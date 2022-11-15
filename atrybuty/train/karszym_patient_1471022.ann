@@ -1,0 +1,257 @@
+T1	Condition 450 499	Ubytek w przegrodzie międzyprzedsionkowej typu II
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Treatment 501 556	Zamknięcie zestawem Occlutech Figulla Flex II ASD 24 mm
+N2	Reference T2 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T3	Date 559 569	09.04.2019
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Condition 572 599	Choroba niedokrwienna serca
+N3	Reference T4 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T5	Condition 601 626	Dusznica bolesna stabilna
+N4	Reference T5 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T6	Condition 636 655	zawale serca NSTEMI
+N5	Reference T6 ICD10:I21.4	Ostry zawał serca podwsierdziowy
+T7	Treatment 656 675	leczony zachowawczo
+T8	Date 676 683	01.2018
+R2	Dat Arg1:T8 Arg2:T6	
+R3	Dat Arg1:T8 Arg2:T7	
+T9	Condition 685 729	Łagodna niedomykalność zastawki trójdzielnej
+N6	Reference T9 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T10	Condition 731 794	Nadkomorowe zaburzeni rytmu serca (pobudzenia pojedyncze, pary)
+N7	Reference T10 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T11	Condition 796 839	Pojedyncze przedwczesne pobudzenia komorowe
+N8	Reference T11 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T12	Condition 841 862	Nadciśnienie tętnicze
+N9	Reference T12 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T13	Condition 864 884	Hipercholesterolemia
+N10	Reference T13 ICD10:E78.0	Czysta hipercholesterolemia
+T14	Treatment 906 936	usunięciu macicy z przydatkami
+A1	Status T14 Historical_Insignificant
+N11	Reference T14 ICD10:Z90.7	Nabyty brak narządów płciowych
+T15	Condition 946 956	mięśniaków
+N12	Reference T15 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+A2	Status T15 Historical_Insignificant
+T16	Date 958 962	2016
+R4	Dat Arg1:T16 Arg2:T15	
+R5	Dat Arg1:T16 Arg2:T14	
+T17	Drug 1084 1087	HNF
+T18	Drug 1089 1096	Asentra
+T19	Drug 1098 1106	Polocard
+T20	Drug 1108 1115	Nebilet
+T21	Drug 1117 1123	Zahron
+T22	Drug 1125 1132	Tritace
+T23	Drug 1134 1140	Plavix
+T24	Drug 1142 1151	Cefazolin
+T25	Drug 1153 1156	PWE
+T26	Drug 1158 1168	NaCl 0,9 %
+T27	Treatment 1287 1344	dalsza opieka u lekarza POZ oraz Poradni Kardiologiczne j
+T28	Date 1346 1374	pierwsza kontrola za miesiąc
+R6	Dat Arg1:T28 Arg2:T27	
+T29	Treatment 1387 1411	kontrolną hospitalizację
+T30	Date 1412 1425	za 3 miesiące
+T31	Treatment 1432 1459	oceny skuteczności leczenia
+R7	Dat Arg1:T30 Arg2:T29	
+R8	Dat Arg1:T30 Arg2:T31	
+T32	Behaviour 1530 1570	Dieta lekkostrawna , niskocholesterolowa
+T33	Investigation 1575 1658	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T34	Investigation 1662 1710	Systematyczna kontrola ciśnienia tętniczego krwi
+T35	Negation 1720 1726	nie ma
+T36	Condition 1727 1761	przeciwwskazań do ewentualnego NMR
+R9	Neg Arg1:T35 Arg2:T36	
+T38	Date 1859 1886	przez 6 miesięcy od zabiegu
+T39	Treatment 1775 1857	Profilaktyka Infekcyjnego Zapalenia Wsierdzia (podczas zabiegów stomatologicznych)
+T40	Drug 1891 1903	amoksycylina
+T41	Drug 1908 1918	ampicylina
+T42	Drug_dose 1919 1939	2 g doustnie lub i.v
+T43	Condition 1954 1961	alergii
+T44	Drug 1965 1985	powyższe antybiotyki
+N13	Reference T43 ICD10:Z88.0	Uczulenie na penicylinę w wywiadzie
+R10	Alg Arg1:T43 Arg2:T44	
+T45	Drug 1988 2000	klindamycyna
+T46	Drug_dose 2001 2025	600 mg doustnie lub i.v.
+R11	Drg Arg1:T45 Arg2:T46	
+R12	Drg Arg1:T41 Arg2:T42	
+R13	Drg Arg1:T40 Arg2:T42	
+R14	Dat Arg1:T38 Arg2:T39	
+T37	Condition 2041 2090	wysokim ryzykiem Infekcyjnego Zapalenia Wsierdzia
+T47	Treatment 2102 2126	działania profilaktyczne
+T48	Behaviour 2129 2163	Ścisła higiena skóry i jamy ustnej
+T49	Treatment 2165 2190	Przeglądy stomatologiczne
+T50	Date 2212 2239	co najmniej dwa razy w roku
+R15	Dat Arg1:T50 Arg2:T49	
+T51	Behaviour 2242 2257	Dezynfekcja ran
+T52	Treatment 2259 2339	Eliminacja lub ograniczenie przewlekłego nosicielstwa bakteryjnego: skóry, moczu
+T53	Treatment 2341 2402	Leczenie antybiotykami każdego ogniska zakażenia bakteryjnego
+T55	Behaviour 2404 2458	Niestosowanie antybiotyków samodzielnie przez pacjenta
+T57	Behaviour 2460 2501	Unikanie kolczykowania i tatuowania ciała
+T58	Treatment 2503 2587	Ścisłe przestrzeganie zasad aseptyki podczas zabiegów stwarzających ryzyko zakażenia
+T59	Drug 2638 2644	Plavix
+T60	Drug 2679 2693	Aspirin Cardio
+T61	Drug 2718 2721	IPP
+T62	Drug 2749 2756	Nebilet
+T63	Drug 2776 2782	Zahron
+T64	Drug 2806 2813	Tritace
+T65	Drug 2837 2844	Asertin
+T66	Drug_dose 2645 2661	75 mg 1x dz rano
+T67	Drug_dose 2694 2716	100 mg 1x dz wieczorem
+T68	Drug_dose 2722 2747	20 mg 1x dz rano na czczo
+T69	Drug_dose 2757 2772	5 mg 1x dz rano
+T70	Drug_dose 2783 2804	20 mg 1x dz wieczorem
+T71	Drug_dose 2814 2836	2,5 mg 1x dz wieczorem
+T72	Drug_dose 2845 2864	100 1x dz wieczorem
+T73	Date 2662 2678	przez 6 miesięcy
+R18	Dat Arg1:T73 Arg2:T59	
+R19	Drg Arg1:T59 Arg2:T66	
+R20	Drg Arg1:T60 Arg2:T67	
+R21	Drg Arg1:T61 Arg2:T68	
+R22	Drg Arg1:T62 Arg2:T69	
+R23	Drg Arg1:T63 Arg2:T70	
+R24	Drg Arg1:T64 Arg2:T71	
+R25	Drg Arg1:T65 Arg2:T72	
+T74	Condition 3099 3105	ASD II
+N14	Reference T74 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T75	Condition 3115 3121	NSTEMI
+N15	Reference T75 ICD10:I21.4	Ostry zawał serca podwsierdziowy
+T76	Treatment 3122 3142	leczonym zachowawczo
+T77	Date 3144 3151	01.2018
+R26	Dat Arg1:T77 Arg2:T76	
+R27	Dat Arg1:T77 Arg2:T75	
+T78	Condition 3154 3156	HA
+N16	Reference T78 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T79	Condition 3158 3178	Hipercholesterolemia
+T80	Symptom 3184 3209	Bóle w okolicy p/sercowej
+N17	Reference T80 ICD10:R07.2	Ból w okolicy przedsercowej
+T81	Symptom 3211 3226	Kołatania serca
+N18	Reference T81 ICD10:R00.2	Kołatanie serca
+T82	Treatment 3251 3281	usuniecie macicy z przydatkami
+N19	Reference T82 ICD10:Z90.7	Nabyty brak narządów płciowych
+T83	Condition 3291 3301	mięśniaków
+A3	Status T83 Historical_Insignificant
+N20	Reference T83 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+A4	Status T82 Historical_Insignificant
+T84	Date 3303 3307	2016
+R28	Dat Arg1:T84 Arg2:T83	
+R29	Dat Arg1:T84 Arg2:T82	
+T85	Treatment 3310 3323	appendektomia
+A5	Status T85 Historical_Insignificant
+N21	Reference T85 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T86	Date 3324 3334	pzred laty
+R30	Dat Arg1:T86 Arg2:T85	
+T87	Condition 3614 3620	ASD II
+N22	Reference T87 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T88	Condition 3645 3651	NSTEMI
+N23	Reference T88 ICD10:I21.4	Ostry zawał serca podwsierdziowy
+T89	Treatment 3652 3672	leczonym zachowawczo
+T90	Date 3674 3681	01.2018
+T91	Condition 3686 3688	HA
+N24	Reference T91 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T92	Condition 3690 3710	hipercholesterolemią
+N25	Reference T92 ICD10:E78.0	Czysta hipercholesterolemia
+T93	Symptom 3783 3867	czasem bóle w okolicy p/sercowej, w czasie stresu, bez związku z wysiłkiem fizycznym
+N26	Reference T93 ICD10:R07.2	Ból w okolicy przedsercowej
+T94	Symptom 3890 3917	czasem obrzęki wokół kostek
+N27	Reference T94 ICD10:R60.0	Obrzęk zlokalizowany
+R31	Dat Arg1:T90 Arg2:T89	
+R32	Dat Arg1:T90 Arg2:T88	
+T95	Symptom 3919 3942	krótkie kołatania serca
+N28	Reference T95 ICD10:R00.2	Kołatanie serca
+T96	Symptom 3944 3963	RR 95/55-130/80mmHg
+T97	Negation 3965 3971	Neguje
+T98	Symptom 3973 3985	zasłabnięcia
+T99	Symptom 3987 3995	omdlenia
+N29	Reference T99 ICD10:R55	Omdlenie i zapaść
+T100	Symptom 3997 4007	krwawienia
+T101	Symptom 4009 4022	czarne stolce
+N30	Reference T101 ICD10:K92.1	Stolce smołowate
+T102	Symptom 4024 4040	brunatne wymioty
+N31	Reference T102 ICD10:K92.0	Wymioty krwawe
+T103	Condition 4042 4058	chorobę wrzodową
+N32	Reference T103 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T104	Symptom 4060 4074	duszność nocną
+N33	Reference T104 ICD10:R06.0	Duszność
+T105	Symptom 4076 4091	obrzęki podudzi
+N34	Reference T105 ICD10:R60.0	Obrzęk zlokalizowany
+T106	Condition 4093 4095	DM
+N35	Reference T106 ICD10:E14	Cukrzyca nieokreślona
+T107	Condition 4097 4107	udar mózgu
+N36	Reference T107 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T108	Treatment 4129 4159	usuniecie macicy z przydatkami
+A6	Status T108 Historical_Insignificant
+N37	Reference T108 ICD10:Z90.7	Nabyty brak narządów płciowych
+T109	Condition 4169 4179	mięśniaków
+A7	Status T109 Historical_Insignificant
+N38	Reference T109 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+T110	Date 4181 4185	2016
+T111	Treatment 4188 4201	appendektomia
+A8	Status T111 Historical_Insignificant
+N39	Reference T111 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T112	Date 4202 4212	pzred laty
+T113	Behaviour 4214 4229	Palenie tytoniu
+N40	Reference T113 ICD10:Z72.0	Używanie tytoniu
+T114	Negation 4231 4236	nigdy
+T115	Behaviour 4237 4248	Inne używki
+T116	Negation 4250 4253	nie
+T117	Condition 4254 4263	Uczulenia
+N41	Reference T117 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T118	Negation 4266 4269	nie
+T119	Condition 4297 4300	WZW
+N42	Reference T119 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T120	Negation 4301 4304	(-)
+T121	Condition 4307 4316	borelioza
+N43	Reference T121 ICD10:A69.2	Choroba z Lyme
+T122	Condition 4322 4325	tbc
+N44	Reference T122 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T123	Condition 4331 4335	odra
+N45	Reference T123 ICD10:B05	Odra
+T124	Condition 4341 4355	kontakt z odrą
+N46	Reference T124 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+T125	Negation 4317 4320	(-)
+T126	Negation 4326 4329	(-)
+T127	Negation 4336 4339	(-)
+T128	Negation 4356 4359	(-)
+R33	Neg Arg1:T114 Arg2:T113	
+R34	Neg Arg1:T116 Arg2:T115	
+R35	Neg Arg1:T118 Arg2:T117	
+R36	Dat Arg1:T110 Arg2:T109	
+R37	Neg Arg1:T97 Arg2:T98	
+R38	Neg Arg1:T97 Arg2:T99	
+R39	Neg Arg1:T97 Arg2:T100	
+R40	Neg Arg1:T97 Arg2:T101	
+R41	Neg Arg1:T97 Arg2:T102	
+R42	Neg Arg1:T97 Arg2:T103	
+R43	Neg Arg1:T97 Arg2:T104	
+R44	Neg Arg1:T97 Arg2:T105	
+R45	Neg Arg1:T97 Arg2:T106	
+R46	Neg Arg1:T97 Arg2:T107	
+R47	Dat Arg1:T112 Arg2:T111	
+R48	Dat Arg1:T110 Arg2:T108	
+R49	Neg Arg1:T120 Arg2:T119	
+R50	Neg Arg1:T125 Arg2:T121	
+R51	Neg Arg1:T126 Arg2:T122	
+R52	Neg Arg1:T127 Arg2:T123	
+R53	Neg Arg1:T128 Arg2:T124	
+T129	Condition 4362 4381	wywiadzie rodzinnym
+A9	Status T129 Family
+T130	Negation 4383 4385	bz
+R54	Neg Arg1:T130 Arg2:T129	
+T131	Behaviour 4402 4428	warunki mieszkaniowe dobre
+T132	Drug 4466 4473	Asentra
+T133	Drug 4496 4504	Polocard
+T134	Drug 4526 4533	Nebilet
+T135	Drug 4553 4559	Zahron
+T136	Drug 4581 4588	Tritace
+T137	Drug_dose 4474 4495	100mg 1x 1 tabl/wiecz
+T138	Drug_dose 4505 4525	75mg 1x 1 tabl/wiecz
+T139	Drug_dose 4534 4552	5mg 1x 1 tabl/rano
+T140	Drug_dose 4560 4580	20mg 1x 1 tabl/wiecz
+T141	Drug_dose 4589 4610	2,5mg 1x 1 tabl/wiecz
+R55	Drg Arg1:T132 Arg2:T137	
+R56	Drg Arg1:T133 Arg2:T138	
+R57	Drg Arg1:T134 Arg2:T139	
+R58	Drg Arg1:T135 Arg2:T140	
+R59	Drg Arg1:T136 Arg2:T141	
+T142	Investigation 4671 4692	badania laboratoryjne
+T143	Investigation 4694 4698	ECHO
+T144	Investigation 4700 4703	TEE
+T145	Investigation 4705 4723	EKG metodą Holtera
+T146	Investigation 4725 4729	ABPM
+T147	Investigation 4731 4746	próba wysiłkowa

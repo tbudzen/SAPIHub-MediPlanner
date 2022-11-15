@@ -1,0 +1,78 @@
+T1	Treatment 332 396	Wskazana dalsza opieka u lekarza POZ oraz Poradni Neurologicznej
+T2	Treatment 401 447	Wskazana diagnostyka w Poradni Hematologicznej
+T3	Behaviour 473 512	Dieta lekkostrawna, niskocholesterolowa
+T4	Investigation 519 610	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T5	Date 611 621	co 6-8 tyg
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Investigation 635 683	Systematyczna kontrola ciśnienia tętniczego krwi
+T7	Drug 696 701	Acard
+T8	Drug_dose 702 727	75 mg 1x1 tabl. wieczorem
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 728 734	Atoris
+T10	Drug_dose 735 760	30 mg 1x1 tabl. wieczorem
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 761 769	Bisocard
+T12	Drug_dose 770 791	2,5 mg 1x1 tabl. rano
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 792 799	Polpril
+T14	Drug_dose 800 824	5 mg 1x1 tabl. wieczorem
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Condition 1017 1038	Nadciśnienie tętnicze
+N1	Reference T15 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T16	Treatment 1039 1068	kontrolowane farmakologicznie
+T17	Condition 1093 1096	PFO
+N2	Reference T17 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T18	Negation 1110 1119	negatywna
+R6	Neg Arg1:T18 Arg2:T17	
+T19	Condition 1121 1148	Przebyty udar niedokrwienny
+N3	Reference T19 ICD10:I63.9	Zawał mózgu, nieokreślony
+T20	Date 1150 1160	23.04.2019
+R7	Dat Arg1:T20 Arg2:T19	
+T21	Condition 1163 1183	Nadczynność tarczycy
+N4	Reference T21 ICD10:E05	Nadczynność tarczycy [tyreotoksykoza]
+T22	Condition 1198 1215	obecnie eutyreoza
+T23	Condition 1435 1438	PFO
+A1	Source T23 Declared
+N5	Reference T23 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T24	Condition 1461 1488	udarze niedokrwiennym mózgu
+N6	Reference T24 ICD10:I63.9	Zawał mózgu, nieokreślony
+T25	Date 1490 1497	04.2019
+R8	Dat Arg1:T25 Arg2:T24	
+T26	Condition 1500 1521	Nadciśnienie tętnicze
+N7	Reference T26 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T27	Condition 1523 1563	Nadczynność tarczycy w trakcie eutyreozy
+N8	Reference T27 ICD10:E05	Nadczynność tarczycy [tyreotoksykoza]
+T28	Treatment 1578 1586	Operacje
+T29	Negation 1588 1594	neguje
+R9	Neg Arg1:T29 Arg2:T28	
+T30	Behaviour 1595 1605	Nikotynizm
+T31	Negation 1610 1616	neguje
+R10	Neg Arg1:T31 Arg2:T30	
+T32	Behaviour 1618 1625	Alkohol
+N10	Reference T32 ICD10:Z72.1	Używanie alkoholu
+T33	Negation 1627 1633	neguje
+R11	Neg Arg1:T33 Arg2:T32	
+T34	Negation 1642 1648	neguje
+T35	Condition 1650 1667	uczulenia na leki
+R12	Neg Arg1:T34 Arg2:T35	
+T36	Symptom 1669 1702	krwawienia z przewodu pokarmowego
+N12	Reference T36 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R13	Neg Arg1:T34 Arg2:T36	
+T37	Condition 1704 1719	Wywiad rodzinny
+A2	Status T37 Family
+T38	Negation 1721 1732	nie istotny
+R14	Neg Arg1:T38 Arg2:T37	
+T39	Drug 1759 1764	Acard
+T40	Drug 1766 1773	Polpril
+T41	Drug 1775 1783	Bisocard
+T42	Drug 1785 1791	Atoris
+T43	Investigation 1803 1813	ECHO serca
+T44	Investigation 1815 1825	Holter EKG
+T45	Investigation 1827 1836	Holter RR
+T46	Investigation 1838 1840	PW
+T47	Investigation 1070 1092	Diagnostyka w kierunku
+N9	Reference T30 ICD10:Z72.0	Używanie tytoniu
+N11	Reference T35 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T48	Negation 1564 1567	bez
+T49	Treatment 1568 1576	leczenie
+R15	Neg Arg1:T48 Arg2:T49	

@@ -1,0 +1,28 @@
+T1	Drug 344 352	Spironol
+T2	Drug 354 363	Furosemid
+T3	Drug 365 375	Biofazolin
+T4	Condition 643 712	Wrodzona wada serca pod postacią ubytku w przegrodzie międzykomorowej
+N1	Reference T4 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T5	Condition 718 759	ubytku w przegrodzie międzyprzedsionkowej
+N2	Reference T5 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T6	Condition 762 767	ASDII
+N3	Reference T6 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T7	Investigation 772 793	Obserwacja w kierunku
+T8	Condition 794 821	trisomii 21 pary chromosomu
+A1	Source T8 Declared
+N4	Reference T8 ICD10:Q90	Zespół Downa
+T9	Condition 957 965	z. Downa
+N5	Reference T9 ICD10:Q90	Zespół Downa
+T10	Condition 968 986	złożona wada serca
+T11	Condition 989 1012	niewydolnością krążenia
+N7	Reference T11 ICD10:I50	Niewydolność serca
+T12	Treatment 1052 1077	leczenia kardiologicznego
+T13	Drug 1099 1108	Furosemid
+T14	Drug 1111 1119	Spironol
+T15	Condition 1122 1139	wywiad alergiczny
+N8	Reference T15 ICD10:T78.4	Alergia, nieokreślona
+T16	Negation 1140 1146	ujemny
+R1	Neg Arg1:T16 Arg2:T15	
+T17	Symptom 1176 1204	osłabione napięcie mięsniowe
+N6	Reference T10 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+R5	Neg Arg1:T16 Arg2:T15

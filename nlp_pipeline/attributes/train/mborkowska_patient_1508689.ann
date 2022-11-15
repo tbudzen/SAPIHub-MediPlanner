@@ -1,0 +1,153 @@
+T1	Investigation 2842 2846	ECHO
+T2	Investigation 2848 2852	ABPM
+T3	Drug 2731 2741	Clonazepam
+T4	Drug_dose 2742 2754	0,5 mg 1-1-1
+R1	Drg Arg1:T3 Arg2:T4	
+T5	Drug 2707 2716	Finlepsin
+T6	Drug 2685 2693	Depralin
+T7	Drug 2668 2677	Anafranil
+T8	Drug 2646 2654	Rosucard
+T9	Drug 2625 2633	Toramide
+T10	Drug 2602 2610	Bisocard
+T11	Drug 2580 2587	Polpril
+T12	Drug 2561 2566	Acard
+T13	Drug 2539 2547	Spironol
+T14	Drug_dose 2548 2559	25 mg 0-1-0
+R2	Drg Arg1:T13 Arg2:T14	
+T15	Drug_dose 2567 2578	75 mg 0-0-1
+R3	Drg Arg1:T12 Arg2:T15	
+T16	Drug_dose 2588 2601	2,5 mg 0-0-1,
+R4	Drg Arg1:T11 Arg2:T16	
+T17	Drug_dose 2611 2623	2,5 mg 1-0-0
+R5	Drg Arg1:T10 Arg2:T17	
+T18	Drug_dose 2634 2644	5 mg 1-0-0
+R6	Drg Arg1:T9 Arg2:T18	
+T19	Drug_dose 2655 2666	20 mg 0-0-1
+R7	Drg Arg1:T8 Arg2:T19	
+T20	Drug_dose 2678 2684	2-0-1,
+R8	Drg Arg1:T7 Arg2:T20	
+T21	Drug_dose 2694 2705	40 mg 1-0-0
+R9	Drg Arg1:T6 Arg2:T21	
+T22	Drug_dose 2717 2729	0,4 mg 1-0-2
+R10	Drg Arg1:T5 Arg2:T22	
+T23	Behaviour 2451 2477	warunki mieszkaniowe dobre
+T24	Condition 2389 2392	WZW
+T25	Condition 2399 2408	borelioza
+N2	Reference T25 ICD10:A69.2	Choroba z Lyme
+T26	Condition 2416 2419	tbc
+N3	Reference T26 ICD10:A15	
+T27	Condition 2425 2433	odra (+)
+A1	Source T27 Confirmed
+N4	Reference T27 ICD10:B05	Odra
+T28	Negation 2420 2424	(-),
+R11	Neg Arg1:T28 Arg2:T26	
+T29	Negation 2409 2414	( - )
+R12	Neg Arg1:T29 Arg2:T25	
+T30	Negation 2393 2396	(-)
+R13	Neg Arg1:T30 Arg2:T24	
+T31	Negation 2357 2360	nie
+T32	Negation 2341 2344	nie
+T33	Condition 2346 2355	Uczulenia
+R14	Neg Arg1:T31 Arg2:T33	
+T34	Behaviour 2328 2340	Inne używki:
+R15	Neg Arg1:T32 Arg2:T34	
+T35	Behaviour 2270 2326	1 paczka dziennie, od sierpnia ok. 5 papierosów dziennie
+T36	Condition 2190 2217	żylaków obu kończyn dolnych
+N7	Reference T36 ICD10:I83	Żylaki kończyn dolnych
+T37	Date 2219 2234	ok. 30 lat temu
+T38	Treatment 2180 2189	usunięcie
+R16	Dat Arg1:T37 Arg2:T36	
+R17	Dat Arg1:T37 Arg2:T38	
+A2	Status T36 Historical_Insignificant
+A3	Status T38 Historical_Insignificant
+T39	Symptom 2039 2051	zasłabnięcia
+N8	Reference T39 ICD10:R55	Omdlenie i zapaść
+T40	Symptom 2053 2061	omdlenia
+N9	Reference T40 ICD10:R55	Omdlenie i zapaść
+T41	Symptom 2063 2073	krwawienia
+N10	Reference T41 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T42	Symptom 2075 2088	czarne stolce
+N11	Reference T42 ICD10:K92.1	Stolce smołowate
+T43	Symptom 2090 2106	brunatne wymioty
+N12	Reference T43 ICD10:K92.0	Wymioty krwawe
+T44	Condition 2108 2124	chorobę wrzodową
+N13	Reference T44 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T45	Condition 2125 2127	HA
+N14	Reference T45 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T46	Condition 2129 2131	DM
+N15	Reference T46 ICD10:E13	Inne określone postacie cukrzycy
+T47	Condition 2133 2143	udar mózgu
+T48	Condition 2145 2157	zawał serca.
+N17	Reference T48 ICD10:I25.2	Przebyty zawał serca
+N16	Reference T47 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T49	Negation 2031 2037	Neguje
+R18	Neg Arg1:T49 Arg2:T39	
+R19	Neg Arg1:T49 Arg2:T40	
+R20	Neg Arg1:T49 Arg2:T41	
+R21	Neg Arg1:T49 Arg2:T42	
+R22	Neg Arg1:T49 Arg2:T43	
+R23	Neg Arg1:T49 Arg2:T44	
+R24	Neg Arg1:T49 Arg2:T45	
+R25	Neg Arg1:T49 Arg2:T46	
+R26	Neg Arg1:T49 Arg2:T47	
+R27	Neg Arg1:T49 Arg2:T48	
+T50	Investigation 1890 1912	angioCT tt. wieńcowych
+T51	Investigation 1833 1847	koronarografii
+T52	Date 1802 1815	29-30.08.2019
+R28	Dat Arg1:T52 Arg2:T51	
+T53	Condition 1493 1513	niewydolnością serca
+N18	Reference T53 ICD10:I50	Niewydolność serca
+T54	Symptom 1514 1523	I wg NYHA
+T55	Condition 1525 1567	ciężką dysfunkcją skurczowo-rozkurczowa LK
+T56	Condition 1570 1600	dużą niedomykalnością mitralną
+N19	Reference T56 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T57	Date 1615 1622	08.2019
+T58	Condition 1626 1634	depresją
+N20	Reference T58 ICD10:F32.9	Epizod depresyjny, nieokreślony
+T59	Symptom 1702 1744	ograniczenia tolerancji wysiłku fizycznego
+N21	Reference T59 ICD10:R53	Złe samopoczucie i zmęczenie
+T60	Behaviour 1294 1315	Przewlekły nikotynizm
+T61	Condition 1275 1292	Zespół depresyjny
+T62	Condition 1254 1274	Torbiel nerki lewej.
+N24	Reference T62 ICD10:N28.1	Torbiel nerki, nabyta
+T63	Condition 1231 1252	Cechy miażdżycy aorty
+N25	Reference T63 ICD10:I70.0	Miażdżyca aorty
+T64	Condition 1206 1229	Hiperlipidemia mieszana
+N26	Reference T64 ICD10:E78.2	Hiperlipidemia mieszana
+T65	Condition 1169 1204	Nieutrwalone częstoskurcze komorowe
+N27	Reference T65 ICD10:I47.2	Częstoskurcz komorowy
+T66	Condition 1085 1168	Umiarkowana niedomykalność zastawki mitralnej w mechanizmie wg Carpentiera I/III b.
+N28	Reference T66 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T67	Condition 964 982	Niewydolność serca
+T68	Condition 1022 1074	ciężką dysfunkcją skurczowo-rozkurczową lewej komory
+T69	Investigation_result 1075 1082	(EF 26%
+T70	Drug 683 691	Spironol
+T71	Drug 693 698	Acard
+T72	Drug 700 707	Polpril
+T73	Drug 709 717	Bisocard
+T74	Drug 719 727	Toramide
+T75	Drug 729 737	Rosucard
+T76	Drug 739 748	Anafranil
+T77	Drug 750 758	Depralin
+T78	Drug 760 769	Finlepsin
+T79	Drug 771 781	Clonazepam
+T80	Investigation 410 424	koronarografię
+R29	Dat Arg1:T57 Arg2:T56	
+R30	Dat Arg1:T57 Arg2:T55	
+T81	Symptom 985 1019	I okresie hemodynamicznym wg. NYHA
+N22	Reference T60 ICD10:Z72.0	Używanie tytoniu
+R31	Dat Arg1:T57 Arg2:T54	
+R32	Dat Arg1:T57 Arg2:T53	
+N23	Reference T61 ICD10:F32.9	Epizod depresyjny, nieokreślony
+N6	Reference T35 ICD10:Z72.0	Używanie tytoniu
+N1	Reference T24 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T82	Treatment 331 353	kontrola u lekarza POZ
+T83	Treatment 356 397	dalsza kontrola w Poradni Kardiologicznej
+N29	Reference T67 ICD10:I50.9	Niewydolność serca, nieokreślona
+T84	Behaviour 2236 2258	Palenie tytoniu: pali,
+N30	Reference T84 ICD10:Z72.0	Używanie tytoniu
+T85	Date 2259 2269	od 40 lat,
+R33	Dat Arg1:T85 Arg2:T84	
+R34	Dat Arg1:T85 Arg2:T35	
+N31	Reference T34 ICD10:Z72	Problemy związane ze stylem życia
+N5	Reference T33 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

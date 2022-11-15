@@ -1,0 +1,555 @@
+allRelations          : 36
+oks                   : 15
+isRedundantAndRemoveds: 19
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 1
+GOOD / BAD            : 34 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 38 lat
+------------------------------------------------
+
+
+
+Sentence 1:
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+- Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej.
+
+
+
+Sentence 5:
+- Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych.
+
+
+
+Sentence 6:
+- Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydo
+------------------------------------------------
+
+
+
+Sentence 7:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 8:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Tachykardia zatokowa.
+
+
+Sentence 9:
+Stan po zasłabnięciu.
+
+
+Sentence 10:
+Zespół policystycznych jajników.
+
+
+Sentence 11:
+Otyłość I stopnia.
+
+
+
+Sentence 12:
+------------------------------------------------
+
+
+
+Sentence 13:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 14:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q21.1|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Przetrwały otwór owalny.
+   
+
+
+Sentence 15:
+Otyłość.
+   
+
+
+Sentence 16:
+Stan po zasłabnięciu (11/2018).
+
+R1	Dat Arg1:T11 Arg2:T10 << OK >>	11/2018 -> zasłabnięciu  <RANK: 3> <info: start[1175, 1161] <type: LEFT>>
+
+
+Sentence 17:
+------------------------------------------------
+
+
+
+Sentence 18:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 19:
+Pacjentka lat 37, z otyłością I st., przyjęta do Kliniki z powodu tachykardii zatokowej, zasłabnięcia w wywiadzie (29.11.2018) w celu  diagnostyki.
+R2	Dat Arg1:T15 Arg2:T13 <<REDUNDANT!!!REMOVED>>	29.11.2018 -> tachykardii zatokowej <:REMOVED Too far from TagInfo[T15, 1424, 1434, Date, 29.11.2018
+] TagInfo[T12, 1329, 1344, Condition, otyłością I st.
+]:> <RANK: 2> <info: start[1424, 1375] <type: LEFT>>
+R3	Dat Arg1:T15 Arg2:T14 <<SHOULD NOT BE REMOVED>>	29.11.2018 -> zasłabnięcia <:REMOVED Too far from TagInfo[T15, 1424, 1434, Date, 29.11.2018
+] TagInfo[T12, 1329, 1344, Condition, otyłością I st.
+]:> <RANK: 3> <info: start[1424, 1398] <type: LEFT>>
+R4	Dat Arg1:T15 Arg2:T12 <<REDUNDANT!!!SHOULD BE REMOVED>>	29.11.2018 -> otyłością I st.  <RANK: 2> <info: start[1424, 1329] <type: LEFT>>
+
+
+Sentence 20:
+Pacjentka zgłasza ponadto łatwe męczenie się, nawracające bóle zamostkowe o charakterze kłucia, pojawiające się po wysiłku fizycznym.
+
+
+Sentence 21:
+Dolegliwości od ok. 11.2018r.
+
+
+
+Sentence 22:
+Neguje: , krwawienia, czarne stolce, brunatne wymioty, chorobę wrzodową, DM, udar mózgu, zawał serca.   
+
+R5	Neg Arg1:T19 Arg2:T20 << OK >>	Neguje -> krwawienia  <RANK: 2> <info: start[1621, 1631] <type: RIGHT>>
+R6	Neg Arg1:T19 Arg2:T21 << OK >>	Neguje -> czarne stolce  <RANK: 2> <info: start[1621, 1643] <type: RIGHT>>
+R7	Neg Arg1:T19 Arg2:T22 << OK >>	Neguje -> brunatne wymioty  <RANK: 2> <info: start[1621, 1658] <type: RIGHT>>
+R8	Neg Arg1:T19 Arg2:T23 << OK >>	Neguje -> chorobę wrzodową  <RANK: 2> <info: start[1621, 1676] <type: RIGHT>>
+R9	Neg Arg1:T19 Arg2:T24 << OK >>	Neguje -> DM  <RANK: 2> <info: start[1621, 1694] <type: RIGHT>>
+R10	Neg Arg1:T19 Arg2:T25 << OK >>	Neguje -> udar mózgu  <RANK: 2> <info: start[1621, 1698] <type: RIGHT>>
+R11	Neg Arg1:T19 Arg2:T26 << OK >>	Neguje -> zawał serca  <RANK: 2> <info: start[1621, 1710] <type: RIGHT>>
+
+
+Sentence 23:
+Przebyte operacje: laparoskopia z powodu PCOS, cięcie cesarskie 2x,
+
+
+
+Sentence 24:
+Palenie tytoniu: nie 
+Inne używki: nie 
+Uczulenia: Amotaks,
+
+R12	Neg Arg1:T32 Arg2:T35 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1811, 1834] <type: RIGHT>>
+R13	Neg Arg1:T32 Arg2:T31 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[1811, 1794] <type: LEFT>>
+R14	Neg Arg1:T32 Arg2:T33 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1811, 1816] <type: RIGHT>>
+R15	Neg Arg1:T32 Arg2:T36 <<REDUNDANT!!!REMOVED>>	nie -> Amotaks <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1811, 1845] <type: RIGHT>>
+R16	Neg Arg1:T34 Arg2:T35 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1829, 1834] <type: RIGHT>>
+R17	Neg Arg1:T34 Arg2:T31 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1829, 1794] <type: LEFT>>
+R18	Neg Arg1:T34 Arg2:T33 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[1829, 1816] <type: LEFT>>
+R19	Neg Arg1:T34 Arg2:T36 <<REDUNDANT!!!REMOVED>>	nie -> Amotaks <:REMOVED other second tag between (right):> <RANK: 1> <info: start[1829, 1845] <type: RIGHT>>
+R20	Alg Arg1:T35 Arg2:T36 << OK >>	Uczulenia -> Amotaks  <RANK: 3> <info: start[1834, 1845] <type: RIGHT>>
+
+
+Sentence 25:
+Przebyte choroby zakaźne - WZW (-) , borelioza ( - ), tbc (-), odra (nie pamięta), szczepienie na odrę (wg. kalendarza szczepień),
+
+R21	Neg Arg1:T41 Arg2:T37 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1913, 1881] <type: LEFT>>
+R22	Neg Arg1:T41 Arg2:T38 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1913, 1891] <type: LEFT>>
+R23	Neg Arg1:T41 Arg2:T39 << OK >>	- -> tbc  <RANK: 3> <info: start[1913, 1908] <type: LEFT>>
+R24	Neg Arg1:T41 Arg2:T40 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1913, 1917] <type: RIGHT>>
+R25	Neg Arg1:T41 Arg2:T44 <<REDUNDANT!!!REMOVED>>	- -> szczepienie na odrę <:REMOVED other second tag between (right):> <RANK: 2> <info: start[1913, 1937] <type: RIGHT>>
+R26	Neg Arg1:T42 Arg2:T37 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1903, 1881] <type: LEFT>>
+R27	Neg Arg1:T42 Arg2:T38 << OK >>	- -> borelioza  <RANK: 3> <info: start[1903, 1891] <type: LEFT>>
+R28	Neg Arg1:T42 Arg2:T39 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1903, 1908] <type: RIGHT>>
+R29	Neg Arg1:T42 Arg2:T40 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1903, 1917] <type: RIGHT>>
+R30	Neg Arg1:T42 Arg2:T44 <<REDUNDANT!!!REMOVED>>	- -> szczepienie na odrę <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1903, 1937] <type: RIGHT>>
+R31	Neg Arg1:T43 Arg2:T37 << OK >>	- -> WZW  <RANK: 3> <info: start[1886, 1881] <type: LEFT>>
+R32	Neg Arg1:T43 Arg2:T38 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1886, 1891] <type: RIGHT>>
+R33	Neg Arg1:T43 Arg2:T39 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1886, 1908] <type: RIGHT>>
+R34	Neg Arg1:T43 Arg2:T40 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1886, 1917] <type: RIGHT>>
+R35	Neg Arg1:T43 Arg2:T44 <<REDUNDANT!!!REMOVED>>	- -> szczepienie na odrę <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1886, 1937] <type: RIGHT>>
+
+
+Sentence 26:
+Stan społeczny: warunki mieszkaniowe dobre, pracuje zawodowo: nauczyciel, 
+Leki: przyjęte rano w domu  
+Bisocard 2,5 mg 1 tabl.
+R36	Drg Arg1:T47 Arg2:T48 << OK >>	Bisocard -> 2,5 mg 1 tabl. 1xdz na noc  <RANK: 3> <info: start[2089, 2098] <type: RIGHT>>
+
+
+Sentence 27:
+1xdz na noc, 
+
+Planowany czas hospitalizacji: 3-5 dni. 
+
+
+
+Sentence 28:
+Planowane badania: badania laboratoryjne, próba wysiłkowa, ECHO, ABPM.
+
+
+
+Sentence 29:
+------------------------------------------------
+
+
+
+Sentence 30:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 31:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.42[10^3/ul]
+    
+
+
+Sentence 32:
+RBC Krwinki czerwone:4.57[10^6/ul]
+    
+
+
+Sentence 33:
+HGB Hemoglobina:13.2[g/dl]
+    
+
+
+Sentence 34:
+HCT Hematokryt:37.8[%]
+    
+
+
+Sentence 35:
+MCV wskaźnik czerwonokrw:82.7[fl]
+    
+
+
+Sentence 36:
+MCH wskaźnik czerwonokrw:28.9[pg]
+    
+
+
+Sentence 37:
+MCHC wskaźnik czerwonokr:34.9[g/dl]
+    
+
+
+Sentence 38:
+PLT z morfologii:172[10^3/ul]
+    
+
+
+Sentence 39:
+RDW-SD:37.4[fl]
+    
+
+
+Sentence 40:
+RDW-CV:12.3[%]
+    PDW:16.2[fl]
+    
+
+
+Sentence 41:
+MPV:12.1[fl]
+    
+
+
+Sentence 42:
+P-LCR:41.5[%]
+    
+
+
+Sentence 43:
+PCT (hematokryt płytkowy:0.21[%]
+    
+
+
+Sentence 44:
+NEUTR# wartość bezwzględ:3.72[10^3/ul]
+    
+
+
+Sentence 45:
+NEUTR%:50.2[%]
+    
+
+
+Sentence 46:
+LYMH# wartość bezwzględn:3.06[10^3/ul]
+    LYMPH%:41.2[%]
+    
+
+
+Sentence 47:
+MONO# wartość bezwzględn:0.46[10^3/ul]
+    
+
+
+Sentence 48:
+MONO%:6.2[%]
+    
+
+
+Sentence 49:
+EO# wartość bezwzględna:0.14[10^3/ul]
+    
+
+
+Sentence 50:
+EO%:1.9[%]
+    
+
+
+Sentence 51:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    BASO%:0.5[%]
+    
+
+
+Sentence 52:
+NRBC %:0.0[%]
+    
+
+
+Sentence 53:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 54:
+Badanie ogólne moczu
+    
+
+
+Sentence 55:
+barwa:żółty[ ]
+    
+
+
+Sentence 56:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 57:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 58:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 59:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 60:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 61:
+ciężar właściwy:1.025[ ]
+    
+
+
+Sentence 62:
+pH:5.0[ ]
+    
+
+
+Sentence 63:
+białko:nieobecne[ ]
+    
+
+
+Sentence 64:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 65:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 66:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 67:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 68:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 69:
+nabłonki płaskie:liczne[w preparacie]
+    
+
+
+Sentence 70:
+leukocyty:3 /ul[ul]
+    śluz:dość liczny[w preparacie]
+    
+
+
+Sentence 71:
+bakterie:nieliczne[w preparacie]
+
+
+
+Sentence 72:
+TSH: TSH:2.67[uIU/ml]
+
+
+
+Sentence 73:
+FT3: FT3:3.23[pg/ml]
+
+
+
+Sentence 74:
+FT4: FT4:1.19[ng/dl]
+
+
+
+Sentence 75:
+ALAT: ALAT:26[U/L]
+ASPAT: ASPAT:22[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.52[mg/dl]
+
+
+
+Sentence 76:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 77:
+Potas (K): Potas:4.2[mmol/L]
+
+
+
+Sentence 78:
+Kreatynina + GFR
+    
+
+
+Sentence 79:
+Kreatynina w surowicy:0.62[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 80:
+MDRD ze stan:107.7[ml/min/1,73 m^2]
+
+
+
+Sentence 81:
+Mocznik: Mocznik:27[mg/dl]
+
+
+
+Sentence 82:
+Kwas moczowy: Kwas moczowy:4.9[mg/dl]
+
+
+
+Sentence 83:
+Lipidogram
+    
+
+
+Sentence 84:
+Cholesterol całkowity:133[mg/dl]
+    
+
+
+Sentence 85:
+Cholesterol HDL:46[mg/dl]
+    
+
+
+Sentence 86:
+Cholestrol LDL:75[mg/dl]
+    
+
+
+Sentence 87:
+Triglicerydy:163[mg/dl]
+    
+
+
+Sentence 88:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:98[mg/dl]
+
+
+
+Sentence 89:
+------------------------------------------------
+
+
+
+Sentence 90:
+ICD10
+------------------------------------------------
+Q21.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 91:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 92:
+89.501
+C55
+A01
+89.502
+I81
+89.41
+L43
+N45
+L69
+O55
+I17
+M45
+M37
+I19
+O35
+N13
+88.721
+O69
+
+
+
+Sentence 93:
+------------------------------------------------
+
+

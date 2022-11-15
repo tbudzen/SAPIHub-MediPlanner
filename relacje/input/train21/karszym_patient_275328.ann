@@ -1,0 +1,74 @@
+T1	Treatment 340 398	dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T2	Treatment 401 435	okresową oceną echokardiograficzną
+T3	Behaviour 439 470	Ograniczenie wysiłku fizycznego
+T4	Date 471 506	do czasu wykonania badań obrazowych
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Behaviour 511 569	Dieta lekkostrawna z ograniczeniem tłuszczów zwierzęcych i
+T6	Condition 799 890	Wrodzona wada serca pod postacią dwupłatkowej zastawki aortalnej z łagodną niedomykalnością
+N1	Reference T6 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T7	Condition 895 939	Łagodna niedomykalność zastawki trójdzielnej
+N2	Reference T7 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T8	Condition 942 971	niskim prawdopodobieństwem PH
+T9	Condition 977 1015	Nadciśnienie tętnicze I st. wg ESC/ESH
+N3	Reference T9 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T10	Behaviour 1020 1030	Nikotynizm
+T11	Investigation_result 1175 1178	BAV
+N4	Reference T11 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T12	Investigation_result 1181 1204	ekscentryczną IA II st.
+N5	Reference T12 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T13	Investigation 1206 1209	TTE
+T14	Date 1212 1222	13/11/2018
+R2	Dat Arg1:T14 Arg2:T13	
+R3	Inv Arg1:T13 Arg2:T12	
+R4	Inv Arg1:T13 Arg2:T11	
+T15	Symptom 1261 1324	ograniczenia tolerancji wysiłku podczas uprawiania piłki nożnej
+T16	Symptom 1337 1389	zmęczenie pojawia się po godzinie wysiłku fizycznego
+T17	Date 1391 1404	w przeszłości
+T18	Symptom 1405 1422	takich ograniczeń
+T19	Negation 1423 1439	nie zaobserwował
+R5	Dat Arg1:T17 Arg2:T18	
+R6	Neg Arg1:T19 Arg2:T18	
+T20	Negation 1462 1468	Neguje
+T21	Symptom 1469 1481	zasłabnięcia
+T22	Symptom 1483 1492	duszności
+N6	Reference T22 ICD10:R06.0	Duszność
+T23	Symptom 1494 1525	typowe bóle w klatce piersiowej
+N7	Reference T23 ICD10:R07.2	Ból w okolicy przedsercowej
+T24	Treatment 1527 1544	Przebyte operacje
+N8	Reference T24 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T25	Negation 1547 1553	neguje
+T26	Condition 1581 1584	WZW
+N9	Reference T26 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T27	Condition 1593 1602	borelioza
+N10	Reference T27 ICD10:A69.2	Choroba z Lyme
+T28	Condition 1610 1618	gruźlica
+N11	Reference T28 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T29	Negation 1585 1590	( - )
+T30	Negation 1603 1608	( - )
+T31	Negation 1619 1622	(-)
+T32	Condition 1658 1668	wadę serca
+A1	Status T32 Family
+T33	Behaviour 1703 1735	Palenie tytoniu: tak, 0,5 paczki
+T34	Date 1736 1744	od 3 lat
+T35	Behaviour 1745 1756	Inne używki
+T36	Negation 1758 1761	nie
+T37	Condition 1762 1771	Uczulenia
+N12	Reference T37 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T38	Negation 1773 1779	neguje
+T39	Behaviour 1796 1822	warunki mieszkaniowe dobre
+T40	Behaviour 1825 1842	mieszka z rodziną
+T41	Drug 1843 1847	Leki
+T42	Negation 1849 1853	brak
+R7	Neg Arg1:T20 Arg2:T21	
+R8	Neg Arg1:T20 Arg2:T22	
+R9	Neg Arg1:T20 Arg2:T23	
+R10	Neg Arg1:T25 Arg2:T24	
+R11	Neg Arg1:T29 Arg2:T26	
+R12	Neg Arg1:T30 Arg2:T27	
+R13	Neg Arg1:T31 Arg2:T28	
+R14	Dat Arg1:T34 Arg2:T33	
+R15	Neg Arg1:T36 Arg2:T35	
+R16	Neg Arg1:T38 Arg2:T37	
+R17	Neg Arg1:T42 Arg2:T41	
+N13	Reference T10 ICD10:Z72.0	Używanie tytoniu
+N14	Reference T33 ICD10:Z72.0	Używanie tytoniu

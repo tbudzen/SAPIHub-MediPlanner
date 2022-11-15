@@ -1,0 +1,90 @@
+T1	Condition 447 497	Napadowe migotanie przedsionków – II klasa wg EHRA
+N1	Reference T1 ICD10:I48	Migotanie i trzepotanie przedsionków
+T2	Investigation 499 510	CHA2DS2VASc
+T3	Investigation_result 512 517	6 pkt
+T4	Investigation 519 527	HAS-BLED
+T5	Investigation_result 529 534	1 pkt
+R1	Inv Arg1:T2 Arg2:T3	
+R2	Inv Arg1:T4 Arg2:T5	
+T6	Condition 540 593	Łagodna/umiarkowana niedomykalność zastawki aortalnej
+N2	Reference T6 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T7	Condition 598 619	Nadciśnienie tętnicze
+N3	Reference T7 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T8	Condition 624 639	Cukrzyca typu 2
+N4	Reference T8 ICD10:E11	Cukrzyca insulinoniezależna
+T9	Condition 644 675	Dyslipidemia w trakcie leczenia
+N5	Reference T9 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T10	Drug 676 683	statyną
+T11	Condition 689 715	Rozrost gruczołu krokowego
+N6	Reference T11 ICD10:N40	Rozrost gruczołu krokowego
+T12	Treatment 836 894	dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T13	Behaviour 919 1014	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T14	Investigation 1018 1066	Okresowo kontrola lipidogramu, stężenia elektrol
+T15	Condition 1210 1233	nadciśnieniem tętniczym
+N7	Reference T15 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T16	Condition 1235 1250	cukrzycą typu 2
+N8	Reference T16 ICD10:E11	Cukrzyca insulinoniezależna
+T17	Condition 1253 1282	przerostem gruczołu krokowego
+N9	Reference T17 ICD10:N40	Rozrost gruczołu krokowego
+T18	Condition 1284 1315	dyslipidemią w trakcie leczenia
+N10	Reference T18 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T19	Drug 1316 1323	statyną
+T20	Symptom 1325 1340	zawrotami głowy
+N11	Reference T20 ICD10:R42	Zawroty głowy i odurzenie
+T21	Symptom 1344 1376	ograniczeniem tolerancji wysiłku
+T22	Investigation 1490 1493	EKG
+T23	Investigation_result 1504 1526	migotanie przedsionków
+A1	Source T23 Declared
+N12	Reference T23 ICD10:I48	Migotanie i trzepotanie przedsionków
+R3	Inv Arg1:T22 Arg2:T23	
+A2	Source T22 Declared
+T24	Negation 1601 1607	Neguje
+T25	Symptom 1608 1620	zasłabnięcia
+T26	Symptom 1622 1631	duszności
+N13	Reference T26 ICD10:R06.0	Duszność
+T27	Symptom 1633 1664	typowe bóle w klatce piersiowej
+N14	Reference T27 ICD10:R07.2	Ból w okolicy przedsercowej
+R4	Neg Arg1:T24 Arg2:T25	
+R5	Neg Arg1:T24 Arg2:T26	
+R6	Neg Arg1:T24 Arg2:T27	
+T28	Negation 1686 1692	neguje
+T29	Treatment 1666 1683	Przebyte operacje
+N15	Reference T29 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+R7	Neg Arg1:T28 Arg2:T29	
+T30	Condition 1720 1723	WZW
+N16	Reference T30 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T31	Condition 1732 1741	borelioza
+N17	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Condition 1749 1757	gruźlica
+N18	Reference T32 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T33	Condition 1763 1767	odra
+N19	Reference T33 ICD10:B05	Odra
+T34	Negation 1724 1729	( - )
+T35	Negation 1742 1747	( - )
+T36	Negation 1758 1761	(-)
+T37	Negation 1768 1771	(-)
+R8	Neg Arg1:T34 Arg2:T30	
+R9	Neg Arg1:T35 Arg2:T31	
+R10	Neg Arg1:T36 Arg2:T32	
+R11	Neg Arg1:T37 Arg2:T33	
+T38	Condition 1772 1787	Wywiad rodzinny
+A3	Status T38 Family
+T39	Negation 1789 1798	negatywny
+R12	Neg Arg1:T39 Arg2:T38	
+T40	Behaviour 1799 1814	Palenie tytoniu
+N20	Reference T40 ICD10:Z72.0	Używanie tytoniu
+T41	Date 1816 1829	w przeszłości
+R13	Dat Arg1:T41 Arg2:T40	
+T42	Behaviour 1831 1843	47 lat palił
+N21	Reference T42 ICD10:Z72.0	Używanie tytoniu
+T43	Behaviour 1844 1855	Inne używki
+T44	Negation 1857 1860	nie
+T45	Condition 1861 1870	Uczulenia
+N22	Reference T45 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T46	Negation 1872 1878	neguje
+R14	Neg Arg1:T44 Arg2:T43	
+R15	Neg Arg1:T46 Arg2:T45	
+T47	Behaviour 1895 1921	warunki mieszkaniowe dobre
+T48	Behaviour 1924 1938	mieszka z żoną
+T49	Symptom 1380 1396	II klasy wg NYHA
+N23	Reference T49 ICD10:I50	Niewydolność serca

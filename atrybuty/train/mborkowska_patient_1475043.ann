@@ -1,0 +1,149 @@
+T1	Investigation 3611 3620	Echo serc
+T2	Investigation 3624 3634	Holter EKG
+T3	Investigation 3637 3652	Próba Wysiłkowa
+T4	Drug 3475 3484	Bisoratio
+T5	Drug_dose 3485 3498	10 1x dz rano
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Drug 3500 3507	Tritace
+T7	Drug_dose 3508 3524	10 mg 1x dz rano
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Drug 3527 3534	Halicid
+T9	Drug_dose 3535 3560	20 mg 1x dz rano na czczo
+R3	Drg Arg1:T8 Arg2:T9	
+T10	Drug 3563 3577	Aspirin Cardio
+T11	Drug_dose 3578 3595	100 mg 1x dz rano
+R4	Drg Arg1:T10 Arg2:T11	
+T12	Behaviour 3425 3451	warunki mieszkaniowe dobre
+T13	Negation 3402 3408	neguje
+T14	Condition 3391 3400	Uczulenia
+R5	Neg Arg1:T13 Arg2:T14	
+T15	Behaviour 3346 3389	okazjonalnie ( dziennie ćwiartkę dziennie )
+N2	Reference T15 ICD10:Z72.1	Używanie alkoholu
+T16	Behaviour 3292 3331	Palenie tytoniu: 50 papierosów dziennie
+N3	Reference T16 ICD10:T65.2	Tytoń i nikotyna
+T17	Condition 3240 3265	miażdżyca kończyn dolnych
+N4	Reference T17 ICD10:I70.2	Miażdżyca tętnic kończyn
+A1	Status T17 Family
+T18	Condition 3169 3172	WZW
+N5	Reference T18 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T19	Condition 3182 3191	borelioza
+N6	Reference T19 ICD10:A69.2	Choroba z Lyme
+T20	Condition 3198 3202	Odra
+N7	Reference T20 ICD10:B05	Odra
+T21	Date 3203 3208	( - )
+R6	Dat Arg1:T21 Arg2:T20	
+T22	Date 3192 3197	( - )
+R7	Dat Arg1:T22 Arg2:T19	
+T23	Date 3175 3179	-  )
+R8	Dat Arg1:T23 Arg2:T18	
+T24	Negation 3129 3140	brak danych
+T25	Treatment 3107 3126	Leczenie przewlekłe
+R9	Dat Arg1:T24 Arg2:T25	
+T26	Treatment 3045 3068	operacja przegrody nosa
+A2	Status T26 Historical_Insignificant
+T27	Date 3069 3082	3,5 roku temu
+R10	Dat Arg1:T27 Arg2:T26	
+T28	Treatment 3084 3095	migdałków  
+T29	Date 3095 3105	2 lat temu
+R11	Dat Arg1:T29 Arg2:T28	
+A3	Status T28 Historical_Insignificant
+T30	Condition 3016 3023	Otyłość
+N8	Reference T30 ICD10:E66	Otyłość
+T31	Condition 2989 3015	Obturacyjny bezdech senny.
+N9	Reference T31 ICD10:G47.3	Bezdech senny
+T32	Condition 2966 2987	Polipy jelita grubego
+N10	Reference T32 ICD10:D12	Nowotwór niezłośliwy okrężnicy, odbytnicy, odbytu i kanału odbytu
+T33	Condition 3282 3290	zawałach
+A4	Status T33 Family
+N11	Reference T33 ICD10:I25.2	Przebyty zawał serca
+T34	Condition 2937 2964	Choroba refluksowa przełyku
+N12	Reference T34 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T35	Condition 2906 2913	Arytmia
+N13	Reference T35 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+A5	Source T35 Declared
+T36	Condition 2883 2904	Nadciśnienie tętnicze
+N14	Reference T36 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T37	Symptom 2853 2865	zasłabnięcia
+N15	Reference T37 ICD10:R55	Omdlenie i zapaść
+T38	Negation 2846 2852	Neguje
+R12	Neg Arg1:T38 Arg2:T37	
+T39	Symptom 2763 2769	kaszel
+N16	Reference T39 ICD10:R05	Kaszel
+T40	Date 2770 2792	w godzinach porannych,
+R13	Dat Arg1:T40 Arg2:T39	
+T41	Symptom 2793 2817	niską tolerancje wysiłku
+N17	Reference T41 ICD10:R53	Złe samopoczucie i zmęczenie
+T42	Symptom 2819 2843	okresowo kołatania serca
+N18	Reference T42 ICD10:R00.2	Kołatanie serca
+T43	Symptom 2602 2626	bólu w klatce piersiowej
+N19	Reference T43 ICD10:R07.3	Inne bóle w klatce piersiowej
+T44	Condition 2678 2706	choroby niedokrwiennej serca
+N20	Reference T44 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T45	Investigation 2719 2745	angio-CT tętnic wieńcowych
+T46	Drug 2401 2406	Acard
+T47	Drug_dose 2407 2432	75mg 1 tabletka wieczorem
+R14	Drg Arg1:T46 Arg2:T47	
+T48	Drug 2367 2373	Atoris
+T49	Drug_dose 2374 2399	20mg 1 tabletka wieczorem
+R15	Drg Arg1:T48 Arg2:T49	
+T50	Drug 2311 2320	Metformax
+T51	Drug_dose 2321 2365	850mg 1 tabletka 3 razy dziennie do posiłków
+R16	Drg Arg1:T50 Arg2:T51	
+T52	Drug 2254 2275	Lipanthyl 215mg Supra
+T53	Drug_dose 2276 2309	1 tabletka rano w trakcie posiłku
+R17	Drg Arg1:T52 Arg2:T53	
+T54	Drug 2226 2236	Indapen SR
+T55	Drug_dose 2237 2252	1 tabletka rano
+R18	Drg Arg1:T54 Arg2:T55	
+T56	Drug 2196 2203	Tritace
+T57	Drug 2167 2174	Nebilet
+T58	Drug 2102 2109	Nolpaza
+T59	Drug_dose 2110 2165	20mg 1 tabletka rano na czczo, 30 minut przed posiłkiem
+R19	Drg Arg1:T58 Arg2:T59	
+T60	Drug_dose 2175 2194	5mg 1 tabletka rano
+R20	Drg Arg1:T57 Arg2:T60	
+T61	Drug_dose 2204 2224	10mg 1 tabletka rano
+R21	Drg Arg1:T56 Arg2:T61	
+T62	Investigation 2016 2062	samokontrola ciśnienia tętniczego krwi i tętna
+T63	Behaviour 1982 2001	redukcja masy ciała
+T64	Behaviour 1922 1967	zakaz palenia tytoniu oraz spożywania alkohol
+T65	Behaviour 1790 1904	Dieta lekkostrawna, cukrzycowa, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T66	Investigation 1739 1773	kontrola poziomu glikemii na czczo
+T67	Date 1774 1785	za 7-14 dni
+R22	Dat Arg1:T67 Arg2:T66	
+T68	Investigation 1545 1645	kontrola morfologii, elektrolitów, parametrów wątrobowych (ALT, AST, GGTP) oraz parametrów nerkowych
+T69	Date 1656 1670	za 5-6 tygodni
+R23	Dat Arg1:T69 Arg2:T68	
+T70	Investigation 1376 1381	SPECT
+T71	Treatment 814 837	plastyce przegrody nosa
+A6	Status T71 Historical_Insignificant
+T72	Date 839 843	2015
+R24	Dat Arg1:T72 Arg2:T71	
+T73	Date 845 849	1988
+R25	Dat Arg1:T73 Arg2:T71	
+T74	Treatment 716 797	usunięciu migdałków podniebiennych, plastyce języczka oraz podniebienia miękkiego
+A7	Status T74 Historical_Insignificant
+T75	Date 799 803	2016
+R26	Dat Arg1:T75 Arg2:T74	
+T76	Condition 666 694	Refluks żołądkowo-przełykowy
+N21	Reference T76 ICD10:K21.0	Refluks żołądkowo-przełykowy z zapaleniem przełyku
+T77	Treatment 619 641	endoskopowym usunięciu
+T78	Condition 642 664	polipów jelita grubego
+N22	Reference T78 ICD10:D12	Nowotwór niezłośliwy okrężnicy, odbytnicy, odbytu i kanału odbytu
+T79	Condition 569 594	Obturacyjny bezdech senny
+N23	Reference T79 ICD10:G47.3	Bezdech senny
+T80	Condition 596 609	Uchyłki esicy
+N24	Reference T80 ICD10:K57	Choroba uchyłkowa jelita
+T81	Condition 505 526	nadciśnienie tętnicze
+N25	Reference T81 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T82	Condition 528 540	dyslipidemia
+N26	Reference T82 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T83	Condition 542 557	cukrzyca typu 2
+N27	Reference T83 ICD10:E11	Cukrzyca insulinoniezależna
+T84	Condition 559 566	otyłość
+N28	Reference T84 ICD10:E66	Otyłość
+T85	Condition 438 482	Przewlekła choroba wieńcowa - I klasa wg CCS
+N29	Reference T85 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T86	Date 2629 2657	ostatnio około miesiąca temu
+R27	Dat Arg1:T86 Arg2:T43	
+N1	Reference T14 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

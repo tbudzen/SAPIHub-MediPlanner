@@ -1,0 +1,44 @@
+T1	Treatment 332 397	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T2	Investigation 402 481	Zalecane wykonanie angio-CT tętnic wieńcowych z poziomu Poradni Kardiologicznej
+T3	Behaviour 508 558	Dieta lekkostrawna, niskocholesterolowa, małosolna
+T4	Investigation 565 613	Systematyczna kontrola ciśnienia tętniczego krwi
+T5	Behaviour 620 683	Regularna aktywność fizyczna 5x w tygodniu po 30 minut dziennie
+T6	Condition 956 990	Łagodna niedomykalność trójdzielna
+N1	Reference T6 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T7	Condition 992 1071	Łagodne komorowe zaburzenia rytmu pod postacią pojedynczych pobudzeń komorowych
+N2	Reference T7 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T8	Symptom 1278 1310	kołatania serca z zasłabnięciami
+N3	Reference T8 ICD10:R00.2	Kołatanie serca
+T9	Symptom 1328 1361	nawracającymi krwawieniami z nosa
+N4	Reference T9 ICD10:R04.0	Epistaxis
+T10	Symptom 1371 1397	kłucie w klatce piersiowej
+N5	Reference T10 ICD10:R07.3	Inne bóle w klatce piersiowej
+T11	Treatment 1407 1424	op. jądra prawego
+A1	Status T11 Historical_Insignificant
+T13	Condition 1449 1482	Uczulenia na penicyliny - wysypka
+T15	Behaviour 1492 1514	papierosy sporadycznie
+N7	Reference T15 ICD10:Z72.0	Używanie tytoniu
+T16	Behaviour 1516 1543	alkohol sporadycznie - piwo
+N8	Reference T16 ICD10:Z72.1	Używanie alkoholu
+T17	Behaviour 1545 1554	narkotyki
+N9	Reference T17 ICD10:Z72.2	Używanie narkotyków
+T18	Negation 1555 1561	neguje
+R2	Neg Arg1:T18 Arg2:T17	
+T19	Condition 1601 1608	arytmie
+A2	Status T19 Family
+N10	Reference T19 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T20	Drug 1617 1625	Magne B6
+T21	Drug_dose 1628 1642	1x1 tabl. rano
+R3	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1643 1650	Kaldyum
+T23	Drug_dose 1651 1669	1x1 tabl. co 2 dni
+R4	Drg Arg1:T22 Arg2:T23	
+T24	Investigation 1693 1697	ECHO
+T25	Investigation 1699 1703	ABPM
+T26	Investigation 1705 1715	Holter-EKG
+T27	Investigation 1731 1746	ergospirometria
+N6	Reference T13 ICD10:R21	Rumień i inne nieswoiste wysypki skórne
+T12	Condition 1563 1578	Wywiad rodzinny
+A3	Status T12 Family
+T14	Condition 1434 1447	niezstąpienia
+N11	Reference T14 ICD10:Q53.1	Niezstąpienie jądra, jednostronne

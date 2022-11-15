@@ -1,0 +1,94 @@
+T1	Treatment 345 396	dalsza stała opieka lekarza nefrologa stacji dializ
+T2	Investigation 403 442	codzienna kontrola ciśnienia tętniczego
+T3	Investigation 449 478	okresowa kontrola lipidogramu
+T4	Condition 777 791	Zespół Alporta
+N1	Reference T4 ICD10:Q87.8	Inne określone zespoły wrodzonych wad rozwojowych niesklasyfikowane gdzie indziej
+T5	Condition 794 822	schyłkowa niewydolność nerek
+N2	Reference T5 ICD10:N18.0	Schyłkowa niewydolność nerek
+T6	Treatment 833 851	hemodializoterapii
+N3	Reference T6 ICD10:Z99.2	Zależność od dializy nerkowej
+T7	Condition 853 891	obustronny niedosłuch miernego stopnia
+A1	Status T7 Historical_Insignificant
+N4	Reference T7 ICD10:H91.9	Ubytek słuchu, nieokreślony
+T8	Condition 893 935	Wtórna niedokrwistość normocytarna łagodna
+N5	Reference T8 ICD10:D63.8*	Niedokrwistość w przebiegu innych chorób przewlekłych sklasyfikowanych gdzie indziej
+T9	Condition 937 957	Hipertriglicerydemia
+N6	Reference T9 ICD10:E78.1	Czysta hiperglicerydemia
+T10	Condition 959 992	Nadciśnienie tętnicze skorygowane
+N7	Reference T10 ICD10:I15.1	Nadciśnienie wtórne do innej patologii nerek
+T11	Treatment 994 1072	Implantacja dializacyjnego cewnika permanentnego do lewej żyły podobojczykowej
+T12	Condition 1074 1110	odma podskórna w miejscu implantacji
+T13	Date 1112 1122	02.03.2018
+N8	Reference T11 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+R1	Dat Arg1:T13 Arg2:T11	
+R2	Dat Arg1:T13 Arg2:T12	
+N9	Reference T12 ICD10:T81.8	Inne powikłania zabiegów, niesklasyfikowane gdzie indziej
+T14	Condition 1267 1297	schyłkową niewydolnością nerek
+N10	Reference T14 ICD10:N18.0	Schyłkowa niewydolność nerek
+T15	Treatment 1298 1309	dializowany
+N11	Reference T15 ICD10:Z99.2	Zależność od dializy nerkowej
+T16	Date 1310 1326	od ok 2 miesięcy
+T17	Condition 1330 1353	nadciśnieniem tętniczym
+N12	Reference T17 ICD10:I15.2	Nadciśnienie wtórne do zaburzeń układu wewnątrzwydzielniczego
+T18	Condition 1356 1397	obustronnym niedosłuchem miernego stopnia
+A2	Status T18 Historical_Insignificant
+N13	Reference T18 ICD10:H91.9	Ubytek słuchu, nieokreślony
+T19	Condition 1410 1440	prawdopodobnie zespołu Alporta
+A3	Source T19 Declared
+N14	Reference T19 ICD10:Q87.8	Inne określone zespoły wrodzonych wad rozwojowych niesklasyfikowane gdzie indziej
+T20	Treatment 1511 1544	przed zabiegiem przeszczepu nerki
+T21	Symptom 1546 1569	Dolegliwości somatyczne
+T22	Negation 1570 1576	neguje
+T23	Treatment 1599 1662	kilkukukrotne nieudane próby wykonania przetok tetniczo-żylnych
+N15	Reference T23 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T25	Treatment 1672 1717	cewnik dializacyjny w żyle szyjnej wewnetrzne
+N16	Reference T25 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T26	Date 1718 1730	od 4 tygodni
+T24	Date 1733 1742	na piątek
+T27	Treatment 1743 1786	zaplanowano założenie cewnika permanentnego
+N17	Reference T27 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T28	Date 1787 1794	obecnie
+T29	Treatment 1795 1819	w oslonie antybiotykowej
+T30	Treatment 1821 1845	Leczenie przewlekłe: tak
+T31	Condition 1873 1876	WZW
+N18	Reference T31 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T32	Negation 1877 1883	( -  )
+T33	Condition 1886 1895	borelioza
+N19	Reference T33 ICD10:A69.2	Choroba z Lyme
+T34	Negation 1896 1901	( - )
+T35	Condition 1903 1911	gruźlica
+N20	Reference T35 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T36	Negation 1911 1914	(-)
+T37	Behaviour 1915 1930	Palenie tytoniu
+N21	Reference T37 ICD10:Z72.0	Używanie tytoniu
+T38	Negation 1932 1935	nie
+T39	Behaviour 1936 1947	Inne używki
+T40	Negation 1949 1952	nie
+T41	Condition 1953 1962	Uczulenia
+N22	Reference T41 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T42	Negation 1964 1970	neguje
+T43	Behaviour 1987 2013	warunki mieszkaniowe dobre
+T44	Drug 2024 2031	Tritace
+T45	Drug_dose 2032 2036	10mg
+T46	Drug 2038 2045	Unikalk
+T47	Drug 2047 2055	Alkaneff
+T48	Drug 2057 2065	alfadiol
+T49	Drug 2067 2074	Dalacin
+T50	Drug_dose 2075 2083	3xdz 300
+T51	Date 2084 2094	od wczoraj
+T52	Investigation 2109 2119	Echo serca
+T53	Investigation 2123 2138	próba wysiłkowa
+R3	Dat Arg1:T16 Arg2:T15	
+R4	Neg Arg1:T22 Arg2:T21	
+R5	Dat Arg1:T26 Arg2:T25	
+R6	Dat Arg1:T24 Arg2:T27	
+R7	Dat Arg1:T28 Arg2:T29	
+R8	Neg Arg1:T32 Arg2:T31	
+R9	Neg Arg1:T34 Arg2:T33	
+R10	Neg Arg1:T36 Arg2:T35	
+R11	Neg Arg1:T38 Arg2:T37	
+R12	Neg Arg1:T40 Arg2:T39	
+R13	Neg Arg1:T42 Arg2:T41	
+R14	Dat Arg1:T51 Arg2:T49	
+R15	Drg Arg1:T49 Arg2:T50	
+R16	Drg Arg1:T44 Arg2:T45	

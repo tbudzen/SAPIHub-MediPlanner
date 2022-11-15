@@ -1,0 +1,54 @@
+T1	Behaviour 397 437	Dieta lekkostrawna , niskocholesterolowa
+T2	Investigation 450 524	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T3	Investigation 541 575	kontrola ciśnienia tętniczego krwi
+T4	Drug 626 633	Lorisat
+T5	Drug_dose 634 650	50 mg 1x dz rano
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Drug 652 660	Nebispes
+T7	Drug_dose 661 683	5 mg 1x dz po 1/4 tabl
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Condition 911 932	Nadciśnienie tętnicze
+N1	Reference T8 ICD10:I10	
+T9	Condition 934 964	Pojedyncze pobudzenia komorowe
+N2	Reference T9 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T10	Condition 968 988	Hipercholesterolemia
+T11	Condition 991 998	Otyłość
+N4	Reference T11 ICD10:E66	Otyłość
+T12	Condition 1225 1247	Nadciśnienie tętnicze.
+N5	Reference T12 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T13	Condition 1248 1255	Otyłość
+N6	Reference T13 ICD10:E66	Otyłość
+T14	Condition 1445 1447	HA
+N7	Reference T14 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T15	Investigation_result 1574 1596	RR 140-150/90-95 mmHg.
+T16	Symptom 1669 1684	kołatania serca
+N8	Reference T16 ICD10:R00.2	Kołatanie serca
+T17	Condition 1732 1734	HA
+N9	Reference T17 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T18	Condition 1736 1738	DM
+N10	Reference T18 ICD10:E13	Inne określone postacie cukrzycy
+T19	Behaviour 1740 1749	Papierosy
+N11	Reference T19 ICD10:Z72.0	Używanie tytoniu
+T20	Negation 1752 1758	neguje
+R3	Neg Arg1:T20 Arg2:T19	
+T21	Behaviour 1760 1780	alkohol sporadycznie
+N12	Reference T21 ICD10:Z72.1	Używanie alkoholu
+T22	Treatment 1803 1816	appendektomia
+A1	Status T22 Historical_Insignificant
+T23	Date 1784 1788	2003
+R4	Dat Arg1:T23 Arg2:T22	
+T24	Negation 1826 1832	neguje
+T25	Condition 1818 1825	Alergie
+N13	Reference T25 ICD10:T78.4	Alergia, nieokreślona
+R5	Neg Arg1:T24 Arg2:T25	
+A2	Status T17 Family
+A3	Status T18 Family
+T26	Condition 1420 1444	nadciśnienia tętniczego.
+N14	Reference T26 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T27	Symptom 1619 1658	pobolewania w klatce piersiowej, kłucia
+N15	Reference T27 ICD10:R07.3	Inne bóle w klatce piersiowej
+T28	Treatment 329 394	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+N3	Reference T10 ICD10:E78.0	Czysta hipercholesterolemia
+T29	Symptom 1686 1703	Inne dolegliwości
+T30	Negation 1704 1710	neguje
+R6	Neg Arg1:T30 Arg2:T29	

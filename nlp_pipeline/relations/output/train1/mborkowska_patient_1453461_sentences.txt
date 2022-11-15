@@ -1,0 +1,981 @@
+allRelations          : 40
+oks                   : 15
+isRedundantAndRemoveds: 18
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 7
+GOOD / BAD            : 33 / 7
+Sentence 0:
+------------------------------------------------
+Wiek: 8 miesięcy
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+1.  Kontrola  w Poradni Kardiologicznej ICZMP za miesiąc 
+2. Przyjmowanie leków:
+Acesan 1 x 30 mg
+Spironol 1 x 12,5 mg (1 x 1/2  tabl a 25 mg))
+
+R1	Drg Arg1:T1 Arg2:T9 <<REDUNDANT!!!REMOVED>>	Acesan -> 1 x 12,5 mg (1 x 1/2  tabl a 25 mg <:REMOVED other first tag between (right):> <RANK: 1> <info: start[414, 440] <type: RIGHT>>
+R2	Drg Arg1:T1 Arg2:T10 << OK >>	Acesan -> 1 x 30 mg  <RANK: 3> <info: start[414, 421] <type: RIGHT>>
+R3	Drg Arg1:T2 Arg2:T9 << OK >>	Spironol -> 1 x 12,5 mg (1 x 1/2  tabl a 25 mg  <RANK: 3> <info: start[431, 440] <type: RIGHT>>
+R4	Drg Arg1:T2 Arg2:T10 <<REDUNDANT!!!REMOVED>>	Spironol -> 1 x 30 mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[431, 421] <type: LEFT>>
+
+
+Sentence 5:
+Sildenafil 2 x 5 mg (2 x 1 proszek) 
+
+R5	Drg Arg1:T3 Arg2:T8 << OK >>	Sildenafil -> 2 x 5 mg (2 x 1 proszek)  <RANK: 3> <info: start[477, 488] <type: RIGHT>>
+
+
+Sentence 6:
+Captopril 2x 3mg
+Digoxin 2x 50mcg (2x 1/2 tabl a 100 mcg)
+------------------------------------------------
+
+R6	Drg Arg1:T4 Arg2:T6 <<REDUNDANT!!!REMOVED>>	Captopril -> 2x 50mcg (2x 1/2 tabl a 100 mcg) <:REMOVED other first tag between (right):> <RANK: 1> <info: start[514, 539] <type: RIGHT>>
+R7	Drg Arg1:T4 Arg2:T7 << OK >>	Captopril -> 2x 3mg  <RANK: 3> <info: start[514, 524] <type: RIGHT>>
+R8	Drg Arg1:T5 Arg2:T6 << OK >>	Digoxin -> 2x 50mcg (2x 1/2 tabl a 100 mcg)  <RANK: 3> <info: start[531, 539] <type: RIGHT>>
+R9	Drg Arg1:T5 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Digoxin -> 2x 3mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[531, 524] <type: LEFT>>
+
+
+Sentence 7:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 8:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią zespołu niedorozwoju lewego serca (HLHS)\x0aStan po operacji metodą Norwood-Sano (proteza zbrojona o średnicy 6mm) - 03.09.2018.\x0aZwężenie łuku aorty.\x0aWtórna restrykcja połączenia międzyprzedsionkowego.
+R10	Dat Arg1:T47 Arg2:T43 <<REDUNDANT!!!SHOULD BE REMOVED>>	03.09.2018 -> Wrodzona wada serca pod postacią zespołu niedorozwoju lewego serca (HLHS  <RANK: 3> <info: start[939, 789] <type: LEFT>>
+R11	Dat Arg1:T47 Arg2:T48 <<REDUNDANT!!!REMOVED>>	03.09.2018 -> Zwężenie łuku aorty <:REMOVED many second tags on the right:> <RANK: 2> <info: start[939, 954] <type: RIGHT>>
+R12	Dat Arg1:T47 Arg2:T46 << OK >>	03.09.2018 -> operacji metodą Norwood-Sano (proteza zbrojona o średnicy 6mm)  <RANK: 3> <info: start[939, 874] <type: LEFT>>
+R13	Dat Arg1:T47 Arg2:T51 <<REDUNDANT!!!REMOVED>>	03.09.2018 -> Wtórna restrykcja połączenia międzyprzedsionkowego <:REMOVED many second tags on the right:> <RANK: 2> <info: start[939, 978] <type: RIGHT>>
+
+
+Sentence 9:
+\x0aCewnikowanie serca z atrioseptostomią statyczną (14.01.2019)\x0aStan po operacji met Glenna,  wycięciu przegrody przedsionków,  podwiązaniu i przecięciu zespolenia RV-PA. oraz rekonstrukcji  łuku aorty (nacięcie podłużnie łuku aorty oraz tunelu uszytego z łaty Cor-Matrix.
+R14	Dat Arg1:T53 Arg2:T52 << OK >>	14.01.2019 -> z atrioseptostomią statyczną  <RANK: 3> <info: start[1083, 1053] <type: LEFT>>
+R15	Dat Arg1:T53 Arg2:T54 <<REDUNDANT!!!SHOULD BE REMOVED>>	14.01.2019 -> operacji met Glenna,  wycięciu przegrody przedsionków,  podwiązaniu i przecięciu zespolenia RV-PA. oraz rekonstrukcji  łuku aorty (nacięcie podłużnie łuku aorty oraz tunelu uszytego z łaty Cor-Matrix. Zespolenie bezpośrednio tunelu z łukiem aorty, implantacja stentu Formula 418 7x 12 mm do aorty zstępującej  <RANK: 3> <info: start[1083, 1106] <type: RIGHT>>
+R16	Dat Arg1:T53 Arg2:T76 << OK >>	14.01.2019 -> Cewnikowanie serca  <RANK: 3> <info: start[1083, 1034] <type: LEFT>>
+
+
+Sentence 10:
+Zespolenie bezpośrednio tunelu z łukiem aorty, implantacja stentu Formula 418 7x 12 mm do aorty zstępującej (22.01.2019 ).
+
+
+Sentence 11:
+\x0aRestenoza w stencie implantowanym do aorty zstępującej .
+
+
+Sentence 12:
+\x0aZaburzenia kurczliwości systemowej prawej komory.\x0aCewnikowanie serca z angioplastyką balonową stentu implantowanego do aorty zstępującej (10.04.2018)\x0a
+------------------------------------------------
+
+R17	Dat Arg1:T60 Arg2:T57 <<REDUNDANT!!!REMOVED>>	10.04.2018 -> Zaburzenia kurczliwości systemowej prawej komory <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1636, 1495] <type: LEFT>>
+R18	Dat Arg1:T60 Arg2:T59 << OK >>	10.04.2018 -> z angioplastyką balonową stentu implantowanego do aorty zstępującej  <RANK: 3> <info: start[1636, 1567] <type: LEFT>>
+R19	Dat Arg1:T60 Arg2:T75 << OK >>	10.04.2018 -> Cewnikowanie serca  <RANK: 3> <info: start[1636, 1548] <type: LEFT>>
+
+
+Sentence 13:
+Zastosowane leczenie
+
+
+
+Sentence 14:
+------------------------------------------------
+Acesan ,Spironol, Furosemid, Sildenafil, Digoxin, Cefazolin, Clexane, znieczulenie ogólne do cewnikowania serca.
+
+
+
+Sentence 15:
+------------------------------------------------
+
+
+
+Sentence 16:
+Zastosowane leczenie
+
+
+
+Sentence 17:
+------------------------------------------------
+Acesan, Spironol, Sildenafil, Cefazolin, Dormicum
+------------------------------------------------
+
+
+
+Sentence 18:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 19:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią zespołu niedorozwoju lewego serca (HLHS)\x0aStan po operacji metodą Norwood-Sano (proteza zbrojona o średnicy 6mm) - 03.09.2018.\x0aZwężenie łuku aorty.\x0aWtórna restrykcja połączenia międzyprzedsionkowego.
+R20	Dat Arg1:T62 Arg2:T44 <<REDUNDANT!!!SHOULD BE REMOVED>>	03.09.2018 -> Wrodzona wada serca pod postacią zespołu niedorozwoju lewego serca (HLHS)  <RANK: 3> <info: start[2420, 2270] <type: LEFT>>
+R21	Dat Arg1:T62 Arg2:T49 <<REDUNDANT!!!REMOVED>>	03.09.2018 -> Zwężenie łuku aorty <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2420, 2435] <type: RIGHT>>
+R22	Dat Arg1:T62 Arg2:T61 << OK >>	03.09.2018 -> operacji metodą Norwood-Sano (proteza zbrojona o średnicy 6mm)  <RANK: 3> <info: start[2420, 2355] <type: LEFT>>
+R23	Dat Arg1:T62 Arg2:T63 <<REDUNDANT!!!REMOVED>>	03.09.2018 -> Wtórna restrykcja połączenia międzyprzedsionkowego <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2420, 2459] <type: RIGHT>>
+
+
+Sentence 20:
+\x0aCewnikowanie serca z atrioseptostomią statyczną (14.01.2019)\x0aStan po operacji met Glenna,  wycięciu przegrody przedsionków,  podwiązaniu i przecięciu zespolenia RV-PA. oraz rekonstrukcji  łuku aorty (nacięcie podłużnie łuku aorty oraz tunelu uszytego z łaty Cor-Matrix.
+R24	Dat Arg1:T65 Arg2:T64 << OK >>	14.01.2019 -> z atrioseptostomią statyczną  <RANK: 3> <info: start[2564, 2534] <type: LEFT>>
+R25	Dat Arg1:T65 Arg2:T66 <<REDUNDANT!!!SHOULD BE REMOVED>>	14.01.2019 -> operacji met Glenna,  wycięciu przegrody przedsionków,  podwiązaniu i przecięciu zespolenia RV-PA. oraz rekonstrukcji  łuku aorty (nacięcie podłużnie łuku aorty oraz tunelu uszytego z łaty Cor-Matrix. Zespolenie bezpośrednio tunelu z łukiem aorty, implantacja stentu Formula 418 7mm x 12 mm do aorty zstępującej)  <RANK: 3> <info: start[2564, 2587] <type: RIGHT>>
+R26	Dat Arg1:T65 Arg2:T77 << OK >>	14.01.2019 -> Cewnikowanie serca  <RANK: 3> <info: start[2564, 2515] <type: LEFT>>
+
+
+Sentence 21:
+Zespolenie bezpośrednio tunelu z łukiem aorty, implantacja stentu Formula 418 7mm x 12 mm do aorty zstępującej) (22.01.2019).
+
+
+Sentence 22:
+\x0aRestenoza w stencie implantowanym do aorty zstępującej .
+
+
+Sentence 23:
+\x0aZaburzenia kurczliwości systemowej prawej komory.\x0a
+------------------------------------------------
+
+
+
+Sentence 24:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 25:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią zespołu niedorozwoju lewego serca (HLHS)\x0aStan po operacji metodą Norwood-Sano (proteza zbrojona o średnicy 6mm) - 03.09.2018.\x0aZwężenie łuku aorty.\x0aRestrykcyjne połączenie międzyprzedsionkowe.\x0aCewnikowanie serca z atrioseptostomią statyczną (14.01.2019)\x0aZapalenie płuc o etiologii Sreptococcus pneumoniae
+------------------------------------------------
+
+R27	Dat Arg1:T71 Arg2:T45 <<REDUNDANT!!!SHOULD BE REMOVED>>	03.09.2018 -> Wrodzona wada serca pod postacią zespołu niedorozwoju lewego serca (HLHS)  <RANK: 3> <info: start[3400, 3250] <type: LEFT>>
+R28	Dat Arg1:T71 Arg2:T50 <<REDUNDANT!!!REMOVED>>	03.09.2018 -> Zwężenie łuku aorty. <:REMOVED many second tags on the right:> <RANK: 2> <info: start[3400, 3415] <type: RIGHT>>
+R29	Dat Arg1:T71 Arg2:T69 <<REDUNDANT!!!REMOVED>>	03.09.2018 -> Restrykcyjne połączenie międzyprzedsionkowe <:REMOVED many second tags on the right:> <RANK: 2> <info: start[3400, 3439] <type: RIGHT>>
+R30	Dat Arg1:T71 Arg2:T74 <<REDUNDANT!!!REMOVED>>	03.09.2018 -> Zapalenie płuc o etiologii Sreptococcus pneumoniae <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3400, 3551] <type: RIGHT>>
+R31	Dat Arg1:T71 Arg2:T70 << OK >>	03.09.2018 -> operacji metodą Norwood-Sano (proteza zbrojona o średnicy 6mm)  <RANK: 3> <info: start[3400, 3335] <type: LEFT>>
+R32	Dat Arg1:T71 Arg2:T72 <<REDUNDANT!!!REMOVED>>	03.09.2018 -> z atrioseptostomią statyczną <:REMOVED other second tag between (right) (dat):> <RANK: 2> <info: start[3400, 3506] <type: RIGHT>>
+R33	Dat Arg1:T71 Arg2:T78 <<REDUNDANT!!!REMOVED>>	03.09.2018 -> Cewnikowanie serca <:REMOVED many second tags on the right:> <RANK: 2> <info: start[3400, 3487] <type: RIGHT>>
+R34	Dat Arg1:T73 Arg2:T45 <<REDUNDANT!!!REMOVED>>	14.01.2019 -> Wrodzona wada serca pod postacią zespołu niedorozwoju lewego serca (HLHS) <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3536, 3250] <type: LEFT>>
+R35	Dat Arg1:T73 Arg2:T50 <<REDUNDANT!!!REMOVED>>	14.01.2019 -> Zwężenie łuku aorty. <:REMOVED other second tag between (left):> <RANK: 2> <info: start[3536, 3415] <type: LEFT>>
+R36	Dat Arg1:T73 Arg2:T69 <<REDUNDANT!!!REMOVED>>	14.01.2019 -> Restrykcyjne połączenie międzyprzedsionkowe <:REMOVED other second tag between (left):> <RANK: 2> <info: start[3536, 3439] <type: LEFT>>
+R37	Dat Arg1:T73 Arg2:T74 <<REDUNDANT!!!SHOULD BE REMOVED>>	14.01.2019 -> Zapalenie płuc o etiologii Sreptococcus pneumoniae  <RANK: 3> <info: start[3536, 3551] <type: RIGHT>>
+R38	Dat Arg1:T73 Arg2:T70 <<REDUNDANT!!!REMOVED>>	14.01.2019 -> operacji metodą Norwood-Sano (proteza zbrojona o średnicy 6mm) <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3536, 3335] <type: LEFT>>
+R39	Dat Arg1:T73 Arg2:T72 << OK >>	14.01.2019 -> z atrioseptostomią statyczną  <RANK: 3> <info: start[3536, 3506] <type: LEFT>>
+R40	Dat Arg1:T73 Arg2:T78 <<REDUNDANT!!!SHOULD BE REMOVED>>	14.01.2019 -> Cewnikowanie serca  <RANK: 3> <info: start[3536, 3487] <type: LEFT>>
+
+
+Sentence 26:
+Zastosowane leczenie
+
+
+
+Sentence 27:
+------------------------------------------------
+
+
+
+Sentence 28:
+Amoksiklav, Fortum, Cephazolin, Pulmicort, Berodual, Mucosolvan, Acesan, Spironol, Sildenafil, , Debridat, Flostrum Baby, vit D3, Clexane, Furosemid, sedacja do badania ECHO, znieczulenie ogólne do cewnikowania serca ,
+
+
+
+Sentence 29:
+------------------------------------------------
+
+
+
+Sentence 30:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 31:
+Dziecko  8  miesięczne  w  stanie  dość  dobrym  został  przyjęty  do  Kliniki  celem  przeprowadzenia  cewnikowania  serca
+
+
+Sentence 32:
+Otrzymuje  Sildenafil  +  Spironol+  Acesan
+------------------------------------------------
+
+
+
+Sentence 33:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 34:
+Próba zgodności (kontrola grupy krwi biorcy)
+    
+
+
+Sentence 35:
+NR-KS:K-19/1169
+    KODKRESKOWYPROBKI:K-19/1169
+    
+
+
+Sentence 36:
+GR:A
+    RH:+ (dodatni)
+    
+
+
+Sentence 37:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+    
+
+
+Sentence 38:
+DONACJA:Z510719001287
+    
+
+
+Sentence 39:
+GR:A
+    RH:+ (dodatni)
+    WYNIK-D:zgodna
+Grupa krwi + p/c odpornościowe (powyżej 4. m-ca życia
+    NR-KS:G-19/006975
+    KODKRESKOWYPROBKI:G-19/006975
+    
+
+
+Sentence 40:
+GR:A
+    RH:+ (dodatni)
+    
+
+
+Sentence 41:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+
+
+
+Sentence 42:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.65[10^3/ul]
+    
+
+
+Sentence 43:
+RBC Krwinki czerwone:5.64[10^6/ul]
+    
+
+
+Sentence 44:
+HGB Hemoglobina:13.7[g/dl]
+    
+
+
+Sentence 45:
+HCT Hematokryt:41.8[%]
+    
+
+
+Sentence 46:
+MCV wskaźnik czerwonokrw:74.1[fl]
+    
+
+
+Sentence 47:
+MCH wskaźnik czerwonokrw:24.3[pg]
+    
+
+
+Sentence 48:
+MCHC wskaźnik czerwonokr:32.8[g/dl]
+    
+
+
+Sentence 49:
+PLT z morfologii:304[10^3/ul]
+    
+
+
+Sentence 50:
+RDW-SD:38.5[fl]
+    
+
+
+Sentence 51:
+RDW-CV:14.9[%]
+    PDW:11.3[fl]
+    MPV:10.0[fl]
+    
+
+
+Sentence 52:
+P-LCR:25.7[%]
+    
+
+
+Sentence 53:
+PCT (hematokryt płytkowy:0.30[%]
+    
+
+
+Sentence 54:
+NEUTR# wartość bezwzględ:1.58[10^3/ul]
+    
+
+
+Sentence 55:
+NEUTR%:23.7[%]
+    
+
+
+Sentence 56:
+LYMH# wartość bezwzględn:3.99[10^3/ul]
+    
+
+
+Sentence 57:
+LYMPH%:60.0[%]
+    
+
+
+Sentence 58:
+MONO# wartość bezwzględn:0.50[10^3/ul]
+    
+
+
+Sentence 59:
+MONO%:7.5[%]
+    
+
+
+Sentence 60:
+EO# wartość bezwzględna:0.51[10^3/ul]
+    
+
+
+Sentence 61:
+EO%:7.7[%]
+    BASO# wartość bezwzględn:0.07[10^3/ul]
+    BASO%:1.1[%]
+    
+
+
+Sentence 62:
+NRBC %:0.2[%]
+    
+
+
+Sentence 63:
+NRBC #:0.01[10^3/ul]
+
+
+
+Sentence 64:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:9.48[10^3/ul]
+    
+
+
+Sentence 65:
+RBC Krwinki czerwone:5.75[10^6/ul]
+    
+
+
+Sentence 66:
+HGB Hemoglobina:16.0[g/dl]
+    
+
+
+Sentence 67:
+HCT Hematokryt:45.7[%]
+    
+
+
+Sentence 68:
+MCV wskaźnik czerwonokrw:79.5[fl]
+    
+
+
+Sentence 69:
+MCH wskaźnik czerwonokrw:27.8[pg]
+    
+
+
+Sentence 70:
+MCHC wskaźnik czerwonokr:35.0[g/dl]
+    
+
+
+Sentence 71:
+PLT z morfologii:376[10^3/ul]
+    
+
+
+Sentence 72:
+RDW-SD:41.0[fl]
+    
+
+
+Sentence 73:
+RDW-CV:14.4[%]
+    PDW:12.1[fl]
+    
+
+
+Sentence 74:
+MPV:10.3[fl]
+    P-LCR:27.6[%]
+    
+
+
+Sentence 75:
+PCT (hematokryt płytkowy:0.39[%]
+    
+
+
+Sentence 76:
+NEUTR# wartość bezwzględ:3.61[10^3/ul]
+    
+
+
+Sentence 77:
+NEUTR%:38.1[%]
+    
+
+
+Sentence 78:
+LYMH# wartość bezwzględn:4.72[10^3/ul]
+    
+
+
+Sentence 79:
+LYMPH%:49.8[%]
+    
+
+
+Sentence 80:
+MONO# wartość bezwzględn:0.89[10^3/ul]
+    
+
+
+Sentence 81:
+MONO%:9.4[%]
+    
+
+
+Sentence 82:
+EO# wartość bezwzględna:0.18[10^3/ul]
+    
+
+
+Sentence 83:
+EO%:1.9[%]
+    
+
+
+Sentence 84:
+BASO# wartość bezwzględn:0.08[10^3/ul]
+    
+
+
+Sentence 85:
+BASO%:0.8[%]
+    
+
+
+Sentence 86:
+NRBC %:0.0[%]
+    
+
+
+Sentence 87:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 88:
+Antytrombina III: Antytrombina III:87[%]
+
+
+
+Sentence 89:
+Antytrombina III: Antytrombina III:109[%]
+
+
+
+Sentence 90:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:33.3[sek]
+
+
+
+Sentence 91:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:31.0[sek]
+
+
+
+Sentence 92:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 93:
+Czas protrombinowy:11.5[sek]
+    
+
+
+Sentence 94:
+Wskaźnik PT:95.7[%]
+    
+
+
+Sentence 95:
+INR:1.05
+Czas protrombinowy (PT)
+    
+
+
+Sentence 96:
+Czas protrombinowy:11.9[sek]
+    
+
+
+Sentence 97:
+Wskaźnik PT:92.4[%]
+    
+
+
+Sentence 98:
+INR:1.08
+Czas trombinowy TT: Czas trombinowy TT:19.0[sek]
+
+
+
+Sentence 99:
+Czas trombinowy TT: Czas trombinowy TT:16.6[sek]
+
+
+
+Sentence 100:
+Fibrynogen: Fibrynogen:1.96[g/L]
+
+
+
+Sentence 101:
+Fibrynogen: Fibrynogen:2.24[g/L]
+
+
+
+Sentence 102:
+D-dimer - test ilościowy: D-dimer - test ilościowy:169[ng/ml]
+
+
+
+Sentence 103:
+Płytki krwi z THEX: Płytki krwi:325[10^3/ul]
+
+
+
+Sentence 104:
+Troponina T: Troponina T:17.7[pg/ml]
+
+
+
+Sentence 105:
+Troponina T: Troponina T:32.6[pg/ml]
+
+
+
+Sentence 106:
+ALAT: ALAT:16[U/L]
+
+
+
+Sentence 107:
+ALAT: ALAT:24[U/L]
+ALAT: ALAT:17[U/L]
+ASPAT: ASPAT:29[U/L]
+ASPAT: ASPAT:42[U/L]
+ASPAT: ASPAT:28[U/L]
+Bilirubina całkowita (TBil): Bilirubina całkowita:0.37[mg/dl]
+
+
+
+Sentence 108:
+CK - aktywność: CK:50[U/L]
+
+
+
+Sentence 109:
+CKMB aktywność: CKMB:30[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 110:
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 111:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 112:
+Potas (K): Potas:4.8[mmol/L]
+
+
+
+Sentence 113:
+Chlorki (Cl): Chlorki:108[mmol/L]
+
+
+
+Sentence 114:
+Fosforany nieorganiczne: Fosforany nieorganiczne:2.21[mmol/L]
+
+
+
+Sentence 115:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:19[U/L]
+
+
+
+Sentence 116:
+Kreatynina + GFR
+    
+
+
+Sentence 117:
+Kreatynina w surowicy:0.26[mg/dl]
+    eGFR nowor.
+
+
+Sentence 118:
+wg Schwartza:108.0[ml/min/1,73 m^2]
+    
+
+
+Sentence 119:
+wzrost:68[cm]
+
+
+
+Sentence 120:
+Kreatynina + GFR
+    
+
+
+Sentence 121:
+Kreatynina w surowicy:0.30[mg/dl]
+    
+
+
+Sentence 122:
+eGFR nowor.
+
+
+Sentence 123:
+wg Schwartza:101.9[ml/min/1,73 m^2]
+    wzrost:74[cm]
+
+
+
+Sentence 124:
+Mleczany (LAC): Mleczany:25.4[mg/dl]
+
+
+
+Sentence 125:
+Magnez: Magnez:0.95[mmol/L]
+
+
+
+Sentence 126:
+Mocznik: Mocznik:19[mg/dl]
+
+
+
+Sentence 127:
+Mocznik: Mocznik:24[mg/dl]
+
+
+
+Sentence 128:
+Wapń całkowity: Wapń całkowity:2.61[mmol/L]
+
+
+
+Sentence 129:
+Digoksyna: Digoksyna:0.7[ng/ml]
+
+
+
+Sentence 130:
+Profil parametrów krytycznych (ABL)
+    pH:7.333
+    pCO2:46.8[mmHg]
+    BE:-1.50[mmol/L]
+    
+
+
+Sentence 131:
+HCO3:24.2[mmol/L]
+    pO2:30.9[mmHg]
+    O2Sat:48.4[%]
+    
+
+
+Sentence 132:
+Sód (ABL):136[mmol/L]
+    
+
+
+Sentence 133:
+Potas (ABL):5.3[mmol/L]
+    
+
+
+Sentence 134:
+Chlorki (ABL):105[mmol/L]
+    
+
+
+Sentence 135:
+Wapń zjonizowany (ABL):1.35[mmol/L]
+    
+
+
+Sentence 136:
+Ht - ABL:43.1[%]
+    
+
+
+Sentence 137:
+Hb - ABL:14.0[g/dl]
+    
+
+
+Sentence 138:
+FO2Hb:47.9[%]
+    
+
+
+Sentence 139:
+FCOHb:0.5[%]
+    FMetHb:0.6[%]
+    
+
+
+Sentence 140:
+Glukoza (ABL):81[mg/dl]
+    Mleczany:37[mg/dl]
+
+
+
+Sentence 141:
+Profil parametrów krytycznych (ABL)
+    pH:7.395
+    pCO2:37.1[mmHg]
+    BE:-1.70[mmol/L]
+    
+
+
+Sentence 142:
+HCO3:22.2[mmol/L]
+    
+
+
+Sentence 143:
+pO2:36.9[mmHg]
+    
+
+
+Sentence 144:
+O2Sat:63.4[%]
+    
+
+
+Sentence 145:
+Sód (ABL):139[mmol/L]
+    
+
+
+Sentence 146:
+Potas (ABL):4.3[mmol/L]
+    
+
+
+Sentence 147:
+Chlorki (ABL):111[mmol/L]
+    
+
+
+Sentence 148:
+Wapń zjonizowany (ABL):1.23[mmol/L]
+    
+
+
+Sentence 149:
+Ht - ABL:39.3[%]
+    
+
+
+Sentence 150:
+Hb - ABL:12.8[g/dl]
+    
+
+
+Sentence 151:
+FO2Hb:62.3[%]
+    
+
+
+Sentence 152:
+FCOHb:0.8[%]
+    FMetHb:1.0[%]
+    
+
+
+Sentence 153:
+Glukoza (ABL):76[mg/dl]
+    Mleczany:19[mg/dl]
+
+
+
+Sentence 154:
+Glukoza w surowicy: Glukoza w surowicy:108[mg/dl]
+
+
+
+Sentence 155:
+NT-proBNP surowica: NT-proBNP w surowicy:1647[pg/ml]
+
+
+
+Sentence 156:
+NT-proBNP surowica: NT-proBNP w surowicy:1580[pg/ml]
+
+
+
+Sentence 157:
+NT-proBNP surowica: NT-proBNP w surowicy:5653[pg/ml]
+
+
+
+Sentence 158:
+------------------------------------------------
+
+
+
+Sentence 159:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 160:
+Q23.4
+Z98.8
+R23.0
+
+
+
+Sentence 161:
+Z95.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 162:
+ICD9
+------------------------------------------------
+89.522
+C66
+I81
+89.602
+G21
+L43
+I89
+G03
+
+
+
+Sentence 163:
+G25
+
+
+
+Sentence 164:
+O61
+L23
+M87
+G49
+N45
+35.411
+N24
+37.21
+C55
+G53
+I97
+G11
+L31
+I17
+O77
+
+
+
+Sentence 165:
+N11
+35.961
+I19
+
+
+
+Sentence 166:
+O35
+M37
+
+
+
+Sentence 167:
+N13
+88.721
+M19
+M18
+8
+T17
+
+
+
+Sentence 168:
+------------------------------------------------
+
+

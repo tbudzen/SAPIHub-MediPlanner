@@ -1,0 +1,210 @@
+T1	Drug 341 347	Plavix
+T2	Drug 349 354	Acard
+T3	Drug 356 363	Sobycor
+T4	Drug 365 373	Spironol
+T5	Drug 375 383	Prenessa
+T6	Drug 385 390	Atrox
+T7	Drug 392 398	Panzol
+T8	Drug 400 406	Warfin
+T9	Investigation 3475 3479	ECHO
+T10	Investigation 3481 3499	EKG metodą Holtera
+T11	Investigation 3501 3505	ABPM
+T12	Drug 3085 3091	Plavix
+T13	Drug_dose 3092 3112	75mg 1xdziennie rano
+R1	Drg Arg1:T12 Arg2:T13	
+T14	Drug 3114 3119	Acard
+T15	Drug_dose 3120 3145	75mg 1xdziennie wieczorem
+R2	Drg Arg1:T14 Arg2:T15	
+T16	Drug 3147 3154	Sobycor
+T17	Drug_dose 3155 3176	7,5mg 1xdziennie rano
+R3	Drg Arg1:T16 Arg2:T17	
+T18	Drug 3178 3186	Spironol
+T19	Drug_dose 3187 3213	25mg 1xdziennie w południe
+R4	Drg Arg1:T18 Arg2:T19	
+T20	Drug 3215 3223	Prenessa
+T21	Drug_dose 3224 3256	4mg pół tabletki 1xdziennie rano
+R5	Drg Arg1:T20 Arg2:T21	
+T22	Drug 3258 3263	Atrox
+T23	Drug_dose 3264 3289	40mg 1xdziennie wieczorem
+R6	Drg Arg1:T22 Arg2:T23	
+T24	Drug 3291 3297	Panzol
+T25	Drug_dose 3298 3327	20mg 1xdziennie rano na czczo
+R7	Drg Arg1:T24 Arg2:T25	
+T26	Drug 3329 3335	Warfin
+T27	Drug_dose 3336 3391	według INR: 7,5mg/rano w pn i sob, poza tym 1x 5mg/rano
+R8	Drg Arg1:T26 Arg2:T27	
+T28	Behaviour 3021 3047	warunki mieszkaniowe dobre
+T29	Condition 2942 2945	WZW
+N1	Reference T29 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T30	Condition 2952 2961	borelioza
+N2	Reference T30 ICD10:A69.2	Choroba z Lyme
+T31	Condition 2967 2970	tbc
+N3	Reference T31 ICD10:A15	
+T32	Condition 2976 2980	odra
+N4	Reference T32 ICD10:B05	Odra
+T33	Behaviour 2986 3000	kontakt z odrą
+N5	Reference T33 ICD10:B05	Odra
+T34	Negation 3001 3004	(-)
+R9	Neg Arg1:T34 Arg2:T33	
+T35	Negation 2981 2984	(-)
+R10	Neg Arg1:T35 Arg2:T32	
+T36	Negation 2971 2974	(-)
+R11	Neg Arg1:T36 Arg2:T31	
+T37	Negation 2962 2965	(-)
+R12	Neg Arg1:T37 Arg2:T30	
+T38	Negation 2946 2949	(-)
+R13	Neg Arg1:T38 Arg2:T29	
+T39	Negation 2911 2914	nie
+T40	Negation 2895 2898	nie
+T41	Negation 2876 2881	nigdy
+T42	Condition 2899 2908	Uczulenia
+N6	Reference T42 ICD10:T78.4	Alergia, nieokreślona
+T43	Behaviour 2882 2894	Inne używki:
+R14	Neg Arg1:T40 Arg2:T43	
+R15	Neg Arg1:T39 Arg2:T42	
+T44	Behaviour 2859 2875	Palenie tytoniu:
+N7	Reference T44 ICD10:T65.2	Tytoń i nikotyna
+R16	Neg Arg1:T41 Arg2:T44	
+T45	Negation 2658 2664	Neguje
+T46	Treatment 2837 2858	Przebyte operacje: jw
+T47	Symptom 2666 2678	zasłabnięcia
+N8	Reference T47 ICD10:R55	Omdlenie i zapaść
+T48	Symptom 2680 2688	omdlenia
+N9	Reference T48 ICD10:R55	Omdlenie i zapaść
+T49	Symptom 2690 2700	krwawienia
+N10	Reference T49 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T50	Symptom 2702 2715	czarne stolce
+N11	Reference T50 ICD10:K92.1	Stolce smołowate
+T51	Symptom 2717 2733	brunatne wymioty
+N12	Reference T51 ICD10:K92.0	Wymioty krwawe
+T52	Symptom 2735 2749	duszność nocną
+N13	Reference T52 ICD10:I50.1	Niewydolność serca lewokomorowa
+T53	Symptom 2751 2766	obrzęki podudzi
+N14	Reference T53 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T54	Symptom 2768 2792	bóle w klatce piersiowej
+N15	Reference T54 ICD10:R07.3	Inne bóle w klatce piersiowej
+T55	Symptom 2794 2809	kołatania serca
+N16	Reference T55 ICD10:R00.2	Kołatanie serca
+T56	Condition 2811 2813	HA
+N17	Reference T56 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T57	Condition 2815 2817	DM
+N18	Reference T57 ICD10:E13	Inne określone postacie cukrzycy
+T58	Condition 2819 2835	choroby tarczycy
+N19	Reference T58 ICD10:E07	Inne choroby tarczycy
+R17	Neg Arg1:T45 Arg2:T47	
+R18	Neg Arg1:T45 Arg2:T48	
+R19	Neg Arg1:T45 Arg2:T49	
+R20	Neg Arg1:T45 Arg2:T50	
+R21	Neg Arg1:T45 Arg2:T51	
+R22	Neg Arg1:T45 Arg2:T52	
+R23	Neg Arg1:T45 Arg2:T53	
+R24	Neg Arg1:T45 Arg2:T54	
+R25	Neg Arg1:T45 Arg2:T55	
+R26	Neg Arg1:T45 Arg2:T56	
+R27	Neg Arg1:T45 Arg2:T57	
+R28	Neg Arg1:T45 Arg2:T58	
+T59	Investigation 1356 1419	kontrola lipidogramu, elektrolitów, stała kontrola wartości INR
+T60	Behaviour 1420 1475	dieta niskocholesterolowa, regularna aktywność fizyczna
+T61	Drug 1510 1516	Plavix
+T62	Drug_dose 1517 1538	75mg 1x dziennie rano
+R29	Drg Arg1:T61 Arg2:T62	
+T63	Drug 1540 1545	Acard
+T64	Drug_dose 1546 1609	75mg 1x dziennie wieczorem (do 08.05.2018r, następnie odstawić)
+R30	Drg Arg1:T63 Arg2:T64	
+T65	Drug 1610 1617	Sobycor
+T66	Drug_dose 1618 1639	10mg 1x dziennie rano
+R31	Drg Arg1:T65 Arg2:T66	
+T67	Drug 1641 1649	Spironol
+T68	Drug_dose 1650 1677	25mg 1x dziennie w południe
+R32	Drg Arg1:T67 Arg2:T68	
+T69	Drug 1679 1687	Prenessa
+T70	Drug_dose 1688 1720	4mg 1/2 tabletki 1xdziennie rano
+R33	Drg Arg1:T69 Arg2:T70	
+T71	Drug 1722 1727	Atrox
+T72	Drug_dose 1728 1754	40mg 1x dziennie wieczorem
+R34	Drg Arg1:T71 Arg2:T72	
+T73	Drug 1756 1763	Nolpaza
+T74	Drug_dose 1764 1794	20mg 1x dziennie rano na czczo
+R35	Drg Arg1:T73 Arg2:T74	
+T75	Drug 1796 1802	Warfin
+T76	Drug_dose 1803 1858	według INR: 7,5mg/rano w pn i sob, poza tym 1x 5mg/rano
+R36	Drg Arg1:T75 Arg2:T76	
+T77	Condition 624 662	Przewlekła choroba niedokrwienna serca
+N20	Reference T77 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T78	Condition 2003 2019	chorobą wieńcową
+N21	Reference T78 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T80	Condition 2024 2034	OZW NSTEMI
+N23	Reference T80 ICD10:I21	Ostry zawał mięśnia sercowego
+T81	Treatment 683 699	leczonym POBA Cx
+T82	Date 700 711	(08.11.2018
+R37	Dat Arg1:T82 Arg2:T81	
+T83	Treatment 2035 2051	leczonym POBA Cx
+T84	Date 2053 2063	08.11.2018
+R38	Dat Arg1:T84 Arg2:T83	
+T85	Condition 722 734	zawale serca
+N24	Reference T85 ICD10:I25.2	Przebyty zawał serca
+T86	Treatment 735 747	leczonym STK
+T87	Date 749 753	1999
+R39	Dat Arg1:T87 Arg2:T86	
+R40	Dat Arg1:T87 Arg2:T85	
+T88	Condition 2069 2081	zawale serca
+N25	Reference T88 ICD10:I25.2	Przebyty zawał serca
+T89	Treatment 2082 2094	leczonym STK
+T90	Date 2096 2100	1999
+R41	Dat Arg1:T90 Arg2:T89	
+R42	Dat Arg1:T90 Arg2:T88	
+T91	Treatment 765 784	operacja zamknięcia
+T92	Treatment 830 891	przy użyciu systemu Bioventrix za pomocą 2 kotew zewnętrznych
+T93	Condition 785 829	tętniaka pozawałowego koniuszka lewej komory
+N26	Reference T93 ICD10:I25.3	Tętniak serca
+T94	Date 893 900	04.2013
+R43	Dat Arg1:T94 Arg2:T92	
+R44	Dat Arg1:T94 Arg2:T93	
+R45	Dat Arg1:T94 Arg2:T91	
+T95	Condition 2126 2170	tętniaka pozawałowego koniuszka lewej komory
+N27	Reference T95 ICD10:I25.3	Tętniak serca
+T96	Treatment 2106 2125	operacji zamknięcia
+T97	Treatment 2171 2232	przy użyciu systemu Bioventrix za pomocą 2 kotew zewnętrznych
+T98	Date 2234 2241	04.2013
+R46	Dat Arg1:T98 Arg2:T97	
+R47	Dat Arg1:T98 Arg2:T95	
+R48	Dat Arg1:T98 Arg2:T96	
+T99	Condition 903 953	Pozawałowa dysfunkcja skurczowa lewej komory serca
+N28	Reference T99 ICD10:I50	Niewydolność serca
+T100	Investigation_result 954 961	(EF 44%
+T101	Condition 964 1007	Zaburzenia rytmu serca pod postacią poj ExV
+N29	Reference T101 ICD10:I49	Inne zaburzenia rytmu serca
+T102	Condition 1017 1059	udarze niedokrwiennym prawej półkuli mózgu
+N30	Reference T102 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T103	Symptom 1062 1097	połowiczym niedowładem lewostronnym
+N31	Reference T103 ICD10:G81	Porażenie połowicze
+T104	Date 1099 1103	2012
+R49	Dat Arg1:T104 Arg2:T103	
+R50	Dat Arg1:T104 Arg2:T102	
+T105	Condition 1106 1137	Zwężenie lewej tętnicy kręgowej
+N32	Reference T105 ICD10:I77.1	Zwężenie tętnicy
+T106	Condition 1139 1176	Tętniak lewej tętnicy środkowej mózgu
+N33	Reference T106 ICD10:I67.1	Tętniak mózgu, niepęknięty
+T107	Condition 2246 2296	pozawałową dysfunkcją skurczową lewej komory serca
+N34	Reference T107 ICD10:I50	Niewydolność serca
+T108	Investigation_result 2298 2304	EF 44%
+T109	Condition 2307 2333	ekstrasystolią nadkomorową
+N35	Reference T109 ICD10:I47.1	Częstoskurcz nadkomorowy
+T110	Condition 2412 2451	udar niedokrwienny prawej półkuli mózgu
+N36	Reference T110 ICD10:I63	Zawał mózgu
+T111	Symptom 2454 2489	połowiczym niedowładem lewostronnym
+N37	Reference T111 ICD10:G81	Porażenie połowicze
+T112	Date 2491 2495	2012
+R51	Dat Arg1:T112 Arg2:T111	
+R52	Dat Arg1:T112 Arg2:T110	
+T113	Condition 2531 2568	tętniak lewej tętnicy środkowej mózgu
+N38	Reference T113 ICD10:I67.1	Tętniak mózgu, niepęknięty
+T114	Condition 2498 2529	zwężenie lewej tętnicy kręgowej
+N39	Reference T114 ICD10:I77.1	Zwężenie tętnicy
+T115	Investigation_result 2631 2644	RR<100/60mmHg
+T116	Date 2645 2657	"od zawsze."
+R53	Dat Arg1:T116 Arg2:T115	
+T117	Condition 672 682	OZW NSTEMI
+N40	Reference T117 ICD10:I21	Ostry zawał mięśnia sercowego
+R54	Dat Arg1:T82 Arg2:T117	
+R56	Dat Arg1:T84 Arg2:T80	

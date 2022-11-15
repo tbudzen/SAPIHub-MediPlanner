@@ -1,0 +1,92 @@
+T1	Condition 438 503	Obserwacja negatywna w kierunku infekcyjnego zapalenia wsierdzia.
+N1	Reference T1 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T2	Symptom 504 520	Stany gorączkowe
+T3	Symptom 522 546	Bóle w klatce piersiowej
+N2	Reference T3 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T4	Symptom 549 564	kołatania serca
+N3	Reference T4 ICD10:R00.2	Kołatanie serca
+T5	Drug 689 694	leków
+T6	Negation 685 688	bez
+R1	Neg Arg1:T6 Arg2:T5	
+T7	Condition 1075 1090	podejrzenia IZW
+N4	Reference T7 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T8	Date 1102 1113	lutego 2019
+T9	Symptom 1114 1157	nawracające stany podgorączkowe/ gorączkowe
+N5	Reference T9 ICD10:R50.9	Gorączka, nieokreślona
+T10	Symptom 1170 1177	kaszlem
+N6	Reference T10 ICD10:R50.9	Gorączka, nieokreślona
+T11	Symptom 1179 1191	bólem gardła
+N7	Reference T11 ICD10:R07.0	Ból gardła
+T12	Symptom 1193 1245	powiekszeniem węzłów chłonnych szyjnych po str lewej
+T13	Symptom 1247 1265	złym samopoczuciem
+N8	Reference T13 ICD10:R53	Złe samopoczucie i zmęczenie
+T14	Symptom 1267 1293	potami i dreszczami w nocy
+T15	Drug 1306 1315	Pyralginę
+T16	Drug_dose 1334 1341	2-3x dz
+R2	Drg Arg1:T15 Arg2:T16	
+T17	Date 1343 1355	Od 3 tygodni
+T18	Investigation_result 1356 1375	temp 37.5-38,3 st C
+T19	Symptom 1379 1397	złym samopoczuciem
+N9	Reference T19 ICD10:R53	Złe samopoczucie i zmęczenie
+T20	Symptom 1399 1423	bólami stawów kolanowych
+N10	Reference T20 ICD10:M25.5	Ból stawu
+T21	Symptom 1425 1473	powiększeniem węzłów chłonnych szyi po str lewej
+T22	Symptom 1475 1537	Przy wzroście temperatury występują uciski w klatce piersiowej
+T23	Symptom 1540 1563	uczucie kołatania serca
+N11	Reference T23 ICD10:R00.2	Kołatanie serca
+T24	Negation 1565 1571	Neguje
+T25	Symptom 1573 1585	zasłabnięcia
+N12	Reference T25 ICD10:R55	Omdlenie i zapaść
+T26	Symptom 1587 1595	omdlenia
+N13	Reference T26 ICD10:R55	Omdlenie i zapaść
+T27	Symptom 1597 1607	krwawienia
+N14	Reference T27 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T28	Symptom 1609 1622	czarne stolce
+N15	Reference T28 ICD10:K92.1	Stolce smołowate
+T29	Symptom 1624 1640	brunatne wymioty
+N16	Reference T29 ICD10:K92,0	
+R3	Neg Arg1:T24 Arg2:T25	
+R4	Neg Arg1:T24 Arg2:T26	
+R5	Neg Arg1:T24 Arg2:T27	
+R6	Neg Arg1:T24 Arg2:T28	
+R7	Neg Arg1:T24 Arg2:T29	
+T30	Negation 1662 1665	nie
+T31	Treatment 1643 1660	Przebyte operacje
+R8	Neg Arg1:T30 Arg2:T31	
+T32	Behaviour 1666 1695	Palenie tytoniu: sporadycznie
+N17	Reference T32 ICD10:T65.2	Tytoń i nikotyna
+T33	Behaviour 1696 1731	Inne używki: sporadycznie marihuana
+T34	Negation 1743 1746	nie
+T35	Condition 1732 1741	Uczulenia
+N18	Reference T35 ICD10:T78.4	Alergia, nieokreślona
+R9	Neg Arg1:T34 Arg2:T35	
+T36	Condition 1850 1853	WZW
+N19	Reference T36 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T37	Condition 1860 1869	borelioza
+N20	Reference T37 ICD10:A69.2	Choroba z Lyme
+T38	Condition 1875 1878	tbc
+N21	Reference T38 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T39	Condition 1884 1888	odra
+N22	Reference T39 ICD10:B05	Odra
+T40	Behaviour 1894 1908	kontakt z odrą
+N23	Reference T40 ICD10:B05	Odra
+T41	Negation 1909 1912	(-)
+R10	Neg Arg1:T41 Arg2:T40	
+T42	Negation 1890 1892	-)
+R11	Neg Arg1:T42 Arg2:T39	
+T43	Negation 1880 1881	-
+R12	Neg Arg1:T43 Arg2:T38	
+T44	Negation 1870 1872	(-
+R13	Neg Arg1:T44 Arg2:T37	
+T45	Negation 1854 1857	(-)
+R14	Neg Arg1:T45 Arg2:T36	
+T46	Behaviour 1929 1955	warunki mieszkaniowe dobre
+T47	Drug 1958 1962	Leki
+T48	Negation 1964 1973	bez leków
+R15	Neg Arg1:T48 Arg2:T47	
+T49	Investigation 2057 2061	ECHO
+T50	Investigation 2063 2081	EKG metodą Holtera
+T51	Investigation 2083 2087	ABPM
+T52	Investigation 2089 2104	próba wysiłkowa
+A1	Source T1 Declared
+A2	Source T7 Declared

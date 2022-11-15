@@ -1,0 +1,164 @@
+T1	Condition 438 465	Przewlekła choroba wieńcowa
+N1	Reference T1 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T2	Condition 484 503	Zespół metaboliczny
+N2	Reference T2 ICD10:E88.9	Zaburzenia metaboliczne, nieokreślone
+T3	Condition 505 526	nadciśnienie tętnicze
+N3	Reference T3 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T4	Condition 528 540	dyslipidemia
+N4	Reference T4 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T5	Condition 542 557	cukrzyca typu 2
+N5	Reference T5 ICD10:E11	Cukrzyca insulinoniezależna
+T6	Condition 559 566	otyłość
+N6	Reference T6 ICD10:E66.9	Otyłość, nieokreślona
+T7	Condition 569 594	Obturacyjny bezdech senny
+N7	Reference T7 ICD10:G47.3	Bezdech senny
+T8	Condition 596 609	Uchyłki esicy
+N8	Reference T8 ICD10:K57.3	Choroba uchyłkowa jelita grubego bez perforacji i ropnia
+T9	Treatment 619 641	endoskopowym usunięciu
+T10	Condition 642 664	polipów jelita grubego
+N9	Reference T10 ICD10:K57.3	Choroba uchyłkowa jelita grubego bez perforacji i ropnia
+T11	Condition 666 694	Refluks żołądkowo-przełykowy
+N10	Reference T11 ICD10:K21.9	Zarzucanie żołądkowo-przełykowe bez zapalenia przełyku
+T12	Treatment 716 750	usunięciu migdałków podniebiennych
+N11	Reference T12 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T13	Treatment 752 797	plastyce języczka oraz podniebienia miękkiego
+N12	Reference T13 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T14	Date 799 803	2016
+A1	Status T12 Historical_Insignificant
+A2	Status T13 Historical_Insignificant
+T15	Treatment 814 837	plastyce przegrody nosa
+A3	Status T15 Historical_Insignificant
+N13	Reference T15 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T16	Date 839 843	2015
+T17	Date 845 849	1988
+R1	Dat Arg1:T14 Arg2:T13	
+R2	Dat Arg1:T14 Arg2:T12	
+R3	Dat Arg1:T16 Arg2:T15	
+R4	Dat Arg1:T17 Arg2:T15	
+A4	Status T9 Historical_Insignificant
+A5	Status T10 Historical_Insignificant
+T18	Treatment 1189 1266	Dalsza opieka w POZ, Poradni Gastroenterologicznej,  Poradni Diabetologicznej
+T19	Treatment 1305 1374	dalsza diagnostyka kardiologiczna w warunkach Poradni Kardiologicznej
+T20	Investigation 1376 1381	SPECT
+T21	Treatment 1421 1497	ocena oraz ewentualna dalsza diagnostyka i leczenie w Poradni Chorób Wątroby
+T22	Investigation 1536 1645	okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych (ALT, AST, GGTP) oraz parametrów nerkowych
+T23	Date 1647 1670	pierwsza za 5-6 tygodni
+R5	Dat Arg1:T23 Arg2:T22	
+T24	Treatment 1673 1725	Po uzyskaniu wyników ewentualna modyfikacja leczenia
+T25	Investigation 1739 1773	kontrola poziomu glikemii na czczo
+T26	Date 1774 1785	za 7-14 dni
+T27	Behaviour 1790 1904	Dieta lekkostrawna, cukrzycowa, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T29	Behaviour 1922 1968	zakaz palenia tytoniu oraz spożywania alkoholu
+R6	Dat Arg1:T26 Arg2:T25	
+T31	Behaviour 1982 2001	redukcja masy ciała
+T32	Investigation 2006 2062	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T33	Drug 2102 2109	Nolpaza
+T34	Drug 2167 2174	Nebilet
+T35	Drug 2196 2203	Tritace
+T36	Drug 2226 2236	Indapen SR
+T37	Drug 2254 2263	Lipanthyl
+T38	Drug 2311 2320	Metformax
+T39	Drug 2367 2373	Atoris
+T40	Drug 2401 2406	Acard
+T41	Drug_dose 2110 2165	20mg 1 tabletka rano na czczo, 30 minut przed posiłkiem
+T42	Drug_dose 2175 2194	5mg 1 tabletka rano
+T43	Drug_dose 2237 2252	1 tabletka rano
+T44	Drug_dose 2264 2309	215mg Supra 1 tabletka rano w trakcie posiłku
+T45	Drug_dose 2321 2365	850mg 1 tabletka 3 razy dziennie do posiłków
+T46	Drug_dose 2374 2399	20mg 1 tabletka wieczorem
+T47	Drug_dose 2407 2432	75mg 1 tabletka wieczorem
+R9	Drg Arg1:T33 Arg2:T41	
+R10	Drg Arg1:T34 Arg2:T42	
+T48	Drug_dose 2204 2224	10mg 1 tabletka rano
+R11	Drg Arg1:T35 Arg2:T48	
+R12	Drg Arg1:T36 Arg2:T43	
+R13	Drg Arg1:T37 Arg2:T44	
+R14	Drg Arg1:T38 Arg2:T45	
+R15	Drg Arg1:T39 Arg2:T46	
+R16	Drg Arg1:T40 Arg2:T47	
+T49	Symptom 2602 2626	bólu w klatce piersiowej
+N16	Reference T49 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T50	Date 2629 2657	ostatnio około miesiąca temu
+R17	Dat Arg1:T50 Arg2:T49	
+T51	Investigation 2719 2745	angio-CT tętnic wieńcowych
+T52	Investigation 2666 2707	diagnostyki choroby niedokrwiennej serca,
+T53	Symptom 2763 2791	kaszel w godzinach porannych
+N17	Reference T53 ICD10:R05	Kaszel
+T54	Symptom 2793 2817	niską tolerancje wysiłku
+T55	Symptom 2819 2843	okresowo kołatania serca
+N18	Reference T55 ICD10:R00.2	Kołatanie serca
+T56	Negation 2846 2852	Neguje
+T57	Symptom 2853 2865	zasłabnięcia
+T58	Condition 2883 2904	Nadciśnienie tętnicze
+N19	Reference T58 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T59	Condition 2906 2913	Arytmia
+N20	Reference T59 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T60	Condition 2937 2964	Choroba refluksowa przełyku
+N21	Reference T60 ICD10:K21.9	Zarzucanie żołądkowo-przełykowe bez zapalenia przełyku
+T61	Condition 2966 2987	Polipy jelita grubego
+N22	Reference T61 ICD10:K57.3	Choroba uchyłkowa jelita grubego bez perforacji i ropnia
+T62	Condition 2989 3014	Obturacyjny bezdech senny
+N23	Reference T62 ICD10:G47.3	Bezdech senny
+T63	Condition 3016 3023	Otyłość
+N24	Reference T63 ICD10:E66.9	Otyłość, nieokreślona
+T64	Treatment 3045 3068	operacja przegrody nosa
+A6	Status T64 Historical_Insignificant
+N25	Reference T64 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T65	Date 3069 3082	3,5 roku temu
+T66	Treatment 3084 3093	migdałków
+A7	Status T66 Historical_Insignificant
+N26	Reference T66 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T67	Date 3095 3105	2 lat temu
+T68	Condition 3169 3172	WZW
+N27	Reference T68 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T69	Condition 3182 3191	borelioza
+N28	Reference T69 ICD10:A69.2	Choroba z Lyme
+T70	Condition 3198 3202	Odra
+N29	Reference T70 ICD10:B05	Odra
+T71	Negation 3173 3179	( -  )
+T72	Negation 3192 3197	( - )
+T73	Negation 3203 3208	( - )
+T74	Condition 3240 3265	miażdżyca kończyn dolnych
+A8	Status T74 Family
+N30	Reference T74 ICD10:I70.2	Miażdżyca tętnic kończyn
+T75	Condition 3275 3290	trzech zawałach
+A9	Status T75 Family
+N31	Reference T75 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T76	Behaviour 3292 3331	Palenie tytoniu: 50 papierosów dziennie
+N32	Reference T76 ICD10:Z72.0	Używanie tytoniu
+T77	Behaviour 3333 3345;3370 3387	Inne używki: ćwiartkę dziennie
+N33	Reference T77 ICD10:Z72.1	Używanie alkoholu
+T78	Condition 3391 3400	Uczulenia
+N34	Reference T78 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T79	Negation 3402 3408	neguje
+T80	Behaviour 3425 3451	warunki mieszkaniowe dobre
+T81	Behaviour 3454 3467	mieszka z sam
+R18	Neg Arg1:T56 Arg2:T57	
+R19	Dat Arg1:T65 Arg2:T64	
+R20	Dat Arg1:T67 Arg2:T66	
+T82	Treatment 3034 3042	operacje
+A10	Status T82 Historical_Insignificant
+N35	Reference T82 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R21	Dat Arg1:T67 Arg2:T82	
+R22	Neg Arg1:T71 Arg2:T68	
+R23	Neg Arg1:T72 Arg2:T69	
+R24	Neg Arg1:T73 Arg2:T70	
+R25	Neg Arg1:T79 Arg2:T78	
+T83	Drug 3475 3484	Bisoratio
+T84	Drug_dose 3485 3498	10 1x dz rano
+T85	Drug 3500 3507	Tritace
+T86	Drug_dose 3508 3524	10 mg 1x dz rano
+T87	Drug 3527 3534	Halicid
+T88	Drug_dose 3535 3560	20 mg 1x dz rano na czczo
+T89	Drug 3563 3577	Aspirin Cardio
+T90	Drug_dose 3578 3595	100 mg 1x dz rano
+T91	Investigation 3611 3621	Echo serca
+T92	Investigation 3624 3634	Holter EKG
+T93	Investigation 3637 3652	Próba Wysiłkowa
+R26	Drg Arg1:T83 Arg2:T84	
+R27	Drg Arg1:T85 Arg2:T86	
+R28	Drg Arg1:T87 Arg2:T88	
+R29	Drg Arg1:T89 Arg2:T90	
+A11	Source T59 Declared
+T94	Symptom 468 482	I klasa wg CCS
+N36	Reference T94 ICD10:I20	Choroba niedokrwienna serca

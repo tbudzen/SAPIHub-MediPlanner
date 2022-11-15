@@ -1,0 +1,94 @@
+T1	Investigation 1888 1898	echo serca
+T2	Investigation 1900 1903	TET
+T3	Investigation 1905 1909	ABPM
+T4	Investigation 1911 1921	Holter ekg
+T5	Investigation 1923 1941	rtg kl. piersiowej
+T6	Drug 1814 1823	Triplixam
+T7	Drug_dose 1824 1858	10 mg + 2.5mg + 10 mg 1 tabl. rano
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 1786 1792	Bibloc
+T9	Drug_dose 1793 1812	2,5 mg 1 tabl. rano
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 1762 1767	Doxar
+T11	Drug_dose 1768 1785	4 mg 1 tabl. rano
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Negation 1687 1693	neguje
+T13	Behaviour 1645 1666	Alkohol: okazjonalnie
+N1	Reference T13 ICD10:Z72.1	Używanie alkoholu
+T14	Negation 1636 1644	neguje  
+T15	Behaviour 1624 1634	Nikotynizm
+N2	Reference T15 ICD10:Z72.0	Używanie tytoniu
+R4	Neg Arg1:T14 Arg2:T15	
+T16	Behaviour 1668 1685	Uzależnienie inne
+N3	Reference T16 ICD10:Z72	Problemy związane ze stylem życia
+R5	Neg Arg1:T12 Arg2:T16	
+T17	Negation 1616 1622	neguje
+T18	Negation 1592 1605	bez znaczenia
+T19	Condition 1607 1614	Alergie
+N4	Reference T19 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R6	Neg Arg1:T17 Arg2:T19	
+T20	Condition 1575 1590	Wywiad rodzinny
+A1	Status T20 Family
+R7	Neg Arg1:T18 Arg2:T20	
+T21	Treatment 1502 1515	appendektomia
+A2	Status T21 Historical_Insignificant
+T22	Date 1516 1521	1967r
+R8	Dat Arg1:T22 Arg2:T21	
+T23	Condition 1541 1558	zaćmy oka prawego
+N5	Reference T23 ICD10:H26.9	Zaćma, nieokreślona
+A3	Status T23 Historical_Insignificant
+T24	Treatment 1532 1540	operacji
+A4	Status T24 Historical_Insignificant
+T25	Date 1560 1573	sierpień 2017
+R9	Dat Arg1:T25 Arg2:T23	
+R10	Dat Arg1:T25 Arg2:T24	
+T26	Condition 1475 1481	jaskra
+N6	Reference T26 ICD10:H40.9	Jaskra, nieokreślona
+T27	Investigation_result 1449 1473	obecnie max. 160/80mmHg)
+T28	Condition 1432 1434	HA
+N7	Reference T28 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T29	Date 1437 1447	od 2-3 lat
+R11	Dat Arg1:T29 Arg2:T28	
+T30	Treatment 1390 1417	diagnostyki kardiologicznej
+T31	Condition 1198 1215	zaćmy oka prawego
+N8	Reference T31 ICD10:H26.9	Zaćma, nieokreślona
+A5	Status T31 Historical_Insignificant
+T32	Treatment 1189 1197	operacji
+A6	Status T32 Historical_Insignificant
+T33	Date 1216 1224	(08.2017
+R12	Dat Arg1:T33 Arg2:T31	
+R13	Dat Arg1:T33 Arg2:T32	
+T34	Treatment 1159 1172	appendektomii
+A7	Status T34 Historical_Insignificant
+T35	Date 1174 1178	1967
+R14	Dat Arg1:T35 Arg2:T34	
+T36	Condition 1143 1149	Jaskra
+N9	Reference T36 ICD10:H40.9	Jaskra, nieokreślona
+T37	Condition 1134 1141	Otyłość
+N10	Reference T37 ICD10:E66	Otyłość
+T38	Condition 1111 1132	Nadciśnienie tętnicze
+N11	Reference T38 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T39	Condition 1044 1085	Podejrzenie przewlekłej choroby wieńcowej
+A8	Source T39 Declared
+T40	Condition 983 1042	Przewlekła niewydolność serca z zachowaną frakcją skurczową
+T41	Drug 734 740	Atoris
+T42	Drug 696 701	Acard
+T43	Drug 643 652	Triplixam
+T44	Drug 609 615	Bibloc
+T45	Drug 578 583	Doxar
+T46	Drug_dose 584 601	4 mg 1 tabl. rano
+R15	Drg Arg1:T45 Arg2:T46	
+T47	Drug_dose 616 635	2,5 mg 1 tabl. rano
+R16	Drg Arg1:T44 Arg2:T47	
+T48	Drug_dose 653 687	10 mg + 2.5mg + 10 mg 1 tabl. rano
+R17	Drg Arg1:T43 Arg2:T48	
+T49	Drug_dose 702 725	75 mg 1 tabl. wieczorem
+T50	Drug_dose 741 764	20 mg 1 tabl. wieczorem
+R18	Drg Arg1:T41 Arg2:T50	
+T51	Treatment 352 374	opieka w poradni POZ  
+T52	Treatment 389 427	kontrola kardiologiczna i okulistyczna
+T53	Treatment 444 473	kontrola ciśnienia tętniczego
+T54	Behaviour 481 506	dieta niskocholesterolowa
+T55	Behaviour 515 534	redukcja masy ciała
+N12	Reference T39 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+N13	Reference T40 ICD10:I50.9	Niewydolność serca, nieokreślona

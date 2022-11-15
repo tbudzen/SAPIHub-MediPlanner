@@ -1,0 +1,94 @@
+T1	Treatment 556 657	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Endokrynologicznej, Neurologicznej
+T2	Behaviour 661 701	Dieta lekkostrawna , niskocholesterolowa
+T3	Investigation 705 753	Systematyczna kontrola ciśnienia tętniczego krwi
+T4	Treatment 756 797	Wskazane systematyczne przyjmowanie leków
+T5	Drug 804 817	Wit. D3 forte
+T6	Drug_dose 818 828	1x dz rano
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Condition 1022 1063	Łagodna niedomykalność zastawki mitralnej
+N1	Reference T7 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T8	Condition 1065 1098	Pojedyncze pobudzenia nadkomorowe
+N2	Reference T8 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T9	Condition 1100 1121	Hipertrójglicerydemia
+N3	Reference T9 ICD10:E78.1	Czysta hiperglicerydemia
+T10	Condition 1123 1139	Hiperandrogenizm
+N4	Reference T10 ICD10:E28.1	Hiperandrogenizm
+T11	Condition 1163 1190	Łagodny niedobór witaminy D
+N5	Reference T11 ICD10:E55.9	Niedobór witaminy D, nieokreślony
+T12	Condition 1193 1200	Otyłość
+N6	Reference T12 ICD10:E66.9	Otyłość, nieokreślona
+T13	Symptom 1202 1212	Bóle głowy
+N7	Reference T13 ICD10:R51	Ból głowy
+T14	Symptom 1441 1486	chwiejnych wartości ciśnienia tętniczego krwi
+N8	Reference T14 ICD10:R03	
+T15	Symptom 1489 1511	Nasilenie dolegliwości
+T16	Date 1512 1525	od 2 miesięcy
+R2	Dat Arg1:T16 Arg2:T15	
+R3	Dat Arg1:T16 Arg2:T14	
+T17	Symptom 1544 1591	bóle w klatce piersiowej o charakterze kłującym
+N9	Reference T17 ICD10:R07.2	Ból w okolicy przedsercowej
+T18	Symptom 1593 1608	kołatania serca
+N10	Reference T18 ICD10:R00.2	Kołatanie serca
+T19	Symptom 1611 1634	trudności z zasypianiem
+N11	Reference T19 ICD10:G47.9	Zaburzenia snu, nieokreślone
+T20	Symptom 1672 1697	bólem w klatce piersiowej
+N12	Reference T20 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T21	Date 1663 1669	w nocy
+R4	Dat Arg1:T21 Arg2:T20	
+T22	Symptom 1717 1729	bóle w głowy
+N13	Reference T22 ICD10:R51	Ból głowy
+T23	Treatment 1750 1776	diagnostyki neurologicznej
+T24	Investigation 1779 1787	MR głowy
+T25	Date 1790 1800	24.02.2018
+R5	Dat Arg1:T25 Arg2:T24	
+T26	Investigation_result 1815 1835	torbiel pajęczynówki
+N14	Reference T26 ICD10:G93.0	Torbiele mózgu
+R6	Inv Arg1:T24 Arg2:T26	
+T27	Symptom 1846 1858	zasłabnięcia
+T28	Negation 1839 1845	Neguje
+R7	Neg Arg1:T28 Arg2:T27	
+T29	Condition 1874 1890	Hiperandrogenizm
+N15	Reference T29 ICD10:E28.1	Hiperandrogenizm
+T30	Condition 1914 1941	Łagodny niedobór witaminy D
+N16	Reference T30 ICD10:E55.9	Niedobór witaminy D, nieokreślony
+T31	Condition 1944 1951	Otyłość
+N17	Reference T31 ICD10:E66.9	Otyłość, nieokreślona
+T32	Treatment 1955 1972	Przebyte operacje
+T33	Negation 1975 1979	brak
+R8	Neg Arg1:T33 Arg2:T32	
+T34	Treatment 1980 1999	Leczenie przewlekłe
+T35	Treatment 2002 2019	endokrynologiczna
+T36	Treatment 2022 2035	neurologiczna
+T37	Condition 2064 2067	WZW
+N18	Reference T37 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T38	Condition 2077 2086	borelioza
+N19	Reference T38 ICD10:A69.2	Choroba z Lyme
+T39	Negation 2089 2090	-
+R9	Neg Arg1:T39 Arg2:T38	
+T40	Negation 2070 2071	-
+R10	Neg Arg1:T40 Arg2:T37	
+T41	Condition 2095 2114	wywiadzie rodzinnym
+A1	Status T41 Family
+T42	Negation 2117 2121	brak
+R11	Neg Arg1:T42 Arg2:T41	
+T43	Behaviour 2123 2138	Palenie tytoniu
+T44	Negation 2140 2148	nie pali
+T45	Date 2149 2165	od ok 8 miesięcy
+R12	Dat Arg1:T45 Arg2:T43	
+R13	Neg Arg1:T44 Arg2:T43	
+T46	Behaviour 2167 2178	Inne używki
+T47	Negation 2180 2183	nie
+R14	Neg Arg1:T47 Arg2:T46	
+T48	Condition 2184 2193	Uczulenia
+T49	Behaviour 2231 2257	warunki mieszkaniowe dobre
+T50	Drug 2294 2310	Witamin D3 forte
+T51	Drug_dose 2311 2321	1x dz rano
+R15	Drg Arg1:T50 Arg2:T51	
+T52	Investigation 2337 2347	Echo serca
+T53	Investigation 2350 2360	Holter EKG
+T54	Investigation 2363 2365	RR
+N22	Reference T27 ICD10:R55	Omdlenie i zapaść
+N20	Reference T43 ICD10:Z72.0	Używanie tytoniu
+N21	Reference T48 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N23	Reference T46 ICD10:Z72	Problemy związane ze stylem życia
+T55	Investigation 2369 2384	Próba Wysiłkowa

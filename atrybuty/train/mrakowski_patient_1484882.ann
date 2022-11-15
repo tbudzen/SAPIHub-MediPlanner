@@ -1,0 +1,135 @@
+T1	Condition 404 438	Łagodna niedomykalność trójdzielna
+N1	Reference T1 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T2	Condition 440 452	Dyslipidemia
+N2	Reference T2 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T3	Treatment 453 477	w trakcie farmakoterapii
+T4	Drug 478 485	statyną
+T5	Condition 487 502	Cukrzyca typu 2
+N3	Reference T5 ICD10:E11	Cukrzyca insulinoniezależna
+T6	Condition 504 525	Częste zapalenia płuc
+N4	Reference T6 ICD10:J18.9	Zapalenie płuc, nieokreślone
+T7	Treatment 684 768	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej i Diabetologicznej
+T8	Treatment 773 853	Wskazana coroczna kontrola w warunkach ambulatoryjnych w Poradni Kardiologicznej
+T9	Investigation 859 889	Wskazane wykonanie SPECT serca
+T10	Treatment 961 1035	W przypadku prawidłowego obrazu SPECT wskazana diagnostyka pulmonologiczna
+T11	Behaviour 1041 1080	Dieta lekkostrawna, niskocholesterolowa
+T12	Investigation 1088 1179	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T13	Date 1180 1190	co 6-8 tyg
+R1	Dat Arg1:T13 Arg2:T12	
+T14	Investigation 1205 1253	Systematyczna kontrola ciśnienia tętniczego krwi
+T15	Drug 1268 1275	Romazic
+T16	Drug_dose 1276 1301	10 mg 1x1 tabl. wieczorem
+R2	Drg Arg1:T15 Arg2:T16	
+T17	Drug 1302 1315	Glucophage XR
+T18	Drug_dose 1316 1343	1000 mg 1x1 tabl. wieczorem
+R3	Drg Arg1:T17 Arg2:T18	
+T19	Drug 1344 1351	Piramil
+T20	Drug_dose 1352 1379	1,25 mg 1x1 tabl. wieczorem
+R4	Drg Arg1:T19 Arg2:T20	
+T21	Drug 1380 1384	Zaax
+T22	Drug_dose 1385 1410	1x1 tabl. - kont. zaleceń
+R5	Drg Arg1:T21 Arg2:T22	
+T23	Symptom 1583 1614	zmniejszonej tolerancji wysiłku
+N5	Reference T23 ICD10:R53	Złe samopoczucie i zmęczenie
+T24	Symptom 1616 1672	wg wywiadu pacjentka wchodzi bez przystanku na IV piętro
+T25	Symptom 1684 1812	dolegliwości bólowe w klatce piersiowej pod postacią kłucia oraz ucisku, niezwiązany z wysiłkiem fizycznym, trwający kilka minut
+N6	Reference T25 ICD10:R07.3	Inne bóle w klatce piersiowej
+T27	Symptom 1887 1912	dolegliwości bólowe głowy
+N8	Reference T27 ICD10:R51	Ból głowy
+T28	Negation 1914 1920	Neguje
+T29	Symptom 1921 1933	zasłabnięcia
+T30	Symptom 1935 1943	omdlenia
+N9	Reference T30 ICD10:R55	Omdlenie i zapaść
+T31	Symptom 1945 1958	zawroty głowy
+N10	Reference T31 ICD10:R42	Zawroty głowy i odurzenie
+T32	Symptom 1960 1970	krwawienia
+T33	Symptom 1972 1985	czarne stolce
+N12	Reference T33 ICD10:K92.1	Stolce smołowate
+T34	Symptom 1987 2003	brunatne wymioty
+N13	Reference T34 ICD10:K92.0	Wymioty krwawe
+T35	Condition 2005 2021	chorobę wrzodową
+N14	Reference T35 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T36	Symptom 2023 2037	duszność nocną
+N15	Reference T36 ICD10:R06.0	Duszność
+T37	Symptom 2039 2054	obrzęki podudzi
+R6	Neg Arg1:T28 Arg2:T37	
+R7	Neg Arg1:T28 Arg2:T36	
+R8	Neg Arg1:T28 Arg2:T35	
+R9	Neg Arg1:T28 Arg2:T34	
+R10	Neg Arg1:T28 Arg2:T33	
+R11	Neg Arg1:T28 Arg2:T32	
+R12	Neg Arg1:T28 Arg2:T31	
+R13	Neg Arg1:T28 Arg2:T30	
+R14	Neg Arg1:T28 Arg2:T29	
+T38	Symptom 2056 2075	Innych dolegliwości
+T39	Negation 2076 2087	nie zgłasza
+R15	Neg Arg1:T39 Arg2:T38	
+T40	Condition 2102 2114	Dyslipidemia
+N17	Reference T40 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T41	Treatment 2115 2139	w trakcie farmakoterapii
+T42	Drug 2140 2147	statyną
+T43	Condition 2149 2164	Cukrzyca typu 2
+N18	Reference T43 ICD10:E11	Cukrzyca insulinoniezależna
+T44	Condition 2166 2187	Częste zapalenia płuc
+N19	Reference T44 ICD10:J18.9	Zapalenie płuc, nieokreślone
+T45	Treatment 2201 2218	Przebyte operacje
+T46	Negation 2220 2226	neguje
+R16	Neg Arg1:T46 Arg2:T45	
+T47	Condition 2254 2257	WZW
+N20	Reference T47 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T48	Condition 2266 2275	borelioza
+N21	Reference T48 ICD10:A69.2	Choroba z Lyme
+T49	Condition 2283 2291	grużlica
+T50	Condition 2299 2303	odra
+N23	Reference T50 ICD10:B05	Odra
+T51	Date 2308 2322	w dzieciństwie
+R17	Dat Arg1:T51 Arg2:T50	
+T52	Negation 2294 2295	-
+R18	Neg Arg1:T52 Arg2:T49	
+T53	Negation 2278 2279	-
+R19	Neg Arg1:T53 Arg2:T48	
+T54	Negation 2260 2261	-
+R20	Neg Arg1:T54 Arg2:T47	
+T55	Condition 2325 2340	Wywiad rodzinny
+A1	Status T55 Family
+T56	Condition 2349 2360	rak żołądka
+N24	Reference T56 ICD10:C16	Nowotwór złośliwy żołądka
+A2	Status T56 Family
+T57	Condition 2369 2381	rak prostaty
+A3	Status T57 Family
+N25	Reference T57 ICD10:C61	Nowotwór złośliwy gruczołu krokowego
+T58	Behaviour 2383 2398	Palenie tytoniu
+T59	Negation 2400 2416	aktualnie neguje
+R21	Neg Arg1:T59 Arg2:T58	
+T60	Behaviour 2432 2454	20 papierosów dziennie
+T61	Date 2455 2467	przez 15 lat
+R22	Dat Arg1:T61 Arg2:T60	
+T62	Behaviour 2469 2480	Inne używki
+T63	Negation 2482 2488	neguje
+R23	Neg Arg1:T63 Arg2:T62	
+T64	Condition 2490 2499	Uczulenia
+N28	Reference T64 ICD10:T78.4	Alergia, nieokreślona
+T65	Negation 2501 2507	neguje
+R24	Neg Arg1:T65 Arg2:T64	
+T66	Behaviour 2525 2551	warunki mieszkaniowe dobre
+T67	Behaviour 2577 2585	emerytka
+T68	Drug 2593 2597	Zaax
+T69	Drug_dose 2598 2610	1 tabletka R
+T70	Drug 2612 2619	Romazic
+T71	Drug_dose 2620 2637	10mg 1 tabletka W
+T72	Drug 2639 2652	Glucophage XR
+T73	Drug_dose 2653 2672	1000mg 1 tabletka W
+R25	Drg Arg1:T68 Arg2:T69	
+R26	Drg Arg1:T70 Arg2:T71	
+R27	Drg Arg1:T72 Arg2:T73	
+T74	Investigation 2688 2691	TTE
+T75	Investigation 2693 2696	TET
+T76	Investigation 2698 2702	ABPM
+T77	Investigation 2704 2714	Holter EKG
+N29	Reference T29 ICD10:R55	Omdlenie i zapaść
+N26	Reference T58 ICD10:Z72.0	Używanie tytoniu
+N27	Reference T60 ICD10:Z72.0	Używanie tytoniu
+N7	Reference T32 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N11	Reference T37 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N16	Reference T49 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N22	Reference T62 ICD10:Z72	Problemy związane ze stylem życia

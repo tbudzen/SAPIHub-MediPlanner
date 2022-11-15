@@ -1,0 +1,639 @@
+allRelations          : 42
+oks                   : 16
+isRedundantAndRemoveds: 25
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 1
+GOOD / BAD            : 41 / 1
+Sentence 0:
+------------------------------------------------
+Wiek: 22 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q23.0|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią dwupłatkowej zastawki aortalnej i poszerzonej aorty wstępującej.
+
+
+Sentence 6:
+Nadciśnienie tętnicze.
+
+
+Sentence 7:
+Bradykardia zatokowa.
+
+
+Sentence 8:
+Otyłość
+------------------------------------------------
+
+
+
+Sentence 9:
+Zastosowane leczenie
+
+
+
+Sentence 10:
+------------------------------------------------
+
+
+
+Sentence 11:
+Triplixan, Amlopin
+------------------------------------------------
+
+
+
+Sentence 12:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 13:
+Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej. 
+
+
+
+Sentence 14:
+Kontrolna hospitalizacja w Klinice za rok. 
+
+R1	Dat Arg1:T10 Arg2:T9 << OK >>	za rok -> Kontrolna hospitalizacja w Klinice  <RANK: 3> <info: start[949, 914] <type: LEFT>>
+
+
+Sentence 15:
+Redukcja masy ciała, systematyczna aktywności fizyczna  ( preferowane wysiłki tlenowe). 
+
+
+
+Sentence 16:
+Dieta lekkostrawna , niskocholesterolowa . 
+
+
+
+Sentence 17:
+Okresowo kontrola lipidogramu .
+
+
+Sentence 18:
+stężenia elektrolitów , parametrów wydolności nerek. 
+
+
+
+Sentence 19:
+Systematyczna kontrola ciśnienia tętniczego krwi. 
+
+
+
+Sentence 20:
+Wskazane systematyczne przyjmowanie leków  
+Rp.
+
+
+
+Sentence 21:
+Triplixan 10+2,5+10 1x dz rano ,
+------------------------------------------------
+
+R2	Drg Arg1:T16 Arg2:T17 << OK >>	Triplixan -> 10+2,5+10 1x dz rano  <RANK: 3> <info: start[1276, 1286] <type: RIGHT>>
+
+
+Sentence 22:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 23:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q23.0|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo::
+------------------------------------------------
+
+
+
+Sentence 24:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 25:
+Pacjent  lat 21 przyjęty do Kliniki celem oceny kardiologicznej .
+
+
+Sentence 26:
+Obecnie bez dolegliwości .
+R3	Neg Arg1:T18 Arg2:T19 << OK >>	bez -> dolegliwości  <RANK: 3> <info: start[1735, 1739] <type: RIGHT>>
+
+
+Sentence 27:
+Ze względu na bradykardię z uczuciem stanów przedomdleniowych odstawiono Nedal ok 3 miesiące temu (dolegliwości ustąpiły ). 
+
+R4	Neg Arg1:T21 Arg2:T20 <<REDUNDANT!!!REMOVED>>	odstawiono -> bradykardię z uczuciem stanów przedomdleniowych <:REMOVED odstaw not for Symptom:> <RANK: 3> <info: start[1816, 1768] <type: LEFT>>
+R5	Neg Arg1:T21 Arg2:T22 << OK >>	odstawiono -> Nedal  <RANK: 3> <info: start[1816, 1827] <type: RIGHT>>
+R6	Dat Arg1:T23 Arg2:T20 <<REDUNDANT!!!SHOULD BE REMOVED>>	ok 3 miesiące temu -> bradykardię z uczuciem stanów przedomdleniowych  <RANK: 3> <info: start[1833, 1768] <type: LEFT>>
+R7	Dat Arg1:T23 Arg2:T22 << OK >>	ok 3 miesiące temu -> Nedal  <RANK: 3> <info: start[1833, 1827] <type: LEFT>>
+
+
+Sentence 28:
+Neguje zasłabnięcia , neguje bóle w klatce piersiowej 
+
+R8	Neg Arg1:T24 Arg2:T25 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[1879, 1886] <type: RIGHT>>
+R9	Neg Arg1:T24 Arg2:T27 <<REDUNDANT!!!REMOVED>>	Neguje -> bóle w klatce piersiowej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1879, 1908] <type: RIGHT>>
+R10	Neg Arg1:T26 Arg2:T25 <<REDUNDANT!!!REMOVED>>	neguje -> zasłabnięcia <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1901, 1886] <type: LEFT>>
+R11	Neg Arg1:T26 Arg2:T27 << OK >>	neguje -> bóle w klatce piersiowej  <RANK: 3> <info: start[1901, 1908] <type: RIGHT>>
+
+
+Sentence 29:
+W wywiadzie : Wrodzona wada serca pod postacią dwupłatkowej zastawki aortalnej i poszerzonej aorty wstępującej.
+
+
+Sentence 30:
+Nadciśnienie tętnicze IIst wg ESC/ESH.
+
+
+Sentence 31:
+Bradykardia zatokowa.
+
+
+Sentence 32:
+łagodne nadkomorowe zaburzenia rytmu serca.
+
+
+Sentence 33:
+Otyłość. 
+
+
+
+Sentence 34:
+Przebyte operacje:  brak
+
+R12	Neg Arg1:T35 Arg2:T34 << OK >>	brak -> Przebyte operacje  <RANK: 3> <info: start[2181, 2161] <type: LEFT>>
+
+
+Sentence 35:
+Leczenie przewlekłe:  brak 
+
+R13	Neg Arg1:T37 Arg2:T36 << OK >>	brak -> Leczenie przewlekłe  <RANK: 3> <info: start[2208, 2186] <type: LEFT>>
+
+
+Sentence 36:
+Przebyte choroby zakaźne - WZW ( -  ) , borelioza ( - ) Odra ( - )
+
+R14	Neg Arg1:T41 Arg2:T38 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2277, 2241] <type: LEFT>>
+R15	Neg Arg1:T41 Arg2:T39 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other second tag between (left):> <RANK: 3> <info: start[2277, 2254] <type: LEFT>>
+R16	Neg Arg1:T41 Arg2:T40 << OK >>	- -> Odra  <RANK: 3> <info: start[2277, 2270] <type: LEFT>>
+R17	Neg Arg1:T42 Arg2:T38 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2266, 2241] <type: LEFT>>
+R18	Neg Arg1:T42 Arg2:T39 << OK >>	- -> borelioza  <RANK: 3> <info: start[2266, 2254] <type: LEFT>>
+R19	Neg Arg1:T42 Arg2:T40 <<REDUNDANT!!!REMOVED>>	- -> Odra <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[2266, 2270] <type: RIGHT>>
+R20	Neg Arg1:T44 Arg2:T38 << OK >>	- -> WZW  <RANK: 3> <info: start[2247, 2241] <type: LEFT>>
+R21	Neg Arg1:T44 Arg2:T39 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2247, 2254] <type: RIGHT>>
+R22	Neg Arg1:T44 Arg2:T40 <<REDUNDANT!!!REMOVED>>	- -> Odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2247, 2270] <type: RIGHT>>
+
+
+Sentence 37:
+W wywiadzie rodzinnym : matka nadciśnienie tętnicze. 
+
+
+
+Sentence 38:
+Palenie tytoniu: nie
+Inne używki: nie
+Uczulenia: neguje
+Stan społeczny: warunki mieszkaniowe dobre , mieszka z rodzicami 
+Leki: Triplixan 10mg+2,5mg+5mg 1x dz wieczorem 
+
+R23	Neg Arg1:T48 Arg2:T51 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2352, 2373] <type: RIGHT>>
+R24	Neg Arg1:T48 Arg2:T47 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[2352, 2335] <type: LEFT>>
+R25	Neg Arg1:T48 Arg2:T49 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2352, 2356] <type: RIGHT>>
+R26	Neg Arg1:T48 Arg2:T53 <<REDUNDANT!!!REMOVED>>	nie -> warunki mieszkaniowe dobre <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2352, 2407] <type: RIGHT>>
+R27	Neg Arg1:T48 Arg2:T54 <<REDUNDANT!!!REMOVED>>	nie -> Triplixan <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2352, 2463] <type: RIGHT>>
+R28	Neg Arg1:T48 Arg2:T55 <<REDUNDANT!!!REMOVED>>	nie -> 10mg+2,5mg+5mg 1x dz wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2352, 2473] <type: RIGHT>>
+R29	Neg Arg1:T50 Arg2:T51 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2369, 2373] <type: RIGHT>>
+R30	Neg Arg1:T50 Arg2:T47 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2369, 2335] <type: LEFT>>
+R31	Neg Arg1:T50 Arg2:T49 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[2369, 2356] <type: LEFT>>
+R32	Neg Arg1:T50 Arg2:T53 <<REDUNDANT!!!REMOVED>>	nie -> warunki mieszkaniowe dobre <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2369, 2407] <type: RIGHT>>
+R33	Neg Arg1:T50 Arg2:T54 <<REDUNDANT!!!REMOVED>>	nie -> Triplixan <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2369, 2463] <type: RIGHT>>
+R34	Neg Arg1:T50 Arg2:T55 <<REDUNDANT!!!REMOVED>>	nie -> 10mg+2,5mg+5mg 1x dz wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2369, 2473] <type: RIGHT>>
+R35	Neg Arg1:T52 Arg2:T51 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[2384, 2373] <type: LEFT>>
+R36	Neg Arg1:T52 Arg2:T47 <<REDUNDANT!!!REMOVED>>	neguje -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2384, 2335] <type: LEFT>>
+R37	Neg Arg1:T52 Arg2:T49 <<REDUNDANT!!!REMOVED>>	neguje -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2384, 2356] <type: LEFT>>
+R38	Neg Arg1:T52 Arg2:T53 <<REDUNDANT!!!REMOVED>>	neguje -> warunki mieszkaniowe dobre <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2384, 2407] <type: RIGHT>>
+R39	Neg Arg1:T52 Arg2:T54 <<REDUNDANT!!!REMOVED>>	neguje -> Triplixan <:REMOVED other second tag between (right):> <RANK: 0> <info: start[2384, 2463] <type: RIGHT>>
+R40	Neg Arg1:T52 Arg2:T55 <<REDUNDANT!!!REMOVED>>	neguje -> 10mg+2,5mg+5mg 1x dz wieczorem <:REMOVED other second tag between (right):> <RANK: 0> <info: start[2384, 2473] <type: RIGHT>>
+R41	Drg Arg1:T54 Arg2:T55 << OK >>	Triplixan -> 10mg+2,5mg+5mg 1x dz wieczorem  <RANK: 3> <info: start[2463, 2473] <type: RIGHT>>
+R42	Alg Arg1:T51 Arg2:T54 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Triplixan <:REMOVED other second tag between (right):> <RANK: 0> <info: start[2373, 2463] <type: RIGHT>>
+
+
+Sentence 39:
+Plan Opieki : Echo serca , Holter EKG , Próba Wysiłkowa  , Planowany czas hospitalizacji 4-5 dni
+
+
+
+Sentence 40:
+------------------------------------------------
+
+
+
+Sentence 41:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 42:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:9.90[10^3/ul]
+    
+
+
+Sentence 43:
+RBC Krwinki czerwone:5.50[10^6/ul]
+    
+
+
+Sentence 44:
+HGB Hemoglobina:16.2[g/dl]
+    
+
+
+Sentence 45:
+HCT Hematokryt:42.8[%]
+    
+
+
+Sentence 46:
+MCV wskaźnik czerwonokrw:77.8[fl]
+    
+
+
+Sentence 47:
+MCH wskaźnik czerwonokrw:29.5[pg]
+    
+
+
+Sentence 48:
+MCHC wskaźnik czerwonokr:37.9[g/dl]
+    
+
+
+Sentence 49:
+PLT z morfologii:165[10^3/ul]
+    
+
+
+Sentence 50:
+RDW-SD:35.2[fl]
+    
+
+
+Sentence 51:
+RDW-CV:12.7[%]
+    PDW:19.4[fl]
+    
+
+
+Sentence 52:
+MPV:13.5[fl]
+    
+
+
+Sentence 53:
+P-LCR:51.3[%]
+    
+
+
+Sentence 54:
+PCT (hematokryt płytkowy:0.22[%]
+    
+
+
+Sentence 55:
+NEUTR# wartość bezwzględ:4.63[10^3/ul]
+    
+
+
+Sentence 56:
+NEUTR%:46.8[%]
+    
+
+
+Sentence 57:
+LYMH# wartość bezwzględn:4.10[10^3/ul]
+    
+
+
+Sentence 58:
+LYMPH%:41.4[%]
+    
+
+
+Sentence 59:
+MONO# wartość bezwzględn:0.98[10^3/ul]
+    MONO%:9.9[%]
+    
+
+
+Sentence 60:
+EO# wartość bezwzględna:0.13[10^3/ul]
+    
+
+
+Sentence 61:
+EO%:1.3[%]
+    BASO# wartość bezwzględn:0.06[10^3/ul]
+    
+
+
+Sentence 62:
+BASO%:0.6[%]
+    
+
+
+Sentence 63:
+NRBC %:0.0[%]
+    
+
+
+Sentence 64:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 65:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:28.5[sek]
+
+
+
+Sentence 66:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 67:
+Czas protrombinowy:12.4[sek]
+    
+
+
+Sentence 68:
+Wskaźnik PT:88.7[%]
+    
+
+
+Sentence 69:
+INR:1.13
+D-dimer
+
+
+Sentence 70:
+- test ilościowy: D-dimer - test ilościowy:138[ng/ml]
+
+
+
+Sentence 71:
+Badanie ogólne moczu
+    
+
+
+Sentence 72:
+barwa:żółty[ ]
+    
+
+
+Sentence 73:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 74:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 75:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 76:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 77:
+ciężar właściwy:1.018[ ]
+    
+
+
+Sentence 78:
+kwas askrobinowy:40 mg/dl[ ]
+    
+
+
+Sentence 79:
+pH:6.0[ ]
+    
+
+
+Sentence 80:
+białko:nieobecne[ ]
+    
+
+
+Sentence 81:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 82:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 83:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 84:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 85:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 86:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 87:
+leukocyty:4 /ul[ul]
+    śluz:dość liczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 88:
+TSH: TSH:3.18[uIU/ml]
+
+
+
+Sentence 89:
+FT3: FT3:4.27[pg/ml]
+
+
+
+Sentence 90:
+FT4: FT4:1.60[ng/dl]
+
+
+
+Sentence 91:
+Troponina T: Troponina T:5.1[pg/ml]
+
+
+
+Sentence 92:
+ALAT: ALAT:41[U/L]
+ASPAT: ASPAT:27[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 93:
+Sód (Na): Sód:139[mmol/L]
+
+
+
+Sentence 94:
+Potas (K): Potas:3.7[mmol/L]
+
+
+
+Sentence 95:
+Kreatynina + GFR
+    
+
+
+Sentence 96:
+Kreatynina w surowicy:0.82[mg/dl]
+    
+
+
+Sentence 97:
+eGFR wg skr.
+
+
+Sentence 98:
+MDRD ze stan:117.5[ml/min/1,73 m^2]
+
+
+
+Sentence 99:
+Mocznik: Mocznik:26[mg/dl]
+
+
+
+Sentence 100:
+Kwas moczowy: Kwas moczowy:5.6[mg/dl]
+
+
+
+Sentence 101:
+Lipidogram
+    
+
+
+Sentence 102:
+Cholesterol całkowity:115[mg/dl]
+    
+
+
+Sentence 103:
+Cholesterol HDL:38[mg/dl]
+    
+
+
+Sentence 104:
+Cholestrol LDL:74[mg/dl]
+    
+
+
+Sentence 105:
+Triglicerydy:73[mg/dl]
+    
+
+
+Sentence 106:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:83[mg/dl]
+
+
+
+Sentence 107:
+NT-proBNP surowica: NT-proBNP w surowicy:15[pg/ml]
+
+
+
+Sentence 108:
+------------------------------------------------
+
+
+
+Sentence 109:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 110:
+Q23.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 111:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 112:
+89.501
+88.721
+89.502
+89.41
+88.761
+88.751
+------------------------------------------------
+
+

@@ -1,0 +1,92 @@
+T1	Treatment 339 395	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T2	Investigation 412 424	kontrola TTE
+T3	Date 425 433	co 1 rok
+T4	Behaviour 435 475	Dieta lekkostrawna , niskocholesterolowa
+R1	Dat Arg1:T3 Arg2:T2	
+T5	Condition 744 782	Łagodna niedomykalność tętnicy płucnej
+T6	Treatment 792 807	walwuloplastyce
+N2	Reference T6 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+N1	Reference T5 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T7	Date 809 814	1994r
+T8	Condition 825 840	stenozy płucnej
+N3	Reference T8 ICD10:Q22.1	Wrodzone zwężenie zastawki pnia płucnego
+T9	Condition 842 864	Żylaki kończyn dolnych
+A1	Status T9 Historical_Insignificant
+N4	Reference T9 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+R2	Dat Arg1:T7 Arg2:T8	
+R3	Dat Arg1:T7 Arg2:T6	
+T10	Condition 1091 1129	Łagodna niedomykalność tętnicy płucnej
+N5	Reference T10 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T11	Treatment 1139 1154	walwuloplastyce
+N6	Reference T11 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T12	Date 1156 1161	1994r
+T13	Condition 1172 1187	stenozy płucnej
+N7	Reference T13 ICD10:Q22.1	Wrodzone zwężenie zastawki pnia płucnego
+T14	Condition 1190 1212	Żylaki kończyn dolnych
+A2	Status T14 Historical_Insignificant
+N8	Reference T14 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T15	Condition 1214 1231	Kifoza kręgosłupa
+A3	Status T15 Historical_Insignificant
+N9	Reference T15 ICD10:M40.2	Inna i nieokreślona kifoza
+R4	Dat Arg1:T12 Arg2:T11	
+R5	Dat Arg1:T12 Arg2:T13	
+T16	Condition 1379 1476	wrodzona wada serca pod postacią zwężenia zastawkowego tętnicy płucnej z łagodną niedomykalnością
+T17	Treatment 1481 1506	walwuloplastyce balonowej
+T18	Date 1508 1513	1994r
+T19	Investigation 1542 1568	oceny echokardiograficznej
+T20	Treatment 1571 1588	Przebyte operacje
+N11	Reference T20 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T21	Negation 1590 1600	nie podaje
+T22	Treatment 1601 1634	Leczenie przewlekłe: ortopedyczne
+T23	Condition 1637 1654	kyfoza kręgosłupa
+N12	Reference T23 ICD10:M40.2	Inna i nieokreślona kifoza
+T24	Condition 1682 1685	WZW
+N13	Reference T24 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T25	Condition 1687 1696	borelioza
+N14	Reference T25 ICD10:A69.2	Choroba z Lyme
+T26	Negation 1699 1709	nie podaje
+T27	Condition 1747 1754	arytmie
+N15	Reference T27 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T28	Behaviour 1755 1770	Palenie tytoniu
+N16	Reference T28 ICD10:Z72.0	Używanie tytoniu
+T29	Negation 1772 1782	nie podaje
+T30	Behaviour 1783 1794	Inne używki
+N17	Reference T30 ICD10:Z72	Problemy związane ze stylem życia
+T31	Negation 1796 1806	nie podaje
+T32	Condition 1807 1816	Uczulenia
+N18	Reference T32 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T33	Negation 1818 1828	nie podaje
+T34	Behaviour 1847 1865	pracownik fizyczny
+T35	Drug 1873 1877	Leki
+T36	Negation 1879 1889	nie podaje
+T37	Investigation 1917 1927	echo serca
+T38	Investigation 1929 1949	echo przezprzełykowe
+T39	Investigation 1951 1968	echo obciążeniowe
+T40	Investigation 1970 1973	TET
+T41	Investigation 1975 1981	Holter
+T42	Investigation 1983 2001	RTG kl. piersiowej
+R6	Neg Arg1:T36 Arg2:T35	
+R7	Neg Arg1:T33 Arg2:T32	
+R8	Neg Arg1:T31 Arg2:T30	
+R9	Neg Arg1:T29 Arg2:T28	
+R10	Neg Arg1:T26 Arg2:T25	
+R11	Neg Arg1:T26 Arg2:T24	
+R12	Neg Arg1:T21 Arg2:T20	
+R13	Dat Arg1:T18 Arg2:T17	
+N10	Reference T16 ICD10:Q22	Wrodzone wady rozwojowe zastawki pnia płucnego i zastawki trójdzielnej
+A4	Status T27 Family
+R1	Dat Arg1:T3 Arg2:T4
+R10	Neg Arg1:T21 Arg2:T22
+R12	Dat Arg1:T18 Arg2:T16
+R13	Dat Arg1:T18 Arg2:T17
+R19	Neg Arg1:T26 Arg2:T25
+R2	Dat Arg1:T3 Arg2:T2
+R3	Dat Arg1:T7 Arg2:T8
+R37	Neg Arg1:T29 Arg2:T28
+R4	Dat Arg1:T7 Arg2:T9
+R5	Dat Arg1:T12 Arg2:T13
+R53	Neg Arg1:T31 Arg2:T30
+R6	Dat Arg1:T12 Arg2:T14
+R66	Neg Arg1:T33 Arg2:T32
+R9	Neg Arg1:T21 Arg2:T20
+R91	Neg Arg1:T36 Arg2:T35

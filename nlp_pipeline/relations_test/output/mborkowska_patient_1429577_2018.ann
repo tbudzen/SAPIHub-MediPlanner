@@ -1,0 +1,93 @@
+T1	Treatment 346 373	dalsza opieka w poradni POZ
+T2	Treatment 389 412	kontrola kardiologiczna
+T3	Behaviour 419 441	dieta środziemnomorska
+T4	Behaviour 448 493	stały, umiarkowany, aerobowy wysiłek fizyczny
+T5	Investigation 499 524	9kontrola morfologii krwi
+T6	Date 525 538	za 2 tygodnie
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Drug 583 593	Concor Cor
+T8	Drug_dose 594 613	2,5 mg 1 tabl. rano
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Investigation 1695 1705	echo serca
+T10	Investigation 1707 1710	TET
+T11	Investigation 1712 1716	ABPM
+T12	Investigation 1718 1728	Holter ekg
+T13	Investigation 1730 1748	rtg kl. piersiowej
+T14	Drug 1653 1657	Leki
+T15	Negation 1659 1666	żadnych
+R3	Neg Arg1:T15 Arg2:T14	
+T16	Negation 1621 1627	neguje
+T17	Behaviour 1602 1619	Uzależnienie inne
+N1	Reference T17 ICD10:Z72	Problemy związane ze stylem życia
+R4	Neg Arg1:T16 Arg2:T17	
+T18	Negation 1594 1600	neguje
+T19	Negation 1576 1584	neguje  
+T20	Negation 1556 1562	neguje
+T21	Behaviour 1564 1574	Nikotynizm
+N2	Reference T21 ICD10:Z72.0	Używanie tytoniu
+R5	Neg Arg1:T19 Arg2:T21	
+T22	Behaviour 1585 1592	Alkohol
+N3	Reference T22 ICD10:Z72.1	Używanie alkoholu
+R6	Neg Arg1:T18 Arg2:T22	
+T23	Condition 1546 1553	Alergie
+N4	Reference T23 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R7	Neg Arg1:T20 Arg2:T23	
+T24	Negation 1531 1544	bez znaczenia
+T25	Condition 1514 1530	Wywiad rodzinny:
+A1	Status T25 Family
+R8	Neg Arg1:T24 Arg2:T25	
+T26	Condition 806 827	Tachykardia zatokowa.
+N5	Reference T26 ICD10:R00.0	Tachykardia, nieokreślona
+T27	Symptom 828 867	Niespecyficzne bóle w klatce piersiowej
+N6	Reference T27 ICD10:R07.3	Inne bóle w klatce piersiowej
+T28	Condition 886 922	przepukliny pachwinowej lewostronnej
+A2	Status T28 Historical_Insignificant
+N7	Reference T28 ICD10:K40	Przepuklina pachwinowa
+T29	Treatment 877 885	operacji
+A3	Status T29 Historical_Insignificant
+T30	Date 924 935	20 lat temu
+R9	Dat Arg1:T30 Arg2:T28	
+R10	Dat Arg1:T30 Arg2:T29	
+T31	Symptom 1138 1165	bólów w klatce piersiowej -
+N8	Reference T31 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T32	Date 1169 1176	09.2017
+R11	Dat Arg1:T32 Arg2:T31	
+T33	Symptom 1177 1207	klujące, zamostkowe, sekundowe
+N9	Reference T33 ICD10:R07.3	Inne bóle w klatce piersiowej
+R12	Dat Arg1:T32 Arg2:T33	
+T34	Date 1210 1249	d 2 m-cy trwają dłużej - wielogodzinne,
+T35	Symptom 1252 1297	charakterze ucisku, klujące również występują
+N10	Reference T35 ICD10:R07.3	Inne bóle w klatce piersiowej
+R13	Dat Arg1:T34 Arg2:T35	
+T36	Investigation 1302 1305	ekg
+T37	Date 1306 1316	11.09.2017
+R14	Dat Arg1:T37 Arg2:T36	
+T38	Investigation_result 1317 1385	obniżenia odc. ST na śc. dolnej z ujemno-dodatnimi zał. T w III, aVF
+R15	Inv Arg1:T36 Arg2:T38	
+R16	Dat Arg1:T37 Arg2:T38	
+T39	Condition 1409 1444	wypadanie płatka zastawki mitralnej
+N11	Reference T39 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T40	Condition 1465 1499	przepuklina pachwinowa lewostronna
+A4	Status T40 Historical_Insignificant
+N12	Reference T40 ICD10:K40	Przepuklina pachwinowa
+T41	Treatment 1455 1463	operacje
+A5	Status T41 Historical_Insignificant
+T42	Date 1501 1512	20 lat temu
+R17	Dat Arg1:T42 Arg2:T40	
+R18	Dat Arg1:T42 Arg2:T41	
+R1	Drg Arg1:T7 Arg2:T8
+R13	Dat Arg1:T32 Arg2:T31
+R14	Dat Arg1:T32 Arg2:T33
+R19	Dat Arg1:T34 Arg2:T35
+R24	Dat Arg1:T37 Arg2:T36
+R25	Neg Arg1:T24 Arg2:T23
+R26	Neg Arg1:T24 Arg2:T25
+R29	Dat Arg1:T42 Arg2:T23
+R30	Dat Arg1:T42 Arg2:T25
+R31	Dat Arg1:T42 Arg2:T40
+R41	Neg Arg1:T15 Arg2:T14
+R42	Neg Arg1:T16 Arg2:T17
+R6	Dat Arg1:T6 Arg2:T5
+R62	Neg Arg1:T19 Arg2:T22
+R70	Neg Arg1:T20 Arg2:T21
+R8	Inv Arg1:T36 Arg2:T38

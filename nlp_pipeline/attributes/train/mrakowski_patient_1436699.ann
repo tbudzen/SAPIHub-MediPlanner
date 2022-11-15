@@ -1,0 +1,24 @@
+T1	Drug 481 491	Metocardem
+T2	Drug_dose 492 535	50 mg x1 do momentu ponownej hospitalizacji
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Treatment 539 578	Termin przyjęcia do Kliniki Kardiologii
+T4	Date 579 592	19 marca 2019
+R2	Dat Arg1:T4 Arg2:T3	
+T5	Condition 877 893	Arytmia komorowa
+N1	Reference T5 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T6	Drug 1015 1024	Rytmonorm
+T7	Drug_dose 1025 1035	3 x 150 mg
+R3	Drg Arg1:T6 Arg2:T7	
+T8	Treatment 1038 1101	kontrola w Poradni Kardiologicznej z wynikiem badania metodą RM
+T9	Drug 1221 1230	Rytmonorm
+T10	Condition 1448 1493	Zaburzenia rytmu serca pochodzenia komorowego
+N2	Reference T10 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T11	Symptom 1506 1526	utracie przytomności
+N3	Reference T11 ICD10:R55	Omdlenie i zapaść
+T12	Symptom 1529 1552	kilkakrotnych drgawkach
+N4	Reference T12 ICD10:R56.8	Inne i nieokreślone drgawki
+T13	Condition 1689 1714	zaburzeniami rytmu  serca
+N5	Reference T13 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T14	Drug 344 349	leków
+T15	Negation 340 343	bez
+R4	Neg Arg1:T15 Arg2:T14	

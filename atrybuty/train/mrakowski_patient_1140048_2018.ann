@@ -1,0 +1,58 @@
+T1	Drug 340 346	Acesan
+T2	Drug 349 357	Spironol
+T3	Drug 360 370	Lisinopril
+T4	Condition 589 664	Wrodzona wada serca pod postacią ubytku przegrody przedsionkowo - komorowej
+N1	Reference T4 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T5	Condition 668 690	zwężeniem cieśni aorty
+N2	Reference T5 ICD10:Q25.1	Zwężenie cieśni aorty
+T6	Treatment 703 728	operacji metodą Crafoorda
+T7	Condition 731 764	przewężeniem pnia tętnicy płucnej
+N3	Reference T7 ICD10:Q25.6	Zwężenie pnia płucnego
+T8	Date 766 777	01.06.2011r
+R1	Dat Arg1:T8 Arg2:T6	
+R2	Dat Arg1:T8 Arg2:T7	
+T9	Treatment 791 808	operacji plastyki
+T10	Condition 809 840	ubytku przedsionkowo-komorowego
+N4	Reference T10 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T11	Treatment 846 895	zdjęcia opaski przewężającej pień tętnicy płucnej
+T12	Date 897 906	24.02.12r
+R3	Dat Arg1:T12 Arg2:T11	
+R4	Dat Arg1:T12 Arg2:T10	
+R5	Dat Arg1:T12 Arg2:T9	
+T13	Treatment 920 958	operacji plastyki zastawki dwudzielnej
+T14	Date 961 972	04.11.2014r
+R6	Dat Arg1:T14 Arg2:T13	
+T15	Condition 978 1021	Istotna niedomykalność zastawki dwudzielnej
+N5	Reference T15 ICD10:Q23.3	Wrodzona niedomykalność zastawki mitralnej
+T16	Condition 1027 1055	Epizody rytmu pozazatokowego
+N6	Reference T16 ICD10:I45.8	Inne określone zaburzenia przewodnictwa
+T17	Condition 1061 1106	Przetoka tętniczo-żylna lewej kończyny górnej
+N7	Reference T17 ICD10:I77.0	Przetoka tętniczo-żylna, nabyta
+T18	Drug 1267 1277	Lisinopril
+T19	Drug_dose 1278 1286	2 x 1 mg
+R7	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1289 1295	Acesan
+T21	Drug_dose 1296 1305	1 x 30 mg
+R8	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1308 1316	Spironol
+T23	Drug_dose 1317 1359	1 x 12,5 mg z przerwą w soboty i niedziele
+R9	Drg Arg1:T22 Arg2:T23	
+T24	Treatment 1361 1384	Kontrola kardiologiczna
+T25	Date 1385 1398	za ok. 6 m-cy
+R10	Dat Arg1:T25 Arg2:T24	
+T26	Condition 1576 1588	przetoki t-ż
+N8	Reference T26 ICD10:I77.0	Przetoka tętniczo-żylna, nabyta
+T27	Behaviour 1611 1729	Wysiłek fizyczny zalecany w zakresie rekreacyjnym z wyłączeniem biegów długodystansowych i dużych obciążeń wysiłkowych
+T28	Investigation 1902 1919	badań kontrolnych
+T29	Drug 1963 1969	Acesan
+T30	Drug_dose 1970 1975	30 mg
+R11	Drg Arg1:T29 Arg2:T30	
+T31	Drug 1977 1985	Spironol
+T32	Drug_dose 1986 2015	1xdz 12,5 mg 5razy w tygodniu
+R12	Drg Arg1:T31 Arg2:T32	
+T33	Condition 2055 2066	astygmatyzm
+N9	Reference T33 ICD10:H52.2	Astygmatyzm
+T34	Negation 2078 2081	bez
+T35	Condition 2082 2095	cech infekcji
+N10	Reference T35 ICD10:J00	Ostre zapalenie nosa i gardła [przeziębienie]
+R13	Neg Arg1:T34 Arg2:T35	

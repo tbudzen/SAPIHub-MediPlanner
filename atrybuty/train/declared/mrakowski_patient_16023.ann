@@ -1,0 +1,115 @@
+T1	Condition 677 716	Istotna niedomykalność zastawki płucnej
+T2	Treatment 726 754	operacji kardiochirurgicznej
+T5	Date 867 872	1978r
+R3	Dat Arg1:T5 Arg2:T2	
+T6	Condition 885 903	Niewydolność serca
+T7	Condition 962 1006	Łagodna niedomykalność zastawki trójdzielnej
+T8	Condition 1008 1039	Pośrednie prawdopodobieństwo HP
+N4	Reference T8 ICD10:I27.0	Pierwotne nadciśnienie płucne
+T9	Condition 1057 1087	Pojedyncze pobudzenia komorowe
+N5	Reference T9 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T10	Condition 1089 1121	Guzek podopłucnowy płuca prawego
+T11	Drug 1265 1275	NaCl 0,9 %
+T12	Drug 1278 1284	Magnez
+T13	Drug 1287 1294	Nonpres
+T14	Treatment 1403 1468	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T15	Behaviour 1471 1511	Dieta lekkostrawna , niskocholesterolowa
+T16	Investigation 1515 1598	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T17	Investigation 1600 1644	Kontrola elektrolitów i kreatyniny, mocznika
+T18	Investigation 1663 1711	Systematyczna kontrola ciśnienia tętniczego krwi
+T19	Treatment 1714 1755	Wskazane systematyczne przyjmowanie leków
+T20	Drug 1762 1769	Nonpres
+T21	Drug_dose 1770 1786	25 mg 1x dz rano
+R4	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1788 1796	Magne B6
+T23	Drug_dose 1797 1807	1x dz rano
+R5	Drg Arg1:T22 Arg2:T23	
+T24	Symptom 1977 2007	pogorszenia tolerancji wysiłku
+N7	Reference T24 ICD10:R53	Złe samopoczucie i zmęczenie
+T25	Date 2032 2042	od 2-3 lat
+R6	Dat Arg1:T25 Arg2:T24	
+T26	Symptom 2070 2143	bóle w klatce piersiowej o charakterze punktowym nie związane z wysiłkiem
+N8	Reference T26 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T27	Symptom 2158 2173	kołatania serca
+N9	Reference T27 ICD10:R00.2	Kołatanie serca
+T28	Negation 2176 2182	Neguje
+T29	Symptom 2183 2195	zasłabnięcia
+R7	Neg Arg1:T28 Arg2:T29	
+T30	Treatment 2222 2241	korekcji całkowitej
+N11	Reference T30 ICD10:Q21.3	Tetralogia Fallota
+T31	Date 2272 2276	1987
+R8	Dat Arg1:T31 Arg2:T30	
+T32	Treatment 2309 2317	leczeniu
+A5	Status T32 Historical_Insignificant
+T33	Date 2347 2360	ok 8 lat temu
+R9	Dat Arg1:T33 Arg2:T32	
+A6	Source T32 Declared
+T34	Condition 2613 2616	WZW
+N12	Reference T34 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T35	Negation 2619 2620	-
+T36	Condition 2626 2635	borelioza
+N13	Reference T36 ICD10:A69.2	Choroba z Lyme
+T37	Negation 2638 2639	-
+T38	Condition 2642 2646	Odra
+N14	Reference T38 ICD10:B05	Odra
+T39	Negation 2649 2650	-
+R10	Neg Arg1:T35 Arg2:T34	
+R11	Neg Arg1:T37 Arg2:T36	
+R12	Neg Arg1:T39 Arg2:T38	
+T40	Behaviour 2690 2705	Palenie tytoniu
+T41	Behaviour 2712 2723	Inne używki
+T42	Condition 2729 2738	Uczulenia
+T43	Negation 2707 2710	nie
+T44	Negation 2725 2728	nie
+T45	Negation 2740 2746	neguje
+R13	Neg Arg1:T43 Arg2:T40	
+R14	Neg Arg1:T44 Arg2:T41	
+R15	Neg Arg1:T45 Arg2:T42	
+A7	Source T33 Declared
+T46	Behaviour 2763 2789	warunki mieszkaniowe dobre
+T47	Investigation 2850 2860	Echo serca
+T48	Investigation 2863 2873	Holter EKG
+T49	Investigation 2875 2877	RR
+T50	Investigation 2881 2896	Próba Wysiłkowa
+T52	Treatment 2558 2577	Leczenie przewlekłe
+T53	Negation 2580 2584	brak
+R16	Neg Arg1:T53 Arg2:T52	
+T54	Condition 2655 2674	wywiadzie rodzinnym
+A8	Status T54 Family
+T55	Negation 2677 2688	brak danych
+R17	Neg Arg1:T55 Arg2:T54	
+N3	Reference T7 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+N1	Reference T1 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T51	Treatment 2532 2549	Przebyte operacje
+T3	Condition 764 785	zweżenia zastawkowego
+N10	Reference T3 ICD10:Q22.1	Wrodzone zwężenie zastawki pnia płucnego
+T4	Condition 824 865	ubytku w przegrodzie międzyprzedsionkowej
+N16	Reference T4 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R1	Dat Arg1:T5 Arg2:T4	
+R2	Dat Arg1:T5 Arg2:T3	
+T56	Condition 2251 2269	Tetralogii Fallota
+N17	Reference T56 ICD10:Q21.3	Tetralogia Fallota
+R18	Dat Arg1:T31 Arg2:T56	
+T57	Condition 2327 2346	Helicobacter pyroli
+N18	Reference T57 ICD10:B96.8	Inne określone bakterie jako przyczyna chorób sklasyfikowanych w innych rozdziałach
+R19	Dat Arg1:T33 Arg2:T57	
+A2	Source T57 Declared
+T58	Condition 788 818	podzastawkowej tętnicy płucnej
+N19	Reference T58 ICD10:Q25.6	Zwężenie pnia płucnego
+R20	Dat Arg1:T5 Arg2:T58	
+T59	Investigation_result 956 959	52%
+A1	Source T8 Declared
+T60	Investigation_result 1042 1054	RVPs-33 mmHg
+N6	Reference T10 ICD10:D38.1	Tchawica, oskrzele i płuco
+T61	Date 1645 1653	za 3 dni
+R21	Dat Arg1:T61 Arg2:T17	
+T62	Treatment 2474 2497	Ostatnia Hospitalizacji
+T63	Date 2500 2504	2006
+R22	Dat Arg1:T63 Arg2:T62	
+N20	Reference T42 ICD10:T78.4	Alergia, nieokreślona
+N2	Reference T6 ICD10:I50	Niewydolność serca
+T64	Symptom 904 920	w I/II' wg. NYHA
+N21	Reference T64 ICD10:I50	Niewydolność serca
+T65	Condition 923 953	frakcją wyrzutową lewej komory
+N22	Reference T65 ICD10:I50	Niewydolność serca
+N15	Reference T40 ICD10:Z72.0	Używanie tytoniu

@@ -1,0 +1,545 @@
+allRelations          : 54
+oks                   : 12
+isRedundantAndRemoveds: 29
+shouldNotBeRemoveds   : 5
+shouldBeBemoveds      : 8
+GOOD / BAD            : 41 / 13
+Sentence 0:
+------------------------------------------------
+Wiek: 3 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zastosowane leczenie
+------------------------------------------------
+
+
+
+Sentence 3:
+Nebulizacje z 0,9%NaCl, krople składowe do nosa z neomycyną i effedryną, Captopril
+
+R1	Drg Arg1:T2 Arg2:T1 << OK >>	0,9%NaCl -> Nebulizacje  <RANK: 3> <info: start[354, 340] <type: LEFT>>
+R2	Drg Arg1:T2 Arg2:T3 <<REDUNDANT!!!REMOVED>>	0,9%NaCl -> krople składowe do nosa <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[354, 364] <type: RIGHT>>
+R3	Drg Arg1:T4 Arg2:T1 <<REDUNDANT!!!REMOVED>>	neomycyną -> Nebulizacje <:REMOVED other first tag between (left):> <RANK: 2> <info: start[390, 340] <type: LEFT>>
+R4	Drg Arg1:T4 Arg2:T3 << OK >>	neomycyną -> krople składowe do nosa  <RANK: 3> <info: start[390, 364] <type: LEFT>>
+R5	Drg Arg1:T5 Arg2:T1 <<REDUNDANT!!!REMOVED>>	effedryną -> Nebulizacje <:REMOVED other first tag between (left):> <RANK: 2> <info: start[402, 340] <type: LEFT>>
+R6	Drg Arg1:T5 Arg2:T3 << OK >>	effedryną -> krople składowe do nosa  <RANK: 2> <info: start[402, 364] <type: LEFT>>
+R7	Drg Arg1:T6 Arg2:T1 <<REDUNDANT!!!REMOVED>>	Captopril -> Nebulizacje <:REMOVED other first tag between (left):> <RANK: 2> <info: start[413, 340] <type: LEFT>>
+R8	Drg Arg1:T6 Arg2:T3 <<REDUNDANT!!!REMOVED>>	Captopril -> krople składowe do nosa <:REMOVED other first tag between (left):> <RANK: 2> <info: start[413, 364] <type: LEFT>>
+
+
+Sentence 4:
+------------------------------------------------
+
+
+
+Sentence 5:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 6:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q25.4|Rozpoznanie II: ICD10:Z98.8|Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: ICD10:J06|Opisowo:: Wrodzona wada serca pod postacią przerwanego łuku aorty typu B i okienka aortalno-płucnego.\x0aStan po operacji kardiochirurgicznej (Katowice, 21.12.2016r.)\x0aZwężenie tętnic płucnych, zwężenie łuku aorty.\x0aStan po przezskórnej balonoplastyce tt. płucnych (Katowice, 06.04.2017r)\x0aStan po implantacji stentu do cieśni aorty (Katowice, 24.07.2017r)\x0aInfekcja górnych dróg oddechowych.
+
+R9	Dat Arg1:T9 Arg2:T7 <<REDUNDANT!!!SHOULD BE REMOVED>>	21.12.2016r -> Wrodzona wada serca pod postacią przerwanego łuku aorty typu B  <RANK: 2> <info: start[814, 671] <type: LEFT>>
+R10	Dat Arg1:T9 Arg2:T10 <<REDUNDANT!!!SHOULD BE REMOVED>>	21.12.2016r -> Zwężenie tętnic płucnych  <RANK: 2> <info: start[814, 831] <type: RIGHT>>
+R11	Dat Arg1:T9 Arg2:T11 <<REDUNDANT!!!SHOULD BE REMOVED>>	21.12.2016r -> zwężenie łuku aorty  <RANK: 2> <info: start[814, 857] <type: RIGHT>>
+R12	Dat Arg1:T9 Arg2:T16 <<REDUNDANT!!!REMOVED>>	21.12.2016r -> Infekcja górnych dróg oddechowych <:REMOVED other first tag between (right):> <RANK: 2> <info: start[814, 1027] <type: RIGHT>>
+R13	Dat Arg1:T9 Arg2:T33 <<REDUNDANT!!!REMOVED>>	21.12.2016r -> cieśni aorty <:REMOVED other first tag between (right):> <RANK: 2> <info: start[814, 987] <type: RIGHT>>
+R14	Dat Arg1:T9 Arg2:T34 <<REDUNDANT!!!SHOULD BE REMOVED>>	21.12.2016r -> okienka aortalno-płucnego  <RANK: 2> <info: start[814, 736] <type: LEFT>>
+R15	Dat Arg1:T9 Arg2:T8 << OK >>	21.12.2016r -> operacji kardiochirurgicznej  <RANK: 2> <info: start[814, 774] <type: LEFT>>
+R16	Dat Arg1:T9 Arg2:T12 <<REDUNDANT!!!SHOULD BE REMOVED>>	21.12.2016r -> przezskórnej balonoplastyce tt. płucnych  <RANK: 2> <info: start[814, 889] <type: RIGHT>>
+R17	Dat Arg1:T9 Arg2:T14 <<REDUNDANT!!!REMOVED>>	21.12.2016r -> implantacji stentu <:REMOVED other first tag between (right):> <RANK: 2> <info: start[814, 965] <type: RIGHT>>
+R18	Dat Arg1:T13 Arg2:T7 <<REDUNDANT!!!REMOVED>>	06.04.2017r -> Wrodzona wada serca pod postacią przerwanego łuku aorty typu B <:REMOVED many second tags on the left:> <RANK: 2> <info: start[941, 671] <type: LEFT>>
+R19	Dat Arg1:T13 Arg2:T10 <<REDUNDANT!!!REMOVED>>	06.04.2017r -> Zwężenie tętnic płucnych <:REMOVED many second tags on the left:> <RANK: 2> <info: start[941, 831] <type: LEFT>>
+R20	Dat Arg1:T13 Arg2:T11 <<REDUNDANT!!!REMOVED>>	06.04.2017r -> zwężenie łuku aorty <:REMOVED many second tags on the left:> <RANK: 2> <info: start[941, 857] <type: LEFT>>
+R21	Dat Arg1:T13 Arg2:T16 <<REDUNDANT!!!REMOVED>>	06.04.2017r -> Infekcja górnych dróg oddechowych <:REMOVED other first tag between (right):> <RANK: 2> <info: start[941, 1027] <type: RIGHT>>
+R22	Dat Arg1:T13 Arg2:T33 <<REDUNDANT!!!SHOULD BE REMOVED>>	06.04.2017r -> cieśni aorty  <RANK: 3> <info: start[941, 987] <type: RIGHT>>
+R23	Dat Arg1:T13 Arg2:T34 <<REDUNDANT!!!REMOVED>>	06.04.2017r -> okienka aortalno-płucnego <:REMOVED many second tags on the left:> <RANK: 2> <info: start[941, 736] <type: LEFT>>
+R24	Dat Arg1:T13 Arg2:T8 <<REDUNDANT!!!REMOVED>>	06.04.2017r -> operacji kardiochirurgicznej <:REMOVED many second tags on the left:> <RANK: 2> <info: start[941, 774] <type: LEFT>>
+R25	Dat Arg1:T13 Arg2:T12 <<SHOULD NOT BE REMOVED>>	06.04.2017r -> przezskórnej balonoplastyce tt. płucnych <:REMOVED many second tags on the left:> <RANK: 2> <info: start[941, 889] <type: LEFT>>
+R26	Dat Arg1:T13 Arg2:T14 <<REDUNDANT!!!SHOULD BE REMOVED>>	06.04.2017r -> implantacji stentu  <RANK: 3> <info: start[941, 965] <type: RIGHT>>
+R27	Dat Arg1:T15 Arg2:T7 <<REDUNDANT!!!REMOVED>>	24.07.2017r -> Wrodzona wada serca pod postacią przerwanego łuku aorty typu B <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1011, 671] <type: LEFT>>
+R28	Dat Arg1:T15 Arg2:T10 <<REDUNDANT!!!REMOVED>>	24.07.2017r -> Zwężenie tętnic płucnych <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1011, 831] <type: LEFT>>
+R29	Dat Arg1:T15 Arg2:T11 <<REDUNDANT!!!REMOVED>>	24.07.2017r -> zwężenie łuku aorty <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1011, 857] <type: LEFT>>
+R30	Dat Arg1:T15 Arg2:T16 <<REDUNDANT!!!SHOULD BE REMOVED>>	24.07.2017r -> Infekcja górnych dróg oddechowych  <RANK: 3> <info: start[1011, 1027] <type: RIGHT>>
+R31	Dat Arg1:T15 Arg2:T33 <<SHOULD NOT BE REMOVED>>	24.07.2017r -> cieśni aorty <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1011, 987] <type: LEFT>>
+R32	Dat Arg1:T15 Arg2:T34 <<REDUNDANT!!!REMOVED>>	24.07.2017r -> okienka aortalno-płucnego <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1011, 736] <type: LEFT>>
+R33	Dat Arg1:T15 Arg2:T8 <<REDUNDANT!!!REMOVED>>	24.07.2017r -> operacji kardiochirurgicznej <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1011, 774] <type: LEFT>>
+R34	Dat Arg1:T15 Arg2:T12 <<REDUNDANT!!!REMOVED>>	24.07.2017r -> przezskórnej balonoplastyce tt. płucnych <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1011, 889] <type: LEFT>>
+R35	Dat Arg1:T15 Arg2:T14 <<SHOULD NOT BE REMOVED>>	24.07.2017r -> implantacji stentu <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1011, 965] <type: LEFT>>
+
+
+Sentence 7:
+------------------------------------------------
+
+
+
+Sentence 8:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 9:
+Captopril 2,5mg co 8 h
+Krople składowe do nosa z neomycyną i effedryną 3xdz 1 kropla przez 5 dni
+
+R36	Drg Arg1:T17 Arg2:T18 << OK >>	Captopril -> 2,5mg co 8 h  <RANK: 3> <info: start[1170, 1180] <type: RIGHT>>
+R37	Drg Arg1:T17 Arg2:T19 <<REDUNDANT!!!REMOVED>>	Captopril -> Krople składowe do nosa <:REMOVED Tag2 not in the same line:> <RANK: 0> <info: start[1170, 1193] <type: RIGHT>>
+R38	Drg Arg1:T17 Arg2:T22 <<REDUNDANT!!!REMOVED>>	Captopril -> 3xdz 1 kropla przez 5 dni <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1170, 1241] <type: RIGHT>>
+R39	Drg Arg1:T20 Arg2:T18 <<REDUNDANT!!!REMOVED>>	neomycyną -> 2,5mg co 8 h <:REMOVED Tag2 not in the same line:> <RANK: 1> <info: start[1219, 1180] <type: LEFT>>
+R40	Drg Arg1:T20 Arg2:T19 << OK >>	neomycyną -> Krople składowe do nosa  <RANK: 3> <info: start[1219, 1193] <type: LEFT>>
+R41	Drg Arg1:T20 Arg2:T22 <<SHOULD NOT BE REMOVED>>	neomycyną -> 3xdz 1 kropla przez 5 dni <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1219, 1241] <type: RIGHT>>
+R42	Drg Arg1:T21 Arg2:T18 <<REDUNDANT!!!REMOVED>>	effedryną -> 2,5mg co 8 h <:REMOVED many second tags on the left:> <RANK: 0> <info: start[1231, 1180] <type: LEFT>>
+R43	Drg Arg1:T21 Arg2:T19 <<SHOULD NOT BE REMOVED>>	effedryną -> Krople składowe do nosa <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1231, 1193] <type: LEFT>>
+R44	Drg Arg1:T21 Arg2:T22 << OK >>	effedryną -> 3xdz 1 kropla przez 5 dni  <RANK: 3> <info: start[1231, 1241] <type: RIGHT>>
+
+
+Sentence 10:
+Sambucol Kids 2x5ml
+
+R45	Drg Arg1:T23 Arg2:T24 << OK >>	Sambucol Kids -> 2x5ml  <RANK: 3> <info: start[1267, 1281] <type: RIGHT>>
+
+
+Sentence 11:
+Nebulizacje z 2,5ml 0,9%NaCl 3xdz
+PectoDrill 2,5ml rano i o 16ej
+Kontrola w POZ za 2 dni
+
+R46	Drg Arg1:T27 Arg2:T25 << OK >>	0,9%NaCl -> Nebulizacje z 2,5ml  <RANK: 3> <info: start[1307, 1287] <type: LEFT>>
+R47	Drg Arg1:T27 Arg2:T26 << OK >>	0,9%NaCl -> 3xdz  <RANK: 3> <info: start[1307, 1316] <type: RIGHT>>
+R48	Drg Arg1:T27 Arg2:T29 <<REDUNDANT!!!REMOVED>>	0,9%NaCl -> 2,5ml rano i o 16ej <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1307, 1332] <type: RIGHT>>
+R49	Drg Arg1:T28 Arg2:T25 <<REDUNDANT!!!REMOVED>>	PectoDrill -> Nebulizacje z 2,5ml <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1321, 1287] <type: LEFT>>
+R50	Drg Arg1:T28 Arg2:T26 <<REDUNDANT!!!REMOVED>>	PectoDrill -> 3xdz <:REMOVED many second tags on the left:> <RANK: 1> <info: start[1321, 1316] <type: LEFT>>
+R51	Drg Arg1:T28 Arg2:T29 << OK >>	PectoDrill -> 2,5ml rano i o 16ej  <RANK: 3> <info: start[1321, 1332] <type: RIGHT>>
+R52	Dat Arg1:T31 Arg2:T30 << OK >>	za 2 dni -> Kontrola w POZ  <RANK: 3> <info: start[1367, 1352] <type: LEFT>>
+R53	Dat Arg1:T31 Arg2:T27 <<REDUNDANT!!!REMOVED>>	za 2 dni -> 0,9%NaCl <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1367, 1307] <type: LEFT>>
+R54	Dat Arg1:T31 Arg2:T28 <<REDUNDANT!!!REMOVED>>	za 2 dni -> PectoDrill <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1367, 1321] <type: LEFT>>
+
+
+Sentence 12:
+Ponowna hospitalizacja w Klinice kardiologii ICZMP po ustąpieniu objawów infekcji (prosze o kontakt  telefoniczny)
+
+
+
+Sentence 13:
+------------------------------------------------
+
+
+
+Sentence 14:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 15:
+Grupa krwi + p/c odpornościowe (powyżej 4. m-ca życia
+    NR-KS:G-19/019502
+    KODKRESKOWYPROBKI:G-19/019502
+    
+
+
+Sentence 16:
+GR:B
+    RH:+ (dodatni)
+    
+
+
+Sentence 17:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+
+
+
+Sentence 18:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.71[10^3/ul]
+    
+
+
+Sentence 19:
+RBC Krwinki czerwone:4.93[10^6/ul]
+    
+
+
+Sentence 20:
+HGB Hemoglobina:12.9[g/dl]
+    
+
+
+Sentence 21:
+HCT Hematokryt:35.7[%]
+    
+
+
+Sentence 22:
+MCV wskaźnik czerwonokrw:72.4[fl]
+    
+
+
+Sentence 23:
+MCH wskaźnik czerwonokrw:26.2[pg]
+    
+
+
+Sentence 24:
+MCHC wskaźnik czerwonokr:36.1[g/dl]
+    
+
+
+Sentence 25:
+PLT z morfologii:287[10^3/ul]
+    
+
+
+Sentence 26:
+RDW-SD:37.4[fl]
+    
+
+
+Sentence 27:
+RDW-CV:14.3[%]
+    PDW:10.9[fl]
+    MPV:10.1[fl]
+    
+
+
+Sentence 28:
+P-LCR:25.0[%]
+    
+
+
+Sentence 29:
+PCT (hematokryt płytkowy:0.29[%]
+    
+
+
+Sentence 30:
+NEUTR# wartość bezwzględ:4.27[10^3/ul]
+    
+
+
+Sentence 31:
+NEUTR%:63.7[%]
+    
+
+
+Sentence 32:
+LYMH# wartość bezwzględn:1.45[10^3/ul]
+    
+
+
+Sentence 33:
+LYMPH%:21.6[%]
+    
+
+
+Sentence 34:
+MONO# wartość bezwzględn:0.74[10^3/ul]
+    
+
+
+Sentence 35:
+MONO%:11.0[%]
+    
+
+
+Sentence 36:
+EO# wartość bezwzględna:0.22[10^3/ul]
+    
+
+
+Sentence 37:
+EO%:3.3[%]
+    
+
+
+Sentence 38:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    BASO%:0.4[%]
+    
+
+
+Sentence 39:
+NRBC %:0.0[%]
+    
+
+
+Sentence 40:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 41:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:32.0[sek]
+
+
+
+Sentence 42:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 43:
+Czas protrombinowy:12.3[sek]
+    
+
+
+Sentence 44:
+Wskaźnik PT:89.4[%]
+    
+
+
+Sentence 45:
+INR:1.11
+Czas trombinowy TT: Czas trombinowy TT:15.9[sek]
+
+
+
+Sentence 46:
+Fibrynogen: Fibrynogen:2.73[g/L]
+
+
+
+Sentence 47:
+Badanie ogólne moczu
+    
+
+
+Sentence 48:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 49:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 50:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 51:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 52:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 53:
+kwas askrobinowy:20 mg/dl[ ]
+    
+
+
+Sentence 54:
+ciężar właściwy:1.006[ ]
+    
+
+
+Sentence 55:
+pH:7.5[ ]
+    
+
+
+Sentence 56:
+białko:nieobecne[ ]
+    
+
+
+Sentence 57:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 58:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 59:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 60:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 61:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 62:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 63:
+leukocyty:5 /ul[ul]
+    erytrocyty świeże:2 /ul[ul]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 64:
+ALAT: ALAT:13[U/L]
+ASPAT: ASPAT:38[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.67[mg/dl]
+
+
+
+Sentence 65:
+Sód (Na): Sód:139[mmol/L]
+
+
+
+Sentence 66:
+Potas (K): Potas:4.7[mmol/L]
+
+
+
+Sentence 67:
+Chlorki (Cl): Chlorki:104[mmol/L]
+
+
+
+Sentence 68:
+Kreatynina + GFR
+    
+
+
+Sentence 69:
+Kreatynina w surowicy:0.35[mg/dl]
+    
+
+
+Sentence 70:
+eGFR stand.
+
+
+Sentence 71:
+wg Schwartza:136.7[ml/min/1,73 m^2]
+    eGFR zmod.
+
+
+Sentence 72:
+wg Schwartza:102.7[ml/min/1,73 m^2]
+    
+
+
+Sentence 73:
+wzrost:87[cm]
+
+
+
+Sentence 74:
+Mocznik: Mocznik:20[mg/dl]
+
+
+
+Sentence 75:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    pH:7.390
+    pCO2:41.2[mmHg]
+    BE:-0.10[mmol/L]
+    HCO3:24.4[mmol/L]
+    
+
+
+Sentence 76:
+pO2:29.4[mmHg]
+    
+
+
+Sentence 77:
+O2Sat:53.5[%]
+
+
+
+Sentence 78:
+NT-proBNP surowica: NT-proBNP w surowicy:418[pg/ml]
+------------------------------------------------
+
+
+
+Sentence 79:
+ICD10
+------------------------------------------------
+Q25.4
+
+
+
+Sentence 80:
+J06.0
+Z98.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 81:
+ICD9
+------------------------------------------------
+89.522
+C55
+A01
+
+
+
+Sentence 82:
+I81
+89.602
+G53
+E65
+I97
+G11
+G21
+
+
+
+Sentence 83:
+G25
+
+
+
+Sentence 84:
+N45
+I17
+M37
+I19
+O35
+
+
+
+Sentence 85:
+N13
+N24
+88.721
+O29
+
+
+
+Sentence 86:
+------------------------------------------------
+
+

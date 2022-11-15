@@ -1,0 +1,133 @@
+T1	Behaviour 2585 2611	warunki mieszkaniowe dobre
+T2	Negation 2562 2568	neguje
+T3	Negation 2547 2550	nie
+T4	Negation 2530 2533	nie
+T5	Condition 2551 2560	Uczulenia
+N1	Reference T5 ICD10:T78.4	Alergia, nieokreślona
+R1	Neg Arg1:T2 Arg2:T5	
+T6	Behaviour 2534 2545	Inne używki
+R2	Neg Arg1:T3 Arg2:T6	
+T7	Behaviour 2513 2528	Palenie tytoniu
+R3	Neg Arg1:T4 Arg2:T7	
+T8	Negation 2458 2461	-  
+T9	Negation 2477 2478	-
+T10	Negation 2491 2494	(-)
+T11	Condition 2452 2455	WZW
+T12	Condition 2465 2474	borelioza
+N4	Reference T12 ICD10:A69.2	Choroba z Lyme
+T13	Condition 2482 2490	gruźlica
+N5	Reference T13 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+R4	Neg Arg1:T10 Arg2:T13	
+R5	Neg Arg1:T9 Arg2:T12	
+R6	Neg Arg1:T8 Arg2:T11	
+T14	Negation 2418 2424	neguje
+T15	Treatment 2398 2415	Przebyte operacje
+R7	Neg Arg1:T14 Arg2:T15	
+T16	Negation 2333 2339	Neguje
+T17	Symptom 2340 2352	zasłabnięcia
+N6	Reference T17 ICD10:R55	Omdlenie i zapaść
+T18	Symptom 2354 2363	duszności
+N7	Reference T18 ICD10:R06.0	Duszność
+T19	Symptom 2365 2396	typowe bóle w klatce piersiowej
+R8	Neg Arg1:T16 Arg2:T17	
+R9	Neg Arg1:T16 Arg2:T18	
+R10	Neg Arg1:T16 Arg2:T19	
+T20	Drug 2261 2267	Letrox
+T21	Drug 2269 2277	Calperos
+T22	Drug 2279 2287	Alfadiol
+T23	Drug 2289 2297	Aspargin
+T24	Drug 2299 2316	Hydrochlorotiazyd
+T25	Drug 2318 2324	Zahron
+T26	Drug 2326 2331	Acard
+T27	Behaviour 2208 2234	warunki mieszkaniowe dobre
+T28	Negation 2185 2191	neguje
+T29	Negation 2170 2173	nie
+T30	Condition 2174 2183	Uczulenia
+N9	Reference T30 ICD10:T78.4	Alergia, nieokreślona
+R11	Neg Arg1:T28 Arg2:T30	
+T31	Behaviour 2157 2168	Inne używki
+R12	Neg Arg1:T29 Arg2:T31	
+T32	Behaviour 2060 2075	Palenie tytoniu
+N10	Reference T32 ICD10:T65.2	Tytoń i nikotyna
+T33	Negation 2092 2100	nie pali
+R13	Neg Arg1:T33 Arg2:T32	
+T34	Condition 2032 2034	MI
+A1	Status T34 Family
+N11	Reference T34 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T35	Condition 1960 1963	WZW
+T36	Condition 1972 1981	borelioza
+N13	Reference T36 ICD10:A69.2	Choroba z Lyme
+T37	Condition 1989 1997	gruźlica
+N14	Reference T37 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T38	Negation 1964 1967	( -
+R14	Neg Arg1:T38 Arg2:T35	
+T39	Negation 1984 1985	-
+R15	Neg Arg1:T39 Arg2:T36	
+T40	Negation 1998 2001	(-)
+R16	Neg Arg1:T40 Arg2:T37	
+T41	Treatment 1909 1932	Przebyte operacje:  j/w
+T42	Negation 1844 1850	Neguje
+T43	Symptom 1851 1863	zasłabnięcia
+N15	Reference T43 ICD10:R55	Omdlenie i zapaść
+T44	Symptom 1865 1874	duszności
+N16	Reference T44 ICD10:R06.0	Duszność
+T45	Symptom 1876 1907	typowe bóle w klatce piersiowej
+R17	Neg Arg1:T42 Arg2:T43	
+R18	Neg Arg1:T42 Arg2:T44	
+R19	Neg Arg1:T42 Arg2:T45	
+T46	Investigation 1128 1169	kontrola lipidogramu, stężenia elektrolit
+T47	Behaviour 1020 1115	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T48	Treatment 1317 1411	tyreoidektomii całkowitej i leczeniu jodem radioaktywnym z pwoodu raka pęcherzykowego tarczycy
+A2	Status T48 Historical_Insignificant
+T49	Date 1413 1417	1998
+R20	Dat Arg1:T49 Arg2:T48	
+T50	Condition 1422 1462	pooperacyjną niedoczynnością przytarczyc
+N18	Reference T50 ICD10:E03.2	Niedoczynność tarczycy wywołana leczeniem lub innymi egzogennymi substancjami
+T51	Condition 675 713	Pooperacyjna niedoczynność przytarczyc
+N19	Reference T51 ICD10:E03.2	Niedoczynność tarczycy wywołana leczeniem lub innymi egzogennymi substancjami
+T52	Condition 448 486	Przewlekła choroba niedokrwienna serca
+N20	Reference T52 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T53	Condition 491 512	Nadciśnienie tętnicze
+N21	Reference T53 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T54	Condition 517 529	Dyslipidemia
+N22	Reference T54 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T55	Drug 549 556	statyną
+T56	Treatment 569 625	tyreoidektomii całkowitej i leczeniu jodem radioaktywnym
+A3	Status T56 Historical_Insignificant
+T57	Date 665 669	1998
+R21	Dat Arg1:T57 Arg2:T56	
+T58	Condition 718 761	Guz nadnercza prawego nieczynny hormonalnie
+N23	Reference T58 ICD10:D44.1	Nadnercze
+T59	Condition 766 785	Niedobór witaminy D
+N24	Reference T59 ICD10:E55	Niedobór witaminy D
+T60	Condition 790 818	Kamica pęcherzyka żółciowego
+N25	Reference T60 ICD10:K80	Kamica żółciowa
+T61	Condition 1537 1565	kamicą pęcherzyka żółciowego
+N26	Reference T61 ICD10:K80	Kamica żółciowa
+T62	Condition 1567 1579	dyslipidemią
+N27	Reference T62 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T63	Drug 1599 1606	statyną
+T64	Condition 1514 1535	niedoborem witaminy D
+N28	Reference T64 ICD10:E55	Niedobór witaminy D
+T65	Condition 1466 1512	guzem nadnercza prawego nieczynnym hormonalnie
+N29	Reference T65 ICD10:D44.1	Nadnercze
+T66	Condition 1726 1734	tężyczki
+N30	Reference T66 ICD10:R29.0	Tężyczka
+T67	Date 1736 1744	08/2018)
+T68	Investigation_result 1792 1837	ujemne zał. T w aVL oraz V1-V3, oznaczone TnT
+R22	Dat Arg1:T67 Arg2:T68	
+R23	Dat Arg1:T67 Arg2:T66	
+T69	Condition 635 663	raka pęcherzykowego tarczycy
+N31	Reference T69 ICD10:D44.0	Tarczyca
+R24	Dat Arg1:T57 Arg2:T69	
+N8	Reference T19 ICD10:R07.3	Inne bóle w klatce piersiowej
+A4	Status T69 Historical_Insignificant
+N17	Reference T45 ICD10:R07.3	Inne bóle w klatce piersiowej
+N12	Reference T35 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T70	Date 2101 2110	od 2 lat,
+R25	Dat Arg1:T70 Arg2:T32	
+T71	Condition 2111 2156	wcześniej paliła 2 lata, 6-7 papierosów/dzień
+A5	Status T71 Historical_Insignificant
+N32	Reference T71 ICD10:Z72.0	Używanie tytoniu
+N3	Reference T11 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N2	Reference T7 ICD10:Z72.0	Używanie tytoniu

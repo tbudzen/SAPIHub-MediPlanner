@@ -1,0 +1,62 @@
+T1	Drug 340 350	Biofuroxym
+T2	Drug 352 359	Clexane
+T3	Drug 361 370	Captopril
+T4	Drug 372 379	morfina
+T5	Drug 381 392	paracetamol
+T6	Drug 504 513	Captopril
+T7	Drug_dose 514 525	2 x 12,5 mg
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Treatment 529 563	kontrola w Poradni Kardiologicznej
+T9	Date 564 574	za miesiąc
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Behaviour 577 601	oszczędzający tryb życia
+T11	Condition 820 847	Zapalenie mięśnia sercowego
+T12	Symptom 1030 1101	bólu w klatce piersiowej zlokalizowanego za mostkiem i po lewej stronie
+N2	Reference T12 ICD10:R07.2	Ból w okolicy przedsercowej
+T13	Symptom 1114 1154	ból promieniuje do lewej kończyny górnej
+N3	Reference T13 ICD10:R07.2	Ból w okolicy przedsercowej
+T14	Symptom 1172 1200	drętwienie palców lewej ręki
+T15	Symptom 1229 1244	ból rozrywający
+T16	Date 1246 1250	Dziś
+T17	Symptom 1251 1265	temp 38,4 st C
+R3	Dat Arg1:T16 Arg2:T17	
+T18	Date 1267 1277	3 dni temu
+T19	Symptom 1278 1288	ból gardła
+N4	Reference T19 ICD10:R07.0	Ból gardła
+T20	Date 1290 1307	wczoraj wieczorem
+T21	Symptom 1321 1369	pokasływanie - kaszel o charakterze produktywnym
+N5	Reference T21 ICD10:R05	Kaszel
+T22	Date 1372 1376	Dziś
+T23	Symptom 1389 1412	ból w klatce piersiowej
+N6	Reference T23 ICD10:R07.2	Ból w okolicy przedsercowej
+T24	Symptom 1414 1439	dolegliwości nasilają się
+T25	Symptom 1449 1479	zmniejszona tolerancja wysiłku
+R4	Dat Arg1:T18 Arg2:T19	
+R5	Dat Arg1:T20 Arg2:T21	
+R6	Dat Arg1:T22 Arg2:T23	
+R7	Dat Arg1:T22 Arg2:T24	
+T26	Date 1481 1486	26.03
+T27	Condition 1514 1552	złamał kolec biodrowy po lewej stronie
+N7	Reference T27 ICD10:S32.3	Złamanie kości biodrowej
+T28	Date 1555 1568	przez miesiąc
+T29	Behaviour 1583 1615	przebywanie w pozycji półleżącej
+T30	Drug 1636 1643	Clexane
+R8	Dat Arg1:T26 Arg2:T27	
+R9	Dat Arg1:T28 Arg2:T29	
+R10	Dat Arg1:T28 Arg2:T30	
+R11	Dat Arg1:T26 Arg2:T29	
+R12	Dat Arg1:T26 Arg2:T30	
+T31	Drug 1646 1659	Leki na stałe
+T32	Negation 1660 1673	nie otrzymuje
+R13	Neg Arg1:T32 Arg2:T31	
+T33	Condition 1717 1733	podejrzenia ANN.
+N8	Reference T33 ICD10:J30.4	Alergiczne zapalenie błony śluzowej nosa, nieokreślone
+T34	Treatment 1684 1707	kierowany do alergologa
+T35	Treatment 1734 1766	Szczepiony zgodnie z kalendarzem
+T36	Investigation 1768 1805	Test przesiewowy na narkotyki w moczu
+T37	Investigation_result 1808 1814	ujemny
+R14	Inv Arg1:T36 Arg2:T37	
+N9	Reference T15 ICD10:R07.2	Ból w okolicy przedsercowej
+A1	Status T33 Historical_Insignificant
+A2	Status T34 Historical_Insignificant
+N1	Reference T11 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone

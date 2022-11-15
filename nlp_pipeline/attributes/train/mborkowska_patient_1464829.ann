@@ -1,0 +1,191 @@
+T1	Drug 3153 3158	Acard
+T2	Drug_dose 3159 3181	75mg 1 tabl. wieczorem
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 3182 3189	Vivacor
+T4	Drug_dose 3190 3227	25mg 1 tabl. rano i 1 tabl. wieczorem
+R2	Drg Arg1:T3 Arg2:T4	
+T5	Drug 3228 3246	Ivabradine Anpharm
+T6	Drug_dose 3247 3287	5mg 1/2 tabl. rano i 1/2 tabl. wieczorem
+R3	Drg Arg1:T5 Arg2:T6	
+T7	Drug 3288 3293	Axtil
+T8	Drug_dose 3294 3316	10mg 1 tabl. wieczorem
+R4	Drg Arg1:T7 Arg2:T8	
+T9	Drug 3317 3325	Torsemed
+T10	Drug_dose 3326 3343	20mg 1 tabl. rano
+R5	Drg Arg1:T9 Arg2:T10	
+T11	Drug 3344 3350	Inspra
+T12	Drug_dose 3351 3374	50mg 1 tabl. w południe
+R6	Drg Arg1:T11 Arg2:T12	
+T13	Drug 3375 3392	Hydrochlorotiazyd
+T14	Drug_dose 3393 3437	12,5mg 1 tabl. rano 30 min. przed Torsemedem
+R7	Drg Arg1:T13 Arg2:T14	
+T15	Drug 3438 3445	Roswera
+T16	Drug_dose 3446 3468	20mg 1 tabl. wieczorem
+R8	Drg Arg1:T15 Arg2:T16	
+T17	Investigation 3552 3556	ECHO
+T18	Investigation 3558 3576	EKG metodą Holtera
+T19	Investigation 3578 3582	ABPM
+T20	Negation 4272 4278	neguje
+T21	Condition 4261 4270	Uczulenia
+N1	Reference T21 ICD10:T78.4	Alergia, nieokreślona
+R9	Neg Arg1:T20 Arg2:T21	
+T22	Behaviour 4201 4223	alkohol - okazjonalnie
+N2	Reference T22 ICD10:Z72.1	Używanie alkoholu
+T23	Behaviour 4157 4187	Palenie tytoniu: tak, od 18 rż
+N3	Reference T23 ICD10:T65.2	Tytoń i nikotyna
+T24	Condition 4141 4155	kardiomiopatia
+A1	Status T24 Family
+N4	Reference T24 ICD10:I42	Kardiomiopatia
+T25	Condition 4062 4065	WZW
+N5	Reference T25 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T26	Condition 4074 4083	borelioza
+N6	Reference T26 ICD10:A69.2	Choroba z Lyme
+T27	Condition 4091 4099	gruźlica
+N7	Reference T27 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T28	Negation 4100 4103	(-)
+R10	Neg Arg1:T28 Arg2:T27	
+T29	Negation 4084 4089	( - )
+R11	Neg Arg1:T29 Arg2:T26	
+T30	Negation 4066 4071	( - )
+R12	Neg Arg1:T30 Arg2:T25	
+T31	Negation 4028 4034	neguje
+T32	Negation 3944 3950	Neguje
+T33	Treatment 4009 4026	Przebyte operacje
+R13	Neg Arg1:T31 Arg2:T33	
+T34	Symptom 3951 3963	zasłabnięcia
+N8	Reference T34 ICD10:R55	Omdlenie i zapaść
+T35	Symptom 3965 3974	duszności
+N9	Reference T35 ICD10:R06.0	Duszność
+T36	Symptom 3976 4007	typowe bóle w klatce piersiowej
+N10	Reference T36 ICD10:R07.3	Inne bóle w klatce piersiowej
+R14	Neg Arg1:T32 Arg2:T34	
+R15	Neg Arg1:T32 Arg2:T35	
+R16	Neg Arg1:T32 Arg2:T36	
+T37	Condition 3866 3878	dyslipidemią
+N11	Reference T37 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T38	Condition 3830 3857	zapaleniu mięśnia sercowego
+N12	Reference T38 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+T39	Date 3859 3863	2008
+R17	Dat Arg1:T39 Arg2:T38	
+T40	Condition 3792 3825	dużą IM (typ IIIb wg Carpentiera)
+N13	Reference T40 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T41	Condition 3751 3778	obecnie w II klasie wg NYHA
+T42	Investigation 410 419	MRI serca
+T43	Condition 795 823	Kardiomiopatia rozstrzeniowa
+N15	Reference T43 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+T44	Condition 855 900	Umiarkowana niedomykalność zastawki mitralnej
+N16	Reference T44 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T45	Condition 906 933	Przewlekła choroba wieńcowa
+N17	Reference T45 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T46	Condition 985 997	Dyslipidemia
+N18	Reference T46 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T47	Drug 1017 1024	statyną
+T48	Condition 946 973	zapaleniu mięśnia sercowego
+N19	Reference T48 ICD10:I51.4	
+T49	Date 975 979	2008
+R19	Dat Arg1:T49 Arg2:T48	
+T50	Condition 1415 1442	zapaleniu mięśnia sercowego
+N20	Reference T50 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+T51	Date 1444 1448	2008
+R20	Dat Arg1:T51 Arg2:T50	
+T52	Condition 1256 1284	Kardiomiopatia rozstrzeniowa
+N21	Reference T52 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+T53	Condition 1316 1370	Łagodna/umiarkowana niedomykalność zastawki mitralnej.
+N22	Reference T53 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T54	Condition 1375 1402	Przewlekła choroba wieńcowa
+N23	Reference T54 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T55	Condition 1454 1466	Dyslipidemia
+N24	Reference T55 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T56	Drug 1486 1493	statyną
+T57	Behaviour 1831 1848	Dieta lekkostrawn
+T58	Negation 3105 3111	neguje
+T59	Condition 3094 3103	Uczulenia
+N25	Reference T59 ICD10:T78.4	Alergia, nieokreślona
+R22	Neg Arg1:T58 Arg2:T59	
+T60	Behaviour 3034 3056	alkohol - okazjonalnie
+N26	Reference T60 ICD10:Z72.1	Używanie alkoholu
+T61	Behaviour 2976 3020	Palenie tytoniu: czynny nikotynizm, od 18 rż
+N27	Reference T61 ICD10:T65.2	Tytoń i nikotyna
+T62	Condition 2960 2974	kardiomiopatia
+A2	Status T62 Family
+N28	Reference T62 ICD10:I42	Kardiomiopatia
+T63	Negation 2751 2757	Neguje
+T64	Symptom 2759 2771	zasłabnięcia
+N29	Reference T64 ICD10:R55	Omdlenie i zapaść
+T65	Symptom 2773 2781	omdlenia
+N30	Reference T65 ICD10:R55	Omdlenie i zapaść
+T66	Symptom 2783 2793	krwawienia
+N31	Reference T66 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T67	Symptom 2795 2808	czarne stolce
+N32	Reference T67 ICD10:K92.1	Stolce smołowate
+T68	Symptom 2810 2826	brunatne wymioty
+N33	Reference T68 ICD10:K92.0	Wymioty krwawe
+T69	Condition 2828 2844	chorobę wrzodową
+N34	Reference T69 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T70	Symptom 2846 2860	duszność nocną
+N35	Reference T70 ICD10:I50.1	Niewydolność serca lewokomorowa
+T71	Symptom 2862 2877	obrzęki podudzi
+N36	Reference T71 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T72	Symptom 2879 2903	bóle w klatce piersiowej
+N37	Reference T72 ICD10:R07.3	Inne bóle w klatce piersiowej
+T73	Symptom 2905 2921	kołatania serca,
+N38	Reference T73 ICD10:R00.2	
+R23	Neg Arg1:T63 Arg2:T64	
+R24	Neg Arg1:T63 Arg2:T65	
+R25	Neg Arg1:T63 Arg2:T66	
+R26	Neg Arg1:T63 Arg2:T67	
+R27	Neg Arg1:T63 Arg2:T68	
+R28	Neg Arg1:T63 Arg2:T69	
+R29	Neg Arg1:T63 Arg2:T70	
+R30	Neg Arg1:T63 Arg2:T73	
+R31	Neg Arg1:T63 Arg2:T72	
+R32	Neg Arg1:T63 Arg2:T71	
+T74	Condition 2710 2722	Dyslipidemia
+N39	Reference T74 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T75	Drug 2742 2749	statyną
+R33	Alg Arg1:T74 Arg2:T75	
+T76	Condition 2674 2701	zapaleniu mięśnia sercowego
+N40	Reference T76 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+T77	Date 2703 2707	2008
+R34	Dat Arg1:T77 Arg2:T76	
+T78	Condition 2637 2664	Przewlekła choroba wieńcowa
+N41	Reference T78 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T79	Condition 2582 2636	Łagodna/umiarkowana niedomykalność zastawki mitralnej.
+N42	Reference T79 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T80	Condition 2525 2553	Kardiomiopatia rozstrzeniowa
+N43	Reference T80 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+T81	Investigation 2154 2163	MRI serca
+T82	Date 2167 2177	07/11/2019
+R35	Dat Arg1:T82 Arg2:T81	
+T83	Investigation_result 2208 2231	spadku EF (EF: 46->24%)
+T84	Investigation 2267 2292	angioCT tętnic wieńcowych
+T85	Investigation_result 2315 2383	nieistotne zwężenie w LAD, poza tym bez zmian w tętnicach wieńcowych
+T86	Date 2250 2257	01/2019
+R36	Dat Arg1:T86 Arg2:T84	
+R37	Inv Arg1:T84 Arg2:T85	
+T87	Drug 2498 2502	ACEI
+T88	Drug 2457 2467	sacubitryl
+T89	Drug 2468 2477	walsartan
+T90	Negation 2417 2434	nie wyraził zgody
+R38	Neg Arg1:T90 Arg2:T88	
+R39	Neg Arg1:T90 Arg2:T89	
+T91	Treatment 2479 2497	utrzymano leczenie
+T92	Date 468 475	11/2019
+R40	Dat Arg1:T92 Arg2:T42	
+T93	Condition 2566 2581	I klasa wg NYHA
+N44	Reference T93 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+T94	Investigation_result 2555 2562	EF: 35%
+T95	Investigation_result 3739 3748	(EF: 24%)
+T96	Condition 3735 3738	DCM
+N45	Reference T96 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+N14	Reference T41 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+T97	Condition 4257 4260	ZZA
+T98	Negation 4253 4256	bez
+R41	Neg Arg1:T98 Arg2:T97	
+A3	Status T97 Family
+T99	Investigation_result 824 833	(EF: 35%)
+T100	Condition 836 851	I klasa wg NYHA
+T101	Investigation_result 1285 1294	(EF: 35%)
+T102	Condition 1297 1312	I klasa wg NYHA
+N46	Reference T102 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+N47	Reference T100 ICD10:I42.0	Kardiomiopatia rozstrzeniowa

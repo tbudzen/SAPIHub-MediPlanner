@@ -1,0 +1,268 @@
+T1	Drug 341 354	Glucophage XR
+T2	Drug 356 364	Euthyrox
+T3	Treatment 475 497	kontrola u lekarza POZ
+T4	Treatment 501 562	dalsza kontrola w Poradni Kardiologicznej, Endokrynologicznej
+T5	Treatment 565 610	kontrolna hospitalizacja w tutejszym oddziale
+T6	Date 611 624	za ok. 3 m-ce
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Treatment 625 658	celem oceny skuteczności leczenia
+T8	Condition 925 960	Nadciśnienie tętnicze II st wg PTNT
+N1	Reference T8 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T9	Condition 962 979	Choroba Hashimoto
+N2	Reference T9 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T10	Symptom 981 1003	Napady kołatania serca
+N3	Reference T10 ICD10:R00.2	Kołatanie serca
+T11	Condition 1005 1025	Hipercholesterolemia
+N4	Reference T11 ICD10:E78.0	Czysta hipercholesterolemia
+T12	Condition 1027 1057	Upośledzona tolerancja glukozy
+N5	Reference T12 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T13	Condition 1059 1075	Insulinooporność
+N6	Reference T13 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T14	Treatment 1184 1211	dalsza opieka w poradni POZ
+T15	Treatment 1212 1263	okresowa kontrola kardiologiczna, endokrynologiczna
+T16	Investigation 1264 1300	okresowy pomiar ciśnienia tętniczego
+T17	Behaviour 1302 1339	dieta ubogowęglowodanowa, z niskim IG
+T18	Behaviour 1340 1368	regularna aktywność fizyczna
+T19	Drug 1375 1388	Glucophage XR
+T20	Drug_dose 1389 1415	750 mg 1x 1 tabl/wieczorem
+R2	Drg Arg1:T19 Arg2:T20	
+T21	Drug 1416 1426	Euthyrox N
+T22	Drug_dose 1427 1446	75ug 1x 1 tabl/rano
+R3	Drg Arg1:T21 Arg2:T22	
+T23	Drug 1447 1458	Betaloc ZOK
+T24	Drug_dose 1459 1479	25 mg 1x 1 tabl/rano
+R4	Drg Arg1:T23 Arg2:T24	
+T25	Condition 1706 1738	Nadciśnienie tętnicze Ist wg WHO
+N7	Reference T25 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T26	Condition 1740 1777	Autoimmunologiczne zapalenie tarczycy
+N8	Reference T26 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T27	Condition 1779 1795	Insulinooporność
+N9	Reference T27 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T28	Condition 1941 1943	HA
+N10	Reference T28 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T29	Negation 1945 1948	bez
+T30	Treatment 1949 1975	leczenia farmakologicznego
+R5	Neg Arg1:T29 Arg2:T30	
+T31	Investigation_result 1988 2009	RR: 130/85-150/90mmHg
+N11	Reference T31 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T32	Investigation_result 2011 2027	RR mx 170/95mmHg
+N12	Reference T32 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T33	Condition 2042 2059	chorobą Hashimoto
+N13	Reference T33 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T34	Drug 2061 2070	Eutyhyrox
+T35	Drug_dose 2071 2075	50ug
+R6	Drg Arg1:T34 Arg2:T35	
+T36	Treatment 2078 2115	pod opieką Poradni Endokrynologicznej
+T37	Symptom 2146 2169	napadów kołatania serca
+N14	Reference T37 ICD10:R00.2	Kołatanie serca
+T38	Date 2170 2233	od 2 m-cy, ostatnio występujących codziennie, trwających 2-3min
+R7	Dat Arg1:T38 Arg2:T37	
+T40	Symptom 2250 2260	dusznością
+N15	Reference T40 ICD10:R06.0	Duszność
+T41	Symptom 2262 2290	kłuciami w klatce piersiowej
+N16	Reference T41 ICD10:R07.3	Inne bóle w klatce piersiowej
+T42	Condition 2314 2334	hipercholesterolemia
+N17	Reference T42 ICD10:E78.0	Czysta hipercholesterolemia
+T43	Condition 2336 2366	upośledzona tolerancja glukozy
+N18	Reference T43 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T44	Condition 2368 2384	insulinooporność
+N19	Reference T44 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T45	Drug 2386 2399	Glucophage XR
+T46	Drug_dose 2400 2403	750
+R8	Drg Arg1:T45 Arg2:T46	
+T47	Date 2418 2423	2017r
+T48	Condition 2454 2465	HA wtórnego
+A1	Source T48 Declared
+N20	Reference T48 ICD10:I15	Nadciśnienie wtórne
+R9	Dat Arg1:T47 Arg2:T48	
+T49	Symptom 2467 2499	zmęczenie po wejściu na 4 piętro
+N21	Reference T49 ICD10:R53	Złe samopoczucie i zmęczenie
+T50	Negation 2530 2536	Neguje
+T51	Symptom 2538 2550	zasłabnięcia
+T52	Symptom 2552 2560	omdlenia
+N22	Reference T52 ICD10:R55	Omdlenie i zapaść
+T53	Symptom 2562 2572	krwawienia
+T54	Symptom 2574 2587	czarne stolce
+N24	Reference T54 ICD10:K92.1	Stolce smołowate
+T55	Symptom 2589 2605	brunatne wymioty
+N25	Reference T55 ICD10:K92.0	Wymioty krwawe
+T56	Condition 2607 2623	chorobę wrzodową
+N26	Reference T56 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T57	Symptom 2625 2639	duszność nocną
+N27	Reference T57 ICD10:R06.0	Duszność
+T58	Symptom 2641 2656	obrzęki podudzi
+T59	Symptom 2658 2682	bóle w klatce piersiowej
+R10	Neg Arg1:T50 Arg2:T59	
+R11	Neg Arg1:T50 Arg2:T58	
+R12	Neg Arg1:T50 Arg2:T57	
+R13	Neg Arg1:T50 Arg2:T56	
+R14	Neg Arg1:T50 Arg2:T55	
+R15	Neg Arg1:T50 Arg2:T54	
+R16	Neg Arg1:T50 Arg2:T53	
+R17	Neg Arg1:T50 Arg2:T52	
+R18	Neg Arg1:T50 Arg2:T51	
+T60	Treatment 2685 2702	Przebyte operacje
+T61	Negation 2704 2708	brak
+R19	Neg Arg1:T61 Arg2:T60	
+T62	Behaviour 2709 2724	Palenie tytoniu
+T63	Date 2731 2738	od 18rż
+T64	Behaviour 2740 2764	8-10 papierosów dziennie
+R20	Dat Arg1:T63 Arg2:T64	
+R21	Dat Arg1:T63 Arg2:T62	
+T65	Behaviour 2766 2777	Inne używki
+T66	Negation 2779 2782	nie
+R22	Neg Arg1:T66 Arg2:T65	
+T67	Condition 2783 2792	Uczulenia
+N32	Reference T67 ICD10:T78.4	Alergia, nieokreślona
+T68	Negation 2795 2798	nie
+R23	Neg Arg1:T68 Arg2:T67	
+T69	Condition 2826 2829	WZW
+N33	Reference T69 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T70	Condition 2836 2845	borelioza
+N34	Reference T70 ICD10:A69.2	Choroba z Lyme
+T71	Condition 2853 2856	tbc
+T72	Negation 2858 2859	-
+R24	Neg Arg1:T72 Arg2:T71	
+T73	Negation 2848 2849	-
+R25	Neg Arg1:T73 Arg2:T70	
+T74	Negation 2831 2832	-
+R26	Neg Arg1:T74 Arg2:T69	
+T75	Condition 2863 2882	wywiadzie rodzinnym
+A2	Status T75 Family
+T76	Condition 2884 2886	HA
+A3	Status T76 Family
+N36	Reference T76 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T77	Behaviour 2914 2940	warunki mieszkaniowe dobre
+T78	Drug 2971 2981	Glucophage
+T79	Drug_dose 2982 3003	750XR 1x 1 tabl/wiecz
+R27	Drg Arg1:T78 Arg2:T79	
+T80	Drug 3004 3012	Euthyrox
+T81	Drug_dose 3013 3032	50ug 1x 1 tabl/rano
+R28	Drg Arg1:T80 Arg2:T81	
+T82	Investigation 3093 3114	badania laboratoryjne
+T83	Investigation 3116 3120	ECHO
+T84	Investigation 3122 3140	EKG metodą Holtera
+T85	Investigation 3142 3146	ABPM
+T86	Investigation 3148 3163	próba wysiłkowa
+T87	Condition 3309 3311	HA
+N37	Reference T87 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T88	Negation 3313 3316	bez
+T89	Treatment 3317 3343	leczenia farmakologicznego
+R29	Neg Arg1:T88 Arg2:T89	
+T90	Investigation_result 3356 3378	RR: 110/63-145/83 mmHg
+N38	Reference T90 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T91	Investigation_result 3380 3396	RR mx 160/95mmHg
+N39	Reference T91 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T92	Condition 3411 3428	chorobą Hashimoto
+N40	Reference T92 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T93	Drug 3430 3441	Eutyhyrox N
+T94	Drug_dose 3442 3446	75ug
+R30	Drg Arg1:T93 Arg2:T94	
+T95	Treatment 3449 3486	pod opieką Poradni Endokrynologicznej
+T96	Symptom 3525 3544	okresowych wahań RR
+N41	Reference T96 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T97	Symptom 3546 3569	napadów kołatania serca
+N42	Reference T97 ICD10:R00.2	
+T98	Negation 3571 3577	Neguje
+T99	Symptom 3578 3593	bóle zamostkowe
+N43	Reference T99 ICD10:R07.2	Ból w okolicy przedsercowej
+R31	Neg Arg1:T98 Arg2:T99	
+T100	Symptom 3601 3617	odczuwa ospałość
+N44	Reference T100 ICD10:R40.0	Senność
+T101	Condition 3640 3660	hipercholesterolemia
+N45	Reference T101 ICD10:E78.0	Czysta hipercholesterolemia
+T102	Condition 3662 3692	upośledzona tolerancja glukozy
+N46	Reference T102 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T103	Condition 3694 3710	insulinooporność
+N47	Reference T103 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T104	Drug 3712 3725	Glucophage XR
+T105	Drug_dose 3726 3729	750
+R32	Drg Arg1:T104 Arg2:T105	
+T106	Investigation_result 3734 3765	częste spadki glikemii do 70mg%
+N48	Reference T106 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T107	Date 3779 3784	2017r
+T108	Condition 3815 3826	HA wtórnego
+A4	Source T108 Declared
+N49	Reference T108 ICD10:I15	Nadciśnienie wtórne
+R33	Dat Arg1:T107 Arg2:T108	
+T109	Negation 3856 3862	Neguje
+T110	Symptom 3864 3876	zasłabnięcia
+T111	Symptom 3878 3886	omdlenia
+N50	Reference T111 ICD10:R55	Omdlenie i zapaść
+T112	Symptom 3888 3898	krwawienia
+T113	Symptom 3900 3913	czarne stolce
+N52	Reference T113 ICD10:K92.1	Stolce smołowate
+T114	Symptom 3915 3931	brunatne wymioty
+N53	Reference T114 ICD10:K92.0	Wymioty krwawe
+T115	Condition 3933 3949	chorobę wrzodową
+N54	Reference T115 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T116	Symptom 3951 3965	duszność nocną
+N55	Reference T116 ICD10:R06.0	Duszność
+T117	Symptom 3967 3982	obrzęki podudzi
+T118	Symptom 3984 4008	bóle w klatce piersiowej
+R34	Neg Arg1:T109 Arg2:T118	
+R35	Neg Arg1:T109 Arg2:T117	
+R36	Neg Arg1:T109 Arg2:T116	
+R37	Neg Arg1:T109 Arg2:T115	
+R38	Neg Arg1:T109 Arg2:T114	
+R39	Neg Arg1:T109 Arg2:T113	
+R40	Neg Arg1:T109 Arg2:T112	
+R41	Neg Arg1:T109 Arg2:T111	
+R42	Neg Arg1:T109 Arg2:T110	
+T119	Treatment 4010 4027	Przebyte operacje
+T120	Negation 4029 4033	brak
+R43	Neg Arg1:T120 Arg2:T119	
+T121	Behaviour 4034 4049	Palenie tytoniu
+T122	Behaviour 4065 4089	ok 6 papierosów dziennie
+T123	Date 4056 4063	od 18rż
+R44	Dat Arg1:T123 Arg2:T122	
+R45	Dat Arg1:T123 Arg2:T121	
+T124	Behaviour 4091 4102	Inne używki
+T125	Negation 4104 4107	nie
+R46	Neg Arg1:T125 Arg2:T124	
+T126	Condition 4108 4117	Uczulenia
+N60	Reference T126 ICD10:T78.4	Alergia, nieokreślona
+T127	Negation 4120 4123	nie
+R47	Neg Arg1:T127 Arg2:T126	
+T128	Condition 4151 4154	WZW
+N61	Reference T128 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T129	Condition 4161 4170	borelioza
+N62	Reference T129 ICD10:A69.2	Choroba z Lyme
+T130	Condition 4178 4181	tbc
+T131	Negation 4183 4184	-
+R48	Neg Arg1:T131 Arg2:T130	
+T132	Negation 4173 4174	-
+R49	Neg Arg1:T132 Arg2:T129	
+T133	Negation 4156 4157	-
+R50	Neg Arg1:T133 Arg2:T128	
+T134	Condition 4188 4207	wywiadzie rodzinnym
+A5	Status T134 Family
+T135	Condition 4209 4211	HA
+A6	Status T135 Family
+N64	Reference T135 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T136	Behaviour 4239 4265	warunki mieszkaniowe dobre
+T137	Drug 4294 4304	Glucophage
+T138	Drug_dose 4305 4326	750XR 1x 1 tabl/wiecz
+R51	Drg Arg1:T137 Arg2:T138	
+T139	Drug 4327 4337	Euthyrox N
+T140	Drug_dose 4338 4357	75ug 1x 1 tabl/rano
+R52	Drg Arg1:T139 Arg2:T140	
+T141	Investigation 4418 4439	badania laboratoryjne
+T142	Investigation 4441 4445	ABPM
+T143	Investigation 4447 4449	PW
+N65	Reference T51 ICD10:R55	Omdlenie i zapaść
+N30	Reference T62 ICD10:Z72.0	Używanie tytoniu
+N31	Reference T64 ICD10:Z72.0	Używanie tytoniu
+N66	Reference T110 ICD10:R55	Omdlenie i zapaść
+N58	Reference T121 ICD10:Z72.0	Używanie tytoniu
+N59	Reference T122 ICD10:Z72.0	Używanie tytoniu
+N23	Reference T53 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N28	Reference T58 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N29	Reference T59 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N67	Reference T65 ICD10:Z72	Problemy związane ze stylem życia
+N35	Reference T71 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N51	Reference T112 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N56	Reference T117 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N57	Reference T118 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N68	Reference T124 ICD10:Z72	Problemy związane ze stylem życia
+N63	Reference T130 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

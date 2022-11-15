@@ -1,0 +1,157 @@
+T1	Treatment 333 430	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Ortopedycznej i Neurologicznej
+T2	Investigation 435 477	Wskazane wykonanie angio-CT tt. wieńcowych
+T3	Treatment 554 661	Wskazana pilna kontrola w Poradni Ortopedycznej adekwatnej dla miejsca implantacji stabilizatora kręgosłupa
+T4	Behaviour 687 726	Dieta lekkostrawna, niskocholesterolowa
+T5	Behaviour 733 790	Łagodna aktywność fizyczna 5x w tyg. po 30 minut dziennie
+T6	Drug 801 817	Sorbifer durules
+T7	Drug_dose 818 832	1x1 tabl. rano
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Condition 1062 1090	choroby niedokrwiennej serca
+A1	Source T8 Declared
+N1	Reference T8 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T9	Condition 1116 1131	Niedobór żelaza
+N2	Reference T9 ICD10:E61.1	Niedobór żelaza
+T10	Condition 1133 1141	Miopatia
+N3	Reference T10 ICD10:G72.9	Miopatia, nieokreślona
+T11	Condition 1188 1221	Przewlekła niewydolność oddechowa
+N4	Reference T11 ICD10:J96.1	Przewlekła niewydolność oddechowa
+T12	Treatment 1235 1269	Nieinwazyjna wentylacja wspomagana
+T13	Treatment 1306 1364	operacji korekcyjnej metalowymi elementami stabilizującymi
+A2	Status T13 Historical_Insignificant
+T14	Treatment 1374 1376	CC
+A3	Status T14 Historical_Insignificant
+T15	Date 1445 1449	2016
+R2	Dat Arg1:T15 Arg2:T14	
+T16	Treatment 1491 1508	leczonej drenażem
+A4	Status T16 Historical_Insignificant
+T17	Condition 1518 1563	dwukrotnych napadach drgawkowych uogólnionych
+N5	Reference T17 ICD10:G40.9	Padaczka, nieokreślona
+T18	Date 1565 1569	2016
+R3	Dat Arg1:T18 Arg2:T17	
+T19	Condition 1726 1734	miopatii
+N6	Reference T19 ICD10:G72.9	Miopatia, nieokreślona
+T20	Investigation 1822 1837	spiroergometrii
+T21	Symptom 1892 1910	duszność wysiłkową
+N7	Reference T21 ICD10:R06.0	Duszność
+T22	Symptom 1912 1949	osłabienie mięśni głównie kk. dolnych
+T23	Symptom 1962 2024	nawracającego bólu w klatce piersiowej o charakterze dławienia
+N8	Reference T23 ICD10:R07.3	Inne bóle w klatce piersiowej
+T24	Negation 2123 2129	Neguje
+T25	Symptom 2130 2142	zasłabnięcia
+R4	Neg Arg1:T24 Arg2:T25	
+T26	Symptom 2144 2152	omdlenia
+N9	Reference T26 ICD10:R55	Omdlenie i zapaść
+R5	Neg Arg1:T24 Arg2:T26	
+T27	Symptom 2154 2167	zawroty głowy
+N10	Reference T27 ICD10:R42	Zawroty głowy i odurzenie
+R6	Neg Arg1:T24 Arg2:T27	
+T28	Symptom 2169 2179	krwawienia
+R7	Neg Arg1:T24 Arg2:T28	
+T29	Symptom 2181 2194	czarne stolce
+N11	Reference T29 ICD10:K92.1	Stolce smołowate
+T30	Symptom 2196 2212	brunatne wymioty
+N12	Reference T30 ICD10:K92.0	Wymioty krwawe
+R8	Neg Arg1:T24 Arg2:T29	
+R9	Neg Arg1:T24 Arg2:T30	
+T31	Condition 2214 2230	chorobę wrzodową
+N13	Reference T31 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T32	Symptom 2232 2247	obrzęki podudzi
+N14	Reference T32 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T33	Symptom 2249 2273	bóle w klatce piersiowej
+N15	Reference T33 ICD10:R07	Ból gardła i w klatce piersiowej
+R10	Neg Arg1:T24 Arg2:T31	
+R11	Neg Arg1:T24 Arg2:T32	
+R12	Neg Arg1:T24 Arg2:T33	
+T34	Symptom 2275 2294	Innych dolegliwości
+T35	Negation 2295 2306	nie zgłasza
+R13	Neg Arg1:T35 Arg2:T34	
+T36	Condition 2321 2329	Miopatia
+N16	Reference T36 ICD10:G72.9	Miopatia, nieokreślona
+T37	Condition 2376 2409	Przewlekła niewydolność oddechowa
+N17	Reference T37 ICD10:J96.1	Przewlekła niewydolność oddechowa
+T38	Treatment 2411 2445	Nieinwazyjna wentylacja wspomagana
+T39	Treatment 2470 2528	operacji korekcyjnej metalowymi elementami stabilizującymi
+A5	Status T39 Historical_Insignificant
+T40	Treatment 2538 2540	CC
+A6	Status T40 Historical_Insignificant
+T41	Date 2609 2613	2016
+R14	Dat Arg1:T41 Arg2:T40	
+T42	Treatment 2655 2672	leczonej drenażem
+A7	Status T42 Historical_Insignificant
+T43	Condition 2682 2727	dwukrotnych napadach drgawkowych uogólnionych
+N18	Reference T43 ICD10:G40.9	Padaczka, nieokreślona
+T44	Date 2729 2733	2016
+R15	Dat Arg1:T44 Arg2:T43	
+T45	Treatment 2736 2753	Przebyte operacje
+T46	Condition 2786 2789	WZW
+N19	Reference T46 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T47	Negation 2792 2793	-
+R16	Neg Arg1:T47 Arg2:T46	
+T48	Condition 2798 2807	borelioza
+N20	Reference T48 ICD10:A69.2	Choroba z Lyme
+T49	Condition 2815 2823	grużlica
+N21	Reference T49 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T50	Condition 2831 2835	odra
+N22	Reference T50 ICD10:B05	Odra
+T51	Negation 2838 2839	-
+R17	Neg Arg1:T51 Arg2:T50	
+T52	Negation 2826 2827	-
+R18	Neg Arg1:T52 Arg2:T49	
+T53	Negation 2810 2811	-
+R19	Neg Arg1:T53 Arg2:T48	
+T54	Condition 2842 2857	Wywiad rodzinny
+A8	Status T54 Family
+T55	Condition 2866 2868	HA
+A9	Status T55 Family
+N23	Reference T55 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T56	Condition 2877 2879	HA
+A10	Status T56 Family
+N24	Reference T56 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T57	Condition 2889 2893	CHNS
+A11	Status T57 Family
+N25	Reference T57 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T58	Behaviour 2894 2909	Palenie tytoniu
+T59	Negation 2911 2917	neguje
+R20	Neg Arg1:T59 Arg2:T58	
+T60	Behaviour 2919 2930	Inne używki
+T61	Negation 2932 2938	neguje
+R21	Neg Arg1:T61 Arg2:T60	
+T62	Condition 2940 2949	Uczulenia
+T63	Negation 2951 2957	neguje
+R22	Neg Arg1:T63 Arg2:T62	
+T64	Behaviour 2975 3001	warunki mieszkaniowe dobre
+T65	Behaviour 3027 3032	renta
+T66	Investigation 3086 3089	TTE
+T67	Investigation 3091 3094	TET
+T68	Investigation 3096 3100	ABPM
+T69	Investigation 3102 3112	Holter EKG
+T70	Condition 1283 1295	Kifoskolioza
+N27	Reference T70 ICD10:M41.8	Inne postacie skoliozy
+T71	Condition 1386 1427	zespołu HELLP powikłanym krwiakiem powłok
+N28	Reference T71 ICD10:O14.1	Ciężki stan przedrzucawkowy
+T72	Treatment 1430 1443	relaparotomią
+R23	Dat Arg1:T15 Arg2:T72	
+R24	Dat Arg1:T15 Arg2:T71	
+T73	Condition 1460 1490	odmie opłucnowej prawostronnej
+N29	Reference T73 ICD10:J93.9	Odma opłucnowa, nieokreślona
+T74	Condition 2447 2459	Kifoskolioza
+N30	Reference T74 ICD10:M41.8	Inne postacie skoliozy
+T75	Condition 2550 2591	zespołu HELLP powikłanym krwiakiem powłok
+N31	Reference T75 ICD10:O14.1	Ciężki stan przedrzucawkowy
+T76	Treatment 2594 2607	relaparotomią
+R25	Dat Arg1:T41 Arg2:T76	
+R26	Dat Arg1:T41 Arg2:T75	
+T77	Condition 2624 2654	odmie opłucnowej prawostronnej
+N32	Reference T77 ICD10:J93.9	Odma opłucnowa, nieokreślona
+T78	Date 2069 2080	trwał 3 dni
+R27	Dat Arg1:T78 Arg2:T23	
+T79	Condition 1143 1185	mutacje w genach kolagenu VI, w tym COL6A1
+N33	Reference T79 ICD10:Q79.6	Zespół Ehlersa-Danlosa
+T80	Symptom 2026 2061	niezwiązanego z wysiłkiem fizycznym
+R28	Dat Arg1:T78 Arg2:T80	
+N34	Reference T28 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T81	Condition 2331 2373	mutacje w genach kolagenu VI, w tym COL6A1
+N35	Reference T81 ICD10:Q79.6	Zespół Ehlersa-Danlosa
+N36	Reference T62 ICD10:T78.4	Alergia, nieokreślona
+N37	Reference T25 ICD10:R55	Omdlenie i zapaść
+N26	Reference T58 ICD10:Z72.0	Używanie tytoniu

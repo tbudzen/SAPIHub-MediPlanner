@@ -1,0 +1,139 @@
+T1	Behaviour 420 460	Dieta lekkostrawna , niskocholesterolowa
+T2	Investigation 477 552	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek.
+T3	Treatment 572 606	kontrola ciśnienia tętniczego krwi
+T4	Drug 619 627	Polocard
+T5	Drug_dose 628 700	75 mg 1x1 tabl. wieczorem - kont. zalec. do decyzji lek. spec. neurologa
+T6	Drug 702 709	Polpril
+T7	Drug 732 739	Amlozek
+T8	Drug 765 772	Romazic
+T9	Drug 847 850	IPP
+T10	Drug 881 889	Vicebrol
+T11	Drug_dose 890 899	2x1 tabl.
+R1	Drg Arg1:T10 Arg2:T11	
+T12	Condition 1128 1189	Wrodzona wada serca pod postacią przetrwałego otworu owalnego
+N1	Reference T12 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T13	Treatment 1199 1265	zamknięciu ubytku zestawm Occlutech Figulla Flex II PFO (23/25 mm)
+T14	Date 1267 1278	22.11.2018r
+R2	Dat Arg1:T14 Arg2:T13	
+T15	Condition 1281 1320	Przebyty przejściowy atak niedokrwienny
+N2	Reference T15 ICD10:I63	Zawał mózgu
+T16	Symptom 1334 1347	zaburzeń mowy
+N3	Reference T16 ICD10:R47	Zaburzenia mowy niesklasyfikowane gdzie indziej
+T17	Date 1349 1356	07.2017
+R3	Dat Arg1:T17 Arg2:T16	
+R4	Dat Arg1:T17 Arg2:T15	
+T18	Symptom 1359 1393	Niedoczulica połowicza lewostronna
+N4	Reference T18 ICD10:G81	Porażenie połowicze
+T19	Symptom 1395 1403	Omdlenia
+N5	Reference T19 ICD10:R55	Omdlenie i zapaść
+T20	Condition 1417 1449	Zmiany zwyrodnieniowe kręgosłupa
+N6	Reference T20 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T21	Condition 1451 1484	Nadciśnienie tętnicze skorygowane
+N7	Reference T21 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T22	Treatment 1494 1517	usunięciu trzonu macicy
+T23	Condition 1527 1537	mięśniaków
+N8	Reference T23 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+T24	Date 1539 1543	2012
+R5	Dat Arg1:T24 Arg2:T23	
+R6	Dat Arg1:T24 Arg2:T22	
+T25	Investigation 2661 2665	ECHO
+T26	Investigation 2667 2685	EKG metodą Holtera
+T27	Investigation 2687 2691	ABPM
+T28	Investigation 2693 2708	próba wysiłkowa
+T29	Drug 2561 2567	Plavix
+T30	Drug 2569 2577	Polocard
+T31	Behaviour 2505 2525	warunki mieszkaniowe
+T32	Condition 2426 2429	WZW
+N9	Reference T32 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T33	Condition 2436 2445	borelioza
+N10	Reference T33 ICD10:A69.2	Choroba z Lyme
+T34	Condition 2451 2454	tbc
+N11	Reference T34 ICD10:A15	
+T35	Condition 2460 2464	odra
+N12	Reference T35 ICD10:B05	Odra
+T36	Behaviour 2470 2484	kontakt z odrą
+N13	Reference T36 ICD10:B05	Odra
+T37	Negation 2485 2488	(-)
+R7	Dat Arg1:T37 Arg2:T36	
+T38	Negation 2465 2468	(-)
+R8	Neg Arg1:T38 Arg2:T35	
+T39	Negation 2455 2458	(-)
+R9	Neg Arg1:T39 Arg2:T34	
+T40	Negation 2446 2449	(-)
+R10	Neg Arg1:T40 Arg2:T33	
+T41	Negation 2430 2433	(-)
+R11	Neg Arg1:T41 Arg2:T32	
+T42	Negation 2395 2398	nie
+T43	Negation 2380 2383	nie
+T44	Negation 2348 2356	nie pali
+T45	Condition 2384 2393	Uczulenia
+N14	Reference T45 ICD10:T78.4	Alergia, nieokreślona
+R12	Neg Arg1:T42 Arg2:T45	
+T46	Behaviour 2367 2378	Inne używki
+R13	Neg Arg1:T43 Arg2:T46	
+T47	Behaviour 2331 2346	Palenie tytoniu
+N15	Reference T47 ICD10:T65.2	Tytoń i nikotyna
+R14	Neg Arg1:T44 Arg2:T47	
+T48	Treatment 2310 2330	Przebyte operacje:jw
+T49	Symptom 2190 2202	zasłabnięcia
+N16	Reference T49 ICD10:R55	Omdlenie i zapaść
+T50	Symptom 2204 2212	omdlenia
+N17	Reference T50 ICD10:R55	Omdlenie i zapaść
+T51	Symptom 2214 2224	krwawienia
+N18	Reference T51 ICD10:R48	Dysleksja i inne zaburzenia spostrzegania, niesklasyfikowane gdzie indziej
+T52	Symptom 2226 2239	czarne stolce
+N19	Reference T52 ICD10:K92.1	Stolce smołowate
+T53	Symptom 2241 2257	brunatne wymioty
+N20	Reference T53 ICD10:K92.0	Wymioty krwawe
+T54	Condition 2259 2275	chorobę wrzodową
+N21	Reference T54 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T55	Symptom 2277 2291	duszność nocną
+N22	Reference T55 ICD10:I50.1	Niewydolność serca lewokomorowa
+T56	Symptom 2293 2308	obrzęki podudzi
+N23	Reference T56 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T57	Negation 2182 2188	Neguje
+R15	Neg Arg1:T57 Arg2:T49	
+R16	Neg Arg1:T57 Arg2:T50	
+R17	Neg Arg1:T57 Arg2:T51	
+R18	Neg Arg1:T57 Arg2:T52	
+R19	Neg Arg1:T57 Arg2:T53	
+R20	Neg Arg1:T57 Arg2:T54	
+R21	Neg Arg1:T57 Arg2:T55	
+R22	Neg Arg1:T57 Arg2:T56	
+T58	Treatment 2130 2153	usunięciu trzonu macicy
+T59	Condition 2163 2173	mięśniaków
+N24	Reference T59 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+T60	Date 2175 2179	2012
+R23	Dat Arg1:T60 Arg2:T59	
+R24	Dat Arg1:T60 Arg2:T58	
+T61	Condition 2087 2121	Nadciśnienie tętnicze skorygowane.
+N25	Reference T61 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T62	Condition 2053 2085	Zmiany zwyrodnieniowe kręgosłupa
+N26	Reference T62 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T63	Symptom 2031 2039	Omdlenia
+N27	Reference T63 ICD10:R55	Omdlenie i zapaść
+T64	Symptom 1995 2029	Niedoczulica połowicza lewostronna
+N28	Reference T64 ICD10:G81	Porażenie połowicze
+T65	Condition 1917 1956	przebyty przejściowy atak niedokrwienny
+N29	Reference T65 ICD10:I63	Zawał mózgu
+T66	Symptom 1970 1983	zaburzeń mowy
+N30	Reference T66 ICD10:R47	Zaburzenia mowy niesklasyfikowane gdzie indziej
+T67	Date 1985 1992	07.2017
+R25	Dat Arg1:T67 Arg2:T66	
+R26	Dat Arg1:T67 Arg2:T65	
+T68	Treatment 1689 1756	zamknięciu ubytku zestawem Occlutech Figulla Flex II PFO (23/25 mm)
+T69	Date 1758 1769	22.11.2018r
+R27	Dat Arg1:T69 Arg2:T68	
+T70	Symptom 1809 1845	okresowo występujących kołatań serca
+N31	Reference T70 ICD10:R00.2	Kołatanie serca
+T71	Symptom 1848 1894	bólów w klatce piersiowej o charakterze kłucia
+N32	Reference T71 ICD10:R07.3	Inne bóle w klatce piersiowej
+R28	Drg Arg1:T4 Arg2:T5	
+T72	Drug_dose 710 731	2,5 mg 1x1 tabl. rano
+R29	Drg Arg1:T6 Arg2:T72	
+T73	Drug_dose 740 764	5 mg 1x1 tabl. wieczorem
+R30	Drg Arg1:T7 Arg2:T73	
+T74	Drug_dose 773 845	20 mg 1x1 tabl. wieczorem - kont. zalec. do decyzji lek. spec. neurologa
+R31	Drg Arg1:T8 Arg2:T74	
+T75	Drug_dose 851 880	20 mg 1x1 tabl. rano na czczo
+R32	Drg Arg1:T9 Arg2:T75	

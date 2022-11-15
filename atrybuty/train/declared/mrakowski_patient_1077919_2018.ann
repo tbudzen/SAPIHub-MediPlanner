@@ -1,0 +1,176 @@
+T1	Condition 439 455	Choroba wieńcowa
+N1	Reference T1 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T2	Condition 465 493	dwóch zatrzymaniach krążenia
+N2	Reference T2 ICD10:I46.9	Zatrzymanie krążenia, nieokreślone
+T3	Condition 496 510	mechanizmie VF
+N3	Reference T3 ICD10:I49.0	Migotanie i trzepotanie komór
+T4	Condition 523 529	NSTEMI
+N4	Reference T4 ICD10:I25.2	Przebyty zawał serca
+T5	Date 531 541	15.06.2018
+R1	Dat Arg1:T5 Arg2:T4	
+R2	Dat Arg1:T5 Arg2:T3	
+R3	Dat Arg1:T5 Arg2:T2	
+T6	Condition 545 567	Mostek mięśniowy w GPZ
+N5	Reference T6 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T7	Treatment 577 612	implantacji ICD w prewencji wtórnej
+T8	Date 614 624	22.06.2018
+R4	Dat Arg1:T8 Arg2:T7	
+T9	Condition 627 664	Przewlekła niewydolność serca NYHA II
+N6	Reference T9 ICD10:I50	Niewydolność serca
+T10	Condition 666 687	Nadciśnienie tętnicze
+N7	Reference T10 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T11	Treatment 698 714	cholecystektomii
+A1	Status T11 Historical_Insignificant
+T12	Date 716 727	30 lat temu
+R5	Dat Arg1:T12 Arg2:T11	
+T13	Condition 730 770	Niedoczynność tarczycy świeżo rozpoznana
+N8	Reference T13 ICD10:E03	Niedoczynność tarczycy o innej etiologii
+T14	Behaviour 772 793	Przewlekły nikotynizm
+N9	Reference T14 ICD10:Z72.0	Używanie tytoniu
+T15	Symptom 807 816	kaszlu po
+N10	Reference T15 ICD10:R05	Kaszel
+T16	Drug 817 821	ACEI
+A2	Source T15 Declared
+T17	Treatment 933 955	kontrola u lekarza POZ
+T18	Treatment 958 999	dalsza kontrola w Poradni Kardiologicznej
+T19	Treatment 1002 1030	regularne przyjmowanie leków
+T20	Drug 1032 1039	Sobycor
+T21	Drug_dose 1040 1060	2,5mg 1x 1 tabl/rano
+R6	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1061 1068	Areplex
+T23	Drug_dose 1069 1088	75mg 1x 1 tabl/rano
+R7	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1089 1094	Acard
+T25	Drug_dose 1095 1115	75mg 1x 1 tabl/wiecz
+R8	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1116 1119	IPP
+T27	Drug_dose 1120 1139	20mg 1x 1 tabl/rano
+R9	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1264 1271	Sobycor
+T29	Drug 1273 1280	Areplex
+T30	Drug 1282 1285	IPP
+T31	Drug 1287 1297	Prestarium
+T32	Drug 1299 1311	Atorvasterol
+T33	Drug 1313 1318	Acard
+T34	Drug 1320 1326	Telmix
+T35	Drug 1328 1335	Amertil
+T36	Drug 1337 1345	Euthyrox
+T37	Condition 1490 1493	CAD
+N11	Reference T37 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T38	Condition 1498 1504	2x NZK
+N12	Reference T38 ICD10:I46.9	Zatrzymanie krążenia, nieokreślone
+T39	Condition 1507 1521	mechanizmie VF
+N13	Reference T39 ICD10:I49.0	Migotanie i trzepotanie komór
+T40	Date 1523 1533	15.06.2018
+R10	Dat Arg1:T40 Arg2:T39	
+R11	Dat Arg1:T40 Arg2:T38	
+T41	Condition 1539 1545	NSTEMI
+N14	Reference T41 ICD10:I25.2	Przebyty zawał serca
+T42	Date 1547 1557	15.06.2018
+R12	Dat Arg1:T42 Arg2:T41	
+T43	Investigation 1561 1565	koro
+T44	Investigation_result 1566 1607	zmiany do 50% oraz mostek mięśniowy w GPZ
+N15	Reference T44 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+R13	Inv Arg1:T43 Arg2:T44	
+T45	Treatment 1614 1649	implantacji ICD w prewencji wtórnej
+T46	Date 1650 1660	22.06.2018
+R14	Dat Arg1:T46 Arg2:T45	
+T47	Condition 1665 1707	przewlekłą niewydolnością serca II wg NYHA
+N16	Reference T47 ICD10:I50	Niewydolność serca
+T48	Condition 1709 1711	HA
+N17	Reference T48 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T49	Symptom 1769 1808	duszności głównie wysiłkowej do II NYHA
+N18	Reference T49 ICD10:R06.0	Duszność
+T50	Symptom 1817 1840	bóle żołądka po posiłku
+N19	Reference T50 ICD10:R10.1	Ból zlokalizowany w nadbrzuszu
+T51	Date 1841 1851	od 2-3 tyg
+R15	Dat Arg1:T51 Arg2:T50	
+T52	Negation 1853 1859	Neguje
+T53	Symptom 1861 1885	bóle w klatce piersiowej
+N20	Reference T53 ICD10:R07	Ból gardła i w klatce piersiowej
+T54	Symptom 1888 1900	zasłabnięcia
+T55	Symptom 1902 1910	omdlenia
+N21	Reference T55 ICD10:R55	Omdlenie i zapaść
+T56	Symptom 1912 1927	kołatania serca
+N22	Reference T56 ICD10:R00.2	Kołatanie serca
+T57	Symptom 1929 1939	krwawienia
+N23	Reference T57 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T58	Symptom 1941 1954	czarne stolce
+N24	Reference T58 ICD10:K92.1	Stolce smołowate
+T59	Symptom 1956 1972	brunatne wymioty
+N25	Reference T59 ICD10:K92.0	Wymioty krwawe
+T60	Condition 1974 1990	chorobę wrzodową
+N26	Reference T60 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T61	Symptom 1992 2020	duszność nocną typu ortopnoe
+N27	Reference T61 ICD10:R06.0	Duszność
+T62	Condition 2022 2024	DM
+N28	Reference T62 ICD10:E14	Cukrzyca nieokreślona
+T63	Condition 2026 2036	udar mózgu
+N29	Reference T63 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T64	Condition 2038 2049	zawał serca
+N30	Reference T64 ICD10:I25.2	Przebyty zawał serca
+R16	Neg Arg1:T52 Arg2:T64	
+R17	Neg Arg1:T52 Arg2:T63	
+R18	Neg Arg1:T52 Arg2:T62	
+R19	Neg Arg1:T52 Arg2:T61	
+R20	Neg Arg1:T52 Arg2:T60	
+R21	Neg Arg1:T52 Arg2:T59	
+R22	Neg Arg1:T52 Arg2:T58	
+R23	Neg Arg1:T52 Arg2:T57	
+R24	Neg Arg1:T52 Arg2:T56	
+R25	Neg Arg1:T52 Arg2:T55	
+R26	Neg Arg1:T52 Arg2:T54	
+R27	Neg Arg1:T52 Arg2:T53	
+T65	Treatment 2055 2072	Przebyte operacje
+T66	Date 2074 2085	30 lat temu
+T67	Treatment 2086 2102	cholecystektomia
+A3	Status T67 Historical_Insignificant
+R28	Dat Arg1:T66 Arg2:T67	
+T68	Behaviour 2103 2118	Palenie tytoniu
+N31	Reference T68 ICD10:Z72.0	Używanie tytoniu
+T69	Date 2127 2133	30 lat
+T70	Negation 2134 2141	rzuciła
+R29	Dat Arg1:T69 Arg2:T68	
+R30	Neg Arg1:T70 Arg2:T68	
+T72	Behaviour 2150 2161	Inne używki
+T73	Negation 2163 2166	nie
+R32	Neg Arg1:T73 Arg2:T72	
+T71	Condition 2167 2176	Uczulenia
+N32	Reference T71 ICD10:T78.4	Alergia, nieokreślona
+T74	Negation 2178 2181	nie
+R31	Neg Arg1:T74 Arg2:T71	
+T75	Condition 2210 2213	WZW
+N33	Reference T75 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T76	Negation 2215 2216	-
+R33	Neg Arg1:T76 Arg2:T75	
+T77	Condition 2220 2229	borelioza
+N34	Reference T77 ICD10:A69.2	Choroba z Lyme
+T78	Negation 2232 2233	-
+R34	Neg Arg1:T78 Arg2:T77	
+T79	Condition 2237 2240	tbc
+N35	Reference T79 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T80	Negation 2242 2243	-
+R35	Neg Arg1:T80 Arg2:T79	
+T81	Behaviour 2262 2288	warunki mieszkaniowe dobre
+T82	Drug 2328 2335	Sobycor
+T83	Drug_dose 2336 2347	2,5mg 1x1 R
+R36	Drg Arg1:T82 Arg2:T83	
+T84	Drug 2348 2355	Areplex
+T85	Drug_dose 2356 2367	75 mg 1x1 R
+R37	Drg Arg1:T84 Arg2:T85	
+T86	Drug 2368 2371	IPP
+T87	Drug_dose 2372 2383	20 mg 1x1 R
+R38	Drg Arg1:T86 Arg2:T87	
+T88	Drug 2384 2394	Prestarium
+T89	Drug_dose 2395 2404	5mg 1x1 W
+R39	Drg Arg1:T88 Arg2:T89	
+T90	Drug 2405 2417	Atorvasterol
+T91	Drug_dose 2418 2429	40 mg 1x1 W
+R40	Drg Arg1:T90 Arg2:T91	
+T92	Drug 2430 2435	Acard
+T93	Drug_dose 2436 2447	75 mg 1x1 W
+R41	Drg Arg1:T92 Arg2:T93	
+T94	Investigation 2509 2530	badania laboratoryjne
+T95	Investigation 2532 2536	ECHO
+T96	Investigation 2538 2542	ABPM
+T97	Investigation 2544 2554	Holter ekg

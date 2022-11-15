@@ -1,0 +1,104 @@
+T1	Behaviour 422 517	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T2	Investigation 530 570	kontrola lipidogramu, stężenia elektroli
+T3	Condition 1040 1072	Nieprawidłowa glikemia na czczo.
+N1	Reference T3 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T4	Treatment 808 834	AVR ( Medtronic Hall 23 A;
+T5	Date 835 842	06/2002
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Condition 1028 1031	TIA
+N2	Reference T6 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T7	Date 1033 1037	2006
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Condition 845 890	Podejrzenie łuszczki przy płatku bezwieńcowym
+A1	Source T8 Declared
+T9	Condition 900 925	3 udarach niedokrwiennych
+N3	Reference T9 ICD10:I63	Zawał mózgu
+T10	Date 949 953	2003
+T11	Condition 928 948	prawej półkuli mózgu
+T12	Condition 955 975	 lewej półkuli mózgu
+N4	Reference T12 ICD10:I63	Zawał mózgu
+T13	Condition 982 1001	lewej półkuli mózgu
+N5	Reference T13 ICD10:I63	Zawał mózgu
+N6	Reference T11 ICD10:I63	Zawał mózgu
+T14	Date 976 980	2009
+R3	Dat Arg1:T14 Arg2:T12	
+R4	Dat Arg1:T10 Arg2:T11	
+T15	Date 1002 1006	2014
+R5	Dat Arg1:T15 Arg2:T13	
+T16	Investigation 1968 1971	TEE
+T17	Investigation 1973 1975	CT
+T18	Investigation 1977 1980	RTG
+T19	Investigation 1982 1985	TTE
+T20	Drug 1803 1810	Sintrom
+T21	Drug_dose 1811 1817	wg INR
+R6	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1819 1829	Prestarium
+T23	Drug_dose 1830 1842	2x.5mg 1x1 R
+R7	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1844 1849	Gasec
+T25	Drug_dose 1850 1866	20mg 1x1 kaps. R
+R8	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1868 1876	Suvardio
+T27	Drug_dose 1877 1886	5mg 1x1 W
+R9	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1888 1895	Lucetam
+T29	Drug_dose 1896 1908	1,2 2x1 tabl
+R10	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1910 1920	Lamotrixem
+T31	Drug_dose 1921 1928	100 2x1
+R11	Drg Arg1:T30 Arg2:T31	
+T32	Drug 1930 1941	Asmac forte
+T33	Drug_dose 1942 1947	R i W
+R12	Drg Arg1:T32 Arg2:T33	
+T34	Negation 1789 1795	neguje
+T35	Condition 1778 1787	Uczulenia
+N7	Reference T35 ICD10:T78.4	Alergia, nieokreślona
+R13	Neg Arg1:T34 Arg2:T35	
+T36	Behaviour 1736 1763	alkohol – 1 piwo na tydzień
+N8	Reference T36 ICD10:Z72.1	Używanie alkoholu
+T37	Negation 1720 1726	neguje
+T38	Behaviour 1699 1717	Palenie papierosów
+N9	Reference T38 ICD10:T65.2	Tytoń i nikotyna
+R14	Neg Arg1:T37 Arg2:T38	
+T39	Condition 1567 1572	WZW B
+N10	Reference T39 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T40	Negation 1573 1576	(-)
+R15	Neg Arg1:T40 Arg2:T39	
+T41	Condition 1578 1586	Grużlica
+N11	Reference T41 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T42	Date 1587 1590	(-)
+R16	Dat Arg1:T42 Arg2:T41	
+T43	Condition 1592 1601	Borelioza
+N12	Reference T43 ICD10:A69.2	Choroba z Lyme
+T44	Negation 1603 1605	-)
+R17	Neg Arg1:T44 Arg2:T43	
+T45	Condition 1607 1611	Odra
+N13	Reference T45 ICD10:B05	Odra
+T46	Negation 1613 1615	-,
+R18	Neg Arg1:T46 Arg2:T45	
+T47	Treatment 1632 1642	szczepiony
+N14	Reference T47 ICD10:B05	Odra
+T48	Negation 1616 1627	nie pamięta
+R19	Neg Arg1:T48 Arg2:T47	
+A2	Source T47 Declared
+T49	Treatment 1217 1220	AVR
+T50	Date 1222 1226	2002
+R20	Dat Arg1:T50 Arg2:T49	
+T51	Condition 1232 1241	3 udarach
+N15	Reference T51 ICD10:I63	
+T52	Date 1243 1247	2003
+T53	Date 1249 1253	2009
+T54	Date 1255 1259	2014
+R21	Dat Arg1:T52 Arg2:T51	
+R22	Dat Arg1:T52 Arg2:T51	
+R23	Dat Arg1:T54 Arg2:T51	
+T55	Condition 1269 1284	1 epizodzie TIA
+N16	Reference T55 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T56	Date 1286 1290	2006
+R24	Dat Arg1:T56 Arg2:T55	
+T57	Investigation 1354 1357	TTE
+T58	Investigation_result 1358 1400	narastania gradientu na zastawce aortalnej
+R25	Inv Arg1:T57 Arg2:T58	
+T59	Behaviour 1765 1769	inne
+T60	Negation 1770 1776	neguje
+R26	Neg Arg1:T60 Arg2:T59	

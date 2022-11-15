@@ -1,0 +1,107 @@
+T1	Condition 415 458	Łagodne zastawkowe zwężenie tętnicy płucnej
+N1	Reference T1 ICD10:I37.0	Zwężenie zastawki pnia płucnego
+T2	Treatment 468 478	zamknięciu
+T3	Condition 479 520	ubytku w przegrodzie międzyprzedsionkowej
+N2	Reference T3 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T4	Treatment 521 528	zapinką
+T5	Date 530 534	2005
+R1	Dat Arg1:T5 Arg2:T4	
+R2	Dat Arg1:T5 Arg2:T3	
+R3	Dat Arg1:T5 Arg2:T2	
+T6	Treatment 545 553	operacji
+T7	Condition 554 615	splotu barkowego prawego z powodu uszkodzenia okołoporodowego
+N3	Reference T7 ICD10:P14.0	Porażenie Erba spowodowane urazem porodowym
+T8	Date 661 665	2000
+R4	Dat Arg1:T8 Arg2:T6	
+R5	Dat Arg1:T8 Arg2:T7	
+A1	Status T7 Historical_Insignificant
+A2	Status T6 Historical_Insignificant
+T9	Treatment 825 852	dalsza opieka w poradni POZ
+T10	Treatment 859 891	okresowa kontrola kardiologiczna
+T11	Treatment 894 921	kolejna w tutejszej Klinice
+T12	Date 922 936	za 12 miesięcy
+R6	Dat Arg1:T12 Arg2:T10	
+R7	Dat Arg1:T12 Arg2:T11	
+T13	Investigation 944 983	codzienna kontrola ciśnienia tętniczego
+T14	Behaviour 990 1000	dieta DASH
+T15	Behaviour 1007 1052	stały, umiarkowany, aerobowy wysiłek fizyczny
+T16	Treatment 1059 1087	regularne przyjmowanie leków
+T17	Drug 1097 1107	Concor Cor
+T18	Drug_dose 1108 1128	1.25 mg 1 tabl. rano
+R8	Drg Arg1:T17 Arg2:T18	
+T19	Drug 1137 1147	Novocardia
+T20	Drug_dose 1148 1160	1 tabl. rano
+R9	Drg Arg1:T19 Arg2:T20	
+T21	Drug 1168 1178	PoloMag B6
+T22	Drug_dose 1179 1191	1 tabl. rano
+R10	Drg Arg1:T21 Arg2:T22	
+T23	Treatment 1341 1351	zamknięciu
+T24	Condition 1352 1393	ubytku w przegrodzie międzyprzedsionkowej
+N4	Reference T24 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T25	Date 1395 1400	2005r
+R11	Dat Arg1:T25 Arg2:T23	
+R12	Dat Arg1:T25 Arg2:T24	
+T26	Condition 1416 1453	zwężeniem zastawkowym tętnicy płucnej
+N5	Reference T26 ICD10:I37.0	Zwężenie zastawki pnia płucnego
+T27	Symptom 1457 1491	niedowładem prawej kończyny górnej
+N6	Reference T27 ICD10:P14.0	Porażenie Erba spowodowane urazem porodowym
+T28	Condition 1493 1536	okołoporodowe uszkodzenie splotu ramiennego
+N7	Reference T28 ICD10:P14.0	Porażenie Erba spowodowane urazem porodowym
+T29	Symptom 1568 1607	okresowych spadków ciśnienia tętniczego
+N8	Reference T29 ICD10:R03.1	Nieswoiste obniżone ciśnienie tętnicze krwi
+T30	Symptom 1609 1644	sporadycznie bólów w kl. piersiowej
+N9	Reference T30 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T31	Symptom 1646 1655	duszności
+N10	Reference T31 ICD10:R06.0	Duszność
+T32	Treatment 1658 1675	Przebyte operacje
+T33	Condition 1709 1753	okołoporodowego uszkodzenia splotu barkowego
+N11	Reference T33 ICD10:P14.0	Porażenie Erba spowodowane urazem porodowym
+A3	Status T33 Historical_Insignificant
+T34	Treatment 1755 1763	operacja
+A4	Status T34 Historical_Insignificant
+T35	Date 1766 1771	2000r
+R13	Dat Arg1:T35 Arg2:T33	
+R14	Dat Arg1:T35 Arg2:T34	
+T36	Treatment 1772 1791	Leczenie przewlekłe
+T37	Treatment 1793 1806	rehabilitacja
+T38	Condition 1834 1837	WZW
+N12	Reference T38 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T39	Condition 1839 1848	borelioza
+N13	Reference T39 ICD10:A69.2	Choroba z Lyme
+T40	Negation 1851 1861	nie podaje
+R15	Neg Arg1:T40 Arg2:T39	
+R16	Neg Arg1:T40 Arg2:T38	
+T41	Condition 1862 1877	Wywiad rodzinny
+A5	Status T41 Family
+T42	Negation 1879 1889	nie podaje
+R17	Neg Arg1:T42 Arg2:T41	
+T43	Behaviour 1890 1905	Palenie tytoniu
+T44	Negation 1907 1917	nie podaje
+R18	Neg Arg1:T44 Arg2:T43	
+T45	Behaviour 1918 1929	Inne używki
+T46	Negation 1931 1941	nie podaje
+R19	Neg Arg1:T46 Arg2:T45	
+T47	Condition 1942 1951	Uczulenia
+N15	Reference T47 ICD10:T78.4	Alergia, nieokreślona
+T48	Negation 1953 1963	nie podaje
+R20	Neg Arg1:T48 Arg2:T47	
+T49	Behaviour 1989 1995	rolnik
+T50	Drug 2002 2012	Procoralan
+T51	Drug 2055 2065	PoloMag B6
+T52	Drug 2030 2040	Novocardia
+T53	Drug_dose 2013 2029	5 mg 1 x 1 tabl.
+R21	Drg Arg1:T50 Arg2:T53	
+T54	Drug_dose 2041 2053	1 tabl. rano
+R22	Drg Arg1:T52 Arg2:T54	
+T55	Drug_dose 2066 2078	1 tabl. rano
+R23	Drg Arg1:T51 Arg2:T55	
+T56	Symptom 618 659	niedowładem prawostronnym kończyny górnej
+A6	Status T56 Historical_Insignificant
+R24	Dat Arg1:T8 Arg2:T56	
+N16	Reference T56 ICD10:P14.0	Porażenie Erba spowodowane urazem porodowym
+T57	Symptom 1677 1699	Niedowład prawostronny
+N17	Reference T57 ICD10:P14.0	Porażenie Erba spowodowane urazem porodowym
+A7	Status T57 Historical_Insignificant
+R25	Dat Arg1:T35 Arg2:T57	
+N14	Reference T43 ICD10:Z72.0	Używanie tytoniu
+N18	Reference T45 ICD10:Z72	Problemy związane ze stylem życia

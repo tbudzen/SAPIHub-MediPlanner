@@ -1,0 +1,73 @@
+T1	Condition 450 492	Niedomykalność zastawki trójdzielnej I/II'
+N1	Reference T1 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T2	Condition 495 562	Nadkomorowe zaburzenia rytmu serca ( pobudzenia pojedyncze , pary )
+N2	Reference T2 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T5	Investigation 565 586	Obserwacja w kierunku
+T6	Condition 587 615	choroby niedokrwiennej serca
+N5	Reference T6 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T7	Negation 616 625	negatywna
+R1	Neg Arg1:T7 Arg2:T6	
+T8	Treatment 736 801	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T9	Behaviour 804 844	Dieta lekkostrawna , niskocholesterolowa
+T10	Investigation 848 896	Systematyczna kontrola ciśnienia tętniczego krwi
+T11	Treatment 899 940	Wskazane systematyczne przyjmowanie leków
+T12	Drug 947 955	Metocard
+T13	Drug_dose 956 981	25 mg 2 x dz po 1/2 tabl.
+R2	Drg Arg1:T12 Arg2:T13	
+T14	Symptom 1379 1394	kołatania serca
+N6	Reference T14 ICD10:R00.2	Kołatanie serca
+T15	Symptom 1397 1421	uczuciem braku powietrza
+N7	Reference T15 ICD10:R06.0	Duszność
+T16	Symptom 1438 1514	bólów w klatce piersiowej o charakterze kłującym nasilającym się przy wdechu
+N8	Reference T16 ICD10:R07.1	Ból w klatce piersiowej podczas oddychania
+T17	Symptom 1518 1540	Nasilenie dolegliwości
+T18	Date 1541 1552	od miesiąca
+R3	Dat Arg1:T18 Arg2:T17	
+T19	Negation 1554 1560	Neguje
+T20	Symptom 1561 1573	zasłabnięcia
+N9	Reference T20 ICD10:R55	Omdlenie i zapaść
+R4	Neg Arg1:T19 Arg2:T20	
+T21	Condition 1591 1625	Nadkomorowe zaburzenia rytmu serca
+N10	Reference T21 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T22	Condition 1628 1650	trzy epizody hipotonii
+N11	Reference T22 ICD10:I95	Niedociśnienie
+T23	Date 1653 1679	ostatni napad ok roku temu
+R5	Dat Arg1:T23 Arg2:T22	
+T24	Treatment 1683 1700	Przebyte operacje
+T25	Negation 1703 1707	brak
+R6	Neg Arg1:T25 Arg2:T24	
+T26	Treatment 1708 1727	Leczenie przewlekłe
+T27	Negation 1730 1741	brak danych
+R7	Neg Arg1:T27 Arg2:T26	
+T28	Condition 1770 1773	WZW
+N12	Reference T28 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T29	Negation 1776 1777	-
+R8	Neg Arg1:T29 Arg2:T28	
+T30	Condition 1783 1792	borelioza
+N13	Reference T30 ICD10:A69.2	Choroba z Lyme
+T31	Negation 1795 1796	-
+R9	Neg Arg1:T31 Arg2:T30	
+T32	Condition 1801 1820	wywiadzie rodzinnym
+A1	Status T32 Family
+T33	Condition 1829 1850	nadciśnienie tętnicze
+A2	Status T33 Family
+N14	Reference T33 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T34	Behaviour 1853 1895	Palenie tytoniu: tak , 1/2 paczki dziennie
+N15	Reference T34 ICD10:Z72.0	Używanie tytoniu
+T35	Behaviour 1912 1932	alkohol sporadycznie
+N16	Reference T35 ICD10:Z72.1	Używanie alkoholu
+T36	Behaviour 1899 1910	Inne używki
+A3	Status T35 Historical_Insignificant
+T37	Condition 1934 1952	Uczulenia: na leki
+N17	Reference T37 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T38	Drug 1982 1989	saridol
+A4	Source T38 Declared
+R10	Alg Arg1:T37 Arg2:T38	
+T39	Behaviour 2011 2037	warunki mieszkaniowe dobre
+T40	Investigation 2099 2109	Echo serca
+T41	Investigation 2112 2122	Holter EKG
+T42	Investigation 2125 2140	Próba Wysiłkowa
+N3	Reference T36 ICD10:Z72	Problemy związane ze stylem życia
+T3	Negation 2062 2065	bez
+T4	Drug 2066 2084	leków przewlekłych
+R11	Neg Arg1:T3 Arg2:T4	

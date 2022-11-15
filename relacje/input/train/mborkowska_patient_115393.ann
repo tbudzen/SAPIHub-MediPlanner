@@ -1,0 +1,84 @@
+T1	Condition 674 702	Zaburzenia depresyjno-lękowe
+N1	Reference T1 ICD10:F41.2	Zaburzenia depresyjne i lękowe mieszane
+T2	Condition 704 743	Małopłytkowość prawdopodobnie polekowa.
+N2	Reference T2 ICD10:D69.5	Małopłytkowość wtórna
+T3	Drug 1668 1678	Pregabalin
+T4	Drug_dose 1679 1694	75 mg 2x1 tabl.
+R1	Drg Arg1:T3 Arg2:T4	
+T5	Drug 1638 1645	Egzysta
+T6	Drug_dose 1646 1667	150 mg 1x1 tabl. rano
+R2	Drg Arg1:T5 Arg2:T6	
+T7	Condition 1575 1590	wywiad rodzinny
+A1	Status T7 Family
+T8	Negation 1591 1600	negatywny
+R3	Neg Arg1:T8 Arg2:T7	
+T9	Behaviour 1533 1559	warunki mieszkaniowe dobre
+T10	Condition 1483 1486	WZW
+N3	Reference T10 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T11	Condition 1493 1502	borelioza
+N4	Reference T11 ICD10:A69.2	Choroba z Lyme
+T12	Condition 1508 1511	tbc
+N5	Reference T12 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T13	Negation 1487 1490	(-)
+T14	Negation 1503 1507	(-),
+T15	Negation 1512 1515	(-)
+R4	Neg Arg1:T15 Arg2:T12	
+R5	Neg Arg1:T14 Arg2:T11	
+R6	Neg Arg1:T13 Arg2:T10	
+T16	Condition 1436 1455	Uczulenia: na pyłki
+N6	Reference T16 ICD10:T78.4	Alergia, nieokreślona
+T17	Negation 1431 1434	nie
+T18	Negation 1413 1416	nie
+T19	Behaviour 1418 1429	Inne używki
+R7	Neg Arg1:T17 Arg2:T19	
+T20	Behaviour 1396 1411	Palenie tytoniu
+N7	Reference T20 ICD10:T65.2	Tytoń i nikotyna
+R8	Neg Arg1:T18 Arg2:T20	
+T21	Treatment 1351 1379	operacje: okulistyczne (zez)
+N8	Reference T21 ICD10:H50	Inne postacie zeza
+T22	Date 1380 1394	w dzieciństwie
+R9	Dat Arg1:T22 Arg2:T21	
+T23	Symptom 1203 1211	omdlenia
+N9	Reference T23 ICD10:R55	Omdlenie i zapaść
+T24	Symptom 1213 1223	krwawienia
+N10	Reference T24 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T25	Symptom 1225 1238	czarne stolce
+N11	Reference T25 ICD10:K92.1	Stolce smołowate
+T26	Symptom 1240 1256	brunatne wymioty
+N12	Reference T26 ICD10:K92.0	Wymioty krwawe
+T27	Condition 1258 1274	chorobę wrzodową
+N13	Reference T27 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T28	Symptom 1276 1304	duszność nocną typu ortopnoe
+N14	Reference T28 ICD10:I50.1	Niewydolność serca lewokomorowa
+T29	Condition 1306 1308	HA
+N15	Reference T29 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T30	Condition 1310 1312	DM
+N16	Reference T30 ICD10:E13	Inne określone postacie cukrzycy
+T31	Condition 1314 1324	udar mózgu
+N17	Reference T31 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T32	Condition 1326 1337	zawał serca
+N18	Reference T32 ICD10:I25.2	Przebyty zawał serca
+T33	Negation 1195 1201	Neguje
+R10	Neg Arg1:T33 Arg2:T23	
+R11	Neg Arg1:T33 Arg2:T24	
+R12	Neg Arg1:T33 Arg2:T25	
+R13	Neg Arg1:T33 Arg2:T26	
+R14	Neg Arg1:T33 Arg2:T27	
+R15	Neg Arg1:T33 Arg2:T28	
+R16	Neg Arg1:T33 Arg2:T29	
+R17	Neg Arg1:T33 Arg2:T30	
+R18	Neg Arg1:T33 Arg2:T31	
+R19	Neg Arg1:T33 Arg2:T32	
+T34	Symptom 1099 1111	grypopodobne
+T35	Condition 1137 1151	niedokrwistość
+N19	Reference T35 ICD10:D64	Inne niedokrwistości
+T36	Symptom 1057 1068	wysoki puls
+T37	Symptom 914 937	uczucia napadów arytmii
+T38	Symptom 939 945	szumów
+N20	Reference T38 ICD10:H93.1	Szum w uszach
+T39	Symptom 948 963	pisków w głowie
+T40	Symptom 969 1047	tępego bólu głowy, połączonych z zawrotami głowy i ograniczeniem pola widzenia
+T41	Investigation 1779 1783	ECHO
+T42	Investigation 1785 1795	Holter-EKG
+T43	Investigation 1797 1801	ABPM
+T44	Investigation 1803 1818	próba wysiłkowa

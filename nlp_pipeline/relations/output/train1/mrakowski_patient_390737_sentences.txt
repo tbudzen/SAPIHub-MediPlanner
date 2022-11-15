@@ -1,0 +1,639 @@
+allRelations          : 28
+oks                   : 6
+isRedundantAndRemoveds: 20
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 1
+GOOD / BAD            : 26 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 11 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+1. Przyjmowanie leków: Acesan 1 x 50mg, Enarenal 1 x 2,5mg, Esentiale forte 1 x 1 kaps /ew na zmiane z Hepatilem, witamina D 2000j 1x1tabl (ambulatoryjna kontrola poziomu witaminy D za 3 miesiące).
+
+R1	Drg Arg1:T2 Arg2:T3 << OK >>	Acesan -> 1 x 50mg  <RANK: 3> <info: start[352, 359] <type: RIGHT>>
+R2	Drg Arg1:T2 Arg2:T5 <<REDUNDANT!!!REMOVED>>	Acesan -> 1 x 2,5mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[352, 378] <type: RIGHT>>
+R3	Drg Arg1:T2 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Acesan -> 1 x 1 kaps <:REMOVED other first tag between (right):> <RANK: 2> <info: start[352, 405] <type: RIGHT>>
+R4	Drg Arg1:T2 Arg2:T10 <<REDUNDANT!!!REMOVED>>	Acesan -> 2000j 1x1tabl <:REMOVED other first tag between (right):> <RANK: 2> <info: start[352, 454] <type: RIGHT>>
+R5	Drg Arg1:T4 Arg2:T3 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1 x 50mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[369, 359] <type: LEFT>>
+R6	Drg Arg1:T4 Arg2:T5 << OK >>	Enarenal -> 1 x 2,5mg  <RANK: 3> <info: start[369, 378] <type: RIGHT>>
+R7	Drg Arg1:T4 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1 x 1 kaps <:REMOVED other first tag between (right):> <RANK: 2> <info: start[369, 405] <type: RIGHT>>
+R8	Drg Arg1:T4 Arg2:T10 <<REDUNDANT!!!REMOVED>>	Enarenal -> 2000j 1x1tabl <:REMOVED other first tag between (right):> <RANK: 2> <info: start[369, 454] <type: RIGHT>>
+R9	Drg Arg1:T6 Arg2:T3 <<REDUNDANT!!!REMOVED>>	Esentiale forte -> 1 x 50mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[389, 359] <type: LEFT>>
+R10	Drg Arg1:T6 Arg2:T5 <<REDUNDANT!!!REMOVED>>	Esentiale forte -> 1 x 2,5mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[389, 378] <type: LEFT>>
+R11	Drg Arg1:T6 Arg2:T7 << OK >>	Esentiale forte -> 1 x 1 kaps  <RANK: 3> <info: start[389, 405] <type: RIGHT>>
+R12	Drg Arg1:T6 Arg2:T10 <<REDUNDANT!!!REMOVED>>	Esentiale forte -> 2000j 1x1tabl <:REMOVED other first tag between (right):> <RANK: 2> <info: start[389, 454] <type: RIGHT>>
+R13	Drg Arg1:T8 Arg2:T3 <<REDUNDANT!!!REMOVED>>	Hepatilem -> 1 x 50mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[432, 359] <type: LEFT>>
+R14	Drg Arg1:T8 Arg2:T5 <<REDUNDANT!!!REMOVED>>	Hepatilem -> 1 x 2,5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[432, 378] <type: LEFT>>
+R15	Drg Arg1:T8 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Hepatilem -> 1 x 1 kaps <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[432, 405] <type: LEFT>>
+R16	Drg Arg1:T8 Arg2:T10 <<REDUNDANT!!!REMOVED>>	Hepatilem -> 2000j 1x1tabl <:REMOVED other second tag between (right):> <RANK: 2> <info: start[432, 454] <type: RIGHT>>
+R17	Drg Arg1:T9 Arg2:T3 <<REDUNDANT!!!REMOVED>>	witamina D -> 1 x 50mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[443, 359] <type: LEFT>>
+R18	Drg Arg1:T9 Arg2:T5 <<REDUNDANT!!!REMOVED>>	witamina D -> 1 x 2,5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[443, 378] <type: LEFT>>
+R19	Drg Arg1:T9 Arg2:T7 <<REDUNDANT!!!REMOVED>>	witamina D -> 1 x 1 kaps <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[443, 405] <type: LEFT>>
+R20	Drg Arg1:T9 Arg2:T10 << OK >>	witamina D -> 2000j 1x1tabl  <RANK: 3> <info: start[443, 454] <type: RIGHT>>
+R21	Dat Arg1:T12 Arg2:T1 <<SHOULD NOT BE REMOVED>>	za 3 miesiące -> Przyjmowanie leków <:REMOVED other second tag between (left):> <RANK: 2> <info: start[511, 332] <type: LEFT>>
+R22	Dat Arg1:T12 Arg2:T11 << OK >>	za 3 miesiące -> ambulatoryjna kontrola poziomu witaminy D  <RANK: 3> <info: start[511, 469] <type: LEFT>>
+R23	Dat Arg1:T12 Arg2:T2 <<REDUNDANT!!!REMOVED>>	za 3 miesiące -> Acesan <:REMOVED other second tag between (left):> <RANK: 2> <info: start[511, 352] <type: LEFT>>
+R24	Dat Arg1:T12 Arg2:T4 <<REDUNDANT!!!REMOVED>>	za 3 miesiące -> Enarenal <:REMOVED other second tag between (left):> <RANK: 2> <info: start[511, 369] <type: LEFT>>
+R25	Dat Arg1:T12 Arg2:T6 <<REDUNDANT!!!REMOVED>>	za 3 miesiące -> Esentiale forte <:REMOVED other second tag between (left):> <RANK: 2> <info: start[511, 389] <type: LEFT>>
+R26	Dat Arg1:T12 Arg2:T8 <<REDUNDANT!!!REMOVED>>	za 3 miesiące -> Hepatilem <:REMOVED other second tag between (left):> <RANK: 2> <info: start[511, 432] <type: LEFT>>
+R27	Dat Arg1:T12 Arg2:T9 <<REDUNDANT!!!SHOULD BE REMOVED>>	za 3 miesiące -> witamina D  <RANK: 3> <info: start[511, 443] <type: LEFT>>
+
+
+Sentence 5:
+2. Ambulatoryjna kontrola poziomu TSH, fT3, fT4 w ciągu 3 miesięcy. 
+
+R28	Dat Arg1:T14 Arg2:T13 << OK >>	w ciągu 3 miesięcy -> Ambulatoryjna kontrola poziomu TSH, fT3, fT4  <RANK: 3> <info: start[575, 530] <type: LEFT>>
+
+
+Sentence 6:
+3. Kontakt z Klinika Kardiologii w ciągu 2 tygodni celem uzyskania informacji odnośnie brakujących wyników badań oraz ustalenia dalszego postępowania. 
+
+
+
+Sentence 7:
+4. Częściowe zwolnienie z zajęć wychowania fizycznego obejmujące ćwiczenia siłowe oraz wytrzymałościowe.
+
+
+Sentence 8:
+Brak przeciwwskazań do uczestnictwa w zajęciach na pływalni.
+
+
+
+Sentence 9:
+5. Dalsza opieka urologiczna.
+
+
+
+Sentence 10:
+6. Opieka ogólnopediatryczna w Poradni Lekarza Rodzinnego.
+
+
+
+Sentence 11:
+------------------------------------------------
+
+
+
+Sentence 12:
+Zastosowane leczenie
+
+
+
+Sentence 13:
+------------------------------------------------
+Acesan, Enarenal, Esentiale forte, wit.
+
+
+Sentence 14:
+D
+------------------------------------------------
+
+
+
+Sentence 15:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 16:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Atrezja zastawki trójdzielnej, d-TGA, ASD,VSD; po operacji dwukierunkowego Glenna, po operacji Stansela, po operacji Fontana
+------------------------------------------------
+
+
+
+Sentence 17:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 18:
+Chłopiec z wrodzoną wadą serca przyjęty do Kliniki do poszerzonych badań i ustalenia dalszego postępowania
+
+
+Sentence 19:
+Stan dość dobry
+------------------------------------------------
+
+
+
+Sentence 20:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 21:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.37[10^3/ul]
+    
+
+
+Sentence 22:
+RBC Krwinki czerwone:5.64[10^6/ul]
+    
+
+
+Sentence 23:
+HGB Hemoglobina:15.6[g/dl]
+    
+
+
+Sentence 24:
+HCT Hematokryt:44.1[%]
+    
+
+
+Sentence 25:
+MCV wskaźnik czerwonokrw:78.2[fl]
+    
+
+
+Sentence 26:
+MCH wskaźnik czerwonokrw:27.7[pg]
+    
+
+
+Sentence 27:
+MCHC wskaźnik czerwonokr:35.4[g/dl]
+    
+
+
+Sentence 28:
+PLT z morfologii:320[10^3/ul]
+    
+
+
+Sentence 29:
+RDW-SD:37.7[fl]
+    
+
+
+Sentence 30:
+RDW-CV:13.4[%]
+    PDW:12.5[fl]
+    MPV:10.4[fl]
+    P-LCR:28.6[%]
+    
+
+
+Sentence 31:
+PCT (hematokryt płytkowy:0.33[%]
+    
+
+
+Sentence 32:
+NEUTR# wartość bezwzględ:3.30[10^3/ul]
+    
+
+
+Sentence 33:
+NEUTR%:44.8[%]
+    
+
+
+Sentence 34:
+LYMH# wartość bezwzględn:2.94[10^3/ul]
+    
+
+
+Sentence 35:
+LYMPH%:39.9[%]
+    
+
+
+Sentence 36:
+MONO# wartość bezwzględn:0.72[10^3/ul]
+    
+
+
+Sentence 37:
+MONO%:9.8[%]
+    
+
+
+Sentence 38:
+EO# wartość bezwzględna:0.32[10^3/ul]
+    
+
+
+Sentence 39:
+EO%:4.3[%]
+    BASO# wartość bezwzględn:0.09[10^3/ul]
+    
+
+
+Sentence 40:
+BASO%:1.2[%]
+    
+
+
+Sentence 41:
+NRBC %:0.0[%]
+    
+
+
+Sentence 42:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 43:
+Antytrombina III: Antytrombina III:80[%]
+
+
+
+Sentence 44:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:34.7[sek]
+
+
+
+Sentence 45:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 46:
+Czas protrombinowy:14.4[sek]
+    
+
+
+Sentence 47:
+Wskaźnik PT:76.4[%]
+    
+
+
+Sentence 48:
+INR:1.30
+Czas trombinowy TT: Czas trombinowy TT:15.9[sek]
+
+
+
+Sentence 49:
+Fibrynogen: Fibrynogen:2.21[g/L]
+
+
+
+Sentence 50:
+D-dimer - test ilościowy: D-dimer - test ilościowy:203[ng/ml]
+
+
+
+Sentence 51:
+Badanie ogólne moczu
+    
+
+
+Sentence 52:
+barwa:żółty[ ]
+    
+
+
+Sentence 53:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 54:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 55:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 56:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 57:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 58:
+ciężar właściwy:1.023[ ]
+    
+
+
+Sentence 59:
+pH:5.0[ ]
+    
+
+
+Sentence 60:
+białko:nieobecne[ ]
+    
+
+
+Sentence 61:
+urobilinogen:2,0 mg/dl[ ]
+    
+
+
+Sentence 62:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 63:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 64:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 65:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 66:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 67:
+leukocyty:4 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 68:
+Krew utajona w kale: Krew utajona w kale:nieobecna
+TSH: TSH:5.34[uIU/ml]
+
+
+
+Sentence 69:
+FT3: FT3:3.99[pg/ml]
+
+
+
+Sentence 70:
+FT4: FT4:1.41[ng/dl]
+
+
+
+Sentence 71:
+Witamina D 25-OH: Witamina D 25-OH:29.6[ng/ml]
+
+
+
+Sentence 72:
+AFP: AFP:1.10[IU/ml]
+
+
+
+Sentence 73:
+ALAT: ALAT:23[U/L]
+
+
+
+Sentence 74:
+Albumina: Albumina:4.3[g/dl]
+ASPAT: ASPAT:36[U/L]
+
+
+
+Sentence 75:
+Białko całkowite w surowicy (TP): Białko całkowite w surow:7.6[g/dl]
+
+
+
+Sentence 76:
+Bilirubina całkowita (TBil): Bilirubina całkowita:1.05[mg/dl]
+
+
+
+Sentence 77:
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 78:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 79:
+Potas (K): Potas:4.4[mmol/L]
+
+
+
+Sentence 80:
+Chlorki (Cl): Chlorki:104[mmol/L]
+
+
+
+Sentence 81:
+Fosfataza alkaliczna (ALP): Fosfataza alkaliczna:246[U/L]
+
+
+
+Sentence 82:
+Fosforany nieorganiczne: Fosforany nieorganiczne:1.64[mmol/L]
+
+
+
+Sentence 83:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:43[U/L]
+
+
+
+Sentence 84:
+Kreatynina + GFR
+    
+
+
+Sentence 85:
+Kreatynina w surowicy:0.66[mg/dl]
+    
+
+
+Sentence 86:
+eGFR stand.
+
+
+Sentence 87:
+wg Schwartza:117.1[ml/min/1,73 m^2]
+    eGFR zmod.
+
+
+Sentence 88:
+wg Schwartza:87.9[ml/min/1,73 m^2]
+    
+
+
+Sentence 89:
+wzrost:140.5[cm]
+
+
+
+Sentence 90:
+Mleczany (LAC): Mleczany:20.2[mg/dl]
+
+
+
+Sentence 91:
+LDH Dehydrogenaza mleczanowa: LDH Dehydrogenaza mlecza:226[U/L]
+
+
+
+Sentence 92:
+Magnez: Magnez:0.81[mmol/L]
+
+
+
+Sentence 93:
+Mocznik: Mocznik:34[mg/dl]
+
+
+
+Sentence 94:
+Wapń całkowity: Wapń całkowity:2.46[mmol/L]
+
+
+
+Sentence 95:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    
+
+
+Sentence 96:
+pH:7.352
+    pCO2:44.1[mmHg]
+    BE:-1.50[mmol/L]
+    
+
+
+Sentence 97:
+HCO3:23.8[mmol/L]
+    
+
+
+Sentence 98:
+pO2:29.2[mmHg]
+    
+
+
+Sentence 99:
+O2Sat:50.4[%]
+
+
+
+Sentence 100:
+Glukoza w surowicy: Glukoza w surowicy:88[mg/dl]
+
+
+
+Sentence 101:
+NT-proBNP surowica: NT-proBNP w surowicy:5[pg/ml]
+
+
+
+Sentence 102:
+------------------------------------------------
+
+
+
+Sentence 103:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 104:
+Q22.6
+Q22.4
+Z98.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 105:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 106:
+I81
+L43
+I89
+G03
+L23
+M87
+N45
+N24
+L07
+O69
+I09
+O29
+C55
+O91
+I97
+G11
+
+
+
+Sentence 107:
+I77
+K33
+L31
+
+
+
+Sentence 108:
+L11
+I17
+O77
+
+
+
+Sentence 109:
+N11
+I19
+O35
+M37
+
+
+
+Sentence 110:
+N13
+------------------------------------------------
+
+

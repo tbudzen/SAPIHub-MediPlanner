@@ -1,0 +1,30 @@
+T1	Drug 459 469	Propafenon
+T2	Drug_dose 470 488	150mg 3 x dziennie
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Behaviour 538 597	Udzielono instruktaż postępowania pacjentowi w razie napadu
+T4	Condition 624 636	częstoskurcz
+N1	Reference T4 ICD10:I47.9	Częstoskurcz napadowy, nieokreślony
+T5	Treatment 668 693	wykonanie próby Valsalvy,
+T6	Behaviour 694 714	prowokacja wymiotów,
+T7	Behaviour 715 733	ochłodzenie twarzy
+T8	Condition 1030 1063	Napadowy częstoskurcz nadkomorowy
+N2	Reference T8 ICD10:I47.1	Częstoskurcz nadkomorowy
+T9	Condition 1303 1327	częstoskurczu napadowego
+N3	Reference T9 ICD10:I47.1	Częstoskurcz nadkomorowy
+T10	Condition 1464 1488	zaburzeniami rytmu serca
+N4	Reference T10 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T11	Condition 1711 1738	nadkomorowym częstoskurczem
+N5	Reference T11 ICD10:I47.1	Częstoskurcz nadkomorowy
+T12	Drug 1760 1768	Metocard
+T13	Condition 1794 1811	wywiad alergiczny
+N6	Reference T13 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T14	Negation 1812 1818	ujemny
+R2	Neg Arg1:T14 Arg2:T13	
+T15	Treatment 489 523	Kontrola w Poradni Kardiologicznej
+T16	Date 524 537	za 6 miesięcy
+R3	Dat Arg1:T16 Arg2:T15	
+T17	Drug 340 350	Propafenon
+R1	Drg Arg1:T1 Arg2:T2
+R2	Dat Arg1:T16 Arg2:T3
+R3	Dat Arg1:T16 Arg2:T15
+R5	Neg Arg1:T14 Arg2:T13

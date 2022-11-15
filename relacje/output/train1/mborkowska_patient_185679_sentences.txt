@@ -1,0 +1,457 @@
+allRelations          : 29
+oks                   : 15
+isRedundantAndRemoveds: 12
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 2
+GOOD / BAD            : 27 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 42 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 2:
+------------------------------------------------
+
+
+
+Sentence 3:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 4:
+------------------------------------------------
+ Rozpozanie I: ICD10:R00|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Podejrzenie kardiomiopatii – w trakcie diagnostyki.
+
+
+Sentence 5:
+Podejrzenie przewlekłej choroby niedokrwiennej serca.
+
+
+Sentence 6:
+Wada serca pod postacią łagodnej niedomykalności mitralnej.
+
+
+Sentence 7:
+Przebyta zatorowość płucna w czasie ciąży (2012).
+R1	Dat Arg1:T4 Arg2:T3 <<REDUNDANT!!!SHOULD BE REMOVED>>	2012 -> Przebyta zatorowość płucna w czasie ciąży  <RANK: 3> <info: start[657, 614] <type: LEFT>>
+
+
+Sentence 8:
+Kamica nerkowa lewostronna.
+
+
+Sentence 9:
+Zaburzenia depresyjne w trakcie leczenia.
+
+
+Sentence 10:
+Uczulenie na bisoprolol
+------------------------------------------------
+
+R2	Alg Arg1:T7 Arg2:T8 << OK >>	Uczulenie -> bisoprolol  <RANK: 3> <info: start[734, 747] <type: RIGHT>>
+
+
+Sentence 11:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 12:
+Zalecenia
+•\x09dalsza opieka w poradni POZ  
+•\x09okresowa kontrola kardiologiczna – proszę zgłosić się do Poradnia Kardiologicznej ICZMP 
+•\x09kontrola endokrynologiczna, psychiatryczna 
+•\x09codzienna kontrola ciśnienia tętniczego  
+•\x09okresowa kontrola lipidogramu  
+•\x09dieta zbliżona do śródziemnomorskiej   
+•\x09oszczędzający tryb życia 
+•\x09regularne przyjmowanie leków:
+
+1.\x09Asentra 50 mg 1 tabl.
+R3	Drg Arg1:T13 Arg2:T14 << OK >>	Asentra -> 50 mg 1 tabl. rano  <RANK: 3> <info: start[1256, 1264] <type: RIGHT>>
+
+
+Sentence 13:
+rano 
+2.\x09Trittico CR 75 mg 1/3 tabl.
+R4	Drg Arg1:T15 Arg2:T16 << OK >>	Trittico CR -> 75 mg 1/3 tabl. wieczorem 2 godziny przed snem  <RANK: 3> <info: start[1290, 1302] <type: RIGHT>>
+
+
+Sentence 14:
+wieczorem 2 godziny przed snem
+3.\x09MagneB6 1 tabl.
+R5	Drg Arg1:T17 Arg2:T18 << OK >>	MagneB6 -> 1 tabl. rano  <RANK: 3> <info: start[1355, 1363] <type: RIGHT>>
+
+
+Sentence 15:
+rano 
+------------------------------------------------
+
+
+
+Sentence 16:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 17:
+Chora lat 41, przyjęta do Kliniki z powodu rejestrowanych w ekg nieprawidłowości pod postacią ujemnych zał. T w II, III, aVF, V3-V6.
+R6	Inv Arg1:T19 Arg2:T20 << OK >>	ekg -> nieprawidłowości pod postacią ujemnych zał. T w II, III, aVF, V3-V6.  <RANK: 3> <info: start[1561, 1565] <type: RIGHT>>
+
+
+Sentence 18:
+Skarży się na duszność, bóle w klatce niespecyficzne (stres?), kołatnia serca.  
+
+
+
+Sentence 19:
+W wykonanych badaniach:
+2009: IM I/II st. wypadanie przedniego płatka zastawki mitralnej, wykonano również EPS (wykluczono obecność drogi dodatkowej).
+
+R7	Inv Arg1:T26 Arg2:T27 << OK >>	EPS -> wykluczono obecność drogi dodatkowej)  <RANK: 3> <info: start[1822, 1827] <type: RIGHT>>
+
+
+Sentence 20:
+W wywiadzie ponadto: zatorowość płucna (2012 w czasie ciąży) kamica nerkowa lewostronna, 
+
+R8	Dat Arg1:T52 Arg2:T51 << OK >>	2012 w czasie ciąży -> zatorowość płucna  <RANK: 3> <info: start[1906, 1887] <type: LEFT>>
+R9	Dat Arg1:T52 Arg2:T53 <<REDUNDANT!!!SHOULD BE REMOVED>>	2012 w czasie ciąży -> kamica nerkowa lewostronna  <RANK: 3> <info: start[1906, 1927] <type: RIGHT>>
+
+
+Sentence 21:
+Przebyte operacje: CC 
+
+
+
+Sentence 22:
+Wywiad rodzinny: bez znaczenia 
+Alergie: na bisoprolol (wysypka)
+
+R10	Neg Arg1:T48 Arg2:T47 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> wysypka <:REMOVED other second tag between (right):> <RANK: 1> <info: start[1996, 2035] <type: RIGHT>>
+R11	Neg Arg1:T48 Arg2:T45 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Alergie <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1996, 2011] <type: RIGHT>>
+R12	Neg Arg1:T48 Arg2:T49 << OK >>	bez znaczenia -> Wywiad rodzinny  <RANK: 3> <info: start[1996, 1979] <type: LEFT>>
+R13	Neg Arg1:T48 Arg2:T46 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> bisoprolol <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1996, 2023] <type: RIGHT>>
+R14	Alg Arg1:T45 Arg2:T46 << OK >>	Alergie -> bisoprolol  <RANK: 3> <info: start[2011, 2023] <type: RIGHT>>
+R15	Alg Arg1:T49 Arg2:T46 <<REDUNDANT!!!REMOVED>>	Wywiad rodzinny -> bisoprolol <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1979, 2023] <type: RIGHT>>
+
+
+Sentence 23:
+Nikotynizm: neguje  
+Alkohol: neguje 
+Uzależnienie inne: neguje 
+Stan społeczny: praca w domu, praca umysłowa
+
+R16	Neg Arg1:T39 Arg2:T42 << OK >>	neguje -> Uzależnienie inne  <RANK: 3> <info: start[2101, 2082] <type: LEFT>>
+R17	Neg Arg1:T39 Arg2:T43 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2101, 2065] <type: LEFT>>
+R18	Neg Arg1:T39 Arg2:T44 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2101, 2044] <type: LEFT>>
+R19	Neg Arg1:T40 Arg2:T42 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2074, 2082] <type: RIGHT>>
+R20	Neg Arg1:T40 Arg2:T43 << OK >>	neguje -> Alkohol  <RANK: 3> <info: start[2074, 2065] <type: LEFT>>
+R21	Neg Arg1:T40 Arg2:T44 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2074, 2044] <type: LEFT>>
+R22	Neg Arg1:T41 Arg2:T42 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2056, 2082] <type: RIGHT>>
+R23	Neg Arg1:T41 Arg2:T43 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2056, 2065] <type: RIGHT>>
+R24	Neg Arg1:T41 Arg2:T44 << OK >>	neguje -> Nikotynizm  <RANK: 3> <info: start[2056, 2044] <type: LEFT>>
+
+
+Sentence 24:
+Leki:
+Sotahexal 40 mg 1 -1/2 -1/2 tabl. 
+
+R25	Drg Arg1:T33 Arg2:T34 << OK >>	Sotahexal -> 40 mg 1 -1/2 -1/2 tabl  <RANK: 3> <info: start[2160, 2170] <type: RIGHT>>
+
+
+Sentence 25:
+Setal MR 1 tabl. rano i wieczorem 
+Asentra 50 mg 1 tabl.
+R26	Drg Arg1:T35 Arg2:T36 << OK >>	Setal MR -> 1 tabl. rano i wieczorem  <RANK: 3> <info: start[2195, 2204] <type: RIGHT>>
+R27	Drg Arg1:T35 Arg2:T38 <<REDUNDANT!!!REMOVED>>	Setal MR -> 50 mg 1 tabl. rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2195, 2238] <type: RIGHT>>
+R28	Drg Arg1:T37 Arg2:T36 <<REDUNDANT!!!REMOVED>>	Asentra -> 1 tabl. rano i wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2230, 2204] <type: LEFT>>
+R29	Drg Arg1:T37 Arg2:T38 << OK >>	Asentra -> 50 mg 1 tabl. rano  <RANK: 3> <info: start[2230, 2238] <type: RIGHT>>
+
+
+Sentence 26:
+rano 
+
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter ekg, rtg kl. piersiowej
+
+
+
+Sentence 27:
+Przewidywana liczba dni hospitalizacji: 5-7 dni
+------------------------------------------------
+
+
+
+Sentence 28:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 29:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:3.78[10^3/ul]
+    
+
+
+Sentence 30:
+RBC Krwinki czerwone:4.31[10^6/ul]
+    
+
+
+Sentence 31:
+HGB Hemoglobina:13.0[g/dl]
+    
+
+
+Sentence 32:
+HCT Hematokryt:38.1[%]
+    
+
+
+Sentence 33:
+MCV wskaźnik czerwonokrw:88.4[fl]
+    
+
+
+Sentence 34:
+MCH wskaźnik czerwonokrw:30.2[pg]
+    
+
+
+Sentence 35:
+MCHC wskaźnik czerwonokr:34.1[g/dl]
+    
+
+
+Sentence 36:
+PLT z morfologii:152[10^3/ul]
+    
+
+
+Sentence 37:
+RDW-SD:46.5[fl]
+    
+
+
+Sentence 38:
+RDW-CV:14.3[%]
+    PDW:15.6[fl]
+    
+
+
+Sentence 39:
+MPV:12.1[fl]
+    
+
+
+Sentence 40:
+P-LCR:43.0[%]
+    
+
+
+Sentence 41:
+PCT (hematokryt płytkowy:0.18[%]
+    
+
+
+Sentence 42:
+NEUTR# wartość bezwzględ:1.29[10^3/ul]
+    
+
+
+Sentence 43:
+NEUTR%:34.1[%]
+    
+
+
+Sentence 44:
+LYMH# wartość bezwzględn:1.98[10^3/ul]
+    
+
+
+Sentence 45:
+LYMPH%:52.4[%]
+    
+
+
+Sentence 46:
+MONO# wartość bezwzględn:0.35[10^3/ul]
+    MONO%:9.3[%]
+    
+
+
+Sentence 47:
+EO# wartość bezwzględna:0.14[10^3/ul]
+    
+
+
+Sentence 48:
+EO%:3.7[%]
+    
+
+
+Sentence 49:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    
+
+
+Sentence 50:
+BASO%:0.5[%]
+    
+
+
+Sentence 51:
+NRBC %:0.0[%]
+    
+
+
+Sentence 52:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 53:
+TSH: TSH:3.65[uIU/ml]
+
+
+
+Sentence 54:
+FT3: FT3:3.14[pg/ml]
+
+
+
+Sentence 55:
+FT4: FT4:1.03[ng/dl]
+ALAT: ALAT:15[U/L]
+ASPAT: ASPAT:24[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:1.13[mg/dl]
+
+
+
+Sentence 56:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 57:
+Potas (K): Potas:4.9[mmol/L]
+
+
+
+Sentence 58:
+Kreatynina + GFR
+    
+
+
+Sentence 59:
+Kreatynina w surowicy:0.64[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 60:
+MDRD ze stan:102.3[ml/min/1,73 m^2]
+
+
+
+Sentence 61:
+Mocznik: Mocznik:36[mg/dl]
+
+
+
+Sentence 62:
+Kwas moczowy: Kwas moczowy:3.1[mg/dl]
+
+
+
+Sentence 63:
+Lipidogram
+    
+
+
+Sentence 64:
+Cholesterol całkowity:113[mg/dl]
+    
+
+
+Sentence 65:
+Cholesterol HDL:62[mg/dl]
+    
+
+
+Sentence 66:
+Cholestrol LDL:55[mg/dl]
+    
+
+
+Sentence 67:
+Triglicerydy:31[mg/dl]
+    
+
+
+Sentence 68:
+Stosunek cholesterolu HD:0.5
+
+
+
+Sentence 69:
+Glukoza w surowicy: Glukoza w surowicy:91[mg/dl]
+
+
+
+Sentence 70:
+------------------------------------------------
+
+
+
+Sentence 71:
+ICD10
+------------------------------------------------
+I34.0
+I42.9
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 72:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 73:
+89.501
+C55
+89.502
+I81
+L43
+N45
+L69
+O55
+I17
+M45
+M37
+I19
+O35
+N13
+88.721
+O69
+
+
+
+Sentence 74:
+------------------------------------------------
+
+

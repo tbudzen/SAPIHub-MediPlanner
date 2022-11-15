@@ -1,0 +1,549 @@
+allRelations          : 22
+oks                   : 10
+isRedundantAndRemoveds: 10
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 2
+GOOD / BAD            : 20 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 40 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zastosowane leczenie
+
+
+
+Sentence 4:
+------------------------------------------------
+Letrox.
+
+
+
+Sentence 5:
+------------------------------------------------
+
+
+
+Sentence 6:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 7:
+------------------------------------------------
+ Rozpozanie I: ICD10:R00.1|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Bradykardia zatokowa.
+
+
+Sentence 8:
+Łagodna niedomykalność zastawki trójdzielnej.
+
+
+Sentence 9:
+Ubytek w przegrodzie międzyprzedsionkowej.
+
+
+Sentence 10:
+Celiakia.
+
+
+Sentence 11:
+Autoimmunologiczne zapalenie tarczycy.
+
+
+Sentence 12:
+Stan po ostrym zapaleniu trzustki (2016r.).
+
+R1	Dat Arg1:T8 Arg2:T7 << OK >>	2016r -> ostrym zapaleniu trzustki  <RANK: 3> <info: start[772, 745] <type: LEFT>>
+
+
+Sentence 13:
+------------------------------------------------
+
+
+
+Sentence 14:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 15:
+Dalsza opieka w Poradni Endokrynologicznej, Neurologicznej (wydano skierowanie) oraz Kardiologicznej (wydanie skierowania na badanie SPECT mięśnia sercowego oraz ew. kwalifikacja do zamknięcia ubytku w IAS po wynikach MRI głowy).
+
+
+
+Sentence 16:
+Kontrola TSH oraz FT4 w POZ za 2 tygodnie.
+
+R2	Dat Arg1:T14 Arg2:T13 << OK >>	za 2 tygodnie -> Kontrola TSH oraz FT4  <RANK: 3> <info: start[1147, 1119] <type: LEFT>>
+
+
+Sentence 17:
+Przestrzeganie diety bezglutenowej.
+
+
+
+Sentence 18:
+Systematyczne stosowanie leków:
+Letrox 100 ug 1x1 tabl rano na czczo
+Letrox 50 ug 1x1/4 tabl rano na czczo
+------------------------------------------------
+
+R3	Drg Arg1:T16 Arg2:T18 << OK >>	Letrox -> 100 ug 1x1 tabl rano na czczo  <RANK: 3> <info: start[1230, 1237] <type: RIGHT>>
+R4	Drg Arg1:T16 Arg2:T19 <<REDUNDANT!!!REMOVED>>	Letrox -> 50 ug 1x1/4 tabl rano na czczo <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1230, 1274] <type: RIGHT>>
+R5	Drg Arg1:T17 Arg2:T18 <<REDUNDANT!!!REMOVED>>	Letrox -> 100 ug 1x1 tabl rano na czczo <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1267, 1237] <type: LEFT>>
+R6	Drg Arg1:T17 Arg2:T19 << OK >>	Letrox -> 50 ug 1x1/4 tabl rano na czczo  <RANK: 3> <info: start[1267, 1274] <type: RIGHT>>
+
+
+Sentence 19:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 20:
+Pacjentka lat 39 z autoimmunologicznym zapaleniem tarczycy, celiakią, po OZT (2016r.), została przyjęta do Kliniki z powodu utrzymującej się od kilku lat bradykardii zatokowej z okresowo występującymi zawrotami głowy i osłabieniem.
+
+R7	Dat Arg1:T23 Arg2:T24 <<REDUNDANT!!!REMOVED>>	2016r -> bradykardii zatokowej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1507, 1583] <type: RIGHT>>
+R8	Dat Arg1:T23 Arg2:T26 <<REDUNDANT!!!REMOVED>>	2016r -> okresowo występującymi zawrotami głowy <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1507, 1607] <type: RIGHT>>
+R9	Dat Arg1:T23 Arg2:T32 <<REDUNDANT!!!REMOVED>>	2016r -> i osłabieniem <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1507, 1646] <type: RIGHT>>
+R10	Dat Arg1:T23 Arg2:T20 <<REDUNDANT!!!SHOULD BE REMOVED>>	2016r -> autoimmunologicznym zapaleniem tarczycy  <RANK: 2> <info: start[1507, 1448] <type: LEFT>>
+R11	Dat Arg1:T23 Arg2:T21 <<REDUNDANT!!!SHOULD BE REMOVED>>	2016r -> celiakią  <RANK: 2> <info: start[1507, 1489] <type: LEFT>>
+R12	Dat Arg1:T23 Arg2:T22 << OK >>	2016r -> OZT  <RANK: 3> <info: start[1507, 1502] <type: LEFT>>
+R13	Dat Arg1:T25 Arg2:T24 << OK >>	od kilku lat -> bradykardii zatokowej  <RANK: 3> <info: start[1570, 1583] <type: RIGHT>>
+R14	Dat Arg1:T25 Arg2:T26 << OK >>	od kilku lat -> okresowo występującymi zawrotami głowy  <RANK: 3> <info: start[1570, 1607] <type: RIGHT>>
+R15	Dat Arg1:T25 Arg2:T32 << OK >>	od kilku lat -> i osłabieniem  <RANK: 3> <info: start[1570, 1646] <type: RIGHT>>
+R16	Dat Arg1:T25 Arg2:T20 <<REDUNDANT!!!REMOVED>>	od kilku lat -> autoimmunologicznym zapaleniem tarczycy <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1570, 1448] <type: LEFT>>
+R17	Dat Arg1:T25 Arg2:T21 <<REDUNDANT!!!REMOVED>>	od kilku lat -> celiakią <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1570, 1489] <type: LEFT>>
+R18	Dat Arg1:T25 Arg2:T22 <<REDUNDANT!!!REMOVED>>	od kilku lat -> OZT <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1570, 1502] <type: LEFT>>
+
+
+Sentence 21:
+Alergie neguje
+Wywiad rodzinny bez znaczenia.
+
+R19	Neg Arg1:T28 Arg2:T27 << OK >>	neguje -> Alergie  <RANK: 3> <info: start[1669, 1661] <type: LEFT>>
+R20	Neg Arg1:T28 Arg2:T29 <<REDUNDANT!!!REMOVED>>	neguje -> Wywiad rodzinny <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1669, 1676] <type: RIGHT>>
+R21	Neg Arg1:T30 Arg2:T27 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Alergie <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1692, 1661] <type: LEFT>>
+R22	Neg Arg1:T30 Arg2:T29 << OK >>	bez znaczenia -> Wywiad rodzinny  <RANK: 3> <info: start[1692, 1676] <type: LEFT>>
+
+
+Sentence 22:
+Leki: Letrox.
+
+
+
+Sentence 23:
+------------------------------------------------
+
+
+
+Sentence 24:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 25:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.56[10^3/ul]
+    
+
+
+Sentence 26:
+RBC Krwinki czerwone:4.56[10^6/ul]
+    
+
+
+Sentence 27:
+HGB Hemoglobina:12.7[g/dl]
+    
+
+
+Sentence 28:
+HCT Hematokryt:38.5[%]
+    
+
+
+Sentence 29:
+MCV wskaźnik czerwonokrw:84.4[fl]
+    
+
+
+Sentence 30:
+MCH wskaźnik czerwonokrw:27.9[pg]
+    
+
+
+Sentence 31:
+MCHC wskaźnik czerwonokr:33.0[g/dl]
+    
+
+
+Sentence 32:
+PLT z morfologii:208[10^3/ul]
+    
+
+
+Sentence 33:
+RDW-SD:43.6[fl]
+    
+
+
+Sentence 34:
+RDW-CV:14.0[%]
+    PDW:11.8[fl]
+    MPV:10.2[fl]
+    
+
+
+Sentence 35:
+P-LCR:26.3[%]
+    
+
+
+Sentence 36:
+PCT (hematokryt płytkowy:0.21[%]
+    
+
+
+Sentence 37:
+NEUTR# wartość bezwzględ:1.63[10^3/ul]
+    
+
+
+Sentence 38:
+NEUTR%:35.7[%]
+    
+
+
+Sentence 39:
+LYMH# wartość bezwzględn:2.20[10^3/ul]
+    
+
+
+Sentence 40:
+LYMPH%:48.2[%]
+    
+
+
+Sentence 41:
+MONO# wartość bezwzględn:0.55[10^3/ul]
+    
+
+
+Sentence 42:
+MONO%:12.1[%]
+    
+
+
+Sentence 43:
+EO# wartość bezwzględna:0.13[10^3/ul]
+    
+
+
+Sentence 44:
+EO%:2.9[%]
+    
+
+
+Sentence 45:
+BASO# wartość bezwzględn:0.05[10^3/ul]
+    BASO%:1.1[%]
+    
+
+
+Sentence 46:
+NRBC %:0.0[%]
+    
+
+
+Sentence 47:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 48:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:28.5[sek]
+
+
+
+Sentence 49:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 50:
+Czas protrombinowy:12.1[sek]
+    
+
+
+Sentence 51:
+Wskaźnik PT:90.9[%]
+    
+
+
+Sentence 52:
+INR:1.10
+D-dimer
+
+
+Sentence 53:
+- test ilościowy: D-dimer - test ilościowy:157[ng/ml]
+
+
+
+Sentence 54:
+Badanie ogólne moczu
+    
+
+
+Sentence 55:
+barwa:żółty[ ]
+    
+
+
+Sentence 56:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 57:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 58:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 59:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 60:
+ciężar właściwy:1.013[ ]
+    
+
+
+Sentence 61:
+kwas askrobinowy:40 mg/dl[ ]
+    
+
+
+Sentence 62:
+pH:5.0[ ]
+    
+
+
+Sentence 63:
+białko:nieobecne[ ]
+    
+
+
+Sentence 64:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 65:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 66:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 67:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 68:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 69:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 70:
+leukocyty:4 /ul[ul]
+    erytrocyty świeże:2 /ul[ul]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 71:
+TSH: TSH:0.07[uIU/ml]
+
+
+
+Sentence 72:
+FT3: FT3:1.82[pg/ml]
+
+
+
+Sentence 73:
+FT4: FT4:1.43[ng/dl]
+
+
+
+Sentence 74:
+ALAT: ALAT:21[U/L]
+ASPAT: ASPAT:24[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 75:
+Sód (Na): Sód:139[mmol/L]
+
+
+
+Sentence 76:
+Potas (K): Potas:4.4[mmol/L]
+
+
+
+Sentence 77:
+Hemoglobina glikowana (HbA1c)
+    :5.21[%]
+    
+
+
+Sentence 78:
+:33[mmol/mol]
+Kreatynina + GFR
+    
+
+
+Sentence 79:
+Kreatynina w surowicy:0.60[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 80:
+MDRD ze stan:111.3[ml/min/1,73 m^2]
+
+
+
+Sentence 81:
+Mocznik: Mocznik:29[mg/dl]
+
+
+
+Sentence 82:
+Gospodarka żelazem
+    Żelazo:239[ug/dl]
+    
+
+
+Sentence 83:
+TIBC (Całkowita zdolność:315[ug/dl]
+    
+
+
+Sentence 84:
+UIBC (Utajona zdolność w:76[ug/dl]
+    
+
+
+Sentence 85:
+Wskaźnik wysycenia Fe:76[%]
+
+
+
+Sentence 86:
+Kwas moczowy: Kwas moczowy:4.4[mg/dl]
+
+
+
+Sentence 87:
+Lipidogram
+    
+
+
+Sentence 88:
+Cholesterol całkowity:189[mg/dl]
+    
+
+
+Sentence 89:
+Cholesterol HDL:67[mg/dl]
+    
+
+
+Sentence 90:
+Cholestrol LDL:109[mg/dl]
+    
+
+
+Sentence 91:
+Triglicerydy:77[mg/dl]
+    
+
+
+Sentence 92:
+Stosunek cholesterolu HD:0.4
+Glukoza w surowicy: Glukoza w surowicy:77[mg/dl]
+
+
+
+Sentence 93:
+NT-proBNP surowica: NT-proBNP w surowicy:52[pg/ml]
+
+
+
+Sentence 94:
+------------------------------------------------
+
+
+
+Sentence 95:
+ICD10
+------------------------------------------------
+Q21.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 96:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 97:
+88.713
+88.721
+89.502
+89.41
+88.761
+------------------------------------------------
+
+

@@ -1,0 +1,706 @@
+allRelations          : 106
+oks                   : 45
+isRedundantAndRemoveds: 45
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 15
+GOOD / BAD            : 90 / 16
+Sentence 0:
+------------------------------------------------
+Wiek: 70 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+• dalsza opieka w poradni POZ   
+• okresowa kontrola kardiologiczna, wskazana kontrola w tutejszej poradni za ok 1 miesiąc
+• regularna kontrola ciśnienia tętniczego   
+• okresowa kontrola lipidogramu - kolejna za 8 tygodni  
+• dieta niskocholesterolowa z unikaniem cukrów prostych i alkoholu
+
+
+
+Sentence 5:
+• regularne przyjmowanie leków:  
+
+Bisocard  5mg 1 tabl.
+R1	Drg Arg1:T7 Arg2:T8 << OK >>	Bisocard -> 5mg 1 tabl. rano  <RANK: 3> <info: start[657, 667] <type: RIGHT>>
+
+
+Sentence 6:
+rano
+Acard 75mg 2x 1 tabl
+Coroswera 20/10 mg 1 tabl.
+R2	Drg Arg1:T9 Arg2:T10 << OK >>	Acard -> 75mg 2x 1 tabl  <RANK: 3> <info: start[684, 690] <type: RIGHT>>
+R3	Drg Arg1:T9 Arg2:T12 <<REDUNDANT!!!REMOVED>>	Acard -> 20/10 mg 1 tabl. wieczorem <:REMOVED other first tag between (right):> <RANK: 1> <info: start[684, 715] <type: RIGHT>>
+R4	Drg Arg1:T11 Arg2:T10 <<REDUNDANT!!!REMOVED>>	Coroswera -> 75mg 2x 1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[705, 690] <type: LEFT>>
+R5	Drg Arg1:T11 Arg2:T12 << OK >>	Coroswera -> 20/10 mg 1 tabl. wieczorem  <RANK: 3> <info: start[705, 715] <type: RIGHT>>
+
+
+Sentence 7:
+wieczorem
+Tertensif SR 1 tabl.
+R6	Drg Arg1:T13 Arg2:T14 << OK >>	Tertensif SR -> 1 tabl. rano  <RANK: 3> <info: start[742, 755] <type: RIGHT>>
+
+
+Sentence 8:
+rano
+Lacipil 2mg 1x 1 tabl/rano
+
+R7	Drg Arg1:T15 Arg2:T16 << OK >>	Lacipil -> 2mg 1x 1 tabl/rano  <RANK: 3> <info: start[768, 776] <type: RIGHT>>
+
+
+Sentence 9:
+Kalipoz prol 2 x 1 tabl.
+
+R8	Drg Arg1:T17 Arg2:T18 << OK >>	Kalipoz prol -> 2 x 1 tabl.  <RANK: 3> <info: start[795, 808] <type: RIGHT>>
+
+
+Sentence 10:
+Magnez B6 forte 1/2 tabl.
+R9	Drg Arg1:T19 Arg2:T20 << OK >>	Magnez B6 forte -> 1/2 tabl. 2 x dz.  <RANK: 3> <info: start[820, 836] <type: RIGHT>>
+
+
+Sentence 11:
+2 x dz.
+Symbicort 320+9ug/d 2xdz
+Atrovent N 20ug/d 2xdz
+------------------------------------------------
+
+R10	Drg Arg1:T21 Arg2:T23 << OK >>	Symbicort -> 320+9ug/d 2xdz  <RANK: 3> <info: start[854, 864] <type: RIGHT>>
+R11	Drg Arg1:T21 Arg2:T24 <<REDUNDANT!!!REMOVED>>	Symbicort -> 20ug/d 2xdz <:REMOVED other first tag between (right):> <RANK: 1> <info: start[854, 890] <type: RIGHT>>
+R12	Drg Arg1:T22 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Atrovent N -> 320+9ug/d 2xdz <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[879, 864] <type: LEFT>>
+R13	Drg Arg1:T22 Arg2:T24 << OK >>	Atrovent N -> 20ug/d 2xdz  <RANK: 3> <info: start[879, 890] <type: RIGHT>>
+
+
+Sentence 12:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 13:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Przewlekła choroba niedokrwienna serca.
+
+
+Sentence 14:
+Złożona wada aortalna (SA+IA) - stan po AVR bioproteza biologiczna St. Jude Epic 19 mm i CABG (Ao-Cx) (2018r).
+R14	Dat Arg1:T30 Arg2:T26 <<REDUNDANT!!!SHOULD BE REMOVED>>	2018r -> Złożona wada aortalna  <RANK: 2> <info: start[1262, 1159] <type: LEFT>>
+R15	Dat Arg1:T30 Arg2:T27 <<REDUNDANT!!!SHOULD BE REMOVED>>	2018r -> SA  <RANK: 2> <info: start[1262, 1182] <type: LEFT>>
+R16	Dat Arg1:T30 Arg2:T28 <<REDUNDANT!!!SHOULD BE REMOVED>>	2018r -> IA  <RANK: 2> <info: start[1262, 1185] <type: LEFT>>
+R17	Dat Arg1:T30 Arg2:T29 << OK >>	2018r -> AVR bioproteza biologiczna St. Jude Epic 19 mm i CABG (Ao-Cx)  <RANK: 3> <info: start[1262, 1199] <type: LEFT>>
+
+
+Sentence 15:
+Miażdżyca aorty.
+
+
+Sentence 16:
+Nadciśnienie tętnicze.
+
+
+Sentence 17:
+Hipercholesterolemia.
+
+
+Sentence 18:
+Astma oskrzelowa w wywiadzie.
+
+
+Sentence 19:
+Uchyłek kątnicy w wywiadzie.
+
+
+Sentence 20:
+Zapalenie błony śluzowej żołądka w wywiadzie.
+
+
+Sentence 21:
+Stan po cholecystektomii w wywiadzie i appendektomii i stan po operacji zaćmy obu oczu (2015).
+
+R18	Dat Arg1:T40 Arg2:T108 << OK >>	2015 -> zaćmy obu oczu  <RANK: 3> <info: start[1525, 1509] <type: LEFT>>
+R19	Dat Arg1:T40 Arg2:T37 <<REDUNDANT!!!SHOULD BE REMOVED>>	2015 -> cholecystektomii  <RANK: 2> <info: start[1525, 1445] <type: LEFT>>
+R20	Dat Arg1:T40 Arg2:T38 <<REDUNDANT!!!SHOULD BE REMOVED>>	2015 -> appendektomii  <RANK: 2> <info: start[1525, 1476] <type: LEFT>>
+R21	Dat Arg1:T40 Arg2:T39 << OK >>	2015 -> operacji  <RANK: 3> <info: start[1525, 1500] <type: LEFT>>
+
+
+Sentence 22:
+------------------------------------------------
+
+
+
+Sentence 23:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 24:
+Pacjentka lat 70, ze złożoną wada zastawki aortalnej (SA+IA), po wymianie zastawki aortalnej na protezę biologiczną St Jude Epic (19mm) (2019) oraz po jednoczasowym CABG (A0-Cx), z HA, hipercholesterolemią, astmą oskrzelową, po cholecystektomii i appendektomii, po operacji zaćmy obu oczu (2015), przyjęta do kliniki z powodu wystepujących napadów arytmii komorowych pod postacią bigeminii (RVOT) (epizody występowały do 02.2019r) .
+
+R22	Dat Arg1:T45 Arg2:T41 <<REDUNDANT!!!SHOULD BE REMOVED>>	2019 -> złożoną wada zastawki aortalnej  <RANK: 2> <info: start[1793, 1677] <type: LEFT>>
+R23	Dat Arg1:T45 Arg2:T42 <<REDUNDANT!!!SHOULD BE REMOVED>>	2019 -> SA  <RANK: 2> <info: start[1793, 1710] <type: LEFT>>
+R24	Dat Arg1:T45 Arg2:T43 <<REDUNDANT!!!SHOULD BE REMOVED>>	2019 -> IA  <RANK: 2> <info: start[1793, 1713] <type: LEFT>>
+R25	Dat Arg1:T45 Arg2:T47 <<REDUNDANT!!!REMOVED>>	2019 -> HA <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1793, 1837] <type: RIGHT>>
+R26	Dat Arg1:T45 Arg2:T48 <<REDUNDANT!!!REMOVED>>	2019 -> hipercholesterolemią <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1793, 1841] <type: RIGHT>>
+R27	Dat Arg1:T45 Arg2:T49 <<REDUNDANT!!!REMOVED>>	2019 -> astmą oskrzelową <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1793, 1863] <type: RIGHT>>
+R28	Dat Arg1:T45 Arg2:T54 <<REDUNDANT!!!REMOVED>>	2019 -> napadów arytmii komorowych pod postacią bigeminii (RVOT) <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1793, 1996] <type: RIGHT>>
+R29	Dat Arg1:T45 Arg2:T109 <<REDUNDANT!!!REMOVED>>	2019 -> zaćmy obu oczu <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1793, 1930] <type: RIGHT>>
+R30	Dat Arg1:T45 Arg2:T44 << OK >>	2019 -> wymianie zastawki aortalnej na protezę biologiczną St Jude Epic (19mm)  <RANK: 3> <info: start[1793, 1721] <type: LEFT>>
+R31	Dat Arg1:T45 Arg2:T46 <<SHOULD NOT BE REMOVED>>	2019 -> po jednoczasowym CABG (A0-Cx) <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1793, 1804] <type: RIGHT>>
+R32	Dat Arg1:T45 Arg2:T50 <<REDUNDANT!!!REMOVED>>	2019 -> cholecystektomii <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1793, 1884] <type: RIGHT>>
+R33	Dat Arg1:T45 Arg2:T51 <<REDUNDANT!!!REMOVED>>	2019 -> appendektomii <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1793, 1903] <type: RIGHT>>
+R34	Dat Arg1:T45 Arg2:T52 <<REDUNDANT!!!REMOVED>>	2019 -> operacji <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1793, 1921] <type: RIGHT>>
+R35	Dat Arg1:T53 Arg2:T41 <<REDUNDANT!!!REMOVED>>	2015 -> złożoną wada zastawki aortalnej <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1946, 1677] <type: LEFT>>
+R36	Dat Arg1:T53 Arg2:T42 <<REDUNDANT!!!REMOVED>>	2015 -> SA <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1946, 1710] <type: LEFT>>
+R37	Dat Arg1:T53 Arg2:T43 <<REDUNDANT!!!REMOVED>>	2015 -> IA <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1946, 1713] <type: LEFT>>
+R38	Dat Arg1:T53 Arg2:T47 <<REDUNDANT!!!SHOULD BE REMOVED>>	2015 -> HA  <RANK: 2> <info: start[1946, 1837] <type: LEFT>>
+R39	Dat Arg1:T53 Arg2:T48 <<REDUNDANT!!!SHOULD BE REMOVED>>	2015 -> hipercholesterolemią  <RANK: 2> <info: start[1946, 1841] <type: LEFT>>
+R40	Dat Arg1:T53 Arg2:T49 <<REDUNDANT!!!SHOULD BE REMOVED>>	2015 -> astmą oskrzelową  <RANK: 2> <info: start[1946, 1863] <type: LEFT>>
+R41	Dat Arg1:T53 Arg2:T54 <<REDUNDANT!!!REMOVED>>	2015 -> napadów arytmii komorowych pod postacią bigeminii (RVOT) <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1946, 1996] <type: RIGHT>>
+R42	Dat Arg1:T53 Arg2:T109 << OK >>	2015 -> zaćmy obu oczu  <RANK: 3> <info: start[1946, 1930] <type: LEFT>>
+R43	Dat Arg1:T53 Arg2:T44 <<REDUNDANT!!!REMOVED>>	2015 -> wymianie zastawki aortalnej na protezę biologiczną St Jude Epic (19mm) <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1946, 1721] <type: LEFT>>
+R44	Dat Arg1:T53 Arg2:T46 <<REDUNDANT!!!SHOULD BE REMOVED>>	2015 -> po jednoczasowym CABG (A0-Cx)  <RANK: 2> <info: start[1946, 1804] <type: LEFT>>
+R45	Dat Arg1:T53 Arg2:T50 <<REDUNDANT!!!SHOULD BE REMOVED>>	2015 -> cholecystektomii  <RANK: 2> <info: start[1946, 1884] <type: LEFT>>
+R46	Dat Arg1:T53 Arg2:T51 <<REDUNDANT!!!SHOULD BE REMOVED>>	2015 -> appendektomii  <RANK: 2> <info: start[1946, 1903] <type: LEFT>>
+R47	Dat Arg1:T53 Arg2:T52 << OK >>	2015 -> operacji  <RANK: 3> <info: start[1946, 1921] <type: LEFT>>
+R48	Dat Arg1:T55 Arg2:T41 <<REDUNDANT!!!REMOVED>>	do 02.2019r -> złożoną wada zastawki aortalnej <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2074, 1677] <type: LEFT>>
+R49	Dat Arg1:T55 Arg2:T42 <<REDUNDANT!!!REMOVED>>	do 02.2019r -> SA <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2074, 1710] <type: LEFT>>
+R50	Dat Arg1:T55 Arg2:T43 <<REDUNDANT!!!REMOVED>>	do 02.2019r -> IA <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2074, 1713] <type: LEFT>>
+R51	Dat Arg1:T55 Arg2:T47 <<REDUNDANT!!!REMOVED>>	do 02.2019r -> HA <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2074, 1837] <type: LEFT>>
+R52	Dat Arg1:T55 Arg2:T48 <<REDUNDANT!!!REMOVED>>	do 02.2019r -> hipercholesterolemią <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2074, 1841] <type: LEFT>>
+R53	Dat Arg1:T55 Arg2:T49 <<REDUNDANT!!!REMOVED>>	do 02.2019r -> astmą oskrzelową <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2074, 1863] <type: LEFT>>
+R54	Dat Arg1:T55 Arg2:T54 << OK >>	do 02.2019r -> napadów arytmii komorowych pod postacią bigeminii (RVOT)  <RANK: 3> <info: start[2074, 1996] <type: LEFT>>
+R55	Dat Arg1:T55 Arg2:T109 <<REDUNDANT!!!REMOVED>>	do 02.2019r -> zaćmy obu oczu <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2074, 1930] <type: LEFT>>
+R56	Dat Arg1:T55 Arg2:T44 <<REDUNDANT!!!REMOVED>>	do 02.2019r -> wymianie zastawki aortalnej na protezę biologiczną St Jude Epic (19mm) <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2074, 1721] <type: LEFT>>
+R57	Dat Arg1:T55 Arg2:T46 <<REDUNDANT!!!REMOVED>>	do 02.2019r -> po jednoczasowym CABG (A0-Cx) <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2074, 1804] <type: LEFT>>
+R58	Dat Arg1:T55 Arg2:T50 <<REDUNDANT!!!REMOVED>>	do 02.2019r -> cholecystektomii <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2074, 1884] <type: LEFT>>
+R59	Dat Arg1:T55 Arg2:T51 <<REDUNDANT!!!REMOVED>>	do 02.2019r -> appendektomii <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2074, 1903] <type: LEFT>>
+R60	Dat Arg1:T55 Arg2:T52 <<REDUNDANT!!!REMOVED>>	do 02.2019r -> operacji <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2074, 1921] <type: LEFT>>
+
+
+Sentence 25:
+Ponadto w wywiadzie: uchyłek kątnicy, zapalenie błony śluzowej żołądka, zaburzenia foniatryczne .
+
+
+
+Sentence 26:
+Neguje: zasłabnięcia, omdlenia, krwawienia, czarne stolce, brunatne wymioty, chorobę wrzodową, duszność nocną, obrzęki podudzi, kołatania serca, DM, udar mózgu, zawał serca.  
+
+R61	Neg Arg1:T59 Arg2:T60 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[2187, 2195] <type: RIGHT>>
+R62	Neg Arg1:T59 Arg2:T61 << OK >>	Neguje -> omdlenia  <RANK: 2> <info: start[2187, 2209] <type: RIGHT>>
+R63	Neg Arg1:T59 Arg2:T62 << OK >>	Neguje -> krwawienia  <RANK: 2> <info: start[2187, 2219] <type: RIGHT>>
+R64	Neg Arg1:T59 Arg2:T63 << OK >>	Neguje -> czarne stolce  <RANK: 2> <info: start[2187, 2231] <type: RIGHT>>
+R65	Neg Arg1:T59 Arg2:T64 << OK >>	Neguje -> brunatne wymioty  <RANK: 2> <info: start[2187, 2246] <type: RIGHT>>
+R66	Neg Arg1:T59 Arg2:T66 << OK >>	Neguje -> duszność nocną  <RANK: 2> <info: start[2187, 2282] <type: RIGHT>>
+R67	Neg Arg1:T59 Arg2:T67 << OK >>	Neguje -> obrzęki podudzi  <RANK: 2> <info: start[2187, 2298] <type: RIGHT>>
+R68	Neg Arg1:T59 Arg2:T68 << OK >>	Neguje -> kołatania serca  <RANK: 2> <info: start[2187, 2315] <type: RIGHT>>
+R69	Neg Arg1:T59 Arg2:T65 << OK >>	Neguje -> chorobę wrzodową  <RANK: 2> <info: start[2187, 2264] <type: RIGHT>>
+R70	Neg Arg1:T59 Arg2:T69 << OK >>	Neguje -> DM  <RANK: 2> <info: start[2187, 2332] <type: RIGHT>>
+R71	Neg Arg1:T59 Arg2:T70 << OK >>	Neguje -> udar mózgu  <RANK: 2> <info: start[2187, 2336] <type: RIGHT>>
+R72	Neg Arg1:T59 Arg2:T71 << OK >>	Neguje -> zawał serca  <RANK: 2> <info: start[2187, 2348] <type: RIGHT>>
+
+
+Sentence 27:
+Przebyte operacje: cholecystektomia (5 lat temu)
+
+R73	Dat Arg1:T74 Arg2:T72 <<REDUNDANT!!!SHOULD BE REMOVED>>	5 lat temu -> Przebyte operacje  <RANK: 3> <info: start[2400, 2363] <type: LEFT>>
+R74	Dat Arg1:T74 Arg2:T73 << OK >>	5 lat temu -> cholecystektomia  <RANK: 3> <info: start[2400, 2382] <type: LEFT>>
+
+
+Sentence 28:
+Palenie tytoniu: nie
+Inne używki: nie
+Uczulenia: nie
+
+R75	Neg Arg1:T76 Arg2:T79 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2429, 2450] <type: RIGHT>>
+R76	Neg Arg1:T76 Arg2:T75 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[2429, 2412] <type: LEFT>>
+R77	Neg Arg1:T76 Arg2:T77 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2429, 2433] <type: RIGHT>>
+R78	Neg Arg1:T78 Arg2:T79 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2446, 2450] <type: RIGHT>>
+R79	Neg Arg1:T78 Arg2:T75 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2446, 2412] <type: LEFT>>
+R80	Neg Arg1:T78 Arg2:T77 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[2446, 2433] <type: LEFT>>
+R81	Neg Arg1:T80 Arg2:T79 << OK >>	nie -> Uczulenia  <RANK: 3> <info: start[2461, 2450] <type: LEFT>>
+R82	Neg Arg1:T80 Arg2:T75 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2461, 2412] <type: LEFT>>
+R83	Neg Arg1:T80 Arg2:T77 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2461, 2433] <type: LEFT>>
+
+
+Sentence 29:
+Przebyte choroby zakaźne - WZW (-) , borelioza ( - ), tbc (-)
+
+R84	Neg Arg1:T84 Arg2:T81 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2524, 2492] <type: LEFT>>
+R85	Neg Arg1:T84 Arg2:T82 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2524, 2502] <type: LEFT>>
+R86	Neg Arg1:T84 Arg2:T83 << OK >>	- -> tbc  <RANK: 3> <info: start[2524, 2519] <type: LEFT>>
+R87	Neg Arg1:T85 Arg2:T81 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2514, 2492] <type: LEFT>>
+R88	Neg Arg1:T85 Arg2:T82 << OK >>	- -> borelioza  <RANK: 3> <info: start[2514, 2502] <type: LEFT>>
+R89	Neg Arg1:T85 Arg2:T83 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2514, 2519] <type: RIGHT>>
+R90	Neg Arg1:T86 Arg2:T81 << OK >>	- -> WZW  <RANK: 3> <info: start[2497, 2492] <type: LEFT>>
+R91	Neg Arg1:T86 Arg2:T82 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2497, 2502] <type: RIGHT>>
+R92	Neg Arg1:T86 Arg2:T83 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2497, 2519] <type: RIGHT>>
+
+
+Sentence 30:
+Stan społeczny: warunki mieszkaniowe dobre. 
+
+
+
+Sentence 31:
+Leki: przyjęte rano w domu
+
+
+
+Sentence 32:
+Leki: 
+
+Biosotal 40 mg 1 tabl.
+R93	Drg Arg1:T88 Arg2:T89 << OK >>	Biosotal -> 40 mg 1 tabl. 2 x dz.  <RANK: 3> <info: start[2607, 2616] <type: RIGHT>>
+
+
+Sentence 33:
+2 x dz.
+Acard 75mg 2x 1 tabl
+Zahron 20mg 1x 1 tabl/wieczorem
+
+R94	Drg Arg1:T90 Arg2:T91 << OK >>	Acard -> 75mg 2x 1 tabl  <RANK: 3> <info: start[2638, 2644] <type: RIGHT>>
+R95	Drg Arg1:T90 Arg2:T93 <<REDUNDANT!!!REMOVED>>	Acard -> 20mg 1x 1 tabl/wieczorem <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2638, 2666] <type: RIGHT>>
+R96	Drg Arg1:T92 Arg2:T91 <<REDUNDANT!!!REMOVED>>	Zahron -> 75mg 2x 1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2659, 2644] <type: LEFT>>
+R97	Drg Arg1:T92 Arg2:T93 << OK >>	Zahron -> 20mg 1x 1 tabl/wieczorem  <RANK: 3> <info: start[2659, 2666] <type: RIGHT>>
+
+
+Sentence 34:
+Ezen 10 mg 1 tabl.
+R98	Drg Arg1:T94 Arg2:T95 << OK >>	Ezen -> 10 mg 1 tabl. rano  <RANK: 3> <info: start[2691, 2696] <type: RIGHT>>
+
+
+Sentence 35:
+rano
+Tertensif SR 1 tabl.
+R99	Drg Arg1:T96 Arg2:T97 << OK >>	Tertensif SR -> 1 tabl. rano  <RANK: 3> <info: start[2715, 2728] <type: RIGHT>>
+
+
+Sentence 36:
+rano
+Lacipil 2mg 1x 1 tabl/rano
+
+R100	Drg Arg1:T98 Arg2:T99 << OK >>	Lacipil -> 2mg 1x 1 tabl/rano  <RANK: 3> <info: start[2741, 2749] <type: RIGHT>>
+
+
+Sentence 37:
+Kalipoz prol 2 x 1 tabl.
+
+R101	Drg Arg1:T100 Arg2:T101 << OK >>	Kalipoz prol -> 2 x 1 tabl.  <RANK: 3> <info: start[2768, 2781] <type: RIGHT>>
+
+
+Sentence 38:
+Magnez B6 forte 1/2 tabl.
+R102	Drg Arg1:T102 Arg2:T103 << OK >>	Magnez B6 forte -> 1/2 tabl. 2 x dz.  <RANK: 3> <info: start[2793, 2809] <type: RIGHT>>
+
+
+Sentence 39:
+2 x dz.
+Symbicort 320+9ug/d 2xdz
+Atrovent N 20ug/d 2xdz
+------------------------------------------------
+
+R103	Drg Arg1:T104 Arg2:T105 << OK >>	Symbicort -> 320+9ug/d 2xdz  <RANK: 3> <info: start[2827, 2837] <type: RIGHT>>
+R104	Drg Arg1:T104 Arg2:T107 <<REDUNDANT!!!REMOVED>>	Symbicort -> 20ug/d 2xdz <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2827, 2863] <type: RIGHT>>
+R105	Drg Arg1:T106 Arg2:T105 <<REDUNDANT!!!REMOVED>>	Atrovent N -> 320+9ug/d 2xdz <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2852, 2837] <type: LEFT>>
+R106	Drg Arg1:T106 Arg2:T107 << OK >>	Atrovent N -> 20ug/d 2xdz  <RANK: 3> <info: start[2852, 2863] <type: RIGHT>>
+
+
+Sentence 40:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 41:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.69[10^3/ul]
+    
+
+
+Sentence 42:
+RBC Krwinki czerwone:3.33[10^6/ul]
+    
+
+
+Sentence 43:
+HGB Hemoglobina:10.6[g/dl]
+    
+
+
+Sentence 44:
+HCT Hematokryt:30.4[%]
+    
+
+
+Sentence 45:
+MCV wskaźnik czerwonokrw:91.3[fl]
+    
+
+
+Sentence 46:
+MCH wskaźnik czerwonokrw:31.8[pg]
+    
+
+
+Sentence 47:
+MCHC wskaźnik czerwonokr:34.9[g/dl]
+    
+
+
+Sentence 48:
+PLT z morfologii:172[10^3/ul]
+    
+
+
+Sentence 49:
+RDW-SD:47.4[fl]
+    
+
+
+Sentence 50:
+RDW-CV:14.1[%]
+    PDW:10.1[fl]
+    
+
+
+Sentence 51:
+MPV:9.4[fl]
+    P-LCR:19.9[%]
+    
+
+
+Sentence 52:
+PCT (hematokryt płytkowy:0.16[%]
+    
+
+
+Sentence 53:
+NEUTR# wartość bezwzględ:1.85[10^3/ul]
+    
+
+
+Sentence 54:
+NEUTR%:39.4[%]
+    
+
+
+Sentence 55:
+LYMH# wartość bezwzględn:2.05[10^3/ul]
+    
+
+
+Sentence 56:
+LYMPH%:43.7[%]
+    
+
+
+Sentence 57:
+MONO# wartość bezwzględn:0.48[10^3/ul]
+    
+
+
+Sentence 58:
+MONO%:10.2[%]
+    
+
+
+Sentence 59:
+EO# wartość bezwzględna:0.27[10^3/ul]
+    
+
+
+Sentence 60:
+EO%:5.8[%]
+    
+
+
+Sentence 61:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    BASO%:0.9[%]
+    
+
+
+Sentence 62:
+NRBC %:0.0[%]
+    
+
+
+Sentence 63:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 64:
+Badanie ogólne moczu
+    
+
+
+Sentence 65:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 66:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 67:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 68:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 69:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 70:
+ciężar właściwy:1.010[ ]
+    
+
+
+Sentence 71:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 72:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 73:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 74:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 75:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 76:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 77:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 78:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 79:
+leukocyty:3 /ul[ul]
+    erytrocyty świeże:3 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 80:
+Krew utajona w kale: Krew utajona w kale:nieobecna
+TSH: TSH:3.09[uIU/ml]
+
+
+
+Sentence 81:
+FT3: FT3:2.25[pg/ml]
+
+
+
+Sentence 82:
+FT4: FT4:1.06[ng/dl]
+
+
+
+Sentence 83:
+Ferrytyna: Ferrytyna:87.0[ng/ml]
+
+
+
+Sentence 84:
+ALAT: ALAT:23[U/L]
+ASPAT: ASPAT:53[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:1.20[mg/dl]
+
+
+
+Sentence 85:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 86:
+Potas (K): Potas:3.6[mmol/L]
+
+
+
+Sentence 87:
+Kreatynina + GFR
+    
+
+
+Sentence 88:
+Kreatynina w surowicy:0.41[mg/dl]
+    eGFR wg BIS1:143.4[ml/min/1,73 m^2]
+
+
+
+Sentence 89:
+LDH Dehydrogenaza mleczanowa: LDH Dehydrogenaza mlecza:326[U/L]
+
+
+
+Sentence 90:
+Mocznik: Mocznik:24[mg/dl]
+
+
+
+Sentence 91:
+Gospodarka żelazem
+    Żelazo:52[ug/dl]
+    
+
+
+Sentence 92:
+TIBC (Całkowita zdolność:315[ug/dl]
+    
+
+
+Sentence 93:
+UIBC (Utajona zdolność w:263[ug/dl]
+    
+
+
+Sentence 94:
+Wskaźnik wysycenia Fe:17[%]
+
+
+
+Sentence 95:
+Kwas moczowy: Kwas moczowy:4.4[mg/dl]
+
+
+
+Sentence 96:
+Lipidogram
+    
+
+
+Sentence 97:
+Cholesterol całkowity:136[mg/dl]
+    
+
+
+Sentence 98:
+Cholesterol HDL:51[mg/dl]
+    
+
+
+Sentence 99:
+Cholestrol LDL:58[mg/dl]
+    Triglicerydy:61[mg/dl]
+    
+
+
+Sentence 100:
+Stosunek cholesterolu HD:0.4
+Glukoza w surowicy: Glukoza w surowicy:88[mg/dl]
+
+
+
+Sentence 101:
+------------------------------------------------
+
+
+
+Sentence 102:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 103:
+I35.2
+I25.1
+I10
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 104:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 105:
+C55
+A01
+I81
+89.41
+A17
+O93
+L43
+K33
+N45
+L69
+O55
+I17
+M45
+M37
+I19
+O35
+L05
+
+
+
+Sentence 106:
+N13
+88.721
+O69
+
+
+
+Sentence 107:
+------------------------------------------------
+
+

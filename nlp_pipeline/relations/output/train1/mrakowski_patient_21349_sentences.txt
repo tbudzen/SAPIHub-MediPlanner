@@ -1,0 +1,477 @@
+allRelations          : 15
+oks                   : 9
+isRedundantAndRemoveds: 6
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 0
+GOOD / BAD            : 15 / 0
+Sentence 0:
+------------------------------------------------
+Wiek: 60 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:I10|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Nadciśnienie tętnicze.
+
+
+Sentence 6:
+Łagodna niedomykalność zastawki mitralnej.
+
+
+Sentence 7:
+Łagodna niedomykalność zastawki trójdzielnej.
+
+
+
+Sentence 8:
+------------------------------------------------
+
+
+
+Sentence 9:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 10:
+Pacjentka lat 58, z około 3-letnim wywiadem nadciśnienia tętniczego, została przyjęta z powodu skoków RR do 200/100mmHg.
+R1	Dat Arg1:T24 Arg2:T4 << OK >>	3-letnim -> nadciśnienia tętniczego  <RANK: 3> <info: start[710, 728] <type: RIGHT>>
+
+
+Sentence 11:
+W wywiadzie: zaburzenia  nerwicowe.
+
+
+Sentence 12:
+Bez typowej dławicy.
+R2	Neg Arg1:T23 Arg2:T22 << OK >>	Bez -> typowej dławicy  <RANK: 3> <info: start[841, 845] <type: RIGHT>>
+
+
+Sentence 13:
+Pacjentka podaje częste oddawanie moczu -  z tego powodu pod opieką ginekologiczną.
+
+
+
+Sentence 14:
+Neguje uczulenia na leki.
+
+R3	Neg Arg1:T8 Arg2:T9 << OK >>	Neguje -> uczulenia na leki  <RANK: 3> <info: start[946, 953] <type: RIGHT>>
+
+
+Sentence 15:
+Ostatnio przyjmowane leki:
+Bibloc 5mg 1x 1 tabl/rano
+Karbis 32mg 1x 1 tabl/wieczorem
+
+R4	Drg Arg1:T10 Arg2:T11 << OK >>	Bibloc -> 5mg 1x 1 tabl/rano  <RANK: 3> <info: start[999, 1006] <type: RIGHT>>
+R5	Drg Arg1:T10 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Bibloc -> 32mg 1x 1 tabl/wieczorem <:REMOVED other first tag between (right):> <RANK: 1> <info: start[999, 1032] <type: RIGHT>>
+R6	Drg Arg1:T12 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Karbis -> 5mg 1x 1 tabl/rano <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1025, 1006] <type: LEFT>>
+R7	Drg Arg1:T12 Arg2:T13 << OK >>	Karbis -> 32mg 1x 1 tabl/wieczorem  <RANK: 3> <info: start[1025, 1032] <type: RIGHT>>
+
+
+Sentence 16:
+Lacipil 4mg 1x1 tabl/wieczorem
+Acard 75mg 1x 1 tabl/wieczorem
+
+R8	Drg Arg1:T14 Arg2:T15 << OK >>	Lacipil -> 4mg 1x1 tabl/wieczorem  <RANK: 3> <info: start[1057, 1065] <type: RIGHT>>
+R9	Drg Arg1:T14 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Lacipil -> 75mg 1x 1 tabl/wieczorem <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1057, 1094] <type: RIGHT>>
+R10	Drg Arg1:T16 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Acard -> 4mg 1x1 tabl/wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1088, 1065] <type: LEFT>>
+R11	Drg Arg1:T16 Arg2:T17 << OK >>	Acard -> 75mg 1x 1 tabl/wieczorem  <RANK: 3> <info: start[1088, 1094] <type: RIGHT>>
+
+
+Sentence 17:
+Pramolan 50mg 2x1 tabl/rano i wieczór
+Afobam 0,5mg 1 tabl.
+R12	Drg Arg1:T18 Arg2:T19 << OK >>	Pramolan -> 50mg 2x1 tabl/rano i wieczór  <RANK: 3> <info: start[1119, 1128] <type: RIGHT>>
+R13	Drg Arg1:T18 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Pramolan -> 0,5mg 1 tabl. doraźnie wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1119, 1164] <type: RIGHT>>
+R14	Drg Arg1:T20 Arg2:T19 <<REDUNDANT!!!REMOVED>>	Afobam -> 50mg 2x1 tabl/rano i wieczór <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1157, 1128] <type: LEFT>>
+R15	Drg Arg1:T20 Arg2:T21 << OK >>	Afobam -> 0,5mg 1 tabl. doraźnie wieczorem  <RANK: 3> <info: start[1157, 1164] <type: RIGHT>>
+
+
+Sentence 18:
+doraźnie wieczorem
+------------------------------------------------
+
+
+
+Sentence 19:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 20:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.81[10^3/ul]
+    
+
+
+Sentence 21:
+RBC Krwinki czerwone:4.60[10^6/ul]
+    
+
+
+Sentence 22:
+HGB Hemoglobina:14.1[g/dl]
+    
+
+
+Sentence 23:
+HCT Hematokryt:40.1[%]
+    
+
+
+Sentence 24:
+MCV wskaźnik czerwonokrw:87.2[fl]
+    
+
+
+Sentence 25:
+MCH wskaźnik czerwonokrw:30.7[pg]
+    
+
+
+Sentence 26:
+MCHC wskaźnik czerwonokr:35.2[g/dl]
+    
+
+
+Sentence 27:
+PLT z morfologii:341[10^3/ul]
+    
+
+
+Sentence 28:
+RDW-SD:38.6[fl]
+    
+
+
+Sentence 29:
+RDW-CV:12.0[%]
+    PDW:10.9[fl]
+    
+
+
+Sentence 30:
+MPV:9.9[fl]
+    
+
+
+Sentence 31:
+P-LCR:24.4[%]
+    
+
+
+Sentence 32:
+PCT (hematokryt płytkowy:0.34[%]
+    
+
+
+Sentence 33:
+NEUTR# wartość bezwzględ:4.82[10^3/ul]
+    
+
+
+Sentence 34:
+NEUTR%:61.7[%]
+    
+
+
+Sentence 35:
+LYMH# wartość bezwzględn:2.29[10^3/ul]
+    
+
+
+Sentence 36:
+LYMPH%:29.3[%]
+    
+
+
+Sentence 37:
+MONO# wartość bezwzględn:0.49[10^3/ul]
+    
+
+
+Sentence 38:
+MONO%:6.3[%]
+    
+
+
+Sentence 39:
+EO# wartość bezwzględna:0.15[10^3/ul]
+    
+
+
+Sentence 40:
+EO%:1.9[%]
+    
+
+
+Sentence 41:
+BASO# wartość bezwzględn:0.06[10^3/ul]
+    
+
+
+Sentence 42:
+BASO%:0.8[%]
+    
+
+
+Sentence 43:
+NRBC %:0.0[%]
+    
+
+
+Sentence 44:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 45:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:31.7[sek]
+
+
+
+Sentence 46:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 47:
+Czas protrombinowy:12.0[sek]
+    
+
+
+Sentence 48:
+Wskaźnik PT:91.7[%]
+    
+
+
+Sentence 49:
+INR:1.09
+D-dimer
+
+
+Sentence 50:
+- test ilościowy: D-dimer - test ilościowy:310[ng/ml]
+
+
+
+Sentence 51:
+Badanie ogólne moczu
+    
+
+
+Sentence 52:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 53:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 54:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 55:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 56:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 57:
+ciężar właściwy:1.012[ ]
+    
+
+
+Sentence 58:
+kwas askrobinowy:40 mg/dl[ ]
+    
+
+
+Sentence 59:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 60:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 61:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 62:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 63:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 64:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 65:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 66:
+leukocyty:18 /ul[ul]
+    erytrocyty świeże:2 /ul[ul]
+    śluz:nieliczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 67:
+TSH: TSH:2.97[uIU/ml]
+
+
+
+Sentence 68:
+FT4: FT4:1.33[ng/dl]
+
+
+
+Sentence 69:
+Troponina T: Troponina T:3.8[pg/ml]
+
+
+
+Sentence 70:
+ALAT: ALAT:17[U/L]
+ASPAT: ASPAT:23[U/L]
+ASPAT: ASPAT:17[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 71:
+Sód (Na): Sód:144[mmol/L]
+
+
+
+Sentence 72:
+Potas (K): Potas:4.4[mmol/L]
+
+
+
+Sentence 73:
+Potas (K): Potas:4.0[mmol/L]
+
+
+
+Sentence 74:
+Kreatynina + GFR
+    
+
+
+Sentence 75:
+Kreatynina w surowicy:0.86[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 76:
+MDRD ze stan:67.5[ml/min/1,73 m^2]
+
+
+
+Sentence 77:
+Kreatynina + GFR
+    
+
+
+Sentence 78:
+Kreatynina w surowicy:0.87[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 79:
+MDRD ze stan:66.6[ml/min/1,73 m^2]
+
+
+
+Sentence 80:
+Mocznik: Mocznik:23[mg/dl]
+
+
+
+Sentence 81:
+Glukoza w surowicy: Glukoza w surowicy:98[mg/dl]
+
+
+
+Sentence 82:
+------------------------------------------------
+
+
+
+Sentence 83:
+ICD10
+------------------------------------------------
+I34.0
+I36.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 84:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 85:
+89.501
+88.721
+89.502
+89.41
+N45
+------------------------------------------------
+
+

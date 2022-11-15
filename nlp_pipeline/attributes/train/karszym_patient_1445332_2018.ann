@@ -1,0 +1,68 @@
+T1	Negation 1468 1471	nie
+T2	Negation 1483 1489	neguje
+T3	Negation 1352 1358	( -  )
+T4	Negation 1371 1376	( - )
+T5	Condition 447 460	Dna moczanowa
+N1	Reference T5 ICD10:M10.9	Dna, nieokreślona
+T6	Condition 462 483	Hipertrójglicerydemia
+N2	Reference T6 ICD10:E78.1	Czysta hiperglicerydemia
+T7	Condition 485 529	Skrzywienie  w odcinku piersiowym kręgosłupa
+N3	Reference T7 ICD10:M41.9	Skolioza, nieokreślona
+T8	Investigation_result 926 991	chwiejnych wartości ciśnienia tętniczego krwi ( do 170/100 mmHg )
+T9	Symptom 1009 1019	osłabienie
+T10	Symptom 1022 1052	pogorszenie tolerancji wysiłku
+T11	Date 1053 1068	od ok 2 tygodni
+T12	Symptom 1070 1100	okresowo stany przedomdleniowe
+N4	Reference T12 ICD10:R55	Omdlenie i zapaść
+T13	Symptom 1102 1162	bóle w klatce piersiowej nasilające się przy głębokim wdechu
+N5	Reference T13 ICD10:R07.1	Ból w klatce piersiowej podczas oddychania
+T14	Condition 1180 1193	Dna moczanowa
+N6	Reference T14 ICD10:M10.9	Dna, nieokreślona
+T15	Treatment 1195 1212	Przebyte operacje
+N7	Reference T15 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T16	Treatment 1223 1231	operacji
+N8	Reference T16 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T17	Condition 1241 1270	żylaków kończyny dolnej lewej
+A1	Status T17 Historical_Insignificant
+N9	Reference T17 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T18	Date 1271 1282	10 lat temu
+R1	Dat Arg1:T18 Arg2:T17	
+R2	Dat Arg1:T18 Arg2:T16	
+R3	Dat Arg1:T11 Arg2:T10	
+T19	Negation 1308 1319	brak danych
+T20	Treatment 1286 1305	Leczenie przewlekłe
+R4	Neg Arg1:T19 Arg2:T20	
+T21	Condition 1348 1351	WZW
+N10	Reference T21 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T22	Condition 1361 1370	borelioza
+N11	Reference T22 ICD10:A69.2	Choroba z Lyme
+R5	Neg Arg1:T4 Arg2:T22	
+R6	Neg Arg1:T3 Arg2:T21	
+T23	Condition 1379 1398	wywiadzie rodzinnym
+A2	Status T23 Family
+T24	Negation 1401 1412	brak danych
+R7	Neg Arg1:T24 Arg2:T23	
+T25	Negation 1431 1434	nie
+T26	Behaviour 1414 1429	Palenie tytoniu
+N12	Reference T26 ICD10:Z72.0	Używanie tytoniu
+T27	Behaviour 1435 1439	pali
+N13	Reference T27 ICD10:Z72.0	Używanie tytoniu
+T28	Date 1440 1452	od 3 tygodni
+T29	Behaviour 1455 1466	Inne używki
+N14	Reference T29 ICD10:Z72	Problemy związane ze stylem życia
+T30	Condition 1472 1481	Uczulenia
+N15	Reference T30 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R8	Neg Arg1:T2 Arg2:T30	
+R9	Neg Arg1:T1 Arg2:T29	
+R10	Neg Arg1:T25 Arg2:T26	
+R11	Neg Arg1:T25 Arg2:T27	
+R12	Dat Arg1:T28 Arg2:T27	
+R13	Dat Arg1:T28 Arg2:T26	
+T31	Behaviour 1506 1532	warunki mieszkaniowe dobre
+T32	Behaviour 1535 1549	mieszka z żona
+T33	Negation 1557 1560	bez
+T34	Drug 1561 1579	leków przewlekłych
+T35	Investigation 1594 1604	Echo serca
+T36	Investigation 1607 1622	Holter EKG i RR
+T37	Investigation 1626 1641	Próba Wysiłkowa
+R14	Neg Arg1:T33 Arg2:T34	

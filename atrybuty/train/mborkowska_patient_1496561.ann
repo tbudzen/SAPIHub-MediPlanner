@@ -1,0 +1,146 @@
+T1	Behaviour 440 535	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T2	Investigation 548 571	kontrola lipidogramu, s
+T3	Condition 789 818	Przewlekła niewydolność serca
+N1	Reference T3 ICD10:I50	Niewydolność serca
+T4	Condition 820 864	Istotna niedomykalność zastawki trójdzielnej
+N2	Reference T4 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T5	Treatment 874 911	ablacji łącza przedsionkowo-komorwego
+T6	Condition 930 934	PSVT
+N3	Reference T6 ICD10:I47.1	Częstoskurcz nadkomorowy
+T7	Date 936 941	1988r
+R1	Dat Arg1:T7 Arg2:T6	
+R2	Dat Arg1:T7 Arg2:T5	
+T8	Treatment 952 1008	implantacji kardiostymulatora i elektrody przedsionkowej
+T9	Date 1010 1015	1988r
+R3	Dat Arg1:T9 Arg2:T8	
+T10	Treatment 1017 1118	(AAIR), stan po reimplanatacji kardiostymulatora Biotronik Safio i implanatacji elektrody dokomorowej
+T11	Treatment 1127 1131	DDDR
+T12	Date 1120 1125	2011r
+R4	Dat Arg1:T12 Arg2:T10	
+R5	Dat Arg1:T12 Arg2:T11	
+N4	Reference T11 ICD10:Z95.0	Obecność stymulatora serca
+T13	Condition 1134 1147	Zez obuoczny.
+N5	Reference T13 ICD10:H50.9	Zez, nieokreślony
+T14	Condition 1148 1156	Oczopląs
+N6	Reference T14 ICD10:H55	Oczopląs i inne nieregularne ruchy gałki ocznej
+T15	Condition 1158 1164	Jaskra
+N7	Reference T15 ICD10:H40.9	Jaskra, nieokreślona
+T16	Investigation 3088 3098	echo serca
+T17	Investigation 3101 3107	Holter
+T18	Investigation 3109 3127	RTG kl. piersiowej
+T19	Drug 3044 3052	Travatan
+T20	Drug 3030 3036	Cosopt
+T21	Drug 3010 3022	Kalipoz prol
+T22	Drug 2981 2991	Procoralan
+T23	Drug 2955 2961	Diuver
+T24	Drug_dose 2962 2980	10 mg 1 tabl. rano
+R6	Drg Arg1:T23 Arg2:T24	
+T25	Drug_dose 2992 3009	5 mg 1 tabl. rano
+R7	Drg Arg1:T22 Arg2:T25	
+T26	Drug_dose 3023 3029	1 x dz
+R8	Drg Arg1:T21 Arg2:T26	
+T27	Drug_dose 3037 3043	2 x dz
+R9	Drg Arg1:T20 Arg2:T27	
+T28	Drug_dose 3053 3059	2 x dz
+R10	Drg Arg1:T19 Arg2:T28	
+T29	Negation 2874 2884	nie podaje
+T30	Negation 2852 2862	nie podaje
+T31	Negation 2828 2838	nie podaje
+T32	Negation 2800 2810	nie podaje
+T33	Negation 2772 2782	nie podaje
+T34	Condition 2863 2872	Uczulenia
+N8	Reference T34 ICD10:T78.4	Alergia, nieokreślona
+R11	Neg Arg1:T29 Arg2:T34	
+T35	Behaviour 2839 2851	Inne używki:
+R12	Neg Arg1:T30 Arg2:T35	
+T36	Behaviour 2811 2826	Palenie tytoniu
+N9	Reference T36 ICD10:T65.2	Tytoń i nikotyna
+R13	Neg Arg1:T31 Arg2:T36	
+T37	Condition 2755 2758	WZW
+N10	Reference T37 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T38	Condition 2760 2769	borelioza
+N11	Reference T38 ICD10:A69.2	Choroba z Lyme
+R14	Neg Arg1:T33 Arg2:T38	
+R15	Neg Arg1:T33 Arg2:T37	
+T39	Condition 2783 2798	Wywiad rodzinny
+A1	Status T39 Family
+R16	Neg Arg1:T32 Arg2:T39	
+T40	Investigation 2583 2586	TTE
+T41	Investigation_result 2588 2598	istotna IT
+N12	Reference T41 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+A2	Source T41 Declared
+R17	Inv Arg1:T40 Arg2:T41	
+T42	Investigation 2615 2637	angioCT tt. wieńcowych
+T43	Investigation_result 2639 2656	tt. bez przewężeń
+R18	Inv Arg1:T42 Arg2:T43	
+T44	Date 2692 2706	w dzieciństwie
+T45	Condition 2677 2691	zaćma obuoczna
+N13	Reference T45 ICD10:H25	Zaćma starcza
+T46	Treatment 2667 2675	operacje
+R19	Dat Arg1:T44 Arg2:T46	
+R20	Dat Arg1:T44 Arg2:T45	
+T47	Condition 2575 2581	Jaskra
+N14	Reference T47 ICD10:H40.9	Jaskra, nieokreślona
+T48	Condition 2565 2573	Oczopląs
+N15	Reference T48 ICD10:H55	Oczopląs i inne nieregularne ruchy gałki ocznej
+T49	Condition 2551 2563	Zez obuoczny
+N16	Reference T49 ICD10:H50.9	Zez, nieokreślony
+T50	Condition 1393 1486	Istotna niedomykalność zastawki trójdzielnej zależna od pozycji elektrody – II klasa wg NYHA.
+N17	Reference T50 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T51	Treatment 1498 1536	ablacji łącza przedsionkowo-komorowego
+T52	Treatment 1589 1642	implantacji układu stymulującego z elektrodą komorową
+T53	Condition 1546 1586	uporczywych nadkomorowych zaburzeń rytmu
+N18	Reference T53 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T54	Date 1644 1648	1988
+R21	Dat Arg1:T54 Arg2:T52	
+R22	Dat Arg1:T54 Arg2:T53	
+R23	Dat Arg1:T54 Arg2:T51	
+T55	Treatment 1663 1763	reimplantacji układu stymulującego i elektrody komorowej oraz doszczepieniu elektrody przedsionkowej
+T56	Date 1765 1769	2005
+R24	Dat Arg1:T56 Arg2:T55	
+T57	Condition 1784 1821	2-krotnym zapaleniu mięśnia sercowego
+N19	Reference T57 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+T58	Date 1840 1844	2005
+R25	Dat Arg1:T58 Arg2:T57	
+T59	Condition 1986 1995	Uczulenie
+N20	Reference T59 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T60	Drug 1999 2009	lignokainę
+R26	Alg Arg1:T59 Arg2:T60	
+T61	Condition 1850 1872	Wole guzowate obojętne
+N21	Reference T61 ICD10:E04.9	
+T62	Condition 1877 1892	Mięśniak macicy
+N22	Reference T62 ICD10:D25	Mięśniak gładkokomórkowy macicy
+T63	Condition 1897 1909	Zez obuoczny
+N23	Reference T63 ICD10:H50.9	Zez, nieokreślony
+T64	Condition 1914 1920	Jaskra
+N24	Reference T64 ICD10:H40.9	Jaskra, nieokreślona
+T65	Condition 1954 1969	zaćmy wrodzonej
+N25	Reference T65 ICD10:H26.8	Inne określone postacie zaćmy
+T66	Date 1970 1980	przed laty
+T67	Treatment 1933 1953	leczeniu operacyjnym
+R27	Dat Arg1:T66 Arg2:T65	
+R28	Dat Arg1:T66 Arg2:T67	
+T68	Symptom 2185 2215	pogorszenia tolerancji wysiłku
+N26	Reference T68 ICD10:R53	Złe samopoczucie i zmęczenie
+T69	Date 2216 2228	od ok. 2 lat
+R29	Dat Arg1:T69 Arg2:T68	
+T70	Symptom 2230 2268	trudności ze spaniem w pozycji leżącej
+T71	Treatment 2291 2328	ablacji łącza przedsionkowo-komorwego
+T72	Condition 2347 2351	PSVT
+N27	Reference T72 ICD10:I47.1	Częstoskurcz nadkomorowy
+T73	Date 2353 2358	1988r
+R30	Dat Arg1:T73 Arg2:T72	
+R31	Dat Arg1:T73 Arg2:T71	
+T74	Treatment 2369 2425	implantacji kardiostymulatora i elektrody przedsionkowej
+T75	Date 2427 2432	1988r
+R32	Dat Arg1:T75 Arg2:T74	
+T76	Treatment 2434 2535	(AAIR), stan po reimplanatacji kardiostymulatora Biotronik Safio i implanatacji elektrody dokomorowej
+T77	Date 2537 2542	2011r
+R33	Dat Arg1:T77 Arg2:T76	
+T78	Treatment 2544 2548	DDDR
+N28	Reference T78 ICD10:Z95.0	Obecność stymulatora serca
+R34	Dat Arg1:T77 Arg2:T78	
+A3	Status T65 Historical_Insignificant
+A4	Status T67 Historical_Insignificant
+A5	Status T45 Historical_Insignificant
+A6	Status T46 Historical_Insignificant

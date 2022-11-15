@@ -1,0 +1,60 @@
+T1	Treatment 338 394	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T2	Behaviour 397 437	Dieta lekkostrawna , niskocholesterolowa
+T3	Investigation 441 524	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T4	Investigation 527 575	Systematyczna kontrola ciśnienia tętniczego krwi
+T5	Drug 626 633	Lorisat
+T6	Drug_dose 634 650	50 mg 1x dz rano
+T7	Drug 652 660	Nebispes
+T8	Drug_dose 661 683	5 mg 1x dz po 1/4 tabl
+T9	Condition 911 932	Nadciśnienie tętnicze
+N1	Reference T9 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T10	Condition 934 964	Pojedyncze pobudzenia komorowe
+N2	Reference T10 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T11	Condition 968 988	Hipercholesterolemia
+N3	Reference T11 ICD10:E78.0	Czysta hipercholesterolemia
+T12	Condition 991 998	Otyłość
+N4	Reference T12 ICD10:E66.9	Otyłość, nieokreślona
+R1	Drg Arg1:T5 Arg2:T6	
+R2	Drg Arg1:T7 Arg2:T8	
+T13	Condition 1225 1246	Nadciśnienie tętnicze
+N5	Reference T13 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T14	Condition 1248 1255	Otyłość
+N6	Reference T14 ICD10:E66.9	Otyłość, nieokreślona
+T15	Condition 1445 1447	HA
+N7	Reference T15 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T16	Date 1448 1473	rozpoznane w dzieciństwie
+T17	Treatment 1489 1517	kilkakrotnie hospitalizowany
+R3	Dat Arg1:T16 Arg2:T15	
+R4	Dat Arg1:T16 Arg2:T17	
+T18	Date 1519 1536	W ostatnim czasie
+T19	Investigation_result 1537 1595	stabilne, nieco podwyższone wartości RR 140-150/90-95 mmHg
+R5	Dat Arg1:T18 Arg2:T19	
+T20	Symptom 1619 1658	pobolewania w klatce piersiowej, kłucia
+N8	Reference T20 ICD10:R07.3	Inne bóle w klatce piersiowej
+T21	Symptom 1660 1684	okresowo kołatania serca
+N9	Reference T21 ICD10:R00.2	Kołatanie serca
+T22	Symptom 1686 1703	Inne dolegliwości
+T23	Negation 1704 1710	neguje
+T24	Condition 1732 1734	HA
+A1	Status T24 Family
+N10	Reference T24 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T25	Condition 1736 1738	DM
+A2	Status T25 Family
+N11	Reference T25 ICD10:E14	Cukrzyca nieokreślona
+T26	Behaviour 1740 1749	Papierosy
+N12	Reference T26 ICD10:Z72.0	Używanie tytoniu
+T27	Negation 1752 1758	neguje
+T28	Behaviour 1760 1780	alkohol sporadycznie
+A3	Status T28 Historical_Insignificant
+N13	Reference T28 ICD10:Z72.1	Używanie alkoholu
+T29	Date 1782 1793	W 2003 roku
+T30	Treatment 1803 1816	appendektomia
+A4	Status T30 Historical_Insignificant
+N14	Reference T30 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T31	Condition 1818 1825	Alergie
+N15	Reference T31 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T32	Negation 1826 1832	neguje
+R6	Neg Arg1:T32 Arg2:T31	
+R7	Dat Arg1:T29 Arg2:T30	
+R8	Neg Arg1:T27 Arg2:T26	
+R9	Neg Arg1:T23 Arg2:T22	

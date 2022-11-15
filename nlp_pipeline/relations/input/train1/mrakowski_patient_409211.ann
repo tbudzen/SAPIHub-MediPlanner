@@ -1,0 +1,136 @@
+T1	Treatment 333 400	Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T2	Treatment 425 499	Wskazana konsultacja zaburzeń gastrycznych w Poradni Gastroenterologicznej
+T3	Investigation 524 604	Kontrola morfologii za 1 msc, gospodarki żelazowej po 3 msc suplementacji żelaza
+T4	Behaviour 607 702	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T5	Investigation 707 798	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T6	Investigation 805 861	Systematyczna kontrola ciśnienia tętniczego krwi i tętna
+T7	Treatment 866 907	Wskazane systematyczne przyjmowanie leków
+T8	Drug 910 917	Bixebra
+T9	Drug_dose 918 936	7,5 mg 1-0-1 tabl.
+R1	Drg Arg1:T8 Arg2:T9	
+T10	Drug 938 945	Emanera
+T11	Drug_dose 946 963	40 mg 1-0-1 tabl.
+R2	Drg Arg1:T10 Arg2:T11	
+T12	Drug 965 975	Tardyferon
+T13	Drug_dose 976 987	1-0-0 tabl.
+R3	Drg Arg1:T12 Arg2:T13	
+T14	Symptom 1205 1225	Tachykardia zatokowa
+N1	Reference T14 ICD10:R00.0	Tachykardia, nieokreślona
+T15	Condition 1227 1244	Otyłość olbrzymia
+N2	Reference T15 ICD10:E66.9	Otyłość, nieokreślona
+T16	Treatment 1266 1307	laparoskopowej rękawowej resekcji żołądka
+A1	Status T16 Historical_Insignificant
+T17	Date 1309 1316	06/2014
+R4	Dat Arg1:T17 Arg2:T16	
+T18	Condition 1322 1337	Niedobór żelaza
+N3	Reference T18 ICD10:E61.1	Niedobór żelaza
+T19	Symptom 1527 1582	utrzymujacej się tachykardii zatokowej z HR 120-140/min
+N4	Reference T19 ICD10:R00.0	Tachykardia, nieokreślona
+T20	Date 1584 1593	Od lutego
+T21	Drug 1603 1610	Bixebrę
+T22	Drug_dose 1611 1615	5 mg
+R5	Drg Arg1:T21 Arg2:T22	
+R6	Dat Arg1:T20 Arg2:T21	
+T23	Symptom 1626 1669	zmniejszenie HR spoczynkowego do ok. 80/min
+N5	Reference T23 ICD10:R00	Zaburzenia rytmu serca
+T24	Symptom 1698 1761	epizody wysokiego HR z towarzyszącym spadkiem RR do 100/60 mmHg
+N6	Reference T24 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T25	Symptom 1779 1799	bóle i zawroty głowy
+N7	Reference T25 ICD10:R42	Zawroty głowy i odurzenie
+T26	Symptom 1805 1875	uczucie "ciemności przed oczami" przy zmianie pozycji ciała na stojącą
+T27	Condition 1900 1917	Otyłość olbrzymia
+N8	Reference T27 ICD10:E66.9	Otyłość, nieokreślona
+T28	Treatment 1939 1980	laparoskopowej rękawowej resekcji żołądka
+A2	Status T28 Historical_Insignificant
+T29	Date 1982 1989	06/2014
+R7	Dat Arg1:T29 Arg2:T28	
+T30	Condition 1992 2035	Przewlekłe zapalenie błony śluzowej żołądka
+N9	Reference T30 ICD10:K29.5	Przewlekłe zapalenie żołądka, nieokreślone
+T31	Negation 2037 2043	Neguje
+T32	Symptom 2045 2057	zasłabnięcia
+T33	Symptom 2059 2067	omdlenia
+N10	Reference T33 ICD10:R55	Omdlenie i zapaść
+T34	Symptom 2069 2079	krwawienia
+T35	Symptom 2081 2094	czarne stolce
+N11	Reference T35 ICD10:K92.1	Stolce smołowate
+T36	Symptom 2096 2112	brunatne wymioty
+N12	Reference T36 ICD10:K92.0	Wymioty krwawe
+T37	Condition 2114 2130	chorobę wrzodową
+N13	Reference T37 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T38	Symptom 2132 2146	duszność nocną
+N14	Reference T38 ICD10:R06.0	Duszność
+T39	Symptom 2148 2163	obrzęki podudzi
+N15	Reference T39 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T40	Symptom 2165 2189	bóle w klatce piersiowej
+N16	Reference T40 ICD10:R07	Ból gardła i w klatce piersiowej
+T41	Symptom 2191 2206	kołatania serca
+N17	Reference T41 ICD10:R00.2	Kołatanie serca
+R8	Neg Arg1:T31 Arg2:T41	
+R9	Neg Arg1:T31 Arg2:T40	
+R10	Neg Arg1:T31 Arg2:T39	
+R11	Neg Arg1:T31 Arg2:T38	
+R12	Neg Arg1:T31 Arg2:T37	
+R13	Neg Arg1:T31 Arg2:T36	
+R14	Neg Arg1:T31 Arg2:T35	
+R15	Neg Arg1:T31 Arg2:T34	
+R16	Neg Arg1:T31 Arg2:T33	
+R17	Neg Arg1:T31 Arg2:T32	
+T42	Treatment 2209 2226	Przebyte operacje
+T43	Behaviour 2231 2246	Palenie tytoniu
+N18	Reference T43 ICD10:Z72.0	Używanie tytoniu
+T44	Negation 2248 2256	nie pali
+T45	Date 2257 2265	od 3 msc
+T46	Behaviour 2278 2289	2 paczkolat
+N19	Reference T46 ICD10:Z72.0	Używanie tytoniu
+R18	Neg Arg1:T44 Arg2:T43	
+R19	Dat Arg1:T45 Arg2:T43	
+T47	Behaviour 2291 2302	Inne używki
+T48	Negation 2304 2310	neguje
+R20	Neg Arg1:T48 Arg2:T47	
+T49	Condition 2311 2320	Uczulenia
+T50	Negation 2322 2328	neguje
+R21	Neg Arg1:T50 Arg2:T49	
+T51	Condition 2356 2359	WZW
+N20	Reference T51 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T52	Negation 2361 2362	-
+R22	Neg Arg1:T52 Arg2:T51	
+T53	Condition 2366 2375	borelioza
+N21	Reference T53 ICD10:A69.2	Choroba z Lyme
+T54	Negation 2377 2378	-
+R23	Neg Arg1:T54 Arg2:T53	
+T55	Condition 2381 2384	tbc
+N22	Reference T55 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T56	Negation 2386 2387	-
+R24	Neg Arg1:T56 Arg2:T55	
+T57	Condition 2390 2394	odra
+N23	Reference T57 ICD10:B05	Odra
+T58	Negation 2396 2397	-
+R25	Neg Arg1:T58 Arg2:T57	
+T59	Condition 2400 2414	kontakt z odrą
+N24	Reference T59 ICD10:B05	Odra
+T60	Negation 2416 2417	-
+R26	Neg Arg1:T60 Arg2:T59	
+T61	Condition 2445 2450	zawał
+A3	Status T61 Family
+N25	Reference T61 ICD10:I25.2	Przebyty zawał serca
+T62	Condition 2461 2465	udar
+A4	Status T62 Family
+N26	Reference T62 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T63	Condition 2474 2489	zmarła na serce
+A5	Status T63 Family
+N27	Reference T63 ICD10:I46.1	Nagły zgon sercowy, tak opisany
+T64	Behaviour 2506 2532	warunki mieszkaniowe dobre
+T65	Drug 2539 2546	Emanera
+T66	Drug_dose 2547 2558	20 mg 1-0-1
+R27	Drg Arg1:T65 Arg2:T66	
+T67	Drug 2559 2566	Bixebra
+T68	Drug_dose 2567 2577	5 mg 1-0-1
+T69	Date 2580 2590	od 02/2019
+R28	Drg Arg1:T67 Arg2:T68	
+R29	Dat Arg1:T69 Arg2:T67	
+T70	Investigation 2652 2673	badania laboratoryjne
+T71	Investigation 2675 2679	ECHO
+T72	Investigation 2681 2699	EKG metodą Holtera
+T73	Investigation 2701 2705	ABPM
+T74	Condition 2419 2434	Wywiad rodzinny
+A6	Status T74 Family

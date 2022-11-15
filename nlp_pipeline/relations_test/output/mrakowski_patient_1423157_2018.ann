@@ -1,0 +1,92 @@
+T1	Condition 439 447	Komorowe
+N1	Reference T1 ICD10:I49.3	
+T2	Condition 450 484	nadkomorowe zaburzenia rytmu serca
+N2	Reference T2 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T3	Condition 486 506	Hipercholesterolemia
+N3	Reference T3 ICD10:E78.0	Czysta hipercholesterolemia
+T4	Treatment 507 531	w trakcie farmakoterapii
+T5	Condition 533 573	Choroba zwyrodnieniowa stawów kręgosłupa
+N4	Reference T5 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T6	Treatment 583 663	przeszczepie kości biodrowej do szczęki celem wykonania uzupełnień protetycznych
+A1	Status T6 Historical_Insignificant
+T7	Date 665 669	2014
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Treatment 795 822	dalsza opieka w poradni POZ
+T9	Treatment 829 861	okresowa kontrola kardiologiczna
+T10	Investigation 869 923	wskazane wykonanie ponownego zapisu Holterowskiego ekg
+T11	Date 924 943	za ok. 2-4 tygodnie
+R2	Dat Arg1:T11 Arg2:T10	
+T12	Investigation 949 1005	okresowa kontrola lipidogramu i stężenia aminotransferaz
+T13	Date 1016 1028	za 6 tygodni
+R3	Dat Arg1:T13 Arg2:T12	
+T14	Behaviour 1035 1060	dieta niskocholesterolowa
+T15	Treatment 1067 1095	regularne przyjmowanie leków
+T16	Drug 1104 1111	Roswera
+T17	Drug 1143 1153	Concor Cor
+T18	Drug_dose 1112 1135	10 mg 1 tabl. wieczorem
+R4	Drg Arg1:T16 Arg2:T18	
+T19	Drug_dose 1154 1174	1,25 mg 1 tabl. rano
+R5	Drg Arg1:T17 Arg2:T19	
+T20	Symptom 1350 1363	kołatań serca
+N5	Reference T20 ICD10:R00.2	Kołatanie serca
+T21	Symptom 1381 1396	zawrotami głowy
+N6	Reference T21 ICD10:R42	Zawroty głowy i odurzenie
+T22	Symptom 1402 1447	stan przedomdleniowy podczas jazdy samochodem
+T23	Symptom 1463 1485	niemiarową akcją serca
+N7	Reference T23 ICD10:R00.8	Inne i nieokreślone zaburzenia rytmu serca
+T24	Treatment 1487 1504	Przebyte operacje
+T25	Treatment 1506 1574	przeszczep kości biodrowej do szczęki do implantów (dziąsło - przód)
+A2	Status T25 Historical_Insignificant
+T26	Date 1577 1582	2014r
+R6	Dat Arg1:T26 Arg2:T25	
+T27	Condition 1611 1614	WZW
+N8	Reference T27 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T28	Condition 1616 1625	borelioza
+N9	Reference T28 ICD10:A69.2	Choroba z Lyme
+T29	Negation 1628 1638	nie podaje
+R7	Neg Arg1:T29 Arg2:T28	
+R8	Neg Arg1:T29 Arg2:T27	
+T30	Condition 1639 1654	Wywiad rodzinny
+A3	Status T30 Family
+T31	Negation 1656 1666	nieistotny
+R9	Neg Arg1:T31 Arg2:T30	
+T32	Behaviour 1667 1682	Palenie tytoniu
+N10	Reference T32 ICD10:Z72.0	Używanie tytoniu
+T33	Negation 1684 1694	nie podaje
+R10	Neg Arg1:T33 Arg2:T32	
+T34	Behaviour 1695 1706	Inne używki
+T35	Negation 1708 1718	nie podaje
+R11	Neg Arg1:T35 Arg2:T34	
+T36	Condition 1719 1728	Uczulenia
+N11	Reference T36 ICD10:T78.4	Alergia, nieokreślona
+T37	Negation 1730 1740	nie podaje
+R12	Neg Arg1:T37 Arg2:T36	
+T38	Behaviour 1759 1778	tryb życia siedzący
+T39	Drug 1805 1812	Roswera
+T40	Drug_dose 1813 1836	30 mg 1 tabl. wieczorem
+R13	Drg Arg1:T39 Arg2:T40	
+T41	Date 1838 1851	od maja 2017r
+R14	Dat Arg1:T41 Arg2:T39	
+T42	Investigation 1880 1890	echo serca
+T43	Investigation 1892 1912	echo przezprzełykowe
+T44	Investigation 1914 1917	TET
+T45	Investigation 1919 1923	ABPM
+T46	Investigation 1925 1931	Holter
+T47	Investigation 1933 1951	RTG kl. piersiowej
+N12	Reference T34 ICD10:Z72	Problemy związane ze stylem życia
+R1	Dat Arg1:T7 Arg2:T6
+R11	Dat Arg1:T13 Arg2:T12
+R12	Drg Arg1:T16 Arg2:T18
+R13	Drg Arg1:T17 Arg2:T18
+R15	Neg Arg1:T29 Arg2:T28
+R16	Neg Arg1:T29 Arg2:T30
+R29	Neg Arg1:T31 Arg2:T32
+R41	Neg Arg1:T33 Arg2:T34
+R5	Dat Arg1:T11 Arg2:T10
+R50	Neg Arg1:T35 Arg2:T36
+R64	Neg Arg1:T37 Arg2:T38
+R69	Drg Arg1:T39 Arg2:T40
+R70	Dat Arg1:T26 Arg2:T27
+R71	Dat Arg1:T26 Arg2:T28
+R87	Dat Arg1:T41 Arg2:T42
+R88	Dat Arg1:T41 Arg2:T43

@@ -1,0 +1,574 @@
+allRelations          : 104
+oks                   : 26
+isRedundantAndRemoveds: 74
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 3
+GOOD / BAD            : 100 / 4
+Sentence 0:
+------------------------------------------------
+Wiek: 25 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:R00.2|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Obserwacja w kierunku kardiomiopatii tachyarytmicznej - negatywna.
+R1	Neg Arg1:T2 Arg2:T1 << OK >>	negatywna -> Obserwacja w kierunku kardiomiopatii tachyarytmicznej  <RANK: 3> <info: start[506, 450] <type: LEFT>>
+
+
+Sentence 6:
+\x0aKrótkotrwałe utraty przytomności w wywiadzie.
+
+
+
+Sentence 7:
+------------------------------------------------
+
+
+
+Sentence 8:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 9:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Podejrzenie kardiomiopatii tachyarytmicznej.
+
+
+Sentence 10:
+Tachykardia.
+
+
+Sentence 11:
+Utraty przytomności podczas stosunku seksualnego w wywiadzie.
+
+
+
+Sentence 12:
+------------------------------------------------
+
+
+
+Sentence 13:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 14:
+- Wskazana dalsza opieka u lekarza POZ.
+
+
+
+Sentence 15:
+- Wskazana dalsza diagnostyka alergologiczna (skierowanie wydano). 
+
+
+
+Sentence 16:
+- Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych.
+
+
+
+Sentence 17:
+- Okresowo kontrola lipidog
+------------------------------------------------
+
+
+
+Sentence 18:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 19:
+Pacjentka lat 25 została przyjęta do kliniki z podejrzeniem kardiomiopatii tachyarytmicznej celem diagnostyki.
+
+
+Sentence 20:
+Zgłasza kilkusekundowe utraty przytomności przy każdym stosunku seksualnym (pierwszy epizod 4 lata temu).
+R2	Dat Arg1:T13 Arg2:T12 << OK >>	pierwszy epizod 4 lata temu -> kilkusekundowe utraty przytomności przy każdym stosunku seksualnym  <RANK: 3> <info: start[1558, 1490] <type: LEFT>>
+
+
+Sentence 21:
+Poza tym wysoki HR >100/min w spoczynku, okresowe kołatania serca, bóle i zawroty głowy.
+
+
+Sentence 22:
+W TTE (03/2019) graniczna funkcja skurczowa LK (EF=54%)- w 04/2019 włączono Propranolo 2x10 mg- zmniejszenie kołatań serca, HR ok 80/min w spoczynku.
+R3	Inv Arg1:T17 Arg2:T19 << OK >>	TTE -> graniczna funkcja skurczowa LK (EF=54%)  <RANK: 3> <info: start[1679, 1693] <type: RIGHT>>
+R4	Drg Arg1:T21 Arg2:T22 << OK >>	Propranolo -> 2x10 mg  <RANK: 3> <info: start[1753, 1764] <type: RIGHT>>
+R5	Dat Arg1:T18 Arg2:T23 <<REDUNDANT!!!SHOULD BE REMOVED>>	03/2019 -> zmniejszenie kołatań serca  <RANK: 3> <info: start[1684, 1773] <type: RIGHT>>
+R6	Dat Arg1:T18 Arg2:T24 <<REDUNDANT!!!REMOVED>>	03/2019 -> HR ok 80/min w spoczynku <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1684, 1801] <type: RIGHT>>
+R7	Dat Arg1:T18 Arg2:T17 << OK >>	03/2019 -> TTE  <RANK: 3> <info: start[1684, 1679] <type: LEFT>>
+R8	Dat Arg1:T18 Arg2:T21 <<REDUNDANT!!!SHOULD BE REMOVED>>	03/2019 -> Propranolo  <RANK: 3> <info: start[1684, 1753] <type: RIGHT>>
+R9	Dat Arg1:T20 Arg2:T23 << OK >>	04/2019 -> zmniejszenie kołatań serca  <RANK: 3> <info: start[1736, 1773] <type: RIGHT>>
+R10	Dat Arg1:T20 Arg2:T24 <<SHOULD NOT BE REMOVED>>	04/2019 -> HR ok 80/min w spoczynku <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1736, 1801] <type: RIGHT>>
+R11	Dat Arg1:T20 Arg2:T17 <<REDUNDANT!!!SHOULD BE REMOVED>>	04/2019 -> TTE  <RANK: 3> <info: start[1736, 1679] <type: LEFT>>
+R12	Dat Arg1:T20 Arg2:T21 << OK >>	04/2019 -> Propranolo  <RANK: 3> <info: start[1736, 1753] <type: RIGHT>>
+
+
+Sentence 23:
+W 03/2019 w Szpitalu WAM wykonano MRI serca- wynik w tutejszej poradni. 
+
+R13	Dat Arg1:T25 Arg2:T26 << OK >>	03/2019 -> MRI serca  <RANK: 3> <info: start[1829, 1861] <type: RIGHT>>
+
+
+Sentence 24:
+W wywiadzie ponadto: nie leczy się z powodu chorób przewlekłych
+
+R14	Neg Arg1:T62 Arg2:T63 << OK >>	nie leczy się z powodu -> chorób przewlekłych  <RANK: 3> <info: start[1921, 1944] <type: RIGHT>>
+
+
+Sentence 25:
+Neguje: krwawienia, czarne stolce, brunatne wymioty, chorobę wrzodową, duszność nocną, obrzęki podudzi, bóle w klatce piersiowej
+
+R15	Neg Arg1:T27 Arg2:T28 << OK >>	Neguje -> krwawienia  <RANK: 3> <info: start[1964, 1972] <type: RIGHT>>
+R16	Neg Arg1:T27 Arg2:T29 << OK >>	Neguje -> czarne stolce  <RANK: 2> <info: start[1964, 1984] <type: RIGHT>>
+R17	Neg Arg1:T27 Arg2:T30 << OK >>	Neguje -> brunatne wymioty  <RANK: 2> <info: start[1964, 1999] <type: RIGHT>>
+R18	Neg Arg1:T27 Arg2:T32 << OK >>	Neguje -> duszność nocną  <RANK: 2> <info: start[1964, 2035] <type: RIGHT>>
+R19	Neg Arg1:T27 Arg2:T33 << OK >>	Neguje -> obrzęki podudzi  <RANK: 2> <info: start[1964, 2051] <type: RIGHT>>
+R20	Neg Arg1:T27 Arg2:T34 << OK >>	Neguje -> bóle w klatce piersiowej  <RANK: 2> <info: start[1964, 2068] <type: RIGHT>>
+R21	Neg Arg1:T27 Arg2:T31 << OK >>	Neguje -> chorobę wrzodową  <RANK: 2> <info: start[1964, 2017] <type: RIGHT>>
+
+
+Sentence 26:
+Przebyte operacje: appendectomia w 13rz
+Palenie tytoniu: neguje
+Inne używki: neguje
+Uczulenia: neguje
+Przebyte choroby zakaźne - WZW (-) , borelioza (-), tbc (-), odra (-), kontakt z odrą (-)
+
+R22	Neg Arg1:T38 Arg2:T41 <<REDUNDANT!!!REMOVED>>	neguje -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2150, 2177] <type: RIGHT>>
+R23	Neg Arg1:T38 Arg2:T43 <<REDUNDANT!!!REMOVED>>	neguje -> WZW <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2150, 2222] <type: RIGHT>>
+R24	Neg Arg1:T38 Arg2:T44 <<REDUNDANT!!!REMOVED>>	neguje -> borelioza <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2150, 2232] <type: RIGHT>>
+R25	Neg Arg1:T38 Arg2:T45 <<REDUNDANT!!!REMOVED>>	neguje -> tbc <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2150, 2247] <type: RIGHT>>
+R26	Neg Arg1:T38 Arg2:T46 <<REDUNDANT!!!REMOVED>>	neguje -> odra <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2150, 2256] <type: RIGHT>>
+R27	Neg Arg1:T38 Arg2:T47 <<REDUNDANT!!!REMOVED>>	neguje -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2150, 2266] <type: RIGHT>>
+R28	Neg Arg1:T38 Arg2:T37 << OK >>	neguje -> Palenie tytoniu  <RANK: 3> <info: start[2150, 2133] <type: LEFT>>
+R29	Neg Arg1:T38 Arg2:T39 <<REDUNDANT!!!REMOVED>>	neguje -> Inne używki <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2150, 2157] <type: RIGHT>>
+R30	Neg Arg1:T38 Arg2:T35 <<REDUNDANT!!!REMOVED>>	neguje -> appendectomia <:REMOVED other second tag between (left):> <RANK: 1> <info: start[2150, 2112] <type: LEFT>>
+R31	Neg Arg1:T40 Arg2:T41 <<REDUNDANT!!!REMOVED>>	neguje -> Uczulenia <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2170, 2177] <type: RIGHT>>
+R32	Neg Arg1:T40 Arg2:T43 <<REDUNDANT!!!REMOVED>>	neguje -> WZW <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2170, 2222] <type: RIGHT>>
+R33	Neg Arg1:T40 Arg2:T44 <<REDUNDANT!!!REMOVED>>	neguje -> borelioza <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2170, 2232] <type: RIGHT>>
+R34	Neg Arg1:T40 Arg2:T45 <<REDUNDANT!!!REMOVED>>	neguje -> tbc <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2170, 2247] <type: RIGHT>>
+R35	Neg Arg1:T40 Arg2:T46 <<REDUNDANT!!!REMOVED>>	neguje -> odra <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2170, 2256] <type: RIGHT>>
+R36	Neg Arg1:T40 Arg2:T47 <<REDUNDANT!!!REMOVED>>	neguje -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2170, 2266] <type: RIGHT>>
+R37	Neg Arg1:T40 Arg2:T37 <<REDUNDANT!!!REMOVED>>	neguje -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2170, 2133] <type: LEFT>>
+R38	Neg Arg1:T40 Arg2:T39 << OK >>	neguje -> Inne używki  <RANK: 3> <info: start[2170, 2157] <type: LEFT>>
+R39	Neg Arg1:T40 Arg2:T35 <<REDUNDANT!!!REMOVED>>	neguje -> appendectomia <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2170, 2112] <type: LEFT>>
+R40	Neg Arg1:T42 Arg2:T41 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[2188, 2177] <type: LEFT>>
+R41	Neg Arg1:T42 Arg2:T43 <<REDUNDANT!!!REMOVED>>	neguje -> WZW <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2188, 2222] <type: RIGHT>>
+R42	Neg Arg1:T42 Arg2:T44 <<REDUNDANT!!!REMOVED>>	neguje -> borelioza <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2188, 2232] <type: RIGHT>>
+R43	Neg Arg1:T42 Arg2:T45 <<REDUNDANT!!!REMOVED>>	neguje -> tbc <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2188, 2247] <type: RIGHT>>
+R44	Neg Arg1:T42 Arg2:T46 <<REDUNDANT!!!REMOVED>>	neguje -> odra <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2188, 2256] <type: RIGHT>>
+R45	Neg Arg1:T42 Arg2:T47 <<REDUNDANT!!!REMOVED>>	neguje -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2188, 2266] <type: RIGHT>>
+R46	Neg Arg1:T42 Arg2:T37 <<REDUNDANT!!!REMOVED>>	neguje -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2188, 2133] <type: LEFT>>
+R47	Neg Arg1:T42 Arg2:T39 <<REDUNDANT!!!REMOVED>>	neguje -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2188, 2157] <type: LEFT>>
+R48	Neg Arg1:T42 Arg2:T35 <<REDUNDANT!!!REMOVED>>	neguje -> appendectomia <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2188, 2112] <type: LEFT>>
+R49	Neg Arg1:T48 Arg2:T41 <<REDUNDANT!!!REMOVED>>	(-) -> Uczulenia <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2226, 2177] <type: LEFT>>
+R50	Neg Arg1:T48 Arg2:T43 << OK >>	(-) -> WZW  <RANK: 3> <info: start[2226, 2222] <type: LEFT>>
+R51	Neg Arg1:T48 Arg2:T44 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2226, 2232] <type: RIGHT>>
+R52	Neg Arg1:T48 Arg2:T45 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2226, 2247] <type: RIGHT>>
+R53	Neg Arg1:T48 Arg2:T46 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2226, 2256] <type: RIGHT>>
+R54	Neg Arg1:T48 Arg2:T47 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2226, 2266] <type: RIGHT>>
+R55	Neg Arg1:T48 Arg2:T37 <<REDUNDANT!!!REMOVED>>	(-) -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2226, 2133] <type: LEFT>>
+R56	Neg Arg1:T48 Arg2:T39 <<REDUNDANT!!!REMOVED>>	(-) -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2226, 2157] <type: LEFT>>
+R57	Neg Arg1:T48 Arg2:T35 <<REDUNDANT!!!REMOVED>>	(-) -> appendectomia <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2226, 2112] <type: LEFT>>
+R58	Neg Arg1:T49 Arg2:T41 <<REDUNDANT!!!REMOVED>>	(-) -> Uczulenia <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2242, 2177] <type: LEFT>>
+R59	Neg Arg1:T49 Arg2:T43 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2242, 2222] <type: LEFT>>
+R60	Neg Arg1:T49 Arg2:T44 << OK >>	(-) -> borelioza  <RANK: 3> <info: start[2242, 2232] <type: LEFT>>
+R61	Neg Arg1:T49 Arg2:T45 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2242, 2247] <type: RIGHT>>
+R62	Neg Arg1:T49 Arg2:T46 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2242, 2256] <type: RIGHT>>
+R63	Neg Arg1:T49 Arg2:T47 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2242, 2266] <type: RIGHT>>
+R64	Neg Arg1:T49 Arg2:T37 <<REDUNDANT!!!REMOVED>>	(-) -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2242, 2133] <type: LEFT>>
+R65	Neg Arg1:T49 Arg2:T39 <<REDUNDANT!!!REMOVED>>	(-) -> Inne używki <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2242, 2157] <type: LEFT>>
+R66	Neg Arg1:T49 Arg2:T35 <<REDUNDANT!!!REMOVED>>	(-) -> appendectomia <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2242, 2112] <type: LEFT>>
+R67	Neg Arg1:T50 Arg2:T41 <<REDUNDANT!!!REMOVED>>	(-) -> Uczulenia <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2251, 2177] <type: LEFT>>
+R68	Neg Arg1:T50 Arg2:T43 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2251, 2222] <type: LEFT>>
+R69	Neg Arg1:T50 Arg2:T44 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2251, 2232] <type: LEFT>>
+R70	Neg Arg1:T50 Arg2:T45 << OK >>	(-) -> tbc  <RANK: 3> <info: start[2251, 2247] <type: LEFT>>
+R71	Neg Arg1:T50 Arg2:T46 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2251, 2256] <type: RIGHT>>
+R72	Neg Arg1:T50 Arg2:T47 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2251, 2266] <type: RIGHT>>
+R73	Neg Arg1:T50 Arg2:T37 <<REDUNDANT!!!REMOVED>>	(-) -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2251, 2133] <type: LEFT>>
+R74	Neg Arg1:T50 Arg2:T39 <<REDUNDANT!!!REMOVED>>	(-) -> Inne używki <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2251, 2157] <type: LEFT>>
+R75	Neg Arg1:T50 Arg2:T35 <<REDUNDANT!!!REMOVED>>	(-) -> appendectomia <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2251, 2112] <type: LEFT>>
+R76	Neg Arg1:T51 Arg2:T41 <<REDUNDANT!!!REMOVED>>	(-) -> Uczulenia <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2261, 2177] <type: LEFT>>
+R77	Neg Arg1:T51 Arg2:T43 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2261, 2222] <type: LEFT>>
+R78	Neg Arg1:T51 Arg2:T44 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2261, 2232] <type: LEFT>>
+R79	Neg Arg1:T51 Arg2:T45 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2261, 2247] <type: LEFT>>
+R80	Neg Arg1:T51 Arg2:T46 << OK >>	(-) -> odra  <RANK: 3> <info: start[2261, 2256] <type: LEFT>>
+R81	Neg Arg1:T51 Arg2:T47 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2261, 2266] <type: RIGHT>>
+R82	Neg Arg1:T51 Arg2:T37 <<REDUNDANT!!!REMOVED>>	(-) -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2261, 2133] <type: LEFT>>
+R83	Neg Arg1:T51 Arg2:T39 <<REDUNDANT!!!REMOVED>>	(-) -> Inne używki <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2261, 2157] <type: LEFT>>
+R84	Neg Arg1:T51 Arg2:T35 <<REDUNDANT!!!REMOVED>>	(-) -> appendectomia <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2261, 2112] <type: LEFT>>
+R85	Neg Arg1:T52 Arg2:T41 <<REDUNDANT!!!REMOVED>>	(-) -> Uczulenia <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2281, 2177] <type: LEFT>>
+R86	Neg Arg1:T52 Arg2:T43 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2281, 2222] <type: LEFT>>
+R87	Neg Arg1:T52 Arg2:T44 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2281, 2232] <type: LEFT>>
+R88	Neg Arg1:T52 Arg2:T45 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2281, 2247] <type: LEFT>>
+R89	Neg Arg1:T52 Arg2:T46 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2281, 2256] <type: LEFT>>
+R90	Neg Arg1:T52 Arg2:T47 << OK >>	(-) -> kontakt z odrą  <RANK: 3> <info: start[2281, 2266] <type: LEFT>>
+R91	Neg Arg1:T52 Arg2:T37 <<REDUNDANT!!!REMOVED>>	(-) -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2281, 2133] <type: LEFT>>
+R92	Neg Arg1:T52 Arg2:T39 <<REDUNDANT!!!REMOVED>>	(-) -> Inne używki <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2281, 2157] <type: LEFT>>
+R93	Neg Arg1:T52 Arg2:T35 <<REDUNDANT!!!REMOVED>>	(-) -> appendectomia <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2281, 2112] <type: LEFT>>
+R94	Dat Arg1:T36 Arg2:T41 <<REDUNDANT!!!REMOVED>>	w 13rz -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2126, 2177] <type: RIGHT>>
+R95	Dat Arg1:T36 Arg2:T43 <<REDUNDANT!!!REMOVED>>	w 13rz -> WZW <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2126, 2222] <type: RIGHT>>
+R96	Dat Arg1:T36 Arg2:T44 <<REDUNDANT!!!REMOVED>>	w 13rz -> borelioza <:REMOVED many second tags on the right:> <RANK: 0> <info: start[2126, 2232] <type: RIGHT>>
+R97	Dat Arg1:T36 Arg2:T45 <<REDUNDANT!!!REMOVED>>	w 13rz -> tbc <:REMOVED many second tags on the right:> <RANK: 0> <info: start[2126, 2247] <type: RIGHT>>
+R98	Dat Arg1:T36 Arg2:T46 <<REDUNDANT!!!REMOVED>>	w 13rz -> odra <:REMOVED many second tags on the right:> <RANK: 0> <info: start[2126, 2256] <type: RIGHT>>
+R99	Dat Arg1:T36 Arg2:T47 <<REDUNDANT!!!REMOVED>>	w 13rz -> kontakt z odrą <:REMOVED many second tags on the right:> <RANK: 0> <info: start[2126, 2266] <type: RIGHT>>
+R100	Dat Arg1:T36 Arg2:T37 <<REDUNDANT!!!REMOVED>>	w 13rz -> Palenie tytoniu <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2126, 2133] <type: RIGHT>>
+R101	Dat Arg1:T36 Arg2:T39 <<REDUNDANT!!!REMOVED>>	w 13rz -> Inne używki <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2126, 2157] <type: RIGHT>>
+R102	Dat Arg1:T36 Arg2:T35 << OK >>	w 13rz -> appendectomia  <RANK: 3> <info: start[2126, 2112] <type: LEFT>>
+
+
+Sentence 27:
+Stan społeczny: warunki mieszkaniowe dobre
+
+
+
+Sentence 28:
+Leki: przyjęte rano w domu
+
+
+
+Sentence 29:
+Leki: Propranolol 10 mg 1-0-1
+tabletki antykoncepcyjne
+
+
+
+R103	Drg Arg1:T54 Arg2:T55 << OK >>	Propranolol -> 10 mg 1-0-1  <RANK: 3> <info: start[2361, 2373] <type: RIGHT>>
+R104	Drg Arg1:T56 Arg2:T55 <<REDUNDANT!!!REMOVED>>	tabletki antykoncepcyjne -> 10 mg 1-0-1 <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 1> <info: start[2385, 2373] <type: LEFT>>
+
+
+Sentence 30:
+Planowany czas hospitalizacji: 4-5 dni.
+
+
+
+Sentence 31:
+Planowane badania: badania laboratoryjne, ECHO, EKG metodą Holtera, ABPM, próba wysiłkowa.
+
+
+
+Sentence 32:
+------------------------------------------------
+
+
+
+Sentence 33:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 34:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.13[10^3/ul]
+    
+
+
+Sentence 35:
+RBC Krwinki czerwone:4.67[10^6/ul]
+    
+
+
+Sentence 36:
+HGB Hemoglobina:13.8[g/dl]
+    
+
+
+Sentence 37:
+HCT Hematokryt:39.6[%]
+    
+
+
+Sentence 38:
+MCV wskaźnik czerwonokrw:84.8[fl]
+    
+
+
+Sentence 39:
+MCH wskaźnik czerwonokrw:29.6[pg]
+    
+
+
+Sentence 40:
+MCHC wskaźnik czerwonokr:34.8[g/dl]
+    
+
+
+Sentence 41:
+PLT z morfologii:225[10^3/ul]
+    
+
+
+Sentence 42:
+RDW-SD:37.6[fl]
+    
+
+
+Sentence 43:
+RDW-CV:12.4[%]
+    PDW:12.9[fl]
+    
+
+
+Sentence 44:
+MPV:10.8[fl]
+    
+
+
+Sentence 45:
+P-LCR:32.0[%]
+    
+
+
+Sentence 46:
+PCT (hematokryt płytkowy:0.24[%]
+    
+
+
+Sentence 47:
+NEUTR# wartość bezwzględ:1.59[10^3/ul]
+    
+
+
+Sentence 48:
+NEUTR%:31.0[%]
+    
+
+
+Sentence 49:
+LYMH# wartość bezwzględn:2.67[10^3/ul]
+    
+
+
+Sentence 50:
+LYMPH%:52.0[%]
+    
+
+
+Sentence 51:
+MONO# wartość bezwzględn:0.68[10^3/ul]
+    
+
+
+Sentence 52:
+MONO%:13.3[%]
+    
+
+
+Sentence 53:
+EO# wartość bezwzględna:0.15[10^3/ul]
+    
+
+
+Sentence 54:
+EO%:2.9[%]
+    
+
+
+Sentence 55:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    
+
+
+Sentence 56:
+BASO%:0.8[%]
+    
+
+
+Sentence 57:
+NRBC %:0.0[%]
+    
+
+
+Sentence 58:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 59:
+D-dimer - test ilościowy: D-dimer - test ilościowy:470[ng/ml]
+
+
+
+Sentence 60:
+TSH: TSH:0.98[uIU/ml]
+
+
+
+Sentence 61:
+FT3: FT3:3.22[pg/ml]
+
+
+
+Sentence 62:
+FT4: FT4:1.51[ng/dl]
+
+
+
+Sentence 63:
+Troponina T
+    Troponina T:
+    3.00[pg/ml]
+
+
+
+Sentence 64:
+ALAT: ALAT:19[U/L]
+ASPAT: ASPAT:23[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.76[mg/dl]
+
+
+
+Sentence 65:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 66:
+Potas (K): Potas:4.4[mmol/L]
+
+
+
+Sentence 67:
+Kreatynina + GFR
+    
+
+
+Sentence 68:
+Kreatynina w surowicy:0.64[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 69:
+MDRD ze stan:113.1[ml/min/1,73 m^2]
+
+
+
+Sentence 70:
+Magnez: Magnez:0.82[mmol/L]
+
+
+
+Sentence 71:
+Mocznik: Mocznik:24[mg/dl]
+
+
+
+Sentence 72:
+Kwas moczowy: Kwas moczowy:5.0[mg/dl]
+
+
+
+Sentence 73:
+Lipidogram
+    
+
+
+Sentence 74:
+Cholesterol całkowity:177[mg/dl]
+    
+
+
+Sentence 75:
+Cholesterol HDL:37[mg/dl]
+    
+
+
+Sentence 76:
+Cholestrol LDL:96[mg/dl]
+    
+
+
+Sentence 77:
+Triglicerydy:187[mg/dl]
+    
+
+
+Sentence 78:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:85[mg/dl]
+
+
+
+Sentence 79:
+------------------------------------------------
+
+
+
+Sentence 80:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 81:
+R00.2
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 82:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 83:
+C55
+
+
+
+Sentence 84:
+I81
+L43
+O61
+M87
+G49
+N45
+L69
+O55
+I17
+M45
+O35
+M37
+I19
+N13
+88.721
+O69
+
+
+
+Sentence 85:
+------------------------------------------------
+
+

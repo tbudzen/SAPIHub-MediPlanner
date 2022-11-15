@@ -1,0 +1,36 @@
+T1	Drug 340 348	Metocard
+T2	Treatment 460 492	Systematyczne przyjmowanie leków
+T3	Drug 494 502	Metocard
+T4	Drug_dose 503 518	50mg 1xdziennie
+R1	Drg Arg1:T3 Arg2:T4	
+T5	Treatment 522 583	Systematyczna opieka  w Poradni Kardiologicznej dla Dorosłych
+T6	Treatment 589 608	Opieka ortopedyczna
+T8	Treatment 628 713	nie ma kardiologicznych przeciwwskazań do zabiegu operacyjnego w znieczuleniu ogólnym
+T7	Condition 955 970	zespołu Marfana
+N1	Reference T7 ICD10:Q87.4	Zespół Marfana
+T9	Condition 975 1000	Poszerzenie opuszki aorty
+N2	Reference T9 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T10	Condition 1006 1050	Prolaps przedniego płatka zastawki mitralnej
+N3	Reference T10 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T11	Condition 1057 1081	łagodną niedomykalnością
+N4	Reference T11 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T12	Condition 1086 1135	Umiarkowane niedomykalności zastawek trójdzielnej
+N5	Reference T12 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T13	Condition 1138 1145	płucnej
+N6	Reference T13 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T14	Condition 1149 1177	Deformacja klatki piersiowej
+N7	Reference T14 ICD10:M95.4	Nabyte zniekształcenia klatki piersiowej i żeber
+T15	Condition 1207 1227	Choroba Scheuermanna
+N8	Reference T15 ICD10:M42.0	Młodzieńcza osteochondroza kręgosłupa
+A1	Source T7 Declared
+T16	Condition 1412 1422	z. Marfana
+A2	Source T16 Declared
+N9	Reference T16 ICD10:Q87.4	Zespół Marfana
+T17	Treatment 1429 1448	pod opieka genetyka
+T18	Treatment 1451 1459	ortopedy
+T19	Drug 1481 1489	Metocard
+T20	Condition 1491 1508	wywiad alergiczny
+N10	Reference T20 ICD10:T78.4	Alergia, nieokreślona
+T21	Negation 1509 1515	ujemny
+R2	Neg Arg1:T21 Arg2:T20	
+T22	Treatment 1178 1201	po leczeniu operacyjnym

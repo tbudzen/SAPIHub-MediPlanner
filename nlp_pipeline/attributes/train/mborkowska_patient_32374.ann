@@ -1,0 +1,145 @@
+T1	Drug 3028 3034	Asamax
+T2	Drug_dose 3035 3056	500 mg 2xdz po 2 tabl
+T3	Drug 2996 3001	Nedal
+T4	Drug_dose 3002 3026	5 mg 1xdz 1/2 tabl. rano
+R1	Drg Arg1:T3 Arg2:T4	
+R2	Drg Arg1:T1 Arg2:T2	
+T5	Behaviour 2909 2935	warunki mieszkaniowe dobre
+T6	Condition 2812 2815	WZW
+N1	Reference T6 ICD10:b18	
+T7	Condition 2822 2831	borelioza
+N2	Reference T7 ICD10:A69.2	Choroba z Lyme
+T8	Condition 2839 2842	tbc
+N3	Reference T8 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T9	Condition 2848 2852	odra
+N4	Reference T9 ICD10:B05	Odra
+T10	Treatment 2858 2877	szczepienie na odrę
+A1	Source T10 Declared
+N5	Reference T10 ICD10:B05	Odra
+T11	Negation 2853 2857	(-),
+T12	Negation 2843 2847	(-),
+T13	Negation 2834 2835	-
+T14	Negation 2816 2819	(-)
+R3	Neg Arg1:T14 Arg2:T6	
+R4	Neg Arg1:T13 Arg2:T7	
+R5	Neg Arg1:T12 Arg2:T8	
+R6	Neg Arg1:T11 Arg2:T9	
+T15	Drug 2761 2783	być może na salicylany
+A2	Source T15 Declared
+N6	Reference T15 ICD10:Y45.1	Salicylany
+T16	Condition 2750 2759	Uczulenia
+T17	Behaviour 2732 2743	Inne używki
+T18	Negation 2745 2748	nie
+R7	Neg Arg1:T18 Arg2:T17	
+T19	Behaviour 2695 2710	Palenie tytoniu
+N8	Reference T19 ICD10:T65.2	Tytoń i nikotyna
+T20	Negation 2712 2720	nie pali
+T21	Date 2724 2731	10.2018
+R8	Neg Arg1:T20 Arg2:T19	
+R9	Dat Arg1:T21 Arg2:T19	
+T22	Treatment 2660 2676	cholecystektomii
+T23	Date 2678 2692	ok. 6 lat temu
+R10	Dat Arg1:T23 Arg2:T22	
+T24	Negation 2535 2541	Neguje
+T25	Symptom 2543 2555	zasłabnięcia
+N9	Reference T25 ICD10:R55	Omdlenie i zapaść
+T26	Symptom 2557 2565	omdlenia
+N10	Reference T26 ICD10:R55	Omdlenie i zapaść
+T27	Symptom 2568 2581	czarne stolce
+N11	Reference T27 ICD10:K92.1	Stolce smołowate
+T28	Symptom 2583 2599	brunatne wymioty
+N12	Reference T28 ICD10:K92.0	Wymioty krwawe
+T29	Condition 2601 2603	DM
+N13	Reference T29 ICD10:E13	Inne określone postacie cukrzycy
+T30	Condition 2605 2615	udar mózgu
+N14	Reference T30 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T31	Condition 2617 2628	zawał serca
+N15	Reference T31 ICD10:I25.2	Przebyty zawał serca
+R11	Neg Arg1:T24 Arg2:T25	
+R12	Neg Arg1:T24 Arg2:T26	
+R13	Neg Arg1:T24 Arg2:T27	
+R14	Neg Arg1:T24 Arg2:T28	
+R15	Neg Arg1:T24 Arg2:T29	
+R16	Neg Arg1:T24 Arg2:T30	
+R17	Neg Arg1:T24 Arg2:T31	
+T32	Date 2416 2423	12.2018
+T33	Negation 2424 2439	nie leczyła się
+T34	Condition 2443 2445	HA
+N16	Reference T34 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+R18	Neg Arg1:T33 Arg2:T34	
+R19	Dat Arg1:T32 Arg2:T34	
+T35	Date 2449 2459	15.10.2018
+T36	Date 2465 2475	20.01.2019
+T37	Symptom 2486 2515	krwotoku z nosa przebiegające
+R20	Dat Arg1:T36 Arg2:T37	
+R21	Dat Arg1:T35 Arg2:T37	
+T38	Condition 2128 2167	wrzodziejącym zapaleniem jelita grubego
+N17	Reference T38 ICD10:K51	Wrzodziejące zapalenie jelita grubego
+T39	Condition 2169 2214	przewlekłym zapaleniem błony śluzowej żołądka
+N18	Reference T39 ICD10:K29.0	Ostre krwotoczne zapalenie żołądka
+T40	Symptom 2315 2330	kołatania serca
+N19	Reference T40 ICD10:R00.2	Kołatanie serca
+T41	Symptom 2332 2342	osłabienia
+N20	Reference T41 ICD10:R53	Złe samopoczucie i zmęczenie
+T42	Symptom 2344 2385	pogroszenia tolerancji wysiłku fizycznego
+T43	Symptom 2391 2411	nasilonego niepokoju
+T44	Symptom 1967 1983	Kołatania serca.
+N21	Reference T44 ICD10:R00.2	Kołatanie serca
+T45	Condition 1944 1965	Nadciśnienie tętnicze
+N22	Reference T45 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T46	Treatment 1912 1942	eradykacji Helicobacter pylori
+T47	Treatment 2219 2249	eradykacji Helicobacter pylori
+T48	Condition 1859 1902	Przewlekłe zapalenie błony śluzowej żołądka
+N23	Reference T48 ICD10:K29.0	Ostre krwotoczne zapalenie żołądka
+T49	Condition 1820 1857	Wrzodziejące zapalenie jelita grubego
+N24	Reference T49 ICD10:K51	Wrzodziejące zapalenie jelita grubego
+T50	Behaviour 1570 1580	Nikotynizm
+T51	Condition 1545 1554	uczulenie
+T52	Drug 1558 1568	salicylany
+R22	Alg Arg1:T51 Arg2:T52	
+T53	Treatment 1495 1525	eradykacji Helicobacter pylori
+T54	Condition 1442 1485	Przewlekłe zapalenie błony śluzowej żołądka
+N27	Reference T54 ICD10:K29.0	Ostre krwotoczne zapalenie żołądka
+T55	Condition 1403 1440	Wrzodziejące zapalenie jelita grubego
+N28	Reference T55 ICD10:K51	Wrzodziejące zapalenie jelita grubego
+T56	Condition 1369 1402	Nieprawidłowa tolerancja glukozy.
+T57	Condition 1355 1367	Dyslipidemia
+N29	Reference T57 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T58	Condition 1309 1353	Łagodna niedomykalność zastawki trójdzielnej
+N30	Reference T58 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T59	Condition 1265 1307	Nadciśnienie tętnicze I stopnia wg ESH/ESC
+N31	Reference T59 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T60	Drug 963 969	Asamax
+T61	Drug_dose 970 1037	500mg 2 tabletki rano i wieczorem - kontynuacja zaleceń specjalisty
+T62	Drug 928 935	Roswera
+T63	Drug_dose 936 961	10mg 1 tabletka wieczorem
+T64	Drug 898 906	Prenessa
+T65	Drug_dose 907 927	4 mg 1 tabletka rano
+T66	Drug 869 874	Nedal
+T67	Drug_dose 875 896	5mg 1/2 tabletki rano
+R23	Drg Arg1:T66 Arg2:T67	
+R24	Drg Arg1:T64 Arg2:T65	
+R25	Drg Arg1:T62 Arg2:T63	
+R26	Drg Arg1:T60 Arg2:T61	
+T68	Behaviour 809 830	Zakaz palenia tytoniu
+T69	Investigation 726 749	angio-CT tt. wieńcowych
+T70	Investigation 656 702	samokontrola ciśnienia tętniczego krwi i tętna
+T71	Behaviour 527 641	Dieta cukrzycowa, lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T72	Investigation 426 522	kontrola morfologii, lipidogramu, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T73	Investigation 3143 3147	ECHO
+T74	Investigation 3149 3153	ABPM
+T75	Investigation 3155 3165	Holter EKG
+T76	Investigation 3167 3176	próba wys
+N32	Reference T56 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+N26	Reference T51 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+N7	Reference T16 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R27	Alg Arg1:T16 Arg2:T15	
+N25	Reference T50 ICD10:Z72.0	Problemy związane ze stylem życia
+N33	Reference T42 ICD10:R53	Złe samopoczucie i zmęczenie
+N34	Reference T37 ICD10:R04.0	Epistaxis
+T77	Investigation_result 2518 2533	podwyższonym HA
+R28	Dat Arg1:T36 Arg2:T77	
+R29	Dat Arg1:T35 Arg2:T77	
+A3	Status T22 Historical_Insignificant
+T78	Negation 2879 2890	nie pamięta
+R30	Neg Arg1:T78 Arg2:T10	

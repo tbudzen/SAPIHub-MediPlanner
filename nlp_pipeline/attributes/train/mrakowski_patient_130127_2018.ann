@@ -1,0 +1,57 @@
+T1	Treatment 329 356	dalsza opieka w poradni POZ
+T2	Treatment 358 390	okresowa kontrola kardiologiczna
+T3	Behaviour 391 412	zakaz palenia tytoniu
+T4	Behaviour 413 463	prawidłowe żywienie i regularna aktywność fizyczna
+T5	Drug 470 480	Concor COR
+T6	Drug_dose 481 501	1,25 mg 1 tabl. rano
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Condition 728 789	Wada nabyta serca - łagodna niedomykalność zastawki aortalnej
+N1	Reference T7 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T8	Treatment 799 822	komisurotomii aortalnej
+T9	Condition 832 862	stenozy zastawki trójpłatkowej
+T10	Date 864 869	1991r
+R2	Dat Arg1:T10 Arg2:T9	
+R3	Dat Arg1:T10 Arg2:T8	
+T11	Behaviour 872 882	Nikotynizm
+T12	Treatment 1048 1069	oceny kardiologicznej
+T13	Treatment 1080 1103	komisurotomii aortalnej
+T14	Date 1106 1110	1991
+R4	Dat Arg1:T14 Arg2:T13	
+T15	Condition 1117 1128	wrodzona SA
+N4	Reference T15 ICD10:Q22.4	Wrodzone zwężenie zastawki trójdzielnej
+N2	Reference T9 ICD10:Q22.4	Wrodzone zwężenie zastawki trójdzielnej
+T16	Investigation 1141 1157	echokardiogramie
+T17	Investigation_result 1158 1188	łagodna, złożona wada aortalna
+N5	Reference T17 ICD10:I35.9	Zaburzenia funkcji zastawki aortalnej, nieokreślone
+R5	Inv Arg1:T16 Arg2:T17	
+T18	Negation 1190 1196	Neguje
+T19	Symptom 1197 1222	jakiekolwiek dolegliwości
+R6	Neg Arg1:T18 Arg2:T19	
+T20	Negation 1246 1252	neguje
+T21	Condition 1253 1271	przewlekłe choroby
+R7	Neg Arg1:T20 Arg2:T21	
+T22	Treatment 1274 1291	Przebyte operacje
+T23	Condition 1300 1315	Wywiad rodzinny
+A1	Status T23 Family
+T24	Negation 1317 1330	bez znaczenia
+R8	Neg Arg1:T24 Arg2:T23	
+T25	Condition 1332 1339	Alergie
+N6	Reference T25 ICD10:T78.4	Alergia, nieokreślona
+T28	Behaviour 1418 1435	Uzależnienie inne
+T29	Negation 1437 1443	neguje
+R9	Neg Arg1:T29 Arg2:T28	
+T30	Behaviour 1461 1468	tapicer
+T31	Investigation 1511 1521	echo serca
+T32	Investigation 1523 1526	TET
+T33	Investigation 1528 1532	ABPM
+T34	Investigation 1534 1544	Holter ekg
+T35	Investigation 1546 1564	rtg kl. piersiowej
+N3	Reference T11 ICD10:Z72.0	Używanie tytoniu
+T36	Behaviour 1349 1378	Nikotynizm: tak, 11 paczkolat
+N9	Reference T36 ICD10:Z72.0	Używanie tytoniu
+T37	Behaviour 1380 1417	Alkohol: sporadycznie, weekendy 5 piw
+N10	Reference T37 ICD10:Z72.1	Używanie alkoholu
+N11	Reference T28 ICD10:Z72	Problemy związane ze stylem życia
+T26	Negation 1475 1482	żadnych
+T27	Drug 1469 1473	Leki
+R10	Neg Arg1:T26 Arg2:T27	

@@ -1,0 +1,247 @@
+T1	Condition 447 476	Hipercholesterolemia rodzinna
+N1	Reference T1 ICD10:E78.0	Czysta hipercholesterolemia
+T2	Condition 704 733	Hipercholesterolemia rodzinna
+N2	Reference T2 ICD10:E78.0	Czysta hipercholesterolemia
+T3	Investigation_result 736 746	12 punktów
+T4	Investigation 749 781	skalu Dutch Lipid Clinic Network
+R1	Inv Arg1:T4 Arg2:T3	
+T5	Condition 810 842	mutacja w genie LDLR - 8 punktów
+T6	Investigation_result 864 894	stężeniem LDL-C pow. 190 mg/dl
+A1	Status T6 Family
+N3	Reference T6 ICD10:E78.0	Czysta hipercholesterolemia
+T7	Investigation_result 914 950	LDL cholesterol 245 mg/dl - 3 punkty
+N4	Reference T7 ICD10:E78.0	Czysta hipercholesterolemia
+T8	Condition 1170 1199	Hipercholesterolemia rodzinna
+N5	Reference T8 ICD10:E78.0	Czysta hipercholesterolemia
+T9	Condition 1344 1373	hipercholesterolemią rodzinną
+N6	Reference T9 ICD10:E78.0	Czysta hipercholesterolemia
+T10	Condition 1402 1434	mutacja w genie LDLR - 8 punktów
+T11	Investigation_result 1456 1504	stężeniem LDL-C pow. 190 mg/dl - matka - 1 punkt
+A2	Status T11 Family
+N7	Reference T11 ICD10:E78.0	Czysta hipercholesterolemia
+A3	Status T7 Family
+T12	Investigation_result 1506 1542	LDL cholesterol 245 mg/dl - 3 punkty
+A4	Status T12 Family
+N8	Reference T12 ICD10:E78.0	Czysta hipercholesterolemia
+T13	Investigation_result 1544 1554	12 punktów
+T14	Investigation 1557 1589	skalu Dutch Lipid Clinic Network
+R2	Inv Arg1:T14 Arg2:T13	
+T15	Treatment 1604 1630	programu lekowego leczenia
+T16	Condition 1631 1661	hipercholesterolemii rodzinnej
+N9	Reference T16 ICD10:E78.0	Czysta hipercholesterolemia
+T17	Investigation 1753 1770	ocena lipidogramu
+T18	Behaviour 1830 1845	Palenie tytoniu
+N10	Reference T18 ICD10:T65.2	Tytoń i nikotyna
+T19	Negation 1847 1850	nie
+R3	Neg Arg1:T19 Arg2:T18	
+T20	Behaviour 1851 1862	Inne używki
+T21	Negation 1864 1867	nie
+R4	Neg Arg1:T21 Arg2:T20	
+T22	Condition 1868 1877	Uczulenia
+T23	Negation 1879 1882	nie
+R5	Neg Arg1:T23 Arg2:T22	
+T24	Condition 1910 1913	WZW
+N11	Reference T24 ICD10:B19	
+T25	Condition 1920 1929	borelioza
+N12	Reference T25 ICD10:A69.2	Choroba z Lyme
+T26	Condition 1937 1940	tbc
+N13	Reference T26 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T27	Condition 1946 1950	odra
+N14	Reference T27 ICD10:B05	Odra
+T28	Negation 1952 1953	-
+R6	Neg Arg1:T28 Arg2:T27	
+T29	Negation 1942 1943	-
+R7	Neg Arg1:T29 Arg2:T26	
+T30	Negation 1932 1933	-
+R8	Neg Arg1:T30 Arg2:T25	
+T31	Negation 1915 1916	-
+R9	Neg Arg1:T31 Arg2:T24	
+T32	Treatment 1956 1975	szczepienie na odrę
+A5	Source T32 Declared
+T33	Behaviour 2006 2032	warunki mieszkaniowe dobre
+T34	Drug 2067 2075	Praluent
+T35	Drug_dose 2076 2101	150 mg s.c. co 2 tygodnie
+R10	Drg Arg1:T34 Arg2:T35	
+T36	Drug 2102 2108	Atoris
+T37	Drug_dose 2109 2129	20 mg 1xdz wieczorem
+R11	Drg Arg1:T36 Arg2:T37	
+T38	Drug 2210 2217	Ezetrol
+T39	Drug_dose 2218 2238	10 mg 1xdz wieczorem
+R12	Drg Arg1:T38 Arg2:T39	
+T40	Behaviour 2255 2290	Pacjent potwierdza stosowanie diety
+T41	Date 2131 2152	od co najmniej 1 roku
+R13	Dat Arg1:T41 Arg2:T36	
+T42	Drug_dose 2155 2208	obecnie co 2-gi dzień z uwagi na silne bóle mięśniowe
+R14	Drg Arg1:T36 Arg2:T42	
+T43	Date 2240 2253	od 27.02.2019
+R15	Dat Arg1:T43 Arg2:T38	
+T44	Condition 2321 2343	hiperlipidemii wtórnej
+A6	Source T44 Declared
+N15	Reference T44 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T45	Condition 2346 2400	homozygotycznej postaci hipercholesterolemii rodzinnej
+A7	Source T45 Declared
+N16	Reference T45 ICD10:E78.0	Czysta hipercholesterolemia
+T46	Condition 2403 2431	ciężkiej niewydolności nerek
+A8	Source T46 Declared
+N17	Reference T46 ICD10:N18.9	Przewlekła niewydolność nerek, nieokreślona
+T47	Condition 2434 2464	ciężkiej niewydolności wątroby
+A9	Source T47 Declared
+N18	Reference T47 ICD10:K72.0	Ostra i podostra niewydolność wątroby
+T48	Condition 2467 2538	nadwrażliwości na alirokumab lub którąkolwiek z substancji pomocniczych
+A10	Source T48 Declared
+N19	Reference T48 ICD10:Z88.8	Uczulenie na inne leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T49	Investigation 2600 2621	badania laboratoryjne
+T50	Condition 2766 2795	hipercholesterolemią rodzinną
+N20	Reference T50 ICD10:E78.0	Czysta hipercholesterolemia
+T51	Condition 2824 2856	mutacja w genie LDLR - 8 punktów
+N21	Reference T51 ICD10:E78.0	Czysta hipercholesterolemia
+N22	Reference T5 ICD10:E78.0	Czysta hipercholesterolemia
+N23	Reference T10 ICD10:E78.0	Czysta hipercholesterolemia
+T52	Investigation_result 2878 2926	stężeniem LDL-C pow. 190 mg/dl - matka - 1 punkt
+N24	Reference T52 ICD10:E78.0	Czysta hipercholesterolemia
+A11	Status T52 Family
+T53	Investigation_result 2928 2964	LDL cholesterol 245 mg/dl - 3 punkty
+A12	Status T53 Family
+N25	Reference T53 ICD10:E78.0	Czysta hipercholesterolemia
+T54	Investigation_result 2966 2976	12 punktów
+T55	Investigation 2979 3011	skalu Dutch Lipid Clinic Network
+R16	Inv Arg1:T55 Arg2:T54	
+T56	Treatment 3026 3052	programu lekowego leczenia
+T57	Condition 3053 3083	hipercholesterolemii rodzinnej
+N26	Reference T57 ICD10:E78.0	Czysta hipercholesterolemia
+T58	Investigation 3175 3192	ocena lipidogramu
+T59	Behaviour 3252 3267	Palenie tytoniu
+N27	Reference T59 ICD10:T65.2	Tytoń i nikotyna
+T60	Negation 3269 3272	nie
+R17	Neg Arg1:T60 Arg2:T59	
+T61	Behaviour 3273 3284	Inne używki
+T62	Negation 3286 3289	nie
+R18	Neg Arg1:T62 Arg2:T61	
+T63	Condition 3290 3299	Uczulenia
+T64	Negation 3301 3304	nie
+R19	Neg Arg1:T64 Arg2:T63	
+T65	Condition 3332 3335	WZW
+N28	Reference T65 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T66	Condition 3342 3351	borelioza
+N29	Reference T66 ICD10:A69.2	Choroba z Lyme
+T67	Condition 3359 3362	tbc
+N30	Reference T67 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T68	Condition 3368 3372	odra
+N31	Reference T68 ICD10:B05	Odra
+T69	Treatment 3378 3397	szczepienie na odrę
+A13	Source T69 Declared
+T70	Negation 3374 3375	-
+R20	Neg Arg1:T70 Arg2:T68	
+T71	Negation 3364 3365	-
+R21	Neg Arg1:T71 Arg2:T67	
+T72	Negation 3354 3355	-
+R22	Neg Arg1:T72 Arg2:T66	
+T73	Negation 3337 3338	-
+R23	Neg Arg1:T73 Arg2:T65	
+T74	Behaviour 3428 3454	warunki mieszkaniowe dobre
+T75	Drug 3489 3497	Praluent
+T76	Drug_dose 3498 3523	150 mg s.c. co 2 tygodnie
+R24	Drg Arg1:T75 Arg2:T76	
+T77	Drug 3524 3530	Atoris
+T78	Drug_dose 3531 3551	20 mg 1xdz wieczorem
+T79	Drug_dose 3577 3630	obecnie co 2-gi dzień z uwagi na silne bóle mięśniowe
+T80	Date 3553 3574	od co najmniej 1 roku
+R25	Dat Arg1:T80 Arg2:T77	
+R26	Drg Arg1:T77 Arg2:T78	
+R27	Drg Arg1:T77 Arg2:T79	
+T81	Drug 3632 3639	Ezetrol
+T82	Drug_dose 3640 3660	10 mg 1xdz wieczorem
+T83	Date 3662 3675	od 27.02.2019
+R28	Drg Arg1:T81 Arg2:T82	
+R29	Dat Arg1:T83 Arg2:T81	
+T84	Behaviour 3677 3712	Pacjent potwierdza stosowanie diety
+T85	Condition 3743 3765	hiperlipidemii wtórnej
+N32	Reference T85 ICD10:E78.5	Hiperlipidemia, nieokreślona
+A14	Source T85 Declared
+T86	Condition 3768 3822	homozygotycznej postaci hipercholesterolemii rodzinnej
+A15	Source T86 Declared
+N33	Reference T86 ICD10:E78.0	Czysta hipercholesterolemia
+T87	Condition 3825 3853	ciężkiej niewydolności nerek
+A16	Source T87 Declared
+N34	Reference T87 ICD10:N18.9	Przewlekła niewydolność nerek, nieokreślona
+T88	Condition 3856 3886	ciężkiej niewydolności wątroby
+A17	Source T88 Declared
+N35	Reference T88 ICD10:K72.0	Ostra i podostra niewydolność wątroby
+T89	Condition 3889 3960	nadwrażliwości na alirokumab lub którąkolwiek z substancji pomocniczych
+A18	Source T89 Declared
+N36	Reference T89 ICD10:Z88.8	Uczulenie na inne leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T90	Investigation 4022 4043	badania laboratoryjne
+T91	Condition 4188 4217	hipercholesterolemią rodzinną
+N37	Reference T91 ICD10:E78.0	Czysta hipercholesterolemia
+T92	Condition 4246 4278	mutacja w genie LDLR - 8 punktów
+N38	Reference T92 ICD10:E78.0	Czysta hipercholesterolemia
+T93	Investigation_result 4300 4348	stężeniem LDL-C pow. 190 mg/dl - matka - 1 punkt
+A19	Status T93 Family
+N39	Reference T93 ICD10:E78.0	Czysta hipercholesterolemia
+T94	Investigation_result 4350 4386	LDL cholesterol 245 mg/dl - 3 punkty
+A20	Status T94 Family
+N40	Reference T94 ICD10:E78.0	Czysta hipercholesterolemia
+T95	Investigation_result 4388 4398	12 punktów
+T96	Investigation 4401 4433	skalu Dutch Lipid Clinic Network
+R30	Inv Arg1:T96 Arg2:T95	
+T97	Condition 4507 4537	podwyższonego LDL cholesterolu
+N41	Reference T97 ICD10:E78.0	Czysta hipercholesterolemia
+T98	Treatment 4562 4579	programu lekowego
+T99	Condition 4580 4610	hipercholesterolemii rodzinnej
+N42	Reference T99 ICD10:E78.0	Czysta hipercholesterolemia
+T100	Behaviour 4659 4674	Palenie tytoniu
+N43	Reference T100 ICD10:T65.2	Tytoń i nikotyna
+T101	Negation 4676 4679	nie
+R31	Neg Arg1:T101 Arg2:T100	
+T102	Behaviour 4681 4692	Inne używki
+T103	Negation 4694 4697	nie
+R32	Neg Arg1:T103 Arg2:T102	
+T104	Condition 4699 4708	Uczulenia
+T105	Negation 4710 4713	nie
+R33	Neg Arg1:T105 Arg2:T104	
+T106	Condition 4742 4745	WZW
+N44	Reference T106 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T107	Condition 4752 4761	borelioza
+N45	Reference T107 ICD10:A69.2	Choroba z Lyme
+T108	Condition 4769 4772	tbc
+N46	Reference T108 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T109	Condition 4778 4782	odra
+N47	Reference T109 ICD10:B05	Odra
+T110	Treatment 4788 4807	szczepienie na odrę
+A21	Source T110 Declared
+T111	Negation 4784 4785	-
+R34	Neg Arg1:T111 Arg2:T109	
+T112	Negation 4774 4775	-
+R35	Neg Arg1:T112 Arg2:T108	
+T113	Negation 4764 4765	-
+R36	Neg Arg1:T113 Arg2:T107	
+T114	Negation 4747 4748	-
+R37	Neg Arg1:T114 Arg2:T106	
+T115	Behaviour 4838 4864	warunki mieszkaniowe dobre
+T116	Drug 4904 4910	Atoris
+T117	Drug_dose 4911 4931	20 mg 1xdz wieczorem
+R38	Drg Arg1:T116 Arg2:T117	
+T118	Date 4933 4954	od co najmniej 1 roku
+R39	Dat Arg1:T118 Arg2:T116	
+T119	Drug 4957 4964	Ezetrol
+T120	Drug_dose 4965 4985	10 mg 1xdz wieczorem
+R40	Drg Arg1:T119 Arg2:T120	
+T121	Date 4987 5000	od 27.02.2019
+R41	Dat Arg1:T121 Arg2:T119	
+T122	Behaviour 5002 5037	Pacjent potwierdza stosowanie diety
+T123	Condition 5068 5090	hiperlipidemii wtórnej
+A22	Source T123 Declared
+N48	Reference T123 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T124	Condition 5093 5147	homozygotycznej postaci hipercholesterolemii rodzinnej
+A23	Source T124 Declared
+N49	Reference T124 ICD10:E78.0	Czysta hipercholesterolemia
+T125	Condition 5151 5179	ciężkiej niewydolności nerek
+A24	Source T125 Declared
+N50	Reference T125 ICD10:N18.9	Przewlekła niewydolność nerek, nieokreślona
+T126	Condition 5182 5212	ciężkiej niewydolności wątroby
+A25	Source T126 Declared
+N51	Reference T126 ICD10:K72.0	Ostra i podostra niewydolność wątroby
+T127	Condition 5215 5286	nadwrażliwości na alirokumab lub którąkolwiek z substancji pomocniczych
+A26	Source T127 Declared
+N52	Reference T127 ICD10:Z88.8	Uczulenie na inne leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T128	Investigation 5349 5370	badania laboratoryjne

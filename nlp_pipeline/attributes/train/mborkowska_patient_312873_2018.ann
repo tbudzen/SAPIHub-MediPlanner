@@ -1,0 +1,249 @@
+T1	Drug 2287 2298	Betaloc ZOK
+T2	Drug 2260 2267	Ezoleta
+T3	Drug 2232 2241	ArmoLipid
+T4	Drug 2199 2207	Polocard
+T5	Drug_dose 2208 2231	75 mg 1 tabl. wieczorem
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Drug_dose 2242 2259	1 tabl. wieczorem
+R2	Drg Arg1:T3 Arg2:T6	
+T7	Drug_dose 2268 2286	10 mg 1 tabl. rano
+R3	Drg Arg1:T2 Arg2:T7	
+T8	Drug_dose 2299 2317	25 mg 1 tabl. rano
+R4	Drg Arg1:T1 Arg2:T8	
+T9	Behaviour 2123 2168	stały, umiarkowany, aerobowy wysiłek fizyczny
+T10	Behaviour 2096 2121	dieta niskocholesterolowa
+T11	Investigation 2074 2094	kontrola lipidogramu
+T12	Drug 3657 3663	Concor
+T13	Drug_dose 3664 3687	1,25 1x dz po 1/2 tabl.
+R5	Drg Arg1:T12 Arg2:T13	
+T14	Drug 3688 3696	Polocard
+T15	Drug_dose 3697 3719	75 mg 1 x dz wieczorem
+R6	Drg Arg1:T14 Arg2:T15	
+T16	Drug 3721 3730	Cholefect
+T17	Drug_dose 3731 3746	1x dz wieczorem
+R7	Drg Arg1:T16 Arg2:T17	
+T18	Investigation 3762 3772	Echo serca
+T19	Investigation 3775 3785	Holter EKG
+T20	Behaviour 3606 3632	warunki mieszkaniowe dobre
+T21	Negation 3583 3589	neguje
+T22	Condition 3572 3581	Uczulenia
+N1	Reference T22 ICD10:T78.4	Alergia, nieokreślona
+R8	Neg Arg1:T21 Arg2:T22	
+T23	Behaviour 3553 3570	Inne używki: kawa
+T24	Behaviour 3517 3532	Palenie tytoniu
+N2	Reference T24 ICD10:Z72.0	Używanie tytoniu
+T25	Negation 3534 3542	nie pali
+R9	Neg Arg1:T25 Arg2:T24	
+T26	Date 3543 3551	od 5 lat
+R10	Dat Arg1:T26 Arg2:T24	
+T27	Condition 3497 3515	chorowała na serce
+A1	Status T27 Family
+A2	Source T27 Declared
+T28	Condition 3438 3441	WZW
+N3	Reference T28 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T29	Condition 3451 3460	borelioza
+N4	Reference T29 ICD10:A69.2	Choroba z Lyme
+T30	Negation 3461 3466	( - )
+R11	Neg Arg1:T30 Arg2:T29	
+T31	Negation 3442 3448	( -  )
+R12	Neg Arg1:T31 Arg2:T28	
+T32	Negation 3369 3373	brak
+T33	Treatment 3349 3366	Przebyte operacje
+R13	Neg Arg1:T32 Arg2:T33	
+T34	Drug 4648 4656	Polocard
+T35	Drug_dose 4657 4662	75mg,
+R14	Drg Arg1:T34 Arg2:T35	
+T36	Drug 4663 4669	concor
+T37	Drug_dose 4670 4686	1,25mg pół tabl.
+R15	Drg Arg1:T36 Arg2:T37	
+T38	Drug 4687 4700	atorwastatyna
+T39	Drug_dose 4701 4705	10mg
+R16	Drg Arg1:T38 Arg2:T39	
+T40	Condition 4597 4626	żylaków kończyny dolnej prawa
+N5	Reference T40 ICD10:I83	Żylaki kończyn dolnych
+T41	Treatment 4588 4596	operacji
+T42	Date 4628 4632	2015
+R17	Dat Arg1:T42 Arg2:T40	
+R18	Dat Arg1:T42 Arg2:T41	
+T43	Behaviour 4534 4544	Nikotynizm
+N6	Reference T43 ICD10:Z72.0	Używanie tytoniu
+T44	Date 4545 4558	w przeszłości
+R19	Dat Arg1:T44 Arg2:T43	
+A3	Status T43 Historical_Insignificant
+T45	Condition 741 764	niedomykalnością (I st)
+N7	Reference T45 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T46	Condition 676 738	Złożona wada serca pod postacią umiarkowanej stenozy aortalnej
+N8	Reference T46 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T47	Condition 770 797	łagodnej stenozy mitralnej.
+N9	Reference T47 ICD10:Q23.2	Wrodzone zwężenie zastawki mitralnej
+T48	Condition 798 823	Miażdżyca wielopoziomowa.
+N10	Reference T48 ICD10:I70.9	Miażdżyca uogólniona i nieokreślona
+T49	Condition 824 862	Przewlekła choroba niedokrwienna serca
+T50	Condition 1380 1442	Złożona wada serca pod postacią umiarkowanej stenozy aortalnej
+N12	Reference T50 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T51	Condition 1445 1466	niedomykalnością I st
+N13	Reference T51 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T52	Condition 1472 1499	łagodnej stenozy mitralnej.
+N14	Reference T52 ICD10:Q23.2	Wrodzone zwężenie zastawki mitralnej
+T53	Condition 1500 1525	Miażdżyca wielopoziomowa.
+N15	Reference T53 ICD10:I70.9	Miażdżyca
+T54	Condition 1526 1564	Przewlekła choroba niedokrwienna serca
+T55	Condition 1574 1583	OZW STEMI
+T56	Treatment 1584 1621	leczonym PCI RCA z implantacją stentu
+T57	Date 1623 1628	2013r
+R20	Dat Arg1:T57 Arg2:T56	
+R21	Dat Arg1:T57 Arg2:T55	
+T58	Condition 1631 1656	Miażdżyca tętnic szyjnych
+N18	Reference T58 ICD10:I65.2	Niedrożność i zwężenie tętnicy szyjnej wewnętrznej
+T59	Condition 1658 1690	Miażdżyca tętnic kończyn dolnych
+N19	Reference T59 ICD10:I70.2	Miażdżyca tętnic kończyn
+T60	Condition 989 1022	Miażdżyca tętnic kończyn dolnych.
+N20	Reference T60 ICD10:I70.2	Miażdżyca tętnic kończyn
+T61	Condition 962 987	Miażdżyca tętnic szyjnych
+N21	Reference T61 ICD10:I65.2	Niedrożność i zwężenie tętnicy szyjnej wewnętrznej
+T62	Condition 3152 3184	Miażdżyca tętnic kończyn dolnych
+N22	Reference T62 ICD10:I70.2	Miażdżyca tętnic kończyn
+T63	Negation 4466 4472	neguje
+T64	Condition 4473 4491	uczulenia na leki,
+N23	Reference T64 ICD10:Z88	
+T65	Negation 4492 4498	neguje
+T66	Symptom 4499 4532	krwawienia z przewodu pokarmowego
+N24	Reference T66 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R22	Neg Arg1:T65 Arg2:T66	
+R23	Neg Arg1:T63 Arg2:T64	
+T67	Condition 4423 4454	Nieprawidłowa glikemia na czczo
+N25	Reference T67 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T68	Condition 4401 4414	Nietolerancja
+N26	Reference T68 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T69	Drug 4415 4421	statyn
+R24	Alg Arg1:T68 Arg2:T69	
+T70	Condition 4379 4399	Hipercholesterolemia
+N27	Reference T70 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T71	Condition 4323 4332	OZW STEMI
+N28	Reference T71 ICD10:I24	Inne ostre postacie choroby niedokrwiennej serca
+T72	Treatment 4333 4370	leczonym PCI RCA z implantacją stentu
+T73	Date 4372 4376	2013
+R25	Dat Arg1:T73 Arg2:T72	
+R26	Dat Arg1:T73 Arg2:T71	
+T74	Condition 4297 4314	Choroba wieńcowa.
+T75	Condition 4246 4277	Złożona wada serca: łagodna SM,
+N29	Reference T75 ICD10:Q23.2	Wrodzone zwężenie zastawki mitralnej
+T76	Condition 4278 4292	umiarkowana SA
+N30	Reference T76 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T77	Condition 4293 4295	IA
+N31	Reference T77 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T78	Investigation_result 4207 4220	80-90/60mmHg,
+T79	Investigation_result 4221 4230	HR 60/min
+T80	Negation 4113 4119	neguje
+T81	Symptom 4120 4140	bóle w kl piersiowej
+N32	Reference T81 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T82	Negation 4142 4148	neguje
+T83	Symptom 4149 4157	duszność
+N33	Reference T83 ICD10:R06.0	Duszność
+T84	Negation 4159 4165	neguje
+T85	Symptom 4166 4181	kołatania serca
+N34	Reference T85 ICD10:R00.2	Kołatanie serca
+R27	Neg Arg1:T84 Arg2:T85	
+R28	Neg Arg1:T82 Arg2:T83	
+R29	Neg Arg1:T80 Arg2:T81	
+T86	Symptom 4003 4013	osłabienia
+N35	Reference T86 ICD10:R53	Złe samopoczucie i zmęczenie
+T87	Date 4025 4041	od stycznia 2018
+R30	Dat Arg1:T87 Arg2:T86	
+T88	Condition 3259 3290	Nieprawidłowa glikemia na czczo
+N36	Reference T88 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T89	Drug 3251 3257	statyn
+T90	Condition 3237 3250	Nietolerancja
+N37	Reference T90 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R31	Alg Arg1:T90 Arg2:T89	
+T91	Condition 3215 3235	Hipercholesterolemia
+N38	Reference T91 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T92	Condition 3186 3213	Poszerzenie aorty brzusznej
+N39	Reference T92 ICD10:R93.1	
+T93	Condition 3304 3347	Podejrzenie obturacyjnego bezdechu sennego.
+N40	Reference T93 ICD10:G47.3	Bezdech senny
+A4	Source T93 Declared
+T94	Condition 1810 1853	Podejrzenie obturacyjnego bezdechu sennego.
+A5	Source T94 Declared
+N41	Reference T94 ICD10:G47.3	Bezdech senny
+T95	Condition 1765 1796	Nieprawidłowa glikemia na czczo
+N42	Reference T95 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T96	Condition 1743 1756	Nietolerancja
+N43	Reference T96 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T97	Drug 1757 1763	statyn
+T98	Condition 1721 1741	Hipercholesterolemia
+R32	Alg Arg1:T96 Arg2:T97	
+T99	Condition 1692 1720	Poszerzenie aorty brzusznej.
+N45	Reference T99 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T100	Condition 1023 1051	Poszerzenie aorty brzusznej.
+N46	Reference T100 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T101	Condition 1052 1072	Hipercholesterolemia
+T102	Condition 1074 1105	Nieprawidłowa glikemia na czczo
+N48	Reference T102 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T103	Condition 1119 1162	Podejrzenie obturacyjnego bezdechu sennego.
+A6	Source T103 Declared
+N49	Reference T103 ICD10:G47.3	Bezdech senny
+T104	Condition 929 961	Komorowe zaburzenia rytmu serca.
+N50	Reference T104 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T105	Condition 872 881	OZW STEMI
+T106	Treatment 882 921	leczonym PCI RCA z implantacją stentu (
+T107	Date 921 926	2013r
+R33	Dat Arg1:T107 Arg2:T106	
+R34	Dat Arg1:T107 Arg2:T105	
+T108	Condition 3011 3042	Komorowe zaburzenia rytmu serca
+N52	Reference T108 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T109	Condition 3045 3052	2x nsVT
+N53	Reference T109 ICD10:I47.2	Częstoskurcz komorowy
+T110	Investigation 3066 3091	angi CT tętnic wieńcowych
+T111	Date 3093 3103	12.07.2018
+T112	Investigation_result 3106 3122	zwężenie do 25 %
+R35	Dat Arg1:T111 Arg2:T110	
+R36	Inv Arg1:T110 Arg2:T112	
+R37	Dat Arg1:T111 Arg2:T112	
+T113	Condition 3125 3151	Miażdżyca tętnic szyjnych.
+N54	Reference T113 ICD10:I65.2	Niedrożność i zwężenie tętnicy szyjnej wewnętrznej
+T114	Condition 2954 2963	OZW STEMI
+T115	Treatment 2964 3001	leczonym PCI RCA z implantacją stentu
+T116	Date 3003 3008	2013r
+R38	Dat Arg1:T116 Arg2:T115	
+R39	Dat Arg1:T116 Arg2:T114	
+T117	Condition 2906 2944	Przewlekła choroba niedokrwienna serca
+T118	Condition 2880 2904	Miażdżyca wielopoziomowa
+N57	Reference T118 ICD10:I70	Miażdżyca
+T119	Condition 2760 2822	Złożona wada serca pod postacią umiarkowanej stenozy aortalnej
+N58	Reference T119 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T120	Condition 2825 2846	niedomykalnością I st
+N59	Reference T120 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T121	Condition 2852 2878	łagodnej stenozy mitralnej
+N60	Reference T121 ICD10:Q23.2	
+T122	Symptom 2730 2742	zasłabnięcia
+N61	Reference T122 ICD10:R55	Omdlenie i zapaść
+T123	Negation 2723 2729	Neguje
+R40	Neg Arg1:T123 Arg2:T122	
+T124	Symptom 2489 2520	pogorszenia tolerancji wysiłku,
+N62	Reference T124 ICD10:R53	Złe samopoczucie i zmęczenie
+T125	Symptom 2540 2550	bóle kolan
+N63	Reference T125 ICD10:M25.5	Ból stawu
+T126	Symptom 2553 2560	mięśnia
+N64	Reference T126 ICD10:M79.1	Bóle mięśni
+T127	Condition 2563 2577	nie tolerancja
+N65	Reference T127 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T128	Drug 2578 2584	statyn
+T129	Drug 2586 2593	Ezoleta
+R41	Alg Arg1:T127 Arg2:T128	
+R42	Alg Arg1:T127 Arg2:T129	
+T130	Symptom 2605 2626	stany przedomdleniowe
+N66	Reference T130 ICD10:R55	Omdlenie i zapaść
+T131	Symptom 2637 2667	słabość mięśni kończyn dolnych
+T132	Drug 2698 2705	Concoru
+N67	Reference T23 ICD10:Z72	Problemy związane ze stylem życia
+N11	Reference T49 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+N51	Reference T105 ICD10:I21.3	Ostry zawał serca pełnościenny o nieokreślonym umiejscowieniu
+N47	Reference T101 ICD10:E78.0	Czysta hipercholesterolemia
+N16	Reference T54 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+N44	Reference T98 ICD10:E78.0	Czysta hipercholesterolemia
+T133	Treatment 1962 1989	dalsza opieka w poradni POZ
+T134	Treatment 1999 2063	kontrola kardiologiczna, neurologiczna i u chirurga naczyniowego
+N17	Reference T55 ICD10:I21.3	Ostry zawał serca pełnościenny o nieokreślonym umiejscowieniu
+N56	Reference T117 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+N55	Reference T114 ICD10:I21.3	Ostry zawał serca pełnościenny o nieokreślonym umiejscowieniu

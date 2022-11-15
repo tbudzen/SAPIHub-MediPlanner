@@ -1,0 +1,68 @@
+T1	Condition 406 414	CIV PII,
+T2	Investigation_result 427 448	9/10ptk w skali Apgar
+T3	Condition 496 513	stenozy aortalnej
+N1	Reference T3 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T4	Condition 344 379	Hipertroficzny wcześniak (36/37hbd)
+N2	Reference T4 ICD10:O60.1	Przedwczesna czynność porodowa z porodem przedwczesnym
+T5	Condition 536 558	niedoczynność tarczycy
+A1	Status T5 Family
+N3	Reference T5 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T7	Investigation_result 560 571	GBS ujemny,
+T6	Treatment 587 613	steroidoteapii prenatalnej
+A2	Status T7 Family
+A3	Status T6 Family
+T8	Symptom 639 666	niewielki wysiłek oddechowy
+T9	Drug 675 694	cytrynian caffeiny.
+T10	Condition 782 806	głośny szmer nad sercem,
+T11	Drug 816 820	abx.
+T12	Investigation 848 873	badaniu screeninowym Echa
+T13	Investigation_result 884 914	podejrzenie stenozy aortalnej.
+A4	Source T13 Declared
+N4	Reference T13 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T14	Investigation_result 915 951	Słabo wyczuwalne tętno na tt.udpwych
+T15	Drug 968 976	Prostinu
+T16	Drug_dose 977 991	0,01mcg/kg/min
+R1	Drg Arg1:T15 Arg2:T16	
+T17	Drug 1118 1125	Prostin
+T18	Drug_dose 1126 1140	0,02mcg/kg/min
+R2	Drg Arg1:T17 Arg2:T18	
+T19	Investigation 1075 1104	pobrano screening infekcyjny,
+T20	Symptom 1056 1073	wydolne oddechowo
+T21	Condition 1180 1218	potwierdzono stenozę zastawki aotalnej
+A5	Source T21 Confirmed
+N5	Reference T21 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T22	Condition 1220 1234	PDA niewielkie
+N6	Reference T22 ICD10:Q25.0	Drożny przewód tętniczy
+T23	Treatment 1271 1287	zabiegu plastyki
+T24	Condition 1288 1306	zastawki aortalnej
+N7	Reference T24 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T25	Drug 1317 1320	TPN
+T26	Drug_dose 1321 1328	130/100
+R3	Drg Arg1:T25 Arg2:T26	
+T27	Treatment 1330 1341	przetoczono
+T28	Drug 1342 1358	dodatkowe płyny.
+T29	Investigation_result 1368 1388	hiperbilirubinemii  
+T30	Treatment 1397 1408	fototerapię
+T31	Treatment 1452 1477	zabiegowi walwuloplastyki
+T32	Condition 1478 1496	zastawki aortalnej
+N8	Reference T32 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T33	Treatment 1543 1555	zaintubowany
+T34	Treatment 1557 1624	wentylowany mechanicznie SIMV (PC) + PS z FiO2 0,34, MAP 11, PIP 22
+T35	Drug 1635 1657	leczenie przeciwbólowe
+T36	Drug 1659 1666	Dexdore
+T37	Drug_dose 1667 1679	0,7 mcg/kg/h
+R4	Drg Arg1:T36 Arg2:T37	
+T38	Drug 1681 1688	Clexane
+T39	Drug_dose 1689 1721	zgodnie z zaleceniem kardiologów
+R5	Drg Arg1:T38 Arg2:T39	
+T40	Investigation_result 1723 1742	ciśnienia wyrównane
+T41	Treatment 1744 1791	Kontynuowano żywienie parenteralne, włączono mf
+T42	Investigation_result 1793 1812	Diureza prawidłowa.
+N9	Reference T10 ICD10:R01.2	Inne zjawiska osłuchowe w okolicy serca
+T43	Date 738 752	W 2dobie życia
+R6	Dat Arg1:T43 Arg2:T10	
+T44	Date 821 835	W 3dobie życia
+R7	Dat Arg1:T44 Arg2:T12	
+R8	Inv Arg1:T12 Arg2:T13	
+R9	Dat Arg1:T44 Arg2:T13	
+R10	Dat Arg1:T43 Arg2:T11	

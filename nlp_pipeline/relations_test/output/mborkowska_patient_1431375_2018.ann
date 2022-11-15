@@ -1,0 +1,182 @@
+T1	Investigation 3269 3279	Echo serca
+T2	Investigation 3282 3297	Holter EKG i RR
+T3	Investigation 3302 3316	róba Wysiłkowa
+T4	Drug 3135 3147	Nitrendypina
+T5	Drug_dose 3148 3171	20 mg 2 x dz po 1 tabl.
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Drug 3172 3198	Metoprololsuccinaat retard
+T7	Drug_dose 3199 3216	50 mg 1 x dz rano
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Drug 3219 3228	Tolucombi
+T9	Drug_dose 3229 3253	80 mg /25 mg 1 x dz rano
+R3	Drg Arg1:T8 Arg2:T9	
+T10	Behaviour 3084 3110	warunki mieszkaniowe dobre
+T11	Negation 3061 3067	neguje
+T12	Negation 3046 3049	nie
+T13	Condition 3050 3059	Uczulenia
+N1	Reference T13 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R4	Neg Arg1:T11 Arg2:T13	
+T14	Behaviour 3033 3044	Inne używki
+N2	Reference T14 ICD10:Z72	Problemy związane ze stylem życia
+R5	Neg Arg1:T12 Arg2:T14	
+T15	Behaviour 2985 3000	Palenie tytoniu
+N3	Reference T15 ICD10:Z72.0	Używanie tytoniu
+T16	Date 3002 3012	30 la temu
+R6	Dat Arg1:T16 Arg2:T15	
+T17	Date 3015 3022	obecnie
+A1	Status T15 Historical_Insignificant
+T18	Behaviour 3027 3031	pali
+N4	Reference T18 ICD10:Z72.0	Używanie tytoniu
+T19	Negation 3023 3026	nie
+R7	Dat Arg1:T17 Arg2:T18	
+R8	Neg Arg1:T19 Arg2:T18	
+T20	Negation 2979 2983	brak
+T21	Condition 2955 2976	W wywiadzie rodzinnym
+A2	Status T21 Family
+R9	Neg Arg1:T20 Arg2:T21	
+T22	Condition 2926 2929	WZW
+N5	Reference T22 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T23	Condition 2939 2948	borelioza
+N6	Reference T23 ICD10:A69.2	Choroba z Lyme
+T24	Negation 2949 2954	( - )
+R10	Neg Arg1:T24 Arg2:T23	
+T25	Negation 2930 2936	( -  )
+R11	Neg Arg1:T25 Arg2:T22	
+T26	Negation 2893 2897	brak
+T27	Treatment 2871 2890	Leczenie przewlekłe
+R12	Neg Arg1:T26 Arg2:T27	
+T28	Treatment 2846 2863	Przebyte operacje
+T29	Treatment 1250 1357	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej , Hematologicznej , Gastroenterologicznej
+T30	Behaviour 1361 1400	Dieta cukrzycowa  , niskocholesterolowa
+T31	Investigation 1413 1488	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek.
+T32	Investigation 1490 1539	Systematyczna kontrola ciśnienia tętniczego krwi.
+T33	Drug 1589 1598	EgiRamlon
+T34	Drug_dose 1599 1617	10 + 10 1x dz rano
+R13	Drg Arg1:T33 Arg2:T34	
+T35	Drug 1618 1624	Diuver
+T36	Drug_dose 1625 1648	5 mg 1x dz po 1/2 tabl.
+R14	Drg Arg1:T35 Arg2:T36	
+T37	Drug 1650 1657	Beto ZK
+T38	Drug_dose 1658 1746	100 mg 1x dz rano ( w dniu planowanej próby wysiłkowej lek przyjąć dopiero  po badaniu )
+T39	Drug 1748 1758	Cardura XL
+T40	Drug_dose 1759 1792	4 mg 1x dz po 1/2 tabl. wieczorem
+R15	Drg Arg1:T39 Arg2:T40	
+R16	Drg Arg1:T37 Arg2:T38	
+T41	Drug 1914 1926	Nitrendypina
+T42	Drug 1929 1955	Metoprololsuccinaat retard
+T43	Drug_dose 1956 1961	50 mg
+R17	Drg Arg1:T42 Arg2:T43	
+T44	Drug 1964 1973	Tolucombi
+T45	Drug_dose 1974 1986	80 mg /25 mg
+R18	Drg Arg1:T44 Arg2:T45	
+T46	Drug 1989 1999	Cardura XL
+T47	Drug 2002 2013	Paracetamol
+T48	Drug 2016 2024	Thicodin
+T49	Drug 2027 2034	Amlopin
+T50	Drug 2037 2044	Tritace
+T51	Drug 2047 2053	Diuver
+T52	Condition 675 767	Drożny otwór owalny w przegrodzenie międzyprzedsionkowej z niewielkim przeciekiem lewo prawo
+N7	Reference T52 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T53	Condition 770 811	Łagodne nadkomorowe zaburzenia rymu serca
+N8	Reference T53 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T54	Condition 813 834	Nadciśnienie tętnicze
+N9	Reference T54 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T55	Condition 837 866	Hipercholesterolemia mieszana
+N10	Reference T55 ICD10:E78.2	Hiperlipidemia mieszana
+T56	Condition 869 883	Niedokrwistość
+N11	Reference T56 ICD10:D64.9	Niedokrwistość, nieokreślona
+T57	Condition 886 901	Polipy przełyku
+N12	Reference T57 ICD10:K22.8	Inne określone choroby przełyku
+T58	Condition 904 943	Reflukosowe zapalenie przełyku A wg. LA
+N13	Reference T58 ICD10:K21.0	Refluks żołądkowo-przełykowy z zapaleniem przełyku
+T59	Treatment 954 999	częściowej resekcji żołądka metodą Billroth I
+A3	Status T59 Historical_Insignificant
+T60	Date 1002 1013	26 lat temu
+R19	Dat Arg1:T60 Arg2:T59	
+T61	Condition 1018 1023	Polip
+N14	Reference T61 ICD10:K31.7	Polip żołądka i dwunastnicy
+T62	Condition 1026 1050	zapalenie kikuta żołądka
+N15	Reference T62 ICD10:K29.6	Inne zapalenia żołądka
+T63	Date 1051 1058	12.2017
+R20	Dat Arg1:T63 Arg2:T62	
+R21	Dat Arg1:T63 Arg2:T61	
+T64	Condition 1060 1103	Owrzodzenie w okolicy kostki kończyny lewej
+T65	Condition 1106 1139	Infekcja górnych dróg oddechowych
+N17	Reference T65 ICD10:J06	Ostre zakażenie górnych dróg oddechowych o umiejscowieniu mnogim nieokreślonym
+T66	Investigation_result 2225 2270	chwiejnych wartości ciśnienia tętniczego krwi
+T67	Symptom 2273 2303	pogorszenia tolerancji wysiłku
+N18	Reference T67 ICD10:R53	Złe samopoczucie i zmęczenie
+T68	Symptom 2320 2391	bólu w klatce piersiowej o charakterze ucisku związanego  z oddychaniem
+N19	Reference T68 ICD10:R07.3	Inne bóle w klatce piersiowej
+T69	Symptom 2448 2463	kołatania serca
+N20	Reference T69 ICD10:R00.2	Kołatanie serca
+T70	Date 2464 2478	głównie w nocy
+R22	Dat Arg1:T70 Arg2:T69	
+T71	Symptom 2487 2499	zasłabnięcia
+N21	Reference T71 ICD10:R55	Omdlenie i zapaść
+T72	Negation 2480 2486	Neguje
+R23	Neg Arg1:T72 Arg2:T71	
+T73	Condition 2517 2538	Nadciśnienie tętnicze
+N22	Reference T73 ICD10:I10	
+T74	Condition 2541 2555	Niedokrwistość
+N23	Reference T74 ICD10:D64.9	Niedokrwistość, nieokreślona
+T75	Investigation 2567 2579	gastroskopię
+T76	Date 2580 2590	27.12.2017
+T77	Investigation_result 2591 2606	Polipy przełyku
+N24	Reference T77 ICD10:K22.8	Inne określone choroby przełyku
+R24	Dat Arg1:T76 Arg2:T77	
+R25	Dat Arg1:T76 Arg2:T75	
+T78	Condition 2609 2650	Reflukosowe zapalenie przełyku A wg. LA .
+N25	Reference T78 ICD10:K21.0	Refluks żołądkowo-przełykowy z zapaleniem przełyku
+T79	Treatment 2659 2704	częściowej resekcji żołądka metodą Billroth I
+A4	Status T79 Historical_Insignificant
+T80	Date 2707 2718	26 lat temu
+R26	Dat Arg1:T80 Arg2:T79	
+T81	Condition 2723 2728	Polip
+N26	Reference T81 ICD10:K31.7	Polip żołądka i dwunastnicy
+T82	Condition 2731 2755	zapalenie kikuta żołądka
+N27	Reference T82 ICD10:K29.6	Inne zapalenia żołądka
+T83	Date 2756 2763	12.2017
+R27	Dat Arg1:T83 Arg2:T82	
+R28	Dat Arg1:T83 Arg2:T81	
+N16	Reference T64 ICD10:L97	Owrzodzenie kończyny dolnej, niesklasyfikowane gdzie indziej
+T84	Condition 2765 2810	Owrzodzenie w okolicy kostki kończyny lewej -
+N28	Reference T84 ICD10:L97	Owrzodzenie kończyny dolnej, niesklasyfikowane gdzie indziej
+T85	Symptom 2395 2417	Nasilenie dolegliwości
+T86	Date 2418 2429	od miesiąca
+R29	Dat Arg1:T86 Arg2:T85	
+R1	Dat Arg1:T60 Arg2:T61
+R108	Neg Arg1:T24 Arg2:T21
+R109	Neg Arg1:T24 Arg2:T23
+R12	Drg Arg1:T37 Arg2:T38
+R120	Drg Arg1:T4 Arg2:T5
+R124	Drg Arg1:T6 Arg2:T7
+R128	Drg Arg1:T8 Arg2:T9
+R13	Drg Arg1:T39 Arg2:T40
+R130	Dat Arg1:T16 Arg2:T21
+R134	Dat Arg1:T16 Arg2:T15
+R145	Dat Arg1:T17 Arg2:T18
+R16	Drg Arg1:T42 Arg2:T43
+R2	Dat Arg1:T60 Arg2:T62
+R21	Drg Arg1:T46 Arg2:T45
+R3	Dat Arg1:T63 Arg2:T64
+R33	Dat Arg1:T86 Arg2:T68
+R34	Dat Arg1:T86 Arg2:T85
+R35	Dat Arg1:T70 Arg2:T69
+R36	Inv Arg1:T75 Arg2:T77
+R37	Neg Arg1:T72 Arg2:T71
+R38	Neg Arg1:T72 Arg2:T73
+R4	Drg Arg1:T33 Arg2:T34
+R45	Dat Arg1:T76 Arg2:T75
+R46	Dat Arg1:T83 Arg2:T81
+R47	Dat Arg1:T83 Arg2:T82
+R48	Dat Arg1:T83 Arg2:T84
+R49	Neg Arg1:T25 Arg2:T22
+R53	Neg Arg1:T26 Arg2:T27
+R55	Neg Arg1:T11 Arg2:T13
+R58	Neg Arg1:T11 Arg2:T10
+R68	Neg Arg1:T12 Arg2:T13
+R72	Neg Arg1:T12 Arg2:T14
+R8	Drg Arg1:T35 Arg2:T36
+R95	Neg Arg1:T20 Arg2:T21
+R99	Neg Arg1:T20 Arg2:T15

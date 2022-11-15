@@ -1,0 +1,36 @@
+T1	Drug 355 366	Sildenafilu
+T2	Drug_dose 367 390	2x dziennie w dawce 7mg
+T3	Treatment 395 427	Wizyta w Poradni Kardiologicznej
+T4	Date 447 465	w dniu 26.06.2018r
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Investigation 739 749	Obserwacja
+T6	Condition 761 782	nadciśnienia płucnego
+N1	Reference T6 ICD10:I27.2	Nadciśnienie płucne wtórne o innej etiologii
+T7	Condition 795 823	dysplazji oskrzelowo-płucnej
+N2	Reference T7 ICD10:P27.1	Dysplazja oskrzelowo-płucna rozpoczynająca się w okresie okołoporodowym
+T8	Condition 825 857	Skrajne wcześniactwo 24 tygodnie
+N3	Reference T8 ICD10:P07.2	Skrajne wcześniactwo
+T9	Condition 867 900	krwawieniu dokomorowym II stopnia
+N4	Reference T9 ICD10:P52.1	Dokomorowy (nieurazowy) krwotok, stopnia 2, u płodu i noworodka
+T10	Condition 910 939	krwawieniu obu półkul móżdżku
+N5	Reference T10 ICD10:P52.6	Krwotok (nieurazowy) do móżdżku i tylnego dołu czaszki u płodu i noworodka
+T11	Condition 941 964	Retinopatia wcześniaków
+N6	Reference T11 ICD10:H35.1	Retinopatia wcześniaków
+T12	Treatment 975 997	laseroterapii obu oczu
+T13	Date 999 1009	20.09.2017
+T14	Treatment 1020 1043	zabiegu resekcji jelita
+N7	Reference T14 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T15	Treatment 1046 1063	wyłonienia stomii
+N8	Reference T15 ICD10:Z93	Stany związane z obecnością sztucznego otworu
+T16	Condition 1076 1098	niedrożności smółkowej
+N9	Reference T16 ICD10:P75*	Niedrożność smółkowa (E84.1†)
+T17	Date 1100 1110	02.08.2017
+R2	Dat Arg1:T17 Arg2:T16	
+R3	Dat Arg1:T17 Arg2:T15	
+R4	Dat Arg1:T17 Arg2:T14	
+R5	Dat Arg1:T13 Arg2:T12	
+R6	Dat Arg1:T13 Arg2:T11	
+T18	Drug 1232 1242	Sildenafil
+T19	Drug 1244 1251	Digoxin
+R7	Drg Arg1:T1 Arg2:T2	
+A1	Source T6 Declared

@@ -1,0 +1,102 @@
+T1	Treatment 329 356	dalsza opieka w poradni POZ
+T2	Treatment 366 423	pilna konsultacja kardiologiczna w Poradni Zaburzeń Rytmu
+T3	Investigation 451 502	okresowa kontrola elektrolitów, enzymów wątrobowych
+T4	Investigation 503 542	regularna kontrola ciśnienia tętniczego
+T5	Behaviour 543 569	dieta nieskocholesterolowa
+T6	Drug 576 589	Co-Prestarium
+T7	Drug_dose 590 610	5mg/5mg 1 tabl. rano
+T8	Drug 611 619	Polocard
+T9	Drug_dose 620 643	75 mg 1 tabl. wieczorem
+T10	Drug 644 651	Finamef
+T11	Drug_dose 652 669	5 mg 1 tabl. rano
+T12	Drug 670 680	Omnic Ocas
+T13	Drug_dose 681 705	0,4 mg 1 tabl. wieczorem
+R1	Drg Arg1:T6 Arg2:T7	
+R2	Drg Arg1:T8 Arg2:T9	
+R3	Drg Arg1:T10 Arg2:T11	
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Condition 923 950	Dysfunkcja węzła zatokowego
+N1	Reference T14 ICD10:I49.5	Zespół chorej zatoki
+T15	Condition 952 982	zespół tachykardia-bradykardia
+N2	Reference T15 ICD10:I49.5	Zespół chorej zatoki
+T16	Condition 984 995	pauzy 3,47s
+N3	Reference T16 ICD10:I49.5	Zespół chorej zatoki
+T17	Condition 998 1007	Borelioza
+N4	Reference T17 ICD10:A69.2	Choroba z Lyme
+T18	Condition 1021 1054	Łagodna dysfunkcja rozkurczowa LK
+N5	Reference T18 ICD10:I50.1	Niewydolność serca lewokomorowa
+T19	Condition 1056 1156	Wada wrodzona serca pod postacią łagodnej niedomykalności zastawki mitralnej, płucnej i trójdzielnej
+T20	Condition 1158 1192	Nadciśnienie tętnicze I st. wg WHO
+N6	Reference T20 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T21	Condition 1194 1220	Rozrost gruczołu krokowego
+N7	Reference T21 ICD10:N40	Rozrost gruczołu krokowego
+T22	Condition 1365 1388	nadciśnieniem tętniczym
+N8	Reference T22 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T23	Condition 1390 1410	bradykardią zatokową
+N9	Reference T23 ICD10:R00.1	Bradykardia, nieokreślona
+T24	Condition 1427 1441	pauzami do 3 s
+T25	Condition 1445 1496	nadkomorowymi i komorowymi zaburzeniami rytmu serca
+N10	Reference T25 ICD10:I49	Inne zaburzenia rytmu serca
+T26	Negation 1521 1536	dyskwalifikacji
+T27	Treatment 1539 1559	zabiegu operacyjnego
+N11	Reference T27 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T28	Condition 1560 1583	przepukliny pachwinowej
+N12	Reference T28 ICD10:K40.9	Jednostronna lub nieokreślona przepuklina pachwinowa bez niedrożności lub zgorzeli
+T29	Date 1585 1593	08.2018r
+T30	Symptom 1604 1626	wolnej czynności serca
+N13	Reference T30 ICD10:R00.1	Bradykardia, nieokreślona
+R5	Neg Arg1:T26 Arg2:T27	
+R6	Dat Arg1:T29 Arg2:T28	
+R7	Dat Arg1:T29 Arg2:T27	
+R8	Dat Arg1:T29 Arg2:T30	
+T31	Condition 1647 1673	kamica nerkowa lewostronna
+A1	Status T31 Historical_Insignificant
+N14	Reference T31 ICD10:N20.0	Kamica nerki
+T32	Treatment 1637 1645	operacje
+A2	Status T32 Historical_Insignificant
+N15	Reference T32 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T33	Date 1675 1679	1970
+R9	Dat Arg1:T33 Arg2:T31	
+R10	Dat Arg1:T33 Arg2:T32	
+T34	Treatment 1682 1701	Leczenie przewlekłe
+T35	Negation 1703 1713	nie podaje
+R11	Neg Arg1:T35 Arg2:T34	
+T36	Condition 1741 1744	WZW
+N16	Reference T36 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T37	Condition 1750 1759	borelioza
+N17	Reference T37 ICD10:A69.2	Choroba z Lyme
+T38	Negation 1745 1748	(-)
+T39	Condition 1771 1786	Wywiad rodzinny
+A3	Status T39 Family
+T40	Negation 1787 1797	nieistotny
+R12	Neg Arg1:T38 Arg2:T36	
+R13	Neg Arg1:T40 Arg2:T39	
+T41	Behaviour 1798 1813	Palenie tytoniu
+N18	Reference T41 ICD10:Z72.0	Używanie tytoniu
+T42	Negation 1815 1825	nie podaje
+T43	Behaviour 1826 1837	Inne używki
+T44	Negation 1838 1848	nie podaje
+T45	Condition 1849 1858	Uczulenia
+N19	Reference T45 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T46	Negation 1860 1870	nie podaje
+T47	Behaviour 1889 1895	emeryt
+T48	Behaviour 1897 1914	mieszka z rodziną
+T49	Drug 1921 1928	Tritace
+T50	Drug 1952 1960	Polocard
+T51	Drug 1985 1995	Omnic Ocas
+T52	Drug 2018 2025	Finamef
+T53	Drug_dose 1929 1951	5 mg 1 tabl. wieczorem
+T54	Drug_dose 1961 1984	75 mg 1 tabl. wieczorem
+T55	Drug_dose 1996 2017	0,4 1 tabl. wieczorem
+T56	Drug_dose 2026 2043	5 mg 1 tabl. rano
+T57	Investigation 2071 2081	echo serca
+T58	Investigation 2083 2086	TET
+T59	Investigation 2088 2092	ABPM
+T60	Investigation 2094 2100	Holter
+R14	Drg Arg1:T49 Arg2:T53	
+R15	Drg Arg1:T50 Arg2:T54	
+R16	Drg Arg1:T51 Arg2:T55	
+R17	Drg Arg1:T52 Arg2:T56	
+R18	Neg Arg1:T46 Arg2:T45	
+R19	Neg Arg1:T44 Arg2:T43	
+R20	Neg Arg1:T42 Arg2:T41	

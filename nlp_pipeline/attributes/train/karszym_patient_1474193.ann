@@ -1,0 +1,137 @@
+T1	Condition 438 505	Łagodna niedomykalność zastawek trójdzielnej, mitralnej i aortalnej
+T2	Condition 507 538	Nadciśnienie tętnicze I* wg WHO
+N1	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Condition 540 560	Hipertriglicerydemia
+N2	Reference T3 ICD10:E78.1	Czysta hiperglicerydemia
+T4	Condition 562 578	Choroba wrzodowa
+N3	Reference T4 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T5	Behaviour 592 602	Nikotynizm
+N4	Reference T5 ICD10:Z72.0	Używanie tytoniu
+T6	Treatment 612 620	operacji
+A1	Status T6 Historical_Insignificant
+N5	Reference T6 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T7	Condition 621 635	żylaków odbytu
+N6	Reference T7 ICD10:I84.9	Hemoroidy, nieokreślone, bez powikłań
+T8	Date 637 644	03/2019
+R1	Dat Arg1:T8 Arg2:T6	
+A2	Status T7 Historical_Insignificant
+R2	Dat Arg1:T8 Arg2:T7	
+T9	Treatment 767 823	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T11	Behaviour 828 849	Zakaz palenia tytoniu
+T12	Behaviour 854 893	Dieta lekkostrawna, niskocholesterolowa
+T13	Investigation 900 991	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T14	Investigation 998 1046	Systematyczna kontrola ciśnienia tętniczego krwi
+T15	Drug 1059 1076	Noliprel Bi-Forte
+T16	Drug_dose 1077 1096	1x1 tabl. wieczorem
+T17	Drug 1097 1109	Nitrendypina
+T18	Drug_dose 1110 1124	10 mg 2x1 tabl
+T19	Treatment 1130 1177	ew. zwiększeniem dawki pod kontrolą lekarza POZ
+T20	Drug 1178 1183	Nedal
+T21	Drug_dose 1184 1203	5 mg 1x1 tabl. rano
+T22	Drug 1204 1215	Grofibrat S
+T23	Drug_dose 1216 1234	160 1x1 tabl. rano
+T24	Drug 1235 1243	Miliurit
+T25	Drug_dose 1244 1265	100 mg 1x1 tabl. rano
+R4	Drg Arg1:T15 Arg2:T16	
+R5	Drg Arg1:T17 Arg2:T18	
+R6	Drg Arg1:T20 Arg2:T21	
+R7	Drg Arg1:T22 Arg2:T23	
+R8	Drg Arg1:T24 Arg2:T25	
+T26	Symptom 1436 1531	podwyższonych wartości cisnienia tętniczego (maks. 150/100mmHg) pomimo dotychczasowego leczenia
+T27	Symptom 1586 1608	Okresowo zawroty głowy
+N8	Reference T27 ICD10:R42	Zawroty głowy i odurzenie
+T28	Symptom 1614 1636	drętwienie kk. górnych
+T29	Negation 1638 1644	Neguje
+N9	Reference T28 ICD10:R20.2	Parestezje
+T30	Symptom 1645 1657	zasłabnięcia
+T31	Symptom 1659 1667	omdlenia
+N10	Reference T31 ICD10:R55	
+T32	Symptom 1669 1679	krwawienia
+T33	Symptom 1681 1694	czarne stolce
+N11	Reference T33 ICD10:K92.1	Stolce smołowate
+T34	Symptom 1696 1712	brunatne wymioty
+N12	Reference T34 ICD10:K92.0	Wymioty krwawe
+T35	Symptom 1714 1729	duszność nocną,
+N13	Reference T35 ICD10:R06.0	Duszność
+T36	Symptom 1730 1745	obrzęki podudzi
+N14	Reference T36 ICD10:R60.0	Obrzęk zlokalizowany
+T37	Symptom 1747 1771	bóle w klatce piersiowej
+N15	Reference T37 ICD10:R07.2	Ból w okolicy przedsercowej
+T38	Symptom 1773 1792	Innych dolegliwości
+T39	Negation 1793 1804	nie zgłasza
+T40	Condition 1819 1840	Nadciśnienie tętnicze
+N16	Reference T40 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T41	Condition 1842 1858	Choroba wrzodowa
+N17	Reference T41 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T42	Behaviour 1872 1882	Nikotynizm
+N18	Reference T42 ICD10:Z72.0	Używanie tytoniu
+T43	Treatment 1911 1919	operacji
+A3	Status T43 Historical_Insignificant
+N19	Reference T43 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T44	Condition 1920 1934	żylaków odbytu
+A4	Status T44 Historical_Insignificant
+N20	Reference T44 ICD10:I84.9	Hemoroidy, nieokreślone, bez powikłań
+T45	Date 1936 1943	03/2019
+T46	Condition 1972 1975	WZW
+N21	Reference T46 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T47	Negation 1976 1981	( - )
+T48	Condition 1984 1993	borelioza
+N22	Reference T48 ICD10:A69.2	Choroba z Lyme
+T49	Negation 1994 1999	( - )
+T50	Condition 2001 2009	grużlica
+N23	Reference T50 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T51	Negation 2010 2015	( - )
+T52	Condition 2017 2021	odra
+N24	Reference T52 ICD10:B05	Odra
+T53	Negation 2022 2027	( - )
+T54	Condition 2052 2065	zator (udar?)
+A5	Status T54 Family
+A6	Source T54 Declared
+N25	Reference T54 ICD10:I63.9	Zawał mózgu, nieokreślony
+T55	Condition 2073 2077	udar
+A7	Status T55 Family
+A8	Source T55 Declared
+N26	Reference T55 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T56	Behaviour 2079 2116	Palenie tytoniu: do 1 paczki dziennie
+N27	Reference T56 ICD10:Z72.0	Używanie tytoniu
+T57	Date 2117 2133	od 21 roku zycia
+R9	Dat Arg1:T57 Arg2:T56	
+T58	Behaviour 2135 2146	Inne używki
+T59	Negation 2148 2154	neguje
+T60	Condition 2156 2165	Uczulenia
+N28	Reference T60 ICD10:Z88	
+T61	Negation 2167 2173	neguje
+T62	Behaviour 2191 2217	warunki mieszkaniowe dobre
+T63	Behaviour 2219 2238	mieszka z partnerką
+T64	Behaviour 2247 2256	dziewiarz
+N29	Reference T64 ICD10:Z57.3	Narażenie zawodowe na inne czynniki zanieczyszczające powietrze
+R10	Neg Arg1:T29 Arg2:T30	
+R11	Neg Arg1:T29 Arg2:T31	
+R12	Neg Arg1:T29 Arg2:T32	
+R13	Neg Arg1:T29 Arg2:T33	
+R14	Neg Arg1:T29 Arg2:T34	
+R15	Neg Arg1:T29 Arg2:T35	
+R16	Neg Arg1:T29 Arg2:T36	
+R17	Neg Arg1:T29 Arg2:T37	
+R18	Neg Arg1:T39 Arg2:T38	
+R19	Dat Arg1:T45 Arg2:T44	
+R20	Dat Arg1:T45 Arg2:T43	
+R21	Neg Arg1:T47 Arg2:T46	
+R22	Neg Arg1:T49 Arg2:T48	
+R23	Neg Arg1:T51 Arg2:T50	
+R24	Neg Arg1:T53 Arg2:T52	
+R25	Neg Arg1:T59 Arg2:T58	
+R26	Neg Arg1:T61 Arg2:T60	
+T65	Drug 2264 2271	Milurit
+T66	Drug_dose 2272 2290	100mg 1 tabletka R
+T67	Drug 2292 2309	Noliprel Bi-forte
+T68	Drug_dose 2310 2342	(10+2,5mg) 1 tabletka w południe
+T69	Drug 2344 2356	nitrendypina
+T70	Drug_dose 2357 2379	10mg 1 tabletka R i W,
+R27	Drg Arg1:T65 Arg2:T66	
+R28	Drg Arg1:T67 Arg2:T68	
+R29	Drg Arg1:T69 Arg2:T70	
+T71	Investigation 2394 2397	TTE
+T72	Investigation 2399 2402	TET
+T73	Investigation 2404 2408	ABPM
+T74	Investigation 2410 2420	Holter EKG

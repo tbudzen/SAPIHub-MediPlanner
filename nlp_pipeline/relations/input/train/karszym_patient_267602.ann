@@ -1,0 +1,85 @@
+T1	Condition 447 468	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 470 499	Anemia aplastyczna w wywidzie
+N2	Reference T2 ICD10:D61.9	Niedokrwistość aplastyczna, nieokreślona
+T3	Treatment 612 686	Dalsza opieka w POZ oraz Poradni Kardiologicznej i Poradni Hematologicznej
+T4	Treatment 691 783	Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T5	Date 786 809	pierwsza za 5-6 tygodni
+T6	Behaviour 814 916	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T7	Treatment 921 977	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+R1	Dat Arg1:T5 Arg2:T4	
+T8	Drug 1016 1024	Teldipin
+T9	Drug 1053 1060	Nebilet
+T10	Drug_dose 1025 1051	5mg + 40mg 1 tabletka rano
+T11	Drug_dose 1061 1080	5mg 1 tabletka rano
+R2	Drg Arg1:T8 Arg2:T10	
+R3	Drg Arg1:T9 Arg2:T11	
+T12	Condition 1308 1329	Nadciśnienie tętnicze
+N3	Reference T12 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T13	Condition 1331 1349	Anemia aplastyczna
+N4	Reference T13 ICD10:D61.9	Niedokrwistość aplastyczna, nieokreślona
+A1	Status T13 Historical_Insignificant
+T14	Date 1350 1364	w dzieciństwie
+R4	Dat Arg1:T14 Arg2:T13	
+T15	Treatment 1374 1387	tonsilektomii
+A2	Status T15 Historical_Insignificant
+N5	Reference T15 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T16	Date 1389 1403	w dzieciństwie
+R5	Dat Arg1:T16 Arg2:T15	
+T17	Condition 1572 1595	nadciśnienia tętniczego
+N6	Reference T17 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T18	Symptom 1634 1673	labilnych wartości ciśnienia tętniczego
+T19	Symptom 1679 1732	nietypowych dolegliwości bólowych w klatce piersiowej
+N7	Reference T19 ICD10:R07.3	Inne bóle w klatce piersiowej
+T20	Symptom 1758 1773	kołatania serca
+N8	Reference T20 ICD10:R00.2	Kołatanie serca
+T21	Investigation 1777 1796	domowej kontroli RR
+T22	Investigation_result 1809 1828	140-165/96-120 mmHg
+T23	Investigation_result 1832 1860	max wartościami 212/144 mmHg
+R6	Inv Arg1:T21 Arg2:T22	
+R7	Inv Arg1:T21 Arg2:T23	
+T24	Condition 1882 1900	anemia aplastyczna
+A3	Status T24 Historical_Insignificant
+N9	Reference T24 ICD10:D61.9	Niedokrwistość aplastyczna, nieokreślona
+T25	Date 1901 1915	w dzieciństwie
+R8	Dat Arg1:T25 Arg2:T24	
+T26	Date 1936 1950	w dzieciństwie
+T27	Symptom 1963 1971	omdlenia
+N10	Reference T27 ICD10:R55	Omdlenie i zapaść
+T28	Symptom 1973 1992	utraty przytomności
+T29	Date 1994 2010	do 16 roku życia
+R9	Dat Arg1:T26 Arg2:T27	
+R10	Dat Arg1:T26 Arg2:T28	
+R11	Dat Arg1:T29 Arg2:T28	
+R12	Dat Arg1:T29 Arg2:T27	
+T30	Treatment 2057 2070	tonsilektomia
+A4	Status T30 Historical_Insignificant
+N11	Reference T30 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T31	Date 2071 2085	w dzieciństwie
+R13	Dat Arg1:T31 Arg2:T30	
+T32	Condition 2087 2096	oparzenie
+A5	Status T32 Historical_Insignificant
+T33	Condition 2124 2131	arytmia
+A6	Status T33 Family
+N12	Reference T33 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T34	Condition 2151 2172	nadciśnienie tętnicze
+A7	Status T34 Family
+N13	Reference T34 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T35	Behaviour 2173 2189	Miszka z rodziną
+T36	Behaviour 2209 2227	pracownik umysłowy
+T37	Behaviour 2191 2207	pracuje zawodowo
+T38	Drug 2235 2248	Co-Prestarium
+T39	Drug_dose 2249 2270	5mg+5mg 1,5 tabl rano
+T40	Drug 2280 2289	Captopril
+T41	Drug_dose 2290 2296	12,5mg
+T42	Drug_dose 2271 2279	doraźnie
+R14	Drg Arg1:T38 Arg2:T39	
+R15	Drg Arg1:T40 Arg2:T41	
+R16	Drg Arg1:T40 Arg2:T42	
+T43	Investigation 2345 2355	echo serca
+T44	Investigation 2357 2361	ABPM
+T45	Investigation 2363 2378	próba wysiłkowa
+T46	Investigation 2380 2390	holter-EKG
+A8	Status T2 Historical_Insignificant
+T47	Date 1547 1558	wieloletnim
+R17	Dat Arg1:T47 Arg2:T17	

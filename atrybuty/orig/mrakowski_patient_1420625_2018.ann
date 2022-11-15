@@ -1,0 +1,120 @@
+T1	Drug 341 347	Lokren
+T2	Drug 349 358	Liphantyl
+T3	Drug 361 371	Glucophage
+T4	Drug 374 386	Hydroxyzinum
+T5	Condition 843 891	Umiarkowana niedomykalność zastawki trójdzielnej
+N1	Reference T5 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T6	Condition 893 934	Łagodna niedomykalność zastawki mitralnej
+N2	Reference T6 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T7	Condition 936 1011	Komorowe zaburzenia rytmu serca (pobudzenia pojedyncze, bigeminia komorowa)
+N3	Reference T7 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T9	Condition 1013 1046	Pojedyncze pobudzenia nadkomorowe
+N5	Reference T9 ICD10:I49.1	
+T10	Condition 1049 1064	Cukrzyca typu 2
+N6	Reference T10 ICD10:E11	Cukrzyca insulinoniezależna
+T11	Condition 1066 1087	Hipertrójglicerydemia
+N7	Reference T11 ICD10:E78.1	Czysta hiperglicerydemia
+T12	Condition 1089 1118	Polekowe stłuszczenie wątroby
+N8	Reference T12 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T13	Treatment 1229 1312	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Diabetologicznej
+T14	Behaviour 1315 1354	Dieta cukrzycowa  , niskocholesterolowa
+T15	Investigation 1358 1441	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T16	Investigation 1444 1492	Systematyczna kontrola ciśnienia tętniczego krwi
+T17	Treatment 1495 1536	Wskazane systematyczne przyjmowanie leków
+T18	Drug 1543 1549	Lokren
+T19	Drug_dose 1550 1580	20 mg 1 x dz po 1/2 tabl. rano
+R1	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1584 1593	Liphantyl
+T21	Drug_dose 1594 1620	160 supra 1 x dz wieczorem
+R2	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1624 1634	Glucophage
+T23	Drug_dose 1635 1651	500 - 0 -1000 mg
+R3	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1655 1670	Magne B6 Cardio
+T25	Drug_dose 1671 1677	2 x dz
+R4	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1679 1689	Witamina D
+T27	Drug_dose 1690 1710	1000 j.m 1 x dz rano
+R5	Drg Arg1:T26 Arg2:T27	
+T28	Symptom 1882 1945	okresowych bólów w klatce piersiowej nie związanych z wysiłkiem
+N9	Reference T28 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T29	Symptom 1951 1966	kołatania serca
+N10	Reference T29 ICD10:R00.2	Kołatanie serca
+T30	Symptom 1969 1991	Nasilenie dolegliwości
+T31	Date 1992 2005	od 3 miesięcy
+R6	Dat Arg1:T31 Arg2:T30	
+T32	Symptom 2015 2027	zasłabnięcie
+N11	Reference T32 ICD10:R55	Omdlenie i zapaść
+T33	Drug 2039 2056	antybiotyku Zamur
+T34	Date 2057 2064	02.2015
+R7	Dat Arg1:T34 Arg2:T33	
+T35	Condition 2082 2113	Komorowe zaburzenia rytmu serca
+N12	Reference T35 ICD10:I49.3	
+T36	Investigation_result 2116 2145	3 tyś pojedynczych oraz 7 par
+N13	Reference T36 ICD10:I49.3	Inne zaburzenia rytmu serca
+T37	Investigation 2148 2158	holter EKG
+R8	Inv Arg1:T37 Arg2:T36	
+T38	Date 2161 2165	2013
+R9	Dat Arg1:T38 Arg2:T37	
+R10	Dat Arg1:T38 Arg2:T36	
+T39	Condition 2170 2185	Cukrzyca typu 2
+N14	Reference T39 ICD10:E11	Cukrzyca insulinoniezależna
+T40	Condition 2188 2207	Zaburzenie lipidowe
+N15	Reference T40 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T41	Condition 2210 2239	Polekowe stłuszczenie wątroby
+N16	Reference T41 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T42	Treatment 2243 2260	Przebyte operacje
+T43	Treatment 2271 2297	usunięciu narządów rodnych
+A1	Status T43 Historical_Insignificant
+T44	Condition 2307 2323	torbieli jajnika
+A2	Status T44 Historical_Insignificant
+N17	Reference T44 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T45	Date 2325 2332	05.2017
+R11	Dat Arg1:T45 Arg2:T44	
+R12	Dat Arg1:T45 Arg2:T43	
+T46	Treatment 2335 2354	Leczenie przewlekłe
+T47	Treatment 2357 2397	diabetologicznej i gastroenterologicznej
+T48	Condition 2426 2429	WZW
+N18	Reference T48 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T49	Condition 2439 2448	borelioza
+N19	Reference T49 ICD10:A69.2	Choroba z Lyme
+T50	Negation 2451 2452	-
+R13	Neg Arg1:T50 Arg2:T49	
+T51	Negation 2432 2433	-
+R14	Neg Arg1:T51 Arg2:T48	
+T52	Condition 2457 2476	wywiadzie rodzinnym
+A3	Status T52 Family
+T53	Condition 2489 2509	hipetrójglicerydemia
+A4	Status T53 Family
+N20	Reference T53 ICD10:E78.1	Czysta hiperglicerydemia
+T54	Condition 2512 2520	cukrzyca
+A5	Status T54 Family
+N21	Reference T54 ICD10:E14	Cukrzyca nieokreślona
+T55	Behaviour 2522 2537	Palenie tytoniu
+N22	Reference T55 ICD10:Z72.0	Używanie tytoniu
+T56	Negation 2539 2542	nie
+R15	Neg Arg1:T56 Arg2:T55	
+T57	Behaviour 2543 2554	Inne używki
+T58	Negation 2556 2559	nie
+R16	Neg Arg1:T58 Arg2:T57	
+T59	Condition 2560 2569	Uczulenia
+T60	Drug 2586 2602	antybiotyk Zamur
+N23	Reference T59 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R17	Alg Arg1:T59 Arg2:T60	
+T61	Behaviour 2620 2646	warunki mieszkaniowe dobre
+T62	Drug 2671 2677	Lokren
+T63	Drug_dose 2678 2708	20 mg 1 x dz po 1/2 tabl. rano
+R18	Drg Arg1:T62 Arg2:T63	
+T64	Drug 2711 2720	Liphantyl
+T65	Drug_dose 2721 2747	160 supra 1 x dz wieczorem
+R19	Drg Arg1:T64 Arg2:T65	
+T66	Drug 2750 2760	Glucophage
+T67	Drug_dose 2761 2777	500 - 0 -1000 mg
+R20	Drg Arg1:T66 Arg2:T67	
+T68	Drug 2780 2785	Xanax
+T69	Drug_dose 2786 2809	0,25 doraźnie 1/2 tabl.
+R21	Drg Arg1:T68 Arg2:T69	
+T70	Investigation 2825 2835	Echo serca
+T71	Investigation 2838 2853	Holter EKG i RR
+T72	Investigation 2856 2871	Próba Wysiłkowa
+N4	Reference T57 ICD10:Z72	Problemy związane ze stylem życia

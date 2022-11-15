@@ -1,0 +1,131 @@
+T1	Treatment 333 352	Dalsza opieka w POZ
+T2	Treatment 357 416	Wskazana dalsza okresowa kontrola w Poradni Kardiologicznej
+T3	Investigation 432 466	badania angio-CT tętnic wieńcowych
+T4	Treatment 536 645	Wskazana ponowna hospitalizacja w Klinice Kardiologii i Wad Wrodzonych Dorosłych w celu oceny kardiologicznej
+T5	Date 646 665	za około 6 miesięcy
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Investigation 670 773	Okresowa kontrola morfologii, lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T7	Date 785 799	za 4-6 tygodni
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Behaviour 804 906	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T9	Investigation 911 967	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T10	Condition 1186 1243	Wada serca pod postacią jednopłatkowej zastawki aortalnej
+N1	Reference T10 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T11	Treatment 1253 1297	implantacji kardiostymulatora Etrinsa 6 DR-T
+T12	Date 1358 1368	27/09/2017
+R3	Dat Arg1:T12 Arg2:T11	
+T13	Symptom 1371 1420	Nawracające omdlenia wazowagalne kardiodepresyjne
+N2	Reference T13 ICD10:R55	Omdlenie i zapaść
+T14	Treatment 1442 1473	porodzie przez cięcie cesarskie
+T15	Date 1475 1485	02/08/2018
+R4	Dat Arg1:T15 Arg2:T14	
+A1	Status T14 Historical_Insignificant
+T16	Condition 1705 1762	Wada serca pod postacią jednopłatkowej zastawki aortalnej
+N3	Reference T16 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T17	Condition 1764 1815	Intermitujący blok przedsionkowo-komorowy I stopnia
+N4	Reference T17 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T18	Treatment 1825 1869	implantacji kardiostymulatora Etrinsa 6 DR-T
+T19	Date 1930 1940	27/09/2017
+R5	Dat Arg1:T19 Arg2:T18	
+T20	Symptom 1943 1992	Nawracające omdlenia wazowagalne kardiodepresyjne
+N5	Reference T20 ICD10:R55	Omdlenie i zapaść
+T21	Treatment 2014 2045	porodzie przez cięcie cesarskie
+A2	Status T21 Historical_Insignificant
+T22	Date 2047 2057	02/08/2018
+R6	Dat Arg1:T22 Arg2:T21	
+T23	Symptom 2314 2329	kołatania serca
+N6	Reference T23 ICD10:R00.2	Kołatanie serca
+T24	Negation 2331 2337	Neguje
+T25	Symptom 2338 2350	zasłabnięcia
+T26	Symptom 2352 2360	omdlenia
+N7	Reference T26 ICD10:R55	Omdlenie i zapaść
+T27	Symptom 2362 2375	zawroty głowy
+N8	Reference T27 ICD10:R42	Zawroty głowy i odurzenie
+T28	Symptom 2377 2387	krwawienia
+T29	Symptom 2389 2402	czarne stolce
+N9	Reference T29 ICD10:K92.1	Stolce smołowate
+T30	Symptom 2404 2420	brunatne wymioty
+N10	Reference T30 ICD10:K92.0	Wymioty krwawe
+T31	Condition 2422 2438	chorobę wrzodową
+N11	Reference T31 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T32	Symptom 2440 2454	duszność nocną
+N12	Reference T32 ICD10:R06.0	Duszność
+T33	Symptom 2456 2471	obrzęki podudzi
+T34	Symptom 2473 2497	bóle w klatce piersiowej
+N14	Reference T34 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+R7	Neg Arg1:T24 Arg2:T34	
+R8	Neg Arg1:T24 Arg2:T33	
+R9	Neg Arg1:T24 Arg2:T25	
+R10	Neg Arg1:T24 Arg2:T26	
+R11	Neg Arg1:T24 Arg2:T27	
+R12	Neg Arg1:T24 Arg2:T28	
+R13	Neg Arg1:T24 Arg2:T29	
+R14	Neg Arg1:T24 Arg2:T30	
+R15	Neg Arg1:T24 Arg2:T31	
+R16	Neg Arg1:T24 Arg2:T32	
+T35	Symptom 2499 2518	Innych dolegliwości
+T36	Negation 2519 2530	nie zgłasza
+R17	Neg Arg1:T36 Arg2:T35	
+T37	Condition 2545 2602	Wada serca pod postacią jednopłatkowej zastawki aortalnej
+N15	Reference T37 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T38	Treatment 2612 2656	implantacji kardiostymulatora Etrinsa 6 DR-T
+T39	Date 2717 2727	27/09/2017
+R18	Dat Arg1:T39 Arg2:T38	
+T40	Symptom 2730 2779	NAwracające omdlenia wazowagalne kardiodepresyjne
+N16	Reference T40 ICD10:R55	Omdlenie i zapaść
+T41	Treatment 2801 2832	porodzie przez cięcie cesarskie
+A3	Status T41 Historical_Insignificant
+T42	Date 2834 2844	02/08/2018
+R19	Dat Arg1:T42 Arg2:T41	
+T43	Treatment 2847 2866	Leczenie przewlekłe
+T44	Condition 2909 2912	WZW
+N17	Reference T44 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T45	Condition 2921 2930	borelioza
+N18	Reference T45 ICD10:A69.2	Choroba z Lyme
+T46	Condition 2938 2946	grużlica
+T47	Condition 2954 2958	odra
+N20	Reference T47 ICD10:B05	Odra
+T48	Negation 2961 2962	-
+R20	Neg Arg1:T48 Arg2:T47	
+T49	Negation 2949 2950	-
+R21	Neg Arg1:T49 Arg2:T46	
+T50	Negation 2933 2934	-
+R22	Neg Arg1:T50 Arg2:T45	
+T51	Negation 2915 2916	-
+R23	Neg Arg1:T51 Arg2:T44	
+T52	Condition 2965 2980	Wywiad rodzinny
+A4	Status T52 Family
+T53	Negation 2982 2992	nieistotny
+R24	Neg Arg1:T53 Arg2:T52	
+T54	Behaviour 2993 3008	Palenie tytoniu
+T55	Negation 3010 3016	neguje
+R25	Neg Arg1:T55 Arg2:T54	
+T56	Behaviour 3018 3029	Inne używki
+T57	Negation 3031 3037	neguje
+R26	Neg Arg1:T57 Arg2:T56	
+T58	Condition 3039 3048	Uczulenia
+T59	Negation 3050 3056	neguje
+R27	Neg Arg1:T59 Arg2:T58	
+T60	Behaviour 3074 3100	warunki mieszkaniowe dobre
+T63	Investigation 3152 3155	TTE
+T64	Investigation 3157 3160	TET
+T65	Investigation 3162 3166	ABPM
+T66	Investigation 3168 3178	Holter EKG
+T61	Treatment 469 503	oceną aorty piersiowej i brzusznej
+T62	Treatment 1300 1356	elektrod: RA Solia S53 oraz RV Solia S60 w trybie DDD 60
+R28	Dat Arg1:T12 Arg2:T62	
+T67	Treatment 1872 1928	elektrod: RA Solia S53 oraz RV Solia S60 w trybie DDD 60
+R29	Dat Arg1:T19 Arg2:T67	
+T68	Treatment 2659 2715	elektrod: RA Solia S53 oraz RV Solia S60 w trybie DDD 60
+R30	Dat Arg1:T39 Arg2:T68	
+T69	Treatment 2868 2882	kardiologiczne
+N23	Reference T58 ICD10:T78.4	Alergia, nieokreślona
+N24	Reference T25 ICD10:R55	Omdlenie i zapaść
+N21	Reference T54 ICD10:Z72.0	Używanie tytoniu
+N22	Reference T28 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N13	Reference T33 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N19	Reference T46 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N25	Reference T56 ICD10:Z72	Problemy związane ze stylem życia
+T70	Drug 3119 3123	Leki
+T71	Negation 3125 3136	nie stosuje
+R31	Neg Arg1:T71 Arg2:T70	

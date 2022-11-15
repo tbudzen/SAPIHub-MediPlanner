@@ -1,0 +1,94 @@
+T1	Condition 448 472	Choroby tarczycy - guzki
+N1	Reference T1 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T2	Condition 474 488	Niedokrwistość
+N2	Reference T2 ICD10:D64.9	Niedokrwistość, nieokreślona
+T3	Condition 490 505	Mięśniak macicy
+N3	Reference T3 ICD10:D25	Mięśniak gładkokomórkowy macicy
+T4	Condition 658 691	Napadowy częstoskurcz nadkomorowy
+N4	Reference T4 ICD10:I47.1	Częstoskurcz nadkomorowy
+T5	Condition 705 731	Zaburzenia miesiączkowania
+N5	Reference T5 ICD10:N92.6	Nieregularne miesiączki, nieokreślone
+T6	Symptom 733 741	Omdlenia
+N6	Reference T6 ICD10:R55	Omdlenie i zapaść
+T7	Symptom 744 756	zasłabnięcia
+T8	Condition 988 1015	częstoskurczu nadkomorowego
+N7	Reference T8 ICD10:I47.1	Częstoskurcz nadkomorowy
+T9	Symptom 1057 1065	2 omdleń
+N8	Reference T9 ICD10:R55	Omdlenie i zapaść
+T10	Symptom 1068 1084	kilku zasłabnięć
+T11	Symptom 1101 1117	kołataniem serca
+N9	Reference T11 ICD10:R00.2	Kołatanie serca
+T12	Symptom 1119 1171	kołatania serca trwają do 20min, ustępują samoistnie
+N10	Reference T12 ICD10:R00.2	Kołatanie serca
+T13	Investigation_result 1195 1209	RR <140/90mmHg
+N11	Reference T13 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T14	Condition 1211 1237	obfite i długie miesiączki
+N12	Reference T14 ICD10:N92.5	Inne określone nieregularne miesiączki
+T15	Condition 1239 1268	zakażenie Helicobacter pylori
+N13	Reference T15 ICD10:B96.8	Inne określone bakterie jako przyczyna chorób sklasyfikowanych w innych rozdziałach
+T16	Negation 1270 1276	Neguje
+T17	Symptom 1278 1288	krwawienia
+T18	Symptom 1290 1303	czarne stolce
+N15	Reference T18 ICD10:K92.1	Stolce smołowate
+T19	Symptom 1305 1321	brunatne wymioty
+N16	Reference T19 ICD10:K92.0	Wymioty krwawe
+T20	Condition 1323 1339	chorobę wrzodową
+N17	Reference T20 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T21	Symptom 1341 1355	duszność nocną
+N18	Reference T21 ICD10:R06.0	Duszność
+T22	Symptom 1357 1372	obrzęki podudzi
+T23	Symptom 1374 1398	bóle w klatce piersiowej
+T24	Condition 1400 1402	HA
+N21	Reference T24 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T25	Condition 1404 1406	DM
+N22	Reference T25 ICD10:E14	Cukrzyca nieokreślona
+R1	Neg Arg1:T16 Arg2:T25	
+R2	Neg Arg1:T16 Arg2:T24	
+R3	Neg Arg1:T16 Arg2:T23	
+R4	Neg Arg1:T16 Arg2:T22	
+R5	Neg Arg1:T16 Arg2:T21	
+R6	Neg Arg1:T16 Arg2:T20	
+R7	Neg Arg1:T16 Arg2:T19	
+R8	Neg Arg1:T16 Arg2:T18	
+R9	Neg Arg1:T16 Arg2:T17	
+T26	Treatment 1409 1426	Przebyte operacje
+T27	Treatment 1428 1448	zabieg kciuka lewego
+A1	Status T27 Historical_Insignificant
+T28	Behaviour 1449 1464	Palenie tytoniu
+N23	Reference T28 ICD10:Z72.0	Używanie tytoniu
+T29	Negation 1466 1471	nigdy
+R10	Neg Arg1:T29 Arg2:T28	
+T30	Behaviour 1472 1483	Inne używki
+T31	Negation 1485 1488	nie
+R11	Neg Arg1:T31 Arg2:T30	
+T32	Condition 1489 1498	Uczulenia
+N24	Reference T32 ICD10:T78.4	Alergia, nieokreślona
+T33	Negation 1500 1503	nie
+R12	Neg Arg1:T33 Arg2:T32	
+T34	Condition 1531 1534	WZW
+N25	Reference T34 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T35	Negation 1536 1537	-
+R13	Neg Arg1:T35 Arg2:T34	
+T36	Condition 1541 1550	borelioza
+N26	Reference T36 ICD10:A69.2	Choroba z Lyme
+T37	Negation 1553 1554	-
+R14	Neg Arg1:T37 Arg2:T36	
+T38	Condition 1558 1561	tbc
+T39	Negation 1563 1564	-
+R15	Neg Arg1:T39 Arg2:T38	
+T40	Behaviour 1582 1608	warunki mieszkaniowe dobre
+T41	Drug 1645 1651	Concor
+T42	Drug_dose 1652 1674	2,5mg 1x 1/4 tabl/rano
+R16	Drg Arg1:T41 Arg2:T42	
+T43	Investigation 1735 1756	badania laboratoryjne
+T44	Investigation 1758 1762	ECHO
+T45	Investigation 1764 1782	EKG metodą Holtera
+T46	Investigation 1784 1788	ABPM
+T47	Investigation 1790 1805	próba wysiłkowa
+N28	Reference T7 ICD10:R55	Omdlenie i zapaść
+N29	Reference T10 ICD10:R55	Omdlenie i zapaść
+N14	Reference T17 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N19	Reference T22 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N20	Reference T23 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N30	Reference T30 ICD10:Z72	Problemy związane ze stylem życia
+N27	Reference T38 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

@@ -1,0 +1,85 @@
+T1	Condition 414 452	Zespół dwupłatkowej zastawki aortalnej
+T2	Condition 454 512	Izolowana istotna niedomykalność zastawki aortalnej IIIst.
+N1	Reference T2 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T3	Condition 513 542	Poszerzenie aorty wstępującej
+T4	Treatment 685 712	dalsza opieka w poradni POZ
+T5	Treatment 723 757	hospitalizacja w tutejszej Klinice
+T6	Date 758 775	za ok. 6 miesięcy
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Condition 919 963	złożoną wadą dwupłatkowej zastawki aortalnej
+T8	Symptom 990 1042	okresowych dolegliwości bólowych w klatce piersiowej
+N2	Reference T8 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T9	Symptom 1044 1057	kołatań serca
+N3	Reference T9 ICD10:R00.2	Kołatanie serca
+T10	Symptom 1063 1077	zawrotów głowy
+N4	Reference T10 ICD10:R42	Zawroty głowy i odurzenie
+T11	Negation 1080 1086	Neguje
+T12	Symptom 1088 1100	zasłabnięcia
+T13	Symptom 1102 1110	omdlenia
+N5	Reference T13 ICD10:R55	Omdlenie i zapaść
+T14	Symptom 1112 1122	krwawienia
+T15	Symptom 1124 1137	czarne stolce
+N6	Reference T15 ICD10:K92.1	Stolce smołowate
+T16	Symptom 1139 1155	brunatne wymioty
+N7	Reference T16 ICD10:K92.0	Wymioty krwawe
+T17	Condition 1157 1173	chorobę wrzodową
+N8	Reference T17 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T18	Symptom 1175 1189	duszność nocną
+N9	Reference T18 ICD10:R06.0	Duszność
+T19	Symptom 1191 1206	obrzęki podudzi
+R2	Neg Arg1:T11 Arg2:T12	
+R3	Neg Arg1:T11 Arg2:T13	
+R4	Neg Arg1:T11 Arg2:T14	
+R5	Neg Arg1:T11 Arg2:T15	
+R6	Neg Arg1:T11 Arg2:T16	
+R7	Neg Arg1:T11 Arg2:T17	
+R8	Neg Arg1:T11 Arg2:T18	
+R9	Neg Arg1:T11 Arg2:T19	
+T20	Treatment 1208 1225	Przebyte operacje
+N11	Reference T20 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T21	Negation 1227 1237	nie podaje
+R10	Neg Arg1:T21 Arg2:T20	
+T22	Behaviour 1246 1263	pali okazjonalnie
+T23	Behaviour 1264 1275	Inne używki
+T24	Negation 1277 1280	nie
+T25	Condition 1281 1290	Uczulenia
+N12	Reference T25 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T26	Negation 1292 1295	nie
+T27	Condition 1323 1326	WZW
+N13	Reference T27 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T28	Condition 1333 1342	borelioza
+N14	Reference T28 ICD10:A69.2	Choroba z Lyme
+T29	Condition 1348 1351	tbc
+N15	Reference T29 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T30	Condition 1357 1361	odra
+N16	Reference T30 ICD10:B05	Odra
+T31	Condition 1367 1381	kontakt z odrą
+N17	Reference T31 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+T32	Negation 1327 1330	(-)
+T33	Negation 1343 1346	(-)
+T34	Negation 1352 1355	(-)
+T35	Negation 1362 1365	(-)
+T36	Negation 1382 1385	(-)
+R11	Neg Arg1:T24 Arg2:T23	
+R12	Neg Arg1:T26 Arg2:T25	
+R13	Neg Arg1:T32 Arg2:T27	
+R14	Neg Arg1:T33 Arg2:T28	
+R15	Neg Arg1:T34 Arg2:T29	
+R16	Neg Arg1:T35 Arg2:T30	
+R17	Neg Arg1:T36 Arg2:T31	
+T37	Behaviour 1402 1428	warunki mieszkaniowe dobre
+T38	Drug 1429 1433	Leki
+T39	Negation 1435 1448	nie przyjmuje
+R18	Neg Arg1:T39 Arg2:T38	
+T40	Investigation 1509 1530	badania laboratoryjne
+T41	Investigation 1532 1536	ECHO
+T42	Investigation 1538 1556	EKG metodą Holtera
+T43	Investigation 1558 1562	ABPM
+T44	Investigation 1564 1579	próba wysiłkowa
+N18	Reference T1 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+N19	Reference T7 ICD10:Q23	Wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+N21	Reference T22 ICD10:Z72.0	Używanie tytoniu
+N20	Reference T12 ICD10:R55	Omdlenie i zapaść
+N22	Reference T14 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N10	Reference T19 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+N23	Reference T23 ICD10:Z72	Problemy związane ze stylem życia

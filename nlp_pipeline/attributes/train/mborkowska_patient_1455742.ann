@@ -1,0 +1,181 @@
+T1	Investigation 492 521	kontrola ciśnienia tętniczego
+T2	Investigation 539 609	kontrola lipidogramu i glikemii, kontrolna morfologia z retikulocytozą
+T3	Behaviour 632 699	dieta niskocholesterolowa oraz niskoglikemiczna (regularne posiłki)
+T4	Behaviour 706 730	oszczędzający tryb życia
+T5	Drug 777 785	Prenessa
+T6	Drug_dose 786 809	4mg 1/2 tabl. wieczorem
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 818 829	Betaloc ZOK
+T8	Drug_dose 830 845	50 1 tabl. rano
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 855 864	Cordarone
+T10	Drug_dose 865 883	200mg 1 tabl. rano
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 894 901	Xarelto
+T12	Drug_dose 902 925	20 mg 1 tabl. wieczorem
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 936 945	Furosemid
+T14	Drug_dose 946 958	1 tabl. rano
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Drug 968 976	Spironol
+T16	Drug_dose 977 1001	25 mg 1 tabl. w południe
+R6	Drg Arg1:T15 Arg2:T16	
+T17	Drug 1011 1017	Sortis
+T18	Drug_dose 1018 1041	40 mg 1 tabl. wieczorem
+R7	Drg Arg1:T17 Arg2:T18	
+T19	Drug 1050 1066	Sorbifer Durules
+T20	Drug_dose 1067 1181	1 tabl. rano i wieczorem (dawka do optymalizacji pod kontrolą lekarza POZ po ocenie morfologii krwi za 2 tygodnie)
+R8	Drg Arg1:T19 Arg2:T20	
+T21	Drug 1190 1215	Emofix maść hemostatyczna
+T22	Drug_dose 1250 1277	2xdziennie przez 2 tygodnie
+R9	Drg Arg1:T21 Arg2:T22	
+T23	Drug 1287 1304	Rinopanteina maść
+T24	Drug_dose 1339 1374	2xdziennie minimum przez 2 miesiące
+R10	Drg Arg1:T23 Arg2:T24	
+T25	Drug 1384 1389	Nasen
+T26	Drug_dose 1390 1406	1 tabl. doraźnie
+R11	Drg Arg1:T25 Arg2:T26	
+T27	Investigation 4163 4173	Echo serca
+T28	Investigation 4176 4186	Holter EKG
+T29	Investigation 4190 4193	TEE
+T30	Drug 3949 3956	Betaloc
+T31	Drug_dose 3957 3970	50 1x dz rano
+R12	Drg Arg1:T30 Arg2:T31	
+T32	Drug 3973 3981	Spironol
+T33	Drug_dose 3982 3998	25 mg 1x dz rano
+R13	Drg Arg1:T32 Arg2:T33	
+T34	Drug 4001 4010	Cordarone
+T35	Drug_dose 4011 4026	200 1 x dz rano
+R14	Drg Arg1:T34 Arg2:T35	
+T36	Drug 4029 4040	Furosemidum
+T37	Drug_dose 4041 4051	1x dz rano
+R15	Drg Arg1:T36 Arg2:T37	
+T38	Drug 4054 4060	Sortis
+T39	Drug_dose 4061 4082	20 mg 1x dz wieczorem
+R16	Drg Arg1:T38 Arg2:T39	
+T40	Drug 4084 4091	Tritace
+T41	Drug_dose 4092 4114	2,5 1 x dz po 1/2 tabl
+R17	Drg Arg1:T40 Arg2:T41	
+T42	Drug 4118 4125	Xarelto
+T43	Drug_dose 4126 4147	20 mg 1x dz wieczorem
+R18	Drg Arg1:T42 Arg2:T43	
+T44	Behaviour 3898 3924	warunki mieszkaniowe dobre
+T45	Negation 3875 3881	neguje
+T46	Negation 3860 3863	nie
+T47	Negation 3824 3832	nie pali
+T48	Condition 3864 3873	Uczulenia
+N1	Reference T48 ICD10:T78.4	Alergia, nieokreślona
+R19	Neg Arg1:T45 Arg2:T48	
+T49	Behaviour 3847 3858	Inne używki
+R20	Neg Arg1:T46 Arg2:T49	
+T50	Behaviour 3807 3822	Palenie tytoniu
+N2	Reference T50 ICD10:T65.2	Tytoń i nikotyna
+R21	Neg Arg1:T47 Arg2:T50	
+T51	Negation 3792 3805	: brak danych
+T52	Condition 3770 3791	W wywiadzie rodzinnym
+A1	Status T52 Family
+R22	Neg Arg1:T51 Arg2:T52	
+T53	Condition 3741 3744	WZW
+N3	Reference T53 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T54	Condition 3754 3763	borelioza
+N4	Reference T54 ICD10:A69.2	Choroba z Lyme
+T55	Negation 3745 3751	( -  )
+R23	Neg Arg1:T55 Arg2:T53	
+T56	Negation 3764 3769	( - )
+R24	Neg Arg1:T56 Arg2:T54	
+T57	Treatment 3651 3675	Przebyte operacje:  j. w
+T58	Condition 1635 1662	Przewlekła choroba wieńcowa
+N5	Reference T58 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T59	Treatment 1716 1836	jednoczasową plastyką zastawki mitralnej z użyciem sztucznego pierścienia oraz dekalcyfikacją płatków zastawki aortalnej
+T60	Date 1838 1848	05.02.2015
+R25	Dat Arg1:T60 Arg2:T59	
+T61	Condition 1851 1912	złożona wada serca pod postacią pod postacią łagodnej stenozy
+N6	Reference T61 ICD10:Q23.2	Wrodzone zwężenie zastawki mitralnej
+T62	Condition 1915 1952	niedomykalności mitralnej III stopnia
+N7	Reference T62 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T63	Condition 1958 2016	umiarkowanej stenozy i niedomykalności aortalnej I stopnia
+T64	Condition 2018 2054	niedomykalność trójdzielna I stopnia
+N9	Reference T64 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+N8	Reference T63 ICD10:I35.2	Zwężenie zastawki aortalnej z niedomykalnością
+T65	Condition 2056 2121	Przewlekła rozkurczowa niewydolność serca w II/III klasie wg NYHA
+N10	Reference T65 ICD10:I50	Niewydolność serca
+T66	Condition 2123 2143	Hipercholesterolemia
+N11	Reference T66 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T67	Behaviour 2164 2174	Nikotynizm
+T68	Date 2175 2188	w przeszłości
+R26	Dat Arg1:T68 Arg2:T67	
+T69	Condition 2190 2224	Nadciśnienie tętnicze skorygowane.
+N13	Reference T69 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T70	Condition 2804 2811	Nadwaga
+N14	Reference T70 ICD10:E66	Otyłość
+T71	Condition 2761 2802	Niedokrwistość łagodna z niedoboru żelaza
+N15	Reference T71 ICD10:D50.9	Niedokrwistość z niedoboru żelaza, nieokreślona
+T72	Symptom 2730 2759	Nawracające krwawienia z nosa
+N16	Reference T72 ICD10:R04.0	Epistaxis
+T73	Investigation_result 2569 2664	Zmiany w istocie białej obu półkul mózgu i moście po stronie prawej - prawdopodobnie bliznowate
+T74	Investigation_result 2666 2728	zmiana poudarowa 46x13x12mm w lewej skorupie mózgowia i wyspie
+T75	Condition 2508 2532	udarze krwotocznym mózgu
+N17	Reference T75 ICD10:I61	Krwotok śródczaszkowy
+T76	Symptom 2535 2560	niedowładem prawostronnym
+N18	Reference T76 ICD10:G81	Porażenie połowicze
+T77	Date 2562 2566	2007
+R27	Dat Arg1:T77 Arg2:T76	
+R28	Dat Arg1:T77 Arg2:T75	
+T78	Condition 2813 2863	Nieprawidłowa tolerancja glukozy świeżo rozpoznana
+N19	Reference T78 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T79	Symptom 2865 2879	Zaburzenia snu
+N20	Reference T79 ICD10:G47	Zaburzenia snu
+T80	Condition 2452 2498	blok przedniej wiązki lewej odnogi pęczka Hisa
+N21	Reference T80 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T81	Condition 2403 2438	napadowy częstoskurcz przedsionkowy
+N22	Reference T81 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T82	Treatment 2357 2391	skuteczna kardiowersja elektryczna
+T83	Date 2393 2400	02.2016
+R29	Dat Arg1:T83 Arg2:T82	
+T84	Condition 2315 2347	Napadowe migotanie przedsionków,
+N23	Reference T84 ICD10:I48	Migotanie i trzepotanie przedsionków
+R30	Dat Arg1:T83 Arg2:T84	
+T85	Condition 2225 2305	Miażdżyca tętnic szyjnych (stenoza 30% podziału tętnicy szyjnej wspólnej prawej)
+N24	Reference T85 ICD10:I70.8	Miażdżyca innych tętnic
+T86	Condition 2308 2313	aorty
+N25	Reference T86 ICD10:I70.0	Miażdżyca aorty
+T87	Treatment 2146 2162	trakcie leczenia
+T88	Symptom 3119 3165	podwyższone wartości ciśnienia tętniczego krwi
+T89	Condition 3594 3611	krwawieniu do OUN
+N26	Reference T89 ICD10:I61	Krwotok śródczaszkowy
+T90	Date 3614 3620	2007 r
+R31	Dat Arg1:T90 Arg2:T89	
+T91	Symptom 3623 3649	Okresowe krwawienia z nosa
+N27	Reference T91 ICD10:R04.0	Epistaxis
+T92	Condition 3473 3506	Przetrwałe migotanie przedsionków
+N28	Reference T92 ICD10:I48	Migotanie i trzepotanie przedsionków
+T93	Treatment 3516 3558	kardiowersji elektrycznej skutecznej 150 J
+T94	Date 3559 3566	02.2016
+R32	Dat Arg1:T94 Arg2:T93	
+R33	Dat Arg1:T94 Arg2:T92	
+T95	Drug 3574 3581	Xarelto
+R34	Alg Arg1:T92 Arg2:T95	
+T96	Condition 3237 3264	Choroba niedokrwienna serca
+N29	Reference T96 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T97	Symptom 3175 3187	zasłabnięcia
+N30	Reference T97 ICD10:R55	Omdlenie i zapaść
+T98	Symptom 3197 3221	bóle w klatce piersiowej
+N31	Reference T98 ICD10:R07.3	Inne bóle w klatce piersiowej
+T99	Negation 3190 3196	neguje
+R35	Neg Arg1:T99 Arg2:T98	
+T100	Negation 3168 3174	Neguje
+R36	Neg Arg1:T100 Arg2:T97	
+T101	Treatment 3274 3435	CABG ( LITA do LAD, SVG do IMg , RCA)  z jednoczasową plastyką zastawki mitralnej z użyciem sztucznego pierścienia oraz dekalcyfikacją płatków zastawki aortalnej
+T102	Date 3437 3447	05.02.2015
+R37	Dat Arg1:T102 Arg2:T101	
+T103	Investigation 3089 3092	TEE
+T104	Condition 3049 3072	wady mitralno-aortalnej
+T105	Condition 3450 3471	Nadciśnienie tętnicze
+N32	Reference T105 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T106	Date 610 623	za 2 tygodnie
+R38	Dat Arg1:T106 Arg2:T2	
+T107	Treatment 1673 1713	CABG (LITA do LAD, SVG, do IMg i do RCA)
+R39	Dat Arg1:T60 Arg2:T107	
+N12	Reference T67 ICD10:T65.2	Tytoń i nikotyna
+T108	Date 3833 3845	od 2007 roku
+R40	Dat Arg1:T108 Arg2:T50	

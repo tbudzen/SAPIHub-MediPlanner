@@ -1,0 +1,550 @@
+allRelations          : 16
+oks                   : 6
+isRedundantAndRemoveds: 7
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 2
+GOOD / BAD            : 13 / 3
+Sentence 0:
+------------------------------------------------
+Wiek: 16 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+1) Dalsza opieka kardiologiczna: wizytę w poradni kardiologicznej wiosną 2020 r. proszę umówić pod numerem telefonu 42 271-15-06 
+2)
+R1	Dat Arg1:T2 Arg2:T1 << OK >>	wiosną 2020 r. -> wizytę w poradni kardiologicznej  <RANK: 3> <info: start[395, 362] <type: LEFT>>
+R2	Dat Arg1:T2 Arg2:T3 <<REDUNDANT!!!SHOULD BE REMOVED>>	wiosną 2020 r. -> Dalsza opieka kardiologiczna  <RANK: 3> <info: start[395, 332] <type: LEFT>>
+
+
+Sentence 4:
+Pacjent może podejmować wysiłki fizyczne na poziomie rekreacyjnym.
+
+
+
+Sentence 5:
+3) Raz w roku wskazana jest ocena aorty piersiowej i brzusznej  za pomocą badania usg doppler celem wykluczenia ewentualnego tętniaka w/w odcinków.
+
+R3	Dat Arg1:T5 Arg2:T20 << OK >>	Raz w roku -> ocena aorty piersiowej i brzusznej  <RANK: 3> <info: start[532, 557] <type: RIGHT>>
+R4	Dat Arg1:T5 Arg2:T21 << OK >>	Raz w roku -> celem wykluczenia ewentualnego tętniaka w/w odcinków  <RANK: 2> <info: start[532, 623] <type: RIGHT>>
+R5	Dat Arg1:T5 Arg2:T6 <<SHOULD NOT BE REMOVED>>	Raz w roku -> badania usg doppler <:REMOVED other second tag between (right) (dat):> <RANK: 2> <info: start[532, 603] <type: RIGHT>>
+
+
+Sentence 6:
+------------------------------------------------
+
+
+
+Sentence 7:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 8:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q25.3|Rozpoznanie II: ICD10:I71.2|Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: ICD10:Z98.8|Opisowo:: Wrodzona wada serca pod postacią zastawkowego zwężenia aorty- stan po komisurotomii dwupłatkowej zastawki aortalnej oraz plastyce tętniaka części wstępującej aorty.
+
+
+Sentence 9:
+Korekcja wady w dniu 30.09.2010r.
+
+R6	Dat Arg1:T12 Arg2:T11 << OK >>	30.09.2010r -> Korekcja wady  <RANK: 3> <info: start[1113, 1092] <type: LEFT>>
+
+
+Sentence 10:
+------------------------------------------------
+
+
+
+Sentence 11:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 12:
+pacjent z SA , po korekcji, leków na stałe nie otrzymuje , wywiad alergiczny ujemny
+------------------------------------------------
+
+R7	Neg Arg1:T16 Arg2:T13 <<REDUNDANT!!!REMOVED>>	nie otrzymuje -> SA <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1293, 1260] <type: LEFT>>
+R8	Neg Arg1:T16 Arg2:T17 <<REDUNDANT!!!REMOVED>>	nie otrzymuje -> wywiad alergiczny <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1293, 1309] <type: RIGHT>>
+R9	Neg Arg1:T16 Arg2:T10 <<REDUNDANT!!!REMOVED>>	nie otrzymuje -> korekcji <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1293, 1268] <type: LEFT>>
+R10	Neg Arg1:T16 Arg2:T15 << OK >>	nie otrzymuje -> leków na stałe  <RANK: 3> <info: start[1293, 1278] <type: LEFT>>
+R11	Neg Arg1:T18 Arg2:T13 <<REDUNDANT!!!REMOVED>>	ujemny -> SA <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1327, 1260] <type: LEFT>>
+R12	Neg Arg1:T18 Arg2:T17 << OK >>	ujemny -> wywiad alergiczny  <RANK: 3> <info: start[1327, 1309] <type: LEFT>>
+R13	Neg Arg1:T18 Arg2:T10 <<REDUNDANT!!!REMOVED>>	ujemny -> korekcji <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1327, 1268] <type: LEFT>>
+R14	Neg Arg1:T18 Arg2:T15 <<REDUNDANT!!!REMOVED>>	ujemny -> leków na stałe <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1327, 1278] <type: LEFT>>
+R15	Alg Arg1:T13 Arg2:T15 <<REDUNDANT!!!REMOVED>>	SA -> leków na stałe <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1260, 1278] <type: RIGHT>>
+R16	Alg Arg1:T17 Arg2:T15 <<REDUNDANT!!!SHOULD BE REMOVED>>	wywiad alergiczny -> leków na stałe  <RANK: 2> <info: start[1309, 1278] <type: LEFT>>
+
+
+Sentence 13:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 14:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.29[10^3/ul]
+    
+
+
+Sentence 15:
+RBC Krwinki czerwone:4.87[10^6/ul]
+    
+
+
+Sentence 16:
+HGB Hemoglobina:13.9[g/dl]
+    
+
+
+Sentence 17:
+HCT Hematokryt:41.3[%]
+    
+
+
+Sentence 18:
+MCV wskaźnik czerwonokrw:84.2[fl]
+    
+
+
+Sentence 19:
+MCH wskaźnik czerwonokrw:28.3[pg]
+    
+
+
+Sentence 20:
+MCHC wskaźnik czerwonokr:33.7[g/dl]
+    
+
+
+Sentence 21:
+PLT z morfologii:111[10^3/ul]
+    
+
+
+Sentence 22:
+RDW-SD:39.1[fl]
+    
+
+
+Sentence 23:
+RDW-CV:12.7[%]
+    PDW:21.1[fl]
+    
+
+
+Sentence 24:
+MPV:14.0[fl]
+    
+
+
+Sentence 25:
+P-LCR:55.8[%]
+    
+
+
+Sentence 26:
+PCT (hematokryt płytkowy:0.16[%]
+    
+
+
+Sentence 27:
+NEUTR# wartość bezwzględ:2.15[10^3/ul]
+    
+
+
+Sentence 28:
+NEUTR%:49.9[%]
+    
+
+
+Sentence 29:
+LYMH# wartość bezwzględn:1.39[10^3/ul]
+    
+
+
+Sentence 30:
+LYMPH%:31.6[%]
+    
+
+
+Sentence 31:
+MONO# wartość bezwzględn:0.45[10^3/ul]
+    
+
+
+Sentence 32:
+MONO%:11.1[%]
+    
+
+
+Sentence 33:
+EO# wartość bezwzględna:0.29[10^3/ul]
+    
+
+
+Sentence 34:
+EO%:6.7[%]
+    
+
+
+Sentence 35:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    BASO%:0.7[%]
+    
+
+
+Sentence 36:
+NRBC %:0.0[%]
+    
+
+
+Sentence 37:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 38:
+Antytrombina III: Antytrombina III:100[%]
+
+
+
+Sentence 39:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:32.8[sek]
+
+
+
+Sentence 40:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 41:
+Czas protrombinowy:12.6[sek]
+    
+
+
+Sentence 42:
+Wskaźnik PT:87.3[%]
+    
+
+
+Sentence 43:
+INR:1.14
+Czas trombinowy TT: Czas trombinowy TT:16.6[sek]
+
+
+
+Sentence 44:
+Fibrynogen: Fibrynogen:1.93[g/L]
+
+
+
+Sentence 45:
+Badanie ogólne moczu
+    
+
+
+Sentence 46:
+barwa:żółty[ ]
+    
+
+
+Sentence 47:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 48:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 49:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 50:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 51:
+ciężar właściwy:1.024[ ]
+    
+
+
+Sentence 52:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 53:
+pH:6.0[ ]
+    
+
+
+Sentence 54:
+białko:nieobecne[ ]
+    
+
+
+Sentence 55:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 56:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 57:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 58:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 59:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 60:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 61:
+leukocyty:2 /ul[ul]
+    erytrocyty świeże:1 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 62:
+TSH: TSH:1.50[uIU/ml]
+
+
+
+Sentence 63:
+FT3: FT3:3.21[pg/ml]
+
+
+
+Sentence 64:
+FT4: FT4:1.33[ng/dl]
+
+
+
+Sentence 65:
+Troponina T: Troponina T:7.9[pg/ml]
+
+
+
+Sentence 66:
+ALAT: ALAT:13[U/L]
+ASPAT: ASPAT:24[U/L]
+
+
+
+Sentence 67:
+CKMB aktywność: CKMB:7[U/L]
+
+
+
+Sentence 68:
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 69:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 70:
+Potas (K): Potas:4.2[mmol/L]
+
+
+
+Sentence 71:
+Chlorki (Cl): Chlorki:102[mmol/L]
+
+
+
+Sentence 72:
+Kreatynina + GFR
+    
+
+
+Sentence 73:
+Kreatynina w surowicy:0.87[mg/dl]
+    
+
+
+Sentence 74:
+eGFR stand. wg Schwartza:160.1[ml/min/1,73 m^2]
+    
+
+
+Sentence 75:
+eGFR zmod.
+
+
+Sentence 76:
+wg Schwartza:94.5[ml/min/1,73 m^2]
+    wzrost:199[cm]
+
+
+
+Sentence 77:
+Mleczany (LAC): Mleczany:14.4[mg/dl]
+
+
+
+Sentence 78:
+Mleczany (LAC): Mleczany:76.2[mg/dl]
+
+
+
+Sentence 79:
+Magnez: Magnez:0.83[mmol/L]
+
+
+
+Sentence 80:
+Mocznik: Mocznik:35[mg/dl]
+
+
+
+Sentence 81:
+Wapń całkowity: Wapń całkowity:2.39[mmol/L]
+
+
+
+Sentence 82:
+Lipidogram
+    
+
+
+Sentence 83:
+Cholesterol całkowity:147[mg/dl]
+    
+
+
+Sentence 84:
+Cholesterol HDL:43[mg/dl]
+    
+
+
+Sentence 85:
+Cholestrol LDL:94[mg/dl]
+    Triglicerydy:67[mg/dl]
+    
+
+
+Sentence 86:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:90[mg/dl]
+
+
+
+Sentence 87:
+------------------------------------------------
+
+
+
+Sentence 88:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 89:
+Q25.3
+I71.2
+Z98.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 90:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 91:
+A01
+
+
+
+Sentence 92:
+I81
+G21
+L43
+O61
+G03
+
+
+
+Sentence 93:
+G25
+M87
+L69
+N45
+O69
+88.777
+C55
+G53
+G11
+I97
+O55
+I17
+O77
+N11
+I19
+O35
+M37
+
+
+
+Sentence 94:
+N13
+
+
+
+Sentence 95:
+M19
+8
+------------------------------------------------
+
+

@@ -1,0 +1,44 @@
+T1	Condition 442 500	Wrodzona wada serca - ubytek w przegrodzie międzykomorowej
+N1	Reference T1 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T2	Condition 503 523	międzyprzedsionkowej
+N2	Reference T2 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T3	Condition 528 543	Wiotkość krtani
+N3	Reference T3 ICD10:Q31	Wrodzone wady rozwojowe krtani
+T4	Drug 664 673	Pulmicort
+T5	Drug 675 683	Spironol
+T6	Drug 685 694	Captopril
+T7	Drug 696 703	Vit. D3
+T8	Condition 892 898	ASD II
+N4	Reference T8 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T9	Condition 901 904	VSD
+N5	Reference T9 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T10	Condition 906 939	podejrzenie nadciśnienia płucnego
+A1	Source T10 Declared
+N6	Reference T10 ICD10:I27.2	Nadciśnienie płucne wtórne o innej etiologii
+T11	Condition 1030 1057	podejrzeniem zapalenia płuc
+N7	Reference T11 ICD10:J18	Zapalenie płuc wywołane przez niezidentyfikowany czynnik zakaźny
+A2	Source T11 Declared
+T12	Symptom 1072 1099	przedłużającej się biegunki
+N8	Reference T12 ICD10:K59.1	Biegunka czynnościowa
+T13	Drug 1284 1293	Augmentin
+T14	Drug 1338 1347	Captopril
+T15	Treatment 1313 1332	leczenie moczopędne
+T16	Symptom 1381 1443	średnio liczne luźne stolce, niektóre z domieszką świeżej krwi
+N9	Reference T16 ICD10:R19.5	Inne patologie kału
+T17	Negation 1456 1466	wykluczono
+T18	Investigation_result 1467 1498	zakażenie adeno i rotawirusami,
+N10	Reference T18 ICD10:B34.8	Inne zakażenia wirusowe o nieokreślonym umiejscowieniu
+R1	Neg Arg1:T17 Arg2:T18	
+T19	Investigation 1523 1534	posiew kału
+T20	Investigation_result 1537 1559	obecna Klebsiella ESBL
+N11	Reference T20 ICD10:B96.1	Klebsiella pneumoniae [K. pneumoniae] jako przyczyna chorób sklasyfikowanych w innych rozdziałach
+R2	Inv Arg1:T19 Arg2:T20	
+T21	Symptom 1586 1592	kaszle
+N12	Reference T21 ICD10:R05	Kaszel
+T22	Symptom 1594 1613	nasilił się stridor
+N13	Reference T22 ICD10:R06.1	Świst krtaniowy
+T23	Behaviour 1615 1639	zjada po 90 ml mieszanki
+T24	Condition 853 871	zespołem wielu wad
+N14	Reference T24 ICD10:Q87	Inne określone zespoły wrodzonych wad rozwojowych dotyczące wielu układów
+T25	Condition 1245 1259	zapalenia płuc
+N15	Reference T25 ICD10:J18	Zapalenie płuc wywołane przez niezidentyfikowany czynnik zakaźny

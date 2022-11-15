@@ -1,0 +1,183 @@
+T1	Drug 341 351	Pernizinum
+T2	Drug 353 359	Onirex
+T3	Drug 361 368	Romazic
+T4	Drug 370 374	Agen
+T5	Drug 376 384	Enarenal
+T6	Drug 386 396	Ipres long
+T7	Drug 398 409	etocard ZK,
+T8	Drug 410 418	Flutixon
+T9	Drug 420 427	Zafiron
+T10	Drug 429 437	Euthyrox
+T11	Drug 439 445	Siofor
+T12	Drug 447 453	Axyven
+T13	Investigation 589 612	kontrola AST, ALT, GGTP
+T14	Date 613 621	za 5 dni
+R1	Dat Arg1:T14 Arg2:T13	
+T15	Investigation 2767 2771	ECHO
+T16	Investigation 2773 2791	EKG metodą Holtera
+T17	Investigation 2793 2797	ABPM
+T18	Investigation 2799 2814	próba wysiłkowa
+T19	Drug 2656 2662	Onirex
+T20	Drug 2626 2636	Pernazinum
+T21	Drug 2598 2604	Axyven
+T22	Drug 2569 2575	Siofor
+T23	Drug 2545 2551	Siofor
+T24	Drug 2516 2524	Euthyrox
+T25	Drug 2502 2509	Zafiron
+T26	Drug 2487 2495	Flutixon
+T27	Drug_dose 2663 2683	10mg 1x 1/2 tabl/noc
+R2	Drg Arg1:T19 Arg2:T27	
+T28	Drug_dose 2637 2655	25mg 1x 3 tabl/noc
+R3	Drg Arg1:T20 Arg2:T28	
+T29	Drug_dose 2605 2625	150mg 1x 1 tabl/rano
+R4	Drg Arg1:T21 Arg2:T29	
+T30	Drug_dose 2496 2501	2x dz
+R5	Drg Arg1:T26 Arg2:T30	
+T31	Drug_dose 2510 2515	2x dz
+R6	Drg Arg1:T25 Arg2:T31	
+T32	Drug_dose 2525 2544	175N 1x 1 tabl/rano
+R7	Drg Arg1:T24 Arg2:T32	
+T33	Drug_dose 2552 2568	850mg 1-1-0 tabl
+R8	Drg Arg1:T23 Arg2:T33	
+T34	Drug_dose 2576 2597	500mg 1x 1 tabl/wiecz
+R9	Drg Arg1:T22 Arg2:T34	
+T35	Drug 2458 2466	Metocard
+T36	Drug 2428 2438	Ipres long
+T37	Drug 2403 2411	Enarenal
+T38	Drug 2378 2382	Agen
+T39	Drug_dose 2383 2402	10mg 1x 1 tabl/rano
+R10	Drg Arg1:T38 Arg2:T39	
+T40	Drug_dose 2412 2427	20mg 1-0-1 tabl
+R11	Drg Arg1:T37 Arg2:T40	
+T41	Drug_dose 2439 2457	1,5 1x 1 tabl/rano
+R12	Drg Arg1:T36 Arg2:T41	
+T42	Drug_dose 2467 2486	50mg 1x 1 tabl/rano
+R13	Drg Arg1:T35 Arg2:T42	
+T43	Behaviour 2316 2342	warunki mieszkaniowe dobre
+T44	Condition 2265 2268	WZW
+T45	Condition 2275 2284	borelioza
+N2	Reference T45 ICD10:A69.2	Choroba z Lyme
+T46	Condition 2292 2295	tbc
+N3	Reference T46 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T47	Negation 2296 2299	(-)
+R14	Neg Arg1:T47 Arg2:T46	
+T48	Negation 2285 2290	( - )
+R15	Neg Arg1:T48 Arg2:T45	
+T49	Negation 2269 2272	(-)
+R16	Neg Arg1:T49 Arg2:T44	
+T50	Condition 2216 2225	Uczulenia
+N4	Reference T50 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T51	Drug 2227 2237	penicylina
+R17	Alg Arg1:T50 Arg2:T51	
+T52	Negation 2212 2215	nie
+T53	Behaviour 2199 2211	Inne używki:
+R18	Neg Arg1:T52 Arg2:T53	
+T54	Behaviour 2160 2198	Palenie tytoniu: tak (ostatnio 4-5/dz)
+T55	Treatment 2098 2110	strumektomia
+T56	Treatment 2112 2128	cholecystektomia
+T57	Treatment 2130 2143	appendektomia
+T58	Treatment 2145 2159	tonsillektomia
+T59	Negation 1930 1936	Neguje
+T60	Symptom 1938 1950	zasłabnięcia
+N6	Reference T60 ICD10:R55	Omdlenie i zapaść
+T61	Symptom 1952 1960	omdlenia
+N7	Reference T61 ICD10:R55	Omdlenie i zapaść
+T62	Symptom 1962 1975	czarne stolce
+N8	Reference T62 ICD10:K92.1	Stolce smołowate
+T63	Symptom 1977 1994	brunatne wymioty,
+N9	Reference T63 ICD10:K92.0	Wymioty krwawe
+T64	Condition 1995 2011	chorobę wrzodową
+N10	Reference T64 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T65	Symptom 2013 2027	duszność nocną
+T66	Symptom 2029 2044	obrzęki podudzi
+N12	Reference T66 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T67	Symptom 2046 2054	nudnosci
+N13	Reference T67 ICD10:R11	Nudności i wymioty
+T68	Symptom 2056 2063	wymioty
+N14	Reference T68 ICD10:R11	Nudności i wymioty
+T69	Symptom 2065 2077	bóle brzucha
+N15	Reference T69 ICD10:R10.4	Inny i nieokreślony ból brzucha
+R19	Neg Arg1:T59 Arg2:T60	
+R20	Neg Arg1:T59 Arg2:T61	
+R21	Neg Arg1:T59 Arg2:T62	
+R22	Neg Arg1:T59 Arg2:T63	
+R23	Neg Arg1:T59 Arg2:T64	
+R24	Neg Arg1:T59 Arg2:T65	
+R25	Neg Arg1:T59 Arg2:T66	
+R26	Neg Arg1:T59 Arg2:T67	
+R27	Neg Arg1:T59 Arg2:T68	
+R28	Neg Arg1:T59 Arg2:T69	
+T70	Symptom 1722 1758	kołatania serca trwające klika minut
+N16	Reference T70 ICD10:R00.2	Kołatanie serca
+T71	Symptom 1770 1808	owarzyszącym bólem w klatce piersiowej
+N17	Reference T71 ICD10:R07.3	Inne bóle w klatce piersiowej
+T72	Symptom 1875 1907	luźne stolce prawidłowego koloru
+N18	Reference T72 ICD10:R19.5	Inne patologie kału
+T73	Symptom 1909 1928	schudła 7kg/1,5 mca
+T74	Condition 1437 1439	HA
+N19	Reference T74 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T75	Investigation_result 1441 1469	RR w domu 130/140-/80-90mmHg
+T76	Condition 1472 1481	DM typu 2
+N20	Reference T76 ICD10:E11	Cukrzyca insulinoniezależna
+T77	Condition 1483 1486	OSA
+T78	Condition 1488 1505	astmą oskrzelową,
+N21	Reference T78 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T79	Condition 1154 1170	Astma oskrzelowa
+N22	Reference T79 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T80	Condition 1063 1079	Cukrzyca typu 2.
+N23	Reference T80 ICD10:E11	Cukrzyca insulinoniezależna
+T81	Condition 1506 1514	depresją
+N24	Reference T81 ICD10:F32.9	Epizod depresyjny, nieokreślony
+T82	Symptom 697 710	(luźne stolce
+T83	Investigation_result 712 752	podwyższone wartości enzymów wątrobowych
+T84	Condition 1172 1180	Depresja
+N25	Reference T84 ICD10:F32.9	Epizod depresyjny, nieokreślony
+T85	Symptom 1014 1039	Bóle w klatce piersiowej.
+T86	Condition 1040 1061	Nadciśnienie tętnicze
+N27	Reference T86 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T87	Condition 1080 1103	Hiperlipidemia mieszana
+N28	Reference T87 ICD10:E78.2	Hiperlipidemia mieszana
+T88	Condition 1182 1196	Otyłość III st
+N29	Reference T88 ICD10:E66	Otyłość
+T89	Behaviour 1198 1219	Przewlekły nikotynizm
+T90	Treatment 1230 1242	strumektomii
+T91	Treatment 1244 1260	cholecystektomii
+T92	Treatment 1262 1275	appendektomii
+T93	Treatment 1277 1291	tonsillektomii
+T94	Condition 1516 1525	otyłością
+N31	Reference T94 ICD10:E66	Otyłość
+T95	Behaviour 1527 1551	przewlekłym nikotynizmem
+T96	Symptom 1582 1603	duszności wysiłkowej,
+N33	Reference T96 ICD10:R06.0	Duszność
+T97	Symptom 1604 1646	zmniejszenia tolerancji wysiłku fizycznego
+N34	Reference T97 ICD10:R53	Złe samopoczucie i zmęczenie
+T98	Date 1647 1655	od 6m-cy
+R29	Dat Arg1:T98 Arg2:T97	
+T99	Symptom 1657 1698	bólów zamostkowych przy wysiłku fizycznym
+N35	Reference T99 ICD10:R07.3	Inne bóle w klatce piersiowej
+T100	Symptom 1851 1860	plamienie
+N36	Reference T100 ICD10:N93	Inne nieprawidłowe krwawienia maciczne i pochwowe
+T101	Condition 1127 1152	Obturacyjny bezdech senny
+N37	Reference T101 ICD10:G47.3	Bezdech senny
+T102	Condition 1105 1125	Stłuszczenie wątroby
+N38	Reference T102 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+N26	Reference T85 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+A1	Status T90 Historical_Insignificant
+A2	Status T91 Historical_Insignificant
+A3	Status T92 Historical_Insignificant
+A4	Status T93 Historical_Insignificant
+N32	Reference T95 ICD10:Z72.0	Używanie tytoniu
+T103	Date 1862 1874	od 2 tygodni
+R30	Dat Arg1:T103 Arg2:T72	
+A5	Status T55 Historical_Insignificant
+A6	Status T56 Historical_Insignificant
+A7	Status T57 Historical_Insignificant
+A8	Status T58 Historical_Insignificant
+N5	Reference T54 ICD10:Z72.0	Używanie tytoniu
+N1	Reference T44 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T104	Treatment 564 586	kontrola u lekarza POZ
+T105	Treatment 763 796	kontrola w Poradni Kardiologiczne
+N30	Reference T89 ICD10:Z72.0	Używanie tytoniu
+N11	Reference T65 ICD10:R06.0	Duszność
+N39	Reference T53 ICD10:Z72	Problemy związane ze stylem życia
+T106	Treatment 639 696	wskazana diagnostyka w kierunku chorób układu pokarmowego

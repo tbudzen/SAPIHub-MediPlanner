@@ -1,0 +1,103 @@
+T1	Condition 457 508	Diagnostyka w kierunku choroby niedokrwiennej serca
+N1	Reference T1 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T2	Negation 511 520	negatywna
+R1	Neg Arg1:T2 Arg2:T1	
+T3	Condition 522 549	Łagodna arytmia nadkomorowa
+T4	Condition 551 596	Izolowana dysfunkcja rozkurczowa lewej komory
+T5	Condition 598 640	Niedoczynność tarczycy w stadium eutyreozy
+T6	Condition 642 674	Zmiany zwyrodnieniowe kręgosłupa
+A1	Status T6 Historical_Insignificant
+N5	Reference T6 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+N4	Reference T5 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T7	Condition 819 843	niedoczynnością tarczycy
+N6	Reference T7 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T8	Symptom 882 1037	nawracających dolegliwości bólowych w klatce piersiowej o charakterze ucisku promieniujących do gardła i żuchwy, z towarzyszącym uczuciem drętwienia języka
+N7	Reference T8 ICD10:R07.2	Ból w okolicy przedsercowej
+T9	Symptom 1050 1075	przyspieszone wartości HR
+N8	Reference T9 ICD10:R00.0	Tachykardia, nieokreślona
+T10	Drug 1094 1103	ConcorCor
+T11	Drug_dose 1104 1136	1,25mg 1 tabl. 1 x dziennie rano
+R2	Drg Arg1:T10 Arg2:T11	
+T12	Symptom 1160 1200	dolegliwości bólowe w obrębie palców rąk
+T13	Condition 1235 1268	choroba zwyrodnieniowa kręgosłupa
+N9	Reference T13 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T14	Negation 1270 1276	Neguje
+T15	Symptom 1278 1290	zasłabnięcia
+T16	Symptom 1292 1300	omdlenia
+N10	Reference T16 ICD10:R55	Omdlenie i zapaść
+T17	Symptom 1302 1312	krwawienia
+T18	Symptom 1314 1327	czarne stolce
+N11	Reference T18 ICD10:K92.1	Stolce smołowate
+T19	Symptom 1329 1345	brunatne wymioty
+N12	Reference T19 ICD10:K92.0	Wymioty krwawe
+T20	Condition 1347 1363	chorobę wrzodową
+N13	Reference T20 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T21	Symptom 1365 1379	duszność nocną
+N14	Reference T21 ICD10:R06.0	Duszność
+T22	Symptom 1381 1396	obrzęki podudzi
+N15	Reference T22 ICD10:R60.0	Obrzęk zlokalizowany
+R3	Neg Arg1:T14 Arg2:T15	
+R4	Neg Arg1:T14 Arg2:T16	
+R5	Neg Arg1:T14 Arg2:T17	
+R6	Neg Arg1:T14 Arg2:T18	
+R7	Neg Arg1:T14 Arg2:T19	
+R8	Neg Arg1:T14 Arg2:T20	
+R9	Neg Arg1:T14 Arg2:T21	
+R10	Neg Arg1:T14 Arg2:T22	
+A3	Status T13 Historical_Insignificant
+T23	Treatment 1398 1415	Przebyte operacje
+N16	Reference T23 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T24	Negation 1417 1427	nie podaje
+T25	Behaviour 1428 1443	Palenie tytoniu
+N17	Reference T25 ICD10:Z72.0	Używanie tytoniu
+T26	Negation 1445 1448	nie
+T27	Behaviour 1449 1453	pali
+R11	Neg Arg1:T26 Arg2:T27	
+R12	Neg Arg1:T26 Arg2:T25	
+T28	Behaviour 1455 1466	Inne używki
+T29	Negation 1468 1471	nie
+T30	Condition 1472 1481	Uczulenia
+N18	Reference T30 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T31	Negation 1483 1486	nie
+R13	Neg Arg1:T29 Arg2:T28	
+R14	Neg Arg1:T31 Arg2:T30	
+R15	Neg Arg1:T24 Arg2:T23	
+T32	Condition 1514 1517	WZW
+N19	Reference T32 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T33	Condition 1524 1533	borelioza
+N20	Reference T33 ICD10:A69.2	Choroba z Lyme
+T34	Condition 1539 1542	tbc
+N21	Reference T34 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T35	Condition 1548 1552	odra
+N22	Reference T35 ICD10:B05	Odra
+T36	Condition 1558 1572	kontakt z odrą
+T37	Negation 1518 1521	(-)
+T38	Negation 1534 1537	(-)
+T39	Negation 1543 1546	(-)
+T40	Negation 1553 1556	(-)
+T41	Negation 1573 1576	(-)
+R16	Neg Arg1:T37 Arg2:T32	
+R17	Neg Arg1:T38 Arg2:T33	
+R18	Neg Arg1:T39 Arg2:T34	
+R19	Neg Arg1:T40 Arg2:T35	
+R20	Neg Arg1:T41 Arg2:T36	
+T42	Behaviour 1593 1619	warunki mieszkaniowe dobre
+T43	Drug 1654 1663	ConcorCor
+T44	Drug_dose 1664 1696	1,25mg 1 tabl. 1 x dziennie rano
+T45	Drug 1697 1707	Euthyrox N
+T46	Drug_dose 1708 1747	88ug 1 tabl. rano na czczo od pon.-czw.
+T47	Drug 1748 1758	Euthyrox N
+T48	Drug_dose 1759 1795	75 ug 1 tabl. rano na czczo pt.-ndz.
+T49	Drug 1796 1803	Roswera
+T50	Drug_dose 1804 1839	30mg 1 tabl. 1 x dziennie wieczorem
+R21	Drg Arg1:T43 Arg2:T44	
+R22	Drg Arg1:T45 Arg2:T46	
+R23	Drg Arg1:T47 Arg2:T48	
+R24	Drg Arg1:T49 Arg2:T50	
+N23	Reference T36 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+N24	Reference T27 ICD10:Z72.0	Używanie tytoniu
+N3	Reference T4 ICD10:I50.9	Niewydolność serca, nieokreślona
+T51	Condition 1205 1233	charakterze reumatycznym (?)
+A4	Source T51 Declared
+N25	Reference T51 ICD10:M06.9	Reumatoidalne zapalenie stawów, nieokreślone
+N2	Reference T3 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]

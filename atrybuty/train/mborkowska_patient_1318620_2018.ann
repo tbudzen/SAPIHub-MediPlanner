@@ -1,0 +1,166 @@
+T1	Investigation 3354 3364	Echo serca
+T2	Investigation 3367 3377	Holter EKG
+T3	Investigation 3380 3397	Próba Wysiłkowa ,
+T4	Drug 3084 3095	Co-Valsacor
+T5	Drug_dose 3096 3114	160/25 1 x dz rano
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Drug 3117 3126	Nebivolek
+T7	Drug_dose 3127 3152	5 mg 3/4 tabl. 1x dz rano
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Drug 3155 3165	Euthyrox N
+T9	Drug_dose 3166 3198	100 1x dz rano w dni nieparzyste
+R3	Drg Arg1:T8 Arg2:T9	
+T10	Drug 3201 3209	Euthyrox
+T11	Drug_dose 3210 3239	125 1x dz rano w dni parzyste
+R4	Drg Arg1:T10 Arg2:T11	
+T12	Drug 3242 3250	Triticco
+T13	Drug_dose 3251 3264	1 x dz na noc
+R5	Drg Arg1:T12 Arg2:T13	
+T14	Drug 3267 3276	Betaserca
+T15	Drug_dose 3277 3288	24 mg 2x dz
+R6	Drg Arg1:T14 Arg2:T15	
+T16	Drug 3291 3305	Cavinton Forte
+T17	Drug_dose 3306 3322	2 x dz po 1 tabl
+R7	Drg Arg1:T16 Arg2:T17	
+T18	Drug 3324 3332	Doreta  
+T19	Drug_dose 3332 3338	2 x dz
+R8	Drg Arg1:T18 Arg2:T19	
+T20	Behaviour 3033 3059	warunki mieszkaniowe dobre
+T21	Drug 978 990	Co-Valsacor,
+T22	Drug 991 1000	Nebivolek
+T23	Drug 1003 1010	Amlopin
+T24	Drug 1012 1020	Euthyrox
+T25	Drug 1022 1030	Triticco
+T26	Drug 1032 1040	Betaserc
+T27	Drug 1042 1056	Cavinton forte
+T28	Drug 1058 1064	Doreta
+T29	Drug 1066 1073	Ketonal
+T30	Drug 1499 1510	Co-Valsacor
+T31	Drug 1533 1542	Nebivolek
+T32	Drug_dose 1511 1529	160/25 1 x dz rano
+R9	Drg Arg1:T30 Arg2:T32	
+T33	Drug_dose 1543 1568	5 mg 3/4 tabl. 1x dz rano
+R10	Drg Arg1:T31 Arg2:T33	
+T34	Drug 1572 1579	Amlopin
+T35	Drug_dose 1580 1596	10 mg 1 x dz ran
+R11	Drg Arg1:T34 Arg2:T35	
+T36	Drug 1603 1613	Euthyrox N
+T37	Drug_dose 1614 1646	100 1x dz rano w dni nieparzyste
+R12	Drg Arg1:T36 Arg2:T37	
+T38	Drug 1649 1657	Euthyrox
+T39	Drug_dose 1658 1687	125 1x dz rano w dni parzyste
+R13	Drg Arg1:T38 Arg2:T39	
+T40	Drug 1691 1699	Triticco
+T41	Drug_dose 1700 1713	1 x dz na noc
+R14	Drg Arg1:T40 Arg2:T41	
+T42	Drug 1717 1726	Betaserca
+T43	Drug_dose 1727 1738	24 mg 2x dz
+R15	Drg Arg1:T42 Arg2:T43	
+T44	Drug 1742 1756	Cavinton Forte
+T45	Drug_dose 1757 1773	2 x dz po 1 tabl
+R16	Drg Arg1:T44 Arg2:T45	
+T46	Drug 1775 1783	Doreta  
+T47	Drug_dose 1783 1789	2 x dz
+R17	Drg Arg1:T46 Arg2:T47	
+T48	Drug 1794 1801	Milurit
+T49	Drug_dose 1802 1819	100 mg 1x dz rano
+R18	Drg Arg1:T48 Arg2:T49	
+T50	Behaviour 1250 1312	Dieta lekkostrawna , niskocholesterolowa , Dieta niskopurynowa
+T51	Investigation 1323 1397	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T52	Investigation 1414 1449	kontrola ciśnienia tętniczego krwi.
+T53	Negation 3010 3016	neguje
+T54	Condition 2999 3008	Uczulenia
+N1	Reference T54 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R19	Neg Arg1:T53 Arg2:T54	
+T55	Behaviour 2982 2993	Inne używki
+N2	Reference T55 ICD10:Z72	Problemy związane ze stylem życia
+T56	Negation 2995 2998	nie
+R20	Neg Arg1:T56 Arg2:T55	
+T57	Behaviour 2952 2967	Palenie tytoniu
+N3	Reference T57 ICD10:Z72.0	Używanie tytoniu
+T58	Date 2969 2980	25 lat temu
+R21	Dat Arg1:T58 Arg2:T57	
+A1	Status T57 Historical_Insignificant
+T59	Negation 2946 2950	brak
+T60	Condition 2922 2943	W wywiadzie rodzinnym
+A2	Status T60 Family
+R22	Neg Arg1:T59 Arg2:T60	
+T61	Condition 2893 2896	WZW
+N4	Reference T61 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T62	Condition 2906 2915	borelioza
+N5	Reference T62 ICD10:A69.2	Choroba z Lyme
+T63	Negation 2897 2903	( -  )
+R23	Neg Arg1:T63 Arg2:T61	
+T64	Negation 2916 2921	( - )
+R24	Neg Arg1:T64 Arg2:T62	
+T65	Condition 834 858	Rwa kulszowa lewostronna
+N6	Reference T65 ICD10:M54.3	Rwa kulszowa
+T66	Symptom 819 833	Zawroty głowy.
+N7	Reference T66 ICD10:R42	Zawroty głowy i odurzenie
+T67	Treatment 806 817	strumektomi
+T68	Condition 774 797	Niedoczynność tarczycy.
+N8	Reference T68 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T69	Condition 759 772	Hiperurykemia
+N9	Reference T69 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T70	Condition 735 756	Nadciśnienie tętnicze
+N10	Reference T70 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T71	Condition 700 733	Pojedyncze pobudzenia nadkomorowe
+N11	Reference T71 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T72	Condition 620 651	Komorowe zaburzenia rytmu serca
+N12	Reference T72 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T73	Condition 654 675	pobudzenia pojedyncze
+N13	Reference T73 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T74	Condition 681 696	salwa pobudzeni
+N14	Reference T74 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T75	Condition 561 602	Łagodna niedomykalność zastawki mitralnej
+N15	Reference T75 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T76	Condition 605 617	trójdzielnej
+N16	Reference T76 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T77	Condition 450 493	Ubytek w przegrodzie międzyprzedsionkowej  
+N17	Reference T77 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T78	Condition 495 529	nieistotnym przeciekiem lewo prawo
+T79	Condition 533 556	przetrwały otwór owalny
+N18	Reference T79 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T80	Treatment 2758 2774	cholecystektomii
+A3	Status T80 Historical_Insignificant
+T81	Treatment 2785 2793	operacji
+A4	Status T81 Historical_Insignificant
+T82	Condition 2803 2820	mięśniaków macicy
+N19	Reference T82 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+A5	Status T82 Historical_Insignificant
+T83	Condition 2702 2726	Rwa kulszowa lewostronna
+N20	Reference T83 ICD10:M54.3	Rwa kulszowa
+T84	Symptom 2617 2630	Zawroty głowy
+N21	Reference T84 ICD10:R42	Zawroty głowy i odurzenie
+T85	Condition 2664 2697	zaburzenia układu przedsionkowego
+T86	Treatment 2603 2614	strumektomi
+A6	Status T86 Historical_Insignificant
+T87	Condition 2571 2593	Niedoczynność tarczycy
+N22	Reference T87 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T88	Condition 2547 2568	Nadciśnienie tętnicze
+N23	Reference T88 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T89	Condition 2485 2508	żylaków kończyn dolnych
+N24	Reference T89 ICD10:I83	Żylaki kończyn dolnych
+T90	Date 2519 2529	24.09.2018
+T91	Date 2511 2516	07.05
+T92	Treatment 2464 2484	szykowana do zabiegu
+R25	Dat Arg1:T91 Arg2:T89	
+R26	Dat Arg1:T91 Arg2:T92	
+R27	Dat Arg1:T90 Arg2:T89	
+R28	Dat Arg1:T90 Arg2:T92	
+T93	Symptom 2435 2447	zasłabnięcia
+N25	Reference T93 ICD10:R55	Omdlenie i zapaść
+T94	Negation 2428 2434	Neguje
+R29	Neg Arg1:T94 Arg2:T93	
+T95	Symptom 2413 2426	zawroty głowy
+N26	Reference T95 ICD10:R42	Zawroty głowy i odurzenie
+T96	Symptom 2218 2233	kołatania serca
+N27	Reference T96 ICD10:R00.2	Kołatanie serca
+T97	Symptom 2247 2299	bólów w klatce piersiowej nie związanych z wysiłkiem
+N28	Reference T97 ICD10:R07.3	Inne bóle w klatce piersiowej
+T98	Investigation_result 2305 2353	chwiejnych wartości ciśnienia  tętniczego krwi  
+A7	Status T67 Historical_Insignificant
+T99	Treatment 1182 1247	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T100	Symptom 2356 2378	Nasilenie dolegliwości
+T101	Date 2379 2394	od ok koło roku
+R30	Dat Arg1:T101 Arg2:T100	

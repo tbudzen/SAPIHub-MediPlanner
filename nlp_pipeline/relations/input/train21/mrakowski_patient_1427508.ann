@@ -1,0 +1,87 @@
+T1	Condition 450 485	ASD typu II z dużym przeciekiem L-P
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Condition 487 516	Rodzinna hipercholesterolemia
+N2	Reference T2 ICD10:E78.0	Czysta hipercholesterolemia
+T3	Condition 518 534	Astma oskrzelowe
+N3	Reference T3 ICD10:J45	Astma oskrzelowa
+T4	Condition 536 575	Przewlekłe zapalenie zatok przynosowych
+N4	Reference T4 ICD10:J32.4	Przewlekłe zapalenie wszystkich zatok przynosowych
+T5	Treatment 687 726	Planowa hospitalizacja celem zamknięcia
+T6	Date 831 841	09/12/2019
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Behaviour 847 933	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów
+T8	Condition 1105 1111	ASD II
+N5	Reference T8 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T9	Negation 1194 1200	Neguje
+T10	Symptom 1201 1213	zasłabnięcia
+T11	Negation 1216 1222	neguje
+T12	Symptom 1223 1247	bóle w klatce piersiowej
+N6	Reference T12 ICD10:R07	Ból gardła i w klatce piersiowej
+R2	Neg Arg1:T11 Arg2:T12	
+R3	Neg Arg1:T9 Arg2:T10	
+T13	Condition 1263 1279	Astma oskrzelowe
+N7	Reference T13 ICD10:J45	Astma oskrzelowa
+T14	Condition 1281 1320	Przewlekłe zapalenie zatok przynosowych
+N8	Reference T14 ICD10:J32.4	Przewlekłe zapalenie wszystkich zatok przynosowych
+T15	Condition 1322 1351	Rodzinna hipercholesterolemia
+N9	Reference T15 ICD10:E78.0	Czysta hipercholesterolemia
+T16	Treatment 1355 1372	Przebyte operacje
+T17	Treatment 1383 1401	operacji usunięcia
+A1	Status T17 Historical_Insignificant
+T18	Date 1431 1435	2013
+R4	Dat Arg1:T18 Arg2:T17	
+T19	Treatment 1446 1464	operacji usunięcia
+A2	Status T19 Historical_Insignificant
+T20	Date 1483 1487	2013
+R5	Dat Arg1:T20 Arg2:T19	
+T21	Treatment 1489 1527	Leczenie przewlekłe:  pulmonologicznej
+T22	Condition 1556 1559	WZW
+N10	Reference T22 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T23	Condition 1569 1578	borelioza
+N11	Reference T23 ICD10:A69.2	Choroba z Lyme
+T24	Condition 1585 1589	Odra
+N12	Reference T24 ICD10:B05	Odra
+T25	Negation 1592 1593	-
+R6	Neg Arg1:T25 Arg2:T24	
+T26	Negation 1581 1582	-
+R7	Neg Arg1:T26 Arg2:T23	
+T27	Negation 1562 1563	-
+R8	Neg Arg1:T27 Arg2:T22	
+T28	Condition 1598 1617	wywiadzie rodzinnym
+A3	Status T28 Family
+T29	Condition 1620 1649	hipercholesterolemia rodzinna
+A4	Status T29 Family
+N13	Reference T29 ICD10:E78.0	Czysta hipercholesterolemia
+T30	Behaviour 1659 1674	Palenie tytoniu
+N14	Reference T30 ICD10:Z72.0	Używanie tytoniu
+T31	Negation 1676 1679	nie
+R9	Neg Arg1:T31 Arg2:T30	
+T32	Behaviour 1680 1691	Inne używki
+T33	Negation 1693 1696	nie
+R10	Neg Arg1:T33 Arg2:T32	
+T34	Condition 1697 1706	Uczulenia
+T35	Condition 1711 1721	pyłki traw
+T36	Behaviour 1739 1765	warunki mieszkaniowe dobre
+T37	Drug 1801 1821	Symbicort Turbuhaler
+T38	Drug_dose 1822 1839	2x dz po 1 wdechu
+R11	Drg Arg1:T37 Arg2:T38	
+T39	Drug 1842 1853	Sinus Rinse
+T40	Drug_dose 1854 1870	1 x dz do nosowo
+R12	Drg Arg1:T39 Arg2:T40	
+T41	Investigation 1886 1896	Echo serca
+T42	Investigation 1899 1909	Holter EKG
+T43	Investigation 1912 1915	TEE
+T44	Condition 727 730	ASD
+N15	Reference T44 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T45	Condition 1402 1430	polipów z zatoki przynosowej
+N16	Reference T45 ICD10:J33.8	Inne polipy zatok
+R13	Dat Arg1:T18 Arg2:T45	
+T46	Condition 1465 1482	trzeciego migdała
+N17	Reference T46 ICD10:J35.2	Przerost migdałka gardłowego
+R14	Dat Arg1:T20 Arg2:T46	
+T47	Investigation_result 1136 1162	nieistotny hemodynamicznie
+T48	Investigation 1126 1135	badaniach
+R15	Inv Arg1:T48 Arg2:T47	
+A5	Status T45 Historical_Insignificant
+A6	Status T46 Historical_Insignificant
+N18	Reference T34 ICD10:T78.4	Alergia, nieokreślona

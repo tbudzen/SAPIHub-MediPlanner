@@ -1,0 +1,41 @@
+T1	Condition 403 469	Wrodzona wada serca pod postacią ubytku w przegrodzie przedsionków
+T2	Investigation 474 492	Cewnikowanie serca
+T3	Treatment 495 515	zabiegiem zamknięcia
+T4	Condition 516 522	ubytku
+T5	Treatment 523 563	zestawem Amplatzer Septal Occluder 14 mm
+T6	Date 564 581	w dniu 15.10.2018
+T7	Drug 751 761	Cefazolina
+T8	Drug 764 770	Clexan
+T9	Drug 773 779	Acesan
+T10	Treatment 889 912	Kontrola kardiologiczna
+T11	Date 913 926	za ok. 3 m-ce
+T12	Drug 941 948	Acesanu
+T13	Drug_dose 949 965	30 mg codziennie
+T14	Date 966 982	przez 6 miesięcy
+T15	Condition 1201 1263	Wrodzona wada serca pod postacią ubytku przegrody przedsionków
+T16	Drug 1393 1403	Cefazolina
+T17	Drug 1405 1414	kroplówka
+T18	Condition 1554 1557	VSD
+T19	Treatment 1572 1592	zabiegu operacyjnego
+T20	Condition 1595 1612	wywiad alergiczny
+T21	Condition 1613 1621	uczulona
+T22	Drug 1635 1649	leków na stałe
+T23	Negation 1650 1663	nie otrzymuje
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody miÄdzyprzedsionkowej
+N2	Reference T3 ICD10:Z95.8	ObecnoÅÄ innych implantÃ³w i przeszczepÃ³w sercowo-naczyniowych
+N3	Reference T4 ICD10:Q21.0	Ubytek przegrody miÄdzykomorowej
+N4	Reference T15 ICD10:Q20	Wrodzone wady rozwojowe jam i poÅÄczeÅ sercowych
+N5	Reference T18 ICD10:Q21.0	Ubytek przegrody miÄdzykomorowej
+N6	Reference T19 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N7	Reference T20 ICD10:T78.4	Alergia, nieokreÅlona
+N8	Reference T21 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+R15	Dat Arg1:T11 Arg2:T10
+R16	Drg Arg1:T12 Arg2:T13
+R17	Dat Arg1:T14 Arg2:T12
+R2	Dat Arg1:T6 Arg2:T4
+R24	Neg Arg1:T23 Arg2:T22
+R26	Alg Arg1:T20 Arg2:T22
+R27	Alg Arg1:T21 Arg2:T22
+R3	Dat Arg1:T6 Arg2:T3
+R4	Dat Arg1:T6 Arg2:T5
+R5	Dat Arg1:T6 Arg2:T2

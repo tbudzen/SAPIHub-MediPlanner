@@ -1,0 +1,153 @@
+T1	Treatment 332 351	Dalsza opieka w POZ
+T2	Treatment 356 404	Wskazana dalsza opieka w Poradni Kardiologicznej
+T3	Investigation 410 467	wykonanie badania SPECT serca w warunkach ambulatoryjnych
+T4	Treatment 472 542	Wskazana opieka w Poradni Diabetologicznej z powodu świeżo rozpoznanej
+T5	Investigation 556 596	Wskazane kontrolne wykonanie badania EKG
+T6	Investigation 706 798	Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T7	Date 810 825	za 1-2 tygodnie
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Behaviour 830 932	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T9	Behaviour 937 966	Codzienna kontrola masy ciała
+T10	Behaviour 971 1020	Ograniczenie przyjmowania płynów do 1,5 l na dobę
+T11	Treatment 1180 1201	leczenia moczopędnego
+T12	Investigation 1207 1263	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T13	Treatment 1269 1297	Regularne przyjmowanie leków
+T14	Drug 1303 1310	Pradaxa
+T15	Drug_dose 1311 1345	150 mg 1 tabletka rano i wieczorem
+R2	Drg Arg1:T14 Arg2:T15	
+T16	Drug 1347 1354	Coronal
+T17	Drug_dose 1355 1376	7,5mg 1 tabletka rano
+R3	Drg Arg1:T16 Arg2:T17	
+T18	Drug 1379 1386	Tritace
+T19	Drug_dose 1387 1407	10mg 1 tabletka rano
+R4	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1410 1417	Amlozek
+T21	Drug_dose 1418 1443	10mg 1 tabletka wieczorem
+R5	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1445 1453	Torsemed
+T23	Drug_dose 1454 1474	20mg 1 tabletka rano
+R6	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1476 1483	Mononit
+T25	Drug_dose 1484 1505	60mg  1 tabletka rano
+R7	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1508 1515	Roswera
+T27	Drug_dose 1516 1541	20mg 1 tabletka wieczorem
+R8	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1543 1550	Milurit
+T29	Drug_dose 1551 1572	100mg 1 tabletka rano
+R9	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1575 1585	Glucophage
+T31	Drug_dose 1586 1631	500mg 1 tabletka rano, w południe i wieczorem
+R10	Drg Arg1:T30 Arg2:T31	
+T32	Condition 1850 1898	Niewydolność serca z pośrednią frakcją wyrzutową
+T33	Condition 1909 1941	Utrwalone migotanie przedsionków
+N2	Reference T33 ICD10:I48	Migotanie i trzepotanie przedsionków
+T34	Condition 1943 1991	Umiarkowana niedomykalność zastawki trójdzielnej
+N3	Reference T34 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T35	Condition 1993 2034	Łagodna niedomykalność zastawki mitralnej
+N4	Reference T35 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T36	Treatment 2057 2069	leczonym PCI
+A1	Source T36 Declared
+T37	Condition 2091 2106	Cukrzyca typu 2
+N5	Reference T37 ICD10:E11	Cukrzyca insulinoniezależna
+T38	Condition 2108 2121	Hiperurykemia
+N6	Reference T38 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T39	Treatment 2131 2145	tonsillektomii
+A2	Status T39 Historical_Insignificant
+T40	Date 2146 2160	w dzieciństwie
+R11	Dat Arg1:T40 Arg2:T39	
+T41	Condition 2564 2578	AF utrwalonego
+N7	Reference T41 ICD10:I48	Migotanie i trzepotanie przedsionków
+T42	Condition 2625 2628	CHF
+N8	Reference T42 ICD10:I50	Niewydolność serca
+N1	Reference T32 ICD10:I50	Niewydolność serca
+T43	Symptom 2683 2695	utratę 11 kg
+N9	Reference T43 ICD10:R63.4	Nieprawidłowa utrata masy ciała
+T44	Condition 2714 2725	odwodnienie
+T45	Drug 2739 2748	Torsemedu
+T46	Treatment 2791 2817	lecz. PCI + stent (DES BMS
+A3	Source T46 Declared
+T47	Symptom 2888 2908	gorączka reumatyczna
+N10	Reference T47 ICD10:I00	Choroba reumatyczna bez informacji o zajęciu serca
+T49	Condition 2939 2952	hiperurykemia
+N11	Reference T49 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+A4	Source T47 Declared
+T48	Date 2923 2937	w dzieciństwie
+R12	Dat Arg1:T48 Arg2:T47	
+T50	Treatment 2983 2996	tonsilektomii
+A5	Status T50 Historical_Insignificant
+T51	Date 2997 3011	w dzieciństwie
+R13	Dat Arg1:T51 Arg2:T50	
+T52	Condition 3013 3028	Wywiad rodzinny
+A6	Status T52 Family
+T53	Negation 3030 3043	bez znaczenia
+R14	Neg Arg1:T53 Arg2:T52	
+T54	Condition 3045 3052	Alergie
+T55	Negation 3054 3060	neguje
+R15	Neg Arg1:T55 Arg2:T54	
+T56	Behaviour 3062 3072	Nikotynizm
+T57	Date 3074 3084	przed laty
+R16	Dat Arg1:T57 Arg2:T56	
+T58	Behaviour 3087 3108	Alkohol: okazjonalnie
+N13	Reference T58 ICD10:Z72.1	Używanie alkoholu
+T59	Behaviour 3110 3127	Uzależnienie inne
+T60	Negation 3129 3135	neguje
+R17	Neg Arg1:T60 Arg2:T59	
+T61	Behaviour 3153 3162	emerytura
+T62	Behaviour 3164 3181	zawód - bankowość
+T63	Drug 3214 3221	Pradaxa
+T64	Drug_dose 3222 3231	2x 150 mg
+R18	Drg Arg1:T63 Arg2:T64	
+T65	Drug 3233 3240	Mononit
+T66	Drug_dose 3241 3259	60mg  1 tabl. rano
+R19	Drg Arg1:T65 Arg2:T66	
+T67	Drug 3261 3268	Coronal
+T68	Drug_dose 3269 3286	5 mg 1 tabl. rano
+R20	Drg Arg1:T67 Arg2:T68	
+T69	Drug 3288 3295	Tritace
+T70	Drug_dose 3296 3314	10 mg 1 tabl. rano
+R21	Drg Arg1:T69 Arg2:T70	
+T71	Drug 3316 3324	Torsemed
+T72	Drug_dose 3325 3343	20 mg 1 tabl. rano
+T73	Drug 3345 3352	Roswera
+R22	Drg Arg1:T71 Arg2:T72	
+T74	Drug_dose 3353 3375	5 mg 1 tabl. wieczorem
+R23	Drg Arg1:T73 Arg2:T74	
+T75	Drug 3377 3384	Amlozek
+T76	Drug_dose 3385 3408	10 mg 1 tabl. wieczorem
+R24	Drg Arg1:T75 Arg2:T76	
+T77	Drug 3410 3417	Milurit
+T78	Drug_dose 3418 3437	100 mg 1 tabl. rano
+R25	Drg Arg1:T77 Arg2:T78	
+T79	Investigation 3466 3476	echo serca
+T80	Investigation 3478 3481	TET
+T81	Investigation 3483 3487	ABPM
+T82	Investigation 3489 3499	Holter ekg
+T83	Investigation 3501 3519	rtg kl. piersiowej
+T84	Treatment 2956 2973	Przebyte operacje
+T85	Condition 2044 2056	zawale serca
+A7	Source T85 Declared
+N14	Reference T85 ICD10:I25.2	Przebyty zawał serca
+T86	Condition 2774 2777	CAD
+N15	Reference T86 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T87	Condition 2788 2790	MI
+A8	Source T87 Declared
+N16	Reference T87 ICD10:I25.2	Przebyty zawał serca
+T88	Investigation_result 1900 1906	EF=45%
+N17	Reference T54 ICD10:T78.4	Alergia, nieokreślona
+T89	Date 597 607	za tydzień
+R26	Dat Arg1:T89 Arg2:T5	
+T90	Investigation 615 642	oceny częstości rytmu komór
+T91	Drug 674 685	bisoprololu
+T92	Treatment 645 673	rozważenie zwiększenia dawki
+T93	Condition 543 551	cukrzycy
+N18	Reference T93 ICD10:E14	Cukrzyca nieokreślona
+T94	Symptom 1037 1072	narastania obrzęków kończyn dolnych
+N19	Reference T94 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T95	Symptom 1079 1123	zwiększenia masy ciała o 2kg w ciągu 2-3 dni
+N20	Reference T95 ICD10:R63.5	Nieprawidłowy przyrost masy ciała
+T96	Symptom 2629 2646	III klasa wg NYHA
+N21	Reference T96 ICD10:I50	Niewydolność serca
+T97	Date 2696 2712	w ciągu 1.5 m-ca
+R27	Dat Arg1:T97 Arg2:T43	
+N12	Reference T56 ICD10:Z72.0	Używanie tytoniu

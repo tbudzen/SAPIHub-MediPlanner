@@ -1,0 +1,600 @@
+allRelations          : 29
+oks                   : 13
+isRedundantAndRemoveds: 14
+shouldNotBeRemoveds   : 2
+shouldBeBemoveds      : 0
+GOOD / BAD            : 27 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 63 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+Zalecenia
+•\x09dalsza opieka w poradni POZ  
+•\x09okresowa kontrola kardiologiczna i diabetologiczna  
+•\x09regularna kontrola ciśnienia tętniczego  
+•\x09okresowa kontrola lipidogramu, badanie ogólne moczu za tydzień
+
+R1	Dat Arg1:T6 Arg2:T1 <<REDUNDANT!!!REMOVED>>	za tydzień -> dalsza opieka w poradni POZ <:REMOVED other second tag between (left):> <RANK: 0> <info: start[537, 345] <type: LEFT>>
+R2	Dat Arg1:T6 Arg2:T2 <<REDUNDANT!!!REMOVED>>	za tydzień -> okresowa kontrola kardiologiczna i diabetologiczna <:REMOVED other second tag between (left):> <RANK: 0> <info: start[537, 380] <type: LEFT>>
+R3	Dat Arg1:T6 Arg2:T3 <<REDUNDANT!!!REMOVED>>	za tydzień -> regularna kontrola ciśnienia tętniczego <:REMOVED other second tag between (left):> <RANK: 0> <info: start[537, 438] <type: LEFT>>
+R4	Dat Arg1:T6 Arg2:T4 <<REDUNDANT!!!REMOVED>>	za tydzień -> okresowa kontrola lipidogramu <:REMOVED other second tag between (left):> <RANK: 2> <info: start[537, 485] <type: LEFT>>
+R5	Dat Arg1:T6 Arg2:T5 << OK >>	za tydzień -> badanie ogólne moczu  <RANK: 3> <info: start[537, 516] <type: LEFT>>
+
+
+Sentence 5:
+•\x09dieta uboga w cukry proste z unikaniem alkoholu, bogata w kwasy omega-3
+
+
+
+Sentence 6:
+•\x09redukcja masy ciała   
+•\x09stały, umiarkowany, aerobowy wysiłek fizyczny  
+•\x09regularne przyjmowanie leków: 
+
+1.\x09Roswera 30 mg 1 tabl.
+R6	Drg Arg1:T10 Arg2:T13 << OK >>	Roswera -> 30 mg 1 tabl. wieczorem  <RANK: 3> <info: start[749, 757] <type: RIGHT>>
+
+
+Sentence 7:
+wieczorem  
+2.\x09Karbis 8 mg 1 tabl.
+R7	Drg Arg1:T11 Arg2:T14 << OK >>	Karbis -> 8 mg 1 tabl. rano  <RANK: 3> <info: start[789, 796] <type: RIGHT>>
+
+
+Sentence 8:
+rano  
+3.\x09Metformax 500 mg 1 tabl. rano i wieczorem
+------------------------------------------------
+
+R8	Drg Arg1:T12 Arg2:T15 << OK >>	Metformax -> 500 mg 1 tabl. rano i wieczorem  <RANK: 3> <info: start[822, 832] <type: RIGHT>>
+
+
+Sentence 9:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 10:
+------------------------------------------------
+ Rozpozanie I: ICD10:R07|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wada serca pod postacią niedomykalności trójdzielnej I stopnia.
+
+
+Sentence 11:
+Blok przedniej wiązki lewej odnogi pęczka Hisa.
+
+
+Sentence 12:
+Nadciśnienie tętnicze skorygowane.
+
+
+Sentence 13:
+Nadwaga.
+
+
+Sentence 14:
+Hipertriglicerydemia.
+
+
+Sentence 15:
+Nieprawidłowa tolerancja glukozy.
+
+
+Sentence 16:
+Stłuszczenie wątroby.
+
+
+Sentence 17:
+Torbiele okołomiedniczkowe obu nerek
+
+
+
+Sentence 18:
+------------------------------------------------
+
+
+
+Sentence 19:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 20:
+Chora lat , przyjęta do Kliniki z powodu bólów w klatce piersiowej (kłujące, spoczynkowe i wysiłkowe - bez reguły) oraz duszności - II kl. wg NYHA (dolegliwości od 2 lat).
+R9	Dat Arg1:T26 Arg2:T24 << OK >>	od 2 lat -> bólów w klatce piersiowej (kłujące, spoczynkowe i wysiłkowe  <RANK: 2> <info: start[1646, 1526] <type: LEFT>>
+R10	Dat Arg1:T26 Arg2:T25 << OK >>	od 2 lat -> duszności - II kl. wg NYHA  <RANK: 3> <info: start[1646, 1605] <type: LEFT>>
+
+
+Sentence 21:
+Podaje ponadto "drętwienie" k. górnej lewej - w czasie jazdy rowerem (tydzien temu, 1 incydent). 
+
+R11	Dat Arg1:T28 Arg2:T27 << OK >>	tydzien temu -> "drętwienie" k. górnej lewej - w czasie jazdy rowerem  <RANK: 3> <info: start[1727, 1672] <type: LEFT>>
+R12	Dat Arg1:T28 Arg2:T29 <<SHOULD NOT BE REMOVED>>	tydzien temu -> 1 incydent <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1727, 1741] <type: RIGHT>>
+
+
+Sentence 22:
+W wywiadzie ponadto:  HA - od 3 lat, skorygowane, hipertriglicerydemia 
+
+R13	Dat Arg1:T31 Arg2:T30 << OK >>	od 3 lat -> HA  <RANK: 3> <info: start[1782, 1777] <type: LEFT>>
+R14	Dat Arg1:T31 Arg2:T33 <<REDUNDANT!!!REMOVED>>	od 3 lat -> hipertriglicerydemia <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1782, 1805] <type: RIGHT>>
+R15	Dat Arg1:T31 Arg2:T32 <<SHOULD NOT BE REMOVED>>	od 3 lat -> skorygowane <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1782, 1792] <type: RIGHT>>
+
+
+Sentence 23:
+Przebyte operacje:ginekologiczna - torbiel  
+Wywiad rodzinny: bez znaczenia 
+Alergie: kurz - łzawienie, katar  
+
+R16	Neg Arg1:T36 Arg2:T35 << OK >>	bez znaczenia -> Wywiad rodzinny  <RANK: 3> <info: start[1889, 1872] <type: LEFT>>
+R17	Neg Arg1:T36 Arg2:T37 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Alergie: kurz - łzawienie, katar <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1889, 1904] <type: RIGHT>>
+R18	Neg Arg1:T36 Arg2:T53 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> torbiel <:REMOVED Tag2 not in the same line:> <RANK: 1> <info: start[1889, 1862] <type: LEFT>>
+R19	Neg Arg1:T36 Arg2:T34 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Przebyte operacje:ginekologiczna <:REMOVED other second tag between (left):> <RANK: 1> <info: start[1889, 1827] <type: LEFT>>
+
+
+Sentence 24:
+Nikotynizm: neguje  
+Alkohol: okazjonalnie 
+Uzależnienie inne: neguje 
+Stan społeczny: praca umysłowa 
+
+R20	Neg Arg1:T41 Arg2:T40 << OK >>	neguje -> Nikotynizm  <RANK: 3> <info: start[1951, 1939] <type: LEFT>>
+R21	Neg Arg1:T41 Arg2:T38 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: okazjonalnie <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1951, 1960] <type: RIGHT>>
+R22	Neg Arg1:T41 Arg2:T39 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1951, 1983] <type: RIGHT>>
+R23	Neg Arg1:T41 Arg2:T43 <<REDUNDANT!!!REMOVED>>	neguje -> praca umysłowa <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1951, 2026] <type: RIGHT>>
+R24	Neg Arg1:T42 Arg2:T40 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2002, 1939] <type: LEFT>>
+R25	Neg Arg1:T42 Arg2:T38 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: okazjonalnie <:REMOVED Tag2 not in the same line:> <RANK: 1> <info: start[2002, 1960] <type: LEFT>>
+R26	Neg Arg1:T42 Arg2:T39 << OK >>	neguje -> Uzależnienie inne  <RANK: 3> <info: start[2002, 1983] <type: LEFT>>
+R27	Neg Arg1:T42 Arg2:T43 <<REDUNDANT!!!REMOVED>>	neguje -> praca umysłowa <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2002, 2026] <type: RIGHT>>
+
+
+Sentence 25:
+Leki:
+Karbis 8 mg 1 tabl.
+R28	Drg Arg1:T44 Arg2:T45 << OK >>	Karbis -> 8 mg 1 tabl. wieczorem  <RANK: 3> <info: start[2048, 2055] <type: RIGHT>>
+
+
+Sentence 26:
+wieczorem 
+Lipanthyl 267 1 tabl.
+R29	Drg Arg1:T46 Arg2:T47 << OK >>	Lipanthyl -> 267 1 tabl. wieczorem  <RANK: 3> <info: start[2079, 2089] <type: RIGHT>>
+
+
+Sentence 27:
+wieczorem 
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter ekg, rtg kl. piersiowej
+
+
+
+Sentence 28:
+Przewidywana liczba dni hospitalizacji: 5-7 dni
+------------------------------------------------
+
+
+
+Sentence 29:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 30:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:8.27[10^3/ul]
+    
+
+
+Sentence 31:
+RBC Krwinki czerwone:5.54[10^6/ul]
+    
+
+
+Sentence 32:
+HGB Hemoglobina:15.4[g/dl]
+    
+
+
+Sentence 33:
+HCT Hematokryt:45.6[%]
+    
+
+
+Sentence 34:
+MCV wskaźnik czerwonokrw:82.3[fl]
+    
+
+
+Sentence 35:
+MCH wskaźnik czerwonokrw:27.8[pg]
+    
+
+
+Sentence 36:
+MCHC wskaźnik czerwonokr:33.8[g/dl]
+    
+
+
+Sentence 37:
+PLT z morfologii:252[10^3/ul]
+    
+
+
+Sentence 38:
+RDW-SD:40.7[fl]
+    
+
+
+Sentence 39:
+RDW-CV:13.7[%]
+    PDW:15.5[fl]
+    
+
+
+Sentence 40:
+MPV:12.1[fl]
+    
+
+
+Sentence 41:
+P-LCR:42.7[%]
+    
+
+
+Sentence 42:
+PCT (hematokryt płytkowy:0.31[%]
+    
+
+
+Sentence 43:
+NEUTR# wartość bezwzględ:4.33[10^3/ul]
+    
+
+
+Sentence 44:
+NEUTR%:52.4[%]
+    
+
+
+Sentence 45:
+LYMH# wartość bezwzględn:3.06[10^3/ul]
+    
+
+
+Sentence 46:
+LYMPH%:37.0[%]
+    
+
+
+Sentence 47:
+MONO# wartość bezwzględn:0.64[10^3/ul]
+    
+
+
+Sentence 48:
+MONO%:7.7[%]
+    
+
+
+Sentence 49:
+EO# wartość bezwzględna:0.20[10^3/ul]
+    
+
+
+Sentence 50:
+EO%:2.4[%]
+    
+
+
+Sentence 51:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    BASO%:0.5[%]
+    
+
+
+Sentence 52:
+NRBC %:0.0[%]
+    
+
+
+Sentence 53:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 54:
+D-dimer - test ilościowy: D-dimer - test ilościowy:403[ng/ml]
+
+
+
+Sentence 55:
+Badanie ogólne moczu
+    
+
+
+Sentence 56:
+barwa:żółty[ ]
+    
+
+
+Sentence 57:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 58:
+przejrzystość:niezupełna[ ]
+    
+
+
+Sentence 59:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 60:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 61:
+ciężar właściwy:1.020[ ]
+    
+
+
+Sentence 62:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 63:
+pH:5.0[ ]
+    
+
+
+Sentence 64:
+białko:nieobecne[ ]
+    
+
+
+Sentence 65:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 66:
+azotyny:obecne[ ]
+    
+
+
+Sentence 67:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 68:
+leukocyty:obecne[ ]
+    
+
+
+Sentence 69:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 70:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 71:
+leukocyty:27 /ul[ul]
+    erytrocyty świeże:4 /ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:liczne[w preparacie]
+
+
+
+Sentence 72:
+TSH: TSH:1.38[uIU/ml]
+
+
+
+Sentence 73:
+FT3: FT3:2.90[pg/ml]
+
+
+
+Sentence 74:
+FT4: FT4:1.40[ng/dl]
+
+
+
+Sentence 75:
+Troponina T: Troponina T:8.6[pg/ml]
+
+
+
+Sentence 76:
+HBsAg: HBsAg:niereaktywny[ ]
+
+
+
+Sentence 77:
+Przeciwciała anty-HCV: Przeciwciała anty-HCV:niereaktywny
+ALAT: ALAT:57[U/L]
+ASPAT: ASPAT:110[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.52[mg/dl]
+
+
+
+Sentence 78:
+Sód (Na): Sód:144[mmol/L]
+
+
+
+Sentence 79:
+Potas (K): Potas:4.7[mmol/L]
+
+
+
+Sentence 80:
+Kreatynina + GFR
+    
+
+
+Sentence 81:
+Kreatynina w surowicy:0.83[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 82:
+MDRD ze stan:69.4[ml/min/1,73 m^2]
+
+
+
+Sentence 83:
+Mocznik: Mocznik:34[mg/dl]
+
+
+
+Sentence 84:
+Gospodarka żelazem
+    Żelazo:101[ug/dl]
+    
+
+
+Sentence 85:
+TIBC (Całkowita zdolność:427[ug/dl]
+    
+
+
+Sentence 86:
+UIBC (Utajona zdolność w:326[ug/dl]
+    
+
+
+Sentence 87:
+Wskaźnik wysycenia Fe:24[%]
+
+
+
+Sentence 88:
+Kwas moczowy: Kwas moczowy:4.8[mg/dl]
+
+
+
+Sentence 89:
+Lipidogram
+    
+
+
+Sentence 90:
+Cholesterol całkowity:201[mg/dl]
+    
+
+
+Sentence 91:
+Cholesterol HDL:40[mg/dl]
+    
+
+
+Sentence 92:
+Cholestrol LDL:135[mg/dl]
+    
+
+
+Sentence 93:
+Triglicerydy:189[mg/dl]
+    
+
+
+Sentence 94:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:107[mg/dl]
+
+
+
+Sentence 95:
+Glukoza 0 min.: Glukoza 0 min.:93[mg/dl]
+
+
+
+Sentence 96:
+Glukoza 120 min.: Glukoza 120 min.:159[mg/dl]
+
+
+
+Sentence 97:
+NT-proBNP surowica: NT-proBNP w surowicy:24[pg/ml]
+
+
+
+Sentence 98:
+------------------------------------------------
+
+
+
+Sentence 99:
+ICD10
+------------------------------------------------
+I36.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 100:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 101:
+C55
+A01
+I81
+O93
+L43
+O61
+G49
+87.440
+N45
+L69
+O55
+I17
+M45
+O35
+M37
+I19
+N13
+N24
+88.721
+O69
+V40
+8
+V48
+88.761
+------------------------------------------------
+
+

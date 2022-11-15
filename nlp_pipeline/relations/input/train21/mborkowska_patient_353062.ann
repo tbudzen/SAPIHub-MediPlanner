@@ -1,0 +1,96 @@
+T1	Condition 449 490	Łagodna niedomykalność zastawki aortalnej
+N1	Reference T1 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T2	Condition 493 505	trójdzielnej
+N2	Reference T2 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T3	Condition 543 597	obserwacja w kierunku infekcyjnego zapalenie wsierdzia
+N3	Reference T3 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T4	Negation 598 607	negatywna
+R1	Neg Arg1:T4 Arg2:T3	
+T5	Symptom 507 540	Gorączki o nieustalonej etiologii
+N4	Reference T5 ICD10:R50	Gorączka o innej lub nieznanej przyczynie
+T6	Condition 609 637	Śródmiąższowe zapalenie płuc
+N5	Reference T6 ICD10:J84.9	Choroba tkanki śródmiąższowej płuc, nieokreślona
+T7	Condition 639 648	Borelioza
+N6	Reference T7 ICD10:A69.2	Choroba z Lyme
+T8	Condition 650 693	Przewlekłe zapalenie błony śluzowej żołądka
+N7	Reference T8 ICD10:K29.5	Przewlekłe zapalenie żołądka, nieokreślone
+T9	Condition 695 724	Refluks żołądkowo-przełykowy.
+N8	Reference T9 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T10	Behaviour 725 735	Nikotynizm
+T11	Treatment 757 767	operacjach
+T12	Condition 785 800	Torbiele nerek.
+N10	Reference T12 ICD10:N28.1	Torbiel nerki, nabyta
+T13	Behaviour 1110 1149	Dieta lekkostrawna, niskocholesterolowa
+T14	Investigation 1165 1247	kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T15	Investigation 1268 1302	kontrola ciśnienia tętniczego krwi
+T16	Behaviour 1308 1330	Zakaz palenia tytoniu!
+T17	Behaviour 1334 1362	Regularna aktywność fizyczna
+T18	Drug 1373 1384	Pantoprazol
+T19	Drug_dose 1385 1403	20 mg 1 tabl. rano
+R2	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1405 1413	Ranigast
+T21	Drug_dose 1414 1439	150 mg doraźnie wieczorem
+R3	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1441 1457	Doxycyclinum TZF
+T23	Drug_dose 1458 1534	100 mg 2x1 tabl. przez min. 3 tygodnie - do dec. lek. spec. chorób zakaźnych
+R4	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1535 1544	Nystatyna
+T25	Drug_dose 1545 1620	500000 j.m. 3x1 przez min. 3 tygodnie - do dec. lek. spec. chorób zakaźnych
+R5	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1621 1627	Lakcid
+T27	Drug_dose 1628 1697	3x1 kaps. przez min. 3 tygodnie - do dec. lek. spec. chorób zakaźnych
+R6	Drg Arg1:T26 Arg2:T27	
+T28	Investigation 2516 2526	echo serca
+T29	Investigation 2528 2531	TET
+T30	Investigation 2533 2537	ABPM
+T31	Investigation 2539 2549	Holter ekg
+T32	Investigation 2551 2569	rtg kl. piersiowej
+T33	Drug 2453 2461	Ranigast
+T34	Drug_dose 2462 2487	150 mg doraźnie wieczorem
+R7	Drg Arg1:T33 Arg2:T34	
+T35	Drug 2421 2432	Pantoprazol
+T36	Drug_dose 2433 2451	20 mg 1 tabl. rano
+R8	Drg Arg1:T35 Arg2:T36	
+T37	Behaviour 2364 2381	Uzależnienie inne
+T38	Negation 2383 2389	neguje
+R9	Neg Arg1:T38 Arg2:T37	
+T39	Behaviour 2342 2349;2351 2363	Alkohol okazjonalnie
+N11	Reference T39 ICD10:Z72.1	Używanie alkoholu
+T40	Behaviour 2228 2238	Nikotynizm
+N12	Reference T40 ICD10:T65.2	Tytoń i nikotyna
+T41	Negation 2240 2265	od 3.5 miesiąca nie pali,
+R10	Neg Arg1:T41 Arg2:T40	
+T42	Behaviour 2266 2341	wcześniej 2 papierosy/dziennie przez 2 lata, jeszcze wcześniej 30 paczkolat
+A1	Status T42 Historical_Insignificant
+N13	Reference T42 ICD10:T65.2	Tytoń i nikotyna
+T43	Negation 2220 2226	neguje
+T44	Condition 2211 2218	Alergie
+N14	Reference T44 ICD10:T78.4	Alergia, nieokreślona
+R11	Neg Arg1:T43 Arg2:T44	
+T45	Condition 2198 2200	MI
+N15	Reference T45 ICD10:I34.0	Niedomykalność zastawki mitralnej
+A2	Status T45 Family
+T46	Symptom 1893 1920	statnów pod- i gorączkowych
+T47	Condition 1942 1956	zapalenie płuc
+N16	Reference T47 ICD10:J18	Zapalenie płuc wywołane przez niezidentyfikowany czynnik zakaźny
+T48	Drug 1958 1986	antybiotykoterapia 2 lekami,
+T49	Condition 2051 2094	przewlekłe zapalenie błony śluzowej żołądka
+N17	Reference T49 ICD10:K29.5	Przewlekłe zapalenie żołądka, nieokreślone
+T50	Condition 2096 2107	refluks ż-p
+N18	Reference T50 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T51	Treatment 2127 2135	zaćma OP
+T52	Treatment 2149 2151	OL
+T53	Date 2136 2147	3 lata temu
+R12	Dat Arg1:T53 Arg2:T51	
+T54	Date 2152 2162	5 lat temu
+R13	Dat Arg1:T54 Arg2:T52	
+A3	Status T52 Historical_Insignificant
+A4	Status T51 Historical_Insignificant
+A6	Source T3 Declared
+N9	Reference T10 ICD10:T65.2	Tytoń i nikotyna
+T55	Condition 768 784	zaćmy obuocznej.
+N19	Reference T55 ICD10:H25.8	Inne postacie zaćmy starczej
+T56	Date 1925 1932	02.2019
+R14	Dat Arg1:T56 Arg2:T47	
+T57	Date 2007 2028	przed 2,5 tygodniami.
+R15	Dat Arg1:T57 Arg2:T48	

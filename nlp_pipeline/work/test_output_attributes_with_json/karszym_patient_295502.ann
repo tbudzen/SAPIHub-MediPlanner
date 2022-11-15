@@ -1,0 +1,48 @@
+T1	Treatment 558 577	dalsza opieka w POZ
+T2	Treatment 580 623	okresowa kontrola w Poradni Kardiologicznej
+T3	Treatment 626 679	dalsza diagnostyka w warunkach Poradni Neurologicznej
+T4	Investigation 682 732	regularna kontrola ciśnienia tętniczego oraz tętna
+T5	Behaviour 735 774	dieta lekkostrawna, niskocholesterolowa
+T6	Investigation_result 951 972	labilnych wartości BP
+T7	Investigation_result 974 999	wyższe wartości wieczorem
+T8	Symptom 1001 1016	kołatania serca
+T9	Drug 1046 1055	nebiwolol
+T11	Date 1037 1044	w lutym
+T12	Symptom 1057 1062	mniej
+T14	Condition 1087 1108	wole guzkowe tarczycy
+T15	Condition 1110 1142	zmiany zwyrodnieniowe kręgosłupa
+T10	Treatment 1144 1161	Przebyte operacje
+T16	Negation 1163 1169	neguje
+T17	Condition 1196 1200	3xMI
+T18	Date 1203 1231	co 5 lat, pierwszy po 40r.ż.
+T19	Condition 1233 1240	Alergie
+T20	Negation 1242 1248	neguje
+T21	Behaviour 1250 1260	Nikotynizm
+T22	Negation 1262 1268	neguje
+T23	Behaviour 1271 1292	Alkohol: okazjonalnie
+T24	Behaviour 1294 1311	Uzależnienie inne
+T25	Negation 1313 1319	neguje
+T26	Behaviour 1337 1349	nauczycielka
+T27	Drug 1357 1364	Nebilet
+T28	Drug_dose 1365 1384	5 mg 1/2 tabl. rano
+T29	Investigation 1414 1424	echo serca
+T30	Investigation 1426 1429	TET
+T31	Investigation 1431 1435	ABPM
+T32	Investigation 1437 1447	Holter ekg
+T33	Investigation 1449 1467	rtg kl. piersiowej
+N1	Reference T8 ICD10:R00.2	KoÅatanie serca
+N2	Reference T15 ICD10:M47.9	Zmiany zwyrodnieniowe krÄgosÅupa, nieokreÅlone
+N3	Reference T10 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N4	Reference T19 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N5	Reference T21 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N6	Reference T23 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N7	Reference T24 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+R20	Neg Arg1:T20 Arg2:T19
+R29	Neg Arg1:T22 Arg2:T21
+R3	Dat Arg1:T11 Arg2:T8
+R30	Neg Arg1:T22 Arg2:T23
+R40	Neg Arg1:T25 Arg2:T26
+R43	Drg Arg1:T27 Arg2:T28
+R44	Dat Arg1:T18 Arg2:T17
+A1	Status T17 Family
+A2	Status T18 Family

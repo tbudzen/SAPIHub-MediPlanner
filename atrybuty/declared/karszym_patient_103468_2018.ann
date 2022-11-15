@@ -1,0 +1,64 @@
+T1	Treatment 447 476	operacji wrodzonej wady serca
+N1	Reference T1 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T2	Condition 490 493	VSD
+N2	Reference T2 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T3	Date 495 500	1990r
+T4	Condition 503 554	Tętniak błoniastej części przegrody międzykomorowej
+N3	Reference T4 ICD10:I25.3	Tętniak serca
+T5	Treatment 679 706	dalsza opieka w poradni POZ
+T6	Treatment 713 745	okresowa kontrola kardiologiczna
+T7	Investigation 779 786	HCV RNA
+T8	Treatment 799 831	pilna konsultacja hepatologiczna
+T9	Investigation 839 868	okresowa kontrola lipidogramu
+T10	Behaviour 875 885	dieta DASH
+T11	Behaviour 892 937	stały, umiarkowany, aerobowy wysiłek fizyczny
+R1	Dat Arg1:T3 Arg2:T2	
+R2	Dat Arg1:T3 Arg2:T1	
+T12	Treatment 1086 1115	operacji wrodzonej wady serca
+N4	Reference T12 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T13	Condition 1129 1161	ubytku przegrody międzykomorowej
+N5	Reference T13 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T14	Date 1163 1168	1990r
+R3	Dat Arg1:T14 Arg2:T13	
+R4	Dat Arg1:T14 Arg2:T12	
+T15	Symptom 1200 1234	okresowych kołatań serca (1x/2-mce
+N6	Reference T15 ICD10:R00.2	Kołatanie serca
+T16	Date 1235 1245	od 2-3 lat
+R6	Dat Arg1:T16 Arg2:T15	
+T18	Treatment 1249 1266	Przebyte operacje
+N7	Reference T18 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T19	Negation 1268 1278	nie podaje
+R7	Neg Arg1:T19 Arg2:T18	
+T20	Condition 1306 1309	WZW
+N8	Reference T20 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T21	Condition 1311 1320	borelioza
+N9	Reference T21 ICD10:A69.2	Choroba z Lyme
+T22	Negation 1323 1333	nie podaje
+R8	Neg Arg1:T22 Arg2:T20	
+R9	Neg Arg1:T22 Arg2:T21	
+T17	Condition 1334 1349	Wywiad rodzinny
+T23	Negation 1351 1361	nie podaje
+T24	Behaviour 1362 1377	Palenie tytoniu
+N10	Reference T24 ICD10:Z72.0	Używanie tytoniu
+T25	Negation 1379 1389	nie podaje
+T26	Behaviour 1390 1415	Inne używki: okazjonalnie
+T27	Condition 1416 1425	Uczulenia
+N11	Reference T27 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T28	Negation 1427 1437	nie podaje
+R5	Neg Arg1:T28 Arg2:T27	
+T29	Behaviour 1456 1463	pracuje
+T30	Behaviour 1465 1484	tryb życia siedzący
+N12	Reference T30 ICD10:Z72.3	Brak aktywności fizycznej
+T32	Negation 1498 1501	bez
+T33	Drug 1502 1507	leków
+T34	Investigation 1535 1545	echo serca
+T35	Investigation 1547 1567	echo przezprzełykowe
+T36	Investigation 1569 1572	TET
+T37	Investigation 1574 1578	ABPM
+T38	Investigation 1580 1586	Holter
+T39	Investigation 1588 1606	RTG kl. piersiowej
+R10	Neg Arg1:T32 Arg2:T33	
+R11	Neg Arg1:T25 Arg2:T24	
+R12	Neg Arg1:T23 Arg2:T17
+A1	Status T1 Historical_Insignificant
+A2	Status T12 Historical_Insignificant

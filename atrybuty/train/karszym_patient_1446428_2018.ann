@@ -1,0 +1,316 @@
+T1	Treatment 330 357	dalsza opieka w Poradni POZ
+T2	Treatment 358 390	okresowa kontrola kardiologiczna
+T3	Treatment 420 454	hospitalizacji w tutejszej Klinice
+T4	Date 455 473	w dn.  15.10.2018r
+T5	Investigation 507 542	stała kontrola ciśnienia tętniczego
+T6	Behaviour 543 568	dieta ubogocholesterolowa
+T7	Drug 599 606	Pradaxa
+R1	Dat Arg1:T4 Arg2:T3	
+T8	Drug_dose 607 638	150 mg 1 tabl. rano i wieczorem
+T9	Drug 639 650	Betaloc ZOK
+T10	Drug_dose 651 669	50 mg 1 tabl. rano
+T11	Drug 670 677	Tritace
+T12	Drug_dose 678 702	5 mg 1/2 tabl. wieczorem
+T13	Drug 703 709	Diuver
+T14	Drug_dose 710 729	5 mg 1/2 tabl. rano
+T15	Drug 730 736	Espiro
+T16	Drug_dose 737 757	25 mg 1/2 tabl. rano
+T17	Drug 758 766	Suvardio
+T18	Drug_dose 767 790	10 mg 1 tabl. wieczorem
+T19	Investigation 1008 1018	Obserwacja
+T20	Condition 1030 1033	PFO
+A1	Source T20 Declared
+N1	Reference T20 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T21	Condition 1034 1037	ASD
+A2	Source T21 Declared
+N2	Reference T21 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T22	Negation 1040 1049	negatywna
+R2	Drg Arg1:T7 Arg2:T8	
+R3	Drg Arg1:T9 Arg2:T10	
+R4	Drg Arg1:T11 Arg2:T12	
+R5	Drg Arg1:T13 Arg2:T14	
+R6	Drg Arg1:T15 Arg2:T16	
+R7	Drg Arg1:T17 Arg2:T18	
+R8	Neg Arg1:T22 Arg2:T21	
+R9	Neg Arg1:T22 Arg2:T20	
+T23	Condition 1051 1088	Skrzeplina w uszku lewego przedsionka
+N3	Reference T23 ICD10:I51.3	Zakrzep wewnątrzsercowy niesklasyfikowany gdzie indziej
+T24	Condition 1090 1122	Utrwalone migotanie przedsionków
+N4	Reference T24 ICD10:I48	Migotanie i trzepotanie przedsionków
+T25	Condition 1123 1147	trzepotanie przedsionków
+N5	Reference T25 ICD10:I48	Migotanie i trzepotanie przedsionków
+T26	Investigation 1149 1161	CHA2DS2-VASc
+T27	Investigation_result 1164 1169	5 pkt
+T28	Investigation 1171 1179	HAS-BLED
+T29	Investigation_result 1182 1187	3 pkt
+T30	Investigation 1189 1193	EHRA
+T31	Investigation_result 1195 1196	1
+R10	Inv Arg1:T26 Arg2:T27	
+R11	Inv Arg1:T28 Arg2:T29	
+R12	Inv Arg1:T30 Arg2:T31	
+T32	Condition 1200 1267	Wada serca pod postacią łagodnej niedomykalności zastawki mitralnej
+N6	Reference T32 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T33	Condition 1270 1282	trójdzielnej
+N7	Reference T33 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T34	Condition 1284 1343	Przewlekła niewydolność serca z zachowaną frakcją wyrzutową
+N8	Reference T34 ICD10:I50.9	Niewydolność serca, nieokreślona
+T35	Condition 1345 1383	Przewlekła choroba niedokrwienna serca
+N9	Reference T35 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T36	Condition 1385 1405	Hipercholesterolemia
+N10	Reference T36 ICD10:E78.0	Czysta hipercholesterolemia
+T37	Treatment 1416 1430	farmakoterapii
+T38	Condition 1432 1453	Nadciśnienie tętnicze
+N11	Reference T38 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T39	Condition 1455 1477	Żylaki kończyn dolnych
+A3	Status T39 Historical_Insignificant
+N12	Reference T39 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T40	Treatment 1487 1501	tonsillectomii
+A4	Status T40 Historical_Insignificant
+N13	Reference T40 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T41	Treatment 1504 1517	appendectomii
+A5	Status T41 Historical_Insignificant
+N14	Reference T41 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T42	Date 1518 1531	w przeszłości
+T43	Treatment 1541 1550	usunięciu
+N15	Reference T43 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T44	Condition 1551 1596	zmiany policzka lewego (rak płaskonabłonkowy)
+R13	Dat Arg1:T42 Arg2:T40	
+R14	Dat Arg1:T42 Arg2:T41	
+T45	Condition 1814 1851	Skrzeplina w uszku lewego przedsionka
+N17	Reference T45 ICD10:I51.3	Zakrzep wewnątrzsercowy niesklasyfikowany gdzie indziej
+T46	Condition 1853 1885	Utrwalone migotanie przedsionków
+N18	Reference T46 ICD10:I48	Migotanie i trzepotanie przedsionków
+T47	Condition 1886 1910	trzepotanie przedsionków
+N19	Reference T47 ICD10:I48	Migotanie i trzepotanie przedsionków
+T48	Investigation 1912 1924	CHA2DS2-VASc
+T49	Investigation_result 1927 1932	5 pkt
+T50	Investigation 1934 1942	HAS-BLED
+T51	Investigation_result 1945 1950	3 pkt
+T52	Investigation 1952 1956	EHRA
+T53	Investigation_result 1958 1959	1
+T54	Condition 1963 2030	Wada serca pod postacią łagodnej niedomykalności zastawki mitralnej
+N20	Reference T54 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T55	Condition 2033 2045	trójdzielnej
+N21	Reference T55 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T56	Condition 2047 2106	Przewlekła niewydolność serca z zachowaną frakcją wyrzutową
+N22	Reference T56 ICD10:I50.9	Niewydolność serca, nieokreślona
+T57	Condition 2108 2146	Przewlekła choroba niedokrwienna serca
+N23	Reference T57 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T58	Condition 2148 2168	Hipercholesterolemia
+N24	Reference T58 ICD10:E78.0	Czysta hipercholesterolemia
+T59	Treatment 2179 2193	farmakoterapii
+T60	Condition 2195 2216	Nadciśnienie tętnicze
+N25	Reference T60 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T61	Condition 2218 2240	Żylaki kończyn dolnych
+A6	Status T61 Historical_Insignificant
+N26	Reference T61 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T62	Treatment 2250 2264	tonsillectomii
+A7	Status T62 Historical_Insignificant
+N27	Reference T62 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T63	Treatment 2267 2280	appendectomii
+N28	Reference T63 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T64	Date 2281 2294	w przeszłości
+T65	Treatment 2304 2313	usunięciu
+N29	Reference T65 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T66	Condition 2314 2359	zmiany policzka lewego (rak płaskonabłonkowy)
+R15	Dat Arg1:T64 Arg2:T62	
+A8	Status T63 Historical_Insignificant
+R16	Dat Arg1:T64 Arg2:T63	
+R17	Inv Arg1:T48 Arg2:T49	
+R18	Inv Arg1:T50 Arg2:T51	
+R19	Inv Arg1:T52 Arg2:T53	
+T67	Treatment 2476 2537	skierowanie do Kliniki Kardiologii i Wad Wrodzonych Dorosłych
+T68	Date 2539 2557	na dn. 14.01.2018r
+T69	Drug 2588 2595	Pradaxa
+T70	Drug_dose 2596 2627	150 mg 1 tabl. rano i wieczorem
+T71	Drug 2628 2639	Betaloc ZOK
+T72	Drug_dose 2640 2658	50 mg 1 tabl. rano
+T73	Drug 2659 2666	Tritace
+T74	Drug_dose 2667 2691	5 mg 1/2 tabl. wieczorem
+T75	Drug 2692 2698	Diuver
+T76	Drug_dose 2699 2718	5 mg 1/2 tabl. rano
+T77	Drug 2719 2725	Espiro
+T78	Drug_dose 2726 2746	25 mg 1/2 tabl. rano
+T79	Drug 2747 2755	Suvardio
+T80	Drug_dose 2756 2779	10 mg 1 tabl. wieczorem
+R20	Dat Arg1:T68 Arg2:T67	
+R21	Drg Arg1:T69 Arg2:T70	
+R22	Drg Arg1:T71 Arg2:T72	
+R23	Drg Arg1:T73 Arg2:T74	
+R24	Drg Arg1:T75 Arg2:T76	
+R25	Drg Arg1:T77 Arg2:T78	
+R26	Drg Arg1:T79 Arg2:T80	
+T81	Condition 2927 2948	utrwalonym migotaniem
+N31	Reference T81 ICD10:I48	Migotanie i trzepotanie przedsionków
+T82	Condition 2949 2974	trzepotaniem przedsionków
+N32	Reference T82 ICD10:I48	Migotanie i trzepotanie przedsionków
+T83	Condition 2976 2999	nadciśnieniem tętniczym
+N33	Reference T83 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T84	Condition 3001 3036	niedomykalnością zastawki mitralnej
+N34	Reference T84 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T85	Condition 3038 3065	przewlekłą chorobą wieńcową
+N35	Reference T85 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T86	Condition 3067 3087	hipercholesterolemią
+N36	Reference T86 ICD10:E78.0	Czysta hipercholesterolemia
+T87	Condition 3111 3151	podejrzeniem wady serca pod postacią ASD
+A9	Source T87 Declared
+N37	Reference T87 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T88	Treatment 3153 3170	Przebyte operacje
+N38	Reference T88 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T89	Treatment 3180 3194	tonsillectomii
+N39	Reference T89 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+A10	Status T89 Historical_Insignificant
+T90	Treatment 3196 3209	appendektomii
+A11	Status T90 Historical_Insignificant
+N40	Reference T90 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T91	Date 3210 3220	w młodości
+T92	Condition 3222 3247	zmiana skórna na policzku
+N30	Reference T66 ICD10:C44.3	Skóra innych i nieokreślonych części twarzy
+N16	Reference T44 ICD10:C44.3	Skóra innych i nieokreślonych części twarzy
+N41	Reference T92 ICD10:D48.5	Skóra
+R27	Dat Arg1:T91 Arg2:T90	
+R28	Dat Arg1:T91 Arg2:T89	
+T93	Treatment 3248 3267	Leczenie przewlekłe
+T94	Negation 3269 3279	nie podaje
+T95	Condition 3307 3310	WZW
+N42	Reference T95 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T96	Negation 3311 3314	(-)
+T97	Condition 3316 3329	borelioza (+)
+N43	Reference T97 ICD10:A69.2	Choroba z Lyme
+T98	Condition 3358 3376	choruje "na serce"
+A12	Status T98 Family
+N44	Reference T98 ICD10:I51.9	Choroba serca, nieokreślona
+T99	Behaviour 3377 3392	Palenie tytoniu
+N45	Reference T99 ICD10:Z72.0	Używanie tytoniu
+T100	Negation 3394 3404	nie podaje
+T101	Behaviour 3405 3416	Inne używki
+N46	Reference T101 ICD10:Z72	Problemy związane ze stylem życia
+T102	Negation 3418 3428	nie podaje
+T103	Condition 3429 3438	Uczulenia
+N47	Reference T103 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T104	Negation 3440 3450	nie podaje
+T105	Behaviour 3469 3493	emerytowana nauczycielka
+T106	Behaviour 3502 3514	mieszka sama
+T107	Behaviour 3516 3523	2 córki
+T108	Drug 3530 3541	Betaloc ZOK
+T109	Drug_dose 3542 3581	50 mg 1 tabl. rano, 1/2 tabl. wieczorem
+T110	Drug 3582 3589	Tritace
+T111	Drug_dose 3590 3614	2,5 mg 1 tabl. wieczorem
+R29	Neg Arg1:T100 Arg2:T99	
+R30	Neg Arg1:T102 Arg2:T101	
+R31	Neg Arg1:T104 Arg2:T103	
+R32	Neg Arg1:T96 Arg2:T95	
+R33	Neg Arg1:T94 Arg2:T93	
+T112	Drug 3615 3627	Preductal MR
+T113	Drug_dose 3628 3642	1 tabl. 2 x dz
+T114	Drug 3644 3650	Diuver
+T115	Drug_dose 3651 3670	5 mg 1/2 tabl. rano
+T116	Drug 3671 3677	Espiro
+T117	Drug_dose 3678 3698	25 mg 1/2 tabl. rano
+T118	Drug 3699 3706	Sintrom
+T119	Drug_dose 3707 3749	wg schematu: 3/4 tabl., 1/2 tabl, 1/2 tabl
+T120	Drug 3751 3759	Suvardio
+T121	Drug_dose 3760 3783	10 mg 1 tabl. wieczorem
+T122	Investigation 3811 3821	echo serca
+T123	Investigation 3823 3843	echo przezprzełykowe
+T124	Investigation 3845 3848	TET
+T125	Investigation 3850 3854	ABPM
+T126	Investigation 3856 3862	Holter
+T127	Investigation 3864 3882	RTG kl. piersiowej
+R34	Drg Arg1:T108 Arg2:T109	
+R35	Drg Arg1:T110 Arg2:T111	
+R36	Drg Arg1:T112 Arg2:T113	
+R37	Drg Arg1:T114 Arg2:T115	
+R38	Drg Arg1:T116 Arg2:T117	
+R39	Drg Arg1:T118 Arg2:T119	
+R40	Drg Arg1:T120 Arg2:T121	
+T128	Condition 4079 4100	utrwalonym migotaniem
+N48	Reference T128 ICD10:I48	Migotanie i trzepotanie przedsionków
+T129	Condition 4101 4126	trzepotaniem przedsionków
+N49	Reference T129 ICD10:I48	Migotanie i trzepotanie przedsionków
+T130	Condition 4131 4168	skrzepliną w uszku lewego przedsionka
+N50	Reference T130 ICD10:I51.3	Zakrzep wewnątrzsercowy niesklasyfikowany gdzie indziej
+T131	Treatment 4186 4214	hspitalizacji w tut. Klinice
+T132	Date 4215 4226	w lipcu br.
+R41	Dat Arg1:T132 Arg2:T131	
+R42	Dat Arg1:T132 Arg2:T130	
+T133	Condition 4229 4252	nadciśnieniem tętniczym
+N51	Reference T133 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T134	Condition 4254 4289	niedomykalnością zastawki mitralnej
+N52	Reference T134 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T135	Condition 4291 4318	przewlekłą chorobą wieńcową
+N53	Reference T135 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T136	Condition 4320 4340	hipercholesterolemią
+N54	Reference T136 ICD10:E78.0	Czysta hipercholesterolemia
+T137	Treatment 4388 4410	leczenia p/krzepliwego
+T138	Negation 4412 4418	Neguje
+T139	Symptom 4419 4427	duszność
+N55	Reference T139 ICD10:R06.0	Duszność
+T140	Symptom 4429 4468	dolegliwości bólowe w klatce piersiowej
+N56	Reference T140 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T141	Symptom 4470 4493	uczucie kołatania serca
+N57	Reference T141 ICD10:R00.2	Kołatanie serca
+T142	Treatment 4495 4512	Przebyte operacje
+N58	Reference T142 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T143	Treatment 4522 4536	tonsillectomii
+A13	Status T143 Historical_Insignificant
+N59	Reference T143 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T144	Treatment 4538 4551	appendektomii
+A14	Status T144 Historical_Insignificant
+N60	Reference T144 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T145	Date 4552 4562	w młodości
+T146	Condition 4564 4589	zmiana skórna na policzku
+N61	Reference T146 ICD10:D48.5	Skóra
+T147	Treatment 4590 4609	Leczenie przewlekłe
+T148	Negation 4611 4621	nie podaje
+R43	Dat Arg1:T145 Arg2:T144	
+R44	Dat Arg1:T145 Arg2:T143	
+R45	Neg Arg1:T138 Arg2:T139	
+R46	Neg Arg1:T138 Arg2:T140	
+R47	Neg Arg1:T138 Arg2:T141	
+R48	Neg Arg1:T148 Arg2:T147	
+T149	Condition 4649 4652	WZW
+N62	Reference T149 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T150	Negation 4653 4656	(-)
+T151	Condition 4658 4671	borelioza (+)
+N63	Reference T151 ICD10:A69.2	Choroba z Lyme
+T152	Condition 4700 4718	choruje "na serce"
+A15	Status T152 Family
+N64	Reference T152 ICD10:I51.9	Choroba serca, nieokreślona
+T153	Behaviour 4719 4734	Palenie tytoniu
+N65	Reference T153 ICD10:Z72.0	Używanie tytoniu
+T154	Negation 4736 4746	nie podaje
+T155	Behaviour 4747 4758	Inne używki
+N66	Reference T155 ICD10:Z72	Problemy związane ze stylem życia
+T156	Negation 4760 4770	nie podaje
+T157	Condition 4771 4780	Uczulenia
+N67	Reference T157 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T158	Negation 4782 4792	nie podaje
+T159	Behaviour 4811 4822	emerytowana
+T160	Behaviour 4844 4856	mieszka sama
+T161	Behaviour 4823 4835	nauczycielka
+T162	Behaviour 4858 4865	2 córki
+R49	Neg Arg1:T150 Arg2:T149	
+R50	Neg Arg1:T154 Arg2:T153	
+R51	Neg Arg1:T156 Arg2:T155	
+R52	Neg Arg1:T158 Arg2:T157	
+T163	Drug 4872 4879	Pradaxa
+T164	Drug_dose 4880 4911	150 mg 1 tabl. rano i wieczorem
+T165	Drug 4912 4923	Betaloc ZOK
+T166	Drug_dose 4924 4942	50 mg 1 tabl. rano
+T167	Drug 4943 4950	Tritace
+T168	Drug_dose 4951 4975	5 mg 1/2 tabl. wieczorem
+T169	Drug 4976 4982	Diuver
+T170	Drug_dose 4983 5002	5 mg 1/2 tabl. rano
+T171	Drug 5003 5009	Espiro
+T172	Drug_dose 5010 5030	25 mg 1/2 tabl. rano
+T173	Drug 5031 5039	Suvardio
+T174	Drug_dose 5040 5063	10 mg 1 tabl. wieczorem
+T175	Investigation 5092 5102	echo serca
+T176	Investigation 5104 5124	echo przezprzełykowe
+R53	Drg Arg1:T163 Arg2:T164	
+R54	Drg Arg1:T165 Arg2:T166	
+R55	Drg Arg1:T167 Arg2:T168	
+R56	Drg Arg1:T169 Arg2:T170	
+R57	Drg Arg1:T171 Arg2:T172	
+R58	Drg Arg1:T173 Arg2:T174	

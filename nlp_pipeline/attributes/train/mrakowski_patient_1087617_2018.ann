@@ -1,0 +1,25 @@
+T1	Condition 459 505	Zaburzenia rytmu serca - arytmia przedsionkowa
+N1	Reference T1 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T2	Condition 510 547	Ubytek przegrody międzyprzedsionkowej
+N2	Reference T2 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T3	Condition 548 577	typu drożnego otworu owalnego
+N3	Reference T3 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T4	Drug 719 736	preparatu magnezu
+T5	Drug 742 750	Magne B6
+T6	Drug_dose 751 762	1tab 1 x dz
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Treatment 768 800	Wizyta w Poradni kardiologicznej
+T8	Date 801 813	za ok.8 m-cy
+R2	Dat Arg1:T8 Arg2:T7	
+T9	Condition 1181 1197	zaburzenia rytmu
+N4	Reference T9 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T10	Investigation 1214 1231	badania kontrolne
+T11	Symptom 1300 1320	wyprysku potnicowego
+N5	Reference T11 ICD10:L30	Inne postacie zapalenia skóry
+T12	Treatment 1268 1290	pod opieką dermatologa
+T13	Drug 1233 1247	leków na stałe
+T14	Negation 1248 1261	nie otrzymuje
+R3	Neg Arg1:T14 Arg2:T13	
+T15	Drug 1050 1055	leków
+T16	Negation 1046 1049	Bez
+R4	Neg Arg1:T16 Arg2:T15	

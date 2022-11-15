@@ -1,0 +1,119 @@
+T1	Symptom 439 463	Bóle w klatce piersiowej
+N1	Reference T1 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T2	Condition 465 488	Ekstrasystolia komorowa
+N2	Reference T2 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T3	Condition 490 511	Nadciśnienie tętnicze
+N3	Reference T3 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T4	Condition 513 533	Hipercholesterolemia
+N4	Reference T4 ICD10:E78.0	Czysta hipercholesterolemia
+T5	Treatment 543 571	operacji kręgosłupa szyjnego
+T6	Treatment 683 705	kontrola u lekarza POZ
+T7	Treatment 708 749	dalsza kontrola w Poradni Kardiologicznej
+T8	Investigation 752 802	kontrola ciśnienia tętniczego w warunkach domowych
+T9	Behaviour 805 830	dieta niskocholesterolowa
+T10	Investigation 832 852	kontrola lipidogramu
+T11	Date 853 862	za 3 m-ce
+R1	Dat Arg1:T11 Arg2:T10	
+T12	Investigation 865 891	kontrola hormonów tarczycy
+T13	Drug 1021 1024	IPP
+T14	Drug 1026 1031	Acard
+T15	Drug 1033 1036	BLW
+T16	Drug 1038 1047	Captopril
+T17	Drug 1049 1056	Romazic
+T18	Symptom 1228 1265	nietypowych bólów w klatce piersiowej
+N5	Reference T18 ICD10:R07.3	Inne bóle w klatce piersiowej
+T19	Symptom 1271 1294	napadów kołatania serca
+N6	Reference T19 ICD10:R00.2	Kołatanie serca
+T20	Negation 1295 1298	bez
+T21	Symptom 1299 1326	towarzyszących dolegliwości
+R2	Neg Arg1:T20 Arg2:T21	
+T22	Symptom 1328 1361	często przyspieszonej pracy serca
+N7	Reference T22 ICD10:R00.8	Inne i nieokreślone zaburzenia rytmu serca
+T23	Treatment 1385 1422	przebyta operacja kręgosłupa szyjnego
+T24	Symptom 1424 1463	silne napadowe bóle kręgosłupa szyjnego
+N8	Reference T24 ICD10:M54.2	Bóle karku
+T25	Symptom 1466 1492	towarzyszącymi nudnościami
+N9	Reference T25 ICD10:R11	Nudności i wymioty
+T26	Investigation_result 1495 1516	skokami RR do 180/100
+N10	Reference T26 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T27	Investigation_result 1518 1545	1x glikemia na czczo-127mg%
+N11	Reference T27 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T28	Negation 1547 1553	Neguje
+T29	Symptom 1555 1567	zasłabnięcia
+N12	Reference T29 ICD10:R55	Omdlenie i zapaść
+T30	Symptom 1569 1577	omdlenia
+N13	Reference T30 ICD10:R55	Omdlenie i zapaść
+T31	Symptom 1579 1589	krwawienia
+T32	Symptom 1591 1604	czarne stolce
+N15	Reference T32 ICD10:K92.1	Stolce smołowate
+T33	Symptom 1606 1622	brunatne wymioty
+N16	Reference T33 ICD10:K92.0	Wymioty krwawe
+T34	Condition 1624 1640	chorobę wrzodową
+N17	Reference T34 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T35	Symptom 1642 1656	duszność nocną
+N18	Reference T35 ICD10:R06.0	Duszność
+T36	Symptom 1658 1673	obrzęki podudzi
+T37	Condition 1675 1677	DM
+N20	Reference T37 ICD10:E14	Cukrzyca nieokreślona
+R3	Neg Arg1:T28 Arg2:T29	
+R4	Neg Arg1:T28 Arg2:T30	
+R5	Neg Arg1:T28 Arg2:T32	
+R6	Neg Arg1:T28 Arg2:T31	
+R7	Neg Arg1:T28 Arg2:T33	
+R8	Neg Arg1:T28 Arg2:T34	
+R9	Neg Arg1:T28 Arg2:T35	
+R10	Neg Arg1:T28 Arg2:T36	
+R11	Neg Arg1:T28 Arg2:T37	
+T38	Treatment 1680 1697	Przebyte operacje
+T39	Behaviour 1702 1717	Palenie tytoniu
+N21	Reference T39 ICD10:Z72.0	Używanie tytoniu
+T40	Negation 1719 1722	nie
+R12	Neg Arg1:T40 Arg2:T39	
+T41	Behaviour 1723 1734	Inne używki
+T42	Negation 1736 1739	nie
+R13	Neg Arg1:T42 Arg2:T41	
+T43	Condition 1740 1749	Uczulenia
+N22	Reference T43 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T44	Condition 1763 1772	uczulenia
+N23	Reference T44 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T45	Drug 1776 1782	Tramal
+R14	Alg Arg1:T44 Arg2:T45	
+T46	Condition 1814 1817	WZW
+N24	Reference T46 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T47	Negation 1819 1820	-
+R15	Neg Arg1:T47 Arg2:T46	
+T48	Condition 1824 1833	borelioza
+N25	Reference T48 ICD10:A69.2	Choroba z Lyme
+T49	Negation 1836 1837	-
+R16	Neg Arg1:T49 Arg2:T48	
+T50	Condition 1841 1844	tbc
+T51	Negation 1846 1847	-
+R17	Neg Arg1:T51 Arg2:T50	
+T52	Behaviour 1865 1891	warunki mieszkaniowe dobre
+T53	Drug 1927 1933	Lokren
+T54	Drug_dose 1934 1956	1x 1/4 tabl co 3 dzień
+R18	Drg Arg1:T53 Arg2:T54	
+T55	Drug 1957 1965	Relanium
+T56	Drug_dose 1966 1980	2mg 1-1-0 tabl
+R19	Drg Arg1:T55 Arg2:T56	
+T57	Drug 1981 1989	Mydocalm
+T58	Drug_dose 1990 1998	doraźnie
+R20	Drg Arg1:T57 Arg2:T58	
+T59	Drug 1999 2006	Ketonal
+T60	Drug_dose 2007 2020	50mg doraźnie
+R21	Drg Arg1:T59 Arg2:T60	
+T61	Drug 2021 2045	Activel (lek hormonalny)
+T62	Drug_dose 2046 2058	co 2gi dzien
+R22	Drg Arg1:T61 Arg2:T62	
+T63	Drug 2059 2064	Acard
+T64	Drug_dose 2065 2098	75mg 1x 1 tabl/wiecz co 2gi dzień
+R23	Drg Arg1:T63 Arg2:T64	
+T65	Investigation 2159 2180	badania laboratoryjne
+T66	Investigation 2182 2186	ECHO
+T67	Investigation 2188 2206	EKG metodą Holtera
+T68	Investigation 2208 2212	ABPM
+T69	Investigation 2214 2217	DSE
+N14	Reference T31 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N19	Reference T36 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N27	Reference T41 ICD10:Z72	Problemy związane ze stylem życia
+N26	Reference T50 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

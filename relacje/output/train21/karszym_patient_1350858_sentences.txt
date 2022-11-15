@@ -1,0 +1,825 @@
+allRelations          : 26
+oks                   : 14
+isRedundantAndRemoveds: 11
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 0
+GOOD / BAD            : 25 / 1
+Sentence 0:
+------------------------------------------------
+Wiek: 3 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 2:
+------------------------------------------------
+
+
+
+Sentence 3:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 4:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią całkowitego ubytku przegrody przedsionkowo-komorowej. 
+   
+
+
+Sentence 5:
+Stan po operacji kardiochirurgicznej: plastyka ubytku przedsionkowo-komorowego w dniu 30.08.2016 a następnie reoperacji: plastyka podpłucnego ubytku w przegrodzie komór -w dniu 09.09.2016
+   
+R1	Dat Arg1:T3 Arg2:T40 << OK >>	w dniu 30.08.2016 -> ubytku przedsionkowo-komorowego  <RANK: 3> <info: start[608, 576] <type: LEFT>>
+R2	Dat Arg1:T3 Arg2:T41 <<REDUNDANT!!!REMOVED>>	w dniu 30.08.2016 -> podpłucnego ubytku w przegrodzie komór <:REMOVED Too far from TagInfo[T3, 608, 625, Date, w dniu 30.08.2016
+] TagInfo[T40, 576, 607, Condition, ubytku przedsionkowo-komorowego
+]:> <RANK: 3> <info: start[608, 659] <type: RIGHT>>
+R3	Dat Arg1:T3 Arg2:T2 << OK >>	w dniu 30.08.2016 -> operacji kardiochirurgicznej: plastyka  <RANK: 3> <info: start[608, 537] <type: LEFT>>
+R4	Dat Arg1:T3 Arg2:T4 <<SHOULD NOT BE REMOVED>>	w dniu 30.08.2016 -> reoperacji: plastyka <:REMOVED Too far from TagInfo[T3, 608, 625, Date, w dniu 30.08.2016
+] TagInfo[T40, 576, 607, Condition, ubytku przedsionkowo-komorowego
+]:> <RANK: 3> <info: start[608, 638] <type: RIGHT>>
+R5	Dat Arg1:T5 Arg2:T40 <<REDUNDANT!!!REMOVED>>	w dniu 09.09.2016 -> ubytku przedsionkowo-komorowego <:REMOVED other first tag between (left):> <RANK: 2> <info: start[699, 576] <type: LEFT>>
+R6	Dat Arg1:T5 Arg2:T41 << OK >>	w dniu 09.09.2016 -> podpłucnego ubytku w przegrodzie komór  <RANK: 3> <info: start[699, 659] <type: LEFT>>
+R7	Dat Arg1:T5 Arg2:T2 <<REDUNDANT!!!REMOVED>>	w dniu 09.09.2016 -> operacji kardiochirurgicznej: plastyka <:REMOVED other first tag between (left):> <RANK: 2> <info: start[699, 537] <type: LEFT>>
+R8	Dat Arg1:T5 Arg2:T4 << OK >>	w dniu 09.09.2016 -> reoperacji: plastyka  <RANK: 3> <info: start[699, 638] <type: LEFT>>
+
+
+Sentence 6:
+Trisomia 21 pary chromosomów
+   Istotna niedomykalność mitralna.
+   
+
+
+Sentence 7:
+Niewydolność serca.
+
+
+
+Sentence 8:
+------------------------------------------------
+
+
+
+Sentence 9:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 10:
+Stosowanie leków:
+Enarenal 2x06 mg po
+Spironol 1x25 mg 
+
+R9	Drg Arg1:T9 Arg2:T11 << OK >>	Enarenal -> 2x06 mg po  <RANK: 3> <info: start[934, 943] <type: RIGHT>>
+R10	Drg Arg1:T9 Arg2:T12 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1x25 mg <:REMOVED other first tag between (right):> <RANK: 1> <info: start[934, 963] <type: RIGHT>>
+R11	Drg Arg1:T10 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Spironol -> 2x06 mg po <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[954, 943] <type: LEFT>>
+R12	Drg Arg1:T10 Arg2:T12 << OK >>	Spironol -> 1x25 mg  <RANK: 3> <info: start[954, 963] <type: RIGHT>>
+
+
+Sentence 11:
+Zgłosi się ponownie do kliniki kardiologii dn,30.03 2020 r po uprzednim potwierdzeniu telefonicznym terminu przyjęcia.
+
+R13	Dat Arg1:T13 Arg2:T14 << OK >>	dn,30.03 2020 r -> Zgłosi się ponownie do kliniki kardiologii  <RANK: 3> <info: start[1015, 972] <type: LEFT>>
+
+
+Sentence 12:
+------------------------------------------------
+
+
+
+Sentence 13:
+Zastosowane leczenie
+
+
+
+Sentence 14:
+------------------------------------------------
+
+
+
+Sentence 15:
+Enarenal  , Spironol, Dormicum, Inhalacje z soli fizjologicznej.
+
+
+
+Sentence 16:
+------------------------------------------------
+
+
+
+Sentence 17:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 18:
+Enarenal 2 x 0.6 mg doustnie
+Spironol 1x1/2 tabl rano
+
+R14	Drg Arg1:T19 Arg2:T20 << OK >>	Enarenal -> 2 x 0.6 mg doustnie  <RANK: 3> <info: start[1383, 1392] <type: RIGHT>>
+R15	Drg Arg1:T19 Arg2:T22 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1x1/2 tabl rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1383, 1421] <type: RIGHT>>
+R16	Drg Arg1:T21 Arg2:T20 <<REDUNDANT!!!REMOVED>>	Spironol -> 2 x 0.6 mg doustnie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1412, 1392] <type: LEFT>>
+R17	Drg Arg1:T21 Arg2:T22 << OK >>	Spironol -> 1x1/2 tabl rano  <RANK: 3> <info: start[1412, 1421] <type: RIGHT>>
+
+
+Sentence 19:
+Zgłosi się ponownie do kliniki kardiologii dn  0.1.07.2019 r  , po uprzednim potwierdzeniu telefonicznym terminu przyjęcia dzień wcześniej.
+
+R18	Dat Arg1:T24 Arg2:T23 << OK >>	dn  0.1.07.2019 r -> Zgłosi się ponownie do kliniki kardiologii  <RANK: 3> <info: start[1480, 1437] <type: LEFT>>
+
+
+Sentence 20:
+------------------------------------------------
+
+
+
+Sentence 21:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 22:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią całkowitego ubytku przegrody przedsionkowo-komorowej. 
+   
+
+
+Sentence 23:
+Stan po operacji kardiochirurgicznej: plastyka ubytku przedsionkowo-komorowego w dniu 30.08.2016 a następnie reoperacji: plastyka podpłucnego ubytku w przegrodzie komór -w dniu 09.09.2016
+   
+R19	Dat Arg1:T27 Arg2:T42 << OK >>	w dniu 30.08.2016 -> ubytku przedsionkowo-komorowego  <RANK: 3> <info: start[1964, 1932] <type: LEFT>>
+R20	Dat Arg1:T27 Arg2:T43 <<REDUNDANT!!!REMOVED>>	w dniu 30.08.2016 -> podpłucnego ubytku w przegrodzie komór <:REMOVED Too far from TagInfo[T27, 1964, 1981, Date, w dniu 30.08.2016
+] TagInfo[T42, 1932, 1963, Condition, ubytku przedsionkowo-komorowego
+]:> <RANK: 3> <info: start[1964, 2015] <type: RIGHT>>
+R21	Dat Arg1:T27 Arg2:T26 << OK >>	w dniu 30.08.2016 -> operacji kardiochirurgicznej: plastyka  <RANK: 3> <info: start[1964, 1893] <type: LEFT>>
+R22	Dat Arg1:T27 Arg2:T28 <<REDUNDANT!!!REMOVED>>	w dniu 30.08.2016 -> reoperacji: plastyka <:REMOVED Too far from TagInfo[T27, 1964, 1981, Date, w dniu 30.08.2016
+] TagInfo[T42, 1932, 1963, Condition, ubytku przedsionkowo-komorowego
+]:> <RANK: 3> <info: start[1964, 1994] <type: RIGHT>>
+R23	Dat Arg1:T29 Arg2:T42 <<REDUNDANT!!!REMOVED>>	w dniu 09.09.2016 -> ubytku przedsionkowo-komorowego <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2055, 1932] <type: LEFT>>
+R24	Dat Arg1:T29 Arg2:T43 << OK >>	w dniu 09.09.2016 -> podpłucnego ubytku w przegrodzie komór  <RANK: 3> <info: start[2055, 2015] <type: LEFT>>
+R25	Dat Arg1:T29 Arg2:T26 <<REDUNDANT!!!REMOVED>>	w dniu 09.09.2016 -> operacji kardiochirurgicznej: plastyka <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2055, 1893] <type: LEFT>>
+R26	Dat Arg1:T29 Arg2:T28 << OK >>	w dniu 09.09.2016 -> reoperacji: plastyka  <RANK: 3> <info: start[2055, 1994] <type: LEFT>>
+
+
+Sentence 24:
+Trisomia 21 pary chromosomów
+   Istotna niedomykalność mitralna.
+   
+
+
+Sentence 25:
+Niewydolność serca.
+
+
+
+Sentence 26:
+------------------------------------------------
+
+
+
+Sentence 27:
+Zastosowane leczenie
+
+
+
+Sentence 28:
+------------------------------------------------
+
+
+
+Sentence 29:
+Enarenal, Spironol, Relanium
+------------------------------------------------
+
+
+
+Sentence 30:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 31:
+Dziewczynka z wrodzoną wadą serca przyjęta do Kliniki do poszerzonych badań i ustalenia dalszego postępowania
+
+
+Sentence 32:
+Stan dość dobry
+------------------------------------------------
+
+
+
+Sentence 33:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 34:
+Dziewczynka z wrodzoną wadą serca  przyjęta do Kliniki do poszerzonych badań i ustalenia dalszego postępowania
+
+
+Sentence 35:
+Stan dość dobry
+------------------------------------------------
+
+
+
+Sentence 36:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 37:
+Grupa krwi + p/c odpornościowe (powyżej 4. m-ca życia
+    NR-KS:G-19/014845
+    KODKRESKOWYPROBKI:G-19/014845
+    
+
+
+Sentence 38:
+GR:O
+    RH:+ (dodatni)
+    
+
+
+Sentence 39:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+
+
+
+Sentence 40:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.94[10^3/ul]
+    
+
+
+Sentence 41:
+RBC Krwinki czerwone:4.78[10^6/ul]
+    
+
+
+Sentence 42:
+HGB Hemoglobina:13.8[g/dl]
+    
+
+
+Sentence 43:
+HCT Hematokryt:40.4[%]
+    
+
+
+Sentence 44:
+MCV wskaźnik czerwonokrw:84.5[fl]
+    
+
+
+Sentence 45:
+MCH wskaźnik czerwonokrw:28.9[pg]
+    
+
+
+Sentence 46:
+MCHC wskaźnik czerwonokr:34.2[g/dl]
+    
+
+
+Sentence 47:
+PLT z morfologii:278[10^3/ul]
+    
+
+
+Sentence 48:
+RDW-SD:41.2[fl]
+    
+
+
+Sentence 49:
+RDW-CV:13.3[%]
+    PDW:11.1[fl]
+    MPV:10.0[fl]
+    P-LCR:24.0[%]
+    
+
+
+Sentence 50:
+PCT (hematokryt płytkowy:0.28[%]
+    
+
+
+Sentence 51:
+NEUTR# wartość bezwzględ:2.60[10^3/ul]
+    
+
+
+Sentence 52:
+NEUTR%:52.6[%]
+    
+
+
+Sentence 53:
+LYMH# wartość bezwzględn:1.49[10^3/ul]
+    
+
+
+Sentence 54:
+LYMPH%:30.2[%]
+    
+
+
+Sentence 55:
+MONO# wartość bezwzględn:0.67[10^3/ul]
+    
+
+
+Sentence 56:
+MONO%:13.6[%]
+    
+
+
+Sentence 57:
+EO# wartość bezwzględna:0.09[10^3/ul]
+    
+
+
+Sentence 58:
+EO%:1.8[%]
+    
+
+
+Sentence 59:
+BASO# wartość bezwzględn:0.09[10^3/ul]
+    
+
+
+Sentence 60:
+BASO%:1.8[%]
+    
+
+
+Sentence 61:
+NRBC %:0.0[%]
+    
+
+
+Sentence 62:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 63:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.09[10^3/ul]
+    
+
+
+Sentence 64:
+RBC Krwinki czerwone:4.49[10^6/ul]
+    
+
+
+Sentence 65:
+HGB Hemoglobina:13.2[g/dl]
+    
+
+
+Sentence 66:
+HCT Hematokryt:37.6[%]
+    
+
+
+Sentence 67:
+MCV wskaźnik czerwonokrw:83.7[fl]
+    
+
+
+Sentence 68:
+MCH wskaźnik czerwonokrw:29.4[pg]
+    
+
+
+Sentence 69:
+MCHC wskaźnik czerwonokr:35.1[g/dl]
+    
+
+
+Sentence 70:
+PLT z morfologii:252[10^3/ul]
+    
+
+
+Sentence 71:
+RDW-SD:43.7[fl]
+    
+
+
+Sentence 72:
+RDW-CV:14.3[%]
+    PDW:12.0[fl]
+    MPV:10.8[fl]
+    P-LCR:30.4[%]
+    
+
+
+Sentence 73:
+PCT (hematokryt płytkowy:0.27[%]
+    
+
+
+Sentence 74:
+NEUTR# wartość bezwzględ:2.97[10^3/ul]
+    
+
+
+Sentence 75:
+NEUTR%:58.3[%]
+    
+
+
+Sentence 76:
+LYMH# wartość bezwzględn:1.37[10^3/ul]
+    
+
+
+Sentence 77:
+LYMPH%:26.9[%]
+    
+
+
+Sentence 78:
+MONO# wartość bezwzględn:0.40[10^3/ul]
+    MONO%:7.9[%]
+    
+
+
+Sentence 79:
+EO# wartość bezwzględna:0.27[10^3/ul]
+    
+
+
+Sentence 80:
+EO%:5.3[%]
+    BASO# wartość bezwzględn:0.08[10^3/ul]
+    BASO%:1.6[%]
+    
+
+
+Sentence 81:
+NRBC %:0.0[%]
+    
+
+
+Sentence 82:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 83:
+Badanie ogólne moczu
+    
+
+
+Sentence 84:
+barwa:żółty[ ]
+    
+
+
+Sentence 85:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 86:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 87:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 88:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 89:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 90:
+ciężar właściwy:1.020[ ]
+    
+
+
+Sentence 91:
+pH:6.0[ ]
+    
+
+
+Sentence 92:
+białko:nieobecne[ ]
+    
+
+
+Sentence 93:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 94:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 95:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 96:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 97:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 98:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 99:
+leukocyty:3 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:nieliczne[w preparacie]
+    kryształy szczawianu wap:nieliczne[w preparacie]
+
+
+
+Sentence 100:
+TSH: TSH:4.01[uIU/ml]
+
+
+
+Sentence 101:
+TSH: TSH:6.08[uIU/ml]
+
+
+
+Sentence 102:
+FT3: FT3:3.71[pg/ml]
+
+
+
+Sentence 103:
+FT4: FT4:1.43[ng/dl]
+
+
+
+Sentence 104:
+Witamina D 25-OH: Witamina D 25-OH:42.8[ng/ml]
+
+
+
+Sentence 105:
+ALAT: ALAT:24[U/L]
+ALAT: ALAT:23[U/L]
+ASPAT: ASPAT:42[U/L]
+ASPAT: ASPAT:37[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.79[mg/dl]
+
+
+
+Sentence 106:
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:1.69[mg/dl]
+
+
+
+Sentence 107:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 108:
+Potas (K): Potas:4.8[mmol/L]
+
+
+
+Sentence 109:
+Kreatynina + GFR
+    
+
+
+Sentence 110:
+Kreatynina w surowicy:0.36[mg/dl]
+    eGFR stand.
+
+
+Sentence 111:
+wg Schwartza:134.4[ml/min/1,73 m^2]
+    
+
+
+Sentence 112:
+eGFR zmod.
+
+
+Sentence 113:
+wg Schwartza:101.0[ml/min/1,73 m^2]
+    
+
+
+Sentence 114:
+wzrost:88[cm]
+Kreatynina + GFR
+    
+
+
+Sentence 115:
+Kreatynina w surowicy:0.35[mg/dl]
+    
+
+
+Sentence 116:
+eGFR stand. wg Schwartza:139.9[ml/min/1,73 m^2]
+    
+
+
+Sentence 117:
+eGFR zmod.
+
+
+Sentence 118:
+wg Schwartza:105.0[ml/min/1,73 m^2]
+    
+
+
+Sentence 119:
+wzrost:89[cm]
+Magnez: Magnez:0.78[mmol/L]
+
+
+
+Sentence 120:
+Mocznik: Mocznik:44[mg/dl]
+
+
+
+Sentence 121:
+Mocznik: Mocznik:33[mg/dl]
+
+
+
+Sentence 122:
+Profil parametrów krytycznych (ABL)
+    pH:7.383
+    pCO2:43.5[mmHg]
+    BE:0.50[mmol/L]
+    
+
+
+Sentence 123:
+HCO3:25.3[mmol/L]
+    pO2:52.8[mmHg]
+    
+
+
+Sentence 124:
+O2Sat:85.6[%]
+    
+
+
+Sentence 125:
+Sód (ABL):133[mmol/L]
+    
+
+
+Sentence 126:
+Potas (ABL):4.8[mmol/L]
+    
+
+
+Sentence 127:
+Chlorki (ABL):107[mmol/L]
+    
+
+
+Sentence 128:
+Wapń zjonizowany (ABL):1.19[mmol/L]
+    
+
+
+Sentence 129:
+Ht - ABL:41.4[%]
+    
+
+
+Sentence 130:
+Hb - ABL:13.5[g/dl]
+    
+
+
+Sentence 131:
+FO2Hb:84.2[%]
+    
+
+
+Sentence 132:
+FCOHb:0.9[%]
+    FMetHb:0.7[%]
+    FHbF:0.0[%]
+    
+
+
+Sentence 133:
+Glukoza (ABL):76[mg/dl]
+    Mleczany:14[mg/dl]
+
+
+
+Sentence 134:
+Glukoza w surowicy: Glukoza w surowicy:86[mg/dl]
+
+
+
+Sentence 135:
+NT-proBNP surowica: NT-proBNP w surowicy:1756[pg/ml]
+
+
+
+Sentence 136:
+NT-proBNP surowica: NT-proBNP w surowicy:1238[pg/ml]
+
+
+
+Sentence 137:
+------------------------------------------------
+
+
+
+Sentence 138:
+ICD10
+------------------------------------------------
+Q90.9
+Q21.2
+I50.1
+Q23.3
+Z98.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 139:
+ICD9
+------------------------------------------------
+89.522
+C55
+A01
+
+
+
+Sentence 140:
+I81
+89.602
+E65
+L43
+M87
+89.541
+L69
+I17
+N45
+I19
+O35
+M37
+
+
+
+Sentence 141:
+N13
+
+
+
+Sentence 142:
+N24
+88.721
+------------------------------------------------
+
+

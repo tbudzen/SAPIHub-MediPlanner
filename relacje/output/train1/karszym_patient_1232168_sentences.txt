@@ -1,0 +1,542 @@
+allRelations          : 40
+oks                   : 20
+isRedundantAndRemoveds: 15
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 4
+GOOD / BAD            : 35 / 5
+Sentence 0:
+------------------------------------------------
+Wiek: 40 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+
+
+
+Sentence 4:
+------------------------------------------------
+
+
+
+Sentence 5:
+dalsza opieka w poradni POZ   
+okresowa kontrola kardiologiczna   
+regularna kontrola ciśnienia tętniczego   
+okresowa kontrola lipidogramu, kw. moczowego
+dieta niskocholesterolowa z unikaniem cukrów prostych
+stały, umiarkowany, aerobowy wysiłek fizyczny   
+regularne przyjmowanie leków:  
+Concor COR 1,25 mg 1 tabl.
+R1	Drg Arg1:T7 Arg2:T8 << OK >>	Concor COR -> 1,25 mg 1 tabl. rano  <RANK: 3> <info: start[620, 631] <type: RIGHT>>
+
+
+Sentence 6:
+rano
+Prestarium 5 mg 1/2 tabl.
+R2	Drg Arg1:T9 Arg2:T10 << OK >>	Prestarium -> 5 mg 1/2 tabl. wieczorem  <RANK: 3> <info: start[652, 663] <type: RIGHT>>
+
+
+Sentence 7:
+wieczorem
+------------------------------------------------
+
+
+
+Sentence 8:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 9:
+------------------------------------------------
+ Rozpozanie I: ICD10:I10|Rozpoznanie II: |Rozpoznanie V: |Opisowo:: Nadciśnienie tętnicze Ist wg ESC/ESH.
+
+
+Sentence 10:
+Żylaki k. dolnej lewej.
+
+
+Sentence 11:
+Ca sutka lewego - stan po mastektomii z rekonstrukcją piersi i chemioterapii  (2014).
+R3	Dat Arg1:T16 Arg2:T13 <<SHOULD NOT BE REMOVED>>	2014 -> Ca sutka lewego <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1020, 941] <type: LEFT>>
+R4	Dat Arg1:T16 Arg2:T14 << OK >>	2014 -> mastektomii  <RANK: 2> <info: start[1020, 967] <type: LEFT>>
+R5	Dat Arg1:T16 Arg2:T15 << OK >>	2014 -> chemioterapii  <RANK: 3> <info: start[1020, 1004] <type: LEFT>>
+R6	Dat Arg1:T16 Arg2:T52 << OK >>	2014 -> rekonstrukcją piersi  <RANK: 2> <info: start[1020, 981] <type: LEFT>>
+
+
+Sentence 12:
+Zmiany zwyrodnieniowe kręgosłupa odc. lędźwiowego.|Rozpoznanie IV: |Rozpoznanie III:
+------------------------------------------------
+
+
+
+Sentence 13:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 14:
+Pacjentka 40-letnia, przyjęta do Kliniki z powodu labilnych wartości ciśnienia tętniczego od 2 lat z towarzyszącymi bólami głowy (max 180/100 mmHg)
+
+R7	Dat Arg1:T19 Arg2:T18 << OK >>	od 2 lat -> labilnych wartości ciśnienia tętniczego  <RANK: 3> <info: start[1326, 1286] <type: LEFT>>
+R8	Dat Arg1:T19 Arg2:T20 << OK >>	od 2 lat -> towarzyszącymi bólami głowy  <RANK: 3> <info: start[1326, 1337] <type: RIGHT>>
+R9	Dat Arg1:T19 Arg2:T21 << OK >>	od 2 lat -> max 180/100 mmHg  <RANK: 3> <info: start[1326, 1366] <type: RIGHT>>
+
+
+Sentence 15:
+W wywiadzie: rak sutka lewego (2014r) + chemioterapia + mastektomia z rekonstrukcja piersi (2014), zmiany zwyrodnieniowe kręgosłupa odc. lędźwiowego, żylaki k dolnej lewej.
+
+R10	Dat Arg1:T23 Arg2:T22 << OK >>	2014r -> rak sutka lewego  <RANK: 3> <info: start[1415, 1397] <type: LEFT>>
+R11	Dat Arg1:T23 Arg2:T27 <<REDUNDANT!!!REMOVED>>	2014r -> zmiany zwyrodnieniowe kręgosłupa odc. lędźwiowego <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1415, 1483] <type: RIGHT>>
+R12	Dat Arg1:T23 Arg2:T28 <<REDUNDANT!!!REMOVED>>	2014r -> żylaki k dolnej lewej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1415, 1534] <type: RIGHT>>
+R13	Dat Arg1:T23 Arg2:T24 <<REDUNDANT!!!SHOULD BE REMOVED>>	2014r -> chemioterapia  <RANK: 3> <info: start[1415, 1424] <type: RIGHT>>
+R14	Dat Arg1:T23 Arg2:T25 <<REDUNDANT!!!SHOULD BE REMOVED>>	2014r -> mastektomia  <RANK: 3> <info: start[1415, 1440] <type: RIGHT>>
+R15	Dat Arg1:T23 Arg2:T53 <<REDUNDANT!!!SHOULD BE REMOVED>>	2014r -> rekonstrukcja piersi  <RANK: 3> <info: start[1415, 1454] <type: RIGHT>>
+R16	Dat Arg1:T26 Arg2:T22 <<REDUNDANT!!!SHOULD BE REMOVED>>	2014 -> rak sutka lewego  <RANK: 3> <info: start[1476, 1397] <type: LEFT>>
+R17	Dat Arg1:T26 Arg2:T27 <<REDUNDANT!!!REMOVED>>	2014 -> zmiany zwyrodnieniowe kręgosłupa odc. lędźwiowego <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1476, 1483] <type: RIGHT>>
+R18	Dat Arg1:T26 Arg2:T28 <<REDUNDANT!!!REMOVED>>	2014 -> żylaki k dolnej lewej <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1476, 1534] <type: RIGHT>>
+R19	Dat Arg1:T26 Arg2:T24 << OK >>	2014 -> chemioterapia  <RANK: 3> <info: start[1476, 1424] <type: LEFT>>
+R20	Dat Arg1:T26 Arg2:T25 << OK >>	2014 -> mastektomia  <RANK: 3> <info: start[1476, 1440] <type: LEFT>>
+R21	Dat Arg1:T26 Arg2:T53 << OK >>	2014 -> rekonstrukcja piersi  <RANK: 3> <info: start[1476, 1454] <type: LEFT>>
+
+
+Sentence 16:
+Przebyte operacje: nie podaje
+
+
+
+Sentence 17:
+Przebyte choroby zakaźne - WZW, borelioza - nie podaje
+Wywiad rodzinny: nieistotny
+
+R22	Neg Arg1:T31 Arg2:T29 << OK >>	nie podaje -> WZW  <RANK: 2> <info: start[1631, 1614] <type: LEFT>>
+R23	Neg Arg1:T31 Arg2:T30 << OK >>	nie podaje -> borelioza  <RANK: 3> <info: start[1631, 1619] <type: LEFT>>
+R24	Neg Arg1:T31 Arg2:T32 <<REDUNDANT!!!REMOVED>>	nie podaje -> Wywiad rodzinny <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1631, 1642] <type: RIGHT>>
+R25	Neg Arg1:T33 Arg2:T29 <<REDUNDANT!!!REMOVED>>	nieistotny -> WZW <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1659, 1614] <type: LEFT>>
+R26	Neg Arg1:T33 Arg2:T30 <<REDUNDANT!!!REMOVED>>	nieistotny -> borelioza <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1659, 1619] <type: LEFT>>
+R27	Neg Arg1:T33 Arg2:T32 << OK >>	nieistotny -> Wywiad rodzinny  <RANK: 3> <info: start[1659, 1642] <type: LEFT>>
+
+
+Sentence 18:
+Palenie tytoniu: nie podaje
+Inne używki: nie podaje
+Uczulenia: dolargan, penicylina
+
+R28	Neg Arg1:T35 Arg2:T38 <<REDUNDANT!!!REMOVED>>	nie podaje -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1687, 1722] <type: RIGHT>>
+R29	Neg Arg1:T35 Arg2:T34 << OK >>	nie podaje -> Palenie tytoniu  <RANK: 3> <info: start[1687, 1670] <type: LEFT>>
+R30	Neg Arg1:T35 Arg2:T36 <<REDUNDANT!!!REMOVED>>	nie podaje -> Inne używki <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1687, 1698] <type: RIGHT>>
+R31	Neg Arg1:T35 Arg2:T39 <<REDUNDANT!!!REMOVED>>	nie podaje -> dolargan <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1687, 1733] <type: RIGHT>>
+R32	Neg Arg1:T35 Arg2:T40 <<REDUNDANT!!!REMOVED>>	nie podaje -> penicylina <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1687, 1743] <type: RIGHT>>
+R33	Neg Arg1:T37 Arg2:T38 <<REDUNDANT!!!REMOVED>>	nie podaje -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1711, 1722] <type: RIGHT>>
+R34	Neg Arg1:T37 Arg2:T34 <<REDUNDANT!!!REMOVED>>	nie podaje -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1711, 1670] <type: LEFT>>
+R35	Neg Arg1:T37 Arg2:T36 << OK >>	nie podaje -> Inne używki  <RANK: 3> <info: start[1711, 1698] <type: LEFT>>
+R36	Neg Arg1:T37 Arg2:T39 <<REDUNDANT!!!REMOVED>>	nie podaje -> dolargan <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1711, 1733] <type: RIGHT>>
+R37	Neg Arg1:T37 Arg2:T40 <<REDUNDANT!!!REMOVED>>	nie podaje -> penicylina <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1711, 1743] <type: RIGHT>>
+R38	Alg Arg1:T38 Arg2:T39 << OK >>	Uczulenia -> dolargan  <RANK: 3> <info: start[1722, 1733] <type: RIGHT>>
+R39	Alg Arg1:T38 Arg2:T40 << OK >>	Uczulenia -> penicylina  <RANK: 2> <info: start[1722, 1743] <type: RIGHT>>
+
+
+Sentence 19:
+Status społeczny: lekarz, 3 dzieci
+
+
+
+Sentence 20:
+Leki:
+bez leków
+
+R40	Neg Arg1:T43 Arg2:T44 << OK >>	bez -> leków  <RANK: 3> <info: start[1795, 1799] <type: RIGHT>>
+
+
+Sentence 21:
+Plan opieki nad pacjentem: echo serca, echo przezprzełykowe, echo obciążeniowe, TET, ABPM, Holter, RTG kl. piersiowej.
+
+
+
+Sentence 22:
+Przewidywana liczba dni hospitalizacji: 4-5 dni
+------------------------------------------------
+
+
+
+Sentence 23:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 24:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.40[10^3/ul]
+    
+
+
+Sentence 25:
+RBC Krwinki czerwone:4.05[10^6/ul]
+    
+
+
+Sentence 26:
+HGB Hemoglobina:12.5[g/dl]
+    
+
+
+Sentence 27:
+HCT Hematokryt:35.6[%]
+    
+
+
+Sentence 28:
+MCV wskaźnik czerwonokrw:87.9[fl]
+    
+
+
+Sentence 29:
+MCH wskaźnik czerwonokrw:30.9[pg]
+    
+
+
+Sentence 30:
+MCHC wskaźnik czerwonokr:35.1[g/dl]
+    
+
+
+Sentence 31:
+PLT z morfologii:169[10^3/ul]
+    
+
+
+Sentence 32:
+RDW-SD:40.8[fl]
+    
+
+
+Sentence 33:
+RDW-CV:12.7[%]
+    PDW:10.2[fl]
+    
+
+
+Sentence 34:
+MPV:9.3[fl]
+    
+
+
+Sentence 35:
+P-LCR:19.9[%]
+    
+
+
+Sentence 36:
+PCT (hematokryt płytkowy:0.16[%]
+    
+
+
+Sentence 37:
+NEUTR# wartość bezwzględ:3.40[10^3/ul]
+    
+
+
+Sentence 38:
+NEUTR%:53.2[%]
+    
+
+
+Sentence 39:
+LYMH# wartość bezwzględn:2.23[10^3/ul]
+    
+
+
+Sentence 40:
+LYMPH%:34.8[%]
+    
+
+
+Sentence 41:
+MONO# wartość bezwzględn:0.50[10^3/ul]
+    
+
+
+Sentence 42:
+MONO%:7.8[%]
+    
+
+
+Sentence 43:
+EO# wartość bezwzględna:0.22[10^3/ul]
+    
+
+
+Sentence 44:
+EO%:3.4[%]
+    
+
+
+Sentence 45:
+BASO# wartość bezwzględn:0.05[10^3/ul]
+    
+
+
+Sentence 46:
+BASO%:0.8[%]
+    
+
+
+Sentence 47:
+NRBC %:0.0[%]
+    
+
+
+Sentence 48:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 49:
+D-dimer - test ilościowy: D-dimer - test ilościowy:312[ng/ml]
+
+
+
+Sentence 50:
+Badanie ogólne moczu
+    
+
+
+Sentence 51:
+barwa:słomkowy[ ]
+    
+
+
+Sentence 52:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 53:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 54:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 55:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 56:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 57:
+ciężar właściwy:1.009[ ]
+    
+
+
+Sentence 58:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 59:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 60:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 61:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 62:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 63:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 64:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 65:
+leukocyty:1 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 66:
+TSH: TSH:0.55[uIU/ml]
+
+
+
+Sentence 67:
+FT3: FT3:2.94[pg/ml]
+
+
+
+Sentence 68:
+FT4: FT4:0.99[ng/dl]
+
+
+
+Sentence 69:
+Aldosteron: Aldosteron:6.52[ng/dl]
+
+
+
+Sentence 70:
+ALAT: ALAT:44[U/L]
+ASPAT: ASPAT:32[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 71:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 72:
+Potas (K): Potas:4.3[mmol/L]
+
+
+
+Sentence 73:
+Kreatynina + GFR
+    
+
+
+Sentence 74:
+Kreatynina w surowicy:0.69[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 75:
+MDRD ze stan:94.2[ml/min/1,73 m^2]
+
+
+
+Sentence 76:
+Mocznik: Mocznik:26[mg/dl]
+
+
+
+Sentence 77:
+Kwas moczowy: Kwas moczowy:6.6[mg/dl]
+
+
+
+Sentence 78:
+Lipidogram
+    
+
+
+Sentence 79:
+Cholesterol całkowity:229[mg/dl]
+    
+
+
+Sentence 80:
+Cholesterol HDL:46[mg/dl]
+    
+
+
+Sentence 81:
+Cholestrol LDL:139[mg/dl]
+    Triglicerydy:225[mg/dl]
+    
+
+
+Sentence 82:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:82[mg/dl]
+
+
+
+Sentence 83:
+NT-proBNP surowica: NT-proBNP w surowicy:120[pg/ml]
+
+
+
+Sentence 84:
+------------------------------------------------
+
+
+
+Sentence 85:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 86:
+I10
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 87:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 88:
+C55
+A01
+I81
+L43
+G49
+N45
+L69
+O55
+I17
+87.221
+M45
+O35
+M37
+I19
+N13
+N24
+88.721
+O69
+88.761
+88.751
+------------------------------------------------
+
+

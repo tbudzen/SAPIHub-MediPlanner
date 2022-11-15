@@ -1,0 +1,539 @@
+allRelations          : 22
+oks                   : 14
+isRedundantAndRemoveds: 6
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 1
+GOOD / BAD            : 20 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 5 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+
+
+
+Sentence 2:
+------------------------------------------------
+
+
+
+Sentence 3:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 4:
+------------------------------------------------
+ Rozpoznanie II: ICD10:Z98.8|Opisowo:: Wrodzona wada serca pod postacią zarośnięcia zastawki tętnicy płucnej z ciągłą przegrodą międzykomorową, hipoplastyczną prawą komorą.
+   
+
+
+Sentence 5:
+Stan po operacji wytworzenia zespolenia prawostronnego B-T (06.06.2014r) i wymianie zakrzepniętego zespolenia na nowe (10.06.2014.)
+   
+R1	Dat Arg1:T4 Arg2:T3 << OK >>	06.06.2014r -> operacji wytworzenia zespolenia prawostronnego B-T  <RANK: 3> <info: start[579, 527] <type: LEFT>>
+R2	Dat Arg1:T4 Arg2:T5 <<REDUNDANT!!!REMOVED>>	06.06.2014r -> wymianie zakrzepniętego zespolenia na nowe <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[579, 594] <type: RIGHT>>
+R3	Dat Arg1:T6 Arg2:T3 <<REDUNDANT!!!REMOVED>>	10.06.2014 -> operacji wytworzenia zespolenia prawostronnego B-T <:REMOVED other first tag between (left):> <RANK: 2> <info: start[638, 527] <type: LEFT>>
+R4	Dat Arg1:T6 Arg2:T5 << OK >>	10.06.2014 -> wymianie zakrzepniętego zespolenia na nowe  <RANK: 3> <info: start[638, 594] <type: LEFT>>
+
+
+Sentence 6:
+Stan po operacji metodą dwukierunkowego Glenna z wycięciem przegrody międzyprzedsionkowej oraz podwiązaniem zespolenia systemowo-płucnego (24.06.2016r.)
+   
+R5	Dat Arg1:T8 Arg2:T7 << OK >>	24.06.2016r -> operacji metodą dwukierunkowego Glenna z wycięciem przegrody międzyprzedsionkowej oraz podwiązaniem zespolenia systemowo-płucnego  <RANK: 3> <info: start[793, 662] <type: LEFT>>
+
+
+Sentence 7:
+Stan po zespoleniu centralnym sr 5mm (25.07.2018)
+   Sinica centralna|Rozpoznanie
+R6	Dat Arg1:T10 Arg2:T11 <<REDUNDANT!!!REMOVED>>	25.07.2018 -> Sinica centralna <:REMOVED many second tags on the right:> <RANK: 1> <info: start[848, 863] <type: RIGHT>>
+R7	Dat Arg1:T10 Arg2:T9 << OK >>	25.07.2018 -> zespoleniu centralnym sr 5mm  <RANK: 3> <info: start[848, 818] <type: LEFT>>
+
+
+Sentence 8:
+IV: |Rozpoznanie V: |Rozpozanie I: ICD10:Q22.0|Rozpoznanie III: ICD10:R23.0
+------------------------------------------------
+
+
+
+Sentence 9:
+Zastosowane leczenie
+
+
+
+Sentence 10:
+------------------------------------------------
+
+
+
+Sentence 11:
+Spironol, Acesan, krople do nosa z neomycyną i effedryną, nebulizacje z 0,9%NaCl i Benodil
+------------------------------------------------
+
+
+
+Sentence 12:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 13:
+Acesan 37,5mg 1xdz (1/2 tabl 75mg)
+
+R8	Drg Arg1:T16 Arg2:T24 << OK >>	Acesan -> 37,5mg 1xdz (1/2 tabl 75mg)  <RANK: 3> <info: start[1286, 1293] <type: RIGHT>>
+
+
+Sentence 14:
+Spironol 1x 25mg z przerwą w niedzielę
+Dicortineff 3x1 kropla do nosa
+
+R9	Drg Arg1:T17 Arg2:T25 << OK >>	Spironol -> 1x 25mg z przerwą w niedzielę  <RANK: 3> <info: start[1321, 1330] <type: RIGHT>>
+R10	Drg Arg1:T17 Arg2:T26 <<REDUNDANT!!!REMOVED>>	Spironol -> 3x1 kropla do nosa <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1321, 1372] <type: RIGHT>>
+R11	Drg Arg1:T18 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Dicortineff -> 1x 25mg z przerwą w niedzielę <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1360, 1330] <type: LEFT>>
+R12	Drg Arg1:T18 Arg2:T26 << OK >>	Dicortineff -> 3x1 kropla do nosa  <RANK: 3> <info: start[1360, 1372] <type: RIGHT>>
+
+
+Sentence 15:
+Nebbud 250mcg + 1ml 0,9%NaCl 2xdz
+
+R13	Drg Arg1:T19 Arg2:T27 << OK >>	Nebbud -> 250mcg  <RANK: 3> <info: start[1391, 1398] <type: RIGHT>>
+R14	Drg Arg1:T19 Arg2:T29 <<REDUNDANT!!!SHOULD BE REMOVED>>	Nebbud -> 1ml  <RANK: 3> <info: start[1391, 1407] <type: RIGHT>>
+R15	Drg Arg1:T19 Arg2:T30 <<SHOULD NOT BE REMOVED>>	Nebbud -> 2xdz <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1391, 1420] <type: RIGHT>>
+R16	Drg Arg1:T28 Arg2:T27 <<REDUNDANT!!!REMOVED>>	0,9%NaCl -> 250mcg <:REMOVED other second tag between (left):> <RANK: 3> <info: start[1411, 1398] <type: LEFT>>
+R17	Drg Arg1:T28 Arg2:T29 << OK >>	0,9%NaCl -> 1ml  <RANK: 3> <info: start[1411, 1407] <type: LEFT>>
+R18	Drg Arg1:T28 Arg2:T30 << OK >>	0,9%NaCl -> 2xdz  <RANK: 3> <info: start[1411, 1420] <type: RIGHT>>
+
+
+Sentence 16:
+Sambucol Kids 5ml 2xdz
+
+R19	Drg Arg1:T20 Arg2:T31 << OK >>	Sambucol Kids -> 5ml 2xdz  <RANK: 3> <info: start[1425, 1439] <type: RIGHT>>
+
+
+Sentence 17:
+Kontrola w POZ za 2-3 dni
+
+R20	Dat Arg1:T32 Arg2:T21 << OK >>	za 2-3 dni -> Kontrola w POZ  <RANK: 3> <info: start[1463, 1448] <type: LEFT>>
+
+
+Sentence 18:
+Ponowna hospitalizacja w klinice kardiologii celem cewnikowania serca dn. 02.03.2020r
+------------------------------------------------
+
+R21	Dat Arg1:T33 Arg2:T22 << OK >>	dn. 02.03.2020r -> Ponowna hospitalizacja w klinice kardiologii  <RANK: 3> <info: start[1544, 1474] <type: LEFT>>
+R22	Dat Arg1:T33 Arg2:T23 << OK >>	dn. 02.03.2020r -> cewnikowania serca  <RANK: 3> <info: start[1544, 1525] <type: LEFT>>
+
+
+Sentence 19:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 20:
+Grupa krwi + p/c odpornościowe (powyżej 4. m-ca życia
+    NR-KS:G-19/018206
+    KODKRESKOWYPROBKI:G-19/018206
+    GR:AB
+    RH:+ (dodatni)
+    
+
+
+Sentence 21:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+
+
+
+Sentence 22:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:9.37[10^3/ul]
+    
+
+
+Sentence 23:
+RBC Krwinki czerwone:5.83[10^6/ul]
+    
+
+
+Sentence 24:
+HGB Hemoglobina:16.2[g/dl]
+    
+
+
+Sentence 25:
+HCT Hematokryt:47.5[%]
+    
+
+
+Sentence 26:
+MCV wskaźnik czerwonokrw:81.5[fl]
+    
+
+
+Sentence 27:
+MCH wskaźnik czerwonokrw:27.8[pg]
+    
+
+
+Sentence 28:
+MCHC wskaźnik czerwonokr:34.1[g/dl]
+    
+
+
+Sentence 29:
+PLT z morfologii:218[10^3/ul]
+    
+
+
+Sentence 30:
+RDW-SD:38.5[fl]
+    
+
+
+Sentence 31:
+RDW-CV:13.2[%]
+    PDW:13.0[fl]
+    MPV:10.7[fl]
+    
+
+
+Sentence 32:
+P-LCR:31.4[%]
+    
+
+
+Sentence 33:
+PCT (hematokryt płytkowy:0.23[%]
+    
+
+
+Sentence 34:
+NEUTR# wartość bezwzględ:4.35[10^3/ul]
+    
+
+
+Sentence 35:
+NEUTR%:46.4[%]
+    
+
+
+Sentence 36:
+LYMH# wartość bezwzględn:3.96[10^3/ul]
+    
+
+
+Sentence 37:
+LYMPH%:42.3[%]
+    
+
+
+Sentence 38:
+MONO# wartość bezwzględn:0.71[10^3/ul]
+    
+
+
+Sentence 39:
+MONO%:7.6[%]
+    
+
+
+Sentence 40:
+EO# wartość bezwzględna:0.29[10^3/ul]
+    
+
+
+Sentence 41:
+EO%:3.1[%]
+    
+
+
+Sentence 42:
+BASO# wartość bezwzględn:0.06[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 43:
+NRBC %:0.0[%]
+    
+
+
+Sentence 44:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 45:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:27.4[sek]
+
+
+
+Sentence 46:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 47:
+Czas protrombinowy:13.2[sek]
+    
+
+
+Sentence 48:
+Wskaźnik PT:83.3[%]
+    
+
+
+Sentence 49:
+INR:1.19
+Czas trombinowy TT: Czas trombinowy TT:15.7[sek]
+
+
+
+Sentence 50:
+Fibrynogen: Fibrynogen:1.93[g/L]
+
+
+
+Sentence 51:
+Badanie ogólne moczu
+    
+
+
+Sentence 52:
+barwa:żółty[ ]
+    
+
+
+Sentence 53:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 54:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 55:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 56:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 57:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 58:
+ciężar właściwy:1.021[ ]
+    
+
+
+Sentence 59:
+pH:6.5[ ]
+    
+
+
+Sentence 60:
+białko:nieobecne[ ]
+    
+
+
+Sentence 61:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 62:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 63:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 64:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 65:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 66:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 67:
+leukocyty:2 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 68:
+ALAT: ALAT:17[U/L]
+ASPAT: ASPAT:44[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 69:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 70:
+Potas (K): Potas:4.6[mmol/L]
+
+
+
+Sentence 71:
+Chlorki (Cl): Chlorki:106[mmol/L]
+
+
+
+Sentence 72:
+Kreatynina + GFR
+    
+
+
+Sentence 73:
+Kreatynina w surowicy:0.49[mg/dl]
+    
+
+
+Sentence 74:
+eGFR stand. wg Schwartza:122.3[ml/min/1,73 m^2]
+    
+
+
+Sentence 75:
+eGFR zmod.
+
+
+Sentence 76:
+wg Schwartza:91.9[ml/min/1,73 m^2]
+    wzrost:109[cm]
+
+
+
+Sentence 77:
+Mocznik: Mocznik:32[mg/dl]
+
+
+
+Sentence 78:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    
+
+
+Sentence 79:
+pH:7.309
+    pCO2:41.0[mmHg]
+    BE:-5.60[mmol/L]
+    
+
+
+Sentence 80:
+HCO3:20.0[mmol/L]
+    pO2:44.5[mmHg]
+    
+
+
+Sentence 81:
+O2Sat:76.3[%]
+
+
+
+Sentence 82:
+NT-proBNP surowica: NT-proBNP w surowicy:327[pg/ml]
+
+
+
+Sentence 83:
+------------------------------------------------
+
+
+
+Sentence 84:
+ICD10
+------------------------------------------------
+Z98.8
+R23.0
+
+
+
+Sentence 85:
+Q22.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 86:
+ICD9
+------------------------------------------------
+89.522
+C55
+A01
+I81
+G53
+E65
+I97
+G11
+G21
+
+
+
+Sentence 87:
+G25
+
+
+
+Sentence 88:
+N45
+I17
+M37
+I19
+O35
+
+
+
+Sentence 89:
+N13
+N24
+88.776
+88.721
+89.5
+88.777
+88.714
+O29
+88.761
+
+
+
+Sentence 90:
+------------------------------------------------
+
+

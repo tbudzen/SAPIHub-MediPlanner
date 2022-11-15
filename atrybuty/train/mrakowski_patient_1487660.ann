@@ -1,0 +1,176 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 359 424	okresowa kontrola kardiologiczna, endokrynologiczna, onkologiczna
+T3	Treatment 425 485	wydano skierowanie do poradni urologicznej celem weryfikacji
+T4	Condition 497 518	zmiany w nerce prawej
+N1	Reference T4 ICD10:R93.4	Nieprawidłowe wyniki diagnostycznych badań obrazowych układu moczowego
+T5	Investigation 519 584	okresowa kontrola elektrolitów, lipidogramu, parametrów nerkowych
+T6	Investigation 585 626	samokontrola ciśnienia tętniczego 2 x dz.
+T7	Behaviour 627 691	prawidłowe żywienie z niską zawartością soli kuchennej (do 5g/d)
+T8	Treatment 692 720	regularne przyjmowanie leków
+T9	Drug 722 731	Bisoratio
+T10	Drug_dose 732 753	5 mg 1i1/2 tabl. rano
+R1	Drg Arg1:T9 Arg2:T10	
+T11	Drug 754 762	Spironol
+T12	Drug_dose 763 787	50 mg 1 tabl. w południe
+R2	Drg Arg1:T11 Arg2:T12	
+T13	Drug 788 797	Egiramlon
+T14	Drug_dose 798 823	10+10 mg 1 tabl wieczorem
+R3	Drg Arg1:T13 Arg2:T14	
+T15	Drug 824 830	Atoris
+T16	Drug_dose 831 854	60 mg 1 tabl. wieczorem
+R4	Drg Arg1:T15 Arg2:T16	
+T17	Drug 855 860	Acard
+T18	Drug_dose 861 884	75 mg 1 tabl. wieczorem
+R5	Drg Arg1:T17 Arg2:T18	
+T19	Drug 885 893	Euthyrox
+T20	Drug_dose 894 925	100/125ug 1 tabl. rano na czczo
+R6	Drg Arg1:T19 Arg2:T20	
+T21	Drug 926 936	Gabapentin
+T22	Drug_dose 937 959	100 mg 1 tabl. 2 x dz.
+R7	Drg Arg1:T21 Arg2:T22	
+T23	Condition 1177 1242	Przewlekła niewydolność serca z zachowaną frakcja wyrzutową HFpEF
+N2	Reference T23 ICD10:I50.9	Niewydolność serca, nieokreślona
+T24	Investigation_result 1244 1252	LVEF 54%
+T25	Condition 1255 1298	Nadciśnienie tętnicze II stopnia wg ESC/ESH
+N3	Reference T25 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T26	Condition 1300 1342	Łagodne nadkomorowe zaburzenia rytmu serca
+N4	Reference T26 ICD10:I49.1	
+T27	Condition 1352 1364	udarze mózgu
+N5	Reference T27 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T28	Date 1366 1373	09/2014
+R8	Dat Arg1:T28 Arg2:T27	
+T29	Condition 1376 1384	Szpiczak
+N6	Reference T29 ICD10:C90.0	Szpiczak mnogi
+T30	Condition 1386 1391	DLBCL
+T31	Treatment 1413 1446	paliatywnej RT Th12-L4 kręgosłupa
+T32	Date 1448 1452	2014
+R9	Dat Arg1:T32 Arg2:T31	
+T33	Condition 1464 1497	złamaniu patologicznym kręgosłupa
+N8	Reference T33 ICD10:T08	Złamanie kręgosłupa, poziom nieokreślony
+T34	Symptom 1500 1539	niedowładem obustronnym kończyn dolnych
+N9	Reference T34 ICD10:G81.9	Porażenie połowicze, nieokreślone
+T35	Condition 1541 1556	Rumień guzowaty
+N10	Reference T35 ICD10:L52	Rumień guzowaty
+T36	Treatment 1578 1590	strumectomii
+A1	Status T36 Historical_Insignificant
+T37	Treatment 1612 1628	panhisterektomii
+T38	Condition 1638 1650	guza jajnika
+N11	Reference T38 ICD10:D39.1	Jajnik
+T39	Date 1652 1656	2014
+R10	Dat Arg1:T39 Arg2:T38	
+R11	Dat Arg1:T39 Arg2:T37	
+T40	Condition 1979 1998	guzka międzyżylnego
+T41	Investigation 2001 2019	TTE ambulatoryjnym
+T42	Negation 2080 2086	Neguje
+T43	Symptom 2087 2099	zasłabnięcia
+T44	Symptom 2101 2109	omdlenia
+N12	Reference T44 ICD10:R55	Omdlenie i zapaść
+T45	Symptom 2111 2124	zawroty głowy
+N13	Reference T45 ICD10:R42	Zawroty głowy i odurzenie
+T46	Symptom 2126 2136	krwawienia
+T47	Symptom 2138 2151	czarne stolce
+N15	Reference T47 ICD10:K92.1	Stolce smołowate
+T48	Symptom 2153 2169	brunatne wymioty
+N16	Reference T48 ICD10:K92.0	Wymioty krwawe
+T49	Condition 2171 2187	chorobę wrzodową
+N17	Reference T49 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T50	Symptom 2189 2203	duszność nocną
+N18	Reference T50 ICD10:R06.0	Duszność
+T51	Symptom 2205 2220	obrzęki podudzi
+T52	Symptom 2222 2246	bóle w klatce piersiowej
+R12	Neg Arg1:T42 Arg2:T52	
+R13	Neg Arg1:T42 Arg2:T51	
+R14	Neg Arg1:T42 Arg2:T50	
+R15	Neg Arg1:T42 Arg2:T49	
+R16	Neg Arg1:T42 Arg2:T48	
+R17	Neg Arg1:T42 Arg2:T47	
+R18	Neg Arg1:T42 Arg2:T46	
+R19	Neg Arg1:T42 Arg2:T45	
+R20	Neg Arg1:T42 Arg2:T44	
+R21	Neg Arg1:T42 Arg2:T43	
+T53	Symptom 2248 2267	Innych dolegliwości
+T54	Negation 2268 2279	nie zgłasza
+R22	Neg Arg1:T54 Arg2:T53	
+T55	Condition 2294 2315	Nadciśnienie tętnicze
+N21	Reference T55 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T56	Condition 2317 2361	Łagodna niedomykalność zastawki trójdzielnej
+N22	Reference T56 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T57	Condition 2363 2371	Szpiczak
+N23	Reference T57 ICD10:C90.0	Szpiczak mnogi
+T58	Treatment 2381 2425	paliatywnej RT na odcinek Th12-L4 kręgosłupa
+T59	Date 2427 2431	2014
+R23	Dat Arg1:T59 Arg2:T58	
+T60	Condition 2442 2454	udarze mózgu
+N24	Reference T60 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T61	Date 2456 2463	09/2014
+R24	Dat Arg1:T61 Arg2:T60	
+T62	Condition 2474 2507	złamaniu patologicznym kręgosłupa
+N25	Reference T62 ICD10:T08	Złamanie kręgosłupa, poziom nieokreślony
+T63	Symptom 2510 2549	niedowładem obustronnym kończyn dolnych
+T64	Condition 2551 2566	Rumień guzowaty
+N27	Reference T64 ICD10:L52	Rumień guzowaty
+N26	Reference T63 ICD10:G81.9	Porażenie połowicze, nieokreślone
+T65	Treatment 2589 2602	tyroidektomii
+A2	Status T65 Historical_Insignificant
+T66	Treatment 2612 2628	panhisterektomii
+T67	Condition 2638 2650	guza jajnika
+N28	Reference T67 ICD10:D39.1	Jajnik
+T68	Date 2652 2656	2014
+R25	Dat Arg1:T68 Arg2:T67	
+R26	Dat Arg1:T68 Arg2:T66	
+T69	Condition 2659 2664	DLBCL
+N29	Reference T69 ICD10:C83.9	Rozlany chłoniak nieziarniczy, nieokreślony
+N7	Reference T30 ICD10:C83.9	Rozlany chłoniak nieziarniczy, nieokreślony
+T70	Treatment 2678 2695	Przebyte operacje
+T71	Treatment 2701 2720	Leczenie przewlekłe
+T72	Treatment 2722 2734	onkologiczne
+T73	Treatment 2736 2750	kardiologiczne
+T74	Treatment 2752 2769	endokrynologiczne
+T75	Treatment 2771 2785	hematologiczne
+T76	Condition 2813 2816	WZW
+N30	Reference T76 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T77	Condition 2825 2834	borelioza
+N31	Reference T77 ICD10:A69.2	Choroba z Lyme
+T78	Condition 2842 2850	grużlica
+T79	Condition 2858 2862	odra
+N33	Reference T79 ICD10:B05	Odra
+T80	Negation 2865 2866	-
+R27	Neg Arg1:T80 Arg2:T79	
+T81	Negation 2853 2854	-
+R28	Neg Arg1:T81 Arg2:T78	
+T82	Negation 2837 2838	-
+R29	Neg Arg1:T82 Arg2:T77	
+T83	Negation 2819 2820	-
+R30	Neg Arg1:T83 Arg2:T76	
+T84	Condition 2869 2884	Wywiad rodzinny
+A3	Status T84 Family
+T85	Negation 2886 2896	nieistotny
+R31	Neg Arg1:T85 Arg2:T84	
+T86	Behaviour 2898 2913	Palenie tytoniu
+T87	Negation 2915 2921	neguje
+R32	Neg Arg1:T87 Arg2:T86	
+T88	Behaviour 2923 2934	Inne używki
+T89	Negation 2936 2942	neguje
+R33	Neg Arg1:T89 Arg2:T88	
+T90	Condition 2944 2953	Uczulenia
+N35	Reference T90 ICD10:T78.4	Alergia, nieokreślona
+T91	Negation 2955 2961	neguje
+R34	Neg Arg1:T91 Arg2:T90	
+T92	Behaviour 2979 3005	warunki mieszkaniowe dobre
+T93	Investigation 3038 3041	TTE
+T94	Investigation 3043 3046	TET
+T95	Investigation 3048 3052	ABPM
+T96	Investigation 3054 3064	Holter EKG
+A4	Status T38 Historical_Insignificant
+A5	Status T37 Historical_Insignificant
+A6	Status T31 Historical_Insignificant
+N36	Reference T43 ICD10:R55	Omdlenie i zapaść
+A7	Status T58 Historical_Insignificant
+A8	Status T67 Historical_Insignificant
+A9	Status T66 Historical_Insignificant
+N34	Reference T86 ICD10:Z72.0	Używanie tytoniu
+N14	Reference T46 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N19	Reference T51 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N20	Reference T52 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N32	Reference T78 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N37	Reference T88 ICD10:Z72	Problemy związane ze stylem życia

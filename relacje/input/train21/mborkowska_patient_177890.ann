@@ -1,0 +1,150 @@
+T1	Investigation 3084 3088	ECHO
+T2	Investigation 3090 3100	Holter ekg
+T3	Investigation 3102 3106	ABPM
+T4	Drug 2976 2990	Euthyrox 125ug
+T5	Drug_dose 2991 2999	1x1 rano
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Drug 2949 2954	Acard
+T7	Drug_dose 2955 2975	75 mg 1x1 w południe
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Drug 2920 2933	Vitrum Osteum
+T9	Drug_dose 2934 2948	1x1 w południe
+R3	Drg Arg1:T8 Arg2:T9	
+T10	Behaviour 2854 2880	warunki mieszkaniowe dobre
+T11	Condition 2802 2805	WZW
+N1	Reference T11 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T12	Condition 2812 2821	borelioza
+N2	Reference T12 ICD10:A69.2	Choroba z Lyme
+T13	Condition 2829 2832	tbc
+N3	Reference T13 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T14	Negation 2806 2809	(-)
+R4	Neg Arg1:T14 Arg2:T11	
+T15	Negation 2824 2825	-
+R5	Neg Arg1:T15 Arg2:T12	
+T16	Negation 2834 2836	-)
+R6	Neg Arg1:T16 Arg2:T13	
+T17	Negation 2770 2773	nie
+T18	Negation 2754 2757	nie
+T19	Negation 2736 2739	nie
+T20	Condition 2759 2768	Uczulenia
+N4	Reference T20 ICD10:T78.4	Alergia, nieokreślona
+R7	Neg Arg1:T17 Arg2:T20	
+T21	Behaviour 2741 2751	Inne używk
+R8	Neg Arg1:T18 Arg2:T21	
+T22	Behaviour 2719 2734	Palenie tytoniu
+N5	Reference T22 ICD10:T65.2	Tytoń i nikotyna
+R9	Neg Arg1:T19 Arg2:T22	
+T23	Condition 439 477	Przewlekła choroba niedokrwienna serca
+N6	Reference T23 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T24	Condition 479 499	Bradykardia zatokowa
+N7	Reference T24 ICD10:R00.1	Bradykardia, nieokreślona
+T25	Condition 502 542	Łagodna niedomykalność zastawki płucnej.
+N8	Reference T25 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T26	Condition 543 555	Cukrzyca t 2
+N9	Reference T26 ICD10:E11	Cukrzyca insulinoniezależna
+T27	Condition 557 577	Hipercholesterolemia
+N10	Reference T27 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T28	Condition 579 631	Niedoczynność tarczycy po strumektomii z powodu wola
+N11	Reference T28 ICD10:E03.8	Inne określone postacie niedoczynności tarczycy
+T29	Treatment 659 671	endoskopowym
+T30	Treatment 702 734	plastyce przedniej ściany pochwy
+T31	Date 736 741	2017r
+R10	Dat Arg1:T31 Arg2:T30	
+T32	Treatment 747 755	operacji
+T33	Investigation 1068 1097	kontrola ciśnienia tętniczego
+T34	Investigation 1110 1179	kontrolą morfologii, lipidogramu , parametrów wątrobowych i nerkowych
+T35	Behaviour 1182 1207	dieta niskocholesterolowa
+T36	Drug 1243 1249	Atoris
+T37	Drug_dose 1250 1268	30mg 1x1 wieczorem
+R11	Drg Arg1:T36 Arg2:T37	
+T38	Drug 1270 1283	Vitrum Osteum
+T39	Drug_dose 1284 1298	1x1 w południe
+R12	Drg Arg1:T38 Arg2:T39	
+T40	Drug 1299 1304	Acard
+T41	Drug_dose 1305 1325	75 mg 1x1 w południe
+R13	Drg Arg1:T40 Arg2:T41	
+T42	Drug 1326 1340	Euthyrox 125ug
+T43	Drug_dose 1341 1349	1x1 rano
+R14	Drg Arg1:T42 Arg2:T43	
+T44	Condition 1567 1571	ChNS
+N12	Reference T44 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T45	Condition 1573 1593	bradykardia zatokowa
+N13	Reference T45 ICD10:R00.1	Bradykardia, nieokreślona
+T46	Condition 1595 1597	DM
+N14	Reference T46 ICD10:E11	Cukrzyca insulinoniezależna
+T47	Condition 1742 1769	chorobą niedokrwienną serca
+N15	Reference T47 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T48	Investigation 1773 1787	koronarografii
+T49	Investigation_result 1804 1836	bez zmian w tętnicach wieńcowych
+R15	Inv Arg1:T48 Arg2:T49	
+T50	Date 1790 1795	2009r
+T51	Date 1798 1803	2000r
+R16	Dat Arg1:T50 Arg2:T48	
+R17	Dat Arg1:T51 Arg2:T48	
+T52	Condition 1841 1864	stenokardią do I-II CCS
+T53	Investigation_result 1890 1965	dodatnimi próbami wysiłkowymi na obszarze ściany dolno-koniuszkowo-bocznej,
+T54	Investigation 1981 1986	SPECT
+T55	Investigation_result 1987 2058	m sercowego niewielkiego stopnia niedokrwieniem w obrębie ściany dolnej
+R18	Inv Arg1:T54 Arg2:T55	
+T56	Date 2060 2065	2006r
+R19	Dat Arg1:T56 Arg2:T54	
+T57	Condition 2082 2102	bradykardią zatokową
+N16	Reference T57 ICD10:R00.1	Bradykardia, nieokreślona
+T58	Symptom 2105 2164	kilkoma epizodami zasłabnięć bez pełnej utraty przytomności
+N17	Reference T58 ICD10:R55	Omdlenie i zapaść
+T59	Condition 2168 2174	DM t 2
+N18	Reference T59 ICD10:E11	Cukrzyca insulinoniezależna
+T60	Drug 2181 2186	leków
+T61	Negation 2177 2180	bez
+R20	Neg Arg1:T61 Arg2:T60	
+T62	Condition 2188 2191	HLP
+N19	Reference T62 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T63	Date 633 638	2004r
+R21	Dat Arg1:T63 Arg2:T28	
+T64	Condition 2193 2247	niedoczynnością tarczycy po strumektomii z powodu wola
+N20	Reference T64 ICD10:E03.8	Inne określone postacie niedoczynności tarczycy
+T65	Date 2249 2254	2004r
+R22	Dat Arg1:T65 Arg2:T64	
+T66	Treatment 2261 2282	leczeniu endoskopowym
+T67	Treatment 2346 2377	lastyce przedniej ściany pochwy
+T68	Date 2379 2384	2017r
+R23	Dat Arg1:T68 Arg2:T67	
+T69	Treatment 2390 2398	operacji
+T70	Negation 2507 2513	Neguje
+T71	Symptom 2516 2526	krwawienia
+N21	Reference T71 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T72	Symptom 2528 2541	czarne stolce
+N22	Reference T72 ICD10:K92.1	Stolce smołowate
+T73	Symptom 2543 2559	brunatne wymioty
+N23	Reference T73 ICD10:K92.0	Wymioty krwawe
+T74	Condition 2561 2577	chorobę wrzodową
+N24	Reference T74 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T75	Symptom 2579 2607	duszność nocną typu ortopnoe
+N25	Reference T75 ICD10:I50.1	Niewydolność serca lewokomorowa
+T76	Condition 2609 2611	HA
+N26	Reference T76 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T77	Condition 2613 2623	udar mózgu
+N27	Reference T77 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T78	Condition 2625 2636	zawał serca
+N28	Reference T78 ICD10:I25.2	Przebyty zawał serca
+R24	Neg Arg1:T70 Arg2:T71	
+R25	Neg Arg1:T70 Arg2:T72	
+R26	Neg Arg1:T70 Arg2:T73	
+R27	Neg Arg1:T70 Arg2:T74	
+R28	Neg Arg1:T70 Arg2:T75	
+R29	Neg Arg1:T70 Arg2:T76	
+R30	Neg Arg1:T70 Arg2:T77	
+R31	Neg Arg1:T70 Arg2:T78	
+T79	Treatment 2660 2676	cholecystektomia
+T80	Treatment 2684 2697	appendektomia
+T81	Date 2677 2683	2005r,
+R32	Dat Arg1:T81 Arg2:T79	
+T82	Date 2698 2713	w 16 roku życia
+R33	Dat Arg1:T82 Arg2:T80	
+A1	Status T80 Historical_Insignificant
+T83	Condition 756 786	żylaków kończyny dolnej prawej
+N29	Reference T83 ICD10:I83	Żylaki kończyn dolnych
+T84	Condition 674 697	rak w polipie odbytnicy
+T85	Condition 2399 2429	żylaków kończyny dolnej prawej
+N30	Reference T85 ICD10:I83	Żylaki kończyn dolnych
+T86	Condition 2285 2308	rak w polipie odbytnicy

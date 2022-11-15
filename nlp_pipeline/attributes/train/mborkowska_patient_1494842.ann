@@ -1,0 +1,161 @@
+T1	Investigation 2733 2737	ECHO
+T2	Investigation 2739 2743	ABPM
+T3	Drug 2607 2616	Humulin N
+T4	Drug_dose 2617 2648	100 j.m./ml 1xdz wieczorem s.c.
+R1	Drg Arg1:T3 Arg2:T4	
+T5	Drug 2575 2584	Humulin R
+T6	Drug_dose 2585 2605	100 j.m./ml 3xdz s.c
+R2	Drg Arg1:T5 Arg2:T6	
+T7	Drug 2553 2560	Spiriva
+T8	Drug_dose 2561 2574	1xdz 1 wdech,
+R3	Drg Arg1:T7 Arg2:T8	
+T9	Drug 2527 2537	Pulmoterol
+T10	Drug_dose 2538 2552	2x po 1 wdech,
+R4	Drg Arg1:T9 Arg2:T10	
+T11	Drug 2506 2514	Encorton
+T12	Drug_dose 2515 2526	5 mg 1-0-0,
+R5	Drg Arg1:T11 Arg2:T12	
+T13	Drug 2484 2498	Vicebrol forte
+T14	Drug_dose 2499 2504	1-0-1
+R6	Drg Arg1:T13 Arg2:T14	
+T15	Drug 2463 2470	Xarelto
+T16	Drug_dose 2471 2482	20 mg 1-0-0
+R7	Drg Arg1:T15 Arg2:T16	
+T17	Drug 2440 2449	Furosemid
+T18	Drug_dose 2450 2462	40 mg 1-1-0,
+R8	Drg Arg1:T17 Arg2:T18	
+T19	Drug 2415 2423	Spironol
+T20	Drug_dose 2424 2438	100 mg 1/2-0-0
+R9	Drg Arg1:T19 Arg2:T20	
+T21	Drug 2395 2400	Nedal
+T22	Drug_dose 2401 2413	5 mg 1-0-1/2
+R10	Drg Arg1:T21 Arg2:T22	
+T23	Drug 2368 2380	Digoxin Teva
+T24	Drug_dose 2381 2393	0,1 mg 1-0-0
+R11	Drg Arg1:T23 Arg2:T24	
+T25	Behaviour 2302 2329	warunki mieszkaniowe dobre.
+T26	Condition 2194 2197	WZW
+N1	Reference T26 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T27	Condition 2204 2213	borelioza
+N2	Reference T27 ICD10:A69.2	Choroba z Lyme
+T28	Condition 2221 2224	tbc
+N3	Reference T28 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T29	Condition 2230 2234	odra
+A1	Source T29 Declared
+N4	Reference T29 ICD10:B05	Odra
+T30	Treatment 2250 2269	szczepienie na odrę
+N5	Reference T30 ICD10:B05	Odra
+T31	Negation 2271 2282	nie pamięta
+R12	Neg Arg1:T31 Arg2:T30	
+T32	Negation 2236 2247	nie pamięta
+R13	Neg Arg1:T32 Arg2:T29	
+T33	Negation 2225 2229	(-),
+R14	Neg Arg1:T33 Arg2:T28	
+T34	Negation 2214 2219	( - )
+R15	Neg Arg1:T34 Arg2:T27	
+T35	Negation 2198 2201	(-)
+R16	Neg Arg1:T35 Arg2:T26	
+T36	Negation 2162 2165	nie
+T37	Condition 2151 2160	Uczulenia
+N6	Reference T37 ICD10:T78.4	Alergia, nieokreślona
+R17	Neg Arg1:T36 Arg2:T37	
+T38	Negation 2146 2149	nie
+T39	Behaviour 2133 2145	Inne używki:
+R18	Neg Arg1:T38 Arg2:T39	
+T40	Behaviour 2068 2083	Palenie tytoniu
+N7	Reference T40 ICD10:T65.2	Tytoń i nikotyna
+T41	Negation 2085 2088	nie
+R19	Neg Arg1:T41 Arg2:T40	
+T42	Treatment 2045 2067	Przebyte operacje:  jw
+T43	Negation 1922 1928	Neguje
+T44	Symptom 1930 1942	zasłabnięcia
+N8	Reference T44 ICD10:R55	Omdlenie i zapaść
+T45	Symptom 1944 1952	omdlenia
+N9	Reference T45 ICD10:R55	Omdlenie i zapaść
+T46	Symptom 1954 1964	krwawienia
+N10	Reference T46 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T47	Symptom 1966 1979	czarne stolce
+N11	Reference T47 ICD10:K92.1	Stolce smołowate
+T48	Symptom 1981 1997	brunatne wymioty
+N12	Reference T48 ICD10:K92.0	Wymioty krwawe
+T49	Condition 1999 2015	chorobę wrzodową
+N13	Reference T49 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T50	Condition 2017 2027	udar mózgu
+N14	Reference T50 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T51	Condition 2029 2041	zawał serca.
+N15	Reference T51 ICD10:I25.2	Przebyty zawał serca
+R20	Neg Arg1:T43 Arg2:T44	
+R21	Neg Arg1:T43 Arg2:T45	
+R22	Neg Arg1:T43 Arg2:T46	
+R23	Neg Arg1:T43 Arg2:T47	
+R24	Neg Arg1:T43 Arg2:T48	
+R25	Neg Arg1:T43 Arg2:T49	
+R26	Neg Arg1:T43 Arg2:T50	
+R27	Neg Arg1:T43 Arg2:T51	
+T52	Condition 1415 1462	przewlekłą niewydolnością serca w III kl. NYHA,
+N16	Reference T52 ICD10:I50	Niewydolność serca
+T53	Condition 1463 1496	napadowym migotaniem przedsionków
+N17	Reference T53 ICD10:I48	Migotanie i trzepotanie przedsionków
+T54	Condition 1498 1521	nadciśnieniem tętniczym
+N18	Reference T54 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T55	Condition 1523 1538	cukrzycą typu 2
+N19	Reference T55 ICD10:E11	Cukrzyca insulinoniezależna
+T56	Treatment 1557 1572	insulinoterapii
+T57	Condition 1631 1655	poliialgii reumatycznej,
+N20	Reference T57 ICD10:M35.3	Polimialgia reumatyczna
+T58	Condition 1574 1611	olbrzymiokomórkowym zapaleniem tetnic
+N21	Reference T58 ICD10:M31.5	Olbrzymiokomórkowe zapalenie tętnic ze współistnieniem polimialgii reumatycznej
+T59	Condition 1656 1680	przewlekłą chorobą nerek
+N22	Reference T59 ICD10:N18.9	Przewlekła niewydolność nerek, nieokreślona
+T60	Condition 1682 1726	torbielą Beckera prawego odołu podkolanowego
+N23	Reference T60 ICD10:M71.2	Torbiel podkolanowa [torbiel Bakera]
+T61	Treatment 1731 1743	strumektomii
+A2	Status T61 Historical_Insignificant
+A3	Source T61 Declared
+T62	Date 1745 1749	1993
+R28	Dat Arg1:T62 Arg2:T61	
+T63	Condition 1774 1782	depresją
+N24	Reference T63 ICD10:F32.9	Epizod depresyjny, nieokreślony
+T64	Symptom 1813 1862	znacznego obniżenia tolerancji wysiłku fizycznego
+N25	Reference T64 ICD10:R53	Złe samopoczucie i zmęczenie
+T65	Symptom 1864 1907	duszności spoczynkowej i głównie wysiłkowej
+N26	Reference T65 ICD10:R06.0	Duszność
+T66	Symptom 1910 1920	osłabienia
+N27	Reference T66 ICD10:R53	Złe samopoczucie i zmęczenie
+T67	Investigation 379 398	kontrola morfologii
+T68	Date 399 428	po 1 msc suplementacji żelaza
+R29	Dat Arg1:T68 Arg2:T67	
+T69	Investigation 430 459	kontrola gospodarki żelazowej
+T70	Date 460 482	po 3 msc suplementacji
+R30	Dat Arg1:T70 Arg2:T69	
+T71	Condition 789 836	 Podejrzenie przewlekłego nadciśnienia płucnego
+A4	Source T71 Declared
+N28	Reference T71 ICD10:I27.2	Nadciśnienie płucne wtórne o innej etiologii
+T72	Condition 838 885	Przewlekła niewydolność serca w III klasie NYHA
+N29	Reference T72 ICD10:I50	Niewydolność serca
+T73	Condition 887 918	Napadowe migotanie przedsionków
+N30	Reference T73 ICD10:I48	Migotanie i trzepotanie przedsionków
+T74	Condition 920 941	Nadciśnienie tętnicze
+N31	Reference T74 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T75	Condition 943 958	Cukrzyca typu 2
+N32	Reference T75 ICD10:E11	Cukrzyca insulinoniezależna
+T76	Condition 987 1022	Olbrzymiokomórkowe zapalenie tętnic
+N33	Reference T76 ICD10:M31.5	Olbrzymiokomórkowe zapalenie tętnic ze współistnieniem polimialgii reumatycznej
+T77	Condition 1042 1067	polimialgii reumatycznej.
+N34	Reference T77 ICD10:M35.3	Polimialgia reumatyczna
+T78	Condition 1068 1093	Przewlekła choroba nerek.
+N35	Reference T78 ICD10:N18.9	Przewlekła niewydolność nerek, nieokreślona
+T79	Condition 1094 1136	Torbiel Beckera prawego dołu podkolanowego
+N36	Reference T79 ICD10:M71.2	Torbiel podkolanowa [torbiel Bakera]
+T80	Treatment 1146 1158	strumektomii
+T81	Date 1160 1164	1993
+R31	Dat Arg1:T81 Arg2:T80	
+A5	Status T80 Historical_Insignificant
+A6	Source T80 Declared
+T82	Condition 1187 1208	Zaburzenia afektywne.
+N37	Reference T82 ICD10:F39	Zaburzenia nastroju [afektywne], nieokreślone
+T83	Condition 1209 1270	Niedokrwistość mikrocytarna niedobarwliwa z niedoboru żelaza.
+N38	Reference T83 ICD10:D50.8	Inne niedokrwistości z niedoboru żelaza
+T84	Treatment 970 985	insulinoterapii
+T85	Date 2098 2113	ok. 10 lat temu
+R32	Dat Arg1:T85 Arg2:T40	

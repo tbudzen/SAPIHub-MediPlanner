@@ -1,0 +1,42 @@
+T1	Condition 471 539	Wrodzona wada serca pod postacią przełożenia wielkich pni tętniczych
+N1	Reference T1 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T2	Treatment 550 571	korekcji anatomicznej
+N2	Reference T2 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T3	Date 573 584	07.10.2002r
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Condition 591 629	Wrodzona wada moczowodu i prawej nerki
+N3	Reference T4 ICD10:Q62	Wrodzone wady miedniczki nerkowej powodujące zastój moczu i wrodzone wady rozwojowe moczowodu
+T5	Condition 631 665	zwężenie podmiedniczkowe moczowodu
+N4	Reference T5 ICD10:Q62.1	Zarośnięcie lub zwężenie moczowodu
+T6	Condition 667 730	poszerzenie i zniekształcenie układu kielichowo- miedniczkowego
+T7	Condition 736 751	Zespół Gilberta
+N6	Reference T7 ICD10:E80.4	Zespół Gilberta
+N5	Reference T6 ICD10:Q62.3	Inne wady miedniczki nerkowej i moczowodu z zaburzeniem odpływu moczu
+T8	Treatment 889 965	Opieka w regionalnej poradni kardiologicznej, hepatologicznej i urologicznej
+T9	Treatment 997 1017	ocena kardiologiczna
+T10	Investigation 1020 1023	EKG
+T11	Investigation 1026 1030	ECHO
+T12	Investigation 1033 1048	próba wysiłkowa
+T13	Date 988 996	coroczna
+R2	Dat Arg1:T13 Arg2:T9	
+R3	Dat Arg1:T13 Arg2:T10	
+R4	Dat Arg1:T13 Arg2:T11	
+R5	Dat Arg1:T13 Arg2:T12	
+T14	Date 1086 1095	wcześniej
+R6	Dat Arg1:T14 Arg2:T12	
+R7	Dat Arg1:T14 Arg2:T11	
+R8	Dat Arg1:T14 Arg2:T10	
+R9	Dat Arg1:T14 Arg2:T9	
+T17	Date 1179 1193	za 1,5 -2 lata
+T18	Treatment 1099 1126	Ocena w Klinice Kardiologii
+T19	Investigation 1129 1144	próba wysiłkowa
+R11	Dat Arg1:T17 Arg2:T18	
+R12	Dat Arg1:T17 Arg2:T19	
+T20	Treatment 1259 1312	Systematyczne profilaktyczne kontrole stomatologiczne
+T15	Symptom 1052 1085	w przypadku niepokojących objawów
+R10	Dat Arg1:T14 Arg2:T15	
+T16	Negation 1146 1156	przy braku
+T21	Symptom 1157 1178	niepokojących objawów
+R13	Neg Arg1:T16 Arg2:T21	
+R14	Dat Arg1:T17 Arg2:T21	
+R15	Dat Arg1:T3 Arg2:T1	

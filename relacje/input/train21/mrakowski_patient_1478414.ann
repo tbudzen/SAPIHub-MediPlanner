@@ -1,0 +1,125 @@
+T1	Condition 439 513	Wada serca pod postacią umiarkowanej niedomykalności zastawki trójdzielnej
+N1	Reference T1 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T2	Condition 515 537	Żylaki kończyn dolnych
+N2	Reference T2 ICD10:I83	Żylaki kończyn dolnych
+T3	Treatment 548 556	operacji
+T4	Condition 557 586	żylaków kończyny dolnej lewej
+N3	Reference T4 ICD10:I83	Żylaki kończyn dolnych
+T5	Date 588 599	27 lat temu
+R1	Dat Arg1:T5 Arg2:T4	
+R2	Dat Arg1:T5 Arg2:T3	
+T6	Treatment 610 626	cholecystektomii
+A1	Status T6 Historical_Insignificant
+A2	Status T3 Historical_Insignificant
+T7	Treatment 636 660	operacji plastyki pochwy
+A3	Status T7 Historical_Insignificant
+T8	Date 662 666	2018
+R3	Dat Arg1:T8 Arg2:T7	
+T9	Date 628 632	2014
+R4	Dat Arg1:T9 Arg2:T6	
+T10	Treatment 792 819	dalsza opieka w poradni POZ
+T11	Treatment 827 889	okresowa kontrola kardiologiczna – kolejna w tutejszej Klinice
+T12	Date 890 904	za 12 miesięcy
+R5	Dat Arg1:T12 Arg2:T11	
+T13	Treatment 913 940	konsultacja pulmonologiczna
+T14	Treatment 943 980	do rozważenia poszerzenie diagnostyki
+T15	Investigation_result 981 1048	wydatnego zarysu wnęki lewej uwidocznionego w rtg klatki piersiowej
+N4	Reference T15 ICD10:R91	Nieprawidłowe wyniki diagnostycznych badań obrazowych płuc
+T16	Treatment 1055 1087	kontrola u chirurga naczyniowego
+T17	Investigation 1095 1134	regularna kontrola ciśnienia tętniczego
+T18	Investigation 1142 1171	okresowa kontrola lipidogramu
+T19	Date 1182 1194	za 8 tygodni
+R6	Dat Arg1:T19 Arg2:T18	
+T20	Treatment 1196 1280	po badaniu rozważenie wskazań do włączenia farmakoterapii pod kierunkiem lekarza POZ
+T21	Behaviour 1286 1388	dieta niskocholesterolowa, bogata w kwasy omega 3 i uboga w cukry proste z unikaniem spożycia alkoholu
+T22	Investigation 1572 1590	ambulatoryjnym TTE
+T23	Date 1592 1599	10/2015
+R7	Dat Arg1:T23 Arg2:T22	
+T24	Investigation_result 1601 1630	umiarkowana IT z PASP 32 mmHg
+N5	Reference T24 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T25	Investigation_result 1631 1673	powiększony wymiar prawego serca (PP i PK)
+N6	Reference T25 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+R8	Inv Arg1:T22 Arg2:T24	
+R9	Inv Arg1:T22 Arg2:T25	
+T26	Symptom 1683 1749	duszność do spoczynkowej włącznie oraz wysilkową do III klasy NYHA
+N7	Reference T26 ICD10:R06.0	Duszność
+T27	Symptom 1760 1775	kołatania serca
+N8	Reference T27 ICD10:R00.2	Kołatanie serca
+T28	Condition 1797 1819	Zylaki kończyn dolnych
+N9	Reference T28 ICD10:I83	Żylaki kończyn dolnych
+T29	Negation 1854 1860	Neguje
+T30	Symptom 1862 1874	zasłabnięcia
+T31	Symptom 1876 1884	omdlenia
+N10	Reference T31 ICD10:R55	Omdlenie i zapaść
+T32	Symptom 1886 1896	krwawienia
+T33	Symptom 1898 1911	czarne stolce
+N11	Reference T33 ICD10:K92.1	Stolce smołowate
+T34	Symptom 1913 1929	brunatne wymioty
+N12	Reference T34 ICD10:K92.0	Wymioty krwawe
+T35	Condition 1931 1947	chorobę wrzodową
+N13	Reference T35 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T36	Symptom 1949 1963	duszność nocną
+N14	Reference T36 ICD10:R06.0	Duszność
+T37	Symptom 1965 1980	obrzęki podudzi
+N15	Reference T37 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T38	Symptom 1982 2006	bóle w klatce piersiowej
+N16	Reference T38 ICD10:R07	Ból gardła i w klatce piersiowej
+R10	Neg Arg1:T29 Arg2:T38	
+R11	Neg Arg1:T29 Arg2:T37	
+R12	Neg Arg1:T29 Arg2:T36	
+R13	Neg Arg1:T29 Arg2:T35	
+R14	Neg Arg1:T29 Arg2:T34	
+R15	Neg Arg1:T29 Arg2:T33	
+R16	Neg Arg1:T29 Arg2:T32	
+R17	Neg Arg1:T29 Arg2:T31	
+R18	Neg Arg1:T29 Arg2:T30	
+T39	Treatment 2007 2024	Przebyte operacje
+T40	Treatment 2026 2044	klasyczna operacja
+T41	Condition 2045 2074	żylaków kończyny dolnej lewej
+N17	Reference T41 ICD10:I83	Żylaki kończyn dolnych
+T42	Date 2076 2087	27 lat temu
+R19	Dat Arg1:T42 Arg2:T41	
+R20	Dat Arg1:T42 Arg2:T40	
+A4	Status T40 Historical_Insignificant
+T43	Treatment 2090 2105	plastyka pocwhy
+A5	Status T43 Historical_Insignificant
+T44	Date 2107 2111	2018
+R21	Dat Arg1:T44 Arg2:T43	
+T45	Treatment 2114 2130	cholecystektomia
+A6	Status T45 Historical_Insignificant
+T46	Date 2132 2136	2014
+R22	Dat Arg1:T46 Arg2:T45	
+T47	Behaviour 2138 2153	Palenie tytoniu
+N18	Reference T47 ICD10:T65.2	Tytoń i nikotyna
+T48	Negation 2155 2161	neguje
+R23	Neg Arg1:T48 Arg2:T47	
+T49	Behaviour 2162 2173	Inne używki
+T50	Negation 2175 2178	nie
+R24	Neg Arg1:T50 Arg2:T49	
+T51	Condition 2179 2188	Uczulenia
+T52	Negation 2190 2193	nie
+R25	Neg Arg1:T52 Arg2:T51	
+T53	Condition 2221 2224	WZW
+N19	Reference T53 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T54	Condition 2231 2240	borelioza
+N20	Reference T54 ICD10:A69.2	Choroba z Lyme
+T55	Condition 2246 2249	tbc
+N21	Reference T55 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T56	Condition 2255 2259	odra
+N22	Reference T56 ICD10:B05	Odra
+T57	Condition 2265 2279	kontakt z odrą
+N23	Reference T57 ICD10:B05	Odra
+T58	Negation 2281 2282	-
+R26	Neg Arg1:T58 Arg2:T57	
+T59	Negation 2261 2262	-
+R27	Neg Arg1:T59 Arg2:T56	
+T60	Negation 2251 2252	-
+R28	Neg Arg1:T60 Arg2:T55	
+T61	Negation 2242 2243	-
+R29	Neg Arg1:T61 Arg2:T54	
+T62	Negation 2226 2227	-
+R30	Neg Arg1:T62 Arg2:T53	
+T63	Behaviour 2300 2326	warunki mieszkaniowe dobre
+T64	Investigation 2417 2438	badania laboratoryjne
+T65	Investigation 2440 2444	ECHO
+T66	Investigation 2446 2464	EKG metodą Holtera

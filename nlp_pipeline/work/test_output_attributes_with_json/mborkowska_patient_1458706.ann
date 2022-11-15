@@ -1,0 +1,90 @@
+T1	Condition 458 478	Zespół chorej zatoki
+T2	Condition 480 500	Hipercholesterolemia
+T3	Condition 502 523	Nadciśnienie tętnicze
+T4	Condition 537 585	Podejrzenie przebyte udaru niedokrwiennego mózgu
+T5	Condition 619 645	Diagnostyka w kierunku PFO
+T6	Negation 646 655	negatywna
+T7	Condition 657 674	Zaburzenia lękowe
+T8	Condition 676 713	Autoimmunologiczne zapalenie tarczycy
+cą tyreotoksykozą
+T9	Investigation 1037 1059	kontrola TSH, FT3, FT4
+T10	Investigation 1141 1223	kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T11	Behaviour 1085 1124	Dieta lekkostrawna, niskocholesterolowa
+T12	Investigation 1258 1300	kontrola ciśnienia tętniczego krwi i tętna
+T13	Drug 1313 1321	Sertagen
+T14	Drug_dose 1322 1343	100 mg 1x1 tabl. rano
+T15	Drug 1344 1355	Pregabalina
+T16	Drug_dose 1356 1371	150 mg 2x1 tabl
+T17	Drug 1373 1380	Romazic
+T18	Drug_dose 1381 1401	40 mg 1x1 tabl. rano
+T19	Drug 1402 1408	Ketrel
+T20	Drug_dose 1409 1434	75 mg 1x1 tabl. wieczorem
+T21	Investigation 2238 2242	ABPM
+T22	Investigation 2244 2254	Holter-EKG
+T23	Investigation 2256 2260	ECHO
+T24	Drug 2193 2199	Ketrel
+T25	Drug_dose 2200 2225	75 mg 1x1 tabl. wieczorem
+T26	Drug 2164 2171	Romazic
+T27	Drug_dose 2172 2192	20 mg 1x1 tabl. rano
+T28	Drug 2135 2146	Pregabalina
+T29	Drug_dose 2147 2163	150 mg 2x1 tabl.
+T30	Drug 2104 2112	Sertagen
+T31	Drug_dose 2113 2134	100 mg 1x1 tabl. rano
+T32	Symptom 1632 1645	Zawroty głowy
+T33	Date 1648 1659	przeszłości
+T34	Symptom 1678 1684	omdleń
+T35	Negation 1674 1677	Bez
+T36	Condition 1698 1719	nadciśnienie tętnicze
+T37	Investigation_result 1721 1750	zmiany naczyniopochodne w OUN
+T38	Condition 1752 1796	podejrzenie przebytego udaru niedokrwiennego
+T39	Condition 1799 1825	diagnostyka w kierunku PFO
+T40	Negation 1826 1835	negatywna
+T41	Condition 1837 1854	zaburzenia lękowe
+T42	Condition 1856 1892	podejrzenie choroby węzła zatokowego
+T43	Negation 2016 2022	neguje
+T44	Condition 2006 2015	Uczulenia
+T45	Date 1894 1901	09.2018
+T46	Investigation_result 1904 1915	pauzy 5,6 s
+T47	Date 1947 1954	12.2018
+T48	Investigation_result 1957 1963	3,37 s
+T49	Condition 2061 2063	HA
+T50	Date 1066 1080	za 4-6 tygodni
+T51	Date 1224 1234	co 6-8 tyg
+T52	Condition 586 616	(zmiany naczyniopochodne w OUN
+T53	Investigation 1000 1023	USG gruczołu tarczowego
+T54	Drug 1929 1938	B-bloker,
+N1	Reference T1 ICD10:I49.5	ZespÃ³Å chorej zatoki
+N2	Reference T2 ICD10:E78.0	Czysta hipercholesterolemia
+N3	Reference T3 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N4	Reference T32 ICD10:R42	Zawroty gÅowy i odurzenie
+N5	Reference T34 ICD10:R55	Omdlenie i zapaÅÄ
+N6	Reference T36 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N7	Reference T44 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N8	Reference T46 ICD10:R94.3	NieprawidÅowe wyniki badaÅ czynnoÅciowych ukÅadu krÄÅ¼enia
+N9	Reference T49 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+R1	Neg Arg1:T6 Arg2:T7
+R12	Neg Arg1:T40 Arg2:T39
+R13	Neg Arg1:T40 Arg2:T41
+R14	Neg Arg1:T40 Arg2:T42
+R2	Dat Arg1:T50 Arg2:T11
+R25	Neg Arg1:T43 Arg2:T44
+R34	Dat Arg1:T45 Arg2:T42
+R4	Dat Arg1:T51 Arg2:T10
+R43	Dat Arg1:T47 Arg2:T54
+R5	Drg Arg1:T15 Arg2:T16
+R50	Drg Arg1:T30 Arg2:T31
+R51	Drg Arg1:T28 Arg2:T29
+R53	Drg Arg1:T26 Arg2:T27
+R6	Drg Arg1:T17 Arg2:T18
+R7	Drg Arg1:T19 Arg2:T20
+R8	Dat Arg1:T33 Arg2:T32
+R9	Neg Arg1:T35 Arg2:T34
+A1	Status T49 Family
+A2	Source T4 Declared
+A3	Source T7 Declared
+A4	Source T30 Declared
+A5	Source T38 Declared
+A6	Source T39 Declared
+A7	Source T42 Declared
+A8	Source T45 Declared
+A9	Source T46 Declared

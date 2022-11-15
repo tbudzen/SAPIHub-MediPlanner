@@ -1,0 +1,42 @@
+T1	Drug 346 351	Acard
+T2	Drug_dose 352 361	1 x 75 mg
+T3	Treatment 362 385	Kontrola kardiologiczna
+T4	Date 386 403	za ok. 6 miesięcy
+T5	Condition 623 692	Wrodzona wada serca pod postacią zarośnięcia zastawki tętnicy płucnej
+N1	Reference T5 ICD10:Q22.0	Zarośnięcie zastawki pnia płucnego
+T6	Condition 695 717	ciągłą przegrodą komór
+T7	Condition 720 751	ubytkiem przegrody przedsionków
+N2	Reference T7 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T8	Treatment 766 813	operacji otwarcia drogi odpływu z prawej komory
+N3	Reference T8 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T9	Treatment 819 876	wytworzenia lewostronnego zespolenia systemowo - płucnego
+N4	Reference T9 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T10	Date 878 889	04.08.2006r
+T11	Treatment 903 964	dwukrotnej walwuloplastyce balonowej zastawki tętnicy płucnej
+T12	Date 966 977	14.08.2007r
+T13	Date 979 990	18.03.2010r
+T14	Treatment 1004 1068	korekcji całkowitej wady z użyciem homograftu płucnego śr. 20 mm
+T15	Date 1071 1082	22.09.2011r
+T16	Condition 1088 1162	Łagodne zwężenie i umiarkowana niedomykalność zastawki homograftu płucnego
+N6	Reference T16 ICD10:I37.2	Zwężenie zastawki pnia płucnego z niedomykalnością
+T17	Drug 1307 1312	Acard
+R1	Drg Arg1:T1 Arg2:T2	
+R2	Dat Arg1:T4 Arg2:T3	
+R3	Dat Arg1:T10 Arg2:T8	
+R4	Dat Arg1:T10 Arg2:T9	
+R5	Dat Arg1:T12 Arg2:T11	
+R6	Dat Arg1:T13 Arg2:T11	
+R7	Dat Arg1:T15 Arg2:T14	
+N5	Reference T14 ICD10:Z95.4	Obecność innych protez zastawek serca
+T18	Condition 1449 1467	złożona wadą serca
+T19	Condition 1470 1500	zwęzenia zastawki trójdzielnej
+N7	Reference T19 ICD10:Q22.4	Wrodzone zwężenie zastawki trójdzielnej
+T20	Condition 1503 1507	VSD0
+T21	Treatment 1511 1532	zabiegach naprawczych
+N8	Reference T21 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T22	Drug 1586 1592	Acesan
+T23	Condition 1595 1612	wywiad alergiczny
+N9	Reference T23 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T24	Negation 1613 1619	ujemny
+R8	Neg Arg1:T24 Arg2:T23	
+N10	Reference T20 ICD10:Q21.0	Ubytek przegrody międzykomorowej

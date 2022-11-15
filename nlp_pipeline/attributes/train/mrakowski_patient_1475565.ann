@@ -1,0 +1,140 @@
+T1	Condition 673 711	Przewlekła choroba niedokrwienna serca
+N1	Reference T1 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T2	Condition 713 757	Przewlekła niewydolność serca z zachowaną EF
+N2	Reference T2 ICD10:I50.9	Niewydolność serca, nieokreślona
+T3	Condition 759 763	RBBB
+N3	Reference T3 ICD10:I45.0	Blok prawej odnogi pęczka Hisa
+T4	Condition 766 769	LPH
+N4	Reference T4 ICD10:I44.5	Blok tylnej gałęzi lewej odnogi pęczka Hisa
+T5	Condition 771 792	Nadciśnienie tętnicze
+N5	Reference T5 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T6	Condition 794 814	Hipercholesterolemia
+N6	Reference T6 ICD10:E78.0	Czysta hipercholesterolemia
+T7	Condition 816 831	Cukrzyca typu 2
+N7	Reference T7 ICD10:E11	Cukrzyca insulinoniezależna
+T8	Condition 833 838	POCHP
+N8	Reference T8 ICD10:J44.9	Przewlekła obturacyjna choroba płuc, nieokreślona
+T9	Behaviour 840 850	Nikotynizm
+T10	Condition 852 879	Przerost gruczołu krokowego
+N10	Reference T10 ICD10:N40	Rozrost gruczołu krokowego
+T11	Treatment 889 921	operacji ścięgna Achilesa lewego
+A1	Status T11 Historical_Insignificant
+T12	Date 922 933	25 lat temu
+R1	Dat Arg1:T12 Arg2:T11	
+T13	Treatment 1048 1075	dalsza opieka w poradni POZ
+T14	Treatment 1078 1174	okresowa kontrola kardiologiczna, diabetologiczna, pulmonologiczna, urologiczna i psychiatryczna
+T15	Investigation 1176 1215	codzienna kontrola ciśnienia tętniczego
+T16	Investigation 1218 1281	okresowa kontrolą morfologii, lipidogramu, parametrów wątrobowy
+T17	Symptom 1462 1508	bólów w klatce piersiowej zależnych od wysiłku
+N11	Reference T17 ICD10:R07.3	Inne bóle w klatce piersiowej
+T18	Symptom 1533 1559	niskiej tolerancji wysiłku
+N12	Reference T18 ICD10:R53	Złe samopoczucie i zmęczenie
+T19	Date 1584 1597	od 6 miesięcy
+R2	Dat Arg1:T19 Arg2:T17	
+R3	Dat Arg1:T19 Arg2:T18	
+T20	Symptom 1616 1645	uczucie nierównej pracy serca
+N13	Reference T20 ICD10:R06.0	Duszność
+T21	Symptom 1647 1674	zwroty głowy przy wstawaniu
+N14	Reference T21 ICD10:R42	Zawroty głowy i odurzenie
+T22	Negation 1678 1684	Neguje
+T23	Symptom 1685 1697	zasłabnięcia
+R4	Neg Arg1:T22 Arg2:T23	
+T24	Condition 1714 1735	Nadciśnienie tętnicze
+N15	Reference T24 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T25	Condition 1737 1752	Cukrzyca typu 2
+N16	Reference T25 ICD10:E11	Cukrzyca insulinoniezależna
+T26	Condition 1754 1759	POCHP
+N17	Reference T26 ICD10:J44.9	Przewlekła obturacyjna choroba płuc, nieokreślona
+T27	Behaviour 1761 1771	Nikotynizm
+T28	Condition 1773 1800	Przerost gruczołu krokowego
+N19	Reference T28 ICD10:N40	Rozrost gruczołu krokowego
+T29	Treatment 1804 1821	Przebyte operacje
+T30	Treatment 1832 1864	operacji ścięgna Achilesa lewego
+A2	Status T30 Historical_Insignificant
+T31	Date 1865 1876	25 lat temu
+R5	Dat Arg1:T31 Arg2:T30	
+T32	Treatment 1878 1897	Leczenie przewlekłe
+T33	Condition 1945 1948	WZW
+N20	Reference T33 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T34	Condition 1958 1967	borelioza
+N21	Reference T34 ICD10:A69.2	
+T35	Condition 1974 1978	Odra
+N22	Reference T35 ICD10:B05	Odra
+T36	Negation 1981 1982	-
+R6	Neg Arg1:T36 Arg2:T35	
+T37	Negation 1970 1971	-
+R7	Neg Arg1:T37 Arg2:T34	
+T38	Negation 1951 1952	-
+R8	Neg Arg1:T38 Arg2:T33	
+T39	Condition 1987 2006	wywiadzie rodzinnym
+A3	Status T39 Family
+T40	Condition 2015 2023	cukrzyca
+A4	Status T40 Family
+N23	Reference T40 ICD10:E14	Cukrzyca nieokreślona
+T41	Behaviour 2025 2040	Palenie tytoniu
+T42	Behaviour 2042 2069	pali 15 papierosów dziennie
+T43	Behaviour 2071 2082	Inne używki
+T44	Negation 2084 2087	nie
+R9	Neg Arg1:T44 Arg2:T43	
+T45	Condition 2088 2097	Uczulenia
+T46	Negation 2099 2105	neguje
+R10	Neg Arg1:T46 Arg2:T45	
+T47	Behaviour 2122 2148	warunki mieszkaniowe dobre
+T48	Drug 2173 2182	Metformax
+T49	Drug_dose 2183 2192	850 2x dz
+R11	Drg Arg1:T48 Arg2:T49	
+T50	Drug 2195 2205	KarbiCombi
+T51	Drug_dose 2206 2223	32 +25 1x dz rano
+R12	Drg Arg1:T50 Arg2:T51	
+T52	Drug 2226 2233	Adipine
+T53	Drug_dose 2234 2250	10mg 1 x dz rano
+R13	Drg Arg1:T52 Arg2:T53	
+T54	Drug 2253 2264	Symasteride
+T55	Drug_dose 2265 2280	5 mg 1x dz rano
+R14	Drg Arg1:T54 Arg2:T55	
+T56	Drug 2283 2291	Symlosin
+T57	Drug_dose 2292 2306	0,4 1x dz rano
+R15	Drg Arg1:T56 Arg2:T57	
+T58	Drug 2309 2314	Nedal
+T59	Drug_dose 2315 2330	5 mg 1x dz rano
+R16	Drg Arg1:T58 Arg2:T59	
+T60	Drug 2333 2341	Dasselta
+T61	Drug_dose 2342 2354	5 1x dz rano
+R17	Drg Arg1:T60 Arg2:T61	
+T62	Drug 2367 2374	Alvesco
+T63	Drug_dose 2357 2366	Inhalacje
+T64	Drug_dose 2375 2393	3 dawki na wieczór
+R18	Drg Arg1:T62 Arg2:T63	
+R19	Drg Arg1:T62 Arg2:T64	
+T65	Drug 2397 2404	Spiriwa
+T66	Drug_dose 2405 2408	2,5
+R20	Drg Arg1:T65 Arg2:T66	
+T67	Drug 2411 2419	Pulveril
+T68	Drug 2422 2428	Mirtor
+T69	Drug_dose 2429 2446	15 1x dz ieczorem
+R21	Drg Arg1:T68 Arg2:T69	
+T70	Drug 2448 2455	Kaldyum
+T71	Drug_dose 2456 2466	1x dz rano
+R22	Drg Arg1:T70 Arg2:T71	
+T72	Drug 2469 2478	Flegamina
+T73	Drug_dose 2479 2490	1 x dz rano
+R23	Drg Arg1:T72 Arg2:T73	
+T74	Drug 2493 2499	Magnez
+T75	Drug 2500 2506	Wit B6
+T76	Drug_dose 2507 2517	1x dz rano
+R24	Drg Arg1:T74 Arg2:T76	
+R25	Drg Arg1:T75 Arg2:T76	
+T77	Investigation 2533 2543	Echo serca
+T78	Investigation 2546 2556	Holter EKG
+T79	Investigation 2559 2574	Próba Wysiłkowa
+N26	Reference T45 ICD10:T78.4	Alergia, nieokreślona
+T80	Treatment 1900 1916	pulmonologicznej
+N9	Reference T9 ICD10:Z72.0	Używanie tytoniu
+T81	Symptom 1514 1531	duszności wysiłku
+N27	Reference T81 ICD10:R06.0	Duszność
+R26	Dat Arg1:T19 Arg2:T81	
+N28	Reference T23 ICD10:R55	Omdlenie i zapaść
+N18	Reference T27 ICD10:Z72.0	Używanie tytoniu
+N25	Reference T42 ICD10:Z72.0	Używanie tytoniu
+N24	Reference T41 ICD10:Z72.0	Używanie tytoniu
+N29	Reference T43 ICD10:Z72	Problemy związane ze stylem życia

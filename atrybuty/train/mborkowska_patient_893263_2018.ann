@@ -1,0 +1,92 @@
+T1	Investigation 1945 1949	ECHO
+T2	Investigation 1951 1969	EKG metodą Holtera
+T3	Investigation 1971 1975	ABPM
+T4	Investigation 1977 1992	próba wysiłkowa
+T5	Negation 1852 1861	bez leków
+T6	Drug 1846 1850	Leki
+R1	Neg Arg1:T5 Arg2:T6	
+T7	Behaviour 1817 1844	warunki mieszkaniowe dobre.
+T8	Condition 1766 1769	WZW
+N1	Reference T8 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T9	Condition 1776 1785	borelioza
+N2	Reference T9 ICD10:A69.2	Choroba z Lyme
+T10	Condition 1793 1796	tbc
+N3	Reference T10 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T11	Negation 1797 1800	(-)
+R2	Neg Arg1:T11 Arg2:T10	
+T12	Negation 1786 1791	( - )
+R3	Neg Arg1:T12 Arg2:T9	
+T13	Negation 1770 1773	(-)
+R4	Neg Arg1:T13 Arg2:T8	
+T14	Negation 1735 1738	nie
+T15	Negation 1719 1722	nie
+T16	Negation 1700 1705	nigdy
+T17	Treatment 1678 1682	2xcc
+A1	Status T17 Historical_Insignificant
+T18	Behaviour 1683 1698	Palenie tytoniu
+N4	Reference T18 ICD10:Z72.0	Używanie tytoniu
+R5	Neg Arg1:T16 Arg2:T18	
+T19	Behaviour 1706 1717	Inne używki
+N5	Reference T19 ICD10:Z72	Problemy związane ze stylem życia
+R6	Neg Arg1:T15 Arg2:T19	
+T20	Condition 1723 1732	Uczulenia
+N6	Reference T20 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R7	Neg Arg1:T14 Arg2:T20	
+T21	Negation 1552 1558	Neguje
+T22	Symptom 1560 1570	krwawienia
+N7	Reference T22 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T23	Symptom 1572 1585	czarne stolce
+N8	Reference T23 ICD10:K92.1	Stolce smołowate
+T24	Symptom 1587 1603	brunatne wymioty
+N9	Reference T24 ICD10:K92.0	Wymioty krwawe
+T25	Condition 1605 1622	chorobę wrzodową,
+N10	Reference T25 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T26	Symptom 1623 1638	duszność nocną,
+N11	Reference T26 ICD10:R06.0	Duszność
+T27	Symptom 1639 1654	obrzęki podudzi
+N12	Reference T27 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T28	Condition 1656 1658	HA
+N13	Reference T28 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+R8	Neg Arg1:T21 Arg2:T22	
+R9	Neg Arg1:T21 Arg2:T23	
+R10	Neg Arg1:T21 Arg2:T24	
+R11	Neg Arg1:T21 Arg2:T25	
+R12	Neg Arg1:T21 Arg2:T26	
+R13	Neg Arg1:T21 Arg2:T27	
+R14	Neg Arg1:T21 Arg2:T28	
+T29	Condition 439 472	Napadowy częstoskurcz nadkomorowy
+N14	Reference T29 ICD10:I47.1	Częstoskurcz nadkomorowy
+T30	Condition 474 515	Łagodna niedomykalność zastawki mitralnej
+N15	Reference T30 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T31	Condition 518 530	trójdzielnej
+N16	Reference T31 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T32	Symptom 532 557	Bóle w klatce piersiowej.
+N17	Reference T32 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T33	Drug 681 686	leków
+T34	Negation 677 680	bez
+R15	Neg Arg1:T34 Arg2:T33	
+T35	Treatment 912 939	ew. kwalifikacji do ablacji
+A2	Source T35 Declared
+T36	Condition 949 987	napadowego częstoskurczu nadkomorowego
+N18	Reference T36 ICD10:I47.1	Częstoskurcz nadkomorowy
+T37	Symptom 1230 1253	napadów kołatania serca
+N19	Reference T37 ICD10:R00.2	Kołatanie serca
+T38	Date 1254 1263	od 5 lat.
+R16	Dat Arg1:T38 Arg2:T37	
+T39	Symptom 1299 1333	z towarzyszącym uciskiem w gardle.
+N20	Reference T39 ICD10:R07	Ból gardła i w klatce piersiowej
+T40	Date 1288 1298	od 6 m-cy,
+R17	Dat Arg1:T40 Arg2:T39	
+R18	Dat Arg1:T40 Arg2:T37	
+T41	Symptom 1356 1408	asłabnięcia po długim przebywaniu w pozycji stojącej
+N21	Reference T41 ICD10:R55	Omdlenie i zapaść
+T42	Symptom 1433 1441	omdlenia
+N22	Reference T42 ICD10:R55	Omdlenie i zapaść
+T43	Date 1411 1424	w przeszłości
+R19	Dat Arg1:T43 Arg2:T42	
+T44	Symptom 1448 1511	bóle w klatce piersiowej po kołataniu serca i czasem w stresie,
+N23	Reference T44 ICD10:R07.3	Inne bóle w klatce piersiowej
+T45	Behaviour 1512 1534	miesiączkuje regulanie
+T46	Investigation_result 1536 1550	RR<<140/90mmHg
+T47	Treatment 797 819	kontrola u lekarza POZ
+T48	Treatment 822 905	wskazana kontrola w Poradni Kardiologicznej przy CKD u P. Prof. Pawła Ptaszyńskiego

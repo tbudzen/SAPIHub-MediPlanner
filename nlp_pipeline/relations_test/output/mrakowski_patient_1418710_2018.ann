@@ -1,0 +1,82 @@
+T1	Drug 344 350	Acesan
+T2	Drug 352 359	Clexane
+T3	Drug 361 371	Amoksiklav
+T4	Drug 373 381	Spironol
+T5	Drug 383 393	Sildenafil
+T6	Drug 395 404	Captopril
+T7	Drug 406 416	Amoksiklav
+T8	Drug 418 424	Fortum
+T9	Drug 426 432	Amikin
+T10	Drug 434 442	Targocid
+T11	Drug 444 453	Linezolid
+T12	Drug 456 462	Vetira
+T13	Drug 464 473	Pulmicort
+T14	Drug 475 483	Berodual
+T15	Drug 485 492	Luminal
+T16	Drug 494 502	Dormicum
+T17	Drug 504 513	Perfalgan
+T18	Drug 515 523	Debridat
+T19	Drug 525 534	Espumisan
+T20	Drug 536 545	Lavidofil
+T21	Treatment 547 566	znieczulenie ogólne
+T22	Investigation 570 588	cewnikowania serca
+T23	Condition 806 878	Wrodzona wada serca pod postacią zespołu niedorozwoju lewej części serca
+N1	Reference T23 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+T24	Condition 880 884	HLHS
+N2	Reference T24 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+T25	Treatment 907 929	operacji met. Norwooda
+T26	Treatment 931 977	zespolenie RV-PA protezą zbrojoną średnicy 6mm
+T27	Date 981 991	07.11.2017
+R1	Dat Arg1:T27 Arg2:T25	
+R2	Dat Arg1:T27 Arg2:T26	
+T28	Investigation 1003 1021	Cewnikowanie serca
+T29	Date 1023 1033	09.04.2018
+R3	Dat Arg1:T29 Arg2:T28	
+T30	Condition 1038 1064	Hipoplazja tętnic płucnych
+N3	Reference T30 ICD10:Q25.7	Inne wrodzone wady rozwojowe pnia płucnego
+T31	Condition 1069 1125	Niedrożność żył udowych i lewej żyły szyjnej wewnętrznej
+N4	Reference T31 ICD10:I80.8	Zapalenie i zakrzepowe zapalenie żył o innym umiejscowieniu
+T32	Condition 1130 1166	Bakteriemia Enterococcus faecium VRE
+N5	Reference T32 ICD10:B95.2	Paciorkowce z grupy D jako przyczyna chorób sklasyfikowanych w innych rozdziałach
+T33	Condition 1180 1244	rozległym udarze niedokrwiennym mózgu z wtórnym ukrwotocznieniem
+N6	Reference T33 ICD10:I63.9	Zawał mózgu, nieokreślony
+T34	Condition 1257 1274	Zespół piramidowy
+N7	Reference T34 ICD10:F01	Otępienie naczyniowe
+T35	Condition 1279 1310	Padaczka strukturalna poudarowa
+N8	Reference T35 ICD10:G40.8	Inne padaczki
+T36	Condition 1314 1332	Opóźnienie rozwoju
+N9	Reference T36 ICD10:R62	Brak oczekiwanego prawidłowego rozwoju fizjologicznego
+T37	Condition 1491 1525	zespołem niedorozwoju lewego serca
+N10	Reference T37 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+T38	Condition 1527 1552	wadami zastawki aortalnej
+N11	Reference T38 ICD10:Q23.9	Wrodzona wada zastawki aortalnej i zastawki mitralnej, nieokreślona
+T39	Condition 1555 1567	trójdzielnej
+N12	Reference T39 ICD10:Q22.9	Wrodzona wada rozwojowa zastawki trójdzielnej, nieokreślona
+T40	Treatment 1572 1589	operacji Norwooda
+T41	Date 1590 1608	w listopadzie 2017
+R4	Dat Arg1:T41 Arg2:T40	
+T42	Condition 1613 1635	przebytym udarze mózgu
+N13	Reference T42 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T43	Symptom 1693 1710	narastania sinicy
+N14	Reference T43 ICD10:R23.0	Sinica
+T44	Symptom 1750 1759	niepokoju
+N15	Reference T44 ICD10:R45.1	Niepokój i pobudzenie
+T45	Condition 1777 1802	infekcji dróg oddechowych
+A1	Source T45 Declared
+T46	Date 1804 1816	Tydzień temu
+T47	Treatment 1822 1851	zaszczepione p/ko rotawirusom
+R5	Dat Arg1:T46 Arg2:T47	
+T48	Symptom 1870 1875	katar
+N16	Reference T48 ICD10:J30.0	Naczynioruchowe zapalenie błony śluzowej nosa
+T49	Symptom 1885 1891	kaszle
+N17	Reference T49 ICD10:R05	Kaszel
+T50	Negation 1881 1884	nie
+R6	Neg Arg1:T50 Arg2:T49	
+R15	Dat Arg1:T27 Arg2:T26
+R36	Dat Arg1:T29 Arg2:T28
+R49	Dat Arg1:T41 Arg2:T42
+R52	Dat Arg1:T41 Arg2:T40
+R68	Dat Arg1:T46 Arg2:T45
+R71	Dat Arg1:T46 Arg2:T47
+R73	Neg Arg1:T50 Arg2:T48
+R74	Neg Arg1:T50 Arg2:T49

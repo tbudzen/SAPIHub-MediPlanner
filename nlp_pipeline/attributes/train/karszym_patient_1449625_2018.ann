@@ -1,0 +1,115 @@
+T1	Condition 439 468	Przewlekła niewydolność serca
+N1	Reference T1 ICD10:I50.9	Niewydolność serca, nieokreślona
+T2	Symptom 471 492	II/III klasie wg NYHA
+N2	Reference T2 ICD10:I50	Niewydolność serca
+T3	Condition 494 530	Kardiomiopatia o nieznanej etiologii
+N3	Reference T3 ICD10:I42.9	Kardiomiopatia, nieokreślona
+T4	Condition 533 578	dysfunkcja skurczowo-rozkurczowa lewej komory
+N4	Reference T4 ICD10:I50.1	Niewydolność serca lewokomorowa
+T5	Investigation_result 580 586	EF 19%
+T6	Condition 589 610	Nadciśnienie tętnicze
+N5	Reference T6 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T7	Condition 624 631	Nadwaga
+T8	Behaviour 633 643	Nikotynizm
+N6	Reference T8 ICD10:Z72.0	Używanie tytoniu
+T9	Condition 645 665	Hipercholesterolemia
+N7	Reference T9 ICD10:E78.0	Czysta hipercholesterolemia
+T10	Treatment 676 684	leczenia
+T11	Treatment 694 710	cholecystektomii
+A1	Status T11 Historical_Insignificant
+N8	Reference T11 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T12	Date 711 721	przed laty
+T13	Condition 723 754	Zaburzenia afektywne - depresja
+N9	Reference T13 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+R1	Dat Arg1:T12 Arg2:T11	
+T14	Treatment 879 906	dalsza opieka w poradni POZ
+T15	Treatment 913 962	okresowa kontrola kardiologiczna i psychiatryczna
+T16	Treatment 969 1027	konsultacja elektrofizjologiczna w Poradni Kardiologicznej
+T17	Investigation 1098 1137	codzienna kontrola ciśnienia tętniczego
+T18	Investigation 1144 1173	okresowa kontrola lipidogramu
+T19	Date 1175 1185	raz w roku
+T20	Behaviour 1193 1218	dieta niskocholesterolowa
+T21	Drug 1264 1270	Diuver
+T22	Drug_dose 1271 1287	5mg 1 tabl. rano
+R2	Dat Arg1:T19 Arg2:T18	
+T23	Drug 1296 1306	Concor Cor
+T24	Drug_dose 1307 1326	2.5 mg 1 tabl. rano
+T25	Drug 1334 1344	Prestarium
+T26	Drug_dose 1345 1366	5mg 1 tabl. wieczorem
+T27	Drug 1375 1381	Atoris
+T28	Drug_dose 1382 1405	40 mg 1 tabl. wieczorem
+T29	Drug 1414 1421	Seronil
+T30	Drug_dose 1422 1440	20 mg 1 tabl. rano
+R3	Drg Arg1:T21 Arg2:T22	
+R4	Drg Arg1:T23 Arg2:T24	
+R5	Drg Arg1:T25 Arg2:T26	
+R6	Drg Arg1:T27 Arg2:T28	
+R7	Drg Arg1:T29 Arg2:T30	
+T31	Condition 1586 1649	ciężką dysfunkcja skurczowa lewej komory  o nieznanej etiologii
+N10	Reference T31 ICD10:I50.1	Niewydolność serca lewokomorowa
+T32	Symptom 1652 1691	objawami klinicznym niewydolnosci serca
+N11	Reference T32 ICD10:I50	Niewydolność serca
+T33	Date 1692 1706	od ok miesiąca
+T34	Investigation 1710 1724	koronarografii
+T35	Date 1727 1738	13.07.2018r
+T36	Investigation_result 1751 1817	zmiany brzeżne w naczyniach wieńcowych, nieistotne hemodynamicznie
+A2	Status T36 Historical_Insignificant
+N12	Reference T36 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T37	Condition 1822 1845	nadcisnieniem tętniczym
+N13	Reference T37 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T38	Condition 1847 1867	hipercholesterolemią
+N14	Reference T38 ICD10:E78.0	Czysta hipercholesterolemia
+T39	Treatment 1878 1886	leczenie
+T40	Condition 1890 1898	depresją
+N15	Reference T40 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T41	Treatment 1970 2001	ewentualnej kwalifikacji do ICD
+T42	Treatment 2002 2019	Przebyte operacje
+N16	Reference T42 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T43	Treatment 2022 2038	cholecystektomia
+A3	Status T43 Historical_Insignificant
+N17	Reference T43 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T44	Date 2039 2049	przed laty
+R8	Dat Arg1:T33 Arg2:T32	
+R9	Dat Arg1:T35 Arg2:T34	
+R10	Inv Arg1:T34 Arg2:T36	
+T45	Treatment 2053 2089	Leczenie przewlekłe:  psychiatryczne
+R11	Dat Arg1:T44 Arg2:T43	
+T46	Condition 2117 2120	WZW
+N18	Reference T46 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T47	Negation 2121 2128	( -   )
+T48	Condition 2131 2140	borelioza
+N19	Reference T48 ICD10:A69.2	Choroba z Lyme
+T49	Negation 2141 2146	( - )
+T50	Condition 2178 2194	choroba wieńcowa
+A4	Status T50 Family
+N20	Reference T50 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T51	Behaviour 2195 2215	Palenie tytoniu: tak
+N21	Reference T51 ICD10:Z72.0	Używanie tytoniu
+T52	Behaviour 2217 2242	Inne używki: okazjonalnie
+A5	Status T52 Historical_Insignificant
+N22	Reference T52 ICD10:Z72	Problemy związane ze stylem życia
+T53	Condition 2246 2255	Uczulenia
+N23	Reference T53 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T54	Negation 2257 2263	neguje
+T55	Behaviour 2281 2307	warunki mieszkaniowe dobre
+T56	Behaviour 2310 2325	mieszka z mężem
+T57	Drug 2336 2342	Atoris
+T58	Drug_dose 2343 2353	40 mg 1xdz
+T59	Drug 2355 2361	Bibloc
+T60	Drug_dose 2363 2371	2,5 1xdz
+T61	Drug 2373 2383	Prestarium
+T62	Drug_dose 2384 2392	5mg 1xdz
+T63	Drug 2394 2401	seronil
+T64	Drug_dose 2402 2412	20 mg 1xdz
+T65	Drug 2414 2420	diuver
+T66	Drug_dose 2421 2429	5mg 1xdz
+T67	Investigation 2444 2454	Echo serca
+T68	Investigation 2457 2467	Holter EKG
+R12	Drg Arg1:T57 Arg2:T58	
+R13	Drg Arg1:T59 Arg2:T60	
+R14	Drg Arg1:T61 Arg2:T62	
+R15	Drg Arg1:T63 Arg2:T64	
+R16	Drg Arg1:T65 Arg2:T66	
+R17	Neg Arg1:T54 Arg2:T53	
+R18	Neg Arg1:T49 Arg2:T48	
+R19	Neg Arg1:T47 Arg2:T46	

@@ -1,0 +1,228 @@
+T1	Condition 439 493	Nadciśnienie tętnicze 2 stopnia wg ESH/ESC skorygowane
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 495 531	Angiopatia nadciśnieniowa II stopnia
+N2	Reference T2 ICD10:H35.0	Retinopatia nieproliferacyjna i zmiany naczyniowe siatkówki
+T3	Condition 533 563	Ekstrasystolia nad- i komorowa
+T4	Behaviour 565 575	Nikotynizm
+N4	Reference T4 ICD10:Z72.0	Używanie tytoniu
+T5	Date 576 589	w przeszłości
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Condition 591 615	Otyłość I stopnia wg WHO
+N5	Reference T6 ICD10:E66	Otyłość
+T7	Condition 617 632	Miażdżyca aorty
+N6	Reference T7 ICD10:I70.0	Miażdżyca aorty
+T8	Condition 634 668	Niealkoholowe stłuszczenie wątroby
+N7	Reference T8 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T9	Condition 670 683	Hiperurykemia
+N8	Reference T9 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T10	Condition 685 707	Żylaki kończyn dolnych
+N9	Reference T10 ICD10:I83	Żylaki kończyn dolnych
+T11	Condition 709 744	Niedokrwistość łagodna mikrocytarna
+N10	Reference T11 ICD10:D50	Niedokrwistość z niedoboru żelaza
+T12	Condition 746 789	Przebyte zapalenie opon mózgowo-rdzeniowych
+N11	Reference T12 ICD10:G03	Zapalenie opon mózgowo-rdzeniowych wywołane przez inne i nieokreślone czynniki
+T13	Condition 800 830	ostrą niewydolnością oddechową
+N12	Reference T13 ICD10:J96.0	Ostra niewydolność oddechowa
+T14	Condition 833 841	śpiączką
+N13	Reference T14 ICD10:R40.2	Śpiączka, nieokreślona
+T15	Date 843 850	12.2015
+R2	Dat Arg1:T15 Arg2:T12	
+R3	Dat Arg1:T15 Arg2:T13	
+R4	Dat Arg1:T15 Arg2:T14	
+T16	Treatment 861 870	usunięciu
+T17	Condition 871 902	guza ślinianki przyusznej lewej
+N14	Reference T17 ICD10:D11.0	Ślinianka przyuszna
+T18	Treatment 903 917	z radioterapią
+T19	Date 919 923	2002
+R5	Dat Arg1:T19 Arg2:T16	
+R6	Dat Arg1:T19 Arg2:T17	
+R7	Dat Arg1:T19 Arg2:T18	
+T20	Treatment 933 952	powtórnym usunięciu
+T21	Condition 953 984	guza ślinianki przyusznej lewej
+N15	Reference T21 ICD10:D11.0	Ślinianka przyuszna
+T22	Date 986 993	07.2015
+R8	Dat Arg1:T22 Arg2:T21	
+R9	Dat Arg1:T22 Arg2:T20	
+T23	Treatment 1004 1017	appendektomii
+T24	Treatment 1020 1033	tonsilektomii
+T25	Date 1045 1055	przed laty
+R10	Dat Arg1:T25 Arg2:T24	
+R11	Dat Arg1:T25 Arg2:T23	
+T26	Condition 1069 1078	uczulenie
+N16	Reference T26 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T27	Drug 1083 1093	ampicylinę
+T28	Drug 1095 1102	Dalacin
+T29	Drug 1104 1113	Augmentin
+T30	Drug 1115 1121	Ceclor
+T31	Drug 1123 1128	Zinat
+T32	Drug 1130 1140	rowamycynę
+T33	Drug 1152 1160	Zofenilu
+R12	Alg Arg1:T26 Arg2:T27	
+R13	Alg Arg1:T26 Arg2:T28	
+R14	Alg Arg1:T26 Arg2:T29	
+R15	Alg Arg1:T26 Arg2:T30	
+R16	Alg Arg1:T26 Arg2:T31	
+R17	Alg Arg1:T26 Arg2:T32	
+R18	Alg Arg1:T26 Arg2:T33	
+T34	Symptom 1142 1151	kaszel po
+N17	Reference T34 ICD10:R05	Kaszel
+T35	Treatment 1285 1312	dalsza opieka w poradni POZ
+T36	Treatment 1319 1373	okresowa kontrola kardiologiczna, gastroenterologiczna
+T37	Investigation 1394 1406	kolonoskopii
+T38	Investigation 1409 1421	gastroskopii
+T39	Investigation 1455 1554	regularna kontrola ciśnienia tętniczego (pomiar jedynie w pełnym komforcie psychicznym i fizycznym)
+T40	Treatment 1561 1638	do rozważenia konsultacja psychologiczna celem poznania metod redukcji stresu
+T41	Investigation 1645 1674	okresowa kontrola lipidogramu
+T42	Date 1684 1690	za rok
+R19	Dat Arg1:T42 Arg2:T41	
+T43	Investigation 1698 1735	wskazane wykonanie USG jamy brzusznej
+T44	Date 1736 1746	raz w roku
+R20	Dat Arg1:T44 Arg2:T43	
+T45	Behaviour 1753 1763	dieta DASH
+T46	Behaviour 1770 1789	redukcja masy ciała
+T47	Behaviour 1798 1843	stały, umiarkowany, aerobowy wysiłek fizyczny
+T48	Treatment 1850 1878	regularne przyjmowanie leków
+T49	Drug 1888 1898	Concor COR
+T50	Drug_dose 1899 1919	2,5mg 1/2 tabl. rano
+R21	Drg Arg1:T49 Arg2:T50	
+T51	Drug 1927 1933	Diured
+T52	Drug_dose 1934 1951	10mg 1 tabl. rano
+R22	Drg Arg1:T51 Arg2:T52	
+T53	Drug 1959 1965	Telmix
+T54	Drug_dose 1966 1988	80mg 1 tabl. wieczorem
+R23	Drg Arg1:T53 Arg2:T54	
+T55	Drug 1996 2003	Kaldyum
+T56	Drug_dose 2004 2028	1 tabl. rano i wieczorem
+R24	Drg Arg1:T55 Arg2:T56	
+T57	Drug 2037 2051	Polomag B6 Mag
+T58	Drug_dose 2052 2084	1 tabl. rano i 1 tabl. wieczorem
+R25	Drg Arg1:T57 Arg2:T58	
+T59	Drug 2093 2106	Diohespan max
+T60	Drug_dose 2107 2119	1 tabl. rano
+R26	Drg Arg1:T59 Arg2:T60	
+T61	Drug 2126 2139	Hemofer prol.
+T62	Drug_dose 2140 2164	1 tabl. rano i wieczorem
+R27	Drg Arg1:T61 Arg2:T62	
+T63	Drug 2172 2178	Atoris
+T64	Drug_dose 2179 2202	10 mg 1 tabl. wieczorem
+R28	Drg Arg1:T63 Arg2:T64	
+T65	Condition 2348 2371	nadciśnieniem tętniczym
+N18	Reference T65 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T66	Date 2372 2384	od wielu lat
+R29	Dat Arg1:T66 Arg2:T65	
+T67	Treatment 2386 2401	hospitalizowana
+T68	Date 2402 2414	przed rokiem
+R30	Dat Arg1:T68 Arg2:T67	
+T69	Date 2437 2449	od ok. 2 lat
+T70	Investigation_result 2455 2490	wahania BP w domu 108/70-180/90mmHg
+N19	Reference T70 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+R31	Dat Arg1:T69 Arg2:T70	
+T71	Symptom 2508 2525	kołataniami serca
+N20	Reference T71 ICD10:R00.2	Kołatanie serca
+T72	Symptom 2527 2542	uczuciem gorąca
+T73	Symptom 2544 2567	zaczerwienieniem twarzy
+N21	Reference T73 ICD10:R23.2	Zaczerwienienie twarzy
+T74	Symptom 2651 2672	namiernego wzrostu HA
+N22	Reference T74 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T75	Symptom 2713 2744	Epizod bólu w klatce piersiowej
+N23	Reference T75 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T76	Date 2745 2754	w 07.2018
+R32	Dat Arg1:T76 Arg2:T75	
+T77	Symptom 2776 2798	napady kołatania serca
+N24	Reference T77 ICD10:R00.2	Kołatanie serca
+T78	Symptom 2814 2824	dusznością
+N25	Reference T78 ICD10:R06.0	Duszność
+T79	Symptom 2826 2841	uczuciem gorąca
+T80	Treatment 2843 2856	appendektomia
+T81	Treatment 2858 2877	usunięcie migdałków
+T82	Date 2878 2888	przed laty
+R33	Dat Arg1:T82 Arg2:T81	
+T83	Condition 2890 2919	żylaki prawej kończyny dolnej
+N26	Reference T83 ICD10:I83	Żylaki kończyn dolnych
+T84	Condition 2921 2930	uczulenie
+N27	Reference T84 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T85	Drug 2935 2945	ampicylinę
+T86	Drug 2947 2954	Dalacin
+T87	Drug 2956 2962	Ceclor
+T88	Drug 2964 2974	rowamycynę
+T89	Drug 2976 2981	Zinat
+T90	Drug 2983 2992	Augmentin
+R34	Alg Arg1:T84 Arg2:T85	
+R35	Alg Arg1:T84 Arg2:T86	
+R36	Alg Arg1:T84 Arg2:T87	
+R37	Alg Arg1:T84 Arg2:T88	
+R38	Alg Arg1:T84 Arg2:T89	
+R39	Alg Arg1:T84 Arg2:T90	
+T91	Negation 3006 3009	nie
+T92	Behaviour 3010 3014	pali
+N28	Reference T92 ICD10:Z72.0	Używanie tytoniu
+T93	Date 3015 3023	od 8 lat
+R40	Neg Arg1:T91 Arg2:T92	
+R41	Dat Arg1:T93 Arg2:T92	
+T94	Investigation 3066 3070	ECHO
+T95	Investigation_result 3072 3078	EF 63%
+T96	Investigation_result 3085 3174	powiększeniem przedsionków, zwłaszcza istotnym powiększeniem objętości przedsionka lewego
+N29	Reference T96 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T97	Investigation 3175 3200	obraz echokardiograficzny
+T98	Investigation 3203 3239	dopplerowski serca i wielkich naczyń
+T99	Investigation_result 3240 3248	w normie
+R42	Inv Arg1:T94 Arg2:T95	
+R43	Inv Arg1:T94 Arg2:T96	
+R44	Inv Arg1:T97 Arg2:T99	
+R45	Inv Arg1:T98 Arg2:T99	
+T100	Investigation_result 3250 3319	aorta piersiowa i tętnica płucna w zakresie widoczności bez patologii
+R46	Inv Arg1:T98 Arg2:T100	
+T101	Investigation 3325 3343	EKG metodą Holtera
+T102	Investigation_result 3345 3425	rytm zatokowy o częstości od 49/min (04:04) do 88/min (17:25), śr. dobowa 63/min
+R47	Inv Arg1:T101 Arg2:T102	
+T103	Investigation_result 3427 3490	ExSV: 1069 pojedynczych przedwczesnych pobudzeń przedsionkowych
+N30	Reference T103 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T104	Investigation_result 3497 3528	1 częstoskurcz z 5 pobudzeń QRS
+N31	Reference T104 ICD10:I47.1	Częstoskurcz nadkomorowy
+R48	Inv Arg1:T101 Arg2:T103	
+R49	Inv Arg1:T101 Arg2:T104	
+T105	Investigation_result 3530 3607	ExV: 103 pojedyncze przedwczesne pobudzenia komorowe różnokształtne, bez pauz
+N32	Reference T105 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+R50	Inv Arg1:T101 Arg2:T105	
+T106	Investigation 3611 3626	Próba wysiłkowa
+T107	Investigation_result 3628 3711	niediagnostyczna- nie osiągnięto wymaganego limitu tętna przy obciążeniu 10:20 METs
+R51	Inv Arg1:T106 Arg2:T107	
+T108	Investigation 3716 3720	ABPM
+T109	Investigation_result 3722 3786	w godzinach dziennych: RR 103/63- 165/91mmHg, śr. RR: 138/80mmHg
+N33	Reference T109 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T110	Investigation_result 3788 3871	w godzinach nocnych/przebudzenia: RR 103/58- 136/78mmHg, śr. RR: 122/70mmHg, dipper
+R52	Inv Arg1:T108 Arg2:T109	
+R53	Inv Arg1:T108 Arg2:T110	
+T111	Investigation 3878 3903	USG-D żył kończyn dolnych
+T112	Investigation_result 3905 4033	naczynia żylne układu głębokiego i powierzchowne obu kończyn dolnych w zakresie dostępnym badaniu drożne z zachowanym przepływem
+T113	Investigation_result 4039 4062	skrzeplin przyściennych
+T114	Negation 4035 4038	bez
+R54	Neg Arg1:T114 Arg2:T113	
+N34	Reference T113 ICD10:I70.8	Miażdżyca innych tętnic
+T115	Investigation_result 4064 4137	zastawki w ujściach VSM obustronnie niewydolne, z falą wstecznego odpływu
+R55	Inv Arg1:T111 Arg2:T112	
+R56	Inv Arg1:T111 Arg2:T113	
+R57	Inv Arg1:T111 Arg2:T115	
+T116	Condition 4184 4214	Angiopathia hypertonica gr. II
+N35	Reference T116 ICD10:H35.0	Retinopatia nieproliferacyjna i zmiany naczyniowe siatkówki
+T117	Drug 4217 4227	Concor COR
+T118	Drug_dose 4228 4250	2,5mg 1x 1/2 tabl/rano
+R58	Drg Arg1:T117 Arg2:T118	
+T119	Drug 4252 4258	Diured
+T120	Drug_dose 4259 4278	10mg 1x 1 tabl/rano
+R59	Drg Arg1:T119 Arg2:T120	
+T121	Drug 4280 4286	Telmix
+T122	Drug_dose 4287 4311	80mg 1x 1 tabl/wieczorem
+R60	Drg Arg1:T121 Arg2:T122	
+T123	Drug 4313 4320	Kaldyum
+T124	Drug_dose 4321 4329	2x1 tabl
+R61	Drg Arg1:T123 Arg2:T124	
+T125	Drug 4331 4345	Polomag B6 Mag
+T126	Drug_dose 4346 4358	1 tabl. rano
+R62	Drg Arg1:T125 Arg2:T126	
+T127	Drug 4360 4373	Diohespan max
+T128	Drug_dose 4374 4386	1 tabl. rano
+R63	Drg Arg1:T127 Arg2:T128	
+N3	Reference T3 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T129	Treatment 2685 2711	poprzedniej hospitalizacji
+T130	Treatment 2635 2641	3x SOR

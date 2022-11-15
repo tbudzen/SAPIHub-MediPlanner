@@ -1,0 +1,56 @@
+T1	Behaviour 1482 1508	warunki mieszkaniowe dobre
+T2	Drug 1529 1533	Leki
+T3	Negation 1535 1539	brak
+R1	Neg Arg1:T3 Arg2:T2	
+T4	Negation 1459 1465	neguje
+T5	Negation 1444 1447	nie
+T6	Negation 1427 1430	nie
+T7	Negation 1406 1409	nie
+T8	Negation 1352 1355	-  
+T9	Negation 1371 1372	-
+T10	Negation 1386 1387	-
+T11	Condition 1376 1384	gruźlica
+N1	Reference T11 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T12	Condition 1359 1368	borelioza
+N2	Reference T12 ICD10:A69.2	Choroba z Lyme
+T13	Condition 1346 1349	WZW
+N3	Reference T13 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+R2	Neg Arg1:T9 Arg2:T12	
+R3	Neg Arg1:T8 Arg2:T13	
+R4	Neg Arg1:T10 Arg2:T11	
+T14	Condition 1389 1404	Wywiad rodzinny
+A1	Status T14 Family
+R5	Neg Arg1:T7 Arg2:T14	
+T15	Behaviour 1410 1425	Palenie tytoniu
+N4	Reference T15 ICD10:T65.2	Tytoń i nikotyna
+R6	Neg Arg1:T6 Arg2:T15	
+T16	Behaviour 1431 1442	Inne używki
+R7	Neg Arg1:T5 Arg2:T16	
+T17	Condition 1448 1457	Uczulenia
+N5	Reference T17 ICD10:T78.4	Alergia, nieokreślona
+R8	Neg Arg1:T4 Arg2:T17	
+T18	Negation 1312 1318	neguje
+T19	Treatment 1292 1309	Przebyte operacje
+R9	Neg Arg1:T18 Arg2:T19	
+T20	Symptom 1248 1257	duszności
+N6	Reference T20 ICD10:R06.0	Duszność
+T21	Symptom 1259 1290	typowe bóle w klatce piersiowej
+T22	Negation 1241 1247	Neguje
+R10	Neg Arg1:T22 Arg2:T20	
+R11	Neg Arg1:T22 Arg2:T21	
+T23	Condition 1101 1118	zespołem Gilberta
+N7	Reference T23 ICD10:E80.4	Zespół Gilberta
+T24	Symptom 1155 1176	okresowego osłabienia
+N8	Reference T24 ICD10:R53	Złe samopoczucie i zmęczenie
+T25	Symptom 1178 1219	zasłabnięć bez pełnej utraty przytomności
+N9	Reference T25 ICD10:R55	Omdlenie i zapaść
+T26	Condition 941 956	Zespół Gilberta
+N10	Reference T26 ICD10:E80.4	Zespół Gilberta
+T27	Condition 880 923	Zasłabnięcia bez pełnej utraty przytomności
+N11	Reference T27 ICD10:R55	Omdlenie i zapaść
+T28	Condition 799 843	Łagodna niedomykalność zastawki trójdzielnej
+N12	Reference T28 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T29	Condition 846 876	niskim prawdopodobieństwem PH.
+N13	Reference T29 ICD10:I27.2	Nadciśnienie płucne wtórne o innej etiologii
+T30	Investigation 449 531	kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T31	Investigation 546 570	kontrola ciśnienia tętni

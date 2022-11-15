@@ -1,0 +1,98 @@
+T1	Investigation 2178 2188	Echo serca
+T2	Investigation 2191 2201	Holter EKG
+T3	Investigation 2204 2219	Próba Wysiłkowa
+T4	Drug 2046 2057	Indix Combi
+T5	Drug_dose 2058 2075	5+1,25 1x dz rano
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Drug 2077 2085	DicloDuo
+T7	Drug_dose 2086 2102	75 mg 1x dz rano
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Drug 2105 2120	Neurotop retard
+T9	Drug_dose 2121 2135	300 1x dz rano
+R3	Drg Arg1:T8 Arg2:T9	
+T10	Drug 2138 2145	Nolpaza
+T11	Drug_dose 2146 2162	20 mg 1x dz rano
+R4	Drg Arg1:T10 Arg2:T11	
+T12	Behaviour 1995 2021	warunki mieszkaniowe dobre
+T13	Negation 1972 1978	neguje
+T14	Condition 1961 1970	Uczulenia
+R5	Neg Arg1:T13 Arg2:T14	
+T15	Behaviour 1917 1942	Inne używki: okozjonalnie
+T16	Behaviour 1896 1911	Palenie tytoniu
+T17	Negation 1913 1916	nie
+R6	Neg Arg1:T17 Arg2:T16	
+T18	Condition 1866 1887	W wywiadzie rodzinnym
+A1	Status T18 Family
+T19	Negation 1890 1894	brak
+R7	Neg Arg1:T19 Arg2:T18	
+T20	Condition 1826 1829	WZW
+T21	Condition 1839 1848	borelioza
+N4	Reference T21 ICD10:A69.2	Choroba z Lyme
+T22	Condition 1855 1859	Odra
+N5	Reference T22 ICD10:B05	Odra
+T23	Negation 1860 1865	( - )
+R8	Neg Arg1:T23 Arg2:T22	
+T24	Negation 1849 1854	( - )
+R9	Neg Arg1:T24 Arg2:T21	
+T25	Negation 1830 1836	( -  )
+R10	Neg Arg1:T25 Arg2:T20	
+T26	Negation 1793 1797	brak
+T27	Negation 1765 1769	brak
+T28	Treatment 1771 1790	Leczenie przewlekłe
+T29	Treatment 1745 1762	Przebyte operacje
+R11	Neg Arg1:T27 Arg2:T29	
+R12	Neg Arg1:T26 Arg2:T28	
+T30	Condition 1735 1742	Otyłość
+N6	Reference T30 ICD10:E66	Otyłość
+T31	Drug 1081 1089	indix SR
+T32	Drug 1091 1099	DicloDuo
+T33	Drug 1101 1109	Neurotop
+T34	Drug 1111 1118	Nolpaza
+T35	Drug 1120 1125	Otrex
+T36	Drug 1127 1134	CLexane
+T37	Drug 1136 1146	Captorpril
+T38	Drug 1148 1160	Hydrokyszyna
+T39	Condition 447 468	Nadciśnienie tętnicze
+N7	Reference T39 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T40	Condition 544 559	Otyłość III st.
+N8	Reference T40 ICD10:E66	Otyłość
+T41	Behaviour 835 858	zmniejszenie masy ciała
+T42	Behaviour 861 903	dieta niskocholesterolowa, niskokaloryczna
+T43	Investigation 915 945	kontrola lipidogramu, AST, ALT
+T44	Condition 505 542	choroba zwyrodnieniowa biodra prawego
+N9	Reference T44 ICD10:M16.9	Koksartroza, nieokreślona
+T45	Condition 1659 1696	Choroba zwyrodnieniowa biodra prawego
+N10	Reference T45 ICD10:M16.9	Koksartroza, nieokreślona
+T46	Treatment 1712 1733	zabiegu wymiany stawu
+T47	Condition 1637 1658	Choroba dwubiegunowa.
+N11	Reference T47 ICD10:F31	Zaburzenia afektywne dwubiegunowe
+T48	Condition 483 504	choroba dwubiegunowa,
+N12	Reference T48 ICD10:F31	Zaburzenia afektywne dwubiegunowe
+T49	Condition 560 624	Pourazowy krwiak tkanek miękkich okolicy stawu biodrowego lewego
+N13	Reference T49 ICD10:M79	Inne choroby tkanek miękkich, niesklasyfikowane gdzie indziej
+T50	Symptom 1533 1556	Obrzęki kończyn dolnych
+N14	Reference T50 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T51	Condition 1510 1531	Nadciśnienie tętnicze
+N15	Reference T51 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T52	Symptom 1470 1494	bóle w klatce piersiowej
+T53	Symptom 1448 1460	zasłabnięcia
+N17	Reference T53 ICD10:R55	Omdlenie i zapaść
+T54	Negation 1441 1447	Neguje
+R13	Neg Arg1:T54 Arg2:T53	
+T55	Negation 1463 1469	neguje
+R14	Neg Arg1:T55 Arg2:T52	
+T56	Symptom 1411 1439	uczucie szybkiej pracy serca
+T57	Symptom 1330 1354	obrzęków kończyn dolnych
+N18	Reference T57 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T58	Symptom 1357 1383	niskiej tolerancji wysiłku
+N19	Reference T58 ICD10:R53	Złe samopoczucie i zmęczenie
+N16	Reference T52 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+A2	Source T46 Declared
+N3	Reference T20 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N2	Reference T16 ICD10:Z72.0	Używanie tytoniu
+T59	Date 1945 1959	1 w tygodniu )
+R15	Dat Arg1:T59 Arg2:T15	
+N1	Reference T14 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N20	Reference T15 ICD10:Z72	Problemy związane ze stylem życia
+T60	Treatment 736 758	kontrola u lekarza POZ
+T61	Treatment 761 832	kontrola w Poradni Kardiologicznej i Chirurgicznej (wydano skierowania)

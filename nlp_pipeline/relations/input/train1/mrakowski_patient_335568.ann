@@ -1,0 +1,156 @@
+T1	Treatment 331 353	kontrola u lekarza POZ
+T2	Treatment 356 417	kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych
+T3	Investigation 441 473	proszę o wykonanie angioCT aorty
+T4	Investigation 477 536	kontrola wartości ciśnienia tętniczego w warunkach domowych
+T5	Behaviour 539 563	unikanie wysiłków fizycz
+T6	Drug 683 690	Tritace
+T7	Drug 692 700	Bisocard
+T8	Drug 702 709	Milurit
+T9	Drug 711 719	Simvacas
+T10	Drug 721 734	Sulfasalazyna
+T11	Condition 952 1037	Dwupłatkowa zastawka aortalna z ciężkim zwężeniem i łagodną niedomykalnością zastawki
+T13	Condition 1039 1083	Istotne poszerzenie aorty wstępującej (54mm)
+T14	Condition 1085 1106	Nadciśnienie tętnicze
+N4	Reference T14 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T15	Condition 1108 1120	Wole guzkowe
+N5	Reference T15 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T16	Treatment 1130 1138	plastyce
+T17	Condition 1184 1221	Wrzodziejące zapalenie jelita grubego
+N6	Reference T17 ICD10:K51.9	Wrzodziejące zapalenie jelita grubego, nieokreślone
+T18	Condition 1223 1251	Kamica pęcherzyka żółciowego
+N7	Reference T18 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T19	Condition 1253 1267	Kamica nerkowa
+N8	Reference T19 ICD10:N20.0	Kamica nerki
+T20	Condition 1269 1282	Hiperurykemia
+N9	Reference T20 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T21	Condition 1426 1428	HA
+N10	Reference T21 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T22	Investigation_result 1430 1444	RR <140/90mmHg
+N11	Reference T22 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T23	Condition 1447 1450	BAV
+T24	Condition 1452 1480	tętniakiem aorty wstępującej
+N12	Reference T24 ICD10:I71.2	Tętniak odcinka piersiowego aorty, bez informacji o pęknięciu
+T25	Symptom 1511 1559	bólów w klatce piersiowej przy wysiłku fizycznym
+N13	Reference T25 ICD10:R07.3	Inne bóle w klatce piersiowej
+T26	Date 1560 1570	od 5-6 lat
+R1	Dat Arg1:T26 Arg2:T25	
+T27	Symptom 1594 1628	na 2 piętro wchodzi bez odpoczynku
+T28	Condition 1630 1657	wole guzkowe (bez leczenia)
+N14	Reference T28 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T29	Treatment 1659 1667	operacja
+A1	Status T29 Historical_Insignificant
+T30	Date 1713 1717	2007
+R2	Dat Arg1:T30 Arg2:T29	
+A2	Status T16 Historical_Insignificant
+T31	Condition 1720 1757	wrzodziejące zapalenie jelita grubego
+N15	Reference T31 ICD10:K51.9	Wrzodziejące zapalenie jelita grubego, nieokreślone
+T32	Condition 1759 1787	kamica pęcherzyka żółciowego
+N16	Reference T32 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T33	Condition 1789 1803	kamica nerkowa
+N17	Reference T33 ICD10:N20.0	Kamica nerki
+T34	Condition 1805 1818	hiperurykemia
+N18	Reference T34 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T35	Investigation 1822 1836	koronarografii
+T36	Date 1838 1842	2013
+R3	Dat Arg1:T36 Arg2:T35	
+T37	Investigation_result 1845 1899	w LAD rozsiane blaszki miażdżycowe ze zwężeniem do 50%
+N19	Reference T37 ICD10:I70.8	Miażdżyca innych tętnic
+T38	Investigation_result 1901 1940	w pozostałych naczyniach zmiany brzeżne
+R4	Inv Arg1:T35 Arg2:T37	
+R5	Inv Arg1:T35 Arg2:T38	
+R6	Dat Arg1:T36 Arg2:T37	
+R7	Dat Arg1:T36 Arg2:T38	
+T39	Negation 1942 1948	Neguje
+T40	Symptom 1950 1986	bóle spoczynkowe w klatce piersiowej
+N20	Reference T40 ICD10:R07.3	Inne bóle w klatce piersiowej
+T41	Symptom 1988 2000	zasłabnięcia
+T42	Symptom 2002 2010	omdlenia
+N21	Reference T42 ICD10:R55	Omdlenie i zapaść
+T43	Symptom 2012 2022	krwawienia
+T44	Symptom 2024 2037	czarne stolce
+N22	Reference T44 ICD10:K92.1	Stolce smołowate
+T45	Symptom 2039 2055	brunatne wymioty
+N23	Reference T45 ICD10:K92.0	Wymioty krwawe
+T46	Condition 2057 2073	chorobę wrzodową
+N24	Reference T46 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T47	Symptom 2075 2089	duszność nocną
+N25	Reference T47 ICD10:R06.0	Duszność
+T48	Symptom 2091 2106	obrzęki podudzi
+N26	Reference T48 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T49	Symptom 2108 2123	kołatania serca
+N27	Reference T49 ICD10:R00.2	Kołatanie serca
+T50	Condition 2125 2127	DM
+N28	Reference T50 ICD10:E14	Cukrzyca nieokreślona
+R8	Neg Arg1:T39 Arg2:T50	
+R9	Neg Arg1:T39 Arg2:T49	
+R10	Neg Arg1:T39 Arg2:T48	
+R11	Neg Arg1:T39 Arg2:T47	
+R12	Neg Arg1:T39 Arg2:T46	
+R13	Neg Arg1:T39 Arg2:T45	
+R14	Neg Arg1:T39 Arg2:T44	
+R15	Neg Arg1:T39 Arg2:T43	
+R16	Neg Arg1:T39 Arg2:T42	
+R17	Neg Arg1:T39 Arg2:T41	
+R18	Neg Arg1:T39 Arg2:T40	
+T51	Behaviour 2152 2167	Palenie tytoniu
+N29	Reference T51 ICD10:Z72.0	Używanie tytoniu
+T52	Negation 2169 2177	nie pali
+T53	Date 2178 2187	od 18 lat
+R19	Dat Arg1:T53 Arg2:T51	
+R20	Neg Arg1:T52 Arg2:T51	
+T54	Behaviour 2188 2199	Inne używki
+T55	Negation 2201 2204	nie
+R21	Neg Arg1:T55 Arg2:T54	
+T56	Condition 2205 2214	Uczulenia
+T57	Negation 2216 2219	nie
+R22	Neg Arg1:T57 Arg2:T56	
+T58	Condition 2247 2250	WZW
+N30	Reference T58 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T59	Condition 2257 2266	borelioza
+N31	Reference T59 ICD10:A69.2	Choroba z Lyme
+T60	Condition 2274 2277	tbc
+N32	Reference T60 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T61	Condition 2283 2287	odra
+N33	Reference T61 ICD10:B05	Odra
+T62	Negation 2289 2290	-
+R23	Neg Arg1:T62 Arg2:T61	
+T63	Negation 2279 2280	-
+R24	Neg Arg1:T63 Arg2:T60	
+T64	Negation 2269 2270	-
+R25	Neg Arg1:T64 Arg2:T59	
+T65	Negation 2252 2253	-
+R26	Neg Arg1:T65 Arg2:T58	
+T66	Condition 2294 2313	wywiadzie rodzinnym
+A3	Status T66 Family
+T67	Negation 2315 2318	b/z
+R27	Neg Arg1:T67 Arg2:T66	
+T68	Behaviour 2335 2361	warunki mieszkaniowe dobre
+T69	Drug 2399 2406	Tritace
+T70	Drug_dose 2407 2425	5mg 1x 1 tabl/rano
+R28	Drg Arg1:T69 Arg2:T70	
+T71	Drug 2426 2434	Bisocard
+T72	Drug_dose 2435 2454	5mg 1x 1 tabl/wiecz
+R29	Drg Arg1:T71 Arg2:T72	
+T73	Drug 2455 2462	Milurit
+T74	Drug_dose 2463 2484	100mg 1x 1 tabl/wiecz
+R30	Drg Arg1:T73 Arg2:T74	
+T75	Drug 2485 2493	Simvacas
+T76	Drug_dose 2494 2514	10mg 1x 1 tabl/wiecz
+R31	Drg Arg1:T75 Arg2:T76	
+T77	Drug 2515 2528	Sulfasalazyna
+T78	Drug_dose 2529 2545	500mg 1-0-1 tabl
+R32	Drg Arg1:T77 Arg2:T78	
+T79	Investigation 2606 2627	badania laboratoryjne
+T80	Investigation 2629 2633	ECHO
+T81	Investigation 2635 2653	EKG metodą Holtera
+T82	Investigation 2655 2659	ABPM
+T83	Investigation 2661 2664	TEE
+N1	Reference T11 ICD10:I35.2	Zwężenie zastawki aortalnej z niedomykalnością
+N2	Reference T23 ICD10:I71.2	Tętniak odcinka piersiowego aorty, bez informacji o pęknięciu
+T12	Treatment 2130 2147	Przebyte operacje
+T84	Condition 1139 1182	przepukliny wślizgowej rozworu przełykowego
+N34	Reference T84 ICD10:K44.9	Przepuklina przeponowa bez niedrożności lub zgorzeli
+N3	Reference T13 ICD10:R93.1	
+T85	Condition 1668 1711	przepukliny wślizgowej rozworu przełykowego
+N35	Reference T85 ICD10:K44.9	Przepuklina przeponowa bez niedrożności lub zgorzeli
+R33	Dat Arg1:T30 Arg2:T85	

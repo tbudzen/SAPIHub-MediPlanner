@@ -1,0 +1,38 @@
+T1	Condition 461 486	Komorowe zaburzenia rytmu
+T2	Condition 491 524	Napadowy częstoskurcz nadkomorowy
+T3	Condition 541 616	Wrodzona wada serca - ubytek w przegrodzie międzyprzedsionkowej typu ASD II
+T4	Condition 621 630	Łuszczyca
+T5	Drug 897 907	Metoprolol
+T6	Drug_dose 908 918	2 x 12.5mg
+T7	Drug 962 970	Chelo-Mg
+T8	Drug_dose 972 981	1 x 1kaps
+T9	Drug 1027 1040	Vigantoletten
+T10	Drug_dose 1041 1050	1 x 2000j
+T11	Drug 1094 1099	Padma
+T12	Drug_dose 1101 1111	3 x 2 tabl
+T13	Investigation 1115 1148	Ambulatoryjna kontrola RR i tętna
+T14	Behaviour 1153 1186	Ograniczenie aktywności fizycznej
+T15	Behaviour 1189 1229	zwolnienie z zajęć wychowania fizycznego
+T16	Investigation 1391 1435	amb.oznaczenie poziomu kreatyniny w surowicy
+T18	Investigation 1506 1535	powtórzenie testu wysiłkowego
+T17	Investigation 1676 1697	badan diagnostycznych
+T19	Condition 1698 1718	wrodzonej wady serca
+T20	Condition 1735 1744	łuszczycę
+T21	Drug 759 764	leków
+T22	Negation 755 758	Bez
+czeń sercowych
+T23	Negation 1746 1757	obecnie bez
+T24	Drug 1758 1763	leków
+N1	Reference T1 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komÃ³r
+N2	Reference T2 ICD10:I47.1	CzÄstoskurcz nadkomorowy
+N3	Reference T3 ICD10:Q21.1	Ubytek przegrody miÄdzyprzedsionkowej
+N4	Reference T4 ICD10:L40.9	Åuszczyca, nieokreÅlona
+N5	Reference T19 ICD10:Q20	Wrodzone wady rozwojowe jam i poÅÄczeÅ sercowych
+N6	Reference T20 ICD10:L40.9	Åuszczyca, nieokreÅlona
+R1	Neg Arg1:T22 Arg2:T21
+R12	Drg Arg1:T9 Arg2:T10
+R17	Drg Arg1:T11 Arg2:T12
+R19	Neg Arg1:T23 Arg2:T20
+R2	Drg Arg1:T5 Arg2:T6
+R21	Neg Arg1:T23 Arg2:T24
+R7	Drg Arg1:T7 Arg2:T8

@@ -1,0 +1,118 @@
+T1	Condition 439 483	Nadciśnienie płucne o nieustalonej etiologii
+N1	Reference T1 ICD10:I27.0	Pierwotne nadciśnienie płucne
+T2	Condition 485 507	Niewydolność oddechowa
+N2	Reference T2 ICD10:J96.9	Niewydolność oddechowa, nieokreślona
+T3	Treatment 508 554	w trakcie terapii domowym koncentratorem tlenu
+T4	Condition 556 582	Nawracające zapalenia płuc
+N3	Reference T4 ICD10:J18.9	Zapalenie płuc, nieokreślone
+T5	Condition 584 611	Dziecięce porażenie mózgowe
+N4	Reference T5 ICD10:G80.9	Mózgowe porażenie dziecięce, nieokreślone
+T6	Condition 613 633	Rozszczep kręgosłupa
+N5	Reference T6 ICD10:Q05.9	Rozszczep kręgosłupa, nieokreślony
+T7	Condition 635 645	Wodogłowie
+N6	Reference T7 ICD10:G91.9	Wodogłowie, nieokreślone
+T8	Treatment 656 689	operacji wymiany zastawki Pudenza
+T9	Condition 708 720	niedrożności
+N7	Reference T9 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T10	Date 722 733	25 lat temu
+A1	Status T9 Historical_Insignificant
+A2	Status T8 Historical_Insignificant
+R1	Dat Arg1:T10 Arg2:T9	
+R2	Dat Arg1:T10 Arg2:T8	
+T11	Treatment 859 886	dalsza opieka w poradni POZ
+T12	Treatment 893 915	poszerzona diagnostyka
+T13	Condition 916 937	nadciśnienia płucnego
+N8	Reference T13 ICD10:I27.0	Pierwotne nadciśnienie płucne
+T14	Treatment 1243 1292	okresowa kontrola pulmonologiczna i neurologiczna
+T15	Behaviour 1299 1335	dieta zbliżona do śródziemnomorskiej
+T16	Treatment 1342 1370	regularne przyjmowanie leków
+T17	Drug 1378 1386	Ditropan
+T18	Drug 1411 1420	Furaginum
+T19	Drug 1447 1458	Furosemidum
+T20	Drug 1482 1490	Alpragen
+T21	Drug_dose 1387 1403	5mg 1 tabl. rano
+T22	Drug_dose 1421 1438	1 tabl. wieczorem
+T23	Drug_dose 1459 1474	1 tabl co 3 dni
+T24	Drug_dose 1491 1514	0,5 mg doraźnie 1 tabl.
+R3	Drg Arg1:T17 Arg2:T21	
+R4	Drg Arg1:T18 Arg2:T22	
+R5	Drg Arg1:T19 Arg2:T23	
+R6	Drg Arg1:T20 Arg2:T24	
+T25	Symptom 1687 1704	spadków saturacji
+T26	Condition 1719 1738	niewydolności serca
+A3	Source T26 Declared
+N10	Reference T26 ICD10:I50.9	Niewydolność serca, nieokreślona
+T27	Symptom 1740 1756	Spadki saturacji
+T28	Date 1757 1770	od 6 miesięcy
+R7	Dat Arg1:T28 Arg2:T27	
+T29	Condition 1772 1799	Kontakt z chorą ograniczony
+T30	Date 1843 1862	w godzinach nocnych
+T31	Symptom 1865 1892	chora się wybudza i krzyczy
+R8	Dat Arg1:T30 Arg2:T31	
+T32	Negation 1896 1902	Neguje
+T33	Symptom 1903 1915	zasłabnięcia
+R9	Neg Arg1:T32 Arg2:T33	
+N9	Reference T31 ICD10:R45.8	Inne objawy i dolegliwości dotyczące stanu emocjonalnego
+T34	Condition 1932 1965	Przewlekła niewydolność oddechowa
+N11	Reference T34 ICD10:J96.1	Przewlekła niewydolność oddechowa
+T35	Treatment 1966 2001	na domowym  koncentratorze tlenowym
+T36	Condition 2003 2029	Nawracające zapalenia płuc
+N12	Reference T36 ICD10:J18.9	Zapalenie płuc, nieokreślone
+T37	Condition 2031 2058	Dziecięce porażenie mózgowe
+N13	Reference T37 ICD10:G80.9	Mózgowe porażenie dziecięce, nieokreślone
+T38	Condition 2060 2080	Rozszczep kręgosłupa
+N14	Reference T38 ICD10:Q05.9	Rozszczep kręgosłupa, nieokreślony
+T39	Condition 2082 2092	Wodogłowie
+N15	Reference T39 ICD10:G91.9	Wodogłowie, nieokreślone
+T40	Treatment 2096 2113	Przebyte operacje
+T41	Treatment 2124 2158	operacji wymiary zastawek Pudentzi
+A4	Status T41 Historical_Insignificant
+T42	Condition 2168 2180	niedrożności
+A5	Status T42 Historical_Insignificant
+N16	Reference T42 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T43	Condition 2183 2193	wodogłowie
+N17	Reference T43 ICD10:G91.9	Wodogłowie, nieokreślone
+T44	Date 2203 2214	25 lat temu
+R10	Dat Arg1:T44 Arg2:T42	
+R11	Dat Arg1:T44 Arg2:T41	
+T45	Treatment 2217 2236	Leczenie przewlekłe
+T46	Treatment 2239 2255	pulmonologicznie
+T47	Condition 2284 2287	WZW
+N18	Reference T47 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T48	Condition 2297 2306	borelioza
+N19	Reference T48 ICD10:A69.2	Choroba z Lyme
+T49	Negation 2309 2310	-
+R12	Neg Arg1:T49 Arg2:T48	
+T50	Negation 2290 2291	-
+R13	Neg Arg1:T50 Arg2:T47	
+T51	Condition 2315 2334	wywiadzie rodzinnym
+A6	Status T51 Family
+T52	Negation 2337 2348	brak danych
+R14	Neg Arg1:T52 Arg2:T51	
+T53	Behaviour 2350 2365	Palenie tytoniu
+T54	Negation 2367 2370	nie
+R15	Neg Arg1:T54 Arg2:T53	
+T55	Behaviour 2371 2382	Inne używki
+T56	Negation 2384 2387	nie
+R16	Neg Arg1:T56 Arg2:T55	
+T57	Condition 2388 2397	Uczulenia
+N21	Reference T57 ICD10:T78.4	Alergia, nieokreślona
+T58	Negation 2399 2405	neguje
+R17	Neg Arg1:T58 Arg2:T57	
+T59	Behaviour 2422 2448	warunki mieszkaniowe dobre
+T60	Drug 2478 2486	Ditropan
+T61	Drug_dose 2487 2496	1x dz ran
+R18	Drg Arg1:T60 Arg2:T61	
+T62	Drug 2499 2508	Furaginum
+T63	Drug_dose 2509 2524	1x dz wieczorem
+R19	Drg Arg1:T62 Arg2:T63	
+T64	Drug 2527 2538	Furosemidum
+T65	Drug_dose 2539 2558	1 tabl co 2-3 dzień
+R20	Drg Arg1:T64 Arg2:T65	
+T66	Drug 2561 2569	Alpragen
+T67	Drug_dose 2570 2603	0,5 mg doraźnie - nawet do 3 tabl
+R21	Drg Arg1:T66 Arg2:T67	
+T68	Investigation 2619 2629	Echo serca
+T69	Investigation 2632 2642	Holter EKG
+N22	Reference T33 ICD10:R55	Omdlenie i zapaść
+N20	Reference T53 ICD10:Z72.0	Używanie tytoniu

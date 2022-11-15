@@ -1,0 +1,21 @@
+T1	Negation 341 344	bez
+T2	Treatment 345 350	lekow
+R1	Neg Arg1:T1 Arg2:T2	
+T3	Treatment 462 499	Dalsza opieka poradni Kardiologicznej
+T4	Treatment 501 517	kontrolna wizyta
+T5	Date 518 529	za 6-8 m-cy
+R2	Dat Arg1:T5 Arg2:T4	
+T6	Behaviour 534 585	Wysiłek fizyczny wskazany dostosowany do wydolności
+T7	Condition 837 922	Wrodzona wada serca pod postacią częściowego kanału przedsionkowo-komorowego (ASD I )
+T8	Condition 924 942	ubytku typu ASD II
+N2	Reference T8 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T9	Condition 943 946	PDA
+N3	Reference T9 ICD10:Q25.0	Drożny przewód tętniczy
+T10	Treatment 959 987	korekcji kardiochirurgicznej
+N4	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T11	Date 989 1000	01.06.2005r
+R3	Dat Arg1:T11 Arg2:T10	
+N1	Reference T7 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R4	Dat Arg1:T11 Arg2:T7	
+R5	Dat Arg1:T11 Arg2:T8	
+R6	Dat Arg1:T11 Arg2:T9	

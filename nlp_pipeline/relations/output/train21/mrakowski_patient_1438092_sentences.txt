@@ -1,0 +1,657 @@
+allRelations          : 51
+oks                   : 23
+isRedundantAndRemoveds: 25
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 2
+GOOD / BAD            : 48 / 3
+Sentence 0:
+------------------------------------------------
+Wiek: 66 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Przewlekła niewydolność serca z pośrednią frakcją wyrzutową LK (HFmrEF, EF=44%) w I/II klasie wg NYHA.
+
+
+Sentence 6:
+Przewlekła choroba wieńcowa.
+
+
+Sentence 7:
+Nadciśnienie tętnicze.
+
+
+Sentence 8:
+Hipertriglicerydemia.
+
+
+Sentence 9:
+Nikotynizm w przeszłości (do 02.2018).
+R1	Dat Arg1:T6 Arg2:T5 << OK >>	do 02.2018 -> Nikotynizm  <RANK: 3> <info: start[641, 615] <type: LEFT>>
+R2	Dat Arg1:T7 Arg2:T5 << OK >>	w przeszłości -> Nikotynizm  <RANK: 3> <info: start[626, 615] <type: LEFT>>
+
+
+Sentence 10:
+Blok lewej odnogi pęczka Hissa.
+
+
+Sentence 11:
+Łagodna niedomykalność mitralna.
+
+
+Sentence 12:
+Napadowe migotanie przedsionków (HAS-BLED 3 punkty, CHA DS -VASc 3 punkty, EHRA I).
+
+R3	Inv Arg1:T11 Arg2:T12 << OK >>	HAS-BLED -> 3 punkty  <RANK: 3> <info: start[752, 761] <type: RIGHT>>
+R4	Inv Arg1:T11 Arg2:T14 <<REDUNDANT!!!REMOVED>>	HAS-BLED -> 3 punkty <:REMOVED other first tag between (right):> <RANK: 2> <info: start[752, 784] <type: RIGHT>>
+R5	Inv Arg1:T11 Arg2:T15 <<REDUNDANT!!!REMOVED>>	HAS-BLED -> EHRA I <:REMOVED other first tag between (right):> <RANK: 2> <info: start[752, 794] <type: RIGHT>>
+R6	Inv Arg1:T13 Arg2:T12 <<REDUNDANT!!!REMOVED>>	CHA DS -VASc -> 3 punkty <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[771, 761] <type: LEFT>>
+R7	Inv Arg1:T13 Arg2:T14 << OK >>	CHA DS -VASc -> 3 punkty  <RANK: 3> <info: start[771, 784] <type: RIGHT>>
+R8	Inv Arg1:T13 Arg2:T15 <<REDUNDANT!!!SHOULD BE REMOVED>>	CHA DS -VASc -> EHRA I  <RANK: 2> <info: start[771, 794] <type: RIGHT>>
+
+
+Sentence 13:
+------------------------------------------------
+
+
+
+Sentence 14:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 15:
+- Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej (skierowanie wydano).
+
+
+
+Sentence 16:
+- Planowa hospitalizacja celem oceny skuteczności dotychczasowego leczenia za 6 miesięcy w Klinice Kardiologii i Wad Wrodzonych Dorosłych ICZMP w Łodzi.\x0d\x
+------------------------------------------------
+
+
+
+Sentence 17:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 18:
+Pacjent 65-letni, hospitalizowany  w 11.2018 w tutejszej Klinice przyjęty obecnie celem oceny skuteczności zmodyfikowanego leczenia CHF.
+R9	Dat Arg1:T19 Arg2:T20 <<REDUNDANT!!!REMOVED>>	11.2018 -> CHF <:REMOVED Too far from TagInfo[T19, 1321, 1328, Date, 11.2018
+] TagInfo[T18, 1302, 1317, Treatment, hospitalizowany
+]:> <RANK: 3> <info: start[1321, 1416] <type: RIGHT>>
+R10	Dat Arg1:T19 Arg2:T18 << OK >>	11.2018 -> hospitalizowany  <RANK: 3> <info: start[1321, 1302] <type: LEFT>>
+
+
+Sentence 19:
+Wobec zgłaszanej podczas ostatniej hospitalizacji przez pacjenta poprawy wydolności fizycznej oraz funkcji skurczowej lewej komory (wzrost EF z 33 do 39% w stosunku do badania wykonanego w 08.2018) utrzymano farmakoterapię niewydolności serca oraz leczenie wieńcowe.  
+R11	Inv Arg1:T24 Arg2:T21 <<REDUNDANT!!!SHOULD BE REMOVED>>	badania -> wzrost EF z 33 do 39%  <RANK: 3> <info: start[1589, 1553] <type: LEFT>>
+R12	Dat Arg1:T25 Arg2:T22 <<REDUNDANT!!!REMOVED>>	08.2018 -> niewydolności serca <:REMOVED Too far from TagInfo[T25, 1610, 1617, Date, 08.2018
+] TagInfo[T24, 1589, 1596, Investigation, badania
+]:> <RANK: 3> <info: start[1610, 1644] <type: RIGHT>>
+R13	Dat Arg1:T25 Arg2:T23 <<REDUNDANT!!!REMOVED>>	08.2018 -> leczenie wieńcowe <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1610, 1669] <type: RIGHT>>
+R14	Dat Arg1:T25 Arg2:T24 << OK >>	08.2018 -> badania  <RANK: 3> <info: start[1610, 1589] <type: LEFT>>
+
+
+Sentence 20:
+Ze względu na zarejestrowane w jednym z codziennych zapisów ekg bezobjawowe napadowe migotanie przedsionków zdecydowano o włączeniu leczenia przeciwkrzepliwego dabigatranem. 
+
+R15	Inv Arg1:T27 Arg2:T26 << OK >>	ekg -> bezobjawowe napadowe migotanie przedsionków  <RANK: 3> <info: start[1749, 1753] <type: RIGHT>>
+
+
+Sentence 21:
+W wywiadzie: Przewlekła choroba wieńcowa.
+
+
+Sentence 22:
+Przewlekła niewydolność serca w I/II klasie wg NYHA - ciężka dysfunkcja skurczowa lewej komory (EF 39%).
+
+
+Sentence 23:
+Nadciśnienie tętnicze.
+
+
+Sentence 24:
+Hipertriglicerydemia.
+
+
+Sentence 25:
+Nikotynizm w przeszłości (do 02.2018).
+R16	Dat Arg1:T35 Arg2:T34 << OK >>	w przeszłości -> Nikotynizm  <RANK: 3> <info: start[2067, 2056] <type: LEFT>>
+R17	Dat Arg1:T36 Arg2:T34 << OK >>	do 02.2018 -> Nikotynizm  <RANK: 3> <info: start[2082, 2056] <type: LEFT>>
+
+
+Sentence 26:
+Blok lewej odnogi pęczka Hisa.
+
+
+Sentence 27:
+Wada serca pod postacią umiarkowanej niedomykalności mitralnej i trójdzielnej.
+
+
+Sentence 28:
+Napadowe migotanie przedsionków – HAS-BLED 3 punkty, CHA DS -VASc 3 punkty, EHRA 1
+
+R18	Inv Arg1:T41 Arg2:T43 << OK >>	HAS-BLED -> 3 punkty  <RANK: 3> <info: start[2239, 2248] <type: RIGHT>>
+R19	Inv Arg1:T41 Arg2:T44 <<REDUNDANT!!!REMOVED>>	HAS-BLED -> 3 punkty <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2239, 2271] <type: RIGHT>>
+R20	Inv Arg1:T42 Arg2:T43 <<REDUNDANT!!!REMOVED>>	CHA DS -VASc -> 3 punkty <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2258, 2248] <type: LEFT>>
+R21	Inv Arg1:T42 Arg2:T44 << OK >>	CHA DS -VASc -> 3 punkty  <RANK: 3> <info: start[2258, 2271] <type: RIGHT>>
+R22	Inv Arg1:T45 Arg2:T43 <<REDUNDANT!!!REMOVED>>	EHRA 1 -> 3 punkty <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2281, 2248] <type: LEFT>>
+R23	Inv Arg1:T45 Arg2:T44 <<REDUNDANT!!!REMOVED>>	EHRA 1 -> 3 punkty <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[2281, 2271] <type: LEFT>>
+
+
+Sentence 29:
+Przebyte operacje: nie podaje
+
+R24	Neg Arg1:T47 Arg2:T46 << OK >>	nie podaje -> Przebyte operacje  <RANK: 3> <info: start[2307, 2288] <type: LEFT>>
+
+
+Sentence 30:
+Przebyte choroby zakaźne - WZW, borelioza nie podaje
+Wywiad rodzinny: matka chorowała na serce
+
+R25	Neg Arg1:T50 Arg2:T48 <<SHOULD NOT BE REMOVED>>	nie podaje -> WZW <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2360, 2345] <type: LEFT>>
+R26	Neg Arg1:T50 Arg2:T49 << OK >>	nie podaje -> borelioza  <RANK: 3> <info: start[2360, 2350] <type: LEFT>>
+R27	Neg Arg1:T50 Arg2:T51 <<REDUNDANT!!!REMOVED>>	nie podaje -> Wywiad rodzinny <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2360, 2371] <type: RIGHT>>
+R28	Neg Arg1:T50 Arg2:T52 <<REDUNDANT!!!REMOVED>>	nie podaje -> chorowała na serce <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2360, 2394] <type: RIGHT>>
+
+
+Sentence 31:
+Palenie tytoniu: nie pali od 02.2018r
+
+R29	Neg Arg1:T54 Arg2:T53 << OK >>	nie pali -> Palenie tytoniu  <RANK: 3> <info: start[2430, 2413] <type: LEFT>>
+R30	Dat Arg1:T55 Arg2:T53 << OK >>	od 02.2018r -> Palenie tytoniu  <RANK: 3> <info: start[2439, 2413] <type: LEFT>>
+
+
+Sentence 32:
+Inne używki: okazjonalnie
+Uczulenia: nie podaje
+Status społeczny: mieszka z żoną, 2 dzieci
+
+R31	Neg Arg1:T58 Arg2:T57 << OK >>	nie podaje -> Uczulenia  <RANK: 3> <info: start[2488, 2477] <type: LEFT>>
+R32	Neg Arg1:T58 Arg2:T56 <<REDUNDANT!!!REMOVED>>	nie podaje -> Inne używki: okazjonalnie <:REMOVED other second tag between (left):> <RANK: 1> <info: start[2488, 2451] <type: LEFT>>
+
+
+Sentence 33:
+Leki:
+1.\x09Pradaxa 150 mg 1 tabl. rano i wieczorem   
+2.\x09Bibloc 1.25 mg 1 tabl. rano  
+3.\x09Atoris 40 mg 1 tabl.
+R33	Drg Arg1:T59 Arg2:T66 << OK >>	Pradaxa -> 150 mg 1 tabl. rano i wieczorem  <RANK: 3> <info: start[2554, 2562] <type: RIGHT>>
+R34	Drg Arg1:T59 Arg2:T67 <<REDUNDANT!!!REMOVED>>	Pradaxa -> 1.25 mg 1 tabl. rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2554, 2610] <type: RIGHT>>
+R35	Drg Arg1:T59 Arg2:T68 <<REDUNDANT!!!REMOVED>>	Pradaxa -> 40 mg 1 tabl. wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2554, 2646] <type: RIGHT>>
+R36	Drg Arg1:T60 Arg2:T66 <<REDUNDANT!!!REMOVED>>	Bibloc -> 150 mg 1 tabl. rano i wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[2603, 2562] <type: LEFT>>
+R37	Drg Arg1:T60 Arg2:T67 << OK >>	Bibloc -> 1.25 mg 1 tabl. rano  <RANK: 3> <info: start[2603, 2610] <type: RIGHT>>
+R38	Drg Arg1:T60 Arg2:T68 <<REDUNDANT!!!REMOVED>>	Bibloc -> 40 mg 1 tabl. wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2603, 2646] <type: RIGHT>>
+R39	Drg Arg1:T61 Arg2:T66 <<REDUNDANT!!!REMOVED>>	Atoris -> 150 mg 1 tabl. rano i wieczorem <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2639, 2562] <type: LEFT>>
+R40	Drg Arg1:T61 Arg2:T67 <<REDUNDANT!!!REMOVED>>	Atoris -> 1.25 mg 1 tabl. rano <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[2639, 2610] <type: LEFT>>
+R41	Drg Arg1:T61 Arg2:T68 << OK >>	Atoris -> 40 mg 1 tabl. wieczorem  <RANK: 3> <info: start[2639, 2646] <type: RIGHT>>
+
+
+Sentence 34:
+wieczorem  
+4.\x09Co-Valsacor 160/25 mg 1 tabl.
+R42	Drg Arg1:T62 Arg2:T69 << OK >>	Co-Valsacor -> 160/25 mg 1 tabl. rano  <RANK: 3> <info: start[2678, 2690] <type: RIGHT>>
+
+
+Sentence 35:
+rano  
+5.\x09Eplenocard 50 mg 1 tabl. w południe   
+6.\x09Preductal MR 1 tabl. rano i wieczorem   
+7. Effox long 50 mg 1 tabl. rano
+
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter, RTG kl. piersiowej.
+
+R43	Drg Arg1:T63 Arg2:T70 << OK >>	Eplenocard -> 50 mg 1 tabl. w południe  <RANK: 3> <info: start[2721, 2732] <type: RIGHT>>
+R44	Drg Arg1:T63 Arg2:T71 <<REDUNDANT!!!REMOVED>>	Eplenocard -> 1 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2721, 2779] <type: RIGHT>>
+R45	Drg Arg1:T63 Arg2:T72 <<REDUNDANT!!!REMOVED>>	Eplenocard -> 50 mg 1 tabl. rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2721, 2821] <type: RIGHT>>
+R46	Drg Arg1:T64 Arg2:T70 <<REDUNDANT!!!REMOVED>>	Preductal MR -> 50 mg 1 tabl. w południe <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[2766, 2732] <type: LEFT>>
+R47	Drg Arg1:T64 Arg2:T71 << OK >>	Preductal MR -> 1 tabl. rano i wieczorem  <RANK: 3> <info: start[2766, 2779] <type: RIGHT>>
+R48	Drg Arg1:T64 Arg2:T72 <<REDUNDANT!!!REMOVED>>	Preductal MR -> 50 mg 1 tabl. rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2766, 2821] <type: RIGHT>>
+R49	Drg Arg1:T65 Arg2:T70 <<REDUNDANT!!!REMOVED>>	Effox long -> 50 mg 1 tabl. w południe <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2810, 2732] <type: LEFT>>
+R50	Drg Arg1:T65 Arg2:T71 <<REDUNDANT!!!REMOVED>>	Effox long -> 1 tabl. rano i wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[2810, 2779] <type: LEFT>>
+R51	Drg Arg1:T65 Arg2:T72 << OK >>	Effox long -> 50 mg 1 tabl. rano  <RANK: 3> <info: start[2810, 2821] <type: RIGHT>>
+
+
+Sentence 36:
+Przewidywana liczba dni hospitalizacji: 3-5 dni
+------------------------------------------------
+
+
+
+Sentence 37:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 38:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:10.10[10^3/ul]
+    
+
+
+Sentence 39:
+RBC Krwinki czerwone:4.12[10^6/ul]
+    
+
+
+Sentence 40:
+HGB Hemoglobina:13.0[g/dl]
+    
+
+
+Sentence 41:
+HCT Hematokryt:35.6[%]
+    
+
+
+Sentence 42:
+MCV wskaźnik czerwonokrw:86.4[fl]
+    
+
+
+Sentence 43:
+MCH wskaźnik czerwonokrw:31.6[pg]
+    
+
+
+Sentence 44:
+MCHC wskaźnik czerwonokr:36.5[g/dl]
+    
+
+
+Sentence 45:
+PLT z morfologii:174[10^3/ul]
+    
+
+
+Sentence 46:
+RDW-SD:38.9[fl]
+    
+
+
+Sentence 47:
+RDW-CV:12.2[%]
+    PDW:13.2[fl]
+    
+
+
+Sentence 48:
+MPV:10.5[fl]
+    
+
+
+Sentence 49:
+P-LCR:31.2[%]
+    
+
+
+Sentence 50:
+PCT (hematokryt płytkowy:0.18[%]
+    
+
+
+Sentence 51:
+NEUTR# wartość bezwzględ:6.24[10^3/ul]
+    
+
+
+Sentence 52:
+NEUTR%:61.8[%]
+    
+
+
+Sentence 53:
+LYMH# wartość bezwzględn:2.79[10^3/ul]
+    
+
+
+Sentence 54:
+LYMPH%:27.6[%]
+    
+
+
+Sentence 55:
+MONO# wartość bezwzględn:0.74[10^3/ul]
+    
+
+
+Sentence 56:
+MONO%:7.3[%]
+    
+
+
+Sentence 57:
+EO# wartość bezwzględna:0.27[10^3/ul]
+    
+
+
+Sentence 58:
+EO%:2.7[%]
+    
+
+
+Sentence 59:
+BASO# wartość bezwzględn:0.06[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 60:
+NRBC %:0.0[%]
+    
+
+
+Sentence 61:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 62:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:44.7[sek]
+
+
+
+Sentence 63:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 64:
+Czas protrombinowy:13.1[sek]
+    
+
+
+Sentence 65:
+Wskaźnik PT:84.0[%]
+    
+
+
+Sentence 66:
+INR:1.18
+D-dimer
+
+
+Sentence 67:
+- test ilościowy: D-dimer - test ilościowy:357[ng/ml]
+
+
+
+Sentence 68:
+Badanie ogólne moczu
+    
+
+
+Sentence 69:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 70:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 71:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 72:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 73:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 74:
+ciężar właściwy:1.020[ ]
+    
+
+
+Sentence 75:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 76:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 77:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 78:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 79:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 80:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 81:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 82:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 83:
+leukocyty:5 /ul[ul]
+    erytrocyty świeże:3 /ul[ul]
+    śluz:dość liczny[w preparacie]
+    bakterie:nieliczne[w preparacie]
+
+
+
+Sentence 84:
+TSH: TSH:1.31[uIU/ml]
+
+
+
+Sentence 85:
+FT3: FT3:3.44[pg/ml]
+
+
+
+Sentence 86:
+FT4: FT4:1.21[ng/dl]
+
+
+
+Sentence 87:
+Troponina T: Troponina T:8.0[pg/ml]
+
+
+
+Sentence 88:
+Ferrytyna: Ferrytyna:743.7[ng/ml]
+
+
+
+Sentence 89:
+ALAT: ALAT:24[U/L]
+ASPAT: ASPAT:21[U/L]
+Bilirubina całkowita (TBil): Bilirubina całkowita:0.55[mg/dl]
+
+
+
+Sentence 90:
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 91:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 92:
+Potas (K): Potas:4.6[mmol/L]
+
+
+
+Sentence 93:
+Kreatynina + GFR
+    
+
+
+Sentence 94:
+Kreatynina w surowicy:0.92[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 95:
+MDRD ze stan:82.3[ml/min/1,73 m^2]
+
+
+
+Sentence 96:
+Mocznik: Mocznik:35[mg/dl]
+
+
+
+Sentence 97:
+Kwas moczowy: Kwas moczowy:6.1[mg/dl]
+
+
+
+Sentence 98:
+Lipidogram
+    
+
+
+Sentence 99:
+Cholesterol całkowity:106[mg/dl]
+    
+
+
+Sentence 100:
+Cholesterol HDL:27[mg/dl]
+    
+
+
+Sentence 101:
+Cholestrol LDL:61[mg/dl]
+    
+
+
+Sentence 102:
+Triglicerydy:155[mg/dl]
+    
+
+
+Sentence 103:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:79[mg/dl]
+
+
+
+Sentence 104:
+NT-proBNP surowica: NT-proBNP w surowicy:786[pg/ml]
+
+
+
+Sentence 105:
+------------------------------------------------
+
+
+
+Sentence 106:
+ICD10
+------------------------------------------------
+I50.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 107:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 108:
+89.501
+C55
+A01
+89.502
+I81
+G11
+G21
+L43
+O61
+I89
+G49
+N45
+L69
+O55
+I17
+M45
+I19
+O35
+M37
+L05
+
+
+
+Sentence 109:
+N13
+N24
+88.721
+O69
+
+
+
+Sentence 110:
+------------------------------------------------
+
+

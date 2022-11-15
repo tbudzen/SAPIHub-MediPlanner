@@ -1,0 +1,188 @@
+T1	Treatment 339 395	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T2	Date 398 418	kontrola za 7-10 dni
+T3	Date 421 431	za miesiąc
+R1	Dat Arg1:T2 Arg2:T1	
+R2	Dat Arg1:T3 Arg2:T1	
+T4	Treatment 445 474	rozważenie ponowne  włączenie
+T5	Drug 475 478	IKA
+T6	Treatment 479 489	i zlecenie
+T7	Investigation 490 516	angio-CT tętnic wieńcowych
+R3	Dat Arg1:T2 Arg2:T4	
+R4	Dat Arg1:T2 Arg2:T5	
+R5	Dat Arg1:T2 Arg2:T6	
+R6	Dat Arg1:T2 Arg2:T7	
+R7	Dat Arg1:T3 Arg2:T4	
+R8	Dat Arg1:T3 Arg2:T5	
+R9	Dat Arg1:T3 Arg2:T6	
+R10	Dat Arg1:T3 Arg2:T7	
+T8	Behaviour 523 563	Dieta lekkostrawna , niskocholesterolowa
+T9	Treatment 568 591	Poradnia kardiologiczna
+T10	Date 592 600	za 7 dni
+T11	Date 603 613	za miesiąc
+R11	Dat Arg1:T10 Arg2:T9	
+R12	Dat Arg1:T11 Arg2:T9	
+T12	Treatment 616 651	Hospitalizacja w Klinice Kardiologi
+T13	Date 652 668	za  3-6 miesięcy
+T14	Investigation 671 690	kontrolnym MR serca
+R13	Dat Arg1:T13 Arg2:T12	
+R14	Dat Arg1:T13 Arg2:T14	
+T15	Treatment 714 741	kontrola u lek.prowadzącego
+T16	Date 742 749	za 4tyg
+T17	Investigation 752 835	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+R15	Dat Arg1:T16 Arg2:T15	
+T18	Investigation 839 887	Systematyczna kontrola ciśnienia tętniczego krwi
+T19	Drug 941 950	Bromergon
+T20	Drug_dose 951 973	2,5 mg 2x dz po 1 tabl
+T21	Date 975 988	do 19.04.2019
+T22	Drug_dose 991 1016	następnie 1x dz po 1 tabl
+R16	Drg Arg1:T19 Arg2:T20	
+R17	Drg Arg1:T19 Arg2:T22	
+R18	Dat Arg1:T21 Arg2:T20	
+T23	Date 1019 1034	przez 6 tygodni
+R19	Dat Arg1:T23 Arg2:T22	
+T24	Drug 1043 1050	Clexane
+T25	Drug_dose 1051 1079	60 mg/0,6 ml co 12 godzin sc
+T26	Date 1080 1102	przez okres stosowania
+R20	Dat Arg1:T26 Arg2:T24	
+R21	Drg Arg1:T24 Arg2:T25	
+T27	Drug 1103 1116	bramokryptyny
+T28	Condition 1355 1378	Kardiomiopatia połogowa
+N1	Reference T28 ICD10:O90.3	Kardiomiopatia w czasie połogu
+T29	Condition 1380 1398	Niewydolność serca
+N2	Reference T29 ICD10:I50.9	Niewydolność serca, nieokreślona
+T30	Condition 1486 1527	Łagodna niedomykalność zastawki mitralnej
+N3	Reference T30 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T31	Condition 1529 1549	Bradykardia zatokowa
+N4	Reference T31 ICD10:R00.1	Bradykardia, nieokreślona
+T32	Condition 1551 1595	Pojedyncze pobudzenia komorowe i nadkomorowe
+N5	Reference T32 ICD10:I49	Inne zaburzenia rytmu serca
+T33	Condition 1597 1626	Hipercholesterolemia mieszana
+N6	Reference T33 ICD10:E78.2	Hiperlipidemia mieszana
+T34	Condition 1628 1646	Naczyniaki wątroby
+N7	Reference T34 ICD10:D18.0	Naczyniak krwionośny o dowolnym umiejscowieniu
+T35	Condition 1648 1683	Naczyniak jamisty rdzenia kręgowego
+N8	Reference T35 ICD10:D18	Naczyniaki krwionośne i chłonne o dowolnym umiejscowieniu
+T36	Condition 1686 1703	torbiel szyszynki
+N9	Reference T36 ICD10:Q04.6	Wrodzone torbiele mózgu
+T37	Treatment 1713 1729	cięciu cesarskim
+N10	Reference T37 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+T38	Date 1730 1740	04.04.2019
+R22	Dat Arg1:T38 Arg2:T37	
+T39	Drug 1861 1870	Bromergon
+T40	Drug 1872 1889	Fraxiparine Multi
+T41	Drug 1891 1899	Metocard
+T42	Drug 1901 1911	Prestarium
+T43	Drug 1913 1924	Biofuroksyn
+T44	Drug 1926 1935	Flucofast
+T45	Condition 2154 2177	Kardiomiopatia połogowa
+N11	Reference T45 ICD10:O90.3	Kardiomiopatia w czasie połogu
+T46	Condition 2192 2227	naczyniak jamisty rdzenia kręgowego
+N12	Reference T46 ICD10:D18	Naczyniaki krwionośne i chłonne o dowolnym umiejscowieniu
+T47	Condition 2230 2247	torbiel szyszynki
+N13	Reference T47 ICD10:Q04.6	Wrodzone torbiele mózgu
+T48	Treatment 2257 2273	cięciu cesarskim
+N14	Reference T48 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+T49	Date 2274 2284	04.04.2019
+R23	Dat Arg1:T49 Arg2:T48	
+T50	Treatment 2431 2433	cc
+N15	Reference T50 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+T51	Date 2434 2446	w nocy 04.04
+T52	Condition 2459 2497	naczyniaka jamistego rdzenia kręgowego
+N16	Reference T52 ICD10:D18	Naczyniaki krwionośne i chłonne o dowolnym umiejscowieniu
+T53	Condition 2500 2518	torbieli szyszynki
+N17	Reference T53 ICD10:Q04.6	Wrodzone torbiele mózgu
+T54	Treatment 2523 2525	cc
+N18	Reference T54 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+T55	Date 2526 2540	ostatniej nocy
+R24	Dat Arg1:T55 Arg2:T54	
+T56	Condition 2575 2598	kardioiopatii połogowej
+N19	Reference T56 ICD10:O90.3	Kardiomiopatia w czasie połogu
+T57	Date 2624 2629	03.04
+T58	Treatment 2612 2623	konsultacji
+R25	Dat Arg1:T57 Arg2:T58	
+T59	Date 2641 2649	od 3 tyg
+T60	Symptom 2652 2678	duszność głównie na leżąco
+N20	Reference T60 ICD10:R00.2	Kołatanie serca
+T61	Date 2680 2695	2 tygodnie temu
+T62	Symptom 2696 2734	ból po stronie wewnętrznej uda prawego
+N21	Reference T62 ICD10:M79.6	Bóle kończyn
+T63	Date 2736 2751	od 1,5 tygodnia
+T64	Symptom 2752 2843	gniotące bóle za mostkiem na leżąco i przy zmianie pozycji ciała (bez bólów przy chodzeniu)
+N22	Reference T64 ICD10:R07.2	Ból w okolicy przedsercowej
+T65	Symptom 2845 2876	niewielkie obrzęki wokół kostek
+N23	Reference T65 ICD10:R60.0	Obrzęk zlokalizowany
+T66	Symptom 2878 2899	RR w domu <140/90mmHg
+R26	Dat Arg1:T51 Arg2:T50	
+R27	Dat Arg1:T59 Arg2:T60	
+R28	Dat Arg1:T61 Arg2:T62	
+R29	Dat Arg1:T63 Arg2:T64	
+R30	Dat Arg1:T63 Arg2:T65	
+T67	Negation 2901 2907	Neguje
+T68	Symptom 2909 2921	zasłabnięcia
+T69	Symptom 2923 2931	omdlenia
+N24	Reference T69 ICD10:R55	Omdlenie i zapaść
+T70	Condition 2933 2942	uczulenia
+N25	Reference T70 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T71	Behaviour 2944 2962	palenie papierosów
+N26	Reference T71 ICD10:Z72.0	Używanie tytoniu
+T72	Symptom 2964 2970	obrzęk
+N27	Reference T72 ICD10:R60.0	Obrzęk zlokalizowany
+T73	Symptom 2972 3003	zaczerwienienie kończyny dolnej
+R31	Neg Arg1:T67 Arg2:T68	
+R32	Neg Arg1:T67 Arg2:T69	
+R33	Neg Arg1:T67 Arg2:T70	
+R34	Neg Arg1:T67 Arg2:T71	
+R35	Neg Arg1:T67 Arg2:T72	
+R36	Neg Arg1:T67 Arg2:T73	
+T74	Investigation 3007 3010	ekg
+T75	Investigation_result 3012 3024	oś pośrednia
+T76	Investigation_result 3026 3054	rytm zatokowy miarowy 69/min
+T77	Investigation_result 3056 3062	s w: I
+T78	Investigation_result 3064 3090	q i płytko-ujemny T w: III
+R37	Inv Arg1:T74 Arg2:T75	
+R38	Inv Arg1:T74 Arg2:T76	
+R39	Inv Arg1:T74 Arg2:T77	
+R40	Inv Arg1:T74 Arg2:T78	
+T79	Date 3092 3110	W dniu dzisiejszym
+T80	Symptom 3136 3144	duszność
+N28	Reference T80 ICD10:R06.0	Duszność
+T81	Symptom 3146 3173	ucisków w klatce pierisowej
+N29	Reference T81 ICD10:R07.2	Ból w okolicy przedsercowej
+T82	Negation 3174 3182	nie było
+T83	Date 3183 3193	od wczoraj
+T85	Investigation_result 3229 3236	ok 1550
+T86	Investigation_result 3248 3257	ok 29 tys
+T87	Investigation 3261 3286	USG-d żył kończyn dolnych
+T88	Negation 3288 3291	bez
+T89	Investigation_result 3292 3307	cech zakrzepicy
+T90	Investigation 3311 3334	angioCT tętnic płucnych
+T91	Negation 3336 3339	bez
+T92	Investigation_result 3340 3356	cech zatorowości
+N31	Reference T92 ICD10:I26	Zator płucny
+N30	Reference T89 ICD10:I80	Zapalenie żył i zakrzepowe zapalenie żył
+T93	Investigation_result 3358 3383	płyn w jamach opłucnowych
+T94	Investigation_result 3385 3408	serca w granicach normy
+T95	Investigation 3413 3439	ECHO wykonanym przyłóżkowo
+T96	Date 3441 3451	05.04.2019
+T97	Investigation_result 3454 3463	EF 35-40%
+T98	Investigation_result 3465 3485	obraz kardiomiopatii
+N32	Reference T98 ICD10:I42.9	Kardiomiopatia, nieokreślona
+R41	Dat Arg1:T79 Arg2:T80	
+R43	Neg Arg1:T82 Arg2:T81	
+R44	Dat Arg1:T83 Arg2:T81	
+R42	Dat Arg1:T79 Arg2:T81	
+R47	Inv Arg1:T87 Arg2:T89	
+R48	Neg Arg1:T88 Arg2:T89	
+R49	Neg Arg1:T91 Arg2:T92	
+R50	Inv Arg1:T90 Arg2:T92	
+R51	Inv Arg1:T90 Arg2:T93	
+R52	Inv Arg1:T90 Arg2:T94	
+R53	Dat Arg1:T96 Arg2:T95	
+R54	Inv Arg1:T95 Arg2:T97	
+R55	Inv Arg1:T95 Arg2:T98	
+T84	Investigation 3224 3227	BNP
+T99	Symptom 1399 1421	III/IV-> I/II’ wg NYHA
+N33	Reference T99 ICD10:I50	Niewydolność serca
+T100	Condition 1424 1475	łagodnym obniżeniem frakcji wyrzutowej lewej komory
+N34	Reference T100 ICD10:I50.9	Niewydolność serca, nieokreślona
+T101	Investigation_result 1477 1483	EF-46%

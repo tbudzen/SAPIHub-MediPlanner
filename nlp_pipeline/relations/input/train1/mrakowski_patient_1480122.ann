@@ -1,0 +1,89 @@
+T1	Condition 438 533	Wada serca pod postacią istotnej ekscentrycznej niedomykalności dwupłatkowej zastawki aortalnej
+T2	Condition 539 572	poszerzenia opuszki aorty do 42mm
+N2	Reference T2 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T3	Condition 574 616	aorty wstępującej do 44 mm i łuku do 34 mm
+N3	Reference T3 ICD10:R93.1	
+T4	Condition 618 655	Łagodna niedomykalność mitralna z łag
+N4	Reference T4 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T5	Symptom 657 677	Zaburzenia nerwicowe
+N5	Reference T5 ICD10:F48.9	Zaburzenia nerwicowe, nieokreślone
+T6	Treatment 789 825	Wskazana dalsza opieka u lekarza POZ
+T7	Treatment 828 966	Wskazana konsultacja psychiatryczna w Poradni Zdrowia Psychicznego pod kątem ustalenia wskazań do leczenia farmakologicznego/psychoterapii
+T8	Symptom 967 987	zaburzeń nerwicowych
+N6	Reference T8 ICD10:F48.9	Zaburzenia nerwicowe, nieokreślone
+T9	Treatment 990 1028	Wskazana okresowa kontrola w Poradni K
+T10	Condition 1170 1189	umiarkowaną/dużą IA
+N7	Reference T10 ICD10:I35.1	Niedomykalność zastawki aortalnej
+N1	Reference T1 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T11	Condition 1195 1250	poszerzeniem aorty wstępującej do 44 mm w przebiegu BAV
+N8	Reference T11 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T12	Condition 1252 1254	IA
+N9	Reference T12 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T13	Condition 1264 1327	ograniczenie ruchu przedniego płatka mitralnego i jego uginanie
+N10	Reference T13 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T14	Symptom 1384 1408	okresowe kołatania serca
+N11	Reference T14 ICD10:R00.2	Kołatanie serca
+T15	Symptom 1461 1481	zaburzenia nerwicowe
+N12	Reference T15 ICD10:F48.9	Zaburzenia nerwicowe, nieokreślone
+T16	Negation 1482 1488	Neguje
+T17	Symptom 1490 1502	zasłabnięcia
+T18	Symptom 1504 1512	omdlenia
+N13	Reference T18 ICD10:R55	Omdlenie i zapaść
+T19	Symptom 1514 1524	krwawienia
+T20	Symptom 1526 1539	czarne stolce
+N14	Reference T20 ICD10:K92.1	Stolce smołowate
+T21	Symptom 1541 1557	brunatne wymioty
+N15	Reference T21 ICD10:K92.0	Wymioty krwawe
+T22	Condition 1559 1575	chorobę wrzodową
+N16	Reference T22 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T23	Symptom 1577 1591	duszność nocną
+N17	Reference T23 ICD10:R06.0	Duszność
+T24	Symptom 1593 1608	obrzęki podudzi
+N18	Reference T24 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T25	Symptom 1610 1634	bóle w klatce piersiowej
+N19	Reference T25 ICD10:R07	Ból gardła i w klatce piersiowej
+R1	Neg Arg1:T16 Arg2:T25	
+R2	Neg Arg1:T16 Arg2:T24	
+R3	Neg Arg1:T16 Arg2:T23	
+R4	Neg Arg1:T16 Arg2:T22	
+R5	Neg Arg1:T16 Arg2:T21	
+R6	Neg Arg1:T16 Arg2:T20	
+R7	Neg Arg1:T16 Arg2:T19	
+R8	Neg Arg1:T16 Arg2:T18	
+R9	Neg Arg1:T16 Arg2:T17	
+T26	Treatment 1635 1652	Przebyte operacje
+T27	Condition 1654 1668	przegrody nosa
+N20	Reference T27 ICD10:J34.2	Skrzywienie przegrody nosa
+T28	Date 1670 1674	2016
+R10	Dat Arg1:T28 Arg2:T27	
+T29	Behaviour 1676 1691	Palenie tytoniu
+N21	Reference T29 ICD10:T65.2	Tytoń i nikotyna
+T30	Negation 1693 1699	neguje
+R11	Neg Arg1:T30 Arg2:T29	
+T31	Behaviour 1700 1711	Inne używki
+T32	Negation 1713 1719	neguje
+R12	Neg Arg1:T32 Arg2:T31	
+T33	Condition 1720 1729	Uczulenia
+T34	Negation 1731 1737	neguje
+R13	Neg Arg1:T34 Arg2:T33	
+T35	Condition 1765 1768	WZW
+N22	Reference T35 ICD10:B19	
+T36	Condition 1775 1784	borelioza
+N23	Reference T36 ICD10:A69.2	Choroba z Lyme
+T37	Condition 1790 1793	tbc
+N24	Reference T37 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T38	Condition 1799 1803	odra
+N25	Reference T38 ICD10:B05	Odra
+T39	Condition 1809 1823	kontakt z odrą
+N26	Reference T39 ICD10:B05	Odra
+T40	Negation 1825 1826	-
+R14	Neg Arg1:T40 Arg2:T39	
+T41	Negation 1805 1806	-
+R15	Neg Arg1:T41 Arg2:T38	
+T42	Negation 1795 1796	-
+R16	Neg Arg1:T42 Arg2:T37	
+T43	Negation 1786 1787	-
+R17	Neg Arg1:T43 Arg2:T36	
+T44	Negation 1770 1771	-
+R18	Neg Arg1:T44 Arg2:T35	
+T45	Behaviour 1844 1870	warunki mieszkaniowe dobre

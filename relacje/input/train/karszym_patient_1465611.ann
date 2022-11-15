@@ -1,0 +1,14 @@
+T1	Treatment 328 372	Kontrola w rejonowej poradni kardiologicznej
+T2	Date 373 381	za 8 mcy
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Condition 600 660	Wada wrodzona serca pod postacią zwężenia zastawki aortalnej
+N1	Reference T3 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T4	Condition 797 813	stenozą aortalna
+N2	Reference T4 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T5	Drug 852 866	leków na stałe
+T6	Negation 867 880	nie otrzymuje
+R2	Neg Arg1:T6 Arg2:T5	
+T7	Condition 882 899	wywiad alergiczny
+N3	Reference T7 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T8	Negation 900 906	ujemny
+R3	Neg Arg1:T8 Arg2:T7	

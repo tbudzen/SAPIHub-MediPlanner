@@ -1,0 +1,139 @@
+T1	Drug 340 345	Acard
+T2	Drug 347 355	Bloxazoc
+T3	Drug 357 370	Co-Prestarium
+T4	Drug 372 378	Diured
+T5	Drug 380 386	Atoris
+T6	Symptom 605 639	Nietypowe bóle w klatce piersiowej
+N1	Reference T6 ICD10:R07.3	Inne bóle w klatce piersiowej
+T7	Condition 641 662	Nadciśnienie tętnicze
+N2	Reference T7 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T8	Condition 677 726	wieloogniskowe naczyniopochodne uszkodzenie mózgu
+N3	Reference T8 ICD10:I69.8	Następstwa innych i nieokreślonych chorób naczyń mózgowych
+T9	Date 728 735	05.2018
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Condition 738 763	miażdżyca tętnic szyjnych
+N4	Reference T10 ICD10:I70.8	Miażdżyca innych tętnic
+T11	Condition 765 790	zaćma początkowa obuoczna
+N5	Reference T11 ICD10:H26.9	Zaćma, nieokreślona
+T12	Condition 792 812	hipercholesterolemia
+N6	Reference T12 ICD10:E78.0	Czysta hipercholesterolemia
+T13	Treatment 822 835	appendektomii
+T14	Behaviour 837 858	Przewlekły nikotynizm
+N7	Reference T14 ICD10:Z72.0	Używanie tytoniu
+T15	Treatment 970 992	kontrola u lekarza POZ
+T16	Treatment 995 1036	dalsza kontrola w Poradni Kardiologicznej
+T17	Behaviour 1039 1064	dieta niskocholesterolowa
+T18	Investigation 1066 1095	okresowa kontrola lipidogramu
+T19	Investigation 1098 1129	wskazana diagnostyka w kierunku
+T20	Condition 1130 1157	chorób przewodu pokarmowego
+N8	Reference T20 ICD10:K92.9	Choroba przewodu pokarmowego, nieokreślona
+T21	Symptom 1159 1186	krew na papierze toaletowym
+T22	Symptom 1345 1366	wahaniami wartości RR
+N9	Reference T22 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T23	Condition 1382 1384	HA
+N10	Reference T23 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T24	Date 1370 1381	wieloletnim
+R2	Dat Arg1:T24 Arg2:T23	
+T25	Symptom 1415 1457	zmniejszenia tolerancji wysiłku fizycznego
+N11	Reference T25 ICD10:R53	Złe samopoczucie i zmęczenie
+T26	Date 1459 1467	od dawna
+R3	Dat Arg1:T26 Arg2:T25	
+T27	Symptom 1470 1517	zmęczenie, poty przy większym wysiłku fizycznym
+N12	Reference T27 ICD10:R53	Złe samopoczucie i zmęczenie
+T28	Symptom 1520 1665	bólów w klatce piersiowej w prawej połowie klatki piersiowej, nasilającymi się podczas poruszania prawą kończyną górną i przy głębokim oddychaniu
+N13	Reference T28 ICD10:R07.1	Ból w klatce piersiowej podczas oddychania
+T29	Condition 1689 1738	wieloogniskowe naczyniopochodne uszkodzenie mózgu
+N14	Reference T29 ICD10:I69.8	Następstwa innych i nieokreślonych chorób naczyń mózgowych
+T30	Date 1740 1747	05.2018
+R4	Dat Arg1:T30 Arg2:T29	
+T31	Condition 1750 1775	miażdżyca tętnic szyjnych
+N15	Reference T31 ICD10:I70.8	Miażdżyca innych tętnic
+T32	Condition 1777 1802	zaćma początkowa obuoczna
+N16	Reference T32 ICD10:H26.9	Zaćma, nieokreślona
+T33	Condition 1804 1824	hipercholesterolemia
+N17	Reference T33 ICD10:E78.0	Czysta hipercholesterolemia
+T34	Symptom 1826 1837	bóle stawów
+N18	Reference T34 ICD10:M25.5	Ból stawu
+T35	Symptom 1839 1873	czasem krew na papierze toaletowym
+T36	Date 1875 1889	kilka lat temu
+T37	Investigation 1904 1916	kolonoskopię
+T38	Investigation_result 1918 1950	wg pacjenta wynik był prawidłowy
+R5	Inv Arg1:T37 Arg2:T38	
+R6	Dat Arg1:T36 Arg2:T37	
+T39	Negation 1953 1959	Neguje
+T40	Symptom 1961 1973	zasłabnięcia
+N19	Reference T40 ICD10:R55	Omdlenie i zapaść
+T41	Symptom 1975 1983	omdlenia
+N20	Reference T41 ICD10:R55	Omdlenie i zapaść
+T42	Symptom 1985 1998	czarne stolce
+N21	Reference T42 ICD10:K92.1	Stolce smołowate
+R7	Neg Arg1:T39 Arg2:T40	
+R8	Neg Arg1:T39 Arg2:T41	
+R9	Neg Arg1:T39 Arg2:T42	
+T43	Symptom 2000 2016	brunatne wymioty
+N22	Reference T43 ICD10:K92.0	Wymioty krwawe
+R10	Neg Arg1:T39 Arg2:T43	
+T44	Condition 2018 2034	chorobę wrzodową
+N23	Reference T44 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T45	Symptom 2036 2050	duszność nocną
+N24	Reference T45 ICD10:R06.0	Duszność
+R11	Neg Arg1:T39 Arg2:T45	
+R12	Neg Arg1:T39 Arg2:T44	
+T46	Symptom 2052 2067	obrzęki podudzi
+T47	Symptom 2069 2084	kołatania serca
+N26	Reference T47 ICD10:R00.2	Kołatanie serca
+T48	Condition 2086 2088	DM
+N27	Reference T48 ICD10:E14	Cukrzyca nieokreślona
+T49	Condition 2090 2106	choroby tarczycy
+N28	Reference T49 ICD10:E07.9	Choroby tarczycy, nieokreślone
+R13	Neg Arg1:T39 Arg2:T46	
+R14	Neg Arg1:T39 Arg2:T47	
+R15	Neg Arg1:T39 Arg2:T48	
+R16	Neg Arg1:T39 Arg2:T49	
+T50	Treatment 2107 2124	Przebyte operacje
+T51	Treatment 2126 2139	appendektomia
+T52	Behaviour 2140 2168	Palenie tytoniu: tak, 5-6/dz
+N29	Reference T52 ICD10:Z72.0	Używanie tytoniu
+T53	Behaviour 2169 2180	Inne używki
+T54	Negation 2182 2185	nie
+R17	Neg Arg1:T54 Arg2:T53	
+T55	Condition 2186 2195	Uczulenia
+N30	Reference T55 ICD10:T78.4	Alergia, nieokreślona
+T56	Negation 2198 2201	nie
+R18	Neg Arg1:T56 Arg2:T55	
+T57	Condition 2229 2232	WZW
+N31	Reference T57 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T58	Negation 2234 2235	-
+R19	Neg Arg1:T58 Arg2:T57	
+T59	Condition 2239 2248	borelioza
+N32	Reference T59 ICD10:A69.2	Choroba z Lyme
+T60	Negation 2251 2252	-
+R20	Neg Arg1:T60 Arg2:T59	
+T61	Condition 2256 2259	tbc
+T62	Negation 2261 2262	-
+R21	Neg Arg1:T62 Arg2:T61	
+T63	Behaviour 2280 2306	warunki mieszkaniowe dobre
+T64	Drug 2344 2349	Acard
+T65	Drug_dose 2350 2370	75mg 1x 1 tabl/wiecz
+R22	Drg Arg1:T64 Arg2:T65	
+T66	Drug 2371 2379	Bloxazoc
+T67	Drug_dose 2380 2401	47,5mg 1x 1 tabl/rano
+R23	Drg Arg1:T66 Arg2:T67	
+T68	Drug 2402 2415	Co-Prestarium
+T69	Drug_dose 2416 2438	10/5mg 1x 1 tabl/wiecz
+R24	Drg Arg1:T68 Arg2:T69	
+T70	Drug 2439 2445	Diured
+T71	Drug_dose 2446 2464	5mg 1x 1 tabl/rano
+R25	Drg Arg1:T70 Arg2:T71	
+T72	Drug 2465 2471	Atoris
+T73	Drug_dose 2472 2492	20mg 1x 1 tabl/wiecz
+R26	Drg Arg1:T72 Arg2:T73	
+T74	Investigation 2553 2574	badania laboratoryjne
+T75	Investigation 2576 2580	ECHO
+T76	Investigation 2582 2600	EKG metodą Holtera
+T77	Investigation 2602 2606	ABPM
+T78	Investigation 2608 2623	próba wysiłkowa
+R27	Dat Arg1:T26 Arg2:T27	
+N25	Reference T46 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N34	Reference T53 ICD10:Z72	Problemy związane ze stylem życia
+N33	Reference T61 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

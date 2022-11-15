@@ -1,0 +1,25 @@
+T1	Treatment 447 455	operacji
+N1	Reference T1 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T2	Date 505 514	21.03.07r
+T3	Condition 456 503	całkowitego nieprawidłowego spływu żył płucnych
+N2	Reference T3 ICD10:Q26.2	Całkowicie nieprawidłowe ujście żył płucnych
+R1	Dat Arg1:T2 Arg2:T1	
+R2	Dat Arg1:T2 Arg2:T3	
+T4	Investigation 520 552	Diagnostyczne cewnikowanie serca
+T5	Date 554 563	24.05.19r
+R3	Dat Arg1:T5 Arg2:T4	
+T6	Drug 685 694	Cefazolin
+T7	Drug 696 702	Clexan
+T8	Drug 704 713	ANA (2:1)
+T9	Drug 715 723	Midanium
+T10	Treatment 833 861	Dalsza opieka kardiologiczna
+T11	Condition 1072 1125	wada pod postacią nieprawidłowego spływu żył płucnych
+N3	Reference T11 ICD10:Q26.2	Całkowicie nieprawidłowe ujście żył płucnych
+T12	Investigation 1142 1160	cewnikowanie serca
+T13	Condition 1163 1180	wywiad alergiczny
+N4	Reference T13 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T14	Negation 1181 1187	ujemny
+R4	Neg Arg1:T14 Arg2:T13	
+T15	Drug 1190 1204	leków na stale
+T16	Negation 1205 1218	nie otrzymuje
+R5	Neg Arg1:T16 Arg2:T15	

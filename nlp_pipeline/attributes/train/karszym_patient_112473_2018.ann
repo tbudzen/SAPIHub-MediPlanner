@@ -1,0 +1,87 @@
+T1	Condition 438 513	Wrodzona wada serca pod postacią odejścia obu dużych naczyń z prawej komory
+N1	Reference T1 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+T2	Treatment 524 566	prawostronnym zespoleniu systemowo-płucnym
+N2	Reference T2 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T3	Date 568 578	06.02.2001
+T4	Treatment 584 592	operacji
+N3	Reference T4 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T5	Condition 593 610	ubytku komorowego
+N4	Reference T5 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T6	Condition 613 655	podwójnym odejściem naczyń z prawej komory
+N5	Reference T6 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+T7	Condition 658 683	zwężeniem tętnicy płucnej
+N6	Reference T7 ICD10:Q25.6	Zwężenie pnia płucnego
+T8	Date 685 695	15/01/2004
+T9	Treatment 702 715	angioplastyce
+T10	Condition 716 746	zwężenia lewej tętnicy płucnej
+N7	Reference T10 ICD10:I28.8	Inne określone choroby naczyń płucnych
+T11	Date 748 755	08.2013
+T12	Treatment 881 908	dalsza opieka w poradni POZ
+T13	Treatment 915 947	okresowa kontrola kardiologiczna
+T14	Date 978 992	za 12 miesięcy
+T15	Treatment 950 977	kolejna w tutejszej Klinice
+T16	Investigation 1000 1039	regularna kontrola ciśnienia tętniczego
+T17	Investigation 1046 1075	okresowa kontrola lipidogramu
+T18	Behaviour 1082 1118	dieta zbliżona do śródziemnomorskiej
+R1	Dat Arg1:T3 Arg2:T2	
+R2	Dat Arg1:T8 Arg2:T4	
+R3	Dat Arg1:T8 Arg2:T5	
+R4	Dat Arg1:T8 Arg2:T6	
+R5	Dat Arg1:T8 Arg2:T7	
+R6	Dat Arg1:T11 Arg2:T9	
+R7	Dat Arg1:T11 Arg2:T10	
+R8	Dat Arg1:T14 Arg2:T15	
+T19	Treatment 1333 1375	prawostronnym zespoleniu systemowo-płucnym
+N8	Reference T19 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T20	Date 1377 1387	06.02.2001
+T21	Treatment 1393 1401	operacji
+N9	Reference T21 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T22	Condition 1402 1419	ubytku komorowego
+N10	Reference T22 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T23	Condition 1422 1464	podwójnym odejściem naczyń z prawej komory
+N11	Reference T23 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+T24	Condition 1467 1487	zwężeniem t. płucnej
+N12	Reference T24 ICD10:Q25.6	Zwężenie pnia płucnego
+T25	Date 1489 1499	15/01/2004
+R9	Dat Arg1:T25 Arg2:T21	
+R10	Dat Arg1:T25 Arg2:T22	
+R11	Dat Arg1:T25 Arg2:T23	
+R12	Dat Arg1:T25 Arg2:T24	
+R13	Dat Arg1:T20 Arg2:T19	
+T26	Treatment 1506 1519	angioplastyce
+T27	Condition 1520 1550	zwężenia lewej tętnicy płucnej
+N13	Reference T27 ICD10:I28.8	Inne określone choroby naczyń płucnych
+T28	Date 1552 1559	08.2013
+R14	Dat Arg1:T28 Arg2:T26	
+R15	Dat Arg1:T28 Arg2:T27	
+T29	Condition 1617 1632	Wywiad rodzinny
+A1	Status T29 Family
+T30	Negation 1634 1647	bez znaczenia
+R16	Neg Arg1:T30 Arg2:T29	
+T31	Condition 1649 1656	Alergie
+N14	Reference T31 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T32	Negation 1658 1664	neguje
+R17	Neg Arg1:T32 Arg2:T31	
+T33	Behaviour 1666 1676	Nikotynizm
+N15	Reference T33 ICD10:Z72.0	Używanie tytoniu
+T34	Negation 1678 1684	neguje
+T35	Behaviour 1687 1694	Alkohol
+N16	Reference T35 ICD10:Z72.1	Używanie alkoholu
+T36	Negation 1696 1701	żaden
+T37	Behaviour 1702 1719	Uzależnienie inne
+T38	Negation 1721 1727	neguje
+T39	Behaviour 1745 1755	anglistyka
+T40	Drug 1778 1782	Leki
+T41	Negation 1784 1791	żadnych
+T42	Investigation 1820 1830	echo serca
+T43	Investigation 1832 1835	TET
+T44	Investigation 1837 1841	ABPM
+T45	Investigation 1843 1853	Holter ekg
+T46	Investigation 1855 1873	rtg kl. piersiowej
+R18	Neg Arg1:T34 Arg2:T33	
+R19	Neg Arg1:T36 Arg2:T35	
+R20	Neg Arg1:T38 Arg2:T37	
+R21	Neg Arg1:T41 Arg2:T40	
+T47	Treatment 1593 1610	Przebyte operacje
+N17	Reference T47 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+N18	Reference T37 ICD10:Z72	Problemy związane ze stylem życia

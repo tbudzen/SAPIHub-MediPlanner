@@ -1,0 +1,77 @@
+T1	Treatment 331 398	Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T2	Investigation 416 445	Wskazane kontrolne echo serca
+T3	Date 446 459	za 3 miesiące
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Behaviour 464 538	Dieta lekkostrawna z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T5	Investigation 542 563	Okresowa kontrola ciś
+T6	Treatment 853 890	zestawem Amplatze Duct Ocluder 2/6 mm
+T7	Date 892 902	26.09.2018
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Condition 905 935	Pojedyncze pobudzenia komorowe
+N1	Reference T8 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T9	Treatment 1081 1091	zamknięciu
+T10	Date 1135 1145	26.09.2018
+R3	Dat Arg1:T10 Arg2:T9	
+T11	Condition 1148 1172	łagodną arytmią komorową
+N2	Reference T11 ICD10:I49.3	
+T12	Symptom 1233 1246	kołatań serca
+N3	Reference T12 ICD10:R00.2	
+T13	Negation 1266 1272	Neguje
+T14	Symptom 1273 1285	zasłabnięcia
+T15	Symptom 1287 1296	duszności
+N4	Reference T15 ICD10:R06.0	Duszność
+T16	Symptom 1298 1329	typowe bóle w klatce piersiowej
+R4	Neg Arg1:T13 Arg2:T14	
+R5	Neg Arg1:T13 Arg2:T15	
+R6	Neg Arg1:T13 Arg2:T16	
+T17	Treatment 1331 1348	Przebyte operacje
+T18	Treatment 1351 1367	cholecystektomia
+A1	Status T18 Historical_Insignificant
+T19	Date 1368 1383	ok. 20 lat temu
+R7	Dat Arg1:T19 Arg2:T18	
+T20	Condition 1411 1414	WZW
+N6	Reference T20 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T21	Condition 1424 1433	borelioza
+N7	Reference T21 ICD10:A69.2	
+T22	Condition 1441 1449	gruźlica
+T23	Negation 1451 1452	-
+R8	Neg Arg1:T23 Arg2:T22	
+T24	Negation 1436 1437	-
+R9	Neg Arg1:T24 Arg2:T21	
+T25	Negation 1417 1418	-
+R10	Neg Arg1:T25 Arg2:T20	
+T26	Condition 1454 1469	Wywiad rodzinny
+A2	Status T26 Family
+T27	Negation 1471 1480	negatywny
+R11	Neg Arg1:T27 Arg2:T26	
+T28	Behaviour 1481 1496	Palenie tytoniu
+T29	Negation 1498 1501	nie
+R12	Neg Arg1:T29 Arg2:T28	
+T30	Behaviour 1502 1513	Inne używki
+T31	Behaviour 1515 1535	alkohol okazjonalnie
+N10	Reference T31 ICD10:Z72.1	Używanie alkoholu
+T32	Condition 1536 1545	Uczulenia
+T33	Negation 1547 1553	neguje
+R13	Neg Arg1:T33 Arg2:T32	
+T34	Behaviour 1570 1596	warunki mieszkaniowe dobre
+T35	Condition 792 827	Przetrwały przewód tętniczy Botalla
+N11	Reference T35 ICD10:Q25.0	Drożny przewód tętniczy
+T36	Treatment 1096 1133	zestawem Amplatze Duct Ocluder 2/6 mm
+R14	Dat Arg1:T10 Arg2:T36	
+T37	Condition 1092 1095	PDA
+N12	Reference T37 ICD10:Q25.0	Drożny przewód tętniczy
+T38	Treatment 838 848	zamknięciu
+R15	Dat Arg1:T7 Arg2:T38	
+T39	Condition 849 852	PDA
+N13	Reference T39 ICD10:Q25.0	Drożny przewód tętniczy
+R16	Dat Arg1:T7 Arg2:T39	
+N14	Reference T32 ICD10:T78.4	Alergia, nieokreślona
+R17	Dat Arg1:T10 Arg2:T37	
+N15	Reference T14 ICD10:R55	Omdlenie i zapaść
+N9	Reference T28 ICD10:Z72.0	Używanie tytoniu
+N5	Reference T16 ICD10:R07.4	
+N8	Reference T22 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N16	Reference T30 ICD10:Z72	Problemy związane ze stylem życia
+T40	Negation 1623 1626	bez
+T41	Drug 1627 1632	leków
+R18	Neg Arg1:T40 Arg2:T41	

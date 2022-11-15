@@ -1,0 +1,100 @@
+T1	Condition 438 516	Przeciek konstrukcyjny oraz okołozastawkowy wokół sztucznej zastawki mitralnej
+T2	Treatment 591 599	operacji
+T3	Date 674 678	1966
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Treatment 697 772	implantacji sztucznej zastawki aortalnej i sztucznej zastawki mitralnej SJM
+T5	Date 774 778	1992
+A1	Source T4 Declared
+R2	Dat Arg1:T5 Arg2:T4	
+T6	Condition 801 813	Dyslipidemia
+N2	Reference T6 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T7	Condition 815 836	Nadciśnienie tętnicze
+N3	Reference T7 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T8	Condition 838 870	Zmiany zwyrodnieniowe kręgosłupa
+N4	Reference T8 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T9	Condition 872 894	Niedosłuch lewostronny
+N5	Reference T9 ICD10:H90.1	Upośledzenie słuchu przewodzeniowe jednostronne bez upośledzenia słuchu po stronie przeciwnej
+T10	Treatment 1237 1273	Wskazana dalsza opieka u lekarza POZ
+T11	Treatment 1276 1326	Wskazana okresowa kontrola Poradni Kardiologicznej
+T12	Date 1429 1437	za 6 msc
+R3	Dat Arg1:T12 Arg2:T11	
+T13	Investigation 1441 1472	Okresowa kontrola wskaźnika INR
+T14	Condition 1656 1709	przecieku okołozastawkowego na sztucznej z. mitralnej
+A2	Source T14 Declared
+N6	Reference T14 ICD10:I34.8	Inne niereumatyczne zaburzenia funkcji zastawki mitralnej
+T15	Symptom 1734 1760	okresowo skurcze dodatkowe
+T16	Symptom 1762 1773	bóle stawów
+N8	Reference T16 ICD10:M25.5	Ból stawu
+T17	Symptom 1776 1786	kręgosłupa
+N9	Reference T17 ICD10:M54.9	Ból grzbietu, nieokreślony
+T18	Condition 1811 1843	zmiany zwyrodnieniowe kręgosłupa
+N10	Reference T18 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T19	Condition 1845 1867	niedosłuch lewostronny
+N11	Reference T19 ICD10:H90.1	Upośledzenie słuchu przewodzeniowe jednostronne bez upośledzenia słuchu po stronie przeciwnej
+T20	Negation 1874 1880	neguje
+T21	Condition 1869 1873	inne
+R4	Neg Arg1:T20 Arg2:T21	
+T22	Treatment 1882 1899	Przebyte operacje
+T23	Treatment 1908 1916	operacja
+T24	Condition 1971 1997	zmiany również reumatyczne
+A3	Source T24 Declared
+T25	Date 1901 1905	1966
+R5	Dat Arg1:T25 Arg2:T23	
+T26	Date 2000 2004	1992
+T27	Treatment 2015 2065	implantacji z. aortalnej i mitralnej sztucznej SMJ
+R6	Dat Arg1:T26 Arg2:T27	
+A4	Source T27 Declared
+T28	Treatment 2106 2119	tonsilektomia
+A5	Status T28 Historical_Insignificant
+T29	Date 2120 2134	w dzieciństwie
+R7	Dat Arg1:T29 Arg2:T28	
+T30	Condition 2143 2158	Wywiad rodzinny
+A6	Status T30 Family
+T31	Negation 2160 2173	bez znaczenia
+R8	Neg Arg1:T31 Arg2:T30	
+T32	Condition 2175 2182	Alergie
+T33	Negation 2184 2187	nie
+R9	Neg Arg1:T33 Arg2:T32	
+T34	Behaviour 2190 2200	Nikotynizm
+T35	Negation 2202 2208	neguje
+R10	Neg Arg1:T35 Arg2:T34	
+T36	Behaviour 2211 2218	Alkohol
+N13	Reference T36 ICD10:Z72.1	Używanie alkoholu
+T37	Negation 2220 2226	neguje
+R11	Neg Arg1:T37 Arg2:T36	
+T38	Behaviour 2228 2245	Uzależnienie inne
+T39	Negation 2247 2253	neguje
+R12	Neg Arg1:T39 Arg2:T38	
+T40	Behaviour 2271 2277	emeryt
+T42	Behaviour 2279 2315	socjoterapeuta, tłumacz angielskiego
+T41	Drug 2325 2332	Sintrom
+T43	Drug_dose 2333 2389	2 mg dziennie wieczorem (19) (co trzecie okresowo mniej)
+R13	Drg Arg1:T41 Arg2:T43	
+T44	Investigation_result 2400 2417	kontrola INR 2.47
+T45	Date 2418 2433	przed tygodniem
+R14	Dat Arg1:T45 Arg2:T44	
+T46	Investigation 2461 2471	echo serca
+T47	Investigation 2473 2476	TET
+T48	Investigation 2478 2482	ABPM
+T49	Investigation 2484 2494	Holter ekg
+T50	Investigation 2496 2514	rtg kl. piersiowej
+N7	Reference T15 ICD10:R25.2	Kurcz i przykurcz
+T51	Condition 600 651	wady wrodzonej serca pod postacią stenozy mitralnej
+N14	Reference T51 ICD10:I34.2	Niereumatyczne zwężenie zastawki mitralnej
+T52	Condition 655 672	stenozy aortalnej
+N15	Reference T52 ICD10:I35.0	Zwężenie zastawki aortalnej
+T53	Condition 1917 1953	wady wrodzonej serca pod postacią SM
+N16	Reference T53 ICD10:I34.2	Niereumatyczne zwężenie zastawki mitralnej
+T54	Condition 1956 1958	SA
+N17	Reference T54 ICD10:I35.0	Zwężenie zastawki aortalnej
+N18	Reference T32 ICD10:T78.4	Alergia, nieokreślona
+R15	Dat Arg1:T3 Arg2:T51	
+R16	Dat Arg1:T3 Arg2:T52	
+T55	Condition 519 581	wąski kanał, przeciek bez istotnego znaczenia hemodynamicznego
+N19	Reference T55 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+N1	Reference T1 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T56	Investigation 1337 1365	kontrola echokardiograficzna
+T57	Condition 1366 1428	przecieku okołozastawkowego wokół sztucznej zastawki mitralnej
+N20	Reference T57 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R17	Dat Arg1:T12 Arg2:T56	
+N12	Reference T34 ICD10:Z72.0	Używanie tytoniu

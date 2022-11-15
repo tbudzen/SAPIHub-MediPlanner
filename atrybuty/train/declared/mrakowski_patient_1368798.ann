@@ -1,0 +1,80 @@
+T1	Drug 340 349	Cordarone
+T2	Drug_dose 350 362	3x 150 mg iv
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 364 384	20% siarczan magnezu
+T4	Drug_dose 385 392	4x 1,2g
+R2	Drg Arg1:T3 Arg2:T4	
+T5	Drug 394 403	Furosemid
+T6	Drug_dose 404 412	3x5mg iv
+R3	Drg Arg1:T5 Arg2:T6	
+T7	Drug 414 422	Spironol
+T8	Drug_dose 423 436	2x 12,5 mg po
+R4	Drg Arg1:T7 Arg2:T8	
+T9	Drug 439 445	Fortum
+T10	Drug_dose 446 454	3x 1g iv
+R5	Drg Arg1:T9 Arg2:T10	
+T11	Drug 457 464	Helicid
+T12	Drug_dose 465 474	1x40mg iv
+R6	Drg Arg1:T11 Arg2:T12	
+T13	Drug 476 483	Clexane
+T14	Drug_dose 484 493	2x50mg sc
+R7	Drg Arg1:T13 Arg2:T14	
+T15	Drug 495 502	Helicid
+T16	Drug_dose 503 513	1x 40mg iv
+R8	Drg Arg1:T15 Arg2:T16	
+T17	Drug 515 523	Euthyrox
+T18	Drug_dose 524 535	1x25 mcg po
+R9	Drg Arg1:T17 Arg2:T18	
+T19	Drug 547 556	Cordarone
+T20	Date 557 568	od 17.09.19
+R10	Dat Arg1:T20 Arg2:T19	
+T21	Drug 570 580	adrenalina
+T22	Date 581 592	17.09-20.09
+R11	Dat Arg1:T22 Arg2:T21	
+T23	Drug 594 601	levonor
+T24	Date 602 610	20-22.09
+R12	Dat Arg1:T24 Arg2:T23	
+T25	Drug 612 624	levosimendan
+T26	Date 625 633	20-22.09
+R13	Dat Arg1:T26 Arg2:T25	
+T27	Drug 636 656	20% siarczan magnezu
+T28	Drug 658 667	Furosemid
+T29	Drug 669 675	Fortum
+T30	Drug 677 684	Helicid
+T31	Drug 686 693	Clexane
+T32	Drug 695 703	Flostrum
+T33	Treatment 705 725	Wentylacja zastępcza
+T34	Date 726 737	17.09-20.09
+R14	Dat Arg1:T34 Arg2:T33	
+T35	Condition 955 995	Arytmogenna kardiomiopatia prawej komory
+N1	Reference T35 ICD10:I42.8	Inne kardiomiopatie
+T36	Condition 1000 1024	Złożona arytmia komorowa
+N2	Reference T36 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T37	Condition 1037 1060	częstoskurczu komorowym
+N3	Reference T37 ICD10:I47.2	Częstoskurcz komorowy
+T38	Condition 1066 1084	Niewydolność serca
+N4	Reference T38 ICD10:I50.9	Niewydolność serca, nieokreślona
+T39	Condition 1271 1313	w stanie ciężkim z niewydolnością krążenia
+T40	Condition 1330 1358	ostrej niewydolności wątroby
+A1	Source T40 Declared
+N5	Reference T40 ICD10:K72.9	Niewydolność wątroby, nieokreślona
+T41	Date 1381 1390	od piątku
+T42	Symptom 1391 1412	dolegliwości brzuszne
+N6	Reference T42 ICD10:R19.8	Inne określone objawy i dolegliwości dotyczące przewodu pokarmowego i jamy brzusznej
+R15	Dat Arg1:T41 Arg2:T42	
+T43	Negation 1458 1464	Neguje
+T44	Behaviour 1466 1483	stosowanie używek
+T45	Negation 1485 1496	nie przebył
+T46	Condition 1497 1514	ostatnio infekcji
+R16	Neg Arg1:T45 Arg2:T46	
+R17	Neg Arg1:T43 Arg2:T44	
+T47	Condition 1517 1532	Wywiad rodzinny
+A2	Status T47 Family
+T48	Negation 1535 1537	bz
+R18	Neg Arg1:T48 Arg2:T47	
+T49	Negation 1539 1542	bez
+T50	Condition 1543 1567	nagłych zgonów sercowych
+A3	Status T50 Family
+N7	Reference T50 ICD10:I46.1	Nagły zgon sercowy, tak opisany
+R19	Neg Arg1:T49 Arg2:T50	
+N8	Reference T46 ICD10:J00	Ostre zapalenie nosa i gardła [przeziębienie]

@@ -1,0 +1,89 @@
+T1	Symptom 439 469	Omdlenia o niejasnej etiologii
+N1	Reference T1 ICD10:R55	Omdlenie i zapaść
+T2	Symptom 471 478	Migrena
+N2	Reference T2 ICD10:G43.9	Migrena, nieokreślona
+T3	Condition 480 487	Nadwaga
+N3	Reference T3 ICD10:E66.9	Otyłość, nieokreślona
+T4	Behaviour 489 499	Nikotynizm
+T5	Date 500 513	w przeszłości
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Treatment 639 666	dalsza opieka w poradni POZ
+T7	Treatment 673 705	okresowa kontrola kardiologiczna
+T8	Treatment 712 734	poszerzona diagnostyka
+T9	Symptom 735 741	omdleń
+N5	Reference T9 ICD10:R55	Omdlenie i zapaść
+T10	Treatment 744 796	elektofizjologiczna, neurologiczna i diabetologiczna
+T11	Negation 798 809	wykluczenie
+T12	Condition 810 822	hipoglikemii
+N6	Reference T12 ICD10:E16.2	Hipoglikemia, nieokreślona
+R2	Neg Arg1:T11 Arg2:T12	
+T13	Symptom 838 844	omdleń
+N7	Reference T13 ICD10:R55	Omdlenie i zapaść
+T14	Treatment 848 861	neurologiczna
+T15	Investigation 868 906	okresowa kontrola ciśnienia tętniczego
+T16	Investigation 913 942	okresowa kontrola lipidogramu
+T17	Investigation 952 981	oznaczenie stężenie d-dimerów
+T18	Date 982 995	za 3 tygodnie
+R3	Dat Arg1:T18 Arg2:T17	
+T19	Behaviour 1002 1038	dieta zbliżona do śródziemnomorskiej
+T20	Behaviour 1044 1063	redukcja masy ciała
+T21	Symptom 1235 1249	zawrotów głowy
+N8	Reference T21 ICD10:R42	Zawroty głowy i odurzenie
+T22	Symptom 1251 1257	omdleń
+N9	Reference T22 ICD10:R55	Omdlenie i zapaść
+T23	Date 1269 1285	3 epizody w roku
+R4	Dat Arg1:T23 Arg2:T21	
+R5	Dat Arg1:T23 Arg2:T22	
+T24	Date 1259 1267	2-3 lata
+R6	Dat Arg1:T24 Arg2:T22	
+R7	Dat Arg1:T24 Arg2:T21	
+T26	Investigation_result 1335 1356	bradykardia do 38/min
+N11	Reference T26 ICD10:R00.1	Bradykardia, nieokreślona
+T27	Symptom 1380 1387	migreny
+N12	Reference T27 ICD10:G43.9	Migrena, nieokreślona
+T28	Treatment 1388 1405	Przebyte operacje
+T29	Negation 1407 1413	neguje
+R8	Neg Arg1:T29 Arg2:T28	
+T30	Condition 1414 1429	Wywiad rodzinny
+A1	Status T30 Family
+T31	Condition 1441 1451	wada serca
+A2	Status T31 Family
+N13	Reference T31 ICD10:Q24.9	Wrodzona wada rozwojowa serca, nieokreślona
+T32	Negation 1453 1459	neguje
+T33	Condition 1460 1463	SCD
+A3	Status T33 Family
+N14	Reference T33 ICD10:I46.1	Nagły zgon sercowy, tak opisany
+R9	Neg Arg1:T32 Arg2:T33	
+T34	Negation 1476 1482	neguje
+T35	Condition 1483 1485	DM
+A4	Status T35 Family
+N15	Reference T35 ICD10:E14	Cukrzyca nieokreślona
+R10	Neg Arg1:T34 Arg2:T35	
+T36	Condition 1498 1505	Alergie
+N16	Reference T36 ICD10:T78.4	Alergia, nieokreślona
+T37	Negation 1507 1513	neguje
+R11	Neg Arg1:T37 Arg2:T36	
+T38	Behaviour 1515 1525	Nikotynizm
+T39	Date 1532 1547	do 7 lat wstecz
+R12	Dat Arg1:T39 Arg2:T38	
+T40	Behaviour 1549 1561	12 paczkolat
+T41	Behaviour 1563 1570	Alkohol
+N19	Reference T41 ICD10:Z72.1	Używanie alkoholu
+T42	Negation 1572 1578	neguje
+R13	Neg Arg1:T42 Arg2:T41	
+T43	Behaviour 1580 1597	Uzależnienie inne
+T44	Negation 1599 1605	neguje
+R14	Neg Arg1:T44 Arg2:T43	
+T45	Behaviour 1623 1641	handel internetowy
+T46	Investigation 1685 1695	echo serca
+T47	Investigation 1697 1700	TET
+T48	Investigation 1702 1706	ABPM
+T49	Investigation 1708 1718	Holter ekg
+T50	Investigation 1720 1738	rtg kl. piersiowej
+N4	Reference T4 ICD10:Z72.0	Używanie tytoniu
+N10	Reference T38 ICD10:Z72.0	Używanie tytoniu
+N17	Reference T40 ICD10:Z72.0	Używanie tytoniu
+N18	Reference T43 ICD10:Z72	Problemy związane ze stylem życia
+T25	Drug 1643 1647	Leki
+T51	Negation 1649 1656	żadnych
+R15	Neg Arg1:T51 Arg2:T25	

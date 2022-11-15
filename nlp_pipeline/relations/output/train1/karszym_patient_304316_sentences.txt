@@ -1,0 +1,902 @@
+allRelations          : 14
+oks                   : 8
+isRedundantAndRemoveds: 6
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 0
+GOOD / BAD            : 14 / 0
+Sentence 0:
+------------------------------------------------
+Wiek: 14 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zastosowane leczenie
+
+
+
+Sentence 4:
+------------------------------------------------
+Carvedilol, Bemecor, Karnityna, Magnezin B6
+------------------------------------------------
+
+
+
+Sentence 5:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 6:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Stan po zapaleniu mięśnia sercowego.\x0aKardiomiopatia pozapalna.
+
+
+
+Sentence 7:
+------------------------------------------------
+
+
+
+Sentence 8:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 9:
+- Carvedilol 2 x 6,25 mg
+
+R1	Drg Arg1:T7 Arg2:T11 << OK >>	Carvedilol -> 2 x 6,25 mg  <RANK: 3> <info: start[777, 788] <type: RIGHT>>
+
+
+Sentence 10:
+- Bemecor 2 x 100 mcg
+- Karnityna 1 x 5 ml p.o.
+
+R2	Drg Arg1:T8 Arg2:T12 << OK >>	Bemecor -> 2 x 100 mcg  <RANK: 3> <info: start[802, 810] <type: RIGHT>>
+R3	Drg Arg1:T8 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Bemecor -> 1 x 5 ml p.o. <:REMOVED other first tag between (right):> <RANK: 1> <info: start[802, 834] <type: RIGHT>>
+R4	Drg Arg1:T9 Arg2:T12 <<REDUNDANT!!!REMOVED>>	Karnityna -> 2 x 100 mcg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[824, 810] <type: LEFT>>
+R5	Drg Arg1:T9 Arg2:T13 << OK >>	Karnityna -> 1 x 5 ml p.o.  <RANK: 3> <info: start[824, 834] <type: RIGHT>>
+
+
+Sentence 11:
+- Magnezin B6 1 x 1 tabl.
+
+R6	Drg Arg1:T10 Arg2:T14 << OK >>	Magnezin B6 -> 1 x 1 tabl  <RANK: 3> <info: start[850, 862] <type: RIGHT>>
+
+
+Sentence 12:
+- kontrola w Poradni Kardiologicznej za 3 m-ce
+------------------------------------------------
+
+R7	Dat Arg1:T16 Arg2:T15 << OK >>	za 3 m-ce -> kontrola w Poradni Kardiologicznej  <RANK: 3> <info: start[911, 876] <type: LEFT>>
+
+
+Sentence 13:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 14:
+------------------------------------------------
+ Rozpozanie I: ICD10:I42.0|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Stan po zapaleniu mięśnia sercowego .\x0aKardiomiopatia
+
+
+Sentence 15:
+pozapalna.\x0a\x0a\x09
+------------------------------------------------
+
+
+
+Sentence 16:
+Zastosowane leczenie
+
+
+
+Sentence 17:
+------------------------------------------------
+
+
+
+Sentence 18:
+Bemecor, Carvedilol, L-Karnityna, Magnesin B6.
+
+
+
+Sentence 19:
+------------------------------------------------
+
+
+
+Sentence 20:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 21:
+1) Przyjmowanie leków: Carvedilol 2 x 6,25mg 
+                                           
+R8	Drg Arg1:T23 Arg2:T24 << OK >>	Carvedilol -> 2 x 6,25mg  <RANK: 3> <info: start[1525, 1536] <type: RIGHT>>
+
+
+Sentence 22:
+Bemecor 2 x 100 mcg
+                                           Karnityna 1 x 5 ml
+                                           Magnesin B6
+2)
+R9	Drg Arg1:T25 Arg2:T26 << OK >>	Bemecor -> 2 x 100 mcg  <RANK: 3> <info: start[1591, 1599] <type: RIGHT>>
+R10	Drg Arg1:T25 Arg2:T28 <<REDUNDANT!!!REMOVED>>	Bemecor -> 1 x 5 ml <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1591, 1664] <type: RIGHT>>
+R11	Drg Arg1:T27 Arg2:T26 <<REDUNDANT!!!REMOVED>>	Karnityna -> 2 x 100 mcg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1654, 1599] <type: LEFT>>
+R12	Drg Arg1:T27 Arg2:T28 << OK >>	Karnityna -> 1 x 5 ml  <RANK: 3> <info: start[1654, 1664] <type: RIGHT>>
+R13	Drg Arg1:T29 Arg2:T26 <<REDUNDANT!!!REMOVED>>	Magnesin B6 -> 2 x 100 mcg <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1716, 1599] <type: LEFT>>
+R14	Drg Arg1:T29 Arg2:T28 <<REDUNDANT!!!REMOVED>>	Magnesin B6 -> 1 x 5 ml <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 1> <info: start[1716, 1664] <type: LEFT>>
+
+
+Sentence 23:
+Kontrolna wizyta w Klinice Kardiologii w dniu  
+3)
+
+
+Sentence 24:
+Ograniczenie wysiłku fizycznego do form rekreacji, zwolnienie z W-F .
+
+
+
+Sentence 25:
+------------------------------------------------
+
+
+
+Sentence 26:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 27:
+Chłopiec po zapaleniu mięśnia sercowego przyjęty do Kliniki do poszerzonych badań i ustalenia dalszego postępowania
+
+
+Sentence 28:
+Stan dość dobry
+------------------------------------------------
+
+
+
+Sentence 29:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 30:
+Chłopiec 14  letni  w  stanie  dobrym został przyjęty  do  Kliniki  celem przeprowadzenia  badań  
+Otrzymuje  Cervedilol
+------------------------------------------------
+
+
+
+Sentence 31:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 32:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.40[10^3/ul]
+    
+
+
+Sentence 33:
+RBC Krwinki czerwone:5.09[10^6/ul]
+    
+
+
+Sentence 34:
+HGB Hemoglobina:14.6[g/dl]
+    
+
+
+Sentence 35:
+HCT Hematokryt:41.8[%]
+    
+
+
+Sentence 36:
+MCV wskaźnik czerwonokrw:82.1[fl]
+    
+
+
+Sentence 37:
+MCH wskaźnik czerwonokrw:28.7[pg]
+    
+
+
+Sentence 38:
+MCHC wskaźnik czerwonokr:34.9[g/dl]
+    
+
+
+Sentence 39:
+PLT z morfologii:220[10^3/ul]
+    
+
+
+Sentence 40:
+RDW-SD:38.8[fl]
+    
+
+
+Sentence 41:
+RDW-CV:13.0[%]
+    PDW:12.7[fl]
+    MPV:10.6[fl]
+    
+
+
+Sentence 42:
+P-LCR:29.9[%]
+    
+
+
+Sentence 43:
+PCT (hematokryt płytkowy:0.23[%]
+    
+
+
+Sentence 44:
+NEUTR# wartość bezwzględ:1.53[10^3/ul]
+    
+
+
+Sentence 45:
+NEUTR%:34.7[%]
+    
+
+
+Sentence 46:
+LYMH# wartość bezwzględn:2.23[10^3/ul]
+    
+
+
+Sentence 47:
+LYMPH%:50.7[%]
+    
+
+
+Sentence 48:
+MONO# wartość bezwzględn:0.44[10^3/ul]
+    
+
+
+Sentence 49:
+MONO%:10.0[%]
+    
+
+
+Sentence 50:
+EO# wartość bezwzględna:0.17[10^3/ul]
+    
+
+
+Sentence 51:
+EO%:3.9[%]
+    
+
+
+Sentence 52:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    BASO%:0.7[%]
+    
+
+
+Sentence 53:
+NRBC %:0.0[%]
+    
+
+
+Sentence 54:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 55:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.66[10^3/ul]
+    
+
+
+Sentence 56:
+RBC Krwinki czerwone:5.19[10^6/ul]
+    
+
+
+Sentence 57:
+HGB Hemoglobina:14.9[g/dl]
+    
+
+
+Sentence 58:
+HCT Hematokryt:42.1[%]
+    
+
+
+Sentence 59:
+MCV wskaźnik czerwonokrw:81.1[fl]
+    
+
+
+Sentence 60:
+MCH wskaźnik czerwonokrw:28.7[pg]
+    
+
+
+Sentence 61:
+MCHC wskaźnik czerwonokr:35.4[g/dl]
+    
+
+
+Sentence 62:
+PLT z morfologii:214[10^3/ul]
+    
+
+
+Sentence 63:
+RDW-SD:38.6[fl]
+    
+
+
+Sentence 64:
+RDW-CV:13.2[%]
+    PDW:12.1[fl]
+    
+
+
+Sentence 65:
+MPV:10.3[fl]
+    
+
+
+Sentence 66:
+P-LCR:26.8[%]
+    
+
+
+Sentence 67:
+PCT (hematokryt płytkowy:0.22[%]
+    
+
+
+Sentence 68:
+NEUTR# wartość bezwzględ:1.51[10^3/ul]
+    
+
+
+Sentence 69:
+NEUTR%:32.4[%]
+    
+
+
+Sentence 70:
+LYMH# wartość bezwzględn:2.53[10^3/ul]
+    
+
+
+Sentence 71:
+LYMPH%:54.3[%]
+    
+
+
+Sentence 72:
+MONO# wartość bezwzględn:0.46[10^3/ul]
+    MONO%:9.9[%]
+    
+
+
+Sentence 73:
+EO# wartość bezwzględna:0.13[10^3/ul]
+    
+
+
+Sentence 74:
+EO%:2.8[%]
+    
+
+
+Sentence 75:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 76:
+NRBC %:0.0[%]
+    
+
+
+Sentence 77:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 78:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:26.6[sek]
+
+
+
+Sentence 79:
+Badanie ogólne moczu
+    
+
+
+Sentence 80:
+barwa:żółty[ ]
+    
+
+
+Sentence 81:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 82:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 83:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 84:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 85:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 86:
+ciężar właściwy:1.021[ ]
+    
+
+
+Sentence 87:
+pH:5.5[ ]
+    
+
+
+Sentence 88:
+białko:58mg/dl[ ]
+    
+
+
+Sentence 89:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 90:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 91:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 92:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 93:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 94:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 95:
+leukocyty:5 /ul[ul]
+    erytrocyty świeże:3 /ul[ul]
+    śluz:dość liczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 96:
+TSH: TSH:2.63[uIU/ml]
+
+
+
+Sentence 97:
+FT3: FT3:4.54[pg/ml]
+
+
+
+Sentence 98:
+FT4: FT4:1.36[ng/dl]
+
+
+
+Sentence 99:
+Troponina T
+    Troponina T:
+    3,00[pg/ml]
+
+
+
+Sentence 100:
+Troponina T
+    Troponina T:
+    3,00[pg/ml]
+
+
+
+Sentence 101:
+Troponina T: Troponina T:3.4[pg/ml]
+
+
+
+Sentence 102:
+ALAT: ALAT:15[U/L]
+ALAT: ALAT:12[U/L]
+ASPAT: ASPAT:31[U/L]
+ASPAT: ASPAT:25[U/L]
+Bilirubina całkowita (TBil): Bilirubina całkowita:0.56[mg/dl]
+
+
+
+Sentence 103:
+Cholesterol całkowity: Cholesterol całkowity:152[mg/dl]
+
+
+
+Sentence 104:
+Cholesterol HDL: Cholesterol HDL:58[mg/dl]
+
+
+
+Sentence 105:
+Cholestrol LDL (direct): Cholestrol LDL:83[mg/dl]
+
+
+
+Sentence 106:
+CK - aktywność: CK:56[U/L]
+
+
+
+Sentence 107:
+CK - aktywność: CK:57[U/L]
+
+
+
+Sentence 108:
+CKMB aktywność: CKMB:12[U/L]
+
+
+
+Sentence 109:
+CKMB aktywność: CKMB:11[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 110:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 111:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 112:
+Potas (K): Potas:5.3[mmol/L]
+
+
+
+Sentence 113:
+Potas (K): Potas:4.9[mmol/L]
+
+
+
+Sentence 114:
+Chlorki (Cl): Chlorki:104[mmol/L]
+
+
+
+Sentence 115:
+Fosforany nieorganiczne: Fosforany nieorganiczne:1.49[mmol/L]
+
+
+
+Sentence 116:
+Kreatynina + GFR
+    
+
+
+Sentence 117:
+Kreatynina w surowicy:0.60[mg/dl]
+    
+
+
+Sentence 118:
+eGFR zmod.
+
+
+Sentence 119:
+wg Schwartza:0.0[ml/min/1,73 m^2]
+    
+
+
+Sentence 120:
+wzrost:brak wzrostu[cm]
+
+
+
+Sentence 121:
+Kreatynina + GFR
+    
+
+
+Sentence 122:
+Kreatynina w surowicy:0.78[mg/dl]
+    eGFR zmod.
+
+
+Sentence 123:
+wg Schwartza:90.3[ml/min/1,73 m^2]
+    
+
+
+Sentence 124:
+wzrost:170.5[cm]
+Mleczany (LAC): Mleczany:21.6[mg/dl]
+
+
+
+Sentence 125:
+Magnez: Magnez:0.77[mmol/L]
+
+
+
+Sentence 126:
+Mocznik: Mocznik:19[mg/dl]
+
+
+
+Sentence 127:
+Mocznik: Mocznik:28[mg/dl]
+
+
+
+Sentence 128:
+Mocznik: Mocznik:26[mg/dl]
+
+
+
+Sentence 129:
+Wapń całkowity: Wapń całkowity:2.43[mmol/L]
+
+
+
+Sentence 130:
+Gospodarka żelazem
+    Żelazo:116[ug/dl]
+    
+
+
+Sentence 131:
+TIBC (Całkowita zdolność:363[ug/dl]
+    
+
+
+Sentence 132:
+UIBC (Utajona zdolność w:247[ug/dl]
+    
+
+
+Sentence 133:
+Wskaźnik wysycenia Fe:32[%]
+
+
+
+Sentence 134:
+Żelazo (Fe): Żelazo (Fe):116[ug/dl]
+
+
+
+Sentence 135:
+Digoksyna: Digoksyna:0.5[ng/ml]
+
+
+
+Sentence 136:
+Digoksyna: Digoksyna:1.4[ng/ml]
+
+
+
+Sentence 137:
+ASO: ASO:58[IU/ml]
+
+
+
+Sentence 138:
+Profil parametrów krytycznych (ABL)
+    pH:7.291
+    pCO2:61.8[mmHg]
+    
+
+
+Sentence 139:
+BE:0.80[mmol/L]
+    
+
+
+Sentence 140:
+HCO3:28.9[mmol/L]
+    
+
+
+Sentence 141:
+pO2:20.2[mmHg]
+    
+
+
+Sentence 142:
+O2Sat:25.6[%]
+    
+
+
+Sentence 143:
+Sód (ABL):139[mmol/L]
+    
+
+
+Sentence 144:
+Potas (ABL):4.6[mmol/L]
+    
+
+
+Sentence 145:
+Chlorki (ABL):107[mmol/L]
+    
+
+
+Sentence 146:
+Wapń zjonizowany (ABL):1.25[mmol/L]
+    
+
+
+Sentence 147:
+Ht - ABL:50.2[%]
+    
+
+
+Sentence 148:
+Hb - ABL:16.4[g/dl]
+    
+
+
+Sentence 149:
+FO2Hb:25.4[%]
+    
+
+
+Sentence 150:
+FCOHb:0.4[%]
+    FMetHb:0.5[%]
+    
+
+
+Sentence 151:
+Glukoza (ABL):90[mg/dl]
+    Mleczany:25[mg/dl]
+
+
+
+Sentence 152:
+Glukoza w surowicy: Glukoza w surowicy:84[mg/dl]
+
+
+
+Sentence 153:
+NT-proBNP surowica: NT-proBNP w surowicy:51[pg/ml]
+
+
+
+Sentence 154:
+NT-proBNP surowica: NT-proBNP w surowicy:22[pg/ml]
+
+
+
+Sentence 155:
+------------------------------------------------
+
+
+
+Sentence 156:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 157:
+I42.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 158:
+ICD9
+------------------------------------------------
+89.522
+A01
+C55
+
+
+
+Sentence 159:
+O61
+I17
+N45
+I19
+O35
+M37
+
+
+
+Sentence 160:
+N13
+
+
+
+Sentence 161:
+N24
+88.721
+M19
+88.926
+
+
+
+Sentence 162:
+M18
+T17
+88.761
+
+
+
+Sentence 163:
+------------------------------------------------
+
+

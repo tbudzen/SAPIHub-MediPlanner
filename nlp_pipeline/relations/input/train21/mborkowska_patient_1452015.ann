@@ -1,0 +1,88 @@
+T1	Condition 414 459	Nadciśnienie tętnicze 1. stopnia wg. ESC/ESH.
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Investigation 2012 2022	echo serca
+T3	Investigation 2024 2027	TET
+T4	Investigation 2029 2033	ABPM
+T5	Investigation 2035 2045	Holter ekg
+T6	Investigation 2047 2065	rtg kl. piersiowej
+T7	Drug 1918 1935	Hydrochlorotiazyd
+T8	Drug_dose 1936 1941	25 mg
+R1	Drg Arg1:T7 Arg2:T8	
+T10	Drug 1856 1865	Dipperram
+T11	Drug_dose 1866 1874	10/160mg
+R3	Drg Arg1:T10 Arg2:T11	
+T13	Drug 1788 1794	Atoris
+T14	Drug_dose 1795 1818	40 mg 1 tabl. wieczorem
+T15	Drug_dose 1820 1838	przyjmuje co 3 dni
+R5	Drg Arg1:T13 Arg2:T14	
+R6	Drg Arg1:T13 Arg2:T15	
+T16	Drug 1716 1722	Plavix
+T17	Drug_dose 1723 1750	75 mg 1 tabl. rano zalecona
+T18	Drug_dose 1752 1770	przyjmuje co 3 dni
+R7	Drg Arg1:T16 Arg2:T17	
+R8	Drg Arg1:T16 Arg2:T18	
+T19	Negation 1661 1667	neguje
+T20	Behaviour 1642 1659	Uzależnienie inne
+T21	Behaviour 1618 1640	Alkohol: piwo dziennie
+N2	Reference T21 ICD10:Z72.1	Używanie alkoholu
+R9	Neg Arg1:T19 Arg2:T20	
+T22	Behaviour 1560 1592	Nikotynizm: 1 dziennie od 20 lat
+T23	Negation 1552 1558	neguje
+T24	Condition 1543 1550	Alergie
+N4	Reference T24 ICD10:T78.4	Alergia, nieokreślona
+R10	Neg Arg1:T23 Arg2:T24	
+T25	Negation 1528 1541	bez znaczenia
+T26	Condition 1511 1526	Wywiad rodzinny
+A8	Status T26 Family
+R11	Neg Arg1:T25 Arg2:T26	
+T27	Negation 1503 1509	neguje
+T28	Treatment 1484 1501	Przebyte operacje
+R12	Neg Arg1:T27 Arg2:T28	
+T29	Condition 1342 1344	HA
+N5	Reference T29 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T30	Condition 1354 1381	udarze niedokrwiennym mózgu
+N6	Reference T30 ICD10:I63	Zawał mózgu
+T31	Condition 468 495	udarze niedokrwiennym mózgu
+N7	Reference T31 ICD10:I63	Zawał mózgu
+T32	Symptom 509 515	afazji
+N8	Reference T32 ICD10:R47.0	Dysfazja i afazja
+T33	Symptom 518 542	niedowładu lewostronnego
+N9	Reference T33 ICD10:G81	Porażenie połowicze
+T34	Date 544 555	2 lata temu
+R13	Dat Arg1:T34 Arg2:T33	
+R14	Dat Arg1:T34 Arg2:T32	
+T35	Symptom 559 585	niedowładu k. dolnej lewej
+N10	Reference T35 ICD10:G82	Porażenie kończyn dolnych i czterokończynowe
+T36	Date 587 594	08.2018
+R15	Dat Arg1:T36 Arg2:T35	
+T37	Condition 597 632	Podejrzenie guza nadnercza prawego.
+N11	Reference T37 ICD10:D44.1	Nadnercze
+A9	Source T37 Declared
+T38	Condition 633 669	Podejrzenie wola guzowatego tarczycy
+N12	Reference T38 ICD10:E04.1	Guzek tarczycy pojedynczy, nietoksyczny
+A10	Source T38 Declared
+T39	Condition 671 690	Torbiel nerki lewej
+N13	Reference T39 ICD10:N28.1	Torbiel nerki, nabyta
+T40	Treatment 1044 1073	kontrola ciśnienia tętniczego
+T41	Symptom 1395 1401	afazji
+N14	Reference T41 ICD10:R47.0	Dysfazja i afazja
+T42	Symptom 1404 1428	niedowładu lewostronnego
+N15	Reference T42 ICD10:G81	Porażenie połowicze
+T43	Date 1430 1441	2 lata temu
+R16	Dat Arg1:T43 Arg2:T42	
+R17	Dat Arg1:T43 Arg2:T41	
+T44	Symptom 1445 1471	niedowładu k. dolnej lewej
+N16	Reference T44 ICD10:G82	Porażenie kończyn dolnych i czterokończynowe
+T45	Date 1473 1480	08.2018
+R18	Dat Arg1:T45 Arg2:T44	
+T46	Condition 1243 1278	podejrzenia wady przeciekowej serca
+A11	Source T46 Declared
+N17	Reference T46 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T47	Condition 1281 1283	IM
+A12	Source T47 Declared
+N18	Reference T47 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T9	Negation 1887 1900	nie przyjmuje
+R2	Neg Arg1:T9 Arg2:T10	
+T12	Negation 1954 1967	nie przyjmuje
+R4	Neg Arg1:T12 Arg2:T7	
+N3	Reference T22 ICD10:T65.2	Tytoń i nikotyna

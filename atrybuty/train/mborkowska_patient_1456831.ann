@@ -1,0 +1,311 @@
+T1	Investigation 6788 6798	Echo serca
+T2	Investigation 6801 6811	Holter EKG
+T3	Investigation 6814 6816	RR
+T4	Drug 6745 6761	Azathioprine VIS
+T5	Drug_dose 6762 6772	50 mg 2xdz
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Drug 6726 6733	Pentasa
+T7	Drug_dose 6734 6743	2 g 2x dz
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Drug 6692 6702	Euthyrox N
+T9	Drug_dose 6702 6724	125ug 1x 1/2 tabl/rano
+R3	Drg Arg1:T8 Arg2:T9	
+T10	Drug 6665 6671	Diured
+T11	Drug_dose 6672 6690	5mg 1x 1 tabl/rano
+R4	Drg Arg1:T10 Arg2:T11	
+T12	Drug 6637 6648	Beto 150 ZK
+T13	Drug_dose 6649 6663	1x 1 tabl/rano
+R5	Drg Arg1:T12 Arg2:T13	
+T14	Drug 6596 6602	Plavix
+T15	Drug_dose 6603 6635	75mg 1x 1 tabl/rano przez 3 m-ce
+R6	Drg Arg1:T14 Arg2:T15	
+T16	Drug 6526 6531	Acard
+T17	Drug_dose 6532 6594	75mg 1x 1 tabl/wiecz przez 6 m-ce (dalej wg zaleceń neurologa)
+R7	Drg Arg1:T16 Arg2:T17	
+T18	Behaviour 6474 6500	warunki mieszkaniowe dobre
+T19	Negation 6451 6457	neguje
+T20	Negation 6436 6439	nie
+T21	Negation 6403 6410	nie pal
+T22	Negation 6373 6384	brak danych
+T23	Negation 6313 6319	( -  )
+T24	Negation 6332 6337	( - )
+T25	Negation 6345 6348	- )
+T26	Condition 6440 6449	Uczulenia
+R8	Neg Arg1:T19 Arg2:T26	
+T27	Behaviour 6423 6434	Inne używki
+R9	Neg Arg1:T20 Arg2:T27	
+T28	Behaviour 6386 6401	Palenie tytoniu
+N2	Reference T28 ICD10:T65.2	Tytoń i nikotyna
+R10	Neg Arg1:T21 Arg2:T28	
+T29	Condition 6349 6370	W wywiadzie rodzinnym
+A1	Status T29 Family
+R11	Neg Arg1:T22 Arg2:T29	
+T30	Condition 6309 6312	WZW
+N3	Reference T30 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T31	Condition 6322 6331	borelioza
+N4	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Condition 6338 6342	Odra
+N5	Reference T32 ICD10:B05	Odra
+R12	Neg Arg1:T25 Arg2:T32	
+R13	Neg Arg1:T24 Arg2:T31	
+R14	Neg Arg1:T23 Arg2:T30	
+T33	Negation 6233 6237	brak
+T34	Treatment 6213 6230	Przebyte operacje
+R15	Neg Arg1:T33 Arg2:T34	
+T35	Condition 6188 6211	Hiperlipidemia mieszana
+N6	Reference T35 ICD10:E78.2	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T36	Drug 1229 1234	Acard
+T37	Drug_dose 1235 1297	75mg 1x 1 tabl/wiecz przez 6 m-ce (dalej wg zaleceń neurologa)
+T38	Drug 1298 1304	Plavix
+T39	Drug_dose 1305 1337	75mg 1x 1 tabl/rano przez 3 m-ce
+R16	Drg Arg1:T36 Arg2:T37	
+R17	Drg Arg1:T38 Arg2:T39	
+T40	Drug 1338 1349	Beto 150 ZK
+T41	Drug_dose 1350 1364	1x 1 tabl/rano
+R18	Drg Arg1:T40 Arg2:T41	
+T42	Drug 1365 1371	Diured
+T43	Drug_dose 1372 1390	5mg 1x 1 tabl/rano
+R19	Drg Arg1:T42 Arg2:T43	
+T44	Drug 1391 1397	Tolura
+T45	Drug_dose 1398 1418	40mg 1x 1 tabl/wiecz
+R20	Drg Arg1:T44 Arg2:T45	
+T46	Drug 1419 1429	Euthyrox N
+T47	Drug_dose 1429 1451	125ug 1x 1/2 tabl/rano
+R21	Drg Arg1:T46 Arg2:T47	
+T48	Drug 1452 1461	Armolipid
+T49	Drug_dose 1462 1477	1x 1 tabl/wiecz
+R22	Drg Arg1:T48 Arg2:T49	
+T50	Drug 1597 1603	BetoZK
+T51	Drug 1605 1611	Diured
+T52	Drug 1613 1621	Euthyrox
+T53	Drug 1623 1628	Acard
+T54	Drug 1630 1637	Kalipoz
+T55	Drug 1639 1648	Cefazolin
+T56	Drug 1650 1658	0,9%NaCl
+T57	Drug 1660 1663	PWE
+T58	Drug 1665 1673	Dormicum
+T59	Drug 1675 1681	Plavix
+T60	Drug 2975 2982	Pentosa
+T61	Drug 2984 2996	Azathioprine
+T62	Drug 2999 3004	Acard
+T63	Drug 3006 3012	Plavix
+T64	Drug 3014 3025	Beto 150 ZK
+T65	Drug 3028 3034	Diured
+T66	Drug 3036 3044	Euthyrox
+T67	Drug 5526 5531	Acard
+T68	Drug_dose 5532 5556	150 mg 1 tabl. wieczorem
+R23	Drg Arg1:T67 Arg2:T68	
+T69	Drug 5499 5518	Kalipoz prolongatum
+T70	Drug_dose 5519 5525	1 x dz
+R24	Drg Arg1:T69 Arg2:T70	
+T71	Drug 5477 5485	Diclofor
+T72	Drug_dose 5486 5498	60 mg 1 x dz
+R25	Drg Arg1:T71 Arg2:T72	
+T73	Drug 5400 5413	Sulfasalazyna
+T74	Drug_dose 5414 5475	500 mg 1 tabl.2 x dz - zakończenie terapii w dniu 08.01.2019r
+R26	Drg Arg1:T73 Arg2:T74	
+T75	Drug 5361 5369	Euthyrox
+T76	Drug_dose 5370 5399	125ug 1/2 tabl. rano na czczo
+R27	Drg Arg1:T75 Arg2:T76	
+T77	Drug 5335 5341	Diured
+T78	Drug_dose 5342 5360	10 mg 1 tabl. rano
+R28	Drg Arg1:T77 Arg2:T78	
+T79	Drug 5307 5314	Beto ZK
+T80	Drug_dose 5315 5334	150 mg 1 tabl. rano
+R29	Drg Arg1:T79 Arg2:T80	
+T81	Drug 4516 4532	Azathioprine VIS
+T82	Drug_dose 4533 4572	50 2x dz - wg. zaleceń gastroenterologa
+R30	Drg Arg1:T81 Arg2:T82	
+T83	Drug 4496 4503	Pentosa
+T84	Drug_dose 4504 4513	2 g 2x dz
+R31	Drg Arg1:T83 Arg2:T84	
+T85	Drug 4468 4477	Armolipid
+T86	Drug_dose 4478 4493	1x 1 tabl/wiecz
+R32	Drg Arg1:T85 Arg2:T86	
+T87	Drug 4413 4423	Euthyrox N
+T88	Drug_dose 4423 4465	75ug 1x dz rano na czczo w dni nieparzyste
+R33	Drg Arg1:T87 Arg2:T88	
+T89	Drug 4350 4360	Euthyrox N
+T90	Drug_dose 4360 4408	125ug na zmianę w dni parzyste  1x 1/2 tabl/rano
+R34	Drg Arg1:T89 Arg2:T90	
+T91	Drug 4320 4326	Tolura
+T92	Drug 4292 4298	Diured
+T93	Drug 4263 4274	Beto 150 ZK
+T94	Drug_dose 4327 4347	40mg 1x 1 tabl/wiecz
+R35	Drg Arg1:T91 Arg2:T94	
+T95	Drug_dose 4299 4317	5mg 1x 1 tabl/rano
+R36	Drg Arg1:T92 Arg2:T95	
+T96	Drug_dose 4275 4289	1x 1 tabl/rano
+R37	Drg Arg1:T93 Arg2:T96	
+T97	Drug 4160 4168	Polocard
+T98	Drug_dose 4169 4260	150mg 1x 1 tabl/wiecz przez 6 m-ce od zabiegu ( do 09.07.2019) (dalej wg zaleceń neurologa)
+R38	Drg Arg1:T97 Arg2:T98	
+T99	Treatment 369 414	profilaktyka infekcyjnego zapalenia wsierdzia
+N7	Reference T99 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T100	Drug 482 494	amoksycylina
+T101	Drug 499 509	ampicylina
+T102	Drug_dose 510 530	2 g doustnie lub i.v
+R39	Drg Arg1:T101 Arg2:T102	
+R40	Drg Arg1:T100 Arg2:T102	
+T103	Condition 545 552	alergii
+N8	Reference T103 ICD10:Z88.1	Uczulenie na inne antybiotyki w wywiadzie
+R41	Alg Arg1:T103 Arg2:T101	
+R42	Alg Arg1:T103 Arg2:T100	
+T104	Drug 579 591	klindamycyna
+T105	Drug_dose 592 615	600mg doustnie lub i.v.
+R43	Drg Arg1:T104 Arg2:T105	
+T106	Behaviour 935 960	dieta niskocholesterolowa
+T107	Investigation 964 1002	kontrola wartości ciśnienia tętniczego
+T108	Investigation 1136 1156	kontrola lipidogramu
+T109	Investigation 4063 4083	kontrola lipidogramu
+T110	Investigation 3831 3890	kontrola wartości ciśnienia tętniczego w warunkach domowych
+T111	Behaviour 3800 3825	dieta niskocholesterolowa
+T112	Condition 3423 3468	profilaktyka infekcyjnego zapalenia wsierdzia
+N9	Reference T112 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T113	Drug 3536 3548	amoksycylina
+T114	Drug 3553 3563	ampicylina
+T115	Drug_dose 3564 3585	2 g doustnie lub i.v.
+R44	Drg Arg1:T114 Arg2:T115	
+R45	Drg Arg1:T113 Arg2:T115	
+T116	Condition 3599 3606	alergii
+N10	Reference T116 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T117	Drug 3633 3645	klindamycyna
+T118	Drug_dose 3646 3668	600mg doustnie lub i.v
+R46	Drg Arg1:T117 Arg2:T118	
+R47	Alg Arg1:T116 Arg2:T114	
+R48	Alg Arg1:T116 Arg2:T113	
+T119	Condition 2806 2829	Hiperlipidemia mieszana
+N11	Reference T119 ICD10:E78.2	Hiperlipidemia mieszana
+T120	Condition 2225 2248	Hiperlipidemia mieszana
+N12	Reference T120 ICD10:E78.2	Hiperlipidemia mieszana
+T121	Condition 2782 2804	Niedoczynność tarczycy
+N13	Reference T121 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T122	Condition 2201 2223	Niedoczynność tarczycy
+N14	Reference T122 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T123	Condition 2767 2781	Uchyłki jelit.
+N15	Reference T123 ICD10:K57	Choroba uchyłkowa jelita
+T124	Condition 2186 2200	Uchyłki jelit.
+N16	Reference T124 ICD10:K57	Choroba uchyłkowa jelita
+T125	Condition 2737 2765	Choroba Leśniowskiego-Crohna
+N17	Reference T125 ICD10:K50.9	Choroba Leśniowskiego-Crohna, nieokreślona
+T126	Condition 2147 2184	Wrzodziejące zapalenie jelita grubego
+N18	Reference T126 ICD10:K50.9	Choroba Leśniowskiego-Crohna, nieokreślona
+T127	Condition 2594 2615	Nadciśnienie tętnicze
+N19	Reference T127 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T128	Condition 2004 2025	Nadciśnienie tętnicze
+N20	Reference T128 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T129	Condition 1909 1932	Przetrwały otwór owalny
+N21	Reference T129 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T130	Treatment 1935 1989	zamknięcie zestawem Occlutech Figulla Flex II 19PFO25D
+T131	Date 1991 2001	09.01.2019
+R49	Dat Arg1:T131 Arg2:T130	
+R50	Dat Arg1:T131 Arg2:T129	
+T132	Treatment 2482 2544	Stan po zamknięcie zestawem Occlutech Figulla Flex II 19PFO25D
+T133	Date 2546 2556	09.01.2019
+R51	Dat Arg1:T133 Arg2:T132	
+T134	Condition 2035 2076	udarze niedokrwiennym lewej półkuli mózgu
+N22	Reference T134 ICD10:I63	Zawał mózgu
+T135	Condition 2625 2666	udarze niedokrwiennym lewej półkuli mózgu
+N23	Reference T135 ICD10:I63	Zawał mózgu
+T136	Symptom 2079 2115	niedowładem połowiczym prawostronnym
+N24	Reference T136 ICD10:G81	Porażenie połowicze
+T137	Symptom 2669 2705	niedowładem połowiczym prawostronnym
+N25	Reference T137 ICD10:G81	Porażenie połowicze
+T138	Symptom 2118 2135	afazją motoryczną
+N26	Reference T138 ICD10:R47.0	Dysfazja i afazja
+T139	Date 2137 2144	08.2018
+R52	Dat Arg1:T139 Arg2:T138	
+R53	Dat Arg1:T139 Arg2:T136	
+R54	Dat Arg1:T139 Arg2:T134	
+T140	Symptom 2708 2725	afazją motoryczną
+N27	Reference T140 ICD10:R47.0	Dysfazja i afazja
+T141	Date 2727 2734	08.2018
+R55	Dat Arg1:T141 Arg2:T140	
+R56	Dat Arg1:T141 Arg2:T137	
+R57	Dat Arg1:T141 Arg2:T135	
+T142	Condition 2559 2593	Pojedyncze pobudzenia nadkomorowe.
+N28	Reference T142 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T143	Condition 4721 4724	PFO
+N29	Reference T143 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T144	Condition 5766 5769	PFO
+N30	Reference T144 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T145	Condition 4726 4749	nadciśnieniem tętniczym
+N31	Reference T145 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T146	Condition 4754 4781	udarze niedokrwiennym mózgu
+N32	Reference T146 ICD10:I63	Zawał mózgu
+T147	Date 4784 4792	08.2018r
+R58	Dat Arg1:T147 Arg2:T146	
+T148	Treatment 4814 4849	zamknięcia ubytku za pomocą zapinki
+T149	Condition 4872 4909	wrzodziejące zapalenie jelita grubego
+N33	Reference T149 ICD10:K50.9	Choroba Leśniowskiego-Crohna, nieokreślona
+T150	Condition 6133 6147	Choroba Crohna
+N34	Reference T150 ICD10:K50.9	Choroba Leśniowskiego-Crohna, nieokreślona
+T151	Condition 4911 4925	uchyłki jelit,
+N35	Reference T151 ICD10:K57	Choroba uchyłkowa jelita
+T152	Condition 6149 6162	Uchyłki jelit
+N36	Reference T152 ICD10:K57	Choroba uchyłkowa jelita
+T153	Condition 4926 4948	niedoczynność tarczycy
+N37	Reference T153 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T154	Condition 4950 4973	hiperlipidemia mieszana
+N38	Reference T154 ICD10:E78.2	Hiperlipidemia mieszana
+T155	Condition 6021 6062	udarze niedokrwiennym lewej półkuli mózgu
+N39	Reference T155 ICD10:I63	Zawał mózgu
+T156	Symptom 6065 6101	niedowładem połowiczym prawostronnym
+N40	Reference T156 ICD10:G81	Porażenie połowicze
+T157	Symptom 6104 6121	afazją motoryczną
+N41	Reference T157 ICD10:R47.0	Dysfazja i afazja
+T158	Date 6123 6130	08.2018
+R59	Dat Arg1:T158 Arg2:T157	
+R60	Dat Arg1:T158 Arg2:T156	
+R61	Dat Arg1:T158 Arg2:T155	
+T159	Condition 5990 6011	Nadciśnienie tętnicze
+N42	Reference T159 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T160	Condition 5895 5918	Przetrwały otwór owalny
+N43	Reference T160 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T161	Treatment 5921 5975	zamknięcie zestawem Occlutech Figulla Flex II 19PFO25D
+T162	Date 5977 5987	09.01.2019
+R62	Dat Arg1:T162 Arg2:T161	
+R63	Dat Arg1:T162 Arg2:T160	
+T163	Symptom 5832 5844	zasłabnięcia
+N44	Reference T163 ICD10:R55	Omdlenie i zapaść
+T164	Symptom 5854 5878	bóle w klatce piersiowej
+N45	Reference T164 ICD10:R07.3	Inne bóle w klatce piersiowej
+T165	Negation 5847 5853	neguje
+R64	Neg Arg1:T165 Arg2:T164	
+T166	Negation 5825 5831	Neguje
+R65	Neg Arg1:T166 Arg2:T163	
+T167	Symptom 5791 5822	okresowe uczucie kołatani serca
+N46	Reference T167 ICD10:R00.2	Kołatanie serca
+T168	Treatment 5739 5765	zabiegu zamknięcia zapinką
+T169	Date 5770 5780	09.01.2019
+R66	Dat Arg1:T169 Arg2:T144	
+R67	Dat Arg1:T169 Arg2:T168	
+T170	Treatment 5244 5260	cięcie cesarskie
+T171	Date 5263 5268	2006r
+R68	Dat Arg1:T171 Arg2:T170	
+T172	Condition 5167 5178	zawal serca
+A2	Status T172 Family
+N47	Reference T172 ICD10:I25.2	Przebyty zawał serca
+T173	Symptom 5045 5053	omdlenia
+N48	Reference T173 ICD10:R55	Omdlenie i zapaść
+T174	Symptom 5055 5074	utraty przytomności
+N49	Reference T174 ICD10:R55	Omdlenie i zapaść
+T175	Symptom 5076 5100	bóle w klatce piersiowej
+N50	Reference T175 ICD10:R07.3	Inne bóle w klatce piersiowej
+T176	Symptom 5102 5125	uczucie kołatania serca
+N51	Reference T176 ICD10:R00.2	Kołatanie serca
+T177	Negation 5126 5141	nie występowały
+R69	Neg Arg1:T177 Arg2:T176	
+R70	Neg Arg1:T177 Arg2:T175	
+R71	Neg Arg1:T177 Arg2:T174	
+R72	Neg Arg1:T177 Arg2:T173	
+T178	Date 1157 1168	po 3 m-cach
+R73	Dat Arg1:T178 Arg2:T108	
+T179	Investigation 3415 3420	NMR  
+T180	Date 4084 4095	po 3 m-cach
+R74	Dat Arg1:T180 Arg2:T109	
+T181	Condition 6164 6186	Niedoczynność tarczycy
+N52	Reference T181 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T182	Date 6412 6421	od 15 lat
+R75	Dat Arg1:T182 Arg2:T28	
+N1	Reference T26 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

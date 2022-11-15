@@ -1,0 +1,99 @@
+T1	Treatment 342 369	dalsza opieka w poradni POZ
+T2	Treatment 374 445	okresowa kontrola kardiologiczna i laryngologiczna oraz dermatologiczna
+T3	Investigation 449 512	codzienna kontrola ciśnienia tętniczego i częstości akcji serca
+T4	Investigation 517 546	okresowa kontrola lipidogramu
+T5	Behaviour 551 561	dieta DASH
+T6	Behaviour 566 585	redukcja masy ciała
+T7	Behaviour 591 636	stały, umiarkowany, aerobowy wysiłek fizyczny
+T8	Treatment 641 669	regularne przyjmowanie leków
+T9	Drug 679 685	Bibloc
+T10	Drug_dose 686 705	2.5 mg 1 tabl. rano
+R1	Drg Arg1:T9 Arg2:T10	
+T11	Drug 714 722	Betaserc
+T12	Drug_dose 723 743	24 mg 1 tabl. 2 x dz
+R2	Drg Arg1:T11 Arg2:T12	
+T13	Drug 751 758	Telfexo
+T14	Drug_dose 759 782	180 mg 1 tabl.wieczorem
+R3	Drg Arg1:T13 Arg2:T14	
+T15	Drug 790 798	Pronasal
+T16	Drug_dose 799 823	50ug 3 x dz po 1 wziewie
+R4	Drg Arg1:T15 Arg2:T16	
+T17	Drug 827 833	Bibloc
+T18	Drug_dose 834 853	2.5 mg 1 tabl. rano
+R5	Drg Arg1:T17 Arg2:T18	
+T19	Drug 855 863	Betaserc
+T20	Drug_dose 864 884	24 mg 1 tabl. 2 x dz
+R6	Drg Arg1:T19 Arg2:T20	
+T21	Drug 885 892	Telfexo
+T22	Drug_dose 893 916	180 mg 1 tabl.wieczorem
+R7	Drg Arg1:T21 Arg2:T22	
+T23	Drug 917 925	Pronasal
+T24	Drug_dose 926 950	50ug 3 x dz po 1 wziewie
+R8	Drg Arg1:T23 Arg2:T24	
+T25	Symptom 1168 1188	Tachykardia zatokowa
+N1	Reference T25 ICD10:R00.0	Tachykardia, nieokreślona
+T26	Condition 1190 1197	Otyłość
+N2	Reference T26 ICD10:E66	Otyłość
+T27	Condition 1199 1224	Przewlekłe zapalenia uszu
+N3	Reference T27 ICD10:H66.9	Zapalenie ucha środkowego, nieokreślone
+T28	Condition 1226 1244	zatok przynosowych
+N4	Reference T28 ICD10:J32.9	Przewlekłe zapalenie zatok, nieokreślone
+T29	Condition 1246 1269	Atopowe zapalenie skóry
+N5	Reference T29 ICD10:L20.9	Atopowe zapalenie skóry, nieokreślone
+T30	Symptom 1271 1301	nadmierne rogowacenie naskórka
+N6	Reference T30 ICD10:L85.9	Zgrubienie naskórka, nieokreślone
+T31	Symptom 1488 1501	kołatań serca
+N7	Reference T31 ICD10:R00.2	Kołatanie serca
+T32	Date 1502 1514	od kilku lat
+R9	Dat Arg1:T32 Arg2:T31	
+T33	Symptom 1516 1579	Dolegliwości nasilają się przy niewielkich wysiłkach fizycznych
+T34	Condition 1594 1619	przewlekłe zapalenia uszu
+N8	Reference T34 ICD10:H66.9	Zapalenie ucha środkowego, nieokreślone
+T35	Condition 1621 1639	zatok przynosowych
+N9	Reference T35 ICD10:J32.9	Przewlekłe zapalenie zatok, nieokreślone
+T36	Condition 1641 1664	atopowe zapalenie skóry
+N10	Reference T36 ICD10:L20.9	Atopowe zapalenie skóry, nieokreślone
+T37	Treatment 1699 1716	leczone sterydami
+N11	Reference T37 ICD10:L85.9	Zgrubienie naskórka, nieokreślone
+T38	Date 1717 1722	2018r
+R10	Dat Arg1:T38 Arg2:T37	
+T39	Treatment 1724 1741	Przebyte operacje
+T40	Negation 1743 1753	nie podaje
+R11	Neg Arg1:T40 Arg2:T39	
+T41	Treatment 1754 1773	Leczenie przewlekłe
+T42	Condition 1807 1810	WZW
+N12	Reference T42 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T43	Condition 1812 1821	borelioza
+N13	Reference T43 ICD10:A69.2	Choroba z Lyme
+T44	Negation 1824 1834	nie podaje
+R12	Neg Arg1:T44 Arg2:T43	
+R13	Neg Arg1:T44 Arg2:T42	
+T45	Condition 1835 1850	Wywiad rodzinny
+A1	Status T45 Family
+T46	Negation 1852 1862	nieistotny
+R14	Neg Arg1:T46 Arg2:T45	
+T47	Behaviour 1863 1878	Palenie tytoniu
+N14	Reference T47 ICD10:Z72.0	Używanie tytoniu
+T48	Negation 1880 1888	nie pali
+R15	Neg Arg1:T48 Arg2:T47	
+T49	Behaviour 1889 1914	Inne używki: okazjonalnie
+T50	Condition 1915 1924	Uczulenia
+T51	Condition 1926 1936	kontaktowe
+T52	Condition 1938 1945	wziewne
+T53	Behaviour 1964 1979	pracownik ICZMP
+T54	Drug 1988 1996	Betaserc
+T55	Drug_dose 1997 2017	24 mg 1 tabl. 2 x dz
+R16	Drg Arg1:T54 Arg2:T55	
+T56	Drug 2018 2025	Telfexo
+T57	Drug_dose 2026 2049	180 mg 1 tabl.wieczorem
+R17	Drg Arg1:T56 Arg2:T57	
+T58	Drug 2050 2058	Pronasal
+T59	Drug_dose 2059 2083	50ug 3 x dz po 1 wziewie
+R18	Drg Arg1:T58 Arg2:T59	
+T60	Investigation 2111 2121	echo serca
+T61	Investigation 2123 2126	TET
+T62	Investigation 2128 2132	ABPM
+T63	Investigation 2134 2140	Holter
+T64	Investigation 2142 2160	RTG kl. piersiowej
+T65	Symptom 1666 1696	nadmierne rogowacenie naskórka
+N15	Reference T65 ICD10:L85.9	Zgrubienie naskórka, nieokreślone

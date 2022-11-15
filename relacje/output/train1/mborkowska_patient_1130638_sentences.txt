@@ -1,0 +1,578 @@
+allRelations          : 16
+oks                   : 6
+isRedundantAndRemoveds: 7
+shouldNotBeRemoveds   : 2
+shouldBeBemoveds      : 1
+GOOD / BAD            : 13 / 3
+Sentence 0:
+------------------------------------------------
+Wiek: 8 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zastosowane leczenie
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Enarenal, Spironol, Aerius
+------------------------------------------------
+
+
+
+Sentence 5:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 6:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q20.5|Rozpoznanie II: ICD10:Q20.3|Rozpoznanie IV: ICD10:Q21.0|Rozpoznanie V: ICD10:Z98.8|Rozpoznanie III: ICD10:Q25.4|Opisowo:: Wrodzona wada serca pod postacią przerwanego łuku aorty (typu A), skorygowanego przełożenia wielkich naczyń z ubytkami międzykomorowymi.\x0aStan po rekonstrukcji łuku aorty oraz przewężeniu pnia tętnicy płucnej.\x0aStan po operacji typu "double switch" wykonanej w warunkach krążenia pozaustrojowego w dniu 03.04.2017\x0aObserwacja w kierunku choroby Recklinghausena.\x0aNadciśnienie tętnicze.
+
+R1	Dat Arg1:T20 Arg2:T15 <<REDUNDANT!!!REMOVED>>	03.04.2017 -> Wrodzona wada serca pod postacią przerwanego łuku aorty (typu A) <:REMOVED other second tag between (left):> <RANK: 2> <info: start[946, 639] <type: LEFT>>
+R2	Dat Arg1:T20 Arg2:T16 <<REDUNDANT!!!REMOVED>>	03.04.2017 -> skorygowanego przełożenia wielkich naczyń <:REMOVED other second tag between (left):> <RANK: 2> <info: start[946, 705] <type: LEFT>>
+R3	Dat Arg1:T20 Arg2:T17 <<REDUNDANT!!!REMOVED>>	03.04.2017 -> ubytkami międzykomorowymi <:REMOVED other second tag between (left):> <RANK: 2> <info: start[946, 749] <type: LEFT>>
+R4	Dat Arg1:T20 Arg2:T21 <<REDUNDANT!!!SHOULD BE REMOVED>>	03.04.2017 -> Obserwacja w kierunku choroby Recklinghausena.  <RANK: 3> <info: start[946, 960] <type: RIGHT>>
+R5	Dat Arg1:T20 Arg2:T22 <<REDUNDANT!!!REMOVED>>	03.04.2017 -> Nadciśnienie tętnicze <:REMOVED many second tags on the right:> <RANK: 2> <info: start[946, 1010] <type: RIGHT>>
+R6	Dat Arg1:T20 Arg2:T18 <<REDUNDANT!!!REMOVED>>	03.04.2017 -> rekonstrukcji łuku aorty oraz przewężeniu pnia tętnicy płucnej <:REMOVED many second tags on the left:> <RANK: 2> <info: start[946, 787] <type: LEFT>>
+R7	Dat Arg1:T20 Arg2:T19 << OK >>	03.04.2017 -> operacji typu "double switch" wykonanej w warunkach krążenia pozaustrojowego  <RANK: 3> <info: start[946, 862] <type: LEFT>>
+
+
+Sentence 7:
+------------------------------------------------
+
+
+
+Sentence 8:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 9:
+1. Regularne przyjmowanie leków:
+- Enarenal 2x 1,25mg doustnie
+- Spironol 1x25 mg doustnie
+
+R8	Drg Arg1:T1 Arg2:T2 << OK >>	Enarenal -> 2x 1,25mg doustnie  <RANK: 3> <info: start[1176, 1185] <type: RIGHT>>
+R9	Drg Arg1:T1 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1x25 mg doustnie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1176, 1215] <type: RIGHT>>
+R10	Drg Arg1:T3 Arg2:T2 <<REDUNDANT!!!REMOVED>>	Spironol -> 2x 1,25mg doustnie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1206, 1185] <type: LEFT>>
+R11	Drg Arg1:T3 Arg2:T4 << OK >>	Spironol -> 1x25 mg doustnie  <RANK: 3> <info: start[1206, 1215] <type: RIGHT>>
+
+
+Sentence 10:
+- kontynuacja stosowania prep.
+
+
+Sentence 11:
+Aerius 
+2. Dalsza opieka w Poradni Kardiologicznej w miejscu zamieszkania.
+
+
+
+Sentence 12:
+3. Wizyta w Poradni Kardiologicznej za 8 miesięcy (dr M. Pierzchała)- wyznaczono termin przyjęcia: 
+
+
+
+Sentence 13:
+4. Dalsza opieka wielospecjalistyczna w miejscu zamieszkania- w tym dalsza diagnostyka gastroenetrologiczna i neurologiczna.
+
+
+
+Sentence 14:
+5. Kontrola hormonów tarczycy w POZ.
+
+
+
+Sentence 15:
+6.
+
+
+Sentence 16:
+W razie niepokojących dolegliwości- omdlenia, zasłabnięcia, uczucie zmienionej pracy serca, pogorszenie stanu ogólnego proszę o pilny kontakt z lekarzem.
+
+
+
+Sentence 17:
+------------------------------------------------
+
+
+
+Sentence 18:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 19:
+Niespełna 8-letnia dziewczynka z wrodzoną wadą serca (L-TGa, VSD, IAA) po korekcji całkowitej dwa lata temu, została przyjęta do Kliniki Kardiologii w celu wykonania badań kontrolnych.
+
+R12	Dat Arg1:T26 Arg2:T23 <<SHOULD NOT BE REMOVED>>	dwa lata temu -> (L-TGa <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1975, 1934] <type: LEFT>>
+R13	Dat Arg1:T26 Arg2:T24 <<SHOULD NOT BE REMOVED>>	dwa lata temu -> VSD <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1975, 1942] <type: LEFT>>
+R14	Dat Arg1:T26 Arg2:T25 << OK >>	dwa lata temu -> IAA  <RANK: 3> <info: start[1975, 1947] <type: LEFT>>
+R15	Dat Arg1:T26 Arg2:T27 << OK >>	dwa lata temu -> korekcji całkowitej  <RANK: 3> <info: start[1975, 1955] <type: LEFT>>
+
+
+Sentence 20:
+Obserwowana w kierunku alergii (pojawiająca się pokrzywka).
+
+
+Sentence 21:
+Działania niepożądane po lekach neguje. 
+
+R16	Neg Arg1:T9 Arg2:T8 << OK >>	neguje -> Działania niepożądane po lekach  <RANK: 3> <info: start[2158, 2126] <type: LEFT>>
+
+
+Sentence 22:
+Obserwacja w kier. choroby Recklinghausena.
+
+
+
+Sentence 23:
+------------------------------------------------
+
+
+
+Sentence 24:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 25:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.70[10^3/ul]
+    
+
+
+Sentence 26:
+RBC Krwinki czerwone:4.33[10^6/ul]
+    
+
+
+Sentence 27:
+HGB Hemoglobina:13.0[g/dl]
+    
+
+
+Sentence 28:
+HCT Hematokryt:36.6[%]
+    
+
+
+Sentence 29:
+MCV wskaźnik czerwonokrw:84.5[fl]
+    
+
+
+Sentence 30:
+MCH wskaźnik czerwonokrw:30.0[pg]
+    
+
+
+Sentence 31:
+MCHC wskaźnik czerwonokr:35.5[g/dl]
+    
+
+
+Sentence 32:
+PLT z morfologii:247[10^3/ul]
+    
+
+
+Sentence 33:
+RDW-SD:41.1[fl]
+    
+
+
+Sentence 34:
+RDW-CV:13.2[%]
+    PDW:12.4[fl]
+    
+
+
+Sentence 35:
+MPV:10.5[fl]
+    
+
+
+Sentence 36:
+P-LCR:29.3[%]
+    
+
+
+Sentence 37:
+PCT (hematokryt płytkowy:0.26[%]
+    
+
+
+Sentence 38:
+NEUTR# wartość bezwzględ:3.36[10^3/ul]
+    
+
+
+Sentence 39:
+NEUTR%:59.0[%]
+    
+
+
+Sentence 40:
+LYMH# wartość bezwzględn:1.76[10^3/ul]
+    
+
+
+Sentence 41:
+LYMPH%:30.9[%]
+    
+
+
+Sentence 42:
+MONO# wartość bezwzględn:0.47[10^3/ul]
+    
+
+
+Sentence 43:
+MONO%:8.2[%]
+    
+
+
+Sentence 44:
+EO# wartość bezwzględna:0.08[10^3/ul]
+    
+
+
+Sentence 45:
+EO%:1.4[%]
+    
+
+
+Sentence 46:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    
+
+
+Sentence 47:
+BASO%:0.5[%]
+    
+
+
+Sentence 48:
+NRBC %:0.0[%]
+    
+
+
+Sentence 49:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 50:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:34.8[sek]
+
+
+
+Sentence 51:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 52:
+Czas protrombinowy:14.6[sek]
+    
+
+
+Sentence 53:
+Wskaźnik PT:75.3[%]
+    
+
+
+Sentence 54:
+INR:1.33
+Czas trombinowy TT: Czas trombinowy TT:17.1[sek]
+
+
+
+Sentence 55:
+Fibrynogen: Fibrynogen:2.80[g/L]
+
+
+
+Sentence 56:
+Przeciwciała przeciw Ascaris lumbricoides IgG:
+
+
+Sentence 57:
+Przeciwciała przeciw Asc:1.6[NTU]
+
+
+
+Sentence 58:
+Przeciwciała przeciw tyreoglobulinie (anty-TG Ab)
+    
+
+
+Sentence 59:
+Przeciwciała przeciw tyr:
+    10,00[IU/ml]
+
+
+
+Sentence 60:
+Przeciwciała przeciw peroksydazie tarczycowej (anty-TPO Ab): Przeciwciała przeciw per:8.7[IU/ml]
+
+
+
+Sentence 61:
+Przeciwciała przeciw receptorowi dla TSH (anty-rTSH Ab)
+    
+
+
+Sentence 62:
+Przeciwciała przeciw rec:
+    0,300[IU/L]
+TSH: TSH:5.78[uIU/ml]
+
+
+
+Sentence 63:
+FT3: FT3:3.71[pg/ml]
+
+
+
+Sentence 64:
+FT4: FT4:1.62[ng/dl]
+
+
+
+Sentence 65:
+Troponina T: Troponina T:3.5[pg/ml]
+
+
+
+Sentence 66:
+Helicobacter pylori przeciwciała IgG ilościowo: Helicobacter pylori prze:7.3[NTU/ml]
+
+
+
+Sentence 67:
+Helicobacter pylori przeciwciała IgA ilościowo: Helicobacter pylori prze:5.8[NTU/ml]
+
+
+
+Sentence 68:
+ALAT: ALAT:43[U/L]
+
+
+
+Sentence 69:
+Amoniak  NH3: Amoniak NH3:88[ug/dl]
+
+
+
+Sentence 70:
+Amylaza w surowicy: Amylaza w surowicy:83[U/L]
+
+
+
+Sentence 71:
+ASPAT: ASPAT:42[U/L]
+Bilirubina niesprzężona (pośrednia) (Bu): Bilirubina niesprzężona:0.79[mg/dl]
+
+
+
+Sentence 72:
+Bilirubina sprzężona (bezpośrednia) (Bc): Bilirubina sprzężona (be:0.00[mg/dl]
+
+
+
+Sentence 73:
+Bilirubina całkowita (TBil): Bilirubina całkowita:0.79[mg/dl]
+
+
+
+Sentence 74:
+CK - aktywność: CK:32[U/L]
+
+
+
+Sentence 75:
+CKMB aktywność: CKMB:21[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 76:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 77:
+Potas (K): Potas:4.2[mmol/L]
+
+
+
+Sentence 78:
+Chlorki (Cl): Chlorki:101[mmol/L]
+
+
+
+Sentence 79:
+Fosfataza alkaliczna (ALP): Fosfataza alkaliczna:294[U/L]
+
+
+
+Sentence 80:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:64[U/L]
+
+
+
+Sentence 81:
+Kreatynina + GFR
+    
+
+
+Sentence 82:
+Kreatynina w surowicy:0.45[mg/dl]
+    eGFR stand.
+
+
+Sentence 83:
+wg Schwartza:151.6[ml/min/1,73 m^2]
+    eGFR zmod.
+
+
+Sentence 84:
+wg Schwartza:113.8[ml/min/1,73 m^2]
+    wzrost:124[cm]
+
+
+
+Sentence 85:
+Mleczany (LAC): Mleczany:29.4[mg/dl]
+
+
+
+Sentence 86:
+Mleczany (LAC): Mleczany:66.2[mg/dl]
+
+
+
+Sentence 87:
+Mleczany (LAC): Mleczany:17.0[mg/dl]
+
+
+
+Sentence 88:
+LDH Dehydrogenaza mleczanowa: LDH Dehydrogenaza mlecza:200[U/L]
+
+
+
+Sentence 89:
+Lipaza: Lipaza:152[U/L]
+
+
+
+Sentence 90:
+Magnez: Magnez:0.79[mmol/L]
+
+
+
+Sentence 91:
+Mocznik: Mocznik:32[mg/dl]
+
+
+
+Sentence 92:
+Wapń całkowity: Wapń całkowity:2.50[mmol/L]
+
+
+
+Sentence 93:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    pH:7.337
+    pCO2:45.0[mmHg]
+    
+
+
+Sentence 94:
+BE:-2.10[mmol/L]
+    HCO3:23.5[mmol/L]
+    
+
+
+Sentence 95:
+pO2:28.3[mmHg]
+    
+
+
+Sentence 96:
+O2Sat:41.1[%]
+
+
+
+Sentence 97:
+Glukoza w surowicy: Glukoza w surowicy:101[mg/dl]
+
+
+
+Sentence 98:
+NT-proBNP surowica: NT-proBNP w surowicy:280[pg/ml]
+
+
+
+Sentence 99:
+------------------------------------------------
+
+
+
+Sentence 100:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 101:
+Q25.4
+
+
+
+Sentence 102:
+Q20.3
+Q20.5
+Z98.8
+Q21.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 103:
+ICD9
+------------------------------------------------
+89.522
+88.721
+89.41
+89.541
+88.761
+23.0105
+------------------------------------------------
+
+

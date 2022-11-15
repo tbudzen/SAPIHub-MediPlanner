@@ -1,0 +1,153 @@
+T1	Treatment 333 417	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej i Diabetologicznej
+T2	Treatment 422 575	Wskazana pilna hospitalizacja w Oddziale Kardiologicznym celem wykonania koronarografii, zalecany ośrodek dysponujący zabezpieczeniem kardiochirurgicznym
+T3	Treatment 601 692	Wskazana pilna konsultacja w Poradni Diabetologicznej celem optymalizacji leczenia cukrzycy
+T4	Behaviour 718 757	Dieta lekkostrawna, niskocholesterolowa
+T5	Investigation 765 856	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T6	Date 857 867	co 6-8 tyg
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Investigation 881 940	Systematyczna kontrola ciśnienia tętniczego krwi i glikemii
+T8	Investigation 947 996	Wskazana kontrola funkcji nerek oraz stęż. potasu
+T9	Date 997 1005	za 7 dni
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Drug 1022 1027	Acard
+T11	Drug_dose 1028 1053	75 mg 1x1 tabl. wieczorem
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 1054 1064	Prestarium
+T13	Drug_dose 1065 1089	5 mg 1x1 tabl. wieczorem
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Drug 1090 1097	Sobycor
+T15	Drug_dose 1098 1117	5 mg 1x1 tabl. rano
+R5	Drg Arg1:T14 Arg2:T15	
+T16	Drug 1118 1128	Cardura XL
+T17	Drug_dose 1129 1153	4 mg 1x1 tabl. wieczorem
+R6	Drg Arg1:T16 Arg2:T17	
+T18	Drug 1154 1159	Atrox
+T19	Drug_dose 1160 1185	40 mg 1x1 tabl. wieczorem
+R7	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1186 1194	Primacor
+T21	Drug_dose 1195 1219	5 mg 1x1 tabl. wieczorem
+R8	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1220 1228	Torsemed
+T23	Drug_dose 1229 1248	20 mg 1-1/2-0 tabl.
+R9	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1249 1266	Hydrochlorotiazyd
+T25	Drug_dose 1267 1284	25 mg 1x1/2 tabl.
+R10	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1285 1294	Metformax
+T27	Drug_dose 1295 1353	1000 mg 0-1-1 tabl. - kont. zaleceń lek. spec. diabetologa
+R11	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1354 1362	Glibetic
+T29	Drug_dose 1363 1421	4 mg 1x1 tabl. rano - kont. zaleceń lek. spec. diabetologa
+R12	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1422 1431	Nitromint
+T31	Drug_dose 1432 1475	1-2 dawki doraźnie w razie bólu dławicowego
+R13	Drg Arg1:T30 Arg2:T31	
+T32	Condition 1731 1809	Niewydolność serca z umiarkowanie obniżoną funkcją skurczową w III klasie NYHA
+N1	Reference T32 ICD10:I50	Niewydolność serca
+T33	Condition 1811 1851	Podejrzenie choroby niedokrwiennej serca
+N2	Reference T33 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T34	Condition 1853 1884	Nadciśnienie tętnicze I* wg WHO
+N3	Reference T34 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T35	Condition 1886 1906	Hipercholesterolemia
+N4	Reference T35 ICD10:E78.0	Czysta hipercholesterolemia
+T36	Condition 1908 1941	Źle kontrolowana cukrzyca typu II
+N5	Reference T36 ICD10:E11	Cukrzyca insulinoniezależna
+T37	Symptom 2114 2157	ograniczenie tolerancji wysiłku do NYHA III
+N6	Reference T37 ICD10:R53	Złe samopoczucie i zmęczenie
+T38	Symptom 2159 2218	bólu w klatce piersiowej (kłujący, promieniujący do pleców)
+N7	Reference T38 ICD10:R07.3	Inne bóle w klatce piersiowej
+T39	Symptom 2241 2253	zasłabnięcia
+T40	Symptom 2255 2283	duszność nocną typu ortopnoe
+N8	Reference T40 ICD10:R06.0	Duszność
+T41	Symptom 2285 2303	obrzęki kk dolnych
+N9	Reference T41 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T42	Symptom 2305 2329	okresowo kołatania serca
+N10	Reference T42 ICD10:R00.2	Kołatanie serca
+T43	Condition 2377 2428	nadciśnienie tętnicze kontrolowane farmakologicznie
+N11	Reference T43 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T44	Condition 2430 2446	cukrzyca typu II
+N12	Reference T44 ICD10:E11	Cukrzyca insulinoniezależna
+T45	Condition 2448 2468	hipercholesterolemia
+N13	Reference T45 ICD10:E78.0	Czysta hipercholesterolemia
+T46	Negation 2471 2477	Neguje
+T47	Symptom 2479 2487	omdlenia
+N14	Reference T47 ICD10:R55	Omdlenie i zapaść
+T48	Symptom 2489 2499	krwawienia
+T49	Symptom 2501 2514	czarne stolce
+N15	Reference T49 ICD10:K92.1	Stolce smołowate
+T50	Symptom 2516 2532	brunatne wymioty
+N16	Reference T50 ICD10:K92.0	Wymioty krwawe
+T51	Condition 2534 2550	chorobę wrzodową
+N17	Reference T51 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T52	Condition 2552 2562	udar mózgu
+N18	Reference T52 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T53	Condition 2564 2575	zawał serca
+N19	Reference T53 ICD10:I25.2	Przebyty zawał serca
+R14	Neg Arg1:T46 Arg2:T53	
+R15	Neg Arg1:T46 Arg2:T52	
+R16	Neg Arg1:T46 Arg2:T51	
+R17	Neg Arg1:T46 Arg2:T50	
+R18	Neg Arg1:T46 Arg2:T49	
+R19	Neg Arg1:T46 Arg2:T48	
+R20	Neg Arg1:T46 Arg2:T47	
+T54	Treatment 2580 2597	Przebyte operacje
+T55	Negation 2599 2605	neguje
+R21	Neg Arg1:T55 Arg2:T54	
+T56	Behaviour 2607 2622	Palenie tytoniu
+N20	Reference T56 ICD10:Z72.0	Używanie tytoniu
+T57	Negation 2624 2627	nie
+R22	Neg Arg1:T57 Arg2:T56	
+T58	Behaviour 2629 2640	Inne używki
+T59	Negation 2642 2645	nie
+R23	Neg Arg1:T59 Arg2:T58	
+T60	Condition 2647 2656	Uczulenia
+T61	Negation 2658 2661	nie
+R24	Neg Arg1:T61 Arg2:T60	
+T62	Condition 2690 2693	WZW
+N21	Reference T62 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+A1	Source T62 Declared
+T63	Condition 2756 2765	borelioza
+N22	Reference T63 ICD10:A69.2	Choroba z Lyme
+T64	Condition 2771 2774	tbc
+N23	Reference T64 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T65	Negation 2767 2768	-
+R25	Neg Arg1:T65 Arg2:T63	
+T66	Negation 2776 2777	-
+R26	Neg Arg1:T66 Arg2:T64	
+T67	Behaviour 2796 2822	warunki mieszkaniowe dobre
+T68	Behaviour 2824 2832	emerytka
+T69	Drug 2922 2927	Tezeo
+T70	Drug_dose 2928 2940	40 2x1 tabl.
+R27	Drg Arg1:T69 Arg2:T70	
+T71	Drug 2941 2948	Sobycor
+T72	Drug_dose 2949 2968	5 mg 1x1 tabl. rano
+R28	Drg Arg1:T71 Arg2:T72	
+T73	Drug 2969 2977	Torsemed
+T74	Drug_dose 2978 2998	10 mg 1x1 tabl. rano
+R29	Drg Arg1:T73 Arg2:T74	
+T75	Drug 2999 3007	Glibetic
+T76	Drug_dose 3008 3027	4 mg 1x1 tabl. rano
+R30	Drg Arg1:T75 Arg2:T76	
+T77	Drug 3028 3037	Metformax
+T78	Drug_dose 3038 3057	1000 mg 0-1-1 tabl.
+R31	Drg Arg1:T77 Arg2:T78	
+T79	Drug 3058 3062	Agen
+T80	Drug_dose 3063 3090	5 mg 1x1/2 tabl. w południe
+R32	Drg Arg1:T79 Arg2:T80	
+T81	Drug 3091 3096	Acard
+T82	Drug_dose 3097 3122	75 mg 1x1 tabl. wieczorem
+R33	Drg Arg1:T81 Arg2:T82	
+T83	Drug 3123 3128	Atrox
+T84	Drug_dose 3129 3154	40 mg 1x1 tabl. wieczorem
+R34	Drg Arg1:T83 Arg2:T84	
+T85	Drug 3155 3165	Cardura XL
+T86	Drug_dose 3166 3190	4 mg 1x1 tabl. wieczorem
+R35	Drg Arg1:T85 Arg2:T86	
+A2	Source T33 Declared
+T87	Condition 2836 2846	W rodzinie
+A3	Status T87 Family
+T88	Negation 2848 2859	bez wywiadu
+T89	Condition 2860 2884	ch. sercowo-naczyniowych
+N24	Reference T89 ICD10:I51.6	Choroby serca i naczyń krwionośnych, nieokreślone
+R36	Neg Arg1:T88 Arg2:T89	
+A4	Status T89 Family

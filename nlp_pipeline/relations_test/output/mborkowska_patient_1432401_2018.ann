@@ -1,0 +1,18 @@
+T1	Condition 746 758	z z. Fallota
+N1	Reference T1 ICD10:Q21.3	Tetralogia Fallota
+T2	Condition 460 511	Wrodzona wada serca pod postacią Tetralogii Fallota
+N2	Reference T2 ICD10:Q21.3	Tetralogia Fallota
+T3	Condition 775 796	leczenia operacyjnego
+T4	Condition 804 821	wywiad alergiczny
+N3	Reference T4 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T5	Negation 822 828	ujemny
+R1	Neg Arg1:T5 Arg2:T4	
+T6	Drug 831 845	leków na stałe
+T7	Negation 846 859	nie otrzymuje
+R2	Neg Arg1:T7 Arg2:T6	
+T8	Symptom 592 608	Sinica centralna
+N4	Reference T8 ICD10:R23.0	Sinica
+T9	Condition 515 588	Wspólne odejście pnia ramienno-głowowego i lewej t. szyjnej od łuku aorty
+N5	Reference T9 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+R14	Neg Arg1:T7 Arg2:T6
+R5	Neg Arg1:T5 Arg2:T4

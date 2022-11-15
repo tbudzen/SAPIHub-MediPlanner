@@ -1,0 +1,354 @@
+T1	Condition 449 452	BAV
+N1	Reference T1 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T2	Treatment 689 710	zabiegowym zamknięciu
+T3	Condition 711 756	ubytku przegrody międzyprzedsionkowej typu II
+N3	Reference T3 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T4	Treatment 757 800	zestawem Occlutech Figulla Flex II ASD 18mm
+N4	Reference T4 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+N2	Reference T2 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T5	Condition 802 831	Dwupłatkowa zastawka aortalna
+N5	Reference T5 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T6	Condition 850 877	przewodu pępkowo-jelitowego
+T7	Treatment 841 849	operacji
+N6	Reference T7 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+N7	Reference T6 ICD10:Q43.0	Uchyłek Meckela
+T8	Condition 879 887	torbieli
+T9	Treatment 890 903	appendektomii
+N8	Reference T9 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T10	Date 905 909	1997
+R1	Dat Arg1:T10 Arg2:T9	
+R2	Dat Arg1:T10 Arg2:T8	
+R3	Dat Arg1:T10 Arg2:T6	
+R4	Dat Arg1:T10 Arg2:T7	
+T11	Treatment 920 928	operacji
+A1	Status T11 Historical_Insignificant
+N9	Reference T11 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+A2	Status T7 Historical_Insignificant
+A3	Status T6 Historical_Insignificant
+A4	Status T8 Historical_Insignificant
+A5	Status T9 Historical_Insignificant
+T12	Condition 929 966	przepukliny pachwinowej prawostronnej
+N10	Reference T12 ICD10:K40.9	Jednostronna lub nieokreślona przepuklina pachwinowa bez niedrożności lub zgorzeli
+T13	Date 968 972	1995
+A6	Status T12 Historical_Insignificant
+R5	Dat Arg1:T13 Arg2:T12	
+R6	Dat Arg1:T13 Arg2:T11	
+T14	Treatment 983 993	meatotomii
+N11	Reference T14 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T15	Date 995 999	1993
+A7	Status T14 Historical_Insignificant
+R7	Dat Arg1:T15 Arg2:T14	
+T16	Treatment 1113 1163	Dalsza opieka w POZ oraz w Poradni Kardiologicznej
+T17	Treatment 1168 1210	Wizyta kontrolna w Poradni Kardiologicznej
+T18	Date 1211 1223	za 1 miesiąc
+R8	Dat Arg1:T18 Arg2:T17	
+T19	Treatment 1248 1329	Ponowna kontrolna hospitalizacja w Klinice Kardiologii i Wad Wrodzonych Dorosłych
+T20	Treatment 1336 1363	oceny skuteczności leczenia
+T21	Date 1364 1377	za 3 miesiące
+R9	Dat Arg1:T21 Arg2:T20	
+R10	Dat Arg1:T21 Arg2:T19	
+T22	Behaviour 1403 1484	Dieta lekkostrawna z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T23	Investigation 1489 1545	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T24	Treatment 1559 1641	profilaktyka infekcyjnego zapalenia wsierdzia (podczas zabiegów stomatologicznych)
+T25	Date 1642 1669	przez 6 miesięcy po zabiegu
+R11	Dat Arg1:T25 Arg2:T24	
+T26	Drug 1672 1684	amoksycylina
+T27	Drug_dose 1685 1709	2g doustnie lub dożylnie
+T28	Condition 1726 1739	nietolerancji
+T29	Drug 1740 1743	w/w
+N12	Reference T28 ICD10:Z88.1	Uczulenie na inne antybiotyki w wywiadzie
+T30	Drug 1755 1767	klindamycynę
+T31	Drug_dose 1768 1795	600mg doustnie lub dożylnie
+R12	Drg Arg1:T26 Arg2:T27	
+R13	Alg Arg1:T28 Arg2:T29	
+R14	Drg Arg1:T30 Arg2:T31	
+T32	Drug 1830 1835	Acard
+T33	Drug_dose 1836 1861	75mg 1 tabletka wieczorem
+T34	Drug 1880 1886	Plavix
+T35	Drug_dose 1887 1907	75mg 1 tabletka rano
+T36	Date 1862 1878	przez 6 miesięcy
+T37	Date 1908 1924	przez 3 miesiące
+T38	Date 1926 1936	06/05/2019
+R15	Dat Arg1:T36 Arg2:T32	
+R16	Drg Arg1:T32 Arg2:T33	
+R17	Drg Arg1:T34 Arg2:T35	
+R18	Dat Arg1:T37 Arg2:T34	
+R19	Dat Arg1:T38 Arg2:T34	
+T39	Negation 1948 1954	nie ma
+T40	Condition 1955 2009	przeciwwskazań do ewentualnego rezonansu magnetycznego
+R20	Neg Arg1:T39 Arg2:T40	
+T41	Treatment 2122 2170	Dalsza opieka w POZ oraz Poradni Kardiologicznej
+T42	Investigation 2184 2215	kontrola parametrów wątrobowych
+T43	Date 2216 2230	za 3-5 tygodni
+R21	Dat Arg1:T43 Arg2:T42	
+T44	Investigation 2235 2303	Okresowa kontrola morfologii, elektrolitów oraz parametrów nerkowych
+T45	Behaviour 2308 2389	Dieta lekkostrawna z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T46	Investigation 2394 2450	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T47	Treatment 2464 2546	profilaktyka infekcyjnego zapalenia wsierdzia (podczas zabiegów stomatologicznych)
+T48	Date 2547 2574	przez 6 miesięcy po zabiegu
+T49	Drug 2577 2589	amoksycylina
+T50	Drug_dose 2590 2614	2g doustnie lub dożylnie
+T51	Condition 2631 2644	nietolerancji
+T52	Drug 2645 2648	w/w
+N13	Reference T51 ICD10:Z88.1	Uczulenie na inne antybiotyki w wywiadzie
+T53	Drug 2660 2672	klindamycynę
+T54	Drug_dose 2673 2700	600mg doustnie lub dożylnie
+R22	Drg Arg1:T49 Arg2:T50	
+R23	Dat Arg1:T48 Arg2:T47	
+R24	Alg Arg1:T51 Arg2:T52	
+R25	Drg Arg1:T53 Arg2:T54	
+T55	Drug 2739 2744	Acard
+T56	Drug_dose 2745 2770	75mg 1 tabletka wieczorem
+T57	Date 2771 2787	przez 3 miesiące
+T58	Date 2789 2802	do 06/09/2019
+R26	Drg Arg1:T55 Arg2:T56	
+R27	Dat Arg1:T57 Arg2:T55	
+R28	Dat Arg1:T58 Arg2:T55	
+T59	Negation 2814 2820	nie ma
+T60	Condition 2821 2875	przeciwwskazań do ewentualnego rezonansu magnetycznego
+R29	Neg Arg1:T59 Arg2:T60	
+T61	Treatment 3102 3112	zamknięciu
+T62	Condition 3113 3158	ubytku przegrody międzyprzedsionkowej typu II
+N15	Reference T62 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T63	Treatment 3159 3202	zestawem Occlutech Figulla Flex II ASD 18mm
+N16	Reference T63 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+N14	Reference T61 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T64	Date 3204 3215	06/03/2019)
+R30	Dat Arg1:T64 Arg2:T63	
+R31	Dat Arg1:T64 Arg2:T62	
+R32	Dat Arg1:T64 Arg2:T61	
+T65	Condition 3217 3246	Dwupłatkowa zastawka aortalna
+N17	Reference T65 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T66	Treatment 3256 3264	operacji
+N18	Reference T66 ICD10:Z98.8	
+T67	Condition 3265 3292	przewodu pępkowo-jelitowego
+N19	Reference T67 ICD10:Q43.0	Uchyłek Meckela
+T68	Condition 3294 3302	torbieli
+T69	Treatment 3305 3318	appendektomii
+A8	Status T69 Historical_Insignificant
+N20	Reference T69 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+A9	Status T68 Historical_Insignificant
+A10	Status T67 Historical_Insignificant
+T70	Date 3320 3324	1997
+T71	Treatment 3335 3343	operacji
+A11	Status T71 Historical_Insignificant
+N21	Reference T71 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T72	Condition 3344 3381	przepukliny pachwinowej prawostronnej
+A12	Status T72 Historical_Insignificant
+N22	Reference T72 ICD10:K40.9	Jednostronna lub nieokreślona przepuklina pachwinowa bez niedrożności lub zgorzeli
+T73	Date 3383 3387	1995
+T74	Treatment 3398 3408	meatotomii
+A13	Status T74 Historical_Insignificant
+N23	Reference T74 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T75	Date 3410 3414	1993
+R33	Dat Arg1:T70 Arg2:T66	
+R34	Dat Arg1:T70 Arg2:T67	
+R35	Dat Arg1:T70 Arg2:T68	
+R36	Dat Arg1:T70 Arg2:T69	
+R37	Dat Arg1:T73 Arg2:T71	
+R38	Dat Arg1:T73 Arg2:T72	
+R39	Dat Arg1:T75 Arg2:T74	
+T76	Condition 3634 3712	Wada wrodzona serca pod postacią ubytku przegrody międzyprzedsionkowej typu II
+N24	Reference T76 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T77	Condition 3718 3749	dwupłatkowej zastawki aortalnej
+N25	Reference T77 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T78	Treatment 3759 3777	zabiegu zamknięcia
+A14	Status T78 Historical_Insignificant
+N26	Reference T78 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T79	Condition 3778 3787	ASD t. II
+N27	Reference T79 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T80	Treatment 3788 3806	zestawem Occlutech
+N28	Reference T80 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T81	Date 3813 3824	07.03.2019r
+R40	Dat Arg1:T81 Arg2:T80	
+R41	Dat Arg1:T81 Arg2:T79	
+R42	Dat Arg1:T81 Arg2:T78	
+T82	Condition 3969 3975	ASD II
+N29	Reference T82 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T83	Condition 3981 3984	BAV
+N30	Reference T83 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T84	Treatment 4029 4047	zabiegu zamknięcia
+N31	Reference T84 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T85	Condition 4048 4051	ASD
+N32	Reference T85 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T86	Negation 4053 4059	Neguje
+T87	Symptom 4060 4072	zasłabnięcia
+T88	Symptom 4074 4082	omdlenia
+N33	Reference T88 ICD10:R55	Omdlenie i zapaść
+T89	Symptom 4084 4097	zawroty głowy
+N34	Reference T89 ICD10:R42	Zawroty głowy i odurzenie
+T90	Symptom 4099 4123	bóle w klatce piersiowej
+N35	Reference T90 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T91	Symptom 4125 4140	kołatania serca
+N36	Reference T91 ICD10:R00.2	Kołatanie serca
+T92	Symptom 4142 4161	Innych dolegliwości
+T93	Negation 4162 4173	nie zgłasza
+T94	Treatment 4196 4204	operacji
+A15	Status T94 Historical_Insignificant
+N37	Reference T94 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T95	Condition 4205 4232	przewodu pępkowo-jelitowego
+A16	Status T95 Historical_Insignificant
+N38	Reference T95 ICD10:Q43.0	Uchyłek Meckela
+T96	Condition 4234 4242	torbieli
+A17	Status T96 Historical_Insignificant
+T97	Treatment 4245 4258	appendektomii
+A18	Status T97 Historical_Insignificant
+N39	Reference T97 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T98	Date 4260 4264	1997
+T99	Treatment 4275 4283	operacji
+A19	Status T99 Historical_Insignificant
+N40	Reference T99 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T100	Condition 4284 4321	przepukliny pachwinowej prawostronnej
+A20	Status T100 Historical_Insignificant
+N41	Reference T100 ICD10:K40.9	Jednostronna lub nieokreślona przepuklina pachwinowa bez niedrożności lub zgorzeli
+T101	Date 4323 4327	1995
+T102	Treatment 4338 4348	meatotomii
+A21	Status T102 Historical_Insignificant
+N42	Reference T102 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T103	Date 4350 4354	1993
+T104	Condition 4384 4387	WZW
+N43	Reference T104 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T105	Negation 4388 4393	( - )
+T106	Condition 4396 4405	borelioza
+N44	Reference T106 ICD10:A69.2	Choroba z Lyme
+T107	Condition 4413 4421	gruźlica
+N45	Reference T107 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T108	Negation 4406 4411	( - )
+T109	Negation 4422 4427	( - )
+T110	Treatment 4429 4433;4461 4471	odra szczepiony
+T111	Condition 4474 4489	Wywiad rodzinny
+A22	Status T111 Family
+T112	Negation 4491 4501	nieistotny
+T113	Behaviour 4503 4518	Palenie tytoniu
+N46	Reference T113 ICD10:Z72.0	Używanie tytoniu
+T114	Negation 4520 4526	neguje
+T115	Behaviour 4528 4539	Inne używki
+T116	Negation 4541 4547	neguje
+T117	Condition 4549 4558	Uczulenia
+N47	Reference T117 ICD10:Z88	
+T118	Negation 4560 4566	neguje
+T119	Behaviour 4584 4610	warunki mieszkaniowe dobre
+T120	Behaviour 4612 4629	Pracownik biurowy
+T121	Drug 4631 4635	Leki
+T122	Negation 4637 4647	nie zażywa
+T123	Investigation 4663 4673	Echo serca
+T124	Treatment 4675 4692	zabieg zamknięcia
+N48	Reference T124 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T125	Condition 4693 4696	ASD
+N49	Reference T125 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R43	Neg Arg1:T86 Arg2:T87	
+R44	Neg Arg1:T86 Arg2:T88	
+R45	Neg Arg1:T86 Arg2:T89	
+R46	Neg Arg1:T86 Arg2:T90	
+R47	Neg Arg1:T86 Arg2:T91	
+R48	Neg Arg1:T93 Arg2:T92	
+R49	Dat Arg1:T98 Arg2:T97	
+R50	Dat Arg1:T98 Arg2:T96	
+R51	Dat Arg1:T98 Arg2:T95	
+R52	Dat Arg1:T98 Arg2:T94	
+R53	Dat Arg1:T101 Arg2:T100	
+R54	Dat Arg1:T101 Arg2:T99	
+R55	Dat Arg1:T103 Arg2:T102	
+R56	Neg Arg1:T105 Arg2:T104	
+R57	Neg Arg1:T108 Arg2:T106	
+R58	Neg Arg1:T109 Arg2:T107	
+R59	Neg Arg1:T112 Arg2:T111	
+R60	Neg Arg1:T114 Arg2:T113	
+R61	Neg Arg1:T116 Arg2:T115	
+R62	Neg Arg1:T118 Arg2:T117	
+R63	Neg Arg1:T122 Arg2:T121	
+T126	Condition 4880 4914	wrodzona serca pod postacią ASD II
+N50	Reference T126 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T127	Condition 4920 4923	BAV
+N51	Reference T127 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T128	Treatment 4928 4938	zamknięciu
+N52	Reference T128 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T129	Condition 4939 4984	ubytku przegrody międzyprzedsionkowej typu II
+N53	Reference T129 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T130	Date 4986 4997	07.03.2019r
+R64	Dat Arg1:T130 Arg2:T129	
+R65	Dat Arg1:T130 Arg2:T128	
+T131	Investigation 5033 5064	oceny stanu pacjenta po zabiegu
+T132	Negation 5066 5072	Neguje
+T133	Symptom 5073 5085	zasłabnięcia
+T134	Symptom 5087 5095	omdlenia
+N54	Reference T134 ICD10:R55	Omdlenie i zapaść
+T135	Symptom 5097 5110	zawroty głowy
+N55	Reference T135 ICD10:R42	Zawroty głowy i odurzenie
+T136	Symptom 5112 5136	bóle w klatce piersiowej
+N56	Reference T136 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T137	Symptom 5138 5153	kołatania serca
+N57	Reference T137 ICD10:R00.2	Kołatanie serca
+T138	Symptom 5155 5174	Innych dolegliwości
+T139	Negation 5175 5186	nie zgłasza
+T140	Treatment 5209 5217	operacji
+A23	Status T140 Historical_Insignificant
+N58	Reference T140 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T141	Condition 5218 5245	przewodu pępkowo-jelitowego
+A24	Status T141 Historical_Insignificant
+N59	Reference T141 ICD10:Q43.0	Uchyłek Meckela
+T142	Condition 5247 5255	torbieli
+A25	Status T142 Historical_Insignificant
+T143	Treatment 5258 5271	appendektomii
+A26	Status T143 Historical_Insignificant
+N60	Reference T143 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T144	Date 5273 5277	1997
+T145	Treatment 5288 5296	operacji
+A27	Status T145 Historical_Insignificant
+N61	Reference T145 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T146	Condition 5297 5334	przepukliny pachwinowej prawostronnej
+N62	Reference T146 ICD10:K40.9	Jednostronna lub nieokreślona przepuklina pachwinowa bez niedrożności lub zgorzeli
+A28	Status T146 Historical_Insignificant
+T147	Date 5336 5340	1995
+T148	Treatment 5351 5361	meatotomii
+A29	Status T148 Historical_Insignificant
+N63	Reference T148 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T149	Date 5363 5367	1993
+T150	Condition 5397 5400	WZW
+N64	Reference T150 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T151	Negation 5401 5406	( - )
+T152	Condition 5409 5418	borelioza
+N65	Reference T152 ICD10:A69.9	Zakażenie wywołane przez krętki, nieokreślone
+T153	Negation 5419 5424	( - )
+T154	Condition 5426 5434	gruźlica
+N66	Reference T154 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T155	Negation 5435 5440	( - )
+T156	Treatment 5442 5446;5474 5484	odra szczepiony
+T157	Condition 5487 5502	Wywiad rodzinny
+A30	Status T157 Family
+T158	Negation 5504 5514	nieistotny
+T159	Behaviour 5516 5531	Palenie tytoniu
+N67	Reference T159 ICD10:Z72.0	Używanie tytoniu
+T160	Negation 5533 5539	neguje
+T161	Behaviour 5541 5552	Inne używki
+T162	Negation 5554 5560	neguje
+T163	Condition 5562 5571	Uczulenia
+N68	Reference T163 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T164	Negation 5573 5579	neguje
+T165	Behaviour 5597 5623	warunki mieszkaniowe dobre
+T166	Behaviour 5625 5642	Pracownik biurowy
+T167	Drug 5644 5648	Leki
+T168	Drug_dose 5650 5660	nie zażywa
+T169	Investigation 5676 5686	Echo serca
+T170	Investigation 5688 5694	Holter
+R66	Neg Arg1:T132 Arg2:T133	
+R67	Neg Arg1:T132 Arg2:T134	
+R68	Neg Arg1:T132 Arg2:T135	
+R69	Neg Arg1:T132 Arg2:T136	
+R70	Neg Arg1:T132 Arg2:T137	
+R71	Neg Arg1:T139 Arg2:T138	
+R72	Dat Arg1:T144 Arg2:T143	
+R73	Dat Arg1:T144 Arg2:T142	
+R74	Dat Arg1:T144 Arg2:T141	
+R75	Dat Arg1:T144 Arg2:T140	
+R76	Dat Arg1:T147 Arg2:T146	
+R77	Dat Arg1:T147 Arg2:T145	
+R78	Dat Arg1:T149 Arg2:T148	
+R79	Neg Arg1:T151 Arg2:T150	
+R80	Neg Arg1:T153 Arg2:T152	
+R81	Neg Arg1:T155 Arg2:T154	
+R82	Neg Arg1:T158 Arg2:T157	
+R83	Neg Arg1:T160 Arg2:T159	
+R84	Neg Arg1:T162 Arg2:T161	
+R85	Neg Arg1:T164 Arg2:T163	
+R86	Drg Arg1:T167 Arg2:T168	

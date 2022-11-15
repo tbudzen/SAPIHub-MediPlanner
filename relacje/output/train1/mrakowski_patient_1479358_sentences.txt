@@ -1,0 +1,461 @@
+allRelations          : 28
+oks                   : 10
+isRedundantAndRemoveds: 13
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 4
+GOOD / BAD            : 23 / 5
+Sentence 0:
+------------------------------------------------
+Wiek: 62 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:R07|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo::
+------------------------------------------------
+
+
+
+Sentence 6:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 7:
+Pacjentka  lat 62 przyjęta do Kliniki z powodu niecharakterystycznych dolegliwości bólowych w klatce piersiowej .
+
+
+Sentence 8:
+Obecnie zgłasza osłabienie i obniżoną tolerancję wysiłku.  
+
+
+Sentence 9:
+okresowe podwyższone RR do 150/100 mmHg .Neguje zasłabnięcia.  
+
+R1	Neg Arg1:T5 Arg2:T6 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[786, 793] <type: RIGHT>>
+R2	Neg Arg1:T5 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Neguje -> podwyższone RR do 150/100 mmHg <:REMOVED many second tags on the left:> <RANK: 2> <info: start[786, 754] <type: LEFT>>
+
+
+Sentence 10:
+W wywiadzie :
+
+
+Sentence 11:
+Stan po chemioterapii ( dokorubicyna , Cyclofosfamid)  z powodu ca. piersi lewej  20.05-08.08.2019.
+R3	Dat Arg1:T11 Arg2:T10 << OK >>	20.05-08.08.2019 -> ca. piersi lewej  <RANK: 3> <info: start[905, 887] <type: LEFT>>
+R4	Dat Arg1:T11 Arg2:T7 <<SHOULD NOT BE REMOVED>>	20.05-08.08.2019 -> chemioterapii <:REMOVED other second tag between (left):> <RANK: 2> <info: start[905, 831] <type: LEFT>>
+R5	Dat Arg1:T11 Arg2:T8 <<REDUNDANT!!!REMOVED>>	20.05-08.08.2019 -> dokorubicyna <:REMOVED other second tag between (left):> <RANK: 2> <info: start[905, 847] <type: LEFT>>
+R6	Dat Arg1:T11 Arg2:T9 <<REDUNDANT!!!REMOVED>>	20.05-08.08.2019 -> Cyclofosfamid <:REMOVED other second tag between (left):> <RANK: 2> <info: start[905, 862] <type: LEFT>>
+R7	Alg Arg1:T10 Arg2:T8 <<REDUNDANT!!!SHOULD BE REMOVED>>	ca. piersi lewej -> dokorubicyna  <RANK: 2> <info: start[887, 847] <type: LEFT>>
+R8	Alg Arg1:T10 Arg2:T9 <<REDUNDANT!!!SHOULD BE REMOVED>>	ca. piersi lewej -> Cyclofosfamid  <RANK: 3> <info: start[887, 862] <type: LEFT>>
+
+
+Sentence 12:
+Stan po częściowej mastektomii lewostronnej 09.04.2019.
+R9	Dat Arg1:T13 Arg2:T12 << OK >>	09.04.2019 -> częściowej mastektomii lewostronnej  <RANK: 3> <info: start[967, 931] <type: LEFT>>
+
+
+Sentence 13:
+Zapalenie błony śluzowej żoładka.
+
+
+
+Sentence 14:
+Przebyte operacje:  j.w
+
+
+
+Sentence 15:
+Przebyte choroby zakaźne - WZW ( -  ) , borelioza ( - ) Odra ( - )
+
+R10	Neg Arg1:T19 Arg2:T16 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1100, 1064] <type: LEFT>>
+R11	Neg Arg1:T19 Arg2:T17 <<REDUNDANT!!!SHOULD BE REMOVED>>	- -> borelioza  <RANK: 3> <info: start[1100, 1077] <type: LEFT>>
+R12	Neg Arg1:T19 Arg2:T18 << OK >>	- -> Odra  <RANK: 3> <info: start[1100, 1093] <type: LEFT>>
+R13	Neg Arg1:T20 Arg2:T16 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1089, 1064] <type: LEFT>>
+R14	Neg Arg1:T20 Arg2:T17 << OK >>	- -> borelioza  <RANK: 3> <info: start[1089, 1077] <type: LEFT>>
+R15	Neg Arg1:T20 Arg2:T18 <<REDUNDANT!!!SHOULD BE REMOVED>>	- -> Odra  <RANK: 3> <info: start[1089, 1093] <type: RIGHT>>
+R16	Neg Arg1:T21 Arg2:T16 << OK >>	- -> WZW  <RANK: 3> <info: start[1070, 1064] <type: LEFT>>
+R17	Neg Arg1:T21 Arg2:T17 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1070, 1077] <type: RIGHT>>
+R18	Neg Arg1:T21 Arg2:T18 <<REDUNDANT!!!REMOVED>>	- -> Odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1070, 1093] <type: RIGHT>>
+
+
+Sentence 16:
+W wywiadzie rodzinnym :  matka - tarczyce, rozrusznik serca , ojciec - ca. prostaty , stan po udarze mózgu , nadciśnienie tętnicze 
+
+
+
+Sentence 17:
+Palenie tytoniu: nie pali od 10 lat 
+
+R19	Neg Arg1:T29 Arg2:T28 << OK >>	nie pali -> Palenie tytoniu  <RANK: 3> <info: start[1253, 1236] <type: LEFT>>
+R20	Dat Arg1:T30 Arg2:T28 << OK >>	od 10 lat -> Palenie tytoniu  <RANK: 3> <info: start[1262, 1236] <type: LEFT>>
+
+
+Sentence 18:
+Inne używki: nie 
+Uczulenia: neguje
+Stan społeczny: warunki mieszkaniowe dobre , mieszka z sama, ekonomista 
+Leki: bez leków 
+
+R21	Neg Arg1:T32 Arg2:T33 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1286, 1291] <type: RIGHT>>
+R22	Neg Arg1:T32 Arg2:T31 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[1286, 1273] <type: LEFT>>
+R23	Neg Arg1:T32 Arg2:T35 <<REDUNDANT!!!REMOVED>>	nie -> warunki mieszkaniowe dobre <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1286, 1325] <type: RIGHT>>
+R24	Neg Arg1:T32 Arg2:T36 <<REDUNDANT!!!REMOVED>>	nie -> ekonomista <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1286, 1370] <type: RIGHT>>
+R25	Neg Arg1:T34 Arg2:T33 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[1302, 1291] <type: LEFT>>
+R26	Neg Arg1:T34 Arg2:T31 <<REDUNDANT!!!REMOVED>>	neguje -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1302, 1273] <type: LEFT>>
+R27	Neg Arg1:T34 Arg2:T35 <<REDUNDANT!!!REMOVED>>	neguje -> warunki mieszkaniowe dobre <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1302, 1325] <type: RIGHT>>
+R28	Neg Arg1:T34 Arg2:T36 <<REDUNDANT!!!REMOVED>>	neguje -> ekonomista <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1302, 1370] <type: RIGHT>>
+
+
+Sentence 19:
+Plan Opieki : Echo serca , , Próba Wysiłkowa ,  , Planowany czas hospitalizacji 1 dni
+
+
+
+Sentence 20:
+------------------------------------------------
+
+
+
+Sentence 21:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 22:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.42[10^3/ul]
+    
+
+
+Sentence 23:
+RBC Krwinki czerwone:4.69[10^6/ul]
+    
+
+
+Sentence 24:
+HGB Hemoglobina:14.0[g/dl]
+    
+
+
+Sentence 25:
+HCT Hematokryt:41.2[%]
+    
+
+
+Sentence 26:
+MCV wskaźnik czerwonokrw:87.8[fl]
+    
+
+
+Sentence 27:
+MCH wskaźnik czerwonokrw:29.9[pg]
+    
+
+
+Sentence 28:
+MCHC wskaźnik czerwonokr:34.0[g/dl]
+    
+
+
+Sentence 29:
+PLT z morfologii:253[10^3/ul]
+    
+
+
+Sentence 30:
+RDW-SD:42.1[fl]
+    
+
+
+Sentence 31:
+RDW-CV:13.2[%]
+    PDW:11.4[fl]
+    
+
+
+Sentence 32:
+MPV:9.9[fl]
+    
+
+
+Sentence 33:
+P-LCR:25.1[%]
+    
+
+
+Sentence 34:
+PCT (hematokryt płytkowy:0.25[%]
+    
+
+
+Sentence 35:
+NEUTR# wartość bezwzględ:3.28[10^3/ul]
+    
+
+
+Sentence 36:
+NEUTR%:60.5[%]
+    
+
+
+Sentence 37:
+LYMH# wartość bezwzględn:1.42[10^3/ul]
+    
+
+
+Sentence 38:
+LYMPH%:26.2[%]
+    
+
+
+Sentence 39:
+MONO# wartość bezwzględn:0.59[10^3/ul]
+    
+
+
+Sentence 40:
+MONO%:10.9[%]
+    
+
+
+Sentence 41:
+EO# wartość bezwzględna:0.10[10^3/ul]
+    
+
+
+Sentence 42:
+EO%:1.8[%]
+    
+
+
+Sentence 43:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 44:
+NRBC %:0.0[%]
+    
+
+
+Sentence 45:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 46:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:27.9[sek]
+
+
+
+Sentence 47:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 48:
+Czas protrombinowy:10.5[sek]
+    
+
+
+Sentence 49:
+Wskaźnik PT:104.8[%]
+    
+
+
+Sentence 50:
+INR:0.96
+TSH: TSH:1.72[uIU/ml]
+
+
+
+Sentence 51:
+FT3: FT3:2.88[pg/ml]
+
+
+
+Sentence 52:
+FT4: FT4:1.07[ng/dl]
+
+
+
+Sentence 53:
+Troponina T: Troponina T:16.2[pg/ml]
+
+
+
+Sentence 54:
+Ferrytyna: Ferrytyna:90.7[ng/ml]
+
+
+
+Sentence 55:
+ALAT: ALAT:17[U/L]
+ASPAT: ASPAT:26[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 56:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 57:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 58:
+Hemoglobina glikowana (HbA1c)
+    :5.53[%]
+    :37[mmol/mol]
+
+
+
+Sentence 59:
+Kreatynina + GFR
+    
+
+
+Sentence 60:
+Kreatynina w surowicy:0.64[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 61:
+MDRD ze stan:94.0[ml/min/1,73 m^2]
+
+
+
+Sentence 62:
+Mocznik: Mocznik:21[mg/dl]
+
+
+
+Sentence 63:
+Kwas moczowy: Kwas moczowy:4.5[mg/dl]
+
+
+
+Sentence 64:
+Lipidogram
+    
+
+
+Sentence 65:
+Cholesterol całkowity:371[mg/dl]
+    
+
+
+Sentence 66:
+Cholesterol HDL:64[mg/dl]
+    
+
+
+Sentence 67:
+Cholestrol LDL:66[mg/dl]
+    
+
+
+Sentence 68:
+Triglicerydy:407[mg/dl]
+    
+
+
+Sentence 69:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:93[mg/dl]
+
+
+
+Sentence 70:
+NT-proBNP surowica: NT-proBNP w surowicy:101[pg/ml]
+------------------------------------------------
+
+
+
+Sentence 71:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 72:
+R07.3
+------------------------------------------------
+------------------------------------------------
+ICD9
+
+
+
+Sentence 73:
+------------------------------------------------
+
+
+
+Sentence 74:
+C55
+
+
+
+Sentence 75:
+I81
+G11
+G21
+L43
+O61
+L55
+N45
+L69
+O55
+I17
+M45
+I19
+O35
+M37
+L05
+
+
+
+Sentence 76:
+N13
+N24
+88.721
+O69
+
+
+
+Sentence 77:
+------------------------------------------------
+
+

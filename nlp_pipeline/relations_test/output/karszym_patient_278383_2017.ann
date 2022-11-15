@@ -1,0 +1,45 @@
+T1	Drug 353 361	Enarenal
+T2	Drug_dose 362 371	1 x 2.5mg
+T3	Drug 415 423	Spironol
+T4	Drug 477 483	Acesan
+T5	Drug 536 543	Hepatil
+T6	Drug 599 612	Vigantoletten
+T7	Drug_dose 424 433	1 x  25mg
+T8	Drug_dose 484 492	1 x 75mg
+T9	Drug_dose 544 554	2 x 1 tabl
+T10	Investigation 635 712	Ambulatoryjna kontrola parametrów funkcji układu krążenia - tętno, RR, sat.O2
+T11	Behaviour 717 759	Aktywność fizyczna w zakresie rekreacyjnym
+T12	Treatment 764 828	Dalsza opieka kardiologiczna w rejonowej Poradni Kardiologicznej
+T13	Treatment 830 878	kontrolna wizyta w Poradni Kardiologicznej ICZMP
+T14	Date 879 882;883 892	za     6-8mcy
+T15	Symptom 910 936	pogorszenia stanu ogólnego
+T16	Treatment 947 964	kontakt z kliniką
+T17	Condition 1105 1123	złożoną wadą serca
+N1	Reference T17 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T18	Condition 1125 1150	dwzunapływowa komora lewa
+N2	Reference T18 ICD10:Q20.4	Wejście obu dróg żylnych do jedynej komory
+T19	Condition 1153 1172	transpozycja naczyń
+N3	Reference T19 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T20	Condition 1175 1178	CoA
+N4	Reference T20 ICD10:Q25.1	Zwężenie cieśni aorty
+T21	Treatment 1185 1206	zabiegach naprawczych
+N5	Reference T21 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T22	Drug 1260 1268	Enarenal
+T23	Drug 1271 1279	Spironol
+T24	Drug 1281 1287	Acesan
+T25	Condition 1289 1306	wywiad alergiczny
+N6	Reference T25 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T26	Negation 1307 1313	ujemny
+R1	Neg Arg1:T26 Arg2:T25	
+R2	Dat Arg1:T14 Arg2:T13	
+R3	Drg Arg1:T1 Arg2:T2	
+R4	Drg Arg1:T3 Arg2:T7	
+R5	Drg Arg1:T4 Arg2:T8	
+R6	Drg Arg1:T5 Arg2:T9	
+T27	Drug_dose 613 631	1000j 1 x dziennie
+R7	Drg Arg1:T6 Arg2:T27	
+R1	Drg Arg1:T1 Arg2:T2
+R13	Drg Arg1:T6 Arg2:T27
+R18	Neg Arg1:T26 Arg2:T25
+R3	Drg Arg1:T4 Arg2:T8
+R8	Drg Arg1:T5 Arg2:T9

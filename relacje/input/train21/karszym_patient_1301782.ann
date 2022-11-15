@@ -1,0 +1,112 @@
+T1	Condition 448 469	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 475 487	Dyslipidemia
+N2	Reference T2 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T3	Condition 492 501	Łuszczyca
+N3	Reference T3 ICD10:L40.9	Łuszczyca, nieokreślona
+T4	Condition 507 557	Przepuklina międzykręgowa odcinka L4-L5 kręgosłupa
+N4	Reference T4 ICD10:M51.2	Inne określone przemieszczenia krążków międzykręgowych
+A1	Status T4 Historical_Insignificant
+T5	Treatment 571 587	cięciu cesarskim
+N5	Reference T5 ICD10:O82.0	Poród pojedynczy przez planowe cięcie cesarskie
+T6	Date 589 593	2013
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Treatment 607 631	zabiegach ortopedycznych
+A2	Status T7 Historical_Insignificant
+N6	Reference T7 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T8	Date 659 663	2002
+R2	Dat Arg1:T8 Arg2:T7	
+A3	Status T5 Historical_Insignificant
+T9	Condition 669 682	Otyłość I st.
+N7	Reference T9 ICD10:E66.9	Otyłość, nieokreślona
+T10	Treatment 802 860	dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T11	Behaviour 864 959	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T12	Treatment 963 1031	Okresowo kontrola stężenia elektrolitów, parametrów wydolności nerek
+T13	Symptom 1431 1492	okresowych bólów w klatce piersiowej promieniującym do gardła
+N8	Reference T13 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T14	Negation 1495 1498	nie
+T15	Symptom 1499 1519	związane z wysiłkiem
+R3	Neg Arg1:T14 Arg2:T15	
+T16	Symptom 1523 1532	HR 55/min
+T17	Symptom 1534 1572	Okresowo podaje uczucie zawrotów głowy
+N9	Reference T17 ICD10:R42	Zawroty głowy i odurzenie
+T18	Symptom 1574 1611	Chwiejne wartości RR. do 150-160 mmHg
+T19	Negation 1613 1619	Neguje
+T20	Symptom 1620 1632	zasłabnięcia
+R4	Neg Arg1:T19 Arg2:T20	
+T21	Condition 1650 1671	Nadciśnienie tętnicze
+N10	Reference T21 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T22	Condition 1673 1704	Łagodna niedomykalność mitralna
+N11	Reference T22 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T23	Condition 1706 1715	Łuszczyca
+N12	Reference T23 ICD10:L40.9	Łuszczyca, nieokreślona
+T24	Condition 1717 1761	Przepuklina międzykręgowa lędźwiowego  L4-L5
+A4	Status T24 Historical_Insignificant
+N13	Reference T24 ICD10:M51.2	Inne określone przemieszczenia krążków międzykręgowych
+T25	Treatment 1790 1806	cięciu cesarskim
+A5	Status T25 Historical_Insignificant
+N14	Reference T25 ICD10:O82.0	Poród pojedynczy przez planowe cięcie cesarskie
+T26	Date 1807 1813	w 2013
+T27	Treatment 1816 1836	zabiegi ortopedyczne
+N15	Reference T27 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T28	Date 1863 1867	2002
+R5	Dat Arg1:T26 Arg2:T25	
+A6	Status T27 Historical_Insignificant
+R6	Dat Arg1:T28 Arg2:T27	
+T29	Treatment 1870 1924	Leczenie przewlekłe:  dermatologicznej , neurologiczne
+T30	Condition 1953 1956	WZW
+N16	Reference T30 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T31	Condition 1966 1975	borelioza
+N17	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Condition 1982 1986	Odra
+N18	Reference T32 ICD10:B05	Odra
+T33	Negation 1957 1963	( -  )
+T34	Negation 1976 1981	( - )
+T35	Negation 1987 1992	( - )
+R7	Neg Arg1:T33 Arg2:T30	
+R8	Neg Arg1:T34 Arg2:T31	
+R9	Neg Arg1:T35 Arg2:T32	
+T36	Condition 2017 2029	nadciśnienie
+N19	Reference T36 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T37	Condition 2032 2040	cukrzyca
+N20	Reference T37 ICD10:E14	Cukrzyca nieokreślona
+A7	Status T36 Family
+A8	Status T37 Family
+T38	Condition 2042 2047	udary
+A9	Status T38 Family
+N21	Reference T38 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T39	Condition 2048 2060	zawała serca
+A10	Status T39 Family
+N22	Reference T39 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T40	Negation 2079 2082	nie
+T41	Behaviour 2083 2087	pali
+N23	Reference T41 ICD10:Z72.0	Używanie tytoniu
+T42	Date 2088 2095	od roku
+R10	Dat Arg1:T42 Arg2:T41	
+R11	Neg Arg1:T40 Arg2:T41	
+T43	Behaviour 2062 2077	Palenie tytoniu
+N24	Reference T43 ICD10:Z72.0	Używanie tytoniu
+R12	Neg Arg1:T40 Arg2:T43	
+R13	Dat Arg1:T42 Arg2:T43	
+A11	Status T40 Historical_Insignificant
+T44	Behaviour 2097 2108	Inne używki
+T45	Negation 2110 2113	nie
+T46	Condition 2125 2140	alergie wziewne
+N25	Reference T46 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R14	Neg Arg1:T45 Arg2:T44	
+T47	Behaviour 2158 2184	warunki mieszkaniowe dobre
+T48	Behaviour 2187 2202	mieszka z mężem
+T49	Drug 2210 2220	Prestarium
+T50	Drug_dose 2221 2236	5 mg 1x dz rano
+R15	Drg Arg1:T49 Arg2:T50	
+T51	Investigation 2252 2262	Echo serca
+T52	Investigation 2265 2275	Holter EKG
+T53	Investigation 2278 2293	Próba Wysiłkowa
+T54	Condition 635 657	wypadku komunikacyjnym
+N26	Reference T54 ICD10:V99	Nieokreślony wypadek komunikacyjny
+R16	Dat Arg1:T8 Arg2:T54	
+A12	Status T54 Historical_Insignificant
+T55	Condition 1840 1862	wypadku komunikacyjnym
+N27	Reference T55 ICD10:V99	Nieokreślony wypadek komunikacyjny
+R17	Dat Arg1:T28 Arg2:T55	
+A13	Status T55 Historical_Insignificant

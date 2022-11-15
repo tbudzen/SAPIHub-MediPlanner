@@ -1,0 +1,128 @@
+T1	Treatment 331 358	dalsza opieka w poradni POZ
+T2	Treatment 361 393	okresowa kontrola kardiologiczna
+T3	Behaviour 395 416	zakaz palenia tytoniu
+T4	Investigation 418 457	codzienna kontrola ciśnienia tętniczego
+T5	Investigation 460 538	okresowa kontrolą morfologii, lipidogramu , parametrów wątrobowych i nerkowych
+T6	Behaviour 540 545	dieta
+T7	Symptom 768 776	Omdlenia
+N1	Reference T7 ICD10:R55	Omdlenie i zapaść
+T8	Behaviour 778 788	Nikotynizm
+T9	Condition 790 818	Żylaki kończyny dolnej lewej
+N3	Reference T9 ICD10:I83	Żylaki kończyn dolnych
+T10	Treatment 828 855	dwukrotnym cięciu cesarskim
+A1	Status T10 Historical_Insignificant
+T11	Condition 1074 1112	Przewlekła choroba niedokrwienna serca
+N4	Reference T11 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T12	Condition 1128 1152	dławicy mikronaczyniowej
+A2	Source T12 Declared
+N5	Reference T12 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+T13	Symptom 1154 1162	Omdlenia
+N6	Reference T13 ICD10:R55	Omdlenie i zapaść
+T14	Condition 1164 1191	Łagodna arytmia nadkomorowa
+T15	Condition 1193 1237	Łagodna niedomykalność zastawki trójdzielnej
+N8	Reference T15 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T16	Behaviour 1239 1249	Nikotynizm
+T17	Condition 1251 1279	Żylaki kończyny dolnej lewej
+N10	Reference T17 ICD10:I83	Żylaki kończyn dolnych
+T18	Treatment 1289 1316	dwukrotnym cięciu cesarskim
+A3	Status T18 Historical_Insignificant
+T19	Symptom 1461 1518	omdleniami (w spoczynku, czasem w sytuacjach stresujących
+N11	Reference T19 ICD10:R55	Omdlenie i zapaść
+T21	Symptom 1568 1623	uczuciem ucisku w klatce piersiowej trwającym kilka sek
+N12	Reference T21 ICD10:R07.3	
+T22	Date 1520 1553	5 krotnie, w ostatnim miesiącu 3x
+T23	Condition 1629 1663	niedotlenieniu mózgu przy porodzie
+N13	Reference T23 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T24	Symptom 1667 1689	okresowym drżeniem rąk
+N14	Reference T24 ICD10:R25.1	Drżenie, nieokreślone
+T25	Treatment 1692 1716	pod opieką neurologiczną
+T26	Date 1717 1731	w dzieciństwie
+R1	Dat Arg1:T26 Arg2:T25	
+T27	Behaviour 1735 1747	nikotynizmem
+T28	Treatment 1752 1779	dwukrotnym cięciu cesarskim
+A4	Status T28 Historical_Insignificant
+T29	Condition 1783 1813	żylakiem kończyny dolnej lewej
+N16	Reference T29 ICD10:I83	Żylaki kończyn dolnych
+T30	Condition 1818 1825	anginie
+N17	Reference T30 ICD10:J03.9	Ostre zapalenie migdałków podniebiennych, nieokreślone
+T31	Treatment 1826 1834	leczonej
+T32	Drug 1835 1848	amoksycykliną
+T33	Date 1849 1861	tydzień temu
+R2	Dat Arg1:T33 Arg2:T32	
+R3	Dat Arg1:T33 Arg2:T31	
+R4	Dat Arg1:T33 Arg2:T30	
+T34	Symptom 1940 1946	omdleń
+N18	Reference T34 ICD10:R55	Omdlenie i zapaść
+T35	Negation 1949 1955	Neguje
+T36	Symptom 1957 1978	bóle w kl. piersiowej
+T37	Symptom 1980 1990	krwawienia
+T38	Symptom 1992 2005	czarne stolce
+N21	Reference T38 ICD10:K92.1	Stolce smołowate
+T39	Symptom 2007 2014	wymioty
+N22	Reference T39 ICD10:R11	Nudności i wymioty
+T40	Condition 2016 2032	chorobę wrzodową
+N23	Reference T40 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T41	Symptom 2034 2042	duszność
+N24	Reference T41 ICD10:R06.0	Duszność
+T42	Condition 2044 2046	HA
+N25	Reference T42 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T43	Condition 2048 2050	DM
+N26	Reference T43 ICD10:E14	Cukrzyca nieokreślona
+T44	Condition 2052 2062	udar mózgu
+N27	Reference T44 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T45	Condition 2064 2075	zawał serca
+N28	Reference T45 ICD10:I25.2	Przebyty zawał serca
+R5	Neg Arg1:T35 Arg2:T45	
+R6	Neg Arg1:T35 Arg2:T44	
+R7	Neg Arg1:T35 Arg2:T43	
+R8	Neg Arg1:T35 Arg2:T42	
+R9	Neg Arg1:T35 Arg2:T41	
+R10	Neg Arg1:T35 Arg2:T40	
+R11	Neg Arg1:T35 Arg2:T39	
+R12	Neg Arg1:T35 Arg2:T38	
+R13	Neg Arg1:T35 Arg2:T37	
+R14	Neg Arg1:T35 Arg2:T36	
+T46	Treatment 2080 2097	Przebyte operacje
+T47	Treatment 2107 2134	dwukrotnym cięciu cesarskim
+A5	Status T47 Historical_Insignificant
+T48	Behaviour 2135 2167	Palenie tytoniu: paczka dziennie
+T49	Behaviour 2168 2179	Inne używki
+T50	Negation 2181 2184	nie
+R15	Neg Arg1:T50 Arg2:T49	
+T51	Condition 2186 2195	Uczulenia
+N30	Reference T51 ICD10:T78.4	Alergia, nieokreślona
+T52	Negation 2197 2200	nie
+R16	Neg Arg1:T52 Arg2:T51	
+T53	Condition 2229 2232	WZW
+N31	Reference T53 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T54	Condition 2239 2248	borelioza
+N32	Reference T54 ICD10:A69.2	Choroba z Lyme
+T55	Condition 2256 2259	tbc
+T56	Negation 2261 2262	-
+R17	Neg Arg1:T56 Arg2:T55	
+T57	Negation 2251 2252	-
+R18	Neg Arg1:T57 Arg2:T54	
+T58	Negation 2234 2235	-
+R19	Neg Arg1:T58 Arg2:T53	
+T59	Investigation 2346 2367	badania laboratoryjne
+T60	Investigation 2369 2373	ECHO
+T61	Investigation 2375 2379	ABPM
+T62	Investigation 2381 2391	Holter ekg
+T63	Investigation 2393 2396	TET
+T64	Investigation 2398 2416	usg zyl kk dolnych
+N2	Reference T8 ICD10:Z72.0	Używanie tytoniu
+N9	Reference T16 ICD10:Z72.0	Używanie tytoniu
+R20	Dat Arg1:T22 Arg2:T19	
+N15	Reference T27 ICD10:Z72.0	Używanie tytoniu
+N29	Reference T48 ICD10:Z72.0	Używanie tytoniu
+N7	Reference T14 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T20	Negation 1863 1866	bez
+T65	Condition 1867 1893	innych chorób przewlekłych
+R21	Neg Arg1:T20 Arg2:T65	
+N19	Reference T36 ICD10:R07.4	
+N20	Reference T37 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N34	Reference T49 ICD10:Z72	Problemy związane ze stylem życia
+N33	Reference T55 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T66	Drug 2265 2269	Leki
+T67	Negation 2271 2284	nie przyjmuje
+R22	Neg Arg1:T67 Arg2:T66	

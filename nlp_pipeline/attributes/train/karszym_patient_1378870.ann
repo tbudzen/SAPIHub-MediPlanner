@@ -1,0 +1,55 @@
+T1	Drug 339 345	Acesan
+T2	Drug 347 357	Sildenafil
+T3	Drug 359 364	Enema
+T4	Drug 366 375	Cefazolin
+T5	Drug 377 387	5% glukoza
+T6	Drug 389 401	premedykacja
+T7	Treatment 405 433	operacji kardiochirurgicznej
+T8	Condition 651 715	Wrodzona wada serca pod postacią hemodynamicznie wspólnej komory
+T9	Condition 717 732	bardzo duży VSD
+N1	Reference T9 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T10	Condition 735 779	skrajnej hipoplazji zastawki tętnicy płucnej
+N2	Reference T10 ICD10:Q22.3	Inne wrodzone wady rozwojowe zastawki pnia płucnego
+T11	Condition 781 813	skorygowanego przełożenia naczyń
+N3	Reference T11 ICD10:Q20.5	Nieprawidłowe połączenia przedsionkowo-komorowe
+T12	Condition 821 851	hipoplazji tylnej zastawki p-k
+T13	Condition 856 896	Restrykcyjny  ubytek międzyprzedsionkowy
+N4	Reference T13 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T14	Condition 901 906	MAPCA
+T15	Treatment 919 943	zespoleniu B-T dx sr 4mm
+N6	Reference T15 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T16	Date 945 956	11.05.2016r
+R1	Dat Arg1:T16 Arg2:T15	
+T17	Treatment 978 1028	operacji  dwukierunkowego zespolenia metodą Glenna
+N7	Reference T17 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T18	Date 1065 1076	12.12.2016r
+R2	Dat Arg1:T18 Arg2:T17	
+T19	Condition 1090 1117	nagłym zatrzymaniu krążenia
+N8	Reference T19 ICD10:I46.0	Zatrzymanie krążenia ze skuteczną resuscytacją
+T20	Date 1119 1129	12.12.2016
+R3	Dat Arg1:T20 Arg2:T19	
+T21	Investigation 1143 1176	diagnostycznym cewnikowaniu serca
+T22	Date 1178 1189	04.06.2018r
+R4	Dat Arg1:T22 Arg2:T21	
+T23	Symptom 1195 1211	Sinica centralna
+N9	Reference T23 ICD10:R23.0	Sinica
+T24	Condition 1216 1250	Opóźnienie rozwoju psychoruchowego
+T25	Condition 1390 1394	HLHS
+N11	Reference T25 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+T26	Treatment 1411 1448	kolejnego etapu leczenia operacyjnego
+T27	Drug 1470 1476	Acesan
+T28	Drug 1479 1489	Sildenafil
+T29	Treatment 1502 1522	pod opieką neurologa
+T30	Condition 1524 1544	zaburzenia rozwojowe
+T31	Drug 1546 1551	leków
+T32	Negation 1552 1565	nie otrzymuje
+R5	Neg Arg1:T32 Arg2:T31	
+T33	Treatment 1031 1057	przecięciem zespolenia B-T
+N13	Reference T33 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R6	Dat Arg1:T18 Arg2:T33	
+T34	Condition 814 819	L-TGA
+N14	Reference T34 ICD10:Q20.5	Nieprawidłowe połączenia przedsionkowo-komorowe
+N5	Reference T14 ICD10:Q25.7	Inne wrodzone wady rozwojowe pnia płucnego
+N10	Reference T24 ICD10:R62.0	Opóźnienie etapów rozwoju fizjologicznego
+N15	Reference T26 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+N12	Reference T30 ICD10:R62.9	Brak oczekiwanego prawidłowego rozwoju fizjologicznego, nieokreślony

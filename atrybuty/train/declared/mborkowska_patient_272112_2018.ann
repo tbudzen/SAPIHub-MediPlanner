@@ -1,0 +1,173 @@
+T1	Investigation 2917 2921	ECHO
+T2	Investigation 2923 2941	EKG metodą Holtera
+T3	Investigation 2943 2947	ABPM
+T4	Investigation 2949 2964	próba wysiłkowa
+T5	Drug 2807 2814	Mazarin
+T6	Drug_dose 2815 2833	10mg 1x 1 tabl/poł
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 2782 2789	Amlozek
+T8	Drug_dose 2790 2806	5mg 0-1-1/2 tabl
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 2758 2765	Pradaxa
+T10	Drug_dose 2766 2781	150mg 2x 1 tabl
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 2730 2738	Valsacor
+T12	Drug_dose 2739 2757	160m 1/2 -0-1 tabl
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 2702 2714	Tertensfi SR
+T14	Drug_dose 2715 2729	1x 1 tabl/rano
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Drug 2673 2681	Nilogrin
+T16	Drug_dose 2682 2701	10mg 1x 1 tabl/rano
+R6	Drg Arg1:T15 Arg2:T16	
+T17	Drug 2645 2652	Emanera
+T18	Drug_dose 2653 2672	20mg 1x 1 tabl/rano
+R7	Drg Arg1:T17 Arg2:T18	
+T19	Drug 2614 2623	Cordarone
+T20	Behaviour 2551 2577	warunki mieszkaniowe dobre
+T21	Condition 2500 2503	WZW
+N1	Reference T21 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T22	Condition 2510 2519	borelioza
+N2	Reference T22 ICD10:A69.2	Choroba z Lyme
+T23	Condition 2527 2530	tbc
+N3	Reference T23 ICD10:A15	
+T24	Negation 2531 2534	(-)
+R8	Neg Arg1:T24 Arg2:T23	
+T25	Negation 2520 2525	( - )
+R9	Neg Arg1:T25 Arg2:T22	
+T26	Negation 2504 2507	(-)
+R10	Neg Arg1:T26 Arg2:T21	
+T27	Condition 2423 2432	Uczulenia
+N4	Reference T27 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T28	Drug 2434 2444	SALICYLANY
+T29	Drug 2446 2454	KONTRAST
+T30	Drug 2456 2472	JAKIŚ ANTYBIOTYK
+R11	Alg Arg1:T27 Arg2:T28	
+R12	Alg Arg1:T27 Arg2:T29	
+R13	Alg Arg1:T27 Arg2:T30	
+T31	Negation 2419 2422	nie
+T32	Negation 2400 2405	nigdy
+T33	Behaviour 2406 2417	Inne używki
+R14	Neg Arg1:T31 Arg2:T33	
+T34	Behaviour 2383 2398	Palenie tytoniu
+N5	Reference T34 ICD10:Z72.0	Używanie tytoniu
+R15	Neg Arg1:T32 Arg2:T34	
+T35	Treatment 2366 2382	cholecystektomia
+A1	Status T35 Historical_Insignificant
+T36	Symptom 2239 2247	omdlenia
+N6	Reference T36 ICD10:R55	Omdlenie i zapaść
+T37	Symptom 2249 2259	krwawienia
+N7	Reference T37 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T38	Symptom 2261 2274	czarne stolce
+N8	Reference T38 ICD10:K92.1	Stolce smołowate
+T39	Symptom 2276 2292	brunatne wymioty
+N9	Reference T39 ICD10:K92.0	Wymioty krwawe
+T40	Condition 2294 2310	chorobę wrzodową
+N10	Reference T40 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T41	Symptom 2312 2326	duszność nocną
+N11	Reference T41 ICD10:I50.1	Niewydolność serca lewokomorowa
+T42	Condition 2328 2330	DM
+N12	Reference T42 ICD10:E19	
+T43	Condition 2332 2344	zawał serca.
+N13	Reference T43 ICD10:I25.2	Przebyty zawał serca
+T44	Negation 2231 2237	Neguje
+R16	Neg Arg1:T44 Arg2:T36	
+R17	Neg Arg1:T44 Arg2:T37	
+R18	Neg Arg1:T44 Arg2:T38	
+R19	Neg Arg1:T44 Arg2:T39	
+R20	Neg Arg1:T44 Arg2:T40	
+R21	Neg Arg1:T44 Arg2:T41	
+R22	Neg Arg1:T44 Arg2:T42	
+R23	Neg Arg1:T44 Arg2:T43	
+T45	Condition 2192 2229	podejrzenie zespołu jelita drażliwego
+A2	Source T45 Declared
+N14	Reference T45 ICD10:K58	Zespół jelita drażliwego
+T46	Condition 1587 1589	HA
+N15	Reference T46 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T47	Investigation_result 1591 1627	ostatnio RR w domu 105/65-145/80mmHg
+T48	Condition 1632 1644	napadowym FA
+N16	Reference T48 ICD10:I48	Migotanie i trzepotanie przedsionków
+T49	Drug_dose 1654 1662	2x150mh)
+T50	Drug 1646 1653	Pradaxa
+R24	Drg Arg1:T50 Arg2:T49	
+T51	Symptom 1693 1739	bólów w klatce piersiowej o charakterze ucisku
+N17	Reference T51 ICD10:R07.3	Inne bóle w klatce piersiowej
+T52	Symptom 1897 1906	zmęczenie
+N18	Reference T52 ICD10:R53	Złe samopoczucie i zmęczenie
+T53	Symptom 1909 1915	potami
+N19	Reference T53 ICD10:R61	Nadmierne pocenie
+T54	Symptom 1917 1950	osłabieniem po przejściu ok. 500m
+N20	Reference T54 ICD10:R53	Złe samopoczucie i zmęczenie
+T55	Symptom 1952 1974	napady kołatania serca
+N21	Reference T55 ICD10:R00.2	Kołatanie serca
+T56	Symptom 1977 1997	uczuciem osłąbienia,
+N22	Reference T56 ICD10:R53	Złe samopoczucie i zmęczenie
+T57	Symptom 2039 2050	nudnosciami
+N23	Reference T57 ICD10:R11	Nudności i wymioty
+T58	Symptom 2052 2060	biegunką
+N24	Reference T58 ICD10:K59.1	Biegunka czynnościowa
+T59	Symptom 2062 2073	osłabieniem
+N25	Reference T59 ICD10:R53	Złe samopoczucie i zmęczenie
+T60	Investigation_result 2076 2091	spadkiem RR (?)
+A3	Source T60 Declared
+T61	Condition 2109 2127	rzebyty udar mózgu
+A4	Source T61 Declared
+N26	Reference T61 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T62	Condition 2148 2155	nerwica
+A5	Source T62 Declared
+N27	Reference T62 ICD10:F48.9	Zaburzenia nerwicowe, nieokreślone
+T63	Condition 2157 2165	depresja
+A6	Source T63 Declared
+N28	Reference T63 ICD10:F32.9	Epizod depresyjny, nieokreślony
+T64	Drug 1343 1350	Emanera
+T65	Drug 1352 1360	Nilogrin
+T66	Drug 1362 1370	Valsacor
+T67	Drug 1372 1379	Pradaxa
+T68	Drug 1381 1388	Amlozek
+T69	Drug 1390 1397	Mazarin
+T70	Drug 1399 1411	Tribux forte
+T71	Drug 1413 1425	Hydroksyzyna
+T72	Drug 1427 1431	APAP
+T73	Drug 1433 1442	Captopril
+T74	Condition 1169 1178	uczulenie
+N29	Reference T74 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T75	Drug 1182 1192	salicylany
+T76	Drug 1194 1202	kontrast
+T77	Drug 1204 1223	"jakiś" antybiotyk.
+R25	Alg Arg1:T74 Arg2:T75	
+R26	Alg Arg1:T74 Arg2:T76	
+R27	Alg Arg1:T74 Arg2:T77	
+T78	Treatment 1138 1154	cholecystektomii
+A7	Status T78 Historical_Insignificant
+T79	Condition 1091 1128	Podejrzenie zespołu jelita drażliwego
+A8	Source T79 Declared
+N30	Reference T79 ICD10:K58	Zespół jelita drażliwego
+T80	Condition 1070 1089	przebyty udar mózgu
+N31	Reference T80 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T81	Condition 1035 1056	Nadciśnienie tętnicze
+N32	Reference T81 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T82	Condition 992 1033	Dysfunkcja rozkurczowa lewej komory serca
+T83	Condition 963 990	Choroba niedokrwienna serca
+N33	Reference T83 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T84	Condition 940 961	Okresowy blok AV I st
+N34	Reference T84 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T85	Condition 878 910	Napadowe migotanie przedsionków-
+N35	Reference T85 ICD10:I48	Migotanie i trzepotanie przedsionków
+T86	Drug 931 938	Pradaxą
+T87	Condition 850 877	Ekstrasystolia nadkomorowa.
+N36	Reference T87 ICD10:I47.1	Częstoskurcz nadkomorowy
+T88	Condition 801 849	Zastępczy rytm z łącza przedsionkowo-komorowego.
+N37	Reference T88 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T89	Condition 768 799	Zespół tachykardia- bradykardia
+N38	Reference T89 ICD10:I49.5	Zespół chorej zatoki
+T90	Drug 515 523	Nilogrin
+T91	Drug_dose 524 544	10mg 1x 1 tabl/rano\
+R28	Drg Arg1:T90 Arg2:T91	
+T92	Drug 487 494	Emanera
+T93	Drug_dose 495 514	20mg 1x 1 tabl/rano
+R29	Drg Arg1:T92 Arg2:T93	
+T94	Drug 427 434	Pradaxa
+T95	Drug_dose 435 486	150mg 2x 1 tabl- ostatnia tabletka w dn. 15.01 rano
+R30	Drg Arg1:T94 Arg2:T95	
+T96	Investigation 357 391	kontrola poziomu hormonów tarczycy
+T97	Symptom 2005 2021	ból w nadbrzuszu

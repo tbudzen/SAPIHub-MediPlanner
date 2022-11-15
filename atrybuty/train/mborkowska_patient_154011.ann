@@ -1,0 +1,307 @@
+T1	Investigation 7566 7576	Echo serca
+T2	Investigation 7579 7589	Holter EKG
+T3	Investigation 7592 7607	Próba Wysiłkowa
+T4	Drug 7520 7527	Nebilet
+T5	Drug_dose 7528 7548	5mg 1x 1/4 tabl/rano
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Drug 7488 7498	Eplenocard
+T7	Drug_dose 7499 7518	25mg 1x 1 tabl/rano
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Drug 7447 7453	Warfin
+T9	Drug_dose 7454 7486	wg INR  ( 8,5 mg 1x dz wieczorem
+R3	Drg Arg1:T8 Arg2:T9	
+T10	Behaviour 7390 7416	warunki mieszkaniowe dobre
+T11	Negation 7367 7373	neguje
+T12	Condition 7356 7365	Uczulenia
+N1	Reference T12 ICD10:T78.4	Alergia, nieokreślona
+R4	Neg Arg1:T11 Arg2:T12	
+T13	Behaviour 7321 7354	Inne używki: alkohol okazjonalnie
+N2	Reference T13 ICD10:Z72.1	Używanie alkoholu
+T14	Negation 7317 7320	nie
+T15	Behaviour 7300 7315	Palenie tytoniu
+R5	Neg Arg1:T14 Arg2:T15	
+T16	Negation 7294 7298	brak
+T17	Negation 7236 7239	-  
+T18	Negation 7255 7256	-
+T19	Negation 7266 7267	-
+T20	Condition 7270 7291	W wywiadzie rodzinnym
+A1	Status T20 Family
+R6	Neg Arg1:T16 Arg2:T20	
+T21	Condition 7230 7233	WZW
+T22	Condition 7243 7252	borelioza
+N5	Reference T22 ICD10:A69.2	Choroba z Lyme
+T23	Condition 7259 7263	Odra
+N6	Reference T23 ICD10:B05	Odra
+R7	Neg Arg1:T17 Arg2:T21	
+R8	Neg Arg1:T18 Arg2:T22	
+R9	Neg Arg1:T19 Arg2:T23	
+T24	Negation 7197 7201	brak
+T25	Treatment 7175 7194	Leczenie przewlekłe
+R10	Neg Arg1:T24 Arg2:T25	
+T26	Treatment 7150 7173	Przebyte operacje:  j.w
+T31	Treatment 589 626	plastyce balonowej zastawki aortalnej
+T32	Treatment 647 670	komisurotomii aortalnej
+T33	Treatment 691 730	operacyjnej plastyce zastawki mitralnej
+T34	Treatment 751 813	implantacji zastawki mechanicznej St Jude 17 w ujście mitralne
+T35	Treatment 834 933	implantacji mechanicznej zastawki mitralnej ATS 23 mm oraz mechanicznej zastawki aortalnej ATS 19mm
+T36	Condition 954 1001	łagodnego zwężenia sztucznej zastawki mitralnej
+N11	Reference T36 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T37	Condition 1013 1061	cięższego względnego zwężenia zastawki aortalnej
+N12	Reference T37 ICD10:I35.	
+T38	Date 935 945	17/02/2011
+R11	Dat Arg1:T38 Arg2:T35	
+T39	Date 815 823	11.03.02
+R12	Dat Arg1:T39 Arg2:T34	
+T40	Date 732 740	12.02.02
+R13	Dat Arg1:T40 Arg2:T33	
+T41	Date 672 680	30.11.00
+R14	Dat Arg1:T41 Arg2:T32	
+T42	Date 628 636	25.11.00
+R15	Dat Arg1:T42 Arg2:T31	
+T43	Condition 1063 1079	Arytmia komorowa
+N13	Reference T43 ICD10:I49	Inne zaburzenia rytmu serca
+T44	Condition 1118 1125	Migreny
+N14	Reference T44 ICD10:G43	
+T45	Drug 1250 1256	Warfin
+T46	Drug 1258 1266	Spironol
+T47	Drug 1268 1278	Eplenocard
+T48	Drug 1280 1287	Clexane
+T49	Investigation 1553 1578	angioCT tętnic wieńcowych
+T50	Treatment 2006 2043	plastyce balonowej zastawki aortalnej
+T51	Treatment 2066 2089	komisurotomii aortalnej
+T52	Treatment 2112 2151	operacyjnej plastyce zastawki mitralnej
+T53	Treatment 2174 2237	implantacji zastawki mechanicznej St. Jude 17 w ujście mitralne
+T54	Date 2045 2055	25.11.2000
+R16	Dat Arg1:T54 Arg2:T50	
+T55	Date 2091 2101	30.11.2000
+R17	Dat Arg1:T55 Arg2:T51	
+T56	Date 2153 2163	12.02.2002
+R18	Dat Arg1:T56 Arg2:T52	
+T57	Date 2239 2249	11.03.2002
+R19	Dat Arg1:T57 Arg2:T53	
+T58	Treatment 2260 2359	implantacji mechanicznej zastawki mitralnej ATS 23 mm oraz mechanicznej zastawki aortalnej ATS 19mm
+T59	Date 2361 2371	17.02.2011
+R20	Dat Arg1:T59 Arg2:T58	
+T60	Condition 2407 2431	Arytmia komorowa do nsVT
+T61	Condition 2454 2461	Migreny
+N16	Reference T61 ICD10:G43	
+T62	Investigation 2811 2833	kontrola wskaźnika INR
+T63	Investigation 2995 3089	okresowa kontrola morfologii, lipidogramu, elektrolitów, parametrów wydolności nerek i wątroby
+T64	Behaviour 3094 3196	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T65	Investigation 3211 3257	samokontrola ciśnienia tętniczego krwi i tętna
+T66	Drug 3296 3302	Warfin
+T67	Drug_dose 3305 3409	w dniu dzisiejszym 3mg, od jutra 5 mg z kontrolą INR w poniedziałek i dostosowaniem dawki do wyniku INR.
+R21	Drg Arg1:T66 Arg2:T67	
+T68	Drug 3410 3417	Nebilet
+T69	Drug_dose 3418 3439	5mg 1/4 tabletki rano
+R22	Drg Arg1:T68 Arg2:T69	
+T70	Drug 3441 3451	Eplenocard
+T71	Drug_dose 3452 3472	25mg 1 tabletka rano
+R23	Drg Arg1:T70 Arg2:T71	
+T74	Date 4112 4122	27/03/2019
+T75	Investigation 4200 4208	TK głowy
+T76	Investigation 4210 4217	RTG klp
+T77	Investigation_result 4218 4252	nie stwierdzając odchyleń od normy
+R24	Inv Arg1:T76 Arg2:T77	
+R25	Inv Arg1:T75 Arg2:T77	
+A2	Source T75 Declared
+A3	Source T76 Declared
+A4	Source T77 Declared
+T78	Symptom 4341 4400	okresowo dolegliwości bólowe lewej części klatki piersiowej
+T79	Symptom 4410 4422	zasłabnięcia
+N19	Reference T79 ICD10:R55	Omdlenie i zapaść
+T80	Symptom 4424 4432	omdlenia
+N20	Reference T80 ICD10:R55	Omdlenie i zapaść
+T81	Symptom 4434 4447	zawroty głowy
+N21	Reference T81 ICD10:R42	Zawroty głowy i odurzenie
+T82	Symptom 4449 4459	krwawienia
+N22	Reference T82 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T83	Symptom 4461 4474	czarne stolce
+N23	Reference T83 ICD10:K92.1	Stolce smołowate
+T84	Symptom 4476 4492	brunatne wymioty
+N24	Reference T84 ICD10:K92.0	Wymioty krwawe
+T85	Condition 4494 4510	chorobę wrzodową
+N25	Reference T85 ICD10:K27	
+T86	Symptom 4512 4526	duszność nocną
+N26	Reference T86 ICD10:I50.1	Niewydolność serca lewokomorowa
+T87	Symptom 4528 4543	obrzęki podudzi
+N27	Reference T87 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T88	Negation 4403 4409	Neguje
+R26	Neg Arg1:T88 Arg2:T79	
+R27	Neg Arg1:T88 Arg2:T80	
+R28	Neg Arg1:T88 Arg2:T81	
+R29	Neg Arg1:T88 Arg2:T82	
+R30	Neg Arg1:T88 Arg2:T83	
+R31	Neg Arg1:T88 Arg2:T84	
+R32	Neg Arg1:T88 Arg2:T85	
+R33	Neg Arg1:T88 Arg2:T86	
+R34	Neg Arg1:T88 Arg2:T87	
+T89	Investigation 5648 5651	TTE
+T90	Investigation 5653 5656	TET
+T91	Investigation 5658 5662	ABPM
+T92	Investigation 5664 5674	Holter EKG
+T93	Drug 5497 5503	Warfin
+T94	Drug_dose 5504 5552	1 tabletka wieczorem w sekwencji 6mg-7,5mg-7,5mg
+R35	Drg Arg1:T93 Arg2:T94	
+T95	Behaviour 5420 5446	warunki mieszkaniowe dobre
+T96	Negation 5396 5402	neguje
+T97	Condition 5385 5394	Uczulenia
+N28	Reference T97 ICD10:T78.4	Alergia, nieokreślona
+R36	Neg Arg1:T96 Arg2:T97	
+T98	Behaviour 5350 5384	Inne używki: alkohol okazjonalnie.
+N29	Reference T98 ICD10:Z72.1	Używanie alkoholu
+T99	Negation 5342 5348	neguje
+T100	Behaviour 5325 5340	Palenie tytoniu
+R37	Neg Arg1:T99 Arg2:T100	
+T101	Negation 5313 5323	nieistotny
+T102	Condition 5296 5311	Wywiad rodzinny
+A5	Status T102 Family
+T103	Condition 5212 5215	WZW
+R38	Neg Arg1:T101 Arg2:T102	
+T104	Condition 5224 5233	borelioza
+N32	Reference T104 ICD10:A69.2	Choroba z Lyme
+T105	Condition 5241 5249	grużlica
+N33	Reference T105 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T106	Condition 5257 5261	odra
+N34	Reference T106 ICD10:B05	Odra
+T107	Negation 5268 5279	nie pamięta
+T108	Treatment 5284 5294	szczepiony
+N35	Reference T108 ICD10:B05	Odra
+R39	Neg Arg1:T107 Arg2:T106	
+R40	Neg Arg1:T107 Arg2:T108	
+T109	Negation 5252 5253	-
+R41	Neg Arg1:T109 Arg2:T105	
+T110	Negation 5236 5237	-
+R42	Neg Arg1:T110 Arg2:T104	
+T111	Negation 5218 5219	-
+R43	Neg Arg1:T111 Arg2:T103	
+T112	Treatment 5110 5133	Przebyte operacje: j/w.
+T113	Condition 5101 5108	Migreny
+N36	Reference T113 ICD10:G43	
+T114	Treatment 4988 5086	mplantacji mechanicznej zastawki mitralnej ATS 23 mm oraz mechanicznej zastawki aortalnej ATS 19mm
+T115	Date 5088 5098	17/02/2011
+R44	Dat Arg1:T115 Arg2:T114	
+T116	Date 4968 4976	11.03.02
+T117	Date 4885 4893	12.02.02
+T118	Date 4825 4833	30.11.00
+T119	Date 4781 4789	25.11.00
+T120	Treatment 4742 4779	plastyce balonowej zastawki aortalnej
+R45	Dat Arg1:T119 Arg2:T120	
+T121	Treatment 4800 4823	komisurotomii aortalnej
+R46	Dat Arg1:T118 Arg2:T121	
+T122	Treatment 4844 4883	operacyjnej plastyce zastawki mitralnej
+R47	Dat Arg1:T117 Arg2:T122	
+T123	Treatment 4904 4966	implantacji zastawki mechanicznej St Jude 17 w ujście mitralne
+R48	Dat Arg1:T116 Arg2:T123	
+T126	Drug 5603 5611	Spironol
+T127	Drug_dose 5612 5632	25mg 1 tabletka rano
+R49	Drg Arg1:T126 Arg2:T127	
+T27	Condition 494 528	niedomykalności zastawki aortalnej
+T128	Condition 438 491	Wrodzona wada serca pod postacią krytycznego zwężenia
+N39	Reference T128 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T30	Condition 545 579	niedomykalności zastawki mitralnej
+T129	Condition 534 542	zwężenia
+N40	Reference T129 ICD10:Q23.2	Wrodzone zwężenie zastawki mitralnej
+T28	Condition 1855 1908	Wrodzona wada serca pod postacią krytycznego zwężenia
+N8	Reference T28 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T29	Condition 1911 1945	niedomykalności zastawki aortalnej
+T130	Condition 1951 1959	zwężenia
+N41	Reference T130 ICD10:Q23.2	Wrodzone zwężenie zastawki mitralnej
+T131	Condition 1962 1996	niedomykalności zastawki mitralnej
+T72	Condition 3872 3926	wrodzonej wady serca pod postacią krytycznego zwężenia
+N17	Reference T72 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T73	Condition 3929 3963	niedomykalności zastawki aortalnej
+T132	Condition 3969 3984	niedomykalności
+T133	Condition 3987 4014	zwężenia zastawki mitralnej
+N44	Reference T133 ICD10:Q23.2	Wrodzone zwężenie zastawki mitralnej
+T124	Condition 4591 4644	Wrodzona wada serca pod postacią krytycznego zwężenia
+N37	Reference T124 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T125	Condition 4647 4681	niedomykalności zastawki aortalnej
+T134	Condition 4687 4695	zwężenia
+N45	Reference T134 ICD10:Q23.2	Wrodzone zwężenie zastawki mitralnej
+T135	Condition 4698 4732	niedomykalności zastawki mitralnej
+T136	Drug_dose 5560 5571	02/04 7,5mg
+T137	Drug_dose 5579 5601	03/04 należy podać 6mg
+R50	Drg Arg1:T93 Arg2:T136	
+R51	Drg Arg1:T93 Arg2:T137	
+T138	Condition 6106 6159	Wrodzona wada serca pod postacią krytycznego zwężenia
+N47	Reference T138 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T139	Condition 6162 6196	niedomykalności zastawki aortalnej
+T140	Condition 6202 6210	zwężenia
+N49	Reference T140 ICD10:Q23.2	Wrodzone zwężenie zastawki mitralnej
+T141	Condition 6213 6246	niedomykalności zastawki mitralne
+T142	Treatment 6257 6294	plastyce balonowej zastawki aortalnej
+T143	Treatment 6315 6338	komisurotomii aortalnej
+T144	Treatment 6359 6398	operacyjnej plastyce zastawki mitralnej
+T145	Treatment 6419 6481	implantacji zastawki mechanicznej St Jude 17 w ujście mitralne
+T146	Treatment 6502 6601	implantacji mechanicznej zastawki mitralnej ATS 23 mm oraz mechanicznej zastawki aortalnej ATS 19mm
+T147	Date 6296 6304	25.11.00
+R52	Dat Arg1:T147 Arg2:T142	
+T148	Date 6340 6348	30.11.00
+R53	Dat Arg1:T148 Arg2:T143	
+T149	Date 6400 6408	12.02.02
+R54	Dat Arg1:T149 Arg2:T144	
+T150	Date 6483 6491	11.03.02
+R55	Dat Arg1:T150 Arg2:T145	
+T151	Date 6603 6612	17/02/201
+R56	Dat Arg1:T151 Arg2:T146	
+T152	Treatment 6622 6729	łagodnego zwężenia sztucznej zastawki mitralnej oraz nieco cięższego względnego zwężenia zastawki aortalnej
+T153	Condition 6731 6747	Arytmia komorowa
+N51	Reference T153 ICD10:I49	Inne zaburzenia rytmu serca
+T154	Condition 6786 6793	Migreny
+N52	Reference T154 ICD10:G43	Migrena
+T155	Investigation 6848 6851	EKG
+T156	Investigation_result 6852 6885	dodatnia na ścianie dolno-bocznej
+R57	Inv Arg1:T155 Arg2:T156	
+T157	Investigation 6812 6827	Próba wysiłkowa
+T158	Investigation_result 6828 6845	klinicznie ujemna
+R58	Inv Arg1:T157 Arg2:T158	
+T159	Investigation 7028 7109	angioCT tętnic wieńcowych z oceną rekonstrukcji przestrzennej sztucznych zastawek
+T160	Symptom 5923 5952	napadowe migrenowe bóle głowy
+T161	Symptom 5984 5996	zasłabnięcia
+N53	Reference T161 ICD10:R55	Omdlenie i zapaść
+T162	Negation 5977 5983	Neguje
+T163	Symptom 6006 6030	bóle w klatce piersiowej
+N54	Reference T163 ICD10:R07.3	Inne bóle w klatce piersiowej
+T164	Negation 5999 6005	neguje
+R59	Neg Arg1:T164 Arg2:T163	
+R60	Neg Arg1:T162 Arg2:T161	
+T165	Negation 6033 6039	neguje
+T166	Symptom 6040 6057	uczucie duszności
+N55	Reference T166 ICD10:R06.0	Duszność
+R61	Neg Arg1:T165 Arg2:T166	
+N7	Reference T27 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+N10	Reference T30 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+T167	Investigation_result 1081 1085	pary
+N56	Reference T167 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T168	Investigation_result 1087 1094	triplet
+N57	Reference T168 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T169	Investigation 1097 1115	EKG metodą Holtera
+R62	Inv Arg1:T169 Arg2:T168	
+R63	Inv Arg1:T169 Arg2:T167	
+N9	Reference T29 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+N42	Reference T131 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+N15	Reference T60 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T170	Date 2854 2864	co tydzień
+R64	Dat Arg1:T170 Arg2:T62	
+N18	Reference T73 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+N43	Reference T132 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+N58	Reference T78 ICD10:R07.3	Inne bóle w klatce piersiowej
+N38	Reference T125 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+N46	Reference T135 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+N31	Reference T103 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N30	Reference T100 ICD10:Z72.0	Używanie tytoniu
+T171	Date 5955 5972	ok raz w miesiącu
+R65	Dat Arg1:T171 Arg2:T160	
+N59	Reference T160 ICD10:R51	Ból głowy
+N48	Reference T139 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+N50	Reference T141 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+T172	Investigation_result 6749 6753	pary
+N60	Reference T172 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T173	Investigation_result 6755 6762	triplet
+N61	Reference T173 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T174	Investigation 6765 6783	EKG metodą Holtera
+R66	Inv Arg1:T174 Arg2:T173	
+R67	Inv Arg1:T174 Arg2:T172	
+N4	Reference T21 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N3	Reference T15 ICD10:Z72.0	Używanie tytoniu

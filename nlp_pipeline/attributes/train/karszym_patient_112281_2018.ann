@@ -1,0 +1,114 @@
+T1	Condition 404 472	Wrodzona wada serca pod postacią przełożenia wielkich pni tętniczych
+N1	Reference T1 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T2	Condition 475 513	ubytkiem w przegrodzie międzykomorowej
+N2	Reference T2 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T3	Treatment 526 563	operacji metodą korekcji anatomicznej
+N3	Reference T3 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T4	Date 565 574	28.09.99r
+T5	Condition 580 600	Zespół preekscytacji
+N4	Reference T5 ICD10:I45.6	Zespół preekscytacji
+R1	Dat Arg1:T4 Arg2:T3	
+T6	Treatment 777 804	dalsza opieka w poradni POZ
+T7	Investigation 806 870	okresowa kontrola morfologii, parametrów wątrobowych i nerkowych
+T8	Treatment 872 915	okresowa kontrola w Poradni Kardiologicznej
+T9	Date 946 952	co rok
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Investigation 920 945	oceną echokardiograficzna
+R3	Dat Arg1:T9 Arg2:T10	
+T11	Condition 1235 1303	Wrodzona wada serca pod postacią przełożenia wielkich pni tętniczych
+N5	Reference T11 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T12	Condition 1306 1344	ubytkiem w przegrodzie międzykomorowej
+N6	Reference T12 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T13	Treatment 1354 1391	operacji metodą korekcji anatomicznej
+N7	Reference T13 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T14	Date 1393 1402	28.09.99r
+R4	Dat Arg1:T14 Arg2:T13	
+T15	Condition 1408 1428	Zespół preekscytacji
+N8	Reference T15 ICD10:I45.6	Zespół preekscytacji
+T16	Condition 1430 1466	Częstoskurcz nadkomorowy bezobjawowy
+N9	Reference T16 ICD10:I47.1	Częstoskurcz nadkomorowy
+T17	Condition 1616 1684	wrodzoną wadą serca pod postacią przełożenia wielkich pni tętniczych
+N10	Reference T17 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T18	Condition 1687 1725	ubytkiem w przegrodzie międzykomorowej
+N11	Reference T18 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T19	Treatment 1730 1760	operacji korekcji anatomicznej
+N12	Reference T19 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T20	Date 1762 1773	28.09.1999r
+T21	Condition 1778 1800	zespołem preekscytacji
+N13	Reference T21 ICD10:I45.6	Zespół preekscytacji
+T22	Symptom 1896 1923	dobrze rozwinięta fizycznie
+T23	Symptom 1925 1943	krążeniowo wydolna
+T24	Negation 1945 1956	nie zgłasza
+T25	Symptom 1957 1969	dolegliwości
+T26	Date 1973 1980	W 2016r
+T27	Treatment 1989 2003	hospitalizacji
+T28	Investigation 2015 2033	EKG metodą Holtera
+T29	Investigation_result 2045 2063	cech preekscytacji
+N14	Reference T29 ICD10:I45.6	Zespół preekscytacji
+R5	Dat Arg1:T20 Arg2:T19	
+R6	Neg Arg1:T24 Arg2:T25	
+R7	Dat Arg1:T26 Arg2:T27	
+R8	Dat Arg1:T26 Arg2:T28	
+R9	Inv Arg1:T28 Arg2:T29	
+T30	Investigation 2067 2074	AngioCT
+R10	Dat Arg1:T26 Arg2:T30	
+T31	Negation 2076 2091	nie stwierdzono
+T32	Investigation_result 2092 2145	zwężeń w miejscach wszycia ani w odcinkach obwodowych
+T33	Investigation_result 2152 2186	dominacji prawej tętnicy wieńcowej
+R11	Inv Arg1:T30 Arg2:T32	
+R12	Neg Arg1:T31 Arg2:T32	
+R13	Inv Arg1:T30 Arg2:T33	
+T35	Investigation 2262 2264	RM
+R14	Dat Arg1:T26 Arg2:T35	
+T36	Negation 2371 2375	brak
+T37	Investigation_result 2376 2418	fali zwrotnej na poziomie zastawki płucnej
+T38	Investigation_result 2420 2479	niewielką (3ml) falę zwrotną na poziomie zastawki aortalnej
+T39	Negation 2481 2496	nie stwierdzono
+T40	Investigation_result 2497 2526	istotnych zaburzeń przepływów
+T41	Negation 2554 2569	nie stwierdzono
+T42	Investigation_result 2570 2619	patologicznych zmian w miokardium ani w osierdziu
+R15	Inv Arg1:T35 Arg2:T37	
+R16	Neg Arg1:T36 Arg2:T37	
+R17	Inv Arg1:T35 Arg2:T38	
+R18	Neg Arg1:T39 Arg2:T40	
+R19	Inv Arg1:T35 Arg2:T40	
+R20	Neg Arg1:T41 Arg2:T42	
+R21	Inv Arg1:T35 Arg2:T42	
+T34	Treatment 2641 2654	tonsilectomia
+A1	Status T34 Historical_Insignificant
+N15	Reference T34 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T43	Date 2655 2659	2012
+R22	Dat Arg1:T43 Arg2:T34	
+T44	Treatment 2660 2698	Leczenie przewlekłe: endokrynologiczne
+T45	Condition 2727 2730	WZW
+N16	Reference T45 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T46	Condition 2732 2741	borelioza
+N17	Reference T46 ICD10:A69.2	Choroba z Lyme
+T47	Negation 2744 2754	nie podano
+T48	Negation 2772 2781	negatywny
+T49	Negation 2799 2802	nie
+T50	Negation 2816 2819	nie
+T51	Negation 2831 2834	nie
+T52	Drug 2875 2881	Letrox
+T53	Condition 2755 2770	Wywiad rodzinny
+A2	Status T53 Family
+T54	Behaviour 2782 2797	Palenie tytoniu
+N18	Reference T54 ICD10:Z72.0	Używanie tytoniu
+T55	Behaviour 2803 2814	Inne używki
+T56	Condition 2820 2829	Uczulenia
+N19	Reference T56 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T57	Behaviour 2853 2862	uczy się,
+T58	Drug_dose 2882 2888	25ug/d
+T59	Investigation 2916 2926	echo serca
+T60	Investigation 2928 2931	TET
+T61	Investigation 2933 2937	ABPM
+T62	Investigation 2939 2945	Holter
+T63	Investigation 2947 2965	RTG kl. piersiowej
+R23	Neg Arg1:T47 Arg2:T46	
+R24	Neg Arg1:T47 Arg2:T45	
+R25	Neg Arg1:T48 Arg2:T53	
+R26	Neg Arg1:T49 Arg2:T54	
+R27	Neg Arg1:T50 Arg2:T55	
+R28	Neg Arg1:T51 Arg2:T56	
+R29	Drg Arg1:T52 Arg2:T58	
+N20	Reference T55 ICD10:Z72	Problemy związane ze stylem życia

@@ -1,0 +1,560 @@
+allRelations          : 52
+oks                   : 20
+isRedundantAndRemoveds: 30
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 1
+GOOD / BAD            : 50 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 46 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zastosowane leczenie
+
+
+
+Sentence 3:
+------------------------------------------------
+bez leków
+------------------------------------------------
+
+
+
+Sentence 4:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 5:
+- kontrola u lekarza POZ
+- dieta niskocholesterolowa, kontrola lipidogramu za 3 m-ce
+
+R1	Dat Arg1:T4 Arg2:T2 <<REDUNDANT!!!REMOVED>>	za 3 m-ce -> dieta niskocholesterolowa <:REMOVED other second tag between (left):> <RANK: 2> <info: start[534, 486] <type: LEFT>>
+R2	Dat Arg1:T4 Arg2:T1 <<REDUNDANT!!!REMOVED>>	za 3 m-ce -> kontrola u lekarza POZ <:REMOVED other second tag between (left):> <RANK: 0> <info: start[534, 461] <type: LEFT>>
+R3	Dat Arg1:T4 Arg2:T3 << OK >>	za 3 m-ce -> kontrola lipidogramu  <RANK: 3> <info: start[534, 513] <type: LEFT>>
+
+
+Sentence 6:
+- regularne przyjmowanie:
+Betaloc ZOK 25mg 1x 1 tabl/rano 
+------------------------------------------------
+
+R4	Drg Arg1:T6 Arg2:T7 << OK >>	Betaloc ZOK -> 25mg 1x 1 tabl/rano  <RANK: 3> <info: start[570, 582] <type: RIGHT>>
+
+
+Sentence 7:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 8:
+------------------------------------------------
+ Rozpozanie I: ICD10:R00.2|Rozpoznanie II: |Rozpoznanie V: |Opisowo::
+
+
+Sentence 9:
+Łagodna niedomykalność zastawki trójdzielnej.
+
+
+Sentence 10:
+Kołatania serca.
+
+
+Sentence 11:
+Hipercholesterolemia.|Rozpoznanie IV: |Rozpoznanie III:
+------------------------------------------------
+
+
+
+Sentence 12:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 13:
+Pacjentka lat 46, po histerektomii z powodu guza jajnika prawego i mięśniaka gładkiego śródściennego macicy (10.2016), powikłaną infekcją pooperacyjną (w antybiogramie wyhodowano wówczas Staphylococcus aureus), przyjęta do Kliniki z powodu duszności wysiłkowej do NYHA III, łatwego męczenia oraz uczucia szybkiej akcji serca (w okresie bezpośrednio po zakończeniu antybiotykoterapii).
+R5	Inv Arg1:T15 Arg2:T14 << OK >>	antybiogramie -> wyhodowano wówczas Staphylococcus aureus  <RANK: 3> <info: start[1193, 1207] <type: RIGHT>>
+R6	Dat Arg1:T12 Arg2:T16 <<REDUNDANT!!!REMOVED>>	10.2016 -> duszności wysiłkowej do NYHA III <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1148, 1279] <type: RIGHT>>
+R7	Dat Arg1:T12 Arg2:T17 <<REDUNDANT!!!REMOVED>>	10.2016 -> łatwego męczenia <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1148, 1313] <type: RIGHT>>
+R8	Dat Arg1:T12 Arg2:T18 <<REDUNDANT!!!REMOVED>>	10.2016 -> uczucia szybkiej akcji serca <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1148, 1335] <type: RIGHT>>
+R9	Dat Arg1:T12 Arg2:T13 <<REDUNDANT!!!REMOVED>>	10.2016 -> powikłaną infekcją pooperacyjną <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1148, 1158] <type: RIGHT>>
+R10	Dat Arg1:T12 Arg2:T56 << OK >>	10.2016 -> guza jajnika prawego  <RANK: 2> <info: start[1148, 1083] <type: LEFT>>
+R11	Dat Arg1:T12 Arg2:T57 << OK >>	10.2016 -> mięśniaka gładkiego śródściennego macicy  <RANK: 3> <info: start[1148, 1106] <type: LEFT>>
+R12	Dat Arg1:T12 Arg2:T11 <<SHOULD NOT BE REMOVED>>	10.2016 -> histerektomii <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1148, 1060] <type: LEFT>>
+R13	Dat Arg1:T12 Arg2:T19 <<REDUNDANT!!!REMOVED>>	10.2016 -> antybiotykoterapii <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1148, 1403] <type: RIGHT>>
+R14	Dat Arg1:T12 Arg2:T15 <<REDUNDANT!!!REMOVED>>	10.2016 -> antybiogramie <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1148, 1193] <type: RIGHT>>
+
+
+Sentence 14:
+Obecnie dolegliwości zmniejszyły się.
+
+
+Sentence 15:
+Pacjentka zgłasza okresowo występującą duszność bez związku z wys. fiz, ucisk zamostkowy.
+
+
+Sentence 16:
+Cel: diagnostyka
+Neguje: zasłabnięcia, omdlenia, HA, DM, udar mózgu, zawał serca.   
+
+R15	Neg Arg1:T22 Arg2:T23 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[1569, 1577] <type: RIGHT>>
+R16	Neg Arg1:T22 Arg2:T24 << OK >>	Neguje -> omdlenia  <RANK: 2> <info: start[1569, 1591] <type: RIGHT>>
+R17	Neg Arg1:T22 Arg2:T25 << OK >>	Neguje -> HA  <RANK: 2> <info: start[1569, 1601] <type: RIGHT>>
+R18	Neg Arg1:T22 Arg2:T26 << OK >>	Neguje -> DM  <RANK: 2> <info: start[1569, 1605] <type: RIGHT>>
+R19	Neg Arg1:T22 Arg2:T27 << OK >>	Neguje -> udar mózgu  <RANK: 2> <info: start[1569, 1609] <type: RIGHT>>
+R20	Neg Arg1:T22 Arg2:T28 << OK >>	Neguje -> zawał serca  <RANK: 2> <info: start[1569, 1621] <type: RIGHT>>
+
+
+Sentence 17:
+Przebyte operacje: jw
+Palenie tytoniu: nie 
+
+R21	Neg Arg1:T31 Arg2:T30 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[1676, 1659] <type: LEFT>>
+R22	Neg Arg1:T31 Arg2:T29 <<REDUNDANT!!!REMOVED>>	nie -> Przebyte operacje <:REMOVED other second tag between (left):> <RANK: 1> <info: start[1676, 1637] <type: LEFT>>
+
+
+Sentence 18:
+Inne używki: nie 
+Uczulenia: nie 
+
+R23	Neg Arg1:T33 Arg2:T34 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1694, 1699] <type: RIGHT>>
+R24	Neg Arg1:T33 Arg2:T32 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[1694, 1681] <type: LEFT>>
+R25	Neg Arg1:T35 Arg2:T34 << OK >>	nie -> Uczulenia  <RANK: 3> <info: start[1710, 1699] <type: LEFT>>
+R26	Neg Arg1:T35 Arg2:T32 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1710, 1681] <type: LEFT>>
+
+
+Sentence 19:
+Przebyte choroby zakaźne - WZW (-) , borelioza ( - ), tbc (-), odra (-), szczepiona na odrę (+), 
+
+R27	Neg Arg1:T41 Arg2:T36 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1784, 1742] <type: LEFT>>
+R28	Neg Arg1:T41 Arg2:T37 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1784, 1752] <type: LEFT>>
+R29	Neg Arg1:T41 Arg2:T38 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1784, 1769] <type: LEFT>>
+R30	Neg Arg1:T41 Arg2:T39 << OK >>	- -> odra  <RANK: 3> <info: start[1784, 1778] <type: LEFT>>
+R31	Neg Arg1:T41 Arg2:T40 <<REDUNDANT!!!REMOVED>>	- -> szczepiona na odrę <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1784, 1788] <type: RIGHT>>
+R32	Neg Arg1:T42 Arg2:T36 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1774, 1742] <type: LEFT>>
+R33	Neg Arg1:T42 Arg2:T37 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1774, 1752] <type: LEFT>>
+R34	Neg Arg1:T42 Arg2:T38 << OK >>	- -> tbc  <RANK: 3> <info: start[1774, 1769] <type: LEFT>>
+R35	Neg Arg1:T42 Arg2:T39 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1774, 1778] <type: RIGHT>>
+R36	Neg Arg1:T42 Arg2:T40 <<REDUNDANT!!!REMOVED>>	- -> szczepiona na odrę <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1774, 1788] <type: RIGHT>>
+R37	Neg Arg1:T43 Arg2:T36 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1764, 1742] <type: LEFT>>
+R38	Neg Arg1:T43 Arg2:T37 << OK >>	- -> borelioza  <RANK: 3> <info: start[1764, 1752] <type: LEFT>>
+R39	Neg Arg1:T43 Arg2:T38 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1764, 1769] <type: RIGHT>>
+R40	Neg Arg1:T43 Arg2:T39 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1764, 1778] <type: RIGHT>>
+R41	Neg Arg1:T43 Arg2:T40 <<REDUNDANT!!!REMOVED>>	- -> szczepiona na odrę <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1764, 1788] <type: RIGHT>>
+R42	Neg Arg1:T44 Arg2:T36 << OK >>	- -> WZW  <RANK: 3> <info: start[1747, 1742] <type: LEFT>>
+R43	Neg Arg1:T44 Arg2:T37 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1747, 1752] <type: RIGHT>>
+R44	Neg Arg1:T44 Arg2:T38 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1747, 1769] <type: RIGHT>>
+R45	Neg Arg1:T44 Arg2:T39 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1747, 1778] <type: RIGHT>>
+R46	Neg Arg1:T44 Arg2:T40 <<REDUNDANT!!!REMOVED>>	- -> szczepiona na odrę <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1747, 1788] <type: RIGHT>>
+
+
+Sentence 20:
+Stan społeczny: warunki mieszkaniowe dobre, pracuje - pielęgniarka - ICZMP. 
+
+
+
+Sentence 21:
+Leki - stosowane z powodu zapalenia ścięgna lewego kolana (zalecone jeszcze przez tydzień): 
+-Olfen 75SR 2xdz,
+-Structum 500 mg 2xdz,
+
+
+
+
+R47	Drg Arg1:T48 Arg2:T50 << OK >>	Olfen -> 75SR 2xdz  <RANK: 3> <info: start[1984, 1990] <type: RIGHT>>
+R48	Drg Arg1:T48 Arg2:T51 <<REDUNDANT!!!REMOVED>>	Olfen -> 500 mg 2xdz <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1984, 2011] <type: RIGHT>>
+R49	Drg Arg1:T49 Arg2:T50 <<REDUNDANT!!!REMOVED>>	Structum -> 75SR 2xdz <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[2002, 1990] <type: LEFT>>
+R50	Drg Arg1:T49 Arg2:T51 << OK >>	Structum -> 500 mg 2xdz  <RANK: 3> <info: start[2002, 2011] <type: RIGHT>>
+R51	Alg Arg1:T47 Arg2:T48 <<REDUNDANT!!!SHOULD BE REMOVED>>	zapalenia ścięgna lewego kolana -> Olfen  <RANK: 1> <info: start[1916, 1984] <type: RIGHT>>
+R52	Alg Arg1:T47 Arg2:T49 <<REDUNDANT!!!REMOVED>>	zapalenia ścięgna lewego kolana -> Structum <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1916, 2002] <type: RIGHT>>
+
+
+Sentence 22:
+Planowany czas hospitalizacji: 3-5 dni. 
+
+
+
+Sentence 23:
+Planowane badania: badania laboratoryjne, próba wysiłkowa, ECHO, ABPM.
+
+
+
+Sentence 24:
+------------------------------------------------
+
+
+
+Sentence 25:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 26:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.95[10^3/ul]
+    
+
+
+Sentence 27:
+RBC Krwinki czerwone:4.22[10^6/ul]
+    
+
+
+Sentence 28:
+HGB Hemoglobina:13.1[g/dl]
+    
+
+
+Sentence 29:
+HCT Hematokryt:37.0[%]
+    
+
+
+Sentence 30:
+MCV wskaźnik czerwonokrw:87.7[fl]
+    
+
+
+Sentence 31:
+MCH wskaźnik czerwonokrw:31.0[pg]
+    
+
+
+Sentence 32:
+MCHC wskaźnik czerwonokr:35.4[g/dl]
+    
+
+
+Sentence 33:
+PLT z morfologii:249[10^3/ul]
+    
+
+
+Sentence 34:
+RDW-SD:40.3[fl]
+    
+
+
+Sentence 35:
+RDW-CV:12.5[%]
+    PDW:14.2[fl]
+    MPV:10.9[fl]
+    
+
+
+Sentence 36:
+P-LCR:34.4[%]
+    
+
+
+Sentence 37:
+PCT (hematokryt płytkowy:0.27[%]
+    
+
+
+Sentence 38:
+NEUTR# wartość bezwzględ:2.17[10^3/ul]
+    
+
+
+Sentence 39:
+NEUTR%:43.8[%]
+    
+
+
+Sentence 40:
+LYMH# wartość bezwzględn:1.94[10^3/ul]
+    
+
+
+Sentence 41:
+LYMPH%:39.2[%]
+    
+
+
+Sentence 42:
+MONO# wartość bezwzględn:0.50[10^3/ul]
+    
+
+
+Sentence 43:
+MONO%:10.1[%]
+    
+
+
+Sentence 44:
+EO# wartość bezwzględna:0.32[10^3/ul]
+    
+
+
+Sentence 45:
+EO%:6.5[%]
+    
+
+
+Sentence 46:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    BASO%:0.4[%]
+    
+
+
+Sentence 47:
+NRBC %:0.2[%]
+    
+
+
+Sentence 48:
+NRBC #:0.01[10^3/ul]
+
+
+
+Sentence 49:
+Badanie ogólne moczu
+    
+
+
+Sentence 50:
+barwa:żółty[ ]
+    
+
+
+Sentence 51:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 52:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 53:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 54:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 55:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 56:
+ciężar właściwy:1.014[ ]
+    pH:5.0[ ]
+    
+
+
+Sentence 57:
+białko:nieobecne[ ]
+    
+
+
+Sentence 58:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 59:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 60:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 61:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 62:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 63:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 64:
+leukocyty:10 /ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 65:
+TSH: TSH:2.30[uIU/ml]
+
+
+
+Sentence 66:
+FT3: FT3:3.16[pg/ml]
+
+
+
+Sentence 67:
+FT4: FT4:1.18[ng/dl]
+
+
+
+Sentence 68:
+ALAT: ALAT:23[U/L]
+ASPAT: ASPAT:21[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 69:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 70:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 71:
+Potas (K): Potas:5.0[mmol/L]
+
+
+
+Sentence 72:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 73:
+Kreatynina + GFR
+    
+
+
+Sentence 74:
+Kreatynina w surowicy:0.66[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 75:
+MDRD ze stan:96.8[ml/min/1,73 m^2]
+
+
+
+Sentence 76:
+Kreatynina + GFR
+    
+
+
+Sentence 77:
+Kreatynina w surowicy:0.67[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 78:
+MDRD ze stan:95.2[ml/min/1,73 m^2]
+
+
+
+Sentence 79:
+Mocznik: Mocznik:44[mg/dl]
+
+
+
+Sentence 80:
+Kwas moczowy: Kwas moczowy:4.6[mg/dl]
+
+
+
+Sentence 81:
+Lipidogram
+    
+
+
+Sentence 82:
+Cholesterol całkowity:202[mg/dl]
+    
+
+
+Sentence 83:
+Cholesterol HDL:40[mg/dl]
+    
+
+
+Sentence 84:
+Cholestrol LDL:137[mg/dl]
+    
+
+
+Sentence 85:
+Triglicerydy:147[mg/dl]
+    
+
+
+Sentence 86:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:89[mg/dl]
+
+
+
+Sentence 87:
+Glukoza w surowicy: Glukoza w surowicy:89[mg/dl]
+
+
+
+Sentence 88:
+NT-proBNP surowica: NT-proBNP w surowicy:71[pg/ml]
+
+
+
+Sentence 89:
+------------------------------------------------
+
+
+
+Sentence 90:
+ICD10
+------------------------------------------------
+I36.1
+R00.2
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 91:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 92:
+89.501
+88.721
+89.502
+------------------------------------------------
+
+

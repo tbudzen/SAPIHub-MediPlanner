@@ -1,0 +1,269 @@
+T1	Drug 340 347	Nolpaza
+T2	Drug 349 359	Tardyferon
+T3	Drug 361 369	Setal MR
+T4	Drug 371 376	Acard
+T5	Drug 378 385	Roswera
+T6	Drug 387 396	Zanacodar
+T7	Drug 398 406	Trosemed
+T8	Drug 408 416	Spironol
+T9	Drug 418 427	eplerenon
+T10	Drug 429 435	Clatra
+T11	Drug 437 444	Kalipoz
+T12	Drug 446 454	Magnezin
+T13	Drug 456 463	Dexaven
+T14	Drug 465 472	Heviran
+T15	Investigation 3705 3715	echo serca
+T16	Investigation 3717 3720	TET
+T17	Investigation 3722 3726	ABPM
+T18	Investigation 3728 3738	Holter ekg
+T19	Investigation 3740 3758	rtg kl. piersiowej
+T20	Drug 3644 3650	Clatra
+T21	Drug_dose 3651 3676	20 mg - 1 tabl. wieczorem
+R1	Drg Arg1:T20 Arg2:T21	
+T22	Drug 3609 3617	Spironol
+T23	Drug_dose 3618 3642	25 mg 1 tabl. w południe
+R2	Drg Arg1:T22 Arg2:T23	
+T24	Drug 3580 3588	Torsemed
+T25	Drug 3545 3554	Zanacodar
+T26	Drug_dose 3555 3578	40 mg 1 tabl. wieczorem
+R3	Drg Arg1:T25 Arg2:T26	
+T27	Drug_dose 3589 3607	10 mg 1 tabl. rano
+R4	Drg Arg1:T24 Arg2:T27	
+T28	Drug 3513 3520	Roswera
+T29	Drug_dose 3521 3544	10 mg 1 tabl. wieczorem
+R5	Drg Arg1:T28 Arg2:T29	
+T30	Drug 3487 3492	Acard
+T31	Drug_dose 3493 3511	75 mg 1 tabl. rano
+R6	Drg Arg1:T30 Arg2:T31	
+T32	Drug 3467 3475	Setal MR
+T33	Drug_dose 3476 3484	2x1 tabl
+R7	Drg Arg1:T32 Arg2:T33	
+T34	Drug 3437 3451	Tardyferon-fol
+T35	Drug 3409 3416	Nolpaza
+T36	Drug_dose 3417 3435	20 mg 1 tabl. rano
+R8	Drg Arg1:T35 Arg2:T36	
+T37	Drug_dose 3453 3465	1 tabl. rano
+R9	Drg Arg1:T34 Arg2:T37	
+T38	Drug 1682 1690	Setal MR
+T39	Drug_dose 1691 1700	2x 1 tabl
+R10	Drg Arg1:T38 Arg2:T39	
+T40	Drug 1701 1706	Acard
+T41	Drug_dose 1707 1727	75mg 1x 1 tabl/wiecz
+R11	Drg Arg1:T40 Arg2:T41	
+T42	Drug 1728 1735	Roswera
+T43	Drug_dose 1736 1756	10mg 1x 1 tabl/wiecz
+R12	Drg Arg1:T42 Arg2:T43	
+T44	Drug 1757 1766	Zanacodar
+T45	Drug_dose 1767 1787	80mg 1x 1 tabl/wiecz
+R13	Drg Arg1:T44 Arg2:T45	
+T46	Drug 1788 1796	Torsemed
+T47	Drug_dose 1797 1816	10mg 1x 1 tabl/rano
+R14	Drg Arg1:T46 Arg2:T47	
+T48	Drug 1817 1826	Eplerenon
+T49	Drug_dose 1827 1845	25mg 1x 1 tabl/poł
+R15	Drg Arg1:T48 Arg2:T49	
+T50	Drug 1846 1853	Nolpaza
+T51	Drug_dose 1854 1872	20mg 1x 1tabl/rano
+R16	Drg Arg1:T50 Arg2:T51	
+T52	Drug 1873 1883	Tardyferon
+T53	Drug_dose 1884 1898	1x 1 tabl/rano
+R17	Drg Arg1:T52 Arg2:T53	
+T54	Drug 1900 1907	Kalipoz
+T55	Drug_dose 1908 1917	2x 1 tabl
+R18	Drg Arg1:T54 Arg2:T55	
+T56	Drug 1918 1926	Magnezin
+T57	Drug_dose 1927 1936	2x 1 tabl
+R19	Drg Arg1:T56 Arg2:T57	
+T58	Drug 1937 1944	Heviran
+T59	Drug_dose 1945 1973	800mg p.o. o 12:00 (1 dawka)
+R20	Drg Arg1:T58 Arg2:T59	
+T60	Negation 3338 3344	neguje
+T61	Behaviour 3319 3337	Uzależnienie inne:
+R21	Neg Arg1:T60 Arg2:T61	
+T62	Behaviour 3296 3317	Alkohol: okazjonalnie
+N1	Reference T62 ICD10:Z72.1	Używanie alkoholu
+T63	Negation 3287 3295	neguje  
+T64	Negation 3267 3273	neguje
+T65	Negation 3243 3256	bez znaczenia
+T66	Behaviour 3275 3285	Nikotynizm
+R22	Neg Arg1:T63 Arg2:T66	
+T67	Condition 3258 3265	Alergie
+N3	Reference T67 ICD10:T78.4	Alergia, nieokreślona
+R23	Neg Arg1:T64 Arg2:T67	
+T68	Condition 3226 3241	Wywiad rodzinny
+A1	Status T68 Family
+R24	Neg Arg1:T65 Arg2:T68	
+T69	Condition 702 729	Choroba niedokrwienna serca
+N4	Reference T69 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T70	Condition 731 751	Hipercholesterolemia
+N5	Reference T70 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T71	Condition 753 768	Miażdżyca aorty
+N6	Reference T71 ICD10:I70.0	Miażdżyca aorty
+T72	Condition 770 791	Nadciśnienie tętnicze
+N7	Reference T72 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T73	Condition 793 821	Nadkomorowe zaburzenia rytmu
+N8	Reference T73 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T74	Investigation_result 906 959	naciek do opłucnej z przyleganiem do aorty piersiowej
+T75	Treatment 972 985	chemioterapii
+T76	Date 987 1009	ostatni cykl w 09.2019
+R25	Dat Arg1:T76 Arg2:T75	
+T77	Condition 823 904	Rak gruczołowy płuca lewego w IV st. zaawansowania z przerzutami do płuca prawego
+N9	Reference T77 ICD10:C34	Nowotwór złośliwy oskrzela i płuca
+T78	Condition 2434 2513	rak gruczołowy płuca lewego IV st. zaawansowania z przerzutami do płuca prawego
+N10	Reference T78 ICD10:C34	Nowotwór złośliwy oskrzela i płuca
+T79	Investigation_result 2516 2568	naciek do opłucnej z przleganiem do aorty piersiowej
+T80	Condition 1025 1041	astmy oskrzelowa
+N11	Reference T80 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T81	Condition 1043 1074	nieprawidłowa glikemia na czczo
+N12	Reference T81 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T82	Condition 1076 1097	ciężka niedokrwistość
+N13	Reference T82 ICD10:D64.8	Inne określone niedokrwistości
+T83	Date 1100 1107	08.2019
+R26	Dat Arg1:T83 Arg2:T82	
+T84	Drug 1132 1136	KKCz
+T85	Condition 1138 1159	owrzodzenie okrężnicy
+N14	Reference T85 ICD10:K63	Inne choroby jelit
+T86	Symptom 1161 1210	krwawienie z górnego odcinka przewodu pokarmowego
+N15	Reference T86 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T87	Date 1212 1216	2011
+R28	Dat Arg1:T87 Arg2:T86	
+T88	Date 1299 1303	2018
+T89	Condition 1227 1297	zapalenia nadżerkowego błony śluzowej części żołądka i odcinka dolnego
+N16	Reference T89 ICD10:K29.6	Inne zapalenia żołądka
+R29	Dat Arg1:T88 Arg2:T89	
+T90	Condition 1306 1331	gruczolaki jelita grubego
+N17	Reference T90 ICD10:C18	Nowotwór złośliwy jelita grubego
+T91	Condition 1333 1346	żylaki odbytu
+N18	Reference T91 ICD10:I84	Hemoroidy
+T92	Treatment 1348 1362	prostatektomia
+T93	Condition 1372 1376	raka
+T94	Date 1378 1382	2010
+R30	Dat Arg1:T94 Arg2:T93	
+R31	Dat Arg1:T94 Arg2:T92	
+T95	Condition 1385 1405	torbiel nerki prawej
+N19	Reference T95 ICD10:N28.1	Torbiel nerki, nabyta
+T96	Treatment 1407 1433	resekcja częściowa żołądka
+A2	Status T96 Historical_Insignificant
+T97	Date 1435 1439	1981
+T98	Condition 1450 1467	choroby wrzodowej
+N20	Reference T98 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+R32	Dat Arg1:T97 Arg2:T98	
+R33	Dat Arg1:T97 Arg2:T96	
+T99	Treatment 1469 1477	operacja
+T100	Condition 1478 1515	przepukliny pachwinowej prawostronnej
+N21	Reference T100 ICD10:K40	Przepuklina pachwinowa
+T101	Date 1517 1521	2010
+R34	Dat Arg1:T101 Arg2:T100	
+R35	Dat Arg1:T101 Arg2:T99	
+T102	Condition 1524 1545	Podejrzenie półpaśćca
+N22	Reference T102 ICD10:B02	Choroba zakaźna wywołana przez wirus herpes zoster [półpasiec]
+A3	Source T102 Declared
+T103	Symptom 2141 2165	obrzęków kończyn dolnych
+N23	Reference T103 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T104	Date 2168 2181	od 2 miesięcy
+R36	Dat Arg1:T104 Arg2:T103	
+T105	Symptom 2190 2198	duszność
+N24	Reference T105 ICD10:R06.0	Duszność
+T106	Negation 2183 2189	neguje
+R37	Neg Arg1:T106 Arg2:T105	
+T107	Condition 2223 2234	tętniak IVS
+N25	Reference T107 ICD10:Q21.9	Wrodzona wada przegrody serca, nieokreślona
+T108	Condition 2236 2238	HA
+N26	Reference T108 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T109	Date 2240 2244	2014
+T110	Investigation 2245 2256	SPECT serca
+R38	Dat Arg1:T109 Arg2:T110	
+T111	Negation 2259 2274	nie stwierdzono
+T112	Investigation_result 2275 2311	indukowanego wysiłkiem niedokrawania
+R39	Neg Arg1:T111 Arg2:T112	
+R40	Inv Arg1:T110 Arg2:T112	
+T113	Condition 2313 2333	hipercholesterolemia
+N27	Reference T113 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T114	Condition 2335 2354	nadciśnienie płucne
+N28	Reference T114 ICD10:I27.2	Nadciśnienie płucne wtórne o innej etiologii
+T115	Condition 2356 2363	IM I st
+N29	Reference T115 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T116	Condition 2365 2376	IA I/II st.
+N30	Reference T116 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T117	Condition 2377 2387	IT II srt.
+N31	Reference T117 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T118	Condition 2390 2393	IFG
+N32	Reference T118 ICD10:R73	Podwyższone stężenie glukozy we krwi
+T119	Condition 2395 2411	astma oskrzelowa
+N33	Reference T119 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T120	Date 2415 2423	od 4 lat
+R41	Dat Arg1:T120 Arg2:T119	
+T121	Drug 2584 2599	pemetreksedem  
+T122	Drug 2571 2583	karboplatyna
+T123	Date 2609 2620	05.-07.2019
+R42	Dat Arg1:T123 Arg2:T121	
+R43	Dat Arg1:T123 Arg2:T122	
+T124	Date 2623 2636	od 09.08.2019
+T125	Drug 2649 2664	pemetreksedem  
+R44	Dat Arg1:T124 Arg2:T125	
+T126	Drug 2815 2832	przetoczenie KKCZ
+T127	Condition 2775 2796	niedokrwistość ciężka
+N34	Reference T127 ICD10:D64.9	Niedokrwistość, nieokreślona
+T128	Date 2797 2813	we sierpniu 2019
+R45	Dat Arg1:T128 Arg2:T127	
+T129	Condition 2835 2856	owrzodzenie okrężnicy
+N35	Reference T129 ICD10:K63	Inne choroby jelit
+T130	Investigation_result 2859 2908	zmiana poinfekcyjna lub niedokrwienna  (his-pat),
+T131	Symptom 2909 2947	krwawienie z p.pokarmowego - z górnego
+N36	Reference T131 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T132	Date 2948 2952	2011
+R47	Dat Arg1:T132 Arg2:T131	
+T133	Condition 2954 3004	zapalenie nadżerkowe błony śluzowej części żołądka
+N37	Reference T133 ICD10:K29.6	Inne zapalenia żołądka
+T134	Symptom 3009 3016	dolnego
+N38	Reference T134 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T135	Date 3017 3021	2018
+R48	Dat Arg1:T135 Arg2:T134	
+T136	Condition 3024 3049	gruczolaki jelita grubego
+N39	Reference T136 ICD10:C18	Nowotwór złośliwy jelita grubego
+T137	Condition 3051 3064	żylaki odbytu
+N40	Reference T137 ICD10:I84	Hemoroidy
+T138	Condition 3067 3079	rak prostaty
+N41	Reference T138 ICD10:C61	Nowotwór złośliwy gruczołu krokowego
+T139	Treatment 3082 3090	usunięty
+T140	Date 3091 3095	2010
+R49	Dat Arg1:T140 Arg2:T139	
+R50	Dat Arg1:T140 Arg2:T138	
+T141	Condition 3097 3117	torbiel nerki prawej
+N42	Reference T141 ICD10:N28.1	Torbiel nerki, nabyta
+T142	Treatment 3138 3158	resekcja cz. żołądka
+T143	Date 3160 3164	1981
+T144	Condition 3166 3182	wrzodowa choroba
+N43	Reference T144 ICD10:K25	Wrzód żołądka
+R51	Dat Arg1:T143 Arg2:T144	
+R52	Dat Arg1:T143 Arg2:T142	
+A4	Status T142 Historical_Insignificant
+A5	Status T144 Historical_Insignificant
+T145	Treatment 3128 3136	operacje
+T146	Condition 3185 3220	przepuklina pachwinowa prawostronna
+N44	Reference T146 ICD10:K40	Przepuklina pachwinowa
+T147	Date 3221 3225	2010
+R53	Dat Arg1:T147 Arg2:T146	
+R54	Dat Arg1:T147 Arg2:T145	
+R27	Dat Arg1:T76 Arg2:T77	
+R55	Dat Arg1:T76 Arg2:T74	
+T148	Treatment 1119 1131	przetoczenia
+A6	Status T92 Historical_Insignificant
+A7	Status T93 Historical_Insignificant
+A8	Status T98 Historical_Insignificant
+A9	Status T100 Historical_Insignificant
+A10	Status T99 Historical_Insignificant
+T149	Drug 2673 2679	chemia
+T150	Date 2680 2691	we wrześniu
+R56	Dat Arg1:T150 Arg2:T149	
+T151	Date 2704 2715	maju 2019r.
+R57	Dat Arg1:T151 Arg2:T149	
+T152	Investigation 2738 2740	TK
+T153	Date 2717 2729	18 listopada
+R58	Dat Arg1:T153 Arg2:T152	
+R46	Dat Arg1:T128 Arg2:T126	
+A11	Status T139 Historical_Insignificant
+A12	Status T138 Historical_Insignificant
+A13	Status T146 Historical_Insignificant
+A14	Status T145 Historical_Insignificant
+N2	Reference T66 ICD10:Z72.0	Używanie tytoniu

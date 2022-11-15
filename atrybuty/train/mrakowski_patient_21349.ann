@@ -1,0 +1,42 @@
+T1	Condition 448 469	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 471 512	Łagodna niedomykalność zastawki mitralnej
+N2	Reference T2 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T3	Condition 514 558	Łagodna niedomykalność zastawki trójdzielnej
+T4	Condition 728 751	nadciśnienia tętniczego
+N4	Reference T4 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T5	Investigation_result 779 803	skoków RR do 200/100mmHg
+T6	Symptom 818 839	zaburzenia  nerwicowe
+N5	Reference T6 ICD10:F48.9	Zaburzenia nerwicowe, nieokreślone
+T7	Symptom 879 901	częste oddawanie moczu
+N6	Reference T7 ICD10:R35	Wielomocz
+T8	Negation 946 952	Neguje
+T9	Condition 953 970	uczulenia na leki
+R1	Neg Arg1:T8 Arg2:T9	
+T10	Drug 999 1005	Bibloc
+T11	Drug_dose 1006 1024	5mg 1x 1 tabl/rano
+R2	Drg Arg1:T10 Arg2:T11	
+T12	Drug 1025 1031	Karbis
+T13	Drug_dose 1032 1056	32mg 1x 1 tabl/wieczorem
+R3	Drg Arg1:T12 Arg2:T13	
+T14	Drug 1057 1064	Lacipil
+T15	Drug_dose 1065 1087	4mg 1x1 tabl/wieczorem
+R4	Drg Arg1:T14 Arg2:T15	
+T16	Drug 1088 1093	Acard
+T17	Drug_dose 1094 1118	75mg 1x 1 tabl/wieczorem
+R5	Drg Arg1:T16 Arg2:T17	
+T18	Drug 1119 1127	Pramolan
+T19	Drug_dose 1128 1156	50mg 2x1 tabl/rano i wieczór
+R6	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1157 1163	Afobam
+T21	Drug_dose 1164 1196	0,5mg 1 tabl. doraźnie wieczorem
+R7	Drg Arg1:T20 Arg2:T21	
+N3	Reference T3 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T22	Condition 845 860	typowej dławicy
+T23	Negation 841 844	Bez
+R8	Neg Arg1:T23 Arg2:T22	
+N7	Reference T22 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+N8	Reference T5 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T24	Date 710 718	3-letnim
+R9	Dat Arg1:T24 Arg2:T4	
+N9	Reference T9 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie

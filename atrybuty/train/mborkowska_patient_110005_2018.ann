@@ -1,0 +1,69 @@
+T1	Symptom 439 470	Omdlenia o niejasnej etiologii.
+N1	Reference T1 ICD10:R55	Omdlenie i zapaść
+T2	Condition 471 478	Migrena
+N2	Reference T2 ICD10:G43.9	Migrena, nieokreślona
+T3	Condition 480 487	Nadwaga
+T4	Behaviour 489 499	Nikotynizm
+N3	Reference T4 ICD10:Z72.0	Używanie tytoniu
+T5	Date 500 513	w przeszłości
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Behaviour 1044 1063	redukcja masy ciała
+T7	Behaviour 1002 1038	dieta zbliżona do śródziemnomorskiej
+T8	Investigation 922 981	kontrola lipidogramu, ponowne oznaczenie stężenie d-dimerów
+T9	Date 982 995	za 3 tygodnie
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Investigation 877 906	kontrola ciśnienia tętniczego
+T11	Symptom 1235 1250	zawrotów głowy,
+N4	Reference T11 ICD10:R42	Zawroty głowy i odurzenie
+T12	Symptom 1251 1257	omdleń
+N5	Reference T12 ICD10:R55	Omdlenie i zapaść
+T13	Date 1259 1268	2-3 lata,
+R3	Dat Arg1:T13 Arg2:T12	
+T14	Date 1269 1285	3 epizody w roku
+R4	Dat Arg1:T14 Arg2:T12	
+T15	Investigation_result 1335 1357	bradykardia do 38/min.
+T16	Condition 1380 1387	migreny
+N6	Reference T16 ICD10:G43.9	Migrena, nieokreślona
+T17	Negation 1407 1413	neguje
+T18	Treatment 1388 1405	Przebyte operacje
+R5	Neg Arg1:T17 Arg2:T18	
+T19	Condition 1441 1451	wada serca
+A1	Status T19 Family
+N7	Reference T19 ICD10:Q24.8	Inne określone wrodzone wady rozwojowe serca
+T20	Condition 1460 1463	SCD
+T21	Negation 1453 1459	neguje
+R6	Neg Arg1:T21 Arg2:T20	
+A2	Status T20 Family
+T22	Negation 1476 1482	neguje
+T23	Condition 1483 1485	DM
+A3	Status T23 Family
+N8	Reference T23 ICD10:E13	Inne określone postacie cukrzycy
+R7	Neg Arg1:T22 Arg2:T23	
+T24	Negation 1507 1513	neguje
+T25	Condition 1498 1505	Alergie
+N9	Reference T25 ICD10:T78.4	Alergia, nieokreślona
+R8	Neg Arg1:T24 Arg2:T25	
+T26	Behaviour 1515 1531	Nikotynizm: tak,
+N10	Reference T26 ICD10:Z72.0	Używanie tytoniu
+T27	Date 1532 1548	do 7 lat wstecz,
+R9	Dat Arg1:T27 Arg2:T26	
+T28	Negation 1572 1578	neguje
+T29	Behaviour 1563 1570	Alkohol
+N11	Reference T29 ICD10:Z72.1	Używanie alkoholu
+R10	Neg Arg1:T28 Arg2:T29	
+T30	Negation 1599 1605	neguje
+T31	Behaviour 1580 1597	Uzależnienie inne
+R11	Neg Arg1:T30 Arg2:T31	
+T32	Negation 1649 1656	żadnych
+T33	Drug 1643 1647	Leki
+T34	Investigation 1685 1695	echo serca
+T35	Investigation 1697 1700	TET
+T36	Investigation 1702 1706	ABPM
+T37	Investigation 1708 1718	Holter ekg
+T38	Investigation 1720 1738	rtg kl. piersiowej
+A4	Status T26 Historical_Insignificant
+R12	Neg Arg1:T32 Arg2:T33	
+N12	Reference T31 ICD10:Z72	Problemy związane ze stylem życia
+T39	Treatment 639 666	dalsza opieka w poradni POZ
+T40	Treatment 682 705	kontrola kardiologiczna
+T41	Treatment 712 861	poszerzona diagnostyka omdleń – elektofizjologiczna, neurologiczna i diabetologiczna (wykluczenie hipoglikemii jako przyczyny omdleń) i neurologiczna

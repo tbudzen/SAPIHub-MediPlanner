@@ -1,0 +1,232 @@
+T1	Treatment 331 358	dalsza opieka w poradni POZ
+T2	Treatment 361 428	okresowa kontrola kardiologiczna, pulmonologiczna i laryngologiczna
+T3	Investigation 430 469	codzienna kontrola ciśnienia tętniczego
+T4	Investigation 472 550	okresowa kontrolą morfologii, lipidogramu , parametrów wątrobowych i nerkowych
+T5	Behaviour 552 557	dieta
+T6	Condition 775 802	PFO z przeciekiem L-P i P-L
+N1	Reference T6 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T7	Investigation 828 837	NMR głowy
+T8	Investigation_result 804 825	Ogniska niedokrwienne
+N2	Reference T8 ICD10:R90	Nieprawidłowe wyniki badań obrazowych ośrodkowego systemu nerwowego
+T9	Date 839 847	12.2018r
+R1	Inv Arg1:T7 Arg2:T8	
+R2	Dat Arg1:T9 Arg2:T7	
+T10	Condition 850 883	Niewydolność serca z zachowaną EF
+N3	Reference T10 ICD10:I50.9	Niewydolność serca, nieokreślona
+T11	Condition 885 926	Łagodna niedomykalność zastawki mitralnej
+N4	Reference T11 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T12	Condition 928 944	Arytmia komorowa
+N5	Reference T12 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T13	Condition 946 949	ExV
+N6	Reference T13 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T14	Condition 964 984	Hipercholesterolemia
+N7	Reference T14 ICD10:E78.0	Czysta hipercholesterolemia
+T15	Condition 986 1002	Astma oskrzelowa
+N8	Reference T15 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T16	Symptom 1004 1017	Zawroty głowy
+N9	Reference T16 ICD10:R42	Zawroty głowy i odurzenie
+T17	Condition 1248 1251	PFO
+A1	Source T17 Declared
+N10	Reference T17 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T18	Condition 1491 1518	PFO z przeciekiem L-P i P-L
+N11	Reference T18 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T19	Treatment 1520 1530	Zamknięcie
+T20	Condition 1531 1559	ubytku międzyprzedsionkowego
+N12	Reference T20 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T21	Treatment 1560 1606	zapinką Occlutech Figulla Flex II PFo 23/25 mm
+T22	Date 1614 1625	11.09.2019r
+R3	Dat Arg1:T22 Arg2:T21	
+R4	Dat Arg1:T22 Arg2:T19	
+R5	Dat Arg1:T22 Arg2:T20	
+T23	Investigation_result 1627 1648	Ogniska niedokrwienne
+T24	Investigation 1651 1660	NMR głowy
+T25	Date 1662 1670	12.2018r
+N13	Reference T23 ICD10:R90	Nieprawidłowe wyniki badań obrazowych ośrodkowego systemu nerwowego
+R6	Inv Arg1:T24 Arg2:T23	
+R7	Dat Arg1:T25 Arg2:T24	
+T26	Condition 1673 1706	Niewydolność serca z zachowaną EF
+N14	Reference T26 ICD10:I50.9	Niewydolność serca, nieokreślona
+T27	Condition 1708 1749	Łagodna niedomykalność zastawki mitralnej
+N15	Reference T27 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T28	Condition 1751 1767	Arytmia komorowa
+N16	Reference T28 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T29	Condition 1769 1772	ExV
+N17	Reference T29 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T30	Condition 1787 1807	Hipercholesterolemia
+N18	Reference T30 ICD10:E78.0	Czysta hipercholesterolemia
+T31	Condition 1809 1825	Astma oskrzelowa
+N19	Reference T31 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T32	Symptom 1827 1840	Zawroty głowy
+N20	Reference T32 ICD10:R42	Zawroty głowy i odurzenie
+T33	Condition 2036 2039	PFO
+A2	Source T33 Declared
+N21	Reference T33 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T34	Symptom 2054 2067	zawroty głowy
+N22	Reference T34 ICD10:R42	Zawroty głowy i odurzenie
+T35	Investigation_result 2069 2090	ogniska niedokrwienne
+N23	Reference T35 ICD10:R90	Nieprawidłowe wyniki badań obrazowych ośrodkowego systemu nerwowego
+T36	Investigation 2093 2102	NMR głowy
+T37	Date 2104 2112	12.2018r
+R8	Inv Arg1:T36 Arg2:T35	
+R9	Dat Arg1:T37 Arg2:T36	
+T38	Condition 2115 2131	astma oskrzelowa
+N24	Reference T38 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T39	Symptom 2133 2148	kołatania serca
+N25	Reference T39 ICD10:R00.2	Kołatanie serca
+T40	Investigation 2152 2158	Holter
+T41	Investigation_result 2161 2170	3 tys ExV
+N26	Reference T41 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+R10	Inv Arg1:T40 Arg2:T41	
+T42	Treatment 2171 2188	Przebyte operacje
+T43	Negation 2190 2200	nie podaje
+R11	Neg Arg1:T43 Arg2:T42	
+T44	Condition 2228 2231	WZW
+N27	Reference T44 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T45	Condition 2233 2242	borelioza
+N28	Reference T45 ICD10:A69.2	Choroba z Lyme
+T46	Negation 2245 2255	nie podaje
+R12	Neg Arg1:T46 Arg2:T45	
+R13	Neg Arg1:T46 Arg2:T44	
+T47	Condition 2256 2271	Wywiad rodzinny
+A3	Status T47 Family
+T48	Negation 2273 2283	nie podaje
+R14	Neg Arg1:T48 Arg2:T47	
+T49	Behaviour 2284 2299	Palenie tytoniu
+T50	Negation 2301 2311	nie podaje
+R15	Neg Arg1:T50 Arg2:T49	
+T51	Behaviour 2312 2337	Inne używki: okazjonalnie
+T52	Condition 2338 2347	Uczulenia
+T54	Drug 2358 2366	Amizepin
+R16	Alg Arg1:T52 Arg2:T54	
+T55	Behaviour 2385 2402	pracownik biurowy
+T56	Drug 2426 2434	Biosotal
+T57	Drug_dose 2435 2456	40 mg 1 tabl. 2 x dz.
+R17	Drg Arg1:T56 Arg2:T57	
+T58	Drug 2457 2467	Pulmoterol
+T59	Drug_dose 2468 2480	50ug/d 2 x 1
+R18	Drg Arg1:T58 Arg2:T59	
+T60	Drug 2481 2490	Miflonide
+T61	Drug_dose 2491 2505	400mcg/d 2 x 1
+R19	Drg Arg1:T60 Arg2:T61	
+T62	Drug 2506 2512	Zyrtec
+T63	Drug_dose 2513 2536	10 mg 1 tabl. wieczorem
+R20	Drg Arg1:T62 Arg2:T63	
+T64	Drug 2537 2545	Promonta
+T65	Drug_dose 2546 2563	1 tabl. wieczorem
+R21	Drg Arg1:T64 Arg2:T65	
+T66	Investigation 2591 2601	echo serca
+T67	Investigation 2603 2623	echo przezprzełykowe
+T68	Investigation 2626 2629	TET
+T69	Investigation 2631 2635	ABPM
+T70	Investigation 2637 2643	Holter
+T71	Investigation 2645 2663	RTG kl. piersiowej
+T72	Treatment 2885 2895	zamknięcia
+T73	Condition 2896 2899	PFO
+N31	Reference T73 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T74	Symptom 2914 2927	zawroty głowy
+N32	Reference T74 ICD10:R42	Zawroty głowy i odurzenie
+T75	Investigation_result 2929 2950	ogniska niedokrwienne
+N33	Reference T75 ICD10:R90	Nieprawidłowe wyniki badań obrazowych ośrodkowego systemu nerwowego
+T76	Investigation 2953 2962	NMR głowy
+T77	Date 2964 2972	12.2018r
+R22	Inv Arg1:T76 Arg2:T75	
+R23	Dat Arg1:T77 Arg2:T76	
+T78	Condition 2975 2991	astma oskrzelowa
+N34	Reference T78 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T79	Symptom 2993 3008	kołatania serca
+N35	Reference T79 ICD10:R00.2	Kołatanie serca
+T80	Investigation 3012 3018	Holter
+T81	Investigation_result 3021 3030	3 tys ExV
+N36	Reference T81 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T82	Date 3032 3037	2017r
+R24	Inv Arg1:T80 Arg2:T81	
+R25	Dat Arg1:T82 Arg2:T80	
+T83	Condition 3040 3060	hipercholesterolemia
+N37	Reference T83 ICD10:E78.0	Czysta hipercholesterolemia
+T84	Investigation 3064 3094	USG Doopler tętnic dogłowowych
+T85	Investigation_result 3136 3151	istotnych zmian
+T86	Date 3122 3130	11.2018r
+R26	Dat Arg1:T86 Arg2:T84	
+R27	Inv Arg1:T84 Arg2:T85	
+T87	Investigation 3157 3187	USG tętnic/żył kończyn dolnych
+T88	Investigation_result 3230 3263	zmian zapalnych bądź zakrzepowych
+R28	Inv Arg1:T87 Arg2:T88	
+T89	Investigation 3268 3330	badaniu echokardiograficznym przezklatkowym i przezprzełykowym
+T90	Investigation_result 3344 3380	prawidłową funkcję skurczową LK i PK
+T91	Investigation_result 3383 3403	EF 63 %, TAPSE 22 mm
+T92	Investigation_result 3406 3475	zaburzenia funkcji rozkurczowej LK o typie pseudonormalizacji napływu
+T93	Investigation_result 3477 3483	IM Ist
+N38	Reference T93 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T94	Investigation_result 3486 3510	billowing płatka tylnego
+T95	Investigation_result 3512 3523	IT ślad/Ist
+N39	Reference T95 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T96	Investigation_result 3529 3545	wiotką IAS z PFO
+N40	Reference T96 ICD10:Q21.1	
+T97	Investigation_result 3547 3604	z przeciekiem L-P oraz dużym P-L podczas manewru Valsalvy
+T98	Treatment 3607 3651	dobrymi warunkami technicznymi do zamknięcia
+T99	Condition 3652 3655	PFO
+N41	Reference T99 ICD10:Q21.1	
+T100	Treatment 3656 3663	zapinką
+R29	Inv Arg1:T89 Arg2:T90	
+R30	Inv Arg1:T89 Arg2:T91	
+R31	Inv Arg1:T89 Arg2:T92	
+R32	Inv Arg1:T89 Arg2:T93	
+R33	Inv Arg1:T89 Arg2:T94	
+R34	Inv Arg1:T89 Arg2:T95	
+R35	Inv Arg1:T89 Arg2:T96	
+R36	Inv Arg1:T89 Arg2:T97	
+T101	Treatment 3698 3715	Przebyte operacje
+T102	Negation 3717 3727	nie podaje
+R37	Neg Arg1:T102 Arg2:T101	
+T103	Condition 3756 3759	WZW
+N42	Reference T103 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T104	Condition 3761 3770	borelioza
+N43	Reference T104 ICD10:A69.2	Choroba z Lyme
+T105	Negation 3773 3783	nie podaje
+R38	Neg Arg1:T105 Arg2:T104	
+R39	Neg Arg1:T105 Arg2:T103	
+T106	Condition 3785 3800	Wywiad rodzinny
+A4	Status T106 Family
+T107	Negation 3802 3812	nie podaje
+R40	Neg Arg1:T107 Arg2:T106	
+T108	Behaviour 3814 3829	Palenie tytoniu
+T109	Negation 3831 3841	nie podaje
+R41	Neg Arg1:T109 Arg2:T108	
+T110	Behaviour 3843 3868	Inne używki: okazjonalnie
+T111	Condition 3870 3879	Uczulenia
+T113	Drug 3890 3898	Amizepin
+R42	Alg Arg1:T111 Arg2:T113	
+T114	Behaviour 3918 3935	pracownik biurowy
+T115	Drug 3961 3968	Beto ZK
+T116	Drug 3985 3991	Atoris
+T117	Drug_dose 3969 3983	25 mg 1x1 rano
+T118	Drug_dose 3992 4011	40 mg 1x1 wieczorem
+R43	Drg Arg1:T115 Arg2:T117	
+R44	Drg Arg1:T116 Arg2:T118	
+T119	Drug 4013 4021	Valsacor
+T120	Drug_dose 4022 4050	80 mg 2x1/2 rano i wieczorem
+R45	Drg Arg1:T119 Arg2:T120	
+T121	Drug 4052 4062	Pulmoterol
+T122	Drug_dose 4063 4075	50ug/d 2 x 1
+R46	Drg Arg1:T121 Arg2:T122	
+T123	Drug 4077 4086	Miflonide
+T124	Drug_dose 4087 4101	400mcg/d 2 x 1
+R47	Drg Arg1:T123 Arg2:T124	
+T125	Drug 4103 4111	Promonta
+T126	Drug_dose 4112 4129	1 tabl. wieczorem
+R48	Drg Arg1:T125 Arg2:T126	
+T127	Investigation 4159 4169	echo serca
+T128	Investigation 4171 4191	echo przezprzełykowe
+T129	Investigation 4194 4197	TET
+T130	Investigation 4199 4203	ABPM
+T131	Investigation 4205 4211	Holter
+T132	Investigation 4213 4231	RTG kl. piersiowej
+N29	Reference T49 ICD10:Z72.0	Używanie tytoniu
+N30	Reference T52 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T53	Negation 3132 3135	bez
+R49	Neg Arg1:T53 Arg2:T85	
+N46	Reference T88 ICD10:I80.9	Zapalenie i zakrzepowe zapalenie żył o nieokreślonym umiejscowieniu
+T112	Negation 3226 3229	bez
+R50	Neg Arg1:T112 Arg2:T88	
+N44	Reference T108 ICD10:Z72.0	Używanie tytoniu
+N45	Reference T111 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie

@@ -1,0 +1,16 @@
+T1	Condition 439 472	Napadowy częstoskurcz nadkomorowy
+N1	Reference T1 ICD10:I47.1	Częstoskurcz nadkomorowy
+T2	Condition 475 500	podejrzenie preekscytacji
+A1	Source T2 Declared
+N2	Reference T2 ICD10:I45.6	Zespół preekscytacji
+T3	Condition 646 666	zaburzeń rytmu serca
+N3	Reference T3 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T4	Date 667 680	od kilku m-cy
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Drug 682 696	leków na stałe
+T6	Negation 697 710	nie otrzymuje
+T7	Condition 712 729	wywiad alergiczny
+N4	Reference T7 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T8	Negation 730 736	ujemny
+R2	Neg Arg1:T8 Arg2:T7	
+R3	Neg Arg1:T6 Arg2:T5	

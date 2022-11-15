@@ -1,0 +1,78 @@
+T1	Condition 450 477	Choroba niedokrwienna serca
+T2	Condition 501 522	Nadciśnienie tętnicze
+T3	Condition 536 541	POCHP
+T4	Condition 543 563	Nadczynność tarczycy
+T5	Treatment 573 590	cholecystekctomii
+T6	Treatment 712 739	dalsza opieka w poradni POZ
+T7	Treatment 743 795	okresowa kontrola kardiologiczna , endokrynologiczna
+T8	Treatment 798 834	wskazana konsultacja pulmonologiczna
+T9	Investigation 835 874	regularna kontrola ciśnienia tętniczego
+T10	Investigation 878 943	okresowa kontrola lipidogramu, elektrolitów, parametrów nerkowych
+T11	Behaviour 944 969	dieta niskocholesterolowa
+T12	Behaviour 970 1015	stały, umiarkowany, aerobowy wysiłek fizyczny
+T13	Treatment 1019 1047	regularne przyjmowanie leków
+T14	Drug 1051 1059	Thyrozol
+T15	Drug_dose 1060 1079	5 mg 1/2 tabl. rano
+T16	Drug 1080 1087	Tritace
+T17	Drug_dose 1088 1110	5 mg 1 tabl. wieczorem
+T18	Drug 1111 1120	Captopril
+T19	Drug_dose 1121 1145	12,5 mg 1 tabl. doraźnie
+T20	Condition 1293 1315	nadczynnością tarczycy
+T21	Symptom 1346 1377	zmniejszenia tolerancji wysiłku
+T22	Date 1378 1393	od ok. 1,5 roku
+T23	Date 1395 1407	Od ok. 2017r
+T24	Negation 1414 1417	nie
+T25	Behaviour 1418 1430	pali tytoniu
+T26	Investigation 1434 1450	spoczynkowym ekg
+T27	Investigation_result 1451 1501	obniżenia odcinka ST w II, III, aVF, V5-V6 (stałe)
+T28	Treatment 1502 1519	Przebyte operacje
+T29	Treatment 1521 1537	cholecystektomia
+T30	Date 1538 1551	w przeszłości
+T31	Condition 1580 1583	WZW
+troby
+T32	Condition 1585 1594	borelioza
+T33	Negation 1597 1607	nie podaje
+T34	Condition 1608 1623	Wywiad rodzinny
+T35	Negation 1625 1635	nieistotny
+T36	Behaviour 1636 1651	Palenie tytoniu
+T37	Date 1653 1666	w przeszłości
+T38	Behaviour 1667 1692	Inne używki: okazjonalnie
+T39	Condition 1693 1702	Uczulenia
+T40	Negation 1704 1714	nie podaje
+T41	Behaviour 1733 1751	pracownik fizyczny
+T42	Drug 1772 1780	Thyrozol
+T43	Drug_dose 1781 1800	5 mg 1/2 tabl. rano
+T44	Investigation 1828 1838	echo serca
+T45	Investigation 1840 1843	TET
+T46	Investigation 1845 1849	ABPM
+T47	Investigation 1851 1857	Holter
+T48	Investigation 1859 1877	RTG kl. piersiowej
+zane ze stylem życia
+N1	Reference T1 ICD10:I20.9	Choroba niedokrwienna serca, nieokreÅlona
+N2	Reference T2 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N3	Reference T3 ICD10:J44.9	PrzewlekÅa obturacyjna choroba pÅuc, nieokreÅlona
+N4	Reference T4 ICD10:E05	NadczynnoÅÄ tarczycy [tyreotoksykoza]
+N5	Reference T20 ICD10:E05.9	Tyreotoksykoza, nieokreÅlona
+N6	Reference T21 ICD10:R53	ZÅe samopoczucie i zmÄczenie
+N7	Reference T25 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N8	Reference T28 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N9	Reference T31 ICD10:B19	NieokreÅlone wirusowe zapalenie wÄtroby
+N10	Reference T32 ICD10:A69.2	Choroba z Lyme
+N11	Reference T36 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N12	Reference T38 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+N13	Reference T39 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+R1	Drg Arg1:T14 Arg2:T15
+R11	Neg Arg1:T33 Arg2:T32
+R12	Neg Arg1:T33 Arg2:T34
+R21	Neg Arg1:T35 Arg2:T34
+R23	Neg Arg1:T35 Arg2:T36
+R31	Neg Arg1:T40 Arg2:T39
+R4	Drg Arg1:T16 Arg2:T17
+R41	Dat Arg1:T37 Arg2:T39
+R42	Dat Arg1:T37 Arg2:T36
+R43	Dat Arg1:T37 Arg2:T38
+R5	Drg Arg1:T18 Arg2:T19
+R8	Dat Arg1:T23 Arg2:T21
+A1	Status T29 Historical_Insignificant
+A2	Source T3 Declared
+A3	Source T4 Declared

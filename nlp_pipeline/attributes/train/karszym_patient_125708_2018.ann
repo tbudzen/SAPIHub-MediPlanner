@@ -1,0 +1,300 @@
+T1	Treatment 345 372	dalsza opieka w poradni POZ
+T2	Treatment 379 428	okresowa kontrola kardiologiczna, diabetologiczna
+T3	Investigation 434 473	codzienna kontrola ciśnienia tętniczego
+T4	Investigation 480 509	okresowa kontrola lipidogramu
+T5	Behaviour 516 526	dieta DASH
+T6	Behaviour 533 552	redukcja masy ciała
+T7	Behaviour 560 605	stały, umiarkowany, aerobowy wysiłek fizyczny
+T9	Behaviour 612 633	zakaz palenia tytoniu
+T10	Drug 678 684	Trifas
+T11	Drug_dose 685 702	10mg 1 tabl. rano
+R2	Drg Arg1:T10 Arg2:T11	
+T12	Drug 710 718	Spironol
+T13	Drug_dose 719 743	25 mg 1 tabl. w południe
+T14	Drug 752 760	Nebicard
+T15	Drug_dose 761 783	5mg 1 i 1/2 tabl. rano
+T16	Drug 791 798	Amlozek
+T17	Drug_dose 799 821	10mg 1 tabl. wieczorem
+T18	Drug 830 837	Atacand
+T19	Drug_dose 838 855	16mg 1 tabl. rano
+T20	Drug 864 874	Cardura XL
+T21	Drug_dose 875 897	4 mg 1 tabl. wieczorem
+T22	Drug 906 912	Letrox
+T23	Drug_dose 913 939	50ug 1 tabl. rano na czczo
+T24	Drug 946 955	Bromergon
+T25	Drug_dose 956 979	2,5mg 1 tabl. wieczorem
+T26	Drug 1031 1035	Kelp
+T27	Drug_dose 1036 1048	1 tabl. rano
+T28	Drug 1102 1117	Vitrum D3 forte
+T29	Drug_dose 1118 1140	2tys j.m. 1 tabl. rano
+R3	Drg Arg1:T12 Arg2:T13	
+R4	Drg Arg1:T14 Arg2:T15	
+R5	Drg Arg1:T16 Arg2:T17	
+R6	Drg Arg1:T18 Arg2:T19	
+R7	Drg Arg1:T20 Arg2:T21	
+R8	Drg Arg1:T22 Arg2:T23	
+R9	Drg Arg1:T24 Arg2:T25	
+R10	Drg Arg1:T26 Arg2:T27	
+R11	Drg Arg1:T28 Arg2:T29	
+T30	Condition 1412 1468	Nadciśnienie tętnicze III stopnia wg ESC/ESH skorygowane
+N2	Reference T30 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T31	Condition 1470 1494	Otyłość I stopnia wg WHO
+N3	Reference T31 ICD10:E66.9	Otyłość, nieokreślona
+T32	Treatment 1504 1520	cholecystektomii
+A1	Status T32 Historical_Insignificant
+N4	Reference T32 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T33	Date 1522 1526	2009
+R12	Dat Arg1:T33 Arg2:T32	
+T34	Treatment 1638 1660	kontrola u lekarza POZ
+T35	Investigation 1663 1695	kontrola RR w warunkach domowych
+T36	Investigation 1717 1739	badania ogólnego moczu
+T37	Treatment 1742 1784	ponowna hospitalizacja w tutejszej klinice
+T38	Date 1785 1799	za 6-8 tygodni
+T39	Treatment 1800 1833	celem oceny skuteczności leczenia
+R13	Dat Arg1:T38 Arg2:T37	
+R14	Dat Arg1:T38 Arg2:T39	
+T40	Drug 1990 1996	Trifas
+T41	Drug 1998 2006	Nebicard
+T42	Drug 2008 2016	Teldipin
+T43	Drug 2018 2025	Amlopin
+T44	Drug 2027 2033	Letrox
+T45	Drug 2035 2044	Bromergon
+T46	Drug 2046 2050	Kelp
+T47	Drug 2052 2058	Wit D3
+T48	Condition 2276 2315	Nadciśnienie tętnicze 3 stopnia wg PTNT
+N5	Reference T48 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T49	Condition 2317 2349	Angiopatia nadciśnieniowa II st.
+T50	Condition 2350 2368	Podejrzenie jaskry
+N7	Reference T50 ICD10:H40.9	Jaskra, nieokreślona
+A2	Source T50 Declared
+T51	Condition 2370 2390	Hipercholesterolemia
+N8	Reference T51 ICD10:E78.0	Czysta hipercholesterolemia
+T52	Condition 2392 2405	Otyłość I st.
+N9	Reference T52 ICD10:E66.9	Otyłość, nieokreślona
+T53	Treatment 2414 2430	cholecystektomii
+A3	Status T53 Historical_Insignificant
+N10	Reference T53 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T54	Date 2432 2436	2009
+T55	Behaviour 2439 2460	Przewlekły nikotynizm
+N11	Reference T55 ICD10:Z72.0	Używanie tytoniu
+R15	Dat Arg1:T54 Arg2:T53	
+T56	Condition 2606 2629	nadciśnieniem tętniczym
+N12	Reference T56 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T57	Date 2630 2640	od 2-3 lat
+T58	Condition 2642 2673	angiopatią nadciśnieniową II st
+N13	Reference T58 ICD10:I79.2*	Angiopatia obwodowa w przebiegu chorób sklasyfikowanych gdzie indziej
+T59	Condition 2675 2694	podejrzeniem jaskry
+A4	Source T59 Declared
+N14	Reference T59 ICD10:H40.9	Jaskra, nieokreślona
+T60	Condition 2696 2716	hipercholesterolemią
+N15	Reference T60 ICD10:E78.0	Czysta hipercholesterolemia
+T61	Negation 2718 2721	bez
+T62	Treatment 2722 2748	leczenia farmakologicznego
+T63	Condition 2751 2760	otyłością
+N16	Reference T63 ICD10:E66.9	Otyłość, nieokreślona
+T64	Treatment 2762 2797	hospitalizowana w tutejszej Klinice
+T65	Date 2798 2811	w lipcu 2018r
+R16	Dat Arg1:T65 Arg2:T64	
+R17	Dat Arg1:T57 Arg2:T56	
+R18	Neg Arg1:T61 Arg2:T62	
+T66	Investigation_result 2855 2887	w domu podwyższonych wartości BP
+T67	Investigation 2981 2992	USG brzucha
+T68	Investigation_result 3001 3040	nieco hipoechogeniczny obszar o śr 14mm
+R19	Inv Arg1:T67 Arg2:T68	
+T69	Investigation 3044 3067	CT brzucha z kontrastem
+T70	Negation 3068 3079	nie wykryto
+T71	Investigation_result 3080 3098	zmiany w nadnerczu
+N17	Reference T71 ICD10:D44.1	Nadnercze
+R20	Neg Arg1:T70 Arg2:T71	
+R21	Inv Arg1:T69 Arg2:T71	
+T72	Investigation_result 3100 3120	wynik do weryfikacji
+T73	Condition 3123 3140	torbiele jajników
+N18	Reference T73 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T74	Condition 3142 3156	guzek tarczycy
+N19	Reference T74 ICD10:E04.1	Guzek tarczycy pojedynczy, nietoksyczny
+T75	Symptom 3158 3181	obrzęk kończyn i twarzy
+T76	Symptom 3183 3199	złe samopoczucie
+T77	Drug 3203 3214	Triplixamie
+T78	Investigation 3234 3246	mierzenia BP
+N21	Reference T78 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+R22	Inv Arg1:T69 Arg2:T72	
+T79	Treatment 2893 2913	modyfikacji leczenia
+T80	Date 2914 2940	w czasie ostatniego pobytu
+R23	Dat Arg1:T80 Arg2:T79	
+T81	Investigation_result 2942 2956	do 190/130mmHg
+T82	Date 3265 3275	06.06.2018
+T83	Investigation 3250 3264	badaniach lab.
+T84	Investigation_result 3278 3281	IFG
+N22	Reference T84 ICD10:R73	Podwyższone stężenie glukozy we krwi
+T85	Treatment 3301 3317	cholecystektomia
+A6	Status T85 Historical_Insignificant
+N23	Reference T85 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T86	Date 3319 3323	2009
+T87	Behaviour 3325 3355	Palenie tytoniu: tak, do 10/dz
+N24	Reference T87 ICD10:Z72.0	Używanie tytoniu
+T88	Condition 3373 3382	Uczulenia
+N25	Reference T88 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T89	Negation 3384 3387	nie
+T90	Behaviour 3356 3367	Inne używki
+T91	Negation 3369 3372	nie
+T92	Condition 3415 3418	WZW
+N26	Reference T92 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T93	Negation 3419 3422	(-)
+T94	Condition 3425 3434	borelioza
+N27	Reference T94 ICD10:A69.2	Choroba z Lyme
+T95	Negation 3435 3440	( - )
+T96	Condition 3442 3445	tbc
+N28	Reference T96 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T97	Negation 3446 3449	(-)
+T98	Behaviour 3466 3492	warunki mieszkaniowe dobre
+R24	Dat Arg1:T82 Arg2:T83	
+R25	Inv Arg1:T83 Arg2:T84	
+R26	Dat Arg1:T86 Arg2:T85	
+R27	Neg Arg1:T91 Arg2:T90	
+R28	Neg Arg1:T89 Arg2:T88	
+R29	Neg Arg1:T93 Arg2:T92	
+R30	Neg Arg1:T95 Arg2:T94	
+R31	Neg Arg1:T97 Arg2:T96	
+T99	Investigation_result 3216 3225	"arytmia"
+A7	Source T99 Declared
+R32	Inv Arg1:T78 Arg2:T99	
+T100	Drug 3527 3537	Trifas COR
+T101	Drug_dose 3538 3556	5mg 1x 1 tabl/rano
+T102	Drug 3558 3565	Kaldyum
+T103	Drug_dose 3566 3580	1x 1 tabl/rano
+T104	Drug 3583 3591	Nebicard
+T105	Drug_dose 3592 3610	5mg 1x 1 tabl/rano
+T106	Drug 3612 3619	Twynsta
+T107	Drug_dose 3620 3643	80+10mg 1x 1 tabl/wiecz
+T108	Drug 3645 3651	Letrox
+T109	Drug_dose 3652 3671	50ug 1x 1 tabl/rano
+T110	Drug 3672 3681	Bromergon
+T111	Drug_dose 3682 3703	2,5mg 1x 1 tabl/wiecz
+T112	Drug 3704 3708	Kelp
+T113	Drug_dose 3709 3723	1x 1 tabl/rano
+T114	Drug 3724 3733	Vitrum D3
+T115	Drug_dose 3734 3755	2tys j 1x 1 tabl/rano
+R33	Drg Arg1:T100 Arg2:T101	
+R34	Drg Arg1:T102 Arg2:T103	
+R35	Drg Arg1:T104 Arg2:T105	
+R36	Drg Arg1:T106 Arg2:T107	
+R37	Drg Arg1:T108 Arg2:T109	
+R38	Drg Arg1:T110 Arg2:T111	
+R39	Drg Arg1:T112 Arg2:T113	
+R40	Drg Arg1:T114 Arg2:T115	
+T116	Condition 3900 3923	nadciśnieniem tętniczym
+N29	Reference T116 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T117	Date 3924 3934	od 2-3 lat
+T118	Condition 3936 3967	angiopatią nadciśnieniową II st
+N30	Reference T118 ICD10:I79.2*	Angiopatia obwodowa w przebiegu chorób sklasyfikowanych gdzie indziej
+T119	Condition 3969 3988	podejrzeniem jaskry
+A5	Source T119 Declared
+N31	Reference T119 ICD10:H40.9	Jaskra, nieokreślona
+T120	Condition 3991 4011	hipercholesterolemią
+N32	Reference T120 ICD10:E78.0	Czysta hipercholesterolemia
+T121	Negation 4013 4016	bez
+T122	Treatment 4017 4043	leczenia farmakologicznego
+T123	Condition 4046 4055	otyłością
+N33	Reference T123 ICD10:E66.9	Otyłość, nieokreślona
+T124	Investigation_result 4086 4106	wysokich wartości RR
+T125	Date 4107 4119	od zimy 2017
+T126	Investigation_result 4121 4143	RR 170/105-220/130mmHg
+T127	Treatment 4150 4176	leczenia farmakologicznego
+T128	Investigation 4202 4213	USG brzucha
+T129	Investigation_result 4222 4261	nieco hipoechogeniczny obszar o śr 14mm
+T130	Investigation 4265 4288	CT brzucha z kontrastem
+T131	Negation 4289 4300	nie wykryto
+T132	Investigation_result 4301 4319	zmiany w nadnerczu
+N34	Reference T132 ICD10:D44.1	Nadnercze
+T133	Investigation_result 4325 4345	wynik do weryfikacji
+T134	Condition 4349 4366	torbiele jajników
+N35	Reference T134 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T135	Condition 4368 4382	guzek tarczycy
+N36	Reference T135 ICD10:E04.1	Guzek tarczycy pojedynczy, nietoksyczny
+T136	Symptom 4384 4407	obrzęk kończyn i twarzy
+T138	Drug 4429 4440	Triplixamie
+T139	Investigation 4460 4472	mierzenia RR
+T140	Investigation_result 4442 4451	"arytmia"
+A8	Source T140 Declared
+R41	Inv Arg1:T139 Arg2:T140	
+R42	Dat Arg1:T117 Arg2:T116	
+R43	Dat Arg1:T125 Arg2:T124	
+R44	Dat Arg1:T125 Arg2:T126	
+R45	Neg Arg1:T121 Arg2:T122	
+R46	Neg Arg1:T131 Arg2:T132	
+R47	Inv Arg1:T130 Arg2:T132	
+R48	Inv Arg1:T130 Arg2:T133	
+R49	Inv Arg1:T128 Arg2:T129	
+T141	Negation 4474 4480	Neguje
+T142	Symptom 4482 4494	zasłabnięcia
+T143	Symptom 4496 4504	omdlenia
+N38	Reference T143 ICD10:R55	Omdlenie i zapaść
+T144	Symptom 4506 4514	duszność
+N39	Reference T144 ICD10:R06.0	Duszność
+T145	Symptom 4517 4541	bóle w klatce piersiowej
+N40	Reference T145 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T146	Condition 4543 4545	DM
+N41	Reference T146 ICD10:E14	Cukrzyca nieokreślona
+T147	Treatment 4567 4583	cholecystektomia
+A9	Status T147 Historical_Insignificant
+N42	Reference T147 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T148	Date 4585 4589	2009
+T149	Behaviour 4591 4621	Palenie tytoniu: tak, do 10/dz
+N43	Reference T149 ICD10:Z72.0	Używanie tytoniu
+T150	Behaviour 4622 4633	Inne używki
+T151	Negation 4635 4638	nie
+T152	Condition 4639 4648	Uczulenia
+N44	Reference T152 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T153	Negation 4650 4653	nie
+T154	Condition 4681 4684	WZW
+N45	Reference T154 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T155	Negation 4685 4688	(-)
+T156	Condition 4691 4700	borelioza
+N46	Reference T156 ICD10:A69.2	Choroba z Lyme
+T157	Negation 4701 4706	( - )
+T158	Condition 4708 4711	tbc
+N47	Reference T158 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T159	Negation 4712 4715	(-)
+T160	Behaviour 4732 4758	warunki mieszkaniowe dobre
+T161	Drug 4796 4806	Trifas COR
+T162	Drug_dose 4807 4825	5mg 1x 1 tabl/rano
+T163	Drug 4826 4832	Lokren
+T164	Drug_dose 4833 4854	20mg 1x 1/2 tabl/rano
+T165	Drug 4855 4862	Beto ZK
+T166	Drug_dose 4863 4884	100mg 1x 1 tabl/wiecz
+T167	Drug 4903 4909	Letrox
+T168	Drug_dose 4910 4929	50ug 1x 1 tabl/rano
+T169	Drug 4964 4973	Bromergon
+T170	Drug_dose 4974 4995	2,5mg 1x 1 tabl/wiecz
+T171	Drug 5030 5034	Kelp
+T172	Drug_dose 5035 5049	1x 1 tabl/rano
+T173	Drug 5084 5090	Wit D3
+T174	Drug_dose 5091 5112	2tys j 1x 1 tabl/rano
+R50	Drg Arg1:T161 Arg2:T162	
+R51	Drg Arg1:T163 Arg2:T164	
+R52	Drg Arg1:T165 Arg2:T166	
+R53	Drg Arg1:T167 Arg2:T168	
+R54	Drg Arg1:T169 Arg2:T170	
+R55	Drg Arg1:T171 Arg2:T172	
+R56	Drg Arg1:T173 Arg2:T174	
+T175	Investigation 5174 5195	badania laboratoryjne
+T176	Investigation 5197 5201	ECHO
+T177	Investigation 5203 5221	EKG metodą Holtera
+T178	Investigation 5223 5227	ABPM
+R57	Neg Arg1:T155 Arg2:T154	
+R58	Neg Arg1:T157 Arg2:T156	
+R59	Neg Arg1:T159 Arg2:T158	
+R60	Neg Arg1:T153 Arg2:T152	
+R61	Neg Arg1:T151 Arg2:T150	
+R62	Dat Arg1:T148 Arg2:T147	
+R63	Neg Arg1:T141 Arg2:T142	
+R64	Neg Arg1:T141 Arg2:T143	
+R65	Neg Arg1:T141 Arg2:T144	
+R66	Neg Arg1:T141 Arg2:T145	
+R67	Neg Arg1:T141 Arg2:T146	
+T137	Symptom 4409 4425	złe samopoczucie
+N20	Reference T75 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N37	Reference T136 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N48	Reference T142 ICD10:R55	Omdlenie i zapaść
+N49	Reference T90 ICD10:Z72	Problemy związane ze stylem życia
+N1	Reference T49 ICD10:H35.0	Retinopatia nieproliferacyjna i zmiany naczyniowe siatkówki

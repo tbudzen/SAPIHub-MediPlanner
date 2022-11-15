@@ -1,0 +1,122 @@
+T1	Treatment 332 399	Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T2	Behaviour 403 498	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T3	Investigation 502 571	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydo
+T4	Condition 798 842	Łagodna niedomykalność zastawki trójdzielnej
+N1	Reference T4 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T5	Condition 880 901	Nadciśnienie tętnicze
+N2	Reference T5 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T6	Symptom 1120 1135	Kołatania serca
+N3	Reference T6 ICD10:R00.2	Kołatanie serca
+T7	Condition 1137 1139	HA
+N4	Reference T7 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T8	Symptom 1162 1234	nietypowe bóle w okolicy przedsercowej bez związku z wysiłkiem fizycznym
+N5	Reference T8 ICD10:R07.2	Ból w okolicy przedsercowej
+T9	Condition 1236 1264	refluks żołądkowo-przełykowy
+N6	Reference T9 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T10	Condition 1266 1288	niedoczynność tarczycy
+N7	Reference T10 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T11	Symptom 1290 1342	obrzęki całych kończyn dolnych po dłuższym siedzeniu
+T12	Condition 1488 1490	HA
+N9	Reference T12 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T13	Date 1491 1503	od wielu lat
+R1	Dat Arg1:T13 Arg2:T12	
+T14	Drug 1517 1527	Prestarium
+T15	Drug_dose 1528 1531	5mg
+R2	Drg Arg1:T14 Arg2:T15	
+T16	Investigation_result 1573 1587	RR <130/85mmHg
+N10	Reference T16 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T17	Date 1533 1555	pod koniec stycznia br
+T18	Negation 1560 1570	odstawiono
+R3	Neg Arg1:T18 Arg2:T14	
+R4	Dat Arg1:T17 Arg2:T14	
+T19	Symptom 1619 1651	krótkich napadów kołatania serca
+N11	Reference T19 ICD10:R00.2	Kołatanie serca
+T20	Symptom 1676 1688	bólami głowy
+N12	Reference T20 ICD10:R51	Ból głowy
+T21	Condition 1690 1735	"arytmii" rejestrowanych przez ciśnieniomierz
+A1	Source T21 Declared
+T22	Symptom 1759 1842	uczucie pieczenia, kłucia w okolicy przedsercowej bez związku z wysiłkiem fizycznym
+N14	Reference T22 ICD10:R07.3	Inne bóle w klatce piersiowej
+T23	Condition 1844 1872	refluks żołądkowo-przełykowy
+N15	Reference T23 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T24	Condition 1874 1896	niedoczynność tarczycy
+N16	Reference T24 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T25	Symptom 1898 1950	obrzęki całych kończyn dolnych po dłuższym siedzeniu
+T26	Negation 1952 1958	Neguje
+T27	Symptom 1960 1972	zasłabnięcia
+T28	Symptom 1974 1982	omdlenia
+N18	Reference T28 ICD10:R55	Omdlenie i zapaść
+T29	Symptom 1984 1994	krwawienia
+T30	Symptom 1996 2009	czarne stolce
+N19	Reference T30 ICD10:K92.1	Stolce smołowate
+T31	Symptom 2011 2027	brunatne wymioty
+N20	Reference T31 ICD10:K92.0	Wymioty krwawe
+T32	Condition 2029 2045	chorobę wrzodową
+N21	Reference T32 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T33	Condition 2047 2049	DM
+N22	Reference T33 ICD10:E14	Cukrzyca nieokreślona
+T34	Symptom 2051 2087	objawy zapalenia żył kończyn dolnych
+N23	Reference T34 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+R5	Neg Arg1:T26 Arg2:T34	
+R6	Neg Arg1:T26 Arg2:T33	
+R7	Neg Arg1:T26 Arg2:T32	
+R8	Neg Arg1:T26 Arg2:T31	
+R9	Neg Arg1:T26 Arg2:T30	
+R10	Neg Arg1:T26 Arg2:T29	
+R11	Neg Arg1:T26 Arg2:T28	
+R12	Neg Arg1:T26 Arg2:T27	
+T35	Treatment 2088 2105	Przebyte operacje
+T36	Negation 2107 2110	nie
+R13	Neg Arg1:T36 Arg2:T35	
+T37	Behaviour 2111 2126	Palenie tytoniu
+T38	Negation 2128 2133	nigdy
+R14	Neg Arg1:T38 Arg2:T37	
+T39	Behaviour 2134 2145	Inne używki
+T40	Negation 2147 2150	nie
+R15	Neg Arg1:T40 Arg2:T39	
+T41	Condition 2151 2160	Uczulenia
+T42	Negation 2162 2165	nie
+R16	Neg Arg1:T42 Arg2:T41	
+T43	Condition 2194 2197	WZW
+N25	Reference T43 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T44	Condition 2204 2213	borelioza
+N26	Reference T44 ICD10:A69.2	Choroba z Lyme
+T45	Condition 2219 2222	tbc
+T46	Condition 2228 2232	odra
+N28	Reference T46 ICD10:B05	Odra
+T47	Condition 2238 2252	kontakt z odrą
+N29	Reference T47 ICD10:B05	Odra
+T48	Negation 2254 2255	-
+R17	Neg Arg1:T48 Arg2:T47	
+T49	Negation 2234 2235	-
+R18	Neg Arg1:T49 Arg2:T46	
+T50	Negation 2224 2225	-
+R19	Neg Arg1:T50 Arg2:T45	
+T51	Negation 2215 2216	-
+R20	Neg Arg1:T51 Arg2:T44	
+T52	Negation 2199 2200	-
+R21	Neg Arg1:T52 Arg2:T43	
+T53	Behaviour 2300 2326	warunki mieszkaniowe dobre
+T54	Drug 2336 2344	Euthyrox
+T55	Drug_dose 2345 2367	75 lub 100ug na zmianę
+R22	Drg Arg1:T54 Arg2:T55	
+T56	Investigation 2428 2449	badania laboratoryjne
+T57	Investigation 2451 2455	ECHO
+T58	Investigation 2457 2475	EKG metodą Holtera
+T59	Investigation 2477 2481	ABPM
+T60	Investigation 2483 2498	próba wysiłkowa
+T61	Condition 2259 2278	wywiadzie rodzinnym
+A2	Status T61 Family
+T62	Negation 2280 2283	b/z
+R23	Neg Arg1:T62 Arg2:T61	
+T63	Condition 845 874	niskim prawdopodobieństwem PH
+N30	Reference T63 ICD10:I27.0	Pierwotne nadciśnienie płucne
+N13	Reference T21 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+N32	Reference T41 ICD10:T78.4	Alergia, nieokreślona
+N34	Reference T27 ICD10:R55	Omdlenie i zapaść
+N24	Reference T37 ICD10:Z72.0	Używanie tytoniu
+N8	Reference T11 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N17	Reference T25 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N31	Reference T29 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N33	Reference T39 ICD10:Z72	Problemy związane ze stylem życia
+N27	Reference T45 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

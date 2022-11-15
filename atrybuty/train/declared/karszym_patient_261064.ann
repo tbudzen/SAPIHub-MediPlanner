@@ -1,0 +1,53 @@
+T1	Treatment 461 512	Wizyta w regionalnej poradni kardiologii dziecięcej
+T2	Date 513 524	za ok.6m-cy
+T3	Investigation 554 592	Holter-EKG w warunkach ambulatoryjnych
+T4	Treatment 596 641	Kontrolne badania w Klinice Kardiologii ICZMP
+T5	Date 642 658	za ok.1-1,5 roku
+T6	Symptom 728 761	w przypadku niepokojących objawów
+R2	Dat Arg1:T5 Arg2:T4	
+T8	Treatment 777 830	Systematyczna, profilaktyczne badania stomatologiczne
+T9	Behaviour 835 870	Dostosowanie wysiłków do wydolności
+T10	Treatment 875 980	Dalsza opieka wielospecjalistyczna (pediatryczna, neurologiczno-psychologiczno-logopedyczna, urologiczna)
+R4	Dat Arg1:T2 Arg2:T1	
+T11	Condition 1232 1288	Wada wrodzona serca pod postacią zwężenia zastawki aorty
+N1	Reference T11 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T12	Treatment 1304 1337	plastyce balonowej zastawki aorty
+T13	Date 1339 1350	08.06.2004r
+T14	Treatment 1358 1366	operacji
+N2	Reference T14 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T15	Date 1432 1443	17.05.2011r
+T16	Condition 1449 1469	Bradykardia zatokowa
+T17	Condition 1474 1551	Epizody bloku zatokowo-przedsionkowego II stopnia  typu periodyki Wenckebacha
+N3	Reference T17 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T18	Treatment 1564 1572	operacji
+A1	Status T18 Historical_Insignificant
+N4	Reference T18 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T19	Date 1599 1610	29.02.2012r
+T20	Condition 1614 1637	Zwężenie cewki moczowej
+A2	Status T20 Historical_Insignificant
+N5	Reference T20 ICD10:N35.9	Zwężenie cewki moczowej, nieokreślone
+T21	Condition 1665 1682	Zespołu Aspergera
+N6	Reference T21 ICD10:F84.5	Zespół Aspergera
+R5	Dat Arg1:T19 Arg2:T18	
+R6	Dat Arg1:T15 Arg2:T14	
+R7	Dat Arg1:T13 Arg2:T12	
+N7	Reference T16 ICD10:R00.1	Bradykardia, nieokreślona
+T7	Date 764 773	wcześniej
+R1	Dat Arg1:T7 Arg2:T6	
+R3	Dat Arg1:T7 Arg2:T4	
+T22	Condition 1367 1416	zwężenia z wtórną niedomykalnością zastawki aorty
+#1	AnnotatorNotes T22	Q23.0 + I35.1
+T23	Treatment 1417 1430	metodą Ross'a
+N8	Reference T23 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R8	Dat Arg1:T15 Arg2:T22	
+R9	Dat Arg1:T15 Arg2:T23	
+T24	Treatment 1585 1597	metodą Duago
+N9	Reference T24 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R10	Dat Arg1:T19 Arg2:T24	
+T25	Condition 1573 1584	spodziectwa
+A3	Status T25 Historical_Insignificant
+N10	Reference T25 ICD10:Q54.9	Spodziectwo, nieokreślone
+R11	Dat Arg1:T19 Arg2:T25	
+A4	Status T24 Historical_Insignificant
+A5	Source T21 Declared
+T26	Investigation 1643 1653	Obserwacja

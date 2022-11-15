@@ -1,0 +1,72 @@
+T1	Investigation 1731 1741	echo serca
+T2	Investigation 1743 1746	TET
+T3	Investigation 1748 1752	ABPM
+T4	Investigation 1754 1764	Holter ekg
+T5	Investigation 1766 1784	rtg kl. piersiowej
+T6	Negation 1695 1702	żadnych
+T7	Drug 1689 1693	Leki
+R1	Neg Arg1:T6 Arg2:T7	
+T8	Negation 1632 1638	neguje
+T9	Negation 1605 1611	neguje
+T10	Negation 1587 1595	neguje  
+T11	Negation 1567 1573	neguje
+T12	Negation 1543 1556	bez znaczenia
+T13	Behaviour 1613 1630	Uzależnienie inne
+R2	Neg Arg1:T8 Arg2:T13	
+T14	Behaviour 1596 1603	Alkohol
+N1	Reference T14 ICD10:Z72.1	Używanie alkoholu
+R3	Neg Arg1:T9 Arg2:T14	
+T15	Behaviour 1575 1585	Nikotynizm
+N2	Reference T15 ICD10:Z72.0	Używanie tytoniu
+R4	Neg Arg1:T10 Arg2:T15	
+T16	Condition 1558 1565	Alergie
+R5	Neg Arg1:T11 Arg2:T16	
+T17	Condition 1526 1541	Wywiad rodzinny
+A1	Status T17 Family
+R6	Neg Arg1:T12 Arg2:T17	
+T18	Treatment 1501 1523	Przebyte operacje: j.w
+T19	Condition 1481 1498	zaćma oka prawego
+N4	Reference T19 ICD10:H26.9	Zaćma, nieokreślona
+T20	Condition 691 708	zaćma oka prawego
+N5	Reference T20 ICD10:H26.9	Zaćma, nieokreślona
+T21	Condition 1437 1474	odwarstwieniu siatkówki oka prawego (
+N6	Reference T21 ICD10:H33	Odwarstwienia i przedarcia siatkówki
+T22	Date 1474 1478	2004
+R7	Dat Arg1:T22 Arg2:T21	
+T23	Condition 1364 1374	hipotensji
+T24	Symptom 1377 1390	kołatań serca
+N7	Reference T24 ICD10:R00.2	Kołatanie serca
+T25	Date 1393 1406	od kilku lat.
+R8	Dat Arg1:T25 Arg2:T24	
+R9	Dat Arg1:T25 Arg2:T23	
+T26	Condition 647 682	odwarstwieniu siatkówki oka prawego
+N8	Reference T26 ICD10:H33	Odwarstwienia i przedarcia siatkówki
+T27	Date 684 688	2004
+R10	Dat Arg1:T27 Arg2:T26	
+T28	Drug 1161 1169	Prenessa
+T29	Drug_dose 1170 1195	4 mg  1/2 tabl. wieczorem
+R11	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1127 1133	Bibloc
+T31	Drug_dose 1134 1154	1.25 mg 1 tabl. rano
+R12	Drg Arg1:T30 Arg2:T31	
+T32	Behaviour 1039 1084	stały, umiarkowany, aerobowy wysiłek fizyczny
+T33	Behaviour 1002 1033	spożywanie 2.5l płynów dziennie
+T34	Behaviour 970 995	dieta niskocholesterolowa
+T35	Investigation 930 950	kontrola lipidogramu
+T36	Date 951 963	(raz w roku)
+R13	Dat Arg1:T36 Arg2:T35	
+T37	Condition 600 620	komorowe rytmu serca
+N9	Reference T37 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T38	Condition 581 595	Zaburzenia nad
+N10	Reference T38 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T39	Condition 623 637	ekstrasystolie
+N11	Reference T39 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T40	Condition 541 579	Tętniak przegrody międzyprzedsionkowej
+T41	Condition 448 520	Przewlekła niewydolność serca z zachowaną frakcją skurczową lewej komory
+T42	Symptom 521 539	w I klasie wg NYHA
+N13	Reference T41 ICD10:I50.9	Niewydolność serca, nieokreślona
+N12	Reference T40 ICD10:Q21.8	Inna wrodzona wada rozwojowa przegród serca
+T43	Treatment 834 861	dalsza opieka w poradni POZ
+T44	Treatment 877 914	kontrola kardiologiczna, okulistyczna
+N14	Reference T13 ICD10:Z72	Problemy związane ze stylem życia
+N3	Reference T16 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

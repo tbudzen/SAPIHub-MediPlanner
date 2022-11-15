@@ -1,0 +1,22 @@
+T1	Condition 437 461	Łagodna arytmia komorowa
+N1	Reference T1 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T2	Condition 466 507	Łagodna niedomykalność zastawki aortalnej
+N2	Reference T2 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T3	Condition 513 520	Nadwaga
+N3	Reference T3 ICD10:E66	Otyłość
+T4	Treatment 646 669	Kontrola kardiologiczna
+T5	Date 670 680	za ok. rok
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Treatment 683 714	Kontrola w Poradni Dietetycznej
+T7	Date 841 854	od kilku m-cy
+T8	Symptom 855 879	bóle w klatce piersiowej
+N4	Reference T8 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+R2	Dat Arg1:T7 Arg2:T8	
+T9	Investigation 884 892	holterze
+T10	Investigation_result 893 918	zaburzenia rytmu komorowe
+N5	Reference T10 ICD10:I49.3	Inne zaburzenia rytmu serca
+R3	Inv Arg1:T9 Arg2:T10	
+T11	Condition 922 955	niedomykalność zastawki mitralnej
+N6	Reference T11 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T12	Condition 968 999	nagły zgon z przyczyn sercowych
+N7	Reference T12 ICD10:I46.1	Nagły zgon sercowy, tak opisany

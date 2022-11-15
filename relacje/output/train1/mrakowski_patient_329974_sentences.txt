@@ -1,0 +1,530 @@
+allRelations          : 52
+oks                   : 16
+isRedundantAndRemoveds: 34
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 1
+GOOD / BAD            : 50 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 45 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 2:
+------------------------------------------------
+
+
+
+Sentence 3:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 4:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q21.1|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Obserwacja w kierunku PFO/ASD - negatywna.
+R1	Neg Arg1:T2 Arg2:T1 << OK >>	negatywna -> ASD  <RANK: 3> <info: start[482, 476] <type: LEFT>>
+R2	Neg Arg1:T2 Arg2:T42 << OK >>	negatywna -> PFO  <RANK: 3> <info: start[482, 472] <type: LEFT>>
+
+
+Sentence 5:
+\x0aStan po omdleniu (ok. 10 lat temu).
+
+R3	Dat Arg1:T4 Arg2:T3 << OK >>	ok. 10 lat temu -> omdleniu  <RANK: 3> <info: start[515, 505] <type: LEFT>>
+
+
+Sentence 6:
+------------------------------------------------
+
+
+
+Sentence 7:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 8:
+- Wskazana dalsza opieka u lekarza POZ.
+
+
+
+Sentence 9:
+- Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych.
+
+
+
+Sentence 10:
+- Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby.  
+
+
+Sentence 11:
+\x0d\x
+
+
+
+Sentence 12:
+------------------------------------------------
+
+
+
+Sentence 13:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 14:
+45-letnia pacjentka po omdleniu ok. 10 lat temu (wówczas po odzyskaniu przytomności chora nie miała czucia w lewej kończynie górnej i lewej kończynie dolnej, co minęło po ok. 20 minutach), po usunięciu torbieli obu jajników (2017), została przyjęta do Kliniki celem diagnostyki PFO/ASD.
+
+R4	Dat Arg1:T9 Arg2:T8 << OK >>	ok. 10 lat temu -> omdleniu  <RANK: 3> <info: start[1039, 1030] <type: LEFT>>
+R5	Dat Arg1:T9 Arg2:T10 <<REDUNDANT!!!SHOULD BE REMOVED>>	ok. 10 lat temu -> nie miała czucia w lewej kończynie górnej i lewej kończynie dolnej  <RANK: 3> <info: start[1039, 1097] <type: RIGHT>>
+R6	Dat Arg1:T9 Arg2:T14 <<REDUNDANT!!!REMOVED>>	ok. 10 lat temu -> PFO/ASD <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1039, 1285] <type: RIGHT>>
+R7	Dat Arg1:T9 Arg2:T43 <<REDUNDANT!!!REMOVED>>	ok. 10 lat temu -> torbieli obu jajników <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1039, 1209] <type: RIGHT>>
+R8	Dat Arg1:T9 Arg2:T12 <<REDUNDANT!!!REMOVED>>	ok. 10 lat temu -> usunięciu <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1039, 1199] <type: RIGHT>>
+R9	Dat Arg1:T11 Arg2:T8 <<REDUNDANT!!!REMOVED>>	minęło po ok. 20 minutach -> omdleniu <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1168, 1030] <type: LEFT>>
+R10	Dat Arg1:T11 Arg2:T10 <<SHOULD NOT BE REMOVED>>	minęło po ok. 20 minutach -> nie miała czucia w lewej kończynie górnej i lewej kończynie dolnej <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1168, 1097] <type: LEFT>>
+R11	Dat Arg1:T11 Arg2:T14 <<REDUNDANT!!!REMOVED>>	minęło po ok. 20 minutach -> PFO/ASD <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1168, 1285] <type: RIGHT>>
+R12	Dat Arg1:T11 Arg2:T43 <<REDUNDANT!!!REMOVED>>	minęło po ok. 20 minutach -> torbieli obu jajników <:REMOVED other second tag between (right) (dat):> <RANK: 2> <info: start[1168, 1209] <type: RIGHT>>
+R13	Dat Arg1:T11 Arg2:T12 <<REDUNDANT!!!REMOVED>>	minęło po ok. 20 minutach -> usunięciu <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1168, 1199] <type: RIGHT>>
+R14	Dat Arg1:T13 Arg2:T8 <<REDUNDANT!!!REMOVED>>	2017 -> omdleniu <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1232, 1030] <type: LEFT>>
+R15	Dat Arg1:T13 Arg2:T10 <<REDUNDANT!!!REMOVED>>	2017 -> nie miała czucia w lewej kończynie górnej i lewej kończynie dolnej <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1232, 1097] <type: LEFT>>
+R16	Dat Arg1:T13 Arg2:T14 <<REDUNDANT!!!REMOVED>>	2017 -> PFO/ASD <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1232, 1285] <type: RIGHT>>
+R17	Dat Arg1:T13 Arg2:T43 << OK >>	2017 -> torbieli obu jajników  <RANK: 3> <info: start[1232, 1209] <type: LEFT>>
+R18	Dat Arg1:T13 Arg2:T12 << OK >>	2017 -> usunięciu  <RANK: 3> <info: start[1232, 1199] <type: LEFT>>
+
+
+Sentence 15:
+Neguje duszności, typowe bóle w klatce piersiowej.
+R19	Neg Arg1:T15 Arg2:T16 << OK >>	Neguje -> duszności  <RANK: 3> <info: start[1294, 1301] <type: RIGHT>>
+R20	Neg Arg1:T15 Arg2:T17 << OK >>	Neguje -> typowe bóle w klatce piersiowej  <RANK: 2> <info: start[1294, 1312] <type: RIGHT>>
+
+
+Sentence 16:
+Podaje uciski w klatce piersiowej pojawiające się niezależnie od wysiłku. 
+
+
+
+Sentence 17:
+Przebyte operacje:  jw+ operacja żylaków kończyn dolnych, appendectomia
+
+
+
+Sentence 18:
+Przebyte choroby zakaźne - WZW ( - ) , borelioza ( - ), gruźlica (-), odra (-), nie szczepiona prawdopodobnie na odrę
+
+R21	Neg Arg1:T26 Arg2:T21 <<REDUNDANT!!!REMOVED>>	nie -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1572, 1519] <type: LEFT>>
+R22	Neg Arg1:T26 Arg2:T22 <<REDUNDANT!!!REMOVED>>	nie -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1572, 1531] <type: LEFT>>
+R23	Neg Arg1:T26 Arg2:T23 <<REDUNDANT!!!REMOVED>>	nie -> gruźlica <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1572, 1548] <type: LEFT>>
+R24	Neg Arg1:T26 Arg2:T24 <<REDUNDANT!!!REMOVED>>	nie -> odra <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1572, 1562] <type: LEFT>>
+R25	Neg Arg1:T26 Arg2:T25 << OK >>	nie -> szczepiona prawdopodobnie na odrę  <RANK: 3> <info: start[1572, 1576] <type: RIGHT>>
+R26	Neg Arg1:T27 Arg2:T21 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1568, 1519] <type: LEFT>>
+R27	Neg Arg1:T27 Arg2:T22 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1568, 1531] <type: LEFT>>
+R28	Neg Arg1:T27 Arg2:T23 <<REDUNDANT!!!REMOVED>>	- -> gruźlica <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1568, 1548] <type: LEFT>>
+R29	Neg Arg1:T27 Arg2:T24 << OK >>	- -> odra  <RANK: 3> <info: start[1568, 1562] <type: LEFT>>
+R30	Neg Arg1:T27 Arg2:T25 <<REDUNDANT!!!REMOVED>>	- -> szczepiona prawdopodobnie na odrę <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1568, 1576] <type: RIGHT>>
+R31	Neg Arg1:T28 Arg2:T21 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1558, 1519] <type: LEFT>>
+R32	Neg Arg1:T28 Arg2:T22 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1558, 1531] <type: LEFT>>
+R33	Neg Arg1:T28 Arg2:T23 << OK >>	- -> gruźlica  <RANK: 3> <info: start[1558, 1548] <type: LEFT>>
+R34	Neg Arg1:T28 Arg2:T24 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1558, 1562] <type: RIGHT>>
+R35	Neg Arg1:T28 Arg2:T25 <<REDUNDANT!!!REMOVED>>	- -> szczepiona prawdopodobnie na odrę <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1558, 1576] <type: RIGHT>>
+R36	Neg Arg1:T29 Arg2:T21 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1543, 1519] <type: LEFT>>
+R37	Neg Arg1:T29 Arg2:T22 << OK >>	- -> borelioza  <RANK: 3> <info: start[1543, 1531] <type: LEFT>>
+R38	Neg Arg1:T29 Arg2:T23 <<REDUNDANT!!!REMOVED>>	- -> gruźlica <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1543, 1548] <type: RIGHT>>
+R39	Neg Arg1:T29 Arg2:T24 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1543, 1562] <type: RIGHT>>
+R40	Neg Arg1:T29 Arg2:T25 <<REDUNDANT!!!REMOVED>>	- -> szczepiona prawdopodobnie na odrę <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1543, 1576] <type: RIGHT>>
+R41	Neg Arg1:T30 Arg2:T21 << OK >>	- -> WZW  <RANK: 3> <info: start[1525, 1519] <type: LEFT>>
+R42	Neg Arg1:T30 Arg2:T22 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1525, 1531] <type: RIGHT>>
+R43	Neg Arg1:T30 Arg2:T23 <<REDUNDANT!!!REMOVED>>	- -> gruźlica <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1525, 1548] <type: RIGHT>>
+R44	Neg Arg1:T30 Arg2:T24 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1525, 1562] <type: RIGHT>>
+R45	Neg Arg1:T30 Arg2:T25 <<REDUNDANT!!!REMOVED>>	- -> szczepiona prawdopodobnie na odrę <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1525, 1576] <type: RIGHT>>
+
+
+Sentence 19:
+Wywiad rodzinny: ojciec - MI w wieku 60 lat
+
+
+
+Sentence 20:
+Palenie tytoniu: nie, nigdy
+
+R46	Neg Arg1:T34 Arg2:T33 << OK >>	nie, nigdy -> Palenie tytoniu  <RANK: 3> <info: start[1671, 1654] <type: LEFT>>
+
+
+Sentence 21:
+Inne używki: nie
+Uczulenia: neguje
+Stan społeczny: warunki mieszkaniowe dobre , mieszka sama
+Leki: jak w IKZL
+------------------------------------------------
+
+R47	Neg Arg1:T36 Arg2:T37 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1695, 1699] <type: RIGHT>>
+R48	Neg Arg1:T36 Arg2:T35 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[1695, 1682] <type: LEFT>>
+R49	Neg Arg1:T36 Arg2:T39 <<REDUNDANT!!!REMOVED>>	nie -> warunki mieszkaniowe dobre <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1695, 1733] <type: RIGHT>>
+R50	Neg Arg1:T38 Arg2:T37 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[1710, 1699] <type: LEFT>>
+R51	Neg Arg1:T38 Arg2:T35 <<REDUNDANT!!!REMOVED>>	neguje -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1710, 1682] <type: LEFT>>
+R52	Neg Arg1:T38 Arg2:T39 <<REDUNDANT!!!REMOVED>>	neguje -> warunki mieszkaniowe dobre <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1710, 1733] <type: RIGHT>>
+
+
+Sentence 22:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 23:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.12[10^3/ul]
+    
+
+
+Sentence 24:
+RBC Krwinki czerwone:3.90[10^6/ul]
+    
+
+
+Sentence 25:
+HGB Hemoglobina:12.9[g/dl]
+    
+
+
+Sentence 26:
+HCT Hematokryt:35.9[%]
+    
+
+
+Sentence 27:
+MCV wskaźnik czerwonokrw:92.1[fl]
+    
+
+
+Sentence 28:
+MCH wskaźnik czerwonokrw:33.1[pg]
+    
+
+
+Sentence 29:
+MCHC wskaźnik czerwonokr:35.9[g/dl]
+    
+
+
+Sentence 30:
+PLT z morfologii:186[10^3/ul]
+    
+
+
+Sentence 31:
+RDW-SD:40.9[fl]
+    
+
+
+Sentence 32:
+RDW-CV:12.2[%]
+    PDW:12.4[fl]
+    MPV:10.5[fl]
+    P-LCR:29.6[%]
+    
+
+
+Sentence 33:
+PCT (hematokryt płytkowy:0.20[%]
+    
+
+
+Sentence 34:
+NEUTR# wartość bezwzględ:2.08[10^3/ul]
+    
+
+
+Sentence 35:
+NEUTR%:40.7[%]
+    
+
+
+Sentence 36:
+LYMH# wartość bezwzględn:2.50[10^3/ul]
+    
+
+
+Sentence 37:
+LYMPH%:48.8[%]
+    
+
+
+Sentence 38:
+MONO# wartość bezwzględn:0.39[10^3/ul]
+    
+
+
+Sentence 39:
+MONO%:7.6[%]
+    
+
+
+Sentence 40:
+EO# wartość bezwzględna:0.14[10^3/ul]
+    
+
+
+Sentence 41:
+EO%:2.7[%]
+    
+
+
+Sentence 42:
+BASO# wartość bezwzględn:0.01[10^3/ul]
+    
+
+
+Sentence 43:
+BASO%:0.2[%]
+    
+
+
+Sentence 44:
+NRBC %:0.0[%]
+    
+
+
+Sentence 45:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 46:
+Badanie ogólne moczu
+    
+
+
+Sentence 47:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 48:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 49:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 50:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 51:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 52:
+ciężar właściwy:1.009[ ]
+    
+
+
+Sentence 53:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 54:
+pH:6.5[ ]
+    
+
+
+Sentence 55:
+białko:nieobecne[ ]
+    
+
+
+Sentence 56:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 57:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 58:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 59:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 60:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 61:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 62:
+leukocyty:3 /ul[ul]
+    erytrocyty świeże:1 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+    
+
+
+Sentence 63:
+drożdże:pojedyncze[w preparacie]
+
+
+
+Sentence 64:
+TSH: TSH:3.06[uIU/ml]
+
+
+
+Sentence 65:
+FT3: FT3:2.89[pg/ml]
+
+
+
+Sentence 66:
+FT4: FT4:1.21[ng/dl]
+
+
+
+Sentence 67:
+ALAT: ALAT:13[U/L]
+ASPAT: ASPAT:24[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 68:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 69:
+Potas (K): Potas:4.1[mmol/L]
+
+
+
+Sentence 70:
+Kreatynina + GFR
+    
+
+
+Sentence 71:
+Kreatynina w surowicy:0.58[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 72:
+MDRD ze stan:112.4[ml/min/1,73 m^2]
+
+
+
+Sentence 73:
+Mocznik: Mocznik:15[mg/dl]
+
+
+
+Sentence 74:
+Kwas moczowy: Kwas moczowy:3.3[mg/dl]
+
+
+
+Sentence 75:
+Lipidogram
+    
+
+
+Sentence 76:
+Cholesterol całkowity:190[mg/dl]
+    
+
+
+Sentence 77:
+Cholesterol HDL:55[mg/dl]
+    
+
+
+Sentence 78:
+Cholestrol LDL:108[mg/dl]
+    
+
+
+Sentence 79:
+Triglicerydy:104[mg/dl]
+    
+
+
+Sentence 80:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:85[mg/dl]
+
+
+
+Sentence 81:
+------------------------------------------------
+
+
+
+Sentence 82:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 83:
+R00.2
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 84:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 85:
+89.501
+C55
+A01
+89.502
+I81
+L43
+N45
+L69
+O55
+I17
+M45
+M37
+I19
+O35
+N13
+88.721
+O69
+88.722
+------------------------------------------------
+
+

@@ -1,0 +1,938 @@
+allRelations          : 21
+oks                   : 13
+isRedundantAndRemoveds: 2
+shouldNotBeRemoveds   : 6
+shouldBeBemoveds      : 0
+GOOD / BAD            : 15 / 6
+Sentence 0:
+------------------------------------------------
+Wiek: 12 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zastosowane leczenie
+
+
+
+Sentence 4:
+------------------------------------------------
+
+
+
+Sentence 5:
+Polocard, Rispolept.
+
+
+
+Sentence 6:
+------------------------------------------------
+
+
+
+Sentence 7:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 8:
+1) Dalsze przyjmowanie Polocardu 150 mg x 1, Rispoleptu 0,5mg x 1. 
+2) Profilaktyka infekcyjnego zapalenia wsierdzia.
+
+R1	Drg Arg1:T3 Arg2:T4 << OK >>	Polocardu -> 150 mg x 1  <RANK: 3> <info: start[492, 502] <type: RIGHT>>
+R2	Drg Arg1:T3 Arg2:T6 <<REDUNDANT!!!REMOVED>>	Polocardu -> 0,5mg x 1 <:REMOVED other first tag between (right):> <RANK: 2> <info: start[492, 525] <type: RIGHT>>
+R3	Drg Arg1:T5 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Rispoleptu -> 150 mg x 1 <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[514, 502] <type: LEFT>>
+R4	Drg Arg1:T5 Arg2:T6 << OK >>	Rispoleptu -> 0,5mg x 1  <RANK: 3> <info: start[514, 525] <type: RIGHT>>
+
+
+Sentence 9:
+3) Kontrola w Klinice Kardiologii za 3 miesiące i 9 miesięcy (wymagane skierowanie, pobyt należy potwierdzić dzień przed planowaną hospitalizacją).
+
+R5	Dat Arg1:T9 Arg2:T8 << OK >>	za 3 miesiące i 9 miesięcy -> Kontrola w Klinice Kardiologii  <RANK: 3> <info: start[621, 590] <type: LEFT>>
+
+
+Sentence 10:
+------------------------------------------------
+
+
+
+Sentence 11:
+Zastosowane leczenie
+
+
+
+Sentence 12:
+------------------------------------------------
+
+
+
+Sentence 13:
+Cefazolin, Acesan, Clexane, płyny i.v, Dormicum
+------------------------------------------------
+
+
+
+Sentence 14:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 15:
+1) Polocard 150mg doustnie co 24 godziny (w miarę wzrostu masy ciałą do ewentualnej modyfikacji dawki)
+
+R6	Drg Arg1:T15 Arg2:T16 << OK >>	Polocard -> 150mg doustnie co 24 godziny (w miarę wzrostu masy ciałą do ewentualnej modyfikacji dawki)  <RANK: 3> <info: start[1013, 1022] <type: RIGHT>>
+
+
+Sentence 16:
+2) Profilaktyka infekcyjnego zapalenia wsierdzia
+3)
+
+
+Sentence 17:
+Kontrola w Poradni Kardiologicznej za 1 miesiąc (dr Makowiecka)
+
+R7	Dat Arg1:T19 Arg2:T18 << OK >>	za 1 miesiąc -> Kontrola w Poradni Kardiologicznej  <RANK: 3> <info: start[1200, 1165] <type: LEFT>>
+
+
+Sentence 18:
+4) Kontrola w Klinice Kardiologii za 3 miesiące, 6 miesięcy i 12 miesięcy.
+R8	Dat Arg1:T21 Arg2:T20 << OK >>	za 3 miesiące, 6 miesięcy i 12 miesięcy -> Kontrola w Klinice Kardiologii  <RANK: 3> <info: start[1263, 1232] <type: LEFT>>
+
+
+Sentence 19:
+1 kontrola wyznaczona na 3.04.2019r (wymagane skierowanie, pobyt należy potwierdzić dzień przed planowaną hospitalizacją).
+
+
+
+Sentence 20:
+5) Proszę o kontakt z kliniką celem uzyskaniu informacji odnośnie wyniku holter ekg.
+
+
+
+Sentence 21:
+------------------------------------------------
+
+
+
+Sentence 22:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 23:
+------------------------------------------------
+ 
+
+
+Sentence 24:
+Rozpoznanie V: |Rozpozanie I: ICD10:Q24.4|Rozpoznanie II: ICD10:Q25.3|Opisowo:: Wrodzona wada serca pod postacią krytycznego zwężenia zastawki aortalnej.
+   
+
+
+Sentence 25:
+Stan po trzykrotnej balonoplastyce zastawki (13.12.2007r, 19.12.2007r; 01.03.2008r).
+   
+R9	Dat Arg1:T25 Arg2:T24 << OK >>	13.12.2007r -> trzykrotnej balonoplastyce zastawki  <RANK: 3> <info: start[1838, 1801] <type: LEFT>>
+R10	Dat Arg1:T26 Arg2:T24 << OK >>	19.12.2007r -> trzykrotnej balonoplastyce zastawki  <RANK: 2> <info: start[1851, 1801] <type: LEFT>>
+R11	Dat Arg1:T27 Arg2:T24 <<SHOULD NOT BE REMOVED>>	01.03.2008r -> trzykrotnej balonoplastyce zastawki <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1864, 1801] <type: LEFT>>
+
+
+Sentence 26:
+Stan po operacji metodą Konno-Ross 31.03.2008r. z użyciem zastawki biologicznej
+   Matrix P plus.
+   
+R12	Dat Arg1:T29 Arg2:T28 << OK >>	31.03.2008r -> operacji metodą Konno-Ross  <RANK: 3> <info: start[1916, 1889] <type: LEFT>>
+R13	Dat Arg1:T29 Arg2:T30 <<SHOULD NOT BE REMOVED>>	31.03.2008r -> użyciem zastawki biologicznej <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1916, 1931] <type: RIGHT>>
+R14	Dat Arg1:T29 Arg2:T31 <<SHOULD NOT BE REMOVED>>	31.03.2008r -> Matrix P plus <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1916, 1964] <type: RIGHT>>
+
+
+Sentence 27:
+Zwężenie zastawki biologicznej Matrix P plus
+   Cewnikowanie serca.
+
+
+Sentence 28:
+Implantacja zastawki Melody w pozycji płucnej (3.01.2019r.)
+   Q24.4; Q25.3; Z98.8|Rozpoznanie IV: |Rozpoznanie III: ICD10:Z98.8
+------------------------------------------------
+
+R15	Dat Arg1:T35 Arg2:T34 << OK >>	3.01.2019r -> Implantacja zastawki Melody w pozycji płucnej  <RANK: 3> <info: start[2097, 2050] <type: LEFT>>
+
+
+Sentence 29:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 30:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q24.4|Rozpoznanie II: ICD10:Q25.3|Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: ICD10:Z98.8|Opisowo:: Wrodzona wada serca pod postacią krytycznego zwężenia zastawki aortalnej.
+   
+
+
+Sentence 31:
+Stan po trzykrotnej balonoplastyce zastawki (13.12.2007r, 19.12.2007r; 01.03.2008r).
+   
+R16	Dat Arg1:T38 Arg2:T37 << OK >>	13.12.2007r -> trzykrotnej balonoplastyce zastawki  <RANK: 3> <info: start[2551, 2514] <type: LEFT>>
+R17	Dat Arg1:T39 Arg2:T37 << OK >>	19.12.2007r -> trzykrotnej balonoplastyce zastawki  <RANK: 2> <info: start[2564, 2514] <type: LEFT>>
+R18	Dat Arg1:T40 Arg2:T37 <<SHOULD NOT BE REMOVED>>	01.03.2008r -> trzykrotnej balonoplastyce zastawki <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2577, 2514] <type: LEFT>>
+
+
+Sentence 32:
+Stan po operacji metodą Konno-Ross 31.03.2008r. z użyciem zastawki biologicznej
+   Matrix P plus.
+   
+R19	Dat Arg1:T44 Arg2:T41 << OK >>	31.03.2008r -> operacji metodą Konno-Ross  <RANK: 3> <info: start[2629, 2602] <type: LEFT>>
+R20	Dat Arg1:T44 Arg2:T42 <<SHOULD NOT BE REMOVED>>	31.03.2008r -> użyciem zastawki biologicznej <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2629, 2644] <type: RIGHT>>
+R21	Dat Arg1:T44 Arg2:T43 <<SHOULD NOT BE REMOVED>>	31.03.2008r -> Matrix P plus <:REMOVED other second tag between (right):> <RANK: 0> <info: start[2629, 2677] <type: RIGHT>>
+
+
+Sentence 33:
+Zwężenie zastawki biologicznej Matrix P plus
+   Q24.4; Q25.3; Z98.8
+------------------------------------------------
+
+
+
+Sentence 34:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 35:
+Chłopak 12  letni  w  stanie  dobrym  został przyjęty  do  kliniki celem  przeprowadzenia  badań
+
+
+
+Sentence 36:
+Otrzymuje  Polocard
+------------------------------------------------
+
+
+
+Sentence 37:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 38:
+Chłopak  12  letni  w  stanie  dobrym  został przyjęty  do  Kliniki  celem przygotowania  do kolejnego  zabiegu  operacyjnego.
+
+
+
+Sentence 39:
+------------------------------------------------
+
+
+
+Sentence 40:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 41:
+Grupa krwi + p/c odpornościowe (powyżej 4. m-ca życia
+    NR-KS:G-19/000100
+    KODKRESKOWYPROBKI:G-19/000100
+    
+
+
+Sentence 42:
+GR:O
+    RH:+ (dodatni)
+    
+
+
+Sentence 43:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+
+
+
+Sentence 44:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.22[10^3/ul]
+    
+
+
+Sentence 45:
+RBC Krwinki czerwone:4.82[10^6/ul]
+    
+
+
+Sentence 46:
+HGB Hemoglobina:13.6[g/dl]
+    
+
+
+Sentence 47:
+HCT Hematokryt:37.9[%]
+    
+
+
+Sentence 48:
+MCV wskaźnik czerwonokrw:78.6[fl]
+    
+
+
+Sentence 49:
+MCH wskaźnik czerwonokrw:28.2[pg]
+    
+
+
+Sentence 50:
+MCHC wskaźnik czerwonokr:35.9[g/dl]
+    
+
+
+Sentence 51:
+PLT z morfologii:186[10^3/ul]
+    
+
+
+Sentence 52:
+RDW-SD:34.7[fl]
+    
+
+
+Sentence 53:
+RDW-CV:12.2[%]
+    PDW:17.8[fl]
+    MPV:12.9[fl]
+    
+
+
+Sentence 54:
+P-LCR:48.9[%]
+    
+
+
+Sentence 55:
+PCT (hematokryt płytkowy:0.24[%]
+    
+
+
+Sentence 56:
+NEUTR# wartość bezwzględ:4.21[10^3/ul]
+    
+
+
+Sentence 57:
+NEUTR%:67.7[%]
+    
+
+
+Sentence 58:
+LYMH# wartość bezwzględn:1.42[10^3/ul]
+    
+
+
+Sentence 59:
+LYMPH%:22.8[%]
+    
+
+
+Sentence 60:
+MONO# wartość bezwzględn:0.50[10^3/ul]
+    
+
+
+Sentence 61:
+MONO%:8.0[%]
+    
+
+
+Sentence 62:
+EO# wartość bezwzględna:0.06[10^3/ul]
+    
+
+
+Sentence 63:
+EO%:1.0[%]
+    BASO# wartość bezwzględn:0.03[10^3/ul]
+    
+
+
+Sentence 64:
+BASO%:0.5[%]
+    
+
+
+Sentence 65:
+NRBC %:0.0[%]
+    
+
+
+Sentence 66:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 67:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.44[10^3/ul]
+    
+
+
+Sentence 68:
+RBC Krwinki czerwone:4.63[10^6/ul]
+    
+
+
+Sentence 69:
+HGB Hemoglobina:13.0[g/dl]
+    
+
+
+Sentence 70:
+HCT Hematokryt:38.7[%]
+    
+
+
+Sentence 71:
+MCV wskaźnik czerwonokrw:83.6[fl]
+    
+
+
+Sentence 72:
+MCH wskaźnik czerwonokrw:28.1[pg]
+    
+
+
+Sentence 73:
+MCHC wskaźnik czerwonokr:33.6[g/dl]
+    
+
+
+Sentence 74:
+PLT z morfologii:152[10^3/ul]
+    
+
+
+Sentence 75:
+RDW-SD:38.4[fl]
+    
+
+
+Sentence 76:
+RDW-CV:12.7[%]
+    PDW:17.9[fl]
+    
+
+
+Sentence 77:
+MPV:13.0[fl]
+    
+
+
+Sentence 78:
+P-LCR:49.7[%]
+    
+
+
+Sentence 79:
+PCT (hematokryt płytkowy:0.20[%]
+    
+
+
+Sentence 80:
+NEUTR# wartość bezwzględ:2.83[10^3/ul]
+    
+
+
+Sentence 81:
+NEUTR%:52.1[%]
+    
+
+
+Sentence 82:
+LYMH# wartość bezwzględn:1.70[10^3/ul]
+    
+
+
+Sentence 83:
+LYMPH%:31.3[%]
+    
+
+
+Sentence 84:
+MONO# wartość bezwzględn:0.59[10^3/ul]
+    
+
+
+Sentence 85:
+MONO%:10.8[%]
+    
+
+
+Sentence 86:
+EO# wartość bezwzględna:0.28[10^3/ul]
+    
+
+
+Sentence 87:
+EO%:5.1[%]
+    
+
+
+Sentence 88:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    BASO%:0.7[%]
+    
+
+
+Sentence 89:
+NRBC %:0.0[%]
+    
+
+
+Sentence 90:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 91:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:29.3[sek]
+
+
+
+Sentence 92:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 93:
+Czas protrombinowy:13.3[sek]
+    
+
+
+Sentence 94:
+Wskaźnik PT:82.7[%]
+    
+
+
+Sentence 95:
+INR:1.21
+Czas trombinowy TT: Czas trombinowy TT:16.5[sek]
+
+
+
+Sentence 96:
+Fibrynogen: Fibrynogen:2.21[g/L]
+
+
+
+Sentence 97:
+Badanie ogólne moczu
+    
+
+
+Sentence 98:
+barwa:słomkowy[ ]
+    
+
+
+Sentence 99:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 100:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 101:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 102:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 103:
+ciężar właściwy:1.013[ ]
+    
+
+
+Sentence 104:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 105:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 106:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 107:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 108:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 109:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 110:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 111:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 112:
+leukocyty:2 /ul[ul]
+    erytrocyty świeże:1 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 113:
+TSH: TSH:3.11[uIU/ml]
+
+
+
+Sentence 114:
+TSH: TSH:2.68[uIU/ml]
+
+
+
+Sentence 115:
+FT3: FT3:4.04[pg/ml]
+
+
+
+Sentence 116:
+FT4: FT4:1.16[ng/dl]
+
+
+
+Sentence 117:
+Troponina T: Troponina T:4.7[pg/ml]
+
+
+
+Sentence 118:
+Troponina T
+    Troponina T:
+    3.00[pg/ml]
+
+
+
+Sentence 119:
+Prokalcytonina (PCT): Prokalcytonina:0.02[ng/ml]
+
+
+
+Sentence 120:
+ALAT: ALAT:24[U/L]
+ALAT: ALAT:15[U/L]
+ASPAT: ASPAT:38[U/L]
+ASPAT: ASPAT:25[U/L]
+
+
+
+Sentence 121:
+Bilirubina całkowita (TBil): Bilirubina całkowita:0.63[mg/dl]
+
+
+
+Sentence 122:
+Bilirubina całkowita (TBil): Bilirubina całkowita:0.58[mg/dl]
+
+
+
+Sentence 123:
+CKMB aktywność: CKMB:31[U/L]
+
+
+
+Sentence 124:
+CKMB aktywność: CKMB:17[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 125:
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 126:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 127:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 128:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 129:
+Potas (K): Potas:4.3[mmol/L]
+
+
+
+Sentence 130:
+Chlorki (Cl): Chlorki:106[mmol/L]
+
+
+
+Sentence 131:
+Chlorki (Cl): Chlorki:107[mmol/L]
+
+
+
+Sentence 132:
+Fosforany nieorganiczne: Fosforany nieorganiczne:1.44[mmol/L]
+
+
+
+Sentence 133:
+Kreatynina + GFR
+    
+
+
+Sentence 134:
+Kreatynina w surowicy:0.52[mg/dl]
+    
+
+
+Sentence 135:
+eGFR stand. wg Schwartza:149.1[ml/min/1,73 m^2]
+    
+
+
+Sentence 136:
+eGFR zmod.
+
+
+Sentence 137:
+wg Schwartza:112.0[ml/min/1,73 m^2]
+    wzrost:141[cm]
+
+
+
+Sentence 138:
+Kreatynina + GFR
+    
+
+
+Sentence 139:
+Kreatynina w surowicy:0.58[mg/dl]
+    eGFR stand.
+
+
+Sentence 140:
+wg Schwartza:137.5[ml/min/1,73 m^2]
+    eGFR zmod.
+
+
+Sentence 141:
+wg Schwartza:103.3[ml/min/1,73 m^2]
+    wzrost:145[cm]
+
+
+
+Sentence 142:
+Mleczany (LAC): Mleczany:19.7[mg/dl]
+
+
+
+Sentence 143:
+Magnez: Magnez:0.83[mmol/L]
+
+
+
+Sentence 144:
+Magnez: Magnez:0.80[mmol/L]
+
+
+
+Sentence 145:
+Mocznik: Mocznik:32[mg/dl]
+
+
+
+Sentence 146:
+Mocznik: Mocznik:20[mg/dl]
+
+
+
+Sentence 147:
+Wapń całkowity: Wapń całkowity:2.45[mmol/L]
+
+
+
+Sentence 148:
+Wapń całkowity: Wapń całkowity:2.36[mmol/L]
+
+
+
+Sentence 149:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    
+
+
+Sentence 150:
+pH:7.381
+    pCO2:35.0[mmHg]
+    BE:-3.80[mmol/L]
+    HCO3:20.3[mmol/L]
+    
+
+
+Sentence 151:
+pO2:70.6[mmHg]
+    
+
+
+Sentence 152:
+O2Sat:95.3[%]
+
+
+
+Sentence 153:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    pH:7.323
+    pCO2:47.7[mmHg]
+    BE:-2.00[mmol/L]
+    HCO3:24.0[mmol/L]
+    
+
+
+Sentence 154:
+pO2:36.7[mmHg]
+    
+
+
+Sentence 155:
+O2Sat:65.6[%]
+
+
+
+Sentence 156:
+Glukoza w surowicy: Glukoza w surowicy:84[mg/dl]
+
+
+
+Sentence 157:
+Glukoza w surowicy: Glukoza w surowicy:93[mg/dl]
+
+
+
+Sentence 158:
+NT-proBNP surowica: NT-proBNP w surowicy:66[pg/ml]
+
+
+
+Sentence 159:
+NT-proBNP surowica: NT-proBNP w surowicy:152[pg/ml]
+------------------------------------------------
+
+
+
+Sentence 160:
+ICD10
+------------------------------------------------
+Q24.4
+
+
+
+Sentence 161:
+Q25.3
+Q25.1
+Z98.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 162:
+ICD9
+------------------------------------------------
+89.522
+A01
+89.602
+
+
+
+Sentence 163:
+I81
+L43
+O61
+I89
+L23
+89.541
+M87
+N45
+L69
+39.999
+N24
+O29
+37.22
+C55
+I97
+87.440
+O77
+I17
+N11
+M37
+I19
+O35
+N13
+88.721
+M19
+
+
+
+Sentence 164:
+------------------------------------------------
+
+

@@ -1,0 +1,323 @@
+T1	Investigation 5248 5252	ECHO
+T2	Investigation 5254 5272	EKG metodą Holtera
+T3	Investigation 5274 5278	ABPM
+T4	Investigation 5280 5295	próba wysiłkowa
+T5	Drug 5151 5158	Spiriva
+T6	Drug_dose 5159 5164	1x dz
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 5132 5140	Atrovent
+T8	Drug_dose 5141 5150	N20 2x dz
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 5119 5125	Asaris
+T10	Drug_dose 5126 5131	2x dz
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 5091 5097	Siofor
+T12	Drug_dose 5098 5118	500mg 1x 1 tabl/rano
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 5060 5074	Theospirex ret
+T14	Drug_dose 5075 5090	300mg 2x 1 tabl
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Drug 5025 5037	CoPrestarium
+T16	Drug_dose 5038 5059	10+5mg 1x 1 tabl/rano
+R6	Drg Arg1:T15 Arg2:T16	
+T17	Drug 4990 4999	TertensAM
+T18	Drug_dose 5000 5024	1,5+5mg 1x 1/2 tabl/rano
+R7	Drg Arg1:T17 Arg2:T18	
+T19	Behaviour 4927 4953	warunki mieszkaniowe dobre
+T20	Condition 4852 4855	WZW
+T21	Negation 4856 4859	(-)
+R8	Neg Arg1:T21 Arg2:T20	
+N1	Reference T20 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T22	Condition 4862 4871	borelioza
+N2	Reference T22 ICD10:A69.2	
+T23	Condition 4879 4882	tbc
+N3	Reference T23 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T24	Negation 4883 4886	(-)
+R9	Neg Arg1:T24 Arg2:T23	
+T25	Negation 4872 4877	( - )
+R10	Neg Arg1:T25 Arg2:T22	
+T26	Condition 4802 4811	Uczulenia
+N4	Reference T26 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T27	Negation 4798 4801	nie
+T28	Negation 4766 4774	nie pali
+T29	Behaviour 4785 4796	Inne używki
+N5	Reference T29 ICD10:Z72	Problemy związane ze stylem życia
+R11	Neg Arg1:T27 Arg2:T29	
+T30	Behaviour 4749 4765	Palenie tytoniu:
+N6	Reference T30 ICD10:Z72.0	Używanie tytoniu
+T31	Date 4775 4784	od 20 lat
+R12	Neg Arg1:T28 Arg2:T30	
+R13	Dat Arg1:T31 Arg2:T30	
+T32	Treatment 4705 4738	operacja stawu kolanowego prawego
+A1	Status T32 Historical_Insignificant
+T33	Date 4740 4747	ok 2016
+R14	Dat Arg1:T33 Arg2:T32	
+T34	Drug 741 748	Romazic
+T35	Drug 750 755	Acard
+T36	Drug 757 769	Tertensif SR
+T37	Drug 771 783	CoPrestarium
+T38	Drug 785 800	Theospirex ret,
+T39	Drug 801 807	Siofor
+T40	Drug 809 815	Asaris
+T41	Drug 817 825	Atrovent
+T42	Drug 827 834	Spiriva
+T43	Drug 836 845	0,9% NaCl
+T44	Treatment 956 978	kontrola u lekarza POZ
+T45	Treatment 981 1063	kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych (wydano skierowanie)
+T46	Treatment 1075 1129	kontrola w Poradni Diabetologicznej i Pulmonologicznej
+T47	Behaviour 1133 1169	dieta cukrzycowa niskocholesterolowa
+T48	Investigation 1171 1188	kontrola gliekmii
+T49	Behaviour 1487 1512	dieta niskocholesterolowa
+T50	Investigation 1514 1534	kontrola lipidogramu
+T51	Treatment 1299 1321	kontrola u lekarza POZ
+T52	Investigation 1430 1455	angioCT tętnic wieńcowych
+T53	Date 1367 1383	za ok 4 tygodnie
+R15	Dat Arg1:T53 Arg2:T52	
+T54	Investigation 3774 3778	ECHO
+T55	Investigation 3780 3798	EKG metodą Holtera
+T56	Drug 3649 3655	Asaris
+T57	Drug 3657 3665	Atrovent
+T58	Drug 3667 3674	Spiriva
+T59	Drug_dose 3676 3690	jak dotychczas
+R16	Drg Arg1:T58 Arg2:T59	
+R17	Drg Arg1:T57 Arg2:T59	
+R18	Drg Arg1:T56 Arg2:T59	
+T60	Drug 3621 3627	Siofor
+T61	Drug 3590 3604	Theospirex ret
+T62	Drug 3555 3567	CoPrestarium
+T63	Drug 3527 3539	Tertensif SR
+T64	Drug 3500 3505	Acard
+T65	Drug 3471 3478	Romazic
+T66	Drug_dose 3479 3499	10mg 1x 1 tabl/wiecz
+R19	Drg Arg1:T65 Arg2:T66	
+T67	Drug_dose 3506 3526	75mg 1x 1 tabl/wiecz
+R20	Drg Arg1:T64 Arg2:T67	
+T68	Drug_dose 3540 3554	1x 1 tabl/rano
+R21	Drg Arg1:T63 Arg2:T68	
+T69	Drug_dose 3568 3589	10+5mg 1x 1 tabl/rano
+R22	Drg Arg1:T62 Arg2:T69	
+T70	Drug_dose 3605 3620	300mg 2x 1 tabl
+R23	Drg Arg1:T61 Arg2:T70	
+T71	Drug_dose 3628 3648	500mg 1x 1 tabl/rano
+R24	Drg Arg1:T60 Arg2:T71	
+T72	Behaviour 3407 3433	warunki mieszkaniowe dobre
+T73	Condition 3383 3386	tbc
+N7	Reference T73 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T74	Condition 3366 3375	borelioza
+N8	Reference T74 ICD10:A69.2	Choroba z Lyme
+T75	Condition 3356 3359	WZW
+N9	Reference T75 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T76	Negation 3387 3390	(-)
+R25	Neg Arg1:T76 Arg2:T73	
+T77	Negation 3376 3381	( - )
+R26	Neg Arg1:T77 Arg2:T74	
+T78	Negation 3360 3363	(-)
+R27	Neg Arg1:T78 Arg2:T75	
+T79	Condition 3307 3316	Uczulenia
+N10	Reference T79 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T80	Negation 3302 3305	nie
+T81	Negation 3273 3281	nie pali
+T82	Behaviour 3289 3301	Inne używki:
+N11	Reference T82 ICD10:Z72.0	Używanie tytoniu
+R28	Neg Arg1:T80 Arg2:T82	
+T83	Behaviour 3256 3271	Palenie tytoniu
+N12	Reference T83 ICD10:Z72.0	Używanie tytoniu
+R29	Neg Arg1:T81 Arg2:T83	
+T84	Date 3282 3288	od lat
+R30	Dat Arg1:T84 Arg2:T83	
+T85	Treatment 3234 3251	Przebyte operacje
+T86	Negation 3036 3042	Neguje
+T87	Symptom 3044 3056	zasłabnięcia
+N13	Reference T87 ICD10:R55	Omdlenie i zapaść
+T88	Symptom 3058 3066	omdlenia
+N14	Reference T88 ICD10:R55	Omdlenie i zapaść
+T89	Symptom 3068 3078	krwawienia
+N15	Reference T89 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T90	Symptom 3080 3093	czarne stolce
+N16	Reference T90 ICD10:K92.1	Stolce smołowate
+T91	Symptom 3095 3112	brunatne wymioty,
+N17	Reference T91 ICD10:K92.0	Wymioty krwawe
+T92	Condition 3113 3129	chorobę wrzodową
+N18	Reference T92 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T93	Symptom 3131 3145	duszność nocną
+N19	Reference T93 ICD10:R06.0	Duszność
+T94	Symptom 3147 3162	obrzęki podudzi
+N20	Reference T94 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T95	Symptom 3164 3188	bóle w klatce piersiowej
+N21	Reference T95 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T96	Symptom 3190 3205	kołatania serca
+N22	Reference T96 ICD10:R00.2	Kołatanie serca
+T97	Condition 3207 3217	udar mózgu
+N23	Reference T97 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T98	Condition 3219 3231	zawał serca.
+N24	Reference T98 ICD10:I25.2	Przebyty zawał serca
+R31	Neg Arg1:T86 Arg2:T87	
+R32	Neg Arg1:T86 Arg2:T88	
+R33	Neg Arg1:T86 Arg2:T89	
+R34	Neg Arg1:T86 Arg2:T90	
+R35	Neg Arg1:T86 Arg2:T91	
+R36	Neg Arg1:T86 Arg2:T92	
+R37	Neg Arg1:T86 Arg2:T93	
+R38	Neg Arg1:T86 Arg2:T94	
+R39	Neg Arg1:T86 Arg2:T95	
+R40	Neg Arg1:T86 Arg2:T96	
+R41	Neg Arg1:T86 Arg2:T97	
+R42	Neg Arg1:T86 Arg2:T98	
+T99	Negation 4552 4558	Neguje
+T100	Symptom 4560 4568	omdlenia
+N25	Reference T100 ICD10:R55	Omdlenie i zapaść
+T101	Symptom 4570 4580	krwawienia
+N26	Reference T101 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T102	Symptom 4582 4595	czarne stolce
+N27	Reference T102 ICD10:K92.1	Stolce smołowate
+T103	Symptom 4597 4613	brunatne wymioty
+N28	Reference T103 ICD10:K92.0	Wymioty krwawe
+T104	Condition 4615 4631	chorobę wrzodową
+N29	Reference T104 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T105	Symptom 4633 4647	duszność nocną
+N30	Reference T105 ICD10:R06.0	Duszność
+T106	Symptom 4649 4664	obrzęki podudzi
+N31	Reference T106 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T107	Symptom 4666 4681	kołatania serca
+N32	Reference T107 ICD10:R00.2	Kołatanie serca
+R43	Neg Arg1:T99 Arg2:T100	
+R44	Neg Arg1:T99 Arg2:T101	
+R45	Neg Arg1:T99 Arg2:T102	
+R46	Neg Arg1:T99 Arg2:T103	
+R47	Neg Arg1:T99 Arg2:T104	
+R48	Neg Arg1:T99 Arg2:T105	
+R49	Neg Arg1:T99 Arg2:T106	
+R50	Neg Arg1:T99 Arg2:T107	
+T108	Investigation_result 3946 3973	RR w domu 125/75-141/84mmHg
+T109	Condition 3942 3944	HA
+N33	Reference T109 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T110	Condition 3976 3985	DM typu 2
+N34	Reference T110 ICD10:E11	Cukrzyca insulinoniezależna
+T111	Drug 3987 3993	Siofor
+T112	Condition 3996 4001	POChP
+N35	Reference T112 ICD10:J44.9	Przewlekła obturacyjna choroba płuc, nieokreślona
+T113	Condition 4032 4047	podejrzenia CAD
+T114	Condition 2129 2134	POChP
+N37	Reference T114 ICD10:J44.9	Przewlekła obturacyjna choroba płuc, nieokreślona
+T115	Condition 553 588	Przewlekła obturacyjna choroba płuc
+N38	Reference T115 ICD10:J44.9	Przewlekła obturacyjna choroba płuc, nieokreślona
+T116	Condition 2109 2118	DM typu 2
+N39	Reference T116 ICD10:E11	Cukrzyca insulinoniezależna
+T117	Condition 536 551	Cukrzyca typu 2
+N40	Reference T117 ICD10:E11	Cukrzyca insulinoniezależna
+T118	Condition 1858 1874	Cukrzyca typu 2.
+N41	Reference T118 ICD10:E11	Cukrzyca insulinoniezależna
+T119	Condition 1875 1910	Przewlekła obturacyjna choroba płuc
+N42	Reference T119 ICD10:J44.9	Przewlekła obturacyjna choroba płuc, nieokreślona
+T120	Investigation_result 2079 2107	RR w domu 120/80-130/85mmHg)
+T121	Condition 2054 2077	nadciśnieniem tętniczym
+N43	Reference T121 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T122	Drug 2120 2126	Siofor
+T123	Investigation 2204 2225	angioCT tt wieńcowych
+T124	Investigation 4052 4056	ECHO
+T125	Date 4082 4091	(05.2017)
+T126	Investigation_result 4093 4100	EF 49%,
+T127	Investigation_result 4101 4193	zaznaczona hipokineza ściany tylnej i bocznej, zaburzenia funkcji skurczowej i rozkurczowej,
+T128	Condition 4194 4226	ExV nie odczuwane przez pacjenta
+R51	Inv Arg1:T124 Arg2:T126	
+R52	Inv Arg1:T124 Arg2:T127	
+R53	Dat Arg1:T125 Arg2:T126	
+R54	Dat Arg1:T125 Arg2:T124	
+R55	Dat Arg1:T125 Arg2:T127	
+T129	Investigation 4230 4248	EKG metodą Holtera
+T130	Date 4275 4283	09.2017)
+R56	Dat Arg1:T130 Arg2:T129	
+T131	Investigation_result 4293 4356	tachykardii ok 120/min dyskretne obniżenia ST na ścianie dolnej
+R57	Inv Arg1:T129 Arg2:T131	
+R58	Dat Arg1:T130 Arg2:T131	
+T132	Symptom 4380 4442	kłucia w okolicy p/sercowej bez związku z wysiłkiem fizycznym,
+N44	Reference T132 ICD10:R07.3	Inne bóle w klatce piersiowej
+T133	Symptom 4443 4499	krótkotrwale uczucia nagłego osłabienia (zasłabnięcia?),
+N45	Reference T133 ICD10:R55	Omdlenie i zapaść
+T134	Treatment 4518 4550	operacji stawu kolanowego lewego
+T135	Negation 2254 2260	neguje
+T136	Symptom 2262 2286	bóle w klatce piersiowej
+N46	Reference T136 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T137	Symptom 2288 2296	duszność
+N47	Reference T137 ICD10:R06.0	Duszność
+T138	Symptom 2298 2316	obrzeki kk dolnych
+N48	Reference T138 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T139	Symptom 2318 2340	dolegliwości wysiłkowe
+R59	Neg Arg1:T135 Arg2:T136	
+R60	Neg Arg1:T135 Arg2:T137	
+R61	Neg Arg1:T135 Arg2:T138	
+R62	Neg Arg1:T135 Arg2:T139	
+T140	Treatment 2382 2414	operacji stawu kolanowego lewego
+A2	Status T140 Historical_Insignificant
+T141	Treatment 2425 2456	operacja stawu kolanowego prawe
+A3	Status T141 Historical_Insignificant
+T142	Date 2460 2468	ok 2016)
+R63	Dat Arg1:T142 Arg2:T141	
+T143	Behaviour 2470 2480	papierosów
+N49	Reference T143 ICD10:Z72.0	Używanie tytoniu
+T144	Negation 2481 2489	nie pali
+R64	Neg Arg1:T144 Arg2:T143	
+T145	Date 2490 2499	od 20 lat
+R65	Dat Arg1:T145 Arg2:T143	
+A5	Status T134 Historical_Insignificant
+T147	Date 2503 2510	03.2018
+T148	Investigation 2557 2561	ECHO
+T149	Investigation_result 2571 2574	b/z
+T150	Investigation_result 2563 2569	EF 64%
+R66	Inv Arg1:T148 Arg2:T150	
+R67	Inv Arg1:T148 Arg2:T149	
+R68	Dat Arg1:T147 Arg2:T148	
+R69	Dat Arg1:T147 Arg2:T150	
+R70	Dat Arg1:T147 Arg2:T149	
+T151	Investigation 2576 2594	Próba dobutaminowa
+T152	Investigation_result 2596 2602	ujemna
+R71	Inv Arg1:T151 Arg2:T152	
+T153	Investigation 2606 2624	EKG metodą Holtera
+T154	Investigation_result 2626 2650	RZ o częstości od 52/min
+T155	Date 2652 2659	02:54 )
+R72	Dat Arg1:T155 Arg2:T154	
+T156	Investigation_result 2660 2670	do 142/min
+T157	Date 2671 2680	(09:24 ),
+R73	Dat Arg1:T157 Arg2:T156	
+T158	Investigation_result 2681 2725	śr. 85/min, bradykardia <50/min: 6 zatokowe,
+T159	Date 2737 2744	o 03:03
+T160	Investigation_result 2726 2736	min 48/min
+R74	Dat Arg1:T159 Arg2:T160	
+R75	Inv Arg1:T153 Arg2:T154	
+R76	Inv Arg1:T153 Arg2:T156	
+R77	Inv Arg1:T153 Arg2:T158	
+R78	Inv Arg1:T153 Arg2:T160	
+T161	Investigation_result 2746 2897	ExSV: 1744, w tym 2 częstoskurcze, mx 1,7 sek, ExV: 14 ExV (2 kształty), bez pauz powyżej 2sek, bez zaburzeń przewodzenia AV, ST bez zmian dynamicznych
+R79	Inv Arg1:T153 Arg2:T161	
+T162	Investigation_result 2942 2987	podwyższone wartości troponiny (20,95-23,11),
+T163	Symptom 2992 3017	bólów w klatce piersiowej
+N50	Reference T163 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T164	Negation 2988 2991	bez
+R80	Neg Arg1:T164 Arg2:T163	
+T165	Investigation_result 3019 3028	bez zmian
+T166	Investigation 3031 3034	EKG
+R81	Inv Arg1:T166 Arg2:T165	
+T167	Condition 1836 1856	Hipercholesterolemia
+T168	Condition 1813 1834	Nadciśnienie tętnicze
+N52	Reference T168 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T169	Condition 1785 1812	Ekstrasystolia nadkomorowa.
+N53	Reference T169 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T170	Condition 1756 1783	Choroba niedokrwienna serca
+T171	Condition 514 534	Hipercholesterolemia
+T172	Condition 491 512	Nadciśnienie tętnicze
+N56	Reference T172 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T173	Condition 456 490	Napadowy częstoskurcz nadkomorowy.
+N57	Reference T173 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T174	Condition 438 454	Choroba wieńcowa
+T175	Condition 590 621	Podejrzenie naczyniaka wątroby.
+N59	Reference T175 ICD10:D18	Naczyniaki krwionośne i chłonne o dowolnym umiejscowieniu
+A6	Source T175 Declared
+A4	Status T143 Historical_Insignificant
+T146	Treatment 1324 1366	ponowna hospitalizacja w tutejszej klinice
+R82	Dat Arg1:T53 Arg2:T146	
+N58	Reference T174 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+N55	Reference T171 ICD10:E78.0	Czysta hipercholesterolemia
+N54	Reference T170 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+N51	Reference T167 ICD10:E78.0	Czysta hipercholesterolemia
+A7	Source T113 Declared
+N36	Reference T113 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona

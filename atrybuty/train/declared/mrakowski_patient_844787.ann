@@ -1,0 +1,67 @@
+T1	Treatment 332 399	Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T2	Behaviour 403 498	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T3	Investigation 502 571	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydo
+T4	Condition 800 832	Ubytek przegrody międzykomorowej
+N1	Reference T4 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T5	Condition 838 850	Dyslipidemia
+N2	Reference T5 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T6	Treatment 851 869	w trakcie leczenia
+T7	Behaviour 882 892	Nikotynizm
+T8	Condition 1040 1043	VSD
+N4	Reference T8 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T9	Condition 1045 1059	hiperlipidemią
+N5	Reference T9 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T10	Symptom 1096 1129	duszności w II/III klasie wg NYHA
+N6	Reference T10 ICD10:R06.0	Duszność
+T11	Negation 1131 1137	Neguje
+T12	Symptom 1138 1150	zasłabnięcia
+T13	Symptom 1152 1173	duszności w spoczynku
+N7	Reference T13 ICD10:R06.0	Duszność
+T14	Symptom 1175 1206	typowe bóle w klatce piersiowej
+N8	Reference T14 ICD10:R07	Ból gardła i w klatce piersiowej
+R1	Neg Arg1:T11 Arg2:T12	
+R2	Neg Arg1:T11 Arg2:T13	
+R3	Neg Arg1:T11 Arg2:T14	
+T15	Treatment 1208 1225	Przebyte operacje
+T16	Treatment 1228 1233	2x cc
+A1	Status T16 Historical_Insignificant
+T17	Condition 1261 1264	WZW
+N9	Reference T17 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T18	Condition 1273 1282	borelioza
+N10	Reference T18 ICD10:A69.2	Choroba z Lyme
+T19	Condition 1290 1298	gruźlica
+N11	Reference T19 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T20	Condition 1304 1308	odra
+N12	Reference T20 ICD10:B05	Odra
+T21	Treatment 1336 1354	szczepiona na odrę
+A2	Source T21 Declared
+T22	Negation 1310 1311	-
+R4	Neg Arg1:T22 Arg2:T20	
+T23	Negation 1300 1301	-
+R5	Neg Arg1:T23 Arg2:T19	
+T24	Negation 1285 1286	-
+R6	Neg Arg1:T24 Arg2:T18	
+T25	Negation 1267 1268	-
+R7	Neg Arg1:T25 Arg2:T17	
+T26	Condition 1382 1392	udar mózgu
+A3	Status T26 Family
+N13	Reference T26 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T28	Behaviour 1408 1423	Palenie tytoniu
+T29	Date 1430 1438	od 5 lat
+R9	Dat Arg1:T29 Arg2:T28	
+T30	Behaviour 1461 1490	1 paczka wystarcza na tydzień
+T31	Behaviour 1493 1504	Inne używki
+T32	Negation 1506 1509	nie
+R10	Neg Arg1:T32 Arg2:T31	
+T33	Condition 1510 1519	Uczulenia
+T34	Negation 1521 1527	neguje
+R11	Neg Arg1:T34 Arg2:T33	
+T35	Behaviour 1544 1570	warunki mieszkaniowe dobre
+T36	Condition 1355 1370	Wywiad rodzinny
+A4	Status T36 Family
+T37	Drug 870 877	statyną
+N16	Reference T33 ICD10:T78.4	Alergia, nieokreślona
+N3	Reference T7 ICD10:Z72.0	Używanie tytoniu
+N17	Reference T12 ICD10:R55	
+N15	Reference T30 ICD10:Z72.0	Używanie tytoniu
+N14	Reference T28 ICD10:Z72.0	Używanie tytoniu

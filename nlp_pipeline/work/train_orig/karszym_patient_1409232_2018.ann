@@ -1,0 +1,118 @@
+T1	Condition 447 468	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 470 490	Hipercholesterolemia
+N2	Reference T2 ICD10:E78.0	Czysta hipercholesterolemia
+T3	Condition 492 536	Łagodna niedomykalność zastawki trójdzielnej
+N3	Reference T3 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T4	Condition 538 554	Astma oskrzelowa
+N4	Reference T4 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T5	Condition 556 565	Uczulenie
+N5	Reference T5 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T6	Symptom 576 581	Zgaga
+N6	Reference T6 ICD10:R12	Zgaga
+T7	Treatment 694 766	Dalsza opieka w POZ oraz Poradni Gastroenterologicznej i Kardiologicznej
+T8	Behaviour 772 833	Dieta lekkostrawna, niskocholesterolowa, uboga w cukry proste
+T9	Behaviour 847 876	podjęcie aktywności fizycznej
+T10	Date 881 899	Za około 6 tygodni
+T11	Investigation 900 920	kontrola lipidogramu
+T12	Treatment 923 961	do rozważenia farmakologiczne leczenie
+T13	Condition 962 982	hipercholesterolemii
+N7	Reference T13 ICD10:E78.0	Czysta hipercholesterolemia
+T14	Investigation 987 1043	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T15	Drug 1085 1093	Dexilent
+T16	Drug_dose 1094 1145	60mg 1-0-0 tabl. na czczo, 30 minut przed posiłkiem
+T17	Drug 1147 1156	Triplixam
+T18	Drug_dose 1157 1177	10/2,5/10 1-0-0 tabl
+T19	Drug 1179 1186	Nebilet
+T20	Drug_dose 1187 1201	5mg 0-0-1 tabl
+T21	Drug 1203 1210	Telfexo
+T22	Drug_dose 1211 1228	180mg 1-0-0 tabl.
+T23	Drug 1229 1235	Fostex
+T24	Drug_dose 1236 1251	1-0-1 inhalacja
+T25	Drug 1253 1261	Ventolin
+T26	Drug_dose 1262 1277	1-0-1 inhalacja
+R1	Dat Arg1:T10 Arg2:T11	
+R2	Dat Arg1:T10 Arg2:T12	
+R3	Drg Arg1:T15 Arg2:T16	
+R4	Drg Arg1:T17 Arg2:T18	
+R5	Drg Arg1:T19 Arg2:T20	
+R6	Drg Arg1:T21 Arg2:T22	
+R7	Drg Arg1:T23 Arg2:T24	
+R8	Drg Arg1:T25 Arg2:T26	
+T27	Investigation_result 1446 1485	wysokich wartości BP (max. 220/160mmHg)
+T28	Negation 1488 1491	bez
+T29	Investigation 1492 1503	diagnostyki
+T30	Date 1504 1514	dotychczas
+R9	Neg Arg1:T28 Arg2:T29	
+R10	Dat Arg1:T30 Arg2:T29	
+T31	Condition 1524 1526	HA
+N8	Reference T31 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T32	Date 1529 1537	od 3 lat
+R11	Dat Arg1:T32 Arg2:T31	
+T33	Symptom 1558 1573;1588 1597	zawroty głowy - cały czas
+N9	Reference T33 ICD10:R42	Zawroty głowy i odurzenie
+T34	Condition 1621 1637	astma oskrzelowa
+N10	Reference T34 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T35	Condition 1639 1648	uczulenie
+N11	Reference T35 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T36	Treatment 1659 1677	antybiotykoterapia
+T37	Date 1678 1690	do dziś rano
+T38	Drug 1693 1699	Klacid
+T39	Condition 1701 1716	"przeziębienie"
+A1	Source T39 Declared
+N12	Reference T39 ICD10:J00	Ostre zapalenie nosa i gardła [przeziębienie]
+R12	Dat Arg1:T37 Arg2:T38	
+R13	Dat Arg1:T37 Arg2:T36	
+T40	Negation 1738 1744	neguje
+T41	Treatment 1719 1736	Przebyte operacje
+T42	Condition 1763 1765	HA
+N14	Reference T42 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+N13	Reference T41 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+A2	Status T42 Family
+T43	Date 1774 1790	w starszym wieku
+R14	Dat Arg1:T43 Arg2:T42	
+T44	Condition 1792 1799	Alergie
+N15	Reference T44 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T45	Behaviour 1805 1834	Nikotynizm: tak, 10 paczkolat
+N16	Reference T45 ICD10:Z72.0	Używanie tytoniu
+T46	Behaviour 1844 1859	paczka na 3 dni
+N17	Reference T46 ICD10:Z72.0	Używanie tytoniu
+T47	Date 1836 1843	od roku
+T48	Behaviour 1861 1887	Alkohol: piwo - 4 dziennie
+N18	Reference T48 ICD10:Z72.1	Używanie alkoholu
+T49	Date 1888 1900	od wielu lat
+T50	Behaviour 1902 1919	Uzależnienie inne
+N19	Reference T50 ICD10:Z72	Problemy związane ze stylem życia
+T51	Negation 1921 1927	neguje
+T52	Behaviour 1945 1952	pracuje
+T53	Behaviour 1962 1988	karetka pogotowia kierowca
+T54	Behaviour 1990 2005	operator maszyn
+T55	Date 1955 1961	12 lat
+R15	Dat Arg1:T55 Arg2:T53	
+T56	Drug 2014 2023	Triplixam
+T57	Drug 2051 2058	Nebilet
+T58	Drug 2083 2090	Telfexo
+T59	Drug 2111 2117	Fostex
+T60	Drug 2143 2151	Ventolin
+T61	Drug 2179 2187	Dexilant
+T62	Drug_dose 2024 2049	10/2.5/10 mg 1 tabl. rano
+T63	Drug_dose 2059 2081	5 mg 1 tabl. wieczorem
+T64	Drug_dose 2091 2109	180mg 1 tabl. rano
+T65	Drug_dose 2118 2141	200ug +6ug 1 wziew rano
+T66	Drug_dose 2152 2176	1 wziew rano i wieczorem
+T67	Drug_dose 2189 2207	60 mg 1 tabl. rano
+T68	Investigation 2236 2246	echo serca
+T69	Investigation 2248 2251	TET
+T70	Investigation 2253 2257	ABPM
+T71	Investigation 2259 2269	Holter ekg
+T72	Investigation 2271 2289	rtg kl. piersiowej
+R16	Dat Arg1:T47 Arg2:T46	
+R17	Dat Arg1:T49 Arg2:T48	
+R18	Neg Arg1:T51 Arg2:T50	
+R19	Drg Arg1:T56 Arg2:T62	
+R20	Drg Arg1:T57 Arg2:T63	
+R21	Drg Arg1:T58 Arg2:T64	
+R22	Drg Arg1:T59 Arg2:T65	
+R23	Drg Arg1:T60 Arg2:T66	
+R24	Drg Arg1:T61 Arg2:T67	
+R25	Neg Arg1:T40 Arg2:T41	

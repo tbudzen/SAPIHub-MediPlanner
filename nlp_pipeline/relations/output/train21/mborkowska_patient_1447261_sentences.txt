@@ -1,0 +1,519 @@
+allRelations          : 28
+oks                   : 7
+isRedundantAndRemoveds: 16
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 5
+GOOD / BAD            : 23 / 5
+Sentence 0:
+------------------------------------------------
+Wiek: 65 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+1. Dalsza opieka w Poradni Kardiologicznej, Gastrologicznej i POZ.
+
+
+
+Sentence 5:
+2. Okresowa kontrola ciśnienia tętniczego.
+
+
+
+Sentence 6:
+3. Higieniczny tryb życia: rzucenie palenia tytoniu, ograniczenie spożycia alkoholu.
+
+
+
+Sentence 7:
+4. Systematyczne stosowanie leków:
+IPP 20 mg 1x1 tabl rano 30 min przed posiłkiem
+------------------------------------------------
+
+R1	Drg Arg1:T3 Arg2:T4 << OK >>	IPP -> 20 mg 1x1 tabl rano 30 min przed posiłkiem  <RANK: 3> <info: start[559, 563] <type: RIGHT>>
+
+
+Sentence 8:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 9:
+------------------------------------------------
+ Rozpozanie I: ICD10:I34.0|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Łagodna niedomykalność zastawki mitralnej.
+
+
+Sentence 10:
+Choroba wrzodowa żołądka w wywiadzie.
+
+
+Sentence 11:
+Nikotynizm.
+
+
+
+Sentence 12:
+------------------------------------------------
+
+
+
+Sentence 13:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 14:
+------------------------------------------------
+ Rozpozanie I: ICD10:R07|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo::
+------------------------------------------------
+
+
+
+Sentence 15:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 16:
+Chory lat 65, przyjęty do Kliniki z powodu bólów w klatce piersiowej - od kilku lat, głównie wieczorem 
+W wywiadzie ponadto: choroba wrzodowa żołądka w przeszłości,  HA?
+R2	Dat Arg1:T9 Arg2:T11 <<REDUNDANT!!!REMOVED>>	w przeszłości -> bólów w klatce piersiowej <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1427, 1320] <type: LEFT>>
+R3	Dat Arg1:T9 Arg2:T8 << OK >>	w przeszłości -> choroba wrzodowa żołądka  <RANK: 3> <info: start[1427, 1402] <type: LEFT>>
+R4	Dat Arg1:T9 Arg2:T10 <<REDUNDANT!!!REMOVED>>	w przeszłości -> HA? <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1427, 1443] <type: RIGHT>>
+R5	Dat Arg1:T12 Arg2:T11 << OK >>	od kilku lat, głównie wieczorem -> bólów w klatce piersiowej  <RANK: 3> <info: start[1348, 1320] <type: LEFT>>
+R6	Dat Arg1:T12 Arg2:T8 <<REDUNDANT!!!REMOVED>>	od kilku lat, głównie wieczorem -> choroba wrzodowa żołądka <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1348, 1402] <type: RIGHT>>
+R7	Dat Arg1:T12 Arg2:T10 <<REDUNDANT!!!REMOVED>>	od kilku lat, głównie wieczorem -> HA? <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1348, 1443] <type: RIGHT>>
+
+
+Sentence 17:
+- chory neguje 
+Przebyte operacje: żadnych 
+Wywiad rodzinny: bez znaczenia 
+Alergie: neguje 
+
+R8	Neg Arg1:T13 Arg2:T17 <<REDUNDANT!!!REMOVED>>	chory neguje -> Wywiad rodzinny <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1449, 1491] <type: RIGHT>>
+R9	Neg Arg1:T13 Arg2:T18 <<REDUNDANT!!!REMOVED>>	chory neguje -> Alergie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1449, 1523] <type: RIGHT>>
+R10	Neg Arg1:T13 Arg2:T15 <<REDUNDANT!!!REMOVED>>	chory neguje -> Przebyte operacje <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 1> <info: start[1449, 1463] <type: RIGHT>>
+R11	Neg Arg1:T14 Arg2:T17 <<REDUNDANT!!!REMOVED>>	żadnych -> Wywiad rodzinny <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1482, 1491] <type: RIGHT>>
+R12	Neg Arg1:T14 Arg2:T18 <<REDUNDANT!!!REMOVED>>	żadnych -> Alergie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1482, 1523] <type: RIGHT>>
+R13	Neg Arg1:T14 Arg2:T15 << OK >>	żadnych -> Przebyte operacje  <RANK: 3> <info: start[1482, 1463] <type: LEFT>>
+R14	Neg Arg1:T16 Arg2:T17 << OK >>	bez znaczenia -> Wywiad rodzinny  <RANK: 3> <info: start[1508, 1491] <type: LEFT>>
+R15	Neg Arg1:T16 Arg2:T18 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Alergie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1508, 1523] <type: RIGHT>>
+R16	Neg Arg1:T16 Arg2:T15 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1508, 1463] <type: LEFT>>
+R17	Neg Arg1:T19 Arg2:T17 <<REDUNDANT!!!REMOVED>>	neguje -> Wywiad rodzinny <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1532, 1491] <type: LEFT>>
+R18	Neg Arg1:T19 Arg2:T18 << OK >>	neguje -> Alergie  <RANK: 3> <info: start[1532, 1523] <type: LEFT>>
+R19	Neg Arg1:T19 Arg2:T15 <<REDUNDANT!!!REMOVED>>	neguje -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1532, 1463] <type: LEFT>>
+
+
+Sentence 18:
+Nikotynizm: 50 paczkolat
+Alkohol: spożywa - okazjonalnie, dzisiaj o 2 nad ranem ostatnie spożycie 
+Uzależnienie inne: neguje 
+Stan społeczny: od 2 lat bezrobotny, wcześniej praca budowlane 
+Leki:
+
+R20	Neg Arg1:T22 Arg2:T20 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm: 50 paczkolat <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1658, 1540] <type: LEFT>>
+R21	Neg Arg1:T22 Arg2:T21 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: spożywa - okazjonalnie, dzisiaj o 2 nad ranem ostatnie spożycie <:REMOVED other second tag between (left):> <RANK: 1> <info: start[1658, 1565] <type: LEFT>>
+R22	Neg Arg1:T22 Arg2:T23 << OK >>	neguje -> Uzależnienie inne  <RANK: 3> <info: start[1658, 1639] <type: LEFT>>
+R23	Neg Arg1:T22 Arg2:T25 <<REDUNDANT!!!REMOVED>>	neguje -> Leki <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1658, 1730] <type: RIGHT>>
+
+
+Sentence 19:
+żadnych
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter ekg, rtg kl. piersiowej
+
+R24	Neg Arg1:T24 Arg2:T26 <<REDUNDANT!!!SHOULD BE REMOVED>>	żadnych -> echo serca  <RANK: 1> <info: start[1736, 1771] <type: RIGHT>>
+R25	Neg Arg1:T24 Arg2:T27 <<REDUNDANT!!!SHOULD BE REMOVED>>	żadnych -> TET  <RANK: 0> <info: start[1736, 1783] <type: RIGHT>>
+R26	Neg Arg1:T24 Arg2:T28 <<REDUNDANT!!!SHOULD BE REMOVED>>	żadnych -> ABPM  <RANK: 0> <info: start[1736, 1788] <type: RIGHT>>
+R27	Neg Arg1:T24 Arg2:T29 <<REDUNDANT!!!SHOULD BE REMOVED>>	żadnych -> Holter ekg,  <RANK: 0> <info: start[1736, 1794] <type: RIGHT>>
+R28	Neg Arg1:T24 Arg2:T30 <<REDUNDANT!!!SHOULD BE REMOVED>>	żadnych -> rtg kl. piersiowej  <RANK: 0> <info: start[1736, 1806] <type: RIGHT>>
+
+
+Sentence 20:
+Przewidywana liczba dni hospitalizacji: 5-7 dni
+------------------------------------------------
+
+
+
+Sentence 21:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 22:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:8.02[10^3/ul]
+    
+
+
+Sentence 23:
+RBC Krwinki czerwone:4.46[10^6/ul]
+    
+
+
+Sentence 24:
+HGB Hemoglobina:14.0[g/dl]
+    
+
+
+Sentence 25:
+HCT Hematokryt:41.8[%]
+    
+
+
+Sentence 26:
+MCV wskaźnik czerwonokrw:93.7[fl]
+    
+
+
+Sentence 27:
+MCH wskaźnik czerwonokrw:31.4[pg]
+    
+
+
+Sentence 28:
+MCHC wskaźnik czerwonokr:33.5[g/dl]
+    
+
+
+Sentence 29:
+PLT z morfologii:239[10^3/ul]
+    
+
+
+Sentence 30:
+RDW-SD:44.1[fl]
+    
+
+
+Sentence 31:
+RDW-CV:12.8[%]
+    PDW:14.6[fl]
+    MPV:11.7[fl]
+    
+
+
+Sentence 32:
+P-LCR:38.8[%]
+    
+
+
+Sentence 33:
+PCT (hematokryt płytkowy:0.28[%]
+    
+
+
+Sentence 34:
+NEUTR# wartość bezwzględ:4.03[10^3/ul]
+    
+
+
+Sentence 35:
+NEUTR%:50.3[%]
+    
+
+
+Sentence 36:
+LYMH# wartość bezwzględn:2.87[10^3/ul]
+    
+
+
+Sentence 37:
+LYMPH%:35.8[%]
+    
+
+
+Sentence 38:
+MONO# wartość bezwzględn:0.87[10^3/ul]
+    
+
+
+Sentence 39:
+MONO%:10.8[%]
+    
+
+
+Sentence 40:
+EO# wartość bezwzględna:0.22[10^3/ul]
+    
+
+
+Sentence 41:
+EO%:2.7[%]
+    
+
+
+Sentence 42:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    BASO%:0.4[%]
+    
+
+
+Sentence 43:
+NRBC %:0.0[%]
+    
+
+
+Sentence 44:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 45:
+D-dimer - test ilościowy: D-dimer - test ilościowy:182[ng/ml]
+
+
+
+Sentence 46:
+Badanie ogólne moczu
+    
+
+
+Sentence 47:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 48:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 49:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 50:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 51:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 52:
+ciężar właściwy:1.016[ ]
+    
+
+
+Sentence 53:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 54:
+pH:6.0[ ]
+    
+
+
+Sentence 55:
+białko:nieobecne[ ]
+    
+
+
+Sentence 56:
+urobilinogen:2,0 mg/dl[ ]
+    
+
+
+Sentence 57:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 58:
+erytrocyty:obecne[ ]
+    
+
+
+Sentence 59:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 60:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 61:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 62:
+leukocyty:2 /ul[ul]
+    erytrocyty świeże i częś:28 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 63:
+TSH: TSH:1.00[uIU/ml]
+
+
+
+Sentence 64:
+FT3: FT3:2.42[pg/ml]
+
+
+
+Sentence 65:
+FT4: FT4:1.02[ng/dl]
+
+
+
+Sentence 66:
+Troponina T: Troponina T:6.7[pg/ml]
+
+
+
+Sentence 67:
+ALAT: ALAT:26[U/L]
+ASPAT: ASPAT:57[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 68:
+Sód (Na): Sód:144[mmol/L]
+
+
+
+Sentence 69:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 70:
+Potas (K): Potas:5.4[mmol/L]
+
+
+
+Sentence 71:
+Potas (K): Potas:4.2[mmol/L]
+
+
+
+Sentence 72:
+Alkohol etylowy (Etanol):
+
+
+Sentence 73:
+Alkohol etylowy:0.1[g/l (‰)]
+
+
+
+Sentence 74:
+Kreatynina + GFR
+    
+
+
+Sentence 75:
+Kreatynina w surowicy:0.87[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 76:
+MDRD ze stan:88.3[ml/min/1,73 m^2]
+
+
+
+Sentence 77:
+Mocznik: Mocznik:39[mg/dl]
+
+
+
+Sentence 78:
+Kwas moczowy: Kwas moczowy:6.5[mg/dl]
+
+
+
+Sentence 79:
+Lipidogram
+    
+
+
+Sentence 80:
+Cholesterol całkowity:180[mg/dl]
+    
+
+
+Sentence 81:
+Cholesterol HDL:106[mg/dl]
+    
+
+
+Sentence 82:
+Cholestrol LDL:79[mg/dl]
+    Triglicerydy:58[mg/dl]
+    
+
+
+Sentence 83:
+Stosunek cholesterolu HD:0.6
+Glukoza w surowicy: Glukoza w surowicy:68[mg/dl]
+
+
+
+Sentence 84:
+NT-proBNP surowica: NT-proBNP w surowicy:60[pg/ml]
+
+
+
+Sentence 85:
+------------------------------------------------
+
+
+
+Sentence 86:
+ICD10
+------------------------------------------------
+I34.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 87:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 88:
+89.501
+88.721
+89.502
+87.440
+88.761
+------------------------------------------------
+
+

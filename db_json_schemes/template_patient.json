@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "patient",
+  "type": "object",
+
+  "properties":
+  {
+    "patientIdentifier": { "type": "string" },
+    "dateAdded": { "type": "string", "format" : "date" },
+    "interviews": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/interview" }
+    },
+    "medicalData": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/medicalData" }
+    }
+  },
+
+  "required": ["patientIdentifier", "dateAdded", "interviews", "medicalData"],
+
+  "definitions":
+  {
+      "interview" : {
+        "type": "object",
+        "required": [
+          "date",
+          "text",
+          "text_id",
+          "interviewType"
+        ],
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "text": {
+            "type": "string"
+          },
+          "text_id": {
+            "type": "string"
+          },
+          "interviewType": {
+            "enum" : ["podmiotowy", "przedmiotowy"]
+          }
+        }
+    },
+
+    "medicalData": {
+        "type": "object",
+        "required": [
+          "date",
+          "identifier",
+          "type",
+          "value",
+          "unit",
+          "stringRepresentation"
+        ],
+        "properties": {
+          "date": {
+            "type": "string",
+            "format" : "date"
+          },
+          "identifier": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "stringRepresentation": {
+            "type": "string"
+          }
+        }
+    }
+  }
+}

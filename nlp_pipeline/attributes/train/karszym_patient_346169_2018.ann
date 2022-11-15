@@ -1,0 +1,112 @@
+T1	Treatment 345 372	dalsza opieka w poradni POZ
+T2	Treatment 379 433	okresowa kontrola w Poradni Kardiologicznej przy ICZMP
+T3	Treatment 440 475	kontrola okulistyczna i urologiczna
+T4	Investigation 482 521	codzienna kontrola ciśnienia tętniczego
+T5	Investigation 528 557	okresowa kontrola lipidogramu
+T6	Date 559 580	pierwsza za 6 tygodni
+T7	Investigation 583 610	oznaczeniem aminotransferaz
+R1	Dat Arg1:T6 Arg2:T5	
+R2	Dat Arg1:T6 Arg2:T7	
+T8	Behaviour 617 627	dieta DASH
+T9	Drug 672 677	Acard
+T10	Drug 709 715	Atoris
+T11	Drug_dose 678 701	75 mg 1 tabl. wieczorem
+T12	Drug_dose 716 739	20 mg 1 tabl. wieczorem
+R3	Drg Arg1:T9 Arg2:T11	
+R4	Drg Arg1:T10 Arg2:T12	
+T13	Condition 967 998	Napadowe migotanie przedsionków
+N1	Reference T13 ICD10:I48	Migotanie i trzepotanie przedsionków
+T14	Condition 1000 1020	Hipercholesterolemia
+N2	Reference T14 ICD10:E78.0	Czysta hipercholesterolemia
+T15	Condition 1022 1028	Jaskra
+N3	Reference T15 ICD10:H40.9	Jaskra, nieokreślona
+T16	Condition 1030 1047	Przerost prostaty
+N4	Reference T16 ICD10:N40	Rozrost gruczołu krokowego
+T17	Treatment 1057 1065	operacji
+N5	Reference T17 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T18	Condition 1066 1102	przepukliny pachwinowej lewostronnej
+A1	Status T18 Historical_Insignificant
+N6	Reference T18 ICD10:K40.9	Jednostronna lub nieokreślona przepuklina pachwinowa bez niedrożności lub zgorzeli
+A2	Status T17 Historical_Insignificant
+T19	Date 1104 1115	3 lata temu
+T20	Condition 1119 1132	prawostronnej
+N7	Reference T20 ICD10:K40.9	Jednostronna lub nieokreślona przepuklina pachwinowa bez niedrożności lub zgorzeli
+T21	Date 1134 1144	5 lat temu
+A3	Status T20 Historical_Insignificant
+R5	Dat Arg1:T19 Arg2:T17	
+R6	Dat Arg1:T19 Arg2:T18	
+R7	Dat Arg1:T21 Arg2:T20	
+R8	Dat Arg1:T21 Arg2:T17	
+T22	Behaviour 1284 1290	judoka
+T23	Symptom 1321 1350	kołatań serca (1x 3 miesiące)
+N8	Reference T23 ICD10:R00.2	Kołatanie serca
+T24	Investigation 1355 1358	ekg
+T25	Investigation_result 1374 1376	RS
+T26	Investigation 1380 1383	ekg
+T27	Date 1384 1399	przed tygodniem
+T28	Investigation_result 1400 1402	AF
+N9	Reference T28 ICD10:I48	Migotanie i trzepotanie przedsionków
+T29	Condition 1404 1424	samoistny powrót RS)
+R9	Dat Arg1:T27 Arg2:T26	
+R10	Inv Arg1:T24 Arg2:T25	
+R11	Inv Arg1:T26 Arg2:T28	
+T30	Date 1359 1373	przy przyjęciu
+R12	Dat Arg1:T30 Arg2:T24	
+T31	Symptom 1426 1441	Kołatania serca
+N10	Reference T31 ICD10:R00.2	Kołatanie serca
+T32	Date 1442 1450	od 2 lat
+T33	Symptom 1452 1471	najdłuższy napad 4h
+N11	Reference T33 ICD10:R00.2	Kołatanie serca
+T34	Symptom 1485 1519	towarzyszy bol w klatce piersiowej
+N12	Reference T34 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+R13	Dat Arg1:T32 Arg2:T31	
+R14	Dat Arg1:T32 Arg2:T33	
+R15	Dat Arg1:T32 Arg2:T34	
+T35	Condition 1543 1549	jaskra
+N13	Reference T35 ICD10:H40.9	Jaskra, nieokreślona
+T36	Condition 1551 1568	przerost prostaty
+N14	Reference T36 ICD10:N40	Rozrost gruczołu krokowego
+T37	Treatment 1570 1590	pod kontrolą urologa
+T38	Treatment 1619 1627	operacji
+A4	Status T38 Historical_Insignificant
+N15	Reference T38 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T39	Condition 1628 1664	przepukliny pachwinowej lewostronnej
+A5	Status T39 Historical_Insignificant
+N16	Reference T39 ICD10:K40.9	Jednostronna lub nieokreślona przepuklina pachwinowa bez niedrożności lub zgorzeli
+T40	Date 1665 1676	3 lata temu
+T41	Condition 1678 1691	prawostronnej
+A6	Status T41 Historical_Insignificant
+N17	Reference T41 ICD10:K40.9	Jednostronna lub nieokreślona przepuklina pachwinowa bez niedrożności lub zgorzeli
+T42	Date 1692 1702	5 lat temu
+R16	Dat Arg1:T40 Arg2:T39	
+R17	Dat Arg1:T40 Arg2:T38	
+R18	Dat Arg1:T42 Arg2:T41	
+R19	Dat Arg1:T42 Arg2:T38	
+T43	Date 1729 1735	38 lat
+T44	Condition 1736 1748	zgon sercowy
+A7	Status T44 Family
+N18	Reference T44 ICD10:I46.1	Nagły zgon sercowy, tak opisany
+R20	Dat Arg1:T43 Arg2:T44	
+T45	Condition 1750 1757	Alergie
+N19	Reference T45 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T46	Negation 1759 1765	neguje
+T47	Behaviour 1767 1777	Nikotynizm
+N20	Reference T47 ICD10:Z72.0	Używanie tytoniu
+T48	Negation 1779 1785	neguje
+T49	Behaviour 1788 1809	Alkohol: okazjonalnie
+A8	Status T49 Historical_Insignificant
+N21	Reference T49 ICD10:Z72.1	Używanie alkoholu
+T50	Behaviour 1811 1828	Uzależnienie inne
+T51	Negation 1830 1836	neguje
+T52	Behaviour 1854 1865	trener judo
+R21	Neg Arg1:T46 Arg2:T45	
+R22	Neg Arg1:T48 Arg2:T47	
+R23	Neg Arg1:T51 Arg2:T50	
+T53	Drug 1867 1871	Leki
+T54	Negation 1873 1880	żadnych
+R24	Neg Arg1:T54 Arg2:T53	
+T55	Investigation 1909 1919	echo serca
+T56	Investigation 1921 1924	TET
+T57	Investigation 1926 1930	ABPM
+T58	Investigation 1932 1942	Holter ekg
+T59	Investigation 1944 1962	rtg kl. piersiowej

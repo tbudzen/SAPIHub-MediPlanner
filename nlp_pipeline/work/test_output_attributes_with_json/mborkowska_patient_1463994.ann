@@ -1,0 +1,58 @@
+T1	Investigation 1447 1457	echo serca
+T2	Investigation 1459 1462	TET
+T3	Investigation 1464 1468	ABPM
+T4	Investigation 1470 1476	Holter
+T5	Investigation 1478 1496	RTG kl. piersiowej
+T6	Drug 1389 1400	Betaloc ZOK
+T7	Drug_dose 1401 1419	25 mg 1 tabl. rano
+T8	Negation 1336 1346	nie podaje
+T9	Condition 1325 1334	Uczulenia
+T10	Behaviour 1300 1324	Inne używki:okazjonalnie
+T11	Negation 1289 1299	nie podaje
+T12	Negation 1261 1271	nie podaje
+T13	Behaviour 1272 1287	Palenie tytoniu
+T14	Condition 1244 1259	Wywiad rodzinny
+T15	Condition 1216 1219	WZW
+troby
+T16	Condition 1221 1230	borelioza
+T17	Negation 1233 1243	nie podaje
+T18	Negation 1178 1188	nie podaje
+T19	Treatment 1159 1176	Przebyte operacje
+T20	Condition 1095 1120	częstoskurcze nadkomorowe
+T21	Drug 1129 1140	Betaloc ZOK
+T22	Drug_dose 1141 1146	25 mg
+T23	Date 1147 1158	od ok.5 lat
+T24	Behaviour 458 497	Dieta lekkostrawna, niskocholesterolowa
+T25	Investigation 518 552	kontrola ciśnienia tętniczego krwi
+T26	Drug 574 585	Betaloc ZOK
+T27	Drug_dose 586 606	25 mg 1x1 tabl. rano
+T28	Symptom 1042 1066	napadowych kołatań serca
+T29	Date 1067 1079	od kilku lat
+T30	Condition 833 857	Częstoskurcz nadkomorowy
+T31	Investigation 431 441	Holter-EKG
+T32	Date 442 453	co pół roku
+N1	Reference T9 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N2	Reference T10 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+N3	Reference T13 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N4	Reference T15 ICD10:B19	NieokreÅlone wirusowe zapalenie wÄtroby
+N5	Reference T16 ICD10:A69.2	Choroba z Lyme
+N6	Reference T19 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N7	Reference T30 ICD10:I47.1	CzÄstoskurcz nadkomorowy
+R1	Dat Arg1:T32 Arg2:T24
+R2	Dat Arg1:T32 Arg2:T31
+R21	Neg Arg1:T11 Arg2:T10
+R22	Neg Arg1:T11 Arg2:T13
+R29	Neg Arg1:T12 Arg2:T14
+R3	Dat Arg1:T29 Arg2:T28
+R34	Neg Arg1:T12 Arg2:T13
+R4	Neg Arg1:T8 Arg2:T9
+R41	Neg Arg1:T17 Arg2:T14
+R43	Neg Arg1:T17 Arg2:T16
+R59	Neg Arg1:T18 Arg2:T19
+R64	Drg Arg1:T6 Arg2:T7
+R67	Drg Arg1:T21 Arg2:T22
+R72	Dat Arg1:T23 Arg2:T20
+R75	Dat Arg1:T23 Arg2:T19
+R77	Dat Arg1:T23 Arg2:T21
+A1	Status T20 Historical_Insignificant
+A2	Status T21 Historical_Insignificant

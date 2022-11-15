@@ -1,0 +1,115 @@
+T1	Treatment 339 395	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T2	Behaviour 398 438	Dieta lekkostrawna , niskocholesterolowa
+T3	Investigation 442 525	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T4	Investigation 528 576	Systematyczna kontrola ciśnienia tętniczego krwi
+T5	Drug 630 643	Glucophage XR
+T6	Drug_dose 644 670	1000 mg 1 tabl.  wieczorem
+T7	Drug 675 683	Trajenta
+T8	Drug_dose 684 701	5 mg 1 tabl. rano
+T9	Drug 706 718	Atorvasterol
+T10	Drug_dose 719 740	20 mg 1x dz wieczorem
+T11	Drug 862 875	Glucophage XR
+T12	Drug 878 886	Trajenta
+T13	Condition 1114 1147	Nadciśnienie tętnicze zredukowane
+N1	Reference T13 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T14	Condition 1149 1169	Hipercholesterolemia
+N2	Reference T14 ICD10:E78.0	Czysta hipercholesterolemia
+T15	Condition 1171 1199	Nadkomorowe zaburzania rytmu
+N3	Reference T15 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T16	Condition 1202 1223	pobudzenia pojedyncze
+N4	Reference T16 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T17	Condition 1225 1230	salwy
+N5	Reference T17 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T18	Condition 1233 1249	Cukrzyca typu 2.
+N6	Reference T18 ICD10:E11	Cukrzyca insulinoniezależna
+T19	Investigation 1424 1427	TEE
+T21	Condition 1442 1462	kardiologicznego tła
+N7	Reference T21 ICD10:I99	Inne i nieokreślone zaburzenia układu krążenia
+T22	Date 1489 1501	w marcu 2018
+T23	Symptom 1502 1547	krótkotrwała utrata świadomości - max. 30 min
+T24	Negation 1549 1552	bez
+T25	Symptom 1553 1579	pełnej utraty przytomności
+R1	Neg Arg1:T24 Arg2:T25	
+T26	Date 1621 1647	bezpośrednio po incydencie
+T27	Negation 1648 1651	bez
+T28	Investigation 1594 1603	badaniach
+T29	Investigation_result 1652 1668	nieprawidłowości
+R2	Neg Arg1:T27 Arg2:T29	
+R3	Inv Arg1:T28 Arg2:T29	
+R4	Dat Arg1:T26 Arg2:T28	
+R5	Drg Arg1:T5 Arg2:T6	
+R6	Drg Arg1:T7 Arg2:T8	
+R7	Drg Arg1:T9 Arg2:T10	
+R8	Dat Arg1:T22 Arg2:T23	
+A1	Source T21 Declared
+T20	Investigation 1711 1714	TTE
+T30	Investigation_result 1715 1751	wiotka przegroda międzyprzedsionkowa
+N8	Reference T30 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T31	Negation 1753 1756	bez
+T32	Investigation_result 1757 1766	przecieku
+T33	Investigation_result 1777 1794	wyniki prawidłowe
+T34	Investigation 1796 1799	MRI
+T35	Investigation_result 1802 1836	zminay naczyniopochodne przewlekłe
+T36	Investigation 1848 1856	CT głowy
+T37	Investigation 1858 1868	Holter EKG
+T38	Investigation 1870 1874	ABPM
+T39	Investigation 1876 1909	USG Dopplerowskie tt. dogłowowych
+N10	Reference T35 ICD10:R90	Nieprawidłowe wyniki badań obrazowych ośrodkowego systemu nerwowego
+R9	Inv Arg1:T20 Arg2:T30	
+T40	Investigation 1684 1699	szczegółowa dgn
+R10	Neg Arg1:T31 Arg2:T32	
+R11	Inv Arg1:T20 Arg2:T32	
+R12	Inv Arg1:T34 Arg2:T35	
+R13	Inv Arg1:T36 Arg2:T33	
+R14	Inv Arg1:T37 Arg2:T33	
+R15	Inv Arg1:T38 Arg2:T33	
+R16	Inv Arg1:T39 Arg2:T33	
+N9	Reference T32 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T41	Condition 1463 1487	zaburzeń neurologicznych
+N11	Reference T41 ICD10:G99.8*	Inne określone zaburzenia układu nerwowego, występujące w przebiegu chorób sklasyfikowanych gdzie indziej
+A2	Source T41 Declared
+T42	Condition 1939 1946	DM t. 2
+N12	Reference T42 ICD10:E11	Cukrzyca insulinoniezależna
+T43	Date 1949 1958	od 10 lat
+T44	Condition 1960 1968	HA I st.
+N13	Reference T44 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T45	Negation 1969 1972	nie
+T46	Treatment 1972 1979	leczone
+R17	Neg Arg1:T45 Arg2:T46	
+T47	Date 1981 1999	przed 2 tygodniami
+T48	Symptom 2000 2028	silny bol nadbrzusza prawego
+N14	Reference T48 ICD10:R10.1	Ból zlokalizowany w nadbrzuszu
+R18	Dat Arg1:T47 Arg2:T48	
+R19	Dat Arg1:T43 Arg2:T42	
+T49	Treatment 2039 2100	operacje: więzadlo krzyżowe przednie stawu kolanowego prawego
+A3	Status T49 Historical_Insignificant
+N15	Reference T49 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T50	Condition 2102 2117	Wywiad rodzinny
+A4	Status T50 Family
+T51	Negation 2119 2132	bez znaczenia
+T52	Condition 2134 2141	Alergie
+N16	Reference T52 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T53	Negation 2143 2149	neguje
+T54	Behaviour 2151 2161	Nikotynizm
+N17	Reference T54 ICD10:Z72.0	Używanie tytoniu
+T55	Negation 2163 2169	neguje
+T56	Behaviour 2172 2193	Alkohol: okazjonalnie
+A5	Status T56 Historical_Insignificant
+N18	Reference T56 ICD10:Z72.1	Używanie alkoholu
+T57	Behaviour 2195 2212	Uzależnienie inne
+N19	Reference T57 ICD10:Z72	Problemy związane ze stylem życia
+T58	Negation 2214 2220	neguje
+T59	Behaviour 2238 2245	lekarka
+T60	Drug 2257 2270	Glucophage XR
+T61	Drug_dose 2271 2297	1000 mg 1 tabl.  wieczorem
+T62	Drug 2302 2310	Trajenta
+T63	Drug_dose 2311 2328	5 mg 1 tabl. rano
+T64	Investigation 2358 2368	echo serca
+T65	Investigation 2370 2373	TET
+T66	Investigation 2375 2393	USG jamy brzusznej
+R20	Drg Arg1:T60 Arg2:T61	
+R21	Drg Arg1:T62 Arg2:T63	
+R22	Neg Arg1:T58 Arg2:T57	
+R23	Neg Arg1:T55 Arg2:T54	
+R24	Neg Arg1:T53 Arg2:T52	
+R25	Neg Arg1:T51 Arg2:T50	

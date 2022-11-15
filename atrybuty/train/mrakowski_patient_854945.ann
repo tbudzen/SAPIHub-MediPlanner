@@ -1,0 +1,86 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 358 390	okresowa kontrola kardiologiczna
+T3	Investigation 487 509	angioCT tt. wieńcowych
+T4	Investigation 510 553	okresowa kontrola lipidogramu, elektrolitów
+T5	Investigation 554 593	regularna kontrola ciśnienia tętniczego
+T6	Behaviour 594 619	dieta ubogocholesterolowa
+T7	Treatment 620 652	systematyczne przyjmowanie leków
+T8	Drug 654 665	Betaloc ZOK
+T9	Drug_dose 666 684	25 mg 1 tabl. rano
+R1	Drg Arg1:T8 Arg2:T9	
+T10	Drug 685 696	Trittico CR
+T11	Drug_dose 697 718	150 mg 1/3 tabl. rano
+R2	Drg Arg1:T10 Arg2:T11	
+T12	Drug 719 728	Armolipid
+T13	Drug_dose 729 744	1 tabl. 1 x dz.
+R3	Drg Arg1:T12 Arg2:T13	
+T14	Condition 962 981	Łagodne nadkomorowe
+T15	Condition 1017 1039	Wole guzowate tarczycy
+N2	Reference T15 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T16	Condition 1041 1062	Zaburzenia depresyjne
+N3	Reference T16 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T17	Symptom 1076 1089	Zawroty głowy
+N4	Reference T17 ICD10:R42	Zawroty głowy i odurzenie
+T18	Treatment 1111 1134	operacji kolana prawego
+A1	Status T18 Historical_Insignificant
+T19	Date 1136 1141	2013r
+R4	Dat Arg1:T19 Arg2:T18	
+T20	Symptom 1317 1330	kołatań serca
+N5	Reference T20 ICD10:R00.2	Kołatanie serca
+T21	Investigation_result 1332 1345	HR do 170/min
+N6	Reference T21 ICD10:R00.0	Tachykardia, nieokreślona
+T22	Symptom 1349 1375	wahań ciśnienia tętniczego
+N7	Reference T22 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T23	Date 1400 1412	od wielu lat
+R5	Dat Arg1:T23 Arg2:T20	
+R6	Dat Arg1:T23 Arg2:T21	
+R7	Dat Arg1:T23 Arg2:T22	
+T24	Condition 1435 1450	zab. depresyjne
+N8	Reference T24 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T25	Symptom 1452 1465	zawroty głowy
+N9	Reference T25 ICD10:R42	Zawroty głowy i odurzenie
+T26	Condition 1467 1498	nieprawidłowa glikemia na czczo
+N10	Reference T26 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T27	Treatment 1501 1518	Przebyte operacje
+T28	Treatment 1528 1551	operacji kolana prawego
+A2	Status T28 Historical_Insignificant
+T29	Date 1553 1558	2013r
+R8	Dat Arg1:T29 Arg2:T28	
+T30	Condition 1587 1590	WZW
+N11	Reference T30 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T31	Condition 1592 1601	borelioza
+N12	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Negation 1604 1614	nie podaje
+R9	Neg Arg1:T32 Arg2:T31	
+R10	Neg Arg1:T32 Arg2:T30	
+T33	Condition 1615 1630	Wywiad rodzinny
+A3	Status T33 Family
+T34	Negation 1632 1642	nieistotny
+R11	Neg Arg1:T34 Arg2:T33	
+T35	Behaviour 1643 1658	Palenie tytoniu
+T36	Negation 1660 1670	nie podaje
+R12	Neg Arg1:T36 Arg2:T35	
+T37	Behaviour 1671 1682	Inne używki
+T38	Negation 1684 1694	nie podaje
+R13	Neg Arg1:T38 Arg2:T37	
+T39	Condition 1695 1704	Uczulenia
+T40	Negation 1706 1716	nie podaje
+R14	Neg Arg1:T40 Arg2:T39	
+T41	Behaviour 1735 1753	pracownik umysłowy
+T42	Drug 1787 1792	Nedal
+T43	Drug_dose 1793 1812	5 mg 1/2 tabl. rano
+R15	Drg Arg1:T42 Arg2:T43	
+T44	Drug 1813 1824	Trittico CR
+T45	Drug_dose 1825 1846	150 mg 1/3 tabl. rano
+R16	Drg Arg1:T44 Arg2:T45	
+T46	Investigation 1874 1884	echo serca
+T47	Investigation 1886 1889	TET
+T48	Investigation 1891 1895	ABPM
+T49	Investigation 1897 1903	Holter
+T50	Investigation 1905 1923	RTG kl. piersiowej
+N1	Reference T14 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T51	Condition 984 1015	komorowe zaburzenia rytmu serca
+N14	Reference T51 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+N15	Reference T39 ICD10:T78.4	Alergia, nieokreślona
+N13	Reference T35 ICD10:Z72.0	Używanie tytoniu
+N16	Reference T37 ICD10:Z72	Problemy związane ze stylem życia

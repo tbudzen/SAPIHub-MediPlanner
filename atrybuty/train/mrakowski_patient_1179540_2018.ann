@@ -1,0 +1,47 @@
+T1	Treatment 460 498	Wizyta w Poradni Kardiologicznej ICZMP
+T2	Date 499 512	za ok. 5 m-cy
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Treatment 570 647	Opieka wielospecjalistyczna (neurologiczna, laryngologiczna, rehabilitacyjna)
+T4	Behaviour 689 724	Dostosowanie wysiłków do wydolności
+T5	Treatment 729 782	Systematyczne profilaktyczne kontrole stomatologiczne
+T6	Condition 1034 1082	Wrodzona wada serca pod postacią Zespołu Fallota
+N1	Reference T6 ICD10:Q21.3	Tetralogia Fallota
+T7	Treatment 1099 1128	baloplastyce zastawki płucnej
+T8	Date 1130 1141	26.07.2012r
+R2	Dat Arg1:T8 Arg2:T7	
+T9	Treatment 1153 1173	pełnej korekcji wady
+T10	Date 1176 1187	04.06.2013r
+R3	Dat Arg1:T10 Arg2:T9	
+T11	Condition 1193 1230	Umiarkowane zwężenie zastawki płucnej
+T12	Investigation_result 1232 1245	PG max 54mmHg
+N2	Reference T11 ICD10:I37.0	Zwężenie zastawki pnia płucnego
+T13	Condition 1251 1282	Przepuklina sznura pępowinowego
+N3	Reference T13 ICD10:Q79.2	Przepuklina pępowinowa
+T14	Treatment 1292 1313	leczeniu zachowawczym
+T15	Condition 1327 1362	niewydolności krążeniowo-oddechowej
+N4	Reference T15 ICD10:R09.2	Zatrzymanie oddechu
+T16	Treatment 1370 1383	tracheostomia
+T17	Date 1385 1397	2012r.-2014r
+R4	Dat Arg1:T17 Arg2:T16	
+T18	Condition 1404 1438	Opóźnienie rozwoju psychoruchowego
+N5	Reference T18 ICD10:R62.0	Opóźnienie etapów rozwoju fizjologicznego
+T19	Condition 1443 1472	Niedobór masy ciała i wzrostu
+N6	Reference T19 ICD10:R62.8	
+T20	Condition 1489 1498	uczulenia
+A1	Source T20 Declared
+N7	Reference T20 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T21	Drug 1502 1508	Klacid
+A2	Source T21 Declared
+R5	Alg Arg1:T20 Arg2:T21	
+T22	Condition 1676 1687	z . Fallota
+N8	Reference T22 ICD10:Q21.3	Tetralogia Fallota
+T23	Treatment 1693 1731	zabiegach korekcyjnych  z wielowadziem
+T24	Condition 1737 1747	omfalocele
+N9	Reference T24 ICD10:Q79.2	Przepuklina pępowinowa
+T25	Investigation 1764 1781	badan kontrolnych
+T26	Drug 343 348	leków
+T27	Negation 339 342	Bez
+R6	Neg Arg1:T27 Arg2:T26	
+T28	Drug 1783 1797	leków na stałe
+T29	Negation 1798 1811	nie otrzymuje
+R7	Neg Arg1:T29 Arg2:T28	

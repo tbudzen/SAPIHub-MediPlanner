@@ -1,0 +1,131 @@
+T1	Drug 340 355	Lipanthyl Supra
+T2	Drug 357 366	Torvacard
+T3	Treatment 477 499	kontrola u lekarza POZ
+T4	Treatment 502 563	kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych
+T5	Investigation 606 631	angioCT tętnic wieńcowych
+T6	Behaviour 635 660	dieta niskocholesterolowa
+T7	Investigation 694 709	kontrola jonogr
+T8	Condition 927 971	Łagodna niedomykalność zastawki trójdzielnej
+N1	Reference T8 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T9	Condition 973 994	Nadciśnienie tętnicze
+N2	Reference T9 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T10	Treatment 1004 1037	operacyjnym usunięciu nerki lewej
+N3	Reference T10 ICD10:Z90.5	Nabyty brak nerki
+T11	Condition 1047 1051	guza
+N4	Reference T11 ICD10:D41.0	Nerka
+T12	Condition 1053 1090	Dyslipidemia w trakcie farmakoterapii
+N5	Reference T12 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T13	Symptom 1092 1116	Bóle w klatce piersiowej
+N6	Reference T13 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T14	Symptom 1118 1159	Podwyższone wartości ciśnienia tętniczego
+T15	Symptom 1331 1397	nieco podwyższonych wartości ciśnienia tętniczego (do 150/110mmHg)
+T16	Symptom 1399 1427	obniżonej tolerancji wysiłku
+T17	Date 1433 1446	w przeszłości
+T18	Symptom 1459 1499	okresowo kłujący ból w klatce piersiowej
+N7	Reference T18 ICD10:R07.3	Inne bóle w klatce piersiowej
+R1	Dat Arg1:T17 Arg2:T18	
+T19	Symptom 1607 1644	okresowo nadmierne pocenie się w nocy
+N8	Reference T19 ICD10:R61.9	Nadmierne pocenie, nieokreślone
+T20	Negation 1646 1652	Neguje
+T21	Symptom 1653 1665	zasłabnięcia
+T22	Symptom 1667 1675	omdlenia
+N9	Reference T22 ICD10:R55	Omdlenie i zapaść
+T23	Symptom 1677 1690	zawroty głowy
+N10	Reference T23 ICD10:R42	Zawroty głowy i odurzenie
+T24	Symptom 1692 1702	krwawienia
+T25	Symptom 1704 1717	czarne stolce
+N11	Reference T25 ICD10:K92.1	Stolce smołowate
+T26	Symptom 1719 1735	brunatne wymioty
+N12	Reference T26 ICD10:K92.0	Wymioty krwawe
+T27	Condition 1737 1753	chorobę wrzodową
+N13	Reference T27 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T28	Symptom 1755 1769	duszność nocną
+N14	Reference T28 ICD10:R06.0	Duszność
+T29	Symptom 1771 1786	obrzęki podudzi
+N15	Reference T29 ICD10:R60.0	Obrzęk zlokalizowany
+R2	Neg Arg1:T20 Arg2:T21	
+R3	Neg Arg1:T20 Arg2:T22	
+R4	Neg Arg1:T20 Arg2:T23	
+R5	Neg Arg1:T20 Arg2:T24	
+R6	Neg Arg1:T20 Arg2:T25	
+R7	Neg Arg1:T20 Arg2:T26	
+R8	Neg Arg1:T20 Arg2:T27	
+R9	Neg Arg1:T20 Arg2:T28	
+R10	Neg Arg1:T20 Arg2:T29	
+T30	Symptom 1788 1807	Innych dolegliwości
+T31	Negation 1808 1819	nie zgłasza
+R11	Neg Arg1:T31 Arg2:T30	
+T32	Condition 1834 1892	Hipertriglicerydemia/dyslipidemia w trakcie farmakoterapii
+N16	Reference T32 ICD10:E78.1	Czysta hiperglicerydemia
+T33	Date 1926 1942	przed włączeniem
+T34	Investigation_result 1913 1925	triglicerydy
+T35	Investigation_result 1948 1959	powyżej 300
+R12	Dat Arg1:T33 Arg2:T34	
+R13	Dat Arg1:T33 Arg2:T35	
+T36	Treatment 1989 2022	operacyjnym usunięciu nerki lewej
+N17	Reference T36 ICD10:Z90.5	Nabyty brak nerki
+T37	Condition 2032 2036	guza
+N18	Reference T37 ICD10:D41.0	Nerka
+T38	Treatment 2038 2106	Leczenie przewlekłe: onkologiczne, okresowo kontrola dermatologiczna
+T39	Condition 2118 2134	liczne pieprzyki
+N19	Reference T39 ICD10:D22.9	Znamiona melanocytowe, umiejscowienie nieokreślone
+T40	Condition 2162 2165	WZW
+N20	Reference T40 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T41	Condition 2174 2183	borelioza
+N21	Reference T41 ICD10:A69.2	
+T42	Condition 2191 2199	grużlica
+N22	Reference T42 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T43	Condition 2207 2211	odra
+N23	Reference T43 ICD10:B05	Odra
+T44	Negation 2214 2215	-
+T45	Negation 2166 2171	( - )
+T46	Negation 2184 2189	( - )
+T47	Negation 2200 2205	( - )
+R14	Neg Arg1:T45 Arg2:T40	
+R15	Neg Arg1:T46 Arg2:T41	
+R16	Neg Arg1:T47 Arg2:T42	
+R17	Neg Arg1:T44 Arg2:T43	
+T48	Condition 2279 2293	nowotwór płuca
+A1	Status T48 Family
+N24	Reference T48 ICD10:D38.1	Tchawica, oskrzele i płuco
+T49	Date 2270 2276	47 lat
+R18	Dat Arg1:T49 Arg2:T48	
+T50	Condition 2310 2321	rak wątroby
+N25	Reference T50 ICD10:C22.9	Wątroba, umiejscowienie nieokreślone
+A2	Status T50 Family
+T51	Condition 2344 2362	rak jelita grubego
+N26	Reference T51 ICD10:C18	Nowotwór złośliwy jelita grubego
+A3	Status T51 Family
+T52	Behaviour 2365 2380	Palenie tytoniu
+N27	Reference T52 ICD10:Z72.0	Używanie tytoniu
+T53	Date 2382 2391	aktualnie
+T54	Negation 2392 2398	neguje
+T55	Date 2401 2414	w przeszłości
+T56	Behaviour 2415 2424	popalanie
+N28	Reference T56 ICD10:Z72.0	Używanie tytoniu
+T57	Date 2425 2442	w wieku 20-22 lat
+R19	Dat Arg1:T53 Arg2:T52	
+R20	Neg Arg1:T54 Arg2:T52	
+R21	Dat Arg1:T55 Arg2:T56	
+R22	Dat Arg1:T57 Arg2:T56	
+T58	Behaviour 2444 2477	Inne używki: alkohol okazjonalnie
+A4	Status T58 Historical_Insignificant
+N29	Reference T58 ICD10:Z72.1	Używanie alkoholu
+T59	Condition 2479 2488	Uczulenia
+N30	Reference T59 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T60	Negation 2490 2496	neguje
+R23	Neg Arg1:T60 Arg2:T59	
+T61	Behaviour 2514 2540	warunki mieszkaniowe dobre
+T62	Behaviour 2542 2556	mieszka z żoną
+T63	Behaviour 2565 2573	elektryk
+T64	Drug 2581 2596	Lipanthyl Supra
+T65	Drug_dose 2597 2628	160 1 tabl. co drugi dzień rano
+T66	Drug 2630 2639	Torvacard
+T67	Drug_dose 2640 2681	10mg 1 tabletka wieczorem co drugi dzień.
+T68	Investigation 2696 2699	TTE
+T69	Investigation 2701 2704	TET
+T70	Investigation 2706 2710	ABPM
+T71	Investigation 2712 2722	Holter EKG
+R24	Drg Arg1:T64 Arg2:T65	
+R25	Drg Arg1:T66 Arg2:T67	
+T72	Investigation 662 691	okresowa kontrola lipidogramu

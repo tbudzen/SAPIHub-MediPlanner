@@ -1,0 +1,91 @@
+T1	Treatment 345 372	dalsza opieka w poradni POZ
+T2	Treatment 379 445	okresowa kontrola kardiologiczna, endokrynologiczna, neurologiczna
+T3	Investigation 452 481	okresowa kontrola lipidogramu
+T4	Date 483 493	raz w roku
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Behaviour 501 537	dieta zbliżona do śródziemnomorskiej
+T6	Behaviour 544 563	redukcja masy ciała
+T7	Behaviour 571 616	stały, umiarkowany, aerobowy wysiłek fizyczny
+T8	Treatment 623 651	regularne przyjmowanie leków
+T9	Drug 660 672	Euthyrox N50
+T10	Drug_dose 675 724	dawkowanie wg dotychczasowych zaleceń specjalisty
+R2	Drg Arg1:T9 Arg2:T10	
+T11	Condition 942 1003	Wada serca pod postacią łagodnej niedomykalności trójdzielnej
+N1	Reference T11 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T12	Condition 1005 1029	Otyłość I stopnia wg WHO
+N2	Reference T12 ICD10:E66.9	Otyłość, nieokreślona
+T13	Symptom 1031 1055	Bóle w klatce piersiowej
+N3	Reference T13 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T14	Condition 1057 1106	Zmiany zwyrodnieniowe odcinka szyjnego kręgosłupa
+N4	Reference T14 ICD10:M47	
+T15	Condition 1108 1130	Niedoczynność tarczycy
+N5	Reference T15 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T16	Treatment 1131 1165	w trakcie leczenia substytucyjnego
+T17	Condition 1166 1185	w stadium eutyreozy
+T18	Treatment 1187 1231	Przebyta artroskopia stawu kolanowego lewego
+A1	Status T18 Historical_Insignificant
+T19	Date 1233 1237	2010
+R3	Dat Arg1:T19 Arg2:T18	
+T20	Treatment 1248 1256	usunięty
+A2	Status T20 Historical_Insignificant
+T21	Condition 1257 1284	ganglionu nadgarstka lewego
+A3	Status T21 Historical_Insignificant
+N6	Reference T21 ICD10:M67.4	Ganglion
+T22	Date 1286 1290	2011
+R4	Dat Arg1:T22 Arg2:T21	
+R5	Dat Arg1:T22 Arg2:T20	
+T23	Symptom 1468 1536	dolegliwości bólowych w kl piersiowej o typie kłucia w kl piersiowej
+N7	Reference T23 ICD10:R07.2	Ból w okolicy przedsercowej
+T24	Condition 1553 1575	niedoczynność tarczycy
+N8	Reference T24 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T25	Symptom 1577 1587	bóle głowy
+N9	Reference T25 ICD10:R51	Ból głowy
+T26	Date 1588 1602	raz w miesiącu
+R6	Dat Arg1:T26 Arg2:T25	
+T27	Condition 1604 1643	przepukliny odcinka szyjnego kręgosłupa
+N10	Reference T27 ICD10:M99.5	Zwężenie kanału kręgowego przez przepuklinę krążka międzykręgowego
+T28	Treatment 1645 1653	Operacje
+T29	Treatment 1655 1689	atroskopia stawu kolanowego lewego
+A4	Status T29 Historical_Insignificant
+T30	Date 1691 1695	2010
+R7	Dat Arg1:T30 Arg2:T29	
+T31	Treatment 1706 1714	usunięty
+A5	Status T31 Historical_Insignificant
+T32	Condition 1715 1739	ganglon nadgarska lewego
+N11	Reference T32 ICD10:M67.4	Ganglion
+A6	Status T32 Historical_Insignificant
+T33	Date 1741 1745	2011
+R8	Dat Arg1:T33 Arg2:T32	
+R9	Dat Arg1:T33 Arg2:T31	
+T34	Behaviour 1747 1757	Nikotynizm
+T35	Negation 1759 1765	neguje
+R10	Neg Arg1:T35 Arg2:T34	
+T36	Behaviour 1770 1791	Alkohol: okazjonalnie
+N13	Reference T36 ICD10:Z72.1	Używanie alkoholu
+T37	Negation 1800 1806	neguje
+T38	Condition 1808 1825	uczulenia na leki
+T39	Symptom 1827 1860	krwawienia z przewodu pokarmowego
+N15	Reference T39 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T40	Symptom 1862 1881	utraty przytomności
+N16	Reference T40 ICD10:R55	Omdlenie i zapaść
+R11	Neg Arg1:T37 Arg2:T38	
+R12	Neg Arg1:T37 Arg2:T39	
+R13	Neg Arg1:T37 Arg2:T40	
+T41	Condition 1883 1898	Wywiad rodzinny
+A7	Status T41 Family
+T42	Condition 1908 1910	HA
+A8	Status T42 Family
+N17	Reference T42 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T43	Condition 1913 1921	cukrzyca
+A9	Status T43 Family
+N18	Reference T43 ICD10:E14	Cukrzyca nieokreślona
+T44	Drug 1948 1956	euthyrox
+T45	Drug_dose 1957 1962	50/75
+R14	Drg Arg1:T44 Arg2:T45	
+T46	Investigation 1974 1984	ECHO serca
+T47	Investigation 1986 1996	Holter EKG
+T48	Investigation 1998 2007	Holter RR
+T49	Investigation 2009 2011	PW
+N12	Reference T34 ICD10:Z72.0	Używanie tytoniu
+N14	Reference T38 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+A10	Status T36 Historical_Insignificant

@@ -1,0 +1,94 @@
+T1	Condition 448 470	Zaburzenia rytmu serca
+N1	Reference T1 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T2	Symptom 472 480	Omdlenia
+N2	Reference T2 ICD10:R55	Omdlenie i zapaść
+T3	Symptom 810 841	zmniejszenia tolerancji wysiłku
+N3	Reference T3 ICD10:R53	Złe samopoczucie i zmęczenie
+T4	Symptom 843 916	męczenie podczas przebiegnięcia krótkiego dystansu, wejścia na 2-3 piętro
+N4	Reference T4 ICD10:R53	Złe samopoczucie i zmęczenie
+T5	Date 918 928	od ok roku
+T6	Symptom 930 940	zasłabnięć
+T7	Symptom 943 961	utrat przytomności
+N5	Reference T7 ICD10:R55	Omdlenie i zapaść
+T8	Symptom 963 986	uczucia kołatania serca
+N6	Reference T8 ICD10:R00.2	Kołatanie serca
+R1	Dat Arg1:T5 Arg2:T4	
+R2	Dat Arg1:T5 Arg2:T3	
+T9	Symptom 1012 1041	uczucie szybkiego bicia serca
+N7	Reference T9 ICD10:R00.2	Kołatanie serca
+T10	Symptom 1043 1060	ogólne osłabienie
+T11	Symptom 1062 1082	mroczki przed oczami
+N8	Reference T11 ICD10:H53.9	Zaburzenia widzenia, nieokreślone
+T12	Negation 1084 1087	Bez
+T13	Symptom 1088 1104	objawów padaczki
+N9	Reference T13 ICD10:G40.9	Padaczka, nieokreślona
+T14	Negation 1106 1109	bez
+T15	Symptom 1110 1117	drgawek
+N10	Reference T15 ICD10:R56.8	Inne i nieokreślone drgawki
+T16	Negation 1119 1122	bez
+T17	Symptom 1123 1146	zwiewnego oddania moczu
+N11	Reference T17 ICD10:R32	Nietrzymanie moczu, nieokreślone
+R3	Neg Arg1:T16 Arg2:T17	
+R4	Neg Arg1:T14 Arg2:T15	
+R5	Neg Arg1:T12 Arg2:T13	
+T18	Condition 1162 1183	nadciśnienie tętnicze
+N12	Reference T18 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T19	Drug 1217 1226	nebiletem
+T20	Drug_dose 1227 1230	5mg
+R6	Drg Arg1:T19 Arg2:T20	
+T21	Negation 1239 1248	odstawiła
+R7	Neg Arg1:T21 Arg2:T19	
+T22	Investigation 1299 1344	systematycznego pomiarów ciśnienia tętniczego
+T23	Negation 1294 1298	Brak
+R8	Neg Arg1:T23 Arg2:T22	
+T24	Investigation_result 1371 1387	RR ok 130/80mmHg
+N13	Reference T24 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T25	Treatment 1408 1421	appendectomii
+A1	Status T25 Historical_Insignificant
+T26	Date 1422 1430	rok temu
+R9	Dat Arg1:T26 Arg2:T25	
+T27	Treatment 1440 1474	operacji stawu kolanowego prawegow
+A2	Status T27 Historical_Insignificant
+T28	Date 1475 1480	16 rż
+R10	Dat Arg1:T28 Arg2:T27	
+T29	Behaviour 1482 1492	Nikotynizm
+T30	Behaviour 1500 1507	Alkohol
+N15	Reference T30 ICD10:Z72.1	Używanie alkoholu
+T31	Negation 1497 1498	-
+T32	Negation 1508 1509	-
+R11	Neg Arg1:T32 Arg2:T30	
+R12	Neg Arg1:T31 Arg2:T29	
+T33	Negation 1518 1524	neguje
+T34	Condition 1526 1543	uczulenia na leki
+T35	Symptom 1545 1578	krwawienia z przewodu pokarmowego
+N16	Reference T35 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R13	Neg Arg1:T33 Arg2:T34	
+R14	Neg Arg1:T33 Arg2:T35	
+T37	Condition 1602 1625	zmarł w wieku 46 na OZW
+A3	Status T37 Family
+N17	Reference T37 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T38	Condition 1634 1636	HA
+A4	Status T38 Family
+N18	Reference T38 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T39	Investigation 1696 1706	ECHO serca
+T40	Investigation 1708 1718	Holter EKG
+T41	Investigation 1720 1729	Holter RR
+T42	Investigation 1731 1733	PW
+T43	Treatment 1390 1398	Operacje
+T44	Condition 1580 1595	Wywiad rodzinny
+A5	Status T44 Family
+T36	Treatment 1184 1210	leczone przez krótki okres
+T45	Symptom 483 508	pełne utraty przytomności
+N20	Reference T45 ICD10:R55	Omdlenie i zapaść
+N21	Reference T6 ICD10:R55	Omdlenie i zapaść
+N22	Reference T10 ICD10:R53	Złe samopoczucie i zmęczenie
+T46	Symptom 988 1000	Zasłabnięcia
+N23	Reference T46 ICD10:R55	Omdlenie i zapaść
+N14	Reference T29 ICD10:Z72.0	Używanie tytoniu
+N19	Reference T34 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T47	Negation 641 644	bez
+T48	Drug 645 650	leków
+R15	Neg Arg1:T47 Arg2:T48	
+T49	Drug 1657 1661	leki
+T50	Negation 1671 1684	nie przyjmuje
+R16	Neg Arg1:T50 Arg2:T49	

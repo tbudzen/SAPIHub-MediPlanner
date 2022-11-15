@@ -1,0 +1,1498 @@
+allRelations          : 256
+oks                   : 54
+isRedundantAndRemoveds: 197
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 4
+GOOD / BAD            : 251 / 5
+Sentence 0:
+------------------------------------------------
+Wiek: 69 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+Dalsza opieka w POZ oraz w Poradni Kardiologicznej i Reumatologicznej. 
+
+
+
+Sentence 4:
+Dalsza opieka w Poradni Ortopedycznej- skierowanie wydano.
+
+
+
+Sentence 5:
+Planowa hospitalizacja celem oceny skuteczności dotychczasowego leczenia oraz ustalenia wskazań do ewentualnej reoperacji w Klinice Kardiologii i Wad Wrodzonych Dorosłych ICZMP w Łodzi w dn. 11/12/2019 r. (skierowanie w Sekretariacie Kliniki).
+
+R1	Dat Arg1:T4 Arg2:T3 << OK >>	11/12/2019 r. -> Planowa hospitalizacja celem oceny skuteczności dotychczasowego leczenia oraz ustalenia wskazań do ewentualnej reoperacji w Klinice Kardiologii i Wad Wrodzonych Dorosłych ICZMP  <RANK: 2> <info: start[652, 461] <type: LEFT>>
+
+
+Sentence 6:
+Dieta lekkostrawna, niskocholesterolowa z niską zawartością cukrów prostych. 
+
+
+
+Sentence 7:
+Regularna samokontrola ciśnienia tętniczego krwi i tętna. 
+
+
+
+Sentence 8:
+Regularny pomiar INR (co 3-4 tygodnie) docelowa wartość INR dla zastawki 3,0 
+Regularne przyjmowanie leków: 
+Rp. 
+Warfin 5 mg 1 tabl 1 xdz  pod kontrolą INR (docelowa wartość INR dla zastawki 3,0), wskazana pierwsza kontrola INR w dn. 20/04/2019
+
+R2	Drg Arg1:T10 Arg2:T18 << OK >>	Warfin -> 5 mg 1 tabl 1 xdz  pod kontrolą INR  <RANK: 3> <info: start[956, 963] <type: RIGHT>>
+R3	Dat Arg1:T8 Arg2:T7 << OK >>	co 3-4 tygodnie -> Regularny pomiar INR  <RANK: 3> <info: start[864, 842] <type: LEFT>>
+R4	Dat Arg1:T8 Arg2:T9 <<REDUNDANT!!!SHOULD BE REMOVED>>	co 3-4 tygodnie -> docelowa wartość INR dla zastawki 3,0  <RANK: 3> <info: start[864, 881] <type: RIGHT>>
+R5	Dat Arg1:T8 Arg2:T19 <<REDUNDANT!!!REMOVED>>	co 3-4 tygodnie -> docelowa wartość INR dla zastawki 3,0 <:REMOVED many second tags on the right:> <RANK: 0> <info: start[864, 1000] <type: RIGHT>>
+R6	Dat Arg1:T8 Arg2:T20 <<REDUNDANT!!!REMOVED>>	co 3-4 tygodnie -> pierwsza kontrola INR <:REMOVED many second tags on the right:> <RANK: 0> <info: start[864, 1049] <type: RIGHT>>
+R7	Dat Arg1:T8 Arg2:T10 <<REDUNDANT!!!REMOVED>>	co 3-4 tygodnie -> Warfin <:REMOVED other second tag between (right) (dat):> <RANK: 0> <info: start[864, 956] <type: RIGHT>>
+R8	Dat Arg1:T21 Arg2:T7 <<REDUNDANT!!!REMOVED>>	20/04/2019 -> Regularny pomiar INR <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1077, 842] <type: LEFT>>
+R9	Dat Arg1:T21 Arg2:T9 <<REDUNDANT!!!REMOVED>>	20/04/2019 -> docelowa wartość INR dla zastawki 3,0 <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1077, 881] <type: LEFT>>
+R10	Dat Arg1:T21 Arg2:T19 <<REDUNDANT!!!SHOULD BE REMOVED>>	20/04/2019 -> docelowa wartość INR dla zastawki 3,0  <RANK: 2> <info: start[1077, 1000] <type: LEFT>>
+R11	Dat Arg1:T21 Arg2:T20 << OK >>	20/04/2019 -> pierwsza kontrola INR  <RANK: 2> <info: start[1077, 1049] <type: LEFT>>
+R12	Dat Arg1:T21 Arg2:T10 <<REDUNDANT!!!REMOVED>>	20/04/2019 -> Warfin <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1077, 956] <type: LEFT>>
+
+
+Sentence 9:
+Cordarone 200 mg 1-0-1 tabl, od dnia 29/04/2019 1-0-0 tabl. pod kontrolą QTc w warunkach POZ (QTc w dn. 26/04/2019 230 ms)
+Bibloc 1,25 mg 1-0-0 tabl.
+
+R13	Inv Arg1:T25 Arg2:T26 << OK >>	QTc -> 230 ms  <RANK: 2> <info: start[1182, 1203] <type: RIGHT>>
+R14	Drg Arg1:T11 Arg2:T22 << OK >>	Cordarone -> 200 mg 1-0-1 tabl  <RANK: 3> <info: start[1088, 1098] <type: RIGHT>>
+R15	Drg Arg1:T11 Arg2:T24 << OK >>	Cordarone -> 1-0-0 tabl. pod kontrolą QTc  <RANK: 2> <info: start[1088, 1136] <type: RIGHT>>
+R16	Drg Arg1:T11 Arg2:T28 <<REDUNDANT!!!REMOVED>>	Cordarone -> 1,25 mg 1-0-0 tabl. <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1088, 1218] <type: RIGHT>>
+R17	Drg Arg1:T12 Arg2:T22 <<REDUNDANT!!!REMOVED>>	Bibloc -> 200 mg 1-0-1 tabl <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1211, 1098] <type: LEFT>>
+R18	Drg Arg1:T12 Arg2:T24 <<REDUNDANT!!!REMOVED>>	Bibloc -> 1-0-0 tabl. pod kontrolą QTc <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1211, 1136] <type: LEFT>>
+R19	Drg Arg1:T12 Arg2:T28 << OK >>	Bibloc -> 1,25 mg 1-0-0 tabl.  <RANK: 3> <info: start[1211, 1218] <type: RIGHT>>
+R20	Dat Arg1:T23 Arg2:T25 <<REDUNDANT!!!REMOVED>>	od dnia 29/04/2019 -> QTc <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1117, 1182] <type: RIGHT>>
+R21	Dat Arg1:T23 Arg2:T11 <<REDUNDANT!!!REMOVED>>	od dnia 29/04/2019 -> Cordarone <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1117, 1088] <type: LEFT>>
+R22	Dat Arg1:T23 Arg2:T12 <<REDUNDANT!!!REMOVED>>	od dnia 29/04/2019 -> Bibloc <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1117, 1211] <type: RIGHT>>
+R23	Dat Arg1:T27 Arg2:T25 << OK >>	w dn. 26/04/2019 -> QTc  <RANK: 3> <info: start[1186, 1182] <type: LEFT>>
+R24	Dat Arg1:T27 Arg2:T11 <<REDUNDANT!!!REMOVED>>	w dn. 26/04/2019 -> Cordarone <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1186, 1088] <type: LEFT>>
+R25	Dat Arg1:T27 Arg2:T12 <<REDUNDANT!!!REMOVED>>	w dn. 26/04/2019 -> Bibloc <:REMOVED other second tag between (right) (dat):> <RANK: 1> <info: start[1186, 1211] <type: RIGHT>>
+
+
+Sentence 10:
+Prestarium 5 mg 0-0-1 tabl.
+
+R26	Drg Arg1:T13 Arg2:T29 << OK >>	Prestarium -> 5 mg 0-0-1 tabl.  <RANK: 3> <info: start[1238, 1249] <type: RIGHT>>
+
+
+Sentence 11:
+Espiro 25 mg 1-0-0 tabl.
+
+R27	Drg Arg1:T14 Arg2:T30 << OK >>	Espiro -> 25 mg 1-0-0 tabl  <RANK: 3> <info: start[1266, 1273] <type: RIGHT>>
+
+
+Sentence 12:
+Diured 5 mg 1-0-0 tabl.
+
+R28	Drg Arg1:T15 Arg2:T31 << OK >>	Diured -> 5 mg 1-0-0 tabl.  <RANK: 3> <info: start[1291, 1298] <type: RIGHT>>
+
+
+Sentence 13:
+Atoris 20 mg 0-0-1 tabl.
+
+R29	Drg Arg1:T16 Arg2:T32 << OK >>	Atoris -> 20 mg 0-0-1 tabl.  <RANK: 3> <info: start[1315, 1322] <type: RIGHT>>
+
+
+Sentence 14:
+Lavistina 24 mg 1/2-0-1/2 tabl. wg zaleceń neurologa
+------------------------------------------------
+
+R30	Drg Arg1:T17 Arg2:T33 << OK >>	Lavistina -> 24 mg 1/2-0-1/2 tabl  <RANK: 3> <info: start[1340, 1350] <type: RIGHT>>
+
+
+Sentence 15:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 16:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Zespół niedopasowania mechanicznej zastawki aortalnej.
+
+
+Sentence 17:
+Podejrzenie łuszczki w obrębie sztucznej zastawki aortalnej od strony lewo-komorowej.
+
+
+Sentence 18:
+Podejrzenie skrzepliny w połączeniu opuszkowo-aortalnym.
+
+
+Sentence 19:
+Stan po AVR (S.J. 19A - 09/1999).
+R31	Dat Arg1:T38 Arg2:T37 << OK >>	09/1999 -> AVR (S.J. 19A  <RANK: 3> <info: start[1832, 1816] <type: LEFT>>
+
+
+Sentence 20:
+Poszerzenie aorty wstępującej do 43 mm.
+
+
+Sentence 21:
+Nadkomorowe zaburzenia rytmu serca.
+
+
+Sentence 22:
+Napadowe migotanie przedsionków.
+
+
+Sentence 23:
+Nadciśnienie tętnicze.
+
+
+Sentence 24:
+Umiarkowana niedomykalność zastawki mitralnej i trójdzielnej.
+
+
+Sentence 25:
+Dyslipidemia.
+
+
+Sentence 26:
+Kamica żółciowa w wywiadzie.
+
+
+Sentence 27:
+Uraz kłębu lewego kciuka (10/04/2019).
+
+R32	Dat Arg1:T47 Arg2:T46 << OK >>	10/04/2019 -> Uraz kłębu lewego kciuka  <RANK: 3> <info: start[2105, 2079] <type: LEFT>>
+
+
+Sentence 28:
+------------------------------------------------
+
+
+
+Sentence 29:
+Zastosowane leczenie
+
+
+
+Sentence 30:
+------------------------------------------------
+
+
+
+Sentence 31:
+Acenokumarol wg INR, Polfenon150mg, Triveram 20/5/5mg, Diuver 5mg, Espiro 25mg, Setal MR 35 mg, Atoris 20 mg, Prestarium 5 mg, Cordarone 200 mg, HNF iv, Clexane 80 mg sc, Warfin wg INR, Hydroksyzyna 10 mg 
+------------------------------------------------
+
+R33	Drg Arg1:T48 Arg2:T49 << OK >>	Acenokumarol -> wg INR  <RANK: 3> <info: start[2237, 2250] <type: RIGHT>>
+R34	Drg Arg1:T48 Arg2:T51 <<REDUNDANT!!!REMOVED>>	Acenokumarol -> 150mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2237, 2266] <type: RIGHT>>
+R35	Drg Arg1:T48 Arg2:T53 <<REDUNDANT!!!REMOVED>>	Acenokumarol -> 20/5/5mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2237, 2282] <type: RIGHT>>
+R36	Drg Arg1:T48 Arg2:T55 <<REDUNDANT!!!REMOVED>>	Acenokumarol -> 5mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2237, 2299] <type: RIGHT>>
+R37	Drg Arg1:T48 Arg2:T57 <<REDUNDANT!!!REMOVED>>	Acenokumarol -> 25mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2237, 2311] <type: RIGHT>>
+R38	Drg Arg1:T48 Arg2:T59 <<REDUNDANT!!!REMOVED>>	Acenokumarol -> 35 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2237, 2326] <type: RIGHT>>
+R39	Drg Arg1:T48 Arg2:T61 <<REDUNDANT!!!REMOVED>>	Acenokumarol -> 20 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2237, 2340] <type: RIGHT>>
+R40	Drg Arg1:T48 Arg2:T63 <<REDUNDANT!!!REMOVED>>	Acenokumarol -> 5 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2237, 2358] <type: RIGHT>>
+R41	Drg Arg1:T48 Arg2:T65 <<REDUNDANT!!!REMOVED>>	Acenokumarol -> 200 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2237, 2374] <type: RIGHT>>
+R42	Drg Arg1:T48 Arg2:T68 <<REDUNDANT!!!REMOVED>>	Acenokumarol -> 80 mg sc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2237, 2398] <type: RIGHT>>
+R43	Drg Arg1:T48 Arg2:T70 <<REDUNDANT!!!REMOVED>>	Acenokumarol -> wg INR <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2237, 2415] <type: RIGHT>>
+R44	Drg Arg1:T48 Arg2:T72 <<REDUNDANT!!!REMOVED>>	Acenokumarol -> 10 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2237, 2436] <type: RIGHT>>
+R45	Drg Arg1:T50 Arg2:T49 <<REDUNDANT!!!REMOVED>>	Polfenon -> wg INR <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2258, 2250] <type: LEFT>>
+R46	Drg Arg1:T50 Arg2:T51 << OK >>	Polfenon -> 150mg  <RANK: 3> <info: start[2258, 2266] <type: RIGHT>>
+R47	Drg Arg1:T50 Arg2:T53 <<REDUNDANT!!!REMOVED>>	Polfenon -> 20/5/5mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2258, 2282] <type: RIGHT>>
+R48	Drg Arg1:T50 Arg2:T55 <<REDUNDANT!!!REMOVED>>	Polfenon -> 5mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2258, 2299] <type: RIGHT>>
+R49	Drg Arg1:T50 Arg2:T57 <<REDUNDANT!!!REMOVED>>	Polfenon -> 25mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2258, 2311] <type: RIGHT>>
+R50	Drg Arg1:T50 Arg2:T59 <<REDUNDANT!!!REMOVED>>	Polfenon -> 35 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2258, 2326] <type: RIGHT>>
+R51	Drg Arg1:T50 Arg2:T61 <<REDUNDANT!!!REMOVED>>	Polfenon -> 20 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2258, 2340] <type: RIGHT>>
+R52	Drg Arg1:T50 Arg2:T63 <<REDUNDANT!!!REMOVED>>	Polfenon -> 5 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2258, 2358] <type: RIGHT>>
+R53	Drg Arg1:T50 Arg2:T65 <<REDUNDANT!!!REMOVED>>	Polfenon -> 200 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2258, 2374] <type: RIGHT>>
+R54	Drg Arg1:T50 Arg2:T68 <<REDUNDANT!!!REMOVED>>	Polfenon -> 80 mg sc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2258, 2398] <type: RIGHT>>
+R55	Drg Arg1:T50 Arg2:T70 <<REDUNDANT!!!REMOVED>>	Polfenon -> wg INR <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2258, 2415] <type: RIGHT>>
+R56	Drg Arg1:T50 Arg2:T72 <<REDUNDANT!!!REMOVED>>	Polfenon -> 10 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2258, 2436] <type: RIGHT>>
+R57	Drg Arg1:T52 Arg2:T49 <<REDUNDANT!!!REMOVED>>	Triveram -> wg INR <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2273, 2250] <type: LEFT>>
+R58	Drg Arg1:T52 Arg2:T51 <<REDUNDANT!!!REMOVED>>	Triveram -> 150mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2273, 2266] <type: LEFT>>
+R59	Drg Arg1:T52 Arg2:T53 << OK >>	Triveram -> 20/5/5mg  <RANK: 3> <info: start[2273, 2282] <type: RIGHT>>
+R60	Drg Arg1:T52 Arg2:T55 <<REDUNDANT!!!REMOVED>>	Triveram -> 5mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2273, 2299] <type: RIGHT>>
+R61	Drg Arg1:T52 Arg2:T57 <<REDUNDANT!!!REMOVED>>	Triveram -> 25mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2273, 2311] <type: RIGHT>>
+R62	Drg Arg1:T52 Arg2:T59 <<REDUNDANT!!!REMOVED>>	Triveram -> 35 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2273, 2326] <type: RIGHT>>
+R63	Drg Arg1:T52 Arg2:T61 <<REDUNDANT!!!REMOVED>>	Triveram -> 20 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2273, 2340] <type: RIGHT>>
+R64	Drg Arg1:T52 Arg2:T63 <<REDUNDANT!!!REMOVED>>	Triveram -> 5 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2273, 2358] <type: RIGHT>>
+R65	Drg Arg1:T52 Arg2:T65 <<REDUNDANT!!!REMOVED>>	Triveram -> 200 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2273, 2374] <type: RIGHT>>
+R66	Drg Arg1:T52 Arg2:T68 <<REDUNDANT!!!REMOVED>>	Triveram -> 80 mg sc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2273, 2398] <type: RIGHT>>
+R67	Drg Arg1:T52 Arg2:T70 <<REDUNDANT!!!REMOVED>>	Triveram -> wg INR <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2273, 2415] <type: RIGHT>>
+R68	Drg Arg1:T52 Arg2:T72 <<REDUNDANT!!!REMOVED>>	Triveram -> 10 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2273, 2436] <type: RIGHT>>
+R69	Drg Arg1:T54 Arg2:T49 <<REDUNDANT!!!REMOVED>>	Diuver -> wg INR <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2292, 2250] <type: LEFT>>
+R70	Drg Arg1:T54 Arg2:T51 <<REDUNDANT!!!REMOVED>>	Diuver -> 150mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2292, 2266] <type: LEFT>>
+R71	Drg Arg1:T54 Arg2:T53 <<REDUNDANT!!!REMOVED>>	Diuver -> 20/5/5mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2292, 2282] <type: LEFT>>
+R72	Drg Arg1:T54 Arg2:T55 << OK >>	Diuver -> 5mg  <RANK: 3> <info: start[2292, 2299] <type: RIGHT>>
+R73	Drg Arg1:T54 Arg2:T57 <<REDUNDANT!!!REMOVED>>	Diuver -> 25mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2292, 2311] <type: RIGHT>>
+R74	Drg Arg1:T54 Arg2:T59 <<REDUNDANT!!!REMOVED>>	Diuver -> 35 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2292, 2326] <type: RIGHT>>
+R75	Drg Arg1:T54 Arg2:T61 <<REDUNDANT!!!REMOVED>>	Diuver -> 20 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2292, 2340] <type: RIGHT>>
+R76	Drg Arg1:T54 Arg2:T63 <<REDUNDANT!!!REMOVED>>	Diuver -> 5 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2292, 2358] <type: RIGHT>>
+R77	Drg Arg1:T54 Arg2:T65 <<REDUNDANT!!!REMOVED>>	Diuver -> 200 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2292, 2374] <type: RIGHT>>
+R78	Drg Arg1:T54 Arg2:T68 <<REDUNDANT!!!REMOVED>>	Diuver -> 80 mg sc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2292, 2398] <type: RIGHT>>
+R79	Drg Arg1:T54 Arg2:T70 <<REDUNDANT!!!REMOVED>>	Diuver -> wg INR <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2292, 2415] <type: RIGHT>>
+R80	Drg Arg1:T54 Arg2:T72 <<REDUNDANT!!!REMOVED>>	Diuver -> 10 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2292, 2436] <type: RIGHT>>
+R81	Drg Arg1:T56 Arg2:T49 <<REDUNDANT!!!REMOVED>>	Espiro -> wg INR <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2304, 2250] <type: LEFT>>
+R82	Drg Arg1:T56 Arg2:T51 <<REDUNDANT!!!REMOVED>>	Espiro -> 150mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2304, 2266] <type: LEFT>>
+R83	Drg Arg1:T56 Arg2:T53 <<REDUNDANT!!!REMOVED>>	Espiro -> 20/5/5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2304, 2282] <type: LEFT>>
+R84	Drg Arg1:T56 Arg2:T55 <<REDUNDANT!!!REMOVED>>	Espiro -> 5mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2304, 2299] <type: LEFT>>
+R85	Drg Arg1:T56 Arg2:T57 << OK >>	Espiro -> 25mg  <RANK: 3> <info: start[2304, 2311] <type: RIGHT>>
+R86	Drg Arg1:T56 Arg2:T59 <<REDUNDANT!!!REMOVED>>	Espiro -> 35 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2304, 2326] <type: RIGHT>>
+R87	Drg Arg1:T56 Arg2:T61 <<REDUNDANT!!!REMOVED>>	Espiro -> 20 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2304, 2340] <type: RIGHT>>
+R88	Drg Arg1:T56 Arg2:T63 <<REDUNDANT!!!REMOVED>>	Espiro -> 5 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2304, 2358] <type: RIGHT>>
+R89	Drg Arg1:T56 Arg2:T65 <<REDUNDANT!!!REMOVED>>	Espiro -> 200 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2304, 2374] <type: RIGHT>>
+R90	Drg Arg1:T56 Arg2:T68 <<REDUNDANT!!!REMOVED>>	Espiro -> 80 mg sc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2304, 2398] <type: RIGHT>>
+R91	Drg Arg1:T56 Arg2:T70 <<REDUNDANT!!!REMOVED>>	Espiro -> wg INR <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2304, 2415] <type: RIGHT>>
+R92	Drg Arg1:T56 Arg2:T72 <<REDUNDANT!!!REMOVED>>	Espiro -> 10 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2304, 2436] <type: RIGHT>>
+R93	Drg Arg1:T58 Arg2:T49 <<REDUNDANT!!!REMOVED>>	Setal MR -> wg INR <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2317, 2250] <type: LEFT>>
+R94	Drg Arg1:T58 Arg2:T51 <<REDUNDANT!!!REMOVED>>	Setal MR -> 150mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2317, 2266] <type: LEFT>>
+R95	Drg Arg1:T58 Arg2:T53 <<REDUNDANT!!!REMOVED>>	Setal MR -> 20/5/5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2317, 2282] <type: LEFT>>
+R96	Drg Arg1:T58 Arg2:T55 <<REDUNDANT!!!REMOVED>>	Setal MR -> 5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2317, 2299] <type: LEFT>>
+R97	Drg Arg1:T58 Arg2:T57 <<REDUNDANT!!!REMOVED>>	Setal MR -> 25mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2317, 2311] <type: LEFT>>
+R98	Drg Arg1:T58 Arg2:T59 << OK >>	Setal MR -> 35 mg  <RANK: 3> <info: start[2317, 2326] <type: RIGHT>>
+R99	Drg Arg1:T58 Arg2:T61 <<REDUNDANT!!!REMOVED>>	Setal MR -> 20 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2317, 2340] <type: RIGHT>>
+R100	Drg Arg1:T58 Arg2:T63 <<REDUNDANT!!!REMOVED>>	Setal MR -> 5 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2317, 2358] <type: RIGHT>>
+R101	Drg Arg1:T58 Arg2:T65 <<REDUNDANT!!!REMOVED>>	Setal MR -> 200 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2317, 2374] <type: RIGHT>>
+R102	Drg Arg1:T58 Arg2:T68 <<REDUNDANT!!!REMOVED>>	Setal MR -> 80 mg sc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2317, 2398] <type: RIGHT>>
+R103	Drg Arg1:T58 Arg2:T70 <<REDUNDANT!!!REMOVED>>	Setal MR -> wg INR <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2317, 2415] <type: RIGHT>>
+R104	Drg Arg1:T58 Arg2:T72 <<REDUNDANT!!!REMOVED>>	Setal MR -> 10 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2317, 2436] <type: RIGHT>>
+R105	Drg Arg1:T60 Arg2:T49 <<REDUNDANT!!!REMOVED>>	Atoris -> wg INR <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2333, 2250] <type: LEFT>>
+R106	Drg Arg1:T60 Arg2:T51 <<REDUNDANT!!!REMOVED>>	Atoris -> 150mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2333, 2266] <type: LEFT>>
+R107	Drg Arg1:T60 Arg2:T53 <<REDUNDANT!!!REMOVED>>	Atoris -> 20/5/5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2333, 2282] <type: LEFT>>
+R108	Drg Arg1:T60 Arg2:T55 <<REDUNDANT!!!REMOVED>>	Atoris -> 5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2333, 2299] <type: LEFT>>
+R109	Drg Arg1:T60 Arg2:T57 <<REDUNDANT!!!REMOVED>>	Atoris -> 25mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2333, 2311] <type: LEFT>>
+R110	Drg Arg1:T60 Arg2:T59 <<REDUNDANT!!!REMOVED>>	Atoris -> 35 mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2333, 2326] <type: LEFT>>
+R111	Drg Arg1:T60 Arg2:T61 << OK >>	Atoris -> 20 mg  <RANK: 3> <info: start[2333, 2340] <type: RIGHT>>
+R112	Drg Arg1:T60 Arg2:T63 <<REDUNDANT!!!REMOVED>>	Atoris -> 5 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2333, 2358] <type: RIGHT>>
+R113	Drg Arg1:T60 Arg2:T65 <<REDUNDANT!!!REMOVED>>	Atoris -> 200 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2333, 2374] <type: RIGHT>>
+R114	Drg Arg1:T60 Arg2:T68 <<REDUNDANT!!!REMOVED>>	Atoris -> 80 mg sc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2333, 2398] <type: RIGHT>>
+R115	Drg Arg1:T60 Arg2:T70 <<REDUNDANT!!!REMOVED>>	Atoris -> wg INR <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2333, 2415] <type: RIGHT>>
+R116	Drg Arg1:T60 Arg2:T72 <<REDUNDANT!!!REMOVED>>	Atoris -> 10 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2333, 2436] <type: RIGHT>>
+R117	Drg Arg1:T62 Arg2:T49 <<REDUNDANT!!!REMOVED>>	Prestarium -> wg INR <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2347, 2250] <type: LEFT>>
+R118	Drg Arg1:T62 Arg2:T51 <<REDUNDANT!!!REMOVED>>	Prestarium -> 150mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2347, 2266] <type: LEFT>>
+R119	Drg Arg1:T62 Arg2:T53 <<REDUNDANT!!!REMOVED>>	Prestarium -> 20/5/5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2347, 2282] <type: LEFT>>
+R120	Drg Arg1:T62 Arg2:T55 <<REDUNDANT!!!REMOVED>>	Prestarium -> 5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2347, 2299] <type: LEFT>>
+R121	Drg Arg1:T62 Arg2:T57 <<REDUNDANT!!!REMOVED>>	Prestarium -> 25mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2347, 2311] <type: LEFT>>
+R122	Drg Arg1:T62 Arg2:T59 <<REDUNDANT!!!REMOVED>>	Prestarium -> 35 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2347, 2326] <type: LEFT>>
+R123	Drg Arg1:T62 Arg2:T61 <<REDUNDANT!!!REMOVED>>	Prestarium -> 20 mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2347, 2340] <type: LEFT>>
+R124	Drg Arg1:T62 Arg2:T63 << OK >>	Prestarium -> 5 mg  <RANK: 3> <info: start[2347, 2358] <type: RIGHT>>
+R125	Drg Arg1:T62 Arg2:T65 <<REDUNDANT!!!REMOVED>>	Prestarium -> 200 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2347, 2374] <type: RIGHT>>
+R126	Drg Arg1:T62 Arg2:T68 <<REDUNDANT!!!REMOVED>>	Prestarium -> 80 mg sc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2347, 2398] <type: RIGHT>>
+R127	Drg Arg1:T62 Arg2:T70 <<REDUNDANT!!!REMOVED>>	Prestarium -> wg INR <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2347, 2415] <type: RIGHT>>
+R128	Drg Arg1:T62 Arg2:T72 <<REDUNDANT!!!REMOVED>>	Prestarium -> 10 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2347, 2436] <type: RIGHT>>
+R129	Drg Arg1:T64 Arg2:T49 <<REDUNDANT!!!REMOVED>>	Cordarone -> wg INR <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2364, 2250] <type: LEFT>>
+R130	Drg Arg1:T64 Arg2:T51 <<REDUNDANT!!!REMOVED>>	Cordarone -> 150mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2364, 2266] <type: LEFT>>
+R131	Drg Arg1:T64 Arg2:T53 <<REDUNDANT!!!REMOVED>>	Cordarone -> 20/5/5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2364, 2282] <type: LEFT>>
+R132	Drg Arg1:T64 Arg2:T55 <<REDUNDANT!!!REMOVED>>	Cordarone -> 5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2364, 2299] <type: LEFT>>
+R133	Drg Arg1:T64 Arg2:T57 <<REDUNDANT!!!REMOVED>>	Cordarone -> 25mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2364, 2311] <type: LEFT>>
+R134	Drg Arg1:T64 Arg2:T59 <<REDUNDANT!!!REMOVED>>	Cordarone -> 35 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2364, 2326] <type: LEFT>>
+R135	Drg Arg1:T64 Arg2:T61 <<REDUNDANT!!!REMOVED>>	Cordarone -> 20 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2364, 2340] <type: LEFT>>
+R136	Drg Arg1:T64 Arg2:T63 <<REDUNDANT!!!REMOVED>>	Cordarone -> 5 mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2364, 2358] <type: LEFT>>
+R137	Drg Arg1:T64 Arg2:T65 << OK >>	Cordarone -> 200 mg  <RANK: 3> <info: start[2364, 2374] <type: RIGHT>>
+R138	Drg Arg1:T64 Arg2:T68 <<REDUNDANT!!!REMOVED>>	Cordarone -> 80 mg sc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2364, 2398] <type: RIGHT>>
+R139	Drg Arg1:T64 Arg2:T70 <<REDUNDANT!!!REMOVED>>	Cordarone -> wg INR <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2364, 2415] <type: RIGHT>>
+R140	Drg Arg1:T64 Arg2:T72 <<REDUNDANT!!!REMOVED>>	Cordarone -> 10 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2364, 2436] <type: RIGHT>>
+R141	Drg Arg1:T66 Arg2:T49 <<REDUNDANT!!!REMOVED>>	HNF iv -> wg INR <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2382, 2250] <type: LEFT>>
+R142	Drg Arg1:T66 Arg2:T51 <<REDUNDANT!!!REMOVED>>	HNF iv -> 150mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2382, 2266] <type: LEFT>>
+R143	Drg Arg1:T66 Arg2:T53 <<REDUNDANT!!!REMOVED>>	HNF iv -> 20/5/5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2382, 2282] <type: LEFT>>
+R144	Drg Arg1:T66 Arg2:T55 <<REDUNDANT!!!REMOVED>>	HNF iv -> 5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2382, 2299] <type: LEFT>>
+R145	Drg Arg1:T66 Arg2:T57 <<REDUNDANT!!!REMOVED>>	HNF iv -> 25mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2382, 2311] <type: LEFT>>
+R146	Drg Arg1:T66 Arg2:T59 <<REDUNDANT!!!REMOVED>>	HNF iv -> 35 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2382, 2326] <type: LEFT>>
+R147	Drg Arg1:T66 Arg2:T61 <<REDUNDANT!!!REMOVED>>	HNF iv -> 20 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2382, 2340] <type: LEFT>>
+R148	Drg Arg1:T66 Arg2:T63 <<REDUNDANT!!!REMOVED>>	HNF iv -> 5 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2382, 2358] <type: LEFT>>
+R149	Drg Arg1:T66 Arg2:T65 <<REDUNDANT!!!REMOVED>>	HNF iv -> 200 mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2382, 2374] <type: LEFT>>
+R150	Drg Arg1:T66 Arg2:T68 <<REDUNDANT!!!SHOULD BE REMOVED>>	HNF iv -> 80 mg sc  <RANK: 2> <info: start[2382, 2398] <type: RIGHT>>
+R151	Drg Arg1:T66 Arg2:T70 <<REDUNDANT!!!REMOVED>>	HNF iv -> wg INR <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2382, 2415] <type: RIGHT>>
+R152	Drg Arg1:T66 Arg2:T72 <<REDUNDANT!!!REMOVED>>	HNF iv -> 10 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2382, 2436] <type: RIGHT>>
+R153	Drg Arg1:T67 Arg2:T49 <<REDUNDANT!!!REMOVED>>	Clexane -> wg INR <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2390, 2250] <type: LEFT>>
+R154	Drg Arg1:T67 Arg2:T51 <<REDUNDANT!!!REMOVED>>	Clexane -> 150mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2390, 2266] <type: LEFT>>
+R155	Drg Arg1:T67 Arg2:T53 <<REDUNDANT!!!REMOVED>>	Clexane -> 20/5/5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2390, 2282] <type: LEFT>>
+R156	Drg Arg1:T67 Arg2:T55 <<REDUNDANT!!!REMOVED>>	Clexane -> 5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2390, 2299] <type: LEFT>>
+R157	Drg Arg1:T67 Arg2:T57 <<REDUNDANT!!!REMOVED>>	Clexane -> 25mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2390, 2311] <type: LEFT>>
+R158	Drg Arg1:T67 Arg2:T59 <<REDUNDANT!!!REMOVED>>	Clexane -> 35 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2390, 2326] <type: LEFT>>
+R159	Drg Arg1:T67 Arg2:T61 <<REDUNDANT!!!REMOVED>>	Clexane -> 20 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2390, 2340] <type: LEFT>>
+R160	Drg Arg1:T67 Arg2:T63 <<REDUNDANT!!!REMOVED>>	Clexane -> 5 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2390, 2358] <type: LEFT>>
+R161	Drg Arg1:T67 Arg2:T65 <<REDUNDANT!!!REMOVED>>	Clexane -> 200 mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2390, 2374] <type: LEFT>>
+R162	Drg Arg1:T67 Arg2:T68 << OK >>	Clexane -> 80 mg sc  <RANK: 3> <info: start[2390, 2398] <type: RIGHT>>
+R163	Drg Arg1:T67 Arg2:T70 <<REDUNDANT!!!REMOVED>>	Clexane -> wg INR <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2390, 2415] <type: RIGHT>>
+R164	Drg Arg1:T67 Arg2:T72 <<REDUNDANT!!!REMOVED>>	Clexane -> 10 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2390, 2436] <type: RIGHT>>
+R165	Drg Arg1:T69 Arg2:T49 <<REDUNDANT!!!REMOVED>>	Warfin -> wg INR <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2408, 2250] <type: LEFT>>
+R166	Drg Arg1:T69 Arg2:T51 <<REDUNDANT!!!REMOVED>>	Warfin -> 150mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2408, 2266] <type: LEFT>>
+R167	Drg Arg1:T69 Arg2:T53 <<REDUNDANT!!!REMOVED>>	Warfin -> 20/5/5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2408, 2282] <type: LEFT>>
+R168	Drg Arg1:T69 Arg2:T55 <<REDUNDANT!!!REMOVED>>	Warfin -> 5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2408, 2299] <type: LEFT>>
+R169	Drg Arg1:T69 Arg2:T57 <<REDUNDANT!!!REMOVED>>	Warfin -> 25mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2408, 2311] <type: LEFT>>
+R170	Drg Arg1:T69 Arg2:T59 <<REDUNDANT!!!REMOVED>>	Warfin -> 35 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2408, 2326] <type: LEFT>>
+R171	Drg Arg1:T69 Arg2:T61 <<REDUNDANT!!!REMOVED>>	Warfin -> 20 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2408, 2340] <type: LEFT>>
+R172	Drg Arg1:T69 Arg2:T63 <<REDUNDANT!!!REMOVED>>	Warfin -> 5 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2408, 2358] <type: LEFT>>
+R173	Drg Arg1:T69 Arg2:T65 <<REDUNDANT!!!REMOVED>>	Warfin -> 200 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2408, 2374] <type: LEFT>>
+R174	Drg Arg1:T69 Arg2:T68 <<REDUNDANT!!!REMOVED>>	Warfin -> 80 mg sc <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2408, 2398] <type: LEFT>>
+R175	Drg Arg1:T69 Arg2:T70 << OK >>	Warfin -> wg INR  <RANK: 3> <info: start[2408, 2415] <type: RIGHT>>
+R176	Drg Arg1:T69 Arg2:T72 <<REDUNDANT!!!REMOVED>>	Warfin -> 10 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2408, 2436] <type: RIGHT>>
+R177	Drg Arg1:T71 Arg2:T49 <<REDUNDANT!!!REMOVED>>	Hydroksyzyna -> wg INR <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2423, 2250] <type: LEFT>>
+R178	Drg Arg1:T71 Arg2:T51 <<REDUNDANT!!!REMOVED>>	Hydroksyzyna -> 150mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2423, 2266] <type: LEFT>>
+R179	Drg Arg1:T71 Arg2:T53 <<REDUNDANT!!!REMOVED>>	Hydroksyzyna -> 20/5/5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2423, 2282] <type: LEFT>>
+R180	Drg Arg1:T71 Arg2:T55 <<REDUNDANT!!!REMOVED>>	Hydroksyzyna -> 5mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2423, 2299] <type: LEFT>>
+R181	Drg Arg1:T71 Arg2:T57 <<REDUNDANT!!!REMOVED>>	Hydroksyzyna -> 25mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2423, 2311] <type: LEFT>>
+R182	Drg Arg1:T71 Arg2:T59 <<REDUNDANT!!!REMOVED>>	Hydroksyzyna -> 35 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2423, 2326] <type: LEFT>>
+R183	Drg Arg1:T71 Arg2:T61 <<REDUNDANT!!!REMOVED>>	Hydroksyzyna -> 20 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2423, 2340] <type: LEFT>>
+R184	Drg Arg1:T71 Arg2:T63 <<REDUNDANT!!!REMOVED>>	Hydroksyzyna -> 5 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2423, 2358] <type: LEFT>>
+R185	Drg Arg1:T71 Arg2:T65 <<REDUNDANT!!!REMOVED>>	Hydroksyzyna -> 200 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2423, 2374] <type: LEFT>>
+R186	Drg Arg1:T71 Arg2:T68 <<REDUNDANT!!!REMOVED>>	Hydroksyzyna -> 80 mg sc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2423, 2398] <type: LEFT>>
+R187	Drg Arg1:T71 Arg2:T70 <<REDUNDANT!!!REMOVED>>	Hydroksyzyna -> wg INR <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2423, 2415] <type: LEFT>>
+R188	Drg Arg1:T71 Arg2:T72 << OK >>	Hydroksyzyna -> 10 mg  <RANK: 3> <info: start[2423, 2436] <type: RIGHT>>
+
+
+Sentence 32:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 33:
+Pacjentka, lat 68, przyjęta do Kliniki Kardiologii i Wad Wrodzonych Dorosłych z podejrzeniem istotnego zwężenia mechanicznej protezy aortalnej w celu wykonania echokardiograficznej próby obciążeniowej.
+
+
+Sentence 34:
+W wywiadzie napadowe migotanie przedsionków, umiarkowana niedomykalność zastawki trójdzielnej, nadciśnienie tętnicze, kamica żółciowa, dyslipidemia mieszana, stan po AVR (S.J. 19A - 09/1999).
+R189	Dat Arg1:T81 Arg2:T75 <<REDUNDANT!!!REMOVED>>	09/1999 -> napadowe migotanie przedsionków <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2951, 2781] <type: LEFT>>
+R190	Dat Arg1:T81 Arg2:T76 <<REDUNDANT!!!REMOVED>>	09/1999 -> umiarkowana niedomykalność zastawki trójdzielnej <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2951, 2814] <type: LEFT>>
+R191	Dat Arg1:T81 Arg2:T77 <<REDUNDANT!!!REMOVED>>	09/1999 -> nadciśnienie tętnicze <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2951, 2864] <type: LEFT>>
+R192	Dat Arg1:T81 Arg2:T78 <<REDUNDANT!!!REMOVED>>	09/1999 -> kamica żółciowa <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2951, 2887] <type: LEFT>>
+R193	Dat Arg1:T81 Arg2:T79 <<REDUNDANT!!!REMOVED>>	09/1999 -> dyslipidemia mieszana <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2951, 2904] <type: LEFT>>
+R194	Dat Arg1:T81 Arg2:T80 << OK >>	09/1999 -> AVR (S.J. 19A  <RANK: 3> <info: start[2951, 2935] <type: LEFT>>
+
+
+Sentence 35:
+Zgłasza uraz w dniu wczorajszym w obrębie prawego kłębu kciuka z zasienieniem i i obrzękiem tkanek miękkich w tej okolicy.
+
+R195	Dat Arg1:T83 Arg2:T85 << OK >>	w dniu wczorajszym -> zasienieniem  <RANK: 3> <info: start[2974, 3026] <type: RIGHT>>
+R196	Dat Arg1:T83 Arg2:T86 <<SHOULD NOT BE REMOVED>>	w dniu wczorajszym -> obrzękiem tkanek miękkich w tej okolicy <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2974, 3043] <type: RIGHT>>
+R197	Dat Arg1:T83 Arg2:T82 << OK >>	w dniu wczorajszym -> w obrębie prawego kłębu kciuka  <RANK: 3> <info: start[2974, 2993] <type: RIGHT>>
+R198	Dat Arg1:T83 Arg2:T84 << OK >>	w dniu wczorajszym -> uraz  <RANK: 3> <info: start[2974, 2969] <type: LEFT>>
+
+
+Sentence 36:
+W 12/2018 Klinice wykonano badanie echokardiograficzne, w którym zaobserwowano wysoki gradient przez sztuczną zastawkę aortalną.
+R199	Inv Arg1:T88 Arg2:T89 << OK >>	badanie echokardiograficzne -> wysoki gradient przez sztuczną zastawkę aortalną  <RANK: 2> <info: start[3111, 3163] <type: RIGHT>>
+R200	Dat Arg1:T87 Arg2:T88 << OK >>	12/2018 -> badanie echokardiograficzne  <RANK: 3> <info: start[3086, 3111] <type: RIGHT>>
+
+
+Sentence 37:
+Wysunięto podejrzenie jej dysfunkcji.
+
+
+Sentence 38:
+W celu dokładniejszej oceny zastawki aortalnej wykonano przezprzełykowe badanie echokardiograficzne, w którym zobrazowano w lewym ujściu tętniczym zastawkę mechaniczną o prawidłowej ruchomości dysków, wysunięto podejrzenie łuszczki od strony lewo-komorowej oraz wykluczono przeciek okołozastawkowy lub przezzastwkowy.
+R201	Inv Arg1:T91 Arg2:T92 << OK >>	przezprzełykowe badanie echokardiograficzne -> w lewym ujściu tętniczym zastawkę mechaniczną o prawidłowej ruchomości dysków  <RANK: 2> <info: start[3307, 3373] <type: RIGHT>>
+R202	Inv Arg1:T91 Arg2:T93 << OK >>	przezprzełykowe badanie echokardiograficzne -> podejrzenie łuszczki od strony lewo-komorowej  <RANK: 2> <info: start[3307, 3462] <type: RIGHT>>
+R203	Inv Arg1:T91 Arg2:T95 << OK >>	przezprzełykowe badanie echokardiograficzne -> przeciek okołozastawkowy lub przezzastwkowy  <RANK: 2> <info: start[3307, 3524] <type: RIGHT>>
+R204	Neg Arg1:T94 Arg2:T91 <<REDUNDANT!!!REMOVED>>	wykluczono -> przezprzełykowe badanie echokardiograficzne <:REMOVED many second tags on the left:> <RANK: 2> <info: start[3513, 3307] <type: LEFT>>
+R205	Neg Arg1:T94 Arg2:T92 <<REDUNDANT!!!REMOVED>>	wykluczono -> w lewym ujściu tętniczym zastawkę mechaniczną o prawidłowej ruchomości dysków <:REMOVED many second tags on the left:> <RANK: 2> <info: start[3513, 3373] <type: LEFT>>
+R206	Neg Arg1:T94 Arg2:T93 <<REDUNDANT!!!REMOVED>>	wykluczono -> podejrzenie łuszczki od strony lewo-komorowej <:REMOVED many second tags on the left:> <RANK: 2> <info: start[3513, 3462] <type: LEFT>>
+R207	Neg Arg1:T94 Arg2:T95 << OK >>	wykluczono -> przeciek okołozastawkowy lub przezzastwkowy  <RANK: 3> <info: start[3513, 3524] <type: RIGHT>>
+
+
+Sentence 39:
+Dodatkowo uwidoczniono poszerzoną aortę piersiową w proksymalnej części wstępującej.
+
+
+Sentence 40:
+Do wykonania MR w warunkach ambulatoryjnych w Szpitalu Barlickiego- oczekuje na termin.
+
+
+
+Sentence 41:
+Zgłasza dolegliwości pod postacią ograniczenia tolerancji wysiłku - szybka męczliwość, duszność wysiłkowa III klasa wg NYHA, oraz okresowo kołatanie serca, zawroty głowy.
+
+
+Sentence 42:
+Neguje zasłabnięcia, omdlenia.
+R208	Neg Arg1:T103 Arg2:T104 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[3913, 3920] <type: RIGHT>>
+R209	Neg Arg1:T103 Arg2:T105 << OK >>	Neguje -> omdlenia  <RANK: 2> <info: start[3913, 3934] <type: RIGHT>>
+
+
+Sentence 43:
+Innych dolegliwości nie zgłasza. 
+
+R210	Neg Arg1:T107 Arg2:T106 << OK >>	nie zgłasza -> Innych dolegliwości  <RANK: 3> <info: start[3964, 3944] <type: LEFT>>
+
+
+Sentence 44:
+W wywiadzie: napadowe migotanie przedsionków, umiarkowana niedomykalność zastawki trójdzielnej, nadciśnienie tętnicze, kamica żółciowa, dyslipidemia mieszana, choroba zwtrodnieniowa stawów. 
+
+
+
+Sentence 45:
+Przebyte operacje: stan po AVR S.J. 19A - 09.1999r. 
+
+R211	Dat Arg1:T115 Arg2:T114 << OK >>	09.1999r -> AVR S.J. 19A  <RANK: 3> <info: start[4211, 4196] <type: LEFT>>
+
+
+Sentence 46:
+Leczenie przewlekłe: kardiologiczne, kardiochirurgiczne, reumatologiczne 
+
+
+
+Sentence 47:
+Przebyte choroby zakaźne - WZW ( - ) , borelioza ( - ), gruźlica ( - ) 
+
+R212	Neg Arg1:T120 Arg2:T117 << OK >>	( - ) -> WZW  <RANK: 3> <info: start[4327, 4323] <type: LEFT>>
+R213	Neg Arg1:T120 Arg2:T118 <<REDUNDANT!!!REMOVED>>	( - ) -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[4327, 4335] <type: RIGHT>>
+R214	Neg Arg1:T120 Arg2:T119 <<REDUNDANT!!!REMOVED>>	( - ) -> gruźlica <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4327, 4352] <type: RIGHT>>
+R215	Neg Arg1:T121 Arg2:T117 <<REDUNDANT!!!REMOVED>>	( - ) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4345, 4323] <type: LEFT>>
+R216	Neg Arg1:T121 Arg2:T118 << OK >>	( - ) -> borelioza  <RANK: 3> <info: start[4345, 4335] <type: LEFT>>
+R217	Neg Arg1:T121 Arg2:T119 <<REDUNDANT!!!REMOVED>>	( - ) -> gruźlica <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[4345, 4352] <type: RIGHT>>
+R218	Neg Arg1:T122 Arg2:T117 <<REDUNDANT!!!REMOVED>>	( - ) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4361, 4323] <type: LEFT>>
+R219	Neg Arg1:T122 Arg2:T118 <<REDUNDANT!!!REMOVED>>	( - ) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4361, 4335] <type: LEFT>>
+R220	Neg Arg1:T122 Arg2:T119 << OK >>	( - ) -> gruźlica  <RANK: 3> <info: start[4361, 4352] <type: LEFT>>
+
+
+Sentence 48:
+W wywiadzie rodzinnym: ojciec - chorował na serce (pacjentka nie pamięta dokladnie) 
+
+
+
+Sentence 49:
+Palenie tytoniu: nie pali. 
+
+R221	Neg Arg1:T125 Arg2:T124 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[4470, 4453] <type: LEFT>>
+R222	Neg Arg1:T125 Arg2:T126 << OK >>	nie -> pali  <RANK: 3> <info: start[4470, 4474] <type: RIGHT>>
+
+
+Sentence 50:
+Inne używki: nie. 
+
+R223	Neg Arg1:T128 Arg2:T127 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[4494, 4481] <type: LEFT>>
+
+
+Sentence 51:
+Uczulenia: neguje 
+Stan społeczny: warunki mieszkaniowe dobre, emerytka. 
+
+R224	Neg Arg1:T130 Arg2:T129 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[4511, 4500] <type: LEFT>>
+R225	Neg Arg1:T130 Arg2:T131 <<REDUNDANT!!!REMOVED>>	neguje -> warunki mieszkaniowe dobre <:REMOVED many second tags on the right:> <RANK: 1> <info: start[4511, 4535] <type: RIGHT>>
+R226	Neg Arg1:T130 Arg2:T132 <<REDUNDANT!!!REMOVED>>	neguje -> emerytka <:REMOVED many second tags on the right:> <RANK: 0> <info: start[4511, 4563] <type: RIGHT>>
+
+
+Sentence 52:
+Leki: Acenokumarol, Polfenon150mg 1-0-1, Triveram 20/5/5mg 1-0-0, Diuver 5mg 1-0-0, Espiro 25mg 1-0-0, Setal MR 1-0-1 
+------------------------------------------------
+
+R227	Drg Arg1:T133 Arg2:T135 <<REDUNDANT!!!SHOULD BE REMOVED>>	Acenokumarol -> 150mg 1-0-1  <RANK: 2> <info: start[4580, 4602] <type: RIGHT>>
+R228	Drg Arg1:T133 Arg2:T137 <<REDUNDANT!!!REMOVED>>	Acenokumarol -> 20/5/5mg 1-0-0 <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4580, 4624] <type: RIGHT>>
+R229	Drg Arg1:T133 Arg2:T139 <<REDUNDANT!!!REMOVED>>	Acenokumarol -> 5mg 1-0-0 <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4580, 4647] <type: RIGHT>>
+R230	Drg Arg1:T133 Arg2:T141 <<REDUNDANT!!!REMOVED>>	Acenokumarol -> 25mg 1-0-0, <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4580, 4665] <type: RIGHT>>
+R231	Drg Arg1:T133 Arg2:T143 <<REDUNDANT!!!REMOVED>>	Acenokumarol -> 1-0-1 <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4580, 4686] <type: RIGHT>>
+R232	Drg Arg1:T134 Arg2:T135 << OK >>	Polfenon -> 150mg 1-0-1  <RANK: 3> <info: start[4594, 4602] <type: RIGHT>>
+R233	Drg Arg1:T134 Arg2:T137 <<REDUNDANT!!!REMOVED>>	Polfenon -> 20/5/5mg 1-0-0 <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4594, 4624] <type: RIGHT>>
+R234	Drg Arg1:T134 Arg2:T139 <<REDUNDANT!!!REMOVED>>	Polfenon -> 5mg 1-0-0 <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4594, 4647] <type: RIGHT>>
+R235	Drg Arg1:T134 Arg2:T141 <<REDUNDANT!!!REMOVED>>	Polfenon -> 25mg 1-0-0, <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4594, 4665] <type: RIGHT>>
+R236	Drg Arg1:T134 Arg2:T143 <<REDUNDANT!!!REMOVED>>	Polfenon -> 1-0-1 <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4594, 4686] <type: RIGHT>>
+R237	Drg Arg1:T136 Arg2:T135 <<REDUNDANT!!!REMOVED>>	Triveram -> 150mg 1-0-1 <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[4615, 4602] <type: LEFT>>
+R238	Drg Arg1:T136 Arg2:T137 << OK >>	Triveram -> 20/5/5mg 1-0-0  <RANK: 3> <info: start[4615, 4624] <type: RIGHT>>
+R239	Drg Arg1:T136 Arg2:T139 <<REDUNDANT!!!REMOVED>>	Triveram -> 5mg 1-0-0 <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4615, 4647] <type: RIGHT>>
+R240	Drg Arg1:T136 Arg2:T141 <<REDUNDANT!!!REMOVED>>	Triveram -> 25mg 1-0-0, <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4615, 4665] <type: RIGHT>>
+R241	Drg Arg1:T136 Arg2:T143 <<REDUNDANT!!!REMOVED>>	Triveram -> 1-0-1 <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4615, 4686] <type: RIGHT>>
+R242	Drg Arg1:T138 Arg2:T135 <<REDUNDANT!!!REMOVED>>	Diuver -> 150mg 1-0-1 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4640, 4602] <type: LEFT>>
+R243	Drg Arg1:T138 Arg2:T137 <<REDUNDANT!!!REMOVED>>	Diuver -> 20/5/5mg 1-0-0 <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[4640, 4624] <type: LEFT>>
+R244	Drg Arg1:T138 Arg2:T139 << OK >>	Diuver -> 5mg 1-0-0  <RANK: 3> <info: start[4640, 4647] <type: RIGHT>>
+R245	Drg Arg1:T138 Arg2:T141 <<REDUNDANT!!!REMOVED>>	Diuver -> 25mg 1-0-0, <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4640, 4665] <type: RIGHT>>
+R246	Drg Arg1:T138 Arg2:T143 <<REDUNDANT!!!REMOVED>>	Diuver -> 1-0-1 <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4640, 4686] <type: RIGHT>>
+R247	Drg Arg1:T140 Arg2:T135 <<REDUNDANT!!!REMOVED>>	Espiro -> 150mg 1-0-1 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4658, 4602] <type: LEFT>>
+R248	Drg Arg1:T140 Arg2:T137 <<REDUNDANT!!!REMOVED>>	Espiro -> 20/5/5mg 1-0-0 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4658, 4624] <type: LEFT>>
+R249	Drg Arg1:T140 Arg2:T139 <<REDUNDANT!!!REMOVED>>	Espiro -> 5mg 1-0-0 <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[4658, 4647] <type: LEFT>>
+R250	Drg Arg1:T140 Arg2:T141 << OK >>	Espiro -> 25mg 1-0-0,  <RANK: 3> <info: start[4658, 4665] <type: RIGHT>>
+R251	Drg Arg1:T140 Arg2:T143 <<REDUNDANT!!!REMOVED>>	Espiro -> 1-0-1 <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4658, 4686] <type: RIGHT>>
+R252	Drg Arg1:T142 Arg2:T135 <<REDUNDANT!!!REMOVED>>	Setal MR -> 150mg 1-0-1 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4677, 4602] <type: LEFT>>
+R253	Drg Arg1:T142 Arg2:T137 <<REDUNDANT!!!REMOVED>>	Setal MR -> 20/5/5mg 1-0-0 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4677, 4624] <type: LEFT>>
+R254	Drg Arg1:T142 Arg2:T139 <<REDUNDANT!!!REMOVED>>	Setal MR -> 5mg 1-0-0 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4677, 4647] <type: LEFT>>
+R255	Drg Arg1:T142 Arg2:T141 <<REDUNDANT!!!REMOVED>>	Setal MR -> 25mg 1-0-0, <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[4677, 4665] <type: LEFT>>
+R256	Drg Arg1:T142 Arg2:T143 << OK >>	Setal MR -> 1-0-1  <RANK: 3> <info: start[4677, 4686] <type: RIGHT>>
+
+
+Sentence 53:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 54:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:9.39[10^3/ul]
+    
+
+
+Sentence 55:
+RBC Krwinki czerwone:4.04[10^6/ul]
+    
+
+
+Sentence 56:
+HGB Hemoglobina:12.4[g/dl]
+    
+
+
+Sentence 57:
+HCT Hematokryt:37.1[%]
+    
+
+
+Sentence 58:
+MCV wskaźnik czerwonokrw:91.8[fl]
+    
+
+
+Sentence 59:
+MCH wskaźnik czerwonokrw:30.7[pg]
+    
+
+
+Sentence 60:
+MCHC wskaźnik czerwonokr:33.4[g/dl]
+    
+
+
+Sentence 61:
+PLT z morfologii:217[10^3/ul]
+    
+
+
+Sentence 62:
+RDW-SD:46.0[fl]
+    
+
+
+Sentence 63:
+RDW-CV:13.5[%]
+    PDW:13.3[fl]
+    MPV:11.2[fl]
+    
+
+
+Sentence 64:
+P-LCR:34.7[%]
+    
+
+
+Sentence 65:
+PCT (hematokryt płytkowy:0.24[%]
+    
+
+
+Sentence 66:
+NEUTR# wartość bezwzględ:2.38[10^3/ul]
+    
+
+
+Sentence 67:
+NEUTR%:25.3[%]
+    
+
+
+Sentence 68:
+LYMH# wartość bezwzględn:6.09[10^3/ul]
+    
+
+
+Sentence 69:
+LYMPH%:64.9[%]
+    
+
+
+Sentence 70:
+MONO# wartość bezwzględn:0.73[10^3/ul]
+    
+
+
+Sentence 71:
+MONO%:7.8[%]
+    
+
+
+Sentence 72:
+EO# wartość bezwzględna:0.17[10^3/ul]
+    
+
+
+Sentence 73:
+EO%:1.8[%]
+    
+
+
+Sentence 74:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    
+
+
+Sentence 75:
+BASO%:0.2[%]
+    
+
+
+Sentence 76:
+NRBC %:0.0[%]
+    
+
+
+Sentence 77:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 78:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.35[10^3/ul]
+    
+
+
+Sentence 79:
+RBC Krwinki czerwone:3.82[10^6/ul]
+    
+
+
+Sentence 80:
+HGB Hemoglobina:12.0[g/dl]
+    
+
+
+Sentence 81:
+HCT Hematokryt:34.9[%]
+    
+
+
+Sentence 82:
+MCV wskaźnik czerwonokrw:91.4[fl]
+    
+
+
+Sentence 83:
+MCH wskaźnik czerwonokrw:31.4[pg]
+    
+
+
+Sentence 84:
+MCHC wskaźnik czerwonokr:34.4[g/dl]
+    
+
+
+Sentence 85:
+PLT z morfologii:206[10^3/ul]
+    
+
+
+Sentence 86:
+RDW-SD:45.6[fl]
+    
+
+
+Sentence 87:
+RDW-CV:13.5[%]
+    PDW:12.3[fl]
+    MPV:10.9[fl]
+    
+
+
+Sentence 88:
+P-LCR:30.8[%]
+    
+
+
+Sentence 89:
+PCT (hematokryt płytkowy:0.22[%]
+    
+
+
+Sentence 90:
+NEUTR# wartość bezwzględ:2.09[10^3/ul]
+    
+
+
+Sentence 91:
+NEUTR%:28.5[%]
+    
+
+
+Sentence 92:
+LYMH# wartość bezwzględn:4.56[10^3/ul]
+    
+
+
+Sentence 93:
+LYMPH%:62.0[%]
+    
+
+
+Sentence 94:
+MONO# wartość bezwzględn:0.51[10^3/ul]
+    MONO%:6.9[%]
+    
+
+
+Sentence 95:
+EO# wartość bezwzględna:0.17[10^3/ul]
+    
+
+
+Sentence 96:
+EO%:2.3[%]
+    BASO# wartość bezwzględn:0.02[10^3/ul]
+    
+
+
+Sentence 97:
+BASO%:0.3[%]
+    
+
+
+Sentence 98:
+NRBC %:0.1[%]
+    
+
+
+Sentence 99:
+NRBC #:0.01[10^3/ul]
+
+
+
+Sentence 100:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.61[10^3/ul]
+    
+
+
+Sentence 101:
+RBC Krwinki czerwone:4.21[10^6/ul]
+    
+
+
+Sentence 102:
+HGB Hemoglobina:12.7[g/dl]
+    
+
+
+Sentence 103:
+HCT Hematokryt:39.3[%]
+    
+
+
+Sentence 104:
+MCV wskaźnik czerwonokrw:93.3[fl]
+    
+
+
+Sentence 105:
+MCH wskaźnik czerwonokrw:30.2[pg]
+    
+
+
+Sentence 106:
+MCHC wskaźnik czerwonokr:32.3[g/dl]
+    
+
+
+Sentence 107:
+PLT z morfologii:222[10^3/ul]
+    
+
+
+Sentence 108:
+RDW-SD:45.6[fl]
+    
+
+
+Sentence 109:
+RDW-CV:13.4[%]
+    PDW:13.3[fl]
+    MPV:11.0[fl]
+    
+
+
+Sentence 110:
+P-LCR:32.7[%]
+    
+
+
+Sentence 111:
+PCT (hematokryt płytkowy:0.24[%]
+    
+
+
+Sentence 112:
+NEUTR# wartość bezwzględ:2.59[10^3/ul]
+    
+
+
+Sentence 113:
+NEUTR%:34.0[%]
+    
+
+
+Sentence 114:
+LYMH# wartość bezwzględn:4.38[10^3/ul]
+    
+
+
+Sentence 115:
+LYMPH%:57.6[%]
+    
+
+
+Sentence 116:
+MONO# wartość bezwzględn:0.49[10^3/ul]
+    
+
+
+Sentence 117:
+MONO%:6.4[%]
+    
+
+
+Sentence 118:
+EO# wartość bezwzględna:0.12[10^3/ul]
+    
+
+
+Sentence 119:
+EO%:1.6[%]
+    
+
+
+Sentence 120:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    BASO%:0.4[%]
+    
+
+
+Sentence 121:
+NRBC %:0.1[%]
+    
+
+
+Sentence 122:
+NRBC #:0.01[10^3/ul]
+
+
+
+Sentence 123:
+Rozmaz krwi obwodowej (mikroskopowy)
+    
+
+
+Sentence 124:
+Granulocyty podzielone:26[%]
+    
+
+
+Sentence 125:
+Granulocyty kwasochłonne:2[%]
+    
+
+
+Sentence 126:
+Limfocyty:64[%]
+    Monocyty:8[%]
+    
+
+
+Sentence 127:
+Opis erytrocytów::
+    anizochromia:nieznaczna
+    
+
+
+Sentence 128:
+Opis limfocytów::
+    limfocyty odczynowe:obecne
+
+
+
+Sentence 129:
+Rozmaz krwi obwodowej (mikroskopowy)
+    
+
+
+Sentence 130:
+Granulocyty podzielone:35[%]
+    
+
+
+Sentence 131:
+Granulocyty kwasochłonne:1[%]
+    
+
+
+Sentence 132:
+Limfocyty:58[%]
+    Monocyty:6[%]
+    
+
+
+Sentence 133:
+Opis limfocytów::
+    limfocyty odczynowe:liczne
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:33.3[sek]
+
+
+
+Sentence 134:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:27.1[sek]
+
+
+
+Sentence 135:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:33.1[sek]
+
+
+
+Sentence 136:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:nie krzepnie[sek]
+
+
+
+Sentence 137:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:55.5[sek]
+
+
+
+Sentence 138:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:39.0[sek]
+
+
+
+Sentence 139:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:41.0[sek]
+
+
+
+Sentence 140:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:36.3[sek]
+
+
+
+Sentence 141:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:NIE KRZEPNIE[sek]
+
+
+
+Sentence 142:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:28.3[sek]
+
+
+
+Sentence 143:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:24.4[sek]
+
+
+
+Sentence 144:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:nie krzepnie[sek]
+
+
+
+Sentence 145:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:31.2[sek]
+
+
+
+Sentence 146:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:41.8[sek]
+
+
+
+Sentence 147:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:31.5[sek]
+
+
+
+Sentence 148:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:37.1[sek]
+
+
+
+Sentence 149:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 150:
+Czas protrombinowy:44.9[sek]
+    
+
+
+Sentence 151:
+Wskaźnik PT:24.5[%]
+    
+
+
+Sentence 152:
+INR:3.91
+Czas protrombinowy (PT)
+    
+
+
+Sentence 153:
+Czas protrombinowy:14.9[sek]
+    
+
+
+Sentence 154:
+Wskaźnik PT:73.8[%]
+    
+
+
+Sentence 155:
+INR:1.34
+Czas protrombinowy (PT)
+    
+
+
+Sentence 156:
+Czas protrombinowy:24.8[sek]
+    
+
+
+Sentence 157:
+Wskaźnik PT:44.4[%]
+    
+
+
+Sentence 158:
+INR:2.20
+Czas protrombinowy (PT)
+    
+
+
+Sentence 159:
+Czas protrombinowy:60.4[sek]
+    
+
+
+Sentence 160:
+Wskaźnik PT:18.2[%]
+    
+
+
+Sentence 161:
+INR:5.22
+Czas protrombinowy (PT)
+    
+
+
+Sentence 162:
+Czas protrombinowy:22.6[sek]
+    
+
+
+Sentence 163:
+Wskaźnik PT:48.7[%]
+    
+
+
+Sentence 164:
+INR:2.01
+Czas protrombinowy (PT)
+    
+
+
+Sentence 165:
+Czas protrombinowy:15.9[sek]
+    
+
+
+Sentence 166:
+Wskaźnik PT:69.2[%]
+    
+
+
+Sentence 167:
+INR:1.43
+Czas protrombinowy (PT)
+    
+
+
+Sentence 168:
+Czas protrombinowy:13.2[sek]
+    
+
+
+Sentence 169:
+Wskaźnik PT:83.3[%]
+    
+
+
+Sentence 170:
+INR:1.19
+Czas protrombinowy (PT)
+    
+
+
+Sentence 171:
+Czas protrombinowy:20.2[sek]
+    
+
+
+Sentence 172:
+Wskaźnik PT:54.5[%]
+    
+
+
+Sentence 173:
+INR:1.80
+Czas protrombinowy (PT)
+    
+
+
+Sentence 174:
+Czas protrombinowy:30.8[sek]
+    
+
+
+Sentence 175:
+Wskaźnik PT:35.7[%]
+    
+
+
+Sentence 176:
+INR:2.71
+Czas protrombinowy (PT)
+    
+
+
+Sentence 177:
+Czas protrombinowy:42.5[sek]
+    
+
+
+Sentence 178:
+Wskaźnik PT:25.9[%]
+    
+
+
+Sentence 179:
+INR:3.71
+Badanie ogólne moczu
+    
+
+
+Sentence 180:
+barwa:żółty[ ]
+    
+
+
+Sentence 181:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 182:
+przejrzystość:niezupełna[ ]
+    
+
+
+Sentence 183:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 184:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 185:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 186:
+ciężar właściwy:1.015[ ]
+    
+
+
+Sentence 187:
+pH:6.5[ ]
+    
+
+
+Sentence 188:
+białko:nikły ślad[ ]
+    
+
+
+Sentence 189:
+urobilinogen:wzmożony ++[ ]
+    
+
+
+Sentence 190:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 191:
+erytrocyty:obecne[ ]
+    
+
+
+Sentence 192:
+leukocyty:obecne[ ]
+    
+
+
+Sentence 193:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 194:
+nabłonki płaskie:dość liczne[w preparacie]
+    
+
+
+Sentence 195:
+nabłonki okrągłe:pojedyncze[w preparacie]
+    
+
+
+Sentence 196:
+leukocyty:53 /ul[ul]
+    erytrocyty świeże i częś:28/ul[ul]
+    śluz:liczny[w preparacie]
+    bakterie:nieliczne[w preparacie]
+
+
+
+Sentence 197:
+TSH: TSH:3.22[uIU/ml]
+TSH: TSH:1.92[uIU/ml]
+
+
+
+Sentence 198:
+FT3: FT3:2.57[pg/ml]
+
+
+
+Sentence 199:
+FT4: FT4:1.08[ng/dl]
+
+
+
+Sentence 200:
+Troponina T: Troponina T:5.3[pg/ml]
+
+
+
+Sentence 201:
+Ferrytyna: Ferrytyna:207.8[ng/ml]
+
+
+
+Sentence 202:
+ALAT: ALAT:23[U/L]
+ASPAT: ASPAT:23[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 203:
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.60[mg/dl]
+
+
+
+Sentence 204:
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.54[mg/dl]
+
+
+
+Sentence 205:
+Sód (Na): Sód:138[mmol/L]
+
+
+
+Sentence 206:
+Potas (K): Potas:4.2[mmol/L]
+
+
+
+Sentence 207:
+Kreatynina + GFR
+    
+
+
+Sentence 208:
+Kreatynina w surowicy:0.74[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 209:
+MDRD ze stan:78.0[ml/min/1,73 m^2]
+
+
+
+Sentence 210:
+Kreatynina + GFR
+    
+
+
+Sentence 211:
+Kreatynina w surowicy:0.80[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 212:
+MDRD ze stan:71.3[ml/min/1,73 m^2]
+
+
+
+Sentence 213:
+Kreatynina + GFR
+    
+
+
+Sentence 214:
+Kreatynina w surowicy:0.8[mg/dl]
+    
+
+
+Sentence 215:
+eGFR wg skr.
+
+
+Sentence 216:
+MDRD ze stan:71.3[ml/min/1,73 m^2]
+
+
+
+Sentence 217:
+Magnez: Magnez:0.89[mmol/L]
+
+
+
+Sentence 218:
+Mocznik: Mocznik:29[mg/dl]
+
+
+
+Sentence 219:
+Kwas moczowy: Kwas moczowy:4.4[mg/dl]
+
+
+
+Sentence 220:
+Lipidogram
+    
+
+
+Sentence 221:
+Cholesterol całkowity:114[mg/dl]
+    
+
+
+Sentence 222:
+Cholesterol HDL:63[mg/dl]
+    
+
+
+Sentence 223:
+Cholestrol LDL:47[mg/dl]
+    
+
+
+Sentence 224:
+Triglicerydy:93[mg/dl]
+    
+
+
+Sentence 225:
+Stosunek cholesterolu HD:0.6
+Glukoza w surowicy: Glukoza w surowicy:91[mg/dl]
+
+
+
+Sentence 226:
+NT-proBNP surowica: NT-proBNP w surowicy:594[pg/ml]
+
+
+
+Sentence 227:
+------------------------------------------------
+
+
+
+Sentence 228:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 229:
+I35.0
+
+
+
+Sentence 230:
+I10
+I48
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 231:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 232:
+88.23
+
+
+
+Sentence 233:
+C55
+A01
+I81
+C32
+G11
+G21
+L43
+
+
+
+Sentence 234:
+O61
+N45
+L69
+O55
+I17
+M45
+O35
+M37
+I19
+N13
+N24
+88.721
+O69
+
+
+
+Sentence 235:
+------------------------------------------------
+
+

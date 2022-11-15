@@ -1,0 +1,719 @@
+allRelations          : 104
+oks                   : 21
+isRedundantAndRemoveds: 78
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 5
+GOOD / BAD            : 99 / 5
+Sentence 0:
+------------------------------------------------
+Wiek: 32 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:E78.9|Rozpoznanie II: |Rozpoznanie V: |Opisowo:: Hipertriglicerydemia.
+
+
+Sentence 6:
+Nadwaga.
+
+
+Sentence 7:
+Nieprawidłowa tolerancja glukozy.
+
+
+Sentence 8:
+Stłuszczenie wątroby.
+
+
+Sentence 9:
+Dna moczanowa.
+
+
+Sentence 10:
+Zaburzenia lękowe|Rozpoznanie
+
+
+Sentence 11:
+IV: |Rozpoznanie III:
+------------------------------------------------
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 12:
+Zalecenia
+•\x09dalsza opieka w poradni POZ  
+•\x09okresowa kontrola kardiologiczna i psychiatryczna
+
+
+
+Sentence 13:
+•\x09konsultacja hepatologiczna  
+•\x09okresowa kontrola ciśnienia tętniczego  
+•\x09okresowa kontrola lipidogramu – kolejna za 4-6 tygodni 
+
+R1	Dat Arg1:T12 Arg2:T9 <<REDUNDANT!!!REMOVED>>	kolejna za 4-6 tygodni -> konsultacja hepatologiczna <:REMOVED Tag2 not in the same line:> <RANK: 1> <info: start[893, 781] <type: LEFT>>
+R2	Dat Arg1:T12 Arg2:T10 <<REDUNDANT!!!REMOVED>>	kolejna za 4-6 tygodni -> okresowa kontrola ciśnienia tętniczego <:REMOVED Tag2 not in the same line:> <RANK: 1> <info: start[893, 815] <type: LEFT>>
+R3	Dat Arg1:T12 Arg2:T11 << OK >>	kolejna za 4-6 tygodni -> okresowa kontrola lipidogramu  <RANK: 3> <info: start[893, 861] <type: LEFT>>
+
+
+Sentence 14:
+•\x09dieta uboga w tłuszcze (do 15% w posiłkach) z całkowitą eliminacją cukrów prostych oraz unikaniem spożycia alkoholu 
+
+R4	Neg Arg1:T14 Arg2:T13 <<REDUNDANT!!!REMOVED>>	unikaniem -> dieta uboga w tłuszcze (do 15% w posiłkach) z całkowitą eliminacją cukrów prostych <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1010, 922] <type: LEFT>>
+R5	Neg Arg1:T14 Arg2:T15 << OK >>	unikaniem -> spożycia alkoholu  <RANK: 3> <info: start[1010, 1020] <type: RIGHT>>
+
+
+Sentence 15:
+•\x09redukcja masy ciała   
+•\x09stały, umiarkowany, aerobowy wysiłek fizyczny  
+•\x09regularne przyjmowanie leków:
+1.\x09Lipanthyl Supra 215mg 1 tabl.
+R6	Drg Arg1:T18 Arg2:T19 << OK >>	Lipanthyl Supra -> 215mg 1 tabl. rano  <RANK: 3> <info: start[1161, 1177] <type: RIGHT>>
+
+
+Sentence 16:
+rano 
+2.\x09Omacor 1g 2 tabl. rano i wieczorem 
+3.\x09Concor Cor 1.25 mg 1 tabl.
+R7	Drg Arg1:T20 Arg2:T21 << OK >>	Omacor -> 1g 2 tabl. rano i wieczorem  <RANK: 3> <info: start[1203, 1210] <type: RIGHT>>
+R8	Drg Arg1:T20 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Omacor -> 1.25 mg 1 tabl. rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1203, 1256] <type: RIGHT>>
+R9	Drg Arg1:T22 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Concor Cor -> 1g 2 tabl. rano i wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[1245, 1210] <type: LEFT>>
+R10	Drg Arg1:T22 Arg2:T23 << OK >>	Concor Cor -> 1.25 mg 1 tabl. rano  <RANK: 3> <info: start[1245, 1256] <type: RIGHT>>
+
+
+Sentence 17:
+rano
+------------------------------------------------
+
+
+
+Sentence 18:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 19:
+31-letni pacjent z dną moczanową, nieprawidłową glikemią na czczo, nieprawidłową tolerancją glukozy, hipetriglicerydemią (TG do 501 mg% - 07/2018), stłuszczeniem wątroby, podwyższonymi wartościami RR w ABPM, zaburzeniami lękowymi, nadmiernym poceniem się, dolegliwościami bólami w klatce piersiowej o charakterze ucisku i kłucia (mającymi związek ze zmianą pozycji ciała), został przyjęty do Kliniki celem diagnostyki. 
+
+R11	Inv Arg1:T32 Arg2:T29 <<REDUNDANT!!!SHOULD BE REMOVED>>	ABPM -> TG do 501 mg%  <RANK: 2> <info: start[1603, 1523] <type: LEFT>>
+R12	Inv Arg1:T32 Arg2:T31 << OK >>	ABPM -> podwyższonymi wartościami RR  <RANK: 3> <info: start[1603, 1572] <type: LEFT>>
+R13	Dat Arg1:T28 Arg2:T34 <<REDUNDANT!!!REMOVED>>	07/2018 -> nadmiernym poceniem się <:REMOVED other second tag between (right) (dat):> <RANK: 2> <info: start[1539, 1632] <type: RIGHT>>
+R14	Dat Arg1:T28 Arg2:T35 <<REDUNDANT!!!REMOVED>>	07/2018 -> dolegliwościami bólami w klatce piersiowej o charakterze ucisku i kłucia (mającymi związek ze zmianą pozycji ciała) <:REMOVED other second tag between (right) (dat):> <RANK: 2> <info: start[1539, 1657] <type: RIGHT>>
+R15	Dat Arg1:T28 Arg2:T24 <<REDUNDANT!!!SHOULD BE REMOVED>>	07/2018 -> dną moczanową  <RANK: 2> <info: start[1539, 1420] <type: LEFT>>
+R16	Dat Arg1:T28 Arg2:T25 <<REDUNDANT!!!SHOULD BE REMOVED>>	07/2018 -> nieprawidłową glikemią na czczo  <RANK: 2> <info: start[1539, 1435] <type: LEFT>>
+R17	Dat Arg1:T28 Arg2:T26 <<REDUNDANT!!!SHOULD BE REMOVED>>	07/2018 -> nieprawidłową tolerancją glukozy  <RANK: 2> <info: start[1539, 1468] <type: LEFT>>
+R18	Dat Arg1:T28 Arg2:T27 <<REDUNDANT!!!SHOULD BE REMOVED>>	07/2018 -> hipetriglicerydemią  <RANK: 3> <info: start[1539, 1502] <type: LEFT>>
+R19	Dat Arg1:T28 Arg2:T30 <<REDUNDANT!!!REMOVED>>	07/2018 -> stłuszczeniem wątroby <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1539, 1549] <type: RIGHT>>
+R20	Dat Arg1:T28 Arg2:T33 <<REDUNDANT!!!REMOVED>>	07/2018 -> zaburzeniami lękowymi <:REMOVED other second tag between (right) (dat):> <RANK: 2> <info: start[1539, 1609] <type: RIGHT>>
+R21	Dat Arg1:T28 Arg2:T32 <<REDUNDANT!!!REMOVED>>	07/2018 -> ABPM <:REMOVED other second tag between (right) (dat):> <RANK: 2> <info: start[1539, 1603] <type: RIGHT>>
+
+
+Sentence 20:
+Neguje zasłabnięcia, duszności, typowe bóle w klatce piersiowej.
+
+R22	Neg Arg1:T36 Arg2:T37 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[1821, 1828] <type: RIGHT>>
+R23	Neg Arg1:T36 Arg2:T38 << OK >>	Neguje -> duszności  <RANK: 2> <info: start[1821, 1842] <type: RIGHT>>
+R24	Neg Arg1:T36 Arg2:T39 << OK >>	Neguje -> typowe bóle w klatce piersiowej  <RANK: 2> <info: start[1821, 1853] <type: RIGHT>>
+
+
+Sentence 21:
+Przebyte operacje: neguje
+Przebyte choroby zakaźne - WZW ( - ) , borelioza ( - ), gruźlica (-)
+Wywiad rodzinny: dziadek - MI w wieku ok. 65-70 lat
+
+R25	Neg Arg1:T41 Arg2:T42 <<REDUNDANT!!!REMOVED>>	neguje -> WZW <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1905, 1939] <type: RIGHT>>
+R26	Neg Arg1:T41 Arg2:T43 <<REDUNDANT!!!REMOVED>>	neguje -> borelioza <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1905, 1951] <type: RIGHT>>
+R27	Neg Arg1:T41 Arg2:T44 <<REDUNDANT!!!REMOVED>>	neguje -> gruźlica <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1905, 1968] <type: RIGHT>>
+R28	Neg Arg1:T41 Arg2:T48 <<REDUNDANT!!!REMOVED>>	neguje -> MI <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1905, 2008] <type: RIGHT>>
+R29	Neg Arg1:T41 Arg2:T40 << OK >>	neguje -> Przebyte operacje  <RANK: 3> <info: start[1905, 1886] <type: LEFT>>
+R30	Neg Arg1:T45 Arg2:T42 << OK >>	( - ) -> WZW  <RANK: 3> <info: start[1943, 1939] <type: LEFT>>
+R31	Neg Arg1:T45 Arg2:T43 <<REDUNDANT!!!REMOVED>>	( - ) -> borelioza <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1943, 1951] <type: RIGHT>>
+R32	Neg Arg1:T45 Arg2:T44 <<REDUNDANT!!!REMOVED>>	( - ) -> gruźlica <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1943, 1968] <type: RIGHT>>
+R33	Neg Arg1:T45 Arg2:T48 <<REDUNDANT!!!REMOVED>>	( - ) -> MI <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1943, 2008] <type: RIGHT>>
+R34	Neg Arg1:T45 Arg2:T40 <<REDUNDANT!!!REMOVED>>	( - ) -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1943, 1886] <type: LEFT>>
+R35	Neg Arg1:T46 Arg2:T42 <<REDUNDANT!!!REMOVED>>	( - ) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1961, 1939] <type: LEFT>>
+R36	Neg Arg1:T46 Arg2:T43 << OK >>	( - ) -> borelioza  <RANK: 3> <info: start[1961, 1951] <type: LEFT>>
+R37	Neg Arg1:T46 Arg2:T44 <<REDUNDANT!!!REMOVED>>	( - ) -> gruźlica <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1961, 1968] <type: RIGHT>>
+R38	Neg Arg1:T46 Arg2:T48 <<REDUNDANT!!!REMOVED>>	( - ) -> MI <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1961, 2008] <type: RIGHT>>
+R39	Neg Arg1:T46 Arg2:T40 <<REDUNDANT!!!REMOVED>>	( - ) -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1961, 1886] <type: LEFT>>
+R40	Neg Arg1:T47 Arg2:T42 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1977, 1939] <type: LEFT>>
+R41	Neg Arg1:T47 Arg2:T43 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1977, 1951] <type: LEFT>>
+R42	Neg Arg1:T47 Arg2:T44 << OK >>	(-) -> gruźlica  <RANK: 3> <info: start[1977, 1968] <type: LEFT>>
+R43	Neg Arg1:T47 Arg2:T48 <<REDUNDANT!!!REMOVED>>	(-) -> MI <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1977, 2008] <type: RIGHT>>
+R44	Neg Arg1:T47 Arg2:T40 <<REDUNDANT!!!REMOVED>>	(-) -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1977, 1886] <type: LEFT>>
+R45	Dat Arg1:T49 Arg2:T42 <<REDUNDANT!!!REMOVED>>	w wieku ok. 65-70 lat -> WZW <:REMOVED Tag2 not in the same line:> <RANK: 0> <info: start[2011, 1939] <type: LEFT>>
+R46	Dat Arg1:T49 Arg2:T43 <<REDUNDANT!!!REMOVED>>	w wieku ok. 65-70 lat -> borelioza <:REMOVED Tag2 not in the same line:> <RANK: 0> <info: start[2011, 1951] <type: LEFT>>
+R47	Dat Arg1:T49 Arg2:T44 <<REDUNDANT!!!REMOVED>>	w wieku ok. 65-70 lat -> gruźlica <:REMOVED Tag2 not in the same line:> <RANK: 1> <info: start[2011, 1968] <type: LEFT>>
+R48	Dat Arg1:T49 Arg2:T48 << OK >>	w wieku ok. 65-70 lat -> MI  <RANK: 3> <info: start[2011, 2008] <type: LEFT>>
+R49	Dat Arg1:T49 Arg2:T40 <<REDUNDANT!!!REMOVED>>	w wieku ok. 65-70 lat -> Przebyte operacje <:REMOVED other second tag between (left):> <RANK: 0> <info: start[2011, 1886] <type: LEFT>>
+
+
+Sentence 22:
+Palenie tytoniu: nie
+Inne używki: narkotyki (kokaina) - ostatni raz 2-3 lata temu, alkohol w przeszłości sporadycznie, obecnie wcale nie spożywa
+Uczulenia: neguje
+Stan społeczny: warunki mieszkaniowe dobre , mieszka z partnerką
+Leki: jak w IKZL
+
+R50	Neg Arg1:T51 Arg2:T60 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2050, 2178] <type: RIGHT>>
+R51	Neg Arg1:T51 Arg2:T50 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[2050, 2033] <type: LEFT>>
+R52	Neg Arg1:T51 Arg2:T52 <<REDUNDANT!!!REMOVED>>	nie -> narkotyki (kokaina) <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2050, 2067] <type: RIGHT>>
+R53	Neg Arg1:T51 Arg2:T54 <<REDUNDANT!!!REMOVED>>	nie -> alkohol <:REMOVED many second tags on the right:> <RANK: 0> <info: start[2050, 2116] <type: RIGHT>>
+R54	Neg Arg1:T51 Arg2:T56 <<REDUNDANT!!!REMOVED>>	nie -> sporadycznie <:REMOVED many second tags on the right:> <RANK: 0> <info: start[2050, 2138] <type: RIGHT>>
+R55	Neg Arg1:T51 Arg2:T59 <<REDUNDANT!!!REMOVED>>	nie -> spożywa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2050, 2170] <type: RIGHT>>
+R56	Neg Arg1:T51 Arg2:T62 <<REDUNDANT!!!REMOVED>>	nie -> warunki mieszkaniowe dobre <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2050, 2212] <type: RIGHT>>
+R57	Neg Arg1:T51 Arg2:T63 <<REDUNDANT!!!REMOVED>>	nie -> mieszka z partnerką <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2050, 2241] <type: RIGHT>>
+R58	Neg Arg1:T51 Arg2:T64 <<REDUNDANT!!!REMOVED>>	nie -> Leki: jak w IKZL <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2050, 2261] <type: RIGHT>>
+R59	Neg Arg1:T58 Arg2:T60 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED other second tag between (right):> <RANK: 1> <info: start[2166, 2178] <type: RIGHT>>
+R60	Neg Arg1:T58 Arg2:T50 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2166, 2033] <type: LEFT>>
+R61	Neg Arg1:T58 Arg2:T52 <<REDUNDANT!!!REMOVED>>	nie -> narkotyki (kokaina) <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2166, 2067] <type: LEFT>>
+R62	Neg Arg1:T58 Arg2:T54 <<REDUNDANT!!!REMOVED>>	nie -> alkohol <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2166, 2116] <type: LEFT>>
+R63	Neg Arg1:T58 Arg2:T56 <<REDUNDANT!!!REMOVED>>	nie -> sporadycznie <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2166, 2138] <type: LEFT>>
+R64	Neg Arg1:T58 Arg2:T59 << OK >>	nie -> spożywa  <RANK: 3> <info: start[2166, 2170] <type: RIGHT>>
+R65	Neg Arg1:T58 Arg2:T62 <<REDUNDANT!!!REMOVED>>	nie -> warunki mieszkaniowe dobre <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2166, 2212] <type: RIGHT>>
+R66	Neg Arg1:T58 Arg2:T63 <<REDUNDANT!!!REMOVED>>	nie -> mieszka z partnerką <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2166, 2241] <type: RIGHT>>
+R67	Neg Arg1:T58 Arg2:T64 <<REDUNDANT!!!REMOVED>>	nie -> Leki: jak w IKZL <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2166, 2261] <type: RIGHT>>
+R68	Neg Arg1:T61 Arg2:T60 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[2189, 2178] <type: LEFT>>
+R69	Neg Arg1:T61 Arg2:T50 <<REDUNDANT!!!REMOVED>>	neguje -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2189, 2033] <type: LEFT>>
+R70	Neg Arg1:T61 Arg2:T52 <<REDUNDANT!!!REMOVED>>	neguje -> narkotyki (kokaina) <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2189, 2067] <type: LEFT>>
+R71	Neg Arg1:T61 Arg2:T54 <<REDUNDANT!!!REMOVED>>	neguje -> alkohol <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2189, 2116] <type: LEFT>>
+R72	Neg Arg1:T61 Arg2:T56 <<REDUNDANT!!!REMOVED>>	neguje -> sporadycznie <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2189, 2138] <type: LEFT>>
+R73	Neg Arg1:T61 Arg2:T59 <<REDUNDANT!!!REMOVED>>	neguje -> spożywa <:REMOVED other second tag between (left):> <RANK: 1> <info: start[2189, 2170] <type: LEFT>>
+R74	Neg Arg1:T61 Arg2:T62 <<REDUNDANT!!!REMOVED>>	neguje -> warunki mieszkaniowe dobre <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2189, 2212] <type: RIGHT>>
+R75	Neg Arg1:T61 Arg2:T63 <<REDUNDANT!!!REMOVED>>	neguje -> mieszka z partnerką <:REMOVED many second tags on the right:> <RANK: 0> <info: start[2189, 2241] <type: RIGHT>>
+R76	Neg Arg1:T61 Arg2:T64 <<REDUNDANT!!!REMOVED>>	neguje -> Leki: jak w IKZL <:REMOVED other second tag between (right):> <RANK: 0> <info: start[2189, 2261] <type: RIGHT>>
+R77	Dat Arg1:T53 Arg2:T60 <<REDUNDANT!!!REMOVED>>	ostatni raz 2-3 lata temu -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2089, 2178] <type: RIGHT>>
+R78	Dat Arg1:T53 Arg2:T50 <<REDUNDANT!!!REMOVED>>	ostatni raz 2-3 lata temu -> Palenie tytoniu <:REMOVED Tag2 not in the same line:> <RANK: 1> <info: start[2089, 2033] <type: LEFT>>
+R79	Dat Arg1:T53 Arg2:T52 << OK >>	ostatni raz 2-3 lata temu -> narkotyki (kokaina)  <RANK: 3> <info: start[2089, 2067] <type: LEFT>>
+R80	Dat Arg1:T53 Arg2:T54 <<REDUNDANT!!!REMOVED>>	ostatni raz 2-3 lata temu -> alkohol <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2089, 2116] <type: RIGHT>>
+R81	Dat Arg1:T53 Arg2:T56 <<REDUNDANT!!!REMOVED>>	ostatni raz 2-3 lata temu -> sporadycznie <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2089, 2138] <type: RIGHT>>
+R82	Dat Arg1:T53 Arg2:T59 <<REDUNDANT!!!REMOVED>>	ostatni raz 2-3 lata temu -> spożywa <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2089, 2170] <type: RIGHT>>
+R83	Dat Arg1:T53 Arg2:T62 <<REDUNDANT!!!REMOVED>>	ostatni raz 2-3 lata temu -> warunki mieszkaniowe dobre <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2089, 2212] <type: RIGHT>>
+R84	Dat Arg1:T53 Arg2:T63 <<REDUNDANT!!!REMOVED>>	ostatni raz 2-3 lata temu -> mieszka z partnerką <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2089, 2241] <type: RIGHT>>
+R85	Dat Arg1:T53 Arg2:T64 <<REDUNDANT!!!REMOVED>>	ostatni raz 2-3 lata temu -> Leki: jak w IKZL <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2089, 2261] <type: RIGHT>>
+R86	Dat Arg1:T55 Arg2:T60 <<REDUNDANT!!!REMOVED>>	w przeszłości -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2124, 2178] <type: RIGHT>>
+R87	Dat Arg1:T55 Arg2:T50 <<REDUNDANT!!!REMOVED>>	w przeszłości -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2124, 2033] <type: LEFT>>
+R88	Dat Arg1:T55 Arg2:T52 <<REDUNDANT!!!REMOVED>>	w przeszłości -> narkotyki (kokaina) <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2124, 2067] <type: LEFT>>
+R89	Dat Arg1:T55 Arg2:T54 << OK >>	w przeszłości -> alkohol  <RANK: 3> <info: start[2124, 2116] <type: LEFT>>
+R90	Dat Arg1:T55 Arg2:T56 << OK >>	w przeszłości -> sporadycznie  <RANK: 3> <info: start[2124, 2138] <type: RIGHT>>
+R91	Dat Arg1:T55 Arg2:T59 <<REDUNDANT!!!REMOVED>>	w przeszłości -> spożywa <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2124, 2170] <type: RIGHT>>
+R92	Dat Arg1:T55 Arg2:T62 <<REDUNDANT!!!REMOVED>>	w przeszłości -> warunki mieszkaniowe dobre <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2124, 2212] <type: RIGHT>>
+R93	Dat Arg1:T55 Arg2:T63 <<REDUNDANT!!!REMOVED>>	w przeszłości -> mieszka z partnerką <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2124, 2241] <type: RIGHT>>
+R94	Dat Arg1:T55 Arg2:T64 <<REDUNDANT!!!REMOVED>>	w przeszłości -> Leki: jak w IKZL <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2124, 2261] <type: RIGHT>>
+R95	Dat Arg1:T57 Arg2:T60 <<REDUNDANT!!!REMOVED>>	obecnie -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2152, 2178] <type: RIGHT>>
+R96	Dat Arg1:T57 Arg2:T50 <<REDUNDANT!!!REMOVED>>	obecnie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2152, 2033] <type: LEFT>>
+R97	Dat Arg1:T57 Arg2:T52 <<REDUNDANT!!!REMOVED>>	obecnie -> narkotyki (kokaina) <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2152, 2067] <type: LEFT>>
+R98	Dat Arg1:T57 Arg2:T54 <<REDUNDANT!!!REMOVED>>	obecnie -> alkohol <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2152, 2116] <type: LEFT>>
+R99	Dat Arg1:T57 Arg2:T56 <<REDUNDANT!!!REMOVED>>	obecnie -> sporadycznie <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2152, 2138] <type: LEFT>>
+R100	Dat Arg1:T57 Arg2:T59 << OK >>	obecnie -> spożywa  <RANK: 3> <info: start[2152, 2170] <type: RIGHT>>
+R101	Dat Arg1:T57 Arg2:T62 <<REDUNDANT!!!REMOVED>>	obecnie -> warunki mieszkaniowe dobre <:REMOVED other second tag between (right) (dat):> <RANK: 1> <info: start[2152, 2212] <type: RIGHT>>
+R102	Dat Arg1:T57 Arg2:T63 <<REDUNDANT!!!REMOVED>>	obecnie -> mieszka z partnerką <:REMOVED many second tags on the right:> <RANK: 0> <info: start[2152, 2241] <type: RIGHT>>
+R103	Dat Arg1:T57 Arg2:T64 <<REDUNDANT!!!REMOVED>>	obecnie -> Leki: jak w IKZL <:REMOVED many second tags on the right:> <RANK: 0> <info: start[2152, 2261] <type: RIGHT>>
+R104	Alg Arg1:T60 Arg2:T64 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Leki: jak w IKZL <:REMOVED other second tag between (right):> <RANK: 0> <info: start[2178, 2261] <type: RIGHT>>
+
+
+Sentence 23:
+------------------------------------------------
+
+
+
+Sentence 24:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 25:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.38[10^3/ul]
+    
+
+
+Sentence 26:
+RBC Krwinki czerwone:4.77[10^6/ul]
+    
+
+
+Sentence 27:
+HGB Hemoglobina:14.5[g/dl]
+    
+
+
+Sentence 28:
+HCT Hematokryt:42.1[%]
+    
+
+
+Sentence 29:
+MCV wskaźnik czerwonokrw:88.3[fl]
+    
+
+
+Sentence 30:
+MCH wskaźnik czerwonokrw:30.4[pg]
+    
+
+
+Sentence 31:
+MCHC wskaźnik czerwonokr:34.4[g/dl]
+    
+
+
+Sentence 32:
+PLT z morfologii:239[10^3/ul]
+    
+
+
+Sentence 33:
+RDW-SD:39.8[fl]
+    
+
+
+Sentence 34:
+RDW-CV:12.3[%]
+    PDW:15.8[fl]
+    MPV:11.7[fl]
+    P-LCR:38.9[%]
+    
+
+
+Sentence 35:
+PCT (hematokryt płytkowy:0.28[%]
+    
+
+
+Sentence 36:
+NEUTR# wartość bezwzględ:2.38[10^3/ul]
+    
+
+
+Sentence 37:
+NEUTR%:37.3[%]
+    
+
+
+Sentence 38:
+LYMH# wartość bezwzględn:3.24[10^3/ul]
+    
+
+
+Sentence 39:
+LYMPH%:50.8[%]
+    
+
+
+Sentence 40:
+MONO# wartość bezwzględn:0.73[10^3/ul]
+    
+
+
+Sentence 41:
+MONO%:11.4[%]
+    
+
+
+Sentence 42:
+EO# wartość bezwzględna:0.00[10^3/ul]
+    
+
+
+Sentence 43:
+EO%:0.0[%]
+    BASO# wartość bezwzględn:0.03[10^3/ul]
+    
+
+
+Sentence 44:
+BASO%:0.5[%]
+    
+
+
+Sentence 45:
+NRBC %:0.0[%]
+    
+
+
+Sentence 46:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 47:
+Odczyn biernackiego OB: WSE - współczynnik sedym:3[mm/ h]
+
+
+
+Sentence 48:
+Badanie ogólne moczu
+    
+
+
+Sentence 49:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 50:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 51:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 52:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 53:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 54:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 55:
+ciężar właściwy:1.016[ ]
+    
+
+
+Sentence 56:
+pH:6.5[ ]
+    
+
+
+Sentence 57:
+białko:nieobecne[ ]
+    
+
+
+Sentence 58:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 59:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 60:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 61:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 62:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 63:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 64:
+leukocyty:3 /ul[ul]
+    śluz:nieliczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 65:
+TSH: TSH:1.38[uIU/ml]
+
+
+
+Sentence 66:
+FT3: FT3:3.05[pg/ml]
+
+
+
+Sentence 67:
+FT4: FT4:0.99[ng/dl]
+
+
+
+Sentence 68:
+Troponina T: Troponina T:5.4[pg/ml]
+
+
+
+Sentence 69:
+Ferrytyna: Ferrytyna:252.7[ng/ml]
+
+
+
+Sentence 70:
+HIV Ag/Ab: HIV Ag/Ab:niereaktywny
+ALAT: ALAT:26[U/L]
+ASPAT: ASPAT:32[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 71:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 72:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 73:
+Kreatynina + GFR
+    
+
+
+Sentence 74:
+Kreatynina w surowicy:0.97[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 75:
+MDRD ze stan:90.3[ml/min/1,73 m^2]
+
+
+
+Sentence 76:
+Mocznik: Mocznik:36[mg/dl]
+
+
+
+Sentence 77:
+Wapń całkowity: Wapń całkowity:2.46[mmol/L]
+
+
+
+Sentence 78:
+Gospodarka żelazem
+    Żelazo:85[ug/dl]
+    
+
+
+Sentence 79:
+TIBC (Całkowita zdolność:420[ug/dl]
+    
+
+
+Sentence 80:
+UIBC (Utajona zdolność w:335[ug/dl]
+    
+
+
+Sentence 81:
+Wskaźnik wysycenia Fe:20[%]
+
+
+
+Sentence 82:
+Kwas moczowy: Kwas moczowy:5.0[mg/dl]
+
+
+
+Sentence 83:
+Kwas moczowy: Kwas moczowy:4.9[mg/dl]
+
+
+
+Sentence 84:
+Lipidogram
+    
+
+
+Sentence 85:
+Cholesterol całkowity:215[mg/dl]
+    
+
+
+Sentence 86:
+Cholesterol HDL:27[mg/dl]
+    
+
+
+Sentence 87:
+Cholestrol LDL:86[mg/dl]
+    
+
+
+Sentence 88:
+Triglicerydy:497[mg/dl]
+    
+
+
+Sentence 89:
+Stosunek cholesterolu HD:0.1
+Glukoza w surowicy: Glukoza w surowicy:90[mg/dl]
+
+
+
+Sentence 90:
+Przeciwciała przeciw antygenom jądrowym-test ANA profil
+    Anty-nucleosome Ab:nie wykryto ( - )
+    Anty-Sm Ab:nie wykryto ( - )
+    Anty-RNP/Ab:nie wykryto ( - )
+    Anty-SSA(Ro60)Ab:nie wykryto ( - )
+    Anty-Ro52 Ab:nie wykryto ( - )
+    Anty-La/SS-B Ab:nie wykryto ( - )
+    
+
+
+Sentence 91:
+Anty-Jo-1Ab:nie wykryto ( - )
+    Anty-Scl-70 Ab:nie wykryto ( - )
+    Anty-CENP B Ab:nie wykryto ( - )
+    
+
+
+Sentence 92:
+Anty-PCNA Ab:nie wykryto ( - )
+    
+
+
+Sentence 93:
+Anty RibP. Ab:nie wykryto ( - )
+    Anty-DSF-70 Ab:nie wykryto ( - )
+Kortyzol 8:00: Kortyzol:18.0[ug/dl]
+
+
+
+Sentence 94:
+Kortyzol 17:00: Kortyzol 17:00:5.8[ug/dl]
+
+
+
+Sentence 95:
+Kortyzol 24:00: Kortyzol 24:00:1.2[ug/dl]
+
+
+
+Sentence 96:
+Glukoza 0 min.: Glukoza 0 min.:89[mg/dl]
+
+
+
+Sentence 97:
+Glukoza 120 min.: Glukoza 120 min.:145[mg/dl]
+
+
+
+Sentence 98:
+Wapń w moczu (Ca-U): Wapń w moczu:6.0[mmol/L]
+
+
+
+Sentence 99:
+NT-proBNP surowica
+    NT-proBNP w surowicy:
+    5.00[pg/ml]
+
+
+
+Sentence 100:
+Test zimnej flotacji
+    
+
+
+Sentence 101:
+Test zimnej flotacji:Ujemny
+    Uwagi do opisu:
+------------------------------------------------
+
+
+
+Sentence 102:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 103:
+I49.8
+E78.8
+------------------------------------------------
+------------------------------------------------
+ICD9
+------------------------------------------------
+
+
+
+Sentence 104:
+C55
+A01
+I81
+C59
+L43
+
+
+
+Sentence 105:
+M31
+O61
+87.440
+N45
+L69
+O55
+I17
+O77
+
+
+
+Sentence 106:
+M45
+O21
+M37
+I19
+O35
+
+
+
+Sentence 107:
+N13
+O69
+88.761
+F91
+------------------------------------------------
+
+

@@ -1,0 +1,114 @@
+T1	Condition 449 489	Ciężka niedomykalność zastawki aortalnej
+N1	Reference T1 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T2	Condition 491 532	Umiarkowane poszerzenie aorty wstępującej
+T3	Condition 534 604	Czynnościowa stenoza zastawki mitralnej - restrykcja przedniego płatka
+T4	Condition 606 654	Niewydolność serca z zachowaną funkcją skurczową
+N2	Reference T4 ICD10:I50.9	Niewydolność serca, nieokreślona
+T5	Condition 675 710	Przerost ekscentryczny lewej komory
+N3	Reference T5 ICD10:I42.2	Inne kardiomiopatie przerostowe
+T6	Condition 712 782	Arytmia komorowa pod postacią licznych dodatkowych pobudzeń komorowych
+N4	Reference T6 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T7	Condition 785 848	nieutrwalonych częstoskurczów komorowych związanych z wysiłkiem
+N5	Reference T7 ICD10:I47.2	Częstoskurcz komorowy
+T8	Condition 850 890	Podejrzenie choroby niedokrwiennej serca
+A1	Source T8 Declared
+N6	Reference T8 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T9	Condition 892 919	Cechy miażdżycy uogólnionej
+N7	Reference T9 ICD10:I70.9	Miażdżyca uogólniona i nieokreślona
+T10	Condition 921 952	Nadciśnienie tętnicze I* wg WHO
+N8	Reference T10 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T11	Condition 954 965	Osteoporoza
+A2	Status T11 Historical_Insignificant
+N9	Reference T11 ICD10:M81.9	Osteoporoza, nieokreślona
+T12	Condition 979 1013	Rozrost łagodny gruczołu krokowego
+N10	Reference T12 ICD10:N40	Rozrost gruczołu krokowego
+N11	Reference T3 ICD10:I34.2	Niereumatyczne zwężenie zastawki mitralnej
+T13	Treatment 1135 1191	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T14	Treatment 1205 1263	pilna hospitalizacja celem konsultacji Kardiochirurgicznej
+T15	Treatment 1274 1320	kwalifikacji do AVR i wykonania koronarografii
+T16	Behaviour 1346 1396	Dieta lekkostrawna, niskocholesterolowa, małosolna
+T17	Investigation 1403 1494	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T18	Date 1495 1506	co 6-8 tyg.
+R1	Dat Arg1:T18 Arg2:T17	
+T19	Investigation 1519 1575	Systematyczna kontrola ciśnienia tętniczego krwi i tętna
+T20	Behaviour 1591 1650	wysiłku fizycznego do czasu konsultacji kardiochirurgicznej
+T21	Negation 1582 1590	Unikanie
+R2	Neg Arg1:T21 Arg2:T20	
+T22	Drug 1661 1666	Acard
+T23	Drug_dose 1667 1692	75 mg 1x1 tabl. wieczorem
+T24	Drug 1693 1699	Atoris
+T25	Drug_dose 1700 1725	20 mg 1x1 tabl. wieczorem
+T26	Drug 1726 1733	Tritace
+T27	Drug_dose 1734 1758	5 mg 1x1 tabl. wieczorem
+T28	Drug 1759 1766	Sobycor
+T29	Drug_dose 1767 1788	2,5 mg 1x1 tabl. rano
+T30	Drug 1789 1798	Nitromint
+T31	Drug_dose 1799 1833	1-2 dawki w razie bólu dławicowego
+T32	Drug 1835 1845	Omnic Ocas
+T33	Drug_dose 1846 1867	0,4 mg 1x1 tabl. rano
+R3	Drg Arg1:T22 Arg2:T23	
+R4	Drg Arg1:T24 Arg2:T25	
+R5	Drg Arg1:T26 Arg2:T27	
+R6	Drg Arg1:T28 Arg2:T29	
+R7	Drg Arg1:T30 Arg2:T31	
+R8	Drg Arg1:T32 Arg2:T33	
+T34	Condition 2047 2070	nadciśnieniem tętniczym
+N12	Reference T34 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T35	Condition 2072 2083	osteoporozą
+A3	Status T35 Historical_Insignificant
+N13	Reference T35 ICD10:M81.9	Osteoporoza, nieokreślona
+T36	Condition 2097 2124	rozrostem łagodnym prostaty
+N14	Reference T36 ICD10:N40	Rozrost gruczołu krokowego
+T37	Condition 2128 2169	izolowaną, dużą IA klasy C1/C2 wg AHA ACC
+N15	Reference T37 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T38	Investigation 2242 2245	TEE
+T39	Negation 2248 2254	Neguje
+T40	Symptom 2255 2267	zasłabnięcia
+T41	Symptom 2269 2278	duszności
+N16	Reference T41 ICD10:R06.0	Duszność
+T42	Symptom 2280 2311	typowe bóle w klatce piersiowej
+N17	Reference T42 ICD10:R07.2	Ból w okolicy przedsercowej
+T43	Treatment 2313 2330	Przebyte operacje
+N18	Reference T43 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T44	Negation 2333 2339	neguje
+T45	Condition 2367 2370	WZW
+N19	Reference T45 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T46	Condition 2379 2388	borelioza
+N20	Reference T46 ICD10:A69.2	Choroba z Lyme
+T47	Condition 2396 2404	gruźlica
+N21	Reference T47 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T48	Negation 2371 2376	( - )
+T49	Negation 2389 2394	( - )
+T50	Negation 2405 2408	(-)
+T51	Condition 2433 2451	chorowała na serce
+A4	Status T51 Family
+N22	Reference T51 ICD10:I51.9	Choroba serca, nieokreślona
+T52	Behaviour 2482 2497	Palenie tytoniu
+N23	Reference T52 ICD10:Z72.0	Używanie tytoniu
+T53	Negation 2499 2502	nie
+T54	Behaviour 2504 2515	palił tytoń
+N24	Reference T54 ICD10:Z72.0	Używanie tytoniu
+T55	Date 2516 2529	w przeszłości
+R9	Neg Arg1:T53 Arg2:T52	
+R10	Dat Arg1:T55 Arg2:T54	
+R11	Neg Arg1:T39 Arg2:T40	
+R12	Neg Arg1:T39 Arg2:T41	
+R13	Neg Arg1:T39 Arg2:T42	
+R14	Neg Arg1:T44 Arg2:T43	
+R15	Neg Arg1:T48 Arg2:T45	
+R16	Neg Arg1:T49 Arg2:T46	
+R17	Neg Arg1:T50 Arg2:T47	
+T56	Behaviour 2531 2542	Inne używki
+T57	Negation 2544 2547	nie
+T58	Condition 2548 2557	Uczulenia
+N25	Reference T58 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T59	Negation 2559 2565	neguje
+T60	Behaviour 2582 2608	warunki mieszkaniowe dobre
+T61	Behaviour 2611 2623	mieszka żoną
+T62	Drug 2624 2640	Leki: jak w IKZL
+R18	Neg Arg1:T57 Arg2:T56	
+R19	Neg Arg1:T59 Arg2:T58	
+T63	Symptom 2172 2188	I klasie wg NYHA
+N26	Reference T63 ICD10:I50	Niewydolność serca
+T64	Symptom 657 673	I klasie wg NYHA
+N27	Reference T64 ICD10:I50	Niewydolność serca

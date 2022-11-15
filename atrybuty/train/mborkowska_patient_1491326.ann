@@ -1,0 +1,94 @@
+T1	Condition 439 455	Stenoza aortalna
+N1	Reference T1 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T2	Condition 1072 1184	Złożona wada zastawki aortalnej pod postacią umiarkowanej stenozy z łagodną niedomykalnością w II klasie wg NYHA
+N2	Reference T2 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T3	Investigation 722 725	EKG
+T5	Investigation_result 1262 1281	CHA2DS2-VASc =4 pkt
+T7	Investigation_result 1283 1297	HAS-BLED=1 pkt
+T8	Condition 1303 1338	Łagodna niedokrwistość normocytarna
+N3	Reference T8 ICD10:D50.9	Niedokrwistość z niedoboru żelaza, nieokreślona
+T9	Condition 1209 1260	Utrwalone migotanie przedsionków w I klasie wg EHRA
+N4	Reference T9 ICD10:I48	Migotanie i trzepotanie przedsionków
+T10	Condition 1340 1345	Astma
+N5	Reference T10 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T11	Condition 1347 1376	Choroba zwyrodnieniowa stawów
+N6	Reference T11 ICD10:M19	Inne zwyrodnienia stawów
+T12	Condition 1378 1383	Zaćma
+N7	Reference T12 ICD10:H25	Zaćma starcza
+T13	Condition 1385 1413	Obustronne torbiele jajników
+T14	Condition 457 478	Nadciśnienie tętnicze
+N9	Reference T14 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T15	Condition 480 502	Migotanie przedsionków
+N10	Reference T15 ICD10:I48	Migotanie i trzepotanie przedsionków
+T16	Condition 1186 1207	Nadciśnienie tętnicze
+N11	Reference T16 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T17	Condition 828 853	utrwalone migotanie przed
+N12	Reference T17 ICD10:I48	Migotanie i trzepotanie przedsionków
+T18	Condition 1589 1619	obustronnych torbieli jajników
+N13	Reference T18 ICD10:N83.2	
+N8	Reference T13 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T19	Condition 1629 1634	2 PDN
+T20	Condition 1655 1660	astma
+N14	Reference T20 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T21	Condition 1662 1683	nadciśnienie tętnicze
+N15	Reference T21 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T22	Condition 1685 1712	choroba niedokrwienna serca
+N16	Reference T22 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T23	Condition 1713 1723	Poronienia
+N17	Reference T23 ICD10:O03	Poronienie samoistne
+T24	Negation 1724 1730	neguje
+R3	Neg Arg1:T24 Arg2:T23	
+T25	Drug 784 795	bisoprololu
+T26	Condition 1875 1880	astmą
+N18	Reference T26 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T27	Condition 1882 1911	chorobą zwyrodnieniową stawów
+N19	Reference T27 ICD10:M19	Inne zwyrodnienia stawów
+T28	Condition 1913 1918	zaćmą
+N20	Reference T28 ICD10:H25	Zaćma starcza
+T29	Drug 2436 2443	Digoxin
+T30	Drug_dose 2444 2450	250ucg
+R4	Drg Arg1:T29 Arg2:T30	
+T31	Drug 2452 2460	Spironol
+T32	Drug_dose 2461 2466	25 mg
+R5	Drg Arg1:T31 Arg2:T32	
+T33	Drug 2468 2474	Doreta
+T34	Drug_dose 2475 2490	37,5 mg +325 mg
+R6	Drg Arg1:T33 Arg2:T34	
+T35	Drug 2492 2500	Hygroton
+T36	Drug_dose 2501 2506	50 mg
+R7	Drg Arg1:T35 Arg2:T36	
+T37	Drug 2508 2516	Berodual
+T38	Drug 2518 2526	Polocard
+T39	Drug_dose 2527 2532	75 mg
+R8	Drg Arg1:T38 Arg2:T39	
+T40	Drug 2534 2545	Metocard ZK
+T41	Drug_dose 2546 2553	47,5 mg
+R9	Drg Arg1:T40 Arg2:T41	
+T42	Drug 2555 2564	Egiramlon
+T43	Drug_dose 2565 2577	10 mg + 5 mg
+R10	Drg Arg1:T42 Arg2:T43	
+T44	Drug 2579 2585	Nebbud
+T45	Drug_dose 2586 2596	0,5 mg/ml.
+R11	Drg Arg1:T44 Arg2:T45	
+T46	Symptom 2614 2639	bóle w klatce piersiowej,
+N21	Reference T46 ICD10:R07.3	Inne bóle w klatce piersiowej
+T47	Symptom 2640 2654	kołatania sera
+N22	Reference T47 ICD10:R00.2	Kołatanie serca
+T48	Symptom 2656 2664	omdlenia
+N23	Reference T48 ICD10:R55	Omdlenie i zapaść
+T49	Symptom 2667 2685	inne dolegliwości.
+N24	Reference T49 ICD10:R68	Inne objawy i dolegliwości ogólne
+T50	Negation 2607 2613	neguje
+R12	Neg Arg1:T50 Arg2:T46	
+R13	Neg Arg1:T50 Arg2:T47	
+R14	Neg Arg1:T50 Arg2:T48	
+R15	Neg Arg1:T50 Arg2:T49	
+T51	Symptom 2707 2716	duszności
+N25	Reference T51 ICD10:R06.0	Duszność
+T52	Negation 2703 2706	bez
+R16	Neg Arg1:T52 Arg2:T51	
+T53	Condition 2008 2024	torbieli jajnika
+N26	Reference T53 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T54	Symptom 2735 2771	ucisk za mostkiem przy zdenerwowaniu
+T55	Date 742 750	za 7 dni
+R17	Dat Arg1:T55 Arg2:T3	

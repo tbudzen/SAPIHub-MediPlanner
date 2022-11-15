@@ -1,0 +1,79 @@
+T1	Drug 659 667	Bisocard
+T2	Drug_dose 668 688	2,5mg 1x 1 tabl/rano
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Condition 906 935	Dwupłatkowa zastawka aortalna
+N1	Reference T3 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T4	Condition 975 1001	niedomykalnością I stopnia
+N2	Reference T4 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T5	Condition 937 972	Umiarkowana/ciężka stenoza aortalna
+N3	Reference T5 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T6	Symptom 1010 1025	kołatania serca
+N4	Reference T6 ICD10:R00.2	Kołatanie serca
+T7	Investigation 1829 1833	ECHO
+T8	Investigation 1835 1853	EKG metodą Holtera
+T9	Investigation 1855 1859	ABPM
+T10	Investigation 1861 1876	próba wysiłkowa
+T11	Drug 1716 1724	Bisocard
+T12	Drug_dose 1725 1745	2,5mg 1x 1 tabl/rano
+R2	Drg Arg1:T11 Arg2:T12	
+T13	Behaviour 1652 1678	warunki mieszkaniowe dobre
+T14	Condition 1611 1620	borelioza
+N5	Reference T14 ICD10:A69.2	Choroba z Lyme
+T15	Condition 1628 1631	tbc
+N6	Reference T15 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T16	Condition 1601 1604	WZW
+T17	Negation 1605 1608	(-)
+R3	Neg Arg1:T17 Arg2:T16	
+T18	Negation 1621 1626	( - )
+R4	Neg Arg1:T18 Arg2:T14	
+T19	Negation 1632 1635	(-)
+R5	Neg Arg1:T19 Arg2:T15	
+T20	Negation 1570 1573	nie
+T21	Negation 1555 1558	nie
+T22	Negation 1536 1541	nigdy
+T23	Condition 1559 1568	Uczulenia
+N8	Reference T23 ICD10:T78.4	Alergia, nieokreślona
+R6	Neg Arg1:T20 Arg2:T23	
+T24	Behaviour 1542 1554	Inne używki:
+R7	Neg Arg1:T21 Arg2:T24	
+T25	Behaviour 1519 1535	Palenie tytoniu:
+N9	Reference T25 ICD10:Z72.0	Używanie tytoniu
+R8	Neg Arg1:T22 Arg2:T25	
+T26	Condition 1502 1518	złamania szczęki
+N10	Reference T26 ICD10:S02.4	Złamanie kości jarzmowej i szczęki
+T27	Treatment 1483 1491	operacje
+A1	Status T27 Historical_Insignificant
+A2	Status T26 Historical_Insignificant
+T28	Symptom 1390 1402	zasłabnięcia
+N11	Reference T28 ICD10:R55	Omdlenie i zapaść
+T29	Symptom 1404 1412	omdlenia
+N12	Reference T29 ICD10:R55	Omdlenie i zapaść
+T30	Symptom 1414 1429	duszność nocną,
+N13	Reference T30 ICD10:I50.1	Niewydolność serca lewokomorowa
+T31	Symptom 1430 1445	obrzęki podudzi
+N14	Reference T31 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T32	Symptom 1447 1472	bóle w klatce piersiowej,
+T33	Negation 1382 1388	Neguje
+R9	Neg Arg1:T33 Arg2:T28	
+R10	Neg Arg1:T33 Arg2:T29	
+R11	Neg Arg1:T33 Arg2:T30	
+R12	Neg Arg1:T33 Arg2:T31	
+R13	Neg Arg1:T33 Arg2:T32	
+T34	Condition 1178 1230	złożonej wrodzonej wady aortalnej z przewagą stenozy
+N16	Reference T34 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T35	Symptom 1288 1311	napadów kołatania serca
+N17	Reference T35 ICD10:R00.2	Kołatanie serca
+T36	Date 1313 1338	ostatni napad 6 m-cy temu
+R14	Dat Arg1:T36 Arg2:T35	
+T37	Symptom 1341 1347	potami
+N18	Reference T37 ICD10:R61	Nadmierne pocenie
+T38	Condition 	
+N19	Reference T38 ICD10:E66	
+T39	Behaviour 1369 1381	Biega 5-10km
+N15	Reference T32 ICD10:R07.4	Inne bóle w klatce piersiowej
+N7	Reference T16 ICD10:B19	Przewlekłe wirusowe zapalenie wątroby
+N20	Reference T24 ICD10:Z72	Problemy związane ze stylem życia
+T40	Treatment 459 481	kontrola u lekarza POZ
+T41	Treatment 484 545	kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych
+T42	Date 547 574	za ok. 6 m-cy lub wcześniej
+R15	Dat Arg1:T42 Arg2:T41	

@@ -1,0 +1,226 @@
+T1	Condition 448 480	Utrwalone migotanie przedsionków
+N1	Reference T1 ICD10:I48	Migotanie i trzepotanie przedsionków
+T2	Condition 482 531	Podejrzenie skrzepliny w uszku lewego przedsionka
+N2	Reference T2 ICD10:I23.6	Skrzeplina w przedsionku, uszku przedsionka i komorze jako powikłanie występujące w czasie ostrego zawału serca
+T3	Negation 545 554	negatywna
+R1	Neg Arg1:T3 Arg2:T2	
+T4	Condition 556 618	Przewlekła niewydolność serca ze zmniejszoną frakcją wyrzutową
+N3	Reference T4 ICD10:I50.9	Niewydolność serca, nieokreślona
+T5	Condition 662 695	Dysfunkcja skurczowa lewej komory
+N4	Reference T5 ICD10:I50.1	Niewydolność serca lewokomorowa
+T6	Condition 705 732	udarze niedokrwiennym mózgu
+N5	Reference T6 ICD10:I63.9	Zawał mózgu, nieokreślony
+T7	Date 734 741	12/2018
+T8	Condition 744 784	Podejrzenie choroby niedokrwiennej serca
+N6	Reference T8 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+R2	Dat Arg1:T7 Arg2:T6	
+T9	Condition 786 837	Nadciśnienie tętnicze kontrolowane farmakologicznie
+N7	Reference T9 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T10	Treatment 847 869	chirurgicznej korekcji
+N8	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T11	Condition 870 873	ASD
+N9	Reference T11 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T12	Date 875 879	1977
+R3	Dat Arg1:T12 Arg2:T11	
+R4	Dat Arg1:T12 Arg2:T10	
+T13	Condition 882 890	Skolioza
+N10	Reference T13 ICD10:M41.9	Skolioza, nieokreślona
+T14	Condition 892 914	Niedoczynność tarczycy
+N11	Reference T14 ICD10:E07.9	Choroby tarczycy, nieokreślone
+T15	Treatment 1036 1113	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej i Endokrynologicznej
+T16	Investigation 1158 1169	SPECT serca
+T17	Behaviour 1214 1253	Dieta lekkostrawna, niskocholesterolowa
+T18	Investigation 1260 1341	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek
+T19	Investigation 1348 1396	Systematyczna kontrola ciśnienia tętniczego krwi
+T20	Drug 1429 1437	Enarenal
+T21	Drug_dose 1438 1458	10 mg 1x1 tabl. rano
+T22	Drug 1459 1467	Bisocard
+T23	Drug_dose 1468 1487	5 mg 1x1 tabl. rano
+T24	Drug 1488 1496	Toramide
+T25	Drug_dose 1497 1516	5 mg 1x1 tabl. rano
+T26	Drug 1517 1524	Nonpres
+T27	Drug_dose 1525 1545	25 mg 1x1 tabl. rano
+T28	Drug 1546 1553	Pradaxa
+T29	Drug_dose 1554 1569	150 mg 2x1 tabl
+T30	Drug 1571 1577	Atoris
+T31	Drug_dose 1578 1598	20 mg 1x1 tabl. rano
+T32	Drug 1599 1606	Amlozek
+T33	Drug_dose 1607 1631	5 mg 1x1 tabl. wieczorem
+T34	Drug 1632 1640	Euthyrox
+T35	Drug_dose 1641 1659	N25 1x1 tabl. rano
+R5	Drg Arg1:T20 Arg2:T21	
+R6	Drg Arg1:T22 Arg2:T23	
+R7	Drg Arg1:T24 Arg2:T25	
+R8	Drg Arg1:T26 Arg2:T27	
+R9	Drg Arg1:T28 Arg2:T29	
+R10	Drg Arg1:T30 Arg2:T31	
+R11	Drg Arg1:T32 Arg2:T33	
+R12	Drg Arg1:T34 Arg2:T35	
+T36	Condition 1805 1836	przewlekłą niewydolnością serca
+N12	Reference T36 ICD10:I50.9	Niewydolność serca, nieokreślona
+T37	Condition 1838 1872	utrwalonym migotaniem przedsionków
+N13	Reference T37 ICD10:I48	Migotanie i trzepotanie przedsionków
+T38	Condition 1877 1904	udarze niedokrwiennym mózgu
+N14	Reference T38 ICD10:I63.9	Zawał mózgu, nieokreślony
+T39	Date 1906 1913	12/2018
+R13	Dat Arg1:T39 Arg2:T38	
+T40	Condition 1916 1939	nadciśnieniem tętniczym
+N15	Reference T40 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T41	Treatment 1944 1966	chirurgicznej korekcji
+N16	Reference T41 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T42	Condition 1967 1970	ASD
+N17	Reference T42 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T43	Date 1972 1976	1977
+R14	Dat Arg1:T43 Arg2:T42	
+R15	Dat Arg1:T43 Arg2:T41	
+T44	Condition 1986 2002	znaczną skoliozą
+N18	Reference T44 ICD10:M41.9	Skolioza, nieokreślona
+T45	Condition 2025 2075	podejrzeniem skrzepliny w uszku lewego przedsionka
+A1	Source T45 Declared
+N19	Reference T45 ICD10:I23.6	Skrzeplina w przedsionku, uszku przedsionka i komorze jako powikłanie występujące w czasie ostrego zawału serca
+T46	Investigation 2104 2107	TEE
+T47	Symptom 2149 2214;2226 2286	okresowo występujący ból o charakterze ucisku w klatce piersiowej nie potrafi określić czy jest związany z wysiłkiem fizycznym
+N20	Reference T47 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T48	Date 2305 2331	w ostatnich 2-3 miesiącach
+T49	Symptom 2345 2376	ograniczenie tolerancji wysiłku
+T50	Date 2395 2402	od roku
+T51	Symptom 2410 2429	uległo zmniejszeniu
+T52	Treatment 2433 2447	hospitalizacji
+T53	Date 2450 2462	12/2018 roku
+T54	Date 2464 2473	aktualnie
+T55	Symptom 2474 2491	II/III klasa NYHA
+T56	Symptom 2493 2517	okresowo kołatania serca
+N21	Reference T56 ICD10:R00.2	Kołatanie serca
+R16	Dat Arg1:T50 Arg2:T49	
+R17	Dat Arg1:T53 Arg2:T52	
+R18	Dat Arg1:T53 Arg2:T51	
+R19	Dat Arg1:T54 Arg2:T55	
+R20	Dat Arg1:T54 Arg2:T56	
+R21	Dat Arg1:T48 Arg2:T47	
+T57	Investigation 2521 2524	TTE
+T58	Date 2527 2537	22/12/2018
+T59	Investigation_result 2538 2545	EF= 30%
+T60	Investigation_result 2547 2582	obraz kardiomiopatii niedokrwiennej
+N22	Reference T60 ICD10:I25.5	Kardiomiopatia niedokrwienna
+T61	Investigation_result 2585 2622	odcinkowymi zaburzeniami kurczliwości
+N23	Reference T61 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T62	Investigation_result 2624 2667	podejrzenie przebytego zawału ściany dolnej
+A2	Source T62 Declared
+N24	Reference T62 ICD10:I25.2	Przebyty zawał serca
+T63	Investigation 2675 2678	TEE
+T64	Date 2681 2691	07/02/2019
+T65	Investigation_result 2692 2732	uogólniona hipokineza ścian lewej komory
+T66	Investigation_result 2735 2744	EF=25-30%
+N25	Reference T65 ICD10:R93.1	
+R22	Dat Arg1:T58 Arg2:T57	
+R23	Inv Arg1:T57 Arg2:T59	
+R24	Inv Arg1:T57 Arg2:T60	
+R25	Inv Arg1:T57 Arg2:T61	
+R26	Inv Arg1:T57 Arg2:T62	
+R27	Dat Arg1:T64 Arg2:T63	
+R28	Inv Arg1:T63 Arg2:T65	
+R29	Inv Arg1:T63 Arg2:T66	
+T67	Negation 2747 2753	Neguje
+T68	Symptom 2754 2766	zasłabnięcia
+T69	Symptom 2768 2776	omdlenia
+N26	Reference T69 ICD10:R55	Omdlenie i zapaść
+T70	Symptom 2778 2791	zawroty głowy
+N27	Reference T70 ICD10:R42	Zawroty głowy i odurzenie
+T71	Symptom 2794 2813	Innych dolegliwości
+T72	Negation 2814 2825	nie zgłasza
+T73	Treatment 2846 2867	korekcja chirurgiczna
+N28	Reference T73 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T74	Condition 2868 2871	ASD
+N29	Reference T74 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T75	Treatment 2873 2889	panhisterektomia
+A3	Status T75 Historical_Insignificant
+N30	Reference T75 ICD10:Z90.7	Nabyty brak narządów płciowych
+R30	Neg Arg1:T72 Arg2:T71	
+R31	Neg Arg1:T67 Arg2:T68	
+R32	Neg Arg1:T67 Arg2:T69	
+R33	Neg Arg1:T67 Arg2:T70	
+T76	Treatment 2910 2960	Leczenie przewlekłe: neurologiczne, kardiologiczne
+T77	Condition 2988 2993	WZW B
+N31	Reference T77 ICD10:B16.9	Ostre wirusowe zapalenie wątroby typu B bez nadkażenia wirusem delta bez śpiączki wątrobowej
+T78	Negation 2994 2999	( - )
+T79	Condition 3002 3011	borelioza
+N32	Reference T79 ICD10:A69.2	Choroba z Lyme
+T80	Negation 3012 3017	( - )
+T81	Condition 3019 3027	gruźlica
+N33	Reference T81 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T82	Negation 3028 3033	( - )
+T83	Condition 3035 3039	odra
+N34	Reference T83 ICD10:B05	Odra
+T84	Negation 3042 3043	-
+T85	Negation 3074 3077	bez
+T86	Condition 3078 3108	kontaktu z osobą chorą na odrę
+N35	Reference T86 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+T87	Condition 3142 3145	PFO
+A4	Source T87 Declared
+N36	Reference T87 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T88	Condition 3151 3154	ASD
+A5	Status T88 Family
+A6	Source T88 Declared
+N37	Reference T88 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+A7	Status T87 Family
+T89	Behaviour 3156 3171	Palenie tytoniu
+N38	Reference T89 ICD10:Z72.0	Używanie tytoniu
+T90	Negation 3173 3176	nie
+T91	Behaviour 3177 3181	pali
+N39	Reference T91 ICD10:Z72.0	Używanie tytoniu
+T92	Date 3182 3191	od 12 lat
+T93	Date 3193 3202	wcześniej
+T94	Behaviour 3203 3231	paczka dziennie przez 10 lat
+N40	Reference T94 ICD10:Z72.0	Używanie tytoniu
+T95	Behaviour 3234 3245	Inne używki
+T96	Negation 3247 3253	neguje
+T97	Condition 3255 3264	Uczulenia
+N41	Reference T97 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T98	Negation 3266 3272	neguje
+T99	Behaviour 3290 3316	warunki mieszkaniowe dobre
+T100	Behaviour 3318 3333	mieszka z mężem
+T101	Behaviour 3335 3345	bezrobotna
+R34	Neg Arg1:T78 Arg2:T77	
+R35	Neg Arg1:T80 Arg2:T79	
+R36	Neg Arg1:T82 Arg2:T81	
+R37	Neg Arg1:T84 Arg2:T83	
+R38	Neg Arg1:T85 Arg2:T86	
+R39	Neg Arg1:T90 Arg2:T89	
+R40	Neg Arg1:T90 Arg2:T91	
+R41	Dat Arg1:T92 Arg2:T91	
+R42	Dat Arg1:T92 Arg2:T89	
+R43	Dat Arg1:T93 Arg2:T94	
+R44	Neg Arg1:T96 Arg2:T95	
+R45	Neg Arg1:T98 Arg2:T97	
+T102	Drug 3353 3359	Atoris
+T103	Drug_dose 3360 3374	20mg 1 tabl. W
+T104	Drug 3376 3384	Enarenal
+T105	Drug_dose 3385 3402	10mg 1 tabl. rano
+T106	Drug 3404 3411	Amlozek
+T107	Drug_dose 3412 3425	5mg 1 tabl. W
+T108	Drug 3427 3435	Bisocard
+T109	Drug_dose 3436 3449	5mg 1 tabl. R
+T110	Drug 3451 3458	Pradaxa
+T111	Drug_dose 3459 3478	150mg 1 tabl. R i W
+T112	Drug 3480 3488	Toramide
+T113	Drug_dose 3489 3502	5mg 1 tabl. R
+T114	Drug 3504 3511	Nonpres
+T115	Drug_dose 3512 3528	50mg 1/2 tabl. R
+T116	Investigation 3544 3547	TEE
+T117	Investigation 3549 3559	Echo serca
+T118	Investigation 3561 3571	Holter EKG
+T119	Investigation 3573 3577	ABPM
+R46	Drg Arg1:T102 Arg2:T103	
+R47	Drg Arg1:T104 Arg2:T105	
+R48	Drg Arg1:T106 Arg2:T107	
+R49	Drg Arg1:T108 Arg2:T109	
+R50	Drg Arg1:T110 Arg2:T111	
+R51	Drg Arg1:T112 Arg2:T113	
+R52	Drg Arg1:T114 Arg2:T115	
+T120	Investigation 534 544	obserwacja
+A8	Source T2 Declared
+T121	Symptom 622 660	II/III okresie hemodynamicznym wg NYHA
+N42	Reference T121 ICD10:I50	Niewydolność serca
+T122	Symptom 2380 2394	III klasy NYHA
+N43	Reference T122 ICD10:I50	Niewydolność serca
+R53	Dat Arg1:T50 Arg2:T122	

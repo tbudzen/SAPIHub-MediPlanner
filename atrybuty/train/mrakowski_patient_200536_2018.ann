@@ -1,0 +1,62 @@
+T1	Condition 439 471	Zaburzenia przewodnictwa w sercu
+N1	Reference T1 ICD10:I45.9	Zaburzenie przewodnictwa, nieokreślone
+T2	Investigation_result 473 519	pauzy o maksymalnym czasie trwania 2.3 sekundy
+T3	Condition 522 556	mechanizmie zahamowania zatokowego
+N2	Reference T3 ICD10:I45.8	Inne określone zaburzenia przewodnictwa
+T4	Condition 560 588	nadkomorowe (ekstrasystolie)
+N3	Reference T4 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T5	Condition 591 676	komorowe zaburzenia rytmu serca – ekstrasystolie pojedyncze, bigeminia komorowa, pary
+N4	Reference T5 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T7	Condition 678 698	Bradykardia zatokowa
+N6	Reference T7 ICD10:R00.1	Bradykardia, nieokreślona
+T8	Condition 700 721	Nadciśnienie tętnicze
+N7	Reference T8 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T9	Condition 723 757	Łagodna niedomykalność trójdzielna
+N8	Reference T9 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T10	Condition 759 777	Guz jajnika lewego
+N9	Reference T10 ICD10:D39.1	Jajnik
+T11	Treatment 787 800	appendektomii
+A1	Status T11 Historical_Insignificant
+T12	Condition 1512 1523	bradykardii
+N10	Reference T12 ICD10:R00.1	Bradykardia, nieokreślona
+T13	Symptom 1549 1574	uczucia  kołatania  serca
+N11	Reference T13 ICD10:R00.2	Kołatanie serca
+T14	Treatment 1638 1655	planowej operacji
+T15	Condition 1657 1682	torbieli  jajnika  lewego
+N12	Reference T15 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T16	Condition 1698 1719	nadciśnienie tętnicze
+N13	Reference T16 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T17	Drug 1741 1755	trimeductan MR
+T18	Drug_dose 1756 1765	2x1 tabl.
+R1	Drg Arg1:T17 Arg2:T18	
+T19	Treatment 1767 1799	Operacje :wyrostka  robaczkowego
+A2	Status T19 Historical_Insignificant
+T20	Behaviour 1800 1810	Nikotynizm
+T21	Behaviour 1815 1822	alkohol
+N15	Reference T21 ICD10:Z72.1	Używanie alkoholu
+T22	Negation 1823 1824	-
+R2	Neg Arg1:T22 Arg2:T21	
+T23	Negation 1811 1812	-
+R3	Neg Arg1:T23 Arg2:T20	
+T24	Negation 1835 1841	neguje
+T25	Symptom 1844 1864	utraty  przytomności
+N16	Reference T25 ICD10:R55	Omdlenie i zapaść
+T26	Symptom 1867 1903	krwawienie  z  przewodu  pokarmowego
+N17	Reference T26 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R4	Neg Arg1:T24 Arg2:T25	
+R5	Neg Arg1:T24 Arg2:T26	
+T27	Condition 1905 1914	Uczulenia
+N18	Reference T27 ICD10:T78.4	Alergia, nieokreślona
+T28	Negation 1917 1931	nie  występują
+R6	Neg Arg1:T28 Arg2:T27	
+T29	Condition 1933 1949	Wywiad  rodzinny
+A3	Status T29 Family
+T30	Condition 1961 1974	rozedma  płuc
+A4	Status T30 Family
+N19	Reference T30 ICD10:J43	Rozedma
+T31	Drug 1981 1995	Trimeduktan MR
+T32	Drug_dose 1997 2005	2x1 tabl
+R7	Drg Arg1:T31 Arg2:T32	
+T33	Investigation 2050 2061	Echo  serca
+T34	Investigation 2064 2075	holter  EKG
+N14	Reference T20 ICD10:Z72.0	Używanie tytoniu

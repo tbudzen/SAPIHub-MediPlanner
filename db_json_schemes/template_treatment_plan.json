@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "treatment_plan",
+  "type": "object",
+  "properties": {
+    "patientIdentifier": {
+      "type": "string"
+    },
+    "dateAdded": {
+      "type": "string",
+      "format": "date"
+    },
+    "analyserVersion": {
+      "type": "string"
+    },
+    "treatment": {
+      "type": "string"
+    },
+    "drugsPrescribed": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/drug"
+      }
+    }
+  },
+
+  "required": ["patientIdentifier", "dateAdded", "analyserVersion", "treatment", "drugsPrescribed"],
+
+  "definitions":
+  {
+      "drug": {
+        "type": "object",
+        "required": ["identifier", "dosage"],
+        "properties": {
+          "identifier": {
+            "type": "string"
+          },
+          "dosage": {
+            "type": "string"
+          }
+        }
+    }
+  }
+}

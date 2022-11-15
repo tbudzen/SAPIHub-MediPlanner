@@ -1,0 +1,335 @@
+T1	Behaviour 330 367	stosowanie diety niskocholesterolowej
+T2	Drug 370 378	Praluent
+T3	Drug_dose 379 400	s.c. 1x co 2 tygodnie
+T4	Drug 402 409	Roswera
+T5	Drug 432 438	Ezehra
+T6	Drug 461 468	Mononit
+T7	Drug 487 495	Bisocard
+T8	Drug 515 525	Prestarium
+T9	Drug_dose 410 430	40 mg 1xdz wieczorem
+T10	Drug_dose 439 459	10 mg 1xdz wieczorem
+T11	Drug_dose 469 485	100 mg 1xdz rano
+T12	Drug_dose 496 513	10 mg 1 x dz rano
+T13	Drug_dose 526 538	5 mg 1 x dz.
+R1	Drg Arg1:T2 Arg2:T3	
+R2	Drg Arg1:T4 Arg2:T9	
+R3	Drg Arg1:T5 Arg2:T10	
+R4	Drg Arg1:T6 Arg2:T11	
+R5	Drg Arg1:T7 Arg2:T12	
+R6	Drg Arg1:T8 Arg2:T13	
+T14	Condition 694 748	Hipercholesterolemia rodzinna potwierdzona genetycznie
+N1	Reference T14 ICD10:E78.0	Czysta hipercholesterolemia
+T15	Condition 750 777	Przewlekła choroba wieńcowa
+N2	Reference T15 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T16	Condition 787 842	zawale mięśnia sercowego ściany bocznej podwsierdziowym
+N3	Reference T16 ICD10:I21.4	Ostry zawał serca podwsierdziowy
+T17	Date 844 855	31.12.1987r
+R7	Dat Arg1:T17 Arg2:T16	
+T18	Treatment 866 915	CABG: wszczepienie 4 pomostów aortalno-wieńcowych
+N4	Reference T18 ICD10:Z95.1	Obecność pomostów naczyniowych aortalno-wieńcowych omijających typu bypass
+T19	Date 918 929	20.01.1988r
+R9	Dat Arg1:T19 Arg2:T18	
+T20	Condition 1215 1269	Hipercholesterolemia rodzinna potwierdzona genetycznie
+N5	Reference T20 ICD10:E78.0	Czysta hipercholesterolemia
+T21	Condition 1271 1298	Przewlekła choroba wieńcowa
+N6	Reference T21 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T22	Condition 1315 1363	mięśnia sercowego ściany bocznej podwsierdziowym
+N7	Reference T22 ICD10:I21.4	Ostry zawał serca podwsierdziowy
+T23	Date 1365 1376	31.12.1987r
+T24	Treatment 1387 1436	CABG: wszczepienie 4 pomostów aortalno-wieńcowych
+N8	Reference T24 ICD10:Z95.1	Obecność pomostów naczyniowych aortalno-wieńcowych omijających typu bypass
+T25	Date 1439 1450	20.01.1988r
+R8	Dat Arg1:T25 Arg2:T24	
+R10	Dat Arg1:T23 Arg2:T22	
+T26	Condition 1598 1676	hipercholesterolemią rodzinną (potwierdzenie genetyczne - mutacja LDLR ekson 4
+N9	Reference T26 ICD10:E78.0	Czysta hipercholesterolemia
+T27	Date 1678 1688	27.11.2019
+R11	Dat Arg1:T27 Arg2:T26	
+T28	Investigation 1855 1887	skali Dutch Lipid Clinic Network
+T29	Investigation_result 1842 1852	19 punktów
+R12	Inv Arg1:T28 Arg2:T29	
+T30	Condition 1703 1732	przedwczesna choroba wieńcowa
+N10	Reference T30 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T31	Condition 1743 1785	krewni I st. z rozpoznaną przedwczesną CAD
+A1	Status T31 Family
+N11	Reference T31 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T32	Investigation_result 1812 1821	>325 mg/d
+T33	Condition 1893 1948	zawale mięśnia sercowego ściany bocznej podwsierdziowym
+N12	Reference T33 ICD10:I21.4	Ostry zawał serca podwsierdziowy
+T34	Date 1949 1963	w wieku 31 lat
+T35	Date 1965 1976	31.12.1987r
+R13	Dat Arg1:T34 Arg2:T33	
+R14	Dat Arg1:T35 Arg2:T33	
+T36	Treatment 1987 2036	CABG: wszczepienie 4 pomostów aortalno-wieńcowych
+N13	Reference T36 ICD10:Z95.1	Obecność pomostów naczyniowych aortalno-wieńcowych omijających typu bypass
+T37	Date 2039 2050	20.01.1988r
+R15	Dat Arg1:T37 Arg2:T36	
+T38	Treatment 2081 2118	monitorowania bezpieczeństwa leczenia
+T39	Treatment 2120 2162	monitorowania leczenia (ocena lipidogramu)
+T40	Treatment 2168 2219	ew. kwalifikacji do kontynuacji udziału w programie
+T41	Negation 2229 2235	neguje
+T42	Symptom 2236 2254	objawy niepożądane
+T43	Drug 2271 2282	alirokumabu
+R16	Neg Arg1:T41 Arg2:T42	
+T44	Negation 2284 2290	neguje
+T45	Condition 2303 2348	ciężkich reakcji alergicznych po podaniu leku
+T46	Symptom 2358 2383	dobrą tolerancję leczenia
+R17	Neg Arg1:T44 Arg2:T45	
+N15	Reference T42 ICD10:T88.7	Nieokreślone działanie niepożądane leku lub środka farmakologicznego
+N14	Reference T45 ICD10:T88.7	Nieokreślone działanie niepożądane leku lub środka farmakologicznego
+T47	Investigation 2386 2429	Najwyższe poziomy cholesterolu bez leczenia
+T48	Investigation_result 2431 2449	Chol całk. 420 mg%
+T49	Investigation_result 2466 2489	LDL cholesterol ok. 330
+R18	Inv Arg1:T47 Arg2:T48	
+R19	Inv Arg1:T47 Arg2:T49	
+T50	Date 2491 2498	10.1987
+R20	Dat Arg1:T50 Arg2:T47	
+A2	Source T48 Declared
+A3	Source T49 Declared
+T51	Date 2550 2569	kilka miesięcy temu
+T52	Drug 2579 2586	Repathę
+R21	Dat Arg1:T51 Arg2:T52	
+T53	Symptom 2589 2611	bardzo dobrym skutkiem
+R22	Dat Arg1:T51 Arg2:T53	
+T54	Condition 2649 2651	FH
+A4	Status T54 Family
+N16	Reference T54 ICD10:E78.0	Czysta hipercholesterolemia
+T55	Condition 2692 2697	udaru
+A5	Status T55 Family
+N17	Reference T55 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T56	Date 2698 2712	w wieku 49 lat
+T57	Condition 2659 2663	zgon
+N18	Reference T57 ICD10:R98	Zgon nieoczekiwany
+A6	Status T57 Family
+R23	Dat Arg1:T56 Arg2:T55	
+R24	Dat Arg1:T56 Arg2:T57	
+T58	Condition 2714 2747	syn - niskie poziomy cholesterolu
+A7	Status T58 Family
+T59	Behaviour 2772 2787	Palenie tytoniu
+N19	Reference T59 ICD10:Z72.0	Używanie tytoniu
+T60	Negation 2789 2792	nie
+T61	Behaviour 2794 2799	palił
+N20	Reference T61 ICD10:Z72.0	Używanie tytoniu
+R25	Neg Arg1:T60 Arg2:T59	
+T62	Date 2800 2807	do 1987
+R26	Dat Arg1:T62 Arg2:T61	
+T63	Behaviour 2812 2832	łącznie 15 paczkolat
+N21	Reference T63 ICD10:Z72.0	Używanie tytoniu
+R27	Dat Arg1:T62 Arg2:T63	
+T64	Behaviour 2835 2846	Inne używki
+T65	Negation 2848 2851	nie
+T66	Condition 2853 2862	Uczulenia
+N22	Reference T66 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T67	Negation 2864 2867	nie
+R28	Neg Arg1:T65 Arg2:T64	
+R29	Neg Arg1:T67 Arg2:T66	
+T68	Condition 2896 2899	WZW
+N23	Reference T68 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T69	Condition 2906 2915	borelioza
+N24	Reference T69 ICD10:A69.2	Choroba z Lyme
+T70	Condition 2923 2926	tbc
+N25	Reference T70 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T71	Condition 2932 2936	odra
+N26	Reference T71 ICD10:B05	Odra
+T72	Negation 2900 2903	(-)
+T73	Negation 2916 2921	( - )
+T74	Negation 2927 2930	(-)
+R30	Neg Arg1:T72 Arg2:T68	
+R31	Neg Arg1:T73 Arg2:T69	
+R32	Neg Arg1:T74 Arg2:T70	
+T75	Behaviour 2992 3018	warunki mieszkaniowe dobre
+T76	Negation 2937 2940	(-)
+R33	Neg Arg1:T76 Arg2:T71	
+T77	Drug 3029 3037	Praluent
+T78	Drug_dose 3038 3061	150 mg 1x s.c. co 2 tyg
+T79	Drug 3064 3071	Roswera
+T80	Drug_dose 3072 3092	40 mg 1xdz wieczorem
+T81	Date 3094 3115	od co najmniej 5 roku
+R34	Dat Arg1:T81 Arg2:T79	
+T82	Drug 3118 3124	Ezehra
+T83	Drug_dose 3125 3145	10 mg 1xdz wieczorem
+T84	Date 3147 3159	od ok. 4 lat
+R35	Dat Arg1:T84 Arg2:T82	
+T85	Drug 3161 3168	Mononit
+T86	Drug_dose 3169 3185	100 mg 1xdz rano
+T87	Drug 3187 3195	Bisocard
+T88	Drug_dose 3196 3213	10 mg 1 x dz rano
+T89	Drug 3215 3225	Prestarium
+T90	Drug_dose 3226 3248	5 mg 1 x dz. wieczorem
+T91	Drug 3250 3255	Acard
+T92	Drug_dose 3256 3276	75 mg 1xdz wieczorem
+T93	Drug 3278 3287	Metformin
+T94	Drug_dose 3288 3309	500 mg 1xdz wieczorem
+R36	Drg Arg1:T77 Arg2:T78	
+R37	Drg Arg1:T79 Arg2:T80	
+R38	Drg Arg1:T82 Arg2:T83	
+R39	Drg Arg1:T85 Arg2:T86	
+R40	Drg Arg1:T87 Arg2:T88	
+R41	Drg Arg1:T89 Arg2:T90	
+R42	Drg Arg1:T91 Arg2:T92	
+R43	Drg Arg1:T93 Arg2:T94	
+T95	Behaviour 3320 3347	potwierdza stosowanie diety
+T96	Negation 3361 3384	brak wywiadu w kierunku
+T97	Condition 3387 3409	hiperlipidemii wtórnej
+N27	Reference T97 ICD10:E78.2	Hiperlipidemia mieszana
+T98	Condition 3412 3466	homozygotycznej postaci hipercholesterolemii rodzinnej
+N28	Reference T98 ICD10:E78.0	Czysta hipercholesterolemia
+T99	Condition 3470 3498	ciężkiej niewydolności nerek
+N29	Reference T99 ICD10:N18	Przewlekła niewydolność nerek
+T100	Condition 3501 3531	ciężkiej niewydolności wątroby
+N30	Reference T100 ICD10:K72.9	Niewydolność wątroby, nieokreślona
+T101	Condition 3534 3548	nadwrażliwości
+N31	Reference T101 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T102	Drug 3552 3562	alirokumab
+T103	Drug 3567 3605	którąkolwiek z substancji pomocniczych
+R44	Alg Arg1:T101 Arg2:T102	
+R45	Alg Arg1:T101 Arg2:T103	
+R46	Neg Arg1:T96 Arg2:T97	
+R47	Neg Arg1:T96 Arg2:T98	
+R48	Neg Arg1:T96 Arg2:T99	
+R49	Neg Arg1:T96 Arg2:T100	
+R50	Neg Arg1:T96 Arg2:T101	
+T104	Investigation 3668 3689	badania laboratoryjne
+T105	Investigation 3691 3694	EKG
+N32	Reference T29 ICD10:E78.0	Czysta hipercholesterolemia
+T106	Condition 3840 3918	hipercholesterolemią rodzinną (potwierdzenie genetyczne - mutacja LDLR ekson 4
+N33	Reference T106 ICD10:E78.0	Czysta hipercholesterolemia
+T107	Date 3920 3930	27.11.2019
+R51	Dat Arg1:T107 Arg2:T106	
+T108	Condition 3945 3974	przedwczesna choroba wieńcowa
+N34	Reference T108 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T109	Condition 3985 4027	krewni I st. z rozpoznaną przedwczesną CAD
+A8	Status T109 Family
+N35	Reference T109 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T110	Investigation_result 4054 4064	>325 mg/dl
+T111	Investigation_result 4084 4094	19 punktów
+N36	Reference T111 ICD10:E78.0	Czysta hipercholesterolemia
+T112	Investigation 4097 4129	skalu Dutch Lipid Clinic Network
+R52	Inv Arg1:T112 Arg2:T111	
+T113	Condition 4135 4190	zawale mięśnia sercowego ściany bocznej podwsierdziowym
+N37	Reference T113 ICD10:I21.4	Ostry zawał serca podwsierdziowy
+T114	Date 4191 4205	w wieku 31 lat
+T115	Date 4207 4218	31.12.1987r
+T116	Treatment 4229 4278	CABG: wszczepienie 4 pomostów aortalno-wieńcowych
+N38	Reference T116 ICD10:Z95.1	Obecność pomostów naczyniowych aortalno-wieńcowych omijających typu bypass
+T117	Date 4281 4292	20.01.1988r
+R53	Dat Arg1:T114 Arg2:T113	
+R54	Dat Arg1:T115 Arg2:T113	
+R55	Dat Arg1:T117 Arg2:T116	
+T118	Treatment 4341 4406	ew. włączenia do programu lekowego hipercholesterolemii rodzinnej
+T119	Condition 4416 4450	dużego ryzyka sercowo-naczyniowego
+T120	Investigation 4452 4495	Najwyższe poziomy cholesterolu bez leczenia
+T121	Investigation_result 4497 4515	Chol całk. 420 mg%
+T122	Investigation_result 4532 4555	LDL cholesterol ok. 330
+T123	Date 4557 4564	10.1987
+R56	Dat Arg1:T123 Arg2:T120	
+R57	Inv Arg1:T120 Arg2:T121	
+R58	Inv Arg1:T120 Arg2:T122	
+A9	Source T121 Declared
+A10	Source T122 Declared
+T124	Date 4616 4635	kilka miesięcy temu
+T125	Drug 4645 4652	Repathę
+T126	Symptom 4655 4677	bardzo dobrym skutkiem
+R59	Dat Arg1:T124 Arg2:T125	
+R60	Dat Arg1:T124 Arg2:T126	
+T127	Condition 4715 4717	FH
+A11	Status T127 Family
+N39	Reference T127 ICD10:E78.0	Czysta hipercholesterolemia
+T128	Condition 4725 4729	zgon
+A12	Status T128 Family
+N40	Reference T128 ICD10:R98	Zgon nieoczekiwany
+T129	Condition 4758 4763	udaru
+N41	Reference T129 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T130	Date 4764 4778	w wieku 49 lat
+T131	Condition 4780 4813	syn - niskie poziomy cholesterolu
+A13	Status T131 Family
+A14	Status T129 Family
+R61	Dat Arg1:T130 Arg2:T129	
+R62	Dat Arg1:T130 Arg2:T128	
+T132	Behaviour 4838 4853	Palenie tytoniu
+N42	Reference T132 ICD10:Z72.0	Używanie tytoniu
+T133	Negation 4855 4858	nie
+T134	Behaviour 4860 4865	palił
+N43	Reference T134 ICD10:Z72.0	Używanie tytoniu
+T135	Date 4866 4875	do 1987 r
+T136	Behaviour 4878 4898	łącznie 15 paczkolat
+N44	Reference T136 ICD10:Z72.0	Używanie tytoniu
+R63	Neg Arg1:T133 Arg2:T132	
+R65	Dat Arg1:T135 Arg2:T134	
+R66	Dat Arg1:T135 Arg2:T136	
+T137	Behaviour 4901 4912	Inne używki
+T138	Negation 4914 4917	nie
+R64	Neg Arg1:T138 Arg2:T137	
+T139	Condition 4919 4928	Uczulenia
+N45	Reference T139 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T140	Negation 4930 4933	nie
+T141	Condition 4962 4965	WZW
+N46	Reference T141 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T142	Condition 4972 4981	borelioza
+N47	Reference T142 ICD10:A69.2	Choroba z Lyme
+T143	Condition 4989 4992	tbc
+N48	Reference T143 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T144	Condition 4998 5002	odra
+N49	Reference T144 ICD10:B05	Odra
+T145	Negation 4966 4969	(-)
+T146	Negation 4982 4987	( - )
+T147	Negation 4993 4996	(-)
+T148	Negation 5003 5006	(-)
+R67	Neg Arg1:T145 Arg2:T141	
+R68	Neg Arg1:T146 Arg2:T142	
+R69	Neg Arg1:T147 Arg2:T143	
+R70	Neg Arg1:T148 Arg2:T144	
+R71	Neg Arg1:T140 Arg2:T139	
+T149	Behaviour 5058 5084	warunki mieszkaniowe dobre
+T150	Drug 5124 5131	Roswera
+T151	Drug_dose 5132 5152	40 mg 1xdz wieczorem
+T152	Date 5154 5175	od co najmniej 5 roku
+T153	Drug 5178 5184	Ezehra
+T154	Drug_dose 5185 5205	10 mg 1xdz wieczorem
+T155	Drug 5221 5228	Mononit
+T156	Drug_dose 5229 5245	100 mg 1xdz rano
+T157	Drug 5247 5255	Bisocard
+T158	Drug_dose 5256 5273	10 mg 1 x dz rano
+T159	Drug 5275 5285	Prestarium
+T160	Drug_dose 5286 5308	5 mg 1 x dz. wieczorem
+T161	Drug 5310 5315	Acard
+T162	Drug_dose 5316 5336	75 mg 1xdz wieczorem
+T163	Drug 5338 5347	Metformin
+T164	Drug_dose 5348 5369	500 mg 1xdz wieczorem
+R72	Drg Arg1:T150 Arg2:T151	
+T165	Date 5207 5219	od ok. 4 lat
+R73	Dat Arg1:T152 Arg2:T150	
+R74	Drg Arg1:T153 Arg2:T154	
+R75	Dat Arg1:T165 Arg2:T153	
+R76	Drg Arg1:T155 Arg2:T156	
+R77	Drg Arg1:T157 Arg2:T158	
+R78	Drg Arg1:T159 Arg2:T160	
+R79	Drg Arg1:T161 Arg2:T162	
+R80	Drg Arg1:T163 Arg2:T164	
+T166	Negation 5421 5444	brak wywiadu w kierunku
+T167	Behaviour 5380 5407	potwierdza stosowanie diety
+T168	Condition 5447 5469	hiperlipidemii wtórnej
+T169	Condition 5472 5526	homozygotycznej postaci hipercholesterolemii rodzinnej
+N51	Reference T169 ICD10:E78.0	Czysta hipercholesterolemia
+T170	Condition 5530 5558	ciężkiej niewydolności nerek
+N52	Reference T170 ICD10:N18	Przewlekła niewydolność nerek
+N50	Reference T168 ICD10:E78.2	Hiperlipidemia mieszana
+T171	Condition 5561 5591	ciężkiej niewydolności wątroby
+N53	Reference T171 ICD10:K72.9	Niewydolność wątroby, nieokreślona
+T172	Condition 5594 5608	nadwrażliwości
+N54	Reference T172 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T173	Drug 5612 5622	alirokumab
+T174	Drug 5627 5665	którąkolwiek z substancji pomocniczych
+R81	Alg Arg1:T172 Arg2:T173	
+R82	Alg Arg1:T172 Arg2:T174	
+R83	Neg Arg1:T166 Arg2:T168	
+R84	Neg Arg1:T166 Arg2:T169	
+R85	Neg Arg1:T166 Arg2:T170	
+R86	Neg Arg1:T166 Arg2:T171	
+R87	Neg Arg1:T166 Arg2:T172	
+T175	Investigation 5728 5749	badania laboratoryjne
+T176	Investigation 5751 5754	EKG
+T177	Investigation 1797 1812	cholesterol LDL
+R88	Inv Arg1:T177 Arg2:T32	
+T178	Investigation 4039 4054	cholesterol LDL
+R89	Inv Arg1:T178 Arg2:T110	

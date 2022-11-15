@@ -1,0 +1,51 @@
+T1	Drug 340 348	Dormicum
+T2	Investigation 352 381	badania echokardiograficznego
+T3	Drug 383 388	płyny
+T4	Drug 395 406	Paracetamol
+T5	Drug 408 417	Ibuprofen
+T6	Drug 419 427	Hidrasec
+T7	Drug 429 437	Flostrum
+T8	Drug 439 448	Pulmicort
+T9	Drug 462 481	soli fizjologicznej
+T10	Drug_dose 450 459	inhalacje
+R1	Drg Arg1:T9 Arg2:T10	
+T11	Drug_dose 389 392	i.v
+R2	Drg Arg1:T3 Arg2:T11	
+T12	Treatment 591 624	Kontrola w POZ w dniu jutrzejszym
+T13	Drug_dose 625 634	Inhalacje
+T14	Drug 637 656	soli fizjologicznej
+T15	Drug_dose 657 672	3 razy dziennie
+R3	Drg Arg1:T14 Arg2:T13	
+R4	Drg Arg1:T14 Arg2:T15	
+T16	Drug 683 692	Pulmicort
+T17	Drug_dose 693 717	(250mcg) 2 razy dziennie
+T18	Drug_dose 673 682	Inhalacje
+R5	Drg Arg1:T16 Arg2:T18	
+R6	Drg Arg1:T16 Arg2:T17	
+T19	Drug 718 726	Flostrum
+T20	Drug_dose 727 747	1 x 7kropli doustnie
+R7	Drg Arg1:T19 Arg2:T20	
+T21	Treatment 748 761	Fizykoterapia
+T22	Behaviour 762 779	Oczyszczanie nosa
+T23	Drug 791 801	Mucosolvan
+A1	Source T23 Declared
+T24	Drug_dose 803 889	2,5ml syropu 2 razy na dobę (proszę obficie poić dziecko, nie podawać leku przed snem)
+R8	Drg Arg1:T23 Arg2:T24	
+T25	Drug 902 915	Sambucol baby
+A2	Source T25 Declared
+T26	Drug_dose 916 950	saszetki1 saszetka 3 razy dziennie
+R9	Drg Arg1:T25 Arg2:T26	
+T27	Treatment 951 977	Leki stałe jak do tej pory
+T28	Treatment 978 1070	W razie niepokojących objawów proszę skontaktować się z lekarzem lub zgłosić się do szpitala
+T29	Treatment 1071 1128	Kontrola w Poradni Kardiologicznej w miejscu zamieszkania
+T30	Date 1129 1137	za 2lata
+R10	Dat Arg1:T30 Arg2:T29	
+T31	Treatment 1139 1232	prosze o kontakt z Kliniką celem otrzymania wyniku w kierunku zakażenia Mycoplasma pneumoniae
+T32	Condition 1470 1519	Obserwacja w kierunku patologii naczyń wieńcowych
+N1	Reference T32 ICD10:Q24.5	Wada rozwojowa naczyń wieńcowych
+T33	Negation 1520 1529	negatywna
+R11	Neg Arg1:T33 Arg2:T32	
+T34	Condition 1533 1570	Nieżyt jelitowy wywołany Adenowirusem
+N2	Reference T34 ICD10:A08.2	Zapalenie jelit wywołane przez adenowirusy
+T35	Condition 1819 1840	Skrajne  wcześniactwo
+N3	Reference T35 ICD10:P07.2	Skrajne wcześniactwo

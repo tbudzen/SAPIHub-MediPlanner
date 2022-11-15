@@ -1,0 +1,120 @@
+T1	Condition 448 451	PFO
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Symptom 453 466	Zawroty głowy
+N2	Reference T2 ICD10:R42	Zawroty głowy i odurzenie
+T3	Symptom 468 536	Omdlenia w przebiegu zespołu wazowagalnego typu naczyniodepresyjnego
+N3	Reference T3 ICD10:R55	Omdlenie i zapaść
+T4	Condition 538 558	Nadczynność tarczycy
+N4	Reference T4 ICD10:E05.9	Tyreotoksykoza, nieokreślona
+T5	Condition 560 599	Hipercholesterolemia w trakcie leczenia
+N5	Reference T5 ICD10:E78.0	Czysta hipercholesterolemia
+T7	Condition 750 766	podejrzeniem PFO
+N6	Reference T7 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T8	Investigation 909 917	MR mózgu
+T9	Investigation_result 918 993	w obrębie płatów czołowych i ciemieniowych rozsiane, ogniska hiperntensywne
+T10	Negation 995 998	bez
+T11	Investigation_result 999 1029	cech wzmocnienia kontrastowego
+R1	Inv Arg1:T8 Arg2:T9	
+R2	Inv Arg1:T8 Arg2:T11	
+R3	Neg Arg1:T10 Arg2:T11	
+T12	Investigation_result 1031 1065	demielinizacyjne/naczyniopochodne?
+R4	Inv Arg1:T8 Arg2:T12	
+T13	Date 1076 1092	około 5 lat lemu
+T14	Symptom 1093 1184	incydent silnego bólu w klatce piersiowej z towarzyszącym drętwieniem lewej kończyny górnej
+N7	Reference T14 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T15	Symptom 1186 1208	z następczym omdleniem
+N8	Reference T15 ICD10:R55	Omdlenie i zapaść
+R5	Dat Arg1:T13 Arg2:T14	
+R6	Dat Arg1:T13 Arg2:T15	
+T16	Treatment 1211 1258	hospitalizowana wówczas w  Oddziale Kardiologii
+T17	Negation 1261 1276	nie stwierdzono
+T18	Condition 1277 1306	cech niestabilności wieńcowej
+T19	Symptom 1317 1385	omdlenia w przebiegu zespołu wazowagalnego typu naczyniodepresyjnego
+N9	Reference T19 ICD10:R55	Omdlenie i zapaść
+R7	Dat Arg1:T13 Arg2:T16	
+R8	Neg Arg1:T17 Arg2:T18	
+R9	Dat Arg1:T13 Arg2:T18	
+N10	Reference T18 ICD10:I20.0	Choroba niedokrwienna serca niestabilna
+T20	Condition 1387 1407	nadczynność tarczycy
+N11	Reference T20 ICD10:E05.9	Tyreotoksykoza, nieokreślona
+T21	Condition 1409 1429	hipercholesterolemia
+N12	Reference T21 ICD10:E78.0	Czysta hipercholesterolemia
+T22	Behaviour 1431 1453	nikotynizm w wywiadzie
+T23	Negation 1456 1462	Neguje
+T24	Negation 1579 1589	nie podaje
+T25	Negation 1607 1610	nie
+T26	Negation 1638 1641	nie
+T27	Negation 1653 1656	nie
+T28	Symptom 1464 1474	krwawienia
+T29	Symptom 1476 1489	czarne stolce
+N13	Reference T29 ICD10:K92.1	Stolce smołowate
+T30	Symptom 1491 1507	brunatne wymioty
+N14	Reference T30 ICD10:K92.0	Wymioty krwawe
+T31	Condition 1509 1525	chorobę wrzodową
+N15	Reference T31 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T32	Symptom 1527 1541	duszność nocną
+N16	Reference T32 ICD10:R06.0	Duszność
+T33	Symptom 1543 1558	obrzęki podudzi
+N17	Reference T33 ICD10:R60.0	Obrzęk zlokalizowany
+T34	Treatment 1560 1577	Przebyte operacje
+N18	Reference T34 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T35	Behaviour 1590 1605	Palenie tytoniu
+T36	Behaviour 1611 1615	pali
+T37	Date 1616 1624	od 5 lat
+T38	Behaviour 1625 1636	Inne używki
+T39	Condition 1642 1651	Uczulenia
+N19	Reference T39 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T40	Condition 1657 1672	Wywiad rodzinny
+A1	Status T40 Family
+T41	Negation 1673 1683	nieistotny
+R10	Neg Arg1:T24 Arg2:T34	
+R11	Neg Arg1:T25 Arg2:T36	
+R12	Neg Arg1:T25 Arg2:T35	
+R13	Dat Arg1:T37 Arg2:T36	
+R14	Dat Arg1:T37 Arg2:T35	
+R15	Neg Arg1:T26 Arg2:T38	
+R16	Neg Arg1:T27 Arg2:T39	
+R17	Neg Arg1:T41 Arg2:T40	
+T42	Condition 1712 1715	WZW
+N20	Reference T42 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T43	Condition 1722 1731	borelioza
+N21	Reference T43 ICD10:A69.2	Choroba z Lyme
+T44	Condition 1737 1740	tbc
+N22	Reference T44 ICD10:A15.9	Gruźlica układu oddechowego nieokreślona, potwierdzona bakteriologicznie i histologicznie
+T45	Condition 1746 1750	odra
+N23	Reference T45 ICD10:B05	Odra
+T46	Condition 1756 1770	kontakt z odrą
+N24	Reference T46 ICD10:Z20.9	Styczność i narażenie na nieokreślone choroby zakaźne
+T47	Negation 1716 1719	(-)
+T48	Negation 1732 1735	(-)
+T49	Negation 1741 1745	(-),
+T50	Negation 1751 1754	(-)
+T51	Negation 1771 1774	(-)
+R18	Neg Arg1:T47 Arg2:T42	
+R19	Neg Arg1:T48 Arg2:T43	
+R20	Neg Arg1:T49 Arg2:T44	
+R21	Neg Arg1:T50 Arg2:T45	
+R22	Neg Arg1:T51 Arg2:T46	
+T52	Behaviour 1791 1817	warunki mieszkaniowe dobre
+T53	Behaviour 1819 1835	pracuje zawodowo
+T54	Drug 1870 1878	Thyrozol
+T55	Drug 1895 1906	Flunaryzyna
+T56	Drug_dose 1879 1893	5/75 na zmianę
+T57	Drug_dose 1907 1914	5 1-0-1
+R23	Drg Arg1:T54 Arg2:T56	
+R24	Drg Arg1:T55 Arg2:T57	
+T58	Investigation 1998 2002	ECHO
+T59	Investigation 2004 2022	EKG metodą Holtera
+T60	Investigation 2024 2028	ABPM
+T61	Investigation 2030 2045	próba wysiłkowa
+R25	Neg Arg1:T23 Arg2:T28	
+R26	Neg Arg1:T23 Arg2:T29	
+R27	Neg Arg1:T23 Arg2:T30	
+R28	Neg Arg1:T23 Arg2:T31	
+R29	Neg Arg1:T23 Arg2:T32	
+R30	Neg Arg1:T23 Arg2:T33	
+N25	Reference T35 ICD10:Z72.0	Używanie tytoniu
+N26	Reference T36 ICD10:Z72.0	Używanie tytoniu
+N27	Reference T22 ICD10:Z72.0	Używanie tytoniu
+T6	Behaviour 600 605	dietą
+A2	Source T7 Declared

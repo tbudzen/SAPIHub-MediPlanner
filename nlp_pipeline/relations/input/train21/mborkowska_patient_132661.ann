@@ -1,0 +1,116 @@
+T1	Behaviour 2806 2832	warunki mieszkaniowe dobre
+T2	Drug 2860 2864	Leki
+T3	Negation 2867 2889	Nie przyjmuje na stałe
+R1	Neg Arg1:T3 Arg2:T2	
+T4	Condition 2756 2759	WZW
+N1	Reference T4 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T5	Condition 2766 2775	borelioza
+N2	Reference T5 ICD10:A69.2	Choroba z Lyme
+T6	Condition 2781 2784	tbc
+N3	Reference T6 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T7	Negation 2786 2787	-
+R2	Neg Arg1:T7 Arg2:T6	
+T8	Negation 2777 2778	-
+R3	Neg Arg1:T8 Arg2:T5	
+T9	Negation 2762 2763	)
+R4	Neg Arg1:T9 Arg2:T4	
+T10	Negation 2724 2727	nie
+T11	Negation 2708 2711	nie
+T12	Negation 2690 2693	nie
+T13	Negation 2665 2671	neguje
+T14	Treatment 2646 2663	Przebyte operacje
+R5	Neg Arg1:T13 Arg2:T14	
+T15	Behaviour 2673 2688	Palenie tytoniu
+N4	Reference T15 ICD10:T65.2	Tytoń i nikotyna
+R6	Neg Arg1:T12 Arg2:T15	
+T16	Behaviour 2695 2706	Inne używki
+R7	Neg Arg1:T11 Arg2:T16	
+T17	Condition 2713 2722	Uczulenia
+N5	Reference T17 ICD10:T78.4	Alergia, nieokreślona
+R8	Neg Arg1:T10 Arg2:T17	
+T18	Negation 2485 2491	Neguje
+T19	Symptom 2493 2505	zasłabnięcia
+N6	Reference T19 ICD10:R55	Omdlenie i zapaść
+T20	Symptom 2507 2515	omdlenia
+N7	Reference T20 ICD10:R55	Omdlenie i zapaść
+T21	Symptom 2517 2527	krwawienia
+N8	Reference T21 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T22	Symptom 2529 2542	czarne stolce
+N9	Reference T22 ICD10:K92.1	Stolce smołowate
+T23	Symptom 2544 2560	brunatne wymioty
+N10	Reference T23 ICD10:K92.0	Wymioty krwawe
+T24	Condition 2562 2578	chorobę wrzodową
+N11	Reference T24 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T25	Symptom 2580 2608	duszność nocną typu ortopnoe
+N12	Reference T25 ICD10:I50.1	Niewydolność serca lewokomorowa
+T26	Condition 2610 2612	HA
+N13	Reference T26 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T27	Condition 2614 2616	DM
+N14	Reference T27 ICD10:E13	
+T28	Condition 2618 2628	udar mózgu
+N15	Reference T28 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T29	Condition 2630 2641	zawał serca
+N16	Reference T29 ICD10:I25.2	Przebyty zawał serca
+R9	Neg Arg1:T18 Arg2:T19	
+R10	Neg Arg1:T18 Arg2:T20	
+R11	Neg Arg1:T18 Arg2:T21	
+R12	Neg Arg1:T18 Arg2:T22	
+R13	Neg Arg1:T18 Arg2:T23	
+R14	Neg Arg1:T18 Arg2:T24	
+R15	Neg Arg1:T18 Arg2:T25	
+R16	Neg Arg1:T18 Arg2:T26	
+R17	Neg Arg1:T18 Arg2:T27	
+R18	Neg Arg1:T18 Arg2:T28	
+R19	Neg Arg1:T18 Arg2:T29	
+T30	Treatment 2428 2447	korekcji całkowitej
+T31	Date 2449 2455	2000 r
+R20	Dat Arg1:T31 Arg2:T30	
+T32	Condition 2360 2406	wrodzona wada serca pod postacią VSD podpłucne
+N17	Reference T32 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T33	Condition 2407 2410	PDA
+N18	Reference T33 ICD10:Q25.0	Drożny przewód tętniczy
+T34	Condition 2411 2414	PFO
+N19	Reference T34 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T35	Condition 2415 2418	CoA
+N20	Reference T35 ICD10:Q25.1	Zwężenie cieśni aorty
+T36	Symptom 2236 2267	ograniczenie tolerancji wysiłku
+T37	Symptom 2270 2306;2308 2337	niespecyficzne bóle podżebrza lewego okresowo związane z wysiłkiem
+T38	Condition 1987 1997	hipotensji
+N21	Reference T38 ICD10:I95	Niedociśnienie
+T39	Treatment 1943 1962	korekcji całkowitej
+T40	Date 1964 1970	2000 r
+R21	Dat Arg1:T40 Arg2:T39	
+T41	Condition 1885 1921	Wrodzona wada serca pod postacią VSD
+N22	Reference T41 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T42	Condition 1922 1925	PDA
+N23	Reference T42 ICD10:Q25.0	Drożny przewód tętniczy
+T43	Condition 1926 1929	PFO
+N24	Reference T43 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T44	Condition 1930 1933	CoA
+N25	Reference T44 ICD10:Q25.1	Zwężenie cieśni aorty
+T45	Behaviour 1561 1611	aktywność fizyczna 5x w tyg. po 30 minut dziennie.
+T46	Behaviour 1088 1122	ścisła higiena skóry i jamy ustnej
+T47	Behaviour 1124 1198	przeglądy stomatologiczne należy przeprowadzać co najmniej dwa razy w roku
+T48	Behaviour 1200 1215	dezynfekcja ran
+T49	Behaviour 1217 1297	eliminacja lub ograniczenie przewlekłego nosicielstwa bakteryjnego: skóry, moczu
+T50	Behaviour 1299 1360	leczenie antybiotykami każdego ogniska zakażenia bakteryjnego
+T51	Behaviour 1362 1416	niestosowanie antybiotyków samodzielnie przez pacjenta
+T52	Behaviour 1418 1459	unikanie kolczykowania i tatuowania ciała
+T53	Behaviour 1461 1545	ścisłe przestrzeganie zasad aseptyki podczas zabiegów stwarzających ryzyko zakażenia
+T54	Drug 848 860	amoksycylina
+T55	Drug 865 875	ampicylina
+T56	Drug_dose 876 896	2 g doustnie lub i.v
+R22	Drg Arg1:T55 Arg2:T56	
+R23	Drg Arg1:T54 Arg2:T56	
+T57	Condition 911 942	alergii na powyższe antybiotyki
+N26	Reference T57 ICD10:Z88.1	Uczulenie na inne antybiotyki w wywiadzie
+T58	Drug 945 957	klindamycyna
+T59	Drug_dose 958 982	600 mg doustnie lub i.v.
+R24	Drg Arg1:T58 Arg2:T59	
+R25	Alg Arg1:T57 Arg2:T55	
+R26	Alg Arg1:T57 Arg2:T54	
+T60	Investigation 716 750	kontrola ciśnienia tętniczego krwi
+T61	Investigation 613 695	kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T62	Behaviour 558 597	Dieta lekkostrawna, niskocholesterolowa
+T63	Treatment 1017 1049	infekcyjnego zapalenia wsierdzia
+N27	Reference T63 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia

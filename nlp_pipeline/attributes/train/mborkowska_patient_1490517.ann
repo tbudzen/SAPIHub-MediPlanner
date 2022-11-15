@@ -1,0 +1,381 @@
+T1	Investigation 7231 7235	ECHO
+T2	Investigation 7237 7255	EKG metodą Holtera
+T3	Investigation 7257 7261	ABPM
+T4	Investigation 7263 7278	próba wysiłkowa
+T5	Drug 6834 6841	Clexane
+T6	Drug_dose 6842 6866	100mg/ml 2x dziennie s.c
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 6869 6875	Plavix
+T8	Drug_dose 6876 6893	75mg 1 tabletka R
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 6895 6900	Acard
+T10	Drug_dose 6901 6918	75mg 1 tabletka W
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 6920 6927	Nebilet
+T12	Drug_dose 6928 6944	5mg 1 tabletka R
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 6946 6953	Bixebra
+T14	Drug_dose 6954 6974	5mg 1 tabletka R i W
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Drug 6976 6982	Tolura
+T16	Drug_dose 6983 7000	80mg 1 tabletka R
+R6	Drg Arg1:T15 Arg2:T16	
+T17	Drug 7002 7010	Primacor
+T18	Drug_dose 7011 7028	10mg 1 tabletka W
+R7	Drg Arg1:T17 Arg2:T18	
+T19	Drug 7030 7036	Trifas
+T20	Drug_dose 7037 7054	10mg 1 tabletka R
+R8	Drg Arg1:T19 Arg2:T20	
+T21	Drug 7056 7066	Eplenocard
+T22	Drug_dose 7067 7093	25mg 1 tabletka w południe
+R9	Drg Arg1:T21 Arg2:T22	
+T23	Drug 7095 7102	Roswera
+T24	Drug_dose 7103 7120	40mg 1 tabletka W
+R10	Drg Arg1:T23 Arg2:T24	
+T25	Drug 7122 7129	Emanera
+T26	Drug_dose 7130 7147	40mg 1 tabletka R
+R11	Drg Arg1:T25 Arg2:T26	
+T27	Behaviour 6800 6826	warunki mieszkaniowe dobre
+T28	Negation 6780 6783	b/z
+T29	Condition 6757 6778	W wywiadzie rodzinnym
+A1	Status T29 Family
+R12	Neg Arg1:T28 Arg2:T29	
+T30	Condition 6694 6697	WZW
+N1	Reference T30 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T31	Condition 6704 6713	borelioza
+N2	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Condition 6719 6722	tbc
+N3	Reference T32 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T33	Condition 6728 6732	odra
+N4	Reference T33 ICD10:B05	Odra
+T34	Behaviour 6738 6752	kontakt z odrą
+N5	Reference T34 ICD10:B05	Odra
+T35	Negation 6753 6756	(-)
+R13	Neg Arg1:T35 Arg2:T34	
+T36	Negation 6733 6737	(-),
+R14	Neg Arg1:T36 Arg2:T33	
+T37	Negation 6723 6727	(-),
+R15	Neg Arg1:T37 Arg2:T32	
+T38	Negation 6714 6718	(-),
+R16	Neg Arg1:T38 Arg2:T31	
+T39	Negation 6698 6701	(-)
+R17	Neg Arg1:T39 Arg2:T30	
+T40	Negation 6662 6665	nie
+T41	Negation 6647 6650	nie
+T42	Condition 6651 6660	Uczulenia
+N6	Reference T42 ICD10:T78.4	Alergia, nieokreślona
+R18	Neg Arg1:T40 Arg2:T42	
+T43	Behaviour 6634 6645	Inne używki
+R19	Neg Arg1:T41 Arg2:T43	
+T44	Behaviour 6598 6613	Palenie tytoniu
+N7	Reference T44 ICD10:T65.2	Tytoń i nikotyna
+T45	Negation 6615 6623	nie pali
+R20	Neg Arg1:T45 Arg2:T44	
+T46	Treatment 6551 6596	usunięcie śledziony po wypadku komunikacyjnym
+T47	Negation 6349 6355	Neguje
+T48	Symptom 6357 6369	zasłabnięcia
+N8	Reference T48 ICD10:R55	Omdlenie i zapaść
+T49	Symptom 6371 6379	omdlenia
+N9	Reference T49 ICD10:R55	Omdlenie i zapaść
+T50	Symptom 6381 6391	krwawienia
+N10	Reference T50 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T51	Symptom 6393 6406	czarne stolce
+N11	Reference T51 ICD10:K92.1	Stolce smołowate
+T52	Symptom 6408 6424	brunatne wymioty
+N12	Reference T52 ICD10:K92.0	Wymioty krwawe
+T53	Condition 6426 6442	chorobę wrzodową
+N13	Reference T53 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T54	Symptom 6444 6458	duszność nocną
+N14	Reference T54 ICD10:I50.1	Niewydolność serca lewokomorowa
+T55	Symptom 6460 6485	bóle w klatce piersiowej,
+N15	Reference T55 ICD10:R07.3	Inne bóle w klatce piersiowej
+T56	Symptom 6486 6501	kołatania serca
+N16	Reference T56 ICD10:R00.2	Kołatanie serca
+T57	Condition 6503 6505	DM
+N17	Reference T57 ICD10:E13	Inne określone postacie cukrzycy
+T58	Condition 6507 6517	udar mózgu
+N18	Reference T58 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T59	Condition 6519 6530	zawał serca
+N19	Reference T59 ICD10:I25.2	
+R21	Neg Arg1:T47 Arg2:T48	
+R22	Neg Arg1:T47 Arg2:T49	
+R23	Neg Arg1:T47 Arg2:T50	
+R24	Neg Arg1:T47 Arg2:T51	
+R25	Neg Arg1:T47 Arg2:T52	
+R26	Neg Arg1:T47 Arg2:T53	
+R27	Neg Arg1:T47 Arg2:T54	
+R28	Neg Arg1:T47 Arg2:T55	
+R29	Neg Arg1:T47 Arg2:T56	
+R30	Neg Arg1:T47 Arg2:T57	
+R31	Neg Arg1:T47 Arg2:T58	
+R32	Neg Arg1:T47 Arg2:T59	
+T60	Behaviour 6312 6333	Przewlekły nikotynizm
+N20	Reference T60 ICD10:T65.2	Tytoń i nikotyna
+T61	Date 6334 6348	w przeszłości.
+R33	Dat Arg1:T61 Arg2:T60	
+T62	Drug 4874 4881	Roswera
+T63	Drug 4851 4858	Bixebra
+T64	Drug 4798 4804	Diuver
+T65	Drug 4824 4831	Nebilet
+T66	Drug 4768 4777	Furosemid
+T67	Drug 4717 4725	Neoparin
+T68	Drug 4689 4697	Spironol
+T69	Drug 4659 4666	Tritace
+T70	Drug_dose 4667 4688	2,5mg 1x 1 tabl/wiecz
+R34	Drg Arg1:T69 Arg2:T70	
+T71	Drug_dose 4698 4716	25mg 1x 1 tabl/poł
+R35	Drg Arg1:T68 Arg2:T71	
+T72	Drug_dose 4726 4767	80mg 2x dz od 12.2018 z przerwą w 01.2019
+R36	Drg Arg1:T67 Arg2:T72	
+T73	Drug_dose 4778 4797	40mg 1x 1 tabl/rano
+R37	Drg Arg1:T66 Arg2:T73	
+T74	Drug_dose 4805 4823	10mg 1x 1 tabl/poł
+R38	Drg Arg1:T64 Arg2:T74	
+T75	Drug_dose 4832 4850	5mg 1x 1 tabl/rano
+R39	Drg Arg1:T65 Arg2:T75	
+T76	Drug_dose 4859 4873	5mg 1-0-1 tabl
+R40	Drg Arg1:T63 Arg2:T76	
+T77	Drug_dose 4882 4902	30mg 1x 1 tabl/wiecz
+R41	Drg Arg1:T62 Arg2:T77	
+T78	Investigation 4986 4990	ECHO
+T79	Investigation 4992 5010	EKG metodą Holtera
+T80	Investigation 5012 5016	ABPM
+T81	Investigation 5018 5033	próba wysiłkowa
+T82	Behaviour 4582 4608	warunki mieszkaniowe dobre
+T83	Negation 4562 4565	b/z
+T84	Condition 4539 4560	W wywiadzie rodzinnym
+A2	Status T84 Family
+R42	Neg Arg1:T83 Arg2:T84	
+T85	Condition 4476 4479	WZW
+N21	Reference T85 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T86	Condition 4486 4495	borelioza
+N22	Reference T86 ICD10:A69.2	Choroba z Lyme
+T87	Condition 4501 4504	tbc
+N23	Reference T87 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T88	Condition 4510 4514	odra
+N24	Reference T88 ICD10:B05	Odra
+T89	Behaviour 4520 4534	kontakt z odrą
+N25	Reference T89 ICD10:B05	Odra
+T90	Negation 4535 4538	(-)
+R43	Neg Arg1:T90 Arg2:T89	
+T91	Negation 4515 4519	(-),
+R44	Neg Arg1:T91 Arg2:T88	
+T92	Negation 4505 4509	(-),
+R45	Neg Arg1:T92 Arg2:T87	
+T93	Negation 4480 4483	(-)
+R46	Neg Arg1:T93 Arg2:T85	
+T94	Negation 4496 4500	(-),
+R47	Neg Arg1:T94 Arg2:T86	
+T95	Negation 4444 4447	nie
+T96	Negation 4429 4432	nie
+T97	Negation 4397 4405	nie pali
+T98	Condition 4433 4442	Uczulenia
+N26	Reference T98 ICD10:T78.4	Alergia, nieokreślona
+R48	Neg Arg1:T95 Arg2:T98	
+T99	Behaviour 4416 4427	Inne używki
+R49	Neg Arg1:T96 Arg2:T99	
+T100	Behaviour 4380 4395	Palenie tytoniu
+N27	Reference T100 ICD10:T65.2	Tytoń i nikotyna
+T101	Condition 788 837	Niewydolność serca z pośrednią frakcją wyrzutową.
+N28	Reference T101 ICD10:I50	Niewydolność serca
+T102	Drug 1495 1502	Tritace
+T103	Drug 1504 1512	Spironol
+T104	Drug 1514 1520	Tolura
+T105	Drug 1522 1529	Pradaxa
+T106	Drug 1531 1537	Diuver
+T107	Drug 1539 1546	Nebilet
+T108	Drug 1548 1555	Bixebra
+T109	Drug 1557 1564	Roswera
+T110	Drug 1566 1573	Clexane
+T111	Drug 1575 1584	Furosemid
+T112	Drug 1586 1595	0,9% NaCl
+T113	Negation 4128 4134	Neguje
+T114	Symptom 4136 4148	zasłabnięcia
+N29	Reference T114 ICD10:R55	Omdlenie i zapaść
+T115	Symptom 4150 4158	omdlenia
+N30	Reference T115 ICD10:R55	Omdlenie i zapaść
+T116	Symptom 4160 4170	krwawienia
+N31	Reference T116 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T117	Symptom 4172 4185	czarne stolce
+N32	Reference T117 ICD10:K92.1	Stolce smołowate
+T118	Symptom 4187 4204	brunatne wymioty,
+N33	Reference T118 ICD10:K92.0	Wymioty krwawe
+T119	Condition 4205 4221	chorobę wrzodową
+N34	Reference T119 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T120	Symptom 4223 4237	duszność nocną
+N35	Reference T120 ICD10:I50.1	Niewydolność serca lewokomorowa
+T121	Symptom 4239 4263	bóle w klatce piersiowej
+N36	Reference T121 ICD10:R07.3	Inne bóle w klatce piersiowej
+T122	Symptom 4265 4280	kołatania serca
+N37	Reference T122 ICD10:R00.2	Kołatanie serca
+T123	Condition 4282 4284	DM
+N38	Reference T123 ICD10:E13	Inne określone postacie cukrzycy
+T124	Condition 4286 4296	udar mózgu
+N39	Reference T124 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T125	Condition 4298 4309	zawał serca
+N40	Reference T125 ICD10:I25.2	Przebyty zawał serca
+R50	Neg Arg1:T113 Arg2:T114	
+R51	Neg Arg1:T113 Arg2:T115	
+R52	Neg Arg1:T113 Arg2:T116	
+R53	Neg Arg1:T113 Arg2:T117	
+R54	Neg Arg1:T113 Arg2:T118	
+R55	Neg Arg1:T113 Arg2:T119	
+R56	Neg Arg1:T113 Arg2:T120	
+R57	Neg Arg1:T113 Arg2:T121	
+R58	Neg Arg1:T113 Arg2:T122	
+R59	Neg Arg1:T113 Arg2:T123	
+R60	Neg Arg1:T113 Arg2:T124	
+R61	Neg Arg1:T113 Arg2:T125	
+T126	Treatment 6198 6303	pourazowym usunięciu śledziony oraz zespoleniu gwoździem śródszpikowym złamania trzonu kości udowej lewej
+T127	Date 6305 6309	2009
+R62	Dat Arg1:T127 Arg2:T126	
+T128	Treatment 4332 4377	usunięcie śledziony po wypadku komunikacyjnym
+T129	Condition 838 885	Podejrzenie przebytego zawału ściany przedniej.
+N41	Reference T129 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+A3	Source T129 Declared
+T130	Condition 886 921	Skrzeplina w koniuszku lewej komory
+N42	Reference T130 ICD10:I51.3	Zakrzep wewnątrzsercowy niesklasyfikowany gdzie indziej
+T131	Condition 923 956	Niedomykalność zastawki aortalnej
+N43	Reference T131 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T132	Condition 959 976	mitralnej I/II st
+N44	Reference T132 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T133	Condition 978 1019	Niedomykalność zastawki trójdzielnej I st
+N45	Reference T133 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T134	Condition 1021 1042	Nadciśnienie tętnicze
+N46	Reference T134 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T135	Condition 1044 1081	Zakrzepica żyły odpiszczelowej lewej.
+N47	Reference T135 ICD10:I80	Zapalenie żył i zakrzepowe zapalenie żył
+T136	Condition 1082 1102	Guz nadnercza lewego
+N48	Reference T136 ICD10:D44.1	
+T137	Treatment 1106 1125	dalszej diagnostyki
+T138	Behaviour 1339 1360	Przewlekły nikotynizm
+N49	Reference T138 ICD10:T65.2	Tytoń i nikotyna
+T139	Treatment 1222 1294	pourazowym usunięciem śledziony oraz zespoleniem gwoździem śródszpikowym
+T140	Date 1332 1336	2009
+R63	Dat Arg1:T140 Arg2:T139	
+T141	Condition 1139 1190	zakrzepowe zapalenie żył kończyny dolnej lewej (3x)
+N50	Reference T141 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+T142	Condition 2170 2186	Choroba wieńcowa
+N51	Reference T142 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T143	Treatment 2188 2245	PCI GPZ z implantacją stentu DES Xposition S 3,5-4,5/27mm
+T144	Date 2247 2257	29/07/2019
+R64	Dat Arg1:T144 Arg2:T143	
+T145	Treatment 2264 2271	POBA D2
+R65	Dat Arg1:T144 Arg2:T145	
+T146	Investigation_result 2334 2345	(EF = 31%).
+T147	Condition 2273 2333	Niewydolność serca z obniżoną frakcją wyrzutową lewej komory
+N52	Reference T147 ICD10:I50	Niewydolność serca
+T148	Condition 2346 2381	Skrzeplina w koniuszku lewej komory
+N53	Reference T148 ICD10:I51.3	Zakrzep wewnątrzsercowy niesklasyfikowany gdzie indziej
+T149	Condition 5982 6017	Skrzeplina w koniuszku lewej komory
+N54	Reference T149 ICD10:I51.3	Zakrzep wewnątrzsercowy niesklasyfikowany gdzie indziej
+T150	Condition 2383 2428	Umiarkowana niedomykalność zastawki aortalnej
+N55	Reference T150 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T151	Condition 3800 3807	IA I/II
+N56	Reference T151 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T152	Condition 2431 2440	mitralnej
+N57	Reference T152 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T153	Condition 6067 6076	mitralnej
+N58	Reference T153 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T154	Condition 6019 6064	Umiarkowana niedomykalność zastawki aortalnej
+N59	Reference T154 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T155	Condition 2442 2463	Nadciśnienie tętnicze
+N60	Reference T155 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T156	Condition 2465 2508	Nawracająca zakrzepica żył kończyn dolnych.
+N61	Reference T156 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+T157	Condition 2509 2529	Guz nadnercza lewego
+N62	Reference T157 ICD10:D44.1	Nadnercze
+T158	Condition 3365 3385	Guz nadnercza lewego
+N63	Reference T158 ICD10:D44.1	Nadnercze
+T159	Condition 6145 6165	Guz nadnercza lewego
+N64	Reference T159 ICD10:D44.1	Nadnercze
+T160	Condition 3317 3359	Nawracająca zakrzepica żył kończyn dolnych
+N65	Reference T160 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+T161	Condition 6101 6143	Nawracająca zakrzepica żył kończyn dolnych
+N66	Reference T161 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+T162	Condition 6078 6099	Nadciśnienie tętnicze
+N67	Reference T162 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T163	Condition 3542 3549	Otyłość
+N68	Reference T163 ICD10:E66	Otyłość
+T164	Treatment 3424 3494	pourazowym usunięciu śledziony oraz zespoleniu gwoździem śródszpikowym
+T165	Date 3531 3535	2009
+R66	Dat Arg1:T165 Arg2:T164	
+T166	Condition 3261 3273	Dyslipidemia
+N69	Reference T166 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T167	Drug 3293 3300	statyną
+T168	Drug 3303 3311	fibratem
+T169	Condition 3234 3255	Nadciśnienie tętnicze
+N70	Reference T169 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T170	Condition 3190 3228	Poszerzenie aorty wstępującej do 43 mm
+N71	Reference T170 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T171	Treatment 3095 3140	PCI LAD z implantacją stentu DES oraz POBA D2
+T172	Date 3143 3153	29/07/2019
+R67	Dat Arg1:T172 Arg2:T171	
+T173	Condition 3037 3081	Przewlekła choroba wieńcowa – I klasa wg CCS
+N72	Reference T173 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T174	Condition 2941 3003	Przewlekła niewydolność serca z pośrednią frakcją wyrzutową LV
+N73	Reference T174 ICD10:I50	Niewydolność serca
+T175	Investigation_result 3004 3013	(EF: 44%)
+T176	Condition 3016 3031	I klasa wg NYHA
+T177	Behaviour 2676 2697	Przewlekły nikotynizm
+N74	Reference T177 ICD10:T65.2	Tytoń i nikotyna
+T178	Treatment 2562 2632	pourazowym usunięciu śledziony oraz zespoleniu gwoździem śródszpikowym
+T179	Date 2669 2673	2009
+R68	Dat Arg1:T179 Arg2:T178	
+T180	Condition 5909 5969	Niewydolność serca z obniżoną frakcją wyrzutową lewej komory
+N75	Reference T180 ICD10:I50	Niewydolność serca
+T181	Investigation_result 5971 5979	EF = 31%
+T182	Treatment 5824 5881	PCI GPZ z implantacją stentu DES Xposition S 3,5-4,5/27mm
+T183	Treatment 5900 5907	POBA D2
+T184	Date 5883 5893	29/07/2019
+R69	Dat Arg1:T184 Arg2:T182	
+R70	Dat Arg1:T184 Arg2:T183	
+T185	Condition 5806 5823	Choroba wieńcowa.
+N76	Reference T185 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T186	Investigation 5409 5431	koronarografię planową
+T187	Investigation_result 5434 5744	w segmencie 7/8 GPZ zmiany 70% z ektazją oraz nieistotna hemodynamicznie blaszka w ujściu D2, do GPZ implantowano stent DEX Xposiotion S3,5-4,5/27mm oraz z uwagi na rezydualne zwężenie ujścia D2 wykonano POBA cewnikiem balonowym NC 2,5/8mm z dobrym wynikiem nagiograficznym i prawidłowymi napływami do GPZ i D2
+R71	Inv Arg1:T186 Arg2:T187	
+T188	Condition 3160 3185	Skrzeplina w koniuszki LV
+N77	Reference T188 ICD10:I51.3	Zakrzep wewnątrzsercowy niesklasyfikowany gdzie indziej
+T189	Condition 3738 3763	skrzepliny w koniuszku LK
+N78	Reference T189 ICD10:I51.3	Zakrzep wewnątrzsercowy niesklasyfikowany gdzie indziej
+T190	Condition 5253 5281	koniuszku serca (skrzeplina)
+N79	Reference T190 ICD10:I51.3	Zakrzep wewnątrzsercowy niesklasyfikowany gdzie indziej
+T191	Symptom 4102 4125	obrzęki lewego podudzia
+N80	Reference T191 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T192	Condition 3823 3825	HA
+N81	Reference T192 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T193	Investigation_result 3837 3851	RR <140/90mmHg
+T194	Condition 3809 3819	IT I/II st
+N82	Reference T194 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T195	Condition 3793 3799	IM II,
+N83	Reference T195 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T196	Condition 3865 3918	zakrzepowego zapalenia żył kończyny dolnej lewej (3x)
+N84	Reference T196 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+T197	Investigation 466 480	koronarografii
+T198	Date 488 498	25/07/2019
+R72	Dat Arg1:T198 Arg2:T197	
+T199	Date 1361 1374	w przeszłości
+R73	Dat Arg1:T199 Arg2:T138	
+T200	Date 2698 2711	w przeszłości
+R74	Dat Arg1:T200 Arg2:T177	
+T201	Condition 3702 3721	niewydolności serca
+N85	Reference T201 ICD10:I50	Niewydolność serca
+T202	Investigation_result 3724 3735	EF 30%->40%
+R77	Neg Arg1:T97 Arg2:T100	
+T203	Condition 3777 3791	zapaleniu płuc
+N86	Reference T203 ICD10:J18	Zapalenie płuc wywołane przez niezidentyfikowany czynnik zakaźny
+A4	Status T139 Historical_Insignificant
+T204	Condition 1295 1330	załamania trzonu kości udowej lewej
+N87	Reference T204 ICD10:S72	Złamanie kości udowej
+R78	Dat Arg1:T140 Arg2:T204	
+T205	Condition 2633 2667	złamania trzonu kości udowej lewej
+N88	Reference T205 ICD10:S72	Złamanie kości udowej
+T206	Condition 3495 3529	złamania trzonu kości udowej lewej
+N89	Reference T206 ICD10:S72	Złamanie kości udowej
+A5	Status T164 Historical_Insignificant
+A6	Status T206 Historical_Insignificant
+T207	Date 4406 4415	od 10 lat
+R75	Dat Arg1:T207 Arg2:T100	
+T208	Date 6624 6633	od 10 lat
+R76	Dat Arg1:T208 Arg2:T44	

@@ -1,0 +1,15 @@
+T1	Condition 590 601	Bradykardia
+N1	Reference T1 ICD10:R00.1	Bradykardia, nieokreślona
+T2	Condition 625 646	zespołu chorej zatoki
+N2	Reference T2 ICD10:I49.5	Zespół chorej zatoki
+A1	Source T2 Declared
+T3	Drug 771 780	teofiliny
+T4	Drug_dose 781 802	150mg 2 razy dziennie
+R1	Drg Arg1:T3 Arg2:T4	
+T5	Treatment 807 841	Kontrola w Poradni Kardiologicznej
+T6	Investigation 603 624	Obserwacja w kierunku
+T7	Negation 340 343	Bez
+T8	Drug 344 349	leków
+R2	Neg Arg1:T7 Arg2:T8	
+T9	Date 842 853	za pół roku
+R3	Dat Arg1:T9 Arg2:T5	

@@ -1,0 +1,125 @@
+T1	Behaviour 487 544	dieta lekkostrawna, ubogosodowa oraz nisko cholesterolowa
+T2	Investigation 423 463	kontrola ciśnienia tętniczego oraz tętna
+T3	Condition 786 818	Łagodna niedomykalność mitralna.
+N1	Reference T3 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T4	Condition 819 840	Nadciśnienie tętnicze
+N2	Reference T4 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T5	Condition 850 883	krwawieniu z przewodu pokarmowego
+N3	Reference T5 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T6	Treatment 885 905	leczonym operacyjnie
+T7	Treatment 914 924	reoperacji
+T8	Condition 934 940	ropnia
+T9	Treatment 950 958	operacji
+T10	Condition 968 989	przepukliny brzusznej
+N4	Reference T10 ICD10:K45	Inne przepukliny brzuszne
+T11	Investigation 2191 2195	ECHO
+T12	Investigation 2197 2215	EKG metodą Holtera
+T13	Investigation 2217 2221	ABPM
+T14	Investigation 2223 2238	próba wysiłkowa
+T15	Behaviour 2024 2050	warunki mieszkaniowe dobre
+T16	Condition 1945 1948	WZW
+T17	Condition 1955 1964	borelioza
+N6	Reference T17 ICD10:A69.2	Choroba z Lyme
+T18	Condition 1970 1973	tbc
+N7	Reference T18 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T19	Condition 1979 1983	odra
+N8	Reference T19 ICD10:B05	Odra
+T20	Behaviour 1989 2003	kontakt z odrą
+N9	Reference T20 ICD10:B05	Odra
+T21	Negation 2004 2007	(-)
+R1	Neg Arg1:T21 Arg2:T20	
+T22	Negation 1984 1988	(-),
+R2	Neg Arg1:T22 Arg2:T19	
+T23	Negation 1974 1978	(-),
+R3	Neg Arg1:T23 Arg2:T18	
+T24	Negation 1965 1969	(-),
+R4	Neg Arg1:T24 Arg2:T17	
+T25	Negation 1949 1952	(-)
+R5	Neg Arg1:T25 Arg2:T16	
+T26	Negation 1914 1917	nie
+T27	Negation 1899 1902	nie
+T28	Negation 1876 1884	nie pali
+T29	Condition 1903 1912	Uczulenia
+R6	Neg Arg1:T26 Arg2:T29	
+T30	Behaviour 1886 1897	Inne używki
+R7	Neg Arg1:T27 Arg2:T30	
+T31	Behaviour 1859 1874	Palenie tytoniu
+R8	Neg Arg1:T28 Arg2:T31	
+T32	Treatment 1739 1747	operacja
+T33	Symptom 1757 1791	krwawienia z przewodu pokarmowego,
+N12	Reference T33 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T34	Treatment 1792 1802	reoperacja
+T35	Condition 1812 1818	ropnia
+T36	Treatment 1828 1836	operacja
+T37	Condition 1846 1857	przepukliny
+N13	Reference T37 ICD10:K45	Inne przepukliny brzuszne
+T38	Date 1820 1825	2005r
+R9	Dat Arg1:T38 Arg2:T36	
+R10	Dat Arg1:T38 Arg2:T37	
+T39	Date 1730 1735	2004r
+R11	Dat Arg1:T39 Arg2:T32	
+R12	Dat Arg1:T39 Arg2:T33	
+R13	Dat Arg1:T39 Arg2:T34	
+R14	Dat Arg1:T39 Arg2:T35	
+T40	Negation 1559 1565	Neguje
+T41	Symptom 1567 1579	zasłabnięcia
+N14	Reference T41 ICD10:R55	Omdlenie i zapaść
+T42	Symptom 1581 1589	omdlenia
+N15	Reference T42 ICD10:R55	Omdlenie i zapaść
+T43	Symptom 1591 1601	krwawienia
+N16	Reference T43 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T44	Symptom 1603 1616	czarne stolce
+N17	Reference T44 ICD10:K92.1	Stolce smołowate
+T45	Symptom 1618 1634	brunatne wymioty
+N18	Reference T45 ICD10:K92.0	Wymioty krwawe
+T46	Condition 1636 1652	chorobę wrzodową
+N19	Reference T46 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T47	Symptom 1654 1668	duszność nocną
+T48	Symptom 1670 1685	obrzęki podudzi
+N21	Reference T48 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T49	Condition 1687 1708	nadciśnienie tętnicze
+N22	Reference T49 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+R15	Neg Arg1:T40 Arg2:T41	
+R16	Neg Arg1:T40 Arg2:T42	
+R17	Neg Arg1:T40 Arg2:T43	
+R18	Neg Arg1:T40 Arg2:T44	
+R19	Neg Arg1:T40 Arg2:T45	
+R20	Neg Arg1:T40 Arg2:T46	
+R21	Neg Arg1:T40 Arg2:T47	
+R22	Neg Arg1:T40 Arg2:T48	
+R23	Neg Arg1:T40 Arg2:T49	
+T50	Investigation 1492 1514	angio-CT tt wieńcowych
+T51	Date 1522 1533	15.05.2019r
+R24	Dat Arg1:T51 Arg2:T50	
+T52	Investigation_result 1533 1557	-bez istotnych przewężeń
+R25	Inv Arg1:T50 Arg2:T52	
+T53	Symptom 1256 1341	duszności, bez związku z wysiłkiem fizycznym (zarówno w spoczynku jak i przy wysiłku)
+N23	Reference T53 ICD10:R06.0	Duszność
+T54	Symptom 1367 1383	kołatania serca.
+N24	Reference T54 ICD10:R06.0	Duszność
+T55	Symptom 1403 1467	dolegliwości bólowe w klatce piersiowej, promieniujące do żeber.
+N25	Reference T55 ICD10:R07.3	Inne bóle w klatce piersiowej
+T56	Negation 2094 2107	nie przyjmuje
+T57	Drug 2088 2092	Leki
+R26	Neg Arg1:T56 Arg2:T57	
+T58	Negation 1132 1143	bez wywiadu
+T59	Condition 1155 1178	chorób układu krążenia,
+R27	Neg Arg1:T58 Arg2:T59	
+A1	Status T9 Historical_Insignificant
+A2	Status T10 Historical_Insignificant
+A3	Status T32 Historical_Insignificant
+A4	Status T34 Historical_Insignificant
+A5	Status T35 Historical_Insignificant
+A6	Status T36 Historical_Insignificant
+A7	Status T37 Historical_Insignificant
+N11	Reference T31 ICD10:Z72.0	Używanie tytoniu
+N5	Reference T16 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+A8	Status T7 Historical_Insignificant
+A9	Status T8 Historical_Insignificant
+A10	Status T5 Historical_Insignificant
+A11	Status T6 Historical_Insignificant
+N10	Reference T29 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T60	Treatment 332 353	dalsza kontrola w POZ
+T61	Treatment 356 410	dalsza diagnostyka w warunkach Poradni Kardiologicznej
+N20	Reference T47 ICD10:R06.0	
+N26	Reference T30 ICD10:Z72	Problemy związane ze stylem życia

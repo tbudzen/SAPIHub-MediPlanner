@@ -1,0 +1,538 @@
+allRelations          : 29
+oks                   : 12
+isRedundantAndRemoveds: 16
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 1
+GOOD / BAD            : 28 / 1
+Sentence 0:
+------------------------------------------------
+Wiek: 19 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+- kontrola u lekarza POZ
+- unikanie sytuacji sprzyjających zasłabnięciom tj, wysokich temperatur, zatłoczonych pomieszczeń, odwodnienia, picie dużych ilości płynów, umiarkowany wysiłek fizyczny
+- dalsza kontrola w Poradni Kardiologicznej i E
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:R55|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Zasłabnięcia.
+
+
+Sentence 6:
+Łagodna niedomykalność zastawki trójdzielnej.
+
+
+Sentence 7:
+Poszerzona zatoka wieńcowa - przetrwała żyła główna górna lewa.
+
+
+Sentence 8:
+Zespół Turnera (kariotyp 45X).
+
+
+Sentence 9:
+Hipogonadyzm hipergonadotropowy.
+
+
+Sentence 10:
+Stan po  operacji stawu kolanowego prawego 3 lata temu.
+
+R1	Dat Arg1:T8 Arg2:T7 << OK >>	3 lata temu -> operacji stawu kolanowego prawego  <RANK: 3> <info: start[1029, 995] <type: LEFT>>
+
+
+Sentence 11:
+------------------------------------------------
+
+
+
+Sentence 12:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 13:
+Pacjentka  lat 19 przyjęta do Kliniki z powodu stanów przedomdleniowych ( ostatnio ostatnio 2 miesiące temu )  .
+R2	Dat Arg1:T41 Arg2:T40 << OK >>	ostatnio 2 miesiące temu -> stanów przedomdleniowych  <RANK: 3> <info: start[1249, 1213] <type: LEFT>>
+
+
+Sentence 14:
+Ponadto zgłasza okresowo uczucie duszności 
+neguje bóle w klatce piersiowej 
+
+R3	Neg Arg1:T38 Arg2:T37 << OK >>	neguje -> bóle w klatce piersiowej  <RANK: 3> <info: start[1323, 1330] <type: RIGHT>>
+R4	Neg Arg1:T38 Arg2:T39 <<REDUNDANT!!!REMOVED>>	neguje -> duszności <:REMOVED many second tags on the left:> <RANK: 1> <info: start[1323, 1312] <type: LEFT>>
+
+
+Sentence 15:
+W wywiadzie :  Łagodna niedomykalność zastawki trójdzielnej.
+
+
+Sentence 16:
+Poszerzona zatoka wieńcowa i przetrwała żyła główna górna lewa.
+
+
+Sentence 17:
+Zespół Turnera - kariotyp 45x.
+
+
+Sentence 18:
+Hipogonadyzm hipergonadotropowy.
+
+
+Sentence 19:
+Terapia hormonalna wzrostu w przeszłości 
+
+R5	Dat Arg1:T32 Arg2:T31 << OK >>	w przeszłości -> Terapia hormonalna wzrostu  <RANK: 3> <info: start[1572, 1545] <type: LEFT>>
+
+
+Sentence 20:
+Przebyte operacje:  stan po operacji stawu kolanowego prawego 3 lata temu. 
+
+R6	Dat Arg1:T30 Arg2:T29 << OK >>	3 lata temu -> operacji stawu kolanowego prawego  <RANK: 3> <info: start[1649, 1615] <type: LEFT>>
+
+
+Sentence 21:
+Leczenie przewlekłe:  endokrynologicznie 
+
+
+
+Sentence 22:
+Przebyte choroby zakaźne - WZW ( -  ) , borelioza ( - ) Odra ( - )
+
+R7	Neg Arg1:T26 Arg2:T23 <<REDUNDANT!!!SHOULD BE REMOVED>>	( -  ) -> WZW  <RANK: 3> <info: start[1736, 1732] <type: LEFT>>
+R8	Neg Arg1:T26 Arg2:T24 <<REDUNDANT!!!REMOVED>>	( -  ) -> borelioza <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1736, 1745] <type: RIGHT>>
+R9	Neg Arg1:T26 Arg2:T25 <<REDUNDANT!!!REMOVED>>	( -  ) -> Odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1736, 1761] <type: RIGHT>>
+R10	Neg Arg1:T27 Arg2:T23 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1757, 1732] <type: LEFT>>
+R11	Neg Arg1:T27 Arg2:T24 << OK >>	- -> borelioza  <RANK: 3> <info: start[1757, 1745] <type: LEFT>>
+R12	Neg Arg1:T27 Arg2:T25 <<REDUNDANT!!!REMOVED>>	- -> Odra <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1757, 1761] <type: RIGHT>>
+R13	Neg Arg1:T28 Arg2:T23 <<REDUNDANT!!!REMOVED>>	( - ) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1766, 1732] <type: LEFT>>
+R14	Neg Arg1:T28 Arg2:T24 <<REDUNDANT!!!REMOVED>>	( - ) -> borelioza <:REMOVED other second tag between (left):> <RANK: 3> <info: start[1766, 1745] <type: LEFT>>
+R15	Neg Arg1:T28 Arg2:T25 << OK >>	( - ) -> Odra  <RANK: 3> <info: start[1766, 1761] <type: LEFT>>
+
+
+Sentence 23:
+W wywiadzie rodzinnym : brak 
+
+R16	Neg Arg1:T21 Arg2:T22 << OK >>	brak -> W wywiadzie rodzinnym  <RANK: 3> <info: start[1796, 1772] <type: LEFT>>
+
+
+Sentence 24:
+Palenie tytoniu: nie
+Inne używki: nie
+Uczulenia: neguje
+Stan społeczny: warunki mieszkaniowe dobre , mieszka z matką 
+
+R17	Neg Arg1:T15 Arg2:T18 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[1851, 1840] <type: LEFT>>
+R18	Neg Arg1:T15 Arg2:T12 <<REDUNDANT!!!REMOVED>>	neguje -> warunki mieszkaniowe dobre <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1851, 1874] <type: RIGHT>>
+R19	Neg Arg1:T15 Arg2:T19 <<REDUNDANT!!!REMOVED>>	neguje -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1851, 1823] <type: LEFT>>
+R20	Neg Arg1:T15 Arg2:T20 <<REDUNDANT!!!REMOVED>>	neguje -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1851, 1802] <type: LEFT>>
+R21	Neg Arg1:T16 Arg2:T18 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1836, 1840] <type: RIGHT>>
+R22	Neg Arg1:T16 Arg2:T12 <<REDUNDANT!!!REMOVED>>	nie -> warunki mieszkaniowe dobre <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1836, 1874] <type: RIGHT>>
+R23	Neg Arg1:T16 Arg2:T19 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[1836, 1823] <type: LEFT>>
+R24	Neg Arg1:T16 Arg2:T20 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1836, 1802] <type: LEFT>>
+R25	Neg Arg1:T17 Arg2:T18 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1819, 1840] <type: RIGHT>>
+R26	Neg Arg1:T17 Arg2:T12 <<REDUNDANT!!!REMOVED>>	nie -> warunki mieszkaniowe dobre <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1819, 1874] <type: RIGHT>>
+R27	Neg Arg1:T17 Arg2:T19 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1819, 1823] <type: RIGHT>>
+R28	Neg Arg1:T17 Arg2:T20 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[1819, 1802] <type: LEFT>>
+
+
+Sentence 25:
+Leki: Femoston 1x dz wieczorem 
+Plan Opieki : Echo serca , Holter EKG , Próba Wysiłkowa , Planowany czas hospitalizacji 4-5 dni
+
+R29	Drg Arg1:T13 Arg2:T14 << OK >>	Femoston -> 1x dz wieczorem  <RANK: 3> <info: start[1926, 1935] <type: RIGHT>>
+
+
+Sentence 26:
+------------------------------------------------
+
+
+
+Sentence 27:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 28:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:3.59[10^3/ul]
+    
+
+
+Sentence 29:
+RBC Krwinki czerwone:3.93[10^6/ul]
+    
+
+
+Sentence 30:
+HGB Hemoglobina:12.6[g/dl]
+    
+
+
+Sentence 31:
+HCT Hematokryt:35.9[%]
+    
+
+
+Sentence 32:
+MCV wskaźnik czerwonokrw:91.3[fl]
+    
+
+
+Sentence 33:
+MCH wskaźnik czerwonokrw:32.1[pg]
+    
+
+
+Sentence 34:
+MCHC wskaźnik czerwonokr:35.1[g/dl]
+    
+
+
+Sentence 35:
+PLT z morfologii:181[10^3/ul]
+    
+
+
+Sentence 36:
+RDW-SD:43.1[fl]
+    
+
+
+Sentence 37:
+RDW-CV:13.1[%]
+    PDW:13.3[fl]
+    MPV:10.8[fl]
+    P-LCR:32.6[%]
+    
+
+
+Sentence 38:
+PCT (hematokryt płytkowy:0.20[%]
+    
+
+
+Sentence 39:
+NEUTR# wartość bezwzględ:1.76[10^3/ul]
+    
+
+
+Sentence 40:
+NEUTR%:49.0[%]
+    
+
+
+Sentence 41:
+LYMH# wartość bezwzględn:1.34[10^3/ul]
+    
+
+
+Sentence 42:
+LYMPH%:37.3[%]
+    
+
+
+Sentence 43:
+MONO# wartość bezwzględn:0.44[10^3/ul]
+    
+
+
+Sentence 44:
+MONO%:12.3[%]
+    
+
+
+Sentence 45:
+EO# wartość bezwzględna:0.03[10^3/ul]
+    
+
+
+Sentence 46:
+EO%:0.8[%]
+    
+
+
+Sentence 47:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 48:
+NRBC %:0.0[%]
+    
+
+
+Sentence 49:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 50:
+D-dimer - test ilościowy: D-dimer - test ilościowy:9[ng/ml]
+
+
+
+Sentence 51:
+Badanie ogólne moczu
+    
+
+
+Sentence 52:
+barwa:żółty[ ]
+    
+
+
+Sentence 53:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 54:
+przejrzystość:niezupełna[ ]
+    
+
+
+Sentence 55:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 56:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 57:
+ciężar właściwy:1.015[ ]
+    
+
+
+Sentence 58:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 59:
+pH:5.0[ ]
+    
+
+
+Sentence 60:
+białko:nieobecne[ ]
+    
+
+
+Sentence 61:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 62:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 63:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 64:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 65:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 66:
+nabłonki płaskie:bardzo liczne[w preparacie]
+    
+
+
+Sentence 67:
+leukocyty:5 /ul[ul]
+    erytrocyty świeże:2 /ul[ul]
+    śluz:liczny[w preparacie]
+    bakterie:nieliczne[w preparacie]
+
+
+
+Sentence 68:
+TSH: TSH:2.64[uIU/ml]
+
+
+
+Sentence 69:
+FT3: FT3:2.86[pg/ml]
+
+
+
+Sentence 70:
+FT4: FT4:1.45[ng/dl]
+
+
+
+Sentence 71:
+Troponina T: Troponina T:4.2[pg/ml]
+
+
+
+Sentence 72:
+ALAT: ALAT:19[U/L]
+ASPAT: ASPAT:25[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 73:
+Sód (Na): Sód:139[mmol/L]
+
+
+
+Sentence 74:
+Potas (K): Potas:4.1[mmol/L]
+
+
+
+Sentence 75:
+Kreatynina + GFR
+    
+
+
+Sentence 76:
+Kreatynina w surowicy:0.75[mg/dl]
+    
+
+
+Sentence 77:
+eGFR wg skr.
+
+
+Sentence 78:
+MDRD ze stan:99.5[ml/min/1,73 m^2]
+
+
+
+Sentence 79:
+Mocznik: Mocznik:19[mg/dl]
+
+
+
+Sentence 80:
+Kwas moczowy: Kwas moczowy:4.4[mg/dl]
+
+
+
+Sentence 81:
+Lipidogram
+    
+
+
+Sentence 82:
+Cholesterol całkowity:157[mg/dl]
+    
+
+
+Sentence 83:
+Cholesterol HDL:63[mg/dl]
+    
+
+
+Sentence 84:
+Cholestrol LDL:76[mg/dl]
+    Triglicerydy:67[mg/dl]
+    
+
+
+Sentence 85:
+Stosunek cholesterolu HD:0.4
+Glukoza w surowicy: Glukoza w surowicy:84[mg/dl]
+
+
+
+Sentence 86:
+------------------------------------------------
+
+
+
+Sentence 87:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 88:
+R55
+I36.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 89:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 90:
+89.501
+C55
+A01
+89.502
+I81
+89.41
+L43
+O61
+G49
+N45
+L69
+O55
+I17
+M45
+O35
+M37
+I19
+N13
+88.721
+O69
+
+
+
+Sentence 91:
+------------------------------------------------
+
+

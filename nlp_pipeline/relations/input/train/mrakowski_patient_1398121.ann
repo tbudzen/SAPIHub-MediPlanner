@@ -1,0 +1,89 @@
+T1	Symptom 439 474	Ból niewieńcowy w klatce piersiowej
+N1	Reference T1 ICD10:R07.3	Inne bóle w klatce piersiowej
+T2	Condition 476 496	Hipercholesterolemia
+N2	Reference T2 ICD10:E78.0	Czysta hipercholesterolemia
+T3	Condition 498 522	Rwa kulszowa lewostronna
+N3	Reference T3 ICD10:M54.3	Rwa kulszowa
+T4	Condition 536 557	Przebyte WZW (typu A)
+N4	Reference T4 ICD10:B15	Ostre wirusowe zapalenie wątroby typu A
+T5	Treatment 567 580	appendektomii
+A1	Status T5 Historical_Insignificant
+T6	Date 582 586	2005
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Treatment 697 724	dalsza opieka w poradni POZ
+T8	Investigation 732 770	okresowa kontrola ciśnienia tętniczego
+T9	Behaviour 777 850	dieta niskocholesterolowa, wskazana ambulatoryjna konsultacja dietetyczna
+T10	Symptom 1020 1058	nawracającego bólu w klatce piersiowej
+N5	Reference T10 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T11	Date 1059 1067	od 3 dni
+R2	Dat Arg1:T11 Arg2:T10	
+T12	Symptom 1086 1192	bol ma charakter kłujący, a także obolała jest cała klatka piersiowa, co nasilało sie przy zmianie pozycji
+N6	Reference T12 ICD10:R07.3	Inne bóle w klatce piersiowej
+T13	Date 1273 1277	2017
+T14	Investigation 1283 1298	próba wysiłkowa
+T15	Investigation_result 1319 1350	ujemna przy obciążeniu 10.5 MET
+R3	Inv Arg1:T14 Arg2:T15	
+R4	Dat Arg1:T13 Arg2:T14	
+R5	Dat Arg1:T13 Arg2:T15	
+T16	Investigation 1356 1372	echokardiogramie
+T17	Investigation_result 1373 1446	obraz echokardiograficzny i dopplerowski serca i wielkich naczyń w normie
+R6	Inv Arg1:T16 Arg2:T17	
+T18	Negation 1448 1458	Wykluczono
+T19	Symptom 1459 1496	tło wieńcowe bólu w klatce piersiowej
+N7	Reference T19 ICD10:R07.2	Ból w okolicy przedsercowej
+R7	Neg Arg1:T18 Arg2:T19	
+T20	Condition 1522 1529	arytmia
+N8	Reference T20 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T21	Date 1530 1540	przed laty
+R8	Dat Arg1:T21 Arg2:T20	
+T22	Drug 1568 1576	atenolol
+T23	Condition 1578 1601	hiperlipidemia mieszana
+N9	Reference T23 ICD10:E78.2	Hiperlipidemia mieszana
+T24	Condition 1603 1627	rwa kulszowa lewostronna
+N10	Reference T24 ICD10:M54.3	Rwa kulszowa
+T25	Date 1628 1640	XI.2015/2016
+R9	Dat Arg1:T25 Arg2:T24	
+T26	Condition 1651 1672	WZW najpewniej typu A
+N11	Reference T26 ICD10:B15	Ostre wirusowe zapalenie wątroby typu A
+T27	Date 1673 1687	w dzieciństwie
+R10	Dat Arg1:T27 Arg2:T26	
+T28	Negation 1689 1695	neguje
+T29	Condition 1696 1719	inne przewlekle choroby
+R11	Neg Arg1:T28 Arg2:T29	
+T30	Treatment 1721 1738	Przebyte operacje
+T31	Treatment 1748 1761	appendektomii
+A2	Status T31 Historical_Insignificant
+T32	Date 1762 1766	2005
+R12	Dat Arg1:T32 Arg2:T31	
+T33	Condition 1769 1784	Wywiad rodzinny
+A3	Status T33 Family
+T34	Condition 1794 1796	MI
+A4	Status T34 Family
+N12	Reference T34 ICD10:I25.2	Przebyty zawał serca
+T35	Condition 1809 1811	DM
+A5	Status T35 Family
+N13	Reference T35 ICD10:E14	Cukrzyca nieokreślona
+T36	Condition 1822 1824	MI
+A6	Status T36 Family
+N14	Reference T36 ICD10:I25.2	Przebyty zawał serca
+T37	Behaviour 1838 1852	palacz tytoniu
+A7	Status T37 Family
+N15	Reference T37 ICD10:Z72.0	Używanie tytoniu
+T38	Condition 1868 1888	hipercholesterolemia
+A8	Status T38 Family
+N16	Reference T38 ICD10:E78.0	Czysta hipercholesterolemia
+T39	Condition 1892 1899	Alergie
+T40	Negation 1901 1907	neguje
+R13	Neg Arg1:T40 Arg2:T39	
+T41	Behaviour 1910 1920	Nikotynizm
+N17	Reference T41 ICD10:Z72.0	Używanie tytoniu
+T42	Negation 1922 1928	neguje
+R14	Neg Arg1:T42 Arg2:T41	
+T43	Behaviour 1932 1939	Alkohol
+N18	Reference T43 ICD10:Z72.1	Używanie alkoholu
+T44	Negation 1941 1947	neguje
+R15	Neg Arg1:T44 Arg2:T43	
+T45	Condition 1950 1967	Uzależnienie inne
+T46	Negation 1969 1975	neguje
+R16	Neg Arg1:T46 Arg2:T45	
+T47	Behaviour 2003 2027	zawód - dział windykacji

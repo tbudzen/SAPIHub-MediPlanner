@@ -1,0 +1,44 @@
+T1	Condition 460 480	Bradykardia zatokowa
+N1	Reference T1 ICD10:R00.1	Bradykardia, nieokreślona
+T2	Condition 485 520	Komorowe zastępcze zaburzenia rytmu
+N2	Reference T2 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T3	Condition 529 532	SSS
+N3	Reference T3 ICD10:I49.5	Zespół chorej zatoki
+T4	Treatment 642 660	Przyjmowanie leków
+T5	Drug 664 681	Theospirex retard
+T6	Drug_dose 682 703	300mg - 1 tabl na noc
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Treatment 704 752	Przyjęcie do Kliniki Kardiologii celem wykonania
+T8	Investigation 753 784	całodobowego badania Holter EKG
+T9	Behaviour 799 856	Przeciwwskazany wysiłek fizyczny o charakterze statycznym
+T10	Drug 976 984	Atropina
+T11	Behaviour 1093 1173	Przeciwwskazane ćwiczenia na siłowni oraz wszelkie statyczne ćwiczenia wysiłkowe
+T12	Treatment 1175 1267	O możliwości wyczynowego uprawiania sportu decyzję powinien podjąć lekarz medycyny sportowej
+T13	Condition 1486 1506	Bradykardia zatokowa
+N4	Reference T13 ICD10:R00.1	Bradykardia, nieokreślona
+T14	Condition 1511 1546	Komorowe zastępcze zaburzenia rytmu
+N5	Reference T14 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T15	Condition 1555 1558	SSS
+N6	Reference T15 ICD10:I49.5	Zespół chorej zatoki
+T16	Investigation_result 1792 1802	HR  60/min
+T17	Condition 1769 1791	bradykardii  zatokowej
+N7	Reference T17 ICD10:R00.1	Bradykardia, nieokreślona
+N8	Reference T16 ICD10:R00.1	Bradykardia, nieokreślona
+T18	Drug 1960 1968	atropina
+T19	Treatment 1984 2005	zabiegu urologicznego
+T20	Symptom 2075 2117	krwawienie z dolnego odcinka p.pokarmowego
+N9	Reference T20 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T21	Drug 2475 2485	Theospirex
+T22	Drug_dose 2487 2504	300mg  1x na  noc
+R2	Drg Arg1:T21 Arg2:T22	
+T23	Symptom 2378 2430	krwawienia  z  dolnego odcinka przewodu  pokarmowego
+N10	Reference T23 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T24	Condition 2434 2461	nieprawidłowe  transaminazy
+N11	Reference T24 ICD10:R94.5	Nieprawidłowe wyniki badań czynnościowych wątroby
+T25	Negation 2017 2038	nie otrzymuje żadnych
+T26	Drug 2039 2044	leków
+R3	Neg Arg1:T25 Arg2:T26	
+R1	Drg Arg1:T5 Arg2:T6
+R11	Drg Arg1:T21 Arg2:T22
+R5	Neg Arg1:T25 Arg2:T19
+R8	Neg Arg1:T25 Arg2:T26

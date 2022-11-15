@@ -1,0 +1,70 @@
+T1	Condition 450 529	Wrodzona wada serca pod postacią ubytku w przegrodzie przedsionkowo - komorowej
+N1	Reference T1 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T2	Date 557 567	12.07.1999
+T3	Treatment 533 555	korekcji chirurgicznej
+N2	Reference T3 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T4	Negation 1741 1747	neguje
+T5	Negation 1726 1729	nie
+T6	Negation 1709 1712	nie
+T7	Negation 1630 1636	( -  )
+T8	Negation 1649 1654	( - )
+T9	Condition 1524 1535	Astygmatyzm
+N3	Reference T9 ICD10:H52.2	Astygmatyzm
+T10	Negation 1820 1823	bez
+T11	Condition 584 595	Astygmatyzm
+N4	Reference T11 ICD10:H52.2	Astygmatyzm
+T12	Condition 597 664	Zmiana guzowata w okolicy podżuchwowej lewej do dalszej diagnostyki
+N5	Reference T12 ICD10:D48.7	Inne określone umiejscowienie
+T13	Condition 570 582	Zespół Downa
+N6	Reference T13 ICD10:Q90.9	Zespół Downa, nieokreślony
+R1	Dat Arg1:T2 Arg2:T3	
+R2	Dat Arg1:T2 Arg2:T1	
+T14	Drug 785 793	0,9%NaCl
+T15	Treatment 904 926	kontrola u lekarza POZ
+T16	Investigation 929 973	kontrolne badanie d-dimerów (ambulatoryjnie)
+T17	Treatment 976 1038	pilna kontrola w Poradni Chirurgii Naczyniowej i Onkologicznej
+T18	Treatment 1062 1136	dalsza kontrola w Poradni Kardiologicznej i Wad wrodzonych Dorosłych i Oku
+T19	Symptom 1308 1329	nierównej pracy serca
+N7	Reference T19 ICD10:R00.2	Kołatanie serca
+T20	Negation 1333 1339	Neguje
+T21	Symptom 1340 1352	zasłabnięcia
+T22	Negation 1355 1361	neguje
+T23	Symptom 1362 1386	bóle w klatce piersiowej
+N8	Reference T23 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T24	Negation 1389 1395	neguje
+T25	Symptom 1396 1413	uczucie duszności
+N9	Reference T25 ICD10:R06.0	Duszność
+R3	Neg Arg1:T20 Arg2:T21	
+R4	Neg Arg1:T22 Arg2:T23	
+R5	Neg Arg1:T24 Arg2:T25	
+T26	Condition 1430 1460	wada wrodzona pod postacią CAV
+N10	Reference T26 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T27	Treatment 1471 1493	korekcji chirurgicznej
+N11	Reference T27 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T28	Date 1496 1506	12.07.1999
+R6	Dat Arg1:T28 Arg2:T27	
+R7	Dat Arg1:T28 Arg2:T26	
+T29	Condition 1510 1522	Zespół Dawna
+N12	Reference T29 ICD10:Q90.9	Zespół Downa, nieokreślony
+T30	Treatment 1564 1598	Leczenie przewlekłe:  okulistyczne
+T31	Condition 1626 1629	WZW
+N13	Reference T31 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T32	Condition 1639 1648	borelioza
+N14	Reference T32 ICD10:A69.2	Choroba z Lyme
+R8	Neg Arg1:T8 Arg2:T32	
+R9	Neg Arg1:T7 Arg2:T31	
+T33	Behaviour 1692 1707	Palenie tytoniu
+N15	Reference T33 ICD10:Z72.0	Używanie tytoniu
+T34	Behaviour 1713 1724	Inne używki
+T35	Condition 1730 1739	Uczulenia
+N16	Reference T35 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R10	Neg Arg1:T6 Arg2:T33	
+R11	Neg Arg1:T5 Arg2:T34	
+R12	Neg Arg1:T4 Arg2:T35	
+T36	Behaviour 1764 1790	warunki mieszkaniowe dobre
+T37	Behaviour 1793 1812	mieszka z rodzicami
+T38	Drug 1824 1842	leków przewlekłych
+R13	Neg Arg1:T10 Arg2:T38	
+T39	Investigation 1857 1867	Echo serca
+T40	Investigation 1870 1880	Holter EKG
+T41	Investigation 1883 1892	Holter RR

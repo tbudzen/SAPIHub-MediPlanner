@@ -1,0 +1,24 @@
+T1	Negation 844 850	Neguje
+T2	Drug 864 869	leków
+R1	Neg Arg1:T1 Arg2:T2	
+T3	Negation 776 782	Neguje
+T4	Condition 783 800	uczulenia na leki
+N1	Reference T4 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T5	Negation 802 808	neguje
+T6	Symptom 809 842	krwawienia z przewodu pokarmowego
+N2	Reference T6 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R2	Neg Arg1:T5 Arg2:T6	
+R3	Neg Arg1:T3 Arg2:T4	
+T7	Negation 768 774	ujemny
+T8	Condition 752 767	Wywiad rodzinny
+A1	Status T8 Family
+R4	Neg Arg1:T7 Arg2:T8	
+T9	Symptom 725 733	duszność
+N3	Reference T9 ICD10:R06.0	Duszność
+T10	Symptom 735 750	kołatania serca
+N4	Reference T10 ICD10:R00.2	Kołatanie serca
+T11	Negation 718 724	neguje
+R5	Neg Arg1:T11 Arg2:T9	
+R6	Neg Arg1:T11 Arg2:T10	
+T12	Symptom 615 674	okresowych dolegliwości w klatce piersiowej o typie kłucia.
+N5	Reference T12 ICD10:R07.3	Inne bóle w klatce piersiowej

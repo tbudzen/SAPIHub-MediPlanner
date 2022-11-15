@@ -1,0 +1,701 @@
+allRelations          : 217
+oks                   : 72
+isRedundantAndRemoveds: 128
+shouldNotBeRemoveds   : 4
+shouldBeBemoveds      : 13
+GOOD / BAD            : 200 / 17
+Sentence 0:
+------------------------------------------------
+Wiek: 63 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+-stosowanie diety niskocholesterolowej, 
+Praluent s.c.
+R1	Drg Arg1:T2 Arg2:T3 << OK >>	Praluent -> s.c. 1x co 2 tygodnie  <RANK: 3> <info: start[370, 379] <type: RIGHT>>
+
+
+Sentence 4:
+1x co 2 tygodnie.
+
+
+
+Sentence 5:
+Roswera 40 mg 1xdz wieczorem,
+
+R2	Drg Arg1:T4 Arg2:T9 << OK >>	Roswera -> 40 mg 1xdz wieczorem  <RANK: 3> <info: start[402, 410] <type: RIGHT>>
+
+
+Sentence 6:
+Ezehra 10 mg 1xdz wieczorem,
+
+R3	Drg Arg1:T5 Arg2:T10 << OK >>	Ezehra -> 10 mg 1xdz wieczorem  <RANK: 3> <info: start[432, 439] <type: RIGHT>>
+
+
+Sentence 7:
+Mononit 100 mg 1xdz rano,
+Bisocard 10 mg 1 x dz rano,
+
+R4	Drg Arg1:T6 Arg2:T11 << OK >>	Mononit -> 100 mg 1xdz rano  <RANK: 3> <info: start[461, 469] <type: RIGHT>>
+R5	Drg Arg1:T6 Arg2:T12 <<REDUNDANT!!!REMOVED>>	Mononit -> 10 mg 1 x dz rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[461, 496] <type: RIGHT>>
+R6	Drg Arg1:T7 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Bisocard -> 100 mg 1xdz rano <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[487, 469] <type: LEFT>>
+R7	Drg Arg1:T7 Arg2:T12 << OK >>	Bisocard -> 10 mg 1 x dz rano  <RANK: 3> <info: start[487, 496] <type: RIGHT>>
+
+
+Sentence 8:
+Prestarium 5 mg 1 x dz. wie
+------------------------------------------------
+
+R8	Drg Arg1:T8 Arg2:T13 << OK >>	Prestarium -> 5 mg 1 x dz.  <RANK: 3> <info: start[515, 526] <type: RIGHT>>
+
+
+Sentence 9:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 10:
+------------------------------------------------
+ Rozpoznanie II: |Opisowo:: Hipercholesterolemia rodzinna potwierdzona genetycznie.
+
+
+Sentence 11:
+Przewlekła choroba wieńcowa; stan po zawale mięśnia sercowego ściany bocznej podwsierdziowym (31.12.1987r) leczonym CABG: wszczepienie 4 pomostów aortalno-wieńcowych  (20.01.1988r.).|Rozpoznanie IV: |Rozpoznanie V: |Rozpozanie I: |Rozpoznanie III:
+------------------------------------------------
+
+R9	Dat Arg1:T17 Arg2:T15 <<REDUNDANT!!!SHOULD BE REMOVED>>	31.12.1987r -> Przewlekła choroba wieńcowa  <RANK: 2> <info: start[844, 750] <type: LEFT>>
+R10	Dat Arg1:T17 Arg2:T16 << OK >>	31.12.1987r -> zawale mięśnia sercowego ściany bocznej podwsierdziowym  <RANK: 3> <info: start[844, 787] <type: LEFT>>
+R11	Dat Arg1:T17 Arg2:T18 <<REDUNDANT!!!REMOVED>>	31.12.1987r -> CABG: wszczepienie 4 pomostów aortalno-wieńcowych <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[844, 866] <type: RIGHT>>
+R12	Dat Arg1:T19 Arg2:T15 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> Przewlekła choroba wieńcowa <:REMOVED other first tag between (left):> <RANK: 2> <info: start[918, 750] <type: LEFT>>
+R13	Dat Arg1:T19 Arg2:T16 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> zawale mięśnia sercowego ściany bocznej podwsierdziowym <:REMOVED other first tag between (left):> <RANK: 2> <info: start[918, 787] <type: LEFT>>
+R14	Dat Arg1:T19 Arg2:T18 << OK >>	20.01.1988r -> CABG: wszczepienie 4 pomostów aortalno-wieńcowych  <RANK: 3> <info: start[918, 866] <type: LEFT>>
+
+
+Sentence 12:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 13:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Hipercholesterolemia rodzinna potwierdzona genetycznie.
+
+
+Sentence 14:
+Przewlekła choroba wieńcowa; stan po zawale mięśnia sercowego ściany bocznej podwsierdziowym (31.12.1987r) leczonym CABG: wszczepienie 4 pomostów aortalno-wieńcowych  (20.01.1988r.).
+
+R15	Dat Arg1:T23 Arg2:T21 <<REDUNDANT!!!SHOULD BE REMOVED>>	31.12.1987r -> Przewlekła choroba wieńcowa  <RANK: 2> <info: start[1365, 1271] <type: LEFT>>
+R16	Dat Arg1:T23 Arg2:T22 << OK >>	31.12.1987r -> mięśnia sercowego ściany bocznej podwsierdziowym  <RANK: 3> <info: start[1365, 1315] <type: LEFT>>
+R17	Dat Arg1:T23 Arg2:T24 <<REDUNDANT!!!REMOVED>>	31.12.1987r -> CABG: wszczepienie 4 pomostów aortalno-wieńcowych <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1365, 1387] <type: RIGHT>>
+R18	Dat Arg1:T25 Arg2:T21 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> Przewlekła choroba wieńcowa <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1439, 1271] <type: LEFT>>
+R19	Dat Arg1:T25 Arg2:T22 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> mięśnia sercowego ściany bocznej podwsierdziowym <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1439, 1315] <type: LEFT>>
+R20	Dat Arg1:T25 Arg2:T24 << OK >>	20.01.1988r -> CABG: wszczepienie 4 pomostów aortalno-wieńcowych  <RANK: 3> <info: start[1439, 1387] <type: LEFT>>
+
+
+Sentence 15:
+------------------------------------------------
+
+
+
+Sentence 16:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 17:
+Pacjent, lat 62 , z hipercholesterolemią rodzinną (potwierdzenie genetyczne - mutacja LDLR ekson 4 (27.11.2019) - 8 punktów, przedwczesna choroba wieńcowa 2 punkty, krewni I st. z rozpoznaną przedwczesną CAD - 1 punkt, cholesterol LDL>325 mg/dl - 8 punktów, razem 19 punktów w skali Dutch Lipid Clinic Network), po zawale mięśnia sercowego ściany bocznej podwsierdziowym w wieku 31 lat (31.12.1987r) leczonym CABG: wszczepienie 4 pomostów aortalno-wieńcowych  (20.01.1988r.), przyjęty do Kliniki w celu monitorowania bezpieczeństwa leczenia, monitorowania leczenia (ocena lipidogramu) oraz ew. kwalifikacji do kontynuacji udziału w programie.
+R21	Inv Arg1:T28 Arg2:T29 << OK >>	skali Dutch Lipid Clinic Network -> 19 punktów  <RANK: 3> <info: start[1855, 1842] <type: LEFT>>
+R22	Inv Arg1:T28 Arg2:T32 <<REDUNDANT!!!SHOULD BE REMOVED>>	skali Dutch Lipid Clinic Network -> cholesterol LDL>325 mg/dl  <RANK: 2> <info: start[1855, 1797] <type: LEFT>>
+R23	Dat Arg1:T27 Arg2:T26 << OK >>	27.11.2019 -> hipercholesterolemią rodzinną (potwierdzenie genetyczne - mutacja LDLR ekson 4  <RANK: 3> <info: start[1678, 1598] <type: LEFT>>
+R24	Dat Arg1:T27 Arg2:T30 <<REDUNDANT!!!REMOVED>>	27.11.2019 -> przedwczesna choroba wieńcowa <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1678, 1703] <type: RIGHT>>
+R25	Dat Arg1:T27 Arg2:T31 <<REDUNDANT!!!REMOVED>>	27.11.2019 -> krewni I st. z rozpoznaną przedwczesną CAD <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1678, 1743] <type: RIGHT>>
+R26	Dat Arg1:T27 Arg2:T33 <<REDUNDANT!!!REMOVED>>	27.11.2019 -> zawale mięśnia sercowego ściany bocznej podwsierdziowym <:REMOVED other second tag between (right) (dat):> <RANK: 2> <info: start[1678, 1893] <type: RIGHT>>
+R27	Dat Arg1:T27 Arg2:T36 <<REDUNDANT!!!REMOVED>>	27.11.2019 -> CABG: wszczepienie 4 pomostów aortalno-wieńcowych <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1678, 1987] <type: RIGHT>>
+R28	Dat Arg1:T27 Arg2:T38 <<REDUNDANT!!!REMOVED>>	27.11.2019 -> monitorowania bezpieczeństwa leczenia <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1678, 2081] <type: RIGHT>>
+R29	Dat Arg1:T27 Arg2:T39 <<REDUNDANT!!!REMOVED>>	27.11.2019 -> monitorowania leczenia (ocena lipidogramu) <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1678, 2120] <type: RIGHT>>
+R30	Dat Arg1:T27 Arg2:T40 <<REDUNDANT!!!REMOVED>>	27.11.2019 -> ew. kwalifikacji do kontynuacji udziału w programie <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1678, 2168] <type: RIGHT>>
+R31	Dat Arg1:T27 Arg2:T28 <<REDUNDANT!!!REMOVED>>	27.11.2019 -> skali Dutch Lipid Clinic Network <:REMOVED other second tag between (right) (dat):> <RANK: 2> <info: start[1678, 1855] <type: RIGHT>>
+R32	Dat Arg1:T34 Arg2:T26 <<REDUNDANT!!!REMOVED>>	w wieku 31 lat -> hipercholesterolemią rodzinną (potwierdzenie genetyczne - mutacja LDLR ekson 4 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1949, 1598] <type: LEFT>>
+R33	Dat Arg1:T34 Arg2:T30 <<REDUNDANT!!!REMOVED>>	w wieku 31 lat -> przedwczesna choroba wieńcowa <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1949, 1703] <type: LEFT>>
+R34	Dat Arg1:T34 Arg2:T31 <<REDUNDANT!!!REMOVED>>	w wieku 31 lat -> krewni I st. z rozpoznaną przedwczesną CAD <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1949, 1743] <type: LEFT>>
+R35	Dat Arg1:T34 Arg2:T33 << OK >>	w wieku 31 lat -> zawale mięśnia sercowego ściany bocznej podwsierdziowym  <RANK: 3> <info: start[1949, 1893] <type: LEFT>>
+R36	Dat Arg1:T34 Arg2:T36 <<REDUNDANT!!!REMOVED>>	w wieku 31 lat -> CABG: wszczepienie 4 pomostów aortalno-wieńcowych <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1949, 1987] <type: RIGHT>>
+R37	Dat Arg1:T34 Arg2:T38 <<REDUNDANT!!!REMOVED>>	w wieku 31 lat -> monitorowania bezpieczeństwa leczenia <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1949, 2081] <type: RIGHT>>
+R38	Dat Arg1:T34 Arg2:T39 <<REDUNDANT!!!REMOVED>>	w wieku 31 lat -> monitorowania leczenia (ocena lipidogramu) <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1949, 2120] <type: RIGHT>>
+R39	Dat Arg1:T34 Arg2:T40 <<REDUNDANT!!!REMOVED>>	w wieku 31 lat -> ew. kwalifikacji do kontynuacji udziału w programie <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1949, 2168] <type: RIGHT>>
+R40	Dat Arg1:T34 Arg2:T28 <<REDUNDANT!!!REMOVED>>	w wieku 31 lat -> skali Dutch Lipid Clinic Network <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1949, 1855] <type: LEFT>>
+R41	Dat Arg1:T35 Arg2:T26 <<REDUNDANT!!!REMOVED>>	31.12.1987r -> hipercholesterolemią rodzinną (potwierdzenie genetyczne - mutacja LDLR ekson 4 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1965, 1598] <type: LEFT>>
+R42	Dat Arg1:T35 Arg2:T30 <<REDUNDANT!!!REMOVED>>	31.12.1987r -> przedwczesna choroba wieńcowa <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1965, 1703] <type: LEFT>>
+R43	Dat Arg1:T35 Arg2:T31 <<REDUNDANT!!!REMOVED>>	31.12.1987r -> krewni I st. z rozpoznaną przedwczesną CAD <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1965, 1743] <type: LEFT>>
+R44	Dat Arg1:T35 Arg2:T33 <<SHOULD NOT BE REMOVED>>	31.12.1987r -> zawale mięśnia sercowego ściany bocznej podwsierdziowym <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1965, 1893] <type: LEFT>>
+R45	Dat Arg1:T35 Arg2:T36 <<REDUNDANT!!!REMOVED>>	31.12.1987r -> CABG: wszczepienie 4 pomostów aortalno-wieńcowych <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1965, 1987] <type: RIGHT>>
+R46	Dat Arg1:T35 Arg2:T38 <<REDUNDANT!!!REMOVED>>	31.12.1987r -> monitorowania bezpieczeństwa leczenia <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1965, 2081] <type: RIGHT>>
+R47	Dat Arg1:T35 Arg2:T39 <<REDUNDANT!!!REMOVED>>	31.12.1987r -> monitorowania leczenia (ocena lipidogramu) <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1965, 2120] <type: RIGHT>>
+R48	Dat Arg1:T35 Arg2:T40 <<REDUNDANT!!!REMOVED>>	31.12.1987r -> ew. kwalifikacji do kontynuacji udziału w programie <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1965, 2168] <type: RIGHT>>
+R49	Dat Arg1:T35 Arg2:T28 <<REDUNDANT!!!REMOVED>>	31.12.1987r -> skali Dutch Lipid Clinic Network <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1965, 1855] <type: LEFT>>
+R50	Dat Arg1:T37 Arg2:T26 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> hipercholesterolemią rodzinną (potwierdzenie genetyczne - mutacja LDLR ekson 4 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2039, 1598] <type: LEFT>>
+R51	Dat Arg1:T37 Arg2:T30 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> przedwczesna choroba wieńcowa <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2039, 1703] <type: LEFT>>
+R52	Dat Arg1:T37 Arg2:T31 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> krewni I st. z rozpoznaną przedwczesną CAD <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2039, 1743] <type: LEFT>>
+R53	Dat Arg1:T37 Arg2:T33 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> zawale mięśnia sercowego ściany bocznej podwsierdziowym <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2039, 1893] <type: LEFT>>
+R54	Dat Arg1:T37 Arg2:T36 << OK >>	20.01.1988r -> CABG: wszczepienie 4 pomostów aortalno-wieńcowych  <RANK: 3> <info: start[2039, 1987] <type: LEFT>>
+R55	Dat Arg1:T37 Arg2:T38 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> monitorowania bezpieczeństwa leczenia <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2039, 2081] <type: RIGHT>>
+R56	Dat Arg1:T37 Arg2:T39 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> monitorowania leczenia (ocena lipidogramu) <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2039, 2120] <type: RIGHT>>
+R57	Dat Arg1:T37 Arg2:T40 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> ew. kwalifikacji do kontynuacji udziału w programie <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2039, 2168] <type: RIGHT>>
+R58	Dat Arg1:T37 Arg2:T28 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> skali Dutch Lipid Clinic Network <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2039, 1855] <type: LEFT>>
+
+
+Sentence 18:
+Pacjent neguje objawy niepożądane po przyjmowaniu alirokumabu, neguje wystąpienie ciężkich reakcji alergicznych po podaniu leku, zgłasza dobrą tolerancję leczenia..
+
+R59	Neg Arg1:T41 Arg2:T42 << OK >>	neguje -> objawy niepożądane  <RANK: 3> <info: start[2229, 2236] <type: RIGHT>>
+R60	Neg Arg1:T41 Arg2:T46 <<REDUNDANT!!!REMOVED>>	neguje -> dobrą tolerancję leczenia <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2229, 2358] <type: RIGHT>>
+R61	Neg Arg1:T41 Arg2:T45 <<REDUNDANT!!!REMOVED>>	neguje -> ciężkich reakcji alergicznych po podaniu leku <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2229, 2303] <type: RIGHT>>
+R62	Neg Arg1:T41 Arg2:T43 <<REDUNDANT!!!SHOULD BE REMOVED>>	neguje -> alirokumabu  <RANK: 3> <info: start[2229, 2271] <type: RIGHT>>
+R63	Neg Arg1:T44 Arg2:T42 <<REDUNDANT!!!REMOVED>>	neguje -> objawy niepożądane <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2284, 2236] <type: LEFT>>
+R64	Neg Arg1:T44 Arg2:T46 <<REDUNDANT!!!REMOVED>>	neguje -> dobrą tolerancję leczenia <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2284, 2358] <type: RIGHT>>
+R65	Neg Arg1:T44 Arg2:T45 << OK >>	neguje -> ciężkich reakcji alergicznych po podaniu leku  <RANK: 3> <info: start[2284, 2303] <type: RIGHT>>
+R66	Neg Arg1:T44 Arg2:T43 <<REDUNDANT!!!REMOVED>>	neguje -> alirokumabu <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2284, 2271] <type: LEFT>>
+R67	Alg Arg1:T45 Arg2:T43 <<REDUNDANT!!!REMOVED>>	ciężkich reakcji alergicznych po podaniu leku -> alirokumabu <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[2303, 2271] <type: LEFT>>
+
+
+Sentence 19:
+Najwyższe poziomy cholesterolu bez leczenia: Chol całk.
+R68	Inv Arg1:T47 Arg2:T48 << OK >>	Najwyższe poziomy cholesterolu bez leczenia -> Chol całk. 420 mg%  <RANK: 3> <info: start[2386, 2431] <type: RIGHT>>
+
+
+Sentence 20:
+420 mg% - bez leczenia, LDL cholesterol ok. 330 (10.1987) - brak dokumentacji medycznej.
+
+
+
+Sentence 21:
+Pacjent podaje, że kilka miesięcy temu stosował Repathę z bardzo dobrym skutkiem.
+
+R69	Dat Arg1:T51 Arg2:T53 << OK >>	kilka miesięcy temu -> bardzo dobrym skutkiem  <RANK: 3> <info: start[2550, 2589] <type: RIGHT>>
+R70	Dat Arg1:T51 Arg2:T52 << OK >>	kilka miesięcy temu -> Repathę  <RANK: 3> <info: start[2550, 2579] <type: RIGHT>>
+
+
+Sentence 22:
+Wywiad rodzinny: brak ma rozpoznaną FH, matka zgon z powodu najprawdopodobniej udaru w wieku 49 lat, syn - niskie poziomy cholesterolu.
+
+R71	Dat Arg1:T56 Arg2:T54 <<REDUNDANT!!!SHOULD BE REMOVED>>	w wieku 49 lat -> FH  <RANK: 2> <info: start[2698, 2649] <type: LEFT>>
+R72	Dat Arg1:T56 Arg2:T55 << OK >>	w wieku 49 lat -> udaru  <RANK: 3> <info: start[2698, 2692] <type: LEFT>>
+R73	Dat Arg1:T56 Arg2:T57 << OK >>	w wieku 49 lat -> zgon  <RANK: 3> <info: start[2698, 2659] <type: LEFT>>
+R74	Dat Arg1:T56 Arg2:T58 <<REDUNDANT!!!REMOVED>>	w wieku 49 lat -> syn - niskie poziomy cholesterolu <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2698, 2714] <type: RIGHT>>
+
+
+Sentence 23:
+Przebyte operacje: jw.
+
+
+
+Sentence 24:
+Palenie tytoniu: nie, palił do 1987 r., łącznie 15 paczkolat, 
+
+R75	Neg Arg1:T60 Arg2:T59 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[2789, 2772] <type: LEFT>>
+R76	Neg Arg1:T60 Arg2:T61 <<REDUNDANT!!!REMOVED>>	nie -> palił <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2789, 2794] <type: RIGHT>>
+R77	Neg Arg1:T60 Arg2:T63 <<REDUNDANT!!!REMOVED>>	nie -> łącznie 15 paczkolat <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2789, 2812] <type: RIGHT>>
+R78	Dat Arg1:T62 Arg2:T59 <<REDUNDANT!!!SHOULD BE REMOVED>>	do 1987 -> Palenie tytoniu  <RANK: 2> <info: start[2800, 2772] <type: LEFT>>
+R79	Dat Arg1:T62 Arg2:T61 << OK >>	do 1987 -> palił  <RANK: 3> <info: start[2800, 2794] <type: LEFT>>
+R80	Dat Arg1:T62 Arg2:T63 <<SHOULD NOT BE REMOVED>>	do 1987 -> łącznie 15 paczkolat <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2800, 2812] <type: RIGHT>>
+
+
+Sentence 25:
+Inne używki: nie 
+Uczulenia: nie 
+
+R81	Neg Arg1:T65 Arg2:T66 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2848, 2853] <type: RIGHT>>
+R82	Neg Arg1:T65 Arg2:T64 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[2848, 2835] <type: LEFT>>
+R83	Neg Arg1:T67 Arg2:T66 << OK >>	nie -> Uczulenia  <RANK: 3> <info: start[2864, 2853] <type: LEFT>>
+R84	Neg Arg1:T67 Arg2:T64 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2864, 2835] <type: LEFT>>
+
+
+Sentence 26:
+Przebyte choroby zakaźne - WZW (-) , borelioza ( - ), tbc (-), odra (-), szczepienie na odrę (nie pamięta)
+
+R85	Neg Arg1:T72 Arg2:T68 << OK >>	(-) -> WZW  <RANK: 3> <info: start[2900, 2896] <type: LEFT>>
+R86	Neg Arg1:T72 Arg2:T69 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2900, 2906] <type: RIGHT>>
+R87	Neg Arg1:T72 Arg2:T70 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2900, 2923] <type: RIGHT>>
+R88	Neg Arg1:T72 Arg2:T71 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2900, 2932] <type: RIGHT>>
+R89	Neg Arg1:T73 Arg2:T68 <<REDUNDANT!!!REMOVED>>	( - ) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2916, 2896] <type: LEFT>>
+R90	Neg Arg1:T73 Arg2:T69 << OK >>	( - ) -> borelioza  <RANK: 3> <info: start[2916, 2906] <type: LEFT>>
+R91	Neg Arg1:T73 Arg2:T70 <<REDUNDANT!!!REMOVED>>	( - ) -> tbc <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2916, 2923] <type: RIGHT>>
+R92	Neg Arg1:T73 Arg2:T71 <<REDUNDANT!!!REMOVED>>	( - ) -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2916, 2932] <type: RIGHT>>
+R93	Neg Arg1:T74 Arg2:T68 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2927, 2896] <type: LEFT>>
+R94	Neg Arg1:T74 Arg2:T69 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2927, 2906] <type: LEFT>>
+R95	Neg Arg1:T74 Arg2:T70 << OK >>	(-) -> tbc  <RANK: 3> <info: start[2927, 2923] <type: LEFT>>
+R96	Neg Arg1:T74 Arg2:T71 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2927, 2932] <type: RIGHT>>
+R97	Neg Arg1:T76 Arg2:T68 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2937, 2896] <type: LEFT>>
+R98	Neg Arg1:T76 Arg2:T69 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2937, 2906] <type: LEFT>>
+R99	Neg Arg1:T76 Arg2:T70 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2937, 2923] <type: LEFT>>
+R100	Neg Arg1:T76 Arg2:T71 << OK >>	(-) -> odra  <RANK: 3> <info: start[2937, 2932] <type: LEFT>>
+
+
+Sentence 27:
+Stan społeczny: warunki mieszkaniowe dobre.  
+
+
+
+Sentence 28:
+Leki: 
+Praluent 150 mg 1x s.c.
+R101	Drg Arg1:T77 Arg2:T78 << OK >>	Praluent -> 150 mg 1x s.c. co 2 tyg  <RANK: 3> <info: start[3029, 3038] <type: RIGHT>>
+
+
+Sentence 29:
+co 2 tyg.,
+
+
+
+Sentence 30:
+Roswera 40 mg 1xdz wieczorem (od co najmniej 5 roku),
+
+R102	Drg Arg1:T79 Arg2:T80 << OK >>	Roswera -> 40 mg 1xdz wieczorem  <RANK: 3> <info: start[3064, 3072] <type: RIGHT>>
+R103	Dat Arg1:T81 Arg2:T79 << OK >>	od co najmniej 5 roku -> Roswera  <RANK: 3> <info: start[3094, 3064] <type: LEFT>>
+
+
+Sentence 31:
+Ezehra 10 mg 1xdz wieczorem (od ok. 4 lat)
+
+R104	Drg Arg1:T82 Arg2:T83 << OK >>	Ezehra -> 10 mg 1xdz wieczorem  <RANK: 3> <info: start[3118, 3125] <type: RIGHT>>
+R105	Dat Arg1:T84 Arg2:T82 << OK >>	od ok. 4 lat -> Ezehra  <RANK: 3> <info: start[3147, 3118] <type: LEFT>>
+
+
+Sentence 32:
+Mononit 100 mg 1xdz rano,
+Bisocard 10 mg 1 x dz rano,
+
+R106	Drg Arg1:T85 Arg2:T86 << OK >>	Mononit -> 100 mg 1xdz rano  <RANK: 3> <info: start[3161, 3169] <type: RIGHT>>
+R107	Drg Arg1:T85 Arg2:T88 <<REDUNDANT!!!REMOVED>>	Mononit -> 10 mg 1 x dz rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3161, 3196] <type: RIGHT>>
+R108	Drg Arg1:T87 Arg2:T86 <<REDUNDANT!!!REMOVED>>	Bisocard -> 100 mg 1xdz rano <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[3187, 3169] <type: LEFT>>
+R109	Drg Arg1:T87 Arg2:T88 << OK >>	Bisocard -> 10 mg 1 x dz rano  <RANK: 3> <info: start[3187, 3196] <type: RIGHT>>
+
+
+Sentence 33:
+Prestarium 5 mg 1 x dz. wieczorem,
+Acard 75 mg 1xdz wieczorem,
+Metformin 500 mg 1xdz wieczorem,
+
+Pacjent potwierdza stosowanie diety.
+
+
+R110	Drg Arg1:T89 Arg2:T90 << OK >>	Prestarium -> 5 mg 1 x dz. wieczorem  <RANK: 3> <info: start[3215, 3226] <type: RIGHT>>
+R111	Drg Arg1:T89 Arg2:T92 <<REDUNDANT!!!REMOVED>>	Prestarium -> 75 mg 1xdz wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3215, 3256] <type: RIGHT>>
+R112	Drg Arg1:T89 Arg2:T94 <<REDUNDANT!!!REMOVED>>	Prestarium -> 500 mg 1xdz wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3215, 3288] <type: RIGHT>>
+R113	Drg Arg1:T91 Arg2:T90 <<REDUNDANT!!!REMOVED>>	Acard -> 5 mg 1 x dz. wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[3250, 3226] <type: LEFT>>
+R114	Drg Arg1:T91 Arg2:T92 << OK >>	Acard -> 75 mg 1xdz wieczorem  <RANK: 3> <info: start[3250, 3256] <type: RIGHT>>
+R115	Drg Arg1:T91 Arg2:T94 <<REDUNDANT!!!REMOVED>>	Acard -> 500 mg 1xdz wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3250, 3288] <type: RIGHT>>
+R116	Drg Arg1:T93 Arg2:T90 <<REDUNDANT!!!REMOVED>>	Metformin -> 5 mg 1 x dz. wieczorem <:REMOVED other first tag between (left):> <RANK: 0> <info: start[3278, 3226] <type: LEFT>>
+R117	Drg Arg1:T93 Arg2:T92 <<REDUNDANT!!!REMOVED>>	Metformin -> 75 mg 1xdz wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[3278, 3256] <type: LEFT>>
+R118	Drg Arg1:T93 Arg2:T94 << OK >>	Metformin -> 500 mg 1xdz wieczorem  <RANK: 3> <info: start[3278, 3288] <type: RIGHT>>
+
+
+Sentence 34:
+U pacjenta brak wywiadu w kierunku:
+-hiperlipidemii wtórnej,
+-homozygotycznej postaci hipercholesterolemii rodzinnej, 
+
+R119	Neg Arg1:T96 Arg2:T97 << OK >>	brak wywiadu w kierunku -> hiperlipidemii wtórnej  <RANK: 1> <info: start[3361, 3387] <type: RIGHT>>
+R120	Neg Arg1:T96 Arg2:T98 << OK >>	brak wywiadu w kierunku -> homozygotycznej postaci hipercholesterolemii rodzinnej  <RANK: 0> <info: start[3361, 3412] <type: RIGHT>>
+
+
+Sentence 35:
+-ciężkiej niewydolności nerek,
+-ciężkiej niewydolności wątroby,
+-nadwrażliwości na alirokumab lub którąkolwiek z substancji pomocniczych.
+
+
+R121	Alg Arg1:T99 Arg2:T102 <<REDUNDANT!!!REMOVED>>	ciężkiej niewydolności nerek -> alirokumab <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3470, 3552] <type: RIGHT>>
+R122	Alg Arg1:T99 Arg2:T103 <<REDUNDANT!!!REMOVED>>	ciężkiej niewydolności nerek -> którąkolwiek z substancji pomocniczych <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3470, 3567] <type: RIGHT>>
+R123	Alg Arg1:T100 Arg2:T102 <<REDUNDANT!!!SHOULD BE REMOVED>>	ciężkiej niewydolności wątroby -> alirokumab  <RANK: 0> <info: start[3501, 3552] <type: RIGHT>>
+R124	Alg Arg1:T100 Arg2:T103 <<REDUNDANT!!!SHOULD BE REMOVED>>	ciężkiej niewydolności wątroby -> którąkolwiek z substancji pomocniczych  <RANK: 0> <info: start[3501, 3567] <type: RIGHT>>
+R125	Alg Arg1:T101 Arg2:T102 << OK >>	nadwrażliwości -> alirokumab  <RANK: 3> <info: start[3534, 3552] <type: RIGHT>>
+R126	Alg Arg1:T101 Arg2:T103 << OK >>	nadwrażliwości -> którąkolwiek z substancji pomocniczych  <RANK: 3> <info: start[3534, 3567] <type: RIGHT>>
+
+
+Sentence 36:
+Planowany czas hospitalizacji: 1 dzień. 
+
+
+
+Sentence 37:
+Planowane badania: badania laboratoryjne, EKG.
+
+
+
+Sentence 38:
+------------------------------------------------
+
+
+
+Sentence 39:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 40:
+Pacjent, lat 62 , z hipercholesterolemią rodzinną (potwierdzenie genetyczne - mutacja LDLR ekson 4 (27.11.2019) - 8 punktów, przedwczesna choroba wieńcowa 2 punkty, krewni I st. z rozpoznaną przedwczesną CAD - 1 punkt, cholesterol LDL>325 mg/dl - 8 punktów, razem 19 punktów w skalu Dutch Lipid Clinic Network), po zawale mięśnia sercowego ściany bocznej podwsierdziowym w wieku 31 lat (31.12.1987r) leczonym CABG: wszczepienie 4 pomostów aortalno-wieńcowych  (20.01.1988r.), przyjęty do Kliniki w celu wykonania badań i ew. włączenia do programu lekowego hipercholesterolemii rodzinnej z powodu dużego ryzyka sercowo-naczyniowego.
+
+R127	Inv Arg1:T112 Arg2:T110 <<REDUNDANT!!!SHOULD BE REMOVED>>	skalu Dutch Lipid Clinic Network -> cholesterol LDL>325 mg/dl  <RANK: 2> <info: start[4097, 4039] <type: LEFT>>
+R128	Inv Arg1:T112 Arg2:T111 << OK >>	skalu Dutch Lipid Clinic Network -> 19 punktów  <RANK: 3> <info: start[4097, 4084] <type: LEFT>>
+R129	Dat Arg1:T107 Arg2:T106 << OK >>	27.11.2019 -> hipercholesterolemią rodzinną (potwierdzenie genetyczne - mutacja LDLR ekson 4  <RANK: 3> <info: start[3920, 3840] <type: LEFT>>
+R130	Dat Arg1:T107 Arg2:T108 <<REDUNDANT!!!REMOVED>>	27.11.2019 -> przedwczesna choroba wieńcowa <:REMOVED many second tags on the right:> <RANK: 2> <info: start[3920, 3945] <type: RIGHT>>
+R131	Dat Arg1:T107 Arg2:T109 <<REDUNDANT!!!REMOVED>>	27.11.2019 -> krewni I st. z rozpoznaną przedwczesną CAD <:REMOVED many second tags on the right:> <RANK: 2> <info: start[3920, 3985] <type: RIGHT>>
+R132	Dat Arg1:T107 Arg2:T113 <<REDUNDANT!!!REMOVED>>	27.11.2019 -> zawale mięśnia sercowego ściany bocznej podwsierdziowym <:REMOVED other second tag between (right) (dat):> <RANK: 2> <info: start[3920, 4135] <type: RIGHT>>
+R133	Dat Arg1:T107 Arg2:T119 <<REDUNDANT!!!REMOVED>>	27.11.2019 -> dużego ryzyka sercowo-naczyniowego <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3920, 4416] <type: RIGHT>>
+R134	Dat Arg1:T107 Arg2:T116 <<REDUNDANT!!!REMOVED>>	27.11.2019 -> CABG: wszczepienie 4 pomostów aortalno-wieńcowych <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3920, 4229] <type: RIGHT>>
+R135	Dat Arg1:T107 Arg2:T118 <<REDUNDANT!!!REMOVED>>	27.11.2019 -> ew. włączenia do programu lekowego hipercholesterolemii rodzinnej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3920, 4341] <type: RIGHT>>
+R136	Dat Arg1:T107 Arg2:T112 <<REDUNDANT!!!REMOVED>>	27.11.2019 -> skalu Dutch Lipid Clinic Network <:REMOVED other second tag between (right) (dat):> <RANK: 2> <info: start[3920, 4097] <type: RIGHT>>
+R137	Dat Arg1:T114 Arg2:T106 <<REDUNDANT!!!REMOVED>>	w wieku 31 lat -> hipercholesterolemią rodzinną (potwierdzenie genetyczne - mutacja LDLR ekson 4 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4191, 3840] <type: LEFT>>
+R138	Dat Arg1:T114 Arg2:T108 <<REDUNDANT!!!REMOVED>>	w wieku 31 lat -> przedwczesna choroba wieńcowa <:REMOVED other second tag between (left):> <RANK: 2> <info: start[4191, 3945] <type: LEFT>>
+R139	Dat Arg1:T114 Arg2:T109 <<REDUNDANT!!!REMOVED>>	w wieku 31 lat -> krewni I st. z rozpoznaną przedwczesną CAD <:REMOVED other second tag between (left):> <RANK: 2> <info: start[4191, 3985] <type: LEFT>>
+R140	Dat Arg1:T114 Arg2:T113 << OK >>	w wieku 31 lat -> zawale mięśnia sercowego ściany bocznej podwsierdziowym  <RANK: 3> <info: start[4191, 4135] <type: LEFT>>
+R141	Dat Arg1:T114 Arg2:T119 <<REDUNDANT!!!REMOVED>>	w wieku 31 lat -> dużego ryzyka sercowo-naczyniowego <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4191, 4416] <type: RIGHT>>
+R142	Dat Arg1:T114 Arg2:T116 <<REDUNDANT!!!REMOVED>>	w wieku 31 lat -> CABG: wszczepienie 4 pomostów aortalno-wieńcowych <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4191, 4229] <type: RIGHT>>
+R143	Dat Arg1:T114 Arg2:T118 <<REDUNDANT!!!REMOVED>>	w wieku 31 lat -> ew. włączenia do programu lekowego hipercholesterolemii rodzinnej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4191, 4341] <type: RIGHT>>
+R144	Dat Arg1:T114 Arg2:T112 <<REDUNDANT!!!REMOVED>>	w wieku 31 lat -> skalu Dutch Lipid Clinic Network <:REMOVED other second tag between (left):> <RANK: 2> <info: start[4191, 4097] <type: LEFT>>
+R145	Dat Arg1:T115 Arg2:T106 <<REDUNDANT!!!REMOVED>>	31.12.1987r -> hipercholesterolemią rodzinną (potwierdzenie genetyczne - mutacja LDLR ekson 4 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4207, 3840] <type: LEFT>>
+R146	Dat Arg1:T115 Arg2:T108 <<REDUNDANT!!!REMOVED>>	31.12.1987r -> przedwczesna choroba wieńcowa <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4207, 3945] <type: LEFT>>
+R147	Dat Arg1:T115 Arg2:T109 <<REDUNDANT!!!REMOVED>>	31.12.1987r -> krewni I st. z rozpoznaną przedwczesną CAD <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4207, 3985] <type: LEFT>>
+R148	Dat Arg1:T115 Arg2:T113 <<SHOULD NOT BE REMOVED>>	31.12.1987r -> zawale mięśnia sercowego ściany bocznej podwsierdziowym <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[4207, 4135] <type: LEFT>>
+R149	Dat Arg1:T115 Arg2:T119 <<REDUNDANT!!!REMOVED>>	31.12.1987r -> dużego ryzyka sercowo-naczyniowego <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4207, 4416] <type: RIGHT>>
+R150	Dat Arg1:T115 Arg2:T116 <<REDUNDANT!!!REMOVED>>	31.12.1987r -> CABG: wszczepienie 4 pomostów aortalno-wieńcowych <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[4207, 4229] <type: RIGHT>>
+R151	Dat Arg1:T115 Arg2:T118 <<REDUNDANT!!!REMOVED>>	31.12.1987r -> ew. włączenia do programu lekowego hipercholesterolemii rodzinnej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4207, 4341] <type: RIGHT>>
+R152	Dat Arg1:T115 Arg2:T112 <<REDUNDANT!!!REMOVED>>	31.12.1987r -> skalu Dutch Lipid Clinic Network <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4207, 4097] <type: LEFT>>
+R153	Dat Arg1:T117 Arg2:T106 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> hipercholesterolemią rodzinną (potwierdzenie genetyczne - mutacja LDLR ekson 4 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4281, 3840] <type: LEFT>>
+R154	Dat Arg1:T117 Arg2:T108 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> przedwczesna choroba wieńcowa <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4281, 3945] <type: LEFT>>
+R155	Dat Arg1:T117 Arg2:T109 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> krewni I st. z rozpoznaną przedwczesną CAD <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4281, 3985] <type: LEFT>>
+R156	Dat Arg1:T117 Arg2:T113 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> zawale mięśnia sercowego ściany bocznej podwsierdziowym <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4281, 4135] <type: LEFT>>
+R157	Dat Arg1:T117 Arg2:T119 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> dużego ryzyka sercowo-naczyniowego <:REMOVED many second tags on the right:> <RANK: 2> <info: start[4281, 4416] <type: RIGHT>>
+R158	Dat Arg1:T117 Arg2:T116 << OK >>	20.01.1988r -> CABG: wszczepienie 4 pomostów aortalno-wieńcowych  <RANK: 3> <info: start[4281, 4229] <type: LEFT>>
+R159	Dat Arg1:T117 Arg2:T118 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> ew. włączenia do programu lekowego hipercholesterolemii rodzinnej <:REMOVED many second tags on the right:> <RANK: 2> <info: start[4281, 4341] <type: RIGHT>>
+R160	Dat Arg1:T117 Arg2:T112 <<REDUNDANT!!!REMOVED>>	20.01.1988r -> skalu Dutch Lipid Clinic Network <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4281, 4097] <type: LEFT>>
+
+
+Sentence 41:
+Najwyższe poziomy cholesterolu bez leczenia: Chol całk.
+R161	Inv Arg1:T120 Arg2:T121 << OK >>	Najwyższe poziomy cholesterolu bez leczenia -> Chol całk. 420 mg%  <RANK: 3> <info: start[4452, 4497] <type: RIGHT>>
+
+
+Sentence 42:
+420 mg% - bez leczenia, LDL cholesterol ok. 330 (10.1987) - brak dokumentacji medycznej.
+
+
+
+Sentence 43:
+Pacjent podaje, że kilka miesięcy temu stosował Repathę z bardzo dobrym skutkiem.
+
+R162	Dat Arg1:T124 Arg2:T126 << OK >>	kilka miesięcy temu -> bardzo dobrym skutkiem  <RANK: 3> <info: start[4616, 4655] <type: RIGHT>>
+R163	Dat Arg1:T124 Arg2:T125 << OK >>	kilka miesięcy temu -> Repathę  <RANK: 3> <info: start[4616, 4645] <type: RIGHT>>
+
+
+Sentence 44:
+Wywiad rodzinny: brak ma rozpoznaną FH, matka zgon z powodu najprawdopodobniej udaru w wieku 49 lat, syn - niskie poziomy cholesterolu.
+
+R164	Dat Arg1:T130 Arg2:T127 <<REDUNDANT!!!SHOULD BE REMOVED>>	w wieku 49 lat -> FH  <RANK: 2> <info: start[4764, 4715] <type: LEFT>>
+R165	Dat Arg1:T130 Arg2:T128 << OK >>	w wieku 49 lat -> zgon  <RANK: 3> <info: start[4764, 4725] <type: LEFT>>
+R166	Dat Arg1:T130 Arg2:T129 << OK >>	w wieku 49 lat -> udaru  <RANK: 3> <info: start[4764, 4758] <type: LEFT>>
+R167	Dat Arg1:T130 Arg2:T131 <<REDUNDANT!!!REMOVED>>	w wieku 49 lat -> syn - niskie poziomy cholesterolu <:REMOVED many second tags on the right:> <RANK: 2> <info: start[4764, 4780] <type: RIGHT>>
+
+
+Sentence 45:
+Przebyte operacje: jw.
+
+
+
+Sentence 46:
+Palenie tytoniu: nie, palił do 1987 r., łącznie 15 paczkolat, 
+
+R168	Neg Arg1:T133 Arg2:T132 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[4855, 4838] <type: LEFT>>
+R169	Neg Arg1:T133 Arg2:T134 <<REDUNDANT!!!REMOVED>>	nie -> palił <:REMOVED many second tags on the right:> <RANK: 2> <info: start[4855, 4860] <type: RIGHT>>
+R170	Neg Arg1:T133 Arg2:T136 <<REDUNDANT!!!REMOVED>>	nie -> łącznie 15 paczkolat <:REMOVED many second tags on the right:> <RANK: 2> <info: start[4855, 4878] <type: RIGHT>>
+R171	Dat Arg1:T135 Arg2:T132 <<REDUNDANT!!!SHOULD BE REMOVED>>	do 1987 r -> Palenie tytoniu  <RANK: 2> <info: start[4866, 4838] <type: LEFT>>
+R172	Dat Arg1:T135 Arg2:T134 << OK >>	do 1987 r -> palił  <RANK: 3> <info: start[4866, 4860] <type: LEFT>>
+R173	Dat Arg1:T135 Arg2:T136 <<SHOULD NOT BE REMOVED>>	do 1987 r -> łącznie 15 paczkolat <:REMOVED many second tags on the right:> <RANK: 2> <info: start[4866, 4878] <type: RIGHT>>
+
+
+Sentence 47:
+Inne używki: nie 
+Uczulenia: nie 
+
+R174	Neg Arg1:T138 Arg2:T139 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[4914, 4919] <type: RIGHT>>
+R175	Neg Arg1:T138 Arg2:T137 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[4914, 4901] <type: LEFT>>
+R176	Neg Arg1:T140 Arg2:T139 << OK >>	nie -> Uczulenia  <RANK: 3> <info: start[4930, 4919] <type: LEFT>>
+R177	Neg Arg1:T140 Arg2:T137 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[4930, 4901] <type: LEFT>>
+
+
+Sentence 48:
+Przebyte choroby zakaźne - WZW (-) , borelioza ( - ), tbc (-), odra (-), szczepienie na odrę (nie pamięta)
+
+R178	Neg Arg1:T145 Arg2:T141 << OK >>	(-) -> WZW  <RANK: 3> <info: start[4966, 4962] <type: LEFT>>
+R179	Neg Arg1:T145 Arg2:T142 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[4966, 4972] <type: RIGHT>>
+R180	Neg Arg1:T145 Arg2:T143 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4966, 4989] <type: RIGHT>>
+R181	Neg Arg1:T145 Arg2:T144 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4966, 4998] <type: RIGHT>>
+R182	Neg Arg1:T146 Arg2:T141 <<REDUNDANT!!!REMOVED>>	( - ) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4982, 4962] <type: LEFT>>
+R183	Neg Arg1:T146 Arg2:T142 << OK >>	( - ) -> borelioza  <RANK: 3> <info: start[4982, 4972] <type: LEFT>>
+R184	Neg Arg1:T146 Arg2:T143 <<REDUNDANT!!!REMOVED>>	( - ) -> tbc <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[4982, 4989] <type: RIGHT>>
+R185	Neg Arg1:T146 Arg2:T144 <<REDUNDANT!!!REMOVED>>	( - ) -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4982, 4998] <type: RIGHT>>
+R186	Neg Arg1:T147 Arg2:T141 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4993, 4962] <type: LEFT>>
+R187	Neg Arg1:T147 Arg2:T142 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4993, 4972] <type: LEFT>>
+R188	Neg Arg1:T147 Arg2:T143 << OK >>	(-) -> tbc  <RANK: 3> <info: start[4993, 4989] <type: LEFT>>
+R189	Neg Arg1:T147 Arg2:T144 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[4993, 4998] <type: RIGHT>>
+R190	Neg Arg1:T148 Arg2:T141 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[5003, 4962] <type: LEFT>>
+R191	Neg Arg1:T148 Arg2:T142 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[5003, 4972] <type: LEFT>>
+R192	Neg Arg1:T148 Arg2:T143 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[5003, 4989] <type: LEFT>>
+R193	Neg Arg1:T148 Arg2:T144 << OK >>	(-) -> odra  <RANK: 3> <info: start[5003, 4998] <type: LEFT>>
+
+
+Sentence 49:
+Stan społeczny: warunki mieszkaniowe dobre.  
+
+
+
+Sentence 50:
+Leki: przyjęte rano w domu  
+Leki: 
+Roswera 40 mg
+R194	Drg Arg1:T150 Arg2:T151 << OK >>	Roswera -> 40 mg 1xdz wieczorem  <RANK: 3> <info: start[5124, 5132] <type: RIGHT>>
+
+
+Sentence 51:
+1xdz wieczorem (od co najmniej 5 roku),
+
+
+
+Sentence 52:
+Ezehra 10 mg 1xdz wieczorem (od ok. 4 lat)
+
+R195	Drg Arg1:T153 Arg2:T154 << OK >>	Ezehra -> 10 mg 1xdz wieczorem  <RANK: 3> <info: start[5178, 5185] <type: RIGHT>>
+R196	Dat Arg1:T165 Arg2:T153 << OK >>	od ok. 4 lat -> Ezehra  <RANK: 3> <info: start[5207, 5178] <type: LEFT>>
+
+
+Sentence 53:
+Mononit 100 mg 1xdz rano,
+Bisocard 10 mg 1 x dz rano,
+
+R197	Drg Arg1:T155 Arg2:T156 << OK >>	Mononit -> 100 mg 1xdz rano  <RANK: 3> <info: start[5221, 5229] <type: RIGHT>>
+R198	Drg Arg1:T155 Arg2:T158 <<REDUNDANT!!!REMOVED>>	Mononit -> 10 mg 1 x dz rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[5221, 5256] <type: RIGHT>>
+R199	Drg Arg1:T157 Arg2:T156 <<REDUNDANT!!!REMOVED>>	Bisocard -> 100 mg 1xdz rano <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[5247, 5229] <type: LEFT>>
+R200	Drg Arg1:T157 Arg2:T158 << OK >>	Bisocard -> 10 mg 1 x dz rano  <RANK: 3> <info: start[5247, 5256] <type: RIGHT>>
+
+
+Sentence 54:
+Prestarium 5 mg 1 x dz. wieczorem,
+Acard 75 mg 1xdz wieczorem,
+Metformin 500 mg 1xdz wieczorem,
+
+Pacjent potwierdza stosowanie diety.
+
+
+R201	Drg Arg1:T159 Arg2:T160 << OK >>	Prestarium -> 5 mg 1 x dz. wieczorem  <RANK: 3> <info: start[5275, 5286] <type: RIGHT>>
+R202	Drg Arg1:T159 Arg2:T162 <<REDUNDANT!!!REMOVED>>	Prestarium -> 75 mg 1xdz wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[5275, 5316] <type: RIGHT>>
+R203	Drg Arg1:T159 Arg2:T164 <<REDUNDANT!!!REMOVED>>	Prestarium -> 500 mg 1xdz wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[5275, 5348] <type: RIGHT>>
+R204	Drg Arg1:T161 Arg2:T160 <<REDUNDANT!!!REMOVED>>	Acard -> 5 mg 1 x dz. wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[5310, 5286] <type: LEFT>>
+R205	Drg Arg1:T161 Arg2:T162 << OK >>	Acard -> 75 mg 1xdz wieczorem  <RANK: 3> <info: start[5310, 5316] <type: RIGHT>>
+R206	Drg Arg1:T161 Arg2:T164 <<REDUNDANT!!!REMOVED>>	Acard -> 500 mg 1xdz wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[5310, 5348] <type: RIGHT>>
+R207	Drg Arg1:T163 Arg2:T160 <<REDUNDANT!!!REMOVED>>	Metformin -> 5 mg 1 x dz. wieczorem <:REMOVED other first tag between (left):> <RANK: 0> <info: start[5338, 5286] <type: LEFT>>
+R208	Drg Arg1:T163 Arg2:T162 <<REDUNDANT!!!REMOVED>>	Metformin -> 75 mg 1xdz wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[5338, 5316] <type: LEFT>>
+R209	Drg Arg1:T163 Arg2:T164 << OK >>	Metformin -> 500 mg 1xdz wieczorem  <RANK: 3> <info: start[5338, 5348] <type: RIGHT>>
+
+
+Sentence 55:
+U pacjenta brak wywiadu w kierunku:
+-hiperlipidemii wtórnej,
+-homozygotycznej postaci hipercholesterolemii rodzinnej, 
+
+R210	Neg Arg1:T166 Arg2:T168 << OK >>	brak wywiadu w kierunku -> hiperlipidemii wtórnej  <RANK: 1> <info: start[5421, 5447] <type: RIGHT>>
+R211	Neg Arg1:T166 Arg2:T169 << OK >>	brak wywiadu w kierunku -> homozygotycznej postaci hipercholesterolemii rodzinnej  <RANK: 0> <info: start[5421, 5472] <type: RIGHT>>
+
+
+Sentence 56:
+-ciężkiej niewydolności nerek,
+-ciężkiej niewydolności wątroby,
+-nadwrażliwości na alirokumab lub którąkolwiek z substancji pomocniczych.
+
+
+R212	Alg Arg1:T170 Arg2:T173 <<REDUNDANT!!!REMOVED>>	ciężkiej niewydolności nerek -> alirokumab <:REMOVED other first tag between (right):> <RANK: 0> <info: start[5530, 5612] <type: RIGHT>>
+R213	Alg Arg1:T170 Arg2:T174 <<REDUNDANT!!!REMOVED>>	ciężkiej niewydolności nerek -> którąkolwiek z substancji pomocniczych <:REMOVED other first tag between (right):> <RANK: 0> <info: start[5530, 5627] <type: RIGHT>>
+R214	Alg Arg1:T171 Arg2:T173 <<REDUNDANT!!!SHOULD BE REMOVED>>	ciężkiej niewydolności wątroby -> alirokumab  <RANK: 0> <info: start[5561, 5612] <type: RIGHT>>
+R215	Alg Arg1:T171 Arg2:T174 <<REDUNDANT!!!SHOULD BE REMOVED>>	ciężkiej niewydolności wątroby -> którąkolwiek z substancji pomocniczych  <RANK: 0> <info: start[5561, 5627] <type: RIGHT>>
+R216	Alg Arg1:T172 Arg2:T173 << OK >>	nadwrażliwości -> alirokumab  <RANK: 3> <info: start[5594, 5612] <type: RIGHT>>
+R217	Alg Arg1:T172 Arg2:T174 << OK >>	nadwrażliwości -> którąkolwiek z substancji pomocniczych  <RANK: 3> <info: start[5594, 5627] <type: RIGHT>>
+
+
+Sentence 57:
+Planowany czas hospitalizacji: 1 dzień. 
+
+
+
+Sentence 58:
+Planowane badania: badania laboratoryjne, EKG.
+
+
+
+Sentence 59:
+------------------------------------------------
+
+
+
+Sentence 60:
+Wyniki badań
+------------------------------------------------
+PSA total: PSA total:6.6[ng/ml]
+
+
+
+Sentence 61:
+ALAT: ALAT:21[U/L]
+ALAT: ALAT:30[U/L]
+ASPAT: ASPAT:32[U/L]
+CK - aktywność: CK:60[U/L]
+
+
+
+Sentence 62:
+CK - aktywność: CK:82[U/L]
+
+
+
+Sentence 63:
+Kreatynina + GFR
+    
+
+
+Sentence 64:
+Kreatynina w surowicy:0.90[mg/dl]
+    
+
+
+Sentence 65:
+eGFR wg skr.
+
+
+Sentence 66:
+MDRD ze stan:85.5[ml/min/1,73 m^2]
+
+
+
+Sentence 67:
+Kreatynina + GFR
+    
+
+
+Sentence 68:
+Kreatynina w surowicy:0.88[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 69:
+MDRD ze stan:87.5[ml/min/1,73 m^2]
+
+
+
+Sentence 70:
+Lipidogram
+    
+
+
+Sentence 71:
+Cholesterol całkowity:232[mg/dl]
+    
+
+
+Sentence 72:
+Cholesterol HDL:32[mg/dl]
+    
+
+
+Sentence 73:
+Cholestrol LDL:167[mg/dl]
+    
+
+
+Sentence 74:
+Triglicerydy:179[mg/dl]
+    
+
+
+Sentence 75:
+Stosunek cholesterolu HD:0.1
+Lipidogram
+    
+
+
+Sentence 76:
+Cholesterol całkowity:97[mg/dl]
+    
+
+
+Sentence 77:
+Cholesterol HDL:32[mg/dl]
+    
+
+
+Sentence 78:
+Cholestrol LDL:50[mg/dl]
+    Triglicerydy:175[mg/dl]
+    
+
+
+Sentence 79:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:113[mg/dl]
+
+
+
+Sentence 80:
+------------------------------------------------
+
+
+
+Sentence 81:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 82:
+E78.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 83:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 84:
+M37
+I19
+M18
+
+
+
+Sentence 85:
+I61
+L43
+I17
+------------------------------------------------
+
+

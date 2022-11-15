@@ -1,0 +1,59 @@
+T1	Condition 450 494	Łagodna niedomykalność zastawki trójdzielnej
+N1	Reference T1 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T2	Condition 496 574	Tętniak przegrody międzyprzedsionkowej uwypuklony w stronę prawego przedsionka
+N2	Reference T2 ICD10:I25.3	Tętniak serca
+T3	Condition 576 606	Pojedyncze pobudzenia komorowe
+N3	Reference T3 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T4	Condition 609 620	nadkomorowe
+N4	Reference T4 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T5	Treatment 738 803	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T6	Behaviour 806 846	Dieta lekkostrawna , niskocholesterolowa
+T7	Investigation 850 933	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T8	Investigation 936 984	Systematyczna kontrola ciśnienia tętniczego krwi
+T9	Condition 1398 1401	ASD
+A1	Source T9 Declared
+N5	Reference T9 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T10	Investigation 1408 1411	TEE
+T11	Symptom 1440 1513	niecharakterystyczne bóle w klatce piersiowej po stronie lewej , punktowe
+N6	Reference T11 ICD10:R07.3	
+T12	Symptom 1516 1562	nie związane z wysiłkiem , związane ze stresem
+T13	Symptom 1574 1595	stany przedomdleniowe
+T14	Symptom 1601 1627	okresowe uczucie duszności
+N7	Reference T14 ICD10:R06.0	Duszność
+T15	Negation 1643 1646	bez
+T16	Condition 1647 1666	chorób przewlekłych
+R1	Neg Arg1:T15 Arg2:T16	
+T17	Treatment 1668 1685	Przebyte operacje
+T18	Treatment 1696 1734	operacji żebki stawu kolanowego lewego
+A2	Status T18 Historical_Insignificant
+T19	Date 1735 1739	2001
+R2	Dat Arg1:T19 Arg2:T18	
+T20	Treatment 1742 1761	Leczenie przewlekłe
+T21	Negation 1764 1768	brak
+R3	Neg Arg1:T21 Arg2:T20	
+T22	Condition 1797 1800	WZW
+N8	Reference T22 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T23	Condition 1810 1819	borelioza
+N9	Reference T23 ICD10:A69.2	Choroba z Lyme
+T24	Negation 1822 1823	-
+R4	Neg Arg1:T24 Arg2:T23	
+T25	Negation 1803 1804	-
+R5	Neg Arg1:T25 Arg2:T22	
+T26	Condition 1828 1847	wywiadzie rodzinnym
+A3	Status T26 Family
+T27	Negation 1850 1861	brak danych
+R6	Neg Arg1:T27 Arg2:T26	
+T28	Behaviour 1863 1878	Palenie tytoniu
+T29	Negation 1880 1883	nie
+R7	Neg Arg1:T29 Arg2:T28	
+T30	Behaviour 1884 1895	Inne używki
+T31	Behaviour 1897 1917	okazjonalnie alkohol
+N11	Reference T31 ICD10:Z72.1	Używanie alkoholu
+T32	Condition 1919 1928	Uczulenia
+T33	Behaviour 1980 2006	warunki mieszkaniowe dobre
+T34	Investigation 2075 2085	Echo serca
+T35	Investigation 2087 2090	TEE
+T36	Investigation 2093 2103	Holter EKG
+T37	Investigation 2106 2121	Próba Wysiłkowa
+N10	Reference T28 ICD10:Z72.0	Używanie tytoniu
+N12	Reference T32 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

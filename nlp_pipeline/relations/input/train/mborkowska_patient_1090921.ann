@@ -1,0 +1,143 @@
+T1	Condition 439 477	Zahamowania zatokowe - pauzy do 2,53 s
+N1	Reference T1 ICD10:I49.5	Inne zaburzenia rytmu serca
+T2	Condition 479 521	Dysfunkcja rozkurczowa lewej komory II st.
+T3	Condition 522 567	Łagodna niedomykalność zastawki trójdzielnej.
+N2	Reference T3 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T4	Condition 568 593	Miażdżyca tętnic szyjnych
+N3	Reference T4 ICD10:I65.2	Niedrożność i zwężenie tętnicy szyjnej wewnętrznej
+T5	Symptom 595 608	Zawroty głowy
+N4	Reference T5 ICD10:R42	Zawroty głowy i odurzenie
+T6	Condition 610 627	Zaburzenia lękowe
+N5	Reference T6 ICD10:F41.9	Zaburzenia lękowe, nieokreślone
+T7	Condition 629 658	Kamica pęcherzyka żółciowego.
+N6	Reference T7 ICD10:K80.8	Inne postacie kamicy żółciowej
+T8	Condition 659 681	Torbiele nerki prawej.
+N7	Reference T8 ICD10:N28.1	Torbiel nerki, nabyta
+T9	Condition 682 718	Kamica ślinianki podżuchwowej lewej.
+N8	Reference T9 ICD10:K11.5	Kamica ślinianek
+T10	Condition 719 761	Przewlekły liszaj pospolity. Świerzbiączka
+N9	Reference T10 ICD10:L28	Przewlekły liszaj pospolity i świerzbiączka
+T11	Condition 763 776	Hiperurykemia
+N10	Reference T11 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T12	Investigation 1063 1092	kontrola ciśnienia tętniczego
+T13	Investigation 1105 1178	kontrola lipidogramu, elektrolitów, parametrów nerkowych, kwasu moczowego
+T14	Drug 1237 1245	Noliprel
+T15	Drug_dose 1246 1258	1 tabl. rano
+R1	Drg Arg1:T14 Arg2:T15	
+T16	Drug 1259 1266	Amlozek
+T17	Drug_dose 1267 1289	5 mg 1 tabl. wieczorem
+R2	Drg Arg1:T16 Arg2:T17	
+T18	Drug 1290 1296	Atoris
+T19	Drug_dose 1297 1320	20 mg 1 tabl. wieczorem
+R3	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1321 1326	Acard
+T21	Drug_dose 1327 1350	75 mg 1 tabl. wieczorem
+R4	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1351 1358	Milurit
+T23	Drug_dose 1359 1378	300 mg 1 tabl. rano
+R5	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1379 1393	Cavinton forte
+T25	Drug_dose 1394 1409	1 tabl. 2 x dz.
+R6	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1410 1421	Trittico CR
+T27	Drug_dose 1422 1485	75 mg 1/3 tabl przez 10-14 dni, następnie wg zaleceń psychiatry
+R7	Drg Arg1:T26 Arg2:T27	
+T28	Investigation 2700 2704	ECHO
+T29	Investigation 2706 2710	ABPM
+T30	Drug 2579 2585	Atoris
+T31	Drug_dose 2586 2614	20 mg 1 tabl. 1xdz wieczorem
+R8	Drg Arg1:T30 Arg2:T31	
+T32	Drug 2551 2565	Cavinton forte
+T33	Drug_dose 2566 2577	10 mg 1-1-0
+R9	Drg Arg1:T32 Arg2:T33	
+T34	Drug 2516 2528	Tertensif SR
+T35	Drug_dose 2529 2549	1,5 mg  1 tabl. rano
+R10	Drg Arg1:T34 Arg2:T35	
+T36	Drug 2478 2489	Metocard ZK
+T37	Drug_dose 2490 2514	23,75 mg 2 x dz 1/2 tabl
+R11	Drg Arg1:T36 Arg2:T37	
+T38	Drug 2443 2453	Prestarium
+T39	Drug_dose 2454 2476	5 mg 1 tabl. 1xdz rano
+R12	Drg Arg1:T38 Arg2:T39	
+T40	Behaviour 2362 2388	warunki mieszkaniowe dobre
+T41	Condition 2300 2303	WZW
+N11	Reference T41 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T42	Condition 2310 2319	borelioza
+N12	Reference T42 ICD10:A69.2	Choroba z Lyme
+T43	Condition 2327 2330	tbc
+N13	Reference T43 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T44	Condition 2336 2344	odra (+)
+A1	Source T44 Confirmed
+N14	Reference T44 ICD10:B05	Odra
+T45	Negation 2332 2333	-
+R13	Neg Arg1:T45 Arg2:T43	
+T46	Negation 2320 2325	( - )
+R14	Neg Arg1:T46 Arg2:T42	
+T47	Negation 2304 2307	(-)
+R15	Neg Arg1:T47 Arg2:T41	
+T48	Negation 2268 2271	nie
+T49	Negation 2252 2255	nie
+T50	Negation 2210 2216	neguje
+T51	Negation 2234 2237	nie
+T52	Condition 2257 2266	Uczulenia
+N15	Reference T52 ICD10:T78.4	Alergia, nieokreślona
+R16	Neg Arg1:T48 Arg2:T52	
+T53	Behaviour 2239 2251	Inne używki:
+R17	Neg Arg1:T49 Arg2:T53	
+T54	Behaviour 2217 2233	Palenie tytoniu:
+N16	Reference T54 ICD10:T65.2	Tytoń i nikotyna
+R18	Neg Arg1:T51 Arg2:T54	
+T55	Treatment 2191 2208	Przebyte operacje
+R19	Neg Arg1:T50 Arg2:T55	
+T56	Negation 2068 2074	Neguje
+T57	Symptom 2076 2088	zasłabnięcia
+N17	Reference T57 ICD10:R55	Omdlenie i zapaść
+T58	Symptom 2090 2098	omdlenia
+N18	Reference T58 ICD10:R55	Omdlenie i zapaść
+T59	Symptom 2100 2110	krwawienia
+N19	Reference T59 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T60	Symptom 2112 2125	czarne stolce
+N20	Reference T60 ICD10:K92.1	Stolce smołowate
+T61	Symptom 2127 2143	brunatne wymioty
+N21	Reference T61 ICD10:K92.0	Wymioty krwawe
+T62	Condition 2145 2161	chorobę wrzodową
+N22	Reference T62 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T63	Condition 2163 2174	udar mózgu,
+N23	Reference T63 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T64	Condition 2175 2187	zawał serca.
+N24	Reference T64 ICD10:I25.2	Przebyty zawał serca
+R20	Neg Arg1:T56 Arg2:T57	
+R21	Neg Arg1:T56 Arg2:T59	
+R22	Neg Arg1:T56 Arg2:T58	
+R23	Neg Arg1:T56 Arg2:T60	
+R24	Neg Arg1:T56 Arg2:T61	
+R25	Neg Arg1:T56 Arg2:T62	
+R26	Neg Arg1:T56 Arg2:T63	
+R27	Neg Arg1:T56 Arg2:T64	
+T65	Condition 2024 2066	przewlekły liszaj pospolity, świerzbiączka
+N25	Reference T65 ICD10:L28	Przewlekły liszaj pospolity i świerzbiączka
+T66	Condition 1987 2022	kamica ślinianki podżuchwowej lewej
+N26	Reference T66 ICD10:K11.5	Kamica ślinianek
+T67	Condition 1964 1986	torbiele nerki prawej,
+N27	Reference T67 ICD10:N28.1	Torbiel nerki, nabyta
+T68	Condition 1934 1962	kamica pęcherzyka żółciowego
+N28	Reference T68 ICD10:K80.8	Inne postacie kamicy żółciowej
+T69	Condition 1919 1932	hiperurykemia
+N29	Reference T69 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T70	Symptom 1904 1917	zawroty głowy
+N30	Reference T70 ICD10:R42	Zawroty głowy i odurzenie
+T71	Condition 1874 1881	IM I st
+N31	Reference T71 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T72	Condition 1883 1890	It I st
+N32	Reference T72 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T73	Condition 1892 1902	ExSV i ExV
+N33	Reference T73 ICD10:I49	Inne zaburzenia rytmu serca
+T74	Symptom 1631 1648	kołataniami serca
+N34	Reference T74 ICD10:R00.2	Kołatanie serca
+T75	Date 1721 1730	ok. 2 lat
+R28	Dat Arg1:T75 Arg2:T74	
+T76	Symptom 1735 1751	szumami w uszach
+N35	Reference T76 ICD10:H93.1	Szum w uszach
+T77	Symptom 1808 1851	duszności spoczynkowej i głównie wysiłkowej
+N36	Reference T77 ICD10:R06.0	Duszność
+T78	Behaviour 1179 1204	dieta niskocholesterolowa

@@ -1,0 +1,104 @@
+T1	Treatment 329 356	dalsza opieka w poradni POZ
+T2	Treatment 357 432	wskazana pilna konsultacja kardiologiczna w Poradni Zaburzeń Rytmu Szp. CKD
+T3	Investigation 451 502	okresowa kontrola elektrolitów, enzymów wątrobowych
+T4	Investigation 503 542	regularna kontrola ciśnienia tętniczego
+T5	Behaviour 543 569	dieta nieskocholesterolowa
+T6	Drug 576 589	Co-Prestarium
+T7	Drug_dose 590 610	5mg/5mg 1 tabl. rano
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 611 619	Polocard
+T9	Drug_dose 620 643	75 mg 1 tabl. wieczorem
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 644 651	Finamef
+T11	Drug_dose 652 669	5 mg 1 tabl. rano
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 670 680	Omnic Ocas
+T13	Drug_dose 681 705	0,4 mg 1 tabl. wieczorem
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Condition 923 950	Dysfunkcja węzła zatokowego
+N1	Reference T14 ICD10:I49.5	Zespół chorej zatoki
+T15	Condition 952 982	zespół tachykardia-bradykardia
+N2	Reference T15 ICD10:I49.5	Zespół chorej zatoki
+T16	Investigation_result 984 995	pauzy 3,47s
+T17	Condition 998 1007	Borelioza
+N3	Reference T17 ICD10:A69.2	Choroba z Lyme
+T18	Condition 1021 1054	Łagodna dysfunkcja rozkurczowa LK
+T19	Condition 1056 1132	Wada wrodzona serca pod postacią łagodnej niedomykalności zastawki mitralnej
+N5	Reference T19 ICD10:Q23.3	Wrodzona niedomykalność zastawki mitralnej
+T20	Condition 1134 1141	płucnej
+N6	Reference T20 ICD10:Q22.2	Wrodzona niedomykalność zastawki pnia płucnego
+T21	Condition 1144 1156	trójdzielnej
+N7	Reference T21 ICD10:Q22.8	Inne wrodzone wady rozwojowe zastawki trójdzielnej
+T22	Condition 1158 1192	Nadciśnienie tętnicze I st. wg WHO
+N8	Reference T22 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T23	Condition 1194 1220	Rozrost gruczołu krokowego
+N9	Reference T23 ICD10:N40	Rozrost gruczołu krokowego
+T24	Condition 1365 1388	nadciśnieniem tętniczym
+N10	Reference T24 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T25	Condition 1390 1410	bradykardią zatokową
+N11	Reference T25 ICD10:R00.1	Bradykardia, nieokreślona
+T26	Investigation_result 1427 1441	pauzami do 3 s
+T27	Condition 1445 1458	nadkomorowymi
+N12	Reference T27 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T28	Condition 1461 1496	komorowymi zaburzeniami rytmu serca
+N13	Reference T28 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T29	Treatment 1539 1559	zabiegu operacyjnego
+T30	Condition 1560 1583	przepukliny pachwinowej
+N14	Reference T30 ICD10:K40.9	Jednostronna lub nieokreślona przepuklina pachwinowa bez niedrożności lub zgorzeli
+T31	Date 1585 1593	08.2018r
+R5	Dat Arg1:T31 Arg2:T30	
+R6	Dat Arg1:T31 Arg2:T29	
+T32	Symptom 1604 1626	wolnej czynności serca
+N15	Reference T32 ICD10:R00.1	Bradykardia, nieokreślona
+T33	Treatment 1628 1645	Przebyte operacje
+T34	Condition 1647 1673	kamica nerkowa lewostronna
+N16	Reference T34 ICD10:N20.0	Kamica nerki
+T35	Date 1675 1679	1970
+A1	Status T34 Historical_Insignificant
+R7	Dat Arg1:T35 Arg2:T34	
+T36	Treatment 1682 1701	Leczenie przewlekłe
+T37	Negation 1703 1713	nie podaje
+R8	Neg Arg1:T37 Arg2:T36	
+T38	Condition 1741 1744	WZW
+N17	Reference T38 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T39	Condition 1750 1759	borelioza
+N18	Reference T39 ICD10:A69.2	Choroba z Lyme
+T40	Negation 1746 1747	-
+R9	Neg Arg1:T40 Arg2:T38	
+T41	Condition 1771 1786	Wywiad rodzinny
+A2	Status T41 Family
+T42	Negation 1787 1797	nieistotny
+R10	Neg Arg1:T42 Arg2:T41	
+T43	Behaviour 1798 1813	Palenie tytoniu
+T44	Negation 1815 1825	nie podaje
+R11	Neg Arg1:T44 Arg2:T43	
+T45	Behaviour 1826 1837	Inne używki
+T46	Negation 1838 1848	nie podaje
+R12	Neg Arg1:T46 Arg2:T45	
+T47	Condition 1849 1858	Uczulenia
+N20	Reference T47 ICD10:T78.4	Alergia, nieokreślona
+T48	Negation 1860 1870	nie podaje
+R13	Neg Arg1:T48 Arg2:T47	
+T49	Behaviour 1889 1895	emeryt
+T50	Drug 1921 1928	Tritace
+T51	Drug_dose 1929 1951	5 mg 1 tabl. wieczorem
+R14	Drg Arg1:T50 Arg2:T51	
+T52	Drug 1952 1960	Polocard
+T53	Drug_dose 1961 1984	75 mg 1 tabl. wieczorem
+R15	Drg Arg1:T52 Arg2:T53	
+T54	Drug 1985 1995	Omnic Ocas
+T55	Drug_dose 1996 2017	0,4 1 tabl. wieczorem
+R16	Drg Arg1:T54 Arg2:T55	
+T56	Drug 2018 2025	Finamef
+T57	Drug_dose 2026 2043	5 mg 1 tabl. rano
+R17	Drg Arg1:T56 Arg2:T57	
+T58	Investigation 2071 2081	echo serca
+T59	Investigation 2083 2086	TET
+T60	Investigation 2088 2092	ABPM
+T61	Investigation 2094 2100	Holter
+T62	Negation 1521 1536	dyskwalifikacji
+R18	Neg Arg1:T62 Arg2:T29	
+N4	Reference T18 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+A3	Status T30 Historical_Insignificant
+N19	Reference T43 ICD10:Z72.0	Używanie tytoniu
+N21	Reference T45 ICD10:Z72	Problemy związane ze stylem życia

@@ -1,0 +1,731 @@
+allRelations          : 102
+oks                   : 37
+isRedundantAndRemoveds: 62
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 3
+GOOD / BAD            : 99 / 3
+Sentence 0:
+------------------------------------------------
+Wiek: 54 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+1. Dalsza opieka w POZ, Poradni Kardiologicznej oraz Poradni Neurologicznej.
+
+
+
+Sentence 4:
+2. Wskazana dalsza diagnostyka przyczyn duszności w Poradni Pulmonologicznej.
+
+
+
+Sentence 5:
+3. Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych - pierwsza za 4-6 tygodni.
+
+R1	Dat Arg1:T4 Arg2:T3 << OK >>	za 4-6 tygodni -> Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych  <RANK: 3> <info: start[592, 488] <type: LEFT>>
+
+
+Sentence 6:
+4. Wskazana kontrola TSH, FT3, FT4 za 3-4 tygodnie w warunkach ambulatoryjnych - w przypadku nieprawidłowości wskazana konsultacja z lekarzem endokrynologiem.
+
+
+
+Sentence 7:
+5. Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych.
+
+
+
+Sentence 8:
+6. Wskazana redukcja masy ciała.
+
+
+
+Sentence 9:
+7. Regularna samokontrola ciśnienia tętniczego krwi i tętna.
+
+
+
+Sentence 10:
+8. Regularne przyjmowanie leków:
+Rp.
+
+
+
+Sentence 11:
+Acard 75mg 1 tabletka wieczorem
+Beto 25 ZK 1 tabletka rano
+
+R2	Drg Arg1:T14 Arg2:T16 <<REDUNDANT!!!REMOVED>>	Beto 25 ZK -> 75mg 1 tabletka wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1037, 1011] <type: LEFT>>
+R3	Drg Arg1:T14 Arg2:T17 << OK >>	Beto 25 ZK -> 1 tabletka rano  <RANK: 3> <info: start[1037, 1048] <type: RIGHT>>
+R4	Drg Arg1:T15 Arg2:T16 << OK >>	Acard -> 75mg 1 tabletka wieczorem  <RANK: 3> <info: start[1005, 1011] <type: RIGHT>>
+R5	Drg Arg1:T15 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Acard -> 1 tabletka rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1005, 1048] <type: RIGHT>>
+
+
+Sentence 12:
+Tritace 5mg 1 tabletka rano
+Amlozek 5mg 1 tabletka wieczorem
+Roswera 30mg 1 tabletka wieczorem
+
+R6	Drg Arg1:T11 Arg2:T18 <<REDUNDANT!!!REMOVED>>	Roswera -> 5mg 1 tabletka rano <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1125, 1072] <type: LEFT>>
+R7	Drg Arg1:T11 Arg2:T19 <<REDUNDANT!!!REMOVED>>	Roswera -> 5mg 1 tabletka wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1125, 1100] <type: LEFT>>
+R8	Drg Arg1:T11 Arg2:T20 << OK >>	Roswera -> 30mg 1 tabletka wieczorem  <RANK: 3> <info: start[1125, 1133] <type: RIGHT>>
+R9	Drg Arg1:T12 Arg2:T18 <<REDUNDANT!!!REMOVED>>	Amlozek -> 5mg 1 tabletka rano <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1092, 1072] <type: LEFT>>
+R10	Drg Arg1:T12 Arg2:T19 << OK >>	Amlozek -> 5mg 1 tabletka wieczorem  <RANK: 3> <info: start[1092, 1100] <type: RIGHT>>
+R11	Drg Arg1:T12 Arg2:T20 <<REDUNDANT!!!REMOVED>>	Amlozek -> 30mg 1 tabletka wieczorem <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1092, 1133] <type: RIGHT>>
+R12	Drg Arg1:T13 Arg2:T18 << OK >>	Tritace -> 5mg 1 tabletka rano  <RANK: 3> <info: start[1064, 1072] <type: RIGHT>>
+R13	Drg Arg1:T13 Arg2:T19 <<REDUNDANT!!!REMOVED>>	Tritace -> 5mg 1 tabletka wieczorem <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1064, 1100] <type: RIGHT>>
+R14	Drg Arg1:T13 Arg2:T20 <<REDUNDANT!!!REMOVED>>	Tritace -> 30mg 1 tabletka wieczorem <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1064, 1133] <type: RIGHT>>
+
+
+Sentence 13:
+Paroxinor 20mg 1 tabletka rano - wg zaleceń lekarza specjalisty
+------------------------------------------------
+
+R15	Drg Arg1:T10 Arg2:T21 << OK >>	Paroxinor -> 20mg 1 tabletka rano - wg zaleceń lekarza specjalisty  <RANK: 3> <info: start[1159, 1169] <type: RIGHT>>
+
+
+Sentence 14:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 15:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Nadciśnienie tętnicze.
+
+
+Sentence 16:
+Dyslipidemia.
+
+
+Sentence 17:
+Stan po TIA (07/2017).
+R16	Dat Arg1:T25 Arg2:T24 << OK >>	07/2017 -> TIA  <RANK: 3> <info: start[1490, 1485] <type: LEFT>>
+
+
+Sentence 18:
+Stan po usunięciu guzków obu piersi.
+
+
+Sentence 19:
+Stan po cięciu cesarskim.
+
+
+Sentence 20:
+Nikotynizm w wywiadzie.
+
+
+Sentence 21:
+Zawroty głowy po tramadolu w wywiadzie.
+
+
+
+Sentence 22:
+------------------------------------------------
+
+
+
+Sentence 23:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 24:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: HA.
+
+
+Sentence 25:
+Zmnijeszona tolerancja wysiłku fizycznego.
+
+
+Sentence 26:
+Bóle w klp.  Mroczki przed oczami.
+
+
+Sentence 27:
+Czasem zasinione usta.
+
+
+Sentence 28:
+Obrzęki wokół kostek; zasinienie stóp podczas stania.
+
+
+Sentence 29:
+Kołatania serca.
+
+
+Sentence 30:
+\x0aPrzebyte operacje: usuniecie guzków obu piersi (ca?), cc\x0aPalenie tytoniu: nie pali od 11 lat
+------------------------------------------------
+
+R17	Neg Arg1:T42 Arg2:T111 <<REDUNDANT!!!REMOVED>>	nie pali -> guzków obu piersi (ca?) <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2101, 2053] <type: LEFT>>
+R18	Neg Arg1:T42 Arg2:T41 << OK >>	nie pali -> Palenie tytoniu  <RANK: 3> <info: start[2101, 2084] <type: LEFT>>
+R19	Neg Arg1:T42 Arg2:T38 <<REDUNDANT!!!REMOVED>>	nie pali -> Przebyte operacje <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2101, 2024] <type: LEFT>>
+R20	Neg Arg1:T42 Arg2:T39 <<REDUNDANT!!!REMOVED>>	nie pali -> usuniecie <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2101, 2043] <type: LEFT>>
+R21	Neg Arg1:T42 Arg2:T40 <<REDUNDANT!!!SHOULD BE REMOVED>>	nie pali -> cc  <RANK: 3> <info: start[2101, 2078] <type: LEFT>>
+R22	Dat Arg1:T43 Arg2:T111 <<REDUNDANT!!!REMOVED>>	od 11 lat -> guzków obu piersi (ca?) <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2110, 2053] <type: LEFT>>
+R23	Dat Arg1:T43 Arg2:T41 << OK >>	od 11 lat -> Palenie tytoniu  <RANK: 3> <info: start[2110, 2084] <type: LEFT>>
+R24	Dat Arg1:T43 Arg2:T38 <<REDUNDANT!!!REMOVED>>	od 11 lat -> Przebyte operacje <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2110, 2024] <type: LEFT>>
+R25	Dat Arg1:T43 Arg2:T39 <<REDUNDANT!!!REMOVED>>	od 11 lat -> usuniecie <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2110, 2043] <type: LEFT>>
+R26	Dat Arg1:T43 Arg2:T40 <<REDUNDANT!!!SHOULD BE REMOVED>>	od 11 lat -> cc  <RANK: 3> <info: start[2110, 2078] <type: LEFT>>
+
+
+Sentence 31:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 32:
+Pacjentka lat 54, z HA  (RR w domu: 150/98-180/110mmHg), po TIA (07.2017), przyjęta do kliniki z powodu labilnych wartości RR, zmnijeszonej od 3-4 lat tolerancji wysiłku fizycznego (aktualniy dystans: 1 piętro - duszność, zmęczenie, bez bólu w klp). 
+
+R27	Neg Arg1:T52 Arg2:T48 <<REDUNDANT!!!REMOVED>>	bez -> labilnych wartości RR <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2477, 2348] <type: LEFT>>
+R28	Neg Arg1:T52 Arg2:T49 <<REDUNDANT!!!REMOVED>>	bez -> zmnijeszonej od 3-4 lat tolerancji wysiłku fizycznego (aktualniy dystans: 1 piętro <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2477, 2371] <type: LEFT>>
+R29	Neg Arg1:T52 Arg2:T50 <<REDUNDANT!!!REMOVED>>	bez -> duszność <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2477, 2456] <type: LEFT>>
+R30	Neg Arg1:T52 Arg2:T51 <<REDUNDANT!!!REMOVED>>	bez -> zmęczenie <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2477, 2466] <type: LEFT>>
+R31	Neg Arg1:T52 Arg2:T53 << OK >>	bez -> bólu w klp  <RANK: 3> <info: start[2477, 2481] <type: RIGHT>>
+R32	Neg Arg1:T52 Arg2:T44 <<REDUNDANT!!!REMOVED>>	bez -> HA <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2477, 2264] <type: LEFT>>
+R33	Neg Arg1:T52 Arg2:T46 <<REDUNDANT!!!REMOVED>>	bez -> TIA <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2477, 2304] <type: LEFT>>
+R34	Neg Arg1:T52 Arg2:T45 <<REDUNDANT!!!REMOVED>>	bez -> RR w domu: 150/98-180/110mmHg <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2477, 2269] <type: LEFT>>
+R35	Dat Arg1:T47 Arg2:T48 <<REDUNDANT!!!REMOVED>>	07.2017 -> labilnych wartości RR <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2309, 2348] <type: RIGHT>>
+R36	Dat Arg1:T47 Arg2:T49 <<REDUNDANT!!!REMOVED>>	07.2017 -> zmnijeszonej od 3-4 lat tolerancji wysiłku fizycznego (aktualniy dystans: 1 piętro <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2309, 2371] <type: RIGHT>>
+R37	Dat Arg1:T47 Arg2:T50 <<REDUNDANT!!!REMOVED>>	07.2017 -> duszność <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2309, 2456] <type: RIGHT>>
+R38	Dat Arg1:T47 Arg2:T51 <<REDUNDANT!!!REMOVED>>	07.2017 -> zmęczenie <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2309, 2466] <type: RIGHT>>
+R39	Dat Arg1:T47 Arg2:T53 <<REDUNDANT!!!REMOVED>>	07.2017 -> bólu w klp <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2309, 2481] <type: RIGHT>>
+R40	Dat Arg1:T47 Arg2:T44 <<REDUNDANT!!!SHOULD BE REMOVED>>	07.2017 -> HA  <RANK: 2> <info: start[2309, 2264] <type: LEFT>>
+R41	Dat Arg1:T47 Arg2:T46 << OK >>	07.2017 -> TIA  <RANK: 3> <info: start[2309, 2304] <type: LEFT>>
+
+
+Sentence 33:
+W wywiadzie ponadto: bóle w klp piekące, trwające 20-30min, ustępujące samoistnie, bez związku z wysiłkiem fizycznym, mroczki przed oczami, czasem zasinione usta, obrzęki wokół kostek, zasinienie stóp podczas stania, uczucie obrzęku kończyn i twarzy rano, czasem kołątania serca. 
+
+
+
+Sentence 34:
+Neguje: zasłabnięcia, omdlenia, krwawienia, czarne stolce, brunatne wymioty, chorobę wrzodową, duszność nocną, obrzęki podudzi, DM, udar mózgu, zawał serca.  
+
+R42	Neg Arg1:T61 Arg2:T62 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[2776, 2784] <type: RIGHT>>
+R43	Neg Arg1:T61 Arg2:T63 << OK >>	Neguje -> omdlenia  <RANK: 2> <info: start[2776, 2798] <type: RIGHT>>
+R44	Neg Arg1:T61 Arg2:T64 << OK >>	Neguje -> krwawienia  <RANK: 2> <info: start[2776, 2808] <type: RIGHT>>
+R45	Neg Arg1:T61 Arg2:T65 << OK >>	Neguje -> czarne stolce  <RANK: 2> <info: start[2776, 2820] <type: RIGHT>>
+R46	Neg Arg1:T61 Arg2:T66 << OK >>	Neguje -> brunatne wymioty  <RANK: 2> <info: start[2776, 2835] <type: RIGHT>>
+R47	Neg Arg1:T61 Arg2:T68 << OK >>	Neguje -> duszność nocną  <RANK: 2> <info: start[2776, 2871] <type: RIGHT>>
+R48	Neg Arg1:T61 Arg2:T69 << OK >>	Neguje -> obrzęki podudzi  <RANK: 2> <info: start[2776, 2887] <type: RIGHT>>
+R49	Neg Arg1:T61 Arg2:T67 << OK >>	Neguje -> chorobę wrzodową  <RANK: 2> <info: start[2776, 2853] <type: RIGHT>>
+R50	Neg Arg1:T61 Arg2:T70 << OK >>	Neguje -> DM  <RANK: 2> <info: start[2776, 2904] <type: RIGHT>>
+R51	Neg Arg1:T61 Arg2:T71 << OK >>	Neguje -> udar mózgu  <RANK: 2> <info: start[2776, 2908] <type: RIGHT>>
+R52	Neg Arg1:T61 Arg2:T72 << OK >>	Neguje -> zawał serca  <RANK: 2> <info: start[2776, 2920] <type: RIGHT>>
+
+
+Sentence 35:
+Przebyte operacje: usuniecie guzków obu piersi (ca?), cc
+Palenie tytoniu: nie pali od 11 lat
+
+R53	Neg Arg1:T77 Arg2:T112 <<REDUNDANT!!!REMOVED>>	nie pali -> guzków obu piersi (ca?) <:REMOVED other second tag between (left):> <RANK: 0> <info: start[3009, 2964] <type: LEFT>>
+R54	Neg Arg1:T77 Arg2:T76 << OK >>	nie pali -> Palenie tytoniu  <RANK: 3> <info: start[3009, 2992] <type: LEFT>>
+R55	Neg Arg1:T77 Arg2:T73 <<REDUNDANT!!!REMOVED>>	nie pali -> Przebyte operacje <:REMOVED other second tag between (left):> <RANK: 0> <info: start[3009, 2935] <type: LEFT>>
+R56	Neg Arg1:T77 Arg2:T74 <<REDUNDANT!!!REMOVED>>	nie pali -> usuniecie <:REMOVED other second tag between (left):> <RANK: 0> <info: start[3009, 2954] <type: LEFT>>
+R57	Neg Arg1:T77 Arg2:T75 <<REDUNDANT!!!REMOVED>>	nie pali -> cc <:REMOVED other second tag between (left):> <RANK: 1> <info: start[3009, 2989] <type: LEFT>>
+R58	Dat Arg1:T78 Arg2:T112 <<REDUNDANT!!!REMOVED>>	od 11 lat -> guzków obu piersi (ca?) <:REMOVED other second tag between (left):> <RANK: 0> <info: start[3018, 2964] <type: LEFT>>
+R59	Dat Arg1:T78 Arg2:T76 << OK >>	od 11 lat -> Palenie tytoniu  <RANK: 3> <info: start[3018, 2992] <type: LEFT>>
+R60	Dat Arg1:T78 Arg2:T73 <<REDUNDANT!!!REMOVED>>	od 11 lat -> Przebyte operacje <:REMOVED other second tag between (left):> <RANK: 0> <info: start[3018, 2935] <type: LEFT>>
+R61	Dat Arg1:T78 Arg2:T74 <<REDUNDANT!!!REMOVED>>	od 11 lat -> usuniecie <:REMOVED other second tag between (left):> <RANK: 0> <info: start[3018, 2954] <type: LEFT>>
+R62	Dat Arg1:T78 Arg2:T75 <<REDUNDANT!!!REMOVED>>	od 11 lat -> cc <:REMOVED other second tag between (left):> <RANK: 1> <info: start[3018, 2989] <type: LEFT>>
+
+
+Sentence 36:
+Inne używki: nie
+Uczulenia: nie, po Tramalu zawroty głowy, nudności
+
+R63	Neg Arg1:T80 Arg2:T81 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[3041, 3045] <type: RIGHT>>
+R64	Neg Arg1:T80 Arg2:T83 <<REDUNDANT!!!REMOVED>>	nie -> po Tramalu zawroty głowy, nudności <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3041, 3061] <type: RIGHT>>
+R65	Neg Arg1:T80 Arg2:T79 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[3041, 3028] <type: LEFT>>
+R66	Neg Arg1:T82 Arg2:T81 << OK >>	nie -> Uczulenia  <RANK: 3> <info: start[3056, 3045] <type: LEFT>>
+R67	Neg Arg1:T82 Arg2:T83 <<REDUNDANT!!!REMOVED>>	nie -> po Tramalu zawroty głowy, nudności <:REMOVED many second tags on the right:> <RANK: 2> <info: start[3056, 3061] <type: RIGHT>>
+R68	Neg Arg1:T82 Arg2:T79 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3056, 3028] <type: LEFT>>
+
+
+Sentence 37:
+Przebyte choroby zakaźne - WZW (-) , borelioza (-), tbc (-), odra (-), kontakt z odrą (-)
+
+R69	Neg Arg1:T89 Arg2:T84 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3183, 3123] <type: LEFT>>
+R70	Neg Arg1:T89 Arg2:T85 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3183, 3133] <type: LEFT>>
+R71	Neg Arg1:T89 Arg2:T86 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3183, 3148] <type: LEFT>>
+R72	Neg Arg1:T89 Arg2:T87 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3183, 3157] <type: LEFT>>
+R73	Neg Arg1:T89 Arg2:T88 << OK >>	- -> kontakt z odrą  <RANK: 3> <info: start[3183, 3167] <type: LEFT>>
+R74	Neg Arg1:T90 Arg2:T84 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3163, 3123] <type: LEFT>>
+R75	Neg Arg1:T90 Arg2:T85 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3163, 3133] <type: LEFT>>
+R76	Neg Arg1:T90 Arg2:T86 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3163, 3148] <type: LEFT>>
+R77	Neg Arg1:T90 Arg2:T87 << OK >>	- -> odra  <RANK: 3> <info: start[3163, 3157] <type: LEFT>>
+R78	Neg Arg1:T90 Arg2:T88 <<REDUNDANT!!!REMOVED>>	- -> kontakt z odrą <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[3163, 3167] <type: RIGHT>>
+R79	Neg Arg1:T91 Arg2:T84 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3153, 3123] <type: LEFT>>
+R80	Neg Arg1:T91 Arg2:T85 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3153, 3133] <type: LEFT>>
+R81	Neg Arg1:T91 Arg2:T86 << OK >>	- -> tbc  <RANK: 3> <info: start[3153, 3148] <type: LEFT>>
+R82	Neg Arg1:T91 Arg2:T87 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[3153, 3157] <type: RIGHT>>
+R83	Neg Arg1:T91 Arg2:T88 <<REDUNDANT!!!REMOVED>>	- -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3153, 3167] <type: RIGHT>>
+R84	Neg Arg1:T92 Arg2:T84 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3144, 3123] <type: LEFT>>
+R85	Neg Arg1:T92 Arg2:T85 << OK >>	- -> borelioza  <RANK: 3> <info: start[3144, 3133] <type: LEFT>>
+R86	Neg Arg1:T92 Arg2:T86 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[3144, 3148] <type: RIGHT>>
+R87	Neg Arg1:T92 Arg2:T87 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3144, 3157] <type: RIGHT>>
+R88	Neg Arg1:T92 Arg2:T88 <<REDUNDANT!!!REMOVED>>	- -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3144, 3167] <type: RIGHT>>
+R89	Neg Arg1:T93 Arg2:T84 << OK >>	- -> WZW  <RANK: 3> <info: start[3128, 3123] <type: LEFT>>
+R90	Neg Arg1:T93 Arg2:T85 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[3128, 3133] <type: RIGHT>>
+R91	Neg Arg1:T93 Arg2:T86 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3128, 3148] <type: RIGHT>>
+R92	Neg Arg1:T93 Arg2:T87 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3128, 3157] <type: RIGHT>>
+R93	Neg Arg1:T93 Arg2:T88 <<REDUNDANT!!!REMOVED>>	- -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3128, 3167] <type: RIGHT>>
+
+
+Sentence 38:
+Stan społeczny: warunki mieszkaniowe dobre. 
+
+
+
+Sentence 39:
+Leki: przyjęte rano w domu 
+
+
+
+Sentence 40:
+Leki: 
+Acard 75mg 1x 1 tabl/wiecz
+Atoris 20mg 1x 1 tabl/wiecz
+
+R94	Drg Arg1:T95 Arg2:T100 << OK >>	Acard -> 75mg 1x 1 tabl/wiecz  <RANK: 3> <info: start[3266, 3272] <type: RIGHT>>
+R95	Drg Arg1:T95 Arg2:T101 <<REDUNDANT!!!REMOVED>>	Acard -> 20mg 1x 1 tabl/wiecz <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3266, 3300] <type: RIGHT>>
+R96	Drg Arg1:T99 Arg2:T100 <<REDUNDANT!!!REMOVED>>	Atoris -> 75mg 1x 1 tabl/wiecz <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3293, 3272] <type: LEFT>>
+R97	Drg Arg1:T99 Arg2:T101 << OK >>	Atoris -> 20mg 1x 1 tabl/wiecz  <RANK: 3> <info: start[3293, 3300] <type: RIGHT>>
+
+
+Sentence 41:
+Tritace 5mg 1x 1 tabl/rano
+Beto 25mg 1x 1 tabl/rano
+
+R98	Drg Arg1:T97 Arg2:T102 <<REDUNDANT!!!REMOVED>>	Beto -> 5mg 1x 1 tabl/rano <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3348, 3329] <type: LEFT>>
+R99	Drg Arg1:T97 Arg2:T103 << OK >>	Beto -> 25mg 1x 1 tabl/rano  <RANK: 3> <info: start[3348, 3353] <type: RIGHT>>
+R100	Drg Arg1:T98 Arg2:T102 << OK >>	Tritace -> 5mg 1x 1 tabl/rano  <RANK: 3> <info: start[3321, 3329] <type: RIGHT>>
+R101	Drg Arg1:T98 Arg2:T103 <<REDUNDANT!!!REMOVED>>	Tritace -> 25mg 1x 1 tabl/rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3321, 3353] <type: RIGHT>>
+
+
+Sentence 42:
+Paroxinor 20mg 1x 1 tabl/rano
+
+Planowany czas hospitalizacji: 4-5 dni.
+
+R102	Drg Arg1:T96 Arg2:T104 << OK >>	Paroxinor -> 20mg 1x 1 tabl/rano  <RANK: 3> <info: start[3373, 3383] <type: RIGHT>>
+
+
+Sentence 43:
+Planowane badania: badania laboratoryjne, ECHO, EKG metodą Holtera, ABPM, próba wysiłkowa.
+
+
+
+Sentence 44:
+------------------------------------------------
+
+
+
+Sentence 45:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 46:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.15[10^3/ul]
+    
+
+
+Sentence 47:
+RBC Krwinki czerwone:4.64[10^6/ul]
+    
+
+
+Sentence 48:
+HGB Hemoglobina:13.1[g/dl]
+    
+
+
+Sentence 49:
+HCT Hematokryt:39.5[%]
+    
+
+
+Sentence 50:
+MCV wskaźnik czerwonokrw:85.1[fl]
+    
+
+
+Sentence 51:
+MCH wskaźnik czerwonokrw:28.2[pg]
+    
+
+
+Sentence 52:
+MCHC wskaźnik czerwonokr:33.2[g/dl]
+    
+
+
+Sentence 53:
+PLT z morfologii:224[10^3/ul]
+    
+
+
+Sentence 54:
+RDW-SD:43.2[fl]
+    
+
+
+Sentence 55:
+RDW-CV:14.0[%]
+    PDW:15.8[fl]
+    MPV:11.8[fl]
+    P-LCR:39.6[%]
+    
+
+
+Sentence 56:
+PCT (hematokryt płytkowy:0.26[%]
+    
+
+
+Sentence 57:
+NEUTR# wartość bezwzględ:4.23[10^3/ul]
+    
+
+
+Sentence 58:
+NEUTR%:59.1[%]
+    
+
+
+Sentence 59:
+LYMH# wartość bezwzględn:1.78[10^3/ul]
+    
+
+
+Sentence 60:
+LYMPH%:24.9[%]
+    
+
+
+Sentence 61:
+MONO# wartość bezwzględn:0.90[10^3/ul]
+    
+
+
+Sentence 62:
+MONO%:12.6[%]
+    
+
+
+Sentence 63:
+EO# wartość bezwzględna:0.19[10^3/ul]
+    
+
+
+Sentence 64:
+EO%:2.7[%]
+    
+
+
+Sentence 65:
+BASO# wartość bezwzględn:0.05[10^3/ul]
+    BASO%:0.7[%]
+    
+
+
+Sentence 66:
+NRBC %:0.0[%]
+    
+
+
+Sentence 67:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 68:
+D-dimer - test ilościowy: D-dimer - test ilościowy:261[ng/ml]
+
+
+
+Sentence 69:
+Badanie ogólne moczu
+    
+
+
+Sentence 70:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 71:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 72:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 73:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 74:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 75:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 76:
+ciężar właściwy:1.009[ ]
+    
+
+
+Sentence 77:
+pH:6.0[ ]
+    
+
+
+Sentence 78:
+białko:nieobecne[ ]
+    
+
+
+Sentence 79:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 80:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 81:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 82:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 83:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 84:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 85:
+leukocyty:2 /ul[ul]
+    śluz:nieliczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 86:
+TSH: TSH:4.15[uIU/ml]
+
+
+
+Sentence 87:
+FT3: FT3:2.59[pg/ml]
+
+
+
+Sentence 88:
+FT4: FT4:0.85[ng/dl]
+
+
+
+Sentence 89:
+Troponina T
+    Troponina T:
+    3.00[pg/ml]
+
+
+
+Sentence 90:
+ALAT: ALAT:22[U/L]
+ASPAT: ASPAT:24[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.61[mg/dl]
+
+
+
+Sentence 91:
+Sód (Na): Sód:139[mmol/L]
+
+
+
+Sentence 92:
+Potas (K): Potas:4.4[mmol/L]
+
+
+
+Sentence 93:
+Kreatynina + GFR
+    
+
+
+Sentence 94:
+Kreatynina w surowicy:0.73[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 95:
+MDRD ze stan:83.1[ml/min/1,73 m^2]
+
+
+
+Sentence 96:
+Mocznik: Mocznik:36[mg/dl]
+
+
+
+Sentence 97:
+Kwas moczowy: Kwas moczowy:5.8[mg/dl]
+
+
+
+Sentence 98:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    
+
+
+Sentence 99:
+pH:7.393
+    pCO2:41.0[mmHg]
+    BE:0.10[mmol/L]
+    HCO3:24.4[mmol/L]
+    
+
+
+Sentence 100:
+pO2:56.0[mmHg]
+    
+
+
+Sentence 101:
+O2Sat:87.6[%]
+
+
+
+Sentence 102:
+Lipidogram
+    
+
+
+Sentence 103:
+Cholesterol całkowity:236[mg/dl]
+    
+
+
+Sentence 104:
+Cholesterol HDL:52[mg/dl]
+    
+
+
+Sentence 105:
+Cholestrol LDL:157[mg/dl]
+    Triglicerydy:150[mg/dl]
+    
+
+
+Sentence 106:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:105[mg/dl]
+
+
+
+Sentence 107:
+Glukoza w surowicy: Glukoza w surowicy:95[mg/dl]
+
+
+
+Sentence 108:
+NT-proBNP surowica: NT-proBNP w surowicy:65[pg/ml]
+
+
+
+Sentence 109:
+------------------------------------------------
+
+
+
+Sentence 110:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 111:
+I10
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 112:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 113:
+89.501
+89.502
+C55
+A01
+I81
+89.41
+L43
+O61
+G49
+87.440
+N45
+L69
+O55
+I17
+M45
+O35
+M37
+I19
+N13
+N24
+88.721
+O69
+88.761
+------------------------------------------------
+
+

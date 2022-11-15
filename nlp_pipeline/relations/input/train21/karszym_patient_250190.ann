@@ -1,0 +1,76 @@
+T1	Behaviour 448 458	Nikotynizm
+T2	Date 459 472	w przeszłości
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Condition 474 481	Otyłość
+N1	Reference T3 ICD10:E66.9	Otyłość, nieokreślona
+T4	Investigation 483 486	BMI
+T5	Condition 720 741	Nadciśnienie tętnicze
+N2	Reference T5 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T6	Condition 743 768	Miażdżyca tętnic szyjnych
+N3	Reference T6 ICD10:I70.8	Miażdżyca innych tętnic
+T7	Condition 770 786	Mięśniaki macicy
+N4	Reference T7 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+A1	Status T7 Historical_Insignificant
+T8	Behaviour 788 798	Nikotynizm
+T9	Date 799 812	w przeszłości
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Condition 814 821	Otyłość
+N5	Reference T10 ICD10:E66.9	Otyłość, nieokreślona
+T11	Investigation 823 826	BMI
+T12	Symptom 1000 1038	wahań ciśnienia tętniczego >150/80mmHG
+T13	Symptom 1048 1072	okresowe kołatania serca
+N6	Reference T13 ICD10:R00.2	Kołatanie serca
+T14	Symptom 1074 1089	bóle zamostkowe
+N7	Reference T14 ICD10:R07.2	Ból w okolicy przedsercowej
+T15	Symptom 1091 1123	drętwienie lewej kończyny górnej
+T16	Symptom 1125 1148	obrzęki kończyn dolnych
+N8	Reference T16 ICD10:R60.0	Obrzęk zlokalizowany
+T17	Condition 1163 1170	otyłość
+N9	Reference T17 ICD10:E66.9	Otyłość, nieokreślona
+T18	Condition 1172 1174	HA
+N10	Reference T18 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T19	Behaviour 1176 1186	nikotynizm
+T20	Date 1187 1200	w przeszłości
+R3	Dat Arg1:T20 Arg2:T19	
+T21	Date 1202 1210	od 8 lat
+T22	Negation 1211 1214	nie
+T23	Behaviour 1215 1219	pali
+R4	Neg Arg1:T22 Arg2:T23	
+R5	Dat Arg1:T21 Arg2:T23	
+T25	Negation 1222 1228	Neguje
+T26	Negation 1250 1256	Neguje
+T27	Symptom 1229 1248	utraty przytomności
+N11	Reference T27 ICD10:R55	Omdlenie i zapaść
+R10	Neg Arg1:T25 Arg2:T27	
+T28	Symptom 1257 1274	bóle przy wysiłku
+R11	Neg Arg1:T26 Arg2:T28	
+T29	Symptom 1276 1295	Wchodzi na 2 piętro
+T30	Negation 1307 1313	neguje
+T31	Treatment 1297 1305	Operacje
+R12	Neg Arg1:T30 Arg2:T31	
+T32	Negation 1322 1328	neguje
+T33	Symptom 1330 1363	krwawienia z przewodu pokarmowego
+N13	Reference T33 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R13	Neg Arg1:T32 Arg2:T33	
+T34	Condition 1365 1374	Uczulenie
+N14	Reference T34 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T35	Drug 1379 1389	penicylinę
+R14	Alg Arg1:T34 Arg2:T35	
+T36	Drug 1410 1414	leki
+T37	Negation 1416 1429	nie przyjmuje
+R15	Neg Arg1:T37 Arg2:T36	
+T38	Investigation 1441 1451	ECHO serca
+T39	Investigation 1453 1463	Holter EKG
+T40	Investigation 1465 1474	Holter RR
+T41	Investigation 1476 1478	PW
+N15	Reference T1 ICD10:Z72.0	Używanie tytoniu
+N16	Reference T8 ICD10:Z72.0	Używanie tytoniu
+N17	Reference T19 ICD10:Z72.0	Używanie tytoniu
+N18	Reference T23 ICD10:Z72.0	Używanie tytoniu
+N12	Reference T31 ICD10:Z98	
+T24	Date 1402 1409	obecnie
+R6	Dat Arg1:T24 Arg2:T36	
+T42	Investigation_result 487 489	34
+R7	Inv Arg1:T4 Arg2:T42	
+T43	Investigation_result 827 829	34
+R8	Inv Arg1:T11 Arg2:T43	

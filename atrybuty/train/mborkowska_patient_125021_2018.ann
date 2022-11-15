@@ -1,0 +1,143 @@
+T1	Investigation 2489 2493	ECHO
+T2	Investigation 2495 2513	EKG metodą Holtera
+T3	Drug 2377 2384	Milurit
+T4	Drug 2347 2358	Tegretol CR
+T5	Drug 2317 2325	Lamotrix
+T6	Drug 2288 2295	Aripsan
+T7	Drug 2261 2269	Euthyrox
+T8	Drug_dose 2270 2287	75 1x 1 tabl/rano
+R1	Drg Arg1:T7 Arg2:T8	
+T9	Drug_dose 2296 2316	5mg 1x 1/2 tabl/rano
+T10	Drug_dose 2326 2346	100mg 1x 1 tabl/rano
+R2	Drg Arg1:T5 Arg2:T10	
+R3	Drg Arg1:T6 Arg2:T9	
+T11	Drug_dose 2359 2376	200mg 2x 1/2 tabl
+R4	Drg Arg1:T4 Arg2:T11	
+T12	Drug_dose 2385 2405	50mg 1x 1 tabl/wiecz
+R5	Drg Arg1:T3 Arg2:T12	
+T13	Condition 2222 2225	WZW
+A1	Status T13 Family
+N1	Reference T13 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T14	Condition 2141 2144	WZW
+N2	Reference T14 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T15	Condition 2151 2160	borelioza
+N3	Reference T15 ICD10:A69.2	Choroba z Lyme
+T16	Condition 2168 2171	tbc
+N4	Reference T16 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T17	Negation 2172 2175	(-)
+R6	Neg Arg1:T17 Arg2:T16	
+T18	Negation 2161 2166	( - )
+R7	Neg Arg1:T18 Arg2:T15	
+T19	Negation 2145 2148	(-)
+R8	Neg Arg1:T19 Arg2:T14	
+T20	Negation 2110 2113	nie
+T21	Negation 2094 2097	nie
+T22	Negation 2077 2080	nie
+T23	Condition 2098 2107	Uczulenia
+N5	Reference T23 ICD10:T78.4	Alergia, nieokreślona
+R9	Neg Arg1:T20 Arg2:T23	
+T24	Behaviour 2081 2092	Inne używki
+R10	Neg Arg1:T21 Arg2:T24	
+T25	Behaviour 2060 2075	Palenie tytoniu
+N6	Reference T25 ICD10:Z72.0	Używanie tytoniu
+R11	Neg Arg1:T22 Arg2:T25	
+T26	Treatment 2038 2055	Przebyte operacje
+T27	Negation 1971 1977	Neguje
+T28	Symptom 1979 1991	zasłabnięcia
+N7	Reference T28 ICD10:R55	Omdlenie i zapaść
+T29	Symptom 1993 2001	omdlenia
+N8	Reference T29 ICD10:R55	Omdlenie i zapaść
+T30	Symptom 2003 2019	obrzęki podudzi,
+N9	Reference T30 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T31	Symptom 2020 2036	kołatania serca,
+N10	Reference T31 ICD10:R00.2	Kołatanie serca
+R12	Neg Arg1:T27 Arg2:T28	
+R13	Neg Arg1:T27 Arg2:T29	
+R14	Neg Arg1:T27 Arg2:T30	
+R15	Neg Arg1:T27 Arg2:T31	
+T32	Drug 1281 1288	Milurit
+T33	Drug_dose 1289 1310	100mg 1x 1 tabl/wiecz
+T34	Drug 1251 1262	Tegretol CR
+T35	Drug 1221 1229	Lamotrix
+T36	Drug 1192 1199	Aripsan
+T37	Drug 1165 1173	Euthyrox
+T38	Drug_dose 1174 1191	75 1x 1 tabl/rano
+R16	Drg Arg1:T37 Arg2:T38	
+T39	Drug_dose 1200 1220	5mg 1x 1/2 tabl/rano
+R17	Drg Arg1:T36 Arg2:T39	
+T40	Drug_dose 1230 1250	100mg 1x 1 tabl/rano
+R18	Drg Arg1:T35 Arg2:T40	
+T41	Drug_dose 1263 1280	200mg 2x 1/2 tabl
+R19	Drg Arg1:T34 Arg2:T41	
+T42	Behaviour 1093 1134	umiarkowana, regularna aktywność fizyczna
+T43	Condition 438 450	Zespół Downa
+N11	Reference T43 ICD10:Q90.9	Zespół Downa, nieokreślony
+T44	Condition 473 506	ubytek przegrody międzykomorowej,
+N12	Reference T44 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T45	Condition 507 538	drożny przewód tętniczy Botalla
+N13	Reference T45 ICD10:Q25.0	Drożny przewód tętniczy
+T46	Condition 540 559	drożny otwór owalny
+N14	Reference T46 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T47	Treatment 591 616	zamknięcie łatą z Dacronu
+T48	Condition 617 669	ubytku w części błoniastej przegrody międzykomorowej
+N15	Reference T48 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T49	Treatment 672 684	podwiązaniem
+T50	Condition 685 714	przewodu tętniczego Botalla i
+N16	Reference T50 ICD10:Q25.0	Drożny przewód tętniczy
+T51	Treatment 717 728	zamknięciem
+T52	Condition 729 744	otworu owalnego
+N17	Reference T52 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T53	Date 745 753	w 2000r.
+R20	Dat Arg1:T53 Arg2:T52	
+R21	Dat Arg1:T53 Arg2:T51	
+R22	Dat Arg1:T53 Arg2:T50	
+R23	Dat Arg1:T53 Arg2:T48	
+R24	Dat Arg1:T53 Arg2:T47	
+T54	Condition 757 802	Bradykardia zatokowa prawdopodobnie polekowa.
+N18	Reference T54 ICD10:R00.1	Bradykardia, nieokreślona
+T55	Condition 816 837	podejrzenie padaczki,
+N19	Reference T55 ICD10:G40.9	Padaczka, nieokreślona
+T56	Condition 851 872	zaburzenia zachowania
+N20	Reference T56 ICD10:F91.9	Zaburzenia zachowania, nieokreślone
+T57	Condition 838 849	czerwienicy
+A2	Source T57 Declared
+T58	Condition 1453 1467	zespołem Downa
+N21	Reference T58 ICD10:Q90.9	Zespół Downa, nieokreślony
+T59	Condition 1490 1493	VSD
+N22	Reference T59 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T60	Condition 1495 1498	PDA
+N23	Reference T60 ICD10:Q25.0	Drożny przewód tętniczy
+T61	Condition 1500 1503	PFO
+N24	Reference T61 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T63	Treatment 1530 1555	zamknięcie łatą z Dacronu
+T64	Condition 1556 1608	ubytku w części błoniastej przegrody międzykomorowej
+N25	Reference T64 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T65	Treatment 1611 1623	podwiązaniem
+T66	Condition 1624 1651	przewodu tętniczego Botalla
+N26	Reference T66 ICD10:Q25.0	Drożny przewód tętniczy
+T67	Condition 1668 1683	otworu owalnego
+N27	Reference T67 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T68	Date 1684 1692	w 2000r,
+T69	Treatment 1656 1667	zamknięciem
+R25	Dat Arg1:T68 Arg2:T67	
+R26	Dat Arg1:T68 Arg2:T69	
+R27	Dat Arg1:T68 Arg2:T66	
+R28	Dat Arg1:T68 Arg2:T63	
+R29	Dat Arg1:T68 Arg2:T64	
+R30	Dat Arg1:T68 Arg2:T65	
+T62	Symptom 1775 1815	duszność przy większym wysiłku fizycznym
+N28	Reference T62 ICD10:R06.0	Duszność
+T70	Symptom 1824 1847	bóle w klatce piersiowe
+N29	Reference T70 ICD10:R07.3	Inne bóle w klatce piersiowej
+T71	Investigation_result 1850 1886	wolna praca serca- czasem 48-50/min,
+T72	Condition 1887 1907	podejrzenie padaczki
+A3	Source T72 Declared
+N30	Reference T72 ICD10:G40.9	Padaczka, nieokreślona
+T73	Condition 1910 1921	czerwienicy
+A4	Source T73 Declared
+T74	Condition 1923 1944	zaburzenia zachowania
+N31	Reference T74 ICD10:F91.9	Zaburzenia zachowania, nieokreślone
+R31	Drg Arg1:T32 Arg2:T33	
+N32	Reference T24 ICD10:Z72	Problemy związane ze stylem życia
+T75	Treatment 981 1008	dalsza opieka w poradni POZ
+T76	Treatment 1018 1092	kontrola kardiologiczna, endokrynologiczna, hematologiczna, psychiatryczna

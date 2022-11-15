@@ -1,0 +1,35 @@
+T1	Condition 477 539	Wrodzona wada serca pod postacią atrezji zastawki trójdzielnej
+N1	Reference T1 ICD10:Q22.4	Wrodzone zwężenie zastawki trójdzielnej
+T2	Condition 542 577	skrajnego zwężenia zastawki płucnej
+N2	Reference T2 ICD10:Q22.1	Wrodzone zwężenie zastawki pnia płucnego
+T3	Condition 579 602	ubytku międzykomorowego
+N3	Reference T3 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T4	Condition 604 628	hipoplazji prawej komory
+N4	Reference T4 ICD10:Q24.8	Inne określone wrodzone wady rozwojowe serca
+T5	Treatment 644 717	zespoleniu pomiędzy pniem ramienno-głowowym a prawą tętnicą płucną śr.4mm
+T6	Treatment 750 770	zabiegiem Rashkind'a
+T7	Treatment 773 814	plastyką balonową wytworzonego zespolenia
+T8	Date 816 827	22.05.2018r
+R1	Dat Arg1:T8 Arg2:T7	
+R2	Dat Arg1:T8 Arg2:T6	
+R3	Dat Arg1:T8 Arg2:T5	
+T9	Drug 953 959	Acesan
+T10	Drug 961 967	Clexan
+T11	Treatment 1128 1154	atrioseptostomii balonowej
+T12	Treatment 1156 1255	zespoleniu systemowo-płucynm proawostronnym pomiędzy pniem ramienno-głowowym a prawą tętnicą płucną
+T13	Symptom 1282 1305	spadki saturacji do 75%
+T14	Date 1257 1267	Od 4-5 dni
+R4	Dat Arg1:T14 Arg2:T13	
+T15	Negation 1348 1351	Nie
+T16	Symptom 1352 1362	gorączkuje
+N5	Reference T16 ICD10:R50.9	Gorączka, nieokreślona
+R5	Neg Arg1:T15 Arg2:T16	
+T17	Behaviour 1364 1377	Zjada chętnie
+T18	Treatment 1379 1411	Szczepiona zgodnie z kalendarzem
+T19	Drug 1431 1437	Acesan
+T20	Drug_dose 1438 1442	15mg
+R6	Drg Arg1:T19 Arg2:T20	
+T21	Condition 1120 1124	HLHS
+N6	Reference T21 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+T22	Investigation 729 747	cewnikowaniu serca
+R7	Dat Arg1:T8 Arg2:T22	

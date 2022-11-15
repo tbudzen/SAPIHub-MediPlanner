@@ -1,0 +1,793 @@
+allRelations          : 94
+oks                   : 37
+isRedundantAndRemoveds: 52
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 5
+GOOD / BAD            : 89 / 5
+Sentence 0:
+------------------------------------------------
+Wiek: 19 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+•\x09dalsza opieka w poradni POZ  
+•\x09okresowa kontrola kardiologiczna – kolejna w tutejszej Klinice za 12 miesięcy   
+•\x09codzienna kontrola ciśnienia tętniczego  
+•\x09okresowa kontrola lipidogramu  
+•\x09dieta zbliżona do śródziemnomorskiej   
+•\x09oszczędzający tryb życia 
+
+
+
+Sentence 4:
+•\x09regularne przyjmowanie leków:
+
+1.\x09Prestarium 5 mg 1 tabl.
+R1	Drg Arg1:T5 Arg2:T6 << OK >>	Prestarium -> 5 mg 1 tabl. wieczorem  <RANK: 3> <info: start[662, 673] <type: RIGHT>>
+
+
+Sentence 5:
+wieczorem 
+2.\x09Bibloc 1.25 mg 1 tabl.
+R2	Drg Arg1:T7 Arg2:T8 << OK >>	Bibloc -> 1.25 mg 1 tabl. rano  <RANK: 3> <info: start[703, 710] <type: RIGHT>>
+
+
+Sentence 6:
+rano 
+3.\x09Digoxin 250ug 1 tabl. rano i wieczorem (przerwa w niedzielę)
+4.\x09Eplerenon 25 mg 1 tabl. w południe 
+5.\x09Acesan 75 mg 1 tabl.
+R3	Drg Arg1:T9 Arg2:T10 << OK >>	Digoxin -> 250ug 1 tabl. rano i wieczorem (przerwa w niedzielę)  <RANK: 3> <info: start[738, 746] <type: RIGHT>>
+R4	Drg Arg1:T9 Arg2:T12 <<REDUNDANT!!!REMOVED>>	Digoxin -> 25 mg 1 tabl. w południe <:REMOVED other first tag between (right):> <RANK: 0> <info: start[738, 815] <type: RIGHT>>
+R5	Drg Arg1:T9 Arg2:T14 <<REDUNDANT!!!REMOVED>>	Digoxin -> 75 mg 1 tabl. wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[738, 854] <type: RIGHT>>
+R6	Drg Arg1:T11 Arg2:T10 <<REDUNDANT!!!REMOVED>>	Eplerenon -> 250ug 1 tabl. rano i wieczorem (przerwa w niedzielę) <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[805, 746] <type: LEFT>>
+R7	Drg Arg1:T11 Arg2:T12 << OK >>	Eplerenon -> 25 mg 1 tabl. w południe  <RANK: 3> <info: start[805, 815] <type: RIGHT>>
+R8	Drg Arg1:T11 Arg2:T14 <<REDUNDANT!!!REMOVED>>	Eplerenon -> 75 mg 1 tabl. wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[805, 854] <type: RIGHT>>
+R9	Drg Arg1:T13 Arg2:T10 <<REDUNDANT!!!REMOVED>>	Acesan -> 250ug 1 tabl. rano i wieczorem (przerwa w niedzielę) <:REMOVED other first tag between (left):> <RANK: 0> <info: start[847, 746] <type: LEFT>>
+R10	Drg Arg1:T13 Arg2:T12 <<REDUNDANT!!!REMOVED>>	Acesan -> 25 mg 1 tabl. w południe <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[847, 815] <type: LEFT>>
+R11	Drg Arg1:T13 Arg2:T14 << OK >>	Acesan -> 75 mg 1 tabl. wieczorem  <RANK: 3> <info: start[847, 854] <type: RIGHT>>
+
+
+Sentence 7:
+wieczorem 
+6.\x09Protevasc SR 35mg 1 tabl. rano i wieczorem 
+------------------------------------------------
+
+R12	Drg Arg1:T15 Arg2:T16 << OK >>	Protevasc SR -> 35mg 1 tabl. rano i wieczorem  <RANK: 3> <info: start[885, 898] <type: RIGHT>>
+
+
+Sentence 8:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 9:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q20.4|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Rozpoznanie: Wrodzona wada serca pod postacią wspólnej komory ze zwężeniem tętnicy płucnej i malpozycją naczyń - stan po operacji lewostronnego zespolenia B-T (04.07.2000), po operacji typu dwukierunkowy Glenn (23.02.2001) i po operacji metodą Fontana z fenestracją (28.01.2005) oraz po zamknięciu fenestracji zestawem Amplatzera (07.06.2005).
+R13	Dat Arg1:T20 Arg2:T17 <<REDUNDANT!!!REMOVED>>	04.07.2000 -> Wrodzona wada serca pod postacią wspólnej komory <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1317, 1170] <type: LEFT>>
+R14	Dat Arg1:T20 Arg2:T18 <<REDUNDANT!!!SHOULD BE REMOVED>>	04.07.2000 -> zwężeniem tętnicy płucnej i malpozycją naczyń  <RANK: 3> <info: start[1317, 1222] <type: LEFT>>
+R15	Dat Arg1:T20 Arg2:T19 << OK >>	04.07.2000 -> operacji lewostronnego zespolenia B-T  <RANK: 3> <info: start[1317, 1278] <type: LEFT>>
+R16	Dat Arg1:T20 Arg2:T21 <<REDUNDANT!!!REMOVED>>	04.07.2000 -> operacji typu dwukierunkowy Glenn <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1317, 1333] <type: RIGHT>>
+R17	Dat Arg1:T20 Arg2:T23 <<REDUNDANT!!!REMOVED>>	04.07.2000 -> operacji metodą Fontana z fenestracją <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1317, 1385] <type: RIGHT>>
+R18	Dat Arg1:T20 Arg2:T25 <<REDUNDANT!!!REMOVED>>	04.07.2000 -> zamknięciu fenestracji zestawem Amplatzera <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1317, 1444] <type: RIGHT>>
+R19	Dat Arg1:T22 Arg2:T17 <<REDUNDANT!!!REMOVED>>	23.02.2001 -> Wrodzona wada serca pod postacią wspólnej komory <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1368, 1170] <type: LEFT>>
+R20	Dat Arg1:T22 Arg2:T18 <<REDUNDANT!!!REMOVED>>	23.02.2001 -> zwężeniem tętnicy płucnej i malpozycją naczyń <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1368, 1222] <type: LEFT>>
+R21	Dat Arg1:T22 Arg2:T19 <<REDUNDANT!!!REMOVED>>	23.02.2001 -> operacji lewostronnego zespolenia B-T <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1368, 1278] <type: LEFT>>
+R22	Dat Arg1:T22 Arg2:T21 << OK >>	23.02.2001 -> operacji typu dwukierunkowy Glenn  <RANK: 3> <info: start[1368, 1333] <type: LEFT>>
+R23	Dat Arg1:T22 Arg2:T23 <<REDUNDANT!!!REMOVED>>	23.02.2001 -> operacji metodą Fontana z fenestracją <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1368, 1385] <type: RIGHT>>
+R24	Dat Arg1:T22 Arg2:T25 <<REDUNDANT!!!REMOVED>>	23.02.2001 -> zamknięciu fenestracji zestawem Amplatzera <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1368, 1444] <type: RIGHT>>
+R25	Dat Arg1:T24 Arg2:T17 <<REDUNDANT!!!REMOVED>>	28.01.2005 -> Wrodzona wada serca pod postacią wspólnej komory <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1424, 1170] <type: LEFT>>
+R26	Dat Arg1:T24 Arg2:T18 <<REDUNDANT!!!REMOVED>>	28.01.2005 -> zwężeniem tętnicy płucnej i malpozycją naczyń <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1424, 1222] <type: LEFT>>
+R27	Dat Arg1:T24 Arg2:T19 <<REDUNDANT!!!REMOVED>>	28.01.2005 -> operacji lewostronnego zespolenia B-T <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1424, 1278] <type: LEFT>>
+R28	Dat Arg1:T24 Arg2:T21 <<REDUNDANT!!!REMOVED>>	28.01.2005 -> operacji typu dwukierunkowy Glenn <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1424, 1333] <type: LEFT>>
+R29	Dat Arg1:T24 Arg2:T23 << OK >>	28.01.2005 -> operacji metodą Fontana z fenestracją  <RANK: 3> <info: start[1424, 1385] <type: LEFT>>
+R30	Dat Arg1:T24 Arg2:T25 <<REDUNDANT!!!REMOVED>>	28.01.2005 -> zamknięciu fenestracji zestawem Amplatzera <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1424, 1444] <type: RIGHT>>
+R31	Dat Arg1:T26 Arg2:T17 <<REDUNDANT!!!REMOVED>>	07.06.2005 -> Wrodzona wada serca pod postacią wspólnej komory <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1488, 1170] <type: LEFT>>
+R32	Dat Arg1:T26 Arg2:T18 <<REDUNDANT!!!REMOVED>>	07.06.2005 -> zwężeniem tętnicy płucnej i malpozycją naczyń <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1488, 1222] <type: LEFT>>
+R33	Dat Arg1:T26 Arg2:T19 <<REDUNDANT!!!REMOVED>>	07.06.2005 -> operacji lewostronnego zespolenia B-T <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1488, 1278] <type: LEFT>>
+R34	Dat Arg1:T26 Arg2:T21 <<REDUNDANT!!!REMOVED>>	07.06.2005 -> operacji typu dwukierunkowy Glenn <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1488, 1333] <type: LEFT>>
+R35	Dat Arg1:T26 Arg2:T23 <<REDUNDANT!!!REMOVED>>	07.06.2005 -> operacji metodą Fontana z fenestracją <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1488, 1385] <type: LEFT>>
+R36	Dat Arg1:T26 Arg2:T25 << OK >>	07.06.2005 -> zamknięciu fenestracji zestawem Amplatzera  <RANK: 3> <info: start[1488, 1444] <type: LEFT>>
+
+
+Sentence 10:
+Łagodna niedomykalność zastawki trójdzielnej, mitralnej i aortalnej.
+
+
+Sentence 11:
+Dysfunkcja skurczowa czynnościowej wspólnej komory (EF 38%).
+
+
+Sentence 12:
+Zaawansowany blok przewodzenia przedsionkowo komorowego - stan po implantacji układu stymulującego DDDR z elektrodami nasierdziowymi (22.02.2013), reimplantacji rozrusznika i elektrody komorowej-18.04.2013 oraz reimplantacji kardiostymulatora Endurity (St. Jude) z pozostawieniem elektrod z powodu wyczerpywania się ogniwa (31.01.2018).
+R37	Dat Arg1:T33 Arg2:T31 <<REDUNDANT!!!SHOULD BE REMOVED>>	22.02.2013 -> Zaawansowany blok przewodzenia przedsionkowo komorowego  <RANK: 3> <info: start[1765, 1631] <type: LEFT>>
+R38	Dat Arg1:T33 Arg2:T32 << OK >>	22.02.2013 -> mplantacji układu stymulującego DDDR z elektrodami nasierdziowymi  <RANK: 3> <info: start[1765, 1698] <type: LEFT>>
+R39	Dat Arg1:T33 Arg2:T34 <<REDUNDANT!!!REMOVED>>	22.02.2013 -> reimplantacji rozrusznika i elektrody komorowej <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1765, 1778] <type: RIGHT>>
+R40	Dat Arg1:T33 Arg2:T36 <<REDUNDANT!!!REMOVED>>	22.02.2013 -> reimplantacji kardiostymulatora Endurity (St. Jude) z pozostawieniem elektrod z powodu wyczerpywania się ogniwa <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1765, 1842] <type: RIGHT>>
+R41	Dat Arg1:T35 Arg2:T31 <<REDUNDANT!!!REMOVED>>	18.04.2013 -> Zaawansowany blok przewodzenia przedsionkowo komorowego <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1826, 1631] <type: LEFT>>
+R42	Dat Arg1:T35 Arg2:T32 <<REDUNDANT!!!REMOVED>>	18.04.2013 -> mplantacji układu stymulującego DDDR z elektrodami nasierdziowymi <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1826, 1698] <type: LEFT>>
+R43	Dat Arg1:T35 Arg2:T34 << OK >>	18.04.2013 -> reimplantacji rozrusznika i elektrody komorowej  <RANK: 3> <info: start[1826, 1778] <type: LEFT>>
+R44	Dat Arg1:T35 Arg2:T36 <<REDUNDANT!!!REMOVED>>	18.04.2013 -> reimplantacji kardiostymulatora Endurity (St. Jude) z pozostawieniem elektrod z powodu wyczerpywania się ogniwa <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1826, 1842] <type: RIGHT>>
+R45	Dat Arg1:T37 Arg2:T31 <<REDUNDANT!!!REMOVED>>	31.01.2018 -> Zaawansowany blok przewodzenia przedsionkowo komorowego <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1955, 1631] <type: LEFT>>
+R46	Dat Arg1:T37 Arg2:T32 <<REDUNDANT!!!REMOVED>>	31.01.2018 -> mplantacji układu stymulującego DDDR z elektrodami nasierdziowymi <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1955, 1698] <type: LEFT>>
+R47	Dat Arg1:T37 Arg2:T34 <<REDUNDANT!!!REMOVED>>	31.01.2018 -> reimplantacji rozrusznika i elektrody komorowej <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1955, 1778] <type: LEFT>>
+R48	Dat Arg1:T37 Arg2:T36 << OK >>	31.01.2018 -> reimplantacji kardiostymulatora Endurity (St. Jude) z pozostawieniem elektrod z powodu wyczerpywania się ogniwa  <RANK: 3> <info: start[1955, 1842] <type: LEFT>>
+
+
+Sentence 13:
+Przebyte cewnikowanie serca (30.08.2016).
+R49	Dat Arg1:T39 Arg2:T38 << OK >>	30.08.2016 -> cewnikowanie serca  <RANK: 3> <info: start[1997, 1977] <type: LEFT>>
+
+
+Sentence 14:
+Uczulenie na klej na elektrodach holterowskich w wywiadzie \x0a\x0a\x0a\x0a
+------------------------------------------------
+
+
+
+Sentence 15:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 16:
+Pacjent  lat 19 przyjęty do Kliniki celem oceny kardiologicznej.
+
+
+Sentence 17:
+Obecnie neguje jakiekolwiek dolegliwości. 
+
+R50	Neg Arg1:T47 Arg2:T48 << OK >>	neguje -> jakiekolwiek dolegliwości  <RANK: 3> <info: start[2283, 2290] <type: RIGHT>>
+R51	Dat Arg1:T49 Arg2:T48 << OK >>	Obecnie -> jakiekolwiek dolegliwości  <RANK: 3> <info: start[2275, 2290] <type: RIGHT>>
+
+
+Sentence 18:
+Neguje zasłabnięcia , neguje bóle w klatce piersiowej, neguje kołatani serca 
+
+R52	Neg Arg1:T44 Arg2:T41 <<REDUNDANT!!!REMOVED>>	neguje -> zasłabnięcia <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2373, 2325] <type: LEFT>>
+R53	Neg Arg1:T44 Arg2:T42 <<REDUNDANT!!!REMOVED>>	neguje -> bóle w klatce piersiowej <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2373, 2347] <type: LEFT>>
+R54	Neg Arg1:T44 Arg2:T43 << OK >>	neguje -> kołatani serca  <RANK: 3> <info: start[2373, 2380] <type: RIGHT>>
+R55	Neg Arg1:T45 Arg2:T41 <<REDUNDANT!!!REMOVED>>	neguje -> zasłabnięcia <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2340, 2325] <type: LEFT>>
+R56	Neg Arg1:T45 Arg2:T42 << OK >>	neguje -> bóle w klatce piersiowej  <RANK: 3> <info: start[2340, 2347] <type: RIGHT>>
+R57	Neg Arg1:T45 Arg2:T43 <<REDUNDANT!!!REMOVED>>	neguje -> kołatani serca <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2340, 2380] <type: RIGHT>>
+R58	Neg Arg1:T46 Arg2:T41 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[2318, 2325] <type: RIGHT>>
+R59	Neg Arg1:T46 Arg2:T42 <<REDUNDANT!!!REMOVED>>	Neguje -> bóle w klatce piersiowej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2318, 2347] <type: RIGHT>>
+R60	Neg Arg1:T46 Arg2:T43 <<REDUNDANT!!!REMOVED>>	Neguje -> kołatani serca <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2318, 2380] <type: RIGHT>>
+
+
+Sentence 19:
+W wywiadzie : 
+Wrodzona wada serca pod postacią wspólnej komory ze zwężeniem tętnicy płucnej i malpozycją naczyń. 
+
+
+
+Sentence 20:
+Stan po operacji lewostronnego zespolenia B-T (04.07.00r). 
+
+R61	Dat Arg1:T92 Arg2:T91 << OK >>	04.07.00r -> operacji lewostronnego zespolenia B-T  <RANK: 3> <info: start[2558, 2519] <type: LEFT>>
+
+
+Sentence 21:
+Stan po operacji typu dwukierunkowy Glenn (23.02.01r). 
+
+R62	Dat Arg1:T90 Arg2:T89 << OK >>	23.02.01r -> operacji typu dwukierunkowy Glenn  <RANK: 3> <info: start[2614, 2579] <type: LEFT>>
+
+
+Sentence 22:
+Stan po operacji metodą Fontana z fenestracją (28.01.05r). 
+
+R63	Dat Arg1:T88 Arg2:T87 << OK >>	28.01.05r -> operacji metodą Fontana z fenestracją  <RANK: 3> <info: start[2674, 2635] <type: LEFT>>
+
+
+Sentence 23:
+Stan po zamknięciu fenestracji zestawem Amplatzera (07.06.05r). 
+
+R64	Dat Arg1:T86 Arg2:T85 << OK >>	07.06.05r -> zamknięciu fenestracji zestawem Amplatzera  <RANK: 3> <info: start[2739, 2695] <type: LEFT>>
+
+
+Sentence 24:
+Zaawansowany blok przewodzenia przedsionkowo - komorowego. 
+
+
+
+Sentence 25:
+Implantacja układu stymulującego w dniu 22.02.2013 r. 
+Reimplantacja rozrusznika St. Jude Zephyr i elektrody komorowej-18.04.2013r.
+R65	Dat Arg1:T81 Arg2:T80 << OK >>	18.04.2013r -> Reimplantacja rozrusznika St. Jude Zephyr i elektrody komorowej  <RANK: 3> <info: start[2931, 2867] <type: LEFT>>
+R66	Dat Arg1:T81 Arg2:T82 <<REDUNDANT!!!REMOVED>>	18.04.2013r -> Implantacja układu stymulującego <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2931, 2812] <type: LEFT>>
+R67	Dat Arg1:T83 Arg2:T80 <<REDUNDANT!!!REMOVED>>	22.02.2013 r -> Reimplantacja rozrusznika St. Jude Zephyr i elektrody komorowej <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[2852, 2867] <type: RIGHT>>
+R68	Dat Arg1:T83 Arg2:T82 << OK >>	22.02.2013 r -> Implantacja układu stymulującego  <RANK: 3> <info: start[2852, 2812] <type: LEFT>>
+
+
+Sentence 26:
+( ostatnia kontrola w 18.10.2018 ERI 5 lat , DDDR - pod opieką dr. Niwalda ) 
+
+
+
+Sentence 27:
+Cewnikowanie serca w dniu 30.08.2016. 
+
+R69	Dat Arg1:T79 Arg2:T78 << OK >>	30.08.2016 -> Cewnikowanie serca  <RANK: 3> <info: start[3048, 3022] <type: LEFT>>
+
+
+Sentence 28:
+Wymiana rozrusznika z pozostawieniem elektrod 31.01.2018r. 
+
+R70	Dat Arg1:T77 Arg2:T76 << OK >>	31.01.2018r -> Wymiana rozrusznika z pozostawieniem elektrod  <RANK: 3> <info: start[3107, 3061] <type: LEFT>>
+
+
+Sentence 29:
+Przebyte operacje:  j.w
+
+
+
+Sentence 30:
+Leczenie przewlekłe:  kardiologicznej 
+
+
+
+Sentence 31:
+Przebyte choroby zakaźne - WZW ( -  ) , borelioza ( - ) Odra ( + w dzieciństwie  )
+
+R71	Neg Arg1:T73 Arg2:T69 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3236, 3211] <type: LEFT>>
+R72	Neg Arg1:T73 Arg2:T70 << OK >>	- -> borelioza  <RANK: 3> <info: start[3236, 3224] <type: LEFT>>
+R73	Neg Arg1:T73 Arg2:T71 <<REDUNDANT!!!SHOULD BE REMOVED>>	- -> Odra ( +  <RANK: 3> <info: start[3236, 3240] <type: RIGHT>>
+R74	Neg Arg1:T74 Arg2:T69 << OK >>	- -> WZW  <RANK: 3> <info: start[3217, 3211] <type: LEFT>>
+R75	Neg Arg1:T74 Arg2:T70 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED many second tags on the right:> <RANK: 2> <info: start[3217, 3224] <type: RIGHT>>
+R76	Neg Arg1:T74 Arg2:T71 <<REDUNDANT!!!REMOVED>>	- -> Odra ( + <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3217, 3240] <type: RIGHT>>
+R77	Dat Arg1:T72 Arg2:T69 <<REDUNDANT!!!SHOULD BE REMOVED>>	dzieciństwie -> WZW  <RANK: 2> <info: start[3251, 3211] <type: LEFT>>
+R78	Dat Arg1:T72 Arg2:T70 <<REDUNDANT!!!SHOULD BE REMOVED>>	dzieciństwie -> borelioza  <RANK: 3> <info: start[3251, 3224] <type: LEFT>>
+R79	Dat Arg1:T72 Arg2:T71 << OK >>	dzieciństwie -> Odra ( +  <RANK: 3> <info: start[3251, 3240] <type: LEFT>>
+
+
+Sentence 32:
+W wywiadzie rodzinnym : 
+
+
+
+Sentence 33:
+Palenie tytoniu: nie
+Inne używki: nie
+Uczulenia: preparat na elektrodach holterowskich 
+
+R80	Neg Arg1:T65 Arg2:T66 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[3326, 3313] <type: LEFT>>
+R81	Neg Arg1:T65 Arg2:T67 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3326, 3292] <type: LEFT>>
+R82	Neg Arg1:T68 Arg2:T66 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3309, 3313] <type: RIGHT>>
+R83	Neg Arg1:T68 Arg2:T67 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[3309, 3292] <type: LEFT>>
+
+
+Sentence 34:
+Stan społeczny: warunki mieszkaniowe dobre , mieszka z rodzicami 
+Leki: 
+Captopril 2x dziennie po 12,5mg (2x1 tabletka a 12,5mg) 
+
+R84	Drg Arg1:T61 Arg2:T62 << OK >>	Captopril -> 2x dziennie po 12,5mg (2x1 tabletka a 12,5mg)  <RANK: 3> <info: start[3453, 3463] <type: RIGHT>>
+
+
+Sentence 35:
+- Spironol 1x dziennie po 12,5mg (1x 1/2 tabletki a 25mg) w południe 
+- Acesan 1x dziennie 75mg (1x 1 tabletka a 75mg)  wieczorem 
+- Protevasc SR 2x dziennie po 35mg (2x 1 tabletka a 35mg) 
+
+R85	Drg Arg1:T55 Arg2:T56 << OK >>	Protevasc SR -> 2x dziennie po 35mg (2x 1 tabletka a 35mg)  <RANK: 3> <info: start[3643, 3656] <type: RIGHT>>
+R86	Drg Arg1:T55 Arg2:T58 <<REDUNDANT!!!REMOVED>>	Protevasc SR -> 1x dziennie 75mg (1x 1 tabletka a 75mg)  wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3643, 3589] <type: LEFT>>
+R87	Drg Arg1:T55 Arg2:T60 <<REDUNDANT!!!REMOVED>>	Protevasc SR -> 1x dziennie po 12,5mg (1x 1/2 tabletki a 25mg) w południe <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3643, 3521] <type: LEFT>>
+R88	Drg Arg1:T57 Arg2:T56 <<REDUNDANT!!!REMOVED>>	Acesan -> 2x dziennie po 35mg (2x 1 tabletka a 35mg) <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3582, 3656] <type: RIGHT>>
+R89	Drg Arg1:T57 Arg2:T58 << OK >>	Acesan -> 1x dziennie 75mg (1x 1 tabletka a 75mg)  wieczorem  <RANK: 3> <info: start[3582, 3589] <type: RIGHT>>
+R90	Drg Arg1:T57 Arg2:T60 <<REDUNDANT!!!REMOVED>>	Acesan -> 1x dziennie po 12,5mg (1x 1/2 tabletki a 25mg) w południe <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3582, 3521] <type: LEFT>>
+R91	Drg Arg1:T59 Arg2:T56 <<REDUNDANT!!!REMOVED>>	Spironol -> 2x dziennie po 35mg (2x 1 tabletka a 35mg) <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3512, 3656] <type: RIGHT>>
+R92	Drg Arg1:T59 Arg2:T58 <<REDUNDANT!!!REMOVED>>	Spironol -> 1x dziennie 75mg (1x 1 tabletka a 75mg)  wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3512, 3589] <type: RIGHT>>
+R93	Drg Arg1:T59 Arg2:T60 << OK >>	Spironol -> 1x dziennie po 12,5mg (1x 1/2 tabletki a 25mg) w południe  <RANK: 3> <info: start[3512, 3521] <type: RIGHT>>
+
+
+Sentence 36:
+- Digoxin 2x dziennie po 1tabl.
+R94	Drg Arg1:T53 Arg2:T54 << OK >>	Digoxin -> x dziennie po 1tabl. po 250ug (2x 1 tabletka a 250 mikrogram) ( w niedzielę bez digoxiny )  <RANK: 3> <info: start[3702, 3711] <type: RIGHT>>
+
+
+Sentence 37:
+po 250ug (2x 1 tabletka a 250 mikrogram) ( w niedzielę bez digoxiny )
+
+
+
+Sentence 38:
+Plan Opieki : Echo serca , Holter EKG , Próba Wysiłkowa  , Planowany czas hospitalizacji 4-5 dni
+
+
+
+Sentence 39:
+------------------------------------------------
+
+
+
+Sentence 40:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 41:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.37[10^3/ul]
+    
+
+
+Sentence 42:
+RBC Krwinki czerwone:5.96[10^6/ul]
+    
+
+
+Sentence 43:
+HGB Hemoglobina:17.5[g/dl]
+    
+
+
+Sentence 44:
+HCT Hematokryt:50.2[%]
+    
+
+
+Sentence 45:
+MCV wskaźnik czerwonokrw:84.2[fl]
+    
+
+
+Sentence 46:
+MCH wskaźnik czerwonokrw:29.4[pg]
+    
+
+
+Sentence 47:
+MCHC wskaźnik czerwonokr:34.9[g/dl]
+    
+
+
+Sentence 48:
+PLT z morfologii:192[10^3/ul]
+    
+
+
+Sentence 49:
+RDW-SD:40.7[fl]
+    
+
+
+Sentence 50:
+RDW-CV:13.2[%]
+    PDW:13.3[fl]
+    
+
+
+Sentence 51:
+MPV:10.8[fl]
+    
+
+
+Sentence 52:
+P-LCR:32.3[%]
+    
+
+
+Sentence 53:
+PCT (hematokryt płytkowy:0.21[%]
+    
+
+
+Sentence 54:
+NEUTR# wartość bezwzględ:3.73[10^3/ul]
+    
+
+
+Sentence 55:
+NEUTR%:58.6[%]
+    
+
+
+Sentence 56:
+LYMH# wartość bezwzględn:2.01[10^3/ul]
+    LYMPH%:31.6[%]
+    
+
+
+Sentence 57:
+MONO# wartość bezwzględn:0.41[10^3/ul]
+    
+
+
+Sentence 58:
+MONO%:6.4[%]
+    
+
+
+Sentence 59:
+EO# wartość bezwzględna:0.20[10^3/ul]
+    
+
+
+Sentence 60:
+EO%:3.1[%]
+    
+
+
+Sentence 61:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    
+
+
+Sentence 62:
+BASO%:0.3[%]
+    
+
+
+Sentence 63:
+NRBC %:0.0[%]
+    
+
+
+Sentence 64:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 65:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:33.3[sek]
+
+
+
+Sentence 66:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 67:
+Czas protrombinowy:14.9[sek]
+    
+
+
+Sentence 68:
+Wskaźnik PT:73.8[%]
+    
+
+
+Sentence 69:
+INR:1.34
+D-dimer - test ilościowy: D-dimer
+
+
+Sentence 70:
+- test ilościowy:134[ng/ml]
+
+
+
+Sentence 71:
+Badanie ogólne moczu
+    
+
+
+Sentence 72:
+barwa:żółty[ ]
+    
+
+
+Sentence 73:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 74:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 75:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 76:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 77:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 78:
+ciężar właściwy:1.021[ ]
+    
+
+
+Sentence 79:
+pH:6.0[ ]
+    
+
+
+Sentence 80:
+białko:nieobecne[ ]
+    
+
+
+Sentence 81:
+urobilinogen:wzmożony +[ ]
+    
+
+
+Sentence 82:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 83:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 84:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 85:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 86:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 87:
+nabłonki okrągłe:pojedyncze[w preparacie]
+    
+
+
+Sentence 88:
+leukocyty:4 /ul[ul]
+    śluz:liczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 89:
+TSH: TSH:2.91[uIU/ml]
+
+
+
+Sentence 90:
+FT3: FT3:3.45[pg/ml]
+
+
+
+Sentence 91:
+FT4: FT4:1.43[ng/dl]
+
+
+
+Sentence 92:
+Troponina T: Troponina T:6.8[pg/ml]
+
+
+
+Sentence 93:
+AFP: AFP:2.57[IU/ml]
+HBsAg: HBsAg:niereaktywny[ ]
+
+
+
+Sentence 94:
+Przeciwciała anty-HCV: Przeciwciała anty-HCV:niereaktywny
+ALAT: ALAT:34[U/L]
+
+
+
+Sentence 95:
+Albumina: Albumina:4.3[g/dl]
+ASPAT: ASPAT:35[U/L]
+
+
+
+Sentence 96:
+Białko całkowite w surowicy (TP): Białko całkowite w surow:7.0[g/dl]
+
+
+
+Sentence 97:
+Bilirubina niesprzężona (pośrednia) (Bu): Bilirubina niesprzężona:1.64[mg/dl]
+
+
+
+Sentence 98:
+Bilirubina sprzężona (bezpośrednia) (Bc): Bilirubina sprzężona (be:0.00[mg/dl]
+
+
+
+Sentence 99:
+Bilirubina całkowita (TBil): Bilirubina całkowita:1.64[mg/dl]
+
+
+
+Sentence 100:
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.50[mg/dl]
+
+
+
+Sentence 101:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 102:
+Potas (K): Potas:4.3[mmol/L]
+
+
+
+Sentence 103:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:78[U/L]
+
+
+
+Sentence 104:
+Kreatynina + GFR
+    
+
+
+Sentence 105:
+Kreatynina w surowicy:0.76[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 106:
+MDRD ze stan:132.1[ml/min/1,73 m^2]
+
+
+
+Sentence 107:
+Mocznik: Mocznik:29[mg/dl]
+
+
+
+Sentence 108:
+Digoksyna: Digoksyna:0.9[ng/ml]
+
+
+
+Sentence 109:
+Kwas moczowy: Kwas moczowy:4.0[mg/dl]
+
+
+
+Sentence 110:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    pH:7.366
+    pCO2:38.7[mmHg]
+    BE:-2.80[mmol/L]
+    HCO3:21.6[mmol/L]
+    
+
+
+Sentence 111:
+pO2:68.6[mmHg]
+    
+
+
+Sentence 112:
+O2Sat:94.9[%]
+
+
+
+Sentence 113:
+Lipidogram
+    
+
+
+Sentence 114:
+Cholesterol całkowity:125[mg/dl]
+    
+
+
+Sentence 115:
+Cholesterol HDL:41[mg/dl]
+    
+
+
+Sentence 116:
+Cholestrol LDL:85[mg/dl]
+    Triglicerydy:58[mg/dl]
+    
+
+
+Sentence 117:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:83[mg/dl]
+
+
+
+Sentence 118:
+NT-proBNP surowica: NT-proBNP w surowicy:218[pg/ml]
+
+
+
+Sentence 119:
+------------------------------------------------
+
+
+
+Sentence 120:
+ICD10
+------------------------------------------------
+Q20.4
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 121:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 122:
+A01
+
+
+
+Sentence 123:
+I81
+G21
+I87
+L43
+I89
+G49
+N45
+L69
+M45
+N24
+L07
+I09
+O69
+O29
+I91
+C55
+G11
+I77
+L31
+I17
+O55
+I19
+O35
+M37
+
+
+
+Sentence 124:
+N13
+T17
+
+
+
+Sentence 125:
+------------------------------------------------
+
+

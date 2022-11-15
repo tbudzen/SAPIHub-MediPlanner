@@ -1,0 +1,751 @@
+allRelations          : 17
+oks                   : 8
+isRedundantAndRemoveds: 9
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 0
+GOOD / BAD            : 17 / 0
+Sentence 0:
+------------------------------------------------
+Wiek: 16 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+Warfin 5mg rano i 7,5mg wieczorem
+Dusphatalin Retard 2 x dziennie 1 tabletka
+Topamax 50mg 2 x dziennie
+
+Dalsza opieka w poradni hematologicznej i kardiologicznej
+------------------------------------------------
+
+R1	Drg Arg1:T1 Arg2:T2 << OK >>	Warfin -> 5mg rano i 7,5mg wieczorem  <RANK: 3> <info: start[330, 337] <type: RIGHT>>
+R2	Drg Arg1:T1 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Warfin -> 2 x dziennie 1 tabletka <:REMOVED other first tag between (right):> <RANK: 0> <info: start[330, 383] <type: RIGHT>>
+R3	Drg Arg1:T1 Arg2:T6 <<REDUNDANT!!!REMOVED>>	Warfin -> 50mg 2 x dziennie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[330, 415] <type: RIGHT>>
+R4	Drg Arg1:T3 Arg2:T2 <<REDUNDANT!!!REMOVED>>	Dusphatalin Retard -> 5mg rano i 7,5mg wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[364, 337] <type: LEFT>>
+R5	Drg Arg1:T3 Arg2:T4 << OK >>	Dusphatalin Retard -> 2 x dziennie 1 tabletka  <RANK: 3> <info: start[364, 383] <type: RIGHT>>
+R6	Drg Arg1:T3 Arg2:T6 <<REDUNDANT!!!REMOVED>>	Dusphatalin Retard -> 50mg 2 x dziennie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[364, 415] <type: RIGHT>>
+R7	Drg Arg1:T5 Arg2:T2 <<REDUNDANT!!!REMOVED>>	Topamax -> 5mg rano i 7,5mg wieczorem <:REMOVED other first tag between (left):> <RANK: 1> <info: start[407, 337] <type: LEFT>>
+R8	Drg Arg1:T5 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Topamax -> 2 x dziennie 1 tabletka <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[407, 383] <type: LEFT>>
+R9	Drg Arg1:T5 Arg2:T6 << OK >>	Topamax -> 50mg 2 x dziennie  <RANK: 3> <info: start[407, 415] <type: RIGHT>>
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią zespołu Bland-White-Garland.
+   
+
+
+Sentence 6:
+Stan po dwukrotnej plastyce zastawki mitralnej (17.08.2004 i 20.09.2004)
+   
+R10	Dat Arg1:T10 Arg2:T9 << OK >>	17.08.2004 -> dwukrotnej plastyce zastawki mitralnej  <RANK: 3> <info: start[822, 782] <type: LEFT>>
+R11	Dat Arg1:T11 Arg2:T9 << OK >>	20.09.2004 -> dwukrotnej plastyce zastawki mitralnej  <RANK: 2> <info: start[835, 782] <type: LEFT>>
+
+
+Sentence 7:
+Stan po implantacji sztucznej zastawki mechanicznej w polu mitralnym (12.05.2006)
+   
+R12	Dat Arg1:T13 Arg2:T12 << OK >>	12.05.2006 -> implantacji sztucznej zastawki mechanicznej w polu mitralnym  <RANK: 3> <info: start[920, 858] <type: LEFT>>
+
+
+Sentence 8:
+Stan po wymianie zastawki mechanicznej na Medtronic o średnicy 27mm (08.02.2018)
+   Zaburzenia rytmu serca.
+
+R13	Dat Arg1:T15 Arg2:T16 <<REDUNDANT!!!REMOVED>>	08.02.2018 -> Zaburzenia rytmu serca <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1004, 1019] <type: RIGHT>>
+R14	Dat Arg1:T15 Arg2:T14 << OK >>	08.02.2018 -> wymianie zastawki mechanicznej na Medtronic o średnicy 27mm  <RANK: 3> <info: start[1004, 943] <type: LEFT>>
+
+
+Sentence 9:
+------------------------------------------------
+
+
+
+Sentence 10:
+Zastosowane leczenie
+
+
+
+Sentence 11:
+------------------------------------------------
+Warfin, Dusphatalin Retard, Topamax
+
+
+Sentence 12:
+, Pyralginum
+------------------------------------------------
+
+
+
+Sentence 13:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+ dziewczynka z zaburzeniami rytmu serca , po implantacji sztucznej zastawki na stałe otrzymuje  
+
+
+Sentence 14:
+Warfarin, skierowana na badania kontrolne, wywiad alergiczny ujemny
+------------------------------------------------
+
+R15	Neg Arg1:T25 Arg2:T24 << OK >>	ujemny -> wywiad alergiczny  <RANK: 3> <info: start[1491, 1473] <type: LEFT>>
+R16	Neg Arg1:T25 Arg2:T23 <<REDUNDANT!!!REMOVED>>	ujemny -> Warfarin <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1491, 1430] <type: LEFT>>
+R17	Alg Arg1:T24 Arg2:T23 <<REDUNDANT!!!REMOVED>>	wywiad alergiczny -> Warfarin <:REMOVED too long text between 35 limit:10:> <RANK: 2> <info: start[1473, 1430] <type: LEFT>>
+
+
+Sentence 15:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 16:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.16[10^3/ul]
+    
+
+
+Sentence 17:
+RBC Krwinki czerwone:4.00[10^6/ul]
+    
+
+
+Sentence 18:
+HGB Hemoglobina:11.0[g/dl]
+    
+
+
+Sentence 19:
+HCT Hematokryt:33.5[%]
+    
+
+
+Sentence 20:
+MCV wskaźnik czerwonokrw:83.8[fl]
+    
+
+
+Sentence 21:
+MCH wskaźnik czerwonokrw:27.5[pg]
+    
+
+
+Sentence 22:
+MCHC wskaźnik czerwonokr:32.8[g/dl]
+    
+
+
+Sentence 23:
+PLT z morfologii:326[10^3/ul]
+    
+
+
+Sentence 24:
+RDW-SD:40.6[fl]
+    
+
+
+Sentence 25:
+RDW-CV:13.3[%]
+    PDW:13.7[fl]
+    MPV:10.9[fl]
+    
+
+
+Sentence 26:
+P-LCR:32.8[%]
+    
+
+
+Sentence 27:
+PCT (hematokryt płytkowy:0.35[%]
+    
+
+
+Sentence 28:
+NEUTR# wartość bezwzględ:3.45[10^3/ul]
+    
+
+
+Sentence 29:
+NEUTR%:66.9[%]
+    
+
+
+Sentence 30:
+LYMH# wartość bezwzględn:0.75[10^3/ul]
+    
+
+
+Sentence 31:
+LYMPH%:14.5[%]
+    
+
+
+Sentence 32:
+MONO# wartość bezwzględn:0.44[10^3/ul]
+    
+
+
+Sentence 33:
+MONO%:8.5[%]
+    
+
+
+Sentence 34:
+EO# wartość bezwzględna:0.48[10^3/ul]
+    
+
+
+Sentence 35:
+EO%:9.3[%]
+    
+
+
+Sentence 36:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    
+
+
+Sentence 37:
+BASO%:0.8[%]
+    
+
+
+Sentence 38:
+NRBC %:0.0[%]
+    
+
+
+Sentence 39:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 40:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:8.12[10^3/ul]
+    
+
+
+Sentence 41:
+RBC Krwinki czerwone:4.55[10^6/ul]
+    
+
+
+Sentence 42:
+HGB Hemoglobina:12.5[g/dl]
+    
+
+
+Sentence 43:
+HCT Hematokryt:37.3[%]
+    
+
+
+Sentence 44:
+MCV wskaźnik czerwonokrw:82.0[fl]
+    
+
+
+Sentence 45:
+MCH wskaźnik czerwonokrw:27.5[pg]
+    
+
+
+Sentence 46:
+MCHC wskaźnik czerwonokr:33.5[g/dl]
+    
+
+
+Sentence 47:
+PLT z morfologii:399[10^3/ul]
+    
+
+
+Sentence 48:
+RDW-SD:41.7[fl]
+    RDW-CV:14.0[%]
+    PDW:11.6[fl]
+    MPV:10.3[fl]
+    
+
+
+Sentence 49:
+P-LCR:26.1[%]
+    
+
+
+Sentence 50:
+PCT (hematokryt płytkowy:0.41[%]
+    
+
+
+Sentence 51:
+NEUTR# wartość bezwzględ:5.19[10^3/ul]
+    
+
+
+Sentence 52:
+NEUTR%:63.9[%]
+    
+
+
+Sentence 53:
+LYMH# wartość bezwzględn:1.39[10^3/ul]
+    
+
+
+Sentence 54:
+LYMPH%:17.1[%]
+    
+
+
+Sentence 55:
+MONO# wartość bezwzględn:0.65[10^3/ul]
+    MONO%:8.0[%]
+    
+
+
+Sentence 56:
+EO# wartość bezwzględna:0.80[10^3/ul]
+    
+
+
+Sentence 57:
+EO%:9.9[%]
+    
+
+
+Sentence 58:
+BASO# wartość bezwzględn:0.09[10^3/ul]
+    
+
+
+Sentence 59:
+BASO%:1.1[%]
+    
+
+
+Sentence 60:
+NRBC %:0.0[%]
+    
+
+
+Sentence 61:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 62:
+Antytrombina III: Antytrombina III:119[%]
+
+
+
+Sentence 63:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:37.7[sek]
+
+
+
+Sentence 64:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:43.6[sek]
+
+
+
+Sentence 65:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 66:
+Czas protrombinowy:16.5[sek]
+    
+
+
+Sentence 67:
+Wskaźnik PT:66.7[%]
+    
+
+
+Sentence 68:
+INR:1.48
+Czas protrombinowy (PT)
+    
+
+
+Sentence 69:
+Czas protrombinowy:20.4[sek]
+    
+
+
+Sentence 70:
+Wskaźnik PT:53.9[%]
+    
+
+
+Sentence 71:
+INR:1.82
+Czas protrombinowy (PT)
+    
+
+
+Sentence 72:
+Czas protrombinowy:35.0[sek]
+    
+
+
+Sentence 73:
+Wskaźnik PT:31.4[%]
+    
+
+
+Sentence 74:
+INR:3.07
+Czas protrombinowy (PT)
+    
+
+
+Sentence 75:
+Czas protrombinowy:31.7[sek]
+    
+
+
+Sentence 76:
+Wskaźnik PT:34.7[%]
+    
+
+
+Sentence 77:
+INR:2.79
+Czas protrombinowy (PT)
+    
+
+
+Sentence 78:
+Czas protrombinowy:37.0[sek]
+    
+
+
+Sentence 79:
+Wskaźnik PT:29.7[%]
+    
+
+
+Sentence 80:
+INR:3.24
+Czas protrombinowy (PT)
+    
+
+
+Sentence 81:
+Czas protrombinowy:23.6[sek]
+    
+
+
+Sentence 82:
+Wskaźnik PT:46.6[%]
+    
+
+
+Sentence 83:
+INR:2.10
+
+
+
+Sentence 84:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 85:
+Czas protrombinowy:51.8[sek]
+    
+
+
+Sentence 86:
+Wskaźnik PT:21.2[%]
+    
+
+
+Sentence 87:
+INR:4.50
+Czas protrombinowy (PT)
+    
+
+
+Sentence 88:
+Czas protrombinowy:44.1[sek]
+    
+
+
+Sentence 89:
+Wskaźnik PT:24.9[%]
+    
+
+
+Sentence 90:
+INR:3.85
+Czas protrombinowy (PT)
+    
+
+
+Sentence 91:
+Czas protrombinowy:33.1[sek]
+    
+
+
+Sentence 92:
+Wskaźnik PT:33.2[%]
+    
+
+
+Sentence 93:
+INR:2.91
+Czas protrombinowy (PT)
+    
+
+
+Sentence 94:
+Czas protrombinowy:34.5[sek]
+    
+
+
+Sentence 95:
+Wskaźnik PT:31.9[%]
+    
+
+
+Sentence 96:
+INR:3.03
+Czas protrombinowy (PT)
+    
+
+
+Sentence 97:
+Czas protrombinowy:38.5[sek]
+    
+
+
+Sentence 98:
+Wskaźnik PT:28.6[%]
+    
+
+
+Sentence 99:
+INR:3.37
+Czas protrombinowy (PT)
+    
+
+
+Sentence 100:
+Czas protrombinowy:37.0[sek]
+    
+
+
+Sentence 101:
+Wskaźnik PT:29.7[%]
+    
+
+
+Sentence 102:
+INR:3.24
+Czas protrombinowy (PT)
+    
+
+
+Sentence 103:
+Czas protrombinowy:35.4[sek]
+    
+
+
+Sentence 104:
+Wskaźnik PT:31.1[%]
+    
+
+
+Sentence 105:
+INR:3.11
+Czas trombinowy TT: Czas trombinowy TT:14.5[sek]
+
+
+
+Sentence 106:
+Czas trombinowy TT: Czas trombinowy TT:15.8[sek]
+
+
+
+Sentence 107:
+Fibrynogen: Fibrynogen:5.23[g/L]
+
+
+
+Sentence 108:
+Fibrynogen: Fibrynogen:2.87[g/L]
+D-dimer - test ilościowy: D-dimer - test ilościowy:1713[ng/ml]
+
+
+
+Sentence 109:
+TSH: TSH:0.85[uIU/ml]
+
+
+
+Sentence 110:
+TSH: TSH:0.99[uIU/ml]
+
+
+
+Sentence 111:
+FT3: FT3:3.79[pg/ml]
+
+
+
+Sentence 112:
+FT3: FT3:3.44[pg/ml]
+
+
+
+Sentence 113:
+FT4: FT4:1.37[ng/dl]
+
+
+
+Sentence 114:
+FT4: FT4:0.90[ng/dl]
+
+
+
+Sentence 115:
+ALAT: ALAT:23[U/L]
+ASPAT: ASPAT:26[U/L]
+
+
+
+Sentence 116:
+CKMB aktywność: CKMB:8[U/L]
+
+
+
+Sentence 117:
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:3.75[mg/dl]
+
+
+
+Sentence 118:
+Kreatynina + GFR
+    
+
+
+Sentence 119:
+Kreatynina w surowicy:0.48[mg/dl]
+    
+
+
+Sentence 120:
+eGFR stand. wg Schwartza:187.9[ml/min/1,73 m^2]
+    
+
+
+Sentence 121:
+eGFR zmod.
+
+
+Sentence 122:
+wg Schwartza:141.1[ml/min/1,73 m^2]
+    wzrost:164[cm]
+
+
+
+Sentence 123:
+Mleczany (LAC): Mleczany:26.2[mg/dl]
+
+
+
+Sentence 124:
+Mocznik: Mocznik:17[mg/dl]
+
+
+
+Sentence 125:
+Żelazo (Fe): Żelazo (Fe):38[ug/dl]
+
+
+
+Sentence 126:
+------------------------------------------------
+
+
+
+Sentence 127:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 128:
+I47.1
+Q24.5
+Z98.8
+Z95.8
+------------------------------------------------
+------------------------------------------------
+ICD9
+------------------------------------------------
+
+
+
+Sentence 129:
+C55
+
+
+
+Sentence 130:
+I81
+G53
+G11
+G21
+G
+O95
+G03
+G25
+G49
+I17
+L69
+O55
+N11
+I19
+M37
+
+
+
+Sentence 131:
+N13
+O69
+
+
+
+Sentence 132:
+M19
+88.761
+------------------------------------------------
+
+

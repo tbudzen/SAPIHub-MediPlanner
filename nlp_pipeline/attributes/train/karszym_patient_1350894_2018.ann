@@ -1,0 +1,31 @@
+T1	Drug 350 357	Innofer
+T2	Drug_dose 358 366	3ml 1xdz
+T3	Date 367 379	przez 3 m-ce
+T4	Drug 382 393	Innovitum B
+T5	Drug_dose 394 407	3 krople 1xdz
+T6	Investigation 408 427	Kontrola morfologii
+T7	Date 428 438	za miesiąc
+T8	Treatment 439 473	Kontrola w Poradni Kardiologicznej
+T9	Date 474 484	za 10 m-cy
+T10	Condition 647 715	Wrodzona wada serca pod postacią przełożenia wielkich pni tętniczych
+N1	Reference T10 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T11	Condition 718 742	ubytkiem międzykomorowym
+N2	Reference T11 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T12	Treatment 755 790	korekcji anatomicznej met. Jatene'a
+N3	Reference T12 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T13	Treatment 793 802	zaszyciem
+N4	Reference T13 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T14	Condition 803 829	ubytku w przegrodzie komór
+N5	Reference T14 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T15	Date 832 843	15.04.2016r
+T16	Negation 1052 1055	Bez
+T17	Drug 1056 1061	leków
+R1	Drg Arg1:T1 Arg2:T2	
+R2	Dat Arg1:T3 Arg2:T1	
+R3	Drg Arg1:T4 Arg2:T5	
+R4	Dat Arg1:T7 Arg2:T6	
+R5	Dat Arg1:T9 Arg2:T8	
+R6	Dat Arg1:T15 Arg2:T14	
+R7	Dat Arg1:T15 Arg2:T13	
+R8	Dat Arg1:T15 Arg2:T12	
+R9	Neg Arg1:T16 Arg2:T17	

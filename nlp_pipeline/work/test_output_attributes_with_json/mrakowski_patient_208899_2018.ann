@@ -1,0 +1,56 @@
+T1	Treatment 329 365	Wskazana dalsza opieka u lekarza POZ
+T2	Behaviour 369 409	Dieta lekkostrawna , niskocholesterolowa
+T3	Investigation 413 466	Okresowo kontrola lipidogramu . stężenia elektrolitów
+T4	Condition 924 968	Łagodna niedomykalność zastawki trójdzielnej
+T5	Condition 970 1000	Pojedyncze pobudzenia komorowe
+T6	Condition 1006 1017	nadkomorowe
+T7	Symptom 1467 1492	uczucia  kołatania  serca
+T8	Symptom 1495 1547	bólu  o  charakterze  ściskającym  w  okolicy  serca
+T9	Date 1565 1575	10.01.2018
+T10	Condition 1630 1667	chorób  układu  sercowo  naczyniowego
+T11	Negation 1601 1617	nie  leczył  się
+T12	Negation 1708 1714	Neguje
+T13	Symptom 1716 1728	zasłabnięcia
+T14	Symptom 1743 1762	częste  bóle  głowy
+T15	Treatment 1765 1804	Przebyte  operacje : przegrody  nosowej
+T16	Condition 1834 1837	WZW
+troby
+T17	Negation 1838 1839	-
+T18	Condition 1842 1851	borelioza
+T19	Negation 1853 1854	-
+T20	Condition 1856 1871	Wywiad rodzinny
+T21	Condition 1880 1883	IHD
+T22	Condition 1894 1913	choroba  Parkinsona
+T23	Behaviour 1915 1931	Palenie  tytoniu
+T24	Negation 1933 1936	nie
+T25	Behaviour 1938 1945	Alkohol
+T26	Negation 1947 1950	nie
+T27	Investigation 2012 2022	ECHO serca
+T28	Investigation 2025 2035	Holter EKG
+T29	Investigation 2038 2054	próba  wysiłkowa
+T30	Negation 1670 1694	nie  przyjmował  żadnych
+T31	Drug 1696 1701	leków
+N1	Reference T4 ICD10:I07.1	NiedomykalnoÅÄ zastawki trÃ³jdzielnej
+N2	Reference T5 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komÃ³r
+N3	Reference T6 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+N4	Reference T7 ICD10:R00.2	KoÅatanie serca
+N5	Reference T13 ICD10:R55	Omdlenie i zapaÅÄ
+N6	Reference T15 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N7	Reference T16 ICD10:B19	NieokreÅlone wirusowe zapalenie wÄtroby
+N8	Reference T18 ICD10:A69.2	Choroba z Lyme
+N9	Reference T23 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N10	Reference T25 ICD10:Z72.1	UÅ¼ywanie alkoholu
+R11	Neg Arg1:T30 Arg2:T31
+R14	Neg Arg1:T17 Arg2:T16
+R15	Neg Arg1:T17 Arg2:T18
+R16	Neg Arg1:T17 Arg2:T20
+R2	Dat Arg1:T9 Arg2:T8
+R27	Neg Arg1:T19 Arg2:T18
+R28	Neg Arg1:T19 Arg2:T20
+R4	Neg Arg1:T11 Arg2:T10
+R43	Neg Arg1:T24 Arg2:T23
+R44	Neg Arg1:T24 Arg2:T25
+R6	Neg Arg1:T12 Arg2:T13
+A1	Status T20 Family
+A2	Status T21 Family
+A3	Status T22 Family

@@ -1,0 +1,526 @@
+allRelations          : 22
+oks                   : 11
+isRedundantAndRemoveds: 10
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 1
+GOOD / BAD            : 21 / 1
+Sentence 0:
+------------------------------------------------
+Wiek: 21 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+
+
+
+Sentence 4:
+------------------------------------------------
+
+
+
+Sentence 5:
+dalsza opieka w poradni POZ, okresowa kontrola kardiologiczna, psychiatryczna
+
+
+
+Sentence 6:
+okresowa kontrola EKG przy zwiększaniu dawek leków psychotropowych (ocena QTc)
+
+
+
+Sentence 7:
+regularne pomiary ciśnienia tętniczego 2 x dz.
+redukcja masy ciała
+prawidłowe żywienie (ograniczenie soli kuchennej do 5g/d), systematyczna aktywność fizyczna
+regularne stosowanie leków:
+Setaloft 50 mg 2 tabl.
+R1	Drg Arg1:T8 Arg2:T9 << OK >>	Setaloft -> 50 mg 2 tabl. rano  <RANK: 3> <info: start[673, 682] <type: RIGHT>>
+
+
+Sentence 8:
+rano
+Diphergan 25 mg 1 tabl.
+R2	Drg Arg1:T10 Arg2:T11 << OK >>	Diphergan -> 25 mg 1 tabl. wieczorem  <RANK: 3> <info: start[701, 711] <type: RIGHT>>
+
+
+Sentence 9:
+wieczorem
+------------------------------------------------
+
+
+
+Sentence 10:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 11:
+------------------------------------------------
+ Rozpozanie I: ICD10:R55|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Omdlenia odruchowe.
+
+
+Sentence 12:
+Zaburzenia rytmu serca pod postacią wstawek rytmu węzłowego w wywiadzie.
+
+
+Sentence 13:
+Upośledzenie umysłowe w stopniu umiarkowanym.
+
+
+Sentence 14:
+Nerwica natręctw w wywiadzie.
+
+
+Sentence 15:
+Otyłość I st.
+------------------------------------------------
+
+
+
+Sentence 16:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 17:
+Pacjent 20-letni, z upośledzeniem umysłowym w stopniu umiarkowanym, z nerwicą natręctw, przyjęty do Kliniki z powodu kilkukrotnych omdleń od 09.2019r - przy pobieraniu krwi, w sytuacjach stresowych.
+
+R3	Dat Arg1:T20 Arg2:T19 << OK >>	od 09.2019r -> kilkukrotnych omdleń  <RANK: 3> <info: start[1406, 1385] <type: LEFT>>
+R4	Dat Arg1:T20 Arg2:T21 <<REDUNDANT!!!SHOULD BE REMOVED>>	od 09.2019r -> przy pobieraniu krwi, w sytuacjach stresowych  <RANK: 3> <info: start[1406, 1420] <type: RIGHT>>
+R5	Dat Arg1:T20 Arg2:T17 <<REDUNDANT!!!REMOVED>>	od 09.2019r -> upośledzeniem umysłowym w stopniu umiarkowanym <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1406, 1288] <type: LEFT>>
+R6	Dat Arg1:T20 Arg2:T18 <<REDUNDANT!!!REMOVED>>	od 09.2019r -> nerwicą natręctw <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1406, 1338] <type: LEFT>>
+
+
+Sentence 18:
+W wywiadzie: w rejestrowanym Holter-EKG (02.2019r) -  wstawka rytmu węzłowego (37-55/min)
+
+R7	Inv Arg1:T22 Arg2:T24 << OK >>	Holter-EKG -> wstawka rytmu węzłowego (37-55/min)  <RANK: 2> <info: start[1496, 1521] <type: RIGHT>>
+R8	Dat Arg1:T23 Arg2:T22 << OK >>	02.2019r -> Holter-EKG  <RANK: 3> <info: start[1508, 1496] <type: LEFT>>
+
+
+Sentence 19:
+Przebyte operacje: zaćma OP i OL 4 x
+
+
+
+Sentence 20:
+Leczenie przewlekłe: psychiatryczne, okulistyczne
+
+
+
+Sentence 21:
+Przebyte choroby zakaźne - WZW, borelioza - nie podaje
+Wywiad rodzinny: siostra- choroba psychiczna
+
+R9	Neg Arg1:T30 Arg2:T28 << OK >>	nie podaje -> WZW  <RANK: 2> <info: start[1688, 1671] <type: LEFT>>
+R10	Neg Arg1:T30 Arg2:T29 << OK >>	nie podaje -> borelioza  <RANK: 3> <info: start[1688, 1676] <type: LEFT>>
+R11	Neg Arg1:T30 Arg2:T31 <<REDUNDANT!!!REMOVED>>	nie podaje -> choroba psychiczna <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1688, 1725] <type: RIGHT>>
+R12	Neg Arg1:T30 Arg2:T49 <<REDUNDANT!!!REMOVED>>	nie podaje -> Wywiad rodzinny <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1688, 1699] <type: RIGHT>>
+
+
+Sentence 22:
+Palenie tytoniu: nie podaje
+Inne używki: nie podaje
+Uczulenia: penicyliny
+
+R13	Neg Arg1:T33 Arg2:T36 <<REDUNDANT!!!REMOVED>>	nie podaje -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1761, 1796] <type: RIGHT>>
+R14	Neg Arg1:T33 Arg2:T37 <<REDUNDANT!!!REMOVED>>	nie podaje -> penicyliny <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1761, 1807] <type: RIGHT>>
+R15	Neg Arg1:T33 Arg2:T32 << OK >>	nie podaje -> Palenie tytoniu  <RANK: 3> <info: start[1761, 1744] <type: LEFT>>
+R16	Neg Arg1:T33 Arg2:T34 <<REDUNDANT!!!REMOVED>>	nie podaje -> Inne używki <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1761, 1772] <type: RIGHT>>
+R17	Neg Arg1:T35 Arg2:T36 <<REDUNDANT!!!REMOVED>>	nie podaje -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1785, 1796] <type: RIGHT>>
+R18	Neg Arg1:T35 Arg2:T37 <<REDUNDANT!!!REMOVED>>	nie podaje -> penicyliny <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1785, 1807] <type: RIGHT>>
+R19	Neg Arg1:T35 Arg2:T32 <<REDUNDANT!!!REMOVED>>	nie podaje -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1785, 1744] <type: LEFT>>
+R20	Neg Arg1:T35 Arg2:T34 << OK >>	nie podaje -> Inne używki  <RANK: 3> <info: start[1785, 1772] <type: LEFT>>
+
+
+Sentence 23:
+Status społeczny: uczy się, mieszka w domu 
+Leki:
+Setaloft 50 mg  2 tabl.
+R21	Drg Arg1:T39 Arg2:T40 << OK >>	Setaloft -> 50 mg  2 tabl. rano  <RANK: 3> <info: start[1868, 1877] <type: RIGHT>>
+
+
+Sentence 24:
+rano
+Diphergan 25 mg 1 tabl.
+R22	Drg Arg1:T41 Arg2:T42 << OK >>	Diphergan -> 25 mg 1 tabl. wieczorem  <RANK: 3> <info: start[1897, 1907] <type: RIGHT>>
+
+
+Sentence 25:
+wieczorem
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter, RTG kl. piersiowej.
+
+
+
+Sentence 26:
+Przewidywana liczba dni hospitalizacji: 4-5 dni
+------------------------------------------------
+
+
+
+Sentence 27:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 28:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.36[10^3/ul]
+    
+
+
+Sentence 29:
+RBC Krwinki czerwone:5.12[10^6/ul]
+    
+
+
+Sentence 30:
+HGB Hemoglobina:15.1[g/dl]
+    
+
+
+Sentence 31:
+HCT Hematokryt:43.8[%]
+    
+
+
+Sentence 32:
+MCV wskaźnik czerwonokrw:85.5[fl]
+    
+
+
+Sentence 33:
+MCH wskaźnik czerwonokrw:29.5[pg]
+    
+
+
+Sentence 34:
+MCHC wskaźnik czerwonokr:34.5[g/dl]
+    
+
+
+Sentence 35:
+PLT z morfologii:242[10^3/ul]
+    
+
+
+Sentence 36:
+RDW-SD:38.7[fl]
+    
+
+
+Sentence 37:
+RDW-CV:12.3[%]
+    PDW:12.1[fl]
+    MPV:10.0[fl]
+    
+
+
+Sentence 38:
+P-LCR:26.7[%]
+    
+
+
+Sentence 39:
+PCT (hematokryt płytkowy:0.24[%]
+    
+
+
+Sentence 40:
+NEUTR# wartość bezwzględ:3.82[10^3/ul]
+    
+
+
+Sentence 41:
+NEUTR%:60.1[%]
+    
+
+
+Sentence 42:
+LYMH# wartość bezwzględn:1.97[10^3/ul]
+    
+
+
+Sentence 43:
+LYMPH%:31.0[%]
+    
+
+
+Sentence 44:
+MONO# wartość bezwzględn:0.49[10^3/ul]
+    
+
+
+Sentence 45:
+MONO%:7.7[%]
+    
+
+
+Sentence 46:
+EO# wartość bezwzględna:0.06[10^3/ul]
+    
+
+
+Sentence 47:
+EO%:0.9[%]
+    
+
+
+Sentence 48:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    
+
+
+Sentence 49:
+BASO%:0.3[%]
+    
+
+
+Sentence 50:
+NRBC %:0.0[%]
+    
+
+
+Sentence 51:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 52:
+Badanie ogólne moczu
+    
+
+
+Sentence 53:
+barwa:żółty[ ]
+    
+
+
+Sentence 54:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 55:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 56:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 57:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 58:
+kwas askrobinowy:20 mg/dl[ ]
+    
+
+
+Sentence 59:
+ciężar właściwy:1.026[ ]
+    
+
+
+Sentence 60:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 61:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 62:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 63:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 64:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 65:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 66:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 67:
+leukocyty:2 /ul[ul]
+    erytrocyty świeże:1 /ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 68:
+TSH: TSH:1.81[uIU/ml]
+
+
+
+Sentence 69:
+FT3: FT3:3.58[pg/ml]
+
+
+
+Sentence 70:
+FT4: FT4:1.22[ng/dl]
+
+
+
+Sentence 71:
+ALAT: ALAT:21[U/L]
+ASPAT: ASPAT:28[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:3.57[mg/dl]
+
+
+
+Sentence 72:
+Sód (Na): Sód:144[mmol/L]
+
+
+
+Sentence 73:
+Potas (K): Potas:4.6[mmol/L]
+
+
+
+Sentence 74:
+Kreatynina + GFR
+    
+
+
+Sentence 75:
+Kreatynina w surowicy:0.73[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 76:
+MDRD ze stan:137.0[ml/min/1,73 m^2]
+
+
+
+Sentence 77:
+Mocznik: Mocznik:26[mg/dl]
+
+
+
+Sentence 78:
+Kwas moczowy: Kwas moczowy:5.2[mg/dl]
+
+
+
+Sentence 79:
+Lipidogram
+    
+
+
+Sentence 80:
+Cholesterol całkowity:174[mg/dl]
+    
+
+
+Sentence 81:
+Cholesterol HDL:51[mg/dl]
+    
+
+
+Sentence 82:
+Cholestrol LDL:114[mg/dl]
+    
+
+
+Sentence 83:
+Triglicerydy:66[mg/dl]
+    
+
+
+Sentence 84:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:87[mg/dl]
+
+
+
+Sentence 85:
+------------------------------------------------
+
+
+
+Sentence 86:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 87:
+I49.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 88:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 89:
+89.501
+C55
+A01
+89.502
+I81
+L43
+N45
+L69
+O55
+I17
+M45
+M37
+I19
+O35
+N13
+88.721
+O69
+
+
+
+Sentence 90:
+------------------------------------------------
+
+

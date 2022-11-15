@@ -1,0 +1,54 @@
+T1	Drug 350 356	Acesan
+T2	Treatment 331 349	Przyjmowanie leków
+T3	Drug_dose 357 364	1x 30mg
+R1	Drg Arg1:T1 Arg2:T3	
+T4	Drug 366 374	Spironol
+T5	Drug_dose 375 384	1x 12,5mg
+R2	Drg Arg1:T4 Arg2:T5	
+T6	Drug 386 394	Enarenal
+T7	Drug_dose 395 404	1x 2,5 mg
+R3	Drg Arg1:T6 Arg2:T7	
+T8	Treatment 408 447	Termin przyjęcia do Kliniki Kardiologii
+T9	Date 448 458	04.03.2018
+R4	Dat Arg1:T9 Arg2:T8	
+T10	Drug 579 585	Acesan
+T11	Drug 587 595	Spironol
+T12	Drug 598 606	Enarenal
+T13	Condition 825 889	Wrodzona wada serca pod postacią zespołu hipoplazji lewego serca
+N1	Reference T13 ICD10:Q23.4	
+T14	Condition 891 895	HLHS
+N2	Reference T14 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+T15	Treatment 908 932	operacji metodą Norwooda
+T16	Date 940 950	08.10.2012
+R5	Dat Arg1:T16 Arg2:T15	
+T17	Treatment 962 1041	operacji metodą Glenna (z pozostawieniem drożnego zespolenia komorowo-płucnego)
+T18	Date 1049 1060	24.04.2013r
+R6	Dat Arg1:T18 Arg2:T17	
+T19	Investigation 1072 1090	cewnikowaniu serca
+T20	Date 1092 1102	12.09.2014
+R7	Dat Arg1:T20 Arg2:T19	
+T21	Investigation 1115 1133	cewnikowaniu serca
+T22	Treatment 1136 1180	angioplastyką balonową lewej tętnicy płucnej
+T23	Treatment 1182 1192	zamknięcie
+T24	Condition 1193 1221	kolaterali aortalno-płucnych
+N3	Reference T24 ICD10:Q25.8	Inne wrodzone wady rozwojowe dużych tętnic
+T25	Treatment 1222 1236	MAPCAs coilami
+T26	Date 1247 1257	12.02.2015
+R8	Dat Arg1:T26 Arg2:T21	
+R9	Dat Arg1:T26 Arg2:T22	
+R10	Dat Arg1:T26 Arg2:T23	
+R11	Dat Arg1:T26 Arg2:T24	
+R12	Dat Arg1:T26 Arg2:T25	
+T27	Treatment 1270 1341	operacji met. Fontana (tunel zewnątrzprzedsionkowy 18mm bez fenestracji
+T28	Date 1351 1361	12.02.2015
+R13	Dat Arg1:T28 Arg2:T27	
+T29	Condition 1514 1518	HLHS
+N4	Reference T29 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+T30	Investigation 1533 1550	badania kontrolne
+T31	Drug 1572 1580	Enarenal
+T32	Drug 1583 1591	Spironol
+T33	Drug 1594 1600	Acesan
+T34	Condition 1602 1619	wywiad alergiczny
+N5	Reference T34 ICD10:T78.4	Alergia, nieokreślona
+T35	Negation 1620 1626	ujemny
+R14	Neg Arg1:T35 Arg2:T34	

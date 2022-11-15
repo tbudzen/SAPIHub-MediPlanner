@@ -1,0 +1,118 @@
+T1	Condition 447 514	Wada serca pod postacią łagodnej niedomykalności zastawki mitralnej
+N1	Reference T1 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T2	Condition 517 529	trójdzielnej
+N2	Reference T2 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T3	Condition 531 598	Komorowe zaburzenia rytmu pod postacią pojedynczych ekstrasystolii.
+N3	Reference T3 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T4	Condition 599 631	Nieprawidłowa tolerancja glukozy
+N4	Reference T4 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T5	Condition 633 655	Rwa barkowa obustronna
+N5	Reference T5 ICD10:M54.4	Rwa kulszowa z bólem lędźwiowo-krzyżowym
+T6	Condition 657 681	Rwa kulszowa lewostronna
+T7	Treatment 691 699	operacji
+T8	Condition 700 739	przepukliny krążka międzykręgowego L5/S
+N7	Reference T8 ICD10:M99.5	Zwężenie kanału kręgowego przez przepuklinę krążka międzykręgowego
+T9	Condition 751 761	WZW typu B
+A1	Source T9 Confirmed
+N8	Reference T9 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T10	Treatment 1203 1232	kontrola ciśnienia tętniczego
+T11	Investigation 1248 1268	kontrola lipidogramu
+T12	Behaviour 1298 1373	dieta uboga w cukry proste z unikaniem alkoholu oraz bogata w kwasy omega-3
+T13	Drug 1418 1424	Atoris
+T14	Drug_dose 1425 1443	20 mg 1 tabl. rano
+T15	Drug 1452 1458	Bibloc
+T16	Drug_dose 1459 1472	2.5 mg 1 tabl
+R1	Drg Arg1:T15 Arg2:T16	
+R2	Drg Arg1:T13 Arg2:T14	
+T17	Condition 1647 1662	podejrzenia PFO
+A2	Source T17 Declared
+N9	Reference T17 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T18	Symptom 1667 1696	licznych epizodach zasłabnięć
+N10	Reference T18 ICD10:R55	Omdlenie i zapaść
+T19	Symptom 1699 1718	zaburzeniami czucia
+N11	Reference T19 ICD10:R20	Zaburzenia czucia skórnego
+T20	Symptom 1720 1732	drętwieniami
+N12	Reference T20 ICD10:R20.2	Parestezje
+T21	Investigation 1736 1745	MRI głowy
+T22	Investigation_result 1746 1780	opisywane ognisko naczyniopochodne
+R3	Inv Arg1:T21 Arg2:T22	
+T23	Investigation 1784 1788	ECHO
+T24	Investigation_result 1789 1799	wiotka IAS
+R4	Inv Arg1:T23 Arg2:T24	
+T25	Condition 1814 1849	wypadanie płatka zastawki mitralnej
+N13	Reference T25 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T26	Condition 1851 1884	choroba zwyrodnieniowa kręgosłupa
+N14	Reference T26 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T27	Condition 1886 1908	rwa barkowa obustronna
+N15	Reference T27 ICD10:M54.4	Rwa kulszowa z bólem lędźwiowo-krzyżowym
+T28	Condition 1910 1934	rwa kulszowa lewostronna
+N16	Reference T28 ICD10:M54.3	Rwa kulszowa
+N6	Reference T6 ICD10:M54.3	Rwa kulszowa
+T29	Treatment 1944 1976	op. krążka międzykręgowego L5/S1
+T30	Condition 1986 2006	przebytym WZW typu B
+A3	Source T30 Confirmed
+N17	Reference T30 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T31	Condition 2008 2039	Nieprawidłowa glikemia na czczo
+N18	Reference T31 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T32	Symptom 2049 2057	omdlenia
+N19	Reference T32 ICD10:R55	Omdlenie i zapaść
+T33	Symptom 2059 2069	krwawienia
+N20	Reference T33 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T34	Symptom 2071 2084	czarne stolce
+N21	Reference T34 ICD10:K92.1	Stolce smołowate
+T35	Symptom 2086 2102	brunatne wymioty
+N22	Reference T35 ICD10:K92.0	Wymioty krwawe
+T36	Condition 2104 2120	chorobę wrzodową
+N23	Reference T36 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T37	Symptom 2122 2150	duszność nocną typu ortopnoe
+N24	Reference T37 ICD10:I50.1	Niewydolność serca lewokomorowa
+T38	Condition 2152 2154	HA
+N25	Reference T38 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T39	Condition 2156 2166	udar mózgu
+N26	Reference T39 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T40	Condition 2168 2179	zawał serca
+N27	Reference T40 ICD10:I25.2	Przebyty zawał serca
+T41	Negation 2041 2047	Neguje
+R5	Neg Arg1:T41 Arg2:T32	
+R6	Neg Arg1:T41 Arg2:T33	
+R7	Neg Arg1:T41 Arg2:T34	
+R8	Neg Arg1:T41 Arg2:T35	
+R9	Neg Arg1:T41 Arg2:T36	
+R10	Neg Arg1:T41 Arg2:T37	
+R11	Neg Arg1:T41 Arg2:T38	
+R12	Neg Arg1:T41 Arg2:T39	
+R13	Neg Arg1:T41 Arg2:T40	
+T42	Treatment 2203 2217	kręgosłupa j.w
+T43	Behaviour 2219 2235	Palenie tytoniu:
+N28	Reference T43 ICD10:T65.2	Tytoń i nikotyna
+T44	Negation 2243 2246	nie
+R14	Neg Arg1:T44 Arg2:T43	
+T45	Negation 2284 2287	nie
+T46	Negation 2300 2303	nie
+T47	Behaviour 2271 2282	Inne używki
+R15	Neg Arg1:T45 Arg2:T47	
+T48	Condition 2289 2298	Uczulenia
+N29	Reference T48 ICD10:T78.4	Alergia, nieokreślona
+R16	Neg Arg1:T46 Arg2:T48	
+T49	Condition 2332 2355	WZW (+ przebyte typu B)
+A4	Source T49 Confirmed
+N30	Reference T49 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T50	Condition 2358 2367	borelioza
+N31	Reference T50 ICD10:A69.2	Choroba z Lyme
+T51	Negation 2368 2371	(-)
+R17	Neg Arg1:T51 Arg2:T50	
+T52	Condition 2373 2376	tbc
+N32	Reference T52 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T53	Negation 2377 2380	(-)
+R18	Neg Arg1:T53 Arg2:T52	
+T54	Behaviour 2398 2424	warunki mieszkaniowe dobre
+T55	Condition 2478 2486	czerniak
+A5	Status T55 Family
+N33	Reference T55 ICD10:C43	Czerniak złośliwy skóry
+T56	Condition 2488 2499	guz wątroby
+N34	Reference T56 ICD10:D37.6	Wątroba, pęcherzyk żółciowy i drogi żółciowe
+A6	Status T56 Family
+T57	Investigation 2615 2619	ECHO
+T58	Investigation 2621 2624	TEE
+T59	Investigation 2626 2630	ABPM
+T60	Investigation 2632 2642	Holter-EKG

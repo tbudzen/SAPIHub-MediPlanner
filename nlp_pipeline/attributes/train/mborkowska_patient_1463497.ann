@@ -1,0 +1,91 @@
+T1	Condition 447 468	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Behaviour 470 491	Przewlekły nikotynizm
+N2	Reference T2 ICD10:T65.2	Tytoń i nikotyna
+T3	Condition 493 520	Łagodna arytmia nadkomorowa
+N3	Reference T3 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T4	Condition 523 531	komorowa
+N4	Reference T4 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T5	Condition 533 561	Podejrzenie bezdechu sennego
+A1	Source T5 Declared
+N5	Reference T5 ICD10:G47.3	Bezdech senny
+T6	Symptom 571 591	utracie przytomności
+N6	Reference T6 ICD10:R55	Omdlenie i zapaść
+T7	Date 593 601	09.2018r
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Investigation 2209 2219	Echo serca
+T9	Investigation 2222 2237	Holter EKG i RR
+T10	Investigation 2241 2256	Próba Wysiłkowa
+T11	Drug 2091 2096	Nedal
+T12	Drug_dose 2097 2118	5 mg 1x dz w południe
+R2	Drg Arg1:T11 Arg2:T12	
+T13	Drug 2121 2133	Polsart Plus
+T14	Drug_dose 2134 2160	80 mg +25 mg mg 1x dz rano
+R3	Drg Arg1:T13 Arg2:T14	
+T15	Drug 2163 2170	Amlonor
+T16	Drug_dose 2171 2192	10 mg 1x dz wieczorem
+R4	Drg Arg1:T15 Arg2:T16	
+T17	Behaviour 2041 2067	warunki mieszkaniowe dobre
+T18	Negation 2018 2024	neguje
+T19	Negation 2003 2006	nie
+T20	Negation 1835 1841	( -  )
+T21	Negation 1854 1859	( - )
+T22	Negation 1865 1870	( - )
+T23	Condition 2007 2016	Uczulenia
+R5	Neg Arg1:T18 Arg2:T23	
+T24	Behaviour 1990 2001	Inne używki
+R6	Neg Arg1:T19 Arg2:T24	
+T25	Behaviour 1944 1988	Palenie tytoniu: pali 20 papierosów dziennie
+N8	Reference T25 ICD10:T65.2	Tytoń i nikotyna
+T26	Condition 1902 1918	astma oskrzelowa
+A2	Status T26 Family
+N9	Reference T26 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T27	Condition 1928 1942	jelita grubego
+N10	Reference T27 ICD10:C18	Nowotwór złośliwy jelita grubego
+T28	Condition 1831 1834	WZW
+N11	Reference T28 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T29	Condition 1844 1853	borelioza
+N12	Reference T29 ICD10:A69.2	Choroba z Lyme
+T30	Condition 1860 1864	Odra
+N13	Reference T30 ICD10:B05	Odra
+R7	Neg Arg1:T22 Arg2:T30	
+R8	Neg Arg1:T21 Arg2:T29	
+R9	Neg Arg1:T20 Arg2:T28	
+T31	Negation 1798 1802	brak
+T32	Negation 1771 1775	brak
+T33	Condition 1727 1748	Nadciśnienie tętnicze
+N14	Reference T33 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T34	Symptom 1687 1711	bóle w klatce piersiowej
+N15	Reference T34 ICD10:R07.3	Inne bóle w klatce piersiowej
+T35	Negation 1680 1686	Neguje
+R10	Neg Arg1:T35 Arg2:T34	
+T36	Treatment 1751 1768	Przebyte operacje
+R11	Neg Arg1:T32 Arg2:T36	
+T37	Treatment 1776 1795	Leczenie przewlekłe
+R12	Neg Arg1:T31 Arg2:T37	
+T38	Symptom 1396 1404	omdlenia
+N16	Reference T38 ICD10:R55	Omdlenie i zapaść
+T39	Date 1412 1419	09.2018
+R13	Dat Arg1:T39 Arg2:T38	
+T40	Symptom 1465 1480	zawrotami głowy
+N17	Reference T40 ICD10:R42	Zawroty głowy i odurzenie
+T41	Symptom 1548 1576	uczucie ciężkiego oddychania
+T42	Symptom 1579 1594	kołatania serca
+N18	Reference T42 ICD10:R00.2	Kołatanie serca
+T43	Drug 1194 1202	Polocard
+T44	Drug_dose 1203 1226	75 mg 1 tabl. wieczorem
+R14	Drg Arg1:T43 Arg2:T44	
+T45	Drug 1158 1165	Valarox
+T46	Drug_dose 1166 1193	20 mg/80 mg 1x dz wieczorem
+R15	Drg Arg1:T45 Arg2:T46	
+T47	Drug 1122 1132	Tertens AM
+T48	Drug_dose 1133 1156	1,5 mg/10 mg 1x dz rano
+R16	Drg Arg1:T47 Arg2:T48	
+T49	Drug 1100 1105	Nedal
+T50	Drug_dose 1106 1121	5 mg 1x dz rano
+R17	Drg Arg1:T49 Arg2:T50	
+T51	Behaviour 1034 1071	dieta ubogocholesterolowa, ubogosolna
+T52	Behaviour 1005 1033	zaprzestanie palenia tytoniu
+T53	Investigation 976 1004	pomiary ciśnienia tętniczego
+T54	Investigation 931 965	kontrola lipidogramu, elektrolitów
+N7	Reference T23 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

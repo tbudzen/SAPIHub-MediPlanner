@@ -1,0 +1,198 @@
+T1	Condition 404 417	FA przetrwałe
+N1	Reference T1 ICD10:I48	Migotanie i trzepotanie przedsionków
+T2	Condition 419 446	Choroba niedokrwienna serca
+N2	Reference T2 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T3	Condition 448 468	Miażdżyca uogólniona
+N3	Reference T3 ICD10:I70.9	Miażdżyca uogólniona i nieokreślona
+T4	Treatment 478 498	operacyjnym leczeniu
+T5	Date 560 570	31.01.2019
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Treatment 577 594	Przebyte operacje
+T7	Date 612 616	2017
+T8	Date 618 622	2018
+T9	Condition 876 921	Umiarkowana niedomykalność zastawki mitralnej
+N4	Reference T9 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T10	Condition 924 936	trójdzielnej
+N5	Reference T10 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T11	Condition 938 976	Przewlekła choroba niedokrwienna serca
+N6	Reference T11 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T12	Condition 1000 1032	Utrwalone migotanie przedsionków
+N7	Reference T12 ICD10:I48	Migotanie i trzepotanie przedsionków
+T13	Investigation 1034 1046	CHA2DS2-VASc
+T14	Investigation 1050 1057	HASBLED
+T15	Investigation_result 1047 1048	5
+T16	Investigation_result 1058 1059	2
+R2	Inv Arg1:T13 Arg2:T15	
+R3	Inv Arg1:T14 Arg2:T16	
+T17	Condition 1062 1083	Nadciśnienie tętnicze
+N8	Reference T17 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T18	Condition 1085 1105	Miażdżyca uogólniona
+N9	Reference T18 ICD10:I70.9	Miażdżyca uogólniona i nieokreślona
+T19	Condition 1107 1154	Przewlekła choroba nerek w stadium G3b wg KDIGO
+N10	Reference T19 ICD10:N18.9	Przewlekła niewydolność nerek, nieokreślona
+T20	Treatment 1164 1184	operacyjnym leczeniu
+T21	Date 1246 1256	31/01/2019
+R4	Dat Arg1:T21 Arg2:T20	
+T22	Treatment 1267 1275	operacji
+T23	Date 1292 1296	2017
+T24	Date 1298 1302	2018
+A1	Status T22 Historical_Insignificant
+A2	Status T6 Historical_Insignificant
+R5	Dat Arg1:T23 Arg2:T22	
+R6	Dat Arg1:T24 Arg2:T22	
+T25	Condition 1305 1318	Uchyłki esicy
+N11	Reference T25 ICD10:K57.3	Choroba uchyłkowa jelita grubego bez perforacji i ropnia
+T26	Treatment 1442 1545	Dalsza opieka w POZ, Poradni Kardiologicznej, Poradni Chirurgii Naczyniowej oraz Poradni Nefrologicznej
+T27	Treatment 1549 1588	Dalsza opieka w Poradni Kardiologicznej
+T28	Investigation 1610 1641	badania SPECT mięśnia sercowego
+T29	Condition 1826 1840	FA przetrwałym
+N12	Reference T29 ICD10:I48	Migotanie i trzepotanie przedsionków
+T30	Condition 1842 1869	chorobą niedokrwienną serca
+N13	Reference T30 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T31	Condition 1871 1891	miażdżycą uogólnioną
+N14	Reference T31 ICD10:I70.9	Miażdżyca uogólniona i nieokreślona
+T32	Treatment 1896 1916	operacyjnym leczeniu
+T33	Date 1978 1988	31.01.2019
+R7	Dat Arg1:T33 Arg2:T32	
+T34	Symptom 2020 2047	wahań RR (91/60-144/94mmHg)
+N15	Reference T34 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T35	Symptom 2067 2079	rano mdłości
+N16	Reference T35 ICD10:R11	Nudności i wymioty
+T36	Symptom 2081 2091	osłabienia
+T37	Date 2156 2169	od ok. 1 m-ca
+R8	Dat Arg1:T37 Arg2:T36	
+R9	Dat Arg1:T37 Arg2:T35	
+R10	Dat Arg1:T37 Arg2:T34	
+T38	Symptom 2192 2216	duszność wysiłkowa (50m)
+N17	Reference T38 ICD10:R53	Złe samopoczucie i zmęczenie
+T39	Date 2217 2226	od 1 m-ca
+R11	Dat Arg1:T39 Arg2:T38	
+T40	Negation 2228 2234	Neguje
+T41	Symptom 2236 2248	zasłabnięcia
+T42	Symptom 2250 2258	omdlenia
+N18	Reference T42 ICD10:R55	Omdlenie i zapaść
+T43	Symptom 2260 2270	krwawienia
+T44	Symptom 2272 2285	czarne stolce
+N19	Reference T44 ICD10:K92.1	Stolce smołowate
+T45	Symptom 2287 2303	brunatne wymioty
+N20	Reference T45 ICD10:K92.0	Wymioty krwawe
+T46	Symptom 2305 2319	duszność nocną
+N21	Reference T46 ICD10:R06.0	Duszność
+T47	Symptom 2321 2336	obrzęki podudzi
+N22	Reference T47 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T48	Symptom 2338 2362	bóle w klatce piersiowej
+N23	Reference T48 ICD10:R07	Ból gardła i w klatce piersiowej
+T49	Symptom 2364 2379	kołatania serca
+N24	Reference T49 ICD10:R00.2	
+T50	Condition 2381 2383	DM
+N25	Reference T50 ICD10:E14	Cukrzyca nieokreślona
+T51	Condition 2385 2395	udar mózgu
+N26	Reference T51 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T52	Condition 2397 2408	zawał serca
+N27	Reference T52 ICD10:I25.2	Przebyty zawał serca
+R12	Neg Arg1:T40 Arg2:T52	
+R13	Neg Arg1:T40 Arg2:T51	
+R14	Neg Arg1:T40 Arg2:T50	
+R15	Neg Arg1:T40 Arg2:T49	
+R16	Neg Arg1:T40 Arg2:T48	
+R17	Neg Arg1:T40 Arg2:T47	
+R18	Neg Arg1:T40 Arg2:T46	
+R19	Neg Arg1:T40 Arg2:T45	
+R20	Neg Arg1:T40 Arg2:T44	
+R21	Neg Arg1:T40 Arg2:T43	
+R22	Neg Arg1:T40 Arg2:T42	
+R23	Neg Arg1:T40 Arg2:T41	
+T53	Treatment 2412 2429	Przebyte operacje
+A3	Status T53 Historical_Insignificant
+T54	Date 2447 2451	2017
+T55	Date 2453 2457	2018
+T56	Condition 2462 2486	tętniaka aorty brzusznej
+T57	Behaviour 2490 2505	Palenie tytoniu
+N28	Reference T57 ICD10:Z72.0	Używanie tytoniu
+T58	Negation 2507 2515	nie pali
+T59	Date 2516 2531	od ponad 20 lat
+R26	Neg Arg1:T58 Arg2:T57	
+R27	Dat Arg1:T59 Arg2:T57	
+T60	Behaviour 2532 2543	Inne używki
+T61	Negation 2545 2548	nie
+R28	Neg Arg1:T61 Arg2:T60	
+T62	Condition 2549 2558	Uczulenia
+T63	Negation 2560 2563	nie
+R29	Neg Arg1:T63 Arg2:T62	
+T64	Condition 2592 2595	WZW
+N29	Reference T64 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T65	Condition 2602 2611	borelioza
+N30	Reference T65 ICD10:A69.2	Choroba z Lyme
+T66	Condition 2617 2620	tbc
+N31	Reference T66 ICD10:A16	
+T67	Condition 2626 2630	odra
+N32	Reference T67 ICD10:B05	Odra
+T68	Condition 2636 2650	kontakt z odrą
+N33	Reference T68 ICD10:B05	Odra
+T69	Negation 2652 2653	-
+R30	Neg Arg1:T69 Arg2:T68	
+T70	Negation 2632 2633	-
+R31	Neg Arg1:T70 Arg2:T67	
+T71	Negation 2622 2623	-
+R32	Neg Arg1:T71 Arg2:T66	
+T72	Negation 2613 2614	-
+R33	Neg Arg1:T72 Arg2:T65	
+T73	Negation 2597 2598	-
+R34	Neg Arg1:T73 Arg2:T64	
+T74	Behaviour 2671 2697	warunki mieszkaniowe dobre
+T75	Drug 2734 2740	Avedol
+T76	Drug 2925 2932	Digoxin
+T77	Drug 2899 2904	Gasec
+T78	Drug 2865 2877	Atorvasterol
+T79	Drug 2841 2853	Preductal MR
+T80	Drug 2812 2820	Spironol
+T81	Drug 2787 2794	Pradaxa
+T82	Drug 2759 2764	Cilan
+T83	Drug_dose 2741 2758	6,25mg 1-0-1 tabl
+T84	Drug_dose 2765 2786	0,5mg 1x 1 tabl/wiecz
+R35	Drg Arg1:T75 Arg2:T83	
+R36	Drg Arg1:T82 Arg2:T84	
+T85	Drug_dose 2795 2811	110mg 1-0-1 tabl
+R37	Drg Arg1:T81 Arg2:T85	
+T86	Drug_dose 2821 2840	25mg 1x 1 tabl/rano
+R38	Drg Arg1:T80 Arg2:T86	
+T87	Drug_dose 2854 2864	1-0-1 tabl
+R39	Drg Arg1:T79 Arg2:T87	
+T88	Drug_dose 2878 2898	20mg 1x 1 tabl/wiecz
+R40	Drg Arg1:T78 Arg2:T88	
+T89	Drug_dose 2905 2924	20mg 1x 1 tabl/rano
+R41	Drg Arg1:T77 Arg2:T89	
+T90	Drug_dose 2933 2961	0,1mg 1x 1 tabl co 2gi dzień
+R42	Drg Arg1:T76 Arg2:T90	
+T91	Investigation 3023 3044	badania laboratoryjne
+T92	Investigation 3046 3050	ECHO
+T93	Investigation 3052 3070	EKG metodą Holtera
+T94	Investigation 3072 3076	ABPM
+T95	Condition 499 523	tętniaka aorty brzusznej
+N34	Reference T95 ICD10:I71.4	Tętniak odcinka brzusznego aorty, bez informacji o pęknięciu
+T96	Treatment 524 558	za pomocą stentgraftu rozwidlonego
+R43	Dat Arg1:T5 Arg2:T96	
+R44	Dat Arg1:T5 Arg2:T95	
+T97	Condition 596 610	zaćma obu oczu
+N35	Reference T97 ICD10:H26.9	Zaćma, nieokreślona
+R45	Dat Arg1:T7 Arg2:T97	
+R46	Dat Arg1:T8 Arg2:T97	
+T98	Treatment 1210 1244	za pomocą stentgraftu rozwidlonego
+R47	Dat Arg1:T21 Arg2:T98	
+T99	Condition 1185 1209	tętniaka aorty brzusznej
+N36	Reference T99 ICD10:I71.4	Tętniak odcinka brzusznego aorty, bez informacji o pęknięciu
+R48	Dat Arg1:T21 Arg2:T99	
+T100	Condition 1276 1290	zaćmy obu oczu
+N37	Reference T100 ICD10:H26.9	Zaćma, nieokreślona
+R49	Dat Arg1:T23 Arg2:T100	
+R50	Dat Arg1:T24 Arg2:T100	
+T101	Treatment 1942 1976	za pomocą stentgraftu rozwidlonego
+R51	Dat Arg1:T33 Arg2:T101	
+T102	Condition 1917 1941	tętniaka aorty brzusznej
+N38	Reference T102 ICD10:I71.4	Tętniak odcinka brzusznego aorty, bez informacji o pęknięciu
+R52	Dat Arg1:T33 Arg2:T102	
+T103	Condition 2431 2445	zaćma obu oczu
+N39	Reference T103 ICD10:H26.9	Zaćma, nieokreślona
+R24	Dat Arg1:T54 Arg2:T103	
+R25	Dat Arg1:T55 Arg2:T103	
+N40	Reference T56 ICD10:I71.4	Tętniak odcinka brzusznego aorty, bez informacji o pęknięciu

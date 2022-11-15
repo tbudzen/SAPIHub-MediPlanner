@@ -1,0 +1,62 @@
+T1	Investigation 1645 1655	Echo serca
+T2	Investigation 1658 1668	Holter EKG
+T3	Investigation 1671 1686	Próba Wysiłkowa
+T4	Investigation 1689 1692	TEE
+T5	Behaviour 1552 1578	warunki mieszkaniowe dobre
+T6	Negation 1608 1630	bez leków przewlekłych
+T7	Drug 1602 1606	Leki
+R1	Neg Arg1:T6 Arg2:T7	
+T8	Condition 1476 1485	Uczulenia
+T9	Negation 1472 1475	nie
+T10	Negation 1455 1458	nie
+T11	Negation 1432 1436	brak
+T12	Negation 1402 1407	( - )
+T13	Negation 1383 1389	( -  )
+T14	Condition 1392 1401	borelioza
+N2	Reference T14 ICD10:A69.2	Choroba z Lyme
+R2	Neg Arg1:T12 Arg2:T14	
+T15	Condition 1379 1382	WZW
+N3	Reference T15 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+R3	Neg Arg1:T13 Arg2:T15	
+T16	Behaviour 1459 1471	Inne używki:
+R4	Neg Arg1:T9 Arg2:T16	
+T17	Behaviour 1438 1453	Palenie tytoniu
+N4	Reference T17 ICD10:Z72.0	Używanie tytoniu
+R5	Neg Arg1:T10 Arg2:T17	
+T18	Negation 1346 1350	brak
+T19	Treatment 1176 1184	operacji
+T20	Condition 1185 1255	wrodzonej wady serca pod postacią ubytku w przegrodzie międzykomorowej
+N5	Reference T20 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T21	Date 1257 1262	2000r
+R6	Dat Arg1:T21 Arg2:T20	
+R7	Dat Arg1:T21 Arg2:T19	
+T22	Negation 1125 1131	neguje
+T23	Negation 1091 1097	neguje
+T24	Negation 1069 1075	Neguje
+T25	Symptom 1076 1088	zasłabnięcia
+N6	Reference T25 ICD10:R55	Omdlenie i zapaść
+R8	Neg Arg1:T24 Arg2:T25	
+T26	Symptom 1098 1122	bóle w klatce piersiowej
+N7	Reference T26 ICD10:R07.3	Inne bóle w klatce piersiowej
+R9	Neg Arg1:T23 Arg2:T26	
+T27	Symptom 1132 1149	uczucie duszności
+N8	Reference T27 ICD10:R06.0	Duszność
+R10	Neg Arg1:T22 Arg2:T27	
+T28	Condition 1265 1278	Arytmia serca
+T29	Drug 871 876	leków
+T30	Negation 867 870	bez
+R11	Neg Arg1:T30 Arg2:T29	
+T31	Condition 447 505	Wrodzona wada serca - ubytek w przegrodzie międzykomorowej
+N9	Reference T31 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T32	Treatment 506 525	leczony operacyjnie
+T33	Date 528 533	2000r
+R12	Dat Arg1:T33 Arg2:T32	
+R13	Dat Arg1:T33 Arg2:T31	
+A1	Source T28 Declared
+N10	Reference T28 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T34	Treatment 1299 1316	Przebyte operacje
+T35	Treatment 1324 1343	Leczenie przewlekłe
+R14	Neg Arg1:T18 Arg2:T35	
+N1	Reference T8 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T36	Treatment 645 667	kontrola u lekarza POZ
+T37	Treatment 679 747	dalsza kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych

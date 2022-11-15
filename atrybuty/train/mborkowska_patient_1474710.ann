@@ -1,0 +1,93 @@
+T1	Condition 448 469	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 471 498	Choroba niedokrwienna serca
+N2	Reference T2 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T3	Treatment 508 524	resekcji żołądka
+T4	Condition 534 559	choroby wrzodowej żołądka
+N3	Reference T4 ICD10:K25	Wrzód żołądka
+T5	Investigation 775 858	kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T6	Investigation 872 894	kontrola wskaźnika INR
+T7	Behaviour 899 1001	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T8	Investigation 1016 1062	samokontrola ciśnienia tętniczego krwi i tętna
+T9	Drug 1101 1109	Polfenon
+T10	Drug_dose 1110 1163	150mg 3x dziennie po 2 tabl. rano, południe , wieczór
+R1	Drg Arg1:T9 Arg2:T10	
+T11	Drug 1164 1170	Bibolc
+T12	Drug_dose 1171 1189	7,5mg 1 tabl. rano
+R2	Drg Arg1:T11 Arg2:T12	
+T13	Drug 1190 1197	Mononit
+T14	Drug_dose 1198 1216	10 mg 1 tabl. rano
+R3	Drg Arg1:T13 Arg2:T14	
+T15	Drug 1217 1224	Zaranta
+T16	Drug_dose 1225 1247	20mg 1 tabl. wieczorem
+R4	Drg Arg1:T15 Arg2:T16	
+T17	Drug 1248 1262	Cavinton forte
+T18	Drug_dose 1263 1294	10mg 1/2 tabl. rano i wieczorem
+R5	Drg Arg1:T17 Arg2:T18	
+T19	Drug 1295 1301	Karbis
+T20	Drug_dose 1302 1324	8 mg 1 tabl. wieczorem
+R6	Drg Arg1:T19 Arg2:T20	
+T21	Drug 1325 1333	Karnidin
+T22	Drug_dose 1334 1358	10 mg 1 tabl. popołudniu
+R7	Drg Arg1:T21 Arg2:T22	
+T23	Drug 1359 1365	Opamid
+T24	Drug_dose 1366 1385	1,5 mg 1 tabl. rano
+R8	Drg Arg1:T23 Arg2:T24	
+T25	Drug 1386 1398	Acenocumarol
+T26	Drug_dose 1399 1450	4 mg 1/2 tabl. w południe, co drugi dzień 1/4 tabl.
+R9	Drg Arg1:T25 Arg2:T26	
+T27	Symptom 1627 1641	kołatań serca,
+N4	Reference T27 ICD10:R00.2	Kołatanie serca
+T28	Investigation_result 1642 1668	wahań ciśnienia tętniczego
+T29	Condition 1683 1704	nadciśnienie tętnicze
+N5	Reference T29 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T30	Condition 1706 1737	napadowe migotanie przedsionków
+N6	Reference T30 ICD10:I48	Migotanie i trzepotanie przedsionków
+T31	Condition 1739 1767	choroba niedokrwienna serca.
+N7	Reference T31 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T32	Symptom 1776 1807	zmniejszenie tolerancji wysiłku
+N8	Reference T32 ICD10:R53	Złe samopoczucie i zmęczenie
+T33	Symptom 1817 1832	bóle zamostkowe
+N9	Reference T33 ICD10:R07.3	Inne bóle w klatce piersiowej
+T34	Negation 1810 1816	Neguje
+R10	Neg Arg1:T34 Arg2:T33	
+T35	Treatment 1853 1869	resekcji żołądka
+T36	Condition 1879 1904	choroby wrzodowej żołądka
+N10	Reference T36 ICD10:K25	Wrzód żołądka
+T37	Behaviour 1906 1916	Nikotynizm
+N11	Reference T37 ICD10:T65.2	Tytoń i nikotyna
+T38	Date 1921 1934	w przeszłości
+R11	Dat Arg1:T38 Arg2:T37	
+T39	Behaviour 1936 1943	Alkohol
+N12	Reference T39 ICD10:Z72.1	Używanie alkoholu
+T40	Negation 1945 1951	neguje
+R12	Neg Arg1:T40 Arg2:T39	
+T41	Negation 1960 1966	neguje
+T42	Condition 1968 1985	uczulenia na leki
+N13	Reference T42 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T43	Symptom 1987 2020	krwawienia z przewodu pokarmowego
+N14	Reference T43 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R13	Neg Arg1:T41 Arg2:T42	
+R14	Neg Arg1:T41 Arg2:T43	
+T44	Negation 2039 2050	nie istotny
+T45	Condition 2022 2037	Wywiad rodzinny
+A1	Status T45 Family
+R15	Neg Arg1:T44 Arg2:T45	
+T46	Drug 2096 2104	polfenon
+T47	Drug_dose 2105 2121	300mg 3xdziennie
+R16	Drg Arg1:T46 Arg2:T47	
+T48	Drug 2123 2129	bibolc
+T49	Drug_dose 2130 2133	5mg
+R17	Drg Arg1:T48 Arg2:T49	
+T50	Drug 2135 2142	mononit
+T51	Drug 2144 2151	zaranta
+T52	Drug 2153 2159	opamid
+T53	Drug 2161 2169	cavinton
+T54	Drug 2171 2183	acenokumarol
+T55	Drug 2185 2192	polsart
+T56	Drug 2194 2202	karnidin
+T57	Investigation 2215 2225	ECHO serca
+T58	Investigation 2227 2237	Holter EKG
+T59	Investigation 2239 2248	Holter RR
+T60	Investigation 2250 2252	PW
+T61	Investigation 732 737	SPECT

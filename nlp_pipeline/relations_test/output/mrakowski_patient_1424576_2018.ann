@@ -1,0 +1,127 @@
+T1	Drug 341 350	Cordaroen
+T2	Drug 352 361	Oxycardil
+T3	Drug 363 375	Acenokumarol
+T4	Drug 377 385	Euthyrox
+T5	Drug 387 394	Bufomix
+T6	Drug 396 403	romazic
+T7	Drug 405 412	Clexane
+T8	Treatment 523 545	kontrola u lekarza POZ
+T9	Investigation 548 570	regularna kontrola INR
+T10	Investigation_result 572 592	zalecany INR 2,0-3,0
+T11	Treatment 596 666	okresowa kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych
+T12	Treatment 669 699	przyjecie do tutejszej kliniki
+T13	Date 706 716	26.02.2018
+R1	Dat Arg1:T13 Arg2:T12	
+T14	Investigation 733 755	angioCT tętnic wieńcow
+R2	Dat Arg1:T13 Arg2:T14	
+T15	Condition 973 1017	Wrodzona wada serca pod postacią ASD typu II
+N1	Reference T15 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T16	Treatment 1028 1048	leczeniu operacyjnym
+T17	Date 1050 1054	1982
+R3	Dat Arg1:T17 Arg2:T16	
+T18	Treatment 1058 1150	reoperacji wady - plastyka ubytku z powodu rekanalizacji łaty i zastawki żyły głównej dolnej
+T19	Date 1152 1156	1997
+R4	Dat Arg1:T19 Arg2:T18	
+T20	Condition 1159 1193	Dysfunkcja skurczowa prawej komory
+N2	Reference T20 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych
+T21	Condition 1195 1214	Nadciśnienie płucne
+T22	Condition 1216 1253	Niedomykalność trójdzielna II stopnia
+N4	Reference T22 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T23	Condition 1267 1295	choroby niedokrwiennej serca
+A1	Source T23 Declared
+N5	Reference T23 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+N3	Reference T21 ICD10:I27.0	Pierwotne nadciśnienie płucne
+T24	Condition 1297 1373	Napadowa arytmia nadkomorowa pod postacią migotania/trzepotania przedsionków
+N6	Reference T24 ICD10:I48	Migotanie i trzepotanie przedsionków
+T25	Condition 1376 1405	częstoskurczu przedsionkowego
+N7	Reference T25 ICD10:I47.1	Częstoskurcz nadkomorowy
+T26	Treatment 1408 1453	kilkakrotnie leczona kardiowersją elektryczną
+T27	Condition 1455 1471	Astma oskrzelowa
+N8	Reference T27 ICD10:J45	Astma oskrzelowa
+T28	Condition 1485 1545	hipertyreoza spowodowana nadmiernym leczeniem substytucyjnym
+N9	Reference T28 ICD10:E05.8	Inne tyreotoksykozy
+T29	Condition 1546 1569	niedoczynności tarczycy
+N10	Reference T29 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T30	Treatment 1578 1615	następstwem leczenia radiojodoterapią
+T31	Date 1617 1621	2007
+A2	Status T30 Historical_Insignificant
+R5	Dat Arg1:T31 Arg2:T30	
+T32	Condition 1623 1644	nadczynności tarczycy
+N11	Reference T32 ICD10:E05	Nadczynność tarczycy [tyreotoksykoza]
+T33	Condition 1646 1700	Przewlekła niewydolność naczyń żylnych kończyn dolnych
+N12	Reference T33 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+T34	Treatment 1850 1871	operacji i reoperacji
+T35	Condition 1872 1878	ASD II
+N13	Reference T35 ICD10:Q21.1	
+T36	Condition 1880 1892	napadowym AF
+N14	Reference T36 ICD10:I48	Migotanie i trzepotanie przedsionków
+T37	Investigation 1929 1949	CT naczyń wieńcowych
+T38	Condition 1963 2002	wrodzona wada serca pod postacią ASD II
+N15	Reference T38 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T39	Treatment 2020 2029	operowana
+T40	Date 2032 2041	1982 roku
+R6	Dat Arg1:T40 Arg2:T39	
+T41	Treatment 2043 2054	reoperowana
+T42	Date 2057 2066	1997 roku
+R7	Dat Arg1:T42 Arg2:T41	
+T43	Treatment 2076 2095	rekanalizacji  łaty
+R8	Dat Arg1:T42 Arg2:T43	
+T44	Condition 2097 2144	nawracająca arytmia nadkomorowa pod postacią AF
+N16	Reference T44 ICD10:I48	Migotanie i trzepotanie przedsionków
+T45	Condition 2146 2153	PAT FlA
+N17	Reference T45 ICD10:I48	Migotanie i trzepotanie przedsionków
+T46	Treatment 2155 2211	leczona kilkakrotnie za pomocą kardiowersji elektrycznej
+T47	Condition 2221 2237	astma oskrzelowa
+N18	Reference T47 ICD10:J45	Astma oskrzelowa
+T48	Date 2287 2296	2007 roku
+T49	Treatment 2297 2313	radiojodoterapia
+R9	Dat Arg1:T48 Arg2:T49	
+A3	Status T49 Historical_Insignificant
+T50	Condition 2323 2344	nadczynności tarczycy
+N19	Reference T50 ICD10:E05	Nadczynność tarczycy [tyreotoksykoza]
+T51	Condition 2347 2378	wtórną niedoczynnością tarczycy
+N20	Reference T51 ICD10:E03.2	Niedoczynność tarczycy wywołana leczeniem lub innymi egzogennymi substancjami
+T52	Treatment 2380 2398	Zabiegi operacyjne
+T53	Negation 2399 2405	neguje
+R10	Neg Arg1:T53 Arg2:T52	
+T54	Condition 2407 2414	Alergie
+N21	Reference T54 ICD10:T78.4	Alergia, nieokreślona
+T55	Negation 2415 2421	neguje
+R11	Neg Arg1:T55 Arg2:T54	
+T56	Drug 2429 2438	Cordarone
+T57	Drug_dose 2439 2457	200 mg 1 x 1 tabl.
+R12	Drg Arg1:T56 Arg2:T57	
+T58	Drug 2458 2467	Oxycardil
+T59	Drug_dose 2468 2487	60 mg 2 x 1/2 tabl.
+R13	Drg Arg1:T58 Arg2:T59	
+T60	Drug 2489 2501	Acenocumarol
+T61	Drug_dose 2502 2513	2 mg 1 x dz
+R14	Drg Arg1:T60 Arg2:T61	
+T62	Drug 2515 2528	Euthyrox N137
+T63	Drug_dose 2529 2540	1 x 1 tabl.
+R15	Drg Arg1:T62 Arg2:T63	
+T64	Drug 2542 2549	Bufomix
+T65	Drug_dose 2550 2570	320/9 ug 2 x 1 wdech
+R16	Drg Arg1:T64 Arg2:T65	
+R1	Inv Arg1:T9 Arg2:T10
+R15	Dat Arg1:T17 Arg2:T15
+R17	Dat Arg1:T17 Arg2:T16
+R18	Dat Arg1:T17 Arg2:T18
+R20	Dat Arg1:T19 Arg2:T20
+R22	Dat Arg1:T19 Arg2:T18
+R23	Dat Arg1:T31 Arg2:T29
+R24	Dat Arg1:T31 Arg2:T32
+R25	Dat Arg1:T31 Arg2:T33
+R26	Dat Arg1:T31 Arg2:T30
+R30	Dat Arg1:T40 Arg2:T39
+R38	Dat Arg1:T42 Arg2:T41
+R39	Dat Arg1:T42 Arg2:T43
+R45	Neg Arg1:T53 Arg2:T52
+R48	Neg Arg1:T55 Arg2:T54
+R5	Dat Arg1:T13 Arg2:T12
+R54	Dat Arg1:T48 Arg2:T49
+R56	Drg Arg1:T56 Arg2:T57
+R57	Drg Arg1:T58 Arg2:T59
+R58	Drg Arg1:T60 Arg2:T61
+R59	Drg Arg1:T62 Arg2:T63
+R60	Drg Arg1:T64 Arg2:T65

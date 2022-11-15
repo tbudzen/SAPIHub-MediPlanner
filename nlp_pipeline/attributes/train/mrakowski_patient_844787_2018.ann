@@ -1,0 +1,52 @@
+T1	Condition 450 482	Ubytek przegrody międzykomorowej
+N1	Reference T1 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T2	Condition 484 511	Choroba niedokrwienna serca
+N2	Reference T2 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T3	Condition 513 527	Hiperlipidemia
+N3	Reference T3 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T4	Condition 704 748	VSD cześci bloniastej 12mm z przeciekiem L-P
+N4	Reference T4 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T5	Symptom 764 794	zmniejszoną tolerancję wysiłku
+N5	Reference T5 ICD10:R53	Złe samopoczucie i zmęczenie
+T6	Condition 818 829	tachykardia
+N6	Reference T6 ICD10:R00.0	Tachykardia, nieokreślona
+T7	Date 830 843	w przeszłości
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Condition 845 873	zmiany zwyrodnieniowe barków
+N7	Reference T8 ICD10:M19	Inne zwyrodnienia stawów
+T9	Treatment 887 904	Przebyte operacje
+T10	Treatment 906 910	2xCC
+A1	Status T10 Historical_Insignificant
+T11	Condition 912 927	Wywiad rodzinny
+A2	Status T11 Family
+T12	Negation 929 942	bez znaczenia
+R2	Neg Arg1:T12 Arg2:T11	
+T13	Condition 944 951	Alergie
+N8	Reference T13 ICD10:T78.4	Alergia, nieokreślona
+T14	Negation 953 959	neguje
+R3	Neg Arg1:T14 Arg2:T13	
+T15	Behaviour 961 971	Nikotynizm
+N9	Reference T15 ICD10:Z72.0	Używanie tytoniu
+T16	Behaviour 995 1018	1-5 papierosów/dziennie
+N10	Reference T16 ICD10:Z72.0	Używanie tytoniu
+T17	Date 978 993	do 4 lat wstecz
+R4	Dat Arg1:T17 Arg2:T15	
+T18	Date 1019 1024	5 lat
+R5	Dat Arg1:T18 Arg2:T16	
+T19	Behaviour 1026 1047	Alkohol: okazjonalnie
+N11	Reference T19 ICD10:Z72.1	Używanie alkoholu
+A3	Status T19 Historical_Insignificant
+T20	Behaviour 1050 1067	Uzależnienie inne
+T21	Negation 1069 1075	neguje
+R6	Neg Arg1:T21 Arg2:T20	
+T22	Behaviour 1093 1101	szwaczka
+T23	Behaviour 1103 1132	ekspedientka - praca fizyczna
+T24	Drug 1140 1148	Bisocard
+T25	Drug_dose 1149 1160	2,5 mg rano
+R7	Drg Arg1:T24 Arg2:T25	
+T26	Investigation 1189 1199	echo serca
+T27	Investigation 1201 1204	TET
+T28	Investigation 1206 1210	ABPM
+T29	Investigation 1212 1222	Holter ekg
+T30	Investigation 1224 1242	rtg kl. piersiowej
+N12	Reference T20 ICD10:Z72	Problemy związane ze stylem życia

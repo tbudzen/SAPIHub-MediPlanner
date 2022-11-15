@@ -1,0 +1,61 @@
+T1	Condition 438 455	Anomalia Ebsteina
+N1	Reference T1 ICD10:Q22.5	Anomalia Ebsteina
+T2	Treatment 465 495	plastyce zastawki trójdzielnej
+T3	Condition 497 520	Atopowe zapalenie skóry
+N2	Reference T3 ICD10:L20.9	Atopowe zapalenie skóry, nieokreślone
+T4	Condition 522 542	Hipertriglicerydemia
+N3	Reference T4 ICD10:E78.1	Czysta hiperglicerydemia
+T5	Behaviour 822 863	Przestrzeganie diety ubogocholesterolowej
+T6	Condition 1009 1026	zespołem Ebsteina
+N4	Reference T6 ICD10:Q22.5	Anomalia Ebsteina
+T7	Treatment 1031 1061	plastyce zastawki trójdzielnej
+T8	Symptom 1151 1167	bez dolegliwości
+T9	Condition 1210 1230	hipertriglicerydemię
+N5	Reference T9 ICD10:E78.1	Czysta hiperglicerydemia
+T10	Investigation 1281 1305	24-godzinnym zapisie EKG
+T11	Investigation_result 1306 1367	krótkie wstawki rytmu idiowentrykularnego w godzinach nocnych
+R1	Inv Arg1:T10 Arg2:T11	
+T12	Investigation_result 1488 1535	umiarkowaną niedomykalność zastawki trójdzielne
+N6	Reference T12 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T13	Condition 1390 1401	bradykardię
+N7	Reference T13 ICD10:R00.1	Bradykardia, nieokreślona
+T14	Investigation_result 1403 1463	rytmy komorowe lub węzłowe, bez pauz dłuższych niż 2 sekundy
+R2	Inv Arg1:T10 Arg2:T14	
+T15	Investigation 1471 1487	echokardiogramie
+T16	Condition 1553 1576	atopowe zapalenie skóry
+N8	Reference T16 ICD10:L20.9	Atopowe zapalenie skóry, nieokreślone
+T17	Condition 1578 1587	półpasiec
+N9	Reference T17 ICD10:B02	Choroba zakaźna wywołana przez wirus herpes zoster [półpasiec]
+T18	Date 1590 1599	luty 2017
+R3	Dat Arg1:T18 Arg2:T17	
+T19	Condition 1625 1660	złamanie V kości śródplecza prawego
+T20	Date 1662 1666	2015
+R4	Dat Arg1:T20 Arg2:T19	
+T21	Condition 1701 1708	Alergie
+N10	Reference T21 ICD10:T78.4	Alergia, nieokreślona
+T22	Behaviour 1718 1728	Nikotynizm
+T23	Behaviour 1739 1780	Alkohol: okazjonalnie, w małych ilościach
+N12	Reference T23 ICD10:Z72.1	Używanie alkoholu
+T24	Negation 1710 1716	neguje
+R5	Neg Arg1:T24 Arg2:T21	
+T25	Negation 1730 1738	neguje  
+R6	Neg Arg1:T25 Arg2:T22	
+T26	Behaviour 1782 1799	Uzależnienie inne
+T27	Negation 1801 1807	neguje
+R7	Neg Arg1:T27 Arg2:T26	
+T28	Negation 1686 1699	bez znaczenia
+T29	Condition 1669 1684	Wywiad rodzinny
+A3	Status T29 Family
+R8	Neg Arg1:T28 Arg2:T29	
+T30	Drug 1860 1865	leków
+T31	Negation 1856 1859	bez
+R9	Neg Arg1:T31 Arg2:T30	
+T32	Treatment 1609 1617	operacje
+R10	Dat Arg1:T20 Arg2:T32	
+R11	Inv Arg1:T15 Arg2:T12	
+T33	Date 1064 1075	przeszłości
+R12	Dat Arg1:T33 Arg2:T7	
+A1	Status T19 Historical_Insignificant
+A2	Status T32 Historical_Insignificant
+N13	Reference T19 ICD10:S62	Złamanie na poziomie nadgarstka i ręki
+N11	Reference T22 ICD10:Z72.0	Używanie tytoniu

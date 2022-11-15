@@ -1,0 +1,40 @@
+T1	Condition 482 585	Wrodzona wada serca pod postacią hipoplazji łuku aorty ,zastawki aortalnej , dwudzielnej i lewej komory
+T2	Condition 591 617	ubytku w przegrodzie komór
+N1	Reference T2 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+N2	Reference T1 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+T3	Treatment 631 667	operacji przewężenia tętnic płucnych
+N3	Reference T3 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T4	Date 669 679	10.03.2015
+T5	Treatment 701 742	implantacji stentu do przewodu tętniczego
+N4	Reference T5 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T6	Date 744 754	12.03.2015
+T7	Treatment 768 825	operacji plastyki przerwanego hipoplastycznego łuku aorty
+T8	Date 965 975	15.11.2016
+T9	Treatment 989 1012	angioplastyce balonowej
+T10	Date 1043 1053	17.02.2017
+T11	Condition 1194 1212	złożona wada serca
+T12	Condition 1247 1264	wywiad alergiczny
+N6	Reference T12 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T13	Negation 1265 1271	ujemny
+T14	Drug 1274 1288	leków na stałe
+T15	Negation 1289 1302	nie otrzymuje
+R1	Neg Arg1:T15 Arg2:T14	
+R2	Neg Arg1:T13 Arg2:T12	
+R3	Dat Arg1:T4 Arg2:T3	
+R4	Dat Arg1:T6 Arg2:T5	
+R5	Dat Arg1:T8 Arg2:T7	
+R6	Dat Arg1:T10 Arg2:T9	
+T16	Treatment 827 880	zamknięcia ubytku w przegrodzie komór łatką dakronową
+N7	Reference T16 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T17	Treatment 883 913	zamknięcia przewodu tętniczego
+T18	Treatment 919 963	zdjęcia opasek przewężających gałęzie płucne
+N5	Reference T7 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+N8	Reference T17 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+N9	Reference T18 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R7	Dat Arg1:T8 Arg2:T16	
+R8	Dat Arg1:T8 Arg2:T17	
+R9	Dat Arg1:T8 Arg2:T18	
+T19	Condition 1013 1041	zwężenia łuku i cieśni aorty
+N10	Reference T19 ICD10:Q25	Wrodzone wady rozwojowe dużych tętnic
+#1	AnnotatorNotes T19	Q25.1 + Q25.3
+R10	Dat Arg1:T10 Arg2:T19	

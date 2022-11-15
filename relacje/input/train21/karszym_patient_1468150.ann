@@ -1,0 +1,116 @@
+T1	Condition 414 434	Hipertriglicerydemia
+N1	Reference T1 ICD10:E78.1	Czysta hiperglicerydemia
+T2	Condition 436 443	Nadwaga
+T3	Condition 445 477	Nieprawidłowa tolerancja glukozy
+N2	Reference T3 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T4	Condition 479 499	Stłuszczenie wątroby
+N3	Reference T4 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T5	Condition 501 514	Dna moczanowa
+N4	Reference T5 ICD10:M10.9	Dna, nieokreślona
+T6	Condition 516 533	Zaburzenia lękowe
+N5	Reference T6 ICD10:F41.9	Zaburzenia lękowe, nieokreślone
+T7	Treatment 691 718	dalsza opieka w poradni POZ
+T8	Treatment 726 775	okresowa kontrola kardiologiczna i psychiatryczna
+T9	Treatment 781 807	konsultacja hepatologiczna
+T10	Treatment 815 853	okresowa kontrola ciśnienia tętniczego
+T11	Treatment 861 890	okresowa kontrola lipidogramu
+T12	Date 893 915	kolejna za 4-6 tygodni
+R1	Dat Arg1:T12 Arg2:T11	
+T13	Behaviour 922 1004	dieta uboga w tłuszcze (do 15% w posiłkach) z całkowitą eliminacją cukrów prostych
+T14	Negation 1010 1019	unikaniem
+T15	Behaviour 1020 1037	spożycia alkoholu
+N6	Reference T15 ICD10:Z72.1	Używanie alkoholu
+R2	Neg Arg1:T14 Arg2:T15	
+T16	Behaviour 1044 1063	redukcja masy ciała
+T17	Behaviour 1072 1117	stały, umiarkowany, aerobowy wysiłek fizyczny
+T18	Drug 1161 1176	Lipanthyl Supra
+T19	Drug_dose 1177 1195	215mg 1 tabl. rano
+T20	Drug 1203 1209	Omacor
+T21	Drug_dose 1210 1237	1g 2 tabl. rano i wieczorem
+T22	Drug 1245 1255	Concor Cor
+T23	Drug_dose 1256 1276	1.25 mg 1 tabl. rano
+R3	Drg Arg1:T18 Arg2:T19	
+R4	Drg Arg1:T20 Arg2:T21	
+R5	Drg Arg1:T22 Arg2:T23	
+T24	Condition 1420 1433	dną moczanową
+N7	Reference T24 ICD10:M10.9	Dna, nieokreślona
+T25	Condition 1435 1466	nieprawidłową glikemią na czczo
+N8	Reference T25 ICD10:R73	Podwyższone stężenie glukozy we krwi
+T26	Condition 1468 1500	nieprawidłową tolerancją glukozy
+N9	Reference T26 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T27	Condition 1502 1521	hipetriglicerydemią
+N10	Reference T27 ICD10:E78.1	Czysta hiperglicerydemia
+T28	Date 1539 1546	07/2018
+T29	Investigation_result 1523 1536	TG do 501 mg%
+R6	Dat Arg1:T28 Arg2:T29	
+T30	Condition 1549 1570	stłuszczeniem wątroby
+N11	Reference T30 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T31	Investigation_result 1572 1600	podwyższonymi wartościami RR
+T32	Investigation 1603 1607	ABPM
+R7	Inv Arg1:T32 Arg2:T31	
+T33	Condition 1609 1630	zaburzeniami lękowymi
+N12	Reference T33 ICD10:F41.9	Zaburzenia lękowe, nieokreślone
+T34	Symptom 1632 1655	nadmiernym poceniem się
+N13	Reference T34 ICD10:R61.1	Nadmierne pocenie uogólnione
+T35	Symptom 1657 1772	dolegliwościami bólami w klatce piersiowej o charakterze ucisku i kłucia (mającymi związek ze zmianą pozycji ciała)
+T36	Negation 1821 1827	Neguje
+N14	Reference T35 ICD10:R07.3	Inne bóle w klatce piersiowej
+T37	Symptom 1828 1840	zasłabnięcia
+T38	Symptom 1842 1851	duszności
+N15	Reference T38 ICD10:R06.0	Duszność
+T39	Symptom 1853 1884	typowe bóle w klatce piersiowej
+N16	Reference T39 ICD10:R07.2	Ból w okolicy przedsercowej
+T40	Treatment 1886 1903	Przebyte operacje
+N17	Reference T40 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T41	Negation 1905 1911	neguje
+T42	Condition 1939 1942	WZW
+N18	Reference T42 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T43	Condition 1951 1960	borelioza
+N19	Reference T43 ICD10:A69.2	
+T44	Condition 1968 1976	gruźlica
+N20	Reference T44 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T45	Negation 1943 1948	( - )
+T46	Negation 1961 1966	( - )
+T47	Negation 1977 1980	(-)
+R8	Neg Arg1:T45 Arg2:T42	
+R9	Neg Arg1:T46 Arg2:T43	
+R10	Neg Arg1:T47 Arg2:T44	
+R11	Neg Arg1:T41 Arg2:T40	
+R12	Neg Arg1:T36 Arg2:T37	
+R13	Neg Arg1:T36 Arg2:T38	
+R14	Neg Arg1:T36 Arg2:T39	
+T48	Condition 2008 2010	MI
+N21	Reference T48 ICD10:I21.9	Ostry zawał serca, nieokreślony
+A1	Status T48 Family
+T49	Date 2011 2032	w wieku ok. 65-70 lat
+R15	Dat Arg1:T49 Arg2:T48	
+T50	Behaviour 2033 2048	Palenie tytoniu
+N22	Reference T50 ICD10:Z72.1	Używanie alkoholu
+T51	Negation 2050 2053	nie
+R16	Neg Arg1:T51 Arg2:T50	
+T52	Behaviour 2067 2086	narkotyki (kokaina)
+N23	Reference T52 ICD10:Z72.2	Używanie narkotyków
+T53	Date 2089 2114	ostatni raz 2-3 lata temu
+R17	Dat Arg1:T53 Arg2:T52	
+T54	Behaviour 2116 2123	alkohol
+T55	Date 2124 2137	w przeszłości
+T56	Behaviour 2138 2150	sporadycznie
+T57	Date 2152 2159	obecnie
+T58	Negation 2166 2169	nie
+T59	Behaviour 2170 2177	spożywa
+N24	Reference T59 ICD10:Z72.1	Używanie alkoholu
+N25	Reference T56 ICD10:Z72.1	Używanie alkoholu
+N26	Reference T54 ICD10:Z72.1	Używanie alkoholu
+R18	Dat Arg1:T55 Arg2:T54	
+R19	Dat Arg1:T55 Arg2:T56	
+R20	Dat Arg1:T57 Arg2:T59	
+R21	Neg Arg1:T58 Arg2:T59	
+A2	Status T56 Historical_Insignificant
+A3	Status T54 Historical_Insignificant
+T60	Condition 2178 2187	Uczulenia
+N27	Reference T60 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T61	Negation 2189 2195	neguje
+T62	Behaviour 2212 2238	warunki mieszkaniowe dobre
+T63	Behaviour 2241 2260	mieszka z partnerką
+R22	Neg Arg1:T61 Arg2:T60	
+T64	Drug 2261 2277	Leki: jak w IKZL

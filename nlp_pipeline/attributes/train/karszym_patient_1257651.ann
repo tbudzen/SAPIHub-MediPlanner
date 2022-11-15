@@ -1,0 +1,57 @@
+T1	Drug 345 350	Acard
+T2	Drug_dose 351 384	1 x 37,5 mg ( 1/2 tabl. a 75 mg )
+T3	Treatment 385 408	Kontrola kardiologiczna
+T4	Date 409 422	za ok. 6 m-cy
+T5	Investigation 424 470	Kontrola wartości saturacji metodą przezskórną
+T6	Treatment 481 510	objęcie opieką kepatologiczną
+T7	Investigation 527 547	elastografii wątroby
+R1	Dat Arg1:T4 Arg2:T3	
+R2	Drg Arg1:T1 Arg2:T2	
+T8	Condition 767 870	Wrodzona wada serca pod postacią zarośnięcia zastawki tętnicy płucnej z ciągła przegrodą międzykomorową
+N1	Reference T8 ICD10:Q22.0	Zarośnięcie zastawki pnia płucnego
+T9	Condition 872 920	hipoplazją prawej komory i zastawki trójdzielnej
+N2	Reference T9 ICD10:Q22.6	Zespół niedorozwoju prawej części serca
+T10	Treatment 970 1047	zespolenia aorty wstępującej z prawą tętnica płucną protezą Gore-Tex śr.3,5mm
+N3	Reference T10 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T11	Date 1049 1060	20.02.2014r
+R3	Dat Arg1:T11 Arg2:T10	
+T12	Treatment 1074 1107	operacji typu dwukierunkowy Glenn
+N4	Reference T12 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T13	Date 1161 1172	01.10.2014r
+T14	Treatment 1186 1202	operacji Fontana
+N5	Reference T14 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T15	Date 1240 1250	13.03.2017
+T16	Condition 1263 1320	udarze lewej półkuli mózgu pogranicza czołowo-skroniowego
+N6	Reference T16 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T17	Date 1322 1332	10. 2014r.
+T18	Condition 1338 1380	Dyskretny niedowład połowiczy prawostronny
+T19	Condition 1386 1417	Padaczka strukturalna poudarowa
+T20	Drug 1605 1610	Acard
+R4	Dat Arg1:T13 Arg2:T12	
+R5	Dat Arg1:T15 Arg2:T14	
+R6	Dat Arg1:T17 Arg2:T16	
+T21	Treatment 1738 1746	opercaji
+T22	Condition 1792 1807	po udarze mózgu
+N9	Reference T22 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T23	Drug 1829 1834	Acard
+T24	Treatment 1837 1856	jest rehabilitowana
+T25	Condition 1867 1884	częstych infekcji
+T26	Treatment 1890 1911	pod opieką Immunologa
+T27	Condition 1913 1930	wywiad alergiczny
+N10	Reference T27 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T28	Negation 1931 1937	ujemny
+R7	Neg Arg1:T28 Arg2:T27	
+N7	Reference T19 ICD10:G40.8	Inne padaczki
+T29	Condition 1747 1789	wrodzonej wady serca pod postacią AP + IVS
+N11	Reference T29 ICD10:Q25.5	Zarośnięcie pnia płucnego
+N8	Reference T21 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+N13	Reference T18 ICD10:G81.9	Porażenie połowicze, nieokreślone
+T31	Treatment 1205 1237	zaszyciem zastawki pnia płucnego
+N14	Reference T31 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R8	Dat Arg1:T15 Arg2:T31	
+T32	Treatment 1110 1159	podwiązaniem i przecięciem zespolenia centralnego
+N15	Reference T32 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R9	Dat Arg1:T13 Arg2:T32	
+T33	Treatment 933 967	operacji nacięcia zastawki płucnej
+N16	Reference T33 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R10	Dat Arg1:T11 Arg2:T33	

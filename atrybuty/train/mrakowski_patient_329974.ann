@@ -1,0 +1,91 @@
+T1	Condition 476 479	ASD
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Negation 482 491	negatywna
+R1	Neg Arg1:T2 Arg2:T1	
+T3	Symptom 505 513	omdleniu
+N2	Reference T3 ICD10:R55	Omdlenie i zapaść
+T4	Date 515 530	ok. 10 lat temu
+R2	Dat Arg1:T4 Arg2:T3	
+T5	Treatment 643 679	Wskazana dalsza opieka u lekarza POZ
+T6	Behaviour 683 778	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T7	Investigation 782 873	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T8	Symptom 1030 1038	omdleniu
+N3	Reference T8 ICD10:R55	Omdlenie i zapaść
+T9	Date 1039 1054	ok. 10 lat temu
+R3	Dat Arg1:T9 Arg2:T8	
+T10	Symptom 1097 1163	nie miała czucia w lewej kończynie górnej i lewej kończynie dolnej
+N4	Reference T10 ICD10:R20.2	Parestezje
+T11	Date 1168 1193	minęło po ok. 20 minutach
+R4	Dat Arg1:T11 Arg2:T10	
+T12	Treatment 1199 1208	usunięciu
+A1	Status T12 Historical_Insignificant
+T13	Date 1232 1236	2017
+R5	Dat Arg1:T13 Arg2:T12	
+T14	Condition 1285 1288	PFO
+N5	Reference T14 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T15	Negation 1294 1300	Neguje
+T16	Symptom 1301 1310	duszności
+N6	Reference T16 ICD10:R06.0	Duszność
+T17	Symptom 1312 1343	typowe bóle w klatce piersiowej
+R6	Neg Arg1:T15 Arg2:T16	
+R7	Neg Arg1:T15 Arg2:T17	
+T18	Symptom 1352 1417	uciski w klatce piersiowej pojawiające się niezależnie od wysiłku
+N8	Reference T18 ICD10:R07.3	Inne bóle w klatce piersiowej
+T19	Treatment 1444 1452	operacja
+A2	Status T19 Historical_Insignificant
+T20	Treatment 1478 1491	appendectomia
+A3	Status T20 Historical_Insignificant
+T21	Condition 1519 1522	WZW
+N9	Reference T21 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T22	Condition 1531 1540	borelioza
+N10	Reference T22 ICD10:A69.2	Choroba z Lyme
+T23	Condition 1548 1556	gruźlica
+T24	Condition 1562 1566	odra
+N12	Reference T24 ICD10:B05	Odra
+T25	Treatment 1576 1609	szczepiona prawdopodobnie na odrę
+T26	Negation 1572 1575	nie
+R8	Neg Arg1:T26 Arg2:T25	
+T27	Negation 1568 1569	-
+R9	Neg Arg1:T27 Arg2:T24	
+T28	Negation 1558 1559	-
+R10	Neg Arg1:T28 Arg2:T23	
+T29	Negation 1543 1544	-
+R11	Neg Arg1:T29 Arg2:T22	
+T30	Negation 1525 1526	-
+R12	Neg Arg1:T30 Arg2:T21	
+T31	Condition 1636 1638	MI
+N13	Reference T31 ICD10:I25.2	Przebyty zawał serca
+T33	Behaviour 1654 1669	Palenie tytoniu
+T34	Negation 1671 1681	nie, nigdy
+R14	Neg Arg1:T34 Arg2:T33	
+T35	Behaviour 1682 1693	Inne używki
+T36	Negation 1695 1698	nie
+R15	Neg Arg1:T36 Arg2:T35	
+T37	Condition 1699 1708	Uczulenia
+T38	Negation 1710 1716	neguje
+R16	Neg Arg1:T38 Arg2:T37	
+T39	Behaviour 1733 1759	warunki mieszkaniowe dobre
+A4	Status T31 Family
+T40	Treatment 1420 1437	Przebyte operacje
+A5	Source T14 Declared
+T41	Condition 1610 1625	Wywiad rodzinny
+A6	Status T41 Family
+T42	Condition 472 475	PFO
+R17	Neg Arg1:T2 Arg2:T42	
+T43	Condition 1209 1230	torbieli obu jajników
+N16	Reference T43 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+R18	Dat Arg1:T13 Arg2:T43	
+T44	Condition 1453 1476	żylaków kończyn dolnych
+N17	Reference T44 ICD10:I83	Żylaki kończyn dolnych
+N15	Reference T42 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T32	Condition 1289 1292	ASD
+A7	Source T32 Declared
+N18	Reference T32 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+A8	Status T44 Historical_Insignificant
+N19	Reference T37 ICD10:T78.4	Alergia, nieokreślona
+T45	Investigation 450 471	Obserwacja w kierunku
+N14	Reference T33 ICD10:Z72.0	Używanie tytoniu
+N11	Reference T23 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N20	Reference T35 ICD10:Z72	Problemy związane ze stylem życia
+A9	Status T43 Historical_Insignificant
+N7	Reference T17 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony

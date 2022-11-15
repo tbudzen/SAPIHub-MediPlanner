@@ -1,0 +1,152 @@
+T1	Treatment 346 373	dalsza opieka w poradni POZ
+T2	Treatment 389 506	kontrola kardiologiczna, gastroenterologiczna, diabetologiczna, okulistyczna, neurologiczna i u chirurga naczyniowego
+T3	Treatment 523 552	kontrola ciśnienia tętniczego
+T4	Treatment 568 588	kontrola lipidogramu
+T5	Behaviour 595 627	dieta DASH i niskocholesterolowa
+T6	Drug 673 678	Acard
+T7	Drug_dose 679 702	75 mg 1 tabl. wieczorem
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 711 717	Bibloc
+T9	Drug_dose 718 736	7.5mg 1 tabl. rano
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 745 752	Polpril
+T11	Drug_dose 753 777	2.5 mg 1 tabl. wieczorem
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 786 792	Atoris
+T13	Drug_dose 793 816	10 mg 1 tabl. wieczorem
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Drug 825 833	Torsemed
+T15	Drug_dose 834 851	5 mg 1 tabl. rano
+R5	Drg Arg1:T14 Arg2:T15	
+T16	Drug 860 867	Amlozek
+T17	Drug_dose 868 890	5 mg 1 tabl. wieczorem
+R6	Drg Arg1:T16 Arg2:T17	
+T18	Drug 899 908	Polprazol
+T19	Drug_dose 909 927	20 mg 1 tabl. rano
+R7	Drg Arg1:T18 Arg2:T19	
+T20	Drug 936 946	Duspatalin
+T21	Drug_dose 947 971	1 tabl. rano i wieczorem
+R8	Drg Arg1:T20 Arg2:T21	
+T22	Drug 979 989	Glucophage
+T23	Drug_dose 990 1038	1000 mg - wg dotychczasowych zaleceń diabetologa
+R9	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1048 1056	Glucobay
+T25	Drug_dose 1057 1102	50mg - wg dotychczasowych zaleceń diabetologa
+R10	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1112 1120	Glibetic
+T27	Drug_dose 1121 1166	4 mg - wg dotychczasowych zaleceń diabetologa
+R11	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1176 1184	Cavinton
+T29	Drug_dose 1185 1214	5 mg 1 tabl. rano i wieczorem
+R12	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1224 1230	Asamax
+T31	Drug_dose 1231 1276	500 mg - 1 tabl. rano, w południe i wieczorem
+R13	Drg Arg1:T30 Arg2:T31	
+T32	Investigation 3256 3266	Echo serca
+T33	Investigation 3269 3279	Holter EKG
+T34	Investigation 3282 3300	Próba dobutaminowa
+T35	Behaviour 3189 3215	warunki mieszkaniowe dobre
+T36	Negation 3166 3172	neguje
+T37	Condition 3155 3164	Uczulenia
+N1	Reference T37 ICD10:Z91.0	
+R14	Neg Arg1:T36 Arg2:T37	
+T38	Behaviour 3135 3153	Inne używki: kawka
+N2	Reference T38 ICD10:Z72.0	Używanie tytoniu
+T39	Negation 3131 3134	nie
+T40	Negation 3108 3112	brak
+T41	Condition 3084 3105	W wywiadzie rodzinnym
+A1	Status T41 Family
+R15	Neg Arg1:T40 Arg2:T41	
+T42	Behaviour 3114 3130	Palenie tytoniu:
+N3	Reference T42 ICD10:Z72.0	Używanie tytoniu
+R16	Neg Arg1:T39 Arg2:T42	
+T43	Condition 3068 3077	borelioza
+N4	Reference T43 ICD10:A69.2	Choroba z Lyme
+T44	Condition 3055 3058	WZW
+N5	Reference T44 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T45	Date 3059 3065	( -  )
+R17	Dat Arg1:T45 Arg2:T44	
+T46	Date 3078 3083	( - )
+R18	Dat Arg1:T46 Arg2:T43	
+T47	Condition 2944 2975	dyskopatki kręgosłupa szyjnego.
+N6	Reference T47 ICD10:M50	
+T48	Treatment 2926 2934	operacji
+T49	Treatment 2857 2872	cholecystektomi
+A2	Status T49 Historical_Insignificant
+T50	Condition 2892 2915	żylaków kończyn dolnych
+N7	Reference T50 ICD10:I83	Żylaki kończyn dolnych
+T51	Treatment 2883 2891	operacji
+T52	Treatment 1559 1614	PCI tętnicy pośredniej z implantacją DES oraz POBA I Dg
+T53	Condition 1521 1548	Przewlekła choroba wieńcowa
+T54	Date 1616 1623	03.2013
+R19	Dat Arg1:T54 Arg2:T53	
+R20	Dat Arg1:T54 Arg2:T52	
+T55	Condition 1626 1647	Nadciśnienie tętnicze
+N9	Reference T55 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T56	Condition 1649 1656	Nadwaga
+T57	Condition 1658 1673	Cukrzyca typu 2
+N10	Reference T57 ICD10:E11	Cukrzyca insulinoniezależna
+T58	Condition 1675 1721	Przewlekła choroba nerek w III stadium wg NKF.
+N11	Reference T58 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T59	Condition 1722 1744	Uchyłki jelita grubego
+N12	Reference T59 ICD10:K57	Choroba uchyłkowa jelita
+T60	Condition 1746 1765	Ślepota oka prawego
+N13	Reference T60 ICD10:H54.6	
+T61	Condition 2769 2788	ślepota oka prawego
+N14	Reference T61 ICD10:H54.6	
+T62	Condition 2744 2766	Uchyłki jelita grubego
+N15	Reference T62 ICD10:M57	
+T63	Condition 2709 2742	Choroba zwyrodnieniowa kręgosłupa
+T64	Condition 2640 2664	Przewlekłą choroba nerek
+N17	Reference T64 ICD10:N18.8	
+T65	Condition 2622 2637	Cukrzyca typu 2
+N18	Reference T65 ICD10:E11	Cukrzyca insulinoniezależna
+T66	Condition 2598 2619	Nadciśnienie tętnicze
+N19	Reference T66 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T67	Treatment 2541 2588	POBA I Dg oraz implantacji DES do t. pośredniej
+T68	Date 2589 2596	03.2013
+R21	Dat Arg1:T68 Arg2:T67	
+T69	Condition 2503 2530	Choroba niedokrwienna serca
+T70	Drug 2478 2487	Furoginum
+T71	Treatment 1977 1985	operacji
+T72	Condition 1986 2009	żylaków kończyn dolnych
+N21	Reference T72 ICD10:I83	Żylaki kończyn dolnych
+T73	Condition 1846 1881	Choroba zwyrodnieniowa kręgosłupa -
+T74	Condition 1911 1941	dyskopatii kręgosłupa szyjnego
+T75	Treatment 1890 1910	leczeniu operacyjnym
+A3	Status T75 Historical_Insignificant
+A4	Status T47 Historical_Insignificant
+A5	Status T48 Historical_Insignificant
+A6	Status T74 Historical_Insignificant
+N23	Reference T74 ICD10:M50	Choroby krążków międzykręgowych szyjnych
+T76	Treatment 1951 1967	cholecystektomii
+A7	Status T76 Historical_Insignificant
+T77	Condition 1804 1845	Przewlekła niewydolność naczyń mózgowych.
+N24	Reference T77 ICD10:I67.8	
+T78	Symptom 2251 2281	pogorszenia tolerancji wysiłku
+N25	Reference T78 ICD10:R53	Złe samopoczucie i zmęczenie
+T79	Symptom 2197 2224	ucisków w klatce piersiowej
+N26	Reference T79 ICD10:R07.3	
+T80	Date 2239 2245	w nocy
+R22	Dat Arg1:T80 Arg2:T79	
+T81	Symptom 2341 2353	zasłabnięcia
+T82	Symptom 2363 2382	utraty przytomności
+N28	Reference T82 ICD10:R55	Omdlenie i zapaść
+N27	Reference T81 ICD10:R53	Złe samopoczucie i zmęczenie
+T83	Symptom 2401 2418	uczucia duszności
+N29	Reference T83 ICD10:R06.0	Duszność
+T84	Condition 2437 2475	uczucie pieczenia przy oddawaniu moczu
+N30	Reference T84 ICD10:R30.0	Bolesne lub utrudnione oddawanie moczu
+T85	Condition 2667 2708	Przewlekła niewydolność naczyń mózgowych.
+N31	Reference T85 ICD10:I67.8	Inne określone choroby naczyń mózgowych
+T86	Condition 1767 1802	Zwyrodnienie plamki żółtej obu oczu
+N32	Reference T86 ICD10:H35.3	Zwyrodnienie plamki i bieguna tylnego
+T87	Condition 2790 2825	Zwyrodnienie plamki żółtej obu oczu
+N33	Reference T87 ICD10:H35.3	Zwyrodnienie plamki i bieguna tylnego
+T88	Treatment 2285 2307	Nasilenie dolegliwości
+T89	Date 2308 2323	od 2-3 miesięcy
+R23	Dat Arg1:T89 Arg2:T88	
+N8	Reference T53 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+N22	Reference T73 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+N20	Reference T69 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+N16	Reference T63 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone

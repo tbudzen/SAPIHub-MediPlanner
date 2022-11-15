@@ -1,0 +1,204 @@
+T1	Treatment 346 373	dalsza opieka w poradni POZ
+T2	Treatment 380 412	okresowa kontrola kardiologiczna
+T3	Date 437 461	pierwsza za 3-4 tygodnie
+T4	Treatment 463 516	po uzyskaniu poprawy kontrolne badanie można rozważyć
+T5	Date 517 530	co 6 miesięcy
+R1	Dat Arg1:T5 Arg2:T4	
+R2	Dat Arg1:T3 Arg2:T2	
+T6	Behaviour 536 586	unikanie ciąży do czasu wzrostu frakcji wyrzutowej
+T7	Investigation 598 626	badaniu echokardiograficznym
+T8	Investigation_result 587 595	LVEF>50%
+R3	Inv Arg1:T7 Arg2:T8	
+T9	Negation 642 655	niestosowanie
+T10	Drug 656 689	doustnych leków antykoncepcyjnych
+R4	Neg Arg1:T9 Arg2:T10	
+T11	Investigation 695 734	codzienna kontrola ciśnienia tętniczego
+T12	Investigation 741 858	kontrola morfologii krwi, stężenia d-dimerów, fibrynogenu, białka całkowitego, aminotransferaz i badanie ogólne moczu
+T13	Date 859 871	za 10-14 dni
+R5	Dat Arg1:T13 Arg2:T12	
+T14	Behaviour 877 887	dieta DASH
+T15	Behaviour 894 918	oszczędzający tryb życia
+T16	Drug 961 968	Accupro
+T17	Drug_dose 969 992	10 mg 1 tabl. wieczorem
+T18	Treatment 994 1050	dawka do optymalizacji pod kontrolą ciśnienia tętniczego
+T19	Investigation_result 1063 1111	w przypadku utrzymywania się wysokiego ciśnienia
+T20	Drug_dose 1128 1145	2 tabl. wieczorem
+R6	Drg Arg1:T16 Arg2:T17	
+T21	Drug 1153 1165	Tertensif SR
+T22	Drug_dose 1166 1178	1 tabl. rano
+T23	Drug 1187 1198	Betaloc ZOK
+T24	Drug_dose 1199 1214	25 1 tabl. rano
+T25	Drug 1222 1229	Fragmin
+T26	Drug_dose 1230 1307	roztwór do wstrzykiwań, 5000 j.m./0,2 ml, 1 ampułkostrzykawka podskórnie rano
+T27	Negation 1316 1326	ostawienia
+T28	Drug 1309 1312	lek
+R7	Neg Arg1:T27 Arg2:T28	
+T29	Treatment 1330 1377	konsultacji z lekarzem ginekologiem-położnikiem
+R8	Drg Arg1:T21 Arg2:T22	
+R9	Drg Arg1:T23 Arg2:T24	
+R10	Drg Arg1:T25 Arg2:T26	
+T30	Condition 1530 1551	Nadciśnienie tętnicze
+N1	Reference T30 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T31	Condition 1553 1576	Kardiomiopatia połogowa
+N2	Reference T31 ICD10:O90.3	Kardiomiopatia w czasie połogu
+T32	Treatment 1586 1619	porodzie drogą cięcia cesarskiego
+N3	Reference T32 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+T33	Date 1621 1631	21.04.2018
+R11	Dat Arg1:T33 Arg2:T32	
+T34	Condition 1634 1655	Głuchota ucha prawego
+A1	Status T34 Historical_Insignificant
+T35	Condition 1903 1926	Kardiomiopatia połogowa
+N5	Reference T35 ICD10:O90.3	Kardiomiopatia w czasie połogu
+T36	Condition 1928 1949	Nadciśnienie tętnicze
+N6	Reference T36 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T37	Condition 2202 2225	Kardiomiopatia połogowa
+N7	Reference T37 ICD10:O90.3	Kardiomiopatia w czasie połogu
+T38	Condition 2227 2234	Ciąża I
+T39	Condition 2236 2243	poród I
+T40	Condition 2245 2261	31 tydzień ciąży
+T41	Treatment 2264 2294	poród drogą cięcia cesarskiego
+N8	Reference T41 ICD10:O82.1	Poród pojedynczy przez cięcie cesarskie ze wskazań nagłych
+T42	Condition 2304 2325	zagrażającej rzucawki
+N9	Reference T42 ICD10:O14.9	Stan przedrzucawkowy nieokreślony
+T43	Date 2327 2337	21.04.2018
+T44	Condition 2340 2394	Łagodna niedomykalność zastawki trójdzielnej i płucnej
+T45	Condition 2396 2417	Nadciśnienie tętnicze
+N10	Reference T45 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T46	Condition 2419 2440	Głuchota ucha prawego
+A2	Status T46 Historical_Insignificant
+R12	Dat Arg1:T43 Arg2:T42	
+R13	Dat Arg1:T43 Arg2:T41	
+R14	Dat Arg1:T43 Arg2:T40	
+T47	Drug 2578 2585	Accupro
+T48	Drug_dose 2586 2594	10-20 mg
+T49	Drug 2596 2603	Beto ZK
+T50	Drug_dose 2604 2608	25mg
+R15	Drg Arg1:T47 Arg2:T48	
+R16	Drg Arg1:T49 Arg2:T50	
+T51	Treatment 2732 2759	dalsza opieka w poradni POZ
+T52	Investigation 2762 2857	okresową kontrolą morfologii krwi, białka całkowitego, aminotransferaz i badania ogólnego moczu
+T53	Treatment 2860 2892	okresowa kontrola kardiologiczna
+T54	Condition 2920 2937	uzyskaniu poprawy
+T55	Date 2971 2984	co 6 miesięcy
+R17	Dat Arg1:T55 Arg2:T129	
+T56	Behaviour 2988 3038	unikanie ciąży do czasu wzrostu frakcji wyrzutowej
+T57	Investigation 3050 3078	badaniu echokardiograficznym
+T58	Investigation_result 3039 3047	LVEF>50%
+R18	Inv Arg1:T57 Arg2:T58	
+T59	Negation 3092 3105	niestosowanie
+T60	Drug 3106 3139	doustnych leków antykoncepcyjnych
+R19	Neg Arg1:T59 Arg2:T60	
+T61	Investigation 3143 3182	codzienna kontrola ciśnienia tętniczego
+N12	Reference T61 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T62	Behaviour 3187 3197	dieta DASH
+T63	Behaviour 3202 3226	oszczędzający tryb życia
+T64	Drug 3265 3272	Accupro
+T65	Drug_dose 3273 3296	20 mg 1 tabl. wieczorem
+T66	Treatment 3298 3354	dawka do optymalizacji pod kontrolą ciśnienia tętniczego
+R20	Drg Arg1:T64 Arg2:T65	
+T68	Drug 3360 3371	Betaloc ZOK
+T69	Drug_dose 3372 3387	25 1 tabl. rano
+R21	Drg Arg1:T68 Arg2:T69	
+T67	Condition 3533 3541	w połogu
+T70	Condition 3546 3554	porodzie
+T71	Date 3555 3566	21.04.2018r
+T72	Investigation_result 3606 3645	labilnych wartości ciśnienia tętniczego
+R22	Dat Arg1:T71 Arg2:T70	
+T73	Treatment 3647 3670	Poród cesarskim cięciem
+N13	Reference T73 ICD10:O82.1	Poród pojedynczy przez cięcie cesarskie ze wskazań nagłych
+T74	Condition 3683 3719	zagrażajacym stanem przedrzucawkowym
+N14	Reference T74 ICD10:O14.9	Stan przedrzucawkowy nieokreślony
+T75	Condition 4486 4489	PIH
+N15	Reference T75 ICD10:O13	Nadciśnienie ciążowe [wywołane ciążą] bez znamiennego białkomoczu
+T76	Condition 3749 3752	WZW
+N16	Reference T76 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T77	Condition 3754 3763	borelioza
+N17	Reference T77 ICD10:A69.2	Choroba z Lyme
+T78	Negation 3766 3776	nie podaje
+R23	Neg Arg1:T78 Arg2:T77	
+R24	Neg Arg1:T78 Arg2:T76	
+T79	Condition 3777 3801	Wywiad rodzinny: dodatni
+A3	Status T79 Family
+T80	Behaviour 3802 3817	Palenie tytoniu
+N18	Reference T80 ICD10:Z72.0	Używanie tytoniu
+T81	Negation 3819 3829	nie podaje
+T82	Behaviour 3830 3841	Inne używki
+T83	Negation 3843 3853	nie podaje
+T84	Condition 3854 3863	Uczulenia
+N19	Reference T84 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T85	Negation 3865 3875	nie podaje
+T86	Behaviour 3894 3899	1 syn
+T87	Drug 3918 3927	Metyldopa
+T88	Drug 3929 3936	Amlopin
+T89	Drug 3938 3943	MgSo4
+T90	Investigation 3971 3981	echo serca
+T91	Investigation 3983 3987	ABPM
+T92	Investigation 3989 3995	Holter
+T93	Investigation 3997 4015	RTG kl. piersiowej
+R25	Neg Arg1:T81 Arg2:T80	
+R26	Neg Arg1:T83 Arg2:T82	
+R27	Neg Arg1:T85 Arg2:T84	
+T94	Condition 4212 4235	kardiomiopatia połogową
+N20	Reference T94 ICD10:O90.3	Kardiomiopatia w czasie połogu
+T95	Condition 4240 4248	porodzie
+T96	Date 4249 4260	21.04.2018r
+T97	Investigation_result 4291 4330	labilnych wartości ciśnienia tętniczego
+T98	Condition 4332 4350	Poród przedwczesny
+N21	Reference T98 ICD10:O60.1	Przedwczesna czynność porodowa z porodem przedwczesnym
+T99	Treatment 4351 4386	operacyjny drogą cięcia cesarskiego
+T100	Date 4388 4398	21.04.2018
+T101	Condition 4411 4447	zagrażajacym stanem przedrzucawkowym
+N23	Reference T101 ICD10:O14.9	Stan przedrzucawkowy nieokreślony
+T102	Condition 4450 4457	Ciąża I
+T103	Condition 4459 4466	poród I
+T104	Condition 4468 4484	31 tydzień ciąży
+T105	Condition 4491 4512	Syn żywy niedonoszony
+T106	Investigation_result 4513 4519	1540 g
+T107	Investigation 4520 4525	Apgar
+T108	Investigation_result 4525 4540	5/5/6/6 punktów
+R28	Inv Arg1:T107 Arg2:T108	
+R29	Dat Arg1:T96 Arg2:T94	
+R30	Dat Arg1:T96 Arg2:T95	
+R31	Dat Arg1:T96 Arg2:T97	
+R32	Dat Arg1:T100 Arg2:T99	
+R33	Dat Arg1:T100 Arg2:T98	
+R34	Dat Arg1:T100 Arg2:T101	
+N22	Reference T99 ICD10:O82.1	Poród pojedynczy przez cięcie cesarskie ze wskazań nagłych
+T109	Condition 4571 4574	WZW
+N24	Reference T109 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T110	Condition 4576 4585	borelioza
+N25	Reference T110 ICD10:A69.2	Choroba z Lyme
+T111	Negation 4588 4598	nie podaje
+T112	Condition 4599 4623	Wywiad rodzinny: dodatni
+A4	Status T112 Family
+T113	Behaviour 4624 4639	Palenie tytoniu
+N26	Reference T113 ICD10:Z72.0	Używanie tytoniu
+T114	Negation 4641 4651	nie podaje
+T115	Behaviour 4652 4663	Inne używki
+T116	Negation 4665 4675	nie podaje
+T117	Condition 4676 4685	Uczulenia
+N27	Reference T117 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T118	Negation 4687 4697	nie podaje
+T119	Behaviour 4716 4721	1 syn
+T120	Drug 4733 4740	Accupro
+T121	Drug_dose 4741 4746	10 mg
+T122	Drug 4748 4760	tertensif SR
+T123	Drug 4762 4773	Betaloc ZOK
+T124	Drug_dose 4774 4782	25 mg/d.
+T125	Investigation 4810 4820	echo serca
+R35	Neg Arg1:T118 Arg2:T117	
+R36	Neg Arg1:T116 Arg2:T115	
+R37	Neg Arg1:T114 Arg2:T113	
+R38	Neg Arg1:T111 Arg2:T110	
+R39	Neg Arg1:T111 Arg2:T109	
+T126	Investigation 4822 4826	ABPM
+R40	Drg Arg1:T120 Arg2:T121	
+R41	Drg Arg1:T123 Arg2:T124	
+T127	Investigation 415 434	echokardiograficzna
+R42	Dat Arg1:T3 Arg2:T127	
+T128	Investigation 2895 2914	echokardiograficzna
+T129	Investigation 2938 2970	kontrolne badania można rozważyć
+N4	Reference T34 ICD10:H90	Upośledzenie słuchu przewodzeniowe i czuciowo-nerwowe
+N11	Reference T46 ICD10:H90	Upośledzenie słuchu przewodzeniowe i czuciowo-nerwowe
+N28	Reference T82 ICD10:Z72	Problemy związane ze stylem życia
+N29	Reference T115 ICD10:Z72	Problemy związane ze stylem życia

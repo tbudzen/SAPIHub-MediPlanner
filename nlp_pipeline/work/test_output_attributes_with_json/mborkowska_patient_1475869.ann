@@ -1,0 +1,63 @@
+T1	Investigation 1841 1851	echo serca
+T2	Investigation 1853 1856	TET
+T3	Investigation 1858 1862	ABPM
+T4	Investigation 1864 1874	Holter ekg
+T5	Investigation 1876 1894	rtg kl. piersiowej
+T6	Behaviour 429 503	Dieta lekkostrawna z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T7	Behaviour 507 569	Regularne spożywanie posiłków i ograniczenie nadmiernego picia
+T8	Symptom 797 830	Atypowe bóle w klatce piersiowej.
+T9	Condition 831 868	Podejrzenie choroby wrzodowej żołądka
+T10	Negation 1654 1660	neguje
+T11	Behaviour 1635 1653	Uzależnienie inne:
+T12	Behaviour 1612 1633	Alkohol: okazjonalnie
+T13	Behaviour 1565 1611	Nikotynizm: tak do 6 m-cy wstecz, 10 paczkolat
+T14	Treatment 1518 1522	CABG
+T15	Condition 1513 1515	MI
+T16	Negation 1478 1484	neguje
+T17	Negation 1451 1457	neguje
+T18	Treatment 1459 1476	Przebyte operacje
+T19	Condition 1430 1449	W wywiadzie ponadto
+T20	Negation 1557 1563	neguje
+T21	Condition 1548 1555	Alergie
+T22	Drug 1720 1724	Leki
+T23	Negation 1726 1733	żadnych
+T24	Drug 1745 1751	Ebivol
+T25	Date 1735 1744	wcześniej
+T26	Drug 1765 1776	Betaloc ZOK
+T27	Symptom 1754 1763	spadki BP
+T28	Symptom 1779 1813	bez efektu, ale też bez spadków BP
+T29	Investigation_result 1394 1416	- tachykardia zatokowa
+T30	Investigation 1354 1364	Holter EKG
+T31	Date 1380 1393	w przeszłości
+T32	Symptom 1037 1064	bólów o charakterze wysiłku
+T33	Symptom 1298 1351	złe samopoczucie "zawroty głowy, ospały, jak na kacu"
+T34	Date 1068 1085	1 x 1.5 roku temu
+T35	Symptom 1086 1145	w wysiłku (siłowania, spacer szybki, duszne pomieszczenia),
+T36	Symptom 1156 1179	spoczynkowe 5x dziennie
+T37	Symptom 1226 1272	promieniowaniem do pleców - ból kilkusekundowy
+T38	Date 1193 1204	6 m-cy temu
+N1	Reference T11 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+N2	Reference T12 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N3	Reference T13 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N4	Reference T14 ICD10:Z95.1	ObecnoÅÄ pomostÃ³w naczyniowych aortalno-wieÅcowych omijajÄcych typu bypass
+N5	Reference T15 ICD10:I34.0	NiedomykalnoÅÄ zastawki mitralnej
+N6	Reference T18 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N7	Reference T21 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N8	Reference T32 ICD10:R51	BÃ³l gÅowy
+R1	Dat Arg1:T34 Arg2:T32
+R10	Dat Arg1:T38 Arg2:T36
+R13	Neg Arg1:T17 Arg2:T19
+R15	Dat Arg1:T31 Arg2:T19
+R20	Neg Arg1:T16 Arg2:T18
+R22	Neg Arg1:T20 Arg2:T21
+R23	Neg Arg1:T20 Arg2:T13
+R28	Neg Arg1:T10 Arg2:T11
+R3	Dat Arg1:T34 Arg2:T35
+R39	Neg Arg1:T23 Arg2:T22
+R40	Neg Arg1:T23 Arg2:T24
+R47	Dat Arg1:T25 Arg2:T22
+R48	Dat Arg1:T25 Arg2:T24
+A1	Status T14 Family
+A2	Status T15 Family
+A3	Status T32 Historical_Insignificant
+A4	Source T9 Declared

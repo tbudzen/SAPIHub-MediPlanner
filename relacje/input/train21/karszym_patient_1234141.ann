@@ -1,0 +1,86 @@
+T1	Treatment 345 372	dalsza opieka w poradni POZ
+T2	Treatment 380 430	okresowa kontrola kardiologiczna i diabetologiczna
+T3	Treatment 438 477	regularna kontrola ciśnienia tętniczego
+T4	Treatment 485 514	okresowa kontrola lipidogramu
+T5	Investigation 516 536	badanie ogólne moczu
+T6	Date 537 547	za tydzień
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Behaviour 553 624	dieta uboga w cukry proste z unikaniem alkoholu, bogata w kwasy omega-3
+T8	Behaviour 630 649	redukcja masy ciała
+T9	Behaviour 658 703	stały, umiarkowany, aerobowy wysiłek fizyczny
+T10	Drug 749 756	Roswera
+T11	Drug 789 795	Karbis
+T12	Drug 822 831	Metformax
+T13	Drug_dose 757 780	30 mg 1 tabl. wieczorem
+T14	Drug_dose 796 813	8 mg 1 tabl. rano
+T15	Drug_dose 832 863	500 mg 1 tabl. rano i wieczorem
+R2	Drg Arg1:T10 Arg2:T13	
+R3	Drg Arg1:T11 Arg2:T14	
+R4	Drg Arg1:T12 Arg2:T15	
+T16	Condition 1090 1152	Wada serca pod postacią niedomykalności trójdzielnej I stopnia
+N1	Reference T16 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T17	Condition 1154 1200	Blok przedniej wiązki lewej odnogi pęczka Hisa
+N2	Reference T17 ICD10:I44.4	Blok przedniej gałęzi lewej odnogi pęczka Hisa
+T18	Condition 1202 1235	Nadciśnienie tętnicze skorygowane
+N3	Reference T18 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T19	Condition 1237 1244	Nadwaga
+T20	Condition 1246 1266	Hipertriglicerydemia
+N4	Reference T20 ICD10:E78.1	Czysta hiperglicerydemia
+T21	Condition 1268 1300	Nieprawidłowa tolerancja glukozy
+N5	Reference T21 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T22	Condition 1302 1322	Stłuszczenie wątroby
+N6	Reference T22 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T23	Condition 1324 1360	Torbiele okołomiedniczkowe obu nerek
+T24	Symptom 1526 1585	bólów w klatce piersiowej (kłujące, spoczynkowe i wysiłkowe
+N7	Reference T24 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T25	Symptom 1605 1631	duszności - II kl. wg NYHA
+N8	Reference T25 ICD10:R06.0	Duszność
+T26	Date 1646 1654	od 2 lat
+R5	Dat Arg1:T26 Arg2:T24	
+R6	Dat Arg1:T26 Arg2:T25	
+T27	Symptom 1672 1725	"drętwienie" k. górnej lewej - w czasie jazdy rowerem
+T28	Date 1727 1739	tydzien temu
+T29	Symptom 1741 1751	1 incydent
+R7	Dat Arg1:T28 Arg2:T27	
+R8	Dat Arg1:T28 Arg2:T29	
+T30	Condition 1777 1779	HA
+N9	Reference T30 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T31	Date 1782 1790	od 3 lat
+T32	Treatment 1792 1803	skorygowane
+R9	Dat Arg1:T31 Arg2:T30	
+R10	Dat Arg1:T31 Arg2:T32	
+T33	Condition 1805 1825	hipertriglicerydemia
+N10	Reference T33 ICD10:E78.1	Czysta hiperglicerydemia
+T34	Treatment 1827 1859	Przebyte operacje:ginekologiczna
+A1	Status T34 Historical_Insignificant
+N11	Reference T34 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T35	Condition 1872 1887	Wywiad rodzinny
+A2	Status T35 Family
+T36	Negation 1889 1902	bez znaczenia
+R11	Neg Arg1:T36 Arg2:T35	
+T37	Condition 1904 1936	Alergie: kurz - łzawienie, katar
+N12	Reference T37 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T40	Behaviour 1939 1949	Nikotynizm
+N13	Reference T40 ICD10:Z72.0	Używanie tytoniu
+T41	Negation 1951 1957	neguje
+R12	Neg Arg1:T41 Arg2:T40	
+T38	Behaviour 1960 1981	Alkohol: okazjonalnie
+T39	Behaviour 1983 2000	Uzależnienie inne
+T42	Negation 2002 2008	neguje
+R13	Neg Arg1:T42 Arg2:T39	
+T43	Behaviour 2026 2040	praca umysłowa
+T44	Drug 2048 2054	Karbis
+T45	Drug_dose 2055 2077	8 mg 1 tabl. wieczorem
+T46	Drug 2079 2088	Lipanthyl
+T47	Drug_dose 2089 2110	267 1 tabl. wieczorem
+R14	Drg Arg1:T44 Arg2:T45	
+R15	Drg Arg1:T46 Arg2:T47	
+T48	Investigation 2139 2149	echo serca
+T49	Investigation 2151 2154	TET
+T50	Investigation 2156 2160	ABPM
+T51	Investigation 2162 2172	Holter ekg
+T52	Investigation 2174 2192	rtg kl. piersiowej
+A3	Status T38 Historical_Insignificant
+N14	Reference T38 ICD10:Z72.1	Używanie alkoholu
+T53	Condition 1862 1869	torbiel
+N15	Reference T53 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe

@@ -1,0 +1,142 @@
+T1	Treatment 346 373	dalsza opieka w poradni POZ
+T2	Treatment 380 432	okresowa kontrola kardiologiczna i endokrynologiczna
+T3	Date 435 457	kolejna za 4-6 tygodni
+T4	Investigation_result 470 507	oznaczeniu stężenia hormonów tarczycy
+T5	Investigation 522 536	wykonanie ABPM
+T6	Date 537 552	za 8-12 tygodni
+T7	Treatment 555 592	ewentualne rozpoczęcie farmakoterapii
+T8	Condition 593 616	nadciśnienia tętniczego
+N1	Reference T8 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T9	Investigation 623 662	regularna kontrola ciśnienia tętniczego
+T10	Investigation 669 698	okresowa kontrola lipidogramu
+T11	Date 700 721	pierwsza za 6 tygodni
+T12	Behaviour 729 739	dieta DASH
+T13	Behaviour 745 764	redukcja masy ciała
+T14	Behaviour 772 817	stały, umiarkowany, aerobowy wysiłek fizyczny
+T15	Drug 861 866	Acard
+T16	Drug 915 922	Zaranta
+T17	Drug 952 960	Euthyrox
+T18	Drug 994 1011	Witamina D3 Forte
+T19	Negation 2363 2369	neguje
+T20	Condition 2279 2286	Alergie
+N2	Reference T20 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T21	Investigation 2498 2508	echo serca
+T22	Investigation 2510 2513	TET
+T23	Investigation 2515 2519	ABPM
+T24	Investigation 2521 2531	Holter ekg
+T25	Investigation_result 2533 2550	rtg kl. piersiowe
+T26	Negation 2462 2469	żadnych
+T27	Drug 2456 2460	Leki
+T28	Negation 2414 2420	neguje
+T29	Behaviour 2438 2455	projektant wnętrz
+T30	Behaviour 2351 2361	Nikotynizm
+N3	Reference T30 ICD10:Z72.0	Używanie tytoniu
+R1	Dat Arg1:T3 Arg2:T2	
+R2	Dat Arg1:T6 Arg2:T5	
+R3	Dat Arg1:T6 Arg2:T7	
+R4	Dat Arg1:T6 Arg2:T8	
+R5	Dat Arg1:T3 Arg2:T4	
+R6	Dat Arg1:T11 Arg2:T10	
+T31	Drug_dose 867 885	75 mg 1 tabl. rano
+T32	Drug_dose 923 945	5 mg 1 tabl. wieczorem
+T33	Drug_dose 961 986	N25 1 tabl. rano na czczo
+T34	Drug_dose 1012 1030	2000j 1 tabl. rano
+T35	Condition 1280 1307	Przewlekła choroba wieńcowa
+N4	Reference T35 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T36	Condition 1309 1351	Nadciśnienie tętnicze I stopnia wg ESH/ESC
+N5	Reference T36 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T37	Condition 1353 1373	Hipercholesterolemia
+N6	Reference T37 ICD10:E78.0	Czysta hipercholesterolemia
+T38	Condition 1375 1399	Otyłość I stopnia wg WHO
+N7	Reference T38 ICD10:E66.9	Otyłość, nieokreślona
+T39	Condition 1401 1447	Niedomykalność zastawki trójdzielnej I stopnia
+N8	Reference T39 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T40	Condition 1449 1471	Niedoczynność tarczycy
+N9	Reference T40 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T41	Condition 1484 1501	choroby Hashimoto
+N10	Reference T41 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T42	Condition 1503 1523	Niedobór witaminy D3
+N11	Reference T42 ICD10:E55.9	Niedobór witaminy D, nieokreślony
+T43	Condition 1533 1555	wypadku komunikacyjnym
+N12	Reference T43 ICD10:V99	Nieokreślony wypadek komunikacyjny
+T44	Condition 1558 1570	urazem żeber
+N13	Reference T44 ICD10:S22.4	Liczne złamania żeber
+T45	Condition 1573 1577	płuc
+N14	Reference T45 ICD10:S27.3	Inne urazy płuca
+T46	Condition 1579 1586	Alergia
+N15	Reference T46 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R7	Drg Arg1:T15 Arg2:T31	
+R8	Drg Arg1:T16 Arg2:T32	
+R9	Drg Arg1:T17 Arg2:T33	
+R10	Drg Arg1:T18 Arg2:T34	
+T47	Investigation_result 1776 1815	labilnych wartości ciśnienia tętniczego
+T48	Date 1817 1824	od roku
+T49	Negation 1828 1841	nie przyjmuje
+T50	Drug 1842 1862	leków hipotensyjnych
+T51	Symptom 1890 1908	wzmożoną potliwość
+N16	Reference T51 ICD10:R61.1	Nadmierne pocenie uogólnione
+T52	Investigation 1912 1915	ekg
+T53	Investigation_result 1916 1941	obniżenie odc. ST w V3-V6
+N17	Reference T53 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+T54	Investigation_result 1943 1951	PQ 120ms
+T55	Condition 1973 1986	ch. Hashimoto
+N18	Reference T55 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T56	Date 1989 1998	od 20 lat
+T57	Investigation 2009 2035	kontrola hormonów tarczycy
+T58	Date 2036 2042	wiosną
+T59	Condition 2053 2075	wypadku komunikacyjnym
+N19	Reference T59 ICD10:V99	Nieokreślony wypadek komunikacyjny
+T60	Date 2078 2089	2 lata temu
+T61	Condition 2092 2104	urazem żeber
+N20	Reference T61 ICD10:S22.4	Liczne złamania żeber
+T62	Condition 2107 2111	płuc
+N21	Reference T62 ICD10:S27.3	Inne urazy płuca
+T63	Investigation_result 2113 2136	niskie stężenie wit. D3
+N22	Reference T63 ICD10:R79.8	Inne określone nieprawidłowości badań biochemicznych krwi
+T64	Treatment 2137 2154	Przebyte operacje
+N23	Reference T64 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T65	Treatment 2156 2169	appendektomia
+A1	Status T65 Historical_Insignificant
+N24	Reference T65 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T66	Date 2170 2181	30 lat temu
+R11	Dat Arg1:T66 Arg2:T65	
+R12	Dat Arg1:T56 Arg2:T55	
+R13	Dat Arg1:T58 Arg2:T57	
+R14	Dat Arg1:T60 Arg2:T59	
+R15	Dat Arg1:T60 Arg2:T61	
+R16	Dat Arg1:T60 Arg2:T62	
+R17	Dat Arg1:T48 Arg2:T47	
+R18	Neg Arg1:T49 Arg2:T50	
+R19	Inv Arg1:T52 Arg2:T53	
+R20	Inv Arg1:T52 Arg2:T54	
+T67	Condition 2213 2224	zawal serca
+A2	Status T67 Family
+N25	Reference T67 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T68	Date 2199 2204	42 rz
+T69	Condition 2227 2231	zgon
+A3	Status T69 Family
+N26	Reference T69 ICD10:I46.1	Nagły zgon sercowy, tak opisany
+T70	Date 2233 2237	57rz
+T71	Condition 2252 2254	MI
+A4	Status T71 Family
+N27	Reference T71 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T72	Condition 2257 2261	zgon
+A5	Status T72 Family
+N28	Reference T72 ICD10:I46.1	Nagły zgon sercowy, tak opisany
+T73	Date 2263 2268	56 rz
+T74	Condition 2275 2277	MI
+A6	Status T74 Family
+N29	Reference T74 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T75	Behaviour 2372 2393	Alkohol: okazjonalnie
+A7	Status T75 Historical_Insignificant
+N30	Reference T75 ICD10:Z72.1	Używanie alkoholu
+T76	Behaviour 2395 2412	Uzależnienie inne
+N31	Reference T76 ICD10:Z72	Problemy związane ze stylem życia
+R21	Neg Arg1:T26 Arg2:T27	
+R22	Neg Arg1:T28 Arg2:T76	
+R23	Neg Arg1:T19 Arg2:T30	
+R24	Dat Arg1:T68 Arg2:T67	
+R25	Dat Arg1:T68 Arg2:T69	
+R26	Dat Arg1:T70 Arg2:T71	
+R27	Dat Arg1:T70 Arg2:T72	
+R28	Dat Arg1:T73 Arg2:T74	

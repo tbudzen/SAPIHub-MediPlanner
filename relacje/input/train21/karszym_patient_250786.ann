@@ -1,0 +1,41 @@
+T1	Treatment 362 394	wizytę w poradni kardiologicznej
+T2	Date 395 409	wiosną 2020 r.
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Treatment 332 360	Dalsza opieka kardiologiczna
+T4	Behaviour 470 527	może podejmować wysiłki fizyczne na poziomie rekreacyjnym
+T5	Date 532 542	Raz w roku
+T6	Investigation 603 622	badania usg doppler
+R2	Dat Arg1:T5 Arg2:T6	
+T7	Condition 927 987	Wrodzona wada serca pod postacią zastawkowego zwężenia aorty
+N1	Reference T7 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T8	Treatment 997 1010	komisurotomii
+N2	Reference T8 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T9	Treatment 1048 1056	plastyce
+T11	Treatment 1092 1105	Korekcja wady
+T12	Date 1113 1124	30.09.2010r
+R3	Dat Arg1:T12 Arg2:T11	
+N4	Reference T11 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T13	Condition 1260 1262	SA
+N5	Reference T13 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T15	Drug 1278 1292	leków na stałe
+T16	Negation 1293 1306	nie otrzymuje
+R4	Neg Arg1:T16 Arg2:T15	
+T17	Condition 1309 1326	wywiad alergiczny
+N7	Reference T17 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T18	Negation 1327 1333	ujemny
+R5	Neg Arg1:T18 Arg2:T17	
+R6	Dat Arg1:T12 Arg2:T8	
+R7	Dat Arg1:T12 Arg2:T9	
+T10	Treatment 1268 1276	korekcji
+N3	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T14	Condition 1011 1042	dwupłatkowej zastawki aortalnej
+N6	Reference T14 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+R8	Dat Arg1:T12 Arg2:T14	
+T19	Condition 1057 1090	tętniaka części wstępującej aorty
+N8	Reference T19 ICD10:I71.2	Tętniak odcinka piersiowego aorty, bez informacji o pęknięciu
+R9	Dat Arg1:T12 Arg2:T19	
+T20	Treatment 557 591	ocena aorty piersiowej i brzusznej
+T21	Treatment 623 675	celem wykluczenia ewentualnego tętniaka w/w odcinków
+R10	Dat Arg1:T5 Arg2:T20	
+R11	Dat Arg1:T5 Arg2:T21	
+R12	Dat Arg1:T12 Arg2:T7	

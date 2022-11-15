@@ -1,0 +1,162 @@
+T1	Treatment 333 434	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Endokrynologicznej i Chorób Piersi
+T2	Treatment 439 519	Wskazana coroczna kontrola w warunkach ambulatoryjnych w Poradni Kardiologicznej
+T3	Treatment 524 570	Wskazana dalsza opieka w Poradni Chorób Piersi
+T4	Behaviour 596 635	Dieta lekkostrawna, niskocholesterolowa
+T5	Investigation 642 733	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T6	Date 734 744	co 6-8 tyg
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Investigation 758 806	Systematyczna kontrola ciśnienia tętniczego krwi
+T8	Drug 819 825	Telmix
+T9	Drug_dose 826 851	80 mg 1x1 tabl. wieczorem
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 852 861	Nebivolek
+T11	Drug_dose 862 882	10 mg 1x1 tabl. rano
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 883 887	Agen
+T13	Drug_dose 888 913	10 mg 1x1 tabl. wieczorem
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Drug 914 926	Tertensif SR
+T15	Drug_dose 927 941	1x1 tabl. rano
+R5	Drg Arg1:T14 Arg2:T15	
+T16	Drug 942 949	Romazic
+T17	Drug_dose 950 975	40 mg 1x1 tabl. wieczorem
+R6	Drg Arg1:T16 Arg2:T17	
+T18	Drug 976 988	Euthyrox N50
+T19	Drug_dose 989 1022	w dni nieparzyste: 1x1 tabl. rano
+R7	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1023 1035	Euthyrox N75
+T21	Drug_dose 1036 1066	w dni parzyste: 1x1 tabl. rano
+R8	Drg Arg1:T20 Arg2:T21	
+T22	Condition 1284 1315	Łagodna niedomykalność mitralna
+N1	Reference T22 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T23	Condition 1317 1368	Nadciśnienie tętnicze kontrolowane farmakologicznie
+N2	Reference T23 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T25	Treatment 1403 1415	strumektomii
+A1	Status T25 Historical_Insignificant
+T26	Date 1417 1421	2011
+R9	Dat Arg1:T26 Arg2:T25	
+T27	Condition 1448 1460	Dyslipidemia
+N4	Reference T27 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T28	Condition 1462 1479	Guz piersi prawej
+T29	Condition 1502 1522	Macica mięśniakowata
+N5	Reference T29 ICD10:D25	Mięśniak gładkokomórkowy macicy
+T30	Condition 1524 1542	Ślepota oka lewego
+N6	Reference T30 ICD10:H54.4	Ślepota jednego oka
+T31	Investigation_result 1716 1783	wysokich wartości ciśnienia tętniczego (przy przyjęciu 220/120mmHg)
+N7	Reference T31 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T32	Symptom 1867 1898	zmniejszenie tolerancji wysiłku
+N8	Reference T32 ICD10:R53	Złe samopoczucie i zmęczenie
+T33	Symptom 1915 2032	dolegliwości bólowe w klatce piersiowej o charakterze ucisku, niezwiązany z wysiłkiem fizycznym (związany ze stresem)
+N9	Reference T33 ICD10:R07.3	Inne bóle w klatce piersiowej
+T34	Symptom 2033 2063	okresowo łagodne zawroty głowy
+N10	Reference T34 ICD10:R42	Zawroty głowy i odurzenie
+T35	Symptom 2069 2102	dolegliwości bólowe piersi prawej
+N11	Reference T35 ICD10:R52	Ból niesklasyfikowany gdzie indziej
+T36	Negation 2104 2110	Neguje
+T37	Symptom 2111 2123	zasłabnięcia
+T38	Symptom 2125 2133	omdlenia
+N12	Reference T38 ICD10:R55	Omdlenie i zapaść
+T39	Symptom 2135 2145	krwawienia
+T40	Symptom 2147 2160	czarne stolce
+N13	Reference T40 ICD10:K92.1	Stolce smołowate
+T41	Symptom 2162 2178	brunatne wymioty
+N14	Reference T41 ICD10:K92.0	Wymioty krwawe
+T42	Condition 2180 2196	chorobę wrzodową
+N15	Reference T42 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T43	Symptom 2198 2212	duszność nocną
+N16	Reference T43 ICD10:R06.0	Duszność
+T44	Symptom 2214 2229	obrzęki podudzi
+N17	Reference T44 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T45	Symptom 2231 2255	bóle w klatce piersiowej
+N18	Reference T45 ICD10:R07	Ból gardła i w klatce piersiowej
+R10	Neg Arg1:T36 Arg2:T45	
+R11	Neg Arg1:T36 Arg2:T44	
+R12	Neg Arg1:T36 Arg2:T43	
+R13	Neg Arg1:T36 Arg2:T42	
+R14	Neg Arg1:T36 Arg2:T41	
+R15	Neg Arg1:T36 Arg2:T40	
+R16	Neg Arg1:T36 Arg2:T39	
+R17	Neg Arg1:T36 Arg2:T38	
+R18	Neg Arg1:T36 Arg2:T37	
+T46	Symptom 2257 2276	Innych dolegliwości
+T47	Negation 2277 2288	nie zgłasza
+R19	Neg Arg1:T47 Arg2:T46	
+T48	Condition 2303 2324	Nadciśnienie tętnicze
+N19	Reference T48 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T50	Treatment 2359 2371	strumektomii
+A2	Status T50 Historical_Insignificant
+T51	Date 2373 2377	2011
+R20	Dat Arg1:T51 Arg2:T50	
+T52	Condition 2380 2392	Dyslipidemia
+N21	Reference T52 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T53	Condition 2406 2423	Guz piersi prawej
+T54	Condition 2446 2466	Macica mięśniakowata
+N22	Reference T54 ICD10:D25	Mięśniak gładkokomórkowy macicy
+T55	Condition 2468 2486	Ślepota oka lewego
+N23	Reference T55 ICD10:H54.4	Ślepota jednego oka
+T56	Treatment 2488 2505	Przebyte operacje
+T57	Condition 2538 2541	WZW
+N24	Reference T57 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T58	Condition 2550 2559	borelioza
+N25	Reference T58 ICD10:A69.2	Choroba z Lyme
+T59	Condition 2567 2575	grużlica
+N26	Reference T59 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T60	Condition 2583 2587	odra
+N27	Reference T60 ICD10:B05	Odra
+T61	Negation 2590 2591	-
+T62	Negation 2578 2579	-
+T63	Negation 2562 2563	-
+T64	Negation 2544 2545	-
+R21	Neg Arg1:T64 Arg2:T57	
+R22	Neg Arg1:T63 Arg2:T58	
+R23	Neg Arg1:T62 Arg2:T59	
+R24	Neg Arg1:T61 Arg2:T60	
+T65	Condition 2594 2609	Wywiad rodzinny
+A3	Status T65 Family
+T66	Negation 2611 2621	nieistotny
+R25	Neg Arg1:T66 Arg2:T65	
+T67	Behaviour 2623 2638	Palenie tytoniu
+N28	Reference T67 ICD10:Z72.0	
+T68	Negation 2640 2658	aktualnie nie pali
+R26	Neg Arg1:T68 Arg2:T67	
+T69	Date 2675 2686	30 lat temu
+T70	Behaviour 2688 2717	1-2 lata 4 papierosy dziennie
+N29	Reference T70 ICD10:Z72.0	Używanie tytoniu
+R27	Dat Arg1:T69 Arg2:T70	
+T71	Behaviour 2719 2730	Inne używki
+T72	Negation 2732 2738	neguje
+R28	Neg Arg1:T72 Arg2:T71	
+T73	Condition 2740 2749	Uczulenia
+T74	Negation 2751 2757	neguje
+R29	Neg Arg1:T74 Arg2:T73	
+T75	Behaviour 2775 2801	warunki mieszkaniowe dobre
+T76	Drug 2826 2842	Euthyrox N75/N50
+T77	Drug_dose 2843 2855	1 tabletka R
+R30	Drg Arg1:T76 Arg2:T77	
+T78	Drug 2857 2863	Telmix
+T79	Drug_dose 2864 2881	80mg 1 tabletka W
+R31	Drg Arg1:T78 Arg2:T79	
+T80	Drug 2883 2888	Axtil
+T81	Drug_dose 2889 2906	10mg 1 tabletka R
+R32	Drg Arg1:T80 Arg2:T81	
+T82	Drug 2908 2920	Tertensif SR
+T83	Drug_dose 2921 2933	1 tabletka R
+R33	Drg Arg1:T82 Arg2:T83	
+T84	Drug 2935 2944	NebivoLek
+T85	Drug_dose 2945 2961	5mg 1 tabletka R
+R34	Drg Arg1:T84 Arg2:T85	
+T86	Drug 2963 2967	Agen
+T87	Drug_dose 2968 2984	5mg 1 tabletka W
+R35	Drg Arg1:T86 Arg2:T87	
+T88	Investigation 3000 3003	TTE
+T89	Investigation 3005 3008	TET
+T90	Investigation 3010 3014	ABPM
+T91	Investigation 3016 3026	Holter EKG
+N3	Reference T28 ICD10:N63	Nieokreślony guzek w piersi
+N20	Reference T53 ICD10:N63	Nieokreślony guzek w piersi
+T24	Condition 1370 1392	Niedoczynność tarczycy
+N30	Reference T24 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T49	Condition 2326 2348	Niedoczynność tarczycy
+N31	Reference T49 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+R36	Dat Arg1:T51 Arg2:T49	
+R37	Dat Arg1:T26 Arg2:T24	

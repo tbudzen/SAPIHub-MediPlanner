@@ -1,0 +1,68 @@
+T1	Treatment 331 350	Dalsza opieka w POZ
+T2	Treatment 355 398	Wskazana kontrola w Poradni Kardiologicznej
+T3	Date 399 412	za 6 miesięcy
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Treatment 416 523	Hospitalizacja w Klinice Kardiologii i Wad Wrodzonych Dorosłych ICZMP w celu ponownej oceny kardiologicznej
+T5	Date 524 538	za 12 miesięcy
+R2	Dat Arg1:T5 Arg2:T4	
+T6	Investigation 543 563	Okresowa kontrola mo
+T7	Condition 757 817	Wrodzona wada serca pod postacią zwężenia zastawki aortalnej
+N1	Reference T7 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T8	Treatment 827 844	operacji m. Rossa
+T9	Date 846 850	2005
+R3	Dat Arg1:T9 Arg2:T8	
+T10	Condition 853 894	Łagodna niedomykalność zastawki aortalnej
+N2	Reference T10 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T11	Condition 896 930	Poszerzona opuszka aorty (do 50mm)
+T12	Condition 932 1016	Cechy zwyrodnienia homograftu płucnego (łagodne zwężenie z łagodną niedomykalnością)
+N4	Reference T12 ICD10:I37.2	Zwężenie zastawki pnia płucnego z niedomykalnością
+T13	Condition 1422 1473	wadą serca pod postacią zwężania zastawki aortalnej
+N5	Reference T13 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T14	Treatment 1475 1492	po operacji Rossa
+T15	Date 1494 1499	2005r
+R4	Dat Arg1:T15 Arg2:T14	
+T16	Negation 1559 1562	bez
+T17	Symptom 1563 1575	dolegliwości
+R5	Neg Arg1:T16 Arg2:T17	
+T18	Negation 1579 1585	Neguje
+T19	Symptom 1586 1598	zasłabnięcia
+T20	Negation 1601 1607	neguje
+T21	Symptom 1608 1632	bóle w klatce piersiowej
+N6	Reference T21 ICD10:R07	Ból gardła i w klatce piersiowej
+R6	Neg Arg1:T20 Arg2:T21	
+R7	Neg Arg1:T18 Arg2:T19	
+T22	Treatment 1654 1672	sprowadzanie jądra
+A1	Status T22 Historical_Insignificant
+T23	Date 1673 1687	w dzieciństwie
+R8	Dat Arg1:T23 Arg2:T22	
+T24	Treatment 1689 1708	Leczenie przewlekłe
+T25	Negation 1711 1717	neguje
+R9	Neg Arg1:T25 Arg2:T24	
+T26	Condition 1746 1749	WZW
+N7	Reference T26 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T27	Condition 1759 1768	borelioza
+N8	Reference T27 ICD10:A69.2	Choroba z Lyme
+T28	Negation 1771 1772	-
+R10	Neg Arg1:T28 Arg2:T27	
+T29	Negation 1752 1753	-
+R11	Neg Arg1:T29 Arg2:T26	
+T30	Condition 1777 1796	wywiadzie rodzinnym
+A2	Status T30 Family
+T31	Negation 1799 1810	brak danych
+R12	Neg Arg1:T31 Arg2:T30	
+T32	Behaviour 1812 1827	Palenie tytoniu
+N9	Reference T32 ICD10:Z72.0	Używanie tytoniu
+T33	Negation 1829 1832	nie
+R13	Neg Arg1:T33 Arg2:T32	
+T34	Behaviour 1833 1844	Inne używki
+T35	Negation 1846 1849	nie
+R14	Neg Arg1:T35 Arg2:T34	
+T36	Condition 1850 1859	Uczulenia
+T37	Drug 1864 1876	doksycyklinę
+R15	Alg Arg1:T36 Arg2:T37	
+T38	Behaviour 1894 1920	warunki mieszkaniowe dobre
+T39	Investigation 1988 1998	Echo serca
+T40	Investigation 2001 2016	Holter EKG i RR
+T41	Investigation 2020 2035	Próba Wysiłkowa
+T42	Treatment 1634 1651	Przebyte operacje
+N3	Reference T11 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego

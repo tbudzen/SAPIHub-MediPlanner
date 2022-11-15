@@ -1,0 +1,28 @@
+T1	Negation 339 342	bez
+T2	Drug 343 348	leków
+T3	Condition 566 634	Wrodzona wada serca pod postacią przełożenie wielkich pni tętniczych
+czenia komorowo-tętnicze
+T4	Condition 637 659	ubytku przegrody komór
+T5	Treatment 672 712	korekcji anatomicznej wady met. Jatene'a
+T6	Date 714 725	22.04.2015r
+T7	Treatment 851 885	Kontrola w Poradni Kardiologicznej
+T8	Date 886 892	za rok
+T9	Condition 1028 1031	TGA
+czenia komorowo-tętnicze
+T10	Treatment 1037 1058	zabiegach naprawczych
+T11	Condition 1095 1112	wywiad alergiczny
+T12	Negation 1113 1119	ujemny
+T13	Drug 1122 1136	leków na stałe
+T14	Negation 1137 1150	nie otrzymuje
+N1	Reference T3 ICD10:Q20	Wrodzone wady rozwojowe jam i poÅÄczeÅ sercowych
+N2	Reference T4 ICD10:Q21.0	Ubytek przegrody miÄdzykomorowej
+N3	Reference T5 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N4	Reference T9 ICD10:Q20.3	NieprawidÅowe poÅÄczenia komorowo-tÄtnicze
+N5	Reference T10 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N6	Reference T11 ICD10:T78.4	Alergia, nieokreÅlona
+R1	Neg Arg1:T1 Arg2:T2
+R10	Neg Arg1:T14 Arg2:T13
+R11	Dat Arg1:T8 Arg2:T9
+R13	Dat Arg1:T8 Arg2:T10
+R2	Dat Arg1:T6 Arg2:T7
+R4	Neg Arg1:T12 Arg2:T11

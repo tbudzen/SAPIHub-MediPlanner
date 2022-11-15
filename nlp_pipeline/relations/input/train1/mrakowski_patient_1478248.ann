@@ -1,0 +1,141 @@
+T1	Condition 439 479	Nadciśnienie tętnicze rozpoznane w ciąży
+T2	Treatment 489 525	cięciu cesarskim w 36 tygodniu ciąży
+T3	Condition 535 558	stanu przedrzucawkowego
+N2	Reference T3 ICD10:O14.9	Stan przedrzucawkowy nieokreślony
+T4	Date 560 570	04.03.2019
+R1	Dat Arg1:T4 Arg2:T3	
+R2	Dat Arg1:T4 Arg2:T2	
+T5	Condition 573 594	Hipertrójglicerydemia
+N3	Reference T5 ICD10:E78.1	Czysta hiperglicerydemia
+T6	Treatment 706 728	kontrola u lekarza POZ
+T7	Investigation 731 776	konieczna kontrola jonogramu, kreatyniny, GFR
+T8	Date 777 789	za ok. 3 dni
+R3	Dat Arg1:T8 Arg2:T7	
+T9	Investigation 793 813	kontrolny lipidogram
+T10	Date 814 825	za 2-3 m-ce
+R4	Dat Arg1:T10 Arg2:T9	
+T11	Treatment 828 893	kontrola u prowadzącego ginekologa zaraz po wypisaniu ze szpitala
+T12	Treatment 896 931	pobrano wymaz z rany - wyniki posie
+T13	Drug 1051 1060	Bromergon
+T14	Drug 1062 1067	Nedal
+T15	Drug 1069 1075	Tolura
+T16	Drug 1077 1083	Diuver
+T17	Drug 1085 1092	Amlozek
+T18	Drug 1094 1101	Kalipoz
+T19	Drug 1103 1110	Clexane
+T20	Drug 1112 1122	Tardyferon
+T21	Drug 1124 1132	Actisorb
+T22	Condition 1277 1308	nadciśnieniem tętniczym w ciąży
+T23	Treatment 1341 1377	cięciu cesarskim w 36 tygodniu ciąży
+T24	Condition 1387 1410	stanu przedrzucawkowego
+N5	Reference T24 ICD10:O14.9	Stan przedrzucawkowy nieokreślony
+T25	Date 1412 1422	04.03.2019
+R5	Dat Arg1:T25 Arg2:T24	
+R6	Dat Arg1:T25 Arg2:T23	
+T26	Condition 1476 1514	Nadciśnienie rozpoznane w 7 m-cu ciąży
+N6	Reference T26 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T27	Investigation_result 1517 1542	maksymalnym RR sk 169mmHg
+N7	Reference T27 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T28	Drug 1561 1568	Dopegyt
+T29	Investigation 1618 1655	kontrolnych badaniach laboratoryjnych
+T30	Investigation_result 1657 1667	białkomocz
+N8	Reference T30 ICD10:O12.1	Białkomocz ciążowy
+R7	Inv Arg1:T29 Arg2:T30	
+T31	Condition 1748 1771	stanu przedrzucawkowego
+N9	Reference T31 ICD10:O14.9	Stan przedrzucawkowy nieokreślony
+T32	Treatment 1781 1783	cc
+T33	Symptom 1806 1859	niewielkie zmniejszenie tolerancji wysiłku fizycznego
+N10	Reference T33 ICD10:R53	Złe samopoczucie i zmęczenie
+T34	Symptom 1864 1908	pacjentka wchodzi na 3 piętro bez odpoczynku
+N11	Reference T34 ICD10:R53	Złe samopoczucie i zmęczenie
+T35	Condition 1910 1929	Zahamowano laktację
+N12	Reference T35 ICD10:O92.5	Zahamowanie laktacji
+T36	Condition 1939 1971	opornego nadciśnienia tętniczego
+T37	Negation 1973 1979	Neguje
+T38	Condition 1981 1995	HA przed ciążą
+N14	Reference T38 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+R8	Neg Arg1:T37 Arg2:T38	
+N1	Reference T1 ICD10:O14	Nadciśnienie ciążowe [wywołane ciążą] ze znacznym białkomoczem
+N4	Reference T22 ICD10:O14	Nadciśnienie ciążowe [wywołane ciążą] ze znacznym białkomoczem
+N13	Reference T36 ICD10:O14	Nadciśnienie ciążowe [wywołane ciążą] ze znacznym białkomoczem
+T39	Symptom 1997 2009	zasłabnięcia
+T40	Symptom 2011 2019	omdlenia
+N15	Reference T40 ICD10:R55	Omdlenie i zapaść
+T41	Symptom 2021 2035	duszność nocną
+N16	Reference T41 ICD10:R06.0	Duszność
+T42	Symptom 2037 2052	obrzęki podudzi
+N17	Reference T42 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T43	Symptom 2054 2078	bóle w klatce piersiowej
+N18	Reference T43 ICD10:R07	Ból gardła i w klatce piersiowej
+T44	Symptom 2080 2095	kołatania serca
+N19	Reference T44 ICD10:R00.2	Kołatanie serca
+T45	Condition 2097 2099	DM
+N20	Reference T45 ICD10:E14	Cukrzyca nieokreślona
+R9	Neg Arg1:T37 Arg2:T39	
+R10	Neg Arg1:T37 Arg2:T40	
+R11	Neg Arg1:T37 Arg2:T41	
+R12	Neg Arg1:T37 Arg2:T42	
+R13	Neg Arg1:T37 Arg2:T43	
+R14	Neg Arg1:T37 Arg2:T44	
+R15	Neg Arg1:T37 Arg2:T45	
+T46	Treatment 2102 2119	Przebyte operacje
+T47	Treatment 2121 2123	cc
+T48	Behaviour 2124 2139	Palenie tytoniu
+N21	Reference T48 ICD10:T65.2	Tytoń i nikotyna
+T49	Negation 2141 2146	nigdy
+R16	Neg Arg1:T49 Arg2:T48	
+T50	Behaviour 2147 2158	Inne używki
+T51	Negation 2160 2163	nie
+R17	Neg Arg1:T51 Arg2:T50	
+T52	Condition 2164 2173	Uczulenia
+T53	Negation 2175 2178	nie
+R18	Neg Arg1:T53 Arg2:T52	
+T54	Condition 2207 2210	WZW
+N22	Reference T54 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T55	Condition 2217 2226	borelioza
+N23	Reference T55 ICD10:A69.2	Choroba z Lyme
+T56	Condition 2232 2235	tbc
+N24	Reference T56 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T57	Condition 2241 2245	odra
+N25	Reference T57 ICD10:B05	Odra
+T58	Condition 2251 2265	kontakt z odrą
+N26	Reference T58 ICD10:B05	Odra
+T59	Negation 2267 2268	-
+R19	Neg Arg1:T59 Arg2:T58	
+T60	Negation 2247 2248	-
+R20	Neg Arg1:T60 Arg2:T57	
+T61	Negation 2237 2238	-
+R21	Neg Arg1:T61 Arg2:T56	
+T62	Negation 2228 2229	-
+R22	Neg Arg1:T62 Arg2:T55	
+T63	Negation 2212 2213	-
+R23	Neg Arg1:T63 Arg2:T54	
+T64	Behaviour 2286 2312	warunki mieszkaniowe dobre
+T65	Drug 2471 2478	Clexane
+T66	Drug_dose 2479 2489	1x 40mg sc
+R24	Drg Arg1:T65 Arg2:T66	
+T67	Drug 2490 2499	Captopril
+T68	Drug_dose 2500 2511	doraźnie sl
+R25	Drg Arg1:T67 Arg2:T68	
+T69	Drug 2512 2522	Tardyferon
+T70	Drug_dose 2523 2532	2x 1 tabl
+R26	Drg Arg1:T69 Arg2:T70	
+T71	Drug 2533 2542	Bromergon
+T72	Drug_dose 2543 2565	(od 7/8 dni) 2x 1 tabl
+R27	Drg Arg1:T71 Arg2:T72	
+T73	Drug 2566 2571	Nedal
+T74	Drug_dose 2572 2590	5mg 1x 1 tabl/rano
+R28	Drg Arg1:T73 Arg2:T74	
+T75	Drug 2591 2602	Telmisartan
+T76	Drug_dose 2603 2622	80mg 1x 1 tabl/rano
+R29	Drg Arg1:T75 Arg2:T76	
+T77	Drug 2623 2629	Diuver
+T78	Drug_dose 2630 2648	5mg 1x 1 tabl/rano
+R30	Drg Arg1:T77 Arg2:T78	
+T79	Drug 2649 2656	Amlozek
+T80	Drug_dose 2657 2675	5mg 1x 1 tabl/rano
+R31	Drg Arg1:T79 Arg2:T80	
+T81	Investigation 2737 2758	badania laboratoryjne
+T82	Investigation 2760 2764	ECHO
+T83	Investigation 2766 2784	EKG metodą Holtera
+T84	Investigation 2786 2790	ABPM

@@ -1,0 +1,57 @@
+T1	Drug 330 338	Suvardio
+T2	Drug 366 371	Acard
+T3	Drug_dose 339 364	10mg 1 x 1tabl. wieczorem
+T4	Drug_dose 372 398	75mg 1 x 1 tabl. wieczorem
+T5	Investigation 1618 1621	TTE
+T6	Investigation 1623 1626	TET
+T7	Investigation 1628 1632	ABPM
+T8	Investigation 1634 1644	holter ekg
+T9	Condition 650 678	choroby niedokrwiennej serca
+T10	Investigation 628 649	Obserwacja w kierunku
+T11	Negation 679 691	niekompletna
+T12	Condition 692 712	Hipercholesterolemia
+T13	Condition 1673 1676	IHD
+T14	Condition 1057 1090	infekcji dolnych dróg oddechowych
+T15	Date 1093 1105	styczniu br-
+T16	Investigation 1106 1115	CT klatki
+T17	Date 1118 1128	30.01.2018
+T18	Investigation_result 1135 1150	zmian zapalnych
+T19	Negation 1131 1134	bez
+T20	Investigation_result 1153 1190	obecne zmiany włókniste w śródmiąższu
+T21	Negation 1192 1202	wykluczono
+T22	Investigation_result 1203 1225	proces neoplazmatyczny
+T23	Symptom 1295 1331	 nietypowe  bóle w klatce piersiowej
+T24	Symptom 1337 1352	kołatania serca
+T25	Symptom 1254 1284	pogorszenia tolerancji wysiłku
+T26	Condition 1367 1383	torbiel tarczycy
+T27	Condition 1386 1399	niedoczynność
+T28	Drug 1421 1431	L-tyroxyną
+T29	Negation 1495 1498	Nie
+T30	Behaviour 1499 1512	pali  tytoniu
+T31	Treatment 1587 1601	Farmakoterapia
+T32	Treatment 837 845	leczenia
+T33	Negation 833 836	bez
+T34	Drug 1523 1539	leków przewlekle
+T35	Negation 1540 1553	nie przyjmuje
+T36	Condition 1647 1664	Wywiad  rodzinny:
+N1	Reference T9 ICD10:I20.9	Choroba niedokrwienna serca, nieokreÅlona
+N2	Reference T12 ICD10:E78.0	Czysta hipercholesterolemia
+N3	Reference T24 ICD10:R00.2	KoÅatanie serca
+N4	Reference T25 ICD10:R53	ZÅe samopoczucie i zmÄczenie
+N5	Reference T30 ICD10:Z72.0	UÅ¼ywanie tytoniu
+R1	Drg Arg1:T1 Arg2:T3
+R12	Neg Arg1:T19 Arg2:T18
+R18	Neg Arg1:T21 Arg2:T20
+R19	Neg Arg1:T21 Arg2:T22
+R2	Drg Arg1:T2 Arg2:T3
+R20	Dat Arg1:T15 Arg2:T14
+R21	Dat Arg1:T15 Arg2:T16
+R22	Dat Arg1:T17 Arg2:T14
+R23	Dat Arg1:T17 Arg2:T16
+R25	Neg Arg1:T29 Arg2:T30
+R3	Neg Arg1:T11 Arg2:T9
+R4	Neg Arg1:T11 Arg2:T12
+R6	Neg Arg1:T33 Arg2:T32
+R7	Inv Arg1:T16 Arg2:T18
+R9	Inv Arg1:T16 Arg2:T22
+A1	Source T9 Declared

@@ -1,0 +1,264 @@
+T1	Treatment 330 399	Dalsza opieka w POZ oraz w Poradni Kardiologicznej i Reumatologicznej
+T2	Treatment 402 439	Dalsza opieka w Poradni Ortopedycznej
+T3	Treatment 469 483	hospitalizacja
+T4	Date 652 665	11/12/2019 r.
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Behaviour 705 780	Dieta lekkostrawna, niskocholesterolowa z niską zawartością cukrów prostych
+T6	Investigation 783 839	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T7	Investigation 842 862	Regularny pomiar INR
+T8	Date 864 879	co 3-4 tygodnie
+R2	Dat Arg1:T8 Arg2:T7	
+T9	Treatment 881 918	docelowa wartość INR dla zastawki 3,0
+T10	Drug 956 962	Warfin
+T11	Drug 1088 1097	Cordarone
+T12	Drug 1211 1217	Bibloc
+T13	Drug 1238 1248	Prestarium
+T14	Drug 1266 1272	Espiro
+T15	Drug 1291 1297	Diured
+T16	Drug 1315 1321	Atoris
+T17	Drug 1340 1349	Lavistina
+T18	Drug_dose 963 998	5 mg 1 tabl 1 xdz  pod kontrolą INR
+T19	Treatment 1000 1037	docelowa wartość INR dla zastawki 3,0
+T20	Investigation 1049 1070	pierwsza kontrola INR
+T21	Date 1077 1087	20/04/2019
+R3	Dat Arg1:T21 Arg2:T20	
+R4	Drg Arg1:T10 Arg2:T18	
+T22	Drug_dose 1098 1115	200 mg 1-0-1 tabl
+T23	Date 1117 1135	od dnia 29/04/2019
+T24	Drug_dose 1136 1164	1-0-0 tabl. pod kontrolą QTc
+T25	Investigation 1182 1185	QTc
+T26	Investigation_result 1203 1209	230 ms
+T27	Date 1186 1202	w dn. 26/04/2019
+R5	Dat Arg1:T27 Arg2:T25	
+R6	Inv Arg1:T25 Arg2:T26	
+R7	Dat Arg1:T23 Arg2:T24	
+R8	Drg Arg1:T11 Arg2:T22	
+R9	Drg Arg1:T11 Arg2:T24	
+T28	Drug_dose 1218 1237	1,25 mg 1-0-0 tabl.
+T29	Drug_dose 1249 1265	5 mg 0-0-1 tabl.
+T30	Drug_dose 1273 1289	25 mg 1-0-0 tabl
+T31	Drug_dose 1298 1314	5 mg 1-0-0 tabl.
+T32	Drug_dose 1322 1339	20 mg 0-0-1 tabl.
+T33	Drug_dose 1350 1370	24 mg 1/2-0-1/2 tabl
+R10	Drg Arg1:T12 Arg2:T28	
+R11	Drg Arg1:T13 Arg2:T29	
+R12	Drg Arg1:T14 Arg2:T30	
+R13	Drg Arg1:T15 Arg2:T31	
+R14	Drg Arg1:T16 Arg2:T32	
+R15	Drg Arg1:T17 Arg2:T33	
+T34	Condition 1610 1663	Zespół niedopasowania mechanicznej zastawki aortalnej
+N1	Reference T34 ICD10:T82.0	Mechaniczne powikłanie protezy zastawki serca
+T35	Condition 1665 1749	Podejrzenie łuszczki w obrębie sztucznej zastawki aortalnej od strony lewo-komorowej
+N2	Reference T35 ICD10:T82.8	Inne powikłania protez, implantów i przeszczepów sercowych i naczyniowych
+A1	Source T35 Declared
+T36	Condition 1751 1806	Podejrzenie skrzepliny w połączeniu opuszkowo-aortalnym
+A2	Source T36 Declared
+N3	Reference T36 ICD10:T82.8	Inne powikłania protez, implantów i przeszczepów sercowych i naczyniowych
+T37	Treatment 1816 1829	AVR (S.J. 19A
+N4	Reference T37 ICD10:Z95.2	Obecność protez zastawek serca
+T38	Date 1832 1839	09/1999
+R16	Dat Arg1:T38 Arg2:T37	
+T39	Condition 1842 1880	Poszerzenie aorty wstępującej do 43 mm
+T40	Condition 1882 1916	Nadkomorowe zaburzenia rytmu serca
+N5	Reference T40 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T41	Condition 1918 1949	Napadowe migotanie przedsionków
+N6	Reference T41 ICD10:I48	Migotanie i trzepotanie przedsionków
+T42	Condition 1951 1972	Nadciśnienie tętnicze
+N7	Reference T42 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T43	Condition 1974 2034	Umiarkowana niedomykalność zastawki mitralnej i trójdzielnej
+#1	AnnotatorNotes T43	I34.0 + I36.1
+T44	Condition 2036 2048	Dyslipidemia
+N8	Reference T44 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T45	Condition 2050 2065	Kamica żółciowa
+N9	Reference T45 ICD10:K80	Kamica żółciowa
+T46	Condition 2079 2103	Uraz kłębu lewego kciuka
+N10	Reference T46 ICD10:S69.8	Inne określone urazy nadgarstka i ręki
+T47	Date 2105 2115	10/04/2019
+R17	Dat Arg1:T47 Arg2:T46	
+T48	Drug 2237 2249	Acenokumarol
+T49	Drug_dose 2250 2256	wg INR
+T50	Drug 2258 2266	Polfenon
+T51	Drug_dose 2266 2271	150mg
+T52	Drug 2273 2281	Triveram
+T53	Drug_dose 2282 2290	20/5/5mg
+T54	Drug 2292 2298	Diuver
+T55	Drug_dose 2299 2302	5mg
+T56	Drug 2304 2310	Espiro
+T57	Drug_dose 2311 2315	25mg
+T58	Drug 2317 2325	Setal MR
+T59	Drug_dose 2326 2331	35 mg
+T60	Drug 2333 2339	Atoris
+T61	Drug_dose 2340 2345	20 mg
+T62	Drug 2347 2357	Prestarium
+T63	Drug_dose 2358 2362	5 mg
+T64	Drug 2364 2373	Cordarone
+T65	Drug_dose 2374 2380	200 mg
+T66	Drug 2382 2388	HNF iv
+T67	Drug 2390 2397	Clexane
+T68	Drug_dose 2398 2406	80 mg sc
+T69	Drug 2408 2414	Warfin
+T70	Drug_dose 2415 2421	wg INR
+T71	Drug 2423 2435	Hydroksyzyna
+T72	Drug_dose 2436 2441	10 mg
+R18	Drg Arg1:T48 Arg2:T49	
+R19	Drg Arg1:T50 Arg2:T51	
+R20	Drg Arg1:T52 Arg2:T53	
+R21	Drg Arg1:T54 Arg2:T55	
+R22	Drg Arg1:T56 Arg2:T57	
+R23	Drg Arg1:T58 Arg2:T59	
+R24	Drg Arg1:T60 Arg2:T61	
+R25	Drg Arg1:T62 Arg2:T63	
+R26	Drg Arg1:T64 Arg2:T65	
+R27	Drg Arg1:T67 Arg2:T68	
+R28	Drg Arg1:T69 Arg2:T70	
+R29	Drg Arg1:T71 Arg2:T72	
+T73	Condition 2647 2709	podejrzeniem istotnego zwężenia mechanicznej protezy aortalnej
+A3	Source T73 Declared
+T74	Investigation 2727 2767	echokardiograficznej próby obciążeniowej
+T75	Condition 2781 2812	napadowe migotanie przedsionków
+N12	Reference T75 ICD10:I48	Migotanie i trzepotanie przedsionków
+T76	Condition 2814 2862	umiarkowana niedomykalność zastawki trójdzielnej
+N13	Reference T76 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T77	Condition 2864 2885	nadciśnienie tętnicze
+N14	Reference T77 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+A4	Status T45 Historical_Insignificant
+T78	Condition 2887 2902	kamica żółciowa
+A5	Status T78 Historical_Insignificant
+N15	Reference T78 ICD10:K80	Kamica żółciowa
+T79	Condition 2904 2925	dyslipidemia mieszana
+N16	Reference T79 ICD10:E78.2	Hiperlipidemia mieszana
+T80	Treatment 2935 2948	AVR (S.J. 19A
+N17	Reference T80 ICD10:Z95.2	Obecność protez zastawek serca
+T81	Date 2951 2958	09/1999
+R30	Dat Arg1:T81 Arg2:T80	
+N11	Reference T73 ICD10:I35.0	Zwężenie zastawki aortalnej
+T82	Condition 2993 3023	w obrębie prawego kłębu kciuka
+N18	Reference T82 ICD10:S69.8	Inne określone urazy nadgarstka i ręki
+T83	Date 2974 2992	w dniu wczorajszym
+T84	Condition 2969 2973	uraz
+N19	Reference T84 ICD10:S69.8	Inne określone urazy nadgarstka i ręki
+R31	Dat Arg1:T83 Arg2:T84	
+R32	Dat Arg1:T83 Arg2:T82	
+T85	Symptom 3026 3038	zasienieniem
+T86	Symptom 3043 3082	obrzękiem tkanek miękkich w tej okolicy
+N20	Reference T86 ICD10:R60.1	Obrzęk uogólniony
+R33	Dat Arg1:T83 Arg2:T85	
+R34	Dat Arg1:T83 Arg2:T86	
+T87	Date 3086 3093	12/2018
+T88	Investigation 3111 3138	badanie echokardiograficzne
+T89	Investigation_result 3163 3211	wysoki gradient przez sztuczną zastawkę aortalną
+N21	Reference T89 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+R35	Dat Arg1:T87 Arg2:T88	
+R36	Inv Arg1:T88 Arg2:T89	
+T90	Investigation_result 3223 3249	podejrzenie jej dysfunkcji
+N22	Reference T90 ICD10:T82.0	Mechaniczne powikłanie protezy zastawki serca
+A6	Source T90 Declared
+R37	Inv Arg1:T88 Arg2:T90	
+T91	Investigation 3307 3350	przezprzełykowe badanie echokardiograficzne
+T92	Investigation_result 3373 3450	w lewym ujściu tętniczym zastawkę mechaniczną o prawidłowej ruchomości dysków
+T93	Investigation_result 3462 3507	podejrzenie łuszczki od strony lewo-komorowej
+T94	Negation 3513 3523	wykluczono
+T95	Investigation_result 3524 3567	przeciek okołozastawkowy lub przezzastwkowy
+N23	Reference T95 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+R38	Neg Arg1:T94 Arg2:T95	
+R39	Inv Arg1:T91 Arg2:T92	
+R40	Inv Arg1:T91 Arg2:T93	
+R41	Inv Arg1:T91 Arg2:T95	
+N24	Reference T93 ICD10:T82.8	Inne powikłania protez, implantów i przeszczepów sercowych i naczyniowych
+T96	Investigation_result 3592 3652	poszerzoną aortę piersiową w proksymalnej części wstępującej
+N25	Reference T96 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+R42	Inv Arg1:T91 Arg2:T96	
+T97	Investigation 3654 3669	Do wykonania MR
+T98	Symptom 3776 3807	ograniczenia tolerancji wysiłku
+T99	Symptom 3810 3827	szybka męczliwość
+T100	Symptom 3829 3847	duszność wysiłkowa
+N26	Reference T100 ICD10:R06.0	Duszność
+T101	Symptom 3872 3896	okresowo kołatanie serca
+N27	Reference T101 ICD10:R00.2	Kołatanie serca
+T102	Symptom 3898 3911	zawroty głowy
+N28	Reference T102 ICD10:R42	Zawroty głowy i odurzenie
+T103	Negation 3913 3919	Neguje
+T104	Symptom 3920 3932	zasłabnięcia
+T105	Condition 3934 3942	omdlenia
+N29	Reference T105 ICD10:R55	Omdlenie i zapaść
+R43	Neg Arg1:T103 Arg2:T104	
+R44	Neg Arg1:T103 Arg2:T105	
+T106	Symptom 3944 3963	Innych dolegliwości
+T107	Negation 3964 3975	nie zgłasza
+R45	Neg Arg1:T107 Arg2:T106	
+T108	Condition 3991 4022	napadowe migotanie przedsionków
+N30	Reference T108 ICD10:I48	Migotanie i trzepotanie przedsionków
+T109	Condition 4024 4072	umiarkowana niedomykalność zastawki trójdzielnej
+N31	Reference T109 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T110	Condition 4074 4095	nadciśnienie tętnicze
+N32	Reference T110 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T111	Condition 4097 4112	kamica żółciowa
+A7	Status T111 Historical_Insignificant
+N33	Reference T111 ICD10:K80	Kamica żółciowa
+T112	Condition 4114 4135	dyslipidemia mieszana
+N34	Reference T112 ICD10:E78.2	Hiperlipidemia mieszana
+T113	Condition 4137 4166	choroba zwtrodnieniowa stawów
+A8	Status T113 Historical_Insignificant
+N35	Reference T113 ICD10:M19.9	Choroba zwyrodnieniowa stawów, nieokreślona
+T114	Treatment 4196 4208	AVR S.J. 19A
+N36	Reference T114 ICD10:Z95.2	Obecność protez zastawek serca
+T115	Date 4211 4219	09.1999r
+R46	Dat Arg1:T115 Arg2:T114	
+T116	Treatment 4222 4294	Leczenie przewlekłe: kardiologiczne, kardiochirurgiczne, reumatologiczne
+T117	Condition 4323 4326	WZW
+N37	Reference T117 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T118	Condition 4335 4344	borelioza
+N38	Reference T118 ICD10:A69.2	Choroba z Lyme
+T119	Condition 4352 4360	gruźlica
+N39	Reference T119 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T120	Negation 4327 4332	( - )
+T121	Negation 4345 4350	( - )
+T122	Negation 4361 4366	( - )
+R47	Neg Arg1:T120 Arg2:T117	
+R48	Neg Arg1:T121 Arg2:T118	
+R49	Neg Arg1:T122 Arg2:T119	
+T123	Condition 4400 4417	chorował na serce
+A9	Status T123 Family
+A10	Source T123 Declared
+T124	Behaviour 4453 4468	Palenie tytoniu
+N40	Reference T124 ICD10:Z72.0	Używanie tytoniu
+T125	Negation 4470 4473	nie
+T126	Behaviour 4474 4478	pali
+N41	Reference T126 ICD10:Z72.0	Używanie tytoniu
+R50	Neg Arg1:T125 Arg2:T124	
+R51	Neg Arg1:T125 Arg2:T126	
+T127	Behaviour 4481 4492	Inne używki
+T128	Negation 4494 4497	nie
+R52	Neg Arg1:T128 Arg2:T127	
+T129	Condition 4500 4509	Uczulenia
+N42	Reference T129 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T130	Negation 4511 4517	neguje
+T131	Behaviour 4535 4561	warunki mieszkaniowe dobre
+T132	Behaviour 4563 4571	emerytka
+R53	Neg Arg1:T130 Arg2:T129	
+T133	Drug 4580 4592	Acenokumarol
+T134	Drug 4594 4602	Polfenon
+T135	Drug_dose 4602 4613	150mg 1-0-1
+T136	Drug 4615 4623	Triveram
+T137	Drug_dose 4624 4638	20/5/5mg 1-0-0
+T138	Drug 4640 4646	Diuver
+T139	Drug_dose 4647 4656	5mg 1-0-0
+T140	Drug 4658 4664	Espiro
+T141	Drug_dose 4665 4676	25mg 1-0-0,
+T142	Drug 4677 4685	Setal MR
+T143	Drug_dose 4686 4691	1-0-1
+R54	Drg Arg1:T134 Arg2:T135	
+R55	Drg Arg1:T136 Arg2:T137	
+R56	Drg Arg1:T138 Arg2:T139	
+R57	Drg Arg1:T140 Arg2:T141	
+R58	Drg Arg1:T142 Arg2:T143	
+N43	Reference T123 ICD10:I51.9	Choroba serca, nieokreślona
+T144	Symptom 3848 3865	III klasa wg NYHA
+N44	Reference T144 ICD10:I50	Niewydolność serca
+N45	Reference T127 ICD10:Z72	Problemy związane ze stylem życia
+T145	Investigation 490 533	oceny skuteczności dotychczasowego leczenia
+T146	Treatment 539 582	ustalenia wskazań do ewentualnej reoperacji
+T147	Treatment 583 637	w Klinice Kardiologii i Wad Wrodzonych Dorosłych ICZMP
+R59	Dat Arg1:T4 Arg2:T145	
+R60	Dat Arg1:T4 Arg2:T146	
+R61	Dat Arg1:T4 Arg2:T147	

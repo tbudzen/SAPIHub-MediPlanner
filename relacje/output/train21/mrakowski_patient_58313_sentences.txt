@@ -1,0 +1,947 @@
+allRelations          : 25
+oks                   : 15
+isRedundantAndRemoveds: 9
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 1
+GOOD / BAD            : 24 / 1
+Sentence 0:
+------------------------------------------------
+Wiek: 54 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 2:
+------------------------------------------------
+
+
+
+Sentence 3:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 4:
+------------------------------------------------
+ Rozpozanie I: ICD10:R07|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo::
+------------------------------------------------
+
+
+
+Sentence 5:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 6:
+------------------------------------------------
+ Rozpozanie I: ICD10:I49|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Nadciśnienie tętnicze.
+
+
+Sentence 7:
+Zapalenie błony śluzowej żołądka.
+
+
+Sentence 8:
+Choroba zwyrodnieniowa kręgosłupa szyjnego.
+
+
+Sentence 9:
+Alergiczny nieżyt błony śluzowej nosa.
+
+
+Sentence 10:
+Łuszczyca. Żylaki odbytu.
+
+
+Sentence 11:
+Kamica pęcherzyka żółciowego.
+
+
+Sentence 12:
+Zmiana ogniskowa w nerce prawej do dalszej obserwacji.
+
+
+
+Sentence 13:
+------------------------------------------------
+
+
+
+Sentence 14:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 15:
+------------------------------------------------
+ Rozpozanie I: ICD10:I49|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Nadciśnienie tętnicze.
+
+
+Sentence 16:
+Zapalenie błony śluzowej żołądka.
+
+
+Sentence 17:
+Choroba zwyrodnieniowa kręgosłupa szyjnego.
+
+
+Sentence 18:
+Alergiczny nieżyt błony śluzowej nosa.
+
+
+Sentence 19:
+Łuszczyca. Żylaki odbytu.
+
+
+Sentence 20:
+Kamica pęcherzyka żółciowego.
+
+
+Sentence 21:
+Zmiana ogniskowa w nerce prawej do dalszej obserwacji.
+
+
+
+Sentence 22:
+------------------------------------------------
+
+
+
+Sentence 23:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 24:
+Pacjentka lat 53 została przyjęta do Kliniki z powodu dolegliwości bólowych w klatce piersiowej o charakterze klujących  nie związanym z wysiłkiem.
+
+
+Sentence 25:
+Kołatania serca występują o nieco mniejszy nasileniu głównie w nocy. 
+
+
+
+Sentence 26:
+W wywiadzie: Nadciśnienie tętnicze.
+
+
+Sentence 27:
+Komorowe zaburzenia rytmu serca ( pobudzenia pojedyncze oraz bigminia komorowa).
+
+
+Sentence 28:
+Zapalenie błony śluzowej żołądka.
+
+
+Sentence 29:
+Choroba zwyrodnieniowa kręgosłupa szyjnego.
+
+
+Sentence 30:
+Alergiczny nieżyt błony śluzowej nosa.
+
+
+Sentence 31:
+Łuszczyca. Żylaki odbytu.
+
+
+Sentence 32:
+Kamica pęcherzyka żółciowego.
+
+
+Sentence 33:
+Zmiana ogniskowa w nerce prawej do dalszej obserwacji. 
+
+
+
+Sentence 34:
+Nikotynizm:      neguje 
+
+R1	Neg Arg1:T32 Arg2:T31 << OK >>	neguje -> Nikotynizm  <RANK: 3> <info: start[2107, 2090] <type: LEFT>>
+
+
+Sentence 35:
+Pacjent neguje: uczulenia na leki, krwawienia z przewodu pokarmowego.
+
+R2	Neg Arg1:T34 Arg2:T35 << OK >>	neguje -> krwawienia z przewodu pokarmowego  <RANK: 2> <info: start[2123, 2150] <type: RIGHT>>
+R3	Neg Arg1:T34 Arg2:T33 << OK >>	neguje -> uczulenia na leki  <RANK: 3> <info: start[2123, 2131] <type: RIGHT>>
+
+
+Sentence 36:
+Alergia na pyłki.
+
+
+
+Sentence 37:
+Wywiad rodzinny: mama- HF, ChNS, tata- udar, HA.
+
+
+
+Sentence 38:
+Przyjmowane obecnie leki: 
+
+
+
+Sentence 39:
+Telmix 40mg pół tabletki 1xdziennie wieczorem  
+Concor Cor 2,5mg   xdziennie rano 
+ Controloc doraźnie.
+
+R4	Drg Arg1:T40 Arg2:T41 << OK >>	Telmix -> 40mg pół tabletki 1xdziennie wieczorem  <RANK: 3> <info: start[2279, 2286] <type: RIGHT>>
+R5	Drg Arg1:T40 Arg2:T43 <<REDUNDANT!!!REMOVED>>	Telmix -> 2,5mg   xdziennie rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2279, 2338] <type: RIGHT>>
+R6	Drg Arg1:T40 Arg2:T45 <<REDUNDANT!!!REMOVED>>	Telmix -> doraźnie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2279, 2373] <type: RIGHT>>
+R7	Drg Arg1:T42 Arg2:T41 <<REDUNDANT!!!REMOVED>>	Concor Cor -> 40mg pół tabletki 1xdziennie wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2327, 2286] <type: LEFT>>
+R8	Drg Arg1:T42 Arg2:T43 << OK >>	Concor Cor -> 2,5mg   xdziennie rano  <RANK: 3> <info: start[2327, 2338] <type: RIGHT>>
+R9	Drg Arg1:T42 Arg2:T45 <<REDUNDANT!!!REMOVED>>	Concor Cor -> doraźnie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2327, 2373] <type: RIGHT>>
+R10	Drg Arg1:T44 Arg2:T41 <<REDUNDANT!!!REMOVED>>	Controloc -> 40mg pół tabletki 1xdziennie wieczorem <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2363, 2286] <type: LEFT>>
+R11	Drg Arg1:T44 Arg2:T43 <<REDUNDANT!!!REMOVED>>	Controloc -> 2,5mg   xdziennie rano <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2363, 2338] <type: LEFT>>
+R12	Drg Arg1:T44 Arg2:T45 << OK >>	Controloc -> doraźnie  <RANK: 3> <info: start[2363, 2373] <type: RIGHT>>
+
+
+Sentence 40:
+Planowane: ECHO serca, PW.
+
+
+
+Sentence 41:
+------------------------------------------------
+
+
+
+Sentence 42:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 43:
+Pacjentka lat 53 została przyjęta celem diagnostyki kołatań serca.
+
+
+Sentence 44:
+Chora neguje bóle zamostkowe, bez utrat przytomności.
+R13	Neg Arg1:T49 Arg2:T50 << OK >>	neguje -> bóle zamostkowe  <RANK: 3> <info: start[2607, 2614] <type: RIGHT>>
+R14	Neg Arg1:T49 Arg2:T52 <<REDUNDANT!!!REMOVED>>	neguje -> utrat przytomności <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2607, 2635] <type: RIGHT>>
+R15	Neg Arg1:T51 Arg2:T50 <<REDUNDANT!!!REMOVED>>	bez -> bóle zamostkowe <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2631, 2614] <type: LEFT>>
+R16	Neg Arg1:T51 Arg2:T52 << OK >>	bez -> utrat przytomności  <RANK: 3> <info: start[2631, 2635] <type: RIGHT>>
+
+
+Sentence 45:
+Kołatania głównie w nocy lub nad ranem, w położeniu na lewym boku.
+
+
+Sentence 46:
+W wywiadzie: nadciśnienie tętnicze, zapalenie błony śluzowej żołądka, choroba zwyrodnieniowa kręgosłupa szyjnego, alergiczny nieżyt bł śluzowej nosa, łuszczyca, żylaki odbytu. 
+
+
+
+Sentence 47:
+Operacje: stan po usunięciu włókniaka lewej piersi (2009).
+
+R17	Dat Arg1:T62 Arg2:T85 << OK >>	2009 -> włókniaka lewej piersi  <RANK: 3> <info: start[2951, 2927] <type: LEFT>>
+R18	Dat Arg1:T62 Arg2:T61 << OK >>	2009 -> usunięciu  <RANK: 3> <info: start[2951, 2917] <type: LEFT>>
+R19	Dat Arg1:T62 Arg2:T54 <<REDUNDANT!!!SHOULD BE REMOVED>>	2009 -> Operacje  <RANK: 3> <info: start[2951, 2899] <type: LEFT>>
+
+
+Sentence 48:
+Nikotynizm:      neguje 
+
+R20	Neg Arg1:T64 Arg2:T63 << OK >>	neguje -> Nikotynizm  <RANK: 3> <info: start[2975, 2958] <type: LEFT>>
+
+
+Sentence 49:
+Pacjent neguje: uczulenia na leki, krwawienia z przewodu pokarmowego.
+
+R21	Neg Arg1:T65 Arg2:T67 << OK >>	neguje -> krwawienia z przewodu pokarmowego  <RANK: 2> <info: start[2991, 3018] <type: RIGHT>>
+R22	Neg Arg1:T65 Arg2:T66 << OK >>	neguje -> uczulenia na leki  <RANK: 3> <info: start[2991, 2999] <type: RIGHT>>
+
+
+Sentence 50:
+Alergia na pyłki.
+
+
+
+Sentence 51:
+Wywiad rodzinny: mama- HF, ChNS, tata- udar, HA.
+
+
+
+Sentence 52:
+Przyjmowane obecnie leki:
+
+
+Sentence 53:
+Telmix 40mg pół tabletki wieczorem, Klimadynon.
+R23	Drg Arg1:T74 Arg2:T75 << OK >>	Telmix -> 40mg pół tabletki wieczorem  <RANK: 3> <info: start[3146, 3153] <type: RIGHT>>
+R24	Drg Arg1:T76 Arg2:T75 <<REDUNDANT!!!REMOVED>>	Klimadynon -> 40mg pół tabletki wieczorem <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[3182, 3153] <type: LEFT>>
+
+
+Sentence 54:
+Controloc doraźnie.
+
+R25	Drg Arg1:T77 Arg2:T78 << OK >>	Controloc -> doraźnie  <RANK: 3> <info: start[3194, 3204] <type: RIGHT>>
+
+
+Sentence 55:
+Planowane: ECHO serca, Holter EKG, Holter RR, PW.
+
+
+
+Sentence 56:
+------------------------------------------------
+
+
+
+Sentence 57:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 58:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.33[10^3/ul]
+    
+
+
+Sentence 59:
+RBC Krwinki czerwone:4.21[10^6/ul]
+    
+
+
+Sentence 60:
+HGB Hemoglobina:12.6[g/dl]
+    
+
+
+Sentence 61:
+HCT Hematokryt:36.3[%]
+    
+
+
+Sentence 62:
+MCV wskaźnik czerwonokrw:86.2[fl]
+    
+
+
+Sentence 63:
+MCH wskaźnik czerwonokrw:29.9[pg]
+    
+
+
+Sentence 64:
+MCHC wskaźnik czerwonokr:34.7[g/dl]
+    
+
+
+Sentence 65:
+PLT z morfologii:280[10^3/ul]
+    
+
+
+Sentence 66:
+RDW-SD:37.2[fl]
+    
+
+
+Sentence 67:
+RDW-CV:12.0[%]
+    PDW:11.6[fl]
+    MPV:10.1[fl]
+    
+
+
+Sentence 68:
+P-LCR:25.9[%]
+    
+
+
+Sentence 69:
+PCT (hematokryt płytkowy:0.28[%]
+    
+
+
+Sentence 70:
+NEUTR# wartość bezwzględ:2.04[10^3/ul]
+    
+
+
+Sentence 71:
+NEUTR%:38.3[%]
+    
+
+
+Sentence 72:
+LYMH# wartość bezwzględn:2.48[10^3/ul]
+    
+
+
+Sentence 73:
+LYMPH%:46.5[%]
+    
+
+
+Sentence 74:
+MONO# wartość bezwzględn:0.48[10^3/ul]
+    
+
+
+Sentence 75:
+MONO%:9.0[%]
+    
+
+
+Sentence 76:
+EO# wartość bezwzględna:0.27[10^3/ul]
+    
+
+
+Sentence 77:
+EO%:5.1[%]
+    
+
+
+Sentence 78:
+BASO# wartość bezwzględn:0.06[10^3/ul]
+    
+
+
+Sentence 79:
+BASO%:1.1[%]
+    
+
+
+Sentence 80:
+NRBC %:0.0[%]
+    
+
+
+Sentence 81:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 82:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.68[10^3/ul]
+    
+
+
+Sentence 83:
+RBC Krwinki czerwone:4.36[10^6/ul]
+    
+
+
+Sentence 84:
+HGB Hemoglobina:13.2[g/dl]
+    
+
+
+Sentence 85:
+HCT Hematokryt:37.6[%]
+    
+
+
+Sentence 86:
+MCV wskaźnik czerwonokrw:86.2[fl]
+    
+
+
+Sentence 87:
+MCH wskaźnik czerwonokrw:30.3[pg]
+    
+
+
+Sentence 88:
+MCHC wskaźnik czerwonokr:35.1[g/dl]
+    
+
+
+Sentence 89:
+PLT z morfologii:284[10^3/ul]
+    
+
+
+Sentence 90:
+RDW-SD:37.2[fl]
+    
+
+
+Sentence 91:
+RDW-CV:11.9[%]
+    PDW:11.8[fl]
+    MPV:10.2[fl]
+    
+
+
+Sentence 92:
+P-LCR:26.6[%]
+    
+
+
+Sentence 93:
+PCT (hematokryt płytkowy:0.29[%]
+    
+
+
+Sentence 94:
+NEUTR# wartość bezwzględ:2.01[10^3/ul]
+    
+
+
+Sentence 95:
+NEUTR%:42.9[%]
+    
+
+
+Sentence 96:
+LYMH# wartość bezwzględn:2.03[10^3/ul]
+    
+
+
+Sentence 97:
+LYMPH%:43.4[%]
+    
+
+
+Sentence 98:
+MONO# wartość bezwzględn:0.34[10^3/ul]
+    
+
+
+Sentence 99:
+MONO%:7.3[%]
+    
+
+
+Sentence 100:
+EO# wartość bezwzględna:0.24[10^3/ul]
+    
+
+
+Sentence 101:
+EO%:5.1[%]
+    
+
+
+Sentence 102:
+BASO# wartość bezwzględn:0.06[10^3/ul]
+    BASO%:1.3[%]
+    
+
+
+Sentence 103:
+NRBC %:0.0[%]
+    
+
+
+Sentence 104:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 105:
+D-dimer - test ilościowy: D-dimer - test ilościowy:168[ng/ml]
+
+
+
+Sentence 106:
+Badanie ogólne moczu
+    
+
+
+Sentence 107:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 108:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 109:
+przejrzystość:niezupełna[ ]
+    
+
+
+Sentence 110:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 111:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 112:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 113:
+ciężar właściwy:1.012[ ]
+    
+
+
+Sentence 114:
+pH:5.0[ ]
+    
+
+
+Sentence 115:
+białko:nieobecne[ ]
+    
+
+
+Sentence 116:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 117:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 118:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 119:
+leukocyty:obecne[ ]
+    
+
+
+Sentence 120:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 121:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 122:
+nabłonki okrągłe:pojedyncze[w preparacie]
+    
+
+
+Sentence 123:
+leukocyty:39 /ul[ul]
+    erytrocyty świeże:2 /ul[ul]
+    śluz:dość liczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 124:
+Przeciwciała przeciw tyreoglobulinie (anty-TG Ab)
+    
+
+
+Sentence 125:
+Przeciwciała przeciw tyr:
+    10.00[IU/ml]
+
+
+
+Sentence 126:
+Przeciwciała przeciw peroksydazie tarczycowej (anty-TPO Ab): Przeciwciała przeciw per:10.4[IU/ml]
+
+
+
+Sentence 127:
+Przeciwciała przeciw receptorowi dla TSH (anty-rTSH Ab): Przeciwciała przeciw rec:0.47[IU/L]
+
+
+
+Sentence 128:
+TSH: TSH:5.52[uIU/ml]
+TSH: TSH:3.11[uIU/ml]
+
+
+
+Sentence 129:
+FT3: FT3:3.12[pg/ml]
+
+
+
+Sentence 130:
+FT3: FT3:3.07[pg/ml]
+
+
+
+Sentence 131:
+FT4: FT4:1.24[ng/dl]
+
+
+
+Sentence 132:
+FT4: FT4:1.20[ng/dl]
+
+
+
+Sentence 133:
+Troponina T
+    Troponina T:
+    3.00[pg/ml]
+
+
+
+Sentence 134:
+Troponina T
+    Troponina T:
+    3.00[pg/ml]
+
+
+
+Sentence 135:
+Ferrytyna: Ferrytyna:35.6[ng/ml]
+
+
+
+Sentence 136:
+Ferrytyna: Ferrytyna:41.0[ng/ml]
+
+
+
+Sentence 137:
+ALAT: ALAT:13[U/L]
+ALAT: ALAT:13[U/L]
+ASPAT: ASPAT:17[U/L]
+ASPAT: ASPAT:21[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 138:
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 139:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 140:
+Sód (Na): Sód:143[mmol/L]
+
+
+
+Sentence 141:
+Potas (K): Potas:3.9[mmol/L]
+
+
+
+Sentence 142:
+Potas (K): Potas:4.1[mmol/L]
+
+
+
+Sentence 143:
+Kreatynina + GFR
+    
+
+
+Sentence 144:
+Kreatynina w surowicy:0.71[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 145:
+MDRD ze stan:86.1[ml/min/1,73 m^2]
+
+
+
+Sentence 146:
+Kreatynina + GFR
+    
+
+
+Sentence 147:
+Kreatynina w surowicy:0.66[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 148:
+MDRD ze stan:93.7[ml/min/1,73 m^2]
+
+
+
+Sentence 149:
+Mocznik: Mocznik:34[mg/dl]
+
+
+
+Sentence 150:
+Mocznik: Mocznik:36[mg/dl]
+
+
+
+Sentence 151:
+Kwas moczowy: Kwas moczowy:5.3[mg/dl]
+
+
+
+Sentence 152:
+Kwas moczowy: Kwas moczowy:5.7[mg/dl]
+
+
+
+Sentence 153:
+Lipidogram
+    
+
+
+Sentence 154:
+Cholesterol całkowity:177[mg/dl]
+    
+
+
+Sentence 155:
+Cholesterol HDL:61[mg/dl]
+    
+
+
+Sentence 156:
+Cholestrol LDL:98[mg/dl]
+    Triglicerydy:67[mg/dl]
+    
+
+
+Sentence 157:
+Stosunek cholesterolu HD:0.3
+
+
+
+Sentence 158:
+Lipidogram
+    
+
+
+Sentence 159:
+Cholesterol całkowity:194[mg/dl]
+    
+
+
+Sentence 160:
+Cholesterol HDL:57[mg/dl]
+    
+
+
+Sentence 161:
+Cholestrol LDL:119[mg/dl]
+    Triglicerydy:92[mg/dl]
+    
+
+
+Sentence 162:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:100[mg/dl]
+
+
+
+Sentence 163:
+Glukoza w surowicy: Glukoza w surowicy:94[mg/dl]
+
+
+
+Sentence 164:
+NT-proBNP surowica: NT-proBNP w surowicy:76[pg/ml]
+
+
+
+Sentence 165:
+NT-proBNP surowica: NT-proBNP w surowicy:66[pg/ml]
+
+
+
+Sentence 166:
+------------------------------------------------
+
+
+
+Sentence 167:
+ICD10
+------------------------------------------------
+I49.9
+
+
+
+Sentence 168:
+I10
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 169:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 170:
+A01
+
+
+
+Sentence 171:
+I81
+L43
+O61
+G49
+N45
+L69
+M45
+L05
+
+
+
+Sentence 172:
+N24
+88.713
+O69
+88.714
+O09
+C55
+87.440
+O55
+I17
+I19
+O35
+M37
+
+
+
+Sentence 173:
+N13
+O15
+88.721
+O18
+88.761
+
+
+
+Sentence 174:
+------------------------------------------------
+
+

@@ -1,0 +1,86 @@
+T1	Treatment 333 381	Dalsza opieka w POZ oraz Poradni Kardiologicznej
+T2	Treatment 395 455	wizyta w Poradni Pulmonologicznej w celu dalszej diagnostyki
+T3	Investigation 469 561	okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T4	Behaviour 566 668	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T5	Investigation 673 729	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T6	Drug 768 774	Zahron
+T7	Drug_dose 775 799	5mg 1 tabletka wieczorem
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Condition 1018 1030	ASD typu II.
+N1	Reference T8 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T9	Condition 1031 1043	Dyslipidemia
+N2	Reference T9 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T10	Condition 1045 1059	Torbiele nerek
+A1	Status T10 Historical_Insignificant
+T11	Condition 1061 1089	Kamica pęcherzyka żółciowego
+A2	Status T11 Historical_Insignificant
+N3	Reference T11 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T12	Condition 1320 1326	ASD II
+N4	Reference T12 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T13	Condition 1328 1356	Kamica pęcherzyka żółciowego
+A3	Status T13 Historical_Insignificant
+N5	Reference T13 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T14	Condition 1514 1520	ASD II
+N6	Reference T14 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T15	Investigation 1614 1618	ECHO
+T16	Date 1619 1626	w 2008)
+T17	Investigation_result 1522 1580	kilka ubytków we wiotkiej przegrodzie międzyprzedsionkowej
+N7	Reference T17 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T18	Investigation_result 1583 1611	bardzo dużym L-P przeciekiem
+R2	Dat Arg1:T16 Arg2:T15	
+R3	Inv Arg1:T15 Arg2:T18	
+R4	Inv Arg1:T15 Arg2:T17	
+T19	Condition 1637 1665	kamicy pęcherzyka żółciowego
+A4	Status T19 Historical_Insignificant
+N8	Reference T19 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T20	Symptom 1758 1774	czuje się dobrze
+T21	Condition 1797 1825	kamica pęcherzyka żółciowego
+A5	Status T21 Historical_Insignificant
+N9	Reference T21 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T22	Condition 1827 1836	półpasiec
+N10	Reference T22 ICD10:B02	Choroba zakaźna wywołana przez wirus herpes zoster [półpasiec]
+T23	Date 1837 1851	kilka lat temu
+R5	Dat Arg1:T23 Arg2:T22	
+T24	Investigation 1853 1874	RTG klatki piersiowej
+T25	Date 1875 1888	3-4 lata temu
+R6	Dat Arg1:T25 Arg2:T24	
+T26	Negation 1890 1896	Neguje
+T27	Symptom 1898 1922	bóle w klatce piersiowej
+N11	Reference T27 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T28	Symptom 1924 1938	duszność nocną
+N12	Reference T28 ICD10:R06.0	Duszność
+T29	Symptom 1940 1958	obrzęki kk dolnych
+N13	Reference T29 ICD10:R60.0	Obrzęk zlokalizowany
+T30	Symptom 1960 1991	objawy zapalenia żył kk dolnych
+N14	Reference T30 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+T31	Symptom 1993 2005	zasłabnięcia
+T32	Symptom 2007 2015	omdlenia
+N15	Reference T32 ICD10:R55	Omdlenie i zapaść
+T33	Symptom 2017 2027	krwawienia
+T34	Symptom 2029 2042	czarne stolce
+N16	Reference T34 ICD10:K92.1	Stolce smołowate
+T35	Symptom 2044 2060	brunatne wymioty
+N17	Reference T35 ICD10:K92.0	Wymioty krwawe
+T36	Condition 2062 2064	HA
+N18	Reference T36 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T37	Condition 2066 2068	DM
+N19	Reference T37 ICD10:E14	Cukrzyca nieokreślona
+T38	Condition 2070 2086	choroby tarczycy
+N20	Reference T38 ICD10:E07.9	Choroby tarczycy, nieokreślone
+R7	Neg Arg1:T26 Arg2:T27	
+R8	Neg Arg1:T26 Arg2:T28	
+R9	Neg Arg1:T26 Arg2:T29	
+R10	Neg Arg1:T26 Arg2:T30	
+R11	Neg Arg1:T26 Arg2:T31	
+R12	Neg Arg1:T26 Arg2:T32	
+R13	Neg Arg1:T26 Arg2:T33	
+R14	Neg Arg1:T26 Arg2:T34	
+R15	Neg Arg1:T26 Arg2:T35	
+R16	Neg Arg1:T26 Arg2:T36	
+R17	Neg Arg1:T26 Arg2:T37	
+R18	Neg Arg1:T26 Arg2:T38	
+T39	Symptom 2088 2115	RR w domu: 95/60-130/80mmHg
+T40	Symptom 2117 2158	Na 4 piętro wchodzi powoli bez odpoczynku
+T41	Drug 2166 2172	Zahron
+T42	Drug_dose 2173 2205	5mg 1x 1 tabl/wiecz co 2gi dzień
+R19	Drg Arg1:T41 Arg2:T42	

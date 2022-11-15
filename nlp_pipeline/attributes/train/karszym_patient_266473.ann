@@ -1,0 +1,17 @@
+T1	Drug 482 503	Rytmonorm ( Polfenon)
+T2	Drug_dose 505 517	3x150 mg  po
+T3	Treatment 518 541	Kontrola kardiologiczna
+T4	Date 542 550	za 6 mcy
+T5	Behaviour 552 600	Dozwolony wysiłek fizyczny w formie rekreacyjnej
+T6	Condition 819 844	Komorowe zaburzenia rytmu
+T7	Condition 984 987	VEX
+N2	Reference T7 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T8	Drug 1037 1045	Polfenon
+T9	Condition 1048 1065	wywiad alergiczny
+N3	Reference T9 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T10	Negation 1066 1072	ujemny
+R1	Neg Arg1:T10 Arg2:T9	
+R2	Drg Arg1:T1 Arg2:T2	
+R3	Dat Arg1:T4 Arg2:T3	
+T11	Drug 341 350	Rytmonorm
+N1	Reference T6 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór

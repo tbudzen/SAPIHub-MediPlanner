@@ -1,0 +1,272 @@
+T1	Investigation 5527 5530	TTE
+T2	Investigation 5532 5535	TET
+T3	Investigation 5537 5541	ABPM
+T4	Investigation 5543 5553	Holter EKG
+T5	Drug 5166 5173	Amlozek
+T6	Drug_dose 5174 5193	10mg 1/2 tabletki W
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 5195 5205	Carzap HCT
+T8	Drug_dose 5206 5230	16+12,5mg 1/2 tabletki R
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 5232 5238	Finxta
+T10	Drug_dose 5239 5252	5mg 1 tabl. R
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 5254 5259	Acard
+T12	Drug_dose 5260 5269	1 tabl. W
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 5271 5280	Heparegen
+T14	Drug_dose 5281 5294	100mg 3x1tabl
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Drug 5296 5304	Euthyrox
+T16	Drug_dose 5305 5320	N100 1 tabl. R,
+R6	Drg Arg1:T15 Arg2:T16	
+T17	Drug 5321 5329	Glibetic
+T18	Drug_dose 5330 5343	1mg 1 tabl. W
+R7	Drg Arg1:T17 Arg2:T18	
+T19	Drug 5345 5351	Siofor
+T20	Drug_dose 5352 5377	500mg 1 tabl R i poludnie
+R8	Drg Arg1:T19 Arg2:T20	
+T21	Drug 5379 5387	betaserc
+T22	Drug_dose 5388 5417	24mg 1/2mg tabl. co 2 dzień W
+R9	Drg Arg1:T21 Arg2:T22	
+T23	Drug 5419 5427	Nilogrin
+T24	Drug_dose 5428 5447	10mg 1 tabl. R i W,
+R10	Drg Arg1:T23 Arg2:T24	
+T25	Drug 5448 5455	Milurit
+T26	Drug_dose 5456 5488	300mg 1/2 tabl. co drugi dzień R
+R11	Drg Arg1:T25 Arg2:T26	
+T27	Drug 5490 5497	Xalatan
+T28	Drug_dose 5498 5509	1 kropla W.
+R12	Drg Arg1:T27 Arg2:T28	
+T29	Behaviour 5100 5126	warunki mieszkaniowe dobre
+T30	Drug 5075 5082	statyny
+T31	Condition 5064 5073	Uczulenia
+N1	Reference T31 ICD10:T78.4	Alergia, nieokreślona
+R13	Alg Arg1:T31 Arg2:T30	
+T32	Negation 5056 5062	neguje
+T33	Behaviour 5043 5055	Inne używki:
+R14	Neg Arg1:T32 Arg2:T33	
+T34	Behaviour 4979 5041	Palenie tytoniu: popala od czasu do czasu pojedyncze papierosy
+N2	Reference T34 ICD10:T65.2	Tytoń i nikotyna
+T35	Condition 4859 4862	WZW
+N3	Reference T35 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T36	Condition 4871 4887	borelioza ( + ),
+N4	Reference T36 ICD10:A69.2	Choroba z Lyme
+A1	Source T36 Confirmed
+T37	Condition 4888 4896	grużlica
+N5	Reference T37 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T38	Condition 4904 4908	odra
+N6	Reference T38 ICD10:B05	Odra
+T39	Negation 4863 4868	( - )
+R15	Neg Arg1:T39 Arg2:T35	
+T40	Negation 4897 4903	( - ),
+R16	Neg Arg1:T40 Arg2:T37	
+T41	Negation 4909 4914	( - )
+R17	Neg Arg1:T41 Arg2:T38	
+T42	Condition 4938 4961	tętniak aorty brzusznej
+A2	Status T42 Family
+N7	Reference T42 ICD10:I71.4	Tętniak odcinka brzusznego aorty, bez informacji o pęknięciu
+T43	Condition 4710 4719	Borelioza
+A3	Source T43 Confirmed
+N8	Reference T43 ICD10:A69.2	Choroba z Lyme
+T44	Drug 4690 4696	statyn
+T45	Condition 4676 4689	Nietolerancja
+N9	Reference T45 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R18	Alg Arg1:T45 Arg2:T44	
+T46	Treatment 4629 4651	Przezcewkowe usunięcie
+T47	Condition 4652 4674	kamienia w moczowodzie
+N10	Reference T47 ICD10:N20	Kamica nerki i moczowodu
+T48	Condition 4541 4553	udarze mózgu
+N11	Reference T48 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T49	Date 4554 4565	w 2001 roku
+R19	Dat Arg1:T49 Arg2:T48	
+A4	Source T48 Declared
+T50	Treatment 4614 4627	appendektomii
+T51	Condition 4517 4531	Zaćma obuoczna
+N12	Reference T51 ICD10:H25	Zaćma starcza
+T52	Condition 4509 4515	Jaskra
+N13	Reference T52 ICD10:H40.9	Jaskra, nieokreślona
+T53	Condition 4493 4507	Torbiele nerek
+N14	Reference T53 ICD10:N28.1	Torbiel nerki, nabyta
+T54	Condition 4477 4491	Kamica nerkowa
+N15	Reference T54 ICD10:N20.0	Kamica nerki
+T55	Condition 4455 4475	Stłuszczenie wątroby
+N16	Reference T55 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T56	Condition 4431 4453	Niedoczynność tarczycy
+N17	Reference T56 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T57	Condition 4414 4430	Cukrzyca typu 2.
+N18	Reference T57 ICD10:E11	Cukrzyca insulinoniezależna
+T58	Condition 4391 4413	Nadciśnienie tętnicze.
+N19	Reference T58 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T59	Condition 4373 4389	Choroba wieńcowa
+N20	Reference T59 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T60	Condition 3087 3101	Zaćma obuoczna
+N21	Reference T60 ICD10:H25	Zaćma starcza
+T61	Condition 2470 2485	Zaćma obuoczna.
+N22	Reference T61 ICD10:H25	Zaćma starcza
+T62	Condition 3079 3085	Jaskra
+N23	Reference T62 ICD10:H40.9	Jaskra, nieokreślona
+T63	Condition 2462 2468	Jaskra
+N24	Reference T63 ICD10:H40.9	Jaskra, nieokreślona
+T64	Condition 3025 3045	Stłuszczenie wątroby
+N25	Reference T64 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T65	Condition 2440 2460	Stłuszczenie wątroby
+N26	Reference T65 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T66	Condition 3047 3061	Kamica nerkowa
+N27	Reference T66 ICD10:N20.0	Kamica nerki
+T67	Condition 2424 2438	Kamica nerkowa
+N28	Reference T67 ICD10:N20.0	Kamica nerki
+T68	Condition 3001 3023	Niedoczynność tarczycy
+N29	Reference T68 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T69	Condition 2384 2407	Niedoczynność tarczycy.
+N30	Reference T69 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T70	Condition 3063 3078	Torbiele nerek.
+N31	Reference T70 ICD10:N28.1	Torbiel nerki, nabyta
+T71	Condition 2408 2422	Torbiele nerek
+N32	Reference T71 ICD10:N28.1	Torbiel nerki, nabyta
+T72	Condition 2367 2382	Cukrzyca typu 2
+N33	Reference T72 ICD10:E11	Cukrzyca insulinoniezależna
+T73	Condition 2984 2999	Cukrzyca typu 2
+N34	Reference T73 ICD10:E11	Cukrzyca insulinoniezależna
+T74	Condition 2961 2982	Nadciśnienie tętnicze
+N35	Reference T74 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T75	Condition 2344 2365	Nadciśnienie tętnicze
+N36	Reference T75 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T76	Condition 2300 2342	Stabilna choroba wieńcowa - I klasa wg CCS
+N37	Reference T76 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T77	Condition 3203 3225	kamienia w moczowodzie
+N38	Reference T77 ICD10:N20	Kamica nerki i moczowodu
+T78	Condition 2705 2724	złogu w moczowodzie
+N39	Reference T78 ICD10:N20	Kamica nerki i moczowodu
+T79	Treatment 3165 3178	appendektomii
+T80	Condition 3111 3123	udarze mózgu
+A5	Source T80 Declared
+N40	Reference T80 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T81	Date 3124 3135	w 2001 roku
+R20	Dat Arg1:T81 Arg2:T80	
+T82	Treatment 2658 2671	appendektomii
+T83	Condition 2616 2648	Zmiany zwyrodnieniowe kręgosłupa
+N41	Reference T83 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T84	Condition 2593 2602	Borelioza
+N42	Reference T84 ICD10:A69.2	Choroba z Lyme
+T85	Investigation_result 2575 2590	wzrost AST, ALT
+T86	Condition 2534 2547	Nietolerancja
+N43	Reference T86 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T87	Drug 2548 2561	atorwastatyny
+T88	Condition 2494 2506	udarze mózgu
+A6	Source T88 Declared
+N44	Reference T88 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T89	Date 2508 2512	2001
+R21	Dat Arg1:T89 Arg2:T88	
+T90	Condition 2943 2959	Choroba wieńcowa
+N45	Reference T90 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T91	Drug 2019 2026	Xalatan
+T92	Drug_dose 2027 2082	1 kropla do obu oczu wieczorem - wg zaleceń specjalisty
+R22	Drg Arg1:T91 Arg2:T92	
+T93	Drug 1936 1945	Heparegen
+T94	Drug_dose 1946 2016	100mg 1 tabletka rano, w południe i wieczorem - wg zaleceń specjalisty
+R23	Drg Arg1:T93 Arg2:T94	
+T95	Drug 1883 1889	Finxta
+T96	Drug_dose 1890 1934	5mg 1 tabletka rano - wg zaleceń specjalisty
+R24	Drg Arg1:T95 Arg2:T96	
+T97	Drug 1815 1823	Nilogrin
+T98	Drug_dose 1824 1881	10mg 1 tabletka rano i wieczorem - wg zaleceń specjalisty
+R25	Drg Arg1:T97 Arg2:T98	
+T99	Drug 1737 1745	Betaserc
+T100	Drug 1664 1671	Milurit
+T101	Drug_dose 1746 1813	24mg 1/2 tabletki co drugi dzień wieczorem - wg zaleceń specjalisty
+R26	Drg Arg1:T99 Arg2:T101	
+T102	Drug_dose 1672 1735	300mg 1/2 tabletki co drugi dzień rano - wg zaleceń specjalisty
+R27	Drg Arg1:T100 Arg2:T102	
+T103	Drug 1596 1602	Siofor
+T104	Drug_dose 1603 1662	500mg 1 tabletka rano i w południe - wg zaleceń specjalisty
+R28	Drg Arg1:T103 Arg2:T104	
+T105	Drug 1535 1543	Glibetic
+T106	Drug_dose 1544 1593	1mg 1 tabletka wieczorem - wg zaleceń specjalisty
+R29	Drg Arg1:T105 Arg2:T106	
+T107	Drug 1479 1487	Euthyrox
+T108	Drug_dose 1488 1533	N100 1 tabletka rano - wg zaleceń specjalisty
+R30	Drg Arg1:T107 Arg2:T108	
+T109	Drug 1333 1342	Nitromint
+T110	Drug_dose 1343 1477	1 dawka podjęzykowo w przypadku bólu w klatce piersiowej (w razie nieustąpienia dolegliwości, zalecane wezwanie pogotowia ratunkowego)
+R31	Drg Arg1:T109 Arg2:T110	
+T111	Drug 1298 1305	Roswera
+T112	Drug_dose 1306 1331	20mg 1 tabletka wieczorem
+R32	Drg Arg1:T111 Arg2:T112	
+T113	Drug 1255 1265	Carzap HCT
+T114	Drug_dose 1266 1295	16mg+12,5mg 1/2 tabletki rano
+R33	Drg Arg1:T113 Arg2:T114	
+T115	Drug 1218 1225	Amlozek
+T116	Drug_dose 1226 1253	10mg 1/2 tabletki wieczorem
+R34	Drg Arg1:T115 Arg2:T116	
+T117	Drug 1190 1195	Acard
+T118	Drug_dose 1196 1216	1 tabletka wieczorem
+R35	Drg Arg1:T117 Arg2:T118	
+T119	Investigation 1102 1148	samokontrola ciśnienia tętniczego krwi i tętna
+T120	Behaviour 984 1086	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T121	Investigation 953 967	kontrola HbA1c
+T122	Date 968 979	raz w roku.
+R36	Dat Arg1:T122 Arg2:T121	
+T123	Investigation 829 912	kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T124	Date 924 939	za 4-6 tygodni.
+R37	Dat Arg1:T124 Arg2:T123	
+T125	Drug 3241 3247	statyn
+T126	Condition 3227 3240	Nietolerancja
+N46	Reference T126 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T127	Condition 3261 3270	Borelioza
+N47	Reference T127 ICD10:A69.2	Choroba z Lyme
+T128	Date 3471 3480	2017 roku
+T129	Symptom 3481 3601	dolegliwości bólowych w klatce piersiowej o charakterze pieczenia i uczucia rozrywania (w spoczynku i w trakcie wysiłku,
+N48	Reference T129 ICD10:R07.3	Inne bóle w klatce piersiowej
+T130	Investigation 3808 3811	TTE
+T131	Date 3814 3821	03/2018
+T132	Investigation_result 3822 3839	bez istotnej wady
+R38	Dat Arg1:T131 Arg2:T130	
+R39	Inv Arg1:T130 Arg2:T132	
+T133	Condition 3846 3859	nietolerancja
+N49	Reference T133 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T134	Drug 3860 3866	statyn
+R40	Alg Arg1:T133 Arg2:T134	
+T135	Investigation_result 3880 3907	podwyższone próby wątrobowe
+T136	Drug 3911 3917	atoris
+T137	Investigation 3969 3977	angio-CT
+T138	Date 3985 3995	21/05/2019
+T139	Investigation_result 3997 4183	LAD - zwężenie 90%, D1 - zwężenie 90%, LCx - zwężenie 25%, 25-50%, RCA - zwężenie 25%, R-PDA - zwężenie 25%, dodatkowo uwapniony guzek o średnicy do około 3mm w segmencie 2 płuca prawego
+R41	Inv Arg1:T137 Arg2:T139	
+R42	Dat Arg1:T138 Arg2:T137	
+T140	Negation 4185 4191	Neguje
+T141	Symptom 4192 4204	zasłabnięcia
+N50	Reference T141 ICD10:R55	Omdlenie i zapaść
+T142	Symptom 4206 4214	omdlenia
+N51	Reference T142 ICD10:R55	Omdlenie i zapaść
+T143	Symptom 4216 4229	zawroty głowy
+N52	Reference T143 ICD10:R42	Zawroty głowy i odurzenie
+T144	Symptom 4231 4241	krwawienia
+N53	Reference T144 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T145	Symptom 4243 4256	czarne stolce
+N54	Reference T145 ICD10:K92.1	Stolce smołowate
+T146	Symptom 4258 4274	brunatne wymioty
+N55	Reference T146 ICD10:K92.0	Wymioty krwawe
+T147	Condition 4276 4292	chorobę wrzodową
+N56	Reference T147 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T148	Symptom 4294 4308	duszność nocną
+N57	Reference T148 ICD10:I50.1	Niewydolność serca lewokomorowa
+T149	Symptom 4310 4325	obrzęki podudzi
+N58	Reference T149 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+R43	Neg Arg1:T140 Arg2:T141	
+R44	Neg Arg1:T140 Arg2:T142	
+R45	Neg Arg1:T140 Arg2:T143	
+R46	Neg Arg1:T140 Arg2:T144	
+R47	Neg Arg1:T140 Arg2:T145	
+R48	Neg Arg1:T140 Arg2:T146	
+R49	Neg Arg1:T140 Arg2:T147	
+R50	Neg Arg1:T140 Arg2:T148	
+R51	Neg Arg1:T140 Arg2:T149	
+T150	Investigation 538 552	koronarografii
+T151	Date 560 570	08/07/2019
+R52	Dat Arg1:T151 Arg2:T150	
+R53	Alg Arg1:T86 Arg2:T87	
+R54	Dat Arg1:T128 Arg2:T129	
+T152	Condition 3738 3754	wadzie aortalnej
+R55	Alg Arg1:T126 Arg2:T125	
+T153	Treatment 2681 2704	przezcewkowym usunięciu

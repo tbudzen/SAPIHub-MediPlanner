@@ -1,0 +1,75 @@
+T1	Condition 413 434	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 649 672	nadciśnienia tętniczego
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Symptom 814 824	osłabienie
+N3	Reference T3 ICD10:R53	Złe samopoczucie i zmęczenie
+T4	Symptom 826 839	zawroty głowy
+N4	Reference T4 ICD10:R42	Zawroty głowy i odurzenie
+T5	Symptom 845 868	uczucie kołatania serca
+N5	Reference T5 ICD10:R00.2	Kołatanie serca
+T6	Investigation_result 889 928	labilne wartości RR 100-170/70-100 mmHg
+T7	Symptom 930 970	Dolegliwości bólowe w klatce piersiowej,
+N6	Reference T7 ICD10:R07.3	Inne bóle w klatce piersiowej
+T8	Symptom 971 979	omdlenia
+N7	Reference T8 ICD10:R55	Omdlenie i zapaść
+T9	Symptom 981 1000	utraty przytomności
+N8	Reference T9 ICD10:R55	Omdlenie i zapaść
+T10	Negation 1001 1007	neguje
+R1	Neg Arg1:T10 Arg2:T9	
+T11	Symptom 1023 1050	androgenne wypadanie włosów
+N9	Reference T11 ICD10:L65	Inna niebliznowaciejąca utrata włosów
+T12	Condition 1052 1074	niedoczynność tarczycy
+N10	Reference T12 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T13	Treatment 1120 1153	wycięcie macicy i prawego jajnika
+T14	Date 1155 1161	2014r.
+R2	Dat Arg1:T14 Arg2:T13	
+T15	Treatment 1186 1209	wycięcie lewego jajnika
+T16	Date 1210 1216	2005r.
+R3	Dat Arg1:T16 Arg2:T15	
+T17	Treatment 1240 1256	cholecystectomia
+T18	Date 1257 1263	2004r.
+R4	Dat Arg1:T18 Arg2:T17	
+T19	Condition 1282 1285	WZW
+N11	Reference T19 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T20	Condition 1287 1296	borelioza
+N12	Reference T20 ICD10:A69.2	Choroba z Lyme
+T21	Condition 1298 1306	gruźlica
+N13	Reference T21 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T22	Negation 1309 1319	nie podaje
+R5	Neg Arg1:T22 Arg2:T21	
+R6	Neg Arg1:T22 Arg2:T20	
+R7	Neg Arg1:T22 Arg2:T19	
+T23	Condition 1343 1364	nadciśnienie tętnicze
+A1	Status T23 Family
+N14	Reference T23 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T24	Treatment 1375 1378	PCM
+A2	Status T24 Family
+T25	Behaviour 1396 1400	pali
+N15	Reference T25 ICD10:T65.2	Tytoń i nikotyna
+T26	Negation 1392 1395	nie
+R8	Neg Arg1:T26 Arg2:T25	
+T27	Drug 1407 1418	Betaloc ZOK
+T28	Drug_dose 1419 1434	50 1 tabl. rano
+R9	Drg Arg1:T27 Arg2:T28	
+T29	Drug 1435 1441	Vivace
+T30	Drug_dose 1442 1470	5mg 1 tabl. rano i wieczorem
+R10	Drg Arg1:T29 Arg2:T30	
+T31	Drug 1471 1483	Tertensif SR
+T32	Drug_dose 1484 1496	1 tabl. rano
+R11	Drg Arg1:T31 Arg2:T32	
+T33	Drug 1497 1503	Letrox
+T34	Drug_dose 1504 1530	50mg 1 tabl. rano na czczo
+R12	Drg Arg1:T33 Arg2:T34	
+T35	Investigation 1552 1562	echo serca
+T36	Investigation 1564 1574	holter-ekg
+T37	Investigation 1576 1580	ABPM
+T38	Investigation 1582 1597	próba wysiłkowa
+A3	Status T15 Historical_Insignificant
+A4	Status T17 Historical_Insignificant
+A5	Status T13 Historical_Insignificant
+R13	Neg Arg1:T10 Arg2:T8	
+R14	Neg Arg1:T10 Arg2:T7	
+T39	Condition 1218 1237	cysta endometrialna
+T40	Condition 1388 1391	SSS
+A6	Status T40 Family

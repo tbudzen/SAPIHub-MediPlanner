@@ -1,0 +1,521 @@
+allRelations          : 20
+oks                   : 13
+isRedundantAndRemoveds: 4
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 2
+GOOD / BAD            : 17 / 3
+Sentence 0:
+------------------------------------------------
+Wiek: 66 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:I25.8|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Choroba niedokrwienna serca w trakcie diagnostyki.
+
+
+Sentence 6:
+Nadciśnienie tętnicze.
+
+
+Sentence 7:
+Podejrzenie POCHP.
+
+
+Sentence 8:
+Nadczynność tarczycy.
+
+
+Sentence 9:
+Stan po cholecystekctomii w wywiadzie.
+
+
+
+Sentence 10:
+------------------------------------------------
+
+
+
+Sentence 11:
+Zalecenia
+
+
+
+Sentence 12:
+------------------------------------------------
+dalsza opieka w poradni POZ   
+okresowa kontrola kardiologiczna , endokrynologiczna  
+wskazana konsultacja pulmonologiczna
+regularna kontrola ciśnienia tętniczego   
+okresowa kontrola lipidogramu, elektrolitów, parametrów nerkowych
+
+
+
+Sentence 13:
+dieta niskocholesterolowa
+stały, umiarkowany, aerobowy wysiłek fizyczny   
+regularne przyjmowanie leków:  
+Thyrozol 5 mg 1/2 tabl.
+R1	Drg Arg1:T14 Arg2:T15 << OK >>	Thyrozol -> 5 mg 1/2 tabl. rano  <RANK: 3> <info: start[1051, 1060] <type: RIGHT>>
+
+
+Sentence 14:
+rano
+Tritace 5 mg 1 tabl.
+R2	Drg Arg1:T16 Arg2:T17 << OK >>	Tritace -> 5 mg 1 tabl. wieczorem  <RANK: 3> <info: start[1080, 1088] <type: RIGHT>>
+
+
+Sentence 15:
+wieczorem
+Captopril 12,5 mg 1 tabl.
+R3	Drg Arg1:T18 Arg2:T19 << OK >>	Captopril -> 12,5 mg 1 tabl. doraźnie  <RANK: 3> <info: start[1111, 1121] <type: RIGHT>>
+
+
+Sentence 16:
+doraźnie
+------------------------------------------------
+
+
+
+Sentence 17:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 18:
+Pacjentka 66-letnia, z nadczynnością tarczycy, przyjęta do Kliniki z powodu zmniejszenia tolerancji wysiłku od ok. 1,5 roku.
+R4	Dat Arg1:T22 Arg2:T21 << OK >>	od ok. 1,5 roku -> zmniejszenia tolerancji wysiłku  <RANK: 3> <info: start[1378, 1346] <type: LEFT>>
+R5	Dat Arg1:T22 Arg2:T20 <<REDUNDANT!!!SHOULD BE REMOVED>>	od ok. 1,5 roku -> nadczynnością tarczycy  <RANK: 2> <info: start[1378, 1293] <type: LEFT>>
+
+
+Sentence 19:
+Od ok. 2017r chora nie pali tytoniu.
+R6	Neg Arg1:T24 Arg2:T25 << OK >>	nie -> pali tytoniu  <RANK: 3> <info: start[1414, 1418] <type: RIGHT>>
+R7	Dat Arg1:T23 Arg2:T25 << OK >>	Od ok. 2017r -> pali tytoniu  <RANK: 3> <info: start[1395, 1418] <type: RIGHT>>
+
+
+Sentence 20:
+W spoczynkowym ekg obniżenia odcinka ST w II, III, aVF, V5-V6 (stałe)
+
+R8	Inv Arg1:T26 Arg2:T27 << OK >>	spoczynkowym ekg -> obniżenia odcinka ST w II, III, aVF, V5-V6 (stałe)  <RANK: 3> <info: start[1434, 1451] <type: RIGHT>>
+
+
+Sentence 21:
+Przebyte operacje: cholecystektomia w przeszłości
+
+
+R9	Dat Arg1:T30 Arg2:T28 <<REDUNDANT!!!SHOULD BE REMOVED>>	w przeszłości -> Przebyte operacje  <RANK: 3> <info: start[1538, 1502] <type: LEFT>>
+R10	Dat Arg1:T30 Arg2:T29 << OK >>	w przeszłości -> cholecystektomia  <RANK: 3> <info: start[1538, 1521] <type: LEFT>>
+
+
+Sentence 22:
+Przebyte choroby zakaźne - WZW, borelioza - nie podaje
+Wywiad rodzinny: nieistotny
+
+R11	Neg Arg1:T33 Arg2:T31 <<SHOULD NOT BE REMOVED>>	nie podaje -> WZW <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1597, 1580] <type: LEFT>>
+R12	Neg Arg1:T33 Arg2:T32 << OK >>	nie podaje -> borelioza  <RANK: 3> <info: start[1597, 1585] <type: LEFT>>
+R13	Neg Arg1:T33 Arg2:T34 <<REDUNDANT!!!REMOVED>>	nie podaje -> Wywiad rodzinny <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1597, 1608] <type: RIGHT>>
+R14	Neg Arg1:T35 Arg2:T31 <<REDUNDANT!!!REMOVED>>	nieistotny -> WZW <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1625, 1580] <type: LEFT>>
+R15	Neg Arg1:T35 Arg2:T32 <<REDUNDANT!!!REMOVED>>	nieistotny -> borelioza <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1625, 1585] <type: LEFT>>
+R16	Neg Arg1:T35 Arg2:T34 << OK >>	nieistotny -> Wywiad rodzinny  <RANK: 3> <info: start[1625, 1608] <type: LEFT>>
+
+
+Sentence 23:
+Palenie tytoniu: w przeszłości
+
+R17	Dat Arg1:T37 Arg2:T36 << OK >>	w przeszłości -> Palenie tytoniu  <RANK: 3> <info: start[1653, 1636] <type: LEFT>>
+
+
+Sentence 24:
+Inne używki: okazjonalnie
+Uczulenia: nie podaje
+
+R18	Neg Arg1:T40 Arg2:T39 << OK >>	nie podaje -> Uczulenia  <RANK: 3> <info: start[1704, 1693] <type: LEFT>>
+R19	Neg Arg1:T40 Arg2:T38 <<REDUNDANT!!!REMOVED>>	nie podaje -> Inne używki: okazjonalnie <:REMOVED other second tag between (left):> <RANK: 1> <info: start[1704, 1667] <type: LEFT>>
+
+
+Sentence 25:
+Status społeczny: pracownik fizyczny, mieszka sama
+Leki:
+Thyrozol 5 mg 1/2 tabl.
+R20	Drg Arg1:T42 Arg2:T43 << OK >>	Thyrozol -> 5 mg 1/2 tabl. rano  <RANK: 3> <info: start[1772, 1781] <type: RIGHT>>
+
+
+Sentence 26:
+rano
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter, RTG kl. piersiowej.
+
+
+
+Sentence 27:
+Przewidywana liczba dni hospitalizacji: 4-5 dni
+------------------------------------------------
+
+
+
+Sentence 28:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 29:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.97[10^3/ul]
+    
+
+
+Sentence 30:
+RBC Krwinki czerwone:4.70[10^6/ul]
+    
+
+
+Sentence 31:
+HGB Hemoglobina:13.4[g/dl]
+    
+
+
+Sentence 32:
+HCT Hematokryt:40.1[%]
+    
+
+
+Sentence 33:
+MCV wskaźnik czerwonokrw:85.3[fl]
+    
+
+
+Sentence 34:
+MCH wskaźnik czerwonokrw:28.5[pg]
+    
+
+
+Sentence 35:
+MCHC wskaźnik czerwonokr:33.4[g/dl]
+    
+
+
+Sentence 36:
+PLT z morfologii:274[10^3/ul]
+    
+
+
+Sentence 37:
+RDW-SD:41.1[fl]
+    
+
+
+Sentence 38:
+RDW-CV:13.1[%]
+    PDW:13.7[fl]
+    MPV:11.5[fl]
+    P-LCR:37.0[%]
+    
+
+
+Sentence 39:
+PCT (hematokryt płytkowy:0.32[%]
+    
+
+
+Sentence 40:
+NEUTR# wartość bezwzględ:3.01[10^3/ul]
+    
+
+
+Sentence 41:
+NEUTR%:50.5[%]
+    
+
+
+Sentence 42:
+LYMH# wartość bezwzględn:2.17[10^3/ul]
+    
+
+
+Sentence 43:
+LYMPH%:36.3[%]
+    
+
+
+Sentence 44:
+MONO# wartość bezwzględn:0.54[10^3/ul]
+    
+
+
+Sentence 45:
+MONO%:9.0[%]
+    
+
+
+Sentence 46:
+EO# wartość bezwzględna:0.21[10^3/ul]
+    
+
+
+Sentence 47:
+EO%:3.5[%]
+    BASO# wartość bezwzględn:0.04[10^3/ul]
+    BASO%:0.7[%]
+    
+
+
+Sentence 48:
+NRBC %:0.0[%]
+    
+
+
+Sentence 49:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 50:
+Badanie ogólne moczu
+    
+
+
+Sentence 51:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 52:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 53:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 54:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 55:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 56:
+ciężar właściwy:1.012[ ]
+    
+
+
+Sentence 57:
+kwas askrobinowy:40 mg/dl[ ]
+    
+
+
+Sentence 58:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 59:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 60:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 61:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 62:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 63:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 64:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 65:
+leukocyty:2 /ul[ul]
+    erytrocyty świeże:1 /ul[ul]
+    śluz:dość liczny[w preparacie]
+    bakterie:nieliczne[w preparacie]
+
+
+
+Sentence 66:
+TSH: TSH:2.03[uIU/ml]
+
+
+
+Sentence 67:
+FT3: FT3:2.85[pg/ml]
+
+
+
+Sentence 68:
+FT4: FT4:1.03[ng/dl]
+ALAT: ALAT:18[U/L]
+
+
+
+Sentence 69:
+ASPAT: ASPAT:27[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 70:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 71:
+Potas (K): Potas:4.1[mmol/L]
+
+
+
+Sentence 72:
+Kreatynina + GFR
+    
+
+
+Sentence 73:
+Kreatynina w surowicy:0.76[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 74:
+MDRD ze stan:76.1[ml/min/1,73 m^2]
+
+
+
+Sentence 75:
+Mocznik: Mocznik:32[mg/dl]
+
+
+
+Sentence 76:
+Kwas moczowy: Kwas moczowy:3.7[mg/dl]
+
+
+
+Sentence 77:
+Lipidogram
+    
+
+
+Sentence 78:
+Cholesterol całkowity:193[mg/dl]
+    
+
+
+Sentence 79:
+Cholesterol HDL:58[mg/dl]
+    
+
+
+Sentence 80:
+Cholestrol LDL:96[mg/dl]
+    
+
+
+Sentence 81:
+Triglicerydy:81[mg/dl]
+    
+
+
+Sentence 82:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:91[mg/dl]
+
+
+
+Sentence 83:
+------------------------------------------------
+
+
+
+Sentence 84:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 85:
+I25.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 86:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 87:
+89.501
+C55
+A01
+89.502
+I81
+89.41
+L43
+87.440
+N45
+L69
+O55
+I17
+M45
+M37
+I19
+O35
+N13
+88.721
+O69
+
+
+
+Sentence 88:
+------------------------------------------------
+
+

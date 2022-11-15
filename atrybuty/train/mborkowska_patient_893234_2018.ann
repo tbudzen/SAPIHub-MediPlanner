@@ -1,0 +1,76 @@
+T1	Investigation 1880 1891	Echo  serca
+T2	Investigation 1895 1911	próba  wysiłkowa
+T3	Investigation 1914 1925	holter  EKG
+T4	Drug 1821 1832	Witamina D3
+T5	Drug_dose 1834 1849	2tys. 1 x 1 tab
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Drug 1776 1784	Euthyrox
+T7	Drug_dose 1785 1819	88 1x1 tabl rano  dni  nieparzyste
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Drug 1733 1741	Euthyrox
+T9	Drug_dose 1742 1774	75 1 x1 tabl rano  dni  parzyste
+R3	Drg Arg1:T8 Arg2:T9	
+T10	Drug 1701 1711	Concor cor
+T11	Drug_dose 1712 1732	3,75 !x1/2 tabl rano
+R4	Drg Arg1:T10 Arg2:T11	
+T12	Negation 1652 1658	neguje
+T13	Negation 1625 1631	neguje
+T14	Negation 1608 1614	neguje
+T15	Negation 1589 1595	neguje
+T16	Behaviour 1632 1651	Uzależnienia Inne :
+N1	Reference T16 ICD10:Z72	Problemy związane ze stylem życia
+R5	Neg Arg1:T12 Arg2:T16	
+T17	Behaviour 1616 1623	Alkohol
+N2	Reference T17 ICD10:Z72.1	Używanie alkoholu
+R6	Neg Arg1:T13 Arg2:T17	
+T18	Behaviour 1596 1606	Nikotynizm
+N3	Reference T18 ICD10:Z72.0	Używanie tytoniu
+R7	Neg Arg1:T14 Arg2:T18	
+T19	Behaviour 1579 1586	Alergie
+N4	Reference T19 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R8	Neg Arg1:T15 Arg2:T19	
+T20	Drug 1052 1062	Concor COR
+T21	Drug_dose 1063 1083	1,25 mg 1 tabl. rano
+R9	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1019 1026	Vit. D3
+T23	Drug_dose 1027 1050	2 tys j. 1 tabl. 1 x dz
+R10	Drg Arg1:T22 Arg2:T23	
+T24	Drug 957 965	Euthyrox
+T25	Drug_dose 966 984	88 ug 1 tabl. rano
+R11	Drg Arg1:T24 Arg2:T25	
+T26	Drug_dose 986 1018	75 ug 1 tabl. rano naprzemiennie
+R12	Drg Arg1:T24 Arg2:T26	
+T27	Behaviour 894 922	regularna aktywność fizyczna
+T28	Behaviour 874 893	prawidłowe żywienie
+T29	Condition 466 540	Wada nabyta serca pod postacią łagodnej niedomykalności zastawki mitralnej
+N5	Reference T29 ICD10:I34.0	
+T30	Condition 543 555	trójdzielnej
+N6	Reference T30 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T31	Condition 557 589	Blok przedsionkowo-komorowy I st
+N7	Reference T31 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T32	Drug 638 649	L-tyroksyną
+T33	Treatment 659 671	strumektomii
+A1	Status T33 Historical_Insignificant
+T34	Condition 591 613	Niedoczynność tarczycy
+N8	Reference T34 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T35	Condition 1547 1555	cukrzyca
+A2	Status T35 Family
+N9	Reference T35 ICD10:E13	Inne określone postacie cukrzycy
+T36	Condition 1567 1577	guz  mózgu
+N10	Reference T36 ICD10:D43	Nowotwór o niepewnym lub nieznanym charakterze mózgu i ośrodkowego układu nerwowego
+A3	Status T36 Family
+T37	Treatment 1501 1520	operacje : tarczycy
+A4	Status T37 Historical_Insignificant
+T38	Drug 1481 1487	concor
+T39	Condition 1432 1453	nadciśnienie tętnicze
+N11	Reference T39 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T40	Date 1455 1465	od  3  lat
+T41	Symptom 1267 1298	obniżonej   tolerancji  wysiłku
+N12	Reference T41 ICD10:R53	Złe samopoczucie i zmęczenie
+T42	Symptom 1313 1378	występującego  bólu  w  klatce  piersiowej  o  charakterze  kucia
+N13	Reference T42 ICD10:R07.3	Inne bóle w klatce piersiowej
+T43	Symptom 1397 1407	dusznością
+N14	Reference T43 ICD10:R06.0	Duszność
+T44	Treatment 793 821	dalsza opieka w poradni POZ,
+T45	Treatment 831 873	kontrola kardiologiczna, endokrynologiczna
+R13	Dat Arg1:T40 Arg2:T39	

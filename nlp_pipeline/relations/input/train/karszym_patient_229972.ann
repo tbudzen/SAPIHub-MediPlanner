@@ -1,0 +1,64 @@
+T1	Drug 352 374	Propafenon /Rytmonorm/
+T2	Drug_dose 376 396	150mg (1 tab) 3 x dz
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 399 411	NeoMag Forte
+T4	Drug 425 430	Padma
+T5	Drug 463 474	Koenzym Q10
+T6	Drug_dose 413 422	1caps./dz
+T7	Drug_dose 432 460	2 x 1 caps./dz przez tydzień
+T8	Drug_dose 477 501	1 caps./dz przez tydzień
+R2	Drg Arg1:T3 Arg2:T6	
+R3	Drg Arg1:T4 Arg2:T7	
+R4	Drg Arg1:T5 Arg2:T8	
+T9	Treatment 505 529	Ocena pediatryczna w POZ
+T10	Date 530 540	za tydzień
+R5	Dat Arg1:T10 Arg2:T9	
+T11	Treatment 610 642	Wizyta w Poradni Kardiologicznej
+T12	Date 643 653	za miesiąc
+R6	Dat Arg1:T12 Arg2:T11	
+T13	Behaviour 711 756	Ograniczenie maksymalnych wysiłków fizycznych
+T14	Behaviour 765 814	zwolnienie z zajęć wychowania fizycznego w szkole
+T15	Date 815 834	do końca lutego br.
+R7	Dat Arg1:T15 Arg2:T14	
+T16	Condition 1085 1101	Arytmia komorowa
+T17	Condition 1106 1154	Zapalenie oskrzeli o etiologii mycoplasmatycznej
+N2	Reference T17 ICD10:J20.0	Ostre zapalenie oskrzeli wywołane przez Mycoplasma pneumoniae
+T18	Condition 1159 1204	Obserwacja w kierunku zapalenia mięśnia serca
+T19	Drug 1350 1356	Klacid
+T20	Drug 1358 1366	Metocard
+T21	Drug 1368 1378	Propafenon
+T22	Drug 1380 1392	NeoMag Forte
+T23	Drug 1394 1399	Padma
+T24	Drug 1401 1412	Koenzym Q10
+T25	Drug 1414 1420	Loggic
+T26	Drug_dose 1421 1423	60
+R8	Drg Arg1:T25 Arg2:T26	
+T27	Drug 1425 1428	ANA
+N1	Reference T16 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T28	Date 1554 1565	od tygodnia
+T29	Symptom 1566 1592	czuje nierówne bicie serca
+N4	Reference T29 ICD10:R00.2	Kołatanie serca
+T30	Symptom 1594 1617	ból w klatce piersiowej
+N5	Reference T30 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+R9	Dat Arg1:T28 Arg2:T29	
+R10	Dat Arg1:T28 Arg2:T30	
+T31	Condition 1671 1679	na serce
+A1	Status T31 Family
+T32	Date 1652 1670	w wieku ok. 50 lat
+R11	Dat Arg1:T32 Arg2:T31	
+T33	Condition 1685 1696	astmatykiem
+N6	Reference T33 ICD10:J45.0	Astma oskrzelowa w głównej mierze z przyczyn alergicznych
+T34	Condition 1699 1708	pyłkowica
+N7	Reference T34 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T35	Treatment 1711 1731	w trakcie odczulania
+T36	Drug 1734 1748	leków na stałe
+T37	Negation 1749 1762	nie otrzymuje
+R12	Neg Arg1:T37 Arg2:T36	
+T38	Investigation 1765 1768	ekg
+T39	Investigation_result 1769 1785	skurcze komorowe
+R13	Inv Arg1:T38 Arg2:T39	
+N8	Reference T39 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T40	Symptom 1792 1854	czuje, że serce się na chwile zatrzymuje , potem nierówno bije
+N3	Reference T18 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+A2	Source T18 Declared
+N9	Reference T31 ICD10:I51.9	Choroba serca, nieokreślona

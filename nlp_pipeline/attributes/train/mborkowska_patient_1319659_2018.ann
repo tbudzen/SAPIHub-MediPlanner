@@ -1,0 +1,15 @@
+T1	Condition 593 642	Wrodzona wada serca pod postacią zespołu Ebsteina
+N1	Reference T1 ICD10:Q22.5	Anomalia Ebsteina
+T2	Condition 782 793	z. Ebsteina
+N2	Reference T2 ICD10:Q22.5	Anomalia Ebsteina
+T3	Condition 830 847	wywiad alergiczny
+N3	Reference T3 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T4	Negation 848 854	ujemny
+R1	Neg Arg1:T4 Arg2:T3	
+T5	Drug 857 871	leków na stałe
+T6	Negation 872 885	nie otrzymuje
+R2	Neg Arg1:T6 Arg2:T5	
+T7	Treatment 329 363	Kontrola w Poradni Kardiologicznej
+T8	Date 364 374	za 6-8 mcy
+R3	Dat Arg1:T8 Arg2:T7	
+T9	Investigation 810 827	badania kontrolne

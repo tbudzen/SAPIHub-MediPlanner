@@ -1,0 +1,1317 @@
+allRelations          : 89
+oks                   : 46
+isRedundantAndRemoveds: 41
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 2
+GOOD / BAD            : 87 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 81 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zastosowane leczenie
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Ostatnio leczona:
+Furosemid 100 mg/10 h
+Dopamina 200 mg w 50 ml 0,9% NaCl 3,2 ml/h
+
+R1	Drg Arg1:T1 Arg2:T2 << OK >>	Furosemid -> 100 mg/10 h  <RANK: 3> <info: start[359, 369] <type: RIGHT>>
+R2	Drg Arg1:T1 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Furosemid -> 200 mg w 50 ml <:REMOVED other first tag between (right):> <RANK: 1> <info: start[359, 390] <type: RIGHT>>
+R3	Drg Arg1:T1 Arg2:T6 <<REDUNDANT!!!REMOVED>>	Furosemid -> 3,2 ml/h <:REMOVED other first tag between (right):> <RANK: 0> <info: start[359, 415] <type: RIGHT>>
+R4	Drg Arg1:T3 Arg2:T2 <<REDUNDANT!!!REMOVED>>	Dopamina -> 100 mg/10 h <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[381, 369] <type: LEFT>>
+R5	Drg Arg1:T3 Arg2:T4 << OK >>	Dopamina -> 200 mg w 50 ml  <RANK: 3> <info: start[381, 390] <type: RIGHT>>
+R6	Drg Arg1:T3 Arg2:T6 <<REDUNDANT!!!REMOVED>>	Dopamina -> 3,2 ml/h <:REMOVED other first tag between (right):> <RANK: 2> <info: start[381, 415] <type: RIGHT>>
+R7	Drg Arg1:T5 Arg2:T2 <<REDUNDANT!!!REMOVED>>	0,9% NaCl -> 100 mg/10 h <:REMOVED other first tag between (left):> <RANK: 1> <info: start[405, 369] <type: LEFT>>
+R8	Drg Arg1:T5 Arg2:T4 <<REDUNDANT!!!REMOVED>>	0,9% NaCl -> 200 mg w 50 ml <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[405, 390] <type: LEFT>>
+R9	Drg Arg1:T5 Arg2:T6 << OK >>	0,9% NaCl -> 3,2 ml/h  <RANK: 3> <info: start[405, 415] <type: RIGHT>>
+
+
+Sentence 5:
+Nebulizacja 20 kropli Berodualu + 0,5 mg Pulmicortu co 6h
+Trifas 1 amp. iv.
+Metocard 50 mg 1/2 tabl.
+R10	Drg Arg1:T7 Arg2:T9 << OK >>	Berodualu -> Nebulizacja 20 kropli  <RANK: 3> <info: start[446, 424] <type: LEFT>>
+R11	Drg Arg1:T7 Arg2:T10 <<REDUNDANT!!!SHOULD BE REMOVED>>	Berodualu -> 0,5 mg  <RANK: 3> <info: start[446, 458] <type: RIGHT>>
+R12	Drg Arg1:T7 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Berodualu -> co 6h <:REMOVED other first tag between (right):> <RANK: 2> <info: start[446, 476] <type: RIGHT>>
+R13	Drg Arg1:T7 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Berodualu -> 1 amp. iv. <:REMOVED other first tag between (right):> <RANK: 0> <info: start[446, 489] <type: RIGHT>>
+R14	Drg Arg1:T7 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Berodualu -> 50 mg 1/2 tabl. 2xdz <:REMOVED other first tag between (right):> <RANK: 0> <info: start[446, 509] <type: RIGHT>>
+R15	Drg Arg1:T8 Arg2:T9 <<REDUNDANT!!!REMOVED>>	Pulmicortu -> Nebulizacja 20 kropli <:REMOVED other first tag between (left):> <RANK: 2> <info: start[465, 424] <type: LEFT>>
+R16	Drg Arg1:T8 Arg2:T10 << OK >>	Pulmicortu -> 0,5 mg  <RANK: 3> <info: start[465, 458] <type: LEFT>>
+R17	Drg Arg1:T8 Arg2:T11 << OK >>	Pulmicortu -> co 6h  <RANK: 3> <info: start[465, 476] <type: RIGHT>>
+R18	Drg Arg1:T8 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Pulmicortu -> 1 amp. iv. <:REMOVED other first tag between (right):> <RANK: 1> <info: start[465, 489] <type: RIGHT>>
+R19	Drg Arg1:T8 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Pulmicortu -> 50 mg 1/2 tabl. 2xdz <:REMOVED other first tag between (right):> <RANK: 0> <info: start[465, 509] <type: RIGHT>>
+R20	Drg Arg1:T12 Arg2:T9 <<REDUNDANT!!!REMOVED>>	Trifas -> Nebulizacja 20 kropli <:REMOVED other first tag between (left):> <RANK: 0> <info: start[482, 424] <type: LEFT>>
+R21	Drg Arg1:T12 Arg2:T10 <<REDUNDANT!!!REMOVED>>	Trifas -> 0,5 mg <:REMOVED other first tag between (left):> <RANK: 1> <info: start[482, 458] <type: LEFT>>
+R22	Drg Arg1:T12 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Trifas -> co 6h <:REMOVED many second tags on the left:> <RANK: 1> <info: start[482, 476] <type: LEFT>>
+R23	Drg Arg1:T12 Arg2:T13 << OK >>	Trifas -> 1 amp. iv.  <RANK: 3> <info: start[482, 489] <type: RIGHT>>
+R24	Drg Arg1:T12 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Trifas -> 50 mg 1/2 tabl. 2xdz <:REMOVED other first tag between (right):> <RANK: 0> <info: start[482, 509] <type: RIGHT>>
+R25	Drg Arg1:T14 Arg2:T9 <<REDUNDANT!!!REMOVED>>	Metocard -> Nebulizacja 20 kropli <:REMOVED other first tag between (left):> <RANK: 0> <info: start[500, 424] <type: LEFT>>
+R26	Drg Arg1:T14 Arg2:T10 <<REDUNDANT!!!REMOVED>>	Metocard -> 0,5 mg <:REMOVED other first tag between (left):> <RANK: 0> <info: start[500, 458] <type: LEFT>>
+R27	Drg Arg1:T14 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Metocard -> co 6h <:REMOVED other first tag between (left):> <RANK: 0> <info: start[500, 476] <type: LEFT>>
+R28	Drg Arg1:T14 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Metocard -> 1 amp. iv. <:REMOVED many second tags on the left:> <RANK: 1> <info: start[500, 489] <type: LEFT>>
+R29	Drg Arg1:T14 Arg2:T15 << OK >>	Metocard -> 50 mg 1/2 tabl. 2xdz  <RANK: 3> <info: start[500, 509] <type: RIGHT>>
+
+
+Sentence 6:
+2xdz
+Fraxiparine 0,4 mg 1xdz s.c.
+
+R30	Drg Arg1:T16 Arg2:T17 << OK >>	Fraxiparine -> 0,4 mg 1xdz s.c.  <RANK: 3> <info: start[530, 542] <type: RIGHT>>
+
+
+Sentence 7:
+Milurit 100 mg 1xdz
+
+R31	Drg Arg1:T18 Arg2:T19 << OK >>	Milurit -> 100 mg 1xdz  <RANK: 3> <info: start[559, 567] <type: RIGHT>>
+
+
+Sentence 8:
+Sulpiryd 100 mg 2xdz (z uwagi na brak Sertraliny, którą zalecił psychiatra)
+
+R32	Drg Arg1:T20 Arg2:T21 << OK >>	Sulpiryd -> 100 mg 2xdz (z uwagi na brak Sertraliny, którą zalecił psychiatra)  <RANK: 3> <info: start[579, 588] <type: RIGHT>>
+
+
+Sentence 9:
+Acard 75 mg 1xdz
+Atoris 20 mg 1xdz
+Ins.
+R33	Drg Arg1:T22 Arg2:T23 << OK >>	Acard -> 75 mg 1xdz  <RANK: 3> <info: start[655, 661] <type: RIGHT>>
+R34	Drg Arg1:T22 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Acard -> 20 mg 1xdz <:REMOVED other first tag between (right):> <RANK: 1> <info: start[655, 679] <type: RIGHT>>
+R35	Drg Arg1:T24 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Atoris -> 75 mg 1xdz <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[672, 661] <type: LEFT>>
+R36	Drg Arg1:T24 Arg2:T25 << OK >>	Atoris -> 20 mg 1xdz  <RANK: 3> <info: start[672, 679] <type: RIGHT>>
+R37	Drg Arg1:T26 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Ins. Actrapid -> 75 mg 1xdz <:REMOVED other first tag between (left):> <RANK: 1> <info: start[690, 661] <type: LEFT>>
+R38	Drg Arg1:T26 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Ins. Actrapid -> 20 mg 1xdz <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 1> <info: start[690, 679] <type: LEFT>>
+
+
+Sentence 10:
+Actrapid wg. glikemii ost.
+
+
+Sentence 11:
+12j-10j-10j s.c.
+
+
+
+Sentence 12:
+Ins Insulatard wg. glikemii
+R39	Drg Arg1:T28 Arg2:T29 << OK >>	Ins Insulatard -> wg. glikemii 1xdz wieczorem, ost. 10 j.  <RANK: 3> <info: start[739, 754] <type: RIGHT>>
+
+
+Sentence 13:
+1xdz wieczorem, ost. 10 j.
+Augmentin 0,6 g co 12 h (dziś 7 doba)
+
+R40	Drg Arg1:T30 Arg2:T31 << OK >>	Augmentin -> 0,6 g co 12 h (dziś 7 doba)  <RANK: 3> <info: start[794, 804] <type: RIGHT>>
+
+
+Sentence 14:
+Flucofast 50 mg 1 tabl.
+R41	Drg Arg1:T32 Arg2:T33 << OK >>	Flucofast -> 50 mg 1 tabl. co 24 h (dziś 7 doba)  <RANK: 3> <info: start[832, 842] <type: RIGHT>>
+
+
+Sentence 15:
+co 24 h (dziś 7 doba)
+------------------------------------------------
+
+
+
+Sentence 16:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 17:
+------------------------------------------------
+ Rozpozanie I: ICD10:I50|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Zaostrzenie przewlekłej niewydolności serca z zachowaną funkcją skurczową lewej komory (HFpEF).
+
+
+Sentence 18:
+Dysfunkcja rozkurczowa lewej komory serca.
+
+
+Sentence 19:
+Przewlekła choroba niedokrwienna serca - choroba mostków mięśniowych.
+
+
+Sentence 20:
+Niedomykalność II stopnia z łagodną stenozą zastawki aortalnej.
+
+
+Sentence 21:
+Niedomykalność zastawki trójdzielnej I/II stopnia.
+
+
+Sentence 22:
+Niedomykalność zastawki mitralnej I stopnia.
+
+
+Sentence 23:
+Nadkomorowe zaburzenia rytmu serca.
+
+
+Sentence 24:
+Ostre uszkodzenie nerek nałożone na przewlekłą nefropatię cukrzycową.
+
+
+Sentence 25:
+Nadciśnienie tętnicze.
+
+
+Sentence 26:
+Cukrzyca typu 2. Retinopatia cukrzycowa.
+
+
+Sentence 27:
+Niedokrwistość chorób przewlekłych.
+
+
+Sentence 28:
+Małopłytkowość.
+
+
+Sentence 29:
+Miażdżyca uogólniona.
+
+
+Sentence 30:
+Zmiany śródmiąższowe płuc o charakterze "mlecznej szyby" w wywiadzie w przeszłości - bez diagnostyki w tym kierunku.
+R42	Dat Arg1:T49 Arg2:T48 << OK >>	w przeszłości -> Zmiany śródmiąższowe płuc o charakterze "mlecznej szyby"  <RANK: 3> <info: start[1786, 1717] <type: LEFT>>
+
+
+Sentence 31:
+Hiperurykemia w wywiadzie.
+
+
+Sentence 32:
+Łagodna dysplazja szyjki macicy w wywiadzie.
+
+
+Sentence 33:
+Stan po cholecystektomii.
+
+
+
+Sentence 34:
+------------------------------------------------
+
+
+
+Sentence 35:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 36:
+Pacjentka, lat 80, hospitalizowana w Klinice w grudniu 2018 roku, przyjęta do Kliniki z powodu zaostrzenia niewydolności serca do III klasy hemodynamicznej wg NYHA.
+R43	Dat Arg1:T54 Arg2:T55 <<REDUNDANT!!!REMOVED>>	w grudniu 2018 -> zaostrzenia niewydolności serca do III klasy hemodynamicznej wg NYHA <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2101, 2151] <type: RIGHT>>
+R44	Dat Arg1:T54 Arg2:T53 << OK >>	w grudniu 2018 -> hospitalizowana w Klinice  <RANK: 3> <info: start[2101, 2075] <type: LEFT>>
+
+
+Sentence 37:
+Pacjentka zgłasza narastające obrzęki kończyn dolnych od miesiąca z sączącymi owrzodzeniami na kk. dolnych.
+R45	Dat Arg1:T57 Arg2:T56 << OK >>	od miesiąca -> narastające obrzęki kończyn dolnych  <RANK: 3> <info: start[2275, 2239] <type: LEFT>>
+R46	Dat Arg1:T57 Arg2:T58 <<REDUNDANT!!!SHOULD BE REMOVED>>	od miesiąca -> sączącymi owrzodzeniami na kk. dolnych  <RANK: 3> <info: start[2275, 2289] <type: RIGHT>>
+
+
+Sentence 38:
+Pacjentka i córka pacjentki twierdzą, że chora przyjmowała regularnie leki.
+
+
+
+Sentence 39:
+Neguje zasłabnięcia, omdlenia, zawroty głowy, neguje bóle w klatce piersiowej.
+R47	Neg Arg1:T59 Arg2:T60 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[2405, 2412] <type: RIGHT>>
+R48	Neg Arg1:T59 Arg2:T61 << OK >>	Neguje -> omdlenia  <RANK: 2> <info: start[2405, 2426] <type: RIGHT>>
+R49	Neg Arg1:T59 Arg2:T62 << OK >>	Neguje -> zawroty głowy  <RANK: 2> <info: start[2405, 2436] <type: RIGHT>>
+R50	Neg Arg1:T59 Arg2:T64 <<REDUNDANT!!!REMOVED>>	Neguje -> bóle w klatce piersiowej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2405, 2458] <type: RIGHT>>
+R51	Neg Arg1:T63 Arg2:T60 <<REDUNDANT!!!REMOVED>>	neguje -> zasłabnięcia <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2451, 2412] <type: LEFT>>
+R52	Neg Arg1:T63 Arg2:T61 <<REDUNDANT!!!REMOVED>>	neguje -> omdlenia <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2451, 2426] <type: LEFT>>
+R53	Neg Arg1:T63 Arg2:T62 <<REDUNDANT!!!REMOVED>>	neguje -> zawroty głowy <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2451, 2436] <type: LEFT>>
+R54	Neg Arg1:T63 Arg2:T64 << OK >>	neguje -> bóle w klatce piersiowej  <RANK: 3> <info: start[2451, 2458] <type: RIGHT>>
+
+
+Sentence 40:
+Innych dolegliwości nie zgłasza.
+
+R55	Neg Arg1:T66 Arg2:T65 << OK >>	nie zgłasza -> Innych dolegliwości  <RANK: 3> <info: start[2504, 2484] <type: LEFT>>
+
+
+Sentence 41:
+W wywiadzie: Przewlekła niewydolność serca z zachowaną frakcją wyrzutową w II/III klasie wg NYHA.
+
+
+Sentence 42:
+Dysfunkcja rozkurczowa lewej komory serca.
+
+
+Sentence 43:
+Przewlekła choroba niedokrwienna serca - choroba mostków mięśniowych.
+
+
+Sentence 44:
+Niedomykalność II stopnia z łagodną stenozą zastawki aortalnej.
+
+
+Sentence 45:
+Niedomykalność zastawki trójdzielnej I/II stopnia.
+
+
+Sentence 46:
+Niedomykalność zastawki mitralnej I stopnia.
+
+
+Sentence 47:
+Nadkomorowe zaburzenia rytmu serca.
+
+
+Sentence 48:
+Nadciśnienie tętnicze.
+
+
+Sentence 49:
+Cukrzyca typu 2. Retinopatia cukrzycowa.
+
+
+Sentence 50:
+Przewlekła choroba nerek w stadium G3a wg KDIGO.
+
+
+Sentence 51:
+Niedokrwistość chorób przewlekłych.
+
+
+Sentence 52:
+Małopłytkowość.
+
+
+Sentence 53:
+Miażdżyca uogólniona.
+
+
+Sentence 54:
+Zmiany śródmiąższowe płuc o charakterze "mlecznej szyby" w wywiadzie.
+
+
+Sentence 55:
+Hiperurykemia w wywiadzie.
+
+
+Sentence 56:
+Łagodna dysplazja szyjki macicy w wywiadzie.
+
+
+Sentence 57:
+Stan po cholecystektomii.
+
+
+
+Sentence 58:
+Przebyte operacje: j/w.
+
+
+
+Sentence 59:
+Leczenie przewlekłe: kardiologiczne, diabetologiczne.
+
+
+
+Sentence 60:
+Przebyte choroby zakaźne - WZW ( - ) , borelioza ( - ), gruźlica ( - ), odra ( - ).
+
+R56	Neg Arg1:T92 Arg2:T88 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3436, 3384] <type: LEFT>>
+R57	Neg Arg1:T92 Arg2:T89 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3436, 3396] <type: LEFT>>
+R58	Neg Arg1:T92 Arg2:T90 <<REDUNDANT!!!REMOVED>>	- -> gruźlica <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3436, 3413] <type: LEFT>>
+R59	Neg Arg1:T92 Arg2:T91 << OK >>	- -> odra  <RANK: 3> <info: start[3436, 3429] <type: LEFT>>
+R60	Neg Arg1:T93 Arg2:T88 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3424, 3384] <type: LEFT>>
+R61	Neg Arg1:T93 Arg2:T89 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3424, 3396] <type: LEFT>>
+R62	Neg Arg1:T93 Arg2:T90 << OK >>	- -> gruźlica  <RANK: 3> <info: start[3424, 3413] <type: LEFT>>
+R63	Neg Arg1:T93 Arg2:T91 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[3424, 3429] <type: RIGHT>>
+R64	Neg Arg1:T94 Arg2:T88 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3408, 3384] <type: LEFT>>
+R65	Neg Arg1:T94 Arg2:T89 << OK >>	- -> borelioza  <RANK: 3> <info: start[3408, 3396] <type: LEFT>>
+R66	Neg Arg1:T94 Arg2:T90 <<REDUNDANT!!!REMOVED>>	- -> gruźlica <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[3408, 3413] <type: RIGHT>>
+R67	Neg Arg1:T94 Arg2:T91 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3408, 3429] <type: RIGHT>>
+R68	Neg Arg1:T95 Arg2:T88 << OK >>	- -> WZW  <RANK: 3> <info: start[3390, 3384] <type: LEFT>>
+R69	Neg Arg1:T95 Arg2:T89 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[3390, 3396] <type: RIGHT>>
+R70	Neg Arg1:T95 Arg2:T90 <<REDUNDANT!!!REMOVED>>	- -> gruźlica <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3390, 3413] <type: RIGHT>>
+R71	Neg Arg1:T95 Arg2:T91 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3390, 3429] <type: RIGHT>>
+
+
+Sentence 61:
+W wywiadzie rodzinnym: nieistotny.
+
+R72	Neg Arg1:T97 Arg2:T96 << OK >>	nieistotny -> wywiadzie rodzinnym  <RANK: 3> <info: start[3464, 3443] <type: LEFT>>
+
+
+Sentence 62:
+Palenie tytoniu: neguje.
+
+R73	Neg Arg1:T99 Arg2:T98 << OK >>	neguje -> Palenie tytoniu  <RANK: 3> <info: start[3493, 3476] <type: LEFT>>
+
+
+Sentence 63:
+Inne używki: neguje.
+
+R74	Neg Arg1:T101 Arg2:T100 << OK >>	neguje -> Inne używki  <RANK: 3> <info: start[3514, 3501] <type: LEFT>>
+
+
+Sentence 64:
+Uczulenia: neguje.
+
+R75	Neg Arg1:T103 Arg2:T102 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[3533, 3522] <type: LEFT>>
+
+
+Sentence 65:
+Stan społeczny: warunki mieszkaniowe dobre , mieszka z mężem
+Leki: 
+
+
+
+Sentence 66:
+Diured 10mg 1 tabletka 2 razy dziennie rano i w południe.
+
+R76	Drg Arg1:T105 Arg2:T106 << OK >>	Diured -> 10mg 1 tabletka 2 razy dziennie rano i w południe  <RANK: 3> <info: start[3609, 3616] <type: RIGHT>>
+
+
+Sentence 67:
+Hydrochlorothiazyd 25 mg 1 tabletka 1 raz dziennie rano 30 min. przed podaniem Diuredu.
+
+R77	Drg Arg1:T107 Arg2:T108 << OK >>	Hydrochlorothiazyd -> 25 mg 1 tabletka 1 raz dziennie rano 30 min. przed podaniem Diuredu  <RANK: 3> <info: start[3667, 3686] <type: RIGHT>>
+
+
+Sentence 68:
+Espiro 50mg 1 tabletka 1 raz dziennie rano.
+
+R78	Drg Arg1:T109 Arg2:T110 << OK >>	Espiro -> 50mg 1 tabletka 1 raz dziennie rano  <RANK: 3> <info: start[3755, 3762] <type: RIGHT>>
+
+
+Sentence 69:
+Milurit 100mg 1 tabletka 1 raz dziennie rano.
+
+R79	Drg Arg1:T111 Arg2:T112 << OK >>	Milurit -> 100mg 1 tabletka 1 raz dziennie rano  <RANK: 3> <info: start[3799, 3807] <type: RIGHT>>
+
+
+Sentence 70:
+Sulpiryd 1 tabletka 2 razy dziennie rano i wieczorem.
+
+R80	Drg Arg1:T113 Arg2:T114 << OK >>	Sulpiryd -> 1 tabletka 2 razy dziennie rano i wieczorem  <RANK: 3> <info: start[3845, 3854] <type: RIGHT>>
+
+
+Sentence 71:
+Acard 75 mg 1 tabletka 1 raz dziennie wieczorem.
+
+R81	Drg Arg1:T115 Arg2:T116 << OK >>	Acard -> 75 mg 1 tabletka 1 raz dziennie wieczorem  <RANK: 3> <info: start[3899, 3905] <type: RIGHT>>
+
+
+Sentence 72:
+Coryol 3,125 mg 1 tabletka 2 razy dziennie rano i wieczorem.
+
+R82	Drg Arg1:T117 Arg2:T118 << OK >>	Coryol -> 3,125 mg 1 tabletka 2 razy dziennie rano i wieczorem  <RANK: 3> <info: start[3948, 3955] <type: RIGHT>>
+
+
+Sentence 73:
+Atoris 20mg 1 tabletka 1 raz dziennie wieczorem.
+
+R83	Drg Arg1:T119 Arg2:T120 << OK >>	Atoris -> 20mg 1 tabletka 1 raz dziennie wieczorem  <RANK: 3> <info: start[4009, 4016] <type: RIGHT>>
+
+
+Sentence 74:
+Telmizek 80mg 1 tabletka 1 raz dziennie rano.
+
+R84	Drg Arg1:T121 Arg2:T122 << OK >>	Telmizek -> 80mg 1 tabletka 1 raz dziennie rano  <RANK: 3> <info: start[4058, 4067] <type: RIGHT>>
+
+
+Sentence 75:
+Nitrendypina 20mg 1 tabletka 2 razy dziennie rano i wieczorem.
+
+R85	Drg Arg1:T123 Arg2:T124 << OK >>	Nitrendypina -> 20mg 1 tabletka 2 razy dziennie rano i wieczorem  <RANK: 3> <info: start[4104, 4117] <type: RIGHT>>
+
+
+Sentence 76:
+Doxar 4mg 1 tabletka 1 raz dziennie wieczorem.
+
+R86	Drg Arg1:T125 Arg2:T126 << OK >>	Doxar -> 4mg 1 tabletka 1 raz dziennie wieczorem  <RANK: 3> <info: start[4167, 4173] <type: RIGHT>>
+
+
+Sentence 77:
+Insulina Actrapid 12j.
+R87	Drg Arg1:T127 Arg2:T128 << OK >>	Insulina Actrapid -> 12j. - 10j. - 10j., 30 minut przed posiłkami - ilość jednostek należy dostosować do poziomu glikemii  <RANK: 3> <info: start[4214, 4232] <type: RIGHT>>
+
+
+Sentence 78:
+- 10j. - 10j., 30 minut przed posiłkami - ilość jednostek należy dostosować do poziomu glikemii.
+
+
+
+Sentence 79:
+Insulina Insulatard 10 jednostek o godzinie 22:00.
+
+R88	Drg Arg1:T129 Arg2:T130 << OK >>	Insulina Insulatard -> 10 jednostek o godzinie 22:00  <RANK: 3> <info: start[4334, 4354] <type: RIGHT>>
+
+
+Sentence 80:
+Berodual N aerozol inhalacyjny (50 µg/dawkę+21 µg/dawkę) 1-2 dawki doraźnie w razie obturacji oskrzeli.
+
+R89	Drg Arg1:T131 Arg2:T132 << OK >>	Berodual N aerozol inhalacyjny -> (50 µg/dawkę+21 µg/dawkę) 1-2 dawki doraźnie w razie obturacji oskrzeli  <RANK: 3> <info: start[4385, 4416] <type: RIGHT>>
+
+
+Sentence 81:
+Plan Opieki : Echo serca, ABPM, EKG.
+
+
+Sentence 82:
+Planowany czas hospitalizacji 4-5.
+
+
+
+Sentence 83:
+------------------------------------------------
+
+
+
+Sentence 84:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 85:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.07[10^3/ul]
+    
+
+
+Sentence 86:
+RBC Krwinki czerwone:3.73[10^6/ul]
+    
+
+
+Sentence 87:
+HGB Hemoglobina:11.2[g/dl]
+    
+
+
+Sentence 88:
+HCT Hematokryt:33.1[%]
+    
+
+
+Sentence 89:
+MCV wskaźnik czerwonokrw:88.7[fl]
+    
+
+
+Sentence 90:
+MCH wskaźnik czerwonokrw:30.0[pg]
+    
+
+
+Sentence 91:
+MCHC wskaźnik czerwonokr:33.8[g/dl]
+    
+
+
+Sentence 92:
+PLT z morfologii:158[10^3/ul]
+    
+
+
+Sentence 93:
+RDW-SD:48.4[fl]
+    
+
+
+Sentence 94:
+RDW-CV:14.9[%]
+    PDW:12.7[fl]
+    MPV:11.0[fl]
+    
+
+
+Sentence 95:
+P-LCR:31.3[%]
+    
+
+
+Sentence 96:
+PCT (hematokryt płytkowy:0.17[%]
+    
+
+
+Sentence 97:
+NEUTR# wartość bezwzględ:4.99[10^3/ul]
+    
+
+
+Sentence 98:
+NEUTR%:70.6[%]
+    
+
+
+Sentence 99:
+LYMH# wartość bezwzględn:1.19[10^3/ul]
+    
+
+
+Sentence 100:
+LYMPH%:16.8[%]
+    
+
+
+Sentence 101:
+MONO# wartość bezwzględn:0.66[10^3/ul]
+    MONO%:9.3[%]
+    
+
+
+Sentence 102:
+EO# wartość bezwzględna:0.19[10^3/ul]
+    
+
+
+Sentence 103:
+EO%:2.7[%]
+    
+
+
+Sentence 104:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 105:
+NRBC %:0.0[%]
+    
+
+
+Sentence 106:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 107:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:11.12[10^3/ul]
+    
+
+
+Sentence 108:
+RBC Krwinki czerwone:3.27[10^6/ul]
+    
+
+
+Sentence 109:
+HGB Hemoglobina:10.0[g/dl]
+    
+
+
+Sentence 110:
+HCT Hematokryt:29.8[%]
+    
+
+
+Sentence 111:
+MCV wskaźnik czerwonokrw:91.1[fl]
+    
+
+
+Sentence 112:
+MCH wskaźnik czerwonokrw:30.6[pg]
+    
+
+
+Sentence 113:
+MCHC wskaźnik czerwonokr:33.6[g/dl]
+    
+
+
+Sentence 114:
+PLT z morfologii:137[10^3/ul]
+    
+
+
+Sentence 115:
+RDW-SD:49.0[fl]
+    
+
+
+Sentence 116:
+RDW-CV:14.7[%]
+    PDW:11.6[fl]
+    MPV:10.7[fl]
+    
+
+
+Sentence 117:
+P-LCR:29.9[%]
+    
+
+
+Sentence 118:
+PCT (hematokryt płytkowy:0.15[%]
+    
+
+
+Sentence 119:
+NEUTR# wartość bezwzględ:9.11[10^3/ul]
+    
+
+
+Sentence 120:
+NEUTR%:81.9[%]
+    
+
+
+Sentence 121:
+LYMH# wartość bezwzględn:1.21[10^3/ul]
+    
+
+
+Sentence 122:
+LYMPH%:10.9[%]
+    
+
+
+Sentence 123:
+MONO# wartość bezwzględn:0.69[10^3/ul]
+    
+
+
+Sentence 124:
+MONO%:6.2[%]
+    
+
+
+Sentence 125:
+EO# wartość bezwzględna:0.07[10^3/ul]
+    
+
+
+Sentence 126:
+EO%:0.6[%]
+    
+
+
+Sentence 127:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    BASO%:0.4[%]
+    
+
+
+Sentence 128:
+NRBC %:0.0[%]
+    
+
+
+Sentence 129:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 130:
+Badanie ogólne moczu
+    
+
+
+Sentence 131:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 132:
+glukoza:ślad[ ]
+    
+
+
+Sentence 133:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 134:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 135:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 136:
+ciężar właściwy:1.008[ ]
+    
+
+
+Sentence 137:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 138:
+pH:5.0[ ]
+    
+
+
+Sentence 139:
+białko:63 mg/dl[ ]
+    
+
+
+Sentence 140:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 141:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 142:
+erytrocyty:obecne[ ]
+    
+
+
+Sentence 143:
+leukocyty:obecne[ ]
+    
+
+
+Sentence 144:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 145:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 146:
+skupiska leukocytów:pojedyncze[w preparacie]
+    
+
+
+Sentence 147:
+leukocyty:171 /ul[ul]
+    erytrocyty świeże i częś:33 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:nieliczne[w preparacie]
+
+
+
+Sentence 148:
+Badanie ogólne moczu
+    
+
+
+Sentence 149:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 150:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 151:
+przejrzystość:niezupełna[ ]
+    
+
+
+Sentence 152:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 153:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 154:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 155:
+ciężar właściwy:1.009[ ]
+    
+
+
+Sentence 156:
+pH:5.0[ ]
+    
+
+
+Sentence 157:
+białko:nikły ślad[ ]
+    
+
+
+Sentence 158:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 159:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 160:
+erytrocyty:obecne[ ]
+    
+
+
+Sentence 161:
+leukocyty:obecne[ ]
+    
+
+
+Sentence 162:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 163:
+nabłonki płaskie:dość liczne[w preparacie]
+    
+
+
+Sentence 164:
+leukocyty:95 /ul[ul]
+    erytrocyty świeże i częś:88/ul[ul]
+    śluz:nieliczny[w preparacie]
+    bakterie:nieliczne[w preparacie]
+    
+
+
+Sentence 165:
+wałeczki szkliste:0-1 wpw[w preparacie]
+
+
+
+Sentence 166:
+TSH: TSH:1.52[uIU/ml]
+
+
+
+Sentence 167:
+FT3: FT3:1.73[pg/ml]
+
+
+
+Sentence 168:
+FT4: FT4:1.20[ng/dl]
+
+
+
+Sentence 169:
+Troponina T: Troponina T:24.0[pg/ml]
+
+
+
+Sentence 170:
+Ferrytyna: Ferrytyna:192.6[ng/ml]
+
+
+
+Sentence 171:
+ALAT: ALAT:14[U/L]
+
+
+
+Sentence 172:
+Albumina: Albumina:2.3[g/dl]
+
+
+
+Sentence 173:
+Albumina: Albumina:2.7[g/dl]
+
+
+
+Sentence 174:
+Albumina: Albumina:3.3[g/dl]
+ASPAT: ASPAT:20[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:1.33[mg/dl]
+
+
+
+Sentence 175:
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:5.17[mg/dl]
+
+
+
+Sentence 176:
+Sód (Na): Sód:134[mmol/L]
+
+
+
+Sentence 177:
+Sód (Na): Sód:138[mmol/L]
+
+
+
+Sentence 178:
+Sód (Na): Sód:139[mmol/L]
+
+
+
+Sentence 179:
+Sód (Na): Sód:137[mmol/L]
+
+
+
+Sentence 180:
+Sód (Na): Sód:133[mmol/L]
+
+
+
+Sentence 181:
+Sód (Na): Sód:139[mmol/L]
+
+
+
+Sentence 182:
+Sód (Na): Sód:139[mmol/L]
+
+
+
+Sentence 183:
+Potas (K): Potas:5.1[mmol/L]
+
+
+
+Sentence 184:
+Potas (K): Potas:4.2[mmol/L]
+
+
+
+Sentence 185:
+Potas (K): Potas:4.8[mmol/L]
+
+
+
+Sentence 186:
+Potas (K): Potas:5.0[mmol/L]
+
+
+
+Sentence 187:
+Potas (K): Potas:5.5[mmol/L]
+
+
+
+Sentence 188:
+Potas (K): Potas:4.9[mmol/L]
+
+
+
+Sentence 189:
+Potas (K): Potas:4.7[mmol/L]
+
+
+
+Sentence 190:
+Potas (K): Potas:4.7[mmol/L]
+
+
+
+Sentence 191:
+Hemoglobina glikowana (HbA1c)
+    :9.18[%]
+    :77[mmol/mol]
+
+
+
+Sentence 192:
+Kreatynina + GFR
+    
+
+
+Sentence 193:
+Kreatynina w surowicy:1.18[mg/dl]
+    
+
+
+Sentence 194:
+eGFR wg BIS1:50.3[ml/min/1,73 m^2]
+
+
+
+Sentence 195:
+Kreatynina + GFR
+    
+
+
+Sentence 196:
+Kreatynina w surowicy:1.41[mg/dl]
+    
+
+
+Sentence 197:
+eGFR wg BIS1:43.1[ml/min/1,73 m^2]
+
+
+
+Sentence 198:
+Kreatynina + GFR
+    
+
+
+Sentence 199:
+Kreatynina w surowicy:1.6[mg/dl]
+    
+
+
+Sentence 200:
+eGFR wg BIS1:38.6[ml/min/1,73 m^2]
+
+
+
+Sentence 201:
+Kreatynina + GFR
+    
+
+
+Sentence 202:
+Kreatynina w surowicy:1.70[mg/dl]
+    eGFR wg BIS1:36.6[ml/min/1,73 m^2]
+
+
+
+Sentence 203:
+Kreatynina + GFR
+    
+
+
+Sentence 204:
+Kreatynina w surowicy:2.55[mg/dl]
+    eGFR wg BIS1:25.8[ml/min/1,73 m^2]
+
+
+
+Sentence 205:
+Kreatynina + GFR
+    
+
+
+Sentence 206:
+Kreatynina w surowicy:3.30[mg/dl]
+    
+
+
+Sentence 207:
+eGFR wg BIS1:20.6[ml/min/1,73 m^2]
+
+
+
+Sentence 208:
+Kreatynina + GFR
+    
+
+
+Sentence 209:
+Kreatynina w surowicy:2.95[mg/dl]
+    eGFR wg BIS1:22.7[ml/min/1,73 m^2]
+
+
+
+Sentence 210:
+Kreatynina + GFR
+    
+
+
+Sentence 211:
+Kreatynina w surowicy:2.55[mg/dl]
+    eGFR wg BIS1:25.8[ml/min/1,73 m^2]
+
+
+
+Sentence 212:
+Mocznik: Mocznik:140[mg/dl]
+Mocznik: Mocznik:265[mg/dl]
+
+
+
+Sentence 213:
+Mocznik: Mocznik:265[mg/dl]
+
+
+
+Sentence 214:
+Mocznik: Mocznik:254[mg/dl]
+
+
+
+Sentence 215:
+Gospodarka żelazem
+    Żelazo:40[ug/dl]
+    
+
+
+Sentence 216:
+TIBC (Całkowita zdolność:302[ug/dl]
+    
+
+
+Sentence 217:
+UIBC (Utajona zdolność w:262[ug/dl]
+    
+
+
+Sentence 218:
+Wskaźnik wysycenia Fe:13[%]
+
+
+
+Sentence 219:
+Kwas moczowy: Kwas moczowy:7.2[mg/dl]
+
+
+
+Sentence 220:
+Kwas moczowy: Kwas moczowy:8.2[mg/dl]
+
+
+
+Sentence 221:
+Lipidogram
+    
+
+
+Sentence 222:
+Cholesterol całkowity:89[mg/dl]
+    
+
+
+Sentence 223:
+Cholesterol HDL:65[mg/dl]
+    
+
+
+Sentence 224:
+Cholestrol LDL:
+    30[mg/dl]
+    
+
+
+Sentence 225:
+Triglicerydy:54[mg/dl]
+    
+
+
+Sentence 226:
+Stosunek cholesterolu HD:0.7
+
+
+
+Sentence 227:
+Glukoza w surowicy: Glukoza w surowicy:592[mg/dl]
+
+
+
+Sentence 228:
+Mocz w kierunku bakterii tlenowych
+    
+
+
+Sentence 229:
+D-ZAKON:2019-02-26 10:32:12
+    WYNIK:Ujemny
+    
+
+
+Sentence 230:
+OPISWYNIK:
+Mocz w kierunku grzybów
+    
+
+
+Sentence 231:
+D-ZAKON:2019-03-01 09:25:49
+    WYNIK:Ujemny
+    
+
+
+Sentence 232:
+OPISWYNIK:
+Mocz w kierunku Klebsiella pneumoniae
+    
+
+
+Sentence 233:
+D-ZAKON:2019-02-26 10:32:12
+    WYNIK:Ujemny
+    
+
+
+Sentence 234:
+OPISWYNIK:
+NT-proBNP surowica: NT-proBNP w surowicy:2924[pg/ml]
+
+
+
+Sentence 235:
+------------------------------------------------
+
+
+
+Sentence 236:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 237:
+I10
+E11.2
+I50.0
+
+
+
+Sentence 238:
+N17.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 239:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 240:
+88.721
+87.440
+88.761
+88.751
+------------------------------------------------
+
+

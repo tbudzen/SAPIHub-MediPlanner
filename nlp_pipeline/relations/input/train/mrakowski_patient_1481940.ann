@@ -1,0 +1,131 @@
+T1	Condition 439 539	Przewlekła niewydolność serca z zachowaną frakcją wyrzutową LK (HFpEF, EF=50%) w I/II klasie wg NYHA
+N1	Reference T1 ICD10:I50.9	Niewydolność serca, nieokreślona
+T2	Condition 541 573	Choroba wieńcowa jednonaczyniowa
+N2	Reference T2 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T3	Condition 583 588	STEMI
+N3	Reference T3 ICD10:I25.2	Przebyty zawał serca
+T4	Treatment 589 630	leczonym PCI-PTW z implantacją stentu DES
+T5	Date 632 642	03/04/2019
+R1	Dat Arg1:T5 Arg2:T4	
+R2	Dat Arg1:T5 Arg2:T3	
+T6	Condition 645 673	Napad migotania przedsionków
+N4	Reference T6 ICD10:I48	Migotanie i trzepotanie przedsionków
+T7	Date 674 698	w okresie okołozawałowym
+R3	Dat Arg1:T7 Arg2:T6	
+T8	Condition 700 720	Hipercholesterolemia
+N5	Reference T8 ICD10:E78.0	Czysta hipercholesterolemia
+T9	Behaviour 722 732	Nikotynizm
+N6	Reference T9 ICD10:T65.2	Tytoń i nikotyna
+T10	Condition 746 781	Łagodna niedokrwistość normocytarna
+N7	Reference T10 ICD10:D64.9	Niedokrwistość, nieokreślona
+T11	Treatment 893 958	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T12	Treatment 984 1003	Kontrola morfologii
+T13	Date 1004 1012	za 1 msc
+R4	Dat Arg1:T13 Arg2:T12	
+T14	Behaviour 1031 1126	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T15	Condition 1276 1291	HFmrEF (EF=45%)
+N8	Reference T15 ICD10:I50.9	Niewydolność serca, nieokreślona
+T16	Condition 1401 1406	STEMI
+N9	Reference T16 ICD10:I25.2	Przebyty zawał serca
+T17	Treatment 1407 1448	leczonym PCI-PTW z implantacją stentu DES
+T18	Date 1450 1460	03/04/2019
+R5	Dat Arg1:T18 Arg2:T17	
+R6	Dat Arg1:T18 Arg2:T16	
+T19	Condition 1463 1495	Choroba wieńcowa jednonaczyniowa
+N10	Reference T19 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T20	Condition 1497 1543	Napadowe migotanie przedsionków okołozabiegowe
+N11	Reference T20 ICD10:I48	Migotanie i trzepotanie przedsionków
+T21	Condition 1545 1565	Hipercholesterolemia
+N12	Reference T21 ICD10:E78.0	Czysta hipercholesterolemia
+T22	Behaviour 1567 1577	NIkotynizm
+N13	Reference T22 ICD10:T65.2	Tytoń i nikotyna
+T23	Negation 1591 1597	Neguje
+T24	Symptom 1599 1611	zasłabnięcia
+T25	Symptom 1613 1621	omdlenia
+N14	Reference T25 ICD10:R55	Omdlenie i zapaść
+T26	Symptom 1623 1633	krwawienia
+T27	Symptom 1635 1648	czarne stolce
+N15	Reference T27 ICD10:K92.1	Stolce smołowate
+T28	Symptom 1650 1666	brunatne wymioty
+N16	Reference T28 ICD10:K92.0	Wymioty krwawe
+T29	Condition 1668 1684	chorobę wrzodową
+N17	Reference T29 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T30	Symptom 1686 1700	duszność nocną
+N18	Reference T30 ICD10:R06.0	Duszność
+T31	Symptom 1702 1726	bóle w klatce piersiowej
+N19	Reference T31 ICD10:R07	Ból gardła i w klatce piersiowej
+R7	Neg Arg1:T23 Arg2:T31	
+R8	Neg Arg1:T23 Arg2:T30	
+R9	Neg Arg1:T23 Arg2:T29	
+R10	Neg Arg1:T23 Arg2:T28	
+R11	Neg Arg1:T23 Arg2:T27	
+R12	Neg Arg1:T23 Arg2:T26	
+R13	Neg Arg1:T23 Arg2:T25	
+R14	Neg Arg1:T23 Arg2:T24	
+T32	Treatment 1727 1744	Przebyte operacje
+T33	Treatment 1746 1759	appendectomia
+A1	Status T33 Historical_Insignificant
+T34	Treatment 1768 1784	cholecystektomia
+A2	Status T34 Historical_Insignificant
+T35	Date 1786 1790	2009
+R15	Dat Arg1:T35 Arg2:T34	
+T36	Date 1761 1765	1964
+R16	Dat Arg1:T36 Arg2:T33	
+T37	Behaviour 1792 1807	Palenie tytoniu
+N20	Reference T37 ICD10:T65.2	Tytoń i nikotyna
+T38	Negation 1809 1817	nie pali
+T39	Date 1818 1828	od 04/2019
+R17	Neg Arg1:T38 Arg2:T37	
+R18	Dat Arg1:T39 Arg2:T37	
+T40	Behaviour 1831 1853	wywiadzie 20 paczkolat
+N21	Reference T40 ICD10:T65.2	Tytoń i nikotyna
+T41	Behaviour 1855 1866	Inne używki
+T42	Negation 1868 1874	neguje
+T43	Condition 1875 1884	Uczulenia
+T44	Negation 1886 1892	neguje
+R19	Neg Arg1:T42 Arg2:T41	
+R20	Neg Arg1:T44 Arg2:T43	
+T45	Condition 1920 1923	WZW
+N22	Reference T45 ICD10:B19	
+T46	Condition 1930 1939	borelioza
+N23	Reference T46 ICD10:A69.2	Choroba z Lyme
+T47	Condition 1945 1948	tbc
+N24	Reference T47 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T48	Condition 1954 1958	odra
+N25	Reference T48 ICD10:B05	Odra
+T49	Condition 1964 1978	kontakt z odrą
+N26	Reference T49 ICD10:B05	Odra
+T50	Negation 1980 1981	-
+R21	Neg Arg1:T50 Arg2:T49	
+T51	Negation 1960 1961	-
+R22	Neg Arg1:T51 Arg2:T48	
+T52	Negation 1950 1951	-
+R23	Neg Arg1:T52 Arg2:T47	
+T53	Negation 1941 1942	-
+R24	Neg Arg1:T53 Arg2:T46	
+T54	Negation 1925 1926	-
+R25	Neg Arg1:T54 Arg2:T45	
+T55	Behaviour 1999 2025	warunki mieszkaniowe dobre
+T56	Drug 2059 2067	Brilique
+T57	Drug_dose 2068 2079	90 mg 1-0-1
+R26	Drg Arg1:T56 Arg2:T57	
+T58	Drug 2080 2085	Acard
+T59	Drug_dose 2086 2097	75 mg 0-0-1
+R27	Drg Arg1:T58 Arg2:T59	
+T60	Drug 2098 2105	Nebilet
+T61	Drug_dose 2106 2118	5 mg 1/2-0-0
+R28	Drg Arg1:T60 Arg2:T61	
+T62	Drug 2119 2126	Zofenil
+T63	Drug_dose 2127 2139	7,5 mg 0-0-1
+R29	Drg Arg1:T62 Arg2:T63	
+T64	Drug 2140 2147	Romazic
+T65	Drug_dose 2148 2159	20 mg 0-0-1
+R30	Drg Arg1:T64 Arg2:T65	
+T66	Drug 2160 2169	Controloc
+T67	Drug_dose 2170 2181	20 mg 1-0-0
+R31	Drg Arg1:T66 Arg2:T67	
+T68	Investigation 2242 2263	badania laboratoryjne
+T69	Investigation 2265 2269	ECHO
+T70	Investigation 2271 2289	EKG metodą Holtera
+T71	Investigation 2291 2295	ABPM
+T72	Investigation 2297 2312	próba wysiłkowa

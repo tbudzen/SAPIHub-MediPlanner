@@ -1,0 +1,20 @@
+T2	Behaviour 390 442	nie ma przeciwwskazań do uczestnictwa w zajęciach WF
+T4	Behaviour 333 388	Przeciwwskazany wysiłek fizyczny na poziomie wyczynowym
+T5	Treatment 447 475	Dalsza opieka kardiologiczna
+T6	Treatment 477 509	wizyta w poradni kardiologicznej
+T7	Date 510 522	za 3miesiące
+R3	Dat Arg1:T7 Arg2:T6	
+T8	Investigation 527 568	Kontrolny ambulatoryjny zapis holterowski
+T9	Date 569 588	w dniu 27.03. 2019r
+R4	Dat Arg1:T9 Arg2:T8	
+T10	Negation 795 798	Bez
+T11	Treatment 799 807	leczenia
+R5	Neg Arg1:T10 Arg2:T11	
+T12	Condition 1036 1046	Zespół WPW
+N1	Reference T12 ICD10:I45.6	Zespół preekscytacji
+T13	Symptom 1050 1058	Omdlenia
+N2	Reference T13 ICD10:R55	Omdlenie i zapaść
+T14	Condition 1210 1226	podejrzeniem WPW
+A1	Source T14 Declared
+N3	Reference T14 ICD10:I45.6	Zespół preekscytacji
+T15	Symptom 1303 1313	Stan dobry

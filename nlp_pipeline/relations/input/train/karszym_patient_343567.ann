@@ -1,0 +1,152 @@
+T1	Treatment 345 372	dalsza opieka w poradni POZ
+T2	Treatment 380 443	okresowa kontrola kardiologiczna, okulistyczna i alergologiczna
+T3	Treatment 450 494	do rozważenia gastroskopia celem diagnostyki
+T4	Symptom 495 522	poposiłkowych bólów brzucha
+N1	Reference T4 ICD10:R10.4	Inny i nieokreślony ból brzucha
+T5	Treatment 529 568	regularna kontrola ciśnienia tętniczego
+T6	Treatment 576 605	okresowa kontrola lipidogramu
+T7	Date 608 628	kolejna za 8 tygodni
+T8	Treatment 629 639	i glikemii
+R1	Dat Arg1:T7 Arg2:T6	
+T9	Behaviour 646 743	dieta niskocholesterolowa, z unikaniem spożycia cukrów prostych, alkoholu, bogata w kwasy omega 3
+T13	Behaviour 750 769	redukcja masy ciała
+T14	Behaviour 778 823	stały, umiarkowany, aerobowy wysiłek fizyczny
+T15	Drug 868 875	Nebilet
+T16	Drug_dose 876 893	5 mg 1 tabl. rano
+T17	Drug 901 907	Atoris
+T18	Drug_dose 908 926	20 mg 1 tabl. rano
+T19	Drug 933 947	Magne B6 forte
+T20	Drug 988 995	Emanera
+T21	Drug 1022 1031	Monoprost
+T22	Drug 1112 1120	Telflexo
+T23	Drug_dose 948 980	2 tabl. rano i 2 tabl. wieczorem
+T24	Drug_dose 996 1014	20 mg 1 tabl. rano
+T25	Drug_dose 1032 1105	50ug/ml - krople do oczu (dawkowanie wg dotychczasowych zaleceń okulisty)
+T26	Drug_dose 1121 1151	120 mg 1 tabl. rano (doraźnie)
+R3	Drg Arg1:T15 Arg2:T16	
+R4	Drg Arg1:T17 Arg2:T18	
+R5	Drg Arg1:T19 Arg2:T23	
+R6	Drg Arg1:T20 Arg2:T24	
+R7	Drg Arg1:T21 Arg2:T25	
+R8	Drg Arg1:T22 Arg2:T26	
+T27	Condition 1378 1443	Wada serca pod postacią niedomykalności trójdzielnej I/II stopnia
+N2	Reference T27 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T28	Condition 1445 1503	Zaburzenia rytmu serca - częstoskurcz nadkomorowy napadowy
+N3	Reference T28 ICD10:I47.1	Częstoskurcz nadkomorowy
+T29	Condition 1521 1571	przemijający blok przedsionkowo-komorowy I stopnia
+N4	Reference T29 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T30	Condition 1573 1596	Hiperlipidemia mieszana
+N5	Reference T30 ICD10:E78.2	Hiperlipidemia mieszana
+T31	Behaviour 1598 1608	Nikotynizm
+N6	Reference T31 ICD10:Z72.0	Używanie tytoniu
+T32	Date 1609 1622	w przeszłości
+R9	Dat Arg1:T32 Arg2:T31	
+T33	Condition 1624 1648	Otyłość I stopnia wg WHO
+N7	Reference T33 ICD10:E66.9	Otyłość, nieokreślona
+T34	Condition 1650 1681	Nieprawidłowa glikemia na czczo
+N8	Reference T34 ICD10:R73	Podwyższone stężenie glukozy we krwi
+T35	Condition 1683 1701	Podejrzenie jaskry
+N9	Reference T35 ICD10:H40.9	Jaskra, nieokreślona
+T36	Symptom 1703 1715	Bóle brzucha
+N10	Reference T36 ICD10:R10.4	Inny i nieokreślony ból brzucha
+T37	Treatment 1725 1749	mastektomii lewostronnej
+N11	Reference T37 ICD10:Z90.1	Nabyty brak piersi (jednej lub obu)
+T38	Date 1751 1755	2007
+T39	Treatment 1761 1781	rekonstrukcji piersi
+A1	Status T39 Historical_Insignificant
+N12	Reference T39 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T40	Date 1783 1787	2017
+T41	Date 1789 1793	2018
+T42	Treatment 1804 1836	operacji stawu skokowego prawego
+A2	Status T42 Historical_Insignificant
+N13	Reference T42 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T43	Condition 1846 1868	zmian zwyrodnieniowych
+N14	Reference T43 ICD10:M19.9	Choroba zwyrodnieniowa stawów, nieokreślona
+T44	Date 1870 1877	01.2019
+R10	Dat Arg1:T44 Arg2:T42	
+R11	Dat Arg1:T44 Arg2:T43	
+A3	Status T43 Historical_Insignificant
+R12	Dat Arg1:T40 Arg2:T39	
+R13	Dat Arg1:T41 Arg2:T39	
+R14	Dat Arg1:T38 Arg2:T37	
+T45	Condition 1880 1926	Uczulenie na płyki traw, roztocza, sierść kota
+N15	Reference T45 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T46	Symptom 2094 2109	kołatania serca
+N16	Reference T46 ICD10:R00.2	Kołatanie serca
+T47	Date 2125 2152	od 1.5 roku (po operacjach)
+R17	Dat Arg1:T47 Arg2:T46	
+T50	Symptom 2154 2237	zmniejszenie tolerancji wysiłku - mieszka na 2 pietrze, przy wchodzeniu po schodach
+T51	Condition 2261 2280	hipercholestrolemia
+N17	Reference T51 ICD10:E78.0	Czysta hipercholesterolemia
+T52	Condition 2282 2300	podejrzenie jaskry
+N18	Reference T52 ICD10:H40.9	Jaskra, nieokreślona
+T53	Symptom 2302 2332	bóle żołądka w czasie jedzenia
+N19	Reference T53 ICD10:R10.1	Ból zlokalizowany w nadbrzuszu
+T54	Negation 2335 2338	bez
+T55	Investigation 2339 2351	gastroskopii
+R18	Neg Arg1:T54 Arg2:T55	
+T56	Symptom 2353 2364	ustąpiły po
+T58	Drug 2365 2368	IPP
+T59	Treatment 2392 2415	mastektomia lewostronna
+N20	Reference T59 ICD10:Z90.1	Nabyty brak piersi (jednej lub obu)
+T60	Date 2417 2421	2007
+T61	Treatment 2432 2452	rekonstrukcji piersi
+A4	Status T61 Historical_Insignificant
+T62	Date 2454 2458	2017
+N21	Reference T61 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T63	Date 2460 2464	2018
+T64	Condition 2467 2509	staw skokowy prawy - zmiany zwyrodnieniowe
+A5	Status T64 Historical_Insignificant
+T65	Date 2511 2518	01.2019
+T66	Condition 2520 2535	Wywiad rodzinny
+A6	Status T66 Family
+T67	Negation 2537 2550	bez znaczenia
+T68	Condition 2552 2581	Alergie: trawa, roztocza, kot
+N23	Reference T68 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T69	Behaviour 2582 2597	Nikotynizm: tak
+N24	Reference T69 ICD10:Z72.0	Używanie tytoniu
+T70	Date 2599 2608	30-50r.ż.
+R22	Dat Arg1:T70 Arg2:T69	
+R23	Dat Arg1:T60 Arg2:T59	
+R24	Dat Arg1:T62 Arg2:T61	
+R25	Dat Arg1:T63 Arg2:T61	
+R26	Dat Arg1:T65 Arg2:T64	
+T71	Behaviour 2609 2626	- 5 pap. dziennie
+N25	Reference T71 ICD10:Z72.0	Używanie tytoniu
+R27	Dat Arg1:T70 Arg2:T71	
+T72	Behaviour 2628 2649	Alkohol: okazjonalnie
+N26	Reference T72 ICD10:Z72.1	Używanie alkoholu
+T73	Behaviour 2651 2668	Uzależnienie inne
+T74	Negation 2670 2676	neguje
+R28	Neg Arg1:T74 Arg2:T73	
+T75	Behaviour 2694 2703	emerytura
+T77	Drug 2749 2756	Nebilet
+T78	Drug 2776 2789	MagneB6 forte
+T79	Drug 2827 2836	Monoprost
+T80	Drug 2863 2870	Emanera
+T81	Drug 2891 2899	Telflexo
+T82	Drug_dose 2757 2774	5 mg 1 tabl. rano
+T83	Drug_dose 2790 2825	1tabl. rano, w południe i wieczorem
+T84	Drug_dose 2837 2861	50ug/ml - krople do oczu
+T85	Drug_dose 2871 2889	20 mg 1 tabl. rano
+T86	Drug_dose 2900 2919	120 mg 1 tabl. rano
+R29	Drg Arg1:T77 Arg2:T82	
+R30	Drg Arg1:T78 Arg2:T83	
+R31	Drg Arg1:T79 Arg2:T84	
+R32	Drg Arg1:T80 Arg2:T85	
+R33	Drg Arg1:T81 Arg2:T86	
+T87	Investigation 2948 2958	echo serca
+T88	Investigation 2960 2963	TET
+T89	Investigation 2965 2969	ABPM
+T90	Investigation 2971 2981	Holter ekg
+T91	Investigation 2983 3001	rtg kl. piersiowej
+T76	Behaviour 2727 2741	praca umysłowa
+T92	Behaviour 2706 2713	pracuje
+R15	Neg Arg1:T67 Arg2:T66	
+A7	Source T52 Declared
+A8	Status T72 Historical_Insignificant
+T10	Behaviour 2715 2724	technolog
+T11	Treatment 2382 2390	operacje
+N27	Reference T11 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+N22	Reference T64 ICD10:M19.9	Choroba zwyrodnieniowa stawów, nieokreślona
+R2	Dat Arg1:T65 Arg2:T11	

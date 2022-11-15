@@ -1,0 +1,211 @@
+T2	Condition 461 507	podejrzenia skręconej torbieli jajnika prawego
+A3	Status T2 Historical_Insignificant
+A4	Source T2 Confirmed
+T1	Date 438 451	02-13.06.2018
+R1	Dat Arg1:T1 Arg2:T2	
+T3	Treatment 532 543	laparotomię
+R2	Dat Arg1:T1 Arg2:T3	
+T4	Treatment 549 573	usunięto przydatki prawe
+R3	Dat Arg1:T1 Arg2:T4	
+T5	Investigation_result 589 615	wysokie wartości D-dimerów
+A1	Status T5 Historical_Significant
+A2	Status T3 Historical_Significant
+A5	Source T3 Confirmed
+A6	Status T4 Historical_Significant
+A7	Source T4 Confirmed
+T6	Date 616 644	przed operacją i po operacji
+A8	Status T6 Historical_Significant
+T7	Investigation_result 646 660	mx. 25546ng/ml
+T8	Treatment 678 706	konsultowana kardiologicznie
+A9	Status T8 Historical_Significant
+A10	Source T8 Confirmed
+T9	Investigation 710 733	angioCT tętnic płucnych
+A11	Status T9 Historical_Significant
+A12	Source T9 Confirmed
+T10	Investigation_result 736 791	obraz sugerujący zatorowość obwodową w płatach obu płuc
+A13	Status T10 Historical_Significant
+A14	Source T10 Confirmed
+T11	Investigation 793 818	USG-D żył kończyn dolnych
+A15	Status T11 Historical_Significant
+A16	Source T11 Confirmed
+R4	Dat Arg1:T6 Arg2:T5	
+T12	Investigation_result 820 853	bez zmian zapalnych, zakrzepowych
+A17	Status T12 Historical_Significant
+A18	Source T12 Confirmed
+R5	Inv Arg1:T11 Arg2:T12	
+T13	Drug 864 878	włączenie HDCz
+A19	Status T13 Historical_Significant
+T14	Drug_dose 881 897	dawce leczniczej
+R6	Drg Arg1:T13 Arg2:T14	
+T15	Treatment 940 985	utrzymaniu tego leczenia lub zamianie na NOAC
+T16	Investigation_result 903 928	wyniku histopatologicznym
+A20	Status T16 Historical_Significant
+T17	Condition 1112 1124	schizofrenia
+A21	Status T17 Historical_Significant
+A22	Source T17 Confirmed
+N1	Reference T17 ICD10:F20	Schizofrenia
+T18	Drug 1126 1132	Orizon
+T19	Drug_dose 1133 1141	3mg/rano
+R7	Drg Arg1:T18 Arg2:T19	
+T20	Negation 1145 1151	Neguje
+T21	Symptom 1153 1165	zasłabnięcia
+A23	Status T21 Historical_Significant
+N2	Reference T21 ICD10:R55	Omdlenie i zapaść
+T22	Symptom 1167 1175	omdlenia
+A24	Status T22 Historical_Significant
+N3	Reference T22 ICD10:R55	Omdlenie i zapaść
+T23	Symptom 1177 1187	krwawienia
+A25	Status T23 Historical_Significant
+T24	Symptom 1189 1202	czarne stolce
+A26	Status T24 Historical_Significant
+N4	Reference T24 ICD10:K92.1	Stolce smołowate
+T25	Symptom 1204 1220	brunatne wymioty
+A27	Status T25 Historical_Significant
+N5	Reference T25 ICD10:R11	Nudności i wymioty
+T26	Symptom 1222 1238	chorobę wrzodową
+A28	Status T26 Historical_Significant
+N6	Reference T26 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T27	Symptom 1240 1254	duszność nocną
+A29	Status T27 Historical_Significant
+N7	Reference T27 ICD10:R06.0	Duszność
+R8	Neg Arg1:T20 Arg2:T21	
+R9	Neg Arg1:T20 Arg2:T22	
+R10	Neg Arg1:T20 Arg2:T23	
+R11	Neg Arg1:T20 Arg2:T24	
+R12	Neg Arg1:T20 Arg2:T25	
+R13	Neg Arg1:T20 Arg2:T26	
+R14	Neg Arg1:T20 Arg2:T27	
+T28	Symptom 1256 1270	obrzęki podudz
+A30	Status T28 Historical_Significant
+N8	Reference T28 ICD10:R60.0	Obrzęk zlokalizowany
+R15	Neg Arg1:T20 Arg2:T28	
+T29	Symptom 1273 1297	bóle w klatce piersiowej
+A31	Status T29 Historical_Significant
+N9	Reference T29 ICD10:R07.3	Inne bóle w klatce piersiowej
+R16	Neg Arg1:T20 Arg2:T29	
+T30	Symptom 1299 1319	szybsze męczenie się
+A32	Status T30 Historical_Significant
+N10	Reference T30 ICD10:I50	Niewydolność serca
+R17	Neg Arg1:T20 Arg2:T30	
+T31	Condition 1321 1337	choroby tarczycy
+A33	Status T31 Historical_Significant
+N11	Reference T31 ICD10:E07	Inne choroby tarczycy
+R18	Neg Arg1:T20 Arg2:T31	
+T32	Treatment 1340 1357	Przebyte operacje
+T33	Behaviour 1363 1378	Palenie tytoniu
+A34	Status T33 Historical_Significant
+N12	Reference T33 ICD10:F17	Zaburzenia psychiczne i zaburzenia zachowania spowodowane paleniem tytoniu
+T34	Negation 1380 1388	nie pali
+R19	Neg Arg1:T34 Arg2:T33	
+T35	Date 1389 1398	od 1 m-ca
+R20	Dat Arg1:T35 Arg2:T33	
+T36	Behaviour 1419 1431	Inne używki:
+A35	Status T36 Historical_Significant
+T37	Negation 1432 1435	nie
+R21	Neg Arg1:T37 Arg2:T36	
+T38	Condition 1437 1446	Uczulenia
+A36	Status T38 Historical_Significant
+N13	Reference T38 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T39	Negation 1448 1451	nie
+R22	Neg Arg1:T39 Arg2:T38	
+T40	Condition 1453 1477	Przebyte choroby zakaźne
+A37	Status T40 Historical_Significant
+T41	Condition 1480 1483	WZW
+A38	Status T41 Historical_Significant
+A39	Source T41 Confirmed
+N14	Reference T41 ICD10:B17	Inne ostre wirusowe zapalenie wątroby
+T42	Negation 1485 1486	-
+R23	Neg Arg1:T42 Arg2:T41	
+T43	Condition 1490 1499	borelioza
+A40	Status T43 Historical_Significant
+N15	Reference T43 ICD10:A69.2	Choroba z Lyme
+T44	Negation 1500 1502	(-
+R24	Neg Arg1:T44 Arg2:T43	
+T45	Behaviour 1505 1519	Stan społeczny
+T46	Behaviour 1521 1547	warunki mieszkaniowe dobre
+T47	Drug 1551 1555	Leki
+T48	Drug_dose 1557 1577	przyjęte rano w domu
+R25	Drg Arg1:T47 Arg2:T48	
+T49	Drug 1588 1594	Orizon
+T50	Drug_dose 1595 1613	3mg 1x 1 tabl/rano
+R26	Drg Arg1:T49 Arg2:T50	
+T51	Investigation 1701 1705	ECHO
+T52	Investigation 1707 1725	EKG metodą Holtera
+T53	Investigation 1727 1731	ABPM
+T54	Condition 5992 6009	Zatorowość płucna
+A41	Status T54 Historical_Significant
+A42	Source T54 Confirmed
+N16	Reference T54 ICD10:I26	Zator płucny
+T55	Date 6011 6018	06.2018
+R27	Dat Arg1:T55 Arg2:T54	
+T56	Condition 6021 6041	Hipercholesterolemia
+A43	Status T56 Historical_Significant
+N17	Reference T56 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T57	Treatment 6043 6079	Stan po usunięciu przydatków prawych
+A44	Status T57 Historical_Insignificant
+A45	Source T57 Confirmed
+T58	Date 6081 6091	05.06.2018
+R28	Dat Arg1:T58 Arg2:T57	
+T59	Condition 6094 6106	Schizofrenia
+A46	Status T59 Historical_Significant
+A47	Source T59 Confirmed
+N18	Reference T59 ICD10:F20	Schizofrenia
+T60	Behaviour 6108 6129	Przewlekły nikotynizm
+A48	Status T60 Historical_Significant
+N19	Reference T60 ICD10:F17	Zaburzenia psychiczne i zaburzenia zachowania spowodowane paleniem tytoniu
+T61	Investigation_result 6131 6158	Zmiany ogniskowe w wątrobie
+A49	Status T61 Historical_Significant
+N20	Reference T61 ICD10:K76	Inne choroby wątroby
+T62	Condition 6183 6204	Torbiele nerki prawej
+A50	Status T62 Historical_Significant
+N21	Reference T62 ICD10:N28.1	Torbiel nerki, nabyta
+T63	Condition 6206 6230	Zmiany guzkowe w płucach
+A51	Status T63 Historical_Significant
+A52	Source T63 Confirmed
+N22	Reference T63 ICD10:R91	Nieprawidłowe wyniki diagnostycznych badań obrazowych płuc
+T64	Investigation_result 9934 9970	Wymiary i grubość jam serca w normie
+A53	Status T64 Historical_Significant
+T65	Investigation_result 9972 10049	Bez odcinkowych zaburzeń kurczliwości z zachowaną funkcją skurczową obu komór
+A54	Status T65 Historical_Significant
+T66	Investigation_result 10051 10076	Upośledzona relaksacja LK
+A55	Status T66 Historical_Significant
+T67	Investigation_result 10082 10099	płynu w osierdziu
+A56	Status T67 Historical_Significant
+T68	Negation 10078 10081	Bez
+R29	Neg Arg1:T68 Arg2:T67	
+T69	Investigation_result 10106 10108	IM
+T70	Investigation_result 10110 10112	IT
+A57	Status T69 Historical_Significant
+N23	Reference T69 ICD10:I34.0	Niedomykalność zastawki mitralnej
+A58	Status T70 Historical_Significant
+N24	Reference T70 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T71	Investigation_result 18009 18045	Wymiary i grubość jam serca w normie
+A59	Status T71 Historical_Significant
+T72	Investigation_result 18047 18124	Bez odcinkowych zaburzeń kurczliwości z zachowaną funkcją skurczową obu komór
+A60	Status T72 Historical_Significant
+T73	Investigation_result 18126 18151	Upośledzona relaksacja LK
+T74	Investigation_result 18153 18174	Bez płynu w osierdziu
+A61	Status T74 Historical_Significant
+T75	Investigation_result 18181 18183	IM
+A62	Status T75 Historical_Significant
+N25	Reference T75 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T76	Investigation_result 18185 18187	IT
+A63	Status T76 Historical_Significant
+N26	Reference T76 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T77	Treatment 18495 18515	Zastosowane leczenie
+A64	Status T77 Historical_Significant
+T78	Drug 18565 18571	Orizon
+T79	Drug 18573 18590	Fraxiparine Multi
+T80	Drug 18592 18599	Pradaxa
+T81	Drug 18605 18609	NaCl
+T82	Drug_dose 18601 18605	0.9%
+R30	Drg Arg1:T81 Arg2:T82	
+T83	Drug 19062 19069	Clexane
+T84	Drug_dose 19070 19098	80mg co 12 godzin podskórnie
+R31	Drg Arg1:T83 Arg2:T84	
+T85	Drug 19100 19109	Pantopraz
+T86	Drug_dose 19110 19138	20mg 1x 1 tabl/rano na czczo
+R32	Drg Arg1:T85 Arg2:T86	
+T87	Drug 19140 19146	Orizon
+T88	Drug_dose 19147 19168	wg zaleceń psychiatry
+R33	Drg Arg1:T87 Arg2:T88	

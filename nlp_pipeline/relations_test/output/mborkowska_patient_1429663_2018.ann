@@ -1,0 +1,15 @@
+T1	Behaviour 330 504	Z wynikami wykonanych badań diagnostycznych proszę zgłosić się do lekarza medycyny sportowej w celu dopuszczenia pacjentki do uczestnictwa w treningach i zawodach sportowych.
+T2	Condition 658 675	arytmii komorowej
+N1	Reference T2 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T3	Drug 701 715	leków na stałe
+T4	Negation 716 729	nie otrzymuje
+R1	Neg Arg1:T4 Arg2:T3	
+T5	Condition 732 749	wywiad alergiczny
+N2	Reference T5 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T6	Negation 750 756	ujemny
+R2	Neg Arg1:T6 Arg2:T5	
+T7	Date 689 698	od 2016 r
+R3	Dat Arg1:T7 Arg2:T2	
+R3	Neg Arg1:T4 Arg2:T3
+R5	Neg Arg1:T6 Arg2:T5
+R7	Dat Arg1:T7 Arg2:T2

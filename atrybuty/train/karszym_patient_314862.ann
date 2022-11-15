@@ -1,0 +1,181 @@
+T1	Treatment 330 413	Dalsza opieka w Poradni Endokrynologicznej, Kardiologicznej, Reumatologicznej i POZ
+T2	Behaviour 415 449	Przestrzeganie zbilansowanej diety
+T3	Behaviour 455 492	regularna aerobowa aktywność fizyczna
+T4	Treatment 494 533	Codzienna kontrola ciśnienia tętniczego
+T5	Drug 567 577	Indapen SR
+T6	Drug 592 599	Zofenil
+T7	Drug 625 633	Lecalpin
+T8	Drug 659 669	Orgametril
+T9	Drug 691 702	Leflunomide
+T10	Drug 728 736	Structum
+T11	Drug_dose 578 591	1x1 tabl rano
+T12	Drug_dose 600 624	30 mg 1x1 tabl wieczorem
+T13	Drug_dose 634 658	10 mg 1x1 tabl wieczorem
+T14	Drug_dose 670 679	2x 1 tabl
+T15	Drug_dose 703 727	20mg 1x 1 tabl wieczorem
+T16	Drug_dose 737 751	500 1-0-1 tabl
+T17	Date 681 689	do 20.02
+R1	Drg Arg1:T5 Arg2:T11	
+R2	Drg Arg1:T6 Arg2:T12	
+R3	Drg Arg1:T7 Arg2:T13	
+R4	Drg Arg1:T8 Arg2:T14	
+R5	Dat Arg1:T17 Arg2:T8	
+R6	Drg Arg1:T9 Arg2:T15	
+R7	Drg Arg1:T10 Arg2:T16	
+T18	Drug 871 881	Indapen SR
+T19	Drug 883 890	Zofenil
+T20	Drug 892 900	Lecalpin
+T21	Drug 902 912	Orgametril
+T22	Drug 914 925	Leflunomide
+T23	Drug 927 935	Structum
+T24	Condition 1163 1204	Łagodna niedomykalność zastawki mitralnej
+N1	Reference T24 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T25	Condition 1206 1227	Nadciśnienie tętnicze
+N2	Reference T25 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T26	Condition 1229 1271	Wole guzowate tarczycy w stadium eutyreozy
+N3	Reference T26 ICD10:E04.2	Wole wieloguzkowe, nietoksyczne
+T27	Condition 1273 1303	Reumatoidalne zapalenie stawów
+N4	Reference T27 ICD10:M06.9	Reumatoidalne zapalenie stawów, nieokreślone
+T28	Condition 1305 1334	Choroba zwyrodnieniowa stawów
+A1	Status T28 Historical_Insignificant
+N5	Reference T28 ICD10:M15.9	Choroba zwyrodnieniowa wielostawowa, nieokreślona
+T29	Condition 1336 1362	Zaburzenia miesiączkowania
+T30	Behaviour 1364 1374	Nikotynizm
+T31	Condition 1388 1407	Kamica nerki prawej
+A2	Status T31 Historical_Insignificant
+N6	Reference T31 ICD10:N20.0	Kamica nerki
+T32	Condition 1553 1555	HA
+N7	Reference T32 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T33	Date 1557 1567	od 08.2018
+T34	Symptom 1568 1589	RR do ok. 150/100mmHg
+T35	Symptom 1592 1604	bólami głowy
+N8	Reference T35 ICD10:R51	Ból głowy
+T36	Date 1612 1614	po
+T37	Drug 1615 1621	lekach
+T38	Symptom 1622 1633	<140/90mmHg
+R8	Dat Arg1:T33 Arg2:T34	
+R9	Dat Arg1:T33 Arg2:T35	
+R10	Dat Arg1:T36 Arg2:T37	
+R11	Dat Arg1:T36 Arg2:T38	
+T39	Symptom 1665 1700	ponownego wzrostu RR do 150/110mmHg
+T40	Symptom 1703 1722	bólami głowy w nocy
+N9	Reference T40 ICD10:R51	Ból głowy
+T41	Date 1723 1734	od tygodnia
+R12	Dat Arg1:T41 Arg2:T40	
+R13	Dat Arg1:T41 Arg2:T39	
+T42	Condition 1757 1801	wole guzkowe tarczycy uciskające na tchawicę
+N10	Reference T42 ICD10:E04.2	Wole wieloguzkowe, nietoksyczne
+T44	Symptom 1855 1897	zmniejszenie tolerancji wysiłku fizycznego
+T45	Date 1898 1909	od 2-3 m-cy
+R14	Dat Arg1:T45 Arg2:T44	
+T46	Symptom 1911 1945	odpoczywa po wejściu na 2,5 piętra
+R15	Dat Arg1:T45 Arg2:T46	
+T47	Condition 1947 1950	RZS
+N11	Reference T47 ICD10:M06.9	Reumatoidalne zapalenie stawów, nieokreślone
+T48	Condition 1952 1979	choroba zwyrodnienia stawów
+N12	Reference T48 ICD10:M15.9	Choroba zwyrodnieniowa wielostawowa, nieokreślona
+A3	Status T48 Historical_Insignificant
+T49	Condition 1981 2007	zaburzenia miesiączkowania
+T51	Drug 2019 2034	leki hormonalne
+T52	Symptom 2037 2057	obrzęki wokół kostek
+N13	Reference T52 ICD10:R60.0	Obrzęk zlokalizowany
+T53	Negation 2059 2065	Neguje
+T54	Symptom 2067 2079	zasłabnięcia
+T55	Symptom 2081 2089	omdlenia
+N14	Reference T55 ICD10:R55	Omdlenie i zapaść
+T56	Symptom 2091 2101	krwawienia
+T57	Symptom 2103 2116	czarne stolce
+N15	Reference T57 ICD10:K92.1	Stolce smołowate
+T58	Symptom 2118 2134	brunatne wymioty
+N16	Reference T58 ICD10:K92.0	Wymioty krwawe
+T59	Condition 2136 2152	chorobę wrzodową
+N17	Reference T59 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T60	Symptom 2154 2168	duszność nocną
+N18	Reference T60 ICD10:R06.0	Duszność
+T61	Symptom 2170 2185	obrzęki podudzi
+N19	Reference T61 ICD10:R60.0	Obrzęk zlokalizowany
+T62	Symptom 2187 2211	bóle w klatce piersiowej
+N20	Reference T62 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T63	Symptom 2213 2228	kołatania serca
+N21	Reference T63 ICD10:R00.2	Kołatanie serca
+R16	Neg Arg1:T53 Arg2:T54	
+R17	Neg Arg1:T53 Arg2:T55	
+R18	Neg Arg1:T53 Arg2:T56	
+R19	Neg Arg1:T53 Arg2:T57	
+R20	Neg Arg1:T53 Arg2:T58	
+R21	Neg Arg1:T53 Arg2:T59	
+R22	Neg Arg1:T53 Arg2:T60	
+R23	Neg Arg1:T53 Arg2:T61	
+R24	Neg Arg1:T53 Arg2:T62	
+R25	Neg Arg1:T53 Arg2:T63	
+T64	Treatment 2250 2255	2x cc
+A4	Status T64 Historical_Insignificant
+N22	Reference T64 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+T65	Negation 2273 2276	nie
+T66	Behaviour 2277 2281	pali
+T67	Behaviour 2256 2271	Palenie tytoniu
+T68	Date 2282 2291	od 12 lat
+R26	Dat Arg1:T68 Arg2:T66	
+R27	Dat Arg1:T68 Arg2:T67	
+R28	Neg Arg1:T65 Arg2:T67	
+R29	Neg Arg1:T65 Arg2:T66	
+T69	Behaviour 2292 2303	Inne używki
+T70	Negation 2305 2308	nie
+T71	Condition 2309 2318	Uczulenia
+N23	Reference T71 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T72	Negation 2320 2323	nie
+R30	Neg Arg1:T70 Arg2:T69	
+R31	Neg Arg1:T72 Arg2:T71	
+T73	Condition 2351 2354	WZW
+N24	Reference T73 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T74	Negation 2355 2358	(-)
+T75	Condition 2361 2370	borelioza
+N25	Reference T75 ICD10:A69.2	Choroba z Lyme
+T76	Negation 2371 2374	(-)
+T77	Condition 2376 2379	tbc
+N26	Reference T77 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T78	Negation 2380 2383	(-)
+T79	Condition 2385 2389	odra
+N27	Reference T79 ICD10:B05	Odra
+T80	Negation 2390 2393	(-)
+T81	Condition 2395 2409	kontakt z odrą
+N28	Reference T81 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+T82	Negation 2410 2413	(-)
+R32	Neg Arg1:T74 Arg2:T73	
+R33	Neg Arg1:T76 Arg2:T75	
+R34	Neg Arg1:T78 Arg2:T77	
+R35	Neg Arg1:T80 Arg2:T79	
+R36	Neg Arg1:T82 Arg2:T81	
+T83	Behaviour 2430 2456	warunki mieszkaniowe dobre
+T84	Drug 2493 2503	Indapen SR
+T85	Drug 2519 2526	Zofenil
+T86	Drug 2548 2556	Lecalpin
+T87	Drug 2578 2588	Orgametril
+T88	Drug 2610 2621	Leflunomide
+T89	Drug 2643 2651	Structum
+T90	Drug 2667 2672	Aglan
+T91	Drug_dose 2504 2518	1x 1 tabl/rano
+T92	Drug_dose 2527 2547	30mg 1x 1 tabl/wiecz
+T93	Drug_dose 2557 2577	10mg 1x 1 tabl/wiecz
+T94	Drug_dose 2589 2598	2x 1 tabl
+T95	Drug_dose 2622 2642	20mg 1x 1 tabl/wiecz
+T96	Drug_dose 2652 2666	500 1-0-1 tabl
+T97	Drug_dose 2673 2681	doraźnie
+T98	Date 2600 2608	do 20.02
+R37	Drg Arg1:T84 Arg2:T91	
+R38	Drg Arg1:T85 Arg2:T92	
+R39	Drg Arg1:T86 Arg2:T93	
+R40	Drg Arg1:T87 Arg2:T94	
+R41	Dat Arg1:T98 Arg2:T87	
+R42	Drg Arg1:T88 Arg2:T95	
+R43	Drg Arg1:T89 Arg2:T96	
+R44	Drg Arg1:T90 Arg2:T97	
+T99	Investigation 2742 2763	badania laboratoryjne
+T100	Investigation 2765 2769	ECHO
+T101	Investigation 2771 2789	EKG metodą Holtera
+T102	Investigation 2791 2795	ABPM
+T103	Investigation 2797 2812	próba wysiłkowa
+N29	Reference T30 ICD10:Z72.0	Używanie tytoniu
+T43	Treatment 1813 1853	przygotowywana do operacji z tego powodu
+N30	Reference T67 ICD10:Z72.0	Używanie tytoniu
+N31	Reference T66 ICD10:Z72.0	Używanie tytoniu

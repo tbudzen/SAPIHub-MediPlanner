@@ -1,0 +1,173 @@
+T1	Treatment 333 377;397 427	Dalsza opieka w POZ, Poradni Kardiologicznej ) oraz Poradni Ginekologicznej
+T2	Treatment 441 473	regularna kontrola TSH, FT3, FT4
+T3	Date 474 488	(za ok. 4 tyg.
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Treatment 502 544	dalsza opieka w Poradni Endokrynologicznej
+T5	Treatment 570 636;645 674	Kontrolna hospitalizacja w Klinice Położnictwa i Ginekologii ICZMP w celu oceny dobrostanu płodu
+T6	Date 675 691	w dn. 16/09/2019
+R2	Dat Arg1:T6 Arg2:T5	
+T7	Investigation 704 724	kontrolne echo serca
+T8	Date 725 754	pod koniec II trymestru ciąży
+T9	Date 756 780	przed rozwiązaniem ciąży
+T10	Date 783 794	po porodzie
+R3	Dat Arg1:T8 Arg2:T7	
+R4	Dat Arg1:T9 Arg2:T7	
+R5	Dat Arg1:T10 Arg2:T7	
+T11	Treatment 798 901	Okresowa kontrola morfologii, lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T12	Behaviour 906 1008	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T13	Treatment 1013 1069	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T14	Condition 1288 1328	Wrodzona wada serca - tetralogia Fallota
+N1	Reference T14 ICD10:Q21.3	Tetralogia Fallota
+T15	Treatment 1341 1354	korekcji wady
+N2	Reference T15 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T16	Date 1357 1368	22.10.1998r
+T17	Treatment 1391 1414	przezskórnym zamknięciu
+N3	Reference T17 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T18	Date 1440 1451	04.10.2002r
+T19	Treatment 1474 1522	implantacji w pozycję płucną zastawki Cor Matrix
+N4	Reference T19 ICD10:Z95.4	Obecność innych protez zastawek serca
+T20	Date 1525 1536	24.06.2015r
+T21	Treatment 1549 1560	implantacji
+T22	Date 1619 1630	08.06.2017r
+T23	Condition 1635 1649	Ciąża 12 tydz.
+N6	Reference T23 ICD10:Z32.1	Ciąża potwierdzona
+T24	Date 1653 1663	14.05.2019
+T25	Condition 1650 1652	OM
+R6	Dat Arg1:T24 Arg2:T25	
+R7	Dat Arg1:T22 Arg2:T21	
+R8	Dat Arg1:T20 Arg2:T19	
+R9	Dat Arg1:T18 Arg2:T17	
+R10	Dat Arg1:T16 Arg2:T15	
+T26	Symptom 1788 1800	Dolegliwości
+T27	Negation 1801 1812	nie zgłasza
+T28	Treatment 1823 1829	korek.
+N7	Reference T28 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T29	Condition 1850 1862	Ciąża 12 tyg
+N8	Reference T29 ICD10:Z32.1	Ciąża potwierdzona
+T30	Condition 1863 1865	OM
+T31	Date 1866 1874	14.05.19
+R11	Dat Arg1:T31 Arg2:T30	
+R12	Neg Arg1:T27 Arg2:T26	
+T32	Treatment 2021 2040	korekcji całkowitej
+N9	Reference T32 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T33	Condition 2151 2170	w 12 tygodniu ciąży
+N10	Reference T33 ICD10:Z32.1	Ciąża potwierdzona
+T34	Negation 2173 2179	Neguje
+T35	Symptom 2180 2192	zasłabnięcia
+T36	Symptom 2194 2202	omdlenia
+N11	Reference T36 ICD10:R55	Omdlenie i zapaść
+T37	Symptom 2204 2217	zawroty głowy
+N12	Reference T37 ICD10:R42	Zawroty głowy i odurzenie
+T38	Symptom 2219 2229	krwawienia
+T39	Symptom 2231 2244	czarne stolce
+N13	Reference T39 ICD10:K92.1	Stolce smołowate
+T40	Symptom 2246 2262	brunatne wymioty
+N14	Reference T40 ICD10:K92.0	Wymioty krwawe
+T41	Condition 2264 2280	chorobę wrzodową
+N15	Reference T41 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T42	Symptom 2282 2296	duszność nocną
+N16	Reference T42 ICD10:R06.0	Duszność
+T43	Symptom 2298 2313	obrzęki podudzi
+N17	Reference T43 ICD10:R60.0	Obrzęk zlokalizowany
+T44	Symptom 2315 2339	bóle w klatce piersiowej
+N18	Reference T44 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T45	Symptom 2341 2360	Innych dolegliwości
+T46	Negation 2361 2372	nie zgłasza
+R13	Neg Arg1:T34 Arg2:T35	
+R14	Neg Arg1:T34 Arg2:T36	
+R15	Neg Arg1:T34 Arg2:T37	
+R16	Neg Arg1:T34 Arg2:T38	
+R17	Neg Arg1:T34 Arg2:T39	
+R18	Neg Arg1:T34 Arg2:T40	
+R19	Neg Arg1:T34 Arg2:T41	
+R20	Neg Arg1:T34 Arg2:T42	
+R21	Neg Arg1:T34 Arg2:T43	
+R22	Neg Arg1:T34 Arg2:T44	
+R23	Neg Arg1:T46 Arg2:T45	
+T47	Condition 2387 2427	Wrodzona wada serca - tetralogia Fallota
+N19	Reference T47 ICD10:Q21.3	Tetralogia Fallota
+T48	Treatment 2437 2450	korekcji wady
+N20	Reference T48 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T49	Date 2453 2464	22.10.1998r
+R24	Dat Arg1:T49 Arg2:T48	
+T50	Treatment 2484 2507	przezskórnym zamknięciu
+N21	Reference T50 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T51	Date 2533 2544	04.10.2002r
+R25	Dat Arg1:T51 Arg2:T50	
+T52	Treatment 2564 2612	implantacji w pozycję płucną zastawki Cor Matrix
+N22	Reference T52 ICD10:Z95.4	Obecność innych protez zastawek serca
+T53	Date 2615 2626	24.06.2015r
+T54	Treatment 2636 2647	implantacji
+N23	Reference T54 ICD10:Z95	Obecność implantów i przeszczepów serca i naczyń krwionośnych
+R26	Dat Arg1:T53 Arg2:T52	
+T55	Date 2706 2717	08.06.2017r
+R27	Dat Arg1:T55 Arg2:T54	
+N5	Reference T21 ICD10:Z95	Obecność implantów i przeszczepów serca i naczyń krwionośnych
+T56	Condition 2719 2733	Ciąża 12 tydz.
+N24	Reference T56 ICD10:Z32.1	Ciąża potwierdzona
+T57	Condition 2734 2736	OM
+T58	Date 2737 2747	14.05.2019
+R28	Dat Arg1:T58 Arg2:T57	
+T59	Treatment 2772 2807	Leczenie przewlekłe: kardiologiczne
+T60	Condition 2834 2837	WZW
+N25	Reference T60 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T61	Condition 2846 2855	borelioza
+N26	Reference T61 ICD10:A69.2	Choroba z Lyme
+T62	Condition 2863 2871	grużlica
+N27	Reference T62 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T63	Condition 2879 2887	odra ( +
+N28	Reference T63 ICD10:B05	Odra
+T64	Treatment 2890 2900	szczepiona
+T65	Negation 2838 2843	( - )
+T66	Negation 2856 2861	( - )
+T67	Negation 2872 2877	( - )
+T68	Condition 2929 2939	rak piersi
+N29	Reference T68 ICD10:C50.9	Pierś, umiejscowienie nieokreślone
+A1	Status T68 Family
+R29	Neg Arg1:T65 Arg2:T60	
+R30	Neg Arg1:T66 Arg2:T61	
+R31	Neg Arg1:T67 Arg2:T62	
+T69	Behaviour 2941 2956	Palenie tytoniu
+N30	Reference T69 ICD10:Z72.0	Używanie tytoniu
+T70	Negation 2958 2964	neguje
+T71	Behaviour 2966 2977	Inne używki
+T72	Condition 2987 2996	Uczulenia
+N31	Reference T72 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T73	Negation 2998 3004	neguje
+T74	Negation 2979 2985	neguje
+T75	Behaviour 3022 3048	warunki mieszkaniowe dobre
+T76	Behaviour 3057 3078	studentka psychologii
+T77	Drug 3080 3096	Leki: jak w IKZL
+T78	Investigation 3112 3115	TTE
+T79	Investigation 3117 3121	ABPM
+T80	Investigation 3123 3133	Holter EKG
+R32	Neg Arg1:T70 Arg2:T69	
+R33	Neg Arg1:T74 Arg2:T71	
+R34	Neg Arg1:T73 Arg2:T72	
+T81	Treatment 1419 1437	zestawem ASO 18 mm
+N32	Reference T81 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T82	Condition 1415 1418	ASD
+N33	Reference T82 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R35	Dat Arg1:T18 Arg2:T82	
+T83	Condition 1830 1849	Tetralogoii Fallota
+N34	Reference T83 ICD10:Q21.3	Tetralogia Fallota
+T84	Condition 2041 2044	ToF
+N35	Reference T84 ICD10:Q21.3	Tetralogia Fallota
+R36	Dat Arg1:T16 Arg2:T14	
+R37	Dat Arg1:T49 Arg2:T47	
+T85	Treatment 2512 2530	zestawem ASO 18 mm
+N36	Reference T85 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T86	Condition 2508 2511	ASD
+N37	Reference T86 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R38	Dat Arg1:T51 Arg2:T86	
+T87	Treatment 1581 1616	stentu, a następnie zastawki Melody
+N38	Reference T87 ICD10:Z95	Obecność implantów i przeszczepów serca i naczyń krwionośnych
+R39	Dat Arg1:T22 Arg2:T87	
+T88	Condition 1564 1580	zwężonego graftu
+N39	Reference T88 ICD10:T82.0	Mechaniczne powikłanie protezy zastawki serca
+R40	Dat Arg1:T22 Arg2:T88	
+T89	Condition 2651 2667	zwężonego graftu
+N40	Reference T89 ICD10:T82.0	Mechaniczne powikłanie protezy zastawki serca
+T90	Treatment 2668 2703	stentu, a następnie zastawki Melody
+N41	Reference T90 ICD10:Z95	Obecność implantów i przeszczepów serca i naczyń krwionośnych
+R41	Dat Arg1:T55 Arg2:T90	

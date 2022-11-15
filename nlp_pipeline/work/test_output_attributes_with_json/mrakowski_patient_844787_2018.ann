@@ -1,0 +1,51 @@
+T1	Condition 450 482	Ubytek przegrody międzykomorowej
+T2	Condition 484 511	Choroba niedokrwienna serca
+T3	Condition 513 527	Hiperlipidemia
+T4	Condition 704 748	VSD cześci bloniastej 12mm z przeciekiem L-P
+T5	Symptom 764 794	zmniejszoną tolerancję wysiłku
+T6	Condition 818 829	tachykardia
+T7	Date 830 843	w przeszłości
+T8	Condition 845 873	zmiany zwyrodnieniowe barków
+T9	Treatment 887 904	Przebyte operacje
+T10	Treatment 906 910	2xCC
+T11	Condition 912 927	Wywiad rodzinny
+T12	Negation 929 942	bez znaczenia
+T13	Condition 944 951	Alergie
+T14	Negation 953 959	neguje
+T15	Behaviour 961 971	Nikotynizm
+T16	Behaviour 995 1018	1-5 papierosów/dziennie
+T17	Date 978 993	do 4 lat wstecz
+T18	Date 1019 1024	5 lat
+T19	Behaviour 1026 1047	Alkohol: okazjonalnie
+T20	Behaviour 1050 1067	Uzależnienie inne
+T21	Negation 1069 1075	neguje
+T22	Behaviour 1093 1101	szwaczka
+T23	Behaviour 1103 1132	ekspedientka - praca fizyczna
+T24	Drug 1140 1148	Bisocard
+T25	Drug_dose 1149 1160	2,5 mg rano
+T26	Investigation 1189 1199	echo serca
+T27	Investigation 1201 1204	TET
+T28	Investigation 1206 1210	ABPM
+T29	Investigation 1212 1222	Holter ekg
+T30	Investigation 1224 1242	rtg kl. piersiowej
+zane ze stylem życia
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody miÄdzyprzedsionkowej
+N2	Reference T2 ICD10:I20.9	Choroba niedokrwienna serca, nieokreÅlona
+N3	Reference T3 ICD10:E78.5	Hiperlipidemia, nieokreÅlona
+N4	Reference T4 ICD10:Q21.0	Ubytek przegrody miÄdzykomorowej
+N5	Reference T6 ICD10:R00.0	Tachykardia, nieokreÅlona
+N6	Reference T9 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N7	Reference T13 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N8	Reference T15 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N9	Reference T19 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N10	Reference T20 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+R101	Dat Arg1:T18 Arg2:T19
+R23	Neg Arg1:T14 Arg2:T13
+R24	Neg Arg1:T14 Arg2:T15
+R3	Neg Arg1:T12 Arg2:T11
+R4	Neg Arg1:T12 Arg2:T13
+R46	Neg Arg1:T21 Arg2:T20
+R58	Drg Arg1:T24 Arg2:T25
+R59	Dat Arg1:T7 Arg2:T6
+R60	Dat Arg1:T7 Arg2:T8
+R82	Dat Arg1:T17 Arg2:T16

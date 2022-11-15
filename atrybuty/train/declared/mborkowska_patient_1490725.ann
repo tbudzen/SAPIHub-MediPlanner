@@ -1,0 +1,108 @@
+T1	Investigation 1916 1919	TEE
+T2	Investigation 1921 1925	ECHO
+T3	Investigation 1927 1937	Holter EKG
+T4	Drug 1824 1829	leków
+T5	Negation 1820 1823	Bez
+R1	Neg Arg1:T5 Arg2:T4	
+T6	Behaviour 1751 1777	warunki mieszkaniowe dobre
+T7	Condition 1643 1646	WZW
+N1	Reference T7 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T8	Condition 1653 1662	borelioza
+N2	Reference T8 ICD10:A69.2	Choroba z Lyme
+T9	Condition 1670 1673	tbc
+N3	Reference T9 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T10	Condition 1679 1683	odra
+N4	Reference T10 ICD10:B05	Odra
+T11	Negation 1685 1696	nie pamięta
+A1	Source T11 Declared
+T12	Treatment 1699 1718	szczepienie na odrę
+N5	Reference T12 ICD10:B05	Odra
+T13	Negation 1720 1731	nie pamięta
+R2	Neg Arg1:T13 Arg2:T12	
+R3	Neg Arg1:T11 Arg2:T10	
+T14	Negation 1674 1678	(-),
+R4	Neg Arg1:T14 Arg2:T9	
+T15	Negation 1665 1666	-
+R5	Neg Arg1:T15 Arg2:T8	
+T16	Negation 1647 1650	(-)
+R6	Neg Arg1:T16 Arg2:T7	
+T17	Negation 1611 1614	nie
+T18	Condition 1600 1609	Uczulenia
+N6	Reference T18 ICD10:T78.4	Alergia, nieokreślona
+R7	Neg Arg1:T17 Arg2:T18	
+T19	Behaviour 1577 1597	alkohol sporadycznie
+N7	Reference T19 ICD10:Z72.1	Używanie alkoholu
+T20	Behaviour 1492 1562	Palenie tytoniu: pali, ok. 15 lat, pół paczki dziennie, 7,5 paczkolat,
+N8	Reference T20 ICD10:T65.2	Tytoń i nikotyna
+T21	Negation 1485 1491	neguje
+T22	Treatment 1466 1483	Przebyte operacje
+R8	Neg Arg1:T21 Arg2:T22	
+T23	Negation 1325 1331	Neguje
+T24	Symptom 1333 1345	zasłabnięcia
+N9	Reference T24 ICD10:R55	Omdlenie i zapaść
+T25	Symptom 1347 1355	omdlenia
+N10	Reference T25 ICD10:R55	Omdlenie i zapaść
+T26	Symptom 1357 1367	krwawienia
+N11	Reference T26 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T27	Symptom 1369 1382	czarne stolce
+N12	Reference T27 ICD10:K92.1	Stolce smołowate
+T28	Symptom 1384 1400	brunatne wymioty
+N13	Reference T28 ICD10:K92.0	Wymioty krwawe
+T29	Condition 1402 1418	chorobę wrzodową
+N14	Reference T29 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T30	Symptom 1420 1428	duszność
+N15	Reference T30 ICD10:I50.1	Niewydolność serca lewokomorowa
+T31	Condition 1430 1432	HA
+N16	Reference T31 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T32	Condition 1434 1436	DM
+N17	Reference T32 ICD10:E13	Inne określone postacie cukrzycy
+T33	Condition 1438 1448	udar mózgu
+N18	Reference T33 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T34	Condition 1450 1461	zawał serca
+N19	Reference T34 ICD10:I25.2	Przebyty zawał serca
+R9	Neg Arg1:T23 Arg2:T24	
+R10	Neg Arg1:T23 Arg2:T25	
+R11	Neg Arg1:T23 Arg2:T26	
+R12	Neg Arg1:T23 Arg2:T27	
+R13	Neg Arg1:T23 Arg2:T28	
+R14	Neg Arg1:T23 Arg2:T29	
+R15	Neg Arg1:T23 Arg2:T30	
+R16	Neg Arg1:T23 Arg2:T31	
+R17	Neg Arg1:T23 Arg2:T32	
+R18	Neg Arg1:T23 Arg2:T33	
+R19	Neg Arg1:T23 Arg2:T34	
+T35	Investigation 1258 1275	próbie wysiłkowej
+T36	Date 1245 1255	03.04.2018
+T37	Investigation_result 1276 1323	przy obciążeniu 11 METS klinicznie i EKG ujemna
+R20	Inv Arg1:T35 Arg2:T37	
+R21	Dat Arg1:T36 Arg2:T35	
+T38	Investigation 1213 1223	Holter EKG
+T39	Investigation_result 1225 1237	ExSV 19/dobę
+R22	Inv Arg1:T38 Arg2:T39	
+T40	Date 1200 1210	27.08.2018
+R23	Dat Arg1:T40 Arg2:T38	
+T41	Condition 1163 1166	PFO
+A2	Status T41 Family
+N20	Reference T41 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T42	Symptom 1094 1109	kołatania serca
+N21	Reference T42 ICD10:R00.2	Kołatanie serca
+T43	Symptom 1112 1127	obrzęki kostek.
+N22	Reference T43 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T44	Condition 1169 1175	udarów
+A3	Status T44 Family
+N23	Reference T44 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T45	Condition 971 987	podejrzeniem PFO
+A4	Source T45 Declared
+N24	Reference T45 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T46	Investigation 1014 1017	MRI
+T47	Investigation_result 989 1011	bez zmian naczyniowych
+R24	Inv Arg1:T46 Arg2:T47	
+T48	Condition 895 909	nerwicą lękową
+N25	Reference T48 ICD10:F41	Inne zaburzenia lękowe
+T49	Condition 464 478	Nerwica lękowa
+N26	Reference T49 ICD10:F41	Inne zaburzenia lękowe
+T50	Condition 439 463	Przetrwały otwór owalny.
+N27	Reference T50 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T51	Condition 1070 1073	PFO
+N28	Reference T51 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T52	Treatment 911 966	obecnie bez farmakoterapii, ale w trakcie psychoterapii

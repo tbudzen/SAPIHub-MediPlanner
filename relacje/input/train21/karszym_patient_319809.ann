@@ -1,0 +1,26 @@
+T1	Drug 340 349	Cefazolin
+T2	Drug 351 358	ANA 2:1
+T3	Drug 360 372	Hydroksyzyna
+T4	Drug 374 379	Enema
+T5	Condition 597 657	Wrodzona wada serca pod postacią zwężenia zastawki aortalnej
+N1	Reference T5 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T6	Condition 659 686	hipoplastycznego łuku aorty
+N2	Reference T6 ICD10:Q25.4	Inne wrodzone wady rozwojowe aorty
+T7	Condition 688 709	zwężenia cieśni aorty
+N3	Reference T7 ICD10:Q25.1	Zwężenie cieśni aorty
+T8	Treatment 722 775	plastyce balonowej zastawki aortalnej  i cieśni aorty
+T9	Date 777 788	18.05.2006r
+T10	Treatment 803 811	operacji
+N4	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T11	Date 852 863	08.06.2006r
+T12	Condition 870 907	Zwężenie drogi odpływu z lewej komory
+R1	Dat Arg1:T11 Arg2:T10	
+R2	Dat Arg1:T9 Arg2:T8	
+T13	Condition 1044 1063	wrodzoną wadą serca
+T14	Symptom 1140 1155	Stan dość dobry
+T15	Condition 812 833	zwężenia cieśni aorty
+N5	Reference T15 ICD10:Q25.1	Zwężenie cieśni aorty
+T16	Treatment 834 850	metodą Crafoorda
+N6	Reference T16 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R3	Dat Arg1:T11 Arg2:T16	
+R4	Dat Arg1:T11 Arg2:T15	

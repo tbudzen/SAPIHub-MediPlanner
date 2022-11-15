@@ -1,0 +1,140 @@
+T1	Treatment 333 420	Dalsza opieka w POZ oraz Poradni Kardiologicznej, Endokrynologicznej i Diabetologicznej
+T2	Investigation 425 505	Okresowa kontrola elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T3	Date 517 531	za 5-6 tygodni
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Investigation 536 559	Okresowa kontrola HbA1c
+T5	Date 560 570	raz w roku
+R2	Dat Arg1:T5 Arg2:T4	
+T6	Behaviour 575 677	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T7	Investigation 682 738	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T8	Investigation 743 775	Wskazane wykonanie badania SPECT
+T9	Treatment 846 874	Regularne przyjmowanie leków
+T10	Drug 876 888	Tertensif SR
+T11	Drug 889 903	1x1 tabl. rano
+R3	Inv Arg1:T10 Arg2:T11	
+T12	Drug 904 909	Nedal
+T13	Drug 910 929	5 mg 1x1 tabl. rano
+R4	Inv Arg1:T12 Arg2:T13	
+T14	Drug 930 936	Xartan
+T15	Drug 937 964	50 mg 1x1/2 tabl. wieczorem
+R5	Inv Arg1:T14 Arg2:T15	
+T16	Drug 965 970	Acard
+T17	Drug_dose 971 996	75 mg 1x1 tabl. wieczorem
+R6	Drg Arg1:T16 Arg2:T17	
+T18	Drug 997 1003	Atoris
+T19	Drug_dose 1004 1029	20 mg 1x1 tabl. wieczorem
+R7	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1030 1033	IPP
+T21	Drug_dose 1034 1063	20 mg 1x1 tabl. rano na czczo
+R8	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1064 1076	Vessel Due F
+T23	Drug_dose 1077 1091	1x1 tabl. rano
+R9	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1092 1101	Polvertic
+T25	Drug_dose 1102 1117	24 mg 2x1 tabl.
+R10	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1118 1124	Letrox
+T27	Drug_dose 1125 1181	50 mg 1x1 tabl. rano - kontynuacja zaleceń endokrynologa
+R11	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1182 1193	Ins. Lantus
+T29	Drug_dose 1194 1237	12j. rano - kontynuacja zaleceń diabetologa
+R12	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1238 1250	Ins. Humalog
+T31	Drug_dose 1251 1294	12j. rano - kontynuacja zaleceń diabetologa
+R13	Drg Arg1:T30 Arg2:T31	
+T32	Drug 1295 1301	Siofor
+T33	Drug_dose 1302 1362	500 mg 1x1 tabl. wieczorem - kontynuacja zaleceń diabetologa
+R14	Drg Arg1:T32 Arg2:T33	
+T34	Drug 1363 1372	Nitromint
+T35	Drug_dose 1373 1407	1-2 dawki w razie bólu dławicowego
+R15	Drg Arg1:T34 Arg2:T35	
+T36	Condition 1658 1693	Stabilna choroba wieńcowa CCS I/II*
+N1	Reference T36 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T37	Condition 1695 1726	Nadciśnienie tętnicze I* wg WHO
+N2	Reference T37 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T38	Condition 1728 1744	Cukrzyca typu II
+N3	Reference T38 ICD10:E11	Cukrzyca insulinoniezależna
+T39	Condition 1746 1766	Hipercholesterolemia
+N4	Reference T39 ICD10:E78.0	Czysta hipercholesterolemia
+T40	Condition 1768 1790	Niedoczynność tarczycy
+N5	Reference T40 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T41	Treatment 1825 1849	częściowej tyroidektomii
+A1	Status T41 Historical_Insignificant
+T42	Condition 1851 1869	Niewydolność żylna
+N6	Reference T42 ICD10:I87.2	Niewydolność żył (przewlekła) (obwodowa)
+T43	Condition 1891 1971	urazie głowy powikłanym zespołem korzeniowym w przebiegu wypadku komunikacyjnego
+N7	Reference T43 ICD10:S09.9	Nieokreślony uraz głowy
+T44	Date 1972 1982	6 lat temu
+R16	Dat Arg1:T44 Arg2:T43	
+T45	Condition 1984 1998	Niedokrwistość
+N8	Reference T45 ICD10:D64.9	Niedokrwistość, nieokreślona
+T46	Condition 2022 2041	Gruczolak nadnercza
+A2	Source T46 Declared
+N9	Reference T46 ICD10:D35.0	Nadnercze
+T47	Symptom 2245 2279	atypowego bólu w klatce piersiowej
+N10	Reference T47 ICD10:R07.3	Inne bóle w klatce piersiowej
+T48	Condition 2298 2326	choroby niedokrwiennej serca
+N11	Reference T48 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T49	Condition 2407 2487	urazie głowy powikłanym zespołem korzeniowym w przebiegu wypadku komunikacyjnego
+N12	Reference T49 ICD10:S09.9	Nieokreślony uraz głowy
+T50	Date 2488 2498	6 lat temu
+R17	Dat Arg1:T50 Arg2:T49	
+T51	Condition 2501 2532	nadciśnienie tętnicze I* wg WHO
+N13	Reference T51 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T52	Investigation_result 2544 2570	skoki ciśnienia do 220/100
+N14	Reference T52 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T53	Condition 2616 2632	cukrzyca typu II
+N15	Reference T53 ICD10:E11	Cukrzyca insulinoniezależna
+T54	Treatment 2633 2649	leczona insuliną
+T55	Condition 2651 2673	niedoczynność tarczycy
+N16	Reference T55 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T56	Treatment 2707 2731	częściowej tyroidektomii
+A3	Status T56 Historical_Insignificant
+T57	Condition 2733 2751	niewydolność żylna
+N17	Reference T57 ICD10:I87.2	Niewydolność żył (przewlekła) (obwodowa)
+T58	Investigation 2785 2795	TK brzucha
+T59	Investigation_result 2796 2825	opisywano zmianę na nadnerczu
+N18	Reference T59 ICD10:D35.0	Nadnercze
+R18	Inv Arg1:T58 Arg2:T59	
+T60	Condition 2829 2844	Wywiad rodzinny
+A4	Status T60 Family
+T61	Condition 2865 2893	choroby niedokrwiennej serca
+A5	Status T61 Family
+N19	Reference T61 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T62	Behaviour 2911 2919	emerytka
+T63	Condition 2927 2936	Uczulenia
+T64	Negation 2938 2944	neguje
+R19	Neg Arg1:T64 Arg2:T63	
+T65	Behaviour 2945 2951	Nałogi
+N20	Reference T65 ICD10:Z72.9	Problemy związane ze stylem życia, nieokreślone
+T66	Negation 2953 2959	neguje
+R20	Neg Arg1:T66 Arg2:T65	
+T67	Drug 2967 2979	Tertensif SR
+T68	Drug_dose 2980 2994	1x1 tabl. rano
+R21	Drg Arg1:T67 Arg2:T68	
+T69	Drug 2995 3001	Xartan
+T70	Drug_dose 3002 3024	50 1/2 tabl. wieczorem
+R22	Drg Arg1:T69 Arg2:T70	
+T71	Drug 3025 3036	Ins. Lantus
+T72	Drug_dose 3037 3045	12j rano
+R23	Drg Arg1:T71 Arg2:T72	
+T73	Drug 3046 3058	Ins. Humalog
+T74	Drug_dose 3059 3067	12j rano
+R24	Drg Arg1:T73 Arg2:T74	
+T75	Drug 3068 3071	IPP
+T76	Drug_dose 3072 3092	20 mg 1x1 tabl. rano
+R25	Drg Arg1:T75 Arg2:T76	
+T77	Drug 3093 3099	Letrox
+T78	Drug_dose 3100 3120	50 mg 1x1 tabl. rano
+R26	Drg Arg1:T77 Arg2:T78	
+T79	Drug 3121 3133	Vessel Due F
+T80	Drug_dose 3134 3148	1x1 tabl. rano
+R27	Drg Arg1:T79 Arg2:T80	
+T81	Drug 3149 3155	Siofor
+T82	Drug_dose 3156 3182	500 mg 1x1 tabl. wieczorem
+R28	Drg Arg1:T81 Arg2:T82	
+T83	Treatment 1791 1814	w trakcie suplementacji
+T84	Treatment 2674 2697	w trakcie suplementacji
+T85	Symptom 2583 2613	nagłym zaczerwienieniem twarzy
+N21	Reference T85 ICD10:R23.2	Zaczerwienienie twarzy
+N22	Reference T63 ICD10:T78.4	Alergia, nieokreślona

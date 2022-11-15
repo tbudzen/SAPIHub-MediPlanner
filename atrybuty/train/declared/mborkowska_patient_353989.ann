@@ -1,0 +1,35 @@
+T1	Drug 340 350	Salbutamol
+T2	Drug 483 495	Salbutamol  
+T3	Drug_dose 495 503	2 x 5ml.
+R1	Drg Arg1:T2 Arg2:T3	
+T4	Investigation 522 559	kontrola tętna i ciśnienia tętniczego
+T5	Treatment 564 647	Ewentualne modyfikacje farmakoterapii po weryfikacji z listą leków wydłużających QT
+T6	Behaviour 688 764	Ograniczenie aktywności fizycznej - zwolnienie z zajęć wychowania fizycznego
+T7	Condition 1184 1246	Wrodzona wada serca - podwójne odejście naczyń z prawej komory
+N1	Reference T7 ICD10:Q24	Inne wrodzone wady rozwojowe serca
+T8	Condition 1249 1273	ubytkiem międzykomorowym
+N2	Reference T8 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T9	Condition 1276 1292	koarktacją aorty
+N3	Reference T9 ICD10:Q25.1	Zwężenie cieśni aorty
+T10	Treatment 1305 1318	operacji wady
+T11	Date 1320 1329	28.08.07r
+R2	Dat Arg1:T11 Arg2:T10	
+T12	Treatment 1335 1381	reoperacji zwężenia drogi odpływu lewej komory
+T13	Date 1383 1392	18.12.07r
+R3	Dat Arg1:T13 Arg2:T12	
+T14	Treatment 1406 1437	plastyce balonowej rekoarktacji
+T15	Date 1439 1448	06.12.07r
+R4	Dat Arg1:T15 Arg2:T14	
+T16	Condition 1454 1474	Bradykardia zatokowa
+N4	Reference T16 ICD10:R00.1	Bradykardia, nieokreślona
+T17	Condition 1480 1505	Komorowe zaburzenia rytmu
+N5	Reference T17 ICD10:I47.2	Częstoskurcz komorowy
+T18	Condition 1510 1536	Obserwacja w kierunku LQTS
+A1	Source T18 Declared
+N6	Reference T18 ICD10:I45.8	Inne określone zaburzenia przewodnictwa
+T19	Drug 1715 1725	salbutamol
+T20	Condition 1728 1744	uczulony na kurz
+N7	Reference T20 ICD10:T78.4	Alergia, nieokreślona
+T21	Drug 1759 1764	leków
+T22	Negation 1755 1758	bez
+R5	Neg Arg1:T22 Arg2:T21	

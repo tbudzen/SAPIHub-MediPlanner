@@ -1,0 +1,81 @@
+T1	Investigation 2283 2293	echo serca
+T2	Investigation 2295 2298	TET
+T3	Investigation 2300 2304	ABPM
+T4	Investigation 2306 2316	Holter ekg
+T5	Investigation 2318 2336	rtg kl. piersiowej
+T6	Drug 2231 2240	Magnez B6
+T7	Drug_dose 2241 2253	1 tabl. rano
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 2196 2204	Polocard
+T9	Drug_dose 2205 2229	150 mg 1 tabl. wieczorem
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 2171 2176	Daneb
+T11	Drug 2139 2146	Amlozek
+T12	Drug 2113 2121	Structum
+T13	Drug 2091 2101	Kalcikinon
+T14	Drug 2016 2031	Xydroxycarbamid
+T15	Drug_dose 2032 2089	500mg 1 tabl. rano (1 tabl. rano i wieczorem w niedzielę)
+R3	Drg Arg1:T14 Arg2:T15	
+T16	Drug_dose 2102 2110	2x1 tabl
+R4	Drg Arg1:T13 Arg2:T16	
+T17	Drug_dose 2122 2136	500mg 2x1 tabl
+R5	Drg Arg1:T12 Arg2:T17	
+T18	Drug_dose 2147 2169	5 mg 1 tabl. wieczorem
+R6	Drg Arg1:T11 Arg2:T18	
+T19	Drug_dose 2177 2194	5 mg 1 tabl. rano
+R7	Drg Arg1:T10 Arg2:T19	
+T20	Negation 1949 1955	neguje
+T21	Behaviour 1907 1928	Alkohol: okazjonalnie
+N1	Reference T21 ICD10:Z72.1	Używanie alkoholu
+T22	Behaviour 1864 1874	Nikotynizm
+N2	Reference T22 ICD10:T65.2	Tytoń i nikotyna
+T23	Negation 1876 1887	obecnie nie
+R8	Neg Arg1:T23 Arg2:T22	
+T24	Negation 1856 1862	neguje
+T25	Negation 1832 1845	bez znaczenia
+T26	Negation 1664 1670	neguje
+T27	Condition 1847 1854	Alergie
+N3	Reference T27 ICD10:T78.4	Alergia, nieokreślona
+T28	Condition 1815 1830	Wywiad rodzinny
+A1	Status T28 Family
+R9	Neg Arg1:T25 Arg2:T28	
+T29	Treatment 1645 1662	Przebyte operacje
+R10	Neg Arg1:T26 Arg2:T29	
+T30	Condition 1571 1587	HA - skorygowane
+N4	Reference T30 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T31	Condition 1589 1628	zmiany zwyrodnieniowe stawów kolanowych
+N5	Reference T31 ICD10:M17	Gonartroza [choroba zwyrodnieniowa stawu kolanowego]
+T32	Condition 1630 1643	nadpłytkowość
+N6	Reference T32 ICD10:D75.2	Nadpłytkowość samoistna
+T33	Condition 667 702	Łagodna stenoza zastawki aortalnej.
+N7	Reference T33 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T34	Condition 703 725	Nadciśnienie tętnicze.
+N8	Reference T34 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T35	Condition 726 753	Miażdżyca tętnic obwodowych
+N9	Reference T35 ICD10:I70.9	Miażdżyca uogólniona i nieokreślona
+T36	Condition 755 795	Podejrzenie choroby niedokrwiennej serca
+A2	Source T36 Declared
+N10	Reference T36 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T37	Condition 797 809	Dyslipidemia
+N11	Reference T37 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T38	Drug 835 842	statyną
+T39	Condition 844 859	Cukrzyca typu 2
+N12	Reference T39 ICD10:E11	Cukrzyca insulinoniezależna
+T40	Condition 861 900	Zmiany zwyrodnieniowe stawów kolanowych
+N13	Reference T40 ICD10:M17	Gonartroza [choroba zwyrodnieniowa stawu kolanowego]
+T41	Condition 902 915	Nadpłytkowość
+N14	Reference T41 ICD10:D75.2	Nadpłytkowość samoistna
+T42	Behaviour 929 939	Nikotynizm
+N15	Reference T42 ICD10:T65.2	Tytoń i nikotyna
+T43	Investigation 1243 1282	SPECT mięśnia sercowego z dipirydamolem
+T44	Investigation_result 1515 1527	szmeru serca
+T45	Date 1779 1786	06.2019
+T46	Treatment 1697 1752	planowanej operacji ortopedycznej (prawy staw kolanowy)
+T47	Negation 1672 1687	dyskwalifikacja
+R12	Neg Arg1:T47 Arg2:T46	
+T48	Investigation 1756 1777	USG D żył kk. dolnych
+R13	Neg Arg1:T24 Arg2:T27	
+R14	Dat Arg1:T45 Arg2:T48	
+A4	Source T46 Declared
+T49	Behaviour 1930 1948	Uzależnienie inne:
+R11	Neg Arg1:T20 Arg2:T49	

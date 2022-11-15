@@ -1,0 +1,210 @@
+T1	Investigation 601 630	kontrola ciśnienia tętniczego
+T2	Investigation 646 670	kontrola morfologii krwi
+T3	Investigation 697 708	lipidogramu
+T4	Date 673 694	kolejna za 4 tygodnie
+R1	Dat Arg1:T4 Arg2:T2	
+R2	Dat Arg1:T4 Arg2:T3	
+T5	Investigation 714 747	kontrola stężeń hormonów tarczycy
+T6	Date 748 762	za 4-6 tygodni
+R3	Dat Arg1:T6 Arg2:T5	
+T7	Behaviour 839 849	dieta DASH
+T8	Behaviour 856 880	oszczędzający tryb życia
+T9	Drug 924 932	Euthyrox
+T10	Drug_dose 933 960	N75 1 tabl. rano (na czczo)
+R4	Drg Arg1:T9 Arg2:T10	
+T11	Drug 967 975	Bisocard
+T12	Drug_dose 976 996	2,5mg 1/2 tabl. rano
+R5	Drg Arg1:T11 Arg2:T12	
+T13	Drug 1004 1010	Atoris
+T14	Drug_dose 1011 1034	10 mg 1 tabl. wieczorem
+R6	Drg Arg1:T13 Arg2:T14	
+T15	Drug 1042 1054	Nutrof Total
+T16	Drug_dose 1055 1067	1 tabl. rano
+R7	Drg Arg1:T15 Arg2:T16	
+T17	Drug 1074 1106	Vitrum Calcium 1250 + Vitamin D3
+T18	Drug_dose 1107 1125	1 tabl. w południe
+R8	Drg Arg1:T17 Arg2:T18	
+T19	Investigation 3413 3417	ECHO
+T20	Investigation 3419 3437	EKG metodą Holtera
+T21	Investigation 3439 3443	ABPM
+T22	Investigation 3445 3448	TEE
+T23	Drug 3179 3187	Euthyrox
+T24	Drug_dose 3188 3206	N88 1x 1 tabl/rano
+R9	Drg Arg1:T23 Arg2:T24	
+T25	Drug 3207 3215	Bisocard
+T26	Drug_dose 3216 3238	2,5mg 1x 1/2 tabl/rano
+R10	Drg Arg1:T25 Arg2:T26	
+T27	Drug 3239 3251	Nutrof Total
+T28	Drug_dose 3252 3266	1x 1 tabl/rano
+R11	Drg Arg1:T27 Arg2:T28	
+T29	Drug 3267 3289	Vitrum calcium 1250+d#
+T30	Drug_dose 3290 3303	1x 1 tabl/poł
+R12	Drg Arg1:T29 Arg2:T30	
+T31	Drug 3304 3313	Cholester
+T32	Drug_dose 3314 3329	1x 1 tabl/wiecz
+R13	Drg Arg1:T31 Arg2:T32	
+T33	Behaviour 3116 3142	warunki mieszkaniowe dobre
+T34	Condition 3065 3068	WZW
+N1	Reference T34 ICD10:B19	
+T35	Condition 3075 3084	borelioza
+N2	Reference T35 ICD10:A69.2	Choroba z Lyme
+T36	Condition 3092 3095	tbc
+N3	Reference T36 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T37	Negation 3096 3099	(-)
+R14	Neg Arg1:T37 Arg2:T36	
+T38	Negation 3085 3090	( - )
+R15	Neg Arg1:T38 Arg2:T35	
+T39	Negation 3069 3072	(-)
+R16	Neg Arg1:T39 Arg2:T34	
+T40	Drug 3028 3037	Pyralgina
+T41	Condition 3014 3023	Uczulenia
+N4	Reference T41 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R17	Alg Arg1:T41 Arg2:T40	
+T42	Negation 3010 3013	nie
+T43	Negation 2991 2996	nigdy
+T44	Behaviour 2974 2989	Palenie tytoniu
+N5	Reference T44 ICD10:Z72.0	Używanie tytoniu
+R18	Neg Arg1:T43 Arg2:T44	
+T45	Behaviour 2997 3008	Inne używki
+R19	Neg Arg1:T42 Arg2:T45	
+T46	Condition 1344 1404	Wada serca pod postacią niedomykalności mitralnej IV stopnia
+N6	Reference T46 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T47	Condition 1406 1443	Niedomykalność trójdzielna II stopnia
+N7	Reference T47 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T48	Condition 1445 1464	Nadciśnienie płucne
+N8	Reference T48 ICD10:I27.0	Pierwotne nadciśnienie płucne
+T49	Investigation_result 1466 1479	PAPS 57 mm Hg
+T50	Condition 1482 1516	Nadkomorowe zaburzenia rytmu serca
+N9	Reference T50 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T51	Condition 1519 1533	ekstrasystolie
+N10	Reference T51 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T52	Condition 1535 1555	Hipercholesterolemia
+T53	Condition 1576 1611	Niedokrwistość normocytarna łagodna
+N12	Reference T53 ICD10:D64	Inne niedokrwistości
+T54	Condition 1613 1656	Przewlekły kaszel o nieustalonej etiologii.
+N13	Reference T54 ICD10:R05	Kaszel
+T55	Condition 1743 1753	Osteopenia
+N14	Reference T55 ICD10:M85.8	Inne określone zaburzenia mineralizacji i struktury kości
+T56	Treatment 1711 1721	eradykacji
+T57	Condition 1722 1741	Helicobacter pylori
+T58	Condition 1657 1700	Przewlekłe zapalenie błony śluzowej żołądka
+N15	Reference T58 ICD10:K29	Zapalenie żołądka i dwunastnicy
+T59	Treatment 1763 1775	strumektomii
+A1	Status T59 Historical_Insignificant
+T60	Condition 1785 1800	wola guzowatego
+A2	Status T60 Historical_Insignificant
+T61	Date 1802 1806	2003
+R20	Dat Arg1:T61 Arg2:T60	
+R21	Dat Arg1:T61 Arg2:T59	
+T62	Treatment 1817 1833	usunięciu macicy
+A3	Status T62 Historical_Insignificant
+T63	Condition 1843 1853	mięśniaków
+N16	Reference T63 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+A4	Status T63 Historical_Insignificant
+T64	Date 1855 1859	2000
+R22	Dat Arg1:T64 Arg2:T63	
+R23	Dat Arg1:T64 Arg2:T62	
+T65	Condition 1879 1893	zaćmy obu oczu
+N17	Reference T65 ICD10:H26.9	Zaćma, nieokreślona
+A5	Status T65 Historical_Insignificant
+T66	Treatment 1870 1878	operacji
+A6	Status T66 Historical_Insignificant
+T67	Date 1895 1906	2 lata temu
+R24	Dat Arg1:T67 Arg2:T65	
+R25	Dat Arg1:T67 Arg2:T66	
+T68	Treatment 1918 1943	laseroterapia oka prawego
+A7	Status T68 Historical_Insignificant
+T69	Date 1945 1952	10.2018
+R26	Dat Arg1:T69 Arg2:T68	
+T70	Condition 1955 1964	Uczulenie
+N18	Reference T70 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T71	Drug 1968 1977	pyralginę
+R27	Alg Arg1:T70 Arg2:T71	
+T72	Condition 2122 2169	wypadaniem płatka przedniego zastawki mitralnej
+N19	Reference T72 ICD10:I34.1	
+T73	Condition 2176 2199	ciężką niedomykalnością
+N20	Reference T73 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T74	Symptom 2230 2253	napadów kołatania serca
+N21	Reference T74 ICD10:R00.2	Kołatanie serca
+T75	Date 2254 2263	od 6 m-cy
+R28	Dat Arg1:T75 Arg2:T74	
+T76	Symptom 2320 2403	bólów w okolicy p/sercowej o charakterze ucisku (bez związku z wysiłkiem fizycznym)
+N22	Reference T76 ICD10:R07.3	Inne bóle w klatce piersiowej
+T77	Symptom 2264 2314	(trwają do 5 min, bez towarzyszących dolegliwości)
+R29	Dat Arg1:T75 Arg2:T77	
+T78	Symptom 2427 2444	ogólne osłabienie
+N23	Reference T78 ICD10:R53	Złe samopoczucie i zmęczenie
+T79	Condition 2446 2480	zapalenie błony śluzowej żołądka z
+N24	Reference T79 ICD10:K29	Zapalenie żołądka i dwunastnicy
+T80	Condition 2481 2509	infekcją Helicobacter pylori
+T81	Treatment 2514 2524	eradykacji
+T82	Symptom 2527 2539	suchy kaszel
+N25	Reference T82 ICD10:R05	Kaszel
+T83	Date 2540 2548	od 3 lat
+R30	Dat Arg1:T83 Arg2:T82	
+T84	Condition 2613 2623	osteopenia
+N26	Reference T84 ICD10:M85.8	Inne określone zaburzenia mineralizacji i struktury kości
+T85	Negation 2625 2631	Neguje
+T86	Symptom 2633 2645	zasłabnięcia
+N27	Reference T86 ICD10:R55	Omdlenie i zapaść
+T87	Symptom 2647 2655	omdlenia
+N28	Reference T87 ICD10:R55	Omdlenie i zapaść
+T88	Symptom 2657 2667	krwawienia
+N29	Reference T88 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T89	Symptom 2669 2683	czarne stolce,
+N30	Reference T89 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T90	Symptom 2684 2700	brunatne wymioty
+N31	Reference T90 ICD10:K92.0	Wymioty krwawe
+T91	Condition 2702 2718	chorobę wrzodową
+N32	Reference T91 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T92	Symptom 2720 2734	duszność nocną
+T93	Symptom 2736 2751	obrzęki podudzi
+T94	Condition 2753 2755	HA
+N35	Reference T94 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T95	Condition 2757 2759	DM
+N36	Reference T95 ICD10:E13	Inne określone postacie cukrzycy
+R31	Neg Arg1:T85 Arg2:T86	
+R32	Neg Arg1:T85 Arg2:T87	
+R33	Neg Arg1:T85 Arg2:T88	
+R34	Neg Arg1:T85 Arg2:T89	
+R35	Neg Arg1:T85 Arg2:T90	
+R36	Neg Arg1:T85 Arg2:T91	
+R37	Neg Arg1:T85 Arg2:T92	
+R38	Neg Arg1:T85 Arg2:T93	
+R39	Neg Arg1:T85 Arg2:T94	
+R40	Neg Arg1:T85 Arg2:T95	
+T96	Treatment 2781 2793	strumektomia
+A8	Status T96 Historical_Insignificant
+T97	Condition 2803 2818	wola guzowatego
+A9	Status T97 Historical_Insignificant
+T98	Date 2820 2824	2003
+R41	Dat Arg1:T98 Arg2:T97	
+R42	Dat Arg1:T98 Arg2:T96	
+T99	Treatment 2853 2869	usunięcie macicy
+A10	Status T99 Historical_Insignificant
+T100	Condition 2879 2889	mięśniaków
+A11	Status T100 Historical_Insignificant
+N37	Reference T100 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+T101	Date 2891 2895	2000
+R43	Dat Arg1:T101 Arg2:T100	
+R44	Dat Arg1:T101 Arg2:T99	
+T102	Treatment 2898 2906	operacja
+A12	Status T102 Historical_Insignificant
+T103	Condition 2907 2921	zaćmy obu oczu
+A13	Status T103 Historical_Insignificant
+N38	Reference T103 ICD10:H26.9	Zaćma, nieokreślona
+T104	Date 2923 2934	2 lata temu
+R45	Dat Arg1:T104 Arg2:T103	
+R46	Dat Arg1:T104 Arg2:T102	
+T105	Treatment 2937 2962	laseroterapia oka prawego
+A14	Status T105 Historical_Insignificant
+T106	Date 2964 2971	10.2018
+R47	Dat Arg1:T106 Arg2:T105	
+T107	Drug 794 805	l-tyroksyny
+N33	Reference T92 ICD10:R06.0	Duszność
+N34	Reference T93 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N39	Reference T45 ICD10:Z72	Problemy związane ze stylem życia
+T108	Treatment 346 373	dalsza opieka w poradni POZ
+T109	Treatment 389 478	kontrola kardiologiczna, okulistyczna, ginekologiczna, endokrynologiczna, reumatologiczna
+T110	Treatment 483 584	9pilna konsultacja kardiochirurgiczna celem kwalifikacji do zabiegowego leczenia wady mitralnej serca
+N11	Reference T52 ICD10:E78.0	Czysta hipercholesterolemia

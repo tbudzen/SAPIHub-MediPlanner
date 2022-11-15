@@ -1,0 +1,22 @@
+T1	Drug 340 351	Propranolol
+T2	Drug 353 362	Rytmonorm
+T3	Condition 581 649	Wrodzona wada serca - odejście dużych pni tętniczych z prawej komory
+N1	Reference T3 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+T4	Condition 652 688	ubytek w przegrodzie międzykomorowej
+N2	Reference T4 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T5	Condition 691 718	przetrwały przewód tętniczy
+N3	Reference T5 ICD10:Q25.0	Drożny przewód tętniczy
+T6	Treatment 731 750	korekcji całkowitej
+N4	Reference T6 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T7	Date 753 764	01.08.2017r
+T8	Condition 769 814	Zaburzenia rytmu serca pochodzenia komorowego
+N5	Reference T8 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+R1	Dat Arg1:T7 Arg2:T6	
+T9	Drug 926 935	Rytmonorm
+T10	Drug_dose 936 946	3 x 100 mg
+T11	Treatment 949 983	kontrola w Poradni Kardiologicznej
+T12	Date 984 993	za 3 m-ce
+T13	Condition 1129 1148	wrodzoną wadą serca
+T14	Symptom 1226 1241	Stan dość dobry
+R2	Dat Arg1:T12 Arg2:T11	
+R3	Drg Arg1:T9 Arg2:T10	

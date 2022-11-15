@@ -1,0 +1,91 @@
+T1	Condition 450 479	Dodatkowe pobudzenia komorowe
+T2	Condition 481 508	Choroba niedokrwienna serca
+T3	Condition 510 524	Hiperlipidemia
+T4	Condition 534 544	boreliozie
+T5	Condition 546 579	Choroba zwyrodnieniowa kręgosłupa
+T6	Condition 811 840	Dodatkowe pobudzenia komorowe
+T7	Condition 850 860	boreliozie
+T8	Symptom 1029 1073	postępującej zmniejszonej tolerancji wysiłku
+T9	Date 1074 1085	od ok 2 lat
+T10	Symptom 1100 1159	bóle okolicy lewej strony kl piersiowej przy zmianie pogody
+T11	Date 1161 1176	Ok tydzień temu
+T12	Symptom 1177 1204	zawroty głowy incydentalnie
+T13	Negation 1206 1209	bez
+T14	Symptom 1210 1219	powtórzeń
+T15	Condition 1264 1271	arytmię
+T16	Condition 1273 1276	ExV
+T17	Negation 1279 1282	nie
+T18	Symptom 1283 1306	odczuwa kołatania serca
+T19	Condition 1332 1341	boreliozy
+T20	Date 1342 1356	ok 3 lata temu
+T21	Treatment 1358 1376	antybiotykoterapia
+T22	Date 1377 1394	przez ok pół roku
+T23	Investigation 1406 1414	kontrola
+T24	Date 1415 1430	przez ok 2 lata
+T25	Treatment 1458 1468	wyleczenie
+T26	Symptom 1487 1509	bóle mięśniowo-stawowe
+T27	Condition 1541 1550	boreliozy
+T28	Date 1532 1540	od czasu
+T29	Symptom 1552 1588	Zmniejszają się podczas przyjmowania
+T30	Drug 1589 1594	tranu
+T31	Treatment 1597 1605	Operacje
+T32	Negation 1607 1613	neguje
+T33	Behaviour 1614 1624	Nikotynizm
+T34	Date 1628 1641	w przeszłości
+T35	Behaviour 1644 1665	Alkohol: okazjonalnie
+T36	Negation 1674 1680	neguje
+T37	Condition 1682 1699	uczulenia na leki
+T38	Symptom 1701 1734	krwawienia z przewodu pokarmowego
+T39	Symptom 1736 1755	utraty przytomności
+T40	Condition 1757 1772	Wywiad rodzinny
+T41	Negation 1774 1780	neguje
+T42	Drug 1807 1811	tran
+T43	Investigation 1823 1833	ECHO serca
+T44	Investigation 1835 1845	Holter EKG
+T45	Investigation 1847 1856	Holter RR
+T46	Investigation 1858 1860	PW
+T47	Investigation 1862 1879	RTG kl piersiowej
+T48	Date 1880 1898	ok 3 miesiące temu
+T49	Investigation_result 1901 1911	prawidłowe
+N1	Reference T2 ICD10:I20.9	Choroba niedokrwienna serca, nieokreÅlona
+N2	Reference T3 ICD10:E78.5	Hiperlipidemia, nieokreÅlona
+N3	Reference T4 ICD10:A69.2	Choroba z Lyme
+N4	Reference T5 ICD10:M47	
+N5	Reference T7 ICD10:A69.2	Choroba z Lyme
+N6	Reference T10 ICD10:R51	BÃ³l gÅowy
+N7	Reference T12 ICD10:R42	Zawroty gÅowy i odurzenie
+N8	Reference T19 ICD10:A69.2	Choroba z Lyme
+N9	Reference T26 ICD10:R51	BÃ³l gÅowy
+N10	Reference T27 ICD10:A69.2	Choroba z Lyme
+N11	Reference T31 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N12	Reference T33 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N13	Reference T35 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N14	Reference T37 ICD10:Z88	Uczulenia na leki, Årodki farmakologiczne i substancje biologiczne w wywiadzie
+N15	Reference T38 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreÅlony
+N16	Reference T39 ICD10:R55	Omdlenie i zapaÅÄ
+R1	Dat Arg1:T9 Arg2:T8
+R10	Neg Arg1:T17 Arg2:T18
+R12	Neg Arg1:T17 Arg2:T16
+R14	Dat Arg1:T20 Arg2:T19
+R15	Dat Arg1:T20 Arg2:T21
+R19	Dat Arg1:T22 Arg2:T19
+R2	Dat Arg1:T11 Arg2:T10
+R20	Dat Arg1:T22 Arg2:T21
+R24	Dat Arg1:T24 Arg2:T19
+R25	Dat Arg1:T24 Arg2:T21
+R28	Dat Arg1:T28 Arg2:T29
+R29	Dat Arg1:T28 Arg2:T27
+R3	Neg Arg1:T13 Arg2:T12
+R30	Neg Arg1:T32 Arg2:T33
+R31	Neg Arg1:T32 Arg2:T31
+R33	Dat Arg1:T34 Arg2:T33
+R34	Dat Arg1:T34 Arg2:T31
+R35	Dat Arg1:T34 Arg2:T30
+R36	Neg Arg1:T36 Arg2:T38
+R38	Neg Arg1:T36 Arg2:T37
+R4	Neg Arg1:T13 Arg2:T14
+R40	Neg Arg1:T36 Arg2:T35
+R44	Neg Arg1:T41 Arg2:T40
+R50	Dat Arg1:T48 Arg2:T47
+A1	Status T30 Historical_Insignificant
+A2	Status T40 Family

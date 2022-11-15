@@ -1,0 +1,232 @@
+T1	Investigation 469 552	kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T2	Behaviour 583 685	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T3	Investigation 700 746	samokontrola ciśnienia tętniczego krwi i tętna
+T4	Behaviour 751 770	Redukcja masy ciała
+T5	Investigation 3649 3653	ECHO
+T6	Investigation 3655 3673	EKG metodą Holtera
+T7	Investigation 3675 3679	ABPM
+T8	Investigation 3681 3696	próba wysiłkowa
+T9	Drug 3540 3550	Insulatard
+T10	Drug_dose 3551 3565	16j sc o 22:00
+R1	Drg Arg1:T9 Arg2:T10	
+T11	Drug 3510 3518	Euthyrox
+T12	Drug_dose 3519 3539	100ug 1x 1 tabl/rano
+R2	Drg Arg1:T11 Arg2:T12	
+T13	Drug 3482 3488	Atoris
+T14	Drug_dose 3489 3509	40mg 1x 1 tabl/wiecz
+R3	Drg Arg1:T13 Arg2:T14	
+T15	Drug 3451 3460	Metformax
+T16	Drug_dose 3461 3481	850mg 1x 1 tabl/rano
+R4	Drg Arg1:T15 Arg2:T16	
+T17	Drug 3423 3431	Glibetic
+T18	Drug_dose 3432 3450	3mg 1x 1 tabl/rano
+R5	Drg Arg1:T17 Arg2:T18	
+T19	Drug 3396 3403	Tritace
+T20	Drug_dose 3404 3422	5mg 1x 1 tabl/rano
+R6	Drg Arg1:T19 Arg2:T20	
+T21	Drug 3369 3374	Acard
+T22	Drug_dose 3375 3395	75mg 1x 1 tabl/wiecz
+R7	Drg Arg1:T21 Arg2:T22	
+T23	Drug 3342 3348	Plavix
+T24	Drug_dose 3349 3368	75mg 1x 1 tabl/rano
+R8	Drg Arg1:T23 Arg2:T24	
+T25	Drug 3313 3320	Nebilet
+T26	Drug_dose 3321 3341	5mg 1x 1/2 tabl/rano
+R9	Drg Arg1:T25 Arg2:T26	
+T27	Behaviour 3250 3277	warunki mieszkaniowe dobre.
+T28	Negation 3230 3233	b/z
+T29	Negation 3148 3151	(-)
+T30	Negation 3164 3167	(-)
+T31	Negation 3173 3176	(-)
+T32	Negation 3183 3186	(-)
+T33	Negation 3203 3206	(-)
+T34	Condition 3209 3229	wywiadzie rodzinnym:
+A1	Status T34 Family
+R10	Neg Arg1:T28 Arg2:T34	
+T35	Condition 3144 3147	WZW
+N1	Reference T35 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T36	Condition 3154 3163	borelioza
+N2	Reference T36 ICD10:A69.2	Choroba z Lyme
+T37	Condition 3169 3172	tbc
+N3	Reference T37 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T38	Condition 3178 3182	odra
+N4	Reference T38 ICD10:B05	Odra
+T39	Behaviour 3188 3202	kontakt z odrą
+N5	Reference T39 ICD10:B05	Odra
+R11	Neg Arg1:T29 Arg2:T35	
+R12	Neg Arg1:T30 Arg2:T36	
+R13	Neg Arg1:T31 Arg2:T37	
+R14	Neg Arg1:T32 Arg2:T38	
+R15	Neg Arg1:T33 Arg2:T39	
+T40	Negation 3113 3116	nie
+T41	Negation 3098 3101	nie
+T42	Negation 3064 3072	nie pali
+T43	Condition 3102 3111	Uczulenia
+N6	Reference T43 ICD10:T78.4	Alergia, nieokreślona
+T44	Behaviour 3085 3097	Inne używki:
+R16	Neg Arg1:T41 Arg2:T44	
+T45	Behaviour 3047 3062	Palenie tytoniu
+N7	Reference T45 ICD10:T65.2	Tytoń i nikotyna
+R17	Neg Arg1:T42 Arg2:T45	
+T46	Treatment 3025 3046	Przebyte operacje: jw
+T47	Drug 805 810	Acard
+T48	Drug_dose 811 836	75mg 1 tabletka wieczorem
+R18	Drg Arg1:T47 Arg2:T48	
+T49	Drug 837 844	Nebilet
+T50	Drug_dose 845 866	5mg 1/2 tabletki rano
+R19	Drg Arg1:T49 Arg2:T50	
+T51	Drug 867 873	Tolura
+T52	Drug_dose 874 894	80mg 1 tabletka rano
+R20	Drg Arg1:T51 Arg2:T52	
+T53	Drug 895 902	Amlopin
+T54	Drug_dose 903 927	5mg 1 tabletka wieczorem
+R21	Drg Arg1:T53 Arg2:T54	
+T55	Drug 928 934	Atoris
+T56	Drug_dose 935 960	60mg 1 tabletka wieczorem
+R22	Drg Arg1:T55 Arg2:T56	
+T57	Drug 961 969	Glibetic
+T58	Drug_dose 970 989	3mg 1 tabletka rano
+R23	Drg Arg1:T57 Arg2:T58	
+T59	Drug 990 999	Metformax
+T60	Drug_dose 1000 1046	1000mg 1 tabletka rano, w południe i wieczorem
+R24	Drg Arg1:T59 Arg2:T60	
+T61	Drug 1047 1057	Insulatard
+T62	Drug_dose 1058 1081	16j. podskórnie o 22:00
+R25	Drg Arg1:T61 Arg2:T62	
+T63	Drug 1082 1090	Euthyrox
+T64	Drug_dose 1091 1165	100ug 1x1 tabletka rano, na czczo 30 minut przed posiłkiem i innymi lekami
+R26	Drg Arg1:T63 Arg2:T64	
+T65	Condition 1391 1410	STEMI ściany dolnej
+N8	Reference T65 ICD10:I21	Ostry zawał mięśnia sercowego
+T66	Condition 1411 1424	powikłanym VF
+T67	Treatment 1425 1447	leczonym PCI PTW z DES
+T68	Drug 1461 1473	eptifibatydu
+T69	Date 1475 1479	2012
+R27	Dat Arg1:T69 Arg2:T68	
+R28	Dat Arg1:T69 Arg2:T67	
+R29	Dat Arg1:T69 Arg2:T66	
+R30	Dat Arg1:T69 Arg2:T65	
+T70	Condition 1482 1484	HA
+N10	Reference T70 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T71	Condition 1486 1495	DM typu 2
+N11	Reference T71 ICD10:E11	Cukrzyca insulinoniezależna
+T72	Treatment 1505 1517	strumektomii
+T73	Condition 1527 1531	wola
+T74	Date 1533 1537	2002
+R31	Dat Arg1:T74 Arg2:T73	
+R32	Dat Arg1:T74 Arg2:T72	
+T75	Condition 1540 1560	Hipercholesterolemia
+N12	Reference T75 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T76	Condition 1589 1598	Półpasiec
+N13	Reference T76 ICD10:B02	Choroba zakaźna wywołana przez wirus herpes zoster [półpasiec]
+T77	Date 1599 1610	1 m-c temu.
+R33	Dat Arg1:T77 Arg2:T76	
+T78	Behaviour 1614 1629	Palenie tytoniu
+N14	Reference T78 ICD10:T65.2	Tytoń i nikotyna
+T79	Negation 1631 1639	nie pali
+R34	Neg Arg1:T79 Arg2:T78	
+T80	Condition 1878 1919	Łagodna niedomykalność zastawki mitralnej
+N15	Reference T80 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T81	Condition 1925 1972	Przewlekła choroba wieńcowa - I/II klasa wg CCS
+N16	Reference T81 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T82	Condition 1985 2004	STEMI ściany dolnej
+N17	Reference T82 ICD10:I21	Ostry zawał mięśnia sercowego
+T83	Condition 2005 2018	powikłanym VF
+N18	Reference T83 ICD10:I49.0	Migotanie i trzepotanie komór
+N9	Reference T66 ICD10:I49.0	Migotanie i trzepotanie komór
+T84	Treatment 2019 2065	leczonym PCI RCA z implantacją stentu typu DES
+T85	Drug 2079 2091	eptifibatydu
+T86	Date 2093 2097	2012
+R35	Dat Arg1:T86 Arg2:T82	
+R36	Dat Arg1:T86 Arg2:T83	
+R37	Dat Arg1:T86 Arg2:T84	
+R38	Dat Arg1:T86 Arg2:T85	
+T87	Condition 2103 2124	Nadciśnienie tętnicze
+N19	Reference T87 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T88	Condition 2130 2145	Cukrzyca typu 2
+N20	Reference T88 ICD10:E11	Cukrzyca insulinoniezależna
+T89	Treatment 2159 2171	strumektomii
+T90	Condition 2181 2185	wola
+T91	Date 2187 2191	2002
+R39	Dat Arg1:T91 Arg2:T90	
+R40	Dat Arg1:T91 Arg2:T89	
+T92	Condition 2198 2210	Dyslipidemia
+N21	Reference T92 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T93	Drug 2229 2236	statyną
+T94	Condition 2260 2268	półpaścu
+N22	Reference T94 ICD10:B02	Choroba zakaźna wywołana przez wirus herpes zoster [półpasiec]
+T95	Date 2270 2277	02/2019
+R41	Dat Arg1:T95 Arg2:T94	
+T96	Condition 2284 2292	Otyłość.
+N23	Reference T96 ICD10:E66	Otyłość
+T97	Behaviour 2296 2306	Nikotynizm
+N24	Reference T97 ICD10:T65.2	Tytoń i nikotyna
+T98	Condition 2586 2595	DM typu 2
+N25	Reference T98 ICD10:E11	Cukrzyca insulinoniezależna
+T99	Investigation_result 2558 2583	RR w domu: 120-130/80mmHg
+T100	Condition 2554 2556	HA
+N26	Reference T100 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T101	Symptom 2649 2688	kłujących bólów w okolicy przedsercowej
+N27	Reference T101 ICD10:R07.3	Inne bóle w klatce piersiowej
+T102	Date 2689 2700	od 6 m-cy (
+R42	Dat Arg1:T102 Arg2:T101	
+T103	Drug 2533 2545	eptifibatydu
+T104	Treatment 2497 2519	leczonym PCI PTW z DES
+T105	Date 2547 2551	2012
+T106	Condition 2483 2496	powikłanym VF
+N28	Reference T106 ICD10:I49.0	Migotanie i trzepotanie komór
+T107	Condition 2463 2482	STEMI ściany dolnej
+N29	Reference T107 ICD10:I21	Ostry zawał mięśnia sercowego
+R43	Dat Arg1:T105 Arg2:T103	
+R44	Dat Arg1:T105 Arg2:T104	
+R45	Dat Arg1:T105 Arg2:T106	
+R46	Dat Arg1:T105 Arg2:T107	
+T108	Treatment 2758 2770	strumektomia
+T109	Condition 2780 2784	wola
+T110	Date 2786 2790	2002
+R47	Dat Arg1:T110 Arg2:T109	
+R48	Dat Arg1:T110 Arg2:T108	
+T111	Condition 2793 2813	hipercholesterolemia
+N30	Reference T111 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T112	Drug 2833 2840	statyną
+T113	Condition 2842 2851	półpasiec
+N31	Reference T113 ICD10:B02	Choroba zakaźna wywołana przez wirus herpes zoster [półpasiec]
+T114	Date 2852 2862	1 m-c temu
+R50	Dat Arg1:T114 Arg2:T113	
+T115	Negation 2864 2870	Neguje
+T116	Symptom 2872 2884	zasłabnięcia
+N32	Reference T116 ICD10:R55	Omdlenie i zapaść
+T117	Symptom 2886 2894	omdlenia
+N33	Reference T117 ICD10:R55	Omdlenie i zapaść
+T118	Symptom 2896 2906	krwawienia
+N34	Reference T118 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T119	Symptom 2908 2921	czarne stolce
+N35	Reference T119 ICD10:K92.1	Stolce smołowate
+T120	Symptom 2923 2939	brunatne wymioty
+N36	Reference T120 ICD10:K92.0	Wymioty krwawe
+T121	Condition 2941 2957	chorobę wrzodową
+N37	Reference T121 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T122	Symptom 2959 2973	duszność nocną
+N38	Reference T122 ICD10:I50.1	Niewydolność serca lewokomorowa
+T123	Symptom 2975 2991	obrzęki podudzi,
+N39	Reference T123 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T124	Symptom 2992 3007	kołatania serca
+N40	Reference T124 ICD10:R00.2	Kołatanie serca
+T125	Condition 3009 3020	udar mózgu,
+N41	Reference T125 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+R51	Neg Arg1:T115 Arg2:T116	
+R52	Neg Arg1:T115 Arg2:T117	
+R53	Neg Arg1:T115 Arg2:T118	
+R54	Neg Arg1:T115 Arg2:T119	
+R55	Neg Arg1:T115 Arg2:T120	
+R56	Neg Arg1:T115 Arg2:T121	
+R57	Neg Arg1:T115 Arg2:T122	
+R58	Neg Arg1:T115 Arg2:T123	
+R59	Neg Arg1:T115 Arg2:T124	
+R60	Neg Arg1:T115 Arg2:T125	
+T126	Drug 1580 1587	statyną
+T127	Date 564 578	za 5-6 tygodni
+R63	Dat Arg1:T127 Arg2:T1	
+R66	Neg Arg1:T40 Arg2:T43	
+T128	Date 3073 3084	od 8-10 lat
+R67	Dat Arg1:T128 Arg2:T45	

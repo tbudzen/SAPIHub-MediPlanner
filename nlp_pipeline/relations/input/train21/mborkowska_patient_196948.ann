@@ -1,0 +1,134 @@
+T1	Symptom 933 958	Bóle w klatce piersiowej.
+N1	Reference T1 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T2	Condition 959 1006	Niedomykalność zastawki trójdzielnej ślad/ I st
+N2	Reference T2 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T3	Condition 1008 1029	Nadciśnienie tętnicze
+N3	Reference T3 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T4	Condition 1031 1061	Upośledzona tolerancja glukozy
+T5	Condition 1063 1083	Hipercholesterolemia
+N4	Reference T5 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T6	Condition 1085 1096	Hepatopatia
+N5	Reference T6 ICD10:K76	Inne choroby wątroby
+T7	Symptom 1098 1124	Zaburzenia miesiączkowania
+T8	Condition 1126 1140	Otyłość III st
+N6	Reference T8 ICD10:E66	Otyłość
+T9	Condition 1295 1318	nadciśnienia tętniczego
+N7	Reference T9 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T10	Drug 1320 1333	Sobycombi 5+5
+T11	Drug_dose 1334 1345	1 tabl/rano
+R1	Drg Arg1:T10 Arg2:T11	
+T12	Investigation_result 1347 1378	RR zwykle w domu ok 125/90mmHg)
+T13	Condition 1381 1392	hepatopatii
+N8	Reference T13 ICD10:K76	Inne choroby wątroby
+T14	Symptom 1420 1427	nadwagą
+T15	Condition 1476 1500	bólu w klatce piersiowej
+N9	Reference T15 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T16	Symptom 1516 1656	Ból rozpoczął się w spoczynku, o charakterze gniecenia, nie zmienia się podczas chodzenia, głębokiego oddychania, przy zmianie pozycji ciała
+T17	Drug 1671 1681	Ibuprofenu
+T18	Investigation 2998 3003	ECHO,
+T19	Investigation 3004 3022	EKG metodą Holtera
+T20	Investigation 3024 3028	ABPM
+T21	Investigation 3030 3045	próba wysiłkowa
+T22	Drug 2885 2898	Sobycombi 5+5
+T23	Drug_dose 2900 2914	1x 1 tabl/rano
+R2	Drg Arg1:T22 Arg2:T23	
+T24	Behaviour 2821 2847	warunki mieszkaniowe dobre
+T25	Condition 2735 2737	HA
+A1	Status T25 Family
+N10	Reference T25 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T26	Condition 2747 2763	marskość wątroby
+A2	Status T26 Family
+N11	Reference T26 ICD10:K74	Zwłóknienie i marskość wątroby
+T27	Condition 2773 2797	podejrzenie raka wątroby
+A3	Status T27 Family
+N12	Reference T27 ICD10:C22.0	
+T28	Condition 2649 2652	WZW
+N13	Reference T28 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T29	Condition 2659 2668	borelioza
+N14	Reference T29 ICD10:A69.2	Choroba z Lyme
+T30	Condition 2674 2677	tbc
+N15	Reference T30 ICD10:A15	
+T31	Condition 2683 2687	odra
+N16	Reference T31 ICD10:B05	Odra
+T32	Behaviour 2693 2707	kontakt z odrą
+N17	Reference T32 ICD10:B05	Odra
+T33	Negation 2708 2711	(-)
+T34	Negation 2688 2691	(-)
+T35	Negation 2679 2681	-)
+T36	Negation 2669 2671	(-
+T37	Negation 2653 2656	(-)
+R3	Neg Arg1:T37 Arg2:T28	
+R4	Neg Arg1:T36 Arg2:T29	
+R5	Neg Arg1:T35 Arg2:T30	
+R6	Neg Arg1:T34 Arg2:T31	
+R7	Neg Arg1:T33 Arg2:T32	
+T38	Negation 2594 2597	nie
+T39	Negation 2577 2580	nie
+T40	Negation 2556 2559	nie
+T41	Behaviour 2581 2593	Inne używki:
+R8	Neg Arg1:T38 Arg2:T41	
+T42	Behaviour 2560 2575	Palenie tytoniu
+N18	Reference T42 ICD10:T65.2	
+R9	Neg Arg1:T39 Arg2:T42	
+T43	Treatment 2537 2554	Przebyte operacje
+R10	Neg Arg1:T40 Arg2:T43	
+T44	Condition 2598 2607	Uczulenia
+N19	Reference T44 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T45	Negation 2617 2620	nie
+R11	Neg Arg1:T45 Arg2:T44	
+T46	Drug 1781 1787	Zinnat
+T47	Drug 1789 1796	Ospamox
+T48	Symptom 1799 1825	zaburzenia miesiączkowania
+T49	Symptom 1858 1884	niewielkie obrzęki podudzi
+N20	Reference T49 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T50	Symptom 1924 1932	duszność
+N21	Reference T50 ICD10:R06.0	Duszność
+T51	Symptom 1934 1949	kołatania serca
+N22	Reference T51 ICD10:R00.2	Kołatanie serca
+T52	Symptom 1951 1963	zasłabnięcia
+N23	Reference T52 ICD10:R55	Omdlenie i zapaść
+T53	Symptom 1965 1973	omdlenia
+N24	Reference T53 ICD10:R55	Omdlenie i zapaść
+T54	Condition 1975 1977	DM
+N25	Reference T54 ICD10:E13	Inne określone postacie cukrzycy
+T55	Condition 1979 1995	choroby tarczycy
+N26	Reference T55 ICD10:E07.9	Choroby tarczycy, nieokreślone
+T56	Condition 1997 2013	chorobę wrzodową
+N27	Reference T56 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T57	Symptom 2015 2025	krwawienia
+N28	Reference T57 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T58	Symptom 2027 2040	czarne stolce
+N29	Reference T58 ICD10:K92.1	Stolce smołowate
+T59	Symptom 2042 2058	brunatne wymioty
+N30	Reference T59 ICD10:K92.0	Wymioty krwawe
+T60	Behaviour 2060 2078	palenie papierosów
+N31	Reference T60 ICD10:T65.2	Tytoń i nikotyna
+T61	Drug 2080 2095	leki hormonalne
+T62	Condition 2097 2102	ciążę
+N32	Reference T62 ICD10:Z32.1	Ciąża potwierdzona
+T63	Condition 2104 2121	uczulenia na leki
+N33	Reference T63 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T64	Negation 1916 1922	neguje
+R12	Neg Arg1:T64 Arg2:T50	
+R13	Neg Arg1:T64 Arg2:T51	
+R14	Neg Arg1:T64 Arg2:T52	
+R15	Neg Arg1:T64 Arg2:T53	
+R16	Neg Arg1:T64 Arg2:T54	
+R17	Neg Arg1:T64 Arg2:T55	
+R18	Neg Arg1:T64 Arg2:T56	
+R19	Neg Arg1:T64 Arg2:T57	
+R20	Neg Arg1:T64 Arg2:T58	
+R21	Neg Arg1:T64 Arg2:T59	
+R22	Neg Arg1:T64 Arg2:T60	
+R23	Neg Arg1:T64 Arg2:T61	
+R24	Neg Arg1:T64 Arg2:T63	
+R25	Neg Arg1:T64 Arg2:T62	
+T65	Investigation 2139 2142	EKG
+T66	Symptom 1720 1747	3 infekcje dróg oddechowych
+T67	Symptom 1827 1856	podejrzenie insulinooporności
+T68	Behaviour 593 688	dieta cukrzycowa niskocholesterolowa, zmniejszenie masy ciała, zwiększenie aktywności fizycznej
+T69	Investigation 691 714	kontrola lipidogramu za
+T70	Drug 341 350	sobycombi
+T71	Drug 352 363	Paracetamol
+T72	Drug 365 372	LCexane
+A4	Source T27 Declared

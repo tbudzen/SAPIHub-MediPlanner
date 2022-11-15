@@ -1,0 +1,76 @@
+T1	Condition 447 469	Przełom nadciśnieniowy
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 471 491	Hipertriglicerydemia
+N2	Reference T2 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T3	Condition 493 500	Nadwaga
+T4	Condition 502 541	Tętniak przegrody międzyprzedsionkowej.
+N3	Reference T4 ICD10:Q21.8	Inna wrodzona wada rozwojowa przegród serca
+T5	Condition 542 581	Polipy błony śluzowej zatok szczękowych
+N4	Reference T5 ICD10:J33.8	
+T6	Condition 583 616	Wysięk w zatoce szczękowej prawej
+N5	Reference T6 ICD10:J32.0	Przewlekłe zapalenie zatok szczękowych
+T7	Treatment 730 757	dalsza opieka w poradni POZ
+T8	Investigation 774 803	kontrola ciśnienia tętniczego
+T9	Date 764 773	codzienna
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Investigation 819 839	kontrola lipidogramu
+T11	Date 850 865	za 6-8 tygodni)
+R2	Dat Arg1:T11 Arg2:T10	
+T12	Behaviour 943 991	dieta niskocholesterolowa i uboga w cukry proste
+T13	Behaviour 998 1017	redukcja masy ciała
+T14	Behaviour 1025 1070	stały, umiarkowany, aerobowy wysiłek fizyczny
+T15	Drug 1115 1123	Nebicard
+T16	Drug 1150 1157	Piramil
+T17	Drug 1189 1195	Atoris
+T18	Drug_dose 1124 1141	5 mg 1 tabl. rano
+R3	Drg Arg1:T15 Arg2:T18	
+T19	Drug_dose 1158 1180	5 mg 1 tabl. wieczorem
+R4	Drg Arg1:T16 Arg2:T19	
+T20	Drug_dose 1196 1219	20 mg 1 tabl. wieczorem
+R5	Drg Arg1:T17 Arg2:T20	
+T21	Condition 1389 1408	chorób przewlekłych
+T22	Negation 1361 1364	bez
+R6	Neg Arg1:T22 Arg2:T21	
+T23	Symptom 1488 1523	silnych dolegliwości bólowych głowy
+N6	Reference T23 ICD10:R51	Ból głowy
+T24	Symptom 1526 1541	zawrotami głowy
+N7	Reference T24 ICD10:R42	Zawroty głowy i odurzenie
+T25	Symptom 1543 1583	drętwieniem kończyn zwłaszcza rąk i stóp
+N8	Reference T25 ICD10:R20.2	Parestezje
+T26	Date 1462 1486	od godzin popołudniowych
+R7	Dat Arg1:T26 Arg2:T23	
+R8	Dat Arg1:T26 Arg2:T24	
+R9	Dat Arg1:T26 Arg2:T25	
+T27	Drug 1636 1645	Captopril
+T28	Drug 1621 1630	pyralginy
+T29	Drug_dose 1646 1650	25mg
+R10	Drg Arg1:T27 Arg2:T29	
+T30	Drug_dose 1614 1620	2 tabl
+R11	Drg Arg1:T28 Arg2:T30	
+T31	Investigation_result 1684 1694	HR -95/min
+T32	Investigation_result 1657 1683	kontrolne RR - 168/94mmHg,
+T33	Condition 1696 1703	Alergie
+N9	Reference T33 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T34	Condition 1705 1724	nietolerancje leków
+N10	Reference T34 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T35	Negation 1726 1736	nie podaje
+R12	Neg Arg1:T35 Arg2:T34	
+R13	Neg Arg1:T35 Arg2:T33	
+T36	Investigation 1793 1802	CT głowy,
+T37	Investigation 1803 1806	TTE
+T38	Investigation 1808 1812	ABPM
+T39	Investigation 1814 1817	TET
+T40	Investigation 1819 1829	Holter ekg
+T41	Drug 1750 1755	leków
+T42	Negation 1756 1769	nie przyjmuje
+R14	Neg Arg1:T42 Arg2:T41	
+R1	Drg Arg1:T15 Arg2:T18
+R18	Dat Arg1:T11 Arg2:T10
+R21	Drg Arg1:T17 Arg2:T20
+R23	Drg Arg1:T28 Arg2:T30
+R27	Dat Arg1:T26 Arg2:T21
+R32	Neg Arg1:T35 Arg2:T41
+R33	Neg Arg1:T42 Arg2:T36
+R4	Drg Arg1:T16 Arg2:T19
+R8	Dat Arg1:T9 Arg2:T7
+R9	Dat Arg1:T9 Arg2:T8

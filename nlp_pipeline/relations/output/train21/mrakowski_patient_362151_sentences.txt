@@ -1,0 +1,664 @@
+allRelations          : 44
+oks                   : 11
+isRedundantAndRemoveds: 33
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 0
+GOOD / BAD            : 44 / 0
+Sentence 0:
+------------------------------------------------
+Wiek: 12 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zastosowane leczenie
+
+
+
+Sentence 4:
+------------------------------------------------
+Warfin, Enarenal, Magne B6
+------------------------------------------------
+
+
+
+Sentence 5:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 6:
+1. Stosowanie leków:
+- Warfin: 3,0 - 3,75mg/dz (pod kontrolą INR)
+
+R1	Drg Arg1:T4 Arg2:T5 << OK >>	Warfin -> 3,0 - 3,75mg/dz (pod kontrolą INR)  <RANK: 3> <info: start[498, 506] <type: RIGHT>>
+
+
+Sentence 7:
+- Enarenal 2,5 mg 2 x dz
+- Magne B6 1tab 1x dz
+- Koenzym Q10 1 x 1 tab
+2. Wizyta w Poradni Kardiologicznej ICZMP za pół roku.
+
+R2	Drg Arg1:T6 Arg2:T7 << OK >>	Enarenal -> 2,5 mg 2 x dz  <RANK: 3> <info: start[543, 552] <type: RIGHT>>
+R3	Drg Arg1:T6 Arg2:T9 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1tab 1x dz <:REMOVED other first tag between (right):> <RANK: 0> <info: start[543, 577] <type: RIGHT>>
+R4	Drg Arg1:T6 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Enarenal -> Q10 1 x 1 tab <:REMOVED other first tag between (right):> <RANK: 0> <info: start[543, 598] <type: RIGHT>>
+R5	Drg Arg1:T8 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Magne B6 -> 2,5 mg 2 x dz <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[568, 552] <type: LEFT>>
+R6	Drg Arg1:T8 Arg2:T9 << OK >>	Magne B6 -> 1tab 1x dz  <RANK: 3> <info: start[568, 577] <type: RIGHT>>
+R7	Drg Arg1:T8 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Magne B6 -> Q10 1 x 1 tab <:REMOVED other first tag between (right):> <RANK: 1> <info: start[568, 598] <type: RIGHT>>
+R8	Drg Arg1:T10 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Koenzym -> 2,5 mg 2 x dz <:REMOVED other first tag between (left):> <RANK: 1> <info: start[590, 552] <type: LEFT>>
+R9	Drg Arg1:T10 Arg2:T9 <<REDUNDANT!!!REMOVED>>	Koenzym -> 1tab 1x dz <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[590, 577] <type: LEFT>>
+R10	Drg Arg1:T10 Arg2:T11 << OK >>	Koenzym -> Q10 1 x 1 tab  <RANK: 3> <info: start[590, 598] <type: RIGHT>>
+R11	Dat Arg1:T13 Arg2:T12 << OK >>	za pół roku -> Wizyta w Poradni Kardiologicznej ICZMP  <RANK: 3> <info: start[654, 615] <type: LEFT>>
+R12	Dat Arg1:T13 Arg2:T6 <<REDUNDANT!!!REMOVED>>	za pół roku -> Enarenal <:REMOVED other second tag between (left):> <RANK: 0> <info: start[654, 543] <type: LEFT>>
+R13	Dat Arg1:T13 Arg2:T8 <<REDUNDANT!!!REMOVED>>	za pół roku -> Magne B6 <:REMOVED other second tag between (left):> <RANK: 0> <info: start[654, 568] <type: LEFT>>
+R14	Dat Arg1:T13 Arg2:T10 <<REDUNDANT!!!REMOVED>>	za pół roku -> Koenzym <:REMOVED other second tag between (left):> <RANK: 0> <info: start[654, 590] <type: LEFT>>
+
+
+Sentence 8:
+- w przypadku niepokojących objawów - wcześniej
+- konieczne uprzednie uzgodnienie dokładnego terminu przyjęcia
+
+
+
+Sentence 9:
+3. Opieka w POZ.
+
+
+
+Sentence 10:
+4. Dostosowanie wysiłków do wydolności.
+
+
+
+Sentence 11:
+5. Systematyczne, profilaktyczne kontrole stomatologiczne.
+
+
+Sentence 12:
+\x09
+  \x09  \x09
+------------------------------------------------
+
+
+
+Sentence 13:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 14:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q23.0|Rozpoznanie II: ICD10:Q25.1|Rozpoznanie IV: ICD10:Z95.2|Rozpoznanie V: |Rozpoznanie III: ICD10:Z98.8|Opisowo:: Wrodzona wada serca pod postacią zwężenia zastawki aorty, drogi wypływu z lewej komory i koarktacji aorty.
+
+
+Sentence 15:
+Stan po:
+   - plastyce balonowej zastawki aorty (30.11.2007r.)
+   - plastyce balonowej cieśni aorty (04.01.2008r.)
+   - implantacji stentu
+R15	Dat Arg1:T20 Arg2:T19 << OK >>	30.11.2007r -> plastyce balonowej zastawki aorty  <RANK: 3> <info: start[1329, 1294] <type: LEFT>>
+R16	Dat Arg1:T20 Arg2:T21 <<REDUNDANT!!!REMOVED>>	30.11.2007r -> plastyce balonowej cieśni aorty <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1329, 1348] <type: RIGHT>>
+R17	Dat Arg1:T20 Arg2:T23 <<REDUNDANT!!!REMOVED>>	30.11.2007r -> implantacji stentu Zilver do aorty zstępującej <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1329, 1400] <type: RIGHT>>
+R18	Dat Arg1:T22 Arg2:T19 <<REDUNDANT!!!REMOVED>>	04.01.2008r -> plastyce balonowej zastawki aorty <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1381, 1294] <type: LEFT>>
+R19	Dat Arg1:T22 Arg2:T21 << OK >>	04.01.2008r -> plastyce balonowej cieśni aorty  <RANK: 3> <info: start[1381, 1348] <type: LEFT>>
+R20	Dat Arg1:T22 Arg2:T23 <<REDUNDANT!!!REMOVED>>	04.01.2008r -> implantacji stentu Zilver do aorty zstępującej <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1381, 1400] <type: RIGHT>>
+
+
+Sentence 16:
+Zilver do aorty zstępującej (13.06.2008r.)
+   - operacji metodą Konno-Ross (30.05.2012r.)
+   - implantacji stentu Valeo 10x26mm techniką stent in stent i doprężeniu stentów balonem Opta 12 x 30mm (25.04.2016r.)
+   - operacji plastyki zastawki autograftu w pozycji aortalnej i homograftu w pozycji płucnej (31.03.2017r.)
+   - operacji wymiany autograftu w pozycji aortalnej na mechaniczną zastawkę Medtronic MHV 501DA22 AP i wymiany homograftu w pozycji płucnej na homograft 0606S2378
+R21	Dat Arg1:T24 Arg2:T25 <<REDUNDANT!!!REMOVED>>	13.06.2008r -> operacji metodą Konno-Ross <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 0> <info: start[1448, 1467] <type: RIGHT>>
+R22	Dat Arg1:T24 Arg2:T27 <<REDUNDANT!!!REMOVED>>	13.06.2008r -> implantacji stentu Valeo 10x26mm techniką stent in stent <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1448, 1514] <type: RIGHT>>
+R23	Dat Arg1:T24 Arg2:T29 <<REDUNDANT!!!REMOVED>>	13.06.2008r -> doprężeniu stentów balonem Opta 12 x 30mm <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1448, 1573] <type: RIGHT>>
+R24	Dat Arg1:T24 Arg2:T30 <<REDUNDANT!!!REMOVED>>	13.06.2008r -> operacji plastyki zastawki autograftu w pozycji aortalnej i homograftu w pozycji płucnej <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1448, 1635] <type: RIGHT>>
+R25	Dat Arg1:T24 Arg2:T32 <<REDUNDANT!!!REMOVED>>	13.06.2008r -> operacji wymiany autograftu w pozycji aortalnej na mechaniczną zastawkę Medtronic MHV 501DA22 AP <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1448, 1744] <type: RIGHT>>
+R26	Dat Arg1:T24 Arg2:T33 <<REDUNDANT!!!REMOVED>>	13.06.2008r -> wymiany homograftu w pozycji płucnej na homograft 0606S2378 FPII <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1448, 1843] <type: RIGHT>>
+R27	Dat Arg1:T26 Arg2:T25 << OK >>	30.05.2012r -> operacji metodą Konno-Ross  <RANK: 3> <info: start[1495, 1467] <type: LEFT>>
+R28	Dat Arg1:T26 Arg2:T27 <<REDUNDANT!!!REMOVED>>	30.05.2012r -> implantacji stentu Valeo 10x26mm techniką stent in stent <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1495, 1514] <type: RIGHT>>
+R29	Dat Arg1:T26 Arg2:T29 <<REDUNDANT!!!REMOVED>>	30.05.2012r -> doprężeniu stentów balonem Opta 12 x 30mm <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1495, 1573] <type: RIGHT>>
+R30	Dat Arg1:T26 Arg2:T30 <<REDUNDANT!!!REMOVED>>	30.05.2012r -> operacji plastyki zastawki autograftu w pozycji aortalnej i homograftu w pozycji płucnej <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1495, 1635] <type: RIGHT>>
+R31	Dat Arg1:T26 Arg2:T32 <<REDUNDANT!!!REMOVED>>	30.05.2012r -> operacji wymiany autograftu w pozycji aortalnej na mechaniczną zastawkę Medtronic MHV 501DA22 AP <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1495, 1744] <type: RIGHT>>
+R32	Dat Arg1:T26 Arg2:T33 <<REDUNDANT!!!REMOVED>>	30.05.2012r -> wymiany homograftu w pozycji płucnej na homograft 0606S2378 FPII <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1495, 1843] <type: RIGHT>>
+R33	Dat Arg1:T28 Arg2:T25 <<REDUNDANT!!!REMOVED>>	25.04.2016r -> operacji metodą Konno-Ross <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1616, 1467] <type: LEFT>>
+R34	Dat Arg1:T28 Arg2:T27 << OK >>	25.04.2016r -> implantacji stentu Valeo 10x26mm techniką stent in stent  <RANK: 2> <info: start[1616, 1514] <type: LEFT>>
+R35	Dat Arg1:T28 Arg2:T29 << OK >>	25.04.2016r -> doprężeniu stentów balonem Opta 12 x 30mm  <RANK: 3> <info: start[1616, 1573] <type: LEFT>>
+R36	Dat Arg1:T28 Arg2:T30 <<REDUNDANT!!!REMOVED>>	25.04.2016r -> operacji plastyki zastawki autograftu w pozycji aortalnej i homograftu w pozycji płucnej <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1616, 1635] <type: RIGHT>>
+R37	Dat Arg1:T28 Arg2:T32 <<REDUNDANT!!!REMOVED>>	25.04.2016r -> operacji wymiany autograftu w pozycji aortalnej na mechaniczną zastawkę Medtronic MHV 501DA22 AP <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1616, 1744] <type: RIGHT>>
+R38	Dat Arg1:T28 Arg2:T33 <<REDUNDANT!!!REMOVED>>	25.04.2016r -> wymiany homograftu w pozycji płucnej na homograft 0606S2378 FPII <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1616, 1843] <type: RIGHT>>
+R39	Dat Arg1:T31 Arg2:T25 <<REDUNDANT!!!REMOVED>>	31.03.2017r -> operacji metodą Konno-Ross <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1725, 1467] <type: LEFT>>
+R40	Dat Arg1:T31 Arg2:T27 <<REDUNDANT!!!REMOVED>>	31.03.2017r -> implantacji stentu Valeo 10x26mm techniką stent in stent <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1725, 1514] <type: LEFT>>
+R41	Dat Arg1:T31 Arg2:T29 <<REDUNDANT!!!REMOVED>>	31.03.2017r -> doprężeniu stentów balonem Opta 12 x 30mm <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1725, 1573] <type: LEFT>>
+R42	Dat Arg1:T31 Arg2:T30 << OK >>	31.03.2017r -> operacji plastyki zastawki autograftu w pozycji aortalnej i homograftu w pozycji płucnej  <RANK: 3> <info: start[1725, 1635] <type: LEFT>>
+R43	Dat Arg1:T31 Arg2:T32 <<REDUNDANT!!!REMOVED>>	31.03.2017r -> operacji wymiany autograftu w pozycji aortalnej na mechaniczną zastawkę Medtronic MHV 501DA22 AP <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1725, 1744] <type: RIGHT>>
+R44	Dat Arg1:T31 Arg2:T33 <<REDUNDANT!!!REMOVED>>	31.03.2017r -> wymiany homograftu w pozycji płucnej na homograft 0606S2378 FPII <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1725, 1843] <type: RIGHT>>
+
+
+Sentence 17:
+FPII (10.07.2017r.)
+   
+
+
+Sentence 18:
+Niewielki przeciek okołozastawkowy przy pierścieniu zastawki mechanicznej w pozycji aortalnej.
+   
+
+
+Sentence 19:
+Umiarkowana niedomykalność zastawki mitralnej.
+   
+
+
+Sentence 20:
+/Q23.0; Q25.1; Z98.8; Z95.8; Z95.2/
+------------------------------------------------
+
+
+
+Sentence 21:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 22:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.03[10^3/ul]
+    
+
+
+Sentence 23:
+RBC Krwinki czerwone:4.98[10^6/ul]
+    
+
+
+Sentence 24:
+HGB Hemoglobina:12.3[g/dl]
+    
+
+
+Sentence 25:
+HCT Hematokryt:36.0[%]
+    
+
+
+Sentence 26:
+MCV wskaźnik czerwonokrw:72.3[fl]
+    
+
+
+Sentence 27:
+MCH wskaźnik czerwonokrw:24.7[pg]
+    
+
+
+Sentence 28:
+MCHC wskaźnik czerwonokr:34.2[g/dl]
+    
+
+
+Sentence 29:
+PLT z morfologii:266[10^3/ul]
+    
+
+
+Sentence 30:
+RDW-SD:46.0[fl]
+    
+
+
+Sentence 31:
+RDW-CV:17.8[%]
+    PDW:12.7[fl]
+    MPV:10.7[fl]
+    
+
+
+Sentence 32:
+P-LCR:31.4[%]
+    
+
+
+Sentence 33:
+PCT (hematokryt płytkowy:0.28[%]
+    
+
+
+Sentence 34:
+NEUTR# wartość bezwzględ:2.11[10^3/ul]
+    
+
+
+Sentence 35:
+NEUTR%:52.4[%]
+    
+
+
+Sentence 36:
+LYMH# wartość bezwzględn:1.34[10^3/ul]
+    
+
+
+Sentence 37:
+LYMPH%:33.3[%]
+    
+
+
+Sentence 38:
+MONO# wartość bezwzględn:0.48[10^3/ul]
+    
+
+
+Sentence 39:
+MONO%:11.9[%]
+    
+
+
+Sentence 40:
+EO# wartość bezwzględna:0.07[10^3/ul]
+    
+
+
+Sentence 41:
+EO%:1.7[%]
+    
+
+
+Sentence 42:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    BASO%:0.7[%]
+    
+
+
+Sentence 43:
+NRBC %:0.2[%]
+    
+
+
+Sentence 44:
+NRBC #:0.01[10^3/ul]
+
+
+
+Sentence 45:
+Hemoglobina wolna: Hemoglobina wolna:13.5[mg/dl]
+
+
+
+Sentence 46:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:41.0[sek]
+
+
+
+Sentence 47:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 48:
+Czas protrombinowy:29.5[sek]
+    
+
+
+Sentence 49:
+Wskaźnik PT:37.3[%]
+    
+
+
+Sentence 50:
+INR:2.60
+
+
+
+Sentence 51:
+Czas trombinowy TT: Czas trombinowy TT:16.0[sek]
+
+
+
+Sentence 52:
+Fibrynogen: Fibrynogen:2.39[g/L]
+
+
+
+Sentence 53:
+D-dimer - test ilościowy: D-dimer - test ilościowy:165[ng/ml]
+
+
+
+Sentence 54:
+Badanie ogólne moczu
+    
+
+
+Sentence 55:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 56:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 57:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 58:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 59:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 60:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 61:
+ciężar właściwy:1.013[ ]
+    
+
+
+Sentence 62:
+pH:6.5[ ]
+    
+
+
+Sentence 63:
+białko:nieobecne[ ]
+    
+
+
+Sentence 64:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 65:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 66:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 67:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 68:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 69:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 70:
+leukocyty:2 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 71:
+Troponina T: Troponina T:12.7[pg/ml]
+
+
+
+Sentence 72:
+Witamina D 25-OH: Witamina D 25-OH:23.7[ng/ml]
+
+
+
+Sentence 73:
+ALAT: ALAT:13[U/L]
+ASPAT: ASPAT:36[U/L]
+Bilirubina całkowita (TBil): Bilirubina całkowita:0.43[mg/dl]
+
+
+
+Sentence 74:
+CKMB aktywność: CKMB:18[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 75:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 76:
+Potas (K): Potas:4.9[mmol/L]
+
+
+
+Sentence 77:
+Chlorki (Cl): Chlorki:102[mmol/L]
+
+
+
+Sentence 78:
+Fosforany nieorganiczne: Fosforany nieorganiczne:1.64[mmol/L]
+
+
+
+Sentence 79:
+Kreatynina + GFR
+    
+
+
+Sentence 80:
+Kreatynina w surowicy:0.52[mg/dl]
+    
+
+
+Sentence 81:
+eGFR stand. wg Schwartza:150.2[ml/min/1,73 m^2]
+    
+
+
+Sentence 82:
+eGFR zmod.
+
+
+Sentence 83:
+wg Schwartza:112.8[ml/min/1,73 m^2]
+    wzrost:142[cm]
+
+
+
+Sentence 84:
+Mleczany (LAC): Mleczany:17.5[mg/dl]
+
+
+
+Sentence 85:
+Magnez: Magnez:0.78[mmol/L]
+
+
+
+Sentence 86:
+Mocznik: Mocznik:29[mg/dl]
+
+
+
+Sentence 87:
+Wapń całkowity: Wapń całkowity:2.54[mmol/L]
+
+
+
+Sentence 88:
+Żelazo (Fe): Żelazo (Fe):38[ug/dl]
+
+
+
+Sentence 89:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    
+
+
+Sentence 90:
+pH:7.341
+    pCO2:50.6[mmHg]
+    BE:0.60[mmol/L]
+    HCO3:26.6[mmol/L]
+    
+
+
+Sentence 91:
+pO2:28.6[mmHg]
+    
+
+
+Sentence 92:
+O2Sat:45.9[%]
+
+
+
+Sentence 93:
+Lipidogram
+    
+
+
+Sentence 94:
+Cholesterol całkowity:139[mg/dl]
+    
+
+
+Sentence 95:
+Cholesterol HDL:48[mg/dl]
+    
+
+
+Sentence 96:
+Cholestrol LDL:73[mg/dl]
+    Triglicerydy:95[mg/dl]
+    
+
+
+Sentence 97:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:90[mg/dl]
+
+
+
+Sentence 98:
+NT-proBNP surowica: NT-proBNP w surowicy:371[pg/ml]
+
+
+
+Sentence 99:
+------------------------------------------------
+
+
+
+Sentence 100:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 101:
+Z95.2
+Q23.0
+Q25.1
+Z98.8
+Z95.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 102:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 103:
+A01
+
+
+
+Sentence 104:
+I81
+G21
+L43
+I89
+
+
+
+Sentence 105:
+G25
+
+
+
+Sentence 106:
+O61
+L23
+M87
+G49
+N45
+N24
+O29
+C55
+G53
+I97
+G11
+O91
+
+
+
+Sentence 107:
+O95
+O77
+I17
+N11
+I19
+O35
+M37
+
+
+
+Sentence 108:
+N13
+
+
+
+Sentence 109:
+M19
+------------------------------------------------
+
+

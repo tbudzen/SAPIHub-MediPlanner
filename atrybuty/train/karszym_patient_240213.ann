@@ -1,0 +1,232 @@
+T1	Condition 439 497	Wrodzona wada serca - ubytek w przegrodzie międzykomorowej
+N1	Reference T1 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T2	Date 500 507	obecnie
+T3	Negation 508 522	nieobserwowany
+T4	Condition 524 547	podejrzenie zarośnięcia
+R1	Dat Arg1:T2 Arg2:T4	
+T5	Condition 549 578	Wstawki rytmu przedsionkowego
+N2	Reference T5 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T6	Condition 580 596	Astma oskrzelowa
+N3	Reference T6 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T7	Condition 598 611	Nietolerancja
+T8	Symptom 635 668	Krwawienia z przewodu pokarmowego
+N4	Reference T8 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T10	Drug 714 717	ASA
+T11	Treatment 718 759	p/wskazane przez lekarza gastroenterologa
+T12	Condition 763 803	podejrzenie nieswoistego zapalenia jelit
+R3	Neg Arg1:T3 Arg2:T1	
+R4	Dat Arg1:T2 Arg2:T1	
+T13	Condition 805 810	WZW B
+N5	Reference T13 ICD10:B18.1	Przewlekłe wirusowe zapalenie wątroby typu B bez wirusa delta
+T14	Treatment 811 846	pod opieką Poradni Chorób Zakaźnych
+T15	Condition 856 877	urazie kolana prawego
+T16	Date 879 883	2017
+R5	Dat Arg1:T16 Arg2:T15	
+T17	Treatment 894 918	usunięciu jajnika lewego
+T18	Date 920 924	2011
+R6	Dat Arg1:T18 Arg2:T17	
+T19	Treatment 935 944	usunięciu
+N8	Reference T19 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T20	Date 971 975	2003
+R7	Dat Arg1:T20 Arg2:T19	
+T21	Condition 978 1011	Uczulenie na pyłki traw, roztocza
+N9	Reference T21 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T22	Condition 1013 1046	Niedokrwistość z niedoboru żelaza
+N10	Reference T22 ICD10:D50.9	Niedokrwistość z niedoboru żelaza, nieokreślona
+N7	Reference T17 ICD10:Z90.7	Nabyty brak narządów płciowych
+T23	Treatment 1168 1304	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Pulmonologicznej, Gastroenterologicznej, Chorób Zakaźnych oraz Alergologicznej
+T24	Date 1318 1326	coroczna
+T25	Treatment 1327 1389	kontrola w warunkach ambulatoryjnych w Poradni Kardiologicznej
+T26	Behaviour 1394 1433	Dieta lekkostrawna, niskocholesterolowa
+T27	Investigation 1441 1538	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby w POZ
+T28	Investigation 1545 1593	Systematyczna kontrola ciśnienia tętniczego krwi
+T29	Treatment 1609 1689	profilaktyka infekcyjnego zapalenia wsierdzia podczas zabiegów stomatologicznych
+R8	Dat Arg1:T24 Arg2:T25	
+T30	Drug 1691 1703	amoksycylina
+T31	Drug 1708 1718	ampicylina
+T32	Drug_dose 1719 1739	2 g doustnie lub i.v
+T33	Condition 1754 1761	alergii
+N11	Reference T33 ICD10:Z88.0	Uczulenie na penicylinę w wywiadzie
+T34	Drug 1765 1785	powyższe antybiotyki
+R9	Alg Arg1:T33 Arg2:T34	
+T35	Drug 1788 1800	klindamycyna
+T36	Drug_dose 1801 1825	600 mg doustnie lub i.v.
+R10	Drg Arg1:T35 Arg2:T36	
+R11	Drg Arg1:T30 Arg2:T32	
+R12	Drg Arg1:T31 Arg2:T32	
+T37	Condition 1843 1892	wysokim ryzykiem infekcyjnego zapalenia wsierdzia
+N12	Reference T37 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T38	Treatment 1904 1928	działania profilaktyczne
+T39	Behaviour 1931 1965	ścisła higiena skóry i jamy ustnej
+T40	Behaviour 1967 2041	przeglądy stomatologiczne należy przeprowadzać co najmniej dwa razy w roku
+T41	Behaviour 2043 2059	dezynfekcja ran,
+T42	Treatment 2060 2140	eliminacja lub ograniczenie przewlekłego nosicielstwa bakteryjnego: skóry, moczu
+T43	Treatment 2142 2203	leczenie antybiotykami każdego ogniska zakażenia bakteryjnego
+T45	Behaviour 2205 2259	niestosowanie antybiotyków samodzielnie przez pacjenta
+T47	Behaviour 2261 2302	unikanie kolczykowania i tatuowania ciała
+T48	Treatment 2304 2388	ścisłe przestrzeganie zasad aseptyki podczas zabiegów stwarzających ryzyko zakażenia
+T49	Drug 2437 2443	Clatra
+T50	Drug 2465 2472	Fanipos
+T51	Drug 2493 2513	Symbicort Turbuhaler
+T52	Drug 2527 2533	Asamax
+T53	Drug 2551 2557	Żelazo
+T54	Drug_dose 2444 2458	30 mg 1x1 tabl
+T55	Drug_dose 2473 2492	50ug/dawkę 1x1 rano
+T56	Drug_dose 2514 2526	320 1x1 rano
+T57	Drug_dose 2534 2549	500 mg 4x2 tabl
+T58	Drug_dose 2558 2567	14 mg 2x1
+R15	Drg Arg1:T49 Arg2:T54	
+R16	Drg Arg1:T50 Arg2:T55	
+R17	Drg Arg1:T51 Arg2:T56	
+R18	Drg Arg1:T52 Arg2:T57	
+R19	Drg Arg1:T53 Arg2:T58	
+T59	Symptom 2740 2776	okresowo występujących kołatań serca
+N13	Reference T59 ICD10:R00.2	Kołatanie serca
+T60	Date 2778 2830	rozpoczęły się w okresie wiosennym roku poprzedniego
+R20	Dat Arg1:T60 Arg2:T59	
+T61	Condition 2898 2901	VSD
+N14	Reference T61 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T62	Investigation 2913 2917	echo
+T63	Date 2919 2929	07/06/2018
+R21	Dat Arg1:T63 Arg2:T62	
+T64	Investigation_result 2933 2965	VSD z minimalnym przeciekiem L-P
+N15	Reference T64 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T65	Negation 2979 2982	bez
+T66	Investigation_result 2983 3009	następstw hemodynamicznych
+R22	Neg Arg1:T65 Arg2:T66	
+R23	Inv Arg1:T62 Arg2:T64	
+R24	Inv Arg1:T62 Arg2:T66	
+T67	Negation 3011 3017	Neguje
+T68	Symptom 3018 3030	zasłabnięcia
+T69	Symptom 3032 3040	omdlenia
+N16	Reference T69 ICD10:R55	Omdlenie i zapaść
+T70	Symptom 3042 3055	zawroty głowy
+N17	Reference T70 ICD10:R42	Zawroty głowy i odurzenie
+T71	Symptom 3057 3067	krwawienia
+T72	Symptom 3069 3082	czarne stolce
+N18	Reference T72 ICD10:K92.1	Stolce smołowate
+T73	Symptom 3084 3100	brunatne wymioty
+N19	Reference T73 ICD10:K92.0	Wymioty krwawe
+T74	Condition 3102 3118	chorobę wrzodową
+N20	Reference T74 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T75	Symptom 3120 3134	duszność nocną
+N21	Reference T75 ICD10:R06.0	Duszność
+T76	Symptom 3136 3151	obrzęki podudzi
+T77	Symptom 3153 3177	bóle w klatce piersiowej
+N23	Reference T77 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T78	Symptom 3179 3198	Innych dolegliwości
+T79	Negation 3199 3210	nie zgłasza
+R25	Neg Arg1:T79 Arg2:T78	
+R26	Neg Arg1:T67 Arg2:T68	
+R27	Neg Arg1:T67 Arg2:T69	
+R28	Neg Arg1:T67 Arg2:T70	
+R29	Neg Arg1:T67 Arg2:T71	
+R30	Neg Arg1:T67 Arg2:T72	
+R31	Neg Arg1:T67 Arg2:T73	
+R32	Neg Arg1:T67 Arg2:T74	
+R33	Neg Arg1:T67 Arg2:T75	
+R34	Neg Arg1:T67 Arg2:T76	
+R35	Neg Arg1:T67 Arg2:T77	
+T80	Condition 3225 3228	VSD
+N24	Reference T80 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T81	Condition 3230 3246	Astma oskrzelowa
+N25	Reference T81 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T82	Condition 3248 3261	Nietolerancja
+T83	Symptom 3285 3318	Krwawienia z przewodu pokarmowego
+N26	Reference T83 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T85	Drug 3364 3367	ASA
+T86	Treatment 3368 3409	p/wskazane przez lekarza gastroenterologa
+T87	Condition 3412 3417	WZW B
+N27	Reference T87 ICD10:B18.1	Przewlekłe wirusowe zapalenie wątroby typu B bez wirusa delta
+T88	Treatment 3418 3453	pod opieką Poradni Chorób Zakaźnych
+T89	Condition 3463 3484	urazie kolana prawego
+T90	Date 3486 3490	2017
+R37	Dat Arg1:T90 Arg2:T89	
+T91	Condition 3504 3519	nie może biegać
+N28	Reference T89 ICD10:S83.7	Uraz licznych struktur kolana
+N6	Reference T15 ICD10:S83.7	Uraz licznych struktur kolana
+R38	Dat Arg1:T90 Arg2:T91	
+T92	Condition 3521 3549	Uczulenie na trawy, roztocza
+N29	Reference T92 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T93	Treatment 3570 3572	CC
+N30	Reference T93 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+T94	Date 3574 3578	2015
+R39	Dat Arg1:T94 Arg2:T93	
+A1	Status T93 Historical_Insignificant
+T95	Treatment 3581 3605	Usunięcie jajnika lewego
+N31	Reference T95 ICD10:Z90.7	Nabyty brak narządów płciowych
+T96	Date 3607 3611	2011
+R40	Dat Arg1:T96 Arg2:T95	
+T97	Treatment 3614 3623	Usunięcie
+N32	Reference T97 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T98	Date 3650 3654	2003
+R41	Dat Arg1:T98 Arg2:T97	
+T99	Treatment 3657 3732	Leczenie przewlekłe: zakaźnika, kardiologiczne, pulmonologiczną, alergiczną
+T100	Condition 3760 3771	WZW B ( + )
+N33	Reference T100 ICD10:B18.1	Przewlekłe wirusowe zapalenie wątroby typu B bez wirusa delta
+T101	Condition 3774 3783	borelioza
+N34	Reference T101 ICD10:A69.2	Choroba z Lyme
+T102	Condition 3791 3799	grużlica
+N35	Reference T102 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T103	Condition 3807 3811	odra
+N36	Reference T103 ICD10:B05	Odra
+T104	Negation 3784 3789	( - )
+T105	Negation 3800 3805	( - )
+T106	Negation 3812 3817	( - )
+R42	Neg Arg1:T104 Arg2:T101	
+R43	Neg Arg1:T105 Arg2:T102	
+R44	Neg Arg1:T106 Arg2:T103	
+T107	Condition 3843 3866	niedomykalność zastawki
+A2	Status T107 Family
+T108	Behaviour 3902 3917	Palenie tytoniu
+T109	Behaviour 3927 3938	Inne używki
+T110	Negation 3919 3925	neguje
+T111	Negation 3940 3946	neguje
+T112	Condition 3948 3957	Uczulenia
+N37	Reference T112 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T113	Drug 4005 4015	Debecylina
+R45	Neg Arg1:T110 Arg2:T108	
+R46	Neg Arg1:T111 Arg2:T109	
+T114	Behaviour 4033 4059	warunki mieszkaniowe dobre
+T115	Behaviour 4061 4076	mieszka z mężem
+T116	Behaviour 4078 4110	Praca: specjalista do spraw kadr
+T117	Drug 4118 4124	Clatra
+T118	Drug 4139 4146	Fanipos
+T119	Drug 4166 4186	Symbicort turbohaler
+T120	Drug 4199 4205	Asamax
+T121	Drug 4220 4226	Żelazo
+T122	Drug_dose 4125 4137	30mg 1x/dz R
+T123	Drug_dose 4147 4164	50ug/dawkę 1x/dz.
+T124	Drug_dose 4187 4196	320 1x/dz
+T125	Drug_dose 4206 4218	500 4x2tabl.
+T126	Drug_dose 4227 4238	14mg 2x/dz.
+R47	Drg Arg1:T117 Arg2:T122	
+R48	Drg Arg1:T118 Arg2:T123	
+R49	Drg Arg1:T119 Arg2:T124	
+R50	Drg Arg1:T120 Arg2:T125	
+R51	Drg Arg1:T121 Arg2:T126	
+T127	Investigation 4253 4256	TTE
+T128	Investigation 4258 4261	TET
+T129	Investigation 4263 4267	ABPM
+T130	Investigation 4269 4279	Holter EKG
+N38	Reference T108 ICD10:Z72.0	Używanie tytoniu
+A3	Source T4 Declared
+T9	Condition 945 969	torbieli jajnika prawego
+A4	Status T9 Historical_Insignificant
+N39	Reference T9 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+R52	Dat Arg1:T20 Arg2:T9	
+A5	Status T19 Historical_Insignificant
+T84	Condition 3624 3648	torbieli jajnika prawego
+A6	Status T84 Historical_Insignificant
+N40	Reference T84 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+R53	Dat Arg1:T98 Arg2:T84	
+T131	Investigation 679 712	diagnostyki gastroenterologicznej
+T132	Investigation 3329 3362	diagnostyki gastroenterologicznej
+T44	Investigation_result 2967 2977	sr. ok 3mm
+R2	Inv Arg1:T62 Arg2:T44	
+N41	Reference T68 ICD10:R55	Omdlenie i zapaść
+N42	Reference T71 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N22	Reference T76 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+N43	Reference T82 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N44	Reference T109 ICD10:Z72	Problemy związane ze stylem życia
+N45	Reference T7 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

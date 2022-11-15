@@ -1,0 +1,429 @@
+allRelations          : 21
+oks                   : 6
+isRedundantAndRemoveds: 12
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 3
+GOOD / BAD            : 18 / 3
+Sentence 0:
+------------------------------------------------
+Wiek: 2 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+1) Spironol 1 x 12,5mg
+2) Captopril 2 x 5mg
+3) Karwedilol 2 x 0,5mg
+4)
+R1	Drg Arg1:T1 Arg2:T2 << OK >>	Spironol -> 1 x 12,5mg  <RANK: 3> <info: start[332, 341] <type: RIGHT>>
+R2	Drg Arg1:T1 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Spironol -> 2 x 5mg <:REMOVED other first tag between (right):> <RANK: 0> <info: start[332, 365] <type: RIGHT>>
+R3	Drg Arg1:T1 Arg2:T6 <<REDUNDANT!!!REMOVED>>	Spironol -> 2 x 0,5mg <:REMOVED other first tag between (right):> <RANK: 0> <info: start[332, 387] <type: RIGHT>>
+R4	Drg Arg1:T3 Arg2:T2 <<REDUNDANT!!!REMOVED>>	Captopril -> 1 x 12,5mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[355, 341] <type: LEFT>>
+R5	Drg Arg1:T3 Arg2:T4 << OK >>	Captopril -> 2 x 5mg  <RANK: 3> <info: start[355, 365] <type: RIGHT>>
+R6	Drg Arg1:T3 Arg2:T6 <<REDUNDANT!!!REMOVED>>	Captopril -> 2 x 0,5mg <:REMOVED other first tag between (right):> <RANK: 1> <info: start[355, 387] <type: RIGHT>>
+R7	Drg Arg1:T5 Arg2:T2 <<REDUNDANT!!!REMOVED>>	Karwedilol -> 1 x 12,5mg <:REMOVED other first tag between (left):> <RANK: 1> <info: start[376, 341] <type: LEFT>>
+R8	Drg Arg1:T5 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Karwedilol -> 2 x 5mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[376, 365] <type: LEFT>>
+R9	Drg Arg1:T5 Arg2:T6 << OK >>	Karwedilol -> 2 x 0,5mg  <RANK: 3> <info: start[376, 387] <type: RIGHT>>
+
+
+Sentence 4:
+Kontakt z kliniką kardiologii po otrzymaniu wyników badania genetycznego.
+
+
+
+Sentence 5:
+5) Ambulatoryjny holter ekg za 3 miesiące 
+6) Kontrola w Poradni Kardiologicznej za 5 m-cy
+------------------------------------------------
+
+R10	Dat Arg1:T9 Arg2:T10 <<REDUNDANT!!!REMOVED>>	za 3 miesiące -> Kontrola w Poradni Kardiologicznej <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[502, 520] <type: RIGHT>>
+R11	Dat Arg1:T9 Arg2:T8 << OK >>	za 3 miesiące -> Ambulatoryjny holter ekg  <RANK: 3> <info: start[502, 477] <type: LEFT>>
+R12	Dat Arg1:T11 Arg2:T10 << OK >>	za 5 m-cy -> Kontrola w Poradni Kardiologicznej  <RANK: 3> <info: start[555, 520] <type: LEFT>>
+R13	Dat Arg1:T11 Arg2:T8 <<REDUNDANT!!!REMOVED>>	za 5 m-cy -> Ambulatoryjny holter ekg <:REMOVED other first tag between (left):> <RANK: 1> <info: start[555, 477] <type: LEFT>>
+
+
+Sentence 6:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 7:
+------------------------------------------------
+ Rozpozanie I: ICD10:I42.0|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Kardiomiopatia rozsztrzeniowa
+
+
+
+Sentence 8:
+------------------------------------------------
+
+
+
+Sentence 9:
+Zastosowane leczenie
+
+
+
+Sentence 10:
+------------------------------------------------
+
+
+
+Sentence 11:
+Captopril, Sironol, Carwedilol, L-karnityna
+------------------------------------------------
+
+
+
+Sentence 12:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+ skierowana na badania kontrolne, Spironol ,Captopril, Carvedilol, wywiad alergiczny ujemny
+------------------------------------------------
+
+R14	Neg Arg1:T22 Arg2:T21 << OK >>	ujemny -> wywiad alergiczny  <RANK: 3> <info: start[1195, 1177] <type: LEFT>>
+R15	Neg Arg1:T22 Arg2:T17 <<REDUNDANT!!!REMOVED>>	ujemny -> badania kontrolne <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1195, 1125] <type: LEFT>>
+R16	Neg Arg1:T22 Arg2:T18 <<REDUNDANT!!!REMOVED>>	ujemny -> Spironol <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1195, 1144] <type: LEFT>>
+R17	Neg Arg1:T22 Arg2:T19 <<REDUNDANT!!!REMOVED>>	ujemny -> Captopril <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1195, 1154] <type: LEFT>>
+R18	Neg Arg1:T22 Arg2:T20 <<REDUNDANT!!!REMOVED>>	ujemny -> Carvedilol <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1195, 1165] <type: LEFT>>
+R19	Alg Arg1:T21 Arg2:T18 <<REDUNDANT!!!SHOULD BE REMOVED>>	wywiad alergiczny -> Spironol  <RANK: 2> <info: start[1177, 1144] <type: LEFT>>
+R20	Alg Arg1:T21 Arg2:T19 <<REDUNDANT!!!SHOULD BE REMOVED>>	wywiad alergiczny -> Captopril  <RANK: 2> <info: start[1177, 1154] <type: LEFT>>
+R21	Alg Arg1:T21 Arg2:T20 <<REDUNDANT!!!SHOULD BE REMOVED>>	wywiad alergiczny -> Carvedilol  <RANK: 2> <info: start[1177, 1165] <type: LEFT>>
+
+
+Sentence 13:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 14:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:9.09[10^3/ul]
+    
+
+
+Sentence 15:
+RBC Krwinki czerwone:4.86[10^6/ul]
+    
+
+
+Sentence 16:
+HGB Hemoglobina:13.4[g/dl]
+    
+
+
+Sentence 17:
+HCT Hematokryt:37.9[%]
+    
+
+
+Sentence 18:
+MCV wskaźnik czerwonokrw:78.0[fl]
+    
+
+
+Sentence 19:
+MCH wskaźnik czerwonokrw:27.6[pg]
+    
+
+
+Sentence 20:
+MCHC wskaźnik czerwonokr:35.4[g/dl]
+    
+
+
+Sentence 21:
+PLT z morfologii:359[10^3/ul]
+    
+
+
+Sentence 22:
+RDW-SD:33.8[fl]
+    
+
+
+Sentence 23:
+RDW-CV:12.1[%]
+    
+
+
+Sentence 24:
+PDW:8.3[fl]
+    
+
+
+Sentence 25:
+MPV:8.3[fl]
+    
+
+
+Sentence 26:
+P-LCR:11.4[%]
+    
+
+
+Sentence 27:
+PCT (hematokryt płytkowy:0.30[%]
+    
+
+
+Sentence 28:
+NEUTR# wartość bezwzględ:2.39[10^3/ul]
+    
+
+
+Sentence 29:
+NEUTR%:26.3[%]
+    
+
+
+Sentence 30:
+LYMH# wartość bezwzględn:6.08[10^3/ul]
+    
+
+
+Sentence 31:
+LYMPH%:66.9[%]
+    
+
+
+Sentence 32:
+MONO# wartość bezwzględn:0.45[10^3/ul]
+    
+
+
+Sentence 33:
+MONO%:5.0[%]
+    
+
+
+Sentence 34:
+EO# wartość bezwzględna:0.14[10^3/ul]
+    
+
+
+Sentence 35:
+EO%:1.5[%]
+    
+
+
+Sentence 36:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    
+
+
+Sentence 37:
+BASO%:0.3[%]
+    
+
+
+Sentence 38:
+NRBC %:0.0[%]
+    
+
+
+Sentence 39:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 40:
+TSH: TSH:2.10[uIU/ml]
+
+
+
+Sentence 41:
+FT3: FT3:4.30[pg/ml]
+
+
+
+Sentence 42:
+FT4: FT4:1.27[ng/dl]
+
+
+
+Sentence 43:
+ALAT: ALAT:24[U/L]
+ASPAT: ASPAT:40[U/L]
+CK - aktywność: CK:119[U/L]
+
+
+
+Sentence 44:
+CKMB aktywność: CKMB:33[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 45:
+Sód (Na): Sód:139[mmol/L]
+
+
+
+Sentence 46:
+Potas (K): Potas:4.3[mmol/L]
+
+
+
+Sentence 47:
+Chlorki (Cl): Chlorki:104[mmol/L]
+
+
+
+Sentence 48:
+Kreatynina + GFR
+    
+
+
+Sentence 49:
+Kreatynina w surowicy:0.32[mg/dl]
+    
+
+
+Sentence 50:
+eGFR stand. wg Schwartza:156.4[ml/min/1,73 m^2]
+    
+
+
+Sentence 51:
+wzrost:91[cm]
+
+
+
+Sentence 52:
+Mleczany (LAC): Mleczany:18.5[mg/dl]
+
+
+
+Sentence 53:
+Mocznik: Mocznik:25[mg/dl]
+
+
+
+Sentence 54:
+Gospodarka żelazem
+    Żelazo:124[ug/dl]
+    
+
+
+Sentence 55:
+TIBC (Całkowita zdolność:318[ug/dl]
+    
+
+
+Sentence 56:
+UIBC (Utajona zdolność w:194[ug/dl]
+    
+
+
+Sentence 57:
+Wskaźnik wysycenia Fe:39[%]
+
+
+
+Sentence 58:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    
+
+
+Sentence 59:
+pH:7.418
+    pCO2:38.3[mmHg]
+    BE:0.5[mmol/L]
+    
+
+
+Sentence 60:
+HCO3:24.3[mmol/L]
+    
+
+
+Sentence 61:
+pO2:60.0[mmHg]
+    
+
+
+Sentence 62:
+O2Sat:94.5[%]
+
+
+
+Sentence 63:
+NT-proBNP surowica: NT-proBNP w surowicy:49[pg/ml]
+
+
+
+Sentence 64:
+------------------------------------------------
+
+
+
+Sentence 65:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 66:
+I42.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 67:
+ICD9
+------------------------------------------------
+89.522
+C55
+
+
+
+Sentence 68:
+I81
+I97
+O93
+N45
+L69
+O55
+I17
+N11
+O35
+M37
+I19
+N13
+N24
+88.721
+O69
+
+
+
+Sentence 69:
+M19
+M18
+
+
+
+Sentence 70:
+O29
+88.761
+------------------------------------------------
+
+

@@ -1,0 +1,235 @@
+T1	Condition 439 477	Przewlekła choroba niedokrwienna serca
+N1	Reference T1 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T2	Condition 501 522	Nadciśnienie tętnicze
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Condition 524 540	Arytmia komorowa
+N3	Reference T3 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T4	Condition 554 566	Dyslipidemia
+N4	Reference T4 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T5	Treatment 567 591	w trakcie farmakoterapii
+T6	Condition 601 616	Cukrzyca typu 2
+N5	Reference T6 ICD10:E11	Cukrzyca insulinoniezależna
+T7	Condition 618 668	Łagodna niedokrwistość normocytarna, normobarwliwa
+N6	Reference T7 ICD10:D64.9	Niedokrwistość, nieokreślona
+T8	Condition 670 683	Hiperurykemia
+N7	Reference T8 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T9	Condition 685 713	Kamica pęcherzyka żółciowego
+N8	Reference T9 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T10	Condition 715 735	Stłuszczenie wątroby
+N9	Reference T10 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T11	Condition 737 744	Otyłość
+N10	Reference T11 ICD10:E66	Otyłość
+T12	Condition 746 759	Nietolerancja
+T13	Drug 760 770	Augmentinu
+T14	Drug 772 783	Diclofenacu
+T15	Drug 789 795	Rulidu
+R1	Alg Arg1:T12 Arg2:T13	
+R2	Alg Arg1:T12 Arg2:T14	
+R3	Alg Arg1:T12 Arg2:T15	
+T16	Treatment 817 833	panhisterektomii
+A1	Status T16 Historical_Insignificant
+T17	Date 835 839	2017
+R4	Dat Arg1:T17 Arg2:T16	
+T18	Condition 843 875	Zmiany zwyrodnieniowe kręgosłupa
+N11	Reference T18 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T19	Treatment 998 1047	Dalsza opieka w POZ oraz Poradni Diabetologicznej
+T20	Treatment 1053 1112	Wskazana dalsza okresowa kontrola w Poradni Kardiologicznej
+T21	Investigation 1118 1159	wykonanie badania SPECT mięśnia sercowego
+T22	Treatment 1193 1301	Wskazane wykonanie badania na krew utajoną w kale w warunkach Poradni POZ oraz dalsza ewentualna diagnostyka
+T23	Investigation 1307 1410	Okresowa kontrola morfologii, lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T24	Date 1422 1436	za 4-6 tygodni
+R5	Dat Arg1:T24 Arg2:T23	
+T25	Investigation 1442 1465	Okresowa kontrola HbA1c
+T26	Behaviour 1471 1585	Dieta cukrzycowa, lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T27	Behaviour 1591 1619	Wskazana redukcja masy ciała
+T28	Investigation 1625 1681	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T29	Treatment 1687 1715	Regularne przyjmowanie leków
+T30	Drug 1723 1728	Acard
+T31	Drug_dose 1729 1754	75mg 1 tabletka wieczorem
+R6	Drg Arg1:T30 Arg2:T31	
+T32	Drug 1757 1767	Concor Cor
+T33	Drug_dose 1768 1787	5mg 1 tabletka rano
+R7	Drg Arg1:T32 Arg2:T33	
+T34	Drug 1789 1800	Co-Prenessa
+T35	Drug_dose 1801 1827	4mg+1,25mg 1 tabletka rano
+R8	Drg Arg1:T34 Arg2:T35	
+T36	Drug 1829 1836	Lacipil
+T37	Drug_dose 1837 1861	4mg 1 tabletka wieczorem
+R9	Drg Arg1:T36 Arg2:T37	
+T38	Drug 1863 1870	Romazic
+T39	Drug_dose 1871 1896	10mg 1 tabletka wieczorem
+R10	Drg Arg1:T38 Arg2:T39	
+T40	Drug 1898 1904	Xigduo
+T41	Drug_dose 1905 1943	5mg+1000mg 1 tabletka rano i wieczorem
+R11	Drg Arg1:T40 Arg2:T41	
+T42	Drug 1945 1952	Mixtard
+T43	Drug_dose 1953 1989	30 Penfill 24j - 0j - 18j podskórnie
+R12	Drg Arg1:T42 Arg2:T43	
+T44	Symptom 2162 2205	niestabilnych wartości ciśnienia tętniczego
+N12	Reference T44 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T45	Symptom 2298 2385	dolegliwości pod postacią piekącego bólu w klatce piersiowej występującego po posiłkach
+N13	Reference T45 ICD10:R07.3	Inne bóle w klatce piersiowej
+T46	Negation 2387 2393	Neguje
+T47	Symptom 2394 2419	typowy ból stenokardialny
+R13	Neg Arg1:T46 Arg2:T47	
+T48	Negation 2421 2427	Neguje
+T49	Symptom 2428 2440	zasłabnięcia
+T50	Symptom 2442 2450	omdlenia
+N15	Reference T50 ICD10:R55	Omdlenie i zapaść
+R14	Neg Arg1:T48 Arg2:T49	
+R15	Neg Arg1:T48 Arg2:T50	
+T51	Symptom 2452 2465	zawroty głowy
+N16	Reference T51 ICD10:R42	Zawroty głowy i odurzenie
+R16	Neg Arg1:T48 Arg2:T51	
+T52	Symptom 2467 2477	krwawienia
+T53	Symptom 2479 2492	czarne stolce
+N17	Reference T53 ICD10:K92.1	Stolce smołowate
+T54	Symptom 2494 2510	brunatne wymioty
+N18	Reference T54 ICD10:K92.0	Wymioty krwawe
+T55	Condition 2512 2528	chorobę wrzodową
+N19	Reference T55 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T56	Symptom 2530 2544	duszność nocną
+N20	Reference T56 ICD10:R06.0	Duszność
+T57	Symptom 2546 2561	obrzęki podudzi
+T58	Symptom 2563 2587	bóle w klatce piersiowej
+N22	Reference T58 ICD10:R07	Ból gardła i w klatce piersiowej
+R17	Neg Arg1:T48 Arg2:T52	
+R18	Neg Arg1:T48 Arg2:T53	
+R19	Neg Arg1:T48 Arg2:T54	
+R20	Neg Arg1:T48 Arg2:T55	
+R21	Neg Arg1:T48 Arg2:T56	
+R22	Neg Arg1:T48 Arg2:T57	
+R23	Neg Arg1:T48 Arg2:T58	
+T59	Symptom 2589 2608	Innych dolegliwości
+T60	Negation 2609 2620	nie zgłasza
+R24	Neg Arg1:T60 Arg2:T59	
+T61	Condition 2635 2656	Nadciśnienie tętnicze
+N23	Reference T61 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T62	Condition 2658 2674	Arytmia komorowa
+N24	Reference T62 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T63	Condition 2676 2688	Dyslipidemia
+N25	Reference T63 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T64	Condition 2690 2705	Cukrzyca typu 2
+N26	Reference T64 ICD10:E11	Cukrzyca insulinoniezależna
+T65	Condition 2707 2720	Hiperurykemia
+N27	Reference T65 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T66	Condition 2722 2729	Otyłość
+N28	Reference T66 ICD10:E66	Otyłość
+T67	Condition 2731 2744	Nietolerancja
+T68	Drug 2745 2755	Augmentinu
+T69	Drug 2757 2768	Diclofenacu
+T70	Drug 2774 2780	Rulidu
+R25	Alg Arg1:T67 Arg2:T68	
+R26	Alg Arg1:T67 Arg2:T69	
+R27	Alg Arg1:T67 Arg2:T70	
+T71	Treatment 2794 2811	Przebyte operacje
+T72	Treatment 2821 2837	panhisterektomii
+A2	Status T72 Historical_Insignificant
+T73	Date 2839 2843	2017
+R28	Dat Arg1:T73 Arg2:T72	
+T74	Treatment 2847 2866	Leczenie przewlekłe
+T75	Treatment 2884 2899	diabetologiczne
+T76	Condition 2926 2929	WZW
+N29	Reference T76 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T77	Negation 2932 2933	-
+R29	Neg Arg1:T77 Arg2:T76	
+T78	Condition 2938 2947	borelioza
+N30	Reference T78 ICD10:A69.2	Choroba z Lyme
+T79	Negation 2950 2951	-
+R30	Neg Arg1:T79 Arg2:T78	
+T80	Condition 2955 2963	grużlica
+T81	Negation 2966 2967	-
+R31	Neg Arg1:T81 Arg2:T80	
+T82	Condition 2971 2975	odra
+N32	Reference T82 ICD10:B05	Odra
+T83	Negation 2978 2979	-
+R32	Neg Arg1:T83 Arg2:T82	
+T84	Condition 2982 2997	Wywiad rodzinny
+A3	Status T84 Family
+T85	Condition 3006 3008	HA
+A4	Status T85 Family
+N33	Reference T85 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T86	Condition 3016 3018	HA
+A5	Status T86 Family
+N34	Reference T86 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T87	Condition 3019 3024	zawał
+A6	Status T87 Family
+N35	Reference T87 ICD10:I25.2	Przebyty zawał serca
+T89	Condition 3047 3049	HA
+A7	Status T89 Family
+N36	Reference T89 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T90	Condition 3060 3066	zawały
+A8	Status T90 Family
+N37	Reference T90 ICD10:I25.2	Przebyty zawał serca
+T91	Behaviour 3068 3083	Palenie tytoniu
+T93	Date 3112 3124	od 2016 roku
+T92	Negation 3103 3111	nie pali
+R34	Neg Arg1:T92 Arg2:T91	
+R35	Dat Arg1:T93 Arg2:T91	
+T94	Behaviour 3126 3144	Wcześniej 1 paczka
+T95	Date 3145 3157	przez 20 lat
+R36	Dat Arg1:T95 Arg2:T94	
+T96	Behaviour 3159 3170	Inne używki
+T97	Negation 3172 3178	neguje
+R37	Neg Arg1:T97 Arg2:T96	
+T98	Condition 3180 3189	Uczulenia
+T99	Condition 3191 3204	nietolerancja
+T100	Drug 3205 3215	Augmentinu
+T101	Drug 3217 3228	Diclofenacu
+T102	Drug 3230 3236	Rulidu
+R38	Alg Arg1:T99 Arg2:T100	
+R39	Alg Arg1:T98 Arg2:T100	
+R40	Alg Arg1:T99 Arg2:T101	
+R41	Alg Arg1:T98 Arg2:T101	
+R42	Alg Arg1:T99 Arg2:T102	
+R43	Alg Arg1:T98 Arg2:T102	
+T103	Behaviour 3254 3280	warunki mieszkaniowe dobre
+T104	Behaviour 3289 3296	położna
+T105	Drug 3304 3317	Glucophage XR
+T106	Drug_dose 3318 3332	1000 2 tabl. W
+R44	Drg Arg1:T105 Arg2:T106	
+T107	Drug 3334 3343	Humulin N
+T108	Drug_dose 3344 3365	30j na noc i 16j rano
+R45	Drg Arg1:T107 Arg2:T108	
+T109	Drug 3367 3374	Symglic
+T110	Drug_dose 3375 3388	6mg 1 tabl. R
+R46	Drg Arg1:T109 Arg2:T110	
+T111	Drug 3390 3399	Jardiance
+T112	Drug_dose 3400 3414	10mg 1 tabl. R
+R47	Drg Arg1:T111 Arg2:T112	
+T113	Drug 3416 3423	Romazic
+T114	Drug_dose 3424 3438	10mg 1 tabl. W
+R48	Drg Arg1:T113 Arg2:T114	
+T115	Drug 3440 3445	Acard
+T116	Drug_dose 3446 3460	75mg 1 tabl. W
+R49	Drg Arg1:T115 Arg2:T116	
+T117	Drug 3462 3472	Concor Cor
+T118	Drug_dose 3473 3486	5mg 1 tabl. R
+R50	Drg Arg1:T117 Arg2:T118	
+T119	Drug 3488 3499	Co-Prenessa
+T120	Drug_dose 3500 3520	4mg+1,25mg 1 tabl. R
+R51	Drg Arg1:T119 Arg2:T120	
+T121	Drug 3522 3529	Lacipil
+T122	Drug_dose 3530 3543	4mg 1 tabl. W
+R52	Drg Arg1:T121 Arg2:T122	
+T123	Drug 3545 3555	Atrovent N
+T124	Drug_dose 3556 3564	doraźnie
+R53	Drg Arg1:T123 Arg2:T124	
+T125	Investigation 3581 3584	TTE
+T126	Investigation 3586 3589	TET
+T127	Investigation 3591 3595	ABPM
+T128	Investigation 3597 3607	Holter EKG
+T129	Drug 592 599	statyną
+T130	Treatment 2868 2882	kardiologiczne
+N40	Reference T12 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+N45	Reference T49 ICD10:R55	Omdlenie i zapaść
+N42	Reference T67 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+N38	Reference T91 ICD10:Z72.0	Używanie tytoniu
+N39	Reference T94 ICD10:Z72.0	Używanie tytoniu
+N44	Reference T99 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+N43	Reference T98 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+N14	Reference T47 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+N41	Reference T52 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N21	Reference T57 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N31	Reference T80 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N46	Reference T96 ICD10:Z72	Problemy związane ze stylem życia

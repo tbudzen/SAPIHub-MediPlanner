@@ -1,0 +1,103 @@
+T1	Treatment 331 353	kontrola u lekarza POZ
+T2	Treatment 356 397	dalsza kontrola w Poradni Kardiologicznej
+T3	Treatment 400 428	regularne przyjmowanie leków
+T4	Drug 430 441	Betaloc ZOK
+T5	Drug_dose 442 463	25mg 1x 1/2 tabl/rano
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Drug 464 472	Magnezin
+T7	Drug_dose 473 482	1x 1 tabl
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Drug 483 492	Furaginum
+T9	Drug_dose 493 533	50mg 3x 2 tabl przez 2 dni (kontynuacja)
+R3	Drg Arg1:T8 Arg2:T9	
+T10	Drug 653 661	Bisocard
+T11	Drug_dose 662 668	1,25mg
+R4	Drg Arg1:T10 Arg2:T11	
+T12	Drug 670 677	furagin
+T13	Drug 679 686	LactoDr
+T14	Condition 915 955	Wypadanie obu płatków zastawki mitralnej
+N1	Reference T14 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T15	Condition 957 1002	Umiarkowana niedomykalność zastawki mitralnej
+N2	Reference T15 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T16	Condition 1004 1048	Łagodna niedomykalność zastawki trójdzielnej
+N3	Reference T16 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T17	Condition 1050 1073	Ekstrasystolia komorowa
+N4	Reference T17 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T18	Symptom 1244 1307	objawów przedomdleniowych przy szybkich, intensywnych wysiłkach
+T19	Symptom 1392 1437	duszności w godz. nocnych i podczas śpiewania
+N6	Reference T19 ICD10:R06.0	Duszność
+T20	Symptom 1439 1462	uczucie kołatania serca
+N7	Reference T20 ICD10:R00.2	Kołatanie serca
+T21	Symptom 1473 1512	niespecyficzne bóle w klatce piersiowej
+N8	Reference T21 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T22	Condition 1526 1559	prolaps płatka zastawki mitralnej
+A1	Source T22 Declared
+N9	Reference T22 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T23	Condition 1580 1616	choroba wrzodowa żołądka/dwunastnicy
+N10	Reference T23 ICD10:K28	Wrzód żołądka i jelita czczego
+T24	Negation 1658 1664	Neguje
+T25	Symptom 1666 1680	pełne omdlenia
+N11	Reference T25 ICD10:R55	Omdlenie i zapaść
+T26	Symptom 1682 1692	krwawienia
+T27	Symptom 1694 1707	czarne stolce
+N5	Reference T27 ICD10:K92.1	Stolce smołowate
+T28	Symptom 1709 1725	brunatne wymioty
+N12	Reference T28 ICD10:K92.0	Wymioty krwawe
+T29	Condition 1727 1729	HA
+N13	Reference T29 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T30	Condition 1731 1733	DM
+N14	Reference T30 ICD10:E14	Cukrzyca nieokreślona
+T31	Condition 1735 1745	udar mózgu
+N15	Reference T31 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T32	Condition 1747 1758	zawał serca
+N16	Reference T32 ICD10:I25.2	Przebyty zawał serca
+R5	Neg Arg1:T24 Arg2:T32	
+R6	Neg Arg1:T24 Arg2:T31	
+R7	Neg Arg1:T24 Arg2:T30	
+R8	Neg Arg1:T24 Arg2:T29	
+R9	Neg Arg1:T24 Arg2:T28	
+R10	Neg Arg1:T24 Arg2:T27	
+R11	Neg Arg1:T24 Arg2:T26	
+R12	Neg Arg1:T24 Arg2:T25	
+T33	Treatment 1763 1780	Przebyte operacje
+T34	Treatment 1782 1791	usunięcia
+T35	Condition 1792 1812	znamion barwnikowych
+N17	Reference T35 ICD10:D22	Znamiona barwnikowe
+T36	Treatment 1814 1835	op. przegrody nosa 2x
+T37	Treatment 1837 1865	artroskopia stawu kolanowego
+A2	Status T37 Historical_Insignificant
+A3	Status T36 Historical_Insignificant
+A4	Status T35 Historical_Insignificant
+A5	Status T34 Historical_Insignificant
+T38	Behaviour 1867 1882	Palenie tytoniu
+N18	Reference T38 ICD10:T65.2	Tytoń i nikotyna
+T39	Negation 1884 1887	nie
+R13	Neg Arg1:T39 Arg2:T38	
+T40	Behaviour 1888 1899	Inne używki
+T41	Negation 1901 1904	nie
+R14	Neg Arg1:T41 Arg2:T40	
+T42	Condition 1906 1915	Uczulenia
+T43	Condition 1917 1930	ASA - wysypka
+N19	Reference T43 ICD10:R21	Rumień i inne nieswoiste wysypki skórne
+T44	Condition 1958 1961	WZW
+N20	Reference T44 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T45	Condition 1968 1977	borelioza
+N21	Reference T45 ICD10:A69.2	Choroba z Lyme
+T46	Condition 1983 1986	tbc
+N22	Reference T46 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T47	Negation 1988 1989	-
+R15	Neg Arg1:T47 Arg2:T46	
+T48	Negation 1979 1980	-
+R16	Neg Arg1:T48 Arg2:T45	
+T49	Negation 1963 1964	-
+R17	Neg Arg1:T49 Arg2:T44	
+T50	Behaviour 2009 2035	warunki mieszkaniowe dobre
+T51	Behaviour 2037 2056	obecnie nie pracuje
+T52	Behaviour 2068 2082	praca umysłowa
+T53	Date 2058 2067	wcześniej
+R18	Dat Arg1:T53 Arg2:T52	
+T54	Investigation 2176 2197	badania laboratoryjne
+T55	Investigation 2199 2203	ECHO
+T56	Investigation 2205 2209	ABPM
+T57	Investigation 2211 2221	Holter-EKG
+T58	Investigation 2223 2238	ergospirometria

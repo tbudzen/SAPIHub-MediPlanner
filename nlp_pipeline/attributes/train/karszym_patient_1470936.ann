@@ -1,0 +1,106 @@
+T1	Condition 448 481	Napadowy częstoskurcz nadkomorowy
+N1	Reference T1 ICD10:I47.1	Częstoskurcz nadkomorowy
+T2	Condition 483 504	Nadciśnienie tętnicze
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Condition 506 526	Hipercholesterolemia
+N3	Reference T3 ICD10:E78.0	Czysta hipercholesterolemia
+T4	Date 588 599	ok. 40 r.z.
+T5	Treatment 602 612	2 operacje
+N4	Reference T5 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T6	Condition 613 620	żylaków
+A1	Status T6 Historical_Insignificant
+A2	Status T5 Historical_Insignificant
+T7	Date 621 639	przed kilkoma laty
+R1	Dat Arg1:T7 Arg2:T6	
+R2	Dat Arg1:T7 Arg2:T5	
+T8	Treatment 536 561	usunięciu jajnika prawego
+A3	Status T8 Historical_Insignificant
+T9	Condition 563 575	stan zapalny
+N6	Reference T9 ICD10:N70.9	Zapalenie jajowodów i jajników, nieokreślone
+T10	Condition 577 584	torbiel
+A4	Status T10 Historical_Insignificant
+N7	Reference T10 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+A5	Status T9 Historical_Insignificant
+R3	Dat Arg1:T4 Arg2:T8	
+R4	Dat Arg1:T4 Arg2:T10	
+N5	Reference T8 ICD10:Z90.7	Nabyty brak narządów płciowych
+R5	Dat Arg1:T4 Arg2:T9	
+T11	Treatment 750 777	dalsza opieka w poradni POZ
+T12	Treatment 782 814	okresowa kontrola kardiologiczna
+T13	Investigation 819 857	okresowa kontrola ciśnienia tętniczego
+T14	Behaviour 864 889	dieta niskocholesterolowa
+T15	Treatment 900 937	ambulatoryjna konsultacja dietetyczna
+T16	Condition 1160 1192	napadu częstoskurczu nasadkowego
+N8	Reference T16 ICD10:I47.1	Częstoskurcz nadkomorowy
+T17	Condition 1193 1225	ze zmiennym blokiem przewodzenia
+N9	Reference T17 ICD10:I44.3	Inne i nieokreślone bloki przedsionkowo-komorowe
+T18	Treatment 1241 1261	masaż zatoki szyjnej
+T19	Treatment 1264 1279	manewr Valsalvy
+T20	Negation 1280 1292	nieskuteczne
+R6	Neg Arg1:T20 Arg2:T19	
+R7	Neg Arg1:T20 Arg2:T18	
+T21	Investigation_result 1229 1232	134
+T22	Investigation 1227 1229	HR
+R8	Inv Arg1:T22 Arg2:T21	
+T23	Treatment 1321 1359	położeniu chorej na sali monitorowanej
+T24	Condition 1396 1422	samoistny powrót RS 75/min
+T25	Condition 1432 1460	napadów arytmii nadkomorowej
+N10	Reference T25 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T26	Date 1461 1470	od 45 lat
+R9	Dat Arg1:T26 Arg2:T25	
+T27	Condition 1494 1496	HA
+N11	Reference T27 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T28	Condition 1498 1518	hipercholesterolemia
+N12	Reference T28 ICD10:E78.0	Czysta hipercholesterolemia
+T29	Treatment 1547 1572	usunięciu jajnika prawego
+A6	Status T29 Historical_Insignificant
+N13	Reference T29 ICD10:Z90.7	Nabyty brak narządów płciowych
+T30	Condition 1574 1586	stan zapalny
+N14	Reference T30 ICD10:N70.9	Zapalenie jajowodów i jajników, nieokreślone
+T31	Condition 1588 1595	torbiel
+A7	Status T31 Historical_Insignificant
+N15	Reference T31 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+A8	Status T30 Historical_Insignificant
+T32	Date 1599 1610	ok. 40 r.z.
+R10	Dat Arg1:T32 Arg2:T29	
+R11	Dat Arg1:T32 Arg2:T31	
+R12	Dat Arg1:T32 Arg2:T30	
+T33	Treatment 1613 1623	2 operacje
+A9	Status T33 Historical_Insignificant
+N16	Reference T33 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T34	Condition 1624 1631	żylaków
+T35	Date 1632 1650	przed kilkoma laty
+R13	Dat Arg1:T35 Arg2:T34	
+R14	Dat Arg1:T35 Arg2:T33	
+A10	Status T34 Historical_Insignificant
+T36	Condition 1653 1668	Wywiad rodzinny
+A11	Status T36 Family
+T37	Negation 1670 1683	bez znaczenia
+T38	Condition 1685 1704	Alergie:  na słońce
+N17	Reference T38 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T39	Behaviour 1705 1728	Nikotynizm: 6 paczkolat
+N18	Reference T39 ICD10:Z72.0	Używanie tytoniu
+T40	Date 1729 1742	około 40 r.z.
+R15	Dat Arg1:T40 Arg2:T39	
+T41	Behaviour 1743 1764	Alkohol: okazjonalnie
+A12	Status T41 Historical_Insignificant
+N19	Reference T41 ICD10:Z72.1	Używanie alkoholu
+T42	Behaviour 1766 1783	Uzależnienie inne
+T43	Negation 1785 1791	neguje
+R16	Neg Arg1:T37 Arg2:T36	
+R17	Neg Arg1:T43 Arg2:T42	
+T44	Behaviour 1809 1833	praca umysłowa w mediach
+T45	Drug 1841 1849	Valsacor
+T46	Drug_dose 1850 1869	160 mg 1 tabl. rano
+T47	Drug 1871 1880	Nebilenin
+T48	Drug_dose 1881 1898	5 mg 1 tabl. rano
+T49	Drug 1900 1907	Roswera
+T50	Drug_dose 1908 1931	10 mg 1 tabl. wieczorem
+T51	Investigation 1960 1970	echo serca
+T52	Investigation 1972 1975	TET
+T53	Investigation 1977 1981	ABPM
+T54	Investigation 1983 1993	Holter ekg
+T55	Investigation 1995 2013	rtg kl. piersiowej
+R18	Drg Arg1:T45 Arg2:T46	
+R19	Drg Arg1:T47 Arg2:T48	
+R20	Drg Arg1:T49 Arg2:T50	

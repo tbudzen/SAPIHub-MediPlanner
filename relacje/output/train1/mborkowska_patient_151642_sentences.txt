@@ -1,0 +1,496 @@
+allRelations          : 42
+oks                   : 10
+isRedundantAndRemoveds: 32
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 0
+GOOD / BAD            : 42 / 0
+Sentence 0:
+------------------------------------------------
+Wiek: 57 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+- kontrola u lekarza POZ
+- okresowa kontrola w Poradni Kardiologicznej 
+- dieta niskocholesterolowa
+
+
+
+Sentence 5:
+- regularne przyjmowanie leków:
+Betaloc ZOK 25 mg 1x 1 tabl/rano
+------------------------------------------------
+
+R1	Drg Arg1:T2 Arg2:T3 << OK >>	Betaloc ZOK -> 25 mg 1x 1 tabl/rano  <RANK: 3> <info: start[462, 474] <type: RIGHT>>
+
+
+Sentence 6:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 7:
+------------------------------------------------
+ Rozpozanie I: ICD10:I49|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo::
+------------------------------------------------
+
+
+
+Sentence 8:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 9:
+Chora lat 56, przyjęta do Kliniki z powodu arytmii - rozpoznanie w lutym 2019, w Holterze z lutego ExSV 88poj./dobę, 1 para, 2 salwy - 3-5 pobudzeń 100-132/min, 5 poj. ExV
+
+R2	Inv Arg1:T6 Arg2:T8 << OK >>	Holterze -> ExSV 88poj./dobę, 1 para, 2 salwy - 3-5 pobudzeń 100-132/min, 5 poj. ExV  <RANK: 3> <info: start[926, 944] <type: RIGHT>>
+R3	Dat Arg1:T5 Arg2:T4 << OK >>	lutym 2019 -> arytmii  <RANK: 3> <info: start[912, 888] <type: LEFT>>
+R4	Dat Arg1:T5 Arg2:T6 <<REDUNDANT!!!REMOVED>>	lutym 2019 -> Holterze <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[912, 926] <type: RIGHT>>
+R5	Dat Arg1:T7 Arg2:T4 <<REDUNDANT!!!REMOVED>>	lutego -> arytmii <:REMOVED other first tag between (left):> <RANK: 2> <info: start[937, 888] <type: LEFT>>
+R6	Dat Arg1:T7 Arg2:T6 << OK >>	lutego -> Holterze  <RANK: 3> <info: start[937, 926] <type: LEFT>>
+
+
+Sentence 10:
+W wywiadzie ponadto:  zwyrodnienia w odc. C kręgosłupa 
+
+
+
+Sentence 11:
+Przebyte operacje:neguje 
+Wywiad rodzinny: 52 lata ojciec zakrzepica, od strony matki z 7 rodzeństwa 5 osób rak wątroby  
+Alergie: neguje 
+Nikotynizm: obecnie nie, okazjonalnie wcześniej 
+Alkohol: neguje 
+Uzależnienie inne: neguje 
+Stan społeczny: nauczycielka 
+
+R7	Neg Arg1:T10 Arg2:T12 <<REDUNDANT!!!REMOVED>>	neguje -> zakrzepica <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1091, 1131] <type: RIGHT>>
+R8	Neg Arg1:T10 Arg2:T13 <<REDUNDANT!!!REMOVED>>	neguje -> rak wątroby <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1091, 1181] <type: RIGHT>>
+R9	Neg Arg1:T10 Arg2:T16 <<REDUNDANT!!!REMOVED>>	neguje -> Alergie <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1091, 1195] <type: RIGHT>>
+R10	Neg Arg1:T10 Arg2:T17 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1091, 1212] <type: RIGHT>>
+R11	Neg Arg1:T10 Arg2:T19 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1091, 1261] <type: RIGHT>>
+R12	Neg Arg1:T10 Arg2:T20 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1091, 1278] <type: RIGHT>>
+R13	Neg Arg1:T10 Arg2:T11 << OK >>	neguje -> Przebyte operacje  <RANK: 3> <info: start[1091, 1073] <type: LEFT>>
+R14	Neg Arg1:T14 Arg2:T12 <<REDUNDANT!!!REMOVED>>	neguje -> zakrzepica <:REMOVED Tag2 not in the same line:> <RANK: 0> <info: start[1204, 1131] <type: LEFT>>
+R15	Neg Arg1:T14 Arg2:T13 <<REDUNDANT!!!REMOVED>>	neguje -> rak wątroby <:REMOVED Tag2 not in the same line:> <RANK: 1> <info: start[1204, 1181] <type: LEFT>>
+R16	Neg Arg1:T14 Arg2:T16 << OK >>	neguje -> Alergie  <RANK: 3> <info: start[1204, 1195] <type: LEFT>>
+R17	Neg Arg1:T14 Arg2:T17 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1204, 1212] <type: RIGHT>>
+R18	Neg Arg1:T14 Arg2:T19 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1204, 1261] <type: RIGHT>>
+R19	Neg Arg1:T14 Arg2:T20 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1204, 1278] <type: RIGHT>>
+R20	Neg Arg1:T14 Arg2:T11 <<REDUNDANT!!!REMOVED>>	neguje -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1204, 1073] <type: LEFT>>
+R21	Neg Arg1:T15 Arg2:T12 <<REDUNDANT!!!REMOVED>>	obecnie nie, -> zakrzepica <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1224, 1131] <type: LEFT>>
+R22	Neg Arg1:T15 Arg2:T13 <<REDUNDANT!!!REMOVED>>	obecnie nie, -> rak wątroby <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1224, 1181] <type: LEFT>>
+R23	Neg Arg1:T15 Arg2:T16 <<REDUNDANT!!!REMOVED>>	obecnie nie, -> Alergie <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1224, 1195] <type: LEFT>>
+R24	Neg Arg1:T15 Arg2:T17 << OK >>	obecnie nie, -> Nikotynizm  <RANK: 3> <info: start[1224, 1212] <type: LEFT>>
+R25	Neg Arg1:T15 Arg2:T19 <<REDUNDANT!!!REMOVED>>	obecnie nie, -> Alkohol <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1224, 1261] <type: RIGHT>>
+R26	Neg Arg1:T15 Arg2:T20 <<REDUNDANT!!!REMOVED>>	obecnie nie, -> Uzależnienie inne <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1224, 1278] <type: RIGHT>>
+R27	Neg Arg1:T15 Arg2:T11 <<REDUNDANT!!!REMOVED>>	obecnie nie, -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1224, 1073] <type: LEFT>>
+R28	Neg Arg1:T18 Arg2:T12 <<REDUNDANT!!!REMOVED>>	neguje -> zakrzepica <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1270, 1131] <type: LEFT>>
+R29	Neg Arg1:T18 Arg2:T13 <<REDUNDANT!!!REMOVED>>	neguje -> rak wątroby <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1270, 1181] <type: LEFT>>
+R30	Neg Arg1:T18 Arg2:T16 <<REDUNDANT!!!REMOVED>>	neguje -> Alergie <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1270, 1195] <type: LEFT>>
+R31	Neg Arg1:T18 Arg2:T17 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1270, 1212] <type: LEFT>>
+R32	Neg Arg1:T18 Arg2:T19 << OK >>	neguje -> Alkohol  <RANK: 3> <info: start[1270, 1261] <type: LEFT>>
+R33	Neg Arg1:T18 Arg2:T20 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1270, 1278] <type: RIGHT>>
+R34	Neg Arg1:T18 Arg2:T11 <<REDUNDANT!!!REMOVED>>	neguje -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1270, 1073] <type: LEFT>>
+R35	Neg Arg1:T21 Arg2:T12 <<REDUNDANT!!!REMOVED>>	neguje -> zakrzepica <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1297, 1131] <type: LEFT>>
+R36	Neg Arg1:T21 Arg2:T13 <<REDUNDANT!!!REMOVED>>	neguje -> rak wątroby <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1297, 1181] <type: LEFT>>
+R37	Neg Arg1:T21 Arg2:T16 <<REDUNDANT!!!REMOVED>>	neguje -> Alergie <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1297, 1195] <type: LEFT>>
+R38	Neg Arg1:T21 Arg2:T17 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1297, 1212] <type: LEFT>>
+R39	Neg Arg1:T21 Arg2:T19 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1297, 1261] <type: LEFT>>
+R40	Neg Arg1:T21 Arg2:T20 << OK >>	neguje -> Uzależnienie inne  <RANK: 3> <info: start[1297, 1278] <type: LEFT>>
+R41	Neg Arg1:T21 Arg2:T11 <<REDUNDANT!!!REMOVED>>	neguje -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1297, 1073] <type: LEFT>>
+
+
+Sentence 12:
+Leki:
+Biosotal 40 mg 1/2 rano i wieczorem 
+
+R42	Drg Arg1:T27 Arg2:T28 << OK >>	Biosotal -> 40 mg 1/2 rano i wieczorem  <RANK: 3> <info: start[1341, 1350] <type: RIGHT>>
+
+
+Sentence 13:
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter ekg, rtg kl. piersiowej
+
+
+
+Sentence 14:
+Przewidywana liczba dni hospitalizacji: 5-7 dni
+------------------------------------------------
+
+
+
+Sentence 15:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 16:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.70[10^3/ul]
+    
+
+
+Sentence 17:
+RBC Krwinki czerwone:4.36[10^6/ul]
+    
+
+
+Sentence 18:
+HGB Hemoglobina:13.6[g/dl]
+    
+
+
+Sentence 19:
+HCT Hematokryt:37.8[%]
+    
+
+
+Sentence 20:
+MCV wskaźnik czerwonokrw:86.7[fl]
+    
+
+
+Sentence 21:
+MCH wskaźnik czerwonokrw:31.2[pg]
+    
+
+
+Sentence 22:
+MCHC wskaźnik czerwonokr:36.0[g/dl]
+    
+
+
+Sentence 23:
+PLT z morfologii:176[10^3/ul]
+    
+
+
+Sentence 24:
+RDW-SD:36.7[fl]
+    
+
+
+Sentence 25:
+RDW-CV:11.6[%]
+    PDW:11.9[fl]
+    MPV:10.2[fl]
+    
+
+
+Sentence 26:
+P-LCR:27.2[%]
+    
+
+
+Sentence 27:
+PCT (hematokryt płytkowy:0.18[%]
+    
+
+
+Sentence 28:
+NEUTR# wartość bezwzględ:2.12[10^3/ul]
+    
+
+
+Sentence 29:
+NEUTR%:45.1[%]
+    
+
+
+Sentence 30:
+LYMH# wartość bezwzględn:1.92[10^3/ul]
+    
+
+
+Sentence 31:
+LYMPH%:40.9[%]
+    
+
+
+Sentence 32:
+MONO# wartość bezwzględn:0.43[10^3/ul]
+    MONO%:9.1[%]
+    
+
+
+Sentence 33:
+EO# wartość bezwzględna:0.19[10^3/ul]
+    
+
+
+Sentence 34:
+EO%:4.0[%]
+    
+
+
+Sentence 35:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    BASO%:0.9[%]
+    
+
+
+Sentence 36:
+NRBC %:0.0[%]
+    
+
+
+Sentence 37:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 38:
+Badanie ogólne moczu
+    
+
+
+Sentence 39:
+barwa:żółty[ ]
+    
+
+
+Sentence 40:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 41:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 42:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 43:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 44:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 45:
+ciężar właściwy:1.021[ ]
+    
+
+
+Sentence 46:
+pH:5.0[ ]
+    
+
+
+Sentence 47:
+białko:nieobecne[ ]
+    
+
+
+Sentence 48:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 49:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 50:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 51:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 52:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 53:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 54:
+nabłonki okrągłe:pojedyncze[w preparacie]
+    
+
+
+Sentence 55:
+leukocyty:4 /ul[ul]
+    erytrocyty świeże:1 /ul[ul]
+    śluz:liczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 56:
+TSH: TSH:2.02[uIU/ml]
+
+
+
+Sentence 57:
+FT3: FT3:2.66[pg/ml]
+
+
+
+Sentence 58:
+FT4: FT4:1.36[ng/dl]
+
+
+
+Sentence 59:
+ALAT: ALAT:14[U/L]
+ASPAT: ASPAT:18[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 60:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 61:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 62:
+Kreatynina + GFR
+    
+
+
+Sentence 63:
+Kreatynina w surowicy:0.84[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 64:
+MDRD ze stan:70.1[ml/min/1,73 m^2]
+
+
+
+Sentence 65:
+Mocznik: Mocznik:34[mg/dl]
+
+
+
+Sentence 66:
+Kwas moczowy: Kwas moczowy:4.9[mg/dl]
+
+
+
+Sentence 67:
+Lipidogram
+    
+
+
+Sentence 68:
+Cholesterol całkowity:191[mg/dl]
+    
+
+
+Sentence 69:
+Cholesterol HDL:52[mg/dl]
+    
+
+
+Sentence 70:
+Cholestrol LDL:126[mg/dl]
+    
+
+
+Sentence 71:
+Triglicerydy:61[mg/dl]
+    
+
+
+Sentence 72:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:81[mg/dl]
+
+
+
+Sentence 73:
+------------------------------------------------
+
+
+
+Sentence 74:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 75:
+I49.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 76:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 77:
+89.501
+C55
+A01
+89.502
+I81
+L43
+N45
+L69
+O55
+I17
+M45
+M37
+I19
+O35
+N13
+88.721
+O69
+
+
+
+Sentence 78:
+------------------------------------------------
+
+

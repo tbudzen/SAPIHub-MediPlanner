@@ -1,0 +1,123 @@
+T1	Investigation 2691 2695	ECHO
+T2	Investigation 2697 2712	spiroergometria
+T3	Investigation 2714 2724	Holter-EKH
+T4	Investigation 2726 2729	RTG
+T5	Drug 2583 2588	Nedal
+T6	Drug_dose 2589 2606	5mg 1/2 tabl rano
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 2552 2559	Miansec
+T8	Drug_dose 2560 2582	30 mg 1 tabl wieczorem
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 2493 2503	Euthyrox N
+T10	Drug_dose 2504 2522	100 co drugi dzień
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 2523 2531	Euthyrox
+T12	Drug_dose 2532 2551	N 112 rano na czczo
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 2465 2475	Venlectine
+T14	Drug_dose 2476 2492	75mg 1 tabl rano
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Drug 2426 2432	Afobam
+T16	Drug_dose 2433 2464	0,25 mg 1 tabl rano i wieczorem
+R6	Drg Arg1:T15 Arg2:T16	
+T17	Condition 2344 2347	WZW
+N1	Reference T17 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T18	Condition 2354 2363	borelioza
+N2	Reference T18 ICD10:A69.2	Choroba z Lyme
+T19	Condition 2371 2374	tbc
+N3	Reference T19 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T20	Negation 2375 2378	(-)
+R7	Neg Arg1:T20 Arg2:T19	
+T21	Negation 2364 2369	( - )
+R8	Neg Arg1:T21 Arg2:T18	
+T22	Negation 2348 2351	(-)
+R9	Neg Arg1:T22 Arg2:T17	
+T23	Negation 2312 2315	nie
+T24	Negation 2296 2299	nie
+T25	Condition 2301 2310	Uczulenia
+N4	Reference T25 ICD10:T78.4	Alergia, nieokreślona
+R10	Neg Arg1:T23 Arg2:T25	
+T26	Behaviour 2283 2294	Inne używki
+R11	Neg Arg1:T24 Arg2:T26	
+T27	Condition 2210 2231	nadciśnienie tętnicze
+N5	Reference T27 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T28	Condition 2233 2260	zapalenie mięśnia sercowego
+A1	Status T28 Family
+N6	Reference T28 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+A2	Status T27 Family
+T29	Condition 2271 2282	tachykardia
+A3	Status T29 Family
+N7	Reference T29 ICD10:R00.0	Tachykardia, nieokreślona
+T30	Treatment 381 389	korekcji
+T31	Condition 390 422	ubytku przegrody międzykomorowej
+N8	Reference T31 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T32	Condition 424 444	międzyprzedsionkowej
+N9	Reference T32 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T33	Condition 450 478	drożnego przewodu tętniczego
+N10	Reference T33 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T34	Date 481 501	4-tym miesiącu życia
+R12	Dat Arg1:T34 Arg2:T33	
+R13	Dat Arg1:T34 Arg2:T32	
+R14	Dat Arg1:T34 Arg2:T31	
+R15	Dat Arg1:T34 Arg2:T30	
+T35	Condition 505 564	resztkowym przeciekiem na poziomie przegrody międzykomorowe
+T36	Condition 566 625	Ubytek przegrody międzyprzedsionkowej typu zatoki wieńcowej
+N11	Reference T36 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T37	Condition 627 634	Otyłość
+N12	Reference T37 ICD10:E66	Otyłość
+T38	Condition 636 659	Niedoczynność tarczycy.
+N13	Reference T38 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T39	Investigation_result 660 679	Krew utajona w kale
+T40	Drug 1208 1213	Nedal
+T41	Drug_dose 1214 1231	5mg 1/2 tabl rano
+R16	Drg Arg1:T40 Arg2:T41	
+T42	Drug 1177 1184	Miansec
+T43	Drug_dose 1185 1207	30 mg 1 tabl wieczorem
+R17	Drg Arg1:T42 Arg2:T43	
+T44	Drug 1109 1119	Euthyrox N
+T45	Drug_dose 1120 1138	100 co drugi dzień
+R18	Drg Arg1:T44 Arg2:T45	
+T46	Drug 1140 1150	Euthyrox N
+T47	Drug_dose 1151 1176	112 1 tabl. rano na czczo
+R19	Drg Arg1:T46 Arg2:T47	
+T48	Drug 1081 1091	Venlectine
+T49	Drug_dose 1092 1108	75mg 1 tabl rano
+R20	Drg Arg1:T48 Arg2:T49	
+T50	Drug 1042 1048	Afobam
+T51	Drug_dose 1049 1080	0,25 mg 1 tabl rano i wieczorem
+R21	Drg Arg1:T50 Arg2:T51	
+T52	Behaviour 959 978	prawidłowe żywienie
+T53	Behaviour 979 1007	regularna aktywność fizyczna
+T54	Treatment 2141 2174	usunięcie migdalka podniebiennego
+A4	Status T54 Historical_Insignificant
+T55	Date 2177 2182	2004r
+R22	Dat Arg1:T55 Arg2:T54	
+T56	Treatment 2112 2139	operacja kardiochirurgiczna
+T57	Date 2105 2110	1994r
+R23	Dat Arg1:T57 Arg2:T56	
+T58	Treatment 1377 1385	korekcji
+T59	Condition 1386 1418	ubytku przegrody międzykomorowej
+N14	Reference T59 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T60	Condition 1420 1440	międzyprzedsionkowej
+N15	Reference T60 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T61	Condition 1446 1474	drożnego przewodu tętniczego
+N16	Reference T61 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T62	Date 1477 1497	4-tym miesiącu życia
+R24	Dat Arg1:T62 Arg2:T61	
+R25	Dat Arg1:T62 Arg2:T60	
+R26	Dat Arg1:T62 Arg2:T59	
+R27	Dat Arg1:T62 Arg2:T58	
+T63	Condition 1501 1560	resztkowym przeciekiem na poziomie przegrody międzykomorwej
+T64	Condition 1562 1623	ubytkiem przegrody międzyprzedsionkowej typu zatoki wieńcowej
+N17	Reference T64 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T65	Symptom 1676 1686	zasłabnięć
+N18	Reference T65 ICD10:R55	Omdlenie i zapaść
+T66	Symptom 1692 1698	omdleń
+N19	Reference T66 ICD10:R55	Omdlenie i zapaść
+T67	Symptom 1839 1854	kołatania serca
+N20	Reference T67 ICD10:R00.2	Kołatanie serca
+T68	Investigation_result 1875 1909	RR w granicach 120/80-165/140 mmHg
+T69	Investigation_result 1921 1961	podwyższone wartości HR około 90-150/min
+T70	Symptom 1992 2057	dolegliwości bólowych w klatce piersiowej o charakterze ściskania
+N21	Reference T70 ICD10:R07.3	Inne bóle w klatce piersiowej
+T71	Symptom 2059 2082	uczucie braku powietrza

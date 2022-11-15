@@ -1,0 +1,28 @@
+T1	Treatment 488 509	korekcji anatomicznej
+T2	Date 514 525	11.07.2017r
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Drug 646 655	Midazolam
+T4	Drug 657 665	propofol
+T5	Drug 667 689	kroplówki nawadniające
+T6	Treatment 798 832	Kontrola w Poradni Kardiologicznej
+T7	Date 833 839	za rok
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Treatment 857 889	Dalsza opieka pediatryczna w POZ
+T9	Treatment 1051 1072	zabiegach naprawczych
+T10	Investigation 1087 1104	badania kontrolne
+T11	Drug 1150 1159	Augmentin
+T12	Condition 1169 1188	zapalenia migdałków
+N1	Reference T12 ICD10:J03.9	Ostre zapalenie migdałków podniebiennych, nieokreślone
+T13	Date 1200 1210	3 0-5 2019
+R3	Dat Arg1:T13 Arg2:T12	
+R4	Dat Arg1:T13 Arg2:T11	
+T14	Condition 448 471	Złożona wada serca dTGA
+N2	Reference T14 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T15	Condition 472 484	Taussig-Bing
+N3	Reference T15 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+T16	Condition 1027 1045	złożoną wada serca
+N4	Reference T16 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T17	Drug 1106 1120	na stałe leków
+T18	Negation 1121 1134	nie otrzymuje
+R5	Neg Arg1:T18 Arg2:T17	
+A1	Status T12 Historical_Insignificant

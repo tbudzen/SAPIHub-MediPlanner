@@ -1,0 +1,117 @@
+T1	Treatment 331 398	Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T2	Behaviour 422 517	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T3	Investigation 521 570	Okresowo kontrola lipidogramu, stężenia elektroli
+T4	Treatment 808 833	AVR ( Medtronic Hall 23 A
+T5	Date 835 842	06/2002
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Condition 857 890	łuszczki przy płatku bezwieńcowym
+A1	Source T6 Declared
+T7	Condition 900 925	3 udarach niedokrwiennych
+N1	Reference T7 ICD10:I63.9	Zawał mózgu, nieokreślony
+T8	Condition 928 948	prawej półkuli mózgu
+N2	Reference T8 ICD10:I63.9	Zawał mózgu, nieokreślony
+T9	Date 949 953	2003
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Condition 956 975	lewej półkuli mózgu
+N3	Reference T10 ICD10:I63.9	Zawał mózgu, nieokreślony
+T11	Date 976 980	2009
+R3	Dat Arg1:T11 Arg2:T10	
+T12	Condition 982 1001	lewej półkuli mózgu
+N4	Reference T12 ICD10:I63.9	Zawał mózgu, nieokreślony
+T13	Date 1002 1006	2014
+R4	Dat Arg1:T13 Arg2:T12	
+T14	Condition 1016 1031	1 epizodzie TIA
+N5	Reference T14 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T15	Date 1033 1037	2006
+R5	Dat Arg1:T15 Arg2:T14	
+T16	Condition 1040 1071	Nieprawidłowa glikemia na czczo
+N6	Reference T16 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T17	Treatment 1214 1220	po AVR
+T18	Date 1222 1226	2002
+R6	Dat Arg1:T18 Arg2:T17	
+T19	Condition 1229 1241	po 3 udarach
+N7	Reference T19 ICD10:I63.9	Zawał mózgu, nieokreślony
+T20	Date 1243 1247	2003
+T21	Date 1249 1253	2009
+T22	Date 1255 1259	2014
+R7	Dat Arg1:T22 Arg2:T19	
+R8	Dat Arg1:T21 Arg2:T19	
+R9	Dat Arg1:T20 Arg2:T19	
+T23	Condition 1266 1284	po 1 epizodzie TIA
+N8	Reference T23 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T24	Date 1286 1290	2006
+R10	Dat Arg1:T24 Arg2:T23	
+T25	Investigation 1354 1357	TTE
+T26	Investigation_result 1358 1400	narastania gradientu na zastawce aortalnej
+R11	Inv Arg1:T25 Arg2:T26	
+T27	Negation 1482 1492	nie podaje
+T28	Symptom 1501 1513	dolegliwości
+R12	Neg Arg1:T27 Arg2:T28	
+T29	Condition 1567 1572	WZW B
+N9	Reference T29 ICD10:B16	Ostre wirusowe zapalenie wątroby typu B
+T30	Negation 1574 1575	-
+R13	Neg Arg1:T30 Arg2:T29	
+T31	Condition 1578 1586	Grużlica
+T32	Negation 1588 1589	-
+R14	Neg Arg1:T32 Arg2:T31	
+T33	Condition 1592 1601	Borelioza
+N11	Reference T33 ICD10:A69.2	Choroba z Lyme
+T34	Negation 1603 1604	-
+R15	Neg Arg1:T34 Arg2:T33	
+T35	Condition 1607 1611	Odra
+N12	Reference T35 ICD10:B05	Odra
+T36	Negation 1613 1614	-
+R16	Neg Arg1:T36 Arg2:T35	
+T37	Treatment 1632 1642	szczepiony
+A2	Source T37 Declared
+T38	Condition 1646 1661	Wywiad rodzinny
+A3	Status T38 Family
+T39	Condition 1672 1690	rak jelita grubego
+N13	Reference T39 ICD10:C18	Nowotwór złośliwy jelita grubego
+T40	Condition 1693 1697	płuc
+A4	Status T40 Family
+N14	Reference T40 ICD10:C78.0	Wtórny nowotwór złośliwy płuc
+A5	Status T39 Family
+T41	Behaviour 1699 1717	Palenie papierosów
+T42	Negation 1720 1726	neguje
+R17	Neg Arg1:T42 Arg2:T41	
+T43	Behaviour 1736 1763	alkohol – 1 piwo na tydzień
+N16	Reference T43 ICD10:Z72.1	Używanie alkoholu
+T44	Behaviour 1765 1769	inne
+T45	Negation 1770 1776	neguje
+R18	Neg Arg1:T45 Arg2:T44	
+T46	Condition 1778 1787	Uczulenia
+T47	Negation 1789 1795	neguje
+R19	Neg Arg1:T47 Arg2:T46	
+T48	Drug 1803 1810	Sintrom
+T49	Drug_dose 1811 1817	wg INR
+R20	Drg Arg1:T48 Arg2:T49	
+T50	Drug 1819 1829	Prestarium
+T51	Drug_dose 1830 1842	2x.5mg 1x1 R
+R21	Drg Arg1:T50 Arg2:T51	
+T52	Drug 1844 1849	Gasec
+T53	Drug_dose 1850 1866	20mg 1x1 kaps. R
+R22	Drg Arg1:T52 Arg2:T53	
+T54	Drug 1868 1876	Suvardio
+T55	Drug_dose 1877 1886	5mg 1x1 W
+R23	Drg Arg1:T54 Arg2:T55	
+T56	Drug 1888 1895	Lucetam
+T57	Drug_dose 1896 1909	1,2 2x1 tabl.
+R24	Drg Arg1:T56 Arg2:T57	
+T58	Drug 1910 1920	Lamotrixem
+T59	Drug_dose 1921 1928	100 2x1
+R25	Drg Arg1:T58 Arg2:T59	
+T60	Drug 1930 1941	Asmac forte
+T61	Drug_dose 1942 1947	R i W
+R26	Drg Arg1:T60 Arg2:T61	
+T62	Investigation 1968 1971	TEE
+T63	Investigation 1973 1975	CT
+T64	Investigation 1977 1980	RTG
+T65	Investigation 1982 1985	TTE
+N17	Reference T6 ICD10:Q89	Inne wrodzone wady rozwojowe niesklasyfikowane gdzie indziej
+N18	Reference T46 ICD10:T78.4	Alergia, nieokreślona
+N15	Reference T41 ICD10:Z72.0	Używanie tytoniu
+T66	Behaviour 1728 1734	Używki
+N10	Reference T31 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N19	Reference T44 ICD10:Z72	Problemy związane ze stylem życia
+N20	Reference T66 ICD10:Z72	Problemy związane ze stylem życia

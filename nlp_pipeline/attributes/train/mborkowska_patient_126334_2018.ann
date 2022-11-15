@@ -1,0 +1,237 @@
+T1	Investigation 4126 4136	echo serca
+T2	Investigation 4138 4158	echo przezprzełykowe
+T3	Investigation 4160 4163	TET
+T4	Investigation 4165 4169	ABPM
+T5	Investigation 4171 4177	Holter
+T6	Drug 4068 4075	Rozacom
+T7	Drug_dose 4076 4097	krople do oczu 2 x dz
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 4040 4047	Milurit
+T9	Drug_dose 4048 4067	100 mg 1 tabl. rano
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 4012 4018	Vit D3
+T11	Drug_dose 4019 4038	2 tys j. 1 x 1 tabl
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 3980 3987	Zaranta
+T13	Drug_dose 3988 4011	10 mg 1 tabl. wieczorem
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Drug 3954 3959	Acard
+T15	Drug 3926 3934	Beto ZOK
+T16	Drug 3890 3896	Letrox
+T17	Drug_dose 3897 3925	25ug 1/2 tabl. rano na czczo
+R5	Drg Arg1:T16 Arg2:T17	
+T18	Drug_dose 3935 3953	25 mg 1 tabl. rano
+R6	Drg Arg1:T15 Arg2:T18	
+T19	Drug_dose 3960 3979	75 mg  1 tabl. rano
+R7	Drg Arg1:T14 Arg2:T19	
+T20	Investigation 3047 3057	echo serca
+T21	Investigation 3059 3080	echo przezprzełykowe,
+T22	Investigation 3081 3084	TET
+T23	Investigation 3086 3090	ABPM
+T24	Investigation 3092 3098	Holter
+T25	Investigation 3100 3118	RTG kl. piersiowej
+T26	Drug 3011 3019	Ginkofar
+T27	Drug 3004 3010	Vit D3
+T28	Drug 2974 2980	Zahron
+T29	Drug_dose 2981 3003	5 mg 1 tabl. wieczorem
+R8	Drg Arg1:T28 Arg2:T29	
+T30	Drug 2948 2953	acard
+T31	Drug_dose 2954 2973	75 mg  1 tabl. rano
+R9	Drg Arg1:T30 Arg2:T31	
+T32	Drug 2914 2920	Letrox
+T33	Drug_dose 2921 2947	25ug 1 tabl. rano na czczo
+R10	Drg Arg1:T32 Arg2:T33	
+T34	Drug 2098 2105	Rozacom
+T35	Drug_dose 2106 2127	krople do oczu 2 x dz
+R11	Drg Arg1:T34 Arg2:T35	
+T36	Drug 2070 2077	Milurit
+T37	Drug_dose 2078 2097	100 mg 1 tabl. rano
+R12	Drg Arg1:T36 Arg2:T37	
+T38	Drug 2041 2048	Vit. D3
+T39	Drug_dose 2049 2069	2000j.  1 tabl. rano
+R13	Drg Arg1:T38 Arg2:T39	
+T40	Drug 2009 2016	Zaranta
+T41	Drug_dose 2017 2040	10 mg 1 tabl. wieczorem
+R14	Drg Arg1:T40 Arg2:T41	
+T42	Drug 1979 1984	Acard
+T43	Drug_dose 1985 2008	75 mg 1 tabl. wieczorem
+R15	Drg Arg1:T42 Arg2:T43	
+T44	Drug 1948 1958	Concor COR
+T45	Drug_dose 1959 1978	2,5 mg 1 tabl. rano
+R16	Drg Arg1:T44 Arg2:T45	
+T46	Drug 1923 1929	Letrox
+T47	Drug_dose 1930 1947	50ug 1 tabl. rano
+R17	Drg Arg1:T46 Arg2:T47	
+T48	Drug 1168 1179	Betaloc ZOK
+T49	Drug 1137 1143	Zahron
+T50	Drug 1107 1112	Acard
+T51	Drug 1079 1085	Letrox
+T52	Drug_dose 1086 1106	25 ug 1/2 tabl. rano
+R18	Drg Arg1:T51 Arg2:T52	
+T53	Drug_dose 1113 1136	75 mg 1 tabl. wieczorem
+R19	Drg Arg1:T50 Arg2:T53	
+T54	Drug_dose 1144 1167	10 mg 1 tabl. wieczorem
+R20	Drg Arg1:T49 Arg2:T54	
+T55	Drug_dose 1180 1198	25 mg 1 tabl. rano
+R21	Drg Arg1:T48 Arg2:T55	
+T56	Negation 3815 3825	nie podaje
+T57	Negation 3793 3803	nie podaje
+T58	Negation 3762 3770	nie pali
+T59	Date 3771 3778	od 2015
+T60	Condition 3804 3813	Uczulenia
+N1	Reference T60 ICD10:T78.4	Alergia, nieokreślona
+R22	Neg Arg1:T56 Arg2:T60	
+T61	Behaviour 3780 3791	Inne używki
+R23	Neg Arg1:T57 Arg2:T61	
+T62	Behaviour 3745 3761	Palenie tytoniu:
+N2	Reference T62 ICD10:Z72.0	Używanie tytoniu
+R24	Neg Arg1:T58 Arg2:T62	
+R25	Dat Arg1:T59 Arg2:T62	
+T63	Condition 3733 3743	zatorowość
+A1	Status T63 Family
+N3	Reference T63 ICD10:I74	Zatorowość i zakrzepica tętnicza
+T64	Negation 3697 3707	nie podaje
+T65	Condition 3685 3694	borelioza
+N4	Reference T65 ICD10:A69.2	Choroba z Lyme
+R26	Neg Arg1:T64 Arg2:T65	
+T66	Condition 3680 3683	WZW
+N5	Reference T66 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+R27	Neg Arg1:T64 Arg2:T66	
+T67	Treatment 3639 3652	appendektomii
+A2	Status T67 Historical_Insignificant
+T68	Negation 2839 2849	nie podaje
+T69	Negation 2817 2827	nie podaje
+T70	Negation 2786 2794	nie pali
+T71	Date 2795 2803	od 2015r
+T72	Behaviour 2769 2784	Palenie tytoniu
+N6	Reference T72 ICD10:Z72.0	Używanie tytoniu
+R28	Neg Arg1:T70 Arg2:T72	
+R29	Dat Arg1:T71 Arg2:T72	
+T73	Behaviour 2804 2815	Inne używki
+R30	Neg Arg1:T69 Arg2:T73	
+T74	Condition 2828 2837	Uczulenia
+N7	Reference T74 ICD10:T78.4	
+R31	Neg Arg1:T68 Arg2:T74	
+T75	Behaviour 1868 1887	prawidłowe żywienie
+T76	Behaviour 1888 1916	regularna aktywność fizyczna
+T77	Behaviour 1003 1048	stały, umiarkowany, aerobowy wysiłek fizyczny
+T78	Behaviour 959 1002	dieta niskocholesterolowa, niskoglikemiczna
+T79	Investigation 892 932	kontrola lipidogramu i hormonów tarczycy
+T80	Date 934 958	najbliższa za 6 tygodni)
+R32	Dat Arg1:T80 Arg2:T79	
+T81	Investigation 439 460	Obserwacja w kierunku
+T82	Condition 461 489	przetrwałego otworu owalnego
+N8	Reference T82 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T83	Condition 491 494	PFO
+N9	Reference T83 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T84	Negation 498 507	negatywna
+R33	Neg Arg1:T84 Arg2:T83	
+R34	Neg Arg1:T84 Arg2:T82	
+T85	Condition 509 549	Łagodne komorowe zaburzenia rytmu serca.
+N10	Reference T85 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T86	Condition 559 562	TIA
+N11	Reference T86 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T87	Date 564 569	2017r
+R35	Dat Arg1:T87 Arg2:T86	
+T88	Condition 1467 1470	TIA
+N12	Reference T88 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T89	Date 1471 1477	(2017r
+R36	Dat Arg1:T89 Arg2:T88	
+T90	Condition 2360 2393	incydent utraty świadomości (TIA)
+N13	Reference T90 ICD10:G45.9	
+T91	Condition 3433 3436	TIA
+N14	Reference T91 ICD10:G45.9	
+T92	Date 3438 3444	2017r)
+R37	Dat Arg1:T92 Arg2:T91	
+T93	Symptom 3366 3382	kołatania serca,
+N15	Reference T93 ICD10:R00.2	Kołatanie serca
+T94	Date 3391 3410	w godzinach nocnych
+R38	Dat Arg1:T94 Arg2:T93	
+T95	Condition 3446 3481	subkliniczna niedoczynność tarczycy
+N16	Reference T95 ICD10:E02	Subkliniczna postać niedoczynności tarczycy z powodu niedoboru jodu
+T96	Condition 3508 3523	zaćmy obuocznej
+N17	Reference T96 ICD10:H26.8	Inne określone postacie zaćmy
+T97	Treatment 3499 3507	operacji
+T98	Date 3525 3530	2013r
+R39	Dat Arg1:T98 Arg2:T96	
+R40	Dat Arg1:T98 Arg2:T97	
+T99	Condition 3533 3543	niedosłuch
+T100	Condition 3545 3577	zmiany zwyrodnieniowe kręgosłupa
+N18	Reference T100 ICD10:M47	
+T101	Treatment 3587 3610	operacji kolana prawego
+A3	Status T101 Historical_Insignificant
+T102	Condition 2757 2767	zatorowość
+A4	Status T102 Family
+N19	Reference T102 ICD10:I74	Zatorowość i zakrzepica tętnicza
+T103	Condition 2709 2718	borelioza
+N20	Reference T103 ICD10:A69.2	
+T104	Condition 2704 2707	WZW
+N21	Reference T104 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T105	Negation 2721 2731	nie podaje
+R41	Neg Arg1:T105 Arg2:T103	
+R42	Neg Arg1:T105 Arg2:T104	
+T106	Treatment 2663 2676	appendektomii
+A5	Status T106 Family
+T107	Condition 2470 2505	subkliniczna niedoczynność tarczycy
+N22	Reference T107 ICD10:E02	Subkliniczna postać niedoczynności tarczycy z powodu niedoboru jodu
+T108	Condition 2507 2513	jaskra
+N23	Reference T108 ICD10:H40.9	Jaskra, nieokreślona
+T109	Condition 2532 2547	zaćmy obuocznej
+N24	Reference T109 ICD10:H26.8	Inne określone postacie zaćmy
+T110	Date 2549 2554	2013r
+T111	Treatment 2523 2531	operacji
+R43	Dat Arg1:T110 Arg2:T109	
+R44	Dat Arg1:T110 Arg2:T111	
+T112	Condition 2557 2567	niedosłuch
+T113	Condition 2569 2601	zmiany zwyrodnieniowe kręgosłupa
+N25	Reference T113 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T114	Treatment 2611 2634	operacji kolana prawego
+A6	Status T114 Historical_Insignificant
+T115	Investigation_result 2304 2330	wahań ciśnienia tętniczego
+T116	Symptom 2332 2345	kołatań serca
+N26	Reference T116 ICD10:R00.2	Kołatanie serca
+T117	Condition 1416 1447	Komorowe zaburzenia rytmu serca
+N27	Reference T117 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T118	Condition 1480 1502	Niedoczynność tarczycy
+N28	Reference T118 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T119	Condition 1504 1510	Jaskra
+N29	Reference T119 ICD10:H40.9	Jaskra, nieokreślona
+T120	Condition 1529 1544	zaćmy obuocznej
+N30	Reference T120 ICD10:H26.8	Inne określone postacie zaćmy
+T121	Treatment 1520 1528	operacji
+T122	Date 1546 1551	2013r
+A7	Status T120 Historical_Insignificant
+A8	Status T121 Historical_Insignificant
+R45	Dat Arg1:T122 Arg2:T120	
+R46	Dat Arg1:T122 Arg2:T121	
+T123	Condition 1554 1564	Niedosłuch
+T124	Condition 1566 1598	Zmiany zwyrodnieniowe kręgosłupa
+T125	Treatment 1608 1631	operacji kolana prawego
+A9	Status T125 Historical_Insignificant
+T126	Treatment 1653 1666	appendektomii
+A10	Status T126 Historical_Insignificant
+T127	Condition 572 607	Subkliniczna niedoczynność tarczycy
+N32	Reference T127 ICD10:E02	Subkliniczna postać niedoczynności tarczycy z powodu niedoboru jodu
+T128	Condition 643 666	Hiperlipidemia mieszana
+N33	Reference T128 ICD10:E78.2	Hiperlipidemia mieszana
+T129	Condition 609 641	Nieprawidłowa tolerancja glukozy
+N34	Reference T129 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+A11	Status T109 Historical_Insignificant
+A12	Status T111 Historical_Insignificant
+A13	Status T96 Historical_Insignificant
+A14	Status T97 Historical_Insignificant
+A15	Source T82 Declared
+A16	Source T83 Declared
+N35	Reference T123 ICD10:H90	Upośledzenie słuchu przewodzeniowe i czuciowo-nerwowe
+N36	Reference T112 ICD10:H90	Upośledzenie słuchu przewodzeniowe i czuciowo-nerwowe
+N37	Reference T73 ICD10:Z72	Problemy związane ze stylem życia
+N38	Reference T99 ICD10:H90	
+N39	Reference T61 ICD10:Z72	Problemy związane ze stylem życia
+T130	Treatment 677 691	farmakoterapii
+T131	Treatment 801 828	dalsza opieka w poradni POZ
+T132	Treatment 838 880	kontrola kardiologiczna, endokrynologiczna
+N31	Reference T124 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T133	Treatment 1787 1815	dalsza opieka w poradni POZ,
+T134	Treatment 1825 1867	kontrola kardiologiczna, endokrynologiczna
+T135	Date 2351 2359	09.2017r
+R47	Dat Arg1:T135 Arg2:T90	

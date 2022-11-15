@@ -1,0 +1,570 @@
+T1	Investigation 12078 12082	ECHO
+T2	Drug 11971 11977	Afoban
+T3	Drug 11954 11963	Lacidofil
+T4	Drug 11905 11913	Cipronex
+T5	Drug 11881 11889	Spironol
+T6	Drug 11856 11865	Simvacard
+T7	Drug 11833 11840	Citaxin
+T8	Drug 11806 11819	Cerebrolizyna
+T9	Drug 11750 11767	Nutrison Protison
+T10	Drug 11728 11735	Clexane
+T11	Drug_dose 11736 11749	0,6 mg 2x1 sc
+R1	Drg Arg1:T10 Arg2:T11	
+T12	Drug_dose 11768 11805	1000ml przepływ 30-80ml/h 8-22 do PEG
+R2	Drg Arg1:T9 Arg2:T12	
+T13	Drug_dose 11820 11832	10 ml 3x1 iv
+R3	Drg Arg1:T8 Arg2:T13	
+T14	Drug_dose 11841 11855	20 mg 1-0-0 po
+R4	Drg Arg1:T7 Arg2:T14	
+T15	Drug_dose 11866 11880	40 mg 0-0-1 po
+R5	Drg Arg1:T6 Arg2:T15	
+T16	Drug_dose 11890 11904	25 mg 0-1-0 po
+R6	Drg Arg1:T5 Arg2:T16	
+T17	Drug_dose 11914 11953	500 mg 1-0-1 po kontynuacja przez 7 dni
+R7	Drg Arg1:T4 Arg2:T17	
+T18	Drug_dose 11964 11970	3x1 po
+R8	Drg Arg1:T3 Arg2:T18	
+T19	Drug_dose 11978 11993	0,5 mg 1-0-2 po
+R9	Drg Arg1:T2 Arg2:T19	
+T20	Condition 11522 11525	WZW
+T21	Condition 11532 11541	borelioza
+N2	Reference T21 ICD10:A69.2	Choroba z Lyme
+T22	Condition 11549 11552	tbc
+N3	Reference T22 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T23	Negation 11553 11556	(-)
+R10	Neg Arg1:T23 Arg2:T22	
+T24	Negation 11542 11547	( - )
+R11	Neg Arg1:T24 Arg2:T21	
+T25	Negation 11526 11529	(-)
+R12	Neg Arg1:T25 Arg2:T20	
+T26	Behaviour 11574 11600	warunki mieszkaniowe dobre
+T27	Negation 11490 11493	nie
+T28	Negation 11474 11477	nie
+T29	Negation 11456 11459	nie
+T30	Condition 11479 11488	Uczulenia
+R13	Neg Arg1:T27 Arg2:T30	
+T31	Behaviour 11461 11472	Inne używki
+R14	Neg Arg1:T28 Arg2:T31	
+T32	Behaviour 11439 11455	Palenie tytoniu:
+N5	Reference T32 ICD10:Z72.0	Używanie tytoniu
+R15	Neg Arg1:T29 Arg2:T32	
+T33	Treatment 11416 11432	cięcie cesarskie
+T34	Date 11433 11438	2006r
+R16	Dat Arg1:T34 Arg2:T33	
+T35	Investigation 9604 9608	ECHO
+T36	Drug 9497 9503	Afoban
+T37	Drug_dose 9504 9519	0,5 mg 1-0-2 po
+R17	Drg Arg1:T36 Arg2:T37	
+T38	Drug 9480 9489	Lacidofil
+T39	Drug_dose 9490 9496	3x1 po
+R18	Drg Arg1:T38 Arg2:T39	
+T40	Drug 9431 9439	Cipronex
+T41	Drug_dose 9440 9479	500 mg 1-0-1 po kontynuacja przez 7 dni
+R19	Drg Arg1:T40 Arg2:T41	
+T42	Drug 9407 9415	Spironol
+T43	Drug 9382 9391	Simvacard
+T44	Drug 9359 9366	Citaxin
+T45	Drug 9332 9345	Cerebrolizyna
+T46	Drug 9276 9293	Nutrison Protison
+T47	Drug_dose 9294 9331	1000ml przepływ 30-80ml/h 8-22 do PEG
+R20	Drg Arg1:T46 Arg2:T47	
+T48	Drug_dose 9346 9358	10 ml 3x1 iv
+R21	Drg Arg1:T45 Arg2:T48	
+T49	Drug_dose 9367 9381	20 mg 1-0-0 po
+R22	Drg Arg1:T44 Arg2:T49	
+T50	Drug_dose 9392 9406	40 mg 0-0-1 po
+R23	Drg Arg1:T43 Arg2:T50	
+T51	Drug_dose 9416 9430	25 mg 0-1-0 po
+R24	Drg Arg1:T42 Arg2:T51	
+T52	Drug 9254 9261	Clexane
+T53	Drug_dose 9262 9275	0,6 mg 2x1 sc
+R25	Drg Arg1:T52 Arg2:T53	
+T54	Condition 9048 9051	WZW
+T55	Condition 9058 9067	borelioza
+N7	Reference T55 ICD10:A69.2	Choroba z Lyme
+T56	Condition 9075 9078	tbc
+N8	Reference T56 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T57	Negation 9079 9082	(-)
+R26	Neg Arg1:T57 Arg2:T56	
+T58	Negation 9070 9073	- )
+R27	Neg Arg1:T58 Arg2:T55	
+T59	Negation 9052 9055	(-)
+R28	Neg Arg1:T59 Arg2:T54	
+T60	Behaviour 9100 9126	warunki mieszkaniowe dobre
+T61	Negation 9016 9019	nie
+T62	Negation 9000 9003	nie
+T63	Negation 8982 8985	nie
+T64	Treatment 8942 8958	cięcie cesarskie
+T65	Date 8959 8964	2006r
+R29	Dat Arg1:T65 Arg2:T64	
+T66	Behaviour 8965 8981	Palenie tytoniu:
+N9	Reference T66 ICD10:Z72.0	Używanie tytoniu
+R30	Neg Arg1:T63 Arg2:T66	
+T67	Behaviour 8987 8998	Inne używki
+R31	Neg Arg1:T62 Arg2:T67	
+T68	Condition 9005 9014	Uczulenia
+R32	Neg Arg1:T61 Arg2:T68	
+T69	Investigation 7929 7939	Echo serca
+T70	Drug 7839 7846	Proaxon
+T71	Drug 7792 7803	Kwetaplex  
+T72	Drug 7744 7759	Depakine Chrono
+T73	Drug 7719 7726	Citaxin
+T74	Drug 7697 7704	Kaldyum
+T75	Drug 7670 7679	Simvacard
+T76	Drug 7612 7629	Nutrison Protison
+T77	Drug 7562 7569	Clexane
+T78	Drug 7529 7532	IPP
+T79	Drug 7404 7410	Plavix
+T80	Drug 7447 7452	Acard
+T81	Drug_dose 7411 7444	75 mg 1x dz rano przez 3 miesięcy
+R33	Drg Arg1:T79 Arg2:T81	
+T82	Drug_dose 7453 7525	75 mg 1x dz wieczorem przez 6 miesięcy - następnie wg. zaleceń neurologa
+R34	Drg Arg1:T80 Arg2:T82	
+T83	Drug_dose 7533 7558	20 mg 1x dz rano na czczo
+R35	Drg Arg1:T78 Arg2:T83	
+T84	Drug_dose 7570 7611	0,4 mg  sc co 24 godziny przez 2 miesiące
+R36	Drg Arg1:T77 Arg2:T84	
+T85	Drug_dose 7630 7667	1000ml przepływ 30-80ml/h 8-22 do PEG
+R37	Drg Arg1:T76 Arg2:T85	
+T86	Drug_dose 7680 7694	40 mg 0-0-1 po
+R38	Drg Arg1:T75 Arg2:T86	
+T87	Drug_dose 7705 7715	1x dz rano
+R39	Drg Arg1:T74 Arg2:T87	
+T88	Drug_dose 7727 7741	20 mg 1-0-0 po
+R40	Drg Arg1:T73 Arg2:T88	
+T89	Drug_dose 7760 7790	2 x dz  - wg zaleceń neurologa
+R41	Drg Arg1:T72 Arg2:T89	
+T90	Drug_dose 7803 7837	1x dz rano - wg zaleceń psychiatry
+R42	Drg Arg1:T71 Arg2:T90	
+T91	Drug_dose 7847 7881	1x dz rano  - wg zaleceń neurologa
+R43	Drg Arg1:T70 Arg2:T91	
+T92	Drug 7884 7903	Hemofer prolongatum
+T93	Drug_dose 7904 7909	1-0-1
+R44	Drg Arg1:T92 Arg2:T93	
+T94	Behaviour 7352 7378	warunki mieszkaniowe dobre
+T95	Negation 7329 7335	neguje
+T96	Negation 7314 7317	nie
+T97	Negation 7297 7300	nie
+T98	Negation 7267 7278	brak danych
+T99	Negation 7218 7224	( -  )
+T100	Negation 7237 7242	( - )
+T101	Condition 7227 7236	borelioza
+N11	Reference T101 ICD10:A69.2	Choroba z Lyme
+R45	Neg Arg1:T100 Arg2:T101	
+T102	Condition 7214 7217	WZW
+N12	Reference T102 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+R46	Neg Arg1:T99 Arg2:T102	
+N6	Reference T54 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T103	Condition 7243 7264	W wywiadzie rodzinnym
+A1	Status T103 Family
+R47	Neg Arg1:T98 Arg2:T103	
+T104	Behaviour 7280 7296	Palenie tytoniu:
+N13	Reference T104 ICD10:Z72.0	Używanie tytoniu
+R48	Neg Arg1:T97 Arg2:T104	
+T105	Behaviour 7301 7312	Inne używki
+R49	Neg Arg1:T96 Arg2:T105	
+T106	Condition 7318 7327	Uczulenia
+N14	Reference T106 ICD10:T78.4	Alergia, nieokreślona
+R50	Neg Arg1:T95 Arg2:T106	
+T107	Treatment 813 871	może uczestniczyć w rehabilitacji ruchowej, usprawniającej
+T108	Behaviour 884 927	żywiona doustnie i dietą przemysłową do PEG
+T109	Investigation 995 1017	kontrola tracheostomii
+T110	Date 1018 1026	za 7 dni
+R51	Dat Arg1:T110 Arg2:T109	
+T111	Investigation 1067 1142	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek.
+T112	Investigation 1161 1196	kontrola ciśnienia tętniczego krwi.
+T113	Investigation 1245 1248	NMR
+T114	Condition 1277 1309	Infekcyjnego Zapalenia Wsierdzia
+N15	Reference T114 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T115	Date 1347 1392	 przez 6 miesięcy od zabiegu ( do 20.03.2019)
+R52	Dat Arg1:T115 Arg2:T114	
+T116	Drug 1396 1408	amoksycylina
+T117	Drug 1413 1423	ampicylina
+T118	Drug_dose 1424 1444	2 g doustnie lub i.v
+R53	Drg Arg1:T116 Arg2:T118	
+R54	Drg Arg1:T117 Arg2:T118	
+T119	Drug 1493 1505	klindamycyna
+T120	Drug_dose 1506 1530	600 mg doustnie lub i.v.
+R55	Drg Arg1:T119 Arg2:T120	
+T121	Drug 1589 1595	Plavix
+T122	Drug_dose 1596 1658	75 mg 1x dz rano przez 3 miesięcy  od zabiegu ( do 20.12.2018)
+R56	Drg Arg1:T121 Arg2:T122	
+T123	Drug 1661 1666	Acard
+T124	Drug_dose 1667 1750	75 mg 1x dz wieczorem przez 6 miesięcy od zabiegu - następnie wg. zaleceń neurologa
+R57	Drg Arg1:T123 Arg2:T124	
+T125	Drug 1754 1757	IPP
+T126	Drug_dose 1758 1783	20 mg 1x dz rano na czczo
+R58	Drg Arg1:T125 Arg2:T126	
+T127	Drug 1787 1794	Clexane
+T128	Drug_dose 1795 1968	0,4 mg  sc co 24 godziny przez 2 miesiące ( następnie do decyzji po Konsultacji w Poradni Chirurgi Naczyniowej , należy wziąć pod uwagę czy chora została w pełni uruchomona)
+R59	Drg Arg1:T127 Arg2:T128	
+T129	Drug 1973 1990	Nutrison Protison
+T130	Drug_dose 1991 2030	250ml przepływ 30-80ml/h 4 x dz  do PEG
+R60	Drg Arg1:T129 Arg2:T130	
+T131	Drug 2033 2042	Simvacard
+T132	Drug_dose 2043 2064	40 mg 0-0-1 wieczorem
+R61	Drg Arg1:T131 Arg2:T132	
+T133	Drug 2066 2073	Kaldyum
+T134	Drug_dose 2074 2084	1x dz rano
+R62	Drg Arg1:T133 Arg2:T134	
+T135	Drug 2088 2095	Citaxin
+T136	Drug_dose 2096 2107	20 mg 1-0-0
+R63	Drg Arg1:T135 Arg2:T136	
+T137	Drug 2109 2124	Depakine Chrono
+T138	Drug_dose 2125 2155	2 x dz  - wg zaleceń neurologa
+R64	Drg Arg1:T137 Arg2:T138	
+T139	Drug 2157 2168	Kwetaplex  
+T140	Drug_dose 2168 2202	1x dz rano - wg zaleceń psychiatry
+R65	Drg Arg1:T139 Arg2:T140	
+T141	Drug 2204 2211	Proaxon
+T142	Drug_dose 2212 2246	1x dz rano  - wg zaleceń neurologa
+R66	Drg Arg1:T141 Arg2:T142	
+T143	Drug 2248 2267	Hemofer prolongatum
+T144	Drug_dose 2268 2273	1-0-1
+R67	Drg Arg1:T143 Arg2:T144	
+T145	Drug 6060 6069	Flucofast
+T146	Drug_dose 6070 6187	100mg co 24 1x dz ( pierwsza dawka w domu w godzinach wieczornym 25.09.2018 ) następnie co 24 godziny przez ok 10 dni
+R68	Drg Arg1:T145 Arg2:T146	
+T147	Drug 6032 6051	Hemofer prolongatum
+T148	Drug_dose 6052 6057	1-0-1
+R69	Drg Arg1:T147 Arg2:T148	
+T149	Drug 6007 6013	Afoban
+T150	Drug_dose 6014 6029	0,5 mg 1-0-2 po
+R70	Drg Arg1:T149 Arg2:T150	
+T151	Drug 5989 5998	Lacidofil
+T152	Drug 5936 5944	Cipronex
+T153	Drug_dose 5999 6005	3x1 po
+R71	Drg Arg1:T151 Arg2:T153	
+T154	Drug_dose 5945 5986	500 mg 1-0-1 po kontynuacja przez 1 dnień
+R72	Drg Arg1:T152 Arg2:T154	
+T155	Drug 5915 5922	Kaldyum
+T156	Drug 5889 5898	Simvacard
+T157	Drug 5865 5872	Citaxin
+T158	Drug_dose 5923 5933	1x dz rano
+R73	Drg Arg1:T155 Arg2:T158	
+T159	Drug_dose 5899 5913	40 mg 0-0-1 po
+R74	Drg Arg1:T156 Arg2:T159	
+T160	Drug_dose 5873 5887	20 mg 1-0-0 po
+R75	Drg Arg1:T157 Arg2:T160	
+T161	Drug 5808 5825	Nutrison Protison
+T162	Drug_dose 5826 5863	1000ml przepływ 30-80ml/h 8-22 do PEG
+R76	Drg Arg1:T161 Arg2:T162	
+T163	Drug 5630 5637	Clexane
+T164	Drug_dose 5638 5804	0,6 mg  sc co 24 godziny przez 3 miesiące ( następnie do decyzji po Konsultacji w Poradni Chirurgi Naczyniowej , należy wziąć pod uwagę czy chora będzie nadal leżąca)
+R77	Drg Arg1:T163 Arg2:T164	
+T165	Drug 5598 5601	IPP
+T166	Drug_dose 5602 5627	20 mg 1x dz rano na czczo
+R78	Drg Arg1:T165 Arg2:T166	
+T167	Drug 5517 5522	Acard
+T168	Drug_dose 5523 5595	75 mg 1x dz wieczorem przez 6 miesięcy - następnie wg. zaleceń neurologa
+R79	Drg Arg1:T167 Arg2:T168	
+T169	Drug 5475 5481	Plavix
+T170	Drug_dose 5482 5515	75 mg 1x dz rano przez 3 miesięcy
+R80	Drg Arg1:T169 Arg2:T170	
+T171	Behaviour 5406 5423	Pielęgnacja stomy
+T172	Treatment 5272 5343	Wymaga dalszych ćwiczeń rehabilitacyjnych krtani i karmienia przez peg.
+T173	Condition 5003 5035	Infekcyjnego Zapalenia Wsierdzia
+N16	Reference T173 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T174	Date 5073 5101	 przez 6 miesięcy od zabiegu
+T175	Drug 5106 5118	amoksycylina
+T176	Drug 5123 5133	ampicylina
+T177	Drug_dose 5134 5154	2 g doustnie lub i.v
+T178	Drug 5203 5215	klindamycyna
+T179	Drug_dose 5216 5240	600 mg doustnie lub i.v.
+R81	Drg Arg1:T176 Arg2:T177	
+R82	Drg Arg1:T175 Arg2:T177	
+R83	Drg Arg1:T178 Arg2:T179	
+T180	Investigation 4972 4975	NMR
+T181	Investigation 4889 4923	kontrola ciśnienia tętniczego krwi
+T182	Investigation 4796 4870	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T183	Investigation 4725 4747	kontrola tracheostomii
+T184	Date 4748 4756	za 7 dni
+R84	Dat Arg1:T184 Arg2:T183	
+T185	Behaviour 4679 4711	żywiona dietą przemysłową do PEG
+T186	Behaviour 4599 4631	Należy unikać forsownych ćwiczeń
+T187	Date 4632 4665	przez pierwszy miesiąc po zabiegu
+R85	Dat Arg1:T187 Arg2:T186	
+T188	Behaviour 4539 4597	może uczestniczyć w rehabilitacji ruchowej, usprawniającej
+T189	Treatment 2510 2565	zamknięcie zestawem Occlutech Figulla Flex II PFO 27/30
+T190	Date 2567 2578	20.09.2018)
+R86	Dat Arg1:T190 Arg2:T189	
+T191	Condition 2580 2625	Łagodna niedomykalność zastawki trójdzielnej.
+N17	Reference T191 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T192	Condition 3624 3669	Łagodna niedomykalność zastawki trójdzielnej.
+N18	Reference T192 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T193	Condition 6619 6664	Łagodna niedomykalność zastawki trójdzielnej.
+N19	Reference T193 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T194	Condition 2635 2697	przebytym udarze niedokrwiennym mózgu lewobocznej części mostu
+T195	Date 2699 2710	05.09.2018)
+R87	Dat Arg1:T195 Arg2:T194	
+T196	Condition 3764 3831	przebytym udarze niedokrwiennym mózgu z  zakresu tętnicy podstawnej
+N21	Reference T196 ICD10:I63	Zawał mózgu
+T197	Condition 2720 2787	przebytym udarze niedokrwiennym mózgu z  zakresu tętnicy podstawnej
+N22	Reference T197 ICD10:I63	Zawał mózgu
+T198	Treatment 2788 2812	leczonym trombolitycznie
+T199	Date 2814 2822	07.2018)
+R88	Dat Arg1:T199 Arg2:T198	
+R90	Dat Arg1:T199 Arg2:T197	
+T200	Condition 2834 2858	niewydolnością oddechową
+R89	Dat Arg1:T199 Arg2:T200	
+N23	Reference T200 ICD10:J96	Niewydolność oddechowa niesklasyfikowana gdzie indziej
+T201	Condition 3878 3902	niewydolnością oddechową
+N24	Reference T201 ICD10:J96	Niewydolność oddechowa niesklasyfikowana gdzie indziej
+T202	Condition 6873 6898	niewydolnością oddechową.
+N25	Reference T202 ICD10:J96	Niewydolność oddechowa niesklasyfikowana gdzie indziej
+T203	Condition 8314 8338	niewydolnością oddechową
+N26	Reference T203 ICD10:J96	Niewydolność oddechowa niesklasyfikowana gdzie indziej
+T204	Condition 10788 10812	niewydolnością oddechową
+N27	Reference T204 ICD10:J96	Niewydolność oddechowa niesklasyfikowana gdzie indziej
+T205	Condition 2860 2888	Niedowład czterokończynowym.
+N28	Reference T205 ICD10:G82.5	Porażenie czterokończynowe, nieokreślone
+T206	Condition 3904 3931	Niedowład czterokończynowym
+N29	Reference T206 ICD10:G82.5	Porażenie czterokończynowe, nieokreślone
+T207	Condition 6899 6926	Niedowład czterokończynowym
+N30	Reference T207 ICD10:G82.5	Porażenie czterokończynowe, nieokreślone
+T208	Condition 8380 8409	niedowładem czterokończynowym
+N31	Reference T208 ICD10:G82.5	Porażenie czterokończynowe, nieokreślone
+T209	Condition 10174 10203	niedowładem czterokończynowym
+N32	Reference T209 ICD10:G82.5	Porażenie czterokończynowe, nieokreślone
+T210	Condition 10854 10883	niedowładem czterokończynowym
+N33	Reference T210 ICD10:G82.5	Porażenie czterokończynowe, nieokreślone
+T211	Condition 12648 12678	niedowładem czterokończynowym,
+N34	Reference T211 ICD10:G82.5	Porażenie czterokończynowe, nieokreślone
+T212	Condition 6759 6826	przebytym udarze niedokrwiennym mózgu z  zakresu tętnicy podstawnej
+N35	Reference T212 ICD10:I63	Zawał mózgu
+T213	Date 6852 6861	(07.2018)
+T214	Treatment 6827 6851	leczonym trombolitycznie
+T215	Condition 6674 6736	przebytym udarze niedokrwiennym mózgu lewobocznej części mostu
+T216	Date 6738 6749	05.09.2018)
+R91	Dat Arg1:T216 Arg2:T215	
+R92	Dat Arg1:T213 Arg2:T214	
+R93	Dat Arg1:T213 Arg2:T212	
+R94	Dat Arg1:T213 Arg2:T202	
+T217	Treatment 6549 6604	zamknięciu zestawem Occlutech Figulla Flex II PFO 27/30
+T218	Date 6605 6617	(20.09.2018)
+R95	Dat Arg1:T218 Arg2:T217	
+T219	Symptom 6419 6431	zasłabnięcia
+N37	Reference T219 ICD10:R55	Omdlenie i zapaść
+T220	Symptom 6441 6465	bóle w klatce piersiowej
+N38	Reference T220 ICD10:R07.3	Inne bóle w klatce piersiowej
+T221	Condition 6995 7009	Niedokrwistość
+N39	Reference T221 ICD10:D64.9	Niedokrwistość, nieokreślona
+T222	Treatment 7019 7043	zamknięciu tracheostomii
+T223	Date 7044 7051	10.2018
+R96	Dat Arg1:T223 Arg2:T222	
+T224	Symptom 6475 6492	uczucie duszności
+N40	Reference T224 ICD10:R06.0	Duszność
+T225	Symptom 6502 6525	uczucie kołatania serca
+N41	Reference T225 ICD10:R00.2	Kołatanie serca
+T226	Negation 6495 6501	neguje
+R97	Neg Arg1:T226 Arg2:T225	
+T227	Negation 6468 6474	neguje
+R98	Neg Arg1:T227 Arg2:T224	
+T228	Negation 6434 6440	neguje
+R99	Neg Arg1:T228 Arg2:T220	
+T229	Negation 6412 6418	Neguje
+R100	Neg Arg1:T229 Arg2:T219	
+T230	Condition 6395 6398	PFO
+N42	Reference T230 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T231	Date 6399 6409	20.09.2018
+T232	Treatment 6376 6394	zabiegu zamknięcia
+R101	Dat Arg1:T231 Arg2:T230	
+R102	Dat Arg1:T231 Arg2:T232	
+T233	Condition 2956 2970	Niedokrwistość
+N43	Reference T233 ICD10:D64.9	Niedokrwistość, nieokreślona
+T234	Treatment 2980 3004	zamknięciu tracheostomii
+T235	Date 3005 3012	10.2018
+R103	Dat Arg1:T235 Arg2:T234	
+T236	Condition 3230 3233	PFO
+N44	Reference T236 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T237	Condition 3529 3552	Przetrwały otwór owalny
+N45	Reference T237 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T238	Treatment 3554 3609	Zamknięcie zestawem Occlutech Figulla Flex II PFO 27/30
+T239	Date 3610 3621	(20.09.2018
+R104	Dat Arg1:T239 Arg2:T238	
+T240	Treatment 3832 3856	leczonym trombolitycznie
+T241	Date 3857 3866	(07.2018)
+R105	Dat Arg1:T241 Arg2:T240	
+R106	Dat Arg1:T241 Arg2:T196	
+R107	Dat Arg1:T241 Arg2:T201	
+T242	Condition 3679 3741	przebytym udarze niedokrwiennym mózgu lewobocznej części mostu
+T243	Date 3743 3754	05.09.2018)
+R108	Dat Arg1:T243 Arg2:T242	
+T244	Condition 4027 4041	Niedokrwistość
+N47	Reference T244 ICD10:D64.9	Niedokrwistość, nieokreślona
+T245	Condition 6936 6993	przebytej zakrzepicy żył głębokich prawej kończyny dolnej
+N48	Reference T245 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T246	Condition 8461 8508	zakrzepicy żył głębokich prawej kończyny dolnej
+N49	Reference T246 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T247	Date 8509 8517	09.2018)
+R109	Dat Arg1:T247 Arg2:T246	
+T248	Condition 10935 10982	zakrzepicy żył głębokich prawej kończyny dolnej
+N50	Reference T248 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T249	Date 10983 10991	09.2018)
+R110	Dat Arg1:T249 Arg2:T248	
+T250	Condition 10302 10349	zakrzepicy żył głębokich prawej kończyny dolnej
+N51	Reference T250 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T251	Date 10350 10357	09.2018
+R111	Dat Arg1:T251 Arg2:T250	
+T252	Condition 3941 3999	przebytej zakrzepicy żył głębokich prawej kończyny dolnej.
+N52	Reference T252 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T253	Condition 3253 3300	zakrzepicy żył głębokich prawej kończyny dolnej
+N53	Reference T253 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T254	Condition 2897 2954	przebytej zakrzepicy żył głębokich prawej kończyny dolnej
+N54	Reference T254 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T255	Condition 3243 3249	2x MI,
+N55	Reference T255 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T256	Condition 4000 4025	Infekcja ukłądu moczowego
+N56	Reference T256 ICD10:N39.0	Zakażenie układu moczowego o nieokreślonym umiejscowieniu
+T257	Treatment 7071 7088	 cięcie cesarskie
+T258	Date 7089 7094	2006r
+R112	Dat Arg1:T258 Arg2:T257	
+T259	Investigation_result 8126 8173	udarze niedokrwiennym lewostronnej części mostu
+N57	Reference T259 ICD10:I63	Zawał mózgu
+T260	Investigation 8188 8191	MRI
+T261	Date 8192 8202	07.09.2018
+R113	Inv Arg1:T260 Arg2:T259	
+R114	Dat Arg1:T261 Arg2:T260	
+T262	Condition 8212 8267	udarze niedokrwiennym mózgu z zakresu tętnicy postawnej
+N58	Reference T262 ICD10:I63	Zawał mózgu
+T263	Treatment 8268 8292	leczonym trombolitycznie
+T264	Date 8293 8302	(07.2018)
+R115	Dat Arg1:T264 Arg2:T262	
+R116	Dat Arg1:T264 Arg2:T263	
+T265	Treatment 8414 8438	zamknięciu tracheostomii
+T266	Date 8446 8456	14.09.2018
+R117	Dat Arg1:T266 Arg2:T265	
+T267	Condition 8521 8537	niedokrwistością
+N59	Reference T267 ICD10:D64.9	Niedokrwistość, nieokreślona
+T268	Investigation 8562 8565	TEE
+T269	Investigation_result 8566 8594	PFO z ciągłym przepływem L-P
+N60	Reference T269 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R118	Inv Arg1:T268 Arg2:T269	
+T270	Condition 8754 8761	migreny
+N61	Reference T270 ICD10:G43.9	Migrena, nieokreślona
+T271	Symptom 8813 8822	przytomna
+T272	Symptom 8824 8865	w ograniczonym kontakcie słowno-logicznym
+T273	Symptom 8879 8888	dysartrią
+T274	Symptom 8891 8921	niezbornością czterokończynową
+T275	Treatment 9834 9868	endovascularnym zabiegu zamknięcia
+T276	Condition 9869 9872	PFO
+N62	Reference T276 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T277	Drug 9873 9898	w znieczuleniu miejscowym
+T278	Investigation_result 9920 9967	udarze niedokrwiennym lewostronnej części mostu
+N63	Reference T278 ICD10:I63	Zawał mózgu
+T279	Investigation 9982 9985	MRI
+T280	Date 9986 9996	07.09.2018
+R119	Dat Arg1:T280 Arg2:T279	
+R120	Dat Arg1:T280 Arg2:T278	
+T281	Condition 10006 10061	udarze niedokrwiennym mózgu z zakresu tętnicy postawnej
+T282	Treatment 10062 10086	leczonym trombolitycznie
+T283	Date 10087 10096	(07.2018)
+R121	Dat Arg1:T283 Arg2:T281	
+R122	Dat Arg1:T283 Arg2:T282	
+T284	Condition 10108 10132	niewydolnością oddechową
+N65	Reference T284 ICD10:J96	Niewydolność oddechowa niesklasyfikowana gdzie indziej
+T285	Treatment 10208 10232	zamknięciu tracheostomii
+T286	Date 10233 10250	w dniu 14.09.2018
+R123	Dat Arg1:T286 Arg2:T285	
+T287	Treatment 10254 10278	ponownym jej odtworzenie
+T288	Date 10279 10296	w dniu 19.09.2018
+R124	Dat Arg1:T288 Arg2:T287	
+T289	Condition 10359 10373	niedokrwistość
+N66	Reference T289 ICD10:D64.9	Niedokrwistość, nieokreślona
+T290	Condition 10421 10428	migreny
+N67	Reference T290 ICD10:G43.9	Migrena, nieokreślona
+T291	Condition 10995 11011	niedokrwistością
+N68	Reference T291 ICD10:D64.9	Niedokrwistość, nieokreślona
+T292	Investigation_result 10600 10647	udarze niedokrwiennym lewostronnej części mostu
+N69	Reference T292 ICD10:I63	Zawał mózgu
+T293	Investigation 10662 10665	MRI
+T294	Date 10666 10676	07.09.2018
+R125	Dat Arg1:T294 Arg2:T293	
+R126	Inv Arg1:T293 Arg2:T292	
+T295	Condition 10686 10741	udarze niedokrwiennym mózgu z zakresu tętnicy postawnej
+N70	Reference T295 ICD10:I63	Zawał mózgu
+T296	Treatment 10742 10766	leczonym trombolitycznie
+T297	Date 10768 10776	07.2018)
+R127	Dat Arg1:T297 Arg2:T295	
+R128	Dat Arg1:T297 Arg2:T296	
+T298	Treatment 10888 10912	zamknięciu tracheostomii
+T299	Date 10913 10930	w dniu 14.09.2018
+R129	Dat Arg1:T299 Arg2:T298	
+T300	Investigation 11036 11039	TEE
+T301	Investigation_result 11040 11068	PFO z ciągłym przepływem L-P
+N71	Reference T301 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R130	Inv Arg1:T300 Arg2:T301	
+T302	Treatment 11088 11098	zamknięcia
+T303	Condition 11099 11102	PFO
+N72	Reference T303 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T304	Condition 11228 11235	migreny
+N73	Reference T304 ICD10:G43.9	Migrena, nieokreślona
+T305	Symptom 11287 11296	przytomna
+T306	Symptom 11298 11339	w ograniczonym kontakcie słowno-logicznym
+T307	Symptom 11353 11362	dysartrią
+T308	Symptom 11365 11396	niezbornością czterokończynową.
+T309	Condition 12895 12902	migreny
+N74	Reference T309 ICD10:G43.9	Migrena, nieokreślona
+T310	Condition 12833 12847	niedokrwistość
+N75	Reference T310 ICD10:D64.9	Niedokrwistość, nieokreślona
+T311	Treatment 12308 12342	endovascularnym zabiegu zamknięcia
+T312	Condition 12343 12346	PFO
+N76	Reference T312 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T313	Drug 12349 12372	znieczuleniu miejscowym
+T314	Investigation_result 12394 12441	udarze niedokrwiennym lewostronnej części mostu
+N77	Reference T314 ICD10:I63	Zawał mózgu
+T315	Investigation 12456 12459	MRI
+T316	Date 12460 12470	07.09.2018
+R131	Inv Arg1:T315 Arg2:T314	
+R132	Dat Arg1:T316 Arg2:T314	
+R133	Dat Arg1:T316 Arg2:T315	
+T317	Condition 12480 12535	udarze niedokrwiennym mózgu z zakresu tętnicy postawnej
+N78	Reference T317 ICD10:I63	Zawał mózgu
+T318	Treatment 12536 12560	leczonym trombolitycznie
+T319	Date 12562 12570	07.2018)
+R134	Dat Arg1:T319 Arg2:T318	
+R135	Dat Arg1:T319 Arg2:T317	
+T320	Condition 12582 12606	niewydolnością oddechową
+N79	Reference T320 ICD10:J96	Niewydolność oddechowa niesklasyfikowana gdzie indziej
+T321	Treatment 12682 12706	zamknięciu tracheostomii
+T322	Date 12707 12724	w dniu 14.09.2018
+R136	Dat Arg1:T322 Arg2:T321	
+T323	Treatment 12728 12752	ponownym jej odtworzenie
+T324	Date 12753 12771	w dniu 19.09.2018,
+R137	Dat Arg1:T324 Arg2:T323	
+T325	Condition 12776 12823	zakrzepicy żył głębokich prawej kończyny dolnej
+N80	Reference T325 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T326	Date 12824 12831	09.2018
+R138	Dat Arg1:T326 Arg2:T325	
+A2	Status T234 Historical_Insignificant
+A3	Status T257 Historical_Insignificant
+A4	Status T222 Historical_Insignificant
+A5	Status T64 Historical_Insignificant
+A6	Status T33 Historical_Insignificant
+N1	Reference T20 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T327	Treatment 558 657	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Neurologicznej, Laryngologicznej
+T328	Treatment 659 700	Zalecono kontrola Poradni Kardiologicznej
+T329	Date 701 714	za 5 miesiący
+R139	Dat Arg1:T329 Arg2:T328	
+A7	Source T114 Declared
+T330	Treatment 1264 1276	Profilaktyka
+R140	Dat Arg1:T115 Arg2:T330	
+N20	Reference T194 ICD10:I63.8	Inny zawał mózgu
+N46	Reference T242 ICD10:I63.8	
+T331	Treatment 4160 4259	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Neurologicznej, Laryngologicznej
+T332	Date 4280 4288	za 7 dni
+R141	Dat Arg1:T332 Arg2:T331	
+A8	Source T173 Declared
+T333	Treatment 4990 5002	Profilaktyka
+R142	Dat Arg1:T174 Arg2:T173	
+R143	Dat Arg1:T174 Arg2:T333	
+T334	Treatment 5347 5391	Kontroli w poradni laryngologicznej okresowo
+T335	Date 5392 5402	co 1 mies.
+R144	Dat Arg1:T335 Arg2:T334	
+N36	Reference T215 ICD10:I63.8	Inny zawał mózgu
+N81	Reference T105 ICD10:Z72	Problemy związane ze stylem życia
+N82	Reference T67 ICD10:Z72	Problemy związane ze stylem życia
+N64	Reference T281 ICD10:I63.8	Inny zawał mózgu
+N83	Reference T31 ICD10:Z72	Problemy związane ze stylem życia
+N10	Reference T68 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N4	Reference T30 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

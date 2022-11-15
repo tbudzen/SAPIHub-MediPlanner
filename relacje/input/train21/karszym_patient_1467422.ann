@@ -1,0 +1,187 @@
+T1	Treatment 333 352	Dalsza opieka w POZ
+T2	Treatment 366 408	kontrolna wizyta w Poradni Kardiologicznej
+T3	Date 409 422	za 3 miesiące
+T4	Treatment 427 507	Okresowa kontrola elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T5	Date 510 534	pierwsza za 1-2 tygodnie
+T6	Behaviour 539 641	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T7	Behaviour 655 674	redukcja masy ciała
+T8	Treatment 679 735	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T9	Drug 774 782	Bisocard
+T10	Drug 807 817	Co-Amlessa
+T11	Drug_dose 783 805	2,5mg 1 tabbletka rano
+T12	Drug_dose 818 848	8mg+10mg+2,5mg 1 tabletka rano
+R1	Dat Arg1:T3 Arg2:T2	
+R2	Dat Arg1:T5 Arg2:T4	
+R3	Drg Arg1:T9 Arg2:T11	
+R4	Drg Arg1:T10 Arg2:T12	
+T13	Treatment 1086 1105	operacji zamknięcia
+T14	Condition 1106 1109	VSD
+N2	Reference T14 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T15	Date 1111 1115	1975
+R5	Dat Arg1:T15 Arg2:T13	
+R6	Dat Arg1:T15 Arg2:T14	
+T16	Condition 1137 1185	Umiarkowana niedomykalność zastawki trójdzielnej
+N3	Reference T16 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T17	Condition 1187 1208	Nadciśnienie tętnicze
+N4	Reference T17 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T18	Condition 1210 1270	Arytmia komorowa (poj. pobudzenia, pary, bigeminia komorowa)
+N5	Reference T18 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T19	Condition 1272 1308	Arytmia nadkomorowa (poj. pobudzenia
+N6	Reference T19 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T20	Condition 1310 1313	TSV
+N7	Reference T20 ICD10:I47.1	Częstoskurcz nadkomorowy
+T21	Condition 1316 1348	Nieprawidłowa tolerancja glukozy
+N8	Reference T21 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T22	Condition 1350 1372	Żylaki kończyn dolnych
+N9	Reference T22 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+A1	Status T22 Historical_Insignificant
+T23	Condition 1374 1394	Torbiel nerki prawej
+A2	Status T23 Historical_Insignificant
+T24	Treatment 1404 1420	cholecystektomii
+A3	Status T24 Historical_Insignificant
+N10	Reference T24 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T25	Date 1422 1426	2018
+T26	Treatment 1437 1446	usunięciu
+A4	Status T26 Historical_Insignificant
+N11	Reference T26 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T27	Condition 1447 1464	guza piersi lewej
+N12	Reference T27 ICD10:D24	Nowotwór niezłośliwy piersi
+T28	Date 1466 1470	2014
+R7	Dat Arg1:T28 Arg2:T26	
+R8	Dat Arg1:T28 Arg2:T27	
+R9	Dat Arg1:T25 Arg2:T24	
+T29	Treatment 1481 1494	appendektomii
+A5	Status T29 Historical_Insignificant
+N13	Reference T29 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T30	Date 1496 1510	w dzieciństwie
+R10	Dat Arg1:T30 Arg2:T29	
+T31	Treatment 1749 1768	operacji zamknięcia
+T32	Condition 1769 1772	VSD
+N15	Reference T32 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T33	Date 1774 1778	1975
+N14	Reference T31 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+N1	Reference T13 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R11	Dat Arg1:T33 Arg2:T31	
+R12	Dat Arg1:T33 Arg2:T32	
+A6	Source T31 Declared
+A7	Source T13 Declared
+T34	Condition 1803 1824	Nadciśnienie tętnicze
+N16	Reference T34 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T35	Condition 1829 1851	Żylaki kończyn dolnych
+A8	Status T35 Historical_Insignificant
+N17	Reference T35 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T36	Treatment 1864 1873	usunięciu
+A9	Status T36 Historical_Insignificant
+N18	Reference T36 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T37	Condition 1874 1891	guza piersi lewej
+N19	Reference T37 ICD10:D24	Nowotwór niezłośliwy piersi
+T38	Date 1893 1897	2014
+R13	Dat Arg1:T38 Arg2:T37	
+R14	Dat Arg1:T38 Arg2:T36	
+T39	Treatment 1911 1927	cholecystektomii
+N20	Reference T39 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T40	Date 1929 1933	2018
+R15	Dat Arg1:T40 Arg2:T39	
+T41	Treatment 1947 1960	appendectomii
+N21	Reference T41 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T42	Date 1962 1976	w dzieciństwie
+R16	Dat Arg1:T42 Arg2:T41	
+T43	Treatment 2126 2145	operacji zamknięcia
+A10	Source T43 Declared
+N22	Reference T43 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T44	Condition 2146 2149	VSD
+N23	Reference T44 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T45	Date 2151 2155	1975
+T46	Condition 2177 2200	nadciśnieniem tętniczym
+N24	Reference T46 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T47	Condition 2202 2226	żylakami kończyn dolnych
+N25	Reference T47 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+A11	Status T47 Historical_Insignificant
+T48	Treatment 2231 2240	usunięciu
+A12	Status T48 Historical_Insignificant
+N26	Reference T48 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T49	Condition 2241 2258	guza piersi lewej
+N27	Reference T49 ICD10:D24	Nowotwór niezłośliwy piersi
+T50	Date 2260 2264	2014
+R17	Dat Arg1:T50 Arg2:T48	
+R18	Dat Arg1:T50 Arg2:T49	
+R19	Dat Arg1:T45 Arg2:T44	
+R20	Dat Arg1:T45 Arg2:T43	
+T51	Treatment 2270 2286	cholecystektomii
+A13	Status T51 Historical_Insignificant
+N28	Reference T51 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T52	Date 2288 2292	2018
+R21	Dat Arg1:T52 Arg2:T51	
+T53	Treatment 2298 2311	appendectomii
+A14	Status T53 Historical_Insignificant
+N29	Reference T53 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T54	Date 2313 2327	w dzieciństwie
+R22	Dat Arg1:T54 Arg2:T53	
+T55	Symptom 2375 2388	kołatań serca
+N30	Reference T55 ICD10:R00.2	Kołatanie serca
+T56	Symptom 2391 2440	okresowo występującego kłucia w klatce piersiowej
+N31	Reference T56 ICD10:R07.3	Inne bóle w klatce piersiowej
+T57	Negation 2443 2449	Neguje
+T58	Symptom 2450 2462	zasłabnięcia
+T59	Symptom 2464 2473	duszności
+N32	Reference T59 ICD10:R06.0	Duszność
+T60	Symptom 2475 2506	typowe bóle w klatce piersiowej
+N33	Reference T60 ICD10:R07.2	Ból w okolicy przedsercowej
+R23	Neg Arg1:T57 Arg2:T58	
+R24	Neg Arg1:T57 Arg2:T59	
+R25	Neg Arg1:T57 Arg2:T60	
+T61	Condition 2559 2562	WZW
+N34	Reference T61 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T62	Condition 2571 2580	borelioza
+N35	Reference T62 ICD10:A69.2	Choroba z Lyme
+T63	Condition 2588 2596	gruźlica
+N36	Reference T63 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T64	Condition 2602 2606	odra
+N37	Reference T64 ICD10:B05	Odra
+T65	Condition 2612 2626	kontakt z odra
+N38	Reference T65 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+T66	Negation 2563 2568	( - )
+T67	Negation 2581 2586	( - )
+T68	Negation 2597 2600	(-)
+T69	Negation 2607 2610	(-)
+T70	Negation 2627 2630	(-)
+R26	Neg Arg1:T66 Arg2:T61	
+R27	Neg Arg1:T67 Arg2:T62	
+R28	Neg Arg1:T68 Arg2:T63	
+R29	Neg Arg1:T69 Arg2:T64	
+R30	Neg Arg1:T70 Arg2:T65	
+T71	Condition 2656 2659	CAD
+A15	Status T71 Family
+N39	Reference T71 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T72	Condition 2661 2679	miażdżyca obwodowa
+A16	Status T72 Family
+N40	Reference T72 ICD10:I70.9	Miażdżyca uogólniona i nieokreślona
+T73	Condition 2681 2706	tętniak w jamie brzusznej
+A17	Status T73 Family
+N41	Reference T73 ICD10:I71.4	Tętniak odcinka brzusznego aorty, bez informacji o pęknięciu
+T74	Behaviour 2707 2722	Palenie tytoniu
+N42	Reference T74 ICD10:Z72.0	Używanie tytoniu
+T75	Negation 2724 2727	nie
+T76	Behaviour 2728 2732	pali
+N43	Reference T76 ICD10:Z72.0	Używanie tytoniu
+T77	Date 2733 2746	od ok. 26 lat
+R31	Neg Arg1:T75 Arg2:T74	
+R32	Neg Arg1:T75 Arg2:T76	
+R33	Dat Arg1:T77 Arg2:T76	
+R34	Dat Arg1:T77 Arg2:T74	
+T78	Date 2748 2757	wcześniej
+T79	Behaviour 2758 2764	paliła
+N44	Reference T79 ICD10:Z72.0	Używanie tytoniu
+T80	Date 2765 2770	7 lat
+R35	Dat Arg1:T78 Arg2:T79	
+R36	Dat Arg1:T80 Arg2:T79	
+T81	Behaviour 2771 2782	Inne używki
+T82	Negation 2784 2787	nie
+T83	Condition 2788 2797	Uczulenia
+N45	Reference T83 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T84	Drug 2799 2805	nikiel
+R37	Alg Arg1:T83 Arg2:T84	
+R38	Neg Arg1:T82 Arg2:T81	
+T85	Behaviour 2822 2848	warunki mieszkaniowe dobre
+T86	Behaviour 2851 2868	mieszka z rodziną
+T87	Drug 2869 2885	Leki: jak w IKZL

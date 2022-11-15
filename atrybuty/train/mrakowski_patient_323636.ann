@@ -1,0 +1,64 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 359 391	okresowa kontrola kardiologiczna
+T3	Investigation 392 430	regularne pomiary ciśnienia tętniczego
+T4	Investigation 431 460	okresowa kontrola lipidogramu
+T5	Drug 468 476	Metocard
+T6	Drug_dose 477 501	50 mg 1/2 tabl. doraźnie
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Treatment 727 737	ablacji RF
+T9	Date 788 793	2016r
+R3	Dat Arg1:T9 Arg2:T7	
+T10	Condition 796 834	Nadciśnienie tętnicze I st w g ESC/ESH
+N2	Reference T10 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T11	Condition 836 856	Hipercholesterolemia
+N3	Reference T11 ICD10:E78.0	Czysta hipercholesterolemia
+T12	Treatment 1064 1095	ablacji RF ogniska generującego
+T14	Date 1122 1126	2016
+R5	Dat Arg1:T14 Arg2:T12	
+T15	Symptom 1168 1183	kołatania serca
+N5	Reference T15 ICD10:R00.2	Kołatanie serca
+T16	Negation 1206 1212	neguje
+T17	Condition 1213 1236	inne choroby przewlekłe
+R6	Neg Arg1:T16 Arg2:T17	
+T18	Treatment 1237 1254	Przebyte operacje
+T19	Negation 1256 1262	neguje
+R7	Neg Arg1:T19 Arg2:T18	
+T20	Condition 1289 1295	DM t.2
+A1	Status T20 Family
+N6	Reference T20 ICD10:E11	Cukrzyca insulinoniezależna
+T21	Condition 1297 1319	niedoczynność tarczycy
+A2	Status T21 Family
+N7	Reference T21 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T22	Condition 1330 1332	HA
+A3	Status T22 Family
+N8	Reference T22 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T23	Condition 1334 1340	DM t.2
+A4	Status T23 Family
+N9	Reference T23 ICD10:E11	Cukrzyca insulinoniezależna
+T24	Condition 1342 1349	Alergie
+T25	Negation 1351 1357	neguje
+R8	Neg Arg1:T25 Arg2:T24	
+T26	Behaviour 1359 1369	Nikotynizm
+T27	Negation 1371 1377	neguje
+R9	Neg Arg1:T27 Arg2:T26	
+T28	Behaviour 1380 1387	Alkohol
+N11	Reference T28 ICD10:Z72.1	Używanie alkoholu
+T29	Negation 1389 1395	neguje
+R10	Neg Arg1:T29 Arg2:T28	
+T30	Behaviour 1397 1414	Uzależnienie inne
+T31	Negation 1416 1422	neguje
+R11	Neg Arg1:T31 Arg2:T30	
+T8	Condition 1264 1279	wywiad rodzinny
+A5	Status T8 Family
+T13	Condition 747 786	napadowych częstoskurczów nadkomorowych
+N1	Reference T13 ICD10:I47.1	Częstoskurcz nadkomorowy
+R2	Dat Arg1:T9 Arg2:T13	
+T32	Condition 1096 1120	częstoskurcz nadkomorowy
+N4	Reference T32 ICD10:I47.1	Częstoskurcz nadkomorowy
+R4	Dat Arg1:T14 Arg2:T32	
+N12	Reference T24 ICD10:T78.4	Alergia, nieokreślona
+N10	Reference T26 ICD10:Z72.0	Używanie tytoniu
+N13	Reference T30 ICD10:Z72	Problemy związane ze stylem życia
+T33	Negation 1430 1460	ne stałe nie przyjmuje żadnych
+T34	Drug 1461 1466	leków
+R12	Neg Arg1:T33 Arg2:T34	

@@ -1,0 +1,1082 @@
+allRelations          : 31
+oks                   : 17
+isRedundantAndRemoveds: 10
+shouldNotBeRemoveds   : 4
+shouldBeBemoveds      : 0
+GOOD / BAD            : 27 / 4
+Sentence 0:
+------------------------------------------------
+Wiek: 5 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 2:
+------------------------------------------------
+
+
+
+Sentence 3:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 4:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Kardiomiopatia przerostowa.\x0aPrzewlekła niewydolność serca.\x0aWrodzona wada serca pod postacią ubytku w przegrodzie międzykomorowej.\x0aStan po leczeniu operacyjnym wady (30.04.2015r).\x0a
+------------------------------------------------
+
+R1	Dat Arg1:T5 Arg2:T1 <<SHOULD NOT BE REMOVED>>	30.04.2015r -> Kardiomiopatia przerostowa <:REMOVED other second tag between (left):> <RANK: 2> <info: start[612, 438] <type: LEFT>>
+R2	Dat Arg1:T5 Arg2:T2 <<SHOULD NOT BE REMOVED>>	30.04.2015r -> Przewlekła niewydolność serca <:REMOVED other second tag between (left):> <RANK: 2> <info: start[612, 469] <type: LEFT>>
+R3	Dat Arg1:T5 Arg2:T3 <<SHOULD NOT BE REMOVED>>	30.04.2015r -> Wrodzona wada serca pod postacią ubytku w przegrodzie międzykomorowej <:REMOVED other second tag between (left):> <RANK: 2> <info: start[612, 503] <type: LEFT>>
+R4	Dat Arg1:T5 Arg2:T4 << OK >>	30.04.2015r -> leczeniu operacyjnym wady  <RANK: 3> <info: start[612, 585] <type: LEFT>>
+
+
+Sentence 5:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 6:
+1. Systematyczne przyjmowanie leków:
+Spironol 12,5 mg 1xdziennie
+Lisinopril 0,7mg 1xdziennie
+
+R5	Drg Arg1:T6 Arg2:T9 << OK >>	Spironol -> 12,5 mg 1xdziennie  <RANK: 3> <info: start[775, 784] <type: RIGHT>>
+R6	Drg Arg1:T6 Arg2:T10 <<REDUNDANT!!!REMOVED>>	Spironol -> 0,7mg 1xdziennie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[775, 814] <type: RIGHT>>
+R7	Drg Arg1:T7 Arg2:T9 <<REDUNDANT!!!REMOVED>>	Lisinopril -> 12,5 mg 1xdziennie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[803, 784] <type: LEFT>>
+R8	Drg Arg1:T7 Arg2:T10 << OK >>	Lisinopril -> 0,7mg 1xdziennie  <RANK: 3> <info: start[803, 814] <type: RIGHT>>
+
+
+Sentence 7:
+Propranolol 18mg 3xdziennie
+2.
+R9	Drg Arg1:T8 Arg2:T11 << OK >>	Propranolol -> 18mg 3xdziennie  <RANK: 3> <info: start[831, 843] <type: RIGHT>>
+
+
+Sentence 8:
+Systematyczna kontrola ciśnienia tętniczego oraz częstości rytmu serca.
+
+
+
+Sentence 9:
+3. Wyznaczono termin przyjęcia do Kliniki Kardiologii celem wykonania badania echokardiograficznego na dzień 28.01.2020r.
+
+R10	Dat Arg1:T15 Arg2:T13 << OK >>	28.01.2020r -> przyjęcia do Kliniki Kardiologii celem wykonania  <RANK: 3> <info: start[1043, 955] <type: LEFT>>
+R11	Dat Arg1:T15 Arg2:T14 << OK >>	28.01.2020r -> badania echokardiograficznego  <RANK: 3> <info: start[1043, 1004] <type: LEFT>>
+
+
+Sentence 10:
+4. Dalsza opieka w Poradni Genetycznej.
+
+
+
+Sentence 11:
+5. Wskazana diagnostyka krewnych I stopnia (EKG, badanie echokardiograficzne oraz badania genetyczne).
+
+
+
+Sentence 12:
+6. Leczeni infekcji: Inhalacje z 0,3% NaCl 3xdziennie, Nurofen Forte zawiesiena 3,5ml co 8 godzin, Tantum verde spray 3-4 dawki 4xdziennie.  
+R12	Drg Arg1:T19 Arg2:T20 << OK >>	Inhalacje z 0,3% NaCl -> 3xdziennie  <RANK: 3> <info: start[1220, 1242] <type: RIGHT>>
+R13	Drg Arg1:T19 Arg2:T22 <<REDUNDANT!!!REMOVED>>	Inhalacje z 0,3% NaCl -> 3,5ml co 8 godzin <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1220, 1279] <type: RIGHT>>
+R14	Drg Arg1:T19 Arg2:T24 <<REDUNDANT!!!REMOVED>>	Inhalacje z 0,3% NaCl -> 3-4 dawki 4xdziennie <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1220, 1317] <type: RIGHT>>
+R15	Drg Arg1:T21 Arg2:T20 <<REDUNDANT!!!REMOVED>>	Nurofen Forte zawiesiena -> 3xdziennie <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1254, 1242] <type: LEFT>>
+R16	Drg Arg1:T21 Arg2:T22 << OK >>	Nurofen Forte zawiesiena -> 3,5ml co 8 godzin  <RANK: 3> <info: start[1254, 1279] <type: RIGHT>>
+R17	Drg Arg1:T21 Arg2:T24 <<REDUNDANT!!!REMOVED>>	Nurofen Forte zawiesiena -> 3-4 dawki 4xdziennie <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1254, 1317] <type: RIGHT>>
+R18	Drg Arg1:T23 Arg2:T20 <<REDUNDANT!!!REMOVED>>	Tantum verde spray -> 3xdziennie <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1298, 1242] <type: LEFT>>
+R19	Drg Arg1:T23 Arg2:T22 <<REDUNDANT!!!REMOVED>>	Tantum verde spray -> 3,5ml co 8 godzin <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1298, 1279] <type: LEFT>>
+R20	Drg Arg1:T23 Arg2:T24 << OK >>	Tantum verde spray -> 3-4 dawki 4xdziennie  <RANK: 3> <info: start[1298, 1317] <type: RIGHT>>
+
+
+Sentence 13:
+Kontrola w POZ za 3 dni.
+
+
+R21	Dat Arg1:T26 Arg2:T25 << OK >>	za 3 dni -> Kontrola w POZ  <RANK: 3> <info: start[1355, 1340] <type: LEFT>>
+
+
+Sentence 14:
+UWAGA!!
+
+
+Sentence 15:
+W RAIE WYSTĄPIENIA NIEPOKOJĄCYCH OBJAWÓW ZE STRONY UKŁADU KRĄŻENIA KONIECZNY KONTAKT Z KLINIKA KARDIOLOGII ICZMP W ŁODZI!!
+
+
+Sentence 16:
+TEL. (42) 271-14-71/14-78/14-73
+------------------------------------------------
+
+
+
+Sentence 17:
+Zastosowane leczenie
+
+
+
+Sentence 18:
+------------------------------------------------
+
+
+
+Sentence 19:
+Enarenal, Spironol, Propranolol, ANA 2:1, znieczulenie dożylne do badania echokardiograficznego
+------------------------------------------------
+
+
+
+Sentence 20:
+Zastosowane leczenie
+
+
+
+Sentence 21:
+------------------------------------------------
+
+
+
+Sentence 22:
+Spironol, Enarenal, Propranolol, Hydroksyzyna
+------------------------------------------------
+
+
+
+Sentence 23:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 24:
+1. Systemtyczne przyjmowanie leków:
+Spironol 12,5 mg 1xdziennie
+
+R22	Drg Arg1:T39 Arg2:T40 << OK >>	Spironol -> 12,5 mg 1xdziennie  <RANK: 3> <info: start[2053, 2062] <type: RIGHT>>
+
+
+Sentence 25:
+Enarenal 1,25mg (1/2 tabl.) 2xdziennie
+
+R23	Drg Arg1:T41 Arg2:T42 << OK >>	Enarenal -> 1,25mg (1/2 tabl.) 2xdziennie  <RANK: 3> <info: start[2081, 2090] <type: RIGHT>>
+
+
+Sentence 26:
+Propranolol 12mg 3xdziennie
+2.
+R24	Drg Arg1:T43 Arg2:T44 << OK >>	Propranolol -> 12mg 3xdziennie  <RANK: 3> <info: start[2120, 2132] <type: RIGHT>>
+
+
+Sentence 27:
+Systematyczna kontrola ciśnienia tętniczego krwi oraz częstości rytmu serca.
+
+
+
+Sentence 28:
+3.Kontrola NTproBNP za około tydzień.
+
+R25	Dat Arg1:T47 Arg2:T46 << OK >>	za około tydzień -> Kontrola NTproBNP  <RANK: 3> <info: start[2248, 2230] <type: LEFT>>
+
+
+Sentence 29:
+4. Kontrola w Poradni Kardiologicznej dn. 28.06.2019r  (dr Krzysztofa Michalaka).
+
+R26	Dat Arg1:T49 Arg2:T48 << OK >>	dn. 28.06.2019r -> Kontrola w Poradni Kardiologicznej  <RANK: 3> <info: start[2304, 2269] <type: LEFT>>
+
+
+Sentence 30:
+5. Kontrola w Poradni Genetycznej ICZMP- wyznaczono termin na 28.06.2019r (skierowanie wydano).
+
+R27	Dat Arg1:T51 Arg2:T50 << OK >>	28.06.2019r -> Kontrola w Poradni Genetycznej ICZMP  <RANK: 3> <info: start[2410, 2351] <type: LEFT>>
+
+
+Sentence 31:
+6. Kontakt z Kliniką Kardiologii w sprawie wyników badań genetycznych (badanie MLPA P245 oraz w kierunku HCM).
+
+
+
+
+Sentence 32:
+UWAGA!!
+
+
+Sentence 33:
+W RAZIE WYSTĄPIENIA NIEPOKOJĄCYCH OBJAWÓW KONIECZNY PILNY KONTAKT Z KLINIKĄ KARDIOLOGII ICZMP W ŁODZI!! TEL.
+
+
+Sentence 34:
+42 271-14-73/14-78/14-79.
+
+
+
+Sentence 35:
+------------------------------------------------
+
+
+
+Sentence 36:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 37:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią ubytku w przegrodzie międzykomorowej.\x0aStan po leczeniu operacyjnym wady (30.04.2015r).\x0aKardiomiopatia przerostowa.\x0aPrzewlekła niewydolność serca.\x0a
+------------------------------------------------
+
+R28	Dat Arg1:T57 Arg2:T55 <<SHOULD NOT BE REMOVED>>	30.04.2015r -> Wrodzona wada serca pod postacią ubytku w przegrodzie międzykomorowej <:REMOVED other second tag between (left):> <RANK: 2> <info: start[3025, 2916] <type: LEFT>>
+R29	Dat Arg1:T57 Arg2:T58 <<REDUNDANT!!!REMOVED>>	30.04.2015r -> Kardiomiopatia przerostowa <:REMOVED many second tags on the right:> <RANK: 2> <info: start[3025, 3042] <type: RIGHT>>
+R30	Dat Arg1:T57 Arg2:T59 <<REDUNDANT!!!REMOVED>>	30.04.2015r -> Przewlekła niewydolność serca <:REMOVED many second tags on the right:> <RANK: 2> <info: start[3025, 3073] <type: RIGHT>>
+R31	Dat Arg1:T57 Arg2:T56 << OK >>	30.04.2015r -> leczeniu operacyjnym wady  <RANK: 3> <info: start[3025, 2998] <type: LEFT>>
+
+
+Sentence 38:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 39:
+Dziewczynka  z wrodzoną wadą serca przyjęta do Kliniki do poszerzonych badań i ustalenia dalszego postępowania
+
+
+Sentence 40:
+Stan dość dobry
+------------------------------------------------
+
+
+
+Sentence 41:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 42:
+Grupa krwi + p/c odpornościowe (powyżej 4. m-ca życia
+    NR-KS:G-19/009007
+    KODKRESKOWYPROBKI:G-19/009007
+    GR:O
+    RH:+ (dodatni)
+    
+
+
+Sentence 43:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+
+
+
+Sentence 44:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:10.90[10^3/ul]
+    
+
+
+Sentence 45:
+RBC Krwinki czerwone:4.64[10^6/ul]
+    
+
+
+Sentence 46:
+HGB Hemoglobina:11.9[g/dl]
+    
+
+
+Sentence 47:
+HCT Hematokryt:34.8[%]
+    
+
+
+Sentence 48:
+MCV wskaźnik czerwonokrw:75.0[fl]
+    
+
+
+Sentence 49:
+MCH wskaźnik czerwonokrw:25.6[pg]
+    
+
+
+Sentence 50:
+MCHC wskaźnik czerwonokr:34.2[g/dl]
+    
+
+
+Sentence 51:
+PLT z morfologii:245[10^3/ul]
+    
+
+
+Sentence 52:
+RDW-SD:38.6[fl]
+    
+
+
+Sentence 53:
+RDW-CV:14.5[%]
+    PDW:12.9[fl]
+    MPV:11.3[fl]
+    
+
+
+Sentence 54:
+P-LCR:35.7[%]
+    
+
+
+Sentence 55:
+PCT (hematokryt płytkowy:0.28[%]
+    
+
+
+Sentence 56:
+NEUTR# wartość bezwzględ:4.15[10^3/ul]
+    
+
+
+Sentence 57:
+NEUTR%:38.0[%]
+    
+
+
+Sentence 58:
+LYMH# wartość bezwzględn:5.59[10^3/ul]
+    
+
+
+Sentence 59:
+LYMPH%:51.3[%]
+    
+
+
+Sentence 60:
+MONO# wartość bezwzględn:0.80[10^3/ul]
+    
+
+
+Sentence 61:
+MONO%:7.3[%]
+    
+
+
+Sentence 62:
+EO# wartość bezwzględna:0.30[10^3/ul]
+    
+
+
+Sentence 63:
+EO%:2.8[%]
+    
+
+
+Sentence 64:
+BASO# wartość bezwzględn:0.06[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 65:
+NRBC %:0.0[%]
+    
+
+
+Sentence 66:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 67:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:10.69[10^3/ul]
+    
+
+
+Sentence 68:
+RBC Krwinki czerwone:4.82[10^6/ul]
+    
+
+
+Sentence 69:
+HGB Hemoglobina:12.6[g/dl]
+    
+
+
+Sentence 70:
+HCT Hematokryt:37.5[%]
+    
+
+
+Sentence 71:
+MCV wskaźnik czerwonokrw:77.8[fl]
+    
+
+
+Sentence 72:
+MCH wskaźnik czerwonokrw:26.1[pg]
+    
+
+
+Sentence 73:
+MCHC wskaźnik czerwonokr:33.6[g/dl]
+    
+
+
+Sentence 74:
+PLT z morfologii:283[10^3/ul]
+    
+
+
+Sentence 75:
+RDW-SD:35.1[fl]
+    RDW-CV:12.6[%]
+    PDW:12.9[fl]
+    MPV:10.9[fl]
+    
+
+
+Sentence 76:
+P-LCR:32.1[%]
+    
+
+
+Sentence 77:
+PCT (hematokryt płytkowy:0.31[%]
+    
+
+
+Sentence 78:
+NEUTR# wartość bezwzględ:4.80[10^3/ul]
+    
+
+
+Sentence 79:
+NEUTR%:45.0[%]
+    
+
+
+Sentence 80:
+LYMH# wartość bezwzględn:4.51[10^3/ul]
+    
+
+
+Sentence 81:
+LYMPH%:42.2[%]
+    
+
+
+Sentence 82:
+MONO# wartość bezwzględn:0.89[10^3/ul]
+    
+
+
+Sentence 83:
+MONO%:8.3[%]
+    
+
+
+Sentence 84:
+EO# wartość bezwzględna:0.41[10^3/ul]
+    
+
+
+Sentence 85:
+EO%:3.8[%]
+    BASO# wartość bezwzględn:0.08[10^3/ul]
+    
+
+
+Sentence 86:
+BASO%:0.7[%]
+    
+
+
+Sentence 87:
+NRBC %:0.0[%]
+    
+
+
+Sentence 88:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 89:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:33.5[sek]
+
+
+
+Sentence 90:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 91:
+Czas protrombinowy:14.0[sek]
+    
+
+
+Sentence 92:
+Wskaźnik PT:78.6[%]
+    
+
+
+Sentence 93:
+INR:1.26
+Czas trombinowy TT: Czas trombinowy TT:15.0[sek]
+
+
+
+Sentence 94:
+Fibrynogen: Fibrynogen:3.20[g/L]
+
+
+
+Sentence 95:
+D-dimer - test ilościowy: D-dimer - test ilościowy:227[ng/ml]
+
+
+
+Sentence 96:
+Badanie ogólne moczu
+    
+
+
+Sentence 97:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 98:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 99:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 100:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 101:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 102:
+ciężar właściwy:1.019[ ]
+    
+
+
+Sentence 103:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 104:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 105:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 106:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 107:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 108:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 109:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 110:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 111:
+leukocyty:18 /ul[ul]
+    erytrocyty świeże:4 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 112:
+Badanie ogólne moczu
+    
+
+
+Sentence 113:
+barwa:żółty[ ]
+    
+
+
+Sentence 114:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 115:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 116:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 117:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 118:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 119:
+ciężar właściwy:1.020[ ]
+    
+
+
+Sentence 120:
+pH:6.5[ ]
+    
+
+
+Sentence 121:
+białko:nieobecne[ ]
+    
+
+
+Sentence 122:
+urobilinogen:2,0 mg/dl[ ]
+    
+
+
+Sentence 123:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 124:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 125:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 126:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 127:
+nabłonki płaskie:nieliczne[w preparacie]
+    leukocyty:16 /ul[ul]
+    erytrocyty świeże i częś:7/ul[ul]
+    śluz:dość liczny[w preparacie]
+    bakterie:nieliczne[w preparacie]
+
+
+
+Sentence 128:
+TSH: TSH:3.89[uIU/ml]
+
+
+
+Sentence 129:
+FT3: FT3:4.47[pg/ml]
+
+
+
+Sentence 130:
+FT4: FT4:2.03[ng/dl]
+
+
+
+Sentence 131:
+Troponina T: Troponina T:51.3[pg/ml]
+
+
+
+Sentence 132:
+Troponina T: Troponina T:44.1[pg/ml]
+
+
+
+Sentence 133:
+ALAT: ALAT:17[U/L]
+
+
+
+Sentence 134:
+ALAT: ALAT:17[U/L]
+ASPAT: ASPAT:41[U/L]
+ASPAT: ASPAT:43[U/L]
+Bilirubina całkowita (TBil): Bilirubina całkowita:1.05[mg/dl]
+
+
+
+Sentence 135:
+CK - aktywność: CK:66[U/L]
+
+
+
+Sentence 136:
+CK - aktywność: CK:69[U/L]
+
+
+
+Sentence 137:
+CKMB aktywność: CKMB:28[U/L]
+
+
+
+Sentence 138:
+CKMB aktywność: CKMB:25[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 139:
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 140:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 141:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 142:
+Potas (K): Potas:5.0[mmol/L]
+
+
+
+Sentence 143:
+Potas (K): Potas:5.5[mmol/L]
+
+
+
+Sentence 144:
+Chlorki (Cl): Chlorki:105[mmol/L]
+
+
+
+Sentence 145:
+Chlorki (Cl): Chlorki:108[mmol/L]
+
+
+
+Sentence 146:
+Fosforany nieorganiczne: Fosforany nieorganiczne:1.83[mmol/L]
+
+
+
+Sentence 147:
+Fosforany nieorganiczne: Fosforany nieorganiczne:1.81[mmol/L]
+
+
+
+Sentence 148:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:28[U/L]
+
+
+
+Sentence 149:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:33[U/L]
+
+
+
+Sentence 150:
+Kreatynina + GFR
+    
+
+
+Sentence 151:
+Kreatynina w surowicy:0.38[mg/dl]
+    eGFR stand. wg Schwartza:147.6[ml/min/1,73 m^2]
+    
+
+
+Sentence 152:
+eGFR zmod.
+
+
+Sentence 153:
+wg Schwartza:110.9[ml/min/1,73 m^2]
+    wzrost:102[cm]
+
+
+
+Sentence 154:
+Kreatynina + GFR
+    
+
+
+Sentence 155:
+Kreatynina w surowicy:0.44[mg/dl]
+    
+
+
+Sentence 156:
+eGFR stand.
+
+
+Sentence 157:
+wg Schwartza:127.5[ml/min/1,73 m^2]
+    
+
+
+Sentence 158:
+eGFR zmod.
+
+
+Sentence 159:
+wg Schwartza:95.7[ml/min/1,73 m^2]
+    wzrost:102[cm]
+
+
+
+Sentence 160:
+Mleczany (LAC): Mleczany:18.3[mg/dl]
+
+
+
+Sentence 161:
+Magnez: Magnez:0.77[mmol/L]
+
+
+
+Sentence 162:
+Magnez: Magnez:0.82[mmol/L]
+
+
+
+Sentence 163:
+Mocznik: Mocznik:29[mg/dl]
+
+
+
+Sentence 164:
+Mocznik: Mocznik:29[mg/dl]
+
+
+
+Sentence 165:
+Wapń całkowity: Wapń całkowity:2.47[mmol/L]
+
+
+
+Sentence 166:
+Wapń całkowity: Wapń całkowity:2.59[mmol/L]
+
+
+
+Sentence 167:
+Gospodarka żelazem
+    Żelazo:73[ug/dl]
+    
+
+
+Sentence 168:
+TIBC (Całkowita zdolność:446[ug/dl]
+    
+
+
+Sentence 169:
+UIBC (Utajona zdolność w:373[ug/dl]
+    
+
+
+Sentence 170:
+Wskaźnik wysycenia Fe:16[%]
+
+
+
+Sentence 171:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    
+
+
+Sentence 172:
+pH:7.346
+    pCO2:42.4[mmHg]
+    BE:-2.50[mmol/L]
+    HCO3:22.5[mmol/L]
+    pO2:29.7[mmHg]
+    
+
+
+Sentence 173:
+O2Sat:47.5[%]
+
+
+
+Sentence 174:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    pH:7.394
+    
+
+
+Sentence 175:
+pCO2:35.9[mmHg]
+    BE:-2.40[mmol/L]
+    HCO3:21.4[mmol/L]
+    
+
+
+Sentence 176:
+pO2:31.2[mmHg]
+    O2Sat:55.7[%]
+
+
+
+Sentence 177:
+Glukoza w surowicy: Glukoza w surowicy:74[mg/dl]
+
+
+
+Sentence 178:
+Glukoza w surowicy: Glukoza w surowicy:93[mg/dl]
+
+
+
+Sentence 179:
+Oligosacharydy w moczu metoda jakościowa: Chromatografia oligosach:nie wskazuje na wydalanie
+NT-proBNP surowica: NT-proBNP w surowicy:10701[pg/ml]
+
+
+
+Sentence 180:
+NT-proBNP surowica: NT-proBNP w surowicy:17470[pg/ml]
+
+
+
+Sentence 181:
+------------------------------------------------
+
+
+
+Sentence 182:
+ICD10
+------------------------------------------------
+I42.2
+I50.1
+I50.0
+
+
+
+Sentence 183:
+J00
+Z98.8
+Q21.0
+I42.9
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 184:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 185:
+A01
+
+
+
+Sentence 186:
+I81
+E65
+G21
+L43
+I89
+
+
+
+Sentence 187:
+G25
+
+
+
+Sentence 188:
+O61
+L23
+M87
+G49
+N45
+L69
+N24
+O69
+O29
+C55
+G53
+I97
+G11
+O93
+L31
+87.440
+O77
+I17
+O55
+N11
+O35
+M37
+I19
+N13
+
+
+
+Sentence 189:
+M19
+M18
+8
+------------------------------------------------
+
+

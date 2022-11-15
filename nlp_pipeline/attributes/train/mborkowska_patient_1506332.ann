@@ -1,0 +1,167 @@
+T1	Condition 439 450	FA napadowe
+N1	Reference T1 ICD10:I48	Migotanie i trzepotanie przedsionków
+T2	Condition 452 483	Zespół tachykardia-bradykardia?
+N2	Reference T2 ICD10:I49.5	Zespół chorej zatoki
+T3	Condition 701 745	Łagodna niedomykalność zastawki trójdzielnej
+N3	Reference T3 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T4	Condition 747 774	Przewlekła choroba wieńcowa
+T5	Condition 776 807	Napadowe migotanie przedsionków
+N5	Reference T5 ICD10:I48	Migotanie i trzepotanie przedsionków
+T6	Investigation_result 809 824	CHA2DS2-VASc=4,
+T7	Investigation_result 825 834	HASBLED=1
+T8	Condition 856 875	Arytmia nadkomorowa
+N6	Reference T8 ICD10:I47.1	Częstoskurcz nadkomorowy
+T9	Condition 907 928	Nadciśnienie tętnicze
+N7	Reference T9 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T10	Condition 930 942	Dyslipidemia
+N8	Reference T10 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T11	Drug 968 975	statyną
+T12	Condition 977 1000	Torbiel jajnika prawego
+N9	Reference T12 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T13	Investigation 1228 1251	SPECT mięśnia sercowego
+T14	Condition 1521 1545	torbieli jajnika prawego
+N10	Reference T14 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T15	Treatment 1593 1595	CC
+T16	Investigation_result 1598 1600	Ab
+T17	Condition 1588 1590	PF
+T18	Condition 1621 1643	migotanie przedsionków
+N11	Reference T18 ICD10:I48	Migotanie i trzepotanie przedsionków
+T19	Negation 1654 1660	neguje
+T20	Negation 1670 1676	neguje
+T21	Treatment 1644 1652	Operacje
+R1	Neg Arg1:T19 Arg2:T21	
+T22	Condition 1661 1668	Alergie
+N12	Reference T22 ICD10:T78.4	Alergia, nieokreślona
+R2	Neg Arg1:T20 Arg2:T22	
+T23	Investigation 3098 3102	ECHO
+T24	Investigation 3104 3122	EKG metodą Holtera
+T25	Investigation 3124 3128	ABPM
+T26	Drug 2987 2994	Xarelto
+T27	Drug 2958 2966	Biosotal
+T28	Drug 2919 2934	Zanacodar Combi
+T29	Drug_dose 2935 2957	40+12,5 1x 1 tabl/rano
+R3	Drg Arg1:T28 Arg2:T29	
+T30	Drug_dose 2967 2986	40mg 1x 1 tabl/rano
+R4	Drg Arg1:T27 Arg2:T30	
+T31	Drug_dose 2995 3014	15mg 1x 1 tabl/rano
+R5	Drg Arg1:T26 Arg2:T31	
+T32	Behaviour 2855 2881	warunki mieszkaniowe dobre
+T33	Condition 2776 2779	WZW
+T34	Condition 2786 2795	borelioza
+N14	Reference T34 ICD10:A69.2	Choroba z Lyme
+T35	Condition 2801 2804	tbc
+N15	Reference T35 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T36	Condition 2810 2814	odra
+N16	Reference T36 ICD10:B05	Odra
+T37	Behaviour 2820 2834	kontakt z odrą
+N17	Reference T37 ICD10:B05	Odra
+T38	Date 2835 2838	(-)
+R6	Dat Arg1:T38 Arg2:T37	
+T39	Negation 2815 2818	(-)
+R7	Neg Arg1:T39 Arg2:T36	
+T40	Negation 2805 2809	(-),
+R8	Neg Arg1:T40 Arg2:T35	
+T41	Negation 2796 2800	(-),
+R9	Neg Arg1:T41 Arg2:T34	
+T42	Negation 2780 2783	(-)
+R10	Neg Arg1:T42 Arg2:T33	
+T43	Negation 2744 2747	nie
+T44	Negation 2729 2732	nie
+T45	Negation 2712 2715	nie
+T46	Negation 2691 2694	nie
+T47	Negation 2435 2441	Neguje
+T48	Condition 2733 2742	Uczulenia
+R11	Neg Arg1:T43 Arg2:T48	
+T49	Behaviour 2716 2727	Inne używki
+R12	Neg Arg1:T44 Arg2:T49	
+T50	Behaviour 2695 2710	Palenie tytoniu
+R13	Neg Arg1:T45 Arg2:T50	
+T51	Treatment 2672 2689	Przebyte operacje
+R14	Neg Arg1:T46 Arg2:T51	
+T52	Symptom 2443 2455	zasłabnięcia
+N20	Reference T52 ICD10:R55	Omdlenie i zapaść
+T53	Symptom 2457 2465	omdlenia
+N21	Reference T53 ICD10:R55	Omdlenie i zapaść
+T54	Symptom 2467 2477	krwawienia
+N22	Reference T54 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T55	Symptom 2479 2492	czarne stolce
+N23	Reference T55 ICD10:K92.1	Stolce smołowate
+T56	Symptom 2494 2511	brunatne wymioty,
+N24	Reference T56 ICD10:K92.0	Wymioty krwawe
+T57	Condition 2512 2528	chorobę wrzodową
+N25	Reference T57 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T58	Symptom 2530 2538	duszność
+N26	Reference T58 ICD10:R06.0	Duszność
+T59	Symptom 2540 2554	duszność nocną
+T60	Symptom 2556 2580	bóle w klatce piersiowej
+T61	Symptom 2582 2597	kołatania serca
+N29	Reference T61 ICD10:R00.2	Kołatanie serca
+T62	Condition 2599 2601	HA
+N30	Reference T62 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T63	Condition 2603 2605	DM
+N31	Reference T63 ICD10:E13	Inne określone postacie cukrzycy
+T64	Condition 2607 2617	udar mózgu
+N32	Reference T64 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T65	Condition 2619 2631	zawał serca,
+N33	Reference T65 ICD10:I25.2	Przebyty zawał serca
+T66	Symptom 2632 2668	objawy zapalenia żył kończyn dolnych
+R15	Neg Arg1:T47 Arg2:T52	
+R16	Neg Arg1:T47 Arg2:T53	
+R17	Neg Arg1:T47 Arg2:T66	
+R18	Neg Arg1:T47 Arg2:T55	
+R19	Neg Arg1:T47 Arg2:T54	
+R20	Neg Arg1:T47 Arg2:T56	
+R21	Neg Arg1:T47 Arg2:T57	
+R22	Neg Arg1:T47 Arg2:T58	
+R23	Neg Arg1:T47 Arg2:T59	
+R24	Neg Arg1:T47 Arg2:T60	
+R25	Neg Arg1:T47 Arg2:T61	
+R26	Neg Arg1:T47 Arg2:T62	
+R27	Neg Arg1:T47 Arg2:T63	
+R28	Neg Arg1:T47 Arg2:T64	
+R29	Neg Arg1:T47 Arg2:T65	
+T67	Symptom 2355 2391	obrzęki podudzi pod długim chodzeniu
+N34	Reference T67 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T68	Symptom 2394 2434	kołatania serca w sytuacjach stresowych.
+N35	Reference T68 ICD10:R00.2	Kołatanie serca
+T69	Condition 1821 1858	migotaniem przedsionków (napadowym?),
+N36	Reference T69 ICD10:I48	Migotanie i trzepotanie przedsionków
+T70	Treatment 1934 1975	zabiegu operacyjnego metodą laparoskopową
+T71	Condition 1985 2001	torbieli jajnika
+N37	Reference T71 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T72	Condition 2003 2030	częstoskurczu nadkomorowego
+N38	Reference T72 ICD10:I47.1	Częstoskurcz nadkomorowy
+T73	Investigation_result 2031 2038	150/min
+T74	Condition 2068 2140	zaburzenia rytmu serca w postaci naprzemiennej tachykardii i bradykardii
+N39	Reference T74 ICD10:I49.5	Zespół chorej zatoki
+T75	Investigation_result 2187 2210	RR  150/99 do 40/20mmHg
+T76	Investigation_result 2159 2186	spadek ciśnienia tętniczego
+T77	Treatment 1907 1929	 indukcji znieczulenia
+A4	Source T69 Declared
+A5	Source T2 Declared
+A3	Source T7 Declared
+A2	Source T6 Declared
+A1	Source T5 Declared
+T78	Condition 877 886	ExSV poj.
+N40	Reference T78 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T79	Condition 888 892	pary
+N41	Reference T79 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T80	Condition 894 899	salwy
+N42	Reference T80 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T81	Condition 901 904	TSV
+N43	Reference T81 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+A6	Status T71 Historical_Insignificant
+A7	Status T70 Historical_Insignificant
+T82	Date 2348 2354	czasem
+R30	Dat Arg1:T82 Arg2:T67	
+R31	Dat Arg1:T82 Arg2:T68	
+N28	Reference T60 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N19	Reference T50 ICD10:Z72.0	Używanie tytoniu
+N13	Reference T33 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N18	Reference T48 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N44	Reference T49 ICD10:Z72	Problemy związane ze stylem życia
+N27	Reference T59 ICD10:R06.0	Duszność
+T83	Treatment 1284 1351	Ponowna hospitalizacja w Klinice Kardiologii i Wad Wrodzonych Doros
+T84	Treatment 1165 1204	Dalsza opieka w Poradni Kardiologicznej
+T85	Treatment 1112 1160	Dalsza opieka w POZ oraz Poradni Ginekologicznej
+N4	Reference T4 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona

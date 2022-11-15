@@ -1,0 +1,94 @@
+T1	Condition 457 474	Guz płuca prawego
+N1	Reference T1 ICD10:D38.1	Tchawica, oskrzele i płuco
+T2	Condition 500 521	Nadciśnienie tętnicze
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Condition 523 554	Świeżo rozpoznana cukrzyca t.2.
+N3	Reference T3 ICD10:E11	Cukrzyca insulinoniezależna
+T4	Condition 555 584	Hipercholesterolemia mieszana
+N4	Reference T4 ICD10:E78.2	Hiperlipidemia mieszana
+T5	Behaviour 611 632	Przewlekły nikotynizm
+N5	Reference T5 ICD10:Z72.0	Używanie tytoniu
+T6	Condition 635 656	Polipy jelita grubego
+N6	Reference T6 ICD10:K63.5	Polip okrężnicy
+T7	Treatment 678 693	panhisterktomii
+N7	Reference T7 ICD10:Z90.7	Nabyty brak narządów płciowych
+T8	Treatment 815 842	dalsza opieka w poradni POZ
+T9	Treatment 843 892	okresowa kontrola kardiologiczna, diabetologiczna
+T10	Investigation 902 932	pilna diagnostyka onkologiczna
+T11	Investigation 993 1055	okresowa kontrola glikemii, elektrolitów, mocznika, kreatyniny
+T12	Behaviour 1056 1072	dieta cukrzycowa
+T13	Drug 1104 1116	Estofem mite
+T14	Drug_dose 1117 1131	1x1 tabl. rano
+T15	Drug 1132 1139	Romazic
+T16	Drug_dose 1140 1160	10 mg 1x1 tabl. rano
+T17	Drug 1161 1166	Acard
+T18	Drug_dose 1167 1187	75 mg 1x1 tabl. rano
+T19	Drug 1188 1194	Lokren
+T20	Drug_dose 1195 1215	20 mg 1x1 tabl. rano
+T21	Drug 1216 1223	Polpril
+T22	Drug_dose 1224 1246	5 mg 1 tabl. wieczorem
+T23	Drug 1247 1256	Jardiance
+T24	Drug_dose 1257 1275	10 mg 1 tabl. rano
+R1	Drg Arg1:T13 Arg2:T14	
+R2	Drg Arg1:T15 Arg2:T16	
+R3	Drg Arg1:T17 Arg2:T18	
+R4	Drg Arg1:T19 Arg2:T20	
+R5	Drg Arg1:T21 Arg2:T22	
+R6	Drg Arg1:T23 Arg2:T24	
+A1	Status T7 Historical_Insignificant
+T25	Symptom 1449 1488	atypowych dolegliwości bólowych w kl.p.
+N8	Reference T25 ICD10:R07.3	Inne bóle w klatce piersiowej
+T26	Symptom 1490 1521	ograniczenia tolerancji wysiłku
+T27	Symptom 1523 1539	kołatania serca,
+N9	Reference T27 ICD10:R00.2	Kołatanie serca
+T28	Symptom 1540 1554	zawrotów głowy
+N10	Reference T28 ICD10:R42	Zawroty głowy i odurzenie
+T29	Negation 1555 1558	bez
+T30	Symptom 1559 1565	omdleń
+N11	Reference T30 ICD10:R55	Omdlenie i zapaść
+R7	Neg Arg1:T29 Arg2:T30	
+T31	Symptom 1577 1652	wysiłkowe bóle kończyn dolnych - pieczenie w łydkach i prostownikach kolana
+T32	Condition 1667 1687	Hipercholesterolemia
+N12	Reference T32 ICD10:E78.0	Czysta hipercholesterolemia
+T33	Condition 1689 1720	Nieprawidłowa glikemia na czczo
+N13	Reference T33 ICD10:R73	Podwyższone stężenie glukozy we krwi
+T34	Treatment 1745 1761	panhysterektomii
+A2	Status T34 Historical_Insignificant
+N14	Reference T34 ICD10:Z90.7	Nabyty brak narządów płciowych
+T35	Treatment 1771 1798	polipektomii jelita grubego
+A3	Status T35 Historical_Insignificant
+N15	Reference T35 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+A4	Status T6 Historical_Insignificant
+T36	Condition 1800 1809	Uczulenia
+N16	Reference T36 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T37	Negation 1810 1816	neguje
+R8	Neg Arg1:T37 Arg2:T36	
+T38	Behaviour 1826 1850	papierosy - 35 paczkolat
+N17	Reference T38 ICD10:Z72.0	Używanie tytoniu
+T39	Condition 1864 1880	choroba wieńcowa
+A5	Status T39 Family
+N18	Reference T39 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T40	Date 1889 1906	w okolicy 60 r.ż.
+R9	Dat Arg1:T40 Arg2:T39	
+T41	Behaviour 1909 1918	Rencistka
+T42	Date 1921 1930	wcześniej
+T43	Behaviour 1931 1938	prządka
+N19	Reference T43 ICD10:Z57.3	Narażenie zawodowe na inne czynniki zanieczyszczające powietrze
+R10	Dat Arg1:T42 Arg2:T43	
+T44	Drug 1946 1958	Estofem mite
+T45	Drug_dose 1959 1973	1x1 tabl. rano
+T46	Drug 1974 1981	Romazic
+T47	Drug_dose 1982 2002	10 mg 1x1 tabl. rano
+T48	Drug 2003 2008	Acard
+T49	Drug_dose 2009 2029	75 mg 1x1 tabl. rano
+T50	Drug 2030 2036	Lokren
+T51	Drug_dose 2037 2057	20 mg 1x1 tabl. rano
+T52	Drug 2068 2089	suplementy witaminowe
+R11	Drg Arg1:T44 Arg2:T45	
+R12	Drg Arg1:T46 Arg2:T47	
+R13	Drg Arg1:T48 Arg2:T49	
+R14	Drg Arg1:T50 Arg2:T51	
+T53	Investigation 1721 1735	do diagnostyki
+T54	Treatment 941 976	skierowanie do Oddziału Chorób Płuc
+T55	Investigation 477 498	w trakcie diagnostyki
+T56	Treatment 595 609	farmakoterapii

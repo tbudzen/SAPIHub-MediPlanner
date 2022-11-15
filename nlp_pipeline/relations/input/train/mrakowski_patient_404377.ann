@@ -1,0 +1,74 @@
+T1	Treatment 332 399	Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T2	Behaviour 403 498	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T3	Investigation 502 571	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydo
+T4	Condition 806 876	zawale serca z uniesieniem odcinka ST ściany dolnej i dolno-podstawnej
+N1	Reference T4 ICD10:I25.2	Przebyty zawał serca
+T5	Date 878 888	08/07/2018
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Condition 894 906	Dyslipidemia
+N2	Reference T6 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T7	Condition 1082 1152	zawale serca z uniesieniem odcinka ST ściany dolnej i dolno-podstawnej
+N3	Reference T7 ICD10:I25.2	Przebyty zawał serca
+T8	Investigation 1164 1178	koronarografii
+T9	Investigation_result 1179 1192	bez przewężeń
+R2	Inv Arg1:T8 Arg2:T9	
+T10	Date 1194 1204	08/07/2019
+R3	Dat Arg1:T10 Arg2:T8	
+R4	Dat Arg1:T10 Arg2:T9	
+T11	Investigation 1276 1285	MRI serca
+T12	Negation 1288 1294	Neguje
+T13	Symptom 1295 1307	zasłabnięcia
+T14	Symptom 1309 1318	duszności
+N4	Reference T14 ICD10:R06.0	Duszność
+T15	Symptom 1320 1351	typowe bóle w klatce piersiowej
+N5	Reference T15 ICD10:R07	Ból gardła i w klatce piersiowej
+R5	Neg Arg1:T12 Arg2:T13	
+R6	Neg Arg1:T12 Arg2:T14	
+R7	Neg Arg1:T12 Arg2:T15	
+T16	Treatment 1353 1370	Przebyte operacje
+T17	Treatment 1373 1389	cholecystektomia
+A1	Status T17 Historical_Insignificant
+T18	Date 1390 1397	w 2017r
+R8	Dat Arg1:T18 Arg2:T17	
+T19	Treatment 1400 1413	appendectomia
+A2	Status T19 Historical_Insignificant
+T20	Date 1414 1428	w dzieciństwie
+R9	Dat Arg1:T20 Arg2:T19	
+T21	Treatment 1430 1449	3x cięcie cesarskie
+A3	Status T21 Historical_Insignificant
+T22	Date 1451 1467	ostatnie w 2011r
+R10	Dat Arg1:T22 Arg2:T21	
+T23	Condition 1496 1499	WZW
+N6	Reference T23 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T24	Condition 1508 1517	borelioza
+N7	Reference T24 ICD10:A69.2	Choroba z Lyme
+T25	Condition 1525 1533	gruźlica
+N8	Reference T25 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T26	Condition 1539 1543	odra
+N9	Reference T26 ICD10:B05	Odra
+T27	Treatment 1549 1568	szczepienie na odrę
+T28	Negation 1545 1546	-
+R11	Neg Arg1:T28 Arg2:T26	
+T29	Negation 1535 1536	-
+R12	Neg Arg1:T29 Arg2:T25	
+T30	Negation 1520 1521	-
+R13	Neg Arg1:T30 Arg2:T24	
+T31	Negation 1502 1503	-
+R14	Neg Arg1:T31 Arg2:T23	
+T32	Condition 1573 1588	Wywiad rodzinny
+A4	Status T32 Family
+T33	Negation 1590 1599	negatywny
+R15	Neg Arg1:T33 Arg2:T32	
+T34	Behaviour 1600 1615	Palenie tytoniu
+N10	Reference T34 ICD10:Z72.0	Używanie tytoniu
+T35	Negation 1617 1620	nie
+R16	Neg Arg1:T35 Arg2:T34	
+T36	Behaviour 1621 1632	Inne używki
+T37	Negation 1634 1637	nie
+R17	Neg Arg1:T37 Arg2:T36	
+T38	Condition 1638 1647	Uczulenia
+T39	Negation 1649 1655	neguje
+R18	Neg Arg1:T39 Arg2:T38	
+T40	Behaviour 1672 1698	warunki mieszkaniowe dobre
+T41	Treatment 907 925	w trakcie leczenia
+T42	Drug 926 933	statyną

@@ -1,0 +1,221 @@
+T1	Treatment 335 362	dalsza opieka w poradni POZ
+T2	Treatment 369 451	okresowa kontrola okulistyczna, endokrynologiczna, reumatologiczna i neurologiczna
+T3	Treatment 458 517	okresowa kontrola w Poradni Kardiologicznej w ICZMP w Łodzi
+T4	Investigation 523 585	konieczne wykonanie angio-CT naczyń wieńcowych w trybie pilnym
+T5	Investigation 592 631	codzienna kontrola ciśnienia tętniczego
+T6	Investigation 638 667	okresowa kontrola lipidogramu
+T7	Date 678 692	za 6-8 tygodni
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Behaviour 700 743	dieta niskocholesterolowa i niskokaloryczna
+T9	Behaviour 750 771	zakaz palenia tytoniu
+T10	Behaviour 777 796	redukcja masy ciała
+T11	Behaviour 802 826	oszczędzający tryb życia
+T12	Treatment 832 860	regularne przyjmowanie leków
+T13	Drug 870 875	Acard
+T14	Drug_dose 876 898	75 mg 1tabl. wieczorem
+R2	Drg Arg1:T13 Arg2:T14	
+T15	Drug 907 917	Prestarium
+T16	Drug_dose 918 935	5 mg 1 tabl. rano
+R3	Drg Arg1:T15 Arg2:T16	
+T17	Drug 944 950	Atoris
+T18	Drug_dose 951 974	80 mg 1 tabl. wieczorem
+R4	Drg Arg1:T17 Arg2:T18	
+T19	Drug 983 996	Rutinoscorbin
+T20	Drug_dose 997 1033	1 tabl. rano, w południe i wieczorem
+R5	Drg Arg1:T19 Arg2:T20	
+T21	Drug 1042 1051	Monoprost
+T22	Drug_dose 1052 1097	50ug/ml – wg dotychczasowych zaleceń okulisty
+R6	Drg Arg1:T21 Arg2:T22	
+T23	Drug 1105 1112	Bonviva
+T24	Drug_dose 1115 1153	wg dotychczasowych zaleceń reumatologa
+R7	Drg Arg1:T23 Arg2:T24	
+T25	Symptom 1372 1396	Bóle w klatce piersiowej
+N1	Reference T25 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T26	Condition 1411 1451	przewlekłej choroby niedokrwiennej serca
+A1	Source T26 Declared
+N2	Reference T26 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T27	Condition 1453 1464	Nadkomorowe
+N3	Reference T27 ICD10:I49.1	Inne zaburzenia rytmu serca
+T28	Condition 1467 1491	częstoskurcz nadkomorowy
+N4	Reference T28 ICD10:I47.1	Częstoskurcz nadkomorowy
+T29	Condition 1494 1519	komorowe zaburzenia rytmu
+N5	Reference T29 ICD10:I49.3	Inne zaburzenia rytmu serca
+T30	Condition 1522 1543	częstoskurcz komorowy
+N6	Reference T30 ICD10:I47.2	Częstoskurcz komorowy
+T31	Condition 1545 1586	Przewlekła rozkurczowa niewydolność serca
+N7	Reference T31 ICD10:I50	Niewydolność serca
+T32	Condition 1588 1621	Nadciśnienie tętnicze skorygowane
+N8	Reference T32 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T33	Behaviour 1623 1633	Nikotynizm
+N9	Reference T33 ICD10:Z72.0	Używanie tytoniu
+T34	Condition 1635 1655	Hipercholesterolemia
+N10	Reference T34 ICD10:E78.0	Czysta hipercholesterolemia
+T35	Condition 1657 1664	Otyłość
+N11	Reference T35 ICD10:E66	Otyłość
+T36	Condition 1674 1686	udarze mózgu
+N12	Reference T36 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T37	Symptom 1700 1736	niedowładu połowiczego lewostronnego
+N13	Reference T37 ICD10:G81	Porażenie połowicze
+T38	Date 1747 1759	przed 14 lat
+R8	Dat Arg1:T38 Arg2:T36	
+R9	Dat Arg1:T38 Arg2:T37	
+T39	Condition 1761 1786	Miażdżyca aorty brzusznej
+N14	Reference T39 ICD10:I70.0	Miażdżyca aorty
+T40	Condition 1788 1825	Łagodne poszerzenie aorty wstępującej
+N15	Reference T40 ICD10:R93.1	
+T41	Condition 1827 1886	Wada serca pod postacią niedomykalności aortalnej I stopnia
+N16	Reference T41 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T42	Condition 1888 1950	Zmiany zwyrodnieniowe kręgosłupa w odcinku lędźwiowo-krzyżowym
+N17	Reference T42 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T43	Condition 1952 1963	Osteoporoza
+N18	Reference T43 ICD10:M81.9	Osteoporoza, nieokreślona
+T44	Condition 1965 2018	Przewlekła niewydolności żylna naczyń kończyn dolnych
+N19	Reference T44 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+T45	Condition 2020 2052	Wole guzkowe w stadium eutyreozy
+N20	Reference T45 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T46	Condition 2054 2060	Jaskra
+N21	Reference T46 ICD10:H40	Jaskra
+T47	Treatment 2070 2083	appendektomii
+A2	Status T47 Historical_Insignificant
+T48	Date 2094 2104	przed laty
+R10	Dat Arg1:T48 Arg2:T47	
+T49	Symptom 2288 2384	bólu w klatce piersiowej, rozdzierających promieniujących do gardła, kilku, kilkunastominutowych
+N22	Reference T49 ICD10:R07.3	Inne bóle w klatce piersiowej
+T50	Negation 2386 2392	neguje
+T51	Symptom 2393 2412	związek z wysiłkiem
+R11	Neg Arg1:T50 Arg2:T51	
+T52	Drug 2425 2428	NTG
+T53	Date 2453 2466	od 6 miesięcy
+R12	Dat Arg1:T53 Arg2:T49	
+T54	Symptom 2484 2513	uczucie szybkiego bicia serca
+N23	Reference T54 ICD10:R00.2	Kołatanie serca
+T55	Date 2529 2537	do 5 lat
+R13	Dat Arg1:T55 Arg2:T54	
+T56	Investigation 2541 2553	Holterze ekg
+T57	Date 2557 2561	2011
+R14	Dat Arg1:T57 Arg2:T56	
+T58	Investigation_result 2562 2568	SVTach
+N24	Reference T58 ICD10:I47.1	Częstoskurcz nadkomorowy
+R15	Inv Arg1:T56 Arg2:T58	
+R16	Dat Arg1:T57 Arg2:T58	
+T59	Investigation_result 2575 2595	PAT z HR 100-120/min
+A3	Source T59 Declared
+N25	Reference T59 ICD10:R00.0	Tachykardia, nieokreślona
+R17	Inv Arg1:T56 Arg2:T59	
+T60	Investigation_result 2599 2620	pojedyncze ExV i ExSV
+N26	Reference T60 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+R18	Inv Arg1:T56 Arg2:T60	
+R19	Dat Arg1:T57 Arg2:T59	
+R20	Dat Arg1:T57 Arg2:T60	
+T61	Investigation_result 2622 2639	obniżenia odc. ST
+R21	Inv Arg1:T56 Arg2:T61	
+R22	Dat Arg1:T57 Arg2:T61	
+T62	Date 2651 2663	przed 5 laty
+T63	Symptom 2664 2716	pojedynczy epizod omdlenia bez objawów zwiastunowych
+N27	Reference T63 ICD10:R55	Omdlenie i zapaść
+R23	Dat Arg1:T62 Arg2:T63	
+T64	Condition 2765 2767	HA
+N28	Reference T64 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T65	Date 2770 2777	od roku
+R24	Dat Arg1:T65 Arg2:T64	
+T66	Condition 2810 2822	udarze mózgu
+N29	Reference T66 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T67	Date 2823 2836	przed 14 laty
+R25	Dat Arg1:T67 Arg2:T66	
+T68	Condition 2838 2844	afazja
+N30	Reference T68 ICD10:R47.0	Dysfazja i afazja
+T69	Symptom 2846 2877	niedowład połowiczy lewostronny
+A4	Source T69 Declared
+N31	Reference T69 ICD10:G81	Porażenie połowicze
+T70	Symptom 2881 2914	zaburzenia czucia powierzchownego
+N32	Reference T70 ICD10:R20	Zaburzenia czucia skórnego
+T71	Investigation 2919 2921	TK
+T72	Negation 2940 2943	bez
+T73	Investigation_result 2944 2965	zmian niedokrwiennych
+R26	Neg Arg1:T72 Arg2:T73	
+R27	Inv Arg1:T71 Arg2:T73	
+T74	Investigation_result 2970 3004	zmiany miażdżycowe aorty brzusznej
+N33	Reference T74 ICD10:I70.0	Miażdżyca aorty
+T75	Date 3007 3014	03.2017
+R28	Dat Arg1:T75 Arg2:T74	
+R29	Inv Arg1:T71 Arg2:T74	
+T76	Investigation 3019 3033	badaniach lab.
+T77	Investigation_result 3036 3039	IFG
+N34	Reference T77 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+R30	Inv Arg1:T76 Arg2:T77	
+T78	Investigation_result 3058 3061	HLP
+N35	Reference T78 ICD10:E78.5	Hiperlipidemia, nieokreślona
+R31	Inv Arg1:T76 Arg2:T78	
+T79	Condition 3063 3106	zmiany zwyrodnieniowe kręgosłupa w odc. L/S
+N36	Reference T79 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T80	Condition 3108 3117	kregozmyk
+N37	Reference T80 ICD10:M43.1	Kręgozmyk
+T81	Condition 3119 3165	przewlekła niewydolności żylna nn. kk. dolnych
+N38	Reference T81 ICD10:I80.3	Zapalenie żył i zakrzepowe zapalenie żył
+T82	Date 3167 3174	03.2017
+R32	Dat Arg1:T82 Arg2:T81	
+T83	Condition 3176 3190	guzki tarczycy
+N39	Reference T83 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T84	Condition 3251 3257	jaskra
+N40	Reference T84 ICD10:H40	Jaskra
+T85	Treatment 3260 3277	Przebyte operacje
+T86	Treatment 3279 3292	appendektomia
+A5	Status T86 Historical_Insignificant
+T87	Date 3294 3304	przed laty
+R33	Dat Arg1:T87 Arg2:T86	
+T88	Condition 3307 3322	Wywiad rodzinny
+A6	Status T88 Family
+T89	Negation 3324 3337	bez znaczenia
+R34	Neg Arg1:T89 Arg2:T88	
+T90	Condition 3339 3346	Alergie
+N41	Reference T90 ICD10:T78.4	Alergia, nieokreślona
+T91	Negation 3349 3355	neguje
+R35	Neg Arg1:T91 Arg2:T90	
+T92	Behaviour 3357 3396	Nikotynizm: tak, obecnie 1 -2 /dziennie
+N42	Reference T92 ICD10:Z72.0	Używanie tytoniu
+T93	Behaviour 3398 3413	paczka dziennie
+N43	Reference T93 ICD10:Z72.0	Używanie tytoniu
+T94	Date 3414 3430	do 20 lat wstecz
+R36	Dat Arg1:T94 Arg2:T93	
+T95	Behaviour 3433 3445	20 paczkolat
+N44	Reference T95 ICD10:Z72.0	Używanie tytoniu
+T96	Behaviour 3448 3489	Alkohol: okazjonalnie, w małych ilościach
+A7	Status T96 Historical_Insignificant
+N45	Reference T96 ICD10:Z72.1	Używanie alkoholu
+T97	Behaviour 3491 3508	Uzależnienie inne
+T98	Negation 3510 3516	neguje
+R37	Neg Arg1:T98 Arg2:T97	
+T99	Behaviour 3534 3543	emerytura
+T100	Behaviour 3545 3565	w szkole sprzątaczka
+T101	Drug 3573 3582	Monoprost
+T102	Drug_dose 3583 3623	50ug/ml - 1 amp. do lewego oka wieczorem
+R38	Drg Arg1:T101 Arg2:T102	
+T103	Drug 3625 3635	Prestarium
+T104	Drug_dose 3636 3653	5 mg 1 tabl. rnao
+R39	Drg Arg1:T103 Arg2:T104	
+T105	Drug 3654 3659	Acard
+T106	Drug_dose 3660 3696	75 mg 1tabl. wieczorem - wt i piątki
+R40	Drg Arg1:T105 Arg2:T106	
+T107	Condition 3698 3712	siniaki na kk.
+N46	Reference T107 ICD10:M79.8	Inne określone choroby tkanek miękkich
+T108	Drug 3743 3749	Wit D3
+T109	Drug_dose 3750 3755	2000j
+R41	Drg Arg1:T108 Arg2:T109	
+T110	Drug 3758 3764	wit. K
+T111	Drug_dose 3765 3775	75ug prep.
+R42	Drg Arg1:T110 Arg2:T111	
+T112	Drug 3776 3787	Witamina D3
+T113	Drug 3788 3794	K2MK-7
+T114	Drug_dose 3795 3807	1 tabl. rano
+R43	Drg Arg1:T112 Arg2:T114	
+R44	Drg Arg1:T113 Arg2:T114	
+T115	Drug 3808 3815	statyna
+T116	Negation 3816 3826	odstawiona
+R45	Neg Arg1:T116 Arg2:T115	
+T117	Date 3850 3861	2 m-ce temu
+R46	Dat Arg1:T117 Arg2:T115	
+T118	Investigation 3890 3900	echo serca
+T119	Investigation 3902 3905	TET
+T120	Investigation 3907 3911	ABPM
+T121	Investigation 3913 3923	Holter ekg
+N47	Reference T97 ICD10:Z72	Problemy związane ze stylem życia

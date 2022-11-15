@@ -1,0 +1,166 @@
+T1	Treatment 332 368	Wskazana dalsza opieka u lekarza POZ
+T2	Treatment 372 422	Wskazana okresowa opieka w Poradni Kardiologicznej
+T3	Condition 484 501	choroby wieńcowej
+N1	Reference T3 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T4	Investigation 504 534	badaniu angio-CT tt.wieńcowych
+T5	Investigation 535 546	SPECT serca
+T6	Condition 789 830	Łagodna niedomykalność zastawki aortalnej
+N2	Reference T6 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T7	Condition 832 863	Napadowe migotanie przedsionków
+N3	Reference T7 ICD10:I48	Migotanie i trzepotanie przedsionków
+T8	Condition 877 892	Cukrzyca typu 2
+N4	Reference T8 ICD10:E11	Cukrzyca insulinoniezależna
+T9	Drug 894 906	leki doustne
+T10	Condition 909 930	Nadciśnienie tętnicze
+N5	Reference T10 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T11	Condition 932 961	Przewlekła niewydolność serca
+T12	Condition 995 1035	Niedoczynność tarczy w stadium eutyreozy
+N7	Reference T12 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T13	Condition 1037 1049	Dyslipidemia
+N8	Reference T13 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T14	Symptom 1051 1074	Nawrotowe zawroty głowy
+N9	Reference T14 ICD10:R42	Zawroty głowy i odurzenie
+T15	Condition 1076 1098	Żylaki kończyn dolnych
+N10	Reference T15 ICD10:I83	Żylaki kończyn dolnych
+T16	Condition 1243 1296	napadowym migotaniem przedsionków w II klasie wg EHRA
+N11	Reference T16 ICD10:I48	Migotanie i trzepotanie przedsionków
+T17	Symptom 1334 1385	ograniczenia tolerancji wysiłku do II klasy wg NYHA
+N12	Reference T17 ICD10:R53	Złe samopoczucie i zmęczenie
+T18	Symptom 1392 1431	kłujących bolów po lewej stronie mostka
+N13	Reference T18 ICD10:R07.2	Ból w okolicy przedsercowej
+T19	Condition 1454 1469	cukrzyca typu 2
+N14	Reference T19 ICD10:E11	Cukrzyca insulinoniezależna
+T20	Condition 1471 1492	nadciśnienie tętnicze
+N15	Reference T20 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T21	Condition 1494 1514	niedoczynność tarczy
+N16	Reference T21 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T22	Condition 1516 1528	dyslipidemia
+N17	Reference T22 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T23	Symptom 1530 1553	nawrotowe zawroty głowy
+N18	Reference T23 ICD10:R42	Zawroty głowy i odurzenie
+T24	Condition 1555 1577	żylaki kończyn dolnych
+N19	Reference T24 ICD10:I83	Żylaki kończyn dolnych
+T25	Negation 1579 1585	Neguje
+T26	Symptom 1587 1599	zasłabnięcia
+T27	Symptom 1601 1609	omdlenia
+N20	Reference T27 ICD10:R55	Omdlenie i zapaść
+T28	Symptom 1611 1621	krwawienia
+T29	Symptom 1623 1636	czarne stolce
+N22	Reference T29 ICD10:K92.1	Stolce smołowate
+T30	Symptom 1638 1654	brunatne wymioty
+N23	Reference T30 ICD10:K92.0	Wymioty krwawe
+T31	Condition 1656 1672	chorobę wrzodową
+N24	Reference T31 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T32	Symptom 1674 1688	duszność nocną
+N25	Reference T32 ICD10:R06.0	Duszność
+T33	Symptom 1690 1705	obrzęki podudzi
+T34	Symptom 1707 1731	bóle w klatce piersiowej
+R1	Neg Arg1:T25 Arg2:T34	
+R2	Neg Arg1:T25 Arg2:T33	
+R3	Neg Arg1:T25 Arg2:T32	
+R4	Neg Arg1:T25 Arg2:T31	
+R5	Neg Arg1:T25 Arg2:T30	
+R6	Neg Arg1:T25 Arg2:T29	
+R7	Neg Arg1:T25 Arg2:T28	
+R8	Neg Arg1:T25 Arg2:T27	
+R9	Neg Arg1:T25 Arg2:T26	
+T35	Treatment 1733 1750	Przebyte operacje
+T36	Treatment 1752 1768	cholecystektomia
+A1	Status T36 Historical_Insignificant
+T37	Date 1770 1775	2009r
+R10	Dat Arg1:T37 Arg2:T36	
+T38	Behaviour 1777 1792	Palenie tytoniu
+T39	Behaviour 1794 1804	nikotynizm
+T40	Negation 1818 1826	nie pali
+R11	Neg Arg1:T40 Arg2:T38	
+T41	Date 1827 1839	od 20-30 lat
+R12	Dat Arg1:T41 Arg2:T38	
+T42	Behaviour 1853 1865	15 paczkolat
+T43	Behaviour 1867 1878	Inne używki
+T44	Negation 1880 1886	neguje
+R13	Neg Arg1:T44 Arg2:T43	
+T45	Condition 1887 1896	Uczulenia
+N31	Reference T45 ICD10:T78.4	Alergia, nieokreślona
+T46	Negation 1898 1904	neguje
+R14	Neg Arg1:T46 Arg2:T45	
+T47	Condition 1905 1920	Wywiad rodzinny
+A2	Status T47 Family
+T48	Condition 1929 1933	udar
+A3	Status T48 Family
+N32	Reference T48 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T49	Condition 1949 1953	udar
+A4	Status T49 Family
+N33	Reference T49 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T50	Condition 1989 1992	WZW
+N34	Reference T50 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T51	Condition 1999 2008	borelioza
+N35	Reference T51 ICD10:A69.2	Choroba z Lyme
+T52	Condition 2014 2017	tbc
+T53	Condition 2023 2027	odra
+N37	Reference T53 ICD10:B05	Odra
+T54	Condition 2033 2047	kontakt z odrą
+N38	Reference T54 ICD10:B05	Odra
+T55	Negation 2049 2050	-
+R15	Neg Arg1:T55 Arg2:T54	
+T56	Negation 2029 2030	-
+R16	Neg Arg1:T56 Arg2:T53	
+T57	Negation 2019 2020	-
+R17	Neg Arg1:T57 Arg2:T52	
+T58	Negation 2010 2011	-
+R18	Neg Arg1:T58 Arg2:T51	
+T59	Negation 1994 1995	-
+R19	Neg Arg1:T59 Arg2:T50	
+T60	Behaviour 2068 2094	warunki mieszkaniowe dobre
+T61	Drug 2143 2150	Pradaxa
+T62	Drug_dose 2151 2163	110 mg 1-0-1
+R20	Drg Arg1:T61 Arg2:T62	
+T63	Drug 2164 2172	Bisocard
+T64	Drug_dose 2173 2183	5 mg 1-0-1
+R21	Drg Arg1:T63 Arg2:T64	
+T65	Drug 2185 2197	Tertensif SR
+T66	Drug_dose 2198 2210	1,5 mg 1-0-0
+R22	Drg Arg1:T65 Arg2:T66	
+T67	Drug 2211 2224	Co-Prestarium
+T68	Drug_dose 2225 2239	10+ 5 mg 1-0-0
+R23	Drg Arg1:T67 Arg2:T68	
+T69	Drug 2240 2252	Preducatl MR
+T70	Drug_dose 2253 2264	35 mg 1-0-1
+R24	Drg Arg1:T69 Arg2:T70	
+T71	Drug 2265 2276	Grofibrat S
+T72	Drug_dose 2277 2289	215 mg 0-0-1
+R25	Drg Arg1:T71 Arg2:T72	
+T73	Drug 2290 2297	Vasilip
+T74	Drug_dose 2298 2309	20 mg 0-0-1
+R26	Drg Arg1:T73 Arg2:T74	
+T75	Drug 2310 2320	Diaprel MR
+T76	Drug_dose 2321 2332	60 mg 1-0-0
+R27	Drg Arg1:T75 Arg2:T76	
+T77	Drug 2333 2345	Symformin XR
+T78	Drug_dose 2346 2359	1000 mg 0-0-1
+R28	Drg Arg1:T77 Arg2:T78	
+T79	Drug 2360 2368	Cavinton
+T80	Drug_dose 2369 2379	5 mg 1-0-0
+R29	Drg Arg1:T79 Arg2:T80	
+T81	Drug 2380 2390	Euthyrox N
+T82	Drug_dose 2391 2402	75 ug 1-0-0
+R30	Drg Arg1:T81 Arg2:T82	
+T83	Investigation 2463 2484	badania laboratoryjne
+T84	Investigation 2486 2490	ECHO
+T85	Investigation 2492 2510	EKG metodą Holtera
+T86	Investigation 2512 2516	ABPM
+R31	Neg Arg1:T40 Arg2:T39	
+R32	Dat Arg1:T41 Arg2:T39	
+A5	Source T3 Declared
+T87	Investigation 459 483	nieinwazyjna diagnostyka
+T88	Symptom 962 981	w II klasie wg NYHA
+N39	Reference T88 ICD10:I50	Niewydolność serca
+N6	Reference T11 ICD10:I50	Niewydolność serca
+N40	Reference T26 ICD10:R55	Omdlenie i zapaść
+N28	Reference T38 ICD10:Z72.0	Używanie tytoniu
+N29	Reference T39 ICD10:Z72.0	Używanie tytoniu
+N30	Reference T42 ICD10:Z72.0	Używanie tytoniu
+N21	Reference T28 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N26	Reference T33 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N27	Reference T34 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N41	Reference T43 ICD10:Z72	Problemy związane ze stylem życia
+N36	Reference T52 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

@@ -1,0 +1,618 @@
+allRelations          : 61
+oks                   : 33
+isRedundantAndRemoveds: 27
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 0
+GOOD / BAD            : 60 / 1
+Sentence 0:
+------------------------------------------------
+Wiek: 59 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zastosowane leczenie
+
+
+
+Sentence 4:
+------------------------------------------------
+Nebilet, Encorton, IPP, Tritace, Astmodil, Alvesco, Symbicort,
+------------------------------------------------
+
+
+
+Sentence 5:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 6:
+- kontrola u lekarza POZ
+- dalsza kontrola w Poradni Kardiologicznej i Pulmonologicznej
+- regularne przyjmowanie leków:
+Nebilet 5mg 1x 1/2 tabl/rano
+
+R1	Drg Arg1:T11 Arg2:T15 << OK >>	Nebilet -> 5mg 1x 1/2 tabl/rano  <RANK: 3> <info: start[631, 639] <type: RIGHT>>
+
+
+Sentence 7:
+Tritace 10mg 1x 1 tabl/wiecz
+IPP 20mg 1x 1 tabl/rano
+Encorton, A
+------------------------------------------------
+
+R2	Drg Arg1:T12 Arg2:T16 <<REDUNDANT!!!REMOVED>>	Encorton -> 10mg 1x 1 tabl/wiecz <:REMOVED other first tag between (left):> <RANK: 1> <info: start[713, 668] <type: LEFT>>
+R3	Drg Arg1:T12 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Encorton -> 20mg 1x 1 tabl/rano <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 1> <info: start[713, 693] <type: LEFT>>
+R4	Drg Arg1:T13 Arg2:T16 <<REDUNDANT!!!REMOVED>>	IPP -> 10mg 1x 1 tabl/wiecz <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[689, 668] <type: LEFT>>
+R5	Drg Arg1:T13 Arg2:T17 << OK >>	IPP -> 20mg 1x 1 tabl/rano  <RANK: 3> <info: start[689, 693] <type: RIGHT>>
+R6	Drg Arg1:T14 Arg2:T16 << OK >>	Tritace -> 10mg 1x 1 tabl/wiecz  <RANK: 3> <info: start[660, 668] <type: RIGHT>>
+R7	Drg Arg1:T14 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Tritace -> 20mg 1x 1 tabl/rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[660, 693] <type: RIGHT>>
+
+
+Sentence 8:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 9:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Umiarkowana niedomykalność mitralna w przebiegu wypadania płatków.
+
+
+Sentence 10:
+Nadciśnienie tętnicze.
+
+
+Sentence 11:
+Zespół hipereozynofilowy.
+
+
+Sentence 12:
+Podejrzenie eozynofilowego zapalenia przełyku.
+
+
+Sentence 13:
+Nacieki eozynofilowe błony śluzowej jelita krętego i grubego.
+
+
+Sentence 14:
+Przewlekłe zapalenie krtani.
+
+
+Sentence 15:
+Stan po usunięciu zmiany przerostowej lewego fałdu głosowego.
+
+
+Sentence 16:
+Astma oskrzelowa.
+
+
+Sentence 17:
+Grzybica przełyku w wywiadzie.
+
+
+Sentence 18:
+Uchyłki jelita.
+
+
+
+Sentence 19:
+------------------------------------------------
+
+
+
+Sentence 20:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 21:
+Pacjent lat 59, z podejrzeniem umiarkowanej IM w mechanizmie wypadania P1 i P2- zerwanie struny ścięgnistej, stwierdzanej w TTE - ale w bad. MRI serca "nie stwierdza się różnicy w rzucie lewej komory serca oraz przepływie przez aortę wstępującą, mogącą świadczyć o niedomykalności zastawki mitralnej", z nadciśnieniem tętniczym, zespołem hipereozynofilowym, eozynofilią, z podejrzeniem eozynofilowego zapalenia przełyku, przewlekłym zapaleniem krtani, po usunięciu zmiany przerostowej lewego fałdu głosowego (w histpat parakeratoza bez dysplazji), astmą oskrzelową, grzybicą przełyku w wywiadzie, z uchyłkami jelita, naciekami eozynofilowymi błony śluzowej jelita krętego i grubego, przyjęta do Kliniki celem dalszej diagnostyki z powodu duszności spoczynkowej i głównie wysiłkowej.
+
+R8	Inv Arg1:T31 Arg2:T29 <<SHOULD NOT BE REMOVED>>	TTE -> podejrzeniem umiarkowanej IM w mechanizmie wypadania P1 i P2 <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1571, 1465] <type: LEFT>>
+R9	Inv Arg1:T31 Arg2:T30 << OK >>	TTE -> zerwanie struny ścięgnistej  <RANK: 2> <info: start[1571, 1527] <type: LEFT>>
+R10	Inv Arg1:T31 Arg2:T33 <<REDUNDANT!!!REMOVED>>	TTE -> nie stwierdza się różnicy w rzucie lewej komory serca oraz przepływie przez aortę wstępującą, mogącą świadczyć o niedomykalności zastawki mitralnej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1571, 1599] <type: RIGHT>>
+R11	Inv Arg1:T31 Arg2:T93 <<REDUNDANT!!!REMOVED>>	TTE -> parakeratoza bez dysplazji <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1571, 1966] <type: RIGHT>>
+R12	Inv Arg1:T32 Arg2:T29 <<REDUNDANT!!!REMOVED>>	bad. MRI serca -> podejrzeniem umiarkowanej IM w mechanizmie wypadania P1 i P2 <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1583, 1465] <type: LEFT>>
+R13	Inv Arg1:T32 Arg2:T30 <<REDUNDANT!!!REMOVED>>	bad. MRI serca -> zerwanie struny ścięgnistej <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1583, 1527] <type: LEFT>>
+R14	Inv Arg1:T32 Arg2:T33 << OK >>	bad. MRI serca -> nie stwierdza się różnicy w rzucie lewej komory serca oraz przepływie przez aortę wstępującą, mogącą świadczyć o niedomykalności zastawki mitralnej  <RANK: 3> <info: start[1583, 1599] <type: RIGHT>>
+R15	Inv Arg1:T32 Arg2:T93 <<REDUNDANT!!!REMOVED>>	bad. MRI serca -> parakeratoza bez dysplazji <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1583, 1966] <type: RIGHT>>
+R16	Inv Arg1:T94 Arg2:T29 <<REDUNDANT!!!REMOVED>>	histpat -> podejrzeniem umiarkowanej IM w mechanizmie wypadania P1 i P2 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1958, 1465] <type: LEFT>>
+R17	Inv Arg1:T94 Arg2:T30 <<REDUNDANT!!!REMOVED>>	histpat -> zerwanie struny ścięgnistej <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1958, 1527] <type: LEFT>>
+R18	Inv Arg1:T94 Arg2:T33 <<REDUNDANT!!!REMOVED>>	histpat -> nie stwierdza się różnicy w rzucie lewej komory serca oraz przepływie przez aortę wstępującą, mogącą świadczyć o niedomykalności zastawki mitralnej <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1958, 1599] <type: LEFT>>
+R19	Inv Arg1:T94 Arg2:T93 << OK >>	histpat -> parakeratoza bez dysplazji  <RANK: 3> <info: start[1958, 1966] <type: RIGHT>>
+
+
+Sentence 22:
+Uwaga: 
+1. w MRI (01.2019) nie wykonano analizy przepływów z przyczyn technicznych, ale opisano, że różnica w rzucie prawej i lewej komory może wynikać z opisywanej w badaniu echo IM. 
+
+R20	Inv Arg1:T44 Arg2:T47 << OK >>	MRI -> analizy przepływów z przyczyn technicznych  <RANK: 2> <info: start[2243, 2270] <type: RIGHT>>
+R21	Inv Arg1:T44 Arg2:T48 << OK >>	MRI -> opisano, że różnica w rzucie prawej i lewej komory może wynikać z opisywanej w badaniu echo IM  <RANK: 2> <info: start[2243, 2318] <type: RIGHT>>
+R22	Neg Arg1:T46 Arg2:T44 <<REDUNDANT!!!REMOVED>>	nie wykonano -> MRI <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2257, 2243] <type: LEFT>>
+R23	Neg Arg1:T46 Arg2:T47 << OK >>	nie wykonano -> analizy przepływów z przyczyn technicznych  <RANK: 3> <info: start[2257, 2270] <type: RIGHT>>
+R24	Neg Arg1:T46 Arg2:T48 <<REDUNDANT!!!REMOVED>>	nie wykonano -> opisano, że różnica w rzucie prawej i lewej komory może wynikać z opisywanej w badaniu echo IM <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2257, 2318] <type: RIGHT>>
+R25	Dat Arg1:T45 Arg2:T44 << OK >>	01.2019 -> MRI  <RANK: 3> <info: start[2248, 2243] <type: LEFT>>
+
+
+Sentence 23:
+2. wg. relacji pacjenta w 02.2019 w trakcie hospitalizacji w szpitalu im. Biegańskiego podjęto nieskuteczną próbę wykonania TEE - krwawienie z przełyku - niemożność wprowadzenia głowicy - brak adnotacji w wypisie dostarczonym przez pacjenta.
+
+R26	Neg Arg1:T50 Arg2:T52 <<REDUNDANT!!!REMOVED>>	nieskuteczną -> krwawienie z przełyku <:REMOVED other second tag between (right):> <RANK: 3> <info: start[2510, 2545] <type: RIGHT>>
+R27	Neg Arg1:T50 Arg2:T51 << OK >>	nieskuteczną -> próbę wykonania TEE  <RANK: 3> <info: start[2510, 2523] <type: RIGHT>>
+R28	Dat Arg1:T49 Arg2:T52 << OK >>	02.2019 -> krwawienie z przełyku  <RANK: 2> <info: start[2441, 2545] <type: RIGHT>>
+R29	Dat Arg1:T49 Arg2:T51 << OK >>	02.2019 -> próbę wykonania TEE  <RANK: 2> <info: start[2441, 2523] <type: RIGHT>>
+
+
+Sentence 24:
+Neguje: zasłabnięcia, omdlenia, czarne stolce, brunatne wymioty, chorobę wrzodową, duszność nocną typu ortopnoe, DM, udar mózgu, zawał serca.   
+
+R30	Neg Arg1:T53 Arg2:T54 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[2657, 2665] <type: RIGHT>>
+R31	Neg Arg1:T53 Arg2:T55 << OK >>	Neguje -> omdlenia  <RANK: 2> <info: start[2657, 2679] <type: RIGHT>>
+R32	Neg Arg1:T53 Arg2:T56 << OK >>	Neguje -> czarne stolce  <RANK: 2> <info: start[2657, 2689] <type: RIGHT>>
+R33	Neg Arg1:T53 Arg2:T57 << OK >>	Neguje -> brunatne wymioty  <RANK: 2> <info: start[2657, 2704] <type: RIGHT>>
+R34	Neg Arg1:T53 Arg2:T59 << OK >>	Neguje -> duszność nocną typu ortopnoe  <RANK: 2> <info: start[2657, 2740] <type: RIGHT>>
+R35	Neg Arg1:T53 Arg2:T58 << OK >>	Neguje -> chorobę wrzodową  <RANK: 2> <info: start[2657, 2722] <type: RIGHT>>
+R36	Neg Arg1:T53 Arg2:T60 << OK >>	Neguje -> DM  <RANK: 2> <info: start[2657, 2770] <type: RIGHT>>
+R37	Neg Arg1:T53 Arg2:T61 << OK >>	Neguje -> udar mózgu  <RANK: 2> <info: start[2657, 2774] <type: RIGHT>>
+R38	Neg Arg1:T53 Arg2:T62 << OK >>	Neguje -> zawał serca  <RANK: 2> <info: start[2657, 2786] <type: RIGHT>>
+
+
+Sentence 25:
+Przebyte operacje:  jw
+
+
+
+Sentence 26:
+Palenie tytoniu: nie 
+
+R39	Neg Arg1:T65 Arg2:T64 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[2842, 2825] <type: LEFT>>
+
+
+Sentence 27:
+Inne używki: nie 
+Uczulenia: nie 
+
+R40	Neg Arg1:T67 Arg2:T68 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2860, 2865] <type: RIGHT>>
+R41	Neg Arg1:T67 Arg2:T66 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[2860, 2847] <type: LEFT>>
+R42	Neg Arg1:T69 Arg2:T68 << OK >>	nie -> Uczulenia  <RANK: 3> <info: start[2876, 2865] <type: LEFT>>
+R43	Neg Arg1:T69 Arg2:T66 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2876, 2847] <type: LEFT>>
+
+
+Sentence 28:
+Przebyte choroby zakaźne - WZW (-) , borelioza ( - ), tbc (-) 
+
+R44	Neg Arg1:T73 Arg2:T70 << OK >>	- -> WZW  <RANK: 3> <info: start[2913, 2908] <type: LEFT>>
+R45	Neg Arg1:T73 Arg2:T71 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2913, 2918] <type: RIGHT>>
+R46	Neg Arg1:T73 Arg2:T72 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2913, 2935] <type: RIGHT>>
+R47	Neg Arg1:T74 Arg2:T70 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2930, 2908] <type: LEFT>>
+R48	Neg Arg1:T74 Arg2:T71 << OK >>	- -> borelioza  <RANK: 3> <info: start[2930, 2918] <type: LEFT>>
+R49	Neg Arg1:T74 Arg2:T72 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2930, 2935] <type: RIGHT>>
+R50	Neg Arg1:T75 Arg2:T70 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2940, 2908] <type: LEFT>>
+R51	Neg Arg1:T75 Arg2:T71 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2940, 2918] <type: LEFT>>
+R52	Neg Arg1:T75 Arg2:T72 << OK >>	- -> tbc  <RANK: 3> <info: start[2940, 2935] <type: LEFT>>
+
+
+Sentence 29:
+Stan społeczny: warunki mieszkaniowe dobre, pracuje zawodowo, działalność gospodarcza 
+
+
+
+Sentence 30:
+Leki: przyjęte rano w domu  
+Leki: 
+Encorton 5 mg 2-0-0,
+IPP 20 mg 1-0-0,
+
+R53	Drg Arg1:T78 Arg2:T79 << OK >>	Encorton -> 5 mg 2-0-0  <RANK: 3> <info: start[3067, 3076] <type: RIGHT>>
+R54	Drg Arg1:T78 Arg2:T81 <<REDUNDANT!!!REMOVED>>	Encorton -> 20 mg 1-0-0 <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3067, 3092] <type: RIGHT>>
+R55	Drg Arg1:T80 Arg2:T79 <<REDUNDANT!!!REMOVED>>	IPP -> 5 mg 2-0-0 <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[3088, 3076] <type: LEFT>>
+R56	Drg Arg1:T80 Arg2:T81 << OK >>	IPP -> 20 mg 1-0-0  <RANK: 3> <info: start[3088, 3092] <type: RIGHT>>
+
+
+Sentence 31:
+Tritace 10 mg 1-0-0,
+Astmodil 1-0-0.
+
+R57	Drg Arg1:T82 Arg2:T83 << OK >>	Tritace -> 10 mg 1-0-0  <RANK: 3> <info: start[3105, 3113] <type: RIGHT>>
+R58	Drg Arg1:T82 Arg2:T85 <<REDUNDANT!!!REMOVED>>	Tritace -> 1-0-0 <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3105, 3135] <type: RIGHT>>
+R59	Drg Arg1:T84 Arg2:T83 <<REDUNDANT!!!REMOVED>>	Astmodil -> 10 mg 1-0-0 <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[3126, 3113] <type: LEFT>>
+R60	Drg Arg1:T84 Arg2:T85 << OK >>	Astmodil -> 1-0-0  <RANK: 3> <info: start[3126, 3135] <type: RIGHT>>
+
+
+Sentence 32:
+Alvesco 1xdz 1 wdech.
+
+
+R61	Drg Arg1:T86 Arg2:T87 << OK >>	Alvesco -> 1xdz 1 wdech  <RANK: 3> <info: start[3142, 3150] <type: RIGHT>>
+
+
+Sentence 33:
+Planowany czas hospitalizacji: 3-5 dni. 
+
+
+
+Sentence 34:
+Planowane badania: badania laboratoryjne, ECHO, ABPM.
+
+
+
+Sentence 35:
+------------------------------------------------
+
+
+
+Sentence 36:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 37:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.14[10^3/ul]
+    
+
+
+Sentence 38:
+RBC Krwinki czerwone:4.27[10^6/ul]
+    
+
+
+Sentence 39:
+HGB Hemoglobina:13.5[g/dl]
+    
+
+
+Sentence 40:
+HCT Hematokryt:38.4[%]
+    
+
+
+Sentence 41:
+MCV wskaźnik czerwonokrw:89.9[fl]
+    
+
+
+Sentence 42:
+MCH wskaźnik czerwonokrw:31.6[pg]
+    
+
+
+Sentence 43:
+MCHC wskaźnik czerwonokr:35.2[g/dl]
+    
+
+
+Sentence 44:
+PLT z morfologii:237[10^3/ul]
+    
+
+
+Sentence 45:
+RDW-SD:40.4[fl]
+    
+
+
+Sentence 46:
+RDW-CV:12.4[%]
+    PDW:12.3[fl]
+    MPV:10.5[fl]
+    P-LCR:29.2[%]
+    
+
+
+Sentence 47:
+PCT (hematokryt płytkowy:0.25[%]
+    
+
+
+Sentence 48:
+NEUTR# wartość bezwzględ:3.54[10^3/ul]
+    
+
+
+Sentence 49:
+NEUTR%:49.5[%]
+    
+
+
+Sentence 50:
+LYMH# wartość bezwzględn:2.24[10^3/ul]
+    
+
+
+Sentence 51:
+LYMPH%:31.4[%]
+    
+
+
+Sentence 52:
+MONO# wartość bezwzględn:0.64[10^3/ul]
+    MONO%:9.0[%]
+    
+
+
+Sentence 53:
+EO# wartość bezwzględna:0.62[10^3/ul]
+    
+
+
+Sentence 54:
+EO%:8.7[%]
+    
+
+
+Sentence 55:
+BASO# wartość bezwzględn:0.10[10^3/ul]
+    BASO%:1.4[%]
+    
+
+
+Sentence 56:
+NRBC %:0.1[%]
+    
+
+
+Sentence 57:
+NRBC #:0.01[10^3/ul]
+
+
+
+Sentence 58:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:23.7[sek]
+
+
+
+Sentence 59:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 60:
+Czas protrombinowy:10.9[sek]
+    
+
+
+Sentence 61:
+Wskaźnik PT:100.9[%]
+    
+
+
+Sentence 62:
+INR:0.99
+Badanie ogólne moczu
+    
+
+
+Sentence 63:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 64:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 65:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 66:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 67:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 68:
+ciężar właściwy:1.011[ ]
+    
+
+
+Sentence 69:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 70:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 71:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 72:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 73:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 74:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 75:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 76:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 77:
+leukocyty:2 /ul[ul]
+    erytrocyty świeże:5 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 78:
+TSH: TSH:2.25[uIU/ml]
+
+
+
+Sentence 79:
+FT3: FT3:2.86[pg/ml]
+
+
+
+Sentence 80:
+FT4: FT4:1.29[ng/dl]
+
+
+
+Sentence 81:
+ALAT: ALAT:14[U/L]
+ASPAT: ASPAT:22[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 82:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 83:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 84:
+Kreatynina + GFR
+    
+
+
+Sentence 85:
+Kreatynina w surowicy:1.00[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 86:
+MDRD ze stan:76.5[ml/min/1,73 m^2]
+
+
+
+Sentence 87:
+Mocznik: Mocznik:37[mg/dl]
+
+
+
+Sentence 88:
+Kwas moczowy: Kwas moczowy:6.8[mg/dl]
+
+
+
+Sentence 89:
+Lipidogram
+    
+
+
+Sentence 90:
+Cholesterol całkowity:178[mg/dl]
+    
+
+
+Sentence 91:
+Cholesterol HDL:55[mg/dl]
+    
+
+
+Sentence 92:
+Cholestrol LDL:98[mg/dl]
+    
+
+
+Sentence 93:
+Triglicerydy:65[mg/dl]
+    
+
+
+Sentence 94:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:89[mg/dl]
+
+
+
+Sentence 95:
+------------------------------------------------
+
+
+
+Sentence 96:
+ICD10
+------------------------------------------------
+I34.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 97:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 98:
+C55
+A01
+89.502
+I81
+G11
+G21
+L43
+N45
+L69
+O55
+I17
+M45
+O35
+M37
+I19
+N13
+88.721
+O69
+
+
+
+Sentence 99:
+------------------------------------------------
+
+

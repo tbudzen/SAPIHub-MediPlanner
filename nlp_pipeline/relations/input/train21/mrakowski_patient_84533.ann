@@ -1,0 +1,65 @@
+T1	Condition 673 698	Komorowe zaburzenia rytmu
+N1	Reference T1 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T2	Condition 700 733	Choroba zwyrodnieniowa kręgosłupa
+N2	Reference T2 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T3	Condition 735 764	Hipercholesterolemia mieszana
+N3	Reference T3 ICD10:E78.2	Hiperlipidemia mieszana
+T4	Condition 791 822	Nieprawidłowa glikemia na czczo
+N4	Reference T4 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T5	Symptom 1002 1027	bólów w klatce piersiowej
+N5	Reference T5 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T6	Symptom 1033 1056	uczucia kołatania serca
+N6	Reference T6 ICD10:R00.2	Kołatanie serca
+T7	Negation 1059 1065	Neguje
+T8	Symptom 1066 1078	zasłabnięcia
+R1	Neg Arg1:T7 Arg2:T8	
+T9	Condition 1095 1128	Choroba zwyrodnieniowa kręgosłupa
+N7	Reference T9 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T10	Condition 1130 1159	Hipercholesterolemia mieszana
+N8	Reference T10 ICD10:E78.2	Hiperlipidemia mieszana
+T11	Condition 1161 1192	Nieprawidłowa glikemia na czczo
+N9	Reference T11 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T12	Treatment 1195 1212	Przebyte operacje
+T13	Negation 1215 1219	brak
+R2	Neg Arg1:T13 Arg2:T12	
+T14	Treatment 1220 1239	Leczenie przewlekłe
+T15	Negation 1242 1246	brak
+R3	Neg Arg1:T15 Arg2:T14	
+T16	Condition 1275 1278	WZW
+N10	Reference T16 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T17	Condition 1288 1297	borelioza
+N11	Reference T17 ICD10:A69.2	Choroba z Lyme
+T18	Condition 1304 1308	Odra
+N12	Reference T18 ICD10:B05	Odra
+T19	Negation 1311 1312	-
+R4	Neg Arg1:T19 Arg2:T18	
+T20	Negation 1300 1301	-
+R5	Neg Arg1:T20 Arg2:T17	
+T21	Negation 1281 1282	-
+R6	Neg Arg1:T21 Arg2:T16	
+T22	Treatment 1355 1384	implantacji kardiostymulatora
+A1	Status T22 Family
+T23	Condition 1395 1405	udar mózgu
+A2	Status T23 Family
+N13	Reference T23 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T24	Behaviour 1407 1422	Palenie tytoniu
+N14	Reference T24 ICD10:Z72.0	Używanie tytoniu
+T25	Negation 1424 1427	nie
+R7	Neg Arg1:T25 Arg2:T24	
+T26	Behaviour 1428 1439	Inne używki
+T27	Negation 1441 1444	nie
+R8	Neg Arg1:T27 Arg2:T26	
+T28	Condition 1445 1454	Uczulenia
+T29	Negation 1456 1462	neguje
+R9	Neg Arg1:T29 Arg2:T28	
+T30	Behaviour 1479 1505	warunki mieszkaniowe dobre
+T31	Drug 1530 1538	Magne B6
+T32	Drug_dose 1539 1549	1 xdz rano
+R10	Drg Arg1:T31 Arg2:T32	
+T33	Investigation 1565 1575	Echo serca
+T34	Investigation 1578 1588	Holter EKG
+T35	Investigation 1591 1606	Próba Wysiłkowa
+T36	Condition 1317 1336	wywiadzie rodzinnym
+A3	Status T36 Family
+N15	Reference T22 ICD10:Z95.0	Obecność stymulatora serca
+T37	Treatment 765 789	w trakcie leczenia dietą

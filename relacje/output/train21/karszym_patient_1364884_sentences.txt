@@ -1,0 +1,609 @@
+allRelations          : 13
+oks                   : 10
+isRedundantAndRemoveds: 2
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 0
+GOOD / BAD            : 12 / 1
+Sentence 0:
+------------------------------------------------
+Wiek: 3 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+1) Przyjmowanie leków: Enarenal 1 x 1mg - do zwiększenia dawki stopniowo do 2 mg/dobę. 
+                                           
+R1	Drg Arg1:T1 Arg2:T2 << OK >>	Enarenal -> 1 x 1mg  <RANK: 3> <info: start[351, 360] <type: RIGHT>>
+R2	Drg Arg1:T1 Arg2:T3 << OK >>	Enarenal -> do zwiększenia dawki stopniowo do 2 mg/dobę  <RANK: 3> <info: start[351, 370] <type: RIGHT>>
+
+
+Sentence 4:
+Spironol 1 x 1/2 tabl = 12,5mg
+2)
+R3	Drg Arg1:T4 Arg2:T5 << OK >>	Spironol -> 1 x 1/2 tabl = 12,5mg  <RANK: 3> <info: start[459, 468] <type: RIGHT>>
+
+
+Sentence 5:
+Dieta bogata w żelazo i witaminy krwiotwórcze, stosowanie preparatów żelaza np. Sideral Bimbi 1 saszetka
+  lub w kroplach 2 x 1ml (10 kropli).
+
+R4	Drg Arg1:T8 Arg2:T9 << OK >>	Sideral Bimbi -> 1 saszetka  <RANK: 3> <info: start[573, 587] <type: RIGHT>>
+R5	Drg Arg1:T8 Arg2:T10 <<SHOULD NOT BE REMOVED>>	Sideral Bimbi -> lub w kroplach 2 x 1ml (10 kropli) <:REMOVED Tag2 not in the same line:> <RANK: 1> <info: start[573, 600] <type: RIGHT>>
+
+
+Sentence 6:
+3) Kontrolna wizyta za 4-6 m-cy .
+
+R6	Dat Arg1:T12 Arg2:T11 << OK >>	za 4-6 m-cy -> Kontrolna wizyta  <RANK: 3> <info: start[656, 639] <type: LEFT>>
+
+
+Sentence 7:
+------------------------------------------------
+
+
+
+Sentence 8:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 9:
+------------------------------------------------
+ Rozpoznanie II: ICD10:Q23.1|Opisowo:: Wrodzona wada serca pod postacią wrodzonej stenozy aortalnej  (zastawka jednopłatkowa)  z istotna hemodynamicznie niedomylnościa zastawki aortalnej  (IA III/IV st. + SA).
+   
+
+
+Sentence 10:
+Stan po cewnikowaniu  serca i angioplastyce balonowej BVA (08.12.2016r).
+   
+R7	Dat Arg1:T18 Arg2:T17 << OK >>	08.12.2016r -> angioplastyce balonowej BVA  <RANK: 3> <info: start[1065, 1036] <type: LEFT>>
+R8	Dat Arg1:T18 Arg2:T27 << OK >>	08.12.2016r -> cewnikowaniu  serca  <RANK: 2> <info: start[1065, 1014] <type: LEFT>>
+
+
+Sentence 11:
+Operacja Rossa z użyciem homograftu płucnego o śr 18 mm w dniu 02.10.2018r.
+   
+R9	Dat Arg1:T20 Arg2:T19 << OK >>	w dniu 02.10.2018r -> Operacja Rossa z użyciem homograftu płucnego o śr 18 mm  <RANK: 3> <info: start[1138, 1082] <type: LEFT>>
+
+
+Sentence 12:
+Niedomykalność homograftu płucnego.
+   
+
+
+Sentence 13:
+Syderopenia.
+   
+
+
+Sentence 14:
+Q23.1, Q23.0 ,Z95.2, I37|Rozpoznanie IV: ICD10:I37|Rozpoznanie V: ICD10:D50|Rozpozanie I: ICD10:Q23.0|Rozpoznanie III: ICD10:Z95.2
+
+
+
+Sentence 15:
+------------------------------------------------
+
+
+
+Sentence 16:
+Zastosowane leczenie
+
+
+
+Sentence 17:
+------------------------------------------------
+
+
+
+Sentence 18:
+Enarenal 1 mg, Spironol 12,5 mg.
+
+R10	Drg Arg1:T23 Arg2:T24 << OK >>	Enarenal -> 1 mg  <RANK: 3> <info: start[1466, 1475] <type: RIGHT>>
+R11	Drg Arg1:T23 Arg2:T26 <<REDUNDANT!!!REMOVED>>	Enarenal -> 12,5 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1466, 1490] <type: RIGHT>>
+R12	Drg Arg1:T25 Arg2:T24 <<REDUNDANT!!!REMOVED>>	Spironol -> 1 mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1481, 1475] <type: LEFT>>
+R13	Drg Arg1:T25 Arg2:T26 << OK >>	Spironol -> 12,5 mg  <RANK: 3> <info: start[1481, 1490] <type: RIGHT>>
+
+
+Sentence 19:
+------------------------------------------------
+
+
+
+Sentence 20:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 21:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.89[10^3/ul]
+    
+
+
+Sentence 22:
+RBC Krwinki czerwone:4.77[10^6/ul]
+    
+
+
+Sentence 23:
+HGB Hemoglobina:11.8[g/dl]
+    
+
+
+Sentence 24:
+HCT Hematokryt:33.9[%]
+    
+
+
+Sentence 25:
+MCV wskaźnik czerwonokrw:71.1[fl]
+    
+
+
+Sentence 26:
+MCH wskaźnik czerwonokrw:24.7[pg]
+    
+
+
+Sentence 27:
+MCHC wskaźnik czerwonokr:34.8[g/dl]
+    
+
+
+Sentence 28:
+PLT z morfologii:304[10^3/ul]
+    
+
+
+Sentence 29:
+RDW-SD:32.8[fl]
+    
+
+
+Sentence 30:
+RDW-CV:13.0[%]
+    
+
+
+Sentence 31:
+PDW:9.1[fl]
+    
+
+
+Sentence 32:
+MPV:8.8[fl]
+    
+
+
+Sentence 33:
+P-LCR:15.7[%]
+    
+
+
+Sentence 34:
+PCT (hematokryt płytkowy:0.27[%]
+    
+
+
+Sentence 35:
+NEUTR# wartość bezwzględ:4.59[10^3/ul]
+    
+
+
+Sentence 36:
+NEUTR%:58.2[%]
+    
+
+
+Sentence 37:
+LYMH# wartość bezwzględn:2.66[10^3/ul]
+    
+
+
+Sentence 38:
+LYMPH%:33.7[%]
+    
+
+
+Sentence 39:
+MONO# wartość bezwzględn:0.45[10^3/ul]
+    
+
+
+Sentence 40:
+MONO%:5.7[%]
+    
+
+
+Sentence 41:
+EO# wartość bezwzględna:0.15[10^3/ul]
+    
+
+
+Sentence 42:
+EO%:1.9[%]
+    
+
+
+Sentence 43:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    BASO%:0.5[%]
+    
+
+
+Sentence 44:
+NRBC %:0.0[%]
+    
+
+
+Sentence 45:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 46:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:31.1[sek]
+
+
+
+Sentence 47:
+Badanie ogólne moczu
+    
+
+
+Sentence 48:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 49:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 50:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 51:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 52:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 53:
+kwas askrobinowy:20 mg/dl[ ]
+    
+
+
+Sentence 54:
+ciężar właściwy:1.016[ ]
+    
+
+
+Sentence 55:
+pH:6.0[ ]
+    
+
+
+Sentence 56:
+białko:nieobecne[ ]
+    
+
+
+Sentence 57:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 58:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 59:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 60:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 61:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 62:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 63:
+leukocyty:1 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 64:
+TSH: TSH:2.36[uIU/ml]
+
+
+
+Sentence 65:
+FT3: FT3:3.76[pg/ml]
+
+
+
+Sentence 66:
+FT4: FT4:1.27[ng/dl]
+
+
+
+Sentence 67:
+Troponina T: Troponina T:3.3[pg/ml]
+
+
+
+Sentence 68:
+Prokalcytonina (PCT): Prokalcytonina:0.06[ng/ml]
+
+
+
+Sentence 69:
+Witamina D 25-OH: Witamina D 25-OH:36.8[ng/ml]
+
+
+
+Sentence 70:
+ALAT: ALAT:13[U/L]
+ASPAT: ASPAT:33[U/L]
+
+
+
+Sentence 71:
+Cholesterol całkowity: Cholesterol całkowity:139[mg/dl]
+CK - aktywność: CK:73[U/L]
+
+
+
+Sentence 72:
+CKMB aktywność: CKMB:27[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 73:
+Sód (Na): Sód:144[mmol/L]
+
+
+
+Sentence 74:
+Potas (K): Potas:4.4[mmol/L]
+
+
+
+Sentence 75:
+Chlorki (Cl): Chlorki:112[mmol/L]
+
+
+
+Sentence 76:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:19[U/L]
+
+
+
+Sentence 77:
+Hemoglobina glikowana (HbA1c)
+    :5.58[%]
+    
+
+
+Sentence 78:
+:38[mmol/mol]
+Kreatynina + GFR
+    
+
+
+Sentence 79:
+Kreatynina w surowicy:0.36[mg/dl]
+    eGFR stand. wg Schwartza:131.4[ml/min/1,73 m^2]
+    
+
+
+Sentence 80:
+eGFR zmod.
+
+
+Sentence 81:
+wg Schwartza:98.7[ml/min/1,73 m^2]
+    
+
+
+Sentence 82:
+wzrost:86[cm]
+Magnez: Magnez:0.79[mmol/L]
+
+
+
+Sentence 83:
+Mocznik: Mocznik:25[mg/dl]
+
+
+
+Sentence 84:
+Wapń całkowity: Wapń całkowity:2.47[mmol/L]
+
+
+
+Sentence 85:
+Gospodarka żelazem
+    Żelazo:59[ug/dl]
+    
+
+
+Sentence 86:
+TIBC (Całkowita zdolność:360[ug/dl]
+    
+
+
+Sentence 87:
+UIBC (Utajona zdolność w:301[ug/dl]
+    
+
+
+Sentence 88:
+Wskaźnik wysycenia Fe:16[%]
+
+
+
+Sentence 89:
+Żelazo (Fe): Żelazo (Fe):59[ug/dl]
+ASO
+    ASO:
+    25[IU/ml]
+
+
+
+Sentence 90:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    pH:7.365
+    pCO2:42.0[mmHg]
+    BE:-1.40[mmol/L]
+    HCO3:23.4[mmol/L]
+    
+
+
+Sentence 91:
+pO2:70.5[mmHg]
+    
+
+
+Sentence 92:
+O2Sat:94.5[%]
+
+
+
+Sentence 93:
+Glukoza w surowicy: Glukoza w surowicy:127[mg/dl]
+
+
+
+Sentence 94:
+Glukoza w surowicy: Glukoza w surowicy:74[mg/dl]
+
+
+
+Sentence 95:
+NT-proBNP surowica: NT-proBNP w surowicy:385[pg/ml]
+
+
+
+Sentence 96:
+------------------------------------------------
+
+
+
+Sentence 97:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 98:
+Z85.2
+Q23.0
+
+
+
+Sentence 99:
+Q23.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 100:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 101:
+I81
+L43
+O61
+M87
+N45
+L69
+N24
+O69
+O29
+C55
+I97
+G11
+O91
+
+
+
+Sentence 102:
+I99
+O93
+O95
+L31
+O77
+O55
+I19
+
+
+
+Sentence 103:
+O35
+M37
+N58
+
+
+
+Sentence 104:
+N13
+U75
+
+
+
+Sentence 105:
+M19
+M18
+
+
+
+Sentence 106:
+------------------------------------------------
+
+

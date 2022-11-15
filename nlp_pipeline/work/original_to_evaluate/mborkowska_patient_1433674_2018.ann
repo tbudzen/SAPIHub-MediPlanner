@@ -1,0 +1,180 @@
+T1	Condition 447 519	Przewlekła niewydolność serca z pośrednią frakcją wyrzutową lewej komory
+N1	Reference T1 ICD10:I50	Niewydolność serca
+T2	Condition 521 563	Łagodna niedomykalność zastawki mitralnej.
+N2	Reference T2 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T3	Condition 565 592	Choroba niedokrwienna serca
+N3	Reference T3 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T4	Treatment 602 621	OPCAB ( LITA do LAD
+T5	Date 622 629	10.2013
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Treatment 660 693	leczony PCI RPD z implantacją DES
+T7	Condition 640 659	STEMI ściany dolnej
+N4	Reference T7 ICD10:I21.1	
+T8	Condition 713 732	STEMI ściany dolnej
+N5	Reference T8 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T9	Condition 744 759	blokiem A-V II'
+N6	Reference T9 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T10	Treatment 760 794	leczonym PCI PTW z implantacją BMS
+T11	Date 796 803	08.2013
+T12	Date 695 702	01.2014
+R2	Dat Arg1:T12 Arg2:T6	
+R3	Dat Arg1:T12 Arg2:T7	
+R4	Dat Arg1:T11 Arg2:T10	
+R5	Dat Arg1:T11 Arg2:T9	
+R6	Dat Arg1:T11 Arg2:T8	
+T13	Condition 806 827	Nadciśnienie tętnicze
+N7	Reference T13 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T14	Condition 829 845	Cukrzyca typu 2.
+N8	Reference T14 ICD10:E11	Cukrzyca insulinoniezależna
+T15	Condition 846 869	hiperlipidemia mieszana
+N9	Reference T15 ICD10:E78.2	Hiperlipidemia mieszana
+T16	Treatment 1240 1262	kontrola u lekarza POZ
+T17	Treatment 1265 1306	dalsza kontrola w Poradni Kardiologicznej
+T18	Investigation 1413 1433	próby dobutaminowej,
+T19	Investigation 1446 1464	EKG metoda Holtera
+T20	Treatment 1309 1351	ponowna hospitalizacja w tutejszej klinice
+T21	Date 1352 1366	za 4-6 tygodni
+R7	Dat Arg1:T21 Arg2:T20	
+T22	Behaviour 1467 1472	dieta
+T23	Drug 1592 1604	Preductal MR
+T24	Drug 1606 1619	Glucophage XR
+T25	Drug 1621 1630	Sertragen
+T26	Drug 1632 1643	Trittico CR
+T27	Drug 1645 1654	bisoratio
+T28	Drug 1656 1663	Roswera
+T29	Drug 1665 1672	Priamil
+T30	Drug 1674 1679	Acard
+T31	Drug 1681 1688	Nolpaza
+T32	Investigation 3333 3343	Echo serca
+T33	Investigation 3346 3356	Holter EKG
+T34	Investigation 3359 3374	Próba Wysiłkowa
+T35	Drug 3283 3290	Nolpaza
+T36	Drug 3253 3258	Acard
+T37	Drug 3208 3215	Piramil
+T38	Drug 3177 3184	Roswera
+T39	Drug 3135 3144	Bisoratio
+T40	Drug_dose 3145 3174	5 mg 1x d z po 1/2 tabl. rano
+R8	Drg Arg1:T39 Arg2:T40	
+T41	Drug_dose 3185 3206	20 mg 1x dz wieczorem
+R9	Drg Arg1:T38 Arg2:T41	
+T42	Drug_dose 3216 3250	5 mg 1 x dz po 1/2 tabl. wieczorem
+R10	Drg Arg1:T37 Arg2:T42	
+T43	Drug_dose 3259 3280	75 mg 1x dz wieczorem
+R11	Drg Arg1:T36 Arg2:T43	
+T44	Drug_dose 3291 3317	40 mg 1 x dz rano na czczo
+R12	Drg Arg1:T35 Arg2:T44	
+T45	Drug 3037 3047	Glucophage
+T46	Drug_dose 3048 3061	750 XR 2 x dz
+R13	Drg Arg1:T45 Arg2:T46	
+T47	Drug 3064 3072	Sertagen
+T48	Drug_dose 3073 3091	100 mg 1 x dz rano
+R14	Drg Arg1:T47 Arg2:T48	
+T49	Drug 3094 3105	Trittico CR
+T50	Drug_dose 3106 3132	1 x dz po 1/3 tabl. na noc
+R15	Drg Arg1:T49 Arg2:T50	
+T51	Drug 3010 3022	Preductal MR
+T52	Drug_dose 3023 3034	2 x dz rano
+R16	Drg Arg1:T51 Arg2:T52	
+T53	Behaviour 2959 2985	warunki mieszkaniowe dobre
+T54	Negation 2936 2942	neguje
+T55	Negation 2921 2924	nie
+T56	Negation 2885 2893	nie pali
+T57	Condition 2848 2866	udar niedokrwienny
+A1	Status T57 Family
+N10	Reference T57 ICD10:I63.9	Zawał mózgu, nieokreślony
+T58	Condition 2925 2934	Uczulenia
+N11	Reference T58 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R17	Neg Arg1:T54 Arg2:T58	
+T59	Behaviour 2908 2920	Inne używki:
+N12	Reference T59 ICD10:Z72	Problemy związane ze stylem życia
+R18	Neg Arg1:T55 Arg2:T59	
+T60	Behaviour 2868 2883	Palenie tytoniu
+N13	Reference T60 ICD10:Z72.0	Używanie tytoniu
+T61	Date 2894 2906	od 2013 roku
+R19	Dat Arg1:T61 Arg2:T60	
+R20	Neg Arg1:T56 Arg2:T60	
+T62	Condition 2789 2792	WZW
+N14	Reference T62 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T63	Condition 2802 2811	borelioza
+N15	Reference T63 ICD10:A69.2	Choroba z Lyme
+T64	Negation 2814 2815	-
+R21	Neg Arg1:T64 Arg2:T63	
+T65	Negation 2793 2799	( -  )
+R22	Neg Arg1:T65 Arg2:T62	
+T66	Condition 890 925	Guzek łagodny lewego płata tarczycy
+N16	Reference T66 ICD10:E04.1	Guzek tarczycy pojedynczy, nietoksyczny
+T67	Condition 927 955	Kamica pęcherzyka żółciowego
+N17	Reference T67 ICD10:K80	
+T68	Condition 2528 2556	Kamica pęcherzyka żółciowego
+N18	Reference T68 ICD10:K80	Kamica żółciowa
+T69	Condition 2219 2250	OZW - zawał STEMI ściany dolnej
+N19	Reference T69 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T70	Condition 2311 2336	OZW - STEMI ściany dolnej
+N20	Reference T70 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T71	Treatment 2251 2291	leczony PCI RPD z implantacja stentu DES
+T72	Date 2293 2300	01.2014
+R23	Dat Arg1:T72 Arg2:T71	
+R24	Dat Arg1:T72 Arg2:T69	
+T73	Condition 2337 2363	powikłanym blokiem A-V II'
+N21	Reference T73 ICD10:I44.1	
+T74	Treatment 2364 2405	leczonym PCI PTW z implantacja stentu BMS
+T75	Date 2406 2413	08.2013
+R25	Dat Arg1:T75 Arg2:T74	
+R26	Dat Arg1:T75 Arg2:T73	
+R27	Dat Arg1:T75 Arg2:T70	
+T76	Condition 2415 2436	Nadciśnienie tętnicze
+N22	Reference T76 ICD10:I10	
+T77	Condition 2439 2455	Cukrzyca typu 2.
+N23	Reference T77 ICD10:E11	Cukrzyca insulinoniezależna
+T78	Condition 2456 2475	Zaburzenia lipidowe
+N24	Reference T78 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T79	Treatment 2179 2198	OPCAB ( LITA do LAD
+T80	Date 2199 2206	10.2013
+R28	Dat Arg1:T80 Arg2:T79	
+T81	Condition 2142 2169	Choroba niedokrwienna serca
+N25	Reference T81 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T82	Symptom 2112 2124	zasłabnięcia
+N26	Reference T82 ICD10:R55	Omdlenie i zapaść
+T83	Negation 2105 2111	Neguje
+R29	Neg Arg1:T83 Arg2:T82	
+T84	Symptom 1950 1958	nudności
+N27	Reference T84 ICD10:R11	Nudności i wymioty
+T85	Symptom 1969 1995	uciski w klatce piersiowej
+N28	Reference T85 ICD10:R07.3	Inne bóle w klatce piersiowej
+T86	Symptom 2044 2059	kołatania serca
+N29	Reference T86 ICD10:R00.2	Kołatanie serca
+T87	Symptom 2070 2093	uczucie braku powietrza
+T88	Symptom 2096 2101	zgagi
+N30	Reference T88 ICD10:R12	Zgaga
+T89	Symptom 1859 1889	pogorszenia tolerancji wysiłku
+N31	Reference T89 ICD10:R53	Złe samopoczucie i zmęczenie
+T90	Condition 2478 2525	Guzek lewego płata tarczycy - zmian łagodna BAC
+N32	Reference T90 ICD10:E04.1	Guzek tarczycy pojedynczy, nietoksyczny
+T91	Condition 2558 2601	Przewlekłe zapalenie błony sluzowej żołądka
+N33	Reference T91 ICD10:K29.9	Zapalenie żołądka i dwunastnicy, nieokreślone
+T92	Condition 957 1000	Przewlekłe zapalenie błony śluzowej żołądka
+N34	Reference T92 ICD10:K29.9	Zapalenie żołądka i dwunastnicy, nieokreślone
+T93	Condition 1003 1024	Zaburzenia nerwicowe.
+N35	Reference T93 ICD10:F48.9	Zaburzenia nerwicowe, nieokreślone
+T94	Condition 2604 2624	Zaburzenia nerwicowe
+N36	Reference T94 ICD10:F48.9	Zaburzenia nerwicowe, nieokreślone
+T95	Condition 1025 1049	Niedowidzenie oka lewego
+N37	Reference T95 ICD10:H53.0	Niedowidzenie z nieużywania oka
+T96	Condition 2627 2651	Niedowidzenie oka lewego
+N38	Reference T96 ICD10:H53.0	Niedowidzenie z nieużywania oka
+T97	Condition 2676 2710	przepuklina pachwinowa lewostronną
+N39	Reference T97 ICD10:K40	Przepuklina pachwinowa
+A2	Status T97 Historical_Insignificant
+T98	Condition 1077 1113	przepukliny pachwinowej lewostronnej
+A3	Status T98 Historical_Insignificant
+N40	Reference T98 ICD10:K40	Przepuklina pachwinowa
+T99	Date 1114 1128	w dzieciństwie
+T100	Treatment 1059 1067	operacji
+R30	Dat Arg1:T99 Arg2:T98	
+A4	Status T100 Historical_Insignificant
+R31	Dat Arg1:T99 Arg2:T100	
+T101	Treatment 2662 2670	operacje
+A5	Status T101 Historical_Insignificant
+T102	Date 2711 2725	w dzieciństwie
+R32	Dat Arg1:T102 Arg2:T97	
+R33	Dat Arg1:T102 Arg2:T101	

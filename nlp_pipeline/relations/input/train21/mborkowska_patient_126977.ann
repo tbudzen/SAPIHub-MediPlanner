@@ -1,0 +1,136 @@
+T1	Investigation 3624 3634	echo serca
+T2	Investigation 3636 3639	TET
+T3	Investigation 3641 3645	ABPM
+T4	Investigation 3647 3657	Holter ekg
+T5	Investigation 3659 3677	rtg kl. piersiowej
+T6	Drug 3561 3568	Lacipil
+T7	Drug_dose 3569 3593	2mg 1xdziennie wieczorem
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 3533 3539	Zahron
+T9	Drug_dose 3540 3559	5mg 1xdziennie rano
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 3489 3515	Noliprel forte 5mg +1.25mg
+T11	Drug_dose 3516 3531	1xdziennie rano
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 3459 3471	Euthyrox N50
+T13	Drug_dose 3472 3487	1xdziennie rano
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Drug 3425 3432	Xarelto
+T15	Drug_dose 3433 3457	15mg 1xdzienie wieczorem
+R5	Drg Arg1:T14 Arg2:T15	
+T16	Negation 3360 3366	neguje
+T17	Negation 3334 3340	neguje
+T18	Negation 3316 3324	neguje  
+T19	Negation 3296 3302	neguje
+T20	Negation 3272 3285	bez znaczenia
+T21	Behaviour 3304 3314	Nikotynizm
+N1	Reference T21 ICD10:F17.2	
+T22	Condition 3325 3332	Alkohol
+N2	Reference T22 ICD10:Z72.1	Używanie alkoholu
+R6	Neg Arg1:T17 Arg2:T22	
+R7	Neg Arg1:T18 Arg2:T21	
+T23	Condition 3287 3294	Alergie
+N3	Reference T23 ICD10:T78.4	Alergia, nieokreślona
+R8	Neg Arg1:T19 Arg2:T23	
+T24	Investigation 3103 3133	scyntygrafia mięśnia sercowego
+T25	Investigation_result 3137 3190	wykonano, bez indukowanego wysiłkiem niedokrwienia LK
+A1	Source T25 Confirmed
+R9	Inv Arg1:T24 Arg2:T25	
+T26	Condition 3212 3240	zaćma, zmiany siatkówki - OL
+A2	Status T26 Historical_Insignificant
+N4	Reference T26 ICD10:H25	Zaćma starcza
+T27	Date 3242 3252	5 lat temu
+R10	Dat Arg1:T27 Arg2:T26	
+T28	Investigation 2922 2937	Próba wysiłkowa
+T29	Investigation_result 2938 3010	zakończona na etapie 3,9 MET z wynikiem dodatnim elektrokardiograficznie
+R11	Inv Arg1:T28 Arg2:T29	
+T30	Investigation 2791 2801	Holter EKG
+T31	Investigation_result 2802 2843	stwierdzono średnią akcję serca ok 62/min
+R12	Inv Arg1:T30 Arg2:T31	
+T32	Investigation_result 2856 2893	rejestrowane pauzy do max 2,5 sekundy
+R13	Inv Arg1:T30 Arg2:T32	
+T33	Negation 2894 2906	nie włączono
+T34	Drug 2907 2916	b-blokera
+R14	Neg Arg1:T33 Arg2:T34	
+T35	Investigation 2601 2621	echokardiograficznym
+T36	Investigation_result 2634 2682	umiarkowaną niedomykalność zastawki trójdzielnej
+N5	Reference T36 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T37	Investigation_result 2684 2696	obecność PFO
+N6	Reference T37 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T38	Investigation_result 2729 2775	uogólnione zaburzenia kurczliwości LV z EF 53%
+R15	Inv Arg1:T35 Arg2:T36	
+R16	Inv Arg1:T35 Arg2:T37	
+R17	Inv Arg1:T35 Arg2:T38	
+T39	Symptom 2475 2487	zwroty głowy
+N7	Reference T39 ICD10:R42	Zawroty głowy i odurzenie
+T40	Symptom 2489 2497	zaparcia
+N8	Reference T40 ICD10:K59.0	Zaparcie
+T41	Symptom 2499 2511	bóle brzucha
+N9	Reference T41 ICD10:R10	Ból w okolicy brzucha i miednicy
+T42	Condition 2529 2576	stan zapalny i wysięk w stawie kolanowym prawym
+T43	Date 2513 2528	przed miesiącem
+R18	Dat Arg1:T43 Arg2:T42	
+T44	Investigation_result 2429 2448	46/min HR minimalna
+T45	Condition 2277 2299	Niedoczynność tarczycy
+N10	Reference T45 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T46	Condition 2255 2275	Hipercholesterolemia
+N11	Reference T46 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T47	Condition 2238 2253	Podejrzenie PFO
+N12	Reference T47 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T48	Condition 2203 2236	Podejrzenie nadciśnienia płucnego
+N13	Reference T48 ICD10:I27.2	Nadciśnienie płucne wtórne o innej etiologii
+T49	Condition 2167 2201	Istotna niedomykalność trójdzielna
+N14	Reference T49 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T50	Condition 2119 2165	Łagodna dysfunkacja lewej komory serca (ef48%0
+T51	Condition 2084 2117	Przetrwałe migotanie przedsionków
+N15	Reference T51 ICD10:I48	Migotanie i trzepotanie przedsionków
+T52	Condition 2061 2082	Nadciśnienie tętnicze
+N16	Reference T52 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T53	Condition 1989 2034	Udar niedokrwienny z niedowładem lewostronnym
+N17	Reference T53 ICD10:I63	Zawał mózgu
+T54	Treatment 2035 2059	leczonym trombolitycznie
+T55	Condition 1735 1757	Niedoczynność tarczycy
+N18	Reference T55 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T56	Condition 1663 1708	Udar niedokrwienny z niedowładem lewostronnym
+N19	Reference T56 ICD10:I63	Zawał mózgu
+T57	Treatment 1709 1733	leczonym trombolitycznie
+T58	Condition 1616 1628	Dyslipidemia
+N20	Reference T58 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T59	Drug 1654 1661	statyną
+T60	Condition 1593 1614	Nadciśnienie tętnicze
+N21	Reference T60 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T61	Condition 1530 1591	Utrwalone migotanie przedsionków (CHA2DS2-VASc=6, HAS-BLED=2)
+N22	Reference T61 ICD10:I48	
+T62	Condition 1480 1529	Umiarkowana niedomykalność zastawki trójdzielnej.
+N23	Reference T62 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T63	Condition 1455 1478	Przetrwały otwór owalny
+N24	Reference T63 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T64	Drug 1148 1160	Euthyrox N50
+T65	Drug_dose 1161 1228	1 tabletka rano (na czczo, 30 minut przed posiłkiem i innymi lekami
+R19	Drg Arg1:T64 Arg2:T65	
+T66	Drug 1119 1126	Nolpaza
+T67	Drug_dose 1127 1147	20mg 1 tabletka rano
+R20	Drg Arg1:T66 Arg2:T67	
+T68	Drug 1092 1098	Zahron
+T69	Drug_dose 1099 1118	5mg 1 tabletka rano
+R21	Drg Arg1:T68 Arg2:T69	
+T70	Drug 1059 1066	Lacipil
+T71	Drug_dose 1067 1091	2mg 1 tabletka wieczorem
+R22	Drg Arg1:T70 Arg2:T71	
+T72	Drug 1015 1042	Noliprel forte 1,25mg + 5mg
+T73	Drug_dose 1043 1058	1 tabletka rano
+R23	Drg Arg1:T72 Arg2:T73	
+T74	Drug 975 982	Eliquis
+T75	Drug_dose 983 1014	5mg 1 tabletka rano i wieczorem
+R24	Drg Arg1:T74 Arg2:T75	
+T76	Investigation 889 935	samokontrola ciśnienia tętniczego krwi i tętna
+T77	Behaviour 772 874	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T78	Investigation 673 767	kontrola morfologii, lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+R25	Alg Arg1:T58 Arg2:T59	
+T79	Condition 3255 3270	Wywiad rodzinny
+A3	Status T79 Family
+R26	Neg Arg1:T20 Arg2:T79	
+T80	Behaviour 3341 3358	Uzależnienie inne
+R27	Neg Arg1:T16 Arg2:T80	
+T81	Treatment 3202 3210	operacje
+R28	Dat Arg1:T27 Arg2:T81	

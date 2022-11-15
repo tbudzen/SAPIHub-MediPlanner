@@ -1,0 +1,196 @@
+T1	Treatment 331 358	dalsza opieka w poradni POZ
+T2	Treatment 360 470	okresowa kontrola kardiologiczna, wydano skierowanie do poradni kardiologicznej w celu rozszrzenia diagnostyki
+T3	Investigation 501 508	angioTK
+T4	Investigation 540 571	okresowa kontrola ciśnienia tęt
+T5	Condition 801 829	choroby niedokrwiennej serca
+A1	Source T5 Declared
+N1	Reference T5 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T6	Treatment 939 1004	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T7	Behaviour 1007 1047	Dieta lekkostrawna , niskocholesterolowa
+T8	Investigation 1051 1134	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T9	Investigation 1137 1185	Systematyczna kontrola ciśnienia tętniczego krwi
+T10	Treatment 1188 1229	Wskazane systematyczne przyjmowanie leków
+T11	Drug 1236 1246	Concor COR
+T12	Drug_dose 1247 1269	1,25 1xdz 1 tabl. rano
+R1	Drg Arg1:T11 Arg2:T12	
+T13	Symptom 1722 1759	Diagnostyka bólów w klatce piersiowej
+N2	Reference T13 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T14	Condition 1761 1805	Łagodna niedomykalność zastawki trójdzielnej
+N3	Reference T14 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T15	Condition 1807 1873	Nadkomorowe zaburzenia rytmu serca ( pobudzenia pojedyncze, salwy)
+N4	Reference T15 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T16	Condition 1887 1915	Refluks żołądkowo-przełykowy
+N5	Reference T16 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T17	Treatment 1926 1935	usunięciu
+A2	Status T17 Historical_Insignificant
+T18	Treatment 1965 1978	appendektomii
+A3	Status T18 Historical_Insignificant
+T19	Date 1979 1993	w dzieciństwie
+R2	Dat Arg1:T19 Arg2:T18	
+T20	Condition 2036 2050	biodra prawego
+N6	Reference T20 ICD10:M16	Koksartroza [choroba zwyrodnieniowa stawu biodrowego]
+T21	Treatment 2060 2082	operacji barku prawego
+A4	Status T21 Historical_Insignificant
+T22	Date 2085 2089	2010
+R3	Dat Arg1:T22 Arg2:T21	
+T23	Symptom 2265 2347	bólów w kl. piersiowej uciskowych, kłujących, nie związanych z wysiłkiem fizycznym
+N7	Reference T23 ICD10:R07.3	Inne bóle w klatce piersiowej
+T24	Date 2348 2365	od ok. 3 miesięcy
+R4	Dat Arg1:T24 Arg2:T23	
+T25	Symptom 2371 2396	spadku tolerancji wysiłku
+N8	Reference T25 ICD10:R53	Złe samopoczucie i zmęczenie
+T26	Date 2397 2409	od kilku lat
+R5	Dat Arg1:T26 Arg2:T25	
+T27	Investigation 2414 2430	EKG spoczynkowym
+T28	Date 2432 2443	12.02.2019r
+R6	Dat Arg1:T28 Arg2:T27	
+T29	Investigation_result 2445 2493	rejestrowano obniżenia odcinka ST w II, III, aVF
+R7	Inv Arg1:T27 Arg2:T29	
+R8	Dat Arg1:T28 Arg2:T29	
+N9	Reference T29 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+T30	Condition 2508 2519	refluks ż-p
+N10	Reference T30 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T31	Treatment 2529 2538	usunięciu
+A5	Status T31 Historical_Insignificant
+T32	Date 2547 2552	2016r
+R9	Dat Arg1:T32 Arg2:T31	
+T33	Condition 2597 2607	biodrowych
+N11	Reference T33 ICD10:M16	Koksartroza [choroba zwyrodnieniowa stawu biodrowego]
+T34	Condition 2555 2594	zmiany zwyrodnieniowe stawów kolanowych
+N12	Reference T34 ICD10:M17	Gonartroza [choroba zwyrodnieniowa stawu kolanowego]
+T35	Condition 1995 2035	Choroba zwyrodnieniowa stawów kolanowych
+N13	Reference T35 ICD10:M17	Gonartroza [choroba zwyrodnieniowa stawu kolanowego]
+T36	Condition 2609 2631	żylaki kończyn dolnych
+N14	Reference T36 ICD10:I83	Żylaki kończyn dolnych
+T37	Treatment 2632 2649	Przebyte operacje
+T38	Treatment 2651 2673	operacja barku prawego
+A6	Status T38 Historical_Insignificant
+T39	Date 2675 2680	2010r
+R10	Dat Arg1:T39 Arg2:T38	
+T40	Condition 2709 2712	WZW
+N15	Reference T40 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T41	Condition 2714 2723	borelioza
+N16	Reference T41 ICD10:A69.2	Choroba z Lyme
+T42	Negation 2724 2734	nie podaje
+R11	Neg Arg1:T42 Arg2:T41	
+R12	Neg Arg1:T42 Arg2:T40	
+T43	Condition 2735 2750	Wywiad rodzinny
+A7	Status T43 Family
+T44	Condition 2760 2762	MI
+A8	Status T44 Family
+N17	Reference T44 ICD10:I25.2	Przebyty zawał serca
+T45	Behaviour 2763 2778	Palenie tytoniu
+T46	Negation 2780 2790	nie podaje
+R13	Neg Arg1:T46 Arg2:T45	
+T47	Behaviour 2791 2816	Inne używki: okazjonalnie
+T48	Condition 2817 2826	Uczulenia
+T49	Negation 2828 2838	nie podaje
+R14	Neg Arg1:T49 Arg2:T48	
+T50	Behaviour 2857 2869	nauczycielka
+T51	Drug 2895 2905	Concor COR
+T52	Drug_dose 2906 2926	1,25 mg 1 tabl. rano
+R15	Drg Arg1:T51 Arg2:T52	
+T53	Drug 2927 2933	Magnez
+T54	Drug_dose 2934 2946	1 tabl. rano
+R16	Drg Arg1:T53 Arg2:T54	
+T55	Drug 2947 2953	Vit. D
+T56	Drug_dose 2954 2975	2000j 1 tabl. 1 x dz.
+R17	Drg Arg1:T55 Arg2:T56	
+T57	Investigation 3003 3013	echo serca
+T58	Investigation 3014 3017	TET
+T59	Investigation 3019 3023	ABPM
+T60	Investigation 3025 3031	Holter
+T61	Investigation 3033 3051	RTG kl. piersiowej
+T62	Symptom 3272 3318	okresowych klujących bólów w klatce piersiowej
+N19	Reference T62 ICD10:R07.3	Inne bóle w klatce piersiowej
+T63	Symptom 3324 3343	ogólnego osłabienia
+T64	Symptom 3346 3367	stany przedomdleniowe
+T65	Condition 3384 3415	Łagodna niedomykalność mitralna
+N20	Reference T65 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T66	Condition 3418 3429	trójdzielna
+N21	Reference T66 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T67	Condition 3432 3466	Nadkomorowe zaburzenia rytmu serca
+N22	Reference T67 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T68	Investigation 3468 3483	próba wysiłkowa
+T69	Investigation_result 3484 3505	wątpliwa elektrycznie
+R18	Inv Arg1:T68 Arg2:T69	
+T70	Date 3506 3513	03.2019
+R19	Dat Arg1:T70 Arg2:T69	
+R20	Dat Arg1:T70 Arg2:T68	
+T71	Condition 3515 3543	Refluks żołądkowo-przełykowy
+N23	Reference T71 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T72	Treatment 3554 3563	usunięciu
+A9	Status T72 Historical_Insignificant
+T73	Condition 3585 3625	choroba zwyrodnieniowa stawów kolanowych
+N24	Reference T73 ICD10:M17	Gonartroza [choroba zwyrodnieniowa stawu kolanowego]
+T74	Condition 3626 3640	biodra prawego
+N25	Reference T74 ICD10:M16	Koksartroza [choroba zwyrodnieniowa stawu biodrowego]
+T75	Treatment 3643 3660	Przebyte operacje
+T76	Treatment 3671 3684	appendektomii
+A10	Status T76 Historical_Insignificant
+T77	Date 3685 3699	w dzieciństwie
+R21	Dat Arg1:T77 Arg2:T76	
+T78	Treatment 3710 3732	operacji barku prawego
+A11	Status T78 Historical_Insignificant
+T79	Date 3733 3737	2010
+R22	Dat Arg1:T79 Arg2:T78	
+T80	Treatment 3738 3757	Leczenie przewlekłe
+T81	Condition 3802 3805	WZW
+N26	Reference T81 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T82	Condition 3815 3824	borelioza
+N27	Reference T82 ICD10:A69.2	Choroba z Lyme
+T83	Condition 3831 3835	Odra
+N28	Reference T83 ICD10:B05	Odra
+T84	Negation 3838 3839	-
+R23	Neg Arg1:T84 Arg2:T83	
+T85	Negation 3827 3828	-
+R24	Neg Arg1:T85 Arg2:T82	
+T86	Negation 3808 3809	-
+R25	Neg Arg1:T86 Arg2:T81	
+T87	Condition 3844 3863	wywiadzie rodzinnym
+A12	Status T87 Family
+T88	Condition 3874 3885	zawał serca
+A13	Status T88 Family
+N29	Reference T88 ICD10:I25.2	
+T89	Condition 3888 3898	udar mózgu
+A14	Status T89 Family
+N30	Reference T89 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T90	Behaviour 3900 3915	Palenie tytoniu
+T91	Negation 3917 3920	nie
+R26	Neg Arg1:T91 Arg2:T90	
+T92	Behaviour 3921 3932	Inne używki
+T93	Negation 3934 3937	nie
+R27	Neg Arg1:T93 Arg2:T92	
+T94	Condition 3938 3947	Uczulenia
+T95	Negation 3949 3965	niezdiagnozowane
+R28	Neg Arg1:T95 Arg2:T94	
+T96	Behaviour 3983 4009	warunki mieszkaniowe dobre
+T97	Drug 4034 4044	Concor COR
+T98	Drug_dose 4045 4067	1,25 1xdz 1 tabl. rano
+R29	Drg Arg1:T97 Arg2:T98	
+T99	Drug 4070 4077	Emanera
+T100	Drug_dose 4078 4103	20 mg 1x dz rano na czczo
+R30	Drg Arg1:T99 Arg2:T100	
+T101	Investigation 4119 4129	Echo serca
+T102	Investigation 4131 4146	Próba Wysiłkowa
+T103	Condition 1936 1954	polipa dwunastnicy
+N32	Reference T103 ICD10:K31.7	Polip żołądka i dwunastnicy
+T104	Condition 2539 2545	polipa
+N33	Reference T104 ICD10:K31.7	Polip żołądka i dwunastnicy
+R31	Dat Arg1:T32 Arg2:T104	
+T105	Condition 3564 3582	polipa dwunastnicy
+N34	Reference T105 ICD10:K31.7	Polip żołądka i dwunastnicy
+T106	Condition 471 499	choroby niedokrwiennej serca
+N35	Reference T106 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+N36	Reference T48 ICD10:T78.4	Alergia, nieokreślona
+N37	Reference T94 ICD10:T78.4	Alergia, nieokreślona
+T108	Treatment 3760 3773	ortopedycznej
+A15	Status T103 Historical_Insignificant
+A16	Status T104 Historical_Insignificant
+N18	Reference T45 ICD10:Z72.0	Używanie tytoniu
+N40	Reference T63 ICD10:R53	Złe samopoczucie i zmęczenie
+A17	Status T105 Historical_Insignificant
+N31	Reference T90 ICD10:Z72.0	Używanie tytoniu
+N38	Reference T47 ICD10:Z72	Problemy związane ze stylem życia
+A18	Status T47 Historical_Insignificant
+N39	Reference T92 ICD10:Z72	Problemy związane ze stylem życia

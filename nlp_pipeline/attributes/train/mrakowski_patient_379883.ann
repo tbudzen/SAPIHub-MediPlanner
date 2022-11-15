@@ -1,0 +1,129 @@
+T1	Condition 673 706	Ciężka stenoza zastawki aortalnej
+N1	Reference T1 ICD10:I35.0	Zwężenie zastawki aortalnej
+T2	Condition 708 756	Niewydolność serca z zachowaną frakcją wyrzutową
+N2	Reference T2 ICD10:I50.9	Niewydolność serca, nieokreślona
+T3	Condition 767 808	Łagodna niedomykalność zastawki aortalnej
+N3	Reference T3 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T4	Condition 810 855	Łagodna niedomykalność zastawki pnia płucnego
+N4	Reference T4 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T5	Condition 857 878	Nadciśnienie tętnicze
+N5	Reference T5 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T6	Condition 880 892	Dyslipidemia
+N6	Reference T6 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T7	Condition 894 909	Cukrzyca typu 2
+N7	Reference T7 ICD10:E11	Cukrzyca insulinoniezależna
+T8	Treatment 919 927	operacji
+A1	Status T8 Historical_Insignificant
+T9	Date 967 971	1992
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Treatment 1085 1156	Dalsza opieka w POZ, Poradni Kardiologicznej i Poradni Diabetologicznej
+T11	Treatment 1161 1268	Wskazana konsultacja w Poradni Kardiochirurgicznej w celu ostatecznej kwalifikacji do zabiegu korekcji wady
+T12	Investigation 1294 1396	Okresowa kontrola morfologii, elektrolitów, glikemii, parametrów wątrobowych oraz parametrów nerkowych
+T13	Date 1408 1421	za 2 tygodnie
+R2	Dat Arg1:T13 Arg2:T12	
+T14	Investigation 1426 1488	Kontrola HbA1c za około 3 miesiące w warunkach ambulatoryjnych
+T16	Behaviour 1493 1607	Dieta cukrzycowa, lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T17	Investigation 1612 1668	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T18	Investigation 1673 1714	Regularny pomiar glikemii 3 razy dziennie
+T20	Treatment 1719 1747	Regularne przyjmowanie leków
+T21	Drug 1753 1762	Bicardiol
+T22	Drug 1972 1984	Contour Plus
+T23	Drug 1948 1955	MagneB6
+T24	Drug 1924 1931	Potazek
+T25	Drug 1847 1853	Xigduo
+T26	Drug 1813 1820	Roswera
+T27	Drug 1783 1791	Karnidin
+T28	Drug_dose 1763 1782	5mg 1 tabletka rano
+R5	Drg Arg1:T21 Arg2:T28	
+T29	Drug_dose 1792 1812	20mg 1 tabletka rano
+R6	Drg Arg1:T27 Arg2:T29	
+T30	Drug_dose 1821 1846	30mg 1 tabletka wieczorem
+R7	Drg Arg1:T26 Arg2:T30	
+T31	Drug_dose 1854 1923	5mg/1000mg 1 tabletka rano i wieczorem - wg zaleceń diabetologicznych
+R8	Drg Arg1:T25 Arg2:T31	
+T32	Drug_dose 1932 1947	1 tabletka rano
+R9	Drg Arg1:T24 Arg2:T32	
+T33	Drug_dose 1956 1971	1 tabletka rano
+R10	Drg Arg1:T23 Arg2:T33	
+T34	Drug_dose 1985 2010	paski do pomiaru glikemii
+R11	Drg Arg1:T22 Arg2:T34	
+T35	Condition 2164 2166	SA
+N8	Reference T35 ICD10:I35.0	Zwężenie zastawki aortalnej
+T36	Investigation 2169 2172	TTE
+T37	Investigation 2175 2178	TEE
+T38	Date 2181 2185	2017
+T39	Investigation_result 2188 2211	Vmax. 2.97m2, AVA 2 cm2
+R12	Dat Arg1:T38 Arg2:T37	
+R13	Dat Arg1:T38 Arg2:T36	
+R14	Dat Arg1:T38 Arg2:T39	
+R15	Inv Arg1:T37 Arg2:T39	
+R16	Inv Arg1:T36 Arg2:T39	
+T40	Symptom 2301 2373	uczucie "pieczenia w klatce" przy chodzeniu (II - IV piętro, nie zawsze)
+N9	Reference T40 ICD10:R07.3	Inne bóle w klatce piersiowej
+T41	Symptom 2375 2390	"szybkie tętno"
+N10	Reference T41 ICD10:R00.0	Tachykardia, nieokreślona
+T42	Symptom 2392 2406	pieczenie stóp
+T43	Condition 2430 2437	DM t. 2
+N11	Reference T43 ICD10:E11	Cukrzyca insulinoniezależna
+T44	Condition 2439 2441	HA
+N12	Reference T44 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T45	Condition 2461 2496	przepuklina pachwinowa prawostronna
+A2	Status T45 Historical_Insignificant
+T46	Date 2497 2501	1992
+R17	Dat Arg1:T46 Arg2:T45	
+T47	Condition 2531 2534	CAD
+N13	Reference T47 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+A3	Status T47 Family
+T48	Condition 2544 2555	cor bovinum
+A4	Status T48 Family
+N14	Reference T48 ICD10:I51.7	Powiększenie serca
+T49	Condition 2573 2575	MI
+A5	Status T49 Family
+N15	Reference T49 ICD10:I25.2	Przebyty zawał serca
+T51	Condition 2584 2591	Alergie
+T52	Negation 2593 2599	neguje
+R19	Neg Arg1:T52 Arg2:T51	
+T53	Behaviour 2630 2641	4 paczkolat
+T54	Behaviour 2644 2679	Alkohol: okazjonalnie bardzo rzadko
+N17	Reference T54 ICD10:Z72.1	Używanie alkoholu
+T55	Behaviour 2681 2698	Uzależnienie inne
+T56	Negation 2700 2706	neguje
+R20	Neg Arg1:T56 Arg2:T55	
+T57	Behaviour 2724 2732	logistyk
+T58	Drug 2739 2748	Bicardiol
+T59	Drug 2871 2878	MagneB6
+T60	Drug 2849 2856	Potazek
+T61	Drug 2797 2803	Siofor
+T62	Drug 2768 2776	Karnidin
+T63	Drug_dose 2749 2766	5 mg 1 tabl. rano
+R21	Drg Arg1:T58 Arg2:T63	
+T64	Drug_dose 2777 2795	20 mg 1 tabl. rano
+R22	Drg Arg1:T62 Arg2:T64	
+T65	Drug_dose 2804 2847	850 mg 1 tabl. rano, w poludnie i wieczorem
+R23	Drg Arg1:T61 Arg2:T65	
+T66	Drug_dose 2857 2869	1 tabl. rano
+R24	Drg Arg1:T60 Arg2:T66	
+T67	Drug_dose 2879 2895	1 - 2 tabl. rano
+R25	Drg Arg1:T59 Arg2:T67	
+T68	Investigation 2924 2934	echo serca
+T69	Investigation 2936 2939	TET
+T70	Investigation 2941 2945	ABPM
+T71	Investigation 2947 2957	Holter ekg
+T72	Investigation 2959 2977	rtg kl. piersiowej
+T15	Treatment 2442 2459	Przebyte operacje
+T19	Condition 2506 2521	Wywiad rodzinny
+A6	Status T19 Family
+T73	Condition 928 965	przepukliny pachwinowej prawostronnej
+N18	Reference T73 ICD10:K40	Przepuklina pachwinowa
+R3	Dat Arg1:T9 Arg2:T73	
+N19	Reference T45 ICD10:K40	Przepuklina pachwinowa
+T74	Investigation_result 758 764	EF=61%
+A7	Status T73 Historical_Insignificant
+N20	Reference T51 ICD10:T78.4	Alergia, nieokreślona
+T50	Behaviour 2601 2611	Nikotynizm
+N21	Reference T50 ICD10:Z72.0	Używanie tytoniu
+T76	Date 2617 2626	do 22 r.ż
+R4	Dat Arg1:T76 Arg2:T50	
+N16	Reference T53 ICD10:Z72.0	Używanie tytoniu
+A8	Status T54 Historical_Insignificant
+N22	Reference T55 ICD10:Z72	Problemy związane ze stylem życia

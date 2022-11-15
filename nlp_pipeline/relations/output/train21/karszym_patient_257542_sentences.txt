@@ -1,0 +1,914 @@
+allRelations          : 26
+oks                   : 15
+isRedundantAndRemoveds: 11
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 0
+GOOD / BAD            : 26 / 0
+Sentence 0:
+------------------------------------------------
+Wiek: 15 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zastosowane leczenie
+
+
+
+Sentence 3:
+------------------------------------------------
+Acesan, Propranolol, Spironol, Enarenal, Sildenafil, Hepatil, Goprazol, Witamina D3, Calperos
+------------------------------------------------
+
+
+
+Sentence 4:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 5:
+1. Systematyczne przyjmowanie leków:
+Acesan 75mg 1xdziennie
+
+R1	Drg Arg1:T10 Arg2:T19 << OK >>	Acesan -> 75mg 1xdziennie  <RANK: 3> <info: start[579, 586] <type: RIGHT>>
+
+
+Sentence 6:
+Propranolol 40-40-30 mg
+Spironol 25mg 1xdziennie
+Enarenal 2,5 mg 2xdziennie
+
+R2	Drg Arg1:T11 Arg2:T20 << OK >>	Propranolol -> 40-40-30 mg  <RANK: 3> <info: start[602, 614] <type: RIGHT>>
+R3	Drg Arg1:T11 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Propranolol -> 25mg 1xdziennie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[602, 635] <type: RIGHT>>
+R4	Drg Arg1:T11 Arg2:T22 <<REDUNDANT!!!REMOVED>>	Propranolol -> 2,5 mg 2xdziennie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[602, 660] <type: RIGHT>>
+R5	Drg Arg1:T12 Arg2:T20 <<REDUNDANT!!!REMOVED>>	Spironol -> 40-40-30 mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[626, 614] <type: LEFT>>
+R6	Drg Arg1:T12 Arg2:T21 << OK >>	Spironol -> 25mg 1xdziennie  <RANK: 3> <info: start[626, 635] <type: RIGHT>>
+R7	Drg Arg1:T12 Arg2:T22 <<REDUNDANT!!!REMOVED>>	Spironol -> 2,5 mg 2xdziennie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[626, 660] <type: RIGHT>>
+R8	Drg Arg1:T13 Arg2:T20 <<REDUNDANT!!!REMOVED>>	Enarenal -> 40-40-30 mg <:REMOVED other first tag between (left):> <RANK: 1> <info: start[651, 614] <type: LEFT>>
+R9	Drg Arg1:T13 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Enarenal -> 25mg 1xdziennie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[651, 635] <type: LEFT>>
+R10	Drg Arg1:T13 Arg2:T22 << OK >>	Enarenal -> 2,5 mg 2xdziennie  <RANK: 3> <info: start[651, 660] <type: RIGHT>>
+
+
+Sentence 7:
+Sildenafil 25mg 3xdziennie
+Hepatil 1kaps 1xdziennie
+
+R11	Drg Arg1:T14 Arg2:T23 << OK >>	Sildenafil -> 25mg 3xdziennie  <RANK: 3> <info: start[678, 689] <type: RIGHT>>
+R12	Drg Arg1:T14 Arg2:T24 <<REDUNDANT!!!REMOVED>>	Sildenafil -> 1kaps 1xdziennie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[678, 713] <type: RIGHT>>
+R13	Drg Arg1:T15 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Hepatil -> 25mg 3xdziennie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[705, 689] <type: LEFT>>
+R14	Drg Arg1:T15 Arg2:T24 << OK >>	Hepatil -> 1kaps 1xdziennie  <RANK: 3> <info: start[705, 713] <type: RIGHT>>
+
+
+Sentence 8:
+Goprazol 20mg 1xdziennie (na noc)
+Witamina D3 2000j. 1xdziennie
+
+R15	Drg Arg1:T16 Arg2:T25 << OK >>	Goprazol -> 20mg 1xdziennie (na noc)  <RANK: 3> <info: start[730, 739] <type: RIGHT>>
+R16	Drg Arg1:T16 Arg2:T26 <<REDUNDANT!!!REMOVED>>	Goprazol -> 2000j. 1xdziennie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[730, 776] <type: RIGHT>>
+R17	Drg Arg1:T17 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Witamina D3 -> 20mg 1xdziennie (na noc) <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[764, 739] <type: LEFT>>
+R18	Drg Arg1:T17 Arg2:T26 << OK >>	Witamina D3 -> 2000j. 1xdziennie  <RANK: 3> <info: start[764, 776] <type: RIGHT>>
+
+
+Sentence 9:
+Calperos 500mg 1xdziennie 
+2. Kontrola w Poradni Kardiologicznej za 6 miesięcy.
+
+R19	Drg Arg1:T18 Arg2:T27 << OK >>	Calperos -> 500mg 1xdziennie  <RANK: 3> <info: start[794, 803] <type: RIGHT>>
+R20	Dat Arg1:T29 Arg2:T28 << OK >>	za 6 miesięcy -> Kontrola w Poradni Kardiologicznej  <RANK: 3> <info: start[859, 824] <type: LEFT>>
+R21	Dat Arg1:T29 Arg2:T18 <<REDUNDANT!!!REMOVED>>	za 6 miesięcy -> Calperos <:REMOVED other second tag between (left):> <RANK: 0> <info: start[859, 794] <type: LEFT>>
+
+
+Sentence 10:
+3. Dalsza opieka w Poradni Hepatologicznej.
+
+
+
+Sentence 11:
+4. Opieka psychiatryczna/psychologiczna w miejscu zamieszkania.
+
+
+
+Sentence 12:
+5. Kontrolne badanie usg jamy brzusznej oraz morfologia za 2-3 miesiące.
+
+R22	Dat Arg1:T34 Arg2:T32 << OK >>	za 2-3 miesiące -> Kontrolne badanie usg jamy brzusznej  <RANK: 2> <info: start[1038, 985] <type: LEFT>>
+R23	Dat Arg1:T34 Arg2:T33 << OK >>	za 2-3 miesiące -> morfologia  <RANK: 3> <info: start[1038, 1027] <type: LEFT>>
+
+
+Sentence 13:
+------------------------------------------------
+
+
+
+Sentence 14:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 15:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie V: |Opisowo:: Wrodzona wada serca pod postacią zespołu niedorozwoju lewego serca (HLHS).
+   
+
+
+Sentence 16:
+Stan po operacji met.
+
+
+Sentence 17:
+Norwooda (27.04.04).
+   
+
+
+Sentence 18:
+Stan po operacji met. Glenna (06.10.04).
+   
+R24	Dat Arg1:T39 Arg2:T38 << OK >>	06.10.04 -> operacji met. Glenna  <RANK: 3> <info: start[1391, 1369] <type: LEFT>>
+
+
+Sentence 19:
+Stan po operacji met Fontana (27.03.09.)
+   
+R25	Dat Arg1:T41 Arg2:T40 << OK >>	27.03.09 -> operacji met Fontana  <RANK: 3> <info: start[1435, 1413] <type: LEFT>>
+
+
+Sentence 20:
+Stan po interwencyjnym zamknięciu fenestracji zestawem Amplatzer 5mm (16.09.10)
+   
+R26	Dat Arg1:T43 Arg2:T42 << OK >>	16.09.10 -> interwencyjnym zamknięciu fenestracji zestawem Amplatzer 5mm  <RANK: 3> <info: start[1519, 1457] <type: LEFT>>
+
+
+Sentence 21:
+Enteropatia z utratą białka w wywiadzie
+   Śródkomorowe zwężenie w systemowej prawej komorze.
+   
+
+
+Sentence 22:
+Zespół nadpobudliwości psychoruchowej z deficytem uwagi.
+   
+
+
+Sentence 23:
+Włóknienie wątroby w stadium F4 wg Metavir.|Rozpoznanie IV: |Rozpoznanie III:
+------------------------------------------------
+
+
+
+Sentence 24:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 25:
+Chłopak 15 letni  w  stanie  dość  dobrym  został  przyjęty do  Kliniki  celem przeprowadzenia  badań
+
+
+
+Sentence 26:
+Otrzymuje  Sildenafil  
+
+
+Sentence 27:
+Otrzymuje   Acesan +  Propranolol+ Spironol+
+
+
+Sentence 28:
+Enarenal+  Sildenafil 
+
+
+
+Sentence 29:
+Opieka  psychiatryczna  otrzymuje Rispolept
+------------------------------------------------
+
+
+
+Sentence 30:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 31:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:2.99[10^3/ul]
+    
+
+
+Sentence 32:
+RBC Krwinki czerwone:4.83[10^6/ul]
+    
+
+
+Sentence 33:
+HGB Hemoglobina:14.0[g/dl]
+    
+
+
+Sentence 34:
+HCT Hematokryt:40.2[%]
+    
+
+
+Sentence 35:
+MCV wskaźnik czerwonokrw:83.2[fl]
+    
+
+
+Sentence 36:
+MCH wskaźnik czerwonokrw:29.0[pg]
+    
+
+
+Sentence 37:
+MCHC wskaźnik czerwonokr:34.8[g/dl]
+    
+
+
+Sentence 38:
+PLT z morfologii:137[10^3/ul]
+    
+
+
+Sentence 39:
+RDW-SD:41.3[fl]
+    
+
+
+Sentence 40:
+RDW-CV:13.6[%]
+    PDW:15.0[fl]
+    MPV:12.0[fl]
+    P-LCR:41.0[%]
+    
+
+
+Sentence 41:
+PCT (hematokryt płytkowy:0.16[%]
+    
+
+
+Sentence 42:
+NEUTR# wartość bezwzględ:1.48[10^3/ul]
+    
+
+
+Sentence 43:
+NEUTR%:49.4[%]
+    
+
+
+Sentence 44:
+LYMH# wartość bezwzględn:0.75[10^3/ul]
+    
+
+
+Sentence 45:
+LYMPH%:25.1[%]
+    
+
+
+Sentence 46:
+MONO# wartość bezwzględn:0.48[10^3/ul]
+    
+
+
+Sentence 47:
+MONO%:16.1[%]
+    
+
+
+Sentence 48:
+EO# wartość bezwzględna:0.25[10^3/ul]
+    
+
+
+Sentence 49:
+EO%:8.4[%]
+    BASO# wartość bezwzględn:0.03[10^3/ul]
+    BASO%:1.0[%]
+    
+
+
+Sentence 50:
+NRBC %:0.0[%]
+    
+
+
+Sentence 51:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 52:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:8.97[10^3/ul]
+    
+
+
+Sentence 53:
+RBC Krwinki czerwone:4.97[10^6/ul]
+    
+
+
+Sentence 54:
+HGB Hemoglobina:14.3[g/dl]
+    
+
+
+Sentence 55:
+HCT Hematokryt:42.6[%]
+    
+
+
+Sentence 56:
+MCV wskaźnik czerwonokrw:85.7[fl]
+    
+
+
+Sentence 57:
+MCH wskaźnik czerwonokrw:28.8[pg]
+    
+
+
+Sentence 58:
+MCHC wskaźnik czerwonokr:33.6[g/dl]
+    
+
+
+Sentence 59:
+PLT z morfologii:148[10^3/ul]
+    
+
+
+Sentence 60:
+RDW-SD:43.2[fl]
+    
+
+
+Sentence 61:
+RDW-CV:13.9[%]
+    PDW:15.6[fl]
+    MPV:11.7[fl]
+    
+
+
+Sentence 62:
+P-LCR:40.7[%]
+    
+
+
+Sentence 63:
+PCT (hematokryt płytkowy:0.17[%]
+    
+
+
+Sentence 64:
+NEUTR# wartość bezwzględ:6.60[10^3/ul]
+    
+
+
+Sentence 65:
+NEUTR%:73.5[%]
+    
+
+
+Sentence 66:
+LYMH# wartość bezwzględn:0.89[10^3/ul]
+    LYMPH%:9.9[%]
+    
+
+
+Sentence 67:
+MONO# wartość bezwzględn:1.09[10^3/ul]
+    
+
+
+Sentence 68:
+MONO%:12.2[%]
+    
+
+
+Sentence 69:
+EO# wartość bezwzględna:0.34[10^3/ul]
+    
+
+
+Sentence 70:
+EO%:3.8[%]
+    BASO# wartość bezwzględn:0.05[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 71:
+NRBC %:0.0[%]
+    
+
+
+Sentence 72:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 73:
+Rozmaz krwi obwodowej (mikroskopowy)
+    Granulocyty pałeczkowate:1[%]
+    
+
+
+Sentence 74:
+Granulocyty podzielone:70[%]
+    
+
+
+Sentence 75:
+Granulocyty kwasochłonne:4[%]
+    
+
+
+Sentence 76:
+Granulocyty zasadochłonn:1[%]
+    
+
+
+Sentence 77:
+Limfocyty:10[%]
+    Monocyty:14[%]
+    
+
+
+Sentence 78:
+Opis granulocytów::
+    ziarnistości toksyczne:obecne drobne
+    
+
+
+Sentence 79:
+Opis płyteki krwi::
+    anizocytoza płytek krwi:nieznaczna
+Antytrombina III: Antytrombina III:103[%]
+
+
+
+Sentence 80:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:32.0[sek]
+
+
+
+Sentence 81:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 82:
+Czas protrombinowy:14.4[sek]
+    
+
+
+Sentence 83:
+Wskaźnik PT:76.4[%]
+    
+
+
+Sentence 84:
+INR:1.30
+Czas trombinowy TT: Czas trombinowy TT:14.7[sek]
+
+
+
+Sentence 85:
+Fibrynogen: Fibrynogen:2.44[g/L]
+D-dimer - test ilościowy: D-dimer - test ilościowy:311[ng/ml]
+
+
+
+Sentence 86:
+Płytki krwi z THEX: Płytki krwi:137[10^3/ul]
+
+
+
+Sentence 87:
+Badanie ogólne moczu
+    
+
+
+Sentence 88:
+barwa:słomkowy[ ]
+    
+
+
+Sentence 89:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 90:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 91:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 92:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 93:
+ciężar właściwy:1.009[ ]
+    
+
+
+Sentence 94:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 95:
+pH:5.0[ ]
+    
+
+
+Sentence 96:
+białko:nieobecne[ ]
+    
+
+
+Sentence 97:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 98:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 99:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 100:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 101:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 102:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 103:
+leukocyty:2 /ul[ul]
+    erytrocyty świeże:1 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+    
+
+
+Sentence 104:
+plemniki:pojedyncze[w preparacie]
+
+
+
+Sentence 105:
+TSH: TSH:3.14[uIU/ml]
+
+
+
+Sentence 106:
+FT3: FT3:3.21[pg/ml]
+
+
+
+Sentence 107:
+FT4: FT4:1.66[ng/dl]
+
+
+
+Sentence 108:
+Troponina T: Troponina T:5.6[pg/ml]
+
+
+
+Sentence 109:
+Witamina D 25-OH: Witamina D 25-OH:48.3[ng/ml]
+
+
+
+Sentence 110:
+AFP: AFP:5.80[IU/ml]
+
+
+
+Sentence 111:
+ALAT: ALAT:15[U/L]
+
+
+
+Sentence 112:
+Albumina: Albumina:4.3[g/dl]
+ASPAT: ASPAT:24[U/L]
+
+
+
+Sentence 113:
+Białko całkowite w surowicy (TP): Białko całkowite w surow:6.8[g/dl]
+
+
+
+Sentence 114:
+Bilirubina niesprzężona (pośrednia) (Bu): Bilirubina niesprzężona:1.25[mg/dl]
+
+
+
+Sentence 115:
+Bilirubina sprzężona (bezpośrednia) (Bc): Bilirubina sprzężona (be:0.00[mg/dl]
+
+
+
+Sentence 116:
+Bilirubina całkowita (TBil): Bilirubina całkowita:1.25[mg/dl]
+
+
+
+Sentence 117:
+CK - aktywność: CK:50[U/L]
+
+
+
+Sentence 118:
+CKMB aktywność: CKMB:19[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 119:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 120:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 121:
+Chlorki (Cl): Chlorki:105[mmol/L]
+
+
+
+Sentence 122:
+Fosfataza alkaliczna (ALP): Fosfataza alkaliczna:131[U/L]
+
+
+
+Sentence 123:
+Fosforany nieorganiczne: Fosforany nieorganiczne:1.48[mmol/L]
+
+
+
+Sentence 124:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:47[U/L]
+
+
+
+Sentence 125:
+Kreatynina + GFR: Kreatynina w surowicy:0.70[mg/dl]
+
+
+
+Sentence 126:
+Mleczany (LAC): Mleczany:15.8[mg/dl]
+
+
+
+Sentence 127:
+Mleczany (LAC): Mleczany:32.6[mg/dl]
+
+
+
+Sentence 128:
+LDH Dehydrogenaza mleczanowa: LDH Dehydrogenaza mlecza:145[U/L]
+
+
+
+Sentence 129:
+Magnez: Magnez:0.85[mmol/L]
+
+
+
+Sentence 130:
+Mocznik: Mocznik:33[mg/dl]
+
+
+
+Sentence 131:
+Transferyna: Transferyna:302.61[mg/dl]
+
+
+
+Sentence 132:
+Wapń całkowity: Wapń całkowity:2.35[mmol/L]
+
+
+
+Sentence 133:
+Gospodarka żelazem
+    Żelazo:74[ug/dl]
+    
+
+
+Sentence 134:
+TIBC (Całkowita zdolność:435[ug/dl]
+    
+
+
+Sentence 135:
+UIBC (Utajona zdolność w:361[ug/dl]
+    
+
+
+Sentence 136:
+Wskaźnik wysycenia Fe:17[%]
+
+
+
+Sentence 137:
+Żelazo (Fe): Żelazo (Fe):74[ug/dl]
+
+
+
+Sentence 138:
+ASO: ASO:174[IU/ml]
+
+
+
+Sentence 139:
+Lipidogram
+    
+
+
+Sentence 140:
+Cholesterol całkowity:106[mg/dl]
+    
+
+
+Sentence 141:
+Cholesterol HDL:28[mg/dl]
+    Cholestrol LDL:76[mg/dl]
+    
+
+
+Sentence 142:
+Triglicerydy:53[mg/dl]
+    
+
+
+Sentence 143:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:87[mg/dl]
+
+
+
+Sentence 144:
+Ocena subpopulacji limfocytów krwi pełnej (pełen panel)
+    
+
+
+Sentence 145:
+Limfocyty T CD3+ (bezwzg:468
+    Limfocyty T CD3+ (odsetk:54.8[%]
+    
+
+
+Sentence 146:
+Limfocyty T CD3+CD4+ (be:292
+    Limfocyty T CD3+CD4+ (od:36[%]
+    
+
+
+Sentence 147:
+Limfocyty T CD3+CD8+ (be:161
+    Limfocyty T CD3+CD8+ (od:19.9[%]
+    
+
+
+Sentence 148:
+Limfocyty B CD19+ (bezwz:241
+    Limfocyty B CD19+ (odset:26.9[%]
+    
+
+
+Sentence 149:
+Wskaźnik CD4:CD8:1.81
+
+
+
+Sentence 150:
+Proteinogram surowicy krwi:
+
+
+Sentence 151:
+Proteinogram surowicy kr:SYNEVO
+AAT w kale: AAT w kale:SYNEVO
+
+
+
+Sentence 152:
+NT-proBNP surowica: NT-proBNP w surowicy:60[pg/ml]
+
+
+
+Sentence 153:
+------------------------------------------------
+
+
+
+Sentence 154:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 155:
+Q23.4
+Z98.8
+Z85.8
+
+
+
+Sentence 156:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 157:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 158:
+I81
+I87
+O61
+G03
+I89
+N45
+88.734
+L07
+O69
+I09
+88.751
+I91
+C55
+O91
+
+
+
+Sentence 159:
+G11
+I97
+I77
+87.440
+O55
+I17
+I19
+O35
+
+
+
+Sentence 160:
+M19
+M18
+88.761
+------------------------------------------------
+
+

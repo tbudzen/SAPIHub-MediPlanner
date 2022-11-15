@@ -1,0 +1,485 @@
+allRelations          : 45
+oks                   : 8
+isRedundantAndRemoveds: 36
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 1
+GOOD / BAD            : 44 / 1
+Sentence 0:
+------------------------------------------------
+Wiek: 64 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 2:
+------------------------------------------------
+
+
+
+Sentence 3:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 4:
+------------------------------------------------
+ Rozpozanie I: ICD10:I10|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo::
+------------------------------------------------
+
+
+
+Sentence 5:
+Zalecenia
+
+
+
+Sentence 6:
+------------------------------------------------
+- dalsza opieka w POZ
+- okresowa kontrola w Poradni Kardiologicznej
+- dalsza diagnostyka w warunkach Poradni Neurologicznej
+- regularna kontrola ciśnienia tętniczego oraz tętna
+- dieta lekkostrawna, niskocholesterolowa z niską 
+------------------------------------------------
+
+
+
+Sentence 7:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 8:
+Chora lat 63, przyjęta do Kliniki z powodu labilnych wartości BP, wyższe wartości wieczorem, kołatania serca - na leku włączonym w lutym (nebiwolol) mniej  
+W wywiadzie ponadto:  wole guzkowe tarczycy, zmiany zwyrodnieniowe kręgosłupa 
+
+R1	Dat Arg1:T11 Arg2:T6 <<REDUNDANT!!!REMOVED>>	w lutym -> labilnych wartości BP <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1037, 951] <type: LEFT>>
+R2	Dat Arg1:T11 Arg2:T7 <<REDUNDANT!!!REMOVED>>	w lutym -> wyższe wartości wieczorem <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1037, 974] <type: LEFT>>
+R3	Dat Arg1:T11 Arg2:T8 <<REDUNDANT!!!SHOULD BE REMOVED>>	w lutym -> kołatania serca  <RANK: 3> <info: start[1037, 1001] <type: LEFT>>
+R4	Dat Arg1:T11 Arg2:T12 << OK >>	w lutym -> mniej  <RANK: 3> <info: start[1037, 1057] <type: RIGHT>>
+R5	Dat Arg1:T11 Arg2:T14 <<REDUNDANT!!!REMOVED>>	w lutym -> wole guzkowe tarczycy <:REMOVED other second tag between (right) (dat):> <RANK: 1> <info: start[1037, 1087] <type: RIGHT>>
+R6	Dat Arg1:T11 Arg2:T15 <<REDUNDANT!!!REMOVED>>	w lutym -> zmiany zwyrodnieniowe kręgosłupa <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1037, 1110] <type: RIGHT>>
+R7	Dat Arg1:T11 Arg2:T9 << OK >>	w lutym -> nebiwolol  <RANK: 3> <info: start[1037, 1046] <type: RIGHT>>
+R8	Alg Arg1:T14 Arg2:T9 <<REDUNDANT!!!REMOVED>>	wole guzkowe tarczycy -> nebiwolol <:REMOVED other second tag between (left):> <RANK: 1> <info: start[1087, 1046] <type: LEFT>>
+R9	Alg Arg1:T15 Arg2:T9 <<REDUNDANT!!!REMOVED>>	zmiany zwyrodnieniowe kręgosłupa -> nebiwolol <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1110, 1046] <type: LEFT>>
+
+
+Sentence 9:
+Przebyte operacje: neguje 
+Wywiad rodzinny: siostra 3xMI  (co 5 lat, pierwszy po 40r.ż.)
+Alergie: neguje 
+Nikotynizm: neguje  
+Alkohol: okazjonalnie 
+Uzależnienie inne: neguje 
+Stan społeczny: nauczycielka 
+
+R10	Neg Arg1:T16 Arg2:T17 <<REDUNDANT!!!REMOVED>>	neguje -> 3xMI <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1163, 1196] <type: RIGHT>>
+R11	Neg Arg1:T16 Arg2:T19 <<REDUNDANT!!!REMOVED>>	neguje -> Alergie <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1163, 1233] <type: RIGHT>>
+R12	Neg Arg1:T16 Arg2:T21 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1163, 1250] <type: RIGHT>>
+R13	Neg Arg1:T16 Arg2:T23 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: okazjonalnie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1163, 1271] <type: RIGHT>>
+R14	Neg Arg1:T16 Arg2:T24 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1163, 1294] <type: RIGHT>>
+R15	Neg Arg1:T16 Arg2:T26 <<REDUNDANT!!!REMOVED>>	neguje -> nauczycielka <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1163, 1337] <type: RIGHT>>
+R16	Neg Arg1:T16 Arg2:T10 << OK >>	neguje -> Przebyte operacje  <RANK: 3> <info: start[1163, 1144] <type: LEFT>>
+R17	Neg Arg1:T20 Arg2:T17 <<REDUNDANT!!!REMOVED>>	neguje -> 3xMI <:REMOVED Tag2 not in the same line:> <RANK: 0> <info: start[1242, 1196] <type: LEFT>>
+R18	Neg Arg1:T20 Arg2:T19 << OK >>	neguje -> Alergie  <RANK: 3> <info: start[1242, 1233] <type: LEFT>>
+R19	Neg Arg1:T20 Arg2:T21 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1242, 1250] <type: RIGHT>>
+R20	Neg Arg1:T20 Arg2:T23 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: okazjonalnie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1242, 1271] <type: RIGHT>>
+R21	Neg Arg1:T20 Arg2:T24 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1242, 1294] <type: RIGHT>>
+R22	Neg Arg1:T20 Arg2:T26 <<REDUNDANT!!!REMOVED>>	neguje -> nauczycielka <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1242, 1337] <type: RIGHT>>
+R23	Neg Arg1:T20 Arg2:T10 <<REDUNDANT!!!REMOVED>>	neguje -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1242, 1144] <type: LEFT>>
+R24	Neg Arg1:T22 Arg2:T17 <<REDUNDANT!!!REMOVED>>	neguje -> 3xMI <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1262, 1196] <type: LEFT>>
+R25	Neg Arg1:T22 Arg2:T19 <<REDUNDANT!!!REMOVED>>	neguje -> Alergie <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1262, 1233] <type: LEFT>>
+R26	Neg Arg1:T22 Arg2:T21 << OK >>	neguje -> Nikotynizm  <RANK: 3> <info: start[1262, 1250] <type: LEFT>>
+R27	Neg Arg1:T22 Arg2:T23 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: okazjonalnie <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1262, 1271] <type: RIGHT>>
+R28	Neg Arg1:T22 Arg2:T24 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1262, 1294] <type: RIGHT>>
+R29	Neg Arg1:T22 Arg2:T26 <<REDUNDANT!!!REMOVED>>	neguje -> nauczycielka <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1262, 1337] <type: RIGHT>>
+R30	Neg Arg1:T22 Arg2:T10 <<REDUNDANT!!!REMOVED>>	neguje -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1262, 1144] <type: LEFT>>
+R31	Neg Arg1:T25 Arg2:T17 <<REDUNDANT!!!REMOVED>>	neguje -> 3xMI <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1313, 1196] <type: LEFT>>
+R32	Neg Arg1:T25 Arg2:T19 <<REDUNDANT!!!REMOVED>>	neguje -> Alergie <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1313, 1233] <type: LEFT>>
+R33	Neg Arg1:T25 Arg2:T21 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1313, 1250] <type: LEFT>>
+R34	Neg Arg1:T25 Arg2:T23 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: okazjonalnie <:REMOVED Tag2 not in the same line:> <RANK: 1> <info: start[1313, 1271] <type: LEFT>>
+R35	Neg Arg1:T25 Arg2:T24 << OK >>	neguje -> Uzależnienie inne  <RANK: 3> <info: start[1313, 1294] <type: LEFT>>
+R36	Neg Arg1:T25 Arg2:T26 <<REDUNDANT!!!REMOVED>>	neguje -> nauczycielka <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1313, 1337] <type: RIGHT>>
+R37	Neg Arg1:T25 Arg2:T10 <<REDUNDANT!!!REMOVED>>	neguje -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1313, 1144] <type: LEFT>>
+R38	Dat Arg1:T18 Arg2:T17 << OK >>	co 5 lat, pierwszy po 40r.ż. -> 3xMI  <RANK: 3> <info: start[1203, 1196] <type: LEFT>>
+R39	Dat Arg1:T18 Arg2:T19 <<REDUNDANT!!!REMOVED>>	co 5 lat, pierwszy po 40r.ż. -> Alergie <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1203, 1233] <type: RIGHT>>
+R40	Dat Arg1:T18 Arg2:T21 <<REDUNDANT!!!REMOVED>>	co 5 lat, pierwszy po 40r.ż. -> Nikotynizm <:REMOVED other second tag between (right) (dat):> <RANK: 1> <info: start[1203, 1250] <type: RIGHT>>
+R41	Dat Arg1:T18 Arg2:T23 <<REDUNDANT!!!REMOVED>>	co 5 lat, pierwszy po 40r.ż. -> Alkohol: okazjonalnie <:REMOVED other second tag between (right) (dat):> <RANK: 1> <info: start[1203, 1271] <type: RIGHT>>
+R42	Dat Arg1:T18 Arg2:T24 <<REDUNDANT!!!REMOVED>>	co 5 lat, pierwszy po 40r.ż. -> Uzależnienie inne <:REMOVED other second tag between (right) (dat):> <RANK: 1> <info: start[1203, 1294] <type: RIGHT>>
+R43	Dat Arg1:T18 Arg2:T26 <<REDUNDANT!!!REMOVED>>	co 5 lat, pierwszy po 40r.ż. -> nauczycielka <:REMOVED other second tag between (right) (dat):> <RANK: 1> <info: start[1203, 1337] <type: RIGHT>>
+R44	Dat Arg1:T18 Arg2:T10 <<REDUNDANT!!!REMOVED>>	co 5 lat, pierwszy po 40r.ż. -> Przebyte operacje <:REMOVED other second tag between (left):> <RANK: 1> <info: start[1203, 1144] <type: LEFT>>
+
+
+Sentence 10:
+Leki:
+Nebilet 5 mg 1/2 tabl.
+R45	Drg Arg1:T27 Arg2:T28 << OK >>	Nebilet -> 5 mg 1/2 tabl. rano  <RANK: 3> <info: start[1357, 1365] <type: RIGHT>>
+
+
+Sentence 11:
+rano 
+
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter ekg, rtg kl. piersiowej
+
+
+
+Sentence 12:
+Przewidywana liczba dni hospitalizacji: 5-7 dni
+------------------------------------------------
+
+
+
+Sentence 13:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 14:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.85[10^3/ul]
+    
+
+
+Sentence 15:
+RBC Krwinki czerwone:4.71[10^6/ul]
+    
+
+
+Sentence 16:
+HGB Hemoglobina:14.1[g/dl]
+    
+
+
+Sentence 17:
+HCT Hematokryt:41.0[%]
+    
+
+
+Sentence 18:
+MCV wskaźnik czerwonokrw:87.0[fl]
+    
+
+
+Sentence 19:
+MCH wskaźnik czerwonokrw:29.9[pg]
+    
+
+
+Sentence 20:
+MCHC wskaźnik czerwonokr:34.4[g/dl]
+    
+
+
+Sentence 21:
+PLT z morfologii:327[10^3/ul]
+    
+
+
+Sentence 22:
+RDW-SD:42.4[fl]
+    
+
+
+Sentence 23:
+RDW-CV:13.5[%]
+    PDW:11.8[fl]
+    MPV:10.2[fl]
+    
+
+
+Sentence 24:
+P-LCR:26.9[%]
+    
+
+
+Sentence 25:
+PCT (hematokryt płytkowy:0.33[%]
+    
+
+
+Sentence 26:
+NEUTR# wartość bezwzględ:2.80[10^3/ul]
+    
+
+
+Sentence 27:
+NEUTR%:47.8[%]
+    
+
+
+Sentence 28:
+LYMH# wartość bezwzględn:2.20[10^3/ul]
+    LYMPH%:37.6[%]
+    
+
+
+Sentence 29:
+MONO# wartość bezwzględn:0.42[10^3/ul]
+    
+
+
+Sentence 30:
+MONO%:7.2[%]
+    
+
+
+Sentence 31:
+EO# wartość bezwzględna:0.36[10^3/ul]
+    
+
+
+Sentence 32:
+EO%:6.2[%]
+    
+
+
+Sentence 33:
+BASO# wartość bezwzględn:0.07[10^3/ul]
+    
+
+
+Sentence 34:
+BASO%:1.2[%]
+    
+
+
+Sentence 35:
+NRBC %:0.0[%]
+    
+
+
+Sentence 36:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 37:
+Badanie ogólne moczu
+    
+
+
+Sentence 38:
+barwa:żółty[ ]
+    
+
+
+Sentence 39:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 40:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 41:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 42:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 43:
+ciężar właściwy:1.020[ ]
+    
+
+
+Sentence 44:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 45:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 46:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 47:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 48:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 49:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 50:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 51:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 52:
+leukocyty:3 /ul[ul]
+    erytrocyty świeże:2 /ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 53:
+TSH: TSH:2.29[uIU/ml]
+
+
+
+Sentence 54:
+FT3: FT3:3.09[pg/ml]
+
+
+
+Sentence 55:
+FT4: FT4:1.23[ng/dl]
+
+
+
+Sentence 56:
+ALAT: ALAT:26[U/L]
+ASPAT: ASPAT:36[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.61[mg/dl]
+
+
+
+Sentence 57:
+Sód (Na): Sód:143[mmol/L]
+
+
+
+Sentence 58:
+Potas (K): Potas:4.7[mmol/L]
+
+
+
+Sentence 59:
+Kreatynina + GFR
+    
+
+
+Sentence 60:
+Kreatynina w surowicy:0.65[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 61:
+MDRD ze stan:92.1[ml/min/1,73 m^2]
+
+
+
+Sentence 62:
+Mocznik: Mocznik:33[mg/dl]
+
+
+
+Sentence 63:
+Kwas moczowy: Kwas moczowy:5.6[mg/dl]
+
+
+
+Sentence 64:
+Lipidogram
+    
+
+
+Sentence 65:
+Cholesterol całkowity:254[mg/dl]
+    
+
+
+Sentence 66:
+Cholesterol HDL:51[mg/dl]
+    
+
+
+Sentence 67:
+Cholestrol LDL:154[mg/dl]
+    
+
+
+Sentence 68:
+Triglicerydy:127[mg/dl]
+    
+
+
+Sentence 69:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:92[mg/dl]
+
+
+
+Sentence 70:
+------------------------------------------------
+
+
+
+Sentence 71:
+ICD10
+------------------------------------------------
+R07.2
+
+
+
+Sentence 72:
+I10
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 73:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 74:
+89.501
+C55
+A01
+89.502
+I81
+L43
+87.440
+N45
+L69
+O55
+I17
+M45
+M37
+I19
+O35
+N13
+88.721
+O69
+88.761
+88.751
+------------------------------------------------
+
+

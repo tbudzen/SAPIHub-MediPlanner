@@ -1,0 +1,142 @@
+T1	Treatment 333 436	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Neurologiczne i Zdrowia Psychicznego
+T2	Behaviour 441 480	Dieta lekkostrawna, niskocholesterolowa
+T3	Treatment 485 580	Wskazana diagnostyka w Poradni Hematologicznej i Genetycznej pod kątem zespołów nadkrzepliwości
+T4	Investigation 606 697	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T5	Date 698 708	co 6-8 tyg
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Investigation 715 763	Systematyczna kontrola ciśnienia tętniczego krwi
+T7	Behaviour 770 791	Zakaz palenia tytoniu
+T8	Drug 802 812	Cyclo3Fort
+T9	Drug_dose 813 838	2x1 tabl. - kont. zaleceń
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 840 850	RevitaNerw
+T11	Drug_dose 851 876	1x1 tabl. - kont. zaleceń
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 878 883	Acard
+T13	Drug_dose 884 909	75 mg 1x1 tabl. wieczorem
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Drug 910 916	Atoris
+T15	Drug_dose 917 942	10 mg 1x1 tabl. wieczorem
+R5	Drg Arg1:T14 Arg2:T15	
+T16	Drug 943 950	Nebilet
+T17	Drug_dose 951 972	5 mg 1x1/2 tabl. rano
+R6	Drg Arg1:T16 Arg2:T17	
+T18	Condition 1199 1230	Nadciśnienie tętnicze I* wg WHO
+N1	Reference T18 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T19	Behaviour 1232 1242	Nikotynizm
+N2	Reference T19 ICD10:T65.2	Tytoń i nikotyna
+T20	Condition 1252 1279	udarze niedokrwiennym mózgu
+N3	Reference T20 ICD10:I63.9	Zawał mózgu, nieokreślony
+T21	Condition 1281 1310	opadnięcie powieki oka lewego
+N4	Reference T21 ICD10:H02.4	Opadnięcie powieki
+T22	Date 1313 1320	10.2018
+R7	Dat Arg1:T22 Arg2:T21	
+T23	Investigation 1325 1328	MRI
+T24	Investigation_result 1329 1395	opisywane podkorowe ogniska naczyniopochodne w lewej półkuli mózgu
+R8	Inv Arg1:T23 Arg2:T24	
+N5	Reference T24 ICD10:R90	Nieprawidłowe wyniki badań obrazowych ośrodkowego systemu nerwowego
+T25	Symptom 1397 1429	Zaburzenia obsesyjno-kompulsyjne
+N6	Reference T25 ICD10:F42	Zaburzenia obsesyjno-kompulsyjne
+T26	Date 1430 1443	od ok. 15 lat
+R9	Dat Arg1:T26 Arg2:T25	
+T27	Condition 1602 1629	udarze niedokrwiennym mózgu
+N7	Reference T27 ICD10:I63.9	Zawał mózgu, nieokreślony
+T28	Condition 1631 1660	opadnięcie powieki oka lewego
+N8	Reference T28 ICD10:H02.4	Opadnięcie powieki
+T29	Date 1663 1670	10.2018
+R10	Dat Arg1:T29 Arg2:T28	
+T30	Investigation 1675 1678	MRI
+T31	Investigation_result 1679 1745	opisywane podkorowe ogniska nachyniopochodne w lewej półkuli mózgu
+N9	Reference T31 ICD10:R90	Nieprawidłowe wyniki badań obrazowych ośrodkowego systemu nerwowego
+R11	Inv Arg1:T30 Arg2:T31	
+T32	Condition 1785 1801	przebytego udaru
+N10	Reference T32 ICD10:I63.9	Zawał mózgu, nieokreślony
+T33	Investigation 1819 1822	TEE
+T34	Investigation_result 1825 1841	poszukiwanie PFO
+A1	Source T34 Declared
+N11	Reference T34 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R12	Inv Arg1:T33 Arg2:T34	
+T35	Symptom 1843 1875	Zaburzenia obsesyjno-kompulsyjne
+N12	Reference T35 ICD10:F42	Zaburzenia obsesyjno-kompulsyjne
+T36	Date 1876 1889	od ok. 15 lat
+R13	Dat Arg1:T36 Arg2:T35	
+T37	Negation 1903 1909	Neguje
+T38	Symptom 1911 1923	zasłabnięcia
+T39	Symptom 1925 1933	omdlenia
+N13	Reference T39 ICD10:R55	Omdlenie i zapaść
+T40	Symptom 1935 1945	krwawienia
+T41	Symptom 1947 1960	czarne stolce
+N14	Reference T41 ICD10:K92.1	Stolce smołowate
+T42	Symptom 1962 1978	brunatne wymioty
+N15	Reference T42 ICD10:K92.0	Wymioty krwawe
+T43	Condition 1980 1996	chorobę wrzodową
+N16	Reference T43 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T44	Condition 1998 2000	HA
+N17	Reference T44 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T45	Condition 2002 2004	DM
+N18	Reference T45 ICD10:E14	Cukrzyca nieokreślona
+T46	Condition 2006 2017	zawał serca
+N19	Reference T46 ICD10:I25.2	Przebyty zawał serca
+R14	Neg Arg1:T37 Arg2:T46	
+R15	Neg Arg1:T37 Arg2:T45	
+R16	Neg Arg1:T37 Arg2:T44	
+R17	Neg Arg1:T37 Arg2:T43	
+R18	Neg Arg1:T37 Arg2:T42	
+R19	Neg Arg1:T37 Arg2:T41	
+R20	Neg Arg1:T37 Arg2:T40	
+R21	Neg Arg1:T37 Arg2:T39	
+R22	Neg Arg1:T37 Arg2:T38	
+T47	Treatment 2022 2039	Przebyte operacje
+T48	Treatment 2041 2066	operacyjne leczenie zatok
+A2	Status T48 Historical_Insignificant
+T49	Date 2067 2085	przed wieloma laty
+R23	Dat Arg1:T49 Arg2:T48	
+T50	Behaviour 2087 2102	Palenie tytoniu
+N20	Reference T50 ICD10:T65.2	Tytoń i nikotyna
+T51	Date 2109 2122	od ok. 17 lat
+R24	Dat Arg1:T51 Arg2:T50	
+T52	Behaviour 2124 2139	ok. 10/dziennie
+N21	Reference T52 ICD10:T65.2	Tytoń i nikotyna
+R25	Dat Arg1:T51 Arg2:T52	
+T53	Behaviour 2141 2152	Inne używki
+T54	Negation 2154 2157	nie
+R26	Neg Arg1:T54 Arg2:T53	
+T55	Condition 2159 2168	Uczulenia
+T56	Negation 2170 2173	nie
+R27	Neg Arg1:T56 Arg2:T55	
+T57	Condition 2202 2205	WZW
+N22	Reference T57 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T58	Condition 2212 2221	borelioza
+N23	Reference T58 ICD10:A69.2	Choroba z Lyme
+T59	Condition 2229 2232	tbc
+N24	Reference T59 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T60	Condition 2238 2242	odra
+N25	Reference T60 ICD10:B05	Odra
+T61	Treatment 2248 2267	szczepienie na odrę
+A3	Source T61 Declared
+T62	Negation 2244 2245	-
+R28	Neg Arg1:T62 Arg2:T60	
+T63	Negation 2234 2235	-
+R29	Neg Arg1:T63 Arg2:T59	
+T64	Negation 2224 2225	-
+R30	Neg Arg1:T64 Arg2:T58	
+T65	Negation 2207 2208	-
+R31	Neg Arg1:T65 Arg2:T57	
+T66	Behaviour 2299 2325	warunki mieszkaniowe dobre
+T67	Behaviour 2354 2389	obecnie na zasiłku rehabilitacyjnym
+T68	Drug 2422 2432	Cyclo3Fort
+T69	Drug_dose 2433 2437	2xdz
+R32	Drg Arg1:T68 Arg2:T69	
+T70	Drug 2439 2449	RevitaNerw
+T71	Drug_dose 2450 2470	1xdz (od ok. 16 dni)
+R33	Drg Arg1:T70 Arg2:T71	
+T72	Drug 2471 2494	lek na nerwicę natręctw
+T73	Negation 2497 2507	odstawiony
+R34	Neg Arg1:T73 Arg2:T72	
+T74	Date 2535 2546	w 2018 roku
+R35	Dat Arg1:T74 Arg2:T72	
+T75	Investigation 2639 2660	badania laboratoryjne
+T76	Investigation 2662 2666	ECHO
+T77	Investigation 2668 2671	TEE
+T78	Investigation 2673 2677	ABPM
+T79	Investigation 2679 2689	Holter EKG

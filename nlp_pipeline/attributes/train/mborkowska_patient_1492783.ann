@@ -1,0 +1,220 @@
+T1	Investigation 4148 4152	ECHO
+T2	Investigation 4154 4172	EKG metodą Holtera
+T3	Investigation 4174 4178	ABPM
+T4	Investigation 4180 4195	próba wysiłkowa
+T5	Drug 4047 4052	Acard
+T6	Drug 4026 4033	Polpril
+T7	Drug 4002 4013	Simvastatin
+T8	Drug 3982 3990	Vicebrol
+T9	Drug 3961 3968	Allupol
+T10	Drug 3935 3947	Tertensif SR
+T11	Drug 3916 3922	Lokren
+T12	Drug 3899 3904	Aldan
+T13	Drug_dose 3905 3915	5 mg 1-0-0
+R1	Drg Arg1:T12 Arg2:T13	
+T14	Drug_dose 3923 3934	20 mg 1-0-0
+R2	Drg Arg1:T11 Arg2:T14	
+T15	Drug_dose 3948 3960	1,5 mg 1-0-0
+R3	Drg Arg1:T10 Arg2:T15	
+T16	Drug_dose 3969 3981	100 mg 1-0-0
+R4	Drg Arg1:T9 Arg2:T16	
+T17	Drug_dose 3991 4001	5 mg 1-0-1
+R5	Drg Arg1:T8 Arg2:T17	
+T18	Drug_dose 4014 4025	10 mg 0-0-1
+R6	Drg Arg1:T7 Arg2:T18	
+T19	Drug_dose 4034 4046	2,5 mg 0-0-1
+R7	Drg Arg1:T6 Arg2:T19	
+T20	Drug_dose 4053 4064	75 mg 0-0-1
+R8	Drg Arg1:T5 Arg2:T20	
+T21	Behaviour 3840 3866	warunki mieszkaniowe dobre
+T22	Condition 3761 3764	WZW
+N1	Reference T22 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T23	Condition 3771 3780	borelioza
+N2	Reference T23 ICD10:A69.2	Choroba z Lyme
+T24	Condition 3786 3789	tbc
+N3	Reference T24 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T25	Condition 3795 3799	odra
+N4	Reference T25 ICD10:B05	Odra
+T26	Behaviour 3805 3819	kontakt z odrą
+N5	Reference T26 ICD10:B05	Odra
+T27	Negation 3820 3823	(-)
+R9	Neg Arg1:T27 Arg2:T26	
+T28	Negation 3800 3804	(-),
+R10	Neg Arg1:T28 Arg2:T25	
+T29	Negation 3790 3794	(-),
+R11	Neg Arg1:T29 Arg2:T24	
+T30	Negation 3781 3785	(-),
+R12	Neg Arg1:T30 Arg2:T23	
+T31	Negation 3765 3768	(-)
+R13	Neg Arg1:T31 Arg2:T22	
+T32	Drug 3725 3733	Voltaren
+T33	Condition 3714 3723	Uczulenia
+N6	Reference T33 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R14	Alg Arg1:T33 Arg2:T32	
+T34	Behaviour 3693 3713	alkohol okazjonalnie
+N7	Reference T34 ICD10:Z72.1	Używanie alkoholu
+T35	Negation 3673 3679	neguje
+T36	Behaviour 3656 3672	Palenie tytoniu:
+N8	Reference T36 ICD10:T65.2	Tytoń i nikotyna
+R15	Neg Arg1:T35 Arg2:T36	
+T37	Treatment 3600 3618	usuniecie migdałów
+T38	Date 3620 3624	18rz
+R16	Dat Arg1:T38 Arg2:T37	
+T39	Treatment 3627 3640	appendectomia
+A1	Status T37 Historical_Insignificant
+T40	Date 3641 3655	w dzieciństwie
+R17	Dat Arg1:T40 Arg2:T39	
+T41	Negation 3409 3415	Neguje
+T42	Symptom 3417 3429	zasłabnięcia
+N9	Reference T42 ICD10:R55	Omdlenie i zapaść
+T43	Symptom 3431 3439	omdlenia
+N10	Reference T43 ICD10:R55	Omdlenie i zapaść
+T44	Symptom 3441 3451	krwawienia
+N11	Reference T44 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T45	Symptom 3453 3466	czarne stolce
+N12	Reference T45 ICD10:K92.1	Stolce smołowate
+T46	Symptom 3468 3484	brunatne wymioty
+N13	Reference T46 ICD10:K92.0	Wymioty krwawe
+T47	Condition 3486 3502	chorobę wrzodową
+N14	Reference T47 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T48	Symptom 3504 3518	duszność nocną
+N15	Reference T48 ICD10:I50.1	Niewydolność serca lewokomorowa
+T49	Symptom 3520 3535	obrzęki podudzi
+N16	Reference T49 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T50	Symptom 3537 3561	bóle w klatce piersiowej
+N17	Reference T50 ICD10:R07.3	Inne bóle w klatce piersiowej
+T51	Symptom 3563 3578	kołatania serca
+N18	Reference T51 ICD10:R00.2	Kołatanie serca
+R18	Neg Arg1:T41 Arg2:T42	
+R19	Neg Arg1:T41 Arg2:T43	
+R20	Neg Arg1:T41 Arg2:T44	
+R21	Neg Arg1:T41 Arg2:T45	
+R22	Neg Arg1:T41 Arg2:T46	
+R23	Neg Arg1:T41 Arg2:T47	
+R24	Neg Arg1:T41 Arg2:T48	
+R25	Neg Arg1:T41 Arg2:T49	
+R26	Neg Arg1:T41 Arg2:T50	
+R27	Neg Arg1:T41 Arg2:T51	
+T52	Drug 2535 2543	Vicebrol
+T53	Drug_dose 2544 2598	5mg 1 tabletka rano i wieczorem - wg zaleceń neurologa
+R28	Drg Arg1:T52 Arg2:T53	
+T54	Drug 2505 2512	Allupol
+T55	Drug_dose 2513 2534	100mg 1 tabletka rano
+R29	Drg Arg1:T54 Arg2:T55	
+T56	Drug 2472 2478	Atoris
+T57	Drug_dose 2479 2504	20mg 1 tabletka wieczorem
+R30	Drg Arg1:T56 Arg2:T57	
+T58	Drug 2436 2448	Tertensif SR
+T59	Drug_dose 2449 2471	1,5 mg 1 tabletka rano
+R31	Drg Arg1:T58 Arg2:T59	
+T60	Drug 2405 2410	Aldan
+T61	Drug_dose 2411 2435	5mg 1 tabletka wieczorem
+R32	Drg Arg1:T60 Arg2:T61	
+T62	Drug 2370 2377	Polpril
+T63	Drug 2341 2349	Bisocard
+T64	Drug 2286 2291	Acard
+T65	Drug_dose 2292 2340	75mg 1 tabletka wieczorem - wg zaleceń neurologa
+R33	Drg Arg1:T64 Arg2:T65	
+T66	Drug_dose 2350 2369	5mg 1 tabletka rano
+R34	Drg Arg1:T63 Arg2:T66	
+T67	Drug_dose 2378 2404	2,5mg 1 tabletka wieczorem
+R35	Drg Arg1:T62 Arg2:T67	
+T68	Investigation 2201 2247	samokontrola ciśnienia tętniczego krwi i tętna
+T69	Behaviour 2119 2187	Wskazane podjęcie systematycznej, umiarkowanej aktywności fizycznej.
+T70	Behaviour 2086 2114	Wskazana redukcja masy ciała
+T71	Behaviour 1979 2082	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych.
+T72	Investigation 1856 1867	badania EKG
+T73	Date 1868 1880	za 1 tydzień
+R36	Dat Arg1:T73 Arg2:T72	
+T74	Drug 1947 1958	bisoprololu
+T75	Investigation 1712 1795	kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T76	Date 1807 1822	za 2-3 tygodnie
+R37	Dat Arg1:T76 Arg2:T75	
+T77	Condition 438 454	Arytmia komorowa
+N19	Reference T77 ICD10:I47.2	Częstoskurcz komorowy
+T78	Condition 457 468	nadkomorowa
+N20	Reference T78 ICD10:I47.1	Częstoskurcz nadkomorowy
+T79	Condition 470 491	Nadciśnienie tętnicze
+N21	Reference T79 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T80	Condition 493 520	Choroba niedokrwienna serca
+N22	Reference T80 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T81	Condition 522 560	Niewydolność serca w II klasie wg NYHA
+N23	Reference T81 ICD10:I50	Niewydolność serca
+T82	Condition 563 590	PCHN w stadium G3b wg KDIGO
+N24	Reference T82 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T83	Condition 623 636	Dna moczanowa
+N25	Reference T83 ICD10:M10	Dna moczanowa
+T84	Condition 650 657	Otyłość
+N26	Reference T84 ICD10:E66	Otyłość
+T85	Condition 659 692	Choroba zwyrodnieniowa kręgosłupa
+N27	Reference T85 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T86	Condition 695 713	stawów kolanowych.
+N28	Reference T86 ICD10:M17	Gonartroza [choroba zwyrodnieniowa stawu kolanowego]
+T87	Condition 740 757	Podejrzenie POCHP
+A2	Source T87 Declared
+N29	Reference T87 ICD10:J44.9	Przewlekła obturacyjna choroba płuc, nieokreślona
+T88	Condition 714 739	Łagodny rozrost prostaty.
+N30	Reference T88 ICD10:N40	Rozrost gruczołu krokowego
+T89	Condition 592 621	Torbiel korowa w nerce prawej
+N31	Reference T89 ICD10:N28.1	Torbiel nerki, nabyta
+T90	Condition 975 996	Nadciśnienie tętnicze
+N32	Reference T90 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T91	Condition 998 1046	Arytmia komorowa pod postacią poj. ExV i par ExV
+N33	Reference T91 ICD10:I47.2	Częstoskurcz komorowy
+T92	Condition 1048 1075	Łagodna arytmia nadkomorowa
+N34	Reference T92 ICD10:I47.1	Częstoskurcz nadkomorowy
+T93	Symptom 1077 1112	Omdlenia przy zmianie pozycji głowy
+N35	Reference T93 ICD10:R55	Omdlenie i zapaść
+T94	Condition 1126 1173	Przewlekła choroba nerek w stadium G3b wg KDIGO
+N36	Reference T94 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T95	Condition 1175 1205	Torbiel korowa w nerce prawej.
+N37	Reference T95 ICD10:N28.1	Torbiel nerki, nabyta
+T96	Condition 3243 3272	Torbiel korowa w nerce prawej
+N38	Reference T96 ICD10:N28.1	Torbiel nerki, nabyta
+T97	Condition 3214 3242	PCHN w stadium G3b wg KDIGO.
+N39	Reference T97 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T98	Condition 3173 3211	Niewydolność serca w II klasie wg NYHA
+N40	Reference T98 ICD10:I50	Niewydolność serca
+T99	Condition 3144 3171	Choroba niedokrwienna serca
+N41	Reference T99 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T100	Condition 3121 3142	Nadciśnienie tętnicze
+N42	Reference T100 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T101	Condition 1206 1219	Dna moczanowa
+N43	Reference T101 ICD10:M10	Dna moczanowa
+T102	Condition 3274 3287	Dna moczanowa
+N44	Reference T102 ICD10:M10	Dna moczanowa
+T103	Condition 3301 3308	Otyłość
+N45	Reference T103 ICD10:E66	Otyłość
+T104	Condition 3310 3343	Choroba zwyrodnieniowa kręgosłupa
+N46	Reference T104 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T105	Condition 3346 3363	stawów kolanowych
+N47	Reference T105 ICD10:M17	Gonartroza [choroba zwyrodnieniowa stawu kolanowego]
+T106	Condition 3365 3389	Łagodny rozrost prostaty
+N48	Reference T106 ICD10:N40	Rozrost gruczołu krokowego
+T107	Condition 3391 3408	Podejrzenie POCHP
+N49	Reference T107 ICD10:J44.9	Przewlekła obturacyjna choroba płuc, nieokreślona
+T108	Symptom 3044 3060	2 epizody omdleń
+N50	Reference T108 ICD10:R55	Omdlenie i zapaść
+T109	Date 3061 3071	6 msc temu
+R38	Dat Arg1:T109 Arg2:T108	
+T110	Condition 2785 2820	podejrzeniem migotania przedsionków
+A3	Source T110 Declared
+N51	Reference T110 ICD10:I48	Migotanie i trzepotanie przedsionków
+T111	Investigation 2824 2834	holter EKG
+T112	Date 2851 2861	07/06/2019
+R39	Dat Arg1:T112 Arg2:T111	
+T113	Investigation_result 2873 3001	arytmię komorową (ExV poj. 461/d) oraz nasiloną nadkomorową (2039 ExSV/d , w tym TSV/FA??, salwy, pary, trigeminia nadkomorowa).
+R40	Inv Arg1:T111 Arg2:T113	
+T114	Condition 1323 1341	Podejrzenie POChP.
+N52	Reference T114 ICD10:J44.9	Przewlekła obturacyjna choroba płuc, nieokreślona
+T115	Condition 1297 1321	Łagodny rozrost prostaty
+N53	Reference T115 ICD10:N40	Rozrost gruczołu krokowego
+T116	Condition 1242 1275	Choroba zwyrodnieniowa kręgosłupa
+N54	Reference T116 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T117	Condition 1278 1295	stawów kolanowych
+N55	Reference T117 ICD10:M17	Gonartroza [choroba zwyrodnieniowa stawu kolanowego]
+T118	Condition 1233 1240	Otyłość
+N56	Reference T118 ICD10:E66	Otyłość
+T119	Investigation 1612 1653	oznaczenia witaminy B12 i kwasu foliowego
+T120	Date 1683 1698	za 2-3 tygodnie
+R41	Dat Arg1:T120 Arg2:T119	

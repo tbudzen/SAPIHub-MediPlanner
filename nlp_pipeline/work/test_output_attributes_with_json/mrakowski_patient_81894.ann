@@ -1,0 +1,85 @@
+T1	Condition 447 468	Nadciśnienie tętnicze
+T2	Condition 661 702	Łagodna niedomykalność zastawki mitralnej
+T3	Condition 705 717	trójdzielnej
+T4	Symptom 719 734	Kołatania serca
+T5	Condition 913 936	nadciśnieniem tętniczym
+T6	Symptom 969 1019	ograniczenia tolerancji wysiłku do I klasy wg NYHA
+T7	Date 1020 1026	od lat
+T8	Symptom 1032 1045	kołatań serca
+T9	Negation 1094 1100	Neguje
+T10	Symptom 1101 1113	zasłabnięcia
+T11	Symptom 1115 1124	duszności
+T12	Symptom 1126 1157	typowe bóle w klatce piersiowej
+T13	Treatment 1159 1176	Przebyte operacje
+T14	Negation 1179 1185	neguje
+T15	Condition 1213 1216	WZW
+troby
+T16	Condition 1225 1234	borelioza
+T17	Condition 1242 1250	gruźlica
+T18	Condition 1256 1260	odra
+T19	Negation 1262 1263	-
+T20	Negation 1252 1253	-
+T21	Negation 1237 1238	-
+T22	Negation 1219 1220	-
+T23	Condition 1291 1301	udar mózgu
+T24	Date 1302 1316	w wieku 60 lat
+T25	Behaviour 1317 1332	Palenie tytoniu
+T26	Negation 1334 1337	nie
+T27	Date 1345 1368	ostatni raz 20 lat temu
+T28	Behaviour 1382 1404	alkohol - okazjonalnie
+T29	Condition 1405 1414	Uczulenia
+T30	Negation 1416 1422	neguje
+T31	Behaviour 1439 1465	warunki mieszkaniowe dobre
+T32	Drug 1491 1504	Co-Prestarium
+T33	Drug 1515 1521	Concor
+T34	Drug 1532 1539	Nolpaza
+T35	Drug_dose 1505 1514	5+5 1-0-0
+T36	Drug_dose 1522 1531	5mg 1-0-0
+T37	Drug_dose 1540 1550	20mg 1-0-0
+T38	Condition 1265 1280	Wywiad rodzinny
+T39	Behaviour 1369 1380	Inne używki
+T40	Treatment 937 967	kontrolowanym farmakologicznie
+zane ze stylem życia
+N1	Reference T1 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N2	Reference T2 ICD10:I34.0	NiedomykalnoÅÄ zastawki mitralnej
+N3	Reference T3 ICD10:I07.1	NiedomykalnoÅÄ zastawki trÃ³jdzielnej
+N4	Reference T4 ICD10:R00.2	KoÅatanie serca
+N5	Reference T5 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N6	Reference T6 ICD10:R53	ZÅe samopoczucie i zmÄczenie
+N7	Reference T8 ICD10:R00.2	KoÅatanie serca
+N8	Reference T10 ICD10:R55	Omdlenie i zapaÅÄ
+N9	Reference T11 ICD10:R06.0	DusznoÅÄ
+N10	Reference T12 ICD10:R07.3	
+N11	Reference T13 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N12	Reference T15 ICD10:B19	NieokreÅlone wirusowe zapalenie wÄtroby
+N13	Reference T16 ICD10:A69.2	Choroba z Lyme
+N14	Reference T17 ICD10:A15	GruÅºlica ukÅadu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N15	Reference T23 ICD10:I64	Udar mÃ³zgu, nieokreÅlony jako krwotoczny lub zawaÅowy
+N16	Reference T25 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N17	Reference T28 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N18	Reference T29 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N19	Reference T39 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+R104	Neg Arg1:T30 Arg2:T29
+R116	Drg Arg1:T32 Arg2:T35
+R120	Drg Arg1:T33 Arg2:T36
+R121	Drg Arg1:T33 Arg2:T37
+R123	Drg Arg1:T34 Arg2:T36
+R124	Drg Arg1:T34 Arg2:T37
+R129	Dat Arg1:T24 Arg2:T23
+R13	Neg Arg1:T14 Arg2:T13
+R132	Dat Arg1:T24 Arg2:T25
+R147	Dat Arg1:T27 Arg2:T28
+R149	Dat Arg1:T27 Arg2:T39
+R17	Neg Arg1:T19 Arg2:T18
+R20	Neg Arg1:T19 Arg2:T38
+R3	Neg Arg1:T9 Arg2:T10
+R33	Neg Arg1:T20 Arg2:T17
+R34	Neg Arg1:T20 Arg2:T18
+R49	Neg Arg1:T21 Arg2:T16
+R6	Dat Arg1:T7 Arg2:T6
+R65	Neg Arg1:T22 Arg2:T15
+R7	Dat Arg1:T7 Arg2:T8
+R89	Neg Arg1:T26 Arg2:T25
+A1	Status T23 Family
+A2	Status T24 Family
+A3	Status T38 Family

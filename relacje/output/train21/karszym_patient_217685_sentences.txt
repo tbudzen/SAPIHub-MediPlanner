@@ -1,0 +1,646 @@
+allRelations          : 16
+oks                   : 13
+isRedundantAndRemoveds: 3
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 0
+GOOD / BAD            : 16 / 0
+Sentence 0:
+------------------------------------------------
+Wiek: 16 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zastosowane leczenie
+
+
+
+Sentence 3:
+------------------------------------------------
+BETO ZK, Haloperidol, Acard, Essentiale Cefazolin, Perfalgan, Fragmin, Enarenal, Sildenafil
+------------------------------------------------
+
+
+
+Sentence 4:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 5:
+Acard 150mg p.o. 1 x dziennie
+Enarenal 5mg p.o. 1 x dziennie
+
+R1	Drg Arg1:T10 Arg2:T21 << OK >>	Acard -> 150mg p.o. 1 x dziennie  <RANK: 3> <info: start[540, 546] <type: RIGHT>>
+R2	Drg Arg1:T10 Arg2:T22 <<REDUNDANT!!!REMOVED>>	Acard -> 5mg p.o. 1 x dziennie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[540, 579] <type: RIGHT>>
+R3	Drg Arg1:T11 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Enarenal -> 150mg p.o. 1 x dziennie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[570, 546] <type: LEFT>>
+R4	Drg Arg1:T11 Arg2:T22 << OK >>	Enarenal -> 5mg p.o. 1 x dziennie  <RANK: 3> <info: start[570, 579] <type: RIGHT>>
+
+
+Sentence 6:
+Sildenafil 100mg p.o. 2 x dziennie
+
+R5	Drg Arg1:T12 Arg2:T23 << OK >>	Sildenafil -> 100mg p.o. 2 x dziennie  <RANK: 3> <info: start[601, 612] <type: RIGHT>>
+
+
+Sentence 7:
+Essentiale max 1 kaps p.o. 1 x dziennie
+Kontrola w poradni kardiologicznej za 3 miesiące (konieczne wcześniejsze umówienie terminu).
+
+R6	Drg Arg1:T13 Arg2:T24 << OK >>	Essentiale max -> 1 kaps p.o. 1 x dziennie  <RANK: 3> <info: start[636, 651] <type: RIGHT>>
+R7	Dat Arg1:T15 Arg2:T14 << OK >>	za 3 miesiące -> Kontrola w poradni kardiologicznej  <RANK: 3> <info: start[711, 676] <type: LEFT>>
+R8	Dat Arg1:T15 Arg2:T13 <<REDUNDANT!!!REMOVED>>	za 3 miesiące -> Essentiale max <:REMOVED other second tag between (left):> <RANK: 0> <info: start[711, 636] <type: LEFT>>
+
+
+Sentence 8:
+Dalsza opieka w poradni hepatologicznej.
+
+
+Sentence 9:
+Pacjent po operacji met.
+
+
+Sentence 10:
+Fontana wymaga wykonania szczegółowej diagnostyki zwłóknienia wątroby, zalecane jest wykonanie badania FIBRO-SCAN lub elastografii wątroby.
+
+
+
+Sentence 11:
+------------------------------------------------
+
+
+
+Sentence 12:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 13:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona złożona wada serca pod postacią zarośnięcia zastawki dwudzielnej i wspólnej komory z przełożeniem wielkich pni tętniczych oraz zwężenia tętnicy płucnej.
+   
+
+
+Sentence 14:
+Dextrokardia.
+   
+
+
+Sentence 15:
+Stan po zespoleniu systemowo - płucnym prawostronnym (07.03.2003r)
+   
+R9	Dat Arg1:T31 Arg2:T30 << OK >>	07.03.2003r -> zespoleniu systemowo - płucnym prawostronnym  <RANK: 3> <info: start[1428, 1382] <type: LEFT>>
+
+
+Sentence 16:
+Stan po zespoleniu typu dwukierunkowy Glenn (20.01.2004r)
+   
+R10	Dat Arg1:T33 Arg2:T32 << OK >>	20.01.2004r -> zespoleniu typu dwukierunkowy Glenn  <RANK: 3> <info: start[1489, 1452] <type: LEFT>>
+
+
+Sentence 17:
+Stan po operacji metodą Fontana (18.01.2006r)
+   
+R11	Dat Arg1:T35 Arg2:T34 << OK >>	18.01.2006r -> operacji metodą Fontana  <RANK: 3> <info: start[1538, 1513] <type: LEFT>>
+
+
+Sentence 18:
+Zwężenie zespolenia Glenna oraz obecność przetok żylno - żylnych w lewym kącie żylnym.
+   
+
+
+Sentence 19:
+Cewnikowanie serca z angioplastyką zwężenia zespolenia Glenna, zwężenia tunelu zewnątrzprzedsionkowego z implantacją stentu CP 4528 COVERED 18 x 45 mm z doprężeniem stentu śr. 20 x 40 mm oraz zamknięciu przetoki żylnej zestawem Amplatzer vascular Plug IV 8 mm (26.06.2017r)
+   
+R12	Dat Arg1:T41 Arg2:T38 << OK >>	26.06.2017r -> angioplastyką zwężenia zespolenia Glenna  <RANK: 2> <info: start[1905, 1665] <type: LEFT>>
+R13	Dat Arg1:T41 Arg2:T39 << OK >>	26.06.2017r -> zwężenia tunelu zewnątrzprzedsionkowego z implantacją stentu CP 4528 COVERED 18 x 45 mm z doprężeniem stentu śr. 20 x 40 mm  <RANK: 2> <info: start[1905, 1707] <type: LEFT>>
+R14	Dat Arg1:T41 Arg2:T40 << OK >>	26.06.2017r -> zamknięciu przetoki żylnej zestawem Amplatzer vascular Plug IV 8 mm  <RANK: 3> <info: start[1905, 1836] <type: LEFT>>
+R15	Dat Arg1:T41 Arg2:T45 << OK >>	26.06.2017r -> Cewnikowanie serca  <RANK: 2> <info: start[1905, 1644] <type: LEFT>>
+
+
+Sentence 20:
+Niedrożność odcinka proksymalnego żyły głównej górnej prawej w odcinku dystalnym.
+   
+
+
+Sentence 21:
+Stan po cewnikowaniu serca 16.08.2019r.
+
+R16	Dat Arg1:T44 Arg2:T43 << OK >>	16.08.2019r -> cewnikowaniu serca  <RANK: 3> <info: start[2033, 2014] <type: LEFT>>
+
+
+Sentence 22:
+------------------------------------------------
+
+
+
+Sentence 23:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 24:
+Próba zgodności (kontrola grupy krwi biorcy)
+    
+
+
+Sentence 25:
+NR-KS:K-19/2712
+    KODKRESKOWYPROBKI:K-19/2712
+    
+
+
+Sentence 26:
+GR:O
+    RH:+ (dodatni)
+    
+
+
+Sentence 27:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+    
+
+
+Sentence 28:
+DONACJA:
+
+
+Sentence 29:
+Z510819001298
+    GR:O
+    RH:+ (dodatni)
+    WYNIK-D:zgodna
+
+
+
+Sentence 30:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.75[10^3/ul]
+    
+
+
+Sentence 31:
+RBC Krwinki czerwone:6.68[10^6/ul]
+    
+
+
+Sentence 32:
+HGB Hemoglobina:18.5[g/dl]
+    
+
+
+Sentence 33:
+HCT Hematokryt:53.2[%]
+    
+
+
+Sentence 34:
+MCV wskaźnik czerwonokrw:79.6[fl]
+    
+
+
+Sentence 35:
+MCH wskaźnik czerwonokrw:27.7[pg]
+    
+
+
+Sentence 36:
+MCHC wskaźnik czerwonokr:34.8[g/dl]
+    
+
+
+Sentence 37:
+PLT z morfologii:131[10^3/ul]
+    
+
+
+Sentence 38:
+RDW-SD:40.1[fl]
+    
+
+
+Sentence 39:
+RDW-CV:14.5[%]
+    PDW:20.3[fl]
+    MPV:13.0[fl]
+    
+
+
+Sentence 40:
+P-LCR:49.5[%]
+    
+
+
+Sentence 41:
+PCT (hematokryt płytkowy:0.17[%]
+    
+
+
+Sentence 42:
+NEUTR# wartość bezwzględ:4.31[10^3/ul]
+    
+
+
+Sentence 43:
+NEUTR%:75.0[%]
+    
+
+
+Sentence 44:
+LYMH# wartość bezwzględn:0.92[10^3/ul]
+    
+
+
+Sentence 45:
+LYMPH%:16.0[%]
+    
+
+
+Sentence 46:
+MONO# wartość bezwzględn:0.46[10^3/ul]
+    MONO%:8.0[%]
+    
+
+
+Sentence 47:
+EO# wartość bezwzględna:0.04[10^3/ul]
+    
+
+
+Sentence 48:
+EO%:0.7[%]
+    BASO# wartość bezwzględn:0.02[10^3/ul]
+    
+
+
+Sentence 49:
+BASO%:0.3[%]
+    
+
+
+Sentence 50:
+NRBC %:0.0[%]
+    
+
+
+Sentence 51:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 52:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:38.6[sek]
+
+
+
+Sentence 53:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 54:
+Czas protrombinowy:13.7[sek]
+    
+
+
+Sentence 55:
+Wskaźnik PT:80.3[%]
+    
+
+
+Sentence 56:
+INR:1.24
+Czas trombinowy TT: Czas trombinowy TT:13.3[sek]
+
+
+
+Sentence 57:
+Fibrynogen: Fibrynogen:3.45[g/L]
+
+
+
+Sentence 58:
+D-dimer - test ilościowy: D-dimer - test ilościowy:187[ng/ml]
+
+
+
+Sentence 59:
+Płytki krwi z THEX: Płytki krwi:115[10^3/ul]
+
+
+
+Sentence 60:
+Badanie ogólne moczu
+    
+
+
+Sentence 61:
+barwa:żółty[ ]
+    
+
+
+Sentence 62:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 63:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 64:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 65:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 66:
+ciężar właściwy:1.018[ ]
+    
+
+
+Sentence 67:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 68:
+pH:5.0[ ]
+    
+
+
+Sentence 69:
+białko:nieobecne[ ]
+    
+
+
+Sentence 70:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 71:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 72:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 73:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 74:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 75:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 76:
+leukocyty:7 /ul[ul]
+    erytrocyty świeże:1 /ul[ul]
+    śluz:dość liczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 77:
+TSH: TSH:2.89[uIU/ml]
+
+
+
+Sentence 78:
+FT3: FT3:3.72[pg/ml]
+
+
+
+Sentence 79:
+FT4: FT4:1.49[ng/dl]
+
+
+
+Sentence 80:
+Witamina D 25-OH: Witamina D 25-OH:26.0[ng/ml]
+
+
+
+Sentence 81:
+AFP: AFP:1.03[IU/ml]
+
+
+
+Sentence 82:
+ALAT: ALAT:50[U/L]
+
+
+
+Sentence 83:
+Albumina: Albumina:4.8[g/dl]
+
+
+
+Sentence 84:
+ASPAT: ASPAT:43[U/L]
+
+
+
+Sentence 85:
+Białko całkowite w surowicy (TP): Białko całkowite w surow:8.6[g/dl]
+
+
+
+Sentence 86:
+Bilirubina całkowita (TBil): Bilirubina całkowita:2.21[mg/dl]
+
+
+
+Sentence 87:
+Cholesterol całkowity: Cholesterol całkowity:121[mg/dl]
+
+
+
+Sentence 88:
+Cholesterol HDL: Cholesterol HDL:49[mg/dl]
+
+
+
+Sentence 89:
+Cholestrol LDL (direct): Cholestrol LDL:61[mg/dl]
+
+
+
+Sentence 90:
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.66[mg/dl]
+
+
+
+Sentence 91:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 92:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 93:
+Fosfataza alkaliczna (ALP): Fosfataza alkaliczna:158[U/L]
+
+
+
+Sentence 94:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:68[U/L]
+
+
+
+Sentence 95:
+Kreatynina + GFR
+    
+
+
+Sentence 96:
+Kreatynina w surowicy:1.02[mg/dl]
+    
+
+
+Sentence 97:
+eGFR stand. wg Schwartza:126.3[ml/min/1,73 m^2]
+    
+
+
+Sentence 98:
+eGFR zmod.
+
+
+Sentence 99:
+wg Schwartza:74.5[ml/min/1,73 m^2]
+    wzrost:184[cm]
+
+
+
+Sentence 100:
+Mleczany (LAC): Mleczany:26.4[mg/dl]
+
+
+
+Sentence 101:
+Magnez: Magnez:0.81[mmol/L]
+
+
+
+Sentence 102:
+Mocznik: Mocznik:33[mg/dl]
+
+
+
+Sentence 103:
+ASO: ASO:59[IU/ml]
+
+
+
+Sentence 104:
+AAT w kale: AAT w kale:SYNEVO
+
+
+
+Sentence 105:
+NT-proBNP surowica: NT-proBNP w surowicy:35[pg/ml]
+
+
+
+Sentence 106:
+------------------------------------------------
+
+
+
+Sentence 107:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 108:
+Q20.3
+Q24.0
+Q20.4
+Q23.2
+Z95.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 109:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 110:
+I81
+G
+I89
+K01
+M87
+N45
+K03
+88.776
+L07
+88.777
+I09
+C55
+O91
+G11
+I77
+I99
+L31
+
+
+
+Sentence 111:
+L11
+I17
+N11
+I19
+O35
+M37
+
+
+
+Sentence 112:
+N13
+U75
+88.761
+
+
+
+Sentence 113:
+------------------------------------------------
+
+

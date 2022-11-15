@@ -1,0 +1,138 @@
+T1	Investigation 3077 3081	ECHO
+T2	Investigation 3083 3101	EKG metodą Holtera
+T3	Investigation 3103 3107	ABPM
+T4	Investigation 3109 3124	próba wysiłkowa
+T5	Drug 2961 2971	PoloMag B6
+T6	Drug_dose 2972 2984	1 tabl. rano
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 2937 2947	Novocardia
+T8	Drug_dose 2948 2960	1 tabl. rano
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 2905 2915	Concor Cor
+T10	Drug_dose 2916 2936	1.25 mg 1 tabl. rano
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Behaviour 2848 2874	warunki mieszkaniowe dobre
+T12	Condition 2803 2807	odra
+N1	Reference T12 ICD10:B05	Odra
+T13	Behaviour 2813 2827	kontakt z odrą
+N2	Reference T13 ICD10:B05	Odra
+T14	Condition 2779 2788	borelioza
+N3	Reference T14 ICD10:A69.2	Choroba z Lyme
+T15	Condition 2769 2772	WZW
+N4	Reference T15 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T16	Negation 2773 2776	(-)
+R4	Neg Arg1:T16 Arg2:T15	
+T17	Negation 2789 2793	(-),
+R5	Neg Arg1:T17 Arg2:T14	
+T18	Negation 2798 2802	(-),
+T19	Negation 2808 2812	(-),
+T20	Negation 2828 2831	(-)
+T21	Condition 2794 2797	tbc
+N5	Reference T21 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+R6	Neg Arg1:T18 Arg2:T21	
+R7	Neg Arg1:T19 Arg2:T12	
+R8	Neg Arg1:T20 Arg2:T13	
+T22	Negation 2737 2740	nie
+T23	Negation 2721 2724	nie
+T24	Negation 2704 2707	nie
+T25	Behaviour 2687 2702	Palenie tytoniu
+N6	Reference T25 ICD10:T65.2	Tytoń i nikotyna
+T26	Behaviour 2708 2719	Inne używki
+R9	Neg Arg1:T24 Arg2:T25	
+R10	Neg Arg1:T23 Arg2:T26	
+T27	Condition 2726 2735	Uczulenia
+N7	Reference T27 ICD10:T78.4	Alergia, nieokreślona
+R11	Neg Arg1:T22 Arg2:T27	
+T28	Drug 874 884	Concor Cor
+T29	Drug_dose 885 904	2.5 mg 1 tabl. rano
+R12	Drg Arg1:T28 Arg2:T29	
+T30	Drug 912 922	Novocardia
+T31	Drug_dose 923 935	1 tabl. rano
+R13	Drg Arg1:T30 Arg2:T31	
+T32	Drug 943 953	PoloMag B6
+T33	Drug_dose 954 966	1 tabl. rano
+R14	Drg Arg1:T32 Arg2:T33	
+T34	Condition 1184 1227	Łagodne zastawkowe zwężenie tętnicy płucnej
+N8	Reference T34 ICD10:I37.1	
+T35	Condition 1229 1274	Łagodna niedomykalność zastawki trójdzielnej.
+N9	Reference T35 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T36	Condition 1283 1343	zamknięciu ubytku w przegrodzie międzyprzedsionkowej zapinką
+N10	Reference T36 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T37	Date 1345 1349	2005
+R15	Dat Arg1:T37 Arg2:T36	
+T38	Symptom 1352 1363	Bóle głowy.
+N11	Reference T38 ICD10:G44	Inne zespoły bólu głowy
+T39	Condition 1445 1486	niedowładem prawostronnym kończyny górnej
+N12	Reference T39 ICD10:G83.2	Porażenie jednej kończyny górnej
+T40	Date 1488 1492	2000
+R16	Dat Arg1:T40 Arg2:T39	
+T41	Treatment 1372 1442	operacji splotu barkowego prawego z powodu uszkodzenia okołoporodowego
+R17	Dat Arg1:T40 Arg2:T41	
+T42	Symptom 2546 2558	zasłabnięcia
+N13	Reference T42 ICD10:R55	Omdlenie i zapaść
+T43	Symptom 2560 2568	omdlenia
+N14	Reference T43 ICD10:R55	Omdlenie i zapaść
+T44	Symptom 2570 2580	krwawienia
+N15	Reference T44 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T45	Symptom 2582 2595	czarne stolce
+N16	Reference T45 ICD10:K92.1	Stolce smołowate
+T46	Symptom 2597 2613	brunatne wymioty
+N17	Reference T46 ICD10:K92.0	Wymioty krwawe
+T47	Condition 2615 2631	chorobę wrzodową
+N18	Reference T47 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T48	Symptom 2633 2647	duszność nocną
+N19	Reference T48 ICD10:I50.1	Niewydolność serca lewokomorowa
+T49	Condition 2650 2652	HA
+N20	Reference T49 ICD10:I10	
+T50	Condition 2654 2656	DM
+N21	Reference T50 ICD10:E13	Inne określone postacie cukrzycy
+T51	Condition 2658 2663	ciążę
+N22	Reference T51 ICD10:Z32.1	Ciąża potwierdzona
+T52	Negation 2538 2544	Neguje
+R18	Neg Arg1:T52 Arg2:T42	
+R19	Neg Arg1:T52 Arg2:T43	
+R20	Neg Arg1:T52 Arg2:T44	
+R21	Neg Arg1:T52 Arg2:T45	
+R22	Neg Arg1:T52 Arg2:T46	
+R23	Neg Arg1:T52 Arg2:T47	
+R24	Neg Arg1:T52 Arg2:T48	
+R25	Neg Arg1:T52 Arg2:T49	
+R26	Neg Arg1:T52 Arg2:T50	
+R27	Neg Arg1:T52 Arg2:T51	
+T53	Condition 490 501	bólów głowy
+N23	Reference T53 ICD10:G44	Inne zespoły bólu głowy
+T54	Investigation 621 630	MRI głowy
+T55	Investigation 692 721	kontrola ciśnienia tętniczego
+T56	Investigation 738 758	kontrola lipidogramu
+T57	Behaviour 766 776	dieta DASH
+T58	Behaviour 790 828	umiarkowany, aerobowy wysiłek fizyczny
+T59	Condition 1638 1684	łagodnym zastawkowym zwężeniem tętnicy płucnej
+N24	Reference T59 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T60	Treatment 1689 1764	zamknięciu ubytku w przegrodzie międzyprzedsionkowej zapinką Amplatzer 16mm
+N25	Reference T60 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T61	Date 1766 1770	2005
+R28	Dat Arg1:T61 Arg2:T60	
+T62	Treatment 1871 1898	przezskórnej balonoplastyki
+T63	Negation 1858 1870	nie wykonano
+R29	Neg Arg1:T63 Arg2:T62	
+T64	Symptom 1943 1979	czasem uczucia nierównej pracy serca
+T65	Symptom 2003 2054	napadowa duszność bez związku z wysiłkiem fizycznym
+N26	Reference T65 ICD10:R06.0	Duszność
+T66	Symptom 2056 2078	czasem obrzęki podudzi
+N27	Reference T66 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T67	Symptom 2081 2137	kłucia w okolicy serca bez związku z wysiłkiem fizycznym
+T68	Symptom 2139 2168	pobolewanie w okolicy wątroby
+T69	Symptom 2170 2180	bóle głowy
+N28	Reference T69 ICD10:G44	Inne zespoły bólu głowy
+T70	Investigation 2224 2231	MRI OUN
+T71	Investigation 2251 2257	CT OUN
+T72	Investigation_result 2268 2277	bez zmian
+R30	Inv Arg1:T71 Arg2:T72	
+T73	Date 2259 2266	05.2019
+R31	Dat Arg1:T73 Arg2:T71	
+T74	Treatment 2346 2460	operacja splotu barkowego prawego z powodu uszkodzenia okołoporodowego z niedowładem prawostronnym kończyny górnej
+T75	Date 2462 2466	2000
+R32	Dat Arg1:T75 Arg2:T74	
+A1	Status T74 Historical_Insignificant
+T76	Treatment 510 564	zapinka implantowana do przegrody międzyprzedsionkowej
+T77	Investigation 610 613	MRI

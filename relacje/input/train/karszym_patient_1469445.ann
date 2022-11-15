@@ -1,0 +1,134 @@
+T1	Condition 448 492	Łagodna niedomykalność zastawki trójdzielnej
+N1	Reference T1 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T2	Condition 494 529	Napadowy częstoskurcz przedsionkowy
+N2	Reference T2 ICD10:I47.1	Częstoskurcz nadkomorowy
+T3	Condition 531 544	Blok AV I st.
+N3	Reference T3 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T4	Condition 545 573	Nadciśnienie tętnicze II st.
+N4	Reference T4 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T5	Condition 574 606	Niewydolność nerek G3b wg KKDIGO
+N5	Reference T5 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T6	Condition 621 643	uchyłki jelita grubego
+N6	Reference T6 ICD10:K57.3	Choroba uchyłkowa jelita grubego bez perforacji i ropnia
+T7	Condition 645 673	refluks żołądkowo-przełykowy
+N7	Reference T7 ICD10:K21.9	Zarzucanie żołądkowo-przełykowe bez zapalenia przełyku
+T8	Drug 794 800	Xartan
+T9	Drug 802 808	Concor
+T10	Drug 810 817	Mononit
+T11	Drug 819 827	Nilogrin
+T12	Drug 829 837	Primacor
+T13	Drug 839 844	Acard
+T14	Drug 846 853	Ircolon
+T15	Drug 855 866	CalsinOsteo
+T16	Drug 868 874	Sortis
+T17	Drug 876 885	Captopril
+T18	Treatment 996 1018	kontrola u lekarza POZ
+T19	Treatment 1021 1062	dalsza kontrola w Poradni Kardiologicznej
+T20	Treatment 1066 1099	kontrola w Poradni Nefrologicznej
+T21	Drug 1153 1159	Cozaar
+T22	Drug 1182 1190	Primacor
+T23	Drug_dose 1160 1181	100mg 1x 1 tabl/wiecz
+T24	Drug_dose 1191 1210	20mg 1x 1 tabl/rano
+R1	Drg Arg1:T21 Arg2:T23	
+R2	Drg Arg1:T22 Arg2:T24	
+T25	Symptom 1385 1423	wysokich wartości ciśnienia tętniczego
+T26	Date 1424 1436	od 2 tygodni
+T27	Symptom 1438 1448	150-180/60
+R3	Dat Arg1:T26 Arg2:T25	
+R4	Dat Arg1:T26 Arg2:T27	
+T28	Date 1502 1524	przed dwoma tygodniami
+T29	Symptom 1525 1578	ciśnienie utrzymywało się na poziomie 120-130/60 mmHg
+R5	Dat Arg1:T28 Arg2:T29	
+T30	Negation 1580 1586	Neguje
+T31	Symptom 1587 1599	zasłabnięcia
+T32	Symptom 1601 1609	omdlenia
+N8	Reference T32 ICD10:R55	Omdlenie i zapaść
+T33	Symptom 1611 1624	zawroty głowy
+N9	Reference T33 ICD10:R42	Zawroty głowy i odurzenie
+T34	Symptom 1626 1650	bóle w klatce piersiowej
+N10	Reference T34 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+R6	Neg Arg1:T30 Arg2:T31	
+R7	Neg Arg1:T30 Arg2:T32	
+R8	Neg Arg1:T30 Arg2:T33	
+R9	Neg Arg1:T30 Arg2:T34	
+T35	Symptom 1652 1671	Innych dolegliwości
+T36	Negation 1672 1683	nie zgłasza
+R10	Neg Arg1:T36 Arg2:T35	
+T37	Condition 1698 1719	Nadciśnienie tętnicze
+N11	Reference T37 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T38	Condition 1721 1743	uchyłki jelita grubego
+N12	Reference T38 ICD10:K57.3	Choroba uchyłkowa jelita grubego bez perforacji i ropnia
+T39	Condition 1745 1752	refluks
+N13	Reference T39 ICD10:K21.9	Zarzucanie żołądkowo-przełykowe bez zapalenia przełyku
+T40	Symptom 1754 1761	wzdęcia
+N14	Reference T40 ICD10:R14	Wzdęcie i pokrewne objawy
+T41	Treatment 1763 1790	pod opieką gastroenterologa
+T42	Treatment 1793 1810	Przebyte operacje
+N15	Reference T42 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T43	Negation 1812 1816	brak
+R11	Neg Arg1:T43 Arg2:T42	
+T44	Treatment 1818 1864	Leczenie przewlekłe: okulista, gastroenterolog
+T45	Condition 1894 1897	WZW
+N16	Reference T45 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T46	Condition 1906 1915	borelioza
+N17	Reference T46 ICD10:A69.2	Choroba z Lyme
+T47	Condition 1923 1931	gruźlica
+N18	Reference T47 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T48	Negation 1898 1903	( - )
+T49	Negation 1916 1921	( - )
+T50	Negation 1932 1937	( - )
+R12	Neg Arg1:T48 Arg2:T45	
+R13	Neg Arg1:T49 Arg2:T46	
+R14	Neg Arg1:T50 Arg2:T47	
+T51	Condition 1940 1959	wywiadzie rodzinnym
+A1	Status T51 Family
+T52	Negation 1961 1971	nieistotny
+R15	Neg Arg1:T52 Arg2:T51	
+T53	Behaviour 1973 1988	Palenie tytoniu
+N19	Reference T53 ICD10:Z72.0	Używanie tytoniu
+T54	Negation 1990 1996	neguje
+T55	Behaviour 1997 2008	Inne używki
+T56	Negation 2010 2016	neguje
+T57	Condition 2017 2026	Uczulenia
+N20	Reference T57 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T58	Drug 2028 2035	ketonal
+T59	Drug 2037 2044	Torecan
+T60	Drug 2045 2053	Eurespal
+R16	Neg Arg1:T54 Arg2:T53	
+R17	Neg Arg1:T56 Arg2:T55	
+R18	Alg Arg1:T57 Arg2:T58	
+R19	Alg Arg1:T57 Arg2:T59	
+R20	Alg Arg1:T57 Arg2:T60	
+T61	Behaviour 2070 2096	warunki mieszkaniowe dobre
+T62	Behaviour 2098 2112	mieszka z sama
+T63	Behaviour 2114 2122	Emerytka
+T64	Drug 2130 2137	Ircolon
+T65	Drug_dose 2138 2147	200 R i W
+T66	Drug 2149 2160	Calsinosteo
+T67	Drug_dose 2161 2167	2000 R
+T68	Drug 2169 2175	Xartan
+T69	Drug_dose 2176 2186	50mg R i W
+T70	Drug 2188 2198	Concor Cor
+T71	Drug_dose 2199 2207	1,25mg R
+T72	Drug 2209 2216	Mononit
+T73	Drug_dose 2217 2225	10 R i W
+T74	Drug 2227 2235	Nilogrin
+T75	Drug_dose 2236 2241	R i W
+T76	Drug 2243 2251	Primacor
+T77	Drug_dose 2252 2262	10mg R i W
+T78	Drug 2264 2269	Acard
+T79	Drug_dose 2270 2276	75mg W
+T80	Drug 2278 2287	Captopril
+T81	Drug_dose 2288 2303	12,5mg doraźnie
+R21	Drg Arg1:T64 Arg2:T65	
+R22	Drg Arg1:T66 Arg2:T67	
+R23	Drg Arg1:T68 Arg2:T69	
+R24	Drg Arg1:T70 Arg2:T71	
+R25	Drg Arg1:T72 Arg2:T73	
+R26	Drg Arg1:T74 Arg2:T75	
+R27	Drg Arg1:T76 Arg2:T77	
+R28	Drg Arg1:T78 Arg2:T79	
+R29	Drg Arg1:T80 Arg2:T81	
+T82	Investigation 2320 2330	Echo serca
+T83	Investigation 2332 2342	Holter EKG
+T84	Investigation 2344 2359	Próba Wysiłkowa

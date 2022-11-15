@@ -1,0 +1,74 @@
+T1	Condition 637 682	Ubytek przegrody międzyprzedsionkowej typu II
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Condition 684 696	Dyslipidemia
+N2	Reference T2 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T3	Drug 722 729	statyną
+T4	Behaviour 731 741	Nikotynizm
+T5	Investigation 1122 1216	kontrola morfologii, lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T6	Date 1228 1242	z 4-6 tygodni.
+R2	Dat Arg1:T6 Arg2:T5	
+T7	Treatment 1030 1048	zabiegu zamknięcia
+T8	Condition 1049 1060	ASD typu II
+N4	Reference T8 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T9	Behaviour 1246 1348	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T10	Behaviour 1353 1386	Bezwzględny zakaz palenia tytoniu
+T11	Investigation 1400 1446	samokontrola ciśnienia tętniczego krwi i tętna
+T12	Drug 1485 1491	Atoris
+T13	Drug_dose 1492 1517	40mg 1 tabletka wieczorem
+R3	Drg Arg1:T12 Arg2:T13	
+T14	Investigation 2344 2354	echo serca
+T15	Investigation 2356 2359	TET
+T16	Investigation 2361 2365	ABPM
+T17	Investigation 2367 2377	Holter ekg
+T18	Investigation 2379 2397	rtg kl. piersiowej
+T19	Drug 2262 2267	Acard
+T20	Drug 2270 2276	Atoris
+T21	Date 2277 2295	do miesiąca wstecz
+R4	Dat Arg1:T21 Arg2:T20	
+R5	Dat Arg1:T21 Arg2:T19	
+T22	Negation 2248 2254	neguje
+T23	Behaviour 2229 2246	Uzależnienie inne
+R6	Neg Arg1:T22 Arg2:T23	
+T24	Behaviour 2205 2227	Alkohol: 1-2 piwa/tydz
+N5	Reference T24 ICD10:Z72.1	Używanie alkoholu
+T25	Behaviour 2160 2178	Nikotynizm: 1-2/dz
+T26	Condition 2139 2146	Alergie
+T27	Negation 2124 2137	bez znaczenia
+T28	Negation 2099 2105	neguje
+T29	Condition 2107 2122	Wywiad rodzinny
+A1	Status T29 Family
+R7	Neg Arg1:T27 Arg2:T29	
+T30	Treatment 2081 2098	Przebyte operacje
+R8	Neg Arg1:T28 Arg2:T30	
+T31	Symptom 1873 1905	kłucia w klatce piersiowej (30s)
+N8	Reference T31 ICD10:R07.3	Inne bóle w klatce piersiowej
+T32	Symptom 1908 1934	spadek tolerancji wysiłku.
+N9	Reference T32 ICD10:R53	Złe samopoczucie i zmęczenie
+T33	Treatment 1683 1693	zamknięcia
+T34	Condition 1694 1697	PFO
+N10	Reference T34 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T35	Investigation 1786 1802	echokardiogramie
+T36	Investigation_result 1803 1848	dodatkowo tętniak przegrody m/przedsionkowej.
+R9	Inv Arg1:T35 Arg2:T36	
+N11	Reference T36 ICD10:Q21.9	Wrodzona wada przegrody serca, nieokreślona
+T37	Condition 1967 2004	niespecyficzny incydent neurologiczny
+T38	Date 2005 2017	przed rokiem
+R10	Dat Arg1:T38 Arg2:T37	
+N3	Reference T4 ICD10:Z72.0	Używanie tytoniu
+T39	Date 1097 1107	09/09/2019
+R1	Dat Arg1:T39 Arg2:T8	
+R11	Dat Arg1:T39 Arg2:T7	
+T40	Symptom 2037 2061	pogorszenie samopoczucia
+N12	Reference T40 ICD10:R53	Złe samopoczucie i zmęczenie
+T41	Symptom 2065 2080	zlewnymi potami
+N13	Reference T41 ICD10:R61	Nadmierne pocenie
+N7	Reference T26 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N6	Reference T25 ICD10:Z72.0	Używanie tytoniu
+T42	Date 2180 2190	od 6 m-cy)
+R12	Dat Arg1:T42 Arg2:T25	
+T43	Behaviour 2192 2197	10-20
+N14	Reference T43 ICD10:Z72.0	Używanie tytoniu
+T44	Date 2198 2204	15 lat
+R13	Dat Arg1:T44 Arg2:T43	
+T45	Treatment 888 936	Dalsza opieka w POZ oraz Poradni Kardiologicznej
+N15	Reference T23 ICD10:Z72	Problemy związane ze stylem życia

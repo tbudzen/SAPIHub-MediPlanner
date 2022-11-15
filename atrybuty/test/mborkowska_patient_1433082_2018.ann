@@ -1,0 +1,108 @@
+T1	Investigation 2485 2495	Echo serca
+T2	Investigation 2498 2508	Holter EKG
+T3	Drug 2310 2316	Siofor
+T4	Drug_dose 2317 2338	500 2x dz po 1/2 tabl
+R1	Drg Arg1:T3 Arg2:T4	
+T5	Drug 2340 2346	Letrox
+T6	Drug_dose 2347 2411	150 1x  dz po 1/2 tabl. rano na czczo przez 6 dni , 7 dzień STOP
+R2	Drg Arg1:T5 Arg2:T6	
+T7	Drug 2414 2422	Metocard
+T8	Drug_dose 2423 2439	50 mg 1x dz rano
+R3	Drg Arg1:T7 Arg2:T8	
+T9	Drug 2442 2447	Acard
+T10	Drug_dose 2448 2469	75 mg 1x dz wieczorem
+R4	Drg Arg1:T9 Arg2:T10	
+T11	Behaviour 2260 2286	warunki mieszkaniowe dobre
+T12	Negation 2237 2243	neguje
+T13	Negation 2222 2225	nie
+T14	Negation 2205 2208	nie
+T15	Condition 2226 2235	Uczulenia
+N1	Reference T15 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R5	Neg Arg1:T12 Arg2:T15	
+T16	Behaviour 2209 2221	Inne używki:
+N2	Reference T16 ICD10:Z72	Problemy związane ze stylem życia
+R6	Neg Arg1:T13 Arg2:T16	
+T17	Behaviour 2188 2204	Palenie tytoniu:
+N3	Reference T17 ICD10:Z72.0	Używanie tytoniu
+R7	Neg Arg1:T14 Arg2:T17	
+T18	Condition 2169 2185	astma oskrzelowa
+N4	Reference T18 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T19	Condition 2151 2162	ca żołądka,
+T20	Condition 2104 2113	borelioza
+N5	Reference T20 ICD10:A69.2	Choroba z Lyme
+T21	Condition 2091 2094	WZW
+N6	Reference T21 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T22	Negation 2095 2101	( -  )
+R8	Neg Arg1:T22 Arg2:T21	
+T23	Negation 2114 2119	( - )
+R9	Neg Arg1:T23 Arg2:T20	
+T24	Treatment 2028 2062	Leczenie przewlekłe:  onkologiczne
+T25	Condition 692 721	Przewlekła niewydolność serca
+N7	Reference T25 ICD10:I50.9	Niewydolność serca, nieokreślona
+T26	Symptom 723 738	II-III kl. NYHA
+T27	Symptom 741 749	Omdlenie
+N8	Reference T27 ICD10:R55	Omdlenie i zapaść
+T28	Condition 751 784	Przetrwałe migotanie przedsionków
+N9	Reference T28 ICD10:I48	Migotanie i trzepotanie przedsionków
+T29	Investigation_result 785 800	(CHA DS -VASc=2
+T30	Investigation_result 802 812	HAS-BLED=0
+T31	Condition 815 831	Rak piersi lewej
+N10	Reference T31 ICD10:C50	Nowotwór złośliwy piersi
+T32	Treatment 842 855	chemioterapii
+T33	Condition 857 883	Zmiany przerzutowe do płuc
+T34	Condition 885 905	Hipercholesterolemia
+N11	Reference T34 ICD10:E78.0	Czysta hipercholesterolemia
+T35	Condition 907 922	Cukrzyca typu 2
+N12	Reference T35 ICD10:E11	Cukrzyca insulinoniezależna
+T36	Condition 925 939	Niedokrwistość
+N13	Reference T36 ICD10:D64.9	Niedokrwistość, nieokreślona
+T37	Treatment 1093 1135	dalsza opieka onkologiczna i w poradni POZ
+T38	Treatment 1147 1170	kontrola kardiologiczna
+T39	Investigation 1182 1211	kontrola ciśnienia tętniczego
+T40	Date 1172 1181	codzienna
+R10	Dat Arg1:T40 Arg2:T39	
+T41	Investigation 1223 1291	kontrola morfologii, lipidogramu, parametrów wątrobowych i nerkowych
+T42	Behaviour 1293 1318	dieta niskocholesterolowa
+T43	Symptom 1492 1518	pełnej utraty przytomności
+N14	Reference T43 ICD10:R55	Omdlenie i zapaść
+T44	Date 1519 1549	ok 11 godziny w dniu przyjęcia
+R11	Dat Arg1:T44 Arg2:T43	
+T45	Investigation 1554 1557	EKG
+T46	Investigation_result 1558 1609	migotanie przedsionków o częstości komór ok 130/min
+N15	Reference T46 ICD10:I48	Migotanie i trzepotanie przedsionków
+R12	Inv Arg1:T45 Arg2:T46	
+T47	Symptom 1627 1637	osłabienie
+N16	Reference T47 ICD10:R53	Złe samopoczucie i zmęczenie
+T48	Symptom 1640 1655	kołatania serca
+N17	Reference T48 ICD10:R00.2	Kołatanie serca
+T49	Negation 1656 1665	nie czuje
+R13	Neg Arg1:T49 Arg2:T48	
+T50	Symptom 1679 1694	kołatania serca
+N18	Reference T50 ICD10:R00.2	Kołatanie serca
+T51	Date 1695 1703	od 5 lat
+R14	Dat Arg1:T51 Arg2:T50	
+T52	Symptom 1725 1790	bóle w klatce piersiowej o charakterze ucisku przy zdenerwowaniu.
+N19	Reference T52 ICD10:R07.3	Inne bóle w klatce piersiowej
+T53	Condition 1814 1830	rak piersi lewej
+N20	Reference T53 ICD10:C50	Nowotwór złośliwy piersi
+T54	Treatment 1841 1854	chemioterapii
+T55	Condition 1857 1883	Zmiany przerzutowe do płuc
+T56	Condition 1885 1901	Cukrzyca typu 2.
+N21	Reference T56 ICD10:E11	Cukrzyca insulinoniezależna
+T57	Condition 1919 1932	wola tarczycy
+N22	Reference T57 ICD10:E04	Inne wole nietoksyczne
+T58	Treatment 1910 1918	resekcji
+T59	Date 1933 1943	5 lat temu
+R15	Dat Arg1:T59 Arg2:T57	
+R16	Dat Arg1:T59 Arg2:T58	
+T60	Condition 1991 2013	mięśniaków , i jajnika
+T61	Date 2014 2025	27 lat temu
+T62	Treatment 1947 1964	Przebyte operacje
+R17	Dat Arg1:T61 Arg2:T60	
+R18	Dat Arg1:T61 Arg2:T62	
+T63	Condition 958 971	wola tarczycy
+N23	Reference T63 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T64	Treatment 949 957	resekcji
+T65	Date 972 982	5 lat temu
+R19	Dat Arg1:T65 Arg2:T63	
+R20	Dat Arg1:T65 Arg2:T64	

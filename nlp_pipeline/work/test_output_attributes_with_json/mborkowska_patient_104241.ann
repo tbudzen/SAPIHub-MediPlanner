@@ -1,0 +1,78 @@
+T1	Condition 450 488	Umiarkowana stenoza zastawki aortalnej
+T2	Condition 490 531	Łagodna niedomykalność zastawki aortalnej
+T3	Condition 533 542	mitralnej
+T4	Condition 545 557	trójdzielnej
+T5	Condition 560 581	Nadciśnienie tętnicze
+T6	Condition 583 597	Hiperlipidemia
+T7	Condition 599 624	Miażdżyca tętnic szyjnych
+T8	Investigation 1677 1687	ECHO serca
+T9	Investigation 1689 1699	Holter EKG
+T10	Investigation 1701 1710	Holter RR
+T11	Investigation 1712 1714	PW
+T12	Drug 1611 1618	Beto ZK
+T13	Drug_dose 1619 1621	25
+T14	Drug 1623 1628	Acard
+T15	Drug_dose 1629 1631	75
+T16	Drug 1633 1640	Polpril
+T17	Drug_dose 1641 1646	2,5mg
+T18	Drug 1648 1656	Pramolan
+T19	Drug 1658 1664	Wit D3
+T20	Condition 1566 1581	Wywiad rodzinny
+T21	Negation 1583 1584	-
+T22	Negation 1504 1510	neguje
+T23	Condition 1512 1529	uczulenia na leki
+T24	Symptom 1531 1564	krwawienia z przewodu pokarmowego
+T25	Behaviour 1436 1446	Nikotynizm
+T26	Date 1451 1463	od 2 tygodni
+T27	Negation 1464 1472	nie pali
+T28	Behaviour 1474 1495	Alkohol: okazjonalnie
+T29	Date 1405 1414	2 tygodni
+T30	Negation 1415 1423	nie pali
+T31	Condition 1424 1434	papierosów
+T32	Drug 1393 1400	statyny
+T33	Negation 1361 1379	nie miała zalecone
+T34	Investigation_result 1257 1309	niestabilne blaszki miażdżycowe w tętnicach szyjnych
+T35	Investigation_result 1223 1233	wahania RR
+T36	Symptom 1178 1193	bóle zamostkowe
+T37	Condition 1195 1214	utraty przytomności
+T38	Negation 1164 1170	neguje
+T39	Condition 1115 1117	HA
+T40	Condition 1119 1128	miażdżyca
+T41	Condition 626 648	Zespół bolesnego barku
+zane z ich używaniem, przemęczeniem i przeciążeniem
+T42	Condition 1130 1152	zespół bolesnego barku
+zane z ich używaniem, przemęczeniem i przeciążeniem
+T43	Investigation_result 1078 1100	wahań RR do 180/80mmHg
+T44	Condition 887 909	Zespół bolesnego barku
+zane z ich używaniem, przemęczeniem i przeciążeniem
+T45	Condition 876 885	Miażdżyca
+N1	Reference T2 ICD10:I35.1	NiedomykalnoÅÄ zastawki aortalnej
+N2	Reference T3 ICD10:I34.0	NiedomykalnoÅÄ zastawki mitralnej
+N3	Reference T4 ICD10:I07.1	NiedomykalnoÅÄ zastawki trÃ³jdzielnej
+N4	Reference T5 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N5	Reference T6 ICD10:E78.5	Hiperlipidemia, nieokreÅlona
+N6	Reference T7 ICD10:I70.8	MiaÅ¼dÅ¼yca innych tÄtnic
+N7	Reference T23 ICD10:Z88	Uczulenia na leki, Årodki farmakologiczne i substancje biologiczne w wywiadzie
+N8	Reference T24 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreÅlony
+N9	Reference T25 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N10	Reference T28 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N11	Reference T31 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N12	Reference T36 ICD10:R51	BÃ³l gÅowy
+N13	Reference T37 ICD10:R55	Omdlenie i zapaÅÄ
+N14	Reference T39 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N15	Reference T40 ICD10:I70	MiaÅ¼dÅ¼yca
+N16	Reference T45 ICD10:I70	MiaÅ¼dÅ¼yca
+R1	Neg Arg1:T38 Arg2:T36
+R11	Neg Arg1:T21 Arg2:T20
+R16	Neg Arg1:T22 Arg2:T23
+R17	Neg Arg1:T22 Arg2:T28
+R21	Drg Arg1:T14 Arg2:T13
+R25	Drg Arg1:T16 Arg2:T15
+R29	Drg Arg1:T18 Arg2:T17
+R3	Neg Arg1:T30 Arg2:T31
+R4	Neg Arg1:T30 Arg2:T32
+R5	Dat Arg1:T29 Arg2:T31
+R6	Dat Arg1:T29 Arg2:T32
+R8	Neg Arg1:T27 Arg2:T25
+R9	Dat Arg1:T26 Arg2:T25
+A1	Status T20 Family

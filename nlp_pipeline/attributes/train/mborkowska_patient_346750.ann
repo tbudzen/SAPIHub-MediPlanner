@@ -1,0 +1,47 @@
+T1	Behaviour 462 557	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T2	Condition 789 818	Blok lewej odnogi pęczka Hisa
+N1	Reference T2 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T3	Behaviour 823 833	Nikotynizm
+T4	Symptom 1052 1072	Bóle w kl. piersiowe
+N3	Reference T4 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T5	Condition 1075 1079	LBBB
+N4	Reference T5 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T6	Symptom 1255 1347	dolegliwości bólowych w kl. piersiowe o charakterze ucisku z towarzyszącym silnym zmęczeniem
+T7	Date 1348 1365	od ok. 2 tygodni.
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Investigation 1390 1393	EKG
+T9	Date 1400 1411	30.08.2019r
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Investigation_result 1414 1418	LBBB
+N5	Reference T10 ICD10:I44.7	
+R3	Inv Arg1:T8 Arg2:T10	
+T11	Negation 1439 1449	nie podaje
+T12	Negation 1471 1481	nie podaje
+T13	Condition 1509 1512	WZW
+N6	Reference T13 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T14	Condition 1514 1523	borelioza
+N7	Reference T14 ICD10:A69.2	Choroba z Lyme
+T15	Negation 1526 1536	nie podaje
+R4	Neg Arg1:T15 Arg2:T14	
+R5	Neg Arg1:T15 Arg2:T13	
+T16	Treatment 1450 1469	Leczenie przewlekłe
+T17	Treatment 1420 1438	Przebyte operacje:
+T18	Negation 1554 1564	nieistotny
+T19	Condition 1537 1553	Wywiad rodzinny:
+A1	Status T19 Family
+T20	Behaviour 1565 1601	Palenie tytoniu: pali ok. 1 paczki/d
+N8	Reference T20 ICD10:T65.2	Tytoń i nikotyna
+T21	Behaviour 1602 1626	Inne używki:okazjonalnie
+T22	Condition 1627 1646	Uczulenia: na metal
+N9	Reference T22 ICD10:T78	Niekorzystne skutki niesklasyfikowane gdzie indziej
+T23	Drug 1703 1707	Leki
+T24	Negation 1709 1722	nie przyjmuje
+R6	Neg Arg1:T24 Arg2:T23	
+T25	Investigation 1750 1760	echo serca
+T26	Investigation 1762 1766	ABPM
+T27	Investigation 1768 1774	Holter
+T28	Investigation 1776 1794	RTG kl. piersiowej
+R7	Neg Arg1:T12 Arg2:T16	
+R8	Neg Arg1:T11 Arg2:T17	
+R9	Neg Arg1:T18 Arg2:T19	
+N2	Reference T3 ICD10:T65.2	Tytoń i nikotyna

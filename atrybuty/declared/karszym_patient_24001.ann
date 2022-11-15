@@ -1,0 +1,100 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 358 405	okresowa kontrola kardiologiczna, neurologiczna
+T3	Investigation_result 406 441	pomiary ciśnienia tętniczego 2 x dz
+T5	Treatment 449 518	skierowanie do Kliniki Endokrynologii i Zaburzeń Metabolicznych ICZMP
+T6	Behaviour 528 591	dieta śródziemnomorska z małą zawartością soli kuchennej (5g/d)
+T7	Behaviour 592 620	regularna aktywność fizyczna
+T8	Drug 627 635	Doxanorm
+T9	Drug 659 666	Zaranta
+T10	Drug 691 696	Acard
+T11	Drug_dose 636 658	4 mg 1 tabl. wieczorem
+T12	Drug_dose 667 690	20 mg 1 tabl. wieczorem
+T13	Drug_dose 697 720	75 mg 1 tabl. wieczorem
+R2	Drg Arg1:T8 Arg2:T11	
+R3	Drg Arg1:T9 Arg2:T12	
+R4	Drg Arg1:T10 Arg2:T13	
+T14	Condition 956 1000	Podejrzenie gruczolaka kory nadnercza lewego
+N1	Reference T14 ICD10:D35.0	Nadnercze
+T15	Condition 1002 1035	Nadciśnienie tętnicze skorygowane
+N2	Reference T15 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T17	Condition 1037 1081	Łagodna niedomykalność zastawki trójdzielnej
+N3	Reference T17 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T18	Condition 1083 1121	Łagodna arytmia nadkomorowa i komorowa
+N4	Reference T18 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T19	Condition 1123 1138	Miażdżyca aorty
+N5	Reference T19 ICD10:I70.0	Miażdżyca aorty
+T20	Condition 1140 1176	Przewlekłe zapalenie okołooskrzelowe
+N6	Reference T20 ICD10:J42	Nieokreślone przewlekłe zapalenie oskrzeli
+T21	Behaviour 1178 1199	Przewlekły nikotynizm
+T22	Condition 1202 1243	Zmiany zwyrodnieniowe kręgosłupa szyjnego
+T23	Condition 1245 1292	Skrzywienie prawostronne kręgosłupa piersiowego
+N8	Reference T23 ICD10:M41.9	Skolioza, nieokreślona
+T24	Condition 1294 1337	Skrzywienie lewostronne odcinka lędźwiowego
+N9	Reference T24 ICD10:M41.9	Skolioza, nieokreślona
+N7	Reference T22 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T25	Investigation_result 1505 1549	labilnych wartości ciśnienia (BPs90-160mmHg)
+T26	Symptom 1551 1565	uczucia gorąca
+T27	Symptom 1568 1594	drętwienia k. górnej lewej
+T28	Date 1597 1606	od 2 m-cy
+R5	Dat Arg1:T28 Arg2:T27	
+R6	Dat Arg1:T28 Arg2:T26	
+R7	Dat Arg1:T28 Arg2:T25	
+T29	Condition 1631 1633	HA
+N10	Reference T29 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T30	Date 1636 1643	od roku
+T31	Condition 1645 1682	zmiany zwyrodnieniowe kręgosłupa L-S,
+N11	Reference T31 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T32	Condition 1683 1703	hipercholesterolemia
+N12	Reference T32 ICD10:E78.0	Czysta hipercholesterolemia
+T33	Treatment 1713 1737	operacje: ginekologiczna
+N13	Reference T33 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T34	Date 1740 1750	8 lat temu
+T35	Condition 1752 1767	Wywiad rodzinny
+T36	Negation 1769 1782	bez znaczenia
+T37	Condition 1784 1791	Alergie
+N14	Reference T37 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T38	Negation 1793 1799	neguje
+R8	Dat Arg1:T30 Arg2:T29	
+R9	Dat Arg1:T34 Arg2:T33	
+R10	Neg Arg1:T36 Arg2:T35	
+R11	Neg Arg1:T38 Arg2:T37	
+T39	Behaviour 1801 1828	Nikotynizm: tak, 3/4 paczki
+T40	Date 1829 1841	przez 40 lat
+R12	Dat Arg1:T40 Arg2:T39	
+T41	Behaviour 1843 1850	Alkohol
+T42	Negation 1852 1858	neguje
+T43	Behaviour 1860 1877	Uzależnienie inne
+T44	Negation 1879 1885	neguje
+T45	Behaviour 1920 1934	praca fizyczna
+R13	Neg Arg1:T42 Arg2:T41	
+R14	Neg Arg1:T44 Arg2:T43	
+T46	Drug 1942 1951	Triplixam
+T47	Drug 2077 2084	Zaranta
+T48	Drug 2110 2115	Acard
+T49	Drug_dose 2085 2108	20 mg 1 tabl. wieczorem
+T50	Drug_dose 2116 2139	75 mg 1 tabl. wieczorem
+T51	Drug_dose 1952 1981	5mg-1.25-5mg - 1/2 tabl. rano
+R15	Drg Arg1:T46 Arg2:T51	
+R16	Drg Arg1:T47 Arg2:T49	
+R17	Drg Arg1:T48 Arg2:T50	
+T53	Investigation_result 2013 2029	BP bardzo niskie
+T54	Investigation_result 2031 2048	następnie wysokie
+T56	Drug_dose 2001 2012	całej tabl.
+T55	Date 1983 1987	rano
+R21	Dat Arg1:T55 Arg2:T53	
+T57	Date 2049 2075	w godzinach popołudniowych
+R22	Dat Arg1:T57 Arg2:T54	
+R23	Dat Arg1:T55 Arg2:T56	
+T58	Investigation 2169 2179	echo serca
+T59	Investigation 2181 2184	TET
+T60	Investigation 2186 2190	ABPM
+T61	Investigation 2192 2202	Holter ekg
+T62	Investigation_result 2204 2222	rtg kl. piersiowej
+N15	Reference T21 ICD10:Z72.0	Używanie tytoniu
+N16	Reference T39 ICD10:Z72.0	Używanie tytoniu
+A1	Status T22 Historical_Insignificant
+A2	Status T23 Historical_Insignificant
+A3	Status T24 Historical_Insignificant
+A4	Status T31 Historical_Insignificant
+A5	Status T33 Historical_Insignificant
+A6	Source T14 Declared

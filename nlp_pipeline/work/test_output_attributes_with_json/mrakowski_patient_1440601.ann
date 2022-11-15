@@ -1,0 +1,25 @@
+T1	Treatment 340 352	Znieczulenie
+T2	Investigation 356 359	TEE
+T3	Drug 361 379	kroplówka składowa
+T4	Drug 489 500	Preparat Mg
+T5	Date 501 512	przez 3 mce
+T6	Treatment 514 548	Kontrola w Poradni Kardiologicznej
+T7	Date 549 557	za 8 mcy
+T8	Treatment 560 624	Zalecone leczenie dietetyczne oraz konsultację endokrynologiczną
+T9	Behaviour 627 736	Chłopiec nie wymaga w chwili obecnej ograniczenia wysiłku fizycznego, zalecana umiarkowana aktywność fizyczna
+T10	Condition 956 980	Łagodna arytmia komorowa
+T11	Condition 1008 1014	ASD II
+T12	Negation 1015 1024	negatywna
+T13	Condition 1029 1036	Nadwaga
+T14	Condition 1184 1189	otyły
+T15	Investigation 986 1007	Obserwacja w kierunku
+N1	Reference T10 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komÃ³r
+N2	Reference T11 ICD10:Q21.1	Ubytek przegrody miÄdzyprzedsionkowej
+N3	Reference T13 ICD10:E66	OtyÅoÅÄ
+N4	Reference T14 ICD10:E66.9	OtyÅoÅÄ, nieokreÅlona
+R1	Dat Arg1:T5 Arg2:T6
+R2	Dat Arg1:T5 Arg2:T4
+R3	Dat Arg1:T7 Arg2:T8
+R4	Neg Arg1:T12 Arg2:T11
+R5	Neg Arg1:T12 Arg2:T13
+A1	Source T13 Declared

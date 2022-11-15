@@ -1,0 +1,109 @@
+T1	Drug 1635 1645	Prestarium
+T2	Drug_dose 1646 1666	5 mg 1x dz wieczorem
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 1605 1610	Acard
+T4	Drug_dose 1611 1632	75 mg 1x dz wieczorem
+T5	Drug 2836 2844	Polocard
+T6	Drug_dose 2845 2855	75mg 0-0-1
+R2	Drg Arg1:T5 Arg2:T6	
+T7	Investigation 2883 2893	echo serca
+T8	Investigation 2894 2915	TET - spiroergometria
+T9	Investigation 2917 2921	ABPM
+T10	Investigation 2923 2929	Holter
+T11	Investigation 2931 2949	RTG kl. piersiowej
+T12	Condition 2812 2821	Uczulenia
+N1	Reference T12 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T13	Condition 2715 2718	WZW
+N2	Reference T13 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T14	Condition 2724 2732	gruźlica
+N3	Reference T14 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T15	Condition 2738 2747	borelioza
+N4	Reference T15 ICD10:A69.2	Choroba z Lyme
+T16	Condition 2753 2756	HIV
+N5	Reference T16 ICD10:B24	Choroba wywołana przez ludzki wirus upośledzenia odporności [HIV], nieokreślona
+T17	Negation 2720 2721	-
+R3	Neg Arg1:T17 Arg2:T13	
+T18	Negation 2734 2735	-
+R4	Neg Arg1:T18 Arg2:T14	
+T19	Negation 2749 2750	-
+R5	Neg Arg1:T19 Arg2:T15	
+T20	Negation 2758 2759	-
+R6	Neg Arg1:T20 Arg2:T16	
+T21	Negation 2687 2697	nieistotny
+T22	Condition 2670 2685	Wywiad rodzinny
+A1	Status T22 Family
+R7	Neg Arg1:T21 Arg2:T22	
+T23	Treatment 2519 2563	endoprotezoplastyka prawego stawu biodrowego
+T24	Date 2565 2571	2010r.
+R8	Dat Arg1:T24 Arg2:T23	
+T25	Condition 2574 2618	uraz komunikacyjny z uszkodzeniem kręgosłupa
+T26	Treatment 2630 2640	operacyjne
+T27	Date 2643 2648	2006r
+R9	Dat Arg1:T27 Arg2:T26	
+R10	Dat Arg1:T27 Arg2:T25	
+T28	Condition 2295 2298	CAD
+N6	Reference T28 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T29	Investigation 2301 2315	koronarografia
+T30	Date 2265 2270	2016r
+R11	Dat Arg1:T30 Arg2:T29	
+T31	Investigation_result 2318 2364	bez istotnych przewężeń w tętnicach wieńcowych
+R12	Inv Arg1:T29 Arg2:T31	
+T32	Condition 2437 2442	POCHP
+N7	Reference T32 ICD10:J44	Inne przewlekłe obturacyjne choroby płuc
+T33	Treatment 2414 2425	diagnostyka
+T34	Behaviour 2444 2454	nikotynizm
+A2	Status T34 Historical_Insignificant
+T35	Negation 2468 2476	nie pali
+T36	Date 2477 2496	od około 6 miesięcy
+R13	Dat Arg1:T36 Arg2:T34	
+R14	Neg Arg1:T35 Arg2:T34	
+T37	Investigation 2139 2168	badaniu angio-CT tt. płucnych
+T38	Date 2170 2179	11.2018r.
+R15	Dat Arg1:T38 Arg2:T37	
+T39	Investigation_result 2181 2240	bez ubytków wypełnienia w  świetle zakontrastowanych naczyń
+R16	Inv Arg1:T37 Arg2:T39	
+T40	Condition 1937 1956	zatorowości płucnej
+N9	Reference T40 ICD10:I26	Zator płucny
+T41	Date 1958 1963	2016r
+R17	Dat Arg1:T41 Arg2:T40	
+T42	Symptom 2004 2024	duszności wysiłkowej
+N10	Reference T42 ICD10:R06.0	Duszność
+T43	Date 2053 2110	od około roku z nasileniem w ciągu ostatnich 3-4 miesięcy
+R18	Dat Arg1:T43 Arg2:T42	
+T44	Drug 1787 1792	acard
+T45	Investigation 1520 1554	kontrola ciśnienia tętniczego krwi
+T46	Investigation 1429 1503	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T47	Behaviour 1376 1416	Dieta lekkostrawna , niskocholesterolowa
+T48	Condition 1184 1198	Małopłytkowość
+N11	Reference T48 ICD10:D69	Plamica i inne skazy krwotoczne
+T49	Condition 1175 1182	Otyłość
+N12	Reference T49 ICD10:E66	Otyłość
+T50	Condition 1148 1173	obturacyjnej choroby płuc
+N13	Reference T50 ICD10:J44	Inne przewlekłe obturacyjne choroby płuc
+T51	Treatment 1126 1136	obserwacji
+T52	Treatment 966 1010	endoprotezoplastyce prawego stawu biodrowego
+T53	Date 1012 1017	2010r
+R19	Dat Arg1:T53 Arg2:T52	
+T54	Symptom 1029 1074	urazie komunikacyjny z uszkodzeniem kręgosłup
+T55	Treatment 1087 1098	operacyjnie
+T56	Date 1101 1106	2006r
+R20	Dat Arg1:T56 Arg2:T55	
+R21	Dat Arg1:T56 Arg2:T54	
+T57	Condition 839 956	Nadkomorowe zaburzenia rytmu serca ( pobudzenia pojedyncze, pary oraz częstoskurcz)  i pojedyncze pobudzenia komorowe
+N14	Reference T57 ICD10:I49	Inne zaburzenia rytmu serca
+T58	Condition 811 830	zatorowości płucnej
+N15	Reference T58 ICD10:I26	Zator płucny
+T59	Date 833 837	2016
+R22	Dat Arg1:T59 Arg2:T58	
+T60	Condition 780 801	Nadciśnienie tętnicze
+N16	Reference T60 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T61	Condition 734 778	Łagodna niedomykalność zastawki trójdzielnej
+N17	Reference T61 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T62	Symptom 486 504	Duszność wysiłkowa
+N18	Reference T62 ICD10:R06.0	Duszność
+T63	Condition 465 484	zatorowości płucnej
+N19	Reference T63 ICD10:I26	Zator płucny
+R23	Drg Arg1:T3 Arg2:T4	
+N8	Reference T34 ICD10:T65.2	Tytoń i nikotyna
+T64	Drug 2823 2829	tramal
+R24	Alg Arg1:T12 Arg2:T64	

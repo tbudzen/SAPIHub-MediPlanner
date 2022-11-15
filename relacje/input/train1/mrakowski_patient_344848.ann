@@ -1,0 +1,72 @@
+T1	Treatment 332 399	Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T2	Treatment 403 445	Wizyta kontrolna w Poradni Kardiologicznej
+T3	Date 446 458	za 1 miesiąc
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Treatment 462 568	Ponowna kontrolna hospitalizacja w Klinice Kardiologii i Wad Wrodzonych Dorosłych celem oceny skuteczności
+T6	Treatment 848 903	zamknięcie zestawem Occlutech Figulla Flex II ASD 18 mm
+T7	Date 905 915	14/08/2019
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Treatment 929 947	usunięciu tarczycy
+A1	Status T8 Historical_Insignificant
+T9	Condition 1109 1133	podejrzeniem ASD typu II
+N2	Reference T9 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T10	Treatment 1202 1220	usunięciu tarczycy
+A2	Status T10 Historical_Insignificant
+T11	Negation 1237 1243	Neguje
+T12	Symptom 1244 1256	zasłabnięcia
+T13	Symptom 1258 1267	duszności
+N3	Reference T13 ICD10:R06.0	Duszność
+T14	Symptom 1269 1300	typowe bóle w klatce piersiowej
+N4	Reference T14 ICD10:R07	Ból gardła i w klatce piersiowej
+R3	Neg Arg1:T11 Arg2:T14	
+R4	Neg Arg1:T11 Arg2:T13	
+R5	Neg Arg1:T11 Arg2:T12	
+T15	Date 1302 1316	W grudniu 2018
+T16	Symptom 1333 1359	uciski w klatce piersiowej
+N5	Reference T16 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T17	Symptom 1365 1380	kołatania serca
+N6	Reference T17 ICD10:R00.2	Kołatanie serca
+R6	Dat Arg1:T15 Arg2:T16	
+R7	Dat Arg1:T15 Arg2:T17	
+T18	Condition 1434 1437	WZW
+N7	Reference T18 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T19	Condition 1446 1455	borelioza
+N8	Reference T19 ICD10:A69.2	Choroba z Lyme
+T20	Condition 1463 1471	gruźlica
+N9	Reference T20 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T21	Condition 1477 1481	odra
+N10	Reference T21 ICD10:B05	Odra
+T22	Treatment 1487 1505	szczepiona na odrę
+T23	Negation 1483 1484	-
+R8	Neg Arg1:T23 Arg2:T21	
+T24	Negation 1473 1474	-
+R9	Neg Arg1:T24 Arg2:T20	
+T25	Negation 1458 1459	-
+R10	Neg Arg1:T25 Arg2:T19	
+T26	Negation 1440 1441	-
+R11	Neg Arg1:T26 Arg2:T18	
+T27	Condition 1555 1557	HA
+A3	Status T27 Family
+N11	Reference T27 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T28	Behaviour 1558 1573	Palenie tytoniu
+N12	Reference T28 ICD10:Z72.0	Używanie tytoniu
+T29	Negation 1575 1585	nie, nigdy
+R12	Neg Arg1:T29 Arg2:T28	
+T30	Behaviour 1586 1597	Inne używki
+T31	Negation 1599 1602	nie
+R13	Neg Arg1:T31 Arg2:T30	
+T32	Condition 1603 1612	Uczulenia
+T33	Negation 1614 1620	neguje
+R14	Neg Arg1:T33 Arg2:T32	
+T34	Behaviour 1637 1663	warunki mieszkaniowe dobre
+A4	Source T9 Declared
+T5	Treatment 1384 1401	Przebyte operacje
+T35	Condition 1512 1527	Wywiad rodzinny
+A5	Status T35 Family
+T36	Condition 800 845	Ubytek przegrody międzyprzedsionkowej typu II
+N1	Reference T36 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R15	Dat Arg1:T7 Arg2:T36	
+T37	Condition 957 961	wola
+N13	Reference T37 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T38	Condition 1230 1234	wola
+N14	Reference T38 ICD10:E04.9	Wole nietoksyczne, nieokreślone

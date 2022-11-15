@@ -1,0 +1,114 @@
+T1	Date 512 524	10/12/2002r.
+T2	Date 795 800	2002r
+T3	Treatment 457 467	zamknięciu
+N1	Reference T3 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T4	Treatment 756 766	zamknięciu
+N2	Reference T4 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+R1	Dat Arg1:T1 Arg2:T3	
+R2	Dat Arg1:T2 Arg2:T4	
+T5	Treatment 922 980	dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T6	Behaviour 984 1058	Dieta lekkostrawna z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T7	Investigation 1062 1152	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątrob
+T8	Treatment 1295 1305	zamknięciu
+N3	Reference T8 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T9	Date 1334 1339	2002r
+R3	Dat Arg1:T9 Arg2:T8	
+T11	Investigation_result 1344 1367	ujemno-dodatnim T w III
+T12	Negation 1413 1419	Neguje
+T13	Symptom 1421 1445	bóle w klatce piersiowej
+N4	Reference T13 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T14	Symptom 1447 1456	kołatania
+N5	Reference T14 ICD10:R00.2	Kołatanie serca
+T15	Symptom 1458 1470	zasłabnięcia
+T16	Symptom 1472 1480	omdlenia
+N6	Reference T16 ICD10:R55	Omdlenie i zapaść
+T17	Symptom 1482 1492	krwawienia
+T18	Symptom 1494 1507	czarne stolce
+N7	Reference T18 ICD10:K92.1	Stolce smołowate
+T19	Symptom 1509 1525	brunatne wymioty
+N8	Reference T19 ICD10:K92.0	Wymioty krwawe
+T20	Condition 1527 1543	chorobę wrzodową
+N9	Reference T20 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T21	Symptom 1545 1573	duszność nocną typu ortopnoe
+N10	Reference T21 ICD10:R06.0	Duszność
+T22	Condition 1575 1577	HA
+N11	Reference T22 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T23	Condition 1579 1581	DM
+N12	Reference T23 ICD10:E14	Cukrzyca nieokreślona
+T24	Condition 1583 1593	udar mózgu
+N13	Reference T24 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T25	Condition 1595 1606	zawał serca
+N14	Reference T25 ICD10:I25.2	Przebyty zawał serca
+R5	Neg Arg1:T12 Arg2:T13	
+R6	Neg Arg1:T12 Arg2:T14	
+R7	Neg Arg1:T12 Arg2:T15	
+R8	Neg Arg1:T12 Arg2:T16	
+R9	Neg Arg1:T12 Arg2:T17	
+R10	Neg Arg1:T12 Arg2:T18	
+R11	Neg Arg1:T12 Arg2:T19	
+R12	Neg Arg1:T12 Arg2:T20	
+R13	Neg Arg1:T12 Arg2:T21	
+R14	Neg Arg1:T12 Arg2:T22	
+R15	Neg Arg1:T12 Arg2:T23	
+R16	Neg Arg1:T12 Arg2:T24	
+R17	Neg Arg1:T12 Arg2:T25	
+T10	Treatment 1630 1643	appendektomia
+N15	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T26	Date 1644 1655	około 2009r
+R4	Dat Arg1:T26 Arg2:T10	
+T27	Negation 1673 1676	nie
+T28	Negation 1691 1694	nie
+T29	Negation 1707 1710	nie
+T30	Behaviour 1656 1671	Palenie tytoniu
+R18	Neg Arg1:T27 Arg2:T30	
+T31	Behaviour 1678 1689	Inne używki
+R19	Neg Arg1:T28 Arg2:T31	
+T32	Condition 1696 1705	Uczulenia
+N16	Reference T32 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R20	Neg Arg1:T29 Arg2:T32	
+T33	Condition 1739 1742	WZW
+N17	Reference T33 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T34	Condition 1749 1758	borelioza
+N18	Reference T34 ICD10:A69.2	Choroba z Lyme
+T35	Condition 1766 1769	tbc
+N19	Reference T35 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T36	Negation 1743 1746	(-)
+T37	Negation 1759 1764	( - )
+T38	Negation 1770 1773	(-)
+R21	Neg Arg1:T36 Arg2:T33	
+R22	Neg Arg1:T37 Arg2:T34	
+R23	Neg Arg1:T38 Arg2:T35	
+T39	Behaviour 1791 1817	warunki mieszkaniowe dobre
+T40	Drug 1821 1825	Leki
+T41	Negation 1827 1840	nie przyjmuje
+R24	Neg Arg1:T41 Arg2:T40	
+T42	Investigation 1902 1923	badania laboratoryjne
+T43	Investigation 1925 1929	ECHO
+T44	Investigation 1370 1373	ekg
+R25	Inv Arg1:T44 Arg2:T11	
+A1	Status T10 Historical_Insignificant
+N20	Reference T30 ICD10:Z72.0	Używanie tytoniu
+T45	Condition 468 479	ASD typu II
+N21	Reference T45 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T46	Treatment 480 510	zapinką Amplatzer device nr 13
+N22	Reference T46 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+R26	Dat Arg1:T1 Arg2:T46	
+R27	Dat Arg1:T1 Arg2:T45	
+T47	Treatment 775 793	zapinką Amplantzer
+N23	Reference T47 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+R28	Dat Arg1:T2 Arg2:T47	
+T48	Condition 767 774	ASD t 2
+N24	Reference T48 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R29	Dat Arg1:T2 Arg2:T48	
+T49	Condition 1306 1313	ASD t 2
+N25	Reference T49 ICD10:Q21.1	
+T50	Treatment 1314 1332	zapinką Amplantzer
+N26	Reference T50 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+R30	Dat Arg1:T9 Arg2:T50	
+R31	Dat Arg1:T9 Arg2:T49	
+N27	Reference T11 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+N28	Reference T15 ICD10:R55	Omdlenie i zapaść
+N29	Reference T17 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T51	Treatment 1611 1628	Przebyte operacje
+N30	Reference T51 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N31	Reference T31 ICD10:Z72	Problemy związane ze stylem życia

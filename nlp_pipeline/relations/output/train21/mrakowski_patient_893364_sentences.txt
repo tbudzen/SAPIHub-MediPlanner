@@ -1,0 +1,569 @@
+allRelations          : 47
+oks                   : 12
+isRedundantAndRemoveds: 28
+shouldNotBeRemoveds   : 3
+shouldBeBemoveds      : 4
+GOOD / BAD            : 40 / 7
+Sentence 0:
+------------------------------------------------
+Wiek: 53 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+- Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej (skierowanie wydano).
+
+
+
+Sentence 4:
+- Wskazana konsultacja w Poradni Chirurgii Naczyniowej z wykonaniem USG Doppler żył kończyn dolnych (skierowanie wydano)
+
+
+
+Sentence 5:
+- Dieta lekkostrawna, niskoc
+------------------------------------------------
+
+
+
+Sentence 6:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 7:
+------------------------------------------------
+ Rozpozanie I: ICD10:R00.2|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Kołatania serca.
+   
+
+
+Sentence 8:
+Obrzęki kończyn dolnych.
+   
+
+
+Sentence 9:
+Stan po wypadku komunikacyjnym.
+
+
+
+Sentence 10:
+------------------------------------------------
+
+
+
+Sentence 11:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 12:
+------------------------------------------------
+ Rozpozanie I: ICD10:I35|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Łagodna niedomykalność zastawki mitralnej.
+   
+
+
+Sentence 13:
+Łagodna niedomykalność zastawki trójdzielnej z niskim prawdopodobieństwem PH.
+   
+
+
+Sentence 14:
+Nadciśnienie tętnicze I st.
+   Dyslipidemia.
+   
+
+
+Sentence 15:
+Otyłość I st.
+   Niedokrwistość mikrocytarna niedobarwliwa.
+   
+
+
+Sentence 16:
+Stan po wypadku komunikacyjnym.
+
+
+
+Sentence 17:
+------------------------------------------------
+
+
+
+Sentence 18:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+52-letnia pacjentka, dotychczas nie lecząca się z powodu chorób przewlekłych, nie przyjmująca na stałe leków, po wypadku komunikacyjnym ze złamaniem obustronnym łuku kręgu C2 (brak dokumentacji), została przyjęta do Kliniki z powodu okresowego uczucia kołatania serca, obrzęków kończyn dolnych wokół kostek oraz dolegliwościami w klatce piersiowej o charakterze kłucia pod sutkiem lewym od siedmiu lat, została przyjęta celem diagnostyki.
+
+R1	Dat Arg1:T19 Arg2:T16 <<SHOULD NOT BE REMOVED>>	od siedmiu lat -> okresowego uczucia kołatania serca <:REMOVED Too far from TagInfo[T19, 1887, 1901, Date, od siedmiu lat
+] TagInfo[T15, 1613, 1674, Condition, wypadku komunikacyjnym ze złamaniem obustronnym łuku kręgu C2
+]:> <RANK: 2> <info: start[1887, 1733] <type: LEFT>>
+R2	Dat Arg1:T19 Arg2:T17 <<SHOULD NOT BE REMOVED>>	od siedmiu lat -> obrzęków kończyn dolnych wokół kostek <:REMOVED Too far from TagInfo[T19, 1887, 1901, Date, od siedmiu lat
+] TagInfo[T15, 1613, 1674, Condition, wypadku komunikacyjnym ze złamaniem obustronnym łuku kręgu C2
+]:> <RANK: 2> <info: start[1887, 1769] <type: LEFT>>
+R3	Dat Arg1:T19 Arg2:T18 <<SHOULD NOT BE REMOVED>>	od siedmiu lat -> dolegliwościami w klatce piersiowej o charakterze kłucia pod sutkiem lewym <:REMOVED Too far from TagInfo[T19, 1887, 1901, Date, od siedmiu lat
+] TagInfo[T15, 1613, 1674, Condition, wypadku komunikacyjnym ze złamaniem obustronnym łuku kręgu C2
+]:> <RANK: 3> <info: start[1887, 1812] <type: LEFT>>
+R4	Dat Arg1:T19 Arg2:T15 <<REDUNDANT!!!SHOULD BE REMOVED>>	od siedmiu lat -> wypadku komunikacyjnym ze złamaniem obustronnym łuku kręgu C2  <RANK: 2> <info: start[1887, 1613] <type: LEFT>>
+
+
+Sentence 19:
+Neguje zasłabnięcia, duszności, typowe bóle w klatce piersiowej.
+
+R5	Neg Arg1:T20 Arg2:T21 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[1939, 1946] <type: RIGHT>>
+R6	Neg Arg1:T20 Arg2:T22 << OK >>	Neguje -> duszności  <RANK: 2> <info: start[1939, 1960] <type: RIGHT>>
+R7	Neg Arg1:T20 Arg2:T23 << OK >>	Neguje -> typowe bóle w klatce piersiowej  <RANK: 2> <info: start[1939, 1971] <type: RIGHT>>
+
+
+Sentence 20:
+Przebyte operacje:  usunięcie polipa endometrialnego (2014), abrazja (2016)
+
+R8	Dat Arg1:T26 Arg2:T46 << OK >>	2014 -> polipa endometrialnego  <RANK: 3> <info: start[2058, 2034] <type: LEFT>>
+R9	Dat Arg1:T26 Arg2:T24 <<REDUNDANT!!!SHOULD BE REMOVED>>	2014 -> Przebyte operacje  <RANK: 3> <info: start[2058, 2004] <type: LEFT>>
+R10	Dat Arg1:T26 Arg2:T25 << OK >>	2014 -> usunięcie  <RANK: 3> <info: start[2058, 2024] <type: LEFT>>
+R11	Dat Arg1:T26 Arg2:T27 <<REDUNDANT!!!REMOVED>>	2014 -> abrazja <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2058, 2065] <type: RIGHT>>
+R12	Dat Arg1:T28 Arg2:T46 <<REDUNDANT!!!REMOVED>>	2016 -> polipa endometrialnego <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2074, 2034] <type: LEFT>>
+R13	Dat Arg1:T28 Arg2:T24 <<REDUNDANT!!!REMOVED>>	2016 -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2074, 2004] <type: LEFT>>
+R14	Dat Arg1:T28 Arg2:T25 <<REDUNDANT!!!REMOVED>>	2016 -> usunięcie <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2074, 2024] <type: LEFT>>
+R15	Dat Arg1:T28 Arg2:T27 << OK >>	2016 -> abrazja  <RANK: 3> <info: start[2074, 2065] <type: LEFT>>
+
+
+Sentence 21:
+Przebyte choroby zakaźne - WZW ( - ) , borelioza ( - ), gruźlica (-)
+Wywiad rodzinny: matka - HF, ojciec - MI w wieku 40-kilku lat
+
+R16	Neg Arg1:T30 Arg2:T29 << OK >>	- -> WZW  <RANK: 3> <info: start[2113, 2107] <type: LEFT>>
+R17	Neg Arg1:T30 Arg2:T31 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2113, 2119] <type: RIGHT>>
+R18	Neg Arg1:T30 Arg2:T33 <<REDUNDANT!!!REMOVED>>	- -> gruźlica <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2113, 2136] <type: RIGHT>>
+R19	Neg Arg1:T30 Arg2:T35 <<REDUNDANT!!!REMOVED>>	- -> HF <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2113, 2174] <type: RIGHT>>
+R20	Neg Arg1:T30 Arg2:T36 <<REDUNDANT!!!REMOVED>>	- -> MI <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2113, 2187] <type: RIGHT>>
+R21	Neg Arg1:T30 Arg2:T45 <<REDUNDANT!!!REMOVED>>	- -> Wywiad rodzinny <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2113, 2149] <type: RIGHT>>
+R22	Neg Arg1:T32 Arg2:T29 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2131, 2107] <type: LEFT>>
+R23	Neg Arg1:T32 Arg2:T31 << OK >>	- -> borelioza  <RANK: 3> <info: start[2131, 2119] <type: LEFT>>
+R24	Neg Arg1:T32 Arg2:T33 <<REDUNDANT!!!REMOVED>>	- -> gruźlica <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2131, 2136] <type: RIGHT>>
+R25	Neg Arg1:T32 Arg2:T35 <<REDUNDANT!!!REMOVED>>	- -> HF <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2131, 2174] <type: RIGHT>>
+R26	Neg Arg1:T32 Arg2:T36 <<REDUNDANT!!!REMOVED>>	- -> MI <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2131, 2187] <type: RIGHT>>
+R27	Neg Arg1:T32 Arg2:T45 <<REDUNDANT!!!REMOVED>>	- -> Wywiad rodzinny <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2131, 2149] <type: RIGHT>>
+R28	Neg Arg1:T34 Arg2:T29 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2146, 2107] <type: LEFT>>
+R29	Neg Arg1:T34 Arg2:T31 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2146, 2119] <type: LEFT>>
+R30	Neg Arg1:T34 Arg2:T33 << OK >>	- -> gruźlica  <RANK: 3> <info: start[2146, 2136] <type: LEFT>>
+R31	Neg Arg1:T34 Arg2:T35 <<REDUNDANT!!!REMOVED>>	- -> HF <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2146, 2174] <type: RIGHT>>
+R32	Neg Arg1:T34 Arg2:T36 <<REDUNDANT!!!REMOVED>>	- -> MI <:REMOVED many second tags on the right:> <RANK: 0> <info: start[2146, 2187] <type: RIGHT>>
+R33	Neg Arg1:T34 Arg2:T45 <<REDUNDANT!!!REMOVED>>	- -> Wywiad rodzinny <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2146, 2149] <type: RIGHT>>
+R34	Dat Arg1:T37 Arg2:T29 <<REDUNDANT!!!REMOVED>>	w wieku 40-kilku lat -> WZW <:REMOVED other second tag between (left):> <RANK: 0> <info: start[2190, 2107] <type: LEFT>>
+R35	Dat Arg1:T37 Arg2:T31 <<REDUNDANT!!!REMOVED>>	w wieku 40-kilku lat -> borelioza <:REMOVED other second tag between (left):> <RANK: 0> <info: start[2190, 2119] <type: LEFT>>
+R36	Dat Arg1:T37 Arg2:T33 <<REDUNDANT!!!REMOVED>>	w wieku 40-kilku lat -> gruźlica <:REMOVED other second tag between (left):> <RANK: 0> <info: start[2190, 2136] <type: LEFT>>
+R37	Dat Arg1:T37 Arg2:T35 <<REDUNDANT!!!SHOULD BE REMOVED>>	w wieku 40-kilku lat -> HF  <RANK: 2> <info: start[2190, 2174] <type: LEFT>>
+R38	Dat Arg1:T37 Arg2:T36 << OK >>	w wieku 40-kilku lat -> MI  <RANK: 3> <info: start[2190, 2187] <type: LEFT>>
+R39	Dat Arg1:T37 Arg2:T45 <<REDUNDANT!!!SHOULD BE REMOVED>>	w wieku 40-kilku lat -> Wywiad rodzinny  <RANK: 2> <info: start[2190, 2149] <type: LEFT>>
+
+
+Sentence 22:
+Palenie tytoniu: nie
+Inne używki: nie
+Uczulenia: Pyralgina - duszność
+
+R40	Neg Arg1:T39 Arg2:T42 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2228, 2249] <type: RIGHT>>
+R41	Neg Arg1:T39 Arg2:T43 <<REDUNDANT!!!REMOVED>>	nie -> Pyralgina - duszność <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2228, 2260] <type: RIGHT>>
+R42	Neg Arg1:T39 Arg2:T38 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[2228, 2211] <type: LEFT>>
+R43	Neg Arg1:T39 Arg2:T40 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2228, 2232] <type: RIGHT>>
+R44	Neg Arg1:T41 Arg2:T42 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2245, 2249] <type: RIGHT>>
+R45	Neg Arg1:T41 Arg2:T43 <<REDUNDANT!!!REMOVED>>	nie -> Pyralgina - duszność <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2245, 2260] <type: RIGHT>>
+R46	Neg Arg1:T41 Arg2:T38 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2245, 2211] <type: LEFT>>
+R47	Neg Arg1:T41 Arg2:T40 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[2245, 2232] <type: LEFT>>
+
+
+Sentence 23:
+Stan społeczny: warunki mieszkaniowe dobre , mieszka z rodziną
+
+
+
+Sentence 24:
+Leki: nie przyjmuje na stałe
+------------------------------------------------
+
+
+
+Sentence 25:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 26:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.10[10^3/ul]
+    
+
+
+Sentence 27:
+RBC Krwinki czerwone:4.40[10^6/ul]
+    
+
+
+Sentence 28:
+HGB Hemoglobina:10.9[g/dl]
+    
+
+
+Sentence 29:
+HCT Hematokryt:33.8[%]
+    
+
+
+Sentence 30:
+MCV wskaźnik czerwonokrw:76.8[fl]
+    
+
+
+Sentence 31:
+MCH wskaźnik czerwonokrw:24.8[pg]
+    
+
+
+Sentence 32:
+MCHC wskaźnik czerwonokr:32.2[g/dl]
+    
+
+
+Sentence 33:
+PLT z morfologii:128[10^3/ul]
+    
+
+
+Sentence 34:
+RDW-SD:40.4[fl]
+    
+
+
+Sentence 35:
+RDW-CV:14.5[%]
+    PDW:16.6[fl]
+    MPV:11.9[fl]
+    
+
+
+Sentence 36:
+P-LCR:40.1[%]
+    
+
+
+Sentence 37:
+PCT (hematokryt płytkowy:0.15[%]
+    
+
+
+Sentence 38:
+NEUTR# wartość bezwzględ:2.36[10^3/ul]
+    
+
+
+Sentence 39:
+NEUTR%:57.6[%]
+    
+
+
+Sentence 40:
+LYMH# wartość bezwzględn:1.17[10^3/ul]
+    
+
+
+Sentence 41:
+LYMPH%:28.5[%]
+    
+
+
+Sentence 42:
+MONO# wartość bezwzględn:0.36[10^3/ul]
+    
+
+
+Sentence 43:
+MONO%:8.8[%]
+    
+
+
+Sentence 44:
+EO# wartość bezwzględna:0.19[10^3/ul]
+    
+
+
+Sentence 45:
+EO%:4.6[%]
+    
+
+
+Sentence 46:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    
+
+
+Sentence 47:
+BASO%:0.5[%]
+    
+
+
+Sentence 48:
+NRBC %:0.0[%]
+    
+
+
+Sentence 49:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 50:
+Badanie ogólne moczu
+    
+
+
+Sentence 51:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 52:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 53:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 54:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 55:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 56:
+ciężar właściwy:1.019[ ]
+    
+
+
+Sentence 57:
+kwas askrobinowy:20 mg/dl[ ]
+    
+
+
+Sentence 58:
+pH:5.0[ ]
+    
+
+
+Sentence 59:
+białko:nieobecne[ ]
+    
+
+
+Sentence 60:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 61:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 62:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 63:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 64:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 65:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 66:
+leukocyty:1 /ul[ul]
+    erytrocyty świeże:7 /ul[ul]
+    śluz:nieliczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 67:
+TSH: TSH:0.68[uIU/ml]
+
+
+
+Sentence 68:
+FT3: FT3:2.70[pg/ml]
+
+
+
+Sentence 69:
+FT4: FT4:0.97[ng/dl]
+
+
+
+Sentence 70:
+Troponina T: Troponina T:5.3[pg/ml]
+
+
+
+Sentence 71:
+Ferrytyna: Ferrytyna:5.8[ng/ml]
+
+
+
+Sentence 72:
+ALAT: ALAT:15[U/L]
+ASPAT: ASPAT:19[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 73:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 74:
+Potas (K): Potas:4.4[mmol/L]
+
+
+
+Sentence 75:
+Kreatynina + GFR
+    
+
+
+Sentence 76:
+Kreatynina w surowicy:0.53[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 77:
+MDRD ze stan:120.7[ml/min/1,73 m^2]
+
+
+
+Sentence 78:
+Mocznik: Mocznik:25[mg/dl]
+
+
+
+Sentence 79:
+Gospodarka żelazem
+    Żelazo:53[ug/dl]
+    
+
+
+Sentence 80:
+TIBC (Całkowita zdolność:353[ug/dl]
+    
+
+
+Sentence 81:
+UIBC (Utajona zdolność w:300[ug/dl]
+    
+
+
+Sentence 82:
+Wskaźnik wysycenia Fe:15[%]
+
+
+
+Sentence 83:
+Kwas moczowy: Kwas moczowy:4.2[mg/dl]
+
+
+
+Sentence 84:
+Lipidogram
+    
+
+
+Sentence 85:
+Cholesterol całkowity:202[mg/dl]
+    
+
+
+Sentence 86:
+Cholesterol HDL:65[mg/dl]
+    
+
+
+Sentence 87:
+Cholestrol LDL:106[mg/dl]
+    Triglicerydy:74[mg/dl]
+    
+
+
+Sentence 88:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:93[mg/dl]
+
+
+
+Sentence 89:
+NT-proBNP surowica: NT-proBNP w surowicy:96[pg/ml]
+
+
+
+Sentence 90:
+------------------------------------------------
+
+
+
+Sentence 91:
+ICD10
+------------------------------------------------
+I34.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 92:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 93:
+89.501
+88.721
+89.41
+87.440
+88.761
+------------------------------------------------
+
+

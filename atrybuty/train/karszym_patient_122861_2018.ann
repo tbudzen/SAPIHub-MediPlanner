@@ -1,0 +1,23 @@
+T1	Behaviour 332 388	Ograniczenie wysiłku fizycznego do poziomu rekreacyjnego
+T2	Treatment 481 490	konsylium
+T3	Condition 753 804	Wrodzona wada serca pod postacią tetralogii Fallota
+N1	Reference T3 ICD10:Q21.3	Tetralogia Fallota
+T4	Treatment 808 827	korekcji całkowitej
+N2	Reference T4 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T5	Date 829 840	12.06.2000r
+T6	Treatment 856 866	reoperacji
+N3	Reference T6 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T7	Treatment 869 920	implantacją biologicznej zastawki płucnej CorMatrix
+N4	Reference T7 ICD10:Z95.4	Obecność innych protez zastawek serca
+T8	Date 922 933	02.06.2014r
+T9	Condition 940 970	Zwężenie zastawki biologicznej
+N5	Reference T9 ICD10:T82.0	Mechaniczne powikłanie protezy zastawki serca
+T10	Condition 975 1003	Nadkomorowe zaburzenia rytmu
+T11	Negation 1124 1137	Nie stosowano
+T12	Treatment 1138 1164	leczenia farmakologicznego
+R1	Dat Arg1:T8 Arg2:T7	
+R2	Dat Arg1:T8 Arg2:T6	
+R3	Dat Arg1:T5 Arg2:T3	
+R4	Dat Arg1:T5 Arg2:T4	
+R5	Neg Arg1:T11 Arg2:T12	
+N6	Reference T10 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]

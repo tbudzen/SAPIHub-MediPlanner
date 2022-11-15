@@ -1,0 +1,128 @@
+T1	Treatment 339 410	dalsza opieka u lekarza POZ oraz Poradni Onkologicznej, Kardiologicznej
+T2	Behaviour 413 452	Dieta cukrzycowa  , niskocholesterolowa
+T3	Treatment 456 539	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T4	Treatment 542 590	Systematyczna kontrola ciśnienia tętniczego krwi
+T5	Treatment 602 649	rozważenie wykonania testu OGTT w warunkach POZ
+T6	Investigation 877 888	Diagnostyka
+T7	Symptom 889 914	bólów w klatce piersiowej
+N1	Reference T7 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T8	Condition 916 936	Hipercholesterolemia
+N2	Reference T8 ICD10:E78.0	Czysta hipercholesterolemia
+T9	Condition 938 951	Hiperurykemia
+N3	Reference T9 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T10	Treatment 963 976	chemioterapii
+N4	Reference T10 ICD10:Z51.1	Cykl chemioterapii przeciwnowotworowej
+T11	Drug 979 991	doxorubicyna
+T12	Drug 993 1006	cyclofosfamid
+T13	Drug 1008 1018	paclitaxel
+T14	Date 1022 1032	02-07.2019
+T15	Treatment 1035 1047	radioterapii
+N5	Reference T15 ICD10:Z51.0	Sesja radioterapii
+T16	Date 1048 1064	28.09-04.10.2019
+T17	Condition 1074 1092	raka piersi prawej
+N6	Reference T17 ICD10:C50.9	Pierś, umiejscowienie nieokreślone
+T18	Treatment 1102 1113	mastektomii
+N7	Reference T18 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T19	Treatment 1116 1144	limfadenektomi prawostronnej
+N8	Reference T19 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T20	Condition 1154 1158	raka
+N9	Reference T20 ICD10:C50.9	Pierś, umiejscowienie nieokreślone
+T21	Date 1160 1170	31.07.2019
+T22	Treatment 1180 1213	operacji częściowej szyjki macicy
+N10	Reference T22 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T23	Date 1234 1245	3 lata temu
+T24	Condition 1223 1231	nadżerki
+N11	Reference T24 ICD10:N86	Nadżerka i wywinięcie błony śluzowej kanału szyjki macicy
+R1	Dat Arg1:T23 Arg2:T24	
+R2	Dat Arg1:T23 Arg2:T22	
+T25	Behaviour 1247 1257	Nikotynizm
+N12	Reference T25 ICD10:Z72.0	Używanie tytoniu
+T26	Condition 1259 1266	Otyłość
+N13	Reference T26 ICD10:E66.9	Otyłość, nieokreślona
+R3	Dat Arg1:T14 Arg2:T10	
+R4	Dat Arg1:T14 Arg2:T11	
+R5	Dat Arg1:T14 Arg2:T12	
+R6	Dat Arg1:T14 Arg2:T13	
+R7	Dat Arg1:T16 Arg2:T15	
+R8	Dat Arg1:T16 Arg2:T17	
+R9	Dat Arg1:T14 Arg2:T17	
+R10	Dat Arg1:T21 Arg2:T18	
+R11	Dat Arg1:T21 Arg2:T19	
+R12	Dat Arg1:T21 Arg2:T20	
+T27	Symptom 1665 1729	niecharakterystycznych dolegliwości bólowych w klatce piersiowej
+T28	Negation 1733 1739	Neguje
+T29	Symptom 1740 1752	zasłabnięcia
+R13	Neg Arg1:T28 Arg2:T29	
+T30	Treatment 1777 1802	mastektomii prawostronnej
+N15	Reference T30 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T31	Condition 1812 1814	ca
+N16	Reference T31 ICD10:C50.9	Pierś, umiejscowienie nieokreślone
+T32	Date 1816 1826	31.07.2019
+R14	Dat Arg1:T32 Arg2:T31	
+R15	Dat Arg1:T32 Arg2:T30	
+T33	Treatment 1837 1848	radioteraii
+N17	Reference T33 ICD10:Z51.0	Sesja radioterapii
+T34	Date 1849 1865	28.09-04.10.2019
+R16	Dat Arg1:T34 Arg2:T33	
+T35	Treatment 1875 1888	chemioterapii
+N18	Reference T35 ICD10:Z51.1	Cykl chemioterapii przeciwnowotworowej
+T36	Date 1891 1913	20.02.2019 -11.07.2019
+T37	Drug 1915 1928	doksorubicyną
+R17	Dat Arg1:T36 Arg2:T35	
+R18	Dat Arg1:T36 Arg2:T37	
+T38	Condition 1932 1941	Otyłość  
+N19	Reference T38 ICD10:E66.9	Otyłość, nieokreślona
+T39	Treatment 1970 1978	operacji
+T40	Condition 1979 2000	tłuszczaka na plecach
+A1	Status T40 Historical_Insignificant
+N20	Reference T40 ICD10:D17.1	Tłuszczak skóry i tkanki podskórnej tułowia
+A2	Status T39 Historical_Insignificant
+T41	Date 2001 2011	5 lat temu
+R19	Dat Arg1:T41 Arg2:T39	
+R20	Dat Arg1:T41 Arg2:T40	
+T42	Treatment 2022 2055	operacji częściowej szyjki macicy
+N21	Reference T42 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T43	Condition 2065 2073	nadżerki
+N22	Reference T43 ICD10:N86	Nadżerka i wywinięcie błony śluzowej kanału szyjki macicy
+T44	Date 2076 2087	3 lata temu
+R21	Dat Arg1:T44 Arg2:T43	
+R22	Dat Arg1:T44 Arg2:T42	
+A3	Status T22 Historical_Insignificant
+A4	Status T42 Historical_Insignificant
+T45	Treatment 2089 2124	Leczenie przewlekłe:  onkologicznie
+T46	Condition 2153 2175	WZW ( prawdopodobnie A
+A5	Source T46 Declared
+N23	Reference T46 ICD10:B15	Ostre wirusowe zapalenie wątroby typu A
+T47	Date 2176 2196	w wieku przedszkolny
+R23	Dat Arg1:T47 Arg2:T46	
+T48	Condition 2202 2211	borelioza
+N24	Reference T48 ICD10:A69.2	Choroba z Lyme
+T49	Condition 2218 2222	Odra
+N25	Reference T49 ICD10:B05	Odra
+T50	Negation 2212 2217	( - )
+T51	Negation 2223 2228	( - )
+R24	Neg Arg1:T51 Arg2:T49	
+R25	Neg Arg1:T50 Arg2:T48	
+T52	Condition 2268 2283	cukrzyca typu 2
+N26	Reference T52 ICD10:E11	Cukrzyca insulinoniezależna
+A6	Status T52 Family
+T53	Condition 2292 2313	nadciśnienie tętnicze
+A7	Status T53 Family
+N27	Reference T53 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T54	Behaviour 2316 2355	Palenie tytoniu: tak 1/2 paczki na dobę
+N28	Reference T54 ICD10:Z72.0	Używanie tytoniu
+T55	Behaviour 2357 2368	Inne używki
+T56	Negation 2370 2373	nie
+T57	Condition 2374 2383	Uczulenia
+N29	Reference T57 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T58	Negation 2385 2391	neguje
+T59	Behaviour 2408 2434	warunki mieszkaniowe dobre
+T60	Behaviour 2437 2451	mieszka z sama
+T61	Negation 2458 2461	bez
+T62	Drug 2462 2480	leków przewlekłych
+R26	Neg Arg1:T56 Arg2:T55	
+R27	Neg Arg1:T58 Arg2:T57	
+R28	Neg Arg1:T61 Arg2:T62	
+T63	Investigation 2495 2505	Echo serca
+T64	Investigation 2509 2524	Próba Wysiłkowa
+N14	Reference T27 ICD10:R07.3	Inne bóle w klatce piersiowej

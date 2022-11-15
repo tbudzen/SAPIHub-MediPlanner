@@ -1,0 +1,149 @@
+T1	Condition 448 473	Dysfunkcja rozkurczowa LK
+N1	Reference T1 ICD10:I50.1	Niewydolność serca lewokomorowa
+T2	Condition 475 517	Poszerzenie opuszki oraz aorty wstępującej
+T3	Condition 519 540	Nadciśnienie tętnicze
+N3	Reference T3 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T4	Treatment 550 562	strumectomii
+T5	Treatment 572 585	histerektomii
+T6	Condition 587 601	Kamica nerkowa
+N4	Reference T6 ICD10:N20.0	Kamica nerki
+T7	Condition 603 617	Torbiele nerek
+N5	Reference T7 ICD10:Q61.3	Wielotorbielowatość nerek, nieokreślona
+T8	Treatment 726 822	dalsza opieka w poradni POZ, okresowa kontrola kardiologiczna, endokrynologiczna, psychiatryczna
+T9	Behaviour 823 842	redukcja masy ciała
+T10	Treatment 844 886	wskazana konsultacja dietetyka klinicznego
+T11	Behaviour 887 915	regularna aktywność fizyczna
+T12	Treatment 917 947	systematyczne stosowanie leków
+T13	Drug 949 960	Betaloc ZOK
+T14	Drug_dose 961 979	50 mg 1 tabl. rano
+R1	Drg Arg1:T13 Arg2:T14	
+T15	Drug 980 986	Carzap
+T16	Drug_dose 987 1010	16+12,5 mg 1 tabl. rano
+R2	Drg Arg1:T15 Arg2:T16	
+T17	Drug 1011 1019	Primacor
+T18	Drug_dose 1020 1043	10 mg 1 tabl. wieczorem
+R3	Drg Arg1:T17 Arg2:T18	
+T19	Symptom 1187 1212	obrzękami kończyn dolnych
+T20	Symptom 1216 1240	uczuciem kołatania serca
+N7	Reference T20 ICD10:R00.2	Kołatanie serca
+T21	Condition 1308 1327	niewydolności serca
+N8	Reference T21 ICD10:I50.9	Niewydolność serca, nieokreślona
+T22	Symptom 1415 1465	przybieranie masy ciała, pomimo ćwiczeń fizycznych
+N9	Reference T22 ICD10:R63.5	Nieprawidłowy przyrost masy ciała
+T23	Condition 1502 1523	nadciśnienie tętnicze
+N10	Reference T23 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T24	Date 1524 1532	od 4 lat
+R4	Dat Arg1:T24 Arg2:T23	
+T25	Condition 1534 1540	jaskra
+N11	Reference T25 ICD10:H40.9	Jaskra, nieokreślona
+T26	Condition 1542 1556	kamica nerkowa
+N12	Reference T26 ICD10:N20.0	Kamica nerki
+T27	Treatment 1567 1579	strumectomii
+A1	Status T27 Historical_Insignificant
+T28	Date 1580 1587	w 1989r
+R5	Dat Arg1:T28 Arg2:T27	
+T29	Condition 1673 1691	chorowała na serce
+A2	Status T29 Family
+N13	Reference T29 ICD10:I51.6	Choroby serca i naczyń krwionośnych, nieokreślone
+T30	Negation 1693 1699	Neguje
+T31	Symptom 1701 1713	zasłabnięcia
+T32	Symptom 1715 1723	omdlenia
+N14	Reference T32 ICD10:R55	Omdlenie i zapaść
+T33	Symptom 1725 1735	krwawienia
+T34	Symptom 1737 1750	czarne stolce
+N15	Reference T34 ICD10:K92.1	Stolce smołowate
+T35	Symptom 1752 1768	brunatne wymioty
+N16	Reference T35 ICD10:K92.0	Wymioty krwawe
+T36	Symptom 1770 1784	duszność nocną
+N17	Reference T36 ICD10:R06.0	Duszność
+T37	Symptom 1786 1801	obrzęki podudzi
+T38	Symptom 1803 1851	bóle w klatce piersiowej o charakterze dławienia
+R6	Neg Arg1:T30 Arg2:T38	
+R7	Neg Arg1:T30 Arg2:T37	
+R8	Neg Arg1:T30 Arg2:T36	
+R9	Neg Arg1:T30 Arg2:T35	
+R10	Neg Arg1:T30 Arg2:T34	
+R11	Neg Arg1:T30 Arg2:T33	
+R12	Neg Arg1:T30 Arg2:T32	
+R13	Neg Arg1:T30 Arg2:T31	
+T39	Treatment 1880 1893	appendektomia
+A3	Status T39 Historical_Insignificant
+T40	Date 1873 1877	1977
+R14	Dat Arg1:T40 Arg2:T39	
+T41	Date 1895 1899	1989
+T42	Date 1916 1921	2007r
+T43	Treatment 1902 1914	strumectomia
+A4	Status T43 Historical_Insignificant
+R15	Dat Arg1:T41 Arg2:T43	
+T44	Treatment 1925 1938	histerektomia
+A5	Status T44 Historical_Insignificant
+R16	Dat Arg1:T42 Arg2:T44	
+T45	Behaviour 1961 1976	Palenie tytoniu
+T46	Negation 1978 1986	nie pali
+R17	Neg Arg1:T46 Arg2:T45	
+T47	Behaviour 1988 1999	Inne używki
+T48	Negation 2001 2004	nie
+R18	Neg Arg1:T48 Arg2:T47	
+T49	Condition 2005 2014	Uczulenia
+T50	Negation 2016 2019	nie
+R19	Neg Arg1:T50 Arg2:T49	
+T51	Condition 2047 2052	WZW B
+N21	Reference T51 ICD10:B16	Ostre wirusowe zapalenie wątroby typu B
+T52	Date 2057 2062	1973r
+R20	Dat Arg1:T52 Arg2:T51	
+T53	Condition 2066 2075	borelioza
+N22	Reference T53 ICD10:A69.2	Choroba z Lyme
+T54	Negation 2077 2078	-
+R21	Neg Arg1:T54 Arg2:T53	
+T55	Condition 2081 2084	tbc
+T56	Negation 2086 2087	-
+R22	Neg Arg1:T56 Arg2:T55	
+T57	Condition 2090 2094	odra
+N24	Reference T57 ICD10:B05	Odra
+T58	Negation 2096 2097	-
+R23	Neg Arg1:T58 Arg2:T57	
+T59	Condition 2100 2114	kontakt z odrą
+N25	Reference T59 ICD10:B05	Odra
+T60	Negation 2116 2117	-
+R24	Neg Arg1:T60 Arg2:T59	
+T61	Behaviour 2135 2161	warunki mieszkaniowe dobre
+T62	Drug 2196 2202	Bibloc
+T63	Drug_dose 2203 2210	5 1-0-0
+R25	Drg Arg1:T62 Arg2:T63	
+T64	Drug 2211 2221	Carzap HCT
+T65	Drug_dose 2222 2235	16+12,5 1-0-0
+R26	Drg Arg1:T64 Arg2:T65	
+T66	Drug 2236 2244	Betaserc
+T67	Drug 2272 2280	Dexilant
+T68	Drug 2254 2260	Oriven
+T69	Drug_dose 2245 2253	24 1-0-0
+R27	Drg Arg1:T66 Arg2:T69	
+T70	Drug_dose 2261 2271	37,5 1-0-0
+R28	Drg Arg1:T68 Arg2:T70	
+T71	Drug_dose 2281 2289	60 0-0-1
+R29	Drg Arg1:T67 Arg2:T71	
+T72	Investigation 2350 2371	badania laboratoryjne
+T73	Investigation 2373 2377	ECHO
+T74	Investigation 2379 2397	EKG metodą Holtera
+T75	Investigation 2399 2403	ABPM
+T76	Investigation 2405 2420	próba wysiłkowa
+T77	Condition 1650 1665	Wywiad rodzinny
+A6	Status T77 Family
+T78	Treatment 1854 1871	Przebyte operacje
+A7	Status T4 Historical_Insignificant
+A8	Status T5 Historical_Insignificant
+N2	Reference T2 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T79	Condition 1949 1959	mięśniaków
+N26	Reference T79 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+T80	Investigation_result 1467 1487	około 2-3 kg/miesiąc
+N27	Reference T80 ICD10:R63.5	Nieprawidłowy przyrost masy ciała
+N29	Reference T49 ICD10:T78.4	Alergia, nieokreślona
+N30	Reference T31 ICD10:R55	Omdlenie i zapaść
+A9	Status T79 Historical_Insignificant
+N20	Reference T45 ICD10:Z72.0	Używanie tytoniu
+N6	Reference T19 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N28	Reference T33 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N18	Reference T37 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N31	Reference T47 ICD10:Z72	Problemy związane ze stylem życia
+N23	Reference T55 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N19	Reference T38 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony

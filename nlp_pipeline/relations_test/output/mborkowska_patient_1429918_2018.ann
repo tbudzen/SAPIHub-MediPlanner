@@ -1,0 +1,138 @@
+T1	Investigation 2186 2190	ECHO
+T2	Investigation 2192 2211	EKG metodą Holtera,
+T3	Investigation 2212 2216	ABPM
+T4	Investigation 2218 2233	próba wysiłkowa
+T5	Drug 2076 2083	Lacipil
+T6	Drug 2040 2055	Lipanthyl Supra
+T7	Drug 2013 2018	Acard
+T8	Drug_dose 2019 2039	75mg 1x 1 tabl/wiecz
+R1	Drg Arg1:T7 Arg2:T8	
+T9	Drug_dose 2056 2075	215 1x 1 tabl/obiad
+R2	Drg Arg1:T6 Arg2:T9	
+T10	Drug_dose 2084 2102	4mg 1x 1 tabl/rano
+R3	Drg Arg1:T5 Arg2:T10	
+T11	Condition 1943 1946	WZW
+N1	Reference T11 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T12	Condition 1953 1962	borelioza
+N2	Reference T12 ICD10:A69.2.	Choroba z Lyme
+T13	Condition 1970 1973	tbc
+N3	Reference T13 ICD10:A15	
+T14	Negation 1974 1977	(-)
+R4	Neg Arg1:T14 Arg2:T13	
+T15	Negation 1963 1968	( - )
+R5	Neg Arg1:T15 Arg2:T12	
+T16	Negation 1947 1950	(-)
+R6	Neg Arg1:T16 Arg2:T11	
+T17	Negation 1912 1915	nie
+T18	Negation 1896 1899	nie
+T19	Negation 1863 1871	nie pali
+T20	Negation 1841 1845	brak
+T21	Condition 1900 1909	Uczulenia
+N4	Reference T21 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R7	Neg Arg1:T17 Arg2:T21	
+T22	Behaviour 1883 1895	Inne używki:
+N5	Reference T22 ICD10:Z72	Problemy związane ze stylem życia
+R8	Neg Arg1:T18 Arg2:T22	
+T23	Condition 1846 1861	Palenie tytoniu
+N6	Reference T23 ICD10:Z72.0	Używanie tytoniu
+R9	Neg Arg1:T19 Arg2:T23	
+T24	Date 1872 1882	od 01.2018
+R10	Dat Arg1:T24 Arg2:T23	
+T25	Treatment 1822 1839	Przebyte operacje
+R11	Neg Arg1:T20 Arg2:T25	
+T26	Investigation 459 484	angioCT tętnic wieńcowych
+T27	Behaviour 487 512	dieta niskocholesterolowa
+T28	Treatment 331 353	kontrola u lekarza POZ
+T29	Drug 545 550	Acard
+T30	Drug_dose 551 555	75mg
+R12	Drg Arg1:T29 Arg2:T30	
+T31	Drug 676 681	Acard
+T32	Drug 683 699	Lipanthyl Supra,
+T33	Drug 700 707	Amlopin
+T34	Condition 925 952	Choroba niedokrwienna serca
+T35	Condition 954 975	Nadciśnienie tętnicze
+N8	Reference T35 ICD10:I10	
+T36	Behaviour 977 998	Przewlekły nikotynizm
+N9	Reference T36 ICD10:Z72.0	Używanie tytoniu
+T37	Condition 1012 1024	Dyslipidemia
+N10	Reference T37 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T38	Condition 1026 1046	Torbiel nerki lewej.
+N11	Reference T38 ICD10:N28.1	Torbiel nerki, nabyta
+T39	Condition 1047 1110	Choroba zwyrodnieniowa stawów kręgosłupa szyjnego i lędźwiowego
+T40	Condition 1266 1278	dyslipidemią
+N13	Reference T40 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T41	Drug 1280 1289	Lipanthyl
+T42	Condition 1292 1294	HA
+N14	Reference T42 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T43	Investigation_result 1295 1325	(RR w domu 138/95-165/101mmHg)
+T44	Investigation_result 1356 1378	chwiejnych wartości RR
+T45	Symptom 1380 1419	bólów w lewej połowie klatki peirsiowej
+N15	Reference T45 ICD10:R07.3	Inne bóle w klatce piersiowej
+T46	Date 1420 1429	od 3 m-cy
+R13	Dat Arg1:T46 Arg2:T45	
+T47	Behaviour 1482 1534	wieloletni przewlekły nikotynizm 20-30 papierosów/dz
+N16	Reference T47 ICD10:Z72.0	Używanie tytoniu
+T48	Date 1536 1546	od 01.2018
+R14	Dat Arg1:T48 Arg2:T47	
+T49	Negation 1547 1556	nie pali!
+R15	Neg Arg1:T49 Arg2:T47	
+T50	Condition 1557 1580	chromanie przestankowe?
+A1	Source T50 Declared
+T51	Condition 1581 1644	choroba zwyrodnieniowa stawów kręgosłupa szyjnego i lędźwiowego
+N17	Reference T51 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T52	Negation 1646 1652	Neguje
+T53	Symptom 1654 1666	zasłabnięcia
+N18	Reference T53 ICD10:R55	Omdlenie i zapaść
+T54	Symptom 1668 1676	omdlenia
+N19	Reference T54 ICD10:R55	Omdlenie i zapaść
+T55	Symptom 1678 1688	krwawienia
+N20	Reference T55 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T56	Symptom 1690 1703	czarne stolce
+N21	Reference T56 ICD10:K92.1	Stolce smołowate
+T57	Symptom 1705 1722	brunatne wymioty,
+N22	Reference T57 ICD10:K92.0	Wymioty krwawe
+T58	Condition 1723 1739	chorobę wrzodową
+N23	Reference T58 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T59	Symptom 1741 1756	duszność nocną,
+N24	Reference T59 ICD10:R06.0	Duszność
+T60	Symptom 1757 1773	obrzęki podudzi,
+N25	Reference T60 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T61	Symptom 1774 1790	kołatania serca,
+N26	Reference T61 ICD10:R00.2	Kołatanie serca
+T62	Condition 1791 1793	DM
+N27	Reference T62 ICD10:E13	Inne określone postacie cukrzycy
+T63	Condition 1795 1805	udar mózgu
+N28	Reference T63 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T64	Condition 1807 1818	zawał serca
+N29	Reference T64 ICD10:I25.2	Przebyty zawał serca
+R16	Neg Arg1:T52 Arg2:T53	
+R17	Neg Arg1:T52 Arg2:T54	
+R18	Neg Arg1:T52 Arg2:T55	
+R19	Neg Arg1:T52 Arg2:T56	
+R20	Neg Arg1:T52 Arg2:T57	
+R21	Neg Arg1:T52 Arg2:T58	
+R22	Neg Arg1:T52 Arg2:T59	
+R23	Neg Arg1:T52 Arg2:T60	
+R24	Neg Arg1:T52 Arg2:T61	
+R25	Neg Arg1:T52 Arg2:T62	
+R26	Neg Arg1:T52 Arg2:T63	
+R27	Neg Arg1:T52 Arg2:T64	
+N7	Reference T34 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+N12	Reference T39 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T65	Treatment 356 425	dalsza kontrola w Poradni Kardiologicznej i Wad wrodzonych Dorosłych-
+R1	Drg Arg1:T29 Arg2:T30
+R21	Neg Arg1:T20 Arg2:T25
+R22	Neg Arg1:T16 Arg2:T11
+R23	Neg Arg1:T16 Arg2:T12
+R32	Neg Arg1:T18 Arg2:T21
+R37	Neg Arg1:T19 Arg2:T22
+R4	Dat Arg1:T46 Arg2:T45
+R41	Dat Arg1:T24 Arg2:T22
+R43	Neg Arg1:T14 Arg2:T7
+R45	Neg Arg1:T15 Arg2:T13
+R48	Drg Arg1:T7 Arg2:T8
+R52	Drg Arg1:T6 Arg2:T9
+R6	Neg Arg1:T49 Arg2:T50
+R7	Dat Arg1:T48 Arg2:T50
+R8	Neg Arg1:T52 Arg2:T53
+R9	Neg Arg1:T52 Arg2:T54

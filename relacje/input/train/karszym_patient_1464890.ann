@@ -1,0 +1,204 @@
+T1	Condition 448 490	Choroba niedokrwienna serca II/III* wg CCS
+N1	Reference T1 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T2	Investigation 492 518	angio CT tętnic wieńcowych
+T3	Date 521 531	17.12.2018
+T4	Investigation_result 532 552	LAD zwężenia do 50 %
+N2	Reference T4 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T5	Investigation_result 554 567	LCx do 25-50%
+N3	Reference T5 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T6	Investigation_result 569 582	RCA do 50-75%
+N4	Reference T6 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+R1	Dat Arg1:T3 Arg2:T2	
+R2	Inv Arg1:T2 Arg2:T4	
+R3	Inv Arg1:T2 Arg2:T5	
+R4	Inv Arg1:T2 Arg2:T6	
+T7	Condition 585 642	Podejrzenie guza lewej komory serca w trakcie diagnostyki
+A1	Source T7 Declared
+N5	Reference T7 ICD10:D48.7	Inne określone umiejscowienie
+T8	Investigation 664 668	ECHO
+T9	Negation 645 663	nieoptymalny obraz
+R5	Neg Arg1:T9 Arg2:T8	
+T10	Condition 671 742	Arytmia komorowa pod postacią licznych pojedynczych pobudzeń komorowych
+N6	Reference T10 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T11	Condition 744 768	Cukrzyca typu II de novo
+N7	Reference T11 ICD10:E11	Cukrzyca insulinoniezależna
+T12	Condition 770 790	Hipercholesterolemia
+N8	Reference T12 ICD10:E78.0	Czysta hipercholesterolemia
+T13	Condition 792 797	POChP
+N9	Reference T13 ICD10:J44.8	Inna określona przewlekła obturacyjna choroba płuc
+T14	Treatment 807 830	lobektomii górnej lewej
+N10	Reference T14 ICD10:Z90.2	Nabyty brak [części] płuca
+T15	Condition 840 850	raka płuca
+N11	Reference T15 ICD10:C34.1	Płat górny płuca lub oskrzele płatowe górne
+T16	Date 852 856	2017
+R6	Dat Arg1:T16 Arg2:T14	
+R7	Dat Arg1:T16 Arg2:T15	
+T17	Behaviour 859 869	Nikotynizm
+N12	Reference T17 ICD10:Z72.0	Używanie tytoniu
+T18	Treatment 1003 1111	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Pulmonologicznej, Diabetologicznej i Onkologicznej
+T19	Investigation 1135 1173	koronarografii w trybie przyspieszonym
+T20	Symptom 1185 1204	nasilenie duszności
+N13	Reference T20 ICD10:R06.0	Duszność
+T21	Condition 1210 1227	arytmii komorowej
+N14	Reference T21 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T22	Investigation 1242 1268	angio-CT tętnic wieńcowych
+T23	Investigation_result 1283 1312	zaostrzenie choroby wieńcowej
+R8	Inv Arg1:T22 Arg2:T23	
+N15	Reference T23 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T24	Investigation 1357 1382	MRI serca w trybie pilnym
+T25	Date 1393 1403	14.03.2019
+R9	Dat Arg1:T25 Arg2:T24	
+T26	Behaviour 1539 1578	Dieta lekkostrawna, niskocholesterolowa
+T27	Treatment 1585 1676	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T28	Date 1677 1687	co 6-8 tyg
+R10	Dat Arg1:T28 Arg2:T27	
+T29	Treatment 1694 1742	Systematyczna kontrola ciśnienia tętniczego krwi
+T30	Treatment 1758 1795	ambulatoryjna (POZ) kontrola glikemii
+T31	Date 1796 1808	za 10-14 dni
+T32	Treatment 1811 1851	dalsza opieka w Poradni Diabetologicznej
+R11	Dat Arg1:T31 Arg2:T30	
+T33	Negation 1856 1861	Zakaz
+T34	Behaviour 1862 1877	palenia tytoniu
+N16	Reference T34 ICD10:Z72.0	Używanie tytoniu
+R12	Neg Arg1:T33 Arg2:T34	
+T35	Drug 1888 1897	Metformax
+T36	Drug_dose 1898 1913	500 mg 2x1 tabl
+T37	Drug 1915 1922	Romazic
+T38	Drug_dose 1923 1948	20 mg 1x1 tabl. wieczorem
+T39	Drug 1949 1954	Acard
+T40	Drug_dose 1955 1980	75 mg 1x1 tabl. wieczorem
+T41	Drug 1981 1997	Kalipoz prolong.
+T42	Drug_dose 1998 2012	1x1 tabl. rano
+T43	Drug 2013 2022	Controloc
+T44	Drug_dose 2023 2052	40 mg 1x1 tabl. rano na czczo
+T45	Drug 2053 2062	Co-Diovan
+T46	Drug_dose 2063 2094	160+25 mg 1x1/2 tabl. wieczorem
+T47	Drug 2095 2103	Bisocard
+T48	Drug_dose 2104 2125	2,5 mg 1x1 tabl. rano
+T49	Drug 2126 2136	Berodual N
+T50	Drug_dose 2137 2146	2x1 dawka
+T51	Drug 2147 2167	Pulmicort Turbuhaler
+T52	Drug_dose 2168 2177	2x1 dawka
+T53	Drug 2178 2186	Encorton
+T54	Drug_dose 2187 2204	10 mg 2-1-0 tabl.
+T55	Date 2206 2217	przez 7 dni
+T56	Drug_dose 2226 2237	2-0-0 tabl.
+T57	Date 2238 2249	przez 5 dni
+T58	Drug_dose 2257 2268	1-0-0 tabl.
+T59	Date 2269 2280	przez 5 dni
+R13	Drg Arg1:T35 Arg2:T36	
+R14	Drg Arg1:T37 Arg2:T38	
+R15	Drg Arg1:T39 Arg2:T40	
+R16	Drg Arg1:T41 Arg2:T42	
+R17	Drg Arg1:T43 Arg2:T44	
+R18	Drg Arg1:T45 Arg2:T46	
+R19	Drg Arg1:T47 Arg2:T48	
+R20	Drg Arg1:T49 Arg2:T50	
+R21	Drg Arg1:T51 Arg2:T52	
+R22	Drg Arg1:T53 Arg2:T54	
+R23	Dat Arg1:T55 Arg2:T54	
+R24	Drg Arg1:T53 Arg2:T56	
+R25	Dat Arg1:T57 Arg2:T56	
+R26	Drg Arg1:T53 Arg2:T58	
+R27	Dat Arg1:T59 Arg2:T58	
+T60	Symptom 2465 2491	niskiej tolerancji wysiłku
+T61	Symptom 2493 2513	duszności wysiłkowej
+N17	Reference T61 ICD10:R06.0	Duszność
+T62	Symptom 2515 2537	Nasilenie dolegliwości
+T63	Date 2538 2554	od początku roku
+R28	Dat Arg1:T63 Arg2:T62	
+T64	Symptom 2572 2611	okresowy dyskomfort w klatce piersiowej
+N18	Reference T64 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T65	Investigation 2614 2640	angio CT tętnic wieńcowych
+T66	Date 2643 2653	17.12.2018
+T67	Investigation_result 2654 2674	LAD zwężenia do 50 %
+N19	Reference T67 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T68	Investigation_result 2677 2690	LCx do 25-50%
+N20	Reference T68 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T69	Investigation_result 2693 2706	RCA do 50-75%
+N21	Reference T69 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+R29	Dat Arg1:T66 Arg2:T65	
+R30	Inv Arg1:T65 Arg2:T67	
+R31	Inv Arg1:T65 Arg2:T68	
+R32	Inv Arg1:T65 Arg2:T69	
+T70	Symptom 2717 2730	zawroty głowy
+N22	Reference T70 ICD10:R42	Zawroty głowy i odurzenie
+T71	Symptom 2732 2752	chwiejne wartości RR
+T72	Symptom 2754 2774	chwiejne wartości HR
+T73	Investigation 2779 2782	EKG
+T74	Date 2783 2797	przy przyjęciu
+T75	Investigation_result 2798 2817	trigeminia komorowa
+N23	Reference T75 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+R33	Dat Arg1:T74 Arg2:T73	
+R34	Inv Arg1:T73 Arg2:T75	
+T76	Negation 2820 2826	Neguje
+T77	Symptom 2827 2839	zasłabnięcia
+R35	Neg Arg1:T76 Arg2:T77	
+T78	Condition 2856 2877	Nadciśnienie tętnicze
+N24	Reference T78 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T79	Condition 2879 2914	Przewlekłą obturacyjna choroba płuc
+N25	Reference T79 ICD10:J44.8	Inna określona przewlekła obturacyjna choroba płuc
+T80	Treatment 2924 2947	lobektomii górnej lewej
+N26	Reference T80 ICD10:Z90.2	Nabyty brak [części] płuca
+T81	Condition 2949 2996	Przepuklina wślizgowa rozworu przezprzełykowego
+N27	Reference T81 ICD10:K44	Przepuklina przeponowa
+T82	Treatment 3027 3040	appendektomii
+N28	Reference T82 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T83	Date 3041 3055	w dzieciństwie
+R36	Dat Arg1:T83 Arg2:T82	
+A2	Status T82 Historical_Insignificant
+T84	Treatment 3057 3095	Leczenie przewlekłe:  pulmonologicznej
+T85	Condition 3124 3127	WZW
+N29	Reference T85 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T86	Condition 3137 3146	borelioza
+N30	Reference T86 ICD10:A69.2	Choroba z Lyme
+T87	Condition 3153 3157	Odra
+N31	Reference T87 ICD10:B05	Odra
+T88	Negation 3128 3134	( -  )
+T89	Negation 3147 3152	( - )
+T90	Negation 3158 3163	( - )
+R37	Neg Arg1:T88 Arg2:T85	
+R38	Neg Arg1:T89 Arg2:T86	
+R39	Neg Arg1:T90 Arg2:T87	
+T91	Condition 3195 3207	ca. trzustki
+A3	Status T91 Family
+N32	Reference T91 ICD10:C25.9	Trzustka, umiejscowienie nieokreślone
+T92	Negation 3226 3229	nie
+T93	Date 3235 3243	od 3 lat
+T94	Behaviour 3230 3234	pali
+N33	Reference T94 ICD10:Z72.0	Używanie tytoniu
+T95	Behaviour 3209 3224	Palenie tytoniu
+N34	Reference T95 ICD10:Z72.0	Używanie tytoniu
+R40	Neg Arg1:T92 Arg2:T95	
+R41	Neg Arg1:T92 Arg2:T94	
+R42	Dat Arg1:T93 Arg2:T94	
+R43	Dat Arg1:T93 Arg2:T95	
+T96	Behaviour 3244 3255	Inne używki
+T97	Negation 3257 3260	nie
+R44	Neg Arg1:T97 Arg2:T96	
+T98	Condition 3261 3270	Uczulenia
+N35	Reference T98 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T99	Negation 3272 3278	neguje
+R45	Neg Arg1:T99 Arg2:T98	
+T100	Behaviour 3295 3321	warunki mieszkaniowe dobre
+T101	Behaviour 3324 3345	mieszka z konkubentem
+T102	Drug 3353 3372	Kalipoz prolongatum
+T103	Drug_dose 3373 3384	1 x dz rano
+T104	Drug 3386 3391	Acard
+T105	Drug_dose 3392 3414	75 mg 1 x dz wieczorem
+T106	Drug 3416 3425	Controloc
+T107	Drug_dose 3426 3448	40 1x dz rnao na czczo
+T108	Drug 3451 3460	Co-Diovan
+T109	Drug_dose 3461 3486	160+25 1 x dz po 1/2 tabl
+T110	Drug 3488 3493	Nedal
+T111	Drug_dose 3494 3516	5 mg 1x dz po 1/2 tabl
+T112	Drug 3518 3524	Asaris
+T113	Drug 3526 3531	Anoro
+R46	Drg Arg1:T102 Arg2:T103	
+R47	Drg Arg1:T104 Arg2:T105	
+R48	Drg Arg1:T106 Arg2:T107	
+R49	Drg Arg1:T108 Arg2:T109	
+R50	Drg Arg1:T110 Arg2:T111	
+T114	Investigation 3562 3572	Echo serca
+T115	Investigation 3575 3590	Holter EKG i RR
+T116	Investigation 3593 3608	Próba Wysiłkowa

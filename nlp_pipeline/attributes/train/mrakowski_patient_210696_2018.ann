@@ -1,0 +1,30 @@
+T1	Drug 351 359	Polfenon
+T2	Drug_dose 360 370	3 x 300 mg
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Treatment 375 415	Kontrola w Poradni Kardiologicznej ICZMP
+T4	Date 454 465	25.10.2018r
+R2	Dat Arg1:T4 Arg2:T3	
+T5	Treatment 470 519	Dalsza opieka psychiatryczna oraz diabetologiczna
+T6	Behaviour 524 599	Wskazana jest regularna aktywność fizyczna (preferowane ćwiczenia aerobowe)
+T7	Behaviour 601 668	dostosowana do aktualnej wydolności, w celu zmniejszenia masy ciała
+T8	Treatment 673 698	Dalsza opieka lekarza POZ
+T9	Condition 928 948	Częstoskurcz węzłowy
+N1	Reference T9 ICD10:I47.1	Częstoskurcz nadkomorowy
+T10	Condition 953 969	Zespół Aspergera
+N2	Reference T10 ICD10:F84.5	Zespół Aspergera
+T11	Condition 971 1004	Zaburzenie afektywne dwubiegunowe
+N3	Reference T11 ICD10:F31	Zaburzenia afektywne dwubiegunowe
+T12	Condition 1153 1175	zaburzenia rytmu serca
+N4	Reference T12 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T13	Condition 1199 1216	wywiad alergiczny
+N5	Reference T13 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T14	Negation 1217 1223	ujemny
+R3	Neg Arg1:T14 Arg2:T13	
+T15	Condition 1254 1266	z. Aspergera
+N6	Reference T15 ICD10:F84.5	Zespół Aspergera
+T16	Condition 1268 1284	ch. dwubiegunowa
+N7	Reference T16 ICD10:F31	Zaburzenia afektywne dwubiegunowe
+T17	Condition 1300 1320	stłuszczenie wątroby
+N8	Reference T17 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T18	Drug 1342 1350	Klozapol
+T19	Drug 1352 1359	Abilify

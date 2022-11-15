@@ -1,0 +1,95 @@
+T1	Investigation 2253 2263	echo serca
+T2	Investigation 2265 2268	TET
+T3	Investigation 2270 2274	ABPM
+T4	Investigation 2276 2282	Holter
+T5	Investigation 2284 2302	RTG kl. piersiowej
+T6	Drug 2205 2213	Betaserc
+T7	Drug_dose 2214 2225	24 mg 1-0-1
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Negation 2152 2162	nie podaje
+T9	Negation 2130 2140	nie podaje
+T10	Negation 2106 2116	nie podaje
+T11	Condition 2061 2076	Wywiad rodzinny
+A1	Status T11 Family
+T12	Negation 2078 2088	nieistotny
+R2	Neg Arg1:T12 Arg2:T11	
+T13	Behaviour 2089 2104	Palenie tytoniu
+R3	Neg Arg1:T10 Arg2:T13	
+T14	Behaviour 2117 2128	Inne używki
+R4	Neg Arg1:T9 Arg2:T14	
+T15	Condition 2141 2150	Uczulenia
+R5	Neg Arg1:T8 Arg2:T15	
+T16	Condition 1990 2008	zakażenie wzw t. c
+N3	Reference T16 ICD10:B18.2	Przewlekłe wirusowe zapalenie wątroby typu C
+T17	Drug 2017 2029	interferonem
+T18	Date 2031 2035	2004
+R7	Dat Arg1:T18 Arg2:T17	
+T19	Condition 2038 2059	niedosłuch obustronny
+N4	Reference T19 ICD10:H90	Upośledzenie słuchu przewodzeniowe i czuciowo-nerwowe
+T20	Investigation 1751 1771	echokardiograficznym
+T21	Investigation_result 1782 1814	powiększony wymiar prawej komory
+T22	Investigation_result 1817 1868	umiarkowana niedomykalność zastawki tętnicy płucnej
+N5	Reference T22 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+R8	Inv Arg1:T20 Arg2:T21	
+R9	Inv Arg1:T20 Arg2:T22	
+T23	Date 1773 1778	2010r
+R10	Dat Arg1:T23 Arg2:T20	
+T24	Date 1871 1876	2014r
+R11	Dat Arg1:T24 Arg2:T20	
+T25	Investigation_result 1880 1886	EF 45%
+T26	Investigation_result 1888 1905	poszerzony LP, PP
+T27	Investigation_result 1907 1921	powiększona PK
+T28	Investigation_result 1923 1937	umiarkowana IT
+N6	Reference T28 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T29	Investigation_result 1939 1948	łagona IA
+N7	Reference T29 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T30	Investigation_result 1950 1975	łagodnie podwyższony RVSP
+R12	Dat Arg1:T24 Arg2:T25	
+R13	Dat Arg1:T24 Arg2:T26	
+R14	Dat Arg1:T24 Arg2:T27	
+R15	Dat Arg1:T24 Arg2:T30	
+R16	Dat Arg1:T24 Arg2:T29	
+R17	Dat Arg1:T24 Arg2:T28	
+T31	Condition 1426 1478	wrodzonej wady serca pod postacią tetralogii Fallota
+N8	Reference T31 ICD10:Q21.3	Tetralogia Fallota
+T32	Date 1480 1485	1992r
+R18	Dat Arg1:T32 Arg2:T31	
+T33	Condition 1559 1655	zaburzeń przewodnictwa pod postacią bloku przedsionkowo - komorowego II stopnia typu Wenckebacha
+N9	Reference T33 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T34	Date 1724 1731	w 2010r
+R19	Dat Arg1:T34 Arg2:T33	
+T35	Condition 1248 1269	Niedosłuch obustronny
+N10	Reference T35 ICD10:H90	Upośledzenie słuchu przewodzeniowe i czuciowo-nerwowe
+T36	Condition 1208 1218	WZW typu C
+N11	Reference T36 ICD10:B18.2	Przewlekłe wirusowe zapalenie wątroby typu C
+T37	Drug 1227 1239	interferonem
+T38	Date 1241 1245	2004
+R21	Dat Arg1:T38 Arg2:T36	
+T39	Condition 1151 1186	Napadowy blok AV II stopnia typu I.
+N12	Reference T39 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T40	Condition 1117 1135	Tetralogii Fallota
+N13	Reference T40 ICD10:Q21.3	Tetralogia Fallota
+T41	Date 1136 1149	w wieku 3 lat
+R22	Dat Arg1:T41 Arg2:T40	
+T42	Drug 808 816	Betaserc
+T43	Drug_dose 817 849	24mg 1 tabletka rano i wieczorem
+R23	Drg Arg1:T42 Arg2:T43	
+T44	Investigation 723 769	samokontrola ciśnienia tętniczego krwi i tętna
+T45	Behaviour 606 708	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T46	Investigation 492 575	kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T47	Treatment 1087 1098	operacyjnym
+R24	Dat Arg1:T41 Arg2:T47	
+T48	Treatment 1417 1425	korekcji
+R25	Dat Arg1:T32 Arg2:T48	
+T49	Date 1733 1738	2014r
+R26	Dat Arg1:T49 Arg2:T33	
+T50	Date 578 601	pierwsza za 5-6 tygodni
+R27	Dat Arg1:T50 Arg2:T46	
+T51	Investigation_result 1673 1692	pauzami max 2,1 sek
+T52	Date 1693 1712	w godzinach nocnych
+R20	Dat Arg1:T52 Arg2:T51	
+R28	Dat Arg1:T34 Arg2:T51	
+R29	Dat Arg1:T49 Arg2:T51	
+R6	Dat Arg1:T18 Arg2:T16	
+N1	Reference T13 ICD10:Z72.0	Używanie tytoniu
+N2	Reference T15 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

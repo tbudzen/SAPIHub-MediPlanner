@@ -1,0 +1,142 @@
+T1	Behaviour 1315 1355	Dieta lekkostrawna , niskocholesterolowa
+T2	Investigation 1368 1442	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T3	Investigation 1459 1493	kontrola ciśnienia tętniczego krwi
+T4	Drug 1544 1549	Acard
+T5	Drug_dose 1550 1558	75mg 1x1
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Drug 1559 1570	Betaloc ZOK
+T7	Drug_dose 1571 1585	25mg 1x1/2 tab
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Drug 1586 1597	Co-Valsacor
+T9	Drug_dose 1598 1622	160/12,5 1x1/2 tabl rano
+R3	Drg Arg1:T8 Arg2:T9	
+T10	Drug 1624 1629	Zocor
+T11	Drug_dose 1630 1656	20 mg  1x1 tab po  kolacji
+R4	Drg Arg1:T10 Arg2:T11	
+T12	Drug 1658 1667	Metformax
+T13	Drug_dose 1668 1685	500mg   2x1  tabl
+R5	Drg Arg1:T12 Arg2:T13	
+T14	Drug 1686 1698	Memotropil  
+T15	Drug_dose 1698 1713	1,2  1-1-0 tabl
+R6	Drg Arg1:T14 Arg2:T15	
+T16	Drug 1714 1729	Vicebrol  forte
+T17	Drug_dose 1731 1741	2 x 1 tabl
+R7	Drg Arg1:T16 Arg2:T17	
+T18	Drug 1742 1752	Vessel Due
+T19	Drug_dose 1754 1762	1x1 tabl
+R8	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1764 1778	Cyclo 3 fort  
+T21	Drug_dose 1778 1791	1x1 tabl rano
+R9	Drg Arg1:T20 Arg2:T21	
+T22	Drug 3083 3095	Cyclo 3 fort
+T23	Drug_dose 3097 3110	1x1 tabl rano
+R10	Drg Arg1:T22 Arg2:T23	
+T24	Drug 3061 3071	Vessel Due
+T25	Drug_dose 3072 3081	 1x1 tabl
+R11	Drg Arg1:T24 Arg2:T25	
+T26	Drug 3032 3048	Vicebrol  fporte
+T27	Drug_dose 3050 3060	2 x 1 tabl
+R12	Drg Arg1:T26 Arg2:T27	
+T28	Drug 3004 3016	Memotropil  
+T29	Drug 2976 2985	Metformax
+T30	Drug 2942 2947	Zocor
+T31	Drug 2910 2921	Co-Valsacor
+T32	Drug 2883 2894	Betaloc ZOK
+T33	Drug 2868 2873	Acard
+T34	Drug_dose 2874 2882	75mg 1x1
+R13	Drg Arg1:T33 Arg2:T34	
+T35	Drug_dose 2895 2909	25mg 1x1/2 tab
+R14	Drg Arg1:T32 Arg2:T35	
+T36	Drug_dose 2922 2941	160/12,5 1x1/2 tabl
+R15	Drg Arg1:T31 Arg2:T36	
+T37	Drug_dose 2948 2974	20 mg  1x1 tab po  kolacji
+R16	Drg Arg1:T30 Arg2:T37	
+T38	Drug_dose 2986 3003	500mg   2x1  tabl
+R17	Drg Arg1:T29 Arg2:T38	
+T39	Drug_dose 3016 3031	1,2  1-1-0 tabl
+R18	Drg Arg1:T28 Arg2:T39	
+T40	Condition 2833 2839	WZW(+)
+N1	Reference T40 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T41	Condition 2841 2850	borelioza
+N2	Reference T41 ICD10:A69.2	
+T42	Condition 2855 2858	TBC
+N3	Reference T42 ICD10:A15	
+T43	Negation 2850 2853	(-)
+R19	Neg Arg1:T43 Arg2:T41	
+T44	Negation 2859 2860	-
+R20	Neg Arg1:T44 Arg2:T42	
+A1	Source T40 Confirmed
+T45	Negation 2801 2803	nb
+T46	Negation 2787 2789	nb
+T47	Negation 2769 2771	nb
+T48	Condition 2790 2799	Uczulenia
+N4	Reference T48 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R21	Neg Arg1:T45 Arg2:T48	
+T49	Behaviour 2773 2785	Inne  używki
+R22	Neg Arg1:T46 Arg2:T49	
+T50	Behaviour 2752 2767	Palenie tytoniu
+N5	Reference T50 ICD10:Z72.0	Używanie tytoniu
+R23	Neg Arg1:T47 Arg2:T50	
+T51	Condition 491 543	śladowym przeciekiem lewo prawo –drożny otwór owalny
+N6	Reference T51 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T52	Condition 450 488	Tętniak przegrody międzyprzedsionkowej
+N7	Reference T52 ICD10:Q21.9	Wrodzona wada przegrody serca, nieokreślona
+T53	Condition 546 594	Umiarkowana niedomykalność zastawki trójdzielnej
+N8	Reference T53 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T54	Condition 597 638	Łagodna niedomykalność zastawki mitralnej
+N9	Reference T54 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T55	Condition 641 719	Przewlekłą niewydolność serca z zachowaną frakcją wyrzutową lewej komory serca
+N10	Reference T55 ICD10:I50	
+T56	Investigation_result 722 732	EF= 74 % )
+T57	Condition 735 764	Choroba  niedokrwienna  serca
+N11	Reference T57 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T58	Condition 1091 1116	WZW o nieznanej etiologii
+N12	Reference T58 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T59	Condition 1031 1053	Żylaki kończyn dolnych
+N13	Reference T59 ICD10:I83	
+T60	Condition 1014 1029	Cukrzyca typu 2
+N14	Reference T60 ICD10:E11	Cukrzyca insulinoniezależna
+T61	Condition 957 978	Nadciśnienie tętnicze
+N15	Reference T61 ICD10:I10	
+T62	Condition 980 999	Zaburzenia lipidowe
+N16	Reference T62 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T63	Condition 923 953	Pojedyncze pobudzenia komorowe
+N17	Reference T63 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T64	Treatment 803 859	 implantacji   kardiostymulatora Medtronic Adapta ADDR01
+T65	Date 911 920	06.2011  
+T66	Condition 872 908	 zespołu  chorego  węzła  zatokowego
+N18	Reference T66 ICD10:I49.5	
+R24	Dat Arg1:T65 Arg2:T66	
+R25	Dat Arg1:T65 Arg2:T64	
+T67	Condition 767 793	Dusznica bolesna stabilna.
+N19	Reference T67 ICD10:I20.8	
+T68	Condition 1056 1080	Wole  guzowate  tarczycy
+N20	Reference T68 ICD10:E04.8	Wole nietoksyczne, inne określone
+T69	Symptom 2217 2247	obniżonej  tolerancji  wysiłku
+N21	Reference T69 ICD10:R53	Złe samopoczucie i zmęczenie
+T70	Symptom 2261 2282;2283 2329	występującego  bólu   o  charakterze  ściskającym  w  okolicy  serca
+N22	Reference T70 ICD10:R07.3	Inne bóle w klatce piersiowej
+T71	Symptom 2332 2358	obrzęków  kończyn  dolnych
+N23	Reference T71 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T72	Condition 2440 2469	choroba  niedokrwienna  serca
+N24	Reference T72 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T73	Condition 2472 2493	nadciśnienie tętnicze
+N25	Reference T73 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T74	Treatment 2506 2537	implantacji   kardiostymulatora
+T75	Condition 2550 2585	zespołu  chorego  węzła  zatokowego
+N26	Reference T75 ICD10:I49.5	Zespół chorej zatoki
+T76	Condition 2588 2600	cukrzyca t2,
+N27	Reference T76 ICD10:E11	Cukrzyca insulinoniezależna
+T77	Condition 2602 2626	wole  guzowate  tarczycy
+N28	Reference T77 ICD10:E04.8	Wole nietoksyczne, inne określone
+T78	Condition 2638 2642	WZW.
+N29	Reference T78 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T79	Treatment 2654 2692	endoproteza  stawu  kolanowego  lewego
+A2	Status T79 Historical_Insignificant
+T80	Treatment 2706 2732	 wszczepieniu  rozrusznika
+T81	Condition 2745 2750	zaćmy
+N30	Reference T81 ICD10:H26.9	Zaćma, nieokreślona
+T82	Treatment 2735 2745	operacja  
+A3	Status T82 Historical_Insignificant
+A4	Status T81 Historical_Insignificant
+T83	Treatment 1227 1311	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej , Diabetologicznej

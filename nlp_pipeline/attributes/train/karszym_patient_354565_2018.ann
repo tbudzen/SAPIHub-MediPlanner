@@ -1,0 +1,39 @@
+T1	Drug 459 465	Acesan
+T2	Drug 342 348	Acesan
+T3	Drug_dose 466 473	1x50 mg
+T4	Treatment 476 510	Kontrola w Poradni Kardiologicznej
+T5	Date 511 521	za 10 m-cy
+R1	Drg Arg1:T1 Arg2:T3	
+R2	Dat Arg1:T5 Arg2:T4	
+T6	Condition 739 775	Wrodzona wada serca - wspólna komora
+N1	Reference T6 ICD10:Q20.4	Wejście obu dróg żylnych do jedynej komory
+T7	Condition 778 810	zarośnięcie zastawki dwudzielnej
+N2	Reference T7 ICD10:Q23.2	Wrodzone zwężenie zastawki mitralnej
+T8	Condition 813 837	zwężenie tętnicy płucnej
+N3	Reference T8 ICD10:Q25.6	Zwężenie pnia płucnego
+T9	Condition 840 881	ubytek w przegrodzie międzyprzedsionkowej
+N4	Reference T9 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T10	Condition 884 926	całkowity nieprawidłowy spływ żył płucnych
+N5	Reference T10 ICD10:Q26.2	Całkowicie nieprawidłowe ujście żył płucnych
+T11	Treatment 939 947	korekcji
+N6	Reference T11 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T12	Condition 948 995	całkowitego nieprawidłowego spływu żył płucnych
+N7	Reference T12 ICD10:Q26.2	Całkowicie nieprawidłowe ujście żył płucnych
+T13	Treatment 998 1031	operacji typu dwukierunkowy Glenn
+N8	Reference T13 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T14	Date 1033 1044	25.08.2008r
+T15	Treatment 1059 1082	operacji metodą Fontana
+N9	Reference T15 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T16	Date 1084 1095	21.02.2013r
+T17	Condition 1236 1253	złożoną wda serca
+T18	Treatment 1258 1274	operacji Fontana
+N10	Reference T18 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T19	Drug 1330 1336	Acesan
+T20	Condition 1339 1356	wywiad alergiczny
+N11	Reference T20 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T21	Negation 1357 1363	ujemny
+R3	Dat Arg1:T14 Arg2:T13	
+R4	Dat Arg1:T16 Arg2:T15	
+R5	Dat Arg1:T14 Arg2:T12	
+R6	Dat Arg1:T14 Arg2:T11	
+R7	Neg Arg1:T21 Arg2:T20	

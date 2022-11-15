@@ -1,0 +1,28 @@
+T1	Drug 340 347	Clexane
+T2	Drug 349 358	Pulmicort
+T3	Drug 360 368	Relanium
+T4	Drug 477 483	Acesan
+T5	Drug_dose 484 506	30mg 1 x dziennie pos.
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Treatment 507 541	Kontrola w poradni kardiologicznej
+T7	Date 542 552	za miesiąc
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Condition 859 920	Wada wrodzona serca pod postacią drożnego przewodu tętniczego
+N1	Reference T8 ICD10:Q25.0	Drożny przewód tętniczy
+T9	Treatment 944 977	wraz z zamknieciem interwencyjnym
+T10	Date 1010 1021	27.06.2019r
+R3	Dat Arg1:T10 Arg2:T9	
+T11	Condition 1240 1267	PDA istotne hemodynamicznie
+N2	Reference T11 ICD10:Q25.0	Drożny przewód tętniczy
+T12	Drug 1388 1397	Cefazolin
+T13	Drug 1399 1417	kroplówka składowa
+T14	Treatment 1419 1431	znieczulenie
+T15	Investigation 1435 1453	cewnikowania serca
+T16	Condition 1593 1612	wrodzoną wadą serca
+T17	Treatment 982 1005	( Occlutech PDA 5/7 mm)
+T18	Condition 978 981	PDA
+N3	Reference T18 ICD10:Q25.0	Drożny przewód tętniczy
+T19	Investigation 925 943	Cewnikowanie serca
+R4	Dat Arg1:T10 Arg2:T17	
+R5	Dat Arg1:T10 Arg2:T18	
+R6	Dat Arg1:T10 Arg2:T19	

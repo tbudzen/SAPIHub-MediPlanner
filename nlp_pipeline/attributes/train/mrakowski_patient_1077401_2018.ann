@@ -1,0 +1,32 @@
+T1	Drug 341 362	Depakine chronosphere
+T2	Drug 364 372	Euthyrox
+T3	Drug 374 380	Vit D3
+T4	Drug 382 385	ANA
+T5	Treatment 494 564	Dalsza opieka w Poradni metabolicznej, neurologicznej, hematologicznej
+T6	Condition 816 857	ubytku w przegrodzie międzyprzedsionkowej
+N1	Reference T6 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T7	Negation 858 867	negatywna
+R1	Neg Arg1:T7 Arg2:T6	
+T8	Condition 872 880	Padaczka
+N2	Reference T8 ICD10:G40	Padaczka
+T9	Condition 903 918	zapalenia mózgu
+A1	Source T9 Declared
+N3	Reference T9 ICD10:G04	Zapalenie mózgu, rdzenia kręgowego oraz mózgu i rdzenia kręgowego
+T10	Condition 919 940	udaru niedokrwiennego
+A2	Source T10 Declared
+N4	Reference T10 ICD10:I63.9	Zawał mózgu, nieokreślony
+T11	Treatment 1083 1109	diagnostykę kardiologiczna
+T12	Date 1113 1117	2012
+T13	Condition 1118 1128	udar mózgu
+N5	Reference T13 ICD10:I63.9	Zawał mózgu, nieokreślony
+R2	Dat Arg1:T12 Arg2:T13	
+T14	Drug 1141 1149	Depakinę
+T15	Drug 1152 1160	Euthyrox
+T16	Condition 1162 1170	uczulona
+T17	Condition 1195 1211	astma oskrzelowa
+N7	Reference T17 ICD10:J45	Astma oskrzelowa
+N6	Reference T16 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T18	Negation 1214 1225	obecnie bez
+T19	Drug 1226 1231	leków
+R3	Neg Arg1:T18 Arg2:T19	
+T20	Investigation 794 815	Obserwacja w kierunku

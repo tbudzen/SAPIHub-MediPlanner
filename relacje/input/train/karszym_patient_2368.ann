@@ -1,0 +1,269 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 359 391	okresowa kontrola kardiologiczna
+T3	Treatment 401 423	konsultacja genetyczna
+T4	Treatment 481 549	konsultacja psychiatryczna celem ustalenia leczenia p/psychotycznego
+T5	Drug 580 588	Euthyrox
+T6	Drug 617 623	Siofor
+T7	Drug_dose 589 616	88 ug 1 tabl. rano na czczo
+T8	Drug_dose 624 655	850 mg 1 tabl. rano i wieczorem
+R1	Drg Arg1:T5 Arg2:T7	
+R2	Drg Arg1:T6 Arg2:T8	
+T9	Condition 884 926	Wada serca pod postacią tetralogii Fallota
+N1	Reference T9 ICD10:Q21.3	Tetralogia Fallota
+T10	Treatment 937 979	zespoleniu systemowo-płucnym prawostronnym
+N2	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T11	Date 981 991	10.02.1994
+T12	Treatment 998 1022	korekcji całkowitej wady
+N3	Reference T12 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T13	Date 1024 1034	01.02.1996
+T14	Treatment 1045 1086	walwuloplastyce balonowej tętnicy płucnej
+T15	Date 1088 1098	23.06.1999
+T16	Condition 1101 1163	Umiarkowane/istotne zwężenie i niedomykalność zastawki płucnej
+N4	Reference T16 ICD10:I37.2	Zwężenie zastawki pnia płucnego z niedomykalnością
+R3	Dat Arg1:T11 Arg2:T10	
+R4	Dat Arg1:T13 Arg2:T12	
+R5	Dat Arg1:T15 Arg2:T14	
+T17	Condition 1165 1182	Zespół DiGeorge'a
+N5	Reference T17 ICD10:D82.1	Zespół DiGeorge’a
+T18	Condition 1219 1258	autoimmunologicznego zapalenia tarczycy
+N6	Reference T18 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T19	Condition 1184 1206	Niedoczynność tarczycy
+N7	Reference T19 ICD10:E03.8	Inne określone postacie niedoczynności tarczycy
+T20	Condition 1260 1268	Depresja
+N8	Reference T20 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T21	Condition 1270 1293	Zaburzenia psychotyczne
+N9	Reference T21 ICD10:F23.9	Ostre i przemijające zaburzenia psychotyczne, nieokreślone
+T22	Treatment 1315 1352	2 operacjach otorynolaryngologicznych
+N10	Reference T22 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T23	Treatment 1355 1382	przeszczep błony bębenkowej
+T24	Treatment 1384 1413	Poszerzanie kanału słuchowego
+N11	Reference T24 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+N12	Reference T23 ICD10:Z96.2	Obecność implantów usznych
+T25	Condition 1415 1419	PCOS
+N13	Reference T25 ICD10:E28.2	Zespół policystycznych jajników
+T26	Treatment 1541 1622	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Endokrynologicznej i ZP
+T27	Treatment 1636 1683	wczesna kontrolna hospitalizacja w tut. Klinice
+T28	Investigation 1700 1719	angioTK i MRI serca
+T29	Behaviour 1813 1852	Dieta lekkostrawna, niskocholesterolowa
+T30	Treatment 1860 1957	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby w POZ
+T31	Date 1958 1968	co 6-8 tyg
+R6	Dat Arg1:T31 Arg2:T30	
+T32	Treatment 1975 2034	Systematyczna kontrola ciśnienia tętniczego krwi i glikemii
+T33	Treatment 2041 2130	Wskazana profilaktyka infekcyjnego zapalenia wsierdzia podczas zabiegów stomatologicznych
+T34	Drug 2132 2144	amoksycylina
+T35	Drug 2149 2159	ampicylina
+T36	Drug_dose 2160 2180	2 g doustnie lub i.v
+R7	Drg Arg1:T34 Arg2:T36	
+R8	Drg Arg1:T35 Arg2:T36	
+T37	Condition 2195 2202	alergii
+N14	Reference T37 ICD10:Z88.0	Uczulenie na penicylinę w wywiadzie
+T38	Drug 2203 2226	na powyższe antybiotyki
+R9	Alg Arg1:T37 Arg2:T38	
+T39	Drug 2229 2241	klindamycyna
+T40	Drug_dose 2242 2266	600 mg doustnie lub i.v.
+R10	Drg Arg1:T39 Arg2:T40	
+T41	Condition 2284 2333	wysokim ryzykiem infekcyjnego zapalenia wsierdzia
+N15	Reference T41 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T42	Treatment 2345 2369	działania profilaktyczne
+T43	Behaviour 2372 2406	ścisła higiena skóry i jamy ustnej
+T44	Behaviour 2408 2482	przeglądy stomatologiczne należy przeprowadzać co najmniej dwa razy w roku
+T45	Behaviour 2484 2499	dezynfekcja ran
+T46	Treatment 2501 2581	eliminacja lub ograniczenie przewlekłego nosicielstwa bakteryjnego: skóry, moczu
+T47	Treatment 2583 2644	leczenie antybiotykami każdego ogniska zakażenia bakteryjnego
+T48	Behaviour 2649 2700	stosowanie antybiotyków samodzielnie przez pacjenta
+T49	Negation 2646 2649	nie
+R11	Neg Arg1:T49 Arg2:T48	
+T50	Negation 2702 2710	unikanie
+T51	Behaviour 2711 2743	kolczykowania i tatuowania ciała
+R12	Neg Arg1:T50 Arg2:T51	
+T52	Treatment 2745 2829	ścisłe przestrzeganie zasad aseptyki podczas zabiegów stwarzających ryzyko zakażenia
+T53	Treatment 2844 2920	opieka i konsultacja odnośnie zmiany leczenia w Poradni Zdrowia Psychicznego
+T54	Treatment 2934 3002	kontrola w Poradni Endokrynologicznej i ewentualnie Diabetologicznej
+T55	Date 3003 3020	za ok. 3 miesiące
+R13	Dat Arg1:T55 Arg2:T54	
+T56	Drug 3033 3039	Atoris
+T57	Drug 3064 3072	Euthyrox
+T58	Drug 3119 3125	Siofor
+T59	Drug 3251 3259	Zolafren
+T60	Drug_dose 3040 3063	10 mg 1 tabl. wieczorem
+T61	Drug_dose 3073 3118	N75 1 tabl. rano na czczo przed innymi lekami
+T62	Drug_dose 3126 3142	500 mg - 1 tabl.
+T63	Date 3143 3156	przez tydzień
+R14	Dat Arg1:T63 Arg2:T62	
+T64	Drug_dose 3157 3167	do posiłku
+R15	Dat Arg1:T63 Arg2:T64	
+R16	Drg Arg1:T58 Arg2:T62	
+R17	Drg Arg1:T58 Arg2:T64	
+T66	Drug_dose 3169 3216	następnie 2 x 1 tabl. przez tydzień do posiłków
+R19	Drg Arg1:T58 Arg2:T66	
+T68	Drug_dose 3218 3250	docelowo 3 x 1 tabl. do posiłków
+R20	Drg Arg1:T58 Arg2:T68	
+T67	Drug_dose 3260 3282	5 mg 1 tabl. wieczorem
+R21	Drg Arg1:T56 Arg2:T60	
+R22	Drg Arg1:T57 Arg2:T61	
+R23	Drg Arg1:T59 Arg2:T67	
+T69	Condition 3639 3690	Wrodzona wada serca pod postacią tetralogii Fallota
+N16	Reference T69 ICD10:Q21.3	Tetralogia Fallota
+T70	Treatment 3701 3743	zespoleniu systemowo-płucnym prawostronnym
+N17	Reference T70 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T71	Date 3745 3755	10.02.1994
+T72	Treatment 3762 3786	korekcji całkowitej wady
+N18	Reference T72 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T73	Date 3788 3798	01.02.1996
+T74	Treatment 3809 3850	walwuloplastyce balonowej tętnicy płucnej
+T75	Date 3852 3862	23.06.1999
+T76	Condition 3865 3923	Istotne zwężenie i niedomykalność zastawki płucnej II/III*
+N19	Reference T76 ICD10:I36.2	Niereumatyczne zwężenie zastawki trójdzielnej z niedomykalnością
+T77	Condition 3925 3942	Zespół DiGeorge'a
+N20	Reference T77 ICD10:D82.1	Zespół DiGeorge’a
+R24	Dat Arg1:T71 Arg2:T70	
+R25	Dat Arg1:T73 Arg2:T72	
+R26	Dat Arg1:T75 Arg2:T74	
+T79	Condition 3944 4018	Niedoczynność tarczycy w przebiegu autoimmunologicznego zapalenia tarczycy
+N22	Reference T79 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T80	Condition 4019 4037	w stanie eutyreozy
+T78	Condition 4039 4047	Depresja
+N21	Reference T78 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T81	Condition 4049 4072	zaburzenia psychotyczne
+N23	Reference T81 ICD10:F23.9	Ostre i przemijające zaburzenia psychotyczne, nieokreślone
+A1	Status T22 Historical_Insignificant
+A2	Status T23 Historical_Insignificant
+A3	Status T24 Historical_Insignificant
+T82	Treatment 4094 4131	2 operacjach otorynolaryngologicznych
+A4	Status T82 Historical_Insignificant
+T83	Treatment 4134 4161	przeszczep błony bębenkowej
+A5	Status T83 Historical_Insignificant
+N24	Reference T83 ICD10:Z96.2	Obecność implantów usznych
+T84	Treatment 4163 4192	poszerzanie kanału słuchowego
+N25	Reference T84 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+A6	Status T84 Historical_Insignificant
+T85	Condition 4214 4265	Nieprawidłowa tolerancja glukozy - insulinooporność
+N26	Reference T85 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T86	Condition 4267 4280	Dysplipidemia
+N27	Reference T86 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T87	Condition 4282 4313	Zespół policystycznych jajników
+N28	Reference T87 ICD10:E28.2	Zespół policystycznych jajników
+T88	Condition 4471 4522	wrodzoną wadą serca pod postacią tetralogii Fallota
+N29	Reference T88 ICD10:Q21.3	Tetralogia Fallota
+T89	Treatment 4533 4575	zespoleniu systemowo-płucnym prawostronnym
+N30	Reference T89 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T90	Date 4577 4587	10.02.1994
+T91	Treatment 4594 4618	korekcji całkowitej wady
+N31	Reference T91 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T92	Date 4620 4630	01.02.1996
+T93	Treatment 4641 4682	walwuloplastyce balonowej tętnicy płucnej
+T94	Date 4684 4694	23.06.1999
+T95	Condition 4697 4745	zwężenie i niedomykalność zastawki płucnej I/II*
+N32	Reference T95 ICD10:I37.2	Zwężenie zastawki pnia płucnego z niedomykalnością
+R27	Dat Arg1:T90 Arg2:T89	
+R28	Dat Arg1:T92 Arg2:T91	
+R29	Dat Arg1:T94 Arg2:T93	
+T96	Investigation 4849 4858	MRI serca
+T97	Condition 4870 4940	istotnego zwężenia homograftu (gr. max. 64, średn. 42 mmHg, PHT 90 ms)
+T98	Condition 4963 4980	zespół DiGeorge'a
+N33	Reference T98 ICD10:D82.1	Zespół DiGeorge’a
+T99	Condition 4982 5004	niedoczynność tarczycy
+N34	Reference T99 ICD10:E03.8	Inne określone postacie niedoczynności tarczycy
+T100	Condition 5017 5056	autoimmunologicznego zapalenia tarczycy
+N35	Reference T100 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T101	Condition 5058 5066	depresja
+N36	Reference T101 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T102	Condition 5068 5091	zaburzenia psychotyczne
+N37	Reference T102 ICD10:F23.9	Ostre i przemijające zaburzenia psychotyczne, nieokreślone
+T103	Treatment 5113 5150	2 operacjach otorynolaryngologicznych
+A7	Status T103 Historical_Insignificant
+T104	Treatment 5153 5180	przeszczep błony bębenkowej
+A8	Status T104 Historical_Insignificant
+N38	Reference T104 ICD10:Z96.2	Obecność implantów usznych
+T105	Treatment 5182 5211	poszerzanie kanału słuchowego
+A9	Status T105 Historical_Insignificant
+N39	Reference T105 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T106	Condition 5213 5217	PCOS
+N40	Reference T106 ICD10:E28.2	Zespół policystycznych jajników
+T107	Condition 5219 5228	Uczulenia
+N41	Reference T107 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T108	Negation 5229 5235	neguje
+T109	Behaviour 5237 5243	Używki
+T110	Negation 5244 5250	neguje
+T111	Condition 5252 5267	Wywiad rodzinny
+A10	Status T111 Family
+T112	Negation 5268 5277	negatywny
+T113	Behaviour 5312 5319	pracuje
+T114	Drug 5342 5350	Euthyrox
+T115	Drug 5379 5385	Siofor
+T116	Drug_dose 5351 5378	88 ug 1 tabl. rano na czczo
+T117	Drug_dose 5386 5417	850 mg 1 tabl. rano i wieczorem
+R30	Neg Arg1:T108 Arg2:T107	
+R31	Neg Arg1:T110 Arg2:T109	
+R32	Neg Arg1:T112 Arg2:T111	
+R33	Drg Arg1:T114 Arg2:T116	
+R34	Drg Arg1:T115 Arg2:T117	
+T118	Symptom 5591 5622	ograniczenia tolerancji wysiłku
+T119	Symptom 5624 5633	ospałości
+T120	Condition 5672 5723	wrodzona wada serca pod postacią tetralogii Fallota
+N42	Reference T120 ICD10:Q21.3	Tetralogia Fallota
+T121	Treatment 5734 5776	zespoleniu systemowo-płucnym prawostronnym
+N43	Reference T121 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T122	Date 5778 5788	10.02.1994
+T123	Treatment 5795 5819	korekcji całkowitej wady
+N44	Reference T123 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T124	Date 5821 5831	01.02.1996
+T125	Treatment 5842 5883	walwuloplastyce balonowej tętnicy płucnej
+T126	Date 5885 5895	23.06.1999
+T127	Condition 5898 5946	zwężenie i niedomykalność zastawki płucnej I/II*
+N45	Reference T127 ICD10:I37.2	Zwężenie zastawki pnia płucnego z niedomykalnością
+R35	Dat Arg1:T122 Arg2:T121	
+R36	Dat Arg1:T124 Arg2:T123	
+R37	Dat Arg1:T126 Arg2:T125	
+T128	Condition 5948 5965	zespół DiGeorge'a
+N46	Reference T128 ICD10:D82.1	Zespół DiGeorge’a
+T129	Condition 5967 5989	niedoczynność tarczycy
+N47	Reference T129 ICD10:E03.8	Inne określone postacie niedoczynności tarczycy
+T130	Condition 6002 6041	autoimmunologicznego zapalenia tarczycy
+N48	Reference T130 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T131	Condition 6043 6051	depresja
+N49	Reference T131 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T132	Condition 6053 6076	zaburzenia psychotyczne
+N50	Reference T132 ICD10:F23.9	Ostre i przemijające zaburzenia psychotyczne, nieokreślone
+T133	Treatment 6098 6135	2 operacjach otorynolaryngologicznych
+A11	Status T133 Historical_Insignificant
+T134	Treatment 6138 6165	przeszczep błony bębenkowej
+A12	Status T134 Historical_Insignificant
+N51	Reference T134 ICD10:Z96.2	Obecność implantów usznych
+T135	Treatment 6167 6196	poszerzanie kanału słuchowego
+A13	Status T135 Historical_Insignificant
+N52	Reference T135 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T136	Condition 6198 6202	PCOS
+N53	Reference T136 ICD10:E28.2	Zespół policystycznych jajników
+T137	Condition 6204 6213	Uczulenia
+N54	Reference T137 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T138	Negation 6214 6220	neguje
+T139	Behaviour 6222 6228	Używki
+T140	Negation 6229 6235	neguje
+T141	Condition 6237 6252	Wywiad rodzinny
+A14	Status T141 Family
+T142	Negation 6253 6262	negatywny
+R38	Neg Arg1:T138 Arg2:T137	
+R39	Neg Arg1:T140 Arg2:T139	
+R40	Neg Arg1:T142 Arg2:T141	
+T143	Behaviour 6297 6304	pracuje
+T144	Negation 6293 6296	nie
+T145	Behaviour 6311 6319	uczy się
+T146	Negation 6307 6310	nie
+R41	Neg Arg1:T144 Arg2:T143	
+R42	Neg Arg1:T146 Arg2:T145	
+T147	Behaviour 5326 5334	uczy się
+T148	Negation 5308 5311	nie
+T149	Negation 5322 5325	nie
+R43	Neg Arg1:T148 Arg2:T113	
+R44	Neg Arg1:T149 Arg2:T147	
+T150	Drug 6327 6335	Euthyrox
+T151	Drug_dose 6336 6398	75 i 50 ug naprzemiennie 1x1 tabl. rano (50 ug w dni parzyste)
+T152	Drug 6399 6407	Zolafren
+T153	Drug_dose 6408 6432	5 mg 1x1 tabl. wieczorem
+R45	Drg Arg1:T150 Arg2:T151	
+R46	Drg Arg1:T152 Arg2:T153	
+R18	Dat Arg1:T13 Arg2:T9	
+R47	Dat Arg1:T73 Arg2:T69	
+R48	Dat Arg1:T92 Arg2:T88	
+R49	Dat Arg1:T124 Arg2:T120	

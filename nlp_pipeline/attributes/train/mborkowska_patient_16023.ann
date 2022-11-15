@@ -1,0 +1,100 @@
+T1	Condition 677 716	Istotna niedomykalność zastawki płucnej
+N1	Reference T1 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T2	Treatment 726 754	operacji kardiochirurgicznej
+T3	Condition 764 818	zweżenia zastawkowego i podzastawkowej tętnicy płucnej
+T4	Condition 824 865	ubytku w przegrodzie międzyprzedsionkowej
+N3	Reference T4 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T5	Date 867 872	1978r
+R1	Dat Arg1:T5 Arg2:T2	
+R2	Dat Arg1:T5 Arg2:T4	
+R3	Dat Arg1:T5 Arg2:T3	
+T6	Condition 885 903	Niewydolność serca
+N4	Reference T6 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T7	Condition 962 1007	Łagodna niedomykalność zastawki trójdzielnej.
+N5	Reference T7 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T8	Investigation_result 1042 1054	RVPs-33 mmHg
+T9	Condition 1057 1087	Pojedyncze pobudzenia komorowe
+T10	Condition 1089 1121	Guzek podopłucnowy płuca prawego
+N7	Reference T10 ICD10:D38	Nowotwór o niepewnym lub nieznanym charakterze ucha środkowego, narządów układu oddechowego i klatki piersiowej
+T11	Drug 1265 1275	NaCl 0,9 %
+T12	Drug 1278 1284	Magnez
+T13	Drug 1287 1294	Nonpres
+T14	Behaviour 1471 1511	Dieta lekkostrawna , niskocholesterolowa
+T15	Investigation 1515 1544	Okresowo kontrola lipidogramu
+T16	Investigation 1547 1644	stężenia elektrolitów , parametrów wydolności nerek. Kontrola elektrolitów i kreatyniny, mocznika
+T17	Investigation 1677 1711	kontrola ciśnienia tętniczego krwi
+T18	Drug 1762 1769	Nonpres
+T19	Drug_dose 1770 1786	25 mg 1x dz rano
+R4	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1788 1796	Magne B6
+T21	Drug_dose 1797 1807	1x dz rano
+R5	Drg Arg1:T20 Arg2:T21	
+T22	Symptom 1977 2008	pogorszenia tolerancji wysiłku.
+T23	Symptom 2061 2143	okresowe bóle w klatce piersiowej o charakterze punktowym nie związane z wysiłkiem
+T24	Symptom 2149 2173	okresowe kołatania serca
+N8	Reference T24 ICD10:R00.2	Kołatanie serca
+T25	Symptom 2183 2195	zasłabnięcia
+N9	Reference T25 ICD10:R55	Omdlenie i zapaść
+T26	Negation 2176 2182	Neguje
+R6	Neg Arg1:T26 Arg2:T25	
+T27	Condition 2251 2269	Tetralogii Fallota
+N10	Reference T27 ICD10:Q21.3	Tetralogia Fallota
+T28	Date 2272 2276	1987
+R7	Dat Arg1:T28 Arg2:T27	
+T29	Condition 2327 2346	Helicobacter pyroli
+N11	Reference T29 ICD10:K29	Zapalenie żołądka i dwunastnicy
+T30	Date 2347 2360	ok 8 lat temu
+R8	Dat Arg1:T30 Arg2:T29	
+A4	Source T29 Declared
+T31	Date 2500 2509	2006 roku
+T32	Condition 2613 2616	WZW
+T33	Condition 2626 2635	borelioza
+N13	Reference T33 ICD10:A69.2	Choroba z Lyme
+T34	Condition 2642 2646	Odra
+N14	Reference T34 ICD10:B05	Odra
+T35	Negation 2619 2622	-  
+R9	Neg Arg1:T35 Arg2:T32	
+T36	Negation 2638 2639	-
+R10	Neg Arg1:T36 Arg2:T33	
+T37	Negation 2649 2650	-
+R11	Neg Arg1:T37 Arg2:T34	
+T38	Investigation 2850 2860	Echo serca
+T39	Investigation 2863 2873	Holter EKG
+T40	Investigation 2875 2877	RR
+T41	Investigation 2881 2896	Próba Wysiłkowa
+T42	Behaviour 2763 2805	warunki mieszkaniowe dobre , mieszka z sam
+T43	Condition 2729 2738	Uczulenia
+N15	Reference T43 ICD10:T78.4	Alergia, nieokreślona
+T44	Negation 2740 2746	neguje
+R12	Neg Arg1:T44 Arg2:T43	
+T45	Behaviour 2712 2723	Inne używki
+T46	Negation 2725 2728	nie
+R13	Neg Arg1:T46 Arg2:T45	
+T47	Behaviour 2690 2705	Palenie tytoniu
+T48	Negation 2707 2710	nie
+R14	Neg Arg1:T48 Arg2:T47	
+T49	Treatment 2222 2241	korekcji całkowitej
+R15	Dat Arg1:T28 Arg2:T49	
+T50	Condition 1008 1039	Pośrednie prawdopodobieństwo HP
+T51	Negation 2580 2584	brak
+T52	Treatment 2558 2577	Leczenie przewlekłe
+R16	Neg Arg1:T51 Arg2:T52	
+T53	Negation 2677 2688	brak danych
+T54	Condition 2653 2674	W wywiadzie rodzinnym
+A6	Status T54 Family
+R17	Neg Arg1:T53 Arg2:T54	
+T55	Drug 2807 2811	Leki
+T56	Negation 2813 2816	bez
+R18	Neg Arg1:T56 Arg2:T55	
+N2	Reference T3 ICD10:Q22.1	Wrodzone zwężenie zastawki pnia płucnego
+T57	Symptom 906 920	I/II' wg. NYHA
+T58	Condition 923 953	frakcją wyrzutową lewej komory
+T59	Investigation_result 956 960	52%)
+N17	Reference T50 ICD10:I27.0	Pierwotne nadciśnienie płucne
+N6	Reference T9 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+N18	Reference T22 ICD10:R53	Złe samopoczucie i zmęczenie
+T60	Date 2030 2042	i od 2-3 lat
+R19	Dat Arg1:T60 Arg2:T22	
+N19	Reference T23 ICD10:R07.3	Inne bóle w klatce piersiowej
+N12	Reference T32 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N16	Reference T47 ICD10:Z72.0	Używanie tytoniu

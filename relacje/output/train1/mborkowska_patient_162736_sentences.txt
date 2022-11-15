@@ -1,0 +1,628 @@
+allRelations          : 92
+oks                   : 34
+isRedundantAndRemoveds: 48
+shouldNotBeRemoveds   : 3
+shouldBeBemoveds      : 7
+GOOD / BAD            : 82 / 10
+Sentence 0:
+------------------------------------------------
+Wiek: 50 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+- kontrola u lekarza POZ
+- kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych (wydano skierowanie) - proszę o wykonanie angioCT tętnic wieńcowych
+- regularne przyjmowanie leków:
+Bisotal 80mg 1-0-1 tabl
+Valsacor 160mg
+------------------------------------------------
+
+R1	Drg Arg1:T2 Arg2:T3 << OK >>	Bisotal -> 80mg 1-0-1 tabl  <RANK: 3> <info: start[518, 526] <type: RIGHT>>
+R2	Drg Arg1:T2 Arg2:T5 <<REDUNDANT!!!REMOVED>>	Bisotal -> 160mg <:REMOVED other first tag between (right):> <RANK: 1> <info: start[518, 551] <type: RIGHT>>
+R3	Drg Arg1:T4 Arg2:T3 <<REDUNDANT!!!REMOVED>>	Valsacor -> 80mg 1-0-1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[542, 526] <type: LEFT>>
+R4	Drg Arg1:T4 Arg2:T5 << OK >>	Valsacor -> 160mg  <RANK: 3> <info: start[542, 551] <type: RIGHT>>
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Łagodna niedomykalność zastawki mitralnej.
+
+
+Sentence 6:
+Nadciśnienie tętnicze.
+
+
+Sentence 7:
+Stan po 3 udarach niedokrwiennych mózgu z niedowładem lewostronnym (2009, 2011, 08.2019).
+R5	Dat Arg1:T9 Arg2:T8 << OK >>	2009 -> 3 udarach niedokrwiennych mózgu z niedowładem lewostronnym  <RANK: 3> <info: start[908, 848] <type: LEFT>>
+R6	Dat Arg1:T10 Arg2:T8 << OK >>	2011 -> 3 udarach niedokrwiennych mózgu z niedowładem lewostronnym  <RANK: 2> <info: start[914, 848] <type: LEFT>>
+R7	Dat Arg1:T11 Arg2:T8 <<SHOULD NOT BE REMOVED>>	08.2019 -> 3 udarach niedokrwiennych mózgu z niedowładem lewostronnym <:REMOVED other first tag between (left):> <RANK: 2> <info: start[920, 848] <type: LEFT>>
+
+
+Sentence 8:
+Napadowe migotanie przedsionków w wywiadzie.
+
+
+Sentence 9:
+Cukrzyca typu 2. Dyslipidemia w trakcie leczenia.
+
+
+Sentence 10:
+Nietolerancja statyn.
+
+
+Sentence 11:
+Miażdżyca tętnic szyjnych, aorty.
+
+
+Sentence 12:
+W wywiadzie krwawienie z dróg moczowych po Xarelto.
+
+
+Sentence 13:
+Przebyte operacyjne leczenie złamania kości nadgarstka prawego.
+
+
+
+Sentence 14:
+------------------------------------------------
+
+
+
+Sentence 15:
+Zastosowane leczenie
+
+
+
+Sentence 16:
+------------------------------------------------
+Nitrendypina, Biosotal, Valsacor, Eliquis, Betaserc, Glucophage, Lipanthyl, Primacor,
+------------------------------------------------
+
+
+
+Sentence 17:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 18:
+Pacjent lat 49, Z HA (RR 140/85-150/100mmHg), DM t 2 (leki p.o.), po 3 udarach niedokrwiennych mózgu z niedowładem lewostronnym (2009, 2011, 08.2019), z PFO, przyjęty do kliniki celem diagnostyki i leczenia.
+
+R8	Dat Arg1:T31 Arg2:T28 <<REDUNDANT!!!SHOULD BE REMOVED>>	2009 -> HA (RR 140/85-150/100mmHg)  <RANK: 2> <info: start[1655, 1544] <type: LEFT>>
+R9	Dat Arg1:T31 Arg2:T29 <<REDUNDANT!!!SHOULD BE REMOVED>>	2009 -> DM t 2  <RANK: 2> <info: start[1655, 1572] <type: LEFT>>
+R10	Dat Arg1:T31 Arg2:T30 << OK >>	2009 -> 3 udarach niedokrwiennych mózgu z niedowładem lewostronnym  <RANK: 3> <info: start[1655, 1595] <type: LEFT>>
+R11	Dat Arg1:T31 Arg2:T34 <<REDUNDANT!!!REMOVED>>	2009 -> PFO <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1655, 1679] <type: RIGHT>>
+R12	Dat Arg1:T32 Arg2:T28 <<REDUNDANT!!!SHOULD BE REMOVED>>	2011 -> HA (RR 140/85-150/100mmHg)  <RANK: 2> <info: start[1661, 1544] <type: LEFT>>
+R13	Dat Arg1:T32 Arg2:T29 <<REDUNDANT!!!SHOULD BE REMOVED>>	2011 -> DM t 2  <RANK: 2> <info: start[1661, 1572] <type: LEFT>>
+R14	Dat Arg1:T32 Arg2:T30 << OK >>	2011 -> 3 udarach niedokrwiennych mózgu z niedowładem lewostronnym  <RANK: 2> <info: start[1661, 1595] <type: LEFT>>
+R15	Dat Arg1:T32 Arg2:T34 <<REDUNDANT!!!SHOULD BE REMOVED>>	2011 -> PFO  <RANK: 2> <info: start[1661, 1679] <type: RIGHT>>
+R16	Dat Arg1:T33 Arg2:T28 <<REDUNDANT!!!REMOVED>>	08.2019 -> HA (RR 140/85-150/100mmHg) <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1667, 1544] <type: LEFT>>
+R17	Dat Arg1:T33 Arg2:T29 <<REDUNDANT!!!REMOVED>>	08.2019 -> DM t 2 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1667, 1572] <type: LEFT>>
+R18	Dat Arg1:T33 Arg2:T30 <<SHOULD NOT BE REMOVED>>	08.2019 -> 3 udarach niedokrwiennych mózgu z niedowładem lewostronnym <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1667, 1595] <type: LEFT>>
+R19	Dat Arg1:T33 Arg2:T34 <<REDUNDANT!!!SHOULD BE REMOVED>>	08.2019 -> PFO  <RANK: 2> <info: start[1667, 1679] <type: RIGHT>>
+
+
+Sentence 19:
+W wywiadzie ponadto: dyslipidemia, zwężenie RICA 30-40%, krwawienie z dróg moczowych po Xarelto (wg słów pacjenta - urologicznie jest wszystko w porządku), zawroty głowy, niedowład lewej kończyny dolnej.
+
+
+
+Sentence 20:
+Wg karty wypisowej z 24.01.2012: "włączono VKA i sotalol z powodu wywiadu zaburzeń rytmu - prawdopodobnie napadów migotania przedsionków"
+
+R20	Dat Arg1:T43 Arg2:T42 << OK >>	24.01.2012 -> napadów migotania przedsionków"  <RANK: 2> <info: start[1959, 2044] <type: RIGHT>>
+R21	Dat Arg1:T43 Arg2:T40 << OK >>	24.01.2012 -> VKA  <RANK: 3> <info: start[1959, 1981] <type: RIGHT>>
+R22	Dat Arg1:T43 Arg2:T41 <<SHOULD NOT BE REMOVED>>	24.01.2012 -> sotalol <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1959, 1987] <type: RIGHT>>
+R23	Alg Arg1:T42 Arg2:T40 <<REDUNDANT!!!REMOVED>>	napadów migotania przedsionków" -> VKA <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[2044, 1981] <type: LEFT>>
+R24	Alg Arg1:T42 Arg2:T41 <<REDUNDANT!!!SHOULD BE REMOVED>>	napadów migotania przedsionków" -> sotalol  <RANK: 3> <info: start[2044, 1987] <type: LEFT>>
+
+
+Sentence 21:
+Neguje: zasłabnięcia, omdlenia, krwawienia, czarne stolce, brunatne wymioty, chorobę wrzodową, duszność, obrzęki podudzi, bóle w klatce piersiowej, kołatania serca, 
+
+R25	Neg Arg1:T44 Arg2:T45 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[2076, 2084] <type: RIGHT>>
+R26	Neg Arg1:T44 Arg2:T46 << OK >>	Neguje -> omdlenia  <RANK: 2> <info: start[2076, 2098] <type: RIGHT>>
+R27	Neg Arg1:T44 Arg2:T47 << OK >>	Neguje -> krwawienia  <RANK: 2> <info: start[2076, 2108] <type: RIGHT>>
+R28	Neg Arg1:T44 Arg2:T48 << OK >>	Neguje -> czarne stolce  <RANK: 2> <info: start[2076, 2120] <type: RIGHT>>
+R29	Neg Arg1:T44 Arg2:T49 << OK >>	Neguje -> brunatne wymioty,  <RANK: 2> <info: start[2076, 2135] <type: RIGHT>>
+R30	Neg Arg1:T44 Arg2:T51 << OK >>	Neguje -> duszność  <RANK: 2> <info: start[2076, 2171] <type: RIGHT>>
+R31	Neg Arg1:T44 Arg2:T52 << OK >>	Neguje -> obrzęki podudzi  <RANK: 2> <info: start[2076, 2181] <type: RIGHT>>
+R32	Neg Arg1:T44 Arg2:T53 << OK >>	Neguje -> bóle w klatce piersiowej  <RANK: 2> <info: start[2076, 2198] <type: RIGHT>>
+R33	Neg Arg1:T44 Arg2:T54 << OK >>	Neguje -> kołatania serca,  <RANK: 2> <info: start[2076, 2224] <type: RIGHT>>
+R34	Neg Arg1:T44 Arg2:T50 << OK >>	Neguje -> chorobę wrzodową  <RANK: 2> <info: start[2076, 2153] <type: RIGHT>>
+
+
+Sentence 22:
+Przebyte operacje: złamania kości nadgarstka prawego
+
+
+
+Sentence 23:
+Palenie tytoniu: nie pali od 15 lat
+
+R35	Neg Arg1:T57 Arg2:T56 << OK >>	nie pali -> Palenie tytoniu  <RANK: 3> <info: start[2312, 2295] <type: LEFT>>
+
+
+Sentence 24:
+Inne używki: nie
+Uczulenia: nie, bóle mm po statynie.
+
+R36	Neg Arg1:T58 Arg2:T60 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2344, 2348] <type: RIGHT>>
+R37	Neg Arg1:T58 Arg2:T59 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[2344, 2331] <type: LEFT>>
+R38	Neg Arg1:T58 Arg2:T92 <<REDUNDANT!!!REMOVED>>	nie -> statynie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2344, 2375] <type: RIGHT>>
+R39	Neg Arg1:T61 Arg2:T60 << OK >>	nie -> Uczulenia  <RANK: 3> <info: start[2359, 2348] <type: LEFT>>
+R40	Neg Arg1:T61 Arg2:T59 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2359, 2331] <type: LEFT>>
+R41	Neg Arg1:T61 Arg2:T92 <<REDUNDANT!!!REMOVED>>	nie -> statynie <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2359, 2375] <type: RIGHT>>
+R42	Alg Arg1:T60 Arg2:T92 << OK >>	Uczulenia -> statynie  <RANK: 2> <info: start[2348, 2375] <type: RIGHT>>
+
+
+Sentence 25:
+Przebyte choroby zakaźne - WZW (-) , borelioza (-), tbc (-), odra (-), kontakt z odrą (-)
+
+R43	Neg Arg1:T67 Arg2:T62 << OK >>	- -> WZW  <RANK: 3> <info: start[2417, 2412] <type: LEFT>>
+R44	Neg Arg1:T67 Arg2:T63 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2417, 2422] <type: RIGHT>>
+R45	Neg Arg1:T67 Arg2:T64 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2417, 2437] <type: RIGHT>>
+R46	Neg Arg1:T67 Arg2:T65 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2417, 2446] <type: RIGHT>>
+R47	Neg Arg1:T67 Arg2:T66 <<REDUNDANT!!!REMOVED>>	- -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2417, 2456] <type: RIGHT>>
+R48	Neg Arg1:T68 Arg2:T62 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2433, 2412] <type: LEFT>>
+R49	Neg Arg1:T68 Arg2:T63 << OK >>	- -> borelioza  <RANK: 3> <info: start[2433, 2422] <type: LEFT>>
+R50	Neg Arg1:T68 Arg2:T64 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2433, 2437] <type: RIGHT>>
+R51	Neg Arg1:T68 Arg2:T65 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2433, 2446] <type: RIGHT>>
+R52	Neg Arg1:T68 Arg2:T66 <<REDUNDANT!!!REMOVED>>	- -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2433, 2456] <type: RIGHT>>
+R53	Neg Arg1:T69 Arg2:T62 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2441, 2412] <type: LEFT>>
+R54	Neg Arg1:T69 Arg2:T63 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2441, 2422] <type: LEFT>>
+R55	Neg Arg1:T69 Arg2:T64 << OK >>	(-) -> tbc  <RANK: 3> <info: start[2441, 2437] <type: LEFT>>
+R56	Neg Arg1:T69 Arg2:T65 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2441, 2446] <type: RIGHT>>
+R57	Neg Arg1:T69 Arg2:T66 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2441, 2456] <type: RIGHT>>
+R58	Neg Arg1:T70 Arg2:T62 <<REDUNDANT!!!REMOVED>>	-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2452, 2412] <type: LEFT>>
+R59	Neg Arg1:T70 Arg2:T63 <<REDUNDANT!!!REMOVED>>	-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2452, 2422] <type: LEFT>>
+R60	Neg Arg1:T70 Arg2:T64 <<REDUNDANT!!!REMOVED>>	-) -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2452, 2437] <type: LEFT>>
+R61	Neg Arg1:T70 Arg2:T65 << OK >>	-) -> odra  <RANK: 3> <info: start[2452, 2446] <type: LEFT>>
+R62	Neg Arg1:T70 Arg2:T66 <<REDUNDANT!!!REMOVED>>	-) -> kontakt z odrą <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2452, 2456] <type: RIGHT>>
+R63	Neg Arg1:T71 Arg2:T62 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2472, 2412] <type: LEFT>>
+R64	Neg Arg1:T71 Arg2:T63 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2472, 2422] <type: LEFT>>
+R65	Neg Arg1:T71 Arg2:T64 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2472, 2437] <type: LEFT>>
+R66	Neg Arg1:T71 Arg2:T65 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2472, 2446] <type: LEFT>>
+R67	Neg Arg1:T71 Arg2:T66 << OK >>	- -> kontakt z odrą  <RANK: 3> <info: start[2472, 2456] <type: LEFT>>
+
+
+Sentence 26:
+W wywiadzie rodzinnym: HA- ojciec i matka, ojciec w 50rż miał udar krwotoczny mózgu
+
+
+
+Sentence 27:
+Stan społeczny: warunki mieszkaniowe dobre. 
+
+
+
+Sentence 28:
+Leki: przyjęte rano w domu 
+
+
+
+Sentence 29:
+Leki: 
+Nitrendypina 20mg 1x 1 tabl/wiecz
+Biosotal 80mg 1-0-1 tabl
+Co-Diovan 160+25mg 1x 1 tabl/rano
+
+R68	Drg Arg1:T75 Arg2:T76 << OK >>	Nitrendypina -> 20mg 1x 1 tabl/wiecz  <RANK: 3> <info: start[2639, 2652] <type: RIGHT>>
+R69	Drg Arg1:T75 Arg2:T78 <<REDUNDANT!!!REMOVED>>	Nitrendypina -> 80mg 1-0-1 tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2639, 2682] <type: RIGHT>>
+R70	Drg Arg1:T75 Arg2:T80 <<REDUNDANT!!!REMOVED>>	Nitrendypina -> 1x 1 tabl/rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2639, 2717] <type: RIGHT>>
+R71	Drg Arg1:T77 Arg2:T76 <<REDUNDANT!!!REMOVED>>	Biosotal -> 20mg 1x 1 tabl/wiecz <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2673, 2652] <type: LEFT>>
+R72	Drg Arg1:T77 Arg2:T78 << OK >>	Biosotal -> 80mg 1-0-1 tabl  <RANK: 3> <info: start[2673, 2682] <type: RIGHT>>
+R73	Drg Arg1:T77 Arg2:T80 <<REDUNDANT!!!REMOVED>>	Biosotal -> 1x 1 tabl/rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2673, 2717] <type: RIGHT>>
+R74	Drg Arg1:T79 Arg2:T76 <<REDUNDANT!!!REMOVED>>	Co-Diovan 160+25mg -> 20mg 1x 1 tabl/wiecz <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2698, 2652] <type: LEFT>>
+R75	Drg Arg1:T79 Arg2:T78 <<REDUNDANT!!!REMOVED>>	Co-Diovan 160+25mg -> 80mg 1-0-1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2698, 2682] <type: LEFT>>
+R76	Drg Arg1:T79 Arg2:T80 << OK >>	Co-Diovan 160+25mg -> 1x 1 tabl/rano  <RANK: 3> <info: start[2698, 2717] <type: RIGHT>>
+
+
+Sentence 30:
+Eliquis 5mg 1-0-1 tabl
+Betaserc ODT 24mg 1-0-1
+Glucophage XR 1000 1x 1 tabl/wiecz
+Lipanthyl 267M1x 1 tabl
+
+Planowany czas hospitalizacji: 4-5 dni.
+
+R77	Drg Arg1:T81 Arg2:T82 << OK >>	Eliquis -> 5mg 1-0-1 tabl  <RANK: 3> <info: start[2732, 2740] <type: RIGHT>>
+R78	Drg Arg1:T81 Arg2:T84 <<REDUNDANT!!!REMOVED>>	Eliquis -> 24mg 1-0-1 <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2732, 2768] <type: RIGHT>>
+R79	Drg Arg1:T81 Arg2:T86 <<REDUNDANT!!!REMOVED>>	Eliquis -> 1x 1 tabl/wiecz <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2732, 2798] <type: RIGHT>>
+R80	Drg Arg1:T81 Arg2:T88 <<REDUNDANT!!!REMOVED>>	Eliquis -> 1x 1 tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2732, 2828] <type: RIGHT>>
+R81	Drg Arg1:T83 Arg2:T82 <<REDUNDANT!!!REMOVED>>	Betaserc ODT -> 5mg 1-0-1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2755, 2740] <type: LEFT>>
+R82	Drg Arg1:T83 Arg2:T84 << OK >>	Betaserc ODT -> 24mg 1-0-1  <RANK: 3> <info: start[2755, 2768] <type: RIGHT>>
+R83	Drg Arg1:T83 Arg2:T86 <<REDUNDANT!!!REMOVED>>	Betaserc ODT -> 1x 1 tabl/wiecz <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2755, 2798] <type: RIGHT>>
+R84	Drg Arg1:T83 Arg2:T88 <<REDUNDANT!!!REMOVED>>	Betaserc ODT -> 1x 1 tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2755, 2828] <type: RIGHT>>
+R85	Drg Arg1:T85 Arg2:T82 <<REDUNDANT!!!REMOVED>>	Glucophage XR 1000 -> 5mg 1-0-1 tabl <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2779, 2740] <type: LEFT>>
+R86	Drg Arg1:T85 Arg2:T84 <<REDUNDANT!!!REMOVED>>	Glucophage XR 1000 -> 24mg 1-0-1 <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2779, 2768] <type: LEFT>>
+R87	Drg Arg1:T85 Arg2:T86 << OK >>	Glucophage XR 1000 -> 1x 1 tabl/wiecz  <RANK: 3> <info: start[2779, 2798] <type: RIGHT>>
+R88	Drg Arg1:T85 Arg2:T88 <<REDUNDANT!!!REMOVED>>	Glucophage XR 1000 -> 1x 1 tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2779, 2828] <type: RIGHT>>
+R89	Drg Arg1:T87 Arg2:T82 <<REDUNDANT!!!REMOVED>>	Lipanthyl 267M -> 5mg 1-0-1 tabl <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2814, 2740] <type: LEFT>>
+R90	Drg Arg1:T87 Arg2:T84 <<REDUNDANT!!!REMOVED>>	Lipanthyl 267M -> 24mg 1-0-1 <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2814, 2768] <type: LEFT>>
+R91	Drg Arg1:T87 Arg2:T86 <<REDUNDANT!!!REMOVED>>	Lipanthyl 267M -> 1x 1 tabl/wiecz <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2814, 2798] <type: LEFT>>
+R92	Drg Arg1:T87 Arg2:T88 << OK >>	Lipanthyl 267M -> 1x 1 tabl  <RANK: 3> <info: start[2814, 2828] <type: RIGHT>>
+
+
+Sentence 31:
+Planowane badania: badania laboratoryjne, ECHO, EKG metodą Holtera, ABPM,
+------------------------------------------------
+
+
+
+Sentence 32:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+------------------------------------------------
+
+
+
+Sentence 33:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 34:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.15[10^3/ul]
+    
+
+
+Sentence 35:
+RBC Krwinki czerwone:4.70[10^6/ul]
+    
+
+
+Sentence 36:
+HGB Hemoglobina:14.5[g/dl]
+    
+
+
+Sentence 37:
+HCT Hematokryt:43.5[%]
+    
+
+
+Sentence 38:
+MCV wskaźnik czerwonokrw:92.6[fl]
+    
+
+
+Sentence 39:
+MCH wskaźnik czerwonokrw:30.9[pg]
+    
+
+
+Sentence 40:
+MCHC wskaźnik czerwonokr:33.3[g/dl]
+    
+
+
+Sentence 41:
+PLT z morfologii:226[10^3/ul]
+    
+
+
+Sentence 42:
+RDW-SD:44.4[fl]
+    
+
+
+Sentence 43:
+RDW-CV:13.0[%]
+    PDW:12.9[fl]
+    MPV:10.6[fl]
+    
+
+
+Sentence 44:
+P-LCR:29.9[%]
+    
+
+
+Sentence 45:
+PCT (hematokryt płytkowy:0.24[%]
+    
+
+
+Sentence 46:
+NEUTR# wartość bezwzględ:2.66[10^3/ul]
+    
+
+
+Sentence 47:
+NEUTR%:43.2[%]
+    
+
+
+Sentence 48:
+LYMH# wartość bezwzględn:2.49[10^3/ul]
+    
+
+
+Sentence 49:
+LYMPH%:40.5[%]
+    
+
+
+Sentence 50:
+MONO# wartość bezwzględn:0.54[10^3/ul]
+    
+
+
+Sentence 51:
+MONO%:8.8[%]
+    
+
+
+Sentence 52:
+EO# wartość bezwzględna:0.38[10^3/ul]
+    
+
+
+Sentence 53:
+EO%:6.2[%]
+    
+
+
+Sentence 54:
+BASO# wartość bezwzględn:0.08[10^3/ul]
+    BASO%:1.3[%]
+    
+
+
+Sentence 55:
+NRBC %:0.2[%]
+    
+
+
+Sentence 56:
+NRBC #:0.01[10^3/ul]
+
+
+
+Sentence 57:
+Badanie ogólne moczu
+    
+
+
+Sentence 58:
+barwa:żółty[ ]
+    
+
+
+Sentence 59:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 60:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 61:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 62:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 63:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 64:
+ciężar właściwy:1.018[ ]
+    
+
+
+Sentence 65:
+pH:5.0[ ]
+    
+
+
+Sentence 66:
+białko:nieobecne[ ]
+    
+
+
+Sentence 67:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 68:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 69:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 70:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 71:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 72:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 73:
+leukocyty:4 /ul[ul]
+    śluz:liczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 74:
+TSH: TSH:2.57[uIU/ml]
+FT3: FT3:2.31[pg/ml]
+
+
+
+Sentence 75:
+FT4: FT4:0.96[ng/dl]
+
+
+
+Sentence 76:
+ALAT: ALAT:33[U/L]
+ASPAT: ASPAT:31[U/L]
+
+
+
+Sentence 77:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 78:
+Potas (K): Potas:4.6[mmol/L]
+
+
+
+Sentence 79:
+Hemoglobina glikowana (HbA1c)
+    :5.18[%]
+    
+
+
+Sentence 80:
+:33[mmol/mol]
+Kreatynina + GFR
+    
+
+
+Sentence 81:
+Kreatynina w surowicy:0.85[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 82:
+MDRD ze stan:95.8[ml/min/1,73 m^2]
+
+
+
+Sentence 83:
+Mocznik: Mocznik:30[mg/dl]
+
+
+
+Sentence 84:
+Kwas moczowy: Kwas moczowy:8.6[mg/dl]
+
+
+
+Sentence 85:
+Lipidogram
+    
+
+
+Sentence 86:
+Cholesterol całkowity:189[mg/dl]
+    
+
+
+Sentence 87:
+Cholesterol HDL:35[mg/dl]
+    
+
+
+Sentence 88:
+Cholestrol LDL:106[mg/dl]
+    
+
+
+Sentence 89:
+Triglicerydy:235[mg/dl]
+    
+
+
+Sentence 90:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:122[mg/dl]
+
+
+
+Sentence 91:
+------------------------------------------------
+
+
+
+Sentence 92:
+ICD10
+------------------------------------------------
+I34.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 93:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 94:
+89.501
+89.502
+C55
+A01
+L43
+L55
+L69
+O55
+I17
+N45
+M45
+M37
+I19
+O35
+N13
+88.721
+88.722
+O69
+88.714
+------------------------------------------------
+
+

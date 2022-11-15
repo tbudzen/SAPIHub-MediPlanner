@@ -1,0 +1,81 @@
+T1	Drug 340 351	Telmisartan
+T2	Treatment 469 525	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T3	Behaviour 528 568	Dieta lekkostrawna , niskocholesterolowa
+T4	Investigation 572 655	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T5	Investigation 658 706	Systematyczna kontrola ciśnienia tętniczego krwi
+T6	Drug 757 764	Zofenil
+T7	Drug_dose 765 793	30 mg 1xdz po 1/2 tabl. rano
+T8	Drug 795 802	Amlopin
+T9	Drug_dose 803 831	5 mg 1x dz po 1/2 tabl. rano
+T10	Condition 1060 1101	Łagodna niedomykalność zastawki mitralnej
+N1	Reference T10 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T11	Condition 1103 1147	Pojedyncze pobudzenia komorowe i nadkomorowe
+N2	Reference T11 ICD10:I49	Inne zaburzenia rytmu serca
+T12	Condition 1149 1170	Nadciśnienie tętnicze
+N3	Reference T12 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+R1	Drg Arg1:T6 Arg2:T7	
+R2	Drg Arg1:T8 Arg2:T9	
+T13	Symptom 1567 1626	wysokich wartości ciśnienia tętniczego krwi do 180/120 mmHg
+T14	Symptom 1644 1674	uczucie nierównej pracy serca.
+N4	Reference T14 ICD10:R00.2	Kołatanie serca
+T15	Negation 1675 1681	Neguje
+T16	Symptom 1682 1706	bóle w klatce piersiowej
+N5	Reference T16 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T17	Condition 1723 1744	Nadciśnienie tętnicze
+N6	Reference T17 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T18	Investigation 1762 1779	MR jamy brzusznej
+T19	Date 1746 1752	w 2008
+T20	Negation 1790 1800	wykluczano
+T21	Investigation_result 1810 1830	gruczolaka nadnerczy
+N7	Reference T21 ICD10:D35.0	Nadnercze
+T22	Investigation 1843 1874	oznaczenie stężenia aldosteronu
+T23	Investigation 1877 1883	reniny
+T24	Investigation_result 1906 1923	wyniki prawidłowe
+A1	Source T24 Declared
+T25	Treatment 1953 1960	zabiegu
+A2	Status T25 Historical_Insignificant
+N8	Reference T25 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T26	Condition 1961 1990	żylaków kończyny dolnej lewej
+A3	Status T26 Historical_Insignificant
+N9	Reference T26 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T27	Treatment 1992 2011	Leczenie przewlekłe
+T28	Negation 2014 2018	brak
+T29	Condition 2047 2050	WZW
+N10	Reference T29 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T30	Negation 2051 2057	( -  )
+T31	Condition 2060 2069	borelioza
+N11	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Negation 2070 2075	( - )
+T33	Condition 2110 2119	łuszczycę
+A4	Status T33 Family
+N12	Reference T33 ICD10:L40.0	Łuszczyca pospolita
+T34	Behaviour 2121 2136	Palenie tytoniu
+N13	Reference T34 ICD10:Z72.0	Używanie tytoniu
+T35	Negation 2138 2141	nie
+T36	Behaviour 2155 2175	alkohol sporadycznie
+A5	Status T36 Historical_Insignificant
+N14	Reference T36 ICD10:Z72.1	Używanie alkoholu
+T37	Condition 2177 2186	Uczulenia
+A6	Source T37 Declared
+N15	Reference T37 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T38	Behaviour 2227 2253	warunki mieszkaniowe dobre
+T39	Behaviour 2256 2275	mieszka z partnerką
+T40	Drug 2283 2300	Telmisartan Mylan
+T41	Drug_dose 2301 2331	80 mg 1x dz po 1/2 tabl.  rano
+T42	Investigation 2347 2357	Echo serca
+T43	Investigation 2360 2375	Holter EKG i RR
+T44	Investigation 2379 2394	Próba Wysiłkowa
+R3	Neg Arg1:T15 Arg2:T16	
+R4	Dat Arg1:T19 Arg2:T18	
+R5	Inv Arg1:T18 Arg2:T21	
+R6	Neg Arg1:T20 Arg2:T21	
+R7	Dat Arg1:T19 Arg2:T22	
+R8	Dat Arg1:T19 Arg2:T23	
+R9	Inv Arg1:T23 Arg2:T24	
+R10	Inv Arg1:T22 Arg2:T24	
+R11	Neg Arg1:T28 Arg2:T27	
+R12	Neg Arg1:T30 Arg2:T29	
+R13	Neg Arg1:T32 Arg2:T31	
+R14	Neg Arg1:T35 Arg2:T34	
+R15	Drg Arg1:T40 Arg2:T41	
+T45	Investigation 2188 2209	w trakcie diagnostyki

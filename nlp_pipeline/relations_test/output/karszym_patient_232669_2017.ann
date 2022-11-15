@@ -1,0 +1,262 @@
+T1	Condition 450 508	Wrodzona wada serca pod postacią wspólnego pnia tętniczego
+N1	Reference T1 ICD10:Q20.0	Wspólny pień tętniczy
+T2	Condition 510 521	TAC typ III
+N2	Reference T2 ICD10:Q20.0	Wspólny pień tętniczy
+T3	Symptom 527 542	Stan gorączkowy
+N3	Reference T3 ICD10:R50.9	Gorączka, nieokreślona
+T4	Treatment 554 582	korekcji kardiochirurgicznej
+N4	Reference T4 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T5	Treatment 585 612	użyciem homograftu płucnego
+T6	Date 614 623	01.03.04r
+T7	Treatment 638 657	operacją paliatywną
+N6	Reference T7 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T8	Date 659 670	17.07.2003r
+T9	Condition 676 710	Wielopoziomowe zwężenie homograftu
+T10	Investigation 723 741	cewnikowaniu serca
+T11	Date 743 755	19. 04.2013r
+T12	Treatment 759 831	implantacją stentu CP covered 8 x 34 do proksymalnego odcinka homograftu
+N8	Reference T12 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T13	Treatment 834 895	angioplastyka wysokociśnieniowa dystalnego odcinka homograftu
+T14	Investigation 908 926	cewnikowaniu serca
+T15	Treatment 929 948	implantacji stentów
+N9	Reference T15 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T16	Treatment 954 972	zastawki MELODY 22
+N10	Reference T16 ICD10:Z95.3	Obecność ksenogenicznej zastawki serca
+T17	Date 974 985	10.12.2015r
+T18	Drug 1106 1109	ANA
+T19	Drug 1111 1120	Perfalgan
+T20	Drug 1121 1130	Ibuprofen
+T21	Treatment 1241 1267	Dalsza opieka pediatryczna
+T22	Treatment 1271 1279	Leczenie
+T23	Condition 1280 1286	anemii
+N11	Reference T23 ICD10:D64.9	Niedokrwistość, nieokreślona
+T24	Drug 1293 1312	Hemofer prolongatum
+R1	Dat Arg1:T11 Arg2:T10	
+R2	Dat Arg1:T11 Arg2:T12	
+R3	Dat Arg1:T11 Arg2:T13	
+R4	Dat Arg1:T17 Arg2:T14	
+R5	Dat Arg1:T17 Arg2:T15	
+R6	Dat Arg1:T17 Arg2:T16	
+R7	Dat Arg1:T8 Arg2:T7	
+R8	Dat Arg1:T6 Arg2:T5	
+R9	Dat Arg1:T6 Arg2:T4	
+T25	Condition 3613 3632	wrodzoną wadą serca
+N12	Reference T25 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T26	Treatment 3637 3657	leczeniu operacyjnym
+N13	Reference T26 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T27	Treatment 3660 3679	implantacją stentów
+N14	Reference T27 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T28	Treatment 3682 3690	zastawki
+T29	Symptom 3729 3737	gorączki
+N16	Reference T29 ICD10:R50.9	Gorączka, nieokreślona
+T30	Date 3738 3745	od doby
+T31	Negation 3747 3750	bez
+T32	Symptom 3751 3773	objawów towarzyszących
+R10	Neg Arg1:T31 Arg2:T32	
+R11	Dat Arg1:T30 Arg2:T29	
+T33	Symptom 3775 3785	Stan dobry
+T34	Date 3787 3804	W ostatnim czasie
+T35	Negation 3805 3808	bez
+T36	Condition 3809 3817	infekcji
+T37	Condition 3819 3826	Alergia
+N17	Reference T37 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T38	Negation 3829 3845	nie potwierdzona
+T39	Drug 3860 3866	Acesan
+T40	Drug_dose 3867 3874	1x75 mg
+T41	Condition 4026 4069	wrodzoną wadą serca (wspólny pień tętniczy)
+N18	Reference T41 ICD10:Q20.0	Wspólny pień tętniczy
+T42	Treatment 4074 4094	leczeniu operacyjnym
+N19	Reference T42 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T43	Condition 4214 4246	infekcyjnego zapalenia wsierdzia
+N20	Reference T43 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T44	Symptom 4261 4276	Stan dość dobry
+T45	Negation 4278 4281	nie
+T46	Symptom 4282 4292	gorączkuje
+N21	Reference T46 ICD10:R50.9	Gorączka, nieokreślona
+T47	Date 4294 4302	od 4 dni
+T48	Symptom 4305 4326	dolegliwości bólowych
+N22	Reference T48 ICD10:R52.9	Ból, nieokreślony
+T49	Negation 4327 4338	nie zgłasza
+T50	Condition 4340 4347	Alergia
+N23	Reference T50 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T51	Negation 4348 4364	nie potwierdzona
+R12	Neg Arg1:T51 Arg2:T50	
+R13	Dat Arg1:T47 Arg2:T46	
+R14	Neg Arg1:T45 Arg2:T46	
+R15	Neg Arg1:T49 Arg2:T48	
+R16	Neg Arg1:T38 Arg2:T37	
+R17	Drg Arg1:T39 Arg2:T40	
+R18	Neg Arg1:T35 Arg2:T36	
+T52	Drug 1436 1446	Witamina C
+T53	Drug_dose 1313 1338	2x1 tabl między posiłkami
+T54	Date 1340 1353	przez miesiąc
+T55	Investigation 1409 1429	badań    kontrolnych
+T56	Treatment 1366 1393	do decyzji lekarza pediatry
+T57	Drug_dose 1447 1474	100mg   2x1 tabl( łącznie z
+T58	Drug 1475 1484	hemoferem
+R19	Drg Arg1:T52 Arg2:T57	
+R20	Drg Arg1:T24 Arg2:T53	
+R21	Dat Arg1:T54 Arg2:T24	
+T59	Drug 1491 1503	Kwas foliowy
+T60	Drug_dose 1504 1518	5mg   1x1 tabl
+T61	Date 1519 1535	przez 3 tygodnie
+T62	Drug 1543 1554	Witamina B6
+N7	Reference T9 ICD10:T82.0	Mechaniczne powikłanie protezy zastawki serca
+N5	Reference T5 ICD10:Z95.4	Obecność innych protez zastawek serca
+T63	Drug_dose 1556 1570	50mg  1x1 tabl
+T64	Date 1571 1587	przez 3 tygodnie
+R22	Dat Arg1:T61 Arg2:T59	
+R23	Drg Arg1:T59 Arg2:T60	
+R24	Drg Arg1:T62 Arg2:T63	
+R25	Dat Arg1:T64 Arg2:T62	
+T65	Investigation 1603 1672	kontrolną morfologię+ retikulocyty+ żelazo+ wskaźniki stanu zapalnego
+T66	Date 1673 1683	za miesiąc
+T67	Treatment 1706 1737	zgłosić się do lekarza pediatry
+T68	Investigation 1744 1749	oceny
+T69	Treatment 1752 1779	ustalenia dalszego leczenia
+T70	Condition 1780 1786	anemii
+N24	Reference T70 ICD10:D64.9	Niedokrwistość, nieokreślona
+R26	Dat Arg1:T66 Arg2:T65	
+R27	Dat Arg1:T66 Arg2:T67	
+R28	Dat Arg1:T66 Arg2:T68	
+R29	Dat Arg1:T66 Arg2:T69	
+R30	Dat Arg1:T66 Arg2:T70	
+T71	Drug 1818 1823	Acard
+T72	Drug_dose 1824 1841	150mg   1x1 tabl.
+T73	Drug 1851 1862	Witamina D3
+T74	Drug_dose 1864 1884	1000j   1x1 kapsułka
+T75	Date 1885 1898	przez miesiąc
+T76	Drug_dose 1901 1958	następnie dawkowanie w zależności od wyniku badania w POZ
+T77	Treatment 1961 1973	Profilaktyka
+T78	Condition 1974 2006	infekcyjnego zapalenia wsierdzia
+A1	Source T78 Declared
+N25	Reference T78 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T79	Treatment 2013 2040	zabiegami stomatologicznymi
+T80	Drug 2048 2054	Duomox
+T81	Drug_dose 2055 2068	1 g  doustnie
+T82	Date 2069 2086	ok 30-60min przed
+T83	Treatment 2087 2096	zabiegiem
+N26	Reference T83 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T84	Treatment 2100 2141	Kontrola w poradni kardiologii dziecięcej
+T85	Date 2161 2171	za miesiąc
+T86	Treatment 2184 2218	hospitalizacja w tutejszej Klinice
+T87	Date 2219 2232	za        rok
+T88	Investigation 2436 2447	posiew krwi
+R31	Dat Arg1:T75 Arg2:T73	
+R32	Drg Arg1:T73 Arg2:T74	
+R33	Drg Arg1:T71 Arg2:T72	
+R34	Drg Arg1:T73 Arg2:T76	
+R35	Drg Arg1:T80 Arg2:T81	
+R36	Dat Arg1:T82 Arg2:T80	
+R37	Dat Arg1:T85 Arg2:T84	
+R38	Dat Arg1:T87 Arg2:T86	
+T89	Date 2289 2298	wcześniej
+T90	Symptom 2308 2329	niepokojących objawów
+T91	Symptom 2361 2395	niewyjaśnionego stanu gorączkowego
+N27	Reference T91 ICD10:R50.9	Gorączka, nieokreślona
+R39	Dat Arg1:T89 Arg2:T90	
+R40	Dat Arg1:T89 Arg2:T91	
+R41	Dat Arg1:T89 Arg2:T84	
+T92	Drug 2615 2625	Biotrakson
+T93	Drug 2627 2637	Fluconazol
+T94	Drug 2639 2648	Lacidofil
+T95	Drug 2650 2655	Acard
+T96	Drug 2657 2668	Witamina D3
+T97	Condition 2908 2938	Infekcyjne zapalenie wsierdzia
+N28	Reference T97 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T98	Condition 2943 3001	Wrodzona wada serca pod postacią wspólnego pnia tętniczego
+N29	Reference T98 ICD10:Q20.0	Wspólny pień tętniczy
+T99	Condition 3003 3014	TAC typ III
+N30	Reference T99 ICD10:Q20.0	Wspólny pień tętniczy
+T100	Treatment 3027 3055	korekcji kardiochirurgicznej
+N31	Reference T100 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T101	Treatment 3058 3085	użyciem homograftu płucnego
+N32	Reference T101 ICD10:Z95.4	Obecność innych protez zastawek serca
+T102	Date 3087 3096	01.03.04r
+T103	Treatment 3111 3130	operacją paliatywną
+N33	Reference T103 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T104	Date 3132 3143	17.07.2003r
+T105	Condition 3149 3183	Wielopoziomowe zwężenie homograftu
+N34	Reference T105 ICD10:T82.0	Mechaniczne powikłanie protezy zastawki serca
+T106	Investigation 3196 3214	cewnikowaniu serca
+T107	Date 3216 3228	19. 04.2013r
+T108	Treatment 3232 3304	implantacją stentu CP covered 8 x 34 do proksymalnego odcinka homograftu
+N35	Reference T108 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T109	Treatment 3307 3368	angioplastyka wysokociśnieniowa dystalnego odcinka homograftu
+T110	Investigation 3381 3399	cewnikowaniu serca
+T111	Treatment 3402 3421	implantacji stentów
+N36	Reference T111 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T112	Treatment 3427 3445	zastawki MELODY 22
+N37	Reference T112 ICD10:Z95.3	Obecność ksenogenicznej zastawki serca
+T113	Date 3447 3458	10.12.2015r
+R42	Dat Arg1:T102 Arg2:T100	
+R43	Dat Arg1:T102 Arg2:T101	
+R44	Dat Arg1:T104 Arg2:T103	
+R45	Dat Arg1:T107 Arg2:T106	
+R46	Dat Arg1:T107 Arg2:T108	
+R47	Dat Arg1:T107 Arg2:T109	
+R48	Dat Arg1:T113 Arg2:T110	
+R49	Dat Arg1:T113 Arg2:T111	
+R50	Dat Arg1:T113 Arg2:T112	
+N15	Reference T28 ICD10:Z95	Obecność implantów i przeszczepów serca i naczyń krwionośnych
+R51	Dat Arg1:T34 Arg2:T36	
+R1	Dat Arg1:T6 Arg2:T3
+R101	Dat Arg1:T85 Arg2:T86
+R103	Dat Arg1:T87 Arg2:T90
+R107	Dat Arg1:T89 Arg2:T90
+R111	Neg Arg1:T31 Arg2:T29
+R112	Neg Arg1:T31 Arg2:T32
+R135	Neg Arg1:T35 Arg2:T33
+R137	Neg Arg1:T35 Arg2:T36
+R160	Neg Arg1:T38 Arg2:T37
+R177	Dat Arg1:T30 Arg2:T29
+R178	Dat Arg1:T30 Arg2:T32
+R20	Dat Arg1:T8 Arg2:T7
+R200	Dat Arg1:T34 Arg2:T32
+R201	Dat Arg1:T34 Arg2:T33
+R203	Dat Arg1:T34 Arg2:T36
+R204	Dat Arg1:T34 Arg2:T37
+R228	Dat Arg1:T102 Arg2:T98
+R229	Dat Arg1:T102 Arg2:T99
+R234	Dat Arg1:T102 Arg2:T100
+R235	Dat Arg1:T102 Arg2:T101
+R250	Dat Arg1:T104 Arg2:T98
+R251	Dat Arg1:T104 Arg2:T99
+R256	Dat Arg1:T104 Arg2:T100
+R257	Dat Arg1:T104 Arg2:T101
+R281	Dat Arg1:T107 Arg2:T108
+R285	Dat Arg1:T107 Arg2:T106
+R306	Dat Arg1:T113 Arg2:T112
+R309	Neg Arg1:T45 Arg2:T44
+R310	Neg Arg1:T45 Arg2:T46
+R311	Neg Arg1:T45 Arg2:T48
+R316	Neg Arg1:T49 Arg2:T48
+R318	Neg Arg1:T49 Arg2:T50
+R319	Dat Arg1:T47 Arg2:T44
+R320	Dat Arg1:T47 Arg2:T46
+R321	Dat Arg1:T47 Arg2:T48
+R322	Dat Arg1:T47 Arg2:T43
+R34	Dat Arg1:T11 Arg2:T12
+R38	Dat Arg1:T11 Arg2:T10
+R49	Dat Arg1:T17 Arg2:T15
+R5	Dat Arg1:T6 Arg2:T4
+R50	Dat Arg1:T17 Arg2:T16
+R52	Dat Arg1:T17 Arg2:T14
+R56	Drg Arg1:T24 Arg2:T53
+R59	Drg Arg1:T52 Arg2:T57
+R6	Dat Arg1:T6 Arg2:T5
+R62	Dat Arg1:T54 Arg2:T24
+R69	Drg Arg1:T62 Arg2:T63
+R72	Dat Arg1:T61 Arg2:T62
+R76	Dat Arg1:T64 Arg2:T65
+R79	Dat Arg1:T66 Arg2:T70
+R80	Dat Arg1:T66 Arg2:T67
+R81	Dat Arg1:T66 Arg2:T69
+R83	Dat Arg1:T66 Arg2:T68
+R87	Drg Arg1:T73 Arg2:T74
+R89	Drg Arg1:T80 Arg2:T81
+R90	Dat Arg1:T75 Arg2:T78
+R91	Dat Arg1:T75 Arg2:T77
+R94	Dat Arg1:T82 Arg2:T78
+R96	Dat Arg1:T82 Arg2:T79
+R97	Dat Arg1:T82 Arg2:T80

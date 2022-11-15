@@ -1,0 +1,28 @@
+T1	Treatment 332 360	Dalsza opieka kardiologiczna
+T2	Treatment 362 368	wizyta
+T3	Date 369 375	za rok
+T4	Behaviour 381 438	Ograniczenie maksymalnych, forsownych wysiłkow fizycznych
+T5	Condition 691 747	Wada wrodzona serca pod postacia ubytku międzykomorowego
+N1	Reference T5 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T6	Treatment 757 785	korekcji kardiochirurgicznej
+N2	Reference T6 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T7	Date 788 799	01.12.2000r
+T8	Condition 806 837	Łagodna niedomykalność aortalna
+N3	Reference T8 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T9	Treatment 1009 1017	operacji
+N4	Reference T9 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T10	Condition 1018 1021	VSD
+N5	Reference T10 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T11	Treatment 1034 1055	pod opieką alergologa
+T12	Condition 1056 1059	AZS
+N6	Reference T12 ICD10:L20.9	Atopowe zapalenie skóry, nieokreślone
+T13	Drug 1061 1075	leków na stałe
+T14	Negation 1076 1089	nie otrzymuje
+R1	Dat Arg1:T7 Arg2:T6	
+R2	Dat Arg1:T3 Arg2:T2	
+R3	Neg Arg1:T14 Arg2:T13	
+R1	Dat Arg1:T3 Arg2:T2
+R2	Dat Arg1:T7 Arg2:T5
+R3	Dat Arg1:T7 Arg2:T8
+R4	Dat Arg1:T7 Arg2:T6
+R9	Neg Arg1:T14 Arg2:T13

@@ -1,0 +1,132 @@
+T1	Investigation 1876 1880	ECHO
+T2	Investigation 1882 1900	EKG metodą Holtera
+T3	Investigation 1902 1906	ABPM
+T4	Investigation 1908 1923	próba wysiłkowa
+T5	Drug 1772 1782	Kontracept
+T6	Drug 1742 1750	Setaloft
+T7	Drug 1708 1719	Trittico CR
+T8	Drug 1679 1686	Roswera
+T9	Drug_dose 1687 1707	15mg 1x 1 tabl/wiecz
+R1	Drg Arg1:T8 Arg2:T9	
+T10	Drug_dose 1720 1741	100mg 1x 1 tabl/wiecz
+R2	Drg Arg1:T7 Arg2:T10	
+T11	Drug_dose 1751 1771	100mg 1x 1 tabl/rano
+R3	Drg Arg1:T6 Arg2:T11	
+T12	Drug_dose 1783 1792	1x 1 tabl
+R4	Drg Arg1:T5 Arg2:T12	
+T13	Behaviour 1616 1642	Warunki mieszkaniowe dobre
+T14	Condition 1596 1615	hipercholestrolemia
+A1	Status T14 Family
+N1	Reference T14 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T15	Condition 1575 1588	rak trzustki,
+A2	Status T15 Family
+N2	Reference T15 ICD10:C25	Nowotwór złośliwy trzustki
+T16	Condition 1482 1485	WZW
+N3	Reference T16 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T17	Condition 1492 1501	borelioza
+N4	Reference T17 ICD10:A69.2	Choroba z Lyme
+T18	Condition 1509 1512	tbc
+N5	Reference T18 ICD10:A15	
+T19	Negation 1513 1516	(-)
+R5	Neg Arg1:T19 Arg2:T18	
+T20	Negation 1502 1507	( - )
+R6	Neg Arg1:T20 Arg2:T17	
+T21	Negation 1486 1489	(-)
+R7	Neg Arg1:T21 Arg2:T16	
+T22	Negation 1451 1454	nie
+T23	Negation 1436 1439	nie
+T24	Negation 1417 1422	nigdy
+T25	Negation 1395 1399	brak
+T26	Negation 1214 1220	Neguje
+T27	Condition 1440 1449	Uczulenia
+N6	Reference T27 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R8	Neg Arg1:T22 Arg2:T27	
+T28	Behaviour 1423 1434	Inne używki
+N7	Reference T28 ICD10:Z72	Problemy związane ze stylem życia
+T29	Behaviour 1400 1415	Palenie tytoniu
+N8	Reference T29 ICD10:Z72.0	Używanie tytoniu
+T30	Treatment 1376 1394	Przebyte operacje:
+R9	Neg Arg1:T25 Arg2:T30	
+R10	Neg Arg1:T24 Arg2:T29	
+R11	Neg Arg1:T23 Arg2:T28	
+T31	Symptom 1222 1234	zasłabnięcia
+N9	Reference T31 ICD10:R55	Omdlenie i zapaść
+T32	Symptom 1236 1244	omdlenia
+N10	Reference T32 ICD10:R55	Omdlenie i zapaść
+T33	Symptom 1246 1256	krwawienia
+N11	Reference T33 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T34	Symptom 1258 1271	czarne stolce
+N12	Reference T34 ICD10:K92.1	Stolce smołowate
+T35	Symptom 1273 1289	brunatne wymioty
+N13	Reference T35 ICD10:K92.0	Wymioty krwawe
+T36	Condition 1291 1307	chorobę wrzodową
+N14	Reference T36 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T37	Symptom 1309 1323	duszność nocną
+N15	Reference T37 ICD10:R06.0	Duszność
+T38	Symptom 1325 1340	obrzęki podudzi
+N16	Reference T38 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T39	Symptom 1342 1367	bóle w klatce piersiowej,
+N17	Reference T39 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T40	Condition 1368 1370	HA
+N18	Reference T40 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T41	Condition 1372 1374	DM
+N19	Reference T41 ICD10:E14	Cukrzyca nieokreślona
+R12	Neg Arg1:T26 Arg2:T31	
+R13	Neg Arg1:T26 Arg2:T32	
+R14	Neg Arg1:T26 Arg2:T33	
+R15	Neg Arg1:T26 Arg2:T34	
+R16	Neg Arg1:T26 Arg2:T35	
+R17	Neg Arg1:T26 Arg2:T36	
+R18	Neg Arg1:T26 Arg2:T37	
+R19	Neg Arg1:T26 Arg2:T38	
+R20	Neg Arg1:T26 Arg2:T39	
+R21	Neg Arg1:T26 Arg2:T40	
+R22	Neg Arg1:T26 Arg2:T41	
+T42	Investigation_result 1199 1213	RR <140/90mmHg
+T43	Condition 1183 1197	zaburzenia snu
+N20	Reference T43 ICD10:G47.9	Zaburzenia snu, nieokreślone
+T44	Condition 1173 1181	depresja
+N21	Reference T44 ICD10:F32.9	Epizod depresyjny, nieokreślony
+T45	Condition 1012 1032	hipercholesterolemią
+T46	Date 1033 1053	od wczesnej młodości
+R23	Dat Arg1:T46 Arg2:T45	
+T47	Symptom 1096 1119	napadów kołatania serca
+N23	Reference T47 ICD10:R00.2	Kołatanie serca
+T48	Symptom 1122 1150	uczuciem ucisku za mostkiem.
+N24	Reference T48 ICD10:R07.2	Ból w okolicy przedsercowej
+T49	Condition 404 437	Napadowy częstoskurcz nadkomorowy
+N25	Reference T49 ICD10:I47.1	Częstoskurcz nadkomorowy
+T50	Condition 439 459	Hipercholesterolemia
+T51	Condition 461 494	Miażdżyca tętnic kończyn dolnych.
+N27	Reference T51 ICD10:I70.2	Miażdżyca tętnic kończyn
+T52	Condition 495 503	Depresja
+N28	Reference T52 ICD10:F32.9	Epizod depresyjny, nieokreślony
+T53	Treatment 649 671	kontrola u lekarza POZ
+T54	Behaviour 674 696	dieta śródziemnomorska
+T55	Investigation 699 720	kontrola lipidiogramu
+T56	Date 724 730	3 m-ce
+R24	Dat Arg1:T56 Arg2:T55	
+T57	Investigation 781 784	TEE
+T58	Investigation 791 813	diagnostyki w kierunku
+T59	Condition 814 817	PFO
+A3	Source T59 Declared
+N29	Reference T59 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T60	Drug 850 862	Rosulip Plus
+T61	Drug_dose 863 867	20+1
+R25	Drg Arg1:T60 Arg2:T61	
+N26	Reference T50 ICD10:E78.0	Czysta hipercholesterolemia
+N22	Reference T45 ICD10:E78.0	Czysta hipercholesterolemia
+R114	Neg Arg1:T23 Arg2:T28
+R12	Dat Arg1:T46 Arg2:T45
+R13	Neg Arg1:T26 Arg2:T31
+R135	Neg Arg1:T24 Arg2:T29
+R156	Neg Arg1:T25 Arg2:T30
+R159	Drg Arg1:T5 Arg2:T11
+R16	Neg Arg1:T26 Arg2:T42
+R164	Drg Arg1:T7 Arg2:T10
+R166	Drg Arg1:T8 Arg2:T9
+R28	Neg Arg1:T19 Arg2:T18
+R47	Neg Arg1:T20 Arg2:T17
+R5	Dat Arg1:T56 Arg2:T55
+R66	Neg Arg1:T21 Arg2:T16
+R89	Neg Arg1:T22 Arg2:T27

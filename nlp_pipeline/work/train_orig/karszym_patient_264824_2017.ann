@@ -1,0 +1,69 @@
+T1	Condition 491 551	Wrodzona wada serca pod postacią zwężenia zastawki aortalnej
+N1	Reference T1 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T2	Treatment 564 601	plastyce balonowej zastawki aortalnej
+T3	Date 603 614	20.07.2001r
+T4	Treatment 639 703	implantacji zastawki mechanicznej (mitralnej) w pozycję aortalną
+N2	Reference T4 ICD10:Z95.2	Obecność protez zastawek serca
+T5	Date 705 716	24.08.2004r
+T6	Condition 722 769	Łagodna niedomykalność zastawki tętnicy płucnej
+N3	Reference T6 ICD10:Q22.2	Wrodzona niedomykalność zastawki pnia płucnego
+T7	Treatment 923 955	przyjęcia do Kliniki Kardiologii
+T8	Date 970 981	15.05.2017r
+T9	Treatment 1241 1286	przygotowanie do operacji kardiochirurgicznej
+T10	Date 1092 1105	tydzień przed
+T11	Treatment 1106 1120	hospitalizacją
+T12	Negation 1150 1161	odstawienia
+T13	Drug 1162 1169	Sintrom
+T14	Drug 1204 1211	Clexane
+T15	Drug_dose 1185 1203	iniekcje podskórne
+T16	Treatment 1127 1149	ustalenia ewentualnego
+R1	Dat Arg1:T10 Arg2:T11	
+R2	Dat Arg1:T10 Arg2:T16	
+R3	Neg Arg1:T12 Arg2:T13	
+R4	Dat Arg1:T10 Arg2:T13	
+R5	Drg Arg1:T14 Arg2:T15	
+R6	Dat Arg1:T10 Arg2:T9	
+R7	Dat Arg1:T10 Arg2:T14	
+T17	Drug 1322 1329	Sintrom
+T18	Drug_dose 1330 1356	w schemacie 2mg- 1,5mg-2mg
+T19	Treatment 1292 1321	Kontunuacja przyjmowania leku
+R8	Drg Arg1:T17 Arg2:T18	
+R9	Dat Arg1:T8 Arg2:T7	
+R10	Dat Arg1:T3 Arg2:T2	
+R11	Dat Arg1:T5 Arg2:T4	
+T20	Treatment 1360 1372	Kontrola INR
+T21	Treatment 1383 1435	wynik powinien znajdowac się w przedziale 2.0 do 3.0
+T22	Investigation_result 1455 1491	wyniku poza przytoczonym przedziałem
+T23	Treatment 1502 1526	konsultacja telefoniczna
+T24	Treatment 1546 1563	modyfikacji dawki
+T25	Drug 1564 1572	Sintromu
+T27	Treatment 1577 1589	Profilaktyka
+T28	Condition 1590 1622	Infekcyjnego Zapalenia Wsierdzia
+A1	Source T28 Declared
+N4	Reference T28 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T26	Drug 1743 1750	Sintrom
+T29	Drug 1870 1877	Sintrom
+T30	Drug 1879 1886	Clexane
+T31	Symptom 2505 2522	w  stanie  dobrym
+T32	Treatment 2723 2749	wymiany zastawki mitralnej
+T33	Treatment 2752 2763	wszczepiona
+T34	Date 2764 2771	w  2004
+R12	Dat Arg1:T34 Arg2:T33	
+T35	Drug 2793 2800	Sintrom
+T36	Condition 2802 2819	wywiad alergiczny
+N7	Reference T36 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T37	Negation 2820 2826	ujemny
+R13	Neg Arg1:T37 Arg2:T36	
+N5	Reference T32 ICD10:Z95	Obecność implantów i przeszczepów serca i naczyń krwionośnych
+N6	Reference T33 ICD10:Z95	Obecność implantów i przeszczepów serca i naczyń krwionośnych
+T38	Condition 2104 2153	Wrodzona wada serca - zwężenie zastawki aortalnej
+N8	Reference T38 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T39	Treatment 2172 2195	angioplastyce balonowej
+T40	Date 2198 2209	20.07.2001r
+T41	Treatment 2216 2307	implantacji zastawki mechanicznej (St. Jude "mitralna" o średnicy 19 mm) w pozycję aortalną
+N9	Reference T41 ICD10:Z95.2	Obecność protez zastawek serca
+T42	Date 2310 2321	24.08.2004r
+T43	Condition 2328 2358	zwężenie zastawki mechanicznej
+N10	Reference T43 ICD10:T82.0	Mechaniczne powikłanie protezy zastawki serca
+R14	Dat Arg1:T42 Arg2:T41	
+R15	Dat Arg1:T40 Arg2:T39	

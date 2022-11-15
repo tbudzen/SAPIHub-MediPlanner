@@ -1,0 +1,61 @@
+T1	Drug 2765 2770	leków
+T2	Negation 2742 2764	nie przyjmuje na stałe
+R1	Neg Arg1:T2 Arg2:T1	
+T3	Negation 2733 2736	nie
+T4	Condition 2737 2741	pali
+N1	Reference T4 ICD10:T65.2	Tytoń i nikotyna
+R2	Neg Arg1:T3 Arg2:T4	
+T5	Condition 2706 2721	wywiad rodzinny
+A1	Status T5 Family
+T6	Negation 2722 2732	nieistotny
+R3	Neg Arg1:T6 Arg2:T5	
+T7	Treatment 2655 2681	korekcja przegrody nosowej
+T8	Symptom 2524 2632	dolegliwości bólowe w klatce piersiowej o charakterze kłucia, niezależnie od wykonywanego wysiłku fizycznego
+T9	Symptom 2454 2462	duszność
+N2	Reference T9 ICD10:R06.0	Duszność
+T10	Symptom 2464 2472	omdlenia
+N3	Reference T10 ICD10:R55	Omdlenie i zapaść
+T11	Symptom 2474 2493	utraty przytomności
+N4	Reference T11 ICD10:R55	Omdlenie i zapaść
+T12	Negation 2447 2453	Neguje
+R4	Neg Arg1:T12 Arg2:T9	
+R5	Neg Arg1:T12 Arg2:T10	
+R6	Neg Arg1:T12 Arg2:T11	
+T13	Investigation 2332 2360	badaniu echokardiograficznym
+T14	Investigation_result 2361 2444	stwierdzono zastawkę biologiczną bez cech dysfunkcji z łagodną falą niedomykalności
+R7	Inv Arg1:T13 Arg2:T14	
+T15	Treatment 2217 2239	operację korekcji wady
+T16	Date 2182 2201	okresie niemowlęcym
+R8	Dat Arg1:T16 Arg2:T15	
+T17	Date 2246 2259	15 roku życia
+T18	Treatment 2265 2318	reoperowana z użyciem zastawki biologicznej CorMatrix
+R9	Dat Arg1:T17 Arg2:T18	
+T19	Condition 1979 2027	wrodzoną wadą serca pod postacią zespołu Fallota
+N5	Reference T19 ICD10:Q21.3	Tetralogia Fallota
+T20	Treatment 1770 1822	implantacji biologicznej zastawki w pozycję aortalną
+T21	Date 1824 1829	2015r
+R10	Dat Arg1:T21 Arg2:T20	
+T22	Condition 1733 1751	tetralogii Fallota
+N6	Reference T22 ICD10:Q21.3	Tetralogia Fallota
+T23	Date 1753 1758	2000r
+R11	Dat Arg1:T23 Arg2:T22	
+T24	Condition 1437 1474	Blok prawej odnogi pęczka Hisa (RBBB)
+N7	Reference T24 ICD10:I45.0	Blok prawej odnogi pęczka Hisa
+T25	Condition 1388 1435	Śladowa niedomykalność zastawki tętnicy płucnej
+N8	Reference T25 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T26	Treatment 1286 1373	reoperacji implantacji zastawki biologicznej w pozycję pnia płucnego CorMatrix śr. 23mm
+T27	Date 1375 1385	13/07/2015
+R12	Dat Arg1:T27 Arg2:T26	
+T28	Treatment 1241 1263	operacji korekcji wady
+T29	Date 1265 1275	26/03/2001
+R13	Dat Arg1:T29 Arg2:T28	
+T30	Condition 1204 1231	Przetrwała żyła główna lewa
+N9	Reference T30 ICD10:Q26.1	Przetrwała płodowa lewa górna żyła główna
+T31	Condition 1154 1202	Wrodzona wada serca pod postacią zespołu Fallota
+N10	Reference T31 ICD10:Q21.3	Tetralogia Fallota
+T32	Investigation 845 891	samokontrola ciśnienia tętniczego krwi i tętna
+T33	Behaviour 728 831	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych.
+T34	Investigation 623 653	kontrola poziomu TSH, FT3, FT4
+T35	Investigation 526 609	kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T36	Treatment 1712 1732	operacyjnej korekcji
+R14	Dat Arg1:T23 Arg2:T36	

@@ -1,0 +1,225 @@
+T1	Investigation 3761 3771	Echo serca
+T2	Investigation 3774 3784	Holter EKG
+T3	Investigation 3787 3802	Próba Wysiłkowa
+T4	Drug 3563 3569	Letrox
+T5	Drug_dose 3570 3593	100 1x dz rano na czczo
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Drug 3596 3606	Concor COR
+T7	Drug_dose 3607 3624	2,5 mg 1x dz rano
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Drug 3627 3633	Plavix
+T9	Drug_dose 3634 3650	75 mg 1x dz rano
+R3	Drg Arg1:T8 Arg2:T9	
+T10	Drug 3653 3660	Tritace
+T11	Drug_dose 3661 3683	2,5 mg 1x dz wieczorem
+R4	Drg Arg1:T10 Arg2:T11	
+T12	Drug 3685 3693	Polocard
+T13	Drug_dose 3694 3714	75 mg 1xdz wieczorem
+R5	Drg Arg1:T12 Arg2:T13	
+T14	Drug 3717 3723	Atoris
+T15	Drug_dose 3724 3745	10 mg 1x dz wieczorem
+R6	Drg Arg1:T14 Arg2:T15	
+T16	Behaviour 3512 3538	warunki mieszkaniowe dobre
+T17	Negation 3489 3495	neguje
+T18	Condition 3478 3487	Uczulenia
+N1	Reference T18 ICD10:Z91.0	
+R7	Neg Arg1:T17 Arg2:T18	
+T19	Negation 3440 3448	nie pali
+T20	Behaviour 3423 3438	Palenie tytoniu
+N2	Reference T20 ICD10:Z72.0	Używanie tytoniu
+R8	Neg Arg1:T19 Arg2:T20	
+T21	Date 3449 3457	od 2 lat
+R9	Dat Arg1:T21 Arg2:T20	
+T22	Behaviour 3459 3476	Inne używki: kawa
+N3	Reference T22 ICD10:Z72	Problemy związane ze stylem życia
+T23	Condition 3392 3402	udar mózgu
+A1	Status T23 Family
+N4	Reference T23 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T24	Condition 3411 3421	ca. piersi
+A2	Status T24 Family
+N5	Reference T24 ICD10:C50	Nowotwór złośliwy piersi
+T25	Condition 3329 3332	WZW
+N6	Reference T25 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T26	Condition 3342 3351	borelioza
+N7	Reference T26 ICD10:A69.2	Choroba z Lyme
+T27	Negation 3352 3357	( - )
+R10	Neg Arg1:T27 Arg2:T26	
+T28	Negation 3333 3339	( -  )
+R11	Neg Arg1:T28 Arg2:T25	
+T29	Treatment 3225 3241	rzebyte operacje
+T30	Investigation 3148 3177	Obecnie w trakcie diagnostyki
+T31	Condition 3178 3194	zapalenia stawów
+N8	Reference T31 ICD10:M13.9	Zapalenie stawu, nieokreślone
+T32	Treatment 330 395	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T33	Behaviour 398 438	Dieta lekkostrawna , niskocholesterolowa
+T34	Investigation 451 525	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T35	Investigation 542 577	kontrola ciśnienia tętniczego krwi.
+T36	Drug 627 633	Letrox
+T37	Drug_dose 634 657	100 1x dz rano na czczo
+R12	Drg Arg1:T36 Arg2:T37	
+T38	Drug 659 669	Concor COR
+T39	Drug_dose 670 701	2,5 mg 1x dz po 1/2 tabl.  rano
+R13	Drg Arg1:T38 Arg2:T39	
+T40	Drug 703 709	Plavix
+T41	Drug_dose 710 726	75 mg 1x dz rano
+R14	Drg Arg1:T40 Arg2:T41	
+T42	Drug 728 735	Tritace
+T43	Drug 760 768	Polocard
+T44	Drug_dose 769 789	75 mg 1xdz wieczorem
+T45	Drug_dose 736 758	2,5 mg 1x dz wieczorem
+R15	Drg Arg1:T42 Arg2:T45	
+R16	Drg Arg1:T43 Arg2:T44	
+T46	Drug 791 797	Atoris
+T47	Drug_dose 798 819	20 mg 1x dz wieczorem
+R17	Drg Arg1:T46 Arg2:T47	
+T48	Drug 940 948	Letrox  
+T49	Drug 950 960	Concor COR
+T50	Drug 964 972	Plavix  
+T51	Drug 974 981	Tritace
+T52	Drug 984 994	Polocard  
+T53	Drug 996 1002	Atoris
+T54	Condition 1231 1272	Łagodna niedomykalność zastawki mitralnej
+N9	Reference T54 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T55	Condition 1275 1287	trójdzielnej
+N10	Reference T55 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T56	Condition 1289 1316	Choroba niedokrwienna serca
+T57	Condition 1318 1343	Dusznica bolesna stabilna
+N12	Reference T57 ICD10:I20	Choroba niedokrwienna serca
+T58	Treatment 1441 1472	PCI PTWz implantacją stentu DES
+T59	Treatment 1391 1422	PCI GPZ z implantacja sentu DES
+T60	Condition 1353 1382	zawale STEMI ściany przedniej
+N13	Reference T60 ICD10:I21.0	
+T61	Date 1424 1435	10.09.2016)
+R18	Dat Arg1:T61 Arg2:T59	
+R19	Dat Arg1:T61 Arg2:T60	
+T62	Date 1474 1484	12.09.2016
+R20	Dat Arg1:T62 Arg2:T60	
+T63	Condition 1495 1531	zawale STEMI ściany przednio-bocznej
+N14	Reference T63 ICD10:I21.2	Ostry zawał serca pełnościenny o innej lokalizacji
+T64	Treatment 1541 1573	PCI GPZ z implantacja stentu DES
+T65	Date 1575 1582	06.2012
+R21	Dat Arg1:T65 Arg2:T64	
+R22	Dat Arg1:T65 Arg2:T63	
+T66	Treatment 1593 1611	planowej PCI PTW z
+T67	Date 1613 1620	07.2012
+R23	Dat Arg1:T67 Arg2:T66	
+T68	Condition 1623 1702	Blok przedsionkowo komorowy II’ o typie periodyki Wenckebacha z pauzą do 2,4 s.
+N15	Reference T68 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T69	Condition 1703 1732	Blok przedsionkowo komorowy I
+N16	Reference T69 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T70	Condition 1735 1766	Komorowe zaburzenia rytmu serca
+N17	Reference T70 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T71	Condition 1769 1790	pobudzenia pojedyncze
+N18	Reference T71 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T72	Condition 1792 1810	bigeminia komorowa
+N19	Reference T72 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T73	Condition 1813 1846	Pojedyncze pobudzenia nadkomorowe
+N20	Reference T73 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T74	Condition 1872 1901	Hipercholesterolemia mieszana
+N21	Reference T74 ICD10:I78.2	
+T75	Condition 1903 1916	Hiperurykemia
+N22	Reference T75 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T76	Condition 1918 1941	Niedoczynność tarczycy.
+N23	Reference T76 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T77	Condition 1972 1998	wola guzowatego tarczycy (
+N24	Reference T77 ICD10:E04	Inne wole nietoksyczne
+T78	Treatment 1950 1962	strumektomii
+A3	Status T78 Historical_Insignificant
+A4	Status T77 Historical_Insignificant
+T79	Date 1998 2002	2005
+R24	Dat Arg1:T79 Arg2:T77	
+R25	Dat Arg1:T79 Arg2:T78	
+T80	Symptom 2413 2508	ucisków w klatce piersiowej (chora dolegliwości wiąże ze zmianą pogody) nie zależą od wysiłku  
+N25	Reference T80 ICD10:R07.3	Inne bóle w klatce piersiowej
+T81	Symptom 2527 2557	pogorszenie tolerancji wysiłku
+N26	Reference T81 ICD10:R53	Złe samopoczucie i zmęczenie
+T82	Symptom 2563 2601	kołatania serca głównie przy zmęczeniu
+N27	Reference T82 ICD10:R00.2	Kołatanie serca
+T83	Symptom 2611 2623	zasłabnięcia
+N28	Reference T83 ICD10:R55	Omdlenie i zapaść
+T84	Negation 2604 2610	neguje
+R26	Neg Arg1:T84 Arg2:T83	
+T85	Condition 2640 2667	Choroba niedokrwienna serca
+T86	Treatment 2765 2796	PCI PTWz implantacją stentu DES
+T87	Treatment 2715 2746	PCI GPZ z implantacja sentu DES
+T88	Date 2798 2808	12.09.2016
+T89	Date 2747 2758	(10.09.2016
+T90	Condition 2677 2706	zawale STEMI ściany przedniej
+N30	Reference T90 ICD10:I21.0	Ostry zawał serca pełnościenny ściany przedniej
+T91	Condition 2819 2855	zawale STEMI ściany przednio-bocznej
+N31	Reference T91 ICD10:I21.2	Ostry zawał serca pełnościenny o innej lokalizacji
+T92	Treatment 2865 2897	PCI GPZ z implantacja stentu DES
+T93	Date 2899 2907	06.2012)
+R27	Dat Arg1:T93 Arg2:T92	
+R28	Dat Arg1:T93 Arg2:T91	
+T94	Treatment 2917 2935	planowej PCI PTW z
+T95	Date 2937 2944	07.2012
+R29	Dat Arg1:T95 Arg2:T94	
+T96	Condition 2947 2968	Nadciśnienie tętnicze
+N32	Reference T96 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T97	Condition 2970 2990	Hipercholesterolemia
+T98	Condition 2992 3014	Niedoczynność tarczycy
+N34	Reference T98 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T99	Condition 3046 3070	wola guzowatego tarczycy
+N35	Reference T99 ICD10:E04	Inne wole nietoksyczne
+T100	Date 3072 3076	2005
+A5	Status T99 Historical_Insignificant
+T101	Treatment 3024 3036	strumektomii
+A6	Status T101 Historical_Insignificant
+R30	Dat Arg1:T100 Arg2:T99	
+R31	Dat Arg1:T100 Arg2:T101	
+T102	Drug 3099 3106	Atorisu
+T103	Condition 3120 3145	podejrzenie nietolerancji
+A7	Source T103 Declared
+N36	Reference T103 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R32	Alg Arg1:T103 Arg2:T102	
+T104	Symptom 3107 3117	ból stawów
+N37	Reference T104 ICD10:M25.5	Ból stawu
+T105	Condition 1849 1870	Nadciśnienie tętnicze
+N38	Reference T105 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+N11	Reference T56 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+N29	Reference T85 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+N33	Reference T97 ICD10:E78.0	Czysta hipercholesterolemia
+R1	Drg Arg1:T36 Arg2:T37
+R117	Neg Arg1:T28 Arg2:T25
+R12	Drg Arg1:T43 Arg2:T44
+R13	Drg Arg1:T43 Arg2:T45
+R136	Drg Arg1:T4 Arg2:T5
+R143	Drg Arg1:T6 Arg2:T7
+R150	Drg Arg1:T8 Arg2:T9
+R157	Drg Arg1:T10 Arg2:T11
+R16	Drg Arg1:T46 Arg2:T44
+R164	Drg Arg1:T12 Arg2:T13
+R171	Drg Arg1:T14 Arg2:T15
+R178	Dat Arg1:T21 Arg2:T20
+R179	Dat Arg1:T21 Arg2:T22
+R18	Drg Arg1:T46 Arg2:T47
+R21	Dat Arg1:T61 Arg2:T59
+R23	Dat Arg1:T62 Arg2:T58
+R25	Dat Arg1:T65 Arg2:T64
+R26	Dat Arg1:T65 Arg2:T66
+R27	Dat Arg1:T67 Arg2:T68
+R28	Dat Arg1:T79 Arg2:T77
+R29	Neg Arg1:T84 Arg2:T82
+R30	Neg Arg1:T84 Arg2:T83
+R31	Neg Arg1:T84 Arg2:T85
+R32	Dat Arg1:T88 Arg2:T91
+R36	Dat Arg1:T89 Arg2:T86
+R37	Dat Arg1:T89 Arg2:T87
+R38	Dat Arg1:T93 Arg2:T96
+R39	Dat Arg1:T93 Arg2:T92
+R40	Dat Arg1:T93 Arg2:T94
+R41	Dat Arg1:T95 Arg2:T96
+R42	Dat Arg1:T95 Arg2:T92
+R43	Dat Arg1:T95 Arg2:T94
+R44	Dat Arg1:T100 Arg2:T104
+R45	Dat Arg1:T100 Arg2:T103
+R46	Dat Arg1:T100 Arg2:T102
+R48	Neg Arg1:T17 Arg2:T18
+R53	Neg Arg1:T17 Arg2:T16
+R6	Drg Arg1:T40 Arg2:T39
+R7	Drg Arg1:T42 Arg2:T41
+R76	Neg Arg1:T19 Arg2:T20
+R77	Neg Arg1:T19 Arg2:T22
+R9	Drg Arg1:T42 Arg2:T45
+R96	Neg Arg1:T27 Arg2:T26

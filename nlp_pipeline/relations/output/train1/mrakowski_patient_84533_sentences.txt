@@ -1,0 +1,534 @@
+allRelations          : 32
+oks                   : 10
+isRedundantAndRemoveds: 20
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 2
+GOOD / BAD            : 30 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 64 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+
+
+
+Sentence 2:
+------------------------------------------------
+
+
+
+Sentence 3:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 4:
+------------------------------------------------
+ Rozpozanie I: ICD10:R07|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo::
+------------------------------------------------
+
+
+
+Sentence 5:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 6:
+------------------------------------------------
+ Rozpozanie I: ICD10:I49|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Komorowe zaburzenia rytmu.
+
+
+Sentence 7:
+Choroba zwyrodnieniowa kręgosłupa.
+
+
+Sentence 8:
+Hipercholesterolemia mieszana w trakcie leczenia dietą.
+
+
+Sentence 9:
+Nieprawidłowa glikemia na czczo.
+
+
+
+Sentence 10:
+------------------------------------------------
+
+
+
+Sentence 11:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 12:
+Pacjent  lat 64 przyjęty do Kliniki z powodu z powodu bólów w klatce piersiowej oraz uczucia kołatania serca. 
+
+
+
+Sentence 13:
+Neguje zasłabnięcia. 
+
+R1	Neg Arg1:T7 Arg2:T8 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[1059, 1066] <type: RIGHT>>
+
+
+Sentence 14:
+W wywiadzie : Choroba zwyrodnieniowa kręgosłupa.
+
+
+Sentence 15:
+Hipercholesterolemia mieszana.
+
+
+Sentence 16:
+Nieprawidłowa glikemia na czczo. 
+
+
+
+Sentence 17:
+Przebyte operacje:  brak
+
+R2	Neg Arg1:T13 Arg2:T12 << OK >>	brak -> Przebyte operacje  <RANK: 3> <info: start[1215, 1195] <type: LEFT>>
+
+
+Sentence 18:
+Leczenie przewlekłe:  brak 
+
+R3	Neg Arg1:T15 Arg2:T14 << OK >>	brak -> Leczenie przewlekłe  <RANK: 3> <info: start[1242, 1220] <type: LEFT>>
+
+
+Sentence 19:
+Przebyte choroby zakaźne - WZW ( -  ) , borelioza ( - ) Odra ( - )
+
+R4	Neg Arg1:T19 Arg2:T16 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1311, 1275] <type: LEFT>>
+R5	Neg Arg1:T19 Arg2:T17 <<REDUNDANT!!!SHOULD BE REMOVED>>	- -> borelioza  <RANK: 3> <info: start[1311, 1288] <type: LEFT>>
+R6	Neg Arg1:T19 Arg2:T18 << OK >>	- -> Odra  <RANK: 3> <info: start[1311, 1304] <type: LEFT>>
+R7	Neg Arg1:T20 Arg2:T16 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1300, 1275] <type: LEFT>>
+R8	Neg Arg1:T20 Arg2:T17 << OK >>	- -> borelioza  <RANK: 3> <info: start[1300, 1288] <type: LEFT>>
+R9	Neg Arg1:T20 Arg2:T18 <<REDUNDANT!!!SHOULD BE REMOVED>>	- -> Odra  <RANK: 3> <info: start[1300, 1304] <type: RIGHT>>
+R10	Neg Arg1:T21 Arg2:T16 << OK >>	- -> WZW  <RANK: 3> <info: start[1281, 1275] <type: LEFT>>
+R11	Neg Arg1:T21 Arg2:T17 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1281, 1288] <type: RIGHT>>
+R12	Neg Arg1:T21 Arg2:T18 <<REDUNDANT!!!REMOVED>>	- -> Odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1281, 1304] <type: RIGHT>>
+
+
+Sentence 20:
+W wywiadzie rodzinnym : matka - stan po implantacji kardiostymulatora , ojciec  udar mózgu 
+
+
+
+Sentence 21:
+Palenie tytoniu: nie
+Inne używki: nie
+Uczulenia: neguje
+Stan społeczny: warunki mieszkaniowe dobre , mieszka z mężem
+Leki: Magne B6 1
+R13	Neg Arg1:T25 Arg2:T28 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1424, 1445] <type: RIGHT>>
+R14	Neg Arg1:T25 Arg2:T24 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[1424, 1407] <type: LEFT>>
+R15	Neg Arg1:T25 Arg2:T26 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1424, 1428] <type: RIGHT>>
+R16	Neg Arg1:T25 Arg2:T30 <<REDUNDANT!!!REMOVED>>	nie -> warunki mieszkaniowe dobre <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1424, 1479] <type: RIGHT>>
+R17	Neg Arg1:T25 Arg2:T31 <<REDUNDANT!!!REMOVED>>	nie -> Magne B6 <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1424, 1530] <type: RIGHT>>
+R18	Neg Arg1:T25 Arg2:T32 <<REDUNDANT!!!REMOVED>>	nie -> 1 xdz rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1424, 1539] <type: RIGHT>>
+R19	Neg Arg1:T27 Arg2:T28 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1441, 1445] <type: RIGHT>>
+R20	Neg Arg1:T27 Arg2:T24 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1441, 1407] <type: LEFT>>
+R21	Neg Arg1:T27 Arg2:T26 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[1441, 1428] <type: LEFT>>
+R22	Neg Arg1:T27 Arg2:T30 <<REDUNDANT!!!REMOVED>>	nie -> warunki mieszkaniowe dobre <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1441, 1479] <type: RIGHT>>
+R23	Neg Arg1:T27 Arg2:T31 <<REDUNDANT!!!REMOVED>>	nie -> Magne B6 <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1441, 1530] <type: RIGHT>>
+R24	Neg Arg1:T27 Arg2:T32 <<REDUNDANT!!!REMOVED>>	nie -> 1 xdz rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1441, 1539] <type: RIGHT>>
+R25	Neg Arg1:T29 Arg2:T28 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[1456, 1445] <type: LEFT>>
+R26	Neg Arg1:T29 Arg2:T24 <<REDUNDANT!!!REMOVED>>	neguje -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1456, 1407] <type: LEFT>>
+R27	Neg Arg1:T29 Arg2:T26 <<REDUNDANT!!!REMOVED>>	neguje -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1456, 1428] <type: LEFT>>
+R28	Neg Arg1:T29 Arg2:T30 <<REDUNDANT!!!REMOVED>>	neguje -> warunki mieszkaniowe dobre <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1456, 1479] <type: RIGHT>>
+R29	Neg Arg1:T29 Arg2:T31 <<REDUNDANT!!!REMOVED>>	neguje -> Magne B6 <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1456, 1530] <type: RIGHT>>
+R30	Neg Arg1:T29 Arg2:T32 <<REDUNDANT!!!REMOVED>>	neguje -> 1 xdz rano <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1456, 1539] <type: RIGHT>>
+R31	Drg Arg1:T31 Arg2:T32 << OK >>	Magne B6 -> 1 xdz rano  <RANK: 3> <info: start[1530, 1539] <type: RIGHT>>
+R32	Alg Arg1:T28 Arg2:T31 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Magne B6 <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1445, 1530] <type: RIGHT>>
+
+
+Sentence 22:
+xdz rano 
+Plan Opieki : Echo serca , Holter EKG , Próba Wysiłkowa , Planowany czas hospitalizacji 4-5 dni
+
+
+
+Sentence 23:
+------------------------------------------------
+
+
+
+Sentence 24:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 25:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.39[10^3/ul]
+    
+
+
+Sentence 26:
+RBC Krwinki czerwone:5.01[10^6/ul]
+    
+
+
+Sentence 27:
+HGB Hemoglobina:14.3[g/dl]
+    
+
+
+Sentence 28:
+HCT Hematokryt:41.9[%]
+    
+
+
+Sentence 29:
+MCV wskaźnik czerwonokrw:83.6[fl]
+    
+
+
+Sentence 30:
+MCH wskaźnik czerwonokrw:28.5[pg]
+    
+
+
+Sentence 31:
+MCHC wskaźnik czerwonokr:34.1[g/dl]
+    
+
+
+Sentence 32:
+PLT z morfologii:222[10^3/ul]
+    
+
+
+Sentence 33:
+RDW-SD:42.5[fl]
+    
+
+
+Sentence 34:
+RDW-CV:13.9[%]
+    PDW:11.4[fl]
+    MPV:10.1[fl]
+    
+
+
+Sentence 35:
+P-LCR:25.7[%]
+    
+
+
+Sentence 36:
+PCT (hematokryt płytkowy:0.22[%]
+    
+
+
+Sentence 37:
+NEUTR# wartość bezwzględ:3.51[10^3/ul]
+    
+
+
+Sentence 38:
+NEUTR%:54.9[%]
+    
+
+
+Sentence 39:
+LYMH# wartość bezwzględn:1.86[10^3/ul]
+    
+
+
+Sentence 40:
+LYMPH%:29.1[%]
+    
+
+
+Sentence 41:
+MONO# wartość bezwzględn:0.72[10^3/ul]
+    
+
+
+Sentence 42:
+MONO%:11.3[%]
+    
+
+
+Sentence 43:
+EO# wartość bezwzględna:0.23[10^3/ul]
+    
+
+
+Sentence 44:
+EO%:3.6[%]
+    
+
+
+Sentence 45:
+BASO# wartość bezwzględn:0.07[10^3/ul]
+    BASO%:1.1[%]
+    
+
+
+Sentence 46:
+NRBC %:0.0[%]
+    
+
+
+Sentence 47:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 48:
+D-dimer - test ilościowy: D-dimer - test ilościowy:288[ng/ml]
+
+
+
+Sentence 49:
+Badanie ogólne moczu
+    
+
+
+Sentence 50:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 51:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 52:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 53:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 54:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 55:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 56:
+ciężar właściwy:1.019[ ]
+    
+
+
+Sentence 57:
+pH:6.0[ ]
+    
+
+
+Sentence 58:
+białko:nieobecne[ ]
+    
+
+
+Sentence 59:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 60:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 61:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 62:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 63:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 64:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 65:
+leukocyty:1 /ul[ul]
+    śluz:nieliczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 66:
+TSH: TSH:1.57[uIU/ml]
+
+
+
+Sentence 67:
+FT3: FT3:2.84[pg/ml]
+
+
+
+Sentence 68:
+FT4: FT4:1.19[ng/dl]
+
+
+
+Sentence 69:
+Troponina T: Troponina T:7.6[pg/ml]
+
+
+
+Sentence 70:
+ALAT: ALAT:43[U/L]
+ASPAT: ASPAT:33[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 71:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 72:
+Potas (K): Potas:4.8[mmol/L]
+
+
+
+Sentence 73:
+Kreatynina + GFR
+    
+
+
+Sentence 74:
+Kreatynina w surowicy:0.72[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 75:
+MDRD ze stan:109.9[ml/min/1,73 m^2]
+
+
+
+Sentence 76:
+Magnez: Magnez:0.81[mmol/L]
+
+
+
+Sentence 77:
+Mocznik: Mocznik:37[mg/dl]
+
+
+
+Sentence 78:
+Kwas moczowy: Kwas moczowy:5.7[mg/dl]
+
+
+
+Sentence 79:
+Lipidogram
+    
+
+
+Sentence 80:
+Cholesterol całkowity:207[mg/dl]
+    
+
+
+Sentence 81:
+Cholesterol HDL:45[mg/dl]
+    
+
+
+Sentence 82:
+Cholestrol LDL:120[mg/dl]
+    
+
+
+Sentence 83:
+Triglicerydy:122[mg/dl]
+    
+
+
+Sentence 84:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:115[mg/dl]
+
+
+
+Sentence 85:
+------------------------------------------------
+
+
+
+Sentence 86:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 87:
+I49.9
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 88:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 89:
+89.501
+C55
+A01
+89.502
+I81
+L43
+O61
+M87
+G49
+N45
+L69
+O55
+I17
+M45
+O35
+M37
+I19
+N13
+88.721
+O69
+
+
+
+Sentence 90:
+------------------------------------------------
+
+

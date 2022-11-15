@@ -1,0 +1,22 @@
+T1	Condition 471 531	Wrodzona wada serca pod postacią przełożenia wielkich naczyń
+N1	Reference T1 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T2	Condition 533 569	ubytku w przegrodzie międzykomorowej
+N2	Reference T2 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T3	Treatment 573 603	operacji korekcji anatomicznej
+N3	Reference T3 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T4	Date 605 616	17.08.2017r
+T5	Investigation_result 618 651	Typowa anatomia tętnic wieńcowych
+R1	Dat Arg1:T4 Arg2:T3	
+T6	Investigation_result 656 708	Nieprawidłowy obraz wsierdzia przegrody lewej komory
+N4	Reference T6 ICD10:R93.4	Nieprawidłowe wyniki diagnostycznych badań obrazowych układu moczowego
+T7	Investigation 714 724	obserwacji
+T8	Condition 860 863	TGA
+N5	Reference T8 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T9	Treatment 908 928	pod opieka neurologa
+T10	Drug 930 944	leków na stałe
+T11	Negation 945 958	nie otrzymuje
+T12	Condition 961 978	wywiad alergiczny
+N6	Reference T12 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T13	Negation 979 985	ujemny
+R2	Neg Arg1:T13 Arg2:T12	
+R3	Neg Arg1:T11 Arg2:T10	

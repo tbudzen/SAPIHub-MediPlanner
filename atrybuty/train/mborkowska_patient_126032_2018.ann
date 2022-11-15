@@ -1,0 +1,32 @@
+T1	Investigation 1108 1111	TTE
+T2	Investigation 1113 1116	TET
+T3	Investigation 1117 1132	ekg m. Holtera,
+T4	Investigation 1133 1137	ABPM
+T5	Condition 461 536	Wada serca wrodzona pod postacią  skorygowanego przełożenia wielkich naczyń
+N1	Reference T5 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T6	Condition 542 583	podzastawkowego zwężenia tętnicy płucnej.
+T7	Condition 726 800	wadą serca wrodzona pod postacią skorygowanego przełożenia wielkich naczyń
+N3	Reference T7 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T8	Condition 804 845	zweżeniem podzastawkowym tętnicy płucnej,
+T9	Negation 914 920	neguje
+T10	Symptom 921 945	bóle w klatce piersiowej
+N5	Reference T10 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T11	Symptom 947 977	zmniejszoną tolerancję wysiłku
+N6	Reference T11 ICD10:R53	Złe samopoczucie i zmęczenie
+T12	Symptom 979 995	ko latania serca
+N7	Reference T12 ICD10:R00.2	Kołatanie serca
+R1	Neg Arg1:T9 Arg2:T10	
+R2	Neg Arg1:T9 Arg2:T11	
+R3	Neg Arg1:T9 Arg2:T12	
+T13	Condition 998 1018	Uczulenia  , alergie
+N8	Reference T13 ICD10:T78.4	Alergia, nieokreślona
+T14	Negation 1020 1030	nie podaje
+R4	Neg Arg1:T14 Arg2:T13	
+T15	Treatment 1032 1040	Operacje
+T16	Negation 1042 1044	nb
+R5	Neg Arg1:T16 Arg2:T15	
+T17	Negation 1064 1077	nie przyjmuje
+T18	Drug 1047 1063	Leków przewlekle
+R6	Neg Arg1:T17 Arg2:T18	
+N4	Reference T8 ICD10:I28.8	Inne określone choroby naczyń płucnych
+N2	Reference T6 ICD10:I28.8	Inne określone choroby naczyń płucnych

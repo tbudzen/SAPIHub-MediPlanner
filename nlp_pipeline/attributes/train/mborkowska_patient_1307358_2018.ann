@@ -1,0 +1,66 @@
+T1	Drug 354 360	Warfin
+T2	Drug_dose 361 397	pod kontrolą INR (INR  pomiędzy 2-3)
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 400 409	Captopril
+T4	Drug 423 431	Spironol
+T5	Drug_dose 410 420	2x 6,25 mg
+R2	Drg Arg1:T3 Arg2:T5	
+T6	Drug_dose 432 442	1x 12,5 mg
+R3	Drg Arg1:T4 Arg2:T6	
+T7	Investigation 570 588	badania Fibro-Scan
+T8	Drug 711 717	Warfin
+T9	Drug 719 728	Captopril
+T10	Drug 730 738	Spironol
+T11	Drug 740 747	sedacja
+T12	Investigation 759 763	ECHO
+T13	Drug 765 784	znieczulenie ogólne
+T14	Investigation 788 796	angio-TK
+T15	Condition 1948 1952	HLHS
+N1	Reference T15 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+T16	Condition 1014 1078	Wrodzona wada serca pod postacią zespołu hipoplazji lewego serca
+N2	Reference T16 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+T17	Condition 1080 1084	HLHS
+N3	Reference T17 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+T18	Drug 1974 1982	spironol
+T19	Drug 1984 1990	warfin
+T20	Drug 1992 2001	captopril
+T21	Condition 2037 2054	wywiad alergiczny
+N4	Reference T21 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T22	Negation 2055 2061	ujemny
+R4	Neg Arg1:T22 Arg2:T21	
+T23	Treatment 1097 1121	operacji metodą Norwooda
+T24	Date 1123 1134	02.04.2015r
+R5	Dat Arg1:T24 Arg2:T23	
+T25	Treatment 1712 1779	operacji met Fontana ( tunel zewnątrzprzedsionkowy bez fenestracji)
+T26	Date 1782 1792	11.01.2018
+R6	Dat Arg1:T26 Arg2:T25	
+T27	Investigation 1654 1686	cewnikowaniu serca z aortografią
+T28	Date 1688 1700	30.06.2017r)
+R7	Dat Arg1:T28 Arg2:T27	
+T29	Treatment 1590 1628	angioplastyką balonową tętnic płucnych
+T30	Investigation 1569 1587	cewnikowaniu serca
+T31	Date 1630 1641	21.07.2016r
+R8	Dat Arg1:T31 Arg2:T29	
+R9	Dat Arg1:T31 Arg2:T30	
+T32	Condition 1528 1557	NZK w przebiegu pooperacyjnym
+N5	Reference T32 ICD10:I46.9	Zatrzymanie krążenia, nieokreślone
+T33	Condition 1171 1190	zwężenia łuku aorty
+N6	Reference T33 ICD10:Q25.1	Zwężenie cieśni aorty
+T34	Treatment 1147 1170	angioplastyce balonowej
+T35	Date 1192 1203	17.08.2015r
+R10	Dat Arg1:T35 Arg2:T33	
+R11	Dat Arg1:T35 Arg2:T34	
+T36	Treatment 1355 1438	dwukierunkowym zespoleniu met. Glenna z plastyką łuku aorty z użyciem łaty Gore tex
+T37	Date 1503 1514	07.10.2015r
+R12	Dat Arg1:T37 Arg2:T36	
+T38	Condition 1208 1234	Nawrót zwężenia łuku aorty
+N7	Reference T38 ICD10:Q25.1	Zwężenie cieśni aorty
+T39	Condition 1237 1255	naczyń dogłowowych
+N8	Reference T39 ICD10:I65	Niedrożność i zwężenie tętnic przedmózgowych, nieprowadzące do zawału mózgu
+T40	Treatment 1267 1329	angioplastyce balonowej ujścia naczyń dogłowowych i łuku aorty
+T41	Date 1331 1342	23.09.2015r
+R13	Dat Arg1:T41 Arg2:T40	
+T42	Treatment 448 482	Kontrola w poradni Kardiologicznej
+T43	Date 483 492	za 3 m-ce
+R14	Dat Arg1:T43 Arg2:T42	
+T44	Treatment 496 549	Opieka Poradni Hepatologicznej w miejscu zamieszkania

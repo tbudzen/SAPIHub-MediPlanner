@@ -1,0 +1,67 @@
+T1	Condition 450 488	Tętniak przegrody międzyprzedsionkowej
+T2	Condition 491 514	drożnym otworem owalnym
+T3	Condition 517 540	nieistotnym przeciekiem
+T4	Treatment 650 719	Dalsza opieka w POZ oraz Poradni Kardiologicznej , Endokrynologicznej
+T5	Condition 1120 1135	podejrzenia ASD
+T6	Symptom 1176 1202	napadowe uczucie duszności
+T7	Symptom 1205 1244	trudności z nabraniem głębokiego wdechu
+T8	Investigation 1152 1155	TEE
+T9	Symptom 1256 1268	zasłabnięcia
+T10	Negation 1249 1255	Neguje
+T11	Negation 1271 1277	neguje
+T12	Symptom 1278 1302	bóle w klatce piersiowej
+T13	Condition 1319 1338	podejrzenie nerwicy
+T14	Negation 1360 1364	brak
+T15	Negation 1387 1391	brak
+T16	Negation 1426 1430	-  )
+T17	Negation 1445 1448	- )
+T18	Treatment 1340 1357	Przebyte operacje
+T19	Treatment 1365 1384	Leczenie przewlekłe
+T20	Condition 1420 1423	WZW
+troby
+T21	Condition 1433 1442	borelioza
+T22	Negation 1473 1477	brak
+T23	Negation 1496 1499	nie
+T24	Behaviour 1479 1494	Palenie tytoniu
+T25	Condition 1449 1470	W wywiadzie rodzinnym
+T26	Behaviour 1500 1511	Inne używki
+zane ze stylem życia
+T27	Negation 1530 1536	neguje
+T28	Condition 1519 1528	Uczulenia
+T29	Behaviour 1553 1579	warunki mieszkaniowe dobre
+T30	Negation 1611 1614	bez
+T31	Drug 1605 1609	Leki
+T32	Drug_dose 1615 1633	leków przewlekłych
+T33	Investigation 1648 1660	Echo serca ,
+T34	Investigation 1661 1664	TEE
+T35	Investigation 1667 1688	RTG klatki piersiowej
+N1	Reference T1 ICD10:Q21.8	Inna wrodzona wada rozwojowa przegrÃ³d serca
+N2	Reference T2 ICD10:Q21.1	Ubytek przegrody miÄdzyprzedsionkowej
+N3	Reference T5 ICD10:Q21.1	Ubytek przegrody miÄdzyprzedsionkowej
+N4	Reference T6 ICD10:R06.0	DusznoÅÄ
+N5	Reference T9 ICD10:R55	Omdlenie i zapaÅÄ
+N6	Reference T12 ICD10:R07.4	BÃ³l w klatce piersiowej, nieokreÅlony
+N7	Reference T13 ICD10:F48	Inne zaburzenia nerwicowe
+N8	Reference T18 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N9	Reference T20 ICD10:B19	NieokreÅlone wirusowe zapalenie wÄtroby
+N10	Reference T21 ICD10:A69.2	Choroba z Lyme
+N11	Reference T24 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N12	Reference T26 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+N13	Reference T28 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+R100	Neg Arg1:T30 Arg2:T31
+R101	Neg Arg1:T30 Arg2:T32
+R102	Drg Arg1:T31 Arg2:T32
+R13	Neg Arg1:T14 Arg2:T18
+R2	Neg Arg1:T10 Arg2:T7
+R26	Neg Arg1:T15 Arg2:T19
+R3	Neg Arg1:T10 Arg2:T9
+R30	Neg Arg1:T16 Arg2:T20
+R31	Neg Arg1:T16 Arg2:T21
+R4	Neg Arg1:T11 Arg2:T12
+R44	Neg Arg1:T17 Arg2:T25
+R5	Neg Arg1:T11 Arg2:T13
+R58	Neg Arg1:T22 Arg2:T24
+R71	Neg Arg1:T23 Arg2:T26
+R81	Neg Arg1:T27 Arg2:T28
+A1	Source T8 Declared
+A2	Source T18 Declared

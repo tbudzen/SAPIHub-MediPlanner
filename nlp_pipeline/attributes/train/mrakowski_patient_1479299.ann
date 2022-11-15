@@ -1,0 +1,112 @@
+T1	Condition 439 511	Przewlekła niewydolność serca z zachowaną funkcją skurczową lewej komory
+N1	Reference T1 ICD10:I50.9	Niewydolność serca, nieokreślona
+T2	Condition 513 544	Napadowe migotanie przedsionków
+N2	Reference T2 ICD10:I48	Migotanie i trzepotanie przedsionków
+T3	Investigation 546 558	CHA2DS2-VASc
+T4	Investigation 566 574	HAS-BLED
+T5	Investigation_result 559 564	4 pkt
+T6	Investigation_result 575 580	2 pkt
+R1	Inv Arg1:T4 Arg2:T6	
+R2	Inv Arg1:T3 Arg2:T5	
+T7	Condition 583 604	Nadciśnienie tętnicze
+N3	Reference T7 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T8	Condition 607 621	Hiperlipidemia
+N4	Reference T8 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T9	Condition 623 658	Subkliniczna niedoczynność tarczycy
+N5	Reference T9 ICD10:E02	Subkliniczna postać niedoczynności tarczycy z powodu niedoboru jodu
+T10	Treatment 767 794	dalsza opieka w Poradni POZ
+T11	Treatment 796 828	okresowa kontrola kardiologiczna
+T12	Investigation 829 867	regularne pomiary ciśnienia tętniczego
+T13	Investigation 868 917	okresowa kontrola elektrolitów, hormonów tarczycy
+T14	Behaviour 918 984	prawidłowe żywienie i systematyczna umiarkowana aktywność fizyczna
+T15	Treatment 985 1013	regularne przyjmowanie leków
+T16	Drug 1015 1022	Pradaxa
+T17	Drug_dose 1023 1045	150 mg 1 tabl. 2 x dz.
+R3	Drg Arg1:T16 Arg2:T17	
+T18	Drug 1046 1055	Rytmonorm
+T19	Drug_dose 1056 1078	150 mg 1 tabl. 3 x dz.
+R4	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1079 1085	BetoZK
+T21	Drug_dose 1086 1104	25 mg 1 tabl. rano
+R5	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1105 1111	Trifas
+T23	Drug_dose 1112 1129	5 mg 1 tabl. rano
+R6	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1130 1138	Spironol
+T25	Drug_dose 1139 1163	25 mg 1 tabl. w południe
+R7	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1164 1171	Polsart
+T27	Drug_dose 1172 1190	80 mg 1 tabl. rano
+R8	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1191 1199	Primacor
+T29	Drug_dose 1200 1223	20 mg 1 tabl. wieczorem
+R9	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1224 1232	Euthyrox
+T31	Drug_dose 1233 1269	25/50 mcg 1 tabl. rano naprzemiennie
+R10	Drg Arg1:T30 Arg2:T31	
+T32	Symptom 1672 1696	okresowych kołatań serca
+N6	Reference T32 ICD10:R00.2	Kołatanie serca
+T33	Investigation_result 1698 1720	skoki RR do 170/70mmHg
+N7	Reference T33 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T34	Condition 1735 1756	nadciśnienie tętnicze
+N8	Reference T34 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T35	Condition 1758 1789	napadowe migotanie przedsionków
+N9	Reference T35 ICD10:I48	Migotanie i trzepotanie przedsionków
+T36	Condition 1791 1842	niewydolność serca z zachowaną funkcją skurczową LV
+N10	Reference T36 ICD10:I50.9	Niewydolność serca, nieokreślona
+T37	Condition 1844 1858	hiperlipidemia
+N11	Reference T37 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T38	Negation 1860 1866	Neguje
+T39	Symptom 1867 1879	zasłabnięcia
+T40	Symptom 1881 1889	omdlenia
+N12	Reference T40 ICD10:R55	Omdlenie i zapaść
+T41	Symptom 1891 1901	krwawienia
+T42	Symptom 1903 1916	czarne stolce
+N13	Reference T42 ICD10:K92.1	Stolce smołowate
+T43	Symptom 1918 1934	brunatne wymioty
+N14	Reference T43 ICD10:K92.0	Wymioty krwawe
+T44	Condition 1936 1952	chorobę wrzodową
+N15	Reference T44 ICD10:K27	
+T45	Symptom 1954 1968	duszność nocną
+N16	Reference T45 ICD10:R06.0	Duszność
+R11	Neg Arg1:T38 Arg2:T45	
+R12	Neg Arg1:T38 Arg2:T44	
+R13	Neg Arg1:T38 Arg2:T43	
+R14	Neg Arg1:T38 Arg2:T42	
+R15	Neg Arg1:T38 Arg2:T41	
+R16	Neg Arg1:T38 Arg2:T40	
+R17	Neg Arg1:T38 Arg2:T39	
+T46	Symptom 1970 1989	Innych dolegliwości
+T47	Negation 1990 2001	nie zgłasza
+R18	Neg Arg1:T47 Arg2:T46	
+T48	Treatment 2003 2011	Operacje
+T49	Negation 2013 2019	neguje
+R19	Neg Arg1:T49 Arg2:T48	
+T50	Behaviour 2020 2035	Palenie tytoniu
+T51	Negation 2037 2043	neguje
+R20	Neg Arg1:T51 Arg2:T50	
+T52	Behaviour 2045 2056	Inne używki
+T53	Negation 2058 2064	neguje
+R21	Neg Arg1:T53 Arg2:T52	
+T54	Condition 2066 2075	Uczulenia
+T55	Negation 2077 2083	neguje
+R22	Neg Arg1:T55 Arg2:T54	
+T56	Drug 2091 2098	polsart
+T57	Drug 2100 2106	trifas
+T58	Drug 2108 2115	beto zk
+T59	Drug 2117 2124	pradaxa
+T60	Drug 2126 2135	rytmonorm
+T61	Drug 2137 2149	atorvasterol
+T62	Drug 2151 2159	euthyrox
+T63	Drug 2161 2165	agen
+T64	Drug_dose 2166 2169	5mg
+R23	Drg Arg1:T63 Arg2:T64	
+T65	Investigation 2185 2188	TTE
+T66	Investigation 2190 2193	TET
+T67	Investigation 2195 2199	ABPM
+T68	Investigation 2201 2211	Holter EKG
+N19	Reference T54 ICD10:T78.4	Alergia, nieokreślona
+N20	Reference T39 ICD10:R55	Omdlenie i zapaść
+N17	Reference T50 ICD10:Z72.0	Używanie tytoniu
+N18	Reference T41 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N21	Reference T52 ICD10:Z72	Problemy związane ze stylem życia

@@ -1,0 +1,86 @@
+T1	Condition 448 492	Łagodna niedomykalność zastawki trójdzielnej
+N1	Reference T1 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T2	Condition 494 520	Nadciśnienie tętnicze I st
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Condition 522 542	Hipercholesterolemia
+N3	Reference T3 ICD10:E78.0	Czysta hipercholesterolemia
+T4	Treatment 552 564	strumektomii
+T5	Date 566 570	1994
+A1	Status T4 Historical_Insignificant
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Treatment 581 601	kilkunastu zabiegach
+T7	Date 634 643	2009-2019
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Drug 765 771	Letrox
+T9	Treatment 882 904	kontrola u lekarza POZ
+T10	Treatment 907 996	dalsza kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych i Endokrynologicznej
+T11	Investigation 1000 1059	kontrola wartości ciśnienia tętniczego w warunkach domowych
+T12	Behaviour 1062 1114	dieta niskocholesterolowa, zwiększenie aktywności ru
+T13	Symptom 1286 1312	okresowego kołatania serca
+N4	Reference T13 ICD10:R00.2	Kołatanie serca
+T14	Symptom 1316 1341	stanami przedomdleniowymi
+N5	Reference T14 ICD10:R55	Omdlenie i zapaść
+T15	Symptom 1344 1396	bólów w klatce piersiowej nie związanych z wysiłkiem
+N6	Reference T15 ICD10:R07.3	Inne bóle w klatce piersiowej
+T16	Symptom 1414 1427	zawroty głowy
+N7	Reference T16 ICD10:R42	Zawroty głowy i odurzenie
+T17	Symptom 1443 1489	podwyższone wartości ciśnienia tętniczego krwi
+N8	Reference T17 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T18	Condition 1506 1528	Niedoczynność tarczycy
+N9	Reference T18 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T19	Treatment 1538 1550	strumektomii
+A2	Status T19 Historical_Insignificant
+T20	Date 1551 1555	1994
+R3	Dat Arg1:T20 Arg2:T19	
+T21	Treatment 1566 1605	kilkunastu zabiegach na pęcherz moczowy
+T22	Date 1621 1636	od 2009 do 2019
+R4	Dat Arg1:T22 Arg2:T21	
+T23	Treatment 1663 1682	Leczenie przewlekłe
+T24	Condition 1727 1730	WZW
+N10	Reference T24 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T25	Condition 1740 1749	borelioza
+N11	Reference T25 ICD10:A69.2	Choroba z Lyme
+T26	Condition 1756 1760	Odra
+N12	Reference T26 ICD10:B05	Odra
+T27	Negation 1763 1764	-
+R5	Neg Arg1:T27 Arg2:T26	
+T28	Negation 1752 1753	-
+R6	Neg Arg1:T28 Arg2:T25	
+T29	Negation 1733 1734	-
+R7	Neg Arg1:T29 Arg2:T24	
+T30	Condition 1799 1810	ca. żołądka
+A3	Status T30 Family
+N13	Reference T30 ICD10:C16	Nowotwór złośliwy żołądka
+T31	Behaviour 1812 1827	Palenie tytoniu
+T32	Negation 1829 1832	nie
+R8	Neg Arg1:T32 Arg2:T31	
+T33	Behaviour 1833 1844	Inne używki
+T34	Negation 1846 1849	nie
+R9	Neg Arg1:T34 Arg2:T33	
+T35	Condition 1850 1859	Uczulenia
+T36	Negation 1861 1867	neguje
+R10	Neg Arg1:T36 Arg2:T35	
+T37	Behaviour 1884 1910	warunki mieszkaniowe dobre
+T38	Drug 1935 1941	Letrox
+T39	Drug_dose 1942 1996	50/75 - w środę 75 mg i niedzielę 75 mg poza tym 50 mg
+R11	Drg Arg1:T38 Arg2:T39	
+T40	Investigation 2012 2022	Echo serca
+T41	Investigation 2025 2035	Holter EKG
+T42	Investigation 2038 2053	Próba Wysiłkowa
+T43	Treatment 1639 1656	Przebyte operacje
+T44	Condition 1769 1788	wywiadzie rodzinnym
+A4	Status T44 Family
+T45	Condition 611 632	ca pęcherza moczowego
+N15	Reference T45 ICD10:C67	Nowotwór złośliwy pęcherza moczowego
+R12	Dat Arg1:T7 Arg2:T45	
+T46	Condition 1608 1620	ca. pęcherza
+N16	Reference T46 ICD10:C67	Nowotwór złośliwy pęcherza moczowego
+R13	Dat Arg1:T22 Arg2:T46	
+T47	Treatment 1685 1698	onkologicznie
+N17	Reference T35 ICD10:T78.4	Alergia, nieokreślona
+A5	Status T6 Historical_Insignificant
+A6	Status T45 Historical_Insignificant
+A7	Status T21 Historical_Insignificant
+A8	Status T46 Historical_Insignificant
+N14	Reference T31 ICD10:Z72.0	Używanie tytoniu
+N18	Reference T33 ICD10:Z72	Problemy związane ze stylem życia

@@ -1,0 +1,120 @@
+T1	Treatment 346 373	dalsza opieka w poradni POZ
+T2	Treatment 380 471	okresowa kontrola kardiologiczna, gastroenterologiczna, endokrynologiczna i reumatologiczna
+T3	Investigation 478 516	okresowa kontrola ciśnienia tętniczego
+T4	Behaviour 523 545	dieta śródziemnomorska
+T5	Behaviour 547 581	z uwzględnieniem pokarmów mięsnych
+T6	Treatment 588 616	regularne przyjmowanie leków
+T7	Drug 624 634	Euthyrox N
+T8	Drug 657 663	Asamax
+T9	Drug_dose 635 650	25 1 tabl. rano
+T10	Drug_dose 664 707	500 mg 1 tabl. rano, w południe i wieczorem
+R1	Drg Arg1:T7 Arg2:T9	
+R2	Drg Arg1:T8 Arg2:T10	
+T11	Condition 935 979	Nieistotna niedomykalność zastawki mitralnej
+N1	Reference T11 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T12	Condition 981 1003	Niedoczynność tarczycy
+N2	Reference T12 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T13	Treatment 1004 1038	w trakcie leczenia substytucyjnego
+T14	Condition 1039 1058	w stadium eutyreozy
+T15	Condition 1060 1096	Limfocytowe zapalenie jelita grubego
+N3	Reference T15 ICD10:K52.8	Inne określone niezakaźne zapalenia żołądka, jelita cienkiego i okrężnicy
+T16	Treatment 1106 1124	antybiotykoterapii
+T17	Condition 1136 1168	zakażeniem Clostridium difficile
+N4	Reference T17 ICD10:A04.7	Zapalenie jelita cienkiego i grubego wywołane przez Clostridium difficile
+T18	Date 1170 1174	2017
+R3	Dat Arg1:T18 Arg2:T16	
+R4	Dat Arg1:T18 Arg2:T17	
+T19	Condition 1199 1221	choroba tkanki łącznej
+N5	Reference T19 ICD10:M35.9	Układowe choroby tkanki łącznej, nieokreślone
+A1	Source T19 Declared
+T20	Condition 1382 1447	wada nabyta serca pod postacią łagodnej niedomykalności mitralnej
+N6	Reference T20 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T21	Condition 1449 1471	niedoczynność tarczycy
+N7	Reference T21 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T22	Condition 1473 1512	niezróżnicowana choroba tkanki łączniej
+A2	Source T22 Declared
+N8	Reference T22 ICD10:M35.9	Układowe choroby tkanki łącznej, nieokreślone
+T23	Condition 1520 1556	limfocytowe zapalenie jelita grubego
+N9	Reference T23 ICD10:K52.8	Inne określone niezakaźne zapalenia żołądka, jelita cienkiego i okrężnicy
+T24	Condition 1615 1646	infekcję jelitową C. difficiele
+N10	Reference T24 ICD10:A04.7	Zapalenie jelita cienkiego i grubego wywołane przez Clostridium difficile
+T25	Date 1581 1594	wrześniu 2017
+R5	Dat Arg1:T25 Arg2:T24	
+T26	Investigation 1684 1687	TEE
+T27	Treatment 1699 1734	hospitalizowana w tutejszej Klinice
+T28	Date 1737 1744	12.2017
+R6	Dat Arg1:T28 Arg2:T27	
+T29	Investigation 1771 1787	echokardiogramie
+T30	Investigation_result 1793 1836	łagodną niedomykalnością zastawki mitralnej
+N11	Reference T30 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T31	Investigation_result 1838 1876	obraz serca i wielkich naczyń w normie
+T32	Investigation_result 1878 1884	EF=66%
+R7	Inv Arg1:T29 Arg2:T30	
+R8	Inv Arg1:T29 Arg2:T31	
+R9	Inv Arg1:T29 Arg2:T32	
+R10	Dat Arg1:T28 Arg2:T29	
+T33	Investigation 1889 1934	24-godzinnej rejestracji ciśnienia tętniczego
+T34	Investigation_result 1936 1976	średnie wartości BP wynosiły 125/71 mmHg
+T35	Investigation_result 1978 2011	w godzinach dziennych 134/79 mmHg
+T36	Investigation_result 2014 2033	nocnych 110/57 mmHg
+T37	Investigation_result 2035 2042	dipping
+R11	Inv Arg1:T33 Arg2:T34	
+R12	Inv Arg1:T33 Arg2:T35	
+R13	Inv Arg1:T33 Arg2:T36	
+R14	Inv Arg1:T33 Arg2:T37	
+R15	Dat Arg1:T28 Arg2:T33	
+T38	Investigation 2047 2069	EKG metodą Holterowską
+T39	Investigation_result 2074 2098	istotnych zaburzeń rytmu
+R16	Inv Arg1:T38 Arg2:T39	
+R17	Dat Arg1:T28 Arg2:T38	
+T40	Investigation 2127 2175	testu wysiłkowego na bieżni wg protokołu Bruce'a
+T41	Negation 2176 2187	przerwanego
+R18	Neg Arg1:T41 Arg2:T40	
+T42	Symptom 2197 2208	bólu stawów
+N12	Reference T42 ICD10:M25.5	Ból stawu
+T43	Symptom 2211 2228	silnego zmęczenia
+T44	Investigation_result 2246 2277	maksymalnym obciążeniu 4,8 METs
+R19	Inv Arg1:T40 Arg2:T44	
+T45	Symptom 2329 2380	tendencję do niższych wartości ciśnienia tętniczego
+N14	Reference T45 ICD10:R03.1	Nieswoiste obniżone ciśnienie tętnicze krwi
+T46	Date 2381 2402	w godzinach porannych
+R20	Dat Arg1:T46 Arg2:T45	
+T47	Investigation_result 2404 2422	minimum 85/40 mmHg
+N15	Reference T47 ICD10:R03.1	Nieswoiste obniżone ciśnienie tętnicze krwi
+T48	Symptom 2440 2451	bólem głowy
+N16	Reference T48 ICD10:R51	Ból głowy
+T49	Symptom 2454 2465	osłabieniem
+T50	Treatment 2483 2507	leczenie farmakologiczne
+T51	Negation 2510 2513	Nie
+T52	Behaviour 2514 2518	pali
+T53	Date 2519 2537	od marca 2017 roku
+R21	Neg Arg1:T51 Arg2:T52	
+R22	Dat Arg1:T53 Arg2:T52	
+T54	Negation 2539 2550	Nie spożywa
+T55	Behaviour 2551 2556	mięsa
+R23	Neg Arg1:T54 Arg2:T55	
+T56	Negation 2558 2564	Neguje
+T57	Condition 2565 2572	alergie
+N18	Reference T57 ICD10:T78.4	Alergia, nieokreślona
+R24	Neg Arg1:T56 Arg2:T57	
+T58	Drug 2583 2593	Euthyrox N
+T59	Drug_dose 2594 2609	25 1 tabl. rano
+R25	Drg Arg1:T58 Arg2:T59	
+T60	Drug 2611 2617	Asamax
+T61	Drug_dose 2618 2661	500 mg 1 tabl. rano, w południe i wieczorem
+R26	Drg Arg1:T60 Arg2:T61	
+T62	Drug 2663 2671	Vit. B12
+T63	Drug_dose 2672 2684	1 tabl. rano
+R27	Drg Arg1:T62 Arg2:T63	
+T64	Drug 2688 2694	Vit D.
+T65	Drug_dose 2695 2718	500 j 1tabl. w południe
+R28	Drg Arg1:T64 Arg2:T65	
+A3	Status T17 Historical_Insignificant
+A4	Status T16 Historical_Insignificant
+T66	Investigation 1177 1198	Obserwacja w kierunku
+N19	Reference T39 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T67	Negation 2070 2073	bez
+R29	Neg Arg1:T67 Arg2:T39	
+N17	Reference T52 ICD10:Z72.0	Używanie tytoniu
+N13	Reference T43 ICD10:R53	Złe samopoczucie i zmęczenie
+N20	Reference T49 ICD10:R53	Złe samopoczucie i zmęczenie

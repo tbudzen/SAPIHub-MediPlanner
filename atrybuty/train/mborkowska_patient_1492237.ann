@@ -1,0 +1,110 @@
+T1	Investigation 429 458	kontrola ciśnienia tętniczego
+T2	Investigation 475 495	kontrola lipidogramu
+T3	Behaviour 502 538	dieta zbliżona do śródziemnomorskiej
+T4	Behaviour 547 566	redukcja masy ciała
+T5	Behaviour 575 620	stały, umiarkowany, aerobowy wysiłek fizyczny
+T6	Drug 665 670	Acard
+T7	Drug_dose 671 720	75mg 1 tabl. wieczorem (lek dostępny bez recepty)
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 727 735	Rosucard
+T9	Drug_dose 736 759	20 mg 1 tabl. wieczorem
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 767 775	Nebicard
+T11	Drug_dose 776 796	10 mg 3/4 tabl. rano
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 804 811	Piramil
+T13	Drug_dose 812 837	1.25 mg 1 tabl. wieczorem
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Drug 845 850	Doxar
+T15	Drug_dose 851 873	4 mg 1 tabl. wieczorem
+R5	Drg Arg1:T14 Arg2:T15	
+T16	Drug 881 888	Nolpaza
+T17	Drug_dose 889 918	20 mg 1 tabl. rano (na czczo)
+R6	Drg Arg1:T16 Arg2:T17	
+T18	Drug 926 939	Glucophage XR
+T19	Drug_dose 940 964	750 mg 1 tabl. wieczorem
+R7	Drg Arg1:T18 Arg2:T19	
+T20	Investigation 2594 2604	echo serca
+T21	Investigation 2606 2609	TET
+T22	Investigation 2611 2615	ABPM
+T23	Investigation 2617 2627	Holter ekg
+T24	Investigation 2629 2647	rtg kl. piersiowej
+T25	Drug 2526 2539	Glucophage XR
+T26	Drug_dose 2540 2564	750 mg 1 tabl. wieczorem
+R8	Drg Arg1:T25 Arg2:T26	
+T27	Drug 2499 2504	Nedal
+T28	Drug_dose 2505 2524	5 mg 1/2 tabl. rano
+R9	Drg Arg1:T27 Arg2:T28	
+T29	Drug 2465 2473	Rosucard
+T30	Drug_dose 2474 2497	10 mg 1 tabl. wieczorem
+R10	Drg Arg1:T29 Arg2:T30	
+T31	Drug 2437 2445	Pluscard
+T32	Drug_dose 2446 2463	1 tabl. wieczorem
+R11	Drg Arg1:T31 Arg2:T32	
+T33	Drug 2407 2412	Doxar
+T34	Drug_dose 2413 2435	4 mg 1 tabl. wieczorem
+R12	Drg Arg1:T33 Arg2:T34	
+T35	Negation 2344 2350	neguje
+T36	Negation 2266 2272	neguje
+T37	Negation 2242 2255	bez znaczenia
+T38	Treatment 2208 2224	cholecystektomii
+T39	Behaviour 2325 2343	Uzależnienie inne:
+R13	Neg Arg1:T35 Arg2:T39	
+T40	Behaviour 2299 2324	Alkohol: piwo - 5/tydzień
+N1	Reference T40 ICD10:Z72.1	Używanie alkoholu
+T41	Behaviour 2274 2298	Nikotynizm: 50 paczkolat
+N2	Reference T41 ICD10:T65.2	Tytoń i nikotyna
+T42	Condition 2257 2264	Alergie
+N3	Reference T42 ICD10:T78.4	Alergia, nieokreślona
+R14	Neg Arg1:T36 Arg2:T42	
+T43	Condition 2225 2240	Wywiad rodzinny
+A1	Status T43 Family
+R15	Neg Arg1:T37 Arg2:T43	
+T44	Symptom 1363 1375	zasłabnięcia
+N4	Reference T44 ICD10:R55	Omdlenie i zapaść
+T45	Date 1376 1393	wczoraj wieczorem
+R16	Dat Arg1:T45 Arg2:T44	
+T46	Condition 1498 1506	DM t.2 -
+N5	Reference T46 ICD10:E11	Cukrzyca insulinoniezależna
+T47	Date 1507 1515	od 4 lat
+R17	Dat Arg1:T47 Arg2:T46	
+T48	Condition 1537 1542	POCHP
+N6	Reference T48 ICD10:J44.9	Przewlekła obturacyjna choroba płuc, nieokreślona
+T49	Treatment 1544 1553	usunięcia
+T50	Condition 1554 1576	polipów jelita grubego
+N7	Reference T50 ICD10:D12	Nowotwór niezłośliwy okrężnicy, odbytnicy, odbytu i kanału odbytu
+T51	Date 1578 1585	04.2019
+R18	Dat Arg1:T51 Arg2:T50	
+T52	Investigation 1588 1600	kolonoskopia
+T53	Investigation_result 1610 1632	+ testu na krew w kale
+T54	Condition 1636 1673	gruczolak cewkowy, cewkowo-kosmkowy (
+T55	Investigation_result 1679 1703	dysplazją małego stopnia
+T56	Condition 1706 1730	refluks żółci do żołądka
+T57	Condition 1732 1782	przewlekłe zapalenie błony śluzowej przełyku i XII
+N8	Reference T57 ICD10:K20	Zapalenie przełyku
+T58	Condition 1784 1791	GERD A,
+N9	Reference T58 ICD10:K21.0	Refluks żołądkowo-przełykowy z zapaleniem przełyku
+T59	Condition 1792 1805	żylaki odbytu
+N10	Reference T59 ICD10:I84	Hemoroidy
+T60	Investigation 1830 1846	echokardiogramie
+T61	Date 1848 1855	06.2019
+R19	Dat Arg1:T61 Arg2:T60	
+T62	Investigation_result 1859 1963	powiększenie LP, niewielki przerost przegrody m/komorowej, upośledzona relaksacja mięśnia LK, wiotka IAS
+R20	Inv Arg1:T60 Arg2:T62	
+T63	Investigation 1965 1979	koronarografia
+T64	Date 1982 1986	2016
+R21	Dat Arg1:T64 Arg2:T63	
+T65	Investigation_result 1988 2013	50% w LAD i brzeżne w RCA
+R22	Inv Arg1:T63 Arg2:T65	
+T66	Investigation_result 2017 2043	lab. podwyższone d-dimery,
+T67	Investigation 2044 2049	USG D
+T68	Date 2052 2059	06.2019
+R23	Dat Arg1:T68 Arg2:T67	
+T69	Investigation_result 2062 2113	bez zmian zakrzepowo-zatorowych w żyłach k. dolnych
+R24	Inv Arg1:T67 Arg2:T69	
+T70	Investigation 2117 2136	USG  jamy brzusznej
+T71	Investigation_result 2137 2179	miażdżyca aorty brzusznej - drobne blaszki
+R25	Inv Arg1:T70 Arg2:T71	
+R26	Dat Arg1:T51 Arg2:T49	
+T72	Drug 1519 1535	lekach doustnych
+R27	Alg Arg1:T46 Arg2:T72	

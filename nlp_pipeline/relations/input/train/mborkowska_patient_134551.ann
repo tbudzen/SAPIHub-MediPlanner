@@ -1,0 +1,87 @@
+T1	Behaviour 2136 2162	warunki mieszkaniowe dobre
+T2	Negation 2113 2119	neguje
+T3	Condition 2066 2101	Inne używki: alkohol - okazjonalnie
+N1	Reference T3 ICD10:Z72.1	Używanie alkoholu
+T4	Condition 2102 2111	Uczulenia
+N2	Reference T4 ICD10:T78.4	Alergia, nieokreślona
+R1	Neg Arg1:T2 Arg2:T4	
+T5	Behaviour 2038 2053	Palenie tytoniu
+N3	Reference T5 ICD10:T65.2	Tytoń i nikotyna
+T6	Negation 2055 2065	nie, nigdy
+R2	Neg Arg1:T6 Arg2:T5	
+T7	Condition 2035 2037	HA
+A1	Status T7 Family
+N4	Reference T7 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T8	Condition 1936 1939	WZW
+N5	Reference T8 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T9	Condition 1949 1958	borelioza
+N6	Reference T9 ICD10:A69.2	Choroba z Lyme
+T10	Condition 1966 1974	gruźlica
+N7	Reference T10 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T11	Condition 1980 1984	odra
+N8	Reference T11 ICD10:B05	Odra
+T12	Behaviour 1990 2008	szczepiony na odrę
+N9	Reference T12 ICD10:B05	Odra
+T13	Negation 1942 1945	-  
+R3	Neg Arg1:T13 Arg2:T8	
+T14	Negation 1961 1962	-
+R4	Neg Arg1:T14 Arg2:T9	
+T15	Negation 1976 1977	-
+R5	Neg Arg1:T15 Arg2:T10	
+T16	Negation 1986 1987	-
+R6	Neg Arg1:T16 Arg2:T11	
+T17	Symptom 1827 1839	zasłabnięcia
+N10	Reference T17 ICD10:R55	Omdlenie i zapaść
+T18	Symptom 1841 1850	duszności
+N11	Reference T18 ICD10:R06.0	Duszność
+T19	Symptom 1852 1883	typowe bóle w klatce piersiowej
+T20	Negation 1820 1826	Neguje
+R7	Neg Arg1:T20 Arg2:T17	
+R8	Neg Arg1:T20 Arg2:T18	
+R9	Neg Arg1:T20 Arg2:T19	
+T21	Treatment 1885 1908	Przebyte operacje:  j/w
+T22	Condition 797 811	Zespół Marfana
+N12	Reference T22 ICD10:Q87.4	Zespół Marfana
+T23	Condition 1274 1290;1291 1316	zespołem Marfana potwierdzonym genetycznie
+N13	Reference T23 ICD10:Q87.4	Zespół Marfana
+A2	Source T23 Confirmed
+T24	Condition 1318 1353	poszerzeniem opuszki aorty do 42 mm
+N14	Reference T24 ICD10:I71	Tętniak i rozwarstwienie aorty
+T25	Condition 816 850	Poszerzenie opuszki aorty do 48 mm
+N15	Reference T25 ICD10:I71	Tętniak i rozwarstwienie aorty
+T26	Treatment 863 912	operacyjnym leczeniu deformacji klatki piersiowej
+T27	Condition 1355 1433	prolapsem przedniego płatka zastawki mitralnej z jego łagodną niedomykalnością
+N16	Reference T27 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T28	Condition 1551 1571	chorobą Scheuermanna
+N17	Reference T28 ICD10:M42.0	Młodzieńcza osteochondroza kręgosłupa
+T29	Condition 917 937	Choroba Scheuermanna
+N18	Reference T29 ICD10:M42.0	Młodzieńcza osteochondroza kręgosłupa
+T30	Condition 954 966	Płaskostopie
+N19	Reference T30 ICD10:M21.4	Płaskostopie [pes planus] (nabyte)
+T31	Condition 1585 1598	płaskostopiem
+N20	Reference T31 ICD10:M21.4	Płaskostopie [pes planus] (nabyte)
+T32	Treatment 1603 1645	3-krotnym zabiegu operacyjnym kolana leweg
+A3	Status T32 Historical_Insignificant
+T33	Condition 1687 1737	1-krotnego zerwania więzadła krzyżowego przedniego
+A4	Status T33 Historical_Insignificant
+T34	Treatment 979 1022	3-krotnym zabiegu operacyjnym kolana lewego
+T35	Condition 1063 1113	1-krotnego zerwania więzadła krzyżowego przedniego
+A5	Status T35 Historical_Insignificant
+A6	Status T34 Historical_Insignificant
+T36	Condition 1118 1129	Astygmatyzm
+N21	Reference T36 ICD10:H52.2	Astygmatyzm
+T37	Condition 1739 1752	astygmatyzmem
+N22	Reference T37 ICD10:H52.2	Astygmatyzm
+T38	Condition 1435 1485	umiarkowaną niedomykalnością zastawek trójdzielnej
+N23	Reference T38 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T39	Condition 1488 1495	płucnej
+N24	Reference T39 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T40	Treatment 1500 1549	operacyjnym leczeniu deformacji klatki piersiowej
+T41	Investigation 505 570	kontrola lipidogramu, stężenia elektrolitów, parametrów wydolnośc
+T42	Behaviour 418 492	Dieta lekkostrawna z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T43	Condition 1032 1060	2-krotnego pęknięcia łąkotki
+N25	Reference T35 ICD10:S83.5	Skręcenie i naderwanie w obrębie więzadła krzyżowego (przedniego) (tylnego) kolana
+N26	Reference T43 ICD10:M23.3	Inne uszkodzenia łąkotki
+N27	Reference T33 ICD10:S83.5	Skręcenie i naderwanie w obrębie więzadła krzyżowego (przedniego) (tylnego) kolana
+T44	Condition 1656 1684	2-krotnego pęknięcia łąkotki
+N28	Reference T44 ICD10:M23.3	Inne uszkodzenia łąkotki

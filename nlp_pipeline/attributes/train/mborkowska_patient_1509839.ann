@@ -1,0 +1,26 @@
+T1	Drug 1159 1165	Smecta
+T2	Drug 1139 1157	Kroplówka składowa
+T3	Drug 331 342	Preparat Mg
+T4	Drug_dose 343 354	przez 3 mce
+R1	Drg Arg1:T3 Arg2:T4	
+T5	Drug 357 368	siarczan Mg
+R2	Drg Arg1:T5 Arg2:T4	
+T6	Investigation 440 454	kontrola tętna
+T7	Investigation 484 487	ekg
+T8	Behaviour 655 698	nie wymaga  ograniczenia wysiłku fizycznego
+T9	Symptom 917 932	Kołatania serca
+N1	Reference T9 ICD10:R00.2	Kołatanie serca
+T10	Condition 971 993	zespołu wydłużonego QT
+A1	Source T10 Declared
+N2	Reference T10 ICD10:I45.8	Inne określone zaburzenia przewodnictwa
+T11	Negation 994 1003	negatywna
+R3	Neg Arg1:T11 Arg2:T10	
+T12	Condition 1009 1018	Dyspepsja
+N3	Reference T12 ICD10:K30	Dyspepsja
+T13	Symptom 530 545	kołatania serca
+N4	Reference T13 ICD10:R00.2	Kołatanie serca
+T14	Investigation 611 622	zapisem ekg
+T15	Investigation 949 970	Obserwacja w kierunku
+T16	Treatment 372 416	Kontrola w rejonowej Poradni Kardiologicznej
+T17	Date 417 428	za  6-8 mcy
+R4	Dat Arg1:T17 Arg2:T16	

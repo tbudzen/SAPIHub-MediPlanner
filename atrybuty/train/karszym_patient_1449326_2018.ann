@@ -1,0 +1,138 @@
+T1	Treatment 332 359	dalsza opieka w poradni POZ
+T2	Treatment 362 427	okresowa kontrola kardiologiczna, ginekologiczna i hematologiczna
+T4	Behaviour 430 451	zakaz palenia tytoniu
+T5	Investigation 453 492	codzienna kontrola ciśnienia tętniczego
+T6	Investigation 495 557	okresowa kontrolą morfologii, lipidogramu , parametrów wątrobo
+T7	Condition 775 802	Choroba niedokrwienna serca
+T8	Condition 804 825	Nadciśnienie tętnicze
+N3	Reference T8 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T9	Condition 827 848	Czerwienica prawdziwa
+N4	Reference T9 ICD10:D45	Czerwienica prawdziwa
+T10	Treatment 859 872	krwioupustami
+T11	Behaviour 874 884	Nikotynizm
+N5	Reference T11 ICD10:Z72.0	Używanie tytoniu
+T12	Condition 1103 1156	Choroba niedokrwienna serca - dławica mikronaczyniowa
+N6	Reference T12 ICD10:I20.8	Inne postacie choroby niedokrwiennej serca
+T13	Condition 1158 1179	Nadciśnienie tętnicze
+N7	Reference T13 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T14	Condition 1181 1202	Czerwienica prawdziwa
+N8	Reference T14 ICD10:D45	Czerwienica prawdziwa
+T15	Treatment 1213 1226	krwioupustami
+T16	Behaviour 1228 1238	Nikotynizm
+N9	Reference T16 ICD10:Z72.0	Używanie tytoniu
+T17	Condition 1386 1409	nadciśnieniem tętniczym
+N10	Reference T17 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T18	Treatment 1425 1433	leczonym
+T20	Date 1434 1447	od 3 miesięcy
+T21	Investigation_result 1449 1475	wartości BP do 220/115mmHg
+R2	Dat Arg1:T20 Arg2:T17	
+R3	Dat Arg1:T20 Arg2:T18	
+R4	Dat Arg1:T20 Arg2:T21	
+T19	Condition 1480 1501	czerwienicą prawdziwą
+N11	Reference T19 ICD10:D45	Czerwienica prawdziwa
+T22	Date 1503 1531	stwierdzona w kwietniu 2018r
+R5	Dat Arg1:T22 Arg2:T19	
+T23	Treatment 1542 1555	krwioupustami
+T24	Date 1558 1574	ostatni 06.2018r
+R6	Dat Arg1:T24 Arg2:T23	
+T25	Behaviour 1579 1606	nikotynizmem (20 paczkolat)
+N12	Reference T25 ICD10:Z72.0	Używanie tytoniu
+T26	Symptom 1610 1704	wielokrotnymi zasłabnięciami bez pełnej utraty przytomności w spoczynku w gorącej temperaturze
+N13	Reference T26 ICD10:R55	Omdlenie i zapaść
+T27	Treatment 1715 1779	hospitalizowana w Klinice Ginekologii Operacyjnej i Endoskopowej
+T28	Treatment 1797 1835	laparoskopowej zabiegu wycięcia macicy
+N14	Reference T28 ICD10:Z90.7	Nabyty brak narządów płciowych
+T29	Treatment 1838 1850	wyłuszczenia
+N15	Reference T29 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T30	Condition 1851 1874	torbieli jajnika lewego
+N16	Reference T30 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T31	Negation 1884 1893	odroczono
+R7	Neg Arg1:T31 Arg2:T28	
+R8	Neg Arg1:T31 Arg2:T29	
+T32	Investigation_result 1903 1981	zmian mogących sugerować tło niedokrwienne na obszarze ściany dolnej i bocznej
+T33	Investigation 1984 1987	EKG
+T34	Investigation 2022 2033	diagnostyki
+T35	Condition 2034 2062	choroby niedokrwiennej serca
+A1	Source T35 Declared
+N17	Reference T35 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+N2	Reference T7 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+R9	Inv Arg1:T33 Arg2:T32	
+A2	Source T32 Declared
+N18	Reference T32 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+T36	Negation 2064 2070	Neguje
+T37	Symptom 2072 2096	bóle w klatce piersiowej
+N19	Reference T37 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T38	Symptom 2098 2106	duszność
+N20	Reference T38 ICD10:R06.0	Duszność
+T39	Symptom 2108 2118	krwawienia
+N21	Reference T39 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T40	Symptom 2120 2133	czarne stolce
+N22	Reference T40 ICD10:K92.1	Stolce smołowate
+T41	Symptom 2135 2151	brunatne wymioty
+N23	Reference T41 ICD10:K92.0	Wymioty krwawe
+T42	Condition 2153 2169	chorobę wrzodową
+N24	Reference T42 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T43	Condition 2171 2173	DM
+N25	Reference T43 ICD10:E14	Cukrzyca nieokreślona
+T44	Condition 2175 2185	udar mózgu
+N26	Reference T44 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T45	Condition 2187 2198	zawał serca
+N27	Reference T45 ICD10:I25.2	Przebyty zawał serca
+T46	Treatment 2203 2220	Przebyte operacje
+N28	Reference T46 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T47	Negation 2222 2228	neguje
+T48	Behaviour 2229 2261	Palenie tytoniu: paczka dziennie
+N29	Reference T48 ICD10:Z72.0	Używanie tytoniu
+T49	Date 2262 2271	od 20 lat
+T50	Behaviour 2272 2283	Inne używki
+N30	Reference T50 ICD10:Z72	Problemy związane ze stylem życia
+T51	Negation 2285 2288	nie
+T52	Condition 2290 2299	Uczulenia
+N31	Reference T52 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T53	Negation 2301 2304	nie
+T54	Condition 2333 2336	WZW
+N32	Reference T54 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T55	Negation 2337 2340	(-)
+T56	Condition 2343 2352	borelioza
+N33	Reference T56 ICD10:A69.2	Choroba z Lyme
+T57	Negation 2353 2358	( - )
+T58	Condition 2360 2363	tbc
+N34	Reference T58 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T59	Negation 2364 2367	(-)
+T60	Behaviour 2385 2411	warunki mieszkaniowe dobre
+T61	Drug 2448 2455	Tritace
+T62	Drug_dose 2456 2480	10 mg 1x1 tabl wieczorem
+T63	Drug 2481 2491	Ipres long
+T64	Drug_dose 2492 2511	1,5mg 1x1 tabl rano
+R10	Drg Arg1:T61 Arg2:T62	
+R11	Drg Arg1:T63 Arg2:T64	
+T65	Investigation 2572 2593	badania laboratoryjne
+T66	Investigation 2595 2599	ECHO
+T67	Investigation 2601 2605	ABPM
+T68	Investigation 2607 2617	holter ekg
+T69	Investigation 2619 2622	TET
+T70	Investigation 2624 2646	angio CT tt wieńcowych
+T71	Investigation 2648 2666	USG jamy brzusznej
+T72	Investigation 2669 2685	doppler tt nerk.
+R12	Neg Arg1:T55 Arg2:T54	
+R13	Neg Arg1:T57 Arg2:T56	
+R14	Neg Arg1:T59 Arg2:T58	
+R15	Neg Arg1:T53 Arg2:T52	
+R16	Neg Arg1:T51 Arg2:T50	
+R17	Dat Arg1:T49 Arg2:T48	
+R18	Neg Arg1:T47 Arg2:T46	
+R19	Neg Arg1:T36 Arg2:T37	
+R20	Neg Arg1:T36 Arg2:T38	
+R21	Neg Arg1:T36 Arg2:T39	
+R22	Neg Arg1:T36 Arg2:T40	
+R23	Neg Arg1:T36 Arg2:T41	
+R24	Neg Arg1:T36 Arg2:T42	
+R25	Neg Arg1:T36 Arg2:T43	
+R26	Neg Arg1:T36 Arg2:T44	
+R27	Neg Arg1:T36 Arg2:T45	
+T73	Date 1706 1714	ostatnio
+R28	Dat Arg1:T73 Arg2:T27	
+R29	Dat Arg1:T73 Arg2:T33	
+R30	Dat Arg1:T73 Arg2:T29	
+R31	Dat Arg1:T73 Arg2:T28	
+R32	Dat Arg1:T73 Arg2:T30	

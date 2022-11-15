@@ -1,0 +1,44 @@
+T1	Drug 345 353	Spironol
+T2	Drug 355 364	Captopril
+T3	Drug 366 381	Krople składowe
+T6	Drug 421 427	Cebion
+T7	Drug 429 436	Innofer
+T8	Drug 438 449	Innovitum B
+T9	Drug 451 460	Furosemid
+T10	Drug 463 482	NUKKCz gr 0 Rh plus
+T11	Date 484 495	31.05.2019r
+R1	Dat Arg1:T11 Arg2:T10	
+T12	Drug 498 507	Cefazolin
+T13	Drug 509 516	ANA 1:1
+T14	Drug 518 523	Enema
+T4	Drug 403 411	0,9%NaCl
+T5	Condition 763 848	Wrodzona wada serca pod postacią całkowitego ubytku przegrody przedsionkowo-komorowej
+N1	Reference T5 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T15	Condition 850 902	hemodynamicznie wspólna komora i wspólny przedsionek
+T16	Condition 905 936	Mięśniowy ubytek międzykomorowy
+N2	Reference T16 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T17	Condition 942 955	Dekstrokardia
+N3	Reference T17 ICD10:Q24.0	Prawostronne położenie serca
+T18	Condition 960 995	Zwężenie zastawkowe tętnicy płucnej
+N4	Reference T18 ICD10:Q22.1	Wrodzone zwężenie zastawki pnia płucnego
+T19	Condition 1000 1049	Brak przedwątrobowego odcinka żyły głównej dolnej
+N5	Reference T19 ICD10:Q26.8	Inne wrodzone wady rozwojowe dużych żył
+T20	Condition 1054 1087	Przetrwała żyła główna górna lewa
+N6	Reference T20 ICD10:Q26.1	Przetrwała płodowa lewa górna żyła główna
+T21	Symptom 1092 1098	Sinica
+N7	Reference T21 ICD10:R23.0	Sinica
+T22	Condition 1103 1121	Niewydolność serca
+N8	Reference T22 ICD10:I50.9	Niewydolność serca, nieokreślona
+T23	Condition 1262 1280	złożona wada serca
+T24	Drug 1338 1346	Spironol
+T25	Condition 1349 1366	wywiad alergiczny
+N9	Reference T25 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T26	Negation 1367 1373	ujemny
+R2	Neg Arg1:T26 Arg2:T25	
+T27	Treatment 1281 1316	skierowana do leczenia operacyjnego
+T28	Drug 413 419	Nebbud
+T29	Drug_dose 391 400	Inhalacje
+R3	Drg Arg1:T4 Arg2:T29	
+R4	Drg Arg1:T28 Arg2:T29	
+T30	Drug_dose 382 389	do nosa
+R5	Drg Arg1:T3 Arg2:T30	

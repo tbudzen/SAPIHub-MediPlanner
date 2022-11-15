@@ -1,0 +1,174 @@
+T1	Treatment 331 362	okresowa kontrola u lekarza POZ
+T2	Investigation 365 387	badaniem ogólnym moczu
+T3	Investigation 390 400	lipogramem
+T4	Date 401 414	za 2 miesiące
+T5	Treatment 417 525	kontrola w Poradni Kardiologicznej, Diabetologicznej, Gastoenetrologicznej, Okulistycznej i Pulmonologicznej
+T6	Behaviour 528 566	dieta niskocholesterolowa,  cukrzycowa
+T7	Condition 788 826	Przewlekła choroba niedokrwienna serca
+N1	Reference T7 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T8	Condition 828 871	Podejrzenie przebytego zawału ściany dolnej
+A1	Source T8 Declared
+T9	Date 872 883	3 m-ce temu
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Condition 885 918	Niewydolność serca z zachowaną EF
+N3	Reference T10 ICD10:I50.9	Niewydolność serca, nieokreślona
+T11	Symptom 928 945	I okresie wg NYHA
+N4	Reference T11 ICD10:I50	Niewydolność serca
+T12	Investigation_result 920 923	56%
+T13	Condition 947 968	Nadciśnienie tętnicze
+N5	Reference T13 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T14	Condition 970 991	Napadowy AVB IIst 2:1
+N6	Reference T14 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+R2	Dat Arg1:T4 Arg2:T3	
+R3	Dat Arg1:T4 Arg2:T2	
+T15	Condition 993 1031	Łagodna arytmia komorowa i nadkomorowa
+N7	Reference T15 ICD10:I49	Inne zaburzenia rytmu serca
+T16	Investigation_result 1033 1046	ExV: 847/dobę
+T17	Investigation_result 1048 1062	ExSV: 480/dobę
+T18	Investigation_result 1069 1077	SVTach 1
+T19	Investigation_result 1088 1102	9 ExSV 142/min
+T20	Condition 1105 1114	DM typu 2
+N8	Reference T20 ICD10:E11	Cukrzyca insulinoniezależna
+T21	Behaviour 1116 1137	Przewlekły nikotynizm
+N9	Reference T21 ICD10:Z72.0	Używanie tytoniu
+T22	Condition 1139 1154	Podejrzenie OBS
+A2	Source T22 Declared
+N10	Reference T22 ICD10:G47.3	Bezdech senny
+T23	Condition 1156 1169	Żylaki odbytu
+N11	Reference T23 ICD10:I84.9	Hemoroidy, nieokreślone, bez powikłań
+T24	Treatment 1179 1191	strumektomii
+N12	Reference T24 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T25	Condition 1193 1206	Otyłość I st.
+N13	Reference T25 ICD10:E66.9	Otyłość, nieokreślona
+T26	Condition 1424 1467	Podejrzenie przebytego zawału sciany dolnej
+N14	Reference T26 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+N2	Reference T8 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+A4	Source T26 Declared
+T27	Date 1468 1479	3 m-ce temu
+N15	Reference T16 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+N16	Reference T17 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+N17	Reference T18 ICD10:I47.1	Częstoskurcz nadkomorowy
+N18	Reference T19 ICD10:I47.1	Częstoskurcz nadkomorowy
+R4	Dat Arg1:T27 Arg2:T26	
+T28	Condition 1481 1491	DM typu 2.
+N19	Reference T28 ICD10:E11	Cukrzyca insulinoniezależna
+T29	Condition 1492 1494	HA
+N20	Reference T29 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T30	Behaviour 1496 1517	Przewlekły nikotynizm
+N21	Reference T30 ICD10:Z72.0	Używanie tytoniu
+T31	Condition 1544 1559	podejrzenie OBS
+A5	Source T31 Declared
+N22	Reference T31 ICD10:G47.3	Bezdech senny
+T32	Symptom 1561 1606	czasem niewielkie krwawienia z żylaków odbytu
+N23	Reference T32 ICD10:I84.1	Guzki krwawnicze odbytu wewnętrzne z innymi powikłaniami
+T33	Treatment 1608 1620	strumektomia
+N24	Reference T33 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T34	Condition 1622 1645	podejrzenie akromegalii
+A3	Source T34 Declared
+N25	Reference T34 ICD10:E22.0	Akromegalia i gigantyzm przysadkowy
+T35	Condition 1789 1798	DM typu 2
+N26	Reference T35 ICD10:E11	Cukrzyca insulinoniezależna
+T36	Drug 1800 1804	leki
+T37	Drug_dose 1805 1809	p.o.
+R5	Drg Arg1:T36 Arg2:T37	
+T38	Condition 1812 1814	HA
+N27	Reference T38 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T39	Investigation_result 1816 1844	RR w domu: 120-130/80-95mmHg
+T40	Behaviour 1847 1884	palacz papierosów (1 paczka dziennie)
+N28	Reference T40 ICD10:Z72.0	Używanie tytoniu
+T41	Symptom 1915 1955	silnego rozpierającego bólu zamostkowego
+N29	Reference T41 ICD10:R07.2	Ból w okolicy przedsercowej
+T42	Date 1956 1967	3 m-ce temu
+R6	Dat Arg1:T42 Arg2:T41	
+T43	Symptom 2013 2055	zmniejszenie tolerancji wysiłku fizycznego
+T44	Symptom 2058 2064	potami
+N30	Reference T44 ICD10:R61	Nadmierne pocenie
+T45	Symptom 2066 2088	Słabszy ból zamostkowy
+N31	Reference T45 ICD10:R07.2	Ból w okolicy przedsercowej
+T46	Date 2117 2134	po 2-3 tygodniach
+R7	Dat Arg1:T46 Arg2:T45	
+T47	Symptom 2158 2167	chrapanie
+N32	Reference T47 ICD10:R06.5	Oddychanie przez usta
+T48	Symptom 2169 2184	bezdechy w nocy
+T49	Condition 2186 2201	podejrzenie OBS
+A6	Source T49 Declared
+N33	Reference T49 ICD10:G47.3	Bezdech senny
+T50	Symptom 2205 2272	czasem niewielkie krwawienia z dolnego odcinka przewodu pokarmowego
+N34	Reference T50 ICD10:K62.5	Krwawienie z odbytu i odbytnicy
+T51	Condition 2274 2287	żylaki odbytu
+N35	Reference T51 ICD10:I84.1	Guzki krwawnicze odbytu wewnętrzne z innymi powikłaniami
+T52	Negation 2289 2295	Neguje
+T53	Symptom 2297 2309	zasłabnięcia
+N36	Reference T53 ICD10:R55	Omdlenie i zapaść
+T54	Symptom 2311 2319	omdlenia
+N37	Reference T54 ICD10:R55	Omdlenie i zapaść
+T55	Symptom 2321 2334	czarne stolce
+N38	Reference T55 ICD10:K92.1	Stolce smołowate
+T56	Symptom 2336 2352	brunatne wymioty
+N39	Reference T56 ICD10:K92.0	Wymioty krwawe
+T57	Condition 2354 2370	chorobę wrzodową
+N40	Reference T57 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T58	Symptom 2372 2386	duszność nocną
+N41	Reference T58 ICD10:R06.0	Duszność
+T59	Symptom 2388 2403	obrzęki podudzi
+N42	Reference T59 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T60	Symptom 2405 2420	kołatania serca
+N43	Reference T60 ICD10:R00.2	Kołatanie serca
+T61	Condition 2422 2432	udar mózgu
+N44	Reference T61 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T62	Condition 2434 2445	zawał serca
+N45	Reference T62 ICD10:I25.2	Przebyty zawał serca
+R8	Neg Arg1:T52 Arg2:T53	
+R9	Neg Arg1:T52 Arg2:T54	
+R10	Neg Arg1:T52 Arg2:T55	
+R11	Neg Arg1:T52 Arg2:T56	
+R12	Neg Arg1:T52 Arg2:T57	
+R13	Neg Arg1:T52 Arg2:T58	
+R14	Neg Arg1:T52 Arg2:T59	
+R15	Neg Arg1:T52 Arg2:T60	
+R16	Neg Arg1:T52 Arg2:T61	
+R17	Neg Arg1:T52 Arg2:T62	
+T63	Treatment 2449 2466	Przebyte operacje
+N46	Reference T63 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T64	Treatment 2468 2480	strumektomia
+N47	Reference T64 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T65	Behaviour 2481 2514	Palenie tytoniu: tak, 1 paczka/dz
+N48	Reference T65 ICD10:Z72.0	Używanie tytoniu
+T66	Behaviour 2515 2526	Inne używki
+N49	Reference T66 ICD10:Z72	Problemy związane ze stylem życia
+T67	Negation 2528 2531	nie
+T68	Condition 2532 2541	Uczulenia
+N50	Reference T68 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T69	Negation 2544 2547	nie
+T70	Condition 2575 2578	WZW
+N51	Reference T70 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T71	Negation 2579 2582	(-)
+T72	Condition 2585 2594	borelioza
+N52	Reference T72 ICD10:A69.2	Choroba z Lyme
+T73	Negation 2595 2600	( - )
+T74	Condition 2602 2605	tbc
+N53	Reference T74 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T75	Negation 2606 2609	(-)
+T76	Behaviour 2626 2652	warunki mieszkaniowe dobre
+T77	Drug 2690 2701	Co-Valsacor
+T78	Drug_dose 2702 2727	320/12,5mg 1x 1 tabl/rano
+T79	Drug 2728 2736	Euthyrox
+T80	Drug_dose 2737 2757	175ug 1x 1 tabl/rano
+T81	Drug 2758 2766	Formetic
+T82	Drug_dose 2767 2782	1000 1-0-1 tabl
+T83	Drug 2783 2791	Glibetic
+T84	Drug_dose 2792 2810	1mg 1x 1 tabl/rano
+T85	Investigation 2871 2892	badania laboratoryjne
+T86	Investigation 2894 2898	ECHO
+T87	Investigation 2900 2918	EKG metodą Holtera
+T88	Investigation 2920 2924	ABPM
+T89	Investigation 2926 2941	próba wysiłkowa
+R18	Drg Arg1:T77 Arg2:T78	
+R19	Drg Arg1:T79 Arg2:T80	
+R20	Drg Arg1:T81 Arg2:T82	
+R21	Drg Arg1:T83 Arg2:T84	
+R22	Neg Arg1:T71 Arg2:T70	
+R23	Neg Arg1:T73 Arg2:T72	
+R24	Neg Arg1:T75 Arg2:T74	
+R25	Neg Arg1:T69 Arg2:T68	
+R26	Neg Arg1:T67 Arg2:T66	

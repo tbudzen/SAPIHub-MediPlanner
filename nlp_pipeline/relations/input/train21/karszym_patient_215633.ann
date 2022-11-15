@@ -1,0 +1,32 @@
+T1	Drug 341 349	Euthyrox
+T2	Drug 351 361	Cefazolina
+T3	Drug 363 370	Clexane
+T4	Drug 372 382	5% glukoza
+T5	Condition 600 657	Wrodzona wada serca - przełożenie wielkich pni tętniczych
+N1	Reference T5 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T6	Condition 660 696	ubytek w przegrodzie międzykomorowej
+N2	Reference T6 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T7	Condition 699 732	zwężenie zastawki tętnicy płucnej
+N3	Reference T7 ICD10:Q22.1	Wrodzone zwężenie zastawki pnia płucnego
+T8	Treatment 745 789	zespoleniu systemowo - płucnym prawostronnym
+N4	Reference T8 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T9	Date 791 796	2002r
+T10	Treatment 799 813	i lewostronnym
+N5	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T11	Date 815 820	2004r
+R1	Dat Arg1:T9 Arg2:T8	
+R2	Dat Arg1:T11 Arg2:T10	
+T12	Treatment 835 859	operacji metodą Rastelli
+N6	Reference T12 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T13	Date 862 873	03.11.2005r
+R3	Dat Arg1:T13 Arg2:T12	
+T14	Condition 878 907	Aplazja lewego płata tarczycy
+N7	Reference T14 ICD10:E03.8	Inne określone postacie niedoczynności tarczycy
+T15	Condition 1049 1067	złożoną wadą serca
+T16	Treatment 1082 1109	implantacji zastawki Melody
+N8	Reference T16 ICD10:Z95.3	Obecność ksenogenicznej zastawki serca
+T17	Drug 1131 1139	Euthyrox
+T18	Condition 1141 1158	wywiad alergiczny
+N9	Reference T18 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T19	Negation 1159 1165	ujemny
+R4	Neg Arg1:T19 Arg2:T18	

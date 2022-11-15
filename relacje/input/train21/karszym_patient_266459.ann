@@ -1,0 +1,45 @@
+T1	Condition 403 451	Wrodzona wada serca pod postacią zespołu Fallota
+N1	Reference T1 ICD10:Q21.3	Tetralogia Fallota
+T2	Treatment 464 497	korekcji kardiochirurgicznej wady
+N2	Reference T2 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T3	Date 499 510	24.10.2004r
+T4	Condition 516 559	Umiarkowana niedomykalność zastawki płucnej
+N3	Reference T4 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T5	Treatment 572 628	implantacji zastawki Cor Matrix śr 27 mm w ujście płucne
+N4	Reference T5 ICD10:Z95.4	Obecność innych protez zastawek serca
+T6	Date 630 641	19.11.2015r
+T7	Condition 647 677	Zwężenie zastawki biologicznej
+N5	Reference T7 ICD10:I37.0	Zwężenie zastawki pnia płucnego
+T8	Treatment 690 717	implantacji zastawki Melody
+N6	Reference T8 ICD10:Z95.3	Obecność ksenogenicznej zastawki serca
+T9	Date 719 730	02.03.2017r
+T10	Condition 736 773	Tętniak rzekomy tętnicy udowej prawej
+T11	Condition 775 798	Przetoka tętniczo-żylna
+T12	Treatment 810 818	plastyce
+T13	Date 864 875	23.03.2017r
+T14	Treatment 890 922	zabiegu operacyjnym zaopatrzenia
+T15	Date 995 1006	26.06.2017r
+R1	Dat Arg1:T3 Arg2:T2	
+R2	Dat Arg1:T6 Arg2:T5	
+R3	Dat Arg1:T9 Arg2:T8	
+R4	Dat Arg1:T13 Arg2:T12	
+R5	Dat Arg1:T15 Arg2:T14	
+T16	Treatment 1154 1188	Kontrola w Poradni Kardiologicznej
+T17	Date 1189 1204	za 6-8 miesięcy
+T18	Treatment 1209 1234	Dalsza opieka lekarza poz
+T19	Negation 1355 1358	bez
+T20	Drug 1359 1364	leków
+T21	Symptom 1508 1525	w  stanie  dobrym
+R6	Neg Arg1:T19 Arg2:T20	
+R7	Dat Arg1:T17 Arg2:T16	
+N7	Reference T11 ICD10:I77.0	Przetoka tętniczo-żylna, nabyta
+N8	Reference T10 ICD10:I72.4	Tętniak tętnicy kończyny dolnej
+R8	Dat Arg1:T3 Arg2:T1	
+T22	Condition 819 849	tętniaka tętnicy udowej prawej
+N9	Reference T22 ICD10:I72.4	Tętniak tętnicy kończyny dolnej
+R9	Dat Arg1:T13 Arg2:T22	
+T23	Condition 923 947	przetoki tętniczo-żylnej
+T24	Treatment 950 970	znieczuleniu ogólnym
+N10	Reference T24 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R10	Dat Arg1:T15 Arg2:T23	
+R11	Dat Arg1:T15 Arg2:T24	

@@ -1,0 +1,103 @@
+T1	Condition 674 695	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 697 729	Nieprawidłowa tolerancja glukozy
+N2	Reference T2 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T3	Condition 731 753	Niedoczynność tarczycy
+N3	Reference T3 ICD10:E03	Niedoczynność tarczycy o innej etiologii
+T4	Condition 755 775	Choroba dwubiegunowa
+N4	Reference T4 ICD10:F31	Zaburzenia afektywne dwubiegunowe
+T5	Treatment 896 911	farmakologiczne
+T6	Treatment 1024 1074	Dalsza opieka w POZ oraz w Poradni Kardiologicznej
+T7	Behaviour 1080 1110	Dieta lekkostrawna, cukrzycowa
+T8	Behaviour 1116 1154	Wskazane podjęcie aktywności fizycznej
+T9	Investigation 1159 1215	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T10	Treatment 1221 1249	Regularne przyjmowanie leków
+T11	Drug 1257 1269	Euthyrox N25
+T12	Drug_dose 1270 1342	1 tabletka 1x/dz. rano na czczo 30 minut przed posiłkiem i innymi lekami
+R1	Drg Arg1:T11 Arg2:T12	
+T13	Drug 1344 1351	Nebilet
+T14	Drug_dose 1352 1380	5mg 1/4 tabletki 1x/dz. rano
+R2	Drg Arg1:T13 Arg2:T14	
+T15	Drug 1382 1389	Tritace
+T16	Drug_dose 1390 1419	2,5mg 1/2 tabletki 1x/dz rano
+R3	Drg Arg1:T15 Arg2:T16	
+T17	Drug 1421 1431	Wellbutrin
+T18	Drug 1434 1441	Abilify
+T19	Drug_dose 1444 1477	wg zaleceń specjalisty psychiatry
+R4	Drg Arg1:T17 Arg2:T19	
+R5	Drg Arg1:T18 Arg2:T19	
+T20	Condition 1649 1669	zaburzeń rytmu serca
+N5	Reference T20 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T21	Symptom 1744 1757	kołatań serca
+N6	Reference T21 ICD10:R00.2	Kołatanie serca
+T22	Negation 1761 1767	Neguje
+T23	Symptom 1768 1780	zasłabnięcia
+T24	Symptom 1782 1790	omdlenia
+N7	Reference T24 ICD10:R55	Omdlenie i zapaść
+T25	Symptom 1792 1805	zawroty głowy
+N8	Reference T25 ICD10:R42	Zawroty głowy i odurzenie
+T26	Negation 1807 1813	neguje
+T27	Symptom 1814 1838	bóle w klatce piersiowej
+R6	Neg Arg1:T26 Arg2:T27	
+R7	Neg Arg1:T22 Arg2:T25	
+R8	Neg Arg1:T22 Arg2:T24	
+R9	Neg Arg1:T22 Arg2:T23	
+T28	Symptom 1840 1859	Innych dolegliwości
+T29	Negation 1860 1871	nie zgłasza
+R10	Neg Arg1:T29 Arg2:T28	
+T30	Condition 1886 1908	niedoczynność tarczycy
+N10	Reference T30 ICD10:E03	Niedoczynność tarczycy o innej etiologii
+T31	Condition 1910 1930	choroba dwubiegunowa
+N11	Reference T31 ICD10:F31	Zaburzenia afektywne dwubiegunowe
+T32	Treatment 1932 1949	Przebyte operacje
+T33	Negation 1952 1956	brak
+R11	Neg Arg1:T33 Arg2:T32	
+T34	Treatment 1957 1976	Leczenie przewlekłe
+T35	Treatment 1979 1991	okulistyczne
+T36	Treatment 1993 2010	endokrynologiczne
+T37	Treatment 2012 2026	psychiatryczne
+T38	Condition 2054 2057	WZW
+N12	Reference T38 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T39	Negation 2060 2061	-
+R12	Neg Arg1:T39 Arg2:T38	
+T40	Condition 2066 2075	borelioza
+N13	Reference T40 ICD10:A69.2	Choroba z Lyme
+T41	Negation 2078 2079	-
+R13	Neg Arg1:T41 Arg2:T40	
+T42	Condition 2084 2103	wywiadzie rodzinnym
+A1	Status T42 Family
+T43	Condition 2112 2133	nadciśnienie tętnicze
+A2	Status T43 Family
+N14	Reference T43 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T44	Condition 2136 2163	choroba niedokrwienna serca
+A3	Status T44 Family
+N15	Reference T44 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T45	Behaviour 2166 2181	Palenie tytoniu
+N16	Reference T45 ICD10:Z72.0	Używanie tytoniu
+T46	Negation 2183 2191	nie pali
+T47	Date 2192 2205	od 3 miesięcy
+R14	Neg Arg1:T46 Arg2:T45	
+R15	Dat Arg1:T47 Arg2:T45	
+T48	Behaviour 2206 2217	Inne używki
+T49	Negation 2219 2222	nie
+R16	Neg Arg1:T49 Arg2:T48	
+T50	Condition 2224 2233	Uczulenia
+N17	Reference T50 ICD10:T78.4	Alergia, nieokreślona
+T51	Negation 2235 2241	neguje
+R17	Neg Arg1:T51 Arg2:T50	
+T52	Behaviour 2258 2284	warunki mieszkaniowe dobre
+T53	Drug 2309 2321	euthyrox N25
+T54	Drug_dose 2322 2327	1x/dz
+R18	Drg Arg1:T53 Arg2:T54	
+T55	Drug 2329 2339	Wellbutrin
+T56	Drug_dose 2340 2351	150mg 1x/dz
+R19	Drg Arg1:T55 Arg2:T56	
+T57	Drug 2353 2360	Abilify
+T58	Drug_dose 2361 2370	1x/mc i.m
+R20	Drg Arg1:T57 Arg2:T58	
+T59	Investigation 2386 2396	Echo serca
+T60	Investigation 2398 2408	Holter EKG
+T61	Investigation 2410 2425	Próba Wysiłkowa
+N18	Reference T23 ICD10:R55	Omdlenie i zapaść
+N9	Reference T27 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N19	Reference T48 ICD10:Z72	Problemy związane ze stylem życia

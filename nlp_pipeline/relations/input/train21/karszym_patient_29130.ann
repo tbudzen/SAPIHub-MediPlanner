@@ -1,0 +1,303 @@
+T1	Treatment 565 621	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T2	Behaviour 624 664	Dieta lekkostrawna , niskocholesterolowa
+T3	Negation 668 680	Zaprzestanie
+T4	Behaviour 681 699	palenia papierosów
+R1	Neg Arg1:T3 Arg2:T4	
+T5	Treatment 702 785	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T6	Treatment 788 836	Systematyczna kontrola ciśnienia tętniczego krwi
+T7	Drug 887 895	Actelsar
+T8	Drug 917 925	Lecalpin
+T9	Drug 947 957	Isoptin SR
+T10	Drug 984 997	MagneB6 forte
+T11	Drug 1052 1059	Roswera
+T12	Drug_dose 896 914	80 mg 1 tabl. rano
+T13	Drug_dose 926 944	10 mg 1 tabl. rano
+T14	Drug_dose 958 980	120 mg 2x dz po 1 tabl
+T15	Drug_dose 998 1022	2 tabl. rano i wieczorem
+T16	Drug_dose 1060 1083	15 mg 1 tabl. wieczorem
+R2	Drg Arg1:T7 Arg2:T12	
+R3	Drg Arg1:T8 Arg2:T13	
+R4	Drg Arg1:T9 Arg2:T14	
+R5	Drg Arg1:T10 Arg2:T15	
+R6	Drg Arg1:T11 Arg2:T16	
+T17	Investigation 1310 1321	Diagnostyka
+T18	Symptom 1322 1347	bólów w klatce piersiowej
+N1	Reference T18 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T19	Condition 1349 1393	Łagodna niedomykalność zastawki trójdzielnej
+N2	Reference T19 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T20	Condition 1396 1517	Nadkomorowe (ekstrasystolie, PSVT) i komorowe (pojedyncze ekstrasystolie, pary, bi – i trigeminia) zaburzenia rytmu serca
+N3	Reference T20 ICD10:I49	Inne zaburzenia rytmu serca
+T21	Condition 1531 1552	Nadciśnienie tętnicze
+N4	Reference T21 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T22	Condition 1554 1577	Hiperlipidemia mieszana
+N5	Reference T22 ICD10:E78.2	Hiperlipidemia mieszana
+T23	Condition 1579 1586	Nadwaga
+T24	Behaviour 1588 1598	Nikotynizm
+T25	Condition 1600 1631	Nieprawidłowa glikemia na czczo
+N6	Reference T25 ICD10:R73	Podwyższone stężenie glukozy we krwi
+T26	Condition 1633 1648	Miażdżyca aorty
+N7	Reference T26 ICD10:I70.0	Miażdżyca aorty
+T27	Symptom 1650 1663	Zawroty głowy
+T28	Treatment 1673 1689	cholecystektomii
+A1	Status T28 Historical_Insignificant
+N9	Reference T28 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T29	Date 1690 1704	w wieku 23 lat
+R7	Dat Arg1:T29 Arg2:T28	
+T30	Treatment 1715 1750	artroskopia stawu kolanowego lewego
+A2	Status T30 Historical_Insignificant
+T31	Date 1752 1762	9 lat temu
+T32	Treatment 1764 1773	i prawego
+A3	Status T32 Historical_Insignificant
+T33	Date 1775 1787	przed rokiem
+R8	Dat Arg1:T31 Arg2:T30	
+R9	Dat Arg1:T33 Arg2:T32	
+T34	Condition 2015 2136	Nadkomorowe (ekstrasystolie, PSVT) i komorowe (pojedyncze ekstrasystolie, pary, bi – i trigeminia) zaburzenia rytmu serca
+N10	Reference T34 ICD10:I49	Inne zaburzenia rytmu serca
+T35	Condition 2138 2192	Nadciśnienie tętnicze I stopnia wg ESC/ESH skorygowane
+N11	Reference T35 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T36	Condition 2194 2217	Hiperlipidemia mieszana
+N12	Reference T36 ICD10:E78.2	Hiperlipidemia mieszana
+T37	Condition 2219 2226	Nadwaga
+T38	Behaviour 2228 2238	Nikotynizm
+T39	Condition 2240 2271	Nieprawidłowa glikemia na czczo
+N13	Reference T39 ICD10:R73	Podwyższone stężenie glukozy we krwi
+T40	Condition 2273 2288	Miażdżycy aorty
+N14	Reference T40 ICD10:I70.0	Miażdżyca aorty
+T41	Condition 2290 2319	Poszerzenie aorty wstępującej
+T42	Condition 2321 2365	Łagodna niedomykalność zastawki trójdzielnej
+N15	Reference T42 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T43	Symptom 2367 2380	Zawroty głowy
+T44	Treatment 2390 2406	cholecystektomii
+A4	Status T44 Historical_Insignificant
+N17	Reference T44 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T45	Date 2407 2421	w wieku 23 lat
+R10	Dat Arg1:T45 Arg2:T44	
+T46	Treatment 2432 2467	artroskopia stawu kolanowego lewego
+A5	Status T46 Historical_Insignificant
+T47	Treatment 2481 2490	i prawego
+A6	Status T47 Historical_Insignificant
+T48	Date 2469 2479	9 lat temu
+T49	Date 2492 2504	przed rokiem
+R11	Dat Arg1:T48 Arg2:T46	
+R12	Dat Arg1:T49 Arg2:T47	
+T50	Treatment 2629 2656	dalsza opieka w poradni POZ
+T51	Treatment 2664 2815	konsultacja stomatologiczna, laryngologiczna i ginekologiczna, celem wykluczenia ognisk zapalnych mogących być przyczyną obserwowanej arytmii komorowej
+T52	Treatment 2821 2920	okresowa kontrola kardiologiczna – w tutejszej Klinice celem oceny skuteczności wdrożonego leczenia
+T53	Date 2921 2934	za 6 miesięcy
+R13	Dat Arg1:T53 Arg2:T52	
+T54	Treatment 2940 2979	codzienna kontrola ciśnienia tętniczego
+T55	Treatment 2987 3016	okresowa kontrola lipidogramu
+T56	Behaviour 3024 3034	dieta DASH
+T57	Behaviour 3042 3061	redukcja masy ciała
+T58	Negation 3070 3075	zakaz
+T59	Behaviour 3076 3091	palenia tytoniu
+R14	Neg Arg1:T58 Arg2:T59	
+T60	Behaviour 3097 3142	stały, umiarkowany, aerobowy wysiłek fizyczny
+T61	Drug 3188 3196	Actelsar
+T62	Drug 3223 3231	Lecalpin
+T63	Drug 3258 3268	Isoptin SR
+T64	Drug 3375 3388	MagneB6 forte
+T65	Drug 3448 3455	Roswera
+T66	Drug_dose 3197 3215	80 mg 1 tabl. rano
+T67	Drug_dose 3232 3250	10 mg 1 tabl. rano
+T68	Drug_dose 3269 3368	120 mg 1 tabl. rano (dawka do optymalizacji pod kontrolą lekarza POZ z oceną częstości rytmu serca)
+T69	Drug_dose 3389 3413	2 tabl. rano i wieczorem
+T70	Drug_dose 3456 3479	20 mg 1 tabl. wieczorem
+R15	Drg Arg1:T61 Arg2:T66	
+R16	Drg Arg1:T62 Arg2:T67	
+R17	Drg Arg1:T63 Arg2:T68	
+R18	Drg Arg1:T64 Arg2:T69	
+R19	Drg Arg1:T65 Arg2:T70	
+T71	Symptom 3652 3727	okresowych niecharakterystycznych dolegliwości bólowych w klatce piersiowej
+N18	Reference T71 ICD10:R07.3	Inne bóle w klatce piersiowej
+T72	Symptom 3737 3769	okresowe uczucie kołatania serca
+N19	Reference T72 ICD10:R00.2	Kołatanie serca
+T73	Symptom 3770 3822	o znacznie mniejszym nasileniu od przyjęcia na stałe
+T75	Drug 3823 3831	Isoptine
+T76	Negation 3834 3840	Neguje
+T77	Symptom 3841 3853	zasłabnięcia
+R22	Neg Arg1:T76 Arg2:T77	
+T78	Condition 3871 3933	Inne zaburzenia rytmu serca Nadkomorowe (ekstrasystolie, PSVT)
+T79	Condition 3936 4020	komorowe (pojedyncze ekstrasystolie, pary, bi – i trigeminia) zaburzenia rytmu serca
+T80	Condition 4022 4076	Nadciśnienie tętnicze I stopnia wg ESC/ESH skorygowane
+N20	Reference T80 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T81	Condition 4078 4101	Hiperlipidemia mieszana
+N21	Reference T81 ICD10:E78.2	Hiperlipidemia mieszana
+T82	Condition 4103 4110	Nadwaga
+T83	Behaviour 4112 4122	Nikotynizm
+T84	Condition 4124 4155	Nieprawidłowa glikemia na czczo
+N22	Reference T84 ICD10:R73	Podwyższone stężenie glukozy we krwi
+T85	Condition 4157 4172	Miażdżycy aorty
+N23	Reference T85 ICD10:I70.0	Miażdżyca aorty
+T86	Condition 4174 4203	Poszerzenie aorty wstępującej
+T87	Condition 4205 4249	Łagodna niedomykalność zastawki trójdzielnej
+N24	Reference T87 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T88	Symptom 4251 4264	Zawroty głowy
+T89	Treatment 4274 4290	cholecystektomii
+A7	Status T89 Historical_Insignificant
+N26	Reference T89 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T90	Date 4291 4305	w wieku 23 lat
+R23	Dat Arg1:T90 Arg2:T89	
+T91	Treatment 4316 4351	artroskopia stawu kolanowego lewego
+A8	Status T91 Historical_Insignificant
+T92	Date 4353 4363	9 lat temu
+T93	Treatment 4365 4374	i prawego
+A9	Status T93 Historical_Insignificant
+T94	Date 4376 4388	przed rokiem
+R24	Dat Arg1:T92 Arg2:T91	
+R25	Dat Arg1:T94 Arg2:T93	
+T95	Treatment 4415 4434	Leczenie przewlekłe
+T96	Negation 4437 4441	brak
+R26	Neg Arg1:T96 Arg2:T95	
+T97	Condition 4470 4473	WZW
+N27	Reference T97 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T98	Condition 4483 4492	borelioza
+N28	Reference T98 ICD10:A69.2	Choroba z Lyme
+T99	Condition 4499 4503	Odra
+N29	Reference T99 ICD10:B05	Odra
+T100	Negation 4474 4480	( -  )
+T101	Negation 4493 4498	( - )
+T102	Negation 4504 4509	( - )
+R27	Neg Arg1:T100 Arg2:T97	
+R28	Neg Arg1:T101 Arg2:T98	
+R29	Neg Arg1:T102 Arg2:T99	
+T103	Condition 4543 4553	ca. piersi
+A10	Status T103 Family
+N30	Reference T103 ICD10:C50.9	Pierś, umiejscowienie nieokreślone
+T104	Behaviour 4555 4593	Palenie tytoniu: 5 papierosów dziennie
+T105	Date 4594 4603	od 30 lat
+R30	Dat Arg1:T105 Arg2:T104	
+T106	Behaviour 4605 4616	Inne używki
+T107	Negation 4618 4621	nie
+T108	Condition 4622 4631	Uczulenia
+N31	Reference T108 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T109	Negation 4633 4639	neguje
+T110	Behaviour 4656 4682	warunki mieszkaniowe dobre
+T111	Behaviour 4685 4699	mieszka z sama
+R31	Neg Arg1:T107 Arg2:T106	
+R32	Neg Arg1:T109 Arg2:T108	
+T112	Drug 4707 4715	Actelsar
+T113	Drug 4740 4748	Lecalpin
+T114	Drug 4773 4783	Isoptin SR
+T115	Drug 4888 4901	MagneB6 forte
+T116	Drug 4959 4966	Roswera
+T117	Drug_dose 4716 4734	80 mg 1 tabl. rano
+T118	Drug_dose 4749 4767	10 mg 1 tabl. rano
+T119	Drug_dose 4784 4883	120 mg 1 tabl. rano (dawka do optymalizacji pod kontrolą lekarza POZ z oceną częstości rytmu serca)
+T120	Drug_dose 4902 4926	2 tabl. rano i wieczorem
+T121	Drug_dose 4967 4990	20 mg 1 tabl. wieczorem
+R33	Drg Arg1:T112 Arg2:T117	
+R34	Drg Arg1:T113 Arg2:T118	
+R35	Drg Arg1:T114 Arg2:T119	
+R36	Drg Arg1:T115 Arg2:T120	
+R37	Drg Arg1:T116 Arg2:T121	
+T122	Investigation 5031 5041	Echo serca
+T123	Investigation 5044 5059	Próba Wysiłkowa
+T124	Treatment 5237 5272	hospitalizowana w tutejszej Klinice
+T125	Date 5273 5284	2 lata temu
+R38	Dat Arg1:T125 Arg2:T124	
+T126	Condition 5301 5351	nadciśnienie tętnicze I st. wg ESC/ESH skorygowane
+N32	Reference T126 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T127	Condition 5353 5388	izolowana dysfunkcja rozkurczowa LK
+T128	Condition 5390 5424	nadkomorowe zaburzenia rytmu serca
+N34	Reference T128 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T129	Condition 5426 5449	hiperlipidemia mieszana
+N35	Reference T129 ICD10:E78.2	Hiperlipidemia mieszana
+T130	Symptom 5451 5464	zawroty głowy
+T131	Treatment 5474 5490	cholecystektomii
+N37	Reference T131 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+A11	Status T131 Historical_Insignificant
+T132	Date 5493 5507	w wieku 23 lat
+R39	Dat Arg1:T132 Arg2:T131	
+T133	Symptom 5547 5560	kołatań serca
+N38	Reference T133 ICD10:R00.2	Kołatanie serca
+T134	Date 5561 5573	od 3 tygodni
+R40	Dat Arg1:T134 Arg2:T133	
+T135	Investigation 5578 5581	ekg
+T136	Investigation_result 5582 5590	poj. ExV
+T137	Investigation_result 5592 5596	pary
+T138	Investigation_result 5598 5625	okresowo bigeminia komorowa
+N39	Reference T138 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+N40	Reference T136 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+R41	Inv Arg1:T135 Arg2:T136	
+R42	Inv Arg1:T135 Arg2:T137	
+R43	Inv Arg1:T135 Arg2:T138	
+N41	Reference T137 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T139	Investigation 5664 5682	W echokardiogramie
+T140	Investigation_result 5696 5731	izolowaną dysfunkcję rozkurczową LK
+R44	Inv Arg1:T139 Arg2:T140	
+T141	Investigation 5737 5784	W 24 godzinnej rejestracji ciśnienia tętniczego
+T142	Investigation_result 5785 5835	średnie wartości w ciągu doby wynosiły 116/69 mmHg
+T143	Investigation_result 5837 5877	z typowym spadkiem wartości w ciągu nocy
+R45	Inv Arg1:T141 Arg2:T142	
+R46	Inv Arg1:T141 Arg2:T143	
+T144	Investigation 5884 5906	EKG metodą Holterowską
+T145	Negation 5907 5922	nie stwierdzono
+T146	Investigation_result 5923 5947	istotnych zaburzeń rytmu
+R47	Inv Arg1:T144 Arg2:T146	
+R48	Neg Arg1:T145 Arg2:T146	
+T147	Investigation 5955 5977	usg tętnic dogłowowych
+T148	Negation 5978 5983	bez  
+T149	Investigation_result 5983 6025	przewężeń w tętnicach szyjnych i kręgowych
+N42	Reference T149 ICD10:I66	Niedrożność i zwężenie tętnic mózgowych, nieprowadzące do zawału mózgu
+R49	Neg Arg1:T148 Arg2:T149	
+R50	Inv Arg1:T147 Arg2:T149	
+T150	Investigation 6031 6086	Próba wysiłkowa na bieżni wykonana wg protokołu Bruce'a
+T151	Investigation_result 6087 6093	ujemna
+T152	Investigation_result 6094 6138	przy uzyskanym maksymalnym obciążeniu 7 METs
+R51	Inv Arg1:T150 Arg2:T151	
+R52	Inv Arg1:T150 Arg2:T152	
+T153	Treatment 6162 6197	artroskopia stawu kolanowego lewego
+A12	Status T153 Historical_Insignificant
+T154	Treatment 6211 6220	i prawego
+A13	Status T154 Historical_Insignificant
+T155	Date 6200 6210	9 lat temu
+T156	Date 6221 6233	przed rokiem
+R53	Dat Arg1:T155 Arg2:T153	
+R54	Dat Arg1:T156 Arg2:T154	
+T157	Condition 6235 6250	Wywiad rodzinny
+A14	Status T157 Family
+T158	Negation 6252 6265	bez znaczenia
+T159	Condition 6267 6274	Alergie
+N44	Reference T159 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T160	Negation 6276 6282	neguje
+T161	Behaviour 6284 6310	Nikotynizm: 5-7 pap./dzien
+T162	Date 6311 6320	od 30 lat
+T163	Behaviour 6322 6343	Alkohol: okazjonalnie
+T164	Behaviour 6345 6362	Uzależnienie inne
+T165	Negation 6364 6370	neguje
+T166	Behaviour 6388 6400	pielęgniarka
+R55	Neg Arg1:T158 Arg2:T157	
+R56	Neg Arg1:T160 Arg2:T159	
+R57	Dat Arg1:T162 Arg2:T161	
+R58	Neg Arg1:T165 Arg2:T164	
+T167	Drug 6416 6424	Actelsar
+T168	Drug 6446 6454	Lecalpin
+T169	Drug 6476 6487	Betaloc ZOK
+T170	Drug 6508 6515	Roswera
+T171	Drug_dose 6425 6443	80 mg 1 tabl. rano
+T172	Drug_dose 6455 6473	10 mg 1 tabl. rano
+T173	Drug_dose 6488 6506	50 mg 1 tabl. rano
+T174	Drug_dose 6516 6539	20 mg 1 tabl. wieczorem
+R59	Drg Arg1:T167 Arg2:T171	
+R60	Drg Arg1:T168 Arg2:T172	
+R61	Drg Arg1:T169 Arg2:T173	
+R62	Drg Arg1:T170 Arg2:T174	
+T175	Investigation 6568 6578	echo serca
+T176	Investigation 6580 6583	TET
+T177	Investigation 6585 6589	ABPM
+T178	Investigation 6591 6601	Holter ekg
+T179	Investigation 6603 6621	rtg kl. piersiowej
+N45	Reference T24 ICD10:Z72.0	Używanie tytoniu
+N46	Reference T4 ICD10:Z72.0	Używanie tytoniu
+N47	Reference T38 ICD10:Z72.0	Używanie tytoniu
+N48	Reference T59 ICD10:Z72.0	Używanie tytoniu
+N49	Reference T83 ICD10:Z72.0	Używanie tytoniu
+N50	Reference T104 ICD10:Z72.0	Używanie tytoniu
+N33	Reference T161 ICD10:Z72.0	Używanie tytoniu
+A15	Status T163 Historical_Insignificant
+N43	Reference T163 ICD10:Z72.1	Używanie alkoholu
+N36	Reference T130 ICD10:R42	Zawroty głowy i odurzenie
+N25	Reference T88 ICD10:R42	Zawroty głowy i odurzenie
+N16	Reference T43 ICD10:R42	Zawroty głowy i odurzenie
+N8	Reference T27 ICD10:R42	Zawroty głowy i odurzenie

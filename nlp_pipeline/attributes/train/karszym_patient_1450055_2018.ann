@@ -1,0 +1,82 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 360 392	okresowa kontrola kardiologiczna
+T3	Investigation 394 433	codzienna kontrola ciśnienia tętniczego
+T4	Investigation 436 514	okresowa kontrolą morfologii, lipidogramu , parametrów wątrobowych i nerkowych
+T5	Behaviour 516 554	dieta niskocholesterolowa i cukrzycowa
+T6	Condition 783 804	Nadciśnienie tętnicze
+N1	Reference T6 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T7	Condition 806 839	Niedomykalność zastawki mitralnej
+N2	Reference T7 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T8	Condition 842 859	trójdzielnej I st
+N3	Reference T8 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T9	Investigation_result 861 893	Poszerzona opuszka aorty do 41mm
+T10	Condition 895 914	Arytmia nadkomorowa
+N4	Reference T10 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T11	Condition 916 920	ExSV
+N5	Reference T11 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T12	Condition 924 944	Hipercholesterolemia
+N6	Reference T12 ICD10:E78.0	Czysta hipercholesterolemia
+T13	Condition 947 979	Nieprawidłowa tolerancja glukozy
+N7	Reference T13 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T14	Condition 981 999	Żylaki kk. dolnych
+A1	Status T14 Historical_Insignificant
+N8	Reference T14 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T15	Condition 1001 1021	Stłuszczenie wątroby
+N9	Reference T15 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T16	Investigation_result 1420 1479	labilnych wartości ciśnienia tętniczego - zwykle 150/95mmHg
+T17	Investigation 1483 1499	echokardiogramie
+T18	Investigation_result 1500 1518	cechy przerostu LK
+N10	Reference T18 ICD10:I42.2	Inne kardiomiopatie przerostowe
+R1	Inv Arg1:T17 Arg2:T18	
+T19	Condition 1541 1561	hipercholesterolemia
+N11	Reference T19 ICD10:E78.0	Czysta hipercholesterolemia
+T20	Condition 1563 1581	żylaki kk. dolnych
+A2	Status T20 Historical_Insignificant
+N12	Reference T20 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T21	Treatment 1584 1601	Przebyte operacje
+N13	Reference T21 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T22	Treatment 1603 1616	appendektomia
+A3	Status T22 Historical_Insignificant
+N14	Reference T22 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T23	Date 1617 1631	w dzieciństwie
+T24	Condition 1632 1647	Wywiad rodzinny
+A4	Status T24 Family
+T25	Negation 1649 1662	bez znaczenia
+T26	Condition 1664 1671	Alergie
+N15	Reference T26 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T27	Negation 1673 1679	neguje
+T28	Behaviour 1681 1691	Nikotynizm
+N16	Reference T28 ICD10:Z72.0	Używanie tytoniu
+T29	Negation 1693 1699	neguje
+T30	Behaviour 1701 1704	tak
+N17	Reference T30 ICD10:Z72.0	Używanie tytoniu
+T31	Date 1705 1716	30 lat temu
+R2	Neg Arg1:T29 Arg2:T28	
+R3	Dat Arg1:T31 Arg2:T30	
+R4	Neg Arg1:T27 Arg2:T26	
+R5	Neg Arg1:T25 Arg2:T24	
+R6	Dat Arg1:T23 Arg2:T22	
+T32	Behaviour 1719 1726	Alkohol
+N18	Reference T32 ICD10:Z72.1	Używanie alkoholu
+T33	Negation 1728 1734	neguje
+T34	Behaviour 1736 1753	Uzależnienie inne
+N19	Reference T34 ICD10:Z72	Problemy związane ze stylem życia
+T35	Negation 1755 1761	neguje
+T36	Behaviour 1779 1788	emerytura
+T37	Behaviour 1790 1813	gospodarstwo ogrodnicze
+T38	Drug 1820 1826	Diovan
+T39	Drug_dose 1827 1846	160 mg 1 tabl. rano
+T40	Drug 1847 1854	Nebilet
+T41	Drug_dose 1855 1872	5 mg 1 tabl. rano
+T42	Drug 1874 1886	Simvastatyna
+T43	Drug_dose 1887 1910	10 mg 1 tabl. wieczorem
+T44	Investigation 1939 1949	echo serca
+T45	Investigation 1951 1954	TET
+T46	Investigation 1956 1960	ABPM
+T47	Investigation 1962 1972	Holter ekg
+T48	Investigation 1974 1992	rtg kl. piersiowej
+R7	Drg Arg1:T38 Arg2:T39	
+R8	Drg Arg1:T40 Arg2:T41	
+R9	Drg Arg1:T42 Arg2:T43	
+R10	Neg Arg1:T35 Arg2:T34	
+R11	Neg Arg1:T33 Arg2:T32	

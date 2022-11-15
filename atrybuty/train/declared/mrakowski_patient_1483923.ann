@@ -1,0 +1,186 @@
+T1	Treatment 331 367	Wskazana dalsza opieka u lekarza POZ
+T2	Treatment 369 415	Wskazana dalsza opieka Poradni Kardiologicznej
+T3	Treatment 450 493	diagnostyki nieinwazyjnej naczyń wieńcowych
+T4	Investigation 496 512	badaniu angio-CT
+T5	Behaviour 515 570	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem
+T6	Condition 788 813	Kardiomiopatia zastoinowa
+T7	Condition 815 885	Przewlekła niewydolność serca z pośrednią frakcją frakcją wyrzutową LK
+N2	Reference T7 ICD10:I50.1	Niewydolność serca lewokomorowa
+T8	Investigation_result 887 893	EF-41%
+T9	Condition 896 910	Hiperlipidemia
+N3	Reference T9 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T10	Condition 912 932	Niedobór witaminy D3
+N4	Reference T10 ICD10:E55.9	Niedobór witaminy D, nieokreślony
+T11	Condition 934 956	Migotanie przedsionków
+N5	Reference T11 ICD10:I48	Migotanie i trzepotanie przedsionków
+T12	Treatment 978 1005	skutecznej DCC energią 200J
+T13	Date 1007 1014	07/2013
+R1	Dat Arg1:T13 Arg2:T12	
+T14	Negation 1017 1020	bez
+T15	Treatment 1021 1043	leczenia p/krzepliwego
+R2	Neg Arg1:T14 Arg2:T15	
+T16	Investigation 1044 1056	CHA2DS2-VASc
+T17	Investigation_result 1057 1062	1 pkt
+R3	Inv Arg1:T16 Arg2:T17	
+T18	Condition 1064 1097	Niedomykalność zastawki mitralnej
+N6	Reference T18 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T19	Condition 1099 1123	Łagodna arytmia komorowa
+N7	Reference T19 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T20	Condition 1138 1164	Przewlekłe zapalenie zatok
+N8	Reference T20 ICD10:J32.9	Przewlekłe zapalenie zatok, nieokreślone
+T21	Date 1195 1205	14/05/2019
+T22	Treatment 1180 1194	termin zabiegu
+R4	Dat Arg1:T21 Arg2:T22	
+T23	Date 1366 1370	2004
+T24	Condition 1374 1399	kardiomiopatią zastoinową
+R5	Dat Arg1:T23 Arg2:T24	
+T25	Condition 1402 1444	ciężką dysfunkcją skurczowo-rozkurczową LK
+N10	Reference T25 ICD10:I50.1	Niewydolność serca lewokomorowa
+T26	Investigation_result 1447 1453	EF 36%
+T27	Date 1455 1462	03/2019
+R6	Dat Arg1:T27 Arg2:T25	
+R7	Dat Arg1:T27 Arg2:T26	
+T28	Symptom 1520 1539	I/II klasie wg NYHA
+T29	Investigation 1553 1566	badaniach TTE
+T30	Date 1583 1587	2004
+R8	Dat Arg1:T30 Arg2:T29	
+T31	Investigation_result 1591 1680	obserowano początkowo poprawę EF z 31% do około 50%,a następnie stopniowe jej pogarszanie
+T32	Investigation_result 1682 1766	pomimo pełnego leczenia niewydolności, bez pogorszenia wydolności fizycznej pacjenta
+R9	Inv Arg1:T29 Arg2:T31	
+R10	Inv Arg1:T29 Arg2:T32	
+N11	Reference T31 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T33	Investigation 1797 1806	MRI serca
+T34	Date 1810 1820	12.06.2019
+R11	Dat Arg1:T34 Arg2:T33	
+T35	Condition 1861 1886	Kardiomiopatia zastoinowa
+N1	Reference T6 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+N9	Reference T24 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+N12	Reference T35 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+T36	Condition 1888 1957	Przewlekła niewydolność serca z obniżoną frakcją frakcją wyrzutową LK
+N13	Reference T36 ICD10:I50.1	Niewydolność serca lewokomorowa
+T37	Investigation_result 1959 1965	EF-36%
+T38	Condition 1968 1982	Hiperlipidemia
+N14	Reference T38 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T39	Condition 1984 2004	Niedobór witaminy D3
+N15	Reference T39 ICD10:E55.9	Niedobór witaminy D, nieokreślony
+T40	Condition 2006 2028	Migotanie przedsionków
+N16	Reference T40 ICD10:I48	Migotanie i trzepotanie przedsionków
+T41	Treatment 2044 2058	skutecznej DCC
+A1	Source T41 Declared
+T42	Date 2080 2084	2014
+R12	Dat Arg1:T42 Arg2:T41	
+T43	Negation 2087 2090	bez
+T44	Treatment 2091 2113	leczenia p/krzepliwego
+R13	Neg Arg1:T43 Arg2:T44	
+T45	Condition 2115 2141	Przewlekłe zapalenie zatok
+N17	Reference T45 ICD10:J32.9	Przewlekłe zapalenie zatok, nieokreślone
+T46	Treatment 2157 2171	termin zabiegu
+T47	Date 2172 2182	14/05/2019
+R14	Dat Arg1:T47 Arg2:T46	
+T48	Negation 2184 2190	Neguje
+T49	Symptom 2192 2204	zasłabnięcia
+T50	Symptom 2206 2214	omdlenia
+N18	Reference T50 ICD10:R55	Omdlenie i zapaść
+T51	Symptom 2216 2226	krwawienia
+N19	Reference T51 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T52	Symptom 2228 2241	czarne stolce
+N20	Reference T52 ICD10:K92.1	Stolce smołowate
+T53	Symptom 2243 2259	brunatne wymioty
+N21	Reference T53 ICD10:K92.0	Wymioty krwawe
+T54	Condition 2261 2277	chorobę wrzodową
+N22	Reference T54 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T55	Symptom 2279 2293	duszność nocną
+N23	Reference T55 ICD10:R06.0	Duszność
+T56	Symptom 2295 2310	obrzęki podudzi
+N24	Reference T56 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T57	Symptom 2312 2336	bóle w klatce piersiowej
+N25	Reference T57 ICD10:R07	Ból gardła i w klatce piersiowej
+T58	Symptom 2338 2353	kołatania serca
+N26	Reference T58 ICD10:R00.2	Kołatanie serca
+R15	Neg Arg1:T48 Arg2:T58	
+R16	Neg Arg1:T48 Arg2:T57	
+R17	Neg Arg1:T48 Arg2:T56	
+R18	Neg Arg1:T48 Arg2:T55	
+R19	Neg Arg1:T48 Arg2:T54	
+R20	Neg Arg1:T48 Arg2:T53	
+R21	Neg Arg1:T48 Arg2:T52	
+R22	Neg Arg1:T48 Arg2:T51	
+R23	Neg Arg1:T48 Arg2:T50	
+R24	Neg Arg1:T48 Arg2:T49	
+T59	Treatment 2356 2373	Przebyte operacje
+T60	Negation 2374 2380	neguje
+R25	Neg Arg1:T60 Arg2:T59	
+T61	Behaviour 2381 2396	Palenie tytoniu
+T62	Negation 2398 2404	neguje
+R26	Neg Arg1:T62 Arg2:T61	
+T63	Behaviour 2405 2416	Inne używki
+T64	Negation 2418 2424	neguje
+R27	Neg Arg1:T64 Arg2:T63	
+T65	Condition 2425 2434	Uczulenia
+N28	Reference T65 ICD10:T78.4	Alergia, nieokreślona
+T66	Negation 2436 2442	neguje
+R28	Neg Arg1:T66 Arg2:T65	
+T67	Condition 2443 2458	Wywiad rodzinny
+A2	Status T67 Family
+T68	Condition 2465 2482	zmarł w wieku 29l
+A3	Status T68 Family
+N29	Reference T68 ICD10:I46.1	Nagły zgon sercowy, tak opisany
+T69	Condition 2483 2508	kardiomiopatia zastoinowa
+A4	Status T69 Family
+N30	Reference T69 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+T70	Condition 2536 2539	WZW
+N31	Reference T70 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T71	Condition 2546 2555	borelioza
+N32	Reference T71 ICD10:A69.2	Choroba z Lyme
+T72	Condition 2561 2564	tbc
+N33	Reference T72 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T73	Condition 2570 2574	odra
+N34	Reference T73 ICD10:B05	Odra
+T74	Condition 2580 2594	kontakt z odrą
+N35	Reference T74 ICD10:B05	Odra
+T75	Negation 2596 2597	-
+R29	Neg Arg1:T75 Arg2:T74	
+T76	Negation 2576 2577	-
+R30	Neg Arg1:T76 Arg2:T73	
+T77	Negation 2566 2567	-
+R31	Neg Arg1:T77 Arg2:T72	
+T78	Negation 2557 2558	-
+R32	Neg Arg1:T78 Arg2:T71	
+T79	Negation 2541 2542	-
+R33	Neg Arg1:T79 Arg2:T70	
+T80	Behaviour 2615 2641	warunki mieszkaniowe dobre
+T81	Drug 2675 2684	Cordarone
+T82	Drug_dose 2685 2697	200 mg 1-0-0
+T83	Drug 2699 2707	Spironol
+T84	Drug_dose 2708 2719	25 mg 1-0-0
+R34	Drg Arg1:T83 Arg2:T84	
+R35	Drg Arg1:T81 Arg2:T82	
+T85	Drug 2721 2731	Carvedilol
+T86	Drug_dose 2732 2747	25 mg 1/2-0-1/2
+R36	Drg Arg1:T85 Arg2:T86	
+T87	Drug 2749 2757	Suvardio
+T88	Drug_dose 2758 2771	20 mg 0-0-1/2
+R37	Drg Arg1:T87 Arg2:T88	
+T89	Drug 2773 2779	Diuver
+T90	Drug_dose 2780 2793	10 mg 1/2-0-0
+R38	Drg Arg1:T89 Arg2:T90	
+T91	Drug 2795 2801	Metmin
+T92	Drug_dose 2802 2813	50 mg 1-0-1
+R39	Drg Arg1:T91 Arg2:T92	
+T93	Drug 2815 2821	Nutrof
+T94	Drug_dose 2822 2827	1-0-0
+R40	Drg Arg1:T93 Arg2:T94	
+T95	Drug 2829 2837	Polocard
+T96	Drug_dose 2838 2849	75 mg 0-0-1
+T97	Negation 2851 2859	odstawił
+T98	Date 2860 2870	3 dni temu
+R41	Drg Arg1:T95 Arg2:T96	
+R42	Neg Arg1:T97 Arg2:T95	
+R43	Dat Arg1:T98 Arg2:T95	
+T99	Investigation 2932 2953	badania laboratoryjne
+T100	Investigation 2955 2959	ECHO
+T101	Investigation 2961 2979	EKG metodą Holtera
+T102	Investigation 2981 2985	ABPM
+T103	Investigation 2987 3002	próba wysiłkowa
+N36	Reference T49 ICD10:R55	Omdlenie i zapaść
+N27	Reference T61 ICD10:Z72.0	Używanie tytoniu

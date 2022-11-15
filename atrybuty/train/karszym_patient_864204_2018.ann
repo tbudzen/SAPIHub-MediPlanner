@@ -1,0 +1,141 @@
+T1	Drug 341 348	Emanera
+T2	Treatment 459 481	kontrola u lekarza POZ
+T3	Behaviour 484 509	dieta niskocholesterolowa
+T4	Investigation 511 531	kontrola lipidogramu
+T5	Date 532 541	za 3 m-ce
+T6	Treatment 544 605	kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych
+T7	Investigation 638 685	wykonanie EKG metodą Holtera min 72- godzinnego
+R1	Dat Arg1:T5 Arg2:T4	
+T8	Condition 909 953	Łagodna niedomykalność zastawki trójdzielnej
+N1	Reference T8 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T9	Condition 955 990	Napadowy częstoskurcz przedsionkowy
+N2	Reference T9 ICD10:I47.1	Częstoskurcz nadkomorowy
+T10	Condition 992 1012	Hipercholesterolemia
+N3	Reference T10 ICD10:E78.2	Hiperlipidemia mieszana
+T11	Condition 1027 1055	refluks żołądkowo-przełykowy
+N4	Reference T11 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T12	Treatment 1065 1078	appendektomii
+A1	Status T12 Historical_Insignificant
+N5	Reference T12 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T13	Treatment 1081 1097	cholecystektomii
+A2	Status T13 Historical_Insignificant
+N6	Reference T13 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T14	Date 1098 1108	przed laty
+R2	Dat Arg1:T14 Arg2:T13	
+R3	Dat Arg1:T14 Arg2:T12	
+T15	Condition 1280 1300	hipercholesterolemii
+N7	Reference T15 ICD10:E78.0	Czysta hipercholesterolemia
+T16	Condition 1303 1338	wypadania płatka zastawki mitralnej
+N8	Reference T16 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T17	Symptom 1369 1414	napadów kołatania serca trwających do godziny
+N9	Reference T17 ICD10:R00.2	Kołatanie serca
+T18	Symptom 1432 1442	niepokojem
+N10	Reference T18 ICD10:R45.1	Niepokój i pobudzenie
+T19	Symptom 1444 1476	dyskomfortem w klatce piersiowej
+N11	Reference T19 ICD10:R07.3	Inne bóle w klatce piersiowej
+T20	Symptom 1478 1517	uczucia nierównej pracy serca (przerwy)
+N12	Reference T20 ICD10:R00.2	Kołatanie serca
+T21	Date 1532 1540	od 2 lat
+T22	Symptom 1519 1531	Dolegliwości
+R4	Dat Arg1:T21 Arg2:T22	
+R5	Dat Arg1:T21 Arg2:T20	
+R6	Dat Arg1:T21 Arg2:T17	
+R7	Dat Arg1:T21 Arg2:T18	
+R8	Dat Arg1:T21 Arg2:T19	
+T23	Drug 1563 1571	Bisocard
+T24	Drug_dose 1572 1577	2,5mg
+T25	Drug_dose 1554 1562	doraźnie
+R9	Drg Arg1:T23 Arg2:T24	
+R10	Drg Arg1:T23 Arg2:T25	
+T26	Symptom 1601 1698	uciskowe bóle w okolicy przedsercowej bez związku z wysiłkiem fizycznym, trwające po kilka godzin
+N13	Reference T26 ICD10:R07.2	Ból w okolicy przedsercowej
+T27	Date 1700 1713	przed tydzień
+R11	Dat Arg1:T27 Arg2:T26	
+T28	Condition 1747 1775	Refluks żołądkowo-przełykowy
+N14	Reference T28 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T29	Symptom 1715 1726	Ostatni ból
+N15	Reference T29 ICD10:R07.2	Ból w okolicy przedsercowej
+T30	Date 1728 1745	w trakcie rozmowy
+R12	Dat Arg1:T30 Arg2:T29	
+T31	Negation 1776 1782	Neguje
+T32	Symptom 1784 1796	zasłabnięcia
+N16	Reference T32 ICD10:R55	Omdlenie i zapaść
+T33	Symptom 1798 1806	omdlenia
+N17	Reference T33 ICD10:R55	Omdlenie i zapaść
+T34	Symptom 1808 1818	krwawienia
+N18	Reference T34 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T35	Symptom 1820 1835	obrzęki podudzi
+N19	Reference T35 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T36	Condition 1837 1839	HA
+N20	Reference T36 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T37	Condition 1841 1843	DM
+N21	Reference T37 ICD10:E14	Cukrzyca nieokreślona
+R13	Neg Arg1:T31 Arg2:T32	
+R14	Neg Arg1:T31 Arg2:T33	
+R15	Neg Arg1:T31 Arg2:T34	
+R16	Neg Arg1:T31 Arg2:T35	
+R17	Neg Arg1:T31 Arg2:T36	
+R18	Neg Arg1:T31 Arg2:T37	
+T38	Treatment 1846 1863	Przebyte operacje
+N22	Reference T38 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T39	Treatment 1865 1878	appendektomia
+A3	Status T39 Historical_Insignificant
+N23	Reference T39 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T40	Treatment 1881 1897	cholecystektomia
+A4	Status T40 Historical_Insignificant
+N24	Reference T40 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T41	Date 1898 1909	przed laty.
+R19	Dat Arg1:T41 Arg2:T40	
+R20	Dat Arg1:T41 Arg2:T39	
+T42	Behaviour 1910 1925	Palenie tytoniu
+N25	Reference T42 ICD10:Z72.0	Używanie tytoniu
+T43	Negation 1927 1932	nigdy
+T44	Behaviour 1934 1945	Inne używki
+N26	Reference T44 ICD10:Z72	Problemy związane ze stylem życia
+T45	Negation 1947 1950	nie
+T46	Condition 1951 1969	Uczulenia: na leki
+N27	Reference T46 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T47	Negation 1970 1976	nie ma
+T48	Condition 2004 2007	WZW
+N28	Reference T48 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T49	Negation 2008 2011	(-)
+T50	Condition 2014 2023	borelioza
+N29	Reference T50 ICD10:A69.2	Choroba z Lyme
+T51	Negation 2024 2029	( - )
+T52	Condition 2031 2034	tbc
+N30	Reference T52 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T53	Negation 2035 2038	(-)
+T54	Condition 2062 2072	nagły zgon
+A5	Status T54 Family
+T55	Date 2078 2084	w 55rż
+T56	Condition 2086 2101	zawał śc dolnej
+A6	Status T56 Family
+A7	Source T56 Declared
+N32	Reference T56 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+R21	Dat Arg1:T55 Arg2:T56	
+R22	Dat Arg1:T55 Arg2:T54	
+N31	Reference T54 ICD10:R96	Inny nagły zgon z nieznanej przyczyny
+R23	Neg Arg1:T49 Arg2:T48	
+R24	Neg Arg1:T51 Arg2:T50	
+R25	Neg Arg1:T53 Arg2:T52	
+R26	Neg Arg1:T47 Arg2:T46	
+R27	Neg Arg1:T45 Arg2:T44	
+R28	Neg Arg1:T43 Arg2:T42	
+T57	Behaviour 2120 2146	warunki mieszkaniowe dobre
+T58	Drug 2183 2190	Emanera
+T59	Drug_dose 2191 2210	20mg 1x 1 tabl/rano
+T60	Drug 2211 2217	Magnez
+T61	Drug 2218 2226	Bisocard
+T62	Drug_dose 2227 2241	2,5mg doraźnie
+T63	Date 2243 2251	ostatnio
+T64	Drug_dose 2252 2265	2x w tygodniu
+T65	Drug 2266 2269	HTZ
+R29	Dat Arg1:T63 Arg2:T64	
+R30	Drg Arg1:T61 Arg2:T62	
+R31	Drg Arg1:T61 Arg2:T64	
+R32	Drg Arg1:T58 Arg2:T59	
+T66	Investigation 2330 2351	badania laboratoryjne
+T67	Investigation 2353 2357	ECHO
+T68	Investigation 2359 2377	EKG metodą Holtera
+T69	Investigation 2379 2383	ABPM
+T70	Investigation 2385 2400	próba wysiłkowa

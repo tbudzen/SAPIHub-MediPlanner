@@ -1,0 +1,107 @@
+T1	Condition 546 567	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	
+T2	Condition 569 590	Nadczynność tarczycy.
+N2	Reference T2 ICD10:E05.9	Tyreotoksykoza, nieokreślona
+T3	Condition 591 607	Astma oskrzelowa
+N3	Reference T3 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T4	Condition 764 787	nadczynnością tarczycy,
+N4	Reference T4 ICD10:E05.9	Tyreotoksykoza, nieokreślona
+T5	Condition 788 804	astmą oskrzelową
+N5	Reference T5 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T6	Drug 806 815	Symbocort
+T7	Drug_dose 824 833	doraxnie)
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Investigation_result 868 888	wysokich wartości RR
+T9	Drug 950 962	Furosemidzie
+T10	Drug 965 976	Captoprilem
+T11	Investigation_result 978 985	230/120
+T12	Investigation_result 995 1006	19/110mmHg.
+T13	Symptom 1029 1036	wysypka
+N6	Reference T13 ICD10:R21	Rumień i inne nieswoiste wysypki skórne
+T14	Drug 1057 1067	Metypredem
+T15	Investigation 1586 1590	ECHO
+T16	Investigation 1592 1610	EKG metodą Holtera
+T17	Investigation 1612 1616	ABPM
+T18	Investigation 1618 1633	próba wysiłkowa
+T19	Drug 1484 1492	Thyrozol
+T20	Drug_dose 1493 1502	20-0-20mg
+R2	Drg Arg1:T19 Arg2:T20	
+T21	Behaviour 1448 1474	warunki mieszkaniowe dobre
+T22	Negation 1361 1369	nieznane
+T23	Negation 1346 1349	nie
+T24	Negation 1315 1323	nie pali
+T25	Behaviour 1333 1345	Inne używki:
+N7	Reference T25 ICD10:Z72	Problemy związane ze stylem życia
+R3	Neg Arg1:T23 Arg2:T25	
+T26	Behaviour 1298 1313	Palenie tytoniu
+N8	Reference T26 ICD10:Z72.0	Używanie tytoniu
+R4	Neg Arg1:T24 Arg2:T26	
+T27	Date 1324 1332	od 6 mcy
+R5	Dat Arg1:T27 Arg2:T26	
+T28	Condition 1350 1359	Uczulenia
+N9	Reference T28 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R6	Neg Arg1:T22 Arg2:T28	
+T29	Condition 1397 1400	WZW
+N10	Reference T29 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T30	Condition 1407 1416	borelioza
+N11	Reference T30 ICD10:A69.2	Choroba z Lyme
+T31	Condition 1424 1427	tbc
+N12	Reference T31 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T32	Negation 1401 1404	(-)
+R7	Neg Arg1:T32 Arg2:T29	
+T33	Negation 1417 1422	( - )
+R8	Neg Arg1:T33 Arg2:T30	
+T34	Negation 1428 1431	(-)
+R9	Neg Arg1:T34 Arg2:T31	
+T35	Negation 1092 1098	Neguje
+T36	Symptom 1100 1112	zasłabnięcia
+N13	Reference T36 ICD10:R55	Omdlenie i zapaść
+T37	Symptom 1114 1122	omdlenia
+N14	Reference T37 ICD10:R55	Omdlenie i zapaść
+T38	Symptom 1124 1134	krwawienia
+N15	Reference T38 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T39	Symptom 1136 1149	czarne stolce
+N16	Reference T39 ICD10:K92.1	Stolce smołowate
+T40	Symptom 1151 1167	brunatne wymioty
+N17	Reference T40 ICD10:K92.0	Wymioty krwawe
+T41	Condition 1169 1185	chorobę wrzodową
+N18	Reference T41 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T42	Symptom 1187 1201	duszność nocną
+N19	Reference T42 ICD10:R06.0	Duszność
+T43	Symptom 1203 1219	obrzęki podudzi,
+N20	Reference T43 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T44	Symptom 1220 1244	bóle w klatce piersiowej
+N21	Reference T44 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T45	Symptom 1246 1261	kołatania serca
+N22	Reference T45 ICD10:R00.2	Kołatanie serca
+T46	Condition 1263 1265	HA
+N23	Reference T46 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T47	Condition 1267 1269	DM
+N24	Reference T47 ICD10:E14	Cukrzyca nieokreślona
+T48	Condition 1271 1281	udar mózgu
+N25	Reference T48 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T49	Condition 1283 1294	zawał serca
+N26	Reference T49 ICD10:I25.2	Przebyty zawał serca
+R10	Neg Arg1:T35 Arg2:T36	
+R11	Neg Arg1:T35 Arg2:T37	
+R12	Neg Arg1:T35 Arg2:T38	
+R13	Neg Arg1:T35 Arg2:T39	
+R14	Neg Arg1:T35 Arg2:T40	
+R15	Neg Arg1:T35 Arg2:T41	
+R16	Neg Arg1:T35 Arg2:T42	
+R17	Neg Arg1:T35 Arg2:T43	
+R18	Neg Arg1:T35 Arg2:T44	
+R19	Neg Arg1:T35 Arg2:T45	
+R20	Neg Arg1:T35 Arg2:T46	
+R21	Neg Arg1:T35 Arg2:T47	
+R22	Neg Arg1:T35 Arg2:T48	
+R23	Neg Arg1:T35 Arg2:T49	
+R1	Drg Arg1:T6 Arg2:T7
+R23	Neg Arg1:T24 Arg2:T26
+R32	Neg Arg1:T23 Arg2:T28
+R37	Neg Arg1:T23 Arg2:T25
+R41	Neg Arg1:T32 Arg2:T29
+R50	Neg Arg1:T33 Arg2:T30
+R59	Neg Arg1:T34 Arg2:T31
+R64	Drg Arg1:T19 Arg2:T20
+R8	Neg Arg1:T35 Arg2:T36

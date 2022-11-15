@@ -1,0 +1,303 @@
+T1	Treatment 333 456	Dalsza opieka w POZ, Poradni Diabetologicznej, Poradni Neurologicznej, Poradni Endokrynologicznej oraz Poradni Urologicznej
+T2	Treatment 461 511	Wskazana pilna kontrola w Poradni Pulmonologicznej
+T3	Investigation 514 575	oceną porównawczą zmian obserwowanych w RTG klatki piersiowej
+T4	Treatment 581 644	diagnostyka pulmonologicznych przyczyn zgłaszanych dolegliwości
+T5	Treatment 649 708	Wskazana dalsza okresowa kontrola w Poradni Kardiologicznej
+T6	Investigation 714 754	wykonanie kontrolnego badania Holter EKG
+T7	Date 755 776	za około 2-3 miesiące
+R1	Dat Arg1:T7 Arg2:T6	
+R2	Dat Arg1:T7 Arg2:T5	
+T8	Treatment 781 878	Zalecana konsultacja w Poradni Zaburzeń Rytmu Serca oraz dalsza ewentualna diagnostyka i leczenie
+T9	Investigation 883 943	Wskazana kontrola elektrolitów i parametrów wydolności nerek
+T10	Date 944 954	za 3-5 dni
+R3	Dat Arg1:T10 Arg2:T9	
+T11	Investigation 959 987	Wskazana kontrola morfologii
+T12	Date 988 1003	za 2-3 tygodnie
+T13	Treatment 1009 1038	dalsza ewentualna diagnostyka
+R4	Dat Arg1:T12 Arg2:T11	
+T14	Investigation 1043 1074	Wskazana kontrola TSH, FT3, FT4
+T15	Date 1075 1090	za 3-4 tygodnie
+R5	Dat Arg1:T15 Arg2:T14	
+T16	Investigation 1095 1205	Dalsza okresowa kontrola morfologii, lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T17	Investigation 1210 1233	Okresowa kontrola HbA1c
+T18	Behaviour 1239 1341	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T19	Behaviour 1347 1375	Wskazana redukcja masy ciała
+T20	Behaviour 1381 1433	Wskazany umiarkowany, systematyczny wysiłek fizyczny
+T21	Investigation 1439 1495	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T22	Treatment 1501 1529	Regularne przyjmowanie leków
+T23	Drug 1535 1540	Acard
+T24	Drug_dose 1541 1566	75mg 1 tabletka wieczorem
+R6	Drg Arg1:T23 Arg2:T24	
+T25	Drug 1568 1576	Bisocard
+T26	Drug_dose 1577 1596	5mg 1 tabletka rano
+R7	Drg Arg1:T25 Arg2:T26	
+T27	Drug 1598 1606	Apo-Rami
+T28	Drug_dose 1607 1628	2,5mg 1 tabletka rano
+R8	Drg Arg1:T27 Arg2:T28	
+T29	Drug 1630 1635	Tulip
+T30	Drug_dose 1636 1661	60mg 1 tabletka wieczorem
+R9	Drg Arg1:T29 Arg2:T30	
+T31	Drug 1663 1672	Metformax
+T32	Drug_dose 1673 1768	1000mg 1 tabletka rano, w południe i wieczorem - wg dotychczasowych zaleceń lekarza specjalisty
+R10	Drg Arg1:T31 Arg2:T32	
+T33	Drug 1770 1780	Diaprel MR
+T34	Drug_dose 1781 1852	60mg 1/2 tabletki rano - wg dotychczasowych zaleceń lekarza specjalisty
+R11	Drg Arg1:T33 Arg2:T34	
+T35	Drug 1854 1864	Memotropil
+T36	Drug_dose 1865 1936	1200mg 1 tabletka rano - wg dotychczasowych zaleceń lekarza specjalisty
+R12	Drg Arg1:T35 Arg2:T36	
+T37	Condition 2155 2182	Przewlekła choroba wieńcowa
+N1	Reference T37 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T38	Condition 2184 2217	Arytmia komorowa do nsVT włącznie
+N2	Reference T38 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T39	Condition 2219 2240	Nadciśnienie tętnicze
+N3	Reference T39 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T40	Condition 2242 2254	Dyslipidemia
+N4	Reference T40 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T41	Treatment 2255 2279	w trakcie farmakoterapii
+T42	Condition 2289 2304	Cukrzyca typu 2
+N5	Reference T42 ICD10:E11	Cukrzyca insulinoniezależna
+T43	Condition 2306 2356	Łagodna niedokrwistość normocytarna, normobarwliwa
+N6	Reference T43 ICD10:D64.9	Niedokrwistość, nieokreślona
+T44	Condition 2358 2378	Stłuszczenie wątroby
+N7	Reference T44 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T45	Condition 2380 2407	Zapalenie mięśnia sercowego
+A1	Source T45 Declared
+N8	Reference T45 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+T46	Condition 2441 2457	Zapalenie stawów
+N9	Reference T46 ICD10:M13.9	Zapalenie stawu, nieokreślone
+T47	Condition 2471 2496	Wole guzkowe nietoksyczne
+N10	Reference T47 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T48	Symptom 2498 2542	Dolegliwości bólowe okolicy lędźwiowej lewej
+N11	Reference T48 ICD10:M54.5	Ból okolicy lędźwiowo-krzyżowej
+T49	Condition 2544 2556	kamica nerek
+N12	Reference T49 ICD10:N20.0	Kamica nerki
+T50	Condition 2562 2584	wodonercze nerki lewej
+N13	Reference T50 ICD10:N13.3	Inne i nieokreślone wodonercze
+T51	Symptom 2631 2644	Drżenia ciała
+N14	Reference T51 ICD10:G25.0	Drżenie samoistne
+T52	Condition 2683 2715	Zmiany zwyrodnieniowe kręgosłupa
+N15	Reference T52 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T53	Treatment 2725 2741	cholecystektomii
+A2	Status T53 Historical_Insignificant
+T54	Date 2743 2747	1980
+R13	Dat Arg1:T54 Arg2:T53	
+T55	Symptom 2967 3009	Zmniejszenie tolerancji wysiłku fizycznego
+N16	Reference T55 ICD10:R53	Złe samopoczucie i zmęczenie
+T56	Symptom 3011 3035	Bóle w klatce peirsiowej
+N17	Reference T56 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T57	Condition 3037 3046	DM typu 2
+N18	Reference T57 ICD10:E11	Cukrzyca insulinoniezależna
+T58	Condition 3048 3050	HA
+N19	Reference T58 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T59	Symptom 3077 3099	napady kołatania serca
+N20	Reference T59 ICD10:R00.2	Kołatanie serca
+T60	Symptom 3106 3116	dusznością
+N21	Reference T60 ICD10:R06.0	Duszność
+T61	Symptom 3118 3130	zasłabniecia
+T62	Symptom 3133 3160	spoczynkowe bóle w kl piers
+N22	Reference T62 ICD10:R07.3	Inne bóle w klatce piersiowej
+T63	Date 3161 3170	wiosną br
+R14	Dat Arg1:T63 Arg2:T62	
+T64	Date 3184 3198	w dzieciństwie
+T65	Condition 3200 3206	anginy
+N23	Reference T65 ICD10:J03.9	Ostre zapalenie migdałków podniebiennych, nieokreślone
+R15	Dat Arg1:T64 Arg2:T65	
+T66	Condition 3208 3224	zapalenie stawów
+N24	Reference T66 ICD10:M13.9	Zapalenie stawu, nieokreślone
+R16	Dat Arg1:T64 Arg2:T66	
+T67	Condition 3227 3244	mięsnia sercowego
+N25	Reference T67 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+R17	Dat Arg1:T64 Arg2:T67	
+T68	Symptom 3246 3272	bóle w okolicy lewej nerki
+N26	Reference T68 ICD10:R10	Ból w okolicy brzucha i miednicy
+T69	Condition 3274 3288	kamica nerkowa
+N27	Reference T69 ICD10:N20.0	Kamica nerki
+T70	Condition 3291 3314	wodonercze po str lewej
+N28	Reference T70 ICD10:N13.3	Inne i nieokreślone wodonercze
+T71	Date 3315 3329	ok 4 lata temu
+R18	Dat Arg1:T71 Arg2:T70	
+T72	Symptom 3331 3359	uczucie drżenia całego ciała
+N29	Reference T72 ICD10:G25.0	Drżenie samoistne
+T73	Date 3360 3368	od 6 mcy
+R19	Dat Arg1:T73 Arg2:T72	
+T74	Condition 3370 3384	guzek tarczycy
+N30	Reference T74 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T75	Investigation 3388 3395	biopsji
+T76	Investigation_result 3396 3410	zmiana łagodna
+T77	Date 3411 3418	07.2019
+R20	Inv Arg1:T75 Arg2:T76	
+R21	Dat Arg1:T77 Arg2:T75	
+R22	Dat Arg1:T77 Arg2:T76	
+T78	Condition 3421 3470	choroba zwyrodnieniowa stawów kręgosłupa szyjnego
+N31	Reference T78 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T79	Treatment 3495 3511	cholecystektomia
+A3	Status T79 Historical_Insignificant
+T80	Date 3513 3517	1980
+R23	Dat Arg1:T80 Arg2:T79	
+T81	Condition 3663 3672	DM typu 2
+N32	Reference T81 ICD10:E11	Cukrzyca insulinoniezależna
+T82	Condition 3674 3676	HA
+N33	Reference T82 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T83	Investigation_result 3678 3717	RR w domu 105/70-160/90mmHg, śr. 130/85
+N34	Reference T83 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T84	Symptom 3749 3791	zmnijeszonej tolerancji wysiłku fizycznego
+N35	Reference T84 ICD10:R53	Złe samopoczucie i zmęczenie
+T85	Symptom 3793 3845	odpoczywa po przejściu ok 100m od ''dłuższego czasu"
+N36	Reference T85 ICD10:R53	Złe samopoczucie i zmęczenie
+T86	Symptom 3849 3879	zatykaniem w klatce peirsiowej
+N37	Reference T86 ICD10:R07.3	Inne bóle w klatce piersiowej
+T87	Symptom 3882 3892	dusznością
+N38	Reference T87 ICD10:R06.0	Duszność
+T88	Symptom 3916 3938	napady kołatania serca
+N39	Reference T88 ICD10:R00.2	Kołatanie serca
+T89	Symptom 3945 3955	dusznością
+N40	Reference T89 ICD10:R06.0	Duszność
+T90	Symptom 3957 3969	zasłabniecia
+T91	Symptom 3972 3999	spoczynkowe bóle w kl piers
+N41	Reference T91 ICD10:R07.3	Inne bóle w klatce piersiowej
+T92	Date 4000 4009	wiosną br
+R24	Dat Arg1:T92 Arg2:T91	
+T93	Date 4023 4037	w dzieciństwie
+T94	Condition 4039 4045	anginy
+N42	Reference T94 ICD10:J03.9	Ostre zapalenie migdałków podniebiennych, nieokreślone
+R25	Dat Arg1:T93 Arg2:T94	
+T95	Condition 4047 4063	zapalenie stawów
+N43	Reference T95 ICD10:M13.9	Zapalenie stawu, nieokreślone
+R26	Dat Arg1:T93 Arg2:T95	
+T96	Condition 4066 4083	mięsnia sercowego
+N44	Reference T96 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+R27	Dat Arg1:T93 Arg2:T96	
+T97	Symptom 4085 4111	bóle w okolicy lewej nerki
+N45	Reference T97 ICD10:R10	Ból w okolicy brzucha i miednicy
+T100	Condition 4142 4156	kamica nerkowa
+N46	Reference T100 ICD10:N20.0	Kamica nerki
+T101	Condition 4159 4182	wodonercze po str lewej
+N47	Reference T101 ICD10:N13.3	Inne i nieokreślone wodonercze
+T102	Date 4183 4197	ok 4 lata temu
+R29	Dat Arg1:T102 Arg2:T101	
+T103	Symptom 4199 4227	uczucie drżenia całego ciała
+N48	Reference T103 ICD10:G25.0	Drżenie samoistne
+T104	Date 4228 4236	od 6 mcy
+R30	Dat Arg1:T104 Arg2:T103	
+T105	Condition 4271 4285	guzek tarczycy
+N49	Reference T105 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T106	Investigation 4289 4296	biopsji
+T107	Investigation_result 4297 4311	zmiana łagodna
+R31	Inv Arg1:T106 Arg2:T107	
+T108	Date 4312 4319	07.2019
+R32	Dat Arg1:T108 Arg2:T106	
+R33	Dat Arg1:T108 Arg2:T107	
+T98	Condition 4322 4371	choroba zwyrodnieniowa stawów kręgosłupa szyjnego
+N50	Reference T98 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T99	Negation 4373 4382	nieobecna
+T109	Symptom 4383 4402	krew utajona w kale
+N51	Reference T109 ICD10:R19.5	Inne patologie kału
+R28	Neg Arg1:T99 Arg2:T109	
+T110	Date 4404 4414	10.08.2019
+R34	Dat Arg1:T110 Arg2:T109	
+T111	Date 4417 4431	ok 2 lata temu
+T112	Investigation 4434 4455	rtg klatki piersiowej
+R35	Dat Arg1:T111 Arg2:T112	
+T113	Investigation_result 4456 4494	zmiany podejrzane o chorobę rozrostową
+R36	Inv Arg1:T112 Arg2:T113	
+R37	Dat Arg1:T111 Arg2:T113	
+T114	Drug 4644 4652	Diaprelu
+T115	Drug 4655 4665	Metformaxu
+T116	Negation 4669 4675	Neguje
+T117	Symptom 4677 4685	omdlenia
+N52	Reference T117 ICD10:R55	Omdlenie i zapaść
+T118	Symptom 4687 4697	krwawienia
+T119	Symptom 4699 4712	czarne stolce
+N53	Reference T119 ICD10:K92.1	Stolce smołowate
+T120	Symptom 4714 4730	brunatne wymioty
+N54	Reference T120 ICD10:K92.0	Wymioty krwawe
+T121	Condition 4732 4748	chorobę wrzodową
+N55	Reference T121 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T122	Symptom 4750 4764	duszność nocną
+N56	Reference T122 ICD10:R06.0	Duszność
+T123	Symptom 4766 4781	obrzęki podudzi
+N57	Reference T123 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T124	Condition 4783 4793	udar mózgu
+N58	Reference T124 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T125	Condition 4795 4806	zawał serca
+N59	Reference T125 ICD10:I25.2	Przebyty zawał serca
+R38	Neg Arg1:T116 Arg2:T125	
+R39	Neg Arg1:T116 Arg2:T124	
+R40	Neg Arg1:T116 Arg2:T123	
+R41	Neg Arg1:T116 Arg2:T122	
+R42	Neg Arg1:T116 Arg2:T120	
+R43	Neg Arg1:T116 Arg2:T121	
+R44	Neg Arg1:T116 Arg2:T119	
+R45	Neg Arg1:T116 Arg2:T118	
+R46	Neg Arg1:T116 Arg2:T117	
+T126	Treatment 4829 4845	cholecystektomia
+A4	Status T126 Historical_Insignificant
+T127	Date 4847 4851	1980
+R47	Dat Arg1:T127 Arg2:T126	
+T128	Behaviour 4853 4868	Palenie tytoniu
+T129	Negation 4870 4878	nie pali
+T130	Date 4879 4887	od dawna
+R48	Neg Arg1:T129 Arg2:T128	
+R49	Dat Arg1:T130 Arg2:T128	
+T131	Behaviour 4888 4899	Inne używki
+T132	Negation 4901 4904	nie
+R50	Neg Arg1:T132 Arg2:T131	
+T133	Condition 4905 4914	Uczulenia
+T134	Negation 4916 4919	nie
+R51	Neg Arg1:T134 Arg2:T133	
+T135	Condition 4948 4951	WZW
+N61	Reference T135 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T136	Condition 4958 4967	borelioza
+N62	Reference T136 ICD10:A69.2	Choroba z Lyme
+T137	Condition 4973 4976	tbc
+N63	Reference T137 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T138	Condition 4982 4986	odra
+N64	Reference T138 ICD10:B05	Odra
+T139	Condition 4992 5006	kontakt z odrą
+N65	Reference T139 ICD10:B05	Odra
+T140	Negation 5008 5009	-
+R52	Neg Arg1:T140 Arg2:T139	
+T141	Negation 4988 4989	-
+R53	Neg Arg1:T141 Arg2:T138	
+T142	Negation 4978 4979	-
+R54	Neg Arg1:T142 Arg2:T137	
+T143	Negation 4969 4970	-
+R55	Neg Arg1:T143 Arg2:T136	
+T144	Negation 4953 4954	-
+R56	Neg Arg1:T144 Arg2:T135	
+T145	Behaviour 5027 5053	warunki mieszkaniowe dobre
+T146	Drug 5104 5112	Apo-Rami
+T147	Drug_dose 5113 5133	2,5mg 1x 1 tabl/rano
+R57	Drg Arg1:T146 Arg2:T147	
+T148	Drug 5134 5142	Bisocard
+T149	Drug_dose 5143 5163	5mg 1x 1/2 tabl/rano
+R58	Drg Arg1:T148 Arg2:T149	
+T150	Drug 5164 5174	Diaprel MR
+T151	Drug_dose 5175 5194	60mg 1x 1 tabl/rano
+R59	Drg Arg1:T150 Arg2:T151	
+T152	Drug 5195 5204	Metformax
+T153	Drug_dose 5205 5221	1000mg 3x 1 tabl
+R60	Drg Arg1:T152 Arg2:T153	
+T154	Drug 5222 5232	Memotropil
+T155	Drug_dose 5233 5252	1200 1x 1 tabl/rano
+R61	Drg Arg1:T154 Arg2:T155	
+T156	Drug 5253 5258	Tulip
+T157	Drug_dose 5259 5279	20mg 1x 1 tabl/wiecz
+R62	Drg Arg1:T156 Arg2:T157	
+T158	Investigation 5340 5361	badania laboratoryjne
+T159	Investigation 5363 5367	ECHO
+T160	Investigation 5369 5387	EKG metodą Holtera
+T161	Investigation 5389 5393	ABPM
+T162	Investigation 5395 5410	próba wysiłkowa
+T163	Treatment 3476 3493	Przebyte operacje
+A5	Source T113 Declared
+T164	Condition 4582 4597	spadki glikemii
+N66	Reference T164 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T165	Treatment 4810 4827	Przebyte operacje
+T166	Drug 2280 2287	statyną
+N67	Reference T118 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+N68	Reference T133 ICD10:T78.4	Alergia, nieokreślona
+N69	Reference T61 ICD10:R55	Omdlenie i zapaść
+N70	Reference T90 ICD10:R55	Omdlenie i zapaść
+N60	Reference T128 ICD10:Z72.0	Używanie tytoniu

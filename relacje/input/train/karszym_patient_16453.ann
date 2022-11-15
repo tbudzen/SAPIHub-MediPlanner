@@ -1,0 +1,152 @@
+T1	Treatment 342 417	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej i Pulmonologicznej
+T2	Treatment 441 527	planowej koronarografii w Oddziale Kardiologicznym dysponującym Pracownią Hemodynamiki
+T3	Behaviour 553 592	Dieta lekkostrawna, niskocholesterolowa
+T4	Treatment 599 690	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T5	Treatment 697 745	Systematyczna kontrola ciśnienia tętniczego krwi
+T6	Drug 758 763	Acard
+T7	Drug 790 796	Atoris
+T8	Drug 823 833	Prestarium
+T9	Drug 861 866	Nedal
+T10	Drug 887 896	Nitromint
+T11	Drug 949 955	Salmex
+T12	Drug 1009 1019	Vessel Due
+T13	Drug_dose 764 789	75 mg 1x1 tabl. wieczorem
+T14	Drug_dose 797 822	20 mg 1x1 tabl. wieczorem
+T15	Drug_dose 834 860	5 mg 1x1/2 tabl. wieczorem
+T16	Drug_dose 867 886	5 mg 1x1 tabl. rano
+T17	Drug_dose 897 948	1-2 dawki doraźnie w razie bólu w klatce piersiowej
+T18	Drug_dose 956 979	250 2x1 dawka (wziewnie
+T19	Drug_dose 1020 1028	2x1 tabl
+R1	Drg Arg1:T6 Arg2:T13	
+R2	Drg Arg1:T7 Arg2:T14	
+R3	Drg Arg1:T8 Arg2:T15	
+R4	Drg Arg1:T9 Arg2:T16	
+R5	Drg Arg1:T10 Arg2:T17	
+R6	Drg Arg1:T11 Arg2:T18	
+R7	Drg Arg1:T12 Arg2:T19	
+T20	Condition 1288 1350	Choroba niedokrwienna serca I/II* wg CCS w trakcie diagnostyki
+N1	Reference T20 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T22	Condition 1352 1383	Nadciśnienie tętnicze I* wg WHO
+N2	Reference T22 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T23	Condition 1385 1405	Hipercholesterolemia
+N3	Reference T23 ICD10:E78.0	Czysta hipercholesterolemia
+T24	Condition 1407 1472	Arytmia nadkomorowa w postaci wstawek częstoskurczu nadkomorowego
+N4	Reference T24 ICD10:I47.1	Częstoskurcz nadkomorowy
+T25	Condition 1474 1490	Astma oskrzelowa
+N5	Reference T25 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T26	Treatment 1500 1508	operacji
+A1	Status T26 Historical_Insignificant
+N6	Reference T26 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T27	Symptom 1705 1745	skaczących wartości ciśnienia tętniczego
+T28	Symptom 1747 1770	uczucia kołatania serca
+N7	Reference T28 ICD10:R00.2	Kołatanie serca
+T29	Symptom 1773 1802	duszności związanej z arytmią
+N8	Reference T29 ICD10:R06.0	Duszność
+T30	Condition 1817 1865	guz na lewym nadnerczu (gruczolak/incydentaloma)
+N9	Reference T30 ICD10:D44.1	Nadnercze
+T31	Condition 1867 1888	nadciśnienie tętnicze
+N10	Reference T31 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T32	Condition 1890 1906	astma oskrzelowa
+N11	Reference T32 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T33	Condition 1908 1933	stan po urazie ręki lewej
+A2	Status T33 Historical_Insignificant
+N12	Reference T33 ICD10:S69.9	Nieokreślony uraz nadgarstka i ręki
+T34	Condition 1935 1955	hipercholesterolemia
+N13	Reference T34 ICD10:E78.0	Czysta hipercholesterolemia
+T35	Negation 1957 1963	Neguje
+T36	Symptom 1965 1977	zasłabnięcia
+T37	Symptom 1979 1987	omdlenia
+N14	Reference T37 ICD10:R55	Omdlenie i zapaść
+T38	Symptom 1989 1999	krwawienia
+T39	Symptom 2001 2014	czarne stolce
+N15	Reference T39 ICD10:K92.1	Stolce smołowate
+T40	Symptom 2016 2032	brunatne wymioty
+N16	Reference T40 ICD10:K92.0	Wymioty krwawe
+T41	Condition 2034 2050	chorobę wrzodową
+N17	Reference T41 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T42	Symptom 2052 2080	duszność nocną typu ortopnoe
+N18	Reference T42 ICD10:R06.0	Duszność
+T43	Condition 2082 2084	HA
+N19	Reference T43 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T44	Condition 2086 2088	DM
+N20	Reference T44 ICD10:E14	Cukrzyca nieokreślona
+T45	Condition 2090 2100	udar mózgu
+N21	Reference T45 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T46	Condition 2102 2113	zawał serca
+N22	Reference T46 ICD10:I25.2	Przebyty zawał serca
+R8	Neg Arg1:T35 Arg2:T36	
+R9	Neg Arg1:T35 Arg2:T37	
+R10	Neg Arg1:T35 Arg2:T38	
+R11	Neg Arg1:T35 Arg2:T39	
+R12	Neg Arg1:T35 Arg2:T40	
+R13	Neg Arg1:T35 Arg2:T41	
+R14	Neg Arg1:T35 Arg2:T42	
+R15	Neg Arg1:T35 Arg2:T43	
+R16	Neg Arg1:T35 Arg2:T44	
+R17	Neg Arg1:T35 Arg2:T45	
+R18	Neg Arg1:T35 Arg2:T46	
+T47	Treatment 2127 2135	operacje
+N23	Reference T47 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T48	Date 2167 2177	15.04.2019
+A3	Status T47 Historical_Insignificant
+T49	Condition 2180 2209	torbiel szyi po lewej stronie
+N24	Reference T49 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+A4	Status T49 Historical_Insignificant
+T50	Treatment 2221 2234	histerektomia
+N25	Reference T50 ICD10:Z90.7	Nabyty brak narządów płciowych
+T51	Date 2236 2240	2007
+T52	Date 2211 2218	09.2017
+R19	Dat Arg1:T48 Arg2:T47	
+R20	Dat Arg1:T52 Arg2:T49	
+A5	Status T50 Historical_Insignificant
+R21	Dat Arg1:T51 Arg2:T50	
+T53	Negation 2259 2262	nie
+T54	Date 2264 2273	od 16 lat
+T55	Behaviour 2242 2257	Palenie tytoniu
+T56	Behaviour 2276 2288	15 paczkolat
+R22	Neg Arg1:T53 Arg2:T55	
+R23	Dat Arg1:T54 Arg2:T55	
+T57	Behaviour 2290 2301	Inne używki
+T58	Condition 2308 2317	Uczulenia
+N26	Reference T58 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T59	Negation 2319 2322	nie
+T60	Negation 2303 2306	nie
+R24	Neg Arg1:T60 Arg2:T57	
+R25	Neg Arg1:T59 Arg2:T58	
+T61	Condition 2351 2354	WZW
+N27	Reference T61 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T62	Condition 2361 2370	borelioza
+N28	Reference T62 ICD10:A69.2	Choroba z Lyme
+T63	Condition 2376 2379	tbc
+N29	Reference T63 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T64	Negation 2355 2358	(-)
+T65	Negation 2371 2374	(-)
+T66	Negation 2380 2383	(-)
+R26	Neg Arg1:T64 Arg2:T61	
+R27	Neg Arg1:T65 Arg2:T62	
+R28	Neg Arg1:T66 Arg2:T63	
+T67	Behaviour 2401 2427	warunki mieszkaniowe dobre
+T68	Behaviour 2429 2437	Emerytka
+T70	Behaviour 2439 2460	Wcześniej sprzątaczka
+T71	Condition 2463 2483	kontakt z ew. chemią
+N30	Reference T71 ICD10:Z57.5	Narażenie zawodowe na czynniki toksyczne w innych gałęziach zatrudnienia
+T73	Behaviour 2493 2517	wcześniej praca w biurze
+T74	Drug 2548 2558	Vessel Due
+T75	Drug 2569 2575	Salmex
+T76	Drug_dose 2559 2567	2x1 tabl
+T77	Drug_dose 2576 2592	250 mg 2x1 dawka
+R32	Drg Arg1:T74 Arg2:T76	
+R33	Drg Arg1:T75 Arg2:T77	
+T78	Investigation 2654 2675	badania laboratoryjne
+T79	Investigation 2677 2681	ECHO
+T80	Investigation 2683 2687	ABPM
+N31	Reference T55 ICD10:Z72.0	Używanie tytoniu
+N32	Reference T56 ICD10:Z72.0	Używanie tytoniu
+T21	Condition 1509 1532	żylaków kończyn dolnych
+A6	Status T21 Historical_Insignificant
+N33	Reference T21 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T69	Condition 2137 2165	żylaki kończyny dolnej lewej
+A7	Status T69 Historical_Insignificant
+N34	Reference T69 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+R29	Dat Arg1:T48 Arg2:T69	
+R30	Dat Arg1:T52 Arg2:T47	

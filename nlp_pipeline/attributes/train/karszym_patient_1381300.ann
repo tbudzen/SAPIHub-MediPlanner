@@ -1,0 +1,119 @@
+T1	Treatment 340 398	dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T2	Behaviour 422 517	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T3	Investigation 521 570	Okresowo kontrola lipidogramu, stężenia elektroli
+T4	Treatment 808 833	AVR ( Medtronic Hall 23 A
+N1	Reference T4 ICD10:Z95.2	Obecność protez zastawek serca
+T5	Date 835 842	06/2002
+T6	Condition 845 890	Podejrzenie łuszczki przy płatku bezwieńcowym
+A1	Source T6 Declared
+N2	Reference T6 ICD10:T82.8	Inne powikłania protez, implantów i przeszczepów sercowych i naczyniowych
+T7	Condition 900 925	3 udarach niedokrwiennych
+N3	Reference T7 ICD10:I63.9	Zawał mózgu, nieokreślony
+T8	Condition 928 948	prawej półkuli mózgu
+N4	Reference T8 ICD10:I63.9	Zawał mózgu, nieokreślony
+T9	Date 949 953	2003
+T10	Condition 956 975	lewej półkuli mózgu
+N5	Reference T10 ICD10:I63.9	Zawał mózgu, nieokreślony
+T11	Condition 982 1001	lewej półkuli mózgu
+N6	Reference T11 ICD10:I63.9	Zawał mózgu, nieokreślony
+T12	Date 1002 1006	2014
+T13	Date 976 980	2009
+T14	Condition 1016 1031	1 epizodzie TIA
+N7	Reference T14 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T15	Date 1033 1037	2006
+R1	Dat Arg1:T5 Arg2:T4	
+R2	Dat Arg1:T9 Arg2:T8	
+R3	Dat Arg1:T13 Arg2:T10	
+R4	Dat Arg1:T12 Arg2:T11	
+R5	Dat Arg1:T9 Arg2:T7	
+R6	Dat Arg1:T13 Arg2:T7	
+R7	Dat Arg1:T12 Arg2:T7	
+R8	Dat Arg1:T15 Arg2:T14	
+T16	Condition 1040 1071	Nieprawidłowa glikemia na czczo
+N8	Reference T16 ICD10:R73	Podwyższone stężenie glukozy we krwi
+T17	Treatment 1217 1220	AVR
+N9	Reference T17 ICD10:Z95.2	Obecność protez zastawek serca
+T18	Date 1222 1226	2002
+T19	Condition 1232 1241	3 udarach
+T20	Date 1243 1247	2003
+T21	Date 1249 1253	2009
+T22	Date 1255 1259	2014
+T23	Condition 1269 1284	1 epizodzie TIA
+N11	Reference T23 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T24	Date 1286 1290	2006
+R9	Dat Arg1:T24 Arg2:T23	
+N10	Reference T19 ICD10:I63.9	Zawał mózgu, nieokreślony
+R10	Dat Arg1:T18 Arg2:T17	
+R11	Dat Arg1:T20 Arg2:T19	
+R12	Dat Arg1:T21 Arg2:T19	
+R13	Dat Arg1:T22 Arg2:T19	
+T25	Investigation 1354 1357	TTE
+T26	Investigation_result 1358 1400	narastania gradientu na zastawce aortalnej
+R14	Inv Arg1:T25 Arg2:T26	
+T27	Negation 1482 1500	nie podaje żadnych
+T28	Symptom 1501 1513	dolegliwości
+R15	Neg Arg1:T27 Arg2:T28	
+T29	Negation 1523 1526	nie
+T30	Treatment 1527 1538	leczący się
+T31	Condition 1542 1565	inne choroby przewlekłe
+R16	Neg Arg1:T29 Arg2:T30	
+R17	Neg Arg1:T29 Arg2:T31	
+T32	Condition 1567 1572	WZW B
+N12	Reference T32 ICD10:B18.1	Przewlekłe wirusowe zapalenie wątroby typu B bez wirusa delta
+T33	Condition 1578 1586	Grużlica
+N13	Reference T33 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T34	Condition 1592 1601	Borelioza
+N14	Reference T34 ICD10:A69.2	Choroba z Lyme
+T35	Condition 1607 1611	Odra
+N15	Reference T35 ICD10:B05	Odra
+T36	Negation 1573 1576	(-)
+T37	Negation 1587 1590	(-)
+T38	Negation 1602 1605	(-)
+R18	Neg Arg1:T36 Arg2:T32	
+R19	Neg Arg1:T37 Arg2:T33	
+R20	Neg Arg1:T38 Arg2:T34	
+T39	Negation 1613 1614	-
+R21	Neg Arg1:T39 Arg2:T35	
+T40	Condition 1672 1697	rak jelita grubego i płuc
+A2	Status T40 Family
+#1	AnnotatorNotes T40	C18.9 + C34.9
+T41	Behaviour 1699 1717	Palenie papierosów
+N16	Reference T41 ICD10:Z72.0	Używanie tytoniu
+T42	Negation 1720 1726	neguje
+T43	Behaviour 1736 1763	alkohol – 1 piwo na tydzień
+A3	Status T43 Historical_Insignificant
+N17	Reference T43 ICD10:Z72.1	Używanie alkoholu
+T44	Behaviour 1765 1769	inne
+T45	Negation 1770 1776	neguje
+R22	Neg Arg1:T45 Arg2:T44	
+T46	Condition 1778 1787	Uczulenia
+N18	Reference T46 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T47	Negation 1789 1795	neguje
+R23	Neg Arg1:T47 Arg2:T46	
+T48	Drug 1803 1810	Sintrom
+T49	Drug_dose 1811 1817	wg INR
+T50	Drug 1819 1829	Prestarium
+T51	Drug_dose 1830 1842	2x.5mg 1x1 R
+T52	Drug 1844 1849	Gasec
+T53	Drug_dose 1850 1866	20mg 1x1 kaps. R
+T54	Drug 1868 1876	Suvardio
+T55	Drug_dose 1877 1886	5mg 1x1 W
+T56	Drug 1888 1895	Lucetam
+T57	Drug_dose 1896 1908	1,2 2x1 tabl
+T58	Drug 1910 1920	Lamotrixem
+T59	Drug_dose 1921 1928	100 2x1
+T60	Drug 1930 1941	Asmac forte
+T61	Drug_dose 1942 1947	R i W
+T62	Investigation 1968 1971	TEE
+T63	Investigation 1973 1975	CT
+T64	Investigation 1977 1980	RTG
+T65	Investigation 1982 1985	TTE
+R24	Drg Arg1:T48 Arg2:T49	
+R25	Drg Arg1:T50 Arg2:T51	
+R26	Drg Arg1:T52 Arg2:T53	
+R27	Drg Arg1:T54 Arg2:T55	
+R28	Drg Arg1:T56 Arg2:T57	
+R29	Drg Arg1:T58 Arg2:T59	
+R30	Drg Arg1:T60 Arg2:T61	
+R31	Neg Arg1:T42 Arg2:T41	
+N19	Reference T44 ICD10:Z72	Problemy związane ze stylem życia

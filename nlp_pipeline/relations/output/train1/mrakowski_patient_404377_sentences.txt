@@ -1,0 +1,550 @@
+allRelations          : 59
+oks                   : 16
+isRedundantAndRemoveds: 39
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 3
+GOOD / BAD            : 55 / 4
+Sentence 0:
+------------------------------------------------
+Wiek: 42 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+- Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej.
+
+
+
+Sentence 4:
+- Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych.
+
+
+
+Sentence 5:
+- Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydo
+------------------------------------------------
+
+
+
+Sentence 6:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 7:
+------------------------------------------------
+ Rozpozanie I: ICD10:I25|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Stan po zawale serca z uniesieniem odcinka ST ściany dolnej i dolno-podstawnej (08/07/2018).\x0aDyslipidemia w trakcie leczenia statyną.
+
+R1	Dat Arg1:T5 Arg2:T4 << OK >>	08/07/2018 -> zawale serca z uniesieniem odcinka ST ściany dolnej i dolno-podstawnej  <RANK: 3> <info: start[878, 806] <type: LEFT>>
+R2	Dat Arg1:T5 Arg2:T6 <<REDUNDANT!!!REMOVED>>	08/07/2018 -> Dyslipidemia <:REMOVED many second tags on the right:> <RANK: 2> <info: start[878, 894] <type: RIGHT>>
+R3	Dat Arg1:T5 Arg2:T41 <<REDUNDANT!!!REMOVED>>	08/07/2018 -> w trakcie leczenia <:REMOVED many second tags on the right:> <RANK: 2> <info: start[878, 907] <type: RIGHT>>
+R4	Dat Arg1:T5 Arg2:T42 <<REDUNDANT!!!REMOVED>>	08/07/2018 -> statyną <:REMOVED many second tags on the right:> <RANK: 2> <info: start[878, 926] <type: RIGHT>>
+R5	Alg Arg1:T4 Arg2:T42 <<REDUNDANT!!!REMOVED>>	zawale serca z uniesieniem odcinka ST ściany dolnej i dolno-podstawnej -> statyną <:REMOVED other first tag between (right):> <RANK: 2> <info: start[806, 926] <type: RIGHT>>
+R6	Alg Arg1:T6 Arg2:T42 <<REDUNDANT!!!SHOULD BE REMOVED>>	Dyslipidemia -> statyną  <RANK: 3> <info: start[894, 926] <type: RIGHT>>
+
+
+Sentence 8:
+------------------------------------------------
+
+
+
+Sentence 9:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 10:
+42-letnia pacjentka po zawale serca z uniesieniem odcinka ST ściany dolnej i dolno-podstawnej (wówczas w koronarografii bez przewężeń, 08/07/2019), została przyjęta do Kliniki celem diagnostyki kardiologicznej, w tym MRI serca. 
+
+R7	Inv Arg1:T8 Arg2:T9 << OK >>	koronarografii -> bez przewężeń  <RANK: 3> <info: start[1164, 1179] <type: RIGHT>>
+R8	Inv Arg1:T11 Arg2:T9 <<REDUNDANT!!!REMOVED>>	MRI serca -> bez przewężeń <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1276, 1179] <type: LEFT>>
+R9	Dat Arg1:T10 Arg2:T7 <<REDUNDANT!!!REMOVED>>	08/07/2019 -> zawale serca z uniesieniem odcinka ST ściany dolnej i dolno-podstawnej <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1194, 1082] <type: LEFT>>
+R10	Dat Arg1:T10 Arg2:T8 <<SHOULD NOT BE REMOVED>>	08/07/2019 -> koronarografii <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1194, 1164] <type: LEFT>>
+R11	Dat Arg1:T10 Arg2:T11 <<REDUNDANT!!!SHOULD BE REMOVED>>	08/07/2019 -> MRI serca  <RANK: 2> <info: start[1194, 1276] <type: RIGHT>>
+
+
+Sentence 11:
+Neguje zasłabnięcia, duszności, typowe bóle w klatce piersiowej.
+
+R12	Neg Arg1:T12 Arg2:T13 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[1288, 1295] <type: RIGHT>>
+R13	Neg Arg1:T12 Arg2:T14 << OK >>	Neguje -> duszności  <RANK: 2> <info: start[1288, 1309] <type: RIGHT>>
+R14	Neg Arg1:T12 Arg2:T15 << OK >>	Neguje -> typowe bóle w klatce piersiowej  <RANK: 2> <info: start[1288, 1320] <type: RIGHT>>
+
+
+Sentence 12:
+Przebyte operacje:  cholecystektomia w 2017r., appendectomia w dzieciństwie, 3x cięcie cesarskie, ostatnie w 2011r.
+
+R15	Dat Arg1:T18 Arg2:T16 <<REDUNDANT!!!SHOULD BE REMOVED>>	w 2017r -> Przebyte operacje  <RANK: 3> <info: start[1390, 1353] <type: LEFT>>
+R16	Dat Arg1:T18 Arg2:T17 << OK >>	w 2017r -> cholecystektomia  <RANK: 3> <info: start[1390, 1373] <type: LEFT>>
+R17	Dat Arg1:T18 Arg2:T19 <<REDUNDANT!!!REMOVED>>	w 2017r -> appendectomia <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1390, 1400] <type: RIGHT>>
+R18	Dat Arg1:T18 Arg2:T21 <<REDUNDANT!!!REMOVED>>	w 2017r -> 3x cięcie cesarskie <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1390, 1430] <type: RIGHT>>
+R19	Dat Arg1:T20 Arg2:T16 <<REDUNDANT!!!REMOVED>>	w dzieciństwie -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1414, 1353] <type: LEFT>>
+R20	Dat Arg1:T20 Arg2:T17 <<REDUNDANT!!!REMOVED>>	w dzieciństwie -> cholecystektomia <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1414, 1373] <type: LEFT>>
+R21	Dat Arg1:T20 Arg2:T19 << OK >>	w dzieciństwie -> appendectomia  <RANK: 3> <info: start[1414, 1400] <type: LEFT>>
+R22	Dat Arg1:T20 Arg2:T21 <<REDUNDANT!!!REMOVED>>	w dzieciństwie -> 3x cięcie cesarskie <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1414, 1430] <type: RIGHT>>
+R23	Dat Arg1:T22 Arg2:T16 <<REDUNDANT!!!REMOVED>>	ostatnie w 2011r -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1451, 1353] <type: LEFT>>
+R24	Dat Arg1:T22 Arg2:T17 <<REDUNDANT!!!REMOVED>>	ostatnie w 2011r -> cholecystektomia <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1451, 1373] <type: LEFT>>
+R25	Dat Arg1:T22 Arg2:T19 <<REDUNDANT!!!REMOVED>>	ostatnie w 2011r -> appendectomia <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1451, 1400] <type: LEFT>>
+R26	Dat Arg1:T22 Arg2:T21 << OK >>	ostatnie w 2011r -> 3x cięcie cesarskie  <RANK: 2> <info: start[1451, 1430] <type: LEFT>>
+
+
+Sentence 13:
+Przebyte choroby zakaźne - WZW ( - ) , borelioza ( - ), gruźlica (-), odra (-), szczepienie na odrę (+)
+
+R27	Neg Arg1:T28 Arg2:T23 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1545, 1496] <type: LEFT>>
+R28	Neg Arg1:T28 Arg2:T24 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1545, 1508] <type: LEFT>>
+R29	Neg Arg1:T28 Arg2:T25 <<REDUNDANT!!!REMOVED>>	- -> gruźlica <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1545, 1525] <type: LEFT>>
+R30	Neg Arg1:T28 Arg2:T26 << OK >>	- -> odra  <RANK: 3> <info: start[1545, 1539] <type: LEFT>>
+R31	Neg Arg1:T28 Arg2:T27 <<REDUNDANT!!!REMOVED>>	- -> szczepienie na odrę <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1545, 1549] <type: RIGHT>>
+R32	Neg Arg1:T29 Arg2:T23 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1535, 1496] <type: LEFT>>
+R33	Neg Arg1:T29 Arg2:T24 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1535, 1508] <type: LEFT>>
+R34	Neg Arg1:T29 Arg2:T25 << OK >>	- -> gruźlica  <RANK: 3> <info: start[1535, 1525] <type: LEFT>>
+R35	Neg Arg1:T29 Arg2:T26 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1535, 1539] <type: RIGHT>>
+R36	Neg Arg1:T29 Arg2:T27 <<REDUNDANT!!!REMOVED>>	- -> szczepienie na odrę <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1535, 1549] <type: RIGHT>>
+R37	Neg Arg1:T30 Arg2:T23 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1520, 1496] <type: LEFT>>
+R38	Neg Arg1:T30 Arg2:T24 << OK >>	- -> borelioza  <RANK: 3> <info: start[1520, 1508] <type: LEFT>>
+R39	Neg Arg1:T30 Arg2:T25 <<REDUNDANT!!!REMOVED>>	- -> gruźlica <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1520, 1525] <type: RIGHT>>
+R40	Neg Arg1:T30 Arg2:T26 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1520, 1539] <type: RIGHT>>
+R41	Neg Arg1:T30 Arg2:T27 <<REDUNDANT!!!REMOVED>>	- -> szczepienie na odrę <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1520, 1549] <type: RIGHT>>
+R42	Neg Arg1:T31 Arg2:T23 << OK >>	- -> WZW  <RANK: 3> <info: start[1502, 1496] <type: LEFT>>
+R43	Neg Arg1:T31 Arg2:T24 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1502, 1508] <type: RIGHT>>
+R44	Neg Arg1:T31 Arg2:T25 <<REDUNDANT!!!REMOVED>>	- -> gruźlica <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1502, 1525] <type: RIGHT>>
+R45	Neg Arg1:T31 Arg2:T26 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1502, 1539] <type: RIGHT>>
+R46	Neg Arg1:T31 Arg2:T27 <<REDUNDANT!!!REMOVED>>	- -> szczepienie na odrę <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1502, 1549] <type: RIGHT>>
+
+
+Sentence 14:
+Wywiad rodzinny: negatywny
+
+R47	Neg Arg1:T33 Arg2:T32 << OK >>	negatywny -> Wywiad rodzinny  <RANK: 3> <info: start[1590, 1573] <type: LEFT>>
+
+
+Sentence 15:
+Palenie tytoniu: nie
+Inne używki: nie
+Uczulenia: neguje
+Stan społeczny: warunki mieszkaniowe dobre , mieszka z rodziną
+
+R48	Neg Arg1:T35 Arg2:T38 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1617, 1638] <type: RIGHT>>
+R49	Neg Arg1:T35 Arg2:T34 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[1617, 1600] <type: LEFT>>
+R50	Neg Arg1:T35 Arg2:T36 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1617, 1621] <type: RIGHT>>
+R51	Neg Arg1:T35 Arg2:T40 <<REDUNDANT!!!REMOVED>>	nie -> warunki mieszkaniowe dobre <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1617, 1672] <type: RIGHT>>
+R52	Neg Arg1:T37 Arg2:T38 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1634, 1638] <type: RIGHT>>
+R53	Neg Arg1:T37 Arg2:T34 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1634, 1600] <type: LEFT>>
+R54	Neg Arg1:T37 Arg2:T36 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[1634, 1621] <type: LEFT>>
+R55	Neg Arg1:T37 Arg2:T40 <<REDUNDANT!!!REMOVED>>	nie -> warunki mieszkaniowe dobre <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1634, 1672] <type: RIGHT>>
+R56	Neg Arg1:T39 Arg2:T38 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[1649, 1638] <type: LEFT>>
+R57	Neg Arg1:T39 Arg2:T34 <<REDUNDANT!!!REMOVED>>	neguje -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1649, 1600] <type: LEFT>>
+R58	Neg Arg1:T39 Arg2:T36 <<REDUNDANT!!!REMOVED>>	neguje -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1649, 1621] <type: LEFT>>
+R59	Neg Arg1:T39 Arg2:T40 <<REDUNDANT!!!REMOVED>>	neguje -> warunki mieszkaniowe dobre <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1649, 1672] <type: RIGHT>>
+
+
+Sentence 16:
+Leki: jak w IKZL
+------------------------------------------------
+
+
+
+Sentence 17:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 18:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.80[10^3/ul]
+    
+
+
+Sentence 19:
+RBC Krwinki czerwone:4.57[10^6/ul]
+    
+
+
+Sentence 20:
+HGB Hemoglobina:12.3[g/dl]
+    
+
+
+Sentence 21:
+HCT Hematokryt:36.7[%]
+    
+
+
+Sentence 22:
+MCV wskaźnik czerwonokrw:80.3[fl]
+    
+
+
+Sentence 23:
+MCH wskaźnik czerwonokrw:26.9[pg]
+    
+
+
+Sentence 24:
+MCHC wskaźnik czerwonokr:33.5[g/dl]
+    
+
+
+Sentence 25:
+PLT z morfologii:336[10^3/ul]
+    
+
+
+Sentence 26:
+RDW-SD:41.1[fl]
+    
+
+
+Sentence 27:
+RDW-CV:14.1[%]
+    PDW:13.5[fl]
+    MPV:11.4[fl]
+    
+
+
+Sentence 28:
+P-LCR:35.3[%]
+    
+
+
+Sentence 29:
+PCT (hematokryt płytkowy:0.38[%]
+    
+
+
+Sentence 30:
+NEUTR# wartość bezwzględ:3.38[10^3/ul]
+    
+
+
+Sentence 31:
+NEUTR%:49.6[%]
+    
+
+
+Sentence 32:
+LYMH# wartość bezwzględn:2.37[10^3/ul]
+    
+
+
+Sentence 33:
+LYMPH%:34.9[%]
+    
+
+
+Sentence 34:
+MONO# wartość bezwzględn:0.84[10^3/ul]
+    
+
+
+Sentence 35:
+MONO%:12.4[%]
+    
+
+
+Sentence 36:
+EO# wartość bezwzględna:0.15[10^3/ul]
+    
+
+
+Sentence 37:
+EO%:2.2[%]
+    
+
+
+Sentence 38:
+BASO# wartość bezwzględn:0.06[10^3/ul]
+    BASO%:0.9[%]
+    
+
+
+Sentence 39:
+NRBC %:0.0[%]
+    
+
+
+Sentence 40:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 41:
+Badanie ogólne moczu
+    
+
+
+Sentence 42:
+barwa:żółty[ ]
+    
+
+
+Sentence 43:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 44:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 45:
+przejrzystość:niezupełna[ ]
+    
+
+
+Sentence 46:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 47:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 48:
+ciężar właściwy:1.025[ ]
+    
+
+
+Sentence 49:
+pH:5.0[ ]
+    
+
+
+Sentence 50:
+białko:nieobecne[ ]
+    
+
+
+Sentence 51:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 52:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 53:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 54:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 55:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 56:
+nabłonki płaskie:bardzo liczne[w preparacie]
+    
+
+
+Sentence 57:
+leukocyty:8 /ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 58:
+TSH: TSH:1.57[uIU/ml]
+
+
+
+Sentence 59:
+FT3: FT3:3.00[pg/ml]
+
+
+
+Sentence 60:
+FT4: FT4:1.15[ng/dl]
+
+
+
+Sentence 61:
+Troponina T
+    Troponina T:
+    3.00[pg/ml]
+
+
+
+Sentence 62:
+Ferrytyna: Ferrytyna:22.5[ng/ml]
+
+
+
+Sentence 63:
+ALAT: ALAT:25[U/L]
+ASPAT: ASPAT:26[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 64:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 65:
+Potas (K): Potas:4.3[mmol/L]
+
+
+
+Sentence 66:
+Kreatynina + GFR
+    
+
+
+Sentence 67:
+Kreatynina w surowicy:0.78[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 68:
+MDRD ze stan:81.0[ml/min/1,73 m^2]
+
+
+
+Sentence 69:
+Mocznik: Mocznik:30[mg/dl]
+
+
+
+Sentence 70:
+Gospodarka żelazem
+    Żelazo:126[ug/dl]
+    
+
+
+Sentence 71:
+TIBC (Całkowita zdolność:350[ug/dl]
+    
+
+
+Sentence 72:
+UIBC (Utajona zdolność w:224[ug/dl]
+    
+
+
+Sentence 73:
+Wskaźnik wysycenia Fe:36[%]
+
+
+
+Sentence 74:
+Kwas moczowy: Kwas moczowy:3.9[mg/dl]
+
+
+
+Sentence 75:
+Lipidogram
+    
+
+
+Sentence 76:
+Cholesterol całkowity:170[mg/dl]
+    
+
+
+Sentence 77:
+Cholesterol HDL:43[mg/dl]
+    
+
+
+Sentence 78:
+Cholestrol LDL:106[mg/dl]
+    
+
+
+Sentence 79:
+Triglicerydy:139[mg/dl]
+    
+
+
+Sentence 80:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:97[mg/dl]
+
+
+
+Sentence 81:
+------------------------------------------------
+
+
+
+Sentence 82:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 83:
+I25.2
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 84:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 85:
+C55
+A01
+I81
+O93
+L43
+O61
+N45
+L69
+O55
+I17
+M45
+O35
+M37
+L05
+
+
+
+Sentence 86:
+I19
+N13
+O69
+88.926
+88.761
+88.751
+------------------------------------------------
+
+

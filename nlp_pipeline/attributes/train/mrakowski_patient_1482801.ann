@@ -1,0 +1,17 @@
+T1	Treatment 461 502	Dalsza kontrola w Poradni Kardiologicznej
+T2	Treatment 507 532	Dalsza opieka lekarza poz
+T3	Condition 751 774	Ekstrasystolia komorowa
+N1	Reference T3 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T4	Condition 913 920	arytmia
+N2	Reference T4 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T5	Investigation 935 956	badania diagnostyczne
+T6	Condition 959 976	wywiad alergiczny
+T7	Negation 977 983	ujemny
+R1	Neg Arg1:T7 Arg2:T6	
+N3	Reference T6 ICD10:T78.4	Alergia, nieokreślona
+T8	Drug 344 349	leków
+T9	Negation 340 343	Bez
+R2	Neg Arg1:T9 Arg2:T8	
+T10	Drug 986 1000	leków na stale
+T11	Negation 1001 1014	nie otrzymuje
+R3	Neg Arg1:T11 Arg2:T10	

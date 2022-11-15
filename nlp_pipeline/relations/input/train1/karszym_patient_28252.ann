@@ -1,0 +1,65 @@
+T1	Negation 757 760	Bez
+T2	Drug 761 766	leków
+R1	Neg Arg1:T1 Arg2:T2	
+T3	Drug 899 907	Polocard
+T4	Drug_dose 908 923	150mg 1x 1 tabl
+T5	Treatment 928 967	Dalsza opieka w Poradni Kardiologicznej
+T6	Condition 987 1019	częste infekcje układu moczowego
+N1	Reference T6 ICD10:N39.0	Zakażenie układu moczowego o nieokreślonym umiejscowieniu
+T7	Treatment 1029 1065	konsultacja w Poradni Nefrologicznej
+T8	Treatment 1071 1147	Dalsza opieka i kontrola w Poradni Neurologicznej oraz Chirurgii Naczyniowej
+T9	Treatment 1152 1177	Dalsza opieka lekarza POZ
+R2	Drg Arg1:T3 Arg2:T4	
+T10	Drug 1290 1298	Polocard
+T11	Drug_dose 1299 1313	150mg 1x1 tabl
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Investigation 1387 1405	badania holter EKG
+T13	Date 1360 1370	12.03.2019
+R4	Dat Arg1:T13 Arg2:T12	
+T14	Treatment 1410 1486	Dalsza opieka i kontrola w Poradni Neurologicznej oraz Chirurgii Naczyniowej
+T15	Treatment 1491 1521	Kontrola w Poradni Kardiologii
+T16	Date 1522 1567	po uzyskaniu pełnych wyników badań obrazowych
+R5	Dat Arg1:T16 Arg2:T15	
+T17	Investigation 1568 1593	MR i TK naczyń wieńcowych
+T18	Investigation 1605 1615	holter EKG
+T19	Investigation 1618 1634	próby wysiłkowej
+T20	Drug 1755 1766	Propranolol
+T21	Date 1769 1793	przed badaniem obrazowym
+R6	Dat Arg1:T21 Arg2:T20	
+T22	Drug 1796 1804	ANA i.v.
+T23	Condition 518 530	rekoarktacja
+T24	Treatment 533 572	implantacja stentu do aorty zstępującej
+N2	Reference T24 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T25	Date 575 585	20.01.2014
+R7	Dat Arg1:T25 Arg2:T23	
+R8	Dat Arg1:T25 Arg2:T24	
+T26	Condition 588 636	niedrożność tętnicy biodrowej zewnętrznej prawej
+T29	Date 503 514	04.03.1997r
+T30	Treatment 439 460	Korekcja anatomicznej
+N5	Reference T30 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R9	Dat Arg1:T29 Arg2:T30	
+T31	Treatment 1995 2016	korekcji anatomicznej
+N6	Reference T31 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T32	Date 2058 2069	04.03.1997r
+R10	Dat Arg1:T32 Arg2:T31	
+T33	Condition 2074 2086	Rekoarktacja
+T34	Treatment 2099 2138	implantacji stentu do aorty zstępującej
+N7	Reference T34 ICD10:Z85.8	Nowotwory złośliwe innych narządów i układów w wywiadzie
+T35	Date 2140 2151	20.01.2014r
+R11	Dat Arg1:T35 Arg2:T33	
+R12	Dat Arg1:T35 Arg2:T34	
+T36	Condition 2153 2214	powikłanej niedrożnością tętnicy biodrowej zewnętrznej prawej
+N8	Reference T36 ICD10:I74.3	Zator i zakrzep tętnic kończyn dolnych
+A1	Status T6 Historical_Insignificant
+T27	Condition 461 481	zespołu Taussig-Bing
+N3	Reference T27 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+T28	Condition 484 500	koarktacją aorty
+N4	Reference T28 ICD10:Q25.1	Zwężenie cieśni aorty
+R13	Dat Arg1:T29 Arg2:T27	
+R14	Dat Arg1:T29 Arg2:T28	
+T37	Condition 2017 2037	zespołu Taussig-Bing
+N9	Reference T37 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+T38	Condition 2040 2056	koarktacją aorty
+N10	Reference T38 ICD10:Q25.1	Zwężenie cieśni aorty
+R15	Dat Arg1:T32 Arg2:T37	
+R16	Dat Arg1:T32 Arg2:T38	

@@ -1,0 +1,136 @@
+T1	Investigation 2461 2471	ECHO serca
+T2	Investigation 2473 2483	Holter EKG
+T3	Investigation 2485 2494	Holter RR
+T4	Investigation 2496 2498	PW
+T5	Drug 2360 2368	Suvardio
+T6	Drug 2290 2297	Beto ZK
+T7	Drug_dose 2298 2302	25mg
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 2304 2312	Polocard
+T9	Drug_dose 2313 2317	75mg
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 2319 2326	Helicid
+T11	Drug_dose 2327 2331	20mg
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Negation 2252 2263	nie istotny
+T13	Condition 2235 2250	Wywiad rodzinny
+A1	Status T13 Family
+R4	Neg Arg1:T12 Arg2:T13	
+T14	Drug_dose 2369 2373	20mg
+R5	Drg Arg1:T5 Arg2:T14	
+T15	Condition 2181 2198	uczulenia na leki
+N1	Reference T15 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T16	Symptom 2200 2233	krwawienia z przewodu pokarmowego
+N2	Reference T16 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T17	Negation 2173 2179	neguje
+R6	Neg Arg1:T17 Arg2:T15	
+R7	Neg Arg1:T17 Arg2:T16	
+T18	Behaviour 2149 2156	Alkohol
+N3	Reference T18 ICD10:Z72.1	Używanie alkoholu
+T19	Negation 2158 2164	neguje
+R8	Neg Arg1:T19 Arg2:T18	
+T20	Behaviour 2129 2146	Nikotynizm:   tak
+N4	Reference T20 ICD10:Z72.0	Używanie tytoniu
+T21	Treatment 2119 2121	CC
+A2	Status T21 Historical_Insignificant
+T22	Date 2123 2127	1982
+R9	Dat Arg1:T22 Arg2:T21	
+T23	Treatment 2106 2113	Operacj
+T24	Investigation 447 476	kontrola ciśnienia tętniczego
+T25	Investigation 492 512	kontrola lipidogramu
+T26	Date 514 538	pierwsza za 6 -8 tygodni
+R10	Dat Arg1:T26 Arg2:T25	
+T27	Behaviour 546 594	dieta niskocholesterolowa i uboga w cukry proste
+T28	Behaviour 601 622	zakaz palenia tytoniu
+T29	Drug 667 675	Polocard
+T30	Drug_dose 676 698	75mg 1 tabl. wieczorem
+R11	Drg Arg1:T29 Arg2:T30	
+T31	Drug 707 718	Betaloc ZOK
+T32	Drug_dose 719 741	25mg 1 tabl. wieczorem
+R12	Drg Arg1:T31 Arg2:T32	
+T33	Drug 750 757	Roswera
+T34	Drug_dose 758 781	30 mg 1 tabl. wieczorem
+R13	Drg Arg1:T33 Arg2:T34	
+T35	Drug 789 796	Tritace
+T36	Drug_dose 797 820	10 mg 1 tabl. wieczorem
+R14	Drg Arg1:T35 Arg2:T36	
+T37	Drug 828 840	Tertensif SR
+T38	Drug_dose 841 852	1tabl. rano
+R15	Drg Arg1:T37 Arg2:T38	
+T39	Drug 860 863	IPP
+T40	Drug_dose 864 891	20 mg 1 tabl. rano na czczo
+R16	Drg Arg1:T39 Arg2:T40	
+T41	Condition 1086 1127	Przewlekła rozkurczowa niewydolność serca
+T42	Symptom 1130 1147	II klasie wg NYHA
+T43	Condition 1149 1194	Przewlekła choroba wieńcowa w I klasie wg CCS
+T45	Condition 1196 1217	Nadciśnienie tętnicze
+N7	Reference T45 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T46	Behaviour 1219 1229	Nikotynizm
+N8	Reference T46 ICD10:Z72.0	Używanie tytoniu
+T47	Condition 1231 1251	Hipertriglicerydemia
+N9	Reference T47 ICD10:E78.1	Czysta hiperglicerydemia
+T48	Condition 1253 1284	Nieprawidłowa glikemia na czczo
+N10	Reference T48 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T49	Condition 1302 1307	AVNRT
+N11	Reference T49 ICD10:I47.1	Częstoskurcz nadkomorowy
+T50	Treatment 1294 1301	ablacji
+T51	Date 1309 1316	06.2017
+R17	Dat Arg1:T51 Arg2:T49	
+R18	Dat Arg1:T51 Arg2:T50	
+T52	Symptom 1344 1359	kołatania serca
+N12	Reference T52 ICD10:R00.2	Kołatanie serca
+T53	Treatment 1370 1399	kardiowersji farmakologicznej
+T54	Drug 1400 1409	adenozyną
+T55	Condition 1410 1437	częstoskurczu nadkomorowego
+N13	Reference T55 ICD10:I47.1	Częstoskurcz nadkomorowy
+T56	Date 1439 1447	06.2018,
+A3	Source T55 Declared
+A4	Source T54 Declared
+A5	Source T53 Declared
+R19	Dat Arg1:T56 Arg2:T55	
+R20	Dat Arg1:T56 Arg2:T54	
+R21	Dat Arg1:T56 Arg2:T53	
+T57	Condition 1468 1497	Blok lewej wiązki pęczka Hisa
+N14	Reference T57 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T58	Treatment 1508 1524	cięcie cesarskie
+A6	Status T58 Historical_Insignificant
+T59	Date 1526 1530	1982
+R22	Dat Arg1:T59 Arg2:T58	
+T60	Symptom 1733 1764	zmniejszenia tolerancji wysiłku
+N15	Reference T60 ICD10:R53	Złe samopoczucie i zmęczenie
+T61	Date 1765 1783	od kilku miesięcy,
+R23	Dat Arg1:T61 Arg2:T60	
+T62	Symptom 1788 1805	bólu zamostkowego
+N16	Reference T62 ICD10:R07.2	Ból w okolicy przedsercowej
+T63	Negation 1784 1787	bez
+R24	Neg Arg1:T63 Arg2:T62	
+T64	Condition 1836 1841	AVNRT
+N17	Reference T64 ICD10:I47.1	Częstoskurcz nadkomorowy
+T65	Treatment 1828 1835	ablacji
+T66	Date 1843 1850	06.2017
+R25	Dat Arg1:T66 Arg2:T64	
+R26	Dat Arg1:T66 Arg2:T65	
+T67	Condition 1853 1857	LBBB
+N18	Reference T67 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T68	Condition 1859 1879	Hipercholesterolemia
+N19	Reference T68 ICD10:E78.0	Czysta hipercholesterolemia
+T69	Behaviour 1881 1891	Nikotynizm
+N20	Reference T69 ICD10:Z72.0	Używanie tytoniu
+T70	Symptom 1933 1955	napady kołatania serca
+N21	Reference T70 ICD10:R00.2	Kołatanie serca
+T71	Date 1957 1973	k 2-3xw miesiącu
+R27	Dat Arg1:T71 Arg2:T70	
+A7	Status T71 Historical_Insignificant
+T72	Date 1999 2024	około raz na 2-3 miesiące
+R28	Dat Arg1:T72 Arg2:T70	
+T73	Symptom 2040 2055	kołatania serca
+N22	Reference T73 ICD10:R00.2	
+T74	Date 2056 2070	w czerwcu 2018
+R29	Dat Arg1:T74 Arg2:T73	
+T75	Drug 2090 2099	Adenocoru
+T76	Drug_dose 2100 2103	6mg
+R30	Drg Arg1:T75 Arg2:T76	
+T44	Treatment 346 373	dalsza opieka w poradni POZ
+T77	Treatment 389 430	kontrola kardiologiczna i diabetologiczna
+N5	Reference T41 ICD10:I50.9	Niewydolność serca, nieokreślona
+N6	Reference T43 ICD10:I25.8	Inne postacie przewlekłej choroby niedokrwiennej serca

@@ -1,0 +1,80 @@
+T1	Treatment 565 642	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Kardiochirurgicznej
+T2	Behaviour 645 685	Dieta lekkostrawna , niskocholesterolowa
+T3	Investigation 689 772	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T4	Investigation 775 823	Systematyczna kontrola ciśnienia tętniczego krwi
+T5	Drug 874 881	Nebilet
+T6	Drug_dose 882 910	5 mg 1x dz po 1/2 tabl. rano
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 1031 1038	Nebilet
+T8	Condition 1267 1341	Łagodna niedomykalność zastawki aortalnej na podłożu zastawki dwupłatkowej
+N1	Reference T8 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T9	Condition 1343 1377	Poszerzenie opuszki aorty do 52 mm
+T10	Condition 1379 1443	Komorowe zaburzenia rytmu serca ( pobudzenia pojedyncze , para )
+N2	Reference T10 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T11	Condition 1445 1478	Pojedyncze pobudzenia nadkomorowe
+N3	Reference T11 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T12	Condition 1480 1521	Podejrzenie kamicy nerkowej prawostronnej
+A1	Status T12 Historical_Insignificant
+A2	Source T12 Declared
+N4	Reference T12 ICD10:N20.0	Kamica nerki
+T13	Condition 1523 1552	Nadciśnienie tętnicze de novo
+N5	Reference T13 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T14	Symptom 1723 1757	okresowego uczucia kołatania serca
+N6	Reference T14 ICD10:R00.2	Kołatanie serca
+T15	Symptom 1763 1881	bólów w klatce piersiowej o charakterze gniecenia , ucisku nie zawsze związane z wysiłkiem, niekiedy w pozycji leżącej
+N7	Reference T15 ICD10:R07.2	Ból w okolicy przedsercowej
+T16	Symptom 1884 1906	Nasilenie dolegliwości
+T17	Date 1907 1920	od 2 miesięcy
+R2	Dat Arg1:T17 Arg2:T16	
+T18	Negation 1924 1930	Neguje
+T19	Symptom 1931 1943	zasłabnięcia
+T20	Negation 1961 1964	bez
+T21	Condition 1965 1986	chorób towarzyszących
+T22	Treatment 1988 2005	Przebyte operacje
+N8	Reference T22 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T23	Negation 2008 2012	brak
+T24	Treatment 2013 2032	Leczenie przewlekłe
+T25	Negation 2035 2039	brak
+T26	Condition 2068 2071	WZW
+N9	Reference T26 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T27	Condition 2081 2090	borelioza
+N10	Reference T27 ICD10:A69.2	Choroba z Lyme
+T28	Condition 2097 2101	Odra
+N11	Reference T28 ICD10:B05	Odra
+T29	Negation 2072 2078	( -  )
+T30	Negation 2091 2096	( - )
+T31	Negation 2102 2107	( - )
+R3	Neg Arg1:T29 Arg2:T26	
+R4	Neg Arg1:T30 Arg2:T27	
+R5	Neg Arg1:T31 Arg2:T28	
+R6	Neg Arg1:T23 Arg2:T22	
+R7	Neg Arg1:T20 Arg2:T21	
+R8	Neg Arg1:T18 Arg2:T19	
+R9	Neg Arg1:T25 Arg2:T24	
+T32	Condition 2139 2148	alzhaimer
+A3	Status T32 Family
+N12	Reference T32 ICD10:G30.9	Choroba Alzheimera, nieokreślona
+T33	Behaviour 2149 2164	Palenie tytoniu
+N13	Reference T33 ICD10:Z72.0	Używanie tytoniu
+T34	Negation 2166 2169	nie
+T35	Behaviour 2170 2181	Inne używki
+T36	Negation 2183 2186	nie
+T37	Condition 2187 2196	Uczulenia
+N14	Reference T37 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T38	Negation 2198 2204	neguje
+T39	Behaviour 2221 2247	warunki mieszkaniowe dobre
+T40	Behaviour 2250 2264	mieszka z żoną
+T41	Negation 2272 2275	bez
+T42	Drug 2276 2294	leków przewlekłych
+T43	Drug 2297 2307	Beto 50 ZK
+T44	Negation 2308 2321	nie przyjmuje
+T45	Date 2322 2330	od 7 dni
+T46	Investigation 2346 2356	Echo serca
+T47	Investigation 2359 2374	Holter EKG i RR
+T48	Investigation 2377 2392	Próba Wysiłkowa
+R10	Neg Arg1:T34 Arg2:T33	
+R11	Neg Arg1:T36 Arg2:T35	
+R12	Neg Arg1:T38 Arg2:T37	
+R13	Dat Arg1:T45 Arg2:T43	
+R14	Neg Arg1:T44 Arg2:T43	
+R15	Neg Arg1:T41 Arg2:T42	

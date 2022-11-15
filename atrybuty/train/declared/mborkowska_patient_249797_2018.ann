@@ -1,0 +1,111 @@
+T1	Drug 510 518	Bisocard
+T2	Drug 540 545	Acard
+T3	Drug 571 579	Betaserc
+T4	Drug 597 606	PoloVital
+T5	Drug 620 634	Cavinton forte
+T6	Drug 660 673	Levetiracetam
+T7	Drug_dose 519 538	2,5 mg 1 tabl. rano
+R1	Drg Arg1:T1 Arg2:T7	
+T8	Drug_dose 546 569	75 mg 1 tabl. wieczorem
+R2	Drg Arg1:T2 Arg2:T8	
+T9	Drug_dose 580 595	24 mg 2x1 tabl.
+R3	Drg Arg1:T3 Arg2:T9	
+T10	Drug_dose 607 619	1 tabl. rano
+R4	Drg Arg1:T4 Arg2:T10	
+T11	Drug_dose 635 658	10 mg 1 tabl. wieczorem
+R5	Drg Arg1:T5 Arg2:T11	
+T12	Drug_dose 674 787	750 mg 1/2 tabl. rano (dawki leku do modyfikacji po konsultacji neurologicznej w Klinice Neurologii Szp. im. WAM)
+R6	Drg Arg1:T6 Arg2:T12	
+T13	Investigation 2269 2280	echo serca,
+T14	Investigation 2281 2284	TET
+T15	Investigation 2286 2290	ABPM
+T16	Investigation 2292 2302	Holter ekg
+T17	Investigation 2304 2322	rtg kl. piersiowej
+T18	Drug 2204 2217	Levetiracetam
+T19	Drug 2173 2184	Scorbolamid
+T20	Drug 2133 2147	Cavinton forte
+T21	Drug 2100 2106	Magnez
+T22	Drug 2074 2082	Betaserc
+T23	Drug 2043 2048	Acard
+T24	Drug 2013 2021	Bisocard
+T25	Drug_dose 2022 2041	2,5 mg 1 tabl. rano
+R7	Drg Arg1:T24 Arg2:T25	
+T26	Drug_dose 2049 2072	75 mg 1 tabl. wieczorem
+R8	Drg Arg1:T23 Arg2:T26	
+T27	Drug_dose 2083 2097	24 mg 2x1 tabl
+R9	Drg Arg1:T22 Arg2:T27	
+T28	Drug_dose 2107 2131	1 tabl. rano i wieczorem
+R10	Drg Arg1:T21 Arg2:T28	
+T29	Drug_dose 2148 2171	10 mg 1 tabl. wieczorem
+R11	Drg Arg1:T20 Arg2:T29	
+T30	Drug_dose 2185 2202	1 tabl. wieczorem
+R12	Drg Arg1:T19 Arg2:T30	
+T31	Drug_dose 2218 2239	750 mg 1/2 tabl. rano
+R13	Drg Arg1:T18 Arg2:T31	
+T32	Negation 1966 1972	neguje
+T33	Negation 1939 1945	neguje
+T34	Behaviour 1930 1937	Alkohol
+N1	Reference T34 ICD10:Z72.1	Używanie alkoholu
+R14	Neg Arg1:T33 Arg2:T34	
+T35	Behaviour 1947 1964	Uzależnienie inne
+R15	Neg Arg1:T32 Arg2:T35	
+T36	Behaviour 1887 1897	Nikotynizm
+N2	Reference T36 ICD10:Z72.0	Używanie tytoniu
+T37	Date 1899 1910	do 34 roku,
+R16	Dat Arg1:T37 Arg2:T36	
+T38	Negation 1879 1885	neguje
+T39	Negation 1855 1868	bez znaczenia
+T40	Condition 1870 1877	Alergie
+N3	Reference T40 ICD10:T78.4	Alergia, nieokreślona
+R17	Neg Arg1:T38 Arg2:T40	
+T41	Condition 1838 1853	Wywiad rodzinny
+A1	Status T41 Family
+R18	Neg Arg1:T39 Arg2:T41	
+T42	Treatment 1834 1836	CC
+T43	Condition 1005 1020	Podejrzenie PFO
+N4	Reference T43 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+A2	Source T43 Declared
+T44	Condition 1022 1030	Padaczka
+N5	Reference T44 ICD10:G40.9	Padaczka, nieokreślona
+T45	Condition 1041 1057	napad padaczkowy
+N6	Reference T45 ICD10:G40.4	Inne postacie uogólnionej padaczki i zespołów padaczkowych
+T46	Date 1059 1070	08.05.2018r
+R19	Dat Arg1:T46 Arg2:T45	
+T47	Condition 1081 1103	przebytym udarze mózgu
+N7	Reference T47 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T48	Condition 1117 1131	Małopłytkowość
+N8	Reference T48 ICD10:D69.6	Małopłytkowość, nieokreślona
+T49	Condition 1133 1163	Obniżenie czynnikow IX i VIII.
+T50	Condition 1164 1184	Zespół fosfolipidowy
+N9	Reference T50 ICD10:D68.8	Inne określone zaburzenia krzepnięcia
+T51	Condition 1674 1696	zespół fosfolipidowy ?
+N10	Reference T51 ICD10:D68.8	Inne określone zaburzenia krzepnięcia
+T52	Condition 1198 1221	Łupież różowy Gilberta.
+N11	Reference T52 ICD10:L42	Łupież różowy Giberta
+T53	Condition 1698 1720	łupież różowy Gilberta
+N12	Reference T53 ICD10:L42	Łupież różowy Giberta
+T54	Condition 1755 1769	małopłytkowość
+N13	Reference T54 ICD10:D69.6	Małopłytkowość, nieokreślona
+T55	Condition 1771 1800	obnizenie czynnikow IX i VIII
+T56	Condition 1727 1748	stan przedrzucawkowy,
+N14	Reference T56 ICD10:O14.9	Stan przedrzucawkowy nieokreślony
+T57	Date 1722 1726	2004
+R20	Dat Arg1:T57 Arg2:T56	
+T58	Treatment 1749 1753	CC I
+T59	Investigation_result 1630 1650	tachykardia zatokowa
+N15	Reference T59 ICD10:R00.0	Tachykardia, nieokreślona
+T60	Date 1609 1616	02.2018
+T61	Investigation 1594 1608	Holterze EKG z
+R21	Dat Arg1:T60 Arg2:T61	
+R22	Inv Arg1:T61 Arg2:T59	
+T62	Condition 1389 1405	podejrzenia PFO,
+N16	Reference T62 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T63	Condition 1412 1431	przebyła udar mózgu
+N17	Reference T63 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T64	Symptom 1433 1465	lewostronne opadanie kącika ust)
+T65	Condition 1467 1475	padaczka
+N18	Reference T65 ICD10:G40.9	Padaczka, nieokreślona
+T66	Symptom 1526 1547	omdlenia - 3 epizody,
+N19	Reference T66 ICD10:R55	Omdlenie i zapaść
+A3	Source T51 Declared
+A4	Source T62 Declared

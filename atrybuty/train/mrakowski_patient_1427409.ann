@@ -1,0 +1,113 @@
+T1	Condition 678 704	Kardiomiopatia przerostowa
+N1	Reference T1 ICD10:I42.2	Inne kardiomiopatie przerostowe
+T2	Condition 755 788	Pojedyncze pobudzenia nadkomorowe
+N2	Reference T2 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T3	Condition 790 825	Łagodna niedokrwistość mikrocytarna
+N3	Reference T3 ICD10:D50	Niedokrwistość z niedoboru żelaza
+T4	Treatment 955 1020	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T5	Behaviour 1023 1063	Dieta lekkostrawna , niskocholesterolowa
+T6	Investigation 1067 1150	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T7	Investigation 1153 1201	Systematyczna kontrola ciśnienia tętniczego krwi
+T8	Behaviour 1204 1239	Zakaz uprawiania sportu wyczynowego
+T9	Condition 1437 1463	kardiomiopatia przerostowa
+N4	Reference T9 ICD10:I42.2	Inne kardiomiopatie przerostowe
+T10	Symptom 1504 1516	Dolegliwości
+T11	Negation 1517 1523	neguje
+R1	Neg Arg1:T11 Arg2:T10	
+T12	Investigation 1589 1599	echo serca
+T13	Investigation_result 1600 1633	obraz kardiomiopatii przerostowej
+N5	Reference T13 ICD10:I42.2	Inne kardiomiopatie przerostowe
+R2	Inv Arg1:T12 Arg2:T13	
+T14	Investigation_result 1636 1662	wymiary jam serca w normie
+T15	Investigation_result 1665 1753	asymetryczny przerost przegrody międzykomorowej zwłaszcza w segmencie środkowym do 17 mm
+T16	Investigation_result 1754 1830	w rozkurczu bez zawężenia drogi odpływu lewej komory serca ( V max 208 cm/s)
+T17	Investigation_result 1835 1885	istotnego wzrostu prędkości podczas próby Valsalvy
+T18	Investigation_result 1888 1960	w pozycji siedzącej , stojącej , objawy SAM (na granicy diagnostycznej )
+T19	Investigation_result 1967 2040	odcinkowych zaburzeń kurczliwości z zachowaną funkcją skurczową obu komór
+R3	Inv Arg1:T12 Arg2:T14	
+R4	Inv Arg1:T12 Arg2:T15	
+R5	Inv Arg1:T12 Arg2:T16	
+R6	Inv Arg1:T12 Arg2:T17	
+R7	Inv Arg1:T12 Arg2:T18	
+R8	Inv Arg1:T12 Arg2:T19	
+T20	Investigation 2048 2060	Holterze EKG
+T21	Investigation_result 2061 2103	stwierdzono pojedyncze pobudzenia komorowe
+N6	Reference T21 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+R9	Inv Arg1:T20 Arg2:T21	
+T22	Investigation 2120 2135	próbę wysiłkową
+T23	Investigation_result 2136 2153	ujemną klinicznie
+T24	Investigation 2156 2179	elektrokardiograficznie
+T25	Investigation_result 2182 2211	prawidłową tolerancją wysiłku
+T26	Investigation_result 2214 2278	W trakcie wysiłku zaobserwowano nieznaczny spadek do 110/70 mmHg
+R10	Inv Arg1:T22 Arg2:T23	
+R11	Inv Arg1:T24 Arg2:T25	
+R12	Inv Arg1:T24 Arg2:T26	
+T27	Investigation 2335 2360	badaniach laboratoryjnych
+T28	Investigation_result 2361 2423	cechy łagodnej niedokrwistości mikrocytarna z niedoboru żelaza
+N7	Reference T28 ICD10:D50	Niedokrwistość z niedoboru żelaza
+T29	Negation 2431 2437	neguje
+T30	Symptom 2438 2453	smoliste stolce
+N8	Reference T30 ICD10:K92.1	Stolce smołowate
+T31	Symptom 2464 2505	okresowo występowanie obfitych miesiączek
+N9	Reference T31 ICD10:N92.0	Obfite i częste miesiączki regularne
+R13	Neg Arg1:T29 Arg2:T30	
+R14	Inv Arg1:T27 Arg2:T28	
+T32	Drug 2519 2531	prep. żelaza
+T33	Negation 2533 2543	odstawiony
+T34	Date 2545 2555	po 3m-cach
+R15	Neg Arg1:T33 Arg2:T32	
+R16	Dat Arg1:T34 Arg2:T32	
+T35	Investigation 2557 2577	kontrolna morfologia
+T36	Investigation_result 2588 2598	prawidłowa
+T37	Date 2580 2587	08.2018
+R17	Dat Arg1:T37 Arg2:T35	
+R18	Dat Arg1:T37 Arg2:T36	
+R19	Inv Arg1:T35 Arg2:T36	
+T38	Treatment 2747 2764	Przebyte operacje
+T39	Negation 2766 2776	nie podaje
+R20	Neg Arg1:T39 Arg2:T38	
+T40	Treatment 2777 2796	Leczenie przewlekłe
+T41	Negation 2798 2808	nie podaje
+R21	Neg Arg1:T41 Arg2:T40	
+T42	Condition 2836 2839	WZW
+N10	Reference T42 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T43	Condition 2841 2850	borelioza
+N11	Reference T43 ICD10:A69.2	Choroba z Lyme
+T44	Negation 2852 2862	nie podaje
+R22	Neg Arg1:T44 Arg2:T43	
+R23	Neg Arg1:T44 Arg2:T42	
+T45	Condition 2863 2878	Wywiad rodzinny
+A1	Status T45 Family
+T46	Condition 2889 2899	rozrusznik
+A2	Status T46 Family
+N12	Reference T46 ICD10:Z95.0	Obecność stymulatora serca
+T47	Behaviour 2900 2915	Palenie tytoniu
+T48	Negation 2917 2927	nie podaje
+R24	Neg Arg1:T48 Arg2:T47	
+T49	Behaviour 2928 2939	Inne używki
+T50	Negation 2941 2951	nie podaje
+R25	Neg Arg1:T50 Arg2:T49	
+T51	Condition 2952 2961	Uczulenia
+T52	Negation 2963 2973	nie podaje
+R26	Neg Arg1:T52 Arg2:T51	
+N14	Reference T15 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T53	Treatment 2650 2711	chorą skierowano do Poradni Genetyki Klinicznej w CKD w Łodzi
+N15	Reference T51 ICD10:T78.4	Alergia, nieokreślona
+T54	Behaviour 2999 3007	uczy się
+T55	Investigation_result 2281 2304	w spoczynku 120/80 mmHg
+T56	Investigation_result 2307 2327	zupełnie bezobjawowy
+R27	Inv Arg1:T24 Arg2:T55	
+R28	Inv Arg1:T24 Arg2:T56	
+T57	Negation 705 708	bez
+T58	Condition 709 753	zawężenia drogi odpływu z lewej komory serca
+N16	Reference T58 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+R29	Neg Arg1:T57 Arg2:T58	
+T59	Negation 1831 1834	bez
+R30	Neg Arg1:T59 Arg2:T17	
+T60	Negation 1963 1966	bez
+R31	Neg Arg1:T60 Arg2:T19	
+N13	Reference T47 ICD10:Z72.0	Używanie tytoniu
+N17	Reference T49 ICD10:Z72	Problemy związane ze stylem życia
+T61	Drug 3018 3023	leków
+T62	Negation 3014 3017	bez
+R32	Neg Arg1:T62 Arg2:T61	

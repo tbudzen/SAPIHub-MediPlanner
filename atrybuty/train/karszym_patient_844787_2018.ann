@@ -1,0 +1,60 @@
+T1	Condition 450 482	Ubytek przegrody międzykomorowej
+N1	Reference T1 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T2	Condition 484 511	Choroba niedokrwienna serca
+N2	Reference T2 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T3	Condition 513 527	Hiperlipidemia
+N3	Reference T3 ICD10:E78.2	Hiperlipidemia mieszana
+T4	Condition 699 725	pod. VSD cześci bloniastej
+N4	Reference T4 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T5	Symptom 764 794	zmniejszoną tolerancję wysiłku
+T6	Condition 818 829	tachykardia
+N5	Reference T6 ICD10:R00.0	Tachykardia, nieokreślona
+T7	Date 830 843	w przeszłości
+T8	Condition 845 873	zmiany zwyrodnieniowe barków
+N6	Reference T8 ICD10:M19.8	Inne określone choroby zwyrodnieniowe stawów
+T9	Negation 875 881	neguje
+T10	Condition 882 886	inne
+R1	Neg Arg1:T9 Arg2:T10	
+A1	Status T8 Historical_Insignificant
+R2	Dat Arg1:T7 Arg2:T6	
+T11	Treatment 887 904	Przebyte operacje
+N7	Reference T11 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T12	Treatment 906 910	2xCC
+N8	Reference T12 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+T13	Condition 912 927	Wywiad rodzinny
+A2	Status T13 Family
+T14	Negation 929 942	bez znaczenia
+T15	Condition 944 951	Alergie
+N9	Reference T15 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T16	Negation 953 959	neguje
+T17	Behaviour 961 976	Nikotynizm: tak
+N10	Reference T17 ICD10:Z72.0	Używanie tytoniu
+T18	Date 978 993	do 4 lat wstecz
+T19	Behaviour 995 1018	1-5 papierosów/dziennie
+N11	Reference T19 ICD10:Z72.0	Używanie tytoniu
+T20	Date 1019 1024	5 lat
+R3	Dat Arg1:T20 Arg2:T19	
+R4	Dat Arg1:T18 Arg2:T17	
+R5	Neg Arg1:T16 Arg2:T15	
+R6	Neg Arg1:T14 Arg2:T13	
+T21	Behaviour 1026 1047	Alkohol: okazjonalnie
+A3	Status T21 Historical_Insignificant
+N12	Reference T21 ICD10:Z72.1	Używanie alkoholu
+T22	Behaviour 1050 1067	Uzależnienie inne
+N13	Reference T22 ICD10:Z72	Problemy związane ze stylem życia
+T23	Negation 1069 1075	neguje
+T24	Behaviour 1093 1101	szwaczka
+T25	Behaviour 1103 1115	ekspedientka
+T26	Behaviour 1118 1132	praca fizyczna
+T27	Drug 1140 1148	Bisocard
+T28	Drug_dose 1149 1160	2,5 mg rano
+T29	Investigation 1189 1199	echo serca
+T30	Investigation 1201 1204	TET
+T31	Investigation 1206 1210	ABPM
+T32	Investigation 1212 1222	Holter ekg
+T33	Investigation 1224 1242	rtg kl. piersiowej
+R7	Drg Arg1:T27 Arg2:T28	
+R8	Neg Arg1:T23 Arg2:T22	
+A4	Source T4 Declared
+A5	Status T12 Historical_Insignificant
+T34	Investigation_result 726 748	12mm z przeciekiem L-P

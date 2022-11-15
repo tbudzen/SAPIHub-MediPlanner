@@ -1,0 +1,60 @@
+T1	Condition 438 473	Podejrzenie nadciśnienia tętniczego
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+A1	Source T1 Declared
+T2	Symptom 475 496	Migrenowe bóle głowy.
+N2	Reference T2 ICD10:R51	Ból głowy
+T3	Drug 616 629	Hydrokortyzon
+T4	Drug 631 642	0,9%NCl iv,
+T5	Drug 643 656	Prerfalgan iv
+T6	Drug 658 666	Metocard
+T7	Drug 668 677	Captopril
+T8	Treatment 788 810	kontrola u lekarza POZ
+T9	Treatment 932 965	kontrola w Poradni Hematologiczne
+T10	Investigation 979 1001	diagnostyka w kierunku
+T11	Condition 1002 1025	nadciśnienia tętniczego
+A2	Source T11 Declared
+N3	Reference T11 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T12	Condition 1177 1183	migren
+N4	Reference T12 ICD10:G43.9	Migrena, nieokreślona
+T13	Symptom 1245 1264	silnego bólu głowy,
+N5	Reference T13 ICD10:R51	Ból głowy
+T14	Condition 1285 1310	przejściowe zaniewidzenie
+N6	Reference T14 ICD10:G45.3	Przemijające objawy ślepoty
+T15	Condition 1312 1319	drgawki
+N7	Reference T15 ICD10:R56.8	Inne i nieokreślone drgawki
+T16	Symptom 1321 1342	stan przedomdleniowy.
+N8	Reference T16 ICD10:R55	Omdlenie i zapaść
+T17	Condition 1372 1394	nadciśnienie tętnicze,
+N9	Reference T17 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T18	Date 1365 1371	kiedyś
+R1	Dat Arg1:T18 Arg2:T17	
+T19	Investigation_result 1562 1590	Glikemia z palca w IP 112mg%
+T20	Investigation 1608 1616	CT głowy
+T21	Investigation 1717 1725	CT głowy
+T22	Negation 1430 1436	Neguje
+T23	Symptom 1438 1448	krwawienia
+N10	Reference T23 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T24	Symptom 1450 1463	czarne stolce
+N11	Reference T24 ICD10:K92.1	Stolce smołowate
+T25	Symptom 1465 1481	brunatne wymioty
+N12	Reference T25 ICD10:K92.0	Wymioty krwawe
+T26	Condition 1483 1500	chorobę wrzodową,
+N13	Reference T26 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T27	Behaviour 1501 1523	przyjmowanie dopalaczy
+T28	Behaviour 1525 1535	narkotyków
+T29	Behaviour 1537 1544	alkohol
+N16	Reference T29 ICD10:Z72.1	Używanie alkoholu
+N14	Reference T27 ICD10:Z72.8	Inne problemy związane ze stylem życia
+N15	Reference T28 ICD10:Z72.2	Używanie narkotyków
+R2	Neg Arg1:T22 Arg2:T23	
+R3	Neg Arg1:T22 Arg2:T24	
+R4	Neg Arg1:T22 Arg2:T25	
+R5	Neg Arg1:T22 Arg2:T26	
+R6	Neg Arg1:T22 Arg2:T27	
+R7	Neg Arg1:T22 Arg2:T28	
+R8	Neg Arg1:T22 Arg2:T29	
+T30	Condition 1545 1554	Uczulenia
+N17	Reference T30 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T31	Negation 1557 1560	nie
+R9	Neg Arg1:T31 Arg2:T30	
+T32	Treatment 845 918	dalsza Opieka w Oddziale Neurologii dla Dorosłych i Poradni Neurologiczne

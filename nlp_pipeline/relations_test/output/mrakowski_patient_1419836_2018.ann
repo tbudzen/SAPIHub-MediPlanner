@@ -1,0 +1,28 @@
+T1	Treatment 336 374	Wizyta w Poradni kardiologicznej ICZMP
+T2	Date 375 384	za 3 m-ce
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Treatment 452 471	Opieka pediatryczna
+T4	Drug 592 600	Dormicum
+T5	Drug 602 605	ANA
+T6	Condition 856 905	Wrodzona wada serca pod postacią koarktacji aorty
+N1	Reference T6 ICD10:Q25.1	Zwężenie cieśni aorty
+T7	Condition 907 926	zwężenia łuku aorty
+N2	Reference T7 ICD10:Q25.3	Zwężenie aorty
+T8	Condition 928 969	hipoplazji zastawki aortalnej i mitralnej
+N3	Reference T8 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T9	Treatment 982 990	operacji
+T10	Condition 991 1007	koarktacji aorty
+N4	Reference T10 ICD10:Q25.1	Zwężenie cieśni aorty
+T11	Treatment 1008 1025	metodą Crafoord'a
+T12	Date 1027 1038	27.11.2017r
+R2	Dat Arg1:T12 Arg2:T9	
+R3	Dat Arg1:T12 Arg2:T10	
+R4	Dat Arg1:T12 Arg2:T11	
+T13	Condition 1044 1064	Łagodna rekoarktacja
+N5	Reference T13 ICD10:I77	Inne choroby tętnic i tętniczek
+T14	Condition 1226 1245	wrodzoną wadą serca
+N6	Reference T14 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+R1	Dat Arg1:T2 Arg2:T1
+R5	Dat Arg1:T12 Arg2:T10
+R7	Dat Arg1:T12 Arg2:T9
+R8	Dat Arg1:T12 Arg2:T11

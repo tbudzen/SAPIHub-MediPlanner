@@ -1,0 +1,142 @@
+T1	Investigation 2502 2506	ECHO
+T2	Investigation 2508 2526	EKG metodą Holtera
+T3	Investigation 2528 2532	ABPM
+T4	Investigation 2534 2549	próba wysiłkowa
+T5	Drug 2398 2406	Tisercin
+T6	Drug_dose 2407 2418	25 mg 0-3-0
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 2378 2384	Siofor
+T8	Drug_dose 2385 2397	500 mg 0-3-0
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 2358 2365	Nolpaza
+T10	Drug_dose 2366 2377	20 mg 1-0-0
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 2333 2345	Escitalopram
+T12	Drug_dose 2346 2357	20 mg 0-3-0
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 2311 2320	Bisoratio
+T14	Drug_dose 2321 2332	10 mg 1-0-0
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Behaviour 2234 2260	warunki mieszkaniowe dobre
+T16	Condition 2155 2158	WZW
+N1	Reference T16 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T17	Condition 2165 2174	borelioza
+N2	Reference T17 ICD10:A69.2	Choroba z Lyme
+T18	Condition 2180 2183	tbc
+N3	Reference T18 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T19	Condition 2189 2193	odra
+N4	Reference T19 ICD10:B05	Odra
+T20	Behaviour 2199 2213	kontakt z odrą
+N5	Reference T20 ICD10:B05	Odra
+T21	Negation 2214 2217	(-)
+R6	Neg Arg1:T21 Arg2:T20	
+T22	Negation 2194 2198	(-),
+R7	Neg Arg1:T22 Arg2:T19	
+T23	Negation 2184 2188	(-),
+R8	Neg Arg1:T23 Arg2:T18	
+T24	Negation 2175 2179	(-),
+R9	Neg Arg1:T24 Arg2:T17	
+T25	Negation 2159 2162	(-)
+R10	Neg Arg1:T25 Arg2:T16	
+T26	Negation 2121 2127	neguje
+T27	Negation 2103 2109	neguje
+T28	Condition 2110 2119	Uczulenia
+N6	Reference T28 ICD10:T78.4	Alergia, nieokreślona
+R11	Neg Arg1:T26 Arg2:T28	
+T29	Behaviour 2090 2101	Inne używki
+R12	Neg Arg1:T27 Arg2:T29	
+T30	Behaviour 2040 2074	Palenie tytoniu: nikotynizm czynny
+N7	Reference T30 ICD10:T65.2	Tytoń i nikotyna
+T31	Condition 440 485	Łagodna niedomykalność zastawki trójdzielnej.
+N8	Reference T31 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T32	Condition 486 507	Nadciśnienie tętnicze
+N9	Reference T32 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T33	Condition 509 536	Choroba refluksowa przełyku
+N10	Reference T33 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T34	Condition 538 555	Cukrzyca typu 2 (
+N11	Reference T34 ICD10:E11	Cukrzyca insulinoniezależna
+T35	Drug 555 567	leki doustne
+T36	Condition 570 582	Dyslipidemia
+N12	Reference T36 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T37	Condition 584 598	Otyłość III st
+N13	Reference T37 ICD10:E66	Otyłość
+T38	Investigation_result 600 614	BMI 40.7 kg/m2
+T39	Condition 617 636	Zespół metaboliczny
+N14	Reference T39 ICD10:E88.8	Inne określone zaburzenia metaboliczne
+T40	Investigation_result 638 656	obwód talii >90 cm
+T41	Condition 667 679	dyslipidemii
+N15	Reference T41 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T42	Condition 690 713	nadciśnienia tętniczego
+N16	Reference T42 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T43	Condition 724 739	cukrzycy typu 2
+N17	Reference T43 ICD10:E11	Cukrzyca insulinoniezależna
+T44	Treatment 681 689	leczenie
+T45	Treatment 715 723	leczenie
+T46	Treatment 658 666	leczenie
+T47	Condition 743 764	Zaburzenia depresyjne
+N18	Reference T47 ICD10:F32.9	Epizod depresyjny, nieokreślony
+T48	Behaviour 766 783	Nikotynizm czynny
+N19	Reference T48 ICD10:T65.2	Tytoń i nikotyna
+T49	Condition 785 815	Zmiany rozstrzeniowe w płucach
+N20	Reference T49 ICD10:R91	Nieprawidłowe wyniki diagnostycznych badań obrazowych płuc
+T50	Condition 832 864	Podejrzenie stłuszczenia wątroby
+N21	Reference T50 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T51	Investigation 1113 1147	badania angio-CT tętnic wieńcowych
+T52	Condition 1412 1444	podejrzeniem niewydolnosci serca
+A1	Source T52 Declared
+N22	Reference T52 ICD10:I50	Niewydolność serca
+T53	Symptom 1454 1485	ograniczenie tolerancji wysiłku
+N23	Reference T53 ICD10:R53	Złe samopoczucie i zmęczenie
+T54	Symptom 1488 1524	duszność wysiłkową do III klasy NYHA
+N24	Reference T54 ICD10:R06.0	Duszność
+T55	Symptom 1535 1558	obrzęki kończyn dolnych
+N25	Reference T55 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T56	Symptom 1560 1582	orthopnoe (3 poduszki)
+N26	Reference T56 ICD10:R06.0	Duszność
+T57	Symptom 1593 1608	kołatania serca
+N27	Reference T57 ICD10:R00.2	Kołatanie serca
+T58	Symptom 1624 1667	zasłabnięcia bez pełnej utraty przytomności
+N28	Reference T58 ICD10:R55	Omdlenie i zapaść
+T59	Date 1669 1688	ostatnio 3 msc temu
+R13	Dat Arg1:T59 Arg2:T58	
+T60	Condition 1711 1732	nadciśnienie tętnicze
+N29	Reference T60 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T61	Condition 1734 1761	choroba refluksowa przełyku
+N30	Reference T61 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T62	Condition 1763 1778	cukrzyca typu 2
+N31	Reference T62 ICD10:E11	Cukrzyca insulinoniezależna
+T63	Condition 1780 1801	zaburzenia depresyjne
+N32	Reference T63 ICD10:F32.9	Epizod depresyjny, nieokreślony
+T64	Condition 1803 1820	otyłość olbrzymia
+N33	Reference T64 ICD10:E66	Otyłość
+T65	Negation 1821 1827	Neguje
+T66	Symptom 1828 1836	omdlenia
+N34	Reference T66 ICD10:R55	Omdlenie i zapaść
+T67	Symptom 1838 1848	krwawienia
+N35	Reference T67 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T68	Symptom 1850 1863	czarne stolce
+N36	Reference T68 ICD10:K92.1	Stolce smołowate
+T69	Symptom 1865 1881	brunatne wymioty
+N37	Reference T69 ICD10:K92.0	Wymioty krwawe
+T70	Condition 1883 1899	chorobę wrzodową
+N38	Reference T70 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T71	Symptom 1901 1915	duszność nocną
+N39	Reference T71 ICD10:I50.1	Niewydolność serca lewokomorowa
+T72	Symptom 1917 1941	bóle w klatce piersiowej
+N40	Reference T72 ICD10:R07.3	Inne bóle w klatce piersiowej
+R14	Neg Arg1:T65 Arg2:T66	
+R15	Neg Arg1:T65 Arg2:T67	
+R16	Neg Arg1:T65 Arg2:T68	
+R17	Neg Arg1:T65 Arg2:T69	
+R18	Neg Arg1:T65 Arg2:T70	
+R19	Neg Arg1:T65 Arg2:T71	
+R20	Neg Arg1:T65 Arg2:T72	
+T73	Treatment 2009 2026	przegrody nosowej
+A2	Status T73 Historical_Insignificant
+T74	Date 2028 2038	7 lat temu
+R21	Dat Arg1:T74 Arg2:T73	
+T75	Condition 1961 1998	przepukliny pachwinowej prawostronnej
+N41	Reference T75 ICD10:K40.9	Jednostronna lub nieokreślona przepuklina pachwinowa bez niedrożności lub zgorzeli
+A3	Status T75 Historical_Insignificant
+T76	Date 2000 2006	w 19rz
+R22	Dat Arg1:T76 Arg2:T75	

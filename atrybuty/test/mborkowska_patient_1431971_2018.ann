@@ -1,0 +1,97 @@
+T1	Drug 2197 2208	pantoprazol
+T2	Drug_dose 2209 2217	20 mg/d,
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 2218 2229	Metocard ZK
+T4	Drug_dose 2230 2252	23,75 mg 1 x 1/2 tabl.
+R2	Drg Arg1:T3 Arg2:T4	
+T5	Drug 2287 2295	Vesicare
+T6	Drug_dose 2296 2315	10 mg 1 x 1/2 tabl.
+R3	Drg Arg1:T5 Arg2:T6	
+T7	Drug_dose 2268 2284	24 mg 2 x 1 tabl
+T8	Drug 2254 2267	Betanil forte
+R4	Drg Arg1:T8 Arg2:T7	
+T9	Condition 2158 2173	chorobami serca
+N1	Reference T9 ICD10:I51	Choroby serca niedokładnie określone i powikłania chorób serca
+T10	Negation 2174 2180	neguje
+R5	Neg Arg1:T10 Arg2:T9	
+T11	Negation 2130 2136	neguje
+T12	Behaviour 2120 2129	papierosy
+N2	Reference T12 ICD10:Z72.0	Używanie tytoniu
+R6	Neg Arg1:T11 Arg2:T12	
+T13	Condition 2109 2118	Uczulenia
+N3	Reference T13 ICD10:Z91.0	Narażenie na czynniki ryzyka niesklasyfikowane gdzie indziej w wywiadzie
+R7	Neg Arg1:T11 Arg2:T13	
+T14	Treatment 2046 2072	klasyczną cholecystektomię
+T15	Treatment 2079 2106	laparoskopową hysterektomię
+T16	Condition 2017 2035	Nietrzymanie moczu
+N4	Reference T16 ICD10:R32	Nietrzymanie moczu, nieokreślone
+T17	Treatment 788 815	dalsza opieka w poradni POZ
+T18	Treatment 825 896	kontrola kardiologiczna, endokrynologiczna, gastrologiczna, urologiczna
+T19	Treatment 907 936	kontrola ciśnienia tętniczego
+T20	Date 897 906	codzienna
+R8	Dat Arg1:T20 Arg2:T19	
+T21	Investigation 946 970	kontrola lipidogramu, OB
+T22	Behaviour 971 996	dieta niskocholesterolowa
+T23	Behaviour 997 1042	stały, umiarkowany, aerobowy wysiłek fizyczny
+T24	Drug 1073 1084	Pantoprazol
+T25	Drug_dose 1085 1103	20 mg 1 tabl. rano
+R9	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1104 1115	Metocard ZK
+T27	Drug_dose 1116 1139	23,75 mg 1/2 tabl. rano
+T28	Drug 1140 1153	Betanil forte
+R10	Drg Arg1:T26 Arg2:T27	
+T29	Drug_dose 1154 1171	24 mg 2 x 1 tabl.
+R11	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1172 1180	Vesicare
+T31	Drug 1197 1206	Captopril
+T32	Drug_dose 1181 1195	10 mg 1/2 tabl
+R12	Drg Arg1:T30 Arg2:T32	
+T33	Drug_dose 1207 1231	12,5 mg 1 tabl. doraźnie
+R13	Drg Arg1:T31 Arg2:T33	
+T34	Symptom 1438 1462	stanów przedomdleniowych
+N5	Reference T34 ICD10:R55	Omdlenie i zapaść
+T35	Symptom 1479 1493	szybkim biciem
+N6	Reference T35 ICD10:R00	
+T36	Symptom 1496 1512	kołataniem serca
+N7	Reference T36 ICD10:R00.2	Kołatanie serca
+T37	Symptom 1514 1572	niespecyficznych dolegliwości bólowych w klatce piersiowej
+N8	Reference T37 ICD10:R07.3	Inne bóle w klatce piersiowej
+T38	Investigation_result 1578 1607	wahania ciśnienia tętniczego.
+T39	Symptom 1608 1634	Epizody nagłego osłabienia
+N9	Reference T39 ICD10:R53	Złe samopoczucie i zmęczenie
+T40	Symptom 1636 1650	silnych potów,
+N10	Reference T40 ICD10:R61	Nadmierne pocenie
+T41	Symptom 1651 1660	niepokoju
+N11	Reference T41 ICD10:R45.1	Niepokój i pobudzenie
+T42	Symptom 1663 1681	uczucia omdlewania
+N12	Reference T42 ICD10:R55	Omdlenie i zapaść
+T43	Date 1692 1709	od prawie 1 roku,
+R14	Dat Arg1:T43 Arg2:T42	
+T44	Condition 1819 1839	uszkodzenie błędnika
+N13	Reference T44 ICD10:H83.2	Zaburzenia czynności błędnika
+T45	Condition 1861 1893	przepuklina rozworu przełykowego
+N14	Reference T45 ICD10:K44	Przepuklina przeponowa
+T46	Condition 1905 1909	GERD
+N15	Reference T46 ICD10:K21.9	Zarzucanie żołądkowo-przełykowe bez zapalenia przełyku
+T47	Date 1911 1937	W październiku 2017 roku r
+T48	Condition 1947 1967	nadczynność tarczycy
+N16	Reference T48 ICD10:E05.9	Tyreotoksykoza, nieokreślona
+T49	Drug 1977 1987	thyrozolem
+R15	Dat Arg1:T47 Arg2:T48	
+R16	Dat Arg1:T47 Arg2:T49	
+T50	Condition 459 490	Napadowe zaburzenia rytmu serca
+N17	Reference T50 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T51	Symptom 492 513	Stany przedomdleniowe
+N18	Reference T51 ICD10:R55	Omdlenie i zapaść
+T52	Symptom 515 528	Zawroty głowy
+N19	Reference T52 ICD10:R42	Zawroty głowy i odurzenie
+T53	Condition 530 562	Przepuklina rozworu przełykowego
+N20	Reference T53 ICD10:K44	Przepuklina przeponowa
+T54	Condition 574 578	GERD
+N21	Reference T54 ICD10:K21.9	Zarzucanie żołądkowo-przełykowe bez zapalenia przełyku
+T55	Condition 580 600	Nadczynność tarczycy
+N22	Reference T55 ICD10:E05	Nadczynność tarczycy [tyreotoksykoza]
+T56	Condition 602 620	Nietrzymanie moczu
+N23	Reference T56 ICD10:R32	Nietrzymanie moczu, nieokreślone
+T57	Treatment 630 646	cholecystectomii
+T58	Treatment 649 662	hysterectomii

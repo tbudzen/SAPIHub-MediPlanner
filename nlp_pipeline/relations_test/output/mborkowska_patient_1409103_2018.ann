@@ -1,0 +1,36 @@
+T1	Behaviour 333 401	Nie ma kardiologicznych przeciwwskazań do dalszego uprawiania sportu
+T2	Drug 455 468	D-Vitum Forte
+T3	Drug 448 453	ApoD3
+T4	Drug_dose 549 560	1000IU/dobę
+T5	Drug_dose 497 537	2000IU na dobę (dwie kapsułki po 1000IU)
+T6	Date 539 548	następnie
+R1	Dat Arg1:T6 Arg2:T4	
+T7	Date 476 488	dwa tygodnie
+R2	Dat Arg1:T7 Arg2:T5	
+R3	Drg Arg1:T2 Arg2:T5	
+R4	Drg Arg1:T2 Arg2:T4	
+R5	Drg Arg1:T3 Arg2:T5	
+R6	Drg Arg1:T3 Arg2:T4	
+T8	Drug 628 650	Clacium tabl. musujące
+T9	Treatment 563 626	Jednocześnie przyjmowanie preparatu wapnia 3x dziennie po 300mg
+T10	Condition 407 442	Suplementacja preparatem witaminy D
+T11	Investigation 653 680	Kontrola poziomu witaminy D
+T12	Date 702 719	za ok. 2 miesiące
+R7	Dat Arg1:T12 Arg2:T11	
+T13	Negation 1012 1025	Nie stosowano
+T14	Treatment 1026 1053	leczenia farmakologicznego.
+R8	Neg Arg1:T13 Arg2:T14	
+T15	Condition 1290 1313	bradykardii   zatokowej
+N1	Reference T15 ICD10:R00.1	Bradykardia, nieokreślona
+T16	Behaviour 1315 1336	Uprawia  piłkę  nożną
+T17	Treatment 725 875	Wizyta w Poradni dla Dzieci i Dorosłych w Centrum Leczenia Osteoporozy i innych Chorób Metabolicznych Kości Dzieci i Młodzieży, Łódź ul. Traugutta 11,
+T18	Date 1279 1290	 od  roku  
+R9	Dat Arg1:T18 Arg2:T15	
+R1	Drg Arg1:T2 Arg2:T4
+R12	Dat Arg1:T7 Arg2:T2
+R15	Dat Arg1:T12 Arg2:T17
+R16	Neg Arg1:T13 Arg2:T14
+R17	Dat Arg1:T18 Arg2:T15
+R18	Dat Arg1:T18 Arg2:T16
+R2	Drg Arg1:T2 Arg2:T5
+R7	Dat Arg1:T6 Arg2:T9

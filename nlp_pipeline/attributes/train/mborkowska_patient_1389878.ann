@@ -1,0 +1,165 @@
+T1	Condition 789 851	Przewlekła niewydolność serca z zachowaną frakcją wyrzutową LK
+N1	Reference T1 ICD10:I50	Niewydolność serca
+T2	Condition 901 942	Łagodna niedomykalność zastawki mitralnej
+N2	Reference T2 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T3	Condition 944 967	Ekstrasystolia komorowa
+N3	Reference T3 ICD10:I49	Inne zaburzenia rytmu serca
+T4	Condition 969 990	Nadciśnienie tętnicze
+N4	Reference T4 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T5	Condition 992 1015	Przemijający blok AV I.
+N5	Reference T5 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T6	Condition 1016 1036	Hipercholesterolemia
+N6	Reference T6 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T7	Condition 1147 1160	Otyłość I st.
+N7	Reference T7 ICD10:E66	Otyłość
+T8	Condition 1038 1054	Rak piersi lewej
+N8	Reference T8 ICD10:C50	Nowotwór złośliwy piersi
+T9	Treatment 1058 1102	leczeniu operacyjnym, radio- i chemioterapii
+T10	Date 1104 1108	2017
+R1	Dat Arg1:T10 Arg2:T9	
+R2	Dat Arg1:T10 Arg2:T8	
+T11	Condition 1161 1213	Przepukliny krążków międzykręgowych L1/2, C5/6, C6/7
+N9	Reference T11 ICD10:M51	Inne choroby krążka międzykręgowego
+T12	Condition 1223 1247	złamaniu podudzia lewego
+T13	Treatment 1257 1268	zespoleniem
+T14	Date 1249 1253	2010
+R3	Dat Arg1:T14 Arg2:T13	
+R4	Dat Arg1:T14 Arg2:T12	
+T15	Condition 1270 1328	Przewlekłe zapalenie błony śluzowej żołądka i dwunastnicy.
+N10	Reference T15 ICD10:K29	
+T16	Condition 1329 1361	Przepuklina rozworu przełykowego
+N11	Reference T16 ICD10:Q40.1	Wrodzona przepuklina rozworu przełykowego przepony
+T17	Treatment 1371 1380	usunięciu
+T18	Condition 1381 1393	polipa esicy
+T19	Date 1395 1405	02.07.2018
+R5	Dat Arg1:T19 Arg2:T18	
+R6	Dat Arg1:T19 Arg2:T17	
+T20	Condition 1408 1431	Łagodna małopłytkowość.
+N12	Reference T20 ICD10:D69.9	Skaza krwotoczna, nieokreślona
+T21	Condition 1432 1444	Guz tarczycy
+N13	Reference T21 ICD10:E04.1	Guzek tarczycy pojedynczy, nietoksyczny
+T22	Investigation 2997 3001	ECHO
+T23	Investigation 3003 3021	EKG metodą Holtera
+T24	Investigation 3023 3027	ABPM
+T25	Investigation 3029 3044	próba wysiłkowa
+T26	Drug 2897 2904	Validol
+T27	Drug_dose 2906 2914	doraźnie
+R7	Drg Arg1:T26 Arg2:T27	
+T28	Drug 2876 2881	Gasec
+T29	Drug_dose 2882 2896	20 mg 1x1 rano
+R8	Drg Arg1:T28 Arg2:T29	
+T30	Drug 2848 2855	Romazic
+T31	Drug_dose 2856 2875	10 mg 1x1 wieczorem
+R9	Drg Arg1:T30 Arg2:T31	
+T32	Drug 2821 2826	Tezeo
+T33	Drug_dose 2827 2847	80 mg 1x 1 tabl/rano
+R10	Drg Arg1:T32 Arg2:T33	
+T34	Drug 2791 2799	Lecalpin
+T35	Drug_dose 2800 2820	10mg 1x 1 tabl/wiecz
+R11	Drg Arg1:T34 Arg2:T35	
+T36	Drug 2763 2771	Nebicard
+T37	Drug_dose 2772 2790	5mg 1x 1 tabl/rano
+R12	Drg Arg1:T36 Arg2:T37	
+T38	Behaviour 2699 2726	warunki mieszkaniowe dobre.
+T39	Condition 2648 2651	WZW
+N14	Reference T39 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T40	Condition 2658 2667	borelioza
+N15	Reference T40 ICD10:A69.2	Choroba z Lyme
+T41	Condition 2675 2678	tbc
+N16	Reference T41 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T42	Negation 2679 2682	(-)
+R13	Neg Arg1:T42 Arg2:T41	
+T43	Negation 2668 2673	( - )
+R14	Neg Arg1:T43 Arg2:T40	
+T44	Negation 2652 2655	(-)
+R15	Neg Arg1:T44 Arg2:T39	
+T45	Negation 2617 2620	nie
+T46	Negation 2602 2605	nie
+T47	Condition 2606 2615	Uczulenia
+N17	Reference T47 ICD10:T78.4	Alergia, nieokreślona
+R16	Neg Arg1:T45 Arg2:T47	
+T48	Behaviour 2589 2600	Inne używki
+R17	Neg Arg1:T46 Arg2:T48	
+T49	Behaviour 2560 2581	Palenie tytoniu: tak,
+N18	Reference T49 ICD10:T65.2	Tytoń i nikotyna
+T50	Treatment 2538 2559	Przebyte operacje: jw
+T51	Negation 2406 2412	Neguje
+T52	Symptom 2414 2426	zasłabnięcia
+N19	Reference T52 ICD10:R55	Omdlenie i zapaść
+T53	Symptom 2428 2436	omdlenia
+N20	Reference T53 ICD10:R55	Omdlenie i zapaść
+T54	Symptom 2438 2448	krwawienia
+N21	Reference T54 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T55	Symptom 2450 2463	czarne stolce
+N22	Reference T55 ICD10:K92.1	Stolce smołowate
+T56	Symptom 2465 2481	brunatne wymioty
+N23	Reference T56 ICD10:K92.0	Wymioty krwawe
+T57	Condition 2483 2499	chorobę wrzodową
+N24	Reference T57 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T58	Symptom 2501 2515	duszność nocną
+N25	Reference T58 ICD10:I50.1	Niewydolność serca lewokomorowa
+T59	Symptom 2517 2532	obrzęki podudzi
+N26	Reference T59 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T60	Condition 2534 2536	DM
+N27	Reference T60 ICD10:E13	Inne określone postacie cukrzycy
+R18	Neg Arg1:T51 Arg2:T52	
+R19	Neg Arg1:T51 Arg2:T53	
+R20	Neg Arg1:T51 Arg2:T54	
+R21	Neg Arg1:T51 Arg2:T55	
+R22	Neg Arg1:T51 Arg2:T56	
+R23	Neg Arg1:T51 Arg2:T57	
+R24	Neg Arg1:T51 Arg2:T58	
+R25	Neg Arg1:T51 Arg2:T59	
+R26	Neg Arg1:T51 Arg2:T60	
+T61	Condition 1612 1631	rakiem piersi lewej
+N28	Reference T61 ICD10:C50	Nowotwór złośliwy piersi
+T62	Treatment 1635 1728	leczeniu operacyjnym (kwadrantektomia piersi lewej z limfadenektomią), radio- i chemioterapii
+T63	Date 1730 1734	2017
+R27	Dat Arg1:T63 Arg2:T62	
+R28	Dat Arg1:T63 Arg2:T61	
+T64	Condition 1775 1777	HA
+N29	Reference T64 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T65	Condition 1781 1790	otyłością
+N30	Reference T65 ICD10:E66	Otyłość
+T66	Symptom 1822 1844	apadów kołatania serca
+N31	Reference T66 ICD10:R00.2	Kołatanie serca
+T67	Symptom 1862 1877	zawrotami głowy
+N32	Reference T67 ICD10:R42	Zawroty głowy i odurzenie
+T68	Symptom 1880 1910	duszności do III klasy wg NYHA
+N33	Reference T68 ICD10:R06.0	Duszność
+T69	Date 1912 1923	od 1,5 roku
+R29	Dat Arg1:T69 Arg2:T68	
+T70	Symptom 1929 2022	bólów gniotących za mostkiem podczas niedużych wysilków fizycznych, do spoczynkowych włącznie
+N34	Reference T70 ICD10:R07.3	Inne bóle w klatce piersiowej
+T71	Date 2023 2031	od 3 msc
+R30	Dat Arg1:T71 Arg2:T70	
+T72	Investigation 2035 2061	angio-CT tętnic wieńcowych
+T73	Date 2063 2070	07/2018
+R31	Dat Arg1:T73 Arg2:T72	
+T74	Investigation_result 2072 2106	bez zmian w naczyniach wieńcowych.
+R32	Inv Arg1:T72 Arg2:T74	
+T75	Condition 2128 2135	otyłość
+N35	Reference T75 ICD10:E66	Otyłość
+T76	Condition 2137 2189	przepukliny krążków międzykręgowych L1/2, C5/6, C6/7
+N36	Reference T76 ICD10:M51	Inne choroby krążka międzykręgowego
+N37	Reference T12 ICD10:S82.9	Złamanie podudzia, część nieokreślona
+T77	Condition 2199 2223	złamaniu podudzia lewego
+N38	Reference T77 ICD10:S82.9	Złamanie podudzia, część nieokreślona
+T78	Treatment 2233 2244	zespoleniem
+T79	Date 2225 2229	2010
+R33	Dat Arg1:T79 Arg2:T77	
+R34	Dat Arg1:T79 Arg2:T78	
+T80	Condition 2246 2303	przewlekłe zapalenie błony śluzowej żołądka i dwunastnicy
+N39	Reference T80 ICD10:K29	Zapalenie żołądka i dwunastnicy
+T81	Condition 2305 2337	przepuklina rozworu przełykowego
+N40	Reference T81 ICD10:Q40.1	Wrodzona przepuklina rozworu przełykowego przepony
+T82	Treatment 2339 2348	usuniecie
+T83	Condition 2349 2361	polipa esicy
+T84	Date 2363 2373	02.07.2018
+R35	Dat Arg1:T84 Arg2:T83	
+R36	Dat Arg1:T84 Arg2:T82	
+T85	Condition 868 899	w II/III klasie wg NYHA de novo
+T86	Investigation_result 860 866	EF=56%
+T87	Treatment 1131 1145	hormonoterapii
+T88	Condition 853 858	HFpEF
+N41	Reference T88 ICD10:I50	Niewydolność serca

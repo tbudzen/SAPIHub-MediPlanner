@@ -1,0 +1,25 @@
+T1	Condition 464 513	Wrodzona wada serca pod postacią koarktacji aorty
+N1	Reference T1 ICD10:Q25.1	Zwężenie cieśni aorty
+T2	Condition 518 577	Łagodna dysplazja zastawki aorty z łagodną niedomykalnością
+N2	Reference T2 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T3	Treatment 716 735	Znieczulenie ogólne
+T4	Investigation 748 756	angio-TK
+T5	Drug 759 765	NUKKCz
+T6	Date 766 780	w dn.23.02.19r
+T7	Drug 782 785	ANA
+T8	Drug 786 795	Cefazolin
+R1	Dat Arg1:T6 Arg2:T5	
+T9	Investigation 930 966	skierowane do diagnostyki wady serca
+T10	Condition 967 970	PDA
+A1	Source T10 Declared
+N3	Reference T10 ICD10:Q25.0	Drożny przewód tętniczy
+T11	Condition 972 975	CoA
+A2	Source T11 Declared
+N4	Reference T11 ICD10:Q25.1	Zwężenie cieśni aorty
+T12	Condition 979 996	wywiad alergiczny
+N5	Reference T12 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T13	Negation 997 1003	ujemny
+T14	Drug 1006 1020	leków na stałe
+T15	Negation 1021 1034	nie otrzymuje
+R2	Neg Arg1:T13 Arg2:T12	
+R3	Neg Arg1:T15 Arg2:T14	

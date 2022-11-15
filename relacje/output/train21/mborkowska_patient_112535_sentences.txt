@@ -1,0 +1,584 @@
+allRelations          : 32
+oks                   : 15
+isRedundantAndRemoveds: 10
+shouldNotBeRemoveds   : 5
+shouldBeBemoveds      : 2
+GOOD / BAD            : 25 / 7
+Sentence 0:
+------------------------------------------------
+Wiek: 29 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q22.1|Rozpoznanie II: ICD10:Q21.1|Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią zwężenia drogi odpływu prawej komory oraz ubytku w przegrodzie międzyprzedsionkowej t. II - stan po operacji korekcji całkowitej (10/11/1994 r.).
+R1	Dat Arg1:T14 Arg2:T1 << OK >>	10/11/1994 r. -> ubytku w przegrodzie międzyprzedsionkowej t. II  <RANK: 3> <info: start[623, 535] <type: LEFT>>
+R2	Dat Arg1:T14 Arg2:T2 << OK >>	10/11/1994 r. -> Wrodzona wada serca pod postacią zwężenia drogi odpływu prawej komory  <RANK: 2> <info: start[623, 460] <type: LEFT>>
+R3	Dat Arg1:T14 Arg2:T13 << OK >>	10/11/1994 r. -> operacji korekcji całkowitej  <RANK: 3> <info: start[623, 593] <type: LEFT>>
+
+
+Sentence 6:
+Duża niedomykalność płucna.
+
+
+Sentence 7:
+Łagodna arytmia komorowa i nadkomorowa w wywiadzie.
+
+
+Sentence 8:
+Mnogie wady kostne.
+
+
+Sentence 9:
+Niedoczynność tarczycy w trakcie suplementacji.
+
+
+Sentence 10:
+Oczopląs.
+
+
+Sentence 11:
+WZW typu C w trakcie leczenia w wywiadzie.
+
+
+
+Sentence 12:
+------------------------------------------------
+
+
+
+Sentence 13:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 14:
+1.
+
+
+Sentence 15:
+Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Ortopedycznej i Endokrynologicznej.
+
+
+
+Sentence 16:
+2. Do rozważenia diagnostyka w Poradni Genetycznej (skierowanie wydano).
+
+
+
+Sentence 17:
+3. Wskazana kwalifikacja kardiochirurgiczna w Instytucie Kardiologii w Aninie (Warszawa) - skierowanie wydano.
+
+
+
+Sentence 18:
+4. Dieta lekkostrawna, niskocholesterolowa.  
+
+
+
+Sentence 19:
+5. Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby oraz TSH co 6-8 tyg. w POZ.  
+
+R4	Dat Arg1:T44 Arg2:T43 << OK >>	co 6-8 tyg -> kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby oraz TSH  <RANK: 3> <info: start[1388, 1296] <type: LEFT>>
+
+
+Sentence 20:
+6.
+
+
+Sentence 21:
+Systematyczna kontrola ciśnienia tętniczego krwi.  
+
+
+
+Sentence 22:
+7.
+
+
+Sentence 23:
+Wskazana profilaktyka infekcyjnego zapalenia wsierdzia podczas zabiegów stomatologicznych (amoksycylina lub ampicylina 2 g doustnie lub i.v , w przypadku alergii na powyższe antybiotyki - klindamycyna 600 mg doustnie lub i.v.) 
+
+R5	Drg Arg1:T46 Arg2:T48 <<SHOULD NOT BE REMOVED>>	amoksycylina -> 2 g doustnie lub i.v <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1558, 1586] <type: RIGHT>>
+R6	Drg Arg1:T46 Arg2:T51 <<REDUNDANT!!!REMOVED>>	amoksycylina -> 600 mg doustnie lub i.v. <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1558, 1668] <type: RIGHT>>
+R7	Drg Arg1:T47 Arg2:T48 <<SHOULD NOT BE REMOVED>>	ampicylina -> 2 g doustnie lub i.v <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1575, 1586] <type: RIGHT>>
+R8	Drg Arg1:T47 Arg2:T51 <<REDUNDANT!!!REMOVED>>	ampicylina -> 600 mg doustnie lub i.v. <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1575, 1668] <type: RIGHT>>
+R9	Drg Arg1:T50 Arg2:T48 <<REDUNDANT!!!REMOVED>>	klindamycyna -> 2 g doustnie lub i.v <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1655, 1586] <type: LEFT>>
+R10	Drg Arg1:T50 Arg2:T51 << OK >>	klindamycyna -> 600 mg doustnie lub i.v.  <RANK: 3> <info: start[1655, 1668] <type: RIGHT>>
+R11	Alg Arg1:T49 Arg2:T46 <<SHOULD NOT BE REMOVED>>	alergii na powyższe antybiotyki -> amoksycylina <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1621, 1558] <type: LEFT>>
+R12	Alg Arg1:T49 Arg2:T47 <<SHOULD NOT BE REMOVED>>	alergii na powyższe antybiotyki -> ampicylina <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1621, 1575] <type: LEFT>>
+R13	Alg Arg1:T49 Arg2:T50 << OK >>	alergii na powyższe antybiotyki -> klindamycyna  <RANK: 3> <info: start[1621, 1655] <type: RIGHT>>
+
+
+Sentence 24:
+8. W związku z wysokim ryzykiem infekcyjnego zapalenia wsierdzia zaleca się działania profilaktyczne - ścisła higiena skóry i jamy ustnej, przeglądy stomatologiczne należy przeprowadzać co najmniej dwa razy w roku, dezynfekcja ran, eliminacja lub ograniczenie przewlekłego nosicielstwa bakteryjnego: skóry, moczu, leczenie antybiotykami każdego ogniska zakażenia bakteryjnego, niestosowanie antybiotyków samodzielnie przez pacjenta, unikanie kolczykowania i tatuowania ciała, ścisłe przestrzeganie zasad aseptyki podczas zabiegów stwarzających ryzyko zakażenia. 
+
+
+
+Sentence 25:
+9. Leki
+
+
+
+Sentence 26:
+Sobycor 2,5 mg 1x1/2 tabl.
+R14	Drg Arg1:T40 Arg2:T41 << OK >>	Sobycor -> 2,5 mg 1x1/2 tabl. rano  <RANK: 3> <info: start[2266, 2274] <type: RIGHT>>
+
+
+Sentence 27:
+rano
+Magne B6 - 1x1 tabl.
+R15	Drg Arg1:T38 Arg2:T39 << OK >>	Magne B6 -> 1x1 tabl. rano  <RANK: 3> <info: start[2298, 2309] <type: RIGHT>>
+
+
+Sentence 28:
+rano
+Letrox 88 ug 1x1 tabl. rano na czczo
+------------------------------------------------
+
+R16	Drg Arg1:T36 Arg2:T37 << OK >>	Letrox -> 88 ug 1x1 tabl. rano na czczo  <RANK: 3> <info: start[2324, 2331] <type: RIGHT>>
+
+
+Sentence 29:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 30:
+Pacjent 29-letni przyjęty do Kliniki celem kontroli po leczeniu wrodzonej wady serca, obecnie ograniczenie tolerancji wysiłku, okresowo zawroty głowy.
+
+
+Sentence 31:
+W wywiadzie wrodzona wada serca pod postacią RVOTO z ASD t. II - stan po operacji korekcji całkowitej (10/11/1994 r.), duża niedomykalność płucna, łagodna arytmia komorowa i nadkomorowa, mnogie wady kostne, niedoczynność tarczycy w trakcie suplementacji, oczopląs, w wywiadzie WZW typu C w trakcie leczenia.
+R17	Dat Arg1:T9 Arg2:T6 <<REDUNDANT!!!SHOULD BE REMOVED>>	10/11/1994 r -> wrodzona wada serca pod postacią RVOTO  <RANK: 2> <info: start[2739, 2648] <type: LEFT>>
+R18	Dat Arg1:T9 Arg2:T7 <<REDUNDANT!!!SHOULD BE REMOVED>>	10/11/1994 r -> ASD t. II  <RANK: 3> <info: start[2739, 2689] <type: LEFT>>
+R19	Dat Arg1:T9 Arg2:T10 <<REDUNDANT!!!REMOVED>>	10/11/1994 r -> duża niedomykalność płucna <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2739, 2755] <type: RIGHT>>
+R20	Dat Arg1:T9 Arg2:T11 <<REDUNDANT!!!REMOVED>>	10/11/1994 r -> łagodna arytmia komorowa <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2739, 2783] <type: RIGHT>>
+R21	Dat Arg1:T9 Arg2:T12 <<REDUNDANT!!!REMOVED>>	10/11/1994 r -> nadkomorowa, <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2739, 2810] <type: RIGHT>>
+R22	Dat Arg1:T9 Arg2:T20 <<REDUNDANT!!!REMOVED>>	10/11/1994 r -> niedoczynność tarczycy <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2739, 2843] <type: RIGHT>>
+R23	Dat Arg1:T9 Arg2:T21 <<REDUNDANT!!!REMOVED>>	10/11/1994 r -> oczopląs <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2739, 2891] <type: RIGHT>>
+R24	Dat Arg1:T9 Arg2:T24 <<REDUNDANT!!!REMOVED>>	10/11/1994 r -> WZW typu C <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2739, 2913] <type: RIGHT>>
+R25	Dat Arg1:T9 Arg2:T60 <<REDUNDANT!!!REMOVED>>	10/11/1994 r -> mnogie wady kostne <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2739, 2823] <type: RIGHT>>
+R26	Dat Arg1:T9 Arg2:T8 << OK >>	10/11/1994 r -> operacji korekcji całkowitej  <RANK: 3> <info: start[2739, 2709] <type: LEFT>>
+
+
+Sentence 32:
+W rodzinie bez chorób serca.
+R27	Neg Arg1:T26 Arg2:T25 << OK >>	W rodzinie bez -> chorób serca  <RANK: 3> <info: start[2944, 2959] <type: RIGHT>>
+
+
+Sentence 33:
+Uczulenia neguje.
+R28	Neg Arg1:T27 Arg2:T29 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[2983, 2973] <type: LEFT>>
+
+
+Sentence 34:
+Uzależnienia: palenie neguje, alkohol i narkotyki również.
+R29	Neg Arg1:T28 Arg2:T34 <<SHOULD NOT BE REMOVED>>	neguje -> alkohol i narkotyki <:REMOVED many second tags on the right:> <RANK: 2> <info: start[3013, 3021] <type: RIGHT>>
+R30	Neg Arg1:T28 Arg2:T35 << OK >>	neguje -> palenie  <RANK: 3> <info: start[3013, 3005] <type: LEFT>>
+
+
+Sentence 35:
+Status społeczny - renta. 
+
+
+
+Sentence 36:
+Leki:
+Magne B6 1x1 tabl.
+R31	Drg Arg1:T30 Arg2:T31 << OK >>	Magne B6 -> 1x1 tabl. rano  <RANK: 3> <info: start[3083, 3092] <type: RIGHT>>
+
+
+Sentence 37:
+rano
+Letrox 100 ug 1x1 tabl.
+R32	Drg Arg1:T32 Arg2:T33 << OK >>	Letrox -> 100 ug 1x1 tabl. rano  <RANK: 3> <info: start[3107, 3114] <type: RIGHT>>
+
+
+Sentence 38:
+rano
+------------------------------------------------
+
+
+
+Sentence 39:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 40:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.91[10^3/ul]
+    
+
+
+Sentence 41:
+RBC Krwinki czerwone:4.68[10^6/ul]
+    
+
+
+Sentence 42:
+HGB Hemoglobina:14.7[g/dl]
+    
+
+
+Sentence 43:
+HCT Hematokryt:42.6[%]
+    
+
+
+Sentence 44:
+MCV wskaźnik czerwonokrw:91.0[fl]
+    
+
+
+Sentence 45:
+MCH wskaźnik czerwonokrw:31.4[pg]
+    
+
+
+Sentence 46:
+MCHC wskaźnik czerwonokr:34.5[g/dl]
+    
+
+
+Sentence 47:
+PLT z morfologii:181[10^3/ul]
+    
+
+
+Sentence 48:
+RDW-SD:41.9[fl]
+    
+
+
+Sentence 49:
+RDW-CV:12.7[%]
+    PDW:15.8[fl]
+    MPV:11.9[fl]
+    
+
+
+Sentence 50:
+P-LCR:40.0[%]
+    
+
+
+Sentence 51:
+PCT (hematokryt płytkowy:0.22[%]
+    
+
+
+Sentence 52:
+NEUTR# wartość bezwzględ:3.51[10^3/ul]
+    
+
+
+Sentence 53:
+NEUTR%:44.4[%]
+    
+
+
+Sentence 54:
+LYMH# wartość bezwzględn:2.21[10^3/ul]
+    
+
+
+Sentence 55:
+LYMPH%:27.9[%]
+    
+
+
+Sentence 56:
+MONO# wartość bezwzględn:1.15[10^3/ul]
+    
+
+
+Sentence 57:
+MONO%:14.5[%]
+    
+
+
+Sentence 58:
+EO# wartość bezwzględna:0.90[10^3/ul]
+    EO%:11.4[%]
+    
+
+
+Sentence 59:
+BASO# wartość bezwzględn:0.14[10^3/ul]
+    BASO%:1.8[%]
+    
+
+
+Sentence 60:
+NRBC %:0.0[%]
+    
+
+
+Sentence 61:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 62:
+Badanie ogólne moczu
+    
+
+
+Sentence 63:
+barwa:żółty[ ]
+    
+
+
+Sentence 64:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 65:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 66:
+przejrzystość:niezupełna[ ]
+    
+
+
+Sentence 67:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 68:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 69:
+ciężar właściwy:1.023[ ]
+    
+
+
+Sentence 70:
+pH:5.0[ ]
+    
+
+
+Sentence 71:
+białko:nieobecne[ ]
+    
+
+
+Sentence 72:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 73:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 74:
+erytrocyty:obecne[ ]
+    
+
+
+Sentence 75:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 76:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 77:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 78:
+leukocyty:14 /ul[ul]
+    erytrocyty świeże i częś:21/ul[ul]
+    śluz:liczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 79:
+TSH: TSH:1.21[uIU/ml]
+
+
+
+Sentence 80:
+FT3: FT3:3.23[pg/ml]
+
+
+
+Sentence 81:
+FT4: FT4:1.28[ng/dl]
+
+
+
+Sentence 82:
+ALAT: ALAT:19[U/L]
+ASPAT: ASPAT:35[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 83:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 84:
+Potas (K): Potas:5.4[mmol/L]
+
+
+
+Sentence 85:
+Kreatynina + GFR
+    
+
+
+Sentence 86:
+Kreatynina w surowicy:0.68[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 87:
+MDRD ze stan:137.9[ml/min/1,73 m^2]
+
+
+
+Sentence 88:
+Magnez: Magnez:0.80[mmol/L]
+
+
+
+Sentence 89:
+Mocznik: Mocznik:28[mg/dl]
+
+
+
+Sentence 90:
+Kwas moczowy: Kwas moczowy:4.6[mg/dl]
+
+
+
+Sentence 91:
+Lipidogram
+    
+
+
+Sentence 92:
+Cholesterol całkowity:153[mg/dl]
+    
+
+
+Sentence 93:
+Cholesterol HDL:42[mg/dl]
+    
+
+
+Sentence 94:
+Cholestrol LDL:108[mg/dl]
+    Triglicerydy:69[mg/dl]
+    
+
+
+Sentence 95:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:83[mg/dl]
+
+
+
+Sentence 96:
+NT-proBNP surowica: NT-proBNP w surowicy:65[pg/ml]
+
+
+
+Sentence 97:
+------------------------------------------------
+
+
+
+Sentence 98:
+ICD10
+------------------------------------------------
+Q22.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 99:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 100:
+89.501
+89.502
+C55
+A01
+I81
+89.41
+L43
+M87
+N45
+L69
+O55
+I17
+M45
+M37
+I19
+O35
+
+
+
+Sentence 101:
+N13
+N24
+88.721
+O69
+
+
+
+Sentence 102:
+------------------------------------------------
+
+

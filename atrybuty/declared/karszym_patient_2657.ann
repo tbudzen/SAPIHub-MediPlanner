@@ -1,0 +1,120 @@
+T1	Condition 448 477	Przewlekła niewydolność serca
+N1	Reference T1 ICD10:I50.9	Niewydolność serca, nieokreślona
+T2	Treatment 487 532	wszczepieniu zastawki komorowo-przedsionkowej
+T3	Condition 547 566	zespół Chiariego II
+N3	Reference T3 ICD10:Q07.0	Zespół Arnolda-Chiariego
+T4	Condition 534 544	Wodogłowie
+N4	Reference T4 ICD10:G91.9	Wodogłowie, nieokreślone
+T5	Condition 568 600	Niedowład wiotki kończyn dolnych
+N5	Reference T5 ICD10:G82.0	Wiotkie porażenie kończyn dolnych
+T6	Treatment 610 618	plastyce
+N6	Reference T6 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T7	Condition 681 707	Rozszczep kręgosłupa Th-L.
+N7	Reference T7 ICD10:Q05	Rozszczep kręgosłupa
+T8	Condition 708 720	Kifoskolioza
+N8	Reference T8 ICD10:M41.9	Skolioza, nieokreślona
+T9	Condition 722 740	Pęcherz neurogenny
+N9	Reference T9 ICD10:N31.9	Nerwowo-mięśniowa dysfunkcja pęcherza moczowego, nieokreślona
+T10	Treatment 750 758	operacji
+N10	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T11	Condition 789 809	Hipercholesterolemia
+N11	Reference T11 ICD10:E78.0	Czysta hipercholesterolemia
+T12	Condition 811 834	Torbiele okołojajnikowe
+N12	Reference T12 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T13	Condition 836 871	Tłuszczak skóry biodra i uda lewego
+N13	Reference T13 ICD10:D17.2	Tłuszczak skóry i tkanki podskórnej kończyn
+T14	Treatment 981 995	kontrola w POZ
+T15	Treatment 997 1029	okresowa kontrola kardiologiczna
+T16	Behaviour 1030 1055	dieta niskocholesterolowa
+T17	Investigation 1056 1085	okresowa kontrola lipidogramu
+T18	Drug 1117 1122	Acard
+T19	Drug 1153 1162	Armolipid
+T20	Drug_dose 1123 1152	75mg 1x 1 tabl. co 2-gi dzień
+T21	Drug_dose 1163 1183	1x 1 tabl. wieczorem
+R1	Drg Arg1:T18 Arg2:T20	
+R2	Drg Arg1:T19 Arg2:T21	
+T22	Symptom 1329 1369	objawami niewydolności krążenia od czasu
+T23	Treatment 1370 1415	wszczepienia zastawki komorowo-przedsionkowej
+T25	Condition 1418 1477	nieprawidłową lokalizacja koncowki cewnika w prawej komorze
+N15	Reference T25 ICD10:T81.8	Inne powikłania zabiegów, niesklasyfikowane gdzie indziej
+T26	Date 1478 1491	w przeszłości
+R5	Dat Arg1:T26 Arg2:T25	
+T27	Investigation 1493 1512	ostatnie badanie TK
+T28	Date 1515 1522	11.2018
+R6	Dat Arg1:T28 Arg2:T27	
+T29	Investigation_result 1525 1567	przebieg drenu dosercowego trudny do oceny
+R7	Inv Arg1:T27 Arg2:T29	
+T30	Investigation_result 1569 1617	końcówka najprawdopodobniej w prawym przedsionku
+R8	Inv Arg1:T27 Arg2:T30	
+T31	Symptom 1649 1671	nasilenia w.w. objawów
+R9	Dat Arg1:T26 Arg2:T23	
+T32	Condition 1685 1695	wodogłowie
+N16	Reference T32 ICD10:G91	Wodogłowie
+T33	Condition 1697 1717	zespół Chiariiego II
+N17	Reference T33 ICD10:Q07.0	Zespół Arnolda-Chiariego
+T34	Condition 1719 1751	niedowład wiatki kończyn dolnych
+N18	Reference T34 ICD10:G82.0	Wiotkie porażenie kończyn dolnych
+T35	Treatment 1761 1769	plastyce
+N19	Reference T35 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T36	Condition 1831 1849	pęcherz neurogenny
+N20	Reference T36 ICD10:N31.9	Nerwowo-mięśniowa dysfunkcja pęcherza moczowego, nieokreślona
+T37	Treatment 1859 1867	operacji
+N21	Reference T37 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T38	Condition 1898 1922	Torbiele okołojajowodowe
+N22	Reference T38 ICD10:N83.8	Inne niezapalne choroby jajnika, jajowodu i więzadła szerokiego macicy
+T39	Condition 1924 1959	tłuszczak skóry biodra i uda lewego
+N23	Reference T39 ICD10:D17.2	Tłuszczak skóry i tkanki podskórnej kończyn
+T40	Condition 2017 2020	WZW
+N24	Reference T40 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T41	Condition 2029 2038	borelioza
+N25	Reference T41 ICD10:A69.2	Choroba z Lyme
+T42	Condition 2046 2054	gruźlica
+N26	Reference T42 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T43	Condition 2059 2063	odra
+N27	Reference T43 ICD10:B05	Odra
+T44	Negation 2021 2026	( - )
+T45	Negation 2039 2044	( - )
+T46	Negation 2054 2057	(-)
+T47	Negation 2064 2067	(-)
+R10	Neg Arg1:T44 Arg2:T40	
+R11	Neg Arg1:T45 Arg2:T41	
+R12	Neg Arg1:T46 Arg2:T42	
+R13	Neg Arg1:T47 Arg2:T43	
+T48	Behaviour 2068 2083	Palenie tytoniu
+T49	Negation 2085 2088	nie
+T50	Behaviour 2089 2100	Inne używki
+T51	Negation 2102 2105	nie
+T52	Condition 2106 2123	Uczulenia: lateks
+N28	Reference T52 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T53	Behaviour 2140 2166	warunki mieszkaniowe dobre
+T54	Behaviour 2168 2173	panna
+T55	Behaviour 2175 2185	bezdzietna
+T56	Drug 2192 2197	Acard
+T57	Drug_dose 2198 2218	75 mg co drugi dzień
+T58	Drug 2220 2246	leki wyjaławiające pęcherz
+R14	Drg Arg1:T56 Arg2:T57	
+T59	Investigation 2261 2271	Echo serca
+R15	Neg Arg1:T49 Arg2:T48	
+R16	Neg Arg1:T51 Arg2:T50	
+N29	Reference T48 ICD10:Z72.0	Używanie tytoniu
+N2	Reference T2 ICD10:Z98.2	Obecność urządzenia do drenażu płynu mózgowo-rdzeniowego
+N14	Reference T23 ICD10:Z98.2	Obecność urządzenia do drenażu płynu mózgowo-rdzeniowego
+R3	Dat Arg1:T26 Arg2:T22	
+T24	Condition 619 679	przepukliny oponowo-rdzeniowej odcinka piersiowo-lędźwiowego
+N30	Reference T24 ICD10:Q05	Rozszczep kręgosłupa
+#1	AnnotatorNotes T24	Q05.6 + Q05.7
+T60	Condition 759 787	torbieli wewnątrzotrzewnowej
+T61	Condition 1770 1829	przepukliny oponowo-rdzeniowe odcinka piersiowo lędźwiowego
+N31	Reference T61 ICD10:Q05	Rozszczep kręgosłupa
+#2	AnnotatorNotes T61	Q05.6 + Q05.7
+T62	Condition 1868 1896	torbieli wewnątrzotrzewnowej
+A1	Status T6 Historical_Insignificant
+A2	Status T8 Historical_Insignificant
+A3	Status T9 Historical_Insignificant
+A4	Status T10 Historical_Insignificant
+A5	Status T13 Historical_Insignificant
+A6	Status T35 Historical_Insignificant
+A7	Status T36 Historical_Insignificant
+A8	Status T37 Historical_Insignificant
+A9	Status T38 Historical_Insignificant
+A10	Status T39 Historical_Insignificant

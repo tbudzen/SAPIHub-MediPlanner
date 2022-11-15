@@ -1,0 +1,135 @@
+T1	Investigation 3228 3238	Echo serca
+T2	Investigation 3241 3256	Holter EKG i RR
+T3	Investigation 3260 3286	angio-CT tętnic wieńcowych
+T4	Negation 3191 3213	bez leków przewlekłych
+T5	Drug 3185 3189	Leki
+R1	Neg Arg1:T4 Arg2:T5	
+T6	Behaviour 3140 3166	warunki mieszkaniowe dobre
+T7	Investigation 3015 3018	EKG
+T8	Investigation_result 3019 3031	Oś pośrednia
+T9	Investigation_result 3034 3048	RZ  ok 100/min
+T10	Investigation_result 3050 3122	Płasko ujemne załamki T w III, Bez istotnych zmian w zakresie odcinka ST
+R2	Inv Arg1:T7 Arg2:T8	
+R3	Inv Arg1:T7 Arg2:T9	
+R4	Inv Arg1:T7 Arg2:T10	
+T11	Drug 3002 3011	Pyralginę
+T12	Condition 2969 3001	Uczulenia: podejrzenia uczulenia
+A1	Source T12 Declared
+N1	Reference T12 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R5	Alg Arg1:T12 Arg2:T11	
+T13	Negation 2965 2968	nie
+T14	Negation 2948 2951	nie
+T15	Behaviour 2952 2963	Inne używki
+N2	Reference T15 ICD10:Z72	Problemy związane ze stylem życia
+R6	Neg Arg1:T13 Arg2:T15	
+T16	Behaviour 2931 2946	Palenie tytoniu
+N3	Reference T16 ICD10:Z72.0	Używanie tytoniu
+R7	Neg Arg1:T14 Arg2:T16	
+T17	Condition 2876 2887	zawał serca
+N4	Reference T17 ICD10:I25.2	Przebyty zawał serca
+A2	Status T17 Family
+T18	Condition 2896 2904	cukrzyca
+A3	Status T18 Family
+N5	Reference T18 ICD10:E14	Cukrzyca nieokreślona
+T19	Condition 2907 2928	nadciśnienie tętnicze
+A4	Status T19 Family
+N6	Reference T19 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T20	Condition 2815 2818	WZW
+N7	Reference T20 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T21	Condition 2828 2837	borelioza
+N8	Reference T21 ICD10:A69.2	Choroba z Lyme
+T22	Negation 2838 2843	( - )
+R8	Neg Arg1:T22 Arg2:T21	
+T23	Negation 2819 2825	( -  )
+R9	Neg Arg1:T23 Arg2:T20	
+T24	Negation 2782 2786	brak
+T25	Treatment 2760 2779	Leczenie przewlekłe
+T26	Treatment 2736 2753	Przebyte operacje
+R10	Neg Arg1:T24 Arg2:T25	
+T27	Condition 2718 2728	grasiczaka
+N9	Reference T27 ICD10:D15	Nowotwór niezłośliwy innych i nieokreślonych narządów klatki piersiowej
+T28	Date 2729 2733	2014
+T29	Treatment 2708 2717	usunięciu
+R11	Dat Arg1:T28 Arg2:T27	
+R12	Dat Arg1:T28 Arg2:T29	
+T30	Condition 2659 2693	Pierwotna nadczynność przytarczycy
+N10	Reference T30 ICD10:E21.0	Pierwotna nadczynność przytarczyc
+T31	Date 2694 2698	2013
+R13	Dat Arg1:T31 Arg2:T30	
+T32	Condition 2599 2640	Łagodna niedomykalność zastawki mitralnej
+N11	Reference T32 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T33	Condition 500 541	Łagodna niedomykalność zastawki mitralnej
+N12	Reference T33 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T34	Condition 450 498	Umiarkowana niedomykalność zastawki trójdzielnej
+N13	Reference T34 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T35	Condition 2643 2655	trójdzielnej
+N14	Reference T35 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T36	Condition 2550 2596	Wypadanie płatka przedniego zastawki mitralnej
+N15	Reference T36 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T37	Condition 584 618	niewielkim przeciekiem lewo prawym
+T38	Condition 543 581	Tętniak przegrody międzyprzedsionkowej
+N16	Reference T38 ICD10:Q21.8	Inna wrodzona wada rozwojowa przegród serca
+T39	Condition 621 655	Nadkomorowe zaburzenia rytmu serca
+N17	Reference T39 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T40	Condition 658 679	pobudzenia pojedyncze
+N18	Reference T40 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T41	Condition 685 689	pary
+N19	Reference T41 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T42	Condition 693 727	Pierwotna nadczynność przytarczycy
+N20	Reference T42 ICD10:E21.0	Pierwotna nadczynność przytarczyc
+T43	Date 728 732	2013
+R14	Dat Arg1:T43 Arg2:T42	
+T44	Condition 752 762	grasiczaka
+N21	Reference T44 ICD10:D15	Nowotwór niezłośliwy innych i nieokreślonych narządów klatki piersiowej
+T45	Date 763 767	2014
+T46	Treatment 742 751	usunięciu
+R15	Dat Arg1:T45 Arg2:T44	
+R16	Dat Arg1:T45 Arg2:T46	
+T47	Treatment 877 959	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Neurologicznej.
+T48	Behaviour 960 1000	Dieta lekkostrawna , niskocholesterolowa
+T49	Investigation 1013 1088	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek.
+T50	Investigation 1099 1131	oznaczenie kreatyniny , mocznika
+T51	Date 1132 1140	za 3 dni
+R17	Dat Arg1:T51 Arg2:T50	
+T52	Behaviour 1159 1277	Zalecono modyfikację trybu życia ( redukację masy ciała , systematyczna aktywność fizyczna , dieta nikocholesterolowa)
+T53	Investigation 1294 1329	kontrola ciśnienia tętniczego krwi.
+T54	Drug 1450 1453	BLW
+T55	Drug 1455 1463	Metocard
+T56	Drug 1465 1477	Hydroxyzinum
+T57	Symptom 1876 1931	nawracających dolegliwości bólowych w klatce piersiowej
+N22	Reference T57 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T58	Symptom 1934 1964	pogorszenia tolerancji wysiłku
+N23	Reference T58 ICD10:R53	Złe samopoczucie i zmęczenie
+T59	Symptom 1965 1989	, duszności wysiłkowych.
+N24	Reference T59 ICD10:R06.0	Duszność
+T60	Symptom 1990 2033	Bóle w klatce piersiowej występują uciskowe
+N25	Reference T60 ICD10:R07.3	Inne bóle w klatce piersiowej
+T61	Date 2034 2041	od 2009
+R18	Dat Arg1:T61 Arg2:T60	
+T62	Symptom 2044 2086	związane z niska temperaturą, przy wysiłku
+R19	Dat Arg1:T61 Arg2:T62	
+T63	Investigation 2089 2100	SPECT serca
+T64	Date 2110 2117	07.2009
+R20	Dat Arg1:T64 Arg2:T63	
+T65	Investigation_result 2120 2229	obserwuje się niewielkiego stopnia indukowane wysiłkiem niedokrwienie w zakresie ściany przednio-przegrodowej
+R21	Dat Arg1:T64 Arg2:T65	
+R22	Inv Arg1:T63 Arg2:T65	
+T66	Symptom 2254 2271	uczucie duszności
+N26	Reference T66 ICD10:R06.0	Duszność
+T67	Symptom 2281 2300	utraty przytomności
+N27	Reference T67 ICD10:R55	Omdlenie i zapaść
+T68	Negation 2274 2280	neguje
+R23	Neg Arg1:T68 Arg2:T67	
+T69	Symptom 2319 2366	jest w stanie wejść na II pietro bez przystanku
+T70	Symptom 2437 2452	kołatania serca
+N28	Reference T70 ICD10:R00.2	Kołatanie serca
+T71	Symptom 2463 2475	zasłabnięcia
+N29	Reference T71 ICD10:R55	Omdlenie i zapaść
+T72	Negation 2456 2462	Neguje
+R24	Neg Arg1:T72 Arg2:T71	
+T73	Condition 2516 2533	polipu edometrium
+N30	Reference T73 ICD10:N84.0	Polip trzonu macicy
+T74	Treatment 2498 2515	zabiegu usunięcia
+T75	Symptom 2371 2393	Nasilenie dolegliwości
+T76	Date 2394 2409	od 3-4 miesięcy
+R25	Dat Arg1:T76 Arg2:T75	

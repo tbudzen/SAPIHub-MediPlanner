@@ -1,0 +1,79 @@
+T1	Treatment 340 398	dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T2	Treatment 401 435	okresową oceną echokardiograficzną
+T3	Behaviour 439 470	Ograniczenie wysiłku fizycznego
+T4	Date 471 506	do czasu wykonania badań obrazowych
+T5	Behaviour 511 569	Dieta lekkostrawna z ograniczeniem tłuszczów zwierzęcych i
+T6	Condition 799 890	Wrodzona wada serca pod postacią dwupłatkowej zastawki aortalnej z łagodną niedomykalnością
+T7	Condition 895 939	Łagodna niedomykalność zastawki trójdzielnej
+T8	Condition 942 971	niskim prawdopodobieństwem PH
+T9	Condition 977 1015	Nadciśnienie tętnicze I st. wg ESC/ESH
+T10	Behaviour 1020 1030	Nikotynizm
+T11	Investigation_result 1175 1178	BAV
+T12	Investigation_result 1181 1204	ekscentryczną IA II st.
+T13	Investigation 1206 1209	TTE
+T14	Date 1212 1222	13/11/2018
+T15	Symptom 1261 1324	ograniczenia tolerancji wysiłku podczas uprawiania piłki nożnej
+T16	Symptom 1337 1389	zmęczenie pojawia się po godzinie wysiłku fizycznego
+T17	Date 1391 1404	w przeszłości
+T18	Symptom 1405 1422	takich ograniczeń
+T19	Negation 1423 1439	nie zaobserwował
+T20	Negation 1462 1468	Neguje
+T21	Symptom 1469 1481	zasłabnięcia
+T22	Symptom 1483 1492	duszności
+T23	Symptom 1494 1525	typowe bóle w klatce piersiowej
+T24	Treatment 1527 1544	Przebyte operacje
+T25	Negation 1547 1553	neguje
+T26	Condition 1581 1584	WZW
+troby
+T27	Condition 1593 1602	borelioza
+T28	Condition 1610 1618	gruźlica
+T29	Negation 1585 1590	( - )
+T30	Negation 1603 1608	( - )
+T31	Negation 1619 1622	(-)
+T32	Condition 1658 1668	wadę serca
+T33	Behaviour 1703 1735	Palenie tytoniu: tak, 0,5 paczki
+T34	Date 1736 1744	od 3 lat
+T35	Behaviour 1745 1756	Inne używki
+T36	Negation 1758 1761	nie
+T37	Condition 1762 1771	Uczulenia
+T38	Negation 1773 1779	neguje
+T39	Behaviour 1796 1822	warunki mieszkaniowe dobre
+T40	Behaviour 1825 1842	mieszka z rodziną
+T41	Drug 1843 1847	Leki
+T42	Negation 1849 1853	brak
+N1	Reference T6 ICD10:Q23.1	Wrodzona niedomykalnoÅÄ zastawki aortalnej
+N2	Reference T7 ICD10:I07.1	NiedomykalnoÅÄ zastawki trÃ³jdzielnej
+N3	Reference T9 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N4	Reference T10 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N5	Reference T11 ICD10:Q23.1	Wrodzona niedomykalnoÅÄ zastawki aortalnej
+N6	Reference T15 ICD10:R53	ZÅe samopoczucie i zmÄczenie
+N7	Reference T16 ICD10:R53	ZÅe samopoczucie i zmÄczenie
+N8	Reference T21 ICD10:R55	Omdlenie i zapaÅÄ
+N9	Reference T22 ICD10:R06.0	DusznoÅÄ
+N10	Reference T23 ICD10:R07.3	
+N11	Reference T24 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N12	Reference T26 ICD10:B19	NieokreÅlone wirusowe zapalenie wÄtroby
+N13	Reference T27 ICD10:A69.2	Choroba z Lyme
+N14	Reference T28 ICD10:A15	GruÅºlica ukÅadu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N15	Reference T33 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N16	Reference T35 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+N17	Reference T37 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+R1	Dat Arg1:T4 Arg2:T5
+R15	Neg Arg1:T20 Arg2:T22
+R16	Neg Arg1:T20 Arg2:T23
+R17	Dat Arg1:T17 Arg2:T15
+R18	Dat Arg1:T17 Arg2:T16
+R19	Dat Arg1:T17 Arg2:T18
+R23	Neg Arg1:T25 Arg2:T24
+R24	Neg Arg1:T29 Arg2:T26
+R29	Neg Arg1:T30 Arg2:T27
+R3	Inv Arg1:T13 Arg2:T12
+R34	Neg Arg1:T31 Arg2:T28
+R38	Neg Arg1:T36 Arg2:T35
+R4	Dat Arg1:T14 Arg2:T13
+R42	Neg Arg1:T38 Arg2:T37
+R53	Neg Arg1:T42 Arg2:T41
+R55	Dat Arg1:T34 Arg2:T33
+R56	Dat Arg1:T34 Arg2:T35
+R8	Neg Arg1:T19 Arg2:T21
+A1	Status T32 Family

@@ -1,0 +1,109 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 358 423	okresowa kontrola kardiologiczna, endokrynologiczna, onkologiczna
+T3	Treatment 424 487	wskazana konsultacja psychiatryczna w warunkach ambulatoryjnych
+T4	Investigation 488 517	okresowa kontrola lipidogramu
+T5	Behaviour 519 544	dieta niskocholesterolowa
+T6	Behaviour 546 591	stały, umiarkowany, aerobowy wysiłek fizyczny
+T7	Treatment 592 620	regularne przyjmowanie leków
+T8	Drug 622 630	Toramide
+T9	Drug_dose 631 649	10 mg 1 tabl. rano
+R1	Drg Arg1:T8 Arg2:T9	
+T10	Drug 650 656	Vivace
+T11	Drug_dose 657 674	5 mg 1 tabl. rano
+R2	Drg Arg1:T10 Arg2:T11	
+T12	Drug 675 682	Amlozek
+T13	Drug_dose 683 706	10 mg 1 tabl. wieczorem
+R3	Drg Arg1:T12 Arg2:T13	
+T14	Drug 707 716	Nootropil
+T15	Drug_dose 717 750	1200 mg 1 tabl. rano i w południe
+R4	Drg Arg1:T14 Arg2:T15	
+T16	Condition 968 988	Bradykardia zatokowa
+N1	Reference T16 ICD10:R00.1	Bradykardia, nieokreślona
+T17	Condition 990 1019	Przewlekła niewydolność serca
+N2	Reference T17 ICD10:I50	Niewydolność serca
+T18	Symptom 1020 1038	w II/III' wg. NYHA
+N3	Reference T18 ICD10:I50	Niewydolność serca
+T19	Condition 1039 1087	z zachowaną frakcją wyrzutową lewej komory serca
+N4	Reference T19 ICD10:I50	Niewydolność serca
+T20	Condition 1089 1110	Nadciśnienie tętnicze
+N5	Reference T20 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T21	Condition 1112 1132	Hipercholesterolemia
+N6	Reference T21 ICD10:E78.0	Czysta hipercholesterolemia
+T22	Treatment 1133 1146	leczona dietą
+T23	Condition 1148 1183	Subkliniczna niedoczynność tarczycy
+N7	Reference T23 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T24	Condition 1185 1218	Choroba zwyrodnieniowa kręgosłupa
+N8	Reference T24 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T25	Treatment 1229 1263	usunięciu płuca lewego z powodu ca
+N9	Reference T25 ICD10:C78.0	Wtórny nowotwór złośliwy płuc
+T26	Treatment 1267 1294	limfoadenektomią regionalna
+T27	Date 1297 1301	2015
+R5	Dat Arg1:T27 Arg2:T26	
+R6	Dat Arg1:T27 Arg2:T25	
+T28	Treatment 1314 1327	chemioterapii
+T29	Date 1330 1337	11.2015
+R7	Dat Arg1:T29 Arg2:T28	
+T30	Condition 1491 1526	niewydolnością serca z zachowaną EF
+N10	Reference T30 ICD10:I50	Niewydolność serca
+T31	Condition 1528 1551	nadciśnieniem tętniczym
+N11	Reference T31 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T32	Condition 1555 1588	chorobą zwyrodnieniową kręgosłupa
+N12	Reference T32 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T33	Treatment 1593 1627	usunięciu płuca lewego z powodu ca
+N13	Reference T33 ICD10:C78.0	Wtórny nowotwór złośliwy płuc
+T34	Date 1629 1634	2015r
+R8	Dat Arg1:T34 Arg2:T33	
+T35	Treatment 1638 1664	limfadenektomią regionalną
+R9	Dat Arg1:T34 Arg2:T35	
+T36	Treatment 1669 1682	chemioterapii
+T37	Date 1684 1689	2015r
+R10	Dat Arg1:T37 Arg2:T36	
+T38	Condition 1692 1729	subkliniczna niedoczynnością tarczycy
+N14	Reference T38 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T39	Symptom 1760 1778	złego samopoczucia
+N15	Reference T39 ICD10:R53	Złe samopoczucie i zmęczenie
+T40	Investigation_result 1795 1826	bradykardii zatokowej do 45/min
+N16	Reference T40 ICD10:R00.1	Bradykardia, nieokreślona
+T41	Investigation 1829 1845	spoczynkowym EKG
+R11	Inv Arg1:T41 Arg2:T40	
+T42	Symptom 1848 1879	Kontrakt z pacjentką utrudniony
+N17	Reference T42 ICD10:R41.0	Dezorientacja, nieokreślona
+T43	Symptom 1881 1899	zaburzenia pamięci
+N18	Reference T43 ICD10:F06.7	Łagodne zaburzenia procesów poznawczych
+T44	Treatment 1901 1918	Przebyte operacje
+T45	Treatment 1925 1944	Leczenie przewlekłe
+T46	Treatment 1946 1958	onkologiczne
+T47	Condition 1986 1989	WZW
+N19	Reference T47 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T48	Condition 1991 2000	borelioza
+N20	Reference T48 ICD10:A69.2	Choroba z Lyme
+T49	Negation 2003 2013	nie podaje
+R12	Neg Arg1:T49 Arg2:T48	
+R13	Neg Arg1:T49 Arg2:T47	
+T50	Condition 2014 2029	Wywiad rodzinny
+T51	Negation 2031 2041	nieistotny
+R14	Neg Arg1:T51 Arg2:T50	
+T52	Behaviour 2042 2057	Palenie tytoniu
+N21	Reference T52 ICD10:Z72.0	Używanie tytoniu
+T53	Date 2059 2072	w przeszłości
+R15	Dat Arg1:T53 Arg2:T52	
+T54	Behaviour 2078 2088	1 paczka/d
+N22	Reference T54 ICD10:Z72.0	Używanie tytoniu
+R16	Dat Arg1:T53 Arg2:T54	
+T55	Behaviour 2090 2101	Inne używki
+T56	Negation 2103 2113	nie podaje
+R17	Neg Arg1:T56 Arg2:T55	
+T57	Condition 2114 2123	Uczulenia
+N23	Reference T57 ICD10:T78.4	Alergia, nieokreślona
+T58	Negation 2125 2135	nie podaje
+R18	Neg Arg1:T58 Arg2:T57	
+T59	Behaviour 2170 2178	emerytka
+T60	Behaviour 2180 2194	praca umysłowa
+T61	Date 2195 2208	w przeszłości
+R19	Dat Arg1:T61 Arg2:T60	
+T62	Drug 2216 2222	Vivace
+T63	Drug_dose 2223 2246	10 mg 1 tabl. wieczorem
+R20	Drg Arg1:T62 Arg2:T63	
+T64	Investigation 2274 2284	Holter-EKG
+T65	Investigation 2287 2305	RTG kl. piersiowej
+N24	Reference T55 ICD10:Z72	Problemy związane ze stylem życia

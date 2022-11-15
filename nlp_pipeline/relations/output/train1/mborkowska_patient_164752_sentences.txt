@@ -1,0 +1,597 @@
+allRelations          : 29
+oks                   : 15
+isRedundantAndRemoveds: 13
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 0
+GOOD / BAD            : 28 / 1
+Sentence 0:
+------------------------------------------------
+Wiek: 60 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Choroba niedokrwienna serca małych naczyń.
+
+
+Sentence 6:
+Nadciśnienie tętnicze.
+
+
+Sentence 7:
+Napadowy częstoskurcz przedsionkowy.
+
+
+Sentence 8:
+Hipercholesterolemia.
+
+
+Sentence 9:
+Cukrzyca typu 2 świeżo rozpoznana.
+
+
+Sentence 10:
+Nietolerancja ACEI (kaszel).
+
+
+Sentence 11:
+Nietrzymanie moczu.
+
+
+Sentence 12:
+W przeszłości niedoczynność tarczycy.
+
+
+Sentence 13:
+Stan po operacji przepukliny jądra miażdżystego krążka międzykręgowego L4-L5 (2012, 2014).
+R1	Dat Arg1:T10 Arg2:T53 << OK >>	2012 -> przepukliny jądra miażdżystego krążka międzykręgowego L4-L5  <RANK: 3> <info: start[764, 703] <type: LEFT>>
+R2	Dat Arg1:T10 Arg2:T9 << OK >>	2012 -> operacji  <RANK: 3> <info: start[764, 694] <type: LEFT>>
+R3	Dat Arg1:T11 Arg2:T53 << OK >>	2014 -> przepukliny jądra miażdżystego krążka międzykręgowego L4-L5  <RANK: 2> <info: start[770, 703] <type: LEFT>>
+R4	Dat Arg1:T11 Arg2:T9 <<SHOULD NOT BE REMOVED>>	2014 -> operacji <:REMOVED other second tag between (left):> <RANK: 2> <info: start[770, 694] <type: LEFT>>
+
+
+Sentence 14:
+Stan po panhisterektomii (2002).
+
+R5	Dat Arg1:T13 Arg2:T12 << OK >>	2002 -> panhisterektomii  <RANK: 3> <info: start[803, 785] <type: LEFT>>
+
+
+Sentence 15:
+------------------------------------------------
+
+
+
+Sentence 16:
+Zastosowane leczenie
+
+
+
+Sentence 17:
+------------------------------------------------
+Nebilet, Captopril, 0,9% NaCl, Zahron, Telmix,
+------------------------------------------------
+
+
+
+Sentence 18:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 19:
+- kontrola u lekarza POZ
+- dieta cukrzycowa niskocholesterolowa 
+- kontrola lipidogramu za 3 m-ce
+- dalsza kontrola w Poradni Neurologicznej i Kardiologicznej
+
+
+
+Sentence 20:
+- regularne przyjmowanie leków:
+Nebilet 5mg 1x 1 tabl/rano\x0
+------------------------------------------------
+
+R6	Drg Arg1:T19 Arg2:T20 << OK >>	Nebilet -> 5mg 1x 1 tabl/rano  <RANK: 3> <info: start[1275, 1283] <type: RIGHT>>
+
+
+Sentence 21:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 22:
+Pacjentka 60-letnia, przyjęta do Kliniki z powodu labilnych wartości ciśnienia tętniczego oraz bólów zamostkowych głównie w pozycji leżącej i podczas snu.
+
+
+Sentence 23:
+Dolegliwości występują od ok. 6 miesięcy.
+
+
+
+Sentence 24:
+W wywiadzie: nadciśnienie tętnicze od ok. 3 lat, nietolerancja ACEI (kaszel), nietrzymanie moczu, w przeszłości niedoczynność tarczycy.
+
+R7	Dat Arg1:T30 Arg2:T26 <<REDUNDANT!!!REMOVED>>	przeszłości -> nadciśnienie tętnicze <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1726, 1639] <type: LEFT>>
+R8	Dat Arg1:T30 Arg2:T27 <<REDUNDANT!!!REMOVED>>	przeszłości -> nietolerancja ACEI (kaszel) <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1726, 1675] <type: LEFT>>
+R9	Dat Arg1:T30 Arg2:T28 <<REDUNDANT!!!REMOVED>>	przeszłości -> nietrzymanie moczu <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1726, 1704] <type: LEFT>>
+R10	Dat Arg1:T30 Arg2:T29 << OK >>	przeszłości -> niedoczynność tarczycy  <RANK: 3> <info: start[1726, 1738] <type: RIGHT>>
+
+
+Sentence 25:
+Przebyte operacje: stan po operacji przepukliny jadra miażdżystego krążka międzykręgowego L4-L5 (2012, 2014r), po panhisterctomii (2002r)
+
+R11	Dat Arg1:T32 Arg2:T31 << OK >>	2012 -> operacji przepukliny jadra miażdżystego krążka międzykręgowego L4-L5  <RANK: 3> <info: start[1859, 1789] <type: LEFT>>
+R12	Dat Arg1:T32 Arg2:T34 <<REDUNDANT!!!REMOVED>>	2012 -> panhisterctomii <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1859, 1876] <type: RIGHT>>
+R13	Dat Arg1:T33 Arg2:T31 << OK >>	2014r -> operacji przepukliny jadra miażdżystego krążka międzykręgowego L4-L5  <RANK: 2> <info: start[1865, 1789] <type: LEFT>>
+R14	Dat Arg1:T33 Arg2:T34 <<REDUNDANT!!!REMOVED>>	2014r -> panhisterctomii <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1865, 1876] <type: RIGHT>>
+R15	Dat Arg1:T35 Arg2:T31 <<REDUNDANT!!!REMOVED>>	2002r -> operacji przepukliny jadra miażdżystego krążka międzykręgowego L4-L5 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1893, 1789] <type: LEFT>>
+R16	Dat Arg1:T35 Arg2:T34 << OK >>	2002r -> panhisterctomii  <RANK: 3> <info: start[1893, 1876] <type: LEFT>>
+
+
+Sentence 26:
+Przebyte choroby zakaźne - WZW, borelioza - nie podaje
+Wywiad rodzinny: nieistotny
+
+R17	Neg Arg1:T38 Arg2:T36 << OK >>	nie podaje -> WZW  <RANK: 2> <info: start[1944, 1927] <type: LEFT>>
+R18	Neg Arg1:T38 Arg2:T37 << OK >>	nie podaje -> borelioza  <RANK: 3> <info: start[1944, 1932] <type: LEFT>>
+R19	Neg Arg1:T38 Arg2:T41 <<REDUNDANT!!!REMOVED>>	nie podaje -> Wywiad rodzinny <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1944, 1955] <type: RIGHT>>
+R20	Neg Arg1:T39 Arg2:T36 <<REDUNDANT!!!REMOVED>>	nieistotny -> WZW <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1972, 1927] <type: LEFT>>
+R21	Neg Arg1:T39 Arg2:T37 <<REDUNDANT!!!REMOVED>>	nieistotny -> borelioza <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1972, 1932] <type: LEFT>>
+R22	Neg Arg1:T39 Arg2:T41 << OK >>	nieistotny -> Wywiad rodzinny  <RANK: 3> <info: start[1972, 1955] <type: LEFT>>
+
+
+Sentence 27:
+Palenie tytoniu: nie podaje
+Inne używki: okazjonalnie
+Uczulenia: nie podaje
+Status społeczny: emerytka, wcześniej praca fizyczna, mieszka z mężem i córką
+
+R23	Neg Arg1:T40 Arg2:T45 <<REDUNDANT!!!REMOVED>>	nie podaje -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2000, 2037] <type: RIGHT>>
+R24	Neg Arg1:T40 Arg2:T42 << OK >>	nie podaje -> Palenie tytoniu  <RANK: 3> <info: start[2000, 1983] <type: LEFT>>
+R25	Neg Arg1:T40 Arg2:T43 <<REDUNDANT!!!REMOVED>>	nie podaje -> Inne używki: okazjonalnie <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2000, 2011] <type: RIGHT>>
+R26	Neg Arg1:T44 Arg2:T45 << OK >>	nie podaje -> Uczulenia  <RANK: 3> <info: start[2048, 2037] <type: LEFT>>
+R27	Neg Arg1:T44 Arg2:T42 <<REDUNDANT!!!REMOVED>>	nie podaje -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2048, 1983] <type: LEFT>>
+R28	Neg Arg1:T44 Arg2:T43 <<REDUNDANT!!!REMOVED>>	nie podaje -> Inne używki: okazjonalnie <:REMOVED other second tag between (left):> <RANK: 1> <info: start[2048, 2011] <type: LEFT>>
+
+
+Sentence 28:
+Leki:
+Nebilet 5 mg 1 tal.
+R29	Drg Arg1:T46 Arg2:T47 << OK >>	Nebilet -> 5 mg 1 tal. rano  <RANK: 3> <info: start[2143, 2151] <type: RIGHT>>
+
+
+Sentence 29:
+rano
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter, RTG kl. piersiowej.
+
+
+
+Sentence 30:
+Przewidywana liczba dni hospitalizacji: 4-5 dni
+------------------------------------------------
+
+
+
+Sentence 31:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 32:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.24[10^3/ul]
+    
+
+
+Sentence 33:
+RBC Krwinki czerwone:4.80[10^6/ul]
+    
+
+
+Sentence 34:
+HGB Hemoglobina:14.2[g/dl]
+    
+
+
+Sentence 35:
+HCT Hematokryt:42.4[%]
+    
+
+
+Sentence 36:
+MCV wskaźnik czerwonokrw:88.3[fl]
+    
+
+
+Sentence 37:
+MCH wskaźnik czerwonokrw:29.6[pg]
+    
+
+
+Sentence 38:
+MCHC wskaźnik czerwonokr:33.5[g/dl]
+    
+
+
+Sentence 39:
+PLT z morfologii:222[10^3/ul]
+    
+
+
+Sentence 40:
+RDW-SD:41.1[fl]
+    
+
+
+Sentence 41:
+RDW-CV:12.6[%]
+    PDW:11.5[fl]
+    MPV:10.0[fl]
+    
+
+
+Sentence 42:
+P-LCR:25.2[%]
+    
+
+
+Sentence 43:
+PCT (hematokryt płytkowy:0.22[%]
+    
+
+
+Sentence 44:
+NEUTR# wartość bezwzględ:3.70[10^3/ul]
+    
+
+
+Sentence 45:
+NEUTR%:51.1[%]
+    
+
+
+Sentence 46:
+LYMH# wartość bezwzględn:2.79[10^3/ul]
+    
+
+
+Sentence 47:
+LYMPH%:38.5[%]
+    
+
+
+Sentence 48:
+MONO# wartość bezwzględn:0.57[10^3/ul]
+    MONO%:7.9[%]
+    
+
+
+Sentence 49:
+EO# wartość bezwzględna:0.13[10^3/ul]
+    
+
+
+Sentence 50:
+EO%:1.8[%]
+    BASO# wartość bezwzględn:0.05[10^3/ul]
+    BASO%:0.7[%]
+    
+
+
+Sentence 51:
+NRBC %:0.0[%]
+    
+
+
+Sentence 52:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 53:
+Badanie ogólne moczu
+    
+
+
+Sentence 54:
+barwa:żółty[ ]
+    
+
+
+Sentence 55:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 56:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 57:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 58:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 59:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 60:
+ciężar właściwy:1.027[ ]
+    pH:5.0[ ]
+    
+
+
+Sentence 61:
+białko:nieobecne[ ]
+    
+
+
+Sentence 62:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 63:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 64:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 65:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 66:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 67:
+nabłonki płaskie:liczne[w preparacie]
+    
+
+
+Sentence 68:
+nabłonki okrągłe:pojedyncze[w preparacie]
+    leukocyty:19 /ul[ul]
+    erytrocyty świeże:2 /ul[ul]
+    śluz:
+
+
+Sentence 69:
+obfity[w preparacie]
+    bakterie:nieliczne[w preparacie]
+    kryształy szczawianu wap:nieliczne[w preparacie]
+
+
+
+Sentence 70:
+TSH: TSH:1.53[uIU/ml]
+
+
+
+Sentence 71:
+FT3: FT3:3.40[pg/ml]
+
+
+
+Sentence 72:
+FT4: FT4:1.28[ng/dl]
+
+
+
+Sentence 73:
+ALAT: ALAT:30[U/L]
+ASPAT: ASPAT:24[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.57[mg/dl]
+
+
+
+Sentence 74:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 75:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 76:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 77:
+Potas (K): Potas:4.9[mmol/L]
+
+
+
+Sentence 78:
+Hemoglobina glikowana (HbA1c)
+    :7.07[%]
+    :54[mmol/mol]
+
+
+
+Sentence 79:
+Kreatynina + GFR
+    
+
+
+Sentence 80:
+Kreatynina w surowicy:0.68[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 81:
+MDRD ze stan:88.3[ml/min/1,73 m^2]
+
+
+
+Sentence 82:
+Kreatynina + GFR
+    
+
+
+Sentence 83:
+Kreatynina w surowicy:0.70[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 84:
+MDRD ze stan:85.4[ml/min/1,73 m^2]
+
+
+
+Sentence 85:
+Mocznik: Mocznik:43[mg/dl]
+
+
+
+Sentence 86:
+Mocznik: Mocznik:29[mg/dl]
+
+
+
+Sentence 87:
+Kwas moczowy: Kwas moczowy:5.0[mg/dl]
+
+
+
+Sentence 88:
+Lipidogram
+    
+
+
+Sentence 89:
+Cholesterol całkowity:203[mg/dl]
+    
+
+
+Sentence 90:
+Cholesterol HDL:49[mg/dl]
+    
+
+
+Sentence 91:
+Cholestrol LDL:144[mg/dl]
+    
+
+
+Sentence 92:
+Triglicerydy:110[mg/dl]
+    
+
+
+Sentence 93:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:130[mg/dl]
+
+
+
+Sentence 94:
+Glukoza 0 min.: Glukoza 0 min.:116[mg/dl]
+
+
+
+Sentence 95:
+Glukoza 120 min.: Glukoza 120 min.:223[mg/dl]
+
+
+
+Sentence 96:
+------------------------------------------------
+
+
+
+Sentence 97:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 98:
+I10
+I25.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 99:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 100:
+89.501
+C55
+A01
+89.502
+I81
+
+
+
+Sentence 101:
+87.421
+L43
+L55
+N45
+L69
+O55
+I17
+M45
+M37
+I19
+O35
+N13
+88.721
+O69
+
+
+
+Sentence 102:
+------------------------------------------------
+
+

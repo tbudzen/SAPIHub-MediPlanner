@@ -1,0 +1,175 @@
+T1	Treatment 345 372	dalsza opieka w poradni POZ
+T2	Treatment 379 411	okresowa kontrola kardiologiczna
+T3	Treatment 418 515	kontrola endokrynologiczna, gastroenterologiczna, pulmonologiczna, neurologiczna i ginekologiczna
+T4	Investigation 521 584	codzienna kontrola ciśnienia tętniczego i czynności akcji serca
+T5	Investigation 591 620	okresowa kontrola lipidogramu
+T6	Behaviour 627 663	dieta zbliżona do śródziemnomorskiej
+T7	Behaviour 671 716	stały, umiarkowany, aerobowy wysiłek fizyczny
+T8	Treatment 723 751	regularne przyjmowanie leków
+T9	Drug 761 767	Telmix
+T10	Drug_dose 768 791	40 mg 1 tabl. wieczorem
+R1	Drg Arg1:T9 Arg2:T10	
+T11	Drug 800 806	Bibloc
+T12	Drug_dose 807 826	1.25mg 1 tabl. rano
+R2	Drg Arg1:T11 Arg2:T12	
+T13	Drug 835 843	Euthyrox
+T14	Drug_dose 844 861	N 50 1 tabl. rano
+R3	Drg Arg1:T13 Arg2:T14	
+T15	Drug 871 879	Suvardio
+T16	Drug_dose 880 902	5 mg 1 tabl. wieczorem
+R4	Drg Arg1:T15 Arg2:T16	
+T17	Drug 911 932	Levofloxacin Genoptim
+T18	Drug_dose 933 977	5mg/ml - wg dotychczasowych zaleceń okulisty
+R5	Drg Arg1:T17 Arg2:T18	
+T19	Condition 1195 1266	Wada serca pod postacią łagodnej/umiarkowanej niedomykalności mitralnej
+N1	Reference T19 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T20	Condition 1268 1301	tętniaka zastawki otworu owalnego
+N2	Reference T20 ICD10:I25.3	Tętniak serca
+T21	Condition 1307 1348	PFO z nieistotnym przeciekiem lewo-prawym
+N3	Reference T21 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T22	Condition 1350 1383	Nadciśnienie tętnicze skorygowane
+N4	Reference T22 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T23	Condition 1385 1397	Dyslipidemia
+N5	Reference T23 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T24	Treatment 1398 1416	w trakcie leczenia
+T25	Condition 1418 1435	Wole wieloguzkowe
+N6	Reference T25 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T26	Treatment 1436 1470	w trakcie leczenia substytucyjnego
+T27	Condition 1471 1490	w okresie eutyreozy
+N7	Reference T27 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T28	Condition 1492 1520	Choroba wrzodowa dwunastnicy
+A1	Source T28 Declared
+N8	Reference T28 ICD10:K26	Wrzód dwunastnicy
+T29	Treatment 1550 1589	operacji odcinka lędźwiowego kręgosłupa
+A2	Status T29 Historical_Insignificant
+T30	Date 1592 1597	2005r
+R6	Dat Arg1:T30 Arg2:T29	
+T31	Treatment 1608 1616	operacji
+T32	Condition 1617 1634	mięśniaków macicy
+N9	Reference T32 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+T33	Date 1637 1642	2012r
+R7	Dat Arg1:T33 Arg2:T32	
+R8	Dat Arg1:T33 Arg2:T31	
+T34	Treatment 1653 1672	dwukrotnym wycięciu
+T35	Condition 1673 1708	guzka piersi lewej (zmiany łagodne)
+N10	Reference T35 ICD10:D48.6	Pierś
+T36	Condition 1722 1752	zmiany ogniskowej płuca lewego
+N11	Reference T36 ICD10:R91	Nieprawidłowe wyniki diagnostycznych badań obrazowych płuc
+T44	Condition 1793 1802	Uczulenia
+T45	Condition 2035 2071	reumatycznej wady zastawki mitralnej
+A3	Source T45 Declared
+N12	Reference T45 ICD10:I05.9	Choroba zastawki mitralnej, nieokreślona
+T46	Negation 2140 2146	Neguje
+T47	Symptom 2147 2159	zasłabnięcia
+T48	Symptom 2161 2169	omdlenia
+N13	Reference T48 ICD10:R55	Omdlenie i zapaść
+T49	Symptom 2171 2184	zawroty głowy
+N14	Reference T49 ICD10:R42	Zawroty głowy i odurzenie
+T50	Symptom 2186 2196	krwawienia
+T51	Symptom 2198 2211	czarne stolce
+N15	Reference T51 ICD10:K92.1	Stolce smołowate
+T52	Symptom 2213 2229	brunatne wymioty
+N16	Reference T52 ICD10:K92.0	Wymioty krwawe
+T53	Symptom 2231 2245	duszność nocną
+N17	Reference T53 ICD10:R06.0	Duszność
+T54	Symptom 2247 2262	obrzęki podudzi
+N18	Reference T54 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T55	Symptom 2264 2288	bóle w klatce piersiowej
+N19	Reference T55 ICD10:R07	Ból gardła i w klatce piersiowej
+R10	Neg Arg1:T46 Arg2:T55	
+R11	Neg Arg1:T46 Arg2:T54	
+R12	Neg Arg1:T46 Arg2:T53	
+R13	Neg Arg1:T46 Arg2:T52	
+R14	Neg Arg1:T46 Arg2:T51	
+R15	Neg Arg1:T46 Arg2:T50	
+R16	Neg Arg1:T46 Arg2:T49	
+R17	Neg Arg1:T46 Arg2:T48	
+R18	Neg Arg1:T46 Arg2:T47	
+T56	Symptom 2290 2309	Innych dolegliwości
+T57	Negation 2310 2321	nie zgłasza
+R19	Neg Arg1:T57 Arg2:T56	
+T58	Condition 2336 2357	nadciśnienie tętnicze
+N20	Reference T58 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T59	Condition 2359 2376	wole wieloguzkowe
+N21	Reference T59 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T60	Condition 2378 2390	dyslipidemia
+N22	Reference T60 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T61	Condition 2392 2420	choroba wrzodowa dwunastnicy
+A4	Source T61 Declared
+N23	Reference T61 ICD10:K26	Wrzód dwunastnicy
+T62	Treatment 2450 2489	operacji odcinka lędźwiowego kręgosłupa
+A5	Status T62 Historical_Insignificant
+T63	Date 2492 2496	2005
+R20	Dat Arg1:T63 Arg2:T62	
+T64	Treatment 2508 2516	operacji
+T65	Condition 2517 2534	mięśniaków macicy
+N24	Reference T65 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+T66	Date 2537 2541	2012
+R21	Dat Arg1:T66 Arg2:T65	
+R22	Dat Arg1:T66 Arg2:T64	
+T67	Treatment 2553 2572	dwukrotnym wycięciu
+T68	Condition 2573 2608	guzka piersi lewej (zmiany łagodne)
+N25	Reference T68 ICD10:D48.6	Pierś
+T69	Condition 2622 2652	zmiany ogniskowej płuca lewego
+N26	Reference T69 ICD10:R91	Nieprawidłowe wyniki diagnostycznych badań obrazowych płuc
+A6	Source T69 Declared
+A7	Source T36 Declared
+T37	Treatment 2693 2712	Leczenie przewlekłe
+T70	Treatment 2731 2749	endokrynologicznie
+T71	Treatment 2751 2767	pulmonologicznie
+T72	Condition 2794 2797	WZW
+N27	Reference T72 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T73	Condition 2806 2815	borelioza
+N28	Reference T73 ICD10:A69.2	Choroba z Lyme
+T74	Condition 2823 2831	grużlica
+N29	Reference T74 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T75	Condition 2839 2843	odra
+N30	Reference T75 ICD10:B05	Odra
+T76	Negation 2846 2847	-
+R23	Neg Arg1:T76 Arg2:T75	
+T77	Negation 2834 2835	-
+R24	Neg Arg1:T77 Arg2:T74	
+T78	Negation 2818 2819	-
+R25	Neg Arg1:T78 Arg2:T73	
+T79	Negation 2800 2801	-
+R26	Neg Arg1:T79 Arg2:T72	
+T80	Condition 2850 2865	Wywiad rodzinny
+A8	Status T80 Family
+T81	Negation 2867 2877	nieistotny
+R27	Neg Arg1:T81 Arg2:T80	
+T82	Behaviour 2878 2893	Palenie tytoniu
+T83	Negation 2895 2901	neguje
+R28	Neg Arg1:T83 Arg2:T82	
+T84	Behaviour 2903 2914	Inne używki
+T85	Negation 2916 2922	neguje
+R29	Neg Arg1:T85 Arg2:T84	
+T86	Condition 2924 2933	Uczulenia
+T92	Drug 2986 2996	ampicylina
+T93	Behaviour 3014 3040	warunki mieszkaniowe dobre
+T94	Behaviour 3065 3073	emertyka
+T95	Drug 3081 3087	Telmix
+T96	Drug_dose 3088 3105	40 mg 1-0-0 tabl.
+R30	Drg Arg1:T95 Arg2:T96	
+T97	Drug 3106 3116	Euthyrox N
+T98	Drug_dose 3117 3148	50 ug 1-0-0 tabl. rano na czczo
+R31	Drg Arg1:T97 Arg2:T98	
+T99	Drug 3149 3157	Suvardio
+T100	Drug_dose 3158 3174	5 mg 0-0-1 tabl.
+R32	Drg Arg1:T99 Arg2:T100	
+T101	Drug 3175 3196	Levofloxacin Genoptim
+T102	Drug_dose 3197 3230	5mg/ml - 3 x 1 kropla do obu oczu
+R33	Drg Arg1:T101 Arg2:T102	
+T103	Investigation 3246 3249	TTE
+T104	Investigation 3251 3254	TET
+T105	Investigation 3256 3260	ABPM
+T106	Investigation 3262 3272	Holter EKG
+N32	Reference T50 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T107	Treatment 2714 2729	kardiologicznie
+A9	Status T31 Historical_Insignificant
+A10	Status T32 Historical_Insignificant
+N34	Reference T44 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N35	Reference T47 ICD10:R55	Omdlenie i zapaść
+A11	Status T64 Historical_Insignificant
+A12	Status T65 Historical_Insignificant
+N31	Reference T82 ICD10:Z72.0	Używanie tytoniu
+N33	Reference T86 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

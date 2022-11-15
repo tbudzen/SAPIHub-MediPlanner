@@ -1,0 +1,504 @@
+allRelations          : 21
+oks                   : 8
+isRedundantAndRemoveds: 13
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 0
+GOOD / BAD            : 21 / 0
+Sentence 0:
+------------------------------------------------
+Wiek: 41 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 2:
+------------------------------------------------
+
+
+
+Sentence 3:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 4:
+------------------------------------------------
+ Rozpozanie I: ICD10:I10|Rozpoznanie II: ICD10:E10|Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo::
+------------------------------------------------
+
+
+
+Sentence 5:
+Zastosowane leczenie
+
+
+
+Sentence 6:
+------------------------------------------------
+cardura, isoptin, iporel, hydroxizinum, humulin,
+------------------------------------------------
+
+
+
+Sentence 7:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 8:
+Pacjentka lat 41 została przyjęta z powodu wahań ciśnienia tętniczego.
+
+
+Sentence 9:
+W wywiadzie: HA od 7 lat, cukrzyca insulinozależna od 2012r.
+
+R1	Dat Arg1:T9 Arg2:T7 << OK >>	od 7 lat -> HA  <RANK: 3> <info: start[836, 833] <type: LEFT>>
+R2	Dat Arg1:T9 Arg2:T8 <<REDUNDANT!!!REMOVED>>	od 7 lat -> cukrzyca insulinozależna <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[836, 846] <type: RIGHT>>
+R3	Dat Arg1:T10 Arg2:T7 <<REDUNDANT!!!REMOVED>>	od 2012r -> HA <:REMOVED other first tag between (left):> <RANK: 2> <info: start[871, 833] <type: LEFT>>
+R4	Dat Arg1:T10 Arg2:T8 << OK >>	od 2012r -> cukrzyca insulinozależna  <RANK: 3> <info: start[871, 846] <type: LEFT>>
+
+
+Sentence 10:
+Nikotynizm:   -   Alkohol:-
+
+R5	Neg Arg1:T11 Arg2:T13 << OK >>	- -> Nikotynizm  <RANK: 3> <info: start[895, 881] <type: LEFT>>
+R6	Neg Arg1:T11 Arg2:T14 <<REDUNDANT!!!REMOVED>>	- -> Alkohol <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[895, 899] <type: RIGHT>>
+R7	Neg Arg1:T12 Arg2:T13 <<REDUNDANT!!!REMOVED>>	- -> Nikotynizm <:REMOVED other second tag between (left):> <RANK: 3> <info: start[907, 881] <type: LEFT>>
+R8	Neg Arg1:T12 Arg2:T14 << OK >>	- -> Alkohol  <RANK: 3> <info: start[907, 899] <type: LEFT>>
+
+
+Sentence 11:
+Pacjent neguje: uczulenia na leki, krwawienia z przewodu pokarmowego.
+
+R9	Neg Arg1:T15 Arg2:T17 << OK >>	neguje -> krwawienia z przewodu pokarmowego  <RANK: 2> <info: start[917, 944] <type: RIGHT>>
+R10	Neg Arg1:T15 Arg2:T16 << OK >>	neguje -> uczulenia na leki  <RANK: 3> <info: start[917, 925] <type: RIGHT>>
+
+
+Sentence 12:
+Wywiad rodzinny: -
+Przyjmowane obecnie leki: bisocard 5mg, ramipril comb, cardura
+
+R11	Neg Arg1:T18 Arg2:T19 << OK >>	- -> Wywiad rodzinny  <RANK: 3> <info: start[996, 979] <type: LEFT>>
+R12	Neg Arg1:T18 Arg2:T20 <<REDUNDANT!!!REMOVED>>	- -> bisocard <:REMOVED many second tags on the right:> <RANK: 1> <info: start[996, 1024] <type: RIGHT>>
+R13	Neg Arg1:T18 Arg2:T22 <<REDUNDANT!!!REMOVED>>	- -> ramipril comb <:REMOVED other second tag between (right):> <RANK: 0> <info: start[996, 1038] <type: RIGHT>>
+R14	Neg Arg1:T18 Arg2:T23 <<REDUNDANT!!!REMOVED>>	- -> cardura <:REMOVED other second tag between (right):> <RANK: 0> <info: start[996, 1053] <type: RIGHT>>
+R15	Neg Arg1:T18 Arg2:T21 <<REDUNDANT!!!REMOVED>>	- -> 5mg <:REMOVED other second tag between (right):> <RANK: 1> <info: start[996, 1033] <type: RIGHT>>
+R16	Drg Arg1:T20 Arg2:T21 << OK >>	bisocard -> 5mg  <RANK: 3> <info: start[1024, 1033] <type: RIGHT>>
+R17	Drg Arg1:T22 Arg2:T21 <<REDUNDANT!!!REMOVED>>	ramipril comb -> 5mg <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1038, 1033] <type: LEFT>>
+R18	Drg Arg1:T23 Arg2:T21 <<REDUNDANT!!!REMOVED>>	cardura -> 5mg <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1053, 1033] <type: LEFT>>
+R19	Alg Arg1:T19 Arg2:T20 <<REDUNDANT!!!REMOVED>>	Wywiad rodzinny -> bisocard <:REMOVED too long text between 30 limit:10:> <RANK: 1> <info: start[979, 1024] <type: RIGHT>>
+R20	Alg Arg1:T19 Arg2:T22 <<REDUNDANT!!!REMOVED>>	Wywiad rodzinny -> ramipril comb <:REMOVED other second tag between (right):> <RANK: 0> <info: start[979, 1038] <type: RIGHT>>
+R21	Alg Arg1:T19 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Wywiad rodzinny -> cardura <:REMOVED other second tag between (right):> <RANK: 0> <info: start[979, 1053] <type: RIGHT>>
+
+
+Sentence 13:
+Planowane: ECHO serca, Holter EKG, Holter RR, PW.
+
+
+
+Sentence 14:
+------------------------------------------------
+
+
+
+Sentence 15:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 16:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:10.02[10^3/ul]
+    
+
+
+Sentence 17:
+RBC Krwinki czerwone:4.28[10^6/ul]
+    
+
+
+Sentence 18:
+HGB Hemoglobina:12.8[g/dl]
+    
+
+
+Sentence 19:
+HCT Hematokryt:36.6[%]
+    
+
+
+Sentence 20:
+MCV wskaźnik czerwonokrw:85.5[fl]
+    
+
+
+Sentence 21:
+MCH wskaźnik czerwonokrw:29.9[pg]
+    
+
+
+Sentence 22:
+MCHC wskaźnik czerwonokr:35.0[g/dl]
+    
+
+
+Sentence 23:
+PLT z morfologii:316[10^3/ul]
+    
+
+
+Sentence 24:
+RDW-SD:39.9[fl]
+    
+
+
+Sentence 25:
+RDW-CV:12.9[%]
+    PDW:12.0[fl]
+    MPV:10.5[fl]
+    P-LCR:28.9[%]
+    
+
+
+Sentence 26:
+PCT (hematokryt płytkowy:0.33[%]
+    
+
+
+Sentence 27:
+NEUTR# wartość bezwzględ:8.33[10^3/ul]
+    
+
+
+Sentence 28:
+NEUTR%:83.1[%]
+    
+
+
+Sentence 29:
+LYMH# wartość bezwzględn:1.30[10^3/ul]
+    
+
+
+Sentence 30:
+LYMPH%:13.0[%]
+    
+
+
+Sentence 31:
+MONO# wartość bezwzględn:0.32[10^3/ul]
+    
+
+
+Sentence 32:
+MONO%:3.2[%]
+    
+
+
+Sentence 33:
+EO# wartość bezwzględna:0.04[10^3/ul]
+    
+
+
+Sentence 34:
+EO%:0.4[%]
+    
+
+
+Sentence 35:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    
+
+
+Sentence 36:
+BASO%:0.3[%]
+    
+
+
+Sentence 37:
+NRBC %:0.0[%]
+    
+
+
+Sentence 38:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 39:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:29.4[sek]
+
+
+
+Sentence 40:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 41:
+Czas protrombinowy:11.1[sek]
+    
+
+
+Sentence 42:
+Wskaźnik PT:99.1[%]
+    
+
+
+Sentence 43:
+INR:1.01
+D-dimer
+
+
+Sentence 44:
+- test ilościowy: D-dimer - test ilościowy:441[ng/ml]
+
+
+
+Sentence 45:
+Badanie ogólne moczu
+    
+
+
+Sentence 46:
+barwa:żółty[ ]
+    
+
+
+Sentence 47:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 48:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 49:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 50:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 51:
+ciężar właściwy:1.012[ ]
+    
+
+
+Sentence 52:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 53:
+pH:6.0[ ]
+    
+
+
+Sentence 54:
+białko:nieobecne[ ]
+    
+
+
+Sentence 55:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 56:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 57:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 58:
+leukocyty:obecne[ ]
+    
+
+
+Sentence 59:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 60:
+nabłonki płaskie:liczne[w preparacie]
+    
+
+
+Sentence 61:
+leukocyty:34 /ul[ul]
+    erytrocyty świeże:3 /ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:nieliczne[w preparacie]
+
+
+
+Sentence 62:
+TSH: TSH:1.26[uIU/ml]
+
+
+
+Sentence 63:
+FT3: FT3:2.47[pg/ml]
+
+
+
+Sentence 64:
+FT4: FT4:0.97[ng/dl]
+
+
+
+Sentence 65:
+Troponina T
+    Troponina T:
+    3.00[pg/ml]
+
+
+
+Sentence 66:
+ALAT: ALAT:12[U/L]
+ASPAT: ASPAT:19[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 67:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 68:
+Potas (K): Potas:4.1[mmol/L]
+
+
+
+Sentence 69:
+Kreatynina + GFR
+    
+
+
+Sentence 70:
+Kreatynina w surowicy:0.59[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 71:
+MDRD ze stan:112.3[ml/min/1,73 m^2]
+
+
+
+Sentence 72:
+Mocznik: Mocznik:16[mg/dl]
+
+
+
+Sentence 73:
+Lipidogram
+    
+
+
+Sentence 74:
+Cholesterol całkowity:155[mg/dl]
+    
+
+
+Sentence 75:
+Cholesterol HDL:37[mg/dl]
+    
+
+
+Sentence 76:
+Cholestrol LDL:101[mg/dl]
+    Triglicerydy:94[mg/dl]
+    
+
+
+Sentence 77:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:82[mg/dl]
+
+
+
+Sentence 78:
+Metoksykatecholaminy w DZM: Metoksykatecholaminy w D:SYNEVO
+
+
+
+Sentence 79:
+NT-proBNP surowica: NT-proBNP w surowicy:112[pg/ml]
+
+
+
+Sentence 80:
+------------------------------------------------
+
+
+
+Sentence 81:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 82:
+I10
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 83:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 84:
+89.501
+C55
+A01
+89.502
+I81
+G11
+G21
+L43
+O61
+G49
+87.440
+N45
+L69
+O55
+I17
+O35
+M37
+I19
+N24
+N13
+88.721
+O69
+88.761
+88.751
+------------------------------------------------
+
+

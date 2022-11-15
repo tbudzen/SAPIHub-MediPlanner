@@ -1,0 +1,82 @@
+T1	Condition 438 455	Anomalia Ebsteina
+N1	Reference T1 ICD10:Q22.5	Anomalia Ebsteina
+T2	Treatment 465 495	plastyce zastawki trójdzielnej
+N2	Reference T2 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T3	Treatment 605 632	dalsza opieka w poradni POZ
+T4	Treatment 633 665	okresowa kontrola kardiologiczna
+T5	Investigation 667 696	okresowa kontrola lipidogramu
+T6	Date 698 708	raz w roku
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Behaviour 710 735	dieta niskocholesterolowa
+T8	Behaviour 737 776	regularny, umiarkowany wysiłek fizyczny
+T9	Condition 921 938	zespołem Ebsteina
+N3	Reference T9 ICD10:Q22.5	Anomalia Ebsteina
+T10	Treatment 943 973	plastyce zastawki trójdzielnej
+N4	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T11	Date 974 987	w przeszłości
+T12	Symptom 1025 1084	okresowych bólów w klatce piersiowej o charakterze kłującym
+N5	Reference T12 ICD10:R07.3	Inne bóle w klatce piersiowej
+T13	Date 1086 1106	W poprzednich latach
+T14	Investigation 1135 1159	24-godzinnym zapisie EKG
+T15	Investigation 1325 1341	echokardiogramie
+T16	Investigation_result 1342 1390	umiarkowaną niedomykalność zastawki trójdzielnej
+N6	Reference T16 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T17	Condition 1406 1413	trądzik
+N7	Reference T17 ICD10:L70.9	Trądzik, nieokreślony
+T18	Condition 1415 1438	atopowe zapalenie skóry
+N8	Reference T18 ICD10:L20.9	Atopowe zapalenie skóry, nieokreślone
+T19	Condition 1440 1449	półpasiec
+N9	Reference T19 ICD10:B02.9	Półpasiec bez powikłań
+T20	Date 1452 1461	luty 2017
+T21	Date 1524 1528	2015
+T22	Condition 1487 1522	złamanie V kości śródplecza prawego
+N10	Reference T22 ICD10:S62.3	Złamanie innej kości śródręcza
+A1	Status T22 Historical_Insignificant
+T23	Treatment 1471 1479	operacje
+N11	Reference T23 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R2	Dat Arg1:T21 Arg2:T22	
+R3	Dat Arg1:T21 Arg2:T23	
+R4	Dat Arg1:T20 Arg2:T19	
+R5	Dat Arg1:T20 Arg2:T18	
+R6	Dat Arg1:T20 Arg2:T17	
+T24	Condition 1531 1546	Wywiad rodzinny
+A2	Status T24 Family
+T25	Negation 1548 1561	bez znaczenia
+T26	Condition 1563 1570	Alergie
+N12	Reference T26 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T27	Negation 1572 1578	neguje
+T28	Behaviour 1580 1590	Nikotynizm
+N13	Reference T28 ICD10:Z72.0	Używanie tytoniu
+T29	Negation 1592 1598	neguje
+T30	Behaviour 1601 1642	Alkohol: okazjonalnie, w małych ilościach
+A3	Status T30 Historical_Insignificant
+N14	Reference T30 ICD10:Z72.1	Używanie alkoholu
+T31	Behaviour 1644 1661	Uzależnienie inne
+N15	Reference T31 ICD10:Z72	Problemy związane ze stylem życia
+T32	Negation 1663 1669	neguje
+T33	Behaviour 1687 1706	student (matematyka
+T34	Drug 1718 1725	Axotret
+T35	Drug_dose 1726 1733	30 mg/d
+R7	Drg Arg1:T34 Arg2:T35	
+R8	Neg Arg1:T32 Arg2:T31	
+R9	Neg Arg1:T29 Arg2:T28	
+R10	Neg Arg1:T27 Arg2:T26	
+R11	Neg Arg1:T25 Arg2:T24	
+R12	Dat Arg1:T11 Arg2:T10	
+R13	Dat Arg1:T13 Arg2:T14	
+R14	Dat Arg1:T13 Arg2:T15	
+R15	Inv Arg1:T15 Arg2:T16	
+T36	Investigation_result 1257 1283	rytmy komorowe lub węzłowe
+T37	Negation 1285 1288	bez
+T38	Investigation_result 1289 1317	pauz dłuższych niż 2 sekundy
+N17	Reference T38 ICD10:R93.4	Nieprawidłowe wyniki diagnostycznych badań obrazowych układu moczowego
+R16	Neg Arg1:T37 Arg2:T38	
+T39	Investigation_result 1160 1221	krótkie wstawki rytmu idiowentrykularnego w godzinach nocnych
+N18	Reference T39 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T40	Investigation_result 1223 1255	powodującego istotną bradykardię
+N19	Reference T40 ICD10:R00.1	Bradykardia, nieokreślona
+R17	Inv Arg1:T14 Arg2:T39	
+R18	Inv Arg1:T14 Arg2:T40	
+R19	Inv Arg1:T14 Arg2:T36	
+R20	Inv Arg1:T14 Arg2:T38	
+N16	Reference T36 ICD10:I49.8	Inne określone zaburzenia rytmu serca

@@ -1,0 +1,89 @@
+T1	Condition 447 477	Choroba wieńcowa dwunaczyniowa
+N1	Reference T1 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T2	Treatment 480 522	angioplastyka RCA z implantacją stentu DES
+T3	Date 524 528	2015
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Condition 539 565	OZW STEMI ściany przedniej
+N2	Reference T4 ICD10:I25.2	
+T5	Condition 612 622	OZW NSTEMI
+N3	Reference T5 ICD10:I25.2	Przebyty zawał serca
+T6	Treatment 566 595	leczonym PCI LAD oraz PCI IDg
+T7	Treatment 623 639	leczonym PCI LAD
+T8	Date 641 645	2009
+T9	Date 597 601	2015
+R2	Dat Arg1:T9 Arg2:T6	
+R3	Dat Arg1:T9 Arg2:T4	
+R4	Dat Arg1:T8 Arg2:T5	
+R5	Dat Arg1:T8 Arg2:T7	
+T10	Treatment 656 663	PCI RCA
+T11	Date 665 669	2014
+R6	Dat Arg1:T11 Arg2:T10	
+T12	Condition 672 690	Niewydolność serca
+N4	Reference T12 ICD10:I50.9	
+T13	Investigation_result 695 701	EF 45%
+T14	Condition 703 723	Hipercholesterolemia
+N5	Reference T14 ICD10:E78.0	Czysta hipercholesterolemia
+T15	Condition 725 758	Choroba zwyrodnieniowa kręgosłupa
+N6	Reference T15 ICD10:M47.9	
+T16	Behaviour 772 782	Nikotynizm
+T17	Symptom 948 974	wahań ciśnienia tętniczego
+N8	Reference T17 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T18	Condition 989 1019	choroba wieńcowa dwunaczyniowa
+N9	Reference T18 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T19	Treatment 1022 1064	angioplastyka RCA z implantacją stentu DES
+T20	Date 1066 1070	2015
+R7	Dat Arg1:T20 Arg2:T19	
+T21	Condition 1081 1107	OZW STEMI ściany przedniej
+N10	Reference T21 ICD10:I25.2	Przebyty zawał serca
+T22	Condition 1154 1164	OZW NSTEMI
+N11	Reference T22 ICD10:I25.2	Przebyty zawał serca
+T23	Treatment 1108 1137	leczonym PCI LAD oraz PCI IDg
+T24	Treatment 1165 1181	leczonym PCI LAD
+T25	Date 1139 1143	2015
+R8	Dat Arg1:T25 Arg2:T21	
+R9	Dat Arg1:T25 Arg2:T23	
+T26	Date 1183 1187	2009
+R10	Dat Arg1:T26 Arg2:T22	
+R11	Dat Arg1:T26 Arg2:T24	
+T27	Treatment 1198 1205	PCI RCA
+T28	Date 1207 1211	2014
+R12	Dat Arg1:T28 Arg2:T27	
+T29	Condition 1214 1232	Niewydolność serca
+N12	Reference T29 ICD10:I50.9	Niewydolność serca, nieokreślona
+T30	Investigation_result 1237 1243	EF 45%
+T31	Condition 1245 1265	Hipercholesterolemia
+N13	Reference T31 ICD10:E78.0	Czysta hipercholesterolemia
+T32	Condition 1267 1300	Choroba zwyrodnieniowa kręgosłupa
+N14	Reference T32 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T33	Behaviour 1314 1324	Nikotynizm
+T34	Treatment 1327 1335	Operacje
+T35	Negation 1337 1343	neguje
+R13	Neg Arg1:T35 Arg2:T34	
+T36	Behaviour 1344 1354	Nikotynizm
+T37	Behaviour 1368 1375	Alkohol
+N17	Reference T37 ICD10:Z72.1	Używanie alkoholu
+T38	Negation 1377 1383	neguje
+R14	Neg Arg1:T38 Arg2:T37	
+T39	Negation 1392 1398	neguje
+T40	Condition 1400 1417	uczulenia na leki
+T41	Symptom 1419 1452	krwawienia z przewodu pokarmowego
+N19	Reference T41 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R15	Neg Arg1:T39 Arg2:T40	
+R16	Neg Arg1:T39 Arg2:T41	
+T42	Condition 1454 1469	Wywiad rodzinny
+A1	Status T42 Family
+T43	Negation 1470 1471	-
+R17	Neg Arg1:T43 Arg2:T42	
+T44	Drug 1498 1509	pantoprazol
+T45	Drug 1511 1517	zahron
+T46	Drug 1519 1527	bisocard
+T47	Drug 1529 1536	ezoleta
+T48	Drug 1538 1546	polocard
+T49	Investigation 1558 1568	ECHO serca
+T50	Investigation 1570 1580	Holter EKG
+T51	Investigation 1582 1591	Holter RR
+T52	Investigation 1593 1595	PW
+N7	Reference T16 ICD10:Z72.0	Używanie tytoniu
+N15	Reference T33 ICD10:Z72.0	Używanie tytoniu
+N16	Reference T36 ICD10:Z72.0	Używanie tytoniu
+N18	Reference T40 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie

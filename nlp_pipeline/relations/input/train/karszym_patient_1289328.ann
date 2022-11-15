@@ -1,0 +1,18 @@
+T1	Treatment 328 351	Kontrola kardiologiczna
+T2	Date 352 369	za ok. 6 miesięcy
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Condition 588 670	Wrodzona wada serca pod postacią krytycznego zastawkowego zwężenia tętnicy płucnej
+N1	Reference T3 ICD10:Q22.1	Wrodzone zwężenie zastawki pnia płucnego
+T4	Treatment 683 741	zabiegu walwuloplastyki balonowej zastawki tętnicy płucnej
+T5	Date 744 754	24.10.2014
+R2	Dat Arg1:T5 Arg2:T4	
+T6	Condition 909 938	zwężeniem zastawki t. płucnej
+N2	Reference T6 ICD10:Q22.1	Wrodzone zwężenie zastawki pnia płucnego
+T7	Treatment 944 965	plastyce przezskórnej
+T8	Condition 1001 1018	wywiad alergiczny
+N3	Reference T8 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T9	Negation 1019 1025	ujemny
+T10	Drug 1027 1041	leków na stale
+T11	Negation 1042 1055	nie otrzymuje
+R3	Neg Arg1:T9 Arg2:T8	
+R4	Neg Arg1:T11 Arg2:T10	

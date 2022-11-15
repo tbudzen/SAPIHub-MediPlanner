@@ -1,0 +1,71 @@
+T1	Condition 453 484	Komorowe zaburzenia rytmu serca
+T2	Treatment 494 525	laparoskopowej cholecystektomii
+T3	Treatment 634 661	dalsza opieka w poradni POZ
+T4	Treatment 662 694	okresowa kontrola kardiologiczna
+T5	Drug 726 735	ConcorCor
+T6	Drug_dose 736 755	2,5 mg 1 tabl. rano
+T7	Date 956 966	13.03.2017
+T8	Symptom 967 1001	szybkiego i nierównego bicia serca
+T9	Investigation_result 1072 1102	wzrostu ciśnienia 170/100 mmHg
+T10	Treatment 1118 1132	otrzymała leki
+T11	Drug 1134 1145	propranolol
+T12	Drug 1148 1161	"coś jeszcze"
+T13	Symptom 1173 1194	dolegliwości ustąpiły
+T14	Treatment 1256 1287	cholecystektomii laparoskopowej
+T15	Condition 1297 1303	kamicy
+T16	Date 1304 1316	przed 5 laty
+T17	Condition 1318 1367	podejrzenie przebytego ostrego zapalenia trzustki
+T18	Date 1368 1380	przed rokiem
+T19	Condition 1409 1417	rak płuc
+T20	Condition 1427 1431	CHNS
+T21	Condition 1433 1435	HA
+T22	Behaviour 1437 1446	Papierosy
+T23	Date 1449 1465	przed wielu laty
+T24	Behaviour 1467 1478	5 paczkolat
+T25	Date 1479 1489	w młodości
+T26	Behaviour 1491 1533	Alkohol - okazjonalnie, w małych ilościach
+T27	Condition 1535 1542	Alergia
+T28	Negation 1545 1551	neguje
+T29	Drug 1553 1557	Leki
+T30	Negation 1570 1591	nie przyjmuje żadnych
+T31	Behaviour 1600 1608	logopeda
+T32	Behaviour 1610 1626	aktywna zawodowo
+T33	Investigation_result 1627 1637	WAGA 57 kg
+T34	Investigation_result 1639 1651	WZROST 160cm
+T35	Investigation_result 1003 1029	potwierdzone przez lekarza
+T36	Treatment 1237 1245	operacje
+T37	Investigation 1062 1065	ekg
+N1	Reference T1 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komÃ³r
+N2	Reference T2 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N3	Reference T8 ICD10:R00	
+N4	Reference T14 ICD10:K80	Kamica Å¼Ã³Åciowa
+N5	Reference T15 ICD10:K80	Kamica Å¼Ã³Åciowa
+N6	Reference T17 ICD10:K85.9	Ostre zapalenie trzustki, nieokreÅlone
+N7	Reference T19 ICD10:C34.9	Oskrzele lub pÅuco, umiejscowienie nieokreÅlone
+N8	Reference T20 ICD10:I25.9	PrzewlekÅa choroba niedokrwienna serca, nieokreÅlona
+N9	Reference T21 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N10	Reference T22 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N11	Reference T24 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+N12	Reference T26 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N13	Reference T27 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N14	Reference T36 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+R1	Drg Arg1:T5 Arg2:T6
+R11	Dat Arg1:T18 Arg2:T17
+R17	Neg Arg1:T28 Arg2:T27
+R2	Inv Arg1:T37 Arg2:T9
+R25	Neg Arg1:T28 Arg2:T29
+R33	Neg Arg1:T30 Arg2:T31
+R34	Neg Arg1:T30 Arg2:T32
+R4	Dat Arg1:T7 Arg2:T8
+R42	Dat Arg1:T23 Arg2:T22
+R43	Dat Arg1:T23 Arg2:T24
+R53	Dat Arg1:T25 Arg2:T24
+R54	Dat Arg1:T25 Arg2:T26
+R6	Dat Arg1:T16 Arg2:T15
+R8	Dat Arg1:T16 Arg2:T14
+A1	Status T2 Historical_Insignificant
+A2	Status T19 Family
+A3	Status T20 Family
+A4	Status T21 Family
+A5	Status T36 Historical_Insignificant
+A6	Source T17 Declared

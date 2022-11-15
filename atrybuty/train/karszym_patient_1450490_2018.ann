@@ -1,0 +1,16 @@
+T1	Drug 344 347	ANA
+T2	Drug 349 359	Cefazolina
+T3	Treatment 361 389	profilaktyka okołooperacyjna
+T4	Condition 619 668	Wrodzona wada serca pod postacią koarktacji aorty
+N1	Reference T4 ICD10:Q25.1	Zwężenie cieśni aorty
+T5	Condition 671 700	dwupłatkową zastawką aortalną
+N2	Reference T5 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T6	Condition 836 852	koarktacja aorty
+N3	Reference T6 ICD10:Q25.1	Zwężenie cieśni aorty
+T8	Condition 901 918	wywiad alergiczny
+N4	Reference T8 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T9	Negation 919 925	ujemny
+T10	Drug 928 942	leków na stałe
+T11	Negation 943 956	nie otrzymuje
+R1	Neg Arg1:T11 Arg2:T10	
+R2	Neg Arg1:T9 Arg2:T8	

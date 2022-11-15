@@ -1,0 +1,513 @@
+allRelations          : 22
+oks                   : 6
+isRedundantAndRemoveds: 15
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 1
+GOOD / BAD            : 21 / 1
+Sentence 0:
+------------------------------------------------
+Wiek: 5 miesięcy
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+Enarenal 2 x 0,2mg
+Spironol 1 x 5mg
+Acesan 1 x 10mg
+
+R1	Drg Arg1:T1 Arg2:T4 << OK >>	Enarenal -> 2 x 0,2mg  <RANK: 3> <info: start[333, 342] <type: RIGHT>>
+R2	Drg Arg1:T1 Arg2:T5 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1 x 5mg <:REMOVED other first tag between (right):> <RANK: 0> <info: start[333, 361] <type: RIGHT>>
+R3	Drg Arg1:T1 Arg2:T6 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1 x 10mg <:REMOVED other first tag between (right):> <RANK: 0> <info: start[333, 376] <type: RIGHT>>
+R4	Drg Arg1:T2 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Spironol -> 2 x 0,2mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[352, 342] <type: LEFT>>
+R5	Drg Arg1:T2 Arg2:T5 << OK >>	Spironol -> 1 x 5mg  <RANK: 3> <info: start[352, 361] <type: RIGHT>>
+R6	Drg Arg1:T2 Arg2:T6 <<REDUNDANT!!!REMOVED>>	Spironol -> 1 x 10mg <:REMOVED other first tag between (right):> <RANK: 1> <info: start[352, 376] <type: RIGHT>>
+R7	Drg Arg1:T3 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Acesan -> 2 x 0,2mg <:REMOVED other first tag between (left):> <RANK: 1> <info: start[369, 342] <type: LEFT>>
+R8	Drg Arg1:T3 Arg2:T5 <<REDUNDANT!!!REMOVED>>	Acesan -> 1 x 5mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[369, 361] <type: LEFT>>
+R9	Drg Arg1:T3 Arg2:T6 << OK >>	Acesan -> 1 x 10mg  <RANK: 3> <info: start[369, 376] <type: RIGHT>>
+
+
+Sentence 5:
+Rozszerzanie diety
+
+
+
+Sentence 6:
+Kontrola w Poradni Kardiologicznej za 2miesiące.
+
+R10	Dat Arg1:T9 Arg2:T8 << OK >>	za 2miesiące -> Kontrola w Poradni Kardiologicznej  <RANK: 3> <info: start[439, 404] <type: LEFT>>
+
+
+Sentence 7:
+Objęcie opieką w Poradni Rehabilitacyjnej i Gastroenterologicznej
+------------------------------------------------
+
+
+
+Sentence 8:
+Zastosowane leczenie
+
+
+
+Sentence 9:
+------------------------------------------------
+
+
+
+Sentence 10:
+Spironol, Furosemid, Enarenal, Acesan, Thiopental
+------------------------------------------------
+
+
+
+Sentence 11:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 12:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q22.5|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią xespołu Ebstein
+   Korekcja Zespołu Ebsteina z użyciem łaty Cor Matrix.
+
+
+Sentence 13:
+Operacja w warunkach krążenia pozaustrojowego wykonana w dniu 21.12.2018.
+
+R11	Dat Arg1:T19 Arg2:T18 << OK >>	w dniu 21.12.2018 -> Operacja w warunkach krążenia pozaustrojowego  <RANK: 3> <info: start[1076, 1021] <type: LEFT>>
+
+
+Sentence 14:
+------------------------------------------------
+
+
+
+Sentence 15:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 16:
+dziecko z z. Ebsteina skierowane na badania kontrolne, na stałe otrzymuje Spironol , Furosemid , Acesan, wywiad alergiczny ujemny
+------------------------------------------------
+
+R12	Neg Arg1:T25 Arg2:T20 <<REDUNDANT!!!REMOVED>>	ujemny -> z. Ebsteina <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1342, 1229] <type: LEFT>>
+R13	Neg Arg1:T25 Arg2:T24 << OK >>	ujemny -> wywiad alergiczny  <RANK: 3> <info: start[1342, 1324] <type: LEFT>>
+R14	Neg Arg1:T25 Arg2:T21 <<REDUNDANT!!!REMOVED>>	ujemny -> Spironol <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1342, 1293] <type: LEFT>>
+R15	Neg Arg1:T25 Arg2:T22 <<REDUNDANT!!!REMOVED>>	ujemny -> Furosemid <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1342, 1304] <type: LEFT>>
+R16	Neg Arg1:T25 Arg2:T23 <<REDUNDANT!!!REMOVED>>	ujemny -> Acesan <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1342, 1316] <type: LEFT>>
+R17	Alg Arg1:T20 Arg2:T21 <<REDUNDANT!!!REMOVED>>	z. Ebsteina -> Spironol <:REMOVED too long text between 53 limit:10:> <RANK: 2> <info: start[1229, 1293] <type: RIGHT>>
+R18	Alg Arg1:T20 Arg2:T22 <<REDUNDANT!!!REMOVED>>	z. Ebsteina -> Furosemid <:REMOVED too long text between 64 limit:10:> <RANK: 2> <info: start[1229, 1304] <type: RIGHT>>
+R19	Alg Arg1:T20 Arg2:T23 <<REDUNDANT!!!REMOVED>>	z. Ebsteina -> Acesan <:REMOVED too long text between 76 limit:10:> <RANK: 2> <info: start[1229, 1316] <type: RIGHT>>
+R20	Alg Arg1:T24 Arg2:T21 <<REDUNDANT!!!REMOVED>>	wywiad alergiczny -> Spironol <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1324, 1293] <type: LEFT>>
+R21	Alg Arg1:T24 Arg2:T22 <<REDUNDANT!!!REMOVED>>	wywiad alergiczny -> Furosemid <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1324, 1304] <type: LEFT>>
+R22	Alg Arg1:T24 Arg2:T23 <<REDUNDANT!!!SHOULD BE REMOVED>>	wywiad alergiczny -> Acesan  <RANK: 2> <info: start[1324, 1316] <type: LEFT>>
+
+
+Sentence 17:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 18:
+Grupa krwi + p/c odpornościowe (powyżej 4. m-ca życia
+    NR-KS:G-19/009120
+    KODKRESKOWYPROBKI:G-19/009120
+    
+
+
+Sentence 19:
+GR:A
+    RH:+ (dodatni)
+    
+
+
+Sentence 20:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+
+
+
+Sentence 21:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.63[10^3/ul]
+    
+
+
+Sentence 22:
+RBC Krwinki czerwone:4.46[10^6/ul]
+    
+
+
+Sentence 23:
+HGB Hemoglobina:12.4[g/dl]
+    
+
+
+Sentence 24:
+HCT Hematokryt:34.8[%]
+    
+
+
+Sentence 25:
+MCV wskaźnik czerwonokrw:78.0[fl]
+    
+
+
+Sentence 26:
+MCH wskaźnik czerwonokrw:27.8[pg]
+    
+
+
+Sentence 27:
+MCHC wskaźnik czerwonokr:35.6[g/dl]
+    
+
+
+Sentence 28:
+PLT z morfologii:346[10^3/ul]
+    
+
+
+Sentence 29:
+RDW-SD:34.3[fl]
+    
+
+
+Sentence 30:
+RDW-CV:12.0[%]
+    PDW:10.7[fl]
+    
+
+
+Sentence 31:
+MPV:9.9[fl]
+    
+
+
+Sentence 32:
+P-LCR:23.2[%]
+    
+
+
+Sentence 33:
+PCT (hematokryt płytkowy:0.34[%]
+    
+
+
+Sentence 34:
+NEUTR# wartość bezwzględ:1.21[10^3/ul]
+    
+
+
+Sentence 35:
+NEUTR%:26.2[%]
+    
+
+
+Sentence 36:
+LYMH# wartość bezwzględn:2.75[10^3/ul]
+    
+
+
+Sentence 37:
+LYMPH%:59.4[%]
+    
+
+
+Sentence 38:
+MONO# wartość bezwzględn:0.43[10^3/ul]
+    MONO%:9.3[%]
+    
+
+
+Sentence 39:
+EO# wartość bezwzględna:0.21[10^3/ul]
+    
+
+
+Sentence 40:
+EO%:4.5[%]
+    
+
+
+Sentence 41:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 42:
+NRBC %:0.0[%]
+    
+
+
+Sentence 43:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 44:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:35.1[sek]
+
+
+
+Sentence 45:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 46:
+Czas protrombinowy:13.5[sek]
+    
+
+
+Sentence 47:
+Wskaźnik PT:81.5[%]
+    
+
+
+Sentence 48:
+INR:1.22
+
+
+
+Sentence 49:
+Czas trombinowy TT: Czas trombinowy TT:21.3[sek]
+
+
+
+Sentence 50:
+Fibrynogen: Fibrynogen:1.86[g/L]
+
+
+
+Sentence 51:
+Troponina T: Troponina T:15.1[pg/ml]
+
+
+
+Sentence 52:
+ALAT: ALAT:33[U/L]
+
+
+
+Sentence 53:
+Albumina: Albumina:4.1[g/dl]
+ASPAT: ASPAT:41[U/L]
+Białko całkowite w surowicy (TP): Białko całkowite w surow:5.8[g/dl]
+
+
+
+Sentence 54:
+Bilirubina całkowita (TBil): Bilirubina całkowita:0.53[mg/dl]
+
+
+
+Sentence 55:
+CK - aktywność: CK:75[U/L]
+
+
+
+Sentence 56:
+CKMB aktywność: CKMB:53[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 57:
+Sód (Na): Sód:139[mmol/L]
+
+
+
+Sentence 58:
+Potas (K): Potas:5.4[mmol/L]
+
+
+
+Sentence 59:
+Chlorki (Cl): Chlorki:106[mmol/L]
+
+
+
+Sentence 60:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:32[U/L]
+
+
+
+Sentence 61:
+Kreatynina + GFR
+    
+
+
+Sentence 62:
+Kreatynina w surowicy:0.29[mg/dl]
+    
+
+
+Sentence 63:
+eGFR nowor.
+
+
+Sentence 64:
+wg Schwartza:92.6[ml/min/1,73 m^2]
+    
+
+
+Sentence 65:
+wzrost:65[cm]
+
+
+
+Sentence 66:
+Mleczany (LAC): Mleczany:22.9[mg/dl]
+
+
+
+Sentence 67:
+LDH Dehydrogenaza mleczanowa: LDH Dehydrogenaza mlecza:238[U/L]
+
+
+
+Sentence 68:
+Magnez: Magnez:0.97[mmol/L]
+
+
+
+Sentence 69:
+Mocznik: Mocznik:16[mg/dl]
+
+
+
+Sentence 70:
+Transferyna: Transferyna:237.02[mg/dl]
+
+
+
+Sentence 71:
+Wapń całkowity: Wapń całkowity:2.61[mmol/L]
+
+
+
+Sentence 72:
+Żelazo (Fe): Żelazo (Fe):86[ug/dl]
+
+
+
+Sentence 73:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    
+
+
+Sentence 74:
+pH:7.393
+    pCO2:39.7[mmHg]
+    BE:-0.60[mmol/L]
+    
+
+
+Sentence 75:
+HCO3:23.7[mmol/L]
+    
+
+
+Sentence 76:
+pO2:41.7[mmHg]
+    
+
+
+Sentence 77:
+O2Sat:74.8[%]
+
+
+
+Sentence 78:
+Glukoza w surowicy: Glukoza w surowicy:68[mg/dl]
+
+
+
+Sentence 79:
+NT-proBNP surowica: NT-proBNP w surowicy:729[pg/ml]
+------------------------------------------------
+
+
+
+Sentence 80:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 81:
+Q22.5
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 82:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 83:
+I81
+G21
+88.718
+L43
+I89
+M87
+N45
+N
+O43
+O29
+C55
+I97
+G11
+
+
+
+Sentence 84:
+I77
+K33
+O95
+L31
+87.440
+O77
+N11
+O35
+M37
+
+
+
+Sentence 85:
+N13
+M19
+M18
+88.761
+------------------------------------------------
+
+

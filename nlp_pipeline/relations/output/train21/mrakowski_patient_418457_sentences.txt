@@ -1,0 +1,560 @@
+allRelations          : 40
+oks                   : 11
+isRedundantAndRemoveds: 25
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 4
+GOOD / BAD            : 36 / 4
+Sentence 0:
+------------------------------------------------
+Wiek: 66 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:I25|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo::
+------------------------------------------------
+
+
+
+Sentence 6:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 7:
+Pacjentka  lat 66 przyjęty do Kliniki z powodu okresowych bólów w klatce piersiowej nasilające się przy wysiłku  oraz uczucia kołątania serca .
+
+
+Sentence 8:
+Ponadto zgłasza bóle brzucha po stronie lewej promenujące do kręgosłupa. 
+
+
+
+Sentence 9:
+Neguje zasłabnięcia , 
+
+R1	Neg Arg1:T4 Arg2:T5 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[790, 797] <type: RIGHT>>
+
+
+Sentence 10:
+W wywiadzie : Choroba niedokrwienna serca.
+
+
+Sentence 11:
+Stan po PCI PTW z implantacją DES 06.08.2014.
+R2	Dat Arg1:T8 Arg2:T7 << OK >>	06.08.2014 -> PCI PTW z implantacją DES  <RANK: 3> <info: start[890, 864] <type: LEFT>>
+
+
+Sentence 12:
+Zaburzenia lipidowe .
+
+
+Sentence 13:
+nikotynizm w wywiadzie.
+
+
+Sentence 14:
+Stan po zapaleniu mięśnia sercowego  ( brak dokumentacji ) 
+
+
+
+Sentence 15:
+Przebyte operacje:  stan po appendektomii , stan po operacji pęcherza 5x dz z powodu nietryzmania moczu , stan po panhisterektomii z powodu wypadania pochwy 2003
+
+R3	Dat Arg1:T16 Arg2:T44 <<REDUNDANT!!!SHOULD BE REMOVED>>	2003 -> nietryzmania moczu  <RANK: 2> <info: start[1165, 1093] <type: LEFT>>
+R4	Dat Arg1:T16 Arg2:T45 << OK >>	2003 -> wypadania pochwy  <RANK: 3> <info: start[1165, 1148] <type: LEFT>>
+R5	Dat Arg1:T16 Arg2:T12 <<REDUNDANT!!!SHOULD BE REMOVED>>	2003 -> Przebyte operacje  <RANK: 2> <info: start[1165, 1008] <type: LEFT>>
+R6	Dat Arg1:T16 Arg2:T13 <<REDUNDANT!!!SHOULD BE REMOVED>>	2003 -> appendektomii  <RANK: 2> <info: start[1165, 1036] <type: LEFT>>
+R7	Dat Arg1:T16 Arg2:T14 <<REDUNDANT!!!SHOULD BE REMOVED>>	2003 -> operacji pęcherza 5x dz  <RANK: 2> <info: start[1165, 1060] <type: LEFT>>
+R8	Dat Arg1:T16 Arg2:T15 << OK >>	2003 -> panhisterektomii  <RANK: 3> <info: start[1165, 1122] <type: LEFT>>
+
+
+Sentence 16:
+Leczenie przewlekłe:  onkologicznej 
+
+
+
+Sentence 17:
+Przebyte choroby zakaźne - WZW ( -  ) , borelioza ( - ) Odra ( - )
+
+R9	Neg Arg1:T21 Arg2:T18 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1270, 1234] <type: LEFT>>
+R10	Neg Arg1:T21 Arg2:T19 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other second tag between (left):> <RANK: 3> <info: start[1270, 1247] <type: LEFT>>
+R11	Neg Arg1:T21 Arg2:T20 << OK >>	- -> Odra  <RANK: 3> <info: start[1270, 1263] <type: LEFT>>
+R12	Neg Arg1:T22 Arg2:T18 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1259, 1234] <type: LEFT>>
+R13	Neg Arg1:T22 Arg2:T19 << OK >>	- -> borelioza  <RANK: 3> <info: start[1259, 1247] <type: LEFT>>
+R14	Neg Arg1:T22 Arg2:T20 <<REDUNDANT!!!REMOVED>>	- -> Odra <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1259, 1263] <type: RIGHT>>
+R15	Neg Arg1:T23 Arg2:T18 << OK >>	- -> WZW  <RANK: 3> <info: start[1240, 1234] <type: LEFT>>
+R16	Neg Arg1:T23 Arg2:T19 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1240, 1247] <type: RIGHT>>
+R17	Neg Arg1:T23 Arg2:T20 <<REDUNDANT!!!REMOVED>>	- -> Odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1240, 1263] <type: RIGHT>>
+
+
+Sentence 18:
+W wywiadzie rodzinnym : ojciec - zawał serca , nadciśnienie tętnicze, ca. żółądka . 
+
+
+
+Sentence 19:
+Palenie tytoniu: nie pali od 5 lat 
+
+R18	Neg Arg1:T28 Arg2:T27 << OK >>	nie pali -> Palenie tytoniu  <RANK: 3> <info: start[1376, 1359] <type: LEFT>>
+R19	Dat Arg1:T29 Arg2:T27 << OK >>	od 5 lat -> Palenie tytoniu  <RANK: 3> <info: start[1385, 1359] <type: LEFT>>
+
+
+Sentence 20:
+Inne używki: nie
+Uczulenia: neguje
+Stan społeczny: warunki mieszkaniowe dobre , mieszka z mężem
+Leki: Cavinton, Romazic , Polpril , Concor , Acard, 
+
+R20	Neg Arg1:T31 Arg2:T32 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1408, 1412] <type: RIGHT>>
+R21	Neg Arg1:T31 Arg2:T30 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[1408, 1395] <type: LEFT>>
+R22	Neg Arg1:T31 Arg2:T34 <<REDUNDANT!!!REMOVED>>	nie -> warunki mieszkaniowe dobre <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1408, 1446] <type: RIGHT>>
+R23	Neg Arg1:T31 Arg2:T35 <<REDUNDANT!!!REMOVED>>	nie -> Cavinton <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1408, 1497] <type: RIGHT>>
+R24	Neg Arg1:T31 Arg2:T36 <<REDUNDANT!!!REMOVED>>	nie -> Romazic <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1408, 1507] <type: RIGHT>>
+R25	Neg Arg1:T31 Arg2:T37 <<REDUNDANT!!!REMOVED>>	nie -> Polpril <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1408, 1517] <type: RIGHT>>
+R26	Neg Arg1:T31 Arg2:T38 <<REDUNDANT!!!REMOVED>>	nie -> Concor <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1408, 1527] <type: RIGHT>>
+R27	Neg Arg1:T31 Arg2:T39 <<REDUNDANT!!!REMOVED>>	nie -> Acard <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1408, 1536] <type: RIGHT>>
+R28	Neg Arg1:T33 Arg2:T32 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[1423, 1412] <type: LEFT>>
+R29	Neg Arg1:T33 Arg2:T30 <<REDUNDANT!!!REMOVED>>	neguje -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1423, 1395] <type: LEFT>>
+R30	Neg Arg1:T33 Arg2:T34 <<REDUNDANT!!!REMOVED>>	neguje -> warunki mieszkaniowe dobre <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1423, 1446] <type: RIGHT>>
+R31	Neg Arg1:T33 Arg2:T35 <<REDUNDANT!!!REMOVED>>	neguje -> Cavinton <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1423, 1497] <type: RIGHT>>
+R32	Neg Arg1:T33 Arg2:T36 <<REDUNDANT!!!REMOVED>>	neguje -> Romazic <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1423, 1507] <type: RIGHT>>
+R33	Neg Arg1:T33 Arg2:T37 <<REDUNDANT!!!REMOVED>>	neguje -> Polpril <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1423, 1517] <type: RIGHT>>
+R34	Neg Arg1:T33 Arg2:T38 <<REDUNDANT!!!REMOVED>>	neguje -> Concor <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1423, 1527] <type: RIGHT>>
+R35	Neg Arg1:T33 Arg2:T39 <<REDUNDANT!!!REMOVED>>	neguje -> Acard <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1423, 1536] <type: RIGHT>>
+R36	Alg Arg1:T32 Arg2:T35 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Cavinton <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1412, 1497] <type: RIGHT>>
+R37	Alg Arg1:T32 Arg2:T36 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Romazic <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1412, 1507] <type: RIGHT>>
+R38	Alg Arg1:T32 Arg2:T37 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Polpril <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1412, 1517] <type: RIGHT>>
+R39	Alg Arg1:T32 Arg2:T38 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Concor <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1412, 1527] <type: RIGHT>>
+R40	Alg Arg1:T32 Arg2:T39 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Acard <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1412, 1536] <type: RIGHT>>
+
+
+Sentence 21:
+Plan Opieki : Echo serca , Holter EKG , Próba Wysiłkowa  , Planowany czas hospitalizacji 4-5 dni
+
+
+
+Sentence 22:
+------------------------------------------------
+
+
+
+Sentence 23:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 24:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.00[10^3/ul]
+    
+
+
+Sentence 25:
+RBC Krwinki czerwone:4.77[10^6/ul]
+    
+
+
+Sentence 26:
+HGB Hemoglobina:13.7[g/dl]
+    
+
+
+Sentence 27:
+HCT Hematokryt:40.4[%]
+    
+
+
+Sentence 28:
+MCV wskaźnik czerwonokrw:84.7[fl]
+    
+
+
+Sentence 29:
+MCH wskaźnik czerwonokrw:28.7[pg]
+    
+
+
+Sentence 30:
+MCHC wskaźnik czerwonokr:33.9[g/dl]
+    
+
+
+Sentence 31:
+PLT z morfologii:244[10^3/ul]
+    
+
+
+Sentence 32:
+RDW-SD:40.9[fl]
+    
+
+
+Sentence 33:
+RDW-CV:13.1[%]
+    
+
+
+Sentence 34:
+PDW:9.8[fl]
+    
+
+
+Sentence 35:
+MPV:9.5[fl]
+    
+
+
+Sentence 36:
+P-LCR:20.7[%]
+    
+
+
+Sentence 37:
+PCT (hematokryt płytkowy:0.23[%]
+    
+
+
+Sentence 38:
+NEUTR# wartość bezwzględ:2.22[10^3/ul]
+    
+
+
+Sentence 39:
+NEUTR%:44.4[%]
+    
+
+
+Sentence 40:
+LYMH# wartość bezwzględn:2.28[10^3/ul]
+    
+
+
+Sentence 41:
+LYMPH%:45.6[%]
+    
+
+
+Sentence 42:
+MONO# wartość bezwzględn:0.39[10^3/ul]
+    
+
+
+Sentence 43:
+MONO%:7.8[%]
+    
+
+
+Sentence 44:
+EO# wartość bezwzględna:0.09[10^3/ul]
+    
+
+
+Sentence 45:
+EO%:1.8[%]
+    
+
+
+Sentence 46:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    BASO%:0.4[%]
+    
+
+
+Sentence 47:
+NRBC %:0.0[%]
+    
+
+
+Sentence 48:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 49:
+D-dimer - test ilościowy: D-dimer
+
+
+Sentence 50:
+- test ilościowy:845[ng/ml]
+
+
+
+Sentence 51:
+Badanie ogólne moczu
+    
+
+
+Sentence 52:
+barwa:żółty[ ]
+    
+
+
+Sentence 53:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 54:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 55:
+przejrzystość:niezupełna[ ]
+    
+
+
+Sentence 56:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 57:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 58:
+ciężar właściwy:1.014[ ]
+    
+
+
+Sentence 59:
+pH:5.5[ ]
+    białko:nikły ślad[ ]
+    
+
+
+Sentence 60:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 61:
+azotyny:obecne[ ]
+    
+
+
+Sentence 62:
+erytrocyty:nieobecne[ ]
+    
+
+
+Sentence 63:
+leukocyty:obecne[ ]
+    
+
+
+Sentence 64:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 65:
+nabłonki płaskie:dość liczne[w preparacie]
+    
+
+
+Sentence 66:
+nabłonki okrągłe:pojedyncze[w preparacie]
+    
+
+
+Sentence 67:
+leukocyty:229 /ul[ul]
+    erytrocyty świeże:3 /ul[ul]
+    śluz:liczny[w preparacie]
+    
+
+
+Sentence 68:
+bakterie:dość liczne[w preparacie]
+
+
+
+Sentence 69:
+TSH: TSH:1.17[uIU/ml]
+
+
+
+Sentence 70:
+FT3: FT3:3.11[pg/ml]
+
+
+
+Sentence 71:
+FT4: FT4:1.03[ng/dl]
+
+
+
+Sentence 72:
+Troponina T: Troponina T:5.6[pg/ml]
+
+
+
+Sentence 73:
+ALAT: ALAT:72[U/L]
+ASPAT: ASPAT:41[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 74:
+Sód (Na): Sód:143[mmol/L]
+
+
+
+Sentence 75:
+Potas (K): Potas:5.1[mmol/L]
+
+
+
+Sentence 76:
+Kreatynina + GFR
+    
+
+
+Sentence 77:
+Kreatynina w surowicy:0.72[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 78:
+MDRD ze stan:81.0[ml/min/1,73 m^2]
+
+
+
+Sentence 79:
+Mocznik: Mocznik:33[mg/dl]
+
+
+
+Sentence 80:
+Kwas moczowy: Kwas moczowy:4.7[mg/dl]
+
+
+
+Sentence 81:
+Lipidogram
+    
+
+
+Sentence 82:
+Cholesterol całkowity:244[mg/dl]
+    
+
+
+Sentence 83:
+Cholesterol HDL:57[mg/dl]
+    
+
+
+Sentence 84:
+Cholestrol LDL:166[mg/dl]
+    
+
+
+Sentence 85:
+Triglicerydy:91[mg/dl]
+    
+
+
+Sentence 86:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:87[mg/dl]
+
+
+
+Sentence 87:
+NT-proBNP surowica: NT-proBNP w surowicy:134[pg/ml]
+
+
+
+Sentence 88:
+------------------------------------------------
+
+
+
+Sentence 89:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 90:
+I25.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 91:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 92:
+C55
+A01
+89.502
+I81
+
+
+
+Sentence 93:
+89.50
+L43
+O61
+87.440
+G49
+N45
+L69
+O55
+I17
+M45
+O35
+M37
+I19
+N13
+N24
+88.721
+O69
+88.714
+88.26
+88.761
+
+
+
+Sentence 94:
+------------------------------------------------
+
+

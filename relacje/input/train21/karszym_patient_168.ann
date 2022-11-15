@@ -1,0 +1,57 @@
+T1	Treatment 420 440	operacyjnym leczeniu
+N1	Reference T1 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T2	Condition 441 472	kanału przedsionkowo-komorowego
+N2	Reference T2 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T3	Date 474 478	1996
+R1	Dat Arg1:T3 Arg2:T1	
+T4	Condition 481 509	Niedomykalność mitralna I st
+N3	Reference T4 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T5	Condition 511 523	Zespół Downa
+N4	Reference T5 ICD10:Q90.9	Zespół Downa, nieokreślony
+T6	Condition 525 547	Niedoczynność tarczycy
+N5	Reference T6 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T7	Treatment 693 720	dalsza opieka w poradni POZ
+T8	Treatment 723 755	okresowa kontrola kardiologiczna
+T9	Treatment 758 787	okresowa kontrola lipidogramu
+T10	Date 789 799	raz w roku
+R3	Dat Arg1:T10 Arg2:T9	
+T11	Behaviour 803 828	dieta niskocholesterolowa
+T12	Drug 864 872	Euthyrox
+T13	Drug 928 936	Euthyrox
+T14	Drug_dose 873 925	50ug 1 tabl. rano na czczo od poniedziałku do soboty
+T15	Drug_dose 937 975	75ug 1 tabl. rano na czczo w niedzielę
+R4	Drg Arg1:T12 Arg2:T14	
+R5	Drg Arg1:T13 Arg2:T15	
+T16	Condition 1115 1129	Zespołem Downa
+N6	Reference T16 ICD10:Q90.9	Zespół Downa, nieokreślony
+T17	Treatment 1134 1154	operacyjnej korekcji
+N7	Reference T17 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T18	Condition 1155 1175	wspólnego kanału A-V
+N8	Reference T18 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T19	Date 1176 1190	w 1 roku zycia
+T20	Date 1194 1200	1996 r
+R7	Dat Arg1:T19 Arg2:T17	
+R8	Dat Arg1:T20 Arg2:T18	
+R6	Dat Arg1:T20 Arg2:T17	
+R9	Dat Arg1:T19 Arg2:T18	
+T21	Treatment 1247 1286	po opieką poradni kardiologicznej ICZMP
+T22	Date 1387 1407	W październiku 2018r
+T23	Symptom 1409 1470	incydent zasłabnięcia, prawdopodobnie w przebiegu odwodnienia
+R10	Dat Arg1:T22 Arg2:T23	
+A1	Status T23 Historical_Insignificant
+T24	Treatment 1481 1499	diagnozowany w SOR
+R11	Dat Arg1:T22 Arg2:T24	
+T25	Date 1523 1540	W ostatnim czasie
+T26	Negation 1541 1544	bez
+T27	Symptom 1545 1577	pogorszenia wydolności fizycznej
+T28	Symptom 1583 1635	innych objawów ze strony układu sercowo-naczyniowego
+T29	Condition 1657 1679	niedoczynność tarczycy
+N9	Reference T29 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T30	Drug 1695 1705	Euthyroxem
+T31	Drug_dose 1706 1713	50 ug/d
+R12	Drg Arg1:T30 Arg2:T31	
+R13	Neg Arg1:T26 Arg2:T27	
+R14	Neg Arg1:T26 Arg2:T28	
+R15	Dat Arg1:T25 Arg2:T27	
+R16	Dat Arg1:T25 Arg2:T28	
+R2	Dat Arg1:T3 Arg2:T2	

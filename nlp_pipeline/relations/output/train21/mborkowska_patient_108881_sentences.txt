@@ -1,0 +1,507 @@
+allRelations          : 21
+oks                   : 12
+isRedundantAndRemoveds: 8
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 0
+GOOD / BAD            : 20 / 1
+Sentence 0:
+------------------------------------------------
+Wiek: 27 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zastosowane leczenie
+
+
+
+Sentence 4:
+------------------------------------------------
+bez leków
+------------------------------------------------
+
+
+
+Sentence 5:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 6:
+- kontrola u lekarza POZ
+- wystawiono skierowanie do Kliniki Elektrokardiologii w CKD w Łodzi (ul. Pomorska 251) celem diagnostyki i leczenia kołatań serca
+
+
+
+Sentence 7:
+- kontrolne badanie poziomu hormonów tarczycy (ambulatoryjnie)
+------------------------------------------------
+
+
+
+Sentence 8:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 9:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Kołatania serca.
+
+
+Sentence 10:
+Przewlekłe zapalenie zatok w wywiadzie.
+
+
+
+Sentence 11:
+------------------------------------------------
+
+
+
+Sentence 12:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 13:
+Pacjent 26-letni, przyjęty do Kliniki z powodu napadów nierównomiernej pracy serca z towarzyszącą dusznością od ok. 0,5-1 roku, głównie w trakcie wysiłku.
+
+R1	Dat Arg1:T8 Arg2:T5 << OK >>	ok. 0,5-1 roku -> napadów nierównomiernej pracy serca  <RANK: 3> <info: start[1187, 1122] <type: LEFT>>
+R2	Dat Arg1:T8 Arg2:T6 << OK >>	ok. 0,5-1 roku -> towarzyszącą dusznością  <RANK: 3> <info: start[1187, 1160] <type: LEFT>>
+R3	Dat Arg1:T8 Arg2:T7 <<REDUNDANT!!!REMOVED>>	ok. 0,5-1 roku -> głównie w trakcie wysiłku <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1187, 1203] <type: RIGHT>>
+
+
+Sentence 14:
+Pacjent neguje bóle w kl. piersiowej, omdlenia, utraty przytomności.
+
+R4	Neg Arg1:T12 Arg2:T9 << OK >>	neguje -> bóle w kl. piersiowej,  <RANK: 3> <info: start[1238, 1245] <type: RIGHT>>
+R5	Neg Arg1:T12 Arg2:T10 << OK >>	neguje -> omdlenia  <RANK: 2> <info: start[1238, 1268] <type: RIGHT>>
+R6	Neg Arg1:T12 Arg2:T11 << OK >>	neguje -> utraty przytomności  <RANK: 2> <info: start[1238, 1278] <type: RIGHT>>
+
+
+Sentence 15:
+W wywiadzie: przewlekłe zapalenie błony śluzowej zatok
+
+
+
+Sentence 16:
+Przebyte operacje: nie podaje
+Leczenie przewlekłe: nie podaje
+
+R7	Neg Arg1:T15 Arg2:T14 << OK >>	nie podaje -> operacje  <RANK: 3> <info: start[1373, 1363] <type: LEFT>>
+R8	Neg Arg1:T15 Arg2:T17 <<REDUNDANT!!!REMOVED>>	nie podaje -> Leczenie przewlekłe <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1373, 1384] <type: RIGHT>>
+R9	Neg Arg1:T16 Arg2:T14 <<REDUNDANT!!!REMOVED>>	nie podaje -> operacje <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1405, 1363] <type: LEFT>>
+R10	Neg Arg1:T16 Arg2:T17 << OK >>	nie podaje -> Leczenie przewlekłe  <RANK: 3> <info: start[1405, 1384] <type: LEFT>>
+
+
+Sentence 17:
+Przebyte choroby zakaźne - WZW, borelioza nie podaje
+Wywiad rodzinny: nieistotny
+
+R11	Neg Arg1:T20 Arg2:T18 <<SHOULD NOT BE REMOVED>>	nie podaje -> WZW <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1458, 1443] <type: LEFT>>
+R12	Neg Arg1:T20 Arg2:T19 << OK >>	nie podaje -> borelioza  <RANK: 3> <info: start[1458, 1448] <type: LEFT>>
+R13	Neg Arg1:T20 Arg2:T21 <<REDUNDANT!!!REMOVED>>	nie podaje -> Wywiad rodzinny <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1458, 1469] <type: RIGHT>>
+R14	Neg Arg1:T22 Arg2:T18 <<REDUNDANT!!!REMOVED>>	nieistotny -> WZW <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1486, 1443] <type: LEFT>>
+R15	Neg Arg1:T22 Arg2:T19 <<REDUNDANT!!!REMOVED>>	nieistotny -> borelioza <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1486, 1448] <type: LEFT>>
+R16	Neg Arg1:T22 Arg2:T21 << OK >>	nieistotny -> Wywiad rodzinny  <RANK: 3> <info: start[1486, 1469] <type: LEFT>>
+
+
+Sentence 18:
+Palenie tytoniu: bierne
+Inne używki: nie podaje
+Uczulenia: niepotwierdzona alergia
+
+R17	Neg Arg1:T24 Arg2:T26 <<REDUNDANT!!!REMOVED>>	nie podaje -> alergia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1534, 1572] <type: RIGHT>>
+R18	Neg Arg1:T24 Arg2:T25 << OK >>	nie podaje -> Inne używki  <RANK: 3> <info: start[1534, 1521] <type: LEFT>>
+R19	Neg Arg1:T27 Arg2:T26 << OK >>	niepotwierdzona -> alergia  <RANK: 3> <info: start[1556, 1572] <type: RIGHT>>
+R20	Neg Arg1:T27 Arg2:T25 <<REDUNDANT!!!REMOVED>>	niepotwierdzona -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1556, 1521] <type: LEFT>>
+
+
+Sentence 19:
+Status społeczny: pracuje w kuźni, archeolog, kawaler
+
+
+
+Sentence 20:
+Leki:
+bez leków
+
+R21	Neg Arg1:T33 Arg2:T34 << OK >>	bez leków -> Leki  <RANK: 1> <info: start[1640, 1634] <type: LEFT>>
+
+
+Sentence 21:
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter, RTG kl. piersiowej.
+
+
+
+Sentence 22:
+Przewidywana liczba dni hospitalizacji: 4-5 dni
+------------------------------------------------
+
+
+
+Sentence 23:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 24:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.84[10^3/ul]
+    
+
+
+Sentence 25:
+RBC Krwinki czerwone:4.75[10^6/ul]
+    
+
+
+Sentence 26:
+HGB Hemoglobina:14.7[g/dl]
+    
+
+
+Sentence 27:
+HCT Hematokryt:40.6[%]
+    
+
+
+Sentence 28:
+MCV wskaźnik czerwonokrw:85.5[fl]
+    
+
+
+Sentence 29:
+MCH wskaźnik czerwonokrw:30.9[pg]
+    
+
+
+Sentence 30:
+MCHC wskaźnik czerwonokr:36.2[g/dl]
+    
+
+
+Sentence 31:
+PLT z morfologii:190[10^3/ul]
+    
+
+
+Sentence 32:
+RDW-SD:37.5[fl]
+    
+
+
+Sentence 33:
+RDW-CV:12.1[%]
+    PDW:12.6[fl]
+    MPV:10.6[fl]
+    
+
+
+Sentence 34:
+P-LCR:29.6[%]
+    
+
+
+Sentence 35:
+PCT (hematokryt płytkowy:0.20[%]
+    
+
+
+Sentence 36:
+NEUTR# wartość bezwzględ:3.11[10^3/ul]
+    
+
+
+Sentence 37:
+NEUTR%:45.5[%]
+    
+
+
+Sentence 38:
+LYMH# wartość bezwzględn:2.62[10^3/ul]
+    
+
+
+Sentence 39:
+LYMPH%:38.3[%]
+    
+
+
+Sentence 40:
+MONO# wartość bezwzględn:0.74[10^3/ul]
+    
+
+
+Sentence 41:
+MONO%:10.8[%]
+    
+
+
+Sentence 42:
+EO# wartość bezwzględna:0.32[10^3/ul]
+    
+
+
+Sentence 43:
+EO%:4.7[%]
+    BASO# wartość bezwzględn:0.05[10^3/ul]
+    BASO%:0.7[%]
+    
+
+
+Sentence 44:
+NRBC %:0.0[%]
+    
+
+
+Sentence 45:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 46:
+Badanie ogólne moczu
+    
+
+
+Sentence 47:
+barwa:żółty[ ]
+    
+
+
+Sentence 48:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 49:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 50:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 51:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 52:
+ciężar właściwy:1.018[ ]
+    
+
+
+Sentence 53:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 54:
+pH:5.0[ ]
+    
+
+
+Sentence 55:
+białko:nieobecne[ ]
+    
+
+
+Sentence 56:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 57:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 58:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 59:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 60:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 61:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 62:
+leukocyty:2 /ul[ul]
+    erytrocyty świeże:3 /ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 63:
+TSH: TSH:4.33[uIU/ml]
+
+
+
+Sentence 64:
+FT3: FT3:3.18[pg/ml]
+
+
+
+Sentence 65:
+FT4: FT4:1.29[ng/dl]
+
+
+
+Sentence 66:
+Troponina T
+    Troponina T:
+    3,00[pg/ml]
+
+
+
+Sentence 67:
+ALAT: ALAT:15[U/L]
+ASPAT: ASPAT:17[U/L]
+CKMB aktywność: CKMB:12[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 68:
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 69:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 70:
+Potas (K): Potas:4.2[mmol/L]
+
+
+
+Sentence 71:
+Kreatynina + GFR
+    
+
+
+Sentence 72:
+Kreatynina w surowicy:0.99[mg/dl]
+    
+
+
+Sentence 73:
+eGFR wg skr.
+
+
+Sentence 74:
+MDRD ze stan:91.4[ml/min/1,73 m^2]
+
+
+
+Sentence 75:
+Mocznik: Mocznik:33[mg/dl]
+
+
+
+Sentence 76:
+Kwas moczowy: Kwas moczowy:4.7[mg/dl]
+
+
+
+Sentence 77:
+Lipidogram
+    
+
+
+Sentence 78:
+Cholesterol całkowity:157[mg/dl]
+    
+
+
+Sentence 79:
+Cholesterol HDL:71[mg/dl]
+    
+
+
+Sentence 80:
+Cholestrol LDL:74[mg/dl]
+    Triglicerydy:69[mg/dl]
+    
+
+
+Sentence 81:
+Stosunek cholesterolu HD:0.5
+
+
+
+Sentence 82:
+Glukoza w surowicy: Glukoza w surowicy:83[mg/dl]
+
+
+
+Sentence 83:
+------------------------------------------------
+
+
+
+Sentence 84:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 85:
+R00.2
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 86:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 87:
+89.501
+88.721
+89.502
+------------------------------------------------
+
+

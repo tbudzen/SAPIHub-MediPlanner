@@ -1,0 +1,125 @@
+T1	Condition 439 472	Napadowy częstoskurcz nadkomorowy
+N1	Reference T1 ICD10:I47.1	Częstoskurcz nadkomorowy
+T2	Condition 474 490	Insulinooporność
+N2	Reference T2 ICD10:E34.8	Inne określone zaburzenia wydzielania wewnętrznego
+T3	Treatment 500 536	amputacji nadpochwowej trzonu macicy
+T4	Date 585 595	22.11.2016
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Condition 815 848	Napadowy częstoskurcz nadkomorowy
+N3	Reference T5 ICD10:I47.1	Częstoskurcz nadkomorowy
+T6	Condition 850 895	Łagodna niedomykalność zastawki trójdzielnej.
+N4	Reference T6 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T7	Condition 896 912	Insulinooporność
+N5	Reference T7 ICD10:E34.8	Inne określone zaburzenia wydzielania wewnętrznego
+T8	Treatment 922 958	amputacji nadpochwowej trzonu macicy
+T9	Date 1007 1017	22.11.2016
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Investigation 1266 1349	kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T11	Behaviour 1354 1468	Dieta cukrzycowa, lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T12	Behaviour 1482 1501	redukcja masy ciała
+T13	Behaviour 1515 1557	podjęcie umiarkowanej aktywności fizycznej
+T14	Investigation 1572 1618	samokontrola ciśnienia tętniczego krwi i tętna
+T15	Investigation 2956 2966	Holter EKG
+T16	Investigation 2968 2972	ECHO
+T17	Investigation 2974 2978	ABPM
+T18	Drug 2835 2845	Concor COR
+T19	Drug_dose 2846 2870	5 mg 1/2 tabl. 1xdz rano
+R3	Drg Arg1:T18 Arg2:T19	
+T20	Behaviour 2747 2773	warunki mieszkaniowe dobre
+T21	Condition 2651 2654	WZW
+N6	Reference T21 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T22	Condition 2661 2670	borelioza
+N7	Reference T22 ICD10:A69.2	Choroba z Lyme
+T23	Condition 2678 2681	tbc
+N8	Reference T23 ICD10:A15	
+T24	Condition 2687 2691	odra
+A1	Source T24 Declared
+N9	Reference T24 ICD10:B05	Odra
+T25	Negation 2693 2704	nie pamięta
+R4	Neg Arg1:T25 Arg2:T24	
+T26	Treatment 2707 2730	szczepienie na odrę (+)
+N10	Reference T26 ICD10:B05	Odra
+A2	Source T26 Confirmed
+T27	Negation 2682 2685	(-)
+R5	Neg Arg1:T27 Arg2:T23	
+T28	Negation 2671 2676	( - )
+R6	Neg Arg1:T28 Arg2:T22	
+T29	Negation 2655 2658	(-)
+R7	Neg Arg1:T29 Arg2:T21	
+T30	Negation 2619 2622	nie
+T31	Negation 2603 2606	nie
+T32	Negation 2585 2588	nie
+T33	Condition 2608 2617	Uczulenia
+N11	Reference T33 ICD10:T78.4	Alergia, nieokreślona
+R8	Neg Arg1:T30 Arg2:T33	
+T34	Behaviour 2590 2601	Inne używki
+R9	Neg Arg1:T31 Arg2:T34	
+T35	Behaviour 2568 2583	Palenie tytoniu
+N12	Reference T35 ICD10:T65.2	Tytoń i nikotyna
+R10	Neg Arg1:T32 Arg2:T35	
+T36	Treatment 2561 2566	2x cc
+T37	Treatment 2455 2491	amputacji nadpochwowej trzonu macicy
+T38	Date 2539 2551	(22.11.2016)
+R11	Dat Arg1:T38 Arg2:T37	
+T39	Condition 1764 1804	napadowymi częstoskurczami nadkomorowymi
+N13	Reference T39 ICD10:I47.1	Częstoskurcz nadkomorowy
+T40	Date 1956 1963	12.2017
+T41	Treatment 1966 1983	umiarowiony na IP
+T42	Drug 1993 2002	adenozyny
+R12	Dat Arg1:T40 Arg2:T39	
+R13	Dat Arg1:T40 Arg2:T42	
+T43	Date 1806 1909	od ok. 10 lat, 1xna miesiąc- kilka miesięcy, częściej w godz. nocnych, trwające od kilku sek. do 20 min
+R14	Dat Arg1:T43 Arg2:T39	
+A3	Source T43 Declared
+T44	Drug 2039 2049	Concor COR
+T45	Symptom 2091 2126	obrzękami kończyn dolnych i górnych
+N14	Reference T45 ICD10:R60	Obrzęk niesklasyfikowany gdzie indziej
+T46	Drug 2157 2163	Trifas
+T47	Drug_dose 2164 2169	10 mg
+R15	Drg Arg1:T46 Arg2:T47	
+T48	Condition 2174 2192	insulinoopornością
+N15	Reference T48 ICD10:E34.8	Inne określone zaburzenia wydzielania wewnętrznego
+T49	Condition 2194 2217	stanem przedcukrzycowym
+T50	Negation 2267 2273	Neguje
+T51	Symptom 2275 2287	zasłabnięcia
+N16	Reference T51 ICD10:R55	Omdlenie i zapaść
+T52	Symptom 2289 2297	omdlenia
+N17	Reference T52 ICD10:R55	Omdlenie i zapaść
+T53	Symptom 2299 2309	krwawienia
+N18	Reference T53 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T54	Symptom 2311 2324	czarne stolce
+N19	Reference T54 ICD10:K92.1	Stolce smołowate
+T55	Symptom 2326 2342	brunatne wymioty
+N20	Reference T55 ICD10:K92.0	
+T56	Condition 2344 2360	chorobę wrzodową
+N21	Reference T56 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T57	Symptom 2362 2390	duszność nocną typu ortopnoe
+N22	Reference T57 ICD10:I50.1	Niewydolność serca lewokomorowa
+T58	Condition 2392 2394	HA
+N23	Reference T58 ICD10:I10	
+T59	Condition 2396 2398	DM
+N24	Reference T59 ICD10:E13	Inne określone postacie cukrzycy
+T60	Condition 2400 2410	udar mózgu
+N25	Reference T60 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T61	Condition 2412 2423	zawał serca
+N26	Reference T61 ICD10:I25.2	Przebyty zawał serca
+R16	Neg Arg1:T50 Arg2:T51	
+R17	Neg Arg1:T50 Arg2:T52	
+R18	Neg Arg1:T50 Arg2:T53	
+R19	Neg Arg1:T50 Arg2:T54	
+R20	Neg Arg1:T50 Arg2:T55	
+R21	Neg Arg1:T50 Arg2:T56	
+R22	Neg Arg1:T50 Arg2:T57	
+R23	Neg Arg1:T50 Arg2:T58	
+R24	Neg Arg1:T50 Arg2:T59	
+R25	Neg Arg1:T50 Arg2:T60	
+R26	Neg Arg1:T50 Arg2:T61	
+T62	Condition 546 583	niezłośliwego nowotworu trzonu macicy
+N27	Reference T62 ICD10:D26	Inne nowotwory niezłośliwe macicy
+R27	Dat Arg1:T4 Arg2:T62	
+T63	Condition 968 1005	niezłośliwego nowotworu trzonu macicy
+N28	Reference T63 ICD10:D62	Ostra niedokrwistość pokrwotoczna
+R28	Dat Arg1:T9 Arg2:T63	
+T64	Condition 2501 2538	niezłośliwego nowotworu trzonu macicy
+N29	Reference T64 ICD10:D62	Ostra niedokrwistość pokrwotoczna
+R29	Dat Arg1:T38 Arg2:T64	

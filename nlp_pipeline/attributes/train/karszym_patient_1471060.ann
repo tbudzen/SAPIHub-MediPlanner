@@ -1,0 +1,67 @@
+T1	Condition 420 446	OZW STEMi ściany przedniej
+N1	Reference T1 ICD10:I21.0	Ostry zawał serca pełnościenny ściany przedniej
+T2	Treatment 447 463	leczonym PCI LAD
+T3	Condition 465 526	Niewydolność serca z zachowaną funkcją skurczową lewej komory
+N2	Reference T3 ICD10:I50.9	Niewydolność serca, nieokreślona
+T4	Condition 527 571	Łagodna niedomykalność zastawki trójdzielnej
+N3	Reference T4 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T5	Condition 573 594	Nadciśnienie tętnicze
+N4	Reference T5 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T6	Condition 596 610	Hiperlipidemia
+N5	Reference T6 ICD10:E78.2	Hiperlipidemia mieszana
+T7	Behaviour 612 622	Nikotynizm
+N6	Reference T7 ICD10:Z72.0	Używanie tytoniu
+T8	Date 623 636	w przeszłości
+R1	Dat Arg1:T8 Arg2:T7	
+T9	Treatment 781 808	dalsza opieka w poradni POZ
+T10	Treatment 814 846	okresowa kontrola kardiologiczna
+T11	Investigation 851 889	okresowa kontrola ciśnienia tętniczego
+T12	Investigation 891 920	okresowa kontrola lipidogramu
+T13	Behaviour 927 952	dieta niskocholesterolowa
+T14	Treatment 963 1000	ambulatoryjna konsultacja dietetyczna
+T15	Symptom 1172 1254	okresowych dolegliwości bólowych w kl  piersiowej, głównie w sytuacjach stresowych
+N7	Reference T15 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T16	Symptom 1256 1285	Dość dobra tolerancja wysiłku
+T17	Condition 1308 1334	OZW STEMi ściany przedniej
+N8	Reference T17 ICD10:I21.0	Ostry zawał serca pełnościenny ściany przedniej
+T18	Treatment 1335 1351	leczonym PCI LAD
+T19	Condition 1353 1355	HF
+N9	Reference T19 ICD10:I50.9	Niewydolność serca, nieokreślona
+T20	Condition 1366 1376	IT łagodna
+N10	Reference T20 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T21	Condition 1378 1380	HA
+N11	Reference T21 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T22	Condition 1382 1396	Hiperlipidemia
+N12	Reference T22 ICD10:E78.2	Hiperlipidemia mieszana
+T23	Behaviour 1398 1408	Nikotynizm
+N13	Reference T23 ICD10:Z72.0	Używanie tytoniu
+T24	Date 1409 1422	w przeszłości
+R2	Dat Arg1:T24 Arg2:T23	
+T25	Treatment 1478 1486	Operacje
+N14	Reference T25 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T26	Negation 1488 1494	neguje
+T27	Behaviour 1495 1512	Alkohol: okresowo
+N15	Reference T27 ICD10:Z72.0	Używanie tytoniu
+R3	Neg Arg1:T26 Arg2:T25	
+T28	Negation 1521 1527	neguje
+T29	Condition 1529 1546	uczulenia na leki
+N16	Reference T29 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T30	Symptom 1548 1581	krwawienia z przewodu pokarmowego
+N17	Reference T30 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R4	Neg Arg1:T28 Arg2:T29	
+R5	Neg Arg1:T28 Arg2:T30	
+T31	Condition 1583 1598	Wywiad rodzinny
+A1	Status T31 Family
+T32	Negation 1600 1613	bez znaczenia
+R6	Neg Arg1:T32 Arg2:T31	
+T33	Drug 1640 1648	brilique
+T34	Drug 1650 1655	acard
+T35	Drug 1657 1664	tritace
+T36	Drug 1666 1673	romazic
+T37	Drug 1675 1678	IPP
+T38	Drug 1680 1685	nedal
+T39	Investigation 1698 1708	ECHO serca
+T40	Investigation 1710 1720	Holter EKG
+T41	Investigation 1722 1731	Holter RR
+T42	Investigation 1733 1735	PW
+T43	Investigation_result 1358 1364	EF 53%

@@ -1,0 +1,34 @@
+T1	Drug 352 360	Spironol
+T2	Drug 373 379	Warfin
+T3	Drug_dose 380 429	1 x 1.5mg (pod kontrolą INR, zalecany zakres:2-3)
+T4	Drug_dose 361 371	1 x 12.5mg
+T5	Treatment 434 483	Ambulatoryjna kontrola parametrów układu krążenia
+T6	Treatment 488 516	Dalsza opieka kardiologiczna
+T7	Treatment 519 535	kontrolna wizyta
+T8	Date 536 543	za 6mcy
+R1	Dat Arg1:T8 Arg2:T7	
+R2	Drg Arg1:T1 Arg2:T4	
+R3	Drg Arg1:T2 Arg2:T3	
+T9	Drug 720 728	Spironol
+T10	Drug 730 736	Warfin
+T11	Condition 955 1009	Wrodzona wada serca - atrezja zastawki tętnicy płucnej
+N1	Reference T11 ICD10:Q22.0	Zarośnięcie zastawki pnia płucnego
+T12	Condition 1012 1036	hipoplazją komory prawej
+N2	Reference T12 ICD10:Q22.6	Zespół niedorozwoju prawej części serca
+T13	Treatment 1049 1075	atrioseptostomii balonowej
+T14	Date 1077 1086	07.08.15r
+T15	Date 1088 1097	16.06.16r
+R4	Dat Arg1:T14 Arg2:T13	
+R5	Dat Arg1:T15 Arg2:T13	
+T16	Treatment 1111 1161	operacji prawostronnego zespolenia Blalock-Taussig
+N3	Reference T16 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T17	Date 1163 1174	11.08.2015r
+T18	Treatment 1180 1192	operacji BDG
+N4	Reference T18 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T19	Date 1194 1205	16.12.2015r
+T20	Treatment 1219 1235	operacji Fontana
+N5	Reference T20 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T21	Date 1237 1246	07.12.17r
+R6	Dat Arg1:T17 Arg2:T16	
+R7	Dat Arg1:T19 Arg2:T18	
+R8	Dat Arg1:T21 Arg2:T20	

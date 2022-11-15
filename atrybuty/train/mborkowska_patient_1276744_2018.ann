@@ -1,0 +1,537 @@
+T1	Investigation 9804 9815	echo serca,
+T2	Investigation 9816 9820	ABPM
+T3	Investigation 9822 9828	Holter
+T4	Investigation 9830 9848	RTG kl. piersiowej
+T5	Drug 9748 9760	Vessel Due F
+T6	Drug 9725 9735	Polhumin R
+T7	Drug 9691 9703	Polhumin Mix
+T8	Drug_dose 9704 9724	wg glikemii 30-0-32j
+R1	Drg Arg1:T7 Arg2:T8	
+T9	Drug_dose 9736 9747	14 j 3 x dz
+R2	Drg Arg1:T6 Arg2:T9	
+T10	Drug_dose 9761 9775	1 kaps. 2 x dz
+R3	Drg Arg1:T5 Arg2:T10	
+T11	Drug 9660 9666	Siofor
+T12	Drug_dose 9667 9689	1000 mg 1 tabl. 3 x dz
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 9606 9613	Pradaxa
+T14	Drug_dose 9614 9635	150 mg 1 tabl. 2 x dz
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Drug 9650 9657	Clexane
+T16	Date 9638 9646	od 11.07
+R6	Dat Arg1:T16 Arg2:T15	
+T17	Drug 9572 9579	Milurit
+T18	Drug 9536 9543	Emanera
+T19	Drug 9503 9512	Presarium
+T20	Drug 9472 9478	Atoris
+T21	Drug_dose 9479 9502	20 mg 1 tabl. wieczorem
+R7	Drg Arg1:T20 Arg2:T21	
+T22	Drug_dose 9513 9535	5 mg 1 tabl. wieczorem
+R8	Drg Arg1:T19 Arg2:T22	
+T23	Drug_dose 9544 9571	20 mg 1 tabl. rano na czczo
+R9	Drg Arg1:T18 Arg2:T23	
+T24	Drug_dose 9580 9605	100 mg 1 tabl. w południe
+R10	Drg Arg1:T17 Arg2:T24	
+T25	Drug 9439 9446	Nonpres
+T26	Drug 9413 9419	Diuver
+T27	Drug 9387 9393	Lokren
+T28	Drug_dose 9394 9411	20 mg 1 tabl. ran
+R11	Drg Arg1:T27 Arg2:T28	
+T29	Drug_dose 9420 9438	10 mg 1 tabl. rano
+R12	Drg Arg1:T26 Arg2:T29	
+T30	Drug_dose 9447 9471	50 mg 1 tabl. w południe
+R13	Drg Arg1:T25 Arg2:T30	
+T31	Negation 9336 9346	nie podaje
+T32	Negation 9314 9324	nie podaje
+T33	Negation 9290 9300	nie podaje
+T34	Condition 9325 9334	Uczulenia
+N1	Reference T34 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R14	Neg Arg1:T31 Arg2:T34	
+T35	Behaviour 9301 9312	Inne używki
+N2	Reference T35 ICD10:Z72	Problemy związane ze stylem życia
+R15	Neg Arg1:T32 Arg2:T35	
+T36	Behaviour 9273 9288	Palenie tytoniu
+N3	Reference T36 ICD10:Z72.0	Używanie tytoniu
+R16	Neg Arg1:T33 Arg2:T36	
+T37	Condition 9236 9271	Wywiad rodzinny: obustronnie dodatn
+A1	Status T37 Family
+A2	Source T37 Confirmed
+T38	Negation 9225 9235	nie podaje
+T39	Condition 9213 9222	borelioza
+N4	Reference T39 ICD10:A69.2	Choroba z Lyme
+T40	Condition 9208 9211	WZW
+N5	Reference T40 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+R17	Neg Arg1:T38 Arg2:T39	
+R18	Neg Arg1:T38 Arg2:T40	
+T41	Investigation 7969 7973	ECHO
+T42	Investigation 7975 7993	EKG metodą Holtera
+T43	Investigation 7995 7999	ABPM
+T44	Drug 7857 7869	Vessel Due F
+T45	Drug_dose 7870 7884	1 kaps. 2 x dz
+R19	Drg Arg1:T44 Arg2:T45	
+T46	Drug 7798 7808	Polhumin R
+T47	Drug_dose 7809 7855	18j-22j-14j do głównych posiłków (wg glikemii)
+R20	Drg Arg1:T46 Arg2:T47	
+T48	Drug 7750 7763	Insuman Basal
+T49	Drug_dose 7764 7795	18 j o godz. 21:00 (wg glikemii
+R21	Drg Arg1:T48 Arg2:T49	
+T50	Drug 7718 7724	Siofor
+T51	Drug_dose 7725 7747	1000 mg 1 tabl. 3 x dz
+R22	Drg Arg1:T50 Arg2:T51	
+T52	Drug 7687 7694	Pradaxa
+T53	Drug_dose 7695 7716	150 mg 1 tabl. 2 x dz
+R23	Drg Arg1:T52 Arg2:T53	
+T54	Drug 7652 7659	Milurit
+T55	Drug_dose 7660 7685	100 mg 1 tabl. w południe
+R24	Drg Arg1:T54 Arg2:T55	
+T56	Drug 7615 7622	Emanera
+T57	Drug_dose 7623 7650	20 mg 1 tabl. rano na czczo
+R25	Drg Arg1:T56 Arg2:T57	
+T58	Drug 7579 7587	Primacor
+T59	Drug_dose 7588 7613	10 mg 1/2 tabl. wieczorem
+R26	Drg Arg1:T58 Arg2:T59	
+T60	Drug 7543 7553	Prestarium
+T61	Drug_dose 7554 7577	10 mg 1 tabl. wieczorem
+R27	Drg Arg1:T60 Arg2:T61	
+T62	Drug 7511 7517	Atoris
+T63	Drug_dose 7518 7541	30 mg 1 tabl. wieczorem
+R28	Drg Arg1:T62 Arg2:T63	
+T64	Drug 7477 7484	Nonpres
+T65	Drug_dose 7485 7509	50 mg 1 tabl. w południe
+R29	Drg Arg1:T64 Arg2:T65	
+T66	Drug 7448 7456	Toramide
+T67	Drug_dose 7457 7475	20 mg 1 tabl. rano
+R30	Drg Arg1:T66 Arg2:T67	
+T68	Drug 7421 7427	Lokren
+T69	Drug_dose 7428 7446	20 mg 1 tabl. rano
+R31	Drg Arg1:T68 Arg2:T69	
+T70	Behaviour 7343 7369	warunki mieszkaniowe dobre
+T71	Condition 7292 7295	WZW
+N6	Reference T71 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T72	Condition 7302 7311	borelioza
+N7	Reference T72 ICD10:A69.2	Choroba z Lyme
+T73	Condition 7319 7322	tbc
+N8	Reference T73 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T74	Negation 7323 7326	(-)
+R32	Neg Arg1:T74 Arg2:T73	
+T75	Negation 7312 7317	( - )
+R33	Neg Arg1:T75 Arg2:T72	
+T76	Negation 7296 7299	(-)
+R34	Neg Arg1:T76 Arg2:T71	
+T77	Negation 7261 7264	nie
+T78	Negation 7245 7248	nie
+T79	Negation 7226 7231	nigdy
+T80	Condition 7249 7258	Uczulenia
+N9	Reference T80 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T81	Behaviour 7232 7243	Inne używki
+N10	Reference T81 ICD10:Z72	Problemy związane ze stylem życia
+R35	Neg Arg1:T78 Arg2:T81	
+T82	Behaviour 7209 7224	Palenie tytoniu
+N11	Reference T82 ICD10:Z72.0	Używanie tytoniu
+R36	Neg Arg1:T79 Arg2:T82	
+R37	Neg Arg1:T77 Arg2:T80	
+T83	Treatment 7187 7204	Przebyte operacje
+T84	Drug 5667 5679	Vessel Due F
+T85	Drug 5608 5618	Polhumin R
+T86	Drug 5560 5573	Insuman Basal
+T87	Drug_dose 5574 5606	18 j o godz. 21:00 (wg glikemii)
+R38	Drg Arg1:T86 Arg2:T87	
+T88	Drug_dose 5619 5665	18j-22j-14j do głównych posiłków (wg glikemii)
+R39	Drg Arg1:T85 Arg2:T88	
+T89	Drug_dose 5680 5694	1 kaps. 2 x dz
+R40	Drg Arg1:T84 Arg2:T89	
+T90	Drug 5528 5534	Siofor
+T91	Drug 5497 5504	Pradaxa
+T92	Drug 5462 5469	Milurit
+T93	Drug 5425 5432	Emanera
+T94	Drug_dose 5433 5460	20 mg 1 tabl. rano na czczo
+R41	Drg Arg1:T93 Arg2:T94	
+T95	Drug_dose 5470 5495	100 mg 1 tabl. w południe
+R42	Drg Arg1:T92 Arg2:T95	
+T96	Drug_dose 5505 5526	150 mg 1 tabl. 2 x dz
+R43	Drg Arg1:T91 Arg2:T96	
+T97	Drug_dose 5535 5557	1000 mg 1 tabl. 3 x dz
+R44	Drg Arg1:T90 Arg2:T97	
+T98	Drug 5389 5397	Primacor
+T99	Drug 5353 5363	Prestarium
+T100	Drug 5321 5327	Atoris
+T101	Drug 5287 5294	Nonpres
+T102	Drug 5258 5266	Toramide
+T103	Drug 5231 5237	Lokren
+T104	Drug_dose 5238 5256	20 mg 1 tabl. rano
+R45	Drg Arg1:T103 Arg2:T104	
+T105	Drug_dose 5267 5285	20 mg 1 tabl. rano
+R46	Drg Arg1:T102 Arg2:T105	
+T106	Drug_dose 5295 5319	50 mg 1 tabl. w południe
+R47	Drg Arg1:T101 Arg2:T106	
+T107	Drug_dose 5328 5351	30 mg 1 tabl. wieczorem
+R48	Drg Arg1:T100 Arg2:T107	
+T108	Drug_dose 5364 5387	10 mg 1 tabl. wieczorem
+R49	Drg Arg1:T99 Arg2:T108	
+T109	Drug_dose 5398 5423	10 mg 1/2 tabl. wieczorem
+R50	Drg Arg1:T98 Arg2:T109	
+T110	Investigation 5091 5160	kontrolą morfologii, lipidogramu , parametrów wątrobowych i nerkowych
+T111	Investigation 5049 5078	kontrola ciśnienia tętniczego
+T112	Behaviour 5163 5188	dieta niskocholesterolowa
+T113	Negation 7076 7082	Neguje
+T114	Symptom 7084 7096	zasłabnięcia
+N12	Reference T114 ICD10:R55	Omdlenie i zapaść
+T115	Symptom 7098 7106	omdlenia
+N13	Reference T115 ICD10:R55	Omdlenie i zapaść
+T116	Symptom 7108 7118	krwawienia
+N14	Reference T116 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T117	Symptom 7120 7133	czarne stolce
+N15	Reference T117 ICD10:K92.1	Stolce smołowate
+T118	Symptom 7135 7152	brunatne wymioty,
+N16	Reference T118 ICD10:K92.0	Wymioty krwawe
+T119	Condition 7153 7169	chorobę wrzodową
+N17	Reference T119 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T120	Symptom 7171 7185	duszność nocną
+N18	Reference T120 ICD10:R06.0	Duszność
+R51	Neg Arg1:T113 Arg2:T114	
+R52	Neg Arg1:T113 Arg2:T115	
+R53	Neg Arg1:T113 Arg2:T116	
+R54	Neg Arg1:T113 Arg2:T117	
+R55	Neg Arg1:T113 Arg2:T118	
+R56	Neg Arg1:T113 Arg2:T119	
+R57	Neg Arg1:T113 Arg2:T120	
+T121	Condition 439 482	Przewleka niewydolność serca z zachowaną EF
+N19	Reference T121 ICD10:I50	Niewydolność serca
+T122	Symptom 485 499	III-> II NYHA.
+T123	Condition 541 565	dławica mikronaczyniowa.
+N20	Reference T123 ICD10:I20.8	Inne postacie choroby niedokrwiennej serca
+T124	Condition 500 538	Przewlekła choroba niedokrwienna serca
+T125	Condition 574 587	przebytym OZW
+T126	Date 589 594	2015r
+R58	Dat Arg1:T126 Arg2:T125	
+T127	Condition 1880 1923	Przewleka niewydolność serca z zachowaną EF
+N23	Reference T127 ICD10:I50	Niewydolność serca
+T128	Symptom 1926 1939	III-> II NYHA
+T129	Condition 1941 1979	Przewlekła choroba niedokrwienna serca
+T130	Condition 1982 2005	dławica mikronaczyniowa
+N25	Reference T130 ICD10:I20.8	Inne postacie choroby niedokrwiennej serca
+T131	Condition 2015 2028	przebytym OZW
+T132	Date 2030 2035	2015r
+R59	Dat Arg1:T132 Arg2:T131	
+T133	Investigation 1619 1662	kontrolą morfologii, lipidogramu , parametr
+T134	Investigation 1576 1605	kontrola ciśnienia tętniczego
+T135	Condition 3919 3962	Przewleka niewydolność serca z zachowaną EF
+N27	Reference T135 ICD10:I50	Niewydolność serca
+T136	Symptom 3965 3978	III-> II NYHA
+T137	Condition 3980 4018	Przewlekła choroba niedokrwienna serca
+T138	Condition 4021 4045	dławica mikronaczyniowa.
+N29	Reference T138 ICD10:I20.8	Inne postacie choroby niedokrwiennej serca
+T139	Condition 4054 4067	przebytym OZW
+N30	Reference T139 ICD10:I24	Inne ostre postacie choroby niedokrwiennej serca
+T140	Date 4069 4074	2015r
+R60	Dat Arg1:T140 Arg2:T139	
+T141	Condition 5840 5885	przewleką niewydolnością serca z zachowaną EF
+N31	Reference T141 ICD10:I50	Niewydolność serca
+T142	Symptom 5888 5901	III-> II NYHA
+T143	Condition 5903 5941	przewlekłą chorobą niedokrwienną serca
+T144	Condition 5944 5967	dławica mikronaczyniowa
+N33	Reference T144 ICD10:I20.8	Inne postacie choroby niedokrwiennej serca
+T145	Condition 5972 5985	przebytym OZW
+T146	Date 5987 5991	2015
+R61	Dat Arg1:T146 Arg2:T145	
+T147	Condition 5996 6019	nadciśnieniem tętniczym
+N35	Reference T147 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T148	Investigation_result 6021 6047	RR ostatnio do 200/100mmHg
+T149	Condition 6088 6107	otyłością olbrzymią
+N36	Reference T149 ICD10:E66	Otyłość
+T150	Condition 6109 6125	astmą oskrzelową
+N37	Reference T150 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T151	Behaviour 6127 6156	ostatnia wizyta u pulmonologa
+T152	Date 6157 6167	1 rok temu
+R62	Dat Arg1:T152 Arg2:T151	
+T153	Condition 6170 6183	hiperurykemią
+N38	Reference T153 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T154	Condition 6185 6208	hiperlipidemią mieszaną
+N39	Reference T154 ICD10:E78.2	Hiperlipidemia mieszana
+T155	Drug 6228 6235	statyną
+T156	Condition 6237 6252	cukrzycą typu 2
+N40	Reference T156 ICD10:E11	Cukrzyca insulinoniezależna
+T157	Condition 6254 6279	polineuropatią cukrzycową
+N41	Reference T157 ICD10:G63.2	
+T158	Condition 6281 6305	żylakami kończyn dolnych
+N42	Reference T158 ICD10:I83	Żylaki kończyn dolnych
+T159	Condition 8796 8821	Polineuropatia cukrzycowa
+N43	Reference T159 ICD10:G63.2	
+T160	Condition 8782 8794	Cukrzyca t.2
+N44	Reference T160 ICD10:E11	Cukrzyca insulinoniezależna
+T161	Condition 8730 8753	Hiperlipidemia mieszana
+N45	Reference T161 ICD10:E78.2	Hiperlipidemia mieszana
+T162	Drug 8773 8780	statyną
+T163	Condition 8715 8728	Hiperurykemia
+N46	Reference T163 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T164	Condition 8696 8713	Otyłość olbrzymia
+N47	Reference T164 ICD10:E66	Otyłość
+T165	Condition 8823 8846	Żylaki kończyn dolnych.
+N48	Reference T165 ICD10:I83	Żylaki kończyn dolnych
+T166	Condition 8885 8922	Choroba zwyrodnieniowa kręgosłupa L-S
+N49	Reference T166 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T167	Condition 8847 8883	Zespół pozakrzepowy podudzia prawego
+N50	Reference T167 ICD10:I87.0	Zespół po zapaleniu żył
+T168	Condition 8924 8957	Subkliniczna nadczynność tarczycy
+N51	Reference T168 ICD10:E05.8	Inne tyreotoksykozy
+T169	Treatment 8989 9005	cholecystektomii
+A3	Status T169 Historical_Insignificant
+T170	Treatment 9025 9046	operacji nerki prawej
+A4	Status T170 Historical_Insignificant
+T171	Condition 9056 9062	kamicy
+N52	Reference T171 ICD10:N20.0	Kamica nerki
+A5	Status T171 Historical_Insignificant
+T172	Condition 9064 9102	Zespół parkinsonowski naczyniopochodny
+N53	Reference T172 ICD10:G21	Parkinsonizm wtórny
+T173	Treatment 9134 9152	zabieg urologiczny
+A6	Status T173 Historical_Insignificant
+T174	Condition 9162 9180	nietrzymania moczu
+N54	Reference T174 ICD10:R32	Nietrzymanie moczu, nieokreślone
+T175	Condition 8635 8656	Nadciśnienie tętnicze
+N55	Reference T175 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T176	Condition 8612 8627	przebytym OZW (
+N56	Reference T176 ICD10:I24	Inne ostre postacie choroby niedokrwiennej serca
+T177	Date 8627 8632	2015r
+R63	Dat Arg1:T177 Arg2:T176	
+T178	Condition 7055 7074	nietrzymanie moczu,
+N57	Reference T178 ICD10:R32	Nietrzymanie moczu, nieokreślone
+T179	Symptom 7038 7053	kołatania serca
+N58	Reference T179 ICD10:R00.2	Kołatanie serca
+T180	Condition 8658 8695	Angiopatia nadciśnieniowa II stopnia.
+N59	Reference T180 ICD10:H35.0	Retinopatia nieproliferacyjna i zmiany naczyniowe siatkówki
+T181	Condition 6307 6329	zespołem pozakrzepowym
+N60	Reference T181 ICD10:I87.0	Zespół po zapaleniu żył
+T182	Condition 597 638	Częstoskurcz przedsionkowy z blokiem 3:1.
+N61	Reference T182 ICD10:I47.1	Częstoskurcz nadkomorowy
+T183	Condition 2038 2079	Częstoskurcz przedsionkowy z blokiem 3:1.
+N62	Reference T183 ICD10:I47.1	Częstoskurcz nadkomorowy
+T184	Condition 2972 3012	Cżęstoskurcz przedsionkowy z blokiem 3:1
+N63	Reference T184 ICD10:I47.1	Częstoskurcz nadkomorowy
+T185	Condition 4077 4117	Częstoskurcz przedsionkowy z blokiem 3:1
+N64	Reference T185 ICD10:I47.1	Częstoskurcz nadkomorowy
+T186	Condition 6050 6086	angiopatią nadciśnieniową II stopnia
+N65	Reference T186 ICD10:H35.0	Retinopatia nieproliferacyjna i zmiany naczyniowe siatkówki
+T187	Symptom 8236 8289	duszności wysiłkowej (dystans - 1/2 piętra lub 100 m)
+N66	Reference T187 ICD10:R06.0	Duszność
+T188	Symptom 8175 8193	bólów zamostkowych
+N67	Reference T188 ICD10:R07.2	Ból w okolicy przedsercowej
+T189	Date 8195 8221	ostatni ból ok. 3 dni temu
+R64	Dat Arg1:T189 Arg2:T188	
+T190	Treatment 8361 8368	abrazji
+T191	Negation 8333 8350	zdyskwalifikowana
+R65	Neg Arg1:T191 Arg2:T190	
+T192	Condition 8378 8387	napadu AF
+N68	Reference T192 ICD10:I48	Migotanie i trzepotanie przedsionków
+T193	Investigation_result 8390 8409	zmian repolaryzacji
+T194	Investigation 8412 8428	spoczynkowym EKG
+R66	Inv Arg1:T194 Arg2:T193	
+T195	Condition 8445 8510	napadowe tachy-AF prawdopodobnie w przebiegu zespołu preekscytacj
+N69	Reference T195 ICD10:I48	Migotanie i trzepotanie przedsionków
+T196	Condition 8574 8602	Kardiomiopatia niedokrwienna
+N70	Reference T196 ICD10:I25.5	Kardiomiopatia niedokrwienna
+T197	Condition 8513 8572	Blok przedsionkowo-komorowy o periodyce Wenckebacha 2:1,3:1
+N71	Reference T197 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T198	Condition 6331 6369	chorobą zwyrodnieniową kręgosłupa L-S,
+N72	Reference T198 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T199	Treatment 6422 6438	cholecystektomii
+A7	Status T199 Historical_Insignificant
+T200	Condition 6370 6405	subkliniczną nadczynnością tarczycy
+N73	Reference T200 ICD10:E05.8	Inne tyreotoksykozy
+T201	Condition 4602 4635	Subkliniczna nadczynność tarczycy
+N74	Reference T201 ICD10:E05.8	Inne tyreotoksykozy
+T202	Treatment 4667 4683	cholecystektomii
+A8	Status T202 Historical_Insignificant
+T203	Treatment 4703 4723	operacji nerki prawe
+T204	Condition 4734 4740	kamicy
+A9	Status T204 Historical_Insignificant
+N75	Reference T204 ICD10:N20.0	Kamica nerki
+T205	Condition 4563 4600	Choroba zwyrodnieniowa kręgosłupa L-S
+N76	Reference T205 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T206	Condition 4501 4524	Żylaki kończyn dolnych.
+N77	Reference T206 ICD10:I83	Żylaki kończyn dolnych
+T207	Condition 4460 4472	Cukrzyca t.2
+N78	Reference T207 ICD10:E11	Cukrzyca insulinoniezależna
+T208	Condition 4408 4431	Hiperlipidemia mieszana
+N79	Reference T208 ICD10:E78.2	Hiperlipidemia mieszana
+T209	Drug 4451 4458	statyną
+T210	Condition 4393 4406	Hiperurykemia
+N80	Reference T210 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T211	Condition 4375 4391	Astma oskrzelowa
+N81	Reference T211 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T212	Condition 4356 4373	Otyłość olbrzymia
+N82	Reference T212 ICD10:E66	Otyłość
+T213	Condition 4295 4316	Nadciśnienie tętnicze
+N83	Reference T213 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T214	Condition 4233 4293	Blok przedsionkowo-komorowy o periodyce Wenckebacha 2:1, 3:1
+N84	Reference T214 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T215	Treatment 4195 4231	3x krotnej kardiowersji elektrycznej
+T216	Condition 4119 4185	Napadowe tachy-AF prawdopodobnie w przebiegu zespołu preekscytacji
+N85	Reference T216 ICD10:I48	Migotanie i trzepotanie przedsionków
+T217	Condition 6484 6526	zespołem parkinsonowskim naczyniopochodnym
+N86	Reference T217 ICD10:G21	Parkinsonizm wtórny
+T218	Treatment 6443 6464	operacji nerki prawej
+A10	Status T218 Historical_Insignificant
+T219	Condition 6474 6480	kamicy
+A11	Status T219 Historical_Insignificant
+N87	Reference T219 ICD10:N20.0	Kamica nerki
+T220	Condition 6594 6643	napadowy częstoskurcz przedsionkowy z blokiem 3:1
+N88	Reference T220 ICD10:I47.1	Częstoskurcz nadkomorowy
+T221	Condition 6645 6714	napadowy tachy-AF (prawdopodobnie w przebiegu zespołu preekscytacji),
+N89	Reference T221 ICD10:I48	Migotanie i trzepotanie przedsionków
+T222	Condition 6561 6590	zaburzenia rytmu i przewodzen
+N90	Reference T222 ICD10:I49	Inne zaburzenia rytmu serca
+T223	Treatment 6718 6755	3x krotnej kardiowersji elektrycznej,
+T224	Condition 6756 6817	blok przedsionkowo-komorowy o periodyce Wenckebacha 2:1, 3:1.
+N91	Reference T224 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T225	Symptom 6857 6892	małej tolerancji wysiłku fizycznego
+N92	Reference T225 ICD10:R53	Złe samopoczucie i zmęczenie
+T226	Symptom 6894 6912	duszność wysiłkowa
+N93	Reference T226 ICD10:R06.0	Duszność
+T227	Symptom 6915 6935	obrzeków kk dolnych,
+N94	Reference T227 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T228	Symptom 6957 7009	uciskowych bólów za mostkiem najczęściej po wysiłku.
+N95	Reference T228 ICD10:R07.3	Inne bóle w klatce piersiowej
+T229	Condition 4742 4780	Zespół parkinsonowski naczyniopochodny
+N96	Reference T229 ICD10:G21	Parkinsonizm wtórny
+T230	Condition 3651 3689	Zespół parkinsonowski naczyniopochodny
+N97	Reference T230 ICD10:G21	Parkinsonizm wtórny
+T231	Condition 2703 2741	Zespół parkinsonowski naczyniopochodny
+N98	Reference T231 ICD10:G21	Parkinsonizm wtórny
+T232	Condition 1268 1306	Zespół parkinsonowski naczyniopochodny
+N99	Reference T232 ICD10:G21	Parkinsonizm wtórny
+T233	Condition 639 652	Przetrwałe AF
+N100	Reference T233 ICD10:I48	Migotanie i trzepotanie przedsionków
+T234	Treatment 662 698	3x krotnej kardiowersji elektrycznej
+T235	Condition 747 807	Blok przedsionkowo-komorowy o periodyce Wenckebacha 2:1, 3:1
+N101	Reference T235 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T236	Condition 821 842	Nadciśnienie tętnicze
+N102	Reference T236 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T237	Condition 882 899	Otyłość olbrzymia
+N103	Reference T237 ICD10:E66	Otyłość
+T238	Condition 901 918	Astma oskrzelowa.
+N104	Reference T238 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T239	Condition 919 932	Hiperurykemia
+N105	Reference T239 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T240	Condition 934 957	Hiperlipidemia mieszana
+N106	Reference T240 ICD10:E78.2	Hiperlipidemia mieszana
+T241	Condition 986 999	Cukrzyca t.2.
+N107	Reference T241 ICD10:E11	Cukrzyca insulinoniezależna
+T242	Condition 1027 1049	Żylaki kończyn dolnych
+N108	Reference T242 ICD10:I83	Żylaki kończyn dolnych
+T243	Condition 1089 1126	Choroba zwyrodnieniowa kręgosłupa L-S
+N109	Reference T243 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T244	Treatment 1193 1209	cholecystektomii
+A12	Status T244 Historical_Insignificant
+T245	Treatment 1229 1250	operacji nerki prawej
+A13	Status T245 Historical_Insignificant
+T246	Condition 1260 1266	kamicy
+A14	Status T246 Historical_Insignificant
+N110	Reference T246 ICD10:N20.0	Kamica nerki
+T247	Condition 1128 1161	Subkliniczna nadczynność tarczycy
+N111	Reference T247 ICD10:E03.8	Inne określone postacie niedoczynności tarczycy
+T248	Drug 977 984	statyną
+T249	Condition 2080 2147	Napadowe tachy-AF prawdopodobnie w przebiegu zespołu preekscytacji.
+N112	Reference T249 ICD10:I48	Migotanie i trzepotanie przedsionków
+T250	Treatment 2156 2192	3x krotnej kardiowersji elektrycznej
+T251	Condition 2194 2254	Blok przedsionkowo-komorowy o periodyce Wenckebacha 2:1, 3:1
+N113	Reference T251 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T252	Condition 2256 2277	Nadciśnienie tętnicze
+N114	Reference T252 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T253	Condition 2317 2334	Otyłość olbrzymia
+N115	Reference T253 ICD10:E66	Otyłość
+T254	Condition 2336 2352	Astma oskrzelowa
+N116	Reference T254 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T255	Condition 2354 2367	Hiperurykemia
+N117	Reference T255 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T256	Condition 2369 2392	Hiperlipidemia mieszana
+N118	Reference T256 ICD10:E78.2	Hiperlipidemia mieszana
+T257	Drug 2412 2419	statyną
+T258	Condition 2421 2433	Cukrzyca t.2
+N119	Reference T258 ICD10:E11	Cukrzyca insulinoniezależna
+T259	Condition 2462 2485	Żylaki kończyn dolnych.
+N120	Reference T259 ICD10:I83	Żylaki kończyn dolnych
+T260	Condition 2524 2561	Choroba zwyrodnieniowa kręgosłupa L-S
+N121	Reference T260 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T261	Condition 2563 2596	Subkliniczna nadczynność tarczycy
+N122	Reference T261 ICD10:E03.8	Inne określone postacie niedoczynności tarczycy
+T262	Treatment 2628 2644	cholecystektomii
+A15	Status T262 Historical_Insignificant
+T263	Treatment 2664 2685	operacji nerki prawej
+A16	Status T263 Historical_Insignificant
+T264	Condition 2695 2701	kamicy
+A17	Status T264 Historical_Insignificant
+N123	Reference T264 ICD10:N20.0	Kamica nerki
+T265	Condition 4318 4354	Angiopatia nadciśnieniowa II stopnia
+N124	Reference T265 ICD10:H35.0	Retinopatia nieproliferacyjna i zmiany naczyniowe siatkówki
+T266	Condition 3227 3263	Angiopatia nadciśnieniowa II stopnia
+N125	Reference T266 ICD10:H35.0	Retinopatia nieproliferacyjna i zmiany naczyniowe siatkówki
+T267	Condition 2279 2315	Angiopatia nadciśnieniowa II stopnia
+N126	Reference T267 ICD10:H35.0	Retinopatia nieproliferacyjna i zmiany naczyniowe siatkówki
+T268	Condition 844 880	Angiopatia nadciśnieniowa II stopnia
+N127	Reference T268 ICD10:H35.0	Retinopatia nieproliferacyjna i zmiany naczyniowe siatkówki
+T269	Condition 700 733	Podejrzenie zespołu preekscytacji
+A18	Source T269 Declared
+N128	Reference T269 ICD10:I45.6	Zespół preekscytacji
+T270	Condition 1000 1026	Polineuropatia cukrzycowa.
+N129	Reference T270 ICD10:G63.2	
+T271	Condition 3383 3408	Polineuropatia cukrzycowa
+N130	Reference T271 ICD10:G63.2	
+T272	Condition 3265 3282	Otyłość olbrzymia
+N131	Reference T272 ICD10:E66	Otyłość
+T273	Condition 3284 3300	Astma oskrzelowa
+N132	Reference T273 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T274	Condition 3302 3315	Hiperurykemia
+N133	Reference T274 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T275	Condition 3317 3340	Hiperlipidemia mieszana
+N134	Reference T275 ICD10:E78.2	Hiperlipidemia mieszana
+T276	Drug 3360 3367	statyną
+T277	Condition 3369 3381	Cukrzyca t.2
+N135	Reference T277 ICD10:E11	Cukrzyca insulinoniezależna
+T278	Condition 3410 3432	Żylaki kończyn dolnych
+N136	Reference T278 ICD10:I83	Żylaki kończyn dolnych
+T279	Condition 3204 3225	Nadciśnienie tętnicze
+N137	Reference T279 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T280	Condition 3181 3194	przebytym OZW
+T281	Date 3196 3201	2015r
+R67	Dat Arg1:T281 Arg2:T280	
+T282	Condition 3082 3141	Blok przedsionkowo-komorowy o periodyce Wenckebacha 2:1,3:1
+N139	Reference T282 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T283	Condition 3143 3172	Kardiomiopatia niedokrwienna.
+N140	Reference T283 ICD10:I25.5	Kardiomiopatia niedokrwienna
+T284	Condition 3014 3080	Napadowe tachy-AF prawdopodobnie w przebiegu zespołu preekscytacji
+N141	Reference T284 ICD10:I48	Migotanie i trzepotanie przedsionków
+T285	Condition 3643 3649	kamicy
+A19	Status T285 Historical_Insignificant
+N142	Reference T285 ICD10:N20.0	Kamica nerki
+T286	Treatment 3612 3633	operacji nerki prawej
+A20	Status T286 Historical_Insignificant
+T287	Treatment 3576 3592	cholecystektomii
+A21	Status T287 Historical_Insignificant
+T288	Condition 3511 3544	Subkliniczna nadczynność tarczycy
+N143	Reference T288 ICD10:E03.8	Inne określone postacie niedoczynności tarczycy
+T289	Condition 3472 3509	Choroba zwyrodnieniowa kręgosłupa L-S
+N144	Reference T289 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T290	Condition 4474 4499	Polineuropatia cukrzycowa
+N145	Reference T290 ICD10:G63.2	
+T291	Condition 4525 4561	Zespół pozakrzepowy podudzia prawego
+N146	Reference T291 ICD10:I87.0	Zespół po zapaleniu żył
+T292	Condition 3434 3470	Zespół pozakrzepowy podudzia prawego
+N147	Reference T292 ICD10:I87.0	Zespół po zapaleniu żył
+T293	Condition 2486 2523	Zespół pozakrzepowy podudzia prawego.
+N148	Reference T293 ICD10:I87.0	Zespół po zapaleniu żył
+T294	Condition 2435 2460	Polineuropatia cukrzycowa
+N149	Reference T294 ICD10:G63.2	
+T295	Condition 1051 1087	Zespół pozakrzepowy podudzia prawego
+N150	Reference T295 ICD10:I87.0	Zespół po zapaleniu żył
+N22	Reference T125 ICD10:I24.9	Ostra choroba niedokrwienna serca, nieokreślona
+T296	Treatment 1429 1456	dalsza opieka w poradni POZ
+T297	Treatment 1470 1562	kontrola kardiologiczna, pulmonologiczna, endokrynologiczna, neurologiczna i diabetologiczna
+N26	Reference T131 ICD10:I24.9	Ostra choroba niedokrwienna serca, nieokreślona
+N138	Reference T280 ICD10:I24.9	Ostra choroba niedokrwienna serca, nieokreślona
+N28	Reference T137 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+N24	Reference T129 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+N21	Reference T124 ICD10:I25.9	
+T298	Treatment 4903 4931	-dalsza opieka w poradni POZ
+T299	Treatment 4944 5036	kontrola kardiologiczna, pulmonologiczna, endokrynologiczna, neurologiczna i diabetologiczna
+N34	Reference T145 ICD10:I24.9	Ostra choroba niedokrwienna serca, nieokreślona
+N32	Reference T143 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona

@@ -1,0 +1,147 @@
+T1	Condition 403 471	Wrodzona złożona wada serca pod postacią dwuodpływowej prawej komory
+N1	Reference T1 ICD10:Q24	Inne wrodzone wady rozwojowe serca
+T2	Condition 473 509	ubytku w przegrodzie międzykomorowej
+N2	Reference T2 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T3	Treatment 536 549	angioplastyce
+T4	Date 577 581	2013
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Condition 511 527	stenozy płucnej.
+N3	Reference T5 ICD10:I37.0	Zwężenie zastawki pnia płucnego
+T6	Treatment 592 611	korekcji całkowitej
+T7	Date 625 629	2004
+T8	Treatment 641 682	espoleniu systemowo-płucnym prawostronnym
+T9	Date 684 688	2001
+R2	Dat Arg1:T7 Arg2:T6	
+R3	Dat Arg1:T9 Arg2:T8	
+T10	Investigation 925 934	MRI serca
+T11	Investigation 935 946	angio-TK tt
+T12	Behaviour 1198 1237	Dieta lekkostrawna, niskocholesterolowa
+T13	Investigation 1253 1335	kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T14	Investigation 1374 1408	kontrola ciśnienia tętniczego krwi
+T15	Drug 1506 1518	amoksycylina
+T16	Drug 1523 1533	ampicylina
+T17	Drug_dose 1534 1554	2 g doustnie lub i.v
+R4	Drg Arg1:T16 Arg2:T17	
+R5	Drg Arg1:T15 Arg2:T17	
+T18	Drug 1603 1615	klindamycyna
+T19	Drug_dose 1616 1640	600 mg doustnie lub i.v.
+R6	Drg Arg1:T18 Arg2:T19	
+T20	Condition 1569 1600	alergii na powyższe antybiotyki
+N4	Reference T20 ICD10:Z88.1	Uczulenie na inne antybiotyki w wywiadzie
+R7	Alg Arg1:T20 Arg2:T16	
+R8	Alg Arg1:T20 Arg2:T15	
+R9	Alg Arg1:T20 Arg2:T18	
+T21	Behaviour 1746 1781	ścisła higiena skóry i jamy ustnej,
+T22	Behaviour 1782 1856	przeglądy stomatologiczne należy przeprowadzać co najmniej dwa razy w roku
+T23	Behaviour 1858 1873	dezynfekcja ran
+T24	Behaviour 1875 1955	eliminacja lub ograniczenie przewlekłego nosicielstwa bakteryjnego: skóry, moczu
+T25	Behaviour 1957 2018	leczenie antybiotykami każdego ogniska zakażenia bakteryjnego
+T26	Behaviour 2020 2074	niestosowanie antybiotyków samodzielnie przez pacjenta
+T27	Behaviour 2076 2117	unikanie kolczykowania i tatuowania ciała
+T28	Behaviour 2119 2204	ścisłe przestrzeganie zasad aseptyki podczas zabiegów stwarzających ryzyko zakażenia.
+T29	Condition 2431 2477	wrodzonej wady serca pod postacią: DORV+VSD+PS
+N5	Reference T29 ICD10:Q24	Inne wrodzone wady rozwojowe serca
+T30	Treatment 2488 2523	zespoleniu systemowo-płucnym prawym
+T31	Date 2525 2535	06/02/2001
+R10	Dat Arg1:T31 Arg2:T30	
+T32	Treatment 2546 2563	operacji korekcji
+T33	Date 2577 2587	15/01/2004
+R11	Dat Arg1:T33 Arg2:T32	
+T34	Treatment 2598 2642	angioplastyce zwężenia lewej tętnicy płucnej
+T35	Date 2644 2651	08.2013
+R12	Dat Arg1:T35 Arg2:T34	
+T36	Negation 2654 2660	Neguje
+T37	Symptom 2662 2674	zasłabnięcia
+T38	Symptom 2676 2684	omdlenia
+N7	Reference T38 ICD10:R55	
+T39	Symptom 2686 2696	krwawienia
+T40	Symptom 2698 2711	czarne stolce
+N9	Reference T40 ICD10:K92.1	Stolce smołowate
+T41	Symptom 2713 2730	brunatne wymioty,
+N10	Reference T41 ICD10:K92.0	Wymioty krwawe
+T42	Condition 2731 2747	chorobę wrzodową
+N11	Reference T42 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T43	Symptom 2749 2777	duszność nocną typu ortopnoe
+N12	Reference T43 ICD10:I50.1	Niewydolność serca lewokomorowa
+T44	Condition 2779 2781	HA
+N13	Reference T44 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T45	Condition 2783 2785	DM
+N14	Reference T45 ICD10:E13	Inne określone postacie cukrzycy
+T46	Condition 2787 2797	udar mózgu
+N15	Reference T46 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T47	Condition 2799 2810	zawał serca
+N16	Reference T47 ICD10:I25.2	Przebyty zawał serca
+R13	Neg Arg1:T36 Arg2:T37	
+R14	Neg Arg1:T36 Arg2:T38	
+R15	Neg Arg1:T36 Arg2:T39	
+R16	Neg Arg1:T36 Arg2:T40	
+R17	Neg Arg1:T36 Arg2:T41	
+R18	Neg Arg1:T36 Arg2:T42	
+R19	Neg Arg1:T36 Arg2:T43	
+R20	Neg Arg1:T36 Arg2:T44	
+R21	Neg Arg1:T36 Arg2:T46	
+R22	Neg Arg1:T36 Arg2:T45	
+R23	Neg Arg1:T36 Arg2:T47	
+N6	Reference T37 ICD10:R55	Omdlenie i zapaść
+T48	Negation 2855 2858	nie
+T49	Negation 2873 2876	nie
+T50	Negation 2889 2892	nie
+T51	Negation 2925 2928	(-)
+T52	Negation 2941 2945	(-),
+T53	Negation 2950 2953	(-)
+T54	Condition 2878 2887	Uczulenia
+N17	Reference T54 ICD10:T78.4	Alergia, nieokreślona
+R24	Neg Arg1:T50 Arg2:T54	
+T55	Behaviour 2860 2871	Inne używki
+R25	Neg Arg1:T49 Arg2:T55	
+T56	Behaviour 2838 2854	Palenie tytoniu:
+N18	Reference T56 ICD10:T65.2	Tytoń i nikotyna
+R26	Neg Arg1:T48 Arg2:T56	
+T57	Treatment 2824 2832	operacje
+T58	Condition 2921 2924	WZW
+N19	Reference T58 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T59	Condition 2931 2940	borelioza
+N20	Reference T59 ICD10:A69.2	Choroba z Lyme
+T60	Condition 2946 2949	tbc
+N21	Reference T60 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+R27	Neg Arg1:T53 Arg2:T60	
+R28	Neg Arg1:T52 Arg2:T59	
+R29	Neg Arg1:T51 Arg2:T58	
+T61	Behaviour 2971 2997	warunki mieszkaniowe dobre
+T62	Symptom 3082 3094	chorób serca
+T63	Negation 3069 3081	rodzinie bez
+A1	Status T63 Family
+R30	Neg Arg1:T63 Arg2:T62	
+T64	Investigation 3208 3212	ECHO
+T65	Investigation 3214 3218	ABPM
+T66	Investigation 3220 3230	Holter-EKG
+T67	Investigation 3232 3247	ergospirometria
+T68	Negation 3102 3115	nie przyjmuje
+T69	Drug 3096 3100	Leki
+R31	Neg Arg1:T68 Arg2:T69	
+T70	Treatment 1437 1469	infekcyjnego zapalenia wsierdzia
+N22	Reference T70 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T71	Treatment 1666 1707	ryzykiem infekcyjnego zapalenia wsierdzia
+N23	Reference T71 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+N8	Reference T39 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T72	Condition 550 575	zwężenia lewej t. płucnej
+N24	Reference T72 ICD10:I77.1	Zwężenie tętnicy
+R32	Dat Arg1:T4 Arg2:T72	
+T73	Condition 617 620	VSD
+N25	Reference T73 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T74	Condition 612 616	DORV
+N26	Reference T74 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+T75	Condition 621 623	PS
+N27	Reference T75 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+R33	Dat Arg1:T7 Arg2:T75	
+R34	Dat Arg1:T7 Arg2:T73	
+R35	Dat Arg1:T7 Arg2:T74	
+T76	Condition 2573 2575	PS
+N28	Reference T76 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T77	Condition 2569 2572	VSD
+N29	Reference T77 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T78	Condition 2564 2568	DORV
+N30	Reference T78 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+R36	Dat Arg1:T33 Arg2:T76	
+R37	Dat Arg1:T33 Arg2:T77	
+R38	Dat Arg1:T33 Arg2:T78	

@@ -1,0 +1,565 @@
+allRelations          : 32
+oks                   : 13
+isRedundantAndRemoveds: 15
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 3
+GOOD / BAD            : 28 / 4
+Sentence 0:
+------------------------------------------------
+Wiek: 27 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:I49|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Zaburzenia rytmu serca.
+
+
+Sentence 6:
+Omdlenia i pełne utraty przytomności w wywiadzie.
+
+
+
+Sentence 7:
+------------------------------------------------
+
+
+
+Sentence 8:
+Zastosowane leczenie
+
+
+
+Sentence 9:
+------------------------------------------------
+bez leków
+------------------------------------------------
+
+
+
+Sentence 10:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 11:
+Pacjentka lat 26 przyjęta z powodu zmniejszenia tolerancji wysiłku (męczenie podczas przebiegnięcia krótkiego dystansu, wejścia na 2-3 piętro) od ok roku, zasłabnięć i utrat przytomności, uczucia kołatania serca.
+R1	Dat Arg1:T5 Arg2:T3 << OK >>	od ok roku -> zmniejszenia tolerancji wysiłku  <RANK: 2> <info: start[918, 810] <type: LEFT>>
+R2	Dat Arg1:T5 Arg2:T4 << OK >>	od ok roku -> męczenie podczas przebiegnięcia krótkiego dystansu, wejścia na 2-3 piętro  <RANK: 3> <info: start[918, 843] <type: LEFT>>
+R3	Dat Arg1:T5 Arg2:T6 <<REDUNDANT!!!REMOVED>>	od ok roku -> zasłabnięć <:REMOVED many second tags on the right:> <RANK: 2> <info: start[918, 930] <type: RIGHT>>
+R4	Dat Arg1:T5 Arg2:T7 <<REDUNDANT!!!REMOVED>>	od ok roku -> utrat przytomności <:REMOVED many second tags on the right:> <RANK: 2> <info: start[918, 943] <type: RIGHT>>
+R5	Dat Arg1:T5 Arg2:T8 <<REDUNDANT!!!REMOVED>>	od ok roku -> uczucia kołatania serca <:REMOVED many second tags on the right:> <RANK: 2> <info: start[918, 963] <type: RIGHT>>
+
+
+Sentence 12:
+Zasłabnięcia rozpoczyna uczucie szybkiego bicia serca, ogólne osłabienie, mroczki przed oczami.
+
+
+Sentence 13:
+Bez objawów padaczki (bez drgawek, bez zwiewnego oddania moczu).
+R6	Neg Arg1:T12 Arg2:T13 << OK >>	Bez -> objawów padaczki  <RANK: 3> <info: start[1084, 1088] <type: RIGHT>>
+R7	Neg Arg1:T12 Arg2:T15 <<REDUNDANT!!!SHOULD BE REMOVED>>	Bez -> drgawek  <RANK: 3> <info: start[1084, 1110] <type: RIGHT>>
+R8	Neg Arg1:T12 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Bez -> zwiewnego oddania moczu <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1084, 1123] <type: RIGHT>>
+R9	Neg Arg1:T14 Arg2:T13 <<REDUNDANT!!!SHOULD BE REMOVED>>	bez -> objawów padaczki  <RANK: 3> <info: start[1106, 1088] <type: LEFT>>
+R10	Neg Arg1:T14 Arg2:T15 << OK >>	bez -> drgawek  <RANK: 3> <info: start[1106, 1110] <type: RIGHT>>
+R11	Neg Arg1:T14 Arg2:T17 <<REDUNDANT!!!REMOVED>>	bez -> zwiewnego oddania moczu <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1106, 1123] <type: RIGHT>>
+R12	Neg Arg1:T16 Arg2:T13 <<REDUNDANT!!!REMOVED>>	bez -> objawów padaczki <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1119, 1088] <type: LEFT>>
+R13	Neg Arg1:T16 Arg2:T15 <<REDUNDANT!!!REMOVED>>	bez -> drgawek <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1119, 1110] <type: LEFT>>
+R14	Neg Arg1:T16 Arg2:T17 << OK >>	bez -> zwiewnego oddania moczu  <RANK: 3> <info: start[1119, 1123] <type: RIGHT>>
+
+
+Sentence 14:
+W wywiadzie: nadciśnienie tętnicze leczone przez krótki okres czasu nebiletem 5mg - chora odstawiła lek nie widząc poprawy po jego przyjmowaniu.
+R15	Neg Arg1:T21 Arg2:T18 <<REDUNDANT!!!REMOVED>>	odstawiła -> nadciśnienie tętnicze leczone <:REMOVED odstaw not for Condition:> <RANK: 3> <info: start[1239, 1162] <type: LEFT>>
+R16	Neg Arg1:T21 Arg2:T19 <<SHOULD NOT BE REMOVED>>	odstawiła -> nebiletem <:REMOVED other second tag between (left):> <RANK: 3> <info: start[1239, 1217] <type: LEFT>>
+R17	Neg Arg1:T21 Arg2:T20 <<REDUNDANT!!!REMOVED>>	odstawiła -> 5mg <:REMOVED odstaw not for Drug_dose:> <RANK: 3> <info: start[1239, 1227] <type: LEFT>>
+R18	Drg Arg1:T19 Arg2:T20 << OK >>	nebiletem -> 5mg  <RANK: 3> <info: start[1217, 1227] <type: RIGHT>>
+R19	Alg Arg1:T18 Arg2:T19 <<REDUNDANT!!!REMOVED>>	nadciśnienie tętnicze leczone -> nebiletem <:REMOVED too long text between 26 limit:10:> <RANK: 3> <info: start[1162, 1217] <type: RIGHT>>
+
+
+Sentence 15:
+Brak systematycznego pomiarów ciśnienia tętniczego.
+R20	Neg Arg1:T23 Arg2:T22 << OK >>	Brak -> systematycznego pomiarów ciśnienia tętniczego  <RANK: 3> <info: start[1294, 1299] <type: RIGHT>>
+
+
+Sentence 16:
+Dzisiaj rano chora miała RR ok 130/80mmHg. 
+
+
+
+Sentence 17:
+Operacje: stan po appendectomii rok temu, stan po operacji stawu kolanowego prawegow 16 rż.
+
+R21	Dat Arg1:T26 Arg2:T25 << OK >>	rok temu -> appendectomii  <RANK: 3> <info: start[1422, 1408] <type: LEFT>>
+R22	Dat Arg1:T26 Arg2:T27 <<REDUNDANT!!!REMOVED>>	rok temu -> operacji stawu kolanowego prawegow <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1422, 1440] <type: RIGHT>>
+R23	Dat Arg1:T26 Arg2:T43 <<REDUNDANT!!!SHOULD BE REMOVED>>	rok temu -> Operacje  <RANK: 3> <info: start[1422, 1390] <type: LEFT>>
+R24	Dat Arg1:T28 Arg2:T25 <<REDUNDANT!!!REMOVED>>	16 rż -> appendectomii <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1475, 1408] <type: LEFT>>
+R25	Dat Arg1:T28 Arg2:T27 << OK >>	16 rż -> operacji stawu kolanowego prawegow  <RANK: 3> <info: start[1475, 1440] <type: LEFT>>
+R26	Dat Arg1:T28 Arg2:T43 <<REDUNDANT!!!REMOVED>>	16 rż -> Operacje <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1475, 1390] <type: LEFT>>
+
+
+Sentence 18:
+Nikotynizm:    -  Alkohol:-
+
+R27	Neg Arg1:T31 Arg2:T29 << OK >>	- -> Nikotynizm  <RANK: 3> <info: start[1497, 1482] <type: LEFT>>
+R28	Neg Arg1:T31 Arg2:T30 <<REDUNDANT!!!REMOVED>>	- -> Alkohol <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1497, 1500] <type: RIGHT>>
+R29	Neg Arg1:T32 Arg2:T29 <<REDUNDANT!!!REMOVED>>	- -> Nikotynizm <:REMOVED other second tag between (left):> <RANK: 3> <info: start[1508, 1482] <type: LEFT>>
+R30	Neg Arg1:T32 Arg2:T30 << OK >>	- -> Alkohol  <RANK: 3> <info: start[1508, 1500] <type: LEFT>>
+
+
+Sentence 19:
+Pacjent neguje: uczulenia na leki, krwawienia z przewodu pokarmowego.
+
+R31	Neg Arg1:T33 Arg2:T35 << OK >>	neguje -> krwawienia z przewodu pokarmowego  <RANK: 2> <info: start[1518, 1545] <type: RIGHT>>
+R32	Neg Arg1:T33 Arg2:T34 << OK >>	neguje -> uczulenia na leki  <RANK: 3> <info: start[1518, 1526] <type: RIGHT>>
+
+
+Sentence 20:
+Wywiad rodzinny: tata zmarł w wieku 46 na OZW, mama - HA
+
+
+
+Sentence 21:
+Przyjmowane obecnie leki: obecnie nie przyjmuje
+
+
+
+Sentence 22:
+Planowane: ECHO serca, Holter EKG, Holter RR, PW.
+
+
+
+Sentence 23:
+------------------------------------------------
+
+
+
+Sentence 24:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 25:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.58[10^3/ul]
+    
+
+
+Sentence 26:
+RBC Krwinki czerwone:4.48[10^6/ul]
+    
+
+
+Sentence 27:
+HGB Hemoglobina:13.4[g/dl]
+    
+
+
+Sentence 28:
+HCT Hematokryt:39.8[%]
+    
+
+
+Sentence 29:
+MCV wskaźnik czerwonokrw:88.8[fl]
+    
+
+
+Sentence 30:
+MCH wskaźnik czerwonokrw:29.9[pg]
+    
+
+
+Sentence 31:
+MCHC wskaźnik czerwonokr:33.7[g/dl]
+    
+
+
+Sentence 32:
+PLT z morfologii:221[10^3/ul]
+    
+
+
+Sentence 33:
+RDW-SD:41.0[fl]
+    
+
+
+Sentence 34:
+RDW-CV:12.5[%]
+    PDW:11.9[fl]
+    MPV:10.7[fl]
+    
+
+
+Sentence 35:
+P-LCR:30.0[%]
+    
+
+
+Sentence 36:
+PCT (hematokryt płytkowy:0.24[%]
+    
+
+
+Sentence 37:
+NEUTR# wartość bezwzględ:3.98[10^3/ul]
+    
+
+
+Sentence 38:
+NEUTR%:60.4[%]
+    
+
+
+Sentence 39:
+LYMH# wartość bezwzględn:1.78[10^3/ul]
+    
+
+
+Sentence 40:
+LYMPH%:27.1[%]
+    
+
+
+Sentence 41:
+MONO# wartość bezwzględn:0.61[10^3/ul]
+    MONO%:9.3[%]
+    
+
+
+Sentence 42:
+EO# wartość bezwzględna:0.14[10^3/ul]
+    
+
+
+Sentence 43:
+EO%:2.1[%]
+    
+
+
+Sentence 44:
+BASO# wartość bezwzględn:0.07[10^3/ul]
+    BASO%:1.1[%]
+    
+
+
+Sentence 45:
+NRBC %:0.0[%]
+    
+
+
+Sentence 46:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 47:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:30.9[sek]
+
+
+
+Sentence 48:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 49:
+Czas protrombinowy:12.8[sek]
+    
+
+
+Sentence 50:
+Wskaźnik PT:85.9[%]
+    
+
+
+Sentence 51:
+INR:1.16
+D-dimer
+
+
+Sentence 52:
+- test ilościowy: D-dimer - test ilościowy:242[ng/ml]
+
+
+
+Sentence 53:
+Badanie ogólne moczu
+    
+
+
+Sentence 54:
+barwa:żółty[ ]
+    
+
+
+Sentence 55:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 56:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 57:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 58:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 59:
+kwas askrobinowy:40 mg/dl[ ]
+    
+
+
+Sentence 60:
+ciężar właściwy:1.029[ ]
+    
+
+
+Sentence 61:
+pH:5.0[ ]
+    
+
+
+Sentence 62:
+białko:nieobecne[ ]
+    
+
+
+Sentence 63:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 64:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 65:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 66:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 67:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 68:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 69:
+leukocyty:8 /ul[ul]
+    erytrocyty świeże:3 /ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+    kryształy szczawianu wap:nieliczne[w preparacie]
+
+
+
+Sentence 70:
+TSH: TSH:1.98[uIU/ml]
+
+
+
+Sentence 71:
+FT3: FT3:3.83[pg/ml]
+
+
+
+Sentence 72:
+FT4: FT4:1.68[ng/dl]
+
+
+
+Sentence 73:
+Troponina T
+    Troponina T:
+    3.00[pg/ml]
+
+
+
+Sentence 74:
+ALAT: ALAT:19[U/L]
+ASPAT: ASPAT:21[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 75:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 76:
+Potas (K): Potas:4.3[mmol/L]
+
+
+
+Sentence 77:
+Kreatynina + GFR
+    
+
+
+Sentence 78:
+Kreatynina w surowicy:0.69[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 79:
+MDRD ze stan:102.8[ml/min/1,73 m^2]
+
+
+
+Sentence 80:
+Mocznik: Mocznik:24[mg/dl]
+
+
+
+Sentence 81:
+Kwas moczowy: Kwas moczowy:5.0[mg/dl]
+
+
+
+Sentence 82:
+Lipidogram
+    
+
+
+Sentence 83:
+Cholesterol całkowity:133[mg/dl]
+    
+
+
+Sentence 84:
+Cholesterol HDL:31[mg/dl]
+    
+
+
+Sentence 85:
+Cholestrol LDL:92[mg/dl]
+    
+
+
+Sentence 86:
+Triglicerydy:107[mg/dl]
+    
+
+
+Sentence 87:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:84[mg/dl]
+
+
+
+Sentence 88:
+NT-proBNP surowica: NT-proBNP w surowicy:46[pg/ml]
+
+
+
+Sentence 89:
+------------------------------------------------
+
+
+
+Sentence 90:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 91:
+I49.9
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 92:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 93:
+89.501
+89.502
+C55
+A01
+I81
+89.41
+G11
+G21
+
+
+
+Sentence 94:
+O6
+L43
+87.440
+G49
+N45
+L69
+O55
+M45
+I19
+O35
+M37
+
+
+
+Sentence 95:
+N13
+
+
+
+Sentence 96:
+N24
+88.721
+88.761
+88.751
+------------------------------------------------
+
+

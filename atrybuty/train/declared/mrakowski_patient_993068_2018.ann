@@ -1,0 +1,95 @@
+T1	Treatment 346 373	dalsza opieka w poradni POZ
+T2	Treatment 380 412	okresowa kontrola kardiologiczna
+T3	Investigation 419 456	pobrano krew celem oznaczenia RNA HCV
+T4	Treatment 490 516	konsultacja hepatologiczna
+T5	Behaviour 523 559	dieta zbliżona do śródziemnomorskiej
+T6	Behaviour 566 585	redukcja masy ciała
+T7	Behaviour 593 638	stały, umiarkowany, aerobowy wysiłek fizyczny
+T8	Condition 857 919	Wada serca pod postacią niedomykalności trójdzielnej I stopnia
+N1	Reference T8 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T9	Condition 922 939	płucnej I stopnia
+N2	Reference T9 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T10	Symptom 941 980	Niespecyficzne bóle w klatce piersiowej
+N3	Reference T10 ICD10:R07.3	Inne bóle w klatce piersiowej
+T11	Condition 982 989	Nadwaga
+N4	Reference T11 ICD10:E66	Otyłość
+T12	Condition 991 1011	Dyskopatia lędźwiowa
+N5	Reference T12 ICD10:M51.3	Inne określone zwyrodnienia krążków międzykręgowych
+T13	Condition 1021 1049	urazie kończyny dolnej lewej
+N6	Reference T13 ICD10:T13.9	Nieokreślony uraz kończyny dolnej, poziom nieokreślony
+T14	Treatment 1059 1067	operacji
+A1	Status T14 Historical_Insignificant
+A2	Status T13 Historical_Insignificant
+T15	Condition 1068 1084	wypadania macicy
+A3	Status T15 Historical_Insignificant
+N7	Reference T15 ICD10:N81.4	Wypadanie macicy i pochwy, nieokreślone
+T16	Date 1086 1090	2010
+T17	Date 1092 1096	2011
+R1	Dat Arg1:T16 Arg2:T14	
+R2	Dat Arg1:T17 Arg2:T14	
+R3	Dat Arg1:T16 Arg2:T15	
+R4	Dat Arg1:T17 Arg2:T15	
+T18	Condition 1122 1132	WZW typu C
+N8	Reference T18 ICD10:B17.1	Ostre wirusowe zapalenie wątroby typu C
+A4	Source T18 Declared
+T19	Symptom 1324 1349	spadku tolerancji wysiłku
+N9	Reference T19 ICD10:R53	Złe samopoczucie i zmęczenie
+T20	Date 1350 1363	od ok. 1 roku
+R5	Dat Arg1:T20 Arg2:T19	
+T21	Symptom 1365 1378	kołatań serca
+N10	Reference T21 ICD10:R00.2	Kołatanie serca
+T22	Symptom 1380 1432	okresowo bólów stenokardialnych w spoczynku, nocnych
+N11	Reference T22 ICD10:R07.2	Ból w okolicy przedsercowej
+T23	Condition 1447 1471	przewlekła choroba żylna
+N12	Reference T23 ICD10:I87.2	Niewydolność żył (przewlekła) (obwodowa)
+T24	Condition 1473 1512	niewydolność żyły odstarzałkowej prawej
+N13	Reference T24 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+T25	Condition 1514 1536	skrzywienie kręgosłupa
+N14	Reference T25 ICD10:M41	Skolioza
+T26	Condition 1538 1558	dyskopatia lędźwiowa
+N15	Reference T26 ICD10:M51.3	Inne określone zwyrodnienia krążków międzykręgowych
+T27	Treatment 1560 1577	Przebyte operacje
+T28	Treatment 1587 1595	operacji
+A5	Status T28 Historical_Insignificant
+T29	Condition 1596 1612	wypadania macicy
+A6	Status T29 Historical_Insignificant
+N16	Reference T29 ICD10:N81.4	Wypadanie macicy i pochwy, nieokreślone
+T30	Date 1614 1618	2010
+T31	Date 1619 1624	2011r
+R6	Dat Arg1:T30 Arg2:T28	
+R7	Dat Arg1:T30 Arg2:T29	
+R8	Dat Arg1:T31 Arg2:T28	
+R9	Dat Arg1:T31 Arg2:T29	
+T32	Condition 1653 1656	WZW
+N17	Reference T32 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T33	Condition 1658 1667	borelioza
+N18	Reference T33 ICD10:A69.2	Choroba z Lyme
+T34	Negation 1670 1680	nie podaje
+R10	Neg Arg1:T34 Arg2:T33	
+R11	Neg Arg1:T34 Arg2:T32	
+T35	Condition 1681 1696	Wywiad rodzinny
+A7	Status T35 Family
+T36	Condition 1724 1728	zwał
+A8	Status T36 Family
+N19	Reference T36 ICD10:I25.2	Przebyty zawał serca
+T37	Condition 1730 1734	udar
+A9	Status T37 Family
+N20	Reference T37 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T38	Condition 1743 1751	cukrzyca
+A10	Status T38 Family
+N21	Reference T38 ICD10:E14	Cukrzyca nieokreślona
+T39	Behaviour 1752 1767	Palenie tytoniu
+N22	Reference T39 ICD10:Z72.0	Używanie tytoniu
+T40	Negation 1769 1779	nie podaje
+R12	Neg Arg1:T40 Arg2:T39	
+T41	Behaviour 1780 1805	Inne używki: okazjonalnie
+T42	Condition 1806 1815	Uczulenia
+T43	Drug 1817 1825	pyralgin
+N23	Reference T42 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R13	Alg Arg1:T42 Arg2:T43	
+T44	Investigation 1909 1919	echo serca
+T45	Investigation 1921 1938	echo obciążeniowe
+T46	Investigation 1940 1943	TET
+T47	Investigation 1945 1949	ABPM
+T48	Investigation 1951 1957	Holter
+T49	Investigation 1959 1977	RTG kl. piersiowej

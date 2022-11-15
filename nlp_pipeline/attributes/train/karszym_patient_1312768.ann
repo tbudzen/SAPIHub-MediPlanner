@@ -1,0 +1,138 @@
+T1	Treatment 331 353	kontrola u lekarza POZ
+T2	Symptom 379 408	krwawienia z dróg oddechowych
+T3	Treatment 419 443	pilny kontakt z lekarzem
+T4	Behaviour 463 488	dieta niskocholesterolowa
+T5	Drug 521 528	Pradaxa
+T6	Drug_dose 529 545	150mg 1-0-1 tabl
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Condition 767 808	Łagodna niedomykalność zastawki mitralnej
+T8	Condition 825 856	Napadowe migotanie przedsionków
+N1	Reference T8 ICD10:I48	Migotanie i trzepotanie przedsionków
+T9	Condition 858 879	Nadciśnienie tętnicze
+N2	Reference T9 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T10	Condition 881 901	Hipercholesterolemia
+N3	Reference T10 ICD10:E78.0	Czysta hipercholesterolemia
+T11	Behaviour 903 924	Przewlekły nikotynizm
+N4	Reference T11 ICD10:Z72.0	Używanie tytoniu
+T12	Date 925 938	w przeszłości
+R2	Dat Arg1:T12 Arg2:T11	
+T13	Drug 1063 1068	Acard
+T14	Drug 1070 1077	Pradaxa
+T15	Drug 1079 1086	Roswera
+T16	Condition 1238 1264	podwyższonego cholesterolu
+N5	Reference T16 ICD10:E78.0	Czysta hipercholesterolemia
+T17	Treatment 1266 1275	leczonego
+T18	Condition 1284 1317	napadowym migotaniem przedsionków
+N6	Reference T18 ICD10:I48	Migotanie i trzepotanie przedsionków
+T19	Drug 1389 1396	Xarelto
+T20	Drug_dose 1397 1401	20mg
+T21	Date 1403 1412	w 10.2018
+R3	Dat Arg1:T21 Arg2:T19	
+R4	Drg Arg1:T19 Arg2:T20	
+T22	Symptom 1422 1453	odkrztuszał brunatną wydzielinę
+T23	Investigation_result 1455 1468	rytm zatokowy
+T24	Negation 1470 1480	odstawiono
+T25	Drug 1489 1496	Xarelto
+R5	Neg Arg1:T24 Arg2:T25	
+T26	Investigation 1498 1508	CHADS2VASc
+T27	Treatment 1540 1585	pilną hospitalizację w Oddz. Pulmonologicznym
+R6	Dat Arg1:T21 Arg2:T27	
+T28	Negation 1598 1613	nie zgłosił się
+T29	Symptom 1653 1700	rzadko występujący niepokój w klatce piersiowej
+R7	Neg Arg1:T28 Arg2:T27	
+R8	Dat Arg1:T21 Arg2:T22	
+R9	Dat Arg1:T21 Arg2:T23	
+T30	Symptom 1710 1722	zasłabnięcia
+T31	Negation 1702 1708	Neguje
+T32	Symptom 1724 1732	omdlenia
+N7	Reference T32 ICD10:R55	Omdlenie i zapaść
+T33	Symptom 1734 1744	krwawienia
+T34	Symptom 1746 1759	czarne stolce
+N8	Reference T34 ICD10:K92.1	Stolce smołowate
+T35	Symptom 1761 1777	brunatne wymioty
+N9	Reference T35 ICD10:K92.0	Wymioty krwawe
+T36	Condition 1779 1795	chorobę wrzodową
+N10	Reference T36 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T37	Symptom 1797 1811	duszność nocną
+N11	Reference T37 ICD10:R06.0	Duszność
+T38	Symptom 1813 1828	obrzęki podudzi
+T39	Symptom 1830 1854	bóle w klatce piersiowej
+N13	Reference T39 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T40	Symptom 1856 1871	kołatania serca
+N14	Reference T40 ICD10:R00.2	Kołatanie serca
+T41	Condition 1873 1875	DM
+N15	Reference T41 ICD10:E14	Cukrzyca nieokreślona
+T42	Condition 1877 1887	udar mózgu
+N16	Reference T42 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T43	Condition 1889 1900	zawał serca
+N17	Reference T43 ICD10:I25.2	Przebyty zawał serca
+R10	Neg Arg1:T31 Arg2:T30	
+R11	Neg Arg1:T31 Arg2:T32	
+R12	Neg Arg1:T31 Arg2:T33	
+R13	Neg Arg1:T31 Arg2:T34	
+R14	Neg Arg1:T31 Arg2:T35	
+R15	Neg Arg1:T31 Arg2:T36	
+R16	Neg Arg1:T31 Arg2:T37	
+R17	Neg Arg1:T31 Arg2:T38	
+R18	Neg Arg1:T31 Arg2:T39	
+R19	Neg Arg1:T31 Arg2:T40	
+R20	Neg Arg1:T31 Arg2:T41	
+R21	Neg Arg1:T31 Arg2:T42	
+R22	Neg Arg1:T31 Arg2:T43	
+T44	Treatment 1904 1921	Przebyte operacje
+N18	Reference T44 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T45	Negation 1923 1927	brak
+R23	Neg Arg1:T45 Arg2:T44	
+T46	Negation 1945 1948	nie
+T47	Behaviour 1949 1953	pali
+N19	Reference T47 ICD10:Z72.0	Używanie tytoniu
+T48	Date 1954 1963	od 15 lat
+R24	Dat Arg1:T48 Arg2:T47	
+R25	Neg Arg1:T46 Arg2:T47	
+T49	Behaviour 1964 1975	Inne używki
+T50	Negation 1977 1980	nie
+T51	Condition 1981 1990	Uczulenia
+N20	Reference T51 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T52	Negation 1992 1995	nie
+T53	Condition 2023 2026	WZW
+N21	Reference T53 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T54	Condition 2033 2042	borelioza
+N22	Reference T54 ICD10:A69.2	Choroba z Lyme
+T55	Condition 2050 2053	tbc
+N23	Reference T55 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T56	Negation 2027 2030	(-)
+T57	Negation 2043 2048	( - )
+T58	Negation 2054 2057	(-)
+T59	Behaviour 2098 2124	warunki mieszkaniowe dobre
+T60	Drug 2133 2138	Acard
+T61	Drug_dose 2139 2152	1x 75mg/wiecz
+T62	Investigation 2213 2234	badania laboratoryjne
+R26	Drg Arg1:T60 Arg2:T61	
+T63	Investigation 2236 2240	ECHO
+T64	Investigation 2242 2260	EKG metodą Holtera
+T65	Investigation 2262 2266	ABPM
+T66	Investigation 2268 2283	próba wysiłkowa
+R27	Neg Arg1:T50 Arg2:T49	
+R28	Neg Arg1:T52 Arg2:T51	
+R29	Neg Arg1:T56 Arg2:T53	
+R30	Neg Arg1:T57 Arg2:T54	
+R31	Neg Arg1:T58 Arg2:T55	
+T67	Behaviour 1928 1943	Palenie tytoniu
+N24	Reference T67 ICD10:Z72.0	Używanie tytoniu
+R32	Neg Arg1:T46 Arg2:T67	
+R33	Dat Arg1:T48 Arg2:T67	
+T68	Investigation_result 1508 1510	=0
+R34	Inv Arg1:T26 Arg2:T68	
+N25	Reference T2 ICD10:R04.9	Krwotok z dróg oddechowych, nieokreślony
+T69	Treatment 445 459	hospitalizacja
+N26	Reference T7 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T70	Condition 811 823	trójdzielnej
+N27	Reference T70 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T71	Behaviour 1276 1281	dietą
+N28	Reference T22 ICD10:R09.3	Nieprawidłowa plwocina
+R35	Dat Arg1:T21 Arg2:T25	
+R36	Dat Arg1:T21 Arg2:T26	
+N29	Reference T30 ICD10:R55	Omdlenie i zapaść
+N30	Reference T33 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N12	Reference T38 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+N31	Reference T49 ICD10:Z72	Problemy związane ze stylem życia

@@ -1,0 +1,99 @@
+T1	Treatment 333 381	Dalsza opieka w POZ oraz Poradni Kardiologicznej
+T2	Treatment 386 495	Zalecana ponowna hospitalizacja w Klinice Kardiologii i Wad Wrodzonych Dorosłych w celu oceny kardiologicznej
+T3	Date 496 511	za około 2 lata
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Treatment 575 622	zalecana diagnostyka w Poradni Laryngologicznej
+T5	Treatment 711 753	wskazana kontrola w Poradni Neurologicznej
+T6	Symptom 804 851	okresowo występującego dyskomfortu w nadbrzuszu
+T7	Drug 862 865	IPP
+T8	Drug_dose 866 870	20mg
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Investigation 940 968	wykonanie USG jamy brzusznej
+T10	Treatment 1013 1053	kontrola w Poradni Gastroenterologicznej
+T11	Symptom 558 573	krwawień z nosa
+N1	Reference T11 ICD10:R04.0	Epistaxis
+T12	Symptom 682 709	dolegliwości bólowych głowy
+N2	Reference T12 ICD10:R51	Ból głowy
+T13	Investigation 1058 1114	Wskazana kontrola elektrolitów oraz parametrów nerkowych
+T14	Date 1115 1129	w poniedziałek
+R3	Dat Arg1:T14 Arg2:T13	
+T15	Investigation 1148 1240	Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T16	Behaviour 1245 1347	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T17	Behaviour 1352 1406	Wskazane spożywanie co najmniej 2 litrów wody dziennie
+T18	Behaviour 1412 1481	Wskazane ograniczenie spożywania pokarmów z wysoką zawartością potasu
+T19	Behaviour 1698 1744	unikanie suplementów diety zawierających potas
+T20	Behaviour 1750 1797	Wskazane ograniczenie spożywania soli kuchennej
+T21	Investigation 1803 1859	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T22	Treatment 1865 1893	Regularne przyjmowanie leków
+T23	Drug 1899 1906	Nebilet
+T24	Drug_dose 1907 1928	5mg 1/2 tabletki rano
+R4	Drg Arg1:T23 Arg2:T24	
+T25	Drug 1930 1936	Karbis
+T26	Drug_dose 1937 1956	8mg 1 tabletka rano
+R5	Drg Arg1:T25 Arg2:T26	
+T27	Drug 1962 1969	Nolpaza
+T28	Drug_dose 1970 2000	20mg 1 tabletka rano, na czczo
+R6	Drg Arg1:T27 Arg2:T28	
+T29	Investigation 2070 2126	wykonanie USG jamy brzusznej w warunkach ambulatoryjnych
+T30	Treatment 2132 2183	ewentualna kontrola w Poradni Gastroenterologicznej
+T31	Condition 2402 2440	Łagodna stenoza zastawki pnia płucnego
+N3	Reference T31 ICD10:I37.0	Zwężenie zastawki pnia płucnego
+T32	Condition 2442 2463	Nadciśnienie tętnicze
+N4	Reference T32 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T33	Condition 2465 2511	Zmiany zwyrodnieniowe stawu kolanowego prawego
+N5	Reference T33 ICD10:M17	Gonartroza [choroba zwyrodnieniowa stawu kolanowego]
+T34	Investigation 2709 2712	TTE
+T35	Investigation_result 2713 2738	zwężenia zastawki płucnej
+R7	Inv Arg1:T34 Arg2:T35	
+N6	Reference T35 ICD10:I37.0	Zwężenie zastawki pnia płucnego
+T36	Symptom 2755 2773	szybka akcja serca
+N7	Reference T36 ICD10:R00.0	Tachykardia, nieokreślona
+T37	Condition 2798 2812	HA skorygowane
+N8	Reference T37 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+A1	Source T37 Declared
+T38	Investigation 2831 2835	ABPM
+T39	Date 2838 2845	2019.04
+R8	Dat Arg1:T39 Arg2:T38	
+T40	Investigation_result 2858 2875	niepełna korekcję
+R9	Inv Arg1:T38 Arg2:T40	
+R10	Dat Arg1:T39 Arg2:T40	
+T41	Condition 2878 2911	niedokrwistosć z niedoboru żelaza
+N9	Reference T41 ICD10:D50	Niedokrwistość z niedoboru żelaza
+T42	Symptom 2914 2931	obfite miesiączki
+N10	Reference T42 ICD10:N92	Obfite, częste i nieregularne miesiączki
+T43	Condition 2933 2979	zmiany zwyrodnieniowe stawu kolanowego prawego
+N11	Reference T43 ICD10:M17	Gonartroza [choroba zwyrodnieniowa stawu kolanowego]
+T44	Treatment 2981 2998	Przebyte operacje
+T45	Negation 3000 3007	neguj e
+R11	Neg Arg1:T45 Arg2:T44	
+T46	Condition 3008 3023	Wywiad rodzinny
+A2	Status T46 Family
+T47	Negation 3025 3038	bez znaczenia
+R12	Neg Arg1:T47 Arg2:T46	
+T48	Condition 3040 3047	Alergie
+T49	Negation 3050 3056	neguje
+R13	Neg Arg1:T49 Arg2:T48	
+T50	Behaviour 3058 3068	Nikotynizm
+T51	Negation 3070 3076	neguje
+R14	Neg Arg1:T51 Arg2:T50	
+T52	Behaviour 3079 3086	Alkohol
+N13	Reference T52 ICD10:Z72.1	Używanie alkoholu
+T53	Negation 3088 3094	neguje
+R15	Neg Arg1:T53 Arg2:T52	
+T54	Condition 3096 3113	Uzależnienie inne
+T55	Negation 3115 3121	neguje
+R16	Neg Arg1:T55 Arg2:T54	
+T56	Drug 3129 3135	Karbis
+T57	Drug_dose 3136 3153	8 mg 1 tabl. rano
+R17	Drg Arg1:T56 Arg2:T57	
+T58	Drug 3155 3162	Isoptin
+T59	Drug_dose 3163 3177	80 - 0 - 40 mg
+R18	Drg Arg1:T58 Arg2:T59	
+T60	Investigation 3206 3216	echo serca
+T61	Investigation 3218 3221	TET
+T62	Investigation 3223 3227	ABPM
+T63	Investigation 3229 3239	Holter ekg
+T64	Investigation 3241 3259	rtg kl. piersiowej
+N14	Reference T48 ICD10:T78.4	Alergia, nieokreślona
+N15	Reference T54 ICD10:T78.4	Alergia, nieokreślona
+N12	Reference T50 ICD10:Z72.0	Używanie tytoniu

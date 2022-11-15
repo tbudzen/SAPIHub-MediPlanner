@@ -1,0 +1,150 @@
+T1	Condition 419 428	hipotonią
+N1	Reference T1 ICD10:R03.1	Nieswoiste obniżone ciśnienie tętnicze krwi
+T2	Condition 431 442	bradykardią
+N2	Reference T2 ICD10:R00.1	Bradykardia, nieokreślona
+T3	Condition 444 457	Blok AV I st.
+N3	Reference T3 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T4	Condition 458 479	Zaburzenia depresyjne
+N4	Reference T4 ICD10:F33	Zaburzenia depresyjne nawracające
+T5	Condition 481 498	Choroba Hashimoto
+N5	Reference T5 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T6	Drug 653 659	Zoloft
+T7	Drug 661 667	Letrox
+T8	Treatment 778 800	kontrola u lekarza POZ
+T9	Investigation 803 831	kontrola enzymów wątrobowych
+T10	Date 832 843	za ok 1 m-c
+R1	Dat Arg1:T10 Arg2:T9	
+T11	Treatment 846 931	dalsza kontrola w PZP - proszę o rozważenie zmiany SSRI na inny lek przeciwdepresyjny
+T12	Treatment 934 978	dalsza kontrola w Poradni Endokrynologicznej
+T13	Investigation 981 1003	wskazane wykonanie TIL
+T14	Condition 1157 1174	choroby Hashimoto
+N6	Reference T14 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T15	Condition 1176 1194	hiperprolaktynemii
+N7	Reference T15 ICD10:E22.1	Hiperprolaktynemia
+T16	Condition 1197 1214	hiperkortyzolemii
+N8	Reference T16 ICD10:E24	Zespół Cushinga
+T17	Condition 1216 1228	endometriozy
+N9	Reference T17 ICD10:N80	Gruczolistość
+A1	Source T17 Declared
+T18	Symptom 1305 1325	epizodu zasłabnięcia
+T19	Investigation_result 1329 1353	spadkiem RR do 70/35mmHg
+N10	Reference T19 ICD10:R03.1	Nieswoiste obniżone ciśnienie tętnicze krwi
+T20	Investigation_result 1356 1365	HR 40/min
+N11	Reference T20 ICD10:R00.1	Bradykardia, nieokreślona
+T21	Symptom 1383 1398	zawrotami głowy
+N12	Reference T21 ICD10:R42	Zawroty głowy i odurzenie
+T22	Symptom 1400 1427	dziwnym uczuciem w kl piers
+N13	Reference T22 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T23	Symptom 1430 1447	zaburzeniami mowy
+N14	Reference T23 ICD10:R47.8	Inne i nieokreślone zaburzenia mowy
+T24	Symptom 1511 1564	Podobne dolegliwości niedawno podczas pobierania krwi
+T25	Date 1589 1601	od ok 1 roku
+T26	Symptom 1603 1620	ogólne osłabienie
+T27	Symptom 1622 1642	szybsze męczenie się
+N15	Reference T27 ICD10:R53	Złe samopoczucie i zmęczenie
+T28	Date 1643 1655	od ok 1 roku
+R2	Dat Arg1:T28 Arg2:T27	
+R3	Dat Arg1:T25 Arg2:T26	
+T29	Symptom 1661 1695	na 3 piętro wchodzi bez odpoczynku
+T30	Symptom 1698 1769	kłucia w okolicy p/sercowej bez związku z wysiłkiem fizycznym i stresem
+N16	Reference T30 ICD10:R07.3	Inne bóle w klatce piersiowej
+T31	Date 1771 1780	od 1 roku
+T32	Symptom 1782 1806	pobolewanie prawej łydki
+N17	Reference T32 ICD10:M79.6	Bóle kończyn
+T33	Symptom 1840 1864	uczucie zamierania serca
+T34	Symptom 1866 1899	zawroty głowy przy pochylaniu się
+N19	Reference T34 ICD10:R42	Zawroty głowy i odurzenie
+T35	Symptom 1927 1939	bólami głowy
+N20	Reference T35 ICD10:R51	Ból głowy
+T36	Condition 1941 1962	zaburzenia depresyjne
+N21	Reference T36 ICD10:F33	Zaburzenia depresyjne nawracające
+T37	Date 1964 1975	od 1,5 roku
+T38	Drug 1986 1992	Zoloft
+R4	Dat Arg1:T37 Arg2:T38	
+T39	Drug_dose 1994 2017	pod kontrolą psychiatry
+R5	Drg Arg1:T38 Arg2:T39	
+T40	Symptom 2020 2070	obfite poty w drugiej polowie cyklu miesiączkowego
+N22	Reference T40 ICD10:R61	Nadmierne pocenie
+T41	Symptom 2072 2102	omdlenia w okresie dojrzewania
+N23	Reference T41 ICD10:R55	Omdlenie i zapaść
+T42	Negation 2104 2110	Neguje
+T43	Symptom 2112 2127	obrzęki podudzi
+R6	Neg Arg1:T42 Arg2:T43	
+T44	Symptom 2129 2144	kołatania serca
+N25	Reference T44 ICD10:R00.2	Kołatanie serca
+R7	Neg Arg1:T42 Arg2:T44	
+T45	Condition 2146 2148	HA
+N18	Reference T45 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T46	Condition 2150 2152	DM
+N26	Reference T46 ICD10:E14	Cukrzyca nieokreślona
+R8	Neg Arg1:T42 Arg2:T45	
+R9	Neg Arg1:T42 Arg2:T46	
+T47	Treatment 2155 2172	Przebyte operacje
+T48	Negation 2174 2177	nie
+R10	Neg Arg1:T48 Arg2:T47	
+T49	Behaviour 2178 2193	Palenie tytoniu
+T50	Negation 2195 2203	nie pali
+T51	Date 2204 2216	od kilku lat
+R11	Neg Arg1:T50 Arg2:T49	
+R12	Dat Arg1:T51 Arg2:T49	
+T52	Behaviour 2217 2228	Inne używki
+T53	Negation 2230 2233	nie
+R13	Neg Arg1:T53 Arg2:T52	
+T54	Condition 2234 2243	Uczulenia
+T55	Negation 2245 2248	nie
+R14	Neg Arg1:T55 Arg2:T54	
+T56	Condition 2276 2279	WZW
+N28	Reference T56 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T57	Condition 2286 2295	borelioza
+N29	Reference T57 ICD10:A69.2	Choroba z Lyme
+T58	Condition 2301 2304	tbc
+T59	Condition 2310 2314	odra
+N31	Reference T59 ICD10:B05	Odra
+T60	Condition 2320 2334	kontakt z odrą
+N32	Reference T60 ICD10:B05	Odra
+T61	Negation 2336 2337	-
+R15	Neg Arg1:T61 Arg2:T60	
+T62	Negation 2316 2317	-
+R16	Neg Arg1:T62 Arg2:T59	
+T63	Negation 2306 2307	-
+R17	Neg Arg1:T63 Arg2:T58	
+T64	Negation 2297 2298	-
+R18	Neg Arg1:T64 Arg2:T57	
+T65	Negation 2281 2282	-
+R19	Neg Arg1:T65 Arg2:T56	
+T66	Condition 2341 2360	wywiadzie rodzinnym
+A2	Status T66 Family
+T67	Negation 2362 2375	bez znaczenia
+R20	Neg Arg1:T67 Arg2:T66	
+T68	Behaviour 2392 2418	warunki mieszkaniowe dobre
+T69	Drug 2456 2462	Zoloft
+T70	Drug_dose 2463 2482	50mg 1x 1 tabl/rano
+R21	Drg Arg1:T69 Arg2:T70	
+T71	Drug 2483 2489	Letrox
+T72	Drug_dose 2490 2509	75ug 1x 1 tabl/rano
+R22	Drg Arg1:T71 Arg2:T72	
+T73	Investigation 2570 2591	badania laboratoryjne
+T74	Investigation 2593 2597	ECHO
+T75	Investigation 2599 2617	EKG metodą Holtera
+T76	Investigation 2619 2623	ABPM
+T77	Investigation 2625 2640	próba wysiłkowa
+T78	Symptom 404 416	Zasłabnięcia
+T79	Negation 1808 1811	bez
+T80	Symptom 1812 1827	zaczerwienienia
+R23	Neg Arg1:T79 Arg2:T80	
+T81	Symptom 1830 1837	obrzeku
+R24	Neg Arg1:T79 Arg2:T81	
+N34	Reference T54 ICD10:T78.4	Alergia, nieokreślona
+N35	Reference T78 ICD10:R55	Omdlenie i zapaść
+N36	Reference T18 ICD10:R55	Omdlenie i zapaść
+N37	Reference T26 ICD10:R53	Złe samopoczucie i zmęczenie
+T82	Symptom 1912 1924	zasłabnięcia
+N38	Reference T82 ICD10:R55	Omdlenie i zapaść
+N27	Reference T49 ICD10:Z72.0	Używanie tytoniu
+T83	Treatment 1474 1498	zabiegu ginekologicznego
+T84	Date 1500 1507	09.2019
+R25	Dat Arg1:T84 Arg2:T83	
+N24	Reference T43 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N33	Reference T81 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N39	Reference T52 ICD10:Z72	Problemy związane ze stylem życia
+N30	Reference T58 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

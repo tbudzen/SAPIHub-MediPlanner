@@ -1,0 +1,185 @@
+T1	Condition 439 460	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 462 493	Napadowe migotanie przedsionków
+N2	Reference T2 ICD10:I48	Migotanie i trzepotanie przedsionków
+T3	Condition 495 533	Przewlekła choroba niedokrwienna serca
+N3	Reference T3 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T4	Condition 535 557	Niedoczynność tarczycy
+N4	Reference T4 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T5	Condition 559 591	Zmiany zwyrodnieniowe kręgosłupa
+N5	Reference T5 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T6	Condition 605 627	Żylaki kończyn dolnych
+N6	Reference T6 ICD10:I83	Żylaki kończyn dolnych
+T7	Treatment 637 658	usunięciu nerki lewej
+T8	Treatment 675 709	operacji prawego ucha wewnętrznego
+T9	Date 660 664	1994
+T10	Date 748 752	1960
+R1	Dat Arg1:T10 Arg2:T8	
+R2	Dat Arg1:T9 Arg2:T7	
+T11	Treatment 866 931	Dalsza kontrola w Poradni Kardiologicznej oraz Endokrynologicznej
+T12	Drug 950 956	Letrox
+T13	Drug_dose 957 1026	50 mcg, 1 tabl. raz dziennie rano na czczo tj. 30 min przed jedzeniem
+R3	Drg Arg1:T12 Arg2:T13	
+T14	Investigation 1030 1047	kontrola TSH i HT
+T15	Date 1048 1060	za 6 tygodni
+R4	Dat Arg1:T15 Arg2:T14	
+T16	Drug 1111 1121	Opacordenu
+T17	Investigation_result 1132 1151	stężenie TSH ok 4-5
+T18	Treatment 1156 1175	Dalsza opieka w POZ
+T19	Investigation 1180 1272	Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T20	Investigation 1277 1308	Okresowa kontrola wskaźnika INR
+T21	Behaviour 1313 1415	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T22	Investigation 1420 1476	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T23	Treatment 1482 1510	Regularne przyjmowanie leków
+T24	Drug 1516 1525	Opacorden
+T25	Drug_dose 1526 1544	200mg 1 tabl. rano
+R5	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1545 1551	Valzek
+T27	Drug_dose 1552 1576	80mg 1/2 tabl. wieczorem
+R6	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1577 1584	Pradaxa
+T29	Drug_dose 1585 1629	150 mg 1 tabl. 2 x dziennie rano i wieczorem
+R7	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1630 1636	Letrox
+T31	Drug_dose 1637 1687	50 ug 1 tabl. rano na czczo 30 min przed posiłkiem
+R8	Drg Arg1:T30 Arg2:T31	
+T32	Drug 1688 1691	IPP
+T33	Drug_dose 1692 1719	20 mg 1 tabl. rano na czczo
+R9	Drg Arg1:T32 Arg2:T33	
+T34	Symptom 1892 1915	napadów kołatania serca
+N7	Reference T34 ICD10:R00.2	Kołatanie serca
+T35	Symptom 1998 2028	zmniejszoną tolerancję wysiłku
+N8	Reference T35 ICD10:R53	Złe samopoczucie i zmęczenie
+T36	Date 2029 2037	od 5 lat
+R10	Dat Arg1:T36 Arg2:T35	
+T37	Symptom 2060 2120	tępe bóle w klatce piersiowej związane z wysiłkiem fizycznym
+N9	Reference T37 ICD10:R07.3	Inne bóle w klatce piersiowej
+T38	Date 2121 2129	od 5 lat
+R11	Dat Arg1:T38 Arg2:T37	
+T39	Symptom 2131 2180	bóle w nadbrzuszu (często w zależności od posiłku
+N10	Reference T39 ICD10:R10.1	Ból zlokalizowany w nadbrzuszu
+T40	Symptom 2223 2245	okresowo zawroty głowy
+N11	Reference T40 ICD10:R42	Zawroty głowy i odurzenie
+T41	Symptom 2251 2282	okresowo drętwienie prawej ręki
+N12	Reference T41 ICD10:R20.2	Parestezje
+T42	Negation 2284 2290	Neguje
+T43	Symptom 2291 2303	zasłabnięcia
+T44	Symptom 2305 2313	omdlenia
+N13	Reference T44 ICD10:R55	Omdlenie i zapaść
+T45	Symptom 2315 2325	krwawienia
+T46	Symptom 2327 2340	czarne stolce
+N14	Reference T46 ICD10:K92.1	Stolce smołowate
+T47	Symptom 2342 2358	brunatne wymioty
+N15	Reference T47 ICD10:K92.0	Wymioty krwawe
+T48	Condition 2360 2376	chorobę wrzodową
+N16	Reference T48 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T49	Symptom 2378 2392	duszność nocną
+N17	Reference T49 ICD10:R06.0	Duszność
+T50	Symptom 2394 2409	obrzęki podudzi
+R12	Neg Arg1:T42 Arg2:T50	
+R13	Neg Arg1:T42 Arg2:T49	
+R14	Neg Arg1:T42 Arg2:T48	
+R15	Neg Arg1:T42 Arg2:T47	
+R16	Neg Arg1:T42 Arg2:T46	
+R17	Neg Arg1:T42 Arg2:T45	
+R18	Neg Arg1:T42 Arg2:T44	
+R19	Neg Arg1:T42 Arg2:T43	
+T51	Symptom 2411 2430	Innych dolegliwości
+T52	Negation 2431 2442	nie zgłasza
+R20	Neg Arg1:T52 Arg2:T51	
+T53	Condition 2457 2478	Nadciśnienie tętnicze
+N19	Reference T53 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T54	Condition 2480 2511	Napadowe migotanie przedsionków
+N20	Reference T54 ICD10:I48	Migotanie i trzepotanie przedsionków
+T55	Condition 2513 2551	Przewlekła choroba niedokrwienna serca
+N21	Reference T55 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T56	Condition 2553 2575	Niedoczynność tarczycy
+N22	Reference T56 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T57	Condition 2577 2609	Zmiany zwyrodnieniowe kręgosłupa
+N23	Reference T57 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T58	Condition 2623 2645	Żylaki kończyn dolnych
+N24	Reference T58 ICD10:I83	Żylaki kończyn dolnych
+T59	Treatment 2647 2664	Przebyte operacje
+T60	Treatment 2674 2695	usunięciu nerki lewej
+T61	Date 2697 2701	1994
+R21	Dat Arg1:T61 Arg2:T60	
+T62	Treatment 2712 2746	operacji prawego ucha wewnętrznego
+T63	Date 2785 2789	1960
+R22	Dat Arg1:T63 Arg2:T62	
+A1	Status T62 Historical_Insignificant
+A2	Status T60 Historical_Insignificant
+A3	Status T8 Historical_Insignificant
+A4	Status T7 Historical_Insignificant
+T64	Treatment 2792 2816	Leczenie przewlekłe: POZ
+T65	Condition 2843 2846	WZW
+N25	Reference T65 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T66	Condition 2855 2864	borelioza
+N26	Reference T66 ICD10:A69.2	Choroba z Lyme
+T67	Condition 2872 2880	grużlica
+T68	Condition 2888 2892	odra
+N28	Reference T68 ICD10:B05	Odra
+T69	Condition 2900 2914	kontakt z odrą
+N29	Reference T69 ICD10:B05	Odra
+T70	Negation 2917 2918	-
+R23	Neg Arg1:T70 Arg2:T69	
+T71	Negation 2895 2896	-
+R24	Neg Arg1:T71 Arg2:T68	
+T72	Negation 2883 2884	-
+R25	Neg Arg1:T72 Arg2:T67	
+T73	Negation 2867 2868	-
+R26	Neg Arg1:T73 Arg2:T66	
+T74	Negation 2849 2850	-
+R27	Neg Arg1:T74 Arg2:T65	
+T75	Condition 2922 2937	Wywiad rodzinny
+A5	Status T75 Family
+T76	Condition 2944 2949	zawał
+A6	Status T76 Family
+N30	Reference T76 ICD10:I25.2	Przebyty zawał serca
+T77	Condition 2962 2967	zawał
+A7	Status T77 Family
+N31	Reference T77 ICD10:I25.2	Przebyty zawał serca
+T78	Behaviour 2976 2991	Palenie tytoniu
+T79	Behaviour 3001 3012	Inne używki
+T80	Negation 2993 2999	neguje
+R28	Neg Arg1:T80 Arg2:T78	
+T81	Negation 3014 3020	neguje
+R29	Neg Arg1:T81 Arg2:T79	
+T82	Condition 3022 3031	Uczulenia
+T83	Negation 3033 3039	neguje
+R30	Neg Arg1:T83 Arg2:T82	
+T84	Behaviour 3057 3083	warunki mieszkaniowe dobre
+T85	Behaviour 3106 3114	emerytka
+T86	Drug 3122 3131	Opacorden
+T87	Drug_dose 3132 3141	1 tabl. R
+R31	Drg Arg1:T86 Arg2:T87	
+T88	Drug 3143 3149	Valzek
+T89	Drug_dose 3150 3166	80mg 1/2 tabl. W
+R32	Drg Arg1:T88 Arg2:T89	
+T90	Drug 3168 3175	Acard W
+T91	Date 3177 3189	od 2 tygodni
+T92	Negation 3190 3200	nie bierze
+T93	Drug 3201 3211	Vessel Duo
+T94	Drug 3214 3222	Aspargin
+R33	Dat Arg1:T91 Arg2:T93	
+R34	Dat Arg1:T91 Arg2:T94	
+R35	Neg Arg1:T92 Arg2:T93	
+R36	Neg Arg1:T92 Arg2:T94	
+T95	Investigation 3238 3241	TTE
+T96	Investigation 3243 3246	TET
+T97	Investigation 3248 3252	ABPM
+T98	Investigation 3254 3264	Holter EKG
+T99	Condition 719 746	zapalenia ucha wewnętrznego
+N33	Reference T99 ICD10:H66.9	Zapalenie ucha środkowego, nieokreślone
+R37	Dat Arg1:T10 Arg2:T99	
+A8	Status T99 Historical_Insignificant
+T100	Condition 2756 2783	zapalenia ucha wewnętrznego
+A9	Status T100 Historical_Insignificant
+N34	Reference T100 ICD10:H66.9	Zapalenie ucha środkowego, nieokreślone
+R38	Dat Arg1:T63 Arg2:T100	
+N36	Reference T82 ICD10:T78.4	Alergia, nieokreślona
+N37	Reference T43 ICD10:R55	Omdlenie i zapaść
+N32	Reference T78 ICD10:Z72.0	Używanie tytoniu
+N35	Reference T45 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N18	Reference T50 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N27	Reference T67 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N38	Reference T79 ICD10:Z72	Problemy związane ze stylem życia

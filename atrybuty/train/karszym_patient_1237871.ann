@@ -1,0 +1,22 @@
+T1	Drug 352 362	Salbutamol
+T2	Drug_dose 363 370	2 x 2mg
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Investigation 375 403	Ambulatoryjna kontrola tętna
+T4	Treatment 408 436	Dalsza opieka kardiologiczna
+T5	Treatment 439 481	kontrolna wizyta w Poradni Kardiologicznej
+T6	Date 482 489	za 6mcy
+R2	Dat Arg1:T6 Arg2:T5	
+T8	Symptom 506 532	pogorszenia stanu ogólnego
+T9	Treatment 543 560	kontakt z kliniką
+T10	Drug 681 691	Salbutamol
+T11	Condition 926 966	ubytku międzyprzedsionkowego typu ASD II
+N1	Reference T11 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T12	Date 968 979	10.02.2014r
+R5	Dat Arg1:T12 Arg2:T11	
+T13	Condition 986 1017	Zespół chorego węzła zatokowego
+N2	Reference T13 ICD10:I49.5	Zespół chorej zatoki
+T14	Condition 1025 1045	Zespół Holta - Orama
+N3	Reference T14 ICD10:Q87.2	Zespoły wrodzonych wad rozwojowych dotyczące głównie kończyn
+T7	Treatment 917 925	operacji
+R3	Dat Arg1:T12 Arg2:T7	
+N4	Reference T7 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych

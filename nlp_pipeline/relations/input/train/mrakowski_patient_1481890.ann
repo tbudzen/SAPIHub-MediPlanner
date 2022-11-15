@@ -1,0 +1,125 @@
+T1	Condition 439 460	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 462 514	Niedoczynność tarczycy w przebiegu choroby Hashimoto
+N2	Reference T2 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T3	Condition 733 754	Nadciśnienie tętnicze
+N3	Reference T3 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T4	Condition 756 808	Niedoczynność tarczycy w przebiegu choroby Hashimoto
+N4	Reference T4 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T5	Treatment 921 997	Dalsza opieka w POZ, Poradni Kardiologicznej oraz Poradni Endokrynologicznej
+T6	Treatment 1002 1132	W przypadku rejestrowania podwyższonych wartości ciśnienia tętniczego, wskazana konsultacja i modyfikacja leczenia w warunkach POZ
+T7	Treatment 1137 1253	Z uwagi na dodatni wynik przeciwciał klasy IgM w kierunku boreliozy, wskazana konsultacja w Poradni Chorób Zakaźnych
+T8	Investigation 1283 1373	Okresowa kontrola morfologii, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T9	Date 1385 1399	za 4-6 tygodni
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Investigation 1404 1444	Wskazana okresowa kontrola TSH, FT3, FT4
+T11	Behaviour 1449 1551	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T12	Behaviour 1556 1610	Wskazana umiarkowana, systematyczna aktywność fizyczna
+T13	Investigation 1615 1671	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T14	Treatment 1676 1704	Regularne przyjmowanie leków
+T15	Drug 1710 1718	Primacor
+T16	Drug_dose 1719 1751	10mg 1 tabletka rano i wieczorem
+R2	Drg Arg1:T15 Arg2:T16	
+T17	Drug 1752 1758	Letrox
+T18	Drug_dose 1761 1801	wg dotychczasowych zaleceń endokrynologa
+R3	Drg Arg1:T17 Arg2:T18	
+T19	Drug 1802 1811	Captopril
+T20	Drug_dose 1812 1935	25mg doraźnie, podjęzykowo - w przypadku wartości ciśnienia powyżej 160/90mmHg 1/2 tabletki, powyżej 180/100mmHg 1 tabletka
+R4	Drg Arg1:T19 Arg2:T20	
+T21	Treatment 1937 2036	W przypadku planowania ciąży, wskazana konsultacja z lekarzem w celu zmiany leczenia hipotensyjnego
+T22	Condition 2210 2233	nadciśnienia tętniczego
+N5	Reference T22 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T23	Drug 2347 2364	leki hipotensyjne
+T24	Treatment 2322 2346	wielokrotnie przyjmowała
+T25	Symptom 2489 2519	wysokich wartościach ciśnienia
+N6	Reference T25 ICD10:R03	
+T26	Symptom 2537 2556	gorsze samopoczucie
+N7	Reference T26 ICD10:R53	Złe samopoczucie i zmęczenie
+T27	Symptom 2562 2572	bóle głowy
+N8	Reference T27 ICD10:R51	Ból głowy
+T28	Negation 2575 2581	Neguje
+T29	Symptom 2582 2594	zasłabnięcia
+T30	Symptom 2596 2604	omdlenia
+N9	Reference T30 ICD10:R55	Omdlenie i zapaść
+T31	Symptom 2606 2619	zawroty głowy
+N10	Reference T31 ICD10:R42	Zawroty głowy i odurzenie
+T32	Symptom 2621 2631	krwawienia
+T33	Symptom 2633 2646	czarne stolce
+N11	Reference T33 ICD10:K92.1	Stolce smołowate
+T34	Symptom 2648 2664	brunatne wymioty
+N12	Reference T34 ICD10:K92.0	Wymioty krwawe
+T35	Condition 2666 2682	chorobę wrzodową
+N13	Reference T35 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T36	Symptom 2684 2698	duszność nocną
+N14	Reference T36 ICD10:R06.0	Duszność
+T37	Symptom 2700 2715	obrzęki podudzi
+N15	Reference T37 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T38	Symptom 2717 2741	bóle w klatce piersiowej
+N16	Reference T38 ICD10:R07	Ból gardła i w klatce piersiowej
+R5	Neg Arg1:T28 Arg2:T38	
+R6	Neg Arg1:T28 Arg2:T37	
+R7	Neg Arg1:T28 Arg2:T36	
+R8	Neg Arg1:T28 Arg2:T35	
+R9	Neg Arg1:T28 Arg2:T34	
+R10	Neg Arg1:T28 Arg2:T33	
+R11	Neg Arg1:T28 Arg2:T32	
+R12	Neg Arg1:T28 Arg2:T31	
+R13	Neg Arg1:T28 Arg2:T30	
+R14	Neg Arg1:T28 Arg2:T29	
+T39	Symptom 2743 2762	Innych dolegliwości
+T40	Negation 2763 2774	nie zgłasza
+R15	Neg Arg1:T40 Arg2:T39	
+T41	Condition 2789 2810	Nadciśnienie tętnicze
+N17	Reference T41 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T42	Condition 2812 2864	Niedoczynność tarczycy w przebiegu choroby Hashimoto
+N18	Reference T42 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T43	Treatment 2867 2884	Przebyte operacje
+T44	Negation 2886 2892	neguje
+R16	Neg Arg1:T44 Arg2:T43	
+T45	Treatment 2894 2918	Leczenie przewlekłe: POZ
+T46	Treatment 2920 2932	endokrynolog
+T47	Treatment 2934 2943	kardiolog
+T48	Condition 2970 2973	WZW
+N19	Reference T48 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T49	Condition 2982 2991	borelioza
+N20	Reference T49 ICD10:A69.2	Choroba z Lyme
+T50	Condition 2999 3007	grużlica
+N21	Reference T50 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T51	Condition 3015 3019	odra
+N22	Reference T51 ICD10:B05	Odra
+T52	Negation 3022 3023	-
+R17	Neg Arg1:T52 Arg2:T51	
+T53	Negation 3010 3011	-
+R18	Neg Arg1:T53 Arg2:T50	
+T54	Negation 2994 2995	-
+R19	Neg Arg1:T54 Arg2:T49	
+T55	Negation 2976 2977	-
+R20	Neg Arg1:T55 Arg2:T48	
+T56	Condition 3026 3041	Wywiad rodzinny
+A1	Status T56 Family
+T57	Condition 3051 3053	HA
+A2	Status T57 Family
+N23	Reference T57 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T58	Condition 3060 3065	zawał
+A3	Status T58 Family
+N24	Reference T58 ICD10:I25.2	Przebyty zawał serca
+T59	Behaviour 3088 3103	Palenie tytoniu
+N25	Reference T59 ICD10:T65.2	Tytoń i nikotyna
+T60	Negation 3105 3111	neguje
+R21	Neg Arg1:T60 Arg2:T59	
+T61	Behaviour 3113 3124	Inne używki
+T62	Negation 3126 3132	neguje
+R22	Neg Arg1:T62 Arg2:T61	
+T63	Condition 3134 3143	Uczulenia
+T64	Negation 3145 3151	neguje
+R23	Neg Arg1:T64 Arg2:T63	
+T65	Behaviour 3169 3195	warunki mieszkaniowe dobre
+T66	Behaviour 3221 3234	praca biurowa
+T67	Drug 3241 3247	Letrox
+T68	Drug_dose 3248 3282	125ug od pon-pt, 100ug w sb i ndz.
+R24	Drg Arg1:T67 Arg2:T68	
+T69	Drug 3284 3308	tabletki antykoncepcyjne
+T70	Investigation 3324 3327	TTE
+T71	Investigation 3329 3332	TET
+T72	Investigation 3334 3338	ABPM
+T73	Investigation 3340 3350	Holter EKG

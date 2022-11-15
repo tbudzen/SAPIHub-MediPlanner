@@ -1,0 +1,180 @@
+T1	Treatment 347 374	dalsza opieka w poradni POZ
+T2	Treatment 381 462	okresowa kontrola kardiologiczna, endokrynologiczna, ginekologiczna, okulistyczna
+T3	Treatment 469 502	konieczne dokończenie diagnostyki
+T4	Condition 503 526	podwyższonego miana ANA
+N1	Reference T4 ICD10:R79.9	Nieprawidłowe wyniki badań biochemicznych krwi, nieokreślone
+T5	Condition 529 564	podwyższonego stężenia parathormonu
+N2	Reference T5 ICD10:R79.9	Nieprawidłowe wyniki badań biochemicznych krwi, nieokreślone
+T6	Investigation 570 609	codzienna kontrola ciśnienia tętniczego
+T7	Investigation 616 645	okresowa kontrola lipidogramu
+T8	Date 656 668	za 6 tygodni
+R1	Dat Arg1:T8 Arg2:T7	
+T9	Investigation 671 702	parametrów nerkowych i kaliemii
+R2	Dat Arg1:T8 Arg2:T9	
+T10	Behaviour 709 741	spożywanie 2.5-3l płynu dziennie
+T11	Behaviour 749 782	dieta DASH i uboga w cukry proste
+T12	Behaviour 788 833	stały, umiarkowany, aerobowy wysiłek fizyczny
+T13	Treatment 840 868	regularne przyjmowanie leków
+T14	Drug 878 886	Tialorid
+T15	Drug_dose 887 909	2,5+25 mg 1 tabl. rano
+R3	Drg Arg1:T14 Arg2:T15	
+T16	Drug 916 924	Spironol
+T17	Drug_dose 925 949	50 mg 1 tabl. w południe
+T18	Drug_dose 951 991	dawka do optymalizacji przez Lekarza POZ
+T19	Investigation 992 1020	pod kontrolą eGFR i kaliemii
+R4	Drg Arg1:T16 Arg2:T17	
+R5	Drg Arg1:T16 Arg2:T18	
+T20	Drug 1028 1034	Iporel
+T21	Drug_dose 1035 1076	75ug 2 tabl. rano, w południe i wieczorem
+R6	Drg Arg1:T20 Arg2:T21	
+T22	Condition 1304 1331	Gruczolak nadnercza prawego
+N3	Reference T22 ICD10:D35.0	Nadnercze
+T23	Condition 1334 1365	dwa gruczolaki nadnercza lewego
+N4	Reference T23 ICD10:D35.0	Nadnercze
+T24	Condition 1379 1398	hiperaldosteronizmu
+A1	Source T24 Declared
+N5	Reference T24 ICD10:E26	Hiperaldosteronizm
+T25	Condition 1401 1452	wtórne nadciśnienie tętnicze III stopnia wg ESH/ESC
+N6	Reference T25 ICD10:I15	Nadciśnienie wtórne
+T26	Condition 1454 1490	Angiopatia nadciśnieniowa II stopnia
+N7	Reference T26 ICD10:H35.0	Retinopatia nieproliferacyjna i zmiany naczyniowe siatkówki
+T27	Behaviour 1492 1502	Nikotynizm
+T28	Condition 1504 1553	Wada serca pod postacią niedomykalności mitralnej
+N9	Reference T28 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T29	Condition 1556 1578	trójdzielnej I stopnia
+N10	Reference T29 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T30	Condition 1580 1625	Dysfunkcja skurczowo-rozkurczowa lewej komory
+N11	Reference T30 ICD10:I50.1	Niewydolność serca lewokomorowa
+T31	Investigation_result 1627 1633	EF 50%
+T32	Treatment 1644 1656	strumektomii
+A2	Status T32 Historical_Insignificant
+T33	Date 1658 1662	1985
+R7	Dat Arg1:T33 Arg2:T32	
+T34	Condition 1665 1698	wole odrostowe guzkowe zamostkowe
+N12	Reference T34 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T35	Condition 1700 1719	tarczyca ektopiczna
+N13	Reference T35 ICD10:E07.8	Inne określone choroby tarczycy
+T36	Treatment 1729 1762	segmentowej resekcji płuca lewego
+A3	Status T36 Historical_Insignificant
+T37	Treatment 1765 1813	wycięcie języczka i węzłów chłonnych śródpiersia
+A4	Status T37 Historical_Insignificant
+T38	Date 1815 1822	09.2014
+R8	Dat Arg1:T38 Arg2:T37	
+R9	Dat Arg1:T38 Arg2:T36	
+T39	Investigation_result 1825 1874	Powiększenie węzłów chłonnych śródpiersia do 7 mm
+N14	Reference T39 ICD10:R93	Nieprawidłowe wyniki diagnostycznych badań obrazowych innych struktur ciała
+T40	Date 1886 1893	od 2015
+R10	Dat Arg1:T40 Arg2:T39	
+T41	Condition 1896 1916	Macica mięśniakowata
+N15	Reference T41 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+T42	Symptom 1918 1957	Nieprawidłowe krwawienia z dróg rodnych
+N16	Reference T42 ICD10:N93.9	Nieprawidłowe krwawienia maciczne i pochwowe, nieokreślone
+T43	Condition 1959 2017	Zmiany zwyrodnieniowe stawów i trzonów kręgosłupa szyjnego
+N17	Reference T43 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T44	Condition 2019 2025	Jaskra
+N18	Reference T44 ICD10:H40.9	Jaskra, nieokreślona
+T45	Condition 2053 2101	podwyższonego miana przeciwciał przeciwjądrowych
+N19	Reference T45 ICD10:R79.9	Nieprawidłowe wyniki badań biochemicznych krwi, nieokreślone
+T46	Date 2103 2107	2008
+R11	Dat Arg1:T46 Arg2:T45	
+T47	Condition 2111 2146	podwyższonego stężenia parathormonu
+N20	Reference T47 ICD10:R79.9	Nieprawidłowe wyniki badań biochemicznych krwi, nieokreślone
+T48	Date 2148 2152	2017
+R12	Dat Arg1:T48 Arg2:T47	
+T49	Symptom 2385 2423	wysokich wartości ciśnienia tętniczego
+N21	Reference T49 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T50	Investigation_result 2437 2452	220-260/110-160
+N22	Reference T50 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T51	Date 2425 2436	od stycznia
+R13	Dat Arg1:T51 Arg2:T50	
+T52	Condition 2456 2458	HA
+N23	Reference T52 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T53	Date 2459 2467	od 4 lat
+R14	Dat Arg1:T53 Arg2:T52	
+T54	Condition 2482 2508	gruczolak nadnercza lewego
+N24	Reference T54 ICD10:D35.0	Nadnercze
+T55	Treatment 2518 2527	usunięciu
+A5	Status T55 Historical_Insignificant
+T56	Condition 2528 2550	rakowiaka płuca lewego
+A6	Status T56 Historical_Insignificant
+N25	Reference T56 ICD10:C78.0	Wtórny nowotwór złośliwy płuc
+T57	Date 2552 2557	2014r
+R15	Dat Arg1:T57 Arg2:T56	
+R16	Dat Arg1:T57 Arg2:T55	
+T58	Condition 2560 2567	IM I st
+N26	Reference T58 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T59	Condition 2569 2576	IT I st
+N27	Reference T59 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T60	Treatment 2586 2598	strumektomii
+A7	Status T60 Historical_Insignificant
+T61	Date 2600 2605	1985r
+R17	Dat Arg1:T61 Arg2:T60	
+T62	Condition 2608 2620	dyslipidemia
+N28	Reference T62 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T63	Condition 2622 2638	mięśniaki macicy
+N29	Reference T63 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+T64	Treatment 2640 2657	Przebyte operacje
+T65	Condition 2691 2694	WZW
+N30	Reference T65 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T66	Condition 2696 2705	borelioza
+N31	Reference T66 ICD10:A69.2	Choroba z Lyme
+T67	Negation 2708 2718	nie podaje
+R18	Neg Arg1:T67 Arg2:T66	
+R19	Neg Arg1:T67 Arg2:T65	
+T68	Condition 2719 2734	Wywiad rodzinny
+A8	Status T68 Family
+T69	Condition 2752 2754	HA
+A9	Status T69 Family
+N32	Reference T69 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T70	Investigation_result 2757 2779	BP ok 170-180/110 mmhg
+A10	Status T70 Family
+N33	Reference T70 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T71	Behaviour 2781 2812	Palenie tytoniu: 5 papierosów/d
+T72	Date 2814 2824	ok. 30 lat
+R20	Dat Arg1:T72 Arg2:T71	
+T73	Behaviour 2826 2837	Inne używki
+T74	Negation 2839 2849	nie podaje
+R21	Neg Arg1:T74 Arg2:T73	
+T75	Condition 2850 2859	Uczulenia
+N35	Reference T75 ICD10:T78.4	Alergia, nieokreślona
+T76	Negation 2861 2871	nie podaje
+R22	Neg Arg1:T76 Arg2:T75	
+T77	Behaviour 2890 2898	szwaczka
+T78	Behaviour 2900 2905	wdowa
+T79	Drug 2922 2932	Concor COR
+T80	Drug_dose 2933 2953	1,25 mg 1 tabl. rano
+R23	Drg Arg1:T79 Arg2:T80	
+T81	Negation 2955 2965	odstawiono
+T82	Date 2969 2976	01.2018
+T83	Investigation_result 2986 3008	wolnej HR - ok. 47/min
+N36	Reference T83 ICD10:R00.1	Bradykardia, nieokreślona
+R24	Neg Arg1:T81 Arg2:T79	
+R25	Dat Arg1:T82 Arg2:T79	
+T84	Drug 3010 3016	Diured
+T85	Drug_dose 3017 3035	10 mg 1 tabl. rano
+R26	Drg Arg1:T84 Arg2:T85	
+T86	Drug 3036 3044	Spironol
+T87	Drug_dose 3045 3065	25 mg 1/2 tabl. rano
+R27	Drg Arg1:T86 Arg2:T87	
+T88	Drug 3066 3073	Tritace
+T89	Drug_dose 3074 3092	10 mg 1 tabl. rano
+R28	Drg Arg1:T88 Arg2:T89	
+T90	Drug 3093 3101	Primacor
+T91	Drug_dose 3102 3125	20 mg 1 tabl. wieczorem
+R29	Drg Arg1:T90 Arg2:T91	
+T92	Drug 3126 3132	Iporel
+T93	Drug_dose 3133 3153	75ug 1 tabl. 2 x dz.
+R30	Drg Arg1:T92 Arg2:T93	
+T94	Drug 3154 3161	Dopegyt
+T95	Drug_dose 3162 3184	250 mg 1 tabl. 2 x dz.
+R31	Drg Arg1:T94 Arg2:T95	
+T96	Investigation 3213 3223	echo serca
+T97	Investigation 3225 3245	echo przezprzełykowe
+T98	Investigation 3247 3264	echo obciążeniowe
+T99	Investigation 3266 3269	TET
+T100	Investigation 3271 3275	ABPM
+T101	Investigation 3277 3283	Holter
+T102	Investigation 3285 3303	RTG kl. piersiowej
+N8	Reference T27 ICD10:Z72.0	Używanie tytoniu
+N34	Reference T71 ICD10:Z72.0	Używanie tytoniu
+N37	Reference T73 ICD10:Z72	Problemy związane ze stylem życia

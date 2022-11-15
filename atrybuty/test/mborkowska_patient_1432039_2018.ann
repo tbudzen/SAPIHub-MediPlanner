@@ -1,0 +1,102 @@
+T1	Investigation 2448 2458	echo serca
+T2	Investigation 2460 2464	ABPM
+T3	Investigation 2466 2476	Holter ekg
+T4	Investigation 2478 2496	rtg kl. piersiowej
+T5	Drug 2397 2407	Diclofenac
+T6	Drug_dose 2410 2418	doraźnie
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 2370 2378	Euthyrox
+T8	Drug_dose 2379 2395	100 1 tabl. rano
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 2335 2343	Cardicor
+T10	Drug_dose 2344 2368	2,5 mg 1 tabl. wieczorem
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 2302 2309	Crestor
+T12	Drug_dose 2310 2333	10 mg 1 tabl. wieczorem
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Treatment 936 963	dalsza opieka w poradni POZ
+T14	Treatment 979 1065	kontrola kardiologiczna, endokrynologiczna, ortopedyczna, neurologiczna i okulistyczna
+T15	Investigation 1082 1111	kontrola ciśnienia tętniczego
+T16	Investigation 1127 1147	kontrola lipidogramu
+T17	Date 1072 1081	codzienna
+R5	Dat Arg1:T17 Arg2:T15	
+T18	Behaviour 1154 1179	dieta niskocholesterolowa
+T19	Behaviour 1186 1205	redukcja masy ciała
+T21	Behaviour 1213 1258	stały, umiarkowany, aerobowy wysiłek fizyczny
+T20	Drug 1303 1308	Acard
+T22	Drug_dose 1309 1359	75 mg 1 tabl. wieczorem (lek dostępny bez recepty)
+R6	Drg Arg1:T20 Arg2:T22	
+T23	Drug 1367 1377	Concor Cor
+T24	Drug_dose 1378 1397	2,5 mg 1 tabl. rano
+R7	Drg Arg1:T23 Arg2:T24	
+T25	Drug 1405 1412	Crestor
+T26	Drug_dose 1413 1436	10 mg 1 tabl. wieczorem
+R8	Drg Arg1:T25 Arg2:T26	
+T27	Drug 1445 1455	Euthyrox N
+T28	Drug_dose 1456 1472	112 1 tabl. rano
+R9	Drg Arg1:T27 Arg2:T28	
+T29	Negation 2243 2249	neguje
+T30	Behaviour 2224 2241	Uzależnienie inne
+N1	Reference T30 ICD10:Z72	Problemy związane ze stylem życia
+R10	Neg Arg1:T29 Arg2:T30	
+T31	Behaviour 2181 2222	Alkohol: okazjonalnie, w małych ilościach
+N2	Reference T31 ICD10:Z72.1	Używanie alkoholu
+T32	Date 2158 2166	do 1989,
+T33	Behaviour 2142 2157	Nikotynizm: tak
+N3	Reference T33 ICD10:Z72.0	Używanie tytoniu
+R11	Dat Arg1:T32 Arg2:T33	
+T34	Negation 2134 2140	neguje
+T35	Condition 2125 2132	Alergie
+N4	Reference T35 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R12	Neg Arg1:T34 Arg2:T35	
+T36	Negation 2110 2123	bez znaczenia
+T37	Condition 2093 2108	Wywiad rodzinny
+R13	Neg Arg1:T36 Arg2:T37	
+T38	Treatment 2069 2086	Przebyte operacje
+T39	Symptom 1643 1674	ograniczenia tolerancji wysiłku
+N5	Reference T39 ICD10:R53	Złe samopoczucie i zmęczenie
+T40	Date 1675 1684	od 2lat -
+R14	Dat Arg1:T40 Arg2:T39	
+T41	Symptom 1685 1704	duszność (I piętro)
+N6	Reference T41 ICD10:R06.0	Duszność
+T42	Symptom 1710 1730	obrzęków kk. dolnych
+N7	Reference T42 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T43	Date 1749 1757	okresowo
+R15	Dat Arg1:T43 Arg2:T42	
+T44	Condition 1784 1812	hipercholestrolemia mieszana
+N8	Reference T44 ICD10:E78.2	Hiperlipidemia mieszana
+T45	Condition 1814 1836	niedoczynność tarczycy
+N9	Reference T45 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T46	Condition 1838 1880	zm. zwyrodnieniowe kręgosłupa w odc. C i L
+T47	Treatment 1891 1912	1 operacji kręgosłupa
+T48	Treatment 1918 1951	2 alloplastykach st. biodrowych (
+T49	Date 1962 1966	2010
+R16	Dat Arg1:T49 Arg2:T48	
+T50	Date 1951 1955	2009
+R17	Dat Arg1:T50 Arg2:T47	
+T51	Condition 1994 2010	krótkowzroczność
+N11	Reference T51 ICD10:H52.1	Krótkowzroczność
+T52	Investigation_result 2012 2025	TSH 34uIU/ml!
+T53	Investigation_result 2031 2061	prawidłowych wolnych hormonach
+T54	Condition 795 811	Krótkowzroczność
+N12	Reference T54 ICD10:H52.1	Krótkowzroczność
+T55	Treatment 742 780	dwóch alloplastykach stawów biodrowych
+T56	Date 782 786	2009
+T57	Date 788 792	2010
+R18	Dat Arg1:T56 Arg2:T55	
+R19	Dat Arg1:T57 Arg2:T55	
+T58	Condition 627 690	Zmiany zwyrodnieniowe kręgosłupa w odcinku szyjnym i lędźwiowym
+N13	Reference T58 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T59	Treatment 701 732	leczeniu operacyjnym kręgosłupa
+T60	Condition 603 626	Niedoczynność tarczycy.
+N14	Reference T60 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T61	Condition 573 602	Hipercholestrolemia mieszana.
+N15	Reference T61 ICD10:E78.2	Hiperlipidemia mieszana
+T62	Condition 564 571	Otyłość
+N16	Reference T62 ICD10:E66	Otyłość
+T63	Condition 524 563	Przewlekła choroba niedokrwienna serca.
+T64	Condition 439 498	Przewlekła niewydolność serca z zachowaną frakcją wyrzutową
+T65	Symptom 501 522	II/III klasie wg NYHA
+N18	Reference T64 ICD10:I50.9	Niewydolność serca, nieokreślona
+N17	Reference T63 ICD10:I25.9	
+N10	Reference T46 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone

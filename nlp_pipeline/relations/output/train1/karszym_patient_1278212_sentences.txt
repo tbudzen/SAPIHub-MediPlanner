@@ -1,0 +1,589 @@
+allRelations          : 25
+oks                   : 9
+isRedundantAndRemoveds: 16
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 0
+GOOD / BAD            : 25 / 0
+Sentence 0:
+------------------------------------------------
+Wiek: 5 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+Acesan 30mg 1xdziennie
+Captopril 2 x 3,125mg (tj. 1/4 tabletki o daw3ce 12,5mg)
+
+R1	Drg Arg1:T1 Arg2:T2 << OK >>	Acesan -> 30mg 1xdziennie  <RANK: 3> <info: start[329, 336] <type: RIGHT>>
+R2	Drg Arg1:T1 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Acesan -> 2 x 3,125mg (tj. 1/4 tabletki o daw3ce 12,5mg) <:REMOVED other first tag between (right):> <RANK: 1> <info: start[329, 362] <type: RIGHT>>
+R3	Drg Arg1:T3 Arg2:T2 <<REDUNDANT!!!REMOVED>>	Captopril -> 30mg 1xdziennie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[352, 336] <type: LEFT>>
+R4	Drg Arg1:T3 Arg2:T4 << OK >>	Captopril -> 2 x 3,125mg (tj. 1/4 tabletki o daw3ce 12,5mg)  <RANK: 3> <info: start[352, 362] <type: RIGHT>>
+
+
+Sentence 4:
+Kontrola w Poradni Kardiologicznej dr K.Michalak za 6 miesięcy
+
+R5	Dat Arg1:T6 Arg2:T5 << OK >>	za 6 miesięcy -> Kontrola w Poradni Kardiologicznej  <RANK: 2> <info: start[458, 409] <type: LEFT>>
+
+
+Sentence 5:
+------------------------------------------------
+
+
+
+Sentence 6:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 7:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q21.0|Rozpoznanie II: ICD10:Z98.8|Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią mnogich ubytków przegrody międzykomorowej.\x0aStan po przewężeniu pnia płucnego do 5,5mm w dniu 24.10.2014.\x0aStan po cewnikowanie serca z implantacją zestawu Amplatzer Muscular VSD Occluder (15.09.2017r).\x0aStan po zdjęciu opaski przewężającej pień tętnicy płucnej dn 22.11.2017
+R6	Dat Arg1:T9 Arg2:T7 <<REDUNDANT!!!REMOVED>>	w dniu 24.10.2014 -> Wrodzona wada serca pod postacią mnogich ubytków przegrody międzykomorowej <:REMOVED other second tag between (left):> <RANK: 2> <info: start[833, 711] <type: LEFT>>
+R7	Dat Arg1:T9 Arg2:T8 << OK >>	w dniu 24.10.2014 -> przewężeniu pnia płucnego do 5,5mm  <RANK: 3> <info: start[833, 798] <type: LEFT>>
+R8	Dat Arg1:T9 Arg2:T10 <<REDUNDANT!!!REMOVED>>	w dniu 24.10.2014 -> implantacją zestawu Amplatzer Muscular VSD Occluder <:REMOVED other second tag between (right) (dat):> <RANK: 2> <info: start[833, 884] <type: RIGHT>>
+R9	Dat Arg1:T9 Arg2:T12 <<REDUNDANT!!!REMOVED>>	w dniu 24.10.2014 -> zdjęciu opaski przewężającej pień tętnicy płucnej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[833, 962] <type: RIGHT>>
+R10	Dat Arg1:T9 Arg2:T22 <<REDUNDANT!!!REMOVED>>	w dniu 24.10.2014 -> cewnikowanie serca <:REMOVED many second tags on the right:> <RANK: 2> <info: start[833, 863] <type: RIGHT>>
+R11	Dat Arg1:T11 Arg2:T7 <<REDUNDANT!!!REMOVED>>	15.09.2017r -> Wrodzona wada serca pod postacią mnogich ubytków przegrody międzykomorowej <:REMOVED other first tag between (left):> <RANK: 2> <info: start[937, 711] <type: LEFT>>
+R12	Dat Arg1:T11 Arg2:T8 <<REDUNDANT!!!REMOVED>>	15.09.2017r -> przewężeniu pnia płucnego do 5,5mm <:REMOVED other first tag between (left):> <RANK: 2> <info: start[937, 798] <type: LEFT>>
+R13	Dat Arg1:T11 Arg2:T10 << OK >>	15.09.2017r -> implantacją zestawu Amplatzer Muscular VSD Occluder  <RANK: 3> <info: start[937, 884] <type: LEFT>>
+R14	Dat Arg1:T11 Arg2:T12 <<REDUNDANT!!!REMOVED>>	15.09.2017r -> zdjęciu opaski przewężającej pień tętnicy płucnej <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[937, 962] <type: RIGHT>>
+R15	Dat Arg1:T11 Arg2:T22 << OK >>	15.09.2017r -> cewnikowanie serca  <RANK: 3> <info: start[937, 863] <type: LEFT>>
+R16	Dat Arg1:T13 Arg2:T7 <<REDUNDANT!!!REMOVED>>	dn 22.11.2017 -> Wrodzona wada serca pod postacią mnogich ubytków przegrody międzykomorowej <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1012, 711] <type: LEFT>>
+R17	Dat Arg1:T13 Arg2:T8 <<REDUNDANT!!!REMOVED>>	dn 22.11.2017 -> przewężeniu pnia płucnego do 5,5mm <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1012, 798] <type: LEFT>>
+R18	Dat Arg1:T13 Arg2:T10 <<REDUNDANT!!!REMOVED>>	dn 22.11.2017 -> implantacją zestawu Amplatzer Muscular VSD Occluder <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1012, 884] <type: LEFT>>
+R19	Dat Arg1:T13 Arg2:T12 << OK >>	dn 22.11.2017 -> zdjęciu opaski przewężającej pień tętnicy płucnej  <RANK: 3> <info: start[1012, 962] <type: LEFT>>
+R20	Dat Arg1:T13 Arg2:T22 <<REDUNDANT!!!REMOVED>>	dn 22.11.2017 -> cewnikowanie serca <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1012, 863] <type: LEFT>>
+
+
+Sentence 8:
+r.\x0aNiedobór masy ciała.\x0aCewnikowanie serca z implantacją zestawu Amplatzer Muscular VSD Occluder (16.05.2018r).\x0aNadciśnienie płucne przepływowe.\x0aStan po udarze niedokrwiennym prawostronnym.
+
+R21	Dat Arg1:T16 Arg2:T14 <<REDUNDANT!!!REMOVED>>	16.05.2018r -> Niedobór masy ciała <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1130, 1032] <type: LEFT>>
+R22	Dat Arg1:T16 Arg2:T17 <<REDUNDANT!!!REMOVED>>	16.05.2018r -> Nadciśnienie płucne przepływowe <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1130, 1147] <type: RIGHT>>
+R23	Dat Arg1:T16 Arg2:T18 <<REDUNDANT!!!REMOVED>>	16.05.2018r -> udarze niedokrwiennym prawostronnym <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1130, 1191] <type: RIGHT>>
+R24	Dat Arg1:T16 Arg2:T15 << OK >>	16.05.2018r -> implantacją zestawu Amplatzer Muscular VSD Occluder  <RANK: 3> <info: start[1130, 1077] <type: LEFT>>
+R25	Dat Arg1:T16 Arg2:T23 << OK >>	16.05.2018r -> Cewnikowanie serca  <RANK: 3> <info: start[1130, 1056] <type: LEFT>>
+
+
+Sentence 9:
+------------------------------------------------
+
+
+
+Sentence 10:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 11:
+Dziewczynka  5  letnia  w  stanie  dobrym została przyjęta  do  kliniki celem przeprowadzenia  badań 
+
+
+
+Sentence 12:
+Otrzymuje  Captopril+  Acesan
+------------------------------------------------
+
+
+
+Sentence 13:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 14:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:8.83[10^3/ul]
+    
+
+
+Sentence 15:
+RBC Krwinki czerwone:4.19[10^6/ul]
+    
+
+
+Sentence 16:
+HGB Hemoglobina:12.3[g/dl]
+    
+
+
+Sentence 17:
+HCT Hematokryt:35.2[%]
+    
+
+
+Sentence 18:
+MCV wskaźnik czerwonokrw:84.0[fl]
+    
+
+
+Sentence 19:
+MCH wskaźnik czerwonokrw:29.4[pg]
+    
+
+
+Sentence 20:
+MCHC wskaźnik czerwonokr:34.9[g/dl]
+    
+
+
+Sentence 21:
+PLT z morfologii:366[10^3/ul]
+    
+
+
+Sentence 22:
+RDW-SD:36.1[fl]
+    
+
+
+Sentence 23:
+RDW-CV:11.9[%]
+    
+
+
+Sentence 24:
+PDW:9.8[fl]
+    
+
+
+Sentence 25:
+MPV:9.4[fl]
+    
+
+
+Sentence 26:
+P-LCR:18.7[%]
+    
+
+
+Sentence 27:
+PCT (hematokryt płytkowy:0.34[%]
+    
+
+
+Sentence 28:
+NEUTR# wartość bezwzględ:4.74[10^3/ul]
+    
+
+
+Sentence 29:
+NEUTR%:53.7[%]
+    
+
+
+Sentence 30:
+LYMH# wartość bezwzględn:3.17[10^3/ul]
+    
+
+
+Sentence 31:
+LYMPH%:35.9[%]
+    
+
+
+Sentence 32:
+MONO# wartość bezwzględn:0.63[10^3/ul]
+    MONO%:7.1[%]
+    
+
+
+Sentence 33:
+EO# wartość bezwzględna:0.22[10^3/ul]
+    
+
+
+Sentence 34:
+EO%:2.5[%]
+    
+
+
+Sentence 35:
+BASO# wartość bezwzględn:0.07[10^3/ul]
+    
+
+
+Sentence 36:
+BASO%:0.8[%]
+    
+
+
+Sentence 37:
+NRBC %:0.1[%]
+    
+
+
+Sentence 38:
+NRBC #:0.01[10^3/ul]
+
+
+
+Sentence 39:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:33.0[sek]
+
+
+
+Sentence 40:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 41:
+Czas protrombinowy:11.9[sek]
+    
+
+
+Sentence 42:
+Wskaźnik PT:92.4[%]
+    
+
+
+Sentence 43:
+INR:1.08
+Fibrynogen: Fibrynogen:2.23[g/L]
+
+
+
+Sentence 44:
+D-dimer - test ilościowy: D-dimer - test ilościowy:203[ng/ml]
+
+
+
+Sentence 45:
+Badanie ogólne moczu
+    
+
+
+Sentence 46:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 47:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 48:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 49:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 50:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 51:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 52:
+ciężar właściwy:1.019[ ]
+    pH:5.0[ ]
+    
+
+
+Sentence 53:
+białko:nieobecne[ ]
+    
+
+
+Sentence 54:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 55:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 56:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 57:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 58:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 59:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 60:
+leukocyty:2 /ul[ul]
+    erytrocyty świeże:1 /ul[ul]
+    śluz:nieliczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 61:
+TSH: TSH:4.53[uIU/ml]
+
+
+
+Sentence 62:
+FT3: FT3:4.65[pg/ml]
+
+
+
+Sentence 63:
+FT4: FT4:1.48[ng/dl]
+
+
+
+Sentence 64:
+Troponina T: Troponina T:3.1[pg/ml]
+
+
+
+Sentence 65:
+ALAT: ALAT:19[U/L]
+ASPAT: ASPAT:39[U/L]
+
+
+
+Sentence 66:
+Bilirubina całkowita (TBil): Bilirubina całkowita:0.63[mg/dl]
+
+
+
+Sentence 67:
+CKMB aktywność: CKMB:23[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 68:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 69:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 70:
+Chlorki (Cl): Chlorki:106[mmol/L]
+
+
+
+Sentence 71:
+Fosforany nieorganiczne: Fosforany nieorganiczne:1.66[mmol/L]
+
+
+
+Sentence 72:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:14[U/L]
+
+
+
+Sentence 73:
+Kreatynina + GFR
+    
+
+
+Sentence 74:
+Kreatynina w surowicy:0.41[mg/dl]
+    
+
+
+Sentence 75:
+eGFR stand. wg Schwartza:131.5[ml/min/1,73 m^2]
+    
+
+
+Sentence 76:
+eGFR zmod.
+
+
+Sentence 77:
+wg Schwartza:98.7[ml/min/1,73 m^2]
+    
+
+
+Sentence 78:
+wzrost:98[cm]
+
+
+
+Sentence 79:
+Mleczany (LAC): Mleczany:26.3[mg/dl]
+
+
+
+Sentence 80:
+Magnez: Magnez:0.77[mmol/L]
+
+
+
+Sentence 81:
+Mocznik: Mocznik:27[mg/dl]
+
+
+
+Sentence 82:
+Transferyna: Transferyna:283.63[mg/dl]
+
+
+
+Sentence 83:
+Wapń całkowity: Wapń całkowity:2.35[mmol/L]
+
+
+
+Sentence 84:
+Gospodarka żelazem
+    Żelazo:140[ug/dl]
+    
+
+
+Sentence 85:
+TIBC (Całkowita zdolność:385[ug/dl]
+    
+
+
+Sentence 86:
+UIBC (Utajona zdolność w:245[ug/dl]
+    
+
+
+Sentence 87:
+Wskaźnik wysycenia Fe:36[%]
+
+
+
+Sentence 88:
+Żelazo (Fe): Żelazo (Fe):140[ug/dl]
+
+
+
+Sentence 89:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    
+
+
+Sentence 90:
+pH:7.395
+    
+
+
+Sentence 91:
+pCO2:38.0[mmHg]
+    BE:-1.30[mmol/L]
+    HCO3:22.8[mmol/L]
+    pO2:54.8[mmHg]
+    
+
+
+Sentence 92:
+O2Sat:87.0[%]
+
+
+
+Sentence 93:
+Glukoza w surowicy: Glukoza w surowicy:74[mg/dl]
+
+
+
+Sentence 94:
+------------------------------------------------
+
+
+
+Sentence 95:
+ICD10
+------------------------------------------------
+Z98.8
+Q21.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 96:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 97:
+I81
+G21
+L43
+I89
+L23
+M87
+G49
+N45
+L69
+O43
+O29
+C55
+G53
+I97
+G11
+O93
+O95
+L31
+I17
+O77
+
+
+
+Sentence 98:
+O55
+N11
+I19
+O35
+M37
+
+
+
+Sentence 99:
+N13
+
+
+
+Sentence 100:
+M19
+------------------------------------------------
+
+

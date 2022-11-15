@@ -1,0 +1,20 @@
+T1	Condition 377 400	Prawostronny łuk aorty.
+N1	Reference T1 ICD10:Q25.4	Inne wrodzone wady rozwojowe aorty
+T2	Condition 405 426	Zwężenie cieśni aorty
+N2	Reference T2 ICD10:Q25.1	Zwężenie cieśni aorty
+T3	Condition 797 800	CoA
+N3	Reference T3 ICD10:Q25.1	Zwężenie cieśni aorty
+T4	Investigation 824 828	ECHO
+T5	Drug 831 838	sedacji
+T6	Condition 841 858	wywiad alergiczny
+N4	Reference T6 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T7	Negation 859 865	ujemny
+R1	Neg Arg1:T7 Arg2:T6	
+T8	Drug 868 882	leków na stałe
+T9	Negation 883 896	nie otrzymuje
+R2	Neg Arg1:T9 Arg2:T8	
+T10	Treatment 604 638	Kontrola w Poradni Kardiologicznej
+T11	Date 639 652	za 3 miesiące
+R3	Dat Arg1:T11 Arg2:T10	
+R10	Neg Arg1:T9 Arg2:T8
+R2	Neg Arg1:T7 Arg2:T6

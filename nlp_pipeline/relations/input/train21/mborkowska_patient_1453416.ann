@@ -1,0 +1,17 @@
+T1	Condition 414 502	Wrodzona wada serca pod postacią ubytku w przegrodzie międzyprzedsionkowej typu secundum
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Drug 657 667	Verospiron
+T3	Drug 669 678	Cefazolin
+T4	Drug 680 690	5% glukoza
+T5	Treatment 864 885	leczenia operacyjnego
+T6	Condition 886 892	ASD II
+N2	Reference T6 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T7	Drug 952 963	Verospirion
+T8	Condition 966 973	Alergie
+N3	Reference T8 ICD10:T78.4	Alergia, nieokreślona
+T9	Negation 973 976	/-/
+R1	Neg Arg1:T9 Arg2:T8	
+T10	Condition 986 990	leki
+N4	Reference T10 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T11	Negation 990 993	/-/
+R2	Neg Arg1:T11 Arg2:T10	

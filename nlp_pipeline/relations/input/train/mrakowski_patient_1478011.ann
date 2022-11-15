@@ -1,0 +1,59 @@
+T1	Condition 448 469	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 471 491	Hipercholesterolemia
+N2	Reference T2 ICD10:E78.0	Czysta hipercholesterolemia
+T3	Condition 493 517	Choroba wrzodowa żołądka
+N3	Reference T3 ICD10:K25	Wrzód żołądka
+T4	Condition 519 534	Cukrzyca typu 2
+N4	Reference T4 ICD10:E11	Cukrzyca insulinoniezależna
+T5	Condition 773 814	Łagodna niedomykalność zastawki mitralnej
+N5	Reference T5 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T6	Condition 820 832	trójdzielnej
+N6	Reference T6 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T7	Condition 834 895	Niewydolność serca z zachowaną funkcją skurczową lewej komory
+N7	Reference T7 ICD10:I50.9	Niewydolność serca, nieokreślona
+T8	Condition 897 918	Nadciśnienie tętnicze
+N8	Reference T8 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T9	Condition 920 940	Hipercholesterolemia
+N9	Reference T9 ICD10:E78.0	Czysta hipercholesterolemia
+T10	Condition 942 966	Choroba wrzodowa żołądka
+N10	Reference T10 ICD10:K25	Wrzód żołądka
+T11	Condition 968 983	Cukrzyca typu 2
+N11	Reference T11 ICD10:E11	Cukrzyca insulinoniezależna
+T12	Condition 985 1010	Miażdżyca tętnic szyjnych
+N12	Reference T12 ICD10:I65.2	Niedrożność i zwężenie tętnicy szyjnej wewnętrznej
+T13	Symptom 1180 1224	zmniejszenia tolerancji wysiłku postępującej
+N13	Reference T13 ICD10:R53	Złe samopoczucie i zmęczenie
+T14	Date 1225 1233	od 2 lat
+R1	Dat Arg1:T14 Arg2:T13	
+T15	Condition 1248 1250	HA
+N14	Reference T15 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T16	Condition 1252 1254	DM
+N15	Reference T16 ICD10:E14	Cukrzyca nieokreślona
+T17	Condition 1255 1279	choroba wrzodowa żoładka
+N16	Reference T17 ICD10:K25	Wrzód żołądka
+T18	Treatment 1281 1289	Operacje
+T19	Negation 1290 1291	-
+R2	Neg Arg1:T19 Arg2:T18	
+T20	Behaviour 1292 1302	Nikotynizm
+N17	Reference T20 ICD10:T65.2	Tytoń i nikotyna
+T21	Negation 1307 1308	-
+R3	Neg Arg1:T21 Arg2:T20	
+T22	Behaviour 1310 1317	Alkohol
+N18	Reference T22 ICD10:T51.9	Alkohol, nieokreślony
+T23	Negation 1318 1319	-
+R4	Neg Arg1:T23 Arg2:T22	
+T24	Negation 1328 1334	neguje
+T25	Condition 1336 1353	uczulenia na leki
+R5	Neg Arg1:T24 Arg2:T25	
+T26	Symptom 1355 1388	krwawienia z przewodu pokarmowego
+N19	Reference T26 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R6	Neg Arg1:T24 Arg2:T26	
+T27	Condition 1390 1405	Wywiad rodzinny
+A1	Status T27 Family
+T28	Negation 1406 1407	-
+R7	Neg Arg1:T28 Arg2:T27	
+T29	Investigation 1457 1467	ECHO serca
+T30	Investigation 1469 1479	Holter EKG
+T31	Investigation 1481 1490	Holter RR
+T32	Investigation 1492 1494	PW

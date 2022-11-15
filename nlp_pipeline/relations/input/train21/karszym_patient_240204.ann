@@ -1,0 +1,48 @@
+T1	Drug 345 353	Euthyrox
+T2	Drug_dose 354 365	1 x 100 mcg
+T3	Treatment 366 389	Kontrola kardiologiczna
+T4	Date 390 399	za 8 m-cy
+R1	Drg Arg1:T1 Arg2:T2	
+R2	Dat Arg1:T4 Arg2:T3	
+T5	Condition 747 820	Wrodzona wada serca pod postacią ubytku przegrody przedsionkowo-komorowej
+N1	Reference T5 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T6	Treatment 834 842	operacji
+A1	Status T6 Historical_Insignificant
+N2	Reference T6 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T7	Date 870 880	03.10.2003
+T8	Treatment 894 922	operacji korekcji wady serca
+N3	Reference T8 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T9	Date 925 935	12.12.2003
+T10	Treatment 949 957	operacji
+N4	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T11	Date 1014 1024	15.12.2003
+R3	Dat Arg1:T11 Arg2:T10	
+R4	Dat Arg1:T9 Arg2:T8	
+T12	Condition 1030 1077	Umiarkowana niedomykalność zastawki dwudzielnej
+N5	Reference T12 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T13	Condition 1083 1095	Zespół Downa
+N6	Reference T13 ICD10:Q90.9	Zespół Downa, nieokreślony
+T14	Condition 1099 1121	Niedoczynność tarczycy
+N7	Reference T14 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+R5	Dat Arg1:T7 Arg2:T6	
+A2	Status T10 Historical_Insignificant
+T15	Condition 1293 1301	z. Downa
+N8	Reference T15 ICD10:Q90.9	Zespół Downa, nieokreślony
+T16	Condition 1304 1332	wada serca pod postacią AVSD
+N9	Reference T16 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T17	Treatment 1338 1360	zabiegaxch naprawczych
+N10	Reference T17 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T18	Drug 1414 1422	Euthyrox
+T19	Condition 1424 1441	wywiad alergiczny
+N11	Reference T19 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T20	Negation 1442 1448	ujemny
+R6	Neg Arg1:T20 Arg2:T19	
+T21	Drug 520 528	Eurhyrox
+T22	Condition 843 867	niedrożności dwunastnicy
+R7	Dat Arg1:T7 Arg2:T22	
+N12	Reference T22 ICD10:Q41.0	Wrodzony brak, zarośnięcie lub zwężenie dwunastnicy
+R8	Dat Arg1:T9 Arg2:T5	
+T23	Condition 958 1011	mechanicznej niedrożności jelita krętego z perforacją
+R9	Dat Arg1:T11 Arg2:T23	
+A3	Status T23 Historical_Insignificant
+A4	Status T22 Historical_Insignificant

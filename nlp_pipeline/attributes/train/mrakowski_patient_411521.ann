@@ -1,0 +1,39 @@
+T1	Drug 340 346	Acesan
+T2	Treatment 458 476	Przyjmowanie leków
+T3	Drug 478 484	Acesan
+T4	Drug_dose 485 493	1 x 50mg
+R1	Drg Arg1:T3 Arg2:T4	
+T5	Investigation 498 555	Ambulatoryjna kontrola parametrów funkcji układu krążenia
+T6	Treatment 560 633	Dalsza opieka kardiologiczna - kontrolna wizyta w Poradni Kardiologicznej
+T7	Date 634 643	za 4-6mcy
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Behaviour 648 690	Aktywność fizyczna w zakresie rekreacyjnym
+T9	Condition 909 950	Wrodzona wada - dwunapływowa komora prawa
+N1	Reference T9 ICD10:Q20.4	Wejście obu dróg żylnych do jedynej komory
+T10	Condition 953 989	L-transpozycyjnym ustawieniem naczyń
+N2	Reference T10 ICD10:Q20.5	Nieprawidłowe połączenia przedsionkowo-komorowe
+T11	Treatment 1003 1011	operacji
+T12	Date 1060 1071	31.07.2009r
+R3	Dat Arg1:T12 Arg2:T11	
+T13	Treatment 1077 1100	operacji BDG i Stansela
+T14	Date 1102 1113	20.04.2010r
+R4	Dat Arg1:T14 Arg2:T13	
+T15	Treatment 1128 1138	zamknięciu
+T16	Date 1162 1173	25.10.2012r
+R5	Dat Arg1:T16 Arg2:T15	
+T17	Treatment 1188 1220	operacji Fontana bez fenestracji
+T18	Date 1222 1233	24.09.2014r
+R6	Dat Arg1:T18 Arg2:T17	
+T19	Condition 1239 1259	Bradykardia zatokowa
+N3	Reference T19 ICD10:R00.1	Bradykardia, nieokreślona
+T20	Condition 1396 1415	wrodzoną wadą serca
+T21	Condition 1012 1028	koarktacji aorty
+N4	Reference T21 ICD10:Q25.1	Zwężenie cieśni aorty
+T22	Condition 1031 1058	przewężenia tętnicy płucnej
+R7	Dat Arg1:T12 Arg2:T21	
+R8	Dat Arg1:T12 Arg2:T22	
+T23	Condition 1139 1160	przetoki żylno-żylnej
+N6	Reference T23 ICD10:I87.8	Inne określone zaburzenia funkcji żył
+R9	Dat Arg1:T16 Arg2:T23	
+N5	Reference T22 ICD10:Q25.6	Zwężenie pnia płucnego
+N7	Reference T20 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych

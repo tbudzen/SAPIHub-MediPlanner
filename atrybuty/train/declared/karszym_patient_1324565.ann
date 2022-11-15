@@ -1,0 +1,106 @@
+T1	Condition 439 526	Wrodzona wada serca pod postacią ubytku w przegrodzie międzyprzedsionkowej (ASD typu 2)
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Condition 528 562	Podejrzenie zespołu wazo-wagalnego
+N2	Reference T2 ICD10:R55	Omdlenie i zapaść
+T3	Symptom 564 572	omdlenia
+N3	Reference T3 ICD10:R55	Omdlenie i zapaść
+T4	Treatment 595 611	cięcie cesarskie
+T5	Date 613 617	2015
+T6	Treatment 628 642	tonsillektomii
+A1	Status T6 Historical_Insignificant
+N5	Reference T6 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+A2	Status T4 Historical_Insignificant
+T7	Date 644 648	2016
+R1	Dat Arg1:T5 Arg2:T4	
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Treatment 773 800	dalsza opieka w poradni POZ
+T11	Investigation 895 915	testu pochyleniowego
+T12	Behaviour 922 958	dieta zbliżona do śródziemnomorskiej
+T13	Behaviour 967 1012	stały, umiarkowany, aerobowy wysiłek fizyczny
+T9	Treatment 808 840	okresowa kontrola kardiologiczna
+T10	Symptom 1194 1203	duszności
+N6	Reference T10 ICD10:R06.0	Duszność
+T14	Symptom 1231 1258	"problemy z braniem wdechu"
+N7	Reference T14 ICD10:R06.0	Duszność
+T15	Symptom 1287 1343	epizody nasilenia duszności w trakcie ćwiczeń na siłowni
+N8	Reference T15 ICD10:R06.0	Duszność
+T16	Symptom 1350 1449	okresowo występujących ściskających bólów w klatce piersiowej, nie związanych z wysiłkiem fizycznym
+N9	Reference T16 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T17	Date 1474 1486	od wielu lat
+T18	Date 1510 1533	od czasów gimnazjalnych
+R3	Dat Arg1:T17 Arg2:T10	
+R4	Dat Arg1:T17 Arg2:T14	
+R5	Dat Arg1:T17 Arg2:T15	
+R6	Dat Arg1:T17 Arg2:T16	
+R7	Dat Arg1:T18 Arg2:T16	
+R8	Dat Arg1:T18 Arg2:T10	
+R9	Dat Arg1:T18 Arg2:T14	
+R10	Dat Arg1:T18 Arg2:T15	
+T19	Negation 1535 1541	Neguje
+T20	Symptom 1542 1554	zasłabnięcia
+T21	Symptom 1556 1564	omdlenia
+N10	Reference T21 ICD10:R55	Omdlenie i zapaść
+T22	Symptom 1566 1579	zawroty głowy
+N11	Reference T22 ICD10:R42	Zawroty głowy i odurzenie
+R11	Neg Arg1:T19 Arg2:T20	
+R12	Neg Arg1:T19 Arg2:T21	
+R13	Neg Arg1:T19 Arg2:T22	
+T23	Symptom 1581 1600	Innych dolegliwości
+T24	Negation 1601 1612	nie zgłasza
+R14	Neg Arg1:T24 Arg2:T23	
+T25	Condition 1627 1635	ASD t. 2
+N12	Reference T25 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T26	Condition 1659 1666	alergii
+N13	Reference T26 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T27	Symptom 1676 1693	uczucia duszności
+N14	Reference T27 ICD10:R06.0	Duszność
+T28	Investigation 1695 1707	testy skórne
+T29	Investigation_result 1708 1714	ujemne
+R15	Inv Arg1:T28 Arg2:T29	
+T30	Treatment 1736 1738	CC
+T31	Date 1741 1746	2015r
+N15	Reference T30 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+N4	Reference T4 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+A3	Status T30 Historical_Insignificant
+R16	Dat Arg1:T31 Arg2:T30	
+T32	Treatment 1752 1780	operacja usunięcia migdałków
+A4	Status T32 Historical_Insignificant
+N16	Reference T32 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T33	Date 1781 1792	2 lata temu
+R17	Dat Arg1:T33 Arg2:T32	
+T34	Treatment 1794 1829	Leczenie przewlekłe: kardiologiczne
+T35	Condition 1857 1860	WZW
+N17	Reference T35 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T36	Negation 1861 1866	( - )
+T37	Condition 1869 1878	borelioza
+N18	Reference T37 ICD10:A69.2	Choroba z Lyme
+T38	Condition 1886 1894	gruźlica
+N19	Reference T38 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T39	Negation 1879 1884	( - )
+T40	Negation 1895 1900	( - )
+R18	Neg Arg1:T36 Arg2:T35	
+R19	Neg Arg1:T39 Arg2:T37	
+R20	Neg Arg1:T40 Arg2:T38	
+T41	Condition 1901 1916	Wywiad rodzinny
+A5	Status T41 Family
+T42	Negation 1918 1928	nieistotny
+T43	Behaviour 1929 1944	Palenie tytoniu
+N20	Reference T43 ICD10:Z72.0	Używanie tytoniu
+T44	Negation 1946 1952	neguje
+T45	Behaviour 1953 1964	Inne używki
+T46	Negation 1966 1972	neguje
+T47	Condition 1973 1982	Uczulenia
+N21	Reference T47 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T48	Negation 1984 1990	neguje
+T49	Behaviour 2007 2033	warunki mieszkaniowe dobre
+T50	Investigation 2069 2079	Echo serca
+T51	Investigation 2081 2091	Holter EKG
+T52	Investigation 2093 2097	ABPM
+T53	Investigation 2099 2114	Próba Wysiłkowa
+R21	Neg Arg1:T42 Arg2:T41	
+R22	Neg Arg1:T44 Arg2:T43	
+R23	Neg Arg1:T46 Arg2:T45	
+R24	Neg Arg1:T48 Arg2:T47	
+A6	Source T26 Declared
+T54	Investigation 848 867	echokardiograficzna
+T55	Investigation 1637 1658	w trakcie diagnostyki

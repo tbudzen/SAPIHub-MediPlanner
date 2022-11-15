@@ -1,0 +1,57 @@
+T1	Behaviour 677 751	Dieta lekkostrawna z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T2	Investigation 764 799	kontrola lipidogramu, stężenia elek
+T3	Treatment 1036 1046	zamknięciu
+T4	Condition 1047 1131	ubytku w przegrodzie międzyprzedsionkowej typu II z istotnym przeciekiem lewo prawym
+N1	Reference T4 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T5	Treatment 1132 1176	zestawem Occlutech Figulla Flex II ASD 30 mm
+T6	Date 1178 1189	21.11.2018)
+R1	Dat Arg1:T6 Arg2:T5	
+R2	Dat Arg1:T6 Arg2:T3	
+R3	Dat Arg1:T6 Arg2:T4	
+T7	Condition 1195 1251	Przewlekle zapalenie zatok przynosowych po stronie lewej
+N2	Reference T7 ICD10:J32	Przewlekłe zapalenie zatok
+T8	Behaviour 2045 2065	warunki mieszkaniowe
+T9	Negation 2022 2028	neguje
+T10	Condition 2011 2020	Uczulenia
+N3	Reference T10 ICD10:T78.4	Alergia, nieokreślona
+R4	Neg Arg1:T9 Arg2:T10	
+T11	Behaviour 1993 2010	Inne używki: kawa
+T12	Behaviour 1955 1970	Palenie tytoniu
+N4	Reference T12 ICD10:T65.2	Tytoń i nikotyna
+T13	Negation 1972 1980	nie pali
+R5	Neg Arg1:T13 Arg2:T12	
+T14	Negation 1950 1954	brak
+T15	Condition 1926 1947	W wywiadzie rodzinnym
+A1	Status T15 Family
+R6	Neg Arg1:T14 Arg2:T15	
+T16	Condition 1898 1901	WZW
+N5	Reference T16 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T17	Condition 1910 1919	borelioza
+N6	Reference T17 ICD10:A69.2	Choroba z Lyme
+T18	Negation 1920 1925	( - )
+R7	Neg Arg1:T18 Arg2:T17	
+T19	Negation 1902 1907	( - )
+R8	Neg Arg1:T19 Arg2:T16	
+T20	Treatment 1796 1821	plastyce małżowin usznych
+T21	Date 1824 1831	03.2018
+R9	Dat Arg1:T21 Arg2:T20	
+T22	Investigation 1737 1757	badaniu endoskopowym
+T23	Date 1758 1768	04.07.2018
+R10	Dat Arg1:T23 Arg2:T22	
+T24	Condition 1672 1728	Przelękłe zapalenie zatok przynosowych po stronie lewej.
+N7	Reference T24 ICD10:J32	Przewlekłe zapalenie zatok
+T25	Symptom 1596 1633	okresowym kłuciem w klatce piersiowej
+N8	Reference T25 ICD10:R00.2	Kołatanie serca
+T26	Symptom 1643 1655	zasłabnięcia
+N9	Reference T26 ICD10:R55	Omdlenie i zapaść
+T27	Negation 1636 1642	Neguje
+R11	Neg Arg1:T27 Arg2:T26	
+T28	Condition 1406 1430	ASD II z przeciekiem L-P
+N10	Reference T28 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T29	Treatment 1434 1483	pomocą zapinki Occlutech Figula Flex II ASD 30 mm
+T30	Date 1491 1501	21.11.2018
+R12	Dat Arg1:T30 Arg2:T29	
+R13	Dat Arg1:T30 Arg2:T28	
+A2	Status T20 Historical_Insignificant
+T31	Date 1981 1992	od miesięcy
+R14	Dat Arg1:T31 Arg2:T12	

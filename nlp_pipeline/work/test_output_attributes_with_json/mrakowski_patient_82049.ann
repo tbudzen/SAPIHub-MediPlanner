@@ -1,0 +1,66 @@
+T1	Condition 484 505	Nadciśnienie tętnicze
+T2	Condition 438 482	Łagodna niedomykalność zastawki trójdzielnej
+T3	Drug 626 633	Zofenil
+T4	Drug 635 640	Nedal
+T5	Treatment 751 773	kontrola u lekarza POZ
+T6	Investigation 776 826	kontrola ciśnienia tętniczego w warunkach domowych
+T7	Investigation 829 891	wskazane wykonanie USG jamy brzusznej i USG-D tętnic nerkowych
+T8	Investigation 894 935	konieczna kontrola lipidogramu (na czczo)
+T9	Treatment 938 966	regularne przyjmowanie leków
+T10	Symptom 1139 1178	labilnych wartości ciśnienia tętniczego
+T11	Date 1179 1192	od 2 miesięcy
+T12	Treatment 1194 1224	Zmiana leczenia hipotensyjnego
+T13	Date 1226 1236	XII. 2019r
+T14	Symptom 1239 1290	Tendencja do wysokich wartości ciśnienia tętniczego
+T15	Date 1291 1298	od 18rż
+T16	Condition 1358 1361	WZW
+troby
+T17	Condition 1363 1372	borelioza
+T18	Negation 1375 1385	nie podaje
+T19	Condition 1414 1416	HA
+T20	Behaviour 1443 1456	1 paczka/dobę
+T21	Date 1458 1468	od 1-3 lat
+T22	Negation 1469 1477	nie pali
+T23	Behaviour 1426 1441	Palenie tytoniu
+T24	Behaviour 1478 1503	Inne używki: okazjonalnie
+T25	Condition 1504 1513	Uczulenia
+T26	Negation 1515 1525	nie podaje
+T27	Drug 1578 1585	Zofenil
+T28	Drug_dose 1586 1610	30 mg  1 tabl. wieczorem
+T29	Drug 1611 1616	Nedal
+T30	Drug_dose 1617 1635	5mg 1/4 tabl. rano
+T31	Investigation 1663 1673	echo serca
+T32	Investigation 1675 1678	TET
+T33	Investigation 1680 1684	ABPM
+T34	Investigation 1686 1692	Holter
+T35	Investigation 1694 1712	RTG kl. piersiowej
+T36	Treatment 1301 1318	Przebyte operacje
+T37	Negation 1320 1330	nie podaje
+T38	Condition 1386 1401	Wywiad rodzinny
+zane ze stylem życia
+N1	Reference T1 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N2	Reference T2 ICD10:I07.1	NiedomykalnoÅÄ zastawki trÃ³jdzielnej
+N3	Reference T16 ICD10:B19	NieokreÅlone wirusowe zapalenie wÄtroby
+N4	Reference T17 ICD10:A69.2	Choroba z Lyme
+N5	Reference T19 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N6	Reference T23 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N7	Reference T24 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+N8	Reference T25 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N9	Reference T36 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+R1	Dat Arg1:T11 Arg2:T10
+R10	Neg Arg1:T18 Arg2:T38
+R2	Dat Arg1:T11 Arg2:T12
+R23	Neg Arg1:T22 Arg2:T20
+R25	Neg Arg1:T22 Arg2:T24
+R3	Dat Arg1:T13 Arg2:T14
+R33	Neg Arg1:T26 Arg2:T25
+R4	Neg Arg1:T37 Arg2:T36
+R42	Drg Arg1:T27 Arg2:T28
+R45	Drg Arg1:T29 Arg2:T30
+R5	Dat Arg1:T15 Arg2:T36
+R51	Dat Arg1:T21 Arg2:T20
+R53	Dat Arg1:T21 Arg2:T24
+R7	Neg Arg1:T18 Arg2:T17
+A1	Status T19 Family
+A2	Status T38 Family
+A3	Source T20 Declared

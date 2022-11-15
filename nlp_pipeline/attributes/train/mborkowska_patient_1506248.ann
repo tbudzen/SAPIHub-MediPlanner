@@ -1,0 +1,177 @@
+T1	Investigation 3374 3384	Echo serca
+T2	Investigation 3387 3397	Holter EKG
+T3	Investigation 3400 3415	Próba Wysiłkowa
+T4	Drug 3203 3209	Eliqus
+T5	Drug_dose 3210 3222	2,5 mg 2x dz
+T6	Drug 3225 3235	Euthyrox N
+T7	Drug_dose 3236 3258	50 1x dz rano na czczo
+R1	Drg Arg1:T4 Arg2:T5	
+T8	Drug 3261 3269	Biosotal
+T9	Drug_dose 3270 3281	40 mg 1-0-1
+T10	Drug 3284 3292	Setal MR
+T11	Drug_dose 3293 3298	2x dz
+T12	Drug 3301 3308	Roswera
+T13	Drug_dose 3309 3330	20 mg 1xd z wieczorem
+T14	Drug 3332 3341	Captopril
+T15	Drug_dose 3342 3358	12,5 mg doraźnie
+R2	Drg Arg1:T6 Arg2:T7	
+R3	Drg Arg1:T8 Arg2:T9	
+R4	Drg Arg1:T10 Arg2:T11	
+R5	Drg Arg1:T12 Arg2:T13	
+R6	Drg Arg1:T14 Arg2:T15	
+T16	Behaviour 3152 3178	warunki mieszkaniowe dobre
+T17	Negation 3129 3135	neguje
+T18	Negation 3114 3117	nie
+T19	Negation 3081 3089	nie pali
+T20	Condition 3118 3127	Uczulenia
+R7	Neg Arg1:T17 Arg2:T20	
+T21	Behaviour 3101 3113	Inne używki:
+R8	Neg Arg1:T18 Arg2:T21	
+T22	Behaviour 3064 3080	Palenie tytoniu:
+R9	Neg Arg1:T19 Arg2:T22	
+T23	Condition 3030 3034	udar
+A1	Status T23 Family
+N3	Reference T23 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T24	Condition 3043 3062	wylew krwi do mózgu
+A2	Status T24 Family
+N4	Reference T24 ICD10:I61	Krwotok śródczaszkowy
+T25	Condition 2924 2927	WZW
+T26	Condition 2937 2950	borelioza ( +
+N6	Reference T26 ICD10:A69.2	Choroba z Lyme
+T27	Condition 2979 2983	Odra
+N7	Reference T27 ICD10:B05	Odra
+T28	Negation 2930 2934	-  )
+R10	Neg Arg1:T28 Arg2:T25	
+A3	Source T26 Confirmed
+T29	Date 2951 2962	5-6 la temu
+R11	Dat Arg1:T29 Arg2:T26	
+T30	Negation 2984 2989	( - )
+R12	Neg Arg1:T30 Arg2:T27	
+T31	Treatment 2798 2821	Przebyte operacje:  j/w
+T32	Investigation_result 2713 2746	Zwężenie 60 % tętnic szyjnych obu
+A4	Source T32 Declared
+T33	Investigation_result 2658 2700	gromadzenie znacznika w migdałku językowym
+T34	Investigation 2654 2657	PET
+T35	Date 2702 2709	07.2019
+R13	Inv Arg1:T34 Arg2:T33	
+R14	Dat Arg1:T35 Arg2:T34	
+T36	Treatment 2622 2641	usunięciu migdałków
+A5	Status T36 Historical_Insignificant
+T37	Date 2642 2649	11.2018
+R15	Dat Arg1:T37 Arg2:T36	
+T38	Condition 2478 2488	Posocznica
+N8	Reference T38 ICD10:A41.9	Posocznica, nieokreślona
+T39	Date 2517 2527	18.07.2019
+R16	Dat Arg1:T39 Arg2:T38	
+T40	Treatment 2537 2577	operacji klinowej wycięcia płuca prawego
+T41	Condition 2587 2603	ca. gruczołowego
+T42	Date 2604 2611	06.2018
+R17	Dat Arg1:T42 Arg2:T40	
+R18	Dat Arg1:T42 Arg2:T41	
+T43	Condition 2454 2476	Niedoczynność tarczycy
+N9	Reference T43 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T44	Condition 2432 2451	Zaburzenia lipidowe
+N10	Reference T44 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T45	Condition 2419 2430	Napadowe AF
+N11	Reference T45 ICD10:I48	Migotanie i trzepotanie przedsionków
+T46	Symptom 2390 2402	zasłabnięcia
+N12	Reference T46 ICD10:R55	Omdlenie i zapaść
+T47	Negation 2383 2389	Neguje
+R19	Neg Arg1:T47 Arg2:T46	
+T48	Investigation_result 2359 2379	RR zwykle  ma niskie
+T49	Symptom 2281 2300	okresowe bóle głowy
+N13	Reference T49 ICD10:R51	Ból głowy
+T50	Symptom 2303 2328	bólów w klatce piersiowej
+N14	Reference T50 ICD10:R07.3	Inne bóle w klatce piersiowej
+T51	Symptom 2330 2347	ogólne osłabienie
+N15	Reference T51 ICD10:R53	Złe samopoczucie i zmęczenie
+T52	Investigation_result 2244 2262	RR do 185/100 mmHg
+T53	Symptom 2181 2203	uczucia kołatania sera
+N16	Reference T53 ICD10:R00.2	Kołatanie serca
+T54	Date 2204 2231	głównie w godzinach nocnych
+R20	Dat Arg1:T54 Arg2:T53	
+T55	Drug 1956 1965	Nitromint
+T56	Drug_dose 1966 2009	1-2 dawki doraźnie w razie bólu dławicowego
+R21	Drg Arg1:T55 Arg2:T56	
+T57	Drug 1922 1929	Roswera
+T58	Drug_dose 1930 1955	20 mg 1x1 tabl. wieczorem
+R22	Drg Arg1:T57 Arg2:T58	
+T59	Drug 1903 1911	Setal MR
+T60	Drug_dose 1912 1921	2x1 tabl.
+R23	Drg Arg1:T59 Arg2:T60	
+T61	Drug 1876 1884	Biosotal
+T62	Drug_dose 1885 1902	40 mg 1-0-1 tabl.
+R24	Drg Arg1:T61 Arg2:T62	
+T63	Drug 1839 1847	Euthyrox
+T64	Drug_dose 1848 1875	N50 1x1 tabl. rano na czczo
+R25	Drg Arg1:T63 Arg2:T64	
+T65	Drug 1803 1813	Prestarium
+T66	Drug_dose 1814 1838	5 mg 1x1 tabl. wieczorem
+R26	Drg Arg1:T65 Arg2:T66	
+T67	Drug 1768 1771	IPP
+T68	Drug 1745 1752	Eliquis
+T69	Drug_dose 1753 1766	5 mg 2x1 tabl
+R27	Drg Arg1:T68 Arg2:T69	
+T70	Drug_dose 1772 1801	20 mg 1x1 tabl. rano na czczo
+R28	Drg Arg1:T67 Arg2:T70	
+T71	Investigation 1698 1717	Kontrola morfologii
+T72	Date 1718 1728	za miesiąc
+R29	Dat Arg1:T72 Arg2:T71	
+T73	Behaviour 1621 1693	Regularna łagodna aktywność fizyczna min. 5x w tyg. po 30 minut dziennie
+T74	Investigation 1580 1614	kontrola ciśnienia tętniczego krwi
+T75	Investigation 1460 1542	kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T76	Date 1543 1553	co 6-8 tyg
+R30	Dat Arg1:T76 Arg2:T75	
+T77	Behaviour 1405 1444	Dieta lekkostrawna, niskocholesterolowa
+T78	Condition 1330 1355	zmian migdałka językowego
+T79	Condition 902 911	Borelioza
+N17	Reference T79 ICD10:A69.2	Choroba z Lyme
+T80	Investigation_result 842 884	Gromadzenie znacznika w migdałku językowym
+T81	Investigation 887 890	PET
+T82	Date 891 900	(07.2019)
+R31	Dat Arg1:T82 Arg2:T81	
+R32	Inv Arg1:T81 Arg2:T80	
+T83	Treatment 796 830	usunięciu migdałków podniebiennych
+T84	Date 832 840	11.2018)
+R33	Dat Arg1:T84 Arg2:T83	
+T85	Treatment 710 750	operacji klinowej wycięcia płuca prawego
+T86	Condition 760 776	Ca. gruczołowego
+T87	Date 778 785	06.2018
+R34	Dat Arg1:T87 Arg2:T86	
+R35	Dat Arg1:T87 Arg2:T85	
+T88	Condition 649 659	posocznicy
+N18	Reference T88 ICD10:A41.9	Posocznica, nieokreślona
+T89	Date 689 699	18.07.2019
+R36	Dat Arg1:T89 Arg2:T88	
+T90	Condition 593 615	Niedoczynność tarczycy
+N19	Reference T90 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T91	Condition 477 497	Hipercholesterolemia
+T92	Investigation_result 527 559	60% zwężenie obu tętnic szyjnych
+A6	Source T92 Declared
+T93	Condition 444 475	Napadowe migotanie przedsionków
+N21	Reference T93 ICD10:I48	Migotanie i trzepotanie przedsionków
+T94	Condition 413 442	Choroba wieńcowa I/II* wg CCS
+T95	Condition 499 524	Choroba tętnic obwodowych
+N23	Reference T95 ICD10:I73.9	Choroba naczyń obwodowych, nieokreślona
+A7	Source T95 Declared
+T96	Date 3090 3099	od 30 lat
+R37	Dat Arg1:T96 Arg2:T22	
+T97	Condition 662 687	ostrym uszkodzeniem nerek
+N24	Reference T97 ICD10:N17.8	Inna ostra niewydolność nerek
+R38	Dat Arg1:T89 Arg2:T97	
+A8	Status T85 Historical_Insignificant
+A9	Status T86 Historical_Insignificant
+A10	Status T83 Historical_Insignificant
+T98	Condition 2491 2516	ostrym uszkodzeniem nerek
+N25	Reference T98 ICD10:N17.8	Inna ostra niewydolność nerek
+R39	Dat Arg1:T39 Arg2:T98	
+A11	Status T40 Historical_Insignificant
+A12	Status T41 Historical_Insignificant
+N5	Reference T25 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N2	Reference T22 ICD10:Z72.0	Używanie tytoniu
+N22	Reference T94 ICD10:I25.8	Inne postacie przewlekłej choroby niedokrwiennej serca
+N20	Reference T91 ICD10:E78.0	Czysta hipercholesterolemia
+T99	Treatment 1070 1189	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Endokrynologicznej, Pulmonologicznej i Onkologicznej
+T100	Treatment 1194 1294	Wskazana kontrola w Poradni Endokrynologicznej celem ewentualnej korekty leczenia suplementacyjnego.
+N26	Reference T21 ICD10:Z72	Problemy związane ze stylem życia
+N1	Reference T20 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

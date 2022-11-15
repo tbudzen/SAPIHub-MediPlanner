@@ -1,0 +1,59 @@
+T1	Condition 606 620	kardiomiopatii
+T2	Negation 621 630	negatywna
+N1	Reference T1 ICD10:I42	Kardiomiopatia
+R1	Neg Arg1:T2 Arg2:T1	
+T3	Behaviour 777 809	trenujący  od 13 lat piłkę nożną
+T4	Negation 812 823	bez wywiadu
+T5	Condition 824 860	chorób układu sercowego-naczyniowego
+N2	Reference T5 ICD10:I51.6	Choroby serca i naczyń krwionośnych, nieokreślone
+R2	Neg Arg1:T4 Arg2:T5	
+T6	Symptom 900 923	wysokich wartości pulsu
+N3	Reference T6 ICD10:R00.0	Tachykardia, nieokreślona
+T7	Symptom 926 962	ciśnienia tętniczego podczas wysiłku
+N4	Reference T7 ICD10:R03.0	Podwyższone ciśnienie tętnicze krwi, bez rozpoznanego nadciśnienia tętniczego
+T8	Symptom 1018 1057	uczucie klucia  w okolicy przedsercowej
+N5	Reference T8 ICD10:R07.2	Ból w okolicy przedsercowej
+T9	Symptom 1064 1094	zmniejszona tolerancja wysiłku
+N6	Reference T9 ICD10:R53	Złe samopoczucie i zmęczenie
+T10	Condition 1116 1142	infekcje dróg  oddechowych
+N7	Reference T10 ICD10:J06.9	Ostre zakażenie górnych dróg oddechowych, nieokreślone
+T11	Symptom 1172 1186	podwyższone RR
+N8	Reference T11 ICD10:R03.0	Podwyższone ciśnienie tętnicze krwi, bez rozpoznanego nadciśnienia tętniczego
+T12	Date 1189 1202	od okolo roku
+R3	Dat Arg1:T12 Arg2:T11	
+T13	Condition 1244 1258	Wywiad rodziny
+A1	Status T13 Family
+T14	Treatment 1286 1304	operowany na serca
+A2	Status T14 Family
+T15	Condition 1307 1310	ASD
+A3	Status T15 Family
+A4	Source T15 Declared
+N9	Reference T15 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T16	Condition 1312 1315	VSD
+A5	Status T16 Family
+A6	Source T16 Declared
+N10	Reference T16 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T17	Negation 1335 1338	Nie
+T18	Negation 1346 1348	ne
+T19	Behaviour 1349 1353	pije
+N11	Reference T19 ICD10:Z72.1	Używanie alkoholu
+T20	Behaviour 1339 1343	pali
+R4	Neg Arg1:T17 Arg2:T20	
+R5	Neg Arg1:T18 Arg2:T19	
+T21	Condition 1357 1366	Uczulenia
+T22	Condition 1368 1375	alergie
+T23	Treatment 1447 1461	farmakoterapia
+T24	Investigation 1463 1484	badania laboratoryjne
+T25	Investigation 1487 1490	TTE
+T26	Investigation 1492 1496	ABPM
+T27	Investigation 1498 1501	TET
+T28	Investigation 583 605	Obserwacja  w kierunku
+N12	Reference T20 ICD10:Z72.0	Używanie tytoniu
+N14	Reference T22 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N13	Reference T21 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T29	Negation 340 343	bez
+T30	Treatment 345 353	leczenia
+R6	Neg Arg1:T29 Arg2:T30	
+T31	Drug 1206 1220	Leków na stałe
+T32	Negation 1227 1240	nie przyjmuje
+R7	Neg Arg1:T32 Arg2:T31	

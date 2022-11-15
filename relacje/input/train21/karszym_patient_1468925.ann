@@ -1,0 +1,188 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 367 409	ponowna hospitalizacja w tutejszej Klinice
+T3	Date 410 427	w dn. 12.11.2019r
+T4	Treatment 428 507	dalsza opieka w poradni chirurgii naczyniowej, neurologicznej, laryngologicznej
+T5	Treatment 508 546	regularne pomiary ciśnienia tętniczego
+T6	Behaviour 547 618	dieta ubogocholesterolowa, z niską zawartością soli kuchennej (do 5g/d)
+T7	Behaviour 619 651	systematyczna aktywność fizyczna
+T8	Negation 652 664	zaprzestanie
+T9	Behaviour 665 683	palenia papierosów
+N1	Reference T9 ICD10:Z72.0	Używanie tytoniu
+T10	Drug 712 719	Nebilet
+T11	Drug_dose 720 739	5 mg 1/2 tabl. rano
+T12	Drug 740 755	Zanacodar combi
+T13	Drug_dose 756 781	80mg/12,5 mg 1 tabl. rano
+T14	Drug 782 789	Lacipil
+T15	Drug_dose 790 812	4 mg 1 tabl. wieczorem
+T16	Drug 813 818	Acard
+T17	Drug_dose 819 842	75 mg 1 tabl. wieczorem
+T18	Drug 843 849	Atoris
+T19	Drug_dose 850 873	10 mg 1 tabl. wieczorem
+T20	Drug 874 881	Aurex  
+T21	Drug_dose 881 898	20 mg 1 tabl rano
+R1	Dat Arg1:T3 Arg2:T2	
+R2	Neg Arg1:T8 Arg2:T9	
+R3	Drg Arg1:T10 Arg2:T11	
+R4	Drg Arg1:T12 Arg2:T13	
+R5	Drg Arg1:T14 Arg2:T15	
+R6	Drg Arg1:T16 Arg2:T17	
+R7	Drg Arg1:T18 Arg2:T19	
+R8	Drg Arg1:T20 Arg2:T21	
+T22	Condition 1116 1153	Poszerzenie aorty wstępującej (52 mm)
+T23	Condition 1155 1196	Miażdżyca aorty ze skrzepliną przyścienną
+N2	Reference T23 ICD10:I70.0	Miażdżyca aorty
+T24	Condition 1199 1276	Wada nabyta serca pod postacią miarkowanej niedomykalności zastawki aortalnej
+N3	Reference T24 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T25	Condition 1279 1325	łagodnej niedomykalności zastawki trójdzielnej
+N4	Reference T25 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T26	Condition 1327 1365	Przewlekła choroba niedokrwienna serca
+N5	Reference T26 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T27	Condition 1367 1392	Miażdżyca tętnic szyjnych
+N6	Reference T27 ICD10:I70.8	Miażdżyca innych tętnic
+T28	Condition 1394 1415	Nadciśnienie tętnicze
+N7	Reference T28 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T29	Behaviour 1417 1427	Nikotynizm
+N8	Reference T29 ICD10:Z72.0	Używanie tytoniu
+T30	Condition 1573 1575	HA
+N9	Reference T30 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T31	Symptom 1577 1597	RR w domu 100/50mmHg
+T32	Drug 1601 1607	lekach
+T33	Symptom 1610 1620	160/75mmHg
+T34	Negation 1621 1626	przed
+T35	Drug 1627 1633	lekami
+R9	Neg Arg1:T34 Arg2:T35	
+T36	Investigation 1677 1698	RTG klatki piersiowej
+T37	Investigation_result 1699 1716	poszerzenia aorty
+R10	Inv Arg1:T36 Arg2:T37	
+T38	Symptom 1740 1801	bóle w klatce piersiowej o charakterze ucisku podczas wysiłku
+T39	Date 1803 1815	od lata 2018
+N10	Reference T38 ICD10:R07.2	Ból w okolicy przedsercowej
+R11	Dat Arg1:T39 Arg2:T38	
+T40	Symptom 1817 1837	ustępujące na leżąco
+R12	Dat Arg1:T39 Arg2:T40	
+N11	Reference T40 ICD10:R07.2	Ból w okolicy przedsercowej
+T41	Condition 1839 1852	wada aortalna
+T42	Condition 1854 1878	zwężenie tętnicy szyjnej
+N12	Reference T42 ICD10:I77.1	Zwężenie tętnicy
+T43	Symptom 1880 1903	krótkie kołatania serca
+N13	Reference T43 ICD10:R00.2	Kołatanie serca
+T44	Symptom 1904 1954	czasem z towarzszącym uciskiem w klatce piersiowej
+N14	Reference T44 ICD10:R07.2	Ból w okolicy przedsercowej
+T45	Symptom 1956 1998	bóle mięśni kończyn dolnych przy chodzeniu
+N15	Reference T45 ICD10:M79.1	Bóle mięśni
+T46	Negation 2000 2006	Neguje
+T47	Symptom 2008 2016	omdlenia
+N16	Reference T47 ICD10:R55	Omdlenie i zapaść
+T48	Symptom 2018 2028	krwawienia
+T49	Symptom 2030 2044	duszność nocną
+N17	Reference T49 ICD10:R06.0	Duszność
+T50	Symptom 2046 2061	obrzęki podudzi
+N18	Reference T50 ICD10:R60.0	Obrzęk zlokalizowany
+T51	Condition 2063 2065	DM
+N19	Reference T51 ICD10:E14	Cukrzyca nieokreślona
+T52	Treatment 2087 2103	zabieg moczowodu
+A1	Status T52 Historical_Insignificant
+N20	Reference T52 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T53	Treatment 2105 2114	usunięcie
+A2	Status T53 Historical_Insignificant
+N21	Reference T53 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T54	Condition 2115 2138	łagodnych guzków piersi
+N22	Reference T54 ICD10:D24	Nowotwór niezłośliwy piersi
+A3	Status T54 Historical_Insignificant
+T55	Treatment 2140 2156	usunięcie macicy
+A4	Status T55 Historical_Insignificant
+N23	Reference T55 ICD10:Z90.7	Nabyty brak narządów płciowych
+T56	Condition 2166 2176	mięśniaków
+A5	Status T56 Historical_Insignificant
+N24	Reference T56 ICD10:D25	Mięśniak gładkokomórkowy macicy
+R13	Neg Arg1:T46 Arg2:T47	
+R14	Neg Arg1:T46 Arg2:T48	
+R15	Neg Arg1:T46 Arg2:T50	
+R16	Neg Arg1:T46 Arg2:T49	
+R17	Neg Arg1:T46 Arg2:T51	
+T57	Behaviour 2178 2193	Palenie tytoniu
+N25	Reference T57 ICD10:Z72.0	Używanie tytoniu
+T58	Date 2195 2204	od 50 lat
+T59	Behaviour 2206 2229	20 papierosów/ dziennie
+N26	Reference T59 ICD10:Z72.0	Używanie tytoniu
+R18	Dat Arg1:T58 Arg2:T57	
+R19	Dat Arg1:T58 Arg2:T59	
+T60	Behaviour 2230 2241	Inne używki
+T61	Negation 2243 2246	nie
+T62	Condition 2247 2256	Uczulenia
+N27	Reference T62 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T63	Negation 2258 2261	nie
+T64	Condition 2290 2293	WZW
+N28	Reference T64 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T65	Condition 2300 2309	borelioza
+N29	Reference T65 ICD10:A69.2	Choroba z Lyme
+T66	Condition 2315 2318	tbc
+N30	Reference T66 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T67	Condition 2324 2328	odra
+N31	Reference T67 ICD10:B05	Odra
+T68	Condition 2334 2348	kontakt z odrą
+N32	Reference T68 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+T69	Negation 2294 2297	(-)
+T70	Negation 2310 2313	(-)
+T71	Negation 2319 2322	(-)
+T72	Negation 2329 2332	(-)
+T73	Negation 2349 2352	(-)
+T74	Behaviour 2369 2395	warunki mieszkaniowe dobre
+T75	Behaviour 2408 2433	prowadzi nocny tryb życia
+T76	Behaviour 2435 2445	plastyczka
+T77	Drug 2461 2465	leki
+T78	Drug 2495 2499	leki
+T79	Drug 2524 2534	Prestarium
+T80	Drug 2547 2554	Amlozek
+T81	Drug 2566 2573	Galpent
+T82	Drug 2585 2593	Vicebrol
+T83	Drug 2600 2605	Aurex
+T84	Drug 2616 2621	Acard
+T85	Drug 2633 2640	Milurit
+T86	Drug 2652 2659	Nebilet
+T87	Drug_dose 2535 2546	7,5mg/wiecz
+T88	Drug_dose 2555 2565	7,5mg/rano
+T89	Drug_dose 2574 2584	100mg/rano
+T90	Drug_dose 2594 2599	2x5mg
+T91	Drug_dose 2606 2615	20mg/rano
+T92	Drug_dose 2622 2632	75mg/wiecz
+T93	Drug_dose 2641 2651	50mg/wiecz
+T94	Drug_dose 2660 2670	2,5mg/rano
+T95	Drug 2680 2689	Captopril
+T96	Drug 2691 2699	Diuresin
+T97	Drug 2701 2708	Stilnox
+T98	Drug_dose 2671 2679	Doraźnie
+R20	Neg Arg1:T61 Arg2:T60	
+R21	Neg Arg1:T63 Arg2:T62	
+R22	Neg Arg1:T69 Arg2:T64	
+R23	Neg Arg1:T70 Arg2:T65	
+R24	Neg Arg1:T71 Arg2:T66	
+R25	Neg Arg1:T72 Arg2:T67	
+R26	Neg Arg1:T73 Arg2:T68	
+R27	Drg Arg1:T79 Arg2:T87	
+R28	Drg Arg1:T80 Arg2:T88	
+R29	Drg Arg1:T81 Arg2:T89	
+R30	Drg Arg1:T82 Arg2:T90	
+R31	Drg Arg1:T83 Arg2:T91	
+R32	Drg Arg1:T84 Arg2:T92	
+R33	Drg Arg1:T85 Arg2:T93	
+R34	Drg Arg1:T86 Arg2:T94	
+R35	Drg Arg1:T95 Arg2:T98	
+R36	Drg Arg1:T96 Arg2:T98	
+R37	Drg Arg1:T97 Arg2:T98	
+T99	Investigation 2769 2790	badania laboratoryjne
+T100	Investigation 2792 2796	ECHO
+T101	Investigation 2798 2816	EKG metodą Holtera
+T102	Investigation 2818 2822	ABPM
+T103	Date 2476 2483	o 16:00
+T104	Date 2510 2516	o 4:00
+T105	Behaviour 2466 2475	przyjmuje
+T106	Behaviour 2500 2509	przyjmuje
+T107	Drug_dose 2485 2494	wieczorne
+T108	Drug_dose 2453 2460	poranne
+R38	Drg Arg1:T77 Arg2:T108	
+R39	Drg Arg1:T78 Arg2:T107	
+R40	Dat Arg1:T103 Arg2:T77	
+R41	Dat Arg1:T103 Arg2:T105	
+R42	Dat Arg1:T104 Arg2:T78	
+R43	Dat Arg1:T104 Arg2:T106	

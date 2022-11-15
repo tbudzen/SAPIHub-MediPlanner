@@ -1,0 +1,178 @@
+T1	Treatment 346 373	dalsza opieka w poradni POZ
+T2	Treatment 380 412	okresowa kontrola kardiologiczna
+T3	Investigation 473 502	okresowa kontrola lipidogramu
+T4	Date 513 525	za 6 tygodni
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Behaviour 534 566	dieta DASH i niskocholesterolowa
+T6	Behaviour 574 593	redukcja masy ciała
+T7	Behaviour 601 646	stały, umiarkowany, aerobowy wysiłek fizyczny
+T8	Treatment 653 681	regularne przyjmowanie leków
+T9	Drug 691 697	Lercan
+T10	Drug_dose 698 721	10 mg 1 tabl. wieczorem
+R2	Drg Arg1:T9 Arg2:T10	
+T11	Drug 730 737	Tritace
+T12	Drug_dose 738 755	5 mg 1 tabl. rano
+R3	Drg Arg1:T11 Arg2:T12	
+T13	Drug 764 770	Atoris
+T14	Drug_dose 771 794	40 mg 1 tabl. wieczorem
+R4	Drg Arg1:T13 Arg2:T14	
+T15	Condition 1012 1053	Przewlekła rozkurczowa niewydolność serca
+N1	Reference T15 ICD10:I50	Niewydolność serca
+T16	Symptom 1054 1073	w II klasie wg NYHA
+N2	Reference T16 ICD10:I50	Niewydolność serca
+T17	Condition 1075 1118	Nadciśnienie tętnicze II stopnia wg ESC/ESH
+N3	Reference T17 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T18	Condition 1120 1179	Wada serca pod postacią niedomykalności mitralnej I stopnia
+N4	Reference T18 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T19	Condition 1181 1201	Hipercholesterolemia
+N5	Reference T19 ICD10:E78.0	Czysta hipercholesterolemia
+T20	Condition 1203 1227	Otyłość I stopnia wg WHO
+N6	Reference T20 ICD10:E66	Otyłość
+T21	Condition 1229 1237	Komorowe
+N7	Reference T21 ICD10:I49.3	
+T22	Condition 1240 1274	nadkomorowe zaburzenia rytmu serca
+N8	Reference T22 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T23	Condition 1276 1296	Bradykardia zatokowa
+N9	Reference T23 ICD10:R00.1	Bradykardia, nieokreślona
+T24	Treatment 1309 1339	leczona przejściowo przewlekle
+T25	Drug 1340 1348	atropiną
+T26	Condition 1350 1370	Torbiel nerki prawej
+N10	Reference T26 ICD10:N28.1	Torbiel nerki, nabyta
+T27	Condition 1372 1386	Kamica nerkowa
+N11	Reference T27 ICD10:N20.0	Kamica nerki
+T28	Condition 1400 1432	Zmiany zwyrodnieniowe kręgosłupa
+N12	Reference T28 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T29	Treatment 1442 1469	cholecystektomii klasycznej
+A1	Status T29 Historical_Insignificant
+T30	Condition 1479 1499	kamicy pęcherzykowej
+N13	Reference T30 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+A2	Status T30 Historical_Insignificant
+T31	Treatment 1510 1526	cięcie cesarskie
+A3	Status T31 Historical_Insignificant
+T32	Symptom 1694 1732	wysokich wartości ciśnienia tętniczego
+N14	Reference T32 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T33	Date 1734 1742	od 2 lat
+T34	Treatment 1743 1750	leczona
+R5	Dat Arg1:T33 Arg2:T34	
+T35	Symptom 1768 1785	duszność nasiloną
+N15	Reference T35 ICD10:R06.0	Duszność
+T36	Date 1786 1803	od kilku miesięcy
+R6	Dat Arg1:T36 Arg2:T35	
+T37	Symptom 1804 1824	do III klasy wg NYHA
+N16	Reference T37 ICD10:R06.0	Duszność
+R7	Dat Arg1:T36 Arg2:T37	
+T38	Condition 1849 1869	hipercholesterolemia
+N17	Reference T38 ICD10:E78.0	Czysta hipercholesterolemia
+T39	Condition 1871 1879	komorowe
+N18	Reference T39 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T40	Condition 1882 1910	nadkomorowe zaburzenia rytmu
+N19	Reference T40 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T41	Symptom 1926 1941	kołatanie serca
+N20	Reference T41 ICD10:R00.2	Kołatanie serca
+T42	Date 1942 1960	w nocy, codziennie
+R8	Dat Arg1:T42 Arg2:T41	
+T43	Investigation 1966 1978	Holterze EKG
+T44	Date 1981 1985	2016
+R9	Dat Arg1:T44 Arg2:T43	
+T45	Investigation_result 1986 2011	26pary ExV i 518 poj. ExV
+N21	Reference T45 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T46	Investigation_result 2013 2026	297 poj. ExSV
+N22	Reference T46 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+R10	Dat Arg1:T44 Arg2:T45	
+R11	Dat Arg1:T44 Arg2:T46	
+R12	Inv Arg1:T43 Arg2:T45	
+R13	Inv Arg1:T43 Arg2:T46	
+T47	Date 2030 2034	2015
+T48	Condition 2045 2082	wstawki częstoskurczu przedsionkowego
+N23	Reference T48 ICD10:I47.1	Częstoskurcz nadkomorowy
+R14	Dat Arg1:T47 Arg2:T48	
+T49	Condition 2084 2093	bigeminia
+N24	Reference T49 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T50	Condition 2095 2114	trigeminia komorowa
+N25	Reference T50 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T51	Investigation_result 2117 2156	bradykardia zatokowa min. 41/min w nocy
+N26	Reference T51 ICD10:R00.1	Bradykardia, nieokreślona
+R15	Dat Arg1:T47 Arg2:T49	
+R16	Dat Arg1:T47 Arg2:T50	
+R17	Dat Arg1:T47 Arg2:T51	
+T52	Date 2164 2181	kilka lat leczona
+T53	Drug 2182 2192	Bellapanem
+T54	Date 2193 2200	do 2015
+R18	Dat Arg1:T54 Arg2:T53	
+R19	Dat Arg1:T52 Arg2:T53	
+T55	Drug 2211 2222	Rytmonormem
+T56	Date 2223 2248	przez rok do 2 lat wstecz
+R20	Dat Arg1:T56 Arg2:T55	
+T57	Investigation_result 2251 2270	przerost mięśnia LK
+N27	Reference T57 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T58	Investigation_result 2273 2281	IT IIst.
+N28	Reference T58 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T59	Investigation_result 2284 2292	IM I st.
+N29	Reference T59 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T60	Investigation 2295 2299	echo
+R21	Inv Arg1:T60 Arg2:T59	
+R22	Inv Arg1:T60 Arg2:T57	
+R23	Inv Arg1:T60 Arg2:T58	
+T61	Condition 2301 2321	torbiel nerki prawej
+N30	Reference T61 ICD10:N28.1	Torbiel nerki, nabyta
+T62	Condition 2323 2337	kamica nerkowa
+N31	Reference T62 ICD10:N20.0	Kamica nerki
+T63	Condition 2348 2380	zmiany zwyrodnieniowe kregosłupa
+N32	Reference T63 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T64	Treatment 2381 2398	Przebyte operacje
+T65	Treatment 2400 2426	cholecystektomia klasyczna
+A4	Status T65 Historical_Insignificant
+T66	Condition 2428 2434	kamica
+N33	Reference T66 ICD10:N20.0	Kamica nerki
+T67	Treatment 2437 2443	CC 1 x
+A5	Status T67 Historical_Insignificant
+A6	Status T66 Historical_Insignificant
+T68	Condition 2444 2459	Wywiad rodzinny
+A7	Status T68 Family
+T69	Condition 2468 2470	MI
+A8	Status T69 Family
+N34	Reference T69 ICD10:I25.2	Przebyty zawał serca
+T70	Condition 2475 2479	udar
+A9	Status T70 Family
+N35	Reference T70 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T71	Condition 2493 2495	MI
+A10	Status T71 Family
+N36	Reference T71 ICD10:I25.2	Przebyty zawał serca
+T72	Condition 2504 2506	MI
+A11	Status T72 Family
+N37	Reference T72 ICD10:I25.2	Przebyty zawał serca
+T73	Condition 2522 2524	HA
+A12	Status T73 Family
+N38	Reference T73 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T74	Condition 2527 2534	Alergie
+N39	Reference T74 ICD10:T78.4	Alergia, nieokreślona
+T75	Negation 2645 2651	neguje
+R24	Neg Arg1:T75 Arg2:T74	
+T76	Treatment 2539 2555	choelcystektomii
+A13	Status T76 Historical_Insignificant
+T77	Symptom 2588 2604	spadek ciśnienia
+N40	Reference T77 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T78	Behaviour 2653 2663	Nikotynizm
+N41	Reference T78 ICD10:Z72.0	Używanie tytoniu
+T79	Negation 2665 2671	neguje
+R25	Neg Arg1:T79 Arg2:T78	
+T80	Behaviour 2674 2681	Alkohol
+N42	Reference T80 ICD10:Z72.1	Używanie alkoholu
+T81	Negation 2683 2689	neguje
+R26	Neg Arg1:T81 Arg2:T80	
+T82	Behaviour 2691 2708	Uzależnienie inne
+T83	Negation 2710 2716	neguje
+R27	Neg Arg1:T83 Arg2:T82	
+T84	Behaviour 2734 2743	emerytura
+T85	Date 2745 2754	wcześniej
+T86	Behaviour 2755 2769	fizyczna praca
+R28	Dat Arg1:T85 Arg2:T86	
+T87	Drug 2777 2791	Noliprel forte
+T88	Drug_dose 2792 2816	5mg+1.25 mg 1 tabl. rano
+R29	Drg Arg1:T87 Arg2:T88	
+T89	Investigation 2846 2856	echo serca
+T90	Investigation 2858 2861	TET
+T91	Investigation 2863 2867	ABPM
+T92	Investigation 2869 2879	Holter ekg
+T93	Investigation 2881 2899	rtg kl. piersiowej
+N43	Reference T82 ICD10:Z72	Problemy związane ze stylem życia

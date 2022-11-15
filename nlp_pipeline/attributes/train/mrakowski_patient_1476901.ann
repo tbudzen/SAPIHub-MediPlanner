@@ -1,0 +1,130 @@
+T1	Treatment 333 417	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej i Diabetologicznej
+T2	Investigation 422 479	Wskazane wykonanie koronarografii w trybie przyspieszonym
+T3	Behaviour 506 556	Dieta lekkostrawna, małosolna, niskocholesterolowa
+T4	Investigation 564 655	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T5	Date 656 670	co 6-8 tygodni
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Investigation 683 742	Systematyczna kontrola ciśnienia tętniczego krwi i glikemii
+T7	Treatment 747 769	Regularne branie leków
+T8	Drug 771 776	Ramve
+T9	Drug_dose 777 802	10 mg 1x1 tabl. wieczorem
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 804 811	Amlozek
+T11	Drug_dose 812 837	10 mg 1x1 tabl. wieczorem
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 839 850	Diuresin SR
+T13	Drug_dose 851 865	1x1 tabl. rano
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Drug 867 876	Metformax
+T15	Drug_dose 877 891	1000 3x1 tabl.
+R5	Drg Arg1:T14 Arg2:T15	
+T16	Drug 892 898	Amaryl
+T17	Drug_dose 899 915	4 1x1 tabl. rano
+R6	Drg Arg1:T16 Arg2:T17	
+T18	Drug 917 925	Bisocard
+T19	Drug_dose 926 947	2,5 mg 1x1 tabl. rano
+R7	Drg Arg1:T18 Arg2:T19	
+T20	Drug 948 953	Acard
+T21	Drug_dose 954 979	75 mg 1x1 tabl. wieczorem
+R8	Drg Arg1:T20 Arg2:T21	
+T22	Drug 980 992	Preductal MR
+T23	Drug_dose 993 1002	2x1 tabl.
+R9	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1003 1010	Roswera
+T25	Drug_dose 1011 1026	40 mg 1x1 tabl.
+R10	Drg Arg1:T24 Arg2:T25	
+T26	Condition 1273 1315	Choroba niedokrwienna serca II/III* wg CCS
+N1	Reference T26 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T27	Condition 1341 1365	Nadciśnienie tętnicze I*
+N2	Reference T27 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T28	Condition 1367 1383	Cukrzyca typu II
+N3	Reference T28 ICD10:E11	Cukrzyca insulinoniezależna
+T29	Condition 1385 1405	Hipercholesterolemia
+N4	Reference T29 ICD10:E78.0	Czysta hipercholesterolemia
+T30	Condition 1551 1574	nadciśnieniem tętniczym
+N5	Reference T30 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T31	Condition 1576 1592	cukrzycą typu II
+N6	Reference T31 ICD10:E11	Cukrzyca insulinoniezależna
+T32	Condition 1594 1623	chorobą zwyrodnieniową stawów
+N7	Reference T32 ICD10:M19.9	Choroba zwyrodnieniowa stawów, nieokreślona
+T33	Condition 1625 1648	skrzywieniem kręgosłupa
+N8	Reference T33 ICD10:M41.9	Skolioza, nieokreślona
+T34	Symptom 1702 1753	bólów zamostkowych o charakterze ucisku i pieczenia
+N9	Reference T34 ICD10:R07.2	Ból w okolicy przedsercowej
+T35	Symptom 1759 1838	duszności występujących zarówno w trakcie wysiłku fizycznego, jak i w spoczynku
+N10	Reference T35 ICD10:R06.0	Duszność
+T37	Negation 1841 1847	Neguje
+T38	Symptom 1849 1861	zasłabnięcia
+T39	Symptom 1863 1871	omdlenia
+N12	Reference T39 ICD10:R55	Omdlenie i zapaść
+T40	Symptom 1873 1883	krwawienia
+T41	Symptom 1885 1898	czarne stolce
+N14	Reference T41 ICD10:K92.1	Stolce smołowate
+T42	Symptom 1900 1916	brunatne wymioty
+N15	Reference T42 ICD10:K92.0	Wymioty krwawe
+T43	Condition 1918 1934	chorobę wrzodową
+N16	Reference T43 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+R11	Neg Arg1:T37 Arg2:T43	
+R12	Neg Arg1:T37 Arg2:T42	
+R13	Neg Arg1:T37 Arg2:T41	
+R14	Neg Arg1:T37 Arg2:T40	
+R15	Neg Arg1:T37 Arg2:T39	
+R16	Neg Arg1:T37 Arg2:T38	
+T44	Treatment 1938 1955	Przebyte operacje
+T45	Treatment 1965 1974	usunięciu
+T46	Condition 1975 2012	tłuszczaka w okolicy międzyłopatkowej
+N17	Reference T46 ICD10:D17.1	Tłuszczak skóry i tkanki podskórnej tułowia
+T47	Behaviour 2014 2029	Palenie tytoniu
+T48	Negation 2031 2034	nie
+R17	Neg Arg1:T48 Arg2:T47	
+T49	Behaviour 2036 2047	Inne używki
+T50	Negation 2049 2052	nie
+R18	Neg Arg1:T50 Arg2:T49	
+T51	Condition 2054 2063	Uczulenia
+N19	Reference T51 ICD10:T78.4	Alergia, nieokreślona
+T52	Negation 2065 2068	nie
+R19	Neg Arg1:T52 Arg2:T51	
+T53	Condition 2097 2100	WZW
+N20	Reference T53 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T54	Condition 2107 2116	borelioza
+N21	Reference T54 ICD10:A69.2	Choroba z Lyme
+T55	Condition 2124 2127	tbc
+T56	Condition 2133 2137	odra
+N23	Reference T56 ICD10:B05	Odra
+T57	Treatment 2143 2162	szczepienie na odrę
+A1	Source T57 Declared
+T58	Negation 2139 2140	-
+T59	Negation 2129 2130	-
+R20	Neg Arg1:T58 Arg2:T56	
+R21	Neg Arg1:T59 Arg2:T55	
+T60	Negation 2119 2120	-
+R22	Neg Arg1:T60 Arg2:T54	
+T61	Negation 2102 2103	-
+R23	Neg Arg1:T61 Arg2:T53	
+T62	Behaviour 2193 2219	warunki mieszkaniowe dobre
+T63	Drug 2259 2264	Ramve
+T64	Drug_dose 2265 2275	10 mg 1xdz
+R24	Drg Arg1:T63 Arg2:T64	
+T65	Drug 2277 2284	Amlozek
+T66	Drug_dose 2285 2295	10 mg 1xdz
+R25	Drg Arg1:T65 Arg2:T66	
+T67	Drug 2297 2308	Diuresin ST
+T68	Drug_dose 2309 2313	1xdz
+R26	Drg Arg1:T67 Arg2:T68	
+T69	Drug 2315 2324	Metformax
+T70	Drug_dose 2325 2334	1000 3xdz
+R27	Drg Arg1:T69 Arg2:T70	
+T71	Drug 2336 2342	Amaryl
+T72	Drug_dose 2343 2349	4 1xdz
+R28	Drg Arg1:T71 Arg2:T72	
+T73	Investigation 2412 2433	badania laboratoryjne
+T74	Investigation 2435 2450	próba wysiłkowa
+T75	Investigation 2452 2456	ECHO
+T76	Investigation 2458 2462	ABPM
+N24	Reference T38 ICD10:R55	
+A2	Status T45 Historical_Insignificant
+A3	Status T46 Historical_Insignificant
+N18	Reference T47 ICD10:Z72.0	Używanie tytoniu
+N11	Reference T40 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N13	Reference T49 ICD10:Z72	Problemy związane ze stylem życia
+N22	Reference T55 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

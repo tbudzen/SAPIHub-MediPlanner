@@ -1,0 +1,92 @@
+T1	Drug 2024 2031	Asentra
+T2	Drug_dose 2032 2041	1 x 50 mg
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Condition 1975 2013	żylaków lewej i prawej kończyny dolnej
+N1	Reference T3 ICD10:I83	Żylaki kończyn dolnych
+T4	Treatment 1966 1974	operacje
+T5	Negation 1949 1955	neguje
+T6	Behaviour 1940 1946	Nałogi
+N2	Reference T6 ICD10:Z72	Problemy związane ze stylem życia
+T7	Condition 1882 1891	Uczulenie
+N3	Reference T7 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T8	Drug 1895 1904	UROPOLINĘ
+T9	Drug 1906 1922	preparaty jodowe
+T10	Drug 1928 1937	Pyralgine
+R2	Alg Arg1:T7 Arg2:T8	
+R3	Alg Arg1:T7 Arg2:T9	
+R4	Alg Arg1:T7 Arg2:T10	
+T11	Condition 1844 1857	nietolerancje
+N4	Reference T11 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T12	Drug 1858 1864	statyn
+T13	Drug 1866 1879	rosuwastatyna
+R5	Alg Arg1:T11 Arg2:T12	
+R6	Alg Arg1:T11 Arg2:T13	
+T14	Treatment 990 1017	dalsza opieka w poradni POZ
+T15	Investigation 1033 1073	kontrola kardiologiczna i psychiatryczna
+T16	Investigation 1079 1108	kontrola ciśnienia tętniczego
+T17	Investigation 1124 1144	kontrola lipidogramu
+T18	Behaviour 1151 1183	dieta DASH i niskocholesterolowa
+T19	Behaviour 1191 1210	redukcja masy ciała
+T20	Behaviour 1218 1263	stały, umiarkowany, aerobowy wysiłek fizyczny
+T21	Drug 1308 1315	Asentra
+T22	Drug_dose 1316 1334	50 mg 1 tabl. rano
+R7	Drg Arg1:T21 Arg2:T22	
+T23	Condition 1483 1506	nadciśnienia tętniczego
+N5	Reference T23 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T24	Condition 1508 1522	hiperlipidemii
+N6	Reference T24 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T25	Investigation_result 1570 1598	wahania ciśnienia tętniczego
+T26	Symptom 1604 1640	nietypowych dolegliwości dławicowych
+N7	Reference T26 ICD10:R07.3	Inne bóle w klatce piersiowej
+T27	Date 1745 1759	kilka lat temu
+T28	Condition 1760 1794	wypadek komunikacyjny urazem głowy
+N8	Reference T28 ICD10:S00	Powierzchowny uraz głowy
+T29	Condition 1797 1818	wstrząśnieniem mózgu,
+N9	Reference T29 ICD10:S06.0	Wstrząśnienie
+R8	Dat Arg1:T27 Arg2:T28	
+R9	Dat Arg1:T27 Arg2:T29	
+T30	Condition 736 756	wstrząśnieniem mózgu
+N10	Reference T30 ICD10:S06.0	Wstrząśnienie
+T31	Condition 762 777	złamaniem żeber
+N11	Reference T31 ICD10:S22	Złamanie żebra (żeber), mostka i odcinka piersiowego kręgosłupa
+T32	Condition 1819 1834	złamania żeber.
+N12	Reference T32 ICD10:S22	Złamanie żebra (żeber), mostka i odcinka piersiowego kręgosłupa
+R10	Dat Arg1:T27 Arg2:T32	
+T33	Treatment 833 841	operacji
+T34	Condition 842 865	żylaków kończyn dolnych
+N13	Reference T34 ICD10:I83	Żylaki kończyn dolnych
+T35	Drug 814 823	metamizol
+T36	Condition 779 788	Uczulenie
+N14	Reference T36 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T37	Drug 792 808	preparaty jodowe
+R11	Alg Arg1:T36 Arg2:T37	
+R12	Alg Arg1:T36 Arg2:T35	
+T38	Condition 696 733	wypadku komunikacyjnym z urazem głowy
+N15	Reference T38 ICD10:S00	Powierzchowny uraz głowy
+T39	Condition 666 686	Zaburzenia afektywne
+N16	Reference T39 ICD10:F31.9	Zaburzenia afektywne dwubiegunowe, nieokreślone
+T40	Symptom 576 600	Bóle w klatce piersiowej
+N17	Reference T40 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T41	Investigation 603 625	diagnostyka w kierunku
+T42	Condition 626 654	choroby niedokrwiennej serca
+T43	Negation 655 664	negatywna
+R13	Neg Arg1:T43 Arg2:T42	
+T44	Condition 567 574	Otyłość
+N19	Reference T44 ICD10:E66	Otyłość
+T45	Condition 545 565	Hipercholesterolemia
+N20	Reference T45 ICD10:E78.0	Czysta hipercholesterolemia
+T46	Condition 501 543	Nadciśnienie tętnicze I stopnia wg ESH/ESC
+N21	Reference T46 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T47	Condition 439 480	Przewlekła rozkurczowa niewydolność serca
+T48	Symptom 483 499	I klasie wg NYHA
+N18	Reference T42 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+N22	Reference T47 ICD10:I50.9	Niewydolność serca, nieokreślona
+R11	Dat Arg1:T27 Arg2:T28
+R12	Alg Arg1:T7 Arg2:T8
+R16	Alg Arg1:T11 Arg2:T12
+R17	Alg Arg1:T11 Arg2:T13
+R2	Neg Arg1:T43 Arg2:T39
+R25	Neg Arg1:T5 Arg2:T4
+R3	Neg Arg1:T43 Arg2:T42
+R7	Alg Arg1:T36 Arg2:T37
+R9	Drg Arg1:T21 Arg2:T22

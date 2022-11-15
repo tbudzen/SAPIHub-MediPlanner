@@ -1,0 +1,109 @@
+T1	Investigation 2286 2293	rtg płu
+T2	Investigation 2296 2306	Echo serca
+T3	Investigation 2310 2319	Holter RR
+T4	Drug 2240 2246	Ampril
+T5	Drug 2252 2259	Amlopin
+T6	Drug 2265 2271	Fostex
+T7	Drug_dose 2260 2263	5mg
+R1	Drg Arg1:T5 Arg2:T7	
+T8	Drug_dose 2247 2250	5mg
+R2	Drg Arg1:T4 Arg2:T8	
+T9	Behaviour 2203 2229	warunki mieszkaniowe dobre
+T10	Condition 2145 2154	Uczulenia
+N1	Reference T10 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T11	Behaviour 2128 2138	Inne używk
+N2	Reference T11 ICD10:Z72	Problemy związane ze stylem życia
+T12	Negation 2141 2144	nie
+T13	Negation 2124 2127	nie
+T14	Behaviour 2107 2122	Palenie tytoniu
+N3	Reference T14 ICD10:Z72.0	Używanie tytoniu
+R3	Neg Arg1:T13 Arg2:T14	
+R4	Neg Arg1:T12 Arg2:T11	
+T15	Condition 2078 2087	borelioza
+N4	Reference T15 ICD10:A69.2	Choroba z Lyme
+T16	Condition 2095 2103	gruźlica
+N5	Reference T16 ICD10:A15	
+T17	Condition 2065 2068	WZW
+N6	Reference T17 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T18	Negation 2069 2075	( -  )
+R5	Neg Arg1:T18 Arg2:T17	
+T19	Negation 2088 2093	( - )
+R6	Neg Arg1:T19 Arg2:T15	
+T20	Negation 2103 2106	(-)
+R7	Neg Arg1:T20 Arg2:T16	
+T21	Treatment 2013 2032	Leczenie przewlekłe
+T22	Treatment 1901 1932	usunięcie fragmentu płuca leweg
+T23	Treatment 1988 2011	operacja przegrody nosa
+T24	Condition 1968 1978	sarkoidozy
+N7	Reference T24 ICD10:D86.9	Sarkoidoza, nieokreślona
+T25	Investigation 1945 1967	diagnostyki w kierunku
+T26	Date 1979 1987	w 2000r,
+R8	Dat Arg1:T26 Arg2:T24	
+R9	Dat Arg1:T26 Arg2:T25	
+T27	Symptom 1814 1838	Bóle w klatce piersiowej
+N8	Reference T27 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T28	Negation 1839 1845	neguje
+R10	Neg Arg1:T28 Arg2:T27	
+T29	Symptom 1847 1872	Zgłasza również chrapanie
+N9	Reference T29 ICD10:R06.5	Oddychanie przez usta
+T30	Condition 1787 1812	infekcji dróg oddechowych
+N10	Reference T30 ICD10:J06	Ostre zakażenie górnych dróg oddechowych o umiejscowieniu mnogim nieokreślonym
+T31	Condition 1480 1503	nadciśnienia tętniczego
+N11	Reference T31 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T32	Condition 1507 1517	sarkoidoza
+N12	Reference T32 ICD10:D86.9	Sarkoidoza, nieokreślona
+T33	Date 1518 1527	od 1999 r
+R11	Dat Arg1:T33 Arg2:T32	
+T34	Date 1564 1572	od 4 lat
+T35	Condition 1573 1581	w remisj
+R12	Dat Arg1:T34 Arg2:T35	
+T36	Condition 1609 1625	astmą oskrzelową
+N13	Reference T36 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T37	Condition 1631 1650	otyłością olbrzymią
+N14	Reference T37 ICD10:E66	Otyłość
+T38	Symptom 1749 1765	obrzęków podudzi
+N15	Reference T38 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T39	Condition 1689 1708	niewydolności serca
+N16	Reference T39 ICD10:I50	Niewydolność serca
+T40	Symptom 1727 1748	w klasie NYHA II/III,
+T41	Date 1709 1726	od dwóch miesięcy
+R13	Dat Arg1:T41 Arg2:T39	
+R14	Dat Arg1:T41 Arg2:T40	
+R15	Dat Arg1:T41 Arg2:T38	
+T42	Condition 438 466	Nadciśnienie tętnicze oporne
+N17	Reference T42 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T43	Condition 468 485	Astma oskrzelowa.
+N18	Reference T43 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T44	Condition 486 514	Sarkoidoza w okresie remisji
+N19	Reference T44 ICD10:D86	Sarkoidoza
+T45	Condition 516 531	Otyłość III st.
+N20	Reference T45 ICD10:E66	Otyłość
+T46	Condition 532 560	Podejrzenie bezdechu sennego
+N21	Reference T46 ICD10:G47.3	Bezdech senny
+T47	Investigation 965 994	kontrola ciśnienia tętniczego
+T48	Investigation 1004 1024	kontrola lipidogramu
+T49	Date 1026 1036	raz w roku
+R16	Dat Arg1:T49 Arg2:T48	
+T50	Behaviour 1038 1063	dieta niskocholesterolowa
+T51	Behaviour 1064 1083	redukcja masy ciała
+T52	Behaviour 1085 1130	stały, umiarkowany, aerobowy wysiłek fizyczny
+T53	Drug 1161 1172	Co-Prenessa
+T54	Drug_dose 1173 1197	8 mg/2,5 mg 1 tabl. rano
+R17	Drg Arg1:T53 Arg2:T54	
+T55	Drug 1198 1206	Bisocard
+T56	Drug_dose 1207 1224	5 mg 1 tabl. rano
+R18	Drg Arg1:T55 Arg2:T56	
+T57	Drug 1225 1232	Amlopin
+T58	Drug_dose 1233 1256	10 mg 1 tabl. wieczorem
+R19	Drg Arg1:T57 Arg2:T58	
+T59	Drug 1257 1262	Doxar
+T60	Drug_dose 1263 1285	4 mg 1 tabl. wieczorem
+R20	Drg Arg1:T59 Arg2:T60	
+T61	Drug 1286 1292	Atoris
+T62	Drug_dose 1293 1316	10 mg 1 tabl. wieczorem
+R21	Drg Arg1:T61 Arg2:T62	
+T63	Treatment 670 697	dalsza opieka w poradni POZ
+T64	Treatment 707 764	kontrola kardiologiczna, pulmonologiczna. laryngologiczna
+T65	Investigation 784 823	badania polisomnograficznego w kierunku
+T66	Condition 824 840	bezdechu sennego
+N22	Reference T66 ICD10:G47.3	Bezdech senny

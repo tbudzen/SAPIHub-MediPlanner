@@ -1,0 +1,116 @@
+T1	Condition 677 716	Istotna niedomykalność zastawki płucnej
+T2	Treatment 726 754	operacji kardiochirurgicznej
+N2	Reference T2 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T3	Condition 764 818	zweżenia zastawkowego i podzastawkowej tętnicy płucnej
+T4	Condition 824 865	ubytku w przegrodzie międzyprzedsionkowej
+N4	Reference T4 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T5	Date 867 872	1978r
+R1	Dat Arg1:T5 Arg2:T2	
+T6	Condition 885 903	Niewydolność serca
+N5	Reference T6 ICD10:I50.9	Niewydolność serca, nieokreślona
+T7	Condition 962 1006	Łagodna niedomykalność zastawki trójdzielnej
+N6	Reference T7 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+N1	Reference T1 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T8	Condition 1008 1039	Pośrednie prawdopodobieństwo HP
+N7	Reference T8 ICD10:I27.2	Nadciśnienie płucne wtórne o innej etiologii
+T9	Investigation_result 1042 1054	RVPs-33 mmHg
+T10	Condition 1057 1087	Pojedyncze pobudzenia komorowe
+N8	Reference T10 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T11	Condition 1089 1144	Guzek podopłucnowy płuca prawego do dalszej diagnostyki
+N9	Reference T11 ICD10:D38.2	Opłucna
+T13	Drug 1265 1275	NaCl 0,9 %
+T14	Drug 1278 1284	Magnez
+T15	Drug 1287 1294	Nonpres
+T16	Treatment 1412 1468	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T17	Behaviour 1471 1511	Dieta lekkostrawna , niskocholesterolowa
+T18	Investigation_result 1515 1598	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T19	Investigation_result 1600 1644	Kontrola elektrolitów i kreatyniny, mocznika
+T20	Date 1645 1653	za 3 dni
+R2	Dat Arg1:T20 Arg2:T19	
+T21	Investigation_result 1663 1711	Systematyczna kontrola ciśnienia tętniczego krwi
+T22	Drug 1762 1769	Nonpres
+T23	Drug 1788 1796	Magne B6
+T24	Drug_dose 1770 1786	25 mg 1x dz rano
+T25	Drug_dose 1797 1807	1x dz rano
+R3	Drg Arg1:T22 Arg2:T24	
+R4	Drg Arg1:T23 Arg2:T25	
+T26	Symptom 1977 2007	pogorszenia tolerancji wysiłku
+T27	Symptom 2009 2031	Nasilenie dolegliwości
+T28	Date 2032 2042	od 2-3 lat
+T29	Symptom 2061 2143	okresowe bóle w klatce piersiowej o charakterze punktowym nie związane z wysiłkiem
+N10	Reference T29 ICD10:R07.3	Inne bóle w klatce piersiowej
+T30	Symptom 2149 2173	okresowe kołatania serca
+N11	Reference T30 ICD10:R00.2	Kołatanie serca
+T31	Negation 2176 2182	Neguje
+T32	Symptom 2183 2195	zasłabnięcia
+T33	Treatment 2222 2241	korekcji całkowitej
+N12	Reference T33 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T34	Condition 2251 2269	Tetralogii Fallota
+N13	Reference T34 ICD10:Q21.3	Tetralogia Fallota
+T35	Date 2272 2276	1987
+R5	Dat Arg1:T35 Arg2:T33	
+R6	Neg Arg1:T31 Arg2:T32	
+R7	Dat Arg1:T28 Arg2:T27	
+T36	Treatment 2309 2317	leczeniu
+T37	Date 2347 2361	ok 8 lat temu.
+A1	Status T36 Historical_Insignificant
+R8	Dat Arg1:T37 Arg2:T36	
+T38	Treatment 2428 2449	kolejny etap operacji
+A2	Source T38 Declared
+N14	Reference T38 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T39	Date 2450 2471	w późniejszym okresie
+R9	Dat Arg1:T39 Arg2:T38	
+T40	Treatment 2474 2497	Ostatnia Hospitalizacji
+T41	Date 2498 2509	w 2006 roku
+R10	Dat Arg1:T41 Arg2:T40	
+T42	Treatment 2558 2577	Leczenie przewlekłe
+T43	Negation 2580 2584	brak
+R11	Neg Arg1:T43 Arg2:T42	
+T44	Condition 2613 2616	WZW
+N15	Reference T44 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T45	Negation 2617 2623	( -  )
+T46	Condition 2626 2635	borelioza
+N16	Reference T46 ICD10:A69.2	Choroba z Lyme
+T47	Condition 2642 2646	Odra
+N17	Reference T47 ICD10:B05	Odra
+T48	Negation 2647 2652	( - )
+T49	Negation 2636 2641	( - )
+R12	Neg Arg1:T45 Arg2:T44	
+R13	Neg Arg1:T49 Arg2:T46	
+R14	Neg Arg1:T48 Arg2:T47	
+T50	Condition 2653 2674	W wywiadzie rodzinnym
+A3	Status T50 Family
+T51	Negation 2677 2688	brak danych
+R15	Neg Arg1:T51 Arg2:T50	
+T52	Behaviour 2690 2705	Palenie tytoniu
+T53	Negation 2707 2710	nie
+T54	Behaviour 2712 2723	Inne używki
+T55	Negation 2725 2728	nie
+T56	Condition 2729 2738	Uczulenia
+N18	Reference T56 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T57	Negation 2740 2746	neguje
+R16	Neg Arg1:T53 Arg2:T52	
+R17	Neg Arg1:T55 Arg2:T54	
+R18	Neg Arg1:T57 Arg2:T56	
+T58	Behaviour 2763 2789	warunki mieszkaniowe dobre
+T59	Behaviour 2792 2805	mieszka z sam
+T61	Negation 2813 2816	bez
+T62	Investigation 2850 2860	Echo serca
+T63	Investigation 2863 2873	Holter EKG
+T64	Investigation 2875 2879	RR  
+T65	Investigation 2881 2896	Próba Wysiłkowa
+T66	Drug 2817 2835	leków przewlekłych
+R20	Neg Arg1:T61 Arg2:T66	
+N19	Reference T52 ICD10:Z72.0	Używanie tytoniu
+R19	Dat Arg1:T5 Arg2:T4	
+R21	Dat Arg1:T5 Arg2:T3	
+#1	AnnotatorNotes T3	Q22.1 + Q24.3
+R22	Dat Arg1:T35 Arg2:T34	
+T12	Condition 2327 2346	Helicobacter pyroli
+R23	Dat Arg1:T37 Arg2:T12	
+A4	Status T12 Historical_Insignificant
+T60	Symptom 906 920	I/II' wg. NYHA
+N3	Reference T60 ICD10:I50	Niewydolność serca
+T67	Condition 921 953	z frakcją wyrzutową lewej komory
+N20	Reference T67 ICD10:I50.9	Niewydolność serca, nieokreślona
+T68	Investigation_result 956 959	52%

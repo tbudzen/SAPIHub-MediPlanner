@@ -1,0 +1,70 @@
+T1	Behaviour 356 401	dieta niskocholesterolowa, zmiana stylu życia
+T2	Investigation 414 434	kontrola lipdogramu-
+T3	Date 448 457	za 3 m-ce
+T4	Investigation 460 471	kontrola RR
+T5	Condition 783 806	Ekstrasystolia komorowa
+T6	Condition 808 829	Nadciśnienie tętnicze
+T7	Condition 834 855	Hipercholesterolemia.
+T8	Investigation 1050 1062	zapisach ekg
+T9	Investigation_result 1063 1127	arytmii pod postacią dodatkowych skurczów pochodzenia komorowego
+T10	Investigation 1654 1664	echo serca
+T11	Investigation 1666 1669	TET
+T12	Investigation 1671 1675	ABPM
+T13	Investigation 1677 1687	Holter ekg
+T14	Negation 1618 1625	żadnych
+T15	Drug 1612 1616	Leki
+T16	Negation 1569 1575	neguje
+T17	Behaviour 1550 1567	Uzależnienie inne
+zane ze stylem życia
+T18	Investigation 513 517	ABPM
+T19	Symptom 1136 1144	omdlenia
+T20	Symptom 1153 1170	inne dolegliwości
+T21	Negation 1146 1152	neguje
+T22	Negation 1129 1135	Neguje
+T23	Investigation 1197 1200	ekg
+T24	Symptom 1238 1260	bólu stawów łokciowych
+T25	Condition 1285 1287	HA
+T26	Investigation_result 1299 1310	140/90mmHg,
+T27	Date 1311 1319	od 3 lat
+T28	Condition 1322 1342	hipercholesterolemia
+T29	Condition 1383 1399	krótkowzroczność
+T30	Negation 1421 1427	neguje
+T31	Treatment 1402 1419	Przebyte operacje
+T32	Condition 1454 1467	wada wrodzona
+T33	Negation 1477 1483	neguje
+T34	Negation 1497 1505	neguje  
+T35	Condition 1468 1475	Alergie
+T36	Behaviour 1485 1495	Nikotynizm
+T37	Behaviour 1507 1548	Alkohol: okazjonalnie, w małych ilościach
+T38	Treatment 521 555	kontrola w Poradni Kardiologicznej
+T39	Treatment 331 353	kontrola u lekarza POZ
+N1	Reference T5 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komÃ³r
+N2	Reference T6 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N3	Reference T7 ICD10:E78.0	Czysta hipercholesterolemia
+N4	Reference T9 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komÃ³r
+N5	Reference T17 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+N6	Reference T19 ICD10:R55	Omdlenie i zapaÅÄ
+N7	Reference T24 ICD10:M25.5	BÃ³l stawu
+N8	Reference T25 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N9	Reference T28 ICD10:E78.0	Czysta hipercholesterolemia
+N10	Reference T29 ICD10:H52.1	KrÃ³tkowzrocznoÅÄ
+N11	Reference T31 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N12	Reference T32 ICD10:Q89.9	Wrodzona wada rozwojowa, nieokreÅlona
+N13	Reference T35 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N14	Reference T36 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N15	Reference T37 ICD10:Z72.1	UÅ¼ywanie alkoholu
+R10	Neg Arg1:T22 Arg2:T9
+R11	Neg Arg1:T21 Arg2:T20
+R30	Neg Arg1:T14 Arg2:T15
+R36	Neg Arg1:T16 Arg2:T17
+R4	Dat Arg1:T3 Arg2:T2
+R54	Neg Arg1:T30 Arg2:T31
+R65	Neg Arg1:T33 Arg2:T35
+R67	Neg Arg1:T33 Arg2:T36
+R7	Inv Arg1:T8 Arg2:T9
+R8	Neg Arg1:T22 Arg2:T19
+R82	Neg Arg1:T34 Arg2:T36
+R83	Neg Arg1:T34 Arg2:T37
+R91	Dat Arg1:T27 Arg2:T25
+A1	Status T32 Family
+A2	Status T37 Historical_Insignificant

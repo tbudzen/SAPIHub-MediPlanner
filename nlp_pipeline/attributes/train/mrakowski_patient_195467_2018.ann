@@ -1,0 +1,219 @@
+T1	Treatment 557 584	dalsza opieka w poradni POZ
+T2	Treatment 587 669	okresowa kontrola kardiologiczna, endokrynologiczna, neurologiczna, psychiatryczna
+T3	Investigation 671 710	codzienna kontrola ciśnienia tętniczego
+T4	Investigation 713 790	okresowa kontrolą morfologii, lipidogramu, parametrów wątrobowych i nerkowych
+T5	Condition 1017 1044	Przewlekła choroba wieńcowa
+N1	Reference T5 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T6	Investigation_result 1046 1060	zmiany brzeżne
+N2	Reference T6 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T7	Investigation 1063 1089	angio CT tętnic wieńcowych
+R1	Inv Arg1:T7 Arg2:T6	
+T8	Condition 1092 1122	Niewydolność serca z zachowaną
+N3	Reference T8 ICD10:I50.9	Niewydolność serca, nieokreślona
+T9	Investigation_result 1123 1131	EF - 62%
+T10	Condition 1134 1174	Niedomykalność zastawki mitralnej I/IIst
+N4	Reference T10 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T11	Condition 1177 1218	Niedomykalność zastawki trójdzielnej I st
+N5	Reference T11 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T12	Investigation_result 1221 1232	SPAP 33mmHg
+T13	Condition 1234 1255	Nadciśnienie tętnicze
+N6	Reference T13 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T14	Condition 1257 1278	Zespół Parkinsonowski
+N7	Reference T14 ICD10:G20	Choroba Parkinsona
+T15	Condition 1280 1302	Niedoczynność tarczycy
+N8	Reference T15 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T16	Treatment 1313 1340	strumektomii z powodu guzka
+A1	Status T16 Historical_Insignificant
+N9	Reference T16 ICD10:E04.1	Guzek tarczycy pojedynczy, nietoksyczny
+T17	Date 1343 1348	1997r
+R2	Dat Arg1:T17 Arg2:T16	
+T18	Condition 1350 1358	Depresja
+N10	Reference T18 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T19	Symptom 1529 1553	bólu w klatce piersiowej
+N11	Reference T19 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T20	Date 1554 1564	od 5-7 dni
+R3	Dat Arg1:T20 Arg2:T19	
+T21	Symptom 1567 1599	ból pojawiła się po zasłabnięciu
+T22	Symptom 1644 1701	bolały  plecy obecnie ból przemieścił się w okolicę serca
+T23	Symptom 1704 1804	Ból w klatce piersiowej nasila się przy pochyleniu do przodu , przy poruszaniu rękoma ból się nasila
+N13	Reference T23 ICD10:R07.3	
+T25	Symptom 1806 1831	Ból nie zależy do wysiłku
+N14	Reference T25 ICD10:R07.3	Inne bóle w klatce piersiowej
+T26	Symptom 1842 1866	niską tolerancje wysiłku
+N15	Reference T26 ICD10:R53	Złe samopoczucie i zmęczenie
+T27	Symptom 1884 1909	bóle w okolicy lędźwiowej
+N16	Reference T27 ICD10:M54.5	Ból okolicy lędźwiowo-krzyżowej
+T28	Investigation 1935 1943	MR głowy
+T29	Date 1944 1956	21.06.2018  
+R4	Dat Arg1:T29 Arg2:T28	
+T30	Investigation_result 1958 2005	mnogie zmiany naczyniopochodne w istocie białej
+N17	Reference T30 ICD10:R90	Nieprawidłowe wyniki badań obrazowych ośrodkowego systemu nerwowego
+R5	Inv Arg1:T28 Arg2:T30	
+T31	Treatment 2008 2032	pod opieką neurologiczną
+T32	Condition 2046 2067	zespół Parkinsonowski
+N18	Reference T32 ICD10:G20	Choroba Parkinsona
+T33	Condition 2087 2108	Nadciśnienie tętnicze
+N19	Reference T33 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T34	Condition 2110 2118	Depresja
+N20	Reference T34 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T35	Negation 2125 2137	nie przyjęła
+T36	Drug 2138 2158	leków hipotensyjnych
+R6	Neg Arg1:T35 Arg2:T36	
+T37	Drug 2181 2188	Nebilet
+T38	Investigation 2194 2197	EKG
+T39	Investigation_result 2215 2254	Oś pośrednia. RZM o częstości ok 90/min
+T40	Investigation_result 2256 2295	ujemne załamki T w II, III, aVF, V 4-V6
+R7	Inv Arg1:T38 Arg2:T39	
+N21	Reference T40 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+R8	Inv Arg1:T38 Arg2:T40	
+T41	Investigation 2296 2306	echo serca
+T42	Date 2316 2323	10.2018
+R9	Dat Arg1:T42 Arg2:T41	
+T43	Investigation_result 2330 2363	odcinkowych zaburzeń kurczliwości
+R10	Inv Arg1:T41 Arg2:T43	
+T44	Investigation 2369 2388	badaniu palpacyjnym
+T45	Symptom 2389 2435	ból się nasila przy ucisku na klatkę piersiową
+N22	Reference T45 ICD10:R07.3	Inne bóle w klatce piersiowej
+T46	Investigation 2439 2460	badaniu przedmiotowym
+T47	Negation 2496 2499	Bez
+T48	Symptom 2500 2509	duszności
+N23	Reference T48 ICD10:R06.0	Duszność
+R11	Neg Arg1:T47 Arg2:T48	
+T49	Investigation_result 2512 2539	Akcja serca miarowa 100/min
+T50	Investigation_result 2545 2578	szmerów patologicznych nad sercem
+T51	Investigation_result 2580 2609	Szmer pęcherzykowy prawidłowy
+T52	Investigation_result 2612 2635	Brzuch mieki niebolesny
+R12	Inv Arg1:T46 Arg2:T52	
+R13	Inv Arg1:T46 Arg2:T51	
+R14	Inv Arg1:T46 Arg2:T50	
+R15	Inv Arg1:T46 Arg2:T49	
+T53	Investigation_result 2640 2660	objawów otrzewnowych
+T54	Investigation_result 2663 2682	perystaltyka obecna
+R16	Inv Arg1:T46 Arg2:T53	
+R17	Inv Arg1:T46 Arg2:T54	
+T55	Negation 2684 2687	Bez
+T56	Symptom 2688 2718	obrzęków na kończynach dolnych
+R18	Neg Arg1:T55 Arg2:T56	
+T57	Symptom 2908 2933	bólów w klatce piersiowej
+N25	Reference T57 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T58	Investigation_result 2936 2948	nowych zmian
+T59	Investigation 2951 2954	EKG
+R19	Inv Arg1:T59 Arg2:T58	
+T60	Investigation_result 2960 3011	wysokiego ciśnienia tętniczego krwi do 190/100 mmHg
+N26	Reference T60 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T61	Symptom 3015 3039	Bóle w klatce piersiowej
+N27	Reference T61 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T62	Date 3040 3050	od 5-7 dni
+R20	Dat Arg1:T62 Arg2:T61	
+T63	Symptom 3053 3085	ból pojawiła się po zasłabnięciu
+T64	Symptom 3130 3187	bolały  plecy obecnie ból przemieścił się w okolicę serca
+N28	Reference T64 ICD10:R07.2	Ból w okolicy przedsercowej
+N12	Reference T22 ICD10:R07.2	Ból w okolicy przedsercowej
+T65	Symptom 3190 3290	Ból w klatce piersiowej nasila się przy pochyleniu do przodu , przy poruszaniu rękoma ból się nasila
+N29	Reference T65 ICD10:R07.3	Inne bóle w klatce piersiowej
+T67	Symptom 3292 3317	Ból nie zależy do wysiłku
+N30	Reference T67 ICD10:R07.3	
+T68	Symptom 3337 3361	niską tolerancje wysiłku
+N31	Reference T68 ICD10:R53	Złe samopoczucie i zmęczenie
+T69	Symptom 3368 3393	bóle w okolicy lędźwiowej
+N32	Reference T69 ICD10:M54.5	Ból okolicy lędźwiowo-krzyżowej
+T70	Investigation 3419 3427	MR głowy
+T71	Date 3428 3440	21.06.2018  
+R21	Dat Arg1:T71 Arg2:T70	
+T72	Investigation_result 3442 3489	mnogie zmiany naczyniopochodne w istocie białej
+N33	Reference T72 ICD10:R90	Nieprawidłowe wyniki badań obrazowych ośrodkowego systemu nerwowego
+R22	Inv Arg1:T70 Arg2:T72	
+T73	Treatment 3492 3516	pod opieką neurologiczną
+T74	Condition 3530 3551	zespół Parkinsonowski
+N34	Reference T74 ICD10:G20	Choroba Parkinsona
+T75	Condition 3571 3592	Nadciśnienie tętnicze
+N35	Reference T75 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T76	Condition 3594 3616	Niedoczynność tarczycy
+N36	Reference T76 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T77	Condition 3619 3627	Depresja
+N37	Reference T77 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T78	Negation 3634 3646	nie przyjęła
+T79	Drug 3647 3667	leków hipotensyjnych
+R23	Neg Arg1:T78 Arg2:T79	
+T80	Investigation 3671 3674	EKG
+T81	Investigation_result 3692 3731	Oś pośrednia. RZM o częstości ok 90/min
+R24	Inv Arg1:T80 Arg2:T81	
+T82	Investigation_result 3733 3772	ujemne załamki T w II, III, aVF, V 4-V6
+N38	Reference T82 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+R25	Inv Arg1:T80 Arg2:T82	
+T83	Investigation 3773 3783	echo serca
+T84	Investigation_result 3802 3835	odcinkowych zaburzeń kurczliwości
+R26	Inv Arg1:T83 Arg2:T84	
+T85	Treatment 3836 3853	Przebyte operacje
+T86	Treatment 3864 3891	strumektomii z powodu guzka
+A2	Status T86 Historical_Insignificant
+N39	Reference T86 ICD10:E04.1	Guzek tarczycy pojedynczy, nietoksyczny
+T87	Date 3894 3898	1997
+R27	Dat Arg1:T87 Arg2:T86	
+T88	Treatment 3900 3919	Leczenie przewlekłe
+T89	Treatment 3922 3934	okulistyczne
+T90	Treatment 3936 3950	neurologicznej
+T91	Condition 3979 3982	WZW
+N40	Reference T91 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T92	Condition 3992 4001	borelioza
+N41	Reference T92 ICD10:A69.2	Choroba z Lyme
+T93	Negation 4004 4005	-
+R28	Neg Arg1:T93 Arg2:T92	
+T94	Negation 3985 3986	-
+R29	Neg Arg1:T94 Arg2:T91	
+T95	Condition 4010 4029	wywiadzie rodzinnym
+A3	Status T95 Family
+T96	Negation 4032 4036	brak
+R30	Neg Arg1:T96 Arg2:T95	
+T97	Behaviour 4038 4053	Palenie tytoniu
+T98	Date 4055 4063	od 10 la
+T99	Negation 4064 4072	nie pali
+R31	Dat Arg1:T98 Arg2:T97	
+R32	Neg Arg1:T99 Arg2:T97	
+T100	Behaviour 4074 4085	Inne używki
+T101	Negation 4087 4090	nie
+R33	Neg Arg1:T101 Arg2:T100	
+T102	Condition 4091 4100	Uczulenia
+N43	Reference T102 ICD10:T78.4	Alergia, nieokreślona
+T103	Negation 4102 4108	neguje
+R34	Neg Arg1:T103 Arg2:T102	
+T104	Behaviour 4125 4151	warunki mieszkaniowe dobre
+T105	Drug 4173 4186	Euthyrox N125
+T106	Drug_dose 4187 4219	1x dz po 1/2 tabl. rano na czczo
+R35	Drg Arg1:T105 Arg2:T106	
+T107	Drug 4221 4228	Asertin
+T108	Drug_dose 4229 4239	1x dz rano
+R36	Drg Arg1:T107 Arg2:T108	
+T109	Drug 4242 4249	Madopar
+T110	Drug_dose 4250 4260	1x dz rano
+R37	Drg Arg1:T109 Arg2:T110	
+T111	Drug 4263 4272	Nebilenin
+T112	Drug_dose 4273 4283	5 mg 1x dz
+R38	Drg Arg1:T111 Arg2:T112	
+T113	Drug 4286 4294	Setal MR
+T114	Drug_dose 4295 4305	1x dz rano
+R39	Drg Arg1:T113 Arg2:T114	
+T115	Drug 4308 4315	Roswera
+T116	Drug_dose 4316 4337	15 mg 1x dz wieczorem
+R40	Drg Arg1:T115 Arg2:T116	
+T117	Drug 4339 4350	Molsidomina
+T118	Drug_dose 4351 4371	4 mg 1x dz wieczorem
+R41	Drg Arg1:T117 Arg2:T118	
+T119	Drug 4373 4380	Tritace
+T120	Drug_dose 4381 4413	5 mg 1x dz po 1/2 tabl wieczorem
+R42	Drg Arg1:T119 Arg2:T120	
+T121	Investigation 4432 4442	Echo serca
+T122	Investigation 4445 4455	Holter EKG
+T123	Investigation 4458 4473	Próba Wysiłkowa
+N44	Reference T21 ICD10:R55	Omdlenie i zapaść
+T124	Negation 2326 2329	bez
+R43	Neg Arg1:T124 Arg2:T43	
+T125	Negation 2541 2544	Bez
+R44	Neg Arg1:T125 Arg2:T50	
+T126	Negation 2636 2639	bez
+R45	Neg Arg1:T126 Arg2:T53	
+T127	Negation 3798 3801	bez
+R46	Neg Arg1:T127 Arg2:T84	
+N42	Reference T97 ICD10:Z72.0	Używanie tytoniu
+N24	Reference T56 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N45	Reference T100 ICD10:Z72	Problemy związane ze stylem życia

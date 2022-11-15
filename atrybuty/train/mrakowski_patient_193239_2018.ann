@@ -1,0 +1,35 @@
+T1	Treatment 330 398	Dalsza opieka kardiologiczna ambulatoryjna w Poradni Kardiologicznej
+T2	Behaviour 401 440	Zalecona umiarkowana aktywność fizyczna
+T3	Behaviour 446 466	leczenie dietetyczne
+T4	Behaviour 470 562	Zwolniona z  intensywnych wysiłków  fizycznych oraz biegów długodystansowych w roku szkolnym
+T5	Date 563 572	2017/2018
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Condition 791 819	Wspólny pień tętniczy typu I
+N1	Reference T6 ICD10:Q20.0	Wspólny pień tętniczy
+T7	Treatment 824 862	operacji z użyciem homograftu płucnego
+T8	Date 864 875	23.08.2002r
+R2	Dat Arg1:T8 Arg2:T7	
+T9	Treatment 889 923	angioplastyce balonowej homograftu
+T10	Date 925 936	21.10.2008r
+R3	Dat Arg1:T10 Arg2:T9	
+T11	Treatment 950 1001	reoperacji - wymiana homograftu płucnego - śr. 23mm
+T12	Date 1003 1014	11.01.2013r
+R4	Dat Arg1:T12 Arg2:T11	
+T13	Condition 1019 1060	Umiarkowane  zwężenie homograftu płucnego
+N2	Reference T13 ICD10:I37.0	Zwężenie zastawki pnia płucnego
+T14	Condition 1062 1088	Nieprawidłowy przebieg RCA
+N3	Reference T14 ICD10:Q24.5	Wada rozwojowa naczyń wieńcowych
+T15	Condition 1094 1110	Arytmia komorowa
+N4	Reference T15 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T16	Condition 1115 1122	Otyłość
+N5	Reference T16 ICD10:E66.9	Otyłość, nieokreślona
+T17	Condition 1270 1289	wrodzoną wada serca
+T18	Investigation 1305 1322	badania kontrolne
+T19	Condition 1356 1373	wywiad alergiczny
+N7	Reference T19 ICD10:T78.4	Alergia, nieokreślona
+T20	Negation 1374 1380	ujemny
+R5	Neg Arg1:T20 Arg2:T19	
+N6	Reference T17 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T21	Drug 1325 1339	leków na stałe
+T22	Negation 1340 1353	nie otrzymuje
+R6	Neg Arg1:T22 Arg2:T21	

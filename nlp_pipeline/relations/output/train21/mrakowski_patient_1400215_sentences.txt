@@ -1,0 +1,795 @@
+allRelations          : 111
+oks                   : 36
+isRedundantAndRemoveds: 67
+shouldNotBeRemoveds   : 2
+shouldBeBemoveds      : 6
+GOOD / BAD            : 103 / 8
+Sentence 0:
+------------------------------------------------
+Wiek: 69 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+Skierowano do Poradni Pulmonologicznej, Kardiologicznej, Urologicznej. 
+
+
+
+Sentence 4:
+Wskazane rozważenie wykonania SPECT serca w ramach poradni Kardiologicznej.
+
+
+
+Sentence 5:
+Dieta lekkostrawna , niskocholesterolowa . 
+
+
+
+Sentence 6:
+Zaprzestanie palenia papierosów. 
+
+
+
+Sentence 7:
+Okresowo kontrola lipidogramu .
+
+
+Sentence 8:
+stężenia elektrolitów , parametrów wydolności nerek. 
+
+
+
+Sentence 9:
+Systematyczna kontrola ciśnienia tętniczego krwi. 
+
+
+
+Sentence 10:
+Wskazane systematyczne przyjmowanie leków  
+Rp.
+
+
+
+Sentence 11:
+Acard 75 mg 1x1 wieczorem
+Atoris 20 mg 1x1 rano
+
+R1	Drg Arg1:T8 Arg2:T9 << OK >>	Acard -> 75 mg 1x1 wieczorem  <RANK: 3> <info: start[740, 746] <type: RIGHT>>
+R2	Drg Arg1:T8 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Acard -> 20 mg 1x1 rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[740, 773] <type: RIGHT>>
+R3	Drg Arg1:T10 Arg2:T9 <<REDUNDANT!!!REMOVED>>	Atoris -> 75 mg 1x1 wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[766, 746] <type: LEFT>>
+R4	Drg Arg1:T10 Arg2:T11 << OK >>	Atoris -> 20 mg 1x1 rano  <RANK: 3> <info: start[766, 773] <type: RIGHT>>
+
+
+Sentence 12:
+Nolpaza 20 mg 1x dz rano na czczo 
+
+R5	Drg Arg1:T12 Arg2:T13 << OK >>	Nolpaza -> 20 mg 1x dz rano na czczo  <RANK: 3> <info: start[788, 796] <type: RIGHT>>
+
+
+Sentence 13:
+Prestarium 5 mg 1x dz po 1/2 tabl. wieczorem. 
+
+R6	Drg Arg1:T14 Arg2:T15 << OK >>	Prestarium -> 5 mg 1x dz po 1/2 tabl. wieczorem  <RANK: 3> <info: start[823, 834] <type: RIGHT>>
+
+
+Sentence 14:
+Polfilin 400 mg 1x1 rano
+Afobam 0,25 mg 1x1 doraźnie - wg zaleceń lekarza POZ 
+Magnez 1x1 rano
+Atrovent  N 20 ug 2x1 , Serevent 25ug 1x1 rano , Seebri breezhaler 44ug 1x1 rano - wg zaleceń Pulmonologa
+------------------------------------------------
+
+R7	Drg Arg1:T16 Arg2:T17 << OK >>	Polfilin -> 400 mg 1x1 rano  <RANK: 3> <info: start[870, 879] <type: RIGHT>>
+R8	Drg Arg1:T16 Arg2:T19 <<REDUNDANT!!!REMOVED>>	Polfilin -> 0,25 mg 1x1 doraźnie - wg zaleceń lekarza POZ <:REMOVED other first tag between (right):> <RANK: 1> <info: start[870, 902] <type: RIGHT>>
+R9	Drg Arg1:T16 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Polfilin -> 1x1 rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[870, 956] <type: RIGHT>>
+R10	Drg Arg1:T16 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Polfilin -> 20 ug 2x1 <:REMOVED other first tag between (right):> <RANK: 0> <info: start[870, 977] <type: RIGHT>>
+R11	Drg Arg1:T16 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Polfilin -> 25ug 1x1 rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[870, 998] <type: RIGHT>>
+R12	Drg Arg1:T16 Arg2:T27 <<REDUNDANT!!!REMOVED>>	Polfilin -> 44ug 1x1 rano - wg zaleceń Pulmonologa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[870, 1032] <type: RIGHT>>
+R13	Drg Arg1:T18 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Afobam -> 400 mg 1x1 rano <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[895, 879] <type: LEFT>>
+R14	Drg Arg1:T18 Arg2:T19 << OK >>	Afobam -> 0,25 mg 1x1 doraźnie - wg zaleceń lekarza POZ  <RANK: 3> <info: start[895, 902] <type: RIGHT>>
+R15	Drg Arg1:T18 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Afobam -> 1x1 rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[895, 956] <type: RIGHT>>
+R16	Drg Arg1:T18 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Afobam -> 20 ug 2x1 <:REMOVED other first tag between (right):> <RANK: 0> <info: start[895, 977] <type: RIGHT>>
+R17	Drg Arg1:T18 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Afobam -> 25ug 1x1 rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[895, 998] <type: RIGHT>>
+R18	Drg Arg1:T18 Arg2:T27 <<REDUNDANT!!!REMOVED>>	Afobam -> 44ug 1x1 rano - wg zaleceń Pulmonologa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[895, 1032] <type: RIGHT>>
+R19	Drg Arg1:T20 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Magnez -> 400 mg 1x1 rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[949, 879] <type: LEFT>>
+R20	Drg Arg1:T20 Arg2:T19 <<REDUNDANT!!!REMOVED>>	Magnez -> 0,25 mg 1x1 doraźnie - wg zaleceń lekarza POZ <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[949, 902] <type: LEFT>>
+R21	Drg Arg1:T20 Arg2:T21 << OK >>	Magnez -> 1x1 rano  <RANK: 3> <info: start[949, 956] <type: RIGHT>>
+R22	Drg Arg1:T20 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Magnez -> 20 ug 2x1 <:REMOVED other first tag between (right):> <RANK: 1> <info: start[949, 977] <type: RIGHT>>
+R23	Drg Arg1:T20 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Magnez -> 25ug 1x1 rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[949, 998] <type: RIGHT>>
+R24	Drg Arg1:T20 Arg2:T27 <<REDUNDANT!!!REMOVED>>	Magnez -> 44ug 1x1 rano - wg zaleceń Pulmonologa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[949, 1032] <type: RIGHT>>
+R25	Drg Arg1:T22 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Atrovent  N -> 400 mg 1x1 rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[965, 879] <type: LEFT>>
+R26	Drg Arg1:T22 Arg2:T19 <<REDUNDANT!!!REMOVED>>	Atrovent  N -> 0,25 mg 1x1 doraźnie - wg zaleceń lekarza POZ <:REMOVED other first tag between (left):> <RANK: 1> <info: start[965, 902] <type: LEFT>>
+R27	Drg Arg1:T22 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Atrovent  N -> 1x1 rano <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[965, 956] <type: LEFT>>
+R28	Drg Arg1:T22 Arg2:T23 << OK >>	Atrovent  N -> 20 ug 2x1  <RANK: 3> <info: start[965, 977] <type: RIGHT>>
+R29	Drg Arg1:T22 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Atrovent  N -> 25ug 1x1 rano <:REMOVED other first tag between (right):> <RANK: 2> <info: start[965, 998] <type: RIGHT>>
+R30	Drg Arg1:T22 Arg2:T27 <<REDUNDANT!!!REMOVED>>	Atrovent  N -> 44ug 1x1 rano - wg zaleceń Pulmonologa <:REMOVED other first tag between (right):> <RANK: 2> <info: start[965, 1032] <type: RIGHT>>
+R31	Drg Arg1:T24 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Serevent -> 400 mg 1x1 rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[989, 879] <type: LEFT>>
+R32	Drg Arg1:T24 Arg2:T19 <<REDUNDANT!!!REMOVED>>	Serevent -> 0,25 mg 1x1 doraźnie - wg zaleceń lekarza POZ <:REMOVED other first tag between (left):> <RANK: 0> <info: start[989, 902] <type: LEFT>>
+R33	Drg Arg1:T24 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Serevent -> 1x1 rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[989, 956] <type: LEFT>>
+R34	Drg Arg1:T24 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Serevent -> 20 ug 2x1 <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[989, 977] <type: LEFT>>
+R35	Drg Arg1:T24 Arg2:T25 << OK >>	Serevent -> 25ug 1x1 rano  <RANK: 3> <info: start[989, 998] <type: RIGHT>>
+R36	Drg Arg1:T24 Arg2:T27 <<REDUNDANT!!!REMOVED>>	Serevent -> 44ug 1x1 rano - wg zaleceń Pulmonologa <:REMOVED other first tag between (right):> <RANK: 2> <info: start[989, 1032] <type: RIGHT>>
+R37	Drg Arg1:T26 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Seebri breezhaler -> 400 mg 1x1 rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1014, 879] <type: LEFT>>
+R38	Drg Arg1:T26 Arg2:T19 <<REDUNDANT!!!REMOVED>>	Seebri breezhaler -> 0,25 mg 1x1 doraźnie - wg zaleceń lekarza POZ <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1014, 902] <type: LEFT>>
+R39	Drg Arg1:T26 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Seebri breezhaler -> 1x1 rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1014, 956] <type: LEFT>>
+R40	Drg Arg1:T26 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Seebri breezhaler -> 20 ug 2x1 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1014, 977] <type: LEFT>>
+R41	Drg Arg1:T26 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Seebri breezhaler -> 25ug 1x1 rano <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1014, 998] <type: LEFT>>
+R42	Drg Arg1:T26 Arg2:T27 << OK >>	Seebri breezhaler -> 44ug 1x1 rano - wg zaleceń Pulmonologa  <RANK: 3> <info: start[1014, 1032] <type: RIGHT>>
+
+
+Sentence 15:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 16:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Przewlekła choroba niedokrwienna serca, po przebytym zawale (brak dokumentacji).
+
+
+Sentence 17:
+Dyslipidemia.
+
+
+Sentence 18:
+POCHP.
+
+
+Sentence 19:
+Nikotynizm.
+
+
+
+Sentence 20:
+------------------------------------------------
+
+
+
+Sentence 21:
+Zastosowane leczenie
+
+
+
+Sentence 22:
+------------------------------------------------
+Acard, Atoris, Nolpaza, Prestarium, Polfilin, Afobam, Magnez, Atrovent  , Serevent  , Seebri breezhaler,
+------------------------------------------------
+
+
+
+Sentence 23:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 24:
+------------------------------------------------
+ Rozpozanie I: ICD10:I35|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Łagodna niedomykalność zastawki aortalnej.
+
+
+Sentence 25:
+Choroba niedokrwienna serca.
+
+
+Sentence 26:
+Dusznica bolesna stabilna.
+
+
+Sentence 27:
+Nadciśninie tętnicze de novo.
+
+
+Sentence 28:
+Pojedyncze pobudzenia nadkomorowe.
+
+
+Sentence 29:
+Dyslipidemia w trakcie leczenia statyną.
+
+
+Sentence 30:
+Stłuszczenie wątroby.
+
+
+Sentence 31:
+Torbiel wątroby.
+
+
+Sentence 32:
+Choroba wrzodowa żołądka w wywiadzie.
+
+
+Sentence 33:
+Przewlekła obturacyjna choroba płuc.
+
+
+Sentence 34:
+Zmiany ogniskowe w płucach do dalszej diagnostyki.
+
+
+Sentence 35:
+Nikotynizm.
+
+
+Sentence 36:
+Przerost gruczołu krokowego.
+
+
+
+Sentence 37:
+------------------------------------------------
+
+
+
+Sentence 38:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 39:
+Pacjent lat 69, z przewlekłą chorobą niedokrwienną serca, po przebytym zawale (brak dokumentacji), dyslipidemią, z POCHP, nikotynizmem pod stałą opieką pulmonologa przyjęty do Kliniki celem dalszej diagnostyki z powodu przemijających bóli w klatce piersiowej o charakterze ucisku, duszności wysiłkowej od roku, obecnie ustąpiły od 3 dni.
+
+R43	Dat Arg1:T63 Arg2:T61 <<SHOULD NOT BE REMOVED>>	od roku -> przemijających bóli w klatce piersiowej o charakterze ucisku <:REMOVED Too far from TagInfo[T63, 2689, 2696, Date, od roku
+] TagInfo[T60, 2509, 2521, Behaviour, nikotynizmem
+]:> <RANK: 2> <info: start[2689, 2606] <type: LEFT>>
+R44	Dat Arg1:T63 Arg2:T62 <<SHOULD NOT BE REMOVED>>	od roku -> duszności wysiłkowej <:REMOVED Too far from TagInfo[T63, 2689, 2696, Date, od roku
+] TagInfo[T60, 2509, 2521, Behaviour, nikotynizmem
+]:> <RANK: 3> <info: start[2689, 2668] <type: LEFT>>
+R45	Dat Arg1:T63 Arg2:T56 <<REDUNDANT!!!SHOULD BE REMOVED>>	od roku -> przewlekłą chorobą niedokrwienną serca  <RANK: 2> <info: start[2689, 2405] <type: LEFT>>
+R46	Dat Arg1:T63 Arg2:T57 <<REDUNDANT!!!SHOULD BE REMOVED>>	od roku -> po przebytym zawale  <RANK: 2> <info: start[2689, 2445] <type: LEFT>>
+R47	Dat Arg1:T63 Arg2:T58 <<REDUNDANT!!!SHOULD BE REMOVED>>	od roku -> dyslipidemią  <RANK: 2> <info: start[2689, 2486] <type: LEFT>>
+R48	Dat Arg1:T63 Arg2:T59 <<REDUNDANT!!!SHOULD BE REMOVED>>	od roku -> POCHP  <RANK: 2> <info: start[2689, 2502] <type: LEFT>>
+R49	Dat Arg1:T63 Arg2:T60 <<REDUNDANT!!!SHOULD BE REMOVED>>	od roku -> nikotynizmem  <RANK: 2> <info: start[2689, 2509] <type: LEFT>>
+
+
+Sentence 40:
+W wywiadzie ponadto:  okresowo kołatania serca bez towarzyszących dolegliwości, 1 epizod krwawienia z gardła tydzień temu, choroba wrzodowa w przeszłości.
+
+R50	Dat Arg1:T66 Arg2:T64 <<REDUNDANT!!!SHOULD BE REMOVED>>	tydzień temu -> okresowo kołatania serca bez towarzyszących dolegliwości  <RANK: 2> <info: start[2834, 2747] <type: LEFT>>
+R51	Dat Arg1:T66 Arg2:T65 << OK >>	tydzień temu -> 1 epizod krwawienia z gardła  <RANK: 3> <info: start[2834, 2805] <type: LEFT>>
+R52	Dat Arg1:T66 Arg2:T67 <<REDUNDANT!!!REMOVED>>	tydzień temu -> choroba wrzodowa <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2834, 2848] <type: RIGHT>>
+R53	Dat Arg1:T68 Arg2:T64 <<REDUNDANT!!!REMOVED>>	w przeszłości -> okresowo kołatania serca bez towarzyszących dolegliwości <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2865, 2747] <type: LEFT>>
+R54	Dat Arg1:T68 Arg2:T65 <<REDUNDANT!!!REMOVED>>	w przeszłości -> 1 epizod krwawienia z gardła <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2865, 2805] <type: LEFT>>
+R55	Dat Arg1:T68 Arg2:T67 << OK >>	w przeszłości -> choroba wrzodowa  <RANK: 3> <info: start[2865, 2848] <type: LEFT>>
+
+
+Sentence 41:
+Neguje: zasłabnięcia, omdlenia, krwawienia, czarne stolce, brunatne wymioty, chorobę wrzodową, duszność nocną typu ortopnoe,, DM, udar mózgu.
+
+R56	Neg Arg1:T69 Arg2:T70 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[2880, 2888] <type: RIGHT>>
+R57	Neg Arg1:T69 Arg2:T71 << OK >>	Neguje -> omdlenia  <RANK: 2> <info: start[2880, 2902] <type: RIGHT>>
+R58	Neg Arg1:T69 Arg2:T72 << OK >>	Neguje -> krwawienia  <RANK: 2> <info: start[2880, 2912] <type: RIGHT>>
+R59	Neg Arg1:T69 Arg2:T73 << OK >>	Neguje -> czarne stolce  <RANK: 2> <info: start[2880, 2924] <type: RIGHT>>
+R60	Neg Arg1:T69 Arg2:T74 << OK >>	Neguje -> brunatne wymioty  <RANK: 2> <info: start[2880, 2939] <type: RIGHT>>
+R61	Neg Arg1:T69 Arg2:T76 << OK >>	Neguje -> duszność nocną typu ortopnoe  <RANK: 2> <info: start[2880, 2975] <type: RIGHT>>
+R62	Neg Arg1:T69 Arg2:T75 << OK >>	Neguje -> chorobę wrzodową  <RANK: 2> <info: start[2880, 2957] <type: RIGHT>>
+R63	Neg Arg1:T69 Arg2:T77 << OK >>	Neguje -> DM  <RANK: 2> <info: start[2880, 3006] <type: RIGHT>>
+R64	Neg Arg1:T69 Arg2:T78 << OK >>	Neguje -> udar mózgu  <RANK: 2> <info: start[2880, 3010] <type: RIGHT>>
+
+
+Sentence 42:
+Przebyte operacje: nie
+Palenie tytoniu: tak, od 50 lat
+
+R65	Neg Arg1:T80 Arg2:T81 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED many second tags on the right:> <RANK: 1> <info: start[3041, 3045] <type: RIGHT>>
+R66	Neg Arg1:T80 Arg2:T79 << OK >>	nie -> Przebyte operacje  <RANK: 3> <info: start[3041, 3022] <type: LEFT>>
+R67	Dat Arg1:T82 Arg2:T81 << OK >>	od 50 lat -> Palenie tytoniu  <RANK: 2> <info: start[3067, 3045] <type: LEFT>>
+R68	Dat Arg1:T82 Arg2:T79 <<REDUNDANT!!!REMOVED>>	od 50 lat -> Przebyte operacje <:REMOVED other second tag between (left):> <RANK: 0> <info: start[3067, 3022] <type: LEFT>>
+
+
+Sentence 43:
+Inne używki: nie 
+Uczulenia: nie 
+
+R69	Neg Arg1:T84 Arg2:T85 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3090, 3095] <type: RIGHT>>
+R70	Neg Arg1:T84 Arg2:T83 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[3090, 3077] <type: LEFT>>
+R71	Neg Arg1:T86 Arg2:T85 << OK >>	nie -> Uczulenia  <RANK: 3> <info: start[3106, 3095] <type: LEFT>>
+R72	Neg Arg1:T86 Arg2:T83 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3106, 3077] <type: LEFT>>
+
+
+Sentence 44:
+Przebyte choroby zakaźne - WZW (-) , borelioza ( - ), tbc (-) 
+
+R73	Neg Arg1:T90 Arg2:T87 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3170, 3138] <type: LEFT>>
+R74	Neg Arg1:T90 Arg2:T88 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3170, 3148] <type: LEFT>>
+R75	Neg Arg1:T90 Arg2:T89 << OK >>	- -> tbc  <RANK: 3> <info: start[3170, 3165] <type: LEFT>>
+R76	Neg Arg1:T91 Arg2:T87 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3160, 3138] <type: LEFT>>
+R77	Neg Arg1:T91 Arg2:T88 << OK >>	- -> borelioza  <RANK: 3> <info: start[3160, 3148] <type: LEFT>>
+R78	Neg Arg1:T91 Arg2:T89 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[3160, 3165] <type: RIGHT>>
+R79	Neg Arg1:T92 Arg2:T87 << OK >>	- -> WZW  <RANK: 3> <info: start[3143, 3138] <type: LEFT>>
+R80	Neg Arg1:T92 Arg2:T88 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[3143, 3148] <type: RIGHT>>
+R81	Neg Arg1:T92 Arg2:T89 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3143, 3165] <type: RIGHT>>
+
+
+Sentence 45:
+Stan społeczny: warunki mieszkaniowe dobre.  
+
+
+
+Sentence 46:
+Leki: przyjęte rano w domu  
+Leki: 
+Acard 75 mg 1x1 wieczorem
+Atoris 10 mg 1x1 rano
+Polfilin 400 mg 1x1 rano
+Afobam 0,25 mg 1x1 doraźnie
+Magnez 1x1 rano
+
+R82	Drg Arg1:T94 Arg2:T95 << OK >>	Acard -> 75 mg 1x1 wieczorem  <RANK: 3> <info: start[3256, 3262] <type: RIGHT>>
+R83	Drg Arg1:T94 Arg2:T97 <<REDUNDANT!!!REMOVED>>	Acard -> 10 mg 1x1 rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3256, 3289] <type: RIGHT>>
+R84	Drg Arg1:T94 Arg2:T99 <<REDUNDANT!!!REMOVED>>	Acard -> 400 mg 1x1 rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3256, 3313] <type: RIGHT>>
+R85	Drg Arg1:T94 Arg2:T101 <<REDUNDANT!!!REMOVED>>	Acard -> 0,25 mg 1x1 doraźnie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3256, 3336] <type: RIGHT>>
+R86	Drg Arg1:T94 Arg2:T103 <<REDUNDANT!!!REMOVED>>	Acard -> 1x1 rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3256, 3364] <type: RIGHT>>
+R87	Drg Arg1:T96 Arg2:T95 <<REDUNDANT!!!REMOVED>>	Atoris -> 75 mg 1x1 wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3282, 3262] <type: LEFT>>
+R88	Drg Arg1:T96 Arg2:T97 << OK >>	Atoris -> 10 mg 1x1 rano  <RANK: 3> <info: start[3282, 3289] <type: RIGHT>>
+R89	Drg Arg1:T96 Arg2:T99 <<REDUNDANT!!!REMOVED>>	Atoris -> 400 mg 1x1 rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3282, 3313] <type: RIGHT>>
+R90	Drg Arg1:T96 Arg2:T101 <<REDUNDANT!!!REMOVED>>	Atoris -> 0,25 mg 1x1 doraźnie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3282, 3336] <type: RIGHT>>
+R91	Drg Arg1:T96 Arg2:T103 <<REDUNDANT!!!REMOVED>>	Atoris -> 1x1 rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3282, 3364] <type: RIGHT>>
+R92	Drg Arg1:T98 Arg2:T95 <<REDUNDANT!!!REMOVED>>	Polfilin -> 75 mg 1x1 wieczorem <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3304, 3262] <type: LEFT>>
+R93	Drg Arg1:T98 Arg2:T97 <<REDUNDANT!!!REMOVED>>	Polfilin -> 10 mg 1x1 rano <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3304, 3289] <type: LEFT>>
+R94	Drg Arg1:T98 Arg2:T99 << OK >>	Polfilin -> 400 mg 1x1 rano  <RANK: 3> <info: start[3304, 3313] <type: RIGHT>>
+R95	Drg Arg1:T98 Arg2:T101 <<REDUNDANT!!!REMOVED>>	Polfilin -> 0,25 mg 1x1 doraźnie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3304, 3336] <type: RIGHT>>
+R96	Drg Arg1:T98 Arg2:T103 <<REDUNDANT!!!REMOVED>>	Polfilin -> 1x1 rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3304, 3364] <type: RIGHT>>
+R97	Drg Arg1:T100 Arg2:T95 <<REDUNDANT!!!REMOVED>>	Afobam -> 75 mg 1x1 wieczorem <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3329, 3262] <type: LEFT>>
+R98	Drg Arg1:T100 Arg2:T97 <<REDUNDANT!!!REMOVED>>	Afobam -> 10 mg 1x1 rano <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3329, 3289] <type: LEFT>>
+R99	Drg Arg1:T100 Arg2:T99 <<REDUNDANT!!!REMOVED>>	Afobam -> 400 mg 1x1 rano <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3329, 3313] <type: LEFT>>
+R100	Drg Arg1:T100 Arg2:T101 << OK >>	Afobam -> 0,25 mg 1x1 doraźnie  <RANK: 3> <info: start[3329, 3336] <type: RIGHT>>
+R101	Drg Arg1:T100 Arg2:T103 <<REDUNDANT!!!REMOVED>>	Afobam -> 1x1 rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3329, 3364] <type: RIGHT>>
+R102	Drg Arg1:T102 Arg2:T95 <<REDUNDANT!!!REMOVED>>	Magnez -> 75 mg 1x1 wieczorem <:REMOVED other first tag between (left):> <RANK: 0> <info: start[3357, 3262] <type: LEFT>>
+R103	Drg Arg1:T102 Arg2:T97 <<REDUNDANT!!!REMOVED>>	Magnez -> 10 mg 1x1 rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[3357, 3289] <type: LEFT>>
+R104	Drg Arg1:T102 Arg2:T99 <<REDUNDANT!!!REMOVED>>	Magnez -> 400 mg 1x1 rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[3357, 3313] <type: LEFT>>
+R105	Drg Arg1:T102 Arg2:T101 <<REDUNDANT!!!REMOVED>>	Magnez -> 0,25 mg 1x1 doraźnie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3357, 3336] <type: LEFT>>
+R106	Drg Arg1:T102 Arg2:T103 << OK >>	Magnez -> 1x1 rano  <RANK: 3> <info: start[3357, 3364] <type: RIGHT>>
+
+
+Sentence 47:
+Atrovent  N 20 ug 2x1
+Serevent 25ug 1x1 rano
+
+R107	Drg Arg1:T104 Arg2:T105 << OK >>	Atrovent  N -> 20 ug 2x1  <RANK: 3> <info: start[3373, 3385] <type: RIGHT>>
+R108	Drg Arg1:T104 Arg2:T107 <<REDUNDANT!!!REMOVED>>	Atrovent  N -> 25ug 1x1 rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3373, 3404] <type: RIGHT>>
+R109	Drg Arg1:T106 Arg2:T105 <<REDUNDANT!!!REMOVED>>	Serevent -> 20 ug 2x1 <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3395, 3385] <type: LEFT>>
+R110	Drg Arg1:T106 Arg2:T107 << OK >>	Serevent -> 25ug 1x1 rano  <RANK: 3> <info: start[3395, 3404] <type: RIGHT>>
+
+
+Sentence 48:
+Seebri breezhaler 44ug 1x1 rano
+
+Planowany czas hospitalizacji: 3-5 dni. 
+
+R111	Drg Arg1:T108 Arg2:T109 << OK >>	Seebri breezhaler -> 44ug 1x1 rano  <RANK: 3> <info: start[3418, 3436] <type: RIGHT>>
+
+
+Sentence 49:
+Planowane badania: badania laboratoryjne, ECHO, ABPM, TET, Holter ekg.
+
+
+
+Sentence 50:
+------------------------------------------------
+
+
+
+Sentence 51:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 52:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.92[10^3/ul]
+    
+
+
+Sentence 53:
+RBC Krwinki czerwone:4.74[10^6/ul]
+    
+
+
+Sentence 54:
+HGB Hemoglobina:15.1[g/dl]
+    
+
+
+Sentence 55:
+HCT Hematokryt:41.2[%]
+    
+
+
+Sentence 56:
+MCV wskaźnik czerwonokrw:86.9[fl]
+    
+
+
+Sentence 57:
+MCH wskaźnik czerwonokrw:31.9[pg]
+    
+
+
+Sentence 58:
+MCHC wskaźnik czerwonokr:36.7[g/dl]
+    
+
+
+Sentence 59:
+PLT z morfologii:160[10^3/ul]
+    
+
+
+Sentence 60:
+RDW-SD:40.8[fl]
+    
+
+
+Sentence 61:
+RDW-CV:12.9[%]
+    PDW:14.8[fl]
+    MPV:11.2[fl]
+    
+
+
+Sentence 62:
+P-LCR:34.5[%]
+    
+
+
+Sentence 63:
+PCT (hematokryt płytkowy:0.18[%]
+    
+
+
+Sentence 64:
+NEUTR# wartość bezwzględ:3.90[10^3/ul]
+    
+
+
+Sentence 65:
+NEUTR%:56.3[%]
+    
+
+
+Sentence 66:
+LYMH# wartość bezwzględn:1.90[10^3/ul]
+    
+
+
+Sentence 67:
+LYMPH%:27.5[%]
+    
+
+
+Sentence 68:
+MONO# wartość bezwzględn:0.92[10^3/ul]
+    
+
+
+Sentence 69:
+MONO%:13.3[%]
+    
+
+
+Sentence 70:
+EO# wartość bezwzględna:0.18[10^3/ul]
+    
+
+
+Sentence 71:
+EO%:2.6[%]
+    
+
+
+Sentence 72:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    
+
+
+Sentence 73:
+BASO%:0.3[%]
+    
+
+
+Sentence 74:
+NRBC %:0.0[%]
+    
+
+
+Sentence 75:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 76:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:29.2[sek]
+
+
+
+Sentence 77:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 78:
+Czas protrombinowy:11.9[sek]
+    
+
+
+Sentence 79:
+Wskaźnik PT:92.4[%]
+    
+
+
+Sentence 80:
+INR:1.08
+D-dimer
+
+
+Sentence 81:
+- test ilościowy: D-dimer - test ilościowy:522[ng/ml]
+
+
+
+Sentence 82:
+Badanie ogólne moczu
+    
+
+
+Sentence 83:
+barwa:żółty[ ]
+    
+
+
+Sentence 84:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 85:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 86:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 87:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 88:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 89:
+ciężar właściwy:1.021[ ]
+    
+
+
+Sentence 90:
+pH:5.0[ ]
+    
+
+
+Sentence 91:
+białko:nieobecne[ ]
+    
+
+
+Sentence 92:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 93:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 94:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 95:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 96:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 97:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 98:
+leukocyty:8 /ul[ul]
+    erytrocyty świeże:4 /ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 99:
+TSH: TSH:1.08[uIU/ml]
+
+
+
+Sentence 100:
+FT3: FT3:2.62[pg/ml]
+
+
+
+Sentence 101:
+FT4: FT4:1.35[ng/dl]
+
+
+
+Sentence 102:
+Troponina T: Troponina T:8.0[pg/ml]
+
+
+
+Sentence 103:
+ALAT: ALAT:6[U/L]
+
+
+
+Sentence 104:
+ASPAT: ASPAT:26[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 105:
+Sód (Na): Sód:143[mmol/L]
+
+
+
+Sentence 106:
+Potas (K): Potas:4.6[mmol/L]
+
+
+
+Sentence 107:
+Kreatynina + GFR
+    
+
+
+Sentence 108:
+Kreatynina w surowicy:0.97[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 109:
+MDRD ze stan:76.7[ml/min/1,73 m^2]
+
+
+
+Sentence 110:
+Magnez: Magnez:0.83[mmol/L]
+
+
+
+Sentence 111:
+Mocznik: Mocznik:38[mg/dl]
+
+
+
+Sentence 112:
+Kwas moczowy: Kwas moczowy:6.8[mg/dl]
+
+
+
+Sentence 113:
+Lipidogram
+    
+
+
+Sentence 114:
+Cholesterol całkowity:133[mg/dl]
+    
+
+
+Sentence 115:
+Cholesterol HDL:35[mg/dl]
+    
+
+
+Sentence 116:
+Cholestrol LDL:80[mg/dl]
+    Triglicerydy:151[mg/dl]
+    
+
+
+Sentence 117:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:83[mg/dl]
+
+
+
+Sentence 118:
+------------------------------------------------
+
+
+
+Sentence 119:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 120:
+I35.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 121:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 122:
+89.501
+89.502
+C55
+A01
+I81
+89.41
+G11
+G21
+L43
+
+
+
+Sentence 123:
+O61
+M87
+G49
+87.440
+I17
+N45
+L69
+O55
+M45
+I19
+O35
+M37
+N13
+88.721
+O69
+
+
+
+Sentence 124:
+------------------------------------------------
+
+

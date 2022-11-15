@@ -1,0 +1,116 @@
+T1	Condition 439 475	Zatorowość płucna pośredniego ryzyka
+N1	Reference T1 ICD10:I26.9	Zator płucny bez informacji o ostrym sercu płucnym
+T2	Treatment 596 654	dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T3	Investigation 671 680	MRI serca
+T4	Behaviour 684 779	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T5	Treatment 783 812	Okresowo kontrola lipidogramu
+T6	Condition 1018 1042	Kardiomiopatia takotsubo
+N2	Reference T6 ICD10:I42.8	Inne kardiomiopatie
+T7	Condition 1047 1090	Intermitujący blok lewej odnogi pęczka Hisa
+N3	Reference T7 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T8	Condition 1096 1141	Guz nadnercza lewego - do dalszej diagnostyki
+N4	Reference T8 ICD10:D44.1	Nadnercze
+T9	Condition 1146 1158	Dyslipidemia
+N5	Reference T9 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T10	Condition 1163 1179	Cukrzyca ciążowa
+N6	Reference T10 ICD10:O24.4	Cukrzyca powstała w ciąży
+T11	Treatment 1192 1208	cięciu cesarskim
+N7	Reference T11 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+T12	Date 1210 1220	02/08/2019
+R1	Dat Arg1:T12 Arg2:T11	
+T13	Condition 1226 1253	Infekcja układu oddechowego
+T14	Treatment 1436 1438	CC
+N8	Reference T14 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+T15	Date 1439 1456	w dniu 02.08.2019
+T16	Condition 1479 1488	C III PII
+T17	Condition 1490 1510	makrosomia u dziecka
+N9	Reference T17 ICD10:P08.0	Noworodek o wyjątkowo dużej wadze
+R2	Dat Arg1:T15 Arg2:T14	
+T18	Condition 1512 1531	cukrzycą ciężarnych
+N10	Reference T18 ICD10:O24.4	Cukrzyca powstała w ciąży
+T19	Treatment 1532 1562	na insulinoterapii wg glikemii
+T20	Condition 1578 1596	HA w trakcie ciąży
+N11	Reference T20 ICD10:O13	Nadciśnienie ciążowe [wywołane ciążą] bez znamiennego białkomoczu
+T21	Drug 1606 1615	Dopegytem
+T22	Date 1618 1640	w ostatnich tygodniach
+T23	Negation 1641 1650	ostawiono
+T24	Investigation 1789 1797	angio CT
+T25	Drug 1897 1906	meronemem
+T26	Date 1907 1915	od 2 dni
+R3	Dat Arg1:T26 Arg2:T25	
+T27	Symptom 1917 1941	Bóle w klatce piersiowej
+N12	Reference T27 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T28	Symptom 1943 1951	duszność
+N13	Reference T28 ICD10:R06.0	Duszność
+T29	Symptom 1954 1965	tachykardia
+N14	Reference T29 ICD10:R00.0	Tachykardia, nieokreślona
+T30	Symptom 1968 1975	kaszlem
+N15	Reference T30 ICD10:R05	Kaszel
+T31	Date 1990 1995	po CC
+R4	Dat Arg1:T31 Arg2:T27	
+R5	Dat Arg1:T31 Arg2:T28	
+R6	Dat Arg1:T31 Arg2:T29	
+R7	Dat Arg1:T31 Arg2:T30	
+T32	Negation 1997 2003	Neguje
+T33	Symptom 2005 2030	jakiekolwiek dolegliwości
+T34	Date 2031 2044	przed porodem
+R8	Dat Arg1:T34 Arg2:T33	
+R9	Neg Arg1:T32 Arg2:T33	
+T35	Behaviour 2069 2084	Palenie tytoniu
+N16	Reference T35 ICD10:Z72.0	Używanie tytoniu
+T36	Negation 2086 2089	nie
+T37	Behaviour 2091 2102	Inne używki
+T38	Negation 2104 2107	nie
+T39	Condition 2109 2118	Uczulenia
+N17	Reference T39 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T40	Negation 2120 2123	nie
+T41	Condition 2152 2155	WZW
+N18	Reference T41 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T42	Condition 2162 2171	borelioza
+N19	Reference T42 ICD10:A69.2	Choroba z Lyme
+T43	Condition 2179 2182	tbc
+N20	Reference T43 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T44	Negation 2156 2159	(-)
+T45	Negation 2172 2177	( - )
+T46	Negation 2183 2186	(-)
+R10	Neg Arg1:T44 Arg2:T41	
+R11	Neg Arg1:T45 Arg2:T42	
+R12	Neg Arg1:T46 Arg2:T43	
+R13	Neg Arg1:T36 Arg2:T35	
+R14	Neg Arg1:T38 Arg2:T37	
+R15	Neg Arg1:T40 Arg2:T39	
+T47	Behaviour 2204 2230	warunki mieszkaniowe dobre
+T48	Drug 2256 2267	Fraxiparinę
+T49	Drug_dose 2268 2275	0,6 2x1
+T50	Drug 2277 2284	Meronem
+T51	Drug_dose 2285 2291	1g 3x1
+T52	Drug 2293 2303	Theospirex
+T53	Drug_dose 2304 2314	200 mg 1x1
+T54	Drug 2316 2323	Dexaven
+T55	Drug_dose 2324 2331	8 mg1x1
+T56	Drug 2333 2341	Metocard
+T57	Drug_dose 2342 2347	50 mg
+T58	Drug 2349 2356	Na HCO3
+T59	Drug_dose 2357 2366	40 mEq1x1
+T60	Drug 2368 2383	płyny infuzyjne
+T61	Investigation 2446 2467	badania laboratoryjne
+T62	Investigation 2469 2473	ECHO
+T63	Investigation 2475 2479	ABPM
+T64	Date 2241 2246	po CC
+R16	Dat Arg1:T64 Arg2:T48	
+R17	Drg Arg1:T48 Arg2:T49	
+R18	Drg Arg1:T50 Arg2:T51	
+R19	Drg Arg1:T52 Arg2:T53	
+R20	Drg Arg1:T54 Arg2:T55	
+R21	Drg Arg1:T56 Arg2:T57	
+R22	Drg Arg1:T58 Arg2:T59	
+R23	Dat Arg1:T64 Arg2:T50	
+R24	Dat Arg1:T64 Arg2:T52	
+R25	Dat Arg1:T64 Arg2:T54	
+R26	Dat Arg1:T64 Arg2:T56	
+R27	Dat Arg1:T64 Arg2:T58	
+R28	Dat Arg1:T64 Arg2:T60	
+T65	Condition 1718 1787	zatorowość płucną płynem owodniowym do różnicowania z zapalaniem płuc
+#1	AnnotatorNotes T65	O88.2 / J18.9
+R29	Dat Arg1:T22 Arg2:T21	
+R30	Neg Arg1:T23 Arg2:T21	

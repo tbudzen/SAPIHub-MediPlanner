@@ -1,0 +1,27 @@
+T1	Drug 330 341	Betaloc ZOK
+T2	Drug_dose 342 353	25 1x1 tabl
+T3	Drug 354 360	Acesan
+T4	Drug_dose 361 375	150mg 1x1 tabl
+T5	Treatment 376 410	Kontrola w Poradni Kardiologicznej
+T6	Date 411 420	za 5 m-cy
+R1	Dat Arg1:T6 Arg2:T5	
+R2	Drg Arg1:T1 Arg2:T2	
+R3	Drg Arg1:T3 Arg2:T4	
+T7	Condition 660 711	Wrodzona wada serca pod postacią tetralogii Fallota
+N1	Reference T7 ICD10:Q21.3	Tetralogia Fallota
+T8	Treatment 724 748	korekcji całkowitej wady
+N2	Reference T8 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T9	Date 750 761	22.11.2005r
+R4	Dat Arg1:T9 Arg2:T8	
+T10	Condition 767 806	Niedomykalność zastawki tętnicy płucnej
+N3	Reference T10 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T11	Condition 811 828	Anomalia Hagemana
+N4	Reference T11 ICD10:D68.2	Dziedziczny niedobór innych czynników krzepnięcia
+T12	Treatment 833 916	Reoperacja - wytworzenie przedniego płatka zastawki pnia płucnego z łaty Cor-Matrix
+N5	Reference T12 ICD10:Z95.4	Obecność innych protez zastawek serca
+T13	Date 920 930	15.05.2017
+T14	Condition 935 955	Wcześniactwo - 31Hbd
+N6	Reference T14 ICD10:P07.3	Inne przypadki wcześniactwa
+R5	Dat Arg1:T13 Arg2:T12	
+T15	Drug 1075 1086	Betaloc ZOK
+R6	Dat Arg1:T9 Arg2:T7	

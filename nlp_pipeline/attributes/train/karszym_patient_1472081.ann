@@ -1,0 +1,212 @@
+T1	Condition 450 494	Łagodna niedomykalność zastawki trójdzielnej
+N1	Reference T1 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T2	Condition 496 566	Napadowy częstoskurcz z szerokimi zespołami QRS do dalszej diagnostyki
+N2	Reference T2 ICD10:I47.2	Częstoskurcz komorowy
+T3	Condition 568 634	Nadkomorowe zaburzenia rytmu serca ( pobudzenia pojedyncze , pary)
+N3	Reference T3 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T4	Symptom 644 654	omdleniach
+N4	Reference T4 ICD10:R55	Omdlenie i zapaść
+T5	Condition 656 672	Astma oskrzelowa
+N5	Reference T5 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T6	Condition 696 729	Choroba zwyrodnieniowa kręgosłupa
+N6	Reference T6 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+A1	Status T6 Historical_Insignificant
+T7	Condition 731 740	Uczulenie
+N7	Reference T7 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T8	Drug 744 766	kwas acetylosalicylowy
+R1	Alg Arg1:T7 Arg2:T8	
+T9	Treatment 1111 1167	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T10	Behaviour 1170 1210	Dieta lekkostrawna , niskocholesterolowa
+T11	Investigation 1214 1297	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T12	Investigation 1300 1348	Systematyczna kontrola ciśnienia tętniczego krwi
+T13	Drug 1399 1407	Magne B6
+T14	Drug_dose 1408 1418	1x dz rano
+T15	Drug 1420 1424	Ahis
+T16	Drug_dose 1425 1442	5 1x dz wieczorem
+T17	Drug 1443 1449	Avamys
+T18	Drug_dose 1450 1465	1x dz wieczorem
+R2	Drg Arg1:T13 Arg2:T14	
+R3	Drg Arg1:T15 Arg2:T16	
+R4	Drg Arg1:T17 Arg2:T18	
+T19	Drug 1586 1590	Ahis
+T20	Drug 1592 1598	Avamys
+T21	Investigation 1825 1836	Diagnostyka
+T22	Symptom 1837 1862	bólów w klatce piersiowej
+N8	Reference T22 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T23	Condition 1864 1924	Napadowy nieutrwalony częstoskurcz z szerokimi zespołami QRS
+N9	Reference T23 ICD10:I47.2	Częstoskurcz komorowy
+T24	Condition 1938 2004	Nadkomorowe zaburzenia rytmu serca ( pobudzenia pojedyncze , pary)
+N10	Reference T24 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T25	Symptom 2026 2036	omdleniach
+N11	Reference T25 ICD10:R55	Omdlenie i zapaść
+T26	Condition 2038 2054	Astma oskrzelowa
+N12	Reference T26 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T27	Condition 2078 2111	Choroba zwyrodnieniowa kręgosłupa
+A2	Status T27 Historical_Insignificant
+N13	Reference T27 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T28	Condition 2113 2122	Uczulenie
+N14	Reference T28 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T29	Drug 2126 2148	kwas acetylosalicylowy
+R5	Alg Arg1:T28 Arg2:T29	
+T30	Treatment 2266 2322	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T31	Behaviour 2325 2365	Dieta lekkostrawna , niskocholesterolowa
+T32	Investigation 2369 2452	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T33	Investigation 2455 2503	Systematyczna kontrola ciśnienia tętniczego krwi
+T34	Symptom 2903 2985	okresowych bólów w klatce piersiowej niezależnych od wysiłku , zależnych od stresu
+N15	Reference T34 ICD10:R07.3	Inne bóle w klatce piersiowej
+T35	Symptom 2987 3021	okresowego uczucia kołatania serca
+N16	Reference T35 ICD10:R00.2	Kołatanie serca
+T36	Symptom 3040 3061	okresowe zasłabnięcia
+T37	Date 3064 3080	ostatnio 12.2018
+R6	Dat Arg1:T37 Arg2:T36	
+T38	Condition 3099 3115	Astma oskrzelowa
+N17	Reference T38 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T39	Drug 3133 3141	ventolin
+T40	Drug_dose 3123 3131	doraźnie
+R7	Drg Arg1:T39 Arg2:T40	
+T41	Condition 3169 3193	Alergia na trawy i zboża
+N18	Reference T41 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T42	Condition 3196 3229	Choroba zwyrodnieniowa kręgosłupa
+A3	Status T42 Historical_Insignificant
+N19	Reference T42 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T43	Treatment 3232 3249	Przebyte operacje
+N20	Reference T43 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T44	Negation 3252 3256	brak
+T45	Treatment 3257 3288	Leczenie przewlekłe:  neurologa
+R8	Neg Arg1:T44 Arg2:T43	
+T46	Condition 3317 3320	WZW
+N21	Reference T46 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T47	Condition 3330 3339	borelioza
+N22	Reference T47 ICD10:A69.2	Choroba z Lyme
+T48	Condition 3346 3350	Odra
+N23	Reference T48 ICD10:B05	Odra
+T49	Negation 3321 3327	( -  )
+T50	Negation 3340 3345	( - )
+T51	Negation 3351 3356	( - )
+R9	Neg Arg1:T49 Arg2:T46	
+R10	Neg Arg1:T50 Arg2:T47	
+R11	Neg Arg1:T51 Arg2:T48	
+T52	Condition 3389 3400	zawal serca
+A4	Status T52 Family
+N24	Reference T52 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T53	Condition 3403 3419	astma oskrzelowa
+A5	Status T53 Family
+N25	Reference T53 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T54	Condition 3432 3459	choroba niedokrwienna serca
+A6	Status T54 Family
+N26	Reference T54 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T55	Condition 3462 3483	nadciśnienie tętnicze
+A7	Status T55 Family
+N27	Reference T55 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T56	Behaviour 3486 3501	Palenie tytoniu
+N28	Reference T56 ICD10:Z72.0	Używanie tytoniu
+T57	Negation 3503 3506	nie
+T58	Behaviour 3507 3511	pali
+N29	Reference T58 ICD10:Z72.0	Używanie tytoniu
+T59	Date 3512 3521	od 12 lat
+R12	Neg Arg1:T57 Arg2:T56	
+R13	Neg Arg1:T57 Arg2:T58	
+R14	Dat Arg1:T59 Arg2:T58	
+R15	Dat Arg1:T59 Arg2:T56	
+T60	Behaviour 3523 3534	Inne używki
+T61	Negation 3536 3539	nie
+R16	Neg Arg1:T61 Arg2:T60	
+T62	Condition 3540 3549	Uczulenia
+N30	Reference T62 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T63	Drug 3551 3559	aspirynę
+R17	Alg Arg1:T62 Arg2:T63	
+T64	Behaviour 3577 3603	warunki mieszkaniowe dobre
+T65	Behaviour 3606 3625	mieszka z partnerem
+T66	Drug 3633 3638	Ahist
+T67	Drug_dose 3639 3660	5 mg 1 x dz wieczorem
+T68	Drug 3662 3668	Avamys
+T69	Drug_dose 3669 3675	1 x dz
+R18	Drg Arg1:T66 Arg2:T67	
+R19	Drg Arg1:T68 Arg2:T69	
+T70	Investigation 3691 3701	Echo serca
+T71	Investigation 3704 3714	Holter EKG
+T72	Investigation 3717 3732	Próba Wysiłkowa
+T73	Symptom 3944 4004	okresowych bólów w klatce piersiowej niezależnych od wysiłku
+N31	Reference T73 ICD10:R07.3	Inne bóle w klatce piersiowej
+T74	Symptom 4010 4044	okresowego uczucia kołatania serca
+N32	Reference T74 ICD10:R00.2	Kołatanie serca
+T75	Symptom 4063 4084	okresowe zasłabnięcia
+T76	Date 4087 4103	ostatnio 12.2018
+R20	Dat Arg1:T76 Arg2:T75	
+T77	Condition 4130 4181	Niereumatyczna niedomykalność zastawki trójdzielnej
+N33	Reference T77 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T78	Condition 4182 4226	Łagodna niedomykalność zastawki trójdzielnej
+N34	Reference T78 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T79	Condition 4228 4298	Napadowy częstoskurcz z szerokimi zespołami QRS do dalszej diagnostyki
+N35	Reference T79 ICD10:I47.2	Częstoskurcz komorowy
+T80	Investigation 4310 4313	EPS
+T81	Date 4314 4321	08.2019
+T82	Negation 4322 4325	bez
+T83	Investigation_result 4326 4345	uchwytnej przyczyny
+R21	Neg Arg1:T82 Arg2:T83	
+R22	Dat Arg1:T81 Arg2:T80	
+R23	Inv Arg1:T80 Arg2:T83	
+T84	Condition 4348 4414	Nadkomorowe zaburzenia rytmu serca ( pobudzenia pojedyncze , pary)
+N36	Reference T84 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T85	Symptom 4424 4434	omdleniach
+N37	Reference T85 ICD10:R55	Omdlenie i zapaść
+T86	Condition 4436 4452	Astma oskrzelowa
+N38	Reference T86 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T87	Condition 4476 4509	Choroba zwyrodnieniowa kręgosłupa
+N39	Reference T87 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+A8	Status T87 Historical_Insignificant
+T88	Condition 4511 4520	Uczulenie
+N40	Reference T88 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T89	Drug 4524 4546	kwas acetylosalicylowy
+R24	Alg Arg1:T88 Arg2:T89	
+T90	Treatment 4547 4564	Przebyte operacje
+N41	Reference T90 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T91	Negation 4567 4571	brak
+T92	Treatment 4572 4603	Leczenie przewlekłe:  neurologa
+R25	Neg Arg1:T91 Arg2:T90	
+T93	Condition 4632 4635	WZW
+N42	Reference T93 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T94	Negation 4636 4642	( -  )
+T95	Condition 4645 4654	borelioza
+N43	Reference T95 ICD10:A69.2	Choroba z Lyme
+T96	Negation 4655 4660	( - )
+T97	Condition 4661 4665	Odra
+N44	Reference T97 ICD10:B05	Odra
+T98	Negation 4666 4671	( - )
+R26	Neg Arg1:T94 Arg2:T93	
+R27	Neg Arg1:T96 Arg2:T95	
+R28	Neg Arg1:T98 Arg2:T97	
+T99	Condition 4704 4715	zawal serca
+A9	Status T99 Family
+N45	Reference T99 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T100	Condition 4718 4734	astma oskrzelowa
+N46	Reference T100 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+A10	Status T100 Family
+T101	Condition 4747 4774	choroba niedokrwienna serca
+N47	Reference T101 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+A11	Status T101 Family
+T102	Condition 4777 4798	nadciśnienie tętnicze
+A12	Status T102 Family
+N48	Reference T102 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T103	Behaviour 4801 4816	Palenie tytoniu
+N49	Reference T103 ICD10:Z72.0	Używanie tytoniu
+T104	Negation 4818 4821	nie
+T105	Behaviour 4822 4826	pali
+N50	Reference T105 ICD10:Z72.0	Używanie tytoniu
+T106	Date 4827 4836	od 12 lat
+R29	Neg Arg1:T104 Arg2:T103	
+R30	Neg Arg1:T104 Arg2:T105	
+R31	Dat Arg1:T106 Arg2:T105	
+R32	Dat Arg1:T106 Arg2:T103	
+T107	Behaviour 4838 4849	Inne używki
+T108	Negation 4851 4854	nie
+T109	Condition 4855 4864	Uczulenia
+N51	Reference T109 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T110	Drug 4866 4874	aspirynę
+R33	Neg Arg1:T108 Arg2:T107	
+R34	Alg Arg1:T109 Arg2:T110	
+T111	Behaviour 4892 4918	warunki mieszkaniowe dobre
+T112	Behaviour 4921 4940	mieszka z partnerem
+T113	Drug 4948 4956	Magne B6
+T114	Investigation 4972 4982	Echo serca
+T115	Investigation 4984 4999	Próba Wysiłkowa

@@ -1,0 +1,129 @@
+T1	Investigation 2233 2237	ECHO
+T2	Investigation 2239 2257	EKG metodą Holtera
+T3	Investigation 2259 2263	ABPM
+T4	Drug 2132 2137	Zocor
+T5	Drug_dose 2138 2149	20 mg 0-0-1
+T6	Drug 2110 2118	Biosotal
+T7	Drug_dose 2119 2130	80 mg 1-0-1
+T8	Drug 2088 2096	Valsacor
+T9	Drug_dose 2097 2109	160 mg 1-0-0
+T10	Drug 2062 2074	Tertensif SR
+T11	Drug_dose 2075 2087	1,5 mg 1-0-0
+T12	Drug 2042 2049	Amlozek
+T13	Drug_dose 2050 2061	10 mg 0-0-1
+T14	Drug 2020 2027	Pradaxa
+T15	Drug_dose 2028 2040	150 mg 1-0-1
+R1	Drg Arg1:T14 Arg2:T15	
+R2	Drg Arg1:T12 Arg2:T13	
+R3	Drg Arg1:T10 Arg2:T11	
+R4	Drg Arg1:T8 Arg2:T9	
+R5	Drg Arg1:T6 Arg2:T7	
+R6	Drg Arg1:T4 Arg2:T5	
+T16	Condition 1973 1978	zawał
+A1	Status T16 Family
+N1	Reference T16 ICD10:I25.2	Przebyty zawał serca
+T17	Behaviour 1913 1939	warunki mieszkaniowe dobre
+T18	Condition 1834 1837	WZW
+N2	Reference T18 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T19	Condition 1844 1853	borelioza
+N3	Reference T19 ICD10:A69.2	Choroba z Lyme
+T20	Condition 1859 1862	tbc
+N4	Reference T20 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T21	Condition 1868 1872	odra
+N5	Reference T21 ICD10:B05	Odra
+T22	Behaviour 1878 1892	kontakt z odrą
+N6	Reference T22 ICD10:B05	Odra
+T23	Negation 1893 1896	(-)
+R7	Neg Arg1:T23 Arg2:T22	
+T24	Negation 1873 1877	(-),
+R8	Neg Arg1:T24 Arg2:T21	
+T25	Negation 1863 1867	(-),
+R9	Neg Arg1:T25 Arg2:T20	
+T26	Negation 1854 1858	(-),
+R10	Neg Arg1:T26 Arg2:T19	
+T27	Negation 1838 1841	(-)
+R11	Neg Arg1:T27 Arg2:T18	
+T28	Condition 1789 1798	Uczulenia
+N7	Reference T28 ICD10:T78.4	Alergia, nieokreślona
+T29	Negation 1800 1806	neguje
+R12	Neg Arg1:T29 Arg2:T28	
+T30	Behaviour 1769 1781	Inne używki:
+T31	Negation 1782 1788	neguje
+R13	Neg Arg1:T31 Arg2:T30	
+T32	Behaviour 1745 1761	Palenie tytoniu:
+N8	Reference T32 ICD10:T65.2	Tytoń i nikotyna
+T33	Negation 1762 1768	neguje
+R14	Neg Arg1:T33 Arg2:T32	
+T34	Symptom 1575 1587	zasłabnięcia
+N9	Reference T34 ICD10:R55	Omdlenie i zapaść
+T35	Symptom 1589 1597	omdlenia
+N10	Reference T35 ICD10:R55	Omdlenie i zapaść
+T36	Symptom 1599 1609	krwawienia
+N11	Reference T36 ICD10:K92	Inne choroby układu pokarmowego
+T37	Symptom 1611 1624	czarne stolce
+N12	Reference T37 ICD10:K92.1	Stolce smołowate
+T38	Symptom 1626 1642	brunatne wymioty
+N13	Reference T38 ICD10:K92.0	Wymioty krwawe
+T39	Condition 1644 1660	chorobę wrzodową
+N14	Reference T39 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T40	Symptom 1662 1676	duszność nocną
+N15	Reference T40 ICD10:I50.1	Niewydolność serca lewokomorowa
+T41	Symptom 1678 1693	obrzęki podudzi
+N16	Reference T41 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T42	Symptom 1695 1719	bóle w klatce piersiowej
+N17	Reference T42 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T43	Negation 1567 1573	Neguje
+R15	Neg Arg1:T43 Arg2:T34	
+R16	Neg Arg1:T43 Arg2:T35	
+R17	Neg Arg1:T43 Arg2:T36	
+R18	Neg Arg1:T43 Arg2:T37	
+R19	Neg Arg1:T43 Arg2:T38	
+R20	Neg Arg1:T43 Arg2:T39	
+R21	Neg Arg1:T43 Arg2:T40	
+R22	Neg Arg1:T43 Arg2:T41	
+R23	Neg Arg1:T43 Arg2:T42	
+T44	Condition 1532 1539	Otyłość
+N18	Reference T44 ICD10:E66	Otyłość
+T45	Condition 1542 1564	Zylaki kończyn dolnych
+N19	Reference T45 ICD10:I83	Żylaki kończyn dolnych
+T46	Condition 1499 1517	po 2 epizodach TIA
+T47	Date 1519 1523	2006
+T48	Date 1525 1529	2013
+R24	Dat Arg1:T47 Arg2:T46	
+R25	Dat Arg1:T48 Arg2:T46	
+T49	Condition 1480 1492	Dyslipidemia
+N20	Reference T49 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T50	Condition 1447 1478	Nieprawidłowa glikemia na czczo
+T51	Condition 1002 1009	Otyłość
+N21	Reference T51 ICD10:E66	Otyłość
+T52	Condition 1012 1034	Żylaki kończyn dolnych
+N22	Reference T52 ICD10:I83	Żylaki kończyn dolnych
+T53	Condition 1424 1445	Nadciśnienie tętnicze
+N23	Reference T53 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T54	Condition 822 843	Nadciśnienie tętnicze
+N24	Reference T54 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T55	Condition 845 948	Zaburzenia metabolizmu węglowodanów (nieprawidłowa glikemia na czczo, nieprawidłowa tolerancja glukozy)
+T56	Condition 950 962	Dyslipidemia
+N25	Reference T56 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T57	Condition 1391 1422	Napadowe migotanie przedsionków
+N26	Reference T57 ICD10:I48	Migotanie i trzepotanie przedsionków
+T58	Symptom 1300 1351	zmniejszenie tolerancji wysiłku do II klasy wg NYHA
+T59	Condition 1353 1368	kołatania serca
+N27	Reference T59 ICD10:R00.2	Kołatanie serca
+T60	Condition 1179 1212	napadowym migotaniem przedsionków
+N28	Reference T60 ICD10:I48	Migotanie i trzepotanie przedsionków
+T61	Condition 972 987	2 epizodach TIA
+T62	Date 989 993	2006
+T63	Date 995 999	2013
+R26	Dat Arg1:T62 Arg2:T61	
+R27	Dat Arg1:T63 Arg2:T61	
+T64	Condition 789 820	Napadowe migotanie przedsionków
+N29	Reference T64 ICD10:I48	Migotanie i trzepotanie przedsionków
+T65	Investigation 530 571	kontrola lipidogramu, stężenia elektrolit
+T66	Behaviour 422 517	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T67	Condition 1270 1289	niewydolności serca
+N30	Reference T67 ICD10:I50	Niewydolność serca
+N31	Reference T55 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+N32	Reference T61 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+N33	Reference T50 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+N34	Reference T46 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone

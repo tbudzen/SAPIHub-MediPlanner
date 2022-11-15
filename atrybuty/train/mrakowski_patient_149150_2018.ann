@@ -1,0 +1,96 @@
+T1	Condition 439 476	Nadciśnienie tętnicze I st wg ESC/ESH
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 478 482	LBBB
+N2	Reference T2 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T3	Treatment 492 517	usunięciu jajnika prawego
+A1	Status T3 Historical_Insignificant
+T4	Treatment 639 666	dalsza opieka w poradni POZ
+T5	Treatment 667 699	okresowa kontrola kardiologiczna
+T6	Investigation 700 764	wskazana kontrola RTG kl. piersiowej w warunkach ambulatoryjnych
+T7	Date 765 781	za ok. 1 miesiąc
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Investigation 782 821	codzienna kontrola ciśnienia tętniczego
+T9	Investigation 822 851	okresowa kontrola lipidogramu
+T10	Behaviour 853 878	dieta niskocholesterolowa
+T11	Behaviour 879 924	stały, umiarkowany, aerobowy wysiłek fizyczny
+T12	Behaviour 925 946	zakaz palenia tytoniu
+T13	Treatment 947 975	regularne przyjmowanie leków
+T14	Drug 977 985	Polocard
+T15	Drug_dose 986 1009	75 mg 1 tabl. wieczorem
+R2	Drg Arg1:T14 Arg2:T15	
+T16	Drug 1033 1039	Atoris
+T17	Drug_dose 1040 1063	20 mg 1 tabl. wieczorem
+R3	Drg Arg1:T16 Arg2:T17	
+T18	Drug 1064 1072	Teldipin
+T19	Drug_dose 1073 1093	80/5 mg 1 tabl. rano
+R4	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1094 1103	Captopril
+T21	Drug_dose 1104 1128	12,5 mg 1 tabl. doraźnie
+R5	Drg Arg1:T20 Arg2:T21	
+T22	Condition 1277 1300	nadciśnieniem tętniczym
+N3	Reference T22 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T23	Date 1301 1318	od ok. 2 miesięcy
+R6	Dat Arg1:T23 Arg2:T22	
+T24	Investigation_result 1320 1348	świeżo zidentyfikowanym LBBB
+N4	Reference T24 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T25	Investigation 1351 1367	spoczynkowym EKG
+R7	Inv Arg1:T25 Arg2:T24	
+T26	Date 1368 1379	30.04.2018r
+R8	Dat Arg1:T26 Arg2:T25	
+T27	Symptom 1419 1458	labilnych wartości ciśnienia tętniczego
+N5	Reference T27 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T28	Condition 1471 1488	choroby wieńcowej
+N6	Reference T28 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T29	Treatment 1519 1536	Przebyte operacje
+T30	Treatment 1546 1571	usunięciu jajnika prawego
+A2	Status T30 Historical_Insignificant
+T31	Date 1575 1580	2005r
+R9	Dat Arg1:T31 Arg2:T30	
+T32	Treatment 1581 1600	Leczenie przewlekłe
+T33	Negation 1602 1612	nie podaje
+R10	Neg Arg1:T33 Arg2:T32	
+T34	Condition 1640 1643	WZW
+N7	Reference T34 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T35	Condition 1645 1654	borelioza
+N8	Reference T35 ICD10:A69.2	Choroba z Lyme
+T36	Negation 1657 1667	nie podaje
+R11	Neg Arg1:T36 Arg2:T35	
+R12	Neg Arg1:T36 Arg2:T34	
+T37	Condition 1668 1683	Wywiad rodzinny
+A3	Status T37 Family
+T38	Condition 1693 1695	MI
+A4	Status T38 Family
+N9	Reference T38 ICD10:I25.2	Przebyty zawał serca
+T39	Behaviour 1696 1711	Palenie tytoniu
+T40	Negation 1714 1724	nie podaje
+R13	Neg Arg1:T40 Arg2:T39	
+T41	Behaviour 1725 1750	Inne używki: okazjonalnie
+T42	Condition 1751 1760	Uczulenia
+N11	Reference T42 ICD10:T78.4	Alergia, nieokreślona
+T43	Negation 1762 1772	nie podaje
+R14	Neg Arg1:T43 Arg2:T42	
+T44	Behaviour 1791 1809	pracownik umysłowy
+T45	Behaviour 1811 1828	obecnie emerytura
+T46	Drug 1854 1859	Acard
+T47	Drug_dose 1860 1883	75 mg 1 tabl. wieczorem
+R15	Drg Arg1:T46 Arg2:T47	
+T48	Drug 1884 1896	Preductal MR
+T49	Drug_dose 1897 1912	1 tabl. 2 x dz.
+R16	Drg Arg1:T48 Arg2:T49	
+T50	Drug 1913 1924	Diuresin SR
+T51	Drug_dose 1925 1937	1 tabl. rano
+R17	Drg Arg1:T50 Arg2:T51	
+T52	Drug 1938 1946	Teldipin
+T53	Drug_dose 1947 1972	80/5 mg 1 tabl. wieczorem
+R18	Drg Arg1:T52 Arg2:T53	
+T54	Investigation 2000 2010	echo serca
+T55	Investigation 2012 2015	TET
+T56	Investigation 2017 2021	ABPM
+T57	Investigation 2023 2029	Holter
+T58	Investigation 2031 2049	RTG kl. piersiowej
+N10	Reference T39 ICD10:Z72.0	Używanie tytoniu
+T59	Date 1490 1507	Od ok. 1 tygodnia
+T60	Drug 1508 1517	nowe leki
+R19	Dat Arg1:T59 Arg2:T60	
+A5	Status T41 Historical_Insignificant
+N12	Reference T41 ICD10:Z72	Problemy związane ze stylem życia

@@ -1,0 +1,133 @@
+T1	Investigation 2606 2609	ExT
+T2	Investigation 2611 2615	ECHO
+T3	Investigation 2617 2621	ABPM
+T4	Investigation 2623 2633	Holter-EKG
+T5	Investigation 2635 2638	TEE
+T6	Drug 2503 2512	Captopril
+T7	Drug_dose 2513 2521	doraźnie
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 2460 2473	Biotevit gold
+T9	Drug_dose 2474 2488	1x1 tabl. rano
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Condition 2331 2335	udar
+A1	Status T10 Family
+N1	Reference T10 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T11	Condition 2370 2375	zawał
+A2	Status T11 Family
+N2	Reference T11 ICD10:I25.2	Przebyty zawał serca
+T12	Condition 2416 2421	zawał
+N3	Reference T12 ICD10:I25.2	Przebyty zawał serca
+A3	Status T12 Family
+T13	Condition 2205 2208	WZW
+N4	Reference T13 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T14	Condition 2215 2224	borelioza
+N5	Reference T14 ICD10:A69.2	Choroba z Lyme
+T15	Condition 2230 2233	tbc
+N6	Reference T15 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T16	Negation 2234 2237	(-)
+R3	Neg Arg1:T16 Arg2:T15	
+T17	Negation 2225 2228	(-)
+R4	Neg Arg1:T17 Arg2:T14	
+T18	Negation 2209 2212	(-)
+R5	Neg Arg1:T18 Arg2:T13	
+T19	Negation 2174 2177	nie
+T20	Negation 2158 2161	nie
+T21	Negation 1917 1923	Neguje
+T22	Condition 2163 2172	Uczulenia
+N7	Reference T22 ICD10:T78.4	Alergia, nieokreślona
+R6	Neg Arg1:T19 Arg2:T22	
+T23	Behaviour 2145 2156	Inne używki
+R7	Neg Arg1:T20 Arg2:T23	
+T24	Behaviour 2102 2143	Palenie tytoniu: nikotynizm 25 paczkolat.
+N8	Reference T24 ICD10:T65.2	Tytoń i nikotyna
+T25	Symptom 1925 1937	zasłabnięcia
+N9	Reference T25 ICD10:R55	Omdlenie i zapaść
+T26	Symptom 1939 1947	omdlenia
+N10	Reference T26 ICD10:R55	Omdlenie i zapaść
+T27	Symptom 1949 1959	krwawienia
+N11	Reference T27 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T28	Symptom 1961 1974	czarne stolce
+N12	Reference T28 ICD10:K92.1	Stolce smołowate
+T29	Symptom 1976 1992	brunatne wymioty
+N13	Reference T29 ICD10:K92.0	Wymioty krwawe
+T30	Condition 1994 2010	chorobę wrzodową
+N14	Reference T30 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T31	Condition 2012 2015	DM2
+N15	Reference T31 ICD10:E11	Cukrzyca insulinoniezależna
+T32	Condition 2017 2028	zawał serca
+N16	Reference T32 ICD10:I25.2	Przebyty zawał serca
+R8	Neg Arg1:T21 Arg2:T25	
+R9	Neg Arg1:T21 Arg2:T26	
+R10	Neg Arg1:T21 Arg2:T27	
+R11	Neg Arg1:T21 Arg2:T28	
+R12	Neg Arg1:T21 Arg2:T29	
+R13	Neg Arg1:T21 Arg2:T30	
+R14	Neg Arg1:T21 Arg2:T31	
+R15	Neg Arg1:T21 Arg2:T32	
+T33	Treatment 2052 2079	korekcja przegrody nosowej,
+T34	Treatment 2080 2093	appendektomia
+T35	Treatment 2095 2100	2x CC
+T36	Symptom 1884 1915	obrzęki kk dolnych asymetryczne
+N17	Reference T36 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T37	Condition 1808 1813	HA I*
+N18	Reference T37 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T38	Symptom 1748 1763	kołatania serca
+N19	Reference T38 ICD10:R00.2	Kołatanie serca
+T39	Investigation 528 571	kontrola lipidogramu, stężenia elektrolitów
+T40	Behaviour 420 515	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T41	Condition 798 836	Przewlekła choroba niedokrwienna serca
+N20	Reference T41 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T42	Condition 865 894	Obserwacja w kierunku PFO/ASD
+A4	Source T42 Declared
+N21	Reference T42 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T43	Negation 897 906	negatywna
+R16	Neg Arg1:T43 Arg2:T42	
+T44	Condition 919 922	TIA
+N22	Reference T44 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T45	Date 924 928	2017
+A5	Source T44 Declared
+R17	Dat Arg1:T45 Arg2:T44	
+T46	Condition 953 965	Dyslipidemia
+N23	Reference T46 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T47	Behaviour 970 980	Nikotynizm
+N24	Reference T47 ICD10:T65.2	Tytoń i nikotyna
+T48	Condition 1212 1224	Przebyte TIA
+N25	Reference T48 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T49	Condition 1226 1241	Podejrzenie PFO
+A6	Source T49 Declared
+N26	Reference T49 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T50	Symptom 1243 1258	Kołatania serca
+N27	Reference T50 ICD10:R00.2	Kołatanie serca
+T51	Symptom 1269 1277	duszność
+N28	Reference T51 ICD10:R06.0	Duszność
+T52	Condition 1279 1300	Nadciśnienie tętnicze
+N29	Reference T52 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T53	Behaviour 1302 1312	Nikotynizm
+N30	Reference T53 ICD10:T65.2	Tytoń i nikotyna
+T54	Symptom 1774 1806	duszność niezależnie od sytuacji
+N31	Reference T54 ICD10:R06.0	Duszność
+T55	Condition 1484 1516	przebytego udaru niedokrwiennego
+N32	Reference T55 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T56	Condition 1517 1520	TIA
+N33	Reference T56 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T57	Date 1521 1532	2 lata temu
+R18	Dat Arg1:T57 Arg2:T56	
+R19	Dat Arg1:T57 Arg2:T55	
+T58	Symptom 1534 1554	zaburzenia równowagi
+N34	Reference T58 ICD10:R26.8	Inne i nieokreślone zaburzenia chodu i poruszania się
+T59	Symptom 1556 1569	zawroty głowy
+N35	Reference T59 ICD10:R42	Zawroty głowy i odurzenie
+T60	Symptom 1571 1586	zaburzenia mowy
+N36	Reference T60 ICD10:R47	Zaburzenia mowy niesklasyfikowane gdzie indziej
+T61	Symptom 1588 1610	zaburzenia świadomości
+N37	Reference T61 ICD10:R41	Inne objawy i dolegliwości dotyczące funkcji poznawczych i świadomości
+T62	Symptom 1612 1644	drętwienie kończyny lewej górnej
+N38	Reference T62 ICD10:R20.2	Parestezje
+T63	Condition 1647 1685	podejrzenia zakrzepicy kończyn dolnych
+A7	Source T63 Declared
+N39	Reference T63 ICD10:I80	Zapalenie żył i zakrzepowe zapalenie żył
+T64	Symptom 1700 1738	bólowe kończyn dolnych, głównie prawej
+N40	Reference T64 ICD10:M79.6	Bóle kończyn
+T65	Condition 2402 2407	wylew
+A8	Status T65 Family
+N41	Reference T65 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy

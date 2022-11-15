@@ -1,0 +1,100 @@
+T1	Condition 448 475	Przewlekła choroba wieńcowa
+N1	Reference T1 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T2	Condition 477 498	Nadciśnienie tętnicze
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Condition 500 515	Miażdżyca aorty
+N3	Reference T3 ICD10:I70.0	Miażdżyca aorty
+T4	Condition 517 529	Cukrzyca t.2
+N4	Reference T4 ICD10:E11	Cukrzyca insulinoniezależna
+T5	Condition 531 555	Przewlekła choroba nerek
+N5	Reference T5 ICD10:N18.9	Przewlekła niewydolność nerek, nieokreślona
+T6	Condition 557 564	Otyłość
+N6	Reference T6 ICD10:E66	Otyłość
+T7	Treatment 574 590	cholecystectomii
+T8	Condition 604 618	Zapalenie płuc
+N7	Reference T8 ICD10:J18.9	Zapalenie płuc, nieokreślone
+T9	Investigation 816 868	kontrola glikemii, lipidogramu, parametrów nerkowych
+T10	Investigation 879 912	samokontrola ciśnienia tętniczego
+T11	Behaviour 913 950	dieta cukrzycowa, ubogocholesterolowa
+T12	Drug 985 992	Nebilet
+T13	Drug_dose 993 1010	5 mg 1 tabl. rano
+R1	Drg Arg1:T12 Arg2:T13	
+T14	Drug 1011 1023	Tertensif SR
+T15	Drug_dose 1024 1036	1 tabl. rano
+R2	Drg Arg1:T14 Arg2:T15	
+T16	Drug 1037 1045	Spironol
+T17	Drug_dose 1046 1070	25 mg 1 tabl. w południe
+R3	Drg Arg1:T16 Arg2:T17	
+T18	Drug 1071 1076	Rimal
+T19	Drug_dose 1077 1107	10 mg + 5 mg 1 tabl. wieczorem
+R4	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1108 1113	Acard
+T21	Drug_dose 1114 1137	75 mg 1 tabl. wieczorem
+R5	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1138 1144	Atoris
+T23	Drug_dose 1145 1168	20 mg 1 tabl. wieczorem
+R6	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1169 1181	Preductal MR
+T25	Drug_dose 1182 1196	1 tabl. 2 x dz
+R7	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1198 1207	Nitromint
+T27	Drug_dose 1210 1228	aerozol - doraźnie
+R8	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1229 1238	Augmentin
+T29	Drug_dose 1239 1279	500+125 mg 1 tabl. co 8 godz przez 5 dni
+R9	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1280 1289	Lacidofil
+T31	Drug_dose 1290 1303	1 kaps 3 x dz
+R10	Drg Arg1:T30 Arg2:T31	
+T32	Negation 1506 1512	Neguje
+T33	Symptom 1513 1528	bóle zamostkowe
+T34	Symptom 1537 1555	utraty przytomnośc
+N8	Reference T34 ICD10:R55	Omdlenie i zapaść
+T35	Symptom 1565 1580	kołatania serca
+N9	Reference T35 ICD10:R00.2	Kołatanie serca
+T36	Negation 1558 1564	neguje
+R11	Neg Arg1:T36 Arg2:T35	
+T37	Negation 1530 1536	neguje
+R12	Neg Arg1:T37 Arg2:T34	
+R13	Neg Arg1:T32 Arg2:T33	
+T38	Condition 1595 1616	nadciśnienie tętnicze
+N10	Reference T38 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T39	Condition 1618 1633	cukrzyca typu 2
+N11	Reference T39 ICD10:E11	Cukrzyca insulinoniezależna
+T40	Treatment 1655 1671	cholecystektomia
+T41	Negation 1685 1699	neguje        
+T42	Negation 1709 1715	neguje
+T43	Negation 1724 1730	neguje
+T44	Condition 1672 1682	Nikotynizm
+N12	Reference T44 ICD10:F17.2	
+T45	Condition 1700 1707	Alkohol
+N13	Reference T45 ICD10:Z72.1	Używanie alkoholu
+R14	Neg Arg1:T41 Arg2:T44	
+R15	Neg Arg1:T42 Arg2:T45	
+T46	Condition 1732 1749	uczulenia na leki
+N14	Reference T46 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T47	Condition 1751 1784	krwawienia z przewodu pokarmowego
+N15	Reference T47 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R16	Neg Arg1:T43 Arg2:T46	
+R17	Neg Arg1:T43 Arg2:T47	
+T48	Drug 1812 1820	bisocard
+T49	Drug 1822 1834	tertensif SR
+T50	Drug 1869 1880	gliclazidum
+T51	Drug_dose 1881 1885	80mg
+R18	Drg Arg1:T50 Arg2:T51	
+T52	Drug 1887 1898	molsidomina
+T53	Drug_dose 1899 1902	2mg
+R19	Drg Arg1:T52 Arg2:T53	
+T54	Drug 1904 1911	amlozek
+T55	Drug_dose 1912 1916	10mg
+R20	Drg Arg1:T54 Arg2:T55	
+T56	Drug 1918 1926	acurenal
+T57	Drug_dose 1927 1931	10mg
+R21	Drg Arg1:T56 Arg2:T57	
+T58	Drug 1933 1940	Akistan
+T59	Drug 1942 1950	Cataroft
+T60	Investigation 1979 1989	ECHO serca
+T61	Investigation 1991 2001	Holter EKG
+T62	Investigation 2003 2012	Holter RR
+T63	Drug_dose 1835 1867	(bierze tylko od czasu do czasu)
+R22	Drg Arg1:T49 Arg2:T63	

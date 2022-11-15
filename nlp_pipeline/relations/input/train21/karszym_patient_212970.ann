@@ -1,0 +1,56 @@
+T1	Treatment 461 505	Wizyta w regionalnej Poradni Kardiologicznej
+T2	Date 516 530	za ok pół roku
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Treatment 533 608	następnie w poradni kardiologicznej dla dorosłych z wrodzonymi wadami serca
+T5	Symptom 798 843	w przypadku niepokojących objawów - wcześniej
+T7	Treatment 614 762	Poszerzone badania kliniczne (w tym próba wysiłkowa) w regionalnym ośrodku lub w Klinice Kardiologii dla Dorosłych z Wrodzonymi Wadami Serca w ICZMP
+T8	Behaviour 910 955	Ograniczenie maksymalnych wysiłków fizycznych
+T9	Behaviour 957 992	dostosowanie wysiłków do wydolności
+T10	Treatment 998 1047	Regularne profilaktyczne kontrole stomatologiczne
+R5	Dat Arg1:T2 Arg2:T7	
+T11	Condition 1310 1378	Wrodzona wada serca pod postacią krytycznego zwężenia zastawki aorty
+N1	Reference T11 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T12	Condition 1380 1396	koarktacji aorty
+T13	Condition 1399 1431	przetrwałego przewodu tętniczego
+N3	Reference T13 ICD10:Q25.0	Drożny przewód tętniczy
+T14	Treatment 1447 1455	operacji
+N4	Reference T14 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T15	Date 1509 1520	26.02.2002r
+R7	Dat Arg1:T15 Arg2:T14	
+T16	Treatment 1528 1561	balonowej plastyce zastawki aorty
+T17	Date 1563 1574	14.03.2002r
+R8	Dat Arg1:T17 Arg2:T16	
+T18	Treatment 1582 1600	balonowej plastyce
+N6	Reference T18 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T19	Date 1619 1630	04.07.2002r
+R9	Dat Arg1:T19 Arg2:T18	
+T20	Treatment 1638 1660	operacji metodą Ross'a
+N7	Reference T20 ICD10:Z95.4	Obecność innych protez zastawek serca
+T21	Date 1662 1673	10.12.2002r
+R10	Dat Arg1:T21 Arg2:T20	
+T22	Condition 1679 1736	Umiarkowana niedomykalność autograftu w pozycji aortalnej
+N8	Reference T22 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T23	Condition 1741 1803	Łagodna niedomykalność i zwężenie homograftu w pozycji płucnej
+N9	Reference T23 ICD10:I37.2	Zwężenie zastawki pnia płucnego z niedomykalnością
+T24	Condition 1808 1849	Niedrożność prawej i lewej tętnicy udowej
+N5	Reference T16 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T25	Treatment 1875 1923	implantacją stentu CP45Z8 do łuku i cieśni aorty
+N11	Reference T25 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T26	Date 1925 1936	23.11.2017r
+R11	Dat Arg1:T26 Arg2:T25	
+N2	Reference T12 ICD10:Q25.1	Zwężenie cieśni aorty
+R2	Dat Arg1:T2 Arg2:T3	
+T4	Negation 340 343	Bez
+T6	Drug 344 349	leków
+R3	Neg Arg1:T4 Arg2:T6	
+T27	Condition 1456 1472	koarktacji aorty
+N10	Reference T27 ICD10:Q25.1	Zwężenie cieśni aorty
+T28	Condition 1475 1507	przetrwałego przewodu tętniczego
+N12	Reference T28 ICD10:Q25.0	Drożny przewód tętniczy
+R4	Dat Arg1:T15 Arg2:T27	
+R6	Dat Arg1:T15 Arg2:T28	
+T29	Condition 1601 1617	koarktacji aorty
+N13	Reference T29 ICD10:Q25.1	Zwężenie cieśni aorty
+R12	Dat Arg1:T19 Arg2:T29	
+T30	Investigation 1854 1872	Cewnikowanie serca
+R13	Dat Arg1:T26 Arg2:T30	

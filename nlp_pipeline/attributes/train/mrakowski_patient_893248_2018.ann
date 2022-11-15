@@ -1,0 +1,77 @@
+T1	Condition 439 505	Wada serca pod postacią szpilkowatego przetrwałego otworu owalnego
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Symptom 507 519	Zasłabnięcia
+N2	Reference T2 ICD10:R55	Omdlenie i zapaść
+T3	Negation 520 523	bez
+T4	Symptom 524 550	pełnej utraty przytomności
+N3	Reference T4 ICD10:R55	Omdlenie i zapaść
+R1	Neg Arg1:T3 Arg2:T4	
+T5	Symptom 564 584	Migrenowe bóle głowy
+N4	Reference T5 ICD10:G43	Migrena
+T6	Treatment 705 732	dalsza opieka w poradni POZ
+T7	Treatment 733 800	okresowa kontrola kardiologiczna, endokrynologiczna i neurologiczna
+T8	Investigation 802 831	okresowa kontrola lipidogramu
+T9	Date 833 843	raz w roku
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Behaviour 845 870	dieta niskocholesterolowa
+T11	Behaviour 872 917	stały, umiarkowany, aerobowy wysiłek fizyczny
+T12	Symptom 1140 1150	zasłabnięć
+N5	Reference T12 ICD10:R55	Omdlenie i zapaść
+T13	Symptom 1155 1181	pełnej utraty przytomności
+N6	Reference T13 ICD10:R55	Omdlenie i zapaść
+T14	Negation 1151 1154	bez
+R3	Neg Arg1:T14 Arg2:T13	
+T15	Condition 1197 1239	dwa epizody upadków z urazem twarzoczaszki
+N7	Reference T15 ICD10:S09.9	Nieokreślony uraz głowy
+T16	Negation 1241 1244	bez
+T17	Symptom 1245 1266	objawów prodromalnych
+R4	Neg Arg1:T16 Arg2:T17	
+T18	Date 1288 1311	ostatni 3 tygodnie temu
+T19	Date 1268 1286	Pierwszy rok  temu
+R5	Dat Arg1:T18 Arg2:T15	
+R6	Dat Arg1:T19 Arg2:T15	
+T21	Symptom 1384 1465	miała świadomość zdarzeń, ale nie panowała nad własnym ciałem i padała bezwładnie
+N9	Reference T21 ICD10:W19	Nieokreślony upadek
+T22	Symptom 1488 1536	migrenowe bóle głowy związane z miesiączkowaniem
+N10	Reference T22 ICD10:G43	Migrena
+T23	Condition 1538 1591	zaburzenia miesiączkowania w postaci braku miesiączki
+N11	Reference T23 ICD10:N91.1	Wtórny brak miesiączki
+T24	Date 1592 1605	od 3 miesięcy
+R7	Dat Arg1:T24 Arg2:T23	
+T25	Treatment 1655 1672	Przebyte operacje
+T26	Negation 1675 1676	-
+R8	Neg Arg1:T26 Arg2:T25	
+T27	Treatment 1677 1696	Leczenie przewlekłe
+T28	Negation 1697 1700	nie
+R9	Neg Arg1:T28 Arg2:T27	
+T29	Condition 1729 1732	WZW
+N12	Reference T29 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T30	Negation 1735 1736	-
+R10	Neg Arg1:T30 Arg2:T29	
+T31	Condition 1742 1751	borelioza
+N13	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Negation 1754 1755	-
+R11	Neg Arg1:T32 Arg2:T31	
+T33	Condition 1759 1767	gruźlica
+T34	Negation 1768 1769	-
+R12	Neg Arg1:T34 Arg2:T33	
+T35	Behaviour 1771 1786	Palenie tytoniu
+N15	Reference T35 ICD10:Z72.0	Używanie tytoniu
+T36	Negation 1788 1791	nie
+R13	Neg Arg1:T36 Arg2:T35	
+T37	Behaviour 1792 1803	Inne używki
+T38	Negation 1805 1808	nie
+R14	Neg Arg1:T38 Arg2:T37	
+T39	Condition 1809 1818	Uczulenia
+N16	Reference T39 ICD10:T78.4	Alergia, nieokreślona
+T40	Negation 1820 1826	neguje
+R15	Neg Arg1:T40 Arg2:T39	
+T41	Behaviour 1843 1869	warunki mieszkaniowe dobre
+T42	Investigation 1913 1923	Echo serca
+T43	Investigation 1927 1937	Holter EKG
+T44	Investigation 1939 1954	próba wysiłkowa
+N8	Reference T33 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N14	Reference T37 ICD10:Z72	Problemy związane ze stylem życia
+T20	Negation 1880 1883	bez
+T45	Drug 1884 1898	leków na stałe
+R16	Neg Arg1:T20 Arg2:T45	

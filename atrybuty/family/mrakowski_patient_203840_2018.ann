@@ -1,0 +1,56 @@
+T1	Condition 685 712	zapaleniu mięśnia sercowego
+N1	Reference T1 ICD10:I40.9	Ostre zapalenie mięśnia sercowego, nieokreślone
+T2	Date 714 721	07.2018
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Condition 724 764	Pojedyncze dodatkowe pobudzenia komorowe
+N2	Reference T3 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T4	Symptom 972 1007	uciski i kłucia w klatce piersiowej
+N3	Reference T4 ICD10:R07.3	Inne bóle w klatce piersiowej
+T5	Negation 1010 1016	Neguje
+T6	Symptom 1017 1029	zasłabnięcia
+R2	Neg Arg1:T5 Arg2:T6	
+T7	Condition 1054 1081	zapaleniu mięśnia sercowego
+N4	Reference T7 ICD10:I33.9	Ostre zapalenie wsierdzia, nieokreślone
+T8	Condition 1095 1130	atypowego infekcji dróg oddechowych
+N5	Reference T8 ICD10:J22	Nieokreślone ostre zakażenie dolnych dróg oddechowych
+T9	Date 1131 1141	26.07.2018
+R3	Dat Arg1:T9 Arg2:T7	
+R4	Dat Arg1:T9 Arg2:T8	
+T10	Treatment 1142 1159	Przebyte operacje
+T11	Treatment 1170 1183	appendektomii
+A1	Status T11 Historical_Insignificant
+T12	Date 1184 1195	19 lat temu
+R5	Dat Arg1:T12 Arg2:T11	
+T13	Treatment 1197 1216	Leczenie przewlekłe
+T14	Negation 1219 1223	brak
+R6	Neg Arg1:T14 Arg2:T13	
+T15	Condition 1252 1255	WZW
+N6	Reference T15 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T16	Negation 1258 1259	-
+R7	Neg Arg1:T16 Arg2:T15	
+T17	Condition 1265 1274	borelioza
+N7	Reference T17 ICD10:A69.2	Choroba z Lyme
+T18	Negation 1277 1278	-
+R8	Neg Arg1:T18 Arg2:T17	
+T19	Condition 1283 1302	wywiadzie rodzinnym
+A2	Status T19 Family
+T20	Negation 1305 1316	brak danych
+R9	Neg Arg1:T20 Arg2:T19	
+T21	Behaviour 1318 1333	Palenie tytoniu
+N8	Reference T21 ICD10:T65.2	Tytoń i nikotyna
+T22	Negation 1335 1338	nie
+R10	Neg Arg1:T22 Arg2:T21	
+T23	Behaviour 1339 1350	Inne używki
+T24	Negation 1352 1355	nie
+R11	Neg Arg1:T24 Arg2:T23	
+T25	Condition 1356 1365	Uczulenia
+N9	Reference T25 ICD10:T78.4	Alergia, nieokreślona
+T26	Negation 1367 1373	neguje
+R12	Neg Arg1:T26 Arg2:T25	
+T27	Behaviour 1390 1416	warunki mieszkaniowe dobre
+T28	Drug 1444 1451	Nebilet
+T29	Drug_dose 1452 1476	5 mg 1 x dz po 1/2 tabl.
+R13	Drg Arg1:T28 Arg2:T29	
+T30	Investigation 1492 1502	Echo serca
+T31	Investigation 1505 1520	Holter EKG i RR
+T32	Investigation 1524 1539	Próba Wysiłkowa

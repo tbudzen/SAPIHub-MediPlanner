@@ -1,0 +1,28 @@
+T1	Treatment 331 365	Kontrola w Poradni Kardiologicznej
+T2	Date 366 375	za 6 m-cy
+T3	Condition 593 617	Częstoskurcz nadkomorowy
+N1	Reference T3 ICD10:I47.1	Częstoskurcz nadkomorowy
+T4	Drug 741 748	Betaloc
+T5	Drug_dose 749 758	1 x 25 mg
+T6	Drug 898 918	Betaloc (metoprolol)
+T7	Drug_dose 927 942	25mg 1xdziennie
+T8	Treatment 955 979	hospitalizacja w Klinice
+T9	Date 993 1006	3 lipca 2018r
+T10	Condition 1355 1388	Napadowy częstoskurcz nadkomorowy
+N2	Reference T10 ICD10:I47.1	Częstoskurcz nadkomorowy
+T11	Drug 1509 1516	Betaloc
+T12	Symptom 1666 1683	w  stanie  dobrym
+T13	Drug 1757 1764	Betaloc
+T14	Drug_dose 1765 1771	1x25mg
+T15	Condition 1909 1945	napadzie częstoskurczu nadkomorowego
+N3	Reference T15 ICD10:I47.1	Częstoskurcz nadkomorowy
+T16	Drug 1996 2005	Adenocoru
+T17	Condition 2006 2018	częstoskurcz
+N4	Reference T17 ICD10:I47	Częstoskurcz napadowy
+T18	Negation 2019 2026	ustąpił
+R1	Neg Arg1:T18 Arg2:T17	
+R2	Drg Arg1:T13 Arg2:T14	
+R3	Dat Arg1:T9 Arg2:T8	
+R4	Drg Arg1:T4 Arg2:T5	
+R5	Dat Arg1:T2 Arg2:T1	
+R6	Drg Arg1:T6 Arg2:T7	

@@ -1,0 +1,35 @@
+T1	Drug 340 349	Rytmonorm
+T2	Drug 351 358	Bemecor
+T3	Drug 360 378	kroplówka składowa
+T4	Drug 380 389	ibuprofen
+T5	Drug 391 402	paracetamol
+T6	Drug 404 410	Smecta
+T7	Behaviour 519 537	Dieta lekkostrawna
+T8	Date 538 551	przez 3-4 dni
+R1	Dat Arg1:T8 Arg2:T7	
+T9	Drug 554 563	Rytmonorm
+T10	Drug 573 580	Bemecor
+T11	Drug_dose 581 588	2x50 ug
+R2	Drg Arg1:T10 Arg2:T11	
+T12	Drug_dose 564 572	3 x35 mg
+R3	Drg Arg1:T9 Arg2:T12	
+T13	Investigation 751 778	badania holterowskiego ekg)
+T14	Condition 1584 1603	wrodzoną wadą serca
+N1	Reference T14 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T15	Condition 996 1070	Wrodzona wada serca pod postacią ubytku przegrody przedsionkowo-komorowej.
+N2	Reference T15 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T16	Condition 1082 1109	przewężeniu tętnicy płucnej
+N3	Reference T16 ICD10:Q25.6	Zwężenie pnia płucnego
+T17	Date 1111 1122	23.04.2014r
+R4	Dat Arg1:T17 Arg2:T16	
+T18	Treatment 1144 1243	operacji wspólnego kanału przedsionkowo-komorowego i zdjęciu podwiązki przewężającej tętnicę płucną
+T19	Date 1245 1256	08.09.2014r
+R5	Dat Arg1:T19 Arg2:T18	
+T20	Condition 1274 1311	Ektopiczny częstoskurcz przedsionkowy
+N4	Reference T20 ICD10:I47.1	Częstoskurcz nadkomorowy
+T21	Condition 1328 1364	Przedsionkowe zaburzenia rytmu serca
+N5	Reference T21 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T22	Condition 1369 1444	Ostra infekcja żołądkowo-jelitowa, najprawdopodobniej o etiologii wirusowej
+A1	Source T22 Declared
+N6	Reference T22 ICD10:A08	Wirusowe i inne określone zakażenia jelit
+T23	Drug 705 715	Rytmonormu

@@ -1,0 +1,48 @@
+T1	Drug 331 343	Nasivin Soft
+T2	Drug_dose 344 376	4 x dziennie 1 aplikacja do nosa
+T3	Date 377 398	do ustąpienia objawów
+T4	Drug 403 415	Tantum Verde
+T5	Drug_dose 416 450	5 x dziennie 1 aplikacja do gardła
+T6	Date 451 472	do ustąpienia objawów
+T7	Drug 477 483	Pelavo
+T8	Drug_dose 484 496	3 x 3 ml pos
+T9	Treatment 501 529	Dalsza opieka kardiologiczna
+T10	Treatment 531 547	wizyta w poradni
+T11	Date 548 565	we wrześniu 2019r
+R1	Drg Arg1:T1 Arg2:T2	
+R2	Dat Arg1:T3 Arg2:T1	
+R3	Drg Arg1:T4 Arg2:T5	
+R4	Dat Arg1:T6 Arg2:T4	
+R5	Drg Arg1:T7 Arg2:T8	
+R6	Dat Arg1:T11 Arg2:T10	
+T12	Condition 817 865	Wrodzona wada serca pod postacią zespołu Fallota
+N1	Reference T12 ICD10:Q21.3	Tetralogia Fallota
+T13	Condition 868 903	zarośnięciem zastawki pnia płucnego
+N2	Reference T13 ICD10:Q22.0	Zarośnięcie zastawki pnia płucnego
+T14	Treatment 916 1005	wytworzeniu zespolenia centralnego za pomocą protezy naczyniowej Gore-Tex o średnicy 4 mm
+N3	Reference T14 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T15	Date 1007 1017	07.03.2017
+T16	Treatment 1019 1045	Drenaż worka osierdziowego
+T17	Date 1073 1083	06.04.2017
+T18	Treatment 1089 1161	Operacja naprawcza wady z użyciem zastawki biologicznej Contegra (14 mm)
+N4	Reference T18 ICD10:Z95.3	Obecność ksenogenicznej zastawki serca
+T19	Date 1162 1179	w dniu 09.11.2017
+T20	Condition 1183 1216	Infekcja górnych dróg oddechowych
+N5	Reference T20 ICD10:J06.9	Ostre zakażenie górnych dróg oddechowych, nieokreślone
+R7	Dat Arg1:T15 Arg2:T14	
+R8	Dat Arg1:T17 Arg2:T16	
+R9	Dat Arg1:T19 Arg2:T18	
+T21	Drug 1336 1344	Relanium
+T22	Drug 1346 1354	Propofol
+T23	Drug 1356 1364	Midanium
+T24	Drug 1366 1377	Paracetamol
+T25	Drug 1379 1386	ANA 1:1
+T26	Condition 1522 1540	złożoną wadą serca
+T27	Treatment 1546 1573	zabiegu kardiochirurgicznym
+N6	Reference T27 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T28	Drug 1576 1590	leków na stale
+T29	Negation 1591 1604	nie otrzymuje
+R10	Neg Arg1:T29 Arg2:T28	
+N7	Reference T26 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T30	Date 1046 1071	w przebiegu pooperacyjnym
+R11	Dat Arg1:T30 Arg2:T16	

@@ -1,0 +1,104 @@
+T1	Condition 503 533	stenozy zastawki pnia płucnego
+N1	Reference T1 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T2	Condition 461 502	Wada wrodzona serca po korekcji ASD t.1 i
+T3	Date 535 540	2001r
+R1	Dat Arg1:T3 Arg2:T1	
+T4	Condition 543 596	Łagodna/umiarkowana niedomykalność zastawki mitralnej
+N2	Reference T4 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T5	Condition 606 672	Łagodna stenoza zastawki pnia płucnego z łagodną niedomykalnością.
+N3	Reference T5 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T6	Condition 673 717	Łagodna niedomykalność zastawki trójdzielnej
+N4	Reference T6 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T7	Condition 719 736	Choroba Hashimoto
+N5	Reference T7 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T8	Treatment 757 777	operacyjnym leczeniu
+A1	Status T8 Historical_Insignificant
+T9	Condition 778 806	złamania kości udowej prawej
+A2	Status T9 Historical_Insignificant
+N6	Reference T9 ICD10:S72	Złamanie kości udowej
+T10	Condition 808 836	Lekkie upośledzenie umysłowe
+N7	Reference T10 ICD10:F70	Upośledzenie umysłowe lekkiego stopnia
+T11	Condition 1702 1730	Lekkie upośledzenie umysłowe
+N8	Reference T11 ICD10:F70	
+T12	Condition 1732 1749	Choroba Hashimoto
+N9	Reference T12 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+A3	Source T12 Declared
+T13	Treatment 1798 1806	operacji
+T14	Treatment 1827 1845	wycięciu migdałków
+T15	Treatment 1855 1863	operacji
+T16	Condition 1864 1892	złamania kości udowej prawej
+N10	Reference T16 ICD10:S72	Złamanie kości udowej
+A4	Status T15 Historical_Insignificant
+T17	Treatment 1902 1926	zabiegu usunięcia ósemek
+A5	Status T17 Historical_Insignificant
+T18	Symptom 1584 1596	zasłabnięcia
+N11	Reference T18 ICD10:R55	Omdlenie i zapaść
+T19	Symptom 1598 1606	omdlenia
+N12	Reference T19 ICD10:R55	Omdlenie i zapaść
+T20	Symptom 1608 1621	zawroty głowy
+N13	Reference T20 ICD10:R42	Zawroty głowy i odurzenie
+T21	Symptom 1630 1654	bóle w klatce piersiowej
+N14	Reference T21 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T22	Negation 1623 1629	neguje
+R2	Neg Arg1:T22 Arg2:T21	
+T23	Negation 1577 1583	Neguje
+R3	Neg Arg1:T23 Arg2:T18	
+R4	Neg Arg1:T23 Arg2:T19	
+T24	Symptom 1562 1575	kołatań serca
+N15	Reference T24 ICD10:R00.2	Kołatanie serca
+T25	Condition 1402 1410	IM II st
+N16	Reference T25 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T26	Treatment 1416 1424	operacji
+T27	Date 1437 1442	2000r
+R5	Dat Arg1:T27 Arg2:T26	
+T28	Investigation 1153 1196	badanie echokardiograficzne przezprzełykowe
+T29	Drug 1199 1242	krótkotrwałym dożylnym znieczuleniu ogólnym
+T30	Date 1244 1255	01.02.2019r
+R6	Dat Arg1:T30 Arg2:T29	
+R7	Dat Arg1:T30 Arg2:T28	
+T31	Investigation 2235 2245	Echo serca
+T32	Investigation 2247 2257	Holter EKG
+T33	Investigation 2259 2274	Próba Wysiłkowa
+T34	Drug 2200 2204	Leki
+T35	Negation 2206 2219	nie przyjmuje
+R8	Neg Arg1:T35 Arg2:T34	
+T36	Behaviour 2172 2198	warunki mieszkaniowe dobre
+T37	Negation 2148 2154	neguje
+T38	Negation 2129 2135	neguje
+T39	Negation 2108 2114	neguje
+T40	Negation 2079 2089	nieistotny
+T41	Negation 2017 2018	-
+T42	Negation 2035 2036	-
+T43	Negation 2051 2052	-
+T44	Condition 2011 2014	WZW
+N17	Reference T44 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T45	Condition 2023 2032	borelioza
+N18	Reference T45 ICD10:A69.2	Choroba z Lyme
+T46	Condition 2040 2048	gruźlica
+N19	Reference T46 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+R9	Neg Arg1:T43 Arg2:T46	
+R10	Neg Arg1:T42 Arg2:T45	
+R11	Neg Arg1:T41 Arg2:T44	
+T47	Condition 2056 2077	W wywiadzie rodzinnym
+A6	Status T47 Family
+R12	Neg Arg1:T40 Arg2:T47	
+T48	Behaviour 2091 2106	Palenie tytoniu
+N20	Reference T48 ICD10:T65.2	Tytoń i nikotyna
+R13	Neg Arg1:T39 Arg2:T48	
+T49	Behaviour 2116 2127	Inne używki
+R14	Neg Arg1:T38 Arg2:T49	
+T50	Condition 2137 2146	Uczulenia
+N21	Reference T50 ICD10:T78.4	Alergia, nieokreślona
+R15	Neg Arg1:T37 Arg2:T50	
+T51	Condition 1807 1812	ASD I
+N22	Reference T51 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T52	Condition 1815 1817	PS
+N23	Reference T52 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+R16	Neg Arg1:T23 Arg2:T20	
+T53	Condition 1425 1430	ASD I
+N24	Reference T53 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T54	Condition 1433 1435	PS
+N25	Reference T54 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+R17	Dat Arg1:T27 Arg2:T54	
+R18	Dat Arg1:T27 Arg2:T53	
+R19	Dat Arg1:T3 Arg2:T2	

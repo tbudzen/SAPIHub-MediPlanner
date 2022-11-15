@@ -1,0 +1,227 @@
+T1	Investigation 4383 4393	Holter EKG
+T2	Investigation 4395 4397	RR
+T3	Treatment 4399 4425	zabieg implantacji zapinki
+T4	Condition 4429 4432	PFO
+N1	Reference T4 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T5	Drug 4345 4350	Acard
+T6	Drug 4352 4365	Ferrum żelazo
+T7	Drug 4367 4369	Mg
+T8	Treatment 4327 4329	CC
+T9	Date 4330 4337	01.2019
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Investigation 2837 2841	ECHO
+T11	Investigation 2843 2863	ECHO przezprzełykowe
+T12	Drug 2731 2741	żelazo p.o
+T13	Drug 2743 2754	magnez p.po
+T14	Behaviour 2671 2697	warunki mieszkaniowe dobre
+T15	Condition 2592 2595	WZW
+N2	Reference T15 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T16	Condition 2602 2611	borelioza
+N3	Reference T16 ICD10:A69.2	Choroba z Lyme
+T17	Condition 2617 2620	tbc
+N4	Reference T17 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T18	Condition 2626 2630	odra
+N5	Reference T18 ICD10:B05	Odra
+T19	Condition 2636 2650	kontakt z odrą
+N6	Reference T19 ICD10:B05	Odra
+T20	Negation 2651 2654	(-)
+R2	Neg Arg1:T20 Arg2:T19	
+T21	Negation 2631 2635	(-),
+R3	Neg Arg1:T21 Arg2:T18	
+T22	Negation 2621 2625	(-),
+R4	Neg Arg1:T22 Arg2:T17	
+T23	Negation 2612 2616	(-),
+R5	Neg Arg1:T23 Arg2:T16	
+T24	Negation 2596 2599	(-)
+R6	Neg Arg1:T24 Arg2:T15	
+T25	Negation 2558 2564	neguje
+T26	Negation 2540 2546	neguje
+T27	Negation 2520 2526	neguje
+T28	Condition 2547 2556	Uczulenia
+N7	Reference T28 ICD10:T78.4	Alergia, nieokreślona
+R7	Neg Arg1:T25 Arg2:T28	
+T29	Behaviour 2527 2538	Inne używki
+R8	Neg Arg1:T26 Arg2:T29	
+T30	Behaviour 2503 2518	Palenie tytoniu
+N8	Reference T30 ICD10:T65.2	Tytoń i nikotyna
+R9	Neg Arg1:T27 Arg2:T30	
+T31	Treatment 2490 2492	CC
+T32	Date 2493 2502	(01/2019)
+R10	Dat Arg1:T32 Arg2:T31	
+T33	Negation 2317 2323	Neguje
+T34	Symptom 2325 2337	zasłabnięcia
+N9	Reference T34 ICD10:R55	Omdlenie i zapaść
+T35	Symptom 2339 2347	omdlenia
+N10	Reference T35 ICD10:R55	Omdlenie i zapaść
+T36	Symptom 2349 2359	krwawienia
+N11	Reference T36 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T37	Symptom 2361 2374	czarne stolce
+N12	Reference T37 ICD10:K92.1	Stolce smołowate
+T38	Symptom 2376 2392	brunatne wymioty
+N13	Reference T38 ICD10:K92.0	Wymioty krwawe
+T39	Condition 2394 2411	chorobę wrzodową,
+N14	Reference T39 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T40	Symptom 2412 2426	duszność nocną
+N15	Reference T40 ICD10:I50.1	Niewydolność serca lewokomorowa
+T41	Symptom 2428 2443	obrzęki podudzi
+N16	Reference T41 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T42	Symptom 2445 2469	bóle w klatce piersiowej
+N17	Reference T42 ICD10:R07.3	Inne bóle w klatce piersiowej
+R11	Neg Arg1:T33 Arg2:T34	
+R12	Neg Arg1:T33 Arg2:T35	
+R13	Neg Arg1:T33 Arg2:T36	
+R14	Neg Arg1:T33 Arg2:T37	
+R15	Neg Arg1:T33 Arg2:T38	
+R16	Neg Arg1:T33 Arg2:T39	
+R17	Neg Arg1:T33 Arg2:T40	
+R18	Neg Arg1:T33 Arg2:T41	
+R19	Neg Arg1:T33 Arg2:T42	
+T43	Condition 2294 2316	niedoczynność tarczycy
+N18	Reference T43 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T44	Symptom 2229 2244	kołatania serca
+N19	Reference T44 ICD10:R00.2	Kołatanie serca
+T45	Investigation 2132 2141	MRI głowy
+T46	Investigation_result 2142 2210	struktury mózgowia bez zmian ogniskowych, bez cech zaburzeń dyfuzjii
+R20	Inv Arg1:T45 Arg2:T46	
+T47	Condition 1994 2004	epizod TIA
+N20	Reference T47 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T48	Date 1961 1968	12/2018
+R21	Dat Arg1:T48 Arg2:T47	
+T49	Symptom 2018 2032	drętwienia pkg
+N21	Reference T49 ICD10:R20.2	Parestezje
+T50	Symptom 2034 2064	zaburzeń mowy o typie dyzartii
+N22	Reference T50 ICD10:R47	Zaburzenia mowy niesklasyfikowane gdzie indziej
+T51	Symptom 2066 2083	drętwienia jezyka
+T52	Symptom 2085 2120	niedowładu n. VII po stronie prawej
+N23	Reference T52 ICD10:G51	Zaburzenia nerwu twarzowego
+T53	Condition 1913 1929	podejrzeniem PFO
+A1	Source T53 Declared
+N24	Reference T53 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T54	Investigation 1954 1957	TEE
+T55	Condition 4247 4263	uczuleń na leki,
+N25	Reference T55 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T56	Negation 4243 4246	bez
+R22	Neg Arg1:T56 Arg2:T55	
+T57	Symptom 4276 4308	krwawień z przewodu pokarmowego.
+N26	Reference T57 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T58	Condition 4224 4235	trombofilię
+N27	Reference T58 ICD10:D68	Inne zaburzenia krzepnięcia
+T59	Negation 4213 4223	Wykluczono
+R23	Neg Arg1:T59 Arg2:T58	
+T60	Negation 4264 4275	bez wywiadu
+R24	Neg Arg1:T60 Arg2:T57	
+T61	Investigation_result 439 461	 PFO z przeciekiem L-P
+N28	Reference T61 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T62	Investigation_result 467 533	dużym przeciekiem P-L podczas podania kontrastu i manewru Valsalvy
+T63	Condition 543 546	TIA
+N29	Reference T63 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T64	Date 564 574	20/12/2018
+R25	Dat Arg1:T64 Arg2:T63	
+T65	Condition 576 598	Niedoczynność tarczycy
+N30	Reference T65 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T66	Condition 600 641	Niedokrwistość mikrocytarna niedobarwliwa
+N31	Reference T66 ICD10:D50	Niedokrwistość z niedoboru żelaza
+T67	Drug 666 672	żelaza
+T68	Condition 1250 1283	Niedokrwistość z niedoboru żelaza
+N32	Reference T68 ICD10:D50	Niedokrwistość z niedoboru żelaza
+T69	Investigation 861 881	kontrolna morfologia
+T70	Date 882 890	za 1 msc
+R27	Dat Arg1:T70 Arg2:T69	
+T71	Investigation 892 921	kontrola gospodarki żelazowej
+T72	Date 922 930	po 3 msc
+R28	Dat Arg1:T72 Arg2:T71	
+T73	Treatment 988 999	zamknięciem
+T74	Condition 1000 1003	PFO
+N33	Reference T74 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T75	Condition 970 981	trombofilii
+N34	Reference T75 ICD10:D68	Inne zaburzenia krzepnięcia
+T76	Treatment 940 969	diagnostyka celem wykluczenia
+T77	Condition 1676 1698	Niedoczynność tarczycy
+N35	Reference T77 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T78	Condition 1285 1307	Niedoczynność tarczycy
+N36	Reference T78 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T79	Symptom 1321 1336	Kołatania serca
+N37	Reference T79 ICD10:R00.2	Kołatanie serca
+T80	Symptom 1712 1727	Kołatania serca
+N38	Reference T80 ICD10:R00.2	Kołatanie serca
+T81	Condition 1641 1674	Niedokrwistość z niedoboru żelaza
+N39	Reference T81 ICD10:D50	Niedokrwistość z niedoboru żelaza
+T82	Treatment 1564 1574	Zamknięcie
+T83	Treatment 1579 1626	zestawem Occlutech Figulla Flex II PFO 23//35mm
+T84	Date 1628 1638	23.10.2019
+T85	Condition 1575 1578	PFO
+N40	Reference T85 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R29	Dat Arg1:T84 Arg2:T83	
+R30	Dat Arg1:T84 Arg2:T85	
+R31	Dat Arg1:T84 Arg2:T82	
+T86	Treatment 3049 3059	zamknięcia
+T87	Condition 3060 3063	PFO
+N41	Reference T87 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T88	Condition 3113 3123	epizod TIA
+N42	Reference T88 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T89	Date 3080 3087	12/2018
+R32	Dat Arg1:T89 Arg2:T88	
+T90	Symptom 3137 3151	drętwienia pkg
+N43	Reference T90 ICD10:R20.2	Parestezje
+T91	Symptom 3153 3183	zaburzeń mowy o typie dyzartii
+N44	Reference T91 ICD10:R47	Zaburzenia mowy niesklasyfikowane gdzie indziej
+T92	Symptom 3204 3239	niedowładu n. VII po stronie prawej
+N45	Reference T92 ICD10:G51	Zaburzenia nerwu twarzowego
+T93	Symptom 3185 3202	drętwienia jezyka
+T94	Investigation 3251 3260	MRI głowy
+T95	Investigation_result 3261 3329	struktury mózgowia bez zmian ogniskowych, bez cech zaburzeń dyfuzjii
+R33	Inv Arg1:T94 Arg2:T95	
+T96	Symptom 3348 3363	kołatania serca
+N46	Reference T96 ICD10:R00.2	Kołatanie serca
+T97	Condition 3413 3436	niedoczynność tarczycy,
+N47	Reference T97 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T98	Symptom 3470 3488	, kołatania serca.
+N48	Reference T98 ICD10:R00.2	Kołatanie serca
+T99	Condition 3437 3470	niedokrwistość z niedoboru żelaza
+N49	Reference T99 ICD10:D50	Niedokrwistość z niedoboru żelaza
+T100	Negation 3490 3496	Neguje
+T101	Symptom 3498 3510	zasłabnięcia
+N50	Reference T101 ICD10:R55	Omdlenie i zapaść
+T102	Symptom 3512 3520	omdlenia
+N51	Reference T102 ICD10:R55	Omdlenie i zapaść
+T103	Symptom 3522 3536	duszność nocną
+N52	Reference T103 ICD10:I50.1	Niewydolność serca lewokomorowa
+T104	Symptom 3538 3553	obrzęki podudzi
+N53	Reference T104 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T105	Symptom 3555 3579	bóle w klatce piersiowej
+N54	Reference T105 ICD10:R07.3	Inne bóle w klatce piersiowej
+R34	Neg Arg1:T100 Arg2:T101	
+R35	Neg Arg1:T100 Arg2:T102	
+R36	Neg Arg1:T100 Arg2:T103	
+R37	Neg Arg1:T100 Arg2:T104	
+R38	Neg Arg1:T100 Arg2:T105	
+T106	Investigation 3583 3586	TTE
+T107	Investigation_result 3587 3648	uwidoczniono prawidłową funkcję skurczowo-rozkurczową LK i PK
+R39	Inv Arg1:T106 Arg2:T107	
+T108	Investigation_result 3649 3656	(EF-67%
+R40	Inv Arg1:T106 Arg2:T108	
+T109	Investigation_result 3659 3715	Prawidłowe wymiary jam serca i przepływy przezzastawkowe
+T110	Investigation_result 3717 3751	Bez ech dodatkowych w jamach serca
+T111	Investigation_result 3753 3803	Samoistne kontrastowanie w żyle głównej dolnej (+)
+R41	Inv Arg1:T106 Arg2:T110	
+R42	Inv Arg1:T106 Arg2:T111	
+T112	Investigation 3807 3810	TEE
+T113	Condition 3822 3825	ASD
+N55	Reference T113 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T114	Condition 3827 3843	uwidoczniono PFO
+N56	Reference T114 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T115	Investigation_result 3845 3948	kieszonka po stronie LP z kanałem długości 11 mm, maksymalna średnica "otwarcia" 4 mm z przeciekiem L-P
+T116	Investigation_result 3954 4021	dużym przeciekiem P-L podczas podania kontrastu i manewru Valsalvy.
+R45	Inv Arg1:T112 Arg2:T115	
+R46	Inv Arg1:T112 Arg2:T116	
+T117	Investigation_result 4022 4117	Nie uwidoczniono innych nieprawidłowych połączeń pomiędzy jamami serca lub wielkimi naczyniami.
+T118	Investigation_result 4118 4159	W jamach serca nie uwidoczniono skrzeplin
+T119	Treatment 4189 4199	zamknięcia
+T120	Treatment 4204 4211	zapinką
+T121	Condition 4200 4203	PFO
+N57	Reference T121 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R47	Inv Arg1:T112 Arg2:T117	
+R48	Inv Arg1:T112 Arg2:T118	
+T122	Negation 3811 3821	wykluczono
+R43	Neg Arg1:T122 Arg2:T113	
+R44	Neg Arg1:T122 Arg2:T112	

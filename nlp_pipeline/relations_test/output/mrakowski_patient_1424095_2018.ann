@@ -1,0 +1,79 @@
+T1	Condition 465 523	Wrodzona wada serca pod postacią stenozy zastawkowej aorty
+N1	Reference T1 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T2	Condition 530 554	ciasnej koarktacji aorty
+N2	Reference T2 ICD10:Q25.1	Zwężenie cieśni aorty
+T3	Condition 556 587	nieprawidłowa zastawka mitralna
+N3	Reference T3 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T4	Treatment 601 661	angioplastyce balonowej zastawki aortalnej oraz cieśni aorty
+T5	Date 664 675	18.12.2017r
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Condition 685 697	Rekoarktacja
+N4	Reference T6 ICD10:I77	Inne choroby tętnic i tętniczek
+T7	Investigation_result 699 708	PG=46mmHg
+T8	Treatment 822 840	Przyjmowanie leków
+T9	Drug 842 851	Captopril
+T10	Drug_dose 852 859	2 x 3mg
+R2	Drg Arg1:T9 Arg2:T10	
+T11	Drug 861 869	Spironol
+T12	Drug_dose 870 899	1 x 10mg bez sobót i niedziel
+R3	Drg Arg1:T11 Arg2:T12	
+T13	Drug 945 957	Innofer baby
+T14	Drug_dose 958 967	1 x 1.8ml
+R4	Drg Arg1:T13 Arg2:T14	
+T15	Drug 969 980	Innovitum B
+T16	Drug_dose 982 994	1 x 2 krople
+R5	Drg Arg1:T15 Arg2:T16	
+T17	Date 995 1012	przez 4-6 tygodni
+R6	Dat Arg1:T17 Arg2:T15	
+T18	Treatment 1016 1044	Dalsza opieka kardiologiczna
+T19	Treatment 1124 1181	Systematyczna opieka ogólnopediatryczna w warunkach POZ-u
+T20	Investigation 1183 1216	wskazana kontrola morfologii krwi
+T21	Date 1217 1227	za miesiąc
+R7	Dat Arg1:T21 Arg2:T20	
+T22	Condition 1446 1495	Wrodzona wada serca - zwężenie zastawki aortalnej
+N5	Reference T22 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T23	Condition 1498 1514	koarktacja aorty
+N6	Reference T23 ICD10:Q25.1	
+T24	Condition 1517 1545	dysplazja zastawki mitralnej
+N7	Reference T24 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T25	Treatment 1558 1619	plastyce balonowej zastawki aortalnej i zwężenia cieśni aorty
+T26	Date 1621 1632	18.12.2017r
+R8	Dat Arg1:T26 Arg2:T25	
+T27	Condition 1635 1647	Rekoarktacja
+N8	Reference T27 ICD10:I77	Inne choroby tętnic i tętniczek
+T28	Treatment 1660 1678	operacji Crafoorda
+T29	Date 1680 1689	18.01.18r
+R9	Dat Arg1:T29 Arg2:T28	
+T30	Condition 1696 1712	Istotne zwężenie
+N9	Reference T30 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T31	Condition 1715 1756	łagodna niedomykalność zastawki aortalnej
+N10	Reference T31 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T32	Condition 1761 1802	Łagodna niedomykalność zastawki mitralnej
+N11	Reference T32 ICD10:Q23.3	Wrodzona niedomykalność zastawki mitralnej
+T33	Drug 1923 1932	Captopril
+T34	Drug 1934 1942	Spironol
+T35	Drug 1944 1954	Thiopental
+T36	Drug 1956 1966	5% glukoza
+T37	Condition 2103 2122	wrodzoną wadą serca
+T38	Condition 2349 2368	wrodzona wada serca
+T39	Drug 2381 2390	Captopril
+T40	Drug 2393 2401	Spironol
+T41	Investigation 2418 2435	badania kontrolne
+T42	Condition 2437 2454	wywiad alergiczny
+N14	Reference T42 ICD10:T78.4	Alergia, nieokreślona
+T43	Negation 2455 2461	ujemny
+R10	Neg Arg1:T43 Arg2:T42	
+N12	Reference T37 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+N13	Reference T38 ICD10:Q20	Wrodzona wada rozwojowa serca, nieokreślona
+R13	Drg Arg1:T13 Arg2:T14
+R18	Drg Arg1:T15 Arg2:T16
+R2	Dat Arg1:T5 Arg2:T4
+R23	Dat Arg1:T17 Arg2:T15
+R24	Dat Arg1:T21 Arg2:T20
+R28	Dat Arg1:T26 Arg2:T27
+R29	Dat Arg1:T26 Arg2:T25
+R3	Drg Arg1:T9 Arg2:T10
+R30	Dat Arg1:T29 Arg2:T30
+R31	Dat Arg1:T29 Arg2:T28
+R33	Neg Arg1:T43 Arg2:T42
+R8	Drg Arg1:T11 Arg2:T12

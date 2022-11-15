@@ -1,0 +1,112 @@
+T1	Condition 450 491	Łagodna niedomykalność zastawki mitralnej
+N1	Reference T1 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T2	Condition 494 506	trójdzielnej
+N2	Reference T2 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T3	Condition 507 533	Dławica piersiowa stabilna
+N3	Reference T3 ICD10:I20.8	Inne postacie choroby niedokrwiennej serca
+T4	Symptom 534 547	II/III wg CCS
+N4	Reference T4 ICD10:I20	Choroba niedokrwienna serca
+T5	Condition 549 570	Nadciśnienie tętnicze
+N5	Reference T5 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T6	Condition 572 639	Choroba zwyrodnieniowa odcinka piersiowego i lędźwiowego kręgosłupa
+A1	Status T6 Historical_Insignificant
+N6	Reference T6 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T7	Treatment 649 665	cholecystektomii
+A2	Status T7 Historical_Insignificant
+N7	Reference T7 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T8	Treatment 675 684	usunięciu
+N8	Reference T8 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T9	Condition 685 707	polipów jelita grubego
+N9	Reference T9 ICD10:K63.5	Polip okrężnicy
+T10	Date 709 713	2016
+T11	Treatment 724 733	usunięciu
+N10	Reference T11 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T12	Condition 734 771	Ca podstawnokomórkowego skóry tułowia
+N11	Reference T12 ICD10:C44.5	Skóra tułowia
+R1	Dat Arg1:T10 Arg2:T8	
+R2	Dat Arg1:T10 Arg2:T9	
+T13	Symptom 974 1005	zmniejszonej tolerancji wysiłku
+T14	Symptom 1024 1053	bóle zamostkowe przywysiłkowe
+N12	Reference T14 ICD10:R07.2	Ból w okolicy przedsercowej
+T15	Symptom 1055 1069	Ból zamostkowy
+N13	Reference T15 ICD10:R07.2	Ból w okolicy przedsercowej
+T16	Date 1070 1089	ostatnio 2 dni temu
+T17	Symptom 1099 1117	ustąpił samoistnie
+R3	Dat Arg1:T16 Arg2:T17	
+R4	Dat Arg1:T16 Arg2:T15	
+T18	Condition 1133 1154	nadciśnienie tętnicze
+N14	Reference T18 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T19	Condition 1156 1223	Choroba zwyrodnieniowa odcinka piersiowego i lędźwiowego kręgosłupa
+A3	Status T19 Historical_Insignificant
+N15	Reference T19 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T20	Treatment 1233 1249	cholecystektomii
+A4	Status T20 Historical_Insignificant
+N16	Reference T20 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T21	Treatment 1259 1268	usunięciu
+N17	Reference T21 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T22	Condition 1269 1291	polipów jelita grubego
+N18	Reference T22 ICD10:K63.5	Polip okrężnicy
+T23	Date 1293 1297	2016
+T24	Investigation 1308 1312	OGTT
+T25	Date 1315 1326	2 lata temu
+T26	Investigation_result 1327 1333	ujemny
+T27	Investigation 1335 1350	USG j brzusznej
+T28	Date 1353 1360	03.2018
+T29	Investigation_result 1361 1371	prawidłowe
+T30	Investigation_result 1381 1401	torbiel nerki prawej
+N19	Reference T30 ICD10:R93.4	Nieprawidłowe wyniki diagnostycznych badań obrazowych układu moczowego
+T31	Investigation 1431 1448	RTG kl piersiowej
+T32	Investigation_result 1451 1461	prawidłowe
+T33	Date 1464 1471	02.2018
+T34	Treatment 1501 1509	Operacje
+N20	Reference T34 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T35	Behaviour 1513 1523	Nikotynizm
+N21	Reference T35 ICD10:Z72.0	Używanie tytoniu
+T36	Negation 1527 1530	nie
+T37	Behaviour 1531 1535	pali
+N22	Reference T37 ICD10:Z72.0	Używanie tytoniu
+T38	Date 1536 1543	od 1989
+T39	Behaviour 1546 1567	Alkohol: okazjonalnie
+A5	Status T39 Historical_Insignificant
+N23	Reference T39 ICD10:Z72.1	Używanie alkoholu
+T40	Negation 1576 1582	neguje
+T41	Condition 1584 1601	uczulenia na leki
+N24	Reference T41 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R5	Dat Arg1:T23 Arg2:T21	
+R6	Dat Arg1:T23 Arg2:T22	
+R7	Dat Arg1:T25 Arg2:T24	
+R8	Inv Arg1:T24 Arg2:T26	
+R9	Dat Arg1:T28 Arg2:T27	
+R10	Inv Arg1:T27 Arg2:T29	
+R11	Inv Arg1:T27 Arg2:T30	
+R12	Inv Arg1:T31 Arg2:T32	
+R13	Dat Arg1:T33 Arg2:T31	
+R14	Neg Arg1:T36 Arg2:T37	
+R15	Neg Arg1:T36 Arg2:T35	
+R16	Dat Arg1:T38 Arg2:T37	
+R17	Dat Arg1:T38 Arg2:T35	
+R18	Neg Arg1:T40 Arg2:T41	
+T42	Symptom 1603 1636	krwawienia z przewodu pokarmowego
+N25	Reference T42 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T43	Symptom 1638 1657	utraty przytomności
+T44	Condition 1677 1687	udar mózgu
+A6	Status T44 Family
+N26	Reference T44 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T45	Date 1697 1704	w 76 rż
+T46	Drug 1732 1746	Telmizek combi
+T47	Drug_dose 1747 1781	(40mg) - pół tabletki raz dziennie
+T48	Date 1787 1808	przez ostatni tydzień
+T49	Negation 1809 1824	nie przyjmowała
+T50	Investigation_result 1829 1842	RR 100/80mmHg
+T51	Investigation 1854 1864	ECHO serca
+T52	Investigation 1866 1876	Holter EKG
+T53	Investigation 1878 1888	Holter RR,
+T54	Investigation 1889 1891	PW
+T55	Investigation 1892 1918	angio ct tętnic wieńcowych
+R19	Dat Arg1:T48 Arg2:T46	
+R20	Drg Arg1:T46 Arg2:T47	
+R21	Neg Arg1:T49 Arg2:T46	
+R22	Dat Arg1:T48 Arg2:T50	
+R23	Dat Arg1:T45 Arg2:T44	
+R24	Neg Arg1:T40 Arg2:T42	
+R25	Neg Arg1:T40 Arg2:T43	

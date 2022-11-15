@@ -1,0 +1,128 @@
+T1	Investigation 2342 2346	ECHO
+T2	Investigation 2348 2352	ABPM
+T3	Investigation 2354 2364	Holter EKG
+T4	Drug 2237 2251	Acidum folicum
+T5	Drug 2214 2222	Metocard
+T6	Drug 2192 2201	Egiramlon
+T7	Drug_dose 2202 2213	5+5mg 1x1 R
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug_dose 2223 2236	23,75mg 1x1 R
+R2	Drg Arg1:T5 Arg2:T8	
+T9	Drug_dose 2252 2257	1x1 R
+R3	Drg Arg1:T4 Arg2:T9	
+T10	Behaviour 2126 2152	warunki mieszkaniowe dobre
+T11	Condition 2056 2059	WZW
+N1	Reference T11 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T12	Condition 2066 2075	borelioza
+N2	Reference T12 ICD10:A69.2	Choroba z Lyme
+T13	Condition 2083 2086	tbc
+N3	Reference T13 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T14	Condition 2091 2095	odra
+N4	Reference T14 ICD10:B05	
+T15	Negation 2097 2108	nie pamięta
+A1	Source T15 Declared
+R4	Neg Arg1:T15 Arg2:T14	
+T16	Negation 2088 2090	-)
+T17	Negation 2076 2081	( - )
+R5	Neg Arg1:T17 Arg2:T12	
+T18	Negation 2060 2063	(-)
+R6	Neg Arg1:T18 Arg2:T11	
+T19	Negation 2024 2027	nie
+T20	Negation 2008 2011	nie
+T21	Negation 1990 1993	nie
+T22	Negation 1969 1972	nie
+T23	Condition 2013 2022	Uczulenia
+N5	Reference T23 ICD10:T78.4	Alergia, nieokreślona
+T24	Behaviour 1995 2006	Inne używki
+R7	Neg Arg1:T20 Arg2:T24	
+R8	Neg Arg1:T19 Arg2:T23	
+T25	Behaviour 1973 1989	Palenie tytoniu:
+N6	Reference T25 ICD10:T65.2	Tytoń i nikotyna
+R9	Neg Arg1:T21 Arg2:T25	
+T26	Treatment 1950 1967	Przebyte operacje
+R10	Neg Arg1:T22 Arg2:T26	
+T27	Drug 340 349	Egiramlon
+T28	Drug 351 362	Metocard ZK
+T29	Drug 364 371	Clexane
+T30	Drug 373 387	Acidum folicum
+T31	Drug 389 392	IPP
+T32	Drug 394 401	Digoxin
+T33	Drug 403 411	Magnezin
+T34	Drug 413 420	Polpril
+T35	Drug 422 428	Diured
+T36	Drug 430 437	Kaldyum
+T37	Condition 1005 1046	Przewlekła niewydolność serca NYHA II-III
+N7	Reference T37 ICD10:I50	Niewydolność serca
+T38	Condition 1048 1096	Umiarkowana niedomykalność zastawki trójdzielnej
+N8	Reference T38 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T39	Condition 1099 1108	mitralnej
+N9	Reference T39 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T40	Condition 1110 1137	Choroba niedokrwienna serca
+N10	Reference T40 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T41	Condition 1139 1160	Nadciśnienie tętnicze
+N11	Reference T41 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T42	Condition 1162 1194	Migotanie przedsionków utrwalone
+N12	Reference T42 ICD10:I48	Migotanie i trzepotanie przedsionków
+T43	Symptom 1223 1237	Zawroty głowy.
+N13	Reference T43 ICD10:R42	Zawroty głowy i odurzenie
+T44	Condition 1238 1266	Kamica pęcherzyka żółciowego
+N14	Reference T44 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T45	Condition 1196 1221	Miażdżyca tętnic szyjnych
+N15	Reference T45 ICD10:I65.2	Niedrożność i zwężenie tętnicy szyjnej wewnętrznej
+T46	Condition 1410 1456	przewlekłą niewydolnością serca do II-III NYHA
+N16	Reference T46 ICD10:I50	Niewydolność serca
+T47	Negation 1457 1470	od 2 miesięcy
+R11	Neg Arg1:T47 Arg2:T46	
+T48	Condition 1472 1495	migotaniem przedsionków
+N17	Reference T48 ICD10:I48	Migotanie i trzepotanie przedsionków
+T49	Condition 1557 1559	HA
+N18	Reference T49 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T50	Condition 1561 1577	niedokrwistością
+N19	Reference T50 ICD10:D64	Inne niedokrwistości
+T51	Investigation_result 1591 1614	ostatnie Hbg prawidłowe
+T52	Condition 1626 1647	stenokardią do II CCS
+N20	Reference T52 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T53	Date 1648 1661	od 2 miesięcy
+R12	Dat Arg1:T53 Arg2:T52	
+T54	Symptom 1675 1690	zawrotami głowy
+N21	Reference T54 ICD10:R42	Zawroty głowy i odurzenie
+T55	Negation 1772 1778	Neguje
+T56	Symptom 1780 1792	zasłabnięcia
+N22	Reference T56 ICD10:R55	Omdlenie i zapaść
+T57	Symptom 1794 1802	omdlenia
+N23	Reference T57 ICD10:R55	Omdlenie i zapaść
+T58	Symptom 1804 1819	kołatania serca
+N24	Reference T58 ICD10:R00.2	Kołatanie serca
+T59	Symptom 1821 1831	krwawienia
+N25	Reference T59 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T60	Symptom 1833 1846	czarne stolce
+N26	Reference T60 ICD10:K92.1	Stolce smołowate
+T61	Symptom 1848 1864	brunatne wymioty
+N27	Reference T61 ICD10:K92.0	Wymioty krwawe
+T62	Condition 1866 1882	chorobę wrzodową
+N28	Reference T62 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T63	Symptom 1884 1912	duszność nocną typu ortopnoe
+N29	Reference T63 ICD10:I50.1	Niewydolność serca lewokomorowa
+T64	Condition 1914 1916	HA
+N30	Reference T64 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T65	Condition 1918 1920	DM
+N31	Reference T65 ICD10:E13	Inne określone postacie cukrzycy
+T66	Condition 1922 1932	udar mózgu
+N32	Reference T66 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T67	Condition 1934 1945	zawał serca
+N33	Reference T67 ICD10:I25.2	Przebyty zawał serca
+R13	Neg Arg1:T55 Arg2:T56	
+R14	Neg Arg1:T55 Arg2:T57	
+R15	Neg Arg1:T55 Arg2:T58	
+R16	Neg Arg1:T55 Arg2:T59	
+R17	Neg Arg1:T55 Arg2:T60	
+R18	Neg Arg1:T55 Arg2:T61	
+R19	Neg Arg1:T55 Arg2:T62	
+R20	Neg Arg1:T55 Arg2:T63	
+R21	Neg Arg1:T55 Arg2:T64	
+R22	Neg Arg1:T55 Arg2:T65	
+R23	Neg Arg1:T55 Arg2:T66	
+R24	Neg Arg1:T55 Arg2:T67	
+T68	Negation 1523 1526	bez
+T69	Treatment 1527 1555	leczenia przeciwzakrzepowego
+R25	Neg Arg1:T68 Arg2:T69	

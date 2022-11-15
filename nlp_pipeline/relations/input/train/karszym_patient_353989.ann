@@ -1,0 +1,51 @@
+T1	Drug 340 350	Salbutamol
+T2	Drug 483 495	Salbutamol  
+T3	Drug_dose 495 502	2 x 5ml
+T4	Treatment 508 559	Ambulatoryjna kontrola tętna i ciśnienia tętniczego
+R1	Drg Arg1:T2 Arg2:T3	
+T5	Treatment 564 647	Ewentualne modyfikacje farmakoterapii po weryfikacji z listą leków wydłużających QT
+T6	Behaviour 688 721	Ograniczenie aktywności fizycznej
+T7	Negation 724 736	zwolnienie z
+T8	Behaviour 737 764	zajęć wychowania fizycznego
+R2	Neg Arg1:T7 Arg2:T8	
+T9	Treatment 848 894	Dalsza kontrola neurologiczna i psychologiczna
+T10	Symptom 899 937	W przypadku pogorszenia stanu ogólnego
+T11	Treatment 938 965	konieczny kontakt z kliniką
+T12	Treatment 781 843	kontakt telefoniczny z kliniką w sprawie dalszego postępowania
+T13	Condition 1184 1246	Wrodzona wada serca - podwójne odejście naczyń z prawej komory
+N1	Reference T13 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+T14	Condition 1249 1273	ubytkiem międzykomorowym
+N2	Reference T14 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T15	Condition 1276 1292	koarktacją aorty
+N3	Reference T15 ICD10:Q25.1	Zwężenie cieśni aorty
+T16	Treatment 1305 1318	operacji wady
+N4	Reference T16 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T17	Date 1320 1329	28.08.07r
+T18	Treatment 1335 1345	reoperacji
+N5	Reference T18 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T19	Date 1383 1392	18.12.07r
+T20	Treatment 1406 1424	plastyce balonowej
+T21	Date 1439 1448	06.12.07r
+T22	Condition 1454 1474	Bradykardia zatokowa
+N6	Reference T22 ICD10:R00.1	Bradykardia, nieokreślona
+T23	Condition 1480 1505	Komorowe zaburzenia rytmu
+T24	Condition 1510 1536	Obserwacja w kierunku LQTS
+R3	Dat Arg1:T17 Arg2:T16	
+R4	Dat Arg1:T19 Arg2:T18	
+R5	Dat Arg1:T21 Arg2:T20	
+T25	Drug 1715 1725	salbutamol
+T26	Condition 1728 1744	uczulony na kurz
+N9	Reference T26 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T27	Negation 1755 1758	bez
+T28	Drug 1759 1764	leków
+T29	Date 1747 1754	obecnie
+R6	Neg Arg1:T27 Arg2:T28	
+R7	Dat Arg1:T29 Arg2:T28	
+N8	Reference T24 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+N7	Reference T23 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T30	Condition 1346 1381	zwężenia drogi odpływu lewej komory
+R8	Dat Arg1:T19 Arg2:T30	
+T31	Condition 1425 1437	rekoarktacji
+N10	Reference T31 ICD10:Q25.1	Zwężenie cieśni aorty
+R9	Dat Arg1:T21 Arg2:T31	
+A1	Source T24 Declared

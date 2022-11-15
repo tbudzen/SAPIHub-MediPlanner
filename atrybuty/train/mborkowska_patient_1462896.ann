@@ -1,0 +1,69 @@
+T1	Drug 1647 1652	Acard
+T2	Drug_dose 1653 1667	150mg 1x1 tabl
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Behaviour 1596 1622	warunki mieszkaniowe dobre
+T4	Negation 1573 1579	neguje
+T5	Negation 1558 1561	nie
+T6	Negation 1541 1544	nie
+T7	Negation 1514 1523	negatywny
+T8	Negation 1458 1464	( -  )
+T9	Negation 1477 1483	( - ),
+T10	Negation 1493 1496	(-)
+T11	Condition 1562 1571	Uczulenia
+N1	Reference T11 ICD10:T78.4	Alergia, nieokreślona
+R2	Neg Arg1:T4 Arg2:T11	
+T12	Behaviour 1545 1556	Inne używki
+R3	Neg Arg1:T5 Arg2:T12	
+T13	Behaviour 1524 1539	Palenie tytoniu
+N2	Reference T13 ICD10:T65.2	Tytoń i nikotyna
+R4	Neg Arg1:T6 Arg2:T13	
+T14	Condition 1497 1512	Wywiad rodzinny
+A1	Status T14 Family
+R5	Neg Arg1:T7 Arg2:T14	
+T15	Condition 1454 1457	WZW
+N3	Reference T15 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T16	Condition 1467 1476	borelioza
+N4	Reference T16 ICD10:A69.2	Choroba z Lyme
+T17	Condition 1484 1492	gruźlica
+N5	Reference T17 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+R6	Neg Arg1:T10 Arg2:T17	
+R7	Neg Arg1:T9 Arg2:T16	
+R8	Neg Arg1:T8 Arg2:T15	
+T18	Negation 1420 1426	neguje
+T19	Treatment 1400 1417	Przebyte operacje
+R9	Neg Arg1:T18 Arg2:T19	
+T20	Negation 1335 1341	Neguje
+T21	Symptom 1342 1354	zasłabnięcia
+N6	Reference T21 ICD10:R55	Omdlenie i zapaść
+T22	Symptom 1356 1365	duszności
+N7	Reference T22 ICD10:R06.0	Duszność
+T23	Symptom 1367 1398	typowe bóle w klatce piersiowej
+N8	Reference T23 ICD10:R07.2	Ból w okolicy przedsercowej
+R10	Neg Arg1:T20 Arg2:T21	
+R11	Neg Arg1:T20 Arg2:T22	
+R12	Neg Arg1:T20 Arg2:T23	
+T24	Behaviour 449 523	Dieta lekkostrawna z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T25	Investigation 536 571	kontrola lipidogramu, stężenia elek
+T26	Treatment 808 818	zamknięciu
+T27	Treatment 823 884	metodą przezskórną zestawem Amplatzer Duct Occluder II 4/6 mm
+T28	Treatment 1086 1096	zamknięciu
+T29	Treatment 1101 1162	metodą przezskórną zestawem Amplatzer Duct Occluder II 4/6 mm
+T30	Date 1164 1174	21/11/2018
+T31	Date 886 896	21/11/2018
+T32	Condition 819 822	PDA
+N9	Reference T32 ICD10:Q25.0	Drożny przewód tętniczy
+T33	Condition 1097 1100	PDA
+N10	Reference T33 ICD10:Q25.0	Drożny przewód tętniczy
+R13	Dat Arg1:T31 Arg2:T27	
+R14	Dat Arg1:T31 Arg2:T32	
+R15	Dat Arg1:T31 Arg2:T26	
+R16	Dat Arg1:T30 Arg2:T29	
+R17	Dat Arg1:T30 Arg2:T33	
+R18	Dat Arg1:T30 Arg2:T28	
+T34	Condition 1177 1215	subkliniczną niedoczynnością tarczycy,
+N11	Reference T34 ICD10:E03	Niedoczynność tarczycy o innej etiologii
+T35	Condition 902 937	Subkliniczna niedoczynność tarczycy
+N12	Reference T35 ICD10:E03	Niedoczynność tarczycy o innej etiologii
+T36	Symptom 1238 1273	uczuciem kłucia w klatce piersiowej
+T37	Symptom 1276 1286	zmęczeniem
+N13	Reference T37 ICD10:R53	Złe samopoczucie i zmęczenie

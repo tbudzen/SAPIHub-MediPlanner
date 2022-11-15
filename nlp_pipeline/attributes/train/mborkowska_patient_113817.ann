@@ -1,0 +1,46 @@
+T1	Drug 487 495	Euthyrox
+T2	Drug_dose 496 516	112ug 1x 1 tabl/rano
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Condition 734 779	Łagodna niedomykalność zastawki trójdzielnej.
+N1	Reference T3 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T4	Symptom 780 795	Kołatania serca
+N2	Reference T4 ICD10:R00.2	Kołatanie serca
+T5	Condition 797 834	Autoimmunologiczne zapalenie tarczycy
+N3	Reference T5 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T6	Condition 1235 1272	autoimmunologiczne zapalenie tarczycy
+N4	Reference T6 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T7	Drug 967 975	Euthyrox
+T8	Symptom 1150 1176	napadowego kołatania serca
+N5	Reference T8 ICD10:R00.2	Kołatanie serca
+T9	Symptom 1190 1220	pogorszenia tolerancji wysiłku
+T10	Date 1177 1187	od 2-3 lat
+R2	Dat Arg1:T10 Arg2:T8	
+T11	Treatment 1273 1290	Przebyte operacje
+T12	Negation 1292 1302	nie podaje
+R3	Neg Arg1:T12 Arg2:T11	
+T13	Condition 1330 1333	WZW
+T14	Condition 1335 1344	borelioza
+N7	Reference T14 ICD10:A69.2	Choroba z Lyme
+T15	Negation 1347 1357	nie podaje
+R4	Neg Arg1:T15 Arg2:T14	
+R5	Neg Arg1:T15 Arg2:T13	
+T16	Condition 1375 1394	dodatni obustronnie
+A1	Status T16 Family
+T17	Behaviour 1395 1422	Palenie tytoniu: tak ok.5/d
+T18	Negation 1436 1446	nie podaje
+T19	Behaviour 1423 1434	Inne używki
+R6	Neg Arg1:T18 Arg2:T19	
+T20	Condition 1447 1456	Uczulenia
+T21	Drug 1519 1533	Euthyrox 112ug
+T22	Drug_dose 1534 1546	1 tabl. rano
+R7	Drg Arg1:T21 Arg2:T22	
+T23	Investigation 1574 1584	echo serca
+T24	Investigation 1586 1589	TET
+T25	Investigation 1591 1595	ABPM
+T26	Investigation 1597 1603	Holter
+T27	Investigation 1605 1623	RTG kl. piersiowej
+T28	Investigation 376 397	RTG klatki piersiowej
+N10	Reference T9 ICD10:R53	Złe samopoczucie i zmęczenie
+N6	Reference T13 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N8	Reference T17 ICD10:Z72.0	Używanie tytoniu
+N9	Reference T20 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

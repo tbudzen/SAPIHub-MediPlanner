@@ -1,0 +1,131 @@
+T1	Drug 341 350	Lorista H
+T2	Condition 615 624	mitralnej
+N1	Reference T2 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T3	Condition 626 664	Tętniak przegrody międzyprzedsionkowej
+N2	Reference T3 ICD10:I25.3	Tętniak serca
+T4	Condition 666 701	Napadowy częstoskurcz przedsionkowy
+N3	Reference T4 ICD10:I47.1	Częstoskurcz nadkomorowy
+T5	Condition 703 724	Nadciśnienie tętnicze
+N4	Reference T5 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T6	Condition 726 746	Hipercholesterolemia
+N5	Reference T6 ICD10:E78.0	Czysta hipercholesterolemia
+T7	Treatment 859 926	Dalsza opieka w POZ, Poradni Kardiologicznej - Zaburzeń Rytmu Serca
+T8	Investigation 952 1064	Okresowa kontrola morfologii, elektrolitów, profilu lipidowego, parametrów wątrobowych oraz parametrów nerkowych
+T9	Date 1083 1102	za około 3 miesiące
+T10	Treatment 1105 1143	do rozważenia włączenie farmakoterapii
+R1	Dat Arg1:T9 Arg2:T8	
+T11	Behaviour 1161 1263	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T12	Investigation 1268 1324	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T13	Treatment 1329 1357	Regularne przyjmowanie leków
+T14	Drug 1363 1372	Lorista H
+T15	Drug 1404 1412	Magnezin
+T16	Drug_dose 1373 1402	50mg + 12,5mg 1 tabletka rano
+R2	Drg Arg1:T14 Arg2:T16	
+T17	Drug_dose 1413 1422	1x 1 tabl
+R3	Drg Arg1:T15 Arg2:T17	
+T18	Condition 1568 1570	HA
+N6	Reference T18 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T19	Condition 1572 1586	tętniakiem IAS
+N7	Reference T19 ICD10:I25.3	Tętniak serca
+T20	Condition 1588 1595	IM I st
+N8	Reference T20 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T21	Condition 1598 1608	IT I/II st
+N9	Reference T21 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T22	Investigation 1610 1613	TTE
+T23	Date 1614 1619	2016r
+R4	Dat Arg1:T23 Arg2:T22	
+T24	Condition 1622 1625	SVT
+N10	Reference T24 ICD10:I47.1	Częstoskurcz nadkomorowy
+T25	Investigation 1641 1653	Holterze EKG
+T26	Date 1656 1661	2016r
+R5	Dat Arg1:T26 Arg2:T25	
+T27	Symptom 1744 1809	okresowego kołatania serca trwającego kilka sekund do kilku minut
+N11	Reference T27 ICD10:R00.2	Kołatanie serca
+T28	Date 1810 1818	od 2 lat
+R6	Dat Arg1:T28 Arg2:T27	
+T29	Symptom 1819 1882	średnio 2-3x w tygodniu z towarzyszącym zatykaniem i dusznością
+N12	Reference T29 ICD10:R06.0	Duszność
+T30	Symptom 1900 1916	objawy menopauzy
+N13	Reference T30 ICD10:N95	Menopauza i inne schorzenia okresu okołomenopauzalnego
+T31	Symptom 1919 1946	okresowe łagodne bóle głowy
+N14	Reference T31 ICD10:R51	Ból głowy
+T32	Negation 1948 1954	Neguje
+T33	Symptom 1956 1987	typowe bóle w klatce piersiowej
+N15	Reference T33 ICD10:R07	Ból gardła i w klatce piersiowej
+T34	Symptom 1989 2001	zasłabnięcia
+T35	Symptom 2003 2011	omdlenia
+N16	Reference T35 ICD10:R55	Omdlenie i zapaść
+T36	Symptom 2013 2023	krwawienia
+T37	Symptom 2025 2038	czarne stolce
+N17	Reference T37 ICD10:K92.1	Stolce smołowate
+T38	Symptom 2040 2056	brunatne wymioty
+N18	Reference T38 ICD10:K92.0	Wymioty krwawe
+T39	Condition 2058 2074	chorobę wrzodową
+N19	Reference T39 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T40	Condition 2076 2078	DM
+N20	Reference T40 ICD10:E14	Cukrzyca nieokreślona
+T41	Condition 2080 2090	udar mózgu
+N21	Reference T41 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T42	Condition 2092 2103	zawał serca
+N22	Reference T42 ICD10:I25.2	Przebyty zawał serca
+R7	Neg Arg1:T32 Arg2:T42	
+R8	Neg Arg1:T32 Arg2:T41	
+R9	Neg Arg1:T32 Arg2:T40	
+R10	Neg Arg1:T32 Arg2:T39	
+R11	Neg Arg1:T32 Arg2:T38	
+R12	Neg Arg1:T32 Arg2:T37	
+R13	Neg Arg1:T32 Arg2:T36	
+R14	Neg Arg1:T32 Arg2:T35	
+R15	Neg Arg1:T32 Arg2:T34	
+R16	Neg Arg1:T32 Arg2:T33	
+T43	Investigation 2106 2110	HBPM
+T44	Investigation_result 2112 2147	prawidłowe w trakcie farmakoterapii
+R17	Inv Arg1:T43 Arg2:T44	
+T45	Treatment 2148 2165	Przebyte operacje
+T46	Treatment 2167 2176	usunięcie
+A1	Status T46 Historical_Insignificant
+T47	Date 2209 2213	2015
+R18	Dat Arg1:T47 Arg2:T46	
+T48	Behaviour 2214 2229	Palenie tytoniu
+N23	Reference T48 ICD10:Z72.0	Używanie tytoniu
+T49	Negation 2231 2234	nie
+R19	Neg Arg1:T49 Arg2:T48	
+T50	Behaviour 2236 2247	Inne używki
+T51	Negation 2249 2252	nie
+R20	Neg Arg1:T51 Arg2:T50	
+T52	Condition 2254 2263	Uczulenia
+T53	Negation 2265 2268	nie
+R21	Neg Arg1:T53 Arg2:T52	
+T54	Condition 2297 2300	WZW
+N24	Reference T54 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T55	Condition 2307 2316	borelioza
+N25	Reference T55 ICD10:A69.2	Choroba z Lyme
+T56	Condition 2324 2327	tbc
+N26	Reference T56 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T57	Negation 2329 2330	-
+R22	Neg Arg1:T57 Arg2:T56	
+T58	Negation 2319 2320	-
+R23	Neg Arg1:T58 Arg2:T55	
+T59	Negation 2302 2303	-
+R24	Neg Arg1:T59 Arg2:T54	
+T60	Behaviour 2349 2375	warunki mieszkaniowe dobre
+T61	Treatment 2401 2405	CABG
+A2	Status T61 Family
+T62	Date 2406 2420	w wieku 57 lat
+R25	Dat Arg1:T62 Arg2:T61	
+T63	Drug 2428 2437	Lorista H
+T64	Drug_dose 2438 2463	50mg+ 12,5 mg 1 tabl rano
+R26	Drg Arg1:T63 Arg2:T64	
+T65	Investigation 2525 2546	badania laboratoryjne
+T66	Investigation 2548 2552	ECHO
+T67	Investigation 2554 2564	Holter ekg
+T68	Investigation 2566 2570	ABPM
+T69	Condition 568 612	Łagodna niedomykalność zastawki trójdzielnej
+N27	Reference T69 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T70	Condition 2379 2394	Wywiad rodzinny
+A3	Status T70 Family
+T71	Condition 1144 1156	dyslipidemii
+N28	Reference T71 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T72	Condition 2177 2208	zropiałego kaszaka piersi lewej
+N29	Reference T72 ICD10:L72.8	Inne torbiele mieszkowe skóry i tkanki podskórne
+R27	Dat Arg1:T47 Arg2:T72	

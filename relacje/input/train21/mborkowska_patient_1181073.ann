@@ -1,0 +1,173 @@
+T1	Condition 439 480	Łagodna niedomykalność zastawki mitralnej
+N1	Reference T1 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T2	Condition 482 503	Nadciśnienie tętnicze
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Condition 505 517	Dyslipidemia
+N3	Reference T3 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T4	Treatment 527 561	operacji kręgosłupa szyjnego C5/C6
+A1	Status T4 Historical_Insignificant
+T5	Date 563 568	2014r
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Treatment 571 582	lędźwiowego
+A2	Status T6 Historical_Insignificant
+T7	Date 584 589	2012r
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Condition 593 633	powodu przepuklin krążka międzykręgowego
+T9	Treatment 643 659	panhisterectomii
+T10	Date 661 666	2014r
+R5	Dat Arg1:T10 Arg2:T9	
+N4	Reference T8 ICD10:M51	Inne choroby krążka międzykręgowego
+T11	Behaviour 978 1017	Dieta lekkostrawna, niskocholesterolowa
+T12	Condition 1245 1281	Diagnostyka bólów w klace piersiowej
+N5	Reference T12 ICD10:R07.3	Inne bóle w klatce piersiowej
+A4	Source T12 Declared
+T13	Condition 1283 1304	Nadciśnienie tętnicze
+N6	Reference T13 ICD10:I10	
+T14	Condition 1306 1318	Dyslipidemia
+N7	Reference T14 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T15	Treatment 1340 1374	operacji kręgosłupa szyjnego C5/C6
+T16	Date 1376 1381	2014r
+R3	Dat Arg1:T16 Arg2:T15	
+T17	Treatment 1384 1395	lędźwiowego
+T18	Date 1397 1402	2012r
+R4	Dat Arg1:T18 Arg2:T17	
+T19	Condition 1404 1446	z powodu przepuklin krążka międzykręgowego
+N8	Reference T19 ICD10:M51	Inne choroby krążka międzykręgowego
+T20	Treatment 1456 1472	panhisterectomii
+T21	Date 1474 1479	2014r
+R6	Dat Arg1:T21 Arg2:T20	
+T22	Behaviour 1658 1698	Dieta lekkostrawna , niskocholesterolowa
+T23	Investigation 1711 1785	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T24	Investigation 1802 1836	kontrola ciśnienia tętniczego krwi
+T25	Drug 1887 1893	Karbis
+T26	Drug_dose 1894 1910	8 mg 1-0-0 tabl.
+R7	Drg Arg1:T25 Arg2:T26	
+T27	Drug 1912 1918	Atoris
+T28	Drug_dose 1919 1935	40 mg 0-0-1 tabl
+R8	Drg Arg1:T27 Arg2:T28	
+T29	Drug 1938 1946	Betaseck
+T30	Drug_dose 1947 1966	24 2 x dz po 1 tabl
+R9	Drg Arg1:T29 Arg2:T30	
+T31	Investigation_result 2369 2444	labilnych wartości ciśnienia tętniczego (śr. 135/95 mmHg, max 185/110 mmHg)
+T32	Treatment 2467 2501	operacji kręgosłupa szyjnego C5/C6
+A7	Status T32 Historical_Insignificant
+T33	Date 2503 2508	2014r
+R10	Dat Arg1:T33 Arg2:T32	
+T34	Treatment 2511 2522	lędźwiowego
+A8	Status T34 Historical_Insignificant
+T35	Date 2524 2529	2012r
+R11	Dat Arg1:T35 Arg2:T34	
+T36	Condition 2531 2573	z powodu przepuklin krążka międzykręgowego
+N9	Reference T36 ICD10:M51	Inne choroby krążka międzykręgowego
+T37	Treatment 2583 2599	panhisterectomii
+T38	Date 2601 2606	2014r
+R12	Dat Arg1:T38 Arg2:T37	
+T39	Condition 2636 2639	WZW
+N10	Reference T39 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T40	Condition 2641 2650	borelioza
+N11	Reference T40 ICD10:A69.2	Choroba z Lyme
+T41	Negation 2653 2663	nie podaje
+R13	Neg Arg1:T41 Arg2:T40	
+R14	Neg Arg1:T41 Arg2:T39	
+T42	Condition 2681 2683	HA
+A10	Status T42 Family
+N12	Reference T42 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T43	Negation 2713 2723	nie podaje
+T44	Behaviour 2696 2711	Palenie tytoniu
+N13	Reference T44 ICD10:T65.2	Tytoń i nikotyna
+R15	Neg Arg1:T43 Arg2:T44	
+T45	Behaviour 2724 2749	Inne używki: okazjonalnie
+N14	Reference T45 ICD10:Z72.1	Używanie alkoholu
+T46	Condition 2750 2759	Uczulenia
+N15	Reference T46 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T47	Drug 2761 2769	Tramadol
+T48	Drug 2771 2778	Ketonal
+R16	Alg Arg1:T46 Arg2:T47	
+R17	Alg Arg1:T46 Arg2:T48	
+T49	Drug 2858 2863	leków
+T50	Negation 2854 2857	bez
+R18	Neg Arg1:T50 Arg2:T49	
+T51	Investigation 2891 2901	echo serca
+T52	Investigation 2902 2905	TET
+T53	Investigation 2907 2911	ABPM
+T54	Investigation 2913 2919	Holter
+T55	Investigation 2921 2939	RTG kl. piersiowej
+T56	Investigation 4013 4023	Echo serca
+T57	Investigation 4026 4041	Próba Wysiłkowa
+T58	Drug 3968 3976	Betaseck
+T59	Drug_dose 3977 3996	24 2 x dz po 1 tabl
+R19	Drg Arg1:T58 Arg2:T59	
+T60	Drug 3941 3950	Juvinelle
+T61	Drug_dose 3951 3966	1x dz wieczorem
+R20	Drg Arg1:T60 Arg2:T61	
+T62	Drug 3915 3921	Atoris
+T63	Drug_dose 3922 3938	40 mg 0-0-1 tabl
+R21	Drg Arg1:T62 Arg2:T63	
+T64	Drug 3890 3896	Karbis
+T65	Drug_dose 3897 3912	8 mg 1-0-0 tabl
+R22	Drg Arg1:T64 Arg2:T65	
+T66	Behaviour 3839 3865	warunki mieszkaniowe dobre
+T67	Condition 3794 3803	Uczulenia
+N16	Reference T67 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T68	Drug 3805 3813	Tramadol
+T69	Drug 3815 3822	Ketonal
+R23	Alg Arg1:T67 Arg2:T68	
+R24	Alg Arg1:T67 Arg2:T69	
+T70	Negation 3790 3793	nie
+T71	Negation 3773 3776	nie
+T72	Behaviour 3777 3788	Inne używki
+R25	Neg Arg1:T70 Arg2:T72	
+T73	Behaviour 3756 3771	Palenie tytoniu
+N17	Reference T73 ICD10:T65.2	Tytoń i nikotyna
+R26	Neg Arg1:T71 Arg2:T73	
+T74	Condition 3733 3754	nadciśnienie tętnicze
+A11	Status T74 Family
+N18	Reference T74 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T75	Condition 3656 3659	WZW
+N19	Reference T75 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T76	Condition 3669 3678	borelioza
+N20	Reference T76 ICD10:A69.2	Choroba z Lyme
+T77	Condition 3685 3689	Odra
+N21	Reference T77 ICD10:B05	Odra
+T78	Negation 3690 3695	( - )
+R27	Neg Arg1:T78 Arg2:T77	
+T79	Negation 3679 3684	( - )
+R28	Neg Arg1:T79 Arg2:T76	
+T80	Negation 3660 3666	( -  )
+R29	Neg Arg1:T80 Arg2:T75	
+T81	Negation 3624 3628	brak
+T82	Treatment 3602 3621	Leczenie przewlekłe
+R30	Neg Arg1:T81 Arg2:T82	
+T83	Treatment 3539 3555	panhisterektomii
+T84	Date 3558 3562	2014
+R31	Dat Arg1:T84 Arg2:T83	
+T85	Condition 3563 3600	z powodu wodniaka i torbieli jajników
+N22	Reference T85 ICD10:Q50	Wrodzone wady rozwojowe jajników, jajowodów i więzadła szerokiego macicy
+T86	Treatment 3362 3396	operacji kręgosłupa szyjnego C5/C6
+T87	Date 3398 3403	2014r
+R32	Dat Arg1:T87 Arg2:T86	
+T88	Treatment 3406 3417	lędźwiowego
+T89	Date 3419 3424	2012r
+R33	Dat Arg1:T89 Arg2:T88	
+T90	Condition 3428 3468	powodu przepuklin krążka międzykręgowego
+N23	Reference T90 ICD10:M51	Inne choroby krążka międzykręgowego
+T91	Treatment 3478 3494	panhisterectomii
+T92	Date 3496 3501	2014r
+R34	Dat Arg1:T92 Arg2:T91	
+T93	Condition 3340 3352	Dyslipidemia
+N24	Reference T93 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T94	Condition 3317 3338	Nadciśnienie tętnicze
+N25	Reference T94 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T95	Condition 3274 3315	Łagodna niedomykalność zastawki mitralnej
+N26	Reference T95 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T96	Symptom 3164 3239	okresowych niecharakterystycznych dolegliwości bólowych w klatce piersiowej
+N27	Reference T96 ICD10:R07.3	Inne bóle w klatce piersiowej
+T97	Symptom 3245 3259	zawrotów głowy
+N28	Reference T97 ICD10:R42	Zawroty głowy i odurzenie
+R35	Dat Arg1:T7 Arg2:T8	
+R36	Dat Arg1:T5 Arg2:T8	
+R37	Dat Arg1:T35 Arg2:T36	
+R38	Dat Arg1:T33 Arg2:T36	
+R39	Dat Arg1:T89 Arg2:T90	
+R40	Dat Arg1:T87 Arg2:T90	
+R41	Dat Arg1:T84 Arg2:T85	

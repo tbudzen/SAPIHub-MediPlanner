@@ -1,0 +1,152 @@
+T1	Investigation 3469 3479	echo serca
+T2	Investigation 3481 3484	TET
+T3	Investigation 3486 3490	ABPM
+T4	Investigation 3492 3502	Holter ekg
+T5	Investigation 3504 3522	rtg kl. piersiowej
+T6	Drug 3408 3418	Concor Cor
+T7	Drug_dose 3419 3439	1.25 mg 1 tabl. rano
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 3376 3383	Amlozek
+T9	Drug_dose 3384 3406	5 mg 1 tabl. wieczorem
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Behaviour 3293 3311	Uzależnienie inne:
+T11	Negation 3312 3318	neguje
+R3	Neg Arg1:T11 Arg2:T10	
+T12	Behaviour 3270 3277	Alkohol
+N1	Reference T12 ICD10:Z72.1	Używanie alkoholu
+T13	Date 3279 3291	okazjonalnie
+R4	Dat Arg1:T13 Arg2:T12	
+T14	Behaviour 3222 3249	Nikotynizm: bierna palaczka
+T15	Condition 3205 3212	Alergie
+N3	Reference T15 ICD10:T78.4	Alergia, nieokreślona
+T16	Negation 3214 3220	neguje
+R5	Neg Arg1:T16 Arg2:T15	
+T17	Condition 3073 3092	polip szyjki macicy
+N4	Reference T17 ICD10:N84.1	Polip szyjki macicy
+T18	Treatment 3093 3119	2 x żylaki kończyn dolnych
+N5	Reference T18 ICD10:I83	Żylaki kończyn dolnych
+T19	Condition 3122 3142	guz piersi (łagodny)
+N6	Reference T19 ICD10:N63	Nieokreślony guzek w piersi
+T20	Date 3155 3171	przed wielu laty
+R6	Dat Arg1:T20 Arg2:T19	
+R7	Dat Arg1:T20 Arg2:T18	
+R8	Dat Arg1:T20 Arg2:T17	
+T21	Symptom 460 485	bólów w klatce piersiowej
+N7	Reference T21 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T22	Condition 487 508	Nadciśnienie tętnicze
+N8	Reference T22 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T23	Condition 510 539	Hipercholesterolemia mieszana
+N9	Reference T23 ICD10:E78.2	Hiperlipidemia mieszana
+T24	Behaviour 717 757	Dieta lekkostrawna , niskocholesterolowa
+T25	Investigation 770 845	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek.
+T26	Investigation 861 895	kontrola ciśnienia tętniczego krwi
+T27	Drug 946 956	Concor COR
+T28	Drug_dose 957 984	1,25 mg 1 tabl. 1x dz. rano
+R9	Drg Arg1:T27 Arg2:T28	
+T29	Drug 987 994	Amlozek
+T30	Drug_dose 995 1024	5 mg 1 tabl. 1x dz. wieczorem
+T31	Drug 1534 1544	Concor COR
+T32	Drug_dose 1545 1572	1,25 mg 1 tabl. 1x dz. rano
+R10	Drg Arg1:T31 Arg2:T32	
+T33	Behaviour 1475 1500	dieta niskocholesterolowa
+T34	Investigation 1439 1468	kontrola ciśnienia tętniczego
+T35	Symptom 1752 1804	okresowych dolegliwości bólowych w klatce piersiowej
+N10	Reference T35 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T36	Symptom 1810 1844	okresowego uczucia kołatania serca
+N11	Reference T36 ICD10:R00.2	Kołatanie serca
+T37	Symptom 1854 1866	zasłabnięcia
+N12	Reference T37 ICD10:R55	Omdlenie i zapaść
+T38	Negation 1847 1853	Neguje
+R11	Neg Arg1:T38 Arg2:T37	
+T39	Condition 1884 1905	Nadciśnienie tętnicze
+N13	Reference T39 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T40	Condition 1945 1973	guza piersi - zmiana łagodna
+N14	Reference T40 ICD10:N63	Nieokreślony guzek w piersi
+T41	Date 1974 1978	1998
+R12	Dat Arg1:T41 Arg2:T40	
+T42	Condition 2035 2038	WZW
+T43	Condition 2048 2057	borelioza
+N16	Reference T43 ICD10:A69.2	Choroba z Lyme
+T44	Condition 2064 2068	Odra
+A5	Status T44 Historical_Insignificant
+N17	Reference T44 ICD10:B05	Odra
+T45	Negation 2060 2061	-
+R13	Neg Arg1:T45 Arg2:T43	
+T46	Negation 2041 2044	-  
+R14	Neg Arg1:T46 Arg2:T42	
+T47	Date 2071 2085	w dzieciństwie
+R15	Dat Arg1:T47 Arg2:T44	
+T48	Condition 2121 2136	cukrzyca typu 2
+A6	Status T48 Family
+N18	Reference T48 ICD10:E11	Cukrzyca insulinoniezależna
+T49	Condition 2139 2155	astma oskrzelowa
+A7	Status T49 Family
+N19	Reference T49 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T50	Condition 2165 2177	rozedma płuc
+A8	Status T50 Family
+N20	Reference T50 ICD10:J43	Rozedma
+T51	Condition 2180 2201	niewydolność krążenia
+A9	Status T51 Family
+N21	Reference T51 ICD10:I50	Niewydolność serca
+T52	Behaviour 2263 2278	Palenie tytoniu
+T53	Negation 2280 2283	nie
+R16	Neg Arg1:T53 Arg2:T52	
+T54	Behaviour 2284 2295	Inne używki
+T55	Negation 2297 2300	nie
+R17	Neg Arg1:T55 Arg2:T54	
+T56	Condition 2301 2310	Uczulenia
+T57	Negation 2312 2318	neguje
+R18	Neg Arg1:T57 Arg2:T56	
+T58	Behaviour 2335 2361	warunki mieszkaniowe dobre
+T59	Drug 2386 2396	Concor COR
+T60	Drug_dose 2397 2424	1,25 mg 1 tabl. 1x dz. rano
+T61	Drug 2427 2434	Amlozek
+T62	Drug_dose 2435 2464	5 mg 1 tabl. 1x dz. wieczorem
+R19	Drg Arg1:T61 Arg2:T62	
+T63	Investigation 2481 2491	Echo serca
+T64	Investigation 2496 2511	Próba Wysiłkowa
+T65	Symptom 2718 2738	szybkiej akcji serca
+T66	Symptom 2767 2821	ucisku w klatce piersiowej niezależnie od szybkości HR
+T67	Investigation_result 2827 2862	okresowo podwyższonych wartości dBP
+T68	Condition 2902 2925	 wole guzowate obojętne
+N24	Reference T68 ICD10:E04	Inne wole nietoksyczne
+T69	Condition 2927 2961	osteopenia lewego stawu biodrowego
+N25	Reference T69 ICD10:M80	Osteoporoza ze złamaniami patologicznymi
+T70	Condition 2963 2992	polipy pęchgerzyka żółciowego
+N26	Reference T70 ICD10:K82	Inne choroby pęcherzyka żółciowego
+T71	Condition 2994 3008	polipy żołądka
+N27	Reference T71 ICD10:K31.7	Polip żołądka i dwunastnicy
+T72	Negation 2002 2006	brak
+T73	Treatment 1980 1999	Leczenie przewlekłe
+R20	Drg Arg1:T29 Arg2:T30	
+R21	Drg Arg1:T59 Arg2:T60	
+T74	Negation 3190 3203	bez znaczenia
+T75	Condition 3173 3188	Wywiad rodzinny
+A10	Status T75 Family
+R22	Neg Arg1:T74 Arg2:T75	
+R23	Neg Arg1:T72 Arg2:T73	
+T76	Date 2868 2877	od 10 lat
+R24	Dat Arg1:T76 Arg2:T67	
+T77	Investigation 448 459	Diagnostyka
+A1	Status T40 Historical_Insignificant
+T78	Treatment 1936 1944	operacji
+R25	Dat Arg1:T41 Arg2:T78	
+A2	Status T78 Historical_Insignificant
+N15	Reference T42 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N22	Reference T52 ICD10:Z72.0	Używanie tytoniu
+T79	Condition 2865 2867	HA
+N28	Reference T79 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+R26	Dat Arg1:T76 Arg2:T79	
+T80	Negation 3011 3019	usunięte
+R27	Neg Arg1:T80 Arg2:T71	
+A3	Status T19 Historical_Insignificant
+A4	Status T17 Historical_Insignificant
+T81	Treatment 3063 3071	operacje
+R28	Dat Arg1:T20 Arg2:T81	
+A11	Status T81 Historical_Insignificant
+A12	Status T14 Historical_Insignificant
+N2	Reference T14 ICD10:Z72.0	Używanie tytoniu
+T82	Date 3252 3268	do 20 roku życia
+R29	Dat Arg1:T82 Arg2:T14	
+N29	Reference T10 ICD10:Z72	Problemy związane ze stylem życia
+N23	Reference T56 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

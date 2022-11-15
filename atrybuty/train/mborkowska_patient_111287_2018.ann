@@ -1,0 +1,59 @@
+T1	Investigation 1824 1834	echo serca
+T2	Investigation 1836 1839	TET
+T3	Investigation 1841 1845	ABPM
+T4	Investigation 1847 1857	Holter ekg
+T5	Investigation 1860 1877	tg kl. piersiowej
+T6	Negation 1788 1795	żadnych
+T7	Drug 1782 1786	Leki
+R1	Neg Arg1:T6 Arg2:T7	
+T8	Behaviour 1674 1701	Alkohol: 2 drinki wieczorem
+N1	Reference T8 ICD10:Z72.1	Używanie alkoholu
+T9	Negation 1630 1634	nie,
+T10	Behaviour 1610 1620	Nikotynizm
+N2	Reference T10 ICD10:Z72.0	Używanie tytoniu
+R2	Neg Arg1:T9 Arg2:T10	
+T11	Negation 1601 1607	neguje
+T12	Condition 1592 1599	Alergie
+N3	Reference T12 ICD10:T78.4	Alergia, nieokreślona
+R3	Neg Arg1:T11 Arg2:T12	
+T13	Condition 1574 1590	astma oskrzelowa
+A1	Status T13 Family
+N4	Reference T13 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T14	Condition 1540 1551	zawał serca
+A2	Status T14 Family
+N5	Reference T14 ICD10:I25.2	Przebyty zawał serca
+T15	Behaviour 1561 1571	nikotynizm
+A3	Status T15 Family
+N6	Reference T15 ICD10:Z72.0	Używanie tytoniu
+T16	Treatment 1505 1507	CC
+T17	Date 1509 1513	1999
+R4	Dat Arg1:T17 Arg2:T16	
+T18	Condition 1429 1436	migreny
+N7	Reference T18 ICD10:G43.9	Migrena, nieokreślona
+T19	Condition 1438 1446	depresja
+N8	Reference T19 ICD10:F32.9	Epizod depresyjny, nieokreślony
+T20	Symptom 1321 1336	kołatania serca
+N9	Reference T20 ICD10:R00.2	Kołatanie serca
+T21	Condition 1353 1364	tachykardii
+N10	Reference T21 ICD10:R00.0	Tachykardia, nieokreślona
+T22	Symptom 1366 1389	duszności spoczynkowej,
+N11	Reference T22 ICD10:R06.0	Duszność
+T23	Investigation 891 925	kontrola ciśnienia tętniczego krwi
+T24	Investigation 800 875	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek.
+T25	Behaviour 747 787	Dieta lekkostrawna , niskocholesterolowa
+T26	Condition 450 483	Pojedyncze pobudzenia nadkomorowe
+N12	Reference T26 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T27	Condition 485 505	Tachykardia zatokowa
+N13	Reference T27 ICD10:R00.0	Tachykardia, nieokreślona
+T28	Symptom 507 527	Migrenowe bóle głowy
+N14	Reference T28 ICD10:R51	Ból głowy
+T29	Date 1339 1351	do kilku lat
+R5	Dat Arg1:T29 Arg2:T20	
+T30	Date 1390 1404	raczej w dzień
+R6	Dat Arg1:T30 Arg2:T22	
+T31	Date 1635 1648	15 lat wstecz
+T32	Behaviour 1649 1652	tak
+N15	Reference T32 ICD10:Z72.0	Używanie tytoniu
+R7	Dat Arg1:T31 Arg2:T32	
+A4	Status T32 Historical_Insignificant
+T33	Treatment 660 744	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Pulmonologicznej.

@@ -1,0 +1,527 @@
+allRelations          : 20
+oks                   : 12
+isRedundantAndRemoveds: 8
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 0
+GOOD / BAD            : 20 / 0
+Sentence 0:
+------------------------------------------------
+Wiek: 62 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:I49|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Nadciśnienie tętnicze I stopnia wg ESC/ESH.
+
+
+Sentence 6:
+Nadwaga (BMI 27.2 kg/m2).
+
+
+Sentence 7:
+Nadkomorowe zaburzenia rytmu (pojedyncze Ex, salwy).
+
+
+Sentence 8:
+Przemijający blok przedsionkowo-komorowy I stopnia.
+
+
+Sentence 9:
+Niedoczynność tarczycy w trakcie diagnostyki.
+
+
+Sentence 10:
+Stan po urazie barku z następczą sterydoterapią (przed 2 laty).
+R1	Dat Arg1:T7 Arg2:T6 << OK >>	(przed 2 laty -> urazie barku z następczą sterydoterapią  <RANK: 3> <info: start[717, 677] <type: LEFT>>
+
+
+Sentence 11:
+Stan po operacji ginekologicznej z powodu zaburzeń statyki narządów rodnych (przed 2 laty)
+------------------------------------------------
+
+R2	Dat Arg1:T9 Arg2:T8 << OK >>	przed 2 laty -> operacji ginekologicznej z powodu zaburzeń statyki narządów rodnych  <RANK: 3> <info: start[810, 741] <type: LEFT>>
+
+
+Sentence 12:
+Zalecenia
+------------------------------------------------
+
+
+
+
+Sentence 13:
+Zalecenia
+•\x09dalsza opieka w poradni POZ   
+•\x09okresowa kontrola kardiologiczna   
+•\x09kontrola endokrynologiczna - proszę zgłosić się ze skierowaniem do Poradni Endokrynologicznej ICZMP (Pani Dr n. med. Renata Michalak)  
+•\x09codzienna kontrola ciśnienia tętniczego   
+•\x09okresowa kontrola lipidogramu   
+•\x09dieta zbliżona do śródziemnomorskiej    
+•\x09redukcja masy ciała    
+•\x09stały, umiarkowany, aerobowy wysiłek fizyczny   
+•\x09regularne przyjmowanie leków: 
+ 
+1.\x09Bibloc 1.25 mg 1 tabl.
+R3	Drg Arg1:T15 Arg2:T16 << OK >>	Bibloc -> 1.25 mg 1 tabl. rano  <RANK: 3> <info: start[1420, 1427] <type: RIGHT>>
+
+
+Sentence 14:
+rano
+------------------------------------------------
+
+
+
+Sentence 15:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 16:
+Chora lat 62, przyjęta do Kliniki z powodu rejestrowanej przyspieszonej czynności serca - w zapisiach ekfgg graniczna tachykardia.  
+
+R4	Inv Arg1:T42 Arg2:T41 << OK >>	ekfgg -> graniczna tachykardia  <RANK: 3> <info: start[1674, 1680] <type: RIGHT>>
+
+
+Sentence 17:
+W wywiadzie ponadto:  pod. zapalenia/ niedoczynności tarczycy, hipercholesterolemia ?
+
+
+Sentence 18:
+- LDL 104 mg/dl w badaniach, uraz barku ze sterydoterapią 2 lata temu
+
+R5	Dat Arg1:T40 Arg2:T39 << OK >>	2 lata temu -> uraz barku  <RANK: 3> <info: start[1849, 1820] <type: LEFT>>
+
+
+Sentence 19:
+Przebyte operacje: statyka narządów rodnych przed 2 laty 
+
+R6	Dat Arg1:T35 Arg2:T34 << OK >>	przed 2 laty -> statyka narządów rodnych  <RANK: 3> <info: start[1905, 1880] <type: LEFT>>
+
+
+Sentence 20:
+Wywiad rodzinny: bez znaczenia 
+Alergie:  neguje 
+
+R7	Neg Arg1:T27 Arg2:T32 << OK >>	neguje -> Alergie  <RANK: 3> <info: start[1961, 1951] <type: LEFT>>
+R8	Neg Arg1:T27 Arg2:T33 <<REDUNDANT!!!REMOVED>>	neguje -> Wywiad rodzinny <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1961, 1919] <type: LEFT>>
+R9	Neg Arg1:T28 Arg2:T32 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Alergie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1936, 1951] <type: RIGHT>>
+R10	Neg Arg1:T28 Arg2:T33 << OK >>	bez znaczenia -> Wywiad rodzinny  <RANK: 3> <info: start[1936, 1919] <type: LEFT>>
+
+
+Sentence 21:
+Nikotynizm: neguje  
+Alkohol: neguje  
+Uzależnienie inne: neguje 
+Stan społeczny: emerytura, wcześniej praca fizyczno umysłowa w handlu 
+
+R11	Neg Arg1:T24 Arg2:T29 << OK >>	neguje -> Uzależnienie inne  <RANK: 3> <info: start[2027, 2008] <type: LEFT>>
+R12	Neg Arg1:T24 Arg2:T30 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2027, 1990] <type: LEFT>>
+R13	Neg Arg1:T24 Arg2:T31 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2027, 1969] <type: LEFT>>
+R14	Neg Arg1:T25 Arg2:T29 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1981, 2008] <type: RIGHT>>
+R15	Neg Arg1:T25 Arg2:T30 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1981, 1990] <type: RIGHT>>
+R16	Neg Arg1:T25 Arg2:T31 << OK >>	neguje -> Nikotynizm  <RANK: 3> <info: start[1981, 1969] <type: LEFT>>
+R17	Neg Arg1:T26 Arg2:T29 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1999, 2008] <type: RIGHT>>
+R18	Neg Arg1:T26 Arg2:T30 << OK >>	neguje -> Alkohol  <RANK: 3> <info: start[1999, 1990] <type: LEFT>>
+R19	Neg Arg1:T26 Arg2:T31 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1999, 1969] <type: LEFT>>
+
+
+Sentence 22:
+Leki: Ximve 20 mg 1 tabl. na noc 
+
+R20	Drg Arg1:T22 Arg2:T23 << OK >>	Ximve -> 0 mg 1 tabl. na noc  <RANK: 3> <info: start[2112, 2119] <type: RIGHT>>
+
+
+Sentence 23:
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter ekg, rtg kl. piersiowej
+
+
+
+Sentence 24:
+Przewidywana liczba dni hospitalizacji: 5-7 dni
+------------------------------------------------
+
+
+
+Sentence 25:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 26:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.89[10^3/ul]
+    
+
+
+Sentence 27:
+RBC Krwinki czerwone:4.57[10^6/ul]
+    
+
+
+Sentence 28:
+HGB Hemoglobina:12.9[g/dl]
+    
+
+
+Sentence 29:
+HCT Hematokryt:38.3[%]
+    
+
+
+Sentence 30:
+MCV wskaźnik czerwonokrw:83.8[fl]
+    
+
+
+Sentence 31:
+MCH wskaźnik czerwonokrw:28.2[pg]
+    
+
+
+Sentence 32:
+MCHC wskaźnik czerwonokr:33.7[g/dl]
+    
+
+
+Sentence 33:
+PLT z morfologii:271[10^3/ul]
+    
+
+
+Sentence 34:
+RDW-SD:41.9[fl]
+    
+
+
+Sentence 35:
+RDW-CV:13.6[%]
+    PDW:13.5[fl]
+    MPV:11.2[fl]
+    
+
+
+Sentence 36:
+P-LCR:35.3[%]
+    
+
+
+Sentence 37:
+PCT (hematokryt płytkowy:0.30[%]
+    
+
+
+Sentence 38:
+NEUTR# wartość bezwzględ:3.81[10^3/ul]
+    
+
+
+Sentence 39:
+NEUTR%:55.3[%]
+    
+
+
+Sentence 40:
+LYMH# wartość bezwzględn:2.15[10^3/ul]
+    
+
+
+Sentence 41:
+LYMPH%:31.2[%]
+    
+
+
+Sentence 42:
+MONO# wartość bezwzględn:0.68[10^3/ul]
+    MONO%:9.9[%]
+    
+
+
+Sentence 43:
+EO# wartość bezwzględna:0.21[10^3/ul]
+    
+
+
+Sentence 44:
+EO%:3.0[%]
+    
+
+
+Sentence 45:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 46:
+NRBC %:0.0[%]
+    
+
+
+Sentence 47:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 48:
+Badanie ogólne moczu
+    
+
+
+Sentence 49:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 50:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 51:
+przejrzystość:niezupełna[ ]
+    
+
+
+Sentence 52:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 53:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 54:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 55:
+ciężar właściwy:1.009[ ]
+    
+
+
+Sentence 56:
+pH:7.0[ ]
+    
+
+
+Sentence 57:
+białko:nikły ślad[ ]
+    
+
+
+Sentence 58:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 59:
+azotyny:obecne[ ]
+    
+
+
+Sentence 60:
+erytrocyty:obecne[ ]
+    
+
+
+Sentence 61:
+leukocyty:obecne[ ]
+    
+
+
+Sentence 62:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 63:
+nabłonki płaskie:bardzo liczne[w preparacie]
+    
+
+
+Sentence 64:
+nabłonki okrągłe:pojedyncze[w preparacie]
+    
+
+
+Sentence 65:
+leukocyty:36 /ul[ul]
+    erytrocyty świeże i częś:32/ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    
+
+
+Sentence 66:
+bakterie:dość liczne[w preparacie]
+
+
+
+Sentence 67:
+TSH: TSH:5.71[uIU/ml]
+
+
+
+Sentence 68:
+FT3: FT3:3.52[pg/ml]
+
+
+
+Sentence 69:
+FT4: FT4:1.25[ng/dl]
+
+
+
+Sentence 70:
+ALAT: ALAT:21[U/L]
+ASPAT: ASPAT:30[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.54[mg/dl]
+
+
+
+Sentence 71:
+Sód (Na): Sód:143[mmol/L]
+
+
+
+Sentence 72:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 73:
+Kreatynina + GFR
+    
+
+
+Sentence 74:
+Kreatynina w surowicy:0.65[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 75:
+MDRD ze stan:92.4[ml/min/1,73 m^2]
+
+
+
+Sentence 76:
+Mocznik: Mocznik:30[mg/dl]
+
+
+
+Sentence 77:
+Kwas moczowy: Kwas moczowy:4.2[mg/dl]
+
+
+
+Sentence 78:
+Lipidogram
+    
+
+
+Sentence 79:
+Cholesterol całkowity:198[mg/dl]
+    
+
+
+Sentence 80:
+Cholesterol HDL:94[mg/dl]
+    
+
+
+Sentence 81:
+Cholestrol LDL:89[mg/dl]
+    
+
+
+Sentence 82:
+Triglicerydy:56[mg/dl]
+    
+
+
+Sentence 83:
+Stosunek cholesterolu HD:0.5
+
+
+
+Sentence 84:
+Glukoza w surowicy: Glukoza w surowicy:93[mg/dl]
+
+
+
+Sentence 85:
+------------------------------------------------
+
+
+
+Sentence 86:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 87:
+I10
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 88:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 89:
+89.501
+C55
+A01
+89.502
+I81
+L43
+N45
+L69
+O55
+I17
+M45
+M37
+I19
+O35
+N13
+88.721
+O69
+
+
+
+Sentence 90:
+------------------------------------------------
+
+

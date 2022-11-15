@@ -1,0 +1,91 @@
+T1	Treatment 332 399	Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T2	Treatment 424 476	Wskazana konsultacja w Poradni Chirurgii Naczyniowej
+T3	Investigation 479 521	wykonaniem USG Doppler żył kończyn dolnych
+T4	Behaviour 545 571	Dieta lekkostrawna, niskoc
+T5	Symptom 800 815	Kołatania serca
+N1	Reference T5 ICD10:R00.2	Kołatanie serca
+T6	Symptom 820 843	Obrzęki kończyn dolnych
+N2	Reference T6 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T7	Condition 848 878	Stan po wypadku komunikacyjnym
+N3	Reference T7 ICD10:V99	Nieokreślony wypadek komunikacyjny
+T8	Condition 1106 1147	Łagodna niedomykalność zastawki mitralnej
+N4	Reference T8 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T9	Condition 1152 1228	Łagodna niedomykalność zastawki trójdzielnej z niskim prawdopodobieństwem PH
+N5	Reference T9 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T10	Condition 1233 1259	Nadciśnienie tętnicze I st
+N6	Reference T10 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T11	Condition 1264 1276	Dyslipidemia
+N7	Reference T11 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T12	Condition 1281 1293	Otyłość I st
+N8	Reference T12 ICD10:E66	Otyłość
+T13	Condition 1298 1339	Niedokrwistość mikrocytarna niedobarwliwa
+N9	Reference T13 ICD10:D50	Niedokrwistość z niedoboru żelaza
+T14	Condition 1344 1374	Stan po wypadku komunikacyjnym
+N10	Reference T14 ICD10:V99	Nieokreślony wypadek komunikacyjny
+T15	Condition 1613 1674	wypadku komunikacyjnym ze złamaniem obustronnym łuku kręgu C2
+N11	Reference T15 ICD10:S12.1	Złamanie 2. kręgu szyjnego
+A1	Source T15 Declared
+T16	Symptom 1733 1767	okresowego uczucia kołatania serca
+N12	Reference T16 ICD10:R00.2	Kołatanie serca
+T17	Symptom 1769 1806	obrzęków kończyn dolnych wokół kostek
+N13	Reference T17 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T18	Symptom 1812 1886	dolegliwościami w klatce piersiowej o charakterze kłucia pod sutkiem lewym
+N14	Reference T18 ICD10:R07.3	Inne bóle w klatce piersiowej
+T19	Date 1887 1901	od siedmiu lat
+R1	Dat Arg1:T19 Arg2:T18	
+R2	Dat Arg1:T19 Arg2:T17	
+R3	Dat Arg1:T19 Arg2:T16	
+T20	Negation 1939 1945	Neguje
+T21	Symptom 1946 1958	zasłabnięcia
+T22	Symptom 1960 1969	duszności
+N15	Reference T22 ICD10:R06.0	Duszność
+T23	Symptom 1971 2002	typowe bóle w klatce piersiowej
+N16	Reference T23 ICD10:R07	Ból gardła i w klatce piersiowej
+R4	Neg Arg1:T20 Arg2:T23	
+R5	Neg Arg1:T20 Arg2:T22	
+R6	Neg Arg1:T20 Arg2:T21	
+T24	Treatment 2004 2021	Przebyte operacje
+T25	Treatment 2024 2033	usunięcie
+A2	Status T25 Historical_Insignificant
+T26	Date 2058 2062	2014
+R7	Dat Arg1:T26 Arg2:T25	
+T27	Treatment 2065 2072	abrazja
+A3	Status T27 Historical_Insignificant
+T28	Date 2074 2078	2016
+R8	Dat Arg1:T28 Arg2:T27	
+T29	Condition 2107 2110	WZW
+N17	Reference T29 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T30	Negation 2113 2114	-
+R9	Neg Arg1:T30 Arg2:T29	
+T31	Condition 2119 2128	borelioza
+N18	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Negation 2131 2132	-
+R10	Neg Arg1:T32 Arg2:T31	
+T33	Condition 2136 2144	gruźlica
+N19	Reference T33 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T34	Negation 2146 2147	-
+R11	Neg Arg1:T34 Arg2:T33	
+T35	Condition 2174 2176	HF
+A4	Status T35 Family
+N20	Reference T35 ICD10:I50.9	Niewydolność serca, nieokreślona
+T36	Condition 2187 2189	MI
+A5	Status T36 Family
+N21	Reference T36 ICD10:I25.2	Przebyty zawał serca
+T37	Date 2190 2210	w wieku 40-kilku lat
+R12	Dat Arg1:T37 Arg2:T36	
+T38	Behaviour 2211 2226	Palenie tytoniu
+N22	Reference T38 ICD10:Z72.0	Używanie tytoniu
+T39	Negation 2228 2231	nie
+R13	Neg Arg1:T39 Arg2:T38	
+T40	Behaviour 2232 2243	Inne używki
+T41	Negation 2245 2248	nie
+R14	Neg Arg1:T41 Arg2:T40	
+T42	Condition 2249 2258	Uczulenia
+T43	Condition 2260 2280	Pyralgina - duszność
+T44	Behaviour 2297 2323	warunki mieszkaniowe dobre
+T45	Condition 2149 2164	Wywiad rodzinny
+A6	Status T45 Family
+N23	Reference T43 ICD10:R06.0	Duszność
+T46	Condition 2034 2056	polipa endometrialnego
+R15	Dat Arg1:T26 Arg2:T46	
+N24	Reference T46 ICD10:N84.8	Polip innych części żeńskiego układu rozrodczego

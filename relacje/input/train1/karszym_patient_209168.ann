@@ -1,0 +1,98 @@
+T1	Treatment 333 381	Dalsza opieka w POZ oraz Poradni Kardiologicznej
+T2	Treatment 411 514	Okresowa kontrola morfologii, lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T3	Behaviour 519 621	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T4	Treatment 626 682	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T5	Drug 721 737	Ivabradine Mylan
+T6	Drug_dose 738 769	5mg 1 tabletka rano i wieczorem
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Treatment 772 861	W przypadku planowania ciąży, wskazana konsultacja z lekarzem w celu modyfikacji leczenia
+T8	Condition 1045 1078	Nieadekwatna tachykardia zatokowa
+N1	Reference T8 ICD10:R00.0	Tachykardia, nieokreślona
+T9	Condition 1331 1351	Tachykardia zatokowa
+N2	Reference T9 ICD10:R00.0	Tachykardia, nieokreślona
+T10	Symptom 1518 1549	napadowej tachykardii zatokowej
+N3	Reference T10 ICD10:R00.0	Tachykardia, nieokreślona
+T11	Symptom 1623 1672	okresowo występujące uczucie szybkiej pracy serca
+N4	Reference T11 ICD10:R00.2	Kołatanie serca
+T12	Treatment 1674 1730	kilkakrotnie z tego powodu zgłaszała się do izby przyjęć
+T14	Investigation 1732 1759	W dotychczasowych badaniach
+T15	Investigation_result 1778 1798	tachykardię zatokową
+N5	Reference T15 ICD10:R00.0	Tachykardia, nieokreślona
+R3	Inv Arg1:T14 Arg2:T15	
+T17	Date 1821 1838	od ok. 2 miesięcy
+T18	Negation 1839 1848	nie miała
+T19	Symptom 1849 1866	w.w. dolegliwości
+N6	Reference T19 ICD10:R00.2	Kołatanie serca
+R5	Neg Arg1:T18 Arg2:T19	
+R6	Dat Arg1:T17 Arg2:T19	
+T20	Negation 1868 1874	Neguje
+T21	Symptom 1876 1888	zasłabnięcia
+T22	Symptom 1890 1898	omdlenia
+N7	Reference T22 ICD10:R55	Omdlenie i zapaść
+T23	Symptom 1900 1910	krwawienia
+T24	Symptom 1912 1925	czarne stolce
+N8	Reference T24 ICD10:K92.1	Stolce smołowate
+T25	Symptom 1927 1943	brunatne wymioty
+N9	Reference T25 ICD10:K92.0	Wymioty krwawe
+T26	Condition 1945 1961	chorobę wrzodową
+N10	Reference T26 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T27	Symptom 1963 1991	duszność nocną typu ortopnoe
+N11	Reference T27 ICD10:R06.0	Duszność
+T28	Condition 1993 1995	HA
+N12	Reference T28 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T29	Condition 1997 1999	DM
+N13	Reference T29 ICD10:E14	Cukrzyca nieokreślona
+T30	Condition 2001 2011	udar mózgu
+N14	Reference T30 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T31	Condition 2013 2024	zawał serca
+N15	Reference T31 ICD10:I25.2	Przebyty zawał serca
+R7	Neg Arg1:T20 Arg2:T21	
+R8	Neg Arg1:T20 Arg2:T22	
+R9	Neg Arg1:T20 Arg2:T23	
+R10	Neg Arg1:T20 Arg2:T24	
+R11	Neg Arg1:T20 Arg2:T25	
+R12	Neg Arg1:T20 Arg2:T26	
+R13	Neg Arg1:T20 Arg2:T27	
+R14	Neg Arg1:T20 Arg2:T28	
+R15	Neg Arg1:T20 Arg2:T29	
+R16	Neg Arg1:T20 Arg2:T30	
+R17	Neg Arg1:T20 Arg2:T31	
+T32	Treatment 2029 2046	Przebyte operacje
+N16	Reference T32 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T33	Negation 2048 2054	neguje
+R18	Neg Arg1:T33 Arg2:T32	
+T34	Behaviour 2055 2071;2077 2084	Palenie tytoniu: biernie
+T35	Behaviour 2086 2097	Inne używki
+T36	Negation 2099 2102	nie
+T37	Negation 2115 2118	nie
+R19	Neg Arg1:T36 Arg2:T35	
+T38	Condition 2104 2113	Uczulenia
+N17	Reference T38 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R20	Neg Arg1:T37 Arg2:T38	
+T39	Condition 2147 2150	WZW
+N18	Reference T39 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T40	Condition 2157 2166	borelioza
+N19	Reference T40 ICD10:A69.2	Choroba z Lyme
+T41	Condition 2174 2177	tbc
+N20	Reference T41 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T42	Condition 2183 2187	odra
+N21	Reference T42 ICD10:B05	Odra
+T43	Treatment 2193 2216	szczepienie na odrę (+)
+T44	Negation 2151 2154	(-)
+T45	Negation 2167 2172	( - )
+T46	Negation 2178 2181	(-)
+T47	Negation 2188 2191	(-)
+R21	Neg Arg1:T44 Arg2:T39	
+R22	Neg Arg1:T45 Arg2:T40	
+R23	Neg Arg1:T46 Arg2:T41	
+R24	Neg Arg1:T47 Arg2:T42	
+T48	Behaviour 2234 2260	warunki mieszkaniowe dobre
+T49	Behaviour 2262 2284	mieszka z mężem i mamą
+T50	Negation 2294 2297	bez
+T51	Drug 2298 2303	leków
+R25	Neg Arg1:T50 Arg2:T51	
+T52	Investigation 2365 2386	badania laboratoryjne
+T53	Investigation 2388 2392	ECHO
+T54	Investigation 2394 2404	Holter EKG
+T55	Investigation 2406 2410	ABPM
+N22	Reference T34 ICD10:Z58.7	Narażenie na dym tytoniowy

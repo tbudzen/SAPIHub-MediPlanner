@@ -1,0 +1,149 @@
+T1	Treatment 346 373	dalsza opieka w poradni POZ
+T2	Treatment 380 429	okresowa kontrola kardiologiczna, diabetologiczna
+T3	Treatment 435 464	dalsza diagnostyka i leczenie
+T4	Condition 465 479	wola guzkowego
+N1	Reference T4 ICD10:E04	Inne wole nietoksyczne
+T5	Treatment 482 508	poradni endokrynologicznej
+T6	Investigation 515 554	codzienna kontrola ciśnienia tętniczego
+T7	Investigation 556 593	pomiar w pełnym komforcie psychicznym
+T8	Investigation 637 712	sprawdzenie poprawności kalibracji aparatu używanego dotychczas do pomiarów
+T9	Investigation 719 748	okresowa kontrola lipidogramu
+T10	Date 759 771	za 6 tygodni
+R1	Dat Arg1:T10 Arg2:T9	
+T11	Behaviour 780 796	dieta cukrzycowa
+T12	Behaviour 803 822	redukcja masy ciała
+T13	Behaviour 829 850	zakaz palenia tytoniu
+T14	Behaviour 856 901	stały, umiarkowany, aerobowy wysiłek fizyczny
+T15	Treatment 908 936	regularne przyjmowanie leków
+T16	Drug 945 952	Amlozek
+T17	Drug_dose 953 975	5 mg 1 tabl. wieczorem
+R2	Drg Arg1:T16 Arg2:T17	
+T18	Drug 983 988	Axtil
+T19	Drug_dose 989 1007	10 mg 1 tabl. rano
+R3	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1013 1021	Bisocard
+T21	Drug_dose 1022 1039	5 mg 1 tabl. rano
+R4	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1045 1052	Indapen
+T23	Drug_dose 1053 1072	2,5 mg 1 tabl. rano
+R5	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1080 1085	Acard
+T25	Drug_dose 1086 1109	75 mg 1 tabl. wieczorem
+R6	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1118 1124	Ridlip
+T27	Drug_dose 1125 1148	20 mg 1 tabl. wieczorem
+R7	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1156 1168	Metformax SR
+T29	Drug_dose 1169 1190	500 1 tabl. wieczorem
+R8	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1198 1216	Asparaginian Extra
+T31	Drug_dose 1218 1229	1tabl. rano
+R9	Drg Arg1:T30 Arg2:T31	
+T32	Condition 1448 1481	Nadciśnienie tętnicze skorygowane
+N2	Reference T32 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T33	Condition 1483 1503	Hipertriglicerydemia
+N3	Reference T33 ICD10:E78.1	Czysta hiperglicerydemia
+T34	Behaviour 1505 1515	Nikotynizm
+N4	Reference T34 ICD10:Z72.0	Używanie tytoniu
+T35	Condition 1517 1541	Otyłość I stopnia wg WHO
+N5	Reference T35 ICD10:E66	Otyłość
+T36	Investigation_result 1543 1557	BMI 30.5 kg/m2
+T37	Condition 1559 1574	Miażdżyca aorty
+N6	Reference T37 ICD10:I70.0	Miażdżyca aorty
+T38	Condition 1576 1615	Utrwalony blok lewej odnogi pęczka Hisa
+N7	Reference T38 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T39	Condition 1617 1666	Wada serca pod postacią niedomykalności aortalnej
+N8	Reference T39 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T40	Condition 1669 1691	trójdzielnej I stopnia
+N9	Reference T40 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T41	Condition 1693 1724	Odrost wola guzkowego w okresie
+N10	Reference T41 ICD10:E04	Inne wole nietoksyczne
+T42	Condition 1725 1762	subklinicznej niedoczynności tarczycy
+N11	Reference T42 ICD10:E02	Subkliniczna postać niedoczynności tarczycy z powodu niedoboru jodu
+T43	Treatment 1772 1784	strumektomii
+A1	Status T43 Historical_Insignificant
+T44	Date 1786 1790	1974
+R10	Dat Arg1:T44 Arg2:T43	
+T45	Condition 1793 1808	Cukrzyca typu 2
+N12	Reference T45 ICD10:E11	Cukrzyca insulinoniezależna
+T46	Condition 1810 1823	Hiperurykemia
+N13	Reference T46 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T47	Investigation_result 1995 2054	wysokich wartości ciśnienia tętniczego krwi do 230/120 mmHg
+N14	Reference T47 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T48	Negation 2057 2063	Neguje
+T49	Symptom 2064 2076	zasłabnięcia
+T50	Negation 2079 2085	neguje
+T51	Symptom 2086 2110	bóle w klatce piersiowej
+R11	Neg Arg1:T50 Arg2:T51	
+R12	Neg Arg1:T48 Arg2:T49	
+T52	Condition 2126 2147	Nadciśnienie tętnicze
+N16	Reference T52 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T53	Condition 2149 2164	Cukrzyca typu 2
+N17	Reference T53 ICD10:E11	Cukrzyca insulinoniezależna
+T54	Condition 2166 2185	Zaburzenia lipidowe
+N18	Reference T54 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T55	Condition 2187 2191	LBBB
+N19	Reference T55 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T56	Date 2204 2211	04.2018
+R13	Dat Arg1:T56 Arg2:T55	
+T57	Treatment 2215 2232	Przebyte operacje
+T58	Treatment 2243 2254	strumektomi
+A2	Status T58 Historical_Insignificant
+T59	Date 2255 2259	1974
+R14	Dat Arg1:T59 Arg2:T58	
+T60	Treatment 2262 2281	Leczenie przewlekłe
+T61	Negation 2284 2295	brak danych
+R15	Neg Arg1:T61 Arg2:T60	
+T62	Condition 2324 2327	WZW
+N20	Reference T62 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T63	Negation 2330 2331	-
+R16	Neg Arg1:T63 Arg2:T62	
+T64	Condition 2337 2346	borelioza
+N21	Reference T64 ICD10:A69.2	Choroba z Lyme
+T65	Negation 2349 2350	-
+R17	Neg Arg1:T65 Arg2:T64	
+T66	Condition 2355 2374	wywiadzie rodzinnym
+A3	Status T66 Family
+T67	Negation 2377 2388	brak danych
+R18	Neg Arg1:T67 Arg2:T66	
+T68	Behaviour 2390 2424	Palenie tytoniu: pali 1/2 dziennie
+N22	Reference T68 ICD10:Z72.0	Używanie tytoniu
+T69	Behaviour 2427 2438	Inne używki
+T70	Negation 2440 2443	nie
+R19	Neg Arg1:T70 Arg2:T69	
+T71	Condition 2444 2453	Uczulenia
+N23	Reference T71 ICD10:T78.4	Alergia, nieokreślona
+T72	Negation 2455 2461	neguje
+R20	Neg Arg1:T72 Arg2:T71	
+T73	Behaviour 2478 2504	warunki mieszkaniowe dobre
+T74	Drug 2529 2536	Amlozek
+T75	Drug_dose 2537 2553	5 mg 1 x dz rano
+R21	Drg Arg1:T74 Arg2:T75	
+T76	Drug 2555 2562	Indapen
+T77	Drug_dose 2563 2580	2,5 mg 1x dz rano
+R22	Drg Arg1:T76 Arg2:T77	
+T78	Drug 2583 2588	Axtil
+T79	Drug_dose 2589 2605	10 mg 1x dz rano
+R23	Drg Arg1:T78 Arg2:T79	
+T80	Drug 2608 2616	Bisocard
+T81	Drug_dose 2617 2632	5 mg 1x dz rano
+R24	Drg Arg1:T80 Arg2:T81	
+T82	Drug 2634 2643	Lipanthyl
+T83	Drug_dose 2644 2665	267 M 1x dz wieczorem
+R25	Drg Arg1:T82 Arg2:T83	
+T84	Drug 2668 2674	Ridlip
+T85	Drug_dose 2675 2696	10 mg 1x dz wieczorem
+R26	Drg Arg1:T84 Arg2:T85	
+T86	Drug 2700 2712	Metformax SR
+T87	Drug_dose 2713 2732	500 1x dz wieczorem
+R27	Drg Arg1:T86 Arg2:T87	
+T88	Drug 2735 2746	Asparginian
+T89	Drug_dose 2747 2757	1x dz rano
+R28	Drg Arg1:T88 Arg2:T89	
+T90	Investigation 2773 2783	Echo serca
+T91	Investigation 2786 2796	Holter EKG
+T92	Date 596 635	po 10-15 minutach odpoczynku fizycznego
+R29	Dat Arg1:T92 Arg2:T7	
+N24	Reference T49 ICD10:R55	Omdlenie i zapaść
+N15	Reference T51 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N25	Reference T69 ICD10:Z72	Problemy związane ze stylem życia

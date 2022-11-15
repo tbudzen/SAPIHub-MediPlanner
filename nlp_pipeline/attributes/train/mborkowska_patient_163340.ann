@@ -1,0 +1,154 @@
+T1	Behaviour 612 651	Dieta lekkostrawna, niskocholesterolowa
+T2	Investigation 667 749	kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T3	Investigation 781 815	kontrola ciśnienia tętniczego krwi
+T4	Behaviour 820 876	Unikanie nadmiernych wysiłków, w szczególności oporowych
+T5	Drug 887 894	Polpril
+T6	Drug_dose 895 919	5 mg 1x1 tabl. wieczorem
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 920 927	Roswera
+T8	Drug_dose 928 953	10 mg 1x1 tabl. wieczorem
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 954 966	Euthyrox N88
+T10	Drug_dose 967 981	1x1 tabl. rano
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 982 985	IPP
+T12	Drug_dose 986 1015	20 mg 1x1 tabl. rano na czczo
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 1016 1024	Polocard
+T14	Drug_dose 1025 1050	75 mg 1x1 tabl. wieczorem
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Drug 1051 1056	Nedal
+T16	Drug_dose 1057 1076	5 mg 1x1 tabl. rano
+R6	Drg Arg1:T15 Arg2:T16	
+T17	Drug 1077 1086	Nitromint
+T18	Drug_dose 1087 1130	1-2 dawki doraźnie w razie bólu dławicowego
+R7	Drg Arg1:T17 Arg2:T18	
+T19	Condition 1368 1408	Choroba niedokrwienna serca I/II* wg CCS
+N1	Reference T19 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T20	Condition 1410 1431	Nadciśnienie tętnicze
+N2	Reference T20 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T21	Condition 1463 1483	Hipercholesterolemia
+N3	Reference T21 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T22	Condition 1485 1507	Miażdżyca tt. szyjnych
+N4	Reference T22 ICD10:I65.2	Niedrożność i zwężenie tętnicy szyjnej wewnętrznej
+T23	Condition 1510 1515	aorty
+N5	Reference T23 ICD10:I70.0	Miażdżyca aorty
+T24	Condition 1517 1561	Przewlekłe zapalenie tarczycy typu Hashimoto
+N6	Reference T24 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T25	Condition 1629 1634	zaćmy
+T26	Symptom 1795 1835	ograniczenia tolerancji wysiłku NYHA II.
+T27	Negation 1842 1848	neguje
+T28	Symptom 1849 1862	bóle w kl. p.
+R8	Neg Arg1:T27 Arg2:T28	
+T29	Symptom 1881 1910	kołatania w klatce piersiowej
+N9	Reference T29 ICD10:R00.2	Kołatanie serca
+T30	Condition 1924 1969	izolowana dysfunkcja rozkurczowa lewej komory
+T31	Condition 1971 2002	nadciśnienie tętnicze I* wg WHO
+N10	Reference T31 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T32	Condition 2004 2017	zawroty głowy
+N11	Reference T32 ICD10:R42	Zawroty głowy i odurzenie
+T33	Condition 2019 2039	miażdżyca uogólniona
+N12	Reference T33 ICD10:I70	Miażdżyca
+T34	Condition 2041 2061	hipercholesterolemia
+N13	Reference T34 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T35	Condition 2082 2126	przewlekłe zapalenie tarczycy typu Hashimoto
+N14	Reference T35 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T36	Treatment 2136 2156	obustronnym leczeniu
+T37	Investigation 2185 2193	angio-TK
+T38	Investigation_result 2215 2226	LAD do 90%,
+R9	Inv Arg1:T37 Arg2:T38	
+T39	Negation 2282 2288	Neguje
+T40	Symptom 2290 2302	zasłabnięcia
+N16	Reference T40 ICD10:R55	Omdlenie i zapaść
+T41	Symptom 2304 2312	omdlenia
+N17	Reference T41 ICD10:R55	Omdlenie i zapaść
+T42	Condition 2314 2331	chorobę wrzodową,
+N18	Reference T42 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T43	Symptom 2332 2360	duszność nocną typu ortopnoe
+N19	Reference T43 ICD10:I50.1	Niewydolność serca lewokomorowa
+T44	Condition 2362 2364	DM
+N20	Reference T44 ICD10:E13	Inne określone postacie cukrzycy
+T45	Condition 2366 2376	udar mózgu
+N21	Reference T45 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T46	Condition 2378 2389	zawał serca
+N22	Reference T46 ICD10:I25.2	Przebyty zawał serca
+R10	Neg Arg1:T39 Arg2:T40	
+R11	Neg Arg1:T39 Arg2:T41	
+R12	Neg Arg1:T39 Arg2:T42	
+R13	Neg Arg1:T39 Arg2:T43	
+R14	Neg Arg1:T39 Arg2:T44	
+R15	Neg Arg1:T39 Arg2:T45	
+R16	Neg Arg1:T39 Arg2:T46	
+T47	Treatment 2413 2434	zabieg ginekologiczny
+T48	Behaviour 2440 2455	Palenie tytoniu
+N23	Reference T48 ICD10:T65.2	Tytoń i nikotyna
+T49	Negation 2467 2470	nie
+R17	Neg Arg1:T49 Arg2:T48	
+T50	Negation 2485 2488	nie
+T51	Behaviour 2472 2483	Inne używki
+R18	Neg Arg1:T50 Arg2:T51	
+T52	Condition 2490 2499	Uczulenia
+N24	Reference T52 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T53	Condition 2569 2572	WZW
+T54	Condition 2579 2588	borelioza
+N26	Reference T54 ICD10:A69.2	Choroba z Lyme
+T55	Condition 2594 2597	tbc
+N27	Reference T55 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T56	Negation 2574 2575	-
+T57	Negation 2589 2593	(-),
+T58	Negation 2598 2601	(-)
+R19	Neg Arg1:T58 Arg2:T55	
+R20	Neg Arg1:T57 Arg2:T54	
+R21	Neg Arg1:T56 Arg2:T53	
+T59	Behaviour 2619 2645	warunki mieszkaniowe dobre
+T60	Condition 2683 2701	rak jelita grubego
+A1	Status T60 Family
+N28	Reference T60 ICD10:C18	Nowotwór złośliwy jelita grubego
+T61	Condition 2703 2706	CAD
+A2	Status T61 Family
+N29	Reference T61 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T62	Condition 2752 2757	zawał
+A3	Status T62 Family
+N30	Reference T62 ICD10:I25.2	Przebyty zawał serca
+T63	Drug 2796 2803	Polpril
+T64	Drug_dose 2804 2828	5 mg 1x1 tabl. wieczorem
+R22	Drg Arg1:T63 Arg2:T64	
+T65	Drug 2829 2836	Roswera
+T66	Drug_dose 2837 2862	10 mg 1x1 tabl. wieczorem
+R23	Drg Arg1:T65 Arg2:T66	
+T67	Drug 2863 2875	Euthyrox N88
+T68	Drug_dose 2876 2890	1x1 tabl. rano
+R24	Drg Arg1:T67 Arg2:T68	
+T69	Drug 2891 2902	Propranolol
+T70	Drug_dose 2903 2919	10 mg - doraźnie
+R25	Drg Arg1:T69 Arg2:T70	
+T71	Investigation 3004 3008	ECHO
+T72	Investigation 3010 3014	ABPM
+T73	Investigation 3016 3026	Holter-EKG
+T74	Investigation 3028 3031	ExT
+T75	Treatment 1574 1598	leczenia substytucyjnego
+N25	Reference T53 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T76	Drug 2518 2521	ASA
+R26	Alg Arg1:T52 Arg2:T76	
+T77	Date 2457 2466	od 12 lat
+R27	Dat Arg1:T77 Arg2:T48	
+T78	Symptom 2530 2540	krwawienia
+N31	Reference T78 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T79	Investigation_result 2227 2237	D1 do 50%,
+T80	Investigation_result 2238 2249	LCx do 50%,
+T81	Investigation_result 2250 2257	RCA 50%
+R28	Inv Arg1:T37 Arg2:T79	
+R29	Inv Arg1:T37 Arg2:T80	
+R30	Inv Arg1:T37 Arg2:T81	
+A4	Status T36 Historical_Insignificant
+T82	Condition 2157 2162	zaćmy
+N15	Reference T82 ICD10:H26.9	Zaćma, nieokreślona
+A5	Status T82 Historical_Insignificant
+N8	Reference T28 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N32	Reference T26 ICD10:R53	Złe samopoczucie i zmęczenie
+N7	Reference T25 ICD10:H26.9	Zaćma, nieokreślona
+T83	Treatment 1608 1628	obustronnej operacji
+A6	Status T83 Historical_Insignificant
+A7	Status T25 Historical_Insignificant
+T84	Date 750 761	co 6-8 tyg.
+R31	Dat Arg1:T84 Arg2:T2	

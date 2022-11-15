@@ -1,0 +1,84 @@
+T1	Condition 439 457	Niewydolność serca
+T2	Symptom 458 472	II kl. wg NYHA
+T3	Condition 474 511	Umiarkowana dysfunkcja rozkurczowa LK
+T4	Condition 513 542	Nieoperacyjny ca płuca lewego
+N2	Reference T4 ICD10:C34.9	Oskrzele lub płuco, umiejscowienie nieokreślone
+T5	Treatment 552 574	I cyklu chemioterapii.
+T6	Condition 575 580	POCHP
+N3	Reference T6 ICD10:J44.9	Przewlekła obturacyjna choroba płuc, nieokreślona
+T7	Treatment 590 617	częściowej resekcji żołądka
+A1	Status T7 Historical_Insignificant
+T8	Drug 892 899	Beto ZK
+T9	Drug_dose 900 918	25 mg 1 tabl. rano
+R1	Drg Arg1:T8 Arg2:T9	
+T10	Drug 919 922	IPP
+T11	Drug_dose 923 941	20 mg 1 tabl. rano
+R2	Drg Arg1:T10 Arg2:T11	
+T12	Drug 942 949	Clexane
+T13	Drug_dose 950 964	0,6 sc 1 x dz.
+R3	Drg Arg1:T12 Arg2:T13	
+T14	Drug 965 975	Atrovent N
+T15	Drug_dose 978 997	wziewnie - doraźnie
+R4	Drg Arg1:T14 Arg2:T15	
+T16	Investigation 811 840	kontrola ciśnienia tętniczego
+T17	Behaviour 841 860	dieta zblilansowana
+T18	Investigation 1885 1895	Echo serca
+T19	Investigation 1898 1908	Holter EKG
+T20	Investigation 1911 1926	Próba Wysiłkowa
+T21	Drug 1839 1849	Atrovent N
+T22	Drug_dose 1852 1870	wziewnie -doraźnie
+R5	Drg Arg1:T21 Arg2:T22	
+T23	Drug 1816 1823	Clexane
+T24	Drug 1789 1796	Beto ZK
+T25	Drug_dose 1797 1815	25 mg 1 tabl. rano
+R6	Drg Arg1:T24 Arg2:T25	
+T26	Drug_dose 1824 1837	0,4 sc 1 x dz
+R7	Drg Arg1:T23 Arg2:T26	
+T27	Behaviour 1737 1763	warunki mieszkaniowe dobre
+T28	Negation 1714 1720	neguje
+T29	Negation 1699 1702	nie
+T30	Condition 1703 1712	Uczulenia
+N4	Reference T30 ICD10:T78.4	Alergia, nieokreślona
+R8	Neg Arg1:T28 Arg2:T30	
+T31	Behaviour 1686 1698	Inne używki:
+R9	Neg Arg1:T29 Arg2:T31	
+T32	Behaviour 1640 1665	Palenie tytoniu: 5-6/dobę
+N5	Reference T32 ICD10:Z72.0	Używanie tytoniu
+T33	Date 1675 1684	od 15 r.ż
+R10	Dat Arg1:T33 Arg2:T32	
+T34	Condition 1548 1551	WZW
+N6	Reference T34 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T35	Condition 1561 1570	borelioza
+N7	Reference T35 ICD10:A69.2	Choroba z Lyme
+T36	Negation 1571 1576	( - )
+R11	Neg Arg1:T36 Arg2:T35	
+T37	Negation 1552 1558	( -  )
+R12	Neg Arg1:T37 Arg2:T34	
+T38	Treatment 1450 1479	częściowej ? resekcji żołądka
+A2	Source T38 Declared
+T39	Condition 1489 1506	choroby wrzodowej
+N8	Reference T39 ICD10:K25	Wrzód żołądka
+T40	Date 1507 1520	w przeszłości
+R13	Dat Arg1:T40 Arg2:T39	
+R14	Dat Arg1:T40 Arg2:T38	
+T41	Symptom 1389 1419	pogorszenie tolerancji wysiłku
+N9	Reference T41 ICD10:R53	Złe samopoczucie i zmęczenie
+T42	Date 1374 1388	kilku miesięcy
+R15	Dat Arg1:T42 Arg2:T41	
+T43	Condition 1145 1179	nieoperacyjnym rakiem płuca lewego
+N10	Reference T43 ICD10:C34.9	Oskrzele lub płuco, umiejscowienie nieokreślone
+T44	Treatment 1191 1204	chemioterapii
+T45	Treatment 1216 1223	II cykl
+T46	Negation 1206 1215	przerwany
+R16	Neg Arg1:T46 Arg2:T45	
+T47	Symptom 1233 1241	omdlenia
+N11	Reference T47 ICD10:R55	Omdlenie i zapaść
+T48	Investigation_result 1243 1281	wysokich wartości ciśnienia tętniczego
+T49	Investigation_result 1284 1292	glikemii
+T50	Condition 1297 1302	POCHP
+N12	Reference T50 ICD10:J44.9	Przewlekła obturacyjna choroba płuc, nieokreślona
+N13	Reference T31 ICD10:Z72	Problemy związane ze stylem życia
+T51	Condition 1619 1639	chorób nowotworowych
+N1	Reference T1 ICD10:I50.9	Niewydolność serca, nieokreślona
+T52	Treatment 739 766	dalsza opieka w poradni POZ
+T53	Treatment 776 799	kontrola kardiologiczna

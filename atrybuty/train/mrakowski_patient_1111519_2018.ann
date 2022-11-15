@@ -1,0 +1,33 @@
+T1	Treatment 329 363	Kontrola w Poradni Kardiologicznej
+T2	Date 364 370	za rok
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Treatment 371 410	Objęcie opieką w Poradni Nefrologicznej
+T4	Drug 427 436	Captopril
+T5	Negation 418 426	odstawić
+R2	Neg Arg1:T5 Arg2:T4	
+T6	Behaviour 440 462	Prawidłowe nawodnienie
+T7	Investigation 466 502	Kontrolne badanie moczu + kreatynina
+T8	Date 503 513	za tydzień
+R3	Dat Arg1:T8 Arg2:T7	
+T9	Investigation 517 553	Kontrolne badanie usg jamy brzusznej
+T10	Treatment 557 569	Profilaktyka
+T11	Condition 570 591	kamicy dróg moczowych
+N1	Reference T11 ICD10:N21	Kamień w obrębie dolnych dróg moczowych
+T12	Investigation 595 629	Monitorowanie ciśnienia tętniczego
+T13	Condition 883 943	Wrodzona wada serca pod postacią zwężenia zastawki aortalnej
+N2	Reference T13 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T14	Condition 946 970	łagodną niedomykalnością
+N3	Reference T14 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T15	Treatment 982 1035	dwukrotnej angioplastyce balonowej zastawki aortalnej
+T16	Date 1049 1060	14.04.2010r
+T17	Date 1068 1079	04.11.2010r
+R4	Dat Arg1:T16 Arg2:T15	
+R5	Dat Arg1:T17 Arg2:T15	
+T18	Condition 1237 1256	wrodzoną wadą serca
+T19	Investigation 1273 1290	badania kontrolne
+T20	Drug 1312 1321	Captopril
+T21	Condition 1323 1340	wywiad alergiczny
+N5	Reference T21 ICD10:T78.4	Alergia, nieokreślona
+T22	Negation 1341 1347	ujemny
+R6	Neg Arg1:T22 Arg2:T21	
+N4	Reference T18 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych

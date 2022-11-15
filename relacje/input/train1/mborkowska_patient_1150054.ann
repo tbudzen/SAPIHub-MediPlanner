@@ -1,0 +1,147 @@
+T1	Condition 674 697	Przetrwały otwór owalny
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Condition 707 719	udarze mózgu
+N2	Reference T2 ICD10:I63	Zawał mózgu
+T3	Condition 724 758	postacią niedowładu prawostronnego
+N3	Reference T3 ICD10:G81	Porażenie połowicze
+T4	Condition 761 787	afazją motoryczno-czuciową
+N4	Reference T4 ICD10:F80	Specyficzne zaburzenia rozwoju mowy i języka
+T5	Condition 810 813	TIA
+N5	Reference T5 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T6	Date 815 819	2004
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Date 790 800	01.09.2019
+R2	Dat Arg1:T7 Arg2:T2	
+R3	Dat Arg1:T7 Arg2:T3	
+R4	Dat Arg1:T7 Arg2:T4	
+T8	Condition 822 875	Podejrzenie przewlekłej choroby niedokrwiennej serca.
+N6	Reference T8 ICD10:I25	Przewlekła choroba niedokrwienna serca
+A1	Source T8 Declared
+T9	Condition 876 909	Bezobjawowa bradykardia zatokowa.
+N7	Reference T9 ICD10:R00.1	Bradykardia, nieokreślona
+T10	Condition 951 992	Łagodna niedomykalność zastawki aortalnej
+N8	Reference T10 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T11	Condition 995 1004	mitralnej
+N9	Reference T11 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T12	Condition 1006 1022	Miażdżyca aorty.
+N10	Reference T12 ICD10:I70.0	Miażdżyca aorty
+T13	Condition 1023 1043	Hipercholesterolemia
+N11	Reference T13 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T14	Condition 910 949	Poszerzenie opuszki i aorty wstępującej
+N12	Reference T14 ICD10:I73	Inne choroby naczyń obwodowych
+T15	Condition 1045 1048	RZS
+N13	Reference T15 ICD10:M06.9	Reumatoidalne zapalenie stawów, nieokreślone
+T16	Treatment 1059 1067	operacji
+T17	Date 1099 1103	2018
+R5	Dat Arg1:T17 Arg2:T16	
+T18	Treatment 1114 1122	operacji
+T19	Date 1139 1148	2018,2019
+R6	Dat Arg1:T19 Arg2:T18	
+T20	Treatment 1159 1174	panhisterktomii
+T21	Date 1225 1229	2011
+R7	Dat Arg1:T21 Arg2:T20	
+T22	Condition 1232 1241	Uczulenie
+N14	Reference T22 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T23	Symptom 1275 1286	Krwinkomocz
+N15	Reference T23 ICD10:R31	Krwiomocz, nieokreślony
+T24	Condition 1310 1335	Stan zapalny okolicy zęba
+N16	Reference T24 ICD10:K05.2	Ostre zapalenie przyzębia
+T25	Investigation 1617 1646	kontrola ciśnienia tętniczego
+T26	Investigation 1658 1698	kontrolą morfologii, lipidogramu , param
+T27	Investigation 2698 2708	echo serca
+T28	Investigation 2710 2713	TET
+T29	Investigation 2715 2719	ABPM
+T30	Investigation 2721 2731	Holter ekg
+T31	Investigation 2733 2751	rtg kl. piersiowej
+T32	Drug 2448 2453	Acard
+T33	Drug_dose 2454 2477	75 mg 1 tabl. wieczorem
+R8	Drg Arg1:T32 Arg2:T33	
+T34	Drug 2479 2484	Atrox
+T35	Drug_dose 2485 2508	20 mg 1 tabl. wieczorem
+R9	Drg Arg1:T34 Arg2:T35	
+T36	Drug 2509 2518	Controloc
+T37	Drug_dose 2519 2537	20 mg 1 tabl. rano
+R10	Drg Arg1:T36 Arg2:T37	
+T38	Drug 2539 2547	Metypred
+T39	Drug_dose 2548 2565	4 mg 1 tabl. rano
+R11	Drg Arg1:T38 Arg2:T39	
+T40	Drug 2567 2578	Methotrexat
+T41	Drug_dose 2579 2625	2.5 mg 2 tabl. rano i wieczorem tylko w sobotę
+R12	Drg Arg1:T40 Arg2:T41	
+T42	Drug 2627 2638	Ac. folicum
+T43	Drug_dose 2639 2669	15 mg 1 tabl. rano w niedzielę
+R13	Drg Arg1:T42 Arg2:T43	
+T44	Negation 2397 2403	neguje
+T45	Behaviour 2378 2395	Uzależnienie inne
+R14	Neg Arg1:T44 Arg2:T45	
+T46	Behaviour 2355 2376	Alkohol: okazjonalnie
+N17	Reference T46 ICD10:Z72.1	Używanie alkoholu
+T47	Negation 2346 2354	neguje  
+T48	Behaviour 2334 2344	Nikotynizm
+N18	Reference T48 ICD10:F17.2	
+R15	Neg Arg1:T47 Arg2:T48	
+T49	Drug 2323 2333	cefuroksym
+T50	Condition 2301 2319	Alergie: uczulenie
+N19	Reference T50 ICD10:Z88.1	Uczulenie na inne antybiotyki w wywiadzie
+R16	Alg Arg1:T50 Arg2:T49	
+T51	Negation 2286 2299	bez znaczenia
+T52	Condition 2269 2284	Wywiad rodzinny
+A2	Status T52 Family
+R17	Neg Arg1:T51 Arg2:T52	
+T53	Treatment 2245 2267	Przebyte operacje: j.w
+T54	Condition 2221 2230	uczulenie
+N20	Reference T54 ICD10:Z88.1	Uczulenie na inne antybiotyki w wywiadzie
+T55	Drug 2234 2244	cefuroksym
+R18	Alg Arg1:T54 Arg2:T55	
+T56	Condition 1899 1910	 udar mózgu
+N21	Reference T56 ICD10:I63	Zawał mózgu
+T57	Condition 1924 1949	niedowładu prawostronnego
+N22	Reference T57 ICD10:G81	Porażenie połowicze
+T58	Condition 1952 1978	afazją motoryczno-czuciową
+N23	Reference T58 ICD10:F80	Specyficzne zaburzenia rozwoju mowy i języka
+T59	Date 1981 1992	01.09.2019,
+R19	Dat Arg1:T59 Arg2:T58	
+R20	Dat Arg1:T59 Arg2:T57	
+R21	Dat Arg1:T59 Arg2:T56	
+T60	Condition 1859 1875	podejrzeniem PFO
+A3	Source T60 Declared
+N24	Reference T60 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T61	Condition 2001 2004	TIA
+N25	Reference T61 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T62	Date 2006 2010	2004
+R22	Dat Arg1:T62 Arg2:T61	
+T63	Condition 2013 2033	hipercholesterolemia
+N26	Reference T63 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T64	Condition 2035 2038	RZS
+N27	Reference T64 ICD10:M06.9	Reumatoidalne zapalenie stawów, nieokreślone
+T65	Treatment 2048 2056	operacji
+T66	Date 2072 2082	(2018,2019
+R23	Dat Arg1:T66 Arg2:T65	
+T67	Treatment 2093 2101	operacji
+T68	Date 2133 2137	2018
+R24	Dat Arg1:T68 Arg2:T67	
+T69	Treatment 2148 2163	panhisterktomii
+T70	Date 2214 2218	2011
+R25	Dat Arg1:T70 Arg2:T69	
+T71	Condition 1068 1097	żylaków kończyny dolnej lewej
+N28	Reference T71 ICD10:I83	Żylaki kończyn dolnych
+R26	Dat Arg1:T17 Arg2:T71	
+T72	Condition 1123 1137	zaćmy obu oczu
+N29	Reference T72 ICD10:H26.8	Inne określone postacie zaćmy
+R27	Dat Arg1:T19 Arg2:T72	
+T73	Condition 1184 1223	niezłośliwego nowotworu jajnika prawego
+N30	Reference T73 ICD10:D39.1	Jajnik
+R28	Dat Arg1:T21 Arg2:T73	
+T74	Drug 1245 1255	cefuroksym
+R29	Alg Arg1:T22 Arg2:T74	
+T75	Condition 1258 1273	Torbiel wątroby
+N31	Reference T75 ICD10:Q44.6	Torbielowatość wątroby
+T76	Condition 2173 2212	nowotworu jajnika prawego niezłośliwego
+N32	Reference T76 ICD10:D39.1	Jajnik
+R30	Dat Arg1:T70 Arg2:T76	
+T77	Condition 2102 2131	żylaków kończyny dolnej lewej
+N33	Reference T77 ICD10:I83	Żylaki kończyn dolnych
+R31	Dat Arg1:T68 Arg2:T77	
+T78	Condition 2057 2071	zaćmy obu oczu
+N34	Reference T78 ICD10:H26.8	Inne określone postacie zaćmy
+R32	Dat Arg1:T66 Arg2:T78	

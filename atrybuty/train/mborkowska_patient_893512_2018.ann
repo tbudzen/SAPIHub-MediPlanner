@@ -1,0 +1,89 @@
+T1	Investigation 2314 2325	echo  serca
+T2	Investigation 2326 2336	holter  RR
+T3	Drug 2261 2273	Preduktal Mr
+T4	Drug_dose 2274 2284	2 x 1 tabl
+R1	Drg Arg1:T3 Arg2:T4	
+T5	Drug 2232 2239	Nebilet
+T6	Drug_dose 2240 2260	5mg 1 x 1 tabl. rano
+R2	Drg Arg1:T5 Arg2:T6	
+T7	Negation 2219 2225	neguje
+T8	Behaviour 2199 2217	Inne  uzależnienia
+N1	Reference T8 ICD10:Z72	Problemy związane ze stylem życia
+R3	Neg Arg1:T7 Arg2:T8	
+T9	Behaviour 2177 2197	Alkohol okazjonalnie
+N2	Reference T9 ICD10:Z72.1	Używanie alkoholu
+T10	Behaviour 2158 2175	Nikotynizm  : tak
+N3	Reference T10 ICD10:Z72.0	Używanie tytoniu
+T11	Negation 2151 2157	neguje
+T12	Condition 2142 2149	Alergie
+N4	Reference T12 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R4	Neg Arg1:T11 Arg2:T12	
+T13	Condition 2111 2140	choroba  niedokrwienna  serca
+T14	Treatment 2044 2082	Przebyte  operacje  ,narządów  rodnych
+A1	Status T14 Historical_Insignificant
+T15	Condition 1976 1997	nadciśnienie tętnicze
+N6	Reference T15 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T16	Condition 1999 2003	LBBB
+N7	Reference T16 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T17	Condition 2005 2040	żylna  choroba  zakrzepowo zatorowa
+N8	Reference T17 ICD10:I80.9	Zapalenie i zakrzepowe zapalenie żył o nieokreślonym umiejscowieniu
+T18	Symptom 1745 1776	 obniżonej  tolerancji  wysiłku
+N9	Reference T18 ICD10:R53	Złe samopoczucie i zmęczenie
+T19	Condition 1812 1835	ostry  zespół  wieńcowy
+T20	Investigation 1867 1881	koronarografii
+T21	Negation 1894 1911	nie  uwidoczniono
+T22	Investigation_result 1913 1960	przewężeń  w  głównych  tętnicach  wieńcowych .
+R5	Neg Arg1:T21 Arg2:T22	
+R6	Inv Arg1:T20 Arg2:T22	
+T23	Drug 1535 1541	Atoris
+T24	Drug 1436 1443	Tritace
+T25	Drug 1404 1411	Nebilet
+T26	Drug_dose 1444 1527	2,5 mg 1 tabl. wieczorem (dawka do optymalizacji pod kontrolą ciśnienia tętniczego)
+R7	Dat Arg1:T26 Arg2:T24	
+T27	Drug_dose 1542 1565	40 mg 1 tabl. wieczorem
+R8	Drg Arg1:T23 Arg2:T27	
+T28	Drug_dose 1412 1428	5mg 1 tabl. rano
+R9	Drg Arg1:T25 Arg2:T28	
+T29	Behaviour 1339 1360	zakaz palenia tytoniu
+T30	Behaviour 1314 1333	redukcja masy ciała
+T31	Behaviour 1265 1308	dieta niskocholesterolowa i ubogokaloryczna
+T32	Investigation 1214 1234	kontrola lipidogramu
+T33	Date 1245 1257	za 6 tygodni
+R10	Dat Arg1:T33 Arg2:T32	
+T34	Investigation 1169 1198	kontrola ciśnienia tętniczego
+T35	Investigation 1105 1124	echokardiograficzna
+T36	Investigation 1127 1152	Holterowskiego zapisu ekg
+T37	Condition 439 482	Nadciśnienie tętnicze II stopnia wg ESH/ESC
+N11	Reference T37 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T38	Condition 484 525	Przewlekła rozkurczowa niewydolność serca
+N12	Reference T38 ICD10:I50	Niewydolność serca
+T39	Symptom 526 545	w II klasie wg NYHA
+T40	Condition 547 610	Wada serca pod postacią niedomykalności mitralnej I/II stopnia.
+N13	Reference T40 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T41	Condition 619 625	OZW UA
+N14	Reference T41 ICD10:I21	Ostry zawał mięśnia sercowego
+T42	Investigation 630 644	koronarografii
+T43	Investigation_result 645 672	naczynia wieńcowe bez zmian
+R11	Inv Arg1:T42 Arg2:T43	
+T44	Date 674 678	2014
+R12	Dat Arg1:T44 Arg2:T43	
+R13	Dat Arg1:T44 Arg2:T42	
+R14	Dat Arg1:T44 Arg2:T41	
+T45	Condition 681 720	Utrwalony blok lewej odnogi pęczka Hisa
+N15	Reference T45 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T46	Condition 722 790	Komorowe zaburzenia rytmu pod postacią licznych skurczów dodatkowych
+N16	Reference T46 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T47	Condition 792 799	Nadwaga
+T48	Condition 801 824	Hiperlipidemia mieszana
+N17	Reference T48 ICD10:E78.2	Hiperlipidemia mieszana
+T49	Behaviour 826 836	Nikotynizm
+N18	Reference T49 ICD10:Z72.0	Używanie tytoniu
+T50	Treatment 846 870	operacji ginekologicznej
+A2	Status T50 Historical_Insignificant
+T51	Date 871 881	przed laty
+R15	Dat Arg1:T51 Arg2:T50	
+T52	Treatment 1006 1033	dalsza opieka w poradni POZ
+T53	Treatment 1049 1072	kontrola kardiologiczna
+A3	Status T13 Family
+N5	Reference T13 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+N10	Reference T19 ICD10:I24.9	Ostra choroba niedokrwienna serca, nieokreślona

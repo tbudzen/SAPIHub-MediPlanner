@@ -1,0 +1,225 @@
+T1	Investigation 3473 3483	echo serca
+T2	Investigation 3485 3489	TET?
+A1	Source T2 Declared
+T3	Investigation 3491 3495	ABPM
+T4	Investigation 3497 3507	Holter ekg
+T5	Investigation 3268 3284	ekg spoczynkowym
+T6	Investigation_result 3285 3306	lewogram patologiczny
+T7	Investigation_result 3308 3319	RZNM 65/min
+T8	Investigation_result 3321 3324	LAH
+N1	Reference T8 ICD10:I44.4	Blok przedniej gałęzi lewej odnogi pęczka Hisa
+T9	Investigation_result 3326 3424	RBBB (w zapisie przy przyjeciu niewidoczny w V1, we wcześniejszych tak, m-ce odprowadzenia prawd.)
+N2	Reference T9 ICD10:I45.0	Blok prawej odnogi pęczka Hisa
+T10	Investigation_result 3426 3434	avb Ist.
+N3	Reference T10 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+R1	Inv Arg1:T5 Arg2:T6	
+R2	Inv Arg1:T5 Arg2:T7	
+R3	Inv Arg1:T5 Arg2:T8	
+R4	Inv Arg1:T5 Arg2:T9	
+R5	Inv Arg1:T5 Arg2:T10	
+T11	Drug 3235 3244	Tamoxyfen
+T12	Drug_dose 3245 3263	20 mg 1 tabl. rano
+R6	Drg Arg1:T11 Arg2:T12	
+T13	Negation 3179 3185	neguje
+T14	Behaviour 3138 3159	Alkohol: okazjonalnie
+N4	Reference T14 ICD10:Z72.1	Używanie alkoholu
+T15	Behaviour 3160 3177	Uzależnienie inne
+N5	Reference T15 ICD10:Z72	Problemy związane ze stylem życia
+R7	Neg Arg1:T13 Arg2:T15	
+T16	Behaviour 3093 3109	Nikotynizm: tak,
+N6	Reference T16 ICD10:Z72.0	Używanie tytoniu
+T17	Date 3110 3122	do 1989 roku
+R8	Dat Arg1:T17 Arg2:T16	
+A2	Status T16 Historical_Insignificant
+T18	Negation 3085 3091	neguje
+T19	Negation 3061 3074	bez znaczenia
+T20	Condition 3044 3059	Wywiad rodzinny
+A3	Status T20 Family
+R9	Neg Arg1:T19 Arg2:T20	
+T21	Condition 3076 3083	Alergie
+N7	Reference T21 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R10	Neg Arg1:T18 Arg2:T21	
+T22	Treatment 3020 3037	Przebyte operacje
+T23	Drug 1776 1786	Tamoksyfen
+T24	Drug 1812 1819	Tritace
+T25	Drug 1844 1850	Diuver
+T26	Drug 1875 1885	Cardura XL
+T27	Drug 1915 1921	Iporel
+T28	Drug 1965 1972	Amlozek
+T29	Drug 2003 2006	IPP
+T30	Drug_dose 1787 1805	20 mg 1 tabl. rano
+R11	Drg Arg1:T23 Arg2:T30	
+T31	Drug_dose 1820 1837	10 mg 1tabl. rano
+R12	Drg Arg1:T24 Arg2:T31	
+T32	Drug_dose 1851 1868	5 mg 1 tabl. rano
+R13	Drg Arg1:T25 Arg2:T32	
+T33	Drug_dose 1886 1908	4 mg 1 tabl. wieczorem
+R14	Drg Arg1:T26 Arg2:T33	
+T34	Drug_dose 1922 1958	1 tabl. rano, w południe i wieczorem
+R15	Drg Arg1:T27 Arg2:T34	
+T35	Drug_dose 1973 1996	10 mg 1 tabl. wieczorem
+R16	Drg Arg1:T28 Arg2:T35	
+T36	Drug_dose 2007 2025	20 mg 1 tabl. rano
+R17	Drg Arg1:T29 Arg2:T36	
+T37	Treatment 1337 1364	dalsza opieka w poradni POZ
+T38	Treatment 1380 1477	kontrola kardiologiczna, gastroenterologiczna, onkologiczna, urologiczna i nefrologiczna (pilna!)
+T39	Investigation 1625 1654	kontrola ciśnienia tętniczego
+T40	Behaviour 1661 1706	spożywanie co najmniej 2 litrów płynu na dobę
+T41	Behaviour 1712 1734	dieta śródziemnomorska
+T42	Condition 438 501	Zaburzenia przewodzenia - blok przedsionkowo-komorowy I stopnia
+N8	Reference T42 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T43	Condition 503 550	blok przedniej wiązki lewej odnogi pęczka Hisa,
+N9	Reference T43 ICD10:I44.4	Blok przedniej gałęzi lewej odnogi pęczka Hisa
+T44	Condition 551 589	zaburzenia przewodzenia śródkomorowego
+N10	Reference T44 ICD10:I45	Inne zaburzenia przewodzenia
+T45	Condition 602 636	nadkomorowe zaburzenia rytmu serca
+N11	Reference T45 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T46	Condition 591 599	Komorowe
+N12	Reference T46 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T47	Condition 638 682	Nadciśnienie tętnicze III stopnia wg ESH/ESC
+N13	Reference T47 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T48	Behaviour 684 694	Nikotynizm
+N14	Reference T48 ICD10:Z72.0	Używanie tytoniu
+T49	Date 695 708	w przeszłości
+R18	Dat Arg1:T49 Arg2:T48	
+T50	Drug 803 815	tamoksifenem
+T51	Treatment 770 782	radioterapią
+T52	Condition 727 744	raka piersi lewej
+N15	Reference T52 ICD10:C50	Nowotwór złośliwy piersi
+T53	Treatment 718 726	operacji
+T54	Date 746 756	25.04.2017
+R19	Dat Arg1:T54 Arg2:T52	
+R20	Dat Arg1:T54 Arg2:T53	
+T55	Treatment 825 839	prostatektomii
+A4	Status T55 Historical_Insignificant
+T56	Condition 849 872	gruczolakoraka prostaty
+N16	Reference T56 ICD10:D29.1	Gruczoł krokowy
+T57	Date 874 882	02.2006)
+A5	Status T56 Historical_Insignificant
+R21	Dat Arg1:T57 Arg2:T56	
+R22	Dat Arg1:T57 Arg2:T55	
+T58	Treatment 892 924	wytworzeniu przetoki nadłonowwej
+A6	Status T58 Historical_Insignificant
+T59	Condition 934 957	zwężenia cewki moczowej
+N17	Reference T59 ICD10:N35	
+A7	Status T59 Historical_Insignificant
+T60	Date 959 963	2007
+R23	Dat Arg1:T60 Arg2:T59	
+R24	Dat Arg1:T60 Arg2:T58	
+T61	Treatment 966 997	cewnik Foleya założony na stałe
+T62	Date 999 1010	od 2007roku
+R25	Dat Arg1:T62 Arg2:T61	
+T63	Condition 1013 1027	Kamica nerkowa
+N18	Reference T63 ICD10:N20.0	Kamica nerki
+T64	Condition 1041 1084	Przewlekła choroba nerek w stadium 4 wg NKF
+N19	Reference T64 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T65	Condition 1086 1115	Niedokrwistość wtórna łagodna
+N20	Reference T65 ICD10:D64	
+T66	Condition 1117 1149	Przepuklina rozworu przełykowego
+N21	Reference T66 ICD10:K44	Przepuklina przeponowa
+T67	Condition 1151 1185	Zapalenie błony śluzowej przełyku,
+N22	Reference T67 ICD10:K20	
+T68	Condition 1186 1199	żołądka i XII
+N23	Reference T68 ICD10:K29	
+T69	Condition 2990 3003	żołądka i XII
+N24	Reference T69 ICD10:K29	Zapalenie żołądka i dwunastnicy
+T70	Condition 2921 2953	przepuklina rozworu przełykowego
+N25	Reference T70 ICD10:K44	Przepuklina przeponowa
+T71	Condition 2955 2988	zapalenie błony śluzowej przełyku
+N26	Reference T71 ICD10:K20	Zapalenie przełyku
+T72	Condition 2873 2887	kamica nerkowa
+N27	Reference T72 ICD10:N20.0	Kamica nerki
+T73	Condition 2901 2919	CKD w st. 4 wg NKF
+N28	Reference T73 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T74	Treatment 2829 2856	cewnik do pęcherza na stałe
+T75	Date 2859 2871	od 2007 roku
+R26	Dat Arg1:T75 Arg2:T74	
+T76	Treatment 2747 2779	wytworzeniu przetoki nadłonowwej
+A8	Status T76 Historical_Insignificant
+T77	Condition 2789 2812	zwężenia cewki moczowej
+A9	Status T77 Historical_Insignificant
+N29	Reference T77 ICD10:N35	Zwężenie cewki moczowej
+T78	Date 2814 2818	2007
+R27	Dat Arg1:T78 Arg2:T77	
+R28	Dat Arg1:T78 Arg2:T76	
+T79	Treatment 2680 2694	prostatketomii
+A10	Status T79 Historical_Insignificant
+T80	Condition 2704 2727	gruczolakoraka prostaty
+A11	Status T80 Historical_Insignificant
+N30	Reference T80 ICD10:D29.1	Gruczoł krokowy
+T81	Date 2729 2737	02.2006)
+R29	Dat Arg1:T81 Arg2:T80	
+R30	Dat Arg1:T81 Arg2:T79	
+T82	Treatment 2630 2639	ewakuacji
+A12	Status T82 Historical_Insignificant
+T83	Condition 2640 2658	krwiaka uda lewego
+N31	Reference T83 ICD10:T14.0	Powierzchowny uraz nieokreślonej okolicy ciała
+T84	Date 2660 2670	09.09.2016
+R31	Dat Arg1:T84 Arg2:T83	
+R32	Dat Arg1:T84 Arg2:T82	
+A13	Status T83 Historical_Insignificant
+T85	Drug 2598 2610	Tomoksyfenem
+T86	Drug_dose 2611 2620	20 mg/die
+R33	Drg Arg1:T85 Arg2:T86	
+T87	Condition 2522 2539	raka piersi lewej
+N32	Reference T87 ICD10:C50	Nowotwór złośliwy piersi
+T88	Date 2541 2551	25.04.2017
+T89	Treatment 2513 2521	operacji
+R34	Dat Arg1:T88 Arg2:T87	
+R35	Dat Arg1:T88 Arg2:T89	
+T90	Treatment 2555 2577	następczą radioterapią
+T91	Condition 2480 2482	HA
+N33	Reference T91 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T92	Date 2485 2504	co najmniej 30 lat,
+R36	Dat Arg1:T92 Arg2:T91	
+T93	Symptom 2347 2401	ez poprzedzony uczuciem ciepła obejmującego całe ciało
+N34	Reference T93 ICD10:R20.2	Parestezje
+T94	Condition 2423 2456	urazów mechanicznych, w tym głowy
+T95	Negation 2419 2422	bez
+R37	Neg Arg1:T95 Arg2:T94	
+T96	Symptom 2194 2202	omdlenia
+N35	Reference T96 ICD10:R55	Omdlenie i zapaść
+T97	Date 2203 2221	w dniu wczorajszym
+R38	Dat Arg1:T97 Arg2:T96	
+T98	Symptom 2223 2283	nagłe, uczucie ciepła obejmujące całe ciało przed incydentem
+N36	Reference T98 ICD10:R20.2	Parestezje
+R1	Dat Arg1:T49 Arg2:T53
+R110	Drg Arg1:T85 Arg2:T86
+R123	Dat Arg1:T17 Arg2:T16
+R13	Dat Arg1:T60 Arg2:T59
+R137	Dat Arg1:T75 Arg2:T72
+R138	Dat Arg1:T75 Arg2:T73
+R146	Dat Arg1:T75 Arg2:T74
+R15	Dat Arg1:T60 Arg2:T58
+R16	Dat Arg1:T60 Arg2:T61
+R160	Dat Arg1:T78 Arg2:T77
+R168	Dat Arg1:T78 Arg2:T76
+R182	Dat Arg1:T81 Arg2:T80
+R189	Dat Arg1:T81 Arg2:T76
+R19	Dat Arg1:T62 Arg2:T63
+R2	Dat Arg1:T54 Arg2:T52
+R203	Dat Arg1:T84 Arg2:T80
+R204	Dat Arg1:T84 Arg2:T83
+R21	Dat Arg1:T62 Arg2:T61
+R211	Dat Arg1:T84 Arg2:T79
+R212	Dat Arg1:T84 Arg2:T82
+R22	Drg Arg1:T23 Arg2:T30
+R236	Inv Arg1:T5 Arg2:T6
+R240	Inv Arg1:T1 Arg2:T10
+R26	Drg Arg1:T24 Arg2:T31
+R30	Drg Arg1:T25 Arg2:T32
+R31	Drg Arg1:T26 Arg2:T33
+R34	Drg Arg1:T27 Arg2:T34
+R35	Drg Arg1:T28 Arg2:T35
+R36	Drg Arg1:T29 Arg2:T36
+R37	Dat Arg1:T97 Arg2:T96
+R38	Dat Arg1:T97 Arg2:T98
+R39	Neg Arg1:T95 Arg2:T93
+R40	Neg Arg1:T95 Arg2:T94
+R41	Dat Arg1:T88 Arg2:T87
+R54	Neg Arg1:T13 Arg2:T15
+R66	Neg Arg1:T18 Arg2:T21
+R7	Dat Arg1:T57 Arg2:T56
+R77	Neg Arg1:T18 Arg2:T16
+R87	Neg Arg1:T19 Arg2:T20
+R88	Neg Arg1:T19 Arg2:T21

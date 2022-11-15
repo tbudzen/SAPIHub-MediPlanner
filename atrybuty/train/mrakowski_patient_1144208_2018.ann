@@ -1,0 +1,47 @@
+T1	Drug 351 357	Warfin
+T2	Drug_dose 372 448	pn: 4mg  wt: 5mg śr: 4mg czw: 5mg pt: 4mg sob: 5mg nd: 4mg  pod kontrolą INR
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 450 458	Enarenal
+T4	Drug_dose 459 467	2 x 2 mg
+R2	Drg Arg1:T3 Arg2:T4	
+T5	Drug 468 476	Spironol
+T6	Drug_dose 477 508	1 x 25 mg (przerwa w niedzielę)
+R3	Drg Arg1:T5 Arg2:T6	
+T7	Treatment 512 535	Kontrola kardiologiczna
+T8	Date 568 581	za 6 miesięcy
+R4	Dat Arg1:T8 Arg2:T7	
+T9	Treatment 585 597	Profilaktyka
+T10	Condition 598 601	IZW
+N1	Reference T10 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T11	Treatment 606 631	Dalsza opieka lekarza POZ
+T12	Condition 929 966	krytyczne zwężenie zastawki aortalnej
+N2	Reference T12 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T13	Condition 972 1007	niedomykalność zastawki dwudzielnej
+N3	Reference T13 ICD10:Q23.3	Wrodzona niedomykalność zastawki mitralnej
+T14	Treatment 1028 1068	plastyce przezskórnej zastawki aortalnej
+T15	Treatment 1078 1131	plastyce operacyjnej zastawki aortalnej i dwudzielnej
+T16	Date 1133 1144	15.09.2011r
+R5	Dat Arg1:T16 Arg2:T15	
+T17	Treatment 1154 1214	implantacji zastawki Medtronic ATS śr. 18 mm w poz.mitralnej
+T18	Treatment 1247 1256	usunięcia
+T19	Condition 1257 1270	zwężenia LVOT
+N4	Reference T19 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T20	Date 1272 1283	04.05.2012r
+R6	Dat Arg1:T20 Arg2:T18	
+R7	Dat Arg1:T20 Arg2:T19	
+R8	Dat Arg1:T20 Arg2:T17	
+T21	Treatment 1220 1244	plastyki zast. aortalnej
+R9	Dat Arg1:T20 Arg2:T21	
+T22	Condition 1288 1332	Niedomykalność zastawki aortalnej III/IV st.
+N5	Reference T22 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T23	Condition 1512 1547	wada zastawki aortalnej i mitralnej
+N6	Reference T23 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T24	Treatment 1552 1583	wszczepieniu zastawki mitralnej
+T25	Investigation 1600 1617	badania kontrolne
+T26	Condition 1620 1637	wywiad alergiczny
+N7	Reference T26 ICD10:T78.4	Alergia, nieokreślona
+T27	Negation 1638 1644	ujemny
+R10	Neg Arg1:T27 Arg2:T26	
+T28	Drug 1666 1672	Warfin
+T29	Drug 1674 1683	Enerapril
+T30	Drug 1686 1694	Spironol

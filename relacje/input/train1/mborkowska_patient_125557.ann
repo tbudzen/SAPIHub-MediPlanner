@@ -1,0 +1,294 @@
+T1	Investigation 8053 8063	Echo serca
+T2	Investigation 8065 8075	Holter EKG
+T3	Investigation 8077 8081	ABPM
+T4	Investigation 8083 8085	CT
+T5	Drug 8010 8018	Nebicard
+T6	Drug_dose 8019 8037	5mg 1/4 tabl. rano
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Behaviour 7931 7957	warunki mieszkaniowe dobre
+T8	Negation 7907 7913	neguje
+T9	Negation 7888 7894	neguje
+T10	Negation 7867 7873	neguje
+T11	Negation 7838 7848	nieistotny
+T12	Condition 7821 7836	Wywiad rodzinny
+A1	Status T12 Family
+R2	Neg Arg1:T11 Arg2:T12	
+T13	Behaviour 7850 7865	Palenie tytoniu
+N1	Reference T13 ICD10:T65.2	Tytoń i nikotyna
+R3	Neg Arg1:T10 Arg2:T13	
+T14	Behaviour 7875 7886	Inne używki
+R4	Neg Arg1:T9 Arg2:T14	
+T15	Condition 7896 7905	Uczulenia
+N2	Reference T15 ICD10:T78.4	Alergia, nieokreślona
+R5	Neg Arg1:T8 Arg2:T15	
+T16	Condition 7673 7678	WZW B
+N3	Reference T16 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T17	Negation 7681 7682	-
+T18	Condition 7687 7696	borelioza
+N4	Reference T18 ICD10:A69.2	Choroba z Lyme
+T19	Condition 7704 7712	gruźlica
+N5	Reference T19 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T20	Condition 7720 7724	odra
+N6	Reference T20 ICD10:B05	Odra
+T21	Negation 7726 7750	nie pamięta czy chorował
+T22	Negation 7752 7763	nie pamięta
+T23	Treatment 7768 7778	szczepiony
+T25	Negation 7715 7716	-
+T26	Negation 7699 7700	-
+R6	Neg Arg1:T17 Arg2:T16	
+R7	Neg Arg1:T26 Arg2:T18	
+R8	Neg Arg1:T25 Arg2:T19	
+R9	Neg Arg1:T21 Arg2:T20	
+R10	Neg Arg1:T22 Arg2:T20	
+R11	Neg Arg1:T22 Arg2:T23	
+T27	Symptom 7330 7345	kołatania serca
+N8	Reference T27 ICD10:R00.2	Kołatanie serca
+T28	Symptom 7347 7355	duszność
+N9	Reference T28 ICD10:R06.0	Duszność
+T29	Symptom 7357 7381	bóle w klatce piersiowej
+N10	Reference T29 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T30	Symptom 7383 7395	zasłabnięcia
+N11	Reference T30 ICD10:R55	Omdlenie i zapaść
+T31	Symptom 7397 7405	omdlenia
+N12	Reference T31 ICD10:R55	Omdlenie i zapaść
+T32	Symptom 7407 7417	krwawienia
+N13	Reference T32 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T33	Symptom 7419 7432	czarne stolce
+N14	Reference T33 ICD10:K92.1	Stolce smołowate
+T34	Symptom 7434 7450	brunatne wymioty
+N15	Reference T34 ICD10:K92.0	Wymioty krwawe
+T35	Condition 7452 7468	chorobę wrzodową
+N16	Reference T35 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T36	Symptom 7470 7498	duszność nocną typu ortopnoe
+N17	Reference T36 ICD10:I50.1	Niewydolność serca lewokomorowa
+T37	Condition 7500 7502	HA
+N18	Reference T37 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T38	Condition 7504 7506	DM
+N19	Reference T38 ICD10:E13	Inne określone postacie cukrzycy
+T39	Condition 7508 7518	udar mózgu
+N20	Reference T39 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T40	Condition 7520 7531	zawał serca
+N21	Reference T40 ICD10:I25.2	Przebyty zawał serca
+T41	Negation 7322 7328	Neguje
+R12	Neg Arg1:T41 Arg2:T27	
+R13	Neg Arg1:T41 Arg2:T28	
+R14	Neg Arg1:T41 Arg2:T29	
+R15	Neg Arg1:T41 Arg2:T30	
+R16	Neg Arg1:T41 Arg2:T31	
+R17	Neg Arg1:T41 Arg2:T32	
+R18	Neg Arg1:T41 Arg2:T33	
+R19	Neg Arg1:T41 Arg2:T34	
+R20	Neg Arg1:T41 Arg2:T35	
+R21	Neg Arg1:T41 Arg2:T36	
+R22	Neg Arg1:T41 Arg2:T37	
+R23	Neg Arg1:T41 Arg2:T38	
+R24	Neg Arg1:T41 Arg2:T39	
+R25	Neg Arg1:T41 Arg2:T40	
+T42	Investigation 7155 7206	całodobowym monitorowaniu ciśnienia tętniczego ABPM
+T43	Investigation_result 7207 7319	zarejestrowano średnie wartości ciśnienia tętniczego na poziomie 109.9/62.7mmHg o profilu nocnym typu non-dipper
+R26	Inv Arg1:T42 Arg2:T43	
+T44	Investigation 7036 7046	Holter EKG
+T45	Investigation_result 7047 7151	zarejestrowano rytm zatokowy o średniej częstości 64/minutę, bez istotnych zaburzeń rytmu i przewodzenia
+R27	Inv Arg1:T44 Arg2:T45	
+T46	Investigation 6633 6641	angio-CT
+T47	Investigation_result 6652 6718	uwidoczniono w segmencie 6 miękką blaszkę miażdżycową długości 8mm
+T48	Investigation_result 6720 6770	zwężająca światło naczynia o 25% w segmencie 6 LAD
+T49	Investigation_result 6772 6816	pierścień zastawki aortalnej o średnicy 31mm
+T50	Investigation_result 6818 6862	opuszkę aorty o wymiarze poprzecznym 50x40mm
+T51	Investigation_result 6864 6896	aortę wstępującą o średnicy 28mm
+T52	Investigation_result 6898 6912	łuk aorty 32mm
+T53	Investigation_result 6914 7025	aortę zstępującą 20mm oraz graft płucny o wymiarze poprzecznym 22x18mm z widocznymi przyściennymi zwapnieniami.
+R28	Inv Arg1:T46 Arg2:T47	
+R29	Inv Arg1:T46 Arg2:T48	
+R30	Inv Arg1:T46 Arg2:T50	
+R31	Inv Arg1:T46 Arg2:T49	
+R32	Inv Arg1:T46 Arg2:T51	
+R33	Inv Arg1:T46 Arg2:T52	
+R34	Inv Arg1:T46 Arg2:T53	
+T54	Condition 5318 5387	wadą serca pod postacią niedomykalności i zwężenia zastawki aortalnej
+N22	Reference T54 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T55	Treatment 5391 5430	dwukrotnym leczeniu kardiochirurgicznym
+T56	Investigation 5476 5491	spiroergometrii
+T57	Condition 5608 5686	Wrodzona wada serca pod postacią niedomykalności i zwężenia zastawki aortalnej
+N23	Reference T57 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T58	Treatment 5694 5757	operacji metodą Rossa z użyciem homograftu płucnego o śr. 25 mm
+T59	Date 5759 5769	17.08.2005
+R35	Dat Arg1:T59 Arg2:T58	
+T60	Treatment 5780 5896	reoperacji założenia szwu okrężnego zwężającego pierścień autograftu do śr. 25 mm oraz plikacji zatoki lewowieńcowej
+T61	Date 5898 5908	18.05.2016
+R36	Dat Arg1:T61 Arg2:T60	
+T62	Condition 5911 6014	Niedomykalność zastawki aortalnej III stopnia z graniczną funkcją skurczową lewej komory (GLPS – 18,5%)
+N24	Reference T62 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T63	Investigation 6069 6097	badaniu echokardiograficznym
+T64	Investigation_result 6111 6167	powiększony wymiar prawej komory serca, obu przedsionków
+T65	Investigation_result 6169 6226	aorty wstępującej oraz lewą komorę o zmienionej geometrii
+R37	Inv Arg1:T63 Arg2:T64	
+R38	Inv Arg1:T63 Arg2:T65	
+T66	Investigation_result 6237 6389	przerost mięśnia lewej komory, bez ewidentnych odcinkowych zaburzeń kurczliwości z zachowaną frakcją wyrzutową lewej komory i nieznacznie obniżonym GLPS
+T67	Investigation_result 6391 6432	zachowaną funkcję skurczową prawej komory
+T68	Investigation_result 6434 6478	umiarkowaną niedomykalność zastawki neoaorty
+T69	Investigation_result 6481 6521	agodne zwężenie homograftu pnia płucnego
+T70	Investigation_result 6527 6571	łagodną niedomykalność zastawki trójdzielnej
+N25	Reference T70 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T71	Condition 6572 6622	z niskim prawdopodobieństwem nadciśnienia płucnego
+N26	Reference T71 ICD10:I27.2	Nadciśnienie płucne wtórne o innej etiologii
+R39	Inv Arg1:T63 Arg2:T66	
+R40	Inv Arg1:T63 Arg2:T68	
+R41	Inv Arg1:T63 Arg2:T67	
+R42	Inv Arg1:T63 Arg2:T69	
+R43	Inv Arg1:T63 Arg2:T70	
+T72	Investigation 5097 5107	Echo serca
+T73	Investigation 5109 5119	Holter EKG
+T74	Investigation 5121 5125	ABPM
+T75	Investigation 5127 5129	CT
+T76	Drug 5054 5062	Nebicard
+T77	Drug_dose 5063 5081	5mg 1/4 tabl. rano
+R44	Drg Arg1:T76 Arg2:T77	
+T78	Behaviour 4975 5001	warunki mieszkaniowe dobre
+T79	Negation 4951 4957	neguje
+T80	Negation 4932 4938	neguje
+T81	Negation 4911 4917	neguje
+T82	Negation 4882 4892	nieistotny
+T83	Negation 4725 4726	-
+T84	Negation 4743 4744	-
+T85	Negation 4759 4760	-
+T86	Negation 4796 4807	nie pamięta
+T87	Negation 4770 4794	nie pamięta czy chorował
+T88	Treatment 4812 4822	szczepiony
+R45	Neg Arg1:T86 Arg2:T88	
+T89	Negation 4824 4836	bez kontaktu
+T90	Behaviour 4839 4862	osobami chorymi na odrę
+R46	Neg Arg1:T89 Arg2:T90	
+T24	Negation 7780 7792	bez kontaktu
+T91	Behaviour 7795 7818	osobami chorymi na odrę
+N7	Reference T91 ICD10:B05	Odra
+R47	Neg Arg1:T24 Arg2:T91	
+T92	Condition 4940 4949	Uczulenia
+N27	Reference T92 ICD10:T78.4	Alergia, nieokreślona
+T93	Behaviour 4919 4930	Inne używki
+R48	Neg Arg1:T79 Arg2:T92	
+R49	Neg Arg1:T80 Arg2:T93	
+T94	Behaviour 4894 4910	Palenie tytoniu:
+R50	Neg Arg1:T81 Arg2:T94	
+T95	Condition 4865 4880	Wywiad rodzinny
+A2	Status T95 Family
+R51	Neg Arg1:T82 Arg2:T95	
+T96	Condition 4717 4722	WZW B
+N28	Reference T96 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T97	Condition 4731 4740	borelioza
+N29	Reference T97 ICD10:A69.2	Choroba z Lyme
+T98	Condition 4748 4756	gruźlica
+N30	Reference T98 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+R52	Neg Arg1:T85 Arg2:T98	
+R53	Neg Arg1:T84 Arg2:T97	
+R54	Neg Arg1:T83 Arg2:T96	
+T99	Treatment 4628 4650	Przebyte operacje: j/w
+T100	Negation 4366 4372	Neguje
+T101	Symptom 4374 4389	kołatania serca
+N31	Reference T101 ICD10:R00.2	Kołatanie serca
+T102	Symptom 4391 4399	duszność
+N32	Reference T102 ICD10:R06.0	Duszność
+T103	Symptom 4401 4425	bóle w klatce piersiowej
+N33	Reference T103 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T104	Symptom 4427 4439	zasłabnięcia
+N34	Reference T104 ICD10:R55	Omdlenie i zapaść
+T105	Symptom 4441 4449	omdlenia
+N35	Reference T105 ICD10:R55	Omdlenie i zapaść
+T106	Symptom 4451 4461	krwawienia
+N36	Reference T106 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T107	Symptom 4463 4476	czarne stolce
+N37	Reference T107 ICD10:K92.1	Stolce smołowate
+T108	Symptom 4478 4494	brunatne wymioty
+N38	Reference T108 ICD10:K92.0	Wymioty krwawe
+T109	Condition 4496 4512	chorobę wrzodową
+N39	Reference T109 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T110	Symptom 4514 4542	duszność nocną typu ortopnoe
+N40	Reference T110 ICD10:I50.1	Niewydolność serca lewokomorowa
+T111	Condition 4544 4546	HA
+N41	Reference T111 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T112	Condition 4548 4550	DM
+N42	Reference T112 ICD10:E13	Inne określone postacie cukrzycy
+T113	Condition 4553 4562	dar mózgu
+N43	Reference T113 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T114	Condition 4564 4575	zawał serca
+N44	Reference T114 ICD10:I25.2	Przebyty zawał serca
+R55	Neg Arg1:T100 Arg2:T101	
+R56	Neg Arg1:T100 Arg2:T102	
+R57	Neg Arg1:T100 Arg2:T103	
+R58	Neg Arg1:T100 Arg2:T104	
+R59	Neg Arg1:T100 Arg2:T105	
+R60	Neg Arg1:T100 Arg2:T106	
+R61	Neg Arg1:T100 Arg2:T107	
+R62	Neg Arg1:T100 Arg2:T108	
+R63	Neg Arg1:T100 Arg2:T109	
+R64	Neg Arg1:T100 Arg2:T110	
+R65	Neg Arg1:T100 Arg2:T111	
+R66	Neg Arg1:T100 Arg2:T112	
+R67	Neg Arg1:T100 Arg2:T113	
+R68	Neg Arg1:T100 Arg2:T114	
+T115	Condition 4261 4364	Niedomykalność zastawki aortalnej III stopnia z graniczną funkcją skurczową lewej komory (GLPS – 18,5%)
+N45	Reference T115 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T116	Condition 3695 3773	wrodzoną wadą serca pod postacią niedomykalności i zwężenia zastawki aortalnej
+N46	Reference T116 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T117	Treatment 3777 3816	dwukrotnym leczeniu kardiochirurgicznym
+T118	Investigation 3906 3908	CT
+T119	Condition 3958 4036	Wrodzona wada serca pod postacią niedomykalności i zwężenia zastawki aortalnej
+N47	Reference T119 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T120	Treatment 4044 4107	operacji metodą Rossa z użyciem homograftu płucnego o śr. 25 mm
+T121	Date 4109 4119	17.08.2005
+R69	Dat Arg1:T121 Arg2:T120	
+T122	Treatment 4130 4246	reoperacji założenia szwu okrężnego zwężającego pierścień autograftu do śr. 25 mm oraz plikacji zatoki lewowieńcowej
+T123	Date 4248 4258	18.05.2016
+R70	Dat Arg1:T123 Arg2:T122	
+T124	Drug 3520 3528	Nebicard
+T125	Drug_dose 3529 3550	5mg 1/4 tabletki rano
+R71	Drg Arg1:T124 Arg2:T125	
+T126	Investigation 3435 3481	samokontrola ciśnienia tętniczego krwi i tętna
+T127	Behaviour 3396 3421	Oszczędzający tryb życia.
+T128	Behaviour 3289 3392	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych.
+T129	Investigation 3201 3284	kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T130	Investigation 3001 3008	angioCT
+T131	Condition 2737 2778	Łagodne zwężenie homograftu pnia płucnego
+T132	Condition 2690 2735	Umiarkowana niedomykalność zastawki aortalnej
+N48	Reference T132 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T133	Treatment 2559 2675	reoperacji założenia szwu okrężnego zwężającego pierścień autograftu do śr. 25 mm oraz plikacji zatoki lewowieńcowej
+T134	Date 2677 2687	18.05.2016
+R72	Dat Arg1:T134 Arg2:T133	
+T135	Condition 2384 2462	Wrodzona wada serca pod postacią niedomykalności i zwężenia zastawki aortalnej
+N49	Reference T135 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T136	Treatment 2473 2536	operacji metodą Rossa z użyciem homograftu płucnego o śr. 25 mm
+T137	Date 2538 2548	17.08.2005
+R73	Dat Arg1:T137 Arg2:T136	
+T138	Condition 2090 2131	Łagodne zwężenie homograftu pnia płucnego
+T139	Condition 2043 2088	Umiarkowana niedomykalność zastawki aortalnej
+N50	Reference T139 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T140	Treatment 1912 2028	reoperacji założenia szwu okrężnego zwężającego pierścień autograftu do śr. 25 mm oraz plikacji zatoki lewowieńcowej
+T141	Date 2030 2040	18.05.2016
+R74	Dat Arg1:T141 Arg2:T140	
+T142	Condition 1737 1815	Wrodzona wada serca pod postacią niedomykalności i zwężenia zastawki aortalnej
+N51	Reference T142 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T143	Treatment 1826 1889	operacji metodą Rossa z użyciem homograftu płucnego o śr. 25 mm
+T144	Date 1891 1901	17.08.2005
+R75	Dat Arg1:T144 Arg2:T143	
+T145	Drug 1523 1531	Nebicard
+T146	Drug_dose 1532 1553	5mg 1/4 tabletki rano
+R76	Drg Arg1:T145 Arg2:T146	
+T147	Investigation 1438 1484	samokontrola ciśnienia tętniczego krwi i tętna
+T148	Behaviour 1399 1423	Oszczędzający tryb życia
+T149	Behaviour 1292 1394	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T150	Investigation 1204 1287	kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T151	Date 1099 1109	14/10/2019
+T152	Condition 752 855	Niedomykalność zastawki aortalnej III stopnia z graniczną funkcją skurczową lewej komory (GLPS – 18,5%)
+N52	Reference T152 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T153	Treatment 621 737	reoperacji założenia szwu okrężnego zwężającego pierścień autograftu do śr. 25 mm oraz plikacji zatoki lewowieńcowej
+T154	Date 739 749	18.05.2016
+R77	Dat Arg1:T154 Arg2:T153	
+T155	Date 600 610	17.08.2005
+T156	Treatment 535 598	operacji metodą Rossa z użyciem homograftu płucnego o śr. 25 mm
+R78	Dat Arg1:T155 Arg2:T156	
+T157	Condition 449 527	Wrodzona wada serca pod postacią niedomykalności i zwężenia zastawki aortalnej
+N53	Reference T157 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T158	Treatment 7584 7606	Przebyte operacje: j/w
+T159	Condition 4764 4768	odra
+N54	Reference T159 ICD10:B05	Odra
+R79	Neg Arg1:T87 Arg2:T159	

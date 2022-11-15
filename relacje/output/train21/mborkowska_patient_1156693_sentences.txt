@@ -1,0 +1,490 @@
+allRelations          : 22
+oks                   : 7
+isRedundantAndRemoveds: 14
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 1
+GOOD / BAD            : 21 / 1
+Sentence 0:
+------------------------------------------------
+Wiek: 8 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+Przyjmowanie:
+- Acesan 1 x 50 mg
+- Enarenal 2 x 1,25 mg ( 2 x 1/4 tabl )
+
+R1	Drg Arg1:T1 Arg2:T2 << OK >>	Acesan -> 1 x 50 mg  <RANK: 3> <info: start[345, 352] <type: RIGHT>>
+R2	Drg Arg1:T1 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Acesan -> 2 x 1,25 mg ( 2 x 1/4 tabl ) <:REMOVED other first tag between (right):> <RANK: 1> <info: start[345, 373] <type: RIGHT>>
+R3	Drg Arg1:T3 Arg2:T2 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1 x 50 mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[364, 352] <type: LEFT>>
+R4	Drg Arg1:T3 Arg2:T4 << OK >>	Enarenal -> 2 x 1,25 mg ( 2 x 1/4 tabl )  <RANK: 3> <info: start[364, 373] <type: RIGHT>>
+
+
+Sentence 4:
+Kontrola kardiologiczna za ok. 6-8 miesięcy.
+
+
+
+Sentence 5:
+Okresowa kontrola saturacji przezskórnej i ciśnienia tętniczego.
+
+
+
+Sentence 6:
+------------------------------------------------
+
+
+
+Sentence 7:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 8:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią zarośnięcia zastawki trójdzielnej oraz ubytku przegrody komór.
+   
+
+
+Sentence 9:
+Stan po zabiegu atriospetostomii balonowej metodą Rashkinda (05.10.2011r).
+   
+R5	Dat Arg1:T9 Arg2:T8 << OK >>	05.10.2011r -> zabiegu atriospetostomii balonowej metodą Rashkinda  <RANK: 3> <info: start[889, 836] <type: LEFT>>
+
+
+Sentence 10:
+Stan po operacji przewężenia pnia tętnicy płucnej (18.11.11r).
+   
+R6	Dat Arg1:T11 Arg2:T28 <<REDUNDANT!!!SHOULD BE REMOVED>>	18.11.11r -> przewężenia pnia tętnicy płucnej  <RANK: 3> <info: start[957, 923] <type: LEFT>>
+R7	Dat Arg1:T11 Arg2:T10 << OK >>	18.11.11r -> operacji  <RANK: 3> <info: start[957, 914] <type: LEFT>>
+
+
+Sentence 11:
+Stan po operacji typu dwukierunkowy Glenn (30.07.2012r )
+   
+R8	Dat Arg1:T13 Arg2:T12 << OK >>	30.07.2012r -> operacji typu dwukierunkowy Glenn  <RANK: 3> <info: start[1015, 980] <type: LEFT>>
+
+
+Sentence 12:
+Stan po operacji metodą Fontana bez fenestracji z podwiązaniem pnia płucnego (01.04.2015r)
+   
+R9	Dat Arg1:T15 Arg2:T14 << OK >>	01.04.2015r -> operacji metodą Fontana bez fenestracji z podwiązaniem pnia płucnego  <RANK: 3> <info: start[1110, 1040] <type: LEFT>>
+
+
+Sentence 13:
+Stan po plastycznym zapaleniu oskrzeli (11.2015)
+   
+   Q22.4, Q21.0, R23.0, Z98.8
+------------------------------------------------
+
+R10	Dat Arg1:T17 Arg2:T16 << OK >>	11.2015 -> plastycznym zapaleniu oskrzeli  <RANK: 3> <info: start[1166, 1134] <type: LEFT>>
+
+
+Sentence 14:
+Zastosowane leczenie
+
+
+
+Sentence 15:
+------------------------------------------------
+Acesan, Enarenal
+------------------------------------------------
+
+
+
+Sentence 16:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 17:
+dziewczynka z AT + VSD , po zabiegu operacyjnym Fontana, na stałe otrzymuje Enarenal , Acesan, ma stwierdzoną AO - otrzymuje Asmenol i Jovesto
+------------------------------------------------
+
+R11	Alg Arg1:T20 Arg2:T23 <<REDUNDANT!!!REMOVED>>	AT -> Enarenal <:REMOVED too long text between 60 limit:10:> <RANK: 2> <info: start[1483, 1545] <type: RIGHT>>
+R12	Alg Arg1:T20 Arg2:T24 <<REDUNDANT!!!REMOVED>>	AT -> Acesan <:REMOVED too long text between 71 limit:10:> <RANK: 2> <info: start[1483, 1556] <type: RIGHT>>
+R13	Alg Arg1:T20 Arg2:T25 <<REDUNDANT!!!REMOVED>>	AT -> Asmenol <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1483, 1594] <type: RIGHT>>
+R14	Alg Arg1:T20 Arg2:T26 <<REDUNDANT!!!REMOVED>>	AT -> Jovesto <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1483, 1604] <type: RIGHT>>
+R15	Alg Arg1:T21 Arg2:T23 <<REDUNDANT!!!REMOVED>>	VSD -> Enarenal <:REMOVED too long text between 54 limit:10:> <RANK: 2> <info: start[1488, 1545] <type: RIGHT>>
+R16	Alg Arg1:T21 Arg2:T24 <<REDUNDANT!!!REMOVED>>	VSD -> Acesan <:REMOVED too long text between 65 limit:10:> <RANK: 2> <info: start[1488, 1556] <type: RIGHT>>
+R17	Alg Arg1:T21 Arg2:T25 <<REDUNDANT!!!REMOVED>>	VSD -> Asmenol <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1488, 1594] <type: RIGHT>>
+R18	Alg Arg1:T21 Arg2:T26 <<REDUNDANT!!!REMOVED>>	VSD -> Jovesto <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1488, 1604] <type: RIGHT>>
+R19	Alg Arg1:T27 Arg2:T23 <<REDUNDANT!!!REMOVED>>	AO -> Enarenal <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1579, 1545] <type: LEFT>>
+R20	Alg Arg1:T27 Arg2:T24 <<REDUNDANT!!!REMOVED>>	AO -> Acesan <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1579, 1556] <type: LEFT>>
+R21	Alg Arg1:T27 Arg2:T25 <<REDUNDANT!!!REMOVED>>	AO -> Asmenol <:REMOVED too long text between 13 limit:10:> <RANK: 3> <info: start[1579, 1594] <type: RIGHT>>
+R22	Alg Arg1:T27 Arg2:T26 <<REDUNDANT!!!REMOVED>>	AO -> Jovesto <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1579, 1604] <type: RIGHT>>
+
+
+Sentence 18:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 19:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.20[10^3/ul]
+    
+
+
+Sentence 20:
+RBC Krwinki czerwone:4.83[10^6/ul]
+    
+
+
+Sentence 21:
+HGB Hemoglobina:13.5[g/dl]
+    
+
+
+Sentence 22:
+HCT Hematokryt:38.6[%]
+    
+
+
+Sentence 23:
+MCV wskaźnik czerwonokrw:79.9[fl]
+    
+
+
+Sentence 24:
+MCH wskaźnik czerwonokrw:28.0[pg]
+    
+
+
+Sentence 25:
+MCHC wskaźnik czerwonokr:35.0[g/dl]
+    
+
+
+Sentence 26:
+PLT z morfologii:260[10^3/ul]
+    
+
+
+Sentence 27:
+RDW-SD:35.0[fl]
+    
+
+
+Sentence 28:
+RDW-CV:12.0[%]
+    PDW:12.7[fl]
+    MPV:11.0[fl]
+    
+
+
+Sentence 29:
+P-LCR:33.7[%]
+    
+
+
+Sentence 30:
+PCT (hematokryt płytkowy:0.29[%]
+    
+
+
+Sentence 31:
+NEUTR# wartość bezwzględ:3.71[10^3/ul]
+    
+
+
+Sentence 32:
+NEUTR%:51.5[%]
+    
+
+
+Sentence 33:
+LYMH# wartość bezwzględn:2.55[10^3/ul]
+    
+
+
+Sentence 34:
+LYMPH%:35.4[%]
+    
+
+
+Sentence 35:
+MONO# wartość bezwzględn:0.69[10^3/ul]
+    MONO%:9.6[%]
+    
+
+
+Sentence 36:
+EO# wartość bezwzględna:0.23[10^3/ul]
+    
+
+
+Sentence 37:
+EO%:3.2[%]
+    
+
+
+Sentence 38:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    
+
+
+Sentence 39:
+BASO%:0.3[%]
+    
+
+
+Sentence 40:
+NRBC %:0.0[%]
+    
+
+
+Sentence 41:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 42:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:35.1[sek]
+
+
+
+Sentence 43:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 44:
+Czas protrombinowy:13.6[sek]
+    
+
+
+Sentence 45:
+Wskaźnik PT:80.9[%]
+    
+
+
+Sentence 46:
+INR:1.24
+Czas trombinowy TT: Czas trombinowy TT:15.1[sek]
+
+
+
+Sentence 47:
+Fibrynogen: Fibrynogen:2.47[g/L]
+
+
+
+Sentence 48:
+D-dimer - test ilościowy: D-dimer - test ilościowy:372[ng/ml]
+
+
+
+Sentence 49:
+Płytki krwi z THEX: Płytki krwi:222[10^3/ul]
+
+
+
+Sentence 50:
+TSH: TSH:3.39[uIU/ml]
+
+
+
+Sentence 51:
+FT3: FT3:4.44[pg/ml]
+
+
+
+Sentence 52:
+FT4: FT4:1.32[ng/dl]
+
+
+
+Sentence 53:
+AFP: AFP:1.17[IU/ml]
+
+
+
+Sentence 54:
+ALAT: ALAT:26[U/L]
+ASPAT: ASPAT:41[U/L]
+
+
+
+Sentence 55:
+Białko całkowite w surowicy (TP): Białko całkowite w surow:8.2[g/dl]
+
+
+
+Sentence 56:
+Bilirubina całkowita (TBil): Bilirubina całkowita:0.59[mg/dl]
+
+
+
+Sentence 57:
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 58:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:27[U/L]
+
+
+
+Sentence 59:
+Kreatynina + GFR
+    
+
+
+Sentence 60:
+Kreatynina w surowicy:0.42[mg/dl]
+    
+
+
+Sentence 61:
+eGFR stand. wg Schwartza:153.2[ml/min/1,73 m^2]
+    
+
+
+Sentence 62:
+eGFR zmod.
+
+
+Sentence 63:
+wg Schwartza:115.1[ml/min/1,73 m^2]
+    wzrost:117[cm]
+
+
+
+Sentence 64:
+Mleczany (LAC): Mleczany:35.5[mg/dl]
+
+
+
+Sentence 65:
+Mleczany (LAC): Mleczany:29.5[mg/dl]
+
+
+
+Sentence 66:
+Mocznik: Mocznik:22[mg/dl]
+
+
+
+Sentence 67:
+Profil parametrów krytycznych (ABL)
+    pH:7.354
+    pCO2:38.1[mmHg]
+    BE:-3.90[mmol/L]
+    HCO3:20.7[mmol/L]
+    
+
+
+Sentence 68:
+pO2:38.2[mmHg]
+    
+
+
+Sentence 69:
+O2Sat:66.1[%]
+    
+
+
+Sentence 70:
+Sód (ABL):136[mmol/L]
+    
+
+
+Sentence 71:
+Potas (ABL):4.4[mmol/L]
+    
+
+
+Sentence 72:
+Chlorki (ABL):111[mmol/L]
+    
+
+
+Sentence 73:
+Wapń zjonizowany (ABL):1.26[mmol/L]
+    
+
+
+Sentence 74:
+Ht - ABL:46.3[%]
+    
+
+
+Sentence 75:
+Hb - ABL:15.1[g/dl]
+    
+
+
+Sentence 76:
+FO2Hb:65.1[%]
+    
+
+
+Sentence 77:
+FCOHb:0.6[%]
+    FMetHb:0.9[%]
+    
+
+
+Sentence 78:
+FHbF:0.0[%]
+    
+
+
+Sentence 79:
+Glukoza (ABL):83[mg/dl]
+    Mleczany:21[mg/dl]
+
+
+
+Sentence 80:
+NT-proBNP surowica: NT-proBNP w surowicy:79[pg/ml]
+
+
+
+Sentence 81:
+------------------------------------------------
+
+
+
+Sentence 82:
+ICD10
+------------------------------------------------
+Q22.4
+Z98.8
+Q21.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 83:
+ICD9
+------------------------------------------------
+89.522
+88.721
+89.541
+88.761
+------------------------------------------------
+
+

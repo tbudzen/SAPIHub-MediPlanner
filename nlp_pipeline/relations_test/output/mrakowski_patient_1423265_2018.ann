@@ -1,0 +1,30 @@
+T1	Drug 341 350	Pyralgina
+T2	Drug 352 361	Ibuprofen
+T3	Symptom 587 607	utracie przytomności
+N1	Reference T3 ICD10:R55	Omdlenie i zapaść
+T4	Treatment 721 762	Dalsza opieka i diagnostyka neurologiczna
+T5	Treatment 763 797	Kontrola w Poradni Kardiologicznej
+T6	Date 798 804	za rok
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Date 929 941	miesiąc temu
+T8	Treatment 942 978	hospitalizowana w Klinice Neurologii
+R2	Dat Arg1:T7 Arg2:T8	
+T9	Symptom 982 1002	utracie przytomności
+N2	Reference T9 ICD10:R55	Omdlenie i zapaść
+T10	Condition 1005 1021	napad padaczkowy
+A1	Source T10 Declared
+N3	Reference T10 ICD10:G40.4	Inne postacie uogólnionej padaczki i zespołów padaczkowych
+T11	Condition 1093 1110	wywiad alergiczny
+N4	Reference T11 ICD10:T78.4	Alergia, nieokreślona
+T12	Negation 1111 1117	ujemny
+R3	Neg Arg1:T12 Arg2:T11	
+T13	Behaviour 1146 1168	intensywne odchudzanie
+T14	Drug 1062 1076	leków na stałe
+T15	Negation 1077 1090	nie otrzymuje
+R4	Neg Arg1:T15 Arg2:T14	
+R12	Dat Arg1:T7 Arg2:T8
+R13	Neg Arg1:T12 Arg2:T11
+R18	Neg Arg1:T15 Arg2:T14
+R5	Dat Arg1:T6 Arg2:T5
+R8	Dat Arg1:T7 Arg2:T9
+R9	Dat Arg1:T7 Arg2:T10

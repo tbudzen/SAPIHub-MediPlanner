@@ -1,0 +1,274 @@
+T1	Drug 6402 6408	Plavix
+T2	Drug_dose 6409 6464	75mg 1 tabletka rano przez 3 miesiące po zamknięciu PFO
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 6292 6297	Acard
+T4	Drug_dose 6298 6400	75mg 1 tabletka wieczorem przez 6 miesięcy po zamknięciu PFO (kontynuacja zależna od zaleceń neurologa
+R2	Drg Arg1:T3 Arg2:T4	
+T5	Behaviour 6239 6265	warunki mieszkaniowe dobre
+T6	Negation 6216 6222	neguje
+T7	Negation 6201 6204	nie
+T8	Condition 6205 6214	Uczulenia
+R3	Neg Arg1:T6 Arg2:T8	
+T9	Behaviour 6188 6199	Inne używki
+R4	Neg Arg1:T7 Arg2:T9	
+T10	Behaviour 6157 6172	Palenie tytoniu
+A1	Status T10 Historical_Insignificant
+N2	Reference T10 ICD10:T65.2	Tytoń i nikotyna
+T11	Date 6174 6187	w przeszłości
+R5	Dat Arg1:T11 Arg2:T10	
+T12	Treatment 6066 6085	operacyjne leczenie
+A2	Status T12 Historical_Insignificant
+T13	Date 6144 6154	9 lat temu
+R6	Dat Arg1:T13 Arg2:T12	
+T14	Condition 5741 5768	udarze niedokrwiennym mózgu
+N3	Reference T14 ICD10:I63	Zawał mózgu
+T15	Condition 5771 5807	niedowładem połowiczym prawostronnym
+N4	Reference T15 ICD10:G81	Porażenie połowicze
+T16	Condition 5810 5825	afazją czuciową
+N5	Reference T16 ICD10:R47.0	Dysfazja i afazja
+T17	Treatment 5826 5850	leczonym trombolitycznie
+T18	Date 5851 5863	(12/11/2017)
+R7	Dat Arg1:T18 Arg2:T17	
+R8	Dat Arg1:T18 Arg2:T14	
+R9	Dat Arg1:T18 Arg2:T15	
+R10	Dat Arg1:T18 Arg2:T16	
+T19	Treatment 5868 5878	zamknięciu
+T20	Date 5879 5889	06.03.2019
+R11	Dat Arg1:T20 Arg2:T19	
+T21	Negation 6012 6018	Neguje
+T22	Symptom 6019 6044	jakiekolwiek dolegliwości
+R12	Neg Arg1:T21 Arg2:T22	
+T23	Drug 5572 5577	Acard
+T24	Drug_dose 5578 5595	75mg 1x1 tabl. po
+R13	Drg Arg1:T23 Arg2:T24	
+T25	Behaviour 5519 5545	warunki mieszkaniowe dobre
+T26	Negation 5496 5502	neguje
+T27	Negation 5481 5484	nie
+T28	Negation 5398 5404	( -  )
+T29	Negation 5417 5422	( - )
+T30	Negation 5433 5436	(-)
+T31	Condition 5485 5494	Uczulenia
+R14	Neg Arg1:T26 Arg2:T31	
+T32	Behaviour 5468 5479	Inne używki
+R15	Neg Arg1:T27 Arg2:T32	
+T33	Behaviour 5437 5452	Palenie tytoniu
+A3	Status T33 Historical_Insignificant
+N7	Reference T33 ICD10:T65.2	Tytoń i nikotyna
+T34	Date 5454 5467	w przeszłości
+R16	Dat Arg1:T34 Arg2:T33	
+T35	Condition 5394 5397	WZW
+N8	Reference T35 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+R17	Neg Arg1:T28 Arg2:T35	
+T36	Condition 5407 5416	borelioza
+N9	Reference T36 ICD10:A69.2	Choroba z Lyme
+R18	Neg Arg1:T29 Arg2:T36	
+T37	Condition 5424 5432	gruźlica
+N10	Reference T37 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+R19	Neg Arg1:T30 Arg2:T37	
+T38	Treatment 5276 5295	operacyjne leczenie
+A4	Status T38 Historical_Insignificant
+T39	Date 5353 5365	(9 lat temu)
+R20	Dat Arg1:T39 Arg2:T38	
+T40	Symptom 5199 5211	zasłabnięcia
+N11	Reference T40 ICD10:R55	Omdlenie i zapaść
+T41	Symptom 5213 5222	duszności
+N12	Reference T41 ICD10:R06.0	Duszność
+T42	Symptom 5224 5255	typowe bóle w klatce piersiowej
+N13	Reference T42 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T43	Negation 5192 5198	Neguje
+R21	Neg Arg1:T43 Arg2:T40	
+R22	Neg Arg1:T43 Arg2:T41	
+R23	Neg Arg1:T43 Arg2:T42	
+T44	Condition 4952 4979	udarze niedokrwiennym mózgu
+N14	Reference T44 ICD10:I63	Zawał mózgu
+T45	Condition 4982 5018	niedowładem połowiczym prawostronnym
+N15	Reference T45 ICD10:G81	Porażenie połowicze
+T46	Condition 5021 5036	afazją czuciową
+N16	Reference T46 ICD10:R47.0	Dysfazja i afazja
+T47	Treatment 5037 5061	leczonym trombolitycznie
+T48	Date 5063 5073	12/11/2017
+R24	Dat Arg1:T48 Arg2:T47	
+R25	Dat Arg1:T48 Arg2:T46	
+R26	Dat Arg1:T48 Arg2:T45	
+R27	Dat Arg1:T48 Arg2:T44	
+T49	Treatment 5161 5185	przezskórnego zamknięcia
+T50	Condition 5076 5079	PFO
+N17	Reference T50 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T51	Date 5117 5124	02/2019
+T52	Treatment 5081 5114	zdiagnozowane w tutejszej klinice
+R28	Dat Arg1:T51 Arg2:T50	
+R29	Dat Arg1:T51 Arg2:T52	
+T53	Condition 5898 5901	PFO
+N18	Reference T53 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T54	Date 5939 5946	02/2019
+T55	Treatment 5903 5936	zdiagnozowane w tutejszej Klinice
+R30	Dat Arg1:T54 Arg2:T55	
+T56	Investigation 4797 4800	TTE
+T57	Investigation 4802 4805	TEE
+T58	Drug 4628 4652	antykoncepcja hormonalna
+T59	Date 4653 4711	1,5 roku przed udarem (stosowana łącznie przez 3 miesiące)
+R31	Dat Arg1:T59 Arg2:T58	
+T60	Drug 4597 4604	Xarelto
+T61	Drug_dose 4605 4615	20 mg 1xdz
+R32	Drg Arg1:T60 Arg2:T61	
+T62	Behaviour 4531 4557	warunki mieszkaniowe dobre
+T63	Condition 4432 4435	WZW
+N19	Reference T63 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T64	Condition 4442 4451	borelioza
+N20	Reference T64 ICD10:A69.2	Choroba z Lyme
+T65	Condition 4459 4462	tbc
+N21	Reference T65 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T66	Condition 4468 4472	odra
+N22	Reference T66 ICD10:B05	Odra
+T67	Treatment 4478 4513	szczepiona wg. kalendarza szczepień
+A5	Source T67 Confirmed
+T68	Negation 4473 4476	(-)
+R33	Neg Arg1:T68 Arg2:T66	
+T69	Negation 4463 4466	(-)
+R34	Neg Arg1:T69 Arg2:T65	
+T70	Negation 4452 4457	( - )
+R35	Neg Arg1:T70 Arg2:T64	
+T71	Negation 4436 4439	(-)
+R36	Neg Arg1:T71 Arg2:T63	
+T72	Negation 4400 4403	nie
+T73	Negation 4384 4387	nie
+T74	Condition 4389 4398	Uczulenia
+R37	Neg Arg1:T72 Arg2:T74	
+T75	Behaviour 4371 4382	Inne używki
+R38	Neg Arg1:T73 Arg2:T75	
+T76	Behaviour 4308 4323	Palenie tytoniu
+N24	Reference T76 ICD10:T65.2	Tytoń i nikotyna
+T77	Negation 4325 4346	nie pali od 2017 roku
+R39	Neg Arg1:T77 Arg2:T76	
+T78	Treatment 4217 4236	operacyjne leczenie
+A6	Status T78 Historical_Insignificant
+T79	Date 4295 4305	9 lat temu
+R40	Dat Arg1:T79 Arg2:T78	
+T80	Symptom 4126 4166	2x zasłabnięcie podczas pobierania krwi,
+N25	Reference T80 ICD10:R55	Omdlenie i zapaść
+T81	Condition 4167 4194	łojotokowe zapalenie skóry.
+N26	Reference T81 ICD10:L21	Łojotokowe zapalenie skóry
+T82	Symptom 4066 4081	bole zamostkowe
+N27	Reference T82 ICD10:R07.3	Inne bóle w klatce piersiowej
+T83	Symptom 4083 4091	duszność
+N28	Reference T83 ICD10:R06.0	Duszność
+T84	Symptom 4093 4112	utraty przytomności
+N29	Reference T84 ICD10:R55	Omdlenie i zapaść
+T85	Negation 4058 4064	Neguje
+R41	Neg Arg1:T85 Arg2:T82	
+R42	Neg Arg1:T85 Arg2:T83	
+R43	Neg Arg1:T85 Arg2:T84	
+T86	Condition 3903 3929	diagnostyka w kierunku PFO
+T87	Negation 3930 3939	negatywna
+R44	Neg Arg1:T87 Arg2:T86	
+T88	Investigation_result 3961 4017	obecność kieszonki od strony LP z cechami przepływu krwi
+T89	Condition 3724 3751	udarze niedokrwiennym mózgu
+N30	Reference T89 ICD10:I63	Zawał mózgu
+T90	Date 3753 3763	12/11/2017
+R45	Dat Arg1:T90 Arg2:T89	
+T91	Condition 3767 3803	niedowładem połowiczym prawostronnym
+N31	Reference T91 ICD10:G81	Porażenie połowicze
+T92	Condition 3806 3821	afazją czuciową
+N32	Reference T92 ICD10:R47.0	Dysfazja i afazja
+T93	Symptom 3852 3878	uczucia wolnej pracy serca
+R46	Dat Arg1:T90 Arg2:T91	
+R47	Dat Arg1:T90 Arg2:T92	
+T94	Investigation 3885 3888	TEE
+T95	Investigation 3512 3559	samokontrola ciśnienia tętniczego krwi i tętna.
+T96	Behaviour 3417 3498	Dieta lekkostrawna z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T97	Treatment 3157 3177	leczeniu operacyjnym
+A7	Status T97 Historical_Insignificant
+T98	Behaviour 3121 3131	Nikotynizm
+T99	Condition 3028 3060	Bradykardia zatokowa bezobjawowa
+N34	Reference T99 ICD10:R00.1	Bradykardia, nieokreślona
+T100	Condition 3066 3115	Łagodna niedokrwistość normocytarna normobarwliwa
+N35	Reference T100 ICD10:D64	Inne niedokrwistości
+T101	Condition 2900 2927	udarze niedokrwiennym mózgu
+N36	Reference T101 ICD10:I63	Zawał mózgu
+T102	Condition 2930 2966	niedowładem połowiczym prawostronnym
+N37	Reference T102 ICD10:G81	Porażenie połowicze
+T103	Condition 2969 2984	afazją czuciową
+N38	Reference T103 ICD10:R47.0	Dysfazja i afazja
+T104	Treatment 2985 3009	leczonym trombolitycznie
+T105	Date 3010 3022	(12/11/2017)
+R48	Dat Arg1:T105 Arg2:T103	
+R49	Dat Arg1:T105 Arg2:T104	
+R50	Dat Arg1:T105 Arg2:T102	
+R51	Dat Arg1:T105 Arg2:T101	
+T106	Condition 2780 2803	Przetrwały otwór owalny
+N39	Reference T106 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T107	Treatment 2814 2872	zamknięciu zestawem Occlutech Figulla Flex II PFO 23/25 mm
+T108	Date 2874 2884	06/03/2019
+T109	Condition 1553 1576	Przetrwały otwór owalny
+N40	Reference T109 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T110	Treatment 1579 1637	zamknięcie zestawem Occlutech Figulla Flex II PFO 23/25 mm
+T111	Date 1638 1650	(06/03/2019)
+R52	Dat Arg1:T111 Arg2:T110	
+T112	Condition 1664 1691	udarze niedokrwiennym mózgu
+N41	Reference T112 ICD10:I63	Zawał mózgu
+T113	Condition 1694 1730	niedowładem połowiczym prawostronnym
+N42	Reference T113 ICD10:G81	Porażenie połowicze
+T114	Condition 1733 1748	afazją czuciową
+N43	Reference T114 ICD10:R47.1	Dysartria i anartria
+T115	Treatment 1749 1773	leczonym trombolitycznie
+T116	Date 1774 1786	(12/11/2017)
+R53	Dat Arg1:T116 Arg2:T115	
+R54	Dat Arg1:T116 Arg2:T114	
+R55	Dat Arg1:T116 Arg2:T113	
+R56	Dat Arg1:T116 Arg2:T112	
+T117	Condition 1791 1823	Bradykardia zatokowa bezobjawowa
+N44	Reference T117 ICD10:R00.1	Bradykardia, nieokreślona
+T118	Behaviour 1828 1838	Nikotynizm
+T119	Treatment 1863 1883	leczeniu operacyjnym
+A8	Status T119 Historical_Insignificant
+T120	Treatment 1281 1301	leczeniu operacyjnym
+A9	Status T120 Historical_Insignificant
+T121	Behaviour 1246 1256	Nikotynizm
+T122	Condition 1197 1229	Bradykardia zatokowa bezobjawowa
+N47	Reference T122 ICD10:R00.1	Bradykardia, nieokreślona
+T123	Condition 1035 1058	Przetrwały otwór owalny
+N48	Reference T123 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T124	Condition 1071 1098	udarze niedokrwiennym mózgu
+N49	Reference T124 ICD10:I63	Zawał mózgu
+T125	Condition 1101 1137	niedowładem połowiczym prawostronnym
+N50	Reference T125 ICD10:G81	Porażenie połowicze
+T126	Condition 1140 1155	afazją czuciową
+N51	Reference T126 ICD10:R47.1	Dysartria i anartria
+T127	Treatment 1156 1179	leczony trombolitycznie
+T128	Date 1180 1191	(12/11/2017
+R57	Dat Arg1:T128 Arg2:T127	
+R58	Dat Arg1:T128 Arg2:T126	
+R59	Dat Arg1:T128 Arg2:T125	
+R60	Dat Arg1:T128 Arg2:T124	
+T129	Treatment 514 538	przezskórnego zamknięcia
+T130	Date 551 561	04/03/2019
+R61	Dat Arg1:T130 Arg2:T129	
+T131	Condition 539 542	PFO
+N52	Reference T131 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R62	Dat Arg1:T130 Arg2:T131	
+N46	Reference T121 ICD10:T65.2	Tytoń i nikotyna
+T132	Condition 1302 1332	złamania lewej kości ramiennej
+N53	Reference T132 ICD10:S42	Złamanie barku i ramienia
+N45	Reference T118 ICD10:T65.2	Tytoń i nikotyna
+T133	Condition 1884 1914	złamania lewej kości ramiennej
+N54	Reference T133 ICD10:S42	Złamanie barku i ramienia
+R63	Dat Arg1:T108 Arg2:T107	
+R64	Dat Arg1:T108 Arg2:T106	
+N33	Reference T98 ICD10:T65.2	Tytoń i nikotyna
+T134	Condition 3178 3208	złamania lewej kości ramiennej
+N55	Reference T134 ICD10:S42	Złamanie barku i ramienia
+T135	Condition 4237 4267	złamania lewej kości ramiennej
+N56	Reference T135 ICD10:S42	Złamanie barku i ramienia
+R65	Dat Arg1:T79 Arg2:T135	
+T136	Condition 5186 5189	PFO
+N57	Reference T136 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T137	Condition 5296 5326	złamania lewej kości ramiennej
+N58	Reference T137 ICD10:S42	Złamanie barku i ramienia
+R66	Dat Arg1:T39 Arg2:T137	
+R67	Dat Arg1:T54 Arg2:T53	
+T138	Condition 6086 6116	złamania lewej kości ramiennej
+N59	Reference T138 ICD10:S42	Złamanie barku i ramienia
+R68	Dat Arg1:T13 Arg2:T138	
+N23	Reference T74 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N6	Reference T31 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N1	Reference T8 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

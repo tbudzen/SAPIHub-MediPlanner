@@ -1,0 +1,106 @@
+T1	Condition 439 473	Łagodna niedomykalność trójdzielna
+N1	Reference T1 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T2	Condition 475 516	Podejrzenie choroby niedokrwiennej serca.
+A1	Source T2 Declared
+N2	Reference T2 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T3	Condition 517 538	Nadciśnienie tętnicze
+N3	Reference T3 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T4	Treatment 742 775	pogłębienie diagnostyki wieńcowej
+T5	Investigation 778 796	angio-CT lub SPECT
+T6	Behaviour 883 922	Dieta lekkostrawna, niskocholesterolowa
+T7	Investigation 938 1020	kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T8	Investigation 1047 1082	kontrola ciśnienia tętniczego krwi.
+T9	Drug 1094 1099	Acard
+T10	Drug_dose 1100 1177	75 mg 1x1 tabl. wieczorem (do decyzji po wyniku dodatkowych badań obrazowych)
+R1	Drg Arg1:T9 Arg2:T10	
+T11	Drug 1178 1184	Atoris
+T12	Drug_dose 1185 1262	20 mg 1x1 tabl. wieczorem (do decyzji po wyniku dodatkowych badań obrazowych)
+R2	Drg Arg1:T11 Arg2:T12	
+T13	Drug 1263 1272	Nitromint
+T14	Drug_dose 1273 1372	1-2 dawki doraźnie w przypadku bólu dławicowego (do decyzji po wyniku dodatkowych badań obrazowych)
+R3	Drg Arg1:T13 Arg2:T14	
+T15	Investigation 2294 2298	ECHO
+T16	Investigation 2300 2304	ABPM
+T17	Investigation 2306 2316	Holter ekg
+T18	Investigation 2318 2321	TET
+T19	Drug 2180 2190	bisoprolol
+T20	Drug_dose 2191 2197	2,5 mg
+R4	Drg Arg1:T19 Arg2:T20	
+T21	Drug 2150 2154	Leki
+T22	Negation 2156 2169	Nie przyjmuje
+R5	Neg Arg1:T22 Arg2:T21	
+T23	Behaviour 2120 2146	warunki mieszkaniowe dobre
+T24	Condition 2068 2071	WZW
+N4	Reference T24 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T25	Condition 2078 2087	borelioza
+N5	Reference T25 ICD10:A69.2	Choroba z Lyme
+T26	Condition 2095 2098	tbc
+N6	Reference T26 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T27	Negation 2099 2102	(-)
+R6	Neg Arg1:T27 Arg2:T26	
+T28	Negation 2088 2093	( - )
+R7	Neg Arg1:T28 Arg2:T25	
+T29	Negation 2072 2075	(-)
+R8	Neg Arg1:T29 Arg2:T24	
+T30	Negation 2036 2039	nie
+T31	Negation 2020 2023	nie
+T32	Negation 2002 2005	nie
+T33	Condition 2025 2034	Uczulenia
+N7	Reference T33 ICD10:T78.4	Alergia, nieokreślona
+R9	Neg Arg1:T30 Arg2:T33	
+T34	Behaviour 2007 2019	Inne używki:
+R10	Neg Arg1:T31 Arg2:T34	
+T35	Behaviour 1985 2000	Palenie tytoniu
+N8	Reference T35 ICD10:T65.2	Tytoń i nikotyna
+R11	Neg Arg1:T32 Arg2:T35	
+T36	Treatment 1982 1984	CC
+T37	Condition 1517 1519	HA
+N9	Reference T37 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T38	Date 1535 1549	czerwca 2019r,
+R12	Dat Arg1:T38 Arg2:T37	
+T39	Condition 1587 1627	choroba zwyrodnieniową stawów kręgosłupa
+N10	Reference T39 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T40	Condition 1630 1633	rąk
+N11	Reference T40 ICD10:M19	Inne zwyrodnienia stawów
+T41	Symptom 1689 1730	niewielkiego obniżenia tolerancji wysiłku
+T42	Date 1731 1748	od kilku miesięcy
+R13	Dat Arg1:T42 Arg2:T41	
+T43	Symptom 1751 1764;1765 1779	sporadycznych kołatań serca.
+N12	Reference T43 ICD10:R00.2	Kołatanie serca
+T44	Condition 1580 1583	HLP
+N13	Reference T44 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T45	Symptom 1550 1577	ostatnio dobre wartości BP,
+T46	Negation 1780 1786	Neguje
+T47	Symptom 1788 1800	zasłabnięcia
+N14	Reference T47 ICD10:R55	Omdlenie i zapaść
+T48	Symptom 1802 1810	omdlenia
+N15	Reference T48 ICD10:R55	Omdlenie i zapaść
+T49	Symptom 1812 1836	bóle w klatce piersiowej
+N16	Reference T49 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T50	Symptom 1838 1848	krwawienia
+N17	Reference T50 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T51	Symptom 1850 1863	czarne stolce
+N18	Reference T51 ICD10:K92.1	Stolce smołowate
+T52	Symptom 1865 1881	brunatne wymioty
+N19	Reference T52 ICD10:K92.0	Wymioty krwawe
+T53	Condition 1883 1900	chorobę wrzodową,
+N20	Reference T53 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T54	Symptom 1901 1929	duszność nocną typu ortopnoe
+N21	Reference T54 ICD10:I50.1	Niewydolność serca lewokomorowa
+T55	Condition 1931 1933	DM
+N22	Reference T55 ICD10:E13	Inne określone postacie cukrzycy
+T56	Condition 1935 1946	udar mózgu,
+N23	Reference T56 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T57	Condition 1947 1958	zawał serca
+N24	Reference T57 ICD10:I25.2	Przebyty zawał serca
+R14	Neg Arg1:T46 Arg2:T47	
+R15	Neg Arg1:T46 Arg2:T48	
+R16	Neg Arg1:T46 Arg2:T49	
+R17	Neg Arg1:T46 Arg2:T50	
+R18	Neg Arg1:T46 Arg2:T51	
+R19	Neg Arg1:T46 Arg2:T52	
+R20	Neg Arg1:T46 Arg2:T53	
+R21	Neg Arg1:T46 Arg2:T54	
+R22	Neg Arg1:T46 Arg2:T55	
+R23	Neg Arg1:T46 Arg2:T56	
+R24	Neg Arg1:T46 Arg2:T57	

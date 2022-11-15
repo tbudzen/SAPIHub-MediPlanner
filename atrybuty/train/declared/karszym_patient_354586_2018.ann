@@ -1,0 +1,93 @@
+T1	Condition 470 515	przecieku przez przegrodę międzyprzedsionkowa
+T2	Negation 516 525	negatywna
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T3	Treatment 536 556	korekcji operacyjnej
+N2	Reference T3 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T4	Condition 558 613	ubytku w przegrodzie międzyprzedsionkowej typu wtórnego
+N3	Reference T4 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T5	Date 614 620	w 2010
+T6	Condition 643 683	Niedomykalność zastawki trójdzielnej II'
+T7	Condition 687 755	Zburzenia  hormonów tarczycy i kory nadnerczy do dalszej diagnostyki
+A1	Source T7 Declared
+T8	Condition 760 780	Hipertriglicerydemia
+N4	Reference T8 ICD10:E78.1	Czysta hiperglicerydemia
+R1	Neg Arg1:T2 Arg2:T1	
+R2	Dat Arg1:T5 Arg2:T4	
+R3	Dat Arg1:T5 Arg2:T3	
+T9	Treatment 900 976	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej i Endokrynologiczna
+T10	Behaviour 980 1020	Dieta lekkostrawna , niskocholesterolowa
+T11	Investigation 1033 1059	kontrola hormonów tarczycy
+T12	Investigation 1062 1065	TSH
+T13	Investigation 1068 1071	FT3
+T14	Investigation 1074 1077	FT4
+T15	Date 1081 1093	za 6 tygodni
+T16	Condition 1511 1568	podejrzenia przecieku w przegrodzie między przedsionkowej
+A2	Source T16 Declared
+N5	Reference T16 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T17	Symptom 1587 1616	pogorszona tolerancje wysiłku
+T18	Symptom 1625 1661	jest w stanie wejść na drugie piętro
+T19	Symptom 1666 1746	okresowe bóle w klatce piersiowej o charakterze kłującym bez związku z wysiłkiem
+N6	Reference T19 ICD10:R07.3	Inne bóle w klatce piersiowej
+T20	Date 1769 1791	przed zabiegiem w 2009
+T21	Symptom 1799 1830	siniały usta w reakcji na zimno
+T22	Date 1833 1840	obecnie
+T23	Symptom 1847 1896	okresowo występują o znacznie mniejszym nasileniu
+T24	Symptom 1899 1938	po dłuższym okresie ekspozycji na zimno
+T25	Negation 1942 1948	Neguje
+T26	Symptom 1949 1961	zasłabnięcia
+T27	Treatment 1986 2008	chirurgicznej korekcji
+N7	Reference T27 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T28	Condition 2009 2019	ASD typu 2
+N8	Reference T28 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T29	Date 2020 2026	w 2009
+T30	Condition 2140 2143	WZW
+N9	Reference T30 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T31	Condition 2153 2162	borelioza
+N10	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Negation 2144 2150	( -  )
+T33	Negation 2163 2168	( - )
+T34	Behaviour 2207 2222	Palenie tytoniu
+N11	Reference T34 ICD10:Z72.0	Używanie tytoniu
+T35	Negation 2224 2227	nie
+T36	Behaviour 2228 2239	Inne używki
+T37	Negation 2241 2244	nie
+T38	Condition 2245 2254	Uczulenia
+N12	Reference T38 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T39	Negation 2256 2262	neguje
+T40	Behaviour 2279 2307	warunki mieszkaniowe średnie
+T41	Behaviour 2311 2325	mieszka z tatą
+T42	Negation 2333 2336	bez
+T43	Drug 2337 2355	leków przewlekłych
+T44	Investigation 2370 2380	Echo serca
+T45	Investigation 2384 2399	Próba Wysiłkowa
+T46	Investigation 2402 2405	TEE
+R4	Dat Arg1:T15 Arg2:T11	
+R5	Dat Arg1:T15 Arg2:T12	
+R6	Dat Arg1:T15 Arg2:T13	
+R7	Dat Arg1:T15 Arg2:T14	
+R8	Dat Arg1:T20 Arg2:T21	
+R9	Dat Arg1:T22 Arg2:T21	
+R10	Dat Arg1:T22 Arg2:T23	
+R11	Dat Arg1:T22 Arg2:T24	
+T47	Date 1571 1578	Obecnie
+R12	Dat Arg1:T47 Arg2:T17	
+R13	Dat Arg1:T47 Arg2:T18	
+R14	Dat Arg1:T47 Arg2:T19	
+R15	Neg Arg1:T25 Arg2:T26	
+R16	Dat Arg1:T29 Arg2:T28	
+R17	Dat Arg1:T29 Arg2:T27	
+R18	Neg Arg1:T32 Arg2:T30	
+R19	Neg Arg1:T33 Arg2:T31	
+R20	Neg Arg1:T35 Arg2:T34	
+R21	Neg Arg1:T37 Arg2:T36	
+R22	Neg Arg1:T39 Arg2:T38	
+R23	Neg Arg1:T42 Arg2:T43	
+A3	Source T27 Declared
+A4	Source T28 Declared
+A5	Source T29 Declared
+A6	Source T3 Declared
+A7	Source T4 Declared
+A8	Source T5 Declared
+N13	Reference T6 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+A9	Source T1 Declared
+T48	Investigation 448 458	Obserwacja

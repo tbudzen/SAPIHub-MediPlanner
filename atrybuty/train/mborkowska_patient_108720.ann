@@ -1,0 +1,81 @@
+T1	Drug 1725 1732	Nebilet
+T2	Drug_dose 1733 1745	5mg 1/4 tabl
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 1748 1756	Cartexan
+T4	Drug_dose 1757 1771	400mg 3x1 tabl
+R2	Drg Arg1:T3 Arg2:T4	
+T5	Behaviour 1672 1698	warunki mieszkaniowe dobre
+T6	Negation 1649 1655	neguje
+T7	Behaviour 1615 1637	alkohol - okazjonalnie
+N1	Reference T7 ICD10:Z72.1	Używanie alkoholu
+T8	Condition 1638 1647	Uczulenia
+N2	Reference T8 ICD10:T78.4	Alergia, nieokreślona
+R3	Neg Arg1:T6 Arg2:T8	
+T9	Negation 1598 1601	nie
+T10	Behaviour 1581 1595	Palenie tytoni
+R4	Neg Arg1:T9 Arg2:T10	
+T11	Condition 1542 1549	ASD/PFO
+A1	Status T11 Family
+N4	Reference T11 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T12	Condition 1551 1553	FA
+A2	Status T12 Family
+N5	Reference T12 ICD10:I48	Migotanie i trzepotanie przedsionków
+T13	Condition 1567 1580	arytmia serca
+A3	Status T13 Family
+N6	Reference T13 ICD10:I49	Inne zaburzenia rytmu serca
+T14	Condition 1474 1477	WZW
+T15	Condition 1486 1495	borelioza
+N8	Reference T15 ICD10:A69.2	Choroba z Lyme
+T16	Condition 1503 1511	gruźlica
+N9	Reference T16 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T17	Negation 1512 1515	(-)
+R5	Neg Arg1:T17 Arg2:T16	
+T18	Negation 1498 1499	-
+R6	Neg Arg1:T18 Arg2:T15	
+T19	Negation 1480 1481	-
+R7	Neg Arg1:T19 Arg2:T14	
+T20	Treatment 1404 1424	operacje:  usunięcie
+T21	Date 1439 1446	05/2017
+R8	Dat Arg1:T21 Arg2:T20	
+T22	Symptom 1337 1349	zasłabnięcia
+N10	Reference T22 ICD10:R55	Omdlenie i zapaść
+T23	Symptom 1351 1360	duszności
+N11	Reference T23 ICD10:R06.0	Duszność
+T24	Symptom 1362 1393	typowe bóle w klatce piersiowej
+N12	Reference T24 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T25	Negation 1330 1336	Neguje
+R9	Neg Arg1:T25 Arg2:T22	
+R10	Neg Arg1:T25 Arg2:T23	
+R11	Neg Arg1:T25 Arg2:T24	
+T26	Condition 469 492	nadciśnienia tętniczego
+N13	Reference T26 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T27	Negation 495 504	negatywna
+R12	Neg Arg1:T27 Arg2:T26	
+T28	Condition 509 526	Astma oskrzelowa.
+N14	Reference T28 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T29	Condition 1057 1073	astmą oskrzelową
+N15	Reference T29 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T30	Condition 548 559	polipa nosa
+N16	Reference T30 ICD10:J33	Polip nosa
+T31	Treatment 538 547	usunięciu
+T32	Date 560 568	(05/2017
+R13	Dat Arg1:T32 Arg2:T30	
+R14	Dat Arg1:T32 Arg2:T31	
+T33	Behaviour 814 888	Dieta lekkostrawna z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T34	Condition 1077 1110	pęknięciem łąkotki kolana prawego
+T35	Investigation_result 1148 1210	niekontrolowanych wartości ciśnienia tętniczego do 180/85 mmHg
+T36	Symptom 1213 1240	towarzyszącymi bólami głowy
+T37	Symptom 1246 1308	dolegliwości bólowych w klatce piersiowej o charakterze kłucia
+T38	Investigation 901 913	kontrola lip
+A5	Source T26 Declared
+T39	Condition 1425 1436	polipa nosa
+N17	Reference T39 ICD10:J33	Polip nosa
+R15	Dat Arg1:T21 Arg2:T39	
+T40	Investigation 447 468	Obserwacja w kierunku
+R16	Neg Arg1:T27 Arg2:T40	
+N18	Reference T36 ICD10:R51	Ból głowy
+N19	Reference T37 ICD10:R07.3	Inne bóle w klatce piersiowej
+A4	Status T39 Historical_Insignificant
+A6	Status T20 Historical_Insignificant
+N7	Reference T14 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N3	Reference T10 ICD10:Z72.0	

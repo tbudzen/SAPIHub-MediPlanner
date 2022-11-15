@@ -1,0 +1,110 @@
+T1	Behaviour 859 899	Dieta lekkostrawna , niskocholesterolowa
+T2	Investigation 912 986	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T3	Investigation 1003 1038	kontrola ciśnienia tętniczego krwi.
+T4	Behaviour 1040 1071	Zaprzestanie palenia papierosów
+T5	Drug 1122 1133	Propranolol
+T6	Drug_dose 1134 1179	10 mg 1 tabl doraźnie w razie kołatania serca
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Condition 1420 1445	bólów w klatce piersiowej
+N1	Reference T7 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T8	Treatment 1408 1419	Diagnostyka
+T9	Condition 1447 1480	Pojedyncze pobudzenia nadkomorowe
+N2	Reference T9 ICD10:I49	Inne zaburzenia rytmu serca
+T10	Condition 1494 1514	Hipercholesterolemia
+N3	Reference T10 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T11	Condition 1552 1570	Torbiele obu nerek
+N4	Reference T11 ICD10:N28.1	Torbiel nerki, nabyta
+T12	Condition 1584 1598	Kamica nerkowa
+N5	Reference T12 ICD10:N20.0	Kamica nerki
+T13	Condition 1613 1665	Dyskopatia kręgosłupa odcinka szyjnego i piersiowego
+N6	Reference T13 ICD10:M51	Inne choroby krążka międzykręgowego
+T14	Condition 1667 1677	Nikotynizm
+N7	Reference T14 ICD10:F17.2	
+T15	Symptom 1849 1864	kołatania serca
+N8	Reference T15 ICD10:R00.2	Kołatanie serca
+T16	Symptom 1866 1877	tachykardii
+N9	Reference T16 ICD10:R00.0	Tachykardia, nieokreślona
+T17	Symptom 1888 1897	duszności
+N10	Reference T17 ICD10:R06.0	Duszność
+T18	Symptom 1899 1930	ograniczenia tolerancji wysiłku
+T19	Symptom 1939 1965	kłucia w klatce piersiowej
+N11	Reference T19 ICD10:R07.3	Inne bóle w klatce piersiowej
+T20	Symptom 2072 2087	wzruszająca się
+T21	Symptom 2089 2101	zestresowana
+T22	Condition 2116 2137	wole guzkowe tarczycy
+N12	Reference T22 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T23	Investigation 2151 2178	USG Doppler żył kk. dolnych
+T24	Date 2180 2190	05.09.2018
+R2	Dat Arg1:T24 Arg2:T23	
+T25	Investigation_result 2192 2211	bez cech zakrzepicy
+R3	Inv Arg1:T23 Arg2:T25	
+T26	Negation 2223 2229	neguje
+T27	Condition 2213 2222	Uczulenia
+N13	Reference T27 ICD10:T78.4	Alergia, nieokreślona
+R4	Neg Arg1:T26 Arg2:T27	
+T28	Negation 2248 2257	negatywny
+T29	Condition 2231 2246	Wywiad rodzinny
+A1	Status T29 Family
+R5	Neg Arg1:T28 Arg2:T29	
+T30	Drug 2328 2333	Leków
+T31	Negation 2343 2356	nie przyjmuje
+R6	Neg Arg1:T31 Arg2:T30	
+T32	Symptom 2608 2623	kołatania serca
+N14	Reference T32 ICD10:R00.2	Kołatanie serca
+T33	Symptom 2540 2582	kłujących dolegliwości w klatce piersiowej
+N15	Reference T33 ICD10:R07.2	Ból w okolicy przedsercowej
+T34	Symptom 2650 2679	trudności nabraniem powietrza
+T35	Symptom 2691 2736	stany osłabienia, ze stanem przedomdleniowym-
+N16	Reference T35 ICD10:R55	Omdlenie i zapaść
+T36	Negation 2764 2770	Neguje
+T37	Symptom 2771 2790	utraty przytomności
+N17	Reference T37 ICD10:R55	Omdlenie i zapaść
+T38	Condition 2807 2828	wole guzkowe tarczycy
+N18	Reference T38 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T39	Condition 2842 2860	Torbiele obu nerek
+N19	Reference T39 ICD10:N28.1	Torbiel nerki, nabyta
+T40	Condition 2874 2888	Kamica nerkowa
+N20	Reference T40 ICD10:N20.0	Kamica nerki
+T41	Condition 2903 2955	Dyskopatia kręgosłupa odcinka szyjnego i piersiowego
+N21	Reference T41 ICD10:M51	Inne choroby krążka międzykręgowego
+T42	Treatment 2986 3002	cieciu cesarskim
+T43	Date 3003 3007	2015
+R7	Dat Arg1:T43 Arg2:T42	
+T44	Negation 3030 3034	brak
+T45	Treatment 3008 3027	Leczenie przewlekłe
+R8	Neg Arg1:T44 Arg2:T45	
+T46	Condition 3063 3066	WZW
+N22	Reference T46 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T47	Condition 3076 3085	borelioza
+N23	Reference T47 ICD10:A69.2	Choroba z Lyme
+T48	Condition 3092 3096	Odra
+N24	Reference T48 ICD10:B05	Odra
+T49	Negation 3069 3070	-
+R9	Neg Arg1:T49 Arg2:T46	
+T50	Negation 3088 3089	-
+R10	Neg Arg1:T50 Arg2:T47	
+T51	Negation 3099 3100	-
+R11	Neg Arg1:T51 Arg2:T48	
+T52	Condition 3127 3143	matka ca. piersi
+A2	Status T52 Family
+N25	Reference T52 ICD10:C50	Nowotwór złośliwy piersi
+T53	Condition 3146 3161	ojciec prostaty
+A3	Status T53 Family
+N26	Reference T53 ICD10:C61	Nowotwór złośliwy gruczołu krokowego
+T54	Behaviour 3163 3190	Palenie tytoniu: pali od 10
+N27	Reference T54 ICD10:T65.2	Tytoń i nikotyna
+T55	Negation 3231 3234	nie
+T56	Negation 3246 3252	neguje
+T57	Behaviour 3218 3229	Inne używki
+R12	Neg Arg1:T55 Arg2:T57	
+T58	Condition 3235 3244	Uczulenia
+N28	Reference T58 ICD10:T78.4	Alergia, nieokreślona
+R13	Neg Arg1:T56 Arg2:T58	
+T59	Behaviour 3269 3295	warunki mieszkaniowe dobre
+T60	Drug 3320 3331	Propranolol
+T61	Drug_dose 3332 3340	doraźnie
+R14	Drg Arg1:T60 Arg2:T61	
+T62	Investigation 3356 3366	Echo serca
+T63	Investigation 3369 3384	Próba Wysiłkowa
+T64	Condition 1517 1538	Wole guzkowe tarczycy
+N29	Reference T64 ICD10:E04.9	Wole nietoksyczne, nieokreślone

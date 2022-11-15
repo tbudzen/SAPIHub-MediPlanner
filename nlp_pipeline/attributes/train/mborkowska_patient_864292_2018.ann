@@ -1,0 +1,95 @@
+T1	Investigation 2376 2386	echo serca
+T2	Investigation 2388 2408	echo przezprzełykowe
+T3	Investigation 2410 2427	echo obciążeniowe
+T4	Investigation 2429 2432	TET
+T5	Investigation 2434 2438	ABPM
+T6	Investigation 2440 2446	Holter
+T7	Investigation 2448 2467	RTG kl. piersiowej.
+T8	Drug 2325 2337	CoPrestarium
+T9	Drug_dose 2338 2348	10mg/10 mg
+R1	Drg Arg1:T8 Arg2:T9	
+T10	Condition 2263 2272	Uczulenia
+N1	Reference T10 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T11	Negation 2241 2249	nie pali
+T12	Behaviour 2224 2239	Palenie tytoniu
+N2	Reference T12 ICD10:Z72.0	Używanie tytoniu
+R2	Neg Arg1:T11 Arg2:T12	
+T13	Condition 2221 2223	HA
+A1	Status T13 Family
+N3	Reference T13 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T14	Condition 2168 2171	WZW
+N4	Reference T14 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T15	Condition 2173 2182	borelioza
+N5	Reference T15 ICD10:A69.2	Choroba z Lyme
+T16	Negation 2183 2193	nie podaje
+R3	Neg Arg1:T16 Arg2:T15	
+R4	Neg Arg1:T16 Arg2:T14	
+T17	Condition 2133 2140	malaria
+A2	Source T17 Confirmed
+N6	Reference T17 ICD10:B54	Malaria nieokreślona
+T18	Condition 2038 2046	napad AF
+N7	Reference T18 ICD10:I48	Migotanie i trzepotanie przedsionków
+T19	Date 2047 2055	06.2017r
+R5	Dat Arg1:T19 Arg2:T18	
+T20	Condition 438 469	Napadowe migotanie przedsionków
+N8	Reference T20 ICD10:I48	Migotanie i trzepotanie przedsionków
+T21	Treatment 479 489	ablacji RF
+T22	Date 491 496	2011r
+R6	Dat Arg1:T22 Arg2:T21	
+T23	Condition 499 520	Nadciśnienie tętnicze
+N9	Reference T23 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T24	Behaviour 698 738	Dieta lekkostrawna , niskocholesterolowa
+T25	Investigation 751 825	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T26	Investigation 842 876	kontrola ciśnienia tętniczego krwi
+T27	Drug 927 936	Rytmonorm
+T28	Drug 962 969	Pradaxa
+T29	Drug 993 1006	Co-Prestarium
+T30	Drug_dose 937 960	150 mg 2x dz po 1 tabl.
+R7	Drg Arg1:T27 Arg2:T30	
+T31	Drug_dose 970 990	150 2 x dz po 1 tabl
+R8	Drg Arg1:T28 Arg2:T31	
+T32	Drug_dose 1007 1023	10+10 1x dz rano
+R9	Drg Arg1:T29 Arg2:T32	
+T33	Drug 1145 1148	KIG
+T34	Drug 1151 1162	Fraxiparine
+T35	Drug 1164 1173	Rytmonorm
+T36	Drug 1175 1184	Cordarone
+T37	Drug 1186 1192	Prdaxa
+T38	Drug 1194 1207	Co-Prestarium
+T39	Condition 1436 1477	Łagodna niedomykalność zastawki mitralnej
+N10	Reference T39 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T40	Condition 1480 1492	trójdzielnej
+N11	Reference T40 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T41	Condition 1494 1527	Przetrwałe migotanie przedsionków
+N12	Reference T41 ICD10:I48	Migotanie i trzepotanie przedsionków
+T42	Treatment 1530 1569	kardiowersja elektryczna 125J skuteczna
+T43	Date 1570 1580	11.06.2018
+R10	Dat Arg1:T43 Arg2:T42	
+R11	Dat Arg1:T43 Arg2:T41	
+T44	Treatment 1591 1601	ablacji RF
+T45	Condition 1611 1633	migotania przedsionków
+N13	Reference T45 ICD10:I48	Migotanie i trzepotanie przedsionków
+T46	Date 1635 1640	2011r
+R12	Dat Arg1:T46 Arg2:T45	
+R13	Dat Arg1:T46 Arg2:T44	
+T47	Condition 1643 1664	Nadciśnienie tętnicze
+N14	Reference T47 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T48	Condition 1827 1850	nadciśnieniem tętniczym
+N15	Reference T48 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T49	Date 1851 1861	od 19 r.ż,
+R14	Dat Arg1:T49 Arg2:T48	
+T50	Condition 1864 1880	astmą oskrzelową
+N16	Reference T50 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T51	Condition 1882 1915	napadowym migotaniem przedsionków
+N17	Reference T51 ICD10:I48	Migotanie i trzepotanie przedsionków
+T52	Treatment 1920 1932	ablacji RF (
+T53	Date 1932 1937	2011r
+R15	Dat Arg1:T53 Arg2:T52	
+R16	Dat Arg1:T53 Arg2:T51	
+T54	Condition 1985 1994	napadu AF
+N18	Reference T54 ICD10:I48	Migotanie i trzepotanie przedsionków
+T55	Date 1996 2028	kilka godzin do 12h, na dyżurze)
+R17	Dat Arg1:T55 Arg2:T54	
+T56	Behaviour 2250 2262	Inne używki:
+N19	Reference T56 ICD10:Z72	Problemy związane ze stylem życia
+T57	Treatment 630 696	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej.

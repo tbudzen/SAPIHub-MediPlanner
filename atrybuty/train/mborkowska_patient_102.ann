@@ -1,0 +1,57 @@
+T1	Condition 415 483	Wrodzona wada serca pod postacią przełożenia wielkich pni tętniczych
+N1	Reference T1 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T2	Treatment 500 521	korekcji anatomicznej
+T3	Date 523 534	25.12.1995r
+R1	Dat Arg1:T3 Arg2:T1	
+R2	Dat Arg1:T3 Arg2:T2	
+T4	Investigation 807 822	próba wysiłkowa
+T5	Investigation 824 834	Holter-EKG
+T6	Treatment 960 993	Coroczne kontrole stomatologiczne
+T7	Behaviour 997 1032	Dostosowanie wysiłków do wydolności
+T8	Investigation 2224 2234	echo serca
+T9	Investigation 2236 2246	Holter-ekg
+T10	Investigation 2248 2257	Holter-RR
+T11	Investigation 2259 2293	ergispirometryczna próba wysiłkowa
+T12	Negation 2175 2186	Nie stosuje
+T13	Drug 2190 2201	stałe leków
+R3	Neg Arg1:T12 Arg2:T13	
+T14	Treatment 2145 2174	Zabiegi operacyjne jak wyżej.
+T15	Negation 2062 2072	nieistotny
+T16	Condition 2046 2061	Wywiad rodzinny
+A1	Status T16 Family
+R4	Neg Arg1:T15 Arg2:T16	
+T17	Symptom 1999 2007	Omdlenia
+N2	Reference T17 ICD10:R55	Omdlenie i zapaść
+T18	Symptom 2009 2028	utraty przytomności
+N3	Reference T18 ICD10:R55	Omdlenie i zapaść
+T19	Negation 2029 2044	nie występowały
+R5	Neg Arg1:T19 Arg2:T18	
+R6	Neg Arg1:T19 Arg2:T17	
+T20	Investigation 1963 1976	kontroluje RR
+T21	Negation 1959 1962	Nie
+R7	Neg Arg1:T21 Arg2:T20	
+T22	Symptom 1865 1957	dolegliwości bólowe w klatce piersiowej o charakterze kłucia głównie w sytuacjach stresowych
+N4	Reference T22 ICD10:R07.3	Inne bóle w klatce piersiowej
+T23	Condition 1191 1260	wrodzonej wady serca pod postacią przełożenia wielkich pni tętniczych
+N5	Reference T23 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T24	Treatment 1262 1290	metodą korekcji anatomicznej
+T25	Date 1291 1305	(25.12.1995r.)
+R8	Dat Arg1:T25 Arg2:T24	
+R9	Dat Arg1:T25 Arg2:T23	
+T26	Investigation 1380 1406	próby ergospirometrycznej.
+T27	Investigation 1490 1518	badaniu echokardiograficznym
+T28	Investigation_result 1519 1733	potwierdzono prawidłowe przepływy przez zastawki wielkich pni tętniczych, z łagodnymi niedomykalnościami, stwierdzono niewielkie przyśpieszenie przepływu w miejscu zespolenia tętnicy płucnej, bez istotnej progresji
+R10	Inv Arg1:T27 Arg2:T28	
+T29	Investigation_result 1743 1757	V do 2,3m/sek,
+T30	Date 1480 1485	2013r
+R11	Dat Arg1:T30 Arg2:T27	
+T31	Date 1760 1765	2007r
+T32	Investigation_result 1766 1772	2m/sek
+R12	Inv Arg1:T27 Arg2:T32	
+R13	Dat Arg1:T31 Arg2:T32	
+T33	Investigation_result 1780 1848	prawidłowych wymiarach jam komór i dobrej kurczliwości mięśnia serca
+R14	Dat Arg1:T30 Arg2:T33	
+T34	Treatment 682 730	Okresowa kontrola w tut. Poradni Kardiologicznej
+T35	Date 731 750	za około 6 miesięcy
+R15	Dat Arg1:T35 Arg2:T34	
+T36	Treatment 753 798	Kontrolne badania w Klinice Kardiologii ICZMP

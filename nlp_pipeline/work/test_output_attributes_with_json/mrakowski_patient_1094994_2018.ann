@@ -1,0 +1,28 @@
+T1	Treatment 331 367	Hospitalizacja w Klinice Kardiologii
+T2	Investigation 384 398	koronarografii
+T3	Date 406 417	25.06.2019r
+T4	Investigation 505 548	Ambulatoryjna kontrola ciśnienia tętniczego
+T5	Treatment 553 613	Stała opieka ogólnopediatryczna w Poradni Lekarza Rodzinnego
+T6	Condition 1006 1058	Wrodzona wada serca pod postacią Zepołu Taussig-Bing
+T7	Condition 1061 1082	hipoplazją łuku aorty
+T8	Condition 1085 1101	koarktacją aorty
+T9	Treatment 1115 1162	leczeniu operacyjnym metodą korekcji całkowitej
+T10	Date 1164 1175	04.06.2010r
+T11	Condition 1313 1328	z. Tausing-Bing
+T12	Investigation 1343 1360	badania kontrolne
+T13	Date 1362 1374	tydzien temu
+T14	Condition 1375 1383	infekcja
+T15	Drug 1406 1416	antybiotyk
+T16	Symptom 1419 1450	kaszel produktywny , zanikajacy
+T17	Drug 738 743	leków
+T18	Negation 734 737	Bez
+N1	Reference T6 ICD10:Q20	Wrodzone wady rozwojowe jam i poÅÄczeÅ sercowych
+N2	Reference T7 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+N3	Reference T9 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N4	Reference T16 ICD10:R05	Kaszel
+R1	Dat Arg1:T3 Arg2:T1
+R2	Dat Arg1:T3 Arg2:T2
+R4	Neg Arg1:T18 Arg2:T17
+R6	Dat Arg1:T13 Arg2:T14
+R7	Dat Arg1:T13 Arg2:T12
+A1	Source T16 Declared

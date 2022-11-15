@@ -1,0 +1,110 @@
+T1	Drug 341 349	Bisocard
+T2	Drug 351 359	Suvardio
+T3	Drug 361 369	Polocard
+T4	Drug 371 377	Karbis
+T5	Investigation 616 641	angioCT tętnic wieńcowych
+T6	Investigation 644 674	kontrolne badanie ogólne moczu
+T7	Condition 936 989	: Poreumatyczna niedomykalność zastawki mitralnej Ist
+N1	Reference T7 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T8	Condition 991 1002	Szkarlatyna
+N2	Reference T8 ICD10:A38	Choroba zakaźna wywołana przez Streptococcus pyogenes [płonica]
+T9	Date 1003 1017	w dzieciństwie
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Condition 1019 1040	Nadciśnienie tętnicze
+N3	Reference T10 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T11	Condition 1042 1061	Hipercholestrolemia
+N4	Reference T11 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T12	Condition 1082 1111	Podejrzenie choroby wieńcowej
+A2	Source T12 Declared
+N5	Reference T12 ICD10:I20	Choroba niedokrwienna serca
+T13	Condition 1257 1259	HA
+N6	Reference T13 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T14	Condition 1261 1280	hipercholestrolemią
+N7	Reference T14 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T15	Condition 1291 1317	niedomykalności mitralnej,
+N8	Reference T15 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T16	Condition 1318 1329	szkarlatyny
+N9	Reference T16 ICD10:A38	
+T17	Investigation_result 1375 1404	wahań RR (135/90-180/100mmHg)
+T18	Symptom 1410 1444	odczuwanej niemiarowej pracy serca
+T19	Investigation_result 1445 1464	(skurcze dodatkowe)
+T20	Symptom 1488 1511	nieduże obrzęki podudzi
+N10	Reference T20 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T21	Negation 1512 1518	Neguje
+T22	Symptom 1520 1532	zasłabnięcia
+N11	Reference T22 ICD10:R55	Omdlenie i zapaść
+T23	Symptom 1534 1542	omdlenia
+N12	Reference T23 ICD10:R55	Omdlenie i zapaść
+T24	Symptom 1544 1554	krwawienia
+N13	Reference T24 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T25	Symptom 1556 1569	czarne stolce
+N14	Reference T25 ICD10:K92.1	Stolce smołowate
+T26	Symptom 1571 1588	brunatne wymioty,
+N15	Reference T26 ICD10:K92.0	Wymioty krwawe
+T27	Condition 1589 1605	chorobę wrzodową
+N16	Reference T27 ICD10:K27	
+T28	Symptom 1607 1621	duszność nocną
+N17	Reference T28 ICD10:R06.0	Duszność
+T29	Symptom 1623 1639	obrzęki podudzi,
+N18	Reference T29 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T30	Symptom 1640 1664	bóle w klatce piersiowej
+N19	Reference T30 ICD10:R07.3	Inne bóle w klatce piersiowej
+T31	Condition 1665 1667	DM
+N20	Reference T31 ICD10:E13	Inne określone postacie cukrzycy
+R2	Neg Arg1:T21 Arg2:T22	
+R3	Neg Arg1:T21 Arg2:T23	
+R4	Neg Arg1:T21 Arg2:T24	
+R5	Neg Arg1:T21 Arg2:T25	
+R6	Neg Arg1:T21 Arg2:T26	
+R7	Neg Arg1:T21 Arg2:T27	
+R8	Neg Arg1:T21 Arg2:T28	
+R10	Neg Arg1:T21 Arg2:T29	
+R11	Neg Arg1:T21 Arg2:T30	
+R9	Neg Arg1:T21 Arg2:T31	
+T32	Treatment 1689 1698	usunięcie
+T33	Condition 1699 1712	polipa macicy
+N21	Reference T33 ICD10:N84	Polip żeńskiego układu rozrodczego
+T34	Date 1714 1718	2016
+R12	Dat Arg1:T34 Arg2:T33	
+R13	Dat Arg1:T34 Arg2:T32	
+T35	Negation 1738 1743	nigdy
+T36	Negation 1757 1760	nie
+T37	Behaviour 1721 1737	Palenie tytoniu:
+N22	Reference T37 ICD10:Z72.0	Używanie tytoniu
+R14	Neg Arg1:T35 Arg2:T37	
+T38	Behaviour 1744 1756	Inne używki:
+R15	Neg Arg1:T36 Arg2:T38	
+T39	Condition 1761 1779	Uczulenia: na leki
+N23	Reference T39 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T40	Negation 1780 1786	nie ma
+R16	Neg Arg1:T40 Arg2:T39	
+T41	Condition 1814 1817	WZW
+T42	Negation 1818 1821	(-)
+R17	Neg Arg1:T42 Arg2:T41	
+T43	Condition 1824 1833	borelioza
+N25	Reference T43 ICD10:A69.2	Choroba z Lyme
+T44	Negation 1834 1839	( - )
+R18	Neg Arg1:T44 Arg2:T43	
+T45	Condition 1841 1844	tbc
+N26	Reference T45 ICD10:A15	
+T46	Negation 1845 1848	(-)
+R19	Neg Arg1:T46 Arg2:T45	
+T47	Behaviour 1865 1891	warunki mieszkaniowe dobre
+T48	Drug 1929 1937	Bisocard
+T49	Drug_dose 1938 1956	5mg 1x 1 tabl/rano
+R20	Drg Arg1:T48 Arg2:T49	
+T50	Drug 1957 1965	Suvardio
+T51	Drug_dose 1966 1985	?mg 1x 1 tabl/wiecz
+R21	Drg Arg1:T50 Arg2:T51	
+T52	Drug 1986 1992	Karbis
+T53	Drug_dose 1993 2025	8mg 1/2-1 tabl/wiecz w zal od RR
+R22	Drg Arg1:T52 Arg2:T53	
+T54	Investigation 2109 2113	ECHO
+T55	Investigation 2115 2133	EKG metodą Holtera
+T56	Investigation 2135 2139	ABPM
+T57	Investigation 2141 2156	próba wysiłkowa
+N24	Reference T41 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+A3	Status T32 Historical_Insignificant
+A4	Status T33 Historical_Insignificant
+T58	Date 1330 1345	w dzieciństwie,
+R23	Dat Arg1:T58 Arg2:T16	

@@ -1,0 +1,149 @@
+T1	Condition 439 466	Choroba niedokrwienna serca
+N1	Reference T1 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T2	Condition 468 489	Nadciśnienie tętnicze
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Condition 491 515	Zespół jelita drażliwego
+N3	Reference T3 ICD10:K58	Zespół jelita drażliwego
+T4	Symptom 517 530	Zawroty głowy
+N4	Reference T4 ICD10:R42	Zawroty głowy i odurzenie
+T5	Condition 532 540	Depresja
+N5	Reference T5 ICD10:F33	Zaburzenia depresyjne nawracające
+T6	Treatment 562 575	appendektomii
+A1	Status T6 Historical_Insignificant
+T7	Treatment 578 594	cholecystektomii
+A2	Status T7 Historical_Insignificant
+T8	Treatment 706 728	kontrola u lekarza POZ
+T9	Treatment 731 770	dalsza opieka w Poradni Kardiologicznej
+T10	Investigation 773 821	umówiono koronarografię w szpitalu MSWiA w Łodzi
+T11	Date 831 841	12.11.2019
+R1	Dat Arg1:T11 Arg2:T10	
+T12	Drug 1065 1077	Tertensif SR
+T13	Drug 1079 1087	Spironol
+T14	Drug 1089 1095	Tolura
+T15	Drug 1097 1108	Molsidomina
+T16	Drug 1110 1119	Simvacard
+T17	Drug 1121 1138	Duspatalin retard
+T18	Drug 1140 1146	Coaxil
+T19	Drug 1148 1160	Atorvasterol
+T20	Drug 1162 1167	Otrex
+T21	Drug 1169 1176	Clexane
+T22	Drug 1178 1190	Preductal MR
+T23	Drug 1192 1197	Acard
+T24	Symptom 1393 1416	uczucia kołatania serca
+N6	Reference T24 ICD10:R00.2	Kołatanie serca
+T25	Symptom 1418 1459	dolegliwości bólowych w klatce piersiowej
+N7	Reference T25 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T26	Symptom 1465 1508	podwyższonych wartości ciśnienia tętniczego
+N8	Reference T26 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T27	Symptom 1511 1563	charakterze kłucia bez związku z wysiłkiem fizycznym
+N9	Reference T27 ICD10:R07.3	
+T28	Negation 1619 1625	Neguje
+T29	Symptom 1626 1638	zasłabnięcia
+T30	Symptom 1640 1648	omdlenia
+N10	Reference T30 ICD10:R55	Omdlenie i zapaść
+T31	Symptom 1650 1660	krwawienia
+N11	Reference T31 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T32	Symptom 1662 1675	czarne stolce
+N12	Reference T32 ICD10:K92.1	Stolce smołowate
+T33	Symptom 1677 1693	brunatne wymioty
+N13	Reference T33 ICD10:K92.0	Wymioty krwawe
+T34	Condition 1695 1711	chorobę wrzodową
+N14	Reference T34 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T35	Symptom 1713 1727	duszność nocną
+N15	Reference T35 ICD10:R06.0	Duszność
+R2	Neg Arg1:T28 Arg2:T35	
+R3	Neg Arg1:T28 Arg2:T34	
+R4	Neg Arg1:T28 Arg2:T33	
+R5	Neg Arg1:T28 Arg2:T32	
+R6	Neg Arg1:T28 Arg2:T31	
+R7	Neg Arg1:T28 Arg2:T30	
+R8	Neg Arg1:T28 Arg2:T29	
+T36	Symptom 1729 1748	Innych dolegliwości
+T37	Negation 1749 1760	nie zgłasza
+R9	Neg Arg1:T37 Arg2:T36	
+T38	Condition 1775 1796	Nadciśnienie tętnicze
+N16	Reference T38 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T39	Condition 1798 1820	Chromanie przestankowe
+N17	Reference T39 ICD10:I73.9	Choroba naczyń obwodowych, nieokreślona
+T40	Condition 1822 1846	Zespół jelita drażliwego
+N18	Reference T40 ICD10:K58	Zespół jelita drażliwego
+T41	Symptom 1848 1861	Zawroty głowy
+N19	Reference T41 ICD10:R42	Zawroty głowy i odurzenie
+T42	Condition 1863 1871	Depresja
+A3	Source T42 Declared
+N20	Reference T42 ICD10:F33	Zaburzenia depresyjne nawracające
+T43	Treatment 1873 1890	Przebyte operacje
+T44	Treatment 1900 1912	appedektomii
+A4	Status T44 Historical_Insignificant
+T45	Treatment 1922 1952	operacji pęcherzyka żółciowego
+A5	Status T45 Historical_Insignificant
+T46	Condition 1980 1983	WZW
+N21	Reference T46 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T47	Condition 1992 2001	borelioza
+N22	Reference T47 ICD10:A69.2	Choroba z Lyme
+T48	Condition 2009 2017	grużlica
+N23	Reference T48 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T49	Condition 2025 2029	odra
+N24	Reference T49 ICD10:B05	Odra
+T50	Negation 2032 2033	-
+R10	Neg Arg1:T50 Arg2:T49	
+T51	Negation 2020 2021	-
+R11	Neg Arg1:T51 Arg2:T48	
+T52	Negation 2004 2005	-
+R12	Neg Arg1:T52 Arg2:T47	
+T53	Negation 1986 1987	-
+R13	Neg Arg1:T53 Arg2:T46	
+T54	Condition 2036 2051	Wywiad rodzinny
+A6	Status T54 Family
+T55	Condition 2053 2058	zawał
+A7	Status T55 Family
+N25	Reference T55 ICD10:I25.2	Przebyty zawał serca
+T56	Condition 2095 2103	"zapaść"
+A8	Status T56 Family
+N26	Reference T56 ICD10:R55	Omdlenie i zapaść
+T57	Behaviour 2105 2120	Palenie tytoniu
+T58	Negation 2122 2140	aktualnie nie pali
+R14	Neg Arg1:T58 Arg2:T57	
+T60	Behaviour 2156 2178	20 papierosów/dziennie
+T61	Date 2179 2191	przez 30 lat
+R15	Dat Arg1:T61 Arg2:T60	
+T59	Behaviour 2193 2204	Inne używki
+T62	Negation 2206 2212	neguje
+R16	Neg Arg1:T62 Arg2:T59	
+T63	Condition 2214 2223	Uczulenia
+N29	Reference T63 ICD10:T78.4	Alergia, nieokreślona
+T64	Negation 2225 2231	neguje
+R17	Neg Arg1:T64 Arg2:T63	
+T65	Behaviour 2249 2275	warunki mieszkaniowe dobre
+T66	Behaviour 2298 2306	emerytka
+T67	Drug 2314 2326	Tertensif SR
+T68	Drug_dose 2327 2364	1 tabletka R, Spironol 25mg 1 tabl. R
+R18	Drg Arg1:T67 Arg2:T68	
+T69	Drug 2366 2372	Tolura
+T70	Drug_dose 2373 2387	40mg 1 tabl. W
+R19	Drg Arg1:T69 Arg2:T70	
+T71	Drug 2389 2392	IPP
+T72	Drug_dose 2393 2407	20mg 1 tabl. R
+R20	Drg Arg1:T71 Arg2:T72	
+T73	Drug 2409 2420	Molsidomina
+T74	Drug_dose 2421 2430	1 tabl. R
+R21	Drg Arg1:T73 Arg2:T74	
+T75	Drug 2432 2441	Simvacard
+T76	Drug_dose 2442 2456	20mg 1 tabl. W
+R22	Drg Arg1:T75 Arg2:T76	
+T77	Drug 2458 2475	Duspatalin retard
+T78	Drug_dose 2476 2488	1 tabl R i W
+R23	Drg Arg1:T77 Arg2:T78	
+T79	Drug 2490 2499	Loperamid
+T80	Drug_dose 2500 2513	1 tabl. R i W
+R24	Drg Arg1:T79 Arg2:T80	
+T81	Drug 2515 2521	Coaxil
+T82	Drug_dose 2522 2535	1 tabl. R i W
+R25	Drg Arg1:T81 Arg2:T82	
+T83	Investigation 2551 2554	TTE
+T84	Investigation 2556 2559	TET
+T85	Investigation 2561 2565	ABPM
+T86	Investigation 2567 2577	Holter EKG
+N30	Reference T29 ICD10:R55	Omdlenie i zapaść
+N27	Reference T57 ICD10:Z72.0	Używanie tytoniu
+N28	Reference T60 ICD10:Z72.0	Używanie tytoniu

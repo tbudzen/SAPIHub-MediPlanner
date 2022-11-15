@@ -1,0 +1,58 @@
+T1	Treatment 344 371	dalsza opieka w poradni POZ
+T2	Behaviour 379 460	dieta bogata w kwasy omega-3 i uboga w cukry proste z unikaniem spożycia alkoholu
+T3	Investigation 466 486	kontrola lipidogramu
+T4	Date 487 499	za 6 tygodni
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Behaviour 505 550	stały, umiarkowany, aerobowy wysiłek fizyczny
+T6	Symptom 786 807	Bóle w kl. piersiowej
+N1	Reference T6 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T7	Condition 809 829	Hipertriglicerydemia
+N2	Reference T7 ICD10:E78.1	Czysta hiperglicerydemia
+T8	Symptom 1007 1032	spadku tolerancji wysiłku
+N3	Reference T8 ICD10:R53	Złe samopoczucie i zmęczenie
+T9	Date 1033 1052	od ok. 2-3 miesięcy
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Symptom 1071 1111	silnych bólów głowy po wysiłku fizycznym
+N4	Reference T10 ICD10:R51	Ból głowy
+T11	Date 1126 1149	ok. 1 miesiąc wcześniej
+T12	Symptom 1150 1265	incydent kłującego bólu w ok. koniuszkowej trwający 2-3 dni, nasilający się przy oddychaniu i zmianie pozycji ciała
+N5	Reference T12 ICD10:R07.2	Ból w okolicy przedsercowej
+R3	Dat Arg1:T11 Arg2:T12	
+T14	Treatment 1268 1285	Przebyte operacje
+T15	Negation 1287 1297	nie podaje
+R4	Neg Arg1:T15 Arg2:T14	
+T16	Treatment 1298 1317	Leczenie przewlekłe
+T17	Negation 1319 1329	nie podaje
+R5	Neg Arg1:T17 Arg2:T16	
+T18	Condition 1357 1360	WZW
+N7	Reference T18 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T19	Condition 1362 1371	borelioza
+N8	Reference T19 ICD10:A69.2	Choroba z Lyme
+T20	Negation 1374 1384	nie podaje
+R6	Neg Arg1:T20 Arg2:T19	
+R7	Neg Arg1:T20 Arg2:T18	
+T21	Condition 1385 1400	Wywiad rodzinny
+A1	Status T21 Family
+T22	Negation 1402 1412	nieistotny
+R8	Neg Arg1:T22 Arg2:T21	
+T23	Behaviour 1413 1428	Palenie tytoniu
+T24	Negation 1430 1440	nie podaje
+R9	Neg Arg1:T24 Arg2:T23	
+T25	Behaviour 1441 1452	Inne używki
+T26	Negation 1454 1464	nie podaje
+R10	Neg Arg1:T26 Arg2:T25	
+T27	Condition 1465 1474	Uczulenia
+N10	Reference T27 ICD10:T78.4	Alergia, nieokreślona
+T28	Negation 1475 1485	nie podaje
+R11	Neg Arg1:T28 Arg2:T27	
+T29	Behaviour 1504 1531	były funkcjonariusz policji
+T30	Investigation 1575 1585	echo serca
+T31	Investigation 1587 1590	TET
+T32	Investigation 1592 1596	ABPM
+T33	Investigation 1598 1604	Holter
+T34	Investigation 1606 1624	RTG kl. piersiowej
+N9	Reference T23 ICD10:Z72.0	Używanie tytoniu
+N6	Reference T25 ICD10:Z72	Problemy związane ze stylem życia
+T13	Negation 1538 1541	bez
+T35	Drug 1542 1547	leków
+R12	Neg Arg1:T13 Arg2:T35	

@@ -1,0 +1,107 @@
+T1	Drug 340 348	Dicoflor
+T2	Drug 350 356	Vit D3
+T3	Drug 469 477	Dicoflor
+T4	Drug_dose 478 494	2 x 5 kropli pos
+T5	Date 495 507	przez 14 dni
+T6	Drug_dose 511 529	potem 1 x 5 kropli
+T7	Date 530 546	przez 2 miesiące
+T8	Drug 551 557	Vit D3
+T9	Drug_dose 558 571	1 x 400 j pos
+T10	Treatment 576 604	Dalsza opieka kardiologiczna
+T11	Treatment 606 644	wizyta w Poradni Kardiologicznej ICZMP
+T12	Date 645 663	w dniu 23.04.2019r
+T13	Drug 696 708	Innofer baby
+T14	Drug_dose 709 721	1 x 1 ml pos
+T15	Date 722 735	przez miesiąc
+T16	Drug 740 749	Innovitum
+T17	Drug_dose 750 766	1 x 1 kropla pos
+T18	Date 767 780	przez miesiąc
+T19	Investigation 785 804	Kontrola morfologii
+T20	Date 821 831	za miesiąc
+T21	Negation 836 842	Nie ma
+T22	Condition 843 903	przeciwwskazań do kontynuowania szczepień ochronnych w/g PSO
+T23	Condition 1144 1209	Wrodzona wada serca pod postacią zastawkowego zwężenia aortalnego
+N1	Reference T23 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T24	Investigation 1222 1240	cewnikowaniu serca
+T25	Treatment 1243 1267	walwuloplastyką aortalną
+T26	Date 1269 1280	18.03.2019r
+T27	Condition 1418 1434	stenozą aortalną
+N2	Reference T27 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T28	Investigation 1475 1493	cewnikowania serca
+T29	Treatment 1495 1525	balonowanie zastawki aortalnej
+T30	Symptom 1536 1560	w stanie ogólnym ciężkim
+T31	Treatment 1562 1574	zaintubowany
+T32	Treatment 1585 1601	żywienie dożylne
+T33	Condition 1628 1633	CI PI
+T34	Condition 1635 1654	w 40 tygodniu ciąży
+T35	Treatment 1656 1680	drogą cięcia cesarskiego
+T36	Condition 1733 1743	małowodzie
+N3	Reference T36 ICD10:O41.0	Małowodzie
+T37	Condition 1693 1731	zagrażająca infekcja wewnątrz maciczna
+T38	Investigation 1748 1764	masą urodzeniową
+T39	Investigation_result 1765 1770	3200g
+T40	Investigation 1814 1827	w skali Apgar
+T41	Investigation_result 1800 1813	9/9/9 punktów
+R1	Inv Arg1:T40 Arg2:T41	
+T42	Investigation_result 1851 1877	głośnego szmeru nad sercem
+T43	Investigation 1887 1926	przesiewowe badanie echokardiograficzne
+T44	Investigation_result 1939 1993	podejrzenie zwężenia zastawki aortalnej i cieśni aorty
+A1	Source T44 Declared
+T45	Investigation 2007 2023	badaniu angio-TK
+T46	Investigation_result 2032 2042	drożny PDA
+N4	Reference T46 ICD10:Q25.0	Drożny przewód tętniczy
+R2	Inv Arg1:T45 Arg2:T46	
+T47	Condition 2053 2080	zwężenia zastawki aortalnej
+N5	Reference T47 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T48	Investigation_result 2083 2103	narastania gradientu
+T49	Investigation 2131 2149	cewnikowania serca
+N6	Reference T35 ICD10:O82.0	Poród pojedynczy przez planowe cięcie cesarskie
+R3	Drg Arg1:T3 Arg2:T4	
+R4	Dat Arg1:T5 Arg2:T4	
+R5	Drg Arg1:T3 Arg2:T6	
+R6	Dat Arg1:T7 Arg2:T6	
+R7	Drg Arg1:T8 Arg2:T9	
+R8	Dat Arg1:T12 Arg2:T11	
+R9	Dat Arg1:T15 Arg2:T13	
+R10	Drg Arg1:T13 Arg2:T14	
+R11	Drg Arg1:T16 Arg2:T17	
+R12	Dat Arg1:T18 Arg2:T16	
+R13	Dat Arg1:T20 Arg2:T19	
+R14	Neg Arg1:T21 Arg2:T22	
+R15	Dat Arg1:T26 Arg2:T25	
+R16	Dat Arg1:T26 Arg2:T24	
+R17	Inv Arg1:T38 Arg2:T39	
+T50	Condition 2286 2302	stenozą aortalną
+N7	Reference T50 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T51	Investigation 2343 2361	cewnikowania serca
+T52	Treatment 2363 2393	balonowanie zastawki aortalnej
+T53	Symptom 2404 2428	w stanie ogólnym ciężkim
+T54	Treatment 2430 2442	zaintubowany
+T55	Treatment 2453 2469	żywienie dożylne
+T56	Condition 2496 2501	CI PI
+T57	Condition 2505 2522	40 tygodniu ciąży
+T58	Condition 2524 2548	drogą cięcia cesarskiego
+N8	Reference T58 ICD10:O82.0	Poród pojedynczy przez planowe cięcie cesarskie
+T59	Condition 2561 2599	zagrażająca infekcja wewnątrz maciczna
+T60	Condition 2601 2611	małowodzie
+N9	Reference T60 ICD10:O41.0	Małowodzie
+T61	Investigation 2616 2632	masą urodzeniową
+T62	Investigation_result 2633 2638	3200g
+T63	Investigation 2682 2695	w skali Apgar
+T64	Investigation_result 2668 2681	9/9/9 punktów
+T65	Investigation_result 2719 2745	głośnego szmeru nad sercem
+T66	Investigation 2755 2794	przesiewowe badanie echokardiograficzne
+T67	Investigation_result 2807 2861	podejrzenie zwężenia zastawki aortalnej i cieśni aorty
+A2	Source T67 Declared
+R18	Inv Arg1:T66 Arg2:T67	
+T68	Investigation 2875 2891	badaniu angio-TK
+T69	Investigation_result 2900 2910	drożny PDA
+N10	Reference T69 ICD10:Q25.0	Drożny przewód tętniczy
+R19	Inv Arg1:T68 Arg2:T69	
+R20	Inv Arg1:T63 Arg2:T64	
+R21	Inv Arg1:T61 Arg2:T62	
+T70	Condition 2921 2948	zwężenia zastawki aortalnej
+N11	Reference T70 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T71	Investigation_result 2951 2971	narastania gradientu
+T72	Investigation 2999 3017	cewnikowania serca
+R22	Inv Arg1:T43 Arg2:T44	

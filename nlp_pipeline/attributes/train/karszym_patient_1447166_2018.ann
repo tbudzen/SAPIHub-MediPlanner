@@ -1,0 +1,54 @@
+T1	Drug 344 352	Spironol
+T2	Drug 354 360	Acesan
+T3	Condition 544 618	Wrodzona wada układu krążenia - zarośnięcie ujścia lewej tętnicy wieńcowej
+N1	Reference T3 ICD10:Q24.5	Wada rozwojowa naczyń wieńcowych
+T4	Treatment 631 659	operacji kardiochirurgicznej
+N2	Reference T4 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T5	Date 661 672	04.07.2018r
+T6	Condition 679 714	Niedomykalność zastawki dwudzielnej
+T7	Drug 860 868	Spironol
+R1	Dat Arg1:T5 Arg2:T4	
+T8	Drug_dose 869 880	1 x 12,5 mg
+T9	Drug 883 892	Captopril
+T10	Drug_dose 893 903	1 x 0,5 mg
+T11	Drug 906 912	Acesan
+T12	Drug_dose 913 922	1 x 15 mg
+T13	Treatment 925 959	kontrola w Poradni Kardiologicznej
+T14	Date 960 969	za 3 m-cw
+T15	Condition 1174 1261	Wrodzona wada serca - nieprawidłowe odejście lewej tętnicy wieńcowej od tętnicy płucnej
+N4	Reference T15 ICD10:Q24.5	Wada rozwojowa naczyń wieńcowych
+T16	Condition 1263 1294	zespół Bland, White'a, Garlanda
+N5	Reference T16 ICD10:Q24.5	Wada rozwojowa naczyń wieńcowych
+T17	Condition 1300 1333	Niedomykalność zastawki mitralnej
+T18	Condition 1338 1363	Komorowe zaburzenia rytmu
+N7	Reference T18 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T19	Drug 1528 1536	Spironol
+T20	Drug 1538 1547	Captopril
+T21	Drug 1549 1552	ANA
+T22	Drug 1554 1562	Relanium
+T23	Drug 1564 1573	Cefazolin
+T24	Treatment 1575 1586	przetoczono
+T25	Drug 1587 1593	NUKKCz
+T26	Condition 1729 1748	wrodzona wadą serca
+N8	Reference T26 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T27	Drug 1804 1812	Spironol
+T28	Drug 1815 1823	Polocard
+T29	Condition 1826 1843	wywiad alergiczny
+N9	Reference T29 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T30	Negation 1844 1850	ujemny
+T31	Condition 1993 2004	z. Garlanda
+N10	Reference T31 ICD10:Q24.5	Wada rozwojowa naczyń wieńcowych
+T32	Treatment 2036 2062	ewent. leczenie operacyjne
+T33	Date 2065 2080	w kwietniu 2018
+T34	Condition 2081 2091	posocznica
+N11	Reference T34 ICD10:A41.9	Posocznica, nieokreślona
+T35	Drug 2146 2155	Captopril
+T36	Drug 2158 2167	Spioronol
+R2	Dat Arg1:T33 Arg2:T34	
+R3	Neg Arg1:T30 Arg2:T29	
+R4	Drg Arg1:T7 Arg2:T8	
+R5	Drg Arg1:T9 Arg2:T10	
+R6	Drg Arg1:T11 Arg2:T12	
+N6	Reference T17 ICD10:Q23.3	Wrodzona niedomykalność zastawki mitralnej
+N3	Reference T6 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+R7	Dat Arg1:T14 Arg2:T13	

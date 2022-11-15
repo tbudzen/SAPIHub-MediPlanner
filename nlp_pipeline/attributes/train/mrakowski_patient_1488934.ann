@@ -1,0 +1,105 @@
+T1	Treatment 331 353	kontrola u lekarza POZ
+T2	Behaviour 356 381	dieta niskocholesterolowa
+T3	Investigation 384 445	okresowa kontrola lipidogramu, AST, ALT, CK i amylazy, lipazy
+T4	Treatment 448 489	wydano skierowanie do Poradni Genetycznej
+T5	Condition 503 523	hipertriglicerydemii
+N1	Reference T5 ICD10:E78.1	Czysta hiperglicerydemia
+T6	Treatment 527 555	regularne przyjmowanie leków
+T7	Condition 774 785	Tachykardia
+N2	Reference T7 ICD10:R00.0	Tachykardia, nieokreślona
+T8	Condition 787 810	Hiperlipidemia mieszana
+N3	Reference T8 ICD10:E78.2	Hiperlipidemia mieszana
+T9	Drug 931 937	Sortis
+T10	Drug 939 953	Lipanthyl 267M
+T11	Condition 1096 1119	hiperlipidemią mieszaną
+N4	Reference T11 ICD10:E78.2	Hiperlipidemia mieszana
+T12	Symptom 1150 1179	uczucia szybkiego bicia serca
+N5	Reference T12 ICD10:R00.0	Tachykardia, nieokreślona
+T13	Investigation_result 1181 1191	ok 100/min
+N6	Reference T13 ICD10:R00.0	Tachykardia, nieokreślona
+T14	Symptom 1259 1319	dyskomfort w okolicy przedsercowej, związany z pozycją ciała
+N7	Reference T14 ICD10:R07.2	Ból w okolicy przedsercowej
+T15	Date 1321 1334	od ponad roku
+R1	Dat Arg1:T15 Arg2:T14	
+T16	Negation 1336 1342	Neguje
+T17	Symptom 1344 1356	zasłabnięcia
+T18	Symptom 1358 1366	omdlenia
+N8	Reference T18 ICD10:R55	Omdlenie i zapaść
+T19	Symptom 1368 1378	krwawienia
+T20	Condition 1380 1396	chorobę wrzodową
+N10	Reference T20 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T21	Symptom 1398 1406	duszność
+N11	Reference T21 ICD10:R06.0	Duszność
+T22	Symptom 1408 1423	obrzęki podudzi
+T23	Condition 1425 1427	DM
+N13	Reference T23 ICD10:E14	Cukrzyca nieokreślona
+R2	Neg Arg1:T16 Arg2:T23	
+R3	Neg Arg1:T16 Arg2:T22	
+R4	Neg Arg1:T16 Arg2:T21	
+R5	Neg Arg1:T16 Arg2:T20	
+R6	Neg Arg1:T16 Arg2:T19	
+R7	Neg Arg1:T16 Arg2:T18	
+R8	Neg Arg1:T16 Arg2:T17	
+T24	Treatment 1430 1447	Przebyte operacje
+T25	Negation 1449 1452	nie
+R9	Neg Arg1:T25 Arg2:T24	
+T26	Behaviour 1453 1468	Palenie tytoniu
+T27	Negation 1470 1478	nie pali
+T28	Date 1479 1488	od 10 lat
+R10	Neg Arg1:T27 Arg2:T26	
+R11	Dat Arg1:T28 Arg2:T26	
+T29	Behaviour 1489 1500	Inne używki
+T30	Negation 1502 1505	nie
+R12	Neg Arg1:T30 Arg2:T29	
+T31	Condition 1506 1515	Uczulenia
+T32	Condition 1527 1534	na leki
+T33	Negation 1535 1538	nie
+R13	Neg Arg1:T33 Arg2:T32	
+T34	Condition 1567 1570	WZW
+N17	Reference T34 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T35	Condition 1577 1586	borelioza
+N18	Reference T35 ICD10:A69.2	Choroba z Lyme
+T36	Condition 1592 1595	tbc
+T37	Condition 1601 1605	odra
+N20	Reference T37 ICD10:B05	Odra
+T38	Condition 1611 1625	kontakt z odrą
+N21	Reference T38 ICD10:B05	Odra
+T39	Negation 1627 1628	-
+R14	Neg Arg1:T39 Arg2:T38	
+T40	Negation 1607 1608	-
+R15	Neg Arg1:T40 Arg2:T37	
+T41	Negation 1597 1598	-
+R16	Neg Arg1:T41 Arg2:T36	
+T42	Negation 1588 1589	-
+R17	Neg Arg1:T42 Arg2:T35	
+T43	Negation 1572 1573	-
+R18	Neg Arg1:T43 Arg2:T34	
+T44	Condition 1632 1651	wywiadzie rodzinnym
+A1	Status T44 Family
+T45	Negation 1663 1669	nie ma
+T46	Condition 1671 1693	wysokiego cholesterolu
+R19	Neg Arg1:T45 Arg2:T46	
+N22	Reference T46 ICD10:E78.0	Czysta hipercholesterolemia
+T47	Negation 1653 1656	b/z
+R20	Neg Arg1:T47 Arg2:T44	
+T48	Behaviour 1711 1737	warunki mieszkaniowe dobre
+A2	Status T46 Family
+T49	Drug 1775 1781	Sortis
+T50	Drug 1803 1817	Lipanthyl 267M
+T51	Drug_dose 1782 1802	80mg 1x 1 tabl/wiecz
+T52	Drug_dose 1818 1832	1x 1 tabl/rano
+R21	Drg Arg1:T49 Arg2:T51	
+R22	Drg Arg1:T50 Arg2:T52	
+T53	Investigation 1893 1914	badania laboratoryjne
+T54	Investigation 1916 1920	ECHO
+T55	Investigation 1922 1940	EKG metodą Holtera
+T56	Investigation 1942 1946	ABPM
+T57	Investigation 1948 1963	próba wysiłkowa
+N23	Reference T17 ICD10:R55	Omdlenie i zapaść
+N14	Reference T26 ICD10:Z72.0	Używanie tytoniu
+N15	Reference T31 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N16	Reference T32 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+N9	Reference T19 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N12	Reference T22 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N24	Reference T29 ICD10:Z72	Problemy związane ze stylem życia
+N19	Reference T36 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

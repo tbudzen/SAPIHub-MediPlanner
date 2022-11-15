@@ -1,0 +1,57 @@
+T1	Treatment 420 440	operacyjnym leczeniu
+T2	Date 474 478	1996
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Condition 481 510	Niedomykalność mitralna I st.
+N1	Reference T3 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T4	Condition 511 523	Zespół Downa
+N2	Reference T4 ICD10:Q90	Zespół Downa
+T5	Condition 525 547	Niedoczynność tarczycy
+N3	Reference T5 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T6	Treatment 693 720	dalsza opieka w poradni POZ
+T7	Treatment 723 755	okresowa kontrola kardiologiczna
+T8	Investigation 758 787	okresowa kontrola lipidogramu
+T9	Behaviour 803 828	dieta niskocholesterolowa
+T10	Treatment 831 859	regularne przyjmowanie leków
+T11	Drug 864 872	Euthyrox
+T12	Drug 928 936	Euthyrox
+T13	Drug_dose 873 925	50ug 1 tabl. rano na czczo od poniedziałku do soboty
+R2	Drg Arg1:T11 Arg2:T13	
+T14	Drug_dose 937 975	75ug 1 tabl. rano na czczo w niedzielę
+R3	Drg Arg1:T12 Arg2:T14	
+T15	Condition 1115 1129	Zespołem Downa
+N4	Reference T15 ICD10:Q90	Zespół Downa
+T16	Treatment 1134 1154	operacyjnej korekcji
+T17	Date 1194 1198	1996
+R4	Dat Arg1:T17 Arg2:T16	
+T18	Symptom 1409 1430	incydent zasłabnięcia
+T19	Date 1387 1407	W październiku 2018r
+R5	Dat Arg1:T19 Arg2:T18	
+T20	Condition 1459 1470	odwodnienia
+R6	Dat Arg1:T19 Arg2:T20	
+T21	Symptom 1545 1577	pogorszenia wydolności fizycznej
+N6	Reference T21 ICD10:R53	Złe samopoczucie i zmęczenie
+T22	Symptom 1583 1635	innych objawów ze strony układu sercowo-naczyniowego
+T23	Negation 1541 1544	bez
+R7	Neg Arg1:T23 Arg2:T21	
+R8	Neg Arg1:T23 Arg2:T22	
+T24	Condition 1657 1679	niedoczynność tarczycy
+N7	Reference T24 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T25	Drug 1695 1705	Euthyroxem
+T26	Drug_dose 1706 1713	50 ug/d
+R9	Drg Arg1:T25 Arg2:T26	
+N8	Reference T1 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+N9	Reference T16 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T27	Condition 1329 1339	wady serca
+T28	Date 789 799	raz w roku
+R10	Dat Arg1:T28 Arg2:T8	
+T29	Date 1178 1190	1 roku zycia
+R11	Dat Arg1:T29 Arg2:T16	
+T30	Condition 441 472	kanału przedsionkowo-komorowego
+N5	Reference T30 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+R12	Dat Arg1:T2 Arg2:T30	
+T31	Condition 1155 1175	wspólnego kanału A-V
+N10	Reference T31 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+R13	Dat Arg1:T29 Arg2:T31	
+R14	Dat Arg1:T17 Arg2:T31	
+N11	Reference T27 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+N12	Reference T18 ICD10:R55	Omdlenie i zapaść

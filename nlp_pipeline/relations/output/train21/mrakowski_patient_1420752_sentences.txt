@@ -1,0 +1,685 @@
+allRelations          : 95
+oks                   : 29
+isRedundantAndRemoveds: 51
+shouldNotBeRemoveds   : 3
+shouldBeBemoveds      : 12
+GOOD / BAD            : 80 / 15
+Sentence 0:
+------------------------------------------------
+Wiek: 42 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+1. Dalsza opieka w POZ.
+
+
+
+Sentence 4:
+2. Dalsza diagnostyka w Poradni Nefrologicznej i Poradni Neurologicznej.
+
+
+
+Sentence 5:
+3. Okresowa kontrola w Poradni Endokrynologicznej.
+
+
+
+Sentence 6:
+4. Okresowa kontrola morfologii, elektrolitów, magnezu, parametrów wątrobowych oraz parametrów nerkowych - pierwsza za 5-6 tygodni.
+
+R1	Dat Arg1:T5 Arg2:T4 << OK >>	za 5-6 tygodni -> Okresowa kontrola morfologii, elektrolitów, magnezu, parametrów wątrobowych oraz parametrów nerkowych  <RANK: 3> <info: start[593, 480] <type: LEFT>>
+
+
+Sentence 7:
+5. Dieta lekkostrawna, wysokosodowa, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych.
+
+
+
+Sentence 8:
+6. Regularna samokontrola ciśnienia tętniczego krwi i tętna.
+
+
+
+Sentence 9:
+7. Regularne przyjmowanie leków:
+Rp.
+
+
+
+Sentence 10:
+Cortineff 1/2 tabletki rano - wg zaleceń endokrynologa
+Slow-Mag 1 tabletka rano i wieczorem
+Vitaminum B6 50mg 1 tabletka rano - wg zaleceń nefrologa
+------------------------------------------------
+
+R2	Drg Arg1:T9 Arg2:T12 << OK >>	Cortineff -> 1/2 tabletki rano - wg zaleceń endokrynologa  <RANK: 3> <info: start[828, 838] <type: RIGHT>>
+R3	Drg Arg1:T9 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Cortineff -> 1 tabletka rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 1> <info: start[828, 892] <type: RIGHT>>
+R4	Drg Arg1:T9 Arg2:T14 <<REDUNDANT!!!REMOVED>>	Cortineff -> 50mg 1 tabletka rano - wg zaleceń nefrologa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[828, 933] <type: RIGHT>>
+R5	Drg Arg1:T10 Arg2:T12 <<REDUNDANT!!!REMOVED>>	Vitaminum B6 -> 1/2 tabletki rano - wg zaleceń endokrynologa <:REMOVED other first tag between (left):> <RANK: 0> <info: start[920, 838] <type: LEFT>>
+R6	Drg Arg1:T10 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Vitaminum B6 -> 1 tabletka rano i wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[920, 892] <type: LEFT>>
+R7	Drg Arg1:T10 Arg2:T14 << OK >>	Vitaminum B6 -> 50mg 1 tabletka rano - wg zaleceń nefrologa  <RANK: 3> <info: start[920, 933] <type: RIGHT>>
+R8	Drg Arg1:T11 Arg2:T12 <<REDUNDANT!!!REMOVED>>	Slow-Mag -> 1/2 tabletki rano - wg zaleceń endokrynologa <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[883, 838] <type: LEFT>>
+R9	Drg Arg1:T11 Arg2:T13 << OK >>	Slow-Mag -> 1 tabletka rano i wieczorem  <RANK: 3> <info: start[883, 892] <type: RIGHT>>
+R10	Drg Arg1:T11 Arg2:T14 <<REDUNDANT!!!REMOVED>>	Slow-Mag -> 50mg 1 tabletka rano - wg zaleceń nefrologa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[883, 933] <type: RIGHT>>
+
+
+Sentence 11:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 12:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Hipotonia ortostatyczna.
+
+
+Sentence 13:
+Łagodna arytmia nadkomorowa.
+
+
+Sentence 14:
+Łagodna niedomykalność zastawki mitralnej i trójdzielnej.
+
+
+Sentence 15:
+Przewlekła choroba nerek w stadium G3b w przebiegu przewlekłego cewkowo- śródmiąższowego zapalenia nerek (biopsja nerki w 09.2018r.).
+R11	Dat Arg1:T21 Arg2:T19 <<REDUNDANT!!!SHOULD BE REMOVED>>	09.2018r -> Przewlekła choroba nerek w stadium G3b  <RANK: 3> <info: start[1428, 1306] <type: LEFT>>
+R12	Dat Arg1:T21 Arg2:T94 <<REDUNDANT!!!SHOULD BE REMOVED>>	09.2018r -> przewlekłego cewkowo- śródmiąższowego zapalenia nerek  <RANK: 3> <info: start[1428, 1357] <type: LEFT>>
+R13	Dat Arg1:T21 Arg2:T20 << OK >>	09.2018r -> biopsja nerki  <RANK: 3> <info: start[1428, 1412] <type: LEFT>>
+
+
+Sentence 16:
+Przewlekła kamica nerkowa w wywiadzie.
+
+
+Sentence 17:
+Nerkowa utrata soli.
+
+
+Sentence 18:
+Przewlekłe wirusowe zapalenie wątroby typu B. Przewlekłe uszkodzenie obu nerwów strzałkowych.
+
+
+Sentence 19:
+Miogenne uszkodzenie mięśni proksymalnych (obserwacja w kierunku zapalenia wielomięśniowego, dystrofii mięśniowej negatywna).
+
+R14	Neg Arg1:T29 Arg2:T26 <<REDUNDANT!!!REMOVED>>	negatywna -> Miogenne uszkodzenie mięśni proksymalnych <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1708, 1594] <type: LEFT>>
+R15	Neg Arg1:T29 Arg2:T27 <<SHOULD NOT BE REMOVED>>	negatywna -> obserwacja w kierunku zapalenia wielomięśniowego <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1708, 1637] <type: LEFT>>
+R16	Neg Arg1:T29 Arg2:T28 << OK >>	negatywna -> dystrofii mięśniowej  <RANK: 3> <info: start[1708, 1687] <type: LEFT>>
+
+
+Sentence 20:
+------------------------------------------------
+
+
+
+Sentence 21:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 22:
+Pacjent lat 42 z wywiadem hipotonii ortostatycznej, komorowymi zaburzeniami rytmu serca, został przyjęty do Kliniki z powodu nawracających dolegliwości bólowych w klatce piersiowej o charakterze kłucia, występowania nudności przy poruszaniu się oraz osłabienia - nużliwości mięśni.
+
+
+Sentence 23:
+W wywiadzie ponadto: przewlekłą choroba nerek w stadium G3a w przebiegu przewlekłego cewkowo- śródmiąższowego zapalenia nerek (biopsja nerki w 09.2018r.), przewlekła kamica nerkowa, nerkowa utrata soli, przewlekłe wirusowe zapaleie wątroby typu B, przewlekłe uszkodzenie obu nerwów strzałkowych, miogenne uszkodzenie mięśni proksymalnych (obserwacja w kierunku zapalenia wielomięśniowego, dystrofii mięśniowej negatywna).
+R17	Neg Arg1:T46 Arg2:T36 <<REDUNDANT!!!REMOVED>>	negatywna -> przewlekłą choroba nerek w stadium G3a <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2536, 2147] <type: LEFT>>
+R18	Neg Arg1:T46 Arg2:T39 <<REDUNDANT!!!REMOVED>>	negatywna -> przewlekła kamica nerkowa <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2536, 2281] <type: LEFT>>
+R19	Neg Arg1:T46 Arg2:T40 <<REDUNDANT!!!REMOVED>>	negatywna -> nerkowa utrata soli <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2536, 2308] <type: LEFT>>
+R20	Neg Arg1:T46 Arg2:T41 <<REDUNDANT!!!REMOVED>>	negatywna -> przewlekłe wirusowe zapaleie wątroby typu B <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2536, 2329] <type: LEFT>>
+R21	Neg Arg1:T46 Arg2:T42 <<REDUNDANT!!!REMOVED>>	negatywna -> przewlekłe uszkodzenie obu nerwów strzałkowych <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2536, 2374] <type: LEFT>>
+R22	Neg Arg1:T46 Arg2:T43 <<REDUNDANT!!!REMOVED>>	negatywna -> miogenne uszkodzenie mięśni proksymalnych <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2536, 2422] <type: LEFT>>
+R23	Neg Arg1:T46 Arg2:T44 <<SHOULD NOT BE REMOVED>>	negatywna -> obserwacja w kierunku zapalenia wielomięśniowego <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2536, 2465] <type: LEFT>>
+R24	Neg Arg1:T46 Arg2:T45 << OK >>	negatywna -> dystrofii mięśniowej  <RANK: 3> <info: start[2536, 2515] <type: LEFT>>
+R25	Neg Arg1:T46 Arg2:T95 <<REDUNDANT!!!REMOVED>>	negatywna -> przewlekłego cewkowo- śródmiąższowego zapalenia nerek <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2536, 2198] <type: LEFT>>
+R26	Neg Arg1:T46 Arg2:T37 <<REDUNDANT!!!REMOVED>>	negatywna -> biopsja nerki <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2536, 2253] <type: LEFT>>
+R27	Dat Arg1:T38 Arg2:T36 <<REDUNDANT!!!SHOULD BE REMOVED>>	09.2018r -> przewlekłą choroba nerek w stadium G3a  <RANK: 3> <info: start[2269, 2147] <type: LEFT>>
+R28	Dat Arg1:T38 Arg2:T39 <<REDUNDANT!!!REMOVED>>	09.2018r -> przewlekła kamica nerkowa <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2269, 2281] <type: RIGHT>>
+R29	Dat Arg1:T38 Arg2:T40 <<REDUNDANT!!!REMOVED>>	09.2018r -> nerkowa utrata soli <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2269, 2308] <type: RIGHT>>
+R30	Dat Arg1:T38 Arg2:T41 <<REDUNDANT!!!REMOVED>>	09.2018r -> przewlekłe wirusowe zapaleie wątroby typu B <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2269, 2329] <type: RIGHT>>
+R31	Dat Arg1:T38 Arg2:T42 <<REDUNDANT!!!REMOVED>>	09.2018r -> przewlekłe uszkodzenie obu nerwów strzałkowych <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2269, 2374] <type: RIGHT>>
+R32	Dat Arg1:T38 Arg2:T43 <<REDUNDANT!!!REMOVED>>	09.2018r -> miogenne uszkodzenie mięśni proksymalnych <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2269, 2422] <type: RIGHT>>
+R33	Dat Arg1:T38 Arg2:T44 <<REDUNDANT!!!REMOVED>>	09.2018r -> obserwacja w kierunku zapalenia wielomięśniowego <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2269, 2465] <type: RIGHT>>
+R34	Dat Arg1:T38 Arg2:T45 <<REDUNDANT!!!REMOVED>>	09.2018r -> dystrofii mięśniowej <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2269, 2515] <type: RIGHT>>
+R35	Dat Arg1:T38 Arg2:T95 <<REDUNDANT!!!SHOULD BE REMOVED>>	09.2018r -> przewlekłego cewkowo- śródmiąższowego zapalenia nerek  <RANK: 3> <info: start[2269, 2198] <type: LEFT>>
+R36	Dat Arg1:T38 Arg2:T37 << OK >>	09.2018r -> biopsja nerki  <RANK: 3> <info: start[2269, 2253] <type: LEFT>>
+
+
+Sentence 24:
+Koronarografia około 3 lata temu - brak dokumentacji, z relacji pacjenta bez istotnych zmian.
+
+R37	Inv Arg1:T47 Arg2:T49 << OK >>	Koronarografia -> z relacji pacjenta bez istotnych zmian  <RANK: 2> <info: start[2548, 2602] <type: RIGHT>>
+R38	Dat Arg1:T48 Arg2:T47 << OK >>	około 3 lata temu -> Koronarografia  <RANK: 3> <info: start[2563, 2548] <type: LEFT>>
+
+
+Sentence 25:
+Neguje: zasłabnięcia, omdlenia - 2x epizod krótkotrwałej utraty przytomności (2013 i 2014r.), krwawienia, czarne stolce, brunatne wymioty, chorobę wrzodową, duszność nocną, obrzęki podudzi, bóle w klatce piersiowej, kołatania serca, 
+
+R39	Neg Arg1:T50 Arg2:T51 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[2642, 2650] <type: RIGHT>>
+R40	Neg Arg1:T50 Arg2:T52 <<REDUNDANT!!!REMOVED>>	Neguje -> omdlenia - 2x epizod krótkotrwałej utraty przytomności <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[2642, 2664] <type: RIGHT>>
+R41	Neg Arg1:T50 Arg2:T55 << OK >>	Neguje -> krwawienia  <RANK: 2> <info: start[2642, 2736] <type: RIGHT>>
+R42	Neg Arg1:T50 Arg2:T56 << OK >>	Neguje -> czarne stolce  <RANK: 2> <info: start[2642, 2748] <type: RIGHT>>
+R43	Neg Arg1:T50 Arg2:T57 << OK >>	Neguje -> brunatne wymioty  <RANK: 2> <info: start[2642, 2763] <type: RIGHT>>
+R44	Neg Arg1:T50 Arg2:T59 << OK >>	Neguje -> duszność nocną  <RANK: 2> <info: start[2642, 2799] <type: RIGHT>>
+R45	Neg Arg1:T50 Arg2:T60 << OK >>	Neguje -> obrzęki podudzi  <RANK: 2> <info: start[2642, 2815] <type: RIGHT>>
+R46	Neg Arg1:T50 Arg2:T61 << OK >>	Neguje -> bóle w klatce piersiowej  <RANK: 2> <info: start[2642, 2832] <type: RIGHT>>
+R47	Neg Arg1:T50 Arg2:T62 << OK >>	Neguje -> kołatania serca  <RANK: 2> <info: start[2642, 2858] <type: RIGHT>>
+R48	Neg Arg1:T50 Arg2:T58 << OK >>	Neguje -> chorobę wrzodową  <RANK: 2> <info: start[2642, 2781] <type: RIGHT>>
+R49	Dat Arg1:T53 Arg2:T51 <<REDUNDANT!!!REMOVED>>	2013 -> zasłabnięcia <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[2720, 2650] <type: LEFT>>
+R50	Dat Arg1:T53 Arg2:T52 << OK >>	2013 -> omdlenia - 2x epizod krótkotrwałej utraty przytomności  <RANK: 3> <info: start[2720, 2664] <type: LEFT>>
+R51	Dat Arg1:T53 Arg2:T55 <<REDUNDANT!!!REMOVED>>	2013 -> krwawienia <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2720, 2736] <type: RIGHT>>
+R52	Dat Arg1:T53 Arg2:T56 <<REDUNDANT!!!REMOVED>>	2013 -> czarne stolce <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2720, 2748] <type: RIGHT>>
+R53	Dat Arg1:T53 Arg2:T57 <<REDUNDANT!!!REMOVED>>	2013 -> brunatne wymioty <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2720, 2763] <type: RIGHT>>
+R54	Dat Arg1:T53 Arg2:T59 <<REDUNDANT!!!REMOVED>>	2013 -> duszność nocną <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2720, 2799] <type: RIGHT>>
+R55	Dat Arg1:T53 Arg2:T60 <<REDUNDANT!!!REMOVED>>	2013 -> obrzęki podudzi <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2720, 2815] <type: RIGHT>>
+R56	Dat Arg1:T53 Arg2:T61 <<REDUNDANT!!!REMOVED>>	2013 -> bóle w klatce piersiowej <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2720, 2832] <type: RIGHT>>
+R57	Dat Arg1:T53 Arg2:T62 <<REDUNDANT!!!REMOVED>>	2013 -> kołatania serca <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2720, 2858] <type: RIGHT>>
+R58	Dat Arg1:T53 Arg2:T58 <<REDUNDANT!!!REMOVED>>	2013 -> chorobę wrzodową <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2720, 2781] <type: RIGHT>>
+R59	Dat Arg1:T54 Arg2:T51 <<REDUNDANT!!!REMOVED>>	2014r -> zasłabnięcia <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[2727, 2650] <type: LEFT>>
+R60	Dat Arg1:T54 Arg2:T52 << OK >>	2014r -> omdlenia - 2x epizod krótkotrwałej utraty przytomności  <RANK: 2> <info: start[2727, 2664] <type: LEFT>>
+R61	Dat Arg1:T54 Arg2:T55 <<REDUNDANT!!!SHOULD BE REMOVED>>	2014r -> krwawienia  <RANK: 2> <info: start[2727, 2736] <type: RIGHT>>
+R62	Dat Arg1:T54 Arg2:T56 <<REDUNDANT!!!SHOULD BE REMOVED>>	2014r -> czarne stolce  <RANK: 2> <info: start[2727, 2748] <type: RIGHT>>
+R63	Dat Arg1:T54 Arg2:T57 <<REDUNDANT!!!SHOULD BE REMOVED>>	2014r -> brunatne wymioty  <RANK: 2> <info: start[2727, 2763] <type: RIGHT>>
+R64	Dat Arg1:T54 Arg2:T59 <<REDUNDANT!!!SHOULD BE REMOVED>>	2014r -> duszność nocną  <RANK: 2> <info: start[2727, 2799] <type: RIGHT>>
+R65	Dat Arg1:T54 Arg2:T60 <<REDUNDANT!!!SHOULD BE REMOVED>>	2014r -> obrzęki podudzi  <RANK: 2> <info: start[2727, 2815] <type: RIGHT>>
+R66	Dat Arg1:T54 Arg2:T61 <<REDUNDANT!!!SHOULD BE REMOVED>>	2014r -> bóle w klatce piersiowej  <RANK: 2> <info: start[2727, 2832] <type: RIGHT>>
+R67	Dat Arg1:T54 Arg2:T62 <<REDUNDANT!!!SHOULD BE REMOVED>>	2014r -> kołatania serca  <RANK: 2> <info: start[2727, 2858] <type: RIGHT>>
+R68	Dat Arg1:T54 Arg2:T58 <<REDUNDANT!!!SHOULD BE REMOVED>>	2014r -> chorobę wrzodową  <RANK: 2> <info: start[2727, 2781] <type: RIGHT>>
+
+
+Sentence 26:
+Przebyte operacje: biopsja mięśnia 2x, biopsja nerki, usuwanie kamieni nerkowych
+
+
+
+Sentence 27:
+Palenie tytoniu: od 17 roku życia, około 1/2 paczki/dobę
+
+R69	Dat Arg1:T68 Arg2:T67 << OK >>	od 17 roku życia -> Palenie tytoniu  <RANK: 3> <info: start[2974, 2957] <type: LEFT>>
+R70	Dat Arg1:T68 Arg2:T69 <<SHOULD NOT BE REMOVED>>	od 17 roku życia -> około 1/2 paczki/dobę <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2974, 2992] <type: RIGHT>>
+
+
+Sentence 28:
+Inne używki: nie
+Uczulenia: nie
+
+R71	Neg Arg1:T71 Arg2:T72 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3027, 3031] <type: RIGHT>>
+R72	Neg Arg1:T71 Arg2:T70 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[3027, 3014] <type: LEFT>>
+R73	Neg Arg1:T73 Arg2:T72 << OK >>	nie -> Uczulenia  <RANK: 3> <info: start[3042, 3031] <type: LEFT>>
+R74	Neg Arg1:T73 Arg2:T70 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3042, 3014] <type: LEFT>>
+
+
+Sentence 29:
+Przebyte choroby zakaźne - WZW (+) , borelioza (-), tbc (-), odra (-), kontakt z odrą (-)
+
+R75	Neg Arg1:T76 Arg2:T74 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other second tag between (left):> <RANK: 2> <info: start[3094, 3073] <type: LEFT>>
+R76	Neg Arg1:T76 Arg2:T75 << OK >>	- -> borelioza  <RANK: 3> <info: start[3094, 3083] <type: LEFT>>
+R77	Neg Arg1:T76 Arg2:T77 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[3094, 3098] <type: RIGHT>>
+R78	Neg Arg1:T76 Arg2:T79 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3094, 3107] <type: RIGHT>>
+R79	Neg Arg1:T76 Arg2:T81 <<REDUNDANT!!!REMOVED>>	- -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3094, 3117] <type: RIGHT>>
+R80	Neg Arg1:T78 Arg2:T74 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3103, 3073] <type: LEFT>>
+R81	Neg Arg1:T78 Arg2:T75 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3103, 3083] <type: LEFT>>
+R82	Neg Arg1:T78 Arg2:T77 << OK >>	- -> tbc  <RANK: 3> <info: start[3103, 3098] <type: LEFT>>
+R83	Neg Arg1:T78 Arg2:T79 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[3103, 3107] <type: RIGHT>>
+R84	Neg Arg1:T78 Arg2:T81 <<REDUNDANT!!!REMOVED>>	- -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3103, 3117] <type: RIGHT>>
+R85	Neg Arg1:T80 Arg2:T74 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3113, 3073] <type: LEFT>>
+R86	Neg Arg1:T80 Arg2:T75 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3113, 3083] <type: LEFT>>
+R87	Neg Arg1:T80 Arg2:T77 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3113, 3098] <type: LEFT>>
+R88	Neg Arg1:T80 Arg2:T79 << OK >>	- -> odra  <RANK: 3> <info: start[3113, 3107] <type: LEFT>>
+R89	Neg Arg1:T80 Arg2:T81 <<REDUNDANT!!!REMOVED>>	- -> kontakt z odrą <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[3113, 3117] <type: RIGHT>>
+R90	Neg Arg1:T82 Arg2:T74 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3133, 3073] <type: LEFT>>
+R91	Neg Arg1:T82 Arg2:T75 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3133, 3083] <type: LEFT>>
+R92	Neg Arg1:T82 Arg2:T77 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3133, 3098] <type: LEFT>>
+R93	Neg Arg1:T82 Arg2:T79 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3133, 3107] <type: LEFT>>
+R94	Neg Arg1:T82 Arg2:T81 << OK >>	- -> kontakt z odrą  <RANK: 3> <info: start[3133, 3117] <type: LEFT>>
+
+
+Sentence 30:
+Stan społeczny: mieszka u znajomych, przebywa na rencie
+
+
+
+Sentence 31:
+Wywiad rodzinny: ojciec - cukrzyca typu2, 
+
+
+
+Sentence 32:
+Leki: przyjęte rano w domu
+
+
+
+Sentence 33:
+Leki: 
+Cortineff 1 tabl x dobę
+
+R95	Drg Arg1:T86 Arg2:T88 << OK >>	Cortineff -> 1 tabl x dobę  <RANK: 3> <info: start[3269, 3279] <type: RIGHT>>
+
+
+Sentence 34:
+witaminy
+
+Planowany czas hospitalizacji: 4-5 dni.
+
+
+
+Sentence 35:
+Planowane badania: badania laboratoryjne, ECHO, EKG metodą Holtera, ABPM, próba wysiłkowa (?).
+
+
+
+Sentence 36:
+------------------------------------------------
+
+
+
+Sentence 37:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 38:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.43[10^3/ul]
+    
+
+
+Sentence 39:
+RBC Krwinki czerwone:3.59[10^6/ul]
+    
+
+
+Sentence 40:
+HGB Hemoglobina:11.7[g/dl]
+    
+
+
+Sentence 41:
+HCT Hematokryt:31.9[%]
+    
+
+
+Sentence 42:
+MCV wskaźnik czerwonokrw:88.9[fl]
+    
+
+
+Sentence 43:
+MCH wskaźnik czerwonokrw:32.6[pg]
+    
+
+
+Sentence 44:
+MCHC wskaźnik czerwonokr:36.7[g/dl]
+    
+
+
+Sentence 45:
+PLT z morfologii:109[10^3/ul]
+    
+
+
+Sentence 46:
+RDW-SD:41.8[fl]
+    
+
+
+Sentence 47:
+RDW-CV:12.8[%]
+    PDW:17.2[fl]
+    MPV:12.5[fl]
+    
+
+
+Sentence 48:
+P-LCR:46.3[%]
+    
+
+
+Sentence 49:
+PCT (hematokryt płytkowy:0.14[%]
+    
+
+
+Sentence 50:
+NEUTR# wartość bezwzględ:2.94[10^3/ul]
+    
+
+
+Sentence 51:
+NEUTR%:54.1[%]
+    
+
+
+Sentence 52:
+LYMH# wartość bezwzględn:1.76[10^3/ul]
+    
+
+
+Sentence 53:
+LYMPH%:32.4[%]
+    
+
+
+Sentence 54:
+MONO# wartość bezwzględn:0.46[10^3/ul]
+    
+
+
+Sentence 55:
+MONO%:8.5[%]
+    
+
+
+Sentence 56:
+EO# wartość bezwzględna:0.24[10^3/ul]
+    
+
+
+Sentence 57:
+EO%:4.4[%]
+    
+
+
+Sentence 58:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 59:
+NRBC %:0.0[%]
+    
+
+
+Sentence 60:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 61:
+Badanie ogólne moczu
+    
+
+
+Sentence 62:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 63:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 64:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 65:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 66:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 67:
+ciężar właściwy:1.013[ ]
+    
+
+
+Sentence 68:
+kwas askrobinowy:20 mg/dl[ ]
+    
+
+
+Sentence 69:
+pH:5.0[ ]
+    
+
+
+Sentence 70:
+białko:nieobecne[ ]
+    
+
+
+Sentence 71:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 72:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 73:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 74:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 75:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 76:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 77:
+leukocyty:1 /ul[ul]
+    erytrocyty świeże:1 /ul[ul]
+    bakterie:pojedyncze[w preparacie]
+    
+
+
+Sentence 78:
+wałeczki szklisto-ziarni:1-3 wpw[w preparacie]
+
+
+
+Sentence 79:
+TSH: TSH:2.39[uIU/ml]
+
+
+
+Sentence 80:
+FT3: FT3:3.57[pg/ml]
+
+
+
+Sentence 81:
+FT4: FT4:1.13[ng/dl]
+
+
+
+Sentence 82:
+ALAT: ALAT:127[U/L]
+ASPAT: ASPAT:66[U/L]
+CK - aktywność: CK:168[U/L]
+
+
+
+Sentence 83:
+CKMB aktywność: CKMB:14[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 84:
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 85:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 86:
+Potas (K): Potas:5.5[mmol/L]
+
+
+
+Sentence 87:
+Kreatynina + GFR
+    
+
+
+Sentence 88:
+Kreatynina w surowicy:2.21[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 89:
+MDRD ze stan:32.8[ml/min/1,73 m^2]
+
+
+
+Sentence 90:
+Magnez: Magnez:0.45[mmol/L]
+
+
+
+Sentence 91:
+Mocznik: Mocznik:96[mg/dl]
+
+
+
+Sentence 92:
+Wapń całkowity: Wapń całkowity:2.22[mmol/L]
+
+
+
+Sentence 93:
+Kwas moczowy: Kwas moczowy:7.3[mg/dl]
+
+
+
+Sentence 94:
+Lipidogram
+    
+
+
+Sentence 95:
+Cholesterol całkowity:134[mg/dl]
+    
+
+
+Sentence 96:
+Cholesterol HDL:20[mg/dl]
+    
+
+
+Sentence 97:
+Cholestrol LDL:51[mg/dl]
+    
+
+
+Sentence 98:
+Triglicerydy:328[mg/dl]
+    
+
+
+Sentence 99:
+Stosunek cholesterolu HD:0.1
+Glukoza w surowicy: Glukoza w surowicy:83[mg/dl]
+
+
+
+Sentence 100:
+Kortyzol 8:00: Kortyzol:6.5[ug/dl]
+
+
+
+Sentence 101:
+------------------------------------------------
+
+
+
+Sentence 102:
+ICD10
+------------------------------------------------
+I34.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 103:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 104:
+C55
+A01
+89.502
+I81
+L43
+M87
+N45
+L69
+O55
+I17
+O77
+
+
+
+Sentence 105:
+M45
+M37
+I19
+O35
+N13
+88.721
+O69
+
+
+
+Sentence 106:
+M19
+M18
+88.761
+
+
+
+Sentence 107:
+------------------------------------------------
+
+

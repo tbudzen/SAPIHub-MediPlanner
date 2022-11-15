@@ -1,0 +1,144 @@
+T1	Drug 341 349	Bisocard
+T2	Drug 351 358	Roswera
+T3	Drug 360 363	BLW
+T4	Drug 365 374	Captopril
+T5	Drug 656 666	Concor COR
+T6	Drug_dose 667 690	3,75mg 1x 1/2 tabl/rano
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 691 701	Prestarium
+T8	Drug_dose 702 703	5
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Behaviour 566 591	dieta niskocholesterolowa
+T10	Investigation 593 613	kontrola lipidogramu
+T11	Date 614 623	za 3 m-ce
+R3	Dat Arg1:T11 Arg2:T10	
+T12	Investigation 2325 2329	ECHO
+T13	Investigation 2331 2349	EKG metodą Holtera
+T14	Investigation 2351 2355	ABPM
+T15	Investigation 2357 2372	próba wysiłkowa
+T16	Drug 2204 2213	Estazolam
+T17	Drug 2174 2182	Bisocard
+T18	Drug_dose 2183 2203	5mg 1x 1/3 tabl/rano
+R4	Drg Arg1:T17 Arg2:T18	
+T19	Drug_dose 2214 2241	1x 1/3 tabl doraźnie na noc
+R5	Drg Arg1:T16 Arg2:T19	
+T20	Behaviour 2110 2136	warunki mieszkaniowe dobre
+T21	Condition 2048 2055	WZW (+)
+N1	Reference T21 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T22	Date 2056 2066	przed laty
+A1	Status T21 Historical_Insignificant
+A2	Source T21 Confirmed
+R6	Dat Arg1:T22 Arg2:T21	
+T23	Condition 2069 2078	borelioza
+N2	Reference T23 ICD10:A69.2	Choroba z Lyme
+T24	Negation 2079 2084	( - )
+R7	Neg Arg1:T24 Arg2:T23	
+T25	Condition 2086 2089	tbc
+N3	Reference T25 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T26	Negation 2090 2093	(-)
+R8	Neg Arg1:T26 Arg2:T25	
+T27	Negation 2017 2020	nie
+T28	Negation 2002 2005	nie
+T29	Negation 1983 1988	nigdy
+T30	Behaviour 1966 1981	Palenie tytoniu
+N4	Reference T30 ICD10:Z72.0	Używanie tytoniu
+R9	Neg Arg1:T29 Arg2:T30	
+T31	Behaviour 1989 2000	Inne używki
+R10	Neg Arg1:T28 Arg2:T31	
+T32	Condition 2006 2015	Uczulenia
+R11	Neg Arg1:T27 Arg2:T32	
+T33	Symptom 921 943	Napady kołatania serca
+N6	Reference T33 ICD10:R00.2	Kołatanie serca
+T34	Condition 945 971	Miażdżyca tętnic szyjnych.
+N7	Reference T34 ICD10:I65.2	Niedrożność i zwężenie tętnicy szyjnej wewnętrznej
+T35	Condition 972 993	Nadciśnienie tętnicze
+N8	Reference T35 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T36	Condition 995 1015	Hipercholesterolemia
+N9	Reference T36 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T37	Condition 1017 1028	Paradontoza
+N10	Reference T37 ICD10:K05.4	Desmodontoza
+T38	Condition 1030 1064	Choroba zwyrodnieniowa kręgosłupa.
+T39	Treatment 1099 1107	operacji
+A3	Status T39 Historical_Insignificant
+T40	Condition 1086 1089	WZW
+N12	Reference T40 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T41	Condition 1108 1144	przepukliny pachwinowej lewostronnej
+N13	Reference T41 ICD10:K40	Przepuklina pachwinowa
+A4	Status T41 Historical_Insignificant
+T42	Condition 1926 1951	przepukliny pachwinowej L
+A5	Status T42 Historical_Insignificant
+N14	Reference T42 ICD10:K40	Przepuklina pachwinowa
+T43	Treatment 1917 1925	operacja
+A6	Status T43 Historical_Insignificant
+T44	Date 1952 1965	(14 lat temu)
+R12	Dat Arg1:T44 Arg2:T42	
+R13	Dat Arg1:T44 Arg2:T43	
+T45	Condition 1299 1334	wypadania płatka zastawki mitralnej
+N15	Reference T45 ICD10:I34.1	
+T46	Symptom 1365 1478	krótkotrwałych napadów kołatania serca z towarzyszącym dyskomfortem w klatce peirsiowej, lekiem, uczuciem gorąca,
+N16	Reference T46 ICD10:R00.2	Kołatanie serca
+T47	Date 1479 1488	od 2 lat.
+R14	Dat Arg1:T47 Arg2:T46	
+T48	Investigation_result 1511 1525	RR <140/90mmHg
+T49	Condition 1527 1538	paradontoza
+N17	Reference T49 ICD10:K05.4	Desmodontoza
+T50	Investigation_result 1540 1562	podwyższone OB ok. 38,
+T51	Condition 1586 1634	choroba zwyrodnieniowa kręgosłupa z wypuklinami.
+T52	Symptom 1563 1584	stolce ołówkowate (?)
+N19	Reference T52 ICD10:R19.5	Inne patologie kału
+A7	Source T52 Declared
+T53	Negation 1635 1641	Neguje
+T54	Symptom 1643 1655	zasłabnięcia
+N20	Reference T54 ICD10:R55	Omdlenie i zapaść
+T55	Symptom 1657 1665	omdlenia
+N21	Reference T55 ICD10:R55	
+T56	Symptom 1667 1677	krwawienia
+N22	Reference T56 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T57	Symptom 1679 1692	czarne stolce
+N23	Reference T57 ICD10:K92.1	Stolce smołowate
+T58	Symptom 1694 1710	brunatne wymioty
+N24	Reference T58 ICD10:K92.0	Wymioty krwawe
+T59	Condition 1712 1728	chorobę wrzodową
+N25	Reference T59 ICD10:K27	
+T60	Symptom 1730 1744	duszność nocną
+T61	Symptom 1746 1761	obrzęki podudzi
+T62	Symptom 1763 1807	bóle w klatce piersiowej podczas wysiłku fiz
+N28	Reference T62 ICD10:R07.3	Inne bóle w klatce piersiowej
+T63	Condition 1809 1811	HA
+N29	Reference T63 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T64	Condition 1813 1815	DM
+N30	Reference T64 ICD10:E13	Inne określone postacie cukrzycy
+T65	Condition 1829 1840	zawał serca
+N31	Reference T65 ICD10:I25.2	Przebyty zawał serca
+T66	Condition 1817 1827	udar mózgu
+N32	Reference T66 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T67	Symptom 1842 1859	dolegl dyzuryczne
+T68	Symptom 1861 1878	spadek masy ciała
+N33	Reference T68 ICD10:R63.4	Nieprawidłowa utrata masy ciała
+T69	Condition 1880 1895	spadek apetytu.
+N34	Reference T69 ICD10:R63	Objawy i dolegliwości związane z przyjmowaniem pokarmów i płynów
+R15	Neg Arg1:T53 Arg2:T54	
+R16	Neg Arg1:T53 Arg2:T55	
+R17	Neg Arg1:T53 Arg2:T56	
+R18	Neg Arg1:T53 Arg2:T57	
+R19	Neg Arg1:T53 Arg2:T58	
+R20	Neg Arg1:T53 Arg2:T59	
+R21	Neg Arg1:T53 Arg2:T60	
+R22	Neg Arg1:T53 Arg2:T61	
+R23	Neg Arg1:T53 Arg2:T62	
+R24	Neg Arg1:T53 Arg2:T63	
+R25	Neg Arg1:T53 Arg2:T64	
+R26	Neg Arg1:T53 Arg2:T66	
+R27	Neg Arg1:T53 Arg2:T65	
+R28	Neg Arg1:T53 Arg2:T67	
+R29	Neg Arg1:T53 Arg2:T68	
+R30	Neg Arg1:T53 Arg2:T69	
+N35	Reference T31 ICD10:Z72	Problemy związane ze stylem życia
+N27	Reference T61 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N26	Reference T60 ICD10:R06.0	Duszność
+N11	Reference T38 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+N18	Reference T51 ICD10:M47.8	Inne zmiany zwyrodnieniowe kręgosłupa
+T70	Treatment 485 507	kontrola u lekarza POZ
+T71	Investigation_result 546 562	podwyższonego OB
+T72	Treatment 510 545	konieczna diagnostyka ambulatoryjna
+N5	Reference T32 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

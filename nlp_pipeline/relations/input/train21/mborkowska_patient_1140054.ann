@@ -1,0 +1,118 @@
+T1	Behaviour 403 498	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T2	Treatment 511 571	kontrola lipidogramu, stężenia elektrolitów, parametrów wydo
+T3	Condition 798 842	Przewlekła choroba wieńcowa - I klasa wg CCS
+N1	Reference T3 ICD10:i25	
+T4	Condition 847 927	Niewydolność serca z zachowaną frakcją wyrzutową LV (EF: 58%) - II klasa wg NYHA
+N2	Reference T4 ICD10:I50	Niewydolność serca
+T5	Condition 932 953	Nadciśnienie tętnicze
+N3	Reference T5 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T6	Condition 958 978	Bradykardia zatokowa
+N4	Reference T6 ICD10:R00.1	Bradykardia, nieokreślona
+T7	Condition 995 1007	Dyslipidemia
+N5	Reference T7 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T8	Condition 1012 1044	Zmiany zwyrodnieniowe kręgosłupa
+N6	Reference T8 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T9	Treatment 1057 1073	cholecystektomii
+T10	Condition 1078 1091	Otyłość I st.
+N7	Reference T10 ICD10:E66	Otyłość
+T11	Investigation 2591 2612	angioCT tt wieńcowych
+T12	Investigation 2614 2624	Holter EKG
+T13	Investigation 2626 2630	ABPM
+T14	Drug 2531 2548	Noliprel Bi-forte
+T15	Drug_dose 2549 2561	1 tabl. rano
+R1	Drg Arg1:T14 Arg2:T15	
+T16	Negation 2464 2470	neguje
+T17	Negation 2437 2443	neguje
+T18	Negation 2419 2427	neguje  
+T19	Behaviour 2445 2462	Uzależnienie inne
+R2	Neg Arg1:T16 Arg2:T19	
+T20	Behaviour 2428 2435	Alkohol
+N8	Reference T20 ICD10:Z72.1	Używanie alkoholu
+R3	Neg Arg1:T17 Arg2:T20	
+T21	Behaviour 2407 2417	Nikotynizm
+N9	Reference T21 ICD10:T65.2	Tytoń i nikotyna
+R4	Neg Arg1:T18 Arg2:T21	
+T22	Condition 1241 1303	niewydolności serca z zachowaną frakcją wyrzutową LV (EF: 60%)
+N10	Reference T22 ICD10:I50	Niewydolność serca
+T23	Condition 1305 1328	nadciśnienia tętniczego
+N11	Reference T23 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T24	Condition 1332 1347	otyłością I st.
+N12	Reference T24 ICD10:E66	Otyłość
+T25	Condition 1349 1369	bradykardią zatokową
+N13	Reference T25 ICD10:R00.1	Bradykardia, nieokreślona
+T26	Condition 1385 1397	dyslipidemią
+N14	Reference T26 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T27	Symptom 1436 1466	pośledzenia tolerancji wysiłku
+T28	Symptom 1491 1504	kołatań serca
+N15	Reference T28 ICD10:R00.2	Kołatanie serca
+T29	Investigation 1557 1579	angioCT tt. wieńcowych
+T30	Investigation 1698 1710	Holterze EKG
+T31	Date 1713 1717	2016
+R5	Dat Arg1:T31 Arg2:T30	
+T32	Investigation_result 1718 1759	26pary ExV i 518 poj. ExV, 297 poj. ExSV,
+R6	Inv Arg1:T30 Arg2:T32	
+T33	Condition 1603 1642	komorowe i nadkomorowe zaburzenia rytmu
+N16	Reference T33 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T34	Symptom 1658 1680	kołatanie serca w nocy
+N17	Reference T34 ICD10:R00.2	Kołatanie serca
+T35	Date 1762 1766	2015
+T36	Investigation_result 1767 1888	dodatkowo wstawki częstoskurczu przedsionkowego, bigeminia, trigeminia komorowa i bradykardia zatokowa min. 41/min w nocy
+R7	Dat Arg1:T35 Arg2:T30	
+R8	Inv Arg1:T30 Arg2:T36	
+T37	Drug 1914 1924	Bellapanem
+A1	Status T37 Historical_Insignificant
+T38	Date 1925 1932	do 2015
+R9	Dat Arg1:T38 Arg2:T37	
+T39	Drug 1943 1954	Rytmonormem
+A2	Status T39 Historical_Insignificant
+T40	Date 1955 1979	przez rok do 2 lat wstec
+R10	Dat Arg1:T40 Arg2:T39	
+T41	Investigation_result 1983 2002	przerost mięśnia LK
+N18	Reference T41 ICD10:I51.7	Powiększenie serca
+T42	Investigation_result 2005 2013	IT IIst.
+N19	Reference T42 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T43	Investigation_result 2016 2023	IM I st
+N20	Reference T43 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T44	Investigation 2027 2031	echo
+R11	Inv Arg1:T44 Arg2:T43	
+R12	Inv Arg1:T44 Arg2:T41	
+R13	Inv Arg1:T44 Arg2:T42	
+T45	Condition 2033 2053	torbiel nerki prawej
+N21	Reference T45 ICD10:N28.1	Torbiel nerki, nabyta
+T46	Condition 2055 2078	kamica nerkowa (piasek)
+N22	Reference T46 ICD10:N20.0	Kamica nerki
+T47	Condition 2080 2112	zmiany zwyrodnieniowe kregosłupa
+N23	Reference T47 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T48	Treatment 2132 2158	cholecystektomia klasyczna
+T49	Treatment 2169 2175	CC 1 x
+T50	Condition 2254 2256	HA
+A3	Status T50 Family
+N24	Reference T50 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T51	Condition 2236 2238	MI
+A4	Status T51 Family
+N25	Reference T51 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T52	Condition 2225 2227	MI
+A5	Status T52 Family
+N26	Reference T52 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T53	Condition 2207 2211	udar
+A6	Status T53 Family
+N27	Reference T53 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T54	Condition 2200 2202	MI
+A7	Status T54 Family
+N28	Reference T54 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T55	Symptom 2320 2336	spadek ciśnienia
+A8	Source T55 Declared
+N29	Reference T55 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T56	Drug 2368 2374	Lerkan
+T57	Symptom 2377 2406	zaczerwienienie twarzy i szyi
+N30	Reference T57 ICD10:R23.2	Zaczerwienienie twarzy
+T58	Condition 2259 2266	Alergie
+N31	Reference T58 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R14	Alg Arg1:T58 Arg2:T56	
+T59	Condition 2176 2191	Wywiad rodzinny
+A9	Status T59 Family
+T60	Condition 2160 2166	kamica
+N32	Reference T60 ICD10:K80.4	Kamica przewodu żółciowego z zapaleniem pęcherzyka żółciowego
+T61	Drug 2346 2365	(nazwy leku nie zna
+A10	Source T61 Declared
+R15	Alg Arg1:T58 Arg2:T61	

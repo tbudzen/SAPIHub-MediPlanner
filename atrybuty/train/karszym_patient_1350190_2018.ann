@@ -1,0 +1,29 @@
+T1	Treatment 331 364	Dalsza opieka i szczepienia w POZ
+T2	Treatment 369 411	Kontrolna wizyta w Poradni Kardiologicznej
+T3	Date 412 420	za 6m-cy
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Condition 672 720	Wada wrodzona serca pod postacią zespołu Fallota
+N1	Reference T4 ICD10:Q21.3	Tetralogia Fallota
+T5	Condition 722 725	ToF
+N2	Reference T5 ICD10:Q21.3	Tetralogia Fallota
+T6	Condition 728 734	MAPCAs
+T7	Investigation 748 766	cewnikowaniu serca
+T8	Treatment 769 780	zamknięciem
+N4	Reference T8 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T9	Condition 781 823	kolaterali systemowo-płucnej prawostronnej
+T10	Treatment 824 862	zestawem Amplatzer Vascular PlugIV 5mm
+N6	Reference T10 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T11	Date 864 875	20.12.2016r
+T12	Treatment 881 894	Korekcja wady
+N7	Reference T12 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T13	Date 932 949	w dniu 01.02.2017
+T14	Condition 954 987	Resztkowy przeciek miedzykomorowy
+R2	Dat Arg1:T11 Arg2:T7	
+R3	Dat Arg1:T11 Arg2:T8	
+R4	Dat Arg1:T11 Arg2:T9	
+R5	Dat Arg1:T11 Arg2:T10	
+R6	Dat Arg1:T13 Arg2:T12	
+N3	Reference T6 ICD10:Q25.7	Inne wrodzone wady rozwojowe pnia płucnego
+N5	Reference T9 ICD10:Q25.7	Inne wrodzone wady rozwojowe pnia płucnego
+T15	Treatment 895 931	w warunkach krążenia pozaustrojowego
+R7	Dat Arg1:T13 Arg2:T15	

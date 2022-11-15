@@ -1,0 +1,13 @@
+T1	Drug 340 349	Cefazolin
+T2	Condition 485 503	tetralogią Fallota
+N1	Reference T2 ICD10:Q21.3	Tetralogia Fallota
+T3	Treatment 509 517	korekcji
+N2	Reference T3 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T4	Treatment 518 560	skierowany do dalszych zabiegów ( Melody?)
+T6	Condition 563 580	wywiad alergiczny
+N4	Reference T6 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T7	Negation 581 587	ujemny
+T8	Drug 590 604	leków na stałe
+T9	Negation 605 618	nie otrzymuje
+R1	Neg Arg1:T9 Arg2:T8	
+R2	Neg Arg1:T7 Arg2:T6	

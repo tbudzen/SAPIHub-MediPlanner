@@ -1,0 +1,39 @@
+T1	Drug 336 345	Enalapril
+T2	Drug 470 477	Hepatil
+T3	Drug 448 454	Acesan
+T4	Drug 391 401	Karwedilol
+T5	Drug 362 375	Spironolakton
+T6	Drug_dose 346 361	2 x 2,5mg 1-0-1
+R1	Drg Arg1:T1 Arg2:T6	
+T7	Drug_dose 376 390	1 x 25mg 1-0-0
+R2	Drg Arg1:T5 Arg2:T7	
+T8	Drug_dose 402 447	1 x 1,5625mg 1-0-1 (2 x 1/2 tabletki 3,215mg)
+R3	Drg Arg1:T4 Arg2:T8	
+T9	Drug_dose 455 469	1 x 30mg 0-0-1
+R4	Drg Arg1:T3 Arg2:T9	
+T10	Drug_dose 478 498	2 x 1 tabletka 1-0-1
+R5	Drg Arg1:T2 Arg2:T10	
+T11	Investigation 500 526	Rezonans magnetyczny serca
+T12	Treatment 632 704	Dalsza opieka w poradni kardiologicznej,genetycznej i endokrynologicznej
+T13	Behaviour 707 836	Ograniczenie aktywności fizycznej w życiu codziennym, powstrzymanie się od ćwiczenia na WFie przynajmniej do końca roku szkolnego
+T14	Condition 1055 1083	Kardiomiopatia rozstrzeniowa
+N1	Reference T14 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+T15	Treatment 1095 1125	kardiochirurgicznym zamknięciu
+T16	Date 1134 1144	27.02.2008
+R6	Dat Arg1:T16 Arg2:T15	
+T17	Symptom 1149 1168	Reakcje wazowagalne
+N2	Reference T17 ICD10:R55	Omdlenie i zapaść
+T18	Condition 1172 1191	Niedobór masy ciała
+N3	Reference T18 ICD10:R62.8	Inne braki w porównaniu do oczekiwanego prawidłowego rozwoju fizjologicznego
+T19	Drug 1315 1324	Enalapril
+T20	Drug 1326 1339	Spironolakton
+T21	Drug 1341 1351	Karwedilol
+T22	Drug 1353 1359	Acesan
+T23	Drug 1361 1368	Hepatil
+T24	Condition 1529 1543	kardiomiopatią
+N4	Reference T24 ICD10:I42.9	Kardiomiopatia, nieokreślona
+T25	Condition 1507 1526	wrodzoną wadą serca
+T26	Condition 1126 1132	ASD II
+N5	Reference T26 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R7	Dat Arg1:T16 Arg2:T26	
+N6	Reference T25 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych

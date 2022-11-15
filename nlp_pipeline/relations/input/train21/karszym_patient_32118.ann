@@ -1,0 +1,127 @@
+T1	Drug 341 350	Egiramlon
+T2	Drug 352 358	Atoris
+T3	Condition 577 633	Łagodna niedomykalność zastawki mitralnej i trójdzielnej
+T4	Condition 635 656	Nadciśnienie tętnicze
+N1	Reference T4 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T5	Condition 658 724	Arytmia komorowa pod postacią pojedynczych pobudzeń przedwczesnych
+N2	Reference T5 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T6	Condition 726 746	Hipercholesterolemia
+N3	Reference T6 ICD10:E78.0	Czysta hipercholesterolemia
+T7	Condition 747 775	Kamica pęcherzyka żółciowego
+A1	Status T7 Historical_Insignificant
+N4	Reference T7 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T8	Behaviour 777 787	Nikotynizm
+T9	Treatment 897 959	Dalsza opieka w Poradni Kardiologii i Wad Wrodzonych Dorosłych
+T10	Investigation 992 1014	Angio-CT tt wieńcowych
+T11	Treatment 1017 1037	Neurologicznej i POZ
+T12	Behaviour 1039 1080	Przestrzeganie diety ubogocholesterolowej
+T13	Treatment 1086 1121	okresowa kontrola lipidogramu w POZ
+T15	Treatment 1162 1201	Codzienna kontrola ciśnienia tętniczego
+T16	Drug 1235 1244	Egiramlon
+T17	Drug 1267 1273	Atoris
+T18	Drug 1300 1306	Bibloc
+T19	Drug_dose 1245 1266	5mg+5mg 1x1 tabl rano
+T20	Drug_dose 1274 1299	20  mg 1x1 tabl wieczorem
+T21	Drug_dose 1307 1328	3,75 mg 1x1 tabl rano
+R1	Drg Arg1:T16 Arg2:T19	
+R2	Drg Arg1:T17 Arg2:T20	
+R3	Drg Arg1:T18 Arg2:T21	
+T22	Behaviour 1330 1350	Niezdolność do pracy
+T23	Date 1352 1369	17.02-03.03.2019r
+R4	Dat Arg1:T23 Arg2:T22	
+T24	Condition 1536 1538	HA
+N5	Reference T24 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T25	Symptom 1540 1561	RR zwykle <140/90mmHg
+T26	Date 1565 1572	01.2019
+T27	Symptom 1574 1587	RR 160/90mmHg
+R5	Dat Arg1:T26 Arg2:T27	
+T28	Symptom 1619 1642	trzykrotnych zasłabnięć
+T29	Date 1643 1654	od 06.01br.
+R6	Dat Arg1:T29 Arg2:T28	
+T30	Symptom 1655 1693	z towarzyszącymi zaburzeniami widzenia
+N6	Reference T30 ICD10:H53.9	Zaburzenia widzenia, nieokreślone
+R7	Dat Arg1:T29 Arg2:T30	
+T31	Symptom 1716 1802	szybkie tętno na ciśnieniomierzu (90-130/min) z uczuciem niepokoju w klatce piersiowej
+T33	Treatment 1804 1813	usunięcie
+A2	Status T33 Historical_Insignificant
+N7	Reference T33 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T34	Negation 1851 1857	Neguje
+T35	Symptom 1859 1867	omdlenia
+N8	Reference T35 ICD10:R55	Omdlenie i zapaść
+T36	Symptom 1869 1879	krwawienia
+T37	Symptom 1881 1894	czarne stolce
+N9	Reference T37 ICD10:K92.1	Stolce smołowate
+T38	Symptom 1896 1912	brunatne wymioty
+N10	Reference T38 ICD10:K92.0	Wymioty krwawe
+T39	Condition 1914 1930	chorobę wrzodową
+N11	Reference T39 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T40	Symptom 1932 1946	duszność nocną
+N12	Reference T40 ICD10:R06.0	Duszność
+T41	Symptom 1948 1963	obrzęki podudzi
+N13	Reference T41 ICD10:R60.0	Obrzęk zlokalizowany
+T42	Symptom 1965 1989	bóle w klatce piersiowej
+N14	Reference T42 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T43	Symptom 1991 2006	kołatania serca
+N15	Reference T43 ICD10:R00.2	Kołatanie serca
+T44	Condition 2008 2010	DM
+N16	Reference T44 ICD10:E14	Cukrzyca nieokreślona
+T45	Condition 2012 2028	choroby tarczycy
+T46	Symptom 2030 2051	szybsze męczenie się.
+R8	Neg Arg1:T34 Arg2:T35	
+R9	Neg Arg1:T34 Arg2:T36	
+R10	Neg Arg1:T34 Arg2:T37	
+R11	Neg Arg1:T34 Arg2:T38	
+R12	Neg Arg1:T34 Arg2:T39	
+R13	Neg Arg1:T34 Arg2:T40	
+R14	Neg Arg1:T34 Arg2:T41	
+R15	Neg Arg1:T34 Arg2:T42	
+R16	Neg Arg1:T34 Arg2:T43	
+R17	Neg Arg1:T34 Arg2:T44	
+R18	Neg Arg1:T34 Arg2:T45	
+R19	Neg Arg1:T34 Arg2:T46	
+T32	Behaviour 2074 2117	Palenie tytoniu: tak, ponad 20 pap/dziennie
+T47	Behaviour 2118 2129	Inne używki
+T48	Negation 2131 2134	nie
+T49	Condition 2135 2144	Uczulenia
+N17	Reference T49 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T50	Negation 2146 2149	nie
+T51	Condition 2177 2180	WZW
+N18	Reference T51 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T52	Condition 2187 2196	borelioza
+N19	Reference T52 ICD10:A69.2	Choroba z Lyme
+T53	Condition 2202 2205	tbc
+N20	Reference T53 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T54	Condition 2211 2215	odra
+N21	Reference T54 ICD10:B05	Odra
+T55	Condition 2221 2235	kontakt z odrą
+N22	Reference T55 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+T56	Negation 2181 2184	(-)
+T57	Negation 2197 2200	(-)
+T58	Negation 2206 2209	(-)
+T59	Negation 2216 2219	(-)
+T60	Negation 2236 2239	(-)
+R20	Neg Arg1:T56 Arg2:T51	
+R21	Neg Arg1:T57 Arg2:T52	
+R22	Neg Arg1:T58 Arg2:T53	
+R23	Neg Arg1:T59 Arg2:T54	
+R24	Neg Arg1:T60 Arg2:T55	
+R25	Neg Arg1:T48 Arg2:T47	
+R26	Neg Arg1:T50 Arg2:T49	
+T61	Drug 2320 2329	Egiramlon
+T62	Drug 2332 2340	Pramolan
+T63	Drug 2343 2352	Captopril
+T64	Drug_dose 2353 2361	doraźnie
+R27	Drg Arg1:T62 Arg2:T64	
+R28	Drg Arg1:T63 Arg2:T64	
+T65	Investigation 2421 2442	badania laboratoryjne
+T66	Investigation 2444 2448	ECHO
+T67	Investigation 2450 2468	EKG metodą Holtera
+T68	Investigation 2470 2474	ABPM
+T69	Investigation 2476 2491	próba wysiłkowa
+T70	Behaviour 2256 2282	warunki mieszkaniowe dobre
+N23	Reference T8 ICD10:Z72.0	Używanie tytoniu
+N24	Reference T32 ICD10:Z72.0	Używanie tytoniu
+T14	Treatment 1124 1160	docelowe wartości chol. LDL<115mg/dl
+T71	Condition 1814 1849	łagodnej zmiany okolicy lewego ucha
+N25	Reference T71 ICD10:D23.9	Skóra, umiejscowienie nieokreślone
+A3	Status T71 Historical_Insignificant

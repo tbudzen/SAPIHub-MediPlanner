@@ -1,0 +1,99 @@
+T1	Drug 567 574	Betaloc
+T2	Condition 803 856	Łagodna/umiarkowana niedomykalność zastawki mitralnej
+N1	Reference T2 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T3	Condition 859 871	trójdzielnej
+N2	Reference T3 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T4	Condition 873 903	Pojedyncze pobudzenia komorowe
+N3	Reference T4 ICD10:I49.3	
+T5	Condition 906 917	nadkomorowe
+N4	Reference T5 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T6	Condition 919 940	Nadciśnienie tętnicze
+N5	Reference T6 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T7	Condition 942 962	Hipercholesterolemia
+N6	Reference T7 ICD10:E78.0	Czysta hipercholesterolemia
+T8	Symptom 964 971	Migrena
+N7	Reference T8 ICD10:G43	Migrena
+T9	Treatment 1080 1145	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T10	Behaviour 1148 1188	Dieta lekkostrawna , niskocholesterolowa
+T11	Investigation 1192 1275	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T12	Investigation 1278 1326	Systematyczna kontrola ciśnienia tętniczego krwi
+T13	Treatment 1329 1370	Wskazane systematyczne przyjmowanie leków
+T14	Drug 1377 1384	Betaloc
+T15	Drug_dose 1385 1401	25 mg 1x dz rano
+R1	Drg Arg1:T14 Arg2:T15	
+T16	Symptom 1576 1591	kołatania serca
+N8	Reference T16 ICD10:R00.2	Kołatanie serca
+T17	Symptom 1594 1639	chwiejnych wartości ciśnienia tętniczego krwi
+N9	Reference T17 ICD10:R03	
+T18	Condition 1663 1696	niedomykalność zastawki mitralnej
+N10	Reference T18 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T19	Investigation 1725 1728	TEE
+T20	Symptom 1748 1800	kłujące w klatce piersiowej nie związane z wysiłkiem
+N11	Reference T20 ICD10:R07.3	Inne bóle w klatce piersiowej
+T21	Negation 1803 1809	Neguje
+T22	Symptom 1810 1822	zasłabnięcia
+R2	Neg Arg1:T21 Arg2:T22	
+T23	Condition 1839 1860	Nadciśnienie tętnicze
+N12	Reference T23 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T24	Symptom 1862 1869	Migreny
+N13	Reference T24 ICD10:G43	Migrena
+T25	Condition 1917 1959	Przewlekły nieżyt górnych dróg oddechowych
+N14	Reference T25 ICD10:J06.9	Ostre zakażenie górnych dróg oddechowych, nieokreślone
+T26	Treatment 2005 2022	Przebyte operacje
+T27	Treatment 2033 2041	operacji
+A1	Status T27 Historical_Insignificant
+T28	Condition 2042 2065	żylaków kończyn dolnych
+A2	Status T28 Historical_Insignificant
+N15	Reference T28 ICD10:I83	Żylaki kończyn dolnych
+T29	Date 2066 2070	1998
+T30	Date 2073 2077	2015
+R3	Dat Arg1:T29 Arg2:T28	
+R4	Dat Arg1:T30 Arg2:T28	
+R5	Dat Arg1:T29 Arg2:T27	
+R6	Dat Arg1:T30 Arg2:T27	
+T31	Treatment 2088 2096	operacji
+A3	Status T31 Historical_Insignificant
+T32	Condition 2097 2124	łagodnego guza piesi prawej
+A4	Status T32 Historical_Insignificant
+N16	Reference T32 ICD10:D24	Nowotwór niezłośliwy piersi
+T33	Date 2125 2129	2015
+R7	Dat Arg1:T33 Arg2:T32	
+R8	Dat Arg1:T33 Arg2:T31	
+T34	Treatment 2133 2152	Leczenie przewlekłe
+T35	Treatment 2155 2171	Laryngologicznie
+T36	Condition 2200 2203	WZW
+N17	Reference T36 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T37	Condition 2213 2222	borelioza
+N18	Reference T37 ICD10:A69.2	Choroba z Lyme
+T38	Negation 2225 2226	-
+R9	Neg Arg1:T38 Arg2:T37	
+T39	Negation 2206 2207	-
+R10	Neg Arg1:T39 Arg2:T36	
+T40	Condition 2231 2250	wywiadzie rodzinnym
+A5	Status T40 Family
+T41	Condition 2260 2281	nadciśnienie tętnicze
+A6	Status T41 Family
+N19	Reference T41 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T42	Behaviour 2283 2298	Palenie tytoniu
+T43	Negation 2300 2308	nie pali
+T44	Date 2309 2318	od 10 lat
+R11	Neg Arg1:T43 Arg2:T42	
+R12	Dat Arg1:T44 Arg2:T42	
+T45	Behaviour 2320 2331	Inne używki
+T46	Negation 2333 2336	nie
+R13	Neg Arg1:T46 Arg2:T45	
+T47	Condition 2337 2346	Uczulenia
+N21	Reference T47 ICD10:T78.4	Alergia, nieokreślona
+T48	Negation 2348 2354	neguje
+R14	Neg Arg1:T48 Arg2:T47	
+T49	Behaviour 2371 2397	warunki mieszkaniowe dobre
+T50	Drug 2422 2429	Betaloc
+T51	Drug_dose 2430 2446	25 mg 1x dz rano
+R15	Drg Arg1:T50 Arg2:T51	
+T52	Investigation 2464 2474	Echo serca
+T53	Investigation 2477 2487	Holter EKG
+T54	Investigation 2490 2505	Próba Wysiłkowa
+T55	Investigation 2508 2511	TEE
+N22	Reference T22 ICD10:R55	Omdlenie i zapaść
+N20	Reference T42 ICD10:Z72.0	Używanie tytoniu
+N23	Reference T45 ICD10:Z72	Problemy związane ze stylem życia

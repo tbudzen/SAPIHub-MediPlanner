@@ -1,0 +1,247 @@
+T1	Treatment 342 437	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Endokrynologicznej i Diabetologicznej
+T2	Behaviour 442 512	Regularna  umiarkowana aktywność fizyczna min. 5x po 30 minut dziennie
+T3	Behaviour 517 567	Dieta lekkostrawna, małosolna, niskocholesterolowa
+T4	Treatment 575 666	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T5	Treatment 673 732	Systematyczna kontrola ciśnienia tętniczego krwi i glikemii
+T6	Drug 745 753	Euthyrox
+T7	Drug_dose 754 772	N25 1x1 tabl. rano
+T8	Drug 773 781	Brilique
+T9	Drug_dose 782 796	90 mg 2x1 tabl
+T10	Date 798 822	minimum do 30.12.2019 r.
+T11	Treatment 824 834	stenty DES
+N1	Reference T11 ICD10:Z95.5	Obecność implantów i przeszczepów związanych z angioplastyką wieńcową
+T12	Negation 837 848	odstawienie
+T13	Condition 855 875	zakrzepicą w stencie
+N2	Reference T13 ICD10:T82.7	Zakażenie i odczyn zapalny spowodowane przez inne urządzenia, implanty i przeszczepy sercowe i naczyniowe
+T14	Condition 878 891	zawałem serca
+N3	Reference T14 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T15	Drug 893 896	IPP
+T16	Drug_dose 897 917	20 mg 1x1 tabl. rano
+T17	Drug 918 926	Toramide
+T18	Drug_dose 927 947	10 mg 1x1 tabl. rano
+T19	Drug 948 956	Bisocard
+T20	Drug_dose 957 976	5 mg 1x1 tabl. rano
+T21	Drug 978 988	Diaprel MR
+T22	Drug_dose 989 1009	60 mg 1x1 tabl. rano
+T23	Drug 1010 1018	Spironol
+T24	Drug_dose 1019 1045	25 mg 1x1 tabl. w południe
+T25	Drug 1046 1052	Siofor
+T26	Drug_dose 1053 1080	850 mg 1x1 tabl. w południe
+T27	Drug 1081 1086	Acard
+T28	Drug_dose 1087 1112	75 mg 1x1 tabl. wieczorem
+T29	Drug 1113 1119	Atoris
+T30	Drug_dose 1120 1145	40 mg 1x1 tabl. wieczorem
+T31	Drug 1146 1153	Tritace
+T32	Drug_dose 1154 1178	5 mg 1x1 tabl. wieczorem
+T33	Drug 1179 1187	Primacor
+T34	Drug_dose 1188 1213	10 mg 1x1 tabl. wieczorem
+T35	Drug 1214 1226	Preductal MR
+T36	Drug_dose 1227 1235	2x1 tabl
+T37	Drug 1237 1246	Nitromint
+T38	Drug_dose 1247 1290	1-2 dawki doraźnie w razie bólu dławicowego
+R1	Drg Arg1:T6 Arg2:T7	
+R2	Drg Arg1:T8 Arg2:T9	
+R3	Dat Arg1:T10 Arg2:T8	
+R4	Drg Arg1:T15 Arg2:T16	
+R5	Drg Arg1:T17 Arg2:T18	
+R6	Drg Arg1:T19 Arg2:T20	
+R7	Drg Arg1:T21 Arg2:T22	
+R8	Drg Arg1:T23 Arg2:T24	
+R9	Drg Arg1:T25 Arg2:T26	
+R10	Drg Arg1:T27 Arg2:T28	
+R11	Drg Arg1:T29 Arg2:T30	
+R12	Drg Arg1:T31 Arg2:T32	
+R13	Drg Arg1:T33 Arg2:T34	
+R14	Drg Arg1:T35 Arg2:T36	
+R15	Drg Arg1:T37 Arg2:T38	
+T39	Condition 1485 1547	Niewydolność serca z zachowaną funkcją skurczową II klasa NYHA
+N4	Reference T39 ICD10:I50.9	Niewydolność serca, nieokreślona
+T40	Condition 1549 1586	Choroba niedokrwienna serca I* wg CCS
+N5	Reference T40 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T41	Condition 1596 1617	OZW-NSTEMI powikłanym
+N6	Reference T41 ICD10:I21.4	Ostry zawał serca podwsierdziowy
+T42	Condition 1618 1632	obrzękiem płuc
+N7	Reference T42 ICD10:J81	Obrzęk płuc
+T43	Treatment 1642 1664	PCI GPZ + 2 stenty DES
+N8	Reference T43 ICD10:Z95.5	Obecność implantów i przeszczepów związanych z angioplastyką wieńcową
+T44	Drug 1667 1678	eptifibatyd
+T45	Date 1680 1690	30.11.2018
+T46	Treatment 1694 1729	PCI GO/3Mg z implantacją stentu DES
+N9	Reference T46 ICD10:Z95.5	Obecność implantów i przeszczepów związanych z angioplastyką wieńcową
+T47	Date 1731 1741	03.12.2018
+R16	Dat Arg1:T45 Arg2:T44	
+R17	Dat Arg1:T45 Arg2:T43	
+R18	Dat Arg1:T45 Arg2:T42	
+R19	Dat Arg1:T45 Arg2:T41	
+R20	Dat Arg1:T47 Arg2:T46	
+T48	Condition 1752 1799	OZW pod postacią niestabilnej choroby wieńcowej
+N10	Reference T48 ICD10:I20.0	Choroba niedokrwienna serca niestabilna
+T49	Treatment 1800 1820	leczonej zachowawczo
+T50	Date 1822 1829	04.2017
+R21	Dat Arg1:T50 Arg2:T48	
+R22	Dat Arg1:T50 Arg2:T49	
+T51	Condition 1832 1877	Umiarkowana niedomykalność zastawki mitralnej
+N11	Reference T51 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T52	Condition 1879 1900	Nadciśnienie tętnicze
+N12	Reference T52 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T53	Condition 1902 1917	Cukrzyca typu 2
+N13	Reference T53 ICD10:E11	Cukrzyca insulinoniezależna
+T54	Condition 1919 1939	Hipercholesterolemia
+N14	Reference T54 ICD10:E78.0	Czysta hipercholesterolemia
+T55	Condition 1941 1998	Niedoczynność tarczycy w trakcie leczenia substytucyjnego
+N15	Reference T55 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T56	Condition 2179 2199	OZW-STEMI powikłanym
+N16	Reference T56 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T57	Condition 2200 2214	obrzękiem płuc
+N17	Reference T57 ICD10:J81	Obrzęk płuc
+T58	Treatment 2215 2246	leczonym PCI GPZ + 2 stenty DES
+N18	Reference T58 ICD10:Z95.5	Obecność implantów i przeszczepów związanych z angioplastyką wieńcową
+T59	Drug 2249 2260	eptifibatyd
+T60	Date 2262 2272	30.11.2018
+R23	Dat Arg1:T60 Arg2:T59	
+R24	Dat Arg1:T60 Arg2:T58	
+R25	Dat Arg1:T60 Arg2:T57	
+R26	Dat Arg1:T60 Arg2:T56	
+T61	Treatment 2276 2311	PCI GO/3Mg z implantacją stentu DES
+N19	Reference T61 ICD10:Z95.5	Obecność implantów i przeszczepów związanych z angioplastyką wieńcową
+T62	Date 2313 2323	03.12.2018
+T63	Condition 2329 2376	OZW pod postacią niestabilnej choroby wieńcowej
+N20	Reference T63 ICD10:I20.0	Choroba niedokrwienna serca niestabilna
+T64	Treatment 2377 2397	leczonej zachowawczo
+T65	Date 2399 2406	04.2017
+R27	Dat Arg1:T62 Arg2:T61	
+R28	Dat Arg1:T65 Arg2:T63	
+R29	Dat Arg1:T65 Arg2:T64	
+T66	Condition 2411 2456	umiarkowaną dysfunkcją skurczową lewej komory
+T67	Condition 2458 2505	umiarkowaną niedomykalnością zastawki mitralnej
+N22	Reference T67 ICD10:I34.0	Niedomykalność zastawki mitralnej
+N21	Reference T66 ICD10:I50.1	Niewydolność serca lewokomorowa
+T68	Condition 2509 2511	HA
+N23	Reference T68 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T69	Condition 2515 2522	DM t. 2
+N24	Reference T69 ICD10:E11	Cukrzyca insulinoniezależna
+T70	Condition 2524 2536	dyslipidemią
+N25	Reference T70 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T71	Condition 2538 2597	niedoczynnością tarczycy w trakcie leczenia substytucyjnego
+N26	Reference T71 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T72	Symptom 2628 2674	utrzymywania sie dolegliwości stenokardialnych
+T73	Symptom 2677 2686	duszności
+N27	Reference T73 ICD10:R06.0	Duszność
+T74	Treatment 2705 2732	konsultacji hemodynamicznej
+T75	Investigation 2778 2789	stress-echo
+T76	Investigation 2797 2828	oceny istotności zwężenia w PTW
+T77	Treatment 2830 2873	przed kwalifikacją do ew. dalszego leczenia
+T78	Symptom 2897 2923	okresowo krwawienie z nosa
+N28	Reference T78 ICD10:R04.0	Epistaxis
+T79	Date 2925 2945	od momentu włączenia
+T80	Drug 2946 2950	DAPT
+R30	Dat Arg1:T79 Arg2:T78	
+T81	Condition 2953 2974	wypadek komunikacyjny
+N29	Reference T81 ICD10:V99	Nieokreślony wypadek komunikacyjny
+T82	Date 2976 2980	1977
+R31	Dat Arg1:T82 Arg2:T81	
+T83	Symptom 3000 3035	dolegliwości bólowe szyi i potylicy
+N30	Reference T83 ICD10:R52.2	Inny ból przewlekły
+T84	Negation 3038 3044	Neguje
+T85	Symptom 3046 3058	zasłabnięcia
+T86	Symptom 3060 3068	omdlenia
+N31	Reference T86 ICD10:R55	Omdlenie i zapaść
+T87	Symptom 3070 3080	krwawienia
+T88	Symptom 3082 3095	czarne stolce
+N32	Reference T88 ICD10:K92.1	Stolce smołowate
+T89	Symptom 3097 3113	brunatne wymioty
+N33	Reference T89 ICD10:K92.0	Wymioty krwawe
+T90	Condition 3115 3131	chorobę wrzodową
+N34	Reference T90 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+R32	Neg Arg1:T84 Arg2:T85	
+R33	Neg Arg1:T84 Arg2:T86	
+R34	Neg Arg1:T84 Arg2:T87	
+R35	Neg Arg1:T84 Arg2:T88	
+R36	Neg Arg1:T84 Arg2:T89	
+R37	Neg Arg1:T84 Arg2:T90	
+T91	Treatment 3152 3165	appendektomia
+N35	Reference T91 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T92	Date 3167 3171	1969
+T93	Treatment 3174 3187	histerektomia
+A1	Status T93 Historical_Insignificant
+N36	Reference T93 ICD10:Z90.7	Nabyty brak narządów płciowych
+R38	Dat Arg1:T92 Arg2:T91	
+T94	Condition 3197 3214	mięśniaków macicy
+A2	Status T94 Historical_Insignificant
+N37	Reference T94 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+T95	Date 3216 3220	2010
+R39	Dat Arg1:T95 Arg2:T93	
+R40	Dat Arg1:T95 Arg2:T94	
+A3	Status T91 Historical_Insignificant
+T96	Behaviour 3224 3239	Palenie tytoniu
+N38	Reference T96 ICD10:Z72.0	Używanie tytoniu
+T97	Negation 3241 3244	nie
+T98	Date 3254 3269	ok. 20 lat temu
+R41	Neg Arg1:T97 Arg2:T96	
+T99	Negation 3246 3253	rzuciła
+R42	Neg Arg1:T99 Arg2:T96	
+R43	Dat Arg1:T98 Arg2:T96	
+T100	Behaviour 3272 3283	Inne używki
+T101	Negation 3285 3288	nie
+T102	Condition 3290 3299	Uczulenia
+N39	Reference T102 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T103	Negation 3301 3304	nie
+T104	Condition 3333 3336	WZW
+N40	Reference T104 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T105	Condition 3343 3352	borelioza
+N41	Reference T105 ICD10:A69.2	Choroba z Lyme
+T106	Condition 3360 3363	tbc
+N42	Reference T106 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T107	Condition 3369 3377	odra (+)
+N43	Reference T107 ICD10:B05	Odra
+T108	Negation 3337 3340	(-)
+T109	Negation 3353 3358	( - )
+T110	Negation 3364 3367	(-)
+R44	Neg Arg1:T108 Arg2:T104	
+R45	Neg Arg1:T109 Arg2:T105	
+R46	Neg Arg1:T110 Arg2:T106	
+R47	Neg Arg1:T101 Arg2:T100	
+R48	Neg Arg1:T103 Arg2:T102	
+T111	Behaviour 3395 3421	warunki mieszkaniowe dobre
+T112	Behaviour 3423 3440	mieszka z rodziną
+T113	Behaviour 3442 3451	emerytura
+T114	Date 3453 3462	wcześniej
+T115	Behaviour 3464 3472	kucharka
+R49	Dat Arg1:T114 Arg2:T115	
+T116	Drug 3510 3518	Euthyrox
+T117	Drug_dose 3519 3533	N25 1xdz. rano
+T118	Drug 3535 3543	Brilique
+T119	Drug_dose 3544 3554	90 mg 2xdz
+T120	Drug 3556 3559	IPP
+T121	Drug_dose 3560 3575	20 mg 1xdz rano
+T122	Drug 3577 3585	Toramide
+T123	Drug_dose 3586 3600	5 mg 1xdz rano
+T124	Drug 3602 3610	Bisocard
+T125	Drug_dose 3611 3620	5 mg 1xdz
+T126	Drug 3622 3632	Diaprel MR
+T127	Drug_dose 3633 3648	60 mg 1xdz rano
+T128	Drug 3650 3658	Spironol
+T129	Drug_dose 3659 3680	25 mg 1xdz w południe
+T130	Drug 3682 3688	Siofor
+T131	Drug_dose 3689 3711	850 mg 1xdz w południe
+T132	Drug 3713 3718	Acard
+T133	Drug_dose 3719 3739	75 mg 1xdz wieczorem
+T134	Drug 3741 3747	Atoris
+T135	Drug_dose 3748 3768	40 mg 1xdz wieczorem
+T136	Drug 3770 3777	Tritace
+T137	Drug_dose 3778 3797	5 mg 1xdz wieczorem
+R50	Drg Arg1:T116 Arg2:T117	
+R51	Drg Arg1:T118 Arg2:T119	
+R52	Drg Arg1:T120 Arg2:T121	
+R53	Drg Arg1:T122 Arg2:T123	
+R54	Drg Arg1:T124 Arg2:T125	
+R55	Drg Arg1:T126 Arg2:T127	
+R56	Drg Arg1:T128 Arg2:T129	
+R57	Drg Arg1:T130 Arg2:T131	
+R58	Drg Arg1:T132 Arg2:T133	
+R59	Drg Arg1:T134 Arg2:T135	
+R60	Drg Arg1:T136 Arg2:T137	
+T138	Investigation 3862 3883	badania laboratoryjne
+T139	Investigation 3885 3889	ECHO
+T140	Investigation 3891 3894	DSE
+T141	Investigation 3896 3900	ABPM

@@ -1,0 +1,64 @@
+T1	Investigation 1841 1851	echo serca
+T2	Investigation 1853 1856	TET
+T3	Investigation 1858 1862	ABPM
+T4	Investigation 1864 1874	Holter ekg
+T5	Investigation 1876 1894	rtg kl. piersiowej
+T6	Behaviour 429 503	Dieta lekkostrawna z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T7	Behaviour 507 569	Regularne spożywanie posiłków i ograniczenie nadmiernego picia
+T8	Symptom 797 830	Atypowe bóle w klatce piersiowej.
+N1	Reference T8 ICD10:R07.3	Inne bóle w klatce piersiowej
+T9	Condition 831 868	Podejrzenie choroby wrzodowej żołądka
+A1	Source T9 Declared
+N2	Reference T9 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T10	Negation 1654 1660	neguje
+T11	Behaviour 1635 1653	Uzależnienie inne:
+R1	Neg Arg1:T10 Arg2:T11	
+T12	Behaviour 1612 1633	Alkohol: okazjonalnie
+N3	Reference T12 ICD10:Z72.1	Używanie alkoholu
+T13	Behaviour 1565 1611	Nikotynizm: tak do 6 m-cy wstecz, 10 paczkolat
+N4	Reference T13 ICD10:T65.2	Tytoń i nikotyna
+T14	Treatment 1518 1522	CABG
+A2	Status T14 Family
+T15	Condition 1513 1515	MI
+A3	Status T15 Family
+N5	Reference T15 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T16	Negation 1478 1484	neguje
+T17	Negation 1451 1457	neguje
+T18	Treatment 1459 1476	Przebyte operacje
+R2	Neg Arg1:T16 Arg2:T18	
+T19	Condition 1430 1449	W wywiadzie ponadto
+R3	Neg Arg1:T17 Arg2:T19	
+T20	Negation 1557 1563	neguje
+T21	Condition 1548 1555	Alergie
+N6	Reference T21 ICD10:T78.4	Alergia, nieokreślona
+R4	Neg Arg1:T20 Arg2:T21	
+T22	Drug 1720 1724	Leki
+T23	Negation 1726 1733	żadnych
+R5	Neg Arg1:T23 Arg2:T22	
+T24	Drug 1745 1751	Ebivol
+A4	Status T24 Historical_Insignificant
+T25	Date 1735 1744	wcześniej
+R6	Dat Arg1:T25 Arg2:T24	
+T26	Drug 1765 1776	Betaloc ZOK
+A5	Status T26 Historical_Insignificant
+T27	Symptom 1754 1763	spadki BP
+T28	Symptom 1779 1813	bez efektu, ale też bez spadków BP
+T29	Investigation_result 1394 1416	- tachykardia zatokowa
+N7	Reference T29 ICD10:R00.0	Tachykardia, nieokreślona
+T30	Investigation 1354 1364	Holter EKG
+R7	Inv Arg1:T30 Arg2:T29	
+T31	Date 1380 1393	w przeszłości
+R8	Dat Arg1:T31 Arg2:T30	
+T32	Symptom 1037 1064	bólów o charakterze wysiłku
+T33	Symptom 1298 1351	złe samopoczucie "zawroty głowy, ospały, jak na kacu"
+N8	Reference T33 ICD10:R53	Złe samopoczucie i zmęczenie
+T34	Date 1068 1085	1 x 1.5 roku temu
+R9	Dat Arg1:T34 Arg2:T32	
+T35	Symptom 1086 1145	w wysiłku (siłowania, spacer szybki, duszne pomieszczenia),
+R10	Dat Arg1:T34 Arg2:T35	
+T36	Symptom 1156 1179	spoczynkowe 5x dziennie
+T37	Symptom 1226 1272	promieniowaniem do pleców - ból kilkusekundowy
+N9	Reference T37 ICD10:R07.3	Inne bóle w klatce piersiowej
+T38	Date 1193 1204	6 m-cy temu
+R11	Dat Arg1:T38 Arg2:T36	
+R12	Dat Arg1:T25 Arg2:T26	

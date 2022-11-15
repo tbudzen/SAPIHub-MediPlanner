@@ -1,0 +1,31 @@
+T1	Condition 447 467	Hipercholesterolemia
+N1	Reference T1 ICD10:E78.0	Czysta hipercholesterolemia
+T2	Condition 469 489	Torbiel nerki prawej
+T3	Condition 491 541	Choroba zwyrodnieniowa odcinka szyjnego kręgosłupa
+N2	Reference T3 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+A1	Status T3 Historical_Insignificant
+T4	Condition 707 730	nadciśnienia tętniczego
+N3	Reference T4 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T5	Symptom 732 808	bólów w kl piersiowej. Bóle nie związane z wysiłkiem, raczej z pozycją ciała
+N4	Reference T5 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T6	Condition 823 843	hipercholesterolemia
+N5	Reference T6 ICD10:E78.0	Czysta hipercholesterolemia
+T7	Negation 845 851	Neguje
+T8	Condition 852 869	uczulenia na leki
+N6	Reference T8 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R1	Neg Arg1:T7 Arg2:T8	
+T9	Negation 871 877	Neguje
+T10	Symptom 878 893	krwawienia z pp
+N7	Reference T10 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T11	Negation 895 901	neguje
+T12	Symptom 902 921	utraty przytomności
+T13	Negation 923 929	neguje
+T14	Symptom 930 944	typową dławice
+N8	Reference T14 ICD10:R07.2	Ból w okolicy przedsercowej
+R2	Neg Arg1:T9 Arg2:T10	
+R3	Neg Arg1:T11 Arg2:T12	
+R4	Neg Arg1:T13 Arg2:T14	
+T15	Drug 957 966	triplixam
+T16	Drug 968 977	lipanthyl
+T17	Drug 979 987	bisocard
+T18	Drug 989 995	espiro

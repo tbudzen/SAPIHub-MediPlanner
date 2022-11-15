@@ -1,0 +1,34 @@
+T1	Drug 339 347	Dormicum
+T2	Drug 349 358	Captopril
+T3	Drug 360 368	Spironol
+T4	Drug 370 376	Acesan
+T5	Drug 509 518	Captopril
+T6	Drug_dose 519 526	2 x 4mg
+T7	Drug 528 536	Spironol
+T8	Drug_dose 537 547	1 x 6.25mg
+T9	Drug 549 555	Acesan
+T10	Drug_dose 556 564	1 x 25mg
+T11	Investigation 569 626	Ambulatoryjna kontrola parametrów funkcji układu krążenia
+T12	Treatment 631 659	Dalsza opieka kardiologiczna
+T13	Treatment 664 721	Systematyczna opieka ogólnopediatryczna w warunkach POZ-u
+T14	Condition 940 994	Wrodzona wada serca - zespół niedorozwoju lewego serca
+N1	Reference T14 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+T15	Treatment 1008 1025	operacji Norwooda
+N2	Reference T15 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T16	Treatment 1050 1094	angioplastyce zespolenia komorowo - płucnego
+T17	Treatment 1097 1107	zamknięcie
+N3	Reference T17 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T18	Condition 1108 1138	kolaterali systemowo - płucnej
+T19	Date 1140 1149	14.07.17r
+T20	Treatment 1163 1175	operacji BDG
+N5	Reference T20 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T21	Date 1177 1186	11.08.17r
+R1	Dat Arg1:T19 Arg2:T17	
+R2	Dat Arg1:T19 Arg2:T18	
+R3	Dat Arg1:T21 Arg2:T20	
+R4	Drg Arg1:T5 Arg2:T6	
+R5	Drg Arg1:T7 Arg2:T8	
+R6	Drg Arg1:T9 Arg2:T10	
+N4	Reference T18 ICD10:Q25.7	Inne wrodzone wady rozwojowe pnia płucnego
+T22	Date 1027 1036	23.01.17r
+R7	Dat Arg1:T22 Arg2:T15	

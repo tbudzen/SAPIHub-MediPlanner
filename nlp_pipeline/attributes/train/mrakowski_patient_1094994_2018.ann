@@ -1,0 +1,29 @@
+T1	Treatment 331 367	Hospitalizacja w Klinice Kardiologii
+T2	Investigation 384 398	koronarografii
+T3	Date 406 417	25.06.2019r
+R1	Dat Arg1:T3 Arg2:T1	
+R2	Dat Arg1:T3 Arg2:T2	
+T4	Investigation 505 548	Ambulatoryjna kontrola ciśnienia tętniczego
+T5	Treatment 553 613	Stała opieka ogólnopediatryczna w Poradni Lekarza Rodzinnego
+T6	Condition 1006 1058	Wrodzona wada serca pod postacią Zepołu Taussig-Bing
+N1	Reference T6 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+T7	Condition 1061 1082	hipoplazją łuku aorty
+N2	Reference T7 ICD10:Q25.4	Inne wrodzone wady rozwojowe aorty
+T8	Condition 1085 1101	koarktacją aorty
+N3	Reference T8 ICD10:Q25.1	Zwężenie cieśni aorty
+T9	Treatment 1115 1162	leczeniu operacyjnym metodą korekcji całkowitej
+T10	Date 1164 1175	04.06.2010r
+R3	Dat Arg1:T10 Arg2:T9	
+T11	Condition 1313 1328	z. Tausing-Bing
+N4	Reference T11 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+T12	Investigation 1343 1360	badania kontrolne
+T13	Date 1362 1374	tydzien temu
+T14	Condition 1375 1383	infekcja
+N5	Reference T14 ICD10:J00	Ostre zapalenie nosa i gardła [przeziębienie]
+R4	Dat Arg1:T13 Arg2:T14	
+T15	Drug 1406 1416	antybiotyk
+T16	Symptom 1419 1450	kaszel produktywny , zanikajacy
+N6	Reference T16 ICD10:R05	Kaszel
+T17	Drug 738 743	leków
+T18	Negation 734 737	Bez
+R5	Neg Arg1:T18 Arg2:T17	

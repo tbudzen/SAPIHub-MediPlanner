@@ -1,0 +1,97 @@
+T1	Investigation 437 466	kontrola ciśnienia tętniczego
+T2	Investigation 476 496	kontrola lipidogramu
+T3	Date 498 508	raz w roku
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Behaviour 510 535	dieta niskocholesterolowa
+T5	Behaviour 537 582	stały, umiarkowany, aerobowy wysiłek fizyczny
+T6	Behaviour 583 604	zakaz palenia tytoniu
+T7	Drug 635 644	Furosemid
+T8	Drug_dose 645 657	1 tabl. rano
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 658 666	Spironol
+T10	Drug_dose 667 691	25 mg 1 tabl. w południe
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 692 703	Betaloc ZOK
+T12	Drug_dose 704 722	50 mg 1 tabl. rano
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 723 730	Polpril
+T14	Drug_dose 731 749	10 mg 1 tabl. rano
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Drug 750 758	Primacor
+T16	Drug_dose 759 782	20 mg 1 tabl. wieczorem
+R6	Drg Arg1:T15 Arg2:T16	
+T17	Drug 783 788	Acard
+T18	Drug_dose 789 811	75 mg  tabl. wieczorem
+R7	Drg Arg1:T17 Arg2:T18	
+T19	Drug 812 818	Atoris
+T20	Drug_dose 819 842	10 mg 1 tabl. wieczorem
+R8	Drg Arg1:T19 Arg2:T20	
+T21	Investigation 2192 2202	echo serca
+T22	Investigation 2203 2206	TET
+T23	Investigation 2208 2212	ABPM
+T24	Investigation 2214 2220	Holter
+T25	Drug 2123 2128	Setal
+T26	Drug_dose 2129 2143	1 tabl. 2 x dz
+R9	Drg Arg1:T25 Arg2:T26	
+T27	Drug 2145 2150	Acard
+T28	Drug_dose 2151 2164	75 mg 1 tabl.
+R10	Drg Arg1:T27 Arg2:T28	
+T29	Negation 2052 2062	nie podaje
+T30	Negation 2030 2040	nie podaje
+T31	Condition 2041 2050	Uczulenia
+R11	Neg Arg1:T29 Arg2:T31	
+T32	Behaviour 2018 2030	Inne używki:
+R12	Neg Arg1:T30 Arg2:T32	
+T33	Behaviour 1965 1989	Palenie tytoniu: do 10/d
+N2	Reference T33 ICD10:Z72.0	Używanie tytoniu
+T34	Date 1991 2008	od kilku miesięcy
+T35	Negation 2009 2017	nie pali
+R13	Neg Arg1:T35 Arg2:T33	
+R14	Dat Arg1:T34 Arg2:T33	
+T36	Condition 1957 1964	dodatni
+A1	Status T36 Family
+A2	Source T36 Declared
+T37	Condition 1914 1923	borelioza
+N3	Reference T37 ICD10:A69.2	Choroba z Lyme
+T38	Condition 1909 1912	WZW
+N4	Reference T38 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T39	Negation 1871 1881	nie podaje
+T40	Treatment 1852 1869	Przebyte operacje
+R15	Neg Arg1:T39 Arg2:T40	
+T41	Investigation 1787 1803	EKG spoczynkowym
+T42	Investigation_result 1805 1851	liczna arytmia komorowa, bigeminia, trigeminia
+R16	Inv Arg1:T41 Arg2:T42	
+T43	Condition 1762 1784	wole guzowate tarczycy
+T44	Symptom 1663 1688	spadek tolerancji wysiłku
+N6	Reference T44 ICD10:R53	Złe samopoczucie i zmęczenie
+T45	Date 1649 1662	Od 3 miesięcy
+T46	Symptom 1690 1698	duszność
+N7	Reference T46 ICD10:R06.0	Duszność
+R17	Dat Arg1:T45 Arg2:T44	
+R18	Dat Arg1:T45 Arg2:T46	
+T47	Condition 1619 1648	choroby niedokrwiennej serca.
+T48	Investigation 1581 1608	diagnostyki kardiologicznej
+T49	Condition 1060 1098	Przewlekła choroba niedokrwienna serca
+T50	Condition 1100 1129	Przewlekła niewydolność serca
+T51	Symptom 1130 1144	II kl. wg NYHA
+T52	Condition 1147 1203	Łagodna/umiarkowana dysfunkcja rozkurczowa lewej komory.
+T53	Condition 1204 1245	Łagodna niedomykalność zastawki mitralnej
+N11	Reference T53 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T54	Condition 1248 1260	trójdzielnej
+N12	Reference T54 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T55	Condition 1299 1353	zmiany zwyrodnieniowe w odcinku piersiowym kręgosłupa.
+N13	Reference T55 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T56	Condition 1262 1296	Prawostronne wyboczenie kręgosłupa
+N14	Reference T56 ICD10:M41	Skolioza
+T57	Condition 1354 1372	Żylaki kk. dolnych
+N15	Reference T57 ICD10:I83	Żylaki kończyn dolnych
+T58	Condition 1374 1409	Przepuklina pachwinowa prawostronna
+N16	Reference T58 ICD10:K40	Przepuklina pachwinowa
+N17	Reference T32 ICD10:Z72	Problemy związane ze stylem życia
+N1	Reference T31 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N5	Reference T43 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T59	Treatment 330 357	dalsza opieka w poradni POZ
+T60	Treatment 367 426	kontrola kardiologiczna, endokrynologiczna, pulmonologiczna
+N9	Reference T49 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+N10	Reference T50 ICD10:I50.9	Niewydolność serca, nieokreślona
+N8	Reference T47 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona

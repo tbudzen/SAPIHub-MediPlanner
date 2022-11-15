@@ -1,0 +1,22 @@
+T1	Condition 438 474	Blok przedsionkowo- komorowy III st.
+N1	Reference T1 ICD10:I44.2	Blok przedsionkowo-komorowy zupełny
+T2	Condition 478 499	Nadciśnienie tętnicze
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Drug 620 630	Salbutamol
+T4	Condition 794 836	bloku przedsionkowo-komorowego III stopnia
+N3	Reference T4 ICD10:I44.2	Blok przedsionkowo-komorowy zupełny
+T5	Negation 899 902	bez
+T6	Symptom 903 915	dolegliwości
+R1	Neg Arg1:T5 Arg2:T6	
+T7	Condition 917 940	Inne choroby przewlekłe
+T8	Negation 941 947	neguje
+R2	Neg Arg1:T8 Arg2:T7	
+T9	Condition 949 956	Alergie
+N4	Reference T9 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T10	Negation 956 959	/-/
+R3	Neg Arg1:T10 Arg2:T9	
+T11	Treatment 960 967	Zabiegi
+N5	Reference T11 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T12	Negation 967 970	/-/
+R4	Neg Arg1:T12 Arg2:T11	
+T13	Treatment 971 995	Szczepiony zgodnie z PSO

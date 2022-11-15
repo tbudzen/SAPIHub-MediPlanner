@@ -1,0 +1,66 @@
+T1	Treatment 346 373	dalsza opieka w poradni POZ
+T2	Treatment 380 428	okresowa kontrola kardiologiczna i neurologiczna
+T3	Investigation 435 474	regularna kontrola ciśnienia tętniczego
+T4	Investigation 481 510	okresowa kontrola lipidogramu
+T5	Behaviour 517 553	dieta zbliżona do śródziemnomorskiej
+T6	Behaviour 561 606	stały, umiarkowany, aerobowy wysiłek fizyczny
+T7	Drug 651 657	Bibloc
+T8	Drug_dose 658 678	1.25 mg 1 tabl. rano
+T9	Drug 687 696	Cliovelle
+T10	Drug_dose 697 721	1 mg+0,5 mg 1 tabl. rano
+T11	Symptom 989 1004	Kołatania serca
+N1	Reference T11 ICD10:R00.2	Kołatanie serca
+T12	Condition 1006 1048	Tętniak tętnicy szyjnej wewnętrznej prawej
+N2	Reference T12 ICD10:I72.0	Tętniak tętnicy szyjnej
+T13	Condition 1050 1088	Tętniak prawej tętnicy środkowej mózgu
+N3	Reference T13 ICD10:I67.1	Tętniak mózgu, niepęknięty
+R1	Drg Arg1:T7 Arg2:T8	
+R2	Drg Arg1:T9 Arg2:T10	
+T14	Condition 1090 1104	Kamica nerkowa
+N4	Reference T14 ICD10:N20.0	Kamica nerki
+T15	Investigation_result 1272 1283	tachykardii
+N5	Reference T15 ICD10:R00.0	Tachykardia, nieokreślona
+T16	Condition 1337 1349	tętniak ICAR
+N6	Reference T16 ICD10:I72.0	Tętniak tętnicy szyjnej
+T17	Investigation_result 1350 1355	15 mm
+T18	Condition 1357 1401	prawa tętnica środkowa mózgu podział tetniak
+N7	Reference T18 ICD10:I67.1	Tętniak mózgu, niepęknięty
+T19	Condition 1403 1417	kamica nerkowa
+A1	Status T19 Historical_Insignificant
+N8	Reference T19 ICD10:N20.0	Kamica nerki
+T20	Condition 1419 1439	hipercholesterolemia
+N9	Reference T20 ICD10:E78.0	Czysta hipercholesterolemia
+T21	Treatment 1440 1457	Przebyte operacje
+N10	Reference T21 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T22	Negation 1459 1465	neguje
+T23	Condition 1467 1482	Wywiad rodzinny
+A2	Status T23 Family
+T24	Negation 1484 1497	bez znaczenia
+T25	Condition 1499 1506	Alergie
+N11	Reference T25 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T26	Negation 1565 1571	neguje
+T27	Behaviour 1515 1549	Nikotynizm: 5 lat mniej niż paczka
+N12	Reference T27 ICD10:Z72.0	Używanie tytoniu
+T28	Date 1552 1563	35 lat temu
+R3	Dat Arg1:T28 Arg2:T27	
+T29	Behaviour 1574 1595	Alkohol: okzajonalnie
+A3	Status T29 Historical_Insignificant
+N13	Reference T29 ICD10:Z72.1	Używanie alkoholu
+T30	Behaviour 1597 1614	Uzależnienie inne
+N14	Reference T30 ICD10:Z72	Problemy związane ze stylem życia
+T31	Negation 1616 1622	neguje
+T32	Behaviour 1639 1654	dyrektor szkoły
+T33	Drug 1662 1671	Cliovelle
+T34	Drug_dose 1672 1684	1 tabl. rano
+T35	Drug 1686 1694	Metocard
+T36	Drug_dose 1695 1731	50 mg 1/2 rano, 1/4 tabl. w południe
+T37	Investigation 1760 1770	echo serca
+T38	Investigation 1772 1775	TET
+T39	Investigation 1777 1781	ABPM
+T40	Investigation 1783 1793	Holter ekg
+T41	Investigation_result 1795 1813	rtg kl. piersiowej
+R4	Drg Arg1:T33 Arg2:T34	
+R5	Drg Arg1:T35 Arg2:T36	
+R6	Neg Arg1:T31 Arg2:T30	
+R7	Neg Arg1:T24 Arg2:T23	
+R8	Neg Arg1:T22 Arg2:T21	

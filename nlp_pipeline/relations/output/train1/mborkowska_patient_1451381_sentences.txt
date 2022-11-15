@@ -1,0 +1,1097 @@
+allRelations          : 15
+oks                   : 6
+isRedundantAndRemoveds: 5
+shouldNotBeRemoveds   : 2
+shouldBeBemoveds      : 2
+GOOD / BAD            : 11 / 4
+Sentence 0:
+------------------------------------------------
+Wiek: 1 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+
+
+
+Sentence 2:
+------------------------------------------------
+
+
+
+Sentence 3:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 4:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wada wrodzona serca pod postacią ubytku przegrody międzyprzedsionkowej.
+
+
+
+Sentence 5:
+------------------------------------------------
+
+
+
+Sentence 6:
+Zastosowane leczenie
+
+
+
+Sentence 7:
+------------------------------------------------
+
+
+
+Sentence 8:
+Cefazolin,Relanium, Dormicum,kroplówka składowa.
+
+
+
+Sentence 9:
+------------------------------------------------
+
+
+
+Sentence 10:
+Zastosowane leczenie
+
+
+
+Sentence 11:
+------------------------------------------------
+
+
+
+Sentence 12:
+Znieczulenie do TTE, Relanium, Spironol, Enarenal,  Bemecor, kroplówka składowa.
+
+
+
+Sentence 13:
+------------------------------------------------
+
+
+
+Sentence 14:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 15:
+Kontrola w Poradni Kardiologicznej za 3 mce.
+
+
+
+Sentence 16:
+Dalsza okresowa kontrola  w Poradni Nefrologicznej.
+
+
+
+Sentence 17:
+Stosowanie leków:
+Enarenal 2x0.5 mg.
+
+R1	Drg Arg1:T12 Arg2:T15 << OK >>	Enarenal -> 2x0.5 mg  <RANK: 3> <info: start[1100, 1109] <type: RIGHT>>
+
+
+Sentence 18:
+Spironol 1x 12.5 mg
+Bemecor 2x1/2 tabl a 0.1 mg.
+
+R2	Drg Arg1:T13 Arg2:T16 << OK >>	Spironol -> 1x 12.5 mg  <RANK: 3> <info: start[1119, 1128] <type: RIGHT>>
+R3	Drg Arg1:T13 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Spironol -> 2x1/2 tabl a 0.1 mg <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1119, 1147] <type: RIGHT>>
+R4	Drg Arg1:T14 Arg2:T16 <<REDUNDANT!!!REMOVED>>	Bemecor -> 1x 12.5 mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1139, 1128] <type: LEFT>>
+R5	Drg Arg1:T14 Arg2:T17 << OK >>	Bemecor -> 2x1/2 tabl a 0.1 mg  <RANK: 3> <info: start[1139, 1147] <type: RIGHT>>
+
+
+Sentence 19:
+------------------------------------------------
+
+
+
+Sentence 20:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 21:
+Enarenal 2x0.5 mg.
+
+R6	Drg Arg1:T18 Arg2:T21 << OK >>	Enarenal -> 2x0.5 mg  <RANK: 3> <info: start[1276, 1285] <type: RIGHT>>
+
+
+Sentence 22:
+Spironol 1x 12.5 mg
+Bemecor 2x1/2 tabl a 0.1 mg.
+
+R7	Drg Arg1:T19 Arg2:T22 << OK >>	Spironol -> 1x 12.5 mg  <RANK: 3> <info: start[1295, 1304] <type: RIGHT>>
+R8	Drg Arg1:T19 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Spironol -> 2x1/2 tabl a 0.1 mg <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1295, 1323] <type: RIGHT>>
+R9	Drg Arg1:T20 Arg2:T22 <<REDUNDANT!!!REMOVED>>	Bemecor -> 1x 12.5 mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1315, 1304] <type: LEFT>>
+R10	Drg Arg1:T20 Arg2:T23 << OK >>	Bemecor -> 2x1/2 tabl a 0.1 mg  <RANK: 3> <info: start[1315, 1323] <type: RIGHT>>
+
+
+Sentence 23:
+------------------------------------------------
+
+
+
+Sentence 24:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 25:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Stan po korekcji ubytku  w przegrodzie międzyprzedsionkowej dn. 26.07.2019 r.\x0aOstra  niewydolności  nerek w przebiegu wstrząsu kardiogennego w okresie okołooperacyjnym.\x0aPrzewlekła niewydolność serca.\x0a
+------------------------------------------------
+
+R11	Dat Arg1:T26 Arg2:T25 <<SHOULD NOT BE REMOVED>>	26.07.2019 r. -> ubytku  w przegrodzie międzyprzedsionkowej <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1625, 1578] <type: LEFT>>
+R12	Dat Arg1:T26 Arg2:T27 <<REDUNDANT!!!REMOVED>>	26.07.2019 r. -> Przewlekła niewydolność serca <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1625, 1736] <type: RIGHT>>
+R13	Dat Arg1:T26 Arg2:T28 <<REDUNDANT!!!SHOULD BE REMOVED>>	26.07.2019 r. -> Ostra  niewydolności  nerek  <RANK: 3> <info: start[1625, 1642] <type: RIGHT>>
+R14	Dat Arg1:T26 Arg2:T29 <<REDUNDANT!!!SHOULD BE REMOVED>>	26.07.2019 r. -> wstrząsu kardiogennego  <RANK: 3> <info: start[1625, 1682] <type: RIGHT>>
+R15	Dat Arg1:T26 Arg2:T24 <<SHOULD NOT BE REMOVED>>	26.07.2019 r. -> korekcji <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1625, 1569] <type: LEFT>>
+
+
+Sentence 26:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 27:
+Chłopiec z wrodzoną wadą serca przyjęty do Kliniki do poszerzonych badań i ustalenia dalszego postępowania
+
+
+Sentence 28:
+Stan dość dobry
+------------------------------------------------
+
+
+
+Sentence 29:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 30:
+Próba zgodności (kontrola grupy krwi biorcy)
+    
+
+
+Sentence 31:
+NR-KS:K-19/2441
+    KODKRESKOWYPROBKI:K-19/2441
+    
+
+
+Sentence 32:
+GR:A
+    RH:- (ujemny)
+    
+
+
+Sentence 33:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+    
+
+
+Sentence 34:
+DONACJA:Z511219001776
+    
+
+
+Sentence 35:
+GR:A
+    RH:- (ujemny)
+    WYNIK-D:zgodna
+    DONACJA:Z510819001258
+    GR:A
+    RH:- (ujemny)
+    WYNIK-D:zgodna
+
+
+
+Sentence 36:
+Grupa krwi + p/c odpornościowe (powyżej 4. m-ca życia
+    NR-KS:G-19/014745
+    KODKRESKOWYPROBKI:G-19/014745
+    GR:A
+    RH:- (ujemny)
+    
+
+
+Sentence 37:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+
+
+
+Sentence 38:
+Grupa krwi + p/c odpornościowe (powyżej 4. m-ca życia
+    NR-KS:G-19/014744
+    KODKRESKOWYPROBKI:G-19/014744
+    
+
+
+Sentence 39:
+GR:A
+    RH:- (ujemny)
+    
+
+
+Sentence 40:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+
+
+
+Sentence 41:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:11.86[10^3/ul]
+    
+
+
+Sentence 42:
+RBC Krwinki czerwone:5.61[10^6/ul]
+    
+
+
+Sentence 43:
+HGB Hemoglobina:13.9[g/dl]
+    
+
+
+Sentence 44:
+HCT Hematokryt:42.0[%]
+    
+
+
+Sentence 45:
+MCV wskaźnik czerwonokrw:74.9[fl]
+    
+
+
+Sentence 46:
+MCH wskaźnik czerwonokrw:24.8[pg]
+    
+
+
+Sentence 47:
+MCHC wskaźnik czerwonokr:33.1[g/dl]
+    
+
+
+Sentence 48:
+PLT z morfologii:300[10^3/ul]
+    
+
+
+Sentence 49:
+RDW-SD:44.0[fl]
+    
+
+
+Sentence 50:
+RDW-CV:16.6[%]
+    PDW:10.3[fl]
+    
+
+
+Sentence 51:
+MPV:9.3[fl]
+    
+
+
+Sentence 52:
+P-LCR:19.6[%]
+    
+
+
+Sentence 53:
+PCT (hematokryt płytkowy:0.28[%]
+    
+
+
+Sentence 54:
+NEUTR# wartość bezwzględ:1.94[10^3/ul]
+    
+
+
+Sentence 55:
+NEUTR%:16.4[%]
+    
+
+
+Sentence 56:
+LYMH# wartość bezwzględn:9.16[10^3/ul]
+    
+
+
+Sentence 57:
+LYMPH%:77.2[%]
+    
+
+
+Sentence 58:
+MONO# wartość bezwzględn:0.50[10^3/ul]
+    MONO%:4.2[%]
+    
+
+
+Sentence 59:
+EO# wartość bezwzględna:0.22[10^3/ul]
+    
+
+
+Sentence 60:
+EO%:1.9[%]
+    
+
+
+Sentence 61:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    
+
+
+Sentence 62:
+BASO%:0.3[%]
+    
+
+
+Sentence 63:
+NRBC %:0.1[%]
+    
+
+
+Sentence 64:
+NRBC #:0.01[10^3/ul]
+
+
+
+Sentence 65:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.91[10^3/ul]
+    
+
+
+Sentence 66:
+RBC Krwinki czerwone:4.45[10^6/ul]
+    
+
+
+Sentence 67:
+HGB Hemoglobina:12.9[g/dl]
+    
+
+
+Sentence 68:
+HCT Hematokryt:36.1[%]
+    
+
+
+Sentence 69:
+MCV wskaźnik czerwonokrw:81.1[fl]
+    
+
+
+Sentence 70:
+MCH wskaźnik czerwonokrw:29.0[pg]
+    
+
+
+Sentence 71:
+MCHC wskaźnik czerwonokr:35.7[g/dl]
+    
+
+
+Sentence 72:
+PLT z morfologii:249[10^3/ul]
+    
+
+
+Sentence 73:
+RDW-SD:37.3[fl]
+    
+
+
+Sentence 74:
+RDW-CV:12.7[%]
+    PDW:10.1[fl]
+    
+
+
+Sentence 75:
+MPV:9.6[fl]
+    
+
+
+Sentence 76:
+P-LCR:21.1[%]
+    
+
+
+Sentence 77:
+PCT (hematokryt płytkowy:0.24[%]
+    
+
+
+Sentence 78:
+NEUTR# wartość bezwzględ:2.26[10^3/ul]
+    
+
+
+Sentence 79:
+NEUTR%:32.7[%]
+    
+
+
+Sentence 80:
+LYMH# wartość bezwzględn:3.98[10^3/ul]
+    
+
+
+Sentence 81:
+LYMPH%:57.6[%]
+    
+
+
+Sentence 82:
+MONO# wartość bezwzględn:0.53[10^3/ul]
+    
+
+
+Sentence 83:
+MONO%:7.7[%]
+    
+
+
+Sentence 84:
+EO# wartość bezwzględna:0.12[10^3/ul]
+    
+
+
+Sentence 85:
+EO%:1.7[%]
+    
+
+
+Sentence 86:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    
+
+
+Sentence 87:
+BASO%:0.3[%]
+    
+
+
+Sentence 88:
+NRBC %:0.0[%]
+    
+
+
+Sentence 89:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 90:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:25.6[sek]
+
+
+
+Sentence 91:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 92:
+Czas protrombinowy:11.5[sek]
+    
+
+
+Sentence 93:
+Wskaźnik PT:95.7[%]
+    
+
+
+Sentence 94:
+INR:1.04
+Czas trombinowy TT: Czas trombinowy TT:16.0[sek]
+
+
+
+Sentence 95:
+Fibrynogen: Fibrynogen:2.03[g/L]
+
+
+
+Sentence 96:
+Badanie ogólne moczu
+    
+
+
+Sentence 97:
+barwa:żółty[ ]
+    
+
+
+Sentence 98:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 99:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 100:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 101:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 102:
+kwas askrobinowy:40 mg/dl[ ]
+    
+
+
+Sentence 103:
+ciężar właściwy:1.018[ ]
+    
+
+
+Sentence 104:
+pH:6.5[ ]
+    
+
+
+Sentence 105:
+białko:nieobecne[ ]
+    
+
+
+Sentence 106:
+urobilinogen:wzmożony ++[ ]
+    
+
+
+Sentence 107:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 108:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 109:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 110:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 111:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 112:
+leukocyty:4 /ul[ul]
+    erytrocyty świeże:2 /ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 113:
+TSH: TSH:5.28[uIU/ml]
+
+
+
+Sentence 114:
+Kortyzol: Kortyzol:10.3[ug/dl]
+
+
+
+Sentence 115:
+Troponina T: Troponina T:28.2[pg/ml]
+
+
+
+Sentence 116:
+Witamina D 25-OH: Witamina D 25-OH:34.5[ng/ml]
+
+
+
+Sentence 117:
+Witamina D 25-OH: Witamina D 25-OH:40.8[ng/ml]
+
+
+
+Sentence 118:
+ALAT: ALAT:24[U/L]
+ALAT: ALAT:20[U/L]
+ASPAT: ASPAT:53[U/L]
+ASPAT: ASPAT:37[U/L]
+CK - aktywność: CK:75[U/L]
+
+
+
+Sentence 119:
+CKMB aktywność: CKMB:28[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 120:
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 121:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 122:
+Potas (K): Potas:7.0[mmol/L]
+
+
+
+Sentence 123:
+Chlorki (Cl): Chlorki:106[mmol/L]
+
+
+
+Sentence 124:
+Fosfataza alkaliczna (ALP): Fosfataza alkaliczna:255[U/L]
+
+
+
+Sentence 125:
+Fosforany nieorganiczne: Fosforany nieorganiczne:2.02[mmol/L]
+
+
+
+Sentence 126:
+Kreatynina + GFR
+    
+
+
+Sentence 127:
+Kreatynina w surowicy:0.28[mg/dl]
+    
+
+
+Sentence 128:
+eGFR stand. wg Schwartza:161.1[ml/min/1,73 m^2]
+    
+
+
+Sentence 129:
+wzrost:82[cm]
+
+
+
+Sentence 130:
+Kreatynina + GFR
+    
+
+
+Sentence 131:
+Kreatynina w surowicy:0.28[mg/dl]
+    
+
+
+Sentence 132:
+eGFR stand. wg Schwartza:167.0[ml/min/1,73 m^2]
+    wzrost:85[cm]
+
+
+
+Sentence 133:
+Magnez: Magnez:1.03[mmol/L]
+
+
+
+Sentence 134:
+Magnez: Magnez:0.89[mmol/L]
+
+
+
+Sentence 135:
+Magnez: Magnez:0.88[mmol/L]
+
+
+
+Sentence 136:
+Mocznik: Mocznik:15[mg/dl]
+
+
+
+Sentence 137:
+Mocznik: Mocznik:24[mg/dl]
+
+
+
+Sentence 138:
+Wapń całkowity: Wapń całkowity:2.61[mmol/L]
+
+
+
+Sentence 139:
+Digoksyna: Digoksyna:0.68[ng/ml]
+
+
+
+Sentence 140:
+Digoksyna: Digoksyna:0.78[ng/ml]
+
+
+
+Sentence 141:
+Profil parametrów krytycznych (ABL)
+    pH:7.353
+    pCO2:39.2[mmHg]
+    BE:-3.50[mmol/L]
+    
+
+
+Sentence 142:
+HCO3:21.2[mmol/L]
+    
+
+
+Sentence 143:
+pO2:42.5[mmHg]
+    
+
+
+Sentence 144:
+O2Sat:72.8[%]
+    
+
+
+Sentence 145:
+Sód (ABL):137[mmol/L]
+    
+
+
+Sentence 146:
+Potas (ABL):4.9[mmol/L]
+    
+
+
+Sentence 147:
+Chlorki (ABL):113[mmol/L]
+    
+
+
+Sentence 148:
+Wapń zjonizowany (ABL):1.31[mmol/L]
+    
+
+
+Sentence 149:
+Ht - ABL:38.4[%]
+    
+
+
+Sentence 150:
+Hb - ABL:12.5[g/dl]
+    
+
+
+Sentence 151:
+FO2Hb:71.4[%]
+    FCOHb:0.6[%]
+    
+
+
+Sentence 152:
+FMetHb:1.3[%]
+    
+
+
+Sentence 153:
+Glukoza (ABL):114[mg/dl]
+    
+
+
+Sentence 154:
+Mleczany:21[mg/dl]
+
+
+
+Sentence 155:
+Profil parametrów krytycznych (ABL)
+    pH:7.396
+    pCO2:36.8[mmHg]
+    BE:-1.80[mmol/L]
+    
+
+
+Sentence 156:
+HCO3:22.1[mmol/L]
+    pO2:51.4[mmHg]
+    
+
+
+Sentence 157:
+O2Sat:85.5[%]
+    
+
+
+Sentence 158:
+Sód (ABL):136[mmol/L]
+    
+
+
+Sentence 159:
+Potas (ABL):4.8[mmol/L]
+    
+
+
+Sentence 160:
+Chlorki (ABL):106[mmol/L]
+    
+
+
+Sentence 161:
+Wapń zjonizowany (ABL):1.28[mmol/L]
+    
+
+
+Sentence 162:
+Ht - ABL:41.1[%]
+    
+
+
+Sentence 163:
+Hb - ABL:13.4[g/dl]
+    FO2Hb:84.0[%]
+    
+
+
+Sentence 164:
+FCOHb:0.8[%]
+    FMetHb:0.9[%]
+    
+
+
+Sentence 165:
+Glukoza (ABL):105[mg/dl]
+    Mleczany:27[mg/dl]
+
+
+
+Sentence 166:
+Profil parametrów krytycznych (ABL)
+    pH:7.415
+    pCO2:34.0[mmHg]
+    BE:-2.00[mmol/L]
+    HCO3:21.4[mmol/L]
+    
+
+
+Sentence 167:
+pO2:60.5[mmHg]
+    
+
+
+Sentence 168:
+O2Sat:92.8[%]
+    
+
+
+Sentence 169:
+Sód (ABL):139[mmol/L]
+    
+
+
+Sentence 170:
+Potas (ABL):5.4[mmol/L]
+    
+
+
+Sentence 171:
+Chlorki (ABL):111[mmol/L]
+    
+
+
+Sentence 172:
+Wapń zjonizowany (ABL):1.32[mmol/L]
+    
+
+
+Sentence 173:
+Ht - ABL:42.7[%]
+    
+
+
+Sentence 174:
+Hb - ABL:13.9[g/dl]
+    
+
+
+Sentence 175:
+FO2Hb:91.3[%]
+    
+
+
+Sentence 176:
+FCOHb:0.8[%]
+    FMetHb:0.8[%]
+    
+
+
+Sentence 177:
+Glukoza (ABL):95[mg/dl]
+    Mleczany:30[mg/dl]
+
+
+
+Sentence 178:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    
+
+
+Sentence 179:
+pH:7.396
+    pCO2:36.8[mmHg]
+    BE:-1.80[mmol/L]
+    
+
+
+Sentence 180:
+HCO3:22.1[mmol/L]
+    pO2:51.4[mmHg]
+    
+
+
+Sentence 181:
+O2Sat:85.5[%]
+
+
+
+Sentence 182:
+Glukoza w surowicy: Glukoza w surowicy:84[mg/dl]
+
+
+
+Sentence 183:
+NT-proBNP surowica: NT-proBNP w surowicy:129[pg/ml]
+NT-proBNP surowica: NT-proBNP w surowicy:1256[pg/ml]
+
+
+
+Sentence 184:
+NT-proBNP surowica: NT-proBNP w surowicy:1424[pg/ml]
+
+
+
+Sentence 185:
+------------------------------------------------
+
+
+
+Sentence 186:
+ICD10
+------------------------------------------------
+I50.1
+Z98.8
+Q21.1
+
+
+
+Sentence 187:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 188:
+ICD9
+------------------------------------------------
+89.522
+A01
+
+
+
+Sentence 189:
+I81
+E65
+G21
+L43
+
+
+
+Sentence 190:
+G25
+
+
+
+Sentence 191:
+O61
+L23
+M87
+N45
+L69
+N24
+O29
+C55
+G53
+I97
+G11
+O91
+
+
+
+Sentence 192:
+M31
+L11
+I17
+O77
+M37
+I19
+O35
+N13
+88.721
+
+
+
+Sentence 193:
+M19
+M18
+8
+T17
+88.761
+------------------------------------------------
+
+

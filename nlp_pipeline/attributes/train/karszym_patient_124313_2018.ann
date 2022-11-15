@@ -1,0 +1,60 @@
+T1	Treatment 331 353	kontrola u lekarza POZ
+T2	Behaviour 356 379	zmniejszenie masy ciała
+T3	Behaviour 382 404	dieta śródziemnomorska
+T4	Investigation 407 427	kontrola lipidogramu
+T5	Date 428 437	za 3 m-ce
+T6	Investigation 440 490	kontrola ciśnienia tętniczego w warunkach domowych
+R1	Dat Arg1:T5 Arg2:T4	
+T7	Negation 610 613	bez
+T8	Drug 614 619	leków
+R2	Neg Arg1:T7 Arg2:T8	
+T9	Condition 837 879	Nadciśnienie tętnicze??? 1 stopnia wg PTNT
+N1	Reference T9 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T10	Condition 888 929	Niezupełny blok prawej odnogi pęczka Hisa
+N2	Reference T10 ICD10:I45.0	Blok prawej odnogi pęczka Hisa
+T11	Condition 931 938	Nadwaga
+T12	Condition 1076 1119	niepełnym blokiem prawej odnogi pęczka Hisa
+N3	Reference T12 ICD10:I45.0	Blok prawej odnogi pęczka Hisa
+T13	Condition 1123 1177	podejrzeniem ubytku w przegrodzie międzyprzedsionkowej
+A1	Source T13 Declared
+N4	Reference T13 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T14	Symptom 1208 1238	pogorszenia tolerancji wysiłku
+T15	Investigation_result 1244 1286	skoków ciśnienia tętniczego do 164/71 mmHg
+T16	Date 1288 1296	03.2018r
+T17	Treatment 1325 1338	appendektomii
+A2	Status T17 Historical_Insignificant
+N5	Reference T17 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T18	Date 1341 1355	w dzieciństwie
+T19	Condition 1384 1387	WZW
+N6	Reference T19 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T20	Condition 1389 1398	borelioza
+N7	Reference T20 ICD10:A69.2	Choroba z Lyme
+T21	Negation 1401 1411	nie podaje
+T22	Condition 1412 1427	Wywiad rodzinny
+A3	Status T22 Family
+T23	Negation 1429 1438	negatywny
+T24	Behaviour 1439 1468	Palenie tytoniu: okazjonalnie
+N8	Reference T24 ICD10:Z72.0	Używanie tytoniu
+T25	Behaviour 1469 1494	Inne używki: okazjonalnie
+T26	Condition 1495 1504	Uczulenia
+N9	Reference T26 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T27	Negation 1506 1516	nie podaje
+T28	Behaviour 1535 1540	uczeń
+T29	Negation 1547 1550	bez
+T30	Drug 1551 1556	leków
+T31	Investigation 1584 1594	echo serca
+T32	Investigation 1596 1616	echo przezprzełykowe
+T33	Investigation 1618 1621	TET
+T34	Investigation 1623 1627	ABPM
+T35	Investigation 1629 1635	Holter
+T36	Investigation 1637 1655	RTG kl. piersiowej
+R3	Dat Arg1:T16 Arg2:T15	
+R4	Dat Arg1:T16 Arg2:T14	
+R5	Dat Arg1:T18 Arg2:T17	
+R6	Neg Arg1:T21 Arg2:T20	
+R7	Neg Arg1:T21 Arg2:T19	
+R8	Neg Arg1:T23 Arg2:T22	
+R9	Neg Arg1:T27 Arg2:T26	
+R10	Neg Arg1:T29 Arg2:T30	
+A4	Source T9 Declared
+N10	Reference T25 ICD10:Z72	Problemy związane ze stylem życia

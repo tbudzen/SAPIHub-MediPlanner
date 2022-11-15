@@ -1,0 +1,108 @@
+T1	Condition 439 483	Nadciśnienie płucne o nieustalonej etiologii
+N1	Reference T1 ICD10:I27.2	Nadciśnienie płucne wtórne o innej etiologii
+T2	Condition 485 507	Niewydolność oddechowa
+N2	Reference T2 ICD10:J96	Niewydolność oddechowa niesklasyfikowana gdzie indziej
+T3	Treatment 510 554	trakcie terapii domowym koncentratorem tlenu
+T5	Condition 556 582	Nawracające zapalenia płuc
+N3	Reference T5 ICD10:J18	Zapalenie płuc wywołane przez niezidentyfikowany czynnik zakaźny
+T6	Condition 584 611	Dziecięce porażenie mózgowe
+N4	Reference T6 ICD10:G80	Mózgowe porażenie dziecięce
+T7	Condition 613 633	Rozszczep kręgosłupa
+N5	Reference T7 ICD10:Q05.9	Rozszczep kręgosłupa, nieokreślony
+T8	Condition 635 645	Wodogłowie
+N6	Reference T8 ICD10:G91.9	Wodogłowie, nieokreślone
+T9	Treatment 656 689	operacji wymiany zastawki Pudenza
+T10	Condition 708 720	niedrożności
+T11	Date 722 733	25 lat temu
+R1	Dat Arg1:T11 Arg2:T10	
+R2	Dat Arg1:T11 Arg2:T9	
+T12	Behaviour 1299 1335	dieta zbliżona do śródziemnomorskiej
+T13	Drug 1378 1386	Ditropan
+T14	Drug_dose 1387 1403	5mg 1 tabl. rano
+R3	Drg Arg1:T13 Arg2:T14	
+T15	Drug 1411 1420	Furaginum
+T16	Drug_dose 1421 1438	1 tabl. wieczorem
+R4	Drg Arg1:T15 Arg2:T16	
+T17	Drug 1447 1458	Furosemidum
+T18	Drug_dose 1459 1474	1 tabl co 3 dni
+R5	Drg Arg1:T17 Arg2:T18	
+T19	Drug 1482 1490	Alpragen
+T20	Drug_dose 1491 1513	0,5 mg doraźnie 1 tabl
+R6	Drg Arg1:T19 Arg2:T20	
+T21	Investigation_result 1687 1704	spadków saturacji
+T22	Condition 1707 1738	podejrzenie niewydolności serca
+A1	Source T22 Declared
+N7	Reference T22 ICD10:I50	Niewydolność serca
+T23	Investigation_result 1740 1756	Spadki saturacji
+T24	Date 1757 1770	od 6 miesięcy
+R7	Dat Arg1:T24 Arg2:T23	
+T25	Symptom 1875 1892	wybudza i krzyczy
+T26	Date 1834 1862	Okresowe w godzinach nocnych
+R8	Dat Arg1:T26 Arg2:T25	
+T27	Symptom 1903 1915	zasłabnięcia
+N8	Reference T27 ICD10:R55	Omdlenie i zapaść
+T28	Negation 1896 1902	Neguje
+R9	Neg Arg1:T28 Arg2:T27	
+T29	Condition 1932 1965	Przewlekła niewydolność oddechowa
+N9	Reference T29 ICD10:J96	Niewydolność oddechowa niesklasyfikowana gdzie indziej
+T30	Treatment 1969 2001	domowym  koncentratorze tlenowym
+T31	Condition 2003 2029	Nawracające zapalenia płuc
+N10	Reference T31 ICD10:J18	Zapalenie płuc wywołane przez niezidentyfikowany czynnik zakaźny
+T32	Condition 2031 2058	Dziecięce porażenie mózgowe
+N11	Reference T32 ICD10:G80	Mózgowe porażenie dziecięce
+T33	Condition 2060 2080	Rozszczep kręgosłupa
+N12	Reference T33 ICD10:Q05.9	Rozszczep kręgosłupa, nieokreślony
+T34	Condition 2082 2092	Wodogłowie
+N13	Reference T34 ICD10:G91.9	Wodogłowie, nieokreślone
+T35	Treatment 2124 2158	operacji wymiary zastawek Pudentzi
+T36	Condition 2168 2195	niedrożności - wodogłowie (
+N14	Reference T36 ICD10:G91.9	Wodogłowie, nieokreślone
+T37	Date 2195 2214	ostatni 25 lat temu
+R10	Dat Arg1:T37 Arg2:T36	
+R11	Dat Arg1:T37 Arg2:T35	
+T38	Condition 2284 2287	WZW
+T39	Condition 2297 2306	borelioza
+N16	Reference T39 ICD10:A69.2	Choroba z Lyme
+T40	Negation 2309 2310	-
+R12	Neg Arg1:T40 Arg2:T39	
+T41	Negation 2288 2294	( -  )
+R13	Neg Arg1:T41 Arg2:T38	
+T42	Negation 2337 2348	brak danych
+T43	Condition 2313 2334	W wywiadzie rodzinnym
+A2	Status T43 Family
+R14	Neg Arg1:T42 Arg2:T43	
+T44	Negation 2367 2370	nie
+T45	Negation 2384 2387	nie
+T46	Negation 2399 2405	neguje
+T47	Condition 2388 2397	Uczulenia
+R15	Neg Arg1:T46 Arg2:T47	
+T48	Behaviour 2371 2382	Inne używki
+R16	Neg Arg1:T45 Arg2:T48	
+T49	Behaviour 2350 2365	Palenie tytoniu
+N18	Reference T49 ICD10:Z72.0	Używanie tytoniu
+R17	Neg Arg1:T44 Arg2:T49	
+T50	Behaviour 2422 2448	warunki mieszkaniowe dobre
+T51	Drug 2478 2486	Ditropan
+T52	Drug_dose 2487 2496	1x dz ran
+R18	Drg Arg1:T51 Arg2:T52	
+T53	Drug 2499 2508	Furaginum
+T54	Drug_dose 2509 2524	1x dz wieczorem
+R19	Drg Arg1:T53 Arg2:T54	
+T55	Drug 2527 2538	Furosemidum
+T56	Drug_dose 2539 2558	1 tabl co 2-3 dzień
+R20	Drg Arg1:T55 Arg2:T56	
+T57	Drug 2561 2569	Alpragen
+T58	Drug_dose 2570 2603	0,5 mg doraźnie - nawet do 3 tabl
+R21	Drg Arg1:T57 Arg2:T58	
+T59	Investigation 2619 2629	Echo serca
+T60	Investigation 2632 2642	Holter EKG
+A3	Status T10 Historical_Insignificant
+A4	Status T9 Historical_Insignificant
+A5	Status T36 Historical_Insignificant
+A6	Status T35 Historical_Insignificant
+N15	Reference T38 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T4	Treatment 859 886	dalsza opieka w poradni POZ
+T61	Treatment 893 1236	poszerzona diagnostyka nadciśnienia płucnego w ośrodku referencyjnym – Klinika Kardiologii Katedry Kardiologii UM w Szpitalu im. W. Biegańskiego w Łodzi (Kierownik Kliniki P. Prof. J. Kasprzak, tel. 42 251 62 16) lub Klinika Krążenia Płucnego i Chorób Zakrzepowo-Zatorowych w Otwocku (Kierownik Kliniki P. Prof. A. Torbicki, tel. 22 710 30 52)
+T62	Treatment 1252 1292	kontrola pulmonologiczna i neurologiczna
+N19	Reference T48 ICD10:Z72	Problemy związane ze stylem życia
+N17	Reference T47 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

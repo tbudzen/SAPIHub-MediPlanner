@@ -1,0 +1,190 @@
+T1	Investigation 4013 4016	TTE
+T2	Investigation 4018 4021	TET
+T3	Investigation 4023 4027	ABPM
+T4	Investigation 4029 4039	Holter EKG
+T5	Drug 3779 3786	Pradaxa
+T6	Drug_dose 3787 3806	150mg 1 tabl. R i W
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 3808 3815	Beto ZK
+T8	Drug_dose 3816 3836	100 rano i wieczorem
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 3838 3845	Digoxin
+T10	Drug_dose 3846 3868	0,1 1 tabl. w południe
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 3870 3880	Prestarium
+T12	Drug_dose 3881 3903	10mg 1 tabl. wieczorem
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 3905 3913	Ventolin
+T14	Drug_dose 3914 3922	doraźnie
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Drug 3924 3933	Metformax
+T16	Drug_dose 3934 3949	500mg 1 tabl. R
+R6	Drg Arg1:T15 Arg2:T16	
+T17	Drug 3951 3959	Atrovent
+T18	Drug_dose 3960 3967	N 2x/dz
+R7	Drg Arg1:T17 Arg2:T18	
+T19	Drug 3969 3976	Ultibro
+T20	Drug_dose 3977 3997	85/43mikrogramy 1x R
+R8	Drg Arg1:T19 Arg2:T20	
+T21	Behaviour 3713 3739	warunki mieszkaniowe dobre
+T22	Negation 3689 3695	neguje
+T23	Negation 3670 3676	neguje
+T24	Condition 3678 3687	Uczulenia
+R9	Neg Arg1:T22 Arg2:T24	
+T25	Behaviour 3657 3668	Inne używki
+R10	Neg Arg1:T23 Arg2:T25	
+T26	Behaviour 3560 3575	Palenie tytoniu
+N2	Reference T26 ICD10:T65.2	Tytoń i nikotyna
+T27	Negation 3587 3595	nie pali
+R11	Neg Arg1:T27 Arg2:T26	
+T28	Negation 3549 3559	nieistotny
+T29	Condition 3532 3547	Wywiad rodzinny
+A1	Status T29 Family
+R12	Neg Arg1:T28 Arg2:T29	
+T30	Condition 3476 3479	WZW
+N3	Reference T30 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T31	Condition 3488 3497	borelioza
+N4	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Condition 3505 3513	grużlica
+N5	Reference T32 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T33	Condition 3521 3525	odra
+N6	Reference T33 ICD10:B05	Odra
+T34	Negation 3480 3485	( - )
+R13	Neg Arg1:T34 Arg2:T30	
+T35	Negation 3500 3503	- )
+R14	Neg Arg1:T35 Arg2:T31	
+T36	Negation 3514 3519	( - )
+R15	Neg Arg1:T36 Arg2:T32	
+T37	Negation 3526 3531	( - )
+R16	Neg Arg1:T37 Arg2:T33	
+T38	Treatment 3342 3350	operacji
+T39	Condition 3351 3381	żylaków kończyny dolnej prawej
+N7	Reference T39 ICD10:I83	Żylaki kończyn dolnych
+T40	Condition 3303 3333	Żylaki kończyny dolnej prawej.
+N8	Reference T40 ICD10:I83	Żylaki kończyn dolnych
+T41	Condition 3286 3301	Cukrzyca typu 2
+N9	Reference T41 ICD10:E11	Cukrzyca insulinoniezależna
+T42	Condition 3249 3284	Przewlekła obturacyjna choroba płuc
+N10	Reference T42 ICD10:J44	Inne przewlekłe obturacyjne choroby płuc
+T43	Treatment 3209 3221	radioterapii
+T44	Treatment 3153 3166	chemioterapii
+T45	Date 3223 3247	22/08/2016 - 05/10/2016)
+R17	Dat Arg1:T45 Arg2:T43	
+T46	Date 3168 3188	09/2015 - 19/03/2016
+R18	Dat Arg1:T46 Arg2:T44	
+T47	Condition 2929 2970	Łagodna niedomykalność zastawki mitralnej
+N11	Reference T47 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T48	Condition 2871 2928	Łagodna/umiarkowana niedomykalność zastawki trójdzielnej.
+N12	Reference T48 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T49	Condition 2814 2857	Utrwalone trzepotanie przedsionków EHRA IIA
+N13	Reference T49 ICD10:I48	Migotanie i trzepotanie przedsionków
+T50	Condition 2740 2801	Niewydolność serca z pośrednią frakcją wyrzutową lewej komory
+N14	Reference T50 ICD10:I50	Niewydolność serca
+T51	Symptom 2598 2608	krwawienia
+N15	Reference T51 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T52	Symptom 2610 2623	czarne stolce
+N16	Reference T52 ICD10:K92.1	Stolce smołowate
+T53	Symptom 2625 2641	brunatne wymioty
+N17	Reference T53 ICD10:K92.0	Wymioty krwawe
+T54	Condition 2643 2659	chorobę wrzodową
+N18	Reference T54 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T55	Symptom 2661 2675	duszność nocną
+N19	Reference T55 ICD10:R06.0	Duszność
+T56	Symptom 2677 2692	obrzęki podudzi
+N20	Reference T56 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T57	Negation 2591 2597	Neguje
+R19	Neg Arg1:T57 Arg2:T51	
+R20	Neg Arg1:T57 Arg2:T52	
+R21	Neg Arg1:T57 Arg2:T53	
+R22	Neg Arg1:T57 Arg2:T54	
+R23	Neg Arg1:T57 Arg2:T55	
+R24	Neg Arg1:T57 Arg2:T56	
+T58	Symptom 2404 2423	epizod zasłabnięcia
+N21	Reference T58 ICD10:R55	Omdlenie i zapaść
+T59	Date 2426 2451	okresie okołoradioterapii
+R25	Dat Arg1:T59 Arg2:T58	
+T60	Symptom 2576 2589	zawroty głowy
+N22	Reference T60 ICD10:R42	Zawroty głowy i odurzenie
+T61	Symptom 2495 2509	drżeniem ciała
+T62	Symptom 2262 2340	dolegliwości bólowe w klatce piersiowej przy nabieraniu powietrza (nie zawsze)
+N23	Reference T62 ICD10:R07.3	Inne bóle w klatce piersiowej
+T63	Treatment 2187 2200	chemioterapię
+T64	Condition 2972 3053	Rak wielkokomórkowy neuroendokrynny płuca prawego z naciekiem wnęki płuca prawego
+N24	Reference T64 ICD10:C34.1	Płat górny płuca lub oskrzele płatowe górne
+T65	Condition 3109 3130	płata górnego z guzem
+N25	Reference T65 ICD10:C34.1	Płat górny płuca lub oskrzele płatowe górne
+T66	Condition 2000 2072	raka niedrobnokomórkowego neuroendokrynnego płata górnego płuca prawego,
+N26	Reference T66 ICD10:C34.1	Płat górny płuca lub oskrzele płatowe górne
+T67	Treatment 3064 3108	klinowym, niedoszczętnym, wycięciu fragmentu
+T68	Date 3131 3142	(29/09/2015
+R26	Dat Arg1:T68 Arg2:T65	
+R27	Dat Arg1:T68 Arg2:T67	
+T69	Treatment 2076 2147	wycięciu niedoszczętnym, po chemioterapii wg schematu PE i radioterapii
+T70	Condition 1808 1867	niewydolności krążenia w III klasie hemodynamicznej wg NYHA
+N27	Reference T70 ICD10:I50	
+T71	Drug 1612 1619	Ultibro
+T72	Drug_dose 1620 1636	85/43mcg 1x rano
+R28	Drg Arg1:T71 Arg2:T72	
+T73	Drug 1577 1585	Ventolin
+T74	Drug_dose 1586 1594	doraźnie
+R29	Drg Arg1:T73 Arg2:T74	
+T75	Drug 1595 1603	Atrovent
+T76	Drug_dose 1604 1611	N 2x/dz
+R30	Drg Arg1:T75 Arg2:T76	
+T77	Drug 1548 1557	Metformax
+T78	Drug_dose 1558 1576	500mg 1 tabl. rano
+R31	Drg Arg1:T77 Arg2:T78	
+T79	Drug 1517 1523	Karbis
+T80	Drug_dose 1524 1547	8mg 1/2 tabl. wieczorem
+R32	Drg Arg1:T79 Arg2:T80	
+T81	Drug 1470 1477	Beto ZK
+T82	Drug_dose 1478 1516	50 mg 2 tabl. rano i 1 tabl. wieczorem
+R33	Drg Arg1:T81 Arg2:T82	
+T83	Drug 1431 1438	Pradaxa
+T84	Drug_dose 1439 1469	150mg 1 tabl. rano i wieczorem
+R34	Drg Arg1:T83 Arg2:T84	
+T85	Investigation 1309 1347	kontrola wartości ciśnienia tętniczego
+T86	Behaviour 1348 1402	prawidłowe żywienie i systematyczna aktywność fizyczna
+T87	Treatment 1074 1082	operacji
+T88	Condition 1083 1113	żylaków kończyny dolnej prawej
+N28	Reference T88 ICD10:I83	Żylaki kończyn dolnych
+T89	Condition 1035 1064	Żylaki kończyny dolnej prawej
+N29	Reference T89 ICD10:I83	Żylaki kończyn dolnych
+T90	Condition 1018 1034	Cukrzyca typu 2.
+N30	Reference T90 ICD10:E11	Cukrzyca insulinoniezależna
+T91	Condition 981 1017	Przewlekła obturacyjna choroba płuc.
+N31	Reference T91 ICD10:J44	Inne przewlekłe obturacyjne choroby płuc
+T92	Treatment 941 953	radioterapii
+T93	Date 955 978	22/08/2016 - 05/10/2016
+R35	Dat Arg1:T93 Arg2:T92	
+T94	Treatment 886 899	chemioterapii
+T95	Date 901 921	09/2015 - 19/03/2016
+R36	Dat Arg1:T95 Arg2:T94	
+T96	Condition 705 786	Rak wielkokomórkowy neuroendokrynny płuca prawego z naciekiem wnęki płuca prawego
+N32	Reference T96 ICD10:C34.1	Płat górny płuca lub oskrzele płatowe górne
+T97	Condition 842 863	płata górnego z guzem
+N33	Reference T97 ICD10:C34.1	Płat górny płuca lub oskrzele płatowe górne
+T98	Date 865 875	29/09/2015
+R37	Dat Arg1:T98 Arg2:T97	
+T99	Treatment 797 841	klinowym, niedoszczętnym, wycięciu fragmentu
+R38	Dat Arg1:T98 Arg2:T99	
+T100	Condition 662 703	Łagodna niedomykalność zastawki mitralnej
+N34	Reference T100 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T101	Condition 616 661	Łagodna niedomykalność zastawki trójdzielnej.
+N35	Reference T101 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T102	Condition 524 568	Utrwalone migotanie/trzepotanie przedsionków
+N36	Reference T102 ICD10:I48	Migotanie i trzepotanie przedsionków
+T103	Condition 438 511	Przewlekła niewydolność serca z prawidłową frakcją wyrzutową lewej komory
+N37	Reference T103 ICD10:I50	Niewydolność serca
+T104	Investigation_result 512 522	(EF = 52%)
+T105	Investigation_result 570 588	CHA2DS2-VASC 2 pkt
+T106	Investigation_result 589 604	HAS-BLED 1 pkt,
+T107	Investigation_result 605 613	EHRA IIa
+T108	Investigation_result 2802 2812	(EF = 45%)
+T109	Treatment 923 931	6 cykli)
+R39	Dat Arg1:T95 Arg2:T109	
+T110	Treatment 3190 3199	6 cykcli)
+R40	Dat Arg1:T46 Arg2:T110	
+T111	Date 3597 3604	od 2015
+R41	Dat Arg1:T111 Arg2:T26	
+N1	Reference T24 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

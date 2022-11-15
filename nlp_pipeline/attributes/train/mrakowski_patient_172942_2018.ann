@@ -1,0 +1,58 @@
+T1	Treatment 458 479	korekcji anatomicznej
+T2	Condition 481 484	TGA
+N1	Reference T2 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T3	Treatment 593 657	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologiczne
+T4	Date 660 673	co 8 miesięcy
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Behaviour 678 718	Dieta lekkostrawna , niskocholesterolowa
+T6	Investigation 723 815	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek oraz EKG
+T7	Investigation 819 867	Systematyczna kontrola ciśnienia tętniczego krwi
+T8	Investigation 871 906	Badania w Klinice Kardiologii ICZMP
+T9	Date 907 919	za ok.2 lata
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Treatment 922 975	Systematyczne profilaktyczne kontrole stomatologiczne
+T11	Condition 1214 1282	Wrodzona wada serca pod postacią przełożenia wielkich pni tętniczych
+N2	Reference T11 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T12	Treatment 1293 1330	operacji metodą korekcji anatomicznej
+T13	Date 1332 1343	28.05.1992r
+R3	Dat Arg1:T13 Arg2:T12	
+T14	Condition 1347 1391	Łagodna niedomykalność zastawki neoaortalnej
+N3	Reference T14 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T15	Condition 1393 1441	Łagodna niedomykalność zastawki neopnia płucnego
+N4	Reference T15 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T16	Condition 1443 1496	Łagodna/umiarkowaną niedomykalność zastawki mitralnej
+N5	Reference T16 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T17	Condition 1498 1542	Łagodna niedomykalność zastawki trójdzielnej
+N6	Reference T17 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T18	Condition 1545 1600	Komorowe zaburzenia rytmu (pobudzenia pojedyncze, pary)
+N7	Reference T18 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T20	Condition 1602 1635	Pojedyncze pobudzenia nadkomorowe
+N9	Reference T20 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T21	Treatment 1778 1807	operacji wrodzonej wady serca
+T22	Condition 1821 1856	przełożenia wielkich pni tętniczych
+N10	Reference T22 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T23	Treatment 1857 1886	metoda korelacji anatomicznej
+T24	Date 1888 1899	28.05.1992r
+R5	Dat Arg1:T24 Arg2:T23	
+R4	Dat Arg1:T24 Arg2:T21	
+T25	Treatment 1964 1987	Ostatnia hospitalizacja
+T26	Date 1997 2011	23-28.04.2015r
+R6	Dat Arg1:T26 Arg2:T25	
+T27	Negation 2071 2074	bez
+T28	Symptom 2075 2087	dolegliwości
+R7	Neg Arg1:T27 Arg2:T28	
+T29	Condition 2110 2154	wydolność fizyczna na porównywalnym poziomie
+T30	Condition 2157 2166	Uczulenia
+N11	Reference T30 ICD10:T78.4	Alergia, nieokreślona
+T31	Negation 2167 2173	neguje
+R8	Neg Arg1:T31 Arg2:T30	
+T32	Behaviour 2175 2184	Papierosy
+T33	Behaviour 2187 2198	inne używki
+T34	Negation 2199 2205	neguje
+R9	Neg Arg1:T34 Arg2:T32	
+R10	Neg Arg1:T34 Arg2:T33	
+N12	Reference T32 ICD10:Z72.0	Używanie tytoniu
+T19	Drug 2089 2094	leków
+T35	Negation 2095 2108	nie przyjmuje
+R11	Neg Arg1:T35 Arg2:T19	
+N8	Reference T33 ICD10:Z72	Problemy związane ze stylem życia

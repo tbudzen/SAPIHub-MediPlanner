@@ -1,0 +1,204 @@
+T1	Treatment 346 373	dalsza opieka w poradni POZ
+T2	Treatment 380 441	okresowa kontrola kardiologiczna, neurologiczna, okulistyczna
+T3	Treatment 447 486	konsultacja dermatologiczna celem oceny
+T4	Symptom 487 511	zmiany na skórze tułowia
+N1	Reference T4 ICD10:R23.8	Inne i nieokreślone zmiany skórne
+T5	Condition 525 532	czyraka
+A1	Source T5 Declared
+N2	Reference T5 ICD10:L02.8	Ropień skóry, czyrak, czyrak gromadny o innej lokalizacji
+T6	Investigation 539 578	codzienna kontrola ciśnienia tętniczego
+T7	Investigation 585 614	okresowa kontrola lipidogramu
+T8	Date 625 639	za 6-8 tygodni
+R1	Dat Arg1:T8 Arg2:T7	
+T9	Behaviour 647 672	dieta niskocholesterolowa
+T10	Treatment 679 707	regularne przyjmowanie leków
+T11	Drug 716 723	Tritace
+T12	Drug_dose 724 743	2,5 mg 1 tabl. rano
+R2	Drg Arg1:T11 Arg2:T12	
+T13	Drug 751 757	Atoris
+T14	Drug_dose 758 781	40 mg 1 tabl. wieczorem
+R3	Drg Arg1:T13 Arg2:T14	
+T15	Drug 789 803	Cavinton forte
+T16	Drug_dose 804 828	1 tabl. rano i wieczorem
+R4	Drg Arg1:T15 Arg2:T16	
+T17	Drug 836 842	Cosopt
+T18	Drug_dose 843 905	1 kropla do worka spojówkowego oka lewego i prawego 2xdziennie
+R5	Drg Arg1:T17 Arg2:T18	
+T19	Symptom 1124 1148	Bóle w klatce piersiowej
+N3	Reference T19 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T20	Condition 1150 1183	Nadciśnienie tętnicze skorygowane
+N4	Reference T20 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T21	Condition 1185 1208	Hiperlipidemia mieszana
+N5	Reference T21 ICD10:E78.2	Hiperlipidemia mieszana
+T22	Condition 1210 1225	Miażdżyca aorty
+N6	Reference T22 ICD10:I70.0	Miażdżyca aorty
+T23	Condition 1227 1289	Wada serca pod postacią niedomykalności trójdzielnej I stopnia
+N7	Reference T23 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T24	Condition 1291 1354	Zmiany zwyrodnieniowe kręgosłupa w odcinku lędźwiowym i szyjnym
+N8	Reference T24 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T25	Condition 1356 1362	Jaskra
+N9	Reference T25 ICD10:H40.9	Jaskra, nieokreślona
+T26	Treatment 1372 1419	cholecystektomii laparoskopowej z powodu kamicy
+A2	Status T26 Historical_Insignificant
+N10	Reference T26 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T27	Date 1421 1425	2009
+R6	Dat Arg1:T27 Arg2:T26	
+T28	Treatment 1428 1444	panhisterektomii
+A3	Status T28 Historical_Insignificant
+T29	Condition 1454 1471	mięśniaków macicy
+A4	Status T29 Historical_Insignificant
+N11	Reference T29 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+T30	Date 1473 1489	przed wielu laty
+R7	Dat Arg1:T30 Arg2:T29	
+R8	Dat Arg1:T30 Arg2:T28	
+T31	Treatment 1492 1500	operacji
+A5	Status T31 Historical_Insignificant
+T32	Condition 1501 1517	zaćmy oka lewego
+A6	Status T32 Historical_Insignificant
+N12	Reference T32 ICD10:H26.9	Zaćma, nieokreślona
+T33	Date 1519 1523	2008
+R9	Dat Arg1:T33 Arg2:T31	
+R10	Dat Arg1:T33 Arg2:T32	
+T34	Condition 1527 1534	prawego
+A7	Status T34 Historical_Insignificant
+N13	Reference T34 ICD10:H26.9	Zaćma, nieokreślona
+T35	Date 1536 1540	2010
+R11	Dat Arg1:T35 Arg2:T34	
+T36	Condition 1543 1572	żylaków kończyny dolnej lewej
+A8	Status T36 Historical_Insignificant
+N14	Reference T36 ICD10:I83	Żylaki kończyn dolnych
+T37	Date 1574 1578	2001
+R12	Dat Arg1:T37 Arg2:T36	
+T38	Condition 1805 1820	szmer skurczowy
+N15	Reference T38 ICD10:R01.1	Szmer serca, nieokreślony
+T39	Condition 1823 1847	pn. max. nad z. mitralną
+T40	Condition 1849 1851	HA
+N16	Reference T40 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T41	Symptom 1894 1920	ból w obrębie lewego barku
+N17	Reference T41 ICD10:M25.5	Ból stawu
+T42	Symptom 1922 1952	lewej strony klatki piersiowej
+N18	Reference T42 ICD10:R07.3	Inne bóle w klatce piersiowej
+T43	Symptom 1954 2005	nasilających się przy ruchach i głębokim oddychaniu
+T44	Negation 2007 2015	bez cech
+T45	Symptom 2016 2031	bólu wieńcowego
+R13	Neg Arg1:T44 Arg2:T45	
+T46	Drug 2045 2049	NLPZ
+N19	Reference T45 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+T47	Condition 2066 2068	HA
+N20	Reference T47 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T48	Date 2071 2078	od 2012
+R14	Dat Arg1:T48 Arg2:T47	
+T49	Condition 2102 2146	zmiany zwyrodnieniowe kręgosłupa w odc. L, C
+A9	Source T49 Declared
+N21	Reference T49 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T50	Condition 2149 2181	miażdżyca aorty (blaszka w łuku)
+N22	Reference T50 ICD10:I70.0	Miażdżyca aorty
+T51	Condition 2183 2189	jaskra
+N23	Reference T51 ICD10:H40.9	Jaskra, nieokreślona
+T52	Treatment 2190 2207	Przebyte operacje
+T53	Treatment 2209 2255	cholecystektomia laparoskopowa z powodu kamicy
+A10	Status T53 Historical_Insignificant
+N24	Reference T53 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T54	Date 2256 2260	2009
+R15	Dat Arg1:T54 Arg2:T53	
+T55	Treatment 2262 2278	panhisterektomia
+A11	Status T55 Historical_Insignificant
+T56	Condition 2281 2297	mięśniaki macicy
+A12	Status T56 Historical_Insignificant
+N25	Reference T56 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+T57	Date 2298 2312	w wieku 55 lat
+R16	Dat Arg1:T57 Arg2:T56	
+R17	Dat Arg1:T57 Arg2:T55	
+T58	Treatment 2315 2318	op.
+A13	Status T58 Historical_Insignificant
+T59	Condition 2319 2327	zacmy OL
+A14	Status T59 Historical_Insignificant
+N26	Reference T59 ICD10:H26.9	Zaćma, nieokreślona
+T60	Condition 2334 2336	OP
+A15	Status T60 Historical_Insignificant
+N27	Reference T60 ICD10:H26.9	Zaćma, nieokreślona
+T61	Date 2328 2332	2008
+T62	Date 2337 2341	2010
+R18	Dat Arg1:T61 Arg2:T58	
+R19	Dat Arg1:T61 Arg2:T59	
+R20	Dat Arg1:T62 Arg2:T60	
+T63	Condition 2343 2365	żylaki k. dolnej lewej
+A16	Status T63 Historical_Insignificant
+N28	Reference T63 ICD10:I83	Żylaki kończyn dolnych
+T64	Date 2366 2378	przed 6 laty
+R21	Dat Arg1:T64 Arg2:T63	
+T65	Condition 2379 2394	Wywiad rodzinny
+A17	Status T65 Family
+T66	Condition 2406 2424	rak jelita grubego
+A18	Status T66 Family
+N29	Reference T66 ICD10:C18	Nowotwór złośliwy jelita grubego
+T67	Condition 2426 2433	Alergie
+N30	Reference T67 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T68	Negation 2435 2441	neguje
+R22	Neg Arg1:T68 Arg2:T67	
+T69	Behaviour 2443 2453	Nikotynizm
+N31	Reference T69 ICD10:Z72.0	Używanie tytoniu
+T70	Negation 2455 2461	neguje
+R23	Neg Arg1:T70 Arg2:T69	
+T71	Behaviour 2464 2512	Alkohol: okazjonalnie, w bardzo małych ilościach
+N32	Reference T71 ICD10:Z72.1	Używanie alkoholu
+T72	Behaviour 2514 2531	Uzależnienie inne
+T73	Negation 2533 2539	neguje
+R24	Neg Arg1:T73 Arg2:T72	
+T74	Behaviour 2557 2566	emerytura
+T75	Date 2568 2577	wcześniej
+T76	Behaviour 2578 2592	praca umysłowa
+R25	Dat Arg1:T75 Arg2:T76	
+T77	Drug 2600 2606	Cosopt
+T78	Drug_dose 2607 2675	1 kropla do worka spojówkowego oka lewego i prawego rano i wieczorem
+R26	Drg Arg1:T77 Arg2:T78	
+T79	Drug 2677 2688	Diuresin SR
+T80	Drug_dose 2689 2708	1.5 mg 1 tabl. rano
+R27	Drg Arg1:T79 Arg2:T80	
+T81	Drug 2710 2724	Cavinton forte
+T82	Drug_dose 2725 2749	1 tabl. rano i wieczorem
+R28	Drg Arg1:T81 Arg2:T82	
+T83	Date 2751 2759	od 19.12
+T84	Drug 2788 2796	Mydocalm
+T85	Drug_dose 2797 2839	50 mg 1 tabl. rano, w południe i wieczorem
+R29	Drg Arg1:T84 Arg2:T85	
+R30	Dat Arg1:T83 Arg2:T84	
+T86	Drug 2841 2854	Ketonal forte
+T87	Drug_dose 2855 2879	1 tabl. rano i wieczorem
+R31	Drg Arg1:T86 Arg2:T87	
+T88	Investigation 2909 2919	echo serca
+T89	Investigation 2921 2924	TET
+T90	Investigation 2926 2930	ABPM
+T91	Investigation 2932 2950	rtg kl. piersiowej
+R32	Dat Arg1:T83 Arg2:T86	
+
+A19	Status T29	Historical_Insignificant
+A20	Status T31	Historical_Insignificant
+A21	Status T32	Historical_Insignificant
+A22	Status T34	Historical_Insignificant
+A23	Status T56	Historical_Insignificant
+A24	Status T58	Historical_Insignificant
+A25	Status T59	Historical_Insignificant
+A26	Status T60	Historical_Insignificant
+A27	Status T66	Family
+A28	Status T67	Family
+A29	Status T29	Historical_Insignificant
+A30	Status T31	Historical_Insignificant
+A31	Status T32	Historical_Insignificant
+A32	Status T34	Historical_Insignificant
+A33	Status T56	Historical_Insignificant
+A34	Status T58	Historical_Insignificant
+A35	Status T59	Historical_Insignificant
+A36	Status T60	Historical_Insignificant
+A37	Status T66	Family
+A38	Status T67	Family
+A39	Status T29 Historical_Insignificant
+A40	Status T31 Historical_Insignificant
+A41	Status T32 Historical_Insignificant
+A42	Status T34 Historical_Insignificant
+A43	Status T56 Historical_Insignificant
+A44	Status T58 Historical_Insignificant
+A45	Status T59 Historical_Insignificant
+A46	Status T60 Historical_Insignificant
+A47	Status T66 Family
+A48	Status T67 Family

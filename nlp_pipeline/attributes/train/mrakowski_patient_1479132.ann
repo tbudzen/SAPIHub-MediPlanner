@@ -1,0 +1,144 @@
+T1	Treatment 329 356	dalsza opieka w poradni POZ
+T2	Treatment 358 390	okresowa kontrola kardiologiczna
+T3	Behaviour 391 410	prawidłowe żywienie
+T4	Behaviour 411 437	regularny wysiłek fizyczny
+T5	Condition 665 687	ASD typu sinus venosus
+N1	Reference T5 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T6	Condition 689 748	Anomalie naczyniowe żył płucnych, żyły głównej górnej lewej
+N2	Reference T6 ICD10:Q25.9	Wrodzona wada rozwojowa dużych tętnic, nieokreślona
+T7	Condition 750 791	Łagodna niedomykalność zastawki mitralnej
+N3	Reference T7 ICD10:Q23.3	Wrodzona niedomykalność zastawki mitralnej
+T8	Condition 793 809	Blok dwuwiązkowy
+N4	Reference T8 ICD10:I45.2	Blok dwuwiązkowy
+T9	Condition 818 821	LPH
+N5	Reference T9 ICD10:I44.5	Blok tylnej gałęzi lewej odnogi pęczka Hisa
+T10	Condition 811 816	IRBBB
+N6	Reference T10 ICD10:I45.0	Blok prawej odnogi pęczka Hisa
+T11	Condition 1015 1094	ASD typu sinus venosus typu żyły głównej górnej z dużym przeciekiem lewo-prawym
+N7	Reference T11 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T12	Condition 1096 1112	Blok dwuwiązkowy
+N8	Reference T12 ICD10:I45.2	
+T13	Condition 1114 1153	niepełny blok prawej odnogi pęczka Hisa
+N9	Reference T13 ICD10:I45.0	Blok prawej odnogi pęczka Hisa
+T14	Condition 1155 1185	blok tylnej wiązki pęczka Hisa
+N10	Reference T14 ICD10:I44.5	Blok tylnej gałęzi lewej odnogi pęczka Hisa
+T15	Treatment 1342 1369	dalsza opieka w poradni POZ
+T16	Treatment 1374 1406	okresowa kontrola kardiologiczna
+T17	Investigation 1410 1449	regularna kontrola ciśnienia tętniczego
+T18	Investigation 1454 1483	okresowa kontrola lipidogramu
+T19	Behaviour 1488 1524	dieta zbliżona do śródziemnomorskiej
+T20	Behaviour 1530 1554	oszczędzający tryb życia
+T21	Investigation 1734 1781	badania echokardiograficznego przezprzełykowego
+T22	Negation 1783 1794	Nie zgłasza
+T23	Symptom 1795 1815	żadnych dolegliwości
+R1	Neg Arg1:T22 Arg2:T23	
+T24	Investigation 1852 1880	badaniu echokardiograficznym
+T25	Investigation_result 1881 1905	przeciek aortalno-płucny
+N11	Reference T25 ICD10:Q21.4	Ubytek przegrody aortalno-płucnej
+T26	Investigation_result 1907 1960	powiększenie jamy prawego przedsionka i prawej komory
+N12	Reference T26 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T27	Investigation_result 1962 2005	niedomykalność zastawki trójdzielnej (IIst)
+N13	Reference T27 ICD10:Q22.8	Inne wrodzone wady rozwojowe zastawki trójdzielnej
+T28	Investigation_result 2011 2047	odcinkowych zaburzeń kurczliwości LK
+R2	Inv Arg1:T24 Arg2:T25	
+R3	Inv Arg1:T24 Arg2:T26	
+R4	Inv Arg1:T24 Arg2:T27	
+R5	Inv Arg1:T24 Arg2:T28	
+T29	Treatment 2056 2073	Przebyte operacje
+T30	Negation 2075 2085	nie podaje
+R6	Neg Arg1:T30 Arg2:T29	
+T31	Treatment 2086 2105	Leczenie przewlekłe
+T32	Negation 2107 2117	nie podaje
+R7	Neg Arg1:T32 Arg2:T31	
+T33	Condition 2145 2148	WZW
+N14	Reference T33 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T34	Condition 2150 2159	borelioza
+N15	Reference T34 ICD10:A69.2	Choroba z Lyme
+T35	Negation 2162 2172	nie podaje
+R8	Neg Arg1:T35 Arg2:T34	
+R9	Neg Arg1:T35 Arg2:T33	
+T36	Condition 2173 2188	Wywiad rodzinny
+A1	Status T36 Family
+T37	Negation 2190 2200	nieistotny
+R10	Neg Arg1:T37 Arg2:T36	
+T38	Behaviour 2201 2229	Palenie tytoniu: okazjonalne
+T39	Behaviour 2230 2255	Inne używki: okazjonalnie
+T40	Condition 2256 2265	Uczulenia
+T41	Behaviour 2313 2330	pracownik biurowy
+T42	Investigation 2379 2389	echo serca
+T43	Investigation 2391 2394	TET
+T44	Investigation 2396 2400	ABPM
+T45	Investigation 2402 2408	Holter
+T46	Investigation 2410 2428	RTG kl. piersiowej
+T47	Treatment 2620 2649	hospitalizowany w tut Klinice
+T48	Date 2650 2657	07.2019
+R11	Dat Arg1:T48 Arg2:T47	
+T49	Condition 2673 2676	PDA
+A2	Source T49 Declared
+N17	Reference T49 ICD10:Q25.0	Drożny przewód tętniczy
+T50	Negation 2771 2782	Nie zgłasza
+T51	Symptom 2783 2803	żadnych dolegliwości
+R12	Neg Arg1:T50 Arg2:T51	
+T52	Investigation 2814 2836	badanie angio-CT serca
+T53	Investigation_result 2838 2934	częściowy nieprawidłowy sp lyw zyl płucnych na poziomie sercowym i nadsercowym po stronie prawej
+N18	Reference T53 ICD10:Q26.3	Częściowo nieprawidłowe ujście żył płucnych
+T54	Investigation_result 2936 2982	ze współistniejącym ASD sinus venosus typu VCS
+N19	Reference T54 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R13	Inv Arg1:T52 Arg2:T53	
+R14	Inv Arg1:T52 Arg2:T54	
+T55	Investigation_result 2984 3135	W dolnej części przegroda międzyprzedsionkowa w okolicy ujścia żyły głównej dolnej do prawego przedsionka na obszarze około 10-11mm skrajnie ścieńczała
+N20	Reference T55 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T56	Investigation_result 3137 3238	odcinkowo niewidoczna - nie można wykluczyć współistnienia ASD sinus venosus typu żyły głównej dolnej
+N21	Reference T56 ICD10:R93.1	
+R15	Inv Arg1:T52 Arg2:T55	
+R16	Inv Arg1:T52 Arg2:T56	
+T57	Investigation_result 3240 3304	ocena utrudniona - podobne zakontrastowanie wszystkich jam serca
+R17	Inv Arg1:T52 Arg2:T57	
+T58	Treatment 3307 3326	Leczenie przewlekłe
+T59	Negation 3328 3338	nie podaje
+R18	Neg Arg1:T59 Arg2:T58	
+T60	Condition 3366 3369	WZW
+N22	Reference T60 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T61	Condition 3371 3380	borelioza
+N23	Reference T61 ICD10:A69.2	Choroba z Lyme
+T62	Negation 3383 3393	nie podaje
+R19	Neg Arg1:T62 Arg2:T61	
+R20	Neg Arg1:T62 Arg2:T60	
+T63	Condition 3394 3409	Wywiad rodzinny
+A3	Status T63 Family
+T64	Negation 3411 3421	nieistotny
+R21	Neg Arg1:T64 Arg2:T63	
+T65	Behaviour 3422 3437	Palenie tytoniu
+T66	Negation 3439 3442	nie
+R22	Neg Arg1:T66 Arg2:T65	
+T67	Behaviour 3443 3468	Inne używki: okazjonalnie
+T68	Condition 3469 3478	Uczulenia
+T69	Behaviour 3526 3543	pracownik biurowy
+T70	Investigation 3592 3602	echo serca
+T71	Investigation 3604 3607	TET
+T72	Investigation 3609 3613	ABPM
+T73	Investigation 3615 3621	Holter
+T74	Investigation 3623 3641	RTG kl. piersiowej
+T75	Investigation_result 2049 2055	EF 67%
+T76	Negation 2007 2010	bez
+R23	Neg Arg1:T76 Arg2:T28	
+R24	Inv Arg1:T24 Arg2:T75	
+N27	Reference T28 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+N16	Reference T38 ICD10:Z72.0	Używanie tytoniu
+N25	Reference T40 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N24	Reference T65 ICD10:Z72.0	Używanie tytoniu
+N26	Reference T68 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T77	Negation 438 441	bez
+T78	Drug 442 447	leków
+R25	Neg Arg1:T77 Arg2:T78	
+N28	Reference T39 ICD10:Z72	Problemy związane ze stylem życia
+A4	Status T38 Historical_Insignificant
+A5	Status T39 Historical_Insignificant
+T79	Drug 2331 2335	Leki
+T80	Negation 2338 2351	nie przyjmuje
+R26	Neg Arg1:T80 Arg2:T79	
+A6	Status T67 Historical_Insignificant
+N29	Reference T67 ICD10:Z72	Problemy związane ze stylem życia
+T81	Drug 3544 3548	Leki
+T82	Negation 3551 3564	nie przyjmuje
+R27	Neg Arg1:T82 Arg2:T81	

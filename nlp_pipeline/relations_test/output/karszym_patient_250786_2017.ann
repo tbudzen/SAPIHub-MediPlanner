@@ -1,0 +1,30 @@
+T1	Treatment 446 454	operacji
+N1	Reference T1 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T2	Condition 455 516	wrodzonej wady serca pod postacią zastawkowego zwężenia aorty
+N2	Reference T2 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T3	Treatment 518 531	Komisurotomia
+N3	Reference T3 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T4	Condition 532 563	dwupłatkowej zastawki aortalnej
+N4	Reference T4 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T5	Treatment 569 577	plastyka
+N5	Reference T5 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T6	Condition 578 611	tętniaka części wstępującej aorty
+N6	Reference T6 ICD10:I71.2	Tętniak odcinka piersiowego aorty, bez informacji o pęknięciu
+T7	Treatment 779 801	zabiegu zwężenia aorty
+N7	Reference T7 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T8	Date 803 811	w 2010 r
+T9	Drug 847 861	leków na stałe
+T10	Negation 862 875	nie otrzymuje
+T11	Condition 878 895	wywiad alergiczny
+N8	Reference T11 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T12	Negation 896 902	ujemny
+R1	Neg Arg1:T12 Arg2:T11	
+R2	Neg Arg1:T10 Arg2:T9	
+R3	Dat Arg1:T8 Arg2:T7	
+T13	Treatment 613 626	Korekcja wady
+N9	Reference T13 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T14	Date 627 646	w dniu 30.09.2010r.
+R4	Dat Arg1:T14 Arg2:T13	
+R3	Neg Arg1:T10 Arg2:T9
+R4	Neg Arg1:T12 Arg2:T11
+R8	Dat Arg1:T8 Arg2:T7

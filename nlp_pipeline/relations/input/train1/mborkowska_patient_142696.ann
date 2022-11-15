@@ -1,0 +1,95 @@
+T1	Behaviour 2009 2035	warunki mieszkaniowe dobre
+T2	Negation 1986 1992	neguje
+T3	Negation 1971 1974	nie
+T4	Negation 1954 1957	nie
+T5	Behaviour 1937 1952	Palenie tytoniu
+N1	Reference T5 ICD10:T65.2	Tytoń i nikotyna
+T6	Behaviour 1958 1969	Inne używki
+R1	Neg Arg1:T3 Arg2:T6	
+R2	Neg Arg1:T4 Arg2:T5	
+T7	Condition 1975 1984	Uczulenia
+N2	Reference T7 ICD10:T78.4	Alergia, nieokreślona
+R3	Neg Arg1:T2 Arg2:T7	
+T8	Condition 1915 1917	HA
+A1	Status T8 Family
+N3	Reference T8 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T9	Condition 1919 1921	MI
+N4	Reference T9 ICD10:I34.0	Niedomykalność zastawki mitralnej
+A2	Status T9 Family
+T10	Negation 1834 1835	-
+T11	Negation 1852 1853	-
+T12	Negation 1867 1868	-
+T13	Condition 1871 1889	odra (nie pamięta)
+A3	Source T13 Declared
+N5	Reference T13 ICD10:B05	Odra
+T14	Condition 1840 1849	borelioza
+N6	Reference T14 ICD10:A69.2	Choroba z Lyme
+T15	Condition 1828 1831	WZW
+N7	Reference T15 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+R4	Neg Arg1:T10 Arg2:T15	
+R5	Neg Arg1:T11 Arg2:T14	
+T16	Condition 1857 1865	gruźlica
+N8	Reference T16 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+R6	Neg Arg1:T12 Arg2:T16	
+T17	Symptom 1719 1731	zasłabnięcia
+N9	Reference T17 ICD10:R55	Omdlenie i zapaść
+T18	Symptom 1733 1742	duszności
+N10	Reference T18 ICD10:R06.0	Duszność
+T19	Symptom 1744 1776	typowe bóle w klatce piersiowej.
+T20	Negation 1712 1718	Neguje
+R7	Neg Arg1:T20 Arg2:T17	
+R8	Neg Arg1:T20 Arg2:T18	
+R9	Neg Arg1:T20 Arg2:T19	
+T21	Treatment 1777 1800	Przebyte operacje:  j/w
+T22	Condition 1405 1463	nadciśnienia tętniczego niekontrolowanego farmakologicznie
+N11	Reference T22 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T23	Investigation_result 1465 1484	max do 200/100 mmHg
+T24	Condition 1489 1502	hiperurykemią
+N12	Reference T24 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T25	Condition 1504 1529	 żylakami kończyn dolnych
+N13	Reference T25 ICD10:I83	Żylaki kończyn dolnych
+T26	Treatment 1534 1559	usunięciu nowotworu skóry
+A4	Source T26 Declared
+N14	Reference T26 ICD10:C44	Inne nowotwory złośliwe skóry
+T27	Date 1561 1565	2014
+R10	Dat Arg1:T27 Arg2:T26	
+T28	Treatment 1590 1606	panhisterektomii
+T29	Condition 1616 1626	mięśniaków
+N15	Reference T29 ICD10:D25.0	Mięśniak gładkokomórkowy podśluzówkowy macicy
+T30	Date 1628 1632	2000
+R11	Dat Arg1:T30 Arg2:T28	
+T31	Drug 1176 1182	Bibloc
+T32	Drug 1184 1189	Acard
+T33	Drug 1191 1198	Amlopin
+T35	Drug 1209 1216	Milurit
+T36	Drug 1218 1225	Roswera
+T34	Drug 1200 1207	Tritace
+T37	Drug 1227 1237	Indapen SR
+T38	Investigation 962 992	kontrola AST, ALT, lipidogramu
+T39	Investigation 1005 1016	kontrola RR
+T40	Behaviour 934 959	dieta niskocholesterolowa
+T41	Treatment 683 699	panhisterektomii
+T42	Condition 709 719	mięśniaków
+N16	Reference T42 ICD10:D25.0	Mięśniak gładkokomórkowy podśluzówkowy macicy
+T43	Date 721 725	2000
+R12	Dat Arg1:T43 Arg2:T42	
+R13	Dat Arg1:T43 Arg2:T41	
+T44	Treatment 641 666	usunięciu nowotworu skóry
+N17	Reference T44 ICD10:C44	Inne nowotwory złośliwe skóry
+T45	Date 668 672	2014
+R14	Dat Arg1:T45 Arg2:T44	
+T46	Condition 609 632	Żylaki kończyn dolnych.
+N18	Reference T46 ICD10:I83	Żylaki kończyn dolnych
+T47	Condition 594 607	Hiperurykemia
+N19	Reference T47 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T48	Condition 572 592	Hipercholesterolemia
+N20	Reference T48 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T49	Condition 549 570	Nadciśnienie tętnicze
+N21	Reference T49 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T50	Condition 448 489	Łagodna niedomykalność zastawki mitralnej
+N22	Reference T50 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T51	Condition 492 504	trójdzielnej
+N23	Reference T51 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T52	Condition 506 547	Dysfunkcja rozkurczowa lewej komory II st
+N24	Reference T52 ICD10:I50	Niewydolność serca
+T53	Investigation 1028 1046	kontrola jonogramu

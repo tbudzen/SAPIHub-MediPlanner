@@ -1,0 +1,150 @@
+T1	Condition 405 445	agodna niedomykalność zastawki aortalnej
+N1	Reference T1 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T2	Condition 448 460	trójdzielnej
+N2	Reference T2 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T3	Condition 462 506	Napadowe migotanie/ trzepotanie przedsionków
+N3	Reference T3 ICD10:I48	Migotanie i trzepotanie przedsionków
+T4	Condition 508 529	Nadciśnienie tętnicze
+N4	Reference T4 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T5	Condition 539 624	prawdopodobnie przebytym udarze mózgu z afazją motoryczną i niedowładem prawostronnym
+N5	Reference T5 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T6	Date 625 636	3 lata temu
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Condition 638 650	Dyslipidemia
+N6	Reference T7 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T8	Condition 652 672	Miażdżyca uogólniona
+N7	Reference T8 ICD10:I70.9	Miażdżyca uogólniona i nieokreślona
+T9	Condition 674 703	Przewlekłe zapalenie oskrzeli
+N8	Reference T9 ICD10:J41	Proste i śluzowo-ropne przewlekłe zapalenie oskrzeli
+T10	Condition 705 727	Żylaki kończyn dolnych
+N9	Reference T10 ICD10:I83	Żylaki kończyn dolnych
+T11	Drug 882 889	Pradaxa
+T12	Drug 891 897	Atoris
+T13	Drug 899 906	Bisotal
+T14	Drug 908 916	Metocard
+T15	Drug 918 928	Prestarium
+T16	Drug 930 938	Spironol
+T17	Drug 940 952	Hydroksyzyna
+T18	Investigation 1097 1128	kontrola "parametrów" nerkowych
+T19	Behaviour 1227 1248	dieta niskotłuszczowa
+T20	Investigation 2564 2568	ECHO
+T21	Investigation 2570 2588	EKG metodą Holtera
+T22	Investigation 2590 2594	ABPM
+T23	Drug 2452 2464	Hydroksyzyna
+T24	Drug_dose 2465 2480	10mg 1-0-1 tabl
+R2	Drg Arg1:T23 Arg2:T24	
+T25	Drug 2423 2431	Spironol
+T26	Drug_dose 2432 2451	25mg 1x 1 tabl/rano
+R3	Drg Arg1:T25 Arg2:T26	
+T27	Drug 2391 2401	Prestarium
+T28	Drug_dose 2402 2422	10mg 1x 1 tabl/wiecz
+R4	Drg Arg1:T27 Arg2:T28	
+T29	Drug 2365 2373	Biosotal
+T30	Drug_dose 2374 2390	40mg 3x 1/2 tabl
+R5	Drg Arg1:T29 Arg2:T30	
+T31	Drug 2337 2343	Atoris
+T32	Drug_dose 2344 2364	20mg 1x 1 tabl/wiecz
+R6	Drg Arg1:T31 Arg2:T32	
+T33	Drug 2312 2319	Pradaxa
+T34	Drug_dose 2320 2336	150mg 1-0-1 tabl
+R7	Drg Arg1:T33 Arg2:T34	
+T35	Behaviour 2248 2274	warunki mieszkaniowe dobre
+T36	Condition 2169 2172	WZW
+N10	Reference T36 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T37	Condition 2179 2188	borelioza
+N11	Reference T37 ICD10:A69.2	Choroba z Lyme
+T38	Condition 2194 2197	tbc
+N12	Reference T38 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T39	Condition 2203 2207	odra
+N13	Reference T39 ICD10:B05	Odra
+T40	Behaviour 2213 2227	kontakt z odrą
+N14	Reference T40 ICD10:B05	Odra
+T41	Negation 2228 2231	(-)
+R8	Neg Arg1:T41 Arg2:T40	
+T42	Negation 2208 2211	(-)
+R9	Neg Arg1:T42 Arg2:T39	
+T43	Negation 2198 2201	(-)
+R10	Neg Arg1:T43 Arg2:T38	
+T44	Negation 2189 2192	(-)
+R11	Neg Arg1:T44 Arg2:T37	
+T45	Negation 2173 2176	(-)
+R12	Neg Arg1:T45 Arg2:T36	
+T46	Negation 2137 2140	nie
+T47	Negation 2122 2125	nie
+T48	Negation 2105 2108	nie
+T49	Negation 2084 2087	nie
+T50	Negation 1925 1931	Neguje
+T51	Condition 2126 2135	Uczulenia
+N15	Reference T51 ICD10:T78.4	Alergia, nieokreślona
+R13	Neg Arg1:T46 Arg2:T51	
+T52	Behaviour 2109 2120	Inne używki
+R14	Neg Arg1:T47 Arg2:T52	
+T53	Behaviour 2088 2103	Palenie tytoniu
+N16	Reference T53 ICD10:T65.2	Tytoń i nikotyna
+R15	Neg Arg1:T48 Arg2:T53	
+T54	Treatment 2065 2083	Przebyte operacje:
+R16	Neg Arg1:T49 Arg2:T54	
+T55	Symptom 1933 1945	zasłabnięcia
+N17	Reference T55 ICD10:R55	Omdlenie i zapaść
+T56	Symptom 1947 1955	omdlenia
+N18	Reference T56 ICD10:R55	Omdlenie i zapaść
+T57	Symptom 1957 1967	krwawienia
+N19	Reference T57 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T58	Symptom 1969 1982	czarne stolce
+N20	Reference T58 ICD10:K92.1	Stolce smołowate
+T59	Symptom 1984 2000	brunatne wymioty
+N21	Reference T59 ICD10:K92.0	Wymioty krwawe
+T60	Symptom 2002 2010	duszność
+N22	Reference T60 ICD10:R06.0	Duszność
+T61	Symptom 2012 2026	duszność nocną
+N23	Reference T61 ICD10:I50.1	Niewydolność serca lewokomorowa
+T62	Condition 2028 2030	DM
+N24	Reference T62 ICD10:E13	Inne określone postacie cukrzycy
+T63	Condition 2032 2043	zawał serca
+N25	Reference T63 ICD10:I25.2	Przebyty zawał serca
+T64	Condition 2045 2061	chorobę wieńcową
+N26	Reference T64 ICD10:I25	Przewlekła choroba niedokrwienna serca
+R17	Neg Arg1:T50 Arg2:T55	
+R18	Neg Arg1:T50 Arg2:T56	
+R19	Neg Arg1:T50 Arg2:T57	
+R20	Neg Arg1:T50 Arg2:T58	
+R21	Neg Arg1:T50 Arg2:T59	
+R22	Neg Arg1:T50 Arg2:T60	
+R23	Neg Arg1:T50 Arg2:T61	
+R24	Neg Arg1:T50 Arg2:T62	
+R25	Neg Arg1:T50 Arg2:T63	
+R26	Neg Arg1:T50 Arg2:T64	
+T65	Condition 1433 1448	napadowym FA/fA
+N27	Reference T65 ICD10:I48	Migotanie i trzepotanie przedsionków
+T66	Drug 1450 1457	Pradaxa
+T67	Drug_dose 1458 1465	2x150mg
+R27	Drg Arg1:T66 Arg2:T67	
+T68	Condition 1468 1470	HA
+N28	Reference T68 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T69	Investigation_result 1472 1511	RR w domu 105-110/55mmHg, HR min 45/min
+T70	Condition 1517 1602	prawdopodobnie przebytym udarze mózgu z afazją motoryczną i niedowładem prawostronnym
+A1	Source T70 Declared
+N29	Reference T70 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T71	Date 1603 1614	3 lata temu
+R28	Dat Arg1:T71 Arg2:T70	
+T72	Condition 1622 1634	dyslipidemią
+N30	Reference T72 ICD10:E78.5	Hiperlipidemia, nieokreślona
+A2	Source T5 Declared
+T73	Condition 1636 1656	miażdżycą uogólnioną
+N31	Reference T73 ICD10:I70.9	Miażdżyca uogólniona i nieokreślona
+T74	Symptom 1756 1782	bólami w klatce peirsiowej
+N32	Reference T74 ICD10:R07.3	Inne bóle w klatce piersiowej
+T75	Symptom 1785 1801	szumami w uszach
+T76	Condition 1825 1835	łagodna IM
+N33	Reference T76 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T77	Condition 1837 1866	przewlekłe zapalenie oskrzeli
+N34	Reference T77 ICD10:J41	Proste i śluzowo-ropne przewlekłe zapalenie oskrzeli
+T78	Symptom 1868 1885	żylaki kk dolnych
+N35	Reference T78 ICD10:I83	Żylaki kończyn dolnych
+T79	Symptom 1887 1924	niewielki obrzek wokół prawej kostki.
+N36	Reference T79 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T80	Investigation 1194 1224	scyntygrafii mięśnia sercowego
+T81	Condition 1696 1706	napadów FA
+N37	Reference T81 ICD10:I48	Migotanie i trzepotanie przedsionków
+T82	Date 1707 1738	(w sierpniu 2x, we wrześniu 3x)
+R29	Dat Arg1:T82 Arg2:T81	

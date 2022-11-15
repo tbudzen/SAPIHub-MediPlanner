@@ -1,0 +1,171 @@
+T1	Investigation 2771 2775	ECHO
+T2	Investigation 2777 2795	EKG metodą Holtera
+T3	Investigation 2797 2801	ABPM
+T4	Investigation 2803 2819	próba wysiłkowa.
+T5	Drug 2657 2665	Vesicare
+T6	Drug 2629 2636	Emanera
+T7	Drug 2602 2607	Acard
+T8	Drug 2573 2580	Roswera
+T9	Drug 2545 2553	Euthyrox
+T10	Drug_dose 2554 2572	N75 1x 1 tabl/rano
+R1	Drg Arg1:T9 Arg2:T10	
+T11	Drug_dose 2581 2601	20mg 1x 1 tabl/wiecz
+R2	Drg Arg1:T8 Arg2:T11	
+T12	Drug_dose 2608 2628	75mg 1x 1 tabl/wiecz
+R3	Drg Arg1:T7 Arg2:T12	
+T13	Drug_dose 2637 2656	40mg 1x 1 tabl/rano
+R4	Drg Arg1:T6 Arg2:T13	
+T14	Drug_dose 2666 2687	10mg 1x 1/2 tabl/rano
+R5	Drg Arg1:T5 Arg2:T14	
+T15	Behaviour 2482 2508	warunki mieszkaniowe dobre
+T16	Condition 2431 2434	WZW
+N1	Reference T16 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T17	Condition 2441 2450	borelioza
+N2	Reference T17 ICD10:A69.2	Choroba z Lyme
+T18	Condition 2458 2461	tbc
+N3	Reference T18 ICD10:A15	
+T19	Negation 2462 2465	(-)
+R6	Neg Arg1:T19 Arg2:T18	
+T20	Negation 2451 2456	( - )
+R7	Neg Arg1:T20 Arg2:T17	
+T21	Negation 2435 2438	(-)
+R8	Neg Arg1:T21 Arg2:T16	
+T22	Negation 2400 2403	nie
+T23	Negation 2386 2389	nie
+T24	Condition 2390 2399	Uczulenia
+R9	Neg Arg1:T22 Arg2:T24	
+T25	Behaviour 2373 2384	Inne używki
+R10	Neg Arg1:T23 Arg2:T25	
+T26	Behaviour 2339 2354	Palenie tytoniu
+N5	Reference T26 ICD10:Z72.0	Używanie tytoniu
+T27	Negation 2356 2364	nie pali
+R11	Neg Arg1:T27 Arg2:T26	
+T28	Date 2365 2372	od 2003
+R12	Dat Arg1:T28 Arg2:T26	
+T29	Treatment 2265 2277	sturmektomia
+A1	Status T29 Historical_Insignificant
+T30	Treatment 2286 2330	endoprotezoplastyka stawu biodrowego prawego
+A2	Status T30 Historical_Insignificant
+T31	Date 2332 2336	2013
+R13	Dat Arg1:T31 Arg2:T30	
+T32	Date 2279 2283	2005
+R14	Dat Arg1:T32 Arg2:T29	
+T33	Drug 951 959	Euthyrox
+T34	Drug 961 968	Roswera
+T35	Drug 970 975	Acard
+T36	Drug 977 984	Emanera
+T37	Drug 986 994	Vesicare
+T38	Drug 1263 1271	Euthyrox
+T39	Drug_dose 1272 1290	N75 1x 1 tabl/rano
+R15	Drg Arg1:T38 Arg2:T39	
+T40	Drug 1291 1298	Roswera
+T41	Drug_dose 1299 1319	20mg 1x 1 tabl/wiecz
+R16	Drg Arg1:T40 Arg2:T41	
+T42	Condition 439 466	Choroba niedokrwienna serca
+T43	Condition 1477 1480	CAD
+N7	Reference T43 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T44	Condition 1482 1496	hiperlipidemii
+N8	Reference T44 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T45	Symptom 1533 1574	zminiejszej tolerancji wysiłku fizycznego
+N9	Reference T45 ICD10:R53	Złe samopoczucie i zmęczenie
+T46	Date 1575 1581	od lat
+R17	Dat Arg1:T46 Arg2:T45	
+T47	Negation 2053 2059	Neguje
+T48	Symptom 2062 2070	omdlenia
+N10	Reference T48 ICD10:R55	Omdlenie i zapaść
+T49	Symptom 2072 2082	krwawienia
+N11	Reference T49 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T50	Symptom 2084 2097	czarne stolce
+N12	Reference T50 ICD10:K92.1	Stolce smołowate
+T51	Symptom 2099 2115	brunatne wymioty
+N13	Reference T51 ICD10:K92.0	Wymioty krwawe
+T52	Condition 2117 2134	chorobę wrzodową,
+N14	Reference T52 ICD10:K27	
+T53	Symptom 2135 2150	duszność nocną,
+T54	Symptom 2151 2166	obrzęki podudzi
+T55	Symptom 2168 2192	bóle w klatce piersiowej
+N17	Reference T55 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T56	Symptom 2194 2209	kołatania serca
+N18	Reference T56 ICD10:R00.2	Kołatanie serca
+T57	Condition 2211 2213	HA
+N19	Reference T57 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T58	Condition 2215 2217	DM
+N20	Reference T58 ICD10:E13	Inne określone postacie cukrzycy
+T59	Condition 2219 2229	udar mózgu
+N21	Reference T59 ICD10:I64	
+T60	Condition 2231 2243	zawał serca.
+N22	Reference T60 ICD10:I25.2	Przebyty zawał serca
+R18	Neg Arg1:T47 Arg2:T48	
+R19	Neg Arg1:T47 Arg2:T49	
+R20	Neg Arg1:T47 Arg2:T50	
+R21	Neg Arg1:T47 Arg2:T51	
+R22	Neg Arg1:T47 Arg2:T52	
+R23	Neg Arg1:T47 Arg2:T53	
+R24	Neg Arg1:T47 Arg2:T54	
+R25	Neg Arg1:T47 Arg2:T55	
+R26	Neg Arg1:T47 Arg2:T56	
+R27	Neg Arg1:T47 Arg2:T57	
+R28	Neg Arg1:T47 Arg2:T59	
+R29	Neg Arg1:T47 Arg2:T60	
+R30	Neg Arg1:T47 Arg2:T58	
+T61	Condition 468 513	Izolowana dysfunkcja rozkurczowa lewej komory
+T62	Condition 515 555	Zmiany zwyrodnieniowe zastawki aortalnej
+T63	Condition 557 571	Hiperlipidemia
+N23	Reference T63 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T64	Condition 592 622	Otępienie bliżej nieokreślone.
+N24	Reference T64 ICD10:F03	Otępienie nieokreślone
+T65	Condition 623 653	Zwyrodnienie stawów kręgosłupa
+T66	Condition 655 677	Żylaki kończyn dolnych
+N26	Reference T66 ICD10:I83	Żylaki kończyn dolnych
+T67	Condition 679 690	Osteoporoza
+N27	Reference T67 ICD10:M81.9	Osteoporoza, nieokreślona
+T68	Condition 692 736	Nadreaktywność wypieracza pęcherza moczowego
+N28	Reference T68 ICD10:N31	Nerwowo-mięśniowa dysfunkcja pęcherza moczowego, niesklasyfikowana gdzie indziej
+T69	Treatment 746 758	strumektomii
+A3	Status T69 Historical_Insignificant
+T70	Date 760 764	2005
+R31	Dat Arg1:T70 Arg2:T69	
+T71	Treatment 775 819	endoprotezoplastyce stawu biodrowego prawego
+A4	Status T71 Historical_Insignificant
+T72	Date 821 825	2013
+R32	Dat Arg1:T72 Arg2:T71	
+T73	Symptom 1592 1632	odpoczywa co 100-150m z powodu duszności
+N29	Reference T73 ICD10:R06.0	Duszność
+T74	Date 1583 1590	Od roku
+R33	Dat Arg1:T74 Arg2:T73	
+T75	Symptom 1634 1643	zmęczenia
+N30	Reference T75 ICD10:R53	Złe samopoczucie i zmęczenie
+T76	Symptom 1645 1650	potów
+N31	Reference T76 ICD10:R61	Nadmierne pocenie
+R34	Dat Arg1:T74 Arg2:T75	
+R35	Dat Arg1:T74 Arg2:T76	
+T77	Symptom 1674 1689	2x zasłabnięcia
+N32	Reference T77 ICD10:R55	Omdlenie i zapaść
+T78	Date 1690 1701	2 lata temu
+R36	Dat Arg1:T78 Arg2:T77	
+T79	Condition 1703 1732	otepienie bliżej nieokreslone
+T80	Condition 1780 1810	zwyrodnienie stawów kręgusłupa
+N34	Reference T80 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T81	Condition 1812 1829	żylaki kk dolnych
+N35	Reference T81 ICD10:I83	Żylaki kończyn dolnych
+T82	Treatment 1839 1851	strumektomii
+T83	Condition 1861 1876	wola guzowatego
+T84	Condition 1878 1889	osteoporoza
+N36	Reference T84 ICD10:M81.9	Osteoporoza, nieokreślona
+T85	Symptom 1898 1946	kołatania serca bez towarzyszących dolegliwości,
+N37	Reference T85 ICD10:R00.2	Kołatanie serca
+T86	Symptom 1947 1977	obrzeki kostek kk dolnych L>P,
+N38	Reference T86 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T87	Condition 1978 2022	nadreaktywność wypieracza pęcherza moczowego
+N39	Reference T87 ICD10:N31	Nerwowo-mięśniowa dysfunkcja pęcherza moczowego, niesklasyfikowana gdzie indziej
+T88	Investigation_result 2024 2052	RR w domu: 80/60-120/80mmHg.
+T89	Behaviour 1205 1230	dieta niskocholesterolowa
+N33	Reference T79 ICD10:F02.8	
+N16	Reference T54 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N15	Reference T53 ICD10:R06.0	Duszność
+N40	Reference T25 ICD10:Z72	Problemy związane ze stylem życia
+N6	Reference T42 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+N25	Reference T65 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T90	Treatment 1105 1127	kontrola u lekarza POZ
+T91	Treatment 1137 1201	kontrola w Poradni Kardiologicznej, Neurologicznej, Urologicznej
+N4	Reference T24 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

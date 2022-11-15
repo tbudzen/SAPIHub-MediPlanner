@@ -1,0 +1,107 @@
+T1	Condition 491 525	prawdopodobnie drożny otwór owalny
+A1	Source T1 Declared
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Condition 448 489	Ubytek w przegrodzie międzyprzedsionkowej
+N2	Reference T2 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T3	Condition 528 555	Choroba niedokrwienna serca
+T4	Condition 561 595	Napadowy częstoskurcz nadkomorowy.
+N4	Reference T4 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T5	Condition 596 617	Nadciśnienie tętnicze
+N5	Reference T5 ICD10:I10	
+T6	Condition 619 634	Cukrzyca typu 2
+N6	Reference T6 ICD10:E11	Cukrzyca insulinoniezależna
+T7	Condition 636 656	Hipercholesterolemia
+T8	Condition 658 689	Nieżyt prawej trąbki słuchowej.
+N8	Reference T8 ICD10:H68	Zapalenie i niedrożność trąbki słuchowej Eustachiusza
+T9	Behaviour 869 894	dieta niskocholesterolowa
+T10	Investigation 896 916	kontrola lipidogramu
+T11	Date 917 926	za 3 m-ce
+R1	Dat Arg1:T11 Arg2:T10	
+T12	Investigation 952 955	TEE
+T13	Drug 1152 1158	Ebivol
+T14	Drug 1160 1172	Preductal MR
+T15	Drug 1174 1186	CoPrestarium
+T16	Drug 1188 1194	Siofor
+T17	Drug 1196 1204	Polocard
+T18	Drug 1206 1213	Romazic
+T19	Drug 1215 1223	0,9%NaCl
+T20	Investigation 2382 2392	Echo serca
+T21	Investigation 2395 2405	Holter EKG
+T22	Investigation 2408 2423	Próba Wysiłkowa
+T23	Drug 2228 2234	Ebivol
+T24	Drug_dose 2235 2247	5 1x dz rano
+R2	Drg Arg1:T23 Arg2:T24	
+T25	Drug 2250 2262	Preductal MR
+T26	Drug_dose 2263 2268	2x dz
+R3	Drg Arg1:T25 Arg2:T26	
+T27	Drug 2271 2284	Co-Prestarium
+T28	Drug_dose 2285 2299	5+5 1x dz rano
+R4	Drg Arg1:T27 Arg2:T28	
+T29	Drug 2302 2308	Siofor
+T30	Drug_dose 2309 2336	850 3x dz w trakcie posiłka
+R5	Drg Arg1:T29 Arg2:T30	
+T31	Drug 2338 2346	Polocard
+T32	Drug_dose 2347 2365	75 1x dz wieczorem
+R6	Drg Arg1:T31 Arg2:T32	
+T33	Behaviour 2177 2203	warunki mieszkaniowe dobre
+T34	Negation 2154 2160	neguje
+T35	Negation 2139 2142	nie
+T36	Negation 2122 2125	nie
+T37	Negation 2040 2046	( -  )
+T38	Negation 2059 2064	( - )
+T39	Condition 2049 2058	borelioza
+N9	Reference T39 ICD10:A69.2	Choroba z Lyme
+R7	Neg Arg1:T38 Arg2:T39	
+T40	Condition 2036 2039	WZW
+N10	Reference T40 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+R8	Neg Arg1:T37 Arg2:T40	
+T41	Condition 2095 2103	cukrzyca
+A2	Status T41 Family
+N11	Reference T41 ICD10:E13	Inne określone postacie cukrzycy
+T42	Behaviour 2105 2121	Palenie tytoniu:
+N12	Reference T42 ICD10:Z72.0	Używanie tytoniu
+R9	Neg Arg1:T36 Arg2:T42	
+T43	Behaviour 2126 2137	Inne używki
+N13	Reference T43 ICD10:Z72	Problemy związane ze stylem życia
+R10	Neg Arg1:T35 Arg2:T43	
+T44	Condition 2143 2152	Uczulenia
+N14	Reference T44 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R11	Neg Arg1:T34 Arg2:T44	
+T45	Treatment 1911 1938	operacji cięcia cesarskiego
+A3	Status T45 Historical_Insignificant
+T46	Date 1939 1949	przed laty
+R12	Dat Arg1:T46 Arg2:T45	
+T47	Condition 1866 1880	Zaćma obu oczu
+N15	Reference T47 ICD10:H26.9	Zaćma, nieokreślona
+T48	Condition 1833 1848	Cukrzyca typu 2
+N16	Reference T48 ICD10:E11	Cukrzyca insulinoniezależna
+T49	Condition 1850 1864	Guzki tarczycy
+N17	Reference T49 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T50	Condition 1810 1831	Nadciśnienie tętnicze
+N18	Reference T50 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T51	Condition 1781 1808	Choroba niedokrwienna serca
+T52	Symptom 1396 1439	okresowych dyskomfortu w klatce piersiowej,
+N20	Reference T52 ICD10:R07.3	Inne bóle w klatce piersiowej
+T53	Symptom 1440 1500	pogorszenia tolerancji wysiłku ( chora wejdzie na 2 piętro )
+N21	Reference T53 ICD10:R53	Złe samopoczucie i zmęczenie
+T54	Symptom 1503 1523	duszności wysiłkowej
+N22	Reference T54 ICD10:R06.0	Duszność
+T55	Symptom 1543 1558	kołatania serca
+N23	Reference T55 ICD10:R00.2	Kołatanie serca
+T56	Symptom 1567 1579	zasłabnięcia
+N24	Reference T56 ICD10:R55	Omdlenie i zapaść
+T57	Negation 1560 1566	Neguje
+R13	Neg Arg1:T57 Arg2:T56	
+T58	Condition 1735 1763	choroby niedokrwiennej serca
+N25	Reference T58 ICD10:I25	
+T59	Investigation 1723 1734	diagnostyki
+T60	Condition 1683 1699	wypadania macicy
+N26	Reference T60 ICD10:N81.9	Wypadanie żeńskich narządów rozrodczych, nieokreślone
+N7	Reference T7 ICD10:E78.0	Czysta hipercholesterolemia
+N3	Reference T3 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+T61	Treatment 800 822	kontrola u lekarza POZ
+T62	Treatment 832 866	kontrola w Poradni Kardiologicznej
+T63	Treatment 1603 1673	konsultowana kardiologicznie  przed planowym zabiegiem ginekologicznym
+T64	Date 1584 1596	W 11.07.2018
+R14	Dat Arg1:T64 Arg2:T63	
+N19	Reference T51 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona

@@ -1,0 +1,65 @@
+T1	Treatment 331 353	kontrola u lekarza POZ
+T2	Behaviour 356 379	zmniejszenie masy ciała
+T3	Behaviour 382 404	dieta śródziemnomorska
+T4	Investigation 407 427	kontrola lipidogramu
+T5	Date 428 437	za 3 m-ce
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Investigation 440 490	kontrola ciśnienia tętniczego w warunkach domowych
+T7	Condition 837 858	Nadciśnienie tętnicze
+A1	Source T7 Declared
+N1	Reference T7 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T8	Condition 862 879	1 stopnia wg PTNT
+T9	Condition 888 929	Niezupełny blok prawej odnogi pęczka Hisa
+N2	Reference T9 ICD10:I45.1	Inne i nieokreślone bloki prawej odnogi pęczka Hisa
+T10	Condition 931 938	Nadwaga
+N3	Reference T10 ICD10:E66.9	Otyłość, nieokreślona
+T11	Condition 1076 1119	niepełnym blokiem prawej odnogi pęczka Hisa
+N4	Reference T11 ICD10:I45.1	Inne i nieokreślone bloki prawej odnogi pęczka Hisa
+T12	Condition 1136 1177	ubytku w przegrodzie międzyprzedsionkowej
+A2	Source T12 Declared
+N5	Reference T12 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T13	Symptom 1208 1238	pogorszenia tolerancji wysiłku
+N6	Reference T13 ICD10:R53	Złe samopoczucie i zmęczenie
+T14	Investigation_result 1244 1286	skoków ciśnienia tętniczego do 164/71 mmHg
+N7	Reference T14 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T15	Date 1288 1296	03.2018r
+R2	Dat Arg1:T15 Arg2:T14	
+T16	Treatment 1298 1315	Przebyte operacje
+T17	Treatment 1325 1338	appendektomii
+A3	Status T17 Historical_Insignificant
+T18	Date 1341 1355	w dzieciństwie
+R3	Dat Arg1:T18 Arg2:T17	
+T19	Condition 1384 1387	WZW
+N8	Reference T19 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T20	Condition 1389 1398	borelioza
+N9	Reference T20 ICD10:A69.2	Choroba z Lyme
+T21	Negation 1401 1411	nie podaje
+R4	Neg Arg1:T21 Arg2:T20	
+R5	Neg Arg1:T21 Arg2:T19	
+T22	Condition 1412 1427	Wywiad rodzinny
+A4	Status T22 Family
+T23	Negation 1429 1438	negatywny
+R6	Neg Arg1:T23 Arg2:T22	
+T24	Behaviour 1439 1468	Palenie tytoniu: okazjonalnie
+T25	Behaviour 1469 1494	Inne używki: okazjonalnie
+T26	Condition 1495 1504	Uczulenia
+N11	Reference T26 ICD10:T78.4	Alergia, nieokreślona
+T27	Negation 1506 1516	nie podaje
+R7	Neg Arg1:T27 Arg2:T26	
+T28	Behaviour 1535 1540	uczeń
+T29	Investigation 1584 1594	echo serca
+T30	Investigation 1596 1616	echo przezprzełykowe
+T31	Investigation 1618 1621	TET
+T32	Investigation 1623 1627	ABPM
+T33	Investigation 1629 1635	Holter
+T34	Investigation 1637 1655	RTG kl. piersiowej
+N10	Reference T24 ICD10:Z72.0	Używanie tytoniu
+T35	Drug 614 619	leków
+T36	Negation 610 613	bez
+R8	Neg Arg1:T36 Arg2:T35	
+A5	Status T24 Historical_Insignificant
+A6	Status T25 Historical_Insignificant
+N12	Reference T25 ICD10:Z72	Problemy związane ze stylem życia
+T37	Drug 1551 1556	leków
+T38	Negation 1547 1550	bez
+R9	Neg Arg1:T38 Arg2:T37	

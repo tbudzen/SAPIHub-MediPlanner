@@ -1,0 +1,74 @@
+T1	Drug 340 350	Prestarium
+T2	Drug 352 363	Propranolol
+T3	Drug 365 370	Nedal
+T4	Treatment 481 503	kontrola u lekarza POZ
+T5	Treatment 506 547	dalsza kontrola w Poradni Kardiologicznej
+T6	Behaviour 550 575	dieta niskocholesterolowa
+T7	Investigation 578 598	kontrola lipidogramu
+T8	Date 599 608	za 3 m-ce
+T9	Drug 641 651	Prestarium
+T10	Drug 672 677	Nedal
+T11	Drug_dose 652 671	5mg 1x 1 tabl/wiecz
+T12	Drug_dose 678 692	5mg 1x 1/4 tab
+T13	Condition 910 931	Nadciśnienie tętnicze
+N1	Reference T13 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T14	Condition 933 956	Hiperlipidemia mieszana
+N2	Reference T14 ICD10:E78.2	Hiperlipidemia mieszana
+T15	Behaviour 958 979	Przewlekły nikotynizm
+N3	Reference T15 ICD10:Z72.0	Używanie tytoniu
+R1	Dat Arg1:T8 Arg2:T7	
+R2	Drg Arg1:T9 Arg2:T11	
+R3	Drg Arg1:T10 Arg2:T12	
+T16	Investigation_result 1141 1205	niestabilnych wartości ciśnienia tętniczego  max do 160/100 mmHg
+T17	Symptom 1209 1235	towarzyszącymi nudnościami
+N4	Reference T17 ICD10:R11	Nudności i wymioty
+T18	Symptom 1254 1314	dolegliwości bólowe w klatce piersiowej o charakterze kłucia
+N5	Reference T18 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T19	Date 1316 1330	Od około 2 lat
+T20	Condition 1352 1375	nadciśnieniem tętniczym
+N6	Reference T20 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T21	Date 1377 1389	od  miesiąca
+T22	Drug 1400 1417	leki hipotensyjne
+T23	Condition 1450 1464	hiperlipidemia
+N7	Reference T23 ICD10:E78.2	Hiperlipidemia mieszana
+T24	Condition 1470 1510	nieprawidłowe wartości glikemii na czczo
+N8	Reference T24 ICD10:R73	Podwyższone stężenie glukozy we krwi
+T25	Behaviour 1512 1522	nikotynizm
+N9	Reference T25 ICD10:Z72.0	Używanie tytoniu
+T26	Condition 1551 1554	WZW
+N10	Reference T26 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T27	Negation 1555 1561	neguje
+T28	Condition 1563 1572	borelioza
+N11	Reference T28 ICD10:A69.2	Choroba z Lyme
+T29	Negation 1573 1579	neguje
+T30	Condition 1604 1611	arytmia
+N12	Reference T30 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+A1	Status T30 Family
+T31	Condition 1613 1623	udar mózgu
+A2	Status T31 Family
+N13	Reference T31 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T32	Behaviour 1624 1665	Palenie tytoniu: około 5-10 sztuk na dobę
+N14	Reference T32 ICD10:Z72.0	Używanie tytoniu
+T33	Date 1672 1681	od 20 lat
+R4	Dat Arg1:T33 Arg2:T32	
+T34	Behaviour 1682 1707	Inne używki: okazjonalnie
+T35	Condition 1708 1718;1729 1736	Uczulenia: na leki
+N15	Reference T35 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T36	Negation 1737 1743	neguje
+R5	Neg Arg1:T36 Arg2:T35	
+T37	Behaviour 1762 1768	żonaty
+T38	Drug 1792 1802	Prestarium
+T39	Drug_dose 1803 1813	5 mg 1-0-0
+T40	Drug 1815 1826	Propranolol
+T41	Drug_dose 1827 1838	10 mg 1-0-0
+T42	Investigation 1866 1876	echo serca
+T43	Investigation 1878 1881	TET
+T44	Investigation 1883 1887	ABPM
+T45	Investigation 1889 1895	Holter
+T46	Investigation 1897 1915	RTG kl. piersiowej
+R6	Dat Arg1:T19 Arg2:T20	
+R7	Dat Arg1:T21 Arg2:T22	
+R8	Neg Arg1:T27 Arg2:T26	
+R9	Neg Arg1:T29 Arg2:T28	
+R10	Drg Arg1:T38 Arg2:T39	
+R11	Drg Arg1:T40 Arg2:T41	

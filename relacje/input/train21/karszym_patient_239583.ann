@@ -1,0 +1,41 @@
+T1	Drug 330 336	Warfin
+T2	Drug_dose 337 363	5mg rano i 7,5mg wieczorem
+T3	Drug 364 382	Dusphatalin Retard
+T4	Drug_dose 383 406	2 x dziennie 1 tabletka
+T5	Drug 407 414	Topamax
+T6	Drug_dose 415 432	50mg 2 x dziennie
+T7	Treatment 434 491	Dalsza opieka w poradni hematologicznej i kardiologicznej
+R1	Drg Arg1:T1 Arg2:T2	
+R2	Drg Arg1:T3 Arg2:T4	
+R3	Drg Arg1:T5 Arg2:T6	
+T8	Condition 709 769	Wrodzona wada serca pod postacią zespołu Bland-White-Garland
+N1	Reference T8 ICD10:Q24.5	Wada rozwojowa naczyń wieńcowych
+T9	Treatment 782 820	dwukrotnej plastyce zastawki mitralnej
+N2	Reference T9 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T10	Date 822 832	17.08.2004
+T11	Date 835 845	20.09.2004
+T12	Treatment 858 918	implantacji sztucznej zastawki mechanicznej w polu mitralnym
+N3	Reference T12 ICD10:Z95.2	Obecność protez zastawek serca
+T13	Date 920 930	12.05.2006
+T14	Treatment 943 1002	wymianie zastawki mechanicznej na Medtronic o średnicy 27mm
+N4	Reference T14 ICD10:Z95.3	Obecność ksenogenicznej zastawki serca
+T15	Date 1004 1014	08.02.2018
+T16	Condition 1019 1041	Zaburzenia rytmu serca
+N5	Reference T16 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+R4	Dat Arg1:T10 Arg2:T9	
+R5	Dat Arg1:T11 Arg2:T9	
+R6	Dat Arg1:T13 Arg2:T12	
+R7	Dat Arg1:T15 Arg2:T14	
+T17	Drug 1162 1168	Warfin
+T18	Drug 1170 1188	Dusphatalin Retard
+T19	Drug 1190 1197	Topamax
+T20	Drug 1199 1209	Pyralginum
+T21	Condition 1349 1373	zaburzeniami rytmu serca
+N6	Reference T21 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T22	Treatment 1379 1418	implantacji sztucznej zastawki na stałe
+T23	Drug 1430 1438	Warfarin
+T24	Condition 1473 1490	wywiad alergiczny
+N8	Reference T24 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T25	Negation 1491 1497	ujemny
+R8	Neg Arg1:T25 Arg2:T24	
+N7	Reference T22 ICD10:Z95.3	Obecność ksenogenicznej zastawki serca

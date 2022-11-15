@@ -1,0 +1,37 @@
+T1	Investigation 1111 1121	ECHO serca
+T2	Investigation 1123 1133	Holter EKG
+T3	Investigation 1135 1144	Holter RR
+T4	Investigation 1146 1148	PW
+T5	Symptom 615 652	dolegliwości bólowych w kl piersiowej
+N1	Reference T5 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T6	Symptom 665 674	duszności
+N2	Reference T6 ICD10:R06.0	Duszność
+T7	Condition 714 717	VSD
+N3	Reference T7 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T8	Date 720 732	dzieciństwie
+R1	Dat Arg1:T8 Arg2:T7	
+T9	Condition 780 837	Przepukliny kręgosłupa odcinka szyjnego oraz lędźwiowego.
+N4	Reference T9 ICD10:M51	
+T10	Treatment 856 895	operacji odcinka lędźwiowego kręgosłupa
+T11	Negation 911 919	neguje  
+T12	Behaviour 897 907	Nikotynizm
+N5	Reference T12 ICD10:T65.2	Tytoń i nikotyna
+R2	Neg Arg1:T11 Arg2:T12	
+T13	Negation 929 935	neguje
+T14	Condition 937 954	uczulenia na leki
+N6	Reference T14 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T15	Symptom 956 989	krwawienia z przewodu pokarmowego
+R3	Neg Arg1:T13 Arg2:T15	
+R4	Neg Arg1:T13 Arg2:T14	
+T16	Negation 1008 1021	bez znaczenia
+T17	Condition 991 1006	Wywiad rodzinny
+A1	Status T17 Family
+R5	Neg Arg1:T16 Arg2:T17	
+T18	Drug 1057 1065	Baclofen
+T19	Drug_dose 1048 1056	doraźnie
+R6	Drg Arg1:T18 Arg2:T19	
+T20	Symptom 1084 1099	bóle kręgosłupa
+N8	Reference T20 ICD10:M54	Bóle grzbietu
+T21	Condition 764 778	samozamknięcie
+A2	Status T10 Historical_Insignificant
+N7	Reference T15 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony

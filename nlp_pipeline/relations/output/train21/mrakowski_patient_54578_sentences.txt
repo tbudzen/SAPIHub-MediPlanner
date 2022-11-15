@@ -1,0 +1,435 @@
+allRelations          : 24
+oks                   : 12
+isRedundantAndRemoveds: 10
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 2
+GOOD / BAD            : 22 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 58 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:I07.1|Rozpoznanie II: ICD10:R07|Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: ICD10:R03|Opisowo:: Łagodna niedomykalność zastawki trójdzielnej.
+
+
+Sentence 6:
+Diagnostyka w kierunku choroby niedokrwiennej serca negatywna.
+R1	Neg Arg1:T3 Arg2:T2 << OK >>	negatywna -> Diagnostyka w kierunku choroby niedokrwiennej serca  <RANK: 3> <info: start[566, 514] <type: LEFT>>
+
+
+Sentence 7:
+Nadciśnienie tętnicze.
+
+
+
+Sentence 8:
+------------------------------------------------
+
+
+
+Sentence 9:
+Zalecenia
+
+
+
+Sentence 10:
+------------------------------------------------
+- dalsza kontrola w POZ
+- dalsza diagnostyka w warunkach Poradni Kardiologicznej
+- regularna kontrola ciśnienia tętniczego oraz tętna w warunkach domowych
+
+
+
+Sentence 11:
+- dieta ubogosodowa
+- regularne przyjmowanie leków:
+
+
+
+Sentence 12:
+Polpril 5mg 1
+------------------------------------------------
+
+R2	Drg Arg1:T10 Arg2:T11 << OK >>	Polpril -> 5mg 1  <RANK: 3> <info: start[915, 923] <type: RIGHT>>
+
+
+Sentence 13:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 14:
+Pacjentka lat 57, zgłosiła się na IP z powodu labilnych wartości ciśnienia tętniczego do max wartości 190/110 mmHg w dniu dzisiejszym, po 25mg Captoprilu obniżyło się do 180/90 mmHg (dotychczas w domowej kontroli RR w granicach 120/80 mmHg max), ponadto zgłasza zawroty głowy od dnia 04.07.2019r. oraz jednorazowe wystąpienie bólu w klatce piersiowej o charakterze ucisku, bez związku z wysiłkiem fizycznym.
+R3	Drg Arg1:T14 Arg2:T15 << OK >>	Captoprilu -> 25mg  <RANK: 3> <info: start[1196, 1191] <type: LEFT>>
+R4	Dat Arg1:T13 Arg2:T18 <<REDUNDANT!!!REMOVED>>	w dniu dzisiejszym -> zawroty głowy <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1168, 1315] <type: RIGHT>>
+R5	Dat Arg1:T13 Arg2:T20 <<REDUNDANT!!!REMOVED>>	w dniu dzisiejszym -> bólu w klatce piersiowej o charakterze ucisku, bez związku z wysiłkiem fizycznym <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1168, 1379] <type: RIGHT>>
+R6	Dat Arg1:T13 Arg2:T14 <<REDUNDANT!!!SHOULD BE REMOVED>>	w dniu dzisiejszym -> Captoprilu  <RANK: 2> <info: start[1168, 1196] <type: RIGHT>>
+R7	Dat Arg1:T19 Arg2:T18 << OK >>	od dnia 04.07.2019r -> zawroty głowy  <RANK: 3> <info: start[1329, 1315] <type: LEFT>>
+R8	Dat Arg1:T19 Arg2:T20 <<REDUNDANT!!!REMOVED>>	od dnia 04.07.2019r -> bólu w klatce piersiowej o charakterze ucisku, bez związku z wysiłkiem fizycznym <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1329, 1379] <type: RIGHT>>
+R9	Dat Arg1:T19 Arg2:T14 <<REDUNDANT!!!REMOVED>>	od dnia 04.07.2019r -> Captoprilu <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1329, 1196] <type: LEFT>>
+
+
+Sentence 15:
+W wywiadzie niedoczynność tarczycy - przyjmuje Euthyrox N 88 ug.
+R10	Drg Arg1:T22 Arg2:T23 << OK >>	Euthyrox N -> 88 ug  <RANK: 3> <info: start[1508, 1519] <type: RIGHT>>
+R11	Alg Arg1:T21 Arg2:T22 <<REDUNDANT!!!REMOVED>>	niedoczynność tarczycy -> Euthyrox N <:REMOVED too long text between 13 limit:10:> <RANK: 3> <info: start[1473, 1508] <type: RIGHT>>
+
+
+Sentence 16:
+Bez omdleń utrat przytomności.
+R12	Neg Arg1:T24 Arg2:T25 << OK >>	Bez -> omdleń  <RANK: 3> <info: start[1526, 1530] <type: RIGHT>>
+R13	Neg Arg1:T24 Arg2:T26 << OK >>	Bez -> utrat przytomności  <RANK: 3> <info: start[1526, 1537] <type: RIGHT>>
+
+
+Sentence 17:
+Wywiad rodzinny: matka - nadciśnienie, ojciec - arytmia serca.
+
+
+Sentence 18:
+Nie pali.
+
+
+
+Sentence 19:
+------------------------------------------------
+
+
+
+Sentence 20:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 21:
+Pacjentka lat 57, zgłosiła się na IP z powodu labilnych wartości ciśnienia tętniczego do max wartości 190/110 mmHg w dniu dzisiejszym, po 25mg Captoprilu obniżyło się do 180/90 mmHg (dotychczas w domowej kontroli RR w granicach 120/80 mmHg max), ponadto zgłasza zawroty głowy od dnia 04.07.2019r. oraz jednorazowe wystąpienie bólu w klatce piersiowej o charakterze ucisku, bez związku z wysiłkiem fizycznym.
+R14	Drg Arg1:T34 Arg2:T33 << OK >>	Captoprilu -> 25mg  <RANK: 3> <info: start[1897, 1892] <type: LEFT>>
+R15	Dat Arg1:T32 Arg2:T37 <<REDUNDANT!!!REMOVED>>	w dniu dzisiejszym -> zawroty głowy <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1869, 2016] <type: RIGHT>>
+R16	Dat Arg1:T32 Arg2:T39 <<REDUNDANT!!!REMOVED>>	w dniu dzisiejszym -> bólu w klatce piersiowej o charakterze ucisku, bez związku z wysiłkiem fizycznym <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1869, 2080] <type: RIGHT>>
+R17	Dat Arg1:T32 Arg2:T34 <<REDUNDANT!!!SHOULD BE REMOVED>>	w dniu dzisiejszym -> Captoprilu  <RANK: 2> <info: start[1869, 1897] <type: RIGHT>>
+R18	Dat Arg1:T38 Arg2:T37 << OK >>	od dnia 04.07.2019r -> zawroty głowy  <RANK: 3> <info: start[2030, 2016] <type: LEFT>>
+R19	Dat Arg1:T38 Arg2:T39 <<REDUNDANT!!!REMOVED>>	od dnia 04.07.2019r -> bólu w klatce piersiowej o charakterze ucisku, bez związku z wysiłkiem fizycznym <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2030, 2080] <type: RIGHT>>
+R20	Dat Arg1:T38 Arg2:T34 <<REDUNDANT!!!REMOVED>>	od dnia 04.07.2019r -> Captoprilu <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2030, 1897] <type: LEFT>>
+
+
+Sentence 22:
+W wywiadzie niedoczynność tarczycy - przyjmuje Euthyrox N 88 ug 1 tabl rano na czczo.
+R21	Drg Arg1:T41 Arg2:T42 << OK >>	Euthyrox N -> 88 ug 1 tabl rano na czczo  <RANK: 3> <info: start[2209, 2220] <type: RIGHT>>
+R22	Alg Arg1:T40 Arg2:T41 <<REDUNDANT!!!REMOVED>>	niedoczynność tarczycy -> Euthyrox N <:REMOVED too long text between 13 limit:10:> <RANK: 3> <info: start[2174, 2209] <type: RIGHT>>
+
+
+Sentence 23:
+Bez omdleń utrat przytomności.
+R23	Neg Arg1:T43 Arg2:T44 << OK >>	Bez -> omdleń  <RANK: 3> <info: start[2248, 2252] <type: RIGHT>>
+R24	Neg Arg1:T43 Arg2:T45 << OK >>	Bez -> utrat przytomności  <RANK: 3> <info: start[2248, 2259] <type: RIGHT>>
+
+
+Sentence 24:
+Wywiad rodzinny: matka - nadciśnienie, ojciec - arytmia serca.
+
+
+Sentence 25:
+Nie pali.
+
+
+
+Sentence 26:
+------------------------------------------------
+
+
+
+Sentence 27:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 28:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:8.08[10^3/ul]
+    
+
+
+Sentence 29:
+RBC Krwinki czerwone:4.61[10^6/ul]
+    
+
+
+Sentence 30:
+HGB Hemoglobina:14.7[g/dl]
+    
+
+
+Sentence 31:
+HCT Hematokryt:39.7[%]
+    
+
+
+Sentence 32:
+MCV wskaźnik czerwonokrw:86.1[fl]
+    
+
+
+Sentence 33:
+MCH wskaźnik czerwonokrw:31.9[pg]
+    
+
+
+Sentence 34:
+MCHC wskaźnik czerwonokr:37.0[g/dl]
+    
+
+
+Sentence 35:
+PLT z morfologii:353[10^3/ul]
+    
+
+
+Sentence 36:
+RDW-SD:36.6[fl]
+    
+
+
+Sentence 37:
+RDW-CV:11.7[%]
+    PDW:10.9[fl]
+    
+
+
+Sentence 38:
+MPV:9.9[fl]
+    
+
+
+Sentence 39:
+P-LCR:24.3[%]
+    
+
+
+Sentence 40:
+PCT (hematokryt płytkowy:0.35[%]
+    
+
+
+Sentence 41:
+NEUTR# wartość bezwzględ:6.01[10^3/ul]
+    
+
+
+Sentence 42:
+NEUTR%:74.3[%]
+    
+
+
+Sentence 43:
+LYMH# wartość bezwzględn:1.63[10^3/ul]
+    
+
+
+Sentence 44:
+LYMPH%:20.2[%]
+    
+
+
+Sentence 45:
+MONO# wartość bezwzględn:0.32[10^3/ul]
+    
+
+
+Sentence 46:
+MONO%:4.0[%]
+    
+
+
+Sentence 47:
+EO# wartość bezwzględna:0.07[10^3/ul]
+    
+
+
+Sentence 48:
+EO%:0.9[%]
+    
+
+
+Sentence 49:
+BASO# wartość bezwzględn:0.05[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 50:
+NRBC %:0.0[%]
+    
+
+
+Sentence 51:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 52:
+TSH: TSH:0.64[uIU/ml]
+
+
+
+Sentence 53:
+FT3: FT3:2.84[pg/ml]
+
+
+
+Sentence 54:
+FT4: FT4:1.36[ng/dl]
+
+
+
+Sentence 55:
+Troponina T: Troponina T:6.4[pg/ml]
+
+
+
+Sentence 56:
+ALAT: ALAT:30[U/L]
+ASPAT: ASPAT:34[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 57:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 58:
+Potas (K): Potas:4.7[mmol/L]
+
+
+
+Sentence 59:
+Kreatynina + GFR
+    
+
+
+Sentence 60:
+Kreatynina w surowicy:0.67[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 61:
+MDRD ze stan:90.7[ml/min/1,73 m^2]
+
+
+
+Sentence 62:
+Mocznik: Mocznik:26[mg/dl]
+
+
+
+Sentence 63:
+Kwas moczowy: Kwas moczowy:4.7[mg/dl]
+
+
+
+Sentence 64:
+Lipidogram
+    
+
+
+Sentence 65:
+Cholesterol całkowity:313[mg/dl]
+    
+
+
+Sentence 66:
+Cholesterol HDL:77[mg/dl]
+    
+
+
+Sentence 67:
+Cholestrol LDL:200[mg/dl]
+    
+
+
+Sentence 68:
+Triglicerydy:111[mg/dl]
+    
+
+
+Sentence 69:
+Stosunek cholesterolu HD:0.2
+------------------------------------------------
+
+
+
+Sentence 70:
+ICD10
+------------------------------------------------
+R07.2
+I07.1
+R03.0
+
+
+
+Sentence 71:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 72:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 73:
+89.501
+C55
+89.502
+I81
+O61
+N45
+L69
+O55
+I17
+M45
+M37
+I19
+O35
+N13
+88.721
+O69
+
+
+
+Sentence 74:
+------------------------------------------------
+
+

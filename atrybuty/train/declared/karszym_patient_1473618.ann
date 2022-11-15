@@ -1,0 +1,188 @@
+T1	Condition 439 442	PFO
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Condition 445 460	przeciekiem L-P
+T3	Condition 462 507	Łagodna niedomykalność mitralna I trójdzielna
+T4	Condition 509 544	Napadowy częstoskurcz przedsionkowy
+N2	Reference T4 ICD10:I47.1	Częstoskurcz nadkomorowy
+T5	Condition 558 584	Zwężenie CCA prawej 35-40%
+N3	Reference T5 ICD10:I77.1	Zwężenie tętnicy
+T6	Condition 598 601	RZS
+N4	Reference T6 ICD10:M05.9	Serododatnie reumatoidalne zapalenie stawów, nieokreślone
+T7	Condition 603 631	Refluks żołądkowo-przełykowy
+N5	Reference T7 ICD10:K21.9	Zarzucanie żołądkowo-przełykowe bez zapalenia przełyku
+T8	Condition 633 654	Zaburzenia depresyjne
+N6	Reference T8 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T9	Treatment 664 685	operacji kręgosłupa L
+A1	Status T9 Historical_Insignificant
+N7	Reference T9 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T10	Date 687 698	20 lat temu
+T11	Treatment 701 714	histerektomii
+N8	Reference T11 ICD10:Z90.7	Nabyty brak narządów płciowych
+T12	Condition 724 734	mięśniaków
+A2	Status T12 Historical_Insignificant
+N9	Reference T12 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+A3	Status T11 Historical_Insignificant
+T13	Treatment 736 772	artroskopii stawu kolanowego prawego
+T14	Date 774 786	3 lata temu)
+R1	Dat Arg1:T10 Arg2:T9	
+A4	Status T13 Historical_Insignificant
+R2	Dat Arg1:T14 Arg2:T13	
+T15	Treatment 906 962	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T16	Treatment 987 1019	Wizyta w Poradni Kardiologicznej
+T17	Treatment 1026 1074	oceny elektrofizjologicznej arytmii nadkomorowej
+T18	Date 1106 1116	16/07/2019
+R3	Dat Arg1:T18 Arg2:T16	
+R4	Dat Arg1:T18 Arg2:T17	
+T19	Condition 1289 1301	FA napadowym
+N10	Reference T19 ICD10:I48	Migotanie i trzepotanie przedsionków
+T20	Date 1303 1323	wykryte 1x w 11.2018
+R5	Dat Arg1:T20 Arg2:T19	
+T21	Condition 1355 1370	podejrzenia PFO
+A5	Source T21 Declared
+N11	Reference T21 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T22	Date 1373 1382	W 11.2018
+T23	Symptom 1385 1419	mała tolerancja wysiłku fizycznego
+T24	Symptom 1421 1433	zasłabnięcia
+T25	Symptom 1435 1450	kołatania serca
+N12	Reference T25 ICD10:R00.2	Kołatanie serca
+T26	Investigation 1455 1458	EKG
+T27	Investigation_result 1470 1477	FA (1x)
+N13	Reference T27 ICD10:I48	Migotanie i trzepotanie przedsionków
+R6	Dat Arg1:T22 Arg2:T23	
+R7	Dat Arg1:T22 Arg2:T24	
+R8	Dat Arg1:T22 Arg2:T25	
+R9	Dat Arg1:T22 Arg2:T26	
+R10	Inv Arg1:T26 Arg2:T27	
+T28	Date 1479 1488	Wcześniej
+T29	Condition 1496 1526	okresy bradykardii (ok 45/min)
+N14	Reference T29 ICD10:R00.1	Bradykardia, nieokreślona
+T30	Symptom 1529 1558	krótki napady kołatania serca
+N15	Reference T30 ICD10:R00.2	Kołatanie serca
+R11	Dat Arg1:T28 Arg2:T29	
+R12	Dat Arg1:T28 Arg2:T30	
+T31	Condition 1581 1591	IM I/II st
+N16	Reference T31 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T32	Condition 1593 1600	IT I st
+N17	Reference T32 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T33	Condition 1602 1628	zwężenie CCA prawej 35-40%
+N18	Reference T33 ICD10:I71.8	Tętniak aorty o nieokreślonym umiejscowieniu, pęknięty
+T34	Condition 1630 1633	RZS
+N19	Reference T34 ICD10:M05.9	Serododatnie reumatoidalne zapalenie stawów, nieokreślone
+T35	Condition 1635 1663	refluks żołądkowo-przełykowy
+N20	Reference T35 ICD10:K21.9	Zarzucanie żołądkowo-przełykowe bez zapalenia przełyku
+T36	Investigation_result 1665 1681	RR mx 140/95mmHg
+T37	Symptom 1683 1699	drętwienie stopy
+T38	Condition 1701 1722	zaburzenia depresyjne
+N21	Reference T38 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T39	Negation 1724 1730	Neguje
+T40	Symptom 1732 1740	omdlenia
+N22	Reference T40 ICD10:R55	Omdlenie i zapaść
+T41	Symptom 1742 1752	krwawienia
+T42	Symptom 1754 1767	czarne stolce
+N23	Reference T42 ICD10:K92.1	Stolce smołowate
+T43	Symptom 1769 1785	brunatne wymioty
+N24	Reference T43 ICD10:K92.0	Wymioty krwawe
+T44	Condition 1787 1803	chorobę wrzodową
+N25	Reference T44 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T45	Symptom 1805 1819	duszność nocną
+N26	Reference T45 ICD10:R06.0	Duszność
+T46	Symptom 1821 1836	obrzęki podudzi
+N27	Reference T46 ICD10:R60.0	Obrzęk zlokalizowany
+T47	Symptom 1838 1862	bóle w klatce piersiowej
+N28	Reference T47 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T48	Symptom 1864 1879	kołatania serca
+N29	Reference T48 ICD10:R00.2	Kołatanie serca
+T49	Condition 1881 1883	HA
+N30	Reference T49 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T50	Condition 1885 1887	DM
+N31	Reference T50 ICD10:E14	Cukrzyca nieokreślona
+T51	Condition 	
+N32	Reference T51 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T52	Condition 1889 1899	udar mózgu
+N33	Reference T52 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T53	Condition 1901 1927	zaburzenia mowy i widzenia
+T54	Condition 1929 1947	niedowład kończyny
+N34	Reference T54 ICD10:G83.3	Porażenie jednej kończyny, nieokreślone
+T55	Treatment 1958 1980	operacje: kręgosłupa L
+A6	Status T55 Historical_Insignificant
+N35	Reference T55 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T56	Date 1982 1993	20 lat temu
+T57	Treatment 1996 2009	histerektomia
+N36	Reference T57 ICD10:Z90.7	Nabyty brak narządów płciowych
+T58	Condition 2019 2029	mięśniaków
+N37	Reference T58 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+A7	Status T57 Historical_Insignificant
+A8	Status T58 Historical_Insignificant
+T59	Treatment 2031 2067	artroskopia stawu kolanowego prawego
+A9	Status T59 Historical_Insignificant
+N38	Reference T59 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T60	Date 2069 2080	3 lata temu
+R13	Dat Arg1:T60 Arg2:T59	
+R14	Dat Arg1:T56 Arg2:T55	
+T61	Behaviour 2083 2098	Palenie tytoniu
+N39	Reference T61 ICD10:Z72.0	Używanie tytoniu
+T62	Negation 2100 2103	nie
+T63	Behaviour 2104 2108	pali
+N40	Reference T63 ICD10:Z72.0	Używanie tytoniu
+T64	Date 2109 2117	od dawna
+R15	Dat Arg1:T64 Arg2:T63	
+R16	Dat Arg1:T64 Arg2:T61	
+R17	Neg Arg1:T62 Arg2:T61	
+R18	Neg Arg1:T62 Arg2:T63	
+T65	Behaviour 2118 2129	Inne używki
+T66	Negation 2131 2134	nie
+R19	Neg Arg1:T66 Arg2:T65	
+T67	Condition 2135 2144	Uczulenia
+N41	Reference T67 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T68	Negation 2146 2149	nie
+R20	Neg Arg1:T68 Arg2:T67	
+T69	Condition 2178 2181	WZW
+N42	Reference T69 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T70	Negation 2182 2185	(-)
+T71	Condition 2188 2197	borelioza
+N43	Reference T71 ICD10:A69.2	Choroba z Lyme
+T72	Condition 2203 2206	tbc
+N44	Reference T72 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T73	Negation 2198 2201	(-)
+T74	Negation 2207 2210	(-)
+T75	Condition 2212 2216	odra
+N45	Reference T75 ICD10:B05	Odra
+T76	Negation 2217 2220	(-)
+T77	Condition 2222 2236	kontakt z odrą
+N46	Reference T77 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+T78	Negation 2237 2240	(-)
+R21	Neg Arg1:T70 Arg2:T69	
+R22	Neg Arg1:T73 Arg2:T71	
+R23	Neg Arg1:T74 Arg2:T72	
+R24	Neg Arg1:T76 Arg2:T75	
+R25	Neg Arg1:T78 Arg2:T77	
+R26	Neg Arg1:T39 Arg2:T40	
+R27	Neg Arg1:T39 Arg2:T41	
+R28	Neg Arg1:T39 Arg2:T42	
+R29	Neg Arg1:T39 Arg2:T43	
+R30	Neg Arg1:T39 Arg2:T44	
+R31	Neg Arg1:T39 Arg2:T45	
+R32	Neg Arg1:T39 Arg2:T46	
+R33	Neg Arg1:T39 Arg2:T47	
+R34	Neg Arg1:T39 Arg2:T48	
+R35	Neg Arg1:T39 Arg2:T49	
+R36	Neg Arg1:T39 Arg2:T50	
+R37	Neg Arg1:T39 Arg2:T52	
+R38	Neg Arg1:T39 Arg2:T53	
+R39	Neg Arg1:T39 Arg2:T54	
+T79	Behaviour 2257 2283	warunki mieszkaniowe dobre
+T80	Drug 2335 2342	Pradaxa
+T81	Drug 2360 2374	Noliprel forte
+T82	Drug 2399 2415	Metotrexat Ebewe
+T83	Drug 2447 2453	Zoloft
+T84	Drug 2474 2482	Mirzaten
+T85	Drug_dose 2343 2359	150mg 1-0-1 tabl
+T86	Drug_dose 2375 2398	5+1,25mg 1x 1 tabl/rano
+T87	Drug_dose 2416 2446	5mg 10-5-0mg/poniedziałki rano
+T88	Drug_dose 2454 2473	50mg 1x 1 tabl/rano
+T89	Drug_dose 2483 2501	15mg 1x 1 tabl/noc
+R40	Drg Arg1:T80 Arg2:T85	
+R41	Drg Arg1:T81 Arg2:T86	
+R42	Drg Arg1:T82 Arg2:T87	
+R43	Drg Arg1:T83 Arg2:T88	
+R44	Drg Arg1:T84 Arg2:T89	

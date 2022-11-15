@@ -1,0 +1,530 @@
+allRelations          : 42
+oks                   : 14
+isRedundantAndRemoveds: 26
+shouldNotBeRemoveds   : 2
+shouldBeBemoveds      : 0
+GOOD / BAD            : 40 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 31 lat
+------------------------------------------------
+
+
+
+Sentence 1:
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Łagodna arytmia komorowa.
+
+
+Sentence 6:
+Nadciśnienie tętnicze ciążowe (2018).
+R1	Dat Arg1:T3 Arg2:T2 << OK >>	2018 -> Nadciśnienie tętnicze ciążowe  <RANK: 3> <info: start[496, 465] <type: LEFT>>
+
+
+Sentence 7:
+Niedoczynność tarczycy.
+
+
+
+Sentence 8:
+------------------------------------------------
+
+
+
+Sentence 9:
+Zalecenia
+
+
+
+Sentence 10:
+------------------------------------------------
+
+
+
+Sentence 11:
+dalsza opieka w Poradni POZ, okresowa kontrola kardiologiczna, endokrynologiczna
+
+
+
+Sentence 12:
+prawidłowe żywienie, systematyczna aktywność fizyczna
+regularne stosowanie leków:
+Concor COR 1,25 mg 1 tabl.
+R2	Drg Arg1:T5 Arg2:T6 << OK >>	Concor COR -> 1,25 mg 1 tabl. rano  <RANK: 3> <info: start[798, 809] <type: RIGHT>>
+
+
+Sentence 13:
+rano
+Euthyrox 50 mcg 1 tabl. rano na czczo
+------------------------------------------------
+
+R3	Drg Arg1:T7 Arg2:T8 << OK >>	Euthyrox 50 mcg -> 1 tabl. rano na czczo  <RANK: 3> <info: start[830, 846] <type: RIGHT>>
+
+
+Sentence 14:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 15:
+Pacjentka 30-letnia, z głuchotą wrodzoną, przyjęta do Kliniki z powodu spadku tolerancji wysiłku od czasu rozwiązania ciąży oraz uczucia kołatania serca pomimo stosowanego Metocard 25 mg 2 x dz.
+
+R4	Drg Arg1:T12 Arg2:T13 << OK >>	Metocard -> 25 mg 2 x dz  <RANK: 3> <info: start[1164, 1173] <type: RIGHT>>
+R5	Alg Arg1:T11 Arg2:T12 <<SHOULD NOT BE REMOVED>>	uczucia kołatania serca -> Metocard <:REMOVED too long text between 20 limit:10:> <RANK: 3> <info: start[1121, 1164] <type: RIGHT>>
+
+
+Sentence 16:
+Podczas ciąży występowało nadciśnienie tętnicze oraz rozpoznano świeżo niedoczynność tarczycy (2018r)
+
+
+R6	Dat Arg1:T15 Arg2:T14 << OK >>	Podczas ciąży -> nadciśnienie tętnicze  <RANK: 3> <info: start[1187, 1213] <type: RIGHT>>
+R7	Dat Arg1:T15 Arg2:T16 <<REDUNDANT!!!REMOVED>>	Podczas ciąży -> świeżo niedoczynność tarczycy <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1187, 1251] <type: RIGHT>>
+R8	Dat Arg1:T17 Arg2:T14 <<REDUNDANT!!!REMOVED>>	2018r -> nadciśnienie tętnicze <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1282, 1213] <type: LEFT>>
+R9	Dat Arg1:T17 Arg2:T16 << OK >>	2018r -> świeżo niedoczynność tarczycy  <RANK: 3> <info: start[1282, 1251] <type: LEFT>>
+
+
+Sentence 17:
+Przebyte operacje: stan po appendectomii
+
+
+
+Sentence 18:
+Leczenie przewlekłe: nie podaje
+
+R10	Neg Arg1:T19 Arg2:T20 << OK >>	nie podaje -> Leczenie przewlekłe  <RANK: 3> <info: start[1352, 1331] <type: LEFT>>
+
+
+Sentence 19:
+Przebyte choroby zakaźne - WZW, borelioza - nie podaje
+Wywiad rodzinny: nie podaje
+Palenie tytoniu: nie podaje
+Inne używki: nie podaje
+Uczulenia: nie podaje
+
+R11	Neg Arg1:T23 Arg2:T21 <<SHOULD NOT BE REMOVED>>	nie podaje -> WZW <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1407, 1390] <type: LEFT>>
+R12	Neg Arg1:T23 Arg2:T22 << OK >>	nie podaje -> borelioza  <RANK: 3> <info: start[1407, 1395] <type: LEFT>>
+R13	Neg Arg1:T23 Arg2:T25 <<REDUNDANT!!!REMOVED>>	nie podaje -> Wywiad rodzinny <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1407, 1418] <type: RIGHT>>
+R14	Neg Arg1:T23 Arg2:T31 <<REDUNDANT!!!REMOVED>>	nie podaje -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1407, 1498] <type: RIGHT>>
+R15	Neg Arg1:T23 Arg2:T29 <<REDUNDANT!!!REMOVED>>	nie podaje -> Palenie tytoniu <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1407, 1446] <type: RIGHT>>
+R16	Neg Arg1:T23 Arg2:T30 <<REDUNDANT!!!REMOVED>>	nie podaje -> Inne używki <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1407, 1474] <type: RIGHT>>
+R17	Neg Arg1:T24 Arg2:T21 <<REDUNDANT!!!REMOVED>>	nie podaje -> WZW <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1435, 1390] <type: LEFT>>
+R18	Neg Arg1:T24 Arg2:T22 <<REDUNDANT!!!REMOVED>>	nie podaje -> borelioza <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1435, 1395] <type: LEFT>>
+R19	Neg Arg1:T24 Arg2:T25 << OK >>	nie podaje -> Wywiad rodzinny  <RANK: 3> <info: start[1435, 1418] <type: LEFT>>
+R20	Neg Arg1:T24 Arg2:T31 <<REDUNDANT!!!REMOVED>>	nie podaje -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1435, 1498] <type: RIGHT>>
+R21	Neg Arg1:T24 Arg2:T29 <<REDUNDANT!!!REMOVED>>	nie podaje -> Palenie tytoniu <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1435, 1446] <type: RIGHT>>
+R22	Neg Arg1:T24 Arg2:T30 <<REDUNDANT!!!REMOVED>>	nie podaje -> Inne używki <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1435, 1474] <type: RIGHT>>
+R23	Neg Arg1:T26 Arg2:T21 <<REDUNDANT!!!REMOVED>>	nie podaje -> WZW <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1463, 1390] <type: LEFT>>
+R24	Neg Arg1:T26 Arg2:T22 <<REDUNDANT!!!REMOVED>>	nie podaje -> borelioza <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1463, 1395] <type: LEFT>>
+R25	Neg Arg1:T26 Arg2:T25 <<REDUNDANT!!!REMOVED>>	nie podaje -> Wywiad rodzinny <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1463, 1418] <type: LEFT>>
+R26	Neg Arg1:T26 Arg2:T31 <<REDUNDANT!!!REMOVED>>	nie podaje -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1463, 1498] <type: RIGHT>>
+R27	Neg Arg1:T26 Arg2:T29 << OK >>	nie podaje -> Palenie tytoniu  <RANK: 3> <info: start[1463, 1446] <type: LEFT>>
+R28	Neg Arg1:T26 Arg2:T30 <<REDUNDANT!!!REMOVED>>	nie podaje -> Inne używki <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1463, 1474] <type: RIGHT>>
+R29	Neg Arg1:T27 Arg2:T21 <<REDUNDANT!!!REMOVED>>	nie podaje -> WZW <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1487, 1390] <type: LEFT>>
+R30	Neg Arg1:T27 Arg2:T22 <<REDUNDANT!!!REMOVED>>	nie podaje -> borelioza <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1487, 1395] <type: LEFT>>
+R31	Neg Arg1:T27 Arg2:T25 <<REDUNDANT!!!REMOVED>>	nie podaje -> Wywiad rodzinny <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1487, 1418] <type: LEFT>>
+R32	Neg Arg1:T27 Arg2:T31 <<REDUNDANT!!!REMOVED>>	nie podaje -> Uczulenia <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1487, 1498] <type: RIGHT>>
+R33	Neg Arg1:T27 Arg2:T29 <<REDUNDANT!!!REMOVED>>	nie podaje -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1487, 1446] <type: LEFT>>
+R34	Neg Arg1:T27 Arg2:T30 << OK >>	nie podaje -> Inne używki  <RANK: 3> <info: start[1487, 1474] <type: LEFT>>
+R35	Neg Arg1:T28 Arg2:T21 <<REDUNDANT!!!REMOVED>>	nie podaje -> WZW <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1509, 1390] <type: LEFT>>
+R36	Neg Arg1:T28 Arg2:T22 <<REDUNDANT!!!REMOVED>>	nie podaje -> borelioza <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1509, 1395] <type: LEFT>>
+R37	Neg Arg1:T28 Arg2:T25 <<REDUNDANT!!!REMOVED>>	nie podaje -> Wywiad rodzinny <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1509, 1418] <type: LEFT>>
+R38	Neg Arg1:T28 Arg2:T31 << OK >>	nie podaje -> Uczulenia  <RANK: 3> <info: start[1509, 1498] <type: LEFT>>
+R39	Neg Arg1:T28 Arg2:T29 <<REDUNDANT!!!REMOVED>>	nie podaje -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1509, 1446] <type: LEFT>>
+R40	Neg Arg1:T28 Arg2:T30 <<REDUNDANT!!!REMOVED>>	nie podaje -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1509, 1474] <type: LEFT>>
+
+
+Sentence 20:
+Status społeczny: pracuje, mieszka z mężem
+Leki: Euthyrox 125 ug 1 tabl.
+R41	Drg Arg1:T32 Arg2:T33 << OK >>	Euthyrox 125 ug -> 1 tabl. rano  <RANK: 3> <info: start[1569, 1585] <type: RIGHT>>
+
+
+Sentence 21:
+rano
+Metocard 25 mg 2 x dz.
+
+R42	Drg Arg1:T34 Arg2:T35 << OK >>	Metocard -> 25 mg 2 x dz  <RANK: 3> <info: start[1598, 1607] <type: RIGHT>>
+
+
+Sentence 22:
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter, RTG kl. piersiowej.
+
+
+
+Sentence 23:
+Przewidywana liczba dni hospitalizacji: 4-5 dni
+------------------------------------------------
+
+
+
+Sentence 24:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 25:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.66[10^3/ul]
+    
+
+
+Sentence 26:
+RBC Krwinki czerwone:4.59[10^6/ul]
+    
+
+
+Sentence 27:
+HGB Hemoglobina:12.8[g/dl]
+    
+
+
+Sentence 28:
+HCT Hematokryt:39.0[%]
+    
+
+
+Sentence 29:
+MCV wskaźnik czerwonokrw:85.0[fl]
+    
+
+
+Sentence 30:
+MCH wskaźnik czerwonokrw:27.9[pg]
+    
+
+
+Sentence 31:
+MCHC wskaźnik czerwonokr:32.8[g/dl]
+    
+
+
+Sentence 32:
+PLT z morfologii:240[10^3/ul]
+    
+
+
+Sentence 33:
+RDW-SD:39.0[fl]
+    
+
+
+Sentence 34:
+RDW-CV:12.7[%]
+    PDW:11.2[fl]
+    MPV:10.0[fl]
+    
+
+
+Sentence 35:
+P-LCR:25.5[%]
+    
+
+
+Sentence 36:
+PCT (hematokryt płytkowy:0.24[%]
+    
+
+
+Sentence 37:
+NEUTR# wartość bezwzględ:2.51[10^3/ul]
+    NEUTR%:53.9[%]
+    
+
+
+Sentence 38:
+LYMH# wartość bezwzględn:1.56[10^3/ul]
+    
+
+
+Sentence 39:
+LYMPH%:33.5[%]
+    
+
+
+Sentence 40:
+MONO# wartość bezwzględn:0.51[10^3/ul]
+    
+
+
+Sentence 41:
+MONO%:10.9[%]
+    
+
+
+Sentence 42:
+EO# wartość bezwzględna:0.06[10^3/ul]
+    
+
+
+Sentence 43:
+EO%:1.3[%]
+    BASO# wartość bezwzględn:0.02[10^3/ul]
+    BASO%:0.4[%]
+    
+
+
+Sentence 44:
+NRBC %:0.0[%]
+    
+
+
+Sentence 45:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 46:
+Badanie ogólne moczu
+    
+
+
+Sentence 47:
+barwa:żółty[ ]
+    
+
+
+Sentence 48:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 49:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 50:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 51:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 52:
+ciężar właściwy:1.020[ ]
+    
+
+
+Sentence 53:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 54:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 55:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 56:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 57:
+erytrocyty:obecne[ ]
+    
+
+
+Sentence 58:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 59:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 60:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 61:
+leukocyty:9 /ul[ul]
+    erytrocyty świeże i częś:34/ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:nieliczne[w preparacie]
+
+
+
+Sentence 62:
+TSH: TSH:0.03[uIU/ml]
+
+
+
+Sentence 63:
+FT3: FT3:3.41[pg/ml]
+
+
+
+Sentence 64:
+FT4: FT4:1.25[ng/dl]
+
+
+
+Sentence 65:
+ALAT: ALAT:15[U/L]
+ASPAT: ASPAT:20[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.67[mg/dl]
+
+
+
+Sentence 66:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 67:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 68:
+Kreatynina + GFR
+    
+
+
+Sentence 69:
+Kreatynina w surowicy:0.62[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 70:
+MDRD ze stan:112.3[ml/min/1,73 m^2]
+
+
+
+Sentence 71:
+Mocznik: Mocznik:24[mg/dl]
+
+
+
+Sentence 72:
+Kwas moczowy: Kwas moczowy:4.6[mg/dl]
+
+
+
+Sentence 73:
+Lipidogram
+    
+
+
+Sentence 74:
+Cholesterol całkowity:168[mg/dl]
+    
+
+
+Sentence 75:
+Cholesterol HDL:48[mg/dl]
+    
+
+
+Sentence 76:
+Cholestrol LDL:94[mg/dl]
+    
+
+
+Sentence 77:
+Triglicerydy:118[mg/dl]
+    
+
+
+Sentence 78:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:83[mg/dl]
+
+
+
+Sentence 79:
+NT-proBNP surowica: NT-proBNP w surowicy:34[pg/ml]
+
+
+
+Sentence 80:
+------------------------------------------------
+
+
+
+Sentence 81:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 82:
+E03.9
+I49.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 83:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 84:
+89.501
+C55
+A01
+89.502
+I81
+L43
+N45
+L69
+O55
+I17
+M45
+M37
+I19
+O35
+
+
+
+Sentence 85:
+N13
+N24
+88.721
+O69
+
+
+
+Sentence 86:
+------------------------------------------------
+
+

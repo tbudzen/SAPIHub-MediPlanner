@@ -1,0 +1,44 @@
+T1	Treatment 463 481	Przyjmowanie leków
+T2	Drug 483 493	Salbutamol
+T3	Drug_dose 495 502	2 x 5ml
+R1	Drg Arg1:T2 Arg2:T3	
+T4	Investigation 508 559	Ambulatoryjna kontrola tętna i ciśnienia tętniczego
+T5	Treatment 564 647	Ewentualne modyfikacje farmakoterapii po weryfikacji z listą leków wydłużających QT
+T6	Behaviour 688 764	Ograniczenie aktywności fizycznej - zwolnienie z zajęć wychowania fizycznego
+T7	Treatment 771 843	Konieczny kontakt telefoniczny z kliniką w sprawie dalszego postępowania
+T8	Treatment 848 894	Dalsza kontrola neurologiczna i psychologiczna
+T9	Treatment 899 965	W przypadku pogorszenia stanu ogólnego konieczny kontakt z kliniką
+T10	Drug 340 350	Salbutamol
+T11	Condition 1184 1246	Wrodzona wada serca - podwójne odejście naczyń z prawej komory
+N1	Reference T11 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+T12	Condition 1249 1273	ubytkiem międzykomorowym
+N2	Reference T12 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T13	Condition 1276 1292	koarktacją aorty
+N3	Reference T13 ICD10:Q25.1	Zwężenie cieśni aorty
+T14	Treatment 1305 1318	operacji wady
+T15	Date 1320 1329	28.08.07r
+R2	Dat Arg1:T15 Arg2:T14	
+T16	Treatment 1335 1345	reoperacji
+T17	Date 1383 1392	18.12.07r
+R3	Dat Arg1:T17 Arg2:T16	
+T18	Treatment 1406 1424	plastyce balonowej
+T19	Date 1439 1448	06.12.07r
+R4	Dat Arg1:T19 Arg2:T18	
+T20	Condition 1454 1474	Bradykardia zatokowa
+N4	Reference T20 ICD10:R00.1	Bradykardia, nieokreślona
+T21	Condition 1480 1505	Komorowe zaburzenia rytmu
+N5	Reference T21 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T22	Condition 1532 1536	LQTS
+N6	Reference T22 ICD10:I45.8	Inne określone zaburzenia przewodnictwa
+T23	Investigation 1685 1702	badania kontrolne
+T24	Drug 1715 1725	salbutamol
+T25	Condition 1728 1736	uczulony
+A1	Source T22 Declared
+T27	Condition 1425 1437	rekoarktacji
+N7	Reference T27 ICD10:I77	Inne choroby tętnic i tętniczek
+R5	Dat Arg1:T19 Arg2:T27	
+T28	Condition 1346 1381	zwężenia drogi odpływu lewej komory
+N8	Reference T28 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+R6	Dat Arg1:T17 Arg2:T28	
+N9	Reference T25 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T26	Investigation 1510 1531	Obserwacja w kierunku

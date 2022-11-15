@@ -1,0 +1,132 @@
+T1	Condition 448 469	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 471 549	Nadkomorowe zaburzenia rytmu serca ( pobudzenia pojedyncze oraz częstoskurcze)
+#1	AnnotatorNotes T2	I49.1 + I47.1
+T3	Condition 551 581	Pojedyncze pobudzenia komorowe
+N2	Reference T3 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T4	Condition 583 603	Hipertriglicerydemia
+N3	Reference T4 ICD10:E78.1	Czysta hiperglicerydemia
+T5	Condition 605 631	Cechy stłuszczenia wątroby
+N4	Reference T5 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T6	Condition 633 661	Kamica pęcherzyka żółciowego
+A1	Status T6 Historical_Insignificant
+N5	Reference T6 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T7	Treatment 780 836	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T8	Behaviour 839 879	Dieta lekkostrawna , niskocholesterolowa
+T9	Treatment 883 966	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T10	Treatment 969 1017	Systematyczna kontrola ciśnienia tętniczego krwi
+T11	Drug 1068 1076	Telmizek
+T12	Drug_dose 1077 1093	40 mg 1x dz rano
+T13	Drug 1095 1102	Nebilet
+T14	Drug_dose 1103 1131	5 mg 1x dz po 1/4 tabl. rano
+T15	Drug 1133 1139	Atoris
+T16	Drug_dose 1140 1161	20 mg 1x dz wieczorem
+R1	Drg Arg1:T11 Arg2:T12	
+R2	Drg Arg1:T13 Arg2:T14	
+R3	Drg Arg1:T15 Arg2:T16	
+T17	Drug 1284 1293	Captopril
+T18	Drug 1296 1304	telmizek
+T19	Drug 1306 1312	Atoris
+T20	Drug 1314 1326	Hydroxyzinum
+T21	Symptom 1726 1777	atypowych dolegliwości bólowych w klatce piersiowej
+N6	Reference T21 ICD10:R07.3	Inne bóle w klatce piersiowej
+T22	Date 1778 1793	od stycznia br.
+R4	Dat Arg1:T22 Arg2:T21	
+T24	Negation 1807 1810	bez
+T25	Symptom 1811 1830	związku z wysiłkiem
+T26	Symptom 1832 1861	promieniujące do lewego barku
+T27	Symptom 1873 1878	zgagi
+N8	Reference T27 ICD10:R12	Zgaga
+T28	Symptom 1880 1923	zmniejszonej nieznacznie tolerancji wysiłku
+R6	Neg Arg1:T24 Arg2:T25	
+R7	Dat Arg1:T22 Arg2:T25	
+R8	Dat Arg1:T22 Arg2:T26	
+R9	Dat Arg1:T22 Arg2:T27	
+R10	Dat Arg1:T22 Arg2:T28	
+N9	Reference T25 ICD10:R07.3	Inne bóle w klatce piersiowej
+N10	Reference T26 ICD10:R07.3	Inne bóle w klatce piersiowej
+T29	Condition 1937 1942	grypa
+N11	Reference T29 ICD10:J11	Grypa, wirus niezidentyfikowany
+T30	Date 1943 1957	w grudniu 2018
+R11	Dat Arg1:T30 Arg2:T29	
+T31	Treatment 1967 1983	panhysterektomii
+A2	Status T31 Historical_Insignificant
+N12	Reference T31 ICD10:Z90.7	Nabyty brak narządów płciowych
+T23	Condition 1799 1805	grypie
+N7	Reference T23 ICD10:J11.8	Grypa z innymi objawami wywołana przez niezidentyfikowany wirus
+R5	Dat Arg1:T22 Arg2:T23	
+T32	Negation 1985 1991	Neguje
+T33	Symptom 1993 2005	zasłabnięcia
+T34	Symptom 2007 2015	omdlenia
+N13	Reference T34 ICD10:R55	Omdlenie i zapaść
+T35	Symptom 2017 2032	kołatania serca
+N14	Reference T35 ICD10:R00.2	Kołatanie serca
+T36	Symptom 2034 2044	krwawienia
+T37	Symptom 2046 2059	czarne stolce
+N15	Reference T37 ICD10:K92.1	Stolce smołowate
+T38	Symptom 2061 2077	brunatne wymioty
+N16	Reference T38 ICD10:K92.0	Wymioty krwawe
+T39	Condition 2079 2095	chorobę wrzodową
+N17	Reference T39 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T40	Symptom 2097 2125	duszność nocną typu ortopnoe
+N18	Reference T40 ICD10:R06.0	Duszność
+T41	Condition 2127 2129	HA
+N19	Reference T41 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T42	Condition 2131 2133	DM
+N20	Reference T42 ICD10:E14	Cukrzyca nieokreślona
+T43	Condition 2135 2145	udar mózgu
+N21	Reference T43 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T44	Condition 2147 2158	zawał serca
+N22	Reference T44 ICD10:I25.2	Przebyty zawał serca
+T45	Treatment 2182 2198	panhysterektomia
+A3	Status T45 Historical_Insignificant
+N23	Reference T45 ICD10:Z90.7	Nabyty brak narządów płciowych
+T46	Behaviour 2200 2215	Palenie tytoniu
+N24	Reference T46 ICD10:Z72.0	Używanie tytoniu
+T47	Date 2217 2224	obecnie
+T48	Negation 2225 2228	nie
+T49	Date 2230 2243	w przeszłości
+T51	Behaviour 2244 2273	2-3 lata pojedyncze papierosy
+N25	Reference T51 ICD10:Z72.0	Używanie tytoniu
+R12	Dat Arg1:T47 Arg2:T46	
+R13	Neg Arg1:T48 Arg2:T46	
+R15	Dat Arg1:T49 Arg2:T51	
+R16	Neg Arg1:T32 Arg2:T33	
+R17	Neg Arg1:T32 Arg2:T34	
+R18	Neg Arg1:T32 Arg2:T35	
+R19	Neg Arg1:T32 Arg2:T36	
+R20	Neg Arg1:T32 Arg2:T37	
+R21	Neg Arg1:T32 Arg2:T38	
+R22	Neg Arg1:T32 Arg2:T39	
+R23	Neg Arg1:T32 Arg2:T40	
+R24	Neg Arg1:T32 Arg2:T41	
+R25	Neg Arg1:T32 Arg2:T42	
+R26	Neg Arg1:T32 Arg2:T43	
+R27	Neg Arg1:T32 Arg2:T44	
+T50	Behaviour 2275 2286	Inne używki
+T52	Negation 2288 2291	nie
+T53	Condition 2293 2302	Uczulenia
+N26	Reference T53 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T54	Negation 2304 2307	nie
+R14	Neg Arg1:T52 Arg2:T50	
+R28	Neg Arg1:T54 Arg2:T53	
+T55	Condition 2336 2339	WZW
+N27	Reference T55 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T56	Negation 2340 2343	(-)
+T57	Condition 2346 2355	borelioza
+N28	Reference T57 ICD10:A69.2	Choroba z Lyme
+T58	Negation 2356 2359	(-)
+T59	Negation 2365 2368	(-)
+T60	Condition 2361 2364	tbc
+N29	Reference T60 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+R29	Neg Arg1:T56 Arg2:T55	
+R30	Neg Arg1:T58 Arg2:T57	
+R31	Neg Arg1:T59 Arg2:T60	
+T61	Behaviour 2386 2412	warunki mieszkaniowe dobre
+T62	Behaviour 2414 2423	emerytura
+T63	Drug 2427 2441	Leków na stałe
+T64	Negation 2442 2455	nie przejmuje
+R32	Neg Arg1:T64 Arg2:T63	
+T65	Drug 2472 2490	leki przeciwbólowe
+T66	Drug_dose 2459 2471	Sporadycznie
+R33	Drg Arg1:T65 Arg2:T66	

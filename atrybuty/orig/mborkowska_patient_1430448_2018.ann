@@ -1,0 +1,232 @@
+T1	Treatment 767 794	dalsza opieka w poradni POZ
+T2	Treatment 804 870	kontrola kardiologiczna, diabetologiczna i u chirurga naczyniowego
+T3	Treatment 882 911	kontrola ciśnienia tętniczego
+T4	Investigation 921 972	kontrola lipidogramu, elektrolitów, kwasu moczowego
+T5	Behaviour 973 1017	dieta niskocholesterolowa i niskoglikemiczna
+T6	Behaviour 1018 1037	redukcja masy ciała
+T7	Behaviour 1039 1084	stały, umiarkowany, aerobowy wysiłek fizyczny
+T8	Drug 1115 1120	Acard
+T9	Drug_dose 1121 1144	75 mg 1 tabl. wieczorem
+R1	Drg Arg1:T8 Arg2:T9	
+T10	Drug 1145 1155	Diaprel MR
+T11	Drug_dose 1156 1175	60 mg  1 tabl. rano
+R2	Drg Arg1:T10 Arg2:T11	
+T12	Drug 1176 1183	Valarox
+T13	Drug_dose 1184 1208	10mg/160 mg 1 tabl. rano
+R3	Drg Arg1:T12 Arg2:T13	
+T14	Drug 1209 1215	Concor
+T15	Drug_dose 1216 1235	10  mg  1tabl. rano
+R4	Drg Arg1:T14 Arg2:T15	
+T16	Drug 1237 1245	Lecalpin
+T17	Drug_dose 1246 1269	10 mg 1 tabl. wieczorem
+R5	Drg Arg1:T16 Arg2:T17	
+T18	Drug 1271 1277	Diuver
+T19	Drug_dose 1278 1296	10 mg 1 tabl. rano
+R6	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1298 1308	Cyclo3Fort
+T21	Drug_dose 1309 1323	1 tabl. 1 x dz
+R7	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1816 1821	Acard
+T23	Drug 1823 1829	Atoris
+T24	Drug 1831 1844	Glucophage XR
+T25	Drug 1846 1854	Valsacor
+T26	Drug 1856 1862	Concor
+T27	Drug 1864 1872	Lecalpin
+T28	Drug 1874 1880	Diuver
+T29	Drug 1882 1891	Captopril
+T30	Investigation 4442 4452	echo serca
+T31	Investigation 4454 4457	TET
+T32	Investigation 4459 4463	ABPM
+T33	Investigation 4465 4475	Holter ekg
+T34	Investigation 4477 4495	rtg kl. piersiowej
+T35	Drug 4396 4405	Furosemid
+T36	Drug_dose 4406 4414	doraźnie
+R8	Drg Arg1:T35 Arg2:T36	
+T37	Drug 4366 4373	Validol
+T38	Drug_dose 4374 4394	60 mg 1 tabl. na noc
+R9	Drg Arg1:T37 Arg2:T38	
+T39	Drug 4339 4345	Diuver
+T40	Drug_dose 4346 4364	10 mg 1 tabl. rano
+T41	Drug 4305 4313	Lecalpin
+T42	Drug_dose 4314 4337	10 mg 1 tabl. wieczorem
+R10	Drg Arg1:T41 Arg2:T42	
+R11	Drg Arg1:T39 Arg2:T40	
+T43	Drug 4277 4283	Concor
+T44	Drug_dose 4284 4303	10  mg  1tabl. rano
+R12	Drg Arg1:T43 Arg2:T44	
+T45	Drug 4248 4256	Valsacor
+T46	Drug_dose 4257 4276	160 mg 1 tabl. rano
+R13	Drg Arg1:T45 Arg2:T46	
+T47	Drug 4219 4229	Glucophage
+T48	Drug_dose 4230 4246	500 mg 1 tabl. w
+R14	Drg Arg1:T47 Arg2:T48	
+T49	Drug 4199 4205	Atoris
+T50	Drug 4181 4186	Acard
+T51	Drug_dose 4187 4198	75 mg 1x1 w
+R15	Drg Arg1:T50 Arg2:T51	
+T52	Drug_dose 4206 4217	20 mg 1x1 w
+R16	Drg Arg1:T49 Arg2:T52	
+T53	Negation 4114 4120	neguje
+T54	Negation 4087 4093	neguje
+T55	Negation 4069 4077	neguje  
+T56	Negation 4049 4055	neguje
+T57	Condition 4040 4047	Alergie
+N1	Reference T57 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R17	Neg Arg1:T56 Arg2:T57	
+T58	Behaviour 4057 4067	Nikotynizm
+N2	Reference T58 ICD10:Z72.0	Używanie tytoniu
+R18	Neg Arg1:T55 Arg2:T58	
+T59	Behaviour 4078 4085	Alkohol
+N3	Reference T59 ICD10:Z72.1	Używanie alkoholu
+R19	Neg Arg1:T54 Arg2:T59	
+T60	Condition 3964 3974	udar mózgu
+A1	Status T60 Family
+N4	Reference T60 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T61	Condition 3992 4010	udar niedokrwienny
+A2	Status T61 Family
+T62	Behaviour 4023 4033	nikotynizm
+N6	Reference T62 ICD10:Z72.0	Używanie tytoniu
+T63	Condition 4035 4039	HA  
+N7	Reference T63 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T64	Negation 3930 3936	neguje
+T65	Treatment 3911 3928	Przebyte operacje
+R20	Neg Arg1:T64 Arg2:T65	
+T66	Condition 404 443	Nadciśnienie tętnicze II st. wg ESC/ESH
+T67	Condition 445 480	Izolowana dysfunkcja rozkurczowa LK
+T68	Condition 482 494	Cukrzyca t.2
+N8	Reference T68 ICD10:E11	Cukrzyca insulinoniezależna
+T69	Condition 497 512	Otyłość III st.
+N9	Reference T69 ICD10:E66	
+T70	Condition 513 533	Hipercholesterolemia
+N10	Reference T70 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T71	Condition 560 589	Przewlekła niewydolność żylna
+N11	Reference T71 ICD10:I87.2	Niewydolność żył (przewlekła) (obwodowa)
+T72	Condition 591 623	Zmiany zwyrodnieniowe kręgosłupa
+T73	Treatment 544 558	farmakoterapii
+T74	Condition 1551 1597	Izolowana dysfunkcja rozkurczowa lewej komory.
+T75	Condition 1598 1619	Nadciśnienie tętnicze
+N13	Reference T75 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T76	Condition 1621 1648	Choroba niedokrwienna serca
+T77	Condition 1650 1670	Hipercholesterolemia
+N15	Reference T77 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T78	Condition 1672 1695	Ekstrasystolia komorowa
+N16	Reference T78 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T79	Treatment 2002 2024	kontrola u lekarza POZ
+T80	Investigation 2178 2203	angioCT tętnic wieńcowych
+T81	Treatment 2034 2068	kontrola w Poradni Kardiologicznej
+T82	Investigation_result 2402 2440	wysokich wartości ciśnienia tętniczego
+T83	Symptom 2458 2473	zawrotami głowy
+N17	Reference T83 ICD10:R42	Zawroty głowy i odurzenie
+T84	Investigation 2548 2570	angioCT tt. wieńcowych
+T85	Symptom 2640 2701	bóle w klatce piersiowej sporadyczne, niezwiązane z wysiłkami
+N18	Reference T85 ICD10:R07.3	Inne bóle w klatce piersiowej
+T86	Symptom 2703 2718	cukrzyca typu 2
+N19	Reference T86 ICD10:E11	Cukrzyca insulinoniezależna
+T87	Date 2721 2730	od 4 lat,
+R21	Dat Arg1:T87 Arg2:T86	
+T88	Condition 2731 2738	otyłość
+N20	Reference T88 ICD10:E66	Otyłość
+T89	Condition 2740 2772	zmiany zwyrodnieniowe kręgosłupa
+N21	Reference T89 ICD10:M47	
+T90	Negation 2793 2799	neguje
+T91	Treatment 2774 2792	Przebyte operacje:
+R22	Neg Arg1:T90 Arg2:T91	
+T92	Behaviour 2886 2896	nikotynizm
+N22	Reference T92 ICD10:Z72.0	Używanie tytoniu
+T93	Condition 2898 2902	HA  
+N23	Reference T93 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T94	Condition 2855 2873	udar niedokrwienny
+N24	Reference T94 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T95	Date 2874 2882	(54 r.ż.
+R23	Dat Arg1:T95 Arg2:T94	
+A3	Status T94 Family
+T96	Condition 2827 2837	udar mózgu
+A4	Status T96 Family
+N25	Reference T96 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T97	Date 2839 2844	75r.z
+R24	Dat Arg1:T97 Arg2:T96	
+T98	Condition 2903 2910	Alergie
+N26	Reference T98 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T99	Negation 2912 2918	neguje
+R25	Neg Arg1:T99 Arg2:T98	
+T100	Negation 2932 2940	neguje  
+T101	Negation 2950 2956	neguje
+T102	Behaviour 2920 2930	Nikotynizm
+T103	Behaviour 2941 2948	Alkohol
+N28	Reference T103 ICD10:Z72.1	Używanie alkoholu
+N27	Reference T102 ICD10:Z72.0	Używanie tytoniu
+R26	Neg Arg1:T100 Arg2:T102	
+R27	Neg Arg1:T101 Arg2:T103	
+T104	Negation 2977 2983	neguje
+T105	Behaviour 2958 2975	Uzależnienie inne
+N29	Reference T105 ICD10:Z72	Problemy związane ze stylem życia
+R28	Neg Arg1:T104 Arg2:T105	
+T106	Drug 3044 3049	Acard
+T107	Drug_dose 3050 3061	75 mg 1x1 w
+R29	Drg Arg1:T106 Arg2:T107	
+T108	Drug 3062 3068	Atoris
+T109	Drug_dose 3069 3080	20 mg 1x1 w
+R30	Drg Arg1:T108 Arg2:T109	
+T110	Drug 3082 3095	Glucophage XR
+T111	Drug_dose 3096 3112	500 mg 1 tabl. w
+R31	Drg Arg1:T110 Arg2:T111	
+T112	Drug 3114 3122	Valsacor
+T113	Drug_dose 3123 3142	160 mg 1 tabl. rano
+R32	Drg Arg1:T112 Arg2:T113	
+T114	Drug 3143 3149	Concor
+T115	Drug_dose 3150 3169	10  mg  1tabl. rano
+R33	Drg Arg1:T114 Arg2:T115	
+T116	Drug 3171 3179	Lecalpin
+T117	Drug_dose 3180 3203	10 mg 1 tabl. wieczorem
+R34	Drg Arg1:T116 Arg2:T117	
+T118	Drug 3205 3211	Diuver
+T119	Drug_dose 3212 3230	10 mg 1 tabl. rano
+R35	Drg Arg1:T118 Arg2:T119	
+T120	Drug 3232 3244	Preductal MR
+T121	Drug_dose 3245 3259	1 tabl. 2 x dz
+R36	Drg Arg1:T120 Arg2:T121	
+T122	Investigation 3288 3305	CT tt. wieńcowych
+T123	Investigation 3307 3311	ABPM
+T124	Investigation 3314 3332	rtg kl. piersiowej
+T125	Investigation_result 3593 3607	- 200/130 mmHg
+T126	Investigation_result 3548 3580	wysokich wartości rejestrowanych
+T127	Date 3581 3592	od miesiąca
+R37	Dat Arg1:T127 Arg2:T126	
+T128	Condition 3609 3611	HA
+N30	Reference T128 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T129	Date 3629 3635	8 laty
+R38	Dat Arg1:T129 Arg2:T128	
+T130	Symptom 3646 3665	obrzęki kk. dolnych
+N31	Reference T130 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T131	Condition 3687 3704	rozkurczowa CHF -
+T132	Symptom 3705 3723	II/III kl. wg NYHA
+T133	Condition 3725 3728	CAD
+N33	Reference T133 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T134	Investigation 3735 3749	koronarografia
+T135	Negation 3731 3734	bez
+R39	Neg Arg1:T135 Arg2:T134	
+T136	Date 3750 3761	w 2010 roku
+R40	Dat Arg1:T136 Arg2:T134	
+T137	Condition 3877 3909	zmiany zwyrodnieniowe kręgosłupa
+T138	Condition 3868 3875	otyłość
+N35	Reference T138 ICD10:E66	Otyłość
+T139	Condition 3840 3855	cukrzyca typu 2
+N36	Reference T139 ICD10:E11	Cukrzyca insulinoniezależna
+T140	Date 3858 3867	od 4 lat,
+R41	Dat Arg1:T140 Arg2:T139	
+T141	Symptom 3776 3798	ostatnio bóle w klatce
+N37	Reference T141 ICD10:R07.3	Inne bóle w klatce piersiowej
+T142	Date 3799 3813	przed 3 m-cami
+R42	Dat Arg1:T142 Arg2:T141	
+T143	Treatment 2071 2113	ponowna hospitalizacja u tutejszej klinice
+T144	Date 2114 2128	za 4-6 tygodni
+R43	Dat Arg1:T144 Arg2:T143	
+A5	Status T92 Family
+A6	Status T93 Family
+A7	Status T62 Family
+A8	Status T63 Family
+N12	Reference T72 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+N14	Reference T76 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+N32	Reference T131 ICD10:I50.9	Niewydolność serca, nieokreślona
+N34	Reference T137 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+N5	Reference T61 ICD10:I63.9	Zawał mózgu, nieokreślony

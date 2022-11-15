@@ -1,0 +1,114 @@
+T1	Symptom 625 659	okresowego uczucia kołatania serca
+N1	Reference T1 ICD10:R00.2	Kołatanie serca
+T2	Negation 662 668	Neguje
+T3	Symptom 669 681	zasłabnięcia
+T4	Negation 683 689	neguje
+T5	Symptom 690 714	bóle w klatce piersiowej
+N2	Reference T5 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T6	Symptom 733 759	bóle stawów biodrowych obu
+N3	Reference T6 ICD10:M25.5	Ból stawu
+T7	Symptom 762 775	skurcze łydek
+N4	Reference T7 ICD10:R25.2	Kurcz i przykurcz
+T8	Symptom 778 800	bóle stawów kolanowych
+N5	Reference T8 ICD10:M25.5	Ból stawu
+T9	Symptom 803 826	bóle palów prawej stopy
+N6	Reference T9 ICD10:R52.9	Ból, nieokreślony
+T10	Symptom 845 875	drażnię rak - po stronie lewej
+N7	Reference T10 ICD10:R25.1	Drżenie, nieokreślone
+T11	Date 876 889	od około roku
+R1	Neg Arg1:T2 Arg2:T3	
+R2	Neg Arg1:T4 Arg2:T5	
+R3	Dat Arg1:T11 Arg2:T10	
+T12	Condition 905 932	Choroba niedokrwienna serca
+N8	Reference T12 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T13	Condition 942 952	OZW NSTEMI
+N9	Reference T13 ICD10:I21.4	Ostry zawał serca podwsierdziowy
+T14	Treatment 953 972	leczony zachowawczo
+T15	Date 973 980	04.2017
+T16	Investigation_result 983 996	w GPZ 20-30 %
+T17	Investigation_result 999 1027	pozostałe naczynia bez zmian
+R4	Dat Arg1:T15 Arg2:T13	
+R5	Dat Arg1:T15 Arg2:T14	
+T18	Condition 1031 1049	Niewydolność serca
+N10	Reference T18 ICD10:I50.9	Niewydolność serca, nieokreślona
+T19	Condition 1060 1064	LBBB
+N11	Reference T19 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T20	Condition 1066 1087	Nadciśnienie tętnicze
+N12	Reference T20 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T21	Treatment 1097 1140	endoprotezoplastyce lewego stawu biodrowego
+A1	Status T21 Historical_Insignificant
+N13	Reference T21 ICD10:Z96.6	Obecność implantów ortopedycznych
+T22	Condition 1142 1177	Przepuklina pachwinowa prawostronna
+N14	Reference T22 ICD10:K40.9	Jednostronna lub nieokreślona przepuklina pachwinowa bez niedrożności lub zgorzeli
+T23	Symptom 1179 1204	gorzej widzi na prawe oko
+N15	Reference T23 ICD10:H54.5	Upośledzenie widzenia jednego oka
+T24	Symptom 1217 1231	anizokoria P>L
+N16	Reference T24 ICD10:H57.0	Zaburzenia czynności źrenicy
+T25	Date 1205 1213	od 2 lat
+R6	Dat Arg1:T25 Arg2:T23	
+A2	Status T22 Historical_Insignificant
+T26	Condition 1320 1323	WZW
+N17	Reference T26 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T27	Negation 1324 1330	( -  )
+T28	Condition 1333 1342	borelioza
+N18	Reference T28 ICD10:A69.2	Choroba z Lyme
+T29	Negation 1343 1348	( - )
+T30	Condition 1349 1353	Odra
+N19	Reference T30 ICD10:B05	Odra
+T31	Negation 1354 1359	( - )
+R7	Neg Arg1:T31 Arg2:T30	
+R8	Neg Arg1:T29 Arg2:T28	
+R9	Neg Arg1:T27 Arg2:T26	
+T32	Condition 1362 1381	wywiadzie rodzinnym
+A3	Status T32 Family
+T33	Negation 1384 1395	brak danych
+R10	Neg Arg1:T33 Arg2:T32	
+T34	Behaviour 1397 1412	Palenie tytoniu
+N20	Reference T34 ICD10:Z72.0	Używanie tytoniu
+T35	Behaviour 1414 1419	palił
+N21	Reference T35 ICD10:Z72.0	Używanie tytoniu
+T36	Date 1420 1430	w młodości
+R11	Dat Arg1:T36 Arg2:T35	
+R12	Dat Arg1:T36 Arg2:T34	
+T37	Behaviour 1432 1443	Inne używki
+T38	Negation 1445 1448	nie
+T39	Condition 1449 1458	Uczulenia
+N22	Reference T39 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T40	Negation 1460 1466	neguje
+T41	Behaviour 1483 1509	warunki mieszkaniowe dobre
+T42	Behaviour 1512 1526	mieszka z żoną
+R13	Dat Arg1:T15 Arg2:T16	
+R14	Dat Arg1:T15 Arg2:T17	
+R15	Neg Arg1:T38 Arg2:T37	
+R16	Neg Arg1:T40 Arg2:T39	
+T43	Drug 1533 1540	Amlozek
+T44	Drug_dose 1541 1557	10 mg 1x dz rano
+T45	Drug 1560 1566	Diuver
+T46	Drug_dose 1567 1583	10 mg 1x dz rano
+T47	Drug 1586 1595	Bicardiol
+T48	Drug_dose 1596 1612	10 mg 1x dz rano
+T49	Drug 1615 1622	Milurit
+T50	Drug_dose 1623 1640	100 mg 1x dz rano
+T51	Drug 1643 1648	Pamyl
+T52	Drug_dose 1649 1675	20 mg 1 x dz rano na czczo
+T53	Drug 1677 1684	Nonpres
+T54	Drug_dose 1685 1707	25 mg 1x dz w południe
+T55	Drug 1710 1715	Acard
+T56	Drug_dose 1716 1737	75 mg 1x dz wieczorem
+T57	Drug 1739 1750	Perindopril
+T58	Drug_dose 1751 1772	10 mg 1x dz wieczorem
+T59	Drug 1774 1783	Atorvagen
+T60	Drug_dose 1784 1805	40 mg 1x dz wieczorem
+T61	Investigation 1822 1832	Echo serca
+T62	Investigation 1835 1845	Holter EKG
+T63	Investigation 1848 1863	Próba Wysiłkowa
+R17	Drg Arg1:T43 Arg2:T44	
+R18	Drg Arg1:T45 Arg2:T46	
+R19	Drg Arg1:T47 Arg2:T48	
+R20	Drg Arg1:T49 Arg2:T50	
+R21	Drg Arg1:T51 Arg2:T52	
+R22	Drg Arg1:T53 Arg2:T54	
+R23	Drg Arg1:T55 Arg2:T56	
+R24	Drg Arg1:T57 Arg2:T58	
+R25	Drg Arg1:T59 Arg2:T60	
+T64	Investigation_result 1050 1057	EF 40 %

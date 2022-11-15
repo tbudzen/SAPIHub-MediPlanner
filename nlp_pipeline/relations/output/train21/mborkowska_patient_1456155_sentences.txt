@@ -1,0 +1,649 @@
+allRelations          : 22
+oks                   : 7
+isRedundantAndRemoveds: 15
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 0
+GOOD / BAD            : 22 / 0
+Sentence 0:
+------------------------------------------------
+Wiek: 4 miesięcy
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zastosowane leczenie
+
+
+
+Sentence 4:
+------------------------------------------------
+Captopril, Clexane, Perfalgan, Cefazolin, płyny dożylne
+------------------------------------------------
+
+
+
+Sentence 5:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 6:
+Kontrola w Poradni Kardioogicznej za miesiąc (dr Ostrowska)
+
+
+
+Sentence 7:
+Captopril 2 x 2mg
+Spironol 1 x 6,25mg
+
+R1	Drg Arg1:T6 Arg2:T7 << OK >>	Captopril -> 2 x 2mg  <RANK: 3> <info: start[568, 578] <type: RIGHT>>
+R2	Drg Arg1:T6 Arg2:T9 <<REDUNDANT!!!REMOVED>>	Captopril -> 1 x 6,25mg <:REMOVED other first tag between (right):> <RANK: 1> <info: start[568, 595] <type: RIGHT>>
+R3	Drg Arg1:T8 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Spironol -> 2 x 2mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[586, 578] <type: LEFT>>
+R4	Drg Arg1:T8 Arg2:T9 << OK >>	Spironol -> 1 x 6,25mg  <RANK: 3> <info: start[586, 595] <type: RIGHT>>
+
+
+Sentence 8:
+Innofer 1,5ml 2 x dziennie
+Innovitum B 1 x 2 krople
+Witamina D3 1 x 400j
+
+Zalecenia dla lekarza POZ:
+
+R5	Drg Arg1:T10 Arg2:T11 << OK >>	Innofer -> 1,5ml 2 x dziennie  <RANK: 3> <info: start[606, 614] <type: RIGHT>>
+R6	Drg Arg1:T10 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Innofer -> 1 x 2 krople <:REMOVED other first tag between (right):> <RANK: 0> <info: start[606, 645] <type: RIGHT>>
+R7	Drg Arg1:T10 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Innofer -> 1 x 400j <:REMOVED other first tag between (right):> <RANK: 0> <info: start[606, 670] <type: RIGHT>>
+R8	Drg Arg1:T12 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Innovitum B -> 1,5ml 2 x dziennie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[633, 614] <type: LEFT>>
+R9	Drg Arg1:T12 Arg2:T13 << OK >>	Innovitum B -> 1 x 2 krople  <RANK: 3> <info: start[633, 645] <type: RIGHT>>
+R10	Drg Arg1:T12 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Innovitum B -> 1 x 400j <:REMOVED other first tag between (right):> <RANK: 1> <info: start[633, 670] <type: RIGHT>>
+R11	Drg Arg1:T14 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Witamina D3 -> 1,5ml 2 x dziennie <:REMOVED other first tag between (left):> <RANK: 1> <info: start[658, 614] <type: LEFT>>
+R12	Drg Arg1:T14 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Witamina D3 -> 1 x 2 krople <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[658, 645] <type: LEFT>>
+R13	Drg Arg1:T14 Arg2:T15 << OK >>	Witamina D3 -> 1 x 400j  <RANK: 3> <info: start[658, 670] <type: RIGHT>>
+
+
+Sentence 9:
+Ze względu na duże ryzyko ponownej rekoarktacji, proszę badać tętno na tętnicach udowych i ramiennych podczas każdej wizyty, Kontrola ciśnienia tętniczego prawa kończyna górna i prawa kończyna dolna.
+
+
+
+Sentence 10:
+------------------------------------------------
+
+
+
+Sentence 11:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 12:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q25.1|Rozpoznanie II: ICD10:Q23.1|Rozpoznanie IV: ICD10:Z98.8|Rozpoznanie V: ICD10:A08.0|Rozpoznanie III: ICD10:Q23.2|Opisowo:: Wrodzona wada serca pod postacią hipoplazji zastawki aortalnej, mitralnej oraz koarktacji aorty
+   Rekoarktacja
+   Angioplastyka balonowa rekoarktacji- 22.01.2019r.
+   
+R14	Dat Arg1:T24 Arg2:T18 <<REDUNDANT!!!REMOVED>>	22.01.2019r -> Wrodzona wada serca pod postacią hipoplazji zastawki aortalnej, <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1331, 1179] <type: LEFT>>
+R15	Dat Arg1:T24 Arg2:T19 <<REDUNDANT!!!REMOVED>>	22.01.2019r -> mitralnej <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1331, 1243] <type: LEFT>>
+R16	Dat Arg1:T24 Arg2:T20 <<REDUNDANT!!!REMOVED>>	22.01.2019r -> koarktacji aorty <:REMOVED other second tag between (left):> <RANK: 1> <info: start[1331, 1258] <type: LEFT>>
+R17	Dat Arg1:T24 Arg2:T21 <<REDUNDANT!!!REMOVED>>	22.01.2019r -> Rekoarktacja <:REMOVED other second tag between (left):> <RANK: 1> <info: start[1331, 1278] <type: LEFT>>
+R18	Dat Arg1:T24 Arg2:T23 << OK >>	22.01.2019r -> rekoarktacji  <RANK: 3> <info: start[1331, 1317] <type: LEFT>>
+R19	Dat Arg1:T24 Arg2:T22 << OK >>	22.01.2019r -> Angioplastyka balonowa  <RANK: 3> <info: start[1331, 1294] <type: LEFT>>
+
+
+Sentence 13:
+Niedokrwistość wymagająca przetoczenia nUKKCz
+   Biegunka wywołana rotawirusum
+------------------------------------------------
+
+R20	Alg Arg1:T25 Arg2:T26 <<REDUNDANT!!!REMOVED>>	Niedokrwistość -> nUKKCz <:REMOVED too long text between 25 limit:10:> <RANK: 3> <info: start[1347, 1386] <type: RIGHT>>
+R21	Alg Arg1:T28 Arg2:T26 <<REDUNDANT!!!REMOVED>>	Biegunka wywołana rotawirusum -> nUKKCz <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 1> <info: start[1396, 1386] <type: LEFT>>
+
+
+Sentence 14:
+Zastosowane leczenie
+
+
+
+Sentence 15:
+------------------------------------------------
+
+
+
+Sentence 16:
+Captopril, Cefazolin, nUKKCz grupy A
+
+
+Sentence 17:
+RhD dodatni
+------------------------------------------------
+
+
+
+Sentence 18:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 19:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q25.1|Rozpoznanie II: ICD10:Q25.3|Rozpoznanie IV: ICD10:Z98.8|Rozpoznanie V: |Rozpoznanie III: ICD10:D50|Opisowo:: Wrodzona wada serca pod postacią hipoplazji zastawki aortalnej, mitralnej oraz koarktacji aorty
+   
+
+
+Sentence 20:
+Niedokrwistość wymagająca przetoczenia nUKKCz
+------------------------------------------------
+
+R22	Alg Arg1:T35 Arg2:T37 <<REDUNDANT!!!REMOVED>>	Niedokrwistość -> nUKKCz <:REMOVED too long text between 25 limit:10:> <RANK: 3> <info: start[1952, 1991] <type: RIGHT>>
+
+
+Sentence 21:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 22:
+Chłopiec z wrodzoną wadą serca przyjęty do Kliniki do poszerzonych badań i ustalenia dalszego postępowania
+
+
+Sentence 23:
+Stan dość dobry
+------------------------------------------------
+
+
+
+Sentence 24:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 25:
+Grupa krwi + p/c odpornościowe (powyżej 4. m-ca życia
+    NR-KS:G-19/001388
+    KODKRESKOWYPROBKI:G-19/001388
+    
+
+
+Sentence 26:
+GR:A
+    RH:+ (dodatni)
+    
+
+
+Sentence 27:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+
+
+
+Sentence 28:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:8.69[10^3/ul]
+    
+
+
+Sentence 29:
+RBC Krwinki czerwone:3.76[10^6/ul]
+    
+
+
+Sentence 30:
+HGB Hemoglobina:10.3[g/dl]
+    
+
+
+Sentence 31:
+HCT Hematokryt:28.1[%]
+    
+
+
+Sentence 32:
+MCV wskaźnik czerwonokrw:74.7[fl]
+    
+
+
+Sentence 33:
+MCH wskaźnik czerwonokrw:27.4[pg]
+    
+
+
+Sentence 34:
+MCHC wskaźnik czerwonokr:36.7[g/dl]
+    
+
+
+Sentence 35:
+PLT z morfologii:413[10^3/ul]
+    
+
+
+Sentence 36:
+RDW-SD:32.3[fl]
+    
+
+
+Sentence 37:
+RDW-CV:11.9[%]
+    PDW:10.1[fl]
+    
+
+
+Sentence 38:
+MPV:9.6[fl]
+    
+
+
+Sentence 39:
+P-LCR:21.1[%]
+    
+
+
+Sentence 40:
+PCT (hematokryt płytkowy:0.40[%]
+    
+
+
+Sentence 41:
+NEUTR# wartość bezwzględ:2.68[10^3/ul]
+    
+
+
+Sentence 42:
+NEUTR%:30.8[%]
+    
+
+
+Sentence 43:
+LYMH# wartość bezwzględn:4.84[10^3/ul]
+    
+
+
+Sentence 44:
+LYMPH%:55.7[%]
+    
+
+
+Sentence 45:
+MONO# wartość bezwzględn:0.89[10^3/ul]
+    
+
+
+Sentence 46:
+MONO%:10.2[%]
+    
+
+
+Sentence 47:
+EO# wartość bezwzględna:0.24[10^3/ul]
+    
+
+
+Sentence 48:
+EO%:2.8[%]
+    
+
+
+Sentence 49:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    BASO%:0.5[%]
+    
+
+
+Sentence 50:
+NRBC %:0.0[%]
+    
+
+
+Sentence 51:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 52:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:32.9[sek]
+
+
+
+Sentence 53:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 54:
+Czas protrombinowy:11.4[sek]
+    
+
+
+Sentence 55:
+Wskaźnik PT:96.5[%]
+    
+
+
+Sentence 56:
+INR:1.04
+Czas trombinowy TT: Czas trombinowy TT:21.1[sek]
+
+
+
+Sentence 57:
+Fibrynogen: Fibrynogen:1.69[g/L]
+
+
+
+Sentence 58:
+Troponina T: Troponina T:19.5[pg/ml]
+
+
+
+Sentence 59:
+Rota/Adeno wirusy - szybki test paskowy
+    
+
+
+Sentence 60:
+Rota wirusy - szybki tes:dodatni
+    Adeno wirusy - szybki te:ujemny
+
+
+
+Sentence 61:
+Norowirusy genogrupy 1 i 2 - szybki test kasetkowy
+    
+
+
+Sentence 62:
+Norowirusy genogrupy 1 -:nie wykryto
+    
+
+
+Sentence 63:
+Norowirusy genogrupy 2 -:nie wykryto
+ALAT: ALAT:38[U/L]
+ASPAT: ASPAT:47[U/L]
+Bilirubina całkowita (TBil): Bilirubina całkowita:0.41[mg/dl]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 64:
+Sód (Na): Sód:136[mmol/L]
+
+
+
+Sentence 65:
+Potas (K): Potas:4.9[mmol/L]
+
+
+
+Sentence 66:
+Chlorki (Cl): Chlorki:104[mmol/L]
+
+
+
+Sentence 67:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:28[U/L]
+
+
+
+Sentence 68:
+Kreatynina + GFR
+    
+
+
+Sentence 69:
+Kreatynina w surowicy:0.21[mg/dl]
+    
+
+
+Sentence 70:
+eGFR nowor.
+
+
+Sentence 71:
+wg Schwartza:121.9[ml/min/1,73 m^2]
+    
+
+
+Sentence 72:
+wzrost:62[cm]
+
+
+
+Sentence 73:
+Mleczany (LAC): Mleczany:15.7[mg/dl]
+
+
+
+Sentence 74:
+Magnez: Magnez:0.92[mmol/L]
+
+
+
+Sentence 75:
+Mocznik: Mocznik:15[mg/dl]
+
+
+
+Sentence 76:
+Wapń całkowity: Wapń całkowity:2.72[mmol/L]
+
+
+
+Sentence 77:
+Profil parametrów krytycznych (ABL)
+    pH:7.397
+    pCO2:35.1[mmHg]
+    BE:-2.60[mmol/L]
+    
+
+
+Sentence 78:
+HCO3:21.1[mmol/L]
+    pO2:68.0[mmHg]
+    
+
+
+Sentence 79:
+O2Sat:94.3[%]
+    
+
+
+Sentence 80:
+Sód (ABL):135[mmol/L]
+    
+
+
+Sentence 81:
+Potas (ABL):4.4[mmol/L]
+    
+
+
+Sentence 82:
+Chlorki (ABL):114[mmol/L]
+    
+
+
+Sentence 83:
+Wapń zjonizowany (ABL):1.24[mmol/L]
+    
+
+
+Sentence 84:
+Ht - ABL:41.1[%]
+    
+
+
+Sentence 85:
+Hb - ABL:13.4[g/dl]
+    
+
+
+Sentence 86:
+FO2Hb:92.5[%]
+    
+
+
+Sentence 87:
+FCOHb:0.7[%]
+    FMetHb:1.2[%]
+    
+
+
+Sentence 88:
+Glukoza (ABL):97[mg/dl]
+    Mleczany:14[mg/dl]
+
+
+
+Sentence 89:
+Profil parametrów krytycznych (ABL)
+    
+
+
+Sentence 90:
+pH:7.380
+    pCO2:41.8[mmHg]
+    BE:-0.40[mmol/L]
+    HCO3:24.2[mmol/L]
+    
+
+
+Sentence 91:
+pO2:52.0[mmHg]
+    
+
+
+Sentence 92:
+O2Sat:88.2[%]
+    
+
+
+Sentence 93:
+Sód (ABL):136[mmol/L]
+    
+
+
+Sentence 94:
+Potas (ABL):4.3[mmol/L]
+    
+
+
+Sentence 95:
+Chlorki (ABL):105[mmol/L]
+    
+
+
+Sentence 96:
+Wapń zjonizowany (ABL):1.32[mmol/L]
+    
+
+
+Sentence 97:
+Ht - ABL:38.2[%]
+    
+
+
+Sentence 98:
+Hb - ABL:12.4[g/dl]
+    
+
+
+Sentence 99:
+FO2Hb:86.4[%]
+    FCOHb:1.1[%]
+    FMetHb:0.9[%]
+    
+
+
+Sentence 100:
+Glukoza (ABL):95[mg/dl]
+    Mleczany:12[mg/dl]
+
+
+
+Sentence 101:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    pH:7.394
+    pCO2:37.7[mmHg]
+    BE:-1.50[mmol/L]
+    
+
+
+Sentence 102:
+HCO3:22.5[mmol/L]
+    pO2:62.4[mmHg]
+    
+
+
+Sentence 103:
+O2Sat:92.6[%]
+
+
+
+Sentence 104:
+Glukoza w surowicy: Glukoza w surowicy:90[mg/dl]
+
+
+
+Sentence 105:
+NT-proBNP surowica: NT-proBNP w surowicy:347[pg/ml]
+
+
+
+Sentence 106:
+------------------------------------------------
+
+
+
+Sentence 107:
+ICD10
+------------------------------------------------
+A08.0
+Q23.1
+Q22.2
+
+
+
+Sentence 108:
+Q25.1
+Z98.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 109:
+ICD9
+------------------------------------------------
+89.522
+37.21
+89.00
+
+
+
+Sentence 110:
+88.721
+89.602
+88.718
+88.761
+35.961
+------------------------------------------------
+
+

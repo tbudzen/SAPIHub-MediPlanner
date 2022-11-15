@@ -1,0 +1,106 @@
+T1	Treatment 332 375	Okresowa kontrola w Poradni Kardiologicznej
+T2	Treatment 380 429	Dalsza opieka w POZ oraz Poradni Diabetologicznej
+T3	Behaviour 435 492	Dieta cukrzycowa, niskocholesterolowa, posiłki regularnie
+T4	Date 493 507	co 3-4 godziny
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Investigation 513 582	Regularna samokontrola ciśnienia tętniczego krwi, tętna oraz glikemii
+T6	Treatment 588 616	Regularne przyjmowanie leków
+T7	Drug 620 626	Siofor
+T8	Drug_dose 627 658	850 mg 1 tabl. rano i wieczorem
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 659 668	Triplixam
+T10	Drug_dose 669 693	5/1,25/5 mg 1 tabl. rano
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 694 702	Actrapid
+T12	Drug_dose 703 712	14j-14j-0
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 713 728	Lantus SoloStar
+T14	Drug_dose 729 739	24j na noc
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Condition 989 1022	nadciśnienia tętniczego - de novo
+A1	Source T15 Declared
+N1	Reference T15 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T16	Symptom 1032 1040	omdleniu
+N2	Reference T16 ICD10:R55	Omdlenie i zapaść
+T17	Condition 1042 1057	Cukrzyca typu 2
+N3	Reference T17 ICD10:E11	Cukrzyca insulinoniezależna
+T18	Condition 1220 1235	cukrzycy typu 2
+N4	Reference T18 ICD10:E11	Cukrzyca insulinoniezależna
+T19	Condition 1293 1324	nadciśnienia tętniczego de-novo
+A2	Source T19 Declared
+N5	Reference T19 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T20	Date 1338 1349	25.05.2019r
+T21	Symptom 1361 1390	omdlenie po wysiłku fizycznym
+N6	Reference T21 ICD10:R55	Omdlenie i zapaść
+T22	Investigation_result 1417 1444	RR w granicach 190/140 mmHg
+N7	Reference T22 ICD10:R03.0	Podwyższone ciśnienie tętnicze krwi, bez rozpoznanego nadciśnienia tętniczego
+T23	Drug 1467 1476	Triplixam
+T24	Drug_dose 1477 1488	5/1,25/5 mg
+R6	Drg Arg1:T23 Arg2:T24	
+R7	Dat Arg1:T20 Arg2:T21	
+T26	Investigation_result 1522 1544	w kontroli 120/80 mmHg
+T25	Symptom 1579 1610	utrata przytomności (4 epizody)
+N8	Reference T25 ICD10:R55	Omdlenie i zapaść
+T27	Negation 1613 1619	Neguje
+T28	Symptom 1620 1629	duszności
+N9	Reference T28 ICD10:R06.0	Duszność
+T29	Symptom 1631 1662	typowe bóle w klatce piersiowej
+N10	Reference T29 ICD10:R07	Ból gardła i w klatce piersiowej
+R8	Neg Arg1:T27 Arg2:T28	
+R9	Neg Arg1:T27 Arg2:T29	
+T30	Treatment 1665 1682	Przebyte operacje
+T31	Treatment 1684 1695	odbarczenie
+T32	Condition 1696 1722	samoistnej odmy opłucnowej
+N11	Reference T32 ICD10:J93.1	Inna samoistna odma opłucnowa
+T33	Condition 1750 1753	WZW
+N12	Reference T33 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T34	Condition 1762 1771	borelioza
+N13	Reference T34 ICD10:A69.2	Choroba z Lyme
+T35	Condition 1779 1787	gruźlica
+N14	Reference T35 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T36	Condition 1793 1797	odra
+N15	Reference T36 ICD10:B05	Odra
+T37	Negation 1756 1757	-
+R10	Neg Arg1:T37 Arg2:T33	
+T38	Negation 1774 1775	-
+R11	Neg Arg1:T38 Arg2:T34	
+T39	Negation 1789 1790	-
+T40	Negation 1799 1800	-
+R12	Neg Arg1:T40 Arg2:T36	
+R13	Neg Arg1:T39 Arg2:T35	
+T41	Condition 1802 1817	Wywiad rodzinny
+A3	Status T41 Family
+T42	Condition 1828 1849	nadciśnienie tętnicze
+A4	Status T42 Family
+N16	Reference T42 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T43	Behaviour 1850 1865	Palenie tytoniu
+T44	Date 1867 1878	od tygodnia
+T45	Negation 1879 1888	nie palił
+T46	Behaviour 1900 1911	paczka/dobę
+T47	Date 1912 1921	od 25 lat
+R14	Dat Arg1:T47 Arg2:T46	
+R15	Dat Arg1:T44 Arg2:T43	
+R16	Neg Arg1:T45 Arg2:T43	
+T48	Behaviour 1922 1933	Inne używki
+T49	Negation 1935 1938	nie
+R17	Neg Arg1:T49 Arg2:T48	
+T50	Condition 1939 1948	Uczulenia
+N19	Reference T50 ICD10:T78.4	Alergia, nieokreślona
+T51	Negation 1950 1956	neguje
+R18	Neg Arg1:T51 Arg2:T50	
+T52	Behaviour 1973 1999	warunki mieszkaniowe dobre
+T53	Drug 2026 2032	Siofor
+T54	Drug_dose 2033 2064	850 mg 1 tabl. rano i wieczorem
+R19	Drg Arg1:T53 Arg2:T54	
+T55	Drug 2065 2074	Triplixam
+T56	Drug_dose 2075 2099	5/1,25/5 mg 1 tabl. rano
+R20	Drg Arg1:T55 Arg2:T56	
+T57	Drug 2100 2108	Actrapid
+T58	Drug_dose 2109 2118	14j-14j-0
+R21	Drg Arg1:T57 Arg2:T58	
+T59	Drug 2119 2134	Lantus SoloStar
+T60	Drug_dose 2135 2145	24j na noc
+R22	Drg Arg1:T59 Arg2:T60	
+T61	Investigation 966 988	Diagnostyka w kierunku
+N17	Reference T43 ICD10:Z72.0	Używanie tytoniu
+N18	Reference T46 ICD10:Z72.0	Używanie tytoniu

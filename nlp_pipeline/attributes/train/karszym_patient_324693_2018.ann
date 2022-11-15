@@ -1,0 +1,58 @@
+T1	Condition 448 469	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Investigation 643 654	diagnostyki
+T3	Symptom 655 680	niestabilnych wartości RR
+T4	Condition 694 696	HA
+N2	Reference T4 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T5	Date 697 713	od około 7-8 lat
+T6	Condition 715 744	początek w ciąży  - III ciąża
+N3	Reference T6 ICD10:O13	Nadciśnienie ciążowe [wywołane ciążą] bez znamiennego białkomoczu
+T7	Symptom 747 795	w domowej kontroli RR 160/110 mmHg, 179/125 mmHg
+T8	Symptom 814 874	dolegliwości bólowe w klatce piersiowej o charakterze kłucia
+N4	Reference T8 ICD10:R07.3	Inne bóle w klatce piersiowej
+T9	Symptom 876 891	Kołatania serca
+N5	Reference T9 ICD10:R00.2	Kołatanie serca
+T10	Symptom 893 901	omdlenia
+N6	Reference T10 ICD10:R55	Omdlenie i zapaść
+T11	Symptom 903 922	utraty przytomności
+T12	Negation 923 929	neguje
+T13	Treatment 951 971	3 x cięcie cesarskie
+A1	Status T13 Historical_Insignificant
+N7	Reference T13 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+T14	Date 973 977	2006
+T15	Date 978 982	2009
+T16	Date 983 987	2010
+T17	Treatment 990 1020	cholecystektomia laparoskopowa
+A2	Status T17 Historical_Insignificant
+N8	Reference T17 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T18	Condition 1061 1082	nadciśnienie tętnicze
+A3	Status T18 Family
+N9	Reference T18 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T19	Negation 1083 1086	Nie
+T20	Behaviour 1087 1091	pali
+N10	Reference T20 ICD10:Z72.0	Używanie tytoniu
+T21	Behaviour 1092 1109	Mieszka z rodziną
+T22	Drug 1116 1127	Betaloc ZOK
+T23	Drug_dose 1128 1136	25 1-0-0
+T24	Drug 1137 1144	Tritace
+T25	Drug_dose 1145 1152	5 1-0-0
+T26	Drug 1153 1161	Spironol
+T27	Drug_dose 1162 1179	25 1-0-0 na czczo
+T28	Drug 1180 1187	Amlozek
+T29	Drug_dose 1188 1195	5 0-0-1
+T30	Investigation 1217 1221	ABPM
+T31	Investigation 1223 1233	Holter-ekg
+T32	Investigation 1235 1245	echo serca
+R1	Dat Arg1:T5 Arg2:T4	
+R2	Dat Arg1:T5 Arg2:T6	
+R3	Neg Arg1:T12 Arg2:T9	
+R4	Neg Arg1:T12 Arg2:T10	
+R5	Neg Arg1:T12 Arg2:T11	
+R6	Dat Arg1:T14 Arg2:T13	
+R7	Dat Arg1:T15 Arg2:T13	
+R8	Dat Arg1:T16 Arg2:T13	
+R9	Neg Arg1:T19 Arg2:T20	
+R10	Drg Arg1:T22 Arg2:T23	
+R11	Drg Arg1:T24 Arg2:T25	
+R12	Drg Arg1:T26 Arg2:T27	
+R13	Drg Arg1:T28 Arg2:T29	

@@ -1,0 +1,108 @@
+T1	Treatment 330 436	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Diabetologicznej, Chirurgii Naczyniowej
+T2	Behaviour 439 477	Dieta cukrzycowa , niskocholesterolowa
+T3	Investigation 481 564	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T4	Investigation 567 615	Systematyczna kontrola ciśnienia tętniczego krwi
+T5	Treatment 618 659	Wskazane systematyczne przyjmowanie leków
+T6	Drug 666 677	Co-Valsacor
+T7	Drug_dose 678 699	80+12,5 mg 1x dz rano
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 701 708	Nonpres
+T9	Drug_dose 709 725	25 mg 1x dz rano
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 727 734	Beto ZK
+T11	Drug_dose 735 764	25 mg 1x dz po 1/2 tabl. rano
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 766 774	Polocard
+T13	Drug_dose 775 796	75 mg 1x dz wieczorem
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Drug 799 806	Zaranta
+T15	Drug_dose 807 828	20 mg 1x dz wieczorem
+R5	Drg Arg1:T14 Arg2:T15	
+T16	Drug 832 845	Dobenox forte
+T17	Drug_dose 846 851	2x dz
+R6	Drg Arg1:T16 Arg2:T17	
+T18	Drug 853 861	Neoparin
+T19	Drug_dose 862 893	40 mg/0,4 ml 1x dz wieczorem sc
+R7	Drg Arg1:T18 Arg2:T19	
+T20	Drug 960 966	Lioton
+T21	Drug_dose 967 1040	1000 2x dz smarować miejsce zmienione chorobowo na lewej kończynie dolnej
+R8	Drg Arg1:T20 Arg2:T21	
+T22	Symptom 1286 1310	Bóle w klatce piersiowej
+T23	Condition 1312 1314	HA
+N2	Reference T23 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T24	Condition 1316 1324	DM t. 2.
+N3	Reference T24 ICD10:E11	Cukrzyca insulinoniezależna
+T25	Condition 1325 1328	CHF
+T26	Drug 1449 1460	Co-Valsacor
+T27	Drug 1463 1470	Nonpres
+T28	Drug 1473 1480	Beto ZK
+T29	Drug 1483 1491	Polocard
+T30	Drug 1494 1501	Zaranta
+T31	Drug 1504 1517	Dobenox forte
+T32	Drug 1520 1528	Neoparin
+T33	Condition 1756 1800	Łagodna niedomykalność zastawki trójdzielnej
+T34	Condition 1802 1829	Choroba niedokrwienna serca
+T35	Condition 1854 1885	Komorowe zaburzenia rytmu serca
+T36	Condition 1919 1952	Pojedyncze pobudzenia nadkomorowe
+T37	Condition 1954 1974	Nadciśninie tętnicze
+N9	Reference T37 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T38	Condition 1976 1996	Hipercholesterolemia
+T39	Condition 1998 2013	Cukrzyca typu 2
+T40	Condition 2030 2083	Zakrzepicę żył powierzchownych kończyndy dolnej lewej
+N12	Reference T40 ICD10:I80.0	Zapalenie i zakrzepowe zapalenie żył powierzchownych kończyn dolnych
+T41	Symptom 2250 2303	nietypowych dolegliwości bólowych w klatce piersiowej
+T42	Symptom 2305 2335	pogorszenia tolerancji wysiłku
+N14	Reference T42 ICD10:R53	Złe samopoczucie i zmęczenie
+T43	Symptom 2341 2361	duszności wysiłkowej
+N15	Reference T43 ICD10:R06.0	Duszność
+T44	Condition 2375 2396	nadciśnienie tętnicze
+N16	Reference T44 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T45	Condition 2398 2411	cukrzyca t. 2
+N17	Reference T45 ICD10:E11	Cukrzyca insulinoniezależna
+N11	Reference T39 ICD10:E11	Cukrzyca insulinoniezależna
+T46	Condition 2440 2462	żylaki kończyn dolnych
+N18	Reference T46 ICD10:I83	Żylaki kończyn dolnych
+T47	Treatment 2478 2486	operacji
+A1	Status T47 Historical_Insignificant
+T48	Date 2517 2532	ok 5-6 lat temu
+R9	Dat Arg1:T48 Arg2:T47	
+T49	Condition 2534 2539	zaćma
+N19	Reference T49 ICD10:H26.9	Zaćma, nieokreślona
+T50	Condition 2545 2551	jaskra
+N20	Reference T50 ICD10:H40	Jaskra
+T51	Condition 2553 2562	Uczulenia
+T52	Negation 2563 2569	neguje
+R10	Neg Arg1:T52 Arg2:T51	
+T53	Behaviour 2571 2580	Papierosy
+T54	Behaviour 2582 2589	alkohol
+N22	Reference T54 ICD10:Z72.1	Używanie alkoholu
+T55	Negation 2590 2596	neguje
+R11	Neg Arg1:T55 Arg2:T53	
+R12	Neg Arg1:T55 Arg2:T54	
+T56	Drug 2607 2620	Dobenox forte
+T57	Drug 2622 2632	Vovalsacor
+T58	Drug 2642 2650	Polocard
+T59	Drug_dose 2633 2640	80/12,5
+R13	Drg Arg1:T57 Arg2:T59	
+T61	Treatment 2412 2438	leczona suplementami diety
+N7	Reference T35 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+N10	Reference T38 ICD10:E78.5	Hiperlipidemia, nieokreślona
+N8	Reference T36 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+N4	Reference T25 ICD10:I50.9	Niewydolność serca, nieokreślona
+N5	Reference T33 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+N6	Reference T34 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+N13	Reference T41 ICD10:R07.3	Inne bóle w klatce piersiowej
+T60	Condition 2487 2516	żylaków prawej kończyn dolnej
+N23	Reference T60 ICD10:I83	Żylaki kończyn dolnych
+R14	Dat Arg1:T48 Arg2:T60	
+T62	Treatment 2014 2027	leczona dietą
+T63	Drug_dose 896 957	do dalszych decyzji po wizycie w Poradni Chirurgi Naczyniowej
+R15	Drg Arg1:T18 Arg2:T63	
+N1	Reference T22 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T64	Condition 1888 1909	pobudzenia pojedyncze
+N24	Reference T64 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+A2	Status T60 Historical_Insignificant
+N25	Reference T51 ICD10:T78.4	Alergia, nieokreślona
+T65	Condition 1911 1916	salwa
+N26	Reference T65 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+N21	Reference T53 ICD10:Z72.0	Używanie tytoniu

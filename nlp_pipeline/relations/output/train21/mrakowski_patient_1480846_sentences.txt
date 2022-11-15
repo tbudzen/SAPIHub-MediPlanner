@@ -1,0 +1,611 @@
+allRelations          : 40
+oks                   : 18
+isRedundantAndRemoveds: 22
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 0
+GOOD / BAD            : 40 / 0
+Sentence 0:
+------------------------------------------------
+Wiek: 46 lat
+------------------------------------------------
+
+
+
+Sentence 1:
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+- kontrola u lekarza POZ
+- dalsza kontrola w Poradni Kardiologicznej
+- regularne przyjmowanie leków:
+
+
+
+Sentence 5:
+Betaloc ZOK 25mg 1x 1/2 tabl/rano
+Magnezin 1x 1 tabl
+Furaginum 50mg 3x 2 tabl przez 2 dni (kontynuacja)
+------------------------------------------------
+
+R1	Drg Arg1:T4 Arg2:T5 << OK >>	Betaloc ZOK -> 25mg 1x 1/2 tabl/rano  <RANK: 3> <info: start[430, 442] <type: RIGHT>>
+R2	Drg Arg1:T4 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Betaloc ZOK -> 1x 1 tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[430, 473] <type: RIGHT>>
+R3	Drg Arg1:T4 Arg2:T9 <<REDUNDANT!!!REMOVED>>	Betaloc ZOK -> 50mg 3x 2 tabl przez 2 dni (kontynuacja) <:REMOVED other first tag between (right):> <RANK: 1> <info: start[430, 493] <type: RIGHT>>
+R4	Drg Arg1:T6 Arg2:T5 <<REDUNDANT!!!REMOVED>>	Magnezin -> 25mg 1x 1/2 tabl/rano <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[464, 442] <type: LEFT>>
+R5	Drg Arg1:T6 Arg2:T7 << OK >>	Magnezin -> 1x 1 tabl  <RANK: 3> <info: start[464, 473] <type: RIGHT>>
+R6	Drg Arg1:T6 Arg2:T9 <<REDUNDANT!!!REMOVED>>	Magnezin -> 50mg 3x 2 tabl przez 2 dni (kontynuacja) <:REMOVED other first tag between (right):> <RANK: 1> <info: start[464, 493] <type: RIGHT>>
+R7	Drg Arg1:T8 Arg2:T5 <<REDUNDANT!!!REMOVED>>	Furaginum -> 25mg 1x 1/2 tabl/rano <:REMOVED other first tag between (left):> <RANK: 1> <info: start[483, 442] <type: LEFT>>
+R8	Drg Arg1:T8 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Furaginum -> 1x 1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[483, 473] <type: LEFT>>
+R9	Drg Arg1:T8 Arg2:T9 << OK >>	Furaginum -> 50mg 3x 2 tabl przez 2 dni (kontynuacja)  <RANK: 3> <info: start[483, 493] <type: RIGHT>>
+
+
+Sentence 6:
+Zastosowane leczenie
+
+
+
+Sentence 7:
+------------------------------------------------
+
+
+
+Sentence 8:
+Bisocard 1,25mg, furagin, LactoDr
+------------------------------------------------
+
+R10	Drg Arg1:T10 Arg2:T11 << OK >>	Bisocard -> 1,25mg  <RANK: 3> <info: start[653, 662] <type: RIGHT>>
+R11	Drg Arg1:T12 Arg2:T11 <<REDUNDANT!!!REMOVED>>	furagin -> 1,25mg <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[670, 662] <type: LEFT>>
+R12	Drg Arg1:T13 Arg2:T11 <<REDUNDANT!!!REMOVED>>	LactoDr -> 1,25mg <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[679, 662] <type: LEFT>>
+
+
+Sentence 9:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 10:
+------------------------------------------------
+ Rozpozanie I: ICD10:I34.9|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wypadanie obu płatków zastawki mitralnej.
+
+
+Sentence 11:
+Umiarkowana niedomykalność zastawki mitralnej.
+
+
+Sentence 12:
+Łagodna niedomykalność zastawki trójdzielnej.
+
+
+Sentence 13:
+Ekstrasystolia komorowa.
+
+
+
+Sentence 14:
+------------------------------------------------
+
+
+
+Sentence 15:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 16:
+Pacjent lat 46, przyjęty do Kliniki z powodu objawów przedomdleniowych przy szybkich, intensywnych wysiłkach.
+
+
+Sentence 17:
+Przy wysiłkach o średnim nasileniu lub długotrwałych bez dolegliwości.
+
+
+Sentence 18:
+Oprócz tego duszności w godz. nocnych i podczas śpiewania, uczucie kołatania serca.
+
+
+Sentence 19:
+Okresowo niespecyficzne bóle w klatce piersiowej.
+
+
+Sentence 20:
+W wywiadzie prolaps płatka zastawki mitralnej (bez dokumentacji), choroba wrzodowa żołądka/dwunastnicy.
+
+
+Sentence 21:
+Dolegliwości nasilają się od kilku lat.
+
+
+
+Sentence 22:
+Neguje: pełne omdlenia, krwawienia, czarne stolce, brunatne wymioty, HA, DM, udar mózgu, zawał serca.   
+
+R13	Neg Arg1:T24 Arg2:T25 << OK >>	Neguje -> pełne omdlenia  <RANK: 3> <info: start[1658, 1666] <type: RIGHT>>
+R14	Neg Arg1:T24 Arg2:T26 << OK >>	Neguje -> krwawienia  <RANK: 2> <info: start[1658, 1682] <type: RIGHT>>
+R15	Neg Arg1:T24 Arg2:T27 << OK >>	Neguje -> czarne stolce  <RANK: 2> <info: start[1658, 1694] <type: RIGHT>>
+R16	Neg Arg1:T24 Arg2:T28 << OK >>	Neguje -> brunatne wymioty  <RANK: 2> <info: start[1658, 1709] <type: RIGHT>>
+R17	Neg Arg1:T24 Arg2:T29 << OK >>	Neguje -> HA  <RANK: 2> <info: start[1658, 1727] <type: RIGHT>>
+R18	Neg Arg1:T24 Arg2:T30 << OK >>	Neguje -> DM  <RANK: 2> <info: start[1658, 1731] <type: RIGHT>>
+R19	Neg Arg1:T24 Arg2:T31 << OK >>	Neguje -> udar mózgu  <RANK: 2> <info: start[1658, 1735] <type: RIGHT>>
+R20	Neg Arg1:T24 Arg2:T32 << OK >>	Neguje -> zawał serca  <RANK: 2> <info: start[1658, 1747] <type: RIGHT>>
+
+
+Sentence 23:
+Przebyte operacje: usunięcia znamion barwnikowych, op. przegrody nosa 2x, artroskopia stawu kolanowego.
+
+
+
+Sentence 24:
+Palenie tytoniu: nie
+Inne używki: nie 
+Uczulenia: ASA - wysypka
+
+R21	Neg Arg1:T39 Arg2:T42 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1884, 1906] <type: RIGHT>>
+R22	Neg Arg1:T39 Arg2:T43 <<REDUNDANT!!!REMOVED>>	nie -> ASA - wysypka <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1884, 1917] <type: RIGHT>>
+R23	Neg Arg1:T39 Arg2:T38 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[1884, 1867] <type: LEFT>>
+R24	Neg Arg1:T39 Arg2:T40 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1884, 1888] <type: RIGHT>>
+R25	Neg Arg1:T41 Arg2:T42 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1901, 1906] <type: RIGHT>>
+R26	Neg Arg1:T41 Arg2:T43 <<REDUNDANT!!!REMOVED>>	nie -> ASA - wysypka <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1901, 1917] <type: RIGHT>>
+R27	Neg Arg1:T41 Arg2:T38 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1901, 1867] <type: LEFT>>
+R28	Neg Arg1:T41 Arg2:T40 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[1901, 1888] <type: LEFT>>
+
+
+Sentence 25:
+Przebyte choroby zakaźne - WZW (-) , borelioza (-), tbc (-), 
+
+R29	Neg Arg1:T47 Arg2:T44 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1988, 1958] <type: LEFT>>
+R30	Neg Arg1:T47 Arg2:T45 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1988, 1968] <type: LEFT>>
+R31	Neg Arg1:T47 Arg2:T46 << OK >>	- -> tbc  <RANK: 3> <info: start[1988, 1983] <type: LEFT>>
+R32	Neg Arg1:T48 Arg2:T44 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1979, 1958] <type: LEFT>>
+R33	Neg Arg1:T48 Arg2:T45 << OK >>	- -> borelioza  <RANK: 3> <info: start[1979, 1968] <type: LEFT>>
+R34	Neg Arg1:T48 Arg2:T46 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1979, 1983] <type: RIGHT>>
+R35	Neg Arg1:T49 Arg2:T44 << OK >>	- -> WZW  <RANK: 3> <info: start[1963, 1958] <type: LEFT>>
+R36	Neg Arg1:T49 Arg2:T45 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1963, 1968] <type: RIGHT>>
+R37	Neg Arg1:T49 Arg2:T46 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1963, 1983] <type: RIGHT>>
+
+
+Sentence 26:
+Stan społeczny: warunki mieszkaniowe dobre, obecnie nie pracuje, wcześniej praca umysłowa.  
+
+R38	Dat Arg1:T53 Arg2:T50 <<REDUNDANT!!!REMOVED>>	wcześniej -> warunki mieszkaniowe dobre <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2058, 2009] <type: LEFT>>
+R39	Dat Arg1:T53 Arg2:T51 <<REDUNDANT!!!REMOVED>>	wcześniej -> obecnie nie pracuje <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2058, 2037] <type: LEFT>>
+R40	Dat Arg1:T53 Arg2:T52 << OK >>	wcześniej -> praca umysłowa  <RANK: 3> <info: start[2058, 2068] <type: RIGHT>>
+
+
+Sentence 27:
+Leków na stałe nie przyjmuje.
+
+
+
+Sentence 28:
+Planowany czas hospitalizacji: 3-5 dni. 
+
+
+
+Sentence 29:
+Planowane badania: badania laboratoryjne, ECHO, ABPM, Holter-EKG, ergospirometria.
+
+
+
+Sentence 30:
+------------------------------------------------
+
+
+
+Sentence 31:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 32:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.45[10^3/ul]
+    
+
+
+Sentence 33:
+RBC Krwinki czerwone:4.54[10^6/ul]
+    
+
+
+Sentence 34:
+HGB Hemoglobina:14.1[g/dl]
+    
+
+
+Sentence 35:
+HCT Hematokryt:40.2[%]
+    
+
+
+Sentence 36:
+MCV wskaźnik czerwonokrw:88.5[fl]
+    
+
+
+Sentence 37:
+MCH wskaźnik czerwonokrw:31.1[pg]
+    
+
+
+Sentence 38:
+MCHC wskaźnik czerwonokr:35.1[g/dl]
+    
+
+
+Sentence 39:
+PLT z morfologii:164[10^3/ul]
+    
+
+
+Sentence 40:
+RDW-SD:39.3[fl]
+    
+
+
+Sentence 41:
+RDW-CV:12.1[%]
+    
+
+
+Sentence 42:
+PDW:9.9[fl]
+    
+
+
+Sentence 43:
+MPV:9.6[fl]
+    
+
+
+Sentence 44:
+P-LCR:21.2[%]
+    
+
+
+Sentence 45:
+PCT (hematokryt płytkowy:0.16[%]
+    
+
+
+Sentence 46:
+NEUTR# wartość bezwzględ:2.64[10^3/ul]
+    
+
+
+Sentence 47:
+NEUTR%:59.4[%]
+    
+
+
+Sentence 48:
+LYMH# wartość bezwzględn:1.21[10^3/ul]
+    
+
+
+Sentence 49:
+LYMPH%:27.2[%]
+    
+
+
+Sentence 50:
+MONO# wartość bezwzględn:0.48[10^3/ul]
+    
+
+
+Sentence 51:
+MONO%:10.8[%]
+    
+
+
+Sentence 52:
+EO# wartość bezwzględna:0.10[10^3/ul]
+    
+
+
+Sentence 53:
+EO%:2.2[%]
+    
+
+
+Sentence 54:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    BASO%:0.4[%]
+    
+
+
+Sentence 55:
+NRBC %:0.2[%]
+    
+
+
+Sentence 56:
+NRBC #:0.01[10^3/ul]
+
+
+
+Sentence 57:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 58:
+Czas protrombinowy:12.7[sek]
+    
+
+
+Sentence 59:
+Wskaźnik PT:86.6[%]
+    
+
+
+Sentence 60:
+INR:1.15
+D-dimer
+
+
+Sentence 61:
+- test ilościowy: D-dimer - test ilościowy:167[ng/ml]
+
+
+
+Sentence 62:
+Badanie ogólne moczu
+    
+
+
+Sentence 63:
+barwa:żółty[ ]
+    
+
+
+Sentence 64:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 65:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 66:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 67:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 68:
+kwas askrobinowy:40 mg/dl[ ]
+    
+
+
+Sentence 69:
+ciężar właściwy:1.021[ ]
+    
+
+
+Sentence 70:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 71:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 72:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 73:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 74:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 75:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 76:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 77:
+leukocyty:4 /ul[ul]
+    śluz:dość liczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 78:
+TSH: TSH:0.51[uIU/ml]
+
+
+
+Sentence 79:
+FT3: FT3:2.90[pg/ml]
+
+
+
+Sentence 80:
+FT4: FT4:1.45[ng/dl]
+
+
+
+Sentence 81:
+Troponina T: Troponina T:3.1[pg/ml]
+
+
+
+Sentence 82:
+ALAT: ALAT:15[U/L]
+ASPAT: ASPAT:21[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 83:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 84:
+Potas (K): Potas:4.3[mmol/L]
+
+
+
+Sentence 85:
+Kreatynina + GFR
+    
+
+
+Sentence 86:
+Kreatynina w surowicy:0.58[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 87:
+MDRD ze stan:150.8[ml/min/1,73 m^2]
+
+
+
+Sentence 88:
+Magnez: Magnez:0.87[mmol/L]
+
+
+
+Sentence 89:
+Mocznik: Mocznik:27[mg/dl]
+
+
+
+Sentence 90:
+Kwas moczowy: Kwas moczowy:3.5[mg/dl]
+
+
+
+Sentence 91:
+Lipidogram
+    
+
+
+Sentence 92:
+Cholesterol całkowity:122[mg/dl]
+    
+
+
+Sentence 93:
+Cholesterol HDL:33[mg/dl]
+    
+
+
+Sentence 94:
+Cholestrol LDL:89[mg/dl]
+    
+
+
+Sentence 95:
+Triglicerydy:49[mg/dl]
+    
+
+
+Sentence 96:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:86[mg/dl]
+
+
+
+Sentence 97:
+NT-proBNP surowica: NT-proBNP w surowicy:41[pg/ml]
+
+
+
+Sentence 98:
+------------------------------------------------
+
+
+
+Sentence 99:
+ICD10
+------------------------------------------------
+I34.0
+I34.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 100:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 101:
+89.501
+89.502
+C55
+A01
+I81
+89.41
+G21
+L43
+O61
+M87
+G49
+N45
+L69
+O55
+I17
+M45
+I19
+O35
+M37
+
+
+
+Sentence 102:
+N13
+
+
+
+Sentence 103:
+N24
+88.721
+O69
+88.722
+------------------------------------------------
+
+

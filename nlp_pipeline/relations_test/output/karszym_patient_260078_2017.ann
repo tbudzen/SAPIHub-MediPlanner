@@ -1,0 +1,148 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 360 392	okresowa kontrola kardiologiczna
+T3	Investigation 395 424	okresowa kontrola lipidogramu
+T4	Date 426 447	pierwsza za 6 tygodni
+T5	Investigation 450 477	oznaczeniem aminotransferaz
+T6	Behaviour 479 504	dieta niskocholesterolowa
+T7	Drug 539 547	Polocard
+T8	Drug 573 580	Nebilet
+T9	Drug 606 613	Tritace
+T10	Drug 634 645	Diuresin SR
+T11	Drug 660 666	Atoris
+T12	Drug 693 696	DIH
+T13	Drug_dose 548 571	75 mg 1 tabl. wieczorem
+T14	Drug_dose 581 604	5 mg 1 i 1/2 tabl. rano
+T15	Drug_dose 614 632	10 mg 1 tabl. rano
+T16	Drug_dose 646 658	1 tabl. rano
+T17	Drug_dose 667 690	20 mg 1 tabl. wieczorem
+T18	Drug_dose 697 728	500 mg 1 tabl. rano i wieczorem
+T19	Condition 973 1014	Przewlekła rozkurczowa niewydolność serca
+N1	Reference T19 ICD10:I50.9	Niewydolność serca, nieokreślona
+T20	Symptom 1017 1034	II klasie wg NYHA
+N2	Reference T20 ICD10:I50	Niewydolność serca
+T21	Condition 1036 1075	Nadciśnienie tętnicze II kl. wg ESC/ESH
+N3	Reference T21 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T22	Condition 1077 1084	Otyłość
+N4	Reference T22 ICD10:E66.9	Otyłość, nieokreślona
+R1	Dat Arg1:T4 Arg2:T3	
+R2	Dat Arg1:T4 Arg2:T5	
+R3	Drg Arg1:T7 Arg2:T13	
+R4	Drg Arg1:T8 Arg2:T14	
+R5	Drg Arg1:T9 Arg2:T15	
+R6	Drg Arg1:T10 Arg2:T16	
+R7	Drg Arg1:T11 Arg2:T17	
+T23	Condition 1086 1109	Hiperlipidemia mieszana
+N5	Reference T23 ICD10:E78.2	
+T24	Behaviour 1111 1121	Nikotynizm
+N6	Reference T24 ICD10:Z72.0	Używanie tytoniu
+T25	Condition 1123 1138	Miażdżyca aorty
+N7	Reference T25 ICD10:I70.0	Miażdżyca aorty
+T26	Condition 1140 1162	Żylaki kończyn dolnych
+A1	Status T26 Historical_Insignificant
+N8	Reference T26 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T27	Treatment 1172 1190	cholecystetektomii
+N9	Reference T27 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+A2	Status T27 Historical_Insignificant
+T28	Condition 1192 1211	Torbiel nerki lewej
+T29	Treatment 1221 1241	operacyjnym leczeniu
+N10	Reference T29 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T30	Condition 1242 1267	wodonercza prawostronnego
+T31	Condition 1277 1283	kamicy
+T32	Condition 1285 1317	Zmiany zwyrodnieniowe kręgosłupa
+A3	Status T32 Historical_Insignificant
+N13	Reference T32 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T33	Symptom 1492 1535	uczucia zatykania przy wysiłkach fizycznych
+T34	Symptom 1537 1550	bólów nocnych
+N14	Reference T34 ICD10:R52.9	Ból, nieokreślony
+T35	Date 1552 1568	ostatnio w 2016r
+T36	Symptom 1571 1606	okresowych napadowych kołatań serca
+N15	Reference T36 ICD10:R00.2	Kołatanie serca
+T37	Condition 1621 1648	zmiany zwyrodnieniowe kolan
+A4	Status T37 Historical_Insignificant
+N16	Reference T37 ICD10:M17.9	Gonartroza, nieokreślona
+T38	Condition 1650 1660	kręgosłupa
+A5	Status T38 Historical_Insignificant
+N17	Reference T38 ICD10:M16.9	Koksartroza, nieokreślona
+T39	Treatment 1670 1678	operacje
+N18	Reference T39 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T40	Condition 1680 1702	żylaki kończyn dolnych
+N19	Reference T40 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T41	Date 1704 1708	2004
+T42	Treatment 1719 1735	cholecystektomii
+A6	Status T42 Historical_Insignificant
+N20	Reference T42 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T43	Date 1737 1742	1979r
+T44	Condition 1745 1768	wodonercze prawostronne
+T45	Condition 1778 1784	kamicy
+T46	Date 1786 1791	2005r
+N22	Reference T45 ICD10:N20.9	Kamica moczowa, nieokreślona
+N12	Reference T31 ICD10:N20.9	Kamica moczowa, nieokreślona
+T47	Condition 1829 1851	żółtaczka wszczepienna
+A7	Source T47 Declared
+N23	Reference T47 ICD10:R17	Żółtaczka, nieokreślona
+T48	Condition 1854 1863	borelioza
+N24	Reference T48 ICD10:A69.2	Choroba z Lyme
+T49	Negation 1866 1876	nie podaje
+T50	Condition 1901 1904	CAD
+A8	Status T50 Family
+N25	Reference T50 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T51	Behaviour 1906 1941	Palenie tytoniu: do 10 papierosów/d
+N26	Reference T51 ICD10:Z72.0	Używanie tytoniu
+T52	Date 1943 1955	ponad 40 lat
+T53	Behaviour 1956 1981	Inne używki: okazjonalnie
+A9	Status T53 Historical_Insignificant
+N27	Reference T53 ICD10:Z72	Problemy związane ze stylem życia
+T54	Condition 1982 1991	Uczulenia
+N28	Reference T54 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T55	Negation 1993 2003	nie podaje
+T56	Behaviour 2022 2034	mieszka sama
+T57	Behaviour 2036 2044	2 dzieci
+T58	Drug 2051 2062	Diuresin SR
+T59	Drug_dose 2063 2075	1 tabl. rano
+T60	Drug 2076 2083	Nebilet
+T61	Drug 2102 2109	Tritace
+T62	Drug 2129 2137	Polocard
+T63	Drug 2162 2166	Tran
+T64	Drug_dose 2084 2101	5 mg 1 tabl. rano
+T65	Drug_dose 2110 2128	10 mg 1 tabl. rano
+T66	Drug_dose 2138 2161	75 mg 1 tabl. wieczorem
+T67	Drug_dose 2167 2182	1 tabl. 1 x dz.
+R8	Drg Arg1:T58 Arg2:T59	
+R9	Drg Arg1:T60 Arg2:T64	
+R10	Drg Arg1:T61 Arg2:T65	
+R11	Drg Arg1:T62 Arg2:T66	
+R12	Drg Arg1:T63 Arg2:T67	
+R13	Neg Arg1:T55 Arg2:T54	
+R14	Dat Arg1:T52 Arg2:T51	
+R15	Neg Arg1:T49 Arg2:T48	
+R16	Neg Arg1:T49 Arg2:T47	
+R17	Dat Arg1:T41 Arg2:T39	
+R18	Dat Arg1:T41 Arg2:T40	
+R19	Dat Arg1:T43 Arg2:T42	
+R20	Dat Arg1:T46 Arg2:T45	
+R21	Dat Arg1:T46 Arg2:T44	
+R22	Dat Arg1:T46 Arg2:T39	
+R23	Dat Arg1:T35 Arg2:T34	
+N11	Reference T30 ICD10:N13.3	Inne i nieokreślone wodonercze
+N21	Reference T44 ICD10:N13.3	Inne i nieokreślone wodonercze
+R1	Drg Arg1:T7 Arg2:T13
+R10	Drg Arg1:T10 Arg2:T16
+R105	Dat Arg1:T52 Arg2:T51
+R106	Dat Arg1:T52 Arg2:T53
+R11	Drg Arg1:T11 Arg2:T17
+R131	Drg Arg1:T62 Arg2:T65
+R132	Drg Arg1:T63 Arg2:T67
+R14	Drg Arg1:T12 Arg2:T18
+R15	Dat Arg1:T35 Arg2:T33
+R16	Dat Arg1:T35 Arg2:T34
+R17	Dat Arg1:T35 Arg2:T36
+R22	Neg Arg1:T49 Arg2:T48
+R40	Neg Arg1:T55 Arg2:T54
+R5	Dat Arg1:T4 Arg2:T3
+R51	Drg Arg1:T58 Arg2:T59
+R56	Drg Arg1:T61 Arg2:T64
+R67	Dat Arg1:T41 Arg2:T42
+R71	Dat Arg1:T43 Arg2:T44
+R8	Drg Arg1:T8 Arg2:T14
+R86	Dat Arg1:T46 Arg2:T45
+R9	Drg Arg1:T9 Arg2:T15

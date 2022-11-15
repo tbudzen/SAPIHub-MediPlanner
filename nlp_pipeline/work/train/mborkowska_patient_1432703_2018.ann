@@ -1,0 +1,65 @@
+T1	Drug 1987 1995	Euthyrox
+T2	Drug_dose 1996 2010	N50 1 x 1 tabl
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 1948 1955	Sintrom
+T4	Drug_dose 1956 1983	4/3/3/4 mg w cyklu dziennym
+R2	Drg Arg1:T3 Arg2:T4	
+T5	Symptom 1917 1938	obrzęk twarzy i warg.
+N1	Reference T5 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T6	Drug 1908 1914	duomox
+T7	Condition 1898 1905	Alergie
+N2	Reference T7 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R3	Alg Arg1:T7 Arg2:T6	
+T8	Negation 1887 1896	negatywny
+T9	Condition 1871 1886	Wywiad rodzinny
+A1	Status T9 Family
+R4	Neg Arg1:T8 Arg2:T9	
+T10	Negation 1863 1869	neguje
+T11	Behaviour 1856 1862	Nałogi
+N3	Reference T11 ICD10:Z72	Problemy związane ze stylem życia
+R5	Neg Arg1:T10 Arg2:T11	
+T12	Treatment 1831 1854	w trakcie suplementacji
+T13	Condition 1793 1830	poamiodaronowa niedoczynność tarczycy
+N4	Reference T13 ICD10:E03.8	Inne określone postacie niedoczynności tarczycy
+T14	Condition 450 475	Wrodzona stenoza aortalna
+N5	Reference T14 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T15	Condition 478 494	niedomykalnością
+N6	Reference T15 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T16	Treatment 504 545	wszczepieniu sztucznej zastawki aortalnej
+T17	Date 547 551	1998
+R6	Dat Arg1:T17 Arg2:T16	
+T18	Treatment 576 601	komissurotomii aortalnej.
+T19	Condition 602 625	Ekstrasystolia komorowa
+N7	Reference T19 ICD10:I47.2	Częstoskurcz komorowy
+T20	Condition 627 647	Hipercholesterolemia
+T21	Condition 649 686	Poamiodaronowa niedoczynność tarczycy
+N9	Reference T21 ICD10:E03.8	Inne określone postacie niedoczynności tarczycy
+T22	Drug 807 814	Sintrom
+T23	Drug 816 824	Euthyrox
+T24	Treatment 935 957	kontrola u lekarza POZ
+T25	Investigation 970 982	kontrola INR
+T26	Behaviour 985 1010	dieta niskocholesterolowa
+T27	Investigation 1013 1033	kontrola lipidogramu
+T28	Date 1034 1043	za 3 m-ce
+R7	Dat Arg1:T28 Arg2:T27	
+T29	Treatment 1046 1102	ponowna hospitalizacja celem oceny skuteczności leczenia
+T30	Date 1103 1119	za ok 4 tygodnie
+R8	Dat Arg1:T30 Arg2:T29	
+T31	Treatment 1294 1335	wszczepieniu sztucznej zastawki aortalnej
+T32	Date 1336 1347	w 1998 roku
+R9	Dat Arg1:T32 Arg2:T31	
+T33	Condition 1357 1406	wrodzonej wady serca pod postacią ciasnej stenozy
+N10	Reference T33 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T34	Condition 1409 1447	umiarkowanej niedomykalności aortalnej
+N11	Reference T34 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T35	Treatment 1466 1479	komisurotomii
+T36	Symptom 1525 1539	zawroty głowy,
+N12	Reference T36 ICD10:R42	Zawroty głowy i odurzenie
+T37	Symptom 1540 1563	epizody kołatania serca
+N13	Reference T37 ICD10:R00.2	Kołatanie serca
+T38	Symptom 1565 1608	niewielkie ograniczenie tolerancji wysiłku.
+N14	Reference T38 ICD10:R53	Złe samopoczucie i zmęczenie
+T39	Investigation 1630 1641	badani ECHO
+T40	Investigation_result 1642 1770	zaobserwowano utrzymujący się wysoki gradient przezzastawkowy z możliwością dysfunkcji protezy -(dokładna ocena niemożliwa w TTE
+R10	Inv Arg1:T39 Arg2:T40	
+N8	Reference T20 ICD10:E78.0	Czysta hipercholesterolemia

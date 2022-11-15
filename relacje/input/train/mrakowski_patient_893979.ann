@@ -1,0 +1,101 @@
+T1	Treatment 461 483	kontrola u lekarza POZ
+T2	Behaviour 486 511	dieta niskocholesterolowa
+T3	Investigation 513 533	kontrola lipidogramu
+T4	Date 534 543	za 3 m-ce
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Treatment 546 568	regularne przyjmowanie
+T6	Drug 570 581	Betaloc ZOK
+T7	Drug_dose 582 601	25mg 1x 1 tabl/rano
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Condition 796 840	Łagodna niedomykalność zastawki trójdzielnej
+N1	Reference T8 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T9	Symptom 842 857	Kołatania serca
+N2	Reference T9 ICD10:R00.2	Kołatanie serca
+T10	Condition 859 879	Hipercholesterolemia
+N3	Reference T10 ICD10:E78.0	Czysta hipercholesterolemia
+T11	Treatment 1060 1073	histerektomii
+T12	Date 1148 1155	10.2016
+R3	Dat Arg1:T12 Arg2:T11	
+T13	Condition 1158 1189	powikłaną infekcją pooperacyjną
+N4	Reference T13 ICD10:T81.4	Zakażenie po zabiegu, niesklasyfikowane gdzie indziej
+T14	Investigation_result 1207 1247	wyhodowano wówczas Staphylococcus aureus
+T15	Investigation 1193 1206	antybiogramie
+R4	Inv Arg1:T15 Arg2:T14	
+T16	Symptom 1279 1311	duszności wysiłkowej do NYHA III
+N5	Reference T16 ICD10:R06.0	Duszność
+T17	Symptom 1313 1329	łatwego męczenia
+N6	Reference T17 ICD10:R53	Złe samopoczucie i zmęczenie
+T18	Symptom 1335 1363	uczucia szybkiej akcji serca
+N7	Reference T18 ICD10:R00.0	Tachykardia, nieokreślona
+T19	Treatment 1403 1421	antybiotykoterapii
+T20	Symptom 1480 1532	okresowo występującą duszność bez związku z wys. fiz
+N8	Reference T20 ICD10:R06.0	Duszność
+T21	Symptom 1534 1550	ucisk zamostkowy
+N9	Reference T21 ICD10:R07.3	Inne bóle w klatce piersiowej
+T22	Negation 1569 1575	Neguje
+T23	Symptom 1577 1589	zasłabnięcia
+T24	Symptom 1591 1599	omdlenia
+N10	Reference T24 ICD10:R55	Omdlenie i zapaść
+T25	Condition 1601 1603	HA
+N11	Reference T25 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T26	Condition 1605 1607	DM
+N12	Reference T26 ICD10:E14	Cukrzyca nieokreślona
+T27	Condition 1609 1619	udar mózgu
+N13	Reference T27 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T28	Condition 1621 1632	zawał serca
+N14	Reference T28 ICD10:I25.2	Przebyty zawał serca
+T29	Treatment 1637 1654	Przebyte operacje
+R5	Neg Arg1:T22 Arg2:T23	
+R6	Neg Arg1:T22 Arg2:T24	
+R7	Neg Arg1:T22 Arg2:T25	
+R8	Neg Arg1:T22 Arg2:T26	
+R9	Neg Arg1:T22 Arg2:T27	
+R10	Neg Arg1:T22 Arg2:T28	
+T30	Behaviour 1659 1674	Palenie tytoniu
+N15	Reference T30 ICD10:Z72.0	Używanie tytoniu
+T31	Negation 1676 1679	nie
+R11	Neg Arg1:T31 Arg2:T30	
+T32	Behaviour 1681 1692	Inne używki
+T33	Negation 1694 1697	nie
+R12	Neg Arg1:T33 Arg2:T32	
+T34	Condition 1699 1708	Uczulenia
+T35	Negation 1710 1713	nie
+R13	Neg Arg1:T35 Arg2:T34	
+T36	Condition 1742 1745	WZW
+N16	Reference T36 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T37	Condition 1752 1761	borelioza
+N17	Reference T37 ICD10:A69.2	Choroba z Lyme
+T38	Condition 1769 1772	tbc
+N18	Reference T38 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T39	Condition 1778 1782	odra
+N19	Reference T39 ICD10:B05	Odra
+T40	Treatment 1788 1806	szczepiona na odrę
+T41	Negation 1784 1785	-
+R14	Neg Arg1:T41 Arg2:T39	
+T42	Negation 1774 1775	-
+R15	Neg Arg1:T42 Arg2:T38	
+T43	Negation 1764 1765	-
+R16	Neg Arg1:T43 Arg2:T37	
+T44	Negation 1747 1748	-
+R17	Neg Arg1:T44 Arg2:T36	
+T45	Behaviour 1829 1855	warunki mieszkaniowe dobre
+T46	Behaviour 1857 1879	pracuje - pielęgniarka
+T47	Condition 1916 1947	zapalenia ścięgna lewego kolana
+N20	Reference T47 ICD10:M67.8	Inne określone choroby błony maziowej i ścięgien
+T48	Drug 1984 1989	Olfen
+T49	Drug 2002 2010	Structum
+T50	Drug_dose 1990 1999	75SR 2xdz
+R18	Drg Arg1:T48 Arg2:T50	
+T51	Drug_dose 2011 2022	500 mg 2xdz
+R19	Drg Arg1:T49 Arg2:T51	
+T52	Investigation 2087 2108	badania laboratoryjne
+T53	Investigation 2110 2125	próba wysiłkowa
+T54	Investigation 2127 2131	ECHO
+T55	Investigation 2133 2137	ABPM
+A1	Status T11 Historical_Insignificant
+T56	Condition 1083 1103	guza jajnika prawego
+N21	Reference T56 ICD10:D39.1	Jajnik
+T57	Condition 1106 1146	mięśniaka gładkiego śródściennego macicy
+N22	Reference T57 ICD10:D25.1	Mięśniak gładkokomórkowy śródścienny macicy
+R20	Dat Arg1:T12 Arg2:T57	
+R21	Dat Arg1:T12 Arg2:T56	

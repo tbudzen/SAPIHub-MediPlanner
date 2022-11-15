@@ -1,0 +1,119 @@
+T1	Treatment 331 353	kontrola u lekarza POZ
+T2	Treatment 356 415	kontrola wartości ciśnienia tętniczego w warunkach domowych
+T3	Treatment 416 441	i ew modyfikacja leczenia
+T4	Treatment 444 485	dalsza kontrola w Poradni Kardiologicznej
+T5	Investigation 507 537	scyntygrafii mięśnia sercowego
+T6	Investigation 540 563	kontrolne EKG metodą Ho
+T7	Drug 683 689	Bibloc
+T8	Drug 691 698	Pradaxa
+T9	Drug 700 708	Suvardio
+T10	Drug 710 717	Potazek
+T11	Drug 719 727	Magnezin
+T12	Drug 729 744	Venoruton forte
+T13	Condition 962 1006	Łagodna niedomykalność zastawki trójdzielnej
+N1	Reference T13 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T14	Condition 1008 1057	Przetrwałe migotanie przedsionków w I klasie EHRA
+N2	Reference T14 ICD10:I48	Migotanie i trzepotanie przedsionków
+T15	Condition 1059 1093	Nadciśnienie tętnicze I st wg PTNT
+N3	Reference T15 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T16	Condition 1095 1128	Hiperlipidemia w trakcie leczenia
+N4	Reference T16 ICD10:E78.2	Hiperlipidemia mieszana
+T18	Drug 1129 1136	statyną
+T19	Condition 1138 1161	Guzki krwawnicze odbytu
+A1	Status T19 Historical_Insignificant
+N5	Reference T19 ICD10:I84.9	Hemoroidy, nieokreślone, bez powikłań
+T20	Behaviour 1163 1180	Nikotynizm czynny
+T21	Condition 1182 1215	Choroba zwyrodnieniowa kręgosłupa
+N6	Reference T21 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T22	Symptom 1431 1462	ograniczenie tolerancji wysiłku
+T23	Symptom 1493 1528	okresowe kłucia w klatce piersiowej
+N7	Reference T23 ICD10:R07.3	Inne bóle w klatce piersiowej
+T24	Condition 1551 1600	Przetrwałe migotanie przedsionków w I klasie EHRA
+N8	Reference T24 ICD10:I48	Migotanie i trzepotanie przedsionków
+T25	Condition 1602 1623	Nadciśnienie tętnicze
+N9	Reference T25 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T26	Condition 1625 1657	Hiperipidemia w trakcie leczenia
+N10	Reference T26 ICD10:E78.2	Hiperlipidemia mieszana
+T28	Drug 1658 1665	statyną
+T29	Condition 1667 1690	Guzki krwawnicze odbytu
+A2	Status T29 Historical_Insignificant
+N11	Reference T29 ICD10:I84.9	Hemoroidy, nieokreślone, bez powikłań
+T30	Behaviour 1692 1724	Nikotynizm czynny (4 paczkolata)
+T31	Condition 1726 1759	Choroba zwyrodnieniowa kręgosłupa
+N12	Reference T31 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T32	Symptom 1761 1788	Przebarwienia skóry podudzi
+T33	Negation 1790 1796	Neguje
+T34	Symptom 1798 1810	zasłabnięcia
+T35	Symptom 1812 1820	omdlenia
+N13	Reference T35 ICD10:R55	Omdlenie i zapaść
+T36	Symptom 1822 1832	krwawienia
+T37	Symptom 1834 1847	czarne stolce
+N14	Reference T37 ICD10:K92.1	Stolce smołowate
+T38	Symptom 1849 1865	brunatne wymioty
+N15	Reference T38 ICD10:K92.0	Wymioty krwawe
+T39	Condition 1867 1883	chorobę wrzodową
+N16	Reference T39 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T40	Symptom 1885 1899	duszność nocną
+N17	Reference T40 ICD10:R06.0	Duszność
+T41	Symptom 1901 1916	obrzęki podudzi
+N18	Reference T41 ICD10:R60.0	Obrzęk zlokalizowany
+T42	Symptom 1918 1942	bóle w klatce piersiowej
+N19	Reference T42 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T43	Symptom 1944 1959	kołatania serca
+N20	Reference T43 ICD10:R00.2	Kołatanie serca
+T44	Treatment 1962 1979	Przebyte operacje
+N21	Reference T44 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T45	Negation 1980 1986	neguje
+R1	Neg Arg1:T45 Arg2:T44	
+R2	Neg Arg1:T33 Arg2:T34	
+R3	Neg Arg1:T33 Arg2:T35	
+R4	Neg Arg1:T33 Arg2:T36	
+R5	Neg Arg1:T33 Arg2:T37	
+R6	Neg Arg1:T33 Arg2:T38	
+R7	Neg Arg1:T33 Arg2:T39	
+R8	Neg Arg1:T33 Arg2:T40	
+R9	Neg Arg1:T33 Arg2:T41	
+R10	Neg Arg1:T33 Arg2:T42	
+R11	Neg Arg1:T33 Arg2:T43	
+T46	Behaviour 1987 2036	Palenie tytoniu: nikotynizm czynny (4 paczkolata)
+T47	Behaviour 2037 2048	Inne używki
+T48	Negation 2050 2056	neguje
+T49	Condition 2057 2066	Uczulenia
+N22	Reference T49 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T50	Negation 2068 2074	neguje
+R12	Neg Arg1:T48 Arg2:T47	
+R13	Neg Arg1:T50 Arg2:T49	
+T51	Condition 2102 2105	WZW
+N23	Reference T51 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T52	Condition 2112 2121	borelioza
+N24	Reference T52 ICD10:A69.2	Choroba z Lyme
+T53	Condition 2127 2130	tbc
+N25	Reference T53 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T54	Condition 2136 2140	odra
+N26	Reference T54 ICD10:B05	Odra
+T55	Condition 2146 2160	kontakt z odrą
+N27	Reference T55 ICD10:Z20.9	Styczność i narażenie na nieokreślone choroby zakaźne
+T56	Negation 2106 2109	(-)
+T57	Negation 2122 2125	(-)
+T58	Negation 2141 2144	(-)
+T59	Negation 2131 2134	(-)
+T60	Negation 2161 2164	(-)
+R14	Neg Arg1:T56 Arg2:T51	
+R15	Neg Arg1:T57 Arg2:T52	
+R16	Neg Arg1:T59 Arg2:T53	
+R17	Neg Arg1:T58 Arg2:T54	
+R18	Neg Arg1:T60 Arg2:T55	
+T61	Behaviour 2181 2207	warunki mieszkaniowe dobre
+T62	Investigation 2312 2333	badania laboratoryjne
+T63	Investigation 2335 2339	ECHO
+T64	Investigation 2341 2359	EKG metodą Holtera
+T65	Investigation 2361 2365	ABPM
+T66	Investigation 2367 2382	próba wysiłkowa
+T67	Drug 2235 2251	Leki: jak w IKZL
+N28	Reference T20 ICD10:Z72.0	Używanie tytoniu
+N29	Reference T30 ICD10:Z72.0	Używanie tytoniu
+A3	Status T31 Historical_Insignificant
+N30	Reference T46 ICD10:Z72.0	Używanie tytoniu
+A4	Status T21 Historical_Insignificant
+T17	Symptom 1466 1482	II klasy wg NYHA
+N31	Reference T17 ICD10:I50	Niewydolność serca

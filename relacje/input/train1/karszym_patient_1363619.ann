@@ -1,0 +1,21 @@
+T1	Condition 438 504	Wrodzona wada serca pod postacią wspólnego pnia tętniczego typ III
+N1	Reference T1 ICD10:Q20.0	Wspólny pień tętniczy
+T2	Condition 507 529	przerwanego łuku aorty
+N2	Reference T2 ICD10:Q25.2	Zarośnięcie aorty
+T3	Treatment 542 561	plastyce łuku aorty
+N3	Reference T3 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T4	Date 594 605	29.07.2016r
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Symptom 610 616	Sinica
+N4	Reference T5 ICD10:R23.0	Sinica
+T6	Condition 756 775	wrodzoną wadą serca
+T7	Symptom 852 867	Stan dość dobry
+T8	Date 868 880	Tydzień temu
+T9	Drug 900 909	Amotaksem
+T10	Condition 919 944	infekcji dróg oddechowych
+R2	Dat Arg1:T8 Arg2:T9	
+T11	Negation 881 899	zakończyła kurację
+R3	Neg Arg1:T11 Arg2:T9	
+T12	Treatment 564 591	przewężeniu tętnic płucnych
+N5	Reference T12 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R4	Dat Arg1:T4 Arg2:T12	

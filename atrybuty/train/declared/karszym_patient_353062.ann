@@ -1,0 +1,139 @@
+T1	Condition 449 505	Łagodna niedomykalność zastawki aortalnej i trójdzielnej
+T2	Symptom 507 540	Gorączki o nieustalonej etiologii
+N1	Reference T2 ICD10:R50.9	Gorączka, nieokreślona
+T3	Condition 565 597	infekcyjnego zapalenie wsierdzia
+N2	Reference T3 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T4	Negation 598 607	negatywna
+R1	Neg Arg1:T4 Arg2:T3	
+T5	Condition 609 637	Śródmiąższowe zapalenie płuc
+N3	Reference T5 ICD10:J84.9	Choroba tkanki śródmiąższowej płuc, nieokreślona
+T6	Condition 639 648	Borelioza
+N4	Reference T6 ICD10:A69.2	Choroba z Lyme
+T7	Condition 650 693	Przewlekłe zapalenie błony śluzowej żołądka
+N5	Reference T7 ICD10:K29.5	Przewlekłe zapalenie żołądka, nieokreślone
+T8	Condition 695 723	Refluks żołądkowo-przełykowy
+A1	Status T8 Historical_Insignificant
+N6	Reference T8 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T9	Behaviour 725 747	Nikotynizm w wywiadzie
+N7	Reference T9 ICD10:Z72.0	Używanie tytoniu
+T10	Treatment 757 767	operacjach
+A2	Status T10 Historical_Insignificant
+N8	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T11	Condition 785 799	Torbiele nerek
+A3	Status T11 Historical_Insignificant
+T12	Treatment 921 983	dalsza opieka u lekarza POZ oraz Poradni Gastroenterologicznej
+T13	Treatment 997 1045	pilna hospitalizacja w Oddziale Chorób Zakaźnych
+T14	Treatment 1051 1084	konsultacja w Poradni Chorób Płuc
+T15	Behaviour 1110 1149	Dieta lekkostrawna, niskocholesterolowa
+T16	Investigation 1156 1247	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T17	Investigation 1254 1302	Systematyczna kontrola ciśnienia tętniczego krwi
+T18	Negation 1308 1313	Zakaz
+T19	Behaviour 1314 1329	palenia tytoniu
+N9	Reference T19 ICD10:Z72.0	Używanie tytoniu
+R2	Neg Arg1:T18 Arg2:T19	
+T20	Behaviour 1334 1362	Regularna aktywność fizyczna
+T21	Drug 1373 1384	Pantoprazol
+T22	Drug 1405 1413	Ranigast
+T23	Drug 1441 1457	Doxycyclinum TZF
+T24	Date 1475 1496	przez min. 3 tygodnie
+T25	Drug 1535 1544	Nystatyna
+T26	Date 1561 1582	przez min. 3 tygodnie
+T27	Drug 1621 1627	Lakcid
+T28	Drug_dose 1385 1403	20 mg 1 tabl. rano
+T29	Drug_dose 1414 1439	150 mg doraźnie wieczorem
+T30	Drug_dose 1458 1473	100 mg 2x1 tabl
+T31	Drug_dose 1545 1560	500000 j.m. 3x1
+T32	Drug_dose 1628 1637	3x1 kaps.
+T33	Date 1638 1659	przez min. 3 tygodnie
+R3	Drg Arg1:T21 Arg2:T28	
+R4	Drg Arg1:T22 Arg2:T29	
+R5	Drg Arg1:T23 Arg2:T30	
+R6	Dat Arg1:T24 Arg2:T23	
+R7	Drg Arg1:T25 Arg2:T31	
+R8	Dat Arg1:T26 Arg2:T25	
+R9	Drg Arg1:T27 Arg2:T32	
+R10	Dat Arg1:T33 Arg2:T27	
+T34	Date 1883 1892	od lutego
+T35	Symptom 1893 1920	statnów pod- i gorączkowych
+N10	Reference T35 ICD10:R50.9	Gorączka, nieokreślona
+R11	Dat Arg1:T34 Arg2:T35	
+T36	Date 1923 1932	w 02.2019
+T37	Condition 1942 1956	zapalenie płuc
+N11	Reference T37 ICD10:J18.9	Zapalenie płuc, nieokreślone
+T38	Treatment 1958 1985	antybiotykoterapia 2 lekami
+T39	Date 2007 2027	przed 2,5 tygodniami
+R12	Dat Arg1:T36 Arg2:T37	
+R13	Dat Arg1:T36 Arg2:T38	
+T40	Treatment 1987 1995	ostatnia
+T41	Negation 1996 2006	zakończona
+R14	Neg Arg1:T41 Arg2:T40	
+R15	Dat Arg1:T39 Arg2:T40	
+T42	Condition 2051 2094	przewlekłe zapalenie błony śluzowej żołądka
+N12	Reference T42 ICD10:K29.5	Przewlekłe zapalenie żołądka, nieokreślone
+T43	Condition 2096 2107	refluks ż-p
+N13	Reference T43 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T44	Treatment 2117 2125	operacje
+A5	Status T44 Historical_Insignificant
+N14	Reference T44 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T45	Date 2136 2147	3 lata temu
+T46	Condition 2149 2151	OL
+A6	Status T46 Historical_Insignificant
+T47	Date 2152 2162	5 lat temu
+R16	Dat Arg1:T47 Arg2:T46	
+T48	Condition 2198 2200	MI
+N16	Reference T48 ICD10:I21.9	Ostry zawał serca, nieokreślony
+A7	Status T48 Family
+T49	Date 2189 2195	50r.ż.
+R17	Dat Arg1:T49 Arg2:T48	
+R18	Dat Arg1:T45 Arg2:T44	
+T50	Condition 2211 2218	Alergie
+N17	Reference T50 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T51	Negation 2220 2226	neguje
+R19	Neg Arg1:T51 Arg2:T50	
+T53	Negation 2256 2259	nie
+T54	Behaviour 2260 2264	pali
+N19	Reference T54 ICD10:Z72.0	Używanie tytoniu
+T55	Date 2240 2255	od 3.5 miesiąca
+T56	Date 2266 2275	wcześniej
+T57	Behaviour 2276 2296	2 papierosy/dziennie
+N20	Reference T57 ICD10:Z72.0	Używanie tytoniu
+T58	Date 2297 2309	przez 2 lata
+T59	Date 2311 2328	jeszcze wcześniej
+T60	Behaviour 2329 2341	30 paczkolat
+N21	Reference T60 ICD10:Z72.0	Używanie tytoniu
+R20	Neg Arg1:T53 Arg2:T54	
+R21	Dat Arg1:T55 Arg2:T54	
+A8	Status T53 Historical_Insignificant
+R22	Dat Arg1:T56 Arg2:T57	
+R23	Dat Arg1:T58 Arg2:T57	
+R24	Dat Arg1:T59 Arg2:T60	
+T52	Behaviour 2342 2363	Alkohol: okazjonalnie
+T61	Behaviour 2364 2382	Uzależnienie inne:
+T62	Negation 2383 2389	neguje
+R25	Neg Arg1:T62 Arg2:T61	
+T63	Behaviour 2407 2414	stolarz
+T64	Drug 2421 2432	Pantoprazol
+T65	Drug 2453 2461	Ranigast
+T66	Drug_dose 2433 2451	20 mg 1 tabl. rano
+T67	Drug_dose 2462 2487	150 mg doraźnie wieczorem
+T68	Investigation 2516 2526	echo serca
+T69	Investigation 2528 2531	TET
+T70	Investigation 2533 2537	ABPM
+T71	Investigation 2539 2549	Holter ekg
+T72	Investigation 2551 2569	rtg kl. piersiowej
+R26	Drg Arg1:T64 Arg2:T66	
+R27	Drg Arg1:T65 Arg2:T67	
+A9	Status T52 Historical_Insignificant
+N18	Reference T52 ICD10:Z72.1	Używanie alkoholu
+T73	Condition 768 783	zaćmy obuocznej
+A10	Status T73 Historical_Insignificant
+N22	Reference T73 ICD10:H26.9	Zaćma, nieokreślona
+T74	Condition 2127 2135	zaćma OP
+A4	Status T74 Historical_Insignificant
+N23	Reference T74 ICD10:H26.9	Zaćma, nieokreślona
+N15	Reference T46 ICD10:H26.9	Zaćma, nieokreślona
+R28	Dat Arg1:T47 Arg2:T44	
+R29	Dat Arg1:T45 Arg2:T74	
+N24	Reference T63 ICD10:Z57.0	Narażenie zawodowe na hałas
+A11	Source T3 Declared
+T75	Investigation 543 553	obserwacja

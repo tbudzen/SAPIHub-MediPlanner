@@ -1,0 +1,300 @@
+T1	Behaviour 445 485	Dieta lekkostrawna , niskocholesterolowa
+T2	Investigation 498 518	kontrola lipidogramu
+T3	Investigation 521 572	stężenia elektrolitów , parametrów wydolności nerek
+T4	Investigation 589 624	kontrola ciśnienia tętniczego krwi.
+T5	Drug 674 679	Acard
+T6	Drug_dose 680 701	75 mg 1xd z wieczorem
+T7	Drug 702 707	Zocor
+T8	Drug_dose 708 729	20 mg 1x dz wieczorem
+R1	Drg Arg1:T5 Arg2:T6	
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 730 738	Kandesar
+T10	Drug_dose 739 755	16 mg 1x dz rano
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 757 767	Effox long
+T12	Drug_dose 768 784	50 mg 1x dz rano
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 786 797	Molsidomina
+T14	Drug_dose 798 825	4 mg 1xd z wieczorem na noc
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Drug 828 835	Dopegyt
+T16	Drug_dose 836 900	250 mg co 12 godzin po 1 tabl. ( dodatkowo 1 tabl. po dializach)
+R6	Drg Arg1:T15 Arg2:T16	
+T17	Drug 903 910	Amlipin
+T18	Drug_dose 911 941	10 mg 1xdz po 1 tabl wieczorem
+R7	Drg Arg1:T17 Arg2:T18	
+T19	Drug 945 950	Nedal
+T20	Drug_dose 951 966	5 mg 1x dz rano
+R8	Drg Arg1:T19 Arg2:T20	
+T21	Drug 968 978	Cardura XL
+T22	Drug_dose 979 999	8 mg 1xd z wieczorem
+R9	Drg Arg1:T21 Arg2:T22	
+T23	Drug 1002 1013	Ac. folicum
+T24	Drug_dose 1014 1033	5mg 1x dz wieczorem
+T25	Drug 1034 1043	Maglek B6
+R10	Drg Arg1:T23 Arg2:T24	
+T26	Drug_dose 1044 1059	3x dz po 1 tabl
+R11	Drg Arg1:T25 Arg2:T26	
+T27	Drug 1062 1070	Debretin
+T28	Drug_dose 1071 1088	100 mg 1x dz rano
+R12	Drg Arg1:T27 Arg2:T28	
+T29	Drug 1090 1100	Diabetosan
+T30	Drug_dose 1101 1116	2x dz po 1 tabl
+R13	Drg Arg1:T29 Arg2:T30	
+T31	Drug 1119 1128	Sylimarol
+T32	Drug_dose 1129 1150	35 mg 3x dz po 1 tabl
+R14	Drg Arg1:T31 Arg2:T32	
+T33	Drug 1153 1161	Alfadiol
+T34	Drug_dose 1162 1198	1 ug  1x dz rano w środy i niedzielę
+T35	Drug 1200 1213	Calperos 1000
+T36	Drug_dose 1214 1230	3 x dz po 1 tabl
+R15	Drg Arg1:T35 Arg2:T36	
+R16	Drg Arg1:T33 Arg2:T34	
+T37	Drug 1233 1249	Witamina K2 MK 7
+T38	Drug_dose 1250 1280	1x dz rano w środę i niedzielę
+R17	Drg Arg1:T37 Arg2:T38	
+T39	Drug 1282 1295	Lecytyna 1200
+T40	Drug_dose 1296 1308	2x dz 1 tabl
+T41	Drug 1311 1324	Witamina. B12
+T42	Drug_dose 1325 1335	1x dz rano
+R18	Drg Arg1:T41 Arg2:T42	
+R19	Drg Arg1:T39 Arg2:T40	
+T43	Drug 1337 1345	Nilogrin
+T44	Drug_dose 1346 1367	10 mg 2x dz po 1 tabl
+R20	Drg Arg1:T43 Arg2:T44	
+T45	Drug 1370 1379	Posorutin
+T46	Drug_dose 1380 1435	3x dz po 1 kropli do oka lewego. - wg. zaleceń okulisty
+R21	Drg Arg1:T45 Arg2:T46	
+T47	Drug 4712 4717	Nedal
+T48	Drug_dose 4718 4744	5mg 0,5 tabl 1-2x dziennie
+R22	Drg Arg1:T47 Arg2:T48	
+T49	Drug 4685 4696	Molsidomina
+T50	Drug_dose 4697 4711	4mg 1-1,5 tabl
+R23	Drg Arg1:T49 Arg2:T50	
+T51	Drug 4653 4660	Lacipil
+T52	Drug_dose 4661 4684	6mg kilka razy dziennie
+R24	Drg Arg1:T51 Arg2:T52	
+T53	Behaviour 4610 4636	warunki mieszkaniowe dobre
+T54	Condition 4487 4492	WZW-B
+N1	Reference T54 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T55	Negation 4493 4539	(+) - pacjentka podaje, że nie jest nosicielem
+A1	Source T55 Declared
+T56	Condition 4541 4550	borelioza
+N2	Reference T56 ICD10:A69.2	Choroba z Lyme
+T57	Condition 4556 4559	tbc
+N3	Reference T57 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T58	Condition 4565 4569	odra
+N4	Reference T58 ICD10:B05	Odra
+T59	Behaviour 4575 4589	kontakt z odrą
+N5	Reference T59 ICD10:B05	Odra
+T60	Negation 4551 4555	(-),
+R25	Neg Arg1:T60 Arg2:T56	
+T61	Negation 4560 4564	(-),
+R26	Neg Arg1:T61 Arg2:T57	
+T62	Negation 4570 4574	(-),
+R27	Neg Arg1:T62 Arg2:T58	
+T63	Negation 4590 4593	(-)
+R28	Neg Arg1:T63 Arg2:T59	
+T64	Symptom 4343 4349	kaszle
+T65	Drug 4353 4361	Loriście
+T66	Symptom 4400 4416	wypadanie włosów
+T67	Drug 4420 4427	Iporelu
+T68	Condition 4444 4458	niedokrwistość
+N6	Reference T68 ICD10:D64.9	Niedokrwistość, nieokreślona
+T69	Behaviour 4315 4326	Inne używki
+T70	Negation 4328 4331	nie
+R29	Neg Arg1:T70 Arg2:T69	
+T71	Behaviour 4280 4296	Palenie tytoniu:
+N7	Reference T71 ICD10:T65.2	Tytoń i nikotyna
+T72	Negation 4297 4305	nie pali
+R30	Neg Arg1:T72 Arg2:T71	
+T73	Treatment 4134 4156	obustronna nefrektomia
+T74	Treatment 4158 4167	usuniecie
+T75	Treatment 4193 4224	obustronne usuniecie przydatków
+T76	Treatment 4226 4242	cholecystektomia
+T77	Treatment 4244 4276	operacja żylaków kończyny dolnej
+N9	Reference T77 ICD10:I83	Żylaki kończyn dolnych
+T78	Symptom 3913 3925	zasłabnięcia
+N10	Reference T78 ICD10:R55	Omdlenie i zapaść
+T79	Symptom 3927 3935	omdlenia
+N11	Reference T79 ICD10:R55	Omdlenie i zapaść
+T80	Condition 3937 3953	chorobę wrzodową
+N12	Reference T80 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T81	Symptom 3955 3969	duszność nocną
+N13	Reference T81 ICD10:I50.1	Niewydolność serca lewokomorowa
+T82	Symptom 3971 3986	obrzęki podudzi
+N14	Reference T82 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T83	Symptom 3988 4003	kołatania serca
+T84	Condition 4005 4007	DM
+N15	Reference T84 ICD10:E13	Inne określone postacie cukrzycy
+T85	Condition 4009 4019	udar mózgu
+N16	Reference T85 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T86	Condition 4021 4032	zawał serca
+N17	Reference T86 ICD10:I25.2	Przebyty zawał serca
+T87	Negation 3905 3911	Neguje
+T88	Symptom 4034 4042	gorączkę
+N18	Reference T88 ICD10:R50.9	Gorączka, nieokreślona
+T89	Investigation 4829 4833	ECHO
+T90	Investigation 4835 4853	EKG metodą Holtera
+T91	Investigation 4855 4859	ABPM
+T92	Investigation 4861 4876	próba wysiłkowa
+T93	Condition 1665 1701	Ciężkie oporne nadciśnienie tętnicze
+T94	Treatment 1703 1725	Obustronna nefrektomia
+T95	Condition 1735 1756	raka jasnokomórkowego
+T96	Date 1758 1762	2000
+T97	Date 1764 1771	12.2018
+R31	Dat Arg1:T96 Arg2:T95	
+R32	Dat Arg1:T97 Arg2:T95	
+T98	Treatment 1836 1854	hemodializoterapia
+T99	Date 1858 1865	11.2012
+R33	Dat Arg1:T99 Arg2:T98	
+T100	Condition 1774 1813	Przewlekłą schyłkowa niewydolność nerek
+N21	Reference T100 ICD10:N18.0	Schyłkowa niewydolność nerek
+T101	Condition 1867 1894	Choroba niedokrwienna serca
+N22	Reference T101 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T102	Condition 1896 1914	Niewydolność serca
+N23	Reference T102 ICD10:I50	Niewydolność serca
+T103	Condition 2033 2056	łagodną niedomykalności
+T104	Condition 2058 2106	Umiarkowana niedomykalność zastawki trójdzielnej
+N25	Reference T104 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T105	Condition 2109 2118	mitralnej
+N26	Reference T105 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T106	Condition 2120 2159	Łagodna niedomykalność zastawki płucnej
+N27	Reference T106 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T107	Condition 2161 2209	Wysokie prawdopodobieństwo nadciśnienie płucnego
+N28	Reference T107 ICD10:I27.0	Pierwotne nadciśnienie płucne
+T108	Investigation_result 2212 2225	RVPs- 61mmHg)
+T109	Condition 2227 2256	Hipercholesterolemia mieszana
+N29	Reference T109 ICD10:E78.2	Hiperlipidemia mieszana
+T110	Condition 2258 2285	Niedokrwistość makrocytarna
+N30	Reference T110 ICD10:D53.1	Inne niedokrwistości megaloblastyczne niesklasyfikowane gdzie indziej
+T111	Treatment 2295 2348	obustronnym usunięciu przydatków metodą laparoskopową
+T112	Date 2350 2360	03.07.2019
+T113	Treatment 2371 2380	usunięciu
+N31	Reference T113 ICD10:D12.5	Esica
+T114	Date 2395 2399	2015
+R34	Dat Arg1:T114 Arg2:T113	
+T115	Treatment 2410 2419	usunięciu
+T116	Condition 2420 2464	guza pęcherza moczowego - rak urotelialny G1
+N32	Reference T116 ICD10:C67	Nowotwór złośliwy pęcherza moczowego
+T117	Date 2466 2470	2014
+R35	Dat Arg1:T117 Arg2:T116	
+T118	Treatment 2481 2497	cholecystektomii
+T119	Date 2499 2503	2013
+R36	Dat Arg1:T119 Arg2:T118	
+T120	Condition 2506 2563	Przewlekłe zapalenie błony śluzowej żołądka i dwunstnicy.
+N33	Reference T120 ICD10:K29	Zapalenie żołądka i dwunastnicy
+T121	Condition 2587 2622	wirusowego zapalenia wątroby typu B
+N34	Reference T121 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T122	Drug 2743 2753	Effox long
+T123	Drug 2755 2766	Molsidomina
+T124	Drug 2768 2771	BLW
+T125	Drug 2773 2780	Dopegyt
+T126	Drug 2782 2794	Nitrendypina
+T127	Drug 2796 2803	Amlopin
+T128	Drug 2805 2810	Nedal
+T129	Drug 2812 2817	Doxar
+T130	Drug 2819 2824	Acard
+T131	Drug 2826 2831	Zocor
+T132	Drug 2833 2839	NTG iv
+T133	Drug 2841 2849	Kandesar
+T134	Drug 2851 2859	Debretin
+T135	Drug 2861 2870	Sylimarol
+T136	Drug 2872 2880	Alfadiol
+T137	Drug 2882 2890	Calperos
+T138	Drug 2892 2901	Posorutin
+T139	Drug 2903 2911	Nilogrin
+T140	Drug 2913 2922	Maglek B6
+T141	Drug 2924 2931	wit B12
+T142	Drug 2933 2942	wit K2MK7
+T143	Drug 2944 2954	diabetosan
+T144	Drug 2956 2966	Ac folicum
+T145	Drug 2968 2980	hydroksyzyna
+T146	Drug 2982 2992	Lactulosum
+T147	Drug 2994 3005	Paracetamol
+T148	Condition 3160 3183	nadciśnienia tętniczego
+N35	Reference T148 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T149	Treatment 3188 3211	obustronnej nefrektomii
+T150	Treatment 3263 3316	obustronnym usunięciu przydatków metodą laparoskopową
+T151	Date 3317 3329	(03.07.2019)
+R37	Dat Arg1:T151 Arg2:T150	
+T152	Investigation 3364 3391	bardzo wysokich wartości RR
+T153	Treatment 3402 3416	dializoterapii
+T154	Investigation_result 3418 3432	do 198/123mmHg
+R38	Inv Arg1:T152 Arg2:T154	
+T155	Symptom 3457 3505;3507 3531	uciskowe bóle w klatce piersiowej przy chodzeniu ustępujące po odpoczynku
+T156	Date 3534 3543	od 2 lat,
+R39	Dat Arg1:T156 Arg2:T155	
+T157	Condition 3573 3591	niewydolność serca
+N36	Reference T157 ICD10:I50	Niewydolność serca
+T159	Condition 3602 3625	niedomykalność zastawek
+T160	Condition 3627 3659	zapalenie błony śluzowej żołądka
+N37	Reference T160 ICD10:K29	Zapalenie żołądka i dwunastnicy
+T161	Condition 3661 3683	niedoczynność tarczycy
+N38	Reference T161 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T162	Symptom 3715 3727	suchy kaszel
+T163	Date 3708 3714	czasem
+R40	Dat Arg1:T163 Arg2:T162	
+T164	Investigation 3766 3768	RR
+T165	Investigation_result 3781 3791	ok 200mmHg
+R41	Inv Arg1:T164 Arg2:T165	
+T166	Investigation_result 3821 3866	140mmHg ale potem znowu rośnie do 200-210mmHg
+T167	Treatment 3868 3875	Dializy
+T168	Date 3876 3902	we wt, czw i sob ok 13:00.
+R42	Dat Arg1:T168 Arg2:T167	
+T169	Condition 3237 3258	ca pęcherza moczowego
+N39	Reference T169 ICD10:C67	Nowotwór złośliwy pęcherza moczowego
+R43	Dat Arg1:T112 Arg2:T111	
+T170	Condition 4063 4092	zapalenie żył kończyn dolnych
+N40	Reference T170 ICD10:I80	Zapalenie żył i zakrzepowe zapalenie żył
+T171	Condition 4094 4111	zatorowość płucną
+N41	Reference T171 ICD10:I23	Niektóre powikłania występujące w czasie ostrego zawału mięśnia sercowego
+T172	Symptom 4044 4052	infekcję
+N42	Reference T172 ICD10:A49	Zakażenia bakteryjne o nieokreślonym umiejscowieniu
+R44	Neg Arg1:T87 Arg2:T78	
+R45	Neg Arg1:T87 Arg2:T79	
+R46	Neg Arg1:T87 Arg2:T80	
+R47	Neg Arg1:T87 Arg2:T81	
+R48	Neg Arg1:T87 Arg2:T82	
+R49	Neg Arg1:T87 Arg2:T83	
+R50	Neg Arg1:T87 Arg2:T84	
+R51	Neg Arg1:T87 Arg2:T85	
+R52	Neg Arg1:T87 Arg2:T86	
+R53	Neg Arg1:T87 Arg2:T88	
+R54	Neg Arg1:T87 Arg2:T172	
+R55	Neg Arg1:T87 Arg2:T170	
+R56	Neg Arg1:T87 Arg2:T171	
+T158	Drug 4439 4443	leku
+A5	Source T158 Declared
+R57	Dat Arg1:T96 Arg2:T94	
+R58	Dat Arg1:T97 Arg2:T94	
+R59	Dat Arg1:T117 Arg2:T115	
+T173	Condition 2381 2393	polipa esicy
+N43	Reference T173 ICD10:D12	Nowotwór niezłośliwy okrężnicy, odbytnicy, odbytu i kanału odbytu
+R60	Dat Arg1:T114 Arg2:T173	
+T174	Condition 3221 3223	ca
+A7	Status T94 Historical_Insignificant
+A8	Status T95 Historical_Insignificant
+N20	Reference T95 ICD10:D41.0	Nerka
+T175	Symptom 1915 1930	II/III’ wg NYHA
+T176	Condition 1933 1960	zachowano frakcją wyrzutową
+T177	Investigation_result 1961 1970	(EF= 58%)
+N24	Reference T103 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T178	Condition 1972 2030	Złożona wada zastawki aortalnej w postaci łągodnej stenozy
+N44	Reference T178 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+N19	Reference T93 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+A9	Status T173 Historical_Insignificant
+A10	Status T113 Historical_Insignificant
+A11	Status T118 Historical_Insignificant
+N45	Reference T174 ICD10:C67	Nowotwór złośliwy pęcherza moczowego
+N46	Reference T155 ICD10:R07.3	Inne bóle w klatce piersiowej
+T179	Investigation_result 3594 3600	EF 48%
+N47	Reference T162 ICD10:R05	Kaszel
+A2	Status T73 Historical_Insignificant
+T180	Condition 4168 4191	guza pęcherza moczowego
+N8	Reference T180 ICD10:C67	Nowotwór złośliwy pęcherza moczowego
+A3	Status T75 Historical_Insignificant
+A4	Status T76 Historical_Insignificant
+T181	Date 4306 4314	od dawna
+R61	Dat Arg1:T181 Arg2:T71	
+A6	Source T68 Declared

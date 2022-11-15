@@ -1,0 +1,168 @@
+T1	Treatment 339 396	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej.
+T2	Behaviour 398 438	Dieta lekkostrawna , niskocholesterolowa
+T3	Investigation 451 525	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T4	Investigation 542 577	kontrola ciśnienia tętniczego krwi.
+T5	Drug 627 634	Roswera
+T6	Drug 658 666	Metocard
+T7	Drug 698 705	Polsart
+T8	Drug 741 748	Emanera
+T9	Drug_dose 635 656	15 mg 1x dz wieczorem
+R1	Drg Arg1:T5 Arg2:T9	
+T10	Drug_dose 667 692	50 mg 2 x dz po 1/4 tabl.
+R2	Drg Arg1:T6 Arg2:T10	
+T11	Drug_dose 706 737	40 mg  1x dz rano po  1/2 tabl.
+R3	Drg Arg1:T7 Arg2:T11	
+T12	Drug_dose 749 775	20 mg 1 x dz rano na czczo
+R4	Drg Arg1:T8 Arg2:T12	
+T13	Drug 778 786	Cipronex
+T14	Drug_dose 787 826	0,5 co 12 godzin po 1 tabl. przez 5 dni
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Drug 828 834	Lakcid
+T16	Drug_dose 835 875	2x dz po 1 tabl. godzinne od antybiotyku
+R6	Drg Arg1:T15 Arg2:T16	
+T17	Drug 997 1004	Roswera
+T18	Drug 1007 1019	Polsart Plus
+T19	Drug 1022 1029	Emanera
+T20	Drug 1032 1040	Cipronex
+T21	Drug 1043 1049	Lakcid
+T22	Condition 1504 1545	Łagodna niedomykalność zastawki mitralnej
+N1	Reference T22 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T23	Condition 1548 1560	trójdzielnej
+N2	Reference T23 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T24	Condition 1563 1596	Nadkomorowe zburzenia rytmu serca
+N3	Reference T24 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T25	Condition 1599 1620	pobudzenia pojedyncze
+N4	Reference T25 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T26	Condition 1623 1628	salwa
+N5	Reference T26 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T27	Condition 1633 1654	Nadciśnienie tętnicze
+N6	Reference T27 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T28	Condition 2354 2375	Nadciśnienie tętnicze
+N7	Reference T28 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T29	Condition 1657 1676	Zaburzenia lipidowe
+N8	Reference T29 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T30	Condition 2377 2396	Zaburzenia lipidowe
+N9	Reference T30 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T31	Condition 1708 1741	Choroba zwyrodnieniowa kręgosłupa
+T32	Condition 2399 2432	Choroba zwyrodnieniowa kręgosłupa
+T33	Treatment 1753 1765	apendektomii
+A1	Status T33 Historical_Insignificant
+T34	Date 1766 1780	w dzieciństwie
+R7	Dat Arg1:T34 Arg2:T33	
+T35	Condition 1801 1819	cysty piersi lewej
+N12	Reference T35 ICD10:N60.0	Samotna torbiel piersi
+A2	Status T35 Historical_Insignificant
+T36	Date 1820 1829	1999 roku
+T37	Treatment 1792 1800	operacji
+A3	Status T37 Historical_Insignificant
+R8	Dat Arg1:T36 Arg2:T35	
+R9	Dat Arg1:T36 Arg2:T37	
+T38	Condition 1832 1857	Infekcja układu moczowego
+N13	Reference T38 ICD10:N39.0	Zakażenie układu moczowego o nieokreślonym umiejscowieniu
+T39	Symptom 2042 2098	dyskomfortu w klatce piersiowej nie zależnego od wysiłku
+N14	Reference T39 ICD10:R07.3	Inne bóle w klatce piersiowej
+T40	Date 2124 2141	od dwóch miesięcy
+R10	Dat Arg1:T40 Arg2:T39	
+T41	Symptom 2160 2175	kołatania serca
+N15	Reference T41 ICD10:R00.2	Kołatanie serca
+T42	Drug 2277 2285	Firaginę
+T43	Date 2253 2264	przez 2 dni
+R11	Dat Arg1:T43 Arg2:T42	
+T44	Symptom 2183 2202	bóle okolicy lędźwi
+N16	Reference T44 ICD10:M54.5	Ból okolicy lędźwiowo-krzyżowej
+T45	Symptom 2213 2250	objawy pieczenia przy oddawaniu moczu
+N17	Reference T45 ICD10:R39	Inne objawy i dolegliwości dotyczące układu moczowego
+T46	Symptom 2297 2309	zasłabnięcia
+N18	Reference T46 ICD10:R55	Omdlenie i zapaść
+T47	Negation 2290 2296	Neguje
+R12	Neg Arg1:T47 Arg2:T46	
+T48	Negation 2312 2318	neguje
+T49	Symptom 2319 2336	uczucie duszności
+N19	Reference T49 ICD10:R06.0	Duszność
+R13	Neg Arg1:T48 Arg2:T49	
+T50	Treatment 2464 2476	opendektomii
+A4	Status T50 Historical_Insignificant
+T51	Date 2477 2491	w dzieciństwie
+R14	Dat Arg1:T51 Arg2:T50	
+T52	Treatment 2502 2510	operacji
+A5	Status T52 Historical_Insignificant
+T53	Condition 2511 2529	cysty piersi lewej
+A6	Status T53 Historical_Insignificant
+N20	Reference T53 ICD10:N60.0	Samotna torbiel piersi
+T54	Date 2530 2539	1999 roku
+R15	Dat Arg1:T54 Arg2:T53	
+R16	Dat Arg1:T54 Arg2:T52	
+T55	Treatment 2542 2550	operacja
+A7	Status T55 Historical_Insignificant
+T56	Condition 2560 2590	palucha stopy prawej po urazie
+A8	Status T56 Historical_Insignificant
+T57	Date 2591 2595	2014
+R17	Dat Arg1:T57 Arg2:T56	
+R18	Dat Arg1:T57 Arg2:T55	
+T58	Condition 2660 2663	WZW
+N21	Reference T58 ICD10:B19	
+T59	Condition 2673 2682	borelioza
+N22	Reference T59 ICD10:A69.2	Choroba z Lyme
+T60	Negation 2664 2670	( -  )
+R19	Neg Arg1:T60 Arg2:T58	
+T61	Negation 2683 2688	( - )
+R20	Neg Arg1:T61 Arg2:T59	
+T62	Condition 2721 2738	ca jelita grubego
+N23	Reference T62 ICD10:C18	Nowotwór złośliwy jelita grubego
+T63	Negation 2757 2760	nie
+T64	Negation 2774 2777	nie
+T65	Negation 2789 2795	neguje
+T66	Behaviour 2740 2755	Palenie tytoniu
+N24	Reference T66 ICD10:Z72.0	Używanie tytoniu
+R21	Neg Arg1:T63 Arg2:T66	
+T67	Behaviour 2761 2772	Inne używki
+N25	Reference T67 ICD10:Z72	Problemy związane ze stylem życia
+R22	Neg Arg1:T64 Arg2:T67	
+T68	Condition 2778 2787	Uczulenia
+N26	Reference T68 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R23	Neg Arg1:T65 Arg2:T68	
+T69	Behaviour 2812 2838	warunki mieszkaniowe dobre
+T70	Drug 2863 2870	Roswera
+T71	Drug_dose 2871 2892	15 mg 1x dz wieczorem
+R24	Drg Arg1:T70 Arg2:T71	
+T72	Drug 2895 2907	Polsart Plus
+T73	Drug_dose 2908 2934	40 mg +12,5 mg  1x dz rano
+R25	Drg Arg1:T72 Arg2:T73	
+T74	Drug 2937 2944	Emanera
+T75	Drug_dose 2945 2971	20 mg 1 x dz rano na czczo
+R26	Drg Arg1:T74 Arg2:T75	
+T76	Investigation 2987 2997	Echo serca
+T77	Investigation 3000 3010	Holter EKG
+T78	Investigation 3013 3028	Próba Wysiłkowa
+T79	Condition 1691 1705	Niedokrwistość
+N27	Reference T79 ICD10:D64.9	Niedokrwistość, nieokreślona
+N10	Reference T31 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+N11	Reference T32 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+R105	Neg Arg1:T65 Arg2:T69
+R11	Drg Arg1:T15 Arg2:T16
+R115	Drg Arg1:T70 Arg2:T71
+R119	Drg Arg1:T72 Arg2:T73
+R12	Dat Arg1:T34 Arg2:T33
+R123	Drg Arg1:T74 Arg2:T75
+R13	Dat Arg1:T36 Arg2:T38
+R14	Dat Arg1:T40 Arg2:T39
+R17	Neg Arg1:T47 Arg2:T46
+R18	Neg Arg1:T47 Arg2:T49
+R19	Neg Arg1:T47 Arg2:T42
+R22	Neg Arg1:T48 Arg2:T46
+R23	Neg Arg1:T48 Arg2:T49
+R26	Dat Arg1:T43 Arg2:T45
+R3	Drg Arg1:T6 Arg2:T9
+R30	Dat Arg1:T51 Arg2:T50
+R31	Dat Arg1:T54 Arg2:T53
+R32	Dat Arg1:T54 Arg2:T56
+R33	Dat Arg1:T54 Arg2:T52
+R34	Dat Arg1:T54 Arg2:T55
+R35	Neg Arg1:T60 Arg2:T58
+R52	Neg Arg1:T61 Arg2:T59
+R6	Drg Arg1:T7 Arg2:T10
+R71	Neg Arg1:T63 Arg2:T66
+R72	Neg Arg1:T63 Arg2:T67
+R8	Drg Arg1:T13 Arg2:T14
+R86	Neg Arg1:T64 Arg2:T68
+R88	Neg Arg1:T64 Arg2:T67

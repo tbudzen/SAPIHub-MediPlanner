@@ -1,0 +1,195 @@
+T1	Investigation 3682 3691	DC po TEE
+T2	Investigation 3693 3697	ECHO
+T3	Investigation 3699 3703	ABPM
+T4	Investigation 3705 3715	Holter EKG
+T5	Drug 3558 3565	Levemir
+T6	Drug_dose 3566 3596	wg. glikemii ost. 20 j. na noc
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 3511 3520	Novorapid
+T8	Drug_dose 3521 3556	3xdz wg. glikemii, ost. 8-10 j 3xdz
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 3475 3484	Metformax
+T10	Drug_dose 3485 3509	850 mg - 500 mg - 850 mg
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 3454 3463	Jardiance
+T12	Drug_dose 3464 3473	1xdz rano
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 3432 3440	Ursofalk
+T14	Drug_dose 3441 3452	250 mg 3xdz
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Drug 3366 3378	Tertensif SR
+T16	Drug_dose 3379 3403	1,5 mg 1 tabl. 1xdz rano
+R6	Drg Arg1:T15 Arg2:T16	
+T17	Drug 3405 3414	Controloc
+T18	Drug_dose 3415 3430	20 mg 1xdz rano
+R7	Drg Arg1:T17 Arg2:T18	
+T19	Drug 3337 3344	Roswera
+T20	Drug_dose 3345 3364	5 mg 1xdz wieczorem
+R8	Drg Arg1:T19 Arg2:T20	
+T21	Drug 3303 3313	Prestarium
+T22	Drug_dose 3314 3335	5 mg 1 x dz wieczorem
+R9	Drg Arg1:T21 Arg2:T22	
+T23	Drug 3280 3289	Rytmonorm
+T24	Drug 3247 3255	Bisocard
+T25	Drug_dose 3256 3278	5 mg 1 tabl. 1xdz rano
+R10	Drg Arg1:T24 Arg2:T25	
+T26	Drug_dose 3290 3301	300 mg 2xdz
+R11	Drg Arg1:T23 Arg2:T26	
+T27	Drug 3186 3198	Acenokumarol
+T28	Drug_dose 3201 3245	4 mg wg. INR, naprzemian  7 mg - 7 mg - 6 mg
+R12	Drg Arg1:T27 Arg2:T28	
+T29	Behaviour 3075 3101	warunki mieszkaniowe dobre
+T30	Condition 3012 3015	WZW
+N1	Reference T30 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T31	Condition 3022 3031	borelioza
+N2	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Condition 3039 3042	tbc
+N3	Reference T32 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T33	Condition 3048 3056	odra (+)
+A1	Source T33 Confirmed
+N4	Reference T33 ICD10:B05	Odra
+T34	Negation 3044 3045	-
+R13	Neg Arg1:T34 Arg2:T32	
+T35	Negation 3034 3035	-
+R14	Neg Arg1:T35 Arg2:T31	
+T36	Negation 3017 3019	-)
+R15	Neg Arg1:T36 Arg2:T30	
+T37	Negation 2980 2983	nie
+T38	Negation 2964 2967	nie
+T39	Negation 2946 2949	nie
+T40	Condition 2969 2978	Uczulenia
+N5	Reference T40 ICD10:T78.4	Alergia, nieokreślona
+R16	Neg Arg1:T37 Arg2:T40	
+T41	Behaviour 2951 2962	Inne używki
+R17	Neg Arg1:T38 Arg2:T41	
+T42	Behaviour 2929 2944	Palenie tytoniu
+N6	Reference T42 ICD10:T65.2	Tytoń i nikotyna
+R18	Neg Arg1:T39 Arg2:T42	
+T43	Treatment 2906 2927	Przebyte operacje: jw
+T44	Symptom 2879 2891	zasłabnięcia
+N7	Reference T44 ICD10:R55	Omdlenie i zapaść
+T45	Symptom 2893 2901	omdlenia
+N8	Reference T45 ICD10:R55	Omdlenie i zapaść
+T46	Negation 2871 2877	Neguje
+R19	Neg Arg1:T46 Arg2:T44	
+R20	Neg Arg1:T46 Arg2:T45	
+T47	Drug 2814 2826	acenokumarol
+T48	Drug 2858 2865	Clexane
+T49	Treatment 2781 2793	kolonoskopię
+T50	Condition 441 532	łożona wada zastawki aortalnej pod postacią umiarkowanej stenozy i łagodnej niedomykalności
+T51	Condition 534 567	Przetrwałe migotanie przedsionków
+N10	Reference T51 ICD10:I48	Migotanie i trzepotanie przedsionków
+T52	Treatment 569 617	skuteczna kardiowersja elektryczna energią 150 J
+T53	Date 619 629	12.04.2019
+R21	Dat Arg1:T53 Arg2:T52	
+T54	Treatment 640 665	ablacji ujść żył płucnych
+T55	Treatment 685 741	nieudanej próbie krioablacji balonowej ujść żył płucnych
+T56	Condition 753 845	Złożona wada zastawki mitralnej pod postacią łagodnej stenozy i umiarkowanej niedomykalności
+T57	Condition 847 892	Łagodna niedomykalność zastawki trójdzielnej.
+N12	Reference T57 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T58	Condition 893 914	Nadciśnienie tętnicze
+N13	Reference T58 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T59	Condition 916 931	Cukrzyca typu 2
+N14	Reference T59 ICD10:E11	Cukrzyca insulinoniezależna
+T60	Date 743 750	05.2015
+R22	Dat Arg1:T60 Arg2:T55	
+T61	Date 667 674	06.2015
+R23	Dat Arg1:T61 Arg2:T54	
+T62	Condition 959 970	Hepatopatia
+N15	Reference T62 ICD10:K76	Inne choroby wątroby
+T63	Treatment 980 1011	laparoskopowej cholecystektomii
+T64	Condition 1028 1061	krwawieniu z przewodu pokarmowego
+N16	Reference T64 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T65	Date 1013 1017	2013
+R24	Dat Arg1:T65 Arg2:T63	
+T66	Date 1063 1067	2011
+R25	Dat Arg1:T66 Arg2:T64	
+T67	Condition 1070 1084	Polipy żołądka
+N17	Reference T67 ICD10:K31	Inne choroby żołądka i dwunastnicy
+T68	Condition 1098 1119	Żółtaczka mechaniczna
+N18	Reference T68 ICD10:R17	Żółtaczka, nieokreślona
+T69	Behaviour 1327 1402	Dieta lekkostrawna, niskocholesterolowa z niską zawartością cukrów prostych
+T70	Investigation 1415 1461	samokontrola ciśnienia tętniczego krwi i tętna
+T71	Investigation 1474 1489	pomiar glikemii
+T72	Investigation 1501 1511	pomiar INR
+T73	Investigation_result 1547 1558	INR 2,0-3,0
+T74	Drug 1596 1608	Acenokumarol
+T75	Drug_dose 1611 1635	4 mg wg. INR, naprzemian
+T76	Drug_dose 1637 1655	7 mg - 6 mg - 6 mg
+R26	Drg Arg1:T74 Arg2:T75	
+R27	Drg Arg1:T74 Arg2:T76	
+T77	Drug 1657 1665	Bisocard
+T78	Drug_dose 1666 1688	5 mg 1 tabl. 1xdz rano
+R28	Drg Arg1:T77 Arg2:T78	
+T79	Drug 1690 1699	Rytmonorm
+T80	Drug_dose 1700 1728	300 mg 2xdz rano i wieczorem
+R29	Drg Arg1:T79 Arg2:T80	
+T81	Drug 1729 1739	Prestarium
+T82	Drug_dose 1740 1761	5 mg 1 x dz wieczorem
+R30	Drg Arg1:T81 Arg2:T82	
+T83	Drug 1763 1770	Roswera
+T84	Drug_dose 1771 1790	5 mg 1xdz wieczorem
+R31	Drg Arg1:T83 Arg2:T84	
+T85	Drug 1792 1804	Tertensif SR
+T86	Drug_dose 1805 1829	1,5 mg 1 tabl. 1xdz rano
+R32	Drg Arg1:T85 Arg2:T86	
+T87	Drug 1831 1840	Controloc
+T88	Drug_dose 1841 1856	20 mg 1xdz rano
+R33	Drg Arg1:T87 Arg2:T88	
+T89	Drug 1858 1866	Ursofalk
+T90	Drug_dose 1867 1878	250 mg 3xdz
+R34	Drg Arg1:T89 Arg2:T90	
+T91	Drug 1880 1889	Jardiance
+T92	Drug_dose 1890 1899	1xdz rano
+R35	Drg Arg1:T91 Arg2:T92	
+T93	Drug 1901 1910	Metformax
+T94	Drug_dose 1911 1935	850 mg - 500 mg - 850 mg
+R36	Drg Arg1:T93 Arg2:T94	
+T95	Drug 1937 1946	Novorapid
+T96	Drug_dose 1947 1982	3xdz wg. glikemii, ost. 8-10 j 3xdz
+R37	Drg Arg1:T95 Arg2:T96	
+T97	Drug 1984 1991	Levemir
+T98	Drug_dose 1992 2022	wg. glikemii ost. 20 j. na noc
+R38	Drg Arg1:T97 Arg2:T98	
+T99	Condition 2168 2203	przetrwałym migotaniem przedsionków
+N19	Reference T99 ICD10:I48	Migotanie i trzepotanie przedsionków
+T100	Treatment 2208 2233	ablacji ujść żył płucnych
+T101	Date 2235 2242	06.2015
+R39	Dat Arg1:T101 Arg2:T100	
+T102	Treatment 2248 2304	nieudanej próbie krioablacji balonowej ujść żył płucnych
+T103	Date 2306 2313	05.2015
+R40	Dat Arg1:T103 Arg2:T102	
+T104	Condition 2319 2358	złożoną wadą mitro-aortalna umiarkowaną
+N20	Reference T104 ICD10:Q24	Inne wrodzone wady rozwojowe serca
+T105	Condition 2360 2383	nadciśnieniem tętniczym
+N21	Reference T105 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T106	Condition 2385 2400	cukrzycą typu 2
+N22	Reference T106 ICD10:E11	Cukrzyca insulinoniezależna
+T107	Condition 2428 2439	hepatopatią
+N23	Reference T107 ICD10:K76	Inne choroby wątroby
+T108	Treatment 2444 2475	laparoskopowej cholecystektomii
+T109	Date 2477 2481	2013
+R41	Dat Arg1:T109 Arg2:T108	
+T110	Condition 2487 2520	krwawieniu z przewodu pokarmowego
+N24	Reference T110 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T111	Date 2522 2526	2011
+R42	Dat Arg1:T111 Arg2:T110	
+T112	Condition 2531 2547	polipami żołądka
+N25	Reference T112 ICD10:K31	Inne choroby żołądka i dwunastnicy
+T113	Condition 2561 2582	żółtaczką mechaniczną
+N26	Reference T113 ICD10:R17	
+T114	Treatment 2599 2619	leczeniu operacyjnym
+T115	Date 2627 2634	10.2018
+R43	Dat Arg1:T115 Arg2:T114	
+T116	Symptom 2667 2677	osłabienia
+N27	Reference T116 ICD10:R53	Złe samopoczucie i zmęczenie
+T117	Symptom 2680 2696	 kołatania serca
+N28	Reference T117 ICD10:R00.2	Kołatanie serca
+T118	Condition 2699 2727	napad migotania przedsionków
+N29	Reference T118 ICD10:I48	Migotanie i trzepotanie przedsionków
+T119	Date 2735 2747	4.04.2019 r.
+R44	Dat Arg1:T119 Arg2:T118	
+R45	Dat Arg1:T53 Arg2:T51	
+T120	Condition 2620 2625	zaćmy
+N9	Reference T120 ICD10:H26.8	Inne określone postacie zaćmy
+R46	Dat Arg1:T115 Arg2:T120	

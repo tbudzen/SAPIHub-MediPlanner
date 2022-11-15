@@ -1,0 +1,32 @@
+T1	Treatment 434 442	operacji
+T2	Condition 443 486	ubytku typu kanału przedsionkowo-komorowego
+T3	Date 488 499	12.04.2007r
+T4	Treatment 513 523	reoperacji
+T5	Condition 533 576	istotnej niedomykalności zastawki mitralnej
+T6	Date 578 589	14.01.2008r
+T7	Drug 769 778	Captopril
+T8	Drug_dose 779 787	2x6,25mg
+T9	Investigation 792 826	Ambulatoryjne badanie holterowskie
+T10	Treatment 896 936	Kontrola w Poradni Kardiologicznej ICZMP
+T11	Date 945 953	za 1 rok
+T12	Treatment 967 1005	konsultacja w Poradni Rehabilitacyjnej
+T13	Treatment 1010 1071	Dalsza opieka ogólnopediatryczna w Poradni Lekarza Rodzinnego
+T14	Drug 1192 1201	Captopril
+T15	Treatment 1342 1350	operacji
+T16	Condition 1351 1354	CAV
+T17	Condition 1359 1418	istotną hemodynamicznie niedomykalnością zastawki mitralnej
+T18	Drug 1474 1483	Captopril
+T19	Condition 1485 1502	wywiad alergiczny
+T20	Negation 1503 1509	ujemny
+N1	Reference T1 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N2	Reference T2 ICD10:Q21.0	Ubytek przegrody miÄdzykomorowej
+N3	Reference T4 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N4	Reference T5 ICD10:Q23.1	Wrodzona niedomykalnoÅÄ zastawki aortalnej
+N5	Reference T15 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N6	Reference T19 ICD10:T78.4	Alergia, nieokreÅlona
+R1	Dat Arg1:T3 Arg2:T2
+R12	Neg Arg1:T20 Arg2:T19
+R3	Dat Arg1:T3 Arg2:T1
+R6	Dat Arg1:T6 Arg2:T5
+R8	Dat Arg1:T6 Arg2:T4
+R9	Drg Arg1:T7 Arg2:T8

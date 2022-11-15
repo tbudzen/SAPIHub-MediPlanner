@@ -1,0 +1,142 @@
+T1	Drug 341 358	Cinacalcet Accord
+T2	Drug 360 368	Spironol
+T3	Drug 370 377	Vivacor
+T4	Drug 379 386	Tritace
+T5	Drug 388 396	Torsemed
+T6	Drug 398 408	Diaprel MR
+T7	Drug 410 418	Debretin
+T8	Drug 420 425	Kreon
+T9	Drug 427 433	Atoris
+T10	Drug 435 438	IPP
+T11	Drug 440 448	Betaserc
+T12	Treatment 560 582	kontrola u lekarza POZ
+T13	Treatment 585 668	dalsza kontrola w Poradni Kardiologicznej, Endokrynologicznej, Leczenia Osteoporozy
+T14	Investigation 671 702	kontrola "parametrów nerkowych"
+T15	Date 703 713	za tydzień
+T16	Behaviour 717 753	dieta cukrzycowa niskocholesterolowa
+T17	Condition 1032 1083	Izolowana dysfunkcja rozkurczowa lewej komory serca
+N1	Reference T17 ICD10:I50.1	Niewydolność serca lewokomorowa
+T18	Condition 1085 1106	Nadciśnienie tętnicze
+N2	Reference T18 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T19	Condition 1108 1139	Dyslipidemia w trakcie leczenia
+N3	Reference T19 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T20	Condition 1141 1156	Miażdżyca aorty
+N4	Reference T20 ICD10:I70.0	Miażdżyca aorty
+T21	Condition 1158 1173	Cukrzyca typu 2
+N5	Reference T21 ICD10:E11	Cukrzyca insulinoniezależna
+R1	Dat Arg1:T15 Arg2:T14	
+T22	Condition 1175 1194	Torbiel nerki lewej
+T23	Condition 1196 1229	Pierwotna nadczynność przytarczyc
+N6	Reference T23 ICD10:E21.0	Pierwotna nadczynność przytarczyc
+T24	Condition 1231 1241	Osteopenia
+N7	Reference T24 ICD10:M85.8	Inne określone zaburzenia mineralizacji i struktury kości
+T25	Condition 1243 1272	Przewlekłe zapalenie trzustki
+N8	Reference T25 ICD10:K86.1	Inne postacie przewlekłego zapalenia trzustki
+T26	Condition 1274 1299	Wole guzkowe nietoksyczne
+N9	Reference T26 ICD10:E04.2	Wole wieloguzkowe, nietoksyczne
+T27	Condition 1301 1320	Torbiel nerki lewej
+T28	Condition 1322 1344	Żylaki kończyn dolnych
+A1	Status T28 Historical_Insignificant
+N10	Reference T28 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T29	Condition 1346 1375	Choroba zwyrodnieniowa stawów
+A2	Status T29 Historical_Insignificant
+T30	Condition 1377 1393	Zaćma oka lewego
+A3	Status T30 Historical_Insignificant
+N12	Reference T30 ICD10:H26.9	Zaćma, nieokreślona
+T31	Treatment 1403 1411	operacji
+A4	Status T31 Historical_Insignificant
+N13	Reference T31 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T32	Condition 1412 1429	zaćmy oka prawego
+A5	Status T32 Historical_Insignificant
+N14	Reference T32 ICD10:H26.9	Zaćma, nieokreślona
+T33	Date 1431 1441	06.12.2016
+T34	Treatment 1452 1460	operacji
+A6	Status T34 Historical_Insignificant
+N15	Reference T34 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T35	Condition 1461 1472	nadziąślaka
+A7	Status T35 Historical_Insignificant
+N16	Reference T35 ICD10:K06.8	Inne określone zaburzenia dziąseł i bezzębnego wyrostka zębodołowego
+T36	Treatment 1482 1491	usunięciu
+N17	Reference T36 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T37	Condition 1492 1506	polipa żołądka
+N18	Reference T37 ICD10:K31.7	Polip żołądka i dwunastnicy
+T38	Treatment 1509 1528	eradykacji H.pylori
+T39	Condition 1672 1710	licznymi obciążeniami internistycznymi
+T40	Symptom 1748 1864	nawracających nietypowych dolegliwości bólowych w obrębie klatki piersiowej - głównie pleców w okolicy lewej łopatki
+N19	Reference T40 ICD10:R07.3	Inne bóle w klatce piersiowej
+T41	Symptom 1866 1900	ograniczenia tolerancji wysiłkowej
+T42	Investigation_result 1906 1967	wahania ciśnienia tętniczego z wartościami max do 210/90 mmHg
+T43	Condition 1981 2014	pierwotna nadczynność przytarczyc
+N20	Reference T43 ICD10:E21.0	Pierwotna nadczynność przytarczyc
+T44	Negation 2716 2722	neguje
+T45	Condition 2706 2713	Alergie
+N21	Reference T45 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T46	Date 2514 2525	06.12.2016r
+T47	Drug 2779 2787	Lecalpin
+R2	Dat Arg1:T33 Arg2:T31	
+R3	Dat Arg1:T33 Arg2:T32	
+T48	Date 2015 2037	rozpoznana w 2014 roku
+T49	Negation 2046 2065	nie wyraziła zgodny
+T50	Treatment 2069 2088	leczenie operacyjne
+N22	Reference T50 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R4	Neg Arg1:T49 Arg2:T50	
+R5	Dat Arg1:T48 Arg2:T43	
+T51	Investigation_result 2090 2113	następcza hiperkalcemia
+N23	Reference T51 ICD10:E87.5	Hiperkalemia
+T52	Date 2122 2129	obecnie
+T53	Drug_dose 2130 2160	powtarzanymi wlewami dożylnymi
+T54	Drug 2161 2173	pamidronianu
+R6	Drg Arg1:T54 Arg2:T53	
+R7	Dat Arg1:T52 Arg2:T54	
+T55	Treatment 2114 2121	leczona
+R9	Dat Arg1:T52 Arg2:T55	
+T56	Condition 2195 2205	osteopenia
+N24	Reference T56 ICD10:M85.8	Inne określone zaburzenia mineralizacji i struktury kości
+T57	Condition 2207 2236	przewlekłe zapalenia trzustki
+N25	Reference T57 ICD10:K86.1	Inne postacie przewlekłego zapalenia trzustki
+T58	Condition 2238 2266	kamica pęcherzyka żółciowego
+N26	Reference T58 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T59	Condition 2268 2281	cukrzyca t. 2
+N27	Reference T59 ICD10:E11	Cukrzyca insulinoniezależna
+T60	Condition 2283 2308	wole guzkowe nietoksyczne
+N28	Reference T60 ICD10:E04.2	Wole wieloguzkowe, nietoksyczne
+T61	Condition 2310 2330	miażdżyca uogólniona
+N29	Reference T61 ICD10:I70.9	Miażdżyca uogólniona i nieokreślona
+T62	Condition 2332 2372	dyslipidemia mieszana w trakcie leczenia
+N30	Reference T62 ICD10:E78.2	Hiperlipidemia mieszana
+T63	Drug 2373 2382	statynami
+T64	Condition 2384 2403	torbiel nerki lewej
+T65	Condition 2405 2427	żylaki kończyn dolnych
+A8	Status T65 Historical_Insignificant
+N31	Reference T65 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T66	Condition 2429 2458	choroba zwyrodnieniowa stawów
+A9	Status T66 Historical_Insignificant
+N32	Reference T66 ICD10:M19.9	Choroba zwyrodnieniowa stawów, nieokreślona
+T67	Condition 2460 2476	zaćma oka lewego
+A10	Status T67 Historical_Insignificant
+N33	Reference T67 ICD10:H26.9	Zaćma, nieokreślona
+T68	Treatment 2486 2494	operacji
+A11	Status T68 Historical_Insignificant
+N34	Reference T68 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T69	Condition 2495 2512	zaćmy oka prawego
+A12	Status T69 Historical_Insignificant
+N35	Reference T69 ICD10:H26.9	Zaćma, nieokreślona
+T70	Treatment 2536 2544	operacji
+A13	Status T70 Historical_Insignificant
+N36	Reference T70 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T71	Condition 2545 2556	nadziąślaka
+A14	Status T71 Historical_Insignificant
+N37	Reference T71 ICD10:K06.8	Inne określone zaburzenia dziąseł i bezzębnego wyrostka zębodołowego
+T72	Treatment 2566 2575	usunięciu
+N38	Reference T72 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T73	Condition 2576 2590	polipa żołądka
+N39	Reference T73 ICD10:K31.7	Polip żołądka i dwunastnicy
+T74	Treatment 2593 2613	eradykacji H. pylori
+T75	Symptom 2640 2673	o kresowe obrzęki kończyn dolnych
+T76	Symptom 2679 2703	pobolewania w nadbrzuszu
+N41	Reference T76 ICD10:R10.1	Ból zlokalizowany w nadbrzuszu
+N11	Reference T29 ICD10:M19.9	Choroba zwyrodnieniowa stawów, nieokreślona
+R8	Dat Arg1:T46 Arg2:T68	
+R10	Dat Arg1:T46 Arg2:T69	
+R11	Neg Arg1:T44 Arg2:T45	
+N40	Reference T75 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej

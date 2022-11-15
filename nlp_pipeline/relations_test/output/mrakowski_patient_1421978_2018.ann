@@ -1,0 +1,40 @@
+T1	Condition 481 543	Wrodzona wada serca pod postacią atrezji zastawki trójdzielnej
+N1	Reference T1 ICD10:Q22.4	Wrodzone zwężenie zastawki trójdzielnej
+T2	Condition 546 584	ubytkiem w przegrodzie międzykomorowej
+N2	Reference T2 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T3	Condition 587 607	międzyprzedsionkowej
+N3	Reference T3 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T4	Treatment 620 649	bandingu pnia tętnicy płucnej
+T5	Date 651 662	28.09.2012r
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Treatment 689 777	operacji dwukierunkowego zespolenia metodą Glenna i dociśnięcia bandingu tętnicy płucnej
+T7	Date 779 790	05.10.2012r
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Symptom 809 815	Sinica
+N4	Reference T8 ICD10:R23.0	Sinica
+T9	Drug 936 946	Verospiron
+T10	Drug 948 956	Enlapril
+T11	Drug 958 961	ANA
+T12	Drug 963 969	Acesan
+T13	Negation 971 981	odstawiony
+T14	Date 982 990	od 18.01
+R3	Neg Arg1:T13 Arg2:T12	
+R4	Dat Arg1:T14 Arg2:T12	
+T15	Condition 1129 1147	złożona wada serca
+T16	Drug 1169 1179	Verospiron
+T17	Drug 1182 1188	Acesan
+T18	Drug 1190 1199	Enalapril
+T19	Investigation 1215 1236	badania diagnostyczne
+T20	Treatment 1253 1274	leczenia operacyjnego
+T21	Condition 1277 1294	wywiad alergiczny
+N6	Reference T21 ICD10:T78.4	Alergia, nieokreślona
+T22	Negation 1295 1301	ujemny
+R5	Neg Arg1:T22 Arg2:T21	
+N5	Reference T15 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+R12	Dat Arg1:T7 Arg2:T6
+R16	Neg Arg1:T13 Arg2:T12
+R18	Dat Arg1:T14 Arg2:T10
+R19	Dat Arg1:T14 Arg2:T11
+R20	Dat Arg1:T14 Arg2:T12
+R21	Neg Arg1:T22 Arg2:T21
+R5	Dat Arg1:T5 Arg2:T4

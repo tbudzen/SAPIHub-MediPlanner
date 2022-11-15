@@ -1,0 +1,141 @@
+T1	Drug 1169 1181	Co-Prestrium
+T2	Drug_dose 1182 1187	10+10
+T3	Drug 1190 1202	Tertensif SR
+T4	Drug 1205 1213	Nebispes
+T5	Drug 1619 1630	Egiramlon  
+T6	Drug_dose 1630 1647	10+10 1 x dz rano
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 1650 1662	Tertensif SR
+T8	Drug_dose 1663 1674	1 x dz rano
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 1676 1684	Nebispes
+T10	Drug_dose 1685 1708	5 mg 1 x dz po 1/2 tabl
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Investigation 2708 2712	ECHO
+T12	Investigation 2714 2732	EKG metodą Holtera
+T13	Investigation 2734 2738	ABPM
+T14	Investigation 2740 2755	próba wysiłkowa
+T15	Drug 2594 2604	Prestarium
+T16	Drug_dose 2605 2624	10mg 1x 1 tabl/rano
+R4	Drg Arg1:T15 Arg2:T16	
+T17	Behaviour 2531 2558	warunki mieszkaniowe dobre.
+T18	Condition 2480 2483	WZW
+N1	Reference T18 ICD10:B19	
+T19	Condition 2490 2499	borelioza
+N2	Reference T19 ICD10:A69.2	Choroba z Lyme
+T20	Condition 2507 2510	tbc
+N3	Reference T20 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T21	Negation 2511 2514	(-)
+R5	Neg Arg1:T21 Arg2:T20	
+T22	Negation 2500 2505	( - )
+R6	Neg Arg1:T22 Arg2:T19	
+T23	Negation 2484 2487	(-)
+R7	Neg Arg1:T23 Arg2:T18	
+T24	Negation 2449 2452	nei
+T25	Negation 2434 2437	nie
+T26	Negation 2407 2410	nie
+T27	Condition 2438 2447	Uczulenia
+N4	Reference T27 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R8	Neg Arg1:T24 Arg2:T27	
+T28	Behaviour 2421 2433	Inne używki:
+R9	Neg Arg1:T25 Arg2:T28	
+T29	Behaviour 2390 2405	Palenie tytoniu
+N6	Reference T29 ICD10:Z72.0	Używanie tytoniu
+R10	Neg Arg1:T26 Arg2:T29	
+N5	Reference T28 ICD10:Z72	Problemy związane ze stylem życia
+T30	Date 2411 2420	od 20 lat
+R11	Dat Arg1:T30 Arg2:T29	
+T31	Negation 2385 2389	brak
+T32	Treatment 2366 2383	Przebyte operacje
+R12	Neg Arg1:T31 Arg2:T32	
+T33	Negation 2227 2233	Neguje
+T34	Symptom 2235 2247	zasłabnięcia
+N7	Reference T34 ICD10:R55	Omdlenie i zapaść
+T35	Symptom 2249 2257	omdlenia
+N8	Reference T35 ICD10:R55	Omdlenie i zapaść
+T36	Symptom 2259 2269	krwawienia
+N9	Reference T36 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T37	Symptom 2271 2284	czarne stolce
+N10	Reference T37 ICD10:K92.1	
+T38	Symptom 2286 2303	brunatne wymioty,
+N11	Reference T38 ICD10:K92.0	Wymioty krwawe
+T39	Condition 2304 2320	chorobę wrzodową
+N12	Reference T39 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T40	Symptom 2322 2336	duszność nocną
+N13	Reference T40 ICD10:R00.6	
+T41	Symptom 2339 2363	bóle w klatce piersiowej
+N14	Reference T41 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+R13	Neg Arg1:T33 Arg2:T34	
+R14	Neg Arg1:T33 Arg2:T35	
+R15	Neg Arg1:T33 Arg2:T36	
+R16	Neg Arg1:T33 Arg2:T37	
+R17	Neg Arg1:T33 Arg2:T39	
+R18	Neg Arg1:T33 Arg2:T38	
+R19	Neg Arg1:T33 Arg2:T40	
+R20	Neg Arg1:T33 Arg2:T41	
+T42	Treatment 1322 1387	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T43	Behaviour 1390 1430	Dieta lekkostrawna , niskocholesterolowa
+T44	Investigation 1443 1517	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T45	Investigation 1534 1569	kontrola ciśnienia tętniczego krwi.
+T46	Condition 1865 1867	HA
+N15	Reference T46 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T47	Condition 1869 1878	łuszczycą
+N16	Reference T47 ICD10:L40.9	Łuszczyca, nieokreślona
+T48	Investigation_result 1919 1945	RR w domu ok. 140-150/100,
+T49	Investigation_result 1946 1975	skoki do 190-200/130-140mmHg)
+T50	Investigation_result 1902 1917	powodu wahań RR
+T51	Symptom 1999 2021	napady kołatania serca
+N17	Reference T51 ICD10:R00.2	Kołatanie serca
+T52	Symptom 2031 2062	towarzyszącymi zawrotami głowy,
+N18	Reference T52 ICD10:R42	Zawroty głowy i odurzenie
+T53	Symptom 2063 2083	obrzęki wokół kostek
+N19	Reference T53 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T54	Condition 2105 2117	przeziębiony
+N20	Reference T54 ICD10:J00	Ostre zapalenie nosa i gardła [przeziębienie]
+T55	Symptom 2120 2174	kaszlem z odkrztuszaniem wydzieliny podbarwionej krwią
+N21	Reference T55 ICD10:R05	Kaszel
+T56	Investigation_result 2178 2194	gorączką do 39st
+T57	Condition 403 405	HA
+N22	Reference T57 ICD10:I10	
+T58	Symptom 407 422	Kołatania serca
+N23	Reference T58 ICD10:R00.2	Kołatanie serca
+T59	Condition 432 457	infekcji dróg oddechowych
+N24	Reference T59 ICD10:J06	Ostre zakażenie górnych dróg oddechowych o umiejscowieniu mnogim nieokreślonym
+T60	Condition 721 761	Łagodna niedomykalność zastawki aortalna
+N25	Reference T60 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T61	Condition 763 790	Poszerzona aorta wstępująca
+N26	Reference T61 ICD10:R93.0	Nieprawidłowe wyniki diagnostycznych badań obrazowych czaszki i głowy, niesklasyfikowane gdzie indziej
+T62	Condition 792 830	Tętniak przegrody międzyprzedsionkowej
+N27	Reference T62 ICD10:Q21.8	Inna wrodzona wada rozwojowa przegród serca
+T63	Condition 834 864	Pojedyncze pobudzenia komorowe
+N28	Reference T63 ICD10:I49.3	
+T64	Condition 866 900	Nadkomorowe zaburzenia rytmu serca
+N29	Reference T64 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T65	Condition 903 924	pobudzenia pojedyncze
+N30	Reference T65 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T66	Condition 926 963	napadowe  częstoskurcze przedsionkowe
+N31	Reference T66 ICD10:I47.1	Częstoskurcz nadkomorowy
+T67	Condition 967 988	Nadciśnienie tętnicze
+N32	Reference T67 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T68	Condition 990 1011	Hipertrójglicerydemia
+N33	Reference T68 ICD10:E78.1	Czysta hiperglicerydemia
+T69	Condition 1013 1027	Kamica nerkowa
+N34	Reference T69 ICD10:N20.0	Kamica nerki
+R1	Drg Arg1:T1 Arg2:T2
+R12	Drg Arg1:T9 Arg2:T10
+R123	Drg Arg1:T15 Arg2:T16
+R13	Neg Arg1:T33 Arg2:T34
+R131	Dat Arg1:T30 Arg2:T27
+R134	Dat Arg1:T30 Arg2:T28
+R135	Dat Arg1:T30 Arg2:T29
+R14	Neg Arg1:T33 Arg2:T35
+R15	Neg Arg1:T33 Arg2:T36
+R17	Neg Arg1:T33 Arg2:T56
+R2	Drg Arg1:T3 Arg2:T2
+R24	Neg Arg1:T21 Arg2:T20
+R38	Neg Arg1:T22 Arg2:T19
+R4	Drg Arg1:T5 Arg2:T6
+R52	Neg Arg1:T23 Arg2:T18
+R70	Neg Arg1:T24 Arg2:T27
+R8	Drg Arg1:T7 Arg2:T8
+R88	Neg Arg1:T25 Arg2:T28

@@ -1,0 +1,683 @@
+T1	Drug 13503 13512	Actrapiod
+T2	Drug_dose 13513 13529	3x  wg  glikemii
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 13480 13492	Nitrendypina
+T4	Drug_dose 13493 13501	10mg 2x1
+R2	Drg Arg1:T3 Arg2:T4	
+T5	Drug 13462 13468	Coryol
+T6	Drug_dose 13469 13479	2x1/2 tabl
+R3	Drg Arg1:T5 Arg2:T6	
+T7	Drug 13426 13432	Atoris
+T8	Drug_dose 13433 13460	20mg  1x1 tabl  po  kolacji
+R4	Drg Arg1:T7 Arg2:T8	
+T9	Drug 13403 13411	telmizek
+T10	Drug 13372 13377	Acard
+T11	Drug 13358 13366	Sulpiryd
+T12	Drug 13331 13338	Milurit
+T13	Drug 13308 13313	Doxar
+T14	Drug 13284 13290	Espiro
+T15	Drug 13257 13263	Diured
+T16	Drug 13238 13247	Panprazox
+T17	Drug_dose 13248 13256	1x1 rano
+R5	Drg Arg1:T16 Arg2:T17	
+T18	Drug_dose 13264 13283	5mg 1x1 tabl,  rano
+R6	Drg Arg1:T15 Arg2:T18	
+T19	Drug_dose 13291 13307	50 1x1 tabl rano
+R7	Drg Arg1:T14 Arg2:T19	
+T20	Drug_dose 13314 13330	4mg 1x1  wieczór
+R8	Drg Arg1:T13 Arg2:T20	
+T21	Drug_dose 13339 13357	100mg 1x1 tab rano
+R9	Drg Arg1:T12 Arg2:T21	
+T22	Drug_dose 13367 13370	2x1
+R10	Drg Arg1:T11 Arg2:T22	
+T23	Drug_dose 13378 13402	75 mg 1x1 tabl wieczorem
+R11	Drg Arg1:T10 Arg2:T23	
+T24	Drug_dose 13412 13425	80mg 1x1 rano
+R12	Drg Arg1:T9 Arg2:T24	
+T25	Negation 13190 13196	neguje
+T26	Negation 13162 13168	neguje
+T27	Negation 13146 13152	neguje
+T28	Negation 13126 13132	neguje
+T29	Condition 13117 13124	Alergie
+N1	Reference T29 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R13	Neg Arg1:T28 Arg2:T29	
+T30	Behaviour 13134 13146	Nikotynizm  
+N2	Reference T30 ICD10:Z72.0	Używanie tytoniu
+R14	Neg Arg1:T27 Arg2:T30	
+T31	Behaviour 13154 13161	Alkohol
+N3	Reference T31 ICD10:Z72.1	Używanie alkoholu
+R15	Neg Arg1:T26 Arg2:T31	
+T32	Behaviour 13170 13188	Uzależnienia  inne
+N4	Reference T32 ICD10:Z72	Problemy związane ze stylem życia
+R16	Neg Arg1:T25 Arg2:T32	
+T33	Treatment 13081 13114	 operacji  pęcherzyka  żółciowego
+A1	Status T33 Historical_Insignificant
+T34	Condition 13036 13047	cukrzyca t2
+N5	Reference T34 ICD10:E11	Cukrzyca insulinoniezależna
+T35	Condition 11884 11899	Cukrzyca typu 2
+N6	Reference T35 ICD10:E11	Cukrzyca insulinoniezależna
+T36	Condition 8655 8670	Cukrzyca typu 2
+N7	Reference T36 ICD10:E11	Cukrzyca insulinoniezależna
+T37	Condition 6335 6350	Cukrzyca typu 2
+N8	Reference T37 ICD10:E11	Cukrzyca insulinoniezależna
+T38	Condition 3049 3064	Cukrzyca typu 2
+N9	Reference T38 ICD10:E11	Cukrzyca insulinoniezależna
+T39	Condition 738 754	Cukrzyca typu 2.
+N10	Reference T39 ICD10:E11	Cukrzyca insulinoniezależna
+T40	Condition 373 402	Przewlekłą niewydolność serca
+T41	Symptom 403 425	III’-> II/III’ wg NYHA
+T42	Condition 428 455	zachowaną frakcją wyrzutową
+T43	Investigation_result 458 466	EF = 74%
+T44	Condition 2632 2691	Przewlekła niewydolność serca z zachowaną frakcją wyrzutową
+T45	Symptom 2694 2715	II/III klasie wg NYHA
+T46	Condition 5910 5969	Przewlekła niewydolność serca z zachowaną frakcją wyrzutową
+T47	Symptom 5972 5991	III klasie wg NYHA;
+T48	Condition 5992 6033	dysfunkcja rozkurczowa lewej komory serca
+T49	Symptom 12824 12856	obniżonej  tolerancji  wysiłku  
+N14	Reference T49 ICD10:R53	Złe samopoczucie i zmęczenie
+T50	Symptom 8283 8323	znacznego pogorszenia tolerancji wysiłku
+N15	Reference T50 ICD10:R53	Złe samopoczucie i zmęczenie
+T51	Condition 471 512	Dysfunkcja rozkurczowa lewej komory serca
+T52	Condition 514 541	Choroba niedokrwienna serca
+T53	Condition 2717 2758	Dysfunkcja rozkurczowa lewej komory serca
+T54	Condition 2760 2829	Przewlekła choroba niedokrwienna serca - choroba mostków mięśniowych.
+N17	Reference T54 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T55	Condition 6035 6103	Przewlekła choroba niedokrwienna serca - choroba mostków mięśniowych
+N18	Reference T55 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T56	Condition 11584 11652	Przewlekła choroba niedokrwienna serca - choroba mostków mięśniowych
+N19	Reference T56 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T57	Condition 11459 11518	Przewlekła niewydolność serca z zachowaną frakcją wyrzutową
+N20	Reference T57 ICD10:I50	Niewydolność serca
+T58	Symptom 11521 11539	III klasie wg NYHA
+T59	Condition 11541 11582	dysfunkcja rozkurczowa lewej komory serca
+T60	Condition 11654 11725	Wada serca pod postacią umiarkowanej niedomykalności zastawki aortalnej
+N21	Reference T60 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T61	Condition 12979 13008	choroba  niedokrwienna  serca
+N22	Reference T61 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T62	Condition 13012 13033	nadciśnienie tętnicze
+N23	Reference T62 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T63	Symptom 12898 12961	występującego  bólu  za  mostkiem  o  charakterze   rozpierania
+N24	Reference T63 ICD10:R07.3	Inne bóle w klatce piersiowej
+T64	Symptom 12858 12884	obrzęków  kończyn  dolnych
+N25	Reference T64 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T65	Condition 6105 6176	Wada serca pod postacią umiarkowanej niedomykalności zastawki aortalnej
+N26	Reference T65 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T66	Condition 2858 2892	łagodną stenozą zastawki aortalnej
+N27	Reference T66 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T67	Condition 2830 2855	Niedomykalność II stopnia
+N28	Reference T67 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T68	Condition 577 622	Umiarkowana niedomykalność zastawki aortalnej
+N29	Reference T68 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T69	Condition 545 572	Choroba mostków mięśniowych
+N30	Reference T69 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T70	Condition 625 670	Łagodna niedomykalność zastawki trójdzielnej.
+N31	Reference T70 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T71	Condition 2894 2944	Niedomykalność zastawki trójdzielnej I/II stopnia.
+N32	Reference T71 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T72	Condition 6179 6225	łagodnej niedomykalności zastawki trójdzielnej
+N33	Reference T72 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T73	Condition 11728 11774	łagodnej niedomykalności zastawki trójdzielnej
+N34	Reference T73 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T74	Drug 12623 12633	Insulatard
+T75	Drug 12590 12598	Actrapid
+T76	Drug 12569 12577	Sulpiryd
+T77	Drug 12543 12550	Cardura
+T78	Drug 12517 12524	Nonpres
+T79	Drug 12478 12484	Coryol
+T80	Drug 12454 12460	Telmix
+T81	Drug 12428 12437	Panprazox
+T82	Drug 12396 12402	Sortis
+T83	Drug 12366 12371	Acard
+T84	Drug_dose 12372 12394	75 mg 1 tabl wieczorem
+R17	Drg Arg1:T83 Arg2:T84	
+T85	Drug_dose 12403 12426	10 mg 1 tabl. wieczorem
+R18	Drg Arg1:T82 Arg2:T85	
+T86	Drug_dose 12438 12452	20 mg 1x1 rano
+R19	Drg Arg1:T81 Arg2:T86	
+T87	Drug_dose 12461 12476	40 1 tabl. rano
+R20	Drg Arg1:T80 Arg2:T87	
+T88	Drug_dose 12485 12515	6.25 1/2 tabl rano i wieczorem
+R21	Drg Arg1:T79 Arg2:T88	
+T89	Drug_dose 12525 12541	25 1x1 tabl rano
+R22	Drg Arg1:T78 Arg2:T89	
+T90	Drug_dose 12551 12567	4mg 1x1  wieczór
+R23	Drg Arg1:T77 Arg2:T90	
+T91	Drug_dose 12578 12587	50 mg 2x1
+R24	Drg Arg1:T76 Arg2:T91	
+T92	Drug_dose 12599 12621	16 j - 6-8 j - 14-16 j
+R25	Drg Arg1:T75 Arg2:T92	
+T93	Drug_dose 12634 12645	8 j o 22.00
+R26	Drg Arg1:T74 Arg2:T93	
+T94	Negation 12315 12323	neguje  
+T95	Behaviour 12294 12312	Uzależnienia  inne
+N35	Reference T95 ICD10:Z72	Problemy związane ze stylem życia
+R27	Neg Arg1:T94 Arg2:T95	
+T96	Negation 12285 12293	neguje  
+T97	Negation 12267 12275	neguje  
+T98	Negation 12244 12252	neguje  
+T99	Behaviour 12276 12283	Alkohol
+N36	Reference T99 ICD10:Z72.1	Używanie alkoholu
+R28	Neg Arg1:T96 Arg2:T99	
+T100	Behaviour 12253 12263	Nikotynizm
+N37	Reference T100 ICD10:Z72.0	Używanie tytoniu
+R29	Neg Arg1:T97 Arg2:T100	
+T101	Condition 12235 12242	Alergie
+N38	Reference T101 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R30	Neg Arg1:T98 Arg2:T101	
+T102	Treatment 12210 12228	Przebyte  operacje
+T103	Treatment 12192 12208	cholecystektomii
+A2	Status T103 Historical_Insignificant
+T104	Condition 12139 12170	Łagodna dysplazja szyjki macicy
+N39	Reference T104 ICD10:N87.9	Dysplazja szyjki macicy, nieokreślona
+T105	Condition 6590 6621	Łagodna dysplazja szyjki macicy
+N40	Reference T105 ICD10:N87.9	Dysplazja szyjki macicy, nieokreślona
+T106	Treatment 6643 6659	cholecystektomii
+A3	Status T106 Historical_Insignificant
+T107	Condition 6312 6333	Nadciśnienie tętnicze
+N41	Reference T107 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T108	Condition 3310 3341	Łagodna dysplazja szyjki macicy
+N42	Reference T108 ICD10:N87.9	Dysplazja szyjki macicy, nieokreślona
+T109	Treatment 3363 3379	cholecystektomii
+A4	Status T109 Historical_Insignificant
+T110	Condition 3191 3211	Miażdżyca uogólniona
+N43	Reference T110 ICD10:I70.9	Miażdżyca uogólniona i nieokreślona
+T111	Condition 3283 3296	Hiperurykemia
+N44	Reference T111 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T112	Condition 2945 2988	Niedomykalność zastawki mitralnej I stopnia
+N45	Reference T112 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T113	Condition 2990 3025	Nadkomorowe zaburzenia rytmu serca.
+N46	Reference T113 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T114	Condition 3026 3047	Nadciśnienie tętnicze
+N47	Reference T114 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T115	Condition 906 937	Łagodna dysplazja szyjki macicy
+N48	Reference T115 ICD10:N87.9	Dysplazja szyjki macicy, nieokreślona
+T116	Condition 805 818	Hiperurykemia
+N49	Reference T116 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T117	Condition 833 842	Miażdżyca
+N50	Reference T117 ICD10:I70	Miażdżyca
+T118	Condition 845 872	Niedokrwistość normocytrana
+N51	Reference T118 ICD10:D64	Inne niedokrwistości
+T119	Condition 671 699	Ekstrasystolia przedsionkowa
+N52	Reference T119 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T120	Condition 714 735	Nadciśnienie tętnicze
+N53	Reference T120 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T121	Condition 755 777	Retinopatia cukrzycowa
+N54	Reference T121 ICD10:H36.0	
+T122	Condition 3066 3088	Retinopatia cukrzycowa
+N55	Reference T122 ICD10:H36.0	
+T123	Condition 3175 3189	Małopłytkowość
+N56	Reference T123 ICD10:D69.6	Małopłytkowość, nieokreślona
+T124	Condition 6352 6374	Retinopatia cukrzycowa
+N57	Reference T124 ICD10:H36.0	
+T125	Condition 6227 6310	Nadkomorowe zaburzenia rytmu serca pod postacią dodatkowych pobudzeń przedwczesnych
+N58	Reference T125 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T126	Condition 6462 6476	Małopłytkowość
+N59	Reference T126 ICD10:D69.6	Małopłytkowość, nieokreślona
+T127	Condition 6421 6460	Niedokrwistość umiarkowana normocytarna
+N60	Reference T127 ICD10:D64	Inne niedokrwistości
+T128	Condition 6478 6491	Hiperurykemia
+N61	Reference T128 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T129	Behaviour 6935 6973	dieta cukrzycowa i niskocholesterolowa
+T130	Behaviour 6981 7051	ścisła kontrola ilości spożywanych płynów – zalecane 1,5-2.0 l na dobę
+T131	Investigation 7058 7085	codzienny pomiar masy ciała
+T132	Investigation 7101 7171	kontrola stężenia elektrolitów, parametrów nerkowych i morfologii krwi
+T133	Date 7174 7196	pierwsza za 3 tygodnie
+T134	Investigation 7202 7213	lipidogramu
+R31	Dat Arg1:T133 Arg2:T132	
+R32	Dat Arg1:T133 Arg2:T134	
+T135	Investigation 7229 7263	kontrola ciśnienia tętniczego krwi
+T136	Drug 7308 7317	Panprazox
+T137	Drug_dose 7318 7330	1 tabl. rano
+R33	Drg Arg1:T136 Arg2:T137	
+T138	Drug 7338 7345	Milurit
+T139	Drug_dose 7346 7362	100mg 1 tab rano
+R34	Drg Arg1:T138 Arg2:T139	
+T140	Drug 7370 7378	Sulpiryd
+T141	Drug_dose 7379 7403	1 tabl. rano i wieczorem
+R35	Drg Arg1:T140 Arg2:T141	
+T142	Drug 7411 7416	Acard
+T143	Drug_dose 7417 7439	75 mg 1 tabl wieczorem
+R36	Drg Arg1:T142 Arg2:T143	
+T144	Drug 7447 7453	Coryol
+T145	Drug_dose 7454 7487	3,125 mg 1 tabl. rano i wieczorem
+R37	Drg Arg1:T144 Arg2:T145	
+T146	Drug 7495 7501	Atoris
+T147	Drug_dose 7502 7525	20mg 1 tabl.  wieczorem
+R38	Drg Arg1:T146 Arg2:T147	
+T148	Drug 7533 7541	Telmizek
+T149	Drug_dose 7542 7553	80mg 1 rano
+R39	Drg Arg1:T148 Arg2:T149	
+T150	Drug 7561 7567	Diured
+T151	Drug_dose 7568 7585	10mg 1 tabl, rano
+R40	Drg Arg1:T150 Arg2:T151	
+T152	Drug 7593 7611	Hydrochlorothiazyd
+T153	Drug_dose 7612 7661	25 mg 1 tabl. rano 30 min. przed podaniem Diuveru
+R41	Drg Arg1:T152 Arg2:T153	
+T154	Drug 7670 7676	Espiro
+T155	Drug_dose 7677 7693	50mg 1 tabl rano
+R42	Drg Arg1:T154 Arg2:T155	
+T156	Drug 7702 7714	Nitrendypina
+T157	Drug_dose 7715 7744	10mg 1 tabl. rano i wieczorem
+R43	Drg Arg1:T156 Arg2:T157	
+T158	Drug 7754 7759	Doxar
+T159	Drug_dose 7760 7781	4mg 1 tabl. wieczorem
+R44	Drg Arg1:T158 Arg2:T159	
+T160	Drug 7790 7807	Insulina Actrapid
+T161	Drug_dose 7810 7832	dawkowanie wg glikemii
+R45	Drg Arg1:T160 Arg2:T161	
+T162	Drug 7842 7854	Hemofer prol
+T163	Drug_dose 7856 7880	1 tabl. rano i wieczorem
+R46	Drg Arg1:T162 Arg2:T163	
+T164	Drug 7890 7900	Berodual N
+T165	Drug_dose 7901 7992	aerozol inhalacyjny (50 µg/dawkę+21 µg/dawkę) 1-2 dawki doraźnie w razie obturacji oskrzeli
+R47	Drg Arg1:T164 Arg2:T165	
+T166	Drug 8001 8010	Furosemid
+T167	Drug_dose 8011 8111	1 tabl. dodatkowo w południe przez 2-3 dni w razie przyrostu masy ciała >2 kg spowodowanej obrzękami
+R48	Drg Arg1:T166 Arg2:T167	
+T168	Symptom 8326 8346	duszności wysiłkowej
+N62	Reference T168 ICD10:R06.0	Duszność
+T169	Symptom 8349 8383	znacznych obrzęków kończyn dolnych
+N63	Reference T169 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T170	Symptom 8439 8524	bóle zamostkowe zależne od wysiłku , ustępujące w trakcie spoczynku po kilku minutach
+N64	Reference T170 ICD10:R07.3	Inne bóle w klatce piersiowej
+T171	Condition 8542 8570	Oporne nadciśnienie tętnicze
+N65	Reference T171 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T172	Condition 8572 8624	Izolowana dysfunkcja rozkurczowa lewej komory serca.
+T173	Condition 8625 8653	Ekstrasystolia przedsionkowa
+N66	Reference T173 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T174	Condition 8672 8694	Retinopatia cukrzycowa
+N67	Reference T174 ICD10:H36.0	
+T175	Condition 8696 8720	Cukrzycowa choroba nerek
+N68	Reference T175 ICD10:E14.2	
+T176	Condition 8722 8736	Niedokrwistość
+N69	Reference T176 ICD10:D64.9	Niedokrwistość, nieokreślona
+T177	Condition 8751 8782	łagodna dysplazja szyjki macicy
+N70	Reference T177 ICD10:N87	Dysplazja szyjki macicy
+T178	Negation 8922 8928	neguje
+T179	Condition 8913 8922	Alergie  
+N71	Reference T179 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R49	Neg Arg1:T178 Arg2:T179	
+T180	Treatment 8878 8899	operacje okulistyczne
+A5	Status T180 Historical_Insignificant
+T181	Date 8902 8911	2002 roku
+R50	Dat Arg1:T181 Arg2:T180	
+T182	Condition 8795 8820	operacje : ginekologiczna
+A6	Status T182 Historical_Insignificant
+A7	Source T182 Declared
+T183	Condition 8992 8995	WZW
+N72	Reference T183 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T184	Condition 9005 9014	borelioza
+N73	Reference T184 ICD10:A69.2	Choroba z Lyme
+T185	Negation 8996 9002	( -  )
+R51	Neg Arg1:T185 Arg2:T183	
+T186	Negation 9015 9020	( - )
+R52	Neg Arg1:T186 Arg2:T184	
+T187	Condition 9021 9042	W wywiadzie rodzinnym
+A8	Status T187 Family
+T188	Negation 9045 9047	bz
+R53	Neg Arg1:T188 Arg2:T187	
+T189	Behaviour 9049 9064	Palenie tytoniu
+N74	Reference T189 ICD10:Z72.0	Używanie tytoniu
+T190	Negation 9066 9069	nie
+T191	Negation 9083 9086	nie
+T192	Negation 9098 9104	neguje
+T193	Behaviour 9070 9082	Inne używki:
+N75	Reference T193 ICD10:Z72	Problemy związane ze stylem życia
+R54	Neg Arg1:T191 Arg2:T193	
+R55	Neg Arg1:T190 Arg2:T189	
+T194	Condition 9087 9096	Uczulenia
+N76	Reference T194 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R56	Neg Arg1:T192 Arg2:T194	
+T195	Behaviour 9121 9147	warunki mieszkaniowe dobre
+T196	Drug 9171 9176	Acard
+T197	Drug 9212 9221	Panprazox
+T198	Drug_dose 9177 9210	75mg 1x 1 tabl co 2gi dzień/wiecz
+R57	Drg Arg1:T196 Arg2:T198	
+T199	Drug_dose 9222 9245	20mg 1x 1 tabl na czczo
+R58	Drg Arg1:T197 Arg2:T199	
+T200	Drug 9247 9253	Diured
+T201	Drug 9274 9281	Nonpres
+T202	Drug_dose 9254 9272	5mg 1x 1 tabl/rano
+R59	Drg Arg1:T200 Arg2:T202	
+T203	Drug_dose 9282 9301	25mg 1x 1 tabl/rano
+R60	Drg Arg1:T201 Arg2:T203	
+T204	Drug 9303 9309	Telmix
+T205	Drug_dose 9310 9330	80mg 1x 1 tabl/wiecz
+R61	Drg Arg1:T204 Arg2:T205	
+T206	Drug 9332 9338	Sortis
+T207	Drug_dose 9339 9359	10mg 1x 1 tabl/wiecz
+R62	Drg Arg1:T206 Arg2:T207	
+T208	Drug 9361 9367	Coryol
+T209	Drug_dose 9368 9390	3,125mg 1x 1 tabl/rano
+R63	Drg Arg1:T208 Arg2:T209	
+T210	Drug 9392 9399	Milurit
+T211	Drug_dose 9400 9420	100mg 1x 1 tabl/rano
+R64	Drg Arg1:T210 Arg2:T211	
+T212	Drug 9422 9434	Nitrendypina
+T213	Drug_dose 9435 9450	10mg 1-0-1 tabl
+R65	Drg Arg1:T212 Arg2:T213	
+T214	Drug 9452 9457	Doxar
+T215	Drug_dose 9458 9472	4mg 1-0-1 tabl
+R66	Drg Arg1:T214 Arg2:T215	
+T216	Drug 9474 9491	Insulina Actrapid
+T217	Drug_dose 9492 9525	wg glikemii- ostatnio 12-8-4 j sc
+R67	Drg Arg1:T216 Arg2:T217	
+T218	Drug 9527 9537	Insulatard
+T219	Drug_dose 9538 9569	wg glikemii ostatnio 4j o 21:00
+R68	Drg Arg1:T218 Arg2:T219	
+T220	Drug 9571 9579	Sulpiryd
+T221	Drug_dose 9581 9612	jak dotychczas: 50mg 1-1-0 tabl
+R69	Drg Arg1:T220 Arg2:T221	
+T222	Investigation 9629 9639	Echo serca
+T223	Investigation 9642 9652	Holter EKG
+T224	Condition 11861 11882	Nadciśnienie tętnicze
+N77	Reference T224 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T225	Condition 11776 11859	Nadkomorowe zaburzenia rytmu serca pod postacią dodatkowych pobudzeń przedwczesnych
+N78	Reference T225 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T226	Condition 11901 11924	Retinopatia cukrzycowa.
+N79	Reference T226 ICD10:H36.0	
+T227	Condition 12011 12025	Małopłytkowość
+N80	Reference T227 ICD10:D69.6	Małopłytkowość, nieokreślona
+T228	Condition 12027 12040	Hiperurykemia
+N81	Reference T228 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T229	Condition 11970 12009	Niedokrwistość umiarkowana normocytarna
+N82	Reference T229 ICD10:D64	Inne niedokrwistości
+T230	Condition 11925 11969	Przewlekła choroba nerek w 3 stadium wg NKF.
+N83	Reference T230 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T231	Condition 12054 12112	Zmiany śródmiąższowe płuc o charakterze " mlecznej szyby "
+N84	Reference T231 ICD10:R93	Nieprawidłowe wyniki diagnostycznych badań obrazowych innych struktur ciała
+T232	Condition 6505 6563	Zmiany śródmiąższowe płuc o charakterze " mlecznej szyby "
+N85	Reference T232 ICD10:R93	Nieprawidłowe wyniki diagnostycznych badań obrazowych innych struktur ciała
+T233	Condition 6376 6419	Przewlekła choroba nerek w 3 stadium wg NKF
+N86	Reference T233 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T234	Condition 3213 3269	Zmiany śródmiąższowe płuc o charakterze "mlecznej szyby"
+N87	Reference T234 ICD10:R93	Nieprawidłowe wyniki diagnostycznych badań obrazowych innych struktur ciała
+T235	Condition 3139 3173	Niedokrwistość chorób przewlekłych
+N88	Reference T235 ICD10:D64	Inne niedokrwistości
+T236	Condition 3090 3137	Przewlekła choroba nerek w stadium G3a wg KDIGO
+N89	Reference T236 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T237	Condition 874 902	Zaburzenia hormonów tarczycy
+T238	Condition 779 803	Cukrzycowa choroba nerek
+N90	Reference T238 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T239	Condition 952 1010	Zmiany śródmiąższowe płuc o charakterze " mlecznej szyby "
+N91	Reference T239 ICD10:R93	Nieprawidłowe wyniki diagnostycznych badań obrazowych innych struktur ciała
+T240	Behaviour 1328 1367	Dieta cukrzycowa  , niskocholesterolowa
+T241	Behaviour 1371 1413	Chora powinna wypijać 1500-2000 ml na dobę
+T242	Investigation 1425 1499	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T243	Investigation 1516 1550	kontrola ciśnienia tętniczego krwi
+T244	Drug 1602 1607	Acard
+T245	Drug_dose 1608 1641	75mg 1x 1 tabl co 2gi dzień/wiecz
+R70	Drg Arg1:T244 Arg2:T245	
+T246	Drug 1643 1652	Panprazox
+T247	Drug_dose 1653 1676	20mg 1x 1 tabl na czczo
+R71	Drg Arg1:T246 Arg2:T247	
+T248	Drug 1678 1684	Diured
+T249	Drug_dose 1685 1704	10mg 1x 1 tabl/rano
+R72	Drg Arg1:T248 Arg2:T249	
+T250	Drug 1706 1713	Nonpres
+T251	Drug_dose 1714 1733	25mg 1x 1 tabl/rano
+R73	Drg Arg1:T250 Arg2:T251	
+T252	Drug 1735 1741	Telmix
+T253	Drug_dose 1742 1762	80mg 1x 1 tabl/wiecz
+R74	Drg Arg1:T252 Arg2:T253	
+T254	Drug 1764 1770	Sortis
+T255	Drug_dose 1771 1791	10mg 1x 1 tabl/wiecz
+R75	Drg Arg1:T254 Arg2:T255	
+T256	Drug 1793 1799	Coryol
+T257	Drug_dose 1800 1824	3,125mg 2 x dz  1/2 tabl
+R76	Drg Arg1:T256 Arg2:T257	
+T258	Drug 1827 1834	Milurit
+T259	Drug_dose 1835 1855	100mg 1x 1 tabl/rano
+R77	Drg Arg1:T258 Arg2:T259	
+T260	Drug 1857 1869	Nitrendypina
+T261	Drug_dose 1870 1885	10mg 1-0-1 tabl
+R78	Drg Arg1:T260 Arg2:T261	
+T262	Drug 1887 1897	Cardura XL
+T263	Drug_dose 1899 1913	8mg 0-0-1 tabl
+R79	Drg Arg1:T262 Arg2:T263	
+T264	Drug 1915 1932	Insulina Actrapid
+T265	Drug_dose 1933 1966	wg glikemii- ostatnio 12-6-4 j sc
+R80	Drg Arg1:T264 Arg2:T265	
+T266	Drug 1968 1978	Insulatard
+T267	Drug_dose 1979 2010	wg glikemii ostatnio 6j o 21:00
+R81	Drg Arg1:T266 Arg2:T267	
+T268	Drug 2012 2020	Sulpiryd
+T269	Drug_dose 2022 2053	jak dotychczas: 50mg 1-1-0 tabl
+R82	Drg Arg1:T268 Arg2:T269	
+T270	Drug 2055 2067	Hydroxyzinum
+T271	Drug_dose 2068 2089	10 mg 1x dz wieczorem
+R83	Drg Arg1:T270 Arg2:T271	
+T272	Drug 2093 2101	Betaserc
+T273	Drug_dose 2102 2115	24   1- 1 - 0
+R84	Drg Arg1:T272 Arg2:T273	
+T274	Drug 2117 2125	Doreta  
+T275	Drug_dose 2125 2164	1 tabl doraźnie w razie bólu kręgosłupa
+R85	Drg Arg1:T274 Arg2:T275	
+T276	Condition 3659 3716	zmian śródmiąższowych płuc o charakterze "mlecznej szyby"
+N92	Reference T276 ICD10:R93	Nieprawidłowe wyniki diagnostycznych badań obrazowych innych struktur ciała
+T277	Investigation 3762 3770	RTG płuc
+T278	Investigation 3847 3917	kontrola stężenia elektrolitów, parametrów nerkowych i morfologii krwi
+T279	Date 3929 3943	za 3 tygodnie.
+R86	Dat Arg1:T279 Arg2:T278	
+T280	Investigation 3978 4007	badania echokardiograficznego
+T281	Date 4008 4014	za rok
+R87	Dat Arg1:T281 Arg2:T280	
+T282	Behaviour 4100 4138	Dieta cukrzycowa i niskocholesterolowa
+T283	Behaviour 4143 4208	Ścisła kontrola ilości spożywanych płynów – zalecane 2.0l na dobę
+T284	Behaviour 4213 4254	Należy regularnie kontrolować masę ciała.
+T285	Drug 4350 4359	Furosemid
+T286	Drug_dose 4360 4397	(1 tabletka) w południe przez 2-3 dni
+R88	Drg Arg1:T285 Arg2:T286	
+T287	Investigation 4412 4454	kontrola ciśnienia tętniczego krwi i tętna
+T288	Investigation 4480 4514	kontrola glikemii przed posiłkami.
+T289	Date 4470 4479	codzienna
+R89	Dat Arg1:T289 Arg2:T288	
+T290	Behaviour 5629 5692	Bezwględny wymóg nadzoru osób trzecich nad przyjmowaniem leków!
+T291	Drug 5517 5526	Furosemid
+T292	Drug_dose 5527 5627	1 tabl. dodatkowo w południe przez 2-3 dni w razie przyrostu masy ciała >2 kg spowodowanej obrzękami
+R90	Drg Arg1:T291 Arg2:T292	
+T293	Drug 5413 5423	Berodual N
+T294	Drug_dose 5424 5516	aerozol inhalacyjny (50 µg/dawkę+21 µg/dawkę) 1-2 dawki doraźnie w razie obturacji oskrzeli.
+R91	Drg Arg1:T293 Arg2:T294	
+T295	Drug 5362 5381	Insulina Insulatard
+T296	Drug_dose 5382 5411	10 jednostek o godzinie 22:00
+R92	Drg Arg1:T295 Arg2:T296	
+T297	Drug 5242 5259	Insulina Actrapid
+T298	Drug_dose 5260 5360	12j. - 10j. - 10j., 30 minut przed posiłkami - ilość jednostek należy dostosować do poziomu glikemii
+R93	Drg Arg1:T297 Arg2:T298	
+T299	Drug 5195 5200	Doxar
+T300	Drug 5132 5144	Nitrendypina
+T301	Drug 5086 5094	Telmizek
+T302	Drug 5037 5043	Atoris
+T303	Drug_dose 5044 5084	20mg 1 tabletka 1 raz dziennie wieczorem
+R94	Drg Arg1:T302 Arg2:T303	
+T304	Drug_dose 5095 5130	80mg 1 tabletka 1 raz dziennie rano
+R95	Drg Arg1:T301 Arg2:T304	
+T305	Drug_dose 5145 5193	20mg 1 tabletka 2 razy dziennie rano i wieczorem
+R96	Drg Arg1:T300 Arg2:T305	
+T306	Drug_dose 5201 5240	4mg 1 tabletka 1 raz dziennie wieczorem
+R97	Drg Arg1:T299 Arg2:T306	
+T307	Drug 4976 4982	Coryol
+T308	Drug 4927 4932	Acard
+T309	Drug 4873 4881	Sulpiryd
+T310	Drug 4827 4834	Milurit
+T311	Drug 4783 4789	Espiro
+T312	Drug_dose 4983 5035	3,125 mg 1 tabletka 2 razy dziennie rano i wieczorem
+R98	Drg Arg1:T307 Arg2:T312	
+T313	Drug_dose 4933 4974	75 mg 1 tabletka 1 raz dziennie wieczorem
+R99	Drg Arg1:T308 Arg2:T313	
+T314	Drug_dose 4882 4926	1 tabletka 2 razy dziennie rano i wieczorem.
+R100	Drg Arg1:T309 Arg2:T314	
+T315	Drug_dose 4835 4871	100mg 1 tabletka 1 raz dziennie rano
+R101	Drg Arg1:T310 Arg2:T315	
+T316	Drug_dose 4790 4825	50mg 1 tabletka 1 raz dziennie rano
+R102	Drg Arg1:T311 Arg2:T316	
+T317	Drug 4695 4713	Hydrochlorothiazyd
+T318	Drug_dose 4714 4781	25 mg 1 tabletka 1 raz dziennie rano 30 min. przed podaniem Diuredu
+R103	Drg Arg1:T317 Arg2:T318	
+T319	Drug 4637 4643	Diured
+T320	Drug_dose 4644 4693	10mg 1 tabletka 2 razy dziennie rano i w południe
+R104	Drg Arg1:T319 Arg2:T320	
+T321	Drug 4549 4552	IPP
+T322	Drug_dose 4553 4635	1 tabletka 1 raz dziennie rano, na czczo 30 minut przed posiłkiem przez 2 tygodnie
+R105	Drg Arg1:T321 Arg2:T322	
+T323	Treatment 1220 1324	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej ,  Diabetologicznej , Pulmonologicznej
+T324	Treatment 3492 3569	Dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej i Diabetologicznej
+T325	Behaviour 4255 4339	W przypadku niespodziewanego wzrostu wagi o ponad 2 kg w ciągu 3 dni, należy przyjąć
+T326	Investigation 6577 6588	diagnostyki
+T327	Treatment 6773 6800	dalsza opieka u lekarza POZ
+T328	Treatment 6816 6856	kontrola kardiologiczna, diabetologiczna
+T329	Condition 6902 6929	śródmiąższowej choroby płuc
+N93	Reference T329 ICD10:J84	Inne śródmiąższowe choroby płuc
+T330	Investigation 6863 6901	poszerzona diagnostyka pulmonologiczna
+T331	Symptom 8387 8409	Nasilenie dolegliwości
+T332	Date 8410 8421	od miesiąca
+R106	Dat Arg1:T332 Arg2:T331	
+T333	Condition 9935 9960	CHF prawo i lewokomorowej
+N94	Reference T333 ICD10:I50	Niewydolność serca
+T334	Drug 10043 10052	torasemid
+T335	Drug 10055 10072	hydrochlorotiazyd
+T336	Drug 10093 10102	furosemid
+T337	Drug_dose 10084 10092	doraźnie
+R107	Drg Arg1:T336 Arg2:T337	
+T338	Symptom 10119 10164	olbrzymie obrzęki kk. dolnych i skóry brzucha
+N95	Reference T338 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T339	Drug 10351 10361	Berodual N
+T340	Drug 10858 10875	hydrochlorotiazyd
+T341	Drug 10846 10855	torasemid
+T342	Investigation_result 11159 11171	HgbA1c 10.7%
+N11	Reference T40 ICD10:I50.9	Niewydolność serca, nieokreślona
+N16	Reference T52 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+N12	Reference T44 ICD10:I50.9	Niewydolność serca, nieokreślona
+N13	Reference T46 ICD10:I50.9	Niewydolność serca, nieokreślona
+R1	Drg Arg1:T244 Arg2:T245
+R10	Drg Arg1:T250 Arg2:T251
+R101	Drg Arg1:T162 Arg2:T161
+R103	Drg Arg1:T164 Arg2:T165
+R105	Dat Arg1:T332 Arg2:T170
+R109	Dat Arg1:T181 Arg2:T180
+R11	Drg Arg1:T252 Arg2:T253
+R110	Neg Arg1:T178 Arg2:T179
+R111	Neg Arg1:T185 Arg2:T183
+R112	Neg Arg1:T185 Arg2:T184
+R113	Neg Arg1:T185 Arg2:T187
+R115	Neg Arg1:T186 Arg2:T184
+R116	Neg Arg1:T186 Arg2:T187
+R118	Neg Arg1:T188 Arg2:T189
+R119	Neg Arg1:T188 Arg2:T193
+R12	Drg Arg1:T254 Arg2:T253
+R122	Neg Arg1:T190 Arg2:T189
+R123	Neg Arg1:T190 Arg2:T193
+R125	Neg Arg1:T191 Arg2:T194
+R127	Neg Arg1:T191 Arg2:T193
+R129	Neg Arg1:T192 Arg2:T194
+R13	Drg Arg1:T256 Arg2:T257
+R132	Neg Arg1:T192 Arg2:T195
+R133	Drg Arg1:T196 Arg2:T198
+R154	Drg Arg1:T200 Arg2:T199
+R155	Drg Arg1:T200 Arg2:T202
+R16	Drg Arg1:T258 Arg2:T259
+R165	Drg Arg1:T201 Arg2:T202
+R166	Drg Arg1:T201 Arg2:T203
+R17	Drg Arg1:T260 Arg2:T261
+R176	Drg Arg1:T204 Arg2:T203
+R177	Drg Arg1:T204 Arg2:T205
+R18	Drg Arg1:T262 Arg2:T263
+R187	Drg Arg1:T206 Arg2:T205
+R188	Drg Arg1:T206 Arg2:T207
+R198	Drg Arg1:T208 Arg2:T207
+R199	Drg Arg1:T208 Arg2:T209
+R200	Drg Arg1:T208 Arg2:T211
+R209	Drg Arg1:T210 Arg2:T209
+R210	Drg Arg1:T210 Arg2:T211
+R220	Drg Arg1:T212 Arg2:T211
+R221	Drg Arg1:T212 Arg2:T213
+R222	Drg Arg1:T212 Arg2:T215
+R23	Drg Arg1:T266 Arg2:T265
+R231	Drg Arg1:T214 Arg2:T213
+R232	Drg Arg1:T214 Arg2:T215
+R233	Drg Arg1:T216 Arg2:T217
+R234	Drg Arg1:T218 Arg2:T219
+R235	Drg Arg1:T220 Arg2:T221
+R238	Drg Arg1:T336 Arg2:T337
+R24	Drg Arg1:T268 Arg2:T269
+R240	Neg Arg1:T97 Arg2:T100
+R241	Neg Arg1:T98 Arg2:T101
+R243	Neg Arg1:T96 Arg2:T95
+R244	Neg Arg1:T96 Arg2:T99
+R246	Drg Arg1:T82 Arg2:T85
+R247	Drg Arg1:T83 Arg2:T84
+R250	Drg Arg1:T79 Arg2:T87
+R251	Drg Arg1:T79 Arg2:T88
+R252	Drg Arg1:T80 Arg2:T86
+R253	Drg Arg1:T80 Arg2:T87
+R254	Drg Arg1:T80 Arg2:T88
+R255	Drg Arg1:T81 Arg2:T86
+R256	Drg Arg1:T81 Arg2:T87
+R257	Drg Arg1:T81 Arg2:T88
+R258	Drg Arg1:T78 Arg2:T89
+R265	Drg Arg1:T75 Arg2:T92
+R268	Drg Arg1:T76 Arg2:T91
+R271	Drg Arg1:T77 Arg2:T90
+R280	Neg Arg1:T25 Arg2:T32
+R29	Drg Arg1:T270 Arg2:T271
+R295	Neg Arg1:T26 Arg2:T31
+R30	Drg Arg1:T270 Arg2:T273
+R310	Neg Arg1:T27 Arg2:T30
+R326	Neg Arg1:T28 Arg2:T30
+R33	Drg Arg1:T272 Arg2:T271
+R34	Drg Arg1:T272 Arg2:T273
+R342	Drg Arg1:T12 Arg2:T20
+R345	Drg Arg1:T13 Arg2:T19
+R348	Drg Arg1:T14 Arg2:T18
+R352	Drg Arg1:T15 Arg2:T18
+R355	Drg Arg1:T16 Arg2:T17
+R374	Drg Arg1:T1 Arg2:T2
+R38	Drg Arg1:T274 Arg2:T273
+R384	Drg Arg1:T3 Arg2:T6
+R39	Drg Arg1:T274 Arg2:T275
+R393	Drg Arg1:T5 Arg2:T8
+R40	Dat Arg1:T279 Arg2:T278
+R405	Drg Arg1:T7 Arg2:T24
+R41	Dat Arg1:T281 Arg2:T280
+R412	Drg Arg1:T9 Arg2:T23
+R419	Drg Arg1:T10 Arg2:T22
+R42	Drg Arg1:T285 Arg2:T286
+R426	Drg Arg1:T11 Arg2:T21
+R43	Dat Arg1:T289 Arg2:T287
+R45	Drg Arg1:T321 Arg2:T322
+R46	Drg Arg1:T319 Arg2:T320
+R47	Drg Arg1:T317 Arg2:T318
+R48	Drg Arg1:T310 Arg2:T316
+R49	Drg Arg1:T311 Arg2:T316
+R5	Drg Arg1:T246 Arg2:T247
+R50	Drg Arg1:T309 Arg2:T314
+R51	Drg Arg1:T309 Arg2:T315
+R52	Drg Arg1:T308 Arg2:T313
+R53	Drg Arg1:T307 Arg2:T312
+R54	Drg Arg1:T302 Arg2:T303
+R55	Drg Arg1:T301 Arg2:T304
+R56	Drg Arg1:T300 Arg2:T305
+R57	Drg Arg1:T299 Arg2:T306
+R58	Drg Arg1:T297 Arg2:T298
+R59	Drg Arg1:T293 Arg2:T294
+R6	Drg Arg1:T246 Arg2:T249
+R60	Drg Arg1:T291 Arg2:T292
+R61	Drg Arg1:T136 Arg2:T137
+R62	Drg Arg1:T136 Arg2:T139
+R64	Drg Arg1:T138 Arg2:T137
+R65	Drg Arg1:T138 Arg2:T139
+R68	Drg Arg1:T140 Arg2:T139
+R69	Drg Arg1:T140 Arg2:T141
+R70	Dat Arg1:T133 Arg2:T134
+R71	Dat Arg1:T133 Arg2:T135
+R75	Drg Arg1:T142 Arg2:T143
+R8	Drg Arg1:T248 Arg2:T247
+R80	Drg Arg1:T144 Arg2:T145
+R85	Drg Arg1:T146 Arg2:T147
+R9	Drg Arg1:T248 Arg2:T249
+R90	Drg Arg1:T148 Arg2:T149
+R91	Drg Arg1:T150 Arg2:T151
+R94	Drg Arg1:T154 Arg2:T155
+R95	Drg Arg1:T156 Arg2:T157
+R96	Drg Arg1:T158 Arg2:T159

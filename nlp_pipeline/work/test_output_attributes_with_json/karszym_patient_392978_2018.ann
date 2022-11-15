@@ -1,0 +1,34 @@
+T1	Condition 460 511	Wrodzona wada serca pod postacią tetralogii Fallota
+T2	Treatment 522 530	korekcji
+T3	Date 532 541	29.05.09r
+T4	Condition 546 582	Zwężenie drogi odpływu komory prawej
+T5	Treatment 594 604	reoperacji
+T6	Date 606 615	14.06.12r
+T7	Condition 643 667	choroby węzła zatokowego
+T8	Treatment 789 849	dalsza opieka kardiologiczna w Poradni Kardiologicznej ICZMP
+T9	Treatment 851 857	wizyta
+T10	Date 858 871	za 6 miesięcy
+T11	Negation 992 995	Bez
+T12	Drug 996 1001	leków
+T13	Condition 1137 1147	z. Fallota
+T14	Condition 1170 1181	bradykardii
+T15	Drug 1184 1198	leków na stałe
+T16	Negation 1199 1212	nie otrzymuje
+T17	Condition 1215 1223	uczulony
+T18	Investigation 621 631	Obserwacja
+N1	Reference T1 ICD10:Q21.3	Tetralogia Fallota
+N2	Reference T2 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N3	Reference T5 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N4	Reference T7 ICD10:I49.5	ZespÃ³Å chorej zatoki
+N5	Reference T14 ICD10:R00.1	Bradykardia, nieokreÅlona
+N6	Reference T17 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+R1	Dat Arg1:T3 Arg2:T1
+R11	Dat Arg1:T6 Arg2:T5
+R13	Dat Arg1:T10 Arg2:T8
+R14	Dat Arg1:T10 Arg2:T9
+R15	Neg Arg1:T11 Arg2:T12
+R18	Neg Arg1:T16 Arg2:T17
+R19	Neg Arg1:T16 Arg2:T15
+R4	Dat Arg1:T3 Arg2:T2
+R8	Dat Arg1:T6 Arg2:T4
+A1	Source T7 Declared

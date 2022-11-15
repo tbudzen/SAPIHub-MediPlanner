@@ -1,0 +1,67 @@
+T2	Condition 665 711	Diagnostyka w kierunku nadciśnienia tętniczego
+N1	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Condition 713 757	Łagodna niedomykalność zastawki trójdzielnej
+N2	Reference T3 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T4	Condition 759 791	Zmiany zwyrodnieniowe kręgosłupa
+A1	Status T4 Historical_Insignificant
+N3	Reference T4 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T5	Treatment 916 935	Dalsza opieka w POZ
+T6	Investigation 959 1001	scyntygrafii perfuzyjnej mięśnia sercowego
+T7	Investigation 1051 1092	rozważenie diagnostyki endokrynologicznej
+T8	Investigation 1152 1244	Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T9	Investigation 1249 1351	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T10	Investigation 1356 1412	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T11	Drug 1451 1460	Captopril
+T12	Drug_dose 1461 1499	12,5mg 1 tabletka podjęzykowo doraźnie
+R1	Drg Arg1:T11 Arg2:T12	
+T13	Investigation_result 1685 1706	labilnych wartości BP
+T14	Negation 1709 1722	nie przyjmuje
+T15	Drug 1723 1728	leków
+R2	Neg Arg1:T14 Arg2:T15	
+T16	Date 1730 1740	od 08.2018
+T17	Investigation_result 1741 1801	3 incydenty nagłego wzrostu BP do wartości max. 220/110mmHg.
+R3	Dat Arg1:T16 Arg2:T17	
+T18	Condition 1826 1858	zmiany zwyrodnieniowe kręgosłupa
+N4	Reference T18 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T19	Treatment 1860 1877	Przebyte operacje
+T20	Negation 1879 1885	neguje
+T21	Condition 1887 1902	Wywiad rodzinny
+A2	Status T21 Family
+T22	Negation 1904 1917	bez znaczenia
+T23	Condition 1919 1926	Alergie
+N6	Reference T23 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T24	Negation 1929 1935	neguje
+T25	Behaviour 1937 1952	Nikotynizm: tak
+T26	Date 1953 1968	do 7 lat wstecz
+T27	Behaviour 1970 1982	15 paczkolat
+R4	Dat Arg1:T26 Arg2:T25	
+R5	Dat Arg1:T26 Arg2:T27	
+R6	Neg Arg1:T24 Arg2:T23	
+R7	Neg Arg1:T22 Arg2:T21	
+R8	Neg Arg1:T20 Arg2:T19	
+T28	Behaviour 1986 2007	Alkohol: okazjonalnie
+T29	Behaviour 2009 2026	Uzależnienie inne
+T30	Negation 2028 2034	neguje
+T31	Behaviour 2052 2070	pracuje w zawodzie
+R9	Neg Arg1:T30 Arg2:T29	
+T32	Drug 2087 2095	Pramolan
+T33	Drug_dose 2078 2086	doraźnie
+R10	Drg Arg1:T32 Arg2:T33	
+T34	Drug 2097 2103	Tolura
+T35	Drug 2105 2114	Captopril
+R11	Drg Arg1:T34 Arg2:T33	
+R12	Drg Arg1:T35 Arg2:T33	
+T38	Investigation 2161 2171	echo serca
+T39	Investigation 2173 2176	TET
+T40	Investigation 2178 2182	ABPM
+T41	Investigation 2184 2194	Holter ekg
+T42	Investigation 2196 2214	rtg kl. piersiowej
+N5	Reference T19 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N7	Reference T25 ICD10:Z72.0	Używanie tytoniu
+N8	Reference T27 ICD10:Z72.0	Używanie tytoniu
+A3	Status T28 Historical_Insignificant
+N9	Reference T28 ICD10:Z72.1	Używanie alkoholu
+T1	Drug_dose 2116 2124	na stałe
+T36	Negation 2125 2132	żadnych
+R13	Neg Arg1:T36 Arg2:T1	
+T37	Treatment 1106 1147	skierowanie do Poradni Endokrynologicznej

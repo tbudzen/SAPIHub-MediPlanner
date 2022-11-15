@@ -1,0 +1,115 @@
+T1	Condition 438 457	Łagodne nadkomorowe
+N1	Reference T1 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T2	Condition 460 530	komorowe zaburzenia rytmu serca (ExV II, IIIa, IIIb, IVa wg kl. Lowna)
+N2	Reference T2 ICD10:I49.3	
+T4	Condition 532 565	Blok przedniej wiązki pęczka Hisa
+N4	Reference T4 ICD10:I44.4	Blok przedniej gałęzi lewej odnogi pęczka Hisa
+T5	Condition 567 611	Łagodna niedomykalność zastawki trójdzielnej
+N5	Reference T5 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T6	Condition 613 633	Hipercholesterolemia
+N6	Reference T6 ICD10:E78.0	Czysta hipercholesterolemia
+T7	Condition 635 653	Polip poprzecznicy
+N7	Reference T7 ICD10:K51.4	Rzekoma polipowatość jelita grubego
+T8	Treatment 664 676	polipektomii
+T9	Date 678 686	09.2019r
+R1	Dat Arg1:T9 Arg2:T8	
+A1	Status T8 Historical_Insignificant
+T10	Condition 689 706	Uchyłki okrężnicy
+N8	Reference T10 ICD10:K57.3	Choroba uchyłkowa jelita grubego bez perforacji i ropnia
+T11	Condition 708 725	Zapalenie żołądka
+N9	Reference T11 ICD10:K29.7	Zapalenie żołądka, nieokreślone
+T12	Treatment 736 746	eradykacji
+T13	Condition 747 756	H. pylori
+N10	Reference T13 ICD10:B96.8	Inne określone bakterie jako przyczyna chorób sklasyfikowanych w innych rozdziałach
+T14	Date 759 767	09.2019r
+R3	Dat Arg1:T14 Arg2:T12	
+R4	Dat Arg1:T14 Arg2:T13	
+T15	Treatment 878 905	dalsza opieka w poradni POZ
+T16	Treatment 907 955	okresowa kontrola kardiologiczna, gastrologiczna
+T17	Investigation 1029 1054	angioCT tętnic wieńcowych
+T18	Treatment 1010 1028	wskazane wykonanie
+T19	Treatment 1055 1082	w warunkach ambulatoryjnych
+T20	Investigation 1083 1122	regularna kontrola ciśnienia tętniczego
+T21	Investigation 1123 1188	okresowa kontrola lipidogramu, elektrolitów, parametrów nerkowych
+T22	Treatment 1189 1215	regularne stosowanie leków
+T23	Drug 1217 1227	Concor COR
+T24	Drug_dose 1228 1248	1,25 mg 1 tabl. rano
+R2	Drg Arg1:T23 Arg2:T24	
+T25	Drug 1249 1254	Acard
+T26	Drug_dose 1255 1278	75 mg 1 tabl. wieczorem
+R5	Drg Arg1:T25 Arg2:T26	
+T27	Drug 1279 1285	Atoris
+T28	Drug_dose 1286 1309	20 mg 1 tabl. wieczorem
+R6	Drg Arg1:T27 Arg2:T28	
+T29	Drug 1310 1317	Mage B6
+T30	Drug_dose 1318 1330	1 tabl. rano
+R7	Drg Arg1:T29 Arg2:T30	
+T31	Symptom 1502 1515	kołatań serca
+N11	Reference T31 ICD10:R00.2	Kołatanie serca
+T32	Symptom 1517 1548	zmniejszonej tolerancji wysiłku
+N12	Reference T32 ICD10:R53	Złe samopoczucie i zmęczenie
+T33	Date 1549 1564	od ok. 1/2 roku
+R8	Dat Arg1:T33 Arg2:T32	
+R9	Dat Arg1:T33 Arg2:T31	
+T34	Symptom 1579 1620	tendencja do wolnej czynności rytmu serca
+N13	Reference T34 ICD10:R00.1	Bradykardia, nieokreślona
+T35	Condition 1622 1640	polip poprzecznicy
+N14	Reference T35 ICD10:K51.4	Rzekoma polipowatość jelita grubego
+T36	Treatment 1650 1662	polipektomii
+T37	Date 1664 1669	2019r
+R10	Dat Arg1:T37 Arg2:T36	
+A2	Status T36 Historical_Insignificant
+A3	Status T12 Historical_Insignificant
+T38	Condition 1672 1689	uchyłki okrężnicy
+N15	Reference T38 ICD10:K57.3	Choroba uchyłkowa jelita grubego bez perforacji i ropnia
+T39	Condition 1691 1708	zapalenie żołądka
+N16	Reference T39 ICD10:K29.7	Zapalenie żołądka, nieokreślone
+T40	Condition 1710 1729	zakażenie H. pylori
+N17	Reference T40 ICD10:B96.8	Inne określone bakterie jako przyczyna chorób sklasyfikowanych w innych rozdziałach
+T41	Treatment 1732 1742	eradykacja
+A4	Status T41 Historical_Insignificant
+T42	Date 1744 1752	09.2019r
+R11	Dat Arg1:T42 Arg2:T41	
+R12	Dat Arg1:T42 Arg2:T40	
+T43	Treatment 1754 1771	Przebyte operacje
+T44	Negation 1773 1783	nie podaje
+R13	Neg Arg1:T44 Arg2:T43	
+T45	Treatment 1784 1803	Leczenie przewlekłe
+T46	Negation 1805 1815	nie podaje
+R14	Neg Arg1:T46 Arg2:T45	
+T47	Condition 1843 1846	WZW
+N18	Reference T47 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T48	Condition 1848 1857	borelioza
+N19	Reference T48 ICD10:A69.2	Choroba z Lyme
+T49	Negation 1860 1870	nie podaje
+R15	Neg Arg1:T49 Arg2:T48	
+R16	Neg Arg1:T49 Arg2:T47	
+T50	Condition 1871 1886	Wywiad rodzinny
+A5	Status T50 Family
+T51	Negation 1888 1898	nie podaje
+R17	Neg Arg1:T51 Arg2:T50	
+T52	Behaviour 1899 1914	Palenie tytoniu
+T53	Negation 1916 1926	nie podaje
+R18	Neg Arg1:T53 Arg2:T52	
+T54	Behaviour 1927 1938	Inne używki
+T55	Negation 1940 1950	nie podaje
+R19	Neg Arg1:T55 Arg2:T54	
+T56	Condition 1951 1960	Uczulenia
+T57	Negation 1962 1972	nie podaje
+R20	Neg Arg1:T57 Arg2:T56	
+T58	Behaviour 1991 1997	emeryt
+T59	Investigation 2064 2074	echo serca
+T60	Investigation 2076 2079	TET
+T61	Investigation 2081 2085	ABPM
+T62	Investigation 2087 2093	Holter
+N21	Reference T56 ICD10:T78.4	Alergia, nieokreślona
+A6	Status T13 Historical_Insignificant
+A7	Status T35 Historical_Insignificant
+A8	Status T40 Historical_Insignificant
+A9	Status T7 Historical_Insignificant
+A10	Status T11 Historical_Insignificant
+N20	Reference T52 ICD10:Z72.0	Używanie tytoniu
+N3	Reference T54 ICD10:Z72	Problemy związane ze stylem życia
+T3	Drug 2017 2021	Leki
+T63	Negation 2023 2036	nie przyjmuje
+R21	Neg Arg1:T63 Arg2:T3	

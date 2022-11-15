@@ -1,0 +1,86 @@
+T1	Symptom 619 683	okresowych bólów w klatce piersiowej nasilające się przy wysiłku
+N1	Reference T1 ICD10:R07.3	Inne bóle w klatce piersiowej
+T2	Symptom 690 713	uczucia kołątania serca
+N2	Reference T2 ICD10:R00.2	Kołatanie serca
+T3	Symptom 732 787	bóle brzucha po stronie lewej promenujące do kręgosłupa
+N3	Reference T3 ICD10:R10.4	Inny i nieokreślony ból brzucha
+T4	Negation 790 796	Neguje
+T5	Symptom 797 809	zasłabnięcia
+R1	Neg Arg1:T4 Arg2:T5	
+T6	Condition 827 854	Choroba niedokrwienna serca
+N4	Reference T6 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T7	Treatment 864 889	PCI PTW z implantacją DES
+T8	Date 890 900	06.08.2014
+R2	Dat Arg1:T8 Arg2:T7	
+T9	Condition 902 921	Zaburzenia lipidowe
+T10	Behaviour 924 934	nikotynizm
+N5	Reference T9 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T11	Condition 956 983	zapaleniu mięśnia sercowego
+A1	Source T11 Declared
+N7	Reference T11 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+T12	Treatment 1008 1025	Przebyte operacje
+T13	Treatment 1036 1049	appendektomii
+A2	Status T13 Historical_Insignificant
+T14	Treatment 1060 1083	operacji pęcherza 5x dz
+A3	Status T14 Historical_Insignificant
+T15	Treatment 1122 1138	panhisterektomii
+A4	Status T15 Historical_Insignificant
+T16	Date 1165 1169	2003
+R3	Dat Arg1:T16 Arg2:T15	
+T17	Treatment 1170 1189	Leczenie przewlekłe
+T18	Condition 1234 1237	WZW
+N8	Reference T18 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T19	Condition 1247 1256	borelioza
+N9	Reference T19 ICD10:A69.2	Choroba z Lyme
+T20	Condition 1263 1267	Odra
+N10	Reference T20 ICD10:B05	Odra
+T21	Negation 1270 1271	-
+R4	Neg Arg1:T21 Arg2:T20	
+T22	Negation 1259 1260	-
+R5	Neg Arg1:T22 Arg2:T19	
+T23	Negation 1240 1241	-
+R6	Neg Arg1:T23 Arg2:T18	
+T24	Condition 1307 1318	zawał serca
+A5	Status T24 Family
+N11	Reference T24 ICD10:I25.2	Przebyty zawał serca
+T25	Condition 1321 1342	nadciśnienie tętnicze
+A6	Status T25 Family
+N12	Reference T25 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T26	Condition 1344 1355	ca. żółądka
+A7	Status T26 Family
+N13	Reference T26 ICD10:C16	Nowotwór złośliwy żołądka
+T27	Behaviour 1359 1374	Palenie tytoniu
+T28	Negation 1376 1384	nie pali
+T29	Date 1385 1393	od 5 lat
+R7	Neg Arg1:T28 Arg2:T27	
+R8	Dat Arg1:T29 Arg2:T27	
+T30	Behaviour 1395 1406	Inne używki
+T31	Negation 1408 1411	nie
+R9	Neg Arg1:T31 Arg2:T30	
+T32	Condition 1412 1421	Uczulenia
+T33	Negation 1423 1429	neguje
+R10	Neg Arg1:T33 Arg2:T32	
+T34	Behaviour 1446 1472	warunki mieszkaniowe dobre
+T35	Drug 1497 1505	Cavinton
+T36	Drug 1507 1514	Romazic
+T37	Drug 1517 1524	Polpril
+T38	Drug 1527 1533	Concor
+T39	Drug 1536 1541	Acard
+T40	Investigation 1558 1568	Echo serca
+T41	Investigation 1571 1581	Holter EKG
+T42	Investigation 1584 1599	Próba Wysiłkowa
+T43	Condition 1276 1295	wywiadzie rodzinnym
+A8	Status T43 Family
+T44	Condition 1093 1111	nietryzmania moczu
+N15	Reference T44 ICD10:R32	Nietrzymanie moczu, nieokreślone
+T45	Condition 1148 1164	wypadania pochwy
+N16	Reference T45 ICD10:N81.3	Całkowite wypadanie macicy i pochwy
+R11	Dat Arg1:T16 Arg2:T45	
+T46	Treatment 1192 1205	onkologicznej
+N17	Reference T32 ICD10:T78.4	Alergia, nieokreślona
+N18	Reference T5 ICD10:R55	Omdlenie i zapaść
+N6	Reference T10 ICD10:Z72.0	Używanie tytoniu
+A9	Status T44 Historical_Insignificant
+A10	Status T45 Historical_Insignificant
+N14	Reference T27 ICD10:Z72.0	Używanie tytoniu
+N19	Reference T30 ICD10:Z72	Problemy związane ze stylem życia

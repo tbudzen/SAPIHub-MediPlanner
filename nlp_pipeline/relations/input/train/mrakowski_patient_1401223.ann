@@ -1,0 +1,168 @@
+T1	Symptom 450 470	Tachykardia zatokowa
+N1	Reference T1 ICD10:R00.0	Tachykardia, nieokreślona
+T2	Condition 480 499	zatorowości płucnej
+N2	Reference T2 ICD10:I26.9	Zator płucny bez informacji o ostrym sercu płucnym
+T3	Date 500 507	06.2017
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Condition 517 571	przebytym zespole HELLP z wielonarządowym uszkodzeniem
+N3	Reference T4 ICD10:O14.1	Ciężki stan przedrzucawkowy
+T5	Date 573 583	06-09.2017
+R2	Dat Arg1:T5 Arg2:T4	
+T6	Treatment 647 664	leczonym drenażem
+T7	Date 674 684	07-08.2017
+T8	Condition 667 673	sepsie
+N4	Reference T8 ICD10:A41.9	Posocznica, nieokreślona
+R3	Dat Arg1:T7 Arg2:T8	
+R4	Dat Arg1:T7 Arg2:T6	
+T9	Condition 686 719	Przewlekła niewydolność oddechowa
+N5	Reference T9 ICD10:J96.1	Przewlekła niewydolność oddechowa
+T10	Treatment 829 912	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Pulmonologicznej
+T11	Behaviour 915 955	Dieta lekkostrawna , niskocholesterolowa
+T12	Investigation 959 1042	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T13	Investigation 1045 1093	Systematyczna kontrola ciśnienia tętniczego krwi
+T14	Treatment 1096 1137	Wskazane systematyczne przyjmowanie leków
+T15	Drug 1144 1151	Nebilet
+T16	Drug_dose 1152 1175	5 mg 1x dz po 1/4 tabl.
+R5	Drg Arg1:T15 Arg2:T16	
+T17	Drug 1296 1303	Nebilet
+T18	Symptom 1530 1545	Kołatania serca
+N6	Reference T18 ICD10:R00.2	Kołatanie serca
+T19	Symptom 1547 1565	Duszność wysiłkowa
+N7	Reference T19 ICD10:R06.0	Duszność
+T20	Condition 1588 1607	zatorowości płucnej
+N8	Reference T20 ICD10:I26.9	Zator płucny bez informacji o ostrym sercu płucnym
+T21	Date 1608 1615	06.2017
+R6	Dat Arg1:T21 Arg2:T20	
+T22	Condition 1624 1678	przebytym zespole HELLP z wielonarządowym uszkodzeniem
+N9	Reference T22 ICD10:O14.1	Ciężki stan przedrzucawkowy
+T23	Condition 1681 1695	przebytą sepsa
+N10	Reference T23 ICD10:A41.9	Posocznica, nieokreślona
+T24	Date 1696 1706	06-09.2017
+R7	Dat Arg1:T24 Arg2:T23	
+R8	Dat Arg1:T24 Arg2:T22	
+T25	Treatment 1770 1787	leczonym drenażem
+T26	Date 1788 1798	07-08.2017
+R9	Dat Arg1:T26 Arg2:T25	
+T27	Condition 1800 1841	Obecnie przewlekła niewydolność oddechowa
+N11	Reference T27 ICD10:J96.1	Przewlekła niewydolność oddechowa
+T28	Condition 1843 1864	Nadciśnienie tętnicze
+N12	Reference T28 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T29	Symptom 2038 2075	duszności wysiłkowej do II klasy NYHA
+N13	Reference T29 ICD10:R06.0	Duszność
+T30	Symptom 2081 2103	okresowo kołatań serca
+N14	Reference T30 ICD10:R00.2	Kołatanie serca
+T31	Negation 2159 2165	Neguje
+T32	Symptom 2166 2178	zasłabnięcia
+T33	Symptom 2180 2188	omdlenia
+N15	Reference T33 ICD10:R55	Omdlenie i zapaść
+T34	Symptom 2190 2203	zawroty głowy
+N16	Reference T34 ICD10:R42	Zawroty głowy i odurzenie
+T35	Symptom 2205 2215	krwawienia
+T36	Symptom 2217 2230	czarne stolce
+N17	Reference T36 ICD10:K92.1	Stolce smołowate
+T37	Symptom 2232 2248	brunatne wymioty
+N18	Reference T37 ICD10:K92.0	Wymioty krwawe
+T38	Condition 2250 2266	chorobę wrzodową
+N19	Reference T38 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T39	Symptom 2268 2282	duszność nocną
+N20	Reference T39 ICD10:R06.0	Duszność
+T40	Symptom 2284 2299	obrzęki podudzi
+N21	Reference T40 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T41	Symptom 2301 2325	bóle w klatce piersiowej
+N22	Reference T41 ICD10:R07	Ból gardła i w klatce piersiowej
+R10	Neg Arg1:T31 Arg2:T41	
+R11	Neg Arg1:T31 Arg2:T32	
+R12	Neg Arg1:T31 Arg2:T40	
+R13	Neg Arg1:T31 Arg2:T39	
+R14	Neg Arg1:T31 Arg2:T38	
+R15	Neg Arg1:T31 Arg2:T37	
+R16	Neg Arg1:T31 Arg2:T36	
+R17	Neg Arg1:T31 Arg2:T35	
+R18	Neg Arg1:T31 Arg2:T34	
+R19	Neg Arg1:T31 Arg2:T33	
+T42	Symptom 2327 2346	Innych dolegliwości
+T43	Negation 2347 2358	nie zgłasza
+R20	Neg Arg1:T43 Arg2:T42	
+T44	Condition 2381 2400	zatorowości płucnej
+N23	Reference T44 ICD10:I26.9	Zator płucny bez informacji o ostrym sercu płucnym
+T45	Date 2401 2408	06.2017
+R21	Dat Arg1:T45 Arg2:T44	
+T46	Condition 2417 2471	przebytym zespole HELLP z wielonarządowym uszkodzeniem
+N24	Reference T46 ICD10:O14.1	Ciężki stan przedrzucawkowy
+T47	Condition 2474 2488	przebytą sepsa
+N25	Reference T47 ICD10:A41.9	Posocznica, nieokreślona
+T48	Date 2489 2499	06-09.2017
+R22	Dat Arg1:T48 Arg2:T47	
+R23	Dat Arg1:T48 Arg2:T46	
+T49	Treatment 2563 2580	leczonym drenażem
+T50	Date 2581 2591	07-08.2017
+R24	Dat Arg1:T50 Arg2:T49	
+T51	Condition 2593 2634	Obecnie przewlekła niewydolność oddechowa
+N26	Reference T51 ICD10:J96.1	Przewlekła niewydolność oddechowa
+T52	Condition 2636 2657	Nadciśnienie tętnicze
+N27	Reference T52 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T53	Treatment 2660 2677	Przebyte operacje
+T54	Treatment 2679 2695	cięcie cesarskie
+A1	Status T54 Historical_Insignificant
+T55	Date 2696 2703	06.2017
+R25	Dat Arg1:T55 Arg2:T54	
+T56	Treatment 2705 2740	Leczenie przewlekłe: kardiologiczne
+T57	Treatment 2742 2757	pulmonologiczne
+T58	Treatment 2759 2772	neurologiczne
+T59	Condition 2800 2803	WZW
+N28	Reference T59 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T60	Condition 2812 2821	borelioza
+N29	Reference T60 ICD10:A69.2	Choroba z Lyme
+T61	Condition 2829 2837	grużlica
+N30	Reference T61 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T62	Condition 2845 2849	odra
+N31	Reference T62 ICD10:B05	Odra
+T63	Negation 2852 2853	-
+R26	Neg Arg1:T63 Arg2:T62	
+T64	Negation 2840 2841	-
+R27	Neg Arg1:T64 Arg2:T61	
+T65	Negation 2824 2825	-
+R28	Neg Arg1:T65 Arg2:T60	
+T66	Negation 2806 2807	-
+R29	Neg Arg1:T66 Arg2:T59	
+T67	Condition 2856 2871	Wywiad rodzinny
+A2	Status T67 Family
+T68	Negation 2873 2883	nieistotny
+R30	Neg Arg1:T68 Arg2:T67	
+T69	Behaviour 2885 2900	Palenie tytoniu
+N32	Reference T69 ICD10:Z72.0	Używanie tytoniu
+T70	Negation 2902 2908	neguje
+R31	Neg Arg1:T70 Arg2:T69	
+T71	Behaviour 2910 2921	Inne używki
+T72	Negation 2923 2929	neguje
+R32	Neg Arg1:T72 Arg2:T71	
+T73	Condition 2931 2940	Uczulenia
+T74	Negation 2942 2948	neguje
+R33	Neg Arg1:T74 Arg2:T73	
+T75	Behaviour 2966 2992	warunki mieszkaniowe dobre
+T76	Behaviour 3018 3045	świadczenie rehabilitacyjne
+T77	Drug 3052 3059	Nebilet
+T78	Drug_dose 3060 3079	5 mg 1/4 tabl. rano
+R34	Drg Arg1:T77 Arg2:T78	
+T79	Investigation 3096 3099	TTE
+T80	Investigation 3101 3104	TET
+T81	Investigation 3106 3110	ABPM
+T82	Investigation 3112 3122	Holter EKG
+T83	Condition 593 617	przebytym zapaleniu płuc
+N33	Reference T83 ICD10:J18.9	Zapalenie płuc, nieokreślone
+T84	Condition 620 644	ropniaku opłucnej prawej
+N34	Reference T84 ICD10:J86	Ropniak opłucnej
+R35	Dat Arg1:T7 Arg2:T84	
+R36	Dat Arg1:T7 Arg2:T83	
+T85	Condition 1716 1740	przebytym zapaleniu płuc
+N35	Reference T85 ICD10:J18.9	Zapalenie płuc, nieokreślone
+T86	Condition 1743 1767	ropniaku opłucnej prawej
+N36	Reference T86 ICD10:J86	Ropniak opłucnej
+R37	Dat Arg1:T26 Arg2:T86	
+R38	Dat Arg1:T26 Arg2:T85	
+T87	Condition 2509 2533	przebytym zapaleniu płuc
+N37	Reference T87 ICD10:J18.9	Zapalenie płuc, nieokreślone
+T88	Condition 2536 2560	ropniaku opłucnej prawej
+N38	Reference T88 ICD10:J86	Ropniak opłucnej
+R39	Dat Arg1:T50 Arg2:T88	
+R40	Dat Arg1:T50 Arg2:T87	

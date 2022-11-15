@@ -1,0 +1,90 @@
+T1	Behaviour 772 797	Dieta lekkostrawna, nisko
+T2	Investigation 2264 2274	Echo serca
+T3	Investigation 2277 2287	Holter EKG
+T4	Investigation 2290 2305	Próba Wysiłkowa
+T5	Investigation 2308 2311	TEE
+T6	Drug 2215 2224	Prestilol
+T7	Drug_dose 2225 2248	5 mg 1x dz po 1/2 tabl.
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Behaviour 2164 2190	warunki mieszkaniowe dobre
+T9	Negation 2141 2147	neguje
+T10	Negation 2126 2129	nie
+T11	Negation 2109 2112	nie
+T12	Negation 2086 2090	brak
+T13	Negation 2026 2032	( -  )
+T14	Negation 2045 2050	( - )
+T15	Negation 2056 2061	( - )
+T16	Condition 2130 2139	Uczulenia
+N1	Reference T16 ICD10:T78.4	Alergia, nieokreślona
+T17	Behaviour 2113 2124	Inne używki
+R2	Neg Arg1:T10 Arg2:T17	
+T18	Behaviour 2092 2107	Palenie tytoniu
+N2	Reference T18 ICD10:T65.2	Tytoń i nikotyna
+R3	Neg Arg1:T11 Arg2:T18	
+T19	Condition 2062 2083	W wywiadzie rodzinnym
+A1	Status T19 Family
+R4	Neg Arg1:T12 Arg2:T19	
+T20	Condition 2022 2025	WZW
+N3	Reference T20 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T21	Condition 2035 2044	borelioza
+N4	Reference T21 ICD10:A69.2	Choroba z Lyme
+T22	Condition 2051 2055	Odra
+N5	Reference T22 ICD10:B05	Odra
+R5	Neg Arg1:T15 Arg2:T22	
+R6	Neg Arg1:T14 Arg2:T21	
+R7	Neg Arg1:T13 Arg2:T20	
+T23	Negation 1949 1953	brak
+T24	Treatment 1929 1946	Przebyte operacje
+R8	Neg Arg1:T23 Arg2:T24	
+T25	Condition 1893 1927	Choroba zwyrodnieniowa kręgosłupa.
+N6	Reference T25 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T26	Condition 1869 1891	Żylaki kończyn dolnych
+N7	Reference T26 ICD10:I83	Żylaki kończyn dolnych
+T27	Treatment 1824 1835	jodoterapii
+T28	Date 1863 1867	2014
+T29	Investigation 1755 1776	RTG klatki piersiowej
+T30	Investigation_result 1777 1794	powiększone serca
+R9	Inv Arg1:T29 Arg2:T30	
+T31	Date 1807 1815	01.2019.
+R10	Dat Arg1:T31 Arg2:T29	
+T32	Condition 1701 1722	Nadciśnienie tętnicze
+N8	Reference T32 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T33	Symptom 1671 1683	zasłabnięcia
+N9	Reference T33 ICD10:R55	Omdlenie i zapaść
+T34	Negation 1664 1670	Neguje
+R11	Neg Arg1:T34 Arg2:T33	
+T35	Symptom 1645 1660	kołatania serca
+N10	Reference T35 ICD10:R00.2	Kołatanie serca
+T36	Symptom 1588 1635	bóle klatce piersiowej nie związane z wysiłkiem
+N11	Reference T36 ICD10:R07.3	Inne bóle w klatce piersiowej
+T37	Symptom 1449 1475	niskiej tolerancji wysiłku
+N12	Reference T37 ICD10:R53	Złe samopoczucie i zmęczenie
+T38	Symptom 1478 1537	duszności wysiłkowej ( wejdzie na I piętro bez przystanku )
+N13	Reference T38 ICD10:R06.0	Duszność
+T39	Condition 1743 1752	IA +/++ .
+N14	Reference T39 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T40	Treatment 1737 1740	BAV
+T41	Condition 1015 1086	 Przewlekła niewydolność serca z zachowaną frakcją wyrzutową LK de novo
+N15	Reference T41 ICD10:I50	Niewydolność serca
+T42	Condition 1088 1093	HFpEF
+T43	Investigation_result 1095 1101	EF=60%
+T44	Condition 1103 1127	w II/ III klasie wg NYHA
+T45	Condition 1129 1150	Nadciśnienie tętnicze
+N16	Reference T45 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T46	Condition 1152 1164	Dyslipidemia
+N17	Reference T46 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T47	Treatment 1174 1185	jodoterapii
+T48	Condition 1219 1241	Żylaki kończyn dolnych
+N18	Reference T48 ICD10:I83	Żylaki kończyn dolnych
+T49	Condition 1243 1276	Choroba zwyrodnieniowa kręgosłupa
+N19	Reference T49 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T50	Condition 1195 1210	guzków tarczycy
+N20	Reference T50 ICD10:E04.1	Guzek tarczycy pojedynczy, nietoksyczny
+T51	Date 1213 1217	2014
+R12	Dat Arg1:T51 Arg2:T50	
+R13	Dat Arg1:T51 Arg2:T47	
+T52	Condition 1845 1860	guzków tarczycy
+N21	Reference T52 ICD10:E04.1	Guzek tarczycy pojedynczy, nietoksyczny
+R14	Dat Arg1:T28 Arg2:T52	
+R15	Dat Arg1:T28 Arg2:T27	
+T53	Investigation 767 769	TK

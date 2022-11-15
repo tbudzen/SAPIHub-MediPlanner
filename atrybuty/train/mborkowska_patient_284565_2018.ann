@@ -1,0 +1,86 @@
+T1	Investigation 1872 1882	echo serca
+T2	Investigation 1884 1887	TET
+T3	Investigation 1889 1893	ABPM
+T4	Investigation 1895 1905	Holter ekg
+T5	Investigation 1907 1925	rtg kl. piersiowej
+T6	Investigation 1927 1936	MRI serca
+T7	Drug 1810 1820	Prestarium
+T8	Drug 1782 1788	Bibloc
+T9	Drug_dose 1789 1808	7.5 mg 1 tabl. rano
+R1	Drg Arg1:T8 Arg2:T9	
+T10	Drug_dose 1821 1843	5 mg 1 tabl. wieczorem
+R2	Drg Arg1:T7 Arg2:T10	
+T11	Negation 1728 1734	neguje
+T12	Negation 1701 1707	neguje
+T13	Negation 1683 1691	neguje  
+T14	Negation 1663 1669	neguje
+T15	Behaviour 1709 1726	Uzależnienie inne
+R3	Neg Arg1:T11 Arg2:T15	
+T16	Behaviour 1692 1699	Alkohol
+N1	Reference T16 ICD10:Z72.1	Używanie alkoholu
+R4	Neg Arg1:T12 Arg2:T16	
+T17	Behaviour 1671 1681	Nikotynizm
+N2	Reference T17 ICD10:Z72.0	Używanie tytoniu
+R5	Neg Arg1:T13 Arg2:T17	
+T18	Condition 1653 1660	Alergie
+N3	Reference T18 ICD10:T78.4	
+R6	Neg Arg1:T14 Arg2:T18	
+T19	Negation 1638 1651	bez znaczenia
+T20	Negation 1613 1619	neguje
+T21	Condition 1621 1636	Wywiad rodzinny
+A1	Status T21 Family
+R7	Neg Arg1:T19 Arg2:T21	
+T22	Treatment 1594 1611	Przebyte operacje
+R8	Neg Arg1:T20 Arg2:T22	
+T23	Condition 1561 1581	hipercholesterolemia
+N4	Reference T23 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T24	Condition 1583 1592	łuszczyca
+N5	Reference T24 ICD10:L40.9	
+T25	Investigation 1475 1483	RM serca
+T26	Date 1499 1509	04.09.2018
+R9	Dat Arg1:T26 Arg2:T25	
+T27	Drug 1115 1125	Prestarium
+T28	Drug 1081 1087	Bibloc
+T29	Drug_dose 1088 1107	7.5 mg 1 tabl. rano
+R10	Drg Arg1:T28 Arg2:T29	
+T30	Drug_dose 1126 1148	5 mg 1 tabl. wieczorem
+R11	Drg Arg1:T27 Arg2:T30	
+T31	Investigation 907 936	kontrola ciśnienia tętniczego
+T32	Investigation 952 972	kontrola lipidogramu
+T33	Behaviour 979 1004	dieta niskocholesterolowa
+T34	Behaviour 1012 1036	oszczędzający tryb życia
+T35	Condition 1290 1293	DCM
+N6	Reference T35 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+T36	Investigation 1295 1299	koro
+T37	Date 1302 1307	30.07
+R12	Dat Arg1:T37 Arg2:T36	
+T38	Investigation_result 1308 1317	bez zmian
+R13	Inv Arg1:T36 Arg2:T38	
+T39	Investigation_result 1319 1325	EF 36%
+T40	Investigation_result 1335 1341	EF 48%
+T41	Date 1326 1333	07.2018
+R14	Dat Arg1:T41 Arg2:T39	
+T42	Date 1342 1352	08.05.2018
+R15	Dat Arg1:T42 Arg2:T40	
+T43	Symptom 1356 1369	I kl. wg NYHA
+T44	Condition 1373 1402	komorowymi zaburzeniami rytmu
+N7	Reference T44 ICD10:I49.3	
+T45	Investigation_result 1404 1423	nsVT - salwy 6/dobę
+T46	Date 1424 1435	27/07.2018)
+R16	Dat Arg1:T46 Arg2:T45	
+T47	Condition 449 488	Kardiomiopatia o nieustalonej etiologii
+N8	Reference T47 ICD10:I42.9	Kardiomiopatia, nieokreślona
+T48	Condition 491 537	podejrzenie przebytego zapalenia mięśnia serca
+N9	Reference T48 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+A2	Source T48 Declared
+T49	Condition 539 598	Wada serca pod postacią niedomykalności mitralnej I stopnia
+N10	Reference T49 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T50	Condition 600 620	Hipertriglicerydemia
+N11	Reference T50 ICD10:E78.1	Czysta hiperglicerydemia
+T51	Condition 622 631	Łuszczyca
+N12	Reference T51 ICD10:L40.9	Łuszczyca, nieokreślona
+N13	Reference T15 ICD10:Z72	
+T52	Treatment 758 785	dalsza opieka w poradni POZ
+T53	Treatment 801 858	kontrola kardiologiczna – kolejna w warunkach szpitalnych
+T54	Date 859 872	za 3 miesiące
+R17	Dat Arg1:T54 Arg2:T53	

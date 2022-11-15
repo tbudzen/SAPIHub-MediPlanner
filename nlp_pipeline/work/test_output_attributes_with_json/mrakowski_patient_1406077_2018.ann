@@ -1,0 +1,78 @@
+T1	Treatment 331 353	kontrola u lekarza POZ
+T2	Behaviour 356 401	dieta niskocholesterolowa, zmiana stylu życia
+T3	Investigation 405 433	okresowa kontrola lipdogramu
+T4	Date 435 457	pierwszy raz za 3 m-ce
+T5	Investigation 460 492	kontrola RR w warunkach domowych
+T6	Investigation 494 517	wskazane wykonanie ABPM
+T7	Treatment 521 555	kontrola w Poradni Kardiologicznej
+T8	Condition 783 806	Ekstrasystolia komorowa
+T9	Condition 808 829	Nadciśnienie tętnicze
+T10	Condition 834 854	Hipercholesterolemia
+T11	Investigation 1050 1062	zapisach ekg
+T12	Investigation_result 1063 1127	arytmii pod postacią dodatkowych skurczów pochodzenia komorowego
+T13	Negation 1129 1135	Neguje
+T14	Negation 1146 1152	neguje
+T15	Symptom 1136 1144	omdlenia
+T16	Symptom 1153 1170	inne dolegliwości
+T17	Investigation 1189 1200	zapisem ekg
+T18	Date 1201 1216	przed tygodniem
+T19	Symptom 1238 1260	bólu stawów łokciowych
+T20	Condition 1285 1287	HA
+T21	Investigation_result 1289 1309	graniczne 140/90mmHg
+T22	Date 1311 1319	od 3 lat
+T23	Condition 1322 1342	hipercholesterolemia
+T24	Treatment 1344 1380	przejściowo leczona farmakologicznie
+T25	Condition 1383 1399	krótkowzroczność
+T26	Treatment 1402 1419	Przebyte operacje
+T27	Negation 1421 1427	neguje
+T28	Condition 1429 1444	Wywiad rodzinny
+T29	Condition 1454 1467	wada wrodzona
+T30	Condition 1468 1475	Alergie
+T31	Negation 1477 1483	neguje
+T32	Behaviour 1485 1495	Nikotynizm
+T33	Negation 1497 1503	neguje
+T34	Behaviour 1507 1548	Alkohol: okazjonalnie, w małych ilościach
+T35	Behaviour 1550 1567	Uzależnienie inne
+T36	Negation 1569 1575	neguje
+T37	Behaviour 1593 1610	pracuje fizycznie
+T38	Investigation 1654 1664	echo serca
+T39	Investigation 1666 1669	TET
+T40	Investigation 1671 1675	ABPM
+T41	Investigation 1677 1687	Holter ekg
+zane ze stylem życia
+T42	Drug 1612 1616	Leki
+T43	Negation 1618 1625	żadnych
+T44	Date 1036 1047	od tygodnia
+N1	Reference T8 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komÃ³r
+N2	Reference T9 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N3	Reference T10 ICD10:E78.0	Czysta hipercholesterolemia
+N4	Reference T12 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komÃ³r
+N5	Reference T15 ICD10:R55	Omdlenie i zapaÅÄ
+N6	Reference T19 ICD10:M25.5	BÃ³l stawu
+N7	Reference T20 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N8	Reference T21 ICD10:R03	NieprawidÅowy wynik pomiaru ciÅnienia tÄtniczego krwi, bez rozpoznania
+N9	Reference T23 ICD10:E78.0	Czysta hipercholesterolemia
+N10	Reference T25 ICD10:H52.1	KrÃ³tkowzrocznoÅÄ
+N11	Reference T26 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N12	Reference T29 ICD10:Q89.9	Wrodzona wada rozwojowa, nieokreÅlona
+N13	Reference T30 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N14	Reference T32 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N15	Reference T34 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N16	Reference T35 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+R10	Neg Arg1:T13 Arg2:T12
+R109	Neg Arg1:T43 Arg2:T42
+R110	Dat Arg1:T22 Arg2:T20
+R12	Dat Arg1:T44 Arg2:T11
+R13	Neg Arg1:T14 Arg2:T16
+R15	Dat Arg1:T18 Arg2:T17
+R23	Neg Arg1:T27 Arg2:T28
+R4	Dat Arg1:T4 Arg2:T3
+R43	Neg Arg1:T31 Arg2:T30
+R62	Neg Arg1:T33 Arg2:T32
+R7	Inv Arg1:T11 Arg2:T12
+R8	Neg Arg1:T13 Arg2:T15
+R82	Neg Arg1:T36 Arg2:T35
+R83	Neg Arg1:T36 Arg2:T37
+A1	Status T28 Family
+A2	Status T29 Family
+A3	Status T34 Historical_Insignificant

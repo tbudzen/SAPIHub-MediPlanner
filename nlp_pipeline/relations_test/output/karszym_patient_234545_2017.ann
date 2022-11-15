@@ -1,0 +1,26 @@
+T1	Investigation 332 389	Ambulatoryjna kontrola parametrów funkcji układu krążenia
+T2	Treatment 394 406	Profilaktyka
+T3	Condition 407 439	infekcyjnego zapalenia wsierdzia
+A1	Source T3 Declared
+N1	Reference T3 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T4	Behaviour 444 486	Aktywność fizyczna w zakresie rekreacyjnym
+T5	Treatment 491 533	Kontrolna wizyta w Poradni Kardiologicznej
+T6	Date 534 541	za 8mcy
+T7	Negation 662 665	Bez
+T8	Drug 666 671	leków
+T9	Condition 809 827	złożoną wadą serca
+N2	Reference T9 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T10	Treatment 833 852	zabiegu korekcyjnym
+N3	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T11	Drug 887 901	leków na stałe
+T12	Negation 902 915	nie otrzymuje
+T13	Condition 917 934	wywiad alergiczny
+N4	Reference T13 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T14	Negation 935 941	ujemny
+R1	Neg Arg1:T14 Arg2:T13	
+R2	Neg Arg1:T12 Arg2:T11	
+R3	Dat Arg1:T6 Arg2:T5	
+R4	Neg Arg1:T7 Arg2:T8	
+R1	Neg Arg1:T7 Arg2:T8
+R5	Neg Arg1:T12 Arg2:T11
+R7	Neg Arg1:T14 Arg2:T13

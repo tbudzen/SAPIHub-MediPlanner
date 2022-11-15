@@ -1,0 +1,933 @@
+allRelations          : 120
+oks                   : 42
+isRedundantAndRemoveds: 68
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 9
+GOOD / BAD            : 110 / 10
+Sentence 0:
+------------------------------------------------
+Wiek: 84 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zastosowane leczenie
+
+
+
+Sentence 4:
+------------------------------------------------
+
+
+
+Sentence 5:
+Rytmonorm, Nedal, Formetic, Amaryl, Fraxiparine multi, Nitromint, Polopiryna, Roswera, IPP
+------------------------------------------------
+
+
+
+Sentence 6:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 7:
+Ostatnio leczona:
+Plavix 1x300mg w dn. 02.04.2019, dalej 1x 75mg/rano
+Fraxiparine multi 2x 0,7ml sc (10:00, 22:00)
+
+R1	Drg Arg1:T10 Arg2:T11 << OK >>	Plavix -> 1x300mg  <RANK: 3> <info: start[558, 565] <type: RIGHT>>
+R2	Drg Arg1:T10 Arg2:T13 << OK >>	Plavix -> 1x 75mg/rano  <RANK: 2> <info: start[558, 597] <type: RIGHT>>
+R3	Drg Arg1:T10 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Plavix -> 2x 0,7ml sc (10:00, 22:00) <:REMOVED other first tag between (right):> <RANK: 0> <info: start[558, 628] <type: RIGHT>>
+R4	Drg Arg1:T14 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Fraxiparine multi -> 1x300mg <:REMOVED other second tag between (left):> <RANK: 0> <info: start[610, 565] <type: LEFT>>
+R5	Drg Arg1:T14 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Fraxiparine multi -> 1x 75mg/rano <:REMOVED many second tags on the left:> <RANK: 1> <info: start[610, 597] <type: LEFT>>
+R6	Drg Arg1:T14 Arg2:T15 << OK >>	Fraxiparine multi -> 2x 0,7ml sc (10:00, 22:00)  <RANK: 3> <info: start[610, 628] <type: RIGHT>>
+R7	Dat Arg1:T12 Arg2:T10 <<REDUNDANT!!!SHOULD BE REMOVED>>	w dn. 02.04.2019 -> Plavix  <RANK: 3> <info: start[573, 558] <type: LEFT>>
+R8	Dat Arg1:T12 Arg2:T14 <<REDUNDANT!!!REMOVED>>	w dn. 02.04.2019 -> Fraxiparine multi <:REMOVED other second tag between (right):> <RANK: 0> <info: start[573, 610] <type: RIGHT>>
+
+
+Sentence 8:
+Polopiryna s 1x 1 tabl w dn. 01.04.2019, dalej 1x 75mg/wiecz
+
+R9	Drg Arg1:T16 Arg2:T17 << OK >>	Polopiryna s -> 1x 1 tabl  <RANK: 3> <info: start[655, 668] <type: RIGHT>>
+R10	Drg Arg1:T16 Arg2:T19 << OK >>	Polopiryna s -> 1x 75mg/wiecz  <RANK: 2> <info: start[655, 702] <type: RIGHT>>
+R11	Dat Arg1:T18 Arg2:T16 <<REDUNDANT!!!SHOULD BE REMOVED>>	w dn. 01.04.2019 -> Polopiryna s  <RANK: 3> <info: start[678, 655] <type: LEFT>>
+
+
+Sentence 9:
+Roswera 15mg 1x 1 tabl/wiecz
+IPP 20mg 1x 1 tabl/rano
+
+R12	Drg Arg1:T20 Arg2:T21 << OK >>	Roswera -> 15mg 1x 1 tabl/wiecz  <RANK: 3> <info: start[716, 724] <type: RIGHT>>
+R13	Drg Arg1:T20 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Roswera -> 20mg 1x 1 tabl/rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[716, 749] <type: RIGHT>>
+R14	Drg Arg1:T22 Arg2:T21 <<REDUNDANT!!!REMOVED>>	IPP -> 15mg 1x 1 tabl/wiecz <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[745, 724] <type: LEFT>>
+R15	Drg Arg1:T22 Arg2:T23 << OK >>	IPP -> 20mg 1x 1 tabl/rano  <RANK: 3> <info: start[745, 749] <type: RIGHT>>
+
+
+Sentence 10:
+Nedal 5mg 1x 1/4 tabl/rano
+Formetic 850mg 1-0-1 tabl - przerwa po porannej dawce 03.04.2019
+Amaryl 1mg 1x 1 tabl/rano
+------------------------------------------------
+
+R16	Drg Arg1:T24 Arg2:T25 << OK >>	Nedal -> 5mg 1x 1/4 tabl/rano  <RANK: 3> <info: start[769, 775] <type: RIGHT>>
+R17	Drg Arg1:T24 Arg2:T27 <<REDUNDANT!!!REMOVED>>	Nedal -> 850mg 1-0-1 tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[769, 805] <type: RIGHT>>
+R18	Drg Arg1:T24 Arg2:T29 <<REDUNDANT!!!REMOVED>>	Nedal -> 1mg 1x 1 tabl/rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[769, 868] <type: RIGHT>>
+R19	Drg Arg1:T24 Arg2:T32 <<REDUNDANT!!!REMOVED>>	Nedal -> przerwa po porannej dawce <:REMOVED other first tag between (right):> <RANK: 1> <info: start[769, 824] <type: RIGHT>>
+R20	Drg Arg1:T26 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Formetic -> 5mg 1x 1/4 tabl/rano <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[796, 775] <type: LEFT>>
+R21	Drg Arg1:T26 Arg2:T27 << OK >>	Formetic -> 850mg 1-0-1 tabl  <RANK: 3> <info: start[796, 805] <type: RIGHT>>
+R22	Drg Arg1:T26 Arg2:T29 <<REDUNDANT!!!REMOVED>>	Formetic -> 1mg 1x 1 tabl/rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[796, 868] <type: RIGHT>>
+R23	Drg Arg1:T26 Arg2:T32 << OK >>	Formetic -> przerwa po porannej dawce  <RANK: 3> <info: start[796, 824] <type: RIGHT>>
+R24	Drg Arg1:T28 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Amaryl -> 5mg 1x 1/4 tabl/rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[861, 775] <type: LEFT>>
+R25	Drg Arg1:T28 Arg2:T27 <<REDUNDANT!!!REMOVED>>	Amaryl -> 850mg 1-0-1 tabl <:REMOVED other second tag between (left):> <RANK: 0> <info: start[861, 805] <type: LEFT>>
+R26	Drg Arg1:T28 Arg2:T29 << OK >>	Amaryl -> 1mg 1x 1 tabl/rano  <RANK: 3> <info: start[861, 868] <type: RIGHT>>
+R27	Drg Arg1:T28 Arg2:T32 <<REDUNDANT!!!REMOVED>>	Amaryl -> przerwa po porannej dawce <:REMOVED many second tags on the left:> <RANK: 0> <info: start[861, 824] <type: LEFT>>
+R28	Dat Arg1:T30 Arg2:T24 <<REDUNDANT!!!REMOVED>>	03.04.2019 -> Nedal <:REMOVED other second tag between (left):> <RANK: 1> <info: start[850, 769] <type: LEFT>>
+R29	Dat Arg1:T30 Arg2:T26 <<REDUNDANT!!!SHOULD BE REMOVED>>	03.04.2019 -> Formetic  <RANK: 3> <info: start[850, 796] <type: LEFT>>
+R30	Dat Arg1:T30 Arg2:T28 <<REDUNDANT!!!REMOVED>>	03.04.2019 -> Amaryl <:REMOVED many second tags on the right:> <RANK: 1> <info: start[850, 861] <type: RIGHT>>
+
+
+Sentence 11:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 12:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: OZW-UA.
+
+
+Sentence 13:
+Umiarkowana niedomykalność zastawki mitralnej.
+
+
+Sentence 14:
+Łagodna niedomykalność zastawki trójdzielnej. 
+   
+
+
+Sentence 15:
+Przewlekła niewydolność serca NYHA I/II.
+
+
+Sentence 16:
+Napadowe migotanie przedsionków.
+
+
+Sentence 17:
+Skrócony odstęp PQ.
+
+
+Sentence 18:
+Stan po implantacji dwujamowego kardiostymulatora z powodu zespołu tachykardia-bradykardia (2000).
+R31	Dat Arg1:T40 Arg2:T39 << OK >>	2000 -> zespołu tachykardia-bradykardia  <RANK: 3> <info: start[1395, 1362] <type: LEFT>>
+R32	Dat Arg1:T40 Arg2:T38 << OK >>	2000 -> implantacji dwujamowego kardiostymulatora  <RANK: 3> <info: start[1395, 1311] <type: LEFT>>
+
+
+Sentence 19:
+Stan po reimplantacji kardiostymulatora (2009) z powodu wyczerpania baterii.
+R33	Dat Arg1:T42 Arg2:T43 << OK >>	2009 -> wyczerpania baterii  <RANK: 3> <info: start[1443, 1458] <type: RIGHT>>
+R34	Dat Arg1:T42 Arg2:T41 << OK >>	2009 -> reimplantacji kardiostymulatora  <RANK: 3> <info: start[1443, 1410] <type: LEFT>>
+
+
+Sentence 20:
+Nadciśnienie tętnicze.
+
+
+Sentence 21:
+Hipercholesterolemia.
+
+
+Sentence 22:
+Cukrzyca typu 2. Stan po appendektomii, usunięciu łagodnego guzka piersi lewej, operacji przepukliny pępkowej.
+
+
+
+Sentence 23:
+------------------------------------------------
+
+
+
+Sentence 24:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 25:
+Pacjentka lat 84, z przewlekłą niewydolnością serca NYHA I/II, z napadowym FA, po implantacji dwujamowego kardiostymulatora z powodu zespołu tachykardia-bradykardia (2000), HA (RR w domu 100-110mmHg), DM typu 2, z chromaniem przestankowym, przyjęta do kliniki z powodu chwilowych bólów w klatce piersiowej w okolicy przedsercowej, promieniujących do gardła lub lewego barku, przy chodzeniu i w spoczynku, dolegliwości od 2 lat. 
+
+R35	Dat Arg1:T54 Arg2:T56 <<REDUNDANT!!!REMOVED>>	2000 -> RR w domu 100-110mmHg) <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1925, 1936] <type: RIGHT>>
+R36	Dat Arg1:T54 Arg2:T59 <<REDUNDANT!!!REMOVED>>	2000 -> chwilowych bólów w klatce piersiowej w okolicy przedsercowej, promieniujących do gardła lub lewego barku, przy chodzeniu i w spoczynku <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1925, 2028] <type: RIGHT>>
+R37	Dat Arg1:T54 Arg2:T50 <<REDUNDANT!!!SHOULD BE REMOVED>>	2000 -> niewydolnością serca NYHA I/II  <RANK: 2> <info: start[1925, 1790] <type: LEFT>>
+R38	Dat Arg1:T54 Arg2:T51 <<REDUNDANT!!!SHOULD BE REMOVED>>	2000 -> napadowym FA  <RANK: 2> <info: start[1925, 1824] <type: LEFT>>
+R39	Dat Arg1:T54 Arg2:T53 << OK >>	2000 -> zespołu tachykardia-bradykardia  <RANK: 3> <info: start[1925, 1892] <type: LEFT>>
+R40	Dat Arg1:T54 Arg2:T55 <<REDUNDANT!!!REMOVED>>	2000 -> HA <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1925, 1932] <type: RIGHT>>
+R41	Dat Arg1:T54 Arg2:T57 <<REDUNDANT!!!REMOVED>>	2000 -> DM typu 2 <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1925, 1960] <type: RIGHT>>
+R42	Dat Arg1:T54 Arg2:T58 <<REDUNDANT!!!REMOVED>>	2000 -> chromaniem przestankowym <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1925, 1973] <type: RIGHT>>
+R43	Dat Arg1:T54 Arg2:T52 << OK >>	2000 -> implantacji dwujamowego kardiostymulatora  <RANK: 3> <info: start[1925, 1841] <type: LEFT>>
+R44	Dat Arg1:T60 Arg2:T56 <<REDUNDANT!!!SHOULD BE REMOVED>>	od 2 lat -> RR w domu 100-110mmHg)  <RANK: 2> <info: start[2177, 1936] <type: LEFT>>
+R45	Dat Arg1:T60 Arg2:T59 <<SHOULD NOT BE REMOVED>>	od 2 lat -> chwilowych bólów w klatce piersiowej w okolicy przedsercowej, promieniujących do gardła lub lewego barku, przy chodzeniu i w spoczynku <:REMOVED Too far from TagInfo[T60, 2177, 2185, Date, od 2 lat
+] TagInfo[T58, 1973, 1997, Condition, chromaniem przestankowym
+]:> <RANK: 2> <info: start[2177, 2028] <type: LEFT>>
+R46	Dat Arg1:T60 Arg2:T50 <<REDUNDANT!!!REMOVED>>	od 2 lat -> niewydolnością serca NYHA I/II <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2177, 1790] <type: LEFT>>
+R47	Dat Arg1:T60 Arg2:T51 <<REDUNDANT!!!REMOVED>>	od 2 lat -> napadowym FA <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2177, 1824] <type: LEFT>>
+R48	Dat Arg1:T60 Arg2:T53 <<REDUNDANT!!!REMOVED>>	od 2 lat -> zespołu tachykardia-bradykardia <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2177, 1892] <type: LEFT>>
+R49	Dat Arg1:T60 Arg2:T55 <<REDUNDANT!!!SHOULD BE REMOVED>>	od 2 lat -> HA  <RANK: 2> <info: start[2177, 1932] <type: LEFT>>
+R50	Dat Arg1:T60 Arg2:T57 <<REDUNDANT!!!SHOULD BE REMOVED>>	od 2 lat -> DM typu 2  <RANK: 2> <info: start[2177, 1960] <type: LEFT>>
+R51	Dat Arg1:T60 Arg2:T58 <<REDUNDANT!!!SHOULD BE REMOVED>>	od 2 lat -> chromaniem przestankowym  <RANK: 2> <info: start[2177, 1973] <type: LEFT>>
+R52	Dat Arg1:T60 Arg2:T52 <<REDUNDANT!!!REMOVED>>	od 2 lat -> implantacji dwujamowego kardiostymulatora <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2177, 1841] <type: LEFT>>
+
+
+Sentence 26:
+W wywiadzie ponadto: szybsze chodzenie męczenie się np. podczas chodzenia po mieszkaniu od 3 m-cy, kołatania serca ustępujące samoistnie z towarzyszącymi bólami w klatce piersiowej, zawroty głowy przy zmianie pozycji ciała, 1x omdlenie w zeszłym roku (z tego powodu była hospitalizowana- brak dokumentacji) - podobno po próbie wysiłkowej wystąpił ból w klatce peirsiowej i nagła utrata przytomności/ zatrzymanie krążenia?
+R53	Dat Arg1:T62 Arg2:T61 << OK >>	od 3 m-cy -> męczenie się np. podczas chodzenia po mieszkaniu  <RANK: 3> <info: start[2276, 2227] <type: LEFT>>
+R54	Dat Arg1:T62 Arg2:T63 <<REDUNDANT!!!REMOVED>>	od 3 m-cy -> kołatania serca ustępujące samoistnie <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2276, 2287] <type: RIGHT>>
+R55	Dat Arg1:T62 Arg2:T64 <<REDUNDANT!!!REMOVED>>	od 3 m-cy -> towarzyszącymi bólami w klatce piersiowej <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2276, 2327] <type: RIGHT>>
+R56	Dat Arg1:T62 Arg2:T65 <<REDUNDANT!!!REMOVED>>	od 3 m-cy -> zawroty głowy przy zmianie pozycji ciała <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2276, 2370] <type: RIGHT>>
+R57	Dat Arg1:T62 Arg2:T66 <<REDUNDANT!!!REMOVED>>	od 3 m-cy -> 1x omdlenie <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2276, 2412] <type: RIGHT>>
+R58	Dat Arg1:T62 Arg2:T69 <<REDUNDANT!!!REMOVED>>	od 3 m-cy -> po próbie wysiłkowej wystąpił ból w klatce peirsiowej i nagła utrata przytomności/ zatrzymanie krążenia?, <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2276, 2505] <type: RIGHT>>
+R59	Dat Arg1:T62 Arg2:T68 <<REDUNDANT!!!REMOVED>>	od 3 m-cy -> z tego powodu była hospitalizowana <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2276, 2440] <type: RIGHT>>
+R60	Dat Arg1:T67 Arg2:T61 <<REDUNDANT!!!REMOVED>>	w zeszłym roku -> męczenie się np. podczas chodzenia po mieszkaniu <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2424, 2227] <type: LEFT>>
+R61	Dat Arg1:T67 Arg2:T63 <<REDUNDANT!!!REMOVED>>	w zeszłym roku -> kołatania serca ustępujące samoistnie <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2424, 2287] <type: LEFT>>
+R62	Dat Arg1:T67 Arg2:T64 <<REDUNDANT!!!REMOVED>>	w zeszłym roku -> towarzyszącymi bólami w klatce piersiowej <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2424, 2327] <type: LEFT>>
+R63	Dat Arg1:T67 Arg2:T65 <<REDUNDANT!!!REMOVED>>	w zeszłym roku -> zawroty głowy przy zmianie pozycji ciała <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2424, 2370] <type: LEFT>>
+R64	Dat Arg1:T67 Arg2:T66 << OK >>	w zeszłym roku -> 1x omdlenie  <RANK: 3> <info: start[2424, 2412] <type: LEFT>>
+R65	Dat Arg1:T67 Arg2:T69 <<REDUNDANT!!!REMOVED>>	w zeszłym roku -> po próbie wysiłkowej wystąpił ból w klatce peirsiowej i nagła utrata przytomności/ zatrzymanie krążenia?, <:REMOVED Too far from TagInfo[T67, 2424, 2438, Date, w zeszłym roku
+] TagInfo[T68, 2440, 2474, Treatment, z tego powodu była hospitalizowana
+]:> <RANK: 3> <info: start[2424, 2505] <type: RIGHT>>
+R66	Dat Arg1:T67 Arg2:T68 << OK >>	w zeszłym roku -> z tego powodu była hospitalizowana  <RANK: 3> <info: start[2424, 2440] <type: RIGHT>>
+
+
+Sentence 27:
+, początkowo zaczerwienienie w okolicy miejsca implantacji stymulatora a ostatnio szczypanie. 
+
+
+
+Sentence 28:
+W 2015 z powodu rozpoznania FA miała włączone Xarelto ale lekarz z POZ lek odstawił.
+
+R67	Neg Arg1:T74 Arg2:T72 <<REDUNDANT!!!REMOVED>>	odstawił -> rozpoznania FA <:REMOVED odstaw not for Condition:> <RANK: 3> <info: start[2779, 2720] <type: LEFT>>
+R68	Neg Arg1:T74 Arg2:T73 << OK >>	odstawił -> Xarelto  <RANK: 3> <info: start[2779, 2750] <type: LEFT>>
+R69	Dat Arg1:T71 Arg2:T72 << OK >>	W 2015 -> rozpoznania FA  <RANK: 3> <info: start[2704, 2720] <type: RIGHT>>
+R70	Dat Arg1:T71 Arg2:T73 << OK >>	W 2015 -> Xarelto  <RANK: 3> <info: start[2704, 2750] <type: RIGHT>>
+R71	Alg Arg1:T72 Arg2:T73 <<REDUNDANT!!!REMOVED>>	rozpoznania FA -> Xarelto <:REMOVED too long text between 16 limit:10:> <RANK: 3> <info: start[2720, 2750] <type: RIGHT>>
+
+
+Sentence 29:
+Neguje: zasłabnięcia, omdlenia, krwawienia, czarne stolce, brunatne wymioty, chorobę wrzodową, duszność nocną, .  
+
+R72	Neg Arg1:T82 Arg2:T75 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[2789, 2797] <type: RIGHT>>
+R73	Neg Arg1:T82 Arg2:T76 << OK >>	Neguje -> omdlenia  <RANK: 2> <info: start[2789, 2811] <type: RIGHT>>
+R74	Neg Arg1:T82 Arg2:T77 << OK >>	Neguje -> krwawienia  <RANK: 2> <info: start[2789, 2821] <type: RIGHT>>
+R75	Neg Arg1:T82 Arg2:T78 << OK >>	Neguje -> czarne stolce  <RANK: 2> <info: start[2789, 2833] <type: RIGHT>>
+R76	Neg Arg1:T82 Arg2:T79 << OK >>	Neguje -> brunatne wymioty  <RANK: 2> <info: start[2789, 2848] <type: RIGHT>>
+R77	Neg Arg1:T82 Arg2:T81 << OK >>	Neguje -> duszność nocną  <RANK: 2> <info: start[2789, 2884] <type: RIGHT>>
+R78	Neg Arg1:T82 Arg2:T80 << OK >>	Neguje -> chorobę wrzodową  <RANK: 2> <info: start[2789, 2866] <type: RIGHT>>
+
+
+Sentence 30:
+Przebyte operacje: appendektomia, usuniecie łagodnego guzka piersi lewej, implantacja i reimplantacja kardiostymulatora, operacja przepukliny pępkowej.
+
+
+
+Sentence 31:
+Palenie tytoniu: nigdy
+Inne używki: nie
+Uczulenia: nie.
+
+R79	Neg Arg1:T88 Arg2:T91 <<REDUNDANT!!!REMOVED>>	nigdy -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3073, 3096] <type: RIGHT>>
+R80	Neg Arg1:T88 Arg2:T87 << OK >>	nigdy -> Palenie tytoniu  <RANK: 3> <info: start[3073, 3056] <type: LEFT>>
+R81	Neg Arg1:T88 Arg2:T89 <<REDUNDANT!!!REMOVED>>	nigdy -> Inne używki <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3073, 3079] <type: RIGHT>>
+R82	Neg Arg1:T90 Arg2:T91 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3092, 3096] <type: RIGHT>>
+R83	Neg Arg1:T90 Arg2:T87 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3092, 3056] <type: LEFT>>
+R84	Neg Arg1:T90 Arg2:T89 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[3092, 3079] <type: LEFT>>
+R85	Neg Arg1:T92 Arg2:T91 << OK >>	nie -> Uczulenia  <RANK: 3> <info: start[3107, 3096] <type: LEFT>>
+R86	Neg Arg1:T92 Arg2:T87 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3107, 3056] <type: LEFT>>
+R87	Neg Arg1:T92 Arg2:T89 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3107, 3079] <type: LEFT>>
+
+
+Sentence 32:
+Przebyte choroby zakaźne - WZW (-) , borelioza (-), tbc (-), odra (-), kontakt z odrą (-)
+
+R88	Neg Arg1:T98 Arg2:T93 << OK >>	(-) -> WZW  <RANK: 3> <info: start[3143, 3139] <type: LEFT>>
+R89	Neg Arg1:T98 Arg2:T94 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[3143, 3149] <type: RIGHT>>
+R90	Neg Arg1:T98 Arg2:T95 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3143, 3164] <type: RIGHT>>
+R91	Neg Arg1:T98 Arg2:T96 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3143, 3173] <type: RIGHT>>
+R92	Neg Arg1:T98 Arg2:T97 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3143, 3183] <type: RIGHT>>
+R93	Neg Arg1:T99 Arg2:T93 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3159, 3139] <type: LEFT>>
+R94	Neg Arg1:T99 Arg2:T94 << OK >>	(-) -> borelioza  <RANK: 3> <info: start[3159, 3149] <type: LEFT>>
+R95	Neg Arg1:T99 Arg2:T95 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[3159, 3164] <type: RIGHT>>
+R96	Neg Arg1:T99 Arg2:T96 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3159, 3173] <type: RIGHT>>
+R97	Neg Arg1:T99 Arg2:T97 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3159, 3183] <type: RIGHT>>
+R98	Neg Arg1:T100 Arg2:T93 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3168, 3139] <type: LEFT>>
+R99	Neg Arg1:T100 Arg2:T94 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3168, 3149] <type: LEFT>>
+R100	Neg Arg1:T100 Arg2:T95 << OK >>	(-) -> tbc  <RANK: 3> <info: start[3168, 3164] <type: LEFT>>
+R101	Neg Arg1:T100 Arg2:T96 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[3168, 3173] <type: RIGHT>>
+R102	Neg Arg1:T100 Arg2:T97 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3168, 3183] <type: RIGHT>>
+R103	Neg Arg1:T101 Arg2:T93 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3178, 3139] <type: LEFT>>
+R104	Neg Arg1:T101 Arg2:T94 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3178, 3149] <type: LEFT>>
+R105	Neg Arg1:T101 Arg2:T95 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3178, 3164] <type: LEFT>>
+R106	Neg Arg1:T101 Arg2:T96 << OK >>	(-) -> odra  <RANK: 3> <info: start[3178, 3173] <type: LEFT>>
+R107	Neg Arg1:T101 Arg2:T97 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[3178, 3183] <type: RIGHT>>
+R108	Neg Arg1:T102 Arg2:T93 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3198, 3139] <type: LEFT>>
+R109	Neg Arg1:T102 Arg2:T94 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3198, 3149] <type: LEFT>>
+R110	Neg Arg1:T102 Arg2:T95 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3198, 3164] <type: LEFT>>
+R111	Neg Arg1:T102 Arg2:T96 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3198, 3173] <type: LEFT>>
+R112	Neg Arg1:T102 Arg2:T97 << OK >>	(-) -> kontakt z odrą  <RANK: 3> <info: start[3198, 3183] <type: LEFT>>
+
+
+Sentence 33:
+Stan społeczny: warunki mieszkaniowe dobre. 
+
+
+
+Sentence 34:
+Leki: przyjęte rano w domu
+
+
+
+Sentence 35:
+Leki: 
+Rytmonorm 150mg 1-0-1 tabl
+Nedal 5mg 1x 1/4 tabl/rano
+
+R113	Drg Arg1:T104 Arg2:T108 << OK >>	Rytmonorm -> 150mg 1-0-1 tabl  <RANK: 3> <info: start[3281, 3291] <type: RIGHT>>
+R114	Drg Arg1:T104 Arg2:T109 <<REDUNDANT!!!REMOVED>>	Rytmonorm -> 5mg 1x 1/4 tabl/rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3281, 3314] <type: RIGHT>>
+R115	Drg Arg1:T105 Arg2:T108 <<REDUNDANT!!!REMOVED>>	Nedal -> 150mg 1-0-1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3308, 3291] <type: LEFT>>
+R116	Drg Arg1:T105 Arg2:T109 << OK >>	Nedal -> 5mg 1x 1/4 tabl/rano  <RANK: 3> <info: start[3308, 3314] <type: RIGHT>>
+
+
+Sentence 36:
+Formetic 850mg 1-0-1 tabl
+Amaryl 1mg 1x 1 tabl/rano
+
+Planowany czas hospitalizacji: 4-5 dni.
+
+R117	Drg Arg1:T106 Arg2:T110 << OK >>	Formetic -> 850mg 1-0-1 tabl  <RANK: 3> <info: start[3335, 3344] <type: RIGHT>>
+R118	Drg Arg1:T106 Arg2:T111 <<REDUNDANT!!!REMOVED>>	Formetic -> 1mg 1x 1 tabl/rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3335, 3368] <type: RIGHT>>
+R119	Drg Arg1:T107 Arg2:T110 <<REDUNDANT!!!REMOVED>>	Amaryl -> 850mg 1-0-1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3361, 3344] <type: LEFT>>
+R120	Drg Arg1:T107 Arg2:T111 << OK >>	Amaryl -> 1mg 1x 1 tabl/rano  <RANK: 3> <info: start[3361, 3368] <type: RIGHT>>
+
+
+Sentence 37:
+Planowane badania: badania laboratoryjne, ECHO, EKG metodą Holtera, ABPM, próba wysiłkowa.
+
+
+
+Sentence 38:
+------------------------------------------------
+
+
+
+Sentence 39:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 40:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.91[10^3/ul]
+    
+
+
+Sentence 41:
+RBC Krwinki czerwone:3.58[10^6/ul]
+    
+
+
+Sentence 42:
+HGB Hemoglobina:13.1[g/dl]
+    
+
+
+Sentence 43:
+HCT Hematokryt:37.3[%]
+    
+
+
+Sentence 44:
+MCV wskaźnik czerwonokrw:104.2[fl]
+    
+
+
+Sentence 45:
+MCH wskaźnik czerwonokrw:36.6[pg]
+    
+
+
+Sentence 46:
+MCHC wskaźnik czerwonokr:35.1[g/dl]
+    
+
+
+Sentence 47:
+PLT z morfologii:206[10^3/ul]
+    
+
+
+Sentence 48:
+RDW-SD:50.9[fl]
+    
+
+
+Sentence 49:
+RDW-CV:13.2[%]
+    PDW:10.6[fl]
+    
+
+
+Sentence 50:
+MPV:9.6[fl]
+    
+
+
+Sentence 51:
+P-LCR:21.7[%]
+    
+
+
+Sentence 52:
+PCT (hematokryt płytkowy:0.20[%]
+    
+
+
+Sentence 53:
+NEUTR# wartość bezwzględ:3.04[10^3/ul]
+    
+
+
+Sentence 54:
+NEUTR%:51.5[%]
+    
+
+
+Sentence 55:
+LYMH# wartość bezwzględn:1.91[10^3/ul]
+    
+
+
+Sentence 56:
+LYMPH%:32.3[%]
+    
+
+
+Sentence 57:
+MONO# wartość bezwzględn:0.74[10^3/ul]
+    
+
+
+Sentence 58:
+MONO%:12.5[%]
+    
+
+
+Sentence 59:
+EO# wartość bezwzględna:0.19[10^3/ul]
+    
+
+
+Sentence 60:
+EO%:3.2[%]
+    
+
+
+Sentence 61:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    
+
+
+Sentence 62:
+BASO%:0.5[%]
+    
+
+
+Sentence 63:
+NRBC %:0.2[%]
+    
+
+
+Sentence 64:
+NRBC #:0.01[10^3/ul]
+
+
+
+Sentence 65:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.54[10^3/ul]
+    
+
+
+Sentence 66:
+RBC Krwinki czerwone:3.54[10^6/ul]
+    
+
+
+Sentence 67:
+HGB Hemoglobina:12.9[g/dl]
+    
+
+
+Sentence 68:
+HCT Hematokryt:36.5[%]
+    
+
+
+Sentence 69:
+MCV wskaźnik czerwonokrw:103.1[fl]
+    
+
+
+Sentence 70:
+MCH wskaźnik czerwonokrw:36.4[pg]
+    
+
+
+Sentence 71:
+MCHC wskaźnik czerwonokr:35.3[g/dl]
+    
+
+
+Sentence 72:
+PLT z morfologii:201[10^3/ul]
+    
+
+
+Sentence 73:
+RDW-SD:49.4[fl]
+    
+
+
+Sentence 74:
+RDW-CV:12.9[%]
+    PDW:10.8[fl]
+    MPV:10.0[fl]
+    
+
+
+Sentence 75:
+P-LCR:23.5[%]
+    
+
+
+Sentence 76:
+PCT (hematokryt płytkowy:0.20[%]
+    
+
+
+Sentence 77:
+NEUTR# wartość bezwzględ:2.32[10^3/ul]
+    
+
+
+Sentence 78:
+NEUTR%:41.9[%]
+    
+
+
+Sentence 79:
+LYMH# wartość bezwzględn:2.20[10^3/ul]
+    
+
+
+Sentence 80:
+LYMPH%:39.7[%]
+    
+
+
+Sentence 81:
+MONO# wartość bezwzględn:0.75[10^3/ul]
+    
+
+
+Sentence 82:
+MONO%:13.5[%]
+    
+
+
+Sentence 83:
+EO# wartość bezwzględna:0.23[10^3/ul]
+    
+
+
+Sentence 84:
+EO%:4.2[%]
+    
+
+
+Sentence 85:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    BASO%:0.7[%]
+    
+
+
+Sentence 86:
+NRBC %:0.0[%]
+    
+
+
+Sentence 87:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 88:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:28.4[sek]
+
+
+
+Sentence 89:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 90:
+Czas protrombinowy:11.7[sek]
+    
+
+
+Sentence 91:
+Wskaźnik PT:94.0[%]
+    
+
+
+Sentence 92:
+INR:1.06
+
+
+
+Sentence 93:
+Badanie ogólne moczu
+    
+
+
+Sentence 94:
+barwa:żółty[ ]
+    
+
+
+Sentence 95:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 96:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 97:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 98:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 99:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 100:
+ciężar właściwy:1.023[ ]
+    
+
+
+Sentence 101:
+pH:5.0[ ]
+    
+
+
+Sentence 102:
+białko:nieobecne[ ]
+    
+
+
+Sentence 103:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 104:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 105:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 106:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 107:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 108:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 109:
+leukocyty:5 /ul[ul]
+    śluz:dość liczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 110:
+TSH: TSH:1.08[uIU/ml]
+
+
+
+Sentence 111:
+FT3: FT3:2.61[pg/ml]
+
+
+
+Sentence 112:
+FT4: FT4:1.10[ng/dl]
+
+
+
+Sentence 113:
+Troponina T: Troponina T:8.0[pg/ml]
+
+
+
+Sentence 114:
+Troponina T: Troponina T:9.6[pg/ml]
+
+
+
+Sentence 115:
+Troponina T: Troponina T:10.8[pg/ml]
+
+
+
+Sentence 116:
+Troponina T: Troponina T:49.4[pg/ml]
+
+
+
+Sentence 117:
+Troponina T: Troponina T:11.6[pg/ml]
+
+
+
+Sentence 118:
+ALAT: ALAT:27[U/L]
+ASPAT: ASPAT:35[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 119:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 120:
+Sód (Na): Sód:139[mmol/L]
+
+
+
+Sentence 121:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 122:
+Potas (K): Potas:4.8[mmol/L]
+
+
+
+Sentence 123:
+Potas (K): Potas:5.0[mmol/L]
+
+
+
+Sentence 124:
+Potas (K): Potas:5.7[mmol/L]
+
+
+
+Sentence 125:
+Hemoglobina glikowana (HbA1c)
+    :5.52[%]
+    :37[mmol/mol]
+
+
+
+Sentence 126:
+Hemoglobina glikowana (HbA1c)
+    :5.47[%]
+    
+
+
+Sentence 127:
+:36[mmol/mol]
+Kreatynina + GFR
+    
+
+
+Sentence 128:
+Kreatynina w surowicy:1.22[mg/dl]
+    
+
+
+Sentence 129:
+eGFR wg BIS1:46.7[ml/min/1,73 m^2]
+
+
+
+Sentence 130:
+Kreatynina + GFR
+    
+
+
+Sentence 131:
+Kreatynina w surowicy:1.03[mg/dl]
+    eGFR wg BIS1:54.1[ml/min/1,73 m^2]
+
+
+
+Sentence 132:
+Mocznik: Mocznik:43[mg/dl]
+
+
+
+Sentence 133:
+Mocznik: Mocznik:30[mg/dl]
+
+
+
+Sentence 134:
+Lipidogram
+    
+
+
+Sentence 135:
+Cholesterol całkowity:202[mg/dl]
+    
+
+
+Sentence 136:
+Cholesterol HDL:54[mg/dl]
+    
+
+
+Sentence 137:
+Cholestrol LDL:130[mg/dl]
+    
+
+
+Sentence 138:
+Triglicerydy:131[mg/dl]
+    
+
+
+Sentence 139:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:184[mg/dl]
+
+
+
+Sentence 140:
+Glukoza w surowicy: Glukoza w surowicy:73[mg/dl]
+
+
+
+Sentence 141:
+Glukoza w surowicy: Glukoza w surowicy:77[mg/dl]
+
+
+
+Sentence 142:
+NT-proBNP surowica: NT-proBNP w surowicy:556[pg/ml]
+------------------------------------------------
+
+
+
+Sentence 143:
+ICD10
+------------------------------------------------
+I20.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 144:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 145:
+89.501
+89.502
+C55
+A01
+I81
+L43
+O61
+87.440
+L55
+L69
+O55
+I17
+N45
+
+
+
+Sentence 146:
+O
+M37
+
+
+
+Sentence 147:
+I19
+O35
+
+
+
+Sentence 148:
+N13
+N24
+88.721
+O69
+88.714
+
+
+
+Sentence 149:
+------------------------------------------------
+
+

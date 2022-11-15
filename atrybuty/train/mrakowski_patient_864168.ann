@@ -1,0 +1,129 @@
+T1	Treatment 332 354	kontrola u lekarza POZ
+T2	Treatment 357 418	kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych
+T3	Investigation 461 491	scyntygrafii mięśnia sercowego
+T4	Behaviour 495 520	dieta niskocholesterolowa
+T5	Investigation 522 542	kontrola lipidogramu
+T6	Date 543 552	za 3 m-ce
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Drug 691 698	Tritace
+T8	Drug 700 709	0,9% NaCl
+T9	Symptom 927 951	Bóle w klatce piersiowej
+N1	Reference T9 ICD10:R07.4	
+T10	Condition 953 974	Nadciśnienie tętnicze
+N2	Reference T10 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T11	Condition 976 999	Hiperlipidemia mieszana
+N3	Reference T11 ICD10:E78.2	Hiperlipidemia mieszana
+T12	Symptom 1168 1235	typowymi i nietypowymi dolegliwościami bólowymi w klatce piersiowej
+N4	Reference T12 ICD10:R07.3	Inne bóle w klatce piersiowej
+T13	Symptom 1237 1268	pogorszeniem tolerancji wysiłku
+N5	Reference T13 ICD10:R53	Złe samopoczucie i zmęczenie
+T14	Symptom 1272 1289	kołataniami serca
+N6	Reference T14 ICD10:R00.2	Kołatanie serca
+T15	Date 1290 1298	od 3 dni
+R2	Dat Arg1:T15 Arg2:T14	
+R3	Dat Arg1:T15 Arg2:T13	
+R4	Dat Arg1:T15 Arg2:T12	
+T16	Symptom 1327 1356	Dolegliwości wiąże ze stresem
+T17	Condition 1397 1418	dyslipidemia mieszana
+N7	Reference T17 ICD10:E78.2	Hiperlipidemia mieszana
+T18	Condition 1420 1422	HA
+N8	Reference T18 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T19	Condition 1424 1457	choroba zwyrodnieniowa kręgosłupa
+N9	Reference T19 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T20	Condition 1459 1479	nadczynność tarczycy
+N10	Reference T20 ICD10:E05	Nadczynność tarczycy [tyreotoksykoza]
+T21	Date 1492 1500	ok. 1980
+R5	Dat Arg1:T21 Arg2:T20	
+T22	Condition 1518 1540	niedoczynność tarczycy
+N11	Reference T22 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T23	Negation 1561 1574	nie przyjmuje
+T24	Drug 1575 1592	leków na tarczycę
+R6	Neg Arg1:T23 Arg2:T24	
+T25	Condition 1596 1606	eutyreozie
+N12	Reference T25 ICD10:E07.8	Inne określone choroby tarczycy
+T26	Date 1652 1656	2016
+T27	Investigation_result 1659 1703	wykazano obecność licznych zmian ogniskowych
+T28	Investigation_result 1705 1733	bez kom. atypowych w biopsji
+R7	Dat Arg1:T26 Arg2:T27	
+R8	Dat Arg1:T26 Arg2:T28	
+T29	Negation 1819 1825	Neguje
+T30	Symptom 1827 1839	zasłabnięcia
+T31	Symptom 1841 1849	omdlenia
+N13	Reference T31 ICD10:R55	Omdlenie i zapaść
+T32	Symptom 1851 1861	krwawienia
+T33	Symptom 1863 1876	czarne stolce
+N14	Reference T33 ICD10:K92.1	Stolce smołowate
+T34	Symptom 1878 1894	brunatne wymioty
+N15	Reference T34 ICD10:K92.0	Wymioty krwawe
+T35	Condition 1896 1912	chorobę wrzodową
+N16	Reference T35 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T36	Symptom 1914 1942	duszność nocną typu ortopnoe
+N17	Reference T36 ICD10:R06.0	Duszność
+T37	Condition 1944 1946	DM
+N18	Reference T37 ICD10:E14	Cukrzyca nieokreślona
+T38	Condition 1948 1958	udar mózgu
+N19	Reference T38 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T39	Condition 1960 1971	zawał serca
+N20	Reference T39 ICD10:I25.2	Przebyty zawał serca
+R9	Neg Arg1:T29 Arg2:T39	
+R10	Neg Arg1:T29 Arg2:T38	
+R11	Neg Arg1:T29 Arg2:T37	
+R12	Neg Arg1:T29 Arg2:T36	
+R13	Neg Arg1:T29 Arg2:T35	
+R14	Neg Arg1:T29 Arg2:T34	
+R15	Neg Arg1:T29 Arg2:T33	
+R16	Neg Arg1:T29 Arg2:T32	
+R17	Neg Arg1:T29 Arg2:T31	
+R18	Neg Arg1:T29 Arg2:T30	
+T40	Treatment 1976 1993	Przebyte operacje
+T41	Treatment 1995 2012	drobny zabieg gin
+A1	Status T41 Historical_Insignificant
+T42	Date 2036 2043	dawniej
+R19	Dat Arg1:T42 Arg2:T41	
+T43	Behaviour 2044 2059	Palenie tytoniu
+T44	Negation 2061 2064	nie
+R20	Neg Arg1:T44 Arg2:T43	
+T45	Behaviour 2066 2077	Inne używki
+T46	Negation 2079 2082	nie
+R21	Neg Arg1:T46 Arg2:T45	
+T47	Condition 2084 2093	Uczulenia
+T48	Negation 2095 2098	nie
+R22	Neg Arg1:T48 Arg2:T47	
+T49	Condition 2127 2130	WZW
+N22	Reference T49 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T50	Condition 2137 2146	borelioza
+N23	Reference T50 ICD10:A69.2	Choroba z Lyme
+T51	Condition 2154 2157	tbc
+T52	Negation 2159 2160	-
+R23	Neg Arg1:T52 Arg2:T51	
+T53	Negation 2149 2150	-
+R24	Neg Arg1:T53 Arg2:T50	
+T54	Negation 2132 2133	-
+R25	Neg Arg1:T54 Arg2:T49	
+T55	Behaviour 2179 2205	warunki mieszkaniowe dobre
+T56	Drug 2245 2252	Tritace
+T57	Drug_dose 2253 2274	5 mg 1 x 1 tabl/ rano
+R26	Drg Arg1:T56 Arg2:T57	
+T58	Drug 2276 2285	Activelle
+T59	Drug_dose 2286 2305	1x 1 tabl/wieczorem
+R27	Drg Arg1:T58 Arg2:T59	
+T60	Drug 2306 2312	Wit D3
+T61	Drug_dose 2313 2338	1200j  1x 1tabl/wieczorem
+R28	Drg Arg1:T60 Arg2:T61	
+T62	Investigation 2400 2421	badania laboratoryjne
+T63	Investigation 2423 2427	ECHO
+T64	Investigation 2429 2432	TET
+T65	Investigation 2434 2441	Holtery
+T66	Condition 2015 2035	polipy szyjki macicy
+N25	Reference T66 ICD10:N84.1	Polip szyjki macicy
+R29	Dat Arg1:T42 Arg2:T66	
+A2	Status T66 Historical_Insignificant
+N27	Reference T47 ICD10:T78.4	Alergia, nieokreślona
+N28	Reference T30 ICD10:R55	Omdlenie i zapaść
+N21	Reference T43 ICD10:Z72.0	Używanie tytoniu
+T67	Date 1357 1375	w ostatnich dniach
+R30	Dat Arg1:T67 Arg2:T16	
+T68	Treatment 1754 1775	leczenia operacyjnego
+N26	Reference T32 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N29	Reference T45 ICD10:Z72	Problemy związane ze stylem życia
+N24	Reference T51 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

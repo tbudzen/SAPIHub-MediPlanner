@@ -1,0 +1,74 @@
+T1	Treatment 	
+T2	Condition 439 477	Nadciśnienie tętnicze I stopnia wg WHO
+N1	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Drug 492 504	amoksycylinę
+T4	Condition 479 488	Uczulenie
+N2	Reference T4 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R1	Alg Arg1:T4 Arg2:T3	
+T5	Treatment 629 656	dalsza opieka w poradni POZ
+T6	Investigation 673 702	kontrola ciśnienia tętniczego
+T7	Investigation 718 738	kontrola lipidogramu
+T8	Date 740 750	raz w roku
+R2	Dat Arg1:T8 Arg2:T7	
+T9	Behaviour 758 794	dieta zbliżona do śródziemnomorskiej
+T10	Behaviour 801 850	regularny, umiarkowany, aerobowy wysiłek fizyczny
+T11	Investigation 1680 1690	echo serca
+T12	Investigation 1692 1695	TET
+T13	Investigation 1697 1701	ABPM
+T14	Investigation 1703 1709	Holter
+T15	Investigation 1711 1729	RTG kl. piersiowej
+T16	Drug 1642 1652	Microgynon
+T17	Condition 1571 1580	Uczulenia
+N3	Reference T17 ICD10:Z88	
+T18	Drug 1585 1597	amoksycylinę
+R3	Alg Arg1:T17 Arg2:T18	
+T19	Negation 1560 1570	nie podaje
+T20	Negation 1538 1546	nie pali
+T21	Negation 1510 1520	nieistotny
+T22	Behaviour 1547 1559	Inne używki:
+N4	Reference T22 ICD10:Z72	Problemy związane ze stylem życia
+R4	Neg Arg1:T19 Arg2:T22	
+T23	Behaviour 1521 1536	Palenie tytoniu
+N5	Reference T23 ICD10:Z72.0	Używanie tytoniu
+R5	Neg Arg1:T20 Arg2:T23	
+T24	Condition 1493 1508	Wywiad rodzinny
+R6	Neg Arg1:T21 Arg2:T24	
+A1	Status T24 Family
+T25	Condition 1447 1450	WZW
+N6	Reference T25 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T26	Negation 1451 1457	neguje
+R7	Neg Arg1:T26 Arg2:T25	
+T27	Condition 1459 1468	borelioza
+N7	Reference T27 ICD10:A69.2	Choroba z Lyme
+T28	Negation 1469 1475	neguje
+R8	Neg Arg1:T28 Arg2:T27	
+T29	Condition 1477 1485	gruźlica
+N8	Reference T29 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T30	Negation 1486 1492	neguje
+R9	Neg Arg1:T30 Arg2:T29	
+T31	Drug 1408 1418	Microgynon
+T32	Drug 1386 1406	leki antykoncepcyjne
+T33	Negation 1354 1364	nie podaje
+T34	Treatment 1335 1352	Przebyte operacje
+R10	Neg Arg1:T33 Arg2:T34	
+T35	Condition 1021 1040	wadą wrodzoną serca
+N9	Reference T35 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T36	Symptom 1097 1120	uczucia kołatania serca
+N10	Reference T36 ICD10:R00.2	Kołatanie serca
+T37	Symptom 1155 1164	duszność,
+N11	Reference T37 ICD10:R06.0	Duszność
+T38	Symptom 1165 1173	nudności
+N12	Reference T38 ICD10:R11	Nudności i wymioty
+T39	Symptom 1198 1259	dolegliwości bólowe w klatce piersiowej o charakterze kłucia.
+N13	Reference T39 ICD10:R07.3	Inne bóle w klatce piersiowej
+R1	Dat Arg1:T8 Arg2:T9
+R12	Neg Arg1:T19 Arg2:T22
+R21	Neg Arg1:T20 Arg2:T22
+R22	Neg Arg1:T20 Arg2:T23
+R26	Neg Arg1:T21 Arg2:T24
+R36	Neg Arg1:T26 Arg2:T25
+R46	Neg Arg1:T28 Arg2:T27
+R5	Dat Arg1:T8 Arg2:T7
+R56	Neg Arg1:T30 Arg2:T29
+R6	Neg Arg1:T33 Arg2:T34
+R7	Neg Arg1:T19 Arg2:T17

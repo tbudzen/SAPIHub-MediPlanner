@@ -1,0 +1,172 @@
+T1	Drug 340 347	Nebilet
+T2	Drug 349 357	Encorton
+T3	Drug 359 362	IPP
+T4	Drug 364 371	Tritace
+T5	Drug 373 381	Astmodil
+T6	Drug 383 390	Alvesco
+T7	Drug 392 401	Symbicort
+T8	Treatment 513 535	kontrola u lekarza POZ
+T9	Treatment 538 598	dalsza kontrola w Poradni Kardiologicznej i Pulmonologicznej
+T10	Treatment 601 629	regularne przyjmowanie leków
+T11	Drug 631 638	Nebilet
+T12	Drug 713 721	Encorton
+T13	Drug 689 692	IPP
+T14	Drug 660 667	Tritace
+T15	Drug_dose 639 659	5mg 1x 1/2 tabl/rano
+R1	Drg Arg1:T11 Arg2:T15	
+T16	Drug_dose 668 688	10mg 1x 1 tabl/wiecz
+R2	Drg Arg1:T14 Arg2:T16	
+T17	Drug_dose 693 712	20mg 1x 1 tabl/rano
+R3	Drg Arg1:T13 Arg2:T17	
+T18	Condition 942 977	Umiarkowana niedomykalność mitralna
+N1	Reference T18 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T19	Condition 978 1007	w przebiegu wypadania płatków
+N2	Reference T19 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T20	Condition 1009 1030	Nadciśnienie tętnicze
+N3	Reference T20 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T21	Condition 1032 1056	Zespół hipereozynofilowy
+N4	Reference T21 ICD10:D72.1	Eozynofilia
+T22	Condition 1058 1103	Podejrzenie eozynofilowego zapalenia przełyku
+A1	Source T22 Declared
+N5	Reference T22 ICD10:K20	Zapalenie przełyku
+T23	Condition 1105 1165	Nacieki eozynofilowe błony śluzowej jelita krętego i grubego
+N6	Reference T23 ICD10:K52.9	Niezakaźne zapalenie żołądka, jelita cienkiego i okrężnicy, nieokreślone
+T24	Condition 1167 1194	Przewlekłe zapalenie krtani
+N7	Reference T24 ICD10:J37.0	Przewlekłe zapalenie krtani
+T25	Treatment 1204 1213	usunięciu
+A2	Status T25 Historical_Insignificant
+T26	Condition 1258 1274	Astma oskrzelowa
+N8	Reference T26 ICD10:J45	Astma oskrzelowa
+T27	Condition 1276 1293	Grzybica przełyku
+N9	Reference T27 ICD10:K22.9	Choroba przełyku, nieokreślona
+T28	Condition 1307 1321	Uchyłki jelita
+N10	Reference T28 ICD10:K57.9	Choroba uchyłkowa nieokreślonego odcinka jelita bez perforacji i ropnia
+T29	Investigation_result 1465 1525	podejrzeniem umiarkowanej IM w mechanizmie wypadania P1 i P2
+A3	Source T29 Declared
+N11	Reference T29 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T30	Investigation_result 1527 1554	zerwanie struny ścięgnistej
+N12	Reference T30 ICD10:I34.8	Inne niereumatyczne zaburzenia funkcji zastawki mitralnej
+T31	Investigation 1571 1574	TTE
+R4	Inv Arg1:T31 Arg2:T30	
+R5	Inv Arg1:T31 Arg2:T29	
+T32	Investigation 1583 1597	bad. MRI serca
+T33	Investigation_result 1599 1746	nie stwierdza się różnicy w rzucie lewej komory serca oraz przepływie przez aortę wstępującą, mogącą świadczyć o niedomykalności zastawki mitralnej
+A4	Source T33 Declared
+R6	Inv Arg1:T32 Arg2:T33	
+T34	Condition 1751 1774	nadciśnieniem tętniczym
+N13	Reference T34 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T35	Condition 1776 1816	zespołem hipereozynofilowym, eozynofilią
+N14	Reference T35 ICD10:D72.1	Eozynofilia
+T36	Condition 1820 1866	podejrzeniem eozynofilowego zapalenia przełyku
+A5	Source T36 Declared
+N15	Reference T36 ICD10:K20	Zapalenie przełyku
+T37	Condition 1868 1897	przewlekłym zapaleniem krtani
+N16	Reference T37 ICD10:J37.0	Przewlekłe zapalenie krtani
+T38	Treatment 1902 1911	usunięciu
+A6	Status T38 Historical_Insignificant
+T39	Condition 1995 2011	astmą oskrzelową
+N17	Reference T39 ICD10:J45	Astma oskrzelowa
+T40	Condition 2013 2030	grzybicą przełyku
+N18	Reference T40 ICD10:K22.9	Choroba przełyku, nieokreślona
+T41	Condition 2046 2062	uchyłkami jelita
+N19	Reference T41 ICD10:K57.9	Choroba uchyłkowa nieokreślonego odcinka jelita bez perforacji i ropnia
+T42	Condition 2064 2128	naciekami eozynofilowymi błony śluzowej jelita krętego i grubego
+N20	Reference T42 ICD10:K52.9	Niezakaźne zapalenie żołądka, jelita cienkiego i okrężnicy, nieokreślone
+T43	Symptom 2185 2228	duszności spoczynkowej i głównie wysiłkowej
+N21	Reference T43 ICD10:R06.0	Duszność
+T44	Investigation 2243 2246	MRI
+T45	Date 2248 2255	01.2019
+R7	Dat Arg1:T45 Arg2:T44	
+T46	Negation 2257 2269	nie wykonano
+T47	Investigation_result 2270 2312	analizy przepływów z przyczyn technicznych
+T48	Investigation_result 2318 2412	opisano, że różnica w rzucie prawej i lewej komory może wynikać z opisywanej w badaniu echo IM
+R8	Inv Arg1:T44 Arg2:T47	
+R9	Inv Arg1:T44 Arg2:T48	
+R10	Dat Arg1:T45 Arg2:T47	
+R11	Dat Arg1:T45 Arg2:T48	
+R12	Neg Arg1:T46 Arg2:T47	
+T49	Date 2441 2448	02.2019
+T50	Negation 2510 2522	nieskuteczną
+T51	Investigation 2523 2542	próbę wykonania TEE
+R13	Dat Arg1:T49 Arg2:T51	
+R14	Neg Arg1:T50 Arg2:T51	
+T52	Symptom 2545 2566	krwawienie z przełyku
+N22	Reference T52 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R15	Dat Arg1:T49 Arg2:T52	
+T53	Negation 2657 2663	Neguje
+T54	Symptom 2665 2677	zasłabnięcia
+T55	Symptom 2679 2687	omdlenia
+N23	Reference T55 ICD10:R55	Omdlenie i zapaść
+T56	Symptom 2689 2702	czarne stolce
+N24	Reference T56 ICD10:K92.1	Stolce smołowate
+T57	Symptom 2704 2720	brunatne wymioty
+N25	Reference T57 ICD10:K92.0	Wymioty krwawe
+T58	Condition 2722 2738	chorobę wrzodową
+N26	Reference T58 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T59	Symptom 2740 2768	duszność nocną typu ortopnoe
+T60	Condition 2770 2772	DM
+N28	Reference T60 ICD10:E14	Cukrzyca nieokreślona
+T61	Condition 2774 2784	udar mózgu
+N29	Reference T61 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T62	Condition 2786 2797	zawał serca
+N30	Reference T62 ICD10:I25.2	Przebyty zawał serca
+R16	Neg Arg1:T53 Arg2:T62	
+R17	Neg Arg1:T53 Arg2:T61	
+R18	Neg Arg1:T53 Arg2:T60	
+R19	Neg Arg1:T53 Arg2:T59	
+N27	Reference T59 ICD10:R06.0	Duszność
+R20	Neg Arg1:T53 Arg2:T58	
+R21	Neg Arg1:T53 Arg2:T57	
+R22	Neg Arg1:T53 Arg2:T56	
+R23	Neg Arg1:T53 Arg2:T55	
+R24	Neg Arg1:T53 Arg2:T54	
+T63	Treatment 2802 2819	Przebyte operacje
+T64	Behaviour 2825 2840	Palenie tytoniu
+N31	Reference T64 ICD10:Z72.0	Używanie tytoniu
+T65	Negation 2842 2845	nie
+R25	Neg Arg1:T65 Arg2:T64	
+T66	Behaviour 2847 2858	Inne używki
+T67	Negation 2860 2863	nie
+R26	Neg Arg1:T67 Arg2:T66	
+T68	Condition 2865 2874	Uczulenia
+T69	Negation 2876 2879	nie
+R27	Neg Arg1:T69 Arg2:T68	
+T70	Condition 2908 2911	WZW
+N32	Reference T70 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T71	Condition 2918 2927	borelioza
+N33	Reference T71 ICD10:A69.2	Choroba z Lyme
+T72	Condition 2935 2938	tbc
+N34	Reference T72 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T73	Negation 2913 2914	-
+T74	Negation 2930 2931	-
+T75	Negation 2940 2941	-
+R28	Neg Arg1:T75 Arg2:T72	
+R29	Neg Arg1:T74 Arg2:T71	
+R30	Neg Arg1:T73 Arg2:T70	
+T76	Behaviour 2960 2986	warunki mieszkaniowe dobre
+T77	Behaviour 2988 3029	pracuje zawodowo, działalność gospodarcza
+T78	Drug 3067 3075	Encorton
+T79	Drug_dose 3076 3086	5 mg 2-0-0
+R31	Drg Arg1:T78 Arg2:T79	
+T80	Drug 3088 3091	IPP
+T81	Drug_dose 3092 3103	20 mg 1-0-0
+R32	Drg Arg1:T80 Arg2:T81	
+T82	Drug 3105 3112	Tritace
+T83	Drug_dose 3113 3124	10 mg 1-0-0
+R33	Drg Arg1:T82 Arg2:T83	
+T84	Drug 3126 3134	Astmodil
+T85	Drug_dose 3135 3140	1-0-0
+R34	Drg Arg1:T84 Arg2:T85	
+T86	Drug 3142 3149	Alvesco
+T87	Drug_dose 3150 3162	1xdz 1 wdech
+R35	Drg Arg1:T86 Arg2:T87	
+T88	Investigation 3225 3246	badania laboratoryjne
+T89	Investigation 3248 3252	ECHO
+T90	Investigation 3254 3258	ABPM
+T91	Condition 1214 1256	zmiany przerostowej lewego fałdu głosowego
+N35	Reference T91 ICD10:J38.3	Inne choroby strun głosowych
+T92	Condition 1912 1954	zmiany przerostowej lewego fałdu głosowego
+N36	Reference T92 ICD10:J38.3	Inne choroby strun głosowych
+T93	Investigation_result 1966 1992	parakeratoza bez dysplazji
+T94	Investigation 1958 1965	histpat
+R36	Inv Arg1:T94 Arg2:T93	

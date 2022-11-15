@@ -1,0 +1,229 @@
+T1	Drug_dose 578 581	N25
+T2	Drug 569 577	Euthyrox
+R1	Drg Arg1:T2 Arg2:T1	
+T3	Drug 583 586	IPP
+T4	Drug 589 594	Acard
+T5	Drug 596 603	Roswera
+T6	Drug 605 613	Betaserc
+T7	Drug 615 623	Biosotal
+T8	Drug 625 635	Prestarium
+T9	Drug 637 647	Tardyferon
+T10	Drug 649 660	Paracetamol
+T11	Treatment 769 874	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Neurologicznej, Gastroenterologicznej.
+T12	Behaviour 877 917	Dieta lekkostrawna , niskocholesterolowa
+T13	Investigation 930 950	kontrolna morfologia
+T14	Date 951 960	za 14 dni
+R2	Dat Arg1:T14 Arg2:T13	
+T15	Investigation 1000 1074	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T16	Investigation 1091 1126	kontrola ciśnienia tętniczego krwi.
+T17	Drug 1176 1184	Euthyrox
+T18	Drug_dose 1185 1211	25 ug 1x dz rano, na czczo
+R3	Drg Arg1:T17 Arg2:T18	
+T19	Drug 1213 1216	IPP
+T20	Drug_dose 1217 1233	20 mg 2 xdz rano
+R4	Drg Arg1:T19 Arg2:T20	
+T21	Drug 1234 1239	Acard
+T22	Drug_dose 1240 1261	75 mg 1x dz wieczorem
+R5	Drg Arg1:T21 Arg2:T22	
+T23	Drug 1262 1269	Roswera
+T24	Drug_dose 1270 1290	5 mg 1x dz wieczorem
+R6	Drg Arg1:T23 Arg2:T24	
+T25	Drug 1292 1300	Betaserc
+T26	Drug 1314 1322	Biosotal
+T27	Drug 1337 1347	Prestarium
+T28	Drug 1367 1377	Tardyferon
+T29	Drug_dose 1301 1312	24 mg 2x dz
+R7	Drg Arg1:T25 Arg2:T29	
+T30	Drug_dose 1323 1335	40 mg 3 x dz
+R8	Drg Arg1:T26 Arg2:T30	
+T31	Drug_dose 1348 1363	5 mg 1x dz rano
+R9	Drg Arg1:T27 Arg2:T31	
+T32	Drug_dose 1378 1389	1x  dz rano
+R10	Drg Arg1:T28 Arg2:T32	
+T33	Investigation 4157 4167	Echo serca
+T34	Investigation 4170 4173	TEE
+T35	Drug 3982 3985	IPP
+T36	Drug_dose 3986 4002	20 mg 1 xdz rano
+R11	Drg Arg1:T35 Arg2:T36	
+T37	Drug 4005 4010	Acard
+T38	Drug_dose 4011 4032	75 mg 1x dz wieczorem
+R12	Drg Arg1:T37 Arg2:T38	
+T39	Drug 4035 4042	Roswera
+T40	Drug_dose 4043 4063	5 mg 1x dz wieczorem
+R13	Drg Arg1:T39 Arg2:T40	
+T41	Drug 4066 4074	Betaserc
+T42	Drug_dose 4075 4086	24 mg 2x dz
+R14	Drg Arg1:T41 Arg2:T42	
+T43	Drug 4089 4097	Biosotal
+T44	Drug_dose 4098 4110	40 mg 3 x dz
+R15	Drg Arg1:T43 Arg2:T44	
+T45	Drug 4113 4123	Prestarium
+T46	Drug_dose 4124 4139	5 mg 1x dz rano
+R16	Drg Arg1:T45 Arg2:T46	
+T47	Drug 3944 3952	Euthyrox
+T48	Drug_dose 3953 3979	25 ug 1x dz rano, na czczo
+R17	Drg Arg1:T47 Arg2:T48	
+T49	Behaviour 3867 3893	warunki mieszkaniowe dobre
+T50	Negation 3844 3850	neguje
+T51	Negation 3829 3832	nie
+T52	Negation 3812 3815	nie
+T53	Negation 3772 3776	-  )
+T54	Negation 3791 3792	-
+T55	Condition 3833 3842	Uczulenia
+N1	Reference T55 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R18	Neg Arg1:T50 Arg2:T55	
+T56	Behaviour 3816 3828	Inne używki:
+N2	Reference T56 ICD10:Z72	Problemy związane ze stylem życia
+R19	Neg Arg1:T51 Arg2:T56	
+T57	Behaviour 3795 3810	Palenie tytoniu
+N3	Reference T57 ICD10:Z72.0	Używanie tytoniu
+R20	Neg Arg1:T52 Arg2:T57	
+T58	Condition 3766 3769	WZW
+N4	Reference T58 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+R21	Neg Arg1:T53 Arg2:T58	
+T59	Condition 3779 3788	borelioza
+N5	Reference T59 ICD10:A69.2	Choroba z Lyme
+R22	Neg Arg1:T54 Arg2:T59	
+T60	Negation 3658 3662	brak
+T61	Treatment 3638 3655	Przebyte operacje
+R23	Neg Arg1:T60 Arg2:T61	
+T62	Condition 3619 3633	Niedokrwistość
+N6	Reference T62 ICD10:D64.9	Niedokrwistość, nieokreślona
+T63	Condition 3594 3616	Niedoczynność tarczycy
+N7	Reference T63 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T64	Condition 3542 3591	Zmiany zwyrodnieniowe odcinka szyjnego kręgosłupa
+T65	Condition 1618 1647	Dwupłatkowa zastawka aortalna
+N9	Reference T65 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T66	Condition 2619 2676	złożonej wady zastawki aortalnej ( zastawka dwupłatkowa )
+N10	Reference T66 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T67	Condition 1649 1683	Łagodna stenoza zastawki aortalnej
+N11	Reference T67 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T68	Condition 1687 1711	śladową niedomykalnością
+N12	Reference T68 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T69	Condition 3074 3122	niedomykalnością płatków zastawki aortalnej I'II
+N13	Reference T69 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T70	Condition 1714 1741	Choroba niedokrwienna serca
+T71	Condition 1743 1768	Dusznica bolesna stabilna
+T72	Condition 1770 1805	Napadowy częstoskurcz przedsionkowy
+N16	Reference T72 ICD10:I47.1	Częstoskurcz nadkomorowy
+T73	Condition 1808 1829	Nadciśnienie tętnicze
+N17	Reference T73 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T74	Condition 1832 1898	Podejrzenie przecieku  części błoniastej przegrody międzykomorowej
+N18	Reference T74 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+A1	Source T74 Declared
+T75	Condition 1901 1930	Przewlekłą niewydolność serca
+T76	Symptom 1931 1944	II’ wg . NYHA
+T77	Condition 1945 1993	z zachowana frakcją wyrzutowa lewej komory serca
+T78	Investigation_result 1996 2005	EF= 65% )
+T79	Symptom 2010 2034	Nawracające zasłabnięcia
+N20	Reference T79 ICD10:R55	Omdlenie i zapaść
+T80	Condition 2037 2057	Miażdżyca uogólniona
+N21	Reference T80 ICD10:I70.9	Miażdżyca uogólniona i nieokreślona
+T81	Condition 3256 3276	Miażdżyca uogólniona
+N22	Reference T81 ICD10:I70.9	Miażdżyca uogólniona i nieokreślona
+T82	Symptom 3229 3253	Nawracające zasłabnięcia
+N23	Reference T82 ICD10:R55	Omdlenie i zapaść
+T83	Condition 3195 3224	Przewlekłą niewydolność serca
+N24	Reference T83 ICD10:I50.9	Niewydolność serca, nieokreślona
+T84	Condition 3126 3192	Podejrzenie przecieku  części błoniastej przegrody międzykomorowej
+A2	Source T84 Declared
+N25	Reference T84 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T85	Condition 2942 2969	Choroba niedokrwienna serca
+T86	Condition 2972 3007	Napadowy częstoskurcz przedsionkowy
+N27	Reference T86 ICD10:I47.1	Częstoskurcz nadkomorowy
+T87	Condition 3010 3031	Nadciśnienie tętnicze
+N28	Reference T87 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T88	Condition 3034 3071	Złożona wada lewego ujścia tętniczego
+N29	Reference T88 ICD10:Q23.9	Wrodzona wada zastawki aortalnej i zastawki mitralnej, nieokreślona
+T89	Condition 3279 3313	Niedrożność lewej tętnicy kręgowej
+N30	Reference T89 ICD10:I65.0	Niedrożność i zwężenie tętnicy kręgowej
+T90	Condition 2060 2094	Niedrożność lewej tętnicy kręgowej
+N31	Reference T90 ICD10:I65.0	Niedrożność i zwężenie tętnicy kręgowej
+T91	Condition 2105 2134	udarze prawej półkuli móżdżku
+N32	Reference T91 ICD10:I63.8	Inny zawał mózgu
+T92	Date 2137 2141	2013
+R24	Dat Arg1:T92 Arg2:T91	
+T93	Condition 3324 3353	udarze prawej półkuli móżdżku
+N33	Reference T93 ICD10:I63.8	Inny zawał mózgu
+T94	Date 3356 3360	2013
+R25	Dat Arg1:T94 Arg2:T93	
+T95	Condition 3364 3391	Choroba refluksowa przełyku
+N34	Reference T95 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T96	Condition 3394 3426	Przepuklina rozworu przełykowego
+N35	Reference T96 ICD10:K44	Przepuklina przeponowa
+T97	Condition 3429 3472	Przewlekłe zapalenie błony śluzowej żołądka
+N36	Reference T97 ICD10:K29.9	Zapalenie żołądka i dwunastnicy, nieokreślone
+T98	Condition 3474 3491	Uchyłki okrężnicy
+N37	Reference T98 ICD10:K57	Choroba uchyłkowa jelita
+T99	Condition 2145 2172	Choroba refluksowa przełyku
+N38	Reference T99 ICD10:K21.9	Zarzucanie żołądkowo-przełykowe bez zapalenia przełyku
+T100	Condition 2175 2207	Przepuklina rozworu przełykowego
+N39	Reference T100 ICD10:K44	Przepuklina przeponowa
+T101	Condition 2210 2253	Przewlekłe zapalenie błony śluzowej żołądka
+N40	Reference T101 ICD10:K29.9	Zapalenie żołądka i dwunastnicy, nieokreślone
+T102	Condition 2255 2272	Uchyłki okrężnicy
+N41	Reference T102 ICD10:K57	Choroba uchyłkowa jelita
+T103	Condition 2275 2303	Polipy pęcherzyka żółciowego
+N42	Reference T103 ICD10:K82.8	Inne określone choroby pęcherzyka żółciowego
+T104	Condition 3494 3522	Polipy pęcherzyka żółciowego
+N43	Reference T104 ICD10:K82.8	Inne określone choroby pęcherzyka żółciowego
+T105	Condition 3525 3539	torbiele nerek
+N44	Reference T105 ICD10:N28.1	Torbiel nerki, nabyta
+T106	Condition 2306 2320	Torbiele nerek
+N45	Reference T106 ICD10:N28.1	Torbiel nerki, nabyta
+T107	Condition 2323 2372	Zmiany zwyrodnieniowe odcinka szyjnego kręgosłupa
+T108	Condition 2375 2397	Niedoczynność tarczycy
+N47	Reference T108 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T109	Condition 2400 2446	Niedokrwistość mikrocytarna z niedoboru żelaża
+N48	Reference T109 ICD10:D50.8	Inne niedokrwistości z niedoboru żelaza
+N8	Reference T64 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+N46	Reference T107 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T110	Condition 2680 2748	podejrzenie przecieku w części błoniastej  przegrody międzykomorowej
+A3	Source T110 Declared
+N49	Reference T110 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T111	Investigation 2764 2767	TEE
+T112	Symptom 2796 2820	bóle w klatce piersiowej
+N50	Reference T112 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T113	Symptom 2823 2853	pogorszenie tolerancji wysiłku
+N51	Reference T113 ICD10:R53	Złe samopoczucie i zmęczenie
+T114	Symptom 2856 2876	duszności wysiłkowej
+N52	Reference T114 ICD10:R06.0	Duszność
+T115	Symptom 2880 2893	zawroty głowy
+N53	Reference T115 ICD10:R42	Zawroty głowy i odurzenie
+T116	Symptom 2896 2907	szumy uszne
+N54	Reference T116 ICD10:H93.1	Szum w uszach
+T117	Symptom 2910 2924	 bóle w mostku
+N55	Reference T117 ICD10:R07.3	Inne bóle w klatce piersiowej
+N14	Reference T70 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+N15	Reference T71 ICD10:I20.8	Inne postacie choroby niedokrwiennej serca
+N19	Reference T75 ICD10:I50.9	Niewydolność serca, nieokreślona
+N26	Reference T85 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+R1	Drg Arg1:T2 Arg2:T1
+R10	Dat Arg1:T14 Arg2:T13
+R104	Drg Arg1:T45 Arg2:T44
+R105	Drg Arg1:T45 Arg2:T46
+R11	Drg Arg1:T17 Arg2:T18
+R113	Drg Arg1:T47 Arg2:T48
+R14	Drg Arg1:T19 Arg2:T20
+R15	Drg Arg1:T21 Arg2:T22
+R19	Drg Arg1:T23 Arg2:T24
+R2	Drg Arg1:T3 Arg2:T1
+R23	Drg Arg1:T25 Arg2:T29
+R24	Drg Arg1:T26 Arg2:T30
+R28	Drg Arg1:T27 Arg2:T31
+R32	Drg Arg1:T28 Arg2:T32
+R33	Dat Arg1:T92 Arg2:T91
+R34	Neg Arg1:T60 Arg2:T61
+R35	Neg Arg1:T50 Arg2:T55
+R45	Neg Arg1:T51 Arg2:T56
+R52	Neg Arg1:T52 Arg2:T57
+R54	Neg Arg1:T53 Arg2:T58
+R61	Neg Arg1:T54 Arg2:T59
+R65	Drg Arg1:T35 Arg2:T36
+R73	Drg Arg1:T37 Arg2:T38
+R81	Drg Arg1:T39 Arg2:T40
+R82	Drg Arg1:T39 Arg2:T42
+R88	Drg Arg1:T41 Arg2:T40
+R89	Drg Arg1:T41 Arg2:T42
+R96	Drg Arg1:T43 Arg2:T42
+R97	Drg Arg1:T43 Arg2:T44

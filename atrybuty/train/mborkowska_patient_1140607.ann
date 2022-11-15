@@ -1,0 +1,86 @@
+T1	Symptom 446 474	trzech utratach przytomności
+N1	Reference T1 ICD10:R55	Omdlenie i zapaść
+T2	Condition 476 478	HA
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Condition 480 501	Przewlekły nikotynizm
+N3	Reference T3 ICD10:F17.2	
+T4	Condition 645 647	HA
+N4	Reference T4 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T5	Date 648 660	od ok. 3 lat
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Investigation_result 662 689	RR w domu 130/80-150/90mmHg
+T7	Behaviour 692 741	przewlekłym nikotynizmem (do 20/dz, pali od 18rż)
+T8	Symptom 772 817	nagłej utraty przytomności po wstaniu z łóżka
+T9	Date 825 835	6.12.2018,
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Symptom 836 933	po odzyskaniu przytomności, w krótkim czasie nastąpiło drugie i trzecie omdlenie z oddaniem moczu
+R3	Dat Arg1:T9 Arg2:T10	
+T11	Negation 943 949	neguje
+T12	Symptom 950 1003	poprzedzające dolegliwości i dolegliwości po omdleniu
+R4	Neg Arg1:T11 Arg2:T12	
+T13	Investigation_result 1026 1046	HR często ok 100/min
+T14	Symptom 1048 1088	zawroty głowy przy zmianie pozycji ciała
+N6	Reference T14 ICD10:R42	Zawroty głowy i odurzenie
+T15	Symptom 1090 1124	na 8 piętro wchodzi bez odpoczynku
+T16	Negation 1126 1132	Neguje
+T17	Symptom 1134 1170	wcześniejsze zasłabnięcia i omdlenia
+N7	Reference T17 ICD10:R55	Omdlenie i zapaść
+T18	Symptom 1172 1182	krwawienia
+N8	Reference T18 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T19	Symptom 1184 1198	duszność nocną
+N9	Reference T19 ICD10:I50.1	Niewydolność serca lewokomorowa
+T20	Symptom 1200 1215	obrzęki podudzi
+N10	Reference T20 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T21	Symptom 1217 1241	bóle w klatce piersiowej
+N11	Reference T21 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T22	Symptom 1243 1258	kołatania serca
+N12	Reference T22 ICD10:R00.2	Kołatanie serca
+T23	Symptom 1260 1286	uczucie wolnej pracy serca
+T24	Condition 1288 1290	DM
+N13	Reference T24 ICD10:E13	Inne określone postacie cukrzycy
+R5	Neg Arg1:T16 Arg2:T17	
+R6	Neg Arg1:T16 Arg2:T18	
+R7	Neg Arg1:T16 Arg2:T19	
+R8	Neg Arg1:T16 Arg2:T20	
+R9	Neg Arg1:T16 Arg2:T21	
+R10	Neg Arg1:T16 Arg2:T22	
+R11	Neg Arg1:T16 Arg2:T23	
+R12	Neg Arg1:T16 Arg2:T24	
+T25	Negation 1314 1318	brak
+T26	Treatment 1295 1312	Przebyte operacje
+R13	Neg Arg1:T25 Arg2:T26	
+T27	Behaviour 1319 1408	Palenie tytoniu: tak do 20 pap/dz od 18 rż, od Bożego Narodzenia- papierosy elektroniczne
+N14	Reference T27 ICD10:T65.2	Tytoń i nikotyna
+T28	Negation 1422 1425	nie
+T29	Negation 1437 1440	nie
+T30	Behaviour 1409 1420	Inne używki
+R14	Neg Arg1:T28 Arg2:T30	
+T31	Condition 1426 1435	Uczulenia
+R15	Neg Arg1:T29 Arg2:T31	
+T32	Condition 1468 1471	WZW
+N16	Reference T32 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T33	Condition 1478 1487	borelioza
+N17	Reference T33 ICD10:A69.2	Choroba z Lyme
+T34	Condition 1495 1498	tbc
+N18	Reference T34 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T35	Behaviour 1519 1545	warunki mieszkaniowe dobre
+T36	Negation 1472 1475	(-)
+R16	Neg Arg1:T36 Arg2:T32	
+T37	Negation 1488 1493	( - )
+R17	Neg Arg1:T37 Arg2:T33	
+T38	Negation 1499 1502	(-)
+R18	Neg Arg1:T38 Arg2:T34	
+T39	Drug 1582 1593	Metocard ZK
+T40	Drug_dose 1594 1613	47,5 1x 1 tabl/rano
+R19	Drg Arg1:T39 Arg2:T40	
+T41	Drug 1614 1622	Indix SR
+T42	Drug_dose 1623 1641	1,5 1x 1 tabl/rano
+R20	Drg Arg1:T41 Arg2:T42	
+T43	Drug 1642 1649	Tritace
+T44	Drug_dose 1650 1668	5mg 1x 1 tabl/rano
+R21	Drg Arg1:T43 Arg2:T44	
+T45	Investigation 1752 1756	ECHO
+T46	Investigation 1758 1776	EKG metodą Holtera
+T47	Investigation 1778 1782	ABPM
+N5	Reference T7 ICD10:T65.2	Tytoń i nikotyna
+N15	Reference T31 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

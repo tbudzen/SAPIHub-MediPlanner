@@ -1,0 +1,753 @@
+allRelations          : 106
+oks                   : 34
+isRedundantAndRemoveds: 68
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 4
+GOOD / BAD            : 102 / 4
+Sentence 0:
+------------------------------------------------
+Wiek: 71 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+
+Sentence 3:
+Zalecenia
+•\x09dalsza opieka w poradni POZ  
+•\x09okresowa kontrola w Poradni Kardiologicznej  
+•\x09kontrola urologiczna, hepatologiczna, neurologiczna i psychiatryczna  
+•\x09codzienna kontrola ciśnienia tętniczego  
+•\x09okresowa kontrola lipidogramu i glikemii
+
+
+
+Sentence 4:
+•\x09dieta DASH  
+•\x09redukcja masy ciała   
+•\x09stały, umiarkowany, aerobowy wysiłek fizyczny  
+•\x09regularne przyjmowanie leków: 
+
+1.\x09Acard 75 mg 1 tabl.
+R1	Drg Arg1:T6 Arg2:T7 << OK >>	Acard -> 75 mg 1 tabl. wieczorem  <RANK: 3> <info: start[737, 743] <type: RIGHT>>
+
+
+Sentence 5:
+wieczorem (lek dostępny bez recepty) 
+
+
+
+Sentence 6:
+2.\x09Atoris 20 mg 1 tabl.
+R2	Drg Arg1:T8 Arg2:T9 << OK >>	Atoris -> 20 mg 1 tabl. wieczorem  <RANK: 3> <info: start[801, 808] <type: RIGHT>>
+
+
+Sentence 7:
+wieczorem  
+3.\x09Preductal MR 1 tabl. rano i wieczorem 
+4.\x09Sobycor 5 mg 1/2 tabl.
+R3	Drg Arg1:T10 Arg2:T11 << OK >>	Preductal MR -> 1 tabl. rano i wieczorem  <RANK: 3> <info: start[840, 853] <type: RIGHT>>
+R4	Drg Arg1:T10 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Preductal MR -> 5 mg 1/2 tabl. rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[840, 893] <type: RIGHT>>
+R5	Drg Arg1:T12 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Sobycor -> 1 tabl. rano i wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[885, 853] <type: LEFT>>
+R6	Drg Arg1:T12 Arg2:T13 << OK >>	Sobycor -> 5 mg 1/2 tabl. rano  <RANK: 3> <info: start[885, 893] <type: RIGHT>>
+
+
+Sentence 8:
+rano  
+5.\x09Cordarone 200 mg 1 tabl. rano  
+6.\x09Egiramlon 10/10mg 1 tabl. rano  
+7.\x09Trifas Cor 5mg 1 tabl. rano  
+8.\x09Espiro 50 mg 1 tabl. w południe  
+9.\x09Doxar 4 mg 2 tabl.
+R7	Drg Arg1:T14 Arg2:T15 << OK >>	Cordarone -> 200 mg 1 tabl. rano  <RANK: 3> <info: start[921, 931] <type: RIGHT>>
+R8	Drg Arg1:T14 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Cordarone -> 1 tabl. rano <:REMOVED Tag2 not in the same line:> <RANK: 0> <info: start[921, 977] <type: RIGHT>>
+R9	Drg Arg1:T14 Arg2:T19 <<REDUNDANT!!!REMOVED>>	Cordarone -> 5mg 1 tabl. rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[921, 1009] <type: RIGHT>>
+R10	Drg Arg1:T14 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Cordarone -> 50 mg 1 tabl. w południe <:REMOVED other first tag between (right):> <RANK: 0> <info: start[921, 1041] <type: RIGHT>>
+R11	Drg Arg1:T14 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Cordarone -> 4 mg 2 tabl. wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[921, 1080] <type: RIGHT>>
+R12	Drg Arg1:T18 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Trifas Cor -> 200 mg 1 tabl. rano <:REMOVED other second tag between (left):> <RANK: 0> <info: start[998, 931] <type: LEFT>>
+R13	Drg Arg1:T18 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Trifas Cor -> 1 tabl. rano <:REMOVED many second tags on the left:> <RANK: 0> <info: start[998, 977] <type: LEFT>>
+R14	Drg Arg1:T18 Arg2:T19 << OK >>	Trifas Cor -> 5mg 1 tabl. rano  <RANK: 3> <info: start[998, 1009] <type: RIGHT>>
+R15	Drg Arg1:T18 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Trifas Cor -> 50 mg 1 tabl. w południe <:REMOVED other first tag between (right):> <RANK: 0> <info: start[998, 1041] <type: RIGHT>>
+R16	Drg Arg1:T18 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Trifas Cor -> 4 mg 2 tabl. wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[998, 1080] <type: RIGHT>>
+R17	Drg Arg1:T20 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Espiro -> 200 mg 1 tabl. rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1034, 931] <type: LEFT>>
+R18	Drg Arg1:T20 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Espiro -> 1 tabl. rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1034, 977] <type: LEFT>>
+R19	Drg Arg1:T20 Arg2:T19 <<REDUNDANT!!!REMOVED>>	Espiro -> 5mg 1 tabl. rano <:REMOVED many second tags on the left:> <RANK: 0> <info: start[1034, 1009] <type: LEFT>>
+R20	Drg Arg1:T20 Arg2:T21 << OK >>	Espiro -> 50 mg 1 tabl. w południe  <RANK: 3> <info: start[1034, 1041] <type: RIGHT>>
+R21	Drg Arg1:T20 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Espiro -> 4 mg 2 tabl. wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1034, 1080] <type: RIGHT>>
+R22	Drg Arg1:T22 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Doxar -> 200 mg 1 tabl. rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1074, 931] <type: LEFT>>
+R23	Drg Arg1:T22 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Doxar -> 1 tabl. rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1074, 977] <type: LEFT>>
+R24	Drg Arg1:T22 Arg2:T19 <<REDUNDANT!!!REMOVED>>	Doxar -> 5mg 1 tabl. rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1074, 1009] <type: LEFT>>
+R25	Drg Arg1:T22 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Doxar -> 50 mg 1 tabl. w południe <:REMOVED many second tags on the left:> <RANK: 0> <info: start[1074, 1041] <type: LEFT>>
+R26	Drg Arg1:T22 Arg2:T23 << OK >>	Doxar -> 4 mg 2 tabl. wieczorem  <RANK: 3> <info: start[1074, 1080] <type: RIGHT>>
+
+
+Sentence 9:
+wieczorem  
+10.\x09Milurit 100 mg 1 tabl.
+R27	Drg Arg1:T24 Arg2:T25 << OK >>	Milurit -> 100 mg 1 tabl. rano  <RANK: 3> <info: start[1112, 1120] <type: RIGHT>>
+
+
+Sentence 10:
+rano  
+11.\x09Betaserc 24mg 1 tabl. rano i wieczór  
+12.\x09Asertin 50 mg 1 tabl. rano 
+------------------------------------------------
+
+R28	Drg Arg1:T26 Arg2:T27 << OK >>	Betaserc -> 24mg 1 tabl. rano i wieczór  <RANK: 3> <info: start[1149, 1158] <type: RIGHT>>
+R29	Drg Arg1:T26 Arg2:T29 <<REDUNDANT!!!REMOVED>>	Betaserc -> 50 mg 1 tabl. rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1149, 1203] <type: RIGHT>>
+R30	Drg Arg1:T28 Arg2:T27 <<REDUNDANT!!!REMOVED>>	Asertin -> 24mg 1 tabl. rano i wieczór <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[1195, 1158] <type: LEFT>>
+R31	Drg Arg1:T28 Arg2:T29 << OK >>	Asertin -> 50 mg 1 tabl. rano  <RANK: 3> <info: start[1195, 1203] <type: RIGHT>>
+
+
+Sentence 11:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 12:
+------------------------------------------------
+ Rozpozanie I: ICD10:I25.2|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Przewlekła niewydolność serca z pośrednią frakcją wyrzutową w II klasie wg NYHA.
+
+
+Sentence 13:
+Otyłość.
+
+
+Sentence 14:
+Hipercholesterolemia.
+
+
+Sentence 15:
+Nadciśnienie tętnicze.
+
+
+Sentence 16:
+Przewlekła choroba wieńcowa – stan po NSTEMI leczonym PCI LAD z implantacją dwóch DES (10.2017).
+R32	Dat Arg1:T37 Arg2:T34 <<REDUNDANT!!!SHOULD BE REMOVED>>	(10.2017 -> Przewlekła choroba wieńcowa  <RANK: 3> <info: start[1672, 1586] <type: LEFT>>
+R33	Dat Arg1:T37 Arg2:T35 << OK >>	(10.2017 -> NSTEMI  <RANK: 3> <info: start[1672, 1624] <type: LEFT>>
+R34	Dat Arg1:T37 Arg2:T36 << OK >>	(10.2017 -> leczonym PCI LAD z implantacją dwóch DES  <RANK: 3> <info: start[1672, 1631] <type: LEFT>>
+
+
+Sentence 17:
+Poszerzenie opuszki i aorty wstępującej.
+
+
+Sentence 18:
+Wada serca pod postacią niedomykalności aortalnej I stopnia oraz mitralnej i trójdzielnej ślad/I stopnia.
+
+
+Sentence 19:
+Zaburzenia nadkomorowe (PSVT) i komorowe rytmu serca (liczne ExV).
+
+
+Sentence 20:
+Hiperurykemia.
+
+
+Sentence 21:
+Przerost prostaty.
+
+
+Sentence 22:
+Hepatopatia.
+
+
+Sentence 23:
+Torbiele nerek.
+
+
+Sentence 24:
+Zawroty głowy.
+
+
+Sentence 25:
+Depresja
+------------------------------------------------
+
+
+
+Sentence 26:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 27:
+Chory lat 70, przyjęty do Kliniki z powodu spadku tolerancji wysiłku. 
+
+
+
+Sentence 28:
+Neguje bóle w klatce piersiowej. 
+
+R35	Neg Arg1:T51 Arg2:T52 << OK >>	Neguje -> bóle w klatce piersiowej  <RANK: 3> <info: start[2179, 2186] <type: RIGHT>>
+
+
+Sentence 29:
+W wywiadzie ponadto:  NSTEMI lecz PCI LAD + 2 DES z następcza skurczową CHF (frakcja po MI 40%), SPECT 15.04.2019: utrwalony ubytek perfuzji w obrębie ściany przednioprzegrodowej, bez indukowanych ubytków, HA - labilne (wieczorem podwyższone do 180/80mmHg), DMt.2 - od 3 lat, hiperurykemia, przerost prostaty, hepatomegalia, hiperbilirubina, torbile nerek, zawroty głowy , depresja 
+
+R36	Inv Arg1:T75 Arg2:T77 << OK >>	SPECT -> utrwalony ubytek perfuzji w obrębie ściany przednioprzegrodowej, bez indukowanych ubytków  <RANK: 2> <info: start[2310, 2328] <type: RIGHT>>
+R37	Dat Arg1:T73 Arg2:T66 <<REDUNDANT!!!REMOVED>>	od 3 lat -> zawroty głowy <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2479, 2570] <type: RIGHT>>
+R38	Dat Arg1:T73 Arg2:T74 <<REDUNDANT!!!SHOULD BE REMOVED>>	od 3 lat -> HA - labilne (wieczorem podwyższone do 180/80mmHg)  <RANK: 2> <info: start[2479, 2419] <type: LEFT>>
+R39	Dat Arg1:T73 Arg2:T64 <<REDUNDANT!!!REMOVED>>	od 3 lat -> NSTEMI <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2479, 2235] <type: LEFT>>
+R40	Dat Arg1:T73 Arg2:T65 <<REDUNDANT!!!REMOVED>>	od 3 lat -> depresja <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2479, 2586] <type: RIGHT>>
+R41	Dat Arg1:T73 Arg2:T67 <<REDUNDANT!!!REMOVED>>	od 3 lat -> torbile nerek <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2479, 2555] <type: RIGHT>>
+R42	Dat Arg1:T73 Arg2:T68 <<REDUNDANT!!!REMOVED>>	od 3 lat -> hiperbilirubina <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2479, 2538] <type: RIGHT>>
+R43	Dat Arg1:T73 Arg2:T69 <<REDUNDANT!!!REMOVED>>	od 3 lat -> hepatomegalia <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2479, 2523] <type: RIGHT>>
+R44	Dat Arg1:T73 Arg2:T70 <<REDUNDANT!!!REMOVED>>	od 3 lat -> przerost prostaty <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2479, 2504] <type: RIGHT>>
+R45	Dat Arg1:T73 Arg2:T71 <<REDUNDANT!!!REMOVED>>	od 3 lat -> hiperurykemia <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2479, 2489] <type: RIGHT>>
+R46	Dat Arg1:T73 Arg2:T72 << OK >>	od 3 lat -> DMt.2  <RANK: 3> <info: start[2479, 2471] <type: LEFT>>
+R47	Dat Arg1:T73 Arg2:T78 <<REDUNDANT!!!REMOVED>>	od 3 lat -> lecz PCI LAD + 2 DES z następcza skurczową CHF (frakcja po MI 40%), <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2479, 2242] <type: LEFT>>
+R48	Dat Arg1:T73 Arg2:T75 <<REDUNDANT!!!REMOVED>>	od 3 lat -> SPECT <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2479, 2310] <type: LEFT>>
+R49	Dat Arg1:T76 Arg2:T66 <<REDUNDANT!!!REMOVED>>	15.04.2019 -> zawroty głowy <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2316, 2570] <type: RIGHT>>
+R50	Dat Arg1:T76 Arg2:T74 <<REDUNDANT!!!REMOVED>>	15.04.2019 -> HA - labilne (wieczorem podwyższone do 180/80mmHg) <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2316, 2419] <type: RIGHT>>
+R51	Dat Arg1:T76 Arg2:T64 <<REDUNDANT!!!SHOULD BE REMOVED>>	15.04.2019 -> NSTEMI  <RANK: 2> <info: start[2316, 2235] <type: LEFT>>
+R52	Dat Arg1:T76 Arg2:T65 <<REDUNDANT!!!REMOVED>>	15.04.2019 -> depresja <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2316, 2586] <type: RIGHT>>
+R53	Dat Arg1:T76 Arg2:T67 <<REDUNDANT!!!REMOVED>>	15.04.2019 -> torbile nerek <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2316, 2555] <type: RIGHT>>
+R54	Dat Arg1:T76 Arg2:T68 <<REDUNDANT!!!REMOVED>>	15.04.2019 -> hiperbilirubina <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2316, 2538] <type: RIGHT>>
+R55	Dat Arg1:T76 Arg2:T69 <<REDUNDANT!!!REMOVED>>	15.04.2019 -> hepatomegalia <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2316, 2523] <type: RIGHT>>
+R56	Dat Arg1:T76 Arg2:T70 <<REDUNDANT!!!REMOVED>>	15.04.2019 -> przerost prostaty <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2316, 2504] <type: RIGHT>>
+R57	Dat Arg1:T76 Arg2:T71 <<REDUNDANT!!!REMOVED>>	15.04.2019 -> hiperurykemia <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2316, 2489] <type: RIGHT>>
+R58	Dat Arg1:T76 Arg2:T72 <<REDUNDANT!!!REMOVED>>	15.04.2019 -> DMt.2 <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2316, 2471] <type: RIGHT>>
+R59	Dat Arg1:T76 Arg2:T78 <<REDUNDANT!!!SHOULD BE REMOVED>>	15.04.2019 -> lecz PCI LAD + 2 DES z następcza skurczową CHF (frakcja po MI 40%),  <RANK: 3> <info: start[2316, 2242] <type: LEFT>>
+R60	Dat Arg1:T76 Arg2:T75 << OK >>	15.04.2019 -> SPECT  <RANK: 3> <info: start[2316, 2310] <type: LEFT>>
+
+
+Sentence 30:
+Przebyte operacje: neguje 
+Wywiad rodzinny: bez znaczenia 
+Alergie: neguje 
+Nikotynizm: neguje 
+Alkohol: neguje 
+Uzależnienie inne: nasenne
+
+R61	Neg Arg1:T53 Arg2:T56 <<REDUNDANT!!!REMOVED>>	neguje -> Wywiad rodzinny <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2615, 2623] <type: RIGHT>>
+R62	Neg Arg1:T53 Arg2:T60 <<REDUNDANT!!!REMOVED>>	neguje -> Alergie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2615, 2655] <type: RIGHT>>
+R63	Neg Arg1:T53 Arg2:T63 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne: nasenne <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2615, 2709] <type: RIGHT>>
+R64	Neg Arg1:T53 Arg2:T61 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2615, 2672] <type: RIGHT>>
+R65	Neg Arg1:T53 Arg2:T62 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2615, 2692] <type: RIGHT>>
+R66	Neg Arg1:T53 Arg2:T54 << OK >>	neguje -> Przebyte operacje  <RANK: 3> <info: start[2615, 2596] <type: LEFT>>
+R67	Neg Arg1:T55 Arg2:T56 << OK >>	bez znaczenia -> Wywiad rodzinny  <RANK: 3> <info: start[2640, 2623] <type: LEFT>>
+R68	Neg Arg1:T55 Arg2:T60 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Alergie <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2640, 2655] <type: RIGHT>>
+R69	Neg Arg1:T55 Arg2:T63 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Uzależnienie inne: nasenne <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2640, 2709] <type: RIGHT>>
+R70	Neg Arg1:T55 Arg2:T61 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Nikotynizm <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2640, 2672] <type: RIGHT>>
+R71	Neg Arg1:T55 Arg2:T62 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Alkohol <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2640, 2692] <type: RIGHT>>
+R72	Neg Arg1:T55 Arg2:T54 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2640, 2596] <type: LEFT>>
+R73	Neg Arg1:T57 Arg2:T56 <<REDUNDANT!!!REMOVED>>	neguje -> Wywiad rodzinny <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2664, 2623] <type: LEFT>>
+R74	Neg Arg1:T57 Arg2:T60 << OK >>	neguje -> Alergie  <RANK: 3> <info: start[2664, 2655] <type: LEFT>>
+R75	Neg Arg1:T57 Arg2:T63 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne: nasenne <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2664, 2709] <type: RIGHT>>
+R76	Neg Arg1:T57 Arg2:T61 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2664, 2672] <type: RIGHT>>
+R77	Neg Arg1:T57 Arg2:T62 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2664, 2692] <type: RIGHT>>
+R78	Neg Arg1:T57 Arg2:T54 <<REDUNDANT!!!REMOVED>>	neguje -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2664, 2596] <type: LEFT>>
+R79	Neg Arg1:T58 Arg2:T56 <<REDUNDANT!!!REMOVED>>	neguje -> Wywiad rodzinny <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2684, 2623] <type: LEFT>>
+R80	Neg Arg1:T58 Arg2:T60 <<REDUNDANT!!!REMOVED>>	neguje -> Alergie <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2684, 2655] <type: LEFT>>
+R81	Neg Arg1:T58 Arg2:T63 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne: nasenne <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2684, 2709] <type: RIGHT>>
+R82	Neg Arg1:T58 Arg2:T61 << OK >>	neguje -> Nikotynizm  <RANK: 3> <info: start[2684, 2672] <type: LEFT>>
+R83	Neg Arg1:T58 Arg2:T62 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2684, 2692] <type: RIGHT>>
+R84	Neg Arg1:T58 Arg2:T54 <<REDUNDANT!!!REMOVED>>	neguje -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2684, 2596] <type: LEFT>>
+R85	Neg Arg1:T59 Arg2:T56 <<REDUNDANT!!!REMOVED>>	neguje -> Wywiad rodzinny <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2701, 2623] <type: LEFT>>
+R86	Neg Arg1:T59 Arg2:T60 <<REDUNDANT!!!REMOVED>>	neguje -> Alergie <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2701, 2655] <type: LEFT>>
+R87	Neg Arg1:T59 Arg2:T63 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne: nasenne <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2701, 2709] <type: RIGHT>>
+R88	Neg Arg1:T59 Arg2:T61 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2701, 2672] <type: LEFT>>
+R89	Neg Arg1:T59 Arg2:T62 << OK >>	neguje -> Alkohol  <RANK: 3> <info: start[2701, 2692] <type: LEFT>>
+R90	Neg Arg1:T59 Arg2:T54 <<REDUNDANT!!!REMOVED>>	neguje -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2701, 2596] <type: LEFT>>
+
+
+Sentence 31:
+Stan społeczny: emerytura, praca umysłowa
+
+
+
+Sentence 32:
+Leki:
+Egiramlon 10/10 1 tabl.
+R91	Drg Arg1:T107 Arg2:T108 << OK >>	Egiramlon 10/10 -> 1 tabl. rano  <RANK: 3> <info: start[2784, 2800] <type: RIGHT>>
+
+
+Sentence 33:
+rano 
+Sobycor 5 mg 1 tabl.
+R92	Drg Arg1:T105 Arg2:T106 << OK >>	Sobycor -> 5 mg 1 tabl. rano  <RANK: 3> <info: start[2814, 2822] <type: RIGHT>>
+
+
+Sentence 34:
+rano 
+
+
+
+Sentence 35:
+Betaserc 24mg 1 tabl. rano i wieczór
+Asertin 50 mg 1 tabl.
+R93	Drg Arg1:T101 Arg2:T102 << OK >>	Asertin -> 50 mg 1 tabl. rano  <RANK: 3> <info: start[2878, 2886] <type: RIGHT>>
+R94	Drg Arg1:T101 Arg2:T104 <<REDUNDANT!!!REMOVED>>	Asertin -> 24mg 1 tabl. rano i wieczór <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2878, 2850] <type: LEFT>>
+R95	Drg Arg1:T103 Arg2:T102 <<REDUNDANT!!!REMOVED>>	Betaserc -> 50 mg 1 tabl. rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2841, 2886] <type: RIGHT>>
+R96	Drg Arg1:T103 Arg2:T104 << OK >>	Betaserc -> 24mg 1 tabl. rano i wieczór  <RANK: 3> <info: start[2841, 2850] <type: RIGHT>>
+
+
+Sentence 36:
+rano 
+Validol  1 tabl.
+R97	Drg Arg1:T99 Arg2:T100 << OK >>	Validol -> 1 tabl. doraźnie  <RANK: 3> <info: start[2906, 2915] <type: RIGHT>>
+
+
+Sentence 37:
+doraźnie 
+Preductal MR 2x1 tabl. 
+
+R98	Drg Arg1:T97 Arg2:T98 << OK >>	Preductal MR -> 2x1 tabl.  <RANK: 3> <info: start[2933, 2946] <type: RIGHT>>
+
+
+Sentence 38:
+Trifas Cor 5 mg 1 tabl.
+R99	Drg Arg1:T95 Arg2:T96 << OK >>	Trifas Cor -> 5 mg 1 tabl. rano  <RANK: 3> <info: start[2957, 2968] <type: RIGHT>>
+
+
+Sentence 39:
+rano 
+Milurit 100 mg 1 tabl.
+R100	Drg Arg1:T93 Arg2:T94 << OK >>	Milurit -> 100 mg 1 tabl. rano  <RANK: 3> <info: start[2987, 2995] <type: RIGHT>>
+
+
+Sentence 40:
+rano 
+Espiro 50 mg 1 tabl. w połdunie 
+Acard 75 mg 1 tabl.
+R101	Drg Arg1:T89 Arg2:T90 << OK >>	Acard -> 75 mg 1 tabl. wieczorem  <RANK: 3> <info: start[3049, 3055] <type: RIGHT>>
+R102	Drg Arg1:T89 Arg2:T92 <<REDUNDANT!!!REMOVED>>	Acard -> 50 mg 1 tabl. w połdunie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3049, 3023] <type: LEFT>>
+R103	Drg Arg1:T91 Arg2:T90 <<REDUNDANT!!!REMOVED>>	Espiro -> 75 mg 1 tabl. wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3016, 3055] <type: RIGHT>>
+R104	Drg Arg1:T91 Arg2:T92 << OK >>	Espiro -> 50 mg 1 tabl. w połdunie  <RANK: 3> <info: start[3016, 3023] <type: RIGHT>>
+
+
+Sentence 41:
+wieczorem 
+Doxar 4 mg 1 tabl.
+R105	Drg Arg1:T87 Arg2:T88 << OK >>	Doxar -> 4 mg 1 tabl. wieczorem  <RANK: 3> <info: start[3080, 3086] <type: RIGHT>>
+
+
+Sentence 42:
+wieczorem 
+Atoris 40 mg 1 tabl.
+R106	Drg Arg1:T84 Arg2:T85 << OK >>	Atoris -> 40 mg 1 tabl. wieczorem zalecona po MI, chory nie wie nic o tym leku, neguje jego przyjmowanie  <RANK: 3> <info: start[3110, 3117] <type: RIGHT>>
+
+
+Sentence 43:
+wieczorem zalecona po MI, chory nie wie nic o tym leku, neguje jego przyjmowanie
+
+
+
+Sentence 44:
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter ekg, rtg kl. piersiowej
+
+
+
+Sentence 45:
+Przewidywana liczba dni hospitalizacji: 5-7 dni
+------------------------------------------------
+
+
+
+Sentence 46:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 47:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.22[10^3/ul]
+    
+
+
+Sentence 48:
+RBC Krwinki czerwone:5.02[10^6/ul]
+    
+
+
+Sentence 49:
+HGB Hemoglobina:16.1[g/dl]
+    
+
+
+Sentence 50:
+HCT Hematokryt:44.0[%]
+    
+
+
+Sentence 51:
+MCV wskaźnik czerwonokrw:87.6[fl]
+    
+
+
+Sentence 52:
+MCH wskaźnik czerwonokrw:32.1[pg]
+    
+
+
+Sentence 53:
+MCHC wskaźnik czerwonokr:36.6[g/dl]
+    
+
+
+Sentence 54:
+PLT z morfologii:138[10^3/ul]
+    
+
+
+Sentence 55:
+RDW-SD:41.1[fl]
+    
+
+
+Sentence 56:
+RDW-CV:12.8[%]
+    PDW:14.8[fl]
+    MPV:11.5[fl]
+    P-LCR:38.2[%]
+    
+
+
+Sentence 57:
+PCT (hematokryt płytkowy:0.16[%]
+    
+
+
+Sentence 58:
+NEUTR# wartość bezwzględ:2.59[10^3/ul]
+    
+
+
+Sentence 59:
+NEUTR%:49.6[%]
+    
+
+
+Sentence 60:
+LYMH# wartość bezwzględn:1.78[10^3/ul]
+    
+
+
+Sentence 61:
+LYMPH%:34.1[%]
+    
+
+
+Sentence 62:
+MONO# wartość bezwzględn:0.68[10^3/ul]
+    
+
+
+Sentence 63:
+MONO%:13.0[%]
+    
+
+
+Sentence 64:
+EO# wartość bezwzględna:0.13[10^3/ul]
+    
+
+
+Sentence 65:
+EO%:2.5[%]
+    
+
+
+Sentence 66:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    
+
+
+Sentence 67:
+BASO%:0.8[%]
+    
+
+
+Sentence 68:
+NRBC %:0.0[%]
+    
+
+
+Sentence 69:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 70:
+Badanie ogólne moczu
+    
+
+
+Sentence 71:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 72:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 73:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 74:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 75:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 76:
+ciężar właściwy:1.014[ ]
+    
+
+
+Sentence 77:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 78:
+pH:6.5[ ]
+    
+
+
+Sentence 79:
+białko:nieobecne[ ]
+    
+
+
+Sentence 80:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 81:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 82:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 83:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 84:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 85:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 86:
+leukocyty:4 /ul[ul]
+    erytrocyty świeże:1 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 87:
+TSH: TSH:1.85[uIU/ml]
+
+
+
+Sentence 88:
+FT3: FT3:4.08[pg/ml]
+
+
+
+Sentence 89:
+FT4: FT4:1.67[ng/dl]
+
+
+
+Sentence 90:
+Troponina T: Troponina T:30.5[pg/ml]
+
+
+
+Sentence 91:
+Ferrytyna: Ferrytyna:264.7[ng/ml]
+
+
+
+Sentence 92:
+ALAT: ALAT:15[U/L]
+ASPAT: ASPAT:18[U/L]
+Bilirubina niesprzężona (pośrednia) (Bu): Bilirubina niesprzężona:1.67[mg/dl]
+
+
+
+Sentence 93:
+Bilirubina sprzężona (bezpośrednia) (Bc): Bilirubina sprzężona (be:0.00[mg/dl]
+
+
+
+Sentence 94:
+Bilirubina całkowita (TBil): Bilirubina całkowita:1.67[mg/dl]
+
+
+
+Sentence 95:
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.50[mg/dl]
+
+
+
+Sentence 96:
+Sód (Na): Sód:139[mmol/L]
+
+
+
+Sentence 97:
+Potas (K): Potas:4.3[mmol/L]
+
+
+
+Sentence 98:
+Hemoglobina glikowana (HbA1c)
+    :5.15[%]
+    
+
+
+Sentence 99:
+:33[mmol/mol]
+Kreatynina + GFR
+    
+
+
+Sentence 100:
+Kreatynina w surowicy:0.84[mg/dl]
+    eGFR wg BIS1:76.8[ml/min/1,73 m^2]
+
+
+
+Sentence 101:
+Mocznik: Mocznik:24[mg/dl]
+
+
+
+Sentence 102:
+Kwas moczowy: Kwas moczowy:5.3[mg/dl]
+
+
+
+Sentence 103:
+Lipidogram
+    
+
+
+Sentence 104:
+Cholesterol całkowity:166[mg/dl]
+    
+
+
+Sentence 105:
+Cholesterol HDL:44[mg/dl]
+    
+
+
+Sentence 106:
+Cholestrol LDL:114[mg/dl]
+    
+
+
+Sentence 107:
+Triglicerydy:107[mg/dl]
+    
+
+
+Sentence 108:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:98[mg/dl]
+
+
+
+Sentence 109:
+NT-proBNP surowica: NT-proBNP w surowicy:355[pg/ml]
+
+
+
+Sentence 110:
+------------------------------------------------
+
+
+
+Sentence 111:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 112:
+I50.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 113:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 114:
+A01
+89.502
+I81
+I87
+L43
+O61
+I89
+N45
+L69
+M45
+L05
+
+
+
+Sentence 115:
+N24
+O69
+88.714
+I91
+C55
+L55
+O55
+I17
+O35
+M37
+I19
+N13
+88.721
+88.761
+------------------------------------------------
+
+

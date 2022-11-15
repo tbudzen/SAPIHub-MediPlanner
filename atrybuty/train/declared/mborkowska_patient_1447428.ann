@@ -1,0 +1,66 @@
+T1	Condition 450 484	Blok przedsionkowo-komorowy zupełn
+N1	Reference T1 ICD10:I44.2	Blok przedsionkowo-komorowy zupełny
+T2	Condition 487 509	Niedoczynność tarczycy
+N2	Reference T2 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T3	Investigation 725 751	kontrola hormonów tarczycy
+T4	Behaviour 752 771	prawidłowe żywienie
+T5	Drug 803 811	Euthyrox
+T6	Drug_dose 812 833	88 mcg 1/2 tabl. rano
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Investigation 1919 1929	Echo serca
+T8	Investigation 1932 1942	Holter EKG
+T9	Drug 1872 1880	Euthyrox
+T10	Drug_dose 1881 1902	N88 1x dz po 1/2 tabl
+R2	Drg Arg1:T9 Arg2:T10	
+T11	Behaviour 1843 1864	warunki mieszka dobre
+T12	Negation 1820 1826	neguje
+T13	Negation 1805 1808	nie
+T14	Negation 1788 1791	nie
+T15	Negation 1765 1769	brak
+T16	Condition 1809 1818	Uczulenia
+N3	Reference T16 ICD10:T78.4	Alergia, nieokreślona
+T17	Behaviour 1792 1804	Inne używki:
+R3	Neg Arg1:T13 Arg2:T17	
+R4	Neg Arg1:T12 Arg2:T16	
+T18	Behaviour 1771 1787	Palenie tytoniu:
+N4	Reference T18 ICD10:T65.2	Tytoń i nikotyna
+R5	Neg Arg1:T14 Arg2:T18	
+T19	Condition 1741 1762	W wywiadzie rodzinnym
+A1	Status T19 Family
+R6	Neg Arg1:T15 Arg2:T19	
+T20	Condition 1701 1704	WZW
+N5	Reference T20 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T21	Condition 1714 1723	borelioza
+N6	Reference T21 ICD10:A69.2	Choroba z Lyme
+T22	Condition 1730 1734	Odra
+N7	Reference T22 ICD10:B05	Odra
+T23	Negation 1705 1711	( -  )
+R7	Neg Arg1:T23 Arg2:T20	
+T24	Negation 1724 1729	( - )
+R8	Neg Arg1:T24 Arg2:T21	
+T25	Negation 1735 1740	( - )
+R9	Neg Arg1:T25 Arg2:T22	
+T26	Negation 1668 1672	brak
+T27	Negation 1641 1645	brak
+T28	Treatment 1646 1665	Leczenie przewlekłe
+R10	Neg Arg1:T26 Arg2:T28	
+T29	Treatment 1621 1638	Przebyte operacje
+R11	Neg Arg1:T27 Arg2:T29	
+T30	Symptom 1544 1583	żle gojącego się owrzodzenia na goleniu
+A2	Source T30 Declared
+T31	Date 1584 1598	kilka lat temu
+R12	Dat Arg1:T31 Arg2:T30	
+T32	Condition 1513 1535	Niedoczynność tarczycy
+N8	Reference T32 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T33	Investigation_result 1422 1463	zawsze miała tętno w granicach 45-50 /min
+T34	Symptom 1348 1360	zasłabnięcia
+N9	Reference T34 ICD10:R55	Omdlenie i zapaść
+T35	Symptom 1363 1382	utraty przytomności
+N10	Reference T35 ICD10:R55	Omdlenie i zapaść
+T36	Negation 1341 1347	neguje
+R13	Neg Arg1:T36 Arg2:T34	
+R14	Neg Arg1:T36 Arg2:T35	
+T37	Condition 1049 1096	bloku A-V III' z czynnością  komór ok 45-50/min
+N11	Reference T37 ICD10:I44.2	Blok przedsionkowo-komorowy zupełny
+T38	Treatment 1099 1163	trakcie zabiegu wyłyżeczkowania macicy z powodu ciąży obumarłej.
+A3	Status T38 Historical_Significant

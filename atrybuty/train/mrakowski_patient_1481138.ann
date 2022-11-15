@@ -1,0 +1,98 @@
+T1	Condition 438 498	Dwupłatkowa zastawka aortalna z umiarkowaną niedomykalnością
+N1	Reference T1 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T2	Symptom 500 507	Migreny
+N2	Reference T2 ICD10:G43.9	Migrena, nieokreślona
+T3	Condition 521 555	Napadowe częstoskurcze nadkomorowe
+N3	Reference T3 ICD10:I47.1	Częstoskurcz nadkomorowy
+T4	Treatment 677 704	dalsza opieka w poradni POZ
+T5	Treatment 706 738	okresowa kontrola kardiologiczna
+T6	Investigation 793 832	regularna kontrola ciśnienia tętniczego
+T7	Behaviour 833 892	prawidłowe żywienie i regularna aerobowa aktywność fizyczna
+T8	Condition 1047 1087	napadowymi częstoskurczami nadkomorowymi
+N4	Reference T8 ICD10:I47.1	Częstoskurcz nadkomorowy
+T9	Date 1089 1107	śr. 1x na pół roku
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Condition 1112 1174	dwupłatkową zastawką aortalną z jej izolowaną niedomykalnością
+N5	Reference T10 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T11	Symptom 1232 1245	kołatań serca
+N6	Reference T11 ICD10:R00.2	Kołatanie serca
+T12	Symptom 1268 1275	migreny
+N7	Reference T12 ICD10:G43.9	Migrena, nieokreślona
+T13	Negation 1277 1283	Neguje
+T14	Symptom 1285 1297	zasłabnięcia
+T15	Symptom 1299 1307	omdlenia
+N8	Reference T15 ICD10:R55	Omdlenie i zapaść
+T16	Symptom 1309 1319	krwawienia
+T17	Symptom 1321 1334	czarne stolce
+N9	Reference T17 ICD10:K92.1	Stolce smołowate
+T18	Symptom 1336 1352	brunatne wymioty
+N10	Reference T18 ICD10:K92.0	Wymioty krwawe
+T19	Condition 1354 1370	chorobę wrzodową
+N11	Reference T19 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T20	Symptom 1372 1400	duszność nocną typu ortopnoe
+N12	Reference T20 ICD10:R06.0	Duszność
+T21	Condition 1402 1404	HA
+N13	Reference T21 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T22	Condition 1406 1408	DM
+N14	Reference T22 ICD10:E14	Cukrzyca nieokreślona
+T23	Condition 1410 1420	udar mózgu
+N15	Reference T23 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T24	Condition 1422 1433	zawał serca
+N16	Reference T24 ICD10:I25.2	
+R2	Neg Arg1:T13 Arg2:T24	
+R3	Neg Arg1:T13 Arg2:T23	
+R4	Neg Arg1:T13 Arg2:T22	
+R5	Neg Arg1:T13 Arg2:T21	
+R6	Neg Arg1:T13 Arg2:T20	
+R7	Neg Arg1:T13 Arg2:T19	
+R8	Neg Arg1:T13 Arg2:T18	
+R9	Neg Arg1:T13 Arg2:T17	
+R10	Neg Arg1:T13 Arg2:T16	
+R11	Neg Arg1:T13 Arg2:T15	
+R12	Neg Arg1:T13 Arg2:T14	
+T25	Treatment 1438 1455	Przebyte operacje
+T26	Condition 1457 1492	przepuklina pachwinowa prawostronna
+N17	Reference T26 ICD10:K40.9	Jednostronna lub nieokreślona przepuklina pachwinowa bez niedrożności lub zgorzeli
+T27	Date 1494 1508	w 2 roku życia
+R13	Dat Arg1:T27 Arg2:T26	
+T28	Behaviour 1510 1525	Palenie tytoniu
+T29	Negation 1527 1530	nie
+R14	Neg Arg1:T29 Arg2:T28	
+T30	Behaviour 1532 1543	Inne używki
+T31	Negation 1545 1548	nie
+R15	Neg Arg1:T31 Arg2:T30	
+T32	Condition 1550 1559	Uczulenia
+T33	Negation 1561 1564	nie
+R16	Neg Arg1:T33 Arg2:T32	
+T34	Condition 1593 1596	WZW
+N19	Reference T34 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T35	Condition 1603 1612	borelioza
+N20	Reference T35 ICD10:A69.2	Choroba z Lyme
+T36	Condition 1620 1623	tbc
+T37	Condition 1629 1633	odra
+N22	Reference T37 ICD10:B05	Odra
+T38	Treatment 1639 1658	szczepienie na odrę
+A1	Source T38 Declared
+T39	Negation 1635 1636	-
+R17	Neg Arg1:T39 Arg2:T37	
+T40	Negation 1625 1626	-
+R18	Neg Arg1:T40 Arg2:T36	
+T41	Negation 1615 1616	-
+R19	Neg Arg1:T41 Arg2:T35	
+T42	Negation 1598 1599	-
+R20	Neg Arg1:T42 Arg2:T34	
+T43	Behaviour 1691 1717	warunki mieszkaniowe dobre
+T44	Behaviour 1719 1744	pracuje: nadzór budowlany
+T45	Investigation 1825 1846	badania laboratoryjne
+T46	Investigation 1848 1852	ECHO
+T47	Investigation 1854 1858	ABPM
+A2	Status T26 Historical_Insignificant
+N24	Reference T32 ICD10:T78.4	Alergia, nieokreślona
+N25	Reference T14 ICD10:R55	Omdlenie i zapaść
+N18	Reference T28 ICD10:Z72.0	Używanie tytoniu
+N23	Reference T16 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N26	Reference T30 ICD10:Z72	Problemy związane ze stylem życia
+N21	Reference T36 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T48	Negation 1753 1756	bez
+T49	Drug 1757 1762	leków
+R21	Neg Arg1:T48 Arg2:T49	

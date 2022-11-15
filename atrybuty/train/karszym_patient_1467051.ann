@@ -1,0 +1,105 @@
+T1	Condition 439 484	Umiarkowana niedomykalność zastawki mitralnej
+N1	Reference T1 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T2	Condition 486 530	Łagodna niedomykalność zastawki trójdzielnej
+N2	Reference T2 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T3	Condition 532 553	Nadciśnienie tętnicze
+N3	Reference T3 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T4	Condition 555 577	Niedoczynność tarczycy
+N4	Reference T4 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T5	Condition 579 592	Hiperurykemia
+N5	Reference T5 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T6	Condition 594 601	Otyłość
+N6	Reference T6 ICD10:E66.0	Otyłość spowodowana nadmierną podażą energii
+T7	Condition 603 606	RZS
+N7	Reference T7 ICD10:M05.9	Serododatnie reumatoidalne zapalenie stawów, nieokreślone
+T8	Treatment 717 744	dalsza opieka w poradni POZ
+T9	Treatment 747 779	okresowa kontrola kardiologiczna
+T10	Investigation 825 847	angioTK tt. wieńcowych
+T11	Treatment 850 865	pulmonologiczna
+T12	Treatment 892 909	endokrynologiczna
+T13	Investigation 912 951	codzienna kontrola ciśnienia tętniczego
+T14	Symptom 1132 1162	pogorszenia tolerancji wysiłku
+T15	Symptom 1165 1185	duszności wysiłkowej
+N8	Reference T15 ICD10:R06.0	Duszność
+T16	Date 1186 1203	od ok. 6 miesięcy
+R1	Dat Arg1:T16 Arg2:T14	
+R2	Dat Arg1:T16 Arg2:T15	
+T17	Condition 1217 1238	nadciśnienie tętnicze
+N9	Reference T17 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T18	Condition 1240 1262	niedoczynność tarczycy
+N10	Reference T18 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T19	Condition 1264 1293	przewlekła niewydolność żylna
+T20	Condition 1295 1308	hiperurykemia
+N12	Reference T20 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T21	Condition 1310 1317	otyłość
+N13	Reference T21 ICD10:E66.9	Otyłość, nieokreślona
+T22	Condition 1319 1322	RZS
+N14	Reference T22 ICD10:M05.9	Serododatnie reumatoidalne zapalenie stawów, nieokreślone
+T23	Treatment 1324 1341	Przebyte operacje
+N15	Reference T23 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T24	Negation 1343 1353	nie podaje
+T25	Condition 1381 1384	WZW
+N16	Reference T25 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T26	Condition 1386 1395	borelioza
+N17	Reference T26 ICD10:A69.2	Choroba z Lyme
+T27	Negation 1398 1408	nie podaje
+R3	Neg Arg1:T27 Arg2:T25	
+R4	Neg Arg1:T27 Arg2:T26	
+R5	Neg Arg1:T24 Arg2:T23	
+T28	Negation 1426 1435	negatywny
+T29	Negation 1453 1463	nie podaje
+T30	Condition 1409 1424	Wywiad rodzinny
+A1	Status T30 Family
+R6	Neg Arg1:T28 Arg2:T30	
+T31	Behaviour 1436 1451	Palenie tytoniu
+N18	Reference T31 ICD10:Z72.0	Używanie tytoniu
+R7	Neg Arg1:T29 Arg2:T31	
+T32	Behaviour 1464 1489	Inne używki: okazjonalnie
+A2	Status T32 Historical_Insignificant
+T33	Condition 1490 1499	Uczulenia
+N19	Reference T33 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T34	Negation 1501 1511	nie podaje
+R8	Neg Arg1:T34 Arg2:T33	
+T35	Behaviour 1530 1542	gospodarstwo
+N20	Reference T35 ICD10:Z57.4	Narażenie zawodowe na czynniki toksyczne w rolnictwie
+T36	Behaviour 1544 1559	mieszka z synem
+T37	Drug 1566 1574	Prenessa
+T38	Drug_dose 1575 1594	4 mg 1/2 tabl. rano
+T39	Drug 1595 1602	Nebinad
+T40	Drug_dose 1603 1620	5 mg 1 tabl. rano
+T41	Drug 1621 1626	Acard
+T42	Drug_dose 1627 1650	75 mg 1 tabl. wieczorem
+T43	Drug 1651 1657	Letrox
+T44	Drug_dose 1658 1675	75ug 1 tabl. rano
+T45	Drug 1676 1682	Lercan
+T46	Drug_dose 1683 1706	10 mg 1 tabl. wieczorem
+T47	Drug 1707 1719	Cyclo 3 Fort
+T48	Drug_dose 1720 1737	1 tabl. wieczorem
+T49	Drug 1738 1747	Polpix SR
+T50	Drug_dose 1748 1765	2 mg 1 tabl. rano
+T51	Drug 1766 1780	Vicebrol forte
+T52	Drug_dose 1781 1793	1 tabl. rano
+T53	Drug 1794 1803	Furosemid
+T54	Drug_dose 1804 1816	1 tabl. rano
+T55	Drug 1817 1823	Milurt
+T56	Drug_dose 1824 1848	300 mg 1 tabl. wieczorem
+T57	Drug 1849 1858	Troscicam
+T58	Drug_dose 1859 1881	15 mg 1 tabl. doraźnie
+R9	Drg Arg1:T37 Arg2:T38	
+R10	Drg Arg1:T39 Arg2:T40	
+R11	Drg Arg1:T41 Arg2:T42	
+R12	Drg Arg1:T43 Arg2:T44	
+R13	Drg Arg1:T45 Arg2:T46	
+R14	Drg Arg1:T47 Arg2:T48	
+R15	Drg Arg1:T49 Arg2:T50	
+R16	Drg Arg1:T51 Arg2:T52	
+R17	Drg Arg1:T53 Arg2:T54	
+R18	Drg Arg1:T55 Arg2:T56	
+R19	Drg Arg1:T57 Arg2:T58	
+T59	Investigation 1909 1919	echo serca
+T60	Investigation 1921 1924	TET
+T61	Investigation 1926 1930	ABPM
+T62	Investigation 1932 1938	Holter
+T63	Investigation 1940 1958	RTG kl. piersiowej
+N11	Reference T19 ICD10:I87.2	Niewydolność żył (przewlekła) (obwodowa)
+A3	Status T19 Historical_Insignificant

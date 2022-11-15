@@ -1,0 +1,35 @@
+T1	Behaviour 328 369	Wysiłek fizyczny na poziomie rekreacyjnym
+T2	Behaviour 371 472	W ramach zajęć wychowania fizycznego ograniczenie dużych obciążeń siłowych i biegów długodystansowych
+T3	Treatment 475 488	Suplementacja
+T4	Drug 489 506	preparatów żelaza
+T5	Investigation 508 555	Kontrola morfologii w warunkach ambulatoryjnych
+T6	Date 556 571	za 1-2 miesiące
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Treatment 573 598	Dalsza opieka lekarza POZ
+T8	Treatment 600 634	Kontrola w Poradni Kardiologicznej
+T9	Date 635 641	za rok
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Investigation 644 707	Okresowa kontrola saturacji przezskórnej i ciśnienia tętniczego
+T11	Condition 948 1016	Wrodzona wada serca pod postacią przełożenia wielkich pni tętniczych
+N1	Reference T11 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T12	Condition 1018 1040	ubytku przegrody komór
+N2	Reference T12 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T13	Condition 1046 1080	łagodnego zwężenia tętnicy płucnej
+T14	Treatment 1094 1111	zabiegu Rashkinda
+T15	Date 1113 1124	20.01.2011r
+R3	Dat Arg1:T15 Arg2:T14	
+T16	Treatment 1131 1156	Korekcja anatomiczna wady
+T17	Date 1173 1184	16.02.2011r
+R4	Dat Arg1:T17 Arg2:T16	
+T18	Condition 1325 1328	TGA
+N4	Reference T18 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T19	Treatment 1334 1354	leczeniu operacyjnym
+T20	Investigation 1371 1388	badania kontrolne
+T21	Condition 1391 1408	wywiad alergiczny
+N5	Reference T21 ICD10:T78.4	Alergia, nieokreślona
+T22	Negation 1409 1415	ujemny
+R5	Neg Arg1:T22 Arg2:T21	
+T23	Drug 1418 1432	leków na stałe
+T24	Negation 1433 1446	nie otrzymuje
+R6	Neg Arg1:T24 Arg2:T23	
+N3	Reference T13 ICD10:Q25.6	Zwężenie pnia płucnego

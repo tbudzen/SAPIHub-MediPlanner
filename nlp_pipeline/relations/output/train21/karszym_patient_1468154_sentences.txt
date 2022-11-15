@@ -1,0 +1,601 @@
+allRelations          : 61
+oks                   : 16
+isRedundantAndRemoveds: 40
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 4
+GOOD / BAD            : 56 / 5
+Sentence 0:
+------------------------------------------------
+Wiek: 59 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:I10|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Nadciśnienie tętnicze II stopnia wg ESC/ESH.
+
+
+Sentence 6:
+Hipertriglicerydemia.
+
+
+Sentence 7:
+Nikotynizm.
+
+
+Sentence 8:
+Kamica nerkowa
+------------------------------------------------
+
+
+
+Sentence 9:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 10:
+Zalecenia
+•\x09dalsza opieka w Poradni Kardiologicznej ICZMP (wskazane wykonanie angioCT naczyń wieńcowych)  
+
+
+
+Sentence 11:
+•\x09kontrola urologiczna  
+•\x09codzienna kontrola ciśnienia tętniczego  
+•\x09okresowa kontrola lipidogramu (pierwsza za 6 tygodni wraz z oznaczeniem stężenia aminotransferaz) 
+
+R1	Dat Arg1:T10 Arg2:T7 <<REDUNDANT!!!REMOVED>>	pierwsza za 6 tygodni -> kontrola urologiczna <:REMOVED other second tag between (left):> <RANK: 1> <info: start[870, 764] <type: LEFT>>
+R2	Dat Arg1:T10 Arg2:T8 <<REDUNDANT!!!REMOVED>>	pierwsza za 6 tygodni -> codzienna kontrola ciśnienia tętniczego <:REMOVED other second tag between (left):> <RANK: 1> <info: start[870, 792] <type: LEFT>>
+R3	Dat Arg1:T10 Arg2:T9 << OK >>	pierwsza za 6 tygodni -> okresowa kontrola lipidogramu  <RANK: 3> <info: start[870, 839] <type: LEFT>>
+R4	Dat Arg1:T10 Arg2:T11 <<SHOULD NOT BE REMOVED>>	pierwsza za 6 tygodni -> oznaczeniem stężenia aminotransferaz <:REMOVED Too far from TagInfo[T10, 870, 891, Date, pierwsza za 6 tygodni
+] TagInfo[T9, 839, 868, Treatment, okresowa kontrola lipidogramu
+]:> <RANK: 3> <info: start[870, 899] <type: RIGHT>>
+
+
+Sentence 12:
+•\x09dieta DASH  
+•\x09redukcja masy ciała   
+•\x09zakaz palenia tytoniu 
+
+R5	Neg Arg1:T14 Arg2:T12 <<REDUNDANT!!!REMOVED>>	zakaz -> dieta DASH <:REMOVED other second tag between (left):> <RANK: 1> <info: start[989, 943] <type: LEFT>>
+R6	Neg Arg1:T14 Arg2:T13 <<REDUNDANT!!!REMOVED>>	zakaz -> redukcja masy ciała <:REMOVED many second tags on the left:> <RANK: 1> <info: start[989, 961] <type: LEFT>>
+R7	Neg Arg1:T14 Arg2:T15 << OK >>	zakaz -> palenia tytoniu  <RANK: 3> <info: start[989, 995] <type: RIGHT>>
+
+
+Sentence 13:
+•\x09regularne przyjmowanie leków: 
+
+1.\x09Atoris 20 mg 1 tabl.
+R8	Drg Arg1:T16 Arg2:T17 << OK >>	Atoris -> 20 mg 1 tabl. wieczorem  <RANK: 3> <info: start[1055, 1062] <type: RIGHT>>
+
+
+Sentence 14:
+wieczorem  
+2.\x09Twynsta 80/10 mg 1 tabl.
+R9	Drg Arg1:T18 Arg2:T19 << OK >>	Twynsta -> 80/10 mg 1 tabl. wieczorem  <RANK: 3> <info: start[1094, 1102] <type: RIGHT>>
+
+
+Sentence 15:
+wieczorem  
+3.\x09Concor 5 mg 1/2 tabl.
+R10	Drg Arg1:T20 Arg2:T21 << OK >>	Concor -> 5 mg 1/2 tabl. rano  <RANK: 3> <info: start[1137, 1144] <type: RIGHT>>
+
+
+Sentence 16:
+rano  
+4.\x09Captopril 12.5 mg 1 tabl. doraźnie pod język w razie nadmiernego wzrostu ciśnienia tętniczego
+------------------------------------------------
+
+R11	Drg Arg1:T22 Arg2:T23 << OK >>	Captopril -> 12.5 mg 1 tabl. doraźnie pod język w razie nadmiernego wzrostu ciśnienia tętniczego  <RANK: 3> <info: start[1172, 1182] <type: RIGHT>>
+
+
+Sentence 17:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 18:
+Chory lat 58, przyjęty do Kliniki z powodu nadciśnienia tętniczego (max. 160/100mmHg) mimo stosowanej terapii, HA od 20 lat.  
+
+R12	Dat Arg1:T27 Arg2:T25 <<REDUNDANT!!!SHOULD BE REMOVED>>	od 20 lat -> max. 160/100mmHg)  <RANK: 2> <info: start[1504, 1458] <type: LEFT>>
+R13	Dat Arg1:T27 Arg2:T24 <<REDUNDANT!!!SHOULD BE REMOVED>>	od 20 lat -> nadciśnienia tętniczego  <RANK: 2> <info: start[1504, 1433] <type: LEFT>>
+R14	Dat Arg1:T27 Arg2:T26 << OK >>	od 20 lat -> HA  <RANK: 3> <info: start[1504, 1501] <type: LEFT>>
+R15	Dat Arg1:T27 Arg2:T56 <<REDUNDANT!!!SHOULD BE REMOVED>>	od 20 lat -> stosowanej terapii  <RANK: 2> <info: start[1504, 1481] <type: LEFT>>
+
+
+Sentence 19:
+W wywiadzie ponadto: hipercholesterolemia w wywiadzie, kamica nerkowa bez dolegliwości, poza tym neguje
+Przebyte operacje: neguje 
+Wywiad rodzinny: matka - 56 lat zawał, ojciec 50 lat ziarnica złośliwa 
+Alergie: neguje 
+Nikotynizm: 40 paczkolat 
+
+R16	Neg Arg1:T30 Arg2:T31 << OK >>	bez -> dolegliwości  <RANK: 3> <info: start[1587, 1591] <type: RIGHT>>
+R17	Neg Arg1:T30 Arg2:T28 <<REDUNDANT!!!REMOVED>>	bez -> hipercholesterolemia <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1587, 1538] <type: LEFT>>
+R18	Neg Arg1:T30 Arg2:T29 <<REDUNDANT!!!SHOULD BE REMOVED>>	bez -> kamica nerkowa  <RANK: 3> <info: start[1587, 1572] <type: LEFT>>
+R19	Neg Arg1:T30 Arg2:T34 <<REDUNDANT!!!REMOVED>>	bez -> zawał <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1587, 1680] <type: RIGHT>>
+R20	Neg Arg1:T30 Arg2:T35 <<REDUNDANT!!!REMOVED>>	bez -> ziarnica złośliwa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1587, 1701] <type: RIGHT>>
+R21	Neg Arg1:T30 Arg2:T38 <<REDUNDANT!!!REMOVED>>	bez -> Alergie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1587, 1720] <type: RIGHT>>
+R22	Neg Arg1:T30 Arg2:T40 <<REDUNDANT!!!REMOVED>>	bez -> Nikotynizm: 40 paczkolat <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1587, 1737] <type: RIGHT>>
+R23	Neg Arg1:T30 Arg2:T32 <<REDUNDANT!!!REMOVED>>	bez -> Przebyte operacje <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1587, 1621] <type: RIGHT>>
+R24	Neg Arg1:T33 Arg2:T31 <<REDUNDANT!!!REMOVED>>	neguje -> dolegliwości <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1640, 1591] <type: LEFT>>
+R25	Neg Arg1:T33 Arg2:T28 <<REDUNDANT!!!REMOVED>>	neguje -> hipercholesterolemia <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1640, 1538] <type: LEFT>>
+R26	Neg Arg1:T33 Arg2:T29 <<REDUNDANT!!!REMOVED>>	neguje -> kamica nerkowa <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1640, 1572] <type: LEFT>>
+R27	Neg Arg1:T33 Arg2:T34 <<REDUNDANT!!!REMOVED>>	neguje -> zawał <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1640, 1680] <type: RIGHT>>
+R28	Neg Arg1:T33 Arg2:T35 <<REDUNDANT!!!REMOVED>>	neguje -> ziarnica złośliwa <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1640, 1701] <type: RIGHT>>
+R29	Neg Arg1:T33 Arg2:T38 <<REDUNDANT!!!REMOVED>>	neguje -> Alergie <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1640, 1720] <type: RIGHT>>
+R30	Neg Arg1:T33 Arg2:T40 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm: 40 paczkolat <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1640, 1737] <type: RIGHT>>
+R31	Neg Arg1:T33 Arg2:T32 << OK >>	neguje -> Przebyte operacje  <RANK: 3> <info: start[1640, 1621] <type: LEFT>>
+R32	Neg Arg1:T39 Arg2:T31 <<REDUNDANT!!!REMOVED>>	neguje -> dolegliwości <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1729, 1591] <type: LEFT>>
+R33	Neg Arg1:T39 Arg2:T28 <<REDUNDANT!!!REMOVED>>	neguje -> hipercholesterolemia <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1729, 1538] <type: LEFT>>
+R34	Neg Arg1:T39 Arg2:T29 <<REDUNDANT!!!REMOVED>>	neguje -> kamica nerkowa <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1729, 1572] <type: LEFT>>
+R35	Neg Arg1:T39 Arg2:T34 <<REDUNDANT!!!REMOVED>>	neguje -> zawał <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1729, 1680] <type: LEFT>>
+R36	Neg Arg1:T39 Arg2:T35 <<REDUNDANT!!!REMOVED>>	neguje -> ziarnica złośliwa <:REMOVED other second tag between (left):> <RANK: 1> <info: start[1729, 1701] <type: LEFT>>
+R37	Neg Arg1:T39 Arg2:T38 << OK >>	neguje -> Alergie  <RANK: 3> <info: start[1729, 1720] <type: LEFT>>
+R38	Neg Arg1:T39 Arg2:T40 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm: 40 paczkolat <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1729, 1737] <type: RIGHT>>
+R39	Neg Arg1:T39 Arg2:T32 <<REDUNDANT!!!REMOVED>>	neguje -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1729, 1621] <type: LEFT>>
+R40	Dat Arg1:T36 Arg2:T31 <<REDUNDANT!!!REMOVED>>	50 lat -> dolegliwości <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1694, 1591] <type: LEFT>>
+R41	Dat Arg1:T36 Arg2:T28 <<REDUNDANT!!!REMOVED>>	50 lat -> hipercholesterolemia <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1694, 1538] <type: LEFT>>
+R42	Dat Arg1:T36 Arg2:T29 <<REDUNDANT!!!REMOVED>>	50 lat -> kamica nerkowa <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1694, 1572] <type: LEFT>>
+R43	Dat Arg1:T36 Arg2:T34 <<REDUNDANT!!!REMOVED>>	50 lat -> zawał <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1694, 1680] <type: LEFT>>
+R44	Dat Arg1:T36 Arg2:T35 << OK >>	50 lat -> ziarnica złośliwa  <RANK: 3> <info: start[1694, 1701] <type: RIGHT>>
+R45	Dat Arg1:T36 Arg2:T38 <<REDUNDANT!!!REMOVED>>	50 lat -> Alergie <:REMOVED other second tag between (right):> <RANK: 1> <info: start[1694, 1720] <type: RIGHT>>
+R46	Dat Arg1:T36 Arg2:T40 <<REDUNDANT!!!REMOVED>>	50 lat -> Nikotynizm: 40 paczkolat <:REMOVED other second tag between (right):> <RANK: 1> <info: start[1694, 1737] <type: RIGHT>>
+R47	Dat Arg1:T36 Arg2:T32 <<REDUNDANT!!!REMOVED>>	50 lat -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1694, 1621] <type: LEFT>>
+R48	Dat Arg1:T37 Arg2:T31 <<REDUNDANT!!!REMOVED>>	56 lat -> dolegliwości <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1673, 1591] <type: LEFT>>
+R49	Dat Arg1:T37 Arg2:T28 <<REDUNDANT!!!REMOVED>>	56 lat -> hipercholesterolemia <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1673, 1538] <type: LEFT>>
+R50	Dat Arg1:T37 Arg2:T29 <<REDUNDANT!!!REMOVED>>	56 lat -> kamica nerkowa <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1673, 1572] <type: LEFT>>
+R51	Dat Arg1:T37 Arg2:T34 << OK >>	56 lat -> zawał  <RANK: 3> <info: start[1673, 1680] <type: RIGHT>>
+R52	Dat Arg1:T37 Arg2:T35 <<REDUNDANT!!!REMOVED>>	56 lat -> ziarnica złośliwa <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1673, 1701] <type: RIGHT>>
+R53	Dat Arg1:T37 Arg2:T38 <<REDUNDANT!!!REMOVED>>	56 lat -> Alergie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1673, 1720] <type: RIGHT>>
+R54	Dat Arg1:T37 Arg2:T40 <<REDUNDANT!!!REMOVED>>	56 lat -> Nikotynizm: 40 paczkolat <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1673, 1737] <type: RIGHT>>
+R55	Dat Arg1:T37 Arg2:T32 <<REDUNDANT!!!REMOVED>>	56 lat -> Przebyte operacje <:REMOVED many second tags on the left:> <RANK: 1> <info: start[1673, 1621] <type: LEFT>>
+
+
+Sentence 20:
+Alkohol: okazjonalnie 
+Uzależnienie inne: neguje 
+Stan społeczny: praca umysłowa związana z dużym stresem 
+
+R56	Neg Arg1:T43 Arg2:T41 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: okazjonalnie <:REMOVED other second tag between (left):> <RANK: 1> <info: start[1805, 1763] <type: LEFT>>
+R57	Neg Arg1:T43 Arg2:T42 << OK >>	neguje -> Uzależnienie inne  <RANK: 3> <info: start[1805, 1786] <type: LEFT>>
+R58	Neg Arg1:T43 Arg2:T44 <<REDUNDANT!!!REMOVED>>	neguje -> praca umysłowa związana z dużym stresem <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1805, 1829] <type: RIGHT>>
+
+
+Sentence 21:
+Leki:
+Liapanor 100 mg 1 tabl.
+R59	Drg Arg1:T45 Arg2:T48 << OK >>	Liapanor -> 100 mg 1 tabl. wieczorem  <RANK: 3> <info: start[1876, 1885] <type: RIGHT>>
+
+
+Sentence 22:
+wieczorem 
+Twynsta 80/5 mg 1 tabl.
+R60	Drg Arg1:T46 Arg2:T49 << OK >>	Twynsta -> 80/5 mg 1 tabl. po południe (16.00)  <RANK: 3> <info: start[1911, 1919] <type: RIGHT>>
+
+
+Sentence 23:
+po południe (16.00)
+
+
+
+Sentence 24:
+Concor 5 mg 1 tabl.
+R61	Drg Arg1:T47 Arg2:T50 << OK >>	Concor -> 5 mg 1 tabl. rano  <RANK: 3> <info: start[1955, 1962] <type: RIGHT>>
+
+
+Sentence 25:
+rano 
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter ekg, rtg kl. piersiowej
+
+
+
+Sentence 26:
+Przewidywana liczba dni hospitalizacji: 5-7 dni
+------------------------------------------------
+
+
+
+Sentence 27:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 28:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:9.25[10^3/ul]
+    
+
+
+Sentence 29:
+RBC Krwinki czerwone:5.69[10^6/ul]
+    
+
+
+Sentence 30:
+HGB Hemoglobina:17.0[g/dl]
+    
+
+
+Sentence 31:
+HCT Hematokryt:50.2[%]
+    
+
+
+Sentence 32:
+MCV wskaźnik czerwonokrw:88.2[fl]
+    
+
+
+Sentence 33:
+MCH wskaźnik czerwonokrw:29.9[pg]
+    
+
+
+Sentence 34:
+MCHC wskaźnik czerwonokr:33.9[g/dl]
+    
+
+
+Sentence 35:
+PLT z morfologii:235[10^3/ul]
+    
+
+
+Sentence 36:
+RDW-SD:42.8[fl]
+    
+
+
+Sentence 37:
+RDW-CV:13.2[%]
+    PDW:15.7[fl]
+    MPV:11.7[fl]
+    
+
+
+Sentence 38:
+P-LCR:38.5[%]
+    
+
+
+Sentence 39:
+PCT (hematokryt płytkowy:0.28[%]
+    
+
+
+Sentence 40:
+NEUTR# wartość bezwzględ:4.60[10^3/ul]
+    
+
+
+Sentence 41:
+NEUTR%:49.8[%]
+    
+
+
+Sentence 42:
+LYMH# wartość bezwzględn:3.13[10^3/ul]
+    
+
+
+Sentence 43:
+LYMPH%:33.8[%]
+    
+
+
+Sentence 44:
+MONO# wartość bezwzględn:1.00[10^3/ul]
+    
+
+
+Sentence 45:
+MONO%:10.8[%]
+    
+
+
+Sentence 46:
+EO# wartość bezwzględna:0.48[10^3/ul]
+    
+
+
+Sentence 47:
+EO%:5.2[%]
+    
+
+
+Sentence 48:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    BASO%:0.4[%]
+    
+
+
+Sentence 49:
+NRBC %:0.0[%]
+    
+
+
+Sentence 50:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 51:
+D-dimer - test ilościowy: D-dimer - test ilościowy:204[ng/ml]
+
+
+
+Sentence 52:
+Badanie ogólne moczu
+    
+
+
+Sentence 53:
+barwa:żółty[ ]
+    
+
+
+Sentence 54:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 55:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 56:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 57:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 58:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 59:
+ciężar właściwy:1.024[ ]
+    
+
+
+Sentence 60:
+pH:5.0[ ]
+    
+
+
+Sentence 61:
+białko:nieobecne[ ]
+    
+
+
+Sentence 62:
+urobilinogen:wzmożony +[ ]
+    
+
+
+Sentence 63:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 64:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 65:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 66:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 67:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 68:
+leukocyty:5 /ul[ul]
+    erytrocyty świeże:4 /ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:nieliczne[w preparacie]
+    kryształy szczawianu wap:nieliczne[w preparacie]
+    
+
+
+Sentence 69:
+wałeczki szkliste:0-1 wpw[w preparacie]
+
+
+
+Sentence 70:
+TSH: TSH:1.11[uIU/ml]
+
+
+
+Sentence 71:
+FT3: FT3:3.75[pg/ml]
+
+
+
+Sentence 72:
+FT4: FT4:1.22[ng/dl]
+
+
+
+Sentence 73:
+Troponina T: Troponina T:7.5[pg/ml]
+
+
+
+Sentence 74:
+ALAT: ALAT:18[U/L]
+
+
+
+Sentence 75:
+ASPAT: ASPAT:20[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 76:
+Sód (Na): Sód:143[mmol/L]
+
+
+
+Sentence 77:
+Potas (K): Potas:4.2[mmol/L]
+
+
+
+Sentence 78:
+Kreatynina + GFR
+    
+
+
+Sentence 79:
+Kreatynina w surowicy:0.99[mg/dl]
+    
+
+
+Sentence 80:
+eGFR wg skr.
+
+
+Sentence 81:
+MDRD ze stan:77.6[ml/min/1,73 m^2]
+
+
+
+Sentence 82:
+Mocznik: Mocznik:33[mg/dl]
+
+
+
+Sentence 83:
+Kwas moczowy: Kwas moczowy:6.3[mg/dl]
+
+
+
+Sentence 84:
+Lipidogram
+    
+
+
+Sentence 85:
+Cholesterol całkowity:126[mg/dl]
+    
+
+
+Sentence 86:
+Cholesterol HDL:35[mg/dl]
+    
+
+
+Sentence 87:
+Cholestrol LDL:52[mg/dl]
+    
+
+
+Sentence 88:
+Triglicerydy:161[mg/dl]
+    
+
+
+Sentence 89:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:83[mg/dl]
+
+
+
+Sentence 90:
+------------------------------------------------
+
+
+
+Sentence 91:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 92:
+I10
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 93:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 94:
+89.501
+C55
+A01
+89.502
+I81
+L43
+O61
+G49
+N45
+L69
+O55
+I17
+M45
+O35
+M37
+I19
+N13
+88.721
+O69
+
+
+
+Sentence 95:
+------------------------------------------------
+
+

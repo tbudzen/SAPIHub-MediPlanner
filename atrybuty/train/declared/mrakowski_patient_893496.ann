@@ -1,0 +1,209 @@
+T1	Treatment 331 358	dalsza opieka w poradni POZ
+T2	Investigation 361 425	okresowe kontrole kardiologiczne z badaniem echokardiograficznym
+T3	Date 426 437	raz do roku
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Investigation 440 509	zalecane wykonanie badania echokardiograficznego u krewnych I stopnia
+T5	Investigation 512 561	regularna codzienna kontrola ciśnienia tętniczego
+T6	Condition 782 856	Łagodna niedomykalność zastawki aortalnej na podłożu zastawki dwupłatkowej
+T7	Condition 858 899	Śladowa niedomykalność zastawki mitralnej
+N2	Reference T7 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T8	Symptom 916 936	Migrenowe bóle głowy
+N3	Reference T8 ICD10:G43.9	Migrena, nieokreślona
+T9	Condition 938 967	Niewydolność naczyń mózgowych
+N4	Reference T9 ICD10:I67.8	Inne określone choroby naczyń mózgowych
+T10	Treatment 977 1062	leczeniu operacyjnym: fenestracji L4/L5 po stronie lewej i rewizji lewego korzenia L5
+T11	Date 1064 1074	02.03.2017
+R2	Dat Arg1:T11 Arg2:T10	
+T12	Treatment 1085 1113	2x łyżeczkowaniu jamy macicy
+A1	Status T12 Historical_Insignificant
+T13	Date 1116 1123	02.2018
+R3	Dat Arg1:T13 Arg2:T12	
+T14	Date 1131 1135	2014
+T15	Condition 1145 1162	mięśniaków macicy
+N5	Reference T15 ICD10:D25	Mięśniak gładkokomórkowy macicy
+R4	Dat Arg1:T14 Arg2:T15	
+T16	Treatment 1272 1353	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Neurologicznej
+T17	Behaviour 1356 1396	Dieta lekkostrawna , niskocholesterolowa
+T18	Investigation 1400 1483	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T19	Investigation 1486 1534	Systematyczna kontrola ciśnienia tętniczego krwi
+T20	Treatment 1537 1578	Wskazane systematyczne przyjmowanie leków
+T21	Drug 1585 1592	Topamax
+T22	Drug_dose 1593 1622	25 mg 1 tabl. 1xdz. wieczorem
+R5	Drg Arg1:T21 Arg2:T22	
+T23	Symptom 2013 2038	bólów w klatce piersiowej
+N6	Reference T23 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T24	Condition 2040 2114	Łagodna niedomykalność zastawki aortalnej na podłożu zastawki dwupłatkowej
+T25	Condition 2116 2160	Łagodna niedomykalność zastawki trójdzielnej
+N8	Reference T25 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T26	Condition 2162 2192	Pojedyncze pobudzenia komorowe
+N9	Reference T26 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T27	Condition 2194 2223	Hipercholesterolemia mieszana
+N10	Reference T27 ICD10:E78.2	Hiperlipidemia mieszana
+T28	Symptom 2226 2246	Migrenowe bóle głowy
+N11	Reference T28 ICD10:G43.9	Migrena, nieokreślona
+T29	Condition 2248 2277	Niewydolność naczyń mózgowych
+N12	Reference T29 ICD10:I67.8	Inne określone choroby naczyń mózgowych
+T30	Treatment 2287 2372	leczeniu operacyjnym: fenestracji L4/L5 po stronie lewej i rewizji lewego korzenia L5
+T31	Date 2374 2384	02.03.2017
+R6	Dat Arg1:T31 Arg2:T30	
+T32	Treatment 2395 2423	2x łyżeczkowaniu jamy macicy
+A2	Status T32 Historical_Insignificant
+T33	Date 2426 2433	02.2018
+R7	Dat Arg1:T33 Arg2:T32	
+T34	Date 2441 2445	2014
+T35	Condition 2455 2472	mięśniaków macicy
+N13	Reference T35 ICD10:D25	Mięśniak gładkokomórkowy macicy
+R8	Dat Arg1:T34 Arg2:T35	
+T36	Symptom 2692 2716	bólami migrenowymi głowy
+N14	Reference T36 ICD10:G43.9	Migrena, nieokreślona
+T37	Investigation 2732 2744	MRI mózgowia
+T38	Investigation_result 2745 2808	zmianami hiperintensywnymi w T2 i FLAIR o etiologii naczyniowej
+R9	Inv Arg1:T37 Arg2:T38	
+T39	Symptom 2866 2938	bólów zamostkowych o charakterze ucisku bez związu z wysiłkiem fizycznym
+N15	Reference T39 ICD10:R07.2	Ból w okolicy przedsercowej
+T40	Treatment 2970 3055	leczeniu operacyjnym: fenestracji L4/L5 po stronie lewej i rewizji lewego korzenia L5
+T41	Date 3057 3067	02.03.2017
+R10	Dat Arg1:T41 Arg2:T40	
+T42	Negation 3070 3076	Neguje
+T43	Symptom 3078 3090	zasłabnięcia
+T44	Symptom 3092 3100	omdlenia
+N16	Reference T44 ICD10:R55	Omdlenie i zapaść
+T45	Symptom 3102 3117	kołatania serca
+R11	Neg Arg1:T42 Arg2:T43	
+R12	Neg Arg1:T42 Arg2:T44	
+R13	Neg Arg1:T42 Arg2:T45	
+N17	Reference T45 ICD10:R00.2	Kołatanie serca
+T46	Treatment 3122 3139	Przebyte operacje
+T47	Treatment 3154 3182	2x łyżeczkowaniu jamy macicy
+A3	Status T47 Historical_Insignificant
+T48	Date 3185 3192	02.2018
+R14	Dat Arg1:T48 Arg2:T47	
+T49	Condition 3214 3224	mięśniaków
+N18	Reference T49 ICD10:D25	Mięśniak gładkokomórkowy macicy
+T50	Date 3200 3204	2014
+R15	Dat Arg1:T50 Arg2:T49	
+T51	Behaviour 3226 3241	Palenie tytoniu
+T52	Negation 3243 3246	nie
+R16	Neg Arg1:T52 Arg2:T51	
+T53	Behaviour 3248 3259	Inne używki
+T54	Negation 3261 3264	nie
+R17	Neg Arg1:T54 Arg2:T53	
+T55	Condition 3266 3275	Uczulenia
+T56	Negation 3277 3280	nie
+R18	Neg Arg1:T56 Arg2:T55	
+T57	Condition 3309 3312	WZW
+N20	Reference T57 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T58	Negation 3314 3315	-
+R19	Neg Arg1:T58 Arg2:T57	
+T59	Condition 3319 3328	borelioza
+N21	Reference T59 ICD10:A69.2	Choroba z Lyme
+T60	Negation 3331 3332	-
+R20	Neg Arg1:T60 Arg2:T59	
+T61	Condition 3336 3339	tbc
+N22	Reference T61 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T62	Negation 3341 3342	-
+R21	Neg Arg1:T62 Arg2:T61	
+T63	Condition 3345 3349	odra
+N23	Reference T63 ICD10:B05	Odra
+T64	Negation 3351 3352	-
+R22	Neg Arg1:T64 Arg2:T63	
+T65	Treatment 3355 3374	szczepienie na odrę
+A4	Source T65 Declared
+T66	Behaviour 3407 3433	warunki mieszkaniowe dobre
+T67	Behaviour 3435 3447	pielęgniarka
+T68	Drug 3503 3510	Topamax
+T69	Drug_dose 3511 3531	50 mg 1xdz wieczorem
+R23	Drg Arg1:T68 Arg2:T69	
+T70	Investigation 3595 3616	badania laboratoryjne
+T71	Investigation 3618 3622	ECHO
+T72	Investigation 3624 3627	TEE
+T73	Investigation 3629 3633	ABPM
+T74	Investigation 3635 3648	pr. wysiłkowa
+T75	Symptom 3821 3885	niecharakterystycznych dolegliwości bólowych w klatce piersiowej
+N24	Reference T75 ICD10:R07.3	Inne bóle w klatce piersiowej
+T76	Date 3911 3922	od miesiąca
+R24	Dat Arg1:T76 Arg2:T75	
+T77	Negation 3924 3930	Neguje
+T78	Symptom 3931 3943	zasłabnięcia
+R25	Neg Arg1:T77 Arg2:T78	
+T79	Condition 3961 4035	Łagodna niedomykalność zastawki aortalnej na podłożu zastawki dwupłatkowej
+T80	Condition 4037 4078	Śladowa niedomykalność zastawki mitralnej
+N26	Reference T80 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T81	Symptom 4095 4115	Migrenowe bóle głowy
+N27	Reference T81 ICD10:G43.9	Migrena, nieokreślona
+T82	Condition 4117 4146	Niewydolność naczyń mózgowych
+N28	Reference T82 ICD10:I67.8	Inne określone choroby naczyń mózgowych
+T83	Treatment 4156 4241	leczeniu operacyjnym: fenestracji L4/L5 po stronie lewej i rewizji lewego korzenia L5
+T84	Date 4243 4253	02.03.2017
+R26	Dat Arg1:T84 Arg2:T83	
+T85	Treatment 4264 4292	2x łyżeczkowaniu jamy macicy
+A5	Status T85 Historical_Insignificant
+T86	Date 4295 4302	02.2018
+R27	Dat Arg1:T86 Arg2:T85	
+T87	Condition 4324 4341	mięśniaków macicy
+N29	Reference T87 ICD10:D25	Mięśniak gładkokomórkowy macicy
+T88	Date 4310 4314	2014
+R28	Dat Arg1:T88 Arg2:T87	
+T89	Treatment 4344 4361	Przebyte operacje
+T90	Treatment 4368 4387	Leczenie przewlekłe
+T91	Condition 4433 4436	WZW
+N30	Reference T91 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T92	Negation 4439 4440	-
+R29	Neg Arg1:T92 Arg2:T91	
+T93	Condition 4446 4455	borelioza
+N31	Reference T93 ICD10:A69.2	Choroba z Lyme
+T94	Negation 4458 4459	-
+R30	Neg Arg1:T94 Arg2:T93	
+T95	Condition 4462 4466	Odra
+N32	Reference T95 ICD10:B05	Odra
+T96	Negation 4469 4470	-
+R31	Neg Arg1:T96 Arg2:T95	
+T97	Condition 4475 4494	wywiadzie rodzinnym
+A6	Status T97 Family
+T98	Condition 4503 4518	cukrzyca typu 2
+A7	Status T98 Family
+N33	Reference T98 ICD10:E11	Cukrzyca insulinoniezależna
+T99	Condition 4521 4542	nadciśnienie tętnicze
+A8	Status T99 Family
+N34	Reference T99 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T100	Condition 4564 4578	zawałach serca
+A9	Status T100 Family
+N35	Reference T100 ICD10:I25.2	Przebyty zawał serca
+T101	Behaviour 4580 4595	Palenie tytoniu
+T102	Negation 4597 4600	nie
+R32	Neg Arg1:T102 Arg2:T101	
+T103	Behaviour 4601 4612	Inne używki
+T104	Negation 4614 4617	nie
+R33	Neg Arg1:T104 Arg2:T103	
+T105	Condition 4618 4627	Uczulenia
+T106	Negation 4629 4635	neguje
+R34	Neg Arg1:T106 Arg2:T105	
+T107	Behaviour 4652 4678	warunki mieszkaniowe dobre
+T108	Drug 4703 4710	Topamax
+T109	Drug_dose 4711 4740	25 mg 1 tabl. 1xdz. wieczorem
+R35	Drg Arg1:T108 Arg2:T109	
+T110	Investigation 4757 4767	Echo serca
+T111	Investigation 4770 4785	Próba Wysiłkowa
+N25	Reference T79 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+N7	Reference T24 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+N1	Reference T6 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T112	Condition 902 914	trójdzielnej
+N37	Reference T112 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T113	Condition 4081 4093	trójdzielnej
+N38	Reference T113 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+N39	Reference T38 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+N40	Reference T55 ICD10:T78.4	Alergia, nieokreślona
+N41	Reference T105 ICD10:T78.4	Alergia, nieokreślona
+T114	Treatment 4390 4404	neurologicznej
+A10	Status T15 Historical_Insignificant
+A11	Status T35 Historical_Insignificant
+A12	Status T30 Historical_Insignificant
+A13	Status T10 Historical_Insignificant
+A14	Status T40 Historical_Insignificant
+A15	Status T49 Historical_Insignificant
+N42	Reference T43 ICD10:R55	Omdlenie i zapaść
+N19	Reference T51 ICD10:Z72.0	Używanie tytoniu
+N43	Reference T78 ICD10:R55	Omdlenie i zapaść
+A16	Status T83 Historical_Insignificant
+A17	Status T87 Historical_Insignificant
+N36	Reference T101 ICD10:Z72.0	Używanie tytoniu

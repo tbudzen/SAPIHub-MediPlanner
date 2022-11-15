@@ -1,0 +1,136 @@
+T1	Treatment 333 419	Wskazana dalsza opieka u lekarza POZ oraz Poradni Endokrynologicznej i Ginekologicznej
+T2	Treatment 424 487	Wskazana kontrola echokardiograficzna w Poradni Kardiologicznej
+T3	Date 488 501	za ok. 3 lata
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Behaviour 506 545	Dieta lekkostrawna, niskocholesterolowa
+T5	Investigation 552 643	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T6	Investigation 650 709	Systematyczna kontrola ciśnienia tętniczego krwi i glikemii
+T7	Behaviour 716 791	Regularna aktywność fizyczna przynajmniej 5x w tyg. po 30-60 minut dziennie
+T8	Drug 840 850	Glucophage
+T9	Drug 868 874	Letrox
+T10	Drug_dose 851 867	500 mg 3x1 tabl.
+R2	Drg Arg1:T8 Arg2:T10	
+T11	Drug_dose 875 896	150 ug 1x1 tabl. rano
+R3	Drg Arg1:T9 Arg2:T11	
+T12	Condition 1125 1159	Łagodna niedomykalność trójdzielna
+N1	Reference T12 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T13	Condition 1198 1209	bradykardii
+N2	Reference T13 ICD10:R00.1	Bradykardia, nieokreślona
+T14	Condition 1211 1254	Wirusowe zapalenie opon mózgowo-rdzeniowych
+N3	Reference T14 ICD10:A87.9	Wirusowe zapalenie opon mózgowo-rdzeniowych, nieokreślone
+T15	Condition 1278 1294	Insulinooporność
+N4	Reference T15 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T16	Condition 1296 1308	Endometrioza
+N5	Reference T16 ICD10:N80.9	Gruczolistość, nieokreślona
+T17	Treatment 1318 1337	polipektomii macicy
+N6	Reference T17 ICD10:N84.0	Polip trzonu macicy
+T18	Condition 1339 1380	Niedoczynność tarczycy w stanie eutyreozy
+N7	Reference T18 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T19	Condition 1552 1573	objawowej bradykardii
+N8	Reference T19 ICD10:R00.1	Bradykardia, nieokreślona
+T20	Symptom 1576 1583	senność
+N9	Reference T20 ICD10:R40.0	Senność
+T21	Symptom 1585 1592	słabość
+T22	Symptom 1594 1600	apatia
+N10	Reference T22 ICD10:R45.3	Demoralizacja i apatia
+T23	Negation 1602 1605	bez
+T24	Symptom 1606 1612	omdleń
+N11	Reference T24 ICD10:R55	Omdlenie i zapaść
+R4	Neg Arg1:T23 Arg2:T24	
+T25	Symptom 1618 1641	migrenowych bólów głowy
+R5	Neg Arg1:T23 Arg2:T25	
+T26	Condition 1656 1698	wirusowe zapaleni opon mózgowo-rdzeniowych
+N13	Reference T26 ICD10:A87.9	Wirusowe zapalenie opon mózgowo-rdzeniowych, nieokreślone
+T27	Date 1700 1707	10.2018
+R6	Dat Arg1:T27 Arg2:T26	
+T28	Condition 1710 1726	insulinooporność
+N14	Reference T28 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T29	Condition 1728 1740	endometrioza
+N15	Reference T29 ICD10:N80.9	Gruczolistość, nieokreślona
+T30	Symptom 1743 1760	obfite miesiączki
+N16	Reference T30 ICD10:N92	Obfite, częste i nieregularne miesiączki
+T31	Condition 1762 1784	niedoczynność tarczycy
+N17	Reference T31 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T32	Treatment 1786 1826	bezskuteczne próby zapłodnienia IV - 4x.
+T33	Negation 1828 1834	Neguje
+T34	Condition 1955 1966	zawał serca
+N18	Reference T34 ICD10:I25.2	Przebyty zawał serca
+T35	Condition 1943 1953	udar mózgu
+N19	Reference T35 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T36	Condition 1939 1941	HA
+N20	Reference T36 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T37	Symptom 1909 1937	duszność nocną typu ortopnoe
+N21	Reference T37 ICD10:R06.0	Duszność
+T38	Condition 1891 1907	chorobę wrzodową
+N22	Reference T38 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T39	Symptom 1873 1889	brunatne wymioty
+N23	Reference T39 ICD10:K92.0	Wymioty krwawe
+T40	Symptom 1858 1871	czarne stolce
+N24	Reference T40 ICD10:K92.1	Stolce smołowate
+T41	Symptom 1846 1856	krwawienia
+T42	Symptom 1836 1844	omdlenia
+N25	Reference T42 ICD10:R55	Omdlenie i zapaść
+R7	Neg Arg1:T33 Arg2:T34	
+R8	Neg Arg1:T33 Arg2:T35	
+R9	Neg Arg1:T33 Arg2:T36	
+R10	Neg Arg1:T33 Arg2:T42	
+R11	Neg Arg1:T33 Arg2:T41	
+R12	Neg Arg1:T33 Arg2:T40	
+R13	Neg Arg1:T33 Arg2:T39	
+R14	Neg Arg1:T33 Arg2:T38	
+R15	Neg Arg1:T33 Arg2:T37	
+T43	Treatment 1990 2035	operacje ginekologiczne - polipektomia macicy
+A1	Status T43 Historical_Insignificant
+T44	Behaviour 2037 2066	Palenie tytoniu: sporadycznie
+T45	Behaviour 2070 2081	Inne używki
+T46	Negation 2083 2086	nie
+R16	Neg Arg1:T46 Arg2:T45	
+T47	Condition 2088 2097	Uczulenia
+T48	Negation 2099 2102	nie
+R17	Neg Arg1:T48 Arg2:T47	
+T49	Condition 2131 2174	wirusowe zapalenie opon mózgowo-rdzeniowych
+N27	Reference T49 ICD10:A87.9	Wirusowe zapalenie opon mózgowo-rdzeniowych, nieokreślone
+T50	Date 2176 2183	10.2018
+R18	Dat Arg1:T50 Arg2:T49	
+T51	Condition 2186 2189	WZW
+N28	Reference T51 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T52	Negation 2191 2192	-
+R19	Neg Arg1:T52 Arg2:T51	
+T53	Condition 2196 2205	borelioza
+N29	Reference T53 ICD10:A69.2	Choroba z Lyme
+T54	Condition 2211 2214	tbc
+T55	Negation 2216 2217	-
+R20	Neg Arg1:T55 Arg2:T54	
+T56	Negation 2207 2208	-
+R21	Neg Arg1:T56 Arg2:T53	
+T57	Behaviour 2236 2262	warunki mieszkaniowe dobre
+T58	Behaviour 2264 2323	pracuje zastępca kierownika produkcji w firmie kosmetycznej
+T59	Condition 2353 2363	stymulator
+A2	Status T59 Family
+N31	Reference T59 ICD10:Z95.0	Obecność stymulatora serca
+T60	Condition 2372 2383	bradykardia
+A3	Status T60 Family
+N32	Reference T60 ICD10:R00.1	Bradykardia, nieokreślona
+T61	Drug 2421 2431	Glucophage
+T62	Drug 2449 2459	Tardyferon
+T63	Drug 2507 2513	Letrox
+T64	Drug_dose 2432 2448	500 mg 3x1 tabl.
+R22	Drg Arg1:T61 Arg2:T64	
+T65	Drug_dose 2460 2506	1x1 tabl. rano w przypadku nasilonych krwawień
+R23	Drg Arg1:T62 Arg2:T65	
+T66	Drug_dose 2514 2535	150 mg 1x1 tabl. rano
+R24	Drg Arg1:T63 Arg2:T66	
+T67	Treatment 1971 1988	Przebyte operacje
+T68	Condition 2327 2342	Wywiad rodzinny
+A4	Status T68 Family
+T69	Date 1268 1275	10.2018
+R25	Dat Arg1:T69 Arg2:T14	
+T70	Condition 1161 1182	Niemiarowość zatokowa
+N33	Reference T70 ICD10:R00	Zaburzenia rytmu serca
+N12	Reference T25 ICD10:G43.9	Migrena, nieokreślona
+N35	Reference T47 ICD10:T78.4	Alergia, nieokreślona
+A5	Status T44 Historical_Insignificant
+N26	Reference T44 ICD10:Z72.0	Używanie tytoniu
+N36	Reference T45 ICD10:Z72	Problemy związane ze stylem życia
+N34	Reference T41 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N30	Reference T54 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

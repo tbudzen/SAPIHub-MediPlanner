@@ -1,0 +1,92 @@
+T1	Condition 439 472	Nadciśnienie tętnicze I st wg WHO
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 474 486	Cukrzyca t.2
+N2	Reference T2 ICD10:E11	Cukrzyca insulinoniezależna
+T3	Condition 500 514	uchyłków esicy
+T4	Treatment 496 499	LAR
+T5	Date 516 521	2018r
+R1	Dat Arg1:T5 Arg2:T3	
+R2	Dat Arg1:T5 Arg2:T4	
+T6	Condition 524 560	Przepuklina w bliźnie pooperacyjnej.
+N3	Reference T6 ICD10:K46	Nieokreślona przepuklina brzuszna
+T7	Condition 561 574	Żylaki odbytu
+N4	Reference T7 ICD10:I84	Hemoroidy
+T8	Behaviour 576 586	Nikotynizm
+N5	Reference T8 ICD10:Z72.0	Używanie tytoniu
+T9	Investigation 2117 2127	echo serca
+T10	Investigation 2130 2133	TET
+T11	Investigation 2135 2139	ABPM
+T12	Investigation 2141 2147	Holter
+T13	Investigation 2149 2168	RTG kl. piersiowej.
+T14	Drug 2064 2069	Rawel
+T15	Drug_dose 2070 2089	1,5 mg 1 tabl. rano
+R3	Drg Arg1:T14 Arg2:T15	
+T16	Drug 2029 2036	Betaloc
+T17	Drug 2002 2010	Prenessa
+T18	Drug_dose 2011 2028	4 mg 1 tabl. rano
+R4	Drg Arg1:T17 Arg2:T18	
+T19	Drug 1972 1981	Metformax
+T20	Drug_dose 1982 2001	500 mg-500mg-1000mg
+R5	Drg Arg1:T19 Arg2:T20	
+T21	Negation 1895 1905	nie podaje
+T22	Negation 1873 1883	nie podaje
+T23	Condition 1884 1893	Uczulenia
+N6	Reference T23 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R6	Neg Arg1:T21 Arg2:T23	
+T24	Behaviour 1860 1871	Inne używki
+R7	Neg Arg1:T22 Arg2:T24	
+T25	Behaviour 1821 1851	Palenie tytoniu: 1 paczka/dobę
+N7	Reference T25 ICD10:Z72.0	Używanie tytoniu
+T26	Date 1852 1859	32 lata
+R8	Dat Arg1:T26 Arg2:T25	
+T27	Condition 1814 1816	DM
+A1	Status T27 Family
+N8	Reference T27 ICD10:E13	Inne określone postacie cukrzycy
+T28	Condition 1818 1820	MI
+N9	Reference T28 ICD10:I34.0	Niedomykalność zastawki mitralnej
+A2	Status T28 Family
+T29	Condition 1763 1766	WZW
+N10	Reference T29 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T30	Condition 1768 1777	borelioza
+N11	Reference T30 ICD10:A69.2	Choroba z Lyme
+T31	Negation 1780 1790	nie podaje
+R9	Neg Arg1:T31 Arg2:T30	
+R10	Neg Arg1:T31 Arg2:T29	
+T32	Condition 1721 1734	żylaki odbytu
+N12	Reference T32 ICD10:I84	Hemoroidy
+T33	Condition 1695 1719	uchyłków jelita grubego,
+T34	Treatment 1682 1685	LAR
+T35	Symptom 1639 1654	kołatania serca
+N13	Reference T35 ICD10:R00.2	Kołatanie serca
+T36	Condition 1426 1439	cukrzycą t.2,
+N14	Reference T36 ICD10:E11	Cukrzyca insulinoniezależna
+T37	Condition 1440 1464	nadciśnieniem tętniczym,
+N15	Reference T37 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T38	Symptom 1512 1542	dwukrotnych utrat przytomności
+N16	Reference T38 ICD10:R55	Omdlenie i zapaść
+T39	Date 1543 1553	(07.2018r)
+R11	Dat Arg1:T39 Arg2:T38	
+T40	Treatment 1557 1594	zabiegu operacyjnym na jelicie grubym
+T41	Condition 1596 1613	zapalny guz esicy
+A3	Status T40 Historical_Insignificant
+T42	Drug 1249 1258	Metformax
+T43	Drug 1260 1268	Prenessa
+T44	Drug 1270 1278	Rawel SR
+T45	Drug 1044 1053	Captopril
+T46	Drug_dose 1054 1129	12,5 mg 1 tabl. doraźnie w przypadku wysokich wartości ciśnienia tętniczego
+R12	Drg Arg1:T45 Arg2:T46	
+T47	Drug 1007 1018	Co-Prenessa
+T48	Drug_dose 1019 1043	4mg/1,25 mg 1 tabl. rano
+R13	Drg Arg1:T47 Arg2:T48	
+T49	Drug 974 983	Metformax
+T50	Drug_dose 984 1005	500 mg 1 tabl. 3 x dz
+R14	Drg Arg1:T49 Arg2:T50	
+T51	Investigation 783 813	kontrola glikemii, lipidogramu
+T52	Investigation 824 851	pomiary ciśnienia tętniczeg
+T53	Date 853 859	2 x dz
+R15	Dat Arg1:T53 Arg2:T52	
+T54	Behaviour 860 888	zaprzestanie palenia tytoniu
+T55	Behaviour 889 938	dieta ubogowęglowodanowa z niską zawartością sodu
+T56	Behaviour 939 967	regularna aktywność fizyczna
+T57	Treatment 696 723	dalsza opieka w poradni POZ
+T58	Treatment 733 773	kontrola kardiologiczna, diabetologiczna

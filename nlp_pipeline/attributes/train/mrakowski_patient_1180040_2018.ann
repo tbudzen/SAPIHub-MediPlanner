@@ -1,0 +1,61 @@
+T1	Condition 438 459	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 461 484	Hiperlipidemia mieszana
+N2	Reference T2 ICD10:E78.2	Hiperlipidemia mieszana
+T3	Treatment 596 618	kontrola u lekarza POZ
+T4	Treatment 621 691	okresowa kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych
+T5	Behaviour 715 759	dieta niskocholesterolowa, zmian stylu życia
+T6	Investigation 763 792	okresowa kontrola lipidogramu
+T7	Date 807 816	za 3 m-ce
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Drug 941 944	IPP
+T9	Drug 946 954	Metocard
+T10	Drug 956 963	Zofenil
+T11	Symptom 1131 1155	bólu w klatce piersiowej
+N3	Reference T11 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T12	Symptom 1171 1262	kłujące, niezwiązany z wysiłkiem, niemal codziennie, utrzymują się czasem niemal cały dzień
+N4	Reference T12 ICD10:R07.3	Inne bóle w klatce piersiowej
+T13	Date 1158 1169	od miesiąca
+R2	Dat Arg1:T13 Arg2:T11	
+R3	Dat Arg1:T13 Arg2:T12	
+T14	Date 1281 1294	od 6 miesięcy
+T15	Investigation_result 1295 1346	podwyższone BP (max. 160/90mmHg, zwykle 140/70mmHg)
+N5	Reference T15 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+R4	Dat Arg1:T14 Arg2:T15	
+T16	Condition 1349 1360	tachykardia
+N6	Reference T16 ICD10:R00.0	Tachykardia, nieokreślona
+R5	Dat Arg1:T14 Arg2:T16	
+T17	Symptom 1385 1398	drżenie głowy
+N7	Reference T17 ICD10:R25.1	Drżenie, nieokreślone
+T18	Treatment 1401 1464	diagnostyka neurologiczna niepełna, 1 konsultacja neurologiczna
+T19	Treatment 1529 1546	Przebyte operacje
+T20	Negation 1548 1554	neguje
+R6	Neg Arg1:T20 Arg2:T19	
+T21	Condition 1556 1571	Wywiad rodzinny
+A1	Status T21 Family
+T22	Condition 1573 1575	HA
+N8	Reference T22 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+A2	Status T22 Family
+T23	Condition 1624 1631	Alergie
+N9	Reference T23 ICD10:T78.4	Alergia, nieokreślona
+T24	Negation 1633 1639	neguje
+R7	Neg Arg1:T24 Arg2:T23	
+T25	Behaviour 1641 1670	Nikotynizm: tak 1,5 paczkolat
+N10	Reference T25 ICD10:Z72.0	Używanie tytoniu
+T26	Behaviour 1672 1720	Alkohol: okazjonalnie, w umiarkowanych ilościach
+A3	Status T26 Historical_Insignificant
+N11	Reference T26 ICD10:Z72.1	Używanie alkoholu
+T27	Behaviour 1722 1739	Uzależnienie inne
+T28	Negation 1741 1747	neguje
+R8	Neg Arg1:T28 Arg2:T27	
+T29	Behaviour 1765 1797	pracuje, konsultant telefoniczny
+T30	Investigation 1842 1852	echo serca
+T31	Investigation 1854 1857	TET
+T32	Investigation 1859 1863	ABPM
+T33	Investigation 1865 1875	Holter ekg
+T34	Investigation 1877 1895	rtg kl. piersiowej
+T35	Investigation 1897 1915	USG jamy brzusznej
+N12	Reference T27 ICD10:Z72	Problemy związane ze stylem życia
+T36	Drug 1799 1803	Leki
+T37	Negation 1806 1813	żadnych
+R9	Neg Arg1:T37 Arg2:T36	

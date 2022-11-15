@@ -1,0 +1,79 @@
+T1	Symptom 619 683	niecharakterystycznych dolegliwości bólowych w klatce piersiowej
+N1	Reference T1 ICD10:R07.3	Inne bóle w klatce piersiowej
+T2	Symptom 702 712	osłabienie
+T3	Symptom 715 742	obniżoną tolerancję wysiłku
+N2	Reference T3 ICD10:R53	Złe samopoczucie i zmęczenie
+T4	Investigation_result 754 784	podwyższone RR do 150/100 mmHg
+N3	Reference T4 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T5	Negation 786 792	Neguje
+T6	Symptom 793 805	zasłabnięcia
+R1	Neg Arg1:T5 Arg2:T6	
+T7	Treatment 831 844	chemioterapii
+T8	Drug 847 859	dokorubicyna
+T9	Drug 862 875	Cyclofosfamid
+T10	Condition 887 903	ca. piersi lewej
+N4	Reference T10 ICD10:C50	Nowotwór złośliwy piersi
+T11	Date 905 921	20.05-08.08.2019
+R2	Dat Arg1:T11 Arg2:T10	
+R3	Dat Arg1:T11 Arg2:T7	
+T12	Treatment 931 966	częściowej mastektomii lewostronnej
+T13	Date 967 977	09.04.2019
+R4	Dat Arg1:T13 Arg2:T12	
+T14	Condition 979 1011	Zapalenie błony śluzowej żoładka
+N5	Reference T14 ICD10:K29.7	Zapalenie żołądka, nieokreślone
+T15	Treatment 1013 1030	Przebyte operacje
+T16	Condition 1064 1067	WZW
+N6	Reference T16 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T17	Condition 1077 1086	borelioza
+N7	Reference T17 ICD10:A69.2	Choroba z Lyme
+T18	Condition 1093 1097	Odra
+N8	Reference T18 ICD10:B05	Odra
+T19	Negation 1100 1101	-
+R5	Neg Arg1:T19 Arg2:T18	
+T20	Negation 1089 1090	-
+R6	Neg Arg1:T20 Arg2:T17	
+T21	Negation 1070 1071	-
+R7	Neg Arg1:T21 Arg2:T16	
+T22	Condition 1106 1125	wywiadzie rodzinnym
+A1	Status T22 Family
+T23	Condition 1137 1145	tarczyce
+A2	Status T23 Family
+N9	Reference T23 ICD10:E07.9	Choroby tarczycy, nieokreślone
+T24	Condition 1147 1163	rozrusznik serca
+A3	Status T24 Family
+N10	Reference T24 ICD10:Z95.0	Obecność stymulatora serca
+T25	Condition 1175 1187	ca. prostaty
+A4	Status T25 Family
+N11	Reference T25 ICD10:C61	Nowotwór złośliwy gruczołu krokowego
+T26	Condition 1198 1210	udarze mózgu
+A5	Status T26 Family
+N12	Reference T26 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T27	Condition 1213 1234	nadciśnienie tętnicze
+A6	Status T27 Family
+N13	Reference T27 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T28	Behaviour 1236 1251	Palenie tytoniu
+T29	Negation 1253 1261	nie pali
+T30	Date 1262 1271	od 10 lat
+R8	Neg Arg1:T29 Arg2:T28	
+R9	Dat Arg1:T30 Arg2:T28	
+T31	Behaviour 1273 1284	Inne używki
+T32	Negation 1286 1289	nie
+R10	Neg Arg1:T32 Arg2:T31	
+T33	Condition 1291 1300	Uczulenia
+T34	Negation 1302 1308	neguje
+R11	Neg Arg1:T34 Arg2:T33	
+T35	Behaviour 1325 1351	warunki mieszkaniowe dobre
+T36	Behaviour 1370 1380	ekonomista
+T37	Investigation 1413 1423	Echo serca
+T38	Investigation 1428 1443	Próba Wysiłkowa
+N15	Reference T33 ICD10:T78.4	Alergia, nieokreślona
+N16	Reference T2 ICD10:R53	Złe samopoczucie i zmęczenie
+N17	Reference T6 ICD10:R55	Omdlenie i zapaść
+A7	Status T10 Historical_Insignificant
+A8	Status T7 Historical_Insignificant
+A9	Status T12 Historical_Insignificant
+N14	Reference T28 ICD10:Z72.0	Używanie tytoniu
+N18	Reference T31 ICD10:Z72	Problemy związane ze stylem życia
+T39	Negation 1388 1391	bez
+T40	Drug 1392 1397	leków
+R12	Neg Arg1:T39 Arg2:T40	

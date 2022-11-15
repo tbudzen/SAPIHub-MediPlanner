@@ -1,0 +1,93 @@
+T1	Condition 449 493	Łagodna niedomykalność zastawki trójdzielnej
+N1	Reference T1 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T2	Condition 495 545	Nadciśnienie tętnicze skorygowane farmakologicznie
+N2	Reference T2 ICD10:I15.1	Nadciśnienie wtórne do innej patologii nerek
+T3	Condition 547 561	Zespół Alporta
+N3	Reference T3 ICD10:Q87.8	Inne określone zespoły wrodzonych wad rozwojowych niesklasyfikowane gdzie indziej
+T4	Condition 564 621	schyłkowa niewydolność nerek w trakcie hemodializoterapii
+N4	Reference T4 ICD10:N18.0	Schyłkowa niewydolność nerek
+T5	Symptom 623 661	obustronny niedosłuch miernego stopnia
+N5	Reference T5 ICD10:H90.3	Upośledzenie słuchu czuciowo-nerwowe obustronne
+T6	Condition 663 705	Wtórna niedokrwistość normocytarna łagodna
+N6	Reference T6 ICD10:D64.1	Wtórna niedokrwistość syderoblastyczna w przebiegu innych chorób
+T7	Condition 707 727	Hipertriglicerydemia
+N7	Reference T7 ICD10:E78.1	Czysta hiperglicerydemia
+T8	Treatment 729 807	Implantacja dializacyjnego cewnika permanentnego do lewej żyły podobojczykowej
+T9	Condition 809 845	odma podskórna w miejscu implantacji
+N8	Reference T9 ICD10:T81.8	Inne powikłania zabiegów, niesklasyfikowane gdzie indziej
+T10	Date 847 857	02.03.2018
+R1	Dat Arg1:T10 Arg2:T9	
+R2	Dat Arg1:T10 Arg2:T8	
+T11	Treatment 970 1034	Wskazana dalsza opieka u lekarza POZ oraz Poradni Nefrologicznej
+T12	Treatment 1039 1170	Wskazane bezwzględne przestrzeganie zaleceń lek. spec. nefrologa - w chwili obecnej bez przeciwwskazań kardiologicznych do Tx nerki
+T13	Behaviour 1176 1244	Dieta zgodna z zaleceniami lek. spec. nefrologa, niskocholesterolowa
+T14	Investigation 1251 1364	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby oraz morfologii i PTH
+T15	Investigation 1371 1419	Systematyczna kontrola ciśnienia tętniczego krwi
+T16	Drug 1432 1439	Tritace
+T17	Drug_dose 1440 1465	10 mg 1x1 tabl. wieczorem
+R3	Drg Arg1:T16 Arg2:T17	
+T18	Drug 1466 1474	Alfadiol
+T19	Drug_dose 1475 1531	0,25 1x1 tabl. rano - kont. zaleceń lek. spec. nefrologa
+R4	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1532 1540	Calperos
+T21	Drug_dose 1541 1592	1000 2x3 tabl. - kont. zaleceń lek. spec. nefrologa
+R5	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1593 1610	Cinacalcet Accord
+T23	Drug_dose 1611 1670	30 1x1 tabl. wieczorem - kont. zaleceń lek. spec. nefrologa
+R6	Drg Arg1:T22 Arg2:T23	
+T24	Condition 1813 1843	schyłkową niewydolnością nerek
+N9	Reference T24 ICD10:N18.0	Schyłkowa niewydolność nerek
+T25	Treatment 1844 1855	dializowany
+T26	Date 1856 1867	od 1,5 roku
+R7	Dat Arg1:T26 Arg2:T25	
+T27	Condition 1871 1894	nadciśnieniem tętniczym
+N10	Reference T27 ICD10:I15.1	Nadciśnienie wtórne do innej patologii nerek
+T28	Symptom 1897 1938	obustronnym niedosłuchem miernego stopnia
+N11	Reference T28 ICD10:H90.3	Upośledzenie słuchu czuciowo-nerwowe obustronne
+T29	Condition 1966 1981	zespołu Alporta
+A1	Source T29 Declared
+N12	Reference T29 ICD10:Q87.8	Inne określone zespoły wrodzonych wad rozwojowych niesklasyfikowane gdzie indziej
+T30	Treatment 2059 2086	zabiegiem przeszczepu nerki
+T31	Symptom 2088 2111	Dolegliwości somatyczne
+T32	Negation 2112 2118	neguje
+R8	Neg Arg1:T32 Arg2:T31	
+T33	Treatment 2141 2177	kilkukrotne nieudane próby wykonania
+T34	Condition 2256 2259	WZW
+N13	Reference T34 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T35	Negation 2262 2263	-
+R9	Neg Arg1:T35 Arg2:T34	
+T36	Condition 2269 2278	borelioza
+N14	Reference T36 ICD10:A69.2	Choroba z Lyme
+T37	Negation 2281 2282	-
+R10	Neg Arg1:T37 Arg2:T36	
+T38	Condition 2286 2294	gruźlica
+N15	Reference T38 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T39	Negation 2295 2296	-
+R11	Neg Arg1:T39 Arg2:T38	
+T40	Behaviour 2298 2313	Palenie tytoniu
+N16	Reference T40 ICD10:Z72.0	Używanie tytoniu
+T41	Negation 2315 2318	nie
+R12	Neg Arg1:T41 Arg2:T40	
+T42	Behaviour 2319 2330	Inne używki
+T43	Negation 2332 2335	nie
+R13	Neg Arg1:T43 Arg2:T42	
+T44	Condition 2336 2345	Uczulenia
+T45	Negation 2347 2353	neguje
+R14	Neg Arg1:T45 Arg2:T44	
+T46	Behaviour 2370 2396	warunki mieszkaniowe dobre
+T47	Drug 2407 2414	Tritace
+T48	Drug_dose 2415 2434	10mg 1x1 tabl. rano
+R15	Drg Arg1:T47 Arg2:T48	
+T49	Drug 2437 2445	Alfadiol
+T50	Drug 2446 2454	Calperos
+T51	Drug 2455 2472	Cinacalcet Accord
+T52	Drug_dose 2473 2495	30 1x1 tabl. wieczorem
+R16	Drg Arg1:T51 Arg2:T52	
+T53	Investigation 2510 2514	Echo
+T54	Investigation 2516 2519	ExT
+T55	Investigation 2521 2525	ABPM
+T56	Investigation 2527 2537	Holter-EKG
+T57	Treatment 2121 2138	Przebyte operacje
+T58	Treatment 2204 2223	Leczenie przewlekłe
+T59	Condition 2178 2202	przetok tętniczo-żylnych
+N17	Reference T59 ICD10:I77.0	Przetoka tętniczo-żylna, nabyta

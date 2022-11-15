@@ -1,0 +1,182 @@
+T1	Investigation 3270 3280	Echo serca
+T2	Investigation 3283 3292	Holter RR
+T3	Investigation 3296 3311	Próba Wysiłkowa
+T4	Investigation 3314 3337	RTG klatki piersiowej .
+T5	Drug 3092 3098	Lokren
+T6	Drug_dose 3099 3124	20 mg 1 x dz po 1/4 tabl.
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 3125 3135	Cardura XL
+T8	Drug_dose 3136 3157	4 mg 1x dz w południe
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 3161 3168	Lacipil
+T10	Drug_dose 3169 3189	4 mg 1 x d wieczorem
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 3192 3209	Noliprel Bi-forte
+T12	Drug_dose 3210 3220	1x dz rano
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 3223 3228	Acard
+T14	Drug_dose 3229 3251	75 mg 1 x dz wieczorem
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Behaviour 3041 3067	warunki mieszkaniowe dobre
+T16	Negation 3018 3024	neguje
+T17	Negation 3003 3006	nie
+T18	Negation 2986 2989	nie
+T19	Condition 3007 3016	Uczulenia
+N1	Reference T19 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R6	Neg Arg1:T16 Arg2:T19	
+T20	Behaviour 2990 3001	Inne używki
+N2	Reference T20 ICD10:Z72	Problemy związane ze stylem życia
+R7	Neg Arg1:T17 Arg2:T20	
+T21	Behaviour 2969 2984	Palenie tytoniu
+N3	Reference T21 ICD10:Z72.0	Używanie tytoniu
+R8	Neg Arg1:T18 Arg2:T21	
+T22	Negation 2963 2967	brak
+T23	Condition 2939 2960	W wywiadzie rodzinnym
+R9	Neg Arg1:T22 Arg2:T23	
+A1	Status T23 Family
+T24	Condition 2910 2913	WZW
+N4	Reference T24 ICD10:B19	
+T25	Condition 2923 2932	borelioza
+N5	Reference T25 ICD10:A69.2	Choroba z Lyme
+T26	Negation 2933 2938	( - )
+R10	Neg Arg1:T26 Arg2:T25	
+T27	Negation 2914 2920	( -  )
+R11	Neg Arg1:T27 Arg2:T24	
+T28	Drug 2034 2040	Lokren
+T29	Drug 2042 2052	Cardura XL
+T30	Drug 2055 2068	Noliper forte
+T31	Drug 2071 2076	Acard
+T32	Drug 2079 2086	Lacipil
+T33	Drug 2089 2097	Primacor
+T34	Drug 2100 2110	Captoopril
+T35	Drug 1008 1020	Atorvasterol
+T36	Drug 975 980	Acard
+T37	Drug 942 959	Noliprel Bi-forte
+T38	Drug 909 916	Lacipil
+T39	Drug 871 881	Cardura XL
+T40	Drug 836 842	Lokren
+T41	Drug_dose 843 867	20 mg 1 x dz po 1/4 tabl
+R12	Drg Arg1:T40 Arg2:T41	
+T42	Drug_dose 882 903	4 mg 1x dz w południe
+R13	Drg Arg1:T39 Arg2:T42	
+T43	Drug_dose 917 937	4 mg 1 x d wieczorem
+R14	Drg Arg1:T38 Arg2:T43	
+T44	Drug_dose 960 970	1x dz rano
+R15	Drg Arg1:T37 Arg2:T44	
+T45	Drug_dose 981 1003	75 mg 1 x dz wieczorem
+R16	Drg Arg1:T36 Arg2:T45	
+T46	Drug_dose 1021 1042	20 mg 1x dz wieczorem
+R17	Drg Arg1:T35 Arg2:T46	
+T47	Treatment 349 463	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej , Urologicznej , Endokrynologicznej , Kardiochirurgicznej
+T48	Behaviour 467 507	Dieta lekkostrawna , niskocholesterolowa
+T49	Investigation 511 540	Pierwsze oznaczenie ALT , AST
+T50	Date 541 556	za 8-12 tygodni
+R18	Dat Arg1:T50 Arg2:T49	
+T51	Behaviour 588 644	chory powinien wypijać około 1500-2000 ml płynów na dobę
+T52	Investigation 656 730	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T53	Investigation 748 783	kontrola ciśnienia tętniczego krwi.
+T54	Condition 1272 1328	Drożny otwór owalny w przegrodzenie międzyprzedsionkowej
+N6	Reference T54 ICD10:Q21.1	
+T55	Condition 1331 1353	niewielkim przeciekiem
+T56	Condition 1357 1386	Przewlekłą niewydolność serca
+T57	Symptom 1387 1399	II’ wg. NYHA
+T58	Condition 1402 1438	frakcją wyrzutową lewej komory serca
+T59	Investigation_result 1441 1448	EF= 51%
+T60	Condition 1452 1493	Ciężka niedomykalność zastawki aortalnej.
+N8	Reference T60 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T61	Condition 1494 1536	 Łagodna niedomykalność zastawki mitralnej
+N9	Reference T61 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T62	Condition 1540 1567	Poszerzona aorta wstępująca
+N10	Reference T62 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T63	Condition 1570 1589	Nadciśnienie płucne
+N11	Reference T63 ICD10:I27.0	Pierwotne nadciśnienie płucne
+T64	Investigation_result 1592 1607	RVPs 39-44 mmHg
+T65	Condition 1614 1644	Pojedyncze pobudzenia komorowe
+N12	Reference T65 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T66	Condition 1647 1658	nadkomorowe
+N13	Reference T66 ICD10:I49.1	
+T67	Condition 1662 1683	Nadciśnienie tętnicze
+N14	Reference T67 ICD10:I10	
+T68	Condition 1686 1715	Hipercholesterolemia mieszana
+N15	Reference T68 ICD10:E78.2	
+T69	Condition 1718 1750	Nieprawidłowa tolerancja glukozy
+N16	Reference T69 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T70	Condition 1765 1810	Przewlekłą choroba nerek w III’ niewydolności
+N17	Reference T70 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T71	Condition 1813 1827	Kamica nerkowa
+N18	Reference T71 ICD10:N20.0	Kamica nerki
+T72	Condition 1830 1849	Torbiel nerki lewej
+N19	Reference T72 ICD10:N28.1	Torbiel nerki, nabyta
+T73	Condition 1852 1880	Zaburzenia hormonów tarczycy
+N20	Reference T73 ICD10:E07	Inne choroby tarczycy
+T74	Condition 1901 1906	zaćmy
+N21	Reference T74 ICD10:H25.9	Zaćma starcza, nieokreślona
+T75	Treatment 1892 1900	operacji
+A2	Status T75 Historical_Insignificant
+A3	Status T74 Historical_Insignificant
+T76	Date 1907 1914	12.2017
+R19	Dat Arg1:T76 Arg2:T74	
+R20	Dat Arg1:T76 Arg2:T75	
+T77	Investigation_result 2508 2555	chwiejnych wartości ciśnienia tętniczego krwi .
+T78	Date 2579 2593	od 2-3 tygodni
+R21	Dat Arg1:T78 Arg2:T77	
+T79	Symptom 2604 2616	zasłabnięcia
+N22	Reference T79 ICD10:R55	Omdlenie i zapaść
+T80	Symptom 2626 2650	bóle w klatce piersiowej
+N23	Reference T80 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T81	Negation 2619 2625	neguje
+T82	Negation 2597 2603	Neguje
+R22	Neg Arg1:T82 Arg2:T79	
+R23	Neg Arg1:T81 Arg2:T80	
+T83	Symptom 2674 2678	poty
+N24	Reference T83 ICD10:R61	Nadmierne pocenie
+T84	Date 2668 2673	nocne
+R24	Dat Arg1:T84 Arg2:T83	
+T85	Condition 2694 2712	Nadciśnienie tętni
+N25	Reference T85 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T86	Condition 2718 2756	Niedomykalność zastawki aortalnej III'
+N26	Reference T86 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T87	Condition 2759 2791	Nieprawidłowa tolerancja glukozy
+N27	Reference T87 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T88	Condition 2833 2838	zaćmy
+N28	Reference T88 ICD10:H25.9	Zaćma starcza, nieokreślona
+T89	Date 2839 2846	12.2017
+T90	Treatment 2824 2832	operacji
+A4	Status T90 Historical_Insignificant
+A5	Status T88 Historical_Insignificant
+R25	Dat Arg1:T89 Arg2:T88	
+R26	Dat Arg1:T89 Arg2:T90	
+N7	Reference T56 ICD10:I50.9	Niewydolność serca, nieokreślona
+R1	Dat Arg1:T50 Arg2:T51
+R10	Drg Arg1:T36 Arg2:T45
+R100	Neg Arg1:T27 Arg2:T24
+R101	Neg Arg1:T27 Arg2:T25
+R112	Drg Arg1:T5 Arg2:T6
+R115	Drg Arg1:T7 Arg2:T6
+R119	Drg Arg1:T9 Arg2:T8
+R123	Drg Arg1:T11 Arg2:T10
+R13	Drg Arg1:T37 Arg2:T44
+R14	Drg Arg1:T37 Arg2:T45
+R140	Drg Arg1:T13 Arg2:T12
+R141	Drg Arg1:T13 Arg2:T14
+R16	Drg Arg1:T38 Arg2:T43
+R2	Drg Arg1:T40 Arg2:T41
+R20	Dat Arg1:T76 Arg2:T74
+R21	Neg Arg1:T82 Arg2:T79
+R22	Dat Arg1:T78 Arg2:T79
+R23	Neg Arg1:T81 Arg2:T80
+R24	Dat Arg1:T84 Arg2:T83
+R25	Dat Arg1:T84 Arg2:T85
+R26	Dat Arg1:T89 Arg2:T88
+R27	Dat Arg1:T89 Arg2:T90
+R3	Drg Arg1:T39 Arg2:T42
+R6	Drg Arg1:T35 Arg2:T45
+R61	Neg Arg1:T18 Arg2:T20
+R62	Neg Arg1:T18 Arg2:T21
+R7	Drg Arg1:T35 Arg2:T46
+R71	Neg Arg1:T22 Arg2:T23
+R76	Neg Arg1:T22 Arg2:T21
+R85	Neg Arg1:T26 Arg2:T23
+R87	Neg Arg1:T26 Arg2:T25
+R9	Drg Arg1:T36 Arg2:T44
+R99	Neg Arg1:T27 Arg2:T23

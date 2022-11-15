@@ -1,0 +1,201 @@
+T1	Investigation 3037 3041	ECHO
+T2	Investigation 3043 3061	EKG metodą Holtera
+T3	Investigation 3063 3067	ABPM
+T4	Investigation 3069 3084	próba wysiłkowa
+T5	Drug 2937 2944	Amlozek
+T6	Drug 2918 2924	Concor
+T7	Drug 2895 2907	Preductal MR
+T8	Drug_dose 2908 2917	2x 1 tabl
+R1	Drg Arg1:T7 Arg2:T8	
+T9	Drug_dose 2925 2936	2,5mg/wiecz
+R2	Drg Arg1:T6 Arg2:T9	
+T10	Drug_dose 2945 2953	5mg/rano
+R3	Drg Arg1:T5 Arg2:T10	
+T11	Behaviour 2832 2858	warunki mieszkaniowe dobre
+T12	Condition 2808 2811	tbc
+N1	Reference T12 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T13	Condition 2791 2800	borelioza
+N2	Reference T13 ICD10:A69.2	Choroba z Lyme
+T14	Condition 2781 2784	WZW
+N3	Reference T14 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T15	Negation 2785 2788	(-)
+R4	Neg Arg1:T15 Arg2:T14	
+T16	Negation 2801 2806	( - )
+R5	Neg Arg1:T16 Arg2:T13	
+T17	Negation 2812 2815	(-)
+R6	Neg Arg1:T17 Arg2:T12	
+T18	Negation 2750 2753	nie
+T19	Negation 2716 2721	nigdy
+T20	Negation 2735 2738	nie
+T21	Investigation_result 2124 2145	RR ok. 150/90-100mmHg
+T22	Investigation_result 2147 2178	skoki RR do 180/140-220/130mmHg
+T23	Investigation_result 2210 2232	chwiejnych wartości RR
+T24	Symptom 2238 2261	napadów kołatania serca
+N4	Reference T24 ICD10:R00.2	Kołatanie serca
+T25	Investigation 2309 2321	gastroskopii
+T26	Investigation_result 2322 2327	dobry
+A1	Source T26 Declared
+R7	Inv Arg1:T25 Arg2:T26	
+T27	Investigation 2331 2343	kolonoskopii
+T28	Investigation_result 2356 2379	uchyłki jelita grubego,
+N5	Reference T28 ICD10:K57	Choroba uchyłkowa jelita
+T29	Symptom 2380 2388	nudnosci
+N6	Reference T29 ICD10:R11	Nudności i wymioty
+R8	Inv Arg1:T27 Arg2:T28	
+T30	Drug 2434 2443	Heviranem
+T31	Date 2389 2403	rano od 2 lat,
+R9	Dat Arg1:T31 Arg2:T29	
+T32	Condition 2416 2425	półpasiec
+N7	Reference T32 ICD10:B02	Choroba zakaźna wywołana przez wirus herpes zoster [półpasiec]
+T33	Date 2404 2415	1 m-ce temu
+R10	Dat Arg1:T33 Arg2:T32	
+R11	Dat Arg1:T33 Arg2:T30	
+T34	Condition 2467 2485	wola guzowatego (?
+A2	Source T34 Declared
+T35	Investigation 2445 2466	w trakcie diagnostyki
+T36	Condition 2739 2748	Uczulenia
+N9	Reference T36 ICD10:Z91.0	
+R12	Neg Arg1:T18 Arg2:T36	
+T37	Behaviour 2722 2733	Inne używki
+N10	Reference T37 ICD10:Z72	Problemy związane ze stylem życia
+R13	Neg Arg1:T20 Arg2:T37	
+T38	Behaviour 2699 2714	Palenie tytoniu
+N11	Reference T38 ICD10:Z72.0	Używanie tytoniu
+R14	Neg Arg1:T19 Arg2:T38	
+T39	Condition 2662 2684	żylaków lewej k dolnej
+N12	Reference T39 ICD10:I83	Żylaki kończyn dolnych
+T40	Date 2685 2698	ok 5 lat temu
+T41	Treatment 2652 2660	operacje
+R15	Dat Arg1:T40 Arg2:T39	
+R16	Dat Arg1:T40 Arg2:T41	
+T42	Negation 2488 2494	Neguje
+T43	Symptom 2496 2508	zasłabnięcia
+N13	Reference T43 ICD10:R55	Omdlenie i zapaść
+T44	Symptom 2510 2518	omdlenia
+N14	Reference T44 ICD10:R55	Omdlenie i zapaść
+T45	Symptom 2520 2530	krwawienia
+N15	Reference T45 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T46	Symptom 2532 2545	czarne stolce
+N16	Reference T46 ICD10:K92.1	Stolce smołowate
+T47	Symptom 2547 2563	brunatne wymioty
+N17	Reference T47 ICD10:K92.0	Wymioty krwawe
+T48	Condition 2565 2582	chorobę wrzodową,
+N18	Reference T48 ICD10:K27	
+T49	Symptom 2583 2597	duszność nocną
+N19	Reference T49 ICD10:R06.0	Duszność
+T50	Symptom 2599 2614	obrzęki podudzi
+N20	Reference T50 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T51	Symptom 2616 2640	bóle w klatce piersiowej
+R17	Neg Arg1:T42 Arg2:T43	
+N21	Reference T51 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+R18	Neg Arg1:T42 Arg2:T44	
+R19	Neg Arg1:T42 Arg2:T45	
+R20	Neg Arg1:T42 Arg2:T46	
+R21	Neg Arg1:T42 Arg2:T47	
+R22	Neg Arg1:T42 Arg2:T48	
+R23	Neg Arg1:T42 Arg2:T49	
+R24	Neg Arg1:T42 Arg2:T50	
+R25	Neg Arg1:T42 Arg2:T51	
+T52	Condition 439 441	HA
+N22	Reference T52 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T53	Symptom 443 458	Kołatania serca
+N23	Reference T53 ICD10:R00.2	Kołatanie serca
+T54	Condition 460 476	Choroba tarczycy
+N24	Reference T54 ICD10:E07	Inne choroby tarczycy
+T55	Investigation 477 499	w trakcie diagnostyki.
+T56	Condition 508 517	półpaśćcu
+N25	Reference T56 ICD10:B02	Choroba zakaźna wywołana przez wirus herpes zoster [półpasiec]
+T57	Date 518 528	1 m-c temu
+R26	Dat Arg1:T57 Arg2:T56	
+T58	Condition 530 552	Uchyłki jelita grubego
+N26	Reference T58 ICD10:K57	Choroba uchyłkowa jelita
+T59	Condition 583 612	żylaków lewej kończyny dolnej
+N27	Reference T59 ICD10:I83	Żylaki kończyn dolnych
+T60	Date 613 624	(5 lat temu
+T61	Treatment 574 582	operacji
+R27	Dat Arg1:T60 Arg2:T59	
+R28	Dat Arg1:T60 Arg2:T61	
+T62	Drug 746 758	Preductal MR
+T63	Drug 761 767	Coccor
+T64	Drug 770 778	Primacor
+T65	Drug 781 789	Sulpiryd
+T66	Drug 792 802	NaCL 0,9 %
+T67	Condition 1031 1080	Umiarkowana niedomykalność zastawki trójdzielnej.
+N28	Reference T67 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T68	Condition 1081 1120	Tętniak przegrody międzyprzedsionkowej.
+N29	Reference T68 ICD10:Q21.8	Inna wrodzona wada rozwojowa przegród serca
+T69	Condition 1122 1149	Poszerzona aorta wstępująca
+N30	Reference T69 ICD10:R93.0	Nieprawidłowe wyniki diagnostycznych badań obrazowych czaszki i głowy, niesklasyfikowane gdzie indziej
+T70	Condition 1151 1181	Pojedyncze pobudzenia komorowe
+N31	Reference T70 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T71	Condition 1184 1195	nadkomorowe
+N32	Reference T71 ICD10:I49.1	
+T72	Condition 1197 1218	Nadciśnienie tętnicze
+N33	Reference T72 ICD10:I10	
+T73	Condition 1221 1241	Hipercholesterolemia
+T74	Condition 1244 1258	Guzki tarczycy
+T75	Investigation 1259 1280	w trakcie diagnostyki
+T76	Condition 1282 1322	Zmiany ogniskowe z wątrobie - naczyniaki
+N36	Reference T76 ICD10:K76	Inne choroby wątroby
+T77	Condition 1325 1347	Uchyłki jelita grubego
+N37	Reference T77 ICD10:K57	Choroba uchyłkowa jelita
+T78	Condition 1378 1409	żylaków lewej kończyny dolnej (
+N38	Reference T78 ICD10:I83	
+T79	Treatment 1369 1377	operacji
+T80	Date 1409 1419	5 lat temu
+R29	Dat Arg1:T80 Arg2:T78	
+R30	Dat Arg1:T80 Arg2:T79	
+T81	Treatment 1530 1596	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej.
+T82	Behaviour 1598 1638	Dieta lekkostrawna , niskocholesterolowa
+T83	Investigation 1651 1725	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T84	Investigation 1742 1776	kontrola ciśnienia tętniczego krwi
+T85	Drug 1827 1839	Preductal MR
+T86	Drug_dose 1840 1849	2x 1 tabl
+R31	Drg Arg1:T85 Arg2:T86	
+T87	Drug 1850 1856	Concor
+T88	Drug_dose 1857 1868	2,5mg/wiecz
+R32	Drg Arg1:T87 Arg2:T88	
+T89	Drug 1869 1877	Primacor
+T90	Drug_dose 1878 1899	10 mg 1x dz wieczorem
+R33	Drg Arg1:T89 Arg2:T90	
+T91	Drug 1901 1909	Sulpiryd
+T92	Drug_dose 1910 1974	50 mg 1 x dz rano przed śniadaniem - wg zaleceń gastroenterologa
+R34	Drg Arg1:T91 Arg2:T92	
+N34	Reference T73 ICD10:E78.0	Czysta hipercholesterolemia
+N8	Reference T34 ICD10:E04.8	Wole nietoksyczne, inne określone
+N35	Reference T74 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+R1	Dat Arg1:T57 Arg2:T56
+R101	Neg Arg1:T17 Arg2:T12
+R107	Neg Arg1:T17 Arg2:T11
+R122	Neg Arg1:T18 Arg2:T36
+R13	Drg Arg1:T89 Arg2:T88
+R14	Drg Arg1:T89 Arg2:T90
+R145	Neg Arg1:T19 Arg2:T38
+R162	Neg Arg1:T20 Arg2:T37
+R168	Drg Arg1:T6 Arg2:T8
+R169	Drg Arg1:T7 Arg2:T8
+R179	Dat Arg1:T40 Arg2:T39
+R18	Drg Arg1:T91 Arg2:T90
+R183	Dat Arg1:T40 Arg2:T38
+R19	Drg Arg1:T91 Arg2:T92
+R199	Drg Arg1:T5 Arg2:T9
+R2	Dat Arg1:T57 Arg2:T58
+R20	Inv Arg1:T25 Arg2:T26
+R200	Drg Arg1:T5 Arg2:T10
+R21	Inv Arg1:T25 Arg2:T28
+R22	Inv Arg1:T27 Arg2:T26
+R23	Inv Arg1:T27 Arg2:T28
+R27	Neg Arg1:T42 Arg2:T43
+R28	Neg Arg1:T42 Arg2:T44
+R29	Neg Arg1:T42 Arg2:T45
+R3	Dat Arg1:T60 Arg2:T59
+R38	Dat Arg1:T31 Arg2:T29
+R4	Drg Arg1:T85 Arg2:T86
+R48	Dat Arg1:T33 Arg2:T29
+R5	Drg Arg1:T85 Arg2:T88
+R66	Neg Arg1:T15 Arg2:T13
+R67	Neg Arg1:T15 Arg2:T14
+R8	Drg Arg1:T87 Arg2:T86
+R83	Neg Arg1:T16 Arg2:T12
+R84	Neg Arg1:T16 Arg2:T13
+R9	Drg Arg1:T87 Arg2:T88

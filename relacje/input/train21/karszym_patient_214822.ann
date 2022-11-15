@@ -1,0 +1,105 @@
+T1	Behaviour 448 458	Nikotynizm
+T2	Condition 460 467	Nadwaga
+T3	Condition 469 484	Cukrzyca typu 2
+N1	Reference T3 ICD10:E11	Cukrzyca insulinoniezależna
+T4	Condition 486 508	Żylaki kończyn dolnych
+N2	Reference T4 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T5	Condition 510 544	Niealkoholowe stłuszczenie wątroby
+N3	Reference T5 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T6	Treatment 669 696	dalsza opieka w poradni POZ
+T7	Treatment 704 736	okresowa kontrola kardiologiczna
+T8	Date 767 780	za 6 miesięcy
+R1	Dat Arg1:T8 Arg2:T7	
+T9	Treatment 789 813	kontrola diabetologiczna
+T10	Treatment 819 858	codzienna kontrola ciśnienia tętniczego
+T11	Treatment 866 922	okresowa kontrola lipidogramu i stężenia aminotransferaz
+T12	Date 924 947	pierwsza za 4-6 tygodni
+R2	Dat Arg1:T12 Arg2:T11	
+T13	Treatment 950 988	oceną możliwości kontynuowania terapii
+R3	Dat Arg1:T12 Arg2:T13	
+T14	Drug 989 996	statyną
+R4	Dat Arg1:T12 Arg2:T14	
+T15	Behaviour 1003 1025	dieta niskoglikemiczna
+T16	Behaviour 1032 1051	redukcja masy ciała
+T17	Behaviour 1060 1105	stały, umiarkowany, aerobowy wysiłek fizyczny
+T18	Drug 1150 1155	Acard
+T19	Drug_dose 1156 1176	75 1 tabl. wieczorem
+T20	Drug 1210 1216	Atoris
+T21	Drug 1248 1258	Concor Cor
+T22	Drug 1286 1296	Diaprel MR
+T23	Drug_dose 1217 1240	20 mg 1 tabl. wieczorem
+T24	Drug_dose 1259 1278	2.5 mg 1 tabl. rano
+T25	Drug_dose 1297 1315	30 mg 1 tabl. rano
+R5	Drg Arg1:T18 Arg2:T19	
+R6	Drg Arg1:T20 Arg2:T23	
+R7	Drg Arg1:T21 Arg2:T24	
+R8	Drg Arg1:T22 Arg2:T25	
+T26	Symptom 1484 1522	bólów w klatce piersiowej (3 incydenty
+T27	Date 1523 1547	od połowy ubiegłego roku
+R9	Dat Arg1:T27 Arg2:T26	
+T28	Symptom 1549 1573;1580 1594;1600 1622;1640 1686	przeszywające i gniotące pod prysznicem w czasie prac domowych utrzymywały się około 1 h, ustąpiły samoistnie
+R10	Dat Arg1:T27 Arg2:T28	
+T29	Condition 1709 1715	DM t.2
+N6	Reference T29 ICD10:E11	Cukrzyca insulinoniezależna
+T30	Date 1718 1729	od 1.5 roku
+R11	Dat Arg1:T30 Arg2:T29	
+T31	Condition 1731 1751	hipercholesterolemia
+N7	Reference T31 ICD10:E78.0	Czysta hipercholesterolemia
+T32	Date 1753 1774	przez ostatnie 2 lata
+T33	Symptom 1775 1800	wzrost masy ciała o 10 kg
+R12	Dat Arg1:T32 Arg2:T33	
+T34	Condition 1802 1820	żylaki kk. dolnych
+N8	Reference T34 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T35	Condition 1822 1842	stłuszczenie wątroby
+N9	Reference T35 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T36	Negation 1864 1870	neguje
+T37	Negation 1889 1902	bez znaczenia
+T38	Condition 1872 1887	Wywiad rodzinny
+A1	Status T38 Family
+R13	Neg Arg1:T37 Arg2:T38	
+T39	Treatment 1845 1862	Przebyte operacje
+R14	Neg Arg1:T36 Arg2:T39	
+T40	Condition 1904 1939	Alergie: detergenty, środki piorące
+N11	Reference T40 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T41	Behaviour 1941 1977	Nikotynizm: tak, 15 papierosów/dzień
+T42	Date 1978 1984	40 lat
+R15	Dat Arg1:T42 Arg2:T41	
+T43	Behaviour 1986 2007	Alkohol: okazjonalnie
+T44	Behaviour 2009 2026	Uzależnienie inne
+T45	Negation 2028 2034	neguje
+R16	Neg Arg1:T45 Arg2:T44	
+T46	Behaviour 2052 2061	emerytura
+T47	Behaviour 2067 2103	pracuje jako opiekunka dla dorosłych
+T48	Behaviour 2105 2119	umysłowa praca
+T49	Date 2120 2129	wcześniej
+R17	Dat Arg1:T49 Arg2:T48	
+T50	Drug 2137 2142	Acard
+T51	Drug 2165 2175	Diaprel MR
+T52	Drug 2196 2203	Molekin
+T53	Drug 2218 2237	Magnez +Vitamina B6
+T54	Drug 2252 2259	Beto ZK
+T55	Drug_dose 2143 2163	75 1 tabl. wieczorem
+T56	Drug_dose 2176 2194	30 mg 1 tabl. rano
+T57	Drug_dose 2204 2216	1 tabl. rano
+T58	Drug_dose 2238 2250	1 tabl. rano
+T59	Drug_dose 2260 2300	25? - doraźnie w razie przyśpieszonej HR
+R18	Drg Arg1:T50 Arg2:T55	
+R19	Drg Arg1:T51 Arg2:T56	
+R20	Drg Arg1:T52 Arg2:T57	
+R21	Drg Arg1:T53 Arg2:T58	
+R22	Drg Arg1:T54 Arg2:T59	
+T60	Investigation 2328 2338	echo serca
+T61	Investigation 2340 2343	TET
+T62	Investigation 2345 2349	ABPM
+T63	Investigation 2351 2361	Holter ekg
+T64	Investigation 2363 2381	rtg kl. piersiowej
+A2	Source T59 Declared
+N12	Reference T1 ICD10:Z72.0	Używanie tytoniu
+A3	Status T4 Historical_Insignificant
+N5	Reference T28 ICD10:R07.2	Ból w okolicy przedsercowej
+N4	Reference T26 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+A4	Status T34 Historical_Insignificant
+N10	Reference T39 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N13	Reference T41 ICD10:Z72.0	Używanie tytoniu
+A5	Status T43 Historical_Insignificant
+N14	Reference T43 ICD10:Z72.1	Używanie alkoholu

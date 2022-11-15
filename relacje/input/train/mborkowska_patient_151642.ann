@@ -1,0 +1,47 @@
+T1	Behaviour 404 429	dieta niskocholesterolowa
+T2	Drug 462 473	Betaloc ZOK
+T3	Drug_dose 474 494	25 mg 1x 1 tabl/rano
+R1	Drg Arg1:T2 Arg2:T3	
+T4	Condition 888 895	arytmii
+N1	Reference T4 ICD10:I49	Inne zaburzenia rytmu serca
+T5	Date 912 922	lutym 2019
+R2	Dat Arg1:T5 Arg2:T4	
+T6	Investigation 926 934	Holterze
+T7	Date 937 943	lutego
+R3	Dat Arg1:T7 Arg2:T6	
+T8	Investigation_result 944 1016	ExSV 88poj./dobę, 1 para, 2 salwy - 3-5 pobudzeń 100-132/min, 5 poj. ExV
+R4	Inv Arg1:T6 Arg2:T8	
+T9	Condition 1038 1071	 zwyrodnienia w odc. C kręgosłupa
+N2	Reference T9 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T10	Negation 1091 1097	neguje
+T11	Treatment 1073 1090	Przebyte operacje
+R5	Neg Arg1:T10 Arg2:T11	
+T12	Condition 1131 1141	zakrzepica
+A1	Status T12 Family
+N3	Reference T12 ICD10:I80	Zapalenie żył i zakrzepowe zapalenie żył
+T13	Condition 1181 1192	rak wątroby
+A2	Status T13 Family
+N4	Reference T13 ICD10:C22.0	Rak komórek wątroby
+T14	Negation 1204 1210	neguje
+T15	Negation 1224 1236	obecnie nie,
+T16	Condition 1195 1202	Alergie
+N5	Reference T16 ICD10:T78.4	Alergia, nieokreślona
+R6	Neg Arg1:T14 Arg2:T16	
+T17	Behaviour 1212 1222	Nikotynizm
+N6	Reference T17 ICD10:F17.2	
+T18	Negation 1270 1276	neguje
+T19	Behaviour 1261 1268	Alkohol
+N7	Reference T19 ICD10:Z72.1	Używanie alkoholu
+R7	Neg Arg1:T18 Arg2:T19	
+T20	Behaviour 1278 1295	Uzależnienie inne
+T21	Negation 1297 1303	neguje
+R8	Neg Arg1:T21 Arg2:T20	
+T22	Investigation 1405 1415	echo serca
+T23	Investigation 1417 1420	TET
+T24	Investigation 1422 1426	ABPM
+T25	Investigation 1428 1438	Holter ekg
+T26	Investigation 1440 1458	rtg kl. piersiowej
+T27	Drug 1341 1349	Biosotal
+T28	Drug_dose 1350 1376	40 mg 1/2 rano i wieczorem
+R9	Drg Arg1:T27 Arg2:T28	
+R10	Neg Arg1:T15 Arg2:T17	

@@ -1,0 +1,44 @@
+T1	Condition 459 497	Zespół niedorozwoju lewej części serca
+N1	Reference T1 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+T2	Treatment 516 533	operacji Norwooda
+N2	Reference T2 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T3	Treatment 539 597	angioplastyce zespolenia komorowo-płucnego oraz łuku aorty
+T4	Treatment 603 634	operacji dwukierunkowego Glenna
+N3	Reference T4 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T5	Drug 766 772	Acesan
+T6	Drug 782 790	Spironol
+T7	Drug_dose 773 781	1 x 20mg
+T8	Drug_dose 791 798	2 x 5mg
+T9	Treatment 802 836	Kontrola w Poradni Kardiologicznej
+T10	Date 837 850	za 3 miesiące
+T11	Treatment 855 880	Dalsza opieka lekarza POZ
+R1	Drg Arg1:T5 Arg2:T7	
+R2	Drg Arg1:T6 Arg2:T8	
+R3	Dat Arg1:T10 Arg2:T9	
+T12	Condition 1121 1159	Zespół niedorozwoju lewej części serca
+N4	Reference T12 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+T13	Treatment 1178 1195	operacji Norwooda
+N5	Reference T13 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T14	Treatment 1201 1259	angioplastyce zespolenia komorowo-płucnego oraz łuku aorty
+T15	Treatment 1265 1296	operacji dwukierunkowego Glenna
+N6	Reference T15 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T16	Drug 1428 1434	Acesan
+T17	Drug_dose 1435 1443	1 x 20mg
+T18	Drug 1444 1452	Spironol
+T19	Drug_dose 1453 1460	2 x 5mg
+T20	Treatment 1464 1498	Kontrola w Poradni Kardiologicznej
+T21	Date 1499 1512	za 3 miesiące
+T22	Treatment 1517 1542	Dalsza opieka lekarza POZ
+T23	Condition 1678 1682	HLHS
+N7	Reference T23 ICD10:Q23.4	Zespół niedorozwoju lewej części serca
+T24	Drug 1704 1714	Sildenafil
+T25	Drug 1717 1723	Acesan
+T26	Drug 1726 1734	Spironol
+T27	Investigation 1750 1768	cewnikowanie serca
+T28	Condition 1770 1787	wywiad alergiczny
+N8	Reference T28 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T29	Negation 1788 1794	ujemny
+R4	Dat Arg1:T21 Arg2:T20	
+R5	Drg Arg1:T16 Arg2:T17	
+R6	Drg Arg1:T18 Arg2:T19	
+R7	Neg Arg1:T29 Arg2:T28	

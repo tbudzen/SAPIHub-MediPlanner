@@ -1,0 +1,27 @@
+T1	Drug 340 349	Captopril
+T2	Drug 351 357	Nebbud
+T3	Drug 489 498	Captopril
+T4	Drug_dose 499 506	2 x 4mg
+T5	Drug 508 514	Nebbud
+T6	Drug_dose 515 540	2 x 0.125mg w nebulizacji
+R1	Drg Arg1:T3 Arg2:T4	
+R2	Drg Arg1:T5 Arg2:T6	
+T7	Treatment 545 573	Dalsza opieka kardiologiczna
+T8	Treatment 576 618	kontrolna wizyta w Poradni Kardiologicznej
+T9	Date 619 627	za 6-mcy
+R3	Dat Arg1:T9 Arg2:T8	
+T10	Condition 846 915	Wrodzona wada serca - tetralogia Fallota bez zastawki tętnicy płucnej
+N1	Reference T10 ICD10:Q21.3	Tetralogia Fallota
+T11	Treatment 928 977	operacji z użyciem zastawki biologicznej Contegra
+N2	Reference T11 ICD10:Z95.3	Obecność ksenogenicznej zastawki serca
+T12	Date 979 990	20.10.2014r
+T13	Treatment 996 1033	reoperacji uwolnienia lewego oskrzela
+N3	Reference T13 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T14	Date 1035 1046	28.10.2014r
+T15	Condition 1052 1067	Zespół DiGeorga
+N4	Reference T15 ICD10:D82.1	Zespół DiGeorge’a
+R4	Dat Arg1:T12 Arg2:T11	
+R5	Dat Arg1:T14 Arg2:T13	
+R6	Dat Arg1:T12 Arg2:T10	
+T16	Condition 1069 1087	mikrodelecja 22q11
+N5	Reference T16 ICD10:D82.1	Zespół DiGeorge’a

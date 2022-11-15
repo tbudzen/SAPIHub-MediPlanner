@@ -1,0 +1,75 @@
+T1	Condition 450 468	Droży otwór owalny
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Condition 470 500	Pojedyncze pobudzenia komorowe
+N2	Reference T2 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T3	Drug 621 629	Bisocard
+T4	Treatment 966 1047	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Neurologicznej
+T5	Behaviour 1050 1090	Dieta lekkostrawna , niskocholesterolowa
+T6	Investigation 1094 1177	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T7	Investigation 1180 1228	Systematyczna kontrola ciśnienia tętniczego krwi
+T8	Treatment 1231 1272	Wskazane systematyczne przyjmowanie leków
+T9	Drug 1279 1287	Bisocard
+T10	Drug_dose 1288 1305	2,5 mg 1x dz rano
+R1	Drg Arg1:T9 Arg2:T10	
+T11	Condition 1489 1546	przecieku lewo prawego w przegrodzie międzyprzedsionkowej
+A1	Source T11 Declared
+N3	Reference T11 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T12	Investigation 1553 1556	TEE
+T13	Negation 1560 1566	Neguje
+T14	Symptom 1567 1579	zasłabnięcia
+T15	Negation 1582 1588	neguje
+T16	Symptom 1589 1613	bóle w klatce piersiowej
+N4	Reference T16 ICD10:R07	Ból gardła i w klatce piersiowej
+R2	Neg Arg1:T15 Arg2:T16	
+R3	Neg Arg1:T13 Arg2:T14	
+T17	Condition 1629 1660	Komorowe zaburzenia rytmu serca
+N5	Reference T17 ICD10:I49.3	
+T18	Investigation 1665 1677	Holterze EKG
+T19	Investigation_result 1678 1715	1359 pojedynczych pobudzeń komorowych
+N6	Reference T19 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+R4	Inv Arg1:T18 Arg2:T19	
+T20	Investigation 1742 1745	EKG
+T21	Investigation 1784 1809	angi CT tętnic wieńcowych
+T22	Negation 1812 1827	nie stwierdzono
+T23	Investigation_result 1828 1846	zmian w naczyniach
+R5	Neg Arg1:T22 Arg2:T23	
+R6	Inv Arg1:T21 Arg2:T23	
+T24	Treatment 1849 1866	Przebyte operacje
+T25	Treatment 1869 1885	cięcie cesarskie
+A2	Status T25 Historical_Insignificant
+T26	Date 1886 1890	2009
+R7	Dat Arg1:T26 Arg2:T25	
+T27	Treatment 1892 1911	Leczenie przewlekłe
+T28	Negation 1914 1918	brak
+R8	Neg Arg1:T28 Arg2:T27	
+T29	Condition 1947 1950	WZW
+N7	Reference T29 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T30	Negation 1953 1954	-
+R9	Neg Arg1:T30 Arg2:T29	
+T31	Condition 1960 1969	borelioza
+N8	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Negation 1972 1973	-
+R10	Neg Arg1:T32 Arg2:T31	
+T33	Condition 1978 1997	wywiadzie rodzinnym
+A3	Status T33 Family
+T34	Condition 2000 2021	nadciśnienie tętnicze
+A4	Status T34 Family
+N9	Reference T34 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T35	Behaviour 2030 2045	Palenie tytoniu
+N10	Reference T35 ICD10:Z72.0	Używanie tytoniu
+T36	Negation 2047 2050	nie
+R11	Neg Arg1:T36 Arg2:T35	
+T37	Behaviour 2051 2062	Inne używki
+T38	Negation 2064 2067	nie
+R12	Neg Arg1:T38 Arg2:T37	
+T39	Condition 2068 2077	Uczulenia
+N11	Reference T39 ICD10:T78.4	Alergia, nieokreślona
+T40	Negation 2079 2085	neguje
+R13	Neg Arg1:T40 Arg2:T39	
+T41	Behaviour 2102 2128	warunki mieszkaniowe dobre
+T42	Drug 2158 2166	Bisocard
+T43	Drug_dose 2167 2184	2,5 mg 1x dz rano
+R14	Drg Arg1:T42 Arg2:T43	
+T44	Investigation 2200 2210	Echo serca
+T45	Investigation 2213 2223	Holter EKG
+T46	Investigation 2227 2230	TEE

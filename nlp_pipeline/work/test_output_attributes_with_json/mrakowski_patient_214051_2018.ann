@@ -1,0 +1,32 @@
+T1	Treatment 469 477	operacji
+T2	Condition 478 542	całkowitego nieprawidłowego spływu żył płucnych (typ podsercowy)
+T3	Date 545 556	21.11.2002r
+T4	Drug 819 832	MagneB6 forte
+T5	Drug 846 852	Vit.D3
+T6	Drug_dose 833 843	1 x 1 tabl
+T7	Drug_dose 854 863	1 x 1000j
+T8	Behaviour 868 924	Systematyczna aktywność fizyczna z zakresie rekreacyjnym
+T9	Treatment 929 976	Dalsza opieka kardiologiczna - kontrolna wizyta
+T10	Date 977 983	za rok
+T11	Condition 1123 1159	nieprawidłowym spływem  żył płucnych
+T12	Treatment 1164 1172	korekcji
+T13	Condition 1206 1223	wywiad alergiczny
+T14	Negation 1224 1230	ujemny
+T15	Investigation 1187 1204	badania kontrolne
+T16	Drug 1233 1247	leków na stałe
+T17	Negation 1248 1261	nie otrzymuje
+T18	Negation 677 680	Bez
+T19	Drug 681 686	leków
+N1	Reference T1 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N2	Reference T2 ICD10:Q26.2	CaÅkowicie nieprawidÅowe ujÅcie Å¼yÅ pÅucnych
+N3	Reference T12 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N4	Reference T13 ICD10:T78.4	Alergia, nieokreÅlona
+R1	Dat Arg1:T3 Arg2:T2
+R15	Neg Arg1:T17 Arg2:T16
+R2	Dat Arg1:T3 Arg2:T1
+R3	Neg Arg1:T18 Arg2:T19
+R4	Drg Arg1:T4 Arg2:T6
+R5	Drg Arg1:T4 Arg2:T7
+R6	Drg Arg1:T5 Arg2:T6
+R7	Drg Arg1:T5 Arg2:T7
+R8	Neg Arg1:T14 Arg2:T13

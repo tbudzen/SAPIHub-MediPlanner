@@ -1,0 +1,145 @@
+T1	Treatment 341 397	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T2	Investigation 421 460	SPECT serca w warunkach ambulatoryjnych
+T3	Behaviour 537 576	Dieta lekkostrawna, niskocholesterolowa
+T4	Investigation 583 674	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T5	Date 675 686	co 6-8 tyg.
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Investigation 699 747	Systematyczna kontrola ciśnienia tętniczego krwi
+T7	Behaviour 754 826	Regularna łagodna aktywność fizyczna 5x w tyg. po min. 30 minut dziennie
+T10	Drug 862 867	Acard
+T11	Drug_dose 868 893	75 mg 1x1 tabl. wieczorem
+T12	Drug 894 899	Nedal
+T13	Drug_dose 900 921	5 mg 1x1/4 tabl. rano
+T14	Drug 922 927	Atrox
+T15	Drug_dose 928 953	40 mg 1x1 tabl. wieczorem
+T16	Drug 954 966	Preductal MR
+T17	Drug_dose 967 976	2x1 tabl.
+R3	Drg Arg1:T10 Arg2:T11	
+R4	Drg Arg1:T12 Arg2:T13	
+R5	Drg Arg1:T14 Arg2:T15	
+R6	Drg Arg1:T16 Arg2:T17	
+T18	Condition 1205 1244	Niedomykalność mitralna do umiarkowanej
+N2	Reference T18 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T19	Condition 1246 1282	Stabilna choroba niedokrwienna serca
+N3	Reference T19 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T20	Condition 1305 1364	zawale serca z uniesieniem odcinka ST (STEMI) ściany dolnej
+N4	Reference T20 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T21	Treatment 1365 1419	leczonym koronaroplastyką PTW z implantacją stentu DES
+N5	Reference T21 ICD10:Z95.5	Obecność implantów i przeszczepów związanych z angioplastyką wieńcową
+T22	Date 1421 1431	29.06.2017
+R7	Dat Arg1:T22 Arg2:T21	
+R8	Dat Arg1:T22 Arg2:T20	
+T23	Condition 1434 1454	Hipercholesterolemia
+N6	Reference T23 ICD10:E78.0	Czysta hipercholesterolemia
+T24	Behaviour 1456 1466	Nikotynizm
+N7	Reference T24 ICD10:Z72.0	Używanie tytoniu
+T25	Symptom 1480 1513	Epizod przemijającego niedosłuchu
+T26	Date 1515 1522	02.2019
+R9	Dat Arg1:T26 Arg2:T25	
+T27	Condition 1738 1743	STEMI
+N8	Reference T27 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T28	Date 1744 1753	w 2017 r.
+R10	Dat Arg1:T28 Arg2:T27	
+T29	Symptom 1756 1793	epizodu przemijającej nagłej głuchoty
+T30	Date 1794 1805	w lutym br.
+R11	Dat Arg1:T30 Arg2:T29	
+T31	Condition 1826 1845	STEMI ściany dolnej
+N9	Reference T31 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T32	Date 1846 1858	w 06.2017 r.
+T33	Treatment 1859 1893	leczonym PCI PTW z implantacją DES
+N10	Reference T33 ICD10:Z95.5	Obecność implantów i przeszczepów związanych z angioplastyką wieńcową
+R12	Dat Arg1:T32 Arg2:T31	
+R13	Dat Arg1:T32 Arg2:T33	
+T34	Symptom 1895 1928	Przemijająca głuchota ucha lewego
+T35	Date 1929 1936	02.2019
+T36	Negation 1939 1945	Neguje
+R14	Dat Arg1:T35 Arg2:T34	
+T37	Symptom 1947 1959	zasłabnięcia
+T38	Symptom 1961 1969	omdlenia
+N11	Reference T38 ICD10:R55	Omdlenie i zapaść
+T39	Symptom 1983 1996	czarne stolce
+N12	Reference T39 ICD10:K92.1	Stolce smołowate
+T40	Symptom 1971 1981	krwawienia
+T41	Symptom 1998 2014	brunatne wymioty
+N13	Reference T41 ICD10:K92.0	Wymioty krwawe
+T42	Condition 2016 2032	chorobę wrzodową
+N14	Reference T42 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T43	Symptom 2034 2062	duszność nocną typu ortopnoe
+N15	Reference T43 ICD10:R06.0	Duszność
+T44	Condition 2064 2066	HA
+N16	Reference T44 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T45	Condition 2068 2070	DM
+N17	Reference T45 ICD10:E14	Cukrzyca nieokreślona
+T46	Treatment 2075 2092	Przebyte operacje
+N18	Reference T46 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T47	Negation 2094 2100	neguje
+R15	Neg Arg1:T36 Arg2:T37	
+R16	Neg Arg1:T36 Arg2:T38	
+R17	Neg Arg1:T36 Arg2:T40	
+R18	Neg Arg1:T36 Arg2:T39	
+R19	Neg Arg1:T36 Arg2:T41	
+R20	Neg Arg1:T36 Arg2:T42	
+R21	Neg Arg1:T36 Arg2:T43	
+R22	Neg Arg1:T36 Arg2:T44	
+R23	Neg Arg1:T36 Arg2:T45	
+T48	Behaviour 2101 2116	Palenie tytoniu
+N19	Reference T48 ICD10:Z72.0	Używanie tytoniu
+T49	Negation 2118 2121	nie
+T50	Date 2122 2131	od zawału
+T51	Date 2133 2142	wcześniej
+T52	Behaviour 2143 2159	ok. 20 paczkolat
+N20	Reference T52 ICD10:Z72.0	Używanie tytoniu
+R24	Neg Arg1:T49 Arg2:T48	
+R25	Dat Arg1:T50 Arg2:T48	
+R26	Neg Arg1:T47 Arg2:T46	
+R27	Dat Arg1:T51 Arg2:T52	
+T53	Behaviour 2161 2172	Inne używki
+T54	Negation 2174 2177	nie
+T55	Condition 2179 2188	Uczulenia
+N21	Reference T55 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T56	Negation 2190 2193	nie
+T57	Condition 2222 2225	WZW
+N22	Reference T57 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T58	Condition 2232 2241	borelioza
+N23	Reference T58 ICD10:A69.2	Choroba z Lyme
+T59	Condition 2249 2252	tbc
+N24	Reference T59 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T60	Negation 2226 2229	(-)
+T61	Negation 2242 2247	( - )
+T62	Negation 2253 2256	(-)
+T63	Behaviour 2274 2300	warunki mieszkaniowe dobre
+R28	Neg Arg1:T54 Arg2:T53	
+R29	Neg Arg1:T56 Arg2:T55	
+R30	Neg Arg1:T60 Arg2:T57	
+R31	Neg Arg1:T61 Arg2:T58	
+R32	Neg Arg1:T62 Arg2:T59	
+T64	Condition 2323 2334	zawał serca
+A1	Status T64 Family
+N25	Reference T64 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T65	Date 2336 2343	45 r.ż.
+T66	Condition 2354 2365	zawał serca
+A2	Status T66 Family
+N26	Reference T66 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T67	Date 2367 2374	49 r.ż.
+R33	Dat Arg1:T65 Arg2:T64	
+R34	Dat Arg1:T67 Arg2:T66	
+T68	Drug 2413 2421	Kaldyuym
+T69	Drug_dose 2422 2436	1x1 tabl. rano
+T70	Drug 2437 2442	Atrox
+T71	Drug_dose 2443 2468	20 mg 1x1 tabl. wieczorem
+T72	Drug 2469 2474	Acard
+T73	Drug_dose 2475 2500	75 mg 1x1 tabl. wieczorem
+T74	Drug 2501 2507	Plavix
+T75	Drug_dose 2508 2528	75 mg 1x1 tabl. rano
+R35	Drg Arg1:T68 Arg2:T69	
+R36	Drg Arg1:T70 Arg2:T71	
+R37	Drg Arg1:T72 Arg2:T73	
+R38	Drg Arg1:T74 Arg2:T75	
+T76	Investigation 2590 2611	badania laboratoryjne
+T77	Investigation 2613 2617	ECHO
+T78	Investigation 2619 2623	ABPM
+T79	Investigation 2625 2635	Holter-EKG
+T80	Investigation 2637 2640	ExT
+T81	Symptom 1283 1295	I/II* wg CCS
+N27	Reference T81 ICD10:I20	Choroba niedokrwienna serca
+T8	Behaviour 830 851	Zakaz palenia tytoniu

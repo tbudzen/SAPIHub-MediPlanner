@@ -1,0 +1,122 @@
+T1	Investigation 2720 2723	TTE
+T2	Investigation 2725 2728	TET
+T3	Investigation 2730 2734	ABPM
+T4	Investigation 2736 2746	Holter EKG
+T5	Drug 2662 2669	Isoptin
+T6	Drug_dose 2670 2704	240 SR 1 tabletka rano i wieczorem
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Behaviour 2586 2612	warunki mieszkaniowe dobre
+T8	Drug 2550 2568	kontrast UltraVist
+T9	Condition 2537 2546	Uczulenie
+N1	Reference T9 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R2	Alg Arg1:T9 Arg2:T8	
+T10	Negation 2518 2524	neguje
+T11	Negation 2497 2503	neguje
+T12	Negation 2325 2330	( - )
+T13	Negation 2343 2348	( - )
+T14	Negation 2359 2364	( - )
+T15	Negation 2371 2376	( - )
+T16	Behaviour 2505 2516	Inne używki
+R3	Neg Arg1:T10 Arg2:T16	
+T17	Behaviour 2480 2495	Palenie tytoniu
+N2	Reference T17 ICD10:T65.2	Tytoń i nikotyna
+R4	Neg Arg1:T11 Arg2:T17	
+T18	Condition 2394 2415	nadciśnienie tętnicze
+N3	Reference T18 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+A1	Status T18 Family
+T19	Condition 2460 2478	rak jelita grubego
+N4	Reference T19 ICD10:C18	Nowotwór złośliwy jelita grubego
+A2	Status T19 Family
+T20	Condition 2321 2324	WZW
+N5	Reference T20 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T21	Condition 2333 2342	borelioza
+N6	Reference T21 ICD10:A69.2	Choroba z Lyme
+T22	Condition 2350 2358	grużlica
+N7	Reference T22 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T23	Condition 2366 2370	odra
+N8	Reference T23 ICD10:B05	Odra
+R5	Neg Arg1:T15 Arg2:T23	
+R6	Neg Arg1:T14 Arg2:T22	
+R7	Neg Arg1:T13 Arg2:T21	
+R8	Neg Arg1:T12 Arg2:T20	
+T24	Condition 2204 2225	Nadciśnienie tętnicze
+N9	Reference T24 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T25	Drug 2238 2257	kontrast UltraVist.
+T26	Condition 2227 2234	Alergia
+N10	Reference T26 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R9	Alg Arg1:T26 Arg2:T25	
+T27	Condition 2135 2176	Łagodna niedomykalność zastawki aortalnej
+N11	Reference T27 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T28	Condition 2178 2187	mitralnej
+N12	Reference T28 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T29	Condition 2190 2202	trójdzielnej
+N13	Reference T29 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T30	Investigation_result 2114 2133	HCM-Risk SCD = 5,6%
+T31	Condition 2040 2106	Kardiomiopatia przerostowa z zawężaniem drogi odpływu lewej komory
+N14	Reference T31 ICD10:I42.1	Przerostowa kardiomiopatia zawężająca
+T32	Negation 1826 1832	Neguje
+T33	Symptom 1833 1845	zasłabnięcia
+N15	Reference T33 ICD10:R55	Omdlenie i zapaść
+T34	Symptom 1847 1855	omdlenia
+N16	Reference T34 ICD10:R55	Omdlenie i zapaść
+T35	Symptom 1857 1870	zawroty głowy
+N17	Reference T35 ICD10:R42	Zawroty głowy i odurzenie
+T36	Symptom 1872 1882	krwawienia
+N18	Reference T36 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T37	Symptom 1884 1897	czarne stolce
+N19	Reference T37 ICD10:K92.1	Stolce smołowate
+T38	Symptom 1899 1915	brunatne wymioty
+N20	Reference T38 ICD10:K92.0	Wymioty krwawe
+T39	Condition 1917 1933	chorobę wrzodową
+N21	Reference T39 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T40	Symptom 1935 1949	duszność nocną
+N22	Reference T40 ICD10:I50.1	Niewydolność serca lewokomorowa
+T41	Symptom 1951 1966	obrzęki podudzi
+N23	Reference T41 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T42	Symptom 1968 1992	bóle w klatce piersiowej
+N24	Reference T42 ICD10:R07.3	Inne bóle w klatce piersiowej
+R10	Neg Arg1:T32 Arg2:T33	
+R11	Neg Arg1:T32 Arg2:T34	
+R12	Neg Arg1:T32 Arg2:T35	
+R13	Neg Arg1:T32 Arg2:T36	
+R14	Neg Arg1:T32 Arg2:T37	
+R15	Neg Arg1:T32 Arg2:T38	
+R16	Neg Arg1:T32 Arg2:T39	
+R17	Neg Arg1:T32 Arg2:T40	
+R18	Neg Arg1:T32 Arg2:T41	
+R19	Neg Arg1:T32 Arg2:T42	
+T43	Drug 1544 1552	Prenessa
+T44	Drug_dose 1553 1577	4 mg 1x1 tabl. wieczorem
+R20	Drg Arg1:T43 Arg2:T44	
+T45	Drug 1519 1526	Isoptin
+T46	Drug_dose 1527 1542	240 SR 2x1 tabl
+R21	Drg Arg1:T45 Arg2:T46	
+T47	Behaviour 1315 1342	Unikanie wysiłków oporowych
+T48	Behaviour 1291 1310	Redukcja masy ciała
+T49	Behaviour 1225 1286	Regularna aerobowa aktywność fizyczna łagodna do umiarkowanej
+T50	Investigation 1184 1218	kontrola ciśnienia tętniczego krwi
+T51	Investigation 1063 1145	kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T52	Behaviour 1007 1046	Dieta lekkostrawna, niskocholesterolowa
+T53	Condition 664 671	Alergia
+N25	Reference T53 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T54	Drug 675 694	kontrast UltraVist.
+R22	Alg Arg1:T53 Arg2:T54	
+T55	Condition 655 662	Otyłość
+N26	Reference T55 ICD10:E66	Otyłość
+T56	Condition 633 653	Hipercholesterolemia
+N27	Reference T56 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T57	Condition 600 631	Nadciśnienie tętnicze I* wg WHO
+N28	Reference T57 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T58	Condition 545 586	Łagodna niedomykalność zastawki mitralnej
+N29	Reference T58 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T59	Condition 589 598	aortalnej
+N30	Reference T59 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T60	Condition 449 515	Kardiomiopatia przerostowa z zawężaniem drogi odpływu lewej komory
+N31	Reference T60 ICD10:I42.1	Przerostowa kardiomiopatia zawężająca
+T61	Investigation_result 523 543	HCM-Risk SCD = 4,16%
+T62	Condition 517 521	HOCM
+N32	Reference T62 ICD10:I42.1	Przerostowa kardiomiopatia zawężająca
+T63	Date 1146 1157	za 6-8 tyg.
+R23	Dat Arg1:T63 Arg2:T51	
+T64	Condition 2108 2112	HOCM
+N33	Reference T64 ICD10:I42.1	Przerostowa kardiomiopatia zawężająca

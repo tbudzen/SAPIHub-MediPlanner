@@ -1,0 +1,138 @@
+T1	Condition 439 477	Przewlekła choroba niedokrwienna serca
+N1	Reference T1 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T2	Condition 479 494	Cukrzyca typu 2
+N2	Reference T2 ICD10:E11	Cukrzyca insulinoniezależna
+T3	Condition 496 517	Nadciśnienie tętnicze
+N3	Reference T3 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T4	Condition 519 535	Arytmia komorowa
+N4	Reference T4 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T5	Treatment 545 557	strumektomii
+N5	Reference T5 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T6	Date 559 563	2007
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Treatment 685 741	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T8	Investigation 755 806	nieinwazyjnej diagnostyki tętnic wieńcowych w SPECT
+T9	Treatment 841 901	Dalsza opieka w Poradni Endokrynologicznej, Diabetologicznej
+T10	Symptom 1088 1108	duszności wysiłkowej
+N6	Reference T10 ICD10:R06.0	Duszność
+T11	Symptom 1128 1171	niestabilnych wartości ciśnienia tętniczego
+T12	Symptom 1237 1316	okresowo bóle w klatce piersiowej o charakterze kłucia występujące przy wysiłku
+T13	Negation 1318 1324	Neguje
+T14	Symptom 1325 1337	zasłabnięcia
+T15	Symptom 1339 1347	omdlenia
+N8	Reference T15 ICD10:R55	Omdlenie i zapaść
+T16	Symptom 1349 1362	zawroty głowy
+N9	Reference T16 ICD10:R42	Zawroty głowy i odurzenie
+T17	Symptom 1364 1374	krwawienia
+T18	Symptom 1376 1389	czarne stolce
+N10	Reference T18 ICD10:K92.1	Stolce smołowate
+T19	Symptom 1391 1407	brunatne wymioty
+N11	Reference T19 ICD10:K92.1	Stolce smołowate
+T20	Condition 1409 1425	chorobę wrzodową
+N12	Reference T20 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T21	Symptom 1427 1441	duszność nocną
+N13	Reference T21 ICD10:R06.0	Duszność
+T22	Symptom 1443 1458	obrzęki podudzi
+N14	Reference T22 ICD10:R60.0	Obrzęk zlokalizowany
+T23	Symptom 1460 1484	bóle w klatce piersiowej
+N15	Reference T23 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N7	Reference T12 ICD10:R07.3	Inne bóle w klatce piersiowej
+R2	Neg Arg1:T13 Arg2:T14	
+T24	Symptom 1486 1505	Innych dolegliwości
+T25	Negation 1506 1517	nie zgłasza
+T26	Condition 1532 1547	Cukrzyca typu 2
+N16	Reference T26 ICD10:E11	Cukrzyca insulinoniezależna
+T27	Condition 1549 1570	Nadciśnienie tętnicze
+N17	Reference T27 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T28	Symptom 1584 1607	ból w klatce piersiowej
+N18	Reference T28 ICD10:R07.2	Ból w okolicy przedsercowej
+T29	Condition 1609 1615	zawał?
+A1	Source T29 Declared
+N19	Reference T29 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T30	Negation 1617 1626	nigdy nie
+T31	Investigation 1627 1639	diagnozowany
+R3	Neg Arg1:T30 Arg2:T31	
+T32	Date 1641 1650	1989/1990
+R4	Dat Arg1:T32 Arg2:T28	
+R5	Dat Arg1:T32 Arg2:T29	
+R6	Dat Arg1:T32 Arg2:T31	
+R7	Neg Arg1:T13 Arg2:T15	
+R8	Neg Arg1:T13 Arg2:T16	
+R9	Neg Arg1:T13 Arg2:T17	
+R10	Neg Arg1:T13 Arg2:T18	
+R11	Neg Arg1:T13 Arg2:T19	
+R12	Neg Arg1:T13 Arg2:T20	
+R13	Neg Arg1:T13 Arg2:T21	
+R14	Neg Arg1:T13 Arg2:T22	
+R15	Neg Arg1:T13 Arg2:T23	
+R16	Neg Arg1:T25 Arg2:T24	
+T33	Treatment 1680 1692	strumektomii
+N20	Reference T33 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T34	Date 1694 1698	2007
+R17	Dat Arg1:T34 Arg2:T33	
+T35	Treatment 1701 1772	Leczenie przewlekłe: endokrynologiczne, diabetologiczne, kardiologiczne
+T36	Condition 1800 1803	WZW
+N21	Reference T36 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T37	Condition 1812 1827	borelioza ( + )
+N22	Reference T37 ICD10:A69.2	Choroba z Lyme
+T38	Condition 1829 1837	grużlica
+N23	Reference T38 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T39	Condition 1845 1849	odra
+N24	Reference T39 ICD10:B05	Odra
+T40	Negation 1804 1809	( - )
+T41	Negation 1838 1843	( - )
+T42	Negation 1850 1855	( - )
+R18	Neg Arg1:T40 Arg2:T36	
+R19	Neg Arg1:T41 Arg2:T38	
+R20	Neg Arg1:T42 Arg2:T39	
+T43	Condition 1856 1871	Wywiad rodzinny
+A4	Status T43 Family
+T44	Negation 1873 1883	nieistotny
+T45	Behaviour 1885 1900	Palenie tytoniu
+N25	Reference T45 ICD10:Z72.0	Używanie tytoniu
+T46	Negation 1902 1908	neguje
+T47	Behaviour 1910 1921	Inne używki
+T48	Negation 1923 1929	neguje
+T49	Condition 1931 1940	Uczulenia
+N26	Reference T49 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T50	Negation 1942 1948	neguje
+R21	Neg Arg1:T44 Arg2:T43	
+R22	Neg Arg1:T46 Arg2:T45	
+R23	Neg Arg1:T48 Arg2:T47	
+R24	Neg Arg1:T50 Arg2:T49	
+T51	Behaviour 1966 1992	warunki mieszkaniowe dobre
+T52	Behaviour 1994 2006	mieszka sama
+T53	Behaviour 2015 2023	emerytka
+T54	Drug 2030 2038	Euthyrox
+T55	Drug_dose 2039 2053	N100 1 tabl. R
+T56	Drug 2055 2063	Setal MR
+T57	Drug_dose 2064 2078	1 tabl. R i W,
+T58	Drug 2079 2087	Gliclada
+T59	Drug_dose 2088 2105	90mg 1 tabletka R
+T60	Drug 2107 2115	Toramide
+T61	Drug_dose 2116 2129	5mg 1 tabl. R
+T62	Drug 2131 2139	Actelsar
+T63	Drug_dose 2140 2154	80mg 1 tabl. R
+T64	Drug 2156 2169	Glucophage XR
+T65	Drug_dose 2170 2185	750mg 1 tabl. W
+T66	Drug 2187 2195	Lecalpin
+T67	Drug_dose 2196 2210	20mg 1 tabl. W
+T68	Drug 2212 2220	Proficar
+T69	Drug_dose 2221 2235	75mg 1 tabl. W
+T70	Drug 2237 2243	Ridlip
+T71	Drug_dose 2244 2258	20mg 1 tabl. W
+T72	Investigation 2274 2277	TTE
+T73	Investigation 2279 2282	TET
+T74	Investigation 2284 2288	ABPM
+T75	Investigation 2290 2300	Holter EKG
+R25	Drg Arg1:T54 Arg2:T55	
+R26	Drg Arg1:T56 Arg2:T57	
+R27	Drg Arg1:T58 Arg2:T59	
+R28	Drg Arg1:T60 Arg2:T61	
+R29	Drg Arg1:T62 Arg2:T63	
+R30	Drg Arg1:T64 Arg2:T65	
+R31	Drg Arg1:T66 Arg2:T67	
+R32	Drg Arg1:T68 Arg2:T69	
+R33	Drg Arg1:T70 Arg2:T71	
+T76	Symptom 1110 1121	II/III NYHA
+N27	Reference T76 ICD10:I50	Niewydolność serca

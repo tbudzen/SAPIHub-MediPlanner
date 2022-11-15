@@ -1,0 +1,155 @@
+T1	Condition 439 472	Napadowy częstoskurcz nadkomorowy
+N1	Reference T1 ICD10:I47.1	Częstoskurcz nadkomorowy
+T2	Condition 474 541	Przewlekłe autoimmunizacyjne zapalenie tarczycy w stadium eutyreozy
+N2	Reference T2 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T3	Condition 543 552	Hirsutyzm
+N3	Reference T3 ICD10:L68.0	Hirsutyzm
+T4	Condition 554 570	Insulinooporność
+N4	Reference T4 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T5	Condition 572 589	Torbiel śledziony
+N5	Reference T5 ICD10:D73.4	Torbiel śledziony
+T6	Symptom 591 608	Przewlekły kaszel
+N6	Reference T6 ICD10:R05	Kaszel
+T7	Treatment 947 1025	Dalsza opieka w POZ, Poradni Zaburzeń Rytmu Serca oraz Poradni Ginekologicznej
+T8	Treatment 1040 1098	dalsza diagnostyka i leczenie w Poradni Endokrynologicznej
+T9	Investigation 1123 1164	USG tarczycy  w warunkach ambulatoryjnych
+T10	Investigation 1179 1210	okresowa kontrola TSH, fT3, fT4
+T11	Investigation 1225 1273	poszerzenie diagnostyki zaburzeń miesiączkowania
+T12	Date 1275 1299	za minimum 3 miesiące od
+T13	Negation 1300 1311	odstawienia
+T14	Drug 1312 1337	antykoncepcji hormonalnej
+T15	Date 1348 1379	w 3.-5. dniu cyklu miesięcznego
+T16	Investigation 1403 1405	LH
+R1	Dat Arg1:T12 Arg2:T14	
+R2	Neg Arg1:T13 Arg2:T14	
+R3	Dat Arg1:T15 Arg2:T16	
+R4	Dat Arg1:T12 Arg2:T16	
+T17	Investigation 1407 1410	FSH
+T18	Investigation 1412 1421	estradiol
+T19	Investigation 1423 1434	testosteron
+T20	Investigation 1436 1440	SHBG
+T21	Investigation 1442 1457	17OHprogesteron
+T22	Investigation 1459 1472	androstendion
+T23	Investigation 1474 1479	DHEAS
+T24	Investigation 1481 1491	prolaktyna
+T25	Investigation 1380 1402	badań laboratoryjnych:
+R5	Dat Arg1:T15 Arg2:T25	
+R6	Dat Arg1:T15 Arg2:T17	
+R7	Dat Arg1:T15 Arg2:T18	
+R8	Dat Arg1:T12 Arg2:T25	
+R9	Dat Arg1:T15 Arg2:T19	
+R10	Dat Arg1:T15 Arg2:T20	
+R11	Dat Arg1:T15 Arg2:T21	
+R12	Dat Arg1:T15 Arg2:T22	
+R13	Dat Arg1:T15 Arg2:T23	
+R14	Dat Arg1:T15 Arg2:T24	
+R15	Dat Arg1:T12 Arg2:T17	
+R16	Dat Arg1:T12 Arg2:T18	
+R17	Dat Arg1:T12 Arg2:T19	
+R18	Dat Arg1:T12 Arg2:T20	
+R19	Dat Arg1:T12 Arg2:T21	
+R20	Dat Arg1:T12 Arg2:T22	
+R21	Dat Arg1:T12 Arg2:T23	
+R22	Dat Arg1:T12 Arg2:T24	
+T26	Treatment 1507 1620	dalsza obserwacja zmian opisywanych w wykonanych badaniach obrazowych (torbiel śledziony) w Poradni Chirurgicznej
+T27	Investigation 1635 1719	dalsza diagnostyka przyczyn przewlekłego kaszlu w warunkach Poradni Pulmonologicznej
+T28	Investigation 1779 1792	białko C i S,
+T29	Investigation 1793 1809	czynnik V Leiden
+T30	Investigation 1851 1894	badania w kierunku mutacji genu protrombiny
+T31	Treatment 1938 1976	rozważenie konsultacji hematologicznej
+T32	Date 1897 1928	po uzyskaniu wszystkich wyników
+R23	Dat Arg1:T32 Arg2:T31	
+T33	Investigation 2002 2094	Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T34	Date 2097 2116	pierwsza za 3-5 dni
+T35	Behaviour 2122 2224	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T36	Investigation 2231 2287	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T37	Drug 2330 2340	Concor Cor
+T38	Drug 2366 2379	Glucophage XR
+T39	Drug_dose 2341 2363	1,25mg 1 tabletka rano
+T40	Drug_dose 2380 2400	1 tabletka wieczorem
+R24	Dat Arg1:T34 Arg2:T33	
+R25	Drg Arg1:T37 Arg2:T39	
+R26	Drg Arg1:T38 Arg2:T40	
+T41	Condition 2545 2582	napadowym częstoskurczem nadkomorowym
+N7	Reference T41 ICD10:I47.1	Częstoskurcz nadkomorowy
+T42	Symptom 2621 2658	powtarzających się epizodów duszności
+N8	Reference T42 ICD10:R06.0	Duszność
+T43	Symptom 2660 2683	uczucia ucisku w gardle
+T44	Symptom 2689 2712	uczucia kołatania serca
+N9	Reference T44 ICD10:R00.2	Kołatanie serca
+T45	Negation 2714 2717	bez
+T46	Symptom 2718 2747	związku z wysiłkiem fizycznym
+R27	Neg Arg1:T45 Arg2:T46	
+T47	Date 2762 2771	w 08.2018
+T48	Condition 2783 2832	częstoskurcz nadkomorowy (z wąskim zespołami QRS)
+N10	Reference T48 ICD10:I47.1	Częstoskurcz nadkomorowy
+T49	Treatment 2845 2860	hospitalizowana
+T50	Treatment 2881 2909	umiarowiona farmakologicznie
+T51	Date 2911 2929	od listopada 2018r
+T52	Symptom 2939 2969	kilkuminutowe napady duszności
+N11	Reference T52 ICD10:R06.0	Duszność
+T53	Symptom 2971 2994	uczucia braku powietrza
+T54	Symptom 3000 3015	kołatania serca
+N12	Reference T54 ICD10:R00.2	Kołatanie serca
+T55	Date 3017 3037	od pobytu w Szpitalu
+T57	Symptom 3075 3094	ustępuje samoistnie
+R29	Dat Arg1:T55 Arg2:T57	
+T58	Condition 3046 3073	napad wystąpił 3 lub 4 razy
+N13	Reference T58 ICD10:I47.1	Częstoskurcz nadkomorowy
+R30	Dat Arg1:T55 Arg2:T58	
+T59	Symptom 3124 3130	kaszlu
+N14	Reference T59 ICD10:R05	Kaszel
+T60	Symptom 3132 3140	Omdlenia
+N15	Reference T60 ICD10:R55	Omdlenie i zapaść
+T61	Symptom 3142 3161	utraty przytomności
+T62	Negation 3162 3177	nie występowały
+T63	Condition 3200 3239	zaburzenia endokrynologiczne -hirsutyzm
+N16	Reference T63 ICD10:L68.0	Hirsutyzm
+T64	Condition 3282 3299	choroby Hashimoto
+T65	Date 3241 3248	obecnie
+T66	Investigation 3314 3341	ambulatoryjne badaniach lab
+T67	Investigation_result 3343 3369	wysokie wartości d-dimerów
+R31	Inv Arg1:T66 Arg2:T67	
+T68	Condition 3407 3441	pod opieką poradni kardiologicznej
+A1	Status T68 Family
+T69	Negation 3442 3445	nie
+T70	Behaviour 3446 3450	pali
+N17	Reference T70 ICD10:Z72.0	Używanie tytoniu
+T71	Treatment 3451 3469	Zabiegi operacyjne
+N18	Reference T71 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T72	Negation 3471 3479	nie było
+T73	Condition 3497 3500	WZW
+N19	Reference T73 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T74	Negation 3501 3504	(-)
+T75	Condition 3506 3514	gruźlica
+N20	Reference T75 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T76	Negation 3515 3518	(-)
+T77	Condition 3520 3529	borelioza
+N21	Reference T77 ICD10:A69.2	Choroba z Lyme
+T78	Negation 3530 3533	(-)
+T79	Drug 3540 3549	Marinette
+T80	Date 3577 3590	od 04.03.2019
+T81	Negation 3591 3604	nie przyjmuje
+T82	Investigation 3618 3628	Echo serca
+T83	Investigation 3631 3641	Holter-ekg
+T84	Investigation 3643 3652	Holter-RR
+R32	Dat Arg1:T80 Arg2:T79	
+R33	Neg Arg1:T81 Arg2:T79	
+R34	Neg Arg1:T74 Arg2:T73	
+R35	Neg Arg1:T76 Arg2:T75	
+R36	Neg Arg1:T78 Arg2:T77	
+R37	Neg Arg1:T72 Arg2:T71	
+R38	Neg Arg1:T69 Arg2:T70	
+R39	Dat Arg1:T65 Arg2:T64	
+A2	Source T64 Declared
+N22	Reference T64 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+R40	Neg Arg1:T62 Arg2:T61	
+R41	Neg Arg1:T62 Arg2:T60	
+R42	Dat Arg1:T51 Arg2:T52	
+R43	Dat Arg1:T51 Arg2:T53	
+R44	Dat Arg1:T51 Arg2:T54	
+R45	Dat Arg1:T47 Arg2:T48	
+R46	Dat Arg1:T47 Arg2:T49	
+R47	Dat Arg1:T47 Arg2:T50	
+T56	Investigation 3249 3270	w trakcie diagnostyki
+R28	Dat Arg1:T65 Arg2:T56	

@@ -1,0 +1,731 @@
+allRelations          : 131
+oks                   : 47
+isRedundantAndRemoveds: 82
+shouldNotBeRemoveds   : 2
+shouldBeBemoveds      : 0
+GOOD / BAD            : 129 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 67 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+Zalecenia
+•\x09dalsza opieka w poradni POZ  
+•\x09okresowa kontrola kardiologiczna, diabetologiczna i ginekologiczna  
+•\x09konieczna poszerzona diagnostyka gruczolaka nadnercza w warunkach szpitalnych - termin przyjęcia do Kliniki Endokrynologii do ustalenia  z P. Dr Renatą Michalak   
+•\x09konsultacja chirurga naczyniowego – poszerzenie aorty brzusznej w opisie CT 
+•\x09codzienna kontrola ciśnienia tętniczego  
+•\x09okresowa kontrola lipidogramu  
+•\x09dieta DASH   
+•\x09redukcja masy ciała  
+•\x09zakaz palenia tytoniu!
+
+R1	Inv Arg1:T12 Arg2:T5 << OK >>	CT -> poszerzenie aorty brzusznej  <RANK: 3> <info: start[696, 659] <type: LEFT>>
+R2	Neg Arg1:T10 Arg2:T8 <<REDUNDANT!!!REMOVED>>	zakaz -> dieta DASH <:REMOVED other second tag between (left):> <RANK: 1> <info: start[835, 789] <type: LEFT>>
+R3	Neg Arg1:T10 Arg2:T9 <<REDUNDANT!!!REMOVED>>	zakaz -> redukcja masy ciała <:REMOVED many second tags on the left:> <RANK: 1> <info: start[835, 808] <type: LEFT>>
+R4	Neg Arg1:T10 Arg2:T11 << OK >>	zakaz -> palenia tytoniu  <RANK: 3> <info: start[835, 841] <type: RIGHT>>
+R5	Neg Arg1:T10 Arg2:T1 <<SHOULD NOT BE REMOVED>>	zakaz -> dalsza opieka w poradni POZ <:REMOVED other second tag between (left):> <RANK: 0> <info: start[835, 345] <type: LEFT>>
+R6	Neg Arg1:T10 Arg2:T2 <<REDUNDANT!!!REMOVED>>	zakaz -> okresowa kontrola kardiologiczna, diabetologiczna i ginekologiczna <:REMOVED other second tag between (left):> <RANK: 0> <info: start[835, 380] <type: LEFT>>
+R7	Neg Arg1:T10 Arg2:T3 <<REDUNDANT!!!REMOVED>>	zakaz -> poszerzona diagnostyka gruczolaka nadnercza w warunkach szpitalnych <:REMOVED other second tag between (left):> <RANK: 0> <info: start[835, 464] <type: LEFT>>
+R8	Neg Arg1:T10 Arg2:T4 <<REDUNDANT!!!REMOVED>>	zakaz -> konsultacja chirurga naczyniowego <:REMOVED other second tag between (left):> <RANK: 1> <info: start[835, 623] <type: LEFT>>
+R9	Neg Arg1:T10 Arg2:T6 <<REDUNDANT!!!REMOVED>>	zakaz -> codzienna kontrola ciśnienia tętniczego <:REMOVED other second tag between (left):> <RANK: 1> <info: start[835, 705] <type: LEFT>>
+R10	Neg Arg1:T10 Arg2:T7 <<REDUNDANT!!!REMOVED>>	zakaz -> okresowa kontrola lipidogramu <:REMOVED other second tag between (left):> <RANK: 1> <info: start[835, 752] <type: LEFT>>
+R11	Neg Arg1:T10 Arg2:T12 <<REDUNDANT!!!REMOVED>>	zakaz -> CT <:REMOVED other second tag between (left):> <RANK: 1> <info: start[835, 696] <type: LEFT>>
+R12	Neg Arg1:T10 Arg2:T5 <<REDUNDANT!!!REMOVED>>	zakaz -> poszerzenie aorty brzusznej <:REMOVED other second tag between (left):> <RANK: 1> <info: start[835, 659] <type: LEFT>>
+
+
+Sentence 5:
+•\x09stały, umiarkowany, aerobowy wysiłek fizyczny  
+•\x09regularne przyjmowanie leków:  
+
+1.\x09Acard 75 mg 1 tabl.
+R13	Drg Arg1:T14 Arg2:T23 << OK >>	Acard -> 75 mg 1 tabl. wieczorem  <RANK: 3> <info: start[955, 961] <type: RIGHT>>
+
+
+Sentence 6:
+wieczorem (lek dostępny bez recepty)  
+2.\x09Polpril 10 mg 1 tabl. wieczorem (lek do ostawienia na 2 tygodnie przed planowanym przyjęciem do Kliniki Endokrynologii)   
+3.\x09Lecalpin 10 mg 1 tabl. rano (lek do ostawienia na 2 tygodnie przed planowanym przyjęciem do Kliniki Endokrynologii)   
+
+R14	Drg Arg1:T15 Arg2:T24 << OK >>	Polpril -> 10 mg 1 tabl. wieczorem  <RANK: 3> <info: start[1020, 1028] <type: RIGHT>>
+R15	Drg Arg1:T15 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Polpril -> 10 mg 1 tabl. rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1020, 1158] <type: RIGHT>>
+R16	Drg Arg1:T16 Arg2:T24 <<REDUNDANT!!!REMOVED>>	Lecalpin -> 10 mg 1 tabl. wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[1149, 1028] <type: LEFT>>
+R17	Drg Arg1:T16 Arg2:T25 << OK >>	Lecalpin -> 10 mg 1 tabl. rano  <RANK: 3> <info: start[1149, 1158] <type: RIGHT>>
+
+
+Sentence 7:
+4.\x09Betaloc ZOK 50 mg 1 i 1/2 tabl. rano (lek do ostawienia na 2 tygodnie przed planowanym przyjęciem do Kliniki Endokrynologii)   
+
+R18	Drg Arg1:T17 Arg2:T26 << OK >>	Betaloc ZOK -> 50 mg 1 i 1/2 tabl. rano  <RANK: 3> <info: start[1274, 1286] <type: RIGHT>>
+
+
+Sentence 8:
+5.\x09Atoris 40 mg 1 tabl.
+R19	Drg Arg1:T18 Arg2:T27 << OK >>	Atoris -> 40 mg 1 tabl. wieczorem  <RANK: 3> <info: start[1408, 1415] <type: RIGHT>>
+
+
+Sentence 9:
+wieczorem  
+6.\x09Glucophage XR 1000 mg 1 tabl.
+R20	Drg Arg1:T19 Arg2:T28 << OK >>	Glucophage XR -> 1000 mg 1 tabl. wieczorem  <RANK: 3> <info: start[1447, 1461] <type: RIGHT>>
+
+
+Sentence 10:
+wieczorem  
+7.\x09Siofor 500 mg 1 tabl. rano i w południe   
+8.\x09Betaserc 24 mg 1 tabl. rano i wieczorem   
+9.\x09Milurit 100 mg 1 tabl. rano   
+
+2 tygodnie przed przyjęciem do Kliniki Endokrynologii, po dostawieniu leków p/nadciśnieniowych dotychczas stosowanych – jak podano wyżej, proszę włączyć:   
+1.\x09Doxar 4 mg 1 tabl. rano i wieczorem (w przypadku zbyt wysokich wartości ciśnienia tętniczego dawkę leku można zwiększyć do 2 tabl. rano i wieczorem)   
+2.    Isoptin SR 120mg 1 tabl. rano i wieczorem 
+------------------------------------------------
+
+R21	Neg Arg1:T33 Arg2:T38 <<REDUNDANT!!!REMOVED>>	dostawieniu -> w przypadku zbyt wysokich wartości ciśnienia tętniczego <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1683, 1825] <type: RIGHT>>
+R22	Neg Arg1:T33 Arg2:T20 <<REDUNDANT!!!REMOVED>>	dostawieniu -> Siofor <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1683, 1495] <type: LEFT>>
+R23	Neg Arg1:T33 Arg2:T21 <<REDUNDANT!!!REMOVED>>	dostawieniu -> Betaserc <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1683, 1544] <type: LEFT>>
+R24	Neg Arg1:T33 Arg2:T22 <<REDUNDANT!!!REMOVED>>	dostawieniu -> Milurit <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1683, 1593] <type: LEFT>>
+R25	Neg Arg1:T33 Arg2:T36 <<REDUNDANT!!!REMOVED>>	dostawieniu -> Doxar <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1683, 1788] <type: RIGHT>>
+R26	Neg Arg1:T33 Arg2:T34 << OK >>	dostawieniu -> leków p/nadciśnieniowych dotychczas stosowanych – jak podano wyżej  <RANK: 3> <info: start[1683, 1695] <type: RIGHT>>
+R27	Neg Arg1:T33 Arg2:T40 <<REDUNDANT!!!REMOVED>>	dostawieniu -> Isoptin SR <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1683, 1946] <type: RIGHT>>
+R28	Neg Arg1:T33 Arg2:T29 <<REDUNDANT!!!REMOVED>>	dostawieniu -> 500 mg 1 tabl. rano i w południe <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1683, 1502] <type: LEFT>>
+R29	Neg Arg1:T33 Arg2:T30 <<REDUNDANT!!!REMOVED>>	dostawieniu -> 24 mg 1 tabl. rano i wieczorem <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1683, 1553] <type: LEFT>>
+R30	Neg Arg1:T33 Arg2:T31 <<REDUNDANT!!!REMOVED>>	dostawieniu -> 100 mg 1 tabl. rano <:REMOVED many second tags on the left:> <RANK: 0> <info: start[1683, 1601] <type: LEFT>>
+R31	Neg Arg1:T33 Arg2:T37 <<REDUNDANT!!!REMOVED>>	dostawieniu -> 4 mg 1 tabl. rano i wieczorem <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1683, 1794] <type: RIGHT>>
+R32	Neg Arg1:T33 Arg2:T39 <<REDUNDANT!!!REMOVED>>	dostawieniu -> można zwiększyć do 2 tabl. rano i wieczorem <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1683, 1892] <type: RIGHT>>
+R33	Neg Arg1:T33 Arg2:T41 <<REDUNDANT!!!REMOVED>>	dostawieniu -> 120mg 1 tabl. rano i wieczorem <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1683, 1957] <type: RIGHT>>
+R34	Drg Arg1:T20 Arg2:T29 << OK >>	Siofor -> 500 mg 1 tabl. rano i w południe  <RANK: 3> <info: start[1495, 1502] <type: RIGHT>>
+R35	Drg Arg1:T20 Arg2:T30 <<REDUNDANT!!!REMOVED>>	Siofor -> 24 mg 1 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1495, 1553] <type: RIGHT>>
+R36	Drg Arg1:T20 Arg2:T31 <<REDUNDANT!!!REMOVED>>	Siofor -> 100 mg 1 tabl. rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1495, 1601] <type: RIGHT>>
+R37	Drg Arg1:T20 Arg2:T37 <<REDUNDANT!!!REMOVED>>	Siofor -> 4 mg 1 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1495, 1794] <type: RIGHT>>
+R38	Drg Arg1:T20 Arg2:T39 <<REDUNDANT!!!REMOVED>>	Siofor -> można zwiększyć do 2 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1495, 1892] <type: RIGHT>>
+R39	Drg Arg1:T20 Arg2:T41 <<REDUNDANT!!!REMOVED>>	Siofor -> 120mg 1 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1495, 1957] <type: RIGHT>>
+R40	Drg Arg1:T21 Arg2:T29 <<REDUNDANT!!!REMOVED>>	Betaserc -> 500 mg 1 tabl. rano i w południe <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[1544, 1502] <type: LEFT>>
+R41	Drg Arg1:T21 Arg2:T30 << OK >>	Betaserc -> 24 mg 1 tabl. rano i wieczorem  <RANK: 3> <info: start[1544, 1553] <type: RIGHT>>
+R42	Drg Arg1:T21 Arg2:T31 <<REDUNDANT!!!REMOVED>>	Betaserc -> 100 mg 1 tabl. rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1544, 1601] <type: RIGHT>>
+R43	Drg Arg1:T21 Arg2:T37 <<REDUNDANT!!!REMOVED>>	Betaserc -> 4 mg 1 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1544, 1794] <type: RIGHT>>
+R44	Drg Arg1:T21 Arg2:T39 <<REDUNDANT!!!REMOVED>>	Betaserc -> można zwiększyć do 2 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1544, 1892] <type: RIGHT>>
+R45	Drg Arg1:T21 Arg2:T41 <<REDUNDANT!!!REMOVED>>	Betaserc -> 120mg 1 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1544, 1957] <type: RIGHT>>
+R46	Drg Arg1:T22 Arg2:T29 <<REDUNDANT!!!REMOVED>>	Milurit -> 500 mg 1 tabl. rano i w południe <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1593, 1502] <type: LEFT>>
+R47	Drg Arg1:T22 Arg2:T30 <<REDUNDANT!!!REMOVED>>	Milurit -> 24 mg 1 tabl. rano i wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[1593, 1553] <type: LEFT>>
+R48	Drg Arg1:T22 Arg2:T31 << OK >>	Milurit -> 100 mg 1 tabl. rano  <RANK: 3> <info: start[1593, 1601] <type: RIGHT>>
+R49	Drg Arg1:T22 Arg2:T37 <<REDUNDANT!!!REMOVED>>	Milurit -> 4 mg 1 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1593, 1794] <type: RIGHT>>
+R50	Drg Arg1:T22 Arg2:T39 <<REDUNDANT!!!REMOVED>>	Milurit -> można zwiększyć do 2 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1593, 1892] <type: RIGHT>>
+R51	Drg Arg1:T22 Arg2:T41 <<REDUNDANT!!!REMOVED>>	Milurit -> 120mg 1 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1593, 1957] <type: RIGHT>>
+R52	Drg Arg1:T36 Arg2:T29 <<REDUNDANT!!!REMOVED>>	Doxar -> 500 mg 1 tabl. rano i w południe <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1788, 1502] <type: LEFT>>
+R53	Drg Arg1:T36 Arg2:T30 <<REDUNDANT!!!REMOVED>>	Doxar -> 24 mg 1 tabl. rano i wieczorem <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1788, 1553] <type: LEFT>>
+R54	Drg Arg1:T36 Arg2:T31 <<REDUNDANT!!!REMOVED>>	Doxar -> 100 mg 1 tabl. rano <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[1788, 1601] <type: LEFT>>
+R55	Drg Arg1:T36 Arg2:T37 << OK >>	Doxar -> 4 mg 1 tabl. rano i wieczorem  <RANK: 3> <info: start[1788, 1794] <type: RIGHT>>
+R56	Drg Arg1:T36 Arg2:T39 << OK >>	Doxar -> można zwiększyć do 2 tabl. rano i wieczorem  <RANK: 2> <info: start[1788, 1892] <type: RIGHT>>
+R57	Drg Arg1:T36 Arg2:T41 <<REDUNDANT!!!REMOVED>>	Doxar -> 120mg 1 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1788, 1957] <type: RIGHT>>
+R58	Drg Arg1:T34 Arg2:T29 <<REDUNDANT!!!REMOVED>>	leków p/nadciśnieniowych dotychczas stosowanych – jak podano wyżej -> 500 mg 1 tabl. rano i w południe <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1695, 1502] <type: LEFT>>
+R59	Drg Arg1:T34 Arg2:T30 <<REDUNDANT!!!REMOVED>>	leków p/nadciśnieniowych dotychczas stosowanych – jak podano wyżej -> 24 mg 1 tabl. rano i wieczorem <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1695, 1553] <type: LEFT>>
+R60	Drg Arg1:T34 Arg2:T31 <<REDUNDANT!!!REMOVED>>	leków p/nadciśnieniowych dotychczas stosowanych – jak podano wyżej -> 100 mg 1 tabl. rano <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[1695, 1601] <type: LEFT>>
+R61	Drg Arg1:T34 Arg2:T37 <<REDUNDANT!!!REMOVED>>	leków p/nadciśnieniowych dotychczas stosowanych – jak podano wyżej -> 4 mg 1 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1695, 1794] <type: RIGHT>>
+R62	Drg Arg1:T34 Arg2:T39 <<REDUNDANT!!!REMOVED>>	leków p/nadciśnieniowych dotychczas stosowanych – jak podano wyżej -> można zwiększyć do 2 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1695, 1892] <type: RIGHT>>
+R63	Drg Arg1:T34 Arg2:T41 <<REDUNDANT!!!REMOVED>>	leków p/nadciśnieniowych dotychczas stosowanych – jak podano wyżej -> 120mg 1 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1695, 1957] <type: RIGHT>>
+R64	Drg Arg1:T40 Arg2:T29 <<REDUNDANT!!!REMOVED>>	Isoptin SR -> 500 mg 1 tabl. rano i w południe <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1946, 1502] <type: LEFT>>
+R65	Drg Arg1:T40 Arg2:T30 <<REDUNDANT!!!REMOVED>>	Isoptin SR -> 24 mg 1 tabl. rano i wieczorem <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1946, 1553] <type: LEFT>>
+R66	Drg Arg1:T40 Arg2:T31 <<REDUNDANT!!!REMOVED>>	Isoptin SR -> 100 mg 1 tabl. rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1946, 1601] <type: LEFT>>
+R67	Drg Arg1:T40 Arg2:T37 <<REDUNDANT!!!REMOVED>>	Isoptin SR -> 4 mg 1 tabl. rano i wieczorem <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1946, 1794] <type: LEFT>>
+R68	Drg Arg1:T40 Arg2:T39 <<REDUNDANT!!!REMOVED>>	Isoptin SR -> można zwiększyć do 2 tabl. rano i wieczorem <:REMOVED many second tags on the left:> <RANK: 0> <info: start[1946, 1892] <type: LEFT>>
+R69	Drg Arg1:T40 Arg2:T41 << OK >>	Isoptin SR -> 120mg 1 tabl. rano i wieczorem  <RANK: 3> <info: start[1946, 1957] <type: RIGHT>>
+R70	Dat Arg1:T32 Arg2:T38 <<REDUNDANT!!!REMOVED>>	2 tygodnie przed przyjęciem do Kliniki Endokrynologii -> w przypadku zbyt wysokich wartości ciśnienia tętniczego <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1625, 1825] <type: RIGHT>>
+R71	Dat Arg1:T32 Arg2:T20 <<REDUNDANT!!!REMOVED>>	2 tygodnie przed przyjęciem do Kliniki Endokrynologii -> Siofor <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1625, 1495] <type: LEFT>>
+R72	Dat Arg1:T32 Arg2:T21 <<REDUNDANT!!!REMOVED>>	2 tygodnie przed przyjęciem do Kliniki Endokrynologii -> Betaserc <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1625, 1544] <type: LEFT>>
+R73	Dat Arg1:T32 Arg2:T22 <<REDUNDANT!!!REMOVED>>	2 tygodnie przed przyjęciem do Kliniki Endokrynologii -> Milurit <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1625, 1593] <type: LEFT>>
+R74	Dat Arg1:T32 Arg2:T36 <<SHOULD NOT BE REMOVED>>	2 tygodnie przed przyjęciem do Kliniki Endokrynologii -> Doxar <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1625, 1788] <type: RIGHT>>
+R75	Dat Arg1:T32 Arg2:T34 << OK >>	2 tygodnie przed przyjęciem do Kliniki Endokrynologii -> leków p/nadciśnieniowych dotychczas stosowanych – jak podano wyżej  <RANK: 2> <info: start[1625, 1695] <type: RIGHT>>
+R76	Dat Arg1:T32 Arg2:T40 <<REDUNDANT!!!REMOVED>>	2 tygodnie przed przyjęciem do Kliniki Endokrynologii -> Isoptin SR <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1625, 1946] <type: RIGHT>>
+
+
+Sentence 11:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 12:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Nadciśnienie tętnicze III stopnia wg ESH/ESC skorygowane.
+
+
+Sentence 13:
+Guz nadnercza lewego – podejrzenie gruczolaka (w trakcie diagnostyki).
+
+
+Sentence 14:
+Przewlekła niewydolność rozkurczowa serca w II/III klasie wg NYHA.
+
+
+Sentence 15:
+Nikotynizm.
+
+
+Sentence 16:
+Hipercholesterolemia w trakcie leczenia.
+
+
+Sentence 17:
+Miażdżyca aorty.
+
+
+Sentence 18:
+Poszerzenie dystalnego odcinka aorty brzusznej do 29x19mm.
+
+
+Sentence 19:
+Komorowe i nadkomorowe zaburzenia rytmu serca.
+
+
+Sentence 20:
+Zawroty głowy.
+
+
+Sentence 21:
+Otyłość.
+
+
+Sentence 22:
+Cukrzyca typu 2. Stłuszczenie wątroby.
+
+
+Sentence 23:
+Hiperurykemia.
+
+
+Sentence 24:
+Stan po panhisterektomii z powodu atypowego rozrostu endometrium
+------------------------------------------------
+
+
+
+Sentence 25:
+Zalecenia
+------------------------------------------------
+
+------------------------------------------------
+
+
+
+Sentence 26:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 27:
+Pacjentka, lat 67, przyjęta do Kliniki z powodu okresowo występującego uczucia kołatania serca oraz okresowo występujących dolegliwości bólowych w klatce piersiowej o charakterze ucisku związany z aktywnością fizyczną w celu diagnostyki i ustalenia dalszego postępowania. 
+
+
+
+Sentence 28:
+Dodatkowo wcześniej nieopisywane (zdaniem pacjentki, brak dokumentacji) zmiany w CT jamy brzusznej (10/08/2018): lewe nadnercze pogrubiałe z guzkiem 27x25mm - cechy gruczolaka, tętniakowate poszerzenie dystalnego odcinka aorty brzusznej do 29x19mm (powyżej śr do 17mm), lewa ściana dystalnej części odbytnicy pogrubiała do 14,5mm - opisane zmiany pozostawione zostały do obserwacji, pacjentka nie miała dodatkowych badań, podaje, że w/w wynik widział lekarz prowadzący onkolog.
+
+R77	Inv Arg1:T61 Arg2:T63 << OK >>	CT jamy brzusznej -> lewe nadnercze pogrubiałe z guzkiem 27x25mm - cechy gruczolaka  <RANK: 3> <info: start[3308, 3340] <type: RIGHT>>
+R78	Inv Arg1:T61 Arg2:T64 << OK >>	CT jamy brzusznej -> tętniakowate poszerzenie dystalnego odcinka aorty brzusznej do 29x19mm (powyżej śr do 17mm)  <RANK: 2> <info: start[3308, 3404] <type: RIGHT>>
+R79	Inv Arg1:T61 Arg2:T65 << OK >>	CT jamy brzusznej -> lewa ściana dystalnej części odbytnicy pogrubiała do 14,5mm  <RANK: 2> <info: start[3308, 3497] <type: RIGHT>>
+R80	Inv Arg1:T68 Arg2:T63 <<REDUNDANT!!!REMOVED>>	dodatkowych badań -> lewe nadnercze pogrubiałe z guzkiem 27x25mm - cechy gruczolaka <:REMOVED other second tag between (left):> <RANK: 2> <info: start[3630, 3340] <type: LEFT>>
+R81	Inv Arg1:T68 Arg2:T64 <<REDUNDANT!!!REMOVED>>	dodatkowych badań -> tętniakowate poszerzenie dystalnego odcinka aorty brzusznej do 29x19mm (powyżej śr do 17mm) <:REMOVED other second tag between (left):> <RANK: 2> <info: start[3630, 3404] <type: LEFT>>
+R82	Inv Arg1:T68 Arg2:T65 <<REDUNDANT!!!REMOVED>>	dodatkowych badań -> lewa ściana dystalnej części odbytnicy pogrubiała do 14,5mm <:REMOVED other second tag between (left):> <RANK: 2> <info: start[3630, 3497] <type: LEFT>>
+R83	Neg Arg1:T67 Arg2:T66 <<REDUNDANT!!!REMOVED>>	nie miała -> opisane zmiany pozostawione zostały do obserwacji <:REMOVED many second tags on the left:> <RANK: 2> <info: start[3620, 3559] <type: LEFT>>
+R84	Neg Arg1:T67 Arg2:T61 <<REDUNDANT!!!REMOVED>>	nie miała -> CT jamy brzusznej <:REMOVED other second tag between (left):> <RANK: 2> <info: start[3620, 3308] <type: LEFT>>
+R85	Neg Arg1:T67 Arg2:T68 << OK >>	nie miała -> dodatkowych badań  <RANK: 3> <info: start[3620, 3630] <type: RIGHT>>
+R86	Neg Arg1:T67 Arg2:T63 <<REDUNDANT!!!REMOVED>>	nie miała -> lewe nadnercze pogrubiałe z guzkiem 27x25mm - cechy gruczolaka <:REMOVED other second tag between (left):> <RANK: 2> <info: start[3620, 3340] <type: LEFT>>
+R87	Neg Arg1:T67 Arg2:T64 <<REDUNDANT!!!REMOVED>>	nie miała -> tętniakowate poszerzenie dystalnego odcinka aorty brzusznej do 29x19mm (powyżej śr do 17mm) <:REMOVED other second tag between (left):> <RANK: 2> <info: start[3620, 3404] <type: LEFT>>
+R88	Neg Arg1:T67 Arg2:T65 <<REDUNDANT!!!REMOVED>>	nie miała -> lewa ściana dystalnej części odbytnicy pogrubiała do 14,5mm <:REMOVED other second tag between (left):> <RANK: 2> <info: start[3620, 3497] <type: LEFT>>
+R89	Dat Arg1:T62 Arg2:T66 <<REDUNDANT!!!REMOVED>>	10/08/2018 -> opisane zmiany pozostawione zostały do obserwacji <:REMOVED many second tags on the right:> <RANK: 2> <info: start[3327, 3559] <type: RIGHT>>
+R90	Dat Arg1:T62 Arg2:T61 << OK >>	10/08/2018 -> CT jamy brzusznej  <RANK: 3> <info: start[3327, 3308] <type: LEFT>>
+R91	Dat Arg1:T62 Arg2:T68 <<REDUNDANT!!!REMOVED>>	10/08/2018 -> dodatkowych badań <:REMOVED many second tags on the right:> <RANK: 2> <info: start[3327, 3630] <type: RIGHT>>
+
+
+Sentence 29:
+Neguje zasłabnięcia, omdlenia, zawroty głowy, krwawienia, czarne stolce, brunatne wymioty, chorobę wrzodową, duszność nocną, obrzęki podudzi.
+R92	Neg Arg1:T69 Arg2:T70 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[3705, 3712] <type: RIGHT>>
+R93	Neg Arg1:T69 Arg2:T71 << OK >>	Neguje -> omdlenia  <RANK: 2> <info: start[3705, 3726] <type: RIGHT>>
+R94	Neg Arg1:T69 Arg2:T72 << OK >>	Neguje -> zawroty głowy  <RANK: 2> <info: start[3705, 3736] <type: RIGHT>>
+R95	Neg Arg1:T69 Arg2:T73 << OK >>	Neguje -> krwawienia  <RANK: 2> <info: start[3705, 3751] <type: RIGHT>>
+R96	Neg Arg1:T69 Arg2:T74 << OK >>	Neguje -> czarne stolce  <RANK: 2> <info: start[3705, 3763] <type: RIGHT>>
+R97	Neg Arg1:T69 Arg2:T75 << OK >>	Neguje -> brunatne wymioty  <RANK: 2> <info: start[3705, 3778] <type: RIGHT>>
+R98	Neg Arg1:T69 Arg2:T77 << OK >>	Neguje -> duszność nocną  <RANK: 2> <info: start[3705, 3814] <type: RIGHT>>
+R99	Neg Arg1:T69 Arg2:T78 << OK >>	Neguje -> obrzęki podudzi  <RANK: 2> <info: start[3705, 3830] <type: RIGHT>>
+R100	Neg Arg1:T69 Arg2:T76 << OK >>	Neguje -> chorobę wrzodową  <RANK: 2> <info: start[3705, 3796] <type: RIGHT>>
+
+
+Sentence 30:
+Innych dolegliwości nie zgłasza.
+
+R101	Neg Arg1:T80 Arg2:T79 << OK >>	nie zgłasza -> Innych dolegliwości  <RANK: 3> <info: start[3867, 3847] <type: LEFT>>
+
+
+Sentence 31:
+W wywiadzie: Nadciśnienie tętnicze III stopnia wg ESH/ESC.
+
+
+Sentence 32:
+Przewlekła niewydolność rozkurczowa serca.
+
+
+Sentence 33:
+Nikotynizm.
+
+
+Sentence 34:
+Miażdżyca aorty.
+
+
+Sentence 35:
+Hipercholesterolemia w trakcie leczenia.
+
+
+Sentence 36:
+Komorowe i nadkomorowe zaburzenia rytmu serca.
+
+
+Sentence 37:
+Zawroty głowy.
+
+
+Sentence 38:
+Nadwaga.
+
+
+Sentence 39:
+Cukrzyca typu 2. Stłuszczenie wątroby.
+
+
+Sentence 40:
+Hiperurykemia.
+
+
+Sentence 41:
+Stan po panhisterektomii z powodu atypowego rozrostu endometrium.
+
+
+
+Sentence 42:
+Przebyte operacje: j/w.
+
+
+
+Sentence 43:
+Leczenie przewlekłe: kardiologiczne, diabetologiczne, neurologiczne.
+
+
+
+Sentence 44:
+Przebyte choroby zakaźne: WZW ( - ) , borelioza ( - ), grużlica ( - ), odra ( - )
+
+R102	Neg Arg1:T100 Arg2:T96 << OK >>	( - ) -> WZW  <RANK: 3> <info: start[4366, 4362] <type: LEFT>>
+R103	Neg Arg1:T100 Arg2:T97 <<REDUNDANT!!!REMOVED>>	( - ) -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[4366, 4374] <type: RIGHT>>
+R104	Neg Arg1:T100 Arg2:T98 <<REDUNDANT!!!REMOVED>>	( - ) -> grużlica <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4366, 4391] <type: RIGHT>>
+R105	Neg Arg1:T100 Arg2:T99 <<REDUNDANT!!!REMOVED>>	( - ) -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4366, 4407] <type: RIGHT>>
+R106	Neg Arg1:T101 Arg2:T96 <<REDUNDANT!!!REMOVED>>	( - ) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4384, 4362] <type: LEFT>>
+R107	Neg Arg1:T101 Arg2:T97 << OK >>	( - ) -> borelioza  <RANK: 3> <info: start[4384, 4374] <type: LEFT>>
+R108	Neg Arg1:T101 Arg2:T98 <<REDUNDANT!!!REMOVED>>	( - ) -> grużlica <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[4384, 4391] <type: RIGHT>>
+R109	Neg Arg1:T101 Arg2:T99 <<REDUNDANT!!!REMOVED>>	( - ) -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4384, 4407] <type: RIGHT>>
+R110	Neg Arg1:T102 Arg2:T96 <<REDUNDANT!!!REMOVED>>	( - ) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4400, 4362] <type: LEFT>>
+R111	Neg Arg1:T102 Arg2:T97 <<REDUNDANT!!!REMOVED>>	( - ) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4400, 4374] <type: LEFT>>
+R112	Neg Arg1:T102 Arg2:T98 << OK >>	( - ) -> grużlica  <RANK: 3> <info: start[4400, 4391] <type: LEFT>>
+R113	Neg Arg1:T102 Arg2:T99 <<REDUNDANT!!!REMOVED>>	( - ) -> odra <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[4400, 4407] <type: RIGHT>>
+R114	Neg Arg1:T103 Arg2:T96 <<REDUNDANT!!!REMOVED>>	( - ) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4412, 4362] <type: LEFT>>
+R115	Neg Arg1:T103 Arg2:T97 <<REDUNDANT!!!REMOVED>>	( - ) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4412, 4374] <type: LEFT>>
+R116	Neg Arg1:T103 Arg2:T98 <<REDUNDANT!!!REMOVED>>	( - ) -> grużlica <:REMOVED other first tag between (left):> <RANK: 2> <info: start[4412, 4391] <type: LEFT>>
+R117	Neg Arg1:T103 Arg2:T99 << OK >>	( - ) -> odra  <RANK: 3> <info: start[4412, 4407] <type: LEFT>>
+
+
+Sentence 45:
+Wywiad rodzinny: nieistotny.
+
+R118	Neg Arg1:T105 Arg2:T104 << OK >>	nieistotny -> Wywiad rodzinny  <RANK: 3> <info: start[4435, 4418] <type: LEFT>>
+
+
+Sentence 46:
+Palenie tytoniu: 10 dziennie od 30 lat.
+
+R119	Dat Arg1:T107 Arg2:T106 << OK >>	od 30 lat -> Palenie tytoniu: 10 dziennie  <RANK: 3> <info: start[4476, 4447] <type: LEFT>>
+
+
+Sentence 47:
+Inne używki: neguje.
+
+R120	Neg Arg1:T109 Arg2:T108 << OK >>	neguje -> Inne używki  <RANK: 3> <info: start[4500, 4487] <type: LEFT>>
+
+
+Sentence 48:
+Uczulenia: neguje.
+
+R121	Neg Arg1:T111 Arg2:T110 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[4519, 4508] <type: LEFT>>
+
+
+Sentence 49:
+Stan społeczny: warunki mieszkaniowe dobre, mieszka sama.
+
+
+Sentence 50:
+Praca: Emerytka.
+
+
+
+Sentence 51:
+Leki: 
+1. Acard 75 mg 1 tabl.
+R122	Drg Arg1:T115 Arg2:T123 << OK >>	Acard -> 75 mg 1 tabl. wieczorem  <RANK: 3> <info: start[4612, 4618] <type: RIGHT>>
+
+
+Sentence 52:
+wieczorem
+2. Polpril 10 mg 1 tabl.
+R123	Drg Arg1:T116 Arg2:T124 << OK >>	Polpril -> 10 mg 1 tabl. wieczorem  <RANK: 3> <info: start[4645, 4653] <type: RIGHT>>
+
+
+Sentence 53:
+wieczorem
+3. Lecalpin 10 mg 1 tabl.
+R124	Drg Arg1:T117 Arg2:T125 << OK >>	Lecalpin -> 10 mg 1 tabl. rano  <RANK: 3> <info: start[4680, 4689] <type: RIGHT>>
+
+
+Sentence 54:
+rano
+4. Betaloc ZOK 50 mg 1 tabl.
+R125	Drg Arg1:T118 Arg2:T126 << OK >>	Betaloc ZOK -> 50 mg 1 tabl. rano  <RANK: 3> <info: start[4711, 4723] <type: RIGHT>>
+
+
+Sentence 55:
+rano
+5. Atoris 40 mg 1 tabl.
+R126	Drg Arg1:T119 Arg2:T127 << OK >>	Atoris -> 40 mg 1 tabl. wieczorem  <RANK: 3> <info: start[4745, 4752] <type: RIGHT>>
+
+
+Sentence 56:
+wieczorem
+6. Glucophage XR 1000 mg 1 tabl.
+R127	Drg Arg1:T120 Arg2:T128 << OK >>	Glucophage XR -> 1000 mg 1 tabl. wieczorem  <RANK: 3> <info: start[4779, 4793] <type: RIGHT>>
+
+
+Sentence 57:
+wieczorem
+7. Betaserc 24 mg 1 tabl. rano i wieczorem
+8. Siofor 500mg 1 tabletka rano i w południe.
+
+R128	Drg Arg1:T121 Arg2:T129 << OK >>	Betaserc -> 24 mg 1 tabl. rano i wieczorem  <RANK: 3> <info: start[4822, 4831] <type: RIGHT>>
+R129	Drg Arg1:T121 Arg2:T130 <<REDUNDANT!!!REMOVED>>	Betaserc -> 500mg 1 tabletka rano i w południe <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4822, 4872] <type: RIGHT>>
+R130	Drg Arg1:T122 Arg2:T129 <<REDUNDANT!!!REMOVED>>	Siofor -> 24 mg 1 tabl. rano i wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[4865, 4831] <type: LEFT>>
+R131	Drg Arg1:T122 Arg2:T130 << OK >>	Siofor -> 500mg 1 tabletka rano i w południe  <RANK: 3> <info: start[4865, 4872] <type: RIGHT>>
+
+
+Sentence 58:
+Plan Opieki : TTE, TET, ABPM, Holter EKG.
+
+
+Sentence 59:
+Planowany czas hospitalizacji 4-5 dni.
+
+
+
+Sentence 60:
+------------------------------------------------
+
+
+
+Sentence 61:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 62:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.72[10^3/ul]
+    
+
+
+Sentence 63:
+RBC Krwinki czerwone:4.42[10^6/ul]
+    
+
+
+Sentence 64:
+HGB Hemoglobina:13.7[g/dl]
+    
+
+
+Sentence 65:
+HCT Hematokryt:40.1[%]
+    
+
+
+Sentence 66:
+MCV wskaźnik czerwonokrw:90.7[fl]
+    
+
+
+Sentence 67:
+MCH wskaźnik czerwonokrw:31.0[pg]
+    
+
+
+Sentence 68:
+MCHC wskaźnik czerwonokr:34.2[g/dl]
+    
+
+
+Sentence 69:
+PLT z morfologii:217[10^3/ul]
+    
+
+
+Sentence 70:
+RDW-SD:47.1[fl]
+    
+
+
+Sentence 71:
+RDW-CV:14.1[%]
+    PDW:14.7[fl]
+    MPV:11.6[fl]
+    
+
+
+Sentence 72:
+P-LCR:37.5[%]
+    
+
+
+Sentence 73:
+PCT (hematokryt płytkowy:0.25[%]
+    
+
+
+Sentence 74:
+NEUTR# wartość bezwzględ:4.27[10^3/ul]
+    
+
+
+Sentence 75:
+NEUTR%:55.2[%]
+    
+
+
+Sentence 76:
+LYMH# wartość bezwzględn:1.86[10^3/ul]
+    
+
+
+Sentence 77:
+LYMPH%:24.1[%]
+    
+
+
+Sentence 78:
+MONO# wartość bezwzględn:1.27[10^3/ul]
+    
+
+
+Sentence 79:
+MONO%:16.5[%]
+    
+
+
+Sentence 80:
+EO# wartość bezwzględna:0.26[10^3/ul]
+    
+
+
+Sentence 81:
+EO%:3.4[%]
+    
+
+
+Sentence 82:
+BASO# wartość bezwzględn:0.06[10^3/ul]
+    
+
+
+Sentence 83:
+BASO%:0.8[%]
+    
+
+
+Sentence 84:
+NRBC %:0.1[%]
+    
+
+
+Sentence 85:
+NRBC #:0.01[10^3/ul]
+
+
+
+Sentence 86:
+TSH: TSH:1.58[uIU/ml]
+
+
+
+Sentence 87:
+FT3: FT3:2.65[pg/ml]
+
+
+
+Sentence 88:
+FT4: FT4:1.11[ng/dl]
+
+
+
+Sentence 89:
+Troponina T: Troponina T:10.0[pg/ml]
+
+
+
+Sentence 90:
+ALAT: ALAT:17[U/L]
+ASPAT: ASPAT:15[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:1.36[mg/dl]
+
+
+
+Sentence 91:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 92:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 93:
+Hemoglobina glikowana (HbA1c)
+    :6.79[%]
+    :51[mmol/mol]
+
+
+
+Sentence 94:
+Kreatynina + GFR
+    
+
+
+Sentence 95:
+Kreatynina w surowicy:0.90[mg/dl]
+    
+
+
+Sentence 96:
+eGFR wg skr.
+
+
+Sentence 97:
+MDRD ze stan:62.5[ml/min/1,73 m^2]
+
+
+
+Sentence 98:
+Mocznik: Mocznik:39[mg/dl]
+
+
+
+Sentence 99:
+Kwas moczowy: Kwas moczowy:8.1[mg/dl]
+
+
+
+Sentence 100:
+Lipidogram
+    
+
+
+Sentence 101:
+Cholesterol całkowity:92[mg/dl]
+    
+
+
+Sentence 102:
+Cholesterol HDL:27[mg/dl]
+    
+
+
+Sentence 103:
+Cholestrol LDL:57[mg/dl]
+    
+
+
+Sentence 104:
+Triglicerydy:119[mg/dl]
+    
+
+
+Sentence 105:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:95[mg/dl]
+
+
+
+Sentence 106:
+------------------------------------------------
+
+
+
+Sentence 107:
+ICD10
+------------------------------------------------
+I50.9
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 108:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 109:
+89.501
+C55
+89.502
+I81
+L43
+O61
+87.440
+L55
+N45
+L69
+O55
+I17
+M45
+O35
+M37
+I19
+N13
+88.721
+O69
+88.761
+
+
+
+Sentence 110:
+------------------------------------------------
+
+

@@ -1,0 +1,1393 @@
+allRelations          : 193
+oks                   : 64
+isRedundantAndRemoveds: 113
+shouldNotBeRemoveds   : 8
+shouldBeBemoveds      : 8
+GOOD / BAD            : 177 / 16
+Sentence 0:
+------------------------------------------------
+Wiek: 49 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+Nie ma przeciwwskazań do badania NMR
+
+
+
+Sentence 4:
+- profilaktyka infekcyjnego zapalenia wsierdzia (podczas zabiegów stomatologicznych)  przez 6 miesięcy od zabiegu (amoksycylina lub ampicylina 2 g doustnie lub i.v., w przypadku alergii na powyższe antybiotyki - klindamycyna 600mg doustnie lub i.v.) 
+- kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych za 1 m-c (P. dr Marek Maciejewski, dr Marek Rybak) - wydano skierowanie
+- kontrolna hospitalizacja w tutejszej klinice za 3 m-ce (wydano skierowanie) - termin do ustalenia w sekretariacie kliniki
+- kontrola u lekarza POZ, w Poradni Endokrynologicznej
+
+R1	Drg Arg1:T100 Arg2:T102 <<SHOULD NOT BE REMOVED>>	amoksycylina -> 2 g doustnie lub i.v <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[482, 510] <type: RIGHT>>
+R2	Drg Arg1:T100 Arg2:T105 <<REDUNDANT!!!REMOVED>>	amoksycylina -> 600mg doustnie lub i.v. <:REMOVED other first tag between (right):> <RANK: 2> <info: start[482, 592] <type: RIGHT>>
+R3	Drg Arg1:T101 Arg2:T102 <<SHOULD NOT BE REMOVED>>	ampicylina -> 2 g doustnie lub i.v <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[499, 510] <type: RIGHT>>
+R4	Drg Arg1:T101 Arg2:T105 <<REDUNDANT!!!REMOVED>>	ampicylina -> 600mg doustnie lub i.v. <:REMOVED other first tag between (right):> <RANK: 2> <info: start[499, 592] <type: RIGHT>>
+R5	Drg Arg1:T104 Arg2:T102 <<REDUNDANT!!!REMOVED>>	klindamycyna -> 2 g doustnie lub i.v <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[579, 510] <type: LEFT>>
+R6	Drg Arg1:T104 Arg2:T105 << OK >>	klindamycyna -> 600mg doustnie lub i.v.  <RANK: 3> <info: start[579, 592] <type: RIGHT>>
+R7	Alg Arg1:T103 Arg2:T100 <<SHOULD NOT BE REMOVED>>	alergii -> amoksycylina <:REMOVED many second tags on the left:> <RANK: 2> <info: start[545, 482] <type: LEFT>>
+R8	Alg Arg1:T103 Arg2:T101 <<SHOULD NOT BE REMOVED>>	alergii -> ampicylina <:REMOVED many second tags on the left:> <RANK: 2> <info: start[545, 499] <type: LEFT>>
+R9	Alg Arg1:T103 Arg2:T104 <<REDUNDANT!!!SHOULD BE REMOVED>>	alergii -> klindamycyna  <RANK: 3> <info: start[545, 579] <type: RIGHT>>
+
+
+Sentence 5:
+- dieta niskocholesterolowa 
+- kontrola wartości ciśnienia tętniczego w warunkach domowych
+
+
+
+Sentence 6:
+- kontrola w Poradni Gastrologicznej (czy pacjentka może przyjmować Armolipid z powodu hipercholesterolemii?)
+
+
+
+Sentence 7:
+- kontrola lipidogramu po 3 m-cach leczenia dietą/ Armolipidem
+
+
+
+Sentence 8:
+- regularne przyjmowanie leków:
+Acard 75mg 1x 1 tabl/wiecz przez 6 m-ce (dalej wg zaleceń neurologa)
+
+R10	Drg Arg1:T36 Arg2:T37 << OK >>	Acard -> 75mg 1x 1 tabl/wiecz przez 6 m-ce (dalej wg zaleceń neurologa)  <RANK: 3> <info: start[1229, 1235] <type: RIGHT>>
+
+
+Sentence 9:
+Plavix 75mg 1x 1 tabl/rano przez 3 m-ce
+Beto 150 ZK 1x 1 tabl/rano
+
+R11	Drg Arg1:T38 Arg2:T39 << OK >>	Plavix -> 75mg 1x 1 tabl/rano przez 3 m-ce  <RANK: 3> <info: start[1298, 1305] <type: RIGHT>>
+R12	Drg Arg1:T38 Arg2:T41 <<REDUNDANT!!!REMOVED>>	Plavix -> 1x 1 tabl/rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1298, 1350] <type: RIGHT>>
+R13	Drg Arg1:T40 Arg2:T39 <<REDUNDANT!!!REMOVED>>	Beto 150 ZK -> 75mg 1x 1 tabl/rano przez 3 m-ce <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1338, 1305] <type: LEFT>>
+R14	Drg Arg1:T40 Arg2:T41 << OK >>	Beto 150 ZK -> 1x 1 tabl/rano  <RANK: 3> <info: start[1338, 1350] <type: RIGHT>>
+
+
+Sentence 10:
+Diured 5mg 1x 1 tabl/rano
+Tolura 40mg 1x 1 tabl/wiecz
+
+R15	Drg Arg1:T42 Arg2:T43 << OK >>	Diured -> 5mg 1x 1 tabl/rano  <RANK: 3> <info: start[1365, 1372] <type: RIGHT>>
+R16	Drg Arg1:T42 Arg2:T45 <<REDUNDANT!!!REMOVED>>	Diured -> 40mg 1x 1 tabl/wiecz <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1365, 1398] <type: RIGHT>>
+R17	Drg Arg1:T44 Arg2:T43 <<REDUNDANT!!!REMOVED>>	Tolura -> 5mg 1x 1 tabl/rano <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1391, 1372] <type: LEFT>>
+R18	Drg Arg1:T44 Arg2:T45 << OK >>	Tolura -> 40mg 1x 1 tabl/wiecz  <RANK: 3> <info: start[1391, 1398] <type: RIGHT>>
+
+
+Sentence 11:
+Euthyrox N125ug 1x 1/2 tabl/rano
+Armolipid 1x 1 tabl/wiecz
+------------------------------------------------
+
+R19	Drg Arg1:T46 Arg2:T47 << OK >>	Euthyrox N -> 125ug 1x 1/2 tabl/rano  <RANK: 3> <info: start[1419, 1429] <type: RIGHT>>
+R20	Drg Arg1:T46 Arg2:T49 <<REDUNDANT!!!REMOVED>>	Euthyrox N -> 1x 1 tabl/wiecz <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1419, 1462] <type: RIGHT>>
+R21	Drg Arg1:T48 Arg2:T47 <<REDUNDANT!!!REMOVED>>	Armolipid -> 125ug 1x 1/2 tabl/rano <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1452, 1429] <type: LEFT>>
+R22	Drg Arg1:T48 Arg2:T49 << OK >>	Armolipid -> 1x 1 tabl/wiecz  <RANK: 3> <info: start[1452, 1462] <type: RIGHT>>
+
+
+Sentence 12:
+Zastosowane leczenie
+
+
+
+Sentence 13:
+------------------------------------------------
+
+
+
+Sentence 14:
+BetoZK, Diured, Euthyrox, Acard, Kalipoz, Cefazolin, 0,9%NaCl, PWE, Dormicum, Plavix,
+------------------------------------------------
+
+
+
+Sentence 15:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 16:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q21|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Przetrwały otwór owalny - zamknięcie zestawem Occlutech Figulla Flex II 19PFO25D (09.01.2019).
+R23	Dat Arg1:T131 Arg2:T129 << OK >>	09.01.2019 -> Przetrwały otwór owalny  <RANK: 3> <info: start[1991, 1909] <type: LEFT>>
+R24	Dat Arg1:T131 Arg2:T130 << OK >>	09.01.2019 -> zamknięcie zestawem Occlutech Figulla Flex II 19PFO25D  <RANK: 3> <info: start[1991, 1935] <type: LEFT>>
+
+
+Sentence 17:
+Nadciśnienie tętnicze.
+
+
+Sentence 18:
+Stan po udarze niedokrwiennym lewej półkuli mózgu z niedowładem połowiczym prawostronnym i afazją motoryczną (08.2018).
+R25	Dat Arg1:T139 Arg2:T136 << OK >>	08.2018 -> niedowładem połowiczym prawostronnym  <RANK: 2> <info: start[2137, 2079] <type: LEFT>>
+R26	Dat Arg1:T139 Arg2:T138 << OK >>	08.2018 -> afazją motoryczną  <RANK: 3> <info: start[2137, 2118] <type: LEFT>>
+R27	Dat Arg1:T139 Arg2:T134 << OK >>	08.2018 -> udarze niedokrwiennym lewej półkuli mózgu  <RANK: 2> <info: start[2137, 2035] <type: LEFT>>
+
+
+Sentence 19:
+Wrzodziejące zapalenie jelita grubego.
+
+
+Sentence 20:
+Uchyłki jelit.
+
+
+Sentence 21:
+Niedoczynność tarczycy.
+
+
+Sentence 22:
+Hiperlipidemia mieszana.\x0a
+------------------------------------------------
+
+
+
+Sentence 23:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 24:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q21.1|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Stan po zamknięcie zestawem Occlutech Figulla Flex II 19PFO25D (09.01.2019).
+R28	Dat Arg1:T133 Arg2:T132 << OK >>	09.01.2019 -> Stan po zamknięcie zestawem Occlutech Figulla Flex II 19PFO25D  <RANK: 3> <info: start[2546, 2482] <type: LEFT>>
+
+
+Sentence 25:
+Pojedyncze pobudzenia nadkomorowe.
+
+
+Sentence 26:
+Nadciśnienie tętnicze.
+
+
+Sentence 27:
+Stan po udarze niedokrwiennym lewej półkuli mózgu z niedowładem połowiczym prawostronnym i afazją motoryczną (08.2018).
+R29	Dat Arg1:T141 Arg2:T137 << OK >>	08.2018 -> niedowładem połowiczym prawostronnym  <RANK: 2> <info: start[2727, 2669] <type: LEFT>>
+R30	Dat Arg1:T141 Arg2:T140 << OK >>	08.2018 -> afazją motoryczną  <RANK: 3> <info: start[2727, 2708] <type: LEFT>>
+R31	Dat Arg1:T141 Arg2:T135 << OK >>	08.2018 -> udarze niedokrwiennym lewej półkuli mózgu  <RANK: 2> <info: start[2727, 2625] <type: LEFT>>
+
+
+Sentence 28:
+Choroba Leśniowskiego-Crohna.
+
+
+Sentence 29:
+Uchyłki jelit.
+
+
+Sentence 30:
+Niedoczynność tarczycy.
+
+
+Sentence 31:
+Hiperlipidemia mieszana w trakcie leczenia dietą.
+
+
+
+Sentence 32:
+------------------------------------------------
+
+
+
+Sentence 33:
+Zastosowane leczenie
+
+
+
+Sentence 34:
+------------------------------------------------
+
+
+
+Sentence 35:
+Pentosa, Azathioprine , Acard, Plavix, Beto 150 ZK , Diured, Euthyrox
+
+
+
+Sentence 36:
+------------------------------------------------
+
+
+
+Sentence 37:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 38:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q21.1|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo::
+------------------------------------------------
+
+
+
+Sentence 39:
+Zalecenia
+------------------------------------------------
+ 
+
+
+Sentence 40:
+Nie ma przeciwwskazań do badania NMR  
+- profilaktyka infekcyjnego zapalenia wsierdzia (podczas zabiegów stomatologicznych)  przez 6 miesięcy od zabiegu (amoksycylina lub ampicylina 2 g doustnie lub i.v., w przypadku alergii na powyższe antybiotyki - klindamycyna 600mg doustnie lub i.v.)   
+- kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych.  
+
+R32	Drg Arg1:T113 Arg2:T115 <<SHOULD NOT BE REMOVED>>	amoksycylina -> 2 g doustnie lub i.v. <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[3536, 3564] <type: RIGHT>>
+R33	Drg Arg1:T113 Arg2:T118 <<REDUNDANT!!!REMOVED>>	amoksycylina -> 600mg doustnie lub i.v <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3536, 3646] <type: RIGHT>>
+R34	Drg Arg1:T114 Arg2:T115 <<SHOULD NOT BE REMOVED>>	ampicylina -> 2 g doustnie lub i.v. <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[3553, 3564] <type: RIGHT>>
+R35	Drg Arg1:T114 Arg2:T118 <<REDUNDANT!!!REMOVED>>	ampicylina -> 600mg doustnie lub i.v <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3553, 3646] <type: RIGHT>>
+R36	Drg Arg1:T117 Arg2:T115 <<REDUNDANT!!!REMOVED>>	klindamycyna -> 2 g doustnie lub i.v. <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[3633, 3564] <type: LEFT>>
+R37	Drg Arg1:T117 Arg2:T118 << OK >>	klindamycyna -> 600mg doustnie lub i.v  <RANK: 3> <info: start[3633, 3646] <type: RIGHT>>
+R38	Alg Arg1:T112 Arg2:T113 <<REDUNDANT!!!SHOULD BE REMOVED>>	profilaktyka infekcyjnego zapalenia wsierdzia -> amoksycylina  <RANK: 3> <info: start[3423, 3536] <type: RIGHT>>
+R39	Alg Arg1:T112 Arg2:T114 <<REDUNDANT!!!SHOULD BE REMOVED>>	profilaktyka infekcyjnego zapalenia wsierdzia -> ampicylina  <RANK: 3> <info: start[3423, 3553] <type: RIGHT>>
+R40	Alg Arg1:T112 Arg2:T117 <<REDUNDANT!!!REMOVED>>	profilaktyka infekcyjnego zapalenia wsierdzia -> klindamycyna <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3423, 3633] <type: RIGHT>>
+R41	Alg Arg1:T116 Arg2:T113 <<SHOULD NOT BE REMOVED>>	alergii -> amoksycylina <:REMOVED many second tags on the left:> <RANK: 2> <info: start[3599, 3536] <type: LEFT>>
+R42	Alg Arg1:T116 Arg2:T114 <<SHOULD NOT BE REMOVED>>	alergii -> ampicylina <:REMOVED many second tags on the left:> <RANK: 2> <info: start[3599, 3553] <type: LEFT>>
+R43	Alg Arg1:T116 Arg2:T117 <<REDUNDANT!!!SHOULD BE REMOVED>>	alergii -> klindamycyna  <RANK: 3> <info: start[3599, 3633] <type: RIGHT>>
+
+
+Sentence 41:
+- kontrola u lekarza POZ, w Poradni Endokrynologicznej  
+- dieta niskocholesterolowa   
+- kontrola wartości ciśnienia tętniczego w warunkach domowych  
+- kontrola w Poradni Gastrologicznej ( pod kontem wykluczenia gastroenterologicznych przeciwwskazań do terapii- monokoliną lub statyną z powodu hipercholesterolemii)  
+- kontrola lipidogramu po 3 m-cach leczenia dietą/ Armolipidem  
+
+
+
+Sentence 42:
+- regularne przyjmowanie leków:  
+Polocard 150mg 1x 1 tabl/wiecz przez 6 m-ce od zabiegu ( do 09.07.2019) (dalej wg zaleceń neurologa)  
+Beto 150 ZK 1x 1 tabl/rano  
+Diured 5mg 1x 1 tabl/rano  
+Tolura 40mg 1x 1 tabl/wiecz  
+Euthyrox N125ug na zmianę w dni parzyste  1x 1/2 tabl/rano ,  
+Euthyrox N75ug 1x dz rano na czczo w dni nieparzyste  
+Armolipid 1x 1 tabl/wiecz  
+Pentosa 2 g 2x dz , Azathioprine VIS 50 2x dz - wg. zaleceń gastroenterologa.
+
+R44	Drg Arg1:T81 Arg2:T82 << OK >>	Azathioprine VIS -> 50 2x dz - wg. zaleceń gastroenterologa  <RANK: 3> <info: start[4516, 4533] <type: RIGHT>>
+R45	Drg Arg1:T81 Arg2:T84 <<REDUNDANT!!!REMOVED>>	Azathioprine VIS -> 2 g 2x dz <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[4516, 4504] <type: LEFT>>
+R46	Drg Arg1:T81 Arg2:T86 <<REDUNDANT!!!REMOVED>>	Azathioprine VIS -> 1x 1 tabl/wiecz <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4516, 4478] <type: LEFT>>
+R47	Drg Arg1:T81 Arg2:T88 <<REDUNDANT!!!REMOVED>>	Azathioprine VIS -> 75ug 1x dz rano na czczo w dni nieparzyste <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4516, 4423] <type: LEFT>>
+R48	Drg Arg1:T81 Arg2:T90 <<REDUNDANT!!!REMOVED>>	Azathioprine VIS -> 125ug na zmianę w dni parzyste  1x 1/2 tabl/rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4516, 4360] <type: LEFT>>
+R49	Drg Arg1:T81 Arg2:T94 <<REDUNDANT!!!REMOVED>>	Azathioprine VIS -> 40mg 1x 1 tabl/wiecz <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4516, 4327] <type: LEFT>>
+R50	Drg Arg1:T81 Arg2:T95 <<REDUNDANT!!!REMOVED>>	Azathioprine VIS -> 5mg 1x 1 tabl/rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4516, 4299] <type: LEFT>>
+R51	Drg Arg1:T81 Arg2:T96 <<REDUNDANT!!!REMOVED>>	Azathioprine VIS -> 1x 1 tabl/rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4516, 4275] <type: LEFT>>
+R52	Drg Arg1:T81 Arg2:T98 <<REDUNDANT!!!REMOVED>>	Azathioprine VIS -> 150mg 1x 1 tabl/wiecz przez 6 m-ce od zabiegu ( do 09.07.2019) (dalej wg zaleceń neurologa) <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4516, 4169] <type: LEFT>>
+R53	Drg Arg1:T83 Arg2:T82 <<REDUNDANT!!!REMOVED>>	Pentosa -> 50 2x dz - wg. zaleceń gastroenterologa <:REMOVED other first tag between (right):> <RANK: 2> <info: start[4496, 4533] <type: RIGHT>>
+R54	Drg Arg1:T83 Arg2:T84 << OK >>	Pentosa -> 2 g 2x dz  <RANK: 3> <info: start[4496, 4504] <type: RIGHT>>
+R55	Drg Arg1:T83 Arg2:T86 <<REDUNDANT!!!REMOVED>>	Pentosa -> 1x 1 tabl/wiecz <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[4496, 4478] <type: LEFT>>
+R56	Drg Arg1:T83 Arg2:T88 <<REDUNDANT!!!REMOVED>>	Pentosa -> 75ug 1x dz rano na czczo w dni nieparzyste <:REMOVED other first tag between (left):> <RANK: 1> <info: start[4496, 4423] <type: LEFT>>
+R57	Drg Arg1:T83 Arg2:T90 <<REDUNDANT!!!REMOVED>>	Pentosa -> 125ug na zmianę w dni parzyste  1x 1/2 tabl/rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4496, 4360] <type: LEFT>>
+R58	Drg Arg1:T83 Arg2:T94 <<REDUNDANT!!!REMOVED>>	Pentosa -> 40mg 1x 1 tabl/wiecz <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4496, 4327] <type: LEFT>>
+R59	Drg Arg1:T83 Arg2:T95 <<REDUNDANT!!!REMOVED>>	Pentosa -> 5mg 1x 1 tabl/rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4496, 4299] <type: LEFT>>
+R60	Drg Arg1:T83 Arg2:T96 <<REDUNDANT!!!REMOVED>>	Pentosa -> 1x 1 tabl/rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4496, 4275] <type: LEFT>>
+R61	Drg Arg1:T83 Arg2:T98 <<REDUNDANT!!!REMOVED>>	Pentosa -> 150mg 1x 1 tabl/wiecz przez 6 m-ce od zabiegu ( do 09.07.2019) (dalej wg zaleceń neurologa) <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4496, 4169] <type: LEFT>>
+R62	Drg Arg1:T85 Arg2:T82 <<REDUNDANT!!!REMOVED>>	Armolipid -> 50 2x dz - wg. zaleceń gastroenterologa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4468, 4533] <type: RIGHT>>
+R63	Drg Arg1:T85 Arg2:T84 <<REDUNDANT!!!REMOVED>>	Armolipid -> 2 g 2x dz <:REMOVED other first tag between (right):> <RANK: 1> <info: start[4468, 4504] <type: RIGHT>>
+R64	Drg Arg1:T85 Arg2:T86 << OK >>	Armolipid -> 1x 1 tabl/wiecz  <RANK: 3> <info: start[4468, 4478] <type: RIGHT>>
+R65	Drg Arg1:T85 Arg2:T88 <<REDUNDANT!!!REMOVED>>	Armolipid -> 75ug 1x dz rano na czczo w dni nieparzyste <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[4468, 4423] <type: LEFT>>
+R66	Drg Arg1:T85 Arg2:T90 <<REDUNDANT!!!REMOVED>>	Armolipid -> 125ug na zmianę w dni parzyste  1x 1/2 tabl/rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4468, 4360] <type: LEFT>>
+R67	Drg Arg1:T85 Arg2:T94 <<REDUNDANT!!!REMOVED>>	Armolipid -> 40mg 1x 1 tabl/wiecz <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4468, 4327] <type: LEFT>>
+R68	Drg Arg1:T85 Arg2:T95 <<REDUNDANT!!!REMOVED>>	Armolipid -> 5mg 1x 1 tabl/rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4468, 4299] <type: LEFT>>
+R69	Drg Arg1:T85 Arg2:T96 <<REDUNDANT!!!REMOVED>>	Armolipid -> 1x 1 tabl/rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4468, 4275] <type: LEFT>>
+R70	Drg Arg1:T85 Arg2:T98 <<REDUNDANT!!!REMOVED>>	Armolipid -> 150mg 1x 1 tabl/wiecz przez 6 m-ce od zabiegu ( do 09.07.2019) (dalej wg zaleceń neurologa) <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4468, 4169] <type: LEFT>>
+R71	Drg Arg1:T87 Arg2:T82 <<REDUNDANT!!!REMOVED>>	Euthyrox N -> 50 2x dz - wg. zaleceń gastroenterologa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4413, 4533] <type: RIGHT>>
+R72	Drg Arg1:T87 Arg2:T84 <<REDUNDANT!!!REMOVED>>	Euthyrox N -> 2 g 2x dz <:REMOVED other first tag between (right):> <RANK: 1> <info: start[4413, 4504] <type: RIGHT>>
+R73	Drg Arg1:T87 Arg2:T86 <<REDUNDANT!!!REMOVED>>	Euthyrox N -> 1x 1 tabl/wiecz <:REMOVED other first tag between (right):> <RANK: 1> <info: start[4413, 4478] <type: RIGHT>>
+R74	Drg Arg1:T87 Arg2:T88 << OK >>	Euthyrox N -> 75ug 1x dz rano na czczo w dni nieparzyste  <RANK: 3> <info: start[4413, 4423] <type: RIGHT>>
+R75	Drg Arg1:T87 Arg2:T90 <<REDUNDANT!!!REMOVED>>	Euthyrox N -> 125ug na zmianę w dni parzyste  1x 1/2 tabl/rano <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[4413, 4360] <type: LEFT>>
+R76	Drg Arg1:T87 Arg2:T94 <<REDUNDANT!!!REMOVED>>	Euthyrox N -> 40mg 1x 1 tabl/wiecz <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4413, 4327] <type: LEFT>>
+R77	Drg Arg1:T87 Arg2:T95 <<REDUNDANT!!!REMOVED>>	Euthyrox N -> 5mg 1x 1 tabl/rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4413, 4299] <type: LEFT>>
+R78	Drg Arg1:T87 Arg2:T96 <<REDUNDANT!!!REMOVED>>	Euthyrox N -> 1x 1 tabl/rano <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4413, 4275] <type: LEFT>>
+R79	Drg Arg1:T87 Arg2:T98 <<REDUNDANT!!!REMOVED>>	Euthyrox N -> 150mg 1x 1 tabl/wiecz przez 6 m-ce od zabiegu ( do 09.07.2019) (dalej wg zaleceń neurologa) <:REMOVED other first tag between (left):> <RANK: 0> <info: start[4413, 4169] <type: LEFT>>
+R80	Drg Arg1:T89 Arg2:T82 <<REDUNDANT!!!REMOVED>>	Euthyrox N -> 50 2x dz - wg. zaleceń gastroenterologa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4350, 4533] <type: RIGHT>>
+R81	Drg Arg1:T89 Arg2:T84 <<REDUNDANT!!!REMOVED>>	Euthyrox N -> 2 g 2x dz <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4350, 4504] <type: RIGHT>>
+R82	Drg Arg1:T89 Arg2:T86 <<REDUNDANT!!!REMOVED>>	Euthyrox N -> 1x 1 tabl/wiecz <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4350, 4478] <type: RIGHT>>
+R83	Drg Arg1:T89 Arg2:T88 <<REDUNDANT!!!REMOVED>>	Euthyrox N -> 75ug 1x dz rano na czczo w dni nieparzyste <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4350, 4423] <type: RIGHT>>
+R84	Drg Arg1:T89 Arg2:T90 << OK >>	Euthyrox N -> 125ug na zmianę w dni parzyste  1x 1/2 tabl/rano  <RANK: 3> <info: start[4350, 4360] <type: RIGHT>>
+R85	Drg Arg1:T89 Arg2:T94 <<REDUNDANT!!!REMOVED>>	Euthyrox N -> 40mg 1x 1 tabl/wiecz <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[4350, 4327] <type: LEFT>>
+R86	Drg Arg1:T89 Arg2:T95 <<REDUNDANT!!!REMOVED>>	Euthyrox N -> 5mg 1x 1 tabl/rano <:REMOVED other first tag between (left):> <RANK: 1> <info: start[4350, 4299] <type: LEFT>>
+R87	Drg Arg1:T89 Arg2:T96 <<REDUNDANT!!!REMOVED>>	Euthyrox N -> 1x 1 tabl/rano <:REMOVED other first tag between (left):> <RANK: 1> <info: start[4350, 4275] <type: LEFT>>
+R88	Drg Arg1:T89 Arg2:T98 <<REDUNDANT!!!REMOVED>>	Euthyrox N -> 150mg 1x 1 tabl/wiecz przez 6 m-ce od zabiegu ( do 09.07.2019) (dalej wg zaleceń neurologa) <:REMOVED other first tag between (left):> <RANK: 1> <info: start[4350, 4169] <type: LEFT>>
+R89	Drg Arg1:T91 Arg2:T82 <<REDUNDANT!!!REMOVED>>	Tolura -> 50 2x dz - wg. zaleceń gastroenterologa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4320, 4533] <type: RIGHT>>
+R90	Drg Arg1:T91 Arg2:T84 <<REDUNDANT!!!REMOVED>>	Tolura -> 2 g 2x dz <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4320, 4504] <type: RIGHT>>
+R91	Drg Arg1:T91 Arg2:T86 <<REDUNDANT!!!REMOVED>>	Tolura -> 1x 1 tabl/wiecz <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4320, 4478] <type: RIGHT>>
+R92	Drg Arg1:T91 Arg2:T88 <<REDUNDANT!!!REMOVED>>	Tolura -> 75ug 1x dz rano na czczo w dni nieparzyste <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4320, 4423] <type: RIGHT>>
+R93	Drg Arg1:T91 Arg2:T90 <<REDUNDANT!!!REMOVED>>	Tolura -> 125ug na zmianę w dni parzyste  1x 1/2 tabl/rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[4320, 4360] <type: RIGHT>>
+R94	Drg Arg1:T91 Arg2:T94 << OK >>	Tolura -> 40mg 1x 1 tabl/wiecz  <RANK: 3> <info: start[4320, 4327] <type: RIGHT>>
+R95	Drg Arg1:T91 Arg2:T95 <<REDUNDANT!!!REMOVED>>	Tolura -> 5mg 1x 1 tabl/rano <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[4320, 4299] <type: LEFT>>
+R96	Drg Arg1:T91 Arg2:T96 <<REDUNDANT!!!REMOVED>>	Tolura -> 1x 1 tabl/rano <:REMOVED other first tag between (left):> <RANK: 1> <info: start[4320, 4275] <type: LEFT>>
+R97	Drg Arg1:T91 Arg2:T98 <<REDUNDANT!!!REMOVED>>	Tolura -> 150mg 1x 1 tabl/wiecz przez 6 m-ce od zabiegu ( do 09.07.2019) (dalej wg zaleceń neurologa) <:REMOVED other first tag between (left):> <RANK: 1> <info: start[4320, 4169] <type: LEFT>>
+R98	Drg Arg1:T92 Arg2:T82 <<REDUNDANT!!!REMOVED>>	Diured -> 50 2x dz - wg. zaleceń gastroenterologa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4292, 4533] <type: RIGHT>>
+R99	Drg Arg1:T92 Arg2:T84 <<REDUNDANT!!!REMOVED>>	Diured -> 2 g 2x dz <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4292, 4504] <type: RIGHT>>
+R100	Drg Arg1:T92 Arg2:T86 <<REDUNDANT!!!REMOVED>>	Diured -> 1x 1 tabl/wiecz <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4292, 4478] <type: RIGHT>>
+R101	Drg Arg1:T92 Arg2:T88 <<REDUNDANT!!!REMOVED>>	Diured -> 75ug 1x dz rano na czczo w dni nieparzyste <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4292, 4423] <type: RIGHT>>
+R102	Drg Arg1:T92 Arg2:T90 <<REDUNDANT!!!REMOVED>>	Diured -> 125ug na zmianę w dni parzyste  1x 1/2 tabl/rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[4292, 4360] <type: RIGHT>>
+R103	Drg Arg1:T92 Arg2:T94 <<REDUNDANT!!!REMOVED>>	Diured -> 40mg 1x 1 tabl/wiecz <:REMOVED other first tag between (right):> <RANK: 1> <info: start[4292, 4327] <type: RIGHT>>
+R104	Drg Arg1:T92 Arg2:T95 << OK >>	Diured -> 5mg 1x 1 tabl/rano  <RANK: 3> <info: start[4292, 4299] <type: RIGHT>>
+R105	Drg Arg1:T92 Arg2:T96 <<REDUNDANT!!!REMOVED>>	Diured -> 1x 1 tabl/rano <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[4292, 4275] <type: LEFT>>
+R106	Drg Arg1:T92 Arg2:T98 <<REDUNDANT!!!REMOVED>>	Diured -> 150mg 1x 1 tabl/wiecz przez 6 m-ce od zabiegu ( do 09.07.2019) (dalej wg zaleceń neurologa) <:REMOVED other first tag between (left):> <RANK: 1> <info: start[4292, 4169] <type: LEFT>>
+R107	Drg Arg1:T93 Arg2:T82 <<REDUNDANT!!!REMOVED>>	Beto 150 ZK -> 50 2x dz - wg. zaleceń gastroenterologa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4263, 4533] <type: RIGHT>>
+R108	Drg Arg1:T93 Arg2:T84 <<REDUNDANT!!!REMOVED>>	Beto 150 ZK -> 2 g 2x dz <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4263, 4504] <type: RIGHT>>
+R109	Drg Arg1:T93 Arg2:T86 <<REDUNDANT!!!REMOVED>>	Beto 150 ZK -> 1x 1 tabl/wiecz <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4263, 4478] <type: RIGHT>>
+R110	Drg Arg1:T93 Arg2:T88 <<REDUNDANT!!!REMOVED>>	Beto 150 ZK -> 75ug 1x dz rano na czczo w dni nieparzyste <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4263, 4423] <type: RIGHT>>
+R111	Drg Arg1:T93 Arg2:T90 <<REDUNDANT!!!REMOVED>>	Beto 150 ZK -> 125ug na zmianę w dni parzyste  1x 1/2 tabl/rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[4263, 4360] <type: RIGHT>>
+R112	Drg Arg1:T93 Arg2:T94 <<REDUNDANT!!!REMOVED>>	Beto 150 ZK -> 40mg 1x 1 tabl/wiecz <:REMOVED other first tag between (right):> <RANK: 1> <info: start[4263, 4327] <type: RIGHT>>
+R113	Drg Arg1:T93 Arg2:T95 <<REDUNDANT!!!REMOVED>>	Beto 150 ZK -> 5mg 1x 1 tabl/rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[4263, 4299] <type: RIGHT>>
+R114	Drg Arg1:T93 Arg2:T96 << OK >>	Beto 150 ZK -> 1x 1 tabl/rano  <RANK: 3> <info: start[4263, 4275] <type: RIGHT>>
+R115	Drg Arg1:T93 Arg2:T98 <<REDUNDANT!!!REMOVED>>	Beto 150 ZK -> 150mg 1x 1 tabl/wiecz przez 6 m-ce od zabiegu ( do 09.07.2019) (dalej wg zaleceń neurologa) <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[4263, 4169] <type: LEFT>>
+R116	Drg Arg1:T97 Arg2:T82 <<REDUNDANT!!!REMOVED>>	Polocard -> 50 2x dz - wg. zaleceń gastroenterologa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4160, 4533] <type: RIGHT>>
+R117	Drg Arg1:T97 Arg2:T84 <<REDUNDANT!!!REMOVED>>	Polocard -> 2 g 2x dz <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4160, 4504] <type: RIGHT>>
+R118	Drg Arg1:T97 Arg2:T86 <<REDUNDANT!!!REMOVED>>	Polocard -> 1x 1 tabl/wiecz <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4160, 4478] <type: RIGHT>>
+R119	Drg Arg1:T97 Arg2:T88 <<REDUNDANT!!!REMOVED>>	Polocard -> 75ug 1x dz rano na czczo w dni nieparzyste <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4160, 4423] <type: RIGHT>>
+R120	Drg Arg1:T97 Arg2:T90 <<REDUNDANT!!!REMOVED>>	Polocard -> 125ug na zmianę w dni parzyste  1x 1/2 tabl/rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4160, 4360] <type: RIGHT>>
+R121	Drg Arg1:T97 Arg2:T94 <<REDUNDANT!!!REMOVED>>	Polocard -> 40mg 1x 1 tabl/wiecz <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4160, 4327] <type: RIGHT>>
+R122	Drg Arg1:T97 Arg2:T95 <<REDUNDANT!!!REMOVED>>	Polocard -> 5mg 1x 1 tabl/rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4160, 4299] <type: RIGHT>>
+R123	Drg Arg1:T97 Arg2:T96 <<REDUNDANT!!!REMOVED>>	Polocard -> 1x 1 tabl/rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[4160, 4275] <type: RIGHT>>
+R124	Drg Arg1:T97 Arg2:T98 << OK >>	Polocard -> 150mg 1x 1 tabl/wiecz przez 6 m-ce od zabiegu ( do 09.07.2019) (dalej wg zaleceń neurologa)  <RANK: 3> <info: start[4160, 4169] <type: RIGHT>>
+
+
+Sentence 43:
+------------------------------------------------
+
+
+
+Sentence 44:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 45:
+Pacjentka 47-letnia, z PFO, nadciśnieniem tętniczym, po udarze niedokrwiennym mózgu w 08.2018r, przyjęta do Kliniki zamknięcia ubytku za pomocą zapinki.
+R125	Dat Arg1:T147 Arg2:T143 <<REDUNDANT!!!SHOULD BE REMOVED>>	08.2018r -> PFO  <RANK: 2> <info: start[4784, 4721] <type: LEFT>>
+R126	Dat Arg1:T147 Arg2:T145 <<REDUNDANT!!!SHOULD BE REMOVED>>	08.2018r -> nadciśnieniem tętniczym  <RANK: 2> <info: start[4784, 4726] <type: LEFT>>
+R127	Dat Arg1:T147 Arg2:T146 << OK >>	08.2018r -> udarze niedokrwiennym mózgu  <RANK: 3> <info: start[4784, 4754] <type: LEFT>>
+R128	Dat Arg1:T147 Arg2:T148 <<REDUNDANT!!!REMOVED>>	08.2018r -> zamknięcia ubytku za pomocą zapinki <:REMOVED many second tags on the right:> <RANK: 2> <info: start[4784, 4814] <type: RIGHT>>
+
+
+Sentence 46:
+W wywiadzie ponadto: wrzodziejące zapalenie jelita grubego, uchyłki jelit, niedoczynność tarczycy, hiperlipidemia mieszana.
+
+
+Sentence 47:
+Pacjentka obecnie nie zgłasza dolegliwości ze strony układu krążenia, omdlenia, utraty przytomności, bóle w klatce piersiowej, uczucie kołatania serca nie występowały.
+
+R129	Neg Arg1:T177 Arg2:T173 << OK >>	nie występowały -> omdlenia  <RANK: 2> <info: start[5126, 5045] <type: LEFT>>
+R130	Neg Arg1:T177 Arg2:T174 << OK >>	nie występowały -> utraty przytomności  <RANK: 2> <info: start[5126, 5055] <type: LEFT>>
+R131	Neg Arg1:T177 Arg2:T175 << OK >>	nie występowały -> bóle w klatce piersiowej  <RANK: 2> <info: start[5126, 5076] <type: LEFT>>
+R132	Neg Arg1:T177 Arg2:T176 << OK >>	nie występowały -> uczucie kołatania serca  <RANK: 3> <info: start[5126, 5102] <type: LEFT>>
+
+
+Sentence 48:
+Wywiad rodzinny: ojciec zawal serca, matka leczy się z przyczyn kardiologicznych
+
+
+
+Sentence 49:
+Zabiegi operacyjne: cięcie cesarskie w 2006r.
+
+R133	Dat Arg1:T171 Arg2:T170 << OK >>	2006r -> cięcie cesarskie  <RANK: 3> <info: start[5263, 5244] <type: LEFT>>
+
+
+Sentence 50:
+Mieszka z rodziną.
+
+
+Sentence 51:
+pracuje umysłowo.
+
+
+
+Sentence 52:
+Beto ZK 150 mg 1 tabl.
+R134	Drg Arg1:T79 Arg2:T80 << OK >>	Beto ZK -> 150 mg 1 tabl. rano  <RANK: 3> <info: start[5307, 5315] <type: RIGHT>>
+
+
+Sentence 53:
+rano
+Diured 10 mg 1 tabl.
+R135	Drg Arg1:T77 Arg2:T78 << OK >>	Diured -> 10 mg 1 tabl. rano  <RANK: 3> <info: start[5335, 5342] <type: RIGHT>>
+
+
+Sentence 54:
+rano
+Euthyrox 125ug 1/2 tabl. rano na czczo
+Sulfasalazyna 500 mg 1 tabl.2 x dz - zakończenie terapii w dniu 08.01.2019r.
+
+R136	Drg Arg1:T73 Arg2:T74 << OK >>	Sulfasalazyna -> 500 mg 1 tabl.2 x dz - zakończenie terapii w dniu 08.01.2019r  <RANK: 3> <info: start[5400, 5414] <type: RIGHT>>
+R137	Drg Arg1:T73 Arg2:T76 <<REDUNDANT!!!REMOVED>>	Sulfasalazyna -> 125ug 1/2 tabl. rano na czczo <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[5400, 5370] <type: LEFT>>
+R138	Drg Arg1:T75 Arg2:T74 <<REDUNDANT!!!REMOVED>>	Euthyrox -> 500 mg 1 tabl.2 x dz - zakończenie terapii w dniu 08.01.2019r <:REMOVED other first tag between (right):> <RANK: 0> <info: start[5361, 5414] <type: RIGHT>>
+R139	Drg Arg1:T75 Arg2:T76 << OK >>	Euthyrox -> 125ug 1/2 tabl. rano na czczo  <RANK: 3> <info: start[5361, 5370] <type: RIGHT>>
+
+
+Sentence 55:
+Diclofor 60 mg 1 x dz
+Kalipoz prolongatum 1 x dz
+Acard 150 mg 1 tabl.
+R140	Drg Arg1:T67 Arg2:T68 << OK >>	Acard -> 150 mg 1 tabl. wieczorem  <RANK: 3> <info: start[5526, 5532] <type: RIGHT>>
+R141	Drg Arg1:T67 Arg2:T70 <<REDUNDANT!!!REMOVED>>	Acard -> 1 x dz <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[5526, 5519] <type: LEFT>>
+R142	Drg Arg1:T67 Arg2:T72 <<REDUNDANT!!!REMOVED>>	Acard -> 60 mg 1 x dz <:REMOVED other first tag between (left):> <RANK: 1> <info: start[5526, 5486] <type: LEFT>>
+R143	Drg Arg1:T69 Arg2:T68 <<REDUNDANT!!!REMOVED>>	Kalipoz prolongatum -> 150 mg 1 tabl. wieczorem <:REMOVED other first tag between (right):> <RANK: 1> <info: start[5499, 5532] <type: RIGHT>>
+R144	Drg Arg1:T69 Arg2:T70 << OK >>	Kalipoz prolongatum -> 1 x dz  <RANK: 3> <info: start[5499, 5519] <type: RIGHT>>
+R145	Drg Arg1:T69 Arg2:T72 <<REDUNDANT!!!REMOVED>>	Kalipoz prolongatum -> 60 mg 1 x dz <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[5499, 5486] <type: LEFT>>
+R146	Drg Arg1:T71 Arg2:T68 <<REDUNDANT!!!REMOVED>>	Diclofor -> 150 mg 1 tabl. wieczorem <:REMOVED other first tag between (right):> <RANK: 1> <info: start[5477, 5532] <type: RIGHT>>
+R147	Drg Arg1:T71 Arg2:T70 <<REDUNDANT!!!REMOVED>>	Diclofor -> 1 x dz <:REMOVED other first tag between (right):> <RANK: 1> <info: start[5477, 5519] <type: RIGHT>>
+R148	Drg Arg1:T71 Arg2:T72 << OK >>	Diclofor -> 60 mg 1 x dz  <RANK: 3> <info: start[5477, 5486] <type: RIGHT>>
+
+
+Sentence 56:
+wieczorem
+------------------------------------------------
+
+
+
+Sentence 57:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 58:
+Pacjentka  lat 48 przyjęta do Kliniki celem oceny efektów zabiegu zamknięcia zapinką PFO 09.01.2019 .
+R149	Dat Arg1:T169 Arg2:T144 << OK >>	09.01.2019 -> PFO  <RANK: 3> <info: start[5770, 5766] <type: LEFT>>
+R150	Dat Arg1:T169 Arg2:T168 << OK >>	09.01.2019 -> zabiegu zamknięcia zapinką  <RANK: 3> <info: start[5770, 5739] <type: LEFT>>
+
+
+Sentence 59:
+Zgłasza okresowe uczucie kołatani serca. 
+
+
+
+Sentence 60:
+Neguje zasłabnięcia , neguje bóle w klatce piersiowej 
+
+R151	Neg Arg1:T165 Arg2:T163 <<REDUNDANT!!!REMOVED>>	neguje -> zasłabnięcia <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[5847, 5832] <type: LEFT>>
+R152	Neg Arg1:T165 Arg2:T164 << OK >>	neguje -> bóle w klatce piersiowej  <RANK: 3> <info: start[5847, 5854] <type: RIGHT>>
+R153	Neg Arg1:T166 Arg2:T163 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[5825, 5832] <type: RIGHT>>
+R154	Neg Arg1:T166 Arg2:T164 <<REDUNDANT!!!REMOVED>>	Neguje -> bóle w klatce piersiowej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[5825, 5854] <type: RIGHT>>
+
+
+Sentence 61:
+W wywiadzie :  Przetrwały otwór owalny - zamknięcie zestawem Occlutech Figulla Flex II 19PFO25D (09.01.2019).
+R155	Dat Arg1:T162 Arg2:T160 << OK >>	09.01.2019 -> Przetrwały otwór owalny  <RANK: 3> <info: start[5977, 5895] <type: LEFT>>
+R156	Dat Arg1:T162 Arg2:T161 << OK >>	09.01.2019 -> zamknięcie zestawem Occlutech Figulla Flex II 19PFO25D  <RANK: 3> <info: start[5977, 5921] <type: LEFT>>
+
+
+Sentence 62:
+Nadciśnienie tętnicze.
+
+
+Sentence 63:
+Stan po udarze niedokrwiennym lewej półkuli mózgu z niedowładem połowiczym prawostronnym i afazją motoryczną (08.2018).
+R157	Dat Arg1:T158 Arg2:T156 << OK >>	08.2018 -> niedowładem połowiczym prawostronnym  <RANK: 2> <info: start[6123, 6065] <type: LEFT>>
+R158	Dat Arg1:T158 Arg2:T157 << OK >>	08.2018 -> afazją motoryczną  <RANK: 3> <info: start[6123, 6104] <type: LEFT>>
+R159	Dat Arg1:T158 Arg2:T155 << OK >>	08.2018 -> udarze niedokrwiennym lewej półkuli mózgu  <RANK: 2> <info: start[6123, 6021] <type: LEFT>>
+
+
+Sentence 64:
+Choroba Crohna.
+
+
+Sentence 65:
+Uchyłki jelit.
+
+
+Sentence 66:
+Niedoczynność tarczycy.
+
+
+Sentence 67:
+Hiperlipidemia mieszana.
+
+
+
+Sentence 68:
+Przebyte operacje:  brak
+
+R160	Neg Arg1:T33 Arg2:T34 << OK >>	brak -> Przebyte operacje  <RANK: 3> <info: start[6233, 6213] <type: LEFT>>
+
+
+Sentence 69:
+Leczenie przewlekłe:  gastroenterologiczne 
+
+
+
+Sentence 70:
+Przebyte choroby zakaźne - WZW ( -  ) , borelioza ( - ) Odra ( - )
+
+R161	Neg Arg1:T23 Arg2:T30 << OK >>	( -  ) -> WZW  <RANK: 3> <info: start[6313, 6309] <type: LEFT>>
+R162	Neg Arg1:T23 Arg2:T31 <<REDUNDANT!!!REMOVED>>	( -  ) -> borelioza <:REMOVED many second tags on the right:> <RANK: 2> <info: start[6313, 6322] <type: RIGHT>>
+R163	Neg Arg1:T23 Arg2:T32 <<REDUNDANT!!!REMOVED>>	( -  ) -> Odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[6313, 6338] <type: RIGHT>>
+R164	Neg Arg1:T24 Arg2:T30 <<REDUNDANT!!!REMOVED>>	( - ) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[6332, 6309] <type: LEFT>>
+R165	Neg Arg1:T24 Arg2:T31 << OK >>	( - ) -> borelioza  <RANK: 3> <info: start[6332, 6322] <type: LEFT>>
+R166	Neg Arg1:T24 Arg2:T32 <<REDUNDANT!!!SHOULD BE REMOVED>>	( - ) -> Odra  <RANK: 3> <info: start[6332, 6338] <type: RIGHT>>
+R167	Neg Arg1:T25 Arg2:T30 <<REDUNDANT!!!REMOVED>>	- ) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[6345, 6309] <type: LEFT>>
+R168	Neg Arg1:T25 Arg2:T31 <<REDUNDANT!!!SHOULD BE REMOVED>>	- ) -> borelioza  <RANK: 3> <info: start[6345, 6322] <type: LEFT>>
+R169	Neg Arg1:T25 Arg2:T32 << OK >>	- ) -> Odra  <RANK: 3> <info: start[6345, 6338] <type: LEFT>>
+
+
+Sentence 71:
+W wywiadzie rodzinnym : brak danych 
+
+R170	Neg Arg1:T22 Arg2:T29 << OK >>	brak danych -> W wywiadzie rodzinnym  <RANK: 3> <info: start[6373, 6349] <type: LEFT>>
+
+
+Sentence 72:
+Palenie tytoniu: nie pali od 15 lat 
+
+R171	Neg Arg1:T21 Arg2:T28 << OK >>	nie pal -> Palenie tytoniu  <RANK: 3> <info: start[6403, 6386] <type: LEFT>>
+
+
+Sentence 73:
+Inne używki: nie
+Uczulenia: neguje
+Stan społeczny: warunki mieszkaniowe dobre , mieszka z mężem
+Leki: 
+Acard 75mg 1x 1 tabl/wiecz przez 6 m-ce (dalej wg zaleceń neurologa) 
+
+R172	Neg Arg1:T19 Arg2:T26 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[6451, 6440] <type: LEFT>>
+R173	Neg Arg1:T19 Arg2:T18 <<REDUNDANT!!!REMOVED>>	neguje -> warunki mieszkaniowe dobre <:REMOVED many second tags on the right:> <RANK: 1> <info: start[6451, 6474] <type: RIGHT>>
+R174	Neg Arg1:T19 Arg2:T27 <<REDUNDANT!!!REMOVED>>	neguje -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[6451, 6423] <type: LEFT>>
+R175	Neg Arg1:T19 Arg2:T16 <<REDUNDANT!!!REMOVED>>	neguje -> Acard <:REMOVED other second tag between (right):> <RANK: 0> <info: start[6451, 6526] <type: RIGHT>>
+R176	Neg Arg1:T19 Arg2:T17 <<REDUNDANT!!!REMOVED>>	neguje -> 75mg 1x 1 tabl/wiecz przez 6 m-ce (dalej wg zaleceń neurologa) <:REMOVED other second tag between (right):> <RANK: 0> <info: start[6451, 6532] <type: RIGHT>>
+R177	Neg Arg1:T20 Arg2:T26 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[6436, 6440] <type: RIGHT>>
+R178	Neg Arg1:T20 Arg2:T18 <<REDUNDANT!!!REMOVED>>	nie -> warunki mieszkaniowe dobre <:REMOVED other first tag between (right):> <RANK: 1> <info: start[6436, 6474] <type: RIGHT>>
+R179	Neg Arg1:T20 Arg2:T27 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[6436, 6423] <type: LEFT>>
+R180	Neg Arg1:T20 Arg2:T16 <<REDUNDANT!!!REMOVED>>	nie -> Acard <:REMOVED other first tag between (right):> <RANK: 0> <info: start[6436, 6526] <type: RIGHT>>
+R181	Neg Arg1:T20 Arg2:T17 <<REDUNDANT!!!REMOVED>>	nie -> 75mg 1x 1 tabl/wiecz przez 6 m-ce (dalej wg zaleceń neurologa) <:REMOVED other first tag between (right):> <RANK: 0> <info: start[6436, 6532] <type: RIGHT>>
+R182	Drg Arg1:T16 Arg2:T17 << OK >>	Acard -> 75mg 1x 1 tabl/wiecz przez 6 m-ce (dalej wg zaleceń neurologa)  <RANK: 3> <info: start[6526, 6532] <type: RIGHT>>
+R183	Alg Arg1:T26 Arg2:T16 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Acard <:REMOVED other second tag between (right):> <RANK: 0> <info: start[6440, 6526] <type: RIGHT>>
+
+
+Sentence 74:
+Plavix 75mg 1x 1 tabl/rano przez 3 m-ce 
+Beto 150 ZK 1x 1 tabl/rano 
+
+R184	Drg Arg1:T12 Arg2:T13 << OK >>	Beto 150 ZK -> 1x 1 tabl/rano  <RANK: 3> <info: start[6637, 6649] <type: RIGHT>>
+R185	Drg Arg1:T12 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Beto 150 ZK -> 75mg 1x 1 tabl/rano przez 3 m-ce <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[6637, 6603] <type: LEFT>>
+R186	Drg Arg1:T14 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Plavix -> 1x 1 tabl/rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[6596, 6649] <type: RIGHT>>
+R187	Drg Arg1:T14 Arg2:T15 << OK >>	Plavix -> 75mg 1x 1 tabl/rano przez 3 m-ce  <RANK: 3> <info: start[6596, 6603] <type: RIGHT>>
+
+
+Sentence 75:
+Diured 5mg 1x 1 tabl/rano 
+
+R188	Drg Arg1:T10 Arg2:T11 << OK >>	Diured -> 5mg 1x 1 tabl/rano  <RANK: 3> <info: start[6665, 6672] <type: RIGHT>>
+
+
+Sentence 76:
+Euthyrox N125ug 1x 1/2 tabl/rano 
+
+R189	Drg Arg1:T8 Arg2:T9 << OK >>	Euthyrox N -> 125ug 1x 1/2 tabl/rano  <RANK: 3> <info: start[6692, 6702] <type: RIGHT>>
+
+
+Sentence 77:
+Pentasa 2 g 2x dz 
+Azathioprine VIS 50 mg 2xdz 
+
+R190	Drg Arg1:T4 Arg2:T5 << OK >>	Azathioprine VIS -> 50 mg 2xdz  <RANK: 3> <info: start[6745, 6762] <type: RIGHT>>
+R191	Drg Arg1:T4 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Azathioprine VIS -> 2 g 2x dz <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[6745, 6734] <type: LEFT>>
+R192	Drg Arg1:T6 Arg2:T5 <<REDUNDANT!!!REMOVED>>	Pentasa -> 50 mg 2xdz <:REMOVED other first tag between (right):> <RANK: 1> <info: start[6726, 6762] <type: RIGHT>>
+R193	Drg Arg1:T6 Arg2:T7 << OK >>	Pentasa -> 2 g 2x dz  <RANK: 3> <info: start[6726, 6734] <type: RIGHT>>
+
+
+Sentence 78:
+Plan Opieki : Echo serca , Holter EKG , RR ,
+
+
+Sentence 79:
+Planowany czas hospitalizacji 4-5 dni
+------------------------------------------------
+
+
+
+Sentence 80:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 81:
+Grupa krwi + p/c odpornościowe (powyżej 4. m-ca życia
+    NR-KS:G-19/000444
+    KODKRESKOWYPROBKI:G-19/000444
+    GR:AB
+    RH:- (ujemny)
+    
+
+
+Sentence 82:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+
+
+
+Sentence 83:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.00[10^3/ul]
+    
+
+
+Sentence 84:
+RBC Krwinki czerwone:4.81[10^6/ul]
+    
+
+
+Sentence 85:
+HGB Hemoglobina:13.4[g/dl]
+    
+
+
+Sentence 86:
+HCT Hematokryt:39.3[%]
+    
+
+
+Sentence 87:
+MCV wskaźnik czerwonokrw:81.7[fl]
+    
+
+
+Sentence 88:
+MCH wskaźnik czerwonokrw:27.9[pg]
+    
+
+
+Sentence 89:
+MCHC wskaźnik czerwonokr:34.1[g/dl]
+    
+
+
+Sentence 90:
+PLT z morfologii:229[10^3/ul]
+    
+
+
+Sentence 91:
+RDW-SD:40.7[fl]
+    
+
+
+Sentence 92:
+RDW-CV:13.7[%]
+    PDW:10.4[fl]
+    
+
+
+Sentence 93:
+MPV:9.6[fl]
+    
+
+
+Sentence 94:
+P-LCR:22.0[%]
+    
+
+
+Sentence 95:
+PCT (hematokryt płytkowy:0.22[%]
+    
+
+
+Sentence 96:
+NEUTR# wartość bezwzględ:3.85[10^3/ul]
+    
+
+
+Sentence 97:
+NEUTR%:64.2[%]
+    
+
+
+Sentence 98:
+LYMH# wartość bezwzględn:1.34[10^3/ul]
+    
+
+
+Sentence 99:
+LYMPH%:22.3[%]
+    
+
+
+Sentence 100:
+MONO# wartość bezwzględn:0.55[10^3/ul]
+    
+
+
+Sentence 101:
+MONO%:9.2[%]
+    
+
+
+Sentence 102:
+EO# wartość bezwzględna:0.23[10^3/ul]
+    
+
+
+Sentence 103:
+EO%:3.8[%]
+    BASO# wartość bezwzględn:0.03[10^3/ul]
+    
+
+
+Sentence 104:
+BASO%:0.5[%]
+    
+
+
+Sentence 105:
+NRBC %:0.0[%]
+    
+
+
+Sentence 106:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 107:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.51[10^3/ul]
+    
+
+
+Sentence 108:
+RBC Krwinki czerwone:4.12[10^6/ul]
+    
+
+
+Sentence 109:
+HGB Hemoglobina:12.2[g/dl]
+    
+
+
+Sentence 110:
+HCT Hematokryt:36.1[%]
+    
+
+
+Sentence 111:
+MCV wskaźnik czerwonokrw:87.6[fl]
+    
+
+
+Sentence 112:
+MCH wskaźnik czerwonokrw:29.6[pg]
+    
+
+
+Sentence 113:
+MCHC wskaźnik czerwonokr:33.8[g/dl]
+    
+
+
+Sentence 114:
+PLT z morfologii:298[10^3/ul]
+    
+
+
+Sentence 115:
+RDW-SD:44.7[fl]
+    
+
+
+Sentence 116:
+RDW-CV:14.3[%]
+    PDW:10.1[fl]
+    
+
+
+Sentence 117:
+MPV:9.5[fl]
+    
+
+
+Sentence 118:
+P-LCR:20.9[%]
+    
+
+
+Sentence 119:
+PCT (hematokryt płytkowy:0.28[%]
+    
+
+
+Sentence 120:
+NEUTR# wartość bezwzględ:2.78[10^3/ul]
+    
+
+
+Sentence 121:
+NEUTR%:61.6[%]
+    
+
+
+Sentence 122:
+LYMH# wartość bezwzględn:1.09[10^3/ul]
+    
+
+
+Sentence 123:
+LYMPH%:24.2[%]
+    
+
+
+Sentence 124:
+MONO# wartość bezwzględn:0.23[10^3/ul]
+    
+
+
+Sentence 125:
+MONO%:5.1[%]
+    
+
+
+Sentence 126:
+EO# wartość bezwzględna:0.38[10^3/ul]
+    
+
+
+Sentence 127:
+EO%:8.4[%]
+    BASO# wartość bezwzględn:0.03[10^3/ul]
+    BASO%:0.7[%]
+    
+
+
+Sentence 128:
+NRBC %:0.0[%]
+    
+
+
+Sentence 129:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 130:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:29.4[sek]
+
+
+
+Sentence 131:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:26.0[sek]
+
+
+
+Sentence 132:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 133:
+Czas protrombinowy:12.9[sek]
+    
+
+
+Sentence 134:
+Wskaźnik PT:85.3[%]
+    
+
+
+Sentence 135:
+INR:1.17
+Czas protrombinowy (PT)
+    
+
+
+Sentence 136:
+Czas protrombinowy:11.4[sek]
+    
+
+
+Sentence 137:
+Wskaźnik PT:96.5[%]
+    
+
+
+Sentence 138:
+INR:1.04
+Badanie ogólne moczu
+    
+
+
+Sentence 139:
+barwa:ciemnożółta[ ]
+    
+
+
+Sentence 140:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 141:
+przejrzystość:niezupełna[ ]
+    
+
+
+Sentence 142:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 143:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 144:
+ciężar właściwy:1.025[ ]
+    
+
+
+Sentence 145:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 146:
+pH:5.0[ ]
+    
+
+
+Sentence 147:
+białko:nieobecne[ ]
+    
+
+
+Sentence 148:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 149:
+azotyny:obecne[ ]
+    
+
+
+Sentence 150:
+erytrocyty:obecne[ ]
+    
+
+
+Sentence 151:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 152:
+OSAD MOCZU:MIKROSKOPOWY[ ]
+    
+
+
+Sentence 153:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 154:
+leukocyty:2[ul]
+    
+
+
+Sentence 155:
+erytrocyty świeże i wyłu:zalegają pole widzenia[ul]
+    śluz:dość liczne pasma[w preparacie]
+    bakterie:dość liczne[w preparacie]
+
+
+
+Sentence 156:
+Badanie ogólne moczu
+    barwa:bursztynowy[ ]
+    
+
+
+Sentence 157:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 158:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 159:
+przejrzystość:niezupełna[ ]
+    
+
+
+Sentence 160:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 161:
+ciężar właściwy:1.021[ ]
+    
+
+
+Sentence 162:
+kwas askrobinowy:20 mg/dl[ ]
+    
+
+
+Sentence 163:
+pH:5.0[ ]
+    
+
+
+Sentence 164:
+białko:nieobecne[ ]
+    
+
+
+Sentence 165:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 166:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 167:
+erytrocyty:obecne[ ]
+    
+
+
+Sentence 168:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 169:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 170:
+nabłonki płaskie:dość liczne[w preparacie]
+    
+
+
+Sentence 171:
+leukocyty:3 /ul[ul]
+    erytrocyty świeże i częś:63/ul[ul]
+    śluz:dość liczny[w preparacie]
+    bakterie:nieliczne[w preparacie]
+    
+
+
+Sentence 172:
+wałeczki szkliste:0-1 wpw[w preparacie]
+
+
+
+Sentence 173:
+TSH: TSH:4.56[uIU/ml]
+
+
+
+Sentence 174:
+TSH: TSH:5.40[uIU/ml]
+
+
+
+Sentence 175:
+FT3: FT3:2.53[pg/ml]
+
+
+
+Sentence 176:
+FT3: FT3:2.94[pg/ml]
+
+
+
+Sentence 177:
+FT4: FT4:1.27[ng/dl]
+
+
+
+Sentence 178:
+FT4: FT4:1.24[ng/dl]
+
+
+
+Sentence 179:
+Troponina T
+    Troponina T:
+    3.00[pg/ml]
+
+
+
+Sentence 180:
+HBsAg: HBsAg:niereaktywny[ ]
+
+
+
+Sentence 181:
+Przeciwciała anty-HCV: Przeciwciała anty-HCV:niereaktywny
+ALAT: ALAT:17[U/L]
+ALAT: ALAT:18[U/L]
+
+
+
+Sentence 182:
+ASPAT: ASPAT:19[U/L]
+ASPAT: ASPAT:20[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:5.12[mg/dl]
+
+
+
+Sentence 183:
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:2.74[mg/dl]
+
+
+
+Sentence 184:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 185:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 186:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 187:
+Potas (K): Potas:4.4[mmol/L]
+
+
+
+Sentence 188:
+Potas (K): Potas:4.3[mmol/L]
+
+
+
+Sentence 189:
+Potas (K): Potas:4.1[mmol/L]
+
+
+
+Sentence 190:
+Kreatynina + GFR
+    
+
+
+Sentence 191:
+Kreatynina w surowicy:0.9[mg/dl]
+    
+
+
+Sentence 192:
+eGFR wg skr.
+
+
+Sentence 193:
+MDRD ze stan:66.8[ml/min/1,73 m^2]
+
+
+
+Sentence 194:
+Kreatynina + GFR
+    
+
+
+Sentence 195:
+Kreatynina w surowicy:0.78[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 196:
+MDRD ze stan:78.8[ml/min/1,73 m^2]
+
+
+
+Sentence 197:
+Kreatynina + GFR
+    
+
+
+Sentence 198:
+Kreatynina w surowicy:0.82[mg/dl]
+    
+
+
+Sentence 199:
+eGFR wg skr.
+
+
+Sentence 200:
+MDRD ze stan:74.4[ml/min/1,73 m^2]
+
+
+
+Sentence 201:
+Mocznik: Mocznik:25[mg/dl]
+
+
+
+Sentence 202:
+Mocznik: Mocznik:21[mg/dl]
+
+
+
+Sentence 203:
+Mocznik: Mocznik:20[mg/dl]
+
+
+
+Sentence 204:
+Kwas moczowy: Kwas moczowy:6.1[mg/dl]
+
+
+
+Sentence 205:
+Kwas moczowy: Kwas moczowy:4.1[mg/dl]
+
+
+
+Sentence 206:
+Lipidogram
+    
+
+
+Sentence 207:
+Cholesterol całkowity:201[mg/dl]
+    
+
+
+Sentence 208:
+Cholesterol HDL:47[mg/dl]
+    
+
+
+Sentence 209:
+Cholestrol LDL:142[mg/dl]
+    
+
+
+Sentence 210:
+Triglicerydy:162[mg/dl]
+    
+
+
+Sentence 211:
+Stosunek cholesterolu HD:0.2
+Lipidogram
+    
+
+
+Sentence 212:
+Cholesterol całkowity:188[mg/dl]
+    
+
+
+Sentence 213:
+Cholesterol HDL:45[mg/dl]
+    
+
+
+Sentence 214:
+Cholestrol LDL:126[mg/dl]
+    
+
+
+Sentence 215:
+Triglicerydy:168[mg/dl]
+    
+
+
+Sentence 216:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:84[mg/dl]
+
+
+
+Sentence 217:
+Glukoza w surowicy: Glukoza w surowicy:93[mg/dl]
+
+
+
+Sentence 218:
+------------------------------------------------
+
+
+
+Sentence 219:
+ICD10
+------------------------------------------------
+Q21.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 220:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 221:
+89.501
+C55
+A01
+89.502
+I81
+G11
+G21
+L43
+O61
+N45
+L69
+O55
+I17
+M45
+I19
+O35
+M37
+
+
+
+Sentence 222:
+N13
+88.721
+88.722
+O69
+
+
+
+Sentence 223:
+------------------------------------------------
+
+

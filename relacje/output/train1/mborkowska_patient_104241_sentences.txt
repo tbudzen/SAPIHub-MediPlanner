@@ -1,0 +1,526 @@
+allRelations          : 46
+oks                   : 12
+isRedundantAndRemoveds: 30
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 3
+GOOD / BAD            : 42 / 4
+Sentence 0:
+------------------------------------------------
+Wiek: 64 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 2:
+------------------------------------------------
+
+
+
+Sentence 3:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 4:
+------------------------------------------------
+ Rozpozanie I: ICD10:I35.2|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Umiarkowana stenoza zastawki aortalnej.
+
+
+Sentence 5:
+Łagodna niedomykalność zastawki aortalnej, mitralnej i trójdzielnej.  
+
+
+Sentence 6:
+Nadciśnienie tętnicze.
+
+
+Sentence 7:
+Hiperlipidemia.
+
+
+Sentence 8:
+Miażdżyca tętnic szyjnych.
+
+
+Sentence 9:
+Zespół bolesnego barku.
+
+
+
+Sentence 10:
+------------------------------------------------
+
+
+
+Sentence 11:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 12:
+------------------------------------------------
+ Rozpozanie I: ICD10:I10|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Miażdżyca.
+
+
+Sentence 13:
+Zespół bolesnego barku.
+
+
+
+Sentence 14:
+------------------------------------------------
+
+
+
+Sentence 15:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 16:
+Pacjentka lat 63 została przyjęta z powodu wahań RR do 180/80mmHg.
+
+
+
+Sentence 17:
+W wywiadzie: HA, miażdżyca, zespół bolesnego barku.
+
+
+
+Sentence 18:
+Pacjentka neguje typowe bóle zamostkowe, utraty przytomności.
+R1	Neg Arg1:T38 Arg2:T36 << OK >>	neguje -> bóle zamostkowe  <RANK: 3> <info: start[1164, 1178] <type: RIGHT>>
+R2	Neg Arg1:T38 Arg2:T37 << OK >>	neguje -> utraty przytomności  <RANK: 2> <info: start[1164, 1195] <type: RIGHT>>
+
+
+Sentence 19:
+Podaje wahania RR.
+
+
+Sentence 20:
+Ponadto: ma opisywane niestabilne blaszki miażdżycowe w tętnicach szyjnych - bez wskazań do zabiegu chirurgicznego.
+
+
+Sentence 21:
+Pacjentka nie miała zalecone przyjmowanie statyny.
+R3	Neg Arg1:T33 Arg2:T32 << OK >>	nie miała zalecone -> statyny  <RANK: 3> <info: start[1361, 1393] <type: RIGHT>>
+
+
+Sentence 22:
+Od 2 tygodni nie pali papierosów.
+
+R4	Neg Arg1:T30 Arg2:T31 << OK >>	nie pali -> papierosów  <RANK: 3> <info: start[1415, 1424] <type: RIGHT>>
+R5	Dat Arg1:T29 Arg2:T31 << OK >>	2 tygodni -> papierosów  <RANK: 3> <info: start[1405, 1424] <type: RIGHT>>
+
+
+Sentence 23:
+Nikotynizm:    od 2 tygodni nie pali  Alkohol: okazjonalnie
+Pacjent neguje: uczulenia na leki, krwawienia z przewodu pokarmowego.
+
+R6	Neg Arg1:T22 Arg2:T24 <<SHOULD NOT BE REMOVED>>	neguje -> krwawienia z przewodu pokarmowego <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1504, 1531] <type: RIGHT>>
+R7	Neg Arg1:T22 Arg2:T23 << OK >>	neguje -> uczulenia na leki  <RANK: 3> <info: start[1504, 1512] <type: RIGHT>>
+R8	Neg Arg1:T22 Arg2:T25 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1504, 1436] <type: LEFT>>
+R9	Neg Arg1:T22 Arg2:T28 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: okazjonalnie <:REMOVED many second tags on the left:> <RANK: 1> <info: start[1504, 1474] <type: LEFT>>
+R10	Neg Arg1:T27 Arg2:T24 <<REDUNDANT!!!REMOVED>>	nie pali -> krwawienia z przewodu pokarmowego <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1464, 1531] <type: RIGHT>>
+R11	Neg Arg1:T27 Arg2:T23 <<REDUNDANT!!!REMOVED>>	nie pali -> uczulenia na leki <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1464, 1512] <type: RIGHT>>
+R12	Neg Arg1:T27 Arg2:T25 << OK >>	nie pali -> Nikotynizm  <RANK: 3> <info: start[1464, 1436] <type: LEFT>>
+R13	Neg Arg1:T27 Arg2:T28 <<REDUNDANT!!!SHOULD BE REMOVED>>	nie pali -> Alkohol: okazjonalnie  <RANK: 3> <info: start[1464, 1474] <type: RIGHT>>
+R14	Dat Arg1:T26 Arg2:T24 <<REDUNDANT!!!REMOVED>>	od 2 tygodni -> krwawienia z przewodu pokarmowego <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1451, 1531] <type: RIGHT>>
+R15	Dat Arg1:T26 Arg2:T23 <<REDUNDANT!!!REMOVED>>	od 2 tygodni -> uczulenia na leki <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1451, 1512] <type: RIGHT>>
+R16	Dat Arg1:T26 Arg2:T25 << OK >>	od 2 tygodni -> Nikotynizm  <RANK: 3> <info: start[1451, 1436] <type: LEFT>>
+R17	Dat Arg1:T26 Arg2:T28 <<REDUNDANT!!!SHOULD BE REMOVED>>	od 2 tygodni -> Alkohol: okazjonalnie  <RANK: 3> <info: start[1451, 1474] <type: RIGHT>>
+
+
+Sentence 24:
+Wywiad rodzinny: -
+Przyjmowane obecnie leki: Beto ZK 25, Acard 75, Polpril 2,5mg, Pramolan, Wit D3.
+
+R18	Neg Arg1:T21 Arg2:T20 << OK >>	- -> Wywiad rodzinny  <RANK: 3> <info: start[1583, 1566] <type: LEFT>>
+R19	Neg Arg1:T21 Arg2:T12 <<REDUNDANT!!!REMOVED>>	- -> Beto ZK <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1583, 1611] <type: RIGHT>>
+R20	Neg Arg1:T21 Arg2:T14 <<REDUNDANT!!!REMOVED>>	- -> Acard <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1583, 1623] <type: RIGHT>>
+R21	Neg Arg1:T21 Arg2:T16 <<REDUNDANT!!!REMOVED>>	- -> Polpril <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1583, 1633] <type: RIGHT>>
+R22	Neg Arg1:T21 Arg2:T18 <<REDUNDANT!!!REMOVED>>	- -> Pramolan <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1583, 1648] <type: RIGHT>>
+R23	Neg Arg1:T21 Arg2:T19 <<REDUNDANT!!!REMOVED>>	- -> Wit D3 <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1583, 1658] <type: RIGHT>>
+R24	Neg Arg1:T21 Arg2:T13 <<REDUNDANT!!!REMOVED>>	- -> 25 <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1583, 1619] <type: RIGHT>>
+R25	Neg Arg1:T21 Arg2:T15 <<REDUNDANT!!!REMOVED>>	- -> 75 <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1583, 1629] <type: RIGHT>>
+R26	Neg Arg1:T21 Arg2:T17 <<REDUNDANT!!!REMOVED>>	- -> 2,5mg <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1583, 1641] <type: RIGHT>>
+R27	Drg Arg1:T12 Arg2:T13 << OK >>	Beto ZK -> 25  <RANK: 3> <info: start[1611, 1619] <type: RIGHT>>
+R28	Drg Arg1:T12 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Beto ZK -> 75 <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1611, 1629] <type: RIGHT>>
+R29	Drg Arg1:T12 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Beto ZK -> 2,5mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1611, 1641] <type: RIGHT>>
+R30	Drg Arg1:T14 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Acard -> 25 <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1623, 1619] <type: LEFT>>
+R31	Drg Arg1:T14 Arg2:T15 << OK >>	Acard -> 75  <RANK: 3> <info: start[1623, 1629] <type: RIGHT>>
+R32	Drg Arg1:T14 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Acard -> 2,5mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1623, 1641] <type: RIGHT>>
+R33	Drg Arg1:T16 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Polpril -> 25 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1633, 1619] <type: LEFT>>
+R34	Drg Arg1:T16 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Polpril -> 75 <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1633, 1629] <type: LEFT>>
+R35	Drg Arg1:T16 Arg2:T17 << OK >>	Polpril -> 2,5mg  <RANK: 3> <info: start[1633, 1641] <type: RIGHT>>
+R36	Drg Arg1:T18 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Pramolan -> 25 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1648, 1619] <type: LEFT>>
+R37	Drg Arg1:T18 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Pramolan -> 75 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1648, 1629] <type: LEFT>>
+R38	Drg Arg1:T18 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Pramolan -> 2,5mg <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1648, 1641] <type: LEFT>>
+R39	Drg Arg1:T19 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Wit D3 -> 25 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1658, 1619] <type: LEFT>>
+R40	Drg Arg1:T19 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Wit D3 -> 75 <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1658, 1629] <type: LEFT>>
+R41	Drg Arg1:T19 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Wit D3 -> 2,5mg <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1658, 1641] <type: LEFT>>
+R42	Alg Arg1:T20 Arg2:T12 <<REDUNDANT!!!SHOULD BE REMOVED>>	Wywiad rodzinny -> Beto ZK  <RANK: 1> <info: start[1566, 1611] <type: RIGHT>>
+R43	Alg Arg1:T20 Arg2:T14 <<REDUNDANT!!!REMOVED>>	Wywiad rodzinny -> Acard <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1566, 1623] <type: RIGHT>>
+R44	Alg Arg1:T20 Arg2:T16 <<REDUNDANT!!!REMOVED>>	Wywiad rodzinny -> Polpril <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1566, 1633] <type: RIGHT>>
+R45	Alg Arg1:T20 Arg2:T18 <<REDUNDANT!!!REMOVED>>	Wywiad rodzinny -> Pramolan <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1566, 1648] <type: RIGHT>>
+R46	Alg Arg1:T20 Arg2:T19 <<REDUNDANT!!!REMOVED>>	Wywiad rodzinny -> Wit D3 <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1566, 1658] <type: RIGHT>>
+
+
+Sentence 25:
+Planowane: ECHO serca, Holter EKG, Holter RR, PW.
+
+
+
+Sentence 26:
+------------------------------------------------
+
+
+
+Sentence 27:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 28:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.14[10^3/ul]
+    
+
+
+Sentence 29:
+RBC Krwinki czerwone:4.21[10^6/ul]
+    
+
+
+Sentence 30:
+HGB Hemoglobina:13.3[g/dl]
+    
+
+
+Sentence 31:
+HCT Hematokryt:37.6[%]
+    
+
+
+Sentence 32:
+MCV wskaźnik czerwonokrw:89.3[fl]
+    
+
+
+Sentence 33:
+MCH wskaźnik czerwonokrw:31.6[pg]
+    
+
+
+Sentence 34:
+MCHC wskaźnik czerwonokr:35.4[g/dl]
+    
+
+
+Sentence 35:
+PLT z morfologii:208[10^3/ul]
+    
+
+
+Sentence 36:
+RDW-SD:40.7[fl]
+    
+
+
+Sentence 37:
+RDW-CV:12.4[%]
+    PDW:12.8[fl]
+    MPV:10.7[fl]
+    
+
+
+Sentence 38:
+P-LCR:30.8[%]
+    
+
+
+Sentence 39:
+PCT (hematokryt płytkowy:0.22[%]
+    
+
+
+Sentence 40:
+NEUTR# wartość bezwzględ:3.14[10^3/ul]
+    
+
+
+Sentence 41:
+NEUTR%:44.0[%]
+    
+
+
+Sentence 42:
+LYMH# wartość bezwzględn:2.83[10^3/ul]
+    
+
+
+Sentence 43:
+LYMPH%:39.6[%]
+    
+
+
+Sentence 44:
+MONO# wartość bezwzględn:0.79[10^3/ul]
+    MONO%:11.1[%]
+    
+
+
+Sentence 45:
+EO# wartość bezwzględna:0.32[10^3/ul]
+    
+
+
+Sentence 46:
+EO%:4.5[%]
+    
+
+
+Sentence 47:
+BASO# wartość bezwzględn:0.06[10^3/ul]
+    
+
+
+Sentence 48:
+BASO%:0.8[%]
+    
+
+
+Sentence 49:
+NRBC %:0.0[%]
+    
+
+
+Sentence 50:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 51:
+Badanie ogólne moczu
+    
+
+
+Sentence 52:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 53:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 54:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 55:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 56:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 57:
+ciężar właściwy:1.013[ ]
+    
+
+
+Sentence 58:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 59:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 60:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 61:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 62:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 63:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 64:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 65:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 66:
+leukocyty:7 /ul[ul]
+    erytrocyty świeże:3 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 67:
+TSH: TSH:3.45[uIU/ml]
+
+
+
+Sentence 68:
+FT3: FT3:2.85[pg/ml]
+
+
+
+Sentence 69:
+FT4: FT4:1.26[ng/dl]
+
+
+
+Sentence 70:
+ALAT: ALAT:10[U/L]
+ASPAT: ASPAT:28[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 71:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 72:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 73:
+Kreatynina + GFR
+    
+
+
+Sentence 74:
+Kreatynina w surowicy:0.82[mg/dl]
+    
+
+
+Sentence 75:
+eGFR wg skr.
+
+
+Sentence 76:
+MDRD ze stan:70.4[ml/min/1,73 m^2]
+
+
+
+Sentence 77:
+Mocznik: Mocznik:34[mg/dl]
+
+
+
+Sentence 78:
+Kwas moczowy: Kwas moczowy:3.9[mg/dl]
+
+
+
+Sentence 79:
+Lipidogram
+    
+
+
+Sentence 80:
+Cholesterol całkowity:142[mg/dl]
+    
+
+
+Sentence 81:
+Cholesterol HDL:48[mg/dl]
+    
+
+
+Sentence 82:
+Cholestrol LDL:87[mg/dl]
+    
+
+
+Sentence 83:
+Triglicerydy:82[mg/dl]
+    
+
+
+Sentence 84:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:75[mg/dl]
+
+
+
+Sentence 85:
+NT-proBNP surowica: NT-proBNP w surowicy:307[pg/ml]
+
+
+
+Sentence 86:
+------------------------------------------------
+
+
+
+Sentence 87:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 88:
+I35.2
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 89:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 90:
+89.501
+88.721
+89.502
+87.440
+------------------------------------------------
+
+

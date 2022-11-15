@@ -1,0 +1,56 @@
+T1	Condition 448 469	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 728 751	nadciśnienia tętniczego
+N2	Reference T2 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T3	Condition 514 558	Łagodna niedomykalność zastawki trójdzielnej
+N3	Reference T3 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T4	Date 710 718	3-letnim
+T5	Condition 0 718	------------------------------------------------
+Wiek: 60 lat
+------------------------------------------------
+------------------------------------------------
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+Rozpoznanie lek. przyjm.
+------------------------------------------------
+ Rozpozanie I: ICD10:I10|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Nadciśnienie tętnicze. Łagodna niedomykalność zastawki mitralnej. Łagodna niedomykalność zastawki trójdzielnej.
+------------------------------------------------
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+Pacjentka lat 58, z około 3-letnim
+N4	Reference T5 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+R1	Dat Arg1:T4 Arg2:T5	
+R2	Dat Arg1:T4 Arg2:T2	
+T6	Symptom 779 803	skoków RR do 200/100mmHg
+T7	Condition 818 839	zaburzenia  nerwicowe
+N5	Reference T7 ICD10:F48.9	Zaburzenia nerwicowe, nieokreślone
+T8	Negation 841 844	Bez
+T9	Symptom 845 860	typowej dławicy
+R3	Neg Arg1:T8 Arg2:T9	
+T10	Symptom 879 901	częste oddawanie moczu
+T11	Treatment 919 944	pod opieką ginekologiczną
+T12	Condition 953 970	uczulenia na leki
+N6	Reference T12 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T13	Negation 946 952	Neguje
+R4	Neg Arg1:T13 Arg2:T12	
+T14	Drug 999 1005	Bibloc
+T15	Drug 1025 1031	Karbis
+T16	Drug 1057 1064	Lacipil
+T17	Drug 1088 1093	Acard
+T18	Drug 1119 1127	Pramolan
+T19	Drug 1157 1163	Afobam
+T20	Drug_dose 1006 1024	5mg 1x 1 tabl/rano
+T21	Drug_dose 1032 1056	32mg 1x 1 tabl/wieczorem
+T22	Drug_dose 1065 1087	4mg 1x1 tabl/wieczorem
+T23	Drug_dose 1094 1118	75mg 1x 1 tabl/wieczorem
+T24	Drug_dose 1128 1156	50mg 2x1 tabl/rano i wieczór
+T25	Drug_dose 1164 1196	0,5mg 1 tabl. doraźnie wieczorem
+R5	Drg Arg1:T14 Arg2:T20	
+R6	Drg Arg1:T15 Arg2:T21	
+R7	Drg Arg1:T16 Arg2:T22	
+R8	Drg Arg1:T17 Arg2:T23	
+R9	Drg Arg1:T19 Arg2:T25	
+T26	Condition 471 512	Łagodna niedomykalność zastawki mitralnej
+N7	Reference T26 ICD10:I34.0	Niedomykalność zastawki mitralnej
+A1	Status T10 Historical_Insignificant

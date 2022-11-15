@@ -1,0 +1,74 @@
+T1	Condition 674 719	Łagodna niedomykalność zastawki trójdzielnej.
+N1	Reference T1 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T2	Condition 720 740	Bradykardia zatokowa
+N2	Reference T2 ICD10:R00.1	Bradykardia, nieokreślona
+T3	Behaviour 918 936	Dieta lekkostrawna
+T4	Investigation 950 1024	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T5	Symptom 1198 1256	okresowych bólów w klatce piersiowej związanych ze stresem
+T6	Symptom 1262 1285	uczucia kołatania serca
+N3	Reference T6 ICD10:R00.2	Kołatanie serca
+T7	Date 1287 1340	Początek dolegliwości od 2-3 związany z dużym stresem
+R1	Dat Arg1:T7 Arg2:T6	
+R2	Dat Arg1:T7 Arg2:T5	
+T8	Symptom 1350 1362	zasłabnięcia
+N4	Reference T8 ICD10:R55	Omdlenie i zapaść
+T9	Negation 1343 1349	Neguje
+R3	Neg Arg1:T9 Arg2:T8	
+T10	Condition 1379 1389	Łagodna IM
+N5	Reference T10 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T11	Condition 1392 1394	IT
+N6	Reference T11 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T12	Condition 1397 1436	Nawracające infekcję układu oddechowego
+A1	Status T12 Historical_Insignificant
+T13	Date 1437 1451	w dzieciństwie
+R4	Dat Arg1:T13 Arg2:T12	
+T14	Condition 1471 1483	mononukleozą
+N7	Reference T14 ICD10:B27	Mononukleoza zakaźna
+T15	Date 1484 1498	w wieku 18 lat
+R5	Dat Arg1:T15 Arg2:T14	
+T16	Treatment 1528 1561	operacji stawu biodrowego prawego
+A3	Status T16 Historical_Insignificant
+T17	Date 1562 1576	w wieku 10 lat
+R6	Dat Arg1:T17 Arg2:T16	
+T18	Treatment 1596 1620	usunięcia polipów z nosa
+T19	Date 1621 1625	2018
+R7	Dat Arg1:T19 Arg2:T18	
+T20	Condition 1682 1685	WZW
+N8	Reference T20 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T21	Condition 1695 1704	borelioza
+N9	Reference T21 ICD10:A69.2	Choroba z Lyme
+T22	Condition 1711 1715	Odra
+N10	Reference T22 ICD10:B05	Odra
+T23	Negation 1688 1691	-  
+T24	Negation 1707 1708	-
+T25	Negation 1718 1719	-
+R8	Neg Arg1:T25 Arg2:T22	
+R9	Neg Arg1:T24 Arg2:T21	
+R10	Neg Arg1:T23 Arg2:T20	
+T26	Condition 1753 1774	nadciśnienie tętnicze
+A5	Status T26 Family
+N11	Reference T26 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T27	Condition 1782 1798	torbiele jajnika
+A6	Status T27 Family
+N12	Reference T27 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T28	Behaviour 1800 1815	Palenie tytoniu
+N13	Reference T28 ICD10:T65.2	Tytoń i nikotyna
+T29	Negation 1817 1820	nie
+R11	Neg Arg1:T29 Arg2:T28	
+T30	Behaviour 1821 1832	Inne używki
+T31	Negation 1834 1837	nie
+R12	Neg Arg1:T31 Arg2:T30	
+T32	Negation 1849 1855	neguje
+T33	Condition 1838 1847	Uczulenia
+N14	Reference T33 ICD10:T78.4	Alergia, nieokreślona
+T34	Behaviour 1872 1898	warunki mieszkaniowe dobre
+T35	Drug 1925 1935	Microgynon
+T36	Drug_dose 1936 1978	211x dz rano przez 21 dni zgodnie z cyklem
+R13	Drg Arg1:T35 Arg2:T36	
+T37	Investigation 1994 2004	Echo serca
+T38	Investigation 2007 2017	Holter EKG
+T39	Investigation 2020 2035	Próba Wysiłkowa
+R14	Neg Arg1:T32 Arg2:T33	
+T40	Negation 1650 1654	brak
+T41	Treatment 1628 1647	Leczenie przewlekłe
+R15	Neg Arg1:T40 Arg2:T41	

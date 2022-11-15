@@ -1,0 +1,218 @@
+T1	Investigation 4636 4646	echo serca
+T2	Investigation 4648 4651	TET
+T3	Investigation 4653 4657	ABPM
+T4	Investigation 4659 4665	Holter
+T5	Investigation 4667 4685	RTG kl. piersiowej
+T6	Drug 4590 4597	Loratan
+T7	Drug 4572 4578	Doreta
+T8	Drug 4537 4548	Vinpocetine
+T9	Drug_dose 4549 4571	5 mg 1 tabl. wieczorem
+R1	Drg Arg1:T8 Arg2:T9	
+T10	Drug_dose 4581 4589	doraźnie
+R2	Drg Arg1:T7 Arg2:T10	
+T11	Drug_dose 4600 4608	doraźnie
+R3	Drg Arg1:T6 Arg2:T11	
+T12	Drug 4506 4512	Atoris
+T13	Drug_dose 4513 4536	10 mg 1 tabl. wieczorem
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Drug 4452 4458	Warfin
+T15	Drug_dose 4459 4505	5 mg wg INR (pon, wt 11/2 tabl, śr-ndz 1 tabl)
+R5	Drg Arg1:T14 Arg2:T15	
+T16	Drug 4419 4428	Egiramlon
+T17	Drug_dose 4429 4451	5 mg+5 mg 1 tabl. rano
+R6	Drg Arg1:T16 Arg2:T17	
+T18	Drug 4388 4394	Dilzem
+T19	Drug_dose 4395 4418	120 mg ret 1 tabl. rano
+R7	Drg Arg1:T18 Arg2:T19	
+T20	Drug 4352 4362	Glucophage
+T21	Drug_dose 4363 4387	500 mg 1 tabl. wieczorem
+R8	Drg Arg1:T20 Arg2:T21	
+T22	Drug 4322 4332	Diaprel MR
+T23	Drug_dose 4333 4351	30 mg 1 tabl. rano
+R9	Drg Arg1:T22 Arg2:T23	
+T24	Condition 4243 4269	Uczulenia: alergie wziewne
+N1	Reference T24 ICD10:T78.4	Alergia, nieokreślona
+T25	Negation 4232 4242	nie podaje
+T26	Negation 4208 4218	nie podaje
+T27	Negation 4180 4190	nie podaje
+T28	Negation 4152 4162	nie podaje
+T29	Condition 4135 4138	WZW
+N2	Reference T29 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T30	Condition 4140 4149	borelioza
+N3	Reference T30 ICD10:A69.2	Choroba z Lyme
+R10	Neg Arg1:T28 Arg2:T30	
+R11	Neg Arg1:T28 Arg2:T29	
+T31	Condition 4163 4178	Wywiad rodzinny
+A1	Status T31 Family
+R12	Neg Arg1:T27 Arg2:T31	
+T32	Behaviour 4191 4206	Palenie tytoniu
+N4	Reference T32 ICD10:T65.2	Tytoń i nikotyna
+R13	Neg Arg1:T26 Arg2:T32	
+T33	Behaviour 4219 4230	Inne używki
+R14	Neg Arg1:T25 Arg2:T33	
+T34	Treatment 4062 4078	cholecystectomii
+A2	Status T34 Historical_Insignificant
+T35	Date 4080 4084	1980
+R15	Dat Arg1:T35 Arg2:T34	
+T36	Treatment 4088 4096	zaćma OP
+T37	Date 4098 4106	10.2018r
+R16	Dat Arg1:T37 Arg2:T36	
+T38	Condition 3868 3910	przewlekła niewydolność serca w II kl.NYHA
+N5	Reference T38 ICD10:I50	Niewydolność serca
+T39	Condition 3912 3944	utrwalone migotanie przedsionków
+N6	Reference T39 ICD10:I48	Migotanie i trzepotanie przedsionków
+T40	Condition 3946 3967	nadciśnienie tętnicze
+N7	Reference T40 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T41	Condition 3969 3981	cukrzyca t.2
+N8	Reference T41 ICD10:E11	Cukrzyca insulinoniezależna
+T42	Condition 3984 4002	żylaki kk. dolnych
+N9	Reference T42 ICD10:I83	Żylaki kończyn dolnych
+T43	Condition 4004 4032	zmiany zwyrodnieniowe stawów
+N10	Reference T43 ICD10:M19	Inne zwyrodnienia stawów
+T44	Symptom 3784 3811	powodu duszności wysiłkowej
+N11	Reference T44 ICD10:R06.0	Duszność
+T45	Symptom 3814 3827	kołatań serca
+N12	Reference T45 ICD10:R00.2	Kołatanie serca
+T46	Negation 3588 3598	nie podaje
+T47	Condition 3599 3613	Przebyte ciąże
+N13	Reference T47 ICD10:Z32.1	Ciąża potwierdzona
+T48	Negation 3615 3616	-
+R17	Neg Arg1:T48 Arg2:T47	
+T49	Condition 3569 3587	Uczulenia na leki:
+N14	Reference T49 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R18	Neg Arg1:T46 Arg2:T49	
+T50	Drug 3536 3542	Atoris
+T51	Drug_dose 3543 3568	10 mg 1x1 tabl. wieczorem
+R19	Drg Arg1:T50 Arg2:T51	
+T52	Drug 3501 3511	Egiramolon
+T53	Drug_dose 3512 3535	5/5 1x1 tabl. wieczorem
+R20	Drg Arg1:T52 Arg2:T53	
+T54	Drug 3463 3470	Nolpaza
+T55	Drug_dose 3471 3500	20 mg 1x1 tabl. rano na czczo
+R21	Drg Arg1:T54 Arg2:T55	
+T56	Drug 3427 3435	Spironol
+T57	Drug_dose 3436 3462	50 mg 1x1 tabl. w południe
+R22	Drg Arg1:T56 Arg2:T57	
+T58	Drug 3403 3411	Vinpoten
+T59	Drug_dose 3412 3426	1x1 tabl. rano
+R23	Drg Arg1:T58 Arg2:T59	
+T60	Drug 3385 3391	Warfin
+T61	Drug_dose 3392 3402	1-1/2 rano
+R24	Drg Arg1:T60 Arg2:T61	
+T62	Drug 3357 3367	Glucophage
+T63	Drug_dose 3368 3383	500 mg 3x1 tabl
+R25	Drg Arg1:T62 Arg2:T63	
+T64	Drug 3327 3334	Nebilet
+T65	Drug_dose 3335 3356	5 mg 1x1/2 tabl. rano
+R26	Drg Arg1:T64 Arg2:T65	
+T66	Drug 3294 3304	Trifas cor
+T67	Drug_dose 3305 3326	5 mg 1x1/2 tabl. rano
+R27	Drg Arg1:T66 Arg2:T67	
+T68	Negation 3275 3286	nie pamięta
+T69	Treatment 3265 3273	Operacje
+R28	Neg Arg1:T68 Arg2:T69	
+T70	Investigation 2920 2923	EKG
+T71	Investigation_result 2924 2946	migotanie przedsionków
+N15	Reference T71 ICD10:I48	Migotanie i trzepotanie przedsionków
+T72	Investigation_result 2947 2967	z blokiem całkowitym
+N16	Reference T72 ICD10:I44.2	Blok przedsionkowo-komorowy zupełny
+T73	Investigation_result 2970 3003	zastępczym rytmem węzłowym 45/min
+R29	Inv Arg1:T70 Arg2:T71	
+R30	Inv Arg1:T70 Arg2:T72	
+R31	Inv Arg1:T70 Arg2:T73	
+T74	Condition 3018 3052	istotna niedomykalność trójdzielna
+N17	Reference T74 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T75	Condition 3054 3074	umiarkowana mitralna
+N18	Reference T75 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T76	Condition 3076 3105	złożona łagodna wada aortalna
+T77	Condition 3107 3120	utrwalone AF,
+N20	Reference T77 ICD10:I48	Migotanie i trzepotanie przedsionków
+T78	Condition 3174 3176	HA
+N21	Reference T78 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T79	Condition 3178 3181	DM2
+N22	Reference T79 ICD10:E11	Cukrzyca insulinoniezależna
+T80	Condition 3183 3208	zwyrodnienie wielostawowe
+N23	Reference T80 ICD10:M15	Zwyrodnienie wielostawowe
+T81	Condition 3121 3172	wole guzkowe w stadium subklinicznej niedoczynności
+N24	Reference T81 ICD10:E05	Nadczynność tarczycy [tyreotoksykoza]
+T82	Condition 3210 3240	incydentaloma lewego nadnercza
+N25	Reference T82 ICD10:D44.1	Nadnercze
+T83	Condition 2651 2681	Incydentaloma lewego nadnercza
+N26	Reference T83 ICD10:D44.1	Nadnercze
+T84	Condition 2610 2649	Zmiany zwyrodnieniowe stawów kolanowych
+N27	Reference T84 ICD10:M17	Gonartroza [choroba zwyrodnieniowa stawu kolanowego]
+T85	Condition 2574 2589	Cukrzyca typu 2
+N28	Reference T85 ICD10:E11	Cukrzyca insulinoniezależna
+T86	Condition 2551 2572	Nadciśnienie tętnicze
+N29	Reference T86 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T87	Condition 2488 2549	Wole guzowate tarczycy w stadium subklinicznej niedoczynności
+N30	Reference T87 ICD10:E05	Nadczynność tarczycy [tyreotoksykoza]
+T88	Condition 2421 2487	Utrwalone migotanie przedsionków CHA2DS2-VASc 5pkt. HAS-BLED 2pkt.
+N31	Reference T88 ICD10:I48	Migotanie i trzepotanie przedsionków
+T89	Condition 2380 2420	Złożona łagodna wada zastawki aortalnej.
+N32	Reference T89 ICD10:Q23	Wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+N19	Reference T76 ICD10:Q23	Wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T90	Condition 2333 2378	Umiarkowana niedomykalność zastawki mitralnej
+N33	Reference T90 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T91	Condition 2287 2331	Istotna niedomykalność zastawki trójdzielnej
+N34	Reference T91 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T92	Condition 439 456	Zespół Fredericka
+N35	Reference T92 ICD10:G25.8	Inne określone zaburzenia pozapiramidowe i zaburzenia czynności ruchowych
+T93	Condition 689 706	Zespół Fredericka
+N36	Reference T93 ICD10:G25.8	Inne określone zaburzenia pozapiramidowe i zaburzenia czynności ruchowych
+T94	Condition 708 760	Utrwalone migotanie przedsionków (CHAD2S2-VASC 4pkt)
+N37	Reference T94 ICD10:I48	Migotanie i trzepotanie przedsionków
+T95	Condition 762 783	Nadciśnienie tętnicze
+N38	Reference T95 ICD10:I10	
+T96	Condition 785 799	Hiperlipidemia
+N39	Reference T96 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T97	Condition 801 816	Cukrzyca typu 2
+N40	Reference T97 ICD10:E11	Cukrzyca insulinoniezależna
+T98	Condition 818 853	Subkliniczna niedoczynność tarczycy
+N41	Reference T98 ICD10:E02	Subkliniczna postać niedoczynności tarczycy z powodu niedoboru jodu
+T99	Condition 856 881	Zwyrodnienie wielostawowe
+N42	Reference T99 ICD10:M15	Zwyrodnienie wielostawowe
+T100	Condition 883 913	Incydentaloma lewego nadnercza
+N43	Reference T100 ICD10:D44.1	Nadnercze
+T101	Condition 938 971	Niedokrwistość z niedoboru żelaza
+N44	Reference T101 ICD10:D50.9	Niedokrwistość z niedoboru żelaza, nieokreślona
+T102	Drug 1115 1125	Diaprel MR
+T103	Drug 1127 1133	Siofor
+T104	Drug 1135 1141	Bibloc
+T105	Drug 1143 1152	Egiramlon
+T106	Drug 1154 1160	Warfin
+T107	Drug 1162 1168	Atoris
+T108	Drug 1170 1181	Vinpocetyna
+T109	Drug 2011 2014	IPP
+T110	Drug_dose 2015 2058	20 mg 1x1 tabl rano 30 min przed śniadaniem
+R32	Drg Arg1:T109 Arg2:T110	
+T111	Drug 1933 1939	Warfin
+T112	Drug_dose 1940 2010	5 mg wg INR, do czasu kontroli wskaźnika INR: codziennie 1x1 tabl rano
+R33	Drg Arg1:T111 Arg2:T112	
+T113	Drug 1894 1904	Glucophage
+T114	Drug_dose 1905 1932	500 mg 3x1 tabl do posiłków
+R34	Drg Arg1:T113 Arg2:T114	
+T115	Drug 1862 1868	Atoris
+T116	Drug_dose 1869 1893	10 mg 1x1 tabl wieczorem
+R35	Drg Arg1:T115 Arg2:T116	
+T117	Drug 1824 1833	Egiramlon
+T118	Drug_dose 1834 1861	5 mg+5mg 1x1 tabl wieczorem
+R36	Drg Arg1:T117 Arg2:T118	
+T119	Drug 1789 1797	Spironol
+T120	Drug_dose 1798 1823	50 mg 1x1 tabl w południe
+R37	Drg Arg1:T119 Arg2:T120	
+T121	Drug 1759 1769	Trifas Cor
+T122	Drug_dose 1770 1788	5 mg 1x1 tabl rano
+R38	Drg Arg1:T121 Arg2:T122	
+T123	Drug 1731 1737	Bibloc
+T124	Drug_dose 1738 1758	2,5 mg 1x1 tabl rano
+R39	Drg Arg1:T123 Arg2:T124	
+T125	Treatment 1657 1697	kontrola ciśnienia tętniczego i glikemii
+T126	Investigation 1522 1589	Kontrola wskaźnika INR 1x w miesiącu oraz dawkowanie Warfinu wg INR
+T127	Behaviour 1399 1440	Przestrzeganie diety ubogocholesterolowej
+T128	Investigation 1446 1475	okresowa kontrola lipidogramu
+T129	Symptom 2876 2886	zasłabnięć
+N45	Reference T129 ICD10:R55	Omdlenie i zapaść
+T130	Date 2887 2899	od 2 tygodni
+R40	Dat Arg1:T130 Arg2:T129	
+N46	Reference T36 ICD10:H25	Zaćma starcza

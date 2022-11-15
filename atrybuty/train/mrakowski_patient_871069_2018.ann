@@ -1,0 +1,90 @@
+T1	Condition 450 500	Zakrzepowe zapalenie żył głębokich podudzia lewego
+N1	Reference T1 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T2	Date 502 509	05.2018
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Condition 512 532	Hipercholesterolemia
+N2	Reference T3 ICD10:E78.0	Czysta hipercholesterolemia
+T4	Treatment 542 561	operacji kręgosłupa
+A1	Status T4 Historical_Insignificant
+T5	Condition 571 610	dyskopatii w odc. lędźwiowym kręgosłupa
+A2	Status T5 Historical_Insignificant
+N3	Reference T5 ICD10:M51	Inne choroby krążka międzykręgowego
+T6	Date 612 616	2002
+R2	Dat Arg1:T6 Arg2:T4	
+R3	Dat Arg1:T6 Arg2:T5	
+T7	Condition 619 623	RBBB
+N4	Reference T7 ICD10:I45.0	Blok prawej odnogi pęczka Hisa
+T8	Symptom 1020 1029	duszności
+N5	Reference T8 ICD10:R06.0	Duszność
+T9	Negation 1060 1066	neguje
+T10	Symptom 1067 1085	duszność wysiłkową
+N6	Reference T10 ICD10:R06.0	Duszność
+R4	Neg Arg1:T9 Arg2:T10	
+T11	Condition 1110 1146	CHF z zachowana funkcją skurczową LK
+N7	Reference T11 ICD10:I50	Niewydolność serca
+T12	Condition 1148 1152	RBBB
+N8	Reference T12 ICD10:I45.0	Blok prawej odnogi pęczka Hisa
+T13	Condition 1154 1204	zakrzepowe zapalenie żył głębokich podudzia lewego
+N9	Reference T13 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T14	Date 1206 1213	05.2018
+R5	Dat Arg1:T14 Arg2:T13	
+T15	Condition 1228 1230	ZP
+N10	Reference T15 ICD10:I26	Zator płucny
+T16	Negation 1217 1227	wykluczono
+R6	Neg Arg1:T16 Arg2:T15	
+T17	Condition 1232 1250	żylaki kk. dolnych
+N11	Reference T17 ICD10:I83	Żylaki kończyn dolnych
+T18	Condition 1252 1272	hipercholesterolemia
+N12	Reference T18 ICD10:E78.0	Czysta hipercholesterolemia
+T19	Condition 1274 1277	IFG
+A3	Source T19 Declared
+N13	Reference T19 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T20	Treatment 1288 1307	operacji kręgosłupa
+A4	Status T20 Historical_Insignificant
+T21	Condition 1317 1345	dyskopatii w odc. lędźwiowym
+A5	Status T21 Historical_Insignificant
+N14	Reference T21 ICD10:M51	
+T22	Date 1347 1351	2002
+R7	Dat Arg1:T22 Arg2:T20	
+R8	Dat Arg1:T22 Arg2:T21	
+T23	Treatment 1353 1370	Przebyte operacje
+T24	Condition 1377 1392	Wywiad rodzinny
+A6	Status T24 Family
+T25	Negation 1394 1407	bez znaczenia
+R9	Neg Arg1:T25 Arg2:T24	
+T26	Condition 1409 1416	Alergie
+N15	Reference T26 ICD10:T78.4	Alergia, nieokreślona
+T27	Negation 1419 1425	neguje
+R10	Neg Arg1:T27 Arg2:T26	
+T28	Behaviour 1427 1437	Nikotynizm
+N16	Reference T28 ICD10:Z72.0	Używanie tytoniu
+T29	Negation 1439 1445	neguje
+R11	Neg Arg1:T29 Arg2:T28	
+T30	Behaviour 1448 1455	Alkohol
+N17	Reference T30 ICD10:Z72.1	Używanie alkoholu
+T31	Negation 1457 1463	neguje
+R12	Neg Arg1:T31 Arg2:T30	
+T32	Behaviour 1465 1482	Uzależnienie inne
+T33	Negation 1484 1490	neguje
+R13	Neg Arg1:T33 Arg2:T32	
+T34	Behaviour 1508 1513	renta
+T35	Condition 1516 1526	dyskopatia
+N18	Reference T35 ICD10:M51	Inne choroby krążka międzykręgowego
+T36	Drug 1535 1543	Diuresin
+T37	Drug_dose 1544 1556	1 tabl. rano
+R14	Drg Arg1:T36 Arg2:T37	
+T38	Drug 1558 1563	Acard
+T39	Drug_dose 1564 1587	75 mg 1 tabl. wieczorem
+R15	Drg Arg1:T38 Arg2:T39	
+T40	Drug 1589 1597	Aspargin
+T41	Drug_dose 1598 1610	1 tabl. rano
+R16	Drg Arg1:T40 Arg2:T41	
+T42	Drug 1612 1621	Diohespan
+T43	Drug_dose 1622 1634	1 tabl. rano
+R17	Drg Arg1:T42 Arg2:T43	
+T44	Investigation 1663 1673	echo serca
+T45	Investigation 1675 1678	TET
+T46	Investigation 1680 1684	ABPM
+T47	Investigation 1686 1696	Holter ekg
+T48	Investigation 1698 1716	rtg kl. piersiowej
+N19	Reference T32 ICD10:Z72	Problemy związane ze stylem życia

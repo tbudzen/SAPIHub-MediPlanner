@@ -1,0 +1,844 @@
+allRelations          : 86
+oks                   : 23
+isRedundantAndRemoveds: 54
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 9
+GOOD / BAD            : 77 / 9
+Sentence 0:
+------------------------------------------------
+Wiek: 78 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+•\x09dalsza opieka w poradni POZ 
+•\x09okresowa kontrola kardiologiczna diabetologiczna, neurologiczna i psychiatryczna 
+•\x09codzienna kontrola ciśnienia tętniczego 
+•\x09okresowa kontrola lipidogramu 
+
+
+
+Sentence 4:
+•\x09dieta DASH 
+•\x09redukcja masy ciała  
+•\x09regularne przyjmowanie leków: 
+
+1.\x09Acard 75 mg 1 tabl.
+R1	Drg Arg1:T8 Arg2:T17 << OK >>	Acard -> 75 mg 1 tabl. wieczorem  <RANK: 3> <info: start[630, 636] <type: RIGHT>>
+
+
+Sentence 5:
+wieczorem (lek dostępny bez recepty)
+
+
+
+Sentence 6:
+2.\x09Roswera 10 mg 1 tabl.
+R2	Drg Arg1:T9 Arg2:T18 << OK >>	Roswera -> 10 mg 1 tabl. wieczorem  <RANK: 3> <info: start[693, 701] <type: RIGHT>>
+
+
+Sentence 7:
+wieczorem 
+3.\x09Micardis 40 mg 1/2 tabl. wieczorem (optymalizacja dawki pod kontrolą lekarza POZ po ocenie wartości ciśnienia tętniczego)
+4.\x09Emanera 40 mg 1 tabl.
+R3	Drg Arg1:T10 Arg2:T19 << OK >>	Micardis -> 40 mg 1/2 tabl. wieczorem (optymalizacja dawki pod kontrolą lekarza POZ po ocenie wartości ciśnienia tętniczego)  <RANK: 3> <info: start[732, 741] <type: RIGHT>>
+R4	Drg Arg1:T10 Arg2:T20 <<REDUNDANT!!!REMOVED>>	Micardis -> 40 mg 1 tabl. rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[732, 868] <type: RIGHT>>
+R5	Drg Arg1:T11 Arg2:T19 <<REDUNDANT!!!REMOVED>>	Emanera -> 40 mg 1/2 tabl. wieczorem (optymalizacja dawki pod kontrolą lekarza POZ po ocenie wartości ciśnienia tętniczego) <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[860, 741] <type: LEFT>>
+R6	Drg Arg1:T11 Arg2:T20 << OK >>	Emanera -> 40 mg 1 tabl. rano  <RANK: 3> <info: start[860, 868] <type: RIGHT>>
+
+
+Sentence 8:
+rano 
+5.\x09Metformax 500 mg 1 tabl. rano, w południe i wieczorem
+6.\x09Novomix Mix 30 28 j rano i 25 j. wieczorem (wg dotychczasowych zaleceń diabetologa)
+7.\x09Madopar 125 mg 1 tabl. rano, w południe i wieczorem 
+8.\x09Akineton 2 mg 1 tabl. rano i wieczorem
+9.\x09Tramal 50 mg 1 tabl. doraźnie w razie bólu stawów
+------------------------------------------------
+
+R7	Drg Arg1:T12 Arg2:T21 << OK >>	Metformax -> 500 mg 1 tabl. rano, w południe i wieczorem  <RANK: 3> <info: start[894, 904] <type: RIGHT>>
+R8	Drg Arg1:T12 Arg2:T22 <<REDUNDANT!!!REMOVED>>	Metformax -> 30 28 j rano i 25 j. wieczorem (wg dotychczasowych zaleceń diabetologa) <:REMOVED other first tag between (right):> <RANK: 0> <info: start[894, 966] <type: RIGHT>>
+R9	Drg Arg1:T12 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Metformax -> 125 mg 1 tabl. rano, w południe i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[894, 1052] <type: RIGHT>>
+R10	Drg Arg1:T12 Arg2:T24 <<REDUNDANT!!!REMOVED>>	Metformax -> 2 mg 1 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[894, 1112] <type: RIGHT>>
+R11	Drg Arg1:T12 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Metformax -> 50 mg 1 tabl. doraźnie w razie bólu stawów <:REMOVED other first tag between (right):> <RANK: 0> <info: start[894, 1155] <type: RIGHT>>
+R12	Drg Arg1:T13 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Novomix Mix -> 500 mg 1 tabl. rano, w południe i wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[954, 904] <type: LEFT>>
+R13	Drg Arg1:T13 Arg2:T22 << OK >>	Novomix Mix -> 30 28 j rano i 25 j. wieczorem (wg dotychczasowych zaleceń diabetologa)  <RANK: 3> <info: start[954, 966] <type: RIGHT>>
+R14	Drg Arg1:T13 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Novomix Mix -> 125 mg 1 tabl. rano, w południe i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[954, 1052] <type: RIGHT>>
+R15	Drg Arg1:T13 Arg2:T24 <<REDUNDANT!!!REMOVED>>	Novomix Mix -> 2 mg 1 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[954, 1112] <type: RIGHT>>
+R16	Drg Arg1:T13 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Novomix Mix -> 50 mg 1 tabl. doraźnie w razie bólu stawów <:REMOVED other first tag between (right):> <RANK: 0> <info: start[954, 1155] <type: RIGHT>>
+R17	Drg Arg1:T14 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Madopar -> 500 mg 1 tabl. rano, w południe i wieczorem <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1044, 904] <type: LEFT>>
+R18	Drg Arg1:T14 Arg2:T22 <<REDUNDANT!!!REMOVED>>	Madopar -> 30 28 j rano i 25 j. wieczorem (wg dotychczasowych zaleceń diabetologa) <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[1044, 966] <type: LEFT>>
+R19	Drg Arg1:T14 Arg2:T23 << OK >>	Madopar -> 125 mg 1 tabl. rano, w południe i wieczorem  <RANK: 3> <info: start[1044, 1052] <type: RIGHT>>
+R20	Drg Arg1:T14 Arg2:T24 <<REDUNDANT!!!REMOVED>>	Madopar -> 2 mg 1 tabl. rano i wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1044, 1112] <type: RIGHT>>
+R21	Drg Arg1:T14 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Madopar -> 50 mg 1 tabl. doraźnie w razie bólu stawów <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1044, 1155] <type: RIGHT>>
+R22	Drg Arg1:T15 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Akineton -> 500 mg 1 tabl. rano, w południe i wieczorem <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1103, 904] <type: LEFT>>
+R23	Drg Arg1:T15 Arg2:T22 <<REDUNDANT!!!REMOVED>>	Akineton -> 30 28 j rano i 25 j. wieczorem (wg dotychczasowych zaleceń diabetologa) <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1103, 966] <type: LEFT>>
+R24	Drg Arg1:T15 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Akineton -> 125 mg 1 tabl. rano, w południe i wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[1103, 1052] <type: LEFT>>
+R25	Drg Arg1:T15 Arg2:T24 << OK >>	Akineton -> 2 mg 1 tabl. rano i wieczorem  <RANK: 3> <info: start[1103, 1112] <type: RIGHT>>
+R26	Drg Arg1:T15 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Akineton -> 50 mg 1 tabl. doraźnie w razie bólu stawów <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1103, 1155] <type: RIGHT>>
+R27	Drg Arg1:T16 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Tramal -> 500 mg 1 tabl. rano, w południe i wieczorem <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1148, 904] <type: LEFT>>
+R28	Drg Arg1:T16 Arg2:T22 <<REDUNDANT!!!REMOVED>>	Tramal -> 30 28 j rano i 25 j. wieczorem (wg dotychczasowych zaleceń diabetologa) <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1148, 966] <type: LEFT>>
+R29	Drg Arg1:T16 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Tramal -> 125 mg 1 tabl. rano, w południe i wieczorem <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1148, 1052] <type: LEFT>>
+R30	Drg Arg1:T16 Arg2:T24 <<REDUNDANT!!!REMOVED>>	Tramal -> 2 mg 1 tabl. rano i wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[1148, 1112] <type: LEFT>>
+R31	Drg Arg1:T16 Arg2:T25 << OK >>	Tramal -> 50 mg 1 tabl. doraźnie w razie bólu stawów  <RANK: 3> <info: start[1148, 1155] <type: RIGHT>>
+
+
+Sentence 9:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 10:
+------------------------------------------------
+ Rozpozanie I: ICD10:R07|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Nadciśnienie tętnicze
+
+
+Sentence 11:
+I stopnia wg ESH/ESC skorygowane.
+
+
+Sentence 12:
+Otyłość.
+
+
+Sentence 13:
+Cukrzyca typu 2. Nikotynizm w przeszłości.
+R32	Dat Arg1:T30 Arg2:T28 <<REDUNDANT!!!SHOULD BE REMOVED>>	w przeszłości -> Cukrzyca typu 2  <RANK: 2> <info: start[1517, 1489] <type: LEFT>>
+R33	Dat Arg1:T30 Arg2:T29 << OK >>	w przeszłości -> Nikotynizm  <RANK: 3> <info: start[1517, 1506] <type: LEFT>>
+
+
+Sentence 14:
+Miażdżyca aorty.
+
+
+Sentence 15:
+Stan po TIA (2015).
+R34	Dat Arg1:T33 Arg2:T32 << OK >>	2015 -> TIA  <RANK: 3> <info: start[1562, 1557] <type: LEFT>>
+
+
+Sentence 16:
+Przewlekła niewydolność serca w II klasie wg NYHA.
+
+
+Sentence 17:
+Wada serca pod postacią łagodnej niedomykalności zastawki trójdzielnej.
+
+
+Sentence 18:
+Przepuklina rozworu przełykowego.
+
+
+Sentence 19:
+Przewlekłe zapalenie błony śluzowej żołądka.
+
+
+Sentence 20:
+Refluks żółciowy.
+
+
+Sentence 21:
+Uchyłkowatość okrężnicy.
+
+
+Sentence 22:
+Żylaki odbytu.
+
+
+Sentence 23:
+Stan po cholecystektomii.
+
+
+Sentence 24:
+Torbiele nerek.
+
+
+Sentence 25:
+Stan po ESWL prawostronnym 02.2014.
+R35	Dat Arg1:T44 Arg2:T43 << OK >>	02.2014 -> ESWL prawostronnym  <RANK: 3> <info: start[1898, 1879] <type: LEFT>>
+
+
+Sentence 26:
+Zmiany zwyrodnieniowe stawów odcinka piersiowego i lędźwiowego kręgosłupa.
+
+
+Sentence 27:
+Choroba Parkinsona.
+
+
+Sentence 28:
+Otępienie wieloprzyczynowe
+------------------------------------------------
+
+
+
+Sentence 29:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 30:
+Pacjentka  lat 77 przyjęty do Kliniki z powodu okresowych bólów  w klatce piersiowej , duszności .
+
+
+
+Sentence 31:
+Chora konsultowana przed zabiegiem z powodu przerostu endometrium 11.2018 zalecono pełna diagnostykę kardiologiczną choroby niedokrwiennej serca i optymalizację leczenia niewydolności serca. 
+
+R36	Dat Arg1:T51 Arg2:T50 << OK >>	11.2018 -> przerostu endometrium  <RANK: 3> <info: start[2318, 2296] <type: LEFT>>
+R37	Dat Arg1:T51 Arg2:T52 <<REDUNDANT!!!REMOVED>>	11.2018 -> choroby niedokrwiennej serca <:REMOVED Too far from TagInfo[T51, 2318, 2325, Date, 11.2018
+] TagInfo[T50, 2296, 2317, Condition, przerostu endometrium
+]:> <RANK: 3> <info: start[2318, 2368] <type: RIGHT>>
+R38	Dat Arg1:T51 Arg2:T53 <<REDUNDANT!!!REMOVED>>	11.2018 -> niewydolności serca <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2318, 2422] <type: RIGHT>>
+
+
+Sentence 32:
+W wywiadzie : CHF w II/III' niewydolności serca .
+
+
+Sentence 33:
+Nadciśnienie tętnicze .
+
+
+Sentence 34:
+Cukrzyca typu 2 na insulinie ,
+R39	Alg Arg1:T56 Arg2:T57 <<REDUNDANT!!!SHOULD BE REMOVED>>	Cukrzyca typu 2 -> insulinie  <RANK: 3> <info: start[2518, 2537] <type: RIGHT>>
+
+
+Sentence 35:
+Nikotynizm ,
+
+
+Sentence 36:
+Stan po TIA 2015, wielooginiskowe uszkodzenie mózgu naczyniopochodne.
+R40	Dat Arg1:T60 Arg2:T59 << OK >>	2015 -> TIA  <RANK: 3> <info: start[2574, 2570] <type: LEFT>>
+R41	Dat Arg1:T60 Arg2:T61 <<REDUNDANT!!!REMOVED>>	2015 -> wielooginiskowe uszkodzenie mózgu naczyniopochodne <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2574, 2580] <type: RIGHT>>
+
+
+Sentence 37:
+otępienie wieloprzyczynowe, choroba Parkinsona.
+
+
+Sentence 38:
+przemijające zaburzenia pamięci, przewlekłe zapalenie błony śluzowej żołądka.
+
+
+Sentence 39:
+refluks żółciowy, uchyłkowatość okrężnicy, żylaki odbytu, przepuklina rozworu przełykowego, stan po cholecystektomii , zmiany pozapalne nerki prawej, torbiele nerek, stan po ESWL prawostronnym 02.2014.  Otyłość .
+R42	Dat Arg1:T74 Arg2:T66 <<REDUNDANT!!!SHOULD BE REMOVED>>	02.2014 -> refluks żółciowy  <RANK: 2> <info: start[2951, 2758] <type: LEFT>>
+R43	Dat Arg1:T74 Arg2:T67 <<REDUNDANT!!!SHOULD BE REMOVED>>	02.2014 -> uchyłkowatość okrężnicy  <RANK: 2> <info: start[2951, 2776] <type: LEFT>>
+R44	Dat Arg1:T74 Arg2:T68 <<REDUNDANT!!!SHOULD BE REMOVED>>	02.2014 -> żylaki odbytu  <RANK: 2> <info: start[2951, 2801] <type: LEFT>>
+R45	Dat Arg1:T74 Arg2:T69 <<REDUNDANT!!!SHOULD BE REMOVED>>	02.2014 -> przepuklina rozworu przełykowego  <RANK: 2> <info: start[2951, 2816] <type: LEFT>>
+R46	Dat Arg1:T74 Arg2:T71 <<REDUNDANT!!!SHOULD BE REMOVED>>	02.2014 -> zmiany pozapalne nerki prawej  <RANK: 2> <info: start[2951, 2877] <type: LEFT>>
+R47	Dat Arg1:T74 Arg2:T72 <<REDUNDANT!!!SHOULD BE REMOVED>>	02.2014 -> torbiele nerek  <RANK: 2> <info: start[2951, 2908] <type: LEFT>>
+R48	Dat Arg1:T74 Arg2:T75 <<REDUNDANT!!!REMOVED>>	02.2014 -> Otyłość <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2951, 2961] <type: RIGHT>>
+R49	Dat Arg1:T74 Arg2:T70 <<REDUNDANT!!!SHOULD BE REMOVED>>	02.2014 -> cholecystektomii  <RANK: 2> <info: start[2951, 2858] <type: LEFT>>
+R50	Dat Arg1:T74 Arg2:T73 << OK >>	02.2014 -> ESWL prawostronnym  <RANK: 3> <info: start[2951, 2932] <type: LEFT>>
+
+
+Sentence 40:
+Zmiany zwyrodnieniowe stawów odcinka piersiowego i lędzwiowego kręgosłupa. 
+
+
+
+Sentence 41:
+Przebyte choroby zakaźne - WZW ( -  ) , borelioza ( - ) Odra ( - )
+
+R51	Neg Arg1:T78 Arg2:T77 << OK >>	- -> WZW  <RANK: 3> <info: start[3080, 3074] <type: LEFT>>
+R52	Neg Arg1:T78 Arg2:T79 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED many second tags on the right:> <RANK: 2> <info: start[3080, 3087] <type: RIGHT>>
+R53	Neg Arg1:T78 Arg2:T81 <<REDUNDANT!!!REMOVED>>	- -> Odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[3080, 3103] <type: RIGHT>>
+R54	Neg Arg1:T80 Arg2:T77 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3099, 3074] <type: LEFT>>
+R55	Neg Arg1:T80 Arg2:T79 << OK >>	- -> borelioza  <RANK: 3> <info: start[3099, 3087] <type: LEFT>>
+R56	Neg Arg1:T80 Arg2:T81 <<REDUNDANT!!!REMOVED>>	- -> Odra <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[3099, 3103] <type: RIGHT>>
+R57	Neg Arg1:T82 Arg2:T77 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[3110, 3074] <type: LEFT>>
+R58	Neg Arg1:T82 Arg2:T79 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other second tag between (left):> <RANK: 3> <info: start[3110, 3087] <type: LEFT>>
+R59	Neg Arg1:T82 Arg2:T81 << OK >>	- -> Odra  <RANK: 3> <info: start[3110, 3103] <type: LEFT>>
+
+
+Sentence 42:
+W wywiadzie rodzinnym : brak danych 
+
+R60	Neg Arg1:T84 Arg2:T83 << OK >>	brak danych -> wywiadzie rodzinnym  <RANK: 3> <info: start[3138, 3116] <type: LEFT>>
+
+
+Sentence 43:
+Palenie tytoniu: nie pali od wielu lat 
+
+R61	Neg Arg1:T86 Arg2:T85 << OK >>	nie pali -> Palenie tytoniu  <RANK: 3> <info: start[3168, 3151] <type: LEFT>>
+R62	Dat Arg1:T87 Arg2:T85 << OK >>	od wielu lat -> Palenie tytoniu  <RANK: 3> <info: start[3177, 3151] <type: LEFT>>
+
+
+Sentence 44:
+Inne używki: nie
+Uczulenia: neguje
+Stan społeczny: warunki mieszkaniowe dobre , mieszka z mężem
+Leki: Akineton, Madopar, Co-Prenessa, Emanera, NovoMix 30 Penfil 
+
+R63	Neg Arg1:T89 Arg2:T90 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[3204, 3208] <type: RIGHT>>
+R64	Neg Arg1:T89 Arg2:T88 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[3204, 3191] <type: LEFT>>
+R65	Neg Arg1:T89 Arg2:T92 <<REDUNDANT!!!REMOVED>>	nie -> warunki mieszkaniowe dobre <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3204, 3242] <type: RIGHT>>
+R66	Neg Arg1:T89 Arg2:T93 <<REDUNDANT!!!REMOVED>>	nie -> Akineton <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3204, 3293] <type: RIGHT>>
+R67	Neg Arg1:T89 Arg2:T94 <<REDUNDANT!!!REMOVED>>	nie -> Madopar <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3204, 3303] <type: RIGHT>>
+R68	Neg Arg1:T89 Arg2:T95 <<REDUNDANT!!!REMOVED>>	nie -> Co-Prenessa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3204, 3312] <type: RIGHT>>
+R69	Neg Arg1:T89 Arg2:T96 <<REDUNDANT!!!REMOVED>>	nie -> Emanera <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3204, 3325] <type: RIGHT>>
+R70	Neg Arg1:T89 Arg2:T97 <<REDUNDANT!!!REMOVED>>	nie -> NovoMix 30 <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3204, 3334] <type: RIGHT>>
+R71	Neg Arg1:T89 Arg2:T98 <<REDUNDANT!!!REMOVED>>	nie -> Penfil <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3204, 3345] <type: RIGHT>>
+R72	Neg Arg1:T91 Arg2:T90 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[3219, 3208] <type: LEFT>>
+R73	Neg Arg1:T91 Arg2:T88 <<REDUNDANT!!!REMOVED>>	neguje -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3219, 3191] <type: LEFT>>
+R74	Neg Arg1:T91 Arg2:T92 <<REDUNDANT!!!REMOVED>>	neguje -> warunki mieszkaniowe dobre <:REMOVED many second tags on the right:> <RANK: 1> <info: start[3219, 3242] <type: RIGHT>>
+R75	Neg Arg1:T91 Arg2:T93 <<REDUNDANT!!!REMOVED>>	neguje -> Akineton <:REMOVED other second tag between (right):> <RANK: 0> <info: start[3219, 3293] <type: RIGHT>>
+R76	Neg Arg1:T91 Arg2:T94 <<REDUNDANT!!!REMOVED>>	neguje -> Madopar <:REMOVED other second tag between (right):> <RANK: 0> <info: start[3219, 3303] <type: RIGHT>>
+R77	Neg Arg1:T91 Arg2:T95 <<REDUNDANT!!!REMOVED>>	neguje -> Co-Prenessa <:REMOVED other second tag between (right):> <RANK: 0> <info: start[3219, 3312] <type: RIGHT>>
+R78	Neg Arg1:T91 Arg2:T96 <<REDUNDANT!!!REMOVED>>	neguje -> Emanera <:REMOVED other second tag between (right):> <RANK: 0> <info: start[3219, 3325] <type: RIGHT>>
+R79	Neg Arg1:T91 Arg2:T97 <<REDUNDANT!!!REMOVED>>	neguje -> NovoMix 30 <:REMOVED other second tag between (right):> <RANK: 0> <info: start[3219, 3334] <type: RIGHT>>
+R80	Neg Arg1:T91 Arg2:T98 <<REDUNDANT!!!REMOVED>>	neguje -> Penfil <:REMOVED other second tag between (right):> <RANK: 0> <info: start[3219, 3345] <type: RIGHT>>
+R81	Alg Arg1:T90 Arg2:T93 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Akineton <:REMOVED other second tag between (right):> <RANK: 0> <info: start[3208, 3293] <type: RIGHT>>
+R82	Alg Arg1:T90 Arg2:T94 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Madopar <:REMOVED other second tag between (right):> <RANK: 0> <info: start[3208, 3303] <type: RIGHT>>
+R83	Alg Arg1:T90 Arg2:T95 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Co-Prenessa <:REMOVED other second tag between (right):> <RANK: 0> <info: start[3208, 3312] <type: RIGHT>>
+R84	Alg Arg1:T90 Arg2:T96 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Emanera <:REMOVED other second tag between (right):> <RANK: 0> <info: start[3208, 3325] <type: RIGHT>>
+R85	Alg Arg1:T90 Arg2:T97 <<REDUNDANT!!!REMOVED>>	Uczulenia -> NovoMix 30 <:REMOVED other second tag between (right):> <RANK: 0> <info: start[3208, 3334] <type: RIGHT>>
+R86	Alg Arg1:T90 Arg2:T98 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Penfil <:REMOVED other second tag between (right):> <RANK: 0> <info: start[3208, 3345] <type: RIGHT>>
+
+
+Sentence 45:
+Plan Opieki : Echo serca , Holter EKG ,  , Planowany czas hospitalizacji 4-5 dni
+
+
+
+Sentence 46:
+------------------------------------------------
+
+
+
+Sentence 47:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 48:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:8.15[10^3/ul]
+    
+
+
+Sentence 49:
+RBC Krwinki czerwone:4.38[10^6/ul]
+    HGB Hemoglobina:13.6[g/dl]
+    
+
+
+Sentence 50:
+HCT Hematokryt:38.7[%]
+    
+
+
+Sentence 51:
+MCV wskaźnik czerwonokrw:88.4[fl]
+    
+
+
+Sentence 52:
+MCH wskaźnik czerwonokrw:31.1[pg]
+    
+
+
+Sentence 53:
+MCHC wskaźnik czerwonokr:35.1[g/dl]
+    
+
+
+Sentence 54:
+PLT z morfologii:211[10^3/ul]
+    
+
+
+Sentence 55:
+RDW-SD:41.1[fl]
+    
+
+
+Sentence 56:
+RDW-CV:12.5[%]
+    PDW:12.0[fl]
+    MPV:10.5[fl]
+    
+
+
+Sentence 57:
+P-LCR:28.5[%]
+    
+
+
+Sentence 58:
+PCT (hematokryt płytkowy:0.22[%]
+    
+
+
+Sentence 59:
+NEUTR# wartość bezwzględ:5.13[10^3/ul]
+    
+
+
+Sentence 60:
+NEUTR%:63.0[%]
+    
+
+
+Sentence 61:
+LYMH# wartość bezwzględn:2.04[10^3/ul]
+    
+
+
+Sentence 62:
+LYMPH%:25.0[%]
+    
+
+
+Sentence 63:
+MONO# wartość bezwzględn:0.71[10^3/ul]
+    
+
+
+Sentence 64:
+MONO%:8.7[%]
+    
+
+
+Sentence 65:
+EO# wartość bezwzględna:0.22[10^3/ul]
+    
+
+
+Sentence 66:
+EO%:2.7[%]
+    
+
+
+Sentence 67:
+BASO# wartość bezwzględn:0.05[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 68:
+NRBC %:0.0[%]
+    
+
+
+Sentence 69:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 70:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:27.2[sek]
+
+
+
+Sentence 71:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 72:
+Czas protrombinowy:10.9[sek]
+    
+
+
+Sentence 73:
+Wskaźnik PT:100.9[%]
+    
+
+
+Sentence 74:
+INR:0.99
+D-dimer
+
+
+Sentence 75:
+- test ilościowy: D-dimer - test ilościowy:1776[ng/ml]
+
+
+
+Sentence 76:
+Badanie ogólne moczu
+    
+
+
+Sentence 77:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 78:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 79:
+przejrzystość:niezupełna[ ]
+    
+
+
+Sentence 80:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 81:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 82:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 83:
+ciężar właściwy:1.009[ ]
+    
+
+
+Sentence 84:
+pH:5.5[ ]
+    białko:ślad[ ]
+    
+
+
+Sentence 85:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 86:
+azotyny:obecne[ ]
+    
+
+
+Sentence 87:
+erytrocyty:nieobecne[ ]
+    
+
+
+Sentence 88:
+leukocyty:obecne[ ]
+    
+
+
+Sentence 89:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 90:
+nabłonki płaskie:liczne[w preparacie]
+    
+
+
+Sentence 91:
+skupiska leukocytów:pojedyncze[w preparacie]
+    
+
+
+Sentence 92:
+leukocyty:
+    1000[ul]
+    
+
+
+Sentence 93:
+erytrocyty świeże i częś:16 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:nieliczne[w preparacie]
+
+
+
+Sentence 94:
+TSH: TSH:1.73[uIU/ml]
+
+
+
+Sentence 95:
+FT3: FT3:2.89[pg/ml]
+
+
+
+Sentence 96:
+FT4: FT4:1.47[ng/dl]
+
+
+
+Sentence 97:
+Troponina T: Troponina T:24.3[pg/ml]
+
+
+
+Sentence 98:
+ALAT: ALAT:13[U/L]
+ASPAT: ASPAT:18[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 99:
+Sód (Na): Sód:138[mmol/L]
+
+
+
+Sentence 100:
+Potas (K): Potas:4.4[mmol/L]
+
+
+
+Sentence 101:
+Hemoglobina glikowana (HbA1c)
+    :8.20[%]
+    :66[mmol/mol]
+
+
+
+Sentence 102:
+Kreatynina + GFR
+    
+
+
+Sentence 103:
+Kreatynina w surowicy:1.04[mg/dl]
+    
+
+
+Sentence 104:
+eGFR wg BIS1:58.3[ml/min/1,73 m^2]
+
+
+
+Sentence 105:
+Mocznik: Mocznik:49[mg/dl]
+
+
+
+Sentence 106:
+Kwas moczowy: Kwas moczowy:5.5[mg/dl]
+
+
+
+Sentence 107:
+Lipidogram
+    
+
+
+Sentence 108:
+Cholesterol całkowity:169[mg/dl]
+    
+
+
+Sentence 109:
+Cholesterol HDL:48[mg/dl]
+    
+
+
+Sentence 110:
+Cholestrol LDL:88[mg/dl]
+    
+
+
+Sentence 111:
+Triglicerydy:142[mg/dl]
+    
+
+
+Sentence 112:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:213[mg/dl]
+
+
+
+Sentence 113:
+Mocz w kierunku bakterii tlenowych
+    
+
+
+Sentence 114:
+D-ZAKON:2019-04-03 11:47:17
+    WYNIK:Dodatni
+    OPISWYNIK:
+    IDENT:
+    LICZ:10^5
+    OPIS:
+    ETYK:=== ANTYBIOGRAM ===
+    ETYK:Antybiotyk \\ Organizm
+    
+
+
+Sentence 115:
+ORG:Escherichia coli
+    ANTYB:Amikacyna
+    
+
+
+Sentence 116:
+OPOR:S MIC 
+    =2
+    ANTYB:Amoksycylina - kwas klawulanowy
+    OPOR:R MIC 
+    
+
+
+Sentence 117:
+=32
+    ANTYB:Ampicylina
+    OPOR:R MIC 
+    
+
+
+Sentence 118:
+=32
+    ANTYB:Cefaleksyna
+    
+
+
+Sentence 119:
+OPOR:S MIC 8
+    ANTYB:Cefepim
+    OPOR:S MIC 
+    =0,12
+    ANTYB:Cefotaksym
+    
+
+
+Sentence 120:
+OPOR:S MIC 
+    
+
+
+Sentence 121:
+=0,25
+    ANTYB:Ceftazydym
+    OPOR:S MIC 
+    
+
+
+Sentence 122:
+=0,12
+    ANTYB:Cefuroksym forma doustna
+    
+
+
+Sentence 123:
+OPOR:S MIC 4
+    ANTYB:Cefuroksym iv
+    OPOR:S MIC 4
+    ANTYB:Ciprofloksacyna
+    
+
+
+Sentence 124:
+OPOR:R MIC 1
+    ANTYB:ESBL
+    
+
+
+Sentence 125:
+OPOR:S MIC iNEG
+    ANTYB:Ertapenem
+    OPOR:S MIC 
+    =0,12
+    ANTYB:Gentamycyna
+    
+
+
+Sentence 126:
+OPOR:S MIC 
+    =1
+    ANTYB:Meropenem
+    
+
+
+Sentence 127:
+OPOR:S MIC 
+    
+
+
+Sentence 128:
+=0,25
+    ANTYB:Nitrofurantoina
+    OPOR:S MIC 
+    =16
+    ANTYB:Norfloksacyna
+    
+
+
+Sentence 129:
+OPOR:R MIC 2
+    ANTYB:Trimetoprim/Sulfametoksazol
+    OPOR:S MIC 
+    
+
+
+Sentence 130:
+=20
+------------------------------------------------
+
+
+
+Sentence 131:
+ICD10
+------------------------------------------------
+I50.9
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 132:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 133:
+C55
+A01
+89.502
+I81
+G11
+G21
+L43
+O61
+L55
+G49
+I17
+N45
+L69
+O55
+M45
+I19
+O35
+M37
+88.723
+N13
+88.721
+O69
+------------------------------------------------
+
+

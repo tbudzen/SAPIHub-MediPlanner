@@ -1,0 +1,133 @@
+T1	Treatment 333 437	Dalsza opieka w POZ, Poradni Psychiatrycznej, Poradni Gastroenterologicznej oraz Poradni Kardiologicznej
+T2	Treatment 476 578	dalsza ambulatoryjna diagnostyka bólów głowy oraz epizodów nagłego zasypiania w Poradni Neurologicznej
+T3	Treatment 617 711	konsultacja endokrynologiczna pod kątem ewentualnych przyczyn wtórnego nadciśnienia tętniczego
+T4	Treatment 741 833	Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T5	Date 836 859	pierwsza za 5-6 tygodni
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Behaviour 864 966	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T7	Treatment 971 1027	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T8	Drug 1066 1076	Concor Cor
+T9	Drug 1101 1110	Captopril
+T10	Drug 1167 1174	Seronil
+T11	Drug 1221 1229	Spamilan
+T12	Drug_dose 1077 1099	1,25mg 1 tabletka rano
+T13	Drug_dose 1111 1165	12,5mg doraźnie w razie wysokiego ciśnienia tętniczego
+T14	Drug_dose 1175 1195	20mg 1 tabletka rano
+T15	Drug_dose 1230 1261	5mg 1 tabletka rano i wieczorem
+R2	Drg Arg1:T8 Arg2:T12	
+R3	Drg Arg1:T9 Arg2:T13	
+R4	Drg Arg1:T10 Arg2:T14	
+R5	Drg Arg1:T11 Arg2:T15	
+T16	Condition 1730 1768	Nadciśnienie tętnicze I stopnia wg WHO
+N1	Reference T16 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T17	Condition 1770 1789	Napadowe bóle głowy
+N2	Reference T17 ICD10:R51	Ból głowy
+T18	Condition 1791 1799	Depresja
+N3	Reference T18 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T19	Condition 1813 1831	Niedobór sacharazy
+N4	Reference T19 ICD10:E74.3	Inne zaburzenia wchłaniania jelitowego węglowodanów
+T20	Date 1832 1846	w dzieciństwie
+R6	Dat Arg1:T20 Arg2:T19	
+T21	Symptom 2020 2069	okresowo występującego ucisku w klatce piersiowej
+N5	Reference T21 ICD10:R07.2	Ból w okolicy przedsercowej
+T22	Date 2070 2087	od około pół roku
+T23	Symptom 2089 2124	niezwiązanego z wysiłkiem fizycznym
+N6	Reference T23 ICD10:R07.2	Ból w okolicy przedsercowej
+R7	Dat Arg1:T22 Arg2:T21	
+R8	Dat Arg1:T22 Arg2:T23	
+T24	Symptom 2127 2140	kołatań serca
+N7	Reference T24 ICD10:R00.2	Kołatanie serca
+T25	Symptom 2142 2180	sukcesywnego spadku tolerancji wysiłku
+T26	Date 2181 2189	od 2 lat
+R9	Dat Arg1:T26 Arg2:T25	
+T27	Symptom 2191 2209	ogólnego zmęczenia
+T28	Symptom 2211 2241	napadowych silnych bólów głowy
+T29	Date 2242 2250	od 2 lat
+T30	Symptom 2252 2299	bolesność lokalizuje się w skroniach oraz czole
+N8	Reference T30 ICD10:R51	Ból głowy
+N9	Reference T28 ICD10:R51	Ból głowy
+T31	Symptom 2302 2377	nagłych epizodów zasypiania niezależnie od pozycji i wykonywanych czynności
+T32	Symptom 2383 2432	okresowo występującego drżenia rąk i całego ciała
+N10	Reference T32 ICD10:R25.1	Drżenie, nieokreślone
+R10	Dat Arg1:T29 Arg2:T28	
+R11	Dat Arg1:T29 Arg2:T30	
+T33	Symptom 2460 2500	wysokie wartości ciśnienia rozkurczowego
+T34	Symptom 2517 2541	140/110 na obu ramionach
+T35	Date 2502 2516	przy przyjęciu
+R12	Dat Arg1:T35 Arg2:T34	
+T36	Condition 2557 2565	depresja
+N11	Reference T36 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T37	Treatment 2568 2589	pod opieką psychiatry
+T38	Date 2590 2601	od pół roku
+T39	Symptom 2603 2617	ostre biegunki
+T40	Symptom 2619 2631	bóle brzucha
+N12	Reference T40 ICD10:R10.4	Inny i nieokreślony ból brzucha
+T41	Symptom 2637 2644	mdłości
+T42	Treatment 2647 2674	pod opieką gastroenterologa
+T43	Condition 2676 2702	niedobór sacharazy leczony
+N13	Reference T43 ICD10:E74.3	Inne zaburzenia wchłaniania jelitowego węglowodanów
+T45	Date 2703 2716	w przeszłości
+T46	Negation 2718 2724	Neguje
+T47	Symptom 2725 2737	zasłabnięcia
+T48	Symptom 2739 2747	omdlenia
+N14	Reference T48 ICD10:R55	Omdlenie i zapaść
+T49	Symptom 2749 2762	zawroty głowy
+N15	Reference T49 ICD10:R42	Zawroty głowy i odurzenie
+T50	Symptom 2764 2783	Innych dolegliwości
+T51	Negation 2784 2795	nie zgłasza
+T52	Treatment 2797 2814	Przebyte operacje
+N16	Reference T52 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T53	Negation 2816 2820	brak
+T54	Treatment 2821 2872	Leczenie przewlekłe: gastrologiczne, psychiatryczne
+T55	Condition 2901 2904	WZW
+N17	Reference T55 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T56	Condition 2913 2922	borelioza
+N18	Reference T56 ICD10:A69.2	Choroba z Lyme
+T57	Condition 2930 2934	Odra
+N19	Reference T57 ICD10:B05	Odra
+T58	Treatment 2941 2953	- szczepiona
+T59	Condition 2955 2963	gruźlica
+N20	Reference T59 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T60	Negation 2905 2910	( - )
+T61	Negation 2923 2928	( - )
+T62	Negation 2935 2940	( - )
+T63	Negation 2964 2969	( - )
+T64	Condition 2970 2985	Wywiad rodzinny
+A1	Status T64 Family
+T65	Negation 2987 2997	nieistotny
+T66	Behaviour 2999 3014	Palenie tytoniu
+T67	Negation 3016 3022	neguje
+T68	Behaviour 3023 3034	Inne używki
+T69	Negation 3036 3042	neguje
+T70	Condition 3043 3052	Uczulenia
+N21	Reference T70 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T71	Negation 3054 3060	neguje
+T72	Behaviour 3077 3103	warunki mieszkaniowe dobre
+T73	Drug 3111 3118	Seronil
+T74	Drug_dose 3119 3138	20mg 1x1 tabletka R
+T75	Drug 3140 3148	Spamilan
+T76	Drug_dose 3149 3172	5mg 2x1 tabletka R i W.
+T77	Investigation 3187 3197	Echo serca
+T78	Investigation 3199 3209	Holter EKG
+T79	Investigation 3211 3215	ABPM
+T80	Investigation 3217 3228	USG brzucha
+T81	Investigation 3230 3245	Próba Wysiłkowa
+R13	Dat Arg1:T38 Arg2:T37	
+R15	Dat Arg1:T45 Arg2:T43	
+R16	Neg Arg1:T46 Arg2:T47	
+R17	Neg Arg1:T46 Arg2:T48	
+R18	Neg Arg1:T46 Arg2:T49	
+R19	Neg Arg1:T51 Arg2:T50	
+R20	Neg Arg1:T53 Arg2:T52	
+R21	Neg Arg1:T60 Arg2:T55	
+R22	Neg Arg1:T61 Arg2:T56	
+R23	Neg Arg1:T62 Arg2:T57	
+R24	Neg Arg1:T63 Arg2:T59	
+R25	Neg Arg1:T65 Arg2:T64	
+R26	Neg Arg1:T67 Arg2:T66	
+R27	Neg Arg1:T69 Arg2:T68	
+R28	Neg Arg1:T71 Arg2:T70	
+R29	Drg Arg1:T73 Arg2:T74	
+R30	Drg Arg1:T75 Arg2:T76	
+A2	Status T19 Historical_Insignificant
+N22	Reference T66 ICD10:Z72.0	Używanie tytoniu

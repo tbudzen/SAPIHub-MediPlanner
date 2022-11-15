@@ -1,0 +1,143 @@
+T1	Condition 438 502	Wrodzona wada serca pod postacią dwupłatkowej zastawki aortalnej
+N1	Reference T1 ICD10:I35.8	Inne zaburzenia funkcji zastawki aortalnej
+T2	Condition 505 561	umiarkowanym/ ciężkim zwężeniem lewego ujścia tętniczego
+N2	Reference T2 ICD10:I35.0	Zwężenie zastawki aortalnej
+T3	Condition 563 592	Poszerzenie aorty wstępującej
+T4	Condition 594 609	Miażdżyca aorty
+N4	Reference T4 ICD10:I70.0	Miażdżyca aorty
+T5	Condition 611 634	Hiperlipidemia mieszana
+N5	Reference T5 ICD10:E78.2	Hiperlipidemia mieszana
+T6	Condition 636 679	Nadciśnienie tętnicze II stopnia wg ESC/EHS
+N6	Reference T6 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T7	Condition 681 722	Przewlekła rozkurczowa niewydolność serca
+T8	Behaviour 744 765	Przewlekły nikotynizm
+T9	Condition 767 782	Cukrzyca typu 2
+N9	Reference T9 ICD10:E11	Cukrzyca insulinoniezależna
+T10	Condition 784 818	Nadkomorowe zaburzenia rytmu serca
+N10	Reference T10 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T11	Condition 820 846	Zaawansowany blok AV II st
+N11	Reference T11 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T12	Drug 871 880	Bisocardu
+T13	Drug_dose 881 886	2,5mg
+R1	Drg Arg1:T12 Arg2:T13	
+T14	Treatment 897 913	dwóch operacjach
+A1	Status T14 Historical_Insignificant
+T15	Date 939 955	przed wielu laty
+R2	Dat Arg1:T15 Arg2:T14	
+T16	Treatment 962 998	alloplastyce stawu kolanowego lewego
+A2	Status T16 Historical_Insignificant
+T17	Date 1000 1013	przed 17 laty
+R3	Dat Arg1:T17 Arg2:T16	
+T18	Drug 1135 1144	Triplixam
+T19	Drug 1146 1154	Bisocard
+T20	Drug 1156 1162	Atoris
+T21	Drug 1164 1174	Glucophage
+T22	Drug 1176 1188	Nitrendypina
+T23	Drug 1190 1197	Kalipoz
+T24	Treatment 1308 1330	kontrola u lekarza POZ
+T25	Treatment 1333 1393	dalsza kontrola w Poradni Kardiologicznej i Diabetologicznej
+T26	Investigation 1396 1443	planowa koronarografia w szpitalu MSWiA w Łodzi
+T27	Treatment 1451 1478	operacją kardiochirurgiczną
+T28	Condition 1688 1695	DM t. 2
+N12	Reference T28 ICD10:E11	Cukrzyca insulinoniezależna
+T29	Condition 1697 1699	HA
+N13	Reference T29 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T30	Condition 1704 1732	umiarkowaną stenozą aortalną
+N14	Reference T30 ICD10:I35.0	Zwężenie zastawki aortalnej
+T31	Condition 1744 1775	dwupłatkowej zastawki aortalnej
+N15	Reference T31 ICD10:I35.8	Inne zaburzenia funkcji zastawki aortalnej
+T32	Condition 1778 1813	dysfunkcją rozkurczową lewej komory
+T33	Condition 1819 1837	poszerzeniem aorty
+T34	Condition 1840 1861	cechami jej miażdżycy
+N18	Reference T34 ICD10:I70.0	Miażdżyca aorty
+T35	Negation 1916 1927	nie zgłasza
+T36	Symptom 1928 1940	dolegliwości
+R4	Neg Arg1:T35 Arg2:T36	
+T37	Investigation 1982 2038	w echokardiograficznej próbie obciążeniowej z dobutaminą
+T38	Investigation_result 2058 2092	indukowanych zaburzeń kurczliwości
+R5	Inv Arg1:T37 Arg2:T38	
+T39	Investigation 2096 2141	w 24-godzinnym zapisie ekg metodą Holterowską
+T40	Investigation_result 2142 2206	stwierdzono krótkotrwałe (<10s) wstawkami migotania przedsionków
+N19	Reference T40 ICD10:I48	Migotanie i trzepotanie przedsionków
+T41	Investigation_result 2208 2267	liczne pojedyncze nadkomorowe skurcze dodatkowe (1788/dobę)
+N20	Reference T41 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T42	Investigation_result 2270 2331	pojedyncze skurcze dodatkowe pochodzenia komorowego (88/dobę)
+N21	Reference T42 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+R6	Inv Arg1:T39 Arg2:T40	
+R7	Inv Arg1:T39 Arg2:T41	
+R8	Inv Arg1:T39 Arg2:T42	
+T43	Investigation 2335 2357	w całodobowym pomiarze
+T44	Investigation_result 2358 2489	32% wartości ciśnienia skurczowego i 35% rozkurczowego w dzień oraz odpowiednio 50% i 39% w nocy przekraczało wartości referencyjne
+R9	Inv Arg1:T43 Arg2:T44	
+T45	Treatment 2511 2523	ortopedyczne
+A3	Status T45 Historical_Insignificant
+T46	Date 2559 2575	przed wielu laty
+R10	Dat Arg1:T46 Arg2:T45	
+T47	Treatment 2578 2611	staw kolanowy lewy - alloplastyka
+A4	Status T47 Historical_Insignificant
+T48	Date 2612 2625	przed 17 laty
+R11	Dat Arg1:T48 Arg2:T47	
+T49	Condition 2626 2641	Wywiad rodzinny
+A5	Status T49 Family
+T50	Negation 2643 2656	bez znaczenia
+R12	Neg Arg1:T50 Arg2:T49	
+T51	Condition 2657 2664	Alergie
+T52	Negation 2666 2672	neguje
+R13	Neg Arg1:T52 Arg2:T51	
+T53	Behaviour 2673 2702	Nikotynizm: tak, 45 paczkolat
+T54	Behaviour 2703 2744	Alkohol: okazjonalnie, w małych ilościach
+N23	Reference T54 ICD10:Z72.1	Używanie alkoholu
+T55	Behaviour 2745 2762	Uzależnienie inne
+T56	Date 2784 2803	codziennie od 3 lat
+R14	Dat Arg1:T56 Arg2:T55	
+T57	Behaviour 2821 2830	emerytura
+T58	Behaviour 2832 2846	praca fizyczna
+T59	Drug 2883 2892	Triplixam
+T60	Drug_dose 2893 2926	10 mg+ 2,5 mg + 5 mg 1 tabl. rano
+R15	Drg Arg1:T59 Arg2:T60	
+T61	Drug 2930 2938	Bisocard
+T62	Drug_dose 2939 2958	2,5 mg 1 tabl. rano
+R16	Drg Arg1:T61 Arg2:T62	
+T63	Drug 2962 2968	Atoris
+T64	Drug_dose 2969 2992	30 mg 1 tabl. wieczorem
+R17	Drg Arg1:T63 Arg2:T64	
+T65	Drug 2996 3009	Glucophage XR
+T66	Drug_dose 3010 3034	500 mg 1 tabl. wieczorem
+R18	Drg Arg1:T65 Arg2:T66	
+T67	Negation 3065 3077	nie stosował
+R19	Neg Arg1:T67 Arg2:T65	
+R20	Neg Arg1:T67 Arg2:T63	
+R21	Neg Arg1:T67 Arg2:T61	
+R22	Neg Arg1:T67 Arg2:T59	
+T68	Date 3089 3106	od ok. 3 miesięcy
+R23	Dat Arg1:T68 Arg2:T65	
+R24	Dat Arg1:T68 Arg2:T63	
+R25	Dat Arg1:T68 Arg2:T61	
+R26	Dat Arg1:T68 Arg2:T59	
+T69	Investigation 3207 3228	badania laboratoryjne
+T70	Investigation 3230 3234	ECHO
+T71	Investigation 3236 3240	ABPM
+N3	Reference T3 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+N17	Reference T33 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T72	Condition 914 937	złamań podudzia prawego
+N25	Reference T72 ICD10:T12	Złamanie kończyny dolnej, poziom nieokreślony
+R27	Dat Arg1:T15 Arg2:T72	
+T73	Condition 2526 2557	2 razy podudzie prawe (złamania
+N26	Reference T73 ICD10:T12	Złamanie kończyny dolnej, poziom nieokreślony
+R28	Dat Arg1:T46 Arg2:T73	
+T74	Treatment 2492 2509	Przebyte operacje
+N27	Reference T51 ICD10:T78.4	Alergia, nieokreślona
+T75	Symptom 723 742	w II klasie wg NYHA
+N28	Reference T75 ICD10:I50	Niewydolność serca
+N7	Reference T7 ICD10:I50	Niewydolność serca
+N8	Reference T8 ICD10:Z72.0	Używanie tytoniu
+A6	Status T72 Historical_Insignificant
+T76	Negation 2041 2057	nie uwidoczniono
+R29	Neg Arg1:T76 Arg2:T38	
+A7	Status T73 Historical_Insignificant
+N22	Reference T53 ICD10:Z72.0	Używanie tytoniu
+T77	Drug 2764 2775	paracetamol
+R30	Dat Arg1:T56 Arg2:T77	
+N16	Reference T32 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+A8	Status T54 Historical_Insignificant
+N24	Reference T55 ICD10:Z72	Problemy związane ze stylem życia

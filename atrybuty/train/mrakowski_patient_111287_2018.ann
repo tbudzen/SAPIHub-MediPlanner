@@ -1,0 +1,63 @@
+T1	Condition 450 483	Pojedyncze pobudzenia nadkomorowe
+N1	Reference T1 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T2	Condition 485 505	Tachykardia zatokowa
+N2	Reference T2 ICD10:R00.0	Tachykardia, nieokreślona
+T3	Symptom 507 527	Migrenowe bóle głowy
+N3	Reference T3 ICD10:G43.9	Migrena, nieokreślona
+T4	Treatment 660 743	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Pulmonologicznej
+T5	Behaviour 747 787	Dieta lekkostrawna , niskocholesterolowa
+T6	Investigation 791 874	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T7	Investigation 877 925	Systematyczna kontrola ciśnienia tętniczego krwi
+T8	Symptom 1321 1336	kołatania serca
+N4	Reference T8 ICD10:R00.2	Kołatanie serca
+T9	Date 1339 1351	do kilku lat
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Condition 1353 1364	tachykardii
+N5	Reference T10 ICD10:R00.0	Tachykardia, nieokreślona
+T11	Symptom 1366 1388	duszności spoczynkowej
+N6	Reference T11 ICD10:R06.0	Duszność
+T12	Symptom 1429 1436	migreny
+N7	Reference T12 ICD10:G43	Migrena
+T13	Condition 1438 1446	depresja
+N8	Reference T13 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T14	Date 1449 1460	10 miesięcy
+R2	Dat Arg1:T14 Arg2:T13	
+T15	Treatment 1486 1503	Przebyte operacje
+T16	Treatment 1505 1507	CC
+A1	Status T16 Historical_Insignificant
+T17	Date 1509 1513	1999
+R3	Dat Arg1:T17 Arg2:T16	
+T18	Condition 1515 1530	Wywiad rodzinny
+A2	Status T18 Family
+T19	Condition 1540 1551	zawał serca
+A3	Status T19 Family
+N9	Reference T19 ICD10:I25.2	Przebyty zawał serca
+T20	Behaviour 1561 1571	nikotynizm
+A4	Status T20 Family
+T21	Condition 1574 1590	astma oskrzelowa
+A5	Status T21 Family
+N11	Reference T21 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T22	Condition 1592 1599	Alergie
+N12	Reference T22 ICD10:T78.4	Alergia, nieokreślona
+T23	Negation 1601 1607	neguje
+R4	Neg Arg1:T23 Arg2:T22	
+T24	Behaviour 1610 1620	Nikotynizm
+T25	Negation 1630 1633	nie
+R5	Neg Arg1:T25 Arg2:T24	
+T26	Date 1653 1664	przez 8 lat
+R6	Dat Arg1:T26 Arg2:T24	
+T27	Behaviour 1674 1701	Alkohol: 2 drinki wieczorem
+N14	Reference T27 ICD10:Z72.1	Używanie alkoholu
+T28	Behaviour 1703 1728	Uzależnienie inne: na sen
+T29	Behaviour 1746 1780	instruktor gimnastyki artystycznej
+T30	Investigation 1824 1834	echo serca
+T31	Investigation 1836 1839	TET
+T32	Investigation 1841 1845	ABPM
+T33	Investigation 1847 1857	Holter ekg
+T34	Investigation 1859 1877	rtg kl. piersiowej
+N10	Reference T20 ICD10:Z72.0	Używanie tytoniu
+N13	Reference T24 ICD10:Z72.0	Używanie tytoniu
+N15	Reference T28 ICD10:Z72	Problemy związane ze stylem życia
+T35	Drug 1782 1786	Leki
+T36	Negation 1788 1795	żadnych
+R7	Neg Arg1:T36 Arg2:T35	

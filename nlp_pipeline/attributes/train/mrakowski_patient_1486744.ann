@@ -1,0 +1,176 @@
+T1	Treatment 332 354	kontrola u lekarza POZ
+T2	Treatment 357 418	kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych
+T3	Treatment 442 506	po zakończeniu diagnostyki w kierunku genetycznie uwarunkowanych
+T4	Condition 507 527	zaburzeń krzepnięcia
+N1	Reference T4 ICD10:D68.9	Zaburzenie krzepnięcia, nieokreślone
+A1	Source T4 Declared
+T5	Treatment 529 573	celem ostatecznej kwalifikacji do zamknięcia
+T6	Condition 574 577	PFO
+N2	Reference T6 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T7	Drug 698 706	Pluscard
+T8	Drug 708 715	Roswera
+T9	Condition 942 961	Drożny otwór owalny
+N3	Reference T9 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T10	Condition 963 966	PFO
+N4	Reference T10 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T11	Condition 977 1019	udarze niedokrwiennym prawej półkuli mózgu
+N5	Reference T11 ICD10:I63.9	Zawał mózgu, nieokreślony
+T12	Symptom 1022 1057	niedowładem połowiczym lewostronnym
+N6	Reference T12 ICD10:G81.9	Porażenie połowicze, nieokreślone
+T13	Condition 1060 1107	uszkodzeniem ośrodkowym n. VII po stronie lewej
+N7	Reference T13 ICD10:G51.0	Obwodowe porażenie nerwu twarzowego
+T14	Date 1109 1119	11.05.2019
+R1	Dat Arg1:T14 Arg2:T11	
+R2	Dat Arg1:T14 Arg2:T12	
+R3	Dat Arg1:T14 Arg2:T13	
+T15	Condition 1122 1131	Uczulenie
+T16	Drug 1135 1144	ibuprofen
+R4	Alg Arg1:T15 Arg2:T16	
+T17	Treatment 1254 1281	dalsza opieka w poradni POZ
+T18	Treatment 1283 1314	okresowa kontrola neurologiczna
+T19	Treatment 1315 1364	wskazana kontrola w Poradni Kardiologicznej ICZMP
+T20	Date 1365 1381	za ok. 1 miesiąc
+R5	Dat Arg1:T20 Arg2:T19	
+T21	Treatment 1382 1410	regularne przyjmowanie leków
+T22	Drug 1412 1420	Pluscard
+T23	Drug_dose 1421 1444	100mg 1 tabl. wieczorem
+R6	Drg Arg1:T22 Arg2:T23	
+T24	Condition 1672 1749	Wada wrodzona serca pod postacią "szpilkowatego" przetrwałego otworu owalnego
+N9	Reference T24 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T25	Negation 1751 1763	Nieskuteczny
+T26	Treatment 1764 1781	zabieg zamknięcia
+T27	Condition 1782 1785	PFO
+N10	Reference T27 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T28	Date 1787 1798	30.10.2019r
+R7	Neg Arg1:T25 Arg2:T26	
+R8	Dat Arg1:T28 Arg2:T26	
+T29	Condition 1809 1851	udarze niedokrwiennym prawej półkuli mózgu
+N11	Reference T29 ICD10:I63.9	Zawał mózgu, nieokreślony
+T30	Symptom 1854 1889	niedowładem połowiczym lewostronnym
+N12	Reference T30 ICD10:G81.9	Porażenie połowicze, nieokreślone
+T31	Condition 1892 1939	uszkodzeniem ośrodkowym n. VII po stronie lewej
+N13	Reference T31 ICD10:G51.0	Obwodowe porażenie nerwu twarzowego
+T32	Date 1941 1951	11.05.2019
+R9	Dat Arg1:T32 Arg2:T29	
+R10	Dat Arg1:T32 Arg2:T30	
+R11	Dat Arg1:T32 Arg2:T31	
+T33	Condition 1954 1963	Uczulenie
+T34	Drug 1967 1976	ibuprofen
+R12	Alg Arg1:T33 Arg2:T34	
+T35	Condition 2125 2167	udarze niedokrwiennym prawej półkuli mózgu
+N15	Reference T35 ICD10:I63.9	Zawał mózgu, nieokreślony
+T36	Symptom 2170 2205	niedowładem połowiczym lewostronnym
+N16	Reference T36 ICD10:G81.9	Porażenie połowicze, nieokreślone
+T37	Condition 2208 2255	uszkodzeniem ośrodkowym n. VII po stronie lewej
+N17	Reference T37 ICD10:G51.0	Obwodowe porażenie nerwu twarzowego
+T38	Date 2257 2267	11/05/2019
+R13	Dat Arg1:T38 Arg2:T35	
+R14	Dat Arg1:T38 Arg2:T36	
+R15	Dat Arg1:T38 Arg2:T37	
+T39	Condition 2327 2330	PFO
+A2	Source T39 Declared
+N18	Reference T39 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T40	Negation 2332 2338	Neguje
+T41	Symptom 2339 2351	zasłabnięcia
+T42	Symptom 2353 2362	duszności
+N19	Reference T42 ICD10:R06.0	Duszność
+T43	Symptom 2364 2395	typowe bóle w klatce piersiowej
+R16	Neg Arg1:T40 Arg2:T41	
+R17	Neg Arg1:T40 Arg2:T42	
+R18	Neg Arg1:T40 Arg2:T43	
+T44	Treatment 2397 2414	Przebyte operacje
+T45	Negation 2417 2423	neguje
+R19	Neg Arg1:T45 Arg2:T44	
+T46	Condition 2451 2454	WZW
+N21	Reference T46 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T47	Condition 2464 2473	borelioza
+N22	Reference T47 ICD10:A69.2	Choroba z Lyme
+T48	Condition 2481 2489	gruźlica
+T49	Treatment 2495 2511	oda (szczepiona)
+T50	Negation 2491 2492	-
+R20	Neg Arg1:T50 Arg2:T48	
+T51	Negation 2457 2458	-
+R21	Neg Arg1:T51 Arg2:T46	
+T52	Condition 2512 2527	Wywiad rodzinny
+A3	Status T52 Family
+T53	Condition 2537 2539	HA
+A4	Status T53 Family
+N24	Reference T53 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T54	Behaviour 2540 2555	Palenie tytoniu
+T55	Negation 2557 2560	nie
+R22	Neg Arg1:T55 Arg2:T54	
+T56	Behaviour 2561 2572	Inne używki
+T57	Negation 2574 2577	nie
+R23	Neg Arg1:T57 Arg2:T56	
+T58	Condition 2578 2587	Uczulenia
+T59	Drug 2589 2598	ibuprofen
+R24	Alg Arg1:T58 Arg2:T59	
+T60	Behaviour 2616 2642	warunki mieszkaniowe dobre
+T61	Condition 2827 2869	udarze niedokrwiennym prawej półkuli mózgu
+N27	Reference T61 ICD10:I63.9	Zawał mózgu, nieokreślony
+T62	Symptom 2872 2907	niedowładem połowiczym lewostronnym
+N28	Reference T62 ICD10:G81.9	Porażenie połowicze, nieokreślone
+T63	Condition 2910 2957	uszkodzeniem ośrodkowym n. VII po stronie lewej
+N29	Reference T63 ICD10:G51.0	Obwodowe porażenie nerwu twarzowego
+T64	Date 2959 2969	11/05/2019
+R25	Dat Arg1:T64 Arg2:T61	
+R26	Dat Arg1:T64 Arg2:T62	
+R27	Dat Arg1:T64 Arg2:T63	
+T65	Treatment 3006 3025	implantacji zapinki
+T66	Condition 3029 3032	PFO
+N30	Reference T66 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T67	Negation 3034 3040	Neguje
+T68	Symptom 3041 3053	zasłabnięcia
+T69	Symptom 3055 3064	duszności
+N31	Reference T69 ICD10:R06.0	Duszność
+T70	Symptom 3066 3097	typowe bóle w klatce piersiowej
+N32	Reference T70 ICD10:R07	Ból gardła i w klatce piersiowej
+R28	Neg Arg1:T67 Arg2:T70	
+R29	Neg Arg1:T67 Arg2:T69	
+R30	Neg Arg1:T67 Arg2:T68	
+T71	Treatment 3099 3116	Przebyte operacje
+T72	Negation 3119 3125	neguje
+R31	Neg Arg1:T72 Arg2:T71	
+T73	Condition 3153 3156	WZW
+N33	Reference T73 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T74	Condition 3166 3175	borelioza
+N34	Reference T74 ICD10:A69.2	Choroba z Lyme
+T75	Condition 3183 3191	gruźlica
+N35	Reference T75 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T76	Treatment 3197 3213	oda (szczepiona)
+T77	Negation 3193 3194	-
+R32	Neg Arg1:T77 Arg2:T75	
+T78	Negation 3159 3160	-
+R33	Neg Arg1:T78 Arg2:T73	
+T79	Condition 3214 3229	Wywiad rodzinny
+A5	Status T79 Family
+T80	Condition 3239 3241	HA
+A6	Status T80 Family
+N36	Reference T80 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T81	Behaviour 3242 3257	Palenie tytoniu
+T82	Negation 3259 3262	nie
+R34	Neg Arg1:T82 Arg2:T81	
+T83	Behaviour 3263 3274	Inne używki
+T84	Negation 3276 3279	nie
+R35	Neg Arg1:T84 Arg2:T83	
+T85	Condition 3280 3289	Uczulenia
+T86	Drug 3291 3300	ibuprofen
+R36	Alg Arg1:T85 Arg2:T86	
+T87	Behaviour 3318 3344	warunki mieszkaniowe dobre
+T88	Drug 3371 3379	Pluscard
+T89	Drug_dose 3380 3385	100mg
+R37	Drg Arg1:T88 Arg2:T89	
+T90	Drug 3386 3393	statyna
+T91	Negation 3394 3404	odstawiono
+R38	Neg Arg1:T91 Arg2:T90	
+N8	Reference T15 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+N14	Reference T33 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+N39	Reference T41 ICD10:R55	
+N25	Reference T54 ICD10:Z72.0	Używanie tytoniu
+N26	Reference T58 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+N40	Reference T68 ICD10:R55	Omdlenie i zapaść
+N37	Reference T81 ICD10:Z72.0	Używanie tytoniu
+N38	Reference T85 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+N20	Reference T43 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N23	Reference T48 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N41	Reference T56 ICD10:Z72	Problemy związane ze stylem życia

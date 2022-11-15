@@ -1,0 +1,58 @@
+T1	Condition 412 448	Przebyte zapalenie mięśnia sercowego
+N1	Reference T1 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+T2	Condition 451 508	przejściowym pogorszeniem funkcji skurczowej lewej komory
+T3	Investigation_result 511 521	EF ok. 28%
+T4	Investigation_result 523 543	obecnie LVEF ok. 56%
+T5	Date 546 551	2016r
+R1	Dat Arg1:T5 Arg2:T1	
+R2	Dat Arg1:T5 Arg2:T2	
+R3	Dat Arg1:T5 Arg2:T3	
+T6	Condition 555 576	Nadciśnienie tętnicze
+N3	Reference T6 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T7	Condition 590 602	Otyłość I st
+N4	Reference T7 ICD10:E66.9	Otyłość, nieokreślona
+T8	Investigation_result 603 617	BMI 31,1 kg/m2
+T9	Condition 795 822	zapaleniu mięśnia sercowego
+N5	Reference T9 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+T10	Date 825 830	2016r
+R4	Dat Arg1:T10 Arg2:T9	
+T11	Condition 833 886	przejściowym spadkiem funkcji skurczowej lewej komory
+T12	Investigation_result 887 893	do 28%
+T13	Investigation_result 895 915	obecnie LVEF ok. 50%
+T14	Condition 977 998	nadciśnienie tętnicze
+N7	Reference T14 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T15	Negation 1021 1027	Neguje
+T16	Negation 1079 1085	Neguje
+T17	Symptom 1028 1050	dolegliwości dławicowe
+N8	Reference T17 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+R5	Neg Arg1:T15 Arg2:T17	
+T18	Symptom 1052 1060	duszność
+N9	Reference T18 ICD10:R06.0	Duszność
+T19	Symptom 1062 1077	kołatania serca
+N10	Reference T19 ICD10:R00.2	Kołatanie serca
+R6	Neg Arg1:T15 Arg2:T18	
+R7	Neg Arg1:T15 Arg2:T19	
+T20	Condition 1086 1093	alergie
+N11	Reference T20 ICD10:T78.4	Alergia, nieokreślona
+T21	Behaviour 1096 1102	nałogi
+R8	Neg Arg1:T16 Arg2:T20	
+R9	Neg Arg1:T16 Arg2:T21	
+T22	Condition 1106 1125	wywiadzie rodzinnym
+A1	Status T22 Family
+T23	Condition 1143 1166	ch. niedokrwienna serca
+A2	Status T23 Family
+N13	Reference T23 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T24	Condition 1182 1191	nowotwory
+A3	Status T24 Family
+N14	Reference T24 ICD10:D48.9	Nowotwór o niepewnym lub nieznanym charakterze, nieokreślony
+R10	Dat Arg1:T10 Arg2:T11	
+R11	Dat Arg1:T10 Arg2:T12	
+N2	Reference T2 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+N6	Reference T11 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+T25	Drug 1193 1197	Leki
+T26	Negation 1199 1222	aktualnie nie przyjmuje
+R12	Neg Arg1:T26 Arg2:T25	
+N12	Reference T21 ICD10:Z72	Problemy związane ze stylem życia
+T27	Negation 1000 1011	obecnie nie
+T28	Treatment 1012 1019	leczone
+R13	Neg Arg1:T27 Arg2:T28	

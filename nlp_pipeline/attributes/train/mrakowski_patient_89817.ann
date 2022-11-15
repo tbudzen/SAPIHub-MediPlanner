@@ -1,0 +1,82 @@
+T2	Date 542 564	w okresie noworodkowym
+T3	Date 566 577	23.03.1999r
+T4	Treatment 510 531	korekcji anatomicznej
+R3	Dat Arg1:T2 Arg2:T4	
+R4	Dat Arg1:T3 Arg2:T4	
+T5	Condition 580 614	Łagodna anomalia tętnic wieńcowych
+N2	Reference T5 ICD10:Q24.5	Wada rozwojowa naczyń wieńcowych
+T6	Treatment 683 733	usunięciu wyrostka robaczkowego i uchyłka Meckel'a
+T7	Date 735 746	02.05.2008r
+R1	Dat Arg1:T7 Arg2:T6	
+T9	Treatment 1040 1061	korekcji anatomicznej
+T10	Date 1062 1084	w okresie noworodkowym
+R2	Dat Arg1:T10 Arg2:T9	
+T11	Condition 1161 1195	łagodną anomalią tętnic wieńcowych
+N4	Reference T11 ICD10:Q24.5	Wada rozwojowa naczyń wieńcowych
+T12	Investigation 1258 1269	badaniu MRI
+T13	Investigation_result 1279 1322	łagodne niedomykalności zastawek tętniczych
+N5	Reference T13 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T14	Investigation_result 1324 1365	wymiary jam serca na górnej granicy normy
+R5	Inv Arg1:T12 Arg2:T13	
+R6	Inv Arg1:T12 Arg2:T14	
+T15	Symptom 1380 1414	biegunki 3-4 dobę w okresie stresu
+N6	Reference T15 ICD10:K59.1	Biegunka czynnościowa
+T16	Condition 1416 1424	stulejka
+N7	Reference T16 ICD10:N47	Nadmiar napletka, stulejka i załupek
+T17	Date 1449 1453	2019
+R7	Dat Arg1:T17 Arg2:T16	
+T18	Treatment 1454 1492	Przebyte operacje: wyrostek robaczkowy
+A1	Status T18 Historical_Insignificant
+T19	Treatment 1494 1509	uchyłek Meckela
+A2	Status T19 Historical_Insignificant
+A3	Status T6 Historical_Insignificant
+T20	Date 1511 1516	2008r
+R8	Dat Arg1:T20 Arg2:T19	
+R9	Dat Arg1:T20 Arg2:T18	
+T21	Treatment 1518 1537	Leczenie przewlekłe
+T22	Condition 1580 1583	WZW
+N8	Reference T22 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T23	Condition 1585 1594	borelioza
+N9	Reference T23 ICD10:A69.2	Choroba z Lyme
+T24	Negation 1597 1607	nie podaje
+R10	Neg Arg1:T24 Arg2:T23	
+R11	Neg Arg1:T24 Arg2:T22	
+T25	Condition 1608 1623	Wywiad rodzinny
+A4	Status T25 Family
+T26	Negation 1626 1636	nieistotny
+R12	Neg Arg1:T26 Arg2:T25	
+T27	Behaviour 1637 1652	Palenie tytoniu
+T28	Negation 1654 1664	nie podaje
+R13	Neg Arg1:T28 Arg2:T27	
+T29	Behaviour 1665 1676	Inne używki
+T30	Negation 1678 1688	nie podaje
+R14	Neg Arg1:T30 Arg2:T29	
+T31	Condition 1689 1698	Uczulenia
+T32	Drug 1700 1709	Augmentin
+R15	Alg Arg1:T31 Arg2:T32	
+T35	Investigation 1799 1809	echo serca
+T36	Investigation 1810 1813	TET
+T37	Investigation 1815 1819	ABPM
+T38	Investigation 1821 1827	Holter
+T39	Investigation 1829 1847	RTG kl. piersiowej
+T1	Condition 438 506	Wrodzona wada serca pod postacią przełożenia wielkich pni tętniczych
+N1	Reference T1 ICD10:Q20.3	
+R16	Dat Arg1:T2 Arg2:T1	
+R17	Dat Arg1:T3 Arg2:T1	
+T8	Condition 955 1036	wrodzonej wady serca pod postacią izolowanego przełożenia wielkich pni tętniczych
+N3	Reference T8 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+R18	Dat Arg1:T10 Arg2:T8	
+T40	Condition 616 672	tętnica okalająca odchodząca od prawej tętnicy wieńcowej
+N11	Reference T40 ICD10:Q24.5	Wada rozwojowa naczyń wieńcowych
+T41	Condition 1198 1254	odejściem tętnicy okalającej od prawej tętnicy wieńcowej
+N12	Reference T41 ICD10:Q24.5	Wada rozwojowa naczyń wieńcowych
+T42	Treatment 1539 1551	okulistyczna
+T43	Behaviour 1746 1754	uczy się
+N10	Reference T27 ICD10:Z72.0	Używanie tytoniu
+N13	Reference T31 ICD10:Z88	
+T33	Treatment 1427 1446	leczona zachowawczo
+R19	Dat Arg1:T17 Arg2:T33	
+N14	Reference T29 ICD10:Z72	Problemy związane ze stylem życia
+T34	Drug 1755 1759	Leki
+T44	Negation 1761 1771	nie podaje
+R20	Neg Arg1:T44 Arg2:T34	

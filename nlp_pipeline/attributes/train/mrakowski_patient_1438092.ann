@@ -1,0 +1,141 @@
+T1	Condition 438 500	Przewlekła niewydolność serca z pośrednią frakcją wyrzutową LK
+T2	Condition 541 568	Przewlekła choroba wieńcowa
+N2	Reference T2 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T3	Condition 570 591	Nadciśnienie tętnicze
+N3	Reference T3 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T4	Condition 593 613	Hipertriglicerydemia
+N4	Reference T4 ICD10:E78.1	Czysta hiperglicerydemia
+T5	Behaviour 615 625	Nikotynizm
+T6	Date 641 651	do 02.2018
+T7	Date 626 639	w przeszłości
+R1	Dat Arg1:T7 Arg2:T5	
+R2	Dat Arg1:T6 Arg2:T5	
+T8	Condition 654 684	Blok lewej odnogi pęczka Hissa
+N6	Reference T8 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T9	Condition 686 717	Łagodna niedomykalność mitralna
+N7	Reference T9 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T10	Condition 719 750	Napadowe migotanie przedsionków
+N8	Reference T10 ICD10:I48	Migotanie i trzepotanie przedsionków
+T11	Investigation 752 760	HAS-BLED
+T12	Investigation_result 761 769	3 punkty
+R3	Inv Arg1:T11 Arg2:T12	
+T13	Investigation 771 783	CHA DS -VASc
+T14	Investigation_result 784 792	3 punkty
+R4	Inv Arg1:T13 Arg2:T14	
+T15	Investigation_result 794 800	EHRA I
+T16	Treatment 913 978	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T17	Treatment 1003 1075	Planowa hospitalizacja celem oceny skuteczności dotychczasowego leczenia
+T18	Treatment 1302 1317	hospitalizowany
+T19	Date 1321 1328	11.2018
+R5	Dat Arg1:T19 Arg2:T18	
+T20	Condition 1416 1419	CHF
+N9	Reference T20 ICD10:I50.9	Niewydolność serca, nieokreślona
+T21	Investigation_result 1553 1574	wzrost EF z 33 do 39%
+T22	Condition 1644 1663	niewydolności serca
+N10	Reference T22 ICD10:I50.9	Niewydolność serca, nieokreślona
+T23	Treatment 1669 1686	leczenie wieńcowe
+T24	Investigation 1589 1596	badania
+T25	Date 1610 1617	08.2018
+R6	Dat Arg1:T25 Arg2:T24	
+T26	Investigation_result 1753 1796	bezobjawowe napadowe migotanie przedsionków
+N11	Reference T26 ICD10:I48	Migotanie i trzepotanie przedsionków
+T27	Investigation 1749 1752	ekg
+R7	Inv Arg1:T27 Arg2:T26	
+T28	Treatment 1821 1848	leczenia przeciwkrzepliwego
+T29	Drug 1849 1861	dabigatranem
+T30	Condition 1877 1904	Przewlekła choroba wieńcowa
+N12	Reference T30 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T31	Condition 1906 1935	Przewlekła niewydolność serca
+T32	Condition 2011 2032	Nadciśnienie tętnicze
+N14	Reference T32 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T33	Condition 2034 2054	Hipertriglicerydemia
+N15	Reference T33 ICD10:E78.1	Czysta hiperglicerydemia
+T34	Behaviour 2056 2066	Nikotynizm
+T35	Date 2067 2080	w przeszłości
+T36	Date 2082 2092	do 02.2018
+R8	Dat Arg1:T35 Arg2:T34	
+R9	Dat Arg1:T36 Arg2:T34	
+T37	Condition 2095 2124	Blok lewej odnogi pęczka Hisa
+N17	Reference T37 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T38	Condition 2126 2188	Wada serca pod postacią umiarkowanej niedomykalności mitralnej
+N18	Reference T38 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T39	Condition 2191 2203	trójdzielnej
+N19	Reference T39 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T40	Condition 2205 2236	Napadowe migotanie przedsionków
+N20	Reference T40 ICD10:I48	Migotanie i trzepotanie przedsionków
+T41	Investigation 2239 2247	HAS-BLED
+T42	Investigation 2258 2270	CHA DS -VASc
+T43	Investigation_result 2248 2256	3 punkty
+T44	Investigation_result 2271 2279	3 punkty
+T45	Investigation 2281 2287	EHRA 1
+R10	Inv Arg1:T42 Arg2:T44	
+R11	Inv Arg1:T41 Arg2:T43	
+T46	Treatment 2288 2305	Przebyte operacje
+T47	Negation 2307 2317	nie podaje
+R12	Neg Arg1:T47 Arg2:T46	
+T48	Condition 2345 2348	WZW
+N21	Reference T48 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T49	Condition 2350 2359	borelioza
+N22	Reference T49 ICD10:A69.2	Choroba z Lyme
+T50	Negation 2360 2370	nie podaje
+R13	Neg Arg1:T50 Arg2:T49	
+R14	Neg Arg1:T50 Arg2:T48	
+T51	Condition 2371 2386	Wywiad rodzinny
+A1	Status T51 Family
+T52	Condition 2394 2412	chorowała na serce
+A2	Status T52 Family
+N23	Reference T52 ICD10:I51.6	Choroby serca i naczyń krwionośnych, nieokreślone
+T53	Behaviour 2413 2428	Palenie tytoniu
+T54	Negation 2430 2438	nie pali
+T55	Date 2439 2450	od 02.2018r
+R15	Neg Arg1:T54 Arg2:T53	
+R16	Dat Arg1:T55 Arg2:T53	
+T56	Behaviour 2451 2476	Inne używki: okazjonalnie
+T57	Condition 2477 2486	Uczulenia
+T58	Negation 2488 2498	nie podaje
+R17	Neg Arg1:T58 Arg2:T57	
+T59	Drug 2554 2561	Pradaxa
+T60	Drug 2603 2609	Bibloc
+T61	Drug 2639 2645	Atoris
+T62	Drug 2678 2689	Co-Valsacor
+T63	Drug 2721 2731	Eplenocard
+T64	Drug 2766 2778	Preductal MR
+T65	Drug 2810 2820	Effox long
+T66	Drug_dose 2562 2593	150 mg 1 tabl. rano i wieczorem
+R18	Drg Arg1:T59 Arg2:T66	
+T67	Drug_dose 2610 2630	1.25 mg 1 tabl. rano
+R19	Drg Arg1:T60 Arg2:T67	
+T68	Drug_dose 2646 2669	40 mg 1 tabl. wieczorem
+R20	Drg Arg1:T61 Arg2:T68	
+T69	Drug_dose 2690 2712	160/25 mg 1 tabl. rano
+R21	Drg Arg1:T62 Arg2:T69	
+T70	Drug_dose 2732 2756	50 mg 1 tabl. w południe
+R22	Drg Arg1:T63 Arg2:T70	
+T71	Drug_dose 2779 2803	1 tabl. rano i wieczorem
+R23	Drg Arg1:T64 Arg2:T71	
+T72	Drug_dose 2821 2839	50 mg 1 tabl. rano
+R24	Drg Arg1:T65 Arg2:T72	
+T73	Investigation 2880 2883	TET
+T74	Investigation 2868 2878	echo serca
+T75	Investigation 2885 2889	ABPM
+T76	Investigation 2891 2897	Holter
+T77	Investigation 2899 2917	RTG kl. piersiowej
+T78	Investigation_result 510 516	EF=44%
+T79	Symptom 518 539	w I/II klasie wg NYHA
+N25	Reference T57 ICD10:T78.4	Alergia, nieokreślona
+T80	Investigation_result 2002 2008	EF 39%
+T81	Condition 1960 2000	ciężka dysfunkcja skurczowa lewej komory
+N26	Reference T81 ICD10:I50.1	Niewydolność serca lewokomorowa
+T82	Condition 502 508	HFmrEF
+N27	Reference T82 ICD10:I50.9	Niewydolność serca, nieokreślona
+N28	Reference T79 ICD10:I50	Niewydolność serca
+N1	Reference T1 ICD10:I50	Niewydolność serca
+N5	Reference T5 ICD10:Z72.0	Używanie tytoniu
+T83	Date 1076 1089	za 6 miesięcy
+R25	Dat Arg1:T83 Arg2:T17	
+T84	Symptom 1936 1957	w I/II klasie wg NYHA
+N29	Reference T84 ICD10:I50	Niewydolność serca
+N13	Reference T31 ICD10:I50	Niewydolność serca
+N16	Reference T34 ICD10:Z72.0	Tytoń i nikotyna
+N24	Reference T53 ICD10:Z72.0	Używanie tytoniu
+N30	Reference T56 ICD10:Z72	Problemy związane ze stylem życia

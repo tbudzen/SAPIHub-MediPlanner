@@ -1,0 +1,509 @@
+allRelations          : 51
+oks                   : 30
+isRedundantAndRemoveds: 18
+shouldNotBeRemoveds   : 3
+shouldBeBemoveds      : 0
+GOOD / BAD            : 48 / 3
+Sentence 0:
+------------------------------------------------
+Wiek: 64 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+- kontrola u lekarza POZ
+- w razie pojawienia się krwawienia z dróg oddechowych konieczny pilny kontakt z lekarzem/ hospitalizacja!
+
+
+
+Sentence 4:
+- dieta niskocholesterolowa
+
+
+
+Sentence 5:
+- regularne przyjmowanie leków:
+
+
+
+Sentence 6:
+Pradaxa 150mg 1-0-1 tabl
+Ros
+------------------------------------------------
+
+R1	Drg Arg1:T5 Arg2:T6 << OK >>	Pradaxa -> 150mg 1-0-1 tabl  <RANK: 3> <info: start[521, 529] <type: RIGHT>>
+
+
+Sentence 7:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 8:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Łagodna niedomykalność zastawki mitralnej i trójdzielnej.
+
+
+Sentence 9:
+Napadowe migotanie przedsionków.
+
+
+Sentence 10:
+Nadciśnienie tętnicze.
+
+
+Sentence 11:
+Hipercholesterolemia.
+
+
+Sentence 12:
+Przewlekły nikotynizm w przeszłości.
+   
+
+R2	Dat Arg1:T12 Arg2:T11 << OK >>	w przeszłości -> Przewlekły nikotynizm  <RANK: 3> <info: start[925, 903] <type: LEFT>>
+
+
+Sentence 13:
+------------------------------------------------
+
+
+
+Sentence 14:
+Zastosowane leczenie
+
+
+
+Sentence 15:
+------------------------------------------------
+
+
+
+Sentence 16:
+Acard, Pradaxa, Roswera
+------------------------------------------------
+
+
+
+Sentence 17:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 18:
+Pacjent lat 63, z wywiadem podwyższonego cholesterolu (leczonego dietą), napadowym migotaniem przedsionków, przyjęty do kliniki celem diagnostyki i leczenia.
+
+
+Sentence 19:
+W czasie stosowania Xarelto 20mg (w 10.2018) pacjent odkrztuszał brunatną wydzielinę (rytm zatokowy) odstawiono wówczas Xarelto (CHADS2VASc=0) i wystawiono skierowanie na pilną hospitalizację w Oddz.
+R3	Inv Arg1:T26 Arg2:T68 << OK >>	CHADS2VASc -> =0  <RANK: 3> <info: start[1498, 1508] <type: RIGHT>>
+R4	Neg Arg1:T24 Arg2:T22 <<REDUNDANT!!!REMOVED>>	odstawiono -> odkrztuszał brunatną wydzielinę <:REMOVED odstaw not for Symptom:> <RANK: 3> <info: start[1470, 1422] <type: LEFT>>
+R5	Neg Arg1:T24 Arg2:T23 <<REDUNDANT!!!REMOVED>>	odstawiono -> rytm zatokowy <:REMOVED odstaw not for Symptom:> <RANK: 3> <info: start[1470, 1455] <type: LEFT>>
+R6	Neg Arg1:T24 Arg2:T27 <<REDUNDANT!!!REMOVED>>	odstawiono -> pilną hospitalizację w Oddz. Pulmonologicznym <:REMOVED odstaw not for Treatment:> <RANK: 2> <info: start[1470, 1540] <type: RIGHT>>
+R7	Neg Arg1:T24 Arg2:T26 <<REDUNDANT!!!REMOVED>>	odstawiono -> CHADS2VASc <:REMOVED odstaw not for Investigation:> <RANK: 3> <info: start[1470, 1498] <type: RIGHT>>
+R8	Neg Arg1:T24 Arg2:T68 <<REDUNDANT!!!REMOVED>>	odstawiono -> =0 <:REMOVED odstaw not for Investigation_result:> <RANK: 3> <info: start[1470, 1508] <type: RIGHT>>
+R9	Neg Arg1:T24 Arg2:T19 <<REDUNDANT!!!REMOVED>>	odstawiono -> Xarelto <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1470, 1389] <type: LEFT>>
+R10	Neg Arg1:T24 Arg2:T25 << OK >>	odstawiono -> Xarelto  <RANK: 3> <info: start[1470, 1489] <type: RIGHT>>
+R11	Neg Arg1:T24 Arg2:T20 <<REDUNDANT!!!REMOVED>>	odstawiono -> 20mg <:REMOVED odstaw not for Drug_dose:> <RANK: 2> <info: start[1470, 1397] <type: LEFT>>
+R12	Drg Arg1:T19 Arg2:T20 << OK >>	Xarelto -> 20mg  <RANK: 3> <info: start[1389, 1397] <type: RIGHT>>
+R13	Drg Arg1:T25 Arg2:T20 <<REDUNDANT!!!REMOVED>>	Xarelto -> 20mg <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1489, 1397] <type: LEFT>>
+R14	Dat Arg1:T21 Arg2:T22 <<SHOULD NOT BE REMOVED>>	w 10.2018 -> odkrztuszał brunatną wydzielinę <:REMOVED Too far from TagInfo[T21, 1403, 1412, Date, w 10.2018
+] TagInfo[T19, 1389, 1396, Drug, Xarelto
+]:> <RANK: 3> <info: start[1403, 1422] <type: RIGHT>>
+R15	Dat Arg1:T21 Arg2:T23 <<SHOULD NOT BE REMOVED>>	w 10.2018 -> rytm zatokowy <:REMOVED Too far from TagInfo[T21, 1403, 1412, Date, w 10.2018
+] TagInfo[T19, 1389, 1396, Drug, Xarelto
+]:> <RANK: 3> <info: start[1403, 1455] <type: RIGHT>>
+R16	Dat Arg1:T21 Arg2:T27 <<SHOULD NOT BE REMOVED>>	w 10.2018 -> pilną hospitalizację w Oddz. Pulmonologicznym <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1403, 1540] <type: RIGHT>>
+R17	Dat Arg1:T21 Arg2:T26 <<REDUNDANT!!!REMOVED>>	w 10.2018 -> CHADS2VASc <:REMOVED Too far from TagInfo[T21, 1403, 1412, Date, w 10.2018
+] TagInfo[T19, 1389, 1396, Drug, Xarelto
+]:> <RANK: 3> <info: start[1403, 1498] <type: RIGHT>>
+R18	Dat Arg1:T21 Arg2:T19 << OK >>	w 10.2018 -> Xarelto  <RANK: 3> <info: start[1403, 1389] <type: LEFT>>
+R19	Dat Arg1:T21 Arg2:T25 <<REDUNDANT!!!REMOVED>>	w 10.2018 -> Xarelto <:REMOVED Too far from TagInfo[T21, 1403, 1412, Date, w 10.2018
+] TagInfo[T19, 1389, 1396, Drug, Xarelto
+]:> <RANK: 3> <info: start[1403, 1489] <type: RIGHT>>
+
+
+Sentence 20:
+Pulmonologicznym ale pacjent nie zgłosił się na pulmonologię. 
+
+
+
+Sentence 21:
+W wywiadzie ponadto: rzadko występujący niepokój w klatce piersiowej.
+
+
+
+Sentence 22:
+Neguje: zasłabnięcia, omdlenia, krwawienia, czarne stolce, brunatne wymioty, chorobę wrzodową, duszność nocną, obrzęki podudzi, bóle w klatce piersiowej, kołatania serca, DM, udar mózgu, zawał serca.  
+
+R20	Neg Arg1:T31 Arg2:T30 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[1702, 1710] <type: RIGHT>>
+R21	Neg Arg1:T31 Arg2:T32 << OK >>	Neguje -> omdlenia  <RANK: 2> <info: start[1702, 1724] <type: RIGHT>>
+R22	Neg Arg1:T31 Arg2:T33 << OK >>	Neguje -> krwawienia  <RANK: 2> <info: start[1702, 1734] <type: RIGHT>>
+R23	Neg Arg1:T31 Arg2:T34 << OK >>	Neguje -> czarne stolce  <RANK: 2> <info: start[1702, 1746] <type: RIGHT>>
+R24	Neg Arg1:T31 Arg2:T35 << OK >>	Neguje -> brunatne wymioty  <RANK: 2> <info: start[1702, 1761] <type: RIGHT>>
+R25	Neg Arg1:T31 Arg2:T37 << OK >>	Neguje -> duszność nocną  <RANK: 2> <info: start[1702, 1797] <type: RIGHT>>
+R26	Neg Arg1:T31 Arg2:T38 << OK >>	Neguje -> obrzęki podudzi  <RANK: 2> <info: start[1702, 1813] <type: RIGHT>>
+R27	Neg Arg1:T31 Arg2:T39 << OK >>	Neguje -> bóle w klatce piersiowej  <RANK: 2> <info: start[1702, 1830] <type: RIGHT>>
+R28	Neg Arg1:T31 Arg2:T40 << OK >>	Neguje -> kołatania serca  <RANK: 2> <info: start[1702, 1856] <type: RIGHT>>
+R29	Neg Arg1:T31 Arg2:T36 << OK >>	Neguje -> chorobę wrzodową  <RANK: 2> <info: start[1702, 1779] <type: RIGHT>>
+R30	Neg Arg1:T31 Arg2:T41 << OK >>	Neguje -> DM  <RANK: 2> <info: start[1702, 1873] <type: RIGHT>>
+R31	Neg Arg1:T31 Arg2:T42 << OK >>	Neguje -> udar mózgu  <RANK: 2> <info: start[1702, 1877] <type: RIGHT>>
+R32	Neg Arg1:T31 Arg2:T43 << OK >>	Neguje -> zawał serca  <RANK: 2> <info: start[1702, 1889] <type: RIGHT>>
+
+
+Sentence 23:
+Przebyte operacje: brak
+
+R33	Neg Arg1:T45 Arg2:T44 << OK >>	brak -> Przebyte operacje  <RANK: 3> <info: start[1923, 1904] <type: LEFT>>
+
+
+Sentence 24:
+Palenie tytoniu: nie pali od 15 lat
+
+R34	Neg Arg1:T46 Arg2:T47 << OK >>	nie -> pali  <RANK: 3> <info: start[1945, 1949] <type: RIGHT>>
+R35	Neg Arg1:T46 Arg2:T67 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[1945, 1928] <type: LEFT>>
+R36	Dat Arg1:T48 Arg2:T47 << OK >>	od 15 lat -> pali  <RANK: 3> <info: start[1954, 1949] <type: LEFT>>
+R37	Dat Arg1:T48 Arg2:T67 << OK >>	od 15 lat -> Palenie tytoniu  <RANK: 3> <info: start[1954, 1928] <type: LEFT>>
+
+
+Sentence 25:
+Inne używki: nie
+Uczulenia: nie
+
+R38	Neg Arg1:T50 Arg2:T51 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1977, 1981] <type: RIGHT>>
+R39	Neg Arg1:T50 Arg2:T49 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[1977, 1964] <type: LEFT>>
+R40	Neg Arg1:T52 Arg2:T51 << OK >>	nie -> Uczulenia  <RANK: 3> <info: start[1992, 1981] <type: LEFT>>
+R41	Neg Arg1:T52 Arg2:T49 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1992, 1964] <type: LEFT>>
+
+
+Sentence 26:
+Przebyte choroby zakaźne - WZW (-) , borelioza ( - ), tbc (-)
+
+R42	Neg Arg1:T56 Arg2:T53 << OK >>	(-) -> WZW  <RANK: 3> <info: start[2027, 2023] <type: LEFT>>
+R43	Neg Arg1:T56 Arg2:T54 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2027, 2033] <type: RIGHT>>
+R44	Neg Arg1:T56 Arg2:T55 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2027, 2050] <type: RIGHT>>
+R45	Neg Arg1:T57 Arg2:T53 <<REDUNDANT!!!REMOVED>>	( - ) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2043, 2023] <type: LEFT>>
+R46	Neg Arg1:T57 Arg2:T54 << OK >>	( - ) -> borelioza  <RANK: 3> <info: start[2043, 2033] <type: LEFT>>
+R47	Neg Arg1:T57 Arg2:T55 <<REDUNDANT!!!REMOVED>>	( - ) -> tbc <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2043, 2050] <type: RIGHT>>
+R48	Neg Arg1:T58 Arg2:T53 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2054, 2023] <type: LEFT>>
+R49	Neg Arg1:T58 Arg2:T54 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2054, 2033] <type: LEFT>>
+R50	Neg Arg1:T58 Arg2:T55 << OK >>	(-) -> tbc  <RANK: 3> <info: start[2054, 2050] <type: LEFT>>
+
+
+Sentence 27:
+W wywiadzie rodzinnym: 
+
+
+
+Sentence 28:
+Stan społeczny: warunki mieszkaniowe dobre. 
+
+
+
+Sentence 29:
+Leki: Acard 1x 75mg/wiecz
+
+
+R51	Drg Arg1:T60 Arg2:T61 << OK >>	Acard -> 1x 75mg/wiecz  <RANK: 3> <info: start[2133, 2139] <type: RIGHT>>
+
+
+Sentence 30:
+Planowany czas hospitalizacji: 4-5 dni.
+
+
+
+Sentence 31:
+Planowane badania: badania laboratoryjne, ECHO, EKG metodą Holtera, ABPM, próba wysiłkowa.
+
+
+
+Sentence 32:
+------------------------------------------------
+
+
+
+Sentence 33:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 34:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.14[10^3/ul]
+    
+
+
+Sentence 35:
+RBC Krwinki czerwone:5.12[10^6/ul]
+    
+
+
+Sentence 36:
+HGB Hemoglobina:15.1[g/dl]
+    
+
+
+Sentence 37:
+HCT Hematokryt:42.7[%]
+    
+
+
+Sentence 38:
+MCV wskaźnik czerwonokrw:83.4[fl]
+    
+
+
+Sentence 39:
+MCH wskaźnik czerwonokrw:29.5[pg]
+    
+
+
+Sentence 40:
+MCHC wskaźnik czerwonokr:35.4[g/dl]
+    
+
+
+Sentence 41:
+PLT z morfologii:161[10^3/ul]
+    
+
+
+Sentence 42:
+RDW-SD:41.2[fl]
+    
+
+
+Sentence 43:
+RDW-CV:13.5[%]
+    PDW:14.4[fl]
+    MPV:11.9[fl]
+    P-LCR:39.9[%]
+    
+
+
+Sentence 44:
+PCT (hematokryt płytkowy:0.19[%]
+    
+
+
+Sentence 45:
+NEUTR# wartość bezwzględ:4.15[10^3/ul]
+    
+
+
+Sentence 46:
+NEUTR%:67.6[%]
+    
+
+
+Sentence 47:
+LYMH# wartość bezwzględn:1.51[10^3/ul]
+    LYMPH%:24.6[%]
+    
+
+
+Sentence 48:
+MONO# wartość bezwzględn:0.34[10^3/ul]
+    
+
+
+Sentence 49:
+MONO%:5.5[%]
+    
+
+
+Sentence 50:
+EO# wartość bezwzględna:0.11[10^3/ul]
+    
+
+
+Sentence 51:
+EO%:1.8[%]
+    
+
+
+Sentence 52:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    
+
+
+Sentence 53:
+BASO%:0.5[%]
+    
+
+
+Sentence 54:
+NRBC %:0.0[%]
+    
+
+
+Sentence 55:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 56:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:27.8[sek]
+
+
+
+Sentence 57:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 58:
+Czas protrombinowy:11.0[sek]
+    
+
+
+Sentence 59:
+Wskaźnik PT:100.0[%]
+    
+
+
+Sentence 60:
+INR:1.00
+D-dimer
+
+
+Sentence 61:
+- test ilościowy: D-dimer - test ilościowy:134[ng/ml]
+
+
+
+Sentence 62:
+TSH: TSH:2.43[uIU/ml]
+
+
+
+Sentence 63:
+FT3: FT3:2.91[pg/ml]
+
+
+
+Sentence 64:
+FT4: FT4:1.19[ng/dl]
+
+
+
+Sentence 65:
+Troponina T: Troponina T:6.7[pg/ml]
+
+
+
+Sentence 66:
+ALAT: ALAT:20[U/L]
+ASPAT: ASPAT:19[U/L]
+
+
+
+Sentence 67:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 68:
+Potas (K): Potas:4.6[mmol/L]
+
+
+
+Sentence 69:
+Kreatynina + GFR
+    
+
+
+Sentence 70:
+Kreatynina w surowicy:0.92[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 71:
+MDRD ze stan:83.1[ml/min/1,73 m^2]
+
+
+
+Sentence 72:
+Mocznik: Mocznik:44[mg/dl]
+
+
+
+Sentence 73:
+Lipidogram
+    
+
+
+Sentence 74:
+Cholesterol całkowity:205[mg/dl]
+    
+
+
+Sentence 75:
+Cholesterol HDL:44[mg/dl]
+    
+
+
+Sentence 76:
+Cholestrol LDL:149[mg/dl]
+    Triglicerydy:130[mg/dl]
+    
+
+
+Sentence 77:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:121[mg/dl]
+
+
+
+Sentence 78:
+Glukoza w surowicy: Glukoza w surowicy:97[mg/dl]
+
+
+
+Sentence 79:
+------------------------------------------------
+
+
+
+Sentence 80:
+ICD10
+------------------------------------------------
+I34.0
+I48
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 81:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 82:
+89.501
+88.721
+89.502
+89.41
+87.440
+88.761
+------------------------------------------------
+
+

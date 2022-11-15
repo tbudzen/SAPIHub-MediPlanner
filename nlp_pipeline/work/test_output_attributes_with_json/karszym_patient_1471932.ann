@@ -1,0 +1,86 @@
+T1	Treatment 565 642	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Kardiochirurgicznej
+T2	Behaviour 645 685	Dieta lekkostrawna , niskocholesterolowa
+T3	Investigation 689 772	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T4	Investigation 775 823	Systematyczna kontrola ciśnienia tętniczego krwi
+T5	Drug 874 881	Nebilet
+T6	Drug_dose 882 910	5 mg 1x dz po 1/2 tabl. rano
+T7	Drug 1031 1038	Nebilet
+T8	Condition 1267 1341	Łagodna niedomykalność zastawki aortalnej na podłożu zastawki dwupłatkowej
+T9	Condition 1343 1377	Poszerzenie opuszki aorty do 52 mm
+T10	Condition 1379 1443	Komorowe zaburzenia rytmu serca ( pobudzenia pojedyncze , para )
+T11	Condition 1445 1478	Pojedyncze pobudzenia nadkomorowe
+T12	Condition 1480 1521	Podejrzenie kamicy nerkowej prawostronnej
+T13	Condition 1523 1552	Nadciśnienie tętnicze de novo
+T14	Symptom 1723 1757	okresowego uczucia kołatania serca
+T15	Symptom 1763 1881	bólów w klatce piersiowej o charakterze gniecenia , ucisku nie zawsze związane z wysiłkiem, niekiedy w pozycji leżącej
+T16	Symptom 1884 1906	Nasilenie dolegliwości
+T17	Date 1907 1920	od 2 miesięcy
+T18	Negation 1924 1930	Neguje
+T19	Symptom 1931 1943	zasłabnięcia
+T20	Negation 1961 1964	bez
+T21	Condition 1965 1986	chorób towarzyszących
+T22	Treatment 1988 2005	Przebyte operacje
+T23	Negation 2008 2012	brak
+T24	Treatment 2013 2032	Leczenie przewlekłe
+T25	Negation 2035 2039	brak
+T26	Condition 2068 2071	WZW
+troby
+T27	Condition 2081 2090	borelioza
+T28	Condition 2097 2101	Odra
+T29	Negation 2072 2078	( -  )
+T30	Negation 2091 2096	( - )
+T31	Negation 2102 2107	( - )
+T32	Condition 2139 2148	alzhaimer
+T33	Behaviour 2149 2164	Palenie tytoniu
+T34	Negation 2166 2169	nie
+T35	Behaviour 2170 2181	Inne używki
+T36	Negation 2183 2186	nie
+T37	Condition 2187 2196	Uczulenia
+T38	Negation 2198 2204	neguje
+T39	Behaviour 2221 2247	warunki mieszkaniowe dobre
+T40	Behaviour 2250 2264	mieszka z żoną
+T41	Negation 2272 2275	bez
+T42	Drug 2276 2294	leków przewlekłych
+T43	Drug 2297 2307	Beto 50 ZK
+T44	Negation 2308 2321	nie przyjmuje
+T45	Date 2322 2330	od 7 dni
+T46	Investigation 2346 2356	Echo serca
+T47	Investigation 2359 2374	Holter EKG i RR
+T48	Investigation 2377 2392	Próba Wysiłkowa
+N1	Reference T8 ICD10:I35.1	NiedomykalnoÅÄ zastawki aortalnej
+N2	Reference T10 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komÃ³r
+N3	Reference T11 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+N4	Reference T13 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N5	Reference T15 ICD10:R07.4	BÃ³l w klatce piersiowej, nieokreÅlony
+N6	Reference T19 ICD10:R55	Omdlenie i zapaÅÄ
+N7	Reference T22 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N8	Reference T26 ICD10:B19	NieokreÅlone wirusowe zapalenie wÄtroby
+N9	Reference T27 ICD10:A69.2	Choroba z Lyme
+N10	Reference T33 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N11	Reference T35 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+N12	Reference T37 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+R1	Drg Arg1:T5 Arg2:T6
+R114	Neg Arg1:T34 Arg2:T33
+R132	Neg Arg1:T36 Arg2:T35
+R147	Neg Arg1:T38 Arg2:T37
+R168	Neg Arg1:T41 Arg2:T40
+R174	Neg Arg1:T41 Arg2:T42
+R188	Neg Arg1:T44 Arg2:T46
+R189	Neg Arg1:T44 Arg2:T47
+R192	Neg Arg1:T44 Arg2:T43
+R2	Dat Arg1:T17 Arg2:T14
+R209	Dat Arg1:T45 Arg2:T43
+R3	Dat Arg1:T17 Arg2:T15
+R33	Neg Arg1:T23 Arg2:T22
+R4	Dat Arg1:T17 Arg2:T16
+R5	Neg Arg1:T18 Arg2:T19
+R51	Neg Arg1:T25 Arg2:T24
+R58	Neg Arg1:T29 Arg2:T26
+R59	Neg Arg1:T29 Arg2:T27
+R6	Neg Arg1:T20 Arg2:T21
+R60	Neg Arg1:T29 Arg2:T28
+R76	Neg Arg1:T30 Arg2:T27
+R77	Neg Arg1:T30 Arg2:T28
+R95	Neg Arg1:T31 Arg2:T32
+A1	Status T32 Family
+A2	Source T12 Declared

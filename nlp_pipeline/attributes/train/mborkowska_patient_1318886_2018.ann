@@ -1,0 +1,41 @@
+T1	Drug 339 348	Cefazolin
+T2	Drug 350 372	kroplówki nawadniające
+T3	Condition 508 574	Wrodzona wada serca pod postacią zarośnięcia zastawki trójdzielnej
+N1	Reference T3 ICD10:Q22.4	Wrodzone zwężenie zastawki trójdzielnej
+T4	Condition 576 600	hipoplazji prawej komory
+N2	Reference T4 ICD10:Q24	Inne wrodzone wady rozwojowe serca
+T5	Condition 602 636	zwężenia zastawki tętnicy płucnej,
+N3	Reference T5 ICD10:Q22.1	Wrodzone zwężenie zastawki pnia płucnego
+T6	Condition 637 673	ubytku w przegrodzie międzykomorowej
+N4	Reference T6 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T7	Condition 679 700	międzyprzedsionkowej.
+N5	Reference T7 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T8	Treatment 712 729	zabiegu Rashkinda
+T9	Date 730 744	(29.06.2015r.)
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Treatment 757 863	operacji wycięcia przegrody międzyprzedsionkowej oraz po wytworzeniu zespolenia centralnego o średnicy 4mm
+T11	Date 865 876	02.07.2015r
+R2	Dat Arg1:T11 Arg2:T10	
+T12	Treatment 890 949	operacji metodą Glenna i podwiązaniu zespolenia centralnego
+T13	Date 950 963	(28.01.2016r)
+R3	Dat Arg1:T13 Arg2:T12	
+T14	Treatment 997 1008	zamknięciem
+T15	Investigation 976 994	cewnikowaniu serca
+T16	Condition 1009 1036	dwóch przetok żylno-żylnych
+N6	Reference T16 ICD10:I87.8	Inne określone zaburzenia funkcji żył
+T17	Date 1038 1049	06.09.2017r
+R4	Dat Arg1:T17 Arg2:T16	
+R5	Dat Arg1:T17 Arg2:T14	
+R6	Dat Arg1:T17 Arg2:T15	
+T18	Condition 1336 1365	atrezją zastawki trójdzielnej
+N7	Reference T18 ICD10:Q22.4	Wrodzone zwężenie zastawki trójdzielnej
+T19	Treatment 1398 1420	leczenia operacyjnego,
+T20	Negation 1439 1445	ujemny
+T21	Condition 1421 1438	wywiad alergiczny
+N8	Reference T21 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R7	Neg Arg1:T20 Arg2:T21	
+T22	Drug 1467 1475	Spironol
+T23	Condition 1477 1494	wywiad alergiczny
+N9	Reference T23 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T24	Negation 1495 1501	ujemny
+R8	Neg Arg1:T24 Arg2:T23	

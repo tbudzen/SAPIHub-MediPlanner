@@ -1,0 +1,83 @@
+T1	Condition 415 430	Podejrzenie PFO
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Negation 444 453	negatywna
+R1	Neg Arg1:T2 Arg2:T1	
+T3	Condition 463 496	przemijającym niedokrwieniu mózgu
+N2	Reference T3 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T4	Date 498 505	11.2018
+T5	Symptom 508 516	Omdlenia
+N3	Reference T5 ICD10:R55	Omdlenie i zapaść
+R2	Dat Arg1:T4 Arg2:T3	
+T6	Condition 530 550	Zaburzenia odżywania
+N4	Reference T6 ICD10:F50.9	Zaburzenia odżywiania, nieokreślone
+T7	Condition 564 599	Subkliniczna niedoczynność tarczycy
+N5	Reference T7 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T8	Behaviour 743 813	Dieta niskotłuszczowa z niską zawartością węglowodanów prostych i soli
+T9	Investigation 815 852	Kontrola ciśnienia tętniczego i tętna
+T10	Investigation 854 890	Kontrola ALT, AST, lipidogramu w POZ
+T11	Date 891 901	co 6-8 tyg
+T12	Behaviour 903 958	Regularna aktywność fizyczna min. 5x w tyg. po 30 minut
+R3	Dat Arg1:T11 Arg2:T10	
+T13	Treatment 969 1043	diagnostyka w Poradni Hematologicznej (pod kątem zespołów nadkrzepliwości)
+T14	Treatment 1065 1134	Dalsza opieka w POZ i Poradni Endokrynologicznej oraz Kardiologicznej
+T15	Drug 1164 1169	Acard
+T16	Drug 1196 1202	Atoris
+T17	Drug_dose 1170 1195	75 mg 1x1 tabl. wieczorem
+T18	Drug_dose 1203 1228	10 mg 1x1 tabl. wieczorem
+R4	Drg Arg1:T15 Arg2:T17	
+R5	Drg Arg1:T16 Arg2:T18	
+T19	Condition 1402 1450	nawracającego przemijającego niedokrwienia mózgu
+N6	Reference T19 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T20	Condition 1456 1471	podejrzenia PFO
+A1	Source T20 Declared
+N7	Reference T20 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T21	Behaviour 1481 1492	nikotynizmu
+N8	Reference T21 ICD10:Z72.0	Używanie tytoniu
+T22	Treatment 1499 1516	zamknięcia ubytku
+T23	Date 1518 1525	Obecnie
+T24	Negation 1536 1542	neguje
+T25	Symptom 1543 1555	dolegliwości
+R6	Neg Arg1:T24 Arg2:T25	
+R7	Dat Arg1:T23 Arg2:T25	
+T26	Condition 1572 1575	TIA
+N9	Reference T26 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T27	Date 1578 1597	listopadzie 2018 r.
+T28	Date 1599 1608	wcześniej
+T29	Symptom 1609 1629	nawracające omdlenia
+N10	Reference T29 ICD10:R55	Omdlenie i zapaść
+T30	Symptom 1632 1666	uczucie osłabienia kończyn górnych
+R8	Dat Arg1:T27 Arg2:T26	
+R9	Dat Arg1:T28 Arg2:T29	
+R10	Dat Arg1:T28 Arg2:T30	
+T31	Condition 1680 1710	odmiedniczkowe zapalenie nerek
+N11	Reference T31 ICD10:N12	Cewkowo-śródmiąższowe zapalenie nerek nieokreślone jako ostre lub przewlekłe
+T32	Date 1712 1718	6 r.ż.
+R11	Dat Arg1:T32 Arg2:T31	
+A2	Status T31 Historical_Insignificant
+T33	Condition 1721 1728	bulimia
+N12	Reference T33 ICD10:F50.2	Żarłoczność psychiczna
+T34	Condition 1731 1740	anoreksja
+N13	Reference T34 ICD10:F50.0	Jadłowstręt psychiczny
+T35	Date 1741 1752	(16-17 r.ż.
+R12	Dat Arg1:T35 Arg2:T33	
+R13	Dat Arg1:T35 Arg2:T34	
+T36	Condition 1782 1801	problemy z tarczycą
+A3	Status T36 Family
+N14	Reference T36 ICD10:E07.9	Choroby tarczycy, nieokreślone
+T37	Negation 1839 1861	Nie przyjmuje na stałe
+T38	Drug 1862 1867	leków
+R14	Neg Arg1:T37 Arg2:T38	
+T39	Condition 1869 1878	Uczulenia
+N15	Reference T39 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T40	Negation 1879 1885	neguje
+R15	Neg Arg1:T40 Arg2:T39	
+T41	Behaviour 1887 1894	Pracuje
+T42	Behaviour 1906 1914	fryzjera
+T43	Condition 1980 1999	Ostatnia miesiączka
+T44	Date 2000 2014	8 stycznia br.
+R16	Dat Arg1:T44 Arg2:T43	
+T45	Condition 1944 1978	chorób układu sercowo-naczyniowego
+A4	Status T45 Family
+N16	Reference T45 ICD10:I99	Inne i nieokreślone zaburzenia układu krążenia
+A5	Source T1 Declared
+T46	Investigation 433 443	obserwacja

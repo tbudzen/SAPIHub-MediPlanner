@@ -1,0 +1,151 @@
+T1	Condition 439 472	Napadowy częstoskurcz nadkomorowy
+N1	Reference T1 ICD10:I47.1	Częstoskurcz nadkomorowy
+T2	Condition 474 490	Insulinooporność
+N2	Reference T2 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T3	Treatment 500 536	amputacji nadpochwowej trzonu macicy
+N3	Reference T3 ICD10:Z90.7	Nabyty brak narządów płciowych
+T4	Condition 546 583	niezłośliwego nowotworu trzonu macicy
+N4	Reference T4 ICD10:D26.1	Trzon macicy
+T5	Date 585 595	22.11.2016
+R1	Dat Arg1:T5 Arg2:T3	
+R2	Dat Arg1:T5 Arg2:T4	
+T6	Condition 815 848	Napadowy częstoskurcz nadkomorowy
+N5	Reference T6 ICD10:I47.1	Częstoskurcz nadkomorowy
+T7	Condition 850 894	Łagodna niedomykalność zastawki trójdzielnej
+N6	Reference T7 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T8	Condition 896 912	Insulinooporność
+N7	Reference T8 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T9	Treatment 922 958	amputacji nadpochwowej trzonu macicy
+N8	Reference T9 ICD10:Z90.8	Nabyty brak innych narządów
+T10	Condition 968 1005	niezłośliwego nowotworu trzonu macicy
+N9	Reference T10 ICD10:D26.1	Trzon macicy
+T11	Date 1007 1017	22.11.2016
+R3	Dat Arg1:T11 Arg2:T10	
+R4	Dat Arg1:T11 Arg2:T9	
+T12	Treatment 1131 1180	Dalsza opieka w POZ oraz Poradni Diabetologicznej
+T13	Treatment 1194 1236	kontrolna wizyta w Poradni Kardiologicznej
+T14	Date 1237 1252	za 1,5 miesiąca
+R5	Dat Arg1:T14 Arg2:T13	
+T15	Treatment 1257 1349	Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T16	Behaviour 1354 1468	Dieta cukrzycowa, lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T17	Behaviour 1482 1501	redukcja masy ciała
+T18	Behaviour 1515 1557	podjęcie umiarkowanej aktywności fizycznej
+T19	Treatment 1562 1618	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T20	Condition 1764 1804	napadowymi częstoskurczami nadkomorowymi
+N10	Reference T20 ICD10:I47.1	Częstoskurcz nadkomorowy
+T21	Date 1806 1819	od ok. 10 lat
+T22	Symptom 1851 1909	częściej w godz. nocnych, trwające od kilku sek. do 20 min
+N11	Reference T22 ICD10:I47.1	Częstoskurcz nadkomorowy
+T23	Date 1956 1963	12.2017
+T24	Treatment 1966 1992	umiarowiony na IP podaniem
+T25	Drug 1993 2002	adenozyny
+R6	Dat Arg1:T21 Arg2:T20	
+R7	Dat Arg1:T21 Arg2:T22	
+T26	Condition 1911 1953	ostatni epizod najdłuższy trwający ok. 6 h
+N12	Reference T26 ICD10:I47.1	Częstoskurcz nadkomorowy
+R8	Dat Arg1:T23 Arg2:T26	
+R9	Dat Arg1:T23 Arg2:T24	
+R10	Dat Arg1:T23 Arg2:T25	
+T27	Date 2005 2018	od tego czasu
+T28	Drug 2039 2049	Concor COR
+T29	Negation 2052 2055	nie
+T30	Condition 2068 2084	nawrotów arytmii
+A1	Source T30 Declared
+N13	Reference T30 ICD10:I47.1	Częstoskurcz nadkomorowy
+R11	Neg Arg1:T29 Arg2:T30	
+R12	Dat Arg1:T27 Arg2:T28	
+R13	Dat Arg1:T27 Arg2:T30	
+T31	Symptom 2091 2126	obrzękami kończyn dolnych i górnych
+T32	Drug_dose 2128 2136	co 3 dni
+T33	Drug 2157 2163	Trifas
+T34	Drug_dose 2164 2169	10 mg
+R14	Drg Arg1:T33 Arg2:T32	
+R15	Drg Arg1:T33 Arg2:T34	
+T35	Condition 2174 2192	insulinoopornością
+N15	Reference T35 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T36	Condition 2194 2217	stanem przedcukrzycowym
+N16	Reference T36 ICD10:R73	Podwyższone stężenie glukozy we krwi
+R16	Dat Arg1:T23 Arg2:T20	
+T37	Negation 2267 2273	Neguje
+T38	Symptom 2275 2287	zasłabnięcia
+T39	Symptom 2289 2297	omdlenia
+N17	Reference T39 ICD10:R55	Omdlenie i zapaść
+T40	Symptom 2299 2309	krwawienia
+T41	Symptom 2311 2324	czarne stolce
+N18	Reference T41 ICD10:K92.1	Stolce smołowate
+T42	Symptom 2326 2342	brunatne wymioty
+N19	Reference T42 ICD10:K92.0	Wymioty krwawe
+T43	Condition 2344 2360	chorobę wrzodową
+N20	Reference T43 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T44	Symptom 2362 2390	duszność nocną typu ortopnoe
+N21	Reference T44 ICD10:R06.0	Duszność
+T45	Condition 2392 2394	HA
+N22	Reference T45 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T46	Condition 2396 2398	DM
+N23	Reference T46 ICD10:E14	Cukrzyca nieokreślona
+T47	Condition 2400 2410	udar mózgu
+N24	Reference T47 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T48	Condition 2412 2423	zawał serca
+N25	Reference T48 ICD10:I25.2	Przebyty zawał serca
+R17	Neg Arg1:T37 Arg2:T38	
+R18	Neg Arg1:T37 Arg2:T39	
+R19	Neg Arg1:T37 Arg2:T40	
+R20	Neg Arg1:T37 Arg2:T41	
+R21	Neg Arg1:T37 Arg2:T42	
+R22	Neg Arg1:T37 Arg2:T43	
+R23	Neg Arg1:T37 Arg2:T44	
+R24	Neg Arg1:T37 Arg2:T45	
+R25	Neg Arg1:T37 Arg2:T46	
+R26	Neg Arg1:T37 Arg2:T47	
+R27	Neg Arg1:T37 Arg2:T48	
+T49	Treatment 2455 2491	amputacji nadpochwowej trzonu macicy
+N26	Reference T49 ICD10:Z90.7	Nabyty brak narządów płciowych
+T50	Condition 2501 2538	niezłośliwego nowotworu trzonu macicy
+N27	Reference T50 ICD10:D26.1	Trzon macicy
+T51	Date 2540 2550	22.11.2016
+R29	Dat Arg1:T51 Arg2:T49	
+T52	Treatment 2561 2566	2x cc
+N28	Reference T52 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+T53	Behaviour 2568 2583	Palenie tytoniu
+N29	Reference T53 ICD10:Z72.0	Używanie tytoniu
+T54	Negation 2585 2588	nie
+T55	Behaviour 2590 2601	Inne używki
+T56	Negation 2603 2606	nie
+T57	Condition 2608 2617	Uczulenia
+N30	Reference T57 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T58	Negation 2619 2622	nie
+R30	Neg Arg1:T54 Arg2:T53	
+R31	Neg Arg1:T56 Arg2:T55	
+R32	Neg Arg1:T58 Arg2:T57	
+T59	Condition 2651 2654	WZW
+N31	Reference T59 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T60	Condition 2661 2670	borelioza
+N32	Reference T60 ICD10:A69.2	Choroba z Lyme
+T61	Condition 2678 2681	tbc
+N33	Reference T61 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T62	Treatment 2707 2730	szczepienie na odrę (+)
+T63	Negation 2655 2658	(-)
+T64	Negation 2671 2676	( - )
+T65	Negation 2682 2685	(-)
+T66	Behaviour 2747 2773	warunki mieszkaniowe dobre
+T67	Behaviour 2775 2785	nauczyciel
+R33	Neg Arg1:T63 Arg2:T59	
+R34	Neg Arg1:T64 Arg2:T60	
+R35	Neg Arg1:T65 Arg2:T61	
+T68	Drug 2835 2845	Concor COR
+T69	Drug_dose 2846 2870	5 mg 1/2 tabl. 1xdz rano
+R36	Drg Arg1:T68 Arg2:T69	
+T70	Investigation 2933 2954	badania laboratoryjne
+T71	Investigation 2956 2966	Holter EKG
+T72	Investigation 2968 2972	ECHO
+T73	Investigation 2974 2978	ABPM
+T74	Date 1821 1849	1xna miesiąc- kilka miesięcy
+R37	Dat Arg1:T74 Arg2:T20	
+R38	Dat Arg1:T74 Arg2:T22	
+A2	Status T52 Historical_Insignificant
+N14	Reference T31 ICD10:R60.0	Obrzęk zlokalizowany
+R28	Dat Arg1:T51 Arg2:T50	
+T75	Behaviour 2788 2804	pracuje zawodowo
+A3	Status T4 Historical_Insignificant
+A4	Status T10 Historical_Insignificant
+A5	Status T50 Historical_Insignificant

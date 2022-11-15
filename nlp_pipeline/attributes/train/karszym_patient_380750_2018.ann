@@ -1,0 +1,133 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 358 439	okresowa kontrola kardiologiczna, endokrynologiczna, gastrologiczna, onkologiczna
+T3	Investigation 488 527	codzienna kontrola ciśnienia tętniczego
+T4	Investigation 528 557	okresowa kontrola lipidogramu
+T5	Date 559 576	kontrola za 6 tyg
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Behaviour 579 604	dieta niskocholesterolowa
+T7	Behaviour 606 655	regularny, umiarkowany, aerobowy wysiłek fizyczny
+T8	Drug 686 694	Nolvadex
+T9	Drug_dose 695 713	20 mg 1 tabl. rano
+T10	Drug 714 722	Bisocard
+T11	Drug_dose 723 740	5 mg 1 tabl. rano
+T12	Drug 741 753	Tertensif SR
+T13	Drug_dose 754 766	1 tabl. rano
+T14	Drug 767 775	Ramipril
+T15	Drug_dose 776 799	10 mg 1 tabl. wieczorem
+T16	Drug 800 806	Atoris
+T17	Drug_dose 807 830	20 mg 1 tabl. wieczorem
+T18	Drug 831 836	Acard
+T19	Drug_dose 837 860	75 mg 1 tabl. wieczorem
+T20	Condition 1078 1107	Przewlekła niewydolność serca
+N1	Reference T20 ICD10:I50.9	Niewydolność serca, nieokreślona
+T21	Treatment 1130 1150	leczeniu operacyjnym
+N2	Reference T21 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T22	Treatment 1152 1165	chemioterapii
+N3	Reference T22 ICD10:Z51.1	Cykl chemioterapii przeciwnowotworowej
+T23	Drug 1167 1178	trastuzumab
+T24	Treatment 1182 1194	radioterapii
+N4	Reference T24 ICD10:Z51.0	Sesja radioterapii
+T25	Condition 1204 1219	ca sutka lewego
+N5	Reference T25 ICD10:C50	Nowotwór złośliwy piersi
+T26	Date 1221 1226	2011r
+T27	Condition 1229 1250	Nadciśnienie tętnicze
+N6	Reference T27 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T28	Condition 1252 1274	Niedoczynność tarczycy
+N7	Reference T28 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T29	Condition 1288 1325	Wrzodziejące zapalenie jelita grubego
+N8	Reference T29 ICD10:K51.9	Wrzodziejące zapalenie jelita grubego, nieokreślone
+T30	Condition 1339 1374	Łagodna niedokrwistość normocytarna
+N9	Reference T30 ICD10:D64.9	Niedokrwistość, nieokreślona
+T31	Condition 1376 1408	Zmiany zwyrodnieniowe kręgosłupa
+N10	Reference T31 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+A1	Status T31 Historical_Insignificant
+T32	Treatment 1418 1431	appendektomii
+A2	Status T32 Historical_Insignificant
+N11	Reference T32 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T33	Symptom 1619 1657	wysokich wartości ciśnienia tętniczego
+T34	Date 1683 1691	od 13.02
+T35	Treatment 1694 1718	zadawalająca kontrola BP
+T36	Drug 1660 1682	nowe leki hipotensyjne
+R2	Dat Arg1:T34 Arg2:T36	
+T37	Symptom 1721 1744	duszności spoczynkowych
+N12	Reference T37 ICD10:R06.0	Duszność
+T38	Symptom 1746 1781	2 incydentów bólów w kl. piersiowej
+N13	Reference T38 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T39	Date 1782 1810	w ciągu ostatnich 2 miesięcy
+T40	Treatment 1820 1841	operacji piersi lewej
+N14	Reference T40 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T41	Condition 1851 1887	ca z przerzutami do węzłów chłonnych
+N15	Reference T41 ICD10:C50	Nowotwór złośliwy piersi
+T42	Date 1889 1894	2011r
+T43	Treatment 1900 1912	radioterapii
+N16	Reference T43 ICD10:Z51.0	Sesja radioterapii
+T44	Treatment 1914 1940	chemioterapii adjuwantowej
+N17	Reference T44 ICD10:Z51.1	Cykl chemioterapii przeciwnowotworowej
+T45	Drug 1942 1953	herceptynie
+T46	Date 1954 1959	1 rok
+T47	Condition 1982 2004	niedoczynność tarczycy
+N18	Reference T47 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T48	Condition 2006 2043	wrzodziejące zapalenie jelita grubego
+N19	Reference T48 ICD10:K51.9	Wrzodziejące zapalenie jelita grubego, nieokreślone
+T49	Condition 2045 2077	zmiany zwyrodnieniowe kręgosłupa
+A3	Status T49 Historical_Insignificant
+N20	Reference T49 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T50	Treatment 2106 2119	appendectomii
+A4	Status T50 Historical_Insignificant
+N21	Reference T50 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T51	Date 2121 2126	2009r
+R3	Drg Arg1:T8 Arg2:T9	
+R4	Drg Arg1:T10 Arg2:T11	
+R5	Drg Arg1:T12 Arg2:T13	
+R6	Drg Arg1:T14 Arg2:T15	
+R7	Drg Arg1:T16 Arg2:T17	
+R8	Drg Arg1:T18 Arg2:T19	
+R9	Dat Arg1:T26 Arg2:T25	
+R10	Dat Arg1:T26 Arg2:T21	
+R11	Dat Arg1:T26 Arg2:T22	
+R12	Dat Arg1:T26 Arg2:T23	
+R13	Dat Arg1:T26 Arg2:T24	
+R14	Dat Arg1:T34 Arg2:T35	
+R15	Dat Arg1:T39 Arg2:T38	
+R16	Dat Arg1:T42 Arg2:T40	
+R17	Dat Arg1:T42 Arg2:T41	
+R18	Dat Arg1:T42 Arg2:T43	
+R19	Dat Arg1:T42 Arg2:T44	
+R20	Dat Arg1:T42 Arg2:T45	
+R21	Dat Arg1:T46 Arg2:T45	
+R22	Dat Arg1:T46 Arg2:T44	
+R23	Dat Arg1:T51 Arg2:T50	
+T52	Condition 2128 2147	Ostatnia miesiączka
+T53	Date 2148 2153	50 rż
+T54	Treatment 2154 2192	Leczenie przewlekłe: endokrynologiczna
+T55	Condition 2222 2225	WZW
+N22	Reference T55 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T56	Condition 2227 2236	borelioza
+N23	Reference T56 ICD10:A69.2	Choroba z Lyme
+T57	Condition 2237 2252	Wywiad rodzinny
+A5	Status T57 Family
+T58	Negation 2254 2264	nieistotny
+T59	Behaviour 2265 2280	Palenie tytoniu
+N24	Reference T59 ICD10:Z72.0	Używanie tytoniu
+T60	Negation 2282 2292	nie podaje
+T61	Behaviour 2293 2304	Inne używki
+T62	Negation 2306 2316	nie podaje
+T63	Condition 2317 2326	Uczulenia
+N25	Reference T63 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T64	Negation 2328 2338	nie podaje
+T65	Behaviour 2367 2375	2 dzieci
+T66	Behaviour 2357 2365	rozwódka
+T67	Investigation 2409 2419	echo serca
+T68	Investigation 2421 2441	echo przezprzełykowe
+T69	Investigation 2443 2460	echo obciążeniowe
+T70	Investigation 2462 2465	TET
+T71	Investigation 2467 2471	ABPM
+T72	Investigation 2473 2479	Holter
+T73	Investigation 2481 2499	RTG kl. piersiowej
+R24	Dat Arg1:T53 Arg2:T52	
+R25	Neg Arg1:T58 Arg2:T57	
+R26	Neg Arg1:T60 Arg2:T59	
+R27	Neg Arg1:T62 Arg2:T61	
+R28	Neg Arg1:T64 Arg2:T63	
+T74	Symptom 1108 1121	II kl wg NYHA
+N26	Reference T74 ICD10:I50	Niewydolność serca

@@ -1,0 +1,151 @@
+T1	Condition 438 459	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 461 481	Hipertriglicerydemia
+N2	Reference T2 ICD10:E78.1	Czysta hiperglicerydemia
+T3	Condition 483 503	Hipercholesterolemia
+N3	Reference T3 ICD10:E78.0	Czysta hipercholesterolemia
+T4	Condition 505 516	Hepatopatia
+T5	Condition 518 531	Dna moczanowa
+N4	Reference T5 ICD10:M10.9	Dna, nieokreślona
+T6	Condition 533 548	Alergia wziewna
+N5	Reference T6 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T7	Condition 550 565	Cukrzyca typu 2
+N6	Reference T7 ICD10:E11	Cukrzyca insulinoniezależna
+T8	Drug 567 579	leki doustne
+T9	Condition 604 621	choroby wieńcowej
+N7	Reference T9 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T10	Negation 622 631	negatywna
+R1	Neg Arg1:T10 Arg2:T9	
+T11	Treatment 752 810	dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T12	Treatment 833 873	Dalsza opieka w Poradni Diabetologicznej
+T13	Treatment 876 914	Dalsza opieka w Poradni Chorób Wątroby
+T14	Behaviour 937 975	Dieta lekkostrawna, niskocholesterolow
+T15	Condition 1117 1157	niekontrolowanym nadciśnieniem tętniczym
+N8	Reference T15 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T16	Symptom 1159 1199	w pomiarach domowych 130-180/80-110 mmHg
+T17	Symptom 1206 1263	wysokimi wartościami tętna (w pomiarach domowych >110/min
+N9	Reference T17 ICD10:R00.0	Tachykardia, nieokreślona
+T18	Condition 1363 1383	Hipertriglicerydemia
+N10	Reference T18 ICD10:E78.1	Czysta hiperglicerydemia
+T19	Investigation_result 1388 1398	1043 mg/dl
+T20	Date 1402 1409	09/2018
+T21	Investigation_result 1411 1420	340 mg/dl
+T22	Date 1423 1430	04/2019
+R2	Dat Arg1:T20 Arg2:T81	
+R3	Dat Arg1:T22 Arg2:T21	
+T23	Condition 1433 1453	Hipercholesterolemia
+N11	Reference T23 ICD10:E78.0	Czysta hipercholesterolemia
+T24	Condition 1455 1466	Hepatopatia
+T25	Investigation 1468 1472	GGTP
+T26	Condition 1483 1496	Dna moczanowa
+N12	Reference T26 ICD10:M10.9	Dna, nieokreślona
+T27	Negation 1761 1767	neguje
+T28	Behaviour 1744 1759	Palenie tytoniu
+N13	Reference T28 ICD10:Z72.0	Używanie tytoniu
+R4	Neg Arg1:T27 Arg2:T28	
+T29	Drug 2007 2016	Heparegen
+T30	Drug_dose 2017 2022	1-0-1
+T31	Drug 2045 2052	Atacand
+T32	Drug_dose 2053 2064	16 mg 1-0-0
+T33	Condition 1498 1513	Alergia wziewna
+N14	Reference T33 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T34	Condition 1515 1530	Cukrzyca typu 2
+N15	Reference T34 ICD10:E14	Cukrzyca nieokreślona
+T35	Drug 1532 1544	leki doustne
+T36	Negation 1547 1553	Neguje
+T37	Symptom 1555 1567	zasłabnięcia
+T38	Symptom 1569 1577	omdlenia
+N16	Reference T38 ICD10:R55	Omdlenie i zapaść
+T39	Symptom 1579 1589	krwawienia
+T40	Symptom 1591 1604	czarne stolce
+N17	Reference T40 ICD10:K92.1	Stolce smołowate
+T41	Symptom 1606 1622	brunatne wymioty
+N18	Reference T41 ICD10:K92.0	Wymioty krwawe
+T42	Condition 1624 1640	chorobę wrzodową
+N19	Reference T42 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T43	Symptom 1642 1656	duszność nocną
+N20	Reference T43 ICD10:R06.0	Duszność
+T44	Symptom 1658 1673	obrzęki podudzi
+N21	Reference T44 ICD10:R60.0	Obrzęk zlokalizowany
+T45	Symptom 1675 1699	bóle w klatce piersiowej
+N22	Reference T45 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T46	Symptom 1701 1716	kołatania serca
+N23	Reference T46 ICD10:R00.2	Kołatanie serca
+T47	Treatment 1719 1736	Przebyte operacje
+N24	Reference T47 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T48	Negation 1737 1743	neguje
+R5	Neg Arg1:T48 Arg2:T47	
+R6	Neg Arg1:T36 Arg2:T37	
+R7	Neg Arg1:T36 Arg2:T38	
+R8	Neg Arg1:T36 Arg2:T39	
+R9	Neg Arg1:T36 Arg2:T40	
+R10	Neg Arg1:T36 Arg2:T41	
+R11	Neg Arg1:T36 Arg2:T42	
+R12	Neg Arg1:T36 Arg2:T43	
+R13	Neg Arg1:T36 Arg2:T44	
+R14	Neg Arg1:T36 Arg2:T45	
+R15	Neg Arg1:T36 Arg2:T46	
+T49	Behaviour 1768 1779	Inne używki
+T50	Negation 1781 1787	neguje
+R16	Neg Arg1:T50 Arg2:T49	
+T51	Condition 1799 1814	alergia wziewna
+N25	Reference T51 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T52	Condition 1816 1833	uczulenia na leki
+N26	Reference T52 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T53	Negation 1834 1840	neguje
+R17	Neg Arg1:T53 Arg2:T52	
+T54	Condition 1868 1871	WZW
+N27	Reference T54 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T55	Condition 1878 1887	borelioza
+N28	Reference T55 ICD10:A69.2	Choroba z Lyme
+T56	Condition 1893 1896	tbc
+N29	Reference T56 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T57	Condition 1902 1906	odra
+N30	Reference T57 ICD10:B05	Odra
+T58	Condition 1912 1926	kontakt z odrą
+N31	Reference T58 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+T59	Negation 1872 1875	(-)
+T60	Negation 1888 1891	(-)
+T61	Negation 1897 1900	(-)
+T62	Negation 1907 1910	(-)
+T63	Negation 1927 1930	(-)
+T64	Behaviour 1947 1973	warunki mieszkaniowe dobre
+T65	Drug 2024 2031	Nolpaza
+T66	Drug_dose 2032 2043	20 mg 1-0-0
+T67	Drug 2066 2079	Glucophage XR
+T68	Drug_dose 2080 2092	500 mg 1-0-0
+T69	Drug 2094 2102	Primacor
+T70	Drug_dose 2103 2114	10 mg 0-0-1
+T71	Drug 2116 2130	Lipantyl Supra
+T72	Drug_dose 2131 2143	215 mg 0-0-1
+T73	Drug 2145 2152	Milurit
+T74	Drug_dose 2153 2167	300 mg 0-0-1/2
+T75	Drug 2169 2175	Zyrtec
+T76	Drug_dose 2176 2181	0-0-1
+T77	Investigation 2243 2264	badania laboratoryjne
+T78	Investigation 2266 2270	ECHO
+T79	Investigation 2272 2290	EKG metodą Holtera
+T80	Investigation 2292 2296	ABPM
+R18	Drg Arg1:T29 Arg2:T30	
+R19	Drg Arg1:T65 Arg2:T66	
+R20	Drg Arg1:T31 Arg2:T32	
+R21	Drg Arg1:T67 Arg2:T68	
+R22	Drg Arg1:T69 Arg2:T70	
+R23	Drg Arg1:T71 Arg2:T72	
+R24	Drg Arg1:T73 Arg2:T74	
+R25	Drg Arg1:T75 Arg2:T76	
+R26	Neg Arg1:T59 Arg2:T54	
+R27	Neg Arg1:T60 Arg2:T55	
+R28	Neg Arg1:T62 Arg2:T57	
+R29	Neg Arg1:T63 Arg2:T58	
+R30	Neg Arg1:T61 Arg2:T56	
+N32	Reference T25 ICD10:R74.8	Nieprawidłowa aktywność innych enzymów w surowicy krwi
+T81	Investigation 1385 1387	TG
+R31	Inv Arg1:T81 Arg2:T19	
+R32	Inv Arg1:T81 Arg2:T21	
+R33	Dat Arg1:T22 Arg2:T81	
+R34	Dat Arg1:T20 Arg2:T19	
+T82	Investigation_result 1473 1480	631 U/l
+R35	Inv Arg1:T25 Arg2:T82	
+A1	Source T9 Declared
+T83	Investigation 582 592	Obserwacja

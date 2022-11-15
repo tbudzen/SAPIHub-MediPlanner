@@ -1,0 +1,643 @@
+allRelations          : 43
+oks                   : 11
+isRedundantAndRemoveds: 25
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 6
+GOOD / BAD            : 36 / 7
+Sentence 0:
+------------------------------------------------
+Wiek: 21 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+1. Przyjmowanie leków: Acesan 1x 150mg, Enarenal 1x 2,5 mg,  Essentiale forte 1x 1 tabl, Vit.
+R1	Drg Arg1:T2 Arg2:T3 << OK >>	Acesan -> 1x 150mg  <RANK: 3> <info: start[353, 360] <type: RIGHT>>
+R2	Drg Arg1:T2 Arg2:T5 <<REDUNDANT!!!REMOVED>>	Acesan -> 1x 2,5 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[353, 379] <type: RIGHT>>
+R3	Drg Arg1:T2 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Acesan -> 1x 1 tabl <:REMOVED other first tag between (right):> <RANK: 2> <info: start[353, 408] <type: RIGHT>>
+R4	Drg Arg1:T4 Arg2:T3 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1x 150mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[370, 360] <type: LEFT>>
+R5	Drg Arg1:T4 Arg2:T5 << OK >>	Enarenal -> 1x 2,5 mg  <RANK: 3> <info: start[370, 379] <type: RIGHT>>
+R6	Drg Arg1:T4 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1x 1 tabl <:REMOVED other first tag between (right):> <RANK: 2> <info: start[370, 408] <type: RIGHT>>
+R7	Drg Arg1:T6 Arg2:T3 <<REDUNDANT!!!REMOVED>>	Essentiale forte -> 1x 150mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[391, 360] <type: LEFT>>
+R8	Drg Arg1:T6 Arg2:T5 <<REDUNDANT!!!REMOVED>>	Essentiale forte -> 1x 2,5 mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[391, 379] <type: LEFT>>
+R9	Drg Arg1:T6 Arg2:T7 << OK >>	Essentiale forte -> 1x 1 tabl  <RANK: 3> <info: start[391, 408] <type: RIGHT>>
+R10	Drg Arg1:T8 Arg2:T3 <<REDUNDANT!!!REMOVED>>	Vit. D3 -> 1x 150mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[419, 360] <type: LEFT>>
+R11	Drg Arg1:T8 Arg2:T5 <<REDUNDANT!!!REMOVED>>	Vit. D3 -> 1x 2,5 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[419, 379] <type: LEFT>>
+R12	Drg Arg1:T8 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Vit. D3 -> 1x 1 tabl <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[419, 408] <type: LEFT>>
+
+
+Sentence 5:
+D3 2000j 1x 1 tabl
+2. SYSTEMATYCZNA OPIEKA KARDIOLOGICZNA - kontrola w Poradni Kardiologicznej ICZMP za 6 m-cy
+
+R13	Dat Arg1:T11 Arg2:T10 << OK >>	za 6 m-cy -> SYSTEMATYCZNA OPIEKA KARDIOLOGICZNA - kontrola w Poradni Kardiologicznej ICZMP  <RANK: 3> <info: start[525, 446] <type: LEFT>>
+
+
+Sentence 6:
+3. Opieka Poradni Neurologicznej
+
+
+
+Sentence 7:
+4. Opieka Poradni Psychologicznej
+
+
+
+Sentence 8:
+5. Opieka Poradni Hepatologicznej - w tym wskazane wykonanie elastografii. 
+
+
+
+Sentence 9:
+6. Rehabilitacja
+7. Kontrola TSH, FT3, FT4 za 2 m-ce. 
+
+R14	Dat Arg1:T18 Arg2:T16 <<REDUNDANT!!!REMOVED>>	za 2 m-ce -> Rehabilitacja <:REMOVED other second tag between (left):> <RANK: 0> <info: start[721, 681] <type: LEFT>>
+R15	Dat Arg1:T18 Arg2:T17 << OK >>	za 2 m-ce -> Kontrola TSH, FT3, FT4  <RANK: 3> <info: start[721, 698] <type: LEFT>>
+
+
+Sentence 10:
+8.  Systematyczna kontrola ciśnienia tętniczego.
+
+
+
+Sentence 11:
+------------------------------------------------
+
+
+
+Sentence 12:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 13:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią zespołu niedorozwoju lewego serca (HLHS)\x0aStan po operacji met.
+
+
+Sentence 14:
+Norwooda (03.01.1999)\x0aStan po dwukierunkowym zespoleniu met. Glenna (18.09.1999)\x0aStan po operacji met.
+R16	Dat Arg1:T22 Arg2:T23 <<REDUNDANT!!!SHOULD BE REMOVED>>	03.01.1999 -> dwukierunkowym zespoleniu met. Glenna  <RANK: 3> <info: start[1108, 1131] <type: RIGHT>>
+R17	Dat Arg1:T22 Arg2:T25 <<REDUNDANT!!!REMOVED>>	03.01.1999 -> operacji met. Fontana - tunel zewnątrzprzedsionkowy z fenestracją <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1108, 1193] <type: RIGHT>>
+R18	Dat Arg1:T24 Arg2:T23 <<SHOULD NOT BE REMOVED>>	18.09.1999 -> dwukierunkowym zespoleniu met. Glenna <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1170, 1131] <type: LEFT>>
+R19	Dat Arg1:T24 Arg2:T25 <<REDUNDANT!!!SHOULD BE REMOVED>>	18.09.1999 -> operacji met. Fontana - tunel zewnątrzprzedsionkowy z fenestracją  <RANK: 3> <info: start[1170, 1193] <type: RIGHT>>
+
+
+Sentence 15:
+Fontana - tunel zewnątrzprzedsionkowy z fenestracją (12.06.2002)\x0aStan po operacji niedrożności dwunastnicy (21.01.1999)\x0aStan po zamknięciu fenestracji zestawem ASO (22.07.2004)\x0aRefleksoryczny niedowład lewostronny.\x0a\x0a
+------------------------------------------------
+
+R20	Dat Arg1:T26 Arg2:T31 <<REDUNDANT!!!REMOVED>>	12.06.2002 -> Refleksoryczny niedowład lewostronny <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1260, 1393] <type: RIGHT>>
+R21	Dat Arg1:T26 Arg2:T40 <<REDUNDANT!!!SHOULD BE REMOVED>>	12.06.2002 -> niedrożności dwunastnicy  <RANK: 3> <info: start[1260, 1292] <type: RIGHT>>
+R22	Dat Arg1:T26 Arg2:T27 <<REDUNDANT!!!SHOULD BE REMOVED>>	12.06.2002 -> operacji  <RANK: 3> <info: start[1260, 1283] <type: RIGHT>>
+R23	Dat Arg1:T26 Arg2:T29 <<REDUNDANT!!!REMOVED>>	12.06.2002 -> zamknięciu fenestracji zestawem ASO <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1260, 1341] <type: RIGHT>>
+R24	Dat Arg1:T28 Arg2:T31 <<REDUNDANT!!!REMOVED>>	21.01.1999 -> Refleksoryczny niedowład lewostronny <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1318, 1393] <type: RIGHT>>
+R25	Dat Arg1:T28 Arg2:T40 << OK >>	21.01.1999 -> niedrożności dwunastnicy  <RANK: 3> <info: start[1318, 1292] <type: LEFT>>
+R26	Dat Arg1:T28 Arg2:T27 << OK >>	21.01.1999 -> operacji  <RANK: 3> <info: start[1318, 1283] <type: LEFT>>
+R27	Dat Arg1:T28 Arg2:T29 <<REDUNDANT!!!SHOULD BE REMOVED>>	21.01.1999 -> zamknięciu fenestracji zestawem ASO  <RANK: 3> <info: start[1318, 1341] <type: RIGHT>>
+R28	Dat Arg1:T30 Arg2:T31 <<REDUNDANT!!!SHOULD BE REMOVED>>	22.07.2004 -> Refleksoryczny niedowład lewostronny  <RANK: 3> <info: start[1378, 1393] <type: RIGHT>>
+R29	Dat Arg1:T30 Arg2:T40 <<REDUNDANT!!!REMOVED>>	22.07.2004 -> niedrożności dwunastnicy <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1378, 1292] <type: LEFT>>
+R30	Dat Arg1:T30 Arg2:T27 <<REDUNDANT!!!REMOVED>>	22.07.2004 -> operacji <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1378, 1283] <type: LEFT>>
+R31	Dat Arg1:T30 Arg2:T29 << OK >>	22.07.2004 -> zamknięciu fenestracji zestawem ASO  <RANK: 3> <info: start[1378, 1341] <type: LEFT>>
+
+
+Sentence 16:
+Zastosowane leczenie
+
+
+
+Sentence 17:
+------------------------------------------------
+
+
+
+Sentence 18:
+Acesan 1x 150mg, Enarenal 1x 2,5 mg,  Essentiale forte 1x 1 tabl, Vit.
+R32	Drg Arg1:T32 Arg2:T33 << OK >>	Acesan -> 1x 150mg  <RANK: 3> <info: start[1558, 1565] <type: RIGHT>>
+R33	Drg Arg1:T32 Arg2:T35 <<REDUNDANT!!!REMOVED>>	Acesan -> 1x 2,5 mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1558, 1584] <type: RIGHT>>
+R34	Drg Arg1:T32 Arg2:T37 <<REDUNDANT!!!REMOVED>>	Acesan -> 1x 1 tabl <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1558, 1613] <type: RIGHT>>
+R35	Drg Arg1:T34 Arg2:T33 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1x 150mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1575, 1565] <type: LEFT>>
+R36	Drg Arg1:T34 Arg2:T35 << OK >>	Enarenal -> 1x 2,5 mg  <RANK: 3> <info: start[1575, 1584] <type: RIGHT>>
+R37	Drg Arg1:T34 Arg2:T37 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1x 1 tabl <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1575, 1613] <type: RIGHT>>
+R38	Drg Arg1:T36 Arg2:T33 <<REDUNDANT!!!REMOVED>>	Essentiale forte -> 1x 150mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1596, 1565] <type: LEFT>>
+R39	Drg Arg1:T36 Arg2:T35 <<REDUNDANT!!!REMOVED>>	Essentiale forte -> 1x 2,5 mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1596, 1584] <type: LEFT>>
+R40	Drg Arg1:T36 Arg2:T37 << OK >>	Essentiale forte -> 1x 1 tabl  <RANK: 3> <info: start[1596, 1613] <type: RIGHT>>
+R41	Drg Arg1:T38 Arg2:T33 <<REDUNDANT!!!REMOVED>>	Vit. D3 -> 1x 150mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1624, 1565] <type: LEFT>>
+R42	Drg Arg1:T38 Arg2:T35 <<REDUNDANT!!!REMOVED>>	Vit. D3 -> 1x 2,5 mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1624, 1584] <type: LEFT>>
+R43	Drg Arg1:T38 Arg2:T37 <<REDUNDANT!!!REMOVED>>	Vit. D3 -> 1x 1 tabl <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1624, 1613] <type: LEFT>>
+
+
+Sentence 19:
+D3 2000j 1x 1 tabl
+------------------------------------------------
+
+
+
+Sentence 20:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 21:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.27[10^3/ul]
+    
+
+
+Sentence 22:
+RBC Krwinki czerwone:5.27[10^6/ul]
+    
+
+
+Sentence 23:
+HGB Hemoglobina:14.8[g/dl]
+    
+
+
+Sentence 24:
+HCT Hematokryt:43.4[%]
+    
+
+
+Sentence 25:
+MCV wskaźnik czerwonokrw:82.4[fl]
+    
+
+
+Sentence 26:
+MCH wskaźnik czerwonokrw:28.1[pg]
+    
+
+
+Sentence 27:
+MCHC wskaźnik czerwonokr:34.1[g/dl]
+    
+
+
+Sentence 28:
+PLT z morfologii:164[10^3/ul]
+    
+
+
+Sentence 29:
+RDW-SD:43.4[fl]
+    RDW-CV:14.6[%]
+    
+
+
+Sentence 30:
+PDW:18.6[fl]
+    MPV:13.0[fl]
+    P-LCR:48.0[%]
+    
+
+
+Sentence 31:
+PCT (hematokryt płytkowy:0.21[%]
+    
+
+
+Sentence 32:
+NEUTR# wartość bezwzględ:2.74[10^3/ul]
+    
+
+
+Sentence 33:
+NEUTR%:51.9[%]
+    
+
+
+Sentence 34:
+LYMH# wartość bezwzględn:1.41[10^3/ul]
+    
+
+
+Sentence 35:
+LYMPH%:26.8[%]
+    
+
+
+Sentence 36:
+MONO# wartość bezwzględn:0.82[10^3/ul]
+    
+
+
+Sentence 37:
+MONO%:15.6[%]
+    
+
+
+Sentence 38:
+EO# wartość bezwzględna:0.26[10^3/ul]
+    
+
+
+Sentence 39:
+EO%:4.9[%]
+    
+
+
+Sentence 40:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    
+
+
+Sentence 41:
+BASO%:0.8[%]
+    
+
+
+Sentence 42:
+NRBC %:0.0[%]
+    
+
+
+Sentence 43:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 44:
+Hemoglobina wolna: Hemoglobina wolna:27.0[mg/dl]
+
+
+
+Sentence 45:
+Antytrombina III: Antytrombina III:129[%]
+
+
+
+Sentence 46:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:31.9[sek]
+
+
+
+Sentence 47:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 48:
+Czas protrombinowy:12.6[sek]
+    
+
+
+Sentence 49:
+Wskaźnik PT:87.3[%]
+    
+
+
+Sentence 50:
+INR:1.14
+Fibrynogen: Fibrynogen:2.46[g/L]
+
+
+
+Sentence 51:
+D-dimer - test ilościowy: D-dimer - test ilościowy:212[ng/ml]
+
+
+
+Sentence 52:
+Płytki krwi z koagulologii: Płytki krwi:160[10^3/ul]
+
+
+
+Sentence 53:
+Płytki krwi z THEX: Płytki krwi:154[10^3/ul]
+
+
+
+Sentence 54:
+Badanie ogólne moczu
+    
+
+
+Sentence 55:
+barwa:żółty[ ]
+    
+
+
+Sentence 56:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 57:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 58:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 59:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 60:
+ciężar właściwy:1.020[ ]
+    
+
+
+Sentence 61:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 62:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 63:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 64:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 65:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 66:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 67:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 68:
+nabłonki płaskie:bardzo liczne[w preparacie]
+    
+
+
+Sentence 69:
+leukocyty:6 /ul[ul]
+    erytrocyty świeże:5 /ul[ul]
+    śluz:nieliczny[w preparacie]
+    bakterie:nieliczne[w preparacie]
+    kryształy szczawianu wap:pojedyncze[w preparacie]
+
+
+
+Sentence 70:
+TSH: TSH:5.23[uIU/ml]
+
+
+
+Sentence 71:
+FT3: FT3:3.07[pg/ml]
+
+
+
+Sentence 72:
+FT4: FT4:1.21[ng/dl]
+
+
+
+Sentence 73:
+Witamina D 25-OH: Witamina D 25-OH:25.8[ng/ml]
+
+
+
+Sentence 74:
+AFP: AFP:4.71[IU/ml]
+
+
+
+Sentence 75:
+ALAT: ALAT:25[U/L]
+
+
+
+Sentence 76:
+Albumina: Albumina:4.8[g/dl]
+
+
+
+Sentence 77:
+ASPAT: ASPAT:30[U/L]
+
+
+
+Sentence 78:
+Białko całkowite w surowicy (TP): Białko całkowite w surow:7.6[g/dl]
+
+
+
+Sentence 79:
+Bilirubina całkowita (TBil): Bilirubina całkowita:0.90[mg/dl]
+
+
+
+Sentence 80:
+Cholesterol HDL: Cholesterol HDL:52[mg/dl]
+
+
+
+Sentence 81:
+Cholestrol LDL (direct): Cholestrol LDL:98[mg/dl]
+
+
+
+Sentence 82:
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 83:
+Sód (Na): Sód:146[mmol/L]
+
+
+
+Sentence 84:
+Potas (K): Potas:4.1[mmol/L]
+
+
+
+Sentence 85:
+Chlorki (Cl): Chlorki:110[mmol/L]
+
+
+
+Sentence 86:
+Fosfataza alkaliczna (ALP): Fosfataza alkaliczna:89[U/L]
+
+
+
+Sentence 87:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:57[U/L]
+Kreatynina + GFR
+    
+
+
+Sentence 88:
+Kreatynina w surowicy:0.85[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 89:
+MDRD ze stan:85.3[ml/min/1,73 m^2]
+    wzrost:168[cm]
+
+
+
+Sentence 90:
+Mleczany (LAC): Mleczany:22.6[mg/dl]
+
+
+
+Sentence 91:
+Mleczany (LAC): Mleczany:87.3[mg/dl]
+
+
+
+Sentence 92:
+LDH Dehydrogenaza mleczanowa: LDH Dehydrogenaza mlecza:187[U/L]
+
+
+
+Sentence 93:
+Magnez: Magnez:0.87[mmol/L]
+
+
+
+Sentence 94:
+Mocznik: Mocznik:23[mg/dl]
+
+
+
+Sentence 95:
+Wapń całkowity: Wapń całkowity:2.46[mmol/L]
+
+
+
+Sentence 96:
+Żelazo (Fe): Żelazo (Fe):54[ug/dl]
+
+
+
+Sentence 97:
+Glukoza w surowicy: Glukoza w surowicy:75[mg/dl]
+
+
+
+Sentence 98:
+AAT w kale: AAT w kale:ALAB
+NT-proBNP surowica: NT-proBNP w surowicy:68[pg/ml]
+
+
+
+Sentence 99:
+------------------------------------------------
+
+
+
+Sentence 100:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 101:
+Q23.4
+Z98.8
+
+
+
+Sentence 102:
+Z95.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 103:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 104:
+I81
+L43
+I89
+G03
+K01
+M87
+L69
+N45
+K03
+L07
+O69
+I09
+C55
+O91
+I97
+K33
+L31
+
+
+
+Sentence 105:
+L11
+
+
+
+Sentence 106:
+O55
+I17
+O77
+L57
+
+
+
+Sentence 107:
+N11
+I19
+O35
+M37
+
+
+
+Sentence 108:
+N13
+------------------------------------------------
+
+

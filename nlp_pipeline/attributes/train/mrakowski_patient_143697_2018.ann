@@ -1,0 +1,132 @@
+T1	Condition 450 480	Pojedyncze pobudzenia komorowe
+N1	Reference T1 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T2	Condition 486 497	nadkomorowe
+N2	Reference T2 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T3	Condition 522 550	choroby niedokrwiennej serca
+N3	Reference T3 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T4	Negation 551 560	negatywna
+R1	Neg Arg1:T4 Arg2:T3	
+T5	Condition 563 583	Hipercholesterolemia
+N4	Reference T5 ICD10:E78.0	Czysta hipercholesterolemia
+T6	Condition 598 620	Niedoczynność tarczycy
+N5	Reference T6 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T7	Treatment 632 644	strumektomii
+A1	Status T7 Historical_Insignificant
+T8	Date 645 649	2005
+R2	Dat Arg1:T8 Arg2:T7	
+T9	Treatment 661 669	operacji
+A2	Status T9 Historical_Insignificant
+T10	Condition 670 700	guzka łagodnego  piersi prawej
+N6	Reference T10 ICD10:D24	Nowotwór niezłośliwy piersi
+A3	Status T10 Historical_Insignificant
+T11	Date 701 705	2003
+R3	Dat Arg1:T11 Arg2:T10	
+R4	Dat Arg1:T11 Arg2:T9	
+T12	Behaviour 707 717	Nikotynizm
+T13	Treatment 828 913	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej , Endokrynologiczna
+T14	Behaviour 917 957	Dieta lekkostrawna , niskocholesterolowa
+T15	Investigation 961 1044	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T16	Investigation 1047 1095	Systematyczna kontrola ciśnienia tętniczego krwi
+T17	Treatment 1098 1139	Wskazane systematyczne przyjmowanie leków
+T18	Drug 1146 1156	Euthyrox N
+T19	Drug 1182 1189	Roswera
+T20	Drug 1216 1224	Betaserc
+T21	Drug_dose 1157 1180	100 1x dz rano na czczo
+R5	Drg Arg1:T18 Arg2:T21	
+T22	Drug_dose 1190 1212	10 mg 1 x dz wieczorem
+R6	Drg Arg1:T19 Arg2:T22	
+T23	Drug_dose 1225 1236	24 mg 1-1-0
+R7	Drg Arg1:T20 Arg2:T23	
+T24	Drug 1582 1590	Euthyrox
+T25	Drug 1593 1600	Roswera
+T26	Drug 1603 1611	Betaserc
+T27	Symptom 1783 1813	pogorszenia tolerancji wysiłku
+N8	Reference T27 ICD10:R53	Złe samopoczucie i zmęczenie
+T28	Symptom 1816 1836	duszności wysiłkowej
+N9	Reference T28 ICD10:R06.0	Duszność
+T29	Symptom 1839 1863	obrzęków kończyn dolnych
+T30	Symptom 1866 1897	obrzęku w okolicy dłoni po nocy
+T31	Date 1923 1934	od miesiąca
+R8	Dat Arg1:T31 Arg2:T27	
+R9	Dat Arg1:T31 Arg2:T28	
+R10	Dat Arg1:T31 Arg2:T29	
+R11	Dat Arg1:T31 Arg2:T30	
+T32	Symptom 1954 1967	zawroty głowy
+N12	Reference T32 ICD10:R42	Zawroty głowy i odurzenie
+T33	Symptom 1979 2038	bóle w klatce piersiowej o charakterze punktowym po stresie
+N13	Reference T33 ICD10:R07.3	Inne bóle w klatce piersiowej
+T34	Symptom 2042 2076	Kołatania serca przy zdenerwowaniu
+N14	Reference T34 ICD10:R00.2	Kołatanie serca
+T35	Date 2079 2100	Około 6 miesięcy temu
+T36	Symptom 2101 2113	zasłabnięcie
+R12	Dat Arg1:T35 Arg2:T36	
+T37	Condition 2131 2153	Niedoczynność tarczycy
+N15	Reference T37 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T38	Treatment 2165 2177	strumektomii
+A4	Status T38 Historical_Insignificant
+T39	Date 2178 2182	2005
+R13	Dat Arg1:T39 Arg2:T38	
+T40	Treatment 2193 2201	operacji
+A5	Status T40 Historical_Insignificant
+T41	Condition 2202 2232	guzka łagodnego  piersi prawej
+A6	Status T41 Historical_Insignificant
+N16	Reference T41 ICD10:D24	Nowotwór niezłośliwy piersi
+T42	Date 2233 2237	2003
+R14	Dat Arg1:T42 Arg2:T41	
+R15	Dat Arg1:T42 Arg2:T40	
+T43	Treatment 2240 2257	Przebyte operacje
+T44	Treatment 2268 2280	apendektomii
+A7	Status T44 Historical_Insignificant
+T45	Date 2281 2285	1978
+R16	Dat Arg1:T45 Arg2:T44	
+T46	Treatment 2286 2305	Leczenie przewlekłe
+T47	Treatment 2307 2325	endokrynologicznej
+T48	Condition 2354 2357	WZW
+N17	Reference T48 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T49	Condition 2367 2376	borelioza
+N18	Reference T49 ICD10:A69.2	Choroba z Lyme
+T50	Negation 2379 2380	-
+R17	Neg Arg1:T50 Arg2:T49	
+T51	Negation 2360 2361	-
+R18	Neg Arg1:T51 Arg2:T48	
+T52	Condition 2385 2404	wywiadzie rodzinnym
+A8	Status T52 Family
+T53	Condition 2416 2427	ca pęcherza
+N19	Reference T53 ICD10:C67	Nowotwór złośliwy pęcherza moczowego
+A9	Status T53 Family
+T54	Condition 2430 2437	ca płuc
+A10	Status T54 Family
+N20	Reference T54 ICD10:C78.0	Wtórny nowotwór złośliwy płuc
+T55	Condition 2440 2451	ca trzustki
+A11	Status T55 Family
+N21	Reference T55 ICD10:C25	Nowotwór złośliwy trzustki
+T56	Condition 2462 2480	choroba Alzhaimera
+A12	Status T56 Family
+N22	Reference T56 ICD10:G30.9	Choroba Alzheimera, nieokreślona
+T57	Behaviour 2482 2516	Palenie tytoniu: 10 sztuk dziennie
+T58	Behaviour 2520 2531	Inne używki
+T59	Negation 2533 2536	nie
+R19	Neg Arg1:T59 Arg2:T58	
+T60	Condition 2537 2546	Uczulenia
+N24	Reference T60 ICD10:T78.4	Alergia, nieokreślona
+T61	Negation 2548 2554	neguje
+R20	Neg Arg1:T61 Arg2:T60	
+T62	Behaviour 2571 2597	warunki mieszkaniowe dobre
+T63	Drug 2623 2636	Euthyrox N100
+T64	Drug_dose 2637 2648	1 x dz rano
+R21	Drg Arg1:T63 Arg2:T64	
+T65	Drug 2651 2658	Roswera
+T66	Drug_dose 2659 2681	10 mg 1 x dz wieczorem
+R22	Drg Arg1:T65 Arg2:T66	
+T67	Investigation 2697 2707	Echo serca
+T68	Investigation 2710 2720	Holter EKG
+T69	Investigation 2723 2738	Próba Wysiłkowa
+T70	Investigation 2741 2764	Doppler tętnic szyjnych
+T71	Investigation 2767 2794	Doppler żył kończyn dolnych
+N7	Reference T12 ICD10:Z72.0	Używanie tytoniu
+T72	Investigation 500 521	Obserwacja w kierunku
+N25	Reference T36 ICD10:R55	Omdlenie i zapaść
+N23	Reference T57 ICD10:Z72.0	Używanie tytoniu
+N10	Reference T29 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N11	Reference T30 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N26	Reference T58 ICD10:Z72	Problemy związane ze stylem życia

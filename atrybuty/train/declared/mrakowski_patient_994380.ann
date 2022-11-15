@@ -1,0 +1,215 @@
+T1	Treatment 333 405	Dalsza opieka w POZ, Poradni Kardiologicznej oraz Poradni Neurologicznej
+T2	Treatment 410 483	Wskazana dalsza diagnostyka przyczyn duszności w Poradni Pulmonologicznej
+T3	Investigation 488 580	Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T4	Date 592 606	za 4-6 tygodni
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Investigation 611 686	Wskazana kontrola TSH, FT3, FT4 za 3-4 tygodnie w warunkach ambulatoryjnych
+T6	Behaviour 770 872	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T7	Behaviour 877 905	Wskazana redukcja masy ciała
+T8	Investigation 910 966	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T9	Treatment 971 999	Regularne przyjmowanie leków
+T10	Drug 1159 1168	Paroxinor
+T11	Drug 1125 1132	Roswera
+T12	Drug 1092 1099	Amlozek
+T13	Drug 1064 1071	Tritace
+T14	Drug 1037 1047	Beto 25 ZK
+T15	Drug 1005 1010	Acard
+T16	Drug_dose 1011 1036	75mg 1 tabletka wieczorem
+R2	Drg Arg1:T15 Arg2:T16	
+T17	Drug_dose 1048 1063	1 tabletka rano
+R3	Drg Arg1:T14 Arg2:T17	
+T18	Drug_dose 1072 1091	5mg 1 tabletka rano
+R4	Drg Arg1:T13 Arg2:T18	
+T19	Drug_dose 1100 1124	5mg 1 tabletka wieczorem
+R5	Drg Arg1:T12 Arg2:T19	
+T20	Drug_dose 1133 1158	30mg 1 tabletka wieczorem
+R6	Drg Arg1:T11 Arg2:T20	
+T21	Drug_dose 1169 1222	20mg 1 tabletka rano - wg zaleceń lekarza specjalisty
+R7	Drg Arg1:T10 Arg2:T21	
+T22	Condition 1440 1461	Nadciśnienie tętnicze
+N1	Reference T22 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T23	Condition 1463 1475	Dyslipidemia
+N2	Reference T23 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T24	Condition 1485 1488	TIA
+N3	Reference T24 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T25	Date 1490 1497	07/2017
+R8	Dat Arg1:T25 Arg2:T24	
+T26	Treatment 1508 1517	usunięciu
+A1	Status T26 Historical_Insignificant
+T27	Treatment 1545 1561	cięciu cesarskim
+A2	Status T27 Historical_Insignificant
+T28	Behaviour 1563 1573	Nikotynizm
+T29	Symptom 1587 1603	Zawroty głowy po
+T30	Condition 1844 1846	HA
+N5	Reference T30 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T31	Symptom 1848 1889	Zmnijeszona tolerancja wysiłku fizycznego
+N6	Reference T31 ICD10:R53	Złe samopoczucie i zmęczenie
+T32	Symptom 1891 1901	Bóle w klp
+N7	Reference T32 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T33	Symptom 1904 1924	Mroczki przed oczami
+N8	Reference T33 ICD10:H53.4	Zmiany w polu widzenia
+T34	Symptom 1926 1947	Czasem zasinione usta
+N9	Reference T34 ICD10:R23.0	Sinica
+T35	Symptom 1949 1969	Obrzęki wokół kostek
+N10	Reference T35 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T36	Symptom 1971 2001	zasinienie stóp podczas stania
+N11	Reference T36 ICD10:R23.0	Sinica
+T37	Symptom 2003 2018	Kołatania serca
+N12	Reference T37 ICD10:R00.2	Kołatanie serca
+T38	Treatment 2024 2041	Przebyte operacje
+T39	Treatment 2043 2052	usuniecie
+A3	Status T39 Historical_Insignificant
+T40	Treatment 2078 2080	cc
+A4	Status T40 Historical_Insignificant
+T41	Behaviour 2084 2099	Palenie tytoniu
+T42	Negation 2101 2109	nie pali
+T43	Date 2110 2119	od 11 lat
+R9	Neg Arg1:T42 Arg2:T41	
+R10	Dat Arg1:T43 Arg2:T41	
+T44	Condition 2264 2266	HA
+N14	Reference T44 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T45	Investigation_result 2269 2298	RR w domu: 150/98-180/110mmHg
+N15	Reference T45 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T46	Condition 2304 2307	TIA
+N16	Reference T46 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T47	Date 2309 2316	07.2017
+R11	Dat Arg1:T47 Arg2:T46	
+T48	Symptom 2348 2369	labilnych wartości RR
+N17	Reference T48 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T49	Symptom 2371 2453	zmnijeszonej od 3-4 lat tolerancji wysiłku fizycznego (aktualniy dystans: 1 piętro
+N18	Reference T49 ICD10:R53	Złe samopoczucie i zmęczenie
+T50	Symptom 2456 2464	duszność
+N19	Reference T50 ICD10:R06.0	Duszność
+T51	Symptom 2466 2475	zmęczenie
+N20	Reference T51 ICD10:R53	Złe samopoczucie i zmęczenie
+T52	Negation 2477 2480	bez
+T53	Symptom 2481 2491	bólu w klp
+N21	Reference T53 ICD10:R07	Ból gardła i w klatce piersiowej
+R12	Neg Arg1:T52 Arg2:T53	
+T54	Symptom 2516 2553	bóle w klp piekące, trwające 20-30min
+N22	Reference T54 ICD10:R07.3	Inne bóle w klatce piersiowej
+T55	Symptom 2613 2633	mroczki przed oczami
+N23	Reference T55 ICD10:H53.4	Zmiany w polu widzenia
+T56	Symptom 2635 2656	czasem zasinione usta
+N24	Reference T56 ICD10:R23.0	Sinica
+T57	Symptom 2658 2678	obrzęki wokół kostek
+N25	Reference T57 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T58	Symptom 2680 2710	zasinienie stóp podczas stania
+N26	Reference T58 ICD10:R23.0	Sinica
+T59	Symptom 2712 2749	uczucie obrzęku kończyn i twarzy rano
+N27	Reference T59 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T60	Symptom 2758 2773	kołątania serca
+N28	Reference T60 ICD10:R00.2	
+T61	Negation 2776 2782	Neguje
+T62	Symptom 2784 2796	zasłabnięcia
+T63	Symptom 2798 2806	omdlenia
+N29	Reference T63 ICD10:R55	Omdlenie i zapaść
+T64	Symptom 2808 2818	krwawienia
+T65	Symptom 2820 2833	czarne stolce
+N30	Reference T65 ICD10:K92.1	Stolce smołowate
+T66	Symptom 2835 2851	brunatne wymioty
+N31	Reference T66 ICD10:K92.0	Wymioty krwawe
+T67	Condition 2853 2869	chorobę wrzodową
+N32	Reference T67 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T68	Symptom 2871 2885	duszność nocną
+N33	Reference T68 ICD10:R06.0	Duszność
+T69	Symptom 2887 2902	obrzęki podudzi
+N34	Reference T69 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T70	Condition 2904 2906	DM
+N35	Reference T70 ICD10:E14	Cukrzyca nieokreślona
+T71	Condition 2908 2918	udar mózgu
+N36	Reference T71 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T72	Condition 2920 2931	zawał serca
+N37	Reference T72 ICD10:I25.2	Przebyty zawał serca
+R13	Neg Arg1:T61 Arg2:T72	
+R14	Neg Arg1:T61 Arg2:T71	
+R15	Neg Arg1:T61 Arg2:T70	
+R16	Neg Arg1:T61 Arg2:T69	
+R17	Neg Arg1:T61 Arg2:T68	
+R18	Neg Arg1:T61 Arg2:T67	
+R19	Neg Arg1:T61 Arg2:T66	
+R20	Neg Arg1:T61 Arg2:T65	
+R21	Neg Arg1:T61 Arg2:T64	
+R22	Neg Arg1:T61 Arg2:T63	
+R23	Neg Arg1:T61 Arg2:T62	
+T73	Treatment 2935 2952	Przebyte operacje
+T74	Treatment 2954 2963	usuniecie
+A5	Status T74 Historical_Insignificant
+T75	Treatment 2989 2991	cc
+A6	Status T75 Historical_Insignificant
+T76	Behaviour 2992 3007	Palenie tytoniu
+T77	Negation 3009 3017	nie pali
+T78	Date 3018 3027	od 11 lat
+R24	Neg Arg1:T77 Arg2:T76	
+R25	Dat Arg1:T78 Arg2:T76	
+T79	Behaviour 3028 3039	Inne używki
+T80	Negation 3041 3044	nie
+R26	Neg Arg1:T80 Arg2:T79	
+T81	Condition 3045 3054	Uczulenia
+T83	Symptom 3072 3085	zawroty głowy
+T84	Condition 3123 3126	WZW
+N39	Reference T84 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T85	Condition 3133 3142	borelioza
+N40	Reference T85 ICD10:A69.2	Choroba z Lyme
+T86	Condition 3148 3151	tbc
+N41	Reference T86 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T87	Condition 3157 3161	odra
+N42	Reference T87 ICD10:B05	Odra
+T88	Condition 3167 3181	kontakt z odrą
+N43	Reference T88 ICD10:B05	Odra
+T89	Negation 3183 3184	-
+R28	Neg Arg1:T89 Arg2:T88	
+T90	Negation 3163 3164	-
+R29	Neg Arg1:T90 Arg2:T87	
+T91	Negation 3153 3154	-
+R30	Neg Arg1:T91 Arg2:T86	
+T92	Negation 3144 3145	-
+R31	Neg Arg1:T92 Arg2:T85	
+T93	Negation 3128 3129	-
+R32	Neg Arg1:T93 Arg2:T84	
+T94	Behaviour 3202 3228	warunki mieszkaniowe dobre
+T95	Drug 3266 3271	Acard
+T96	Drug 3373 3382	Paroxinor
+T97	Drug 3348 3352	Beto
+T98	Drug 3321 3328	Tritace
+T99	Drug 3293 3299	Atoris
+T100	Drug_dose 3272 3292	75mg 1x 1 tabl/wiecz
+R33	Drg Arg1:T95 Arg2:T100	
+T101	Drug_dose 3300 3320	20mg 1x 1 tabl/wiecz
+R34	Drg Arg1:T99 Arg2:T101	
+T102	Drug_dose 3329 3347	5mg 1x 1 tabl/rano
+R35	Drg Arg1:T98 Arg2:T102	
+T103	Drug_dose 3353 3372	25mg 1x 1 tabl/rano
+R36	Drg Arg1:T97 Arg2:T103	
+T104	Drug_dose 3383 3402	20mg 1x 1 tabl/rano
+R37	Drg Arg1:T96 Arg2:T104	
+T105	Investigation 3463 3484	badania laboratoryjne
+T106	Investigation 3486 3490	ECHO
+T107	Investigation 3492 3510	EKG metodą Holtera
+T108	Investigation 3512 3516	ABPM
+T109	Investigation 3518 3533	próba wysiłkowa
+N44	Reference T29 ICD10:R42	Zawroty głowy i odurzenie
+N45	Reference T83 ICD10:R42	Zawroty głowy i odurzenie
+T110	Condition 1518 1535	guzków obu piersi
+N46	Reference T110 ICD10:N63	Nieokreślony guzek w piersi
+T111	Condition 2053 2076	guzków obu piersi (ca?)
+A7	Source T111 Declared
+N47	Reference T111 ICD10:C50	Nowotwór złośliwy piersi
+T112	Condition 2964 2987	guzków obu piersi (ca?)
+A8	Source T112 Declared
+N48	Reference T112 ICD10:C50	Nowotwór złośliwy piersi
+T113	Symptom 2555 2611	ustępujące samoistnie, bez związku z wysiłkiem fizycznym
+N49	Reference T64 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T114	Drug 1604 1613	tramadolu
+T115	Symptom 3087 3095	nudności
+N51	Reference T115 ICD10:R11	Nudności i wymioty
+T116	Drug 3064 3071	Tramalu
+R38	Alg Arg1:T81 Arg2:T116	
+A9	Status T110 Historical_Insignificant
+N4	Reference T28 ICD10:Z72.0	Używanie tytoniu
+N13	Reference T41 ICD10:Z72.0	Używanie tytoniu
+A10	Status T111 Historical_Insignificant
+N52	Reference T62 ICD10:R55	Omdlenie i zapaść
+A11	Status T112 Historical_Insignificant
+N38	Reference T76 ICD10:Z72.0	Używanie tytoniu
+N50	Reference T81 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie

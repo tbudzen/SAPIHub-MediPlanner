@@ -1,0 +1,55 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Behaviour 358 380	dieta śródziemnomorska
+T3	Behaviour 381 422	regularna, umiarkowana aktywność fizyczna
+T4	Drug 427 438	Propranolol
+T5	Drug_dose 439 461	10 mg 1 tabl. doraźnie
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Condition 679 721	Łagodne nadkomorowe zaburzenia rytmu serca
+N1	Reference T6 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T7	Symptom 723 744	Bóle w kl. piersiowej
+N2	Reference T7 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T8	Symptom 947 960	kołatań serca
+N3	Reference T8 ICD10:R00.2	Kołatanie serca
+T9	Symptom 963 985	bólów w kl. piersiowej
+N4	Reference T9 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T10	Date 986 1003	od ok. 6 miesięcy
+R2	Dat Arg1:T10 Arg2:T9	
+R3	Dat Arg1:T10 Arg2:T8	
+T11	Treatment 1005 1022	Przebyte operacje
+T12	Negation 1024 1034	nie podaje
+R4	Neg Arg1:T12 Arg2:T11	
+T13	Treatment 1035 1054	Leczenie przewlekłe
+T14	Negation 1056 1066	nie podaje
+R5	Neg Arg1:T14 Arg2:T13	
+T15	Condition 1094 1097	WZW
+N5	Reference T15 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T16	Condition 1099 1108	borelioza
+N6	Reference T16 ICD10:A69.2	Choroba z Lyme
+T17	Negation 1111 1121	nie podaje
+R6	Neg Arg1:T17 Arg2:T16	
+R7	Neg Arg1:T17 Arg2:T15	
+T18	Condition 1122 1137	Wywiad rodzinny
+A1	Status T18 Family
+T19	Negation 1139 1149	nie podaje
+R8	Neg Arg1:T19 Arg2:T18	
+T20	Behaviour 1150 1165	Palenie tytoniu
+T21	Negation 1167 1177	nie podaje
+R9	Neg Arg1:T21 Arg2:T20	
+T22	Behaviour 1178 1189	Inne używki
+T23	Negation 1191 1201	nie podaje
+R10	Neg Arg1:T23 Arg2:T22	
+T24	Condition 1202 1211	Uczulenia
+N8	Reference T24 ICD10:T78.4	Alergia, nieokreślona
+T25	Negation 1213 1217	brak
+R11	Neg Arg1:T25 Arg2:T24	
+T26	Behaviour 1236 1245	uczennica
+T27	Investigation 1297 1307	echo serca
+T28	Investigation 1310 1313	TET
+T29	Investigation 1315 1319	ABPM
+T30	Investigation 1321 1327	Holter
+T31	Investigation 1329 1347	RTG kl. piersiowej
+N7	Reference T20 ICD10:Z72.0	Używanie tytoniu
+N9	Reference T22 ICD10:Z72	Problemy związane ze stylem życia
+T32	Drug 1253 1257	Leki
+T33	Negation 1259 1269	nie podaje
+R12	Neg Arg1:T33 Arg2:T32	

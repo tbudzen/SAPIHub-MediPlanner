@@ -1,0 +1,174 @@
+T1	Treatment 345 372	dalsza opieka w poradni POZ
+T2	Treatment 388 413	kontrola kardiologiczna  
+T3	Investigation 429 458	kontrola ciśnienia tętniczego
+T4	Date 419 428	codzienna
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Investigation 474 494	kontrola lipidogramu
+T6	Date 505 517	za 6 tygodni
+R2	Dat Arg1:T6 Arg2:T5	
+T7	Treatment 521 545	optymalizacja dawki leku
+T8	Investigation 554 588	ścisłe monitorowanie wskaźnika INR
+T9	Behaviour 595 627	dieta DASH i niskocholesterolowa
+T10	Behaviour 635 654	redukcja masy ciała
+T11	Drug 699 706	Sintrom
+T12	Drug_dose 707 768	4mg - dawkowanie wg INR, zalecane wg dotychczasowego schematu
+R3	Drg Arg1:T11 Arg2:T12	
+T13	Drug 777 785	Bisocard
+T14	Drug_dose 786 804	2,5mg 1 tabl. rano
+R4	Drg Arg1:T13 Arg2:T14	
+T15	Drug 813 822	Rytmonorm
+T16	Drug_dose 823 863	150 1 tabl. rano, w południe i wieczorem
+R5	Drg Arg1:T15 Arg2:T16	
+T17	Drug 872 882	Prestarium
+T18	Drug_dose 883 907	5 mg 1/2 tabl. wieczorem
+R6	Drg Arg1:T17 Arg2:T18	
+T19	Drug 916 922	Sortis
+T20	Drug_dose 923 946	10 mg 1 tabl. wieczorem
+R7	Drg Arg1:T19 Arg2:T20	
+T21	Investigation 2841 2851	Echo serca
+T22	Investigation 2855 2865	Holter EKG
+T23	Drug 2781 2788	Sintrom
+T24	Drug 2790 2798	Bisocard
+T25	Drug 2806 2815	Rytmonorm
+T26	Drug_dose 2799 2805	2,5mg,
+R8	Drg Arg1:T24 Arg2:T26	
+T27	Drug_dose 2816 2824	150 2xdz
+R9	Drg Arg1:T25 Arg2:T27	
+T28	Behaviour 2744 2770	warunki mieszkaniowe dobre
+T29	Negation 2721 2727	neguje
+T30	Negation 2706 2709	nie
+T31	Negation 2689 2692	nie
+T32	Negation 2634 2640	( -  )
+T33	Negation 2653 2659	( - ),
+T34	Negation 2668 2671	(-)
+T35	Condition 2710 2719	Uczulenia
+N1	Reference T35 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R10	Neg Arg1:T29 Arg2:T35	
+T36	Behaviour 2693 2704	Inne używki
+N2	Reference T36 ICD10:Z72	Problemy związane ze stylem życia
+R11	Neg Arg1:T30 Arg2:T36	
+T37	Behaviour 2672 2688	Palenie tytoniu:
+N3	Reference T37 ICD10:Z72.0	Używanie tytoniu
+R12	Neg Arg1:T31 Arg2:T37	
+T38	Condition 2630 2633	WZW
+N4	Reference T38 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T39	Condition 2643 2652	borelioza
+N5	Reference T39 ICD10:A69.2	Choroba z Lyme
+T40	Condition 2660 2668	gruźlica
+N6	Reference T40 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+R13	Neg Arg1:T34 Arg2:T40	
+R14	Neg Arg1:T33 Arg2:T39	
+R15	Neg Arg1:T32 Arg2:T38	
+T41	Treatment 2578 2596	Leczenie przewlekł
+T42	Treatment 2548 2565	Przebyte operacje
+T43	Condition 1165 1216	Przewlekła skurczowo-rozkurczowa niewydolność serca
+N7	Reference T43 ICD10:I50	Niewydolność serca
+T44	Symptom 1219 1238	I/II klasie wg NYHA
+T45	Condition 1240 1262	Nadciśnienie tętnicze.
+N8	Reference T45 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T46	Condition 1263 1270	Otyłość
+N9	Reference T46 ICD10:E66	Otyłość
+T47	Condition 1272 1295	Hiperlipidemia mieszana
+N10	Reference T47 ICD10:E78.2	Hiperlipidemia mieszana
+T48	Condition 1314 1332	koarktacji aorty z
+N11	Reference T48 ICD10:Q25.1	Zwężenie cieśni aorty
+T49	Treatment 1333 1355	wszyciem łaty Gore-Tex
+T50	Treatment 1305 1313	operacji
+T51	Date 1357 1361	1994
+R16	Dat Arg1:T51 Arg2:T49	
+R17	Dat Arg1:T51 Arg2:T48	
+R18	Dat Arg1:T51 Arg2:T50	
+T52	Treatment 1372 1461	implantacji sztucznej zastawki mitralnej St. Jude 31M oraz plastyce zastawki trójdzielnej
+T53	Date 1463 1467	2003
+R19	Dat Arg1:T53 Arg2:T52	
+T54	Condition 1478 1512	ciężkiej niedomykalności mitralnej
+N12	Reference T54 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T55	Condition 1518 1559	umiarkowanej niedomykalności trójdzielnej
+N13	Reference T55 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T56	Date 1561 1565	2003
+R20	Dat Arg1:T56 Arg2:T55	
+R21	Dat Arg1:T56 Arg2:T54	
+T57	Condition 1637 1705	przebiegu zakrzepicy zastawki mitralnej przy nieterapeutycznym INR (
+T58	Treatment 1621 1634	leczonym rtPA
+T59	Condition 1576 1620	udarze niedokrwiennym prawej półkuli móżdżku
+N14	Reference T59 ICD10:I63	Zawał mózgu
+T60	Date 1705 1709	2014
+R22	Dat Arg1:T60 Arg2:T57	
+R23	Dat Arg1:T60 Arg2:T58	
+R24	Dat Arg1:T60 Arg2:T59	
+T61	Condition 1722 1803	ojedynczy epizod migotania przedsionków z samoistną konwersja do rytmu zatokowego
+N15	Reference T61 ICD10:I48	
+T62	Date 1805 1809	2016
+R25	Dat Arg1:T62 Arg2:T61	
+T63	Condition 1812 1883	Nadkomorowe zaburzenia rytmu pod postacią licznych skurczów dodatkowych
+N16	Reference T63 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T64	Condition 2026 2046	wrodzoną wadą serca,
+N17	Reference T64 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T65	Condition 2060 2076	koarktacji aorty
+N18	Reference T65 ICD10:Q25.1	Zwężenie cieśni aorty
+T66	Treatment 2051 2059	operacji
+T67	Date 2079 2083	1994
+T68	Treatment 2086 2110	z wszyciem łaty Gore-Tex
+R26	Dat Arg1:T67 Arg2:T65	
+R27	Dat Arg1:T67 Arg2:T68	
+R28	Dat Arg1:T67 Arg2:T66	
+T69	Treatment 2116 2204	mpalntacji sztucznej zastawki mitralnej St. Jude 31M oraz plastyce zastawki trójdzielnej
+T70	Date 2205 2210	2003r
+R29	Dat Arg1:T70 Arg2:T69	
+T71	Condition 2222 2233	ciężkiej IM
+N19	Reference T71 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T72	Condition 2239 2254	umiarkowanej IT
+N20	Reference T72 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T73	Condition 2259 2307	przebyciu jednego epizodu migotania przedsionków
+N21	Reference T73 ICD10:I48	Migotanie i trzepotanie przedsionków
+T74	Date 2308 2313	2016r
+R30	Dat Arg1:T74 Arg2:T73	
+T75	Condition 2315 2338	nadciśnieniem tętniczym
+N22	Reference T75 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T76	Condition 2343 2387	udarze niedokrwiennym prawej półkuli móżdżku
+N23	Reference T76 ICD10:I63	Zawał mózgu
+T77	Treatment 2388 2401	leczonym rtPA
+T78	Condition 2402 2470	w przebiegu zakrzepicy zastawki mitralnej przy nieterapeutycznym INR
+T79	Date 2471 2475	2014
+R31	Dat Arg1:T79 Arg2:T78	
+R32	Dat Arg1:T79 Arg2:T76	
+R33	Dat Arg1:T79 Arg2:T77	
+T80	Symptom 2507 2530	napadów kołatania serca
+N24	Reference T80 ICD10:R00.2	Kołatanie serca
+T81	Date 2531 2545	od ok miesiąca
+R34	Dat Arg1:T81 Arg2:T80	
+R104	Dat Arg1:T81 Arg2:T77
+R105	Neg Arg1:T29 Arg2:T35
+R124	Neg Arg1:T30 Arg2:T36
+R13	Dat Arg1:T6 Arg2:T5
+R139	Neg Arg1:T31 Arg2:T37
+R148	Neg Arg1:T32 Arg2:T38
+R15	Drg Arg1:T11 Arg2:T12
+R163	Neg Arg1:T33 Arg2:T39
+R178	Neg Arg1:T34 Arg2:T40
+R19	Drg Arg1:T13 Arg2:T14
+R194	Drg Arg1:T25 Arg2:T27
+R23	Drg Arg1:T15 Arg2:T16
+R24	Drg Arg1:T17 Arg2:T18
+R27	Drg Arg1:T19 Arg2:T20
+R28	Dat Arg1:T51 Arg2:T49
+R29	Dat Arg1:T51 Arg2:T52
+R3	Dat Arg1:T4 Arg2:T2
+R30	Dat Arg1:T53 Arg2:T54
+R31	Dat Arg1:T53 Arg2:T55
+R34	Dat Arg1:T56 Arg2:T55
+R35	Dat Arg1:T56 Arg2:T59
+R36	Dat Arg1:T60 Arg2:T57
+R37	Dat Arg1:T60 Arg2:T61
+R38	Dat Arg1:T60 Arg2:T58
+R39	Dat Arg1:T62 Arg2:T63
+R41	Dat Arg1:T67 Arg2:T65
+R5	Dat Arg1:T4 Arg2:T3
+R50	Dat Arg1:T67 Arg2:T68
+R64	Dat Arg1:T70 Arg2:T69
+R70	Dat Arg1:T74 Arg2:T73
+R71	Dat Arg1:T74 Arg2:T75
+R72	Dat Arg1:T74 Arg2:T76
+R86	Dat Arg1:T79 Arg2:T78
+R91	Dat Arg1:T79 Arg2:T77
+R99	Dat Arg1:T81 Arg2:T78

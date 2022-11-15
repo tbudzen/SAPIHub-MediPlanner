@@ -1,0 +1,142 @@
+T1	Treatment 565 592	dalsza opieka w poradni POZ
+T2	Treatment 595 666	okresowa kontrola kardiologiczna, pulmonologiczna, gastroenterologiczna
+T3	Investigation 668 707	codzienna kontrola ciśnienia tętniczego
+T4	Investigation 710 787	okresowa kontrolą morfologii, lipidogramu, parametrów wątrobowych i nerkowych
+T5	Condition 1027 1068	Łagodna dysfunkcja skurczowa lewej komory
+T6	Condition 1106 1109	PDA
+N2	Reference T6 ICD10:Q25.0	Drożny przewód tętniczy
+T7	Treatment 1122 1141	leczony zachowawczo
+T8	Condition 1143 1172	Zwłóknienie wielotorbielowate
+N3	Reference T8 ICD10:E84.9	Zwłóknienie wielotorbielowate, nieokreślone
+T9	Condition 1175 1188	Mukowiscydoza
+N4	Reference T9 ICD10:E84.9	Zwłóknienie wielotorbielowate, nieokreślone
+T10	Symptom 1198 1228	2 krotnym masywnym krwiopluciu
+N5	Reference T10 ICD10:R04.2	Krwioplucie
+T11	Date 1230 1241	27.03.2018r
+R1	Dat Arg1:T11 Arg2:T10	
+T12	Investigation_result 1243 1260	około 500ml  krwi
+N6	Reference T12 ICD10:R04.2	Krwioplucie
+R2	Dat Arg1:T11 Arg2:T12	
+T13	Condition 1263 1310	Przetoki  tętniczo-żylne płata górnego  prawego
+N7	Reference T13 ICD10:I77.0	Przetoka tętniczo-żylna, nabyta
+T14	Treatment 1320 1378	embolektomii prawej tętnicy oskrzelowej na poziomie Th 6/7
+T15	Date 1381 1392	30.03.2018r
+R3	Dat Arg1:T15 Arg2:T14	
+T16	Condition 1396 1422	Przewlekłe zapalenie zatok
+N8	Reference T16 ICD10:J32.9	Przewlekłe zapalenie zatok, nieokreślone
+T17	Condition 1424 1448	Alergiczny  nieżyt  nosa
+N9	Reference T17 ICD10:J30	
+T18	Condition 1450 1469	Słuszczenie wątroby
+N10	Reference T18 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T19	Condition 1471 1491	Hipertriglicerydemia
+N11	Reference T19 ICD10:E78.1	Czysta hiperglicerydemia
+T20	Condition 1507 1555	zespół uciskowy górnego otworu klatki piersiowej
+N12	Reference T20 ICD10:G54.0	Zaburzenia splotu ramiennego
+T21	Condition 1494 1504	Zespół TOS
+N13	Reference T21 ICD10:G54.0	Zaburzenia splotu ramiennego
+T22	Condition 1697 1729	zwłóknieniem  wielotorbielowatym
+N14	Reference T22 ICD10:E84.9	Zwłóknienie wielotorbielowate, nieokreślone
+T23	Condition 1732 1745	mukowiscydozą
+N15	Reference T23 ICD10:E84.9	Zwłóknienie wielotorbielowate, nieokreślone
+T24	Symptom 1749 1780	2 krotnym  masywnym krwiopluciu
+N16	Reference T24 ICD10:R04.2	Krwioplucie
+T25	Date 1783 1794	27.03.2018r
+T26	Investigation_result 1796 1812	oklo 500ml  krwi
+N17	Reference T26 ICD10:R04.2	Krwioplucie
+R4	Dat Arg1:T25 Arg2:T26	
+R5	Dat Arg1:T25 Arg2:T24	
+T27	Condition 1817 1868	przetokami  tętniczo-żylnymi płata górnego  prawego
+N18	Reference T27 ICD10:I77.0	Przetoka tętniczo-żylna, nabyta
+T28	Treatment 1874 1932	embolektomii prawej tętnicy oskrzelowej na poziomie Th 6/7
+T29	Date 1935 1946	30.03.2018r
+R6	Dat Arg1:T29 Arg2:T28	
+T30	Condition 1953 1981	przewlekłym zapaleniem zatok
+N19	Reference T30 ICD10:J32.9	Przewlekłe zapalenie zatok, nieokreślone
+T31	Condition 1983 2010	alergicznym  nieżycie  nosa
+N20	Reference T31 ICD10:J30	Naczynioruchowy i alergiczny nieżyt nosa
+T32	Condition 2014 2034	stłuszczniem wątroby
+N21	Reference T32 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T33	Condition 2039 2051	zespołem TOS
+N22	Reference T33 ICD10:G54.0	Zaburzenia splotu ramiennego
+T34	Condition 2054 2101	zespół uciskowy górnego otworu latki piersiowej
+N23	Reference T34 ICD10:G54.0	Zaburzenia splotu ramiennego
+T35	Condition 2105 2108	PDA
+N24	Reference T35 ICD10:Q25.0	Drożny przewód tętniczy
+T36	Treatment 2109 2129	leczonym zachowawczo
+T37	Condition 2146 2172	kardiomiopatii zastoinowej
+N25	Reference T37 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+A1	Source T37 Declared
+T38	Symptom 2272 2296	Bóle w klatce piersiowej
+N26	Reference T38 ICD10:R07	Ból gardła i w klatce piersiowej
+T39	Symptom 2300 2308	omdlenia
+N27	Reference T39 ICD10:R55	Omdlenie i zapaść
+T40	Negation 2316 2322	neguje
+R7	Neg Arg1:T40 Arg2:T39	
+R8	Neg Arg1:T40 Arg2:T38	
+T41	Negation 2324 2327	Bez
+T42	Symptom 2328 2337	duszności
+N28	Reference T42 ICD10:R06.0	Duszność
+T43	Symptom 2339 2384	twierdzi że wejdzie bez duszności na 4 piętro
+R9	Neg Arg1:T41 Arg2:T42	
+T44	Condition 2386 2404	Uczulenia  na leki
+T45	Negation 2413 2419	neguje
+R10	Neg Arg1:T45 Arg2:T44	
+T46	Condition 2423 2430	alergie
+T47	Drug 2446 2454	Proursan
+T48	Drug_dose 2455 2464	2 x 250mg
+R11	Drg Arg1:T47 Arg2:T48	
+T49	Drug 2466 2479	Rutinoscorbin
+T50	Drug_dose 2480 2490	2 x 1 tabl
+R12	Drg Arg1:T49 Arg2:T50	
+T51	Drug 2492 2500	Enarenal
+T52	Drug_dose 2501 2510	2 x 2,5mg
+R13	Drg Arg1:T51 Arg2:T52	
+T53	Drug 2512 2517	Xyzal
+T54	Drug_dose 2518 2527	1 x 10 mg
+R14	Drg Arg1:T53 Arg2:T54	
+T55	Drug 2529 2537	Setal MR
+T56	Drug_dose 2538 2549	2 x 1 tabl.
+R15	Drg Arg1:T55 Arg2:T56	
+T57	Drug 2550 2558	Dicoflor
+T58	Drug_dose 2559 2579	1 x 60  mg do obiadu
+R16	Drg Arg1:T57 Arg2:T58	
+T59	Drug 2581 2589	Macromax
+T60	Drug_dose 2590 2641	1 x 500mg co 2 dni - zgodnie z sugestia pulmonologa
+R17	Drg Arg1:T59 Arg2:T60	
+T61	Drug 2643 2648	VIt A
+T62	Drug_dose 2649 2659	1 x 2500jm
+R18	Drg Arg1:T61 Arg2:T62	
+T63	Drug 2661 2667	Vit. E
+T64	Drug_dose 2670 2679	1 x 400mg
+R19	Drg Arg1:T63 Arg2:T64	
+T65	Drug 2681 2691	Vitamina D
+T66	Drug_dose 2692 2704	1 x 3 krople
+R20	Drg Arg1:T65 Arg2:T66	
+T67	Drug 2706 2713	Vitacon
+T68	Date 2715 2730	doo 01.07.2018r
+R21	Dat Arg1:T68 Arg2:T67	
+T69	Drug_dose 2733 2742	INhalacje
+T70	Drug 2744 2751	3% NaCl
+T71	Drug_dose 2754 2763	10 kropli
+T72	Drug 2764 2773	berodualu
+T73	Drug_dose 2774 2778	rano
+R22	Drg Arg1:T72 Arg2:T73	
+R23	Drg Arg1:T72 Arg2:T71	
+R24	Drg Arg1:T70 Arg2:T69	
+R25	Drg Arg1:T72 Arg2:T69	
+T74	Drug 2784 2793	pulmozyne
+T75	Drug_dose 2780 2783	1 x
+T76	Drug_dose 2794 2805	po południu
+R26	Drg Arg1:T74 Arg2:T75	
+R27	Drg Arg1:T74 Arg2:T76	
+T77	Drug 2810 2819	Symbicort
+T78	Drug_dose 2820 2837	320ug 2 x 1 wdech
+R28	Drg Arg1:T77 Arg2:T78	
+T79	Investigation 2852 2890	diagnostyka laboratoryjna orz obrazowa
+T80	Treatment 2892 2916	Lecczenie farmakoterapia
+T82	Symptom 1069 1104	w I okresie hemodynamicznym wg NYHA
+N1	Reference T5 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+A2	Status T14 Historical_Insignificant
+A3	Status T28 Historical_Insignificant
+N29	Reference T44 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+N30	Reference T46 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

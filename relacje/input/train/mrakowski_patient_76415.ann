@@ -1,0 +1,80 @@
+T2	Treatment 529 566	operacji metodą korekcji anatomicznej
+T3	Date 568 579	01.12.1998r
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Condition 583 588	Ciąża
+T6	Treatment 961 998	operacji metodą korekcji anatomicznej
+T7	Date 1000 1011	01.12.1998r
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Negation 1153 1159	Neguje
+T9	Symptom 1160 1199	dolegliwości bólowe w klatce piersiowej
+N3	Reference T9 ICD10:R07	Ból gardła i w klatce piersiowej
+T10	Symptom 1201 1224	uczucie kołatania serca
+N4	Reference T10 ICD10:R00.2	Kołatanie serca
+R3	Neg Arg1:T8 Arg2:T9	
+R4	Neg Arg1:T8 Arg2:T10	
+T11	Symptom 1226 1234	Omdlenia
+N5	Reference T11 ICD10:R55	Omdlenie i zapaść
+T12	Symptom 1236 1255	utraty przytomności
+T13	Negation 1256 1271	nie występowały
+R5	Neg Arg1:T13 Arg2:T12	
+R6	Neg Arg1:T13 Arg2:T11	
+T14	Treatment 1293 1312	korekcja wady serca
+T15	Date 1313 1317	1998
+R7	Dat Arg1:T15 Arg2:T14	
+T16	Date 1334 1339	2017r
+T17	Investigation 1385 1413	badaniu echokardiograficznym
+T18	Investigation_result 1414 1507	potwierdzono prawidłowe przepływy na zastawach i w miejscach zespoleń wielkich pni tętniczych
+T19	Investigation_result 1512 1558	śladową falą niedomykalności zastawki neoaorty
+N6	Reference T19 ICD10:I35.1	Niedomykalność zastawki aortalnej
+R8	Inv Arg1:T17 Arg2:T18	
+R9	Inv Arg1:T17 Arg2:T19	
+R10	Dat Arg1:T16 Arg2:T17	
+R11	Dat Arg1:T16 Arg2:T18	
+R12	Dat Arg1:T16 Arg2:T19	
+T20	Investigation_result 1560 1597	przy prawidłowych wymiarach jam komór
+R13	Inv Arg1:T17 Arg2:T20	
+R14	Dat Arg1:T16 Arg2:T20	
+T21	Investigation_result 1600 1633	dobrej kurczliwości mięśnia serca
+R15	Dat Arg1:T16 Arg2:T21	
+R16	Inv Arg1:T17 Arg2:T21	
+T22	Investigation 1644 1668	próba ergospirometryczna
+T23	Investigation_result 1670 1701	maksymalne obciążenie 12,9 METs
+T24	Investigation_result 1703 1769	wykazała średnią wydolność fizyczną, ze średnią tolerancją wysiłku
+T25	Investigation_result 1771 1816	przy parametrach wentylacji w granicach normy
+T26	Investigation_result 1818 1870	parametrach zdolności wymiany metabolicznej w normie
+T27	Investigation_result 1872 1937	prawidłowej chronotropowej i tensyjnej odpowiedzi układu krążenia
+T28	Investigation_result 1939 2004	wysiłek nie sprowokował zaburzeń rytmu ani zaburzeń repolaryzacji
+R17	Inv Arg1:T22 Arg2:T23	
+R18	Inv Arg1:T22 Arg2:T24	
+R19	Inv Arg1:T22 Arg2:T25	
+R20	Inv Arg1:T22 Arg2:T27	
+R21	Inv Arg1:T22 Arg2:T26	
+R22	Inv Arg1:T22 Arg2:T28	
+T29	Investigation 2008 2029	badaniu tomograficzne
+T30	Investigation 2031 2039	angio-TK
+T31	Investigation_result 2042 2067	oceniono tętnice wieńcowe
+R23	Inv Arg1:T29 Arg2:T31	
+R24	Inv Arg1:T30 Arg2:T31	
+T32	Investigation_result 2069 2150	dominacja prawej tętnicy wieńcowej, stwierdzono brak pnia lewej tętnicy wieńcowej
+T33	Investigation_result 2152 2242	GPZ - odchodzi od lewej zatoki Valsalvy, przebiega typowo w rowku międzykomorowym przednim
+T34	Investigation_result 2255 2309	GO - odchodzi wspólnie z PTW od prawej zatoki Valsalvy
+T35	Investigation_result 2311 2494	przebiega retroaortalnie między opuszką aorty a lewym przedsionkiem, dalej typowo w bruździe wieńcowej między lewym przedsionkiem i lewą komorą, naczynie skrajnie recesywne, bez zmian
+T36	Investigation_result 2496 2629	PTW - odchodzi od prawej zatoki Valsalvy, przebiega typowo w bruździe wieńcowej między prawym przedsionkiem i prawą komorą, bez zmian
+T37	Investigation_result 2636 2657	wielkie pnie tętnicze
+R25	Inv Arg1:T29 Arg2:T32	
+R26	Inv Arg1:T29 Arg2:T33	
+R27	Inv Arg1:T29 Arg2:T34	
+R28	Inv Arg1:T29 Arg2:T35	
+R29	Inv Arg1:T29 Arg2:T36	
+R30	Inv Arg1:T29 Arg2:T37	
+T38	Behaviour 2730 2741	Nie pracuje
+T1	Condition 1120 1151	podejrzewa, że może być w ciąży
+A1	Source T1 Declared
+N1	Reference T1 ICD10:Z32.0	Ciąża (jeszcze) niepotwierdzona
+T5	Treatment 1273 1291	Zabiegi operacyjne
+T39	Condition 888 956	wrodzoną wadą serca pod postacią przełożenia wielkich pni tętniczych
+N2	Reference T39 ICD10:Q20.3	
+R31	Dat Arg1:T7 Arg2:T39	
+T40	Condition 450 518	Wrodzona wada serca pod postacią przełożenia wielkich pni tętniczych
+N7	Reference T40 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+R32	Dat Arg1:T3 Arg2:T40	

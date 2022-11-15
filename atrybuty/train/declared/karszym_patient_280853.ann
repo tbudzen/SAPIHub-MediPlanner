@@ -1,0 +1,258 @@
+T1	Treatment 345 372	dalsza opieka w poradni POZ
+T2	Treatment 380 446	okresowa kontrola kardiologiczna, diabetologiczna i ginekologiczna
+T3	Investigation 464 531	poszerzona diagnostyka gruczolaka nadnercza w warunkach szpitalnych
+T4	Treatment 623 656	konsultacja chirurga naczyniowego
+T5	Investigation_result 659 686	poszerzenie aorty brzusznej
+T6	Investigation 705 744	codzienna kontrola ciśnienia tętniczego
+T7	Investigation 752 781	okresowa kontrola lipidogramu
+T8	Behaviour 789 799	dieta DASH
+T9	Behaviour 808 827	redukcja masy ciała
+T10	Negation 835 840	zakaz
+T11	Behaviour 841 856	palenia tytoniu
+R1	Neg Arg1:T10 Arg2:T11	
+T12	Investigation 696 698	CT
+R2	Inv Arg1:T12 Arg2:T5	
+T13	Behaviour 863 908	stały, umiarkowany, aerobowy wysiłek fizyczny
+T14	Drug 955 960	Acard
+T15	Drug 1020 1027	Polpril
+T16	Drug 1149 1157	Lecalpin
+T17	Drug 1274 1285	Betaloc ZOK
+T18	Drug 1408 1414	Atoris
+T19	Drug 1447 1460	Glucophage XR
+T20	Drug 1495 1501	Siofor
+T21	Drug 1544 1552	Betaserc
+T22	Drug 1593 1600	Milurit
+T23	Drug_dose 961 984	75 mg 1 tabl. wieczorem
+T24	Drug_dose 1028 1051	10 mg 1 tabl. wieczorem
+T25	Drug_dose 1158 1176	10 mg 1 tabl. rano
+T26	Drug_dose 1286 1310	50 mg 1 i 1/2 tabl. rano
+T27	Drug_dose 1415 1438	40 mg 1 tabl. wieczorem
+T28	Drug_dose 1461 1486	1000 mg 1 tabl. wieczorem
+T29	Drug_dose 1502 1534	500 mg 1 tabl. rano i w południe
+T30	Drug_dose 1553 1583	24 mg 1 tabl. rano i wieczorem
+T31	Drug_dose 1601 1620	100 mg 1 tabl. rano
+R3	Drg Arg1:T14 Arg2:T23	
+R4	Drg Arg1:T15 Arg2:T24	
+R5	Drg Arg1:T16 Arg2:T25	
+R6	Drg Arg1:T17 Arg2:T26	
+R7	Drg Arg1:T18 Arg2:T27	
+R8	Drg Arg1:T19 Arg2:T28	
+R9	Drg Arg1:T20 Arg2:T29	
+R10	Drg Arg1:T21 Arg2:T30	
+R11	Drg Arg1:T22 Arg2:T31	
+T32	Date 1625 1641	2 tygodnie przed
+T36	Drug 1788 1793	Doxar
+T37	Drug_dose 1794 1823	4 mg 1 tabl. rano i wieczorem
+T38	Symptom 1825 1880	w przypadku zbyt wysokich wartości ciśnienia tętniczego
+T39	Drug_dose 1892 1935	można zwiększyć do 2 tabl. rano i wieczorem
+R12	Dat Arg1:T32 Arg2:T36	
+R13	Drg Arg1:T36 Arg2:T37	
+T33	Negation 1683 1694	dostawieniu
+T34	Drug 1695 1761	leków p/nadciśnieniowych dotychczas stosowanych – jak podano wyżej
+R14	Neg Arg1:T33 Arg2:T34	
+R15	Dat Arg1:T32 Arg2:T34	
+R16	Drg Arg1:T36 Arg2:T39	
+T40	Drug 1946 1956	Isoptin SR
+T41	Drug_dose 1957 1987	120mg 1 tabl. rano i wieczorem
+R19	Drg Arg1:T40 Arg2:T41	
+T42	Condition 2206 2262	Nadciśnienie tętnicze III stopnia wg ESH/ESC skorygowane
+N1	Reference T42 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T43	Condition 2264 2284	Guz nadnercza lewego
+N2	Reference T43 ICD10:D44.1	Nadnercze
+T45	Condition 2335 2376	Przewlekła niewydolność rozkurczowa serca
+N3	Reference T45 ICD10:I50.9	Niewydolność serca, nieokreślona
+T46	Behaviour 2402 2412	Nikotynizm
+T47	Condition 2414 2453	Hipercholesterolemia w trakcie leczenia
+N4	Reference T47 ICD10:E78.0	Czysta hipercholesterolemia
+T49	Condition 2455 2470	Miażdżyca aorty
+N5	Reference T49 ICD10:I70.0	Miażdżyca aorty
+T50	Investigation_result 2472 2530	Poszerzenie dystalnego odcinka aorty brzusznej do 29x19mm.
+T51	Condition 2531 2576	Komorowe i nadkomorowe zaburzenia rytmu serca
+N6	Reference T51 ICD10:I49	Inne zaburzenia rytmu serca
+T52	Symptom 2578 2591	Zawroty głowy
+N7	Reference T52 ICD10:R55	Omdlenie i zapaść
+T53	Condition 2593 2600	Otyłość
+N8	Reference T53 ICD10:E66.9	Otyłość, nieokreślona
+T54	Condition 2602 2618	Cukrzyca typu 2.
+N9	Reference T54 ICD10:E11	Cukrzyca insulinoniezależna
+T55	Condition 2619 2639	Stłuszczenie wątroby
+N10	Reference T55 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T56	Condition 2641 2654	Hiperurykemia
+N11	Reference T56 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T57	Treatment 2664 2680	panhisterektomii
+A1	Status T57 Historical_Insignificant
+N12	Reference T57 ICD10:Z90.7	Nabyty brak narządów płciowych
+T58	Condition 2690 2720	atypowego rozrostu endometrium
+A2	Status T58 Historical_Insignificant
+N13	Reference T58 ICD10:N85.1	Rozrost gruczolakowaty błony śluzowej macicy
+T59	Symptom 3002 3048	okresowo występującego uczucia kołatania serca
+N14	Reference T59 ICD10:R00.2	Kołatanie serca
+T60	Symptom 3054 3171	okresowo występujących dolegliwości bólowych w klatce piersiowej o charakterze ucisku związany z aktywnością fizyczną
+N15	Reference T60 ICD10:R07.2	Ból w okolicy przedsercowej
+T61	Investigation 3308 3325	CT jamy brzusznej
+T62	Date 3327 3337	10/08/2018
+T63	Investigation_result 3340 3402	lewe nadnercze pogrubiałe z guzkiem 27x25mm - cechy gruczolaka
+N16	Reference T63 ICD10:D44.1	Nadnercze
+T64	Investigation_result 3404 3495	tętniakowate poszerzenie dystalnego odcinka aorty brzusznej do 29x19mm (powyżej śr do 17mm)
+T65	Investigation_result 3497 3556	lewa ściana dystalnej części odbytnicy pogrubiała do 14,5mm
+R20	Dat Arg1:T62 Arg2:T61	
+R21	Inv Arg1:T61 Arg2:T63	
+R22	Inv Arg1:T61 Arg2:T64	
+R23	Inv Arg1:T61 Arg2:T65	
+T66	Treatment 3574 3608	pozostawione zostały do obserwacji
+T67	Negation 3620 3629	nie miała
+T68	Investigation 3630 3647	dodatkowych badań
+R24	Neg Arg1:T67 Arg2:T68	
+A3	Source T66 Declared
+T69	Negation 3705 3711	Neguje
+T70	Symptom 3712 3724	zasłabnięcia
+T71	Symptom 3726 3734	omdlenia
+N17	Reference T71 ICD10:R55	Omdlenie i zapaść
+T72	Symptom 3736 3749	zawroty głowy
+N18	Reference T72 ICD10:R42	Zawroty głowy i odurzenie
+T73	Symptom 3751 3761	krwawienia
+T74	Symptom 3763 3776	czarne stolce
+N19	Reference T74 ICD10:K92.1	Stolce smołowate
+T75	Symptom 3778 3794	brunatne wymioty
+N20	Reference T75 ICD10:K92.0	Wymioty krwawe
+T76	Condition 3796 3812	chorobę wrzodową
+N21	Reference T76 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T77	Symptom 3814 3828	duszność nocną
+N22	Reference T77 ICD10:R06.0	Duszność
+T78	Symptom 3830 3845	obrzęki podudzi
+N23	Reference T78 ICD10:R60.0	Obrzęk zlokalizowany
+T79	Symptom 3847 3866	Innych dolegliwości
+T80	Negation 3867 3878	nie zgłasza
+T81	Condition 3893 3937	Nadciśnienie tętnicze III stopnia wg ESH/ESC
+N24	Reference T81 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+R25	Neg Arg1:T69 Arg2:T70	
+R26	Neg Arg1:T69 Arg2:T71	
+R27	Neg Arg1:T69 Arg2:T72	
+R28	Neg Arg1:T69 Arg2:T73	
+R29	Neg Arg1:T69 Arg2:T74	
+R30	Neg Arg1:T69 Arg2:T75	
+R31	Neg Arg1:T69 Arg2:T76	
+R32	Neg Arg1:T69 Arg2:T77	
+R33	Neg Arg1:T69 Arg2:T78	
+R34	Neg Arg1:T80 Arg2:T79	
+T82	Condition 3939 3980	Przewlekła niewydolność rozkurczowa serca
+N25	Reference T82 ICD10:I50.9	Niewydolność serca, nieokreślona
+T83	Behaviour 3982 3992	Nikotynizm
+T84	Condition 3994 4009	Miażdżyca aorty
+N26	Reference T84 ICD10:I70.0	Miażdżyca aorty
+T85	Condition 4011 4050	Hipercholesterolemia w trakcie leczenia
+N27	Reference T85 ICD10:E78.0	Czysta hipercholesterolemia
+T87	Condition 4052 4097	Komorowe i nadkomorowe zaburzenia rytmu serca
+N28	Reference T87 ICD10:I49	Inne zaburzenia rytmu serca
+T88	Condition 4099 4112	Zawroty głowy
+N29	Reference T88 ICD10:R42	Zawroty głowy i odurzenie
+T89	Condition 4114 4121	Nadwaga
+T90	Condition 4123 4138	Cukrzyca typu 2
+N30	Reference T90 ICD10:E11	Cukrzyca insulinoniezależna
+T91	Condition 4140 4160	Stłuszczenie wątroby
+N31	Reference T91 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T92	Condition 4162 4175	Hiperurykemia
+N32	Reference T92 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T93	Treatment 4185 4201	panhisterektomii
+N33	Reference T93 ICD10:Z90.7	Nabyty brak narządów płciowych
+T94	Condition 4211 4241	atypowego rozrostu endometrium
+N34	Reference T94 ICD10:N85.1	Rozrost gruczolakowaty błony śluzowej macicy
+A4	Status T93 Historical_Insignificant
+A5	Status T94 Historical_Insignificant
+T95	Treatment 4267 4334	Leczenie przewlekłe: kardiologiczne, diabetologiczne, neurologiczne
+T96	Condition 4362 4365	WZW
+N35	Reference T96 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T97	Condition 4374 4383	borelioza
+N36	Reference T97 ICD10:A69.2	Choroba z Lyme
+T98	Condition 4391 4399	grużlica
+N37	Reference T98 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T99	Condition 4407 4411	odra
+N38	Reference T99 ICD10:B05	Odra
+T100	Negation 4366 4371	( - )
+T101	Negation 4384 4389	( - )
+T102	Negation 4400 4405	( - )
+T103	Negation 4412 4417	( - )
+R35	Neg Arg1:T100 Arg2:T96	
+R36	Neg Arg1:T101 Arg2:T97	
+R37	Neg Arg1:T102 Arg2:T98	
+R38	Neg Arg1:T103 Arg2:T99	
+T104	Condition 4418 4433	Wywiad rodzinny
+A6	Status T104 Family
+T105	Negation 4435 4445	nieistotny
+R39	Neg Arg1:T105 Arg2:T104	
+T106	Behaviour 4447 4475	Palenie tytoniu: 10 dziennie
+T107	Date 4476 4485	od 30 lat
+R40	Dat Arg1:T107 Arg2:T106	
+T108	Behaviour 4487 4498	Inne używki
+T109	Negation 4500 4506	neguje
+R41	Neg Arg1:T109 Arg2:T108	
+T110	Condition 4508 4517	Uczulenia
+N39	Reference T110 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T111	Negation 4519 4525	neguje
+R42	Neg Arg1:T111 Arg2:T110	
+T112	Behaviour 4543 4569	warunki mieszkaniowe dobre
+T113	Behaviour 4571 4583	mieszka sama
+T114	Behaviour 4592 4600	Emerytka
+T115	Drug 4612 4617	Acard
+T116	Drug 4645 4652	Polpril
+T117	Drug 4680 4688	Lecalpin
+T118	Drug 4711 4722	Betaloc ZOK
+T119	Drug 4745 4751	Atoris
+T120	Drug 4779 4792	Glucophage XR
+T121	Drug 4822 4830	Betaserc
+T122	Drug 4865 4871	Siofor
+T123	Drug_dose 4618 4641	75 mg 1 tabl. wieczorem
+T124	Drug_dose 4653 4676	10 mg 1 tabl. wieczorem
+T125	Drug_dose 4689 4707	10 mg 1 tabl. rano
+T126	Drug_dose 4723 4741	50 mg 1 tabl. rano
+T127	Drug_dose 4752 4775	40 mg 1 tabl. wieczorem
+T128	Drug_dose 4793 4818	1000 mg 1 tabl. wieczorem
+T129	Drug_dose 4831 4861	24 mg 1 tabl. rano i wieczorem
+T130	Drug_dose 4872 4906	500mg 1 tabletka rano i w południe
+R43	Drg Arg1:T115 Arg2:T123	
+R44	Drg Arg1:T116 Arg2:T124	
+R45	Drg Arg1:T117 Arg2:T125	
+R46	Drg Arg1:T118 Arg2:T126	
+R47	Drg Arg1:T119 Arg2:T127	
+R48	Drg Arg1:T120 Arg2:T128	
+R49	Drg Arg1:T121 Arg2:T129	
+R50	Drg Arg1:T122 Arg2:T130	
+T131	Investigation 4922 4925	TTE
+T132	Investigation 4927 4930	TET
+T133	Investigation 4932 4936	ABPM
+T134	Investigation 4938 4948	Holter EKG
+N40	Reference T11 ICD10:Z72.0	Używanie tytoniu
+N41	Reference T46 ICD10:Z72.0	Używanie tytoniu
+N42	Reference T83 ICD10:Z72.0	Używanie tytoniu
+N43	Reference T106 ICD10:Z72.0	Używanie tytoniu
+T35	Investigation_result 3559 3573	opisane zmiany
+T44	Treatment 541 576	przyjęcia do Kliniki Endokrynologii
+T48	Negation 1060 1070	ostawienia
+T86	Drug 1053 1056	lek
+R17	Neg Arg1:T48 Arg2:T86	
+T135	Date 1074 1090	2 tygodnie przed
+T136	Drug 1178 1181	lek
+T137	Negation 1185 1195	ostawienia
+T138	Date 1199 1215	2 tygodnie przed
+T139	Drug 1312 1315	lek
+T140	Negation 1319 1329	ostawienia
+T141	Date 1333 1349	2 tygodnie przed
+T142	Treatment 1227 1263	przyjęciem do Kliniki Endokrynologii
+T143	Treatment 1102 1138	przyjęciem do Kliniki Endokrynologii
+T144	Treatment 1361 1397	przyjęciem do Kliniki Endokrynologii
+R18	Dat Arg1:T135 Arg2:T86	
+R51	Dat Arg1:T135 Arg2:T143	
+R52	Dat Arg1:T138 Arg2:T136	
+R53	Dat Arg1:T138 Arg2:T142	
+R54	Neg Arg1:T137 Arg2:T136	
+R55	Neg Arg1:T140 Arg2:T139	
+R56	Dat Arg1:T141 Arg2:T139	
+R57	Dat Arg1:T141 Arg2:T144	
+T145	Treatment 1642 1678	przyjęciem do Kliniki Endokrynologii
+R58	Dat Arg1:T32 Arg2:T145	
+T146	Condition 2287 2309	podejrzenie gruczolaka
+A7	Source T146 Declared
+N44	Reference T146 ICD10:D35.0	Nadnercze
+T147	Investigation 2311 2332	w trakcie diagnostyki
+T148	Symptom 2379 2400	II/III klasie wg NYHA
+N45	Reference T148 ICD10:I50	Niewydolność serca

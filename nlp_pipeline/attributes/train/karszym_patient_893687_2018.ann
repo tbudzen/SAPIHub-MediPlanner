@@ -1,0 +1,180 @@
+T1	Drug 2587 2596	Tolucombi
+T2	Drug 2622 2634	Tertensif SR
+T3	Drug 2650 2660	Metazydyna
+T4	Drug 2671 2683	Kalipoz prol
+T5	Drug 2699 2705	Qlaira
+T6	Drug 2722 2730	Taflotan
+T7	Date 2417 2427	28.08.2018
+T8	Date 2544 2554	31.08.2018
+T9	Date 2395 2399	2014
+T10	Negation 2138 2144	Neguje
+T11	Drug 1080 1086	Tolura
+T12	Drug 1238 1244	Tolura
+T13	Drug 1246 1258	Tertensif SR
+T14	Drug 1260 1270	Metazydyna
+T15	Drug 1272 1284	Kalipoz prol
+T16	Drug 1286 1295	0.9% NaCl
+T17	Drug 1297 1300	BLW
+T18	Drug 1302 1309	Betaloc
+T19	Drug 1107 1118	Tertensif S
+T20	Condition 439 483	Łagodna niedomykalność zastawki trójdzielnej
+N1	Reference T20 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T21	Symptom 485 509	Bóle w klatce piersiowej
+N2	Reference T21 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T22	Condition 511 532	Nadciśnienie tętnicze
+N3	Reference T22 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T23	Condition 534 549	Cukrzyca typu 2
+N4	Reference T23 ICD10:E11	Cukrzyca insulinoniezależna
+T24	Date 550 567	świeżo rozpoznana
+T25	Condition 582 609	zapalenie mięśnia sercowego
+N5	Reference T25 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+T26	Condition 611 633	dwa naczyniaki wątroby
+N6	Reference T26 ICD10:D18.0	Naczyniak krwionośny o dowolnym umiejscowieniu
+T27	Condition 635 644	Uczulenie
+N7	Reference T27 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T28	Drug 649 656	Tritace
+T29	Symptom 658 664	kaszel
+N8	Reference T29 ICD10:R05	Kaszel
+T30	Drug 668 675	Amlozek
+T31	Symptom 677 690	obrzęk twarzy
+N9	Reference T31 ICD10:R22.0	Zlokalizowany obrzęk, guz i guzek w obrębie głowy
+T32	Symptom 693 700	wysypka
+N10	Reference T32 ICD10:R21	Rumień i inne nieswoiste wysypki skórne
+R1	Dat Arg1:T24 Arg2:T23	
+R2	Alg Arg1:T27 Arg2:T28	
+R3	Alg Arg1:T27 Arg2:T30	
+T33	Treatment 711 719	operacji
+N11	Reference T33 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T34	Condition 729 741	endometriozy
+N12	Reference T34 ICD10:N80.9	Gruczolistość, nieokreślona
+T35	Date 743 750	ok 2011
+T36	Treatment 754 781	artroskopia stawu skokowego
+A1	Status T36 Historical_Insignificant
+N13	Reference T36 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T37	Date 783 787	2014
+R4	Dat Arg1:T37 Arg2:T36	
+R5	Dat Arg1:T35 Arg2:T34	
+R6	Dat Arg1:T35 Arg2:T33	
+T38	Treatment 900 922	kontrola u lekarza POZ
+T39	Behaviour 925 941	dieta cukrzycowa
+T40	Investigation 943 969	okresowa kontrola glikemii
+T41	Treatment 972 1025	kontrola w Poradni Kardiologicznej i Diabetologicznej
+T42	Drug_dose 1087 1106	80mg 1x 1 tabl/rano
+R7	Drg Arg1:T11 Arg2:T42	
+T43	Condition 1463 1465	HA
+N14	Reference T43 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T44	Date 1466 1474	od 8 lat
+T45	Investigation_result 1488 1511	skoki RR do 200/105mmHg
+T46	Symptom 1514 1531	krwotokami z nosa
+N15	Reference T46 ICD10:R04.0	Epistaxis
+R8	Dat Arg1:T44 Arg2:T43	
+T47	Date 1550 1561	2 m-ce temu
+T48	Treatment 1536 1549	zmianie leków
+R9	Dat Arg1:T47 Arg2:T48	
+T49	Investigation_result 1563 1579	RR do 150/90mmhg
+T50	Condition 1584 1601	prawdopodobnie DM
+A2	Source T50 Declared
+N16	Reference T50 ICD10:E14	Cukrzyca nieokreślona
+T51	Investigation 1628 1632	OGTT
+T52	Investigation_result 1603 1625	glikemia powyżej 200m%
+N17	Reference T52 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+R10	Inv Arg1:T51 Arg2:T52	
+T53	Condition 1650 1677	zapaleniu mięśnia sercowego
+N18	Reference T53 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+T54	Date 1678 1684	w 23rż
+R11	Dat Arg1:T54 Arg2:T53	
+T55	Symptom 1704 1736	krótkich napadów kołatania serca
+N19	Reference T55 ICD10:R00.2	Kołatanie serca
+T56	Negation 1737 1740	bez
+T57	Symptom 1741 1768	towarzyszących dolegliwości
+R12	Neg Arg1:T56 Arg2:T57	
+T58	Symptom 1770 1915	bólów w klatce piersiowej o charakterze ucisku w górnej połowie klatki piersiowej (w czasie stresu, zmęczenia, bez związku z wysiłkiem fizycznym)
+N20	Reference T58 ICD10:R07.3	Inne bóle w klatce piersiowej
+T59	Symptom 1917 1959	zmnijeszenia tolerancji wysiłku fizycznego
+T60	Date 1960 1968	od 2 lat
+T61	Treatment 1991 2010	leczenie hormonalne
+T62	Condition 2020 2032	endometriozy
+N21	Reference T62 ICD10:N80.9	Gruczolistość, nieokreślona
+T63	Condition 2034 2074	częste infekcje górnych dróg oddechowych
+N22	Reference T63 ICD10:J06.9	Ostre zakażenie górnych dróg oddechowych, nieokreślone
+T64	Symptom 2076 2103	czasem obrzęki wokół kostek
+N23	Reference T64 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T65	Symptom 2105 2124	pobolewania brzucha
+N24	Reference T65 ICD10:R10.4	Inny i nieokreślony ból brzucha
+T66	Date 2125 2135	od wakacji
+R13	Dat Arg1:T66 Arg2:T65	
+R14	Dat Arg1:T60 Arg2:T55	
+R15	Dat Arg1:T60 Arg2:T57	
+R16	Dat Arg1:T60 Arg2:T58	
+R17	Dat Arg1:T60 Arg2:T59	
+R18	Dat Arg1:T47 Arg2:T49	
+R19	Dat Arg1:T44 Arg2:T45	
+R20	Dat Arg1:T44 Arg2:T46	
+T67	Symptom 2146 2158	zasłabnięcia
+N25	Reference T67 ICD10:R55	Omdlenie i zapaść
+T68	Symptom 2160 2168	omdlenia
+N26	Reference T68 ICD10:R55	Omdlenie i zapaść
+T69	Symptom 2170 2184	duszność nocną
+N27	Reference T69 ICD10:R06.0	Duszność
+T70	Condition 2186 2202	chorobę wrzodową
+N28	Reference T70 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T71	Condition 2204 2212	tarczycy
+N29	Reference T71 ICD10:E07.9	Choroby tarczycy, nieokreślone
+T72	Symptom 2214 2227	czarne stolce
+N30	Reference T72 ICD10:K92.1	Stolce smołowate
+T73	Symptom 2229 2245	brunatne wymioty
+N31	Reference T73 ICD10:K92.0	Wymioty krwawe
+R21	Neg Arg1:T10 Arg2:T67	
+R22	Neg Arg1:T10 Arg2:T68	
+R23	Neg Arg1:T10 Arg2:T69	
+R24	Neg Arg1:T10 Arg2:T70	
+R25	Neg Arg1:T10 Arg2:T71	
+R26	Neg Arg1:T10 Arg2:T72	
+R27	Neg Arg1:T10 Arg2:T73	
+T74	Condition 2247 2256	Uczulenia
+N32	Reference T74 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T75	Drug 2261 2268	Tritace
+T76	Symptom 2270 2276	kaszel
+N33	Reference T76 ICD10:R05	Kaszel
+T77	Drug 2280 2287	Amlozek
+T78	Symptom 2289 2302	obrzęk twarzy
+N34	Reference T78 ICD10:R22.0	Zlokalizowany obrzęk, guz i guzek w obrębie głowy
+T79	Symptom 2305 2312	wysypka
+N35	Reference T79 ICD10:R21	Rumień i inne nieswoiste wysypki skórne
+R28	Alg Arg1:T74 Arg2:T75	
+R29	Alg Arg1:T74 Arg2:T77	
+T80	Treatment 2323 2331	operacje
+N36	Reference T80 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T81	Condition 2342 2354	endometriozy
+N37	Reference T81 ICD10:N80.9	Gruczolistość, nieokreślona
+T82	Date 2356 2363	ok 2011
+T83	Treatment 2366 2393	artroskopia stawu skokowego
+A3	Status T83 Historical_Insignificant
+N38	Reference T83 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R30	Dat Arg1:T9 Arg2:T83	
+R31	Dat Arg1:T82 Arg2:T81	
+R32	Dat Arg1:T82 Arg2:T80	
+T84	Investigation 2404 2415	USG brzucha
+T85	Investigation_result 2430 2450	2 naczyniaki wątroby
+N39	Reference T85 ICD10:D18.0	Naczyniak krwionośny o dowolnym umiejscowieniu
+T86	Investigation_result 2452 2515	w j opłucnej L w kącie cechy płynu do 5-6mm, pojedyncze linie Z
+N40	Reference T86 ICD10:R93.5	Nieprawidłowe wyniki diagnostycznych badań obrazowych innych części jamy brzusznej, w tym przestrzeni zaotrzewnowej
+R33	Dat Arg1:T7 Arg2:T84	
+R34	Inv Arg1:T84 Arg2:T85	
+R35	Inv Arg1:T84 Arg2:T86	
+T87	Investigation 2520 2532	RTG kl piers
+T88	Investigation_result 2534 2542	w normie
+R36	Dat Arg1:T8 Arg2:T87	
+R37	Inv Arg1:T87 Arg2:T88	
+T89	Drug_dose 2597 2621	80/12,5mg 1x 1 tabl/rano
+T90	Drug_dose 2635 2649	1x 1 tabl/rano
+T91	Drug_dose 2661 2670	2x 1 tabl
+T92	Drug_dose 2684 2698	1x 1 tabl/rano
+T93	Drug_dose 2706 2721	1x 1 tabl/wiecz
+T94	Drug_dose 2731 2763	1x 1 kropla do każdego oka/wiecz
+R38	Drg Arg1:T1 Arg2:T89	
+R39	Drg Arg1:T2 Arg2:T90	
+R40	Drg Arg1:T3 Arg2:T91	
+R41	Drg Arg1:T4 Arg2:T92	
+R42	Drg Arg1:T5 Arg2:T93	
+R43	Drg Arg1:T6 Arg2:T94	

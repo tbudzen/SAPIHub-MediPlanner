@@ -1,0 +1,59 @@
+T1	Treatment 333 352	Dalsza opieka w POZ
+T2	Treatment 366 419	dalsza obserwacja w warunkach Poradni Kardiologicznej
+T3	Date 422 446	pierwsza kontrola za rok
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Treatment 451 543	Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T5	Behaviour 548 656	Dieta lekkostrawna, niskocholesterolowa z niską zawartością soli, tłuszczów zwierzęcych oraz cukrów prostych
+T6	Behaviour 661 691	Umiarkowana aktywność fizyczna
+T7	Treatment 696 752	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T8	Condition 971 1012	Łagodna niedomykalność zastawki aortalnej
+N1	Reference T8 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T9	Condition 1231 1264	Niedomykalność zastawki aortalnej
+N2	Reference T9 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T10	Symptom 1440 1472	atypowych bólów w kl. piersiowej
+N3	Reference T10 ICD10:R07.3	Inne bóle w klatce piersiowej
+T11	Symptom 1474 1504	pogorszenia tolerancji wysiłku
+T12	Symptom 1506 1567	labilnych wartości ciśnienia tetniczego (max 140-150/90 mmHg)
+T13	Symptom 1570 1594	napadowych kołatań serca
+N4	Reference T13 ICD10:R00.2	Kołatanie serca
+T14	Symptom 1611 1632	pulsem max do 130/min
+N5	Reference T14 ICD10:R00.0	Tachykardia, nieokreślona
+T15	Condition 1647 1672	umiarkowana IA -wrodzona?
+A1	Source T15 Declared
+N6	Reference T15 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T16	Investigation_result 1674 1684	PHT 380 ms
+T17	Investigation_result 1686 1692	VC 0,4
+T18	Treatment 1694 1711	Przebyte operacje
+N7	Reference T18 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T19	Negation 1713 1717	brak
+R2	Neg Arg1:T19 Arg2:T18	
+T20	Condition 1766 1769	WZW
+N8	Reference T20 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T21	Condition 1771 1780	borelioza
+N9	Reference T21 ICD10:A69.2	Choroba z Lyme
+T22	Negation 1783 1793	nie podaje
+R3	Neg Arg1:T22 Arg2:T20	
+R4	Neg Arg1:T22 Arg2:T21	
+T23	Condition 1794 1809	Wywiad rodzinny
+A2	Status T23 Family
+T24	Negation 1811 1821	nieistotny
+R5	Neg Arg1:T24 Arg2:T23	
+T25	Behaviour 1822 1837	Palenie tytoniu
+N10	Reference T25 ICD10:Z72.0	Używanie tytoniu
+T26	Negation 1839 1849	nie podaje
+R6	Neg Arg1:T26 Arg2:T25	
+T27	Behaviour 1850 1861	Inne używki
+T28	Negation 1863 1873	nie podaje
+R7	Neg Arg1:T28 Arg2:T27	
+T29	Condition 1874 1883	Uczulenia
+N11	Reference T29 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T30	Negation 1885 1895	nie podaje
+R8	Neg Arg1:T30 Arg2:T29	
+T31	Behaviour 1914 1923	studentka
+T32	Behaviour 1925 1934	pracująca
+T33	Behaviour 1936 1953	mieszka z rodziną
+T34	Investigation 1997 2007	echo serca
+T35	Investigation 2009 2012	TET
+T36	Investigation 2014 2018	ABPM
+T37	Investigation 2020 2026	Holter
+T38	Investigation 2028 2046	RTG kl. piersiowej

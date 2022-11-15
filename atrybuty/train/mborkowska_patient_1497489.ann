@@ -1,0 +1,181 @@
+T1	Investigation 3097 3101	ECHO
+T2	Investigation 3103 3113	Holter-EKG
+T3	Investigation 3115 3119	ABPM
+T4	Drug 2986 2994	Brilique
+T5	Drug_dose 2995 3010	90 mg 2x1 tabl.
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Drug 2961 2967	Atoris
+T7	Drug_dose 2968 2985	40 mg 1x1 tabl. W
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Drug 2934 2942	Polocard
+T9	Drug_dose 2943 2960	75 mg 1x1 tabl. W
+R3	Drg Arg1:T8 Arg2:T9	
+T10	Drug 2906 2913	Piramil
+T11	Drug_dose 2914 2933	1,25 mg 1x1 tabl. W
+R4	Drg Arg1:T10 Arg2:T11	
+T12	Drug 2880 2888	Bisocard
+T13	Drug_dose 2889 2905	5 mg 1x1 tabl. R
+R5	Drg Arg1:T12 Arg2:T13	
+T14	Drug 2854 2862	Oxydolor
+T15	Drug_dose 2863 2879	30 mg 1-0-1 p.o.
+R6	Drg Arg1:T14 Arg2:T15	
+T16	Drug 2832 2835	IPP
+T17	Drug_dose 2836 2853	40 mg 1x1 tabl. R
+R7	Drg Arg1:T16 Arg2:T17	
+T18	Drug 2807 2814	Clexane
+T19	Drug_dose 2815 2831	40 mg 1x1 s.c. W
+R8	Drg Arg1:T18 Arg2:T19	
+T20	Condition 2661 2688	choroba niedokrwienna serca
+T21	Condition 2691 2693	AF
+A1	Status T21 Family
+N2	Reference T21 ICD10:I48	Migotanie i trzepotanie przedsionków
+A2	Status T20 Family
+T22	Condition 2705 2723	udar niedokrwienny
+A3	Status T22 Family
+N3	Reference T22 ICD10:I63	Zawał mózgu
+T23	Condition 2752 2754	HA
+A4	Status T23 Family
+N4	Reference T23 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T24	Condition 2756 2761	HFpEF
+N5	Reference T24 ICD10:I50	Niewydolność serca
+A5	Status T24 Family
+T25	Condition 2763 2774	napadowe AF
+A6	Status T25 Family
+N6	Reference T25 ICD10:I48	Migotanie i trzepotanie przedsionków
+T26	Condition 2783 2786	TGA
+A7	Status T26 Family
+N7	Reference T26 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T27	Condition 2787 2790	VSD
+A8	Status T27 Family
+N8	Reference T27 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T28	Behaviour 2609 2635	warunki mieszkaniowe dobre
+T29	Condition 2559 2562	WZW
+T30	Condition 2569 2578	borelioza
+N10	Reference T30 ICD10:A69.2	Choroba z Lyme
+T31	Condition 2584 2587	tbc
+N11	Reference T31 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T32	Negation 2588 2591	(-)
+R9	Neg Arg1:T32 Arg2:T31	
+T33	Negation 2579 2583	(-),
+R10	Neg Arg1:T33 Arg2:T30	
+T34	Negation 2563 2566	(-)
+R11	Neg Arg1:T34 Arg2:T29	
+T35	Negation 2520 2530	nie podaje
+T36	Condition 2509 2518	Uczulenia
+N12	Reference T36 ICD10:T78.4	Alergia, nieokreślona
+R12	Neg Arg1:T35 Arg2:T36	
+T37	Behaviour 2475 2508	okresowo alkohol niskoprocentowy.
+N13	Reference T37 ICD10:Z72.1	Używanie alkoholu
+T38	Behaviour 2424 2444	Palenie tytoniu: tak
+T39	Negation 2422 2423	-
+T40	Treatment 2403 2420	Przebyte operacje
+R13	Neg Arg1:T39 Arg2:T40	
+T41	Negation 2259 2265	Neguje
+T42	Symptom 2267 2279	zasłabnięcia
+N15	Reference T42 ICD10:R55	Omdlenie i zapaść
+T43	Symptom 2281 2289	omdlenia
+N16	Reference T43 ICD10:R55	Omdlenie i zapaść
+T44	Symptom 2291 2301	krwawienia
+N17	Reference T44 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T45	Symptom 2303 2316	czarne stolce
+N18	Reference T45 ICD10:K92.1	Stolce smołowate
+T46	Symptom 2318 2334	brunatne wymioty
+N19	Reference T46 ICD10:K92.0	Wymioty krwawe
+T47	Condition 2336 2352	chorobę wrzodową
+N20	Reference T47 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T48	Symptom 2354 2382	duszność nocną typu ortopnoe
+T49	Condition 2384 2386	DM
+N22	Reference T49 ICD10:E11	Cukrzyca insulinoniezależna
+T50	Condition 2388 2398	udar mózgu
+N23	Reference T50 ICD10:I25.2	Przebyty zawał serca
+R14	Neg Arg1:T41 Arg2:T42	
+R15	Neg Arg1:T41 Arg2:T43	
+R16	Neg Arg1:T41 Arg2:T44	
+R17	Neg Arg1:T41 Arg2:T45	
+R18	Neg Arg1:T41 Arg2:T46	
+R19	Neg Arg1:T41 Arg2:T47	
+R20	Neg Arg1:T41 Arg2:T48	
+R21	Neg Arg1:T41 Arg2:T49	
+R22	Neg Arg1:T41 Arg2:T50	
+T51	Condition 2168 2190	nadciśnienie tętnicze,
+N24	Reference T51 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T52	Condition 2191 2198	otyłość
+N25	Reference T52 ICD10:E66	Otyłość
+T53	Behaviour 2200 2210	nikotynizm
+T54	Condition 2212 2257	stan zapalny w obrębie jamy ustnej po urazie.
+T55	Condition 807 831	ostrym zespole wieńcowym
+N27	Reference T55 ICD10:I24	Inne ostre postacie choroby niedokrwiennej serca
+T56	Condition 834 897	zawale mięśnia sercowego z uniesieniem odcinka ST ściany dolnej
+N28	Reference T56 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T57	Condition 1792 1812	OZW STEMI śc. dolnej
+N29	Reference T57 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T58	Condition 1813 1827	powikłanym NZK
+T59	Condition 1875 1889	zachłyśnięciem
+T60	Condition 898 912	powikłanym NZK
+N32	Reference T60 ICD10:I46.0	Zatrzymanie krążenia ze skuteczną resuscytacją
+T61	Treatment 1891 1921	skuteczna akcja resuscytacyjna
+T62	Condition 1933 1991	złamaniem przedniej blaszki środkowej części trzonu mostka
+N33	Reference T62 ICD10:S22.2	Złamanie mostka
+T63	Condition 1993 2087	złamaniami żeber po stronie prawej od I do VII, złamaniami żeber po stronie lewej od I do VII,
+N34	Reference T63 ICD10:S22.3	Złamanie żebra
+T64	Condition 2104 2123	wstrząs kardiogenny
+N35	Reference T64 ICD10:R57.0	Wstrząs kardiogenny
+T65	Condition 957 980	wstrząsem kardiogennym,
+N36	Reference T65 ICD10:R57.0	Wstrząs kardiogenny
+T66	Treatment 981 1021	leczonym PCI Cx z implantacją stentu DES
+T67	Date 1023 1033	07/08/2019
+R23	Dat Arg1:T67 Arg2:T66	
+R24	Dat Arg1:T67 Arg2:T65	
+T68	Condition 2126 2154	ostra niewydolność oddechowa
+N37	Reference T68 ICD10:J96	Niewydolność oddechowa niesklasyfikowana gdzie indziej
+T69	Condition 1357 1390	Nieprawidłowa tolerancja glukozy.
+N38	Reference T69 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T70	Condition 1340 1352	Dyslipidemia
+N39	Reference T70 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T71	Behaviour 1573 1583	Nikotynizm
+T72	Condition 1313 1334	Nadciśnienie tętnicze
+N41	Reference T72 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T73	Treatment 1041 1063	Skuteczna resyscutycja
+T74	Condition 1064 1100	powikłana licznymi złamaniami mostka
+N42	Reference T74 ICD10:S22.2	Złamanie mostka
+T75	Condition 1103 1227	żeber: po stronie prawej w odcinku przednio-bocznym od I do VII oraz po stronie lewej w odcinku przednio-bocznym od I do VII
+N43	Reference T75 ICD10:S22.3	Złamanie żebra
+T76	Condition 1241 1297	przebytej zakrzepicy zył głębokich kończyny dolnej lewej
+N44	Reference T76 ICD10:I80	Zapalenie żył i zakrzepowe zapalenie żył
+T77	Date 1298 1306	(08/2019
+R25	Dat Arg1:T77 Arg2:T76	
+T78	Investigation_result 1416 1484	heterozygotyczna postać mutacji czynnika V Leiden, niedobór białka S
+T79	Condition 1395 1414	Trombofilia złożona
+T80	Condition 1522 1537	Niedobór żelaza
+N45	Reference T80 ICD10:E61.1	Niedobór żelaza
+T81	Condition 1542 1555	Ubytki zębowe
+N46	Reference T81 ICD10:K08.1	Utrata zębów z powodu wypadku, usunięcia lub miejscowych chorób przyzębia
+T82	Condition 1560 1568	Otyłość.
+N47	Reference T82 ICD10:E66	Otyłość
+T83	Condition 2791 2793	PS
+A9	Status T83 Family
+T84	Treatment 2091 2103	resuscytacji
+T85	Condition 1849 1872	powikłanym urazem głowy
+N48	Reference T83 ICD10:Q22.1	Wrodzone zwężenie zastawki pnia płucnego
+T86	Condition 1836 1838	VF
+N49	Reference T86 ICD10:I49.0	Migotanie i trzepotanie komór
+T87	Condition 1840 1843	PEA
+N50	Reference T87 ICD10:I46.9	Zatrzymanie krążenia, nieokreślone
+T88	Condition 1845 1847	VF
+N51	Reference T88 ICD10:I49.0	Migotanie i trzepotanie komór
+T89	Condition 927 929	VF
+N52	Reference T89 ICD10:I49.0	Migotanie i trzepotanie komór
+T90	Condition 932 956	następczym urazem głowy,
+N40	Reference T71 ICD10:Z72.0	Używanie tytoniu
+N31	Reference T59 ICD10:Y84.4	Pobranie płynu
+N26	Reference T53 ICD10:Z72.0	Używanie tytoniu
+N14	Reference T38 ICD10:Z72.0	Używanie tytoniu
+N9	Reference T29 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T91	Treatment 331 420	Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej (skierowanie wydano).
+T92	Treatment 423 482	Konsultacja w Poradni Hematologicznej (skierowanie wydano).
+T93	Treatment 485 570	Odbiór dodatkowych wyników badań laboratoryjnych w Klinice Kardiologii i Wad Wrodzony
+N30	Reference T58 ICD10:I46.9	Zatrzymanie krążenia, nieokreślone
+N21	Reference T48 ICD10:R06.0	Duszność
+T94	Date 2447 2460	40 paczkolat.
+R26	Dat Arg1:T94 Arg2:T38	
+N1	Reference T20 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona

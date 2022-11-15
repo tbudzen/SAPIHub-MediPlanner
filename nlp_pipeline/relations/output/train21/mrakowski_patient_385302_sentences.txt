@@ -1,0 +1,754 @@
+allRelations          : 60
+oks                   : 30
+isRedundantAndRemoveds: 30
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 0
+GOOD / BAD            : 60 / 0
+Sentence 0:
+------------------------------------------------
+Wiek: 11 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+1. Systematyczne przyjmowanie leków:
+Vivacor 2x 0,8 mg,
+Enarenal, 1x 2,5mg
+Spironol 1x 1/2 tabl a 25mg ,
+
+R1	Drg Arg1:T2 Arg2:T11 << OK >>	Vivacor -> 2x 0,8 mg  <RANK: 3> <info: start[367, 375] <type: RIGHT>>
+R2	Drg Arg1:T2 Arg2:T12 <<REDUNDANT!!!REMOVED>>	Vivacor -> 1x 2,5mg <:REMOVED other first tag between (right):> <RANK: 0> <info: start[367, 396] <type: RIGHT>>
+R3	Drg Arg1:T2 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Vivacor -> 1x 1/2 tabl a 25mg <:REMOVED other first tag between (right):> <RANK: 0> <info: start[367, 414] <type: RIGHT>>
+R4	Drg Arg1:T9 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Spironol -> 2x 0,8 mg <:REMOVED other first tag between (left):> <RANK: 0> <info: start[405, 375] <type: LEFT>>
+R5	Drg Arg1:T9 Arg2:T12 <<REDUNDANT!!!REMOVED>>	Spironol -> 1x 2,5mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[405, 396] <type: LEFT>>
+R6	Drg Arg1:T9 Arg2:T13 << OK >>	Spironol -> 1x 1/2 tabl a 25mg  <RANK: 3> <info: start[405, 414] <type: RIGHT>>
+R7	Drg Arg1:T10 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Enarenal -> 2x 0,8 mg <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[386, 375] <type: LEFT>>
+R8	Drg Arg1:T10 Arg2:T12 << OK >>	Enarenal -> 1x 2,5mg  <RANK: 2> <info: start[386, 396] <type: RIGHT>>
+R9	Drg Arg1:T10 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1x 1/2 tabl a 25mg <:REMOVED other first tag between (right):> <RANK: 0> <info: start[386, 414] <type: RIGHT>>
+
+
+Sentence 5:
+Bemecor 2x 1/2 tabl a 100 mcg
+Acesan 1x 75mg
+Preductal MR 1x 1tabl,
+
+R10	Drg Arg1:T6 Arg2:T14 <<REDUNDANT!!!REMOVED>>	Preductal MR -> 2x 1/2 tabl a 100 mcg <:REMOVED other first tag between (left):> <RANK: 1> <info: start[480, 443] <type: LEFT>>
+R11	Drg Arg1:T6 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Preductal MR -> 1x 75mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[480, 472] <type: LEFT>>
+R12	Drg Arg1:T6 Arg2:T16 << OK >>	Preductal MR -> 1x 1tabl  <RANK: 3> <info: start[480, 493] <type: RIGHT>>
+R13	Drg Arg1:T7 Arg2:T14 <<REDUNDANT!!!REMOVED>>	Acesan -> 2x 1/2 tabl a 100 mcg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[465, 443] <type: LEFT>>
+R14	Drg Arg1:T7 Arg2:T15 << OK >>	Acesan -> 1x 75mg  <RANK: 3> <info: start[465, 472] <type: RIGHT>>
+R15	Drg Arg1:T7 Arg2:T16 <<REDUNDANT!!!REMOVED>>	Acesan -> 1x 1tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[465, 493] <type: RIGHT>>
+R16	Drg Arg1:T8 Arg2:T14 << OK >>	Bemecor -> 2x 1/2 tabl a 100 mcg  <RANK: 3> <info: start[435, 443] <type: RIGHT>>
+R17	Drg Arg1:T8 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Bemecor -> 1x 75mg <:REMOVED other first tag between (right):> <RANK: 1> <info: start[435, 472] <type: RIGHT>>
+R18	Drg Arg1:T8 Arg2:T16 <<REDUNDANT!!!REMOVED>>	Bemecor -> 1x 1tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[435, 493] <type: RIGHT>>
+
+
+Sentence 6:
+Essentiale forte 1x 1 tabl,
+Singulair, Seretide 250 - zgodnie z zaleceniem pulmonologa.
+
+R19	Drg Arg1:T3 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Singulair -> 1x 1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[531, 520] <type: LEFT>>
+R20	Drg Arg1:T3 Arg2:T18 << OK >>	Singulair -> zgodnie z zaleceniem pulmonologa  <RANK: 2> <info: start[531, 557] <type: RIGHT>>
+R21	Drg Arg1:T4 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Seretide 250 -> 1x 1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[542, 520] <type: LEFT>>
+R22	Drg Arg1:T4 Arg2:T18 << OK >>	Seretide 250 -> zgodnie z zaleceniem pulmonologa  <RANK: 3> <info: start[542, 557] <type: RIGHT>>
+R23	Drg Arg1:T5 Arg2:T17 << OK >>	Essentiale forte -> 1x 1 tabl  <RANK: 3> <info: start[503, 520] <type: RIGHT>>
+R24	Drg Arg1:T5 Arg2:T18 <<REDUNDANT!!!REMOVED>>	Essentiale forte -> zgodnie z zaleceniem pulmonologa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[503, 557] <type: RIGHT>>
+
+
+Sentence 7:
+2. Systematyczna opieka pulmonologiczna.
+
+
+
+Sentence 8:
+3. Kinezyterapia, gimnastyka oddechowa.
+
+
+
+Sentence 9:
+4. Profilaktyka infekcyjnego zapalenia wsierdzia.
+
+
+
+Sentence 10:
+------------------------------------------------
+
+
+
+Sentence 11:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 12:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią zespołu hipoplazji lewego serca (HLHS)
+   
+
+
+Sentence 13:
+Stan po operacji metodą Norwooda (18.09.08r-ICZMP).
+   
+R25	Dat Arg1:T24 Arg2:T23 << OK >>	18.09.08r -> operacji metodą Norwooda  <RANK: 3> <info: start[1048, 1022] <type: LEFT>>
+
+
+Sentence 14:
+Stan po dwukierunkowym zespoleniu metodą Glenna (17.03.2009r -ICZMP).
+   
+R26	Dat Arg1:T26 Arg2:T25 << OK >>	17.03.2009r -> dwukierunkowym zespoleniu metodą Glenna  <RANK: 3> <info: start[1118, 1077] <type: LEFT>>
+
+
+Sentence 15:
+Stan po cewnikowaniu serca z zabiegiem implantacji stentu Palmaz-Genesis 9x25 mm do zwężonej lewej tętnicy płucnej (28.05.12r- ICZMP).
+   
+R27	Dat Arg1:T28 Arg2:T77 << OK >>	28.05.12r -> zwężonej lewej tętnicy płucnej  <RANK: 3> <info: start[1258, 1226] <type: LEFT>>
+R28	Dat Arg1:T28 Arg2:T27 << OK >>	28.05.12r -> zabiegiem implantacji stentu Palmaz-Genesis 9x25 mm do  <RANK: 3> <info: start[1258, 1171] <type: LEFT>>
+R29	Dat Arg1:T28 Arg2:T78 << OK >>	28.05.12r -> cewnikowaniu serca  <RANK: 3> <info: start[1258, 1150] <type: LEFT>>
+
+
+Sentence 16:
+Stan po operacji met.
+
+
+Sentence 17:
+Fontana (tunel zewnątrzprzedsionkowy bez fenestracji - Munster 22.03.2013).
+   
+
+
+Sentence 18:
+Stan po implantacji kolejnego stentu do proksymalnych odcinków tętnic płucnych (05.08.2014 - Poznań).
+   
+R30	Dat Arg1:T32 Arg2:T31 << OK >>	05.08.2014 -> implantacji kolejnego stentu do proksymalnych odcinków tętnic płucnych  <RANK: 3> <info: start[1461, 1389] <type: LEFT>>
+
+
+Sentence 19:
+Niewydolność serca.
+   
+
+
+Sentence 20:
+Poszerzenie neoarty.
+   
+
+
+Sentence 21:
+Zwężenie lewego oskrzela głównego znacznego stopnia.
+   
+
+
+Sentence 22:
+Porażenie lewego fałdu głosowego.
+   
+
+
+Sentence 23:
+Astma oskrzelowa.
+   
+
+
+Sentence 24:
+Niedobór wzrostu.
+
+
+
+Sentence 25:
+------------------------------------------------
+
+
+
+Sentence 26:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 27:
+1. Systematyczne przyjmowanie leków:
+ Vivacor 2x 0,8 mg,
+ Enarenal, 1x 2,5mg
+Spironol 1x 1/2 tabl a 25mg ,
+
+R31	Drg Arg1:T40 Arg2:T41 << OK >>	Vivacor -> 2x 0,8 mg  <RANK: 3> <info: start[1811, 1819] <type: RIGHT>>
+R32	Drg Arg1:T40 Arg2:T43 <<REDUNDANT!!!REMOVED>>	Vivacor -> 1x 2,5mg <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1811, 1841] <type: RIGHT>>
+R33	Drg Arg1:T40 Arg2:T45 <<REDUNDANT!!!REMOVED>>	Vivacor -> 1x 1/2 tabl a 25mg <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1811, 1859] <type: RIGHT>>
+R34	Drg Arg1:T42 Arg2:T41 <<REDUNDANT!!!REMOVED>>	Enarenal -> 2x 0,8 mg <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[1831, 1819] <type: LEFT>>
+R35	Drg Arg1:T42 Arg2:T43 << OK >>	Enarenal -> 1x 2,5mg  <RANK: 2> <info: start[1831, 1841] <type: RIGHT>>
+R36	Drg Arg1:T42 Arg2:T45 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1x 1/2 tabl a 25mg <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1831, 1859] <type: RIGHT>>
+R37	Drg Arg1:T44 Arg2:T41 <<REDUNDANT!!!REMOVED>>	Spironol -> 2x 0,8 mg <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1850, 1819] <type: LEFT>>
+R38	Drg Arg1:T44 Arg2:T43 <<REDUNDANT!!!REMOVED>>	Spironol -> 1x 2,5mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1850, 1841] <type: LEFT>>
+R39	Drg Arg1:T44 Arg2:T45 << OK >>	Spironol -> 1x 1/2 tabl a 25mg  <RANK: 3> <info: start[1850, 1859] <type: RIGHT>>
+
+
+Sentence 28:
+Bemecor 2x 1/2 tabl a 100 mcg
+Acesan 1x 75mg
+Preductal MR 1x 1tabl,
+
+R40	Drg Arg1:T46 Arg2:T47 << OK >>	Bemecor -> 2x 1/2 tabl a 100 mcg  <RANK: 3> <info: start[1880, 1888] <type: RIGHT>>
+R41	Drg Arg1:T46 Arg2:T49 <<REDUNDANT!!!REMOVED>>	Bemecor -> 1x 75mg <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1880, 1917] <type: RIGHT>>
+R42	Drg Arg1:T46 Arg2:T51 <<REDUNDANT!!!REMOVED>>	Bemecor -> 1x 1tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1880, 1938] <type: RIGHT>>
+R43	Drg Arg1:T48 Arg2:T47 <<REDUNDANT!!!REMOVED>>	Acesan -> 2x 1/2 tabl a 100 mcg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1910, 1888] <type: LEFT>>
+R44	Drg Arg1:T48 Arg2:T49 << OK >>	Acesan -> 1x 75mg  <RANK: 3> <info: start[1910, 1917] <type: RIGHT>>
+R45	Drg Arg1:T48 Arg2:T51 <<REDUNDANT!!!REMOVED>>	Acesan -> 1x 1tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1910, 1938] <type: RIGHT>>
+R46	Drg Arg1:T50 Arg2:T47 <<REDUNDANT!!!REMOVED>>	Preductal MR -> 2x 1/2 tabl a 100 mcg <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1925, 1888] <type: LEFT>>
+R47	Drg Arg1:T50 Arg2:T49 <<REDUNDANT!!!REMOVED>>	Preductal MR -> 1x 75mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1925, 1917] <type: LEFT>>
+R48	Drg Arg1:T50 Arg2:T51 << OK >>	Preductal MR -> 1x 1tabl  <RANK: 3> <info: start[1925, 1938] <type: RIGHT>>
+
+
+Sentence 29:
+Essentiale forte 1x 1 tabl,
+Singulair, Seretide 250 - zgodnie z zaleceniem pulmonologa.
+
+R49	Drg Arg1:T52 Arg2:T53 << OK >>	Essentiale forte -> 1x 1 tabl  <RANK: 3> <info: start[1948, 1965] <type: RIGHT>>
+R50	Drg Arg1:T52 Arg2:T56 <<REDUNDANT!!!REMOVED>>	Essentiale forte -> zgodnie z zaleceniem pulmonologa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1948, 2002] <type: RIGHT>>
+R51	Drg Arg1:T54 Arg2:T53 <<REDUNDANT!!!REMOVED>>	Singulair -> 1x 1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[1976, 1965] <type: LEFT>>
+R52	Drg Arg1:T54 Arg2:T56 << OK >>	Singulair -> zgodnie z zaleceniem pulmonologa  <RANK: 2> <info: start[1976, 2002] <type: RIGHT>>
+R53	Drg Arg1:T55 Arg2:T53 <<REDUNDANT!!!REMOVED>>	Seretide 250 -> 1x 1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[1987, 1965] <type: LEFT>>
+R54	Drg Arg1:T55 Arg2:T56 << OK >>	Seretide 250 -> zgodnie z zaleceniem pulmonologa  <RANK: 3> <info: start[1987, 2002] <type: RIGHT>>
+
+
+Sentence 30:
+2. Systematyczna opieka pulmonologiczna.
+
+
+
+Sentence 31:
+3. Kinezyterapia, gimnastyka oddechowa.
+
+
+
+Sentence 32:
+4. Profilaktyka infekcyjnego zapalenia wsierdzia.\x09
+------------------------------------------------
+
+
+
+Sentence 33:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 34:
+------------------------------------------------
+ Rozpoznanie II: |Opisowo:: Wrodzona wada serca pod postacią zespołu hipoplazji lewego serca (HLHS)
+   
+
+
+Sentence 35:
+Stan po operacji metodą Norwooda (18.09.08r-ICZMP).
+   
+R55	Dat Arg1:T62 Arg2:T61 << OK >>	18.09.08r -> operacji metodą Norwooda  <RANK: 3> <info: start[2431, 2405] <type: LEFT>>
+
+
+Sentence 36:
+Stan po  dwukierunkowym zespoleniu metodą Glenna (17.03.2009r -ICZMP).
+   
+R56	Dat Arg1:T64 Arg2:T63 << OK >>	17.03.2009r -> dwukierunkowym zespoleniu metodą Glenna  <RANK: 3> <info: start[2502, 2461] <type: LEFT>>
+
+
+Sentence 37:
+Stan po cewnikowaniu serca z zabiegiem implantacji stentu Palmaz-Genesis 9x25 mm do zwężonej lewej tętnicy płucnej (28.05.12r- ICZMP).
+   
+R57	Dat Arg1:T66 Arg2:T80 << OK >>	28.05.12r -> zwężonej lewej tętnicy płucnej  <RANK: 3> <info: start[2642, 2610] <type: LEFT>>
+R58	Dat Arg1:T66 Arg2:T65 << OK >>	28.05.12r -> zabiegiem implantacji stentu Palmaz-Genesis 9x25 mm do  <RANK: 3> <info: start[2642, 2555] <type: LEFT>>
+R59	Dat Arg1:T66 Arg2:T79 << OK >>	28.05.12r -> cewnikowaniu serca  <RANK: 3> <info: start[2642, 2534] <type: LEFT>>
+
+
+Sentence 38:
+Stan po operacji met.
+
+
+Sentence 39:
+Fontana (tunel zewnątrzprzedsionkowy bez fenestracji - Munster 22.03.2013).
+   
+
+
+Sentence 40:
+Stan po implantacji kolejnego stentu do proksymalnych odcinków tętnic płucnych (05.08.2014 - Poznań).
+   
+R60	Dat Arg1:T70 Arg2:T69 << OK >>	05.08.2014 -> implantacji kolejnego stentu do proksymalnych odcinków tętnic płucnych  <RANK: 3> <info: start[2845, 2773] <type: LEFT>>
+
+
+Sentence 41:
+Niewydolność serca.
+   
+
+
+Sentence 42:
+Poszerzenie neoarty.
+   
+
+
+Sentence 43:
+Zwężenie lewego oskrzela głównego znacznego stopnia. 
+   
+
+
+Sentence 44:
+Porażenie lewego fałdu głosowego.
+   
+
+
+Sentence 45:
+Astma oskrzelowa.
+   
+
+
+Sentence 46:
+Niedobór wzrostu.|Rozpoznanie IV: |Rozpoznanie V: |Rozpozanie I: |Rozpoznanie III:
+------------------------------------------------
+
+
+
+Sentence 47:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 48:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.99[10^3/ul]
+    
+
+
+Sentence 49:
+RBC Krwinki czerwone:4.66[10^6/ul]
+    
+
+
+Sentence 50:
+HGB Hemoglobina:13.8[g/dl]
+    
+
+
+Sentence 51:
+HCT Hematokryt:40.1[%]
+    
+
+
+Sentence 52:
+MCV wskaźnik czerwonokrw:86.1[fl]
+    
+
+
+Sentence 53:
+MCH wskaźnik czerwonokrw:29.6[pg]
+    
+
+
+Sentence 54:
+MCHC wskaźnik czerwonokr:34.4[g/dl]
+    
+
+
+Sentence 55:
+PLT z morfologii:177[10^3/ul]
+    
+
+
+Sentence 56:
+RDW-SD:43.8[fl]
+    
+
+
+Sentence 57:
+RDW-CV:14.1[%]
+    PDW:15.6[fl]
+    MPV:12.8[fl]
+    
+
+
+Sentence 58:
+P-LCR:47.6[%]
+    
+
+
+Sentence 59:
+PCT (hematokryt płytkowy:0.23[%]
+    
+
+
+Sentence 60:
+NEUTR# wartość bezwzględ:2.92[10^3/ul]
+    
+
+
+Sentence 61:
+NEUTR%:58.5[%]
+    
+
+
+Sentence 62:
+LYMH# wartość bezwzględn:1.30[10^3/ul]
+    
+
+
+Sentence 63:
+LYMPH%:26.1[%]
+    
+
+
+Sentence 64:
+MONO# wartość bezwzględn:0.49[10^3/ul]
+    
+
+
+Sentence 65:
+MONO%:9.8[%]
+    
+
+
+Sentence 66:
+EO# wartość bezwzględna:0.24[10^3/ul]
+    
+
+
+Sentence 67:
+EO%:4.8[%]
+    
+
+
+Sentence 68:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    
+
+
+Sentence 69:
+BASO%:0.8[%]
+    
+
+
+Sentence 70:
+NRBC %:0.0[%]
+    
+
+
+Sentence 71:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 72:
+Antytrombina III: Antytrombina III:122[%]
+
+
+
+Sentence 73:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:33.7[sek]
+
+
+
+Sentence 74:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 75:
+Czas protrombinowy:13.9[sek]
+    
+
+
+Sentence 76:
+Wskaźnik PT:79.1[%]
+    
+
+
+Sentence 77:
+INR:1.25
+Czas trombinowy TT: Czas trombinowy TT:17.0[sek]
+
+
+
+Sentence 78:
+Fibrynogen: Fibrynogen:2.28[g/L]
+D-dimer - test ilościowy: D-dimer - test ilościowy:127[ng/ml]
+
+
+
+Sentence 79:
+Płytki krwi z THEX: Płytki krwi:168[10^3/ul]
+
+
+
+Sentence 80:
+TSH: TSH:5.75[uIU/ml]
+
+
+
+Sentence 81:
+FT3: FT3:4.49[pg/ml]
+
+
+
+Sentence 82:
+FT4: FT4:1.55[ng/dl]
+
+
+
+Sentence 83:
+Troponina T: Troponina T:4.0[pg/ml]
+
+
+
+Sentence 84:
+AFP: AFP:1.25[IU/ml]
+
+
+
+Sentence 85:
+ALAT: ALAT:25[U/L]
+
+
+
+Sentence 86:
+Albumina: Albumina:4.9[g/dl]
+
+
+
+Sentence 87:
+ASPAT: ASPAT:33[U/L]
+
+
+
+Sentence 88:
+Białko całkowite w surowicy (TP): Białko całkowite w surow:7.4[g/dl]
+
+
+
+Sentence 89:
+CK - aktywność: CK:70[U/L]
+
+
+
+Sentence 90:
+CKMB aktywność: CKMB:41[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 91:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 92:
+Potas (K): Potas:4.2[mmol/L]
+
+
+
+Sentence 93:
+Fosfataza alkaliczna (ALP): Fosfataza alkaliczna:350[U/L]
+
+
+
+Sentence 94:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:56[U/L]
+
+
+
+Sentence 95:
+Kreatynina + GFR
+    
+
+
+Sentence 96:
+Kreatynina w surowicy:0.42[mg/dl]
+    
+
+
+Sentence 97:
+eGFR stand. wg Schwartza:174.2[ml/min/1,73 m^2]
+    
+
+
+Sentence 98:
+eGFR zmod.
+
+
+Sentence 99:
+wg Schwartza:130.8[ml/min/1,73 m^2]
+    wzrost:133[cm]
+
+
+
+Sentence 100:
+Mleczany (LAC): Mleczany:24.4[mg/dl]
+
+
+
+Sentence 101:
+Mleczany (LAC): Mleczany:40.7[mg/dl]
+
+
+
+Sentence 102:
+Mleczany (LAC): Mleczany:28.5[mg/dl]
+
+
+
+Sentence 103:
+Mleczany (LAC): Mleczany:56.7[mg/dl]
+
+
+
+Sentence 104:
+LDH Dehydrogenaza mleczanowa: LDH Dehydrogenaza mlecza:264[U/L]
+
+
+
+Sentence 105:
+Magnez: Magnez:0.81[mmol/L]
+
+
+
+Sentence 106:
+Mocznik: Mocznik:24[mg/dl]
+
+
+
+Sentence 107:
+Wapń całkowity: Wapń całkowity:2.59[mmol/L]
+
+
+
+Sentence 108:
+Digoksyna: Digoksyna:1.6[ng/ml]
+
+
+
+Sentence 109:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    
+
+
+Sentence 110:
+pH:7.369
+    pCO2:44.8[mmHg]
+    BE:0.10[mmol/L]
+    HCO3:25.2[mmol/L]
+    
+
+
+Sentence 111:
+pO2:40.1[mmHg]
+    
+
+
+Sentence 112:
+O2Sat:73.3[%]
+
+
+
+Sentence 113:
+Glukoza w surowicy: Glukoza w surowicy:83[mg/dl]
+
+
+
+Sentence 114:
+NT-proBNP surowica: NT-proBNP w surowicy:52[pg/ml]
+
+
+
+Sentence 115:
+------------------------------------------------
+
+
+
+Sentence 116:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 117:
+Q23.4
+I50.0
+
+
+
+Sentence 118:
+Z98.8
+Z95.8
+J98.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 119:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 120:
+I81
+89.602
+L43
+O61
+G03
+M87
+N45
+N24
+L07
+O69
+I09
+O29
+C55
+89.41
+G11
+I77
+K33
+L31
+
+
+
+Sentence 121:
+L11
+
+
+
+Sentence 122:
+O55
+I17
+O77
+N11
+I19
+O35
+M37
+
+
+
+Sentence 123:
+N13
+M19
+M18
+
+
+
+Sentence 124:
+------------------------------------------------
+
+

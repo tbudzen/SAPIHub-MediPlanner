@@ -1,0 +1,166 @@
+T1	Condition 447 478	Łagodna niedomykalność mitralna
+N1	Reference T1 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T2	Condition 480 533	Tętniak aorty brzusznej ze skrzeplinami przyściennymi
+N2	Reference T2 ICD10:I71.4	Tętniak odcinka brzusznego aorty, bez informacji o pęknięciu
+T3	Condition 535 565	Blok przedsionkowo-komorowy I*
+N3	Reference T3 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T4	Condition 567 598	Nadciśnienie tętnicze I* wg WHO
+N4	Reference T4 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T5	Condition 600 620	Hipercholesterolemia
+N5	Reference T5 ICD10:E78.0	Czysta hipercholesterolemia
+T6	Condition 622 653	Nieprawidłowa glikemia na czczo
+N6	Reference T6 ICD10:R73	Podwyższone stężenie glukozy we krwi
+T7	Behaviour 667 677	Nikotynizm
+N7	Reference T7 ICD10:Z72.0	Używanie tytoniu
+T8	Treatment 687 721	alloplastyce obu stawów biodrowych
+A1	Status T8 Historical_Insignificant
+N8	Reference T8 ICD10:Z96.6	Obecność implantów ortopedycznych
+T9	Treatment 731 740	op. zaćmy
+A2	Status T9 Historical_Insignificant
+T10	Treatment 874 954	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej i Chirurgii Naczyniowej
+T11	Treatment 968 1070	hospitalizacja w Oddziale Chirurgii Naczyniowej celem ostatecznej kwalifikacji do leczenia zabiegowego
+T12	Behaviour 1096 1135	Dieta lekkostrawna, niskocholesterolowa
+T13	Treatment 1142 1232	Okresowo kontrola lipidogram, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T14	Date 1233 1244	co 6-8 tyg.
+R1	Dat Arg1:T14 Arg2:T13	
+T15	Treatment 1257 1305	Systematyczna kontrola ciśnienia tętniczego krwi
+T16	Negation 1312 1317	Zakaz
+T17	Behaviour 1318 1333	palenia tytoniu
+N9	Reference T17 ICD10:Z72.0	Używanie tytoniu
+R2	Neg Arg1:T16 Arg2:T17	
+T18	Negation 1338 1343	Zakaz
+T19	Behaviour 1344 1429	nadmiernej aktywności fizycznej w tym dźwigania przedmiotów o masie wyższej niż 10 kg
+R3	Neg Arg1:T18 Arg2:T19	
+T20	Behaviour 1434 1537	Unikanie urazów, wstrząsów i sytuacji stresowych związanych z nagłym skokiem ciśnienia tętniczego krwi.
+T21	Drug 1547 1560	Co-Prestarium
+T22	Drug_dose 1561 1582	5/5 mg 1x1 tabl. rano
+T23	Drug 1583 1588	Acard
+T24	Drug_dose 1589 1614	75 mg 1x1 tabl. wieczorem
+T25	Drug 1615 1621	Atoris
+T26	Drug_dose 1622 1647	40 mg 1x1 tabl. wieczorem
+T27	Drug 1648 1653	Nedal
+T28	Drug_dose 1654 1675	5 mg 1x1/2 tabl. rano
+T29	Drug 1676 1686	Vascotazin
+T30	Drug_dose 1687 1695	2x1 tabl
+T31	Drug 1713 1721	Vicebrol
+T32	Drug_dose 1722 1730	2x2 tabl
+T33	Drug 1748 1755	Otrex  
+T34	Drug_dose 1755 1770	600 mg 1x1 tabl
+R4	Drg Arg1:T21 Arg2:T22	
+R5	Drg Arg1:T23 Arg2:T24	
+R6	Drg Arg1:T25 Arg2:T26	
+R7	Drg Arg1:T27 Arg2:T28	
+R8	Drg Arg1:T29 Arg2:T30	
+R9	Drg Arg1:T31 Arg2:T32	
+R10	Drg Arg1:T33 Arg2:T34	
+T35	Condition 1930 1932	HA
+N10	Reference T35 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T36	Condition 1934 1942	AVB I st
+N11	Reference T36 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T37	Condition 1944 1947	HLP
+N12	Reference T37 ICD10:E78.2	Hiperlipidemia mieszana
+T38	Condition 1949 1962	hiperurykemią
+N13	Reference T38 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T39	Condition 1964 1995	nieprawidłową glikemią na czczo
+N14	Reference T39 ICD10:R73	Podwyższone stężenie glukozy we krwi
+T40	Behaviour 1997 2009	nikotynizmem
+N15	Reference T40 ICD10:Z72.0	Używanie tytoniu
+T41	Investigation 2051 2054	ekg
+T42	Date 2055 2067	od kilku lat
+T43	Investigation_result 2011 2048	obserwowanymi zał Q na ścianie dolnej
+R11	Dat Arg1:T42 Arg2:T41	
+R12	Inv Arg1:T41 Arg2:T43	
+T44	Condition 2071 2077	jaskrą
+N16	Reference T44 ICD10:H40.9	Jaskra, nieokreślona
+T45	Symptom 2161 2187	okresowych obrzęków kostek
+N18	Reference T45 ICD10:R60.0	Obrzęk zlokalizowany
+T46	Negation 2189 2195	Neguje
+T47	Symptom 2197 2209	zasłabnięcia
+T48	Symptom 2211 2219	omdlenia
+N19	Reference T48 ICD10:R55	Omdlenie i zapaść
+T49	Symptom 2221 2241	bóle w kl piersiowej
+N20	Reference T49 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T50	Symptom 2243 2253	krwawienia
+T51	Symptom 2255 2268	czarne stolce
+N21	Reference T51 ICD10:K92.1	Stolce smołowate
+T52	Symptom 2270 2286	brunatne wymioty
+N22	Reference T52 ICD10:K92.0	Wymioty krwawe
+T53	Condition 2288 2304	chorobę wrzodową
+N23	Reference T53 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T54	Symptom 2306 2334	duszność nocną typu ortopnoe
+N24	Reference T54 ICD10:R06.0	Duszność
+T55	Condition 2336 2338	DM
+N25	Reference T55 ICD10:E14	Cukrzyca nieokreślona
+T56	Condition 2340 2350	udar mózgu
+N26	Reference T56 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T57	Condition 2352 2363	zawał serca
+N27	Reference T57 ICD10:I25.2	Przebyty zawał serca
+R13	Neg Arg1:T46 Arg2:T47	
+R14	Neg Arg1:T46 Arg2:T48	
+R15	Neg Arg1:T46 Arg2:T49	
+R16	Neg Arg1:T46 Arg2:T50	
+R17	Neg Arg1:T46 Arg2:T51	
+R18	Neg Arg1:T46 Arg2:T52	
+R19	Neg Arg1:T46 Arg2:T53	
+R20	Neg Arg1:T46 Arg2:T54	
+R21	Neg Arg1:T46 Arg2:T55	
+R22	Neg Arg1:T46 Arg2:T56	
+R23	Neg Arg1:T46 Arg2:T57	
+N17	Reference T43 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+T58	Treatment 2377 2385	operacje
+A3	Status T58 Historical_Insignificant
+T59	Date 2393 2401	2x 2017r
+R24	Dat Arg1:T59 Arg2:T58	
+T60	Treatment 2403 2425	plastyka st biodrowych
+A4	Status T60 Historical_Insignificant
+N28	Reference T60 ICD10:Z96.6	Obecność implantów ortopedycznych
+T61	Date 2426 2430	1980
+R25	Dat Arg1:T61 Arg2:T60	
+T62	Behaviour 2432 2452	Palenie tytoniu: tak
+N29	Reference T62 ICD10:Z72.0	Używanie tytoniu
+T63	Date 2453 2462	od 62 lat
+R26	Dat Arg1:T63 Arg2:T62	
+T64	Behaviour 2463 2474	Inne używki
+T65	Negation 2476 2479	nie
+T66	Condition 2481 2490	Uczulenia
+N30	Reference T66 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T67	Negation 2492 2495	nie
+T68	Condition 2524 2527	WZW
+N31	Reference T68 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T69	Condition 2534 2543	borelioza
+N32	Reference T69 ICD10:A69.2	Choroba z Lyme
+T70	Condition 2551 2554	tbc
+N33	Reference T70 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T71	Negation 2528 2531	(-)
+T72	Negation 2544 2549	( - )
+T73	Negation 2555 2558	(-)
+R27	Neg Arg1:T65 Arg2:T64	
+R28	Neg Arg1:T67 Arg2:T66	
+R29	Neg Arg1:T71 Arg2:T68	
+R30	Neg Arg1:T72 Arg2:T69	
+R31	Neg Arg1:T73 Arg2:T70	
+T74	Behaviour 2576 2602	warunki mieszkaniowe dobre
+T75	Drug 2642 2655	Co-Prestarium
+T76	Drug 2682 2691	Vasotazin
+T77	Drug 2701 2709	Vicebrol
+T78	Drug 2719 2745	Pentaerythritol compositum
+T79	Drug 2756 2761	Otrex
+T80	Drug_dose 2656 2681	5+5mg 1x1 przy wyższym BP
+T81	Drug_dose 2692 2700	2x1 tabl
+T82	Drug_dose 2710 2718	2x2 tabl
+T83	Drug_dose 2746 2754	1x1 rano
+T84	Drug_dose 2762 2769	600 1x1
+R32	Drg Arg1:T75 Arg2:T80	
+R33	Drg Arg1:T76 Arg2:T81	
+R34	Drg Arg1:T77 Arg2:T82	
+R35	Drg Arg1:T78 Arg2:T83	
+R36	Drg Arg1:T79 Arg2:T84	
+T85	Investigation 2831 2852	badania laboratoryjne
+T86	Investigation 2854 2858	ECHO
+T87	Investigation 2860 2864	ABPM
+T88	Investigation 2866 2876	Holter ekg
+T89	Investigation 2878 2881	TET
+T90	Condition 2387 2392	zaćma
+A5	Status T90 Historical_Insignificant
+N34	Reference T90 ICD10:H26.9	Zaćma, nieokreślona
+R37	Dat Arg1:T59 Arg2:T90	

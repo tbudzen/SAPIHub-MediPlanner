@@ -1,0 +1,63 @@
+T1	Condition 447 477	Diagnostyka w kierunku arytmii
+A1	Source T1 Declared
+N1	Reference T1 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T2	Condition 479 525	Diagnostyka w kierunku nadciśnienia tętniczego
+A2	Source T2 Declared
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Treatment 638 657	Dalsza opieka w POZ
+T4	Behaviour 663 762	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych i cukrów prostych
+T5	Behaviour 768 806	Wskazane podjęcie aktywności fizycznej
+T6	Investigation 811 867	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T7	Treatment 873 901	Regularne przyjmowanie leków
+T8	Drug 909 918	Captopril
+T9	Drug_dose 919 991	12,5mg 1 tabletka podjęzykowo w przypadku wysokiego ciśnienia tętniczego
+R1	Drg Arg1:T8 Arg2:T9	
+T10	Symptom 1187 1221	napadowego uczucia kołatania serca
+N3	Reference T10 ICD10:R00.2	Kołatanie serca
+T12	Symptom 1270 1286	odczuwa duszność
+N4	Reference T12 ICD10:R06.0	Duszność
+T13	Symptom 1288 1311	uczucie kołatania serca
+N5	Reference T13 ICD10:R00.2	Kołatanie serca
+T11	Date 1339 1353	od około  roku
+R2	Dat Arg1:T11 Arg2:T13	
+R3	Dat Arg1:T11 Arg2:T12	
+T14	Date 1363 1380	od około miesiąca
+T15	Investigation_result 1391 1430	labilne wartości RR max do 180/110 mmHg
+N6	Reference T15 ICD10:R03.0	Podwyższone ciśnienie tętnicze krwi, bez rozpoznanego nadciśnienia tętniczego
+R4	Dat Arg1:T14 Arg2:T15	
+T16	Condition 1445 1481	hiperlipidemia leczona głównie dietą
+N7	Reference T16 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T17	Symptom 1484 1609	Przy wyższych wartościach RR występują nietypowe dolegliwości bólowe w klatce piersiowej głównie o charakterze kłucia, ucisku
+N8	Reference T17 ICD10:R07.3	Inne bóle w klatce piersiowej
+T18	Symptom 1611 1619	Omdlenia
+N9	Reference T18 ICD10:R55	Omdlenie i zapaść
+T19	Symptom 1621 1640	utraty przytomności
+N10	Reference T19 ICD10:R55	
+T20	Date 1641 1659	w wieku dziecięcym
+R5	Dat Arg1:T20 Arg2:T19	
+R6	Dat Arg1:T20 Arg2:T18	
+T21	Condition 1684 1699	Wywiad rodzinny
+A3	Status T21 Family
+T22	Condition 1710 1720	udar mózgu
+A4	Status T22 Family
+N11	Reference T22 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T23	Condition 1768 1779	zawał serca
+A5	Status T23 Family
+N12	Reference T23 ICD10:I25.2	Przebyty zawał serca
+T24	Condition 1807 1818	zawał serca
+A6	Status T24 Family
+N13	Reference T24 ICD10:I25.2	Przebyty zawał serca
+T25	Negation 1820 1823	Nie
+T26	Behaviour 1824 1828	pali
+N14	Reference T26 ICD10:Z72.0	Używanie tytoniu
+R7	Neg Arg1:T25 Arg2:T26	
+T27	Treatment 1829 1847	Zabiegi operacyjne
+T28	Treatment 1849 1873	operacja laryngologiczna
+A7	Status T28 Historical_Insignificant
+T29	Behaviour 1898 1922	Pracuje - praca umysłowa
+T30	Investigation 1993 2003	holter-ekg
+T31	Investigation 2005 2014	holter-rr
+T32	Investigation 2016 2026	echo serca
+T33	Investigation 2028 2031	TET
+T34	Condition 1876 1897	krzywa przegroda nosa
+N15	Reference T34 ICD10:J34.2	Skrzywienie przegrody nosa

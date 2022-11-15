@@ -1,0 +1,76 @@
+T1	Symptom 439 469	Omdlenia o niejasnej etiologii
+N1	Reference T1 ICD10:R55	Omdlenie i zapaść
+T2	Condition 471 478	Migrena
+N2	Reference T2 ICD10:G43.9	Migrena, nieokreślona
+T3	Condition 480 487	Nadwaga
+T4	Behaviour 489 499	Nikotynizm
+N3	Reference T4 ICD10:Z72.0	Używanie tytoniu
+T5	Date 500 513	w przeszłości
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Treatment 639 666	dalsza opieka w poradni POZ
+T7	Treatment 673 705	okresowa kontrola kardiologiczna
+T8	Investigation 712 861	poszerzona diagnostyka omdleń – elektofizjologiczna, neurologiczna i diabetologiczna (wykluczenie hipoglikemii jako przyczyny omdleń) i neurologiczna
+T9	Investigation 868 906	okresowa kontrola ciśnienia tętniczego
+T10	Investigation 913 942	okresowa kontrola lipidogramu
+T11	Investigation 944 981	ponowne oznaczenie stężenie d-dimerów
+T12	Date 982 995	za 3 tygodnie
+R2	Dat Arg1:T12 Arg2:T11	
+T13	Behaviour 1002 1038	dieta zbliżona do śródziemnomorskiej
+T14	Behaviour 1044 1063	redukcja masy ciała
+T15	Symptom 1235 1249	zawrotów głowy
+N4	Reference T15 ICD10:R42	Zawroty głowy i odurzenie
+T16	Symptom 1251 1257	omdleń
+N5	Reference T16 ICD10:R55	Omdlenie i zapaść
+T17	Date 1259 1267	2-3 lata
+T18	Symptom 1269 1285	3 epizody w roku
+R3	Dat Arg1:T17 Arg2:T15	
+R4	Dat Arg1:T17 Arg2:T16	
+R5	Dat Arg1:T17 Arg2:T18	
+T19	Condition 1335 1356	bradykardia do 38/min
+A1	Source T19 Declared
+N6	Reference T19 ICD10:R00.1	Bradykardia, nieokreślona
+T20	Condition 1380 1387	migreny
+N7	Reference T20 ICD10:G43.9	Migrena, nieokreślona
+T21	Treatment 1388 1405	Przebyte operacje
+N8	Reference T21 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T22	Negation 1407 1413	neguje
+T23	Condition 1441 1451	wada serca
+A2	Status T23 Family
+T24	Negation 1453 1459	neguje
+T25	Condition 1460 1463	SCD
+A3	Status T25 Family
+N9	Reference T25 ICD10:I46.1	Nagły zgon sercowy, tak opisany
+T26	Negation 1476 1482	neguje
+T27	Condition 1483 1485	DM
+A4	Status T27 Family
+N10	Reference T27 ICD10:E14	Cukrzyca nieokreślona
+R6	Neg Arg1:T24 Arg2:T25	
+R7	Neg Arg1:T26 Arg2:T27	
+R8	Neg Arg1:T22 Arg2:T21	
+T28	Condition 1498 1505	Alergie
+N11	Reference T28 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T29	Negation 1507 1513	neguje
+T30	Behaviour 1515 1530	Nikotynizm: tak
+N12	Reference T30 ICD10:Z72.0	Używanie tytoniu
+T31	Date 1532 1547	do 7 lat wstecz
+T32	Behaviour 1549 1561	12 paczkolat
+N13	Reference T32 ICD10:Z72.0	Używanie tytoniu
+T33	Behaviour 1563 1570	Alkohol
+N14	Reference T33 ICD10:Z72.1	Używanie alkoholu
+T34	Negation 1572 1578	neguje
+T35	Behaviour 1580 1597	Uzależnienie inne
+T36	Negation 1599 1605	neguje
+T37	Behaviour 1623 1641	handel internetowy
+T38	Drug 1643 1647	Leki
+T39	Negation 1649 1656	żadnych
+T40	Investigation 1685 1695	echo serca
+T41	Investigation 1697 1700	TET
+T42	Investigation 1702 1706	ABPM
+T43	Investigation 1708 1718	Holter ekg
+T44	Investigation 1720 1738	rtg kl. piersiowej
+R9	Neg Arg1:T39 Arg2:T38	
+R10	Neg Arg1:T36 Arg2:T35	
+R11	Neg Arg1:T34 Arg2:T33	
+R12	Dat Arg1:T31 Arg2:T30	
+R13	Dat Arg1:T31 Arg2:T32	
+R14	Neg Arg1:T29 Arg2:T28	

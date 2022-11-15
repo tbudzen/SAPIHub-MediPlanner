@@ -1,0 +1,769 @@
+allRelations          : 120
+oks                   : 47
+isRedundantAndRemoveds: 64
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 9
+GOOD / BAD            : 111 / 9
+Sentence 0:
+------------------------------------------------
+Wiek: 81 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+dalsza opieka w poradni POZ
+okresowa kontrola kardiologiczna, onkologiczna, neurologiczna, pulmonologiczna, hepatologiczna
+
+
+
+Sentence 5:
+okresowa kontrola ciśnienia tętniczego, tętna, glikemii
+
+
+
+Sentence 6:
+dieta cukrzycowa
+regularne przyjmowanie leków
+
+
+
+Sentence 7:
+Pradaxa 110 mg 1 tabl.
+R1	Drg Arg1:T5 Arg2:T16 << OK >>	Pradaxa -> 110 mg 1 tabl. 2 x dz  <RANK: 3> <info: start[555, 563] <type: RIGHT>>
+
+
+Sentence 8:
+2 x dz
+Nolpaza 20 mg 1 tabl.
+R2	Drg Arg1:T6 Arg2:T17 << OK >>	Nolpaza -> 20 mg 1 tabl. rano  <RANK: 3> <info: start[585, 593] <type: RIGHT>>
+
+
+Sentence 9:
+rano
+Beto ZK 50 mg 1 tabl.
+R3	Drg Arg1:T7 Arg2:T18 << OK >>	Beto ZK -> 50 mg 1 tabl. rano  <RANK: 3> <info: start[612, 620] <type: RIGHT>>
+
+
+Sentence 10:
+rano
+Diured 5 mg 1 tabl.
+R4	Drg Arg1:T8 Arg2:T19 << OK >>	Diured -> 5 mg 1 tabl. rano  <RANK: 3> <info: start[639, 646] <type: RIGHT>>
+
+
+Sentence 11:
+rano
+Piramil 10 mg 1 tabl wieczorem
+Amlopin 10 mg 1 tabl.
+R5	Drg Arg1:T9 Arg2:T20 << OK >>	Piramil -> 10 mg 1 tabl wieczorem  <RANK: 3> <info: start[664, 672] <type: RIGHT>>
+R6	Drg Arg1:T9 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Piramil -> 10 mg 1 tabl. rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[664, 703] <type: RIGHT>>
+R7	Drg Arg1:T10 Arg2:T20 <<REDUNDANT!!!REMOVED>>	Amlopin -> 10 mg 1 tabl wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[695, 672] <type: LEFT>>
+R8	Drg Arg1:T10 Arg2:T21 << OK >>	Amlopin -> 10 mg 1 tabl. rano  <RANK: 3> <info: start[695, 703] <type: RIGHT>>
+
+
+Sentence 12:
+rano
+Zoxon 2 mg 1x1 tabl wieczorem 
+Siofor 850 mg 2x1 tabl 
+Letrox 125 ug 1x1 tabl rano na czczo 
+
+R9	Drg Arg1:T11 Arg2:T22 << OK >>	Zoxon -> 2 mg 1x1 tabl wieczorem  <RANK: 3> <info: start[722, 728] <type: RIGHT>>
+R10	Drg Arg1:T11 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Zoxon -> 850 mg 2x1 tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[722, 760] <type: RIGHT>>
+R11	Drg Arg1:T11 Arg2:T24 <<REDUNDANT!!!REMOVED>>	Zoxon -> 125 ug 1x1 tabl rano na czczo <:REMOVED other first tag between (right):> <RANK: 1> <info: start[722, 784] <type: RIGHT>>
+R12	Drg Arg1:T12 Arg2:T22 <<REDUNDANT!!!REMOVED>>	Siofor -> 2 mg 1x1 tabl wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[753, 728] <type: LEFT>>
+R13	Drg Arg1:T12 Arg2:T23 << OK >>	Siofor -> 850 mg 2x1 tabl  <RANK: 3> <info: start[753, 760] <type: RIGHT>>
+R14	Drg Arg1:T12 Arg2:T24 <<REDUNDANT!!!REMOVED>>	Siofor -> 125 ug 1x1 tabl rano na czczo <:REMOVED other first tag between (right):> <RANK: 1> <info: start[753, 784] <type: RIGHT>>
+R15	Drg Arg1:T13 Arg2:T22 <<REDUNDANT!!!REMOVED>>	Letrox -> 2 mg 1x1 tabl wieczorem <:REMOVED other first tag between (left):> <RANK: 1> <info: start[777, 728] <type: LEFT>>
+R16	Drg Arg1:T13 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Letrox -> 850 mg 2x1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[777, 760] <type: LEFT>>
+R17	Drg Arg1:T13 Arg2:T24 << OK >>	Letrox -> 125 ug 1x1 tabl rano na czczo  <RANK: 3> <info: start[777, 784] <type: RIGHT>>
+
+
+Sentence 13:
+Pulmoterol 50 ug/d  2x1 wdech 
+Etruzil 2,5 mg 1x1 tabl wieczorem 
+Berodual  (50ug/d +21 ug/d) doraźnie 
+
+R18	Drg Arg1:T14 Arg2:T25 << OK >>	Pulmoterol -> 50 ug/d  2x1 wdech  <RANK: 3> <info: start[815, 826] <type: RIGHT>>
+R19	Drg Arg1:T14 Arg2:T26 <<REDUNDANT!!!REMOVED>>	Pulmoterol -> 2,5 mg 1x1 tabl wieczorem <:REMOVED other first tag between (right):> <RANK: 1> <info: start[815, 854] <type: RIGHT>>
+R20	Drg Arg1:T14 Arg2:T28 <<REDUNDANT!!!REMOVED>>	Pulmoterol -> (50ug/d +21 ug/d) doraźnie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[815, 891] <type: RIGHT>>
+R21	Drg Arg1:T15 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Etruzil -> 50 ug/d  2x1 wdech <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[846, 826] <type: LEFT>>
+R22	Drg Arg1:T15 Arg2:T26 << OK >>	Etruzil -> 2,5 mg 1x1 tabl wieczorem  <RANK: 3> <info: start[846, 854] <type: RIGHT>>
+R23	Drg Arg1:T15 Arg2:T28 <<REDUNDANT!!!REMOVED>>	Etruzil -> (50ug/d +21 ug/d) doraźnie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[846, 891] <type: RIGHT>>
+R24	Drg Arg1:T27 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Berodual -> 50 ug/d  2x1 wdech <:REMOVED other first tag between (left):> <RANK: 0> <info: start[881, 826] <type: LEFT>>
+R25	Drg Arg1:T27 Arg2:T26 <<REDUNDANT!!!REMOVED>>	Berodual -> 2,5 mg 1x1 tabl wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[881, 854] <type: LEFT>>
+R26	Drg Arg1:T27 Arg2:T28 << OK >>	Berodual -> (50ug/d +21 ug/d) doraźnie  <RANK: 3> <info: start[881, 891] <type: RIGHT>>
+
+
+Sentence 14:
+MagneB6 1x1 tabl 
+Hepatil 1 tabl.
+R27	Drg Arg1:T29 Arg2:T30 << OK >>	MagneB6 -> 1x1 tabl  <RANK: 3> <info: start[919, 927] <type: RIGHT>>
+R28	Drg Arg1:T29 Arg2:T32 <<REDUNDANT!!!REMOVED>>	MagneB6 -> 1 tabl. 1 x dz. <:REMOVED other first tag between (right):> <RANK: 1> <info: start[919, 945] <type: RIGHT>>
+R29	Drg Arg1:T31 Arg2:T30 <<REDUNDANT!!!REMOVED>>	Hepatil -> 1x1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[937, 927] <type: LEFT>>
+R30	Drg Arg1:T31 Arg2:T32 << OK >>	Hepatil -> 1 tabl. 1 x dz.  <RANK: 3> <info: start[937, 945] <type: RIGHT>>
+
+
+Sentence 15:
+1 x dz.
+------------------------------------------------
+
+
+
+Sentence 16:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 17:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Niewydolność serca w II/III klasie wg NYHA.
+
+
+Sentence 18:
+Napadowe migotanie przedsionków.
+
+
+Sentence 19:
+Nadciśnienie tętnicze II st. Miażdżyca aorty.
+
+
+Sentence 20:
+Przewlekła niewydolność naczyń mózgowych - stan po dwóch udarach niedokrwiennych mózgu (2001 i 2002).
+R31	Dat Arg1:T39 Arg2:T37 <<REDUNDANT!!!SHOULD BE REMOVED>>	2001 -> Przewlekła niewydolność naczyń mózgowych  <RANK: 3> <info: start[1389, 1301] <type: LEFT>>
+R32	Dat Arg1:T39 Arg2:T38 << OK >>	2001 -> dwóch udarach niedokrwiennych mózgu  <RANK: 3> <info: start[1389, 1352] <type: LEFT>>
+R33	Dat Arg1:T40 Arg2:T37 <<REDUNDANT!!!SHOULD BE REMOVED>>	2002 -> Przewlekła niewydolność naczyń mózgowych  <RANK: 2> <info: start[1396, 1301] <type: LEFT>>
+R34	Dat Arg1:T40 Arg2:T38 << OK >>	2002 -> dwóch udarach niedokrwiennych mózgu  <RANK: 2> <info: start[1396, 1352] <type: LEFT>>
+
+
+Sentence 21:
+Cukrzyca typu 2.  Przewlekła obturacyjna choroba płuc.  
+
+
+Sentence 22:
+Stan po strumektomii z powodu wola guzkowego obojętnego.
+
+
+Sentence 23:
+Stłuszczenie wątroby.
+
+
+Sentence 24:
+Tłuszczak nadnercza prawego.
+
+
+Sentence 25:
+Guz nadnercza lewego.
+
+
+Sentence 26:
+Choroba Alzheimera.  
+
+
+Sentence 27:
+Bóle wielostawowe.  
+
+
+Sentence 28:
+Stan po kwadrantektomii prawego sutka z następcza radioterapią z powodu raka (2013).
+R35	Dat Arg1:T52 Arg2:T135 << OK >>	2013 -> raka  <RANK: 3> <info: start[1707, 1701] <type: LEFT>>
+R36	Dat Arg1:T52 Arg2:T49 << OK >>	2013 -> kwadrantektomii prawego sutka  <RANK: 3> <info: start[1707, 1637] <type: LEFT>>
+R37	Dat Arg1:T52 Arg2:T50 << OK >>	2013 -> następcza radioterapią  <RANK: 3> <info: start[1707, 1669] <type: LEFT>>
+
+
+Sentence 29:
+Zmiany zwyrodnieniowo-wytwórcze odcinka piersiowo-lędźwiowego kręgosłupa z wytworzeniem syndesmofitów.
+
+
+Sentence 30:
+Uchyłki okrężnicy.
+
+
+Sentence 31:
+Przewlekłe biegunki w wywiadzie
+------------------------------------------------
+
+
+
+Sentence 32:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 33:
+Chora lat 80, przyjęta z powodu kołatań serca, głównie w trakcie wysiłku, znacznego ograniczenia tolerancji wysiłku (przystawanie co 1/2 piętra) i wahań ciśnienia tętniczego.
+
+
+
+Sentence 34:
+W wywiadzie:
+Niewydolność serca w II klasie wg NYHA.
+
+
+Sentence 35:
+Nadciśnienie tętnicze II st. Napadowe zaburzenia rytmu.
+
+
+Sentence 36:
+Miażdżyca aorty.
+
+
+Sentence 37:
+Przewlekła niewydolność naczyń mózgowych - stan po dwóch udarach niedokrwiennych mózgu (2001 i 2002).
+R38	Dat Arg1:T66 Arg2:T64 <<REDUNDANT!!!SHOULD BE REMOVED>>	2001 -> Przewlekła niewydolność naczyń mózgowych  <RANK: 3> <info: start[2381, 2293] <type: LEFT>>
+R39	Dat Arg1:T66 Arg2:T65 << OK >>	2001 -> dwóch udarach niedokrwiennych mózgu  <RANK: 3> <info: start[2381, 2344] <type: LEFT>>
+R40	Dat Arg1:T67 Arg2:T64 <<REDUNDANT!!!SHOULD BE REMOVED>>	2002 -> Przewlekła niewydolność naczyń mózgowych  <RANK: 2> <info: start[2388, 2293] <type: LEFT>>
+R41	Dat Arg1:T67 Arg2:T65 << OK >>	2002 -> dwóch udarach niedokrwiennych mózgu  <RANK: 2> <info: start[2388, 2344] <type: LEFT>>
+
+
+Sentence 38:
+Stan po 
+strumektomii z powodu wola guzkowego obojętnego.
+
+
+Sentence 39:
+Tłuszczak nadnercza prawego.
+
+
+Sentence 40:
+Guz nadnercza lewego – w trakcie diagnostyki.
+
+
+Sentence 41:
+Cukrzyca typu 2.  Przewlekła obturacyjna choroba płuc.  
+
+
+Sentence 42:
+Choroba Alzheimera.  
+
+
+Sentence 43:
+Bóle wielostawowe.
+
+
+Sentence 44:
+Stłuszczenie wątroby.
+
+
+Sentence 45:
+Stan po kwadrantektomii prawego sutka z następcza radioterapią z powodu raka (2013 r) – obecnie w trakcie leczenia inhibitorami aromatazy.
+R42	Dat Arg1:T79 Arg2:T136 << OK >>	2013 r -> raka  <RANK: 3> <info: start[2724, 2718] <type: LEFT>>
+R43	Dat Arg1:T79 Arg2:T77 << OK >>	2013 r -> kwadrantektomii prawego sutka  <RANK: 3> <info: start[2724, 2654] <type: LEFT>>
+R44	Dat Arg1:T79 Arg2:T78 << OK >>	2013 r -> następcza radioterapią  <RANK: 3> <info: start[2724, 2686] <type: LEFT>>
+R45	Dat Arg1:T79 Arg2:T82 <<REDUNDANT!!!SHOULD BE REMOVED>>	2013 r -> w trakcie leczenia  <RANK: 3> <info: start[2724, 2742] <type: RIGHT>>
+R46	Dat Arg1:T79 Arg2:T83 <<REDUNDANT!!!SHOULD BE REMOVED>>	2013 r -> inhibitorami aromatazy  <RANK: 3> <info: start[2724, 2761] <type: RIGHT>>
+R47	Dat Arg1:T71 Arg2:T136 << OK >>	obecnie -> raka  <RANK: 3> <info: start[2734, 2718] <type: LEFT>>
+R48	Dat Arg1:T71 Arg2:T77 <<REDUNDANT!!!SHOULD BE REMOVED>>	obecnie -> kwadrantektomii prawego sutka  <RANK: 3> <info: start[2734, 2654] <type: LEFT>>
+R49	Dat Arg1:T71 Arg2:T78 <<REDUNDANT!!!SHOULD BE REMOVED>>	obecnie -> następcza radioterapią  <RANK: 3> <info: start[2734, 2686] <type: LEFT>>
+R50	Dat Arg1:T71 Arg2:T82 << OK >>	obecnie -> w trakcie leczenia  <RANK: 3> <info: start[2734, 2742] <type: RIGHT>>
+R51	Dat Arg1:T71 Arg2:T83 << OK >>	obecnie -> inhibitorami aromatazy  <RANK: 3> <info: start[2734, 2761] <type: RIGHT>>
+R52	Alg Arg1:T136 Arg2:T83 <<REDUNDANT!!!SHOULD BE REMOVED>>	raka -> inhibitorami aromatazy  <RANK: 3> <info: start[2718, 2761] <type: RIGHT>>
+
+
+Sentence 46:
+Zmiany zwyrodnieniowo-wytwórcze odcinka piersiowo-lędźwiowego kręgosłupa z wytworzeniem syndesmofitów.
+
+
+Sentence 47:
+Uchyłki okrężnicy.
+
+
+Sentence 48:
+Przewlekłe biegunki
+
+Przebyte choroby zakaźne - WZW, borelioza - nie podaje
+Wywiad rodzinny: nieistotny
+
+R53	Neg Arg1:T89 Arg2:T86 <<REDUNDANT!!!REMOVED>>	nie podaje -> Przewlekłe biegunki <:REMOVED Tag2 not in the same line:> <RANK: 0> <info: start[2972, 2907] <type: LEFT>>
+R54	Neg Arg1:T89 Arg2:T87 << OK >>	nie podaje -> WZW  <RANK: 2> <info: start[2972, 2955] <type: LEFT>>
+R55	Neg Arg1:T89 Arg2:T88 << OK >>	nie podaje -> borelioza  <RANK: 3> <info: start[2972, 2960] <type: LEFT>>
+R56	Neg Arg1:T89 Arg2:T90 <<REDUNDANT!!!REMOVED>>	nie podaje -> Wywiad rodzinny <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2972, 2983] <type: RIGHT>>
+R57	Neg Arg1:T91 Arg2:T86 <<REDUNDANT!!!REMOVED>>	nieistotny -> Przewlekłe biegunki <:REMOVED other first tag between (left):> <RANK: 0> <info: start[3000, 2907] <type: LEFT>>
+R58	Neg Arg1:T91 Arg2:T87 <<REDUNDANT!!!REMOVED>>	nieistotny -> WZW <:REMOVED other first tag between (left):> <RANK: 0> <info: start[3000, 2955] <type: LEFT>>
+R59	Neg Arg1:T91 Arg2:T88 <<REDUNDANT!!!REMOVED>>	nieistotny -> borelioza <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3000, 2960] <type: LEFT>>
+R60	Neg Arg1:T91 Arg2:T90 << OK >>	nieistotny -> Wywiad rodzinny  <RANK: 3> <info: start[3000, 2983] <type: LEFT>>
+
+
+Sentence 49:
+Palenie tytoniu: negatywny
+
+R61	Neg Arg1:T93 Arg2:T92 << OK >>	negatywny -> Palenie tytoniu  <RANK: 3> <info: start[3028, 3011] <type: LEFT>>
+
+
+Sentence 50:
+Inne używki: -
+Uczulenia: nie podaje
+Status społeczny: emerytka, pracownik fizyczny, mieszka sama, córka dochodząca
+Leki:
+Pradaxa 110 mg 1 tabl.
+R62	Neg Arg1:T95 Arg2:T96 <<REDUNDANT!!!REMOVED>>	- -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[3051, 3053] <type: RIGHT>>
+R63	Neg Arg1:T95 Arg2:T94 << OK >>	- -> Inne używki  <RANK: 3> <info: start[3051, 3038] <type: LEFT>>
+R64	Neg Arg1:T95 Arg2:T98 <<REDUNDANT!!!REMOVED>>	- -> emerytka <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3051, 3093] <type: RIGHT>>
+R65	Neg Arg1:T95 Arg2:T99 <<REDUNDANT!!!REMOVED>>	- -> pracownik fizyczny <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3051, 3103] <type: RIGHT>>
+R66	Neg Arg1:T95 Arg2:T100 <<REDUNDANT!!!REMOVED>>	- -> mieszka sama <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3051, 3123] <type: RIGHT>>
+R67	Neg Arg1:T95 Arg2:T80 <<REDUNDANT!!!REMOVED>>	- -> córka dochodząca <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3051, 3137] <type: RIGHT>>
+R68	Neg Arg1:T95 Arg2:T101 <<REDUNDANT!!!REMOVED>>	- -> Pradaxa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3051, 3160] <type: RIGHT>>
+R69	Neg Arg1:T95 Arg2:T104 <<REDUNDANT!!!REMOVED>>	- -> 110 mg 1 tabl. 2 x dz <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3051, 3168] <type: RIGHT>>
+R70	Neg Arg1:T97 Arg2:T96 << OK >>	nie podaje -> Uczulenia  <RANK: 3> <info: start[3064, 3053] <type: LEFT>>
+R71	Neg Arg1:T97 Arg2:T94 <<REDUNDANT!!!REMOVED>>	nie podaje -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3064, 3038] <type: LEFT>>
+R72	Neg Arg1:T97 Arg2:T98 <<REDUNDANT!!!REMOVED>>	nie podaje -> emerytka <:REMOVED many second tags on the right:> <RANK: 1> <info: start[3064, 3093] <type: RIGHT>>
+R73	Neg Arg1:T97 Arg2:T99 <<REDUNDANT!!!REMOVED>>	nie podaje -> pracownik fizyczny <:REMOVED many second tags on the right:> <RANK: 0> <info: start[3064, 3103] <type: RIGHT>>
+R74	Neg Arg1:T97 Arg2:T100 <<REDUNDANT!!!REMOVED>>	nie podaje -> mieszka sama <:REMOVED many second tags on the right:> <RANK: 0> <info: start[3064, 3123] <type: RIGHT>>
+R75	Neg Arg1:T97 Arg2:T80 <<REDUNDANT!!!REMOVED>>	nie podaje -> córka dochodząca <:REMOVED many second tags on the right:> <RANK: 0> <info: start[3064, 3137] <type: RIGHT>>
+R76	Neg Arg1:T97 Arg2:T101 <<REDUNDANT!!!REMOVED>>	nie podaje -> Pradaxa <:REMOVED other second tag between (right):> <RANK: 0> <info: start[3064, 3160] <type: RIGHT>>
+R77	Neg Arg1:T97 Arg2:T104 <<REDUNDANT!!!REMOVED>>	nie podaje -> 110 mg 1 tabl. 2 x dz <:REMOVED other second tag between (right):> <RANK: 0> <info: start[3064, 3168] <type: RIGHT>>
+R78	Drg Arg1:T101 Arg2:T104 << OK >>	Pradaxa -> 110 mg 1 tabl. 2 x dz  <RANK: 3> <info: start[3160, 3168] <type: RIGHT>>
+R79	Alg Arg1:T96 Arg2:T101 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Pradaxa <:REMOVED other second tag between (right):> <RANK: 0> <info: start[3053, 3160] <type: RIGHT>>
+
+
+Sentence 51:
+2 x dz
+Nolpaza 20 mg 1 tabl.
+R80	Drg Arg1:T102 Arg2:T105 << OK >>	Nolpaza -> 20 mg 1 tabl. rano  <RANK: 3> <info: start[3190, 3198] <type: RIGHT>>
+
+
+Sentence 52:
+rano
+Beto ZK 50 1 tabl.
+R81	Drg Arg1:T103 Arg2:T106 << OK >>	Beto ZK -> 50 1 tabl. rano  <RANK: 3> <info: start[3217, 3225] <type: RIGHT>>
+
+
+Sentence 53:
+rano
+Diured 5 mg 1 tabl.
+R82	Drg Arg1:T107 Arg2:T108 << OK >>	Diured -> 5 mg 1 tabl. rano  <RANK: 3> <info: start[3241, 3248] <type: RIGHT>>
+
+
+Sentence 54:
+rano
+Piramil 5 mg 1 tabl wieczorem
+Amlopin 5 mg 1 tabl.
+R83	Drg Arg1:T109 Arg2:T119 << OK >>	Piramil -> 5 mg 1 tabl wieczorem  <RANK: 3> <info: start[3266, 3274] <type: RIGHT>>
+R84	Drg Arg1:T109 Arg2:T120 <<REDUNDANT!!!REMOVED>>	Piramil -> 5 mg 1 tabl. rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3266, 3304] <type: RIGHT>>
+R85	Drg Arg1:T110 Arg2:T119 <<REDUNDANT!!!REMOVED>>	Amlopin -> 5 mg 1 tabl wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3296, 3274] <type: LEFT>>
+R86	Drg Arg1:T110 Arg2:T120 << OK >>	Amlopin -> 5 mg 1 tabl. rano  <RANK: 3> <info: start[3296, 3304] <type: RIGHT>>
+
+
+Sentence 55:
+rano
+Zoxon 2 mg 1x1 tabl wieczorem 
+Siofor 850 mg 2x1 tabl 
+Letrox 125 ug 1x1 tabl rano na czczo 
+
+R87	Drg Arg1:T111 Arg2:T121 << OK >>	Zoxon -> 2 mg 1x1 tabl wieczorem  <RANK: 3> <info: start[3322, 3328] <type: RIGHT>>
+R88	Drg Arg1:T111 Arg2:T122 <<REDUNDANT!!!REMOVED>>	Zoxon -> 850 mg 2x1 tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3322, 3360] <type: RIGHT>>
+R89	Drg Arg1:T111 Arg2:T123 <<REDUNDANT!!!REMOVED>>	Zoxon -> 125 ug 1x1 tabl rano na czczo <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3322, 3384] <type: RIGHT>>
+R90	Drg Arg1:T112 Arg2:T121 <<REDUNDANT!!!REMOVED>>	Siofor -> 2 mg 1x1 tabl wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3353, 3328] <type: LEFT>>
+R91	Drg Arg1:T112 Arg2:T122 << OK >>	Siofor -> 850 mg 2x1 tabl  <RANK: 3> <info: start[3353, 3360] <type: RIGHT>>
+R92	Drg Arg1:T112 Arg2:T123 <<REDUNDANT!!!REMOVED>>	Siofor -> 125 ug 1x1 tabl rano na czczo <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3353, 3384] <type: RIGHT>>
+R93	Drg Arg1:T113 Arg2:T121 <<REDUNDANT!!!REMOVED>>	Letrox -> 2 mg 1x1 tabl wieczorem <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3377, 3328] <type: LEFT>>
+R94	Drg Arg1:T113 Arg2:T122 <<REDUNDANT!!!REMOVED>>	Letrox -> 850 mg 2x1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3377, 3360] <type: LEFT>>
+R95	Drg Arg1:T113 Arg2:T123 << OK >>	Letrox -> 125 ug 1x1 tabl rano na czczo  <RANK: 3> <info: start[3377, 3384] <type: RIGHT>>
+
+
+Sentence 56:
+Pulmoterol 50 ug/d  2x1 wdech 
+Etruzil 2,5 mg 1x1 tabl wieczorem 
+Berodual  (50ug/d +21 ug/d) draźnie 
+MagneB6 1x1 tabl 
+Hepatil 1 tabl.
+R96	Drg Arg1:T114 Arg2:T124 << OK >>	Pulmoterol -> 50 ug/d  2x1 wdech  <RANK: 3> <info: start[3415, 3426] <type: RIGHT>>
+R97	Drg Arg1:T114 Arg2:T125 <<REDUNDANT!!!REMOVED>>	Pulmoterol -> 2,5 mg 1x1 tabl wieczorem <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3415, 3454] <type: RIGHT>>
+R98	Drg Arg1:T114 Arg2:T126 <<REDUNDANT!!!REMOVED>>	Pulmoterol -> (50ug/d +21 ug/d) draźnie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3415, 3491] <type: RIGHT>>
+R99	Drg Arg1:T114 Arg2:T127 <<REDUNDANT!!!REMOVED>>	Pulmoterol -> 1x1 tabl <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3415, 3526] <type: RIGHT>>
+R100	Drg Arg1:T114 Arg2:T128 <<REDUNDANT!!!REMOVED>>	Pulmoterol -> 1 tabl. 1 x dz. <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3415, 3544] <type: RIGHT>>
+R101	Drg Arg1:T115 Arg2:T124 <<REDUNDANT!!!REMOVED>>	Etruzil -> 50 ug/d  2x1 wdech <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3446, 3426] <type: LEFT>>
+R102	Drg Arg1:T115 Arg2:T125 << OK >>	Etruzil -> 2,5 mg 1x1 tabl wieczorem  <RANK: 3> <info: start[3446, 3454] <type: RIGHT>>
+R103	Drg Arg1:T115 Arg2:T126 <<REDUNDANT!!!REMOVED>>	Etruzil -> (50ug/d +21 ug/d) draźnie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3446, 3491] <type: RIGHT>>
+R104	Drg Arg1:T115 Arg2:T127 <<REDUNDANT!!!REMOVED>>	Etruzil -> 1x1 tabl <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3446, 3526] <type: RIGHT>>
+R105	Drg Arg1:T115 Arg2:T128 <<REDUNDANT!!!REMOVED>>	Etruzil -> 1 tabl. 1 x dz. <:REMOVED other first tag between (right):> <RANK: 0> <info: start[3446, 3544] <type: RIGHT>>
+R106	Drg Arg1:T116 Arg2:T124 <<REDUNDANT!!!REMOVED>>	Berodual -> 50 ug/d  2x1 wdech <:REMOVED other first tag between (left):> <RANK: 0> <info: start[3481, 3426] <type: LEFT>>
+R107	Drg Arg1:T116 Arg2:T125 <<REDUNDANT!!!REMOVED>>	Berodual -> 2,5 mg 1x1 tabl wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3481, 3454] <type: LEFT>>
+R108	Drg Arg1:T116 Arg2:T126 << OK >>	Berodual -> (50ug/d +21 ug/d) draźnie  <RANK: 3> <info: start[3481, 3491] <type: RIGHT>>
+R109	Drg Arg1:T116 Arg2:T127 <<REDUNDANT!!!REMOVED>>	Berodual -> 1x1 tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3481, 3526] <type: RIGHT>>
+R110	Drg Arg1:T116 Arg2:T128 <<REDUNDANT!!!REMOVED>>	Berodual -> 1 tabl. 1 x dz. <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3481, 3544] <type: RIGHT>>
+R111	Drg Arg1:T117 Arg2:T124 <<REDUNDANT!!!REMOVED>>	MagneB6 -> 50 ug/d  2x1 wdech <:REMOVED other first tag between (left):> <RANK: 0> <info: start[3518, 3426] <type: LEFT>>
+R112	Drg Arg1:T117 Arg2:T125 <<REDUNDANT!!!REMOVED>>	MagneB6 -> 2,5 mg 1x1 tabl wieczorem <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3518, 3454] <type: LEFT>>
+R113	Drg Arg1:T117 Arg2:T126 <<REDUNDANT!!!REMOVED>>	MagneB6 -> (50ug/d +21 ug/d) draźnie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3518, 3491] <type: LEFT>>
+R114	Drg Arg1:T117 Arg2:T127 << OK >>	MagneB6 -> 1x1 tabl  <RANK: 3> <info: start[3518, 3526] <type: RIGHT>>
+R115	Drg Arg1:T117 Arg2:T128 <<REDUNDANT!!!REMOVED>>	MagneB6 -> 1 tabl. 1 x dz. <:REMOVED other first tag between (right):> <RANK: 1> <info: start[3518, 3544] <type: RIGHT>>
+R116	Drg Arg1:T118 Arg2:T124 <<REDUNDANT!!!REMOVED>>	Hepatil -> 50 ug/d  2x1 wdech <:REMOVED other first tag between (left):> <RANK: 0> <info: start[3536, 3426] <type: LEFT>>
+R117	Drg Arg1:T118 Arg2:T125 <<REDUNDANT!!!REMOVED>>	Hepatil -> 2,5 mg 1x1 tabl wieczorem <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3536, 3454] <type: LEFT>>
+R118	Drg Arg1:T118 Arg2:T126 <<REDUNDANT!!!REMOVED>>	Hepatil -> (50ug/d +21 ug/d) draźnie <:REMOVED other first tag between (left):> <RANK: 1> <info: start[3536, 3491] <type: LEFT>>
+R119	Drg Arg1:T118 Arg2:T127 <<REDUNDANT!!!REMOVED>>	Hepatil -> 1x1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[3536, 3526] <type: LEFT>>
+R120	Drg Arg1:T118 Arg2:T128 << OK >>	Hepatil -> 1 tabl. 1 x dz.  <RANK: 3> <info: start[3536, 3544] <type: RIGHT>>
+
+
+Sentence 57:
+1 x dz.
+
+Planowany czas hospitalizacji: 4-5 dni. 
+
+
+
+Sentence 58:
+Planowane badania: badania laboratoryjne, ECHO, ABPM, holter ekg.
+
+
+
+Sentence 59:
+------------------------------------------------
+
+
+
+Sentence 60:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 61:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.09[10^3/ul]
+    
+
+
+Sentence 62:
+RBC Krwinki czerwone:4.10[10^6/ul]
+    
+
+
+Sentence 63:
+HGB Hemoglobina:11.9[g/dl]
+    
+
+
+Sentence 64:
+HCT Hematokryt:34.8[%]
+    
+
+
+Sentence 65:
+MCV wskaźnik czerwonokrw:84.9[fl]
+    
+
+
+Sentence 66:
+MCH wskaźnik czerwonokrw:29.0[pg]
+    
+
+
+Sentence 67:
+MCHC wskaźnik czerwonokr:34.2[g/dl]
+    
+
+
+Sentence 68:
+PLT z morfologii:205[10^3/ul]
+    
+
+
+Sentence 69:
+RDW-SD:40.4[fl]
+    
+
+
+Sentence 70:
+RDW-CV:13.2[%]
+    PDW:12.0[fl]
+    MPV:10.3[fl]
+    
+
+
+Sentence 71:
+P-LCR:27.7[%]
+    
+
+
+Sentence 72:
+PCT (hematokryt płytkowy:0.21[%]
+    
+
+
+Sentence 73:
+NEUTR# wartość bezwzględ:3.99[10^3/ul]
+    
+
+
+Sentence 74:
+NEUTR%:56.3[%]
+    
+
+
+Sentence 75:
+LYMH# wartość bezwzględn:2.28[10^3/ul]
+    
+
+
+Sentence 76:
+LYMPH%:32.2[%]
+    
+
+
+Sentence 77:
+MONO# wartość bezwzględn:0.62[10^3/ul]
+    
+
+
+Sentence 78:
+MONO%:8.7[%]
+    
+
+
+Sentence 79:
+EO# wartość bezwzględna:0.17[10^3/ul]
+    
+
+
+Sentence 80:
+EO%:2.4[%]
+    BASO# wartość bezwzględn:0.03[10^3/ul]
+    BASO%:0.4[%]
+    
+
+
+Sentence 81:
+NRBC %:0.0[%]
+    
+
+
+Sentence 82:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 83:
+Badanie ogólne moczu
+    
+
+
+Sentence 84:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 85:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 86:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 87:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 88:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 89:
+ciężar właściwy:1.016[ ]
+    
+
+
+Sentence 90:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 91:
+pH:5.0[ ]
+    
+
+
+Sentence 92:
+białko:nieobecne[ ]
+    
+
+
+Sentence 93:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 94:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 95:
+erytrocyty:obecne[ ]
+    
+
+
+Sentence 96:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 97:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 98:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 99:
+leukocyty:3 /ul[ul]
+    erytrocyty świeże i częś:22 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 100:
+TSH: TSH:0.25[uIU/ml]
+
+
+
+Sentence 101:
+FT3: FT3:2.26[pg/ml]
+
+
+
+Sentence 102:
+FT4: FT4:1.41[ng/dl]
+
+
+
+Sentence 103:
+ALAT: ALAT:17[U/L]
+ASPAT: ASPAT:18[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 104:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 105:
+Potas (K): Potas:4.6[mmol/L]
+
+
+
+Sentence 106:
+Hemoglobina glikowana (HbA1c)
+    :5.84[%]
+    
+
+
+Sentence 107:
+:40[mmol/mol]
+
+
+
+Sentence 108:
+Kreatynina + GFR
+    
+
+
+Sentence 109:
+Kreatynina w surowicy:0.95[mg/dl]
+    eGFR wg BIS1:60.8[ml/min/1,73 m^2]
+
+
+
+Sentence 110:
+Mocznik: Mocznik:49[mg/dl]
+
+
+
+Sentence 111:
+Kwas moczowy: Kwas moczowy:5.8[mg/dl]
+
+
+
+Sentence 112:
+Lipidogram
+    
+
+
+Sentence 113:
+Cholesterol całkowity:122[mg/dl]
+    
+
+
+Sentence 114:
+Cholesterol HDL:34[mg/dl]
+    
+
+
+Sentence 115:
+Cholestrol LDL:80[mg/dl]
+    
+
+
+Sentence 116:
+Triglicerydy:98[mg/dl]
+    
+
+
+Sentence 117:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:85[mg/dl]
+
+
+
+Sentence 118:
+NT-proBNP surowica: NT-proBNP w surowicy:126[pg/ml]
+
+
+
+Sentence 119:
+------------------------------------------------
+
+
+
+Sentence 120:
+ICD10
+------------------------------------------------
+I50.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 121:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 122:
+89.501
+88.721
+89.502
+------------------------------------------------
+
+

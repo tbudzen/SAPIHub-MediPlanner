@@ -1,0 +1,94 @@
+T1	Condition 450 500	Zakrzepowe zapalenie żył głębokich podudzia lewego
+N1	Reference T1 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T2	Date 502 509	05.2018
+T3	Condition 512 532	Hipercholesterolemia
+N2	Reference T3 ICD10:E78.0	Czysta hipercholesterolemia
+T4	Treatment 542 561	operacji kręgosłupa
+A1	Status T4 Historical_Insignificant
+N3	Reference T4 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T5	Condition 571 610	dyskopatii w odc. lędźwiowym kręgosłupa
+A2	Status T5 Historical_Insignificant
+N4	Reference T5 ICD10:M51.9	Choroba krążków międzykręgowych, nieokreślona
+T6	Date 612 616	2002
+R1	Dat Arg1:T6 Arg2:T4	
+R2	Dat Arg1:T6 Arg2:T5	
+T7	Condition 619 623	RBBB
+N5	Reference T7 ICD10:I45.0	Blok prawej odnogi pęczka Hisa
+R3	Dat Arg1:T2 Arg2:T1	
+T8	Symptom 1020 1058	duszności (głownie przy zmianie pogody
+N6	Reference T8 ICD10:R06.0	Duszność
+T9	Negation 1060 1066	neguje
+T10	Symptom 1067 1085	duszność wysiłkową
+N7	Reference T10 ICD10:R06.0	Duszność
+R4	Neg Arg1:T9 Arg2:T10	
+T11	Condition 1110 1146	CHF z zachowana funkcją skurczową LK
+N8	Reference T11 ICD10:I50.9	Niewydolność serca, nieokreślona
+T12	Condition 1148 1152	RBBB
+N9	Reference T12 ICD10:I45.0	Blok prawej odnogi pęczka Hisa
+T13	Condition 1154 1204	zakrzepowe zapalenie żył głębokich podudzia lewego
+N10	Reference T13 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T14	Date 1206 1213	05.2018
+T15	Negation 1217 1227	wykluczono
+T16	Condition 1228 1230	ZP
+N11	Reference T16 ICD10:I26	Zator płucny
+R5	Neg Arg1:T15 Arg2:T16	
+R6	Dat Arg1:T14 Arg2:T13	
+R7	Dat Arg1:T14 Arg2:T16	
+T17	Condition 1232 1250	żylaki kk. dolnych
+N12	Reference T17 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T18	Condition 1252 1272	hipercholesterolemia
+N13	Reference T18 ICD10:E78.0	Czysta hipercholesterolemia
+T19	Condition 1274 1277	IFG
+A3	Source T19 Declared
+N14	Reference T19 ICD10:R73	Podwyższone stężenie glukozy we krwi
+T20	Treatment 1288 1307	operacji kręgosłupa
+A4	Status T20 Historical_Insignificant
+N15	Reference T20 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T21	Condition 1317 1345	dyskopatii w odc. lędźwiowym
+A5	Status T21 Historical_Insignificant
+N16	Reference T21 ICD10:M51.9	Choroba krążków międzykręgowych, nieokreślona
+T22	Date 1347 1351	2002
+T23	Treatment 1353 1370	Przebyte operacje
+N17	Reference T23 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T24	Condition 1377 1392	Wywiad rodzinny
+A6	Status T24 Family
+T25	Negation 1394 1407	bez znaczenia
+T26	Condition 1409 1416	Alergie
+N18	Reference T26 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T27	Negation 1419 1425	neguje
+T28	Behaviour 1427 1437	Nikotynizm
+N19	Reference T28 ICD10:Z72.0	Używanie tytoniu
+T29	Negation 1439 1445	neguje
+R8	Dat Arg1:T22 Arg2:T20	
+R9	Dat Arg1:T22 Arg2:T21	
+R10	Neg Arg1:T25 Arg2:T24	
+R11	Neg Arg1:T27 Arg2:T26	
+R12	Neg Arg1:T29 Arg2:T28	
+T30	Behaviour 1448 1455	Alkohol
+N20	Reference T30 ICD10:Z72.0	Używanie tytoniu
+T31	Negation 1457 1463	neguje
+T32	Behaviour 1465 1482	Uzależnienie inne
+N21	Reference T32 ICD10:Z72	Problemy związane ze stylem życia
+T33	Negation 1484 1490	neguje
+T34	Behaviour 1508 1513	renta
+T35	Condition 1516 1526	dyskopatia
+N22	Reference T35 ICD10:M51.9	Choroba krążków międzykręgowych, nieokreślona
+R13	Neg Arg1:T33 Arg2:T32	
+R14	Neg Arg1:T31 Arg2:T30	
+T36	Drug 1535 1543	Diuresin
+T37	Drug_dose 1544 1556	1 tabl. rano
+T38	Drug 1558 1563	Acard
+T39	Drug_dose 1564 1587	75 mg 1 tabl. wieczorem
+T40	Drug 1589 1597	Aspargin
+T41	Drug_dose 1598 1610	1 tabl. rano
+T42	Drug 1612 1621	Diohespan
+T43	Drug_dose 1622 1634	1 tabl. rano
+T44	Investigation 1663 1673	echo serca
+T45	Investigation 1675 1678	TET
+T46	Investigation 1680 1684	ABPM
+T47	Investigation 1686 1696	Holter ekg
+T48	Investigation 1698 1716	rtg kl. piersiowej
+R15	Drg Arg1:T36 Arg2:T37	
+R16	Drg Arg1:T38 Arg2:T39	
+R17	Drg Arg1:T40 Arg2:T41	
+R18	Drg Arg1:T42 Arg2:T43	

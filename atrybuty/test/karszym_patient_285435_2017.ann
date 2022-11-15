@@ -1,0 +1,48 @@
+T1	Drug 340 347	Tritace
+T2	Drug 349 355	Warfin
+T3	Drug 505 512	Tritace
+T4	Drug_dose 513 523	2,5mg 1xdz
+T5	Drug 528 534	Warfin
+T6	Drug_dose 535 551	pod kontrolą INR
+T7	Date 553 560	obecnie
+T8	Drug_dose 561 605	2mg 1xdz jednego dnia, nastepnego 2,5mg 1xdz
+T9	Behaviour 609 661	Unikanie stosowania leków powodujących wydłużenie QT
+T10	Treatment 666 700	Kontrola w Poradni Kardiologicznej
+T11	Date 701 714	za 6 miesięcy
+R1	Drg Arg1:T3 Arg2:T4
+R2	Drg Arg1:T5 Arg2:T6
+R3	Dat Arg1:T7 Arg2:T8
+R4	Drg Arg1:T5 Arg2:T8
+R5	Dat Arg1:T11 Arg2:T10
+T12	Condition 867 941	Wrodzona wada serca pod postacią wspólnego pnia tętniczego typu pierwszego
+N1	Reference T12 ICD10:Q20.0	Wspólny pień tętniczy
+T13	Treatment 954 967	korekcji wady
+N2	Reference T13 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T14	Treatment 970 997	użyciem homograftu płucnego
+N3	Reference T14 ICD10:Z95.4	Obecność innych protez zastawek serca
+T15	Date 1000 1011	01.04.2005r
+T16	Treatment 1025 1091	implantacji mechanicznej zastawki aortalnej Medtronic A7760 (23mm)
+N4	Reference T16 ICD10:Z95.2	Obecność protez zastawek serca
+T17	Date 1095 1106	02.09.2008r
+T18	Treatment 1120 1165	operacji doszycia sztucznej zastawki aortalne
+N5	Reference T18 ICD10:Z95.2	Obecność protez zastawek serca
+T19	Treatment 1168 1193	wymiany homograftu (23mm)
+N6	Reference T19 ICD10:Z95.4	Obecność innych protez zastawek serca
+T20	Date 1196 1207	20.04.2011r
+T21	Treatment 1212 1275	Interwencyjna implantacja zastawki Melody 22mm w pozycję płucną
+N7	Reference T21 ICD10:Z95.2	Obecność protez zastawek serca
+T22	Date 1277 1287	12.05.2016
+T23	Condition 1292 1317	Zespół mikrodelecji 22q11
+T24	Investigation 1322 1332	Obserwacja
+T25	Condition 1344 1348	LQTs
+N8	Reference T25 ICD10:I45.8	Inne określone zaburzenia przewodnictwa
+T26	Condition 1561 1580	wrodzoną wadą serca
+N9	Reference T26 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T27	Symptom 1649 1659	Stan dobry
+N10	Reference T23 ICD10:D82.1	Zespół DiGeorge’a
+R6	Dat Arg1:T22 Arg2:T21
+R7	Dat Arg1:T20 Arg2:T19
+R8	Dat Arg1:T20 Arg2:T18
+R9	Dat Arg1:T17 Arg2:T16
+R10	Dat Arg1:T15 Arg2:T14
+R11	Dat Arg1:T15 Arg2:T13

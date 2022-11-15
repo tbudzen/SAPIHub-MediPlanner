@@ -1,0 +1,79 @@
+T1	Condition 438 455	Anomalia Ebsteina
+N1	Reference T1 ICD10:Q22.5	Anomalia Ebsteina
+T2	Treatment 465 495	plastyce zastawki trójdzielnej
+T3	Condition 497 520	Atopowe zapalenie skóry
+N2	Reference T3 ICD10:L20	Atopowe zapalenie skóry
+T4	Condition 522 542	Hipertriglicerydemia
+N3	Reference T4 ICD10:E78.1	Czysta hiperglicerydemia
+T5	Treatment 664 701	Ponowna hospitalizacja w tut. Klinice
+T6	Treatment 734 820	Dalsza opieka w Poradni Kardiologii i Wad Wrodzonych Dorosłych, Dermatologicznej i POZ
+T7	Behaviour 822 863	Przestrzeganie diety ubogocholesterolowej
+T8	Treatment 1031 1061	plastyce zastawki trójdzielnej
+T9	Investigation 1169 1196	W badaniach laboratoryjnych
+T10	Investigation_result 1210 1230	hipertriglicerydemię
+R1	Inv Arg1:T9 Arg2:T10	
+T11	Investigation 1294 1305	zapisie EKG
+T12	Investigation_result 1369 1401	powodującego istotną bradykardię
+R2	Inv Arg1:T11 Arg2:T12	
+T13	Investigation 1471 1487	echokardiogramie
+T14	Investigation_result 1488 1536	umiarkowaną niedomykalność zastawki trójdzielnej
+R3	Inv Arg1:T13 Arg2:T14	
+T15	Condition 1553 1576	atopowe zapalenie skóry
+N5	Reference T15 ICD10:L20	Atopowe zapalenie skóry
+T16	Condition 1578 1587	półpasiec
+N6	Reference T16 ICD10:B02	Choroba zakaźna wywołana przez wirus herpes zoster [półpasiec]
+T17	Date 1590 1599	luty 2017
+A9	Status T16 Historical_Insignificant
+R4	Dat Arg1:T17 Arg2:T16	
+T18	Condition 1625 1660	złamanie V kości śródplecza prawego
+A10	Status T18 Historical_Insignificant
+T19	Date 1662 1666	2015
+R5	Dat Arg1:T19 Arg2:T18	
+T20	Condition 1701 1708	Alergie
+T21	Negation 1710 1716	neguje
+R6	Neg Arg1:T21 Arg2:T20	
+T22	Behaviour 1718 1728	Nikotynizm
+T23	Negation 1730 1736	neguje
+R7	Neg Arg1:T23 Arg2:T22	
+T24	Behaviour 1739 1780	Alkohol: okazjonalnie, w małych ilościach
+N8	Reference T24 ICD10:Z72.1	Używanie alkoholu
+T25	Behaviour 1782 1799	Uzależnienie inne
+T26	Negation 1801 1807	neguje
+R8	Neg Arg1:T26 Arg2:T25	
+T27	Date 702 711	za 6 m-cy
+R9	Dat Arg1:T27 Arg2:T5	
+T28	Condition 1009 1026	zespołem Ebsteina
+N9	Reference T28 ICD10:Q22.5	Anomalia Ebsteina
+T29	Symptom 1155 1167	dolegliwości
+T30	Negation 1151 1154	bez
+R10	Neg Arg1:T30 Arg2:T29	
+N10	Reference T12 ICD10:R00.1	Bradykardia, nieokreślona
+T31	Investigation_result 1403 1463	rytmy komorowe lub węzłowe, bez pauz dłuższych niż 2 sekundy
+R11	Inv Arg1:T11 Arg2:T31	
+T32	Condition 1669 1684	Wywiad rodzinny
+A12	Status T32 Family
+T33	Negation 1686 1699	bez znaczenia
+R12	Neg Arg1:T33 Arg2:T32	
+T36	Behaviour 1825 1848	student (matematyka UŁ)
+T37	Treatment 1600 1617	Przebyte operacje
+N11	Reference T10 ICD10:E78.1	Czysta hiperglicerydemia
+N4	Reference T14 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+N12	Reference T18 ICD10:S62.3	Złamanie innej kości śródręcza
+N13	Reference T20 ICD10:T78.4	Alergia, nieokreślona
+T34	Date 1062 1075	w przeszłości
+R13	Dat Arg1:T34 Arg2:T8	
+T35	Date 1348 1367	w godzinach nocnych
+R14	Dat Arg1:T35 Arg2:T12	
+T38	Investigation_result 1306 1347	krótkie wstawki rytmu idiowentrykularnego
+N14	Reference T38 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+R15	Dat Arg1:T35 Arg2:T38	
+R16	Inv Arg1:T11 Arg2:T38	
+N7	Reference T22 ICD10:Z72.0	Używanie tytoniu
+T39	Date 1279 1293	w 24-godzinnym
+R17	Dat Arg1:T39 Arg2:T11	
+T40	Investigation 1121 1143	badań kardiologicznych
+N15	Reference T25 ICD10:Z72	Problemy związane ze stylem życia
+T41	Negation 1856 1859	bez
+T42	Drug 1860 1865	leków
+R18	Neg Arg1:T41 Arg2:T42	
+A1	Status T24 Historical_Insignificant

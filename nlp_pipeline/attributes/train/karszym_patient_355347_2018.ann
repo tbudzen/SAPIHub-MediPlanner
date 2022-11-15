@@ -1,0 +1,28 @@
+T1	Condition 461 500	Podejrzenie częstoskurczu nadkomorowego
+A1	Source T1 Declared
+N1	Reference T1 ICD10:I47.1	Częstoskurcz nadkomorowy
+T2	Condition 527 564	ubytku przegrody międzyprzedsionkowej
+N2	Reference T2 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T3	Negation 565 571	ujemna
+R1	Neg Arg1:T3 Arg2:T2	
+T4	Negation 692 695	Bez
+T5	Drug 696 701	leków
+R2	Neg Arg1:T4 Arg2:T5	
+T6	Treatment 813 841	Dalsza opieka kardiologiczna
+T7	Treatment 843 881	wizyta w Poradni Kardiologicznej ICZMP
+T8	Date 882 895	za 2 miesiące
+R3	Dat Arg1:T8 Arg2:T7	
+T9	Investigation 938 960	badania holterowskiego
+T10	Condition 1128 1134	ASD II
+N3	Reference T10 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T11	Date 1168 1180	od 3 tygodni
+T12	Symptom 1181 1195	" bicia serca"
+N4	Reference T12 ICD10:R00.2	Kołatanie serca
+T13	Treatment 1199 1229	konsultowana  przez kardiologa
+T14	Date 1232 1239	wczoraj
+T15	Condition 1249 1294	epizod zaburzeń pracy serca( szybka czynność)
+N5	Reference T15 ICD10:R00.0	Tachykardia, nieokreślona
+R4	Dat Arg1:T14 Arg2:T15	
+R5	Dat Arg1:T11 Arg2:T12	
+A2	Source T2 Declared
+T16	Investigation 505 515	Obserwacja

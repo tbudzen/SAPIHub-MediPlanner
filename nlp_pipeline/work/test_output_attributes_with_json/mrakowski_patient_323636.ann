@@ -1,0 +1,70 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 359 391	okresowa kontrola kardiologiczna
+T3	Investigation 392 430	regularne pomiary ciśnienia tętniczego
+T4	Investigation 431 460	okresowa kontrola lipidogramu
+T5	Drug 468 476	Metocard
+T6	Drug_dose 477 501	50 mg 1/2 tabl. doraźnie
+T7	Treatment 727 737	ablacji RF
+T9	Date 788 793	2016r
+T10	Condition 796 834	Nadciśnienie tętnicze I st w g ESC/ESH
+T11	Condition 836 856	Hipercholesterolemia
+T12	Treatment 1064 1095	ablacji RF ogniska generującego
+T14	Date 1122 1126	2016
+T15	Symptom 1168 1183	kołatania serca
+T16	Negation 1206 1212	neguje
+T17	Condition 1213 1236	inne choroby przewlekłe
+T18	Treatment 1237 1254	Przebyte operacje
+T19	Negation 1256 1262	neguje
+T20	Condition 1289 1295	DM t.2
+T21	Condition 1297 1319	niedoczynność tarczycy
+T22	Condition 1330 1332	HA
+T23	Condition 1334 1340	DM t.2
+T24	Condition 1342 1349	Alergie
+T25	Negation 1351 1357	neguje
+T26	Behaviour 1359 1369	Nikotynizm
+T27	Negation 1371 1377	neguje
+T28	Behaviour 1380 1387	Alkohol
+T29	Negation 1389 1395	neguje
+T30	Behaviour 1397 1414	Uzależnienie inne
+T31	Negation 1416 1422	neguje
+T8	Condition 1264 1279	wywiad rodzinny
+T13	Condition 747 786	napadowych częstoskurczów nadkomorowych
+T32	Condition 1096 1120	częstoskurcz nadkomorowy
+zane ze stylem życia
+T33	Negation 1430 1460	ne stałe nie przyjmuje żadnych
+T34	Drug 1461 1466	leków
+N1	Reference T10 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N2	Reference T11 ICD10:E78.0	Czysta hipercholesterolemia
+N3	Reference T15 ICD10:R00.2	KoÅatanie serca
+N4	Reference T18 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N5	Reference T20 ICD10:E11	Cukrzyca insulinoniezaleÅ¼na
+N6	Reference T21 ICD10:E03.9	NiedoczynnoÅÄ tarczycy, nieokreÅlona
+N7	Reference T22 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N8	Reference T23 ICD10:E11	Cukrzyca insulinoniezaleÅ¼na
+N9	Reference T24 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N10	Reference T26 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N11	Reference T28 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N12	Reference T30 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+N13	Reference T32 ICD10:I47.1	CzÄstoskurcz nadkomorowy
+R1	Drg Arg1:T5 Arg2:T6
+R109	Neg Arg1:T33 Arg2:T34
+R118	Dat Arg1:T14 Arg2:T32
+R122	Dat Arg1:T14 Arg2:T12
+R2	Dat Arg1:T9 Arg2:T10
+R27	Neg Arg1:T19 Arg2:T8
+R3	Dat Arg1:T9 Arg2:T13
+R33	Neg Arg1:T19 Arg2:T18
+R4	Dat Arg1:T9 Arg2:T7
+R41	Neg Arg1:T25 Arg2:T24
+R59	Neg Arg1:T27 Arg2:T26
+R6	Neg Arg1:T16 Arg2:T17
+R75	Neg Arg1:T29 Arg2:T28
+R91	Neg Arg1:T31 Arg2:T30
+A1	Status T7 Historical_Insignificant
+A2	Status T12 Historical_Insignificant
+A3	Status T20 Family
+A4	Status T21 Family
+A5	Status T22 Family
+A6	Status T23 Family
+A7	Status T8 Family
+A8	Status T13 Historical_Insignificant

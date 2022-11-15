@@ -1,0 +1,131 @@
+T1	Treatment 341 368	dalsza opieka u lekarza POZ
+T2	Investigation 371 402	Kontrola parametrów wątrobowych
+T3	Date 403 411	za 4 tyg
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Treatment 429 472	Okresowa kontrola w Poradni Kardiologicznej
+T5	Investigation 515 541	angio-CT tętnic wieńcowych
+T6	Behaviour 545 563	Dieta lekkostrawna
+T7	Condition 782 833	Niewydolność serca z zachowana frakcją wyrzutową LK
+N1	Reference T7 ICD10:I50.9	Niewydolność serca, nieokreślona
+T8	Condition 879 900	Nadciśnienie tętnicze
+N2	Reference T8 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T9	Condition 902 914	Dyslipidemia
+N3	Reference T9 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T10	Treatment 924 944	operacyjnym leczeniu
+A1	Status T10 Historical_Insignificant
+N4	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T11	Condition 945 959	żylaków odbytu
+N5	Reference T11 ICD10:I84.9	Hemoroidy, nieokreślone, bez powikłań
+T12	Condition 962 985	żylaków kończyn dolnych
+N6	Reference T12 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+A2	Status T11 Historical_Insignificant
+A3	Status T12 Historical_Insignificant
+T13	Condition 1131 1154	nadciśnieniem tętniczym
+N7	Reference T13 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T14	Date 1155 1168	od ok. 25 lat
+R2	Dat Arg1:T14 Arg2:T13	
+T15	Symptom 1225 1268	duszności spoczynkowej i głównie wysiłkowej
+N8	Reference T15 ICD10:R06.0	Duszność
+T16	Symptom 1274 1315	ograniczenia tolerancji wysiłku fizycznej
+T17	Date 1316 1330	od ok. 1-2 lat
+R3	Dat Arg1:T17 Arg2:T16	
+R4	Dat Arg1:T17 Arg2:T15	
+T18	Negation 1332 1338	Neguje
+T19	Symptom 1340 1352	zasłabnięcia
+T20	Symptom 1354 1362	omdlenia
+N9	Reference T20 ICD10:R55	Omdlenie i zapaść
+T21	Symptom 1364 1374	krwawienia
+T22	Symptom 1376 1389	czarne stolce
+N10	Reference T22 ICD10:K92.1	Stolce smołowate
+T23	Symptom 1391 1407	brunatne wymioty
+N11	Reference T23 ICD10:K92.0	Wymioty krwawe
+T24	Condition 1409 1411	DM
+N12	Reference T24 ICD10:E14	Cukrzyca nieokreślona
+T25	Condition 1413 1423	udar mózgu
+N13	Reference T25 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T26	Condition 1425 1436	zawał serca
+N14	Reference T26 ICD10:I25.2	Przebyty zawał serca
+R5	Neg Arg1:T18 Arg2:T19	
+R6	Neg Arg1:T18 Arg2:T20	
+R7	Neg Arg1:T18 Arg2:T21	
+R8	Neg Arg1:T18 Arg2:T22	
+R9	Neg Arg1:T18 Arg2:T23	
+R10	Neg Arg1:T18 Arg2:T24	
+R11	Neg Arg1:T18 Arg2:T25	
+R12	Neg Arg1:T18 Arg2:T26	
+T27	Treatment 1450 1458	operacje
+A4	Status T27 Historical_Insignificant
+T28	Condition 1461 1474	żylaki odbytu
+A5	Status T28 Historical_Insignificant
+N16	Reference T28 ICD10:I84.9	Hemoroidy, nieokreślone, bez powikłań
+T29	Date 1476 1490	kilka lat temu
+T30	Condition 1493 1536	żylaki kończyn dolnych (obie kończyny dolne
+A6	Status T30 Historical_Insignificant
+N17	Reference T30 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T31	Treatment 1539 1554	metodą laserową
+T32	Condition 1556 1576	prawa kończyna dolna
+A7	Status T32 Historical_Insignificant
+N18	Reference T32 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T33	Treatment 1587 1598	tradycyjnie
+N19	Reference T33 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T34	Date 1599 1607	12.2018r
+R13	Dat Arg1:T29 Arg2:T28	
+R14	Dat Arg1:T29 Arg2:T27	
+R15	Dat Arg1:T34 Arg2:T33	
+R16	Dat Arg1:T34 Arg2:T32	
+R17	Dat Arg1:T34 Arg2:T31	
+R18	Dat Arg1:T34 Arg2:T30	
+R19	Dat Arg1:T34 Arg2:T27	
+T35	Behaviour 1609 1624	Palenie tytoniu
+N15	Reference T35 ICD10:Z72.0	Używanie tytoniu
+T36	Negation 1626 1638	nie, rzuciła
+T37	Date 1639 1654	ok. 20 lat temu
+T38	Behaviour 1656 1668	30 paczkolat
+N20	Reference T38 ICD10:Z72.0	Używanie tytoniu
+R20	Dat Arg1:T37 Arg2:T35	
+R21	Neg Arg1:T36 Arg2:T35	
+T39	Behaviour 1671 1682	Inne używki
+T40	Negation 1684 1687	nie
+T41	Condition 1689 1698	Uczulenia
+N21	Reference T41 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T42	Negation 1700 1703	nie
+T43	Condition 1732 1735	WZW
+N22	Reference T43 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T44	Negation 1736 1739	(-)
+T45	Condition 1742 1751	borelioza
+N23	Reference T45 ICD10:A69.2	Choroba z Lyme
+T46	Negation 1752 1757	( - )
+T47	Condition 1759 1762	tbc
+N24	Reference T47 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T48	Negation 1763 1766	(-)
+T49	Behaviour 1832 1858	warunki mieszkaniowe dobre
+T50	Behaviour 1860 1869	emerytura
+T51	Behaviour 1871 1889	pracownik umysłowy
+T52	Drug 1928 1938	Concor COR
+T53	Drug_dose 1939 1949	5 mg 1-0-0
+T54	Drug 1951 1960	Tertensif
+T55	Drug_dose 1961 1973	1,5 mg 1-0-0
+T56	Drug 1975 1982	Accupro
+T57	Drug_dose 1983 1994	10 mg 0-0-1
+T58	Drug 1996 2004	Suvardio
+T59	Drug_dose 2005 2013	mg 0-0-1
+R22	Neg Arg1:T40 Arg2:T39	
+R23	Neg Arg1:T42 Arg2:T41	
+R24	Neg Arg1:T44 Arg2:T43	
+R25	Neg Arg1:T46 Arg2:T45	
+R26	Neg Arg1:T48 Arg2:T47	
+R27	Drg Arg1:T52 Arg2:T53	
+R28	Drg Arg1:T54 Arg2:T55	
+R29	Drg Arg1:T56 Arg2:T57	
+R30	Drg Arg1:T58 Arg2:T59	
+T60	Investigation 2076 2097	badania laboratoryjne
+T61	Investigation 2099 2103	ECHO
+T62	Investigation 2105 2109	ABPM
+T63	Condition 835 840	HFpEF
+N25	Reference T63 ICD10:I50.9	Niewydolność serca, nieokreślona
+T64	Symptom 850 869	w II klasie wg NYHA
+N26	Reference T64 ICD10:I50	Niewydolność serca
+T65	Date 870 877	de novo
+R31	Dat Arg1:T65 Arg2:T7	
+R32	Dat Arg1:T65 Arg2:T63	
+T66	Investigation_result 842 848	EF=60%

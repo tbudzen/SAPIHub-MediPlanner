@@ -1,0 +1,27 @@
+T1	Treatment 331 369	Wizyta w Poradni Kardiologicznej ICZMP
+T2	Date 387 396	za 6 m-cy
+T3	Symptom 468 490	niepokojących objawach
+T4	Date 493 502	wcześniej
+R1	Dat Arg1:T2 Arg2:T1	
+R2	Dat Arg1:T4 Arg2:T1	
+R3	Dat Arg1:T4 Arg2:T3	
+T5	Treatment 506 525	Opieka pediatryczna
+T6	Treatment 528 552	obserwacja neurologiczna
+T7	Negation 673 676	Bez
+T8	Drug 677 682	leków
+R4	Neg Arg1:T7 Arg2:T8	
+T9	Condition 911 979	Wrodzona wada serca pod postacią przełożenia wielkich pni tętniczych
+N1	Reference T9 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T10	Treatment 995 1013	zabiegu Rashkind'a
+N2	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T11	Date 1015 1026	17.06.2016r
+T12	Treatment 1034 1071	operacji metodą korekcji anatomicznej
+N3	Reference T12 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T13	Date 1073 1084	04.07.2016r
+T14	Condition 1091 1121	Dysgenezja ciała modzelowatego
+N4	Reference T14 ICD10:Q04.0	Wrodzone wady rozwojowe spoidła wielkiego
+R5	Dat Arg1:T11 Arg2:T10	
+R6	Dat Arg1:T13 Arg2:T12	
+T15	Condition 1277 1296	wrodzoną wadą serca
+T16	Symptom 1374 1389	Stan ddość obry
+N5	Reference T15 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych

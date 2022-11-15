@@ -1,0 +1,106 @@
+T1	Investigation 2008 2012	ECHO
+T2	Investigation 2014 2018	ABPM
+T3	Investigation 2020 2031	Holter ekg.
+T4	Negation 1910 1923	nie przyjmuje
+T5	Drug 1904 1908	Leki
+R1	Neg Arg1:T4 Arg2:T5	
+T6	Behaviour 1874 1900	warunki mieszkaniowe dobre
+T7	Condition 1822 1825	WZW
+T8	Condition 1832 1841	borelioza
+N2	Reference T8 ICD10:A69.2	Choroba z Lyme
+T9	Condition 1849 1852	tbc
+N3	Reference T9 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T10	Negation 1853 1856	(-)
+R2	Neg Arg1:T10 Arg2:T9	
+T11	Negation 1844 1845	-
+R3	Neg Arg1:T11 Arg2:T8	
+T12	Negation 1826 1829	(-)
+R4	Neg Arg1:T12 Arg2:T7	
+T13	Negation 1790 1793	nie
+T14	Negation 1774 1777	nie
+T15	Condition 1779 1788	Uczulenia
+N4	Reference T15 ICD10:T78.4	Alergia, nieokreślona
+R5	Neg Arg1:T13 Arg2:T15	
+T16	Behaviour 1761 1772	Inne używki
+R6	Neg Arg1:T14 Arg2:T16	
+T17	Behaviour 1726 1760	Palenie tytoniu: tak, 10 paczkolat
+T18	Negation 1722 1725	nie
+T19	Treatment 1703 1720	Przebyte operacje
+R7	Neg Arg1:T18 Arg2:T19	
+T20	Investigation 428 457	kontrola ciśnienia tętniczego
+T21	Investigation 474 494	kontrola lipidogramu
+T22	Behaviour 502 524	dieta niskoglikemiczna
+T23	Behaviour 530 564	bezwzględny zakaz palenia tytoniu!
+T24	Behaviour 571 617	stały, umiarkowany, aerobowy wysiłek fizyczny!
+T25	Symptom 836 860	Bóle w klatce piersiowej
+T26	Condition 862 892	Blok prawej odnogi pęczka Hisa
+N7	Reference T26 ICD10:I45.0	Blok prawej odnogi pęczka Hisa
+T27	Condition 894 916	Hiperlipiemia mieszana
+N8	Reference T27 ICD10:E78.2	Hiperlipidemia mieszana
+T28	Behaviour 918 928	Nikotynizm
+T29	Condition 930 980	Wada serca pod postacią niedomykalności mitralnej,
+N10	Reference T29 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T30	Condition 981 993	trójdzielnej
+N11	Reference T30 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T31	Condition 995 1012	płucnej I stopnia
+N12	Reference T31 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T32	Condition 1014 1036	Hipoglikemia reaktywna
+N13	Reference T32 ICD10:E16.2	Hipoglikemia, nieokreślona
+T33	Condition 1177 1181	RBBB
+N14	Reference T33 ICD10:I45.0	Blok prawej odnogi pęczka Hisa
+T34	Condition 1183 1194	bradykardią
+N15	Reference T34 ICD10:R00.1	Bradykardia, nieokreślona
+T35	Behaviour 1196 1230	po licznych ugryzieniach kleszczy,
+T36	Condition 1246 1255	hipotonii
+T37	Symptom 1323 1381	okresowego gniecenia za mostkiem w sytuacjach stresujących
+T38	Symptom 1393 1410	kołataniami serca
+N16	Reference T38 ICD10:R00.2	Kołatanie serca
+T39	Date 1382 1390	od 2 lat
+R8	Dat Arg1:T39 Arg2:T38	
+R9	Dat Arg1:T39 Arg2:T37	
+T40	Symptom 1436 1472	uczucie nagłej senności po posiłkach
+T41	Symptom 1475 1510	trudnościami w zajęciach manualnych
+T42	Symptom 1516 1540	małą tolerancję alkoholu
+T43	Negation 1542 1548	Neguje
+T44	Symptom 1550 1562	zasłabnięcia
+N17	Reference T44 ICD10:R55	Omdlenie i zapaść
+T45	Symptom 1564 1572	omdlenia
+N18	Reference T45 ICD10:R55	Omdlenie i zapaść
+T46	Symptom 1574 1584	krwawienia
+N19	Reference T46 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T47	Symptom 1586 1599	czarne stolce
+N20	Reference T47 ICD10:K92.1	Stolce smołowate
+T48	Symptom 1601 1617	brunatne wymioty
+N21	Reference T48 ICD10:K92.0	Wymioty krwawe
+T49	Condition 1619 1635	chorobę wrzodową
+N22	Reference T49 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T50	Symptom 1637 1665	duszność nocną typu ortopnoe
+N23	Reference T50 ICD10:R06.0	Duszność
+T51	Condition 1667 1669	HA
+N24	Reference T51 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T52	Condition 1671 1673	DM
+N25	Reference T52 ICD10:E13	Inne określone postacie cukrzycy
+T53	Condition 1675 1686	udar mózgu,
+N26	Reference T53 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T54	Condition 1687 1698	zawał serca
+N27	Reference T54 ICD10:I25.2	Przebyty zawał serca
+R10	Neg Arg1:T43 Arg2:T44	
+R11	Neg Arg1:T43 Arg2:T45	
+R12	Neg Arg1:T43 Arg2:T46	
+R13	Neg Arg1:T43 Arg2:T47	
+R14	Neg Arg1:T43 Arg2:T48	
+R15	Neg Arg1:T43 Arg2:T49	
+R16	Neg Arg1:T43 Arg2:T50	
+R17	Neg Arg1:T43 Arg2:T51	
+R18	Neg Arg1:T43 Arg2:T52	
+R19	Neg Arg1:T43 Arg2:T53	
+R20	Neg Arg1:T43 Arg2:T54	
+N6	Reference T25 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N9	Reference T28 ICD10:Z72.0	Używanie tytoniu
+N28	Reference T36 ICD10:I95.0	Samoistne niedociśnienie tętnicze
+N29	Reference T37 ICD10:R07.3	Inne bóle w klatce piersiowej
+N5	Reference T17 ICD10:Z72.0	Używanie tytoniu
+N1	Reference T7 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T55	Treatment 344 371	dalsza opieka w poradni POZ
+T56	Treatment 379 411	okresowa kontrola kardiologiczna
+N30	Reference T16 ICD10:Z72	Problemy związane ze stylem życia

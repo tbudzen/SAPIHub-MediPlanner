@@ -1,0 +1,102 @@
+T1	Investigation 2942 2952	echo serca
+T2	Investigation 2954 2957	TET
+T3	Investigation 2959 2963	ABPM
+T4	Investigation 2965 2971	Holter
+T5	Investigation 2973 2991	RTG kl. piersiowej
+T6	Drug 2893 2902	Amlessa  
+T7	Drug_dose 2902 2914	1 tabl. rano
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 2866 2873	Xarelto
+T9	Drug_dose 2874 2892	20 mg 1 tabl. rano
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Negation 2788 2798	nie podaje
+T11	Negation 2766 2776	nie podaje
+T12	Negation 2734 2742	nie pali
+T13	Condition 2777 2786	Uczulenia
+N1	Reference T13 ICD10:T78.4	Alergia, nieokreślona
+R3	Neg Arg1:T10 Arg2:T13	
+T14	Behaviour 2753 2764	Inne używki
+R4	Neg Arg1:T11 Arg2:T14	
+T15	Behaviour 2717 2732	Palenie tytoniu
+N2	Reference T15 ICD10:T65.2	Tytoń i nikotyna
+R5	Neg Arg1:T12 Arg2:T15	
+T16	Condition 2713 2716	CAD
+A1	Status T16 Family
+N3	Reference T16 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T17	Negation 2674 2684	nie podaje
+T18	Condition 2657 2660	WZW
+N4	Reference T18 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T19	Condition 2662 2671	borelioza
+N5	Reference T19 ICD10:A69.2	Choroba z Lyme
+R6	Neg Arg1:T17 Arg2:T19	
+R7	Neg Arg1:T17 Arg2:T18	
+T20	Symptom 2342 2367	spadku tolerancji wysiłku
+T21	Condition 2382 2427	kardiomiopatia rozstrzeniowa w II kl. wg NYHA
+N6	Reference T21 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+T22	Condition 2442 2475	utrwalone migotanie przedsionków,
+N7	Reference T22 ICD10:I48	Migotanie i trzepotanie przedsionków
+T23	Condition 2476 2518	blok całkowity z zastępczym rytmem z łącza
+N8	Reference T23 ICD10:I44.2	Blok przedsionkowo-komorowy zupełny
+T24	Date 2520 2530	20/08/2018
+R8	Dat Arg1:T24 Arg2:T23	
+T25	Condition 2554 2574	miażdżyca uogólniona
+N9	Reference T25 ICD10:I70.9	Miażdżyca uogólniona i nieokreślona
+T26	Condition 2595 2629	przepuklina pachwinowa lewostronna
+N10	Reference T26 ICD10:K40	Przepuklina pachwinowa
+T27	Treatment 2576 2593	Przebyte operacje
+T28	Condition 2141 2169	Kardiomiopatia rozstrzeniowa
+N11	Reference T28 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+T29	Condition 1550 1596	Kardiomiopatia rozstrzeniowa  w II kl. wg NYHA
+N12	Reference T29 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+T30	Condition 1803 1823	Miażdżyca uogólniona
+N13	Reference T30 ICD10:I70.9	Miażdżyca uogólniona i nieokreślona
+T31	Condition 869 889	Miażdżyca uogólniona
+N14	Reference T31 ICD10:I70.9	Miażdżyca uogólniona i nieokreślona
+T32	Condition 1886 1922	przepukliny pachwinowej lewostronnej
+N15	Reference T32 ICD10:K40	Przepuklina pachwinowa
+T33	Treatment 1877 1885	operacji
+T34	Condition 1825 1868	Przewlekła niewydolność nerek w III stadium
+N16	Reference T34 ICD10:N18.9	Przewlekła niewydolność nerek, nieokreślona
+T35	Condition 891 934	Przewlekła niewydolność nerek w III stadium
+N17	Reference T35 ICD10:N18.9	Przewlekła niewydolność nerek, nieokreślona
+T36	Condition 1779 1800	Nadciśnienie tętnicze
+N18	Reference T36 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T37	Condition 845 866	Nadciśnienie tętnicze
+N19	Reference T37 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T38	Treatment 943 951	operacji
+T39	Condition 952 988	przepukliny pachwinowej lewostronnej
+N20	Reference T39 ICD10:K40	Przepuklina pachwinowa
+T40	Investigation 1261 1329	kontrolą morfologii, lipidogramu, parametrów wątrobowych i nerkowych
+T41	Investigation 1220 1249	kontrola ciśnienia tętniczego
+T42	Condition 1681 1743	Blok przedsionkowo-komorowy III st z zastępczym rytmem z łącza
+N21	Reference T42 ICD10:I44.2	Blok przedsionkowo-komorowy zupełny
+T43	Date 1744 1756	(20/08/2018)
+R9	Dat Arg1:T43 Arg2:T42	
+T44	Condition 747 809	Blok przedsionkowo-komorowy III st z zastępczym rytmem z łącza
+N22	Reference T44 ICD10:I44.2	Blok przedsionkowo-komorowy zupełny
+T45	Date 811 821	20/08/2018
+R10	Dat Arg1:T45 Arg2:T44	
+T46	Condition 726 745	Zespół tachy -brady
+N23	Reference T46 ICD10:I49.5	Zespół chorej zatoki
+T47	Condition 1645 1679	Zespół tachy-brady bez napadów MAS
+N24	Reference T47 ICD10:I49.5	Zespół chorej zatoki
+T48	Condition 1611 1644	Utrwalone migotanie przedsionków.
+N25	Reference T48 ICD10:I48	Migotanie i trzepotanie przedsionków
+T49	Condition 692 725	Utrwalone migotanie przedsionków.
+N26	Reference T49 ICD10:I48	Migotanie i trzepotanie przedsionków
+T50	Condition 631 681	Niewydolność serca z zachowaną EF w II kl. wg NYHA
+N27	Reference T50 ICD10:I50	Niewydolność serca
+T51	Condition 438 504	Kombinowana wada serca pod postacią umiarkowanej stenozy aortalnej
+N28	Reference T51 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T52	Condition 506 514	IA II st
+N29	Reference T52 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T53	Condition 517 575	umiarkowanej stenozy mitralnej z niedomykalnością II/III s
+N30	Reference T53 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T54	Condition 582 615	niedomykalnością trójdzielną IIst
+N31	Reference T54 ICD10:I07.1	
+T55	Investigation_result 618 629	SPAP 51mmHg
+T56	Investigation_result 683 689	EF 50%
+T57	Investigation_result 1597 1610	(EF 20%-50%).
+T58	Investigation_result 2428 2440	(EF 20%-50%)
+T59	Date 2743 2752	od 40 lat
+R11	Dat Arg1:T59 Arg2:T15	

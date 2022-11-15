@@ -1,0 +1,72 @@
+T1	Condition 449 480	Łagodna niedomykalność aortalna
+N1	Reference T1 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T2	Condition 482 503	Nadciśnienie tętnicze
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Condition 505 519	Hiperlipidemia
+N3	Reference T3 ICD10:E78.2	Hiperlipidemia mieszana
+T4	Condition 529 560	2 krotnym udarze niedokrwiennym
+N4	Reference T4 ICD10:I63.9	Zawał mózgu, nieokreślony
+T5	Date 562 584	ostatni ok 2 lata temu
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Condition 595 619	pęknięciu tętniaka mózgu
+N5	Reference T6 ICD10:I60.9	Krwotok podpajęczynówkowy, nieokreślony
+T7	Date 620 634	ok 30 lat temu
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Condition 636 657	Niedowład lewostronny
+N6	Reference T8 ICD10:G81.9	Porażenie połowicze, nieokreślone
+T9	Treatment 854 910	Dalsza opieka w Poradni Kardiologicznej i Neurologicznej
+T10	Investigation 913 963	Regularna kontrola ciśnienia tętniczego oraz tętna
+T11	Condition 1166 1187	bradykardii zatokowej
+N7	Reference T11 ICD10:R00.1	Bradykardia, nieokreślona
+T12	Condition 1202 1223	nadciśnienie tętnicze
+N8	Reference T12 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T13	Condition 1225 1239	hiperlipidemia
+N9	Reference T13 ICD10:E78.2	Hiperlipidemia mieszana
+T14	Condition 1249 1280	2 krotnym udarze niedokrwiennym
+N10	Reference T14 ICD10:I63.9	Zawał mózgu, nieokreślony
+T15	Date 1282 1304	ostatni ok 2 lata temu
+T16	Condition 1315 1339	pęknięciu tętniaka mózgu
+N11	Reference T16 ICD10:I60.9	Krwotok podpajęczynówkowy, nieokreślony
+T17	Date 1340 1354	ok 30 lat temu
+T18	Treatment 1367 1375	leczenie
+T19	Condition 1376 1390	tętniaka mózgu
+N12	Reference T19 ICD10:I67.1	Tętniak mózgu, niepęknięty
+R3	Dat Arg1:T17 Arg2:T16	
+R4	Dat Arg1:T15 Arg2:T14	
+T20	Date 1391 1405	ok 30 lat temu
+T21	Behaviour 1407 1417	Nikotynizm
+N13	Reference T21 ICD10:Z72.0	Używanie tytoniu
+T22	Date 1420 1433	w przeszłości
+R5	Dat Arg1:T22 Arg2:T21	
+T23	Behaviour 1437 1444	Alkohol
+N14	Reference T23 ICD10:Z72.1	Używanie alkoholu
+T24	Negation 1445 1446	-
+R6	Neg Arg1:T24 Arg2:T23	
+R7	Dat Arg1:T20 Arg2:T18	
+R8	Dat Arg1:T20 Arg2:T19	
+T25	Negation 1455 1461	neguje
+T26	Condition 1463 1480	uczulenia na leki
+N15	Reference T26 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T27	Symptom 1482 1515	krwawienia z przewodu pokarmowego
+N16	Reference T27 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R9	Neg Arg1:T25 Arg2:T26	
+R10	Neg Arg1:T25 Arg2:T27	
+T28	Condition 1517 1532	Wywiad rodzinny
+A1	Status T28 Family
+T29	Negation 1534 1547	bez znaczenia
+R11	Neg Arg1:T29 Arg2:T28	
+T30	Drug 1574 1584	Biootropil
+T31	Drug_dose 1585 1591	1200mg
+T32	Drug 1593 1598	Acard
+T33	Drug_dose 1599 1602	75m
+T34	Drug 1604 1618	Noliprel forte
+T35	Drug_dose 1619 1627	5+1,25mg
+T36	Drug 1629 1635	Atoris
+T37	Drug_dose 1636 1640	20mg
+T38	Investigation 1652 1662	ECHO serca
+T39	Investigation 1664 1674	Holter EKG
+T40	Investigation 1676 1685	Holter RR
+R12	Drg Arg1:T30 Arg2:T31	
+R13	Drg Arg1:T32 Arg2:T33	
+R14	Drg Arg1:T34 Arg2:T35	
+R15	Drg Arg1:T36 Arg2:T37	

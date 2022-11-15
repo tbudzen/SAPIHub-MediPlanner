@@ -1,0 +1,117 @@
+T1	Investigation 2185 2189	ECHO
+T2	Investigation 2191 2209	EKG metodą Holtera
+T3	Investigation 2211 2215	ABPM
+T4	Investigation 2217 2233	próba wysiłkowa.
+T5	Negation 2092 2101	bez leków
+T6	Drug 2086 2090	Leki
+R1	Neg Arg1:T5 Arg2:T6	
+T7	Behaviour 2057 2083	warunki mieszkaniowe dobre
+T8	Condition 1967 1970	WZW
+N1	Reference T8 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T9	Condition 1977 1993	borelioza ( + )-
+N2	Reference T9 ICD10:A69.2	
+T10	Negation 1971 1974	(-)
+R2	Neg Arg1:T10 Arg2:T8	
+T11	Date 1994 2005	przed laty,
+R3	Dat Arg1:T11 Arg2:T9	
+T12	Condition 2033 2036	tbc
+N3	Reference T12 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T13	Negation 2037 2040	(-)
+R4	Neg Arg1:T13 Arg2:T12	
+T14	Negation 1936 1939	nie
+T15	Condition 1925 1934	Uczulenia
+R5	Neg Arg1:T14 Arg2:T15	
+T16	Behaviour 1899 1910	Inne używki
+T17	Date 1912 1920	od 5 lat
+R6	Dat Arg1:T17 Arg2:T16	
+T18	Negation 1921 1924	nie
+R7	Neg Arg1:T18 Arg2:T16	
+T19	Behaviour 1864 1879	Palenie tytoniu
+N5	Reference T19 ICD10:Z72.0	Używanie tytoniu
+T20	Negation 1881 1889	nie pali
+R8	Neg Arg1:T20 Arg2:T19	
+T21	Date 1890 1898	od 5 lat
+R9	Dat Arg1:T21 Arg2:T19	
+T22	Treatment 1821 1848	operacje: stawów kolanowych
+A1	Status T22 Historical_Insignificant
+T23	Date 1849 1863	kilka lat temu
+R10	Dat Arg1:T23 Arg2:T22	
+T24	Negation 1665 1671	Neguje
+T25	Symptom 1673 1685	zasłabnięcia
+N6	Reference T25 ICD10:R55	Omdlenie i zapaść
+T26	Symptom 1687 1695	omdlenia
+N7	Reference T26 ICD10:R55	Omdlenie i zapaść
+T27	Symptom 1697 1707	krwawienia
+N8	Reference T27 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T28	Symptom 1709 1722	czarne stolce
+N9	Reference T28 ICD10:K92.1	Stolce smołowate
+T29	Symptom 1724 1740	brunatne wymioty
+N10	Reference T29 ICD10:K92.0	Wymioty krwawe
+T30	Condition 1742 1759	chorobę wrzodową,
+N11	Reference T30 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T31	Symptom 1760 1774	duszność nocną
+T32	Condition 1777 1779	HA
+N13	Reference T32 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T33	Condition 1781 1783	DM
+N14	Reference T33 ICD10:E13	Inne określone postacie cukrzycy
+T34	Condition 1785 1795	udar mózgu
+N15	Reference T34 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T35	Condition 1797 1808	zawał serca
+N16	Reference T35 ICD10:I25.2	Przebyty zawał serca
+R11	Neg Arg1:T24 Arg2:T25	
+R12	Neg Arg1:T24 Arg2:T26	
+R13	Neg Arg1:T24 Arg2:T27	
+R14	Neg Arg1:T24 Arg2:T28	
+R15	Neg Arg1:T24 Arg2:T29	
+R16	Neg Arg1:T24 Arg2:T30	
+R17	Neg Arg1:T24 Arg2:T31	
+R18	Neg Arg1:T24 Arg2:T32	
+R19	Neg Arg1:T24 Arg2:T33	
+R20	Neg Arg1:T24 Arg2:T34	
+R21	Neg Arg1:T24 Arg2:T35	
+T36	Investigation 390 466	kontrola: morfologii, lipidogramu, glikemii, kreatyniny, ALT, TSH, jonogramu
+T37	Behaviour 496 519	Dieta śródziemnomorska.
+T38	Investigation 529 566	kontrola ciśnienia tętniczego, tętna.
+T39	Behaviour 573 615	Unikanie wszelkich alkoholi energetycznych
+T40	Behaviour 624 654	Umiarkowana aktywność fizyczna
+T41	Condition 873 920	Podejrzenie przebytej zakrzepicy żył kk dolnych
+A2	Source T41 Declared
+N17	Reference T41 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T42	Condition 922 940	zatorowość płucna?
+A3	Source T42 Declared
+N18	Reference T42 ICD10:I26	Zator płucny
+T43	Condition 941 947	Anginy
+N19	Reference T43 ICD10:J03.9	Ostre zapalenie migdałków podniebiennych, nieokreślone
+T44	Condition 1126 1140	częstych angin
+N20	Reference T44 ICD10:J03.9	Ostre zapalenie migdałków podniebiennych, nieokreślone
+T45	Date 1141 1156	w dzieciństwie,
+R22	Dat Arg1:T45 Arg2:T44	
+A4	Status T44 Historical_Insignificant
+T46	Symptom 1186 1228	zmniejszenia tolerancji wysiłku fizycznego
+N21	Reference T46 ICD10:R53	Złe samopoczucie i zmęczenie
+T47	Date 1229 1242	od 3 tygodni.
+R23	Dat Arg1:T47 Arg2:T46	
+T48	Date 1244 1259	3 tygodnie temu
+T49	Symptom 1321 1336	obrzek podudzi,
+N22	Reference T49 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+R24	Dat Arg1:T48 Arg2:T49	
+T50	Symptom 1385 1403	duszność wysiłkowa
+N23	Reference T50 ICD10:R06.0	Duszność
+R25	Dat Arg1:T48 Arg2:T50	
+T51	Symptom 1426 1448	napady kołatania serca
+N24	Reference T51 ICD10:R00.2	Kołatanie serca
+T52	Drug 1656 1663	Dexaven
+T53	Behaviour 1499 1525	nadużywał głównie alkoholu
+N25	Reference T53 ICD10:Z72.1	Używanie alkoholu
+T54	Date 1450 1460	5 lat temu
+R26	Dat Arg1:T54 Arg2:T53	
+T55	Symptom 1527 1553	kłucia w klatce piersiowej
+N26	Reference T55 ICD10:R07.3	Inne bóle w klatce piersiowej
+T56	Symptom 1574 1590	kołatania serca,
+N27	Reference T56 ICD10:R00.2	Kołatanie serca
+T57	Symptom 1591 1633	obrzeki także w okolicy stawów kk górnych-
+N28	Reference T57 ICD10:R22.3	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny górnej
+N12	Reference T31 ICD10:R06.0	Duszność
+N29	Reference T16 ICD10:Z72	Problemy związane ze stylem życia
+T58	Treatment 345 372	Dalsza opieka w poradni POZ
+N4	Reference T15 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

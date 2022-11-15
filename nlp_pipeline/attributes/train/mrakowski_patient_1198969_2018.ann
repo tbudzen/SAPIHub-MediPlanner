@@ -1,0 +1,84 @@
+T1	Treatment 345 372	dalsza opieka w poradni POZ
+T2	Treatment 379 434	okresowa kontrola kardiologiczna i gastroenterologiczna
+T3	Treatment 441 518	konieczna konsultacja hematologiczna celem rozważenia poszerzonej diagnostyki
+T4	Condition 519 534	małopłytkowości
+N1	Reference T4 ICD10:D69.6	Małopłytkowość, nieokreślona
+T5	Investigation 591 612	rtg klatki piersiowej
+T6	Investigation_result 613 706	zacienienia w lewym kącie przeponowo-sercowym (najprawdopodobniej depozyt tkanki tłuszczowej)
+N2	Reference T6 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+R1	Inv Arg1:T5 Arg2:T6	
+T7	Investigation 712 751	codzienna kontrola ciśnienia tętniczego
+T8	Investigation 758 787	okresowa kontrola lipidogramu
+T9	Behaviour 794 804	dieta DASH
+T10	Behaviour 811 830	redukcja masy ciała
+T11	Behaviour 838 883	stały, umiarkowany, aerobowy wysiłek fizyczny
+T12	Treatment 890 918	regularne przyjmowanie leków
+T13	Drug 928 931	IPP
+T14	Drug_dose 932 959	20 mg 1 tabl. rano na czczo
+R2	Drg Arg1:T13 Arg2:T14	
+T15	Condition 1194 1245	Nadkomorowe zaburzenia rytmu serca - ekstrasystolie
+N3	Reference T15 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T16	Condition 1247 1267	Bradykardia zatokowa
+N4	Reference T16 ICD10:R00.1	Bradykardia, nieokreślona
+T17	Condition 1269 1276	Nadwaga
+N5	Reference T17 ICD10:E66	Otyłość
+T18	Investigation_result 1278 1292	BMI 26.4 kg/m2
+T19	Condition 1295 1309	Małopłytkowość
+N6	Reference T19 ICD10:D69.6	Małopłytkowość, nieokreślona
+T20	Condition 1311 1335	Choroba wrzodowa żołądka
+N7	Reference T20 ICD10:K25	Wrzód żołądka
+T21	Treatment 1346 1389	kilkukrotnej eradykacji Helicobacter pylori
+T22	Condition 1391 1419	Choroba refluksowa  przełyku
+N8	Reference T22 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T23	Condition 1429 1470	oparzeniu tułowia i kończyny dolnej lewej
+A1	Status T23 Historical_Insignificant
+N9	Reference T23 ICD10:T29.0	Oparzenia termiczne licznych okolic ciała, nieokreślonego stopnia
+T24	Date 1472 1486	w dzieciństwie
+R3	Dat Arg1:T24 Arg2:T23	
+T25	Symptom 1663 1702	labilnych wartości ciśnienia tętniczego
+N10	Reference T25 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T26	Condition 1726 1750	choroba wrzodowa żołądka
+N11	Reference T26 ICD10:K25	Wrzód żołądka
+T27	Treatment 1760 1786	eradykacji HP kilkukrotnej
+T28	Condition 1788 1816	refluks żołądkowo-przełykowy
+N12	Reference T28 ICD10:K21	
+T29	Condition 1818 1853	oparzenie tułowia i k. dolnej lewej
+A2	Status T29 Historical_Insignificant
+N13	Reference T29 ICD10:T29.0	Oparzenia termiczne licznych okolic ciała, nieokreślonego stopnia
+T30	Date 1854 1868	w dzieciństwie
+R4	Dat Arg1:T30 Arg2:T29	
+T31	Treatment 1870 1887	Przebyte operacje
+T32	Negation 1889 1895	neguje
+R5	Neg Arg1:T32 Arg2:T31	
+T33	Condition 1897 1912	Wywiad rodzinny
+A3	Status T33 Family
+T34	Condition 1923 1947	rak przewodu pokarmowego
+A4	Status T34 Family
+N14	Reference T34 ICD10:C26.0	Przewód pokarmowy, część nieokreślona
+T35	Condition 1957 1967	rak piersi
+A5	Status T35 Family
+N15	Reference T35 ICD10:C50	Nowotwór złośliwy piersi
+T36	Condition 1997 2004	Alergie
+N16	Reference T36 ICD10:T78.4	Alergia, nieokreślona
+T37	Negation 2006 2012	neguje
+R6	Neg Arg1:T37 Arg2:T36	
+T38	Behaviour 2014 2024	Nikotynizm
+N17	Reference T38 ICD10:Z72.0	Używanie tytoniu
+T39	Negation 2026 2032	neguje
+R7	Neg Arg1:T39 Arg2:T38	
+T40	Behaviour 2035 2056	Alkohol: okazjonalnie
+N18	Reference T40 ICD10:Z72.1	Używanie alkoholu
+T41	Behaviour 2058 2075	Uzależnienie inne
+T42	Negation 2077 2083	neguje
+R8	Neg Arg1:T42 Arg2:T41	
+T43	Behaviour 2101 2108	prawnik
+T44	Investigation 2152 2162	echo serca
+T45	Investigation 2164 2167	TET
+T46	Investigation 2169 2173	ABPM
+T47	Investigation 2175 2185	Holter ekg
+T48	Investigation 2187 2205	rtg kl. piersiowej
+T49	Drug 2110 2114	Leki
+T50	Negation 2116 2123	żadnych
+R9	Neg Arg1:T50 Arg2:T49	
+A6	Status T40 Historical_Insignificant
+N19	Reference T41 ICD10:Z72	Problemy związane ze stylem życia

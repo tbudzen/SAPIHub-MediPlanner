@@ -1,0 +1,125 @@
+T1	Condition 448 469	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 471 486	Cukrzyca typu 2
+N2	Reference T2 ICD10:E11	Cukrzyca insulinoniezależna
+T3	Condition 488 518	Choroba afektywna dwubiegunowa
+N3	Reference T3 ICD10:F31.9	Zaburzenia afektywne dwubiegunowe, nieokreślone
+T4	Treatment 528 536	operacji
+A1	Status T4 Historical_Insignificant
+T5	Treatment 595 617	operacji bariatrycznej
+A2	Status T5 Historical_Insignificant
+A3	Source T5 Declared
+T6	Date 639 643	1998
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Condition 537 558	przepukliny brzusznej
+T8	Date 580 584	2011
+N4	Reference T7 ICD10:K43	Przepuklina brzuszna
+R2	Dat Arg1:T8 Arg2:T7	
+R3	Dat Arg1:T8 Arg2:T4	
+A4	Status T7 Historical_Insignificant
+T9	Treatment 983 1082	Dalsza opieka w POZ, Poradni Kardiologicznej, Poradni Diabetologicznej oraz Poradni Psychiatrycznej
+T10	Investigation 1087 1179	Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T11	Date 1191 1205	za 4-6 tygodni
+R4	Dat Arg1:T11 Arg2:T10	
+T12	Investigation 1210 1270	Wskazana kontrola TSH, FT3 i FT4 w warunkach ambulatoryjnych
+T13	Date 1271 1285	za 4-6 tygodni
+R5	Dat Arg1:T13 Arg2:T12	
+T14	Behaviour 1290 1404	Dieta cukrzycowa, lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T15	Behaviour 1409 1437	Zalecana redukcja masy ciała
+T16	Investigation 1442 1498	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T17	Treatment 1503 1531	Regularne przyjmowanie leków
+T18	Drug 1537 1544	Nebilet
+T19	Drug_dose 1545 1566	5mg 1/2 tabletki rano
+R6	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1568 1576	Primacor
+T21	Drug_dose 1577 1597	10mg 1 tabletka rano
+R7	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1599 1606	Tritace
+T23	Drug_dose 1607 1633	2,5mg 1 tabletka wieczorem
+R8	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1635 1642	Roswera
+T25	Drug_dose 1643 1668	15mg 1 tabletka wieczorem
+R9	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1670 1678	Lamotrix
+T27	Drug_dose 1679 1731	100mg+50 mg 1 tabletka rano - wg zaleceń specjalisty
+R10	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1733 1743	Faxolet ER
+T29	Drug_dose 1744 1789	75mg 1 tabletka rano - wg zaleceń specjalisty
+R11	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1791 1801	Diaprel MR
+T31	Drug_dose 1802 1822	30mg 1 tabletka rano
+R12	Drg Arg1:T30 Arg2:T31	
+T32	Drug 1824 1833	Metformax
+T33	Drug_dose 1834 1873	850mg 1 tabletka w południe i wieczorem
+R13	Drg Arg1:T32 Arg2:T33	
+T34	Drug 1875 1884	Captopril
+T35	Drug_dose 1885 1932	12,5mg 1 tabletka podjęzykowo doraźnie, w razie
+T36	Symptom 1933 1963	wysokiego ciśnienia tętniczego
+N5	Reference T36 ICD10:R03	
+R14	Drg Arg1:T34 Arg2:T35	
+T37	Condition 2132 2155	nadciśnienia tętniczego
+N6	Reference T37 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T38	Symptom 2158 2178	podwyższone wartości
+N7	Reference T38 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T39	Date 2179 2190	od miesiąca
+R15	Dat Arg1:T39 Arg2:T38	
+T40	Investigation_result 2192 2228	zwykle 150/90mmHg, max. 195/120 mmHg
+N8	Reference T40 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+R16	Dat Arg1:T39 Arg2:T40	
+T41	Condition 2252 2258	DM t.2
+N9	Reference T41 ICD10:E11	Cukrzyca insulinoniezależna
+T42	Condition 2260 2299	zaburzenia afektywne - ch. dwubiegunowa
+N10	Reference T42 ICD10:F31.9	Zaburzenia afektywne dwubiegunowe, nieokreślone
+T43	Treatment 2301 2318	Przebyte operacje
+T44	Treatment 2328 2350	operacji bariatrycznej
+A5	Status T44 Historical_Insignificant
+T45	Date 2351 2355	1998
+R17	Dat Arg1:T45 Arg2:T44	
+T46	Treatment 2365 2373	operacji
+A6	Status T46 Historical_Insignificant
+T47	Condition 2374 2395	przepukliny brzusznej
+N11	Reference T47 ICD10:K43	Przepuklina brzuszna
+T48	Date 2396 2400	2011
+A7	Status T47 Historical_Insignificant
+R18	Dat Arg1:T48 Arg2:T47	
+R19	Dat Arg1:T48 Arg2:T46	
+T49	Condition 2401 2416	Wywiad rodzinny
+A8	Status T49 Family
+T50	Negation 2418 2431	bez znaczenia
+R20	Neg Arg1:T50 Arg2:T49	
+T51	Condition 2433 2440	Alergie
+T52	Negation 2442 2448	neguje
+R21	Neg Arg1:T52 Arg2:T51	
+T53	Behaviour 2450 2460	Nikotynizm
+T54	Negation 2462 2468	neguje
+R22	Neg Arg1:T54 Arg2:T53	
+T55	Behaviour 2471 2492	Alkohol: okazjonalnie
+T56	Behaviour 2494 2511	Uzależnienie inne
+T57	Negation 2513 2519	neguje
+R23	Neg Arg1:T57 Arg2:T56	
+T58	Behaviour 2537 2548	dziennikarz
+T59	Drug 2556 2563	Lacipil
+T60	Drug_dose 2564 2593	4 mg 1 tabl. rano i wieczorem
+R24	Drg Arg1:T59 Arg2:T60	
+T61	Drug 2595 2605	Diaprel MR
+T62	Drug_dose 2606 2624	30 mg 1 tabl. rano
+R25	Drg Arg1:T61 Arg2:T62	
+T63	Drug 2626 2635	Metformax
+T64	Drug_dose 2636 2670	850 1 tabl. w południe i wieczorem
+R26	Drg Arg1:T63 Arg2:T64	
+T65	Drug 2672 2680	Lamotrix
+T66	Drug_dose 2681 2696	100 +50 mg rano
+R27	Drg Arg1:T65 Arg2:T66	
+T67	Drug 2698 2708	Faxolet ER
+T68	Drug_dose 2709 2726	75mg 1 tabl. rano
+R28	Drg Arg1:T67 Arg2:T68	
+T69	Investigation 2756 2766	echo serca
+T70	Investigation 2768 2771	TET
+T71	Investigation 2773 2777	ABPM
+T72	Investigation 2779 2789	Holter ekg
+T73	Investigation 2791 2809	rtg kl. piersiowej
+N14	Reference T51 ICD10:T78.4	Alergia, nieokreślona
+N13	Reference T55 ICD10:Z72.1	Używanie alkoholu
+N12	Reference T53 ICD10:Z72.0	Używanie tytoniu
+N15	Reference T56 ICD10:Z72	Problemy związane ze stylem życia
+A9	Status T55 Historical_Insignificant

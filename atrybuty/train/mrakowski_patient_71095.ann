@@ -1,0 +1,83 @@
+T1	Treatment 329 406	dalsza opieka w poradni POZ, okresowa kontrola kardiologiczna, psychiatryczna
+T2	Treatment 407 485	okresowa kontrola EKG przy zwiększaniu dawek leków psychotropowych (ocena QTc)
+T3	Investigation 486 532	regularne pomiary ciśnienia tętniczego 2 x dz.
+T4	Behaviour 533 552	redukcja masy ciała
+T5	Behaviour 553 610	prawidłowe żywienie (ograniczenie soli kuchennej do 5g/d)
+T6	Behaviour 612 644	systematyczna aktywność fizyczna
+T7	Treatment 645 671	regularne stosowanie leków
+T8	Drug 673 681	Setaloft
+T9	Drug_dose 682 700	50 mg 2 tabl. rano
+R1	Drg Arg1:T8 Arg2:T9	
+T10	Drug 701 710	Diphergan
+T11	Drug_dose 711 734	25 mg 1 tabl. wieczorem
+R2	Drg Arg1:T10 Arg2:T11	
+T12	Symptom 961 979	Omdlenia odruchowe
+N1	Reference T12 ICD10:R55	Omdlenie i zapaść
+T13	Condition 981 1040	Zaburzenia rytmu serca pod postacią wstawek rytmu węzłowego
+N2	Reference T13 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T14	Condition 1054 1098	Upośledzenie umysłowe w stopniu umiarkowanym
+N3	Reference T14 ICD10:F71	Upośledzenie umysłowe umiarkowanego stopnia
+T15	Condition 1100 1116	Nerwica natręctw
+N4	Reference T15 ICD10:F48.8	Inne określone zaburzenia nerwicowe
+T16	Condition 1130 1143	Otyłość I st.
+N5	Reference T16 ICD10:E66.9	Otyłość, nieokreślona
+T17	Condition 1288 1334	upośledzeniem umysłowym w stopniu umiarkowanym
+N6	Reference T17 ICD10:F71	Upośledzenie umysłowe umiarkowanego stopnia
+T18	Condition 1338 1354	nerwicą natręctw
+N7	Reference T18 ICD10:F48.8	Inne określone zaburzenia nerwicowe
+T19	Symptom 1385 1405	kilkukrotnych omdleń
+N8	Reference T19 ICD10:R55	Omdlenie i zapaść
+T20	Date 1406 1417	od 09.2019r
+R3	Dat Arg1:T20 Arg2:T19	
+T21	Symptom 1420 1465	przy pobieraniu krwi, w sytuacjach stresowych
+N9	Reference T21 ICD10:R55	Omdlenie i zapaść
+T22	Investigation 1496 1506	Holter-EKG
+T23	Date 1508 1516	02.2019r
+R4	Dat Arg1:T23 Arg2:T22	
+T24	Investigation_result 1521 1556	wstawka rytmu węzłowego (37-55/min)
+R5	Dat Arg1:T23 Arg2:T24	
+R6	Inv Arg1:T22 Arg2:T24	
+N10	Reference T24 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T25	Condition 1576 1593	zaćma OP i OL 4 x
+T26	Treatment 1594 1613	Leczenie przewlekłe
+T27	Treatment 1631 1643	okulistyczne
+T28	Condition 1671 1674	WZW
+N11	Reference T28 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T29	Condition 1676 1685	borelioza
+N12	Reference T29 ICD10:A69.2	Choroba z Lyme
+T30	Negation 1688 1698	nie podaje
+R7	Neg Arg1:T30 Arg2:T28	
+R8	Neg Arg1:T30 Arg2:T29	
+T31	Condition 1725 1743	choroba psychiczna
+A2	Status T31 Family
+N13	Reference T31 ICD10:F09	Nieokreślone zaburzenia psychiczne organiczne lub objawowe
+T32	Behaviour 1744 1759	Palenie tytoniu
+T33	Negation 1761 1771	nie podaje
+R9	Neg Arg1:T33 Arg2:T32	
+T34	Behaviour 1772 1783	Inne używki
+T35	Negation 1785 1795	nie podaje
+R10	Neg Arg1:T35 Arg2:T34	
+T36	Condition 1796 1805	Uczulenia
+T37	Drug 1807 1817	penicyliny
+T38	Behaviour 1836 1844	uczy się
+T39	Drug 1868 1876	Setaloft
+T40	Drug_dose 1877 1896	50 mg  2 tabl. rano
+R12	Drg Arg1:T39 Arg2:T40	
+T41	Drug 1897 1906	Diphergan
+T42	Drug_dose 1907 1930	25 mg 1 tabl. wieczorem
+R13	Drg Arg1:T41 Arg2:T42	
+T43	Investigation 1958 1968	echo serca
+T44	Investigation 1970 1973	TET
+T45	Investigation 1975 1979	ABPM
+T46	Investigation 1981 1987	Holter
+T47	Investigation 1989 2007	RTG kl. piersiowej
+T48	Treatment 1557 1574	Przebyte operacje
+T49	Condition 1699 1714	Wywiad rodzinny
+A3	Status T49 Family
+N15	Reference T25 ICD10:H26.9	Zaćma, nieokreślona
+T50	Treatment 1615 1629	psychiatryczne
+R11	Alg Arg1:T36 Arg2:T37	
+A1	Status T25 Historical_Insignificant
+N14	Reference T32 ICD10:Z72.0	Używanie tytoniu
+N16	Reference T36 ICD10:Z88	
+N17	Reference T34 ICD10:Z72	Problemy związane ze stylem życia

@@ -1,0 +1,110 @@
+T1	Treatment 329 356	dalsza opieka w poradni poz
+T2	Treatment 358 390	okresowa kontrola kardiologiczna
+T3	Treatment 400 429	dalsze leczenie neurologiczne
+T4	Behaviour 431 450	prawidłowe żywienie
+T5	Behaviour 451 479	regularna aktywność fizyczna
+T6	Drug 486 491	olfen
+T7	Drug 524 532	neurovit
+T8	Drug 546 549	IPP
+T9	Drug 576 589	poltram combo
+T10	Drug_dose 492 510	75 mg - 1 x 1 i.m.
+T11	Drug_dose 535 545	1 x 1 tabl
+T12	Drug_dose 550 575	20 mg 1 x 1 tabl na czczo
+T13	Drug_dose 592 602	2 x 1 tabl
+T14	Date 511 523	przez 10 dni
+T15	Date 603 615	przez 10 dni
+T16	Condition 851 880	OZW-STMI ściany dolno-bocznej
+N1	Reference T16 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T17	Condition 882 888	MINOCA
+T18	Condition 892 919	zapalenie mięśnia sercowego
+N2	Reference T18 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+T19	Date 921 926	2013r
+T20	Condition 929 953	Rwa kulszowa lewostronna
+A1	Status T20 Historical_Insignificant
+N3	Reference T20 ICD10:M54.3	Rwa kulszowa
+R1	Dat Arg1:T19 Arg2:T18	
+R2	Dat Arg1:T19 Arg2:T16	
+R3	Dat Arg1:T19 Arg2:T17	
+T21	Condition 1110 1137	OZW-STEMI sc. dolno-bocznej
+N4	Reference T21 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T22	Date 1139 1144	2013r
+T23	Investigation 1147 1161	koronarografia
+T24	Investigation_result 0 1163	------------------------------------------------
+Wiek: 38 lat
+------------------------------------------------
+------------------------------------------------
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+Zalecenia
+------------------------------------------------
+dalsza opieka w poradni poz, okresowa kontrola kardiologiczna
+wskazane dalsze leczenie neurologiczne 
+prawidłowe żywienie
+regularna aktywność fizyczna
+leki:
+olfen 75 mg - 1 x 1 i.m. przez 10 dni
+neurovit - 1 x 1 tabl
+IPP 20 mg 1 x 1 tabl na czczo
+poltram combo - 2 x 1 tabl przez 10 dni
+------------------------------------------------
+Rozpoznanie lek. przyjm.
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Stan po przebytym OZW-STMI ściany dolno-bocznej (MINOCA) - zapalenie mięśnia sercowego (2013r). Rwa kulszowa lewostronna.
+------------------------------------------------
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+Pacjent 38-letni, po przebytym OZW-STEMI sc. dolno-bocznej (2013r)( koronarografia t
+R4	Inv Arg1:T23 Arg2:T24	
+T25	Investigation_result 1162 1168	tt. bz
+T26	Condition 1170 1183	zap. m. serc?
+A2	Source T26 Declared
+N5	Reference T26 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+T27	Symptom 1215 1245	pogorszenia tolerancji wysiłku
+T28	Date 1246 1254	od 2013r
+T29	Treatment 1275 1298	operacja przegrody nosa
+N6	Reference T29 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T30	Treatment 1299 1318	Leczenie przewlekłe
+T31	Negation 1320 1330	nie podaje
+T32	Condition 1358 1361	WZW
+N7	Reference T32 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T33	Condition 1363 1372	borelioza
+N8	Reference T33 ICD10:A69.2	Choroba z Lyme
+T34	Negation 1373 1383	nie podaje
+T35	Condition 1409 1412	CAD
+A3	Status T35 Family
+N9	Reference T35 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T36	Behaviour 1413 1428	Palenie tytoniu
+N10	Reference T36 ICD10:Z72.0	Używanie tytoniu
+T37	Negation 1430 1440	nie podaje
+T38	Behaviour 1441 1466	Inne używki: okazjonalnie
+T39	Condition 1467 1476	Uczulenia
+N11	Reference T39 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T40	Negation 1478 1488	nie podaje
+R6	Neg Arg1:T31 Arg2:T30	
+R7	Dat Arg1:T22 Arg2:T21	
+R8	Dat Arg1:T28 Arg2:T27	
+R9	Dat Arg1:T14 Arg2:T6	
+R10	Drg Arg1:T6 Arg2:T10	
+R11	Drg Arg1:T7 Arg2:T11	
+R12	Drg Arg1:T8 Arg2:T12	
+R13	Drg Arg1:T9 Arg2:T13	
+R14	Dat Arg1:T15 Arg2:T9	
+R15	Neg Arg1:T34 Arg2:T32	
+R16	Neg Arg1:T34 Arg2:T33	
+R17	Neg Arg1:T37 Arg2:T36	
+R18	Neg Arg1:T40 Arg2:T39	
+T41	Behaviour 1507 1517	handlowiec
+T42	Behaviour 1519 1523	żona
+T43	Behaviour 1525 1535	bezdzietny
+T44	Negation 1542 1555	nie przyjmuje
+T45	Drug 1556 1570	na stałe leków
+T46	Investigation 1598 1608	echo serca
+T47	Investigation 1610 1613	TET
+T48	Investigation 1615 1619	ABPM
+T49	Investigation 1621 1627	Holter
+T50	Investigation 1629 1647	RTG kl. piersiowej
+R19	Neg Arg1:T44 Arg2:T45	
+R5	Inv Arg1:T23 Arg2:T25	
+R20	Dat Arg1:T22 Arg2:T23	
+R21	Dat Arg1:T22 Arg2:T26	

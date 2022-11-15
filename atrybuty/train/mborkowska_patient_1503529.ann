@@ -1,0 +1,96 @@
+T1	Investigation 2243 2253	echo serca
+T2	Investigation 2255 2275	echo przezprzełykowe
+T3	Investigation 2278 2281	TET
+T4	Investigation 2283 2287	ABPM
+T5	Investigation 2289 2295	Holter
+T6	Investigation 2297 2316	RTG kl. piersiowej.
+T7	Drug 2185 2196	Propranolol
+T8	Drug_dose 2197 2215	40 mg 1 tabl. rano
+R1	Drg Arg1:T7 Arg2:T8	
+T9	Negation 2116 2126	nie podaje
+T10	Condition 2105 2114	Uczulenia
+N1	Reference T10 ICD10:T78.4	Alergia, nieokreślona
+R2	Neg Arg1:T9 Arg2:T10	
+T11	Behaviour 2079 2104	Inne używki: okazjonalnie
+T12	Negation 2068 2078	nie podaje
+T13	Negation 2040 2050	nie podaje
+T14	Negation 2005 2008	(-)
+T15	Negation 2019 2022	(-)
+T16	Condition 2010 2019	borelioza
+N2	Reference T16 ICD10:A69.2	Choroba z Lyme
+R3	Neg Arg1:T15 Arg2:T16	
+T17	Condition 2001 2004	WZW
+R4	Neg Arg1:T14 Arg2:T17	
+T18	Condition 2023 2038	Wywiad rodzinny
+A1	Status T18 Family
+R5	Neg Arg1:T13 Arg2:T18	
+T19	Behaviour 2051 2066	Palenie tytoniu
+R6	Neg Arg1:T12 Arg2:T19	
+T20	Negation 1928 1938	nie podaje
+T21	Treatment 1909 1926	Przebyte operacje
+R7	Neg Arg1:T20 Arg2:T21	
+T22	Condition 924 977	Ubytek w przegrodzie międzykomorowej typu mięśniowego
+N5	Reference T22 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T23	Condition 1272 1326	Ubytek w przegrodzie międzykomorowej typu mięśniowego.
+N6	Reference T23 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T24	Condition 1327 1350	Hiperlipidemia mieszana
+N7	Reference T24 ICD10:E78.2	Hiperlipidemia mieszana
+T25	Condition 979 1002	Hiperlipidemia mieszana
+N8	Reference T25 ICD10:E78.2	Hiperlipidemia mieszana
+T26	Condition 1017 1027	zespół WPW
+N9	Reference T26 ICD10:I45.6	Zespół preekscytacji
+T27	Condition 1365 1375	zespół WPW
+N10	Reference T27 ICD10:I45.6	Zespół preekscytacji
+T28	Date 1028 1042	w dzieciństwie
+R8	Dat Arg1:T28 Arg2:T26	
+T29	Date 1376 1390	w dzieciństwie
+R9	Dat Arg1:T29 Arg2:T27	
+T30	Condition 1572 1615	VSD t. mięśniowego w koniuszkowej części LK
+N11	Reference T30 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T31	Condition 1617 1648	wykryty przypadkowo szmer serca
+T32	Condition 1657 1690	infekcji górnych dróg oddechowych
+N12	Reference T32 ICD10:J06	Ostre zakażenie górnych dróg oddechowych o umiejscowieniu mnogim nieokreślonym
+T33	Date 1692 1697	2018r
+R10	Dat Arg1:T33 Arg2:T32	
+R11	Dat Arg1:T33 Arg2:T31	
+T34	Negation 1725 1731	Neguje
+T35	Symptom 1732 1754	bóle w kl. piersiowej,
+T36	Symptom 1755 1770	kołatania serca
+N14	Reference T36 ICD10:R00.2	Kołatanie serca
+T37	Symptom 1772 1780	omdlenia
+N15	Reference T37 ICD10:R55	Omdlenie i zapaść
+R12	Neg Arg1:T34 Arg2:T35	
+R13	Neg Arg1:T34 Arg2:T36	
+R14	Neg Arg1:T34 Arg2:T37	
+A2	Status T26 Historical_Insignificant
+A3	Status T27 Historical_Insignificant
+T38	Condition 1795 1798	WPW
+N16	Reference T38 ICD10:I45.6	Zespół preekscytacji
+T39	Date 1799 1813	w dzieciństwie
+A4	Status T38 Historical_Insignificant
+R15	Dat Arg1:T39 Arg2:T38	
+T40	Symptom 1815 1832	drżenie samoistne
+N17	Reference T40 ICD10:G25.0	Drżenie samoistne
+T41	Drug 1834 1845	Propranolol
+T42	Date 1846 1858	40 mg 3 x dz
+R16	Dat Arg1:T42 Arg2:T41	
+T43	Condition 1861 1877	polipy odbytnicy
+N18	Reference T43 ICD10:K62.1	Polip odbytnicy
+T44	Treatment 1888 1900	polipektomii
+T45	Date 1902 1907	2019r
+R17	Dat Arg1:T45 Arg2:T44	
+R18	Dat Arg1:T45 Arg2:T43	
+N19	Reference T31 ICD10:R01.2	Inne zjawiska osłuchowe w okolicy serca
+N13	Reference T35 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+A5	Status T44 Historical_Insignificant
+A6	Status T43 Historical_Insignificant
+N3	Reference T17 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N4	Reference T19 ICD10:Z72.0	Używanie tytoniu
+T46	Treatment 463 485	kontrola u lekarza POZ
+T47	Treatment 344 352	leczenia
+T48	Negation 340 343	bez
+R19	Neg Arg1:T48 Arg2:T47	
+T49	Treatment 488 569	kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych (wydano skierowanie
+T50	Treatment 573 645	konsultacja w Poradni Zaburzeń Rytmu Serca przy CKD (wydano skierowanie)
+T51	Treatment 648 688	dalsza kontrola w Poradni Neurologicznej
+N20	Reference T11 ICD10:Z72	Problemy związane ze stylem życia

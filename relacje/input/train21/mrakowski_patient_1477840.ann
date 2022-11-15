@@ -1,0 +1,198 @@
+T1	Treatment 333 350	Przyjmowanie leku
+T2	Drug 351 358	Clexane
+T3	Drug_dose 359 378	2x 80mg  podskórnie
+R1	Drg Arg1:T2 Arg2:T3	
+T4	Treatment 384 475	Elewacja lewej kończyny dolnej i dalsze stosowanie pończochy uciskowej  (II stopień ucisku)
+T5	Investigation 479 515	Kontrolne angio-TK klatki piersiowej
+T6	Date 516 524	za 3m-ce
+R2	Dat Arg1:T6 Arg2:T5	
+T7	Treatment 656 714	Opieka Poradni Chorób Naczyniowych Szpitala im.  Kopernika
+T8	Treatment 741 777	Opieka Poradni Kardiologicznej ICZMP
+T9	Treatment 976 1082	W RAZIE POGORSZENIA STANU OGÓLNEGO, BÓLU W KLATCE PIERSIOWEJ, CZY DUSZNOŚCI KONIECZNA PILNA HOSPITALIZACJA
+T10	Condition 1301 1318	Zatorowość płucna
+N1	Reference T10 ICD10:I26.9	Zator płucny bez informacji o ostrym sercu płucnym
+T11	Condition 1324 1370	Zakrzepica żył głębokich kończyny dolnej lewej
+N2	Reference T11 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T12	Drug 1491 1499	Heparyna
+T13	Drug 1501 1508	Clexane
+T14	Drug 1510 1516	Warfin
+T15	Drug 1518 1525	Helicid
+T16	Condition 1687 1715	masywnej zatorowości płucnej
+N3	Reference T16 ICD10:I26	Zator płucny
+T17	Condition 1718 1764	zakrzepicy żył głębokich kończyny dolnej lewej
+N4	Reference T17 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T18	Date 1766 1773	03.2019
+R3	Dat Arg1:T18 Arg2:T17	
+T19	Condition 2057 2104	Łagodna niedomykalność zastawki tętnicy płucnej
+N5	Reference T19 ICD10:Q22.2	Wrodzona niedomykalność zastawki pnia płucnego
+T20	Condition 2106 2137	Nadciśnienie tętnicze I stopnia
+N6	Reference T20 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T21	Condition 2147 2175	masywnej zatorowości płucnej
+N7	Reference T21 ICD10:I26	Zator płucny
+T22	Condition 2178 2224	zakrzepicy żył głębokich kończyny dolnej lewej
+N8	Reference T22 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T23	Date 2226 2233	03/2019
+R4	Dat Arg1:T23 Arg2:T22	
+T24	Treatment 2346 2365	Dalsza opieka w POZ
+T25	Treatment 2369 2419	Dalsza okresowa kontrola w Poradni Kardiologicznej
+T26	Investigation 2422 2460	kontrolą wartości ciśnienia tętniczego
+T27	Treatment 2463 2517	ewentualną decyzją o włączeniu leczenia hipotensyjnego
+T28	Treatment 2521 2574	Wskazana dalsza diagnostyka w Poradni Hematologicznej
+T29	Condition 2844 2870	podejrzenia zapalenia płuc
+A1	Source T29 Declared
+N9	Reference T29 ICD10:J18.9	Zapalenie płuc, nieokreślone
+T30	Symptom 2892 2911	czuje się osłabione
+T31	Date 2872 2883	Od ok 8 dni
+R5	Dat Arg1:T31 Arg2:T30	
+T32	Date 2919 2929	6 dni temu
+T33	Condition 2930 2957	rozpoznano zapalenie gardła
+N10	Reference T33 ICD10:J02.9	Ostre zapalenie gardła, nieokreślone
+R6	Dat Arg1:T32 Arg2:T33	
+T34	Drug 2969 2978	Augmentin
+T35	Drug 2980 2989	Clemastin
+T36	Drug 2991 3004	Rutinoscorbin
+T37	Symptom 3032 3048	złe samopoczucie
+N11	Reference T37 ICD10:R53	Złe samopoczucie i zmęczenie
+T38	Symptom 3050 3058	duszność
+N12	Reference T38 ICD10:R06.0	Duszność
+T39	Symptom 3112 3145	znaczne pogorszenie stanu zdrowia
+T40	Condition 3189 3220	podejrzenia zatorowości płucnej
+A2	Source T40 Declared
+N13	Reference T40 ICD10:I26	Zator płucny
+T41	Investigation 3254 3263	badaniach
+T42	Investigation_result 3290 3361	TroponinaT 41,2 (N:<14), CRP 23,5 m,g/dl (N:<5). D-dimery 5,41 (n:<0,5)
+R7	Inv Arg1:T41 Arg2:T42	
+T43	Negation 3373 3379	neguje
+T44	Treatment 3380 3407	przyjmowanie leków na stałe
+R8	Neg Arg1:T43 Arg2:T44	
+T45	Negation 3409 3415	neguje
+T46	Drug 3427 3449	doustnej antykoncepcji
+R9	Neg Arg1:T45 Arg2:T46	
+T47	Condition 3451 3464	Test na grypę
+N14	Reference T47 ICD10:J11	Grypa, wirus niezidentyfikowany
+T48	Negation 3467 3473	ujemny
+R10	Neg Arg1:T48 Arg2:T47	
+T49	Condition 3474 3516	W takcie pobytu w IP pacjentka niestabilna
+T50	Symptom 3525 3548	spadki saturacji do 80%
+T51	Symptom 3558 3566	duszność
+N15	Reference T51 ICD10:R06.0	Duszność
+T52	Treatment 3583 3609	konsultację kardiologiczną
+T53	Investigation 3644 3652	angio-CT
+T54	Investigation_result 3655 3672	zatorowość płucna
+N16	Reference T54 ICD10:I26	Zator płucny
+R11	Inv Arg1:T53 Arg2:T54	
+T55	Condition 3688 3713	niestabilny stan pacjenta
+T56	Symptom 3715 3731	spadki saturacji
+T57	Condition 3897 3925	masywnej zatorowości płucnej
+N17	Reference T57 ICD10:I26	Zator płucny
+T58	Investigation 3929 3948	angioCT tt płucnych
+T59	Investigation_result 3949 4034	w obu głównych tt płucnych widzoczne ubytki zakontrastowania od poziomu wnęk płucnych
+R12	Inv Arg1:T58 Arg2:T59	
+T60	Condition 4038 4084	zakrzepicy żył głębokich kończyny dolnej lewej
+N18	Reference T60 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T61	Date 4086 4093	03.2019
+R13	Dat Arg1:T61 Arg2:T60	
+T62	Condition 4193 4198	ŻChZZ
+N19	Reference T62 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T63	Drug 4228 4235	Xarelto
+T64	Drug_dose 4236 4240	20mg
+R14	Drg Arg1:T63 Arg2:T64	
+T65	Condition 4242 4258	czuje się dobrze
+T66	Negation 4260 4271	nie zgłasza
+T67	Symptom 4272 4284	dolegliwości
+R15	Neg Arg1:T66 Arg2:T67	
+T68	Negation 4359 4374	nie stwierdzono
+T69	Condition 4375 4409	obecności mutacji genu protrombiny
+R16	Neg Arg1:T68 Arg2:T69	
+T70	Date 4414 4421	08.2019
+T71	Investigation 4446 4465	usg-d żż kk dolnych
+T72	Investigation_result 4467 4533	żyły układu głębokiego lewej kończyny dolnej drożne, bez skrzeplin
+R17	Inv Arg1:T71 Arg2:T72	
+R18	Dat Arg1:T70 Arg2:T71	
+T73	Date 4538 4545	09.2019
+T74	Investigation 4633 4704	badania w kierunku  trombofilii i zespołu antyfosfolipidowego są w toku
+R19	Dat Arg1:T73 Arg2:T74	
+T75	Negation 4706 4712	Neguje
+T76	Treatment 4561 4630	hospitalizowana w Insytucie Hematologii i Transfuzjologii w Warszawie
+R20	Dat Arg1:T73 Arg2:T76	
+T77	Symptom 4714 4726	zasłabnięcia
+T78	Symptom 4728 4736	omdlenia
+N20	Reference T78 ICD10:R55	Omdlenie i zapaść
+T79	Symptom 4738 4748	krwawienia
+T80	Symptom 4750 4763	czarne stolce
+N21	Reference T80 ICD10:K92.1	Stolce smołowate
+T81	Symptom 4765 4781	brunatne wymioty
+N22	Reference T81 ICD10:K92.0	Wymioty krwawe
+T82	Symptom 4783 4791	duszność
+N23	Reference T82 ICD10:R06.0	Duszność
+T83	Symptom 4793 4808	obrzęki podudzi
+N24	Reference T83 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T84	Symptom 4810 4834	bóle w klatce piersiowej
+N25	Reference T84 ICD10:R07	Ból gardła i w klatce piersiowej
+T85	Symptom 4836 4851	kołatania serca
+N26	Reference T85 ICD10:R00.2	Kołatanie serca
+T86	Drug 4853 4866	antykoncepcja
+T87	Condition 4868 4881	chor tarczycy
+N27	Reference T87 ICD10:E07.9	Choroby tarczycy, nieokreślone
+T88	Condition 4883 4885	HA
+N28	Reference T88 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T89	Condition 4887 4889	DM
+N29	Reference T89 ICD10:E14	Cukrzyca nieokreślona
+R21	Neg Arg1:T75 Arg2:T89	
+R22	Neg Arg1:T75 Arg2:T88	
+R23	Neg Arg1:T75 Arg2:T87	
+R24	Neg Arg1:T75 Arg2:T86	
+R25	Neg Arg1:T75 Arg2:T85	
+R26	Neg Arg1:T75 Arg2:T84	
+R27	Neg Arg1:T75 Arg2:T83	
+R28	Neg Arg1:T75 Arg2:T82	
+R29	Neg Arg1:T75 Arg2:T81	
+R30	Neg Arg1:T75 Arg2:T80	
+R31	Neg Arg1:T75 Arg2:T79	
+R32	Neg Arg1:T75 Arg2:T78	
+R33	Neg Arg1:T75 Arg2:T77	
+T90	Treatment 4890 4907	Przebyte operacje
+T91	Negation 4909 4912	nie
+R34	Neg Arg1:T91 Arg2:T90	
+T92	Behaviour 4913 4928	Palenie tytoniu
+N30	Reference T92 ICD10:T65.2	Tytoń i nikotyna
+T93	Negation 4930 4933	nie
+R35	Neg Arg1:T93 Arg2:T92	
+T94	Behaviour 4934 4945	Inne używki
+T95	Negation 4947 4950	nie
+R36	Neg Arg1:T95 Arg2:T94	
+T96	Condition 4951 4960	Uczulenia
+T97	Negation 4962 4965	nie
+R37	Neg Arg1:T97 Arg2:T96	
+T98	Condition 4994 4997	WZW
+N31	Reference T98 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T99	Negation 4999 5000	-
+R38	Neg Arg1:T99 Arg2:T98	
+T100	Condition 5004 5013	borelioza
+N32	Reference T100 ICD10:A69.2	Choroba z Lyme
+T101	Negation 5015 5016	-
+R39	Neg Arg1:T101 Arg2:T100	
+T102	Condition 5019 5022	tbc
+N33	Reference T102 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T103	Negation 5024 5025	-
+R40	Neg Arg1:T103 Arg2:T102	
+T104	Condition 5028 5032	odra
+N34	Reference T104 ICD10:B05	Odra
+T105	Negation 5034 5035	-
+R41	Neg Arg1:T105 Arg2:T104	
+T106	Condition 5038 5052	kontakt z odrą
+N35	Reference T106 ICD10:B05	Odra
+T107	Negation 5054 5055	-
+R42	Neg Arg1:T107 Arg2:T106	
+T108	Condition 5059 5078	wywiadzie rodzinnym
+A3	Status T108 Family
+T109	Negation 5080 5083	b/z
+R43	Neg Arg1:T109 Arg2:T108	
+T110	Behaviour 5100 5126	warunki mieszkaniowe dobre
+T111	Drug 5163 5170	Xarelto
+T112	Drug_dose 5171 5190	20mg 1x 1 tabl/rano
+R44	Drg Arg1:T111 Arg2:T112	
+T113	Investigation 5251 5272	badania laboratoryjne
+T114	Investigation 5274 5278	ECHO
+T115	Investigation 5280 5298	EKG metodą Holtera
+T116	Investigation 5300 5304	ABPM

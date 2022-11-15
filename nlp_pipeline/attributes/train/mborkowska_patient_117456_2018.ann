@@ -1,0 +1,129 @@
+T1	Investigation 2360 2371	echo serca,
+T2	Investigation 2372 2375	TET
+T3	Investigation 2377 2381	ABPM
+T4	Investigation 2383 2389	Holter
+T5	Investigation 2391 2409	RTG kl. piersiowej
+T6	Drug 2302 2309	Amlozek
+T7	Drug 2274 2281	Milurit
+T8	Drug 2249 2255	Ebivol
+T9	Drug 2221 2229	Spironol
+T10	Drug 2194 2201	Polsart
+T11	Drug 2164 2169	Acard
+T12	Drug_dose 2170 2193	75 mg 1 tabl. wieczorem
+R1	Drg Arg1:T11 Arg2:T12	
+T13	Drug_dose 2202 2220	80 mg 1 tabl. rano
+R2	Drg Arg1:T10 Arg2:T13	
+T14	Drug_dose 2230 2248	25 mg 1 tabl. rano
+R3	Drg Arg1:T9 Arg2:T14	
+T15	Drug_dose 2256 2273	5 mg 1 tabl. rano
+R4	Drg Arg1:T8 Arg2:T15	
+T16	Drug_dose 2282 2301	100 mg 1 tabl. rano
+R5	Drg Arg1:T7 Arg2:T16	
+T17	Drug_dose 2310 2332	5 mg 1 tabl. wieczorem
+R6	Drg Arg1:T6 Arg2:T17	
+T18	Drug 2110 2120	penicylina
+T19	Condition 2099 2108	Uczulenia
+N1	Reference T19 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R7	Alg Arg1:T19 Arg2:T18	
+T20	Negation 2088 2098	nie podaje
+T21	Negation 2064 2074	nie podaje
+T22	Negation 2037 2046	negatywny
+T23	Behaviour 2075 2086	Inne używki
+R8	Neg Arg1:T20 Arg2:T23	
+T24	Behaviour 2047 2062	Palenie tytoniu
+N2	Reference T24 ICD10:Z72.0	Używanie tytoniu
+R9	Neg Arg1:T21 Arg2:T24	
+T25	Condition 2020 2035	Wywiad rodzinny
+A1	Status T25 Family
+R10	Neg Arg1:T22 Arg2:T25	
+T26	Negation 2009 2019	nie podaje
+T27	Condition 1997 2006	borelioza
+N3	Reference T27 ICD10:A69.2	Choroba z Lyme
+T28	Condition 1992 1995	WZW
+N4	Reference T28 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+R11	Neg Arg1:T26 Arg2:T27	
+R12	Neg Arg1:T26 Arg2:T28	
+T29	Treatment 1922 1938	panhisterektomii
+A2	Status T29 Historical_Insignificant
+T30	Condition 1948 1958	ca jajnika
+A3	Status T30 Historical_Insignificant
+N5	Reference T30 ICD10:C56	Nowotwór złośliwy jajnika
+T31	Date 1959 1964	2014r
+R13	Dat Arg1:T31 Arg2:T30	
+R14	Dat Arg1:T31 Arg2:T29	
+T32	Investigation 480 509	kontrola ciśnienia tętniczego
+T33	Investigation 519 553	kontrola lipidogramu, elektrolitów
+T34	Behaviour 554 579	dieta niskocholesterolowa
+T35	Behaviour 580 599	redukcja masy ciała
+T36	Behaviour 601 646	stały, umiarkowany, aerobowy wysiłek fizyczny
+T37	Drug 677 682	Acard
+T38	Drug_dose 683 706	75 mg 1 tabl. wieczorem
+R15	Drg Arg1:T37 Arg2:T38	
+T39	Drug 707 719	Polsart Plus
+T40	Drug_dose 720 744	80 mg/25 mg 1 tabl. rano
+R16	Drg Arg1:T39 Arg2:T40	
+T41	Drug 745 751	Ebivol
+T42	Drug_dose 752 771	5 mg 1/2 tabl. rano
+R17	Drg Arg1:T41 Arg2:T42	
+T43	Drug 772 779	Milurit
+T44	Drug_dose 780 811	100 mg 1 tabl. rano i wieczorem
+R18	Drg Arg1:T43 Arg2:T44	
+T45	Drug 812 820	Primacor
+T46	Drug_dose 821 844	10 mg 1 tabl. wieczorem
+R19	Drg Arg1:T45 Arg2:T46	
+T47	Drug 845 852	Roswera
+T48	Drug_dose 853 876	10 mg 1 tabl. wieczorem
+R20	Drg Arg1:T47 Arg2:T48	
+T49	Drug 877 884	Kaldyum
+T50	Drug_dose 885 899	1 tabl. 1 x dz
+R21	Drg Arg1:T49 Arg2:T50	
+T51	Condition 1118 1136	Niewydolność serca
+T52	Symptom 1137 1147	II wg NYHA
+T53	Condition 1149 1174	Dysfunkcja rozkurczowa LK
+T54	Condition 1176 1197	Nadciśnienie tętnicze
+N7	Reference T54 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T55	Condition 1224 1240	Astma oskrzelowa
+N8	Reference T55 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T56	Condition 1242 1255	Dna moczanowa
+N9	Reference T56 ICD10:M10	Dna moczanowa
+T57	Condition 1257 1280	Wole guzowate tarczycy.
+N10	Reference T57 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T58	Treatment 1289 1305	panhisterektomii
+A4	Status T58 Historical_Insignificant
+T59	Condition 1315 1325	ca jajnika
+A5	Status T59 Historical_Insignificant
+N11	Reference T59 ICD10:C56	Nowotwór złośliwy jajnika
+T60	Date 1327 1332	2014r
+R22	Dat Arg1:T60 Arg2:T59	
+R23	Dat Arg1:T60 Arg2:T58	
+T61	Condition 1335 1353	Żylaki kk. dolnych
+N12	Reference T61 ICD10:I83	Żylaki kończyn dolnych
+T62	Condition 1502 1525	nadciśnieniem tętniczym
+N13	Reference T62 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T63	Condition 1527 1543	astmą oskrzelową
+N14	Reference T63 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T64	Condition 1545 1558	dną moczanową
+N15	Reference T64 ICD10:M10	Dna moczanowa
+T65	Condition 1560 1576	guzkami tarczycy
+N16	Reference T65 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T66	Symptom 1607 1633	spadku tolerancji wysiłku.
+N17	Reference T66 ICD10:R53	Złe samopoczucie i zmęczenie
+T67	Symptom 1663 1671	duszność
+N18	Reference T67 ICD10:R06.0	Duszność
+T68	Investigation 1713 1736	angio-CT tt. wieńcowych
+T69	Date 1739 1744	2012r
+R24	Dat Arg1:T69 Arg2:T68	
+T70	Investigation_result 1747 1826	nietypowe odejście pnia lewej tętnicy wieńcowej z obrazem nieistotnego zwężenia
+R25	Inv Arg1:T68 Arg2:T70	
+T71	Investigation 1830 1834	echo
+T72	Date 1837 1845	01.2018r
+T73	Investigation_result 1848 1893	nieznaczne poszerzenie jam serca, przerost LK
+N19	Reference T73 ICD10:I51.7	Powiększenie serca
+R26	Inv Arg1:T71 Arg2:T73	
+R27	Dat Arg1:T72 Arg2:T71	
+R28	Dat Arg1:T72 Arg2:T73	
+T74	Symptom 1673 1682	brak tchu
+N20	Reference T23 ICD10:Z72	Problemy związane ze stylem życia
+T75	Treatment 330 357	dalsza opieka w poradni POZ
+T76	Treatment 367 468	kontrola kardiologiczna, endokrynologiczna, pulmonologiczna, ginekologiczna i u chirurga naczyniowego
+N6	Reference T51 ICD10:I50.9	Niewydolność serca, nieokreślona

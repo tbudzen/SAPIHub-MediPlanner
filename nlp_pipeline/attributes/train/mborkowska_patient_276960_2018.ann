@@ -1,0 +1,175 @@
+T1	Investigation 475 504	kontrola ciśnienia tętniczego
+T2	Investigation 519 539	kontrola lipidogramu
+T3	Date 541 552	raz w roku)
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Investigation 558 582	kontrola morfologii krwi
+T5	Date 583 596	za 3 tygodnie
+R2	Dat Arg1:T5 Arg2:T4	
+T6	Behaviour 643 668	dieta niskocholesterolowa
+T7	Behaviour 675 694	redukcja masy ciała
+T8	Behaviour 701 746	stały, umiarkowany, aerobowy wysiłek fizyczny
+T9	Drug 789 794	Acard
+T10	Drug 826 833	Romazic
+T11	Drug 865 872	Nebilet
+T12	Drug 898 905	Tritace
+T13	Drug 931 942	Diuresin SR
+T14	Drug 962 968	Lercan
+T15	Drug 999 1009	Cardura XL
+T16	Drug 1042 1048	Letrox
+T17	Drug 1084 1093	Captopril
+T18	Drug_dose 795 818	75 mg 1 tabl. wieczorem
+R3	Drg Arg1:T9 Arg2:T18	
+T19	Drug_dose 834 857	20 mg 1 tabl. wieczorem
+R4	Drg Arg1:T10 Arg2:T19	
+T20	Drug_dose 873 890	5 mg 1 tabl. rano
+R5	Drg Arg1:T11 Arg2:T20	
+T21	Drug_dose 906 924	10 mg 1 tabl. rano
+R6	Drg Arg1:T12 Arg2:T21	
+T22	Drug_dose 943 955	1 tabl. rano
+R7	Drg Arg1:T13 Arg2:T22	
+T23	Drug_dose 969 992	10 mg 1 tabl. wieczorem
+R8	Drg Arg1:T14 Arg2:T23	
+T24	Drug_dose 1010 1034	4 mg 1/2 tabl. wieczorem
+R9	Drg Arg1:T15 Arg2:T24	
+T25	Drug_dose 1049 1076	75 ug 1 tabl. rano na czczo
+R10	Drg Arg1:T16 Arg2:T25	
+T26	Drug_dose 1094 1190	12,5 mg doraźnie w razie wzrostu ciśnienia tętniczego (powyżej 160/100 mmHg) 1 tabl. podjęzykowo
+R11	Drg Arg1:T17 Arg2:T26	
+T27	Investigation 3107 3117	echo serca
+T28	Investigation 3119 3122	TET
+T29	Investigation 3124 3128	ABPM
+T30	Investigation 3130 3136	Holter
+T31	Investigation 3138 3156	RTG kl. piersiowej
+T32	Drug 3048 3055	Romazic
+T33	Drug 3018 3023	Acard
+T34	Drug 2992 2999	Nebilet
+T35	Drug 2962 2972	Effox long
+T36	Drug 2927 2933	Letrox
+T37	Drug_dose 2934 2961	75 ug 1 tabl. rano na czczo
+R12	Drg Arg1:T36 Arg2:T37	
+T38	Drug_dose 2973 2991	50 mg 1 tabl. rano
+R13	Drg Arg1:T35 Arg2:T38	
+T39	Drug_dose 3000 3017	5 mg 1 tabl. rano
+R14	Drg Arg1:T34 Arg2:T39	
+T40	Drug_dose 3024 3047	75 mg 1 tabl. wieczorem
+R15	Drg Arg1:T33 Arg2:T40	
+T41	Drug_dose 3056 3079	20 mg 1 tabl. wieczorem
+R16	Drg Arg1:T32 Arg2:T41	
+T42	Negation 2841 2851	nie podaje
+T43	Condition 2830 2839	Uczulenia
+R17	Neg Arg1:T42 Arg2:T43	
+T44	Behaviour 2804 2829	Inne używki: okazjonalnie
+T45	Behaviour 2751 2780	Palenie tytoniu: ok. 20p/dobę
+N2	Reference T45 ICD10:Z72.0	Używanie tytoniu
+T46	Negation 2782 2790	nie pali
+R18	Neg Arg1:T46 Arg2:T45	
+T47	Date 2791 2803	od ok. 2 lat
+R19	Dat Arg1:T47 Arg2:T45	
+T48	Condition 2725 2749	Wywiad rodzinny: dodatni
+A1	Status T48 Family
+A2	Source T48 Confirmed
+T49	Condition 2697 2700	WZW
+N3	Reference T49 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T50	Condition 2702 2711	borelioza
+N4	Reference T50 ICD10:A69.2	Choroba z Lyme
+T51	Negation 2713 2723	nie podaje
+R20	Neg Arg1:T51 Arg2:T50	
+R21	Neg Arg1:T51 Arg2:T49	
+T52	Condition 1425 1470	Nadciśnienie tętnicze III stopnia wg ESH/ESC.
+N5	Reference T52 ICD10:I10	
+T54	Condition 1471 1512	Przewlekła rozkurczowa niewydolność serca
+T55	Symptom 1515 1536	II/III klasie wg NYHA
+T56	Condition 1538 1545	Otyłość
+N7	Reference T56 ICD10:E66	Otyłość
+T57	Behaviour 1547 1557	Nikotynizm
+N8	Reference T57 ICD10:Z72.0	Używanie tytoniu
+T58	Date 1558 1571	w przeszłości
+R22	Dat Arg1:T58 Arg2:T57	
+T59	Condition 1573 1601	Przewlekła choroba wieńcowa.
+T60	Condition 1602 1627	Miażdżyca tętnic szyjnych
+N10	Reference T60 ICD10:I65.2	Niedrożność i zwężenie tętnicy szyjnej wewnętrznej
+T61	Condition 1629 1652	Przetrwały otwór owalny
+N11	Reference T61 ICD10:Q21.1	
+T62	Condition 1654 1689	Niedokrwistość łagodna mikrocytarna
+N12	Reference T62 ICD10:D64	Inne niedokrwistości
+T63	Condition 1691 1711	Torbiele nerki lewej
+N13	Reference T63 ICD10:N28.1	Torbiel nerki, nabyta
+T64	Condition 1713 1730	Przerost prostaty
+N14	Reference T64 ICD10:N40	Rozrost gruczołu krokowego
+T65	Treatment 1785 1837	zabiegu odbarczenia i stabilizacji na poziomie L3-S1
+A3	Status T65 Historical_Insignificant
+T66	Condition 1732 1774	Dyskopatia w odcinku lędźwiowym kręgosłupa
+N15	Reference T66 ICD10:M51.8	Inne określone choroby krążków międzykręgowych
+T67	Date 1839 1843	2015
+R23	Dat Arg1:T67 Arg2:T65	
+R24	Dat Arg1:T67 Arg2:T66	
+A4	Status T66 Historical_Insignificant
+T68	Treatment 1854 1866	strumektomii
+A5	Status T68 Historical_Insignificant
+T69	Condition 1876 1891	wola guzowatego
+A6	Status T69 Historical_Insignificant
+T70	Date 1893 1897	1999
+R25	Dat Arg1:T70 Arg2:T69	
+R26	Dat Arg1:T70 Arg2:T68	
+T71	Treatment 1908 1916	operacji
+A7	Status T71 Historical_Insignificant
+T72	Condition 1917 1936	guzków krwawniczych
+N16	Reference T72 ICD10:I84	Hemoroidy
+A8	Status T72 Historical_Insignificant
+T73	Date 1938 1951	przed 15 laty
+R27	Dat Arg1:T73 Arg2:T72	
+R28	Dat Arg1:T73 Arg2:T71	
+T74	Condition 2101 2124	nadciśnieniem tętniczym
+N17	Reference T74 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T75	Condition 2126 2133	nadwagą
+T76	Behaviour 2135 2155	były palacz tytoniu,
+A9	Status T76 Historical_Insignificant
+N18	Reference T76 ICD10:Z72.0	Używanie tytoniu
+T77	Condition 2158 2177	podejrzeniem IFG/DM
+A10	Source T77 Declared
+N19	Reference T77 ICD10:E13	Inne określone postacie cukrzycy
+T78	Symptom 2207 2232	spadku tolerancji wysiłku
+N20	Reference T78 ICD10:R53	Złe samopoczucie i zmęczenie
+T79	Date 2233 2246	od ok. 1 roku
+T80	Symptom 2248 2282	dystans 20 m, przejście 1 piętra),
+R29	Dat Arg1:T79 Arg2:T78	
+R30	Dat Arg1:T79 Arg2:T80	
+T81	Symptom 2320 2386	bólów w klatce piersiowej (ustępują po odpoczynku, kilkuminutowe,.
+N21	Reference T81 ICD10:R07.3	Inne bóle w klatce piersiowej
+T82	Date 2387 2396	od 3 m-cy
+R31	Dat Arg1:T82 Arg2:T81	
+T83	Symptom 2409 2422	zawroty głowy
+N22	Reference T83 ICD10:R42	Zawroty głowy i odurzenie
+T84	Date 2423 2431	od roku.
+R32	Dat Arg1:T84 Arg2:T83	
+T85	Condition 2453 2484	 dyskopatia odcinka lędźwiowego
+A11	Status T85 Historical_Insignificant
+N23	Reference T85 ICD10:M51.8	Inne określone choroby krążków międzykręgowych
+T86	Treatment 2495 2555	zabiegu odbarczenia i stabilizacji odcinka lędźwiowego L3-S1
+T87	Date 2557 2563	2015r)
+R33	Dat Arg1:T87 Arg2:T86	
+R34	Dat Arg1:T87 Arg2:T85	
+A12	Status T86 Historical_Insignificant
+T88	Treatment 2573 2585	strumektomii
+A13	Status T88 Historical_Insignificant
+T89	Condition 2595 2610	wola guzowatego
+T90	Date 2612 2617	1999r
+R35	Dat Arg1:T90 Arg2:T89	
+A14	Status T89 Historical_Insignificant
+R36	Dat Arg1:T90 Arg2:T88	
+T91	Treatment 2628 2636	operacji
+A15	Status T91 Historical_Insignificant
+T92	Condition 2637 2656	guzków krwawniczych
+A16	Status T92 Historical_Insignificant
+N24	Reference T92 ICD10:I84	Hemoroidy
+T93	Date 2658 2669	ok. 15 lat)
+R37	Dat Arg1:T93 Arg2:T92	
+R38	Dat Arg1:T93 Arg2:T91	
+A17	Status T57 Historical_Insignificant
+N25	Reference T44 ICD10:Z72	Problemy związane ze stylem życia
+T53	Treatment 345 372	dalsza opieka w poradni POZ
+T94	Treatment 387 458	kontrola kardiologiczna, endokrynologiczna, neurologiczna i urologiczna
+N6	Reference T54 ICD10:I50.9	Niewydolność serca, nieokreślona
+N9	Reference T59 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+N26	Reference T89 ICD10:E04.8	Wole nietoksyczne, inne określone
+N1	Reference T43 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

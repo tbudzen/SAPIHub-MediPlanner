@@ -1,0 +1,128 @@
+T1	Treatment 342 398	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T2	Treatment 412 464	kontrola w warunkach szpitalnych w tutejszej Klinice
+T3	Date 465 478	za 6 miesięcy
+T4	Behaviour 505 544	Dieta lekkostrawna, niskocholesterolowa
+T5	Investigation 551 642	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T6	Investigation 649 697	Systematyczna kontrola ciśnienia tętniczego krwi
+T7	Treatment 713 793	profilaktyka infekcyjnego zapalenia wsierdzia podczas zabiegów stomatologicznych
+T8	Drug 795 807	amoksycylina
+T9	Drug 812 822	ampicylina
+T10	Drug_dose 823 843	2 g doustnie lub i.v
+T11	Condition 858 865	alergii
+T12	Drug 869 889	powyższe antybiotyki
+N1	Reference T11 ICD10:Z88.0	Uczulenie na penicylinę w wywiadzie
+T13	Drug 892 904	klindamycyna
+T14	Drug_dose 905 929	600 mg doustnie lub i.v.
+R1	Drg Arg1:T8 Arg2:T10	
+R2	Drg Arg1:T9 Arg2:T10	
+R3	Alg Arg1:T11 Arg2:T12	
+R4	Drg Arg1:T13 Arg2:T14	
+T15	Condition 947 996	wysokim ryzykiem infekcyjnego zapalenia wsierdzia
+T16	Treatment 1008 1032	działania profilaktyczne
+T17	Behaviour 1035 1069	ścisła higiena skóry i jamy ustnej
+T18	Treatment 1071 1145	przeglądy stomatologiczne należy przeprowadzać co najmniej dwa razy w roku
+T19	Behaviour 1147 1162	dezynfekcja ran
+T20	Treatment 1164 1244	eliminacja lub ograniczenie przewlekłego nosicielstwa bakteryjnego: skóry, moczu
+T21	Treatment 1246 1307	leczenie antybiotykami każdego ogniska zakażenia bakteryjnego
+T23	Behaviour 1309 1363	niestosowanie antybiotyków samodzielnie przez pacjenta
+R6	Dat Arg1:T3 Arg2:T2	
+T25	Behaviour 1365 1406	unikanie kolczykowania i tatuowania ciała
+T26	Treatment 1408 1492	ścisłe przestrzeganie zasad aseptyki podczas zabiegów stwarzających ryzyko zakażenia
+T28	Behaviour 1498 1519	Zakaz palenia tytoniu
+T29	Behaviour 1533 1576	aerobowa aktywność fizyczna do umiarkowanej
+T30	Behaviour 1578 1605	unikanie wysiłków oporowych
+T31	Negation 1608 1611	Bez
+T32	Condition 1612 1635	wskazań do przyjmowania
+T33	Drug 1636 1650	leków na stałe
+R9	Neg Arg1:T31 Arg2:T32	
+R10	Neg Arg1:T31 Arg2:T33	
+T35	Condition 1878 1913	Ciężka/umiarkowana stenoza aortalna
+T37	Condition 1949 1973	łagodną niedomykalnością
+T38	Behaviour 1975 1985	Nikotynizm
+N6	Reference T38 ICD10:Z72.0	Używanie tytoniu
+T39	Condition 2166 2194	stenozy aortalnej opisywanej
+N7	Reference T39 ICD10:I35.0	Zwężenie zastawki aortalnej
+N3	Reference T35 ICD10:I35.0	Zwężenie zastawki aortalnej
+T36	Condition 1925 1946	zastawki dwupłatkowej
+N4	Reference T36 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+N5	Reference T37 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T40	Date 2195 2205	od 2015 r.
+T41	Negation 2212 2218	neguje
+T42	Symptom 2219 2281	wszelkie objawy ze strony układu krążenia i układu oddechowego
+T43	Condition 2301 2352	umiarkowanej stenozy BAV z łagodną niedomykalnością
+N8	Reference T43 ICD10:I35.2	Zwężenie zastawki aortalnej z niedomykalnością
+T44	Symptom 2375 2393	obrzęki kk dolnych
+N9	Reference T44 ICD10:R60.0	Obrzęk zlokalizowany
+T45	Date 2394 2410	w sezonie letnim
+T46	Negation 2412 2418	Neguje
+T47	Symptom 2420 2432	zasłabnięcia
+T48	Symptom 2434 2442	omdlenia
+N10	Reference T48 ICD10:R55	Omdlenie i zapaść
+T49	Symptom 2444 2454	krwawienia
+T50	Symptom 2456 2469	czarne stolce
+N11	Reference T50 ICD10:K92.1	Stolce smołowate
+T51	Symptom 2471 2487	brunatne wymioty
+N12	Reference T51 ICD10:K92.0	Wymioty krwawe
+T52	Condition 2489 2505	chorobę wrzodową
+N13	Reference T52 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T53	Symptom 2507 2535	duszność nocną typu ortopnoe
+N14	Reference T53 ICD10:R06.0	Duszność
+T54	Condition 2537 2539	HA
+N15	Reference T54 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T55	Condition 2541 2543	DM
+N16	Reference T55 ICD10:E14	Cukrzyca nieokreślona
+T56	Condition 2545 2555	udar mózgu
+N17	Reference T56 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T57	Condition 2557 2568	zawał serca
+N18	Reference T57 ICD10:I25.2	Przebyty zawał serca
+T58	Treatment 2573 2590	Przebyte operacje
+N19	Reference T58 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T59	Negation 2592 2598	neguje
+T60	Behaviour 2600 2633	Palenie tytoniu: tak - pół paczki
+N20	Reference T60 ICD10:Z72.0	Używanie tytoniu
+T61	Date 2634 2643	od 10 lat
+R12	Dat Arg1:T61 Arg2:T60	
+T62	Behaviour 2646 2657	Inne używki
+T63	Negation 2659 2662	nie
+T64	Condition 2664 2673	Uczulenia
+N21	Reference T64 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T65	Negation 2675 2678	nie
+T66	Condition 2707 2710	WZW
+N22	Reference T66 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T67	Negation 2711 2714	(-)
+T68	Condition 2717 2726	borelioza
+N23	Reference T68 ICD10:A69.2	Choroba z Lyme
+T69	Condition 2734 2737	tbc
+N24	Reference T69 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T70	Negation 2727 2732	( - )
+T71	Negation 2738 2741	(-)
+T72	Behaviour 2759 2785	warunki mieszkaniowe dobre
+T73	Behaviour 2787 2804	Pracuje fizycznie
+T74	Drug 2807 2821	Leków na stałe
+T75	Negation 2822 2835	nie przyjmuje
+T76	Investigation 2897 2918	badania laboratoryjne
+T77	Investigation 2920 2923	TEE
+T78	Investigation 2925 2929	ECHO
+T79	Investigation 2931 2938	ew. ExT
+T80	Investigation 2941 2948	Holtery
+R13	Dat Arg1:T40 Arg2:T39	
+R14	Neg Arg1:T41 Arg2:T42	
+R15	Dat Arg1:T45 Arg2:T44	
+R16	Neg Arg1:T46 Arg2:T47	
+R17	Neg Arg1:T46 Arg2:T48	
+R18	Neg Arg1:T46 Arg2:T49	
+R19	Neg Arg1:T46 Arg2:T50	
+R20	Neg Arg1:T46 Arg2:T51	
+R21	Neg Arg1:T46 Arg2:T52	
+R22	Neg Arg1:T46 Arg2:T53	
+R23	Neg Arg1:T46 Arg2:T54	
+R24	Neg Arg1:T46 Arg2:T55	
+R25	Neg Arg1:T46 Arg2:T56	
+R26	Neg Arg1:T46 Arg2:T57	
+R27	Neg Arg1:T59 Arg2:T58	
+R28	Neg Arg1:T63 Arg2:T62	
+R29	Neg Arg1:T65 Arg2:T64	
+R30	Neg Arg1:T67 Arg2:T66	
+R31	Neg Arg1:T70 Arg2:T68	
+R32	Neg Arg1:T71 Arg2:T69	
+R33	Neg Arg1:T75 Arg2:T74	

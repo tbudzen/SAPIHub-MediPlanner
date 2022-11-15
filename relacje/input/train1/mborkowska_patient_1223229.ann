@@ -1,0 +1,93 @@
+T1	Investigation 464 490	angio-CT tętnic wieńcowych
+T2	Behaviour 571 610	Dieta lekkostrawna, niskocholesterolowa
+T3	Investigation 626 708	kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T4	Investigation 747 816	kontrola ciśnienia tętniczego krwi i prowadzenie dzienniczka pomiarów
+T5	Drug 829 837	Bisocard
+T6	Drug_dose 838 858	10 mg 1x1 tabl. rano
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 859 871	Tertensif SR
+T8	Drug_dose 872 886	1x1 tabl. rano
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 887 894	Amlozek
+T10	Drug_dose 895 915	10 mg 1x1 tabl. rano
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 916 924	Prenessa
+T12	Drug_dose 925 949	8 mg 1x1 tabl. wieczorem
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 950 963	Sulfasalazyna
+T14	Drug_dose 964 1024	500 mg 3x2 tabl. - kont. zaleceń lek. spec. gastroenterologa
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Drug 1025 1034	Nystatyna
+T16	Drug_dose 1035 1090	4x dziennie - kont. zaleceń lek. spec. gastroenterologa
+R6	Drg Arg1:T15 Arg2:T16	
+T17	Drug 1091 1107	Metformax 500 XR
+T18	Drug_dose 1108 1158	0-0-2 tabl. - kont. zaleceń lek. spec. diabetologa
+R7	Drg Arg1:T17 Arg2:T18	
+T19	Drug 1159 1166	Roswera
+T20	Drug_dose 1167 1191	5 mg 1x1 tabl. wieczorem
+R8	Drg Arg1:T19 Arg2:T20	
+T21	Drug 1192 1200	Vicebrol
+T22	Drug_dose 1201 1215	1x1 tabl. rano
+R9	Drg Arg1:T21 Arg2:T22	
+T23	Condition 1442 1475	Nadciśnienie tętnicze III* wg WHO
+N1	Reference T23 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T24	Condition 1477 1491	Hiperlipidemia
+N2	Reference T24 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T25	Condition 1512 1523	Stenokardia
+N3	Reference T25 ICD10:I20.8	Inne postacie choroby niedokrwiennej serca
+T26	Symptom 1525 1546	Nietolerancja glukozy
+T27	Condition 1560 1597	Wrzodziejące zapalenie jelita grubego
+N4	Reference T27 ICD10:K51.9	Wrzodziejące zapalenie jelita grubego, nieokreślone
+T28	Condition 1599 1615	Polipy odbytnicy
+N5	Reference T28 ICD10:K62.1	Polip odbytnicy
+T29	Condition 1617 1631	Guzki tarczycy
+N6	Reference T29 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T30	Condition 1633 1670	Choroba zwyrodnieniowa kręgosłupa L-S
+N7	Reference T30 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T31	Condition 1672 1696	Zespół cieśni nadgarstka
+N8	Reference T31 ICD10:G56.0	Zespół cieśni nadgarstka
+T32	Condition 1698 1706	Grzybica
+N9	Reference T32 ICD10:B49	Grzybica, nieokreślona
+T33	Symptom 2490 2531	obecnie krwawienia z przewodu pokarmowego
+N10	Reference T33 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T34	Negation 2483 2489	Neguje
+R10	Neg Arg1:T34 Arg2:T33	
+T35	Negation 2457 2463	Neguje
+T36	Condition 2464 2482	uczulenia na leki.
+N11	Reference T36 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R11	Neg Arg1:T35 Arg2:T36	
+T37	Drug 2370 2378	Bisocard
+T38	Drug 2380 2389	tertensif
+T39	Drug 2391 2399	prenessa
+T40	Drug 2401 2414	sulfasalazyna
+T41	Drug 2416 2425	nystatyna
+T42	Drug 2427 2436	metformax
+T43	Drug 2438 2445	roswera
+T44	Drug 2447 2455	vicebrol
+T45	Treatment 2287 2318	usunięciu pęcherzyka żółciowego
+T46	Treatment 2328 2352	usunięciu mięśnia macicy
+T47	Condition 2226 2249	nadciśnienia tętniczego
+A1	Status T47 Family
+N12	Reference T47 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T48	Condition 2252 2266	hiperlipidemii
+A2	Status T48 Family
+N13	Reference T48 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T49	Symptom 2167 2188	zwiększoną męczliwość
+T50	Date 2189 2201	od kilku lat
+R12	Dat Arg1:T50 Arg2:T49	
+T51	Condition 2110 2147	Choroba zwyrodnieniowa kręgosłupa L-S
+N14	Reference T51 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T52	Condition 2000 2021	nadciśnienie tętnicze
+N15	Reference T52 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T53	Condition 2023 2037	hiperlipidemia
+N16	Reference T53 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T54	Condition 2039 2074	wrzodziejąca choroba jelita grubego
+N17	Reference T54 ICD10:K51.9	Wrzodziejące zapalenie jelita grubego, nieokreślone
+T55	Condition 2076 2090	guzki tarczycy
+N18	Reference T55 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T56	Condition 2092 2108	polipy odbytnicy
+N19	Reference T56 ICD10:K62.1	Polip odbytnicy
+T57	Investigation_result 1887 1939	wahań nadciśnienia tętniczego (skoki do 230/135mmHg)
+T58	Condition 1945 1985	diagnostyki w kierunku choroby wieńcowej
+A3	Source T58 Declared
+N20	Reference T58 ICD10:I25	Przewlekła choroba niedokrwienna serca

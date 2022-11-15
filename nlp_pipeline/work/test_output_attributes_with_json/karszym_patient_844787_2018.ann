@@ -1,0 +1,58 @@
+T1	Condition 450 482	Ubytek przegrody międzykomorowej
+T2	Condition 484 511	Choroba niedokrwienna serca
+T3	Condition 513 527	Hiperlipidemia
+T4	Condition 699 725	pod. VSD cześci bloniastej
+T5	Symptom 764 794	zmniejszoną tolerancję wysiłku
+T6	Condition 818 829	tachykardia
+T7	Date 830 843	w przeszłości
+T8	Condition 845 873	zmiany zwyrodnieniowe barków
+T9	Negation 875 881	neguje
+T10	Condition 882 886	inne
+T11	Treatment 887 904	Przebyte operacje
+T12	Treatment 906 910	2xCC
+T13	Condition 912 927	Wywiad rodzinny
+T14	Negation 929 942	bez znaczenia
+T15	Condition 944 951	Alergie
+T16	Negation 953 959	neguje
+T17	Behaviour 961 976	Nikotynizm: tak
+T18	Date 978 993	do 4 lat wstecz
+T19	Behaviour 995 1018	1-5 papierosów/dziennie
+T20	Date 1019 1024	5 lat
+T21	Behaviour 1026 1047	Alkohol: okazjonalnie
+T22	Behaviour 1050 1067	Uzależnienie inne
+zane ze stylem życia
+T23	Negation 1069 1075	neguje
+T24	Behaviour 1093 1101	szwaczka
+T25	Behaviour 1103 1115	ekspedientka
+T26	Behaviour 1118 1132	praca fizyczna
+T27	Drug 1140 1148	Bisocard
+T28	Drug_dose 1149 1160	2,5 mg rano
+T29	Investigation 1189 1199	echo serca
+T30	Investigation 1201 1204	TET
+T31	Investigation 1206 1210	ABPM
+T32	Investigation 1212 1222	Holter ekg
+T33	Investigation 1224 1242	rtg kl. piersiowej
+T34	Investigation_result 726 748	12mm z przeciekiem L-P
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody miÄdzyprzedsionkowej
+N2	Reference T2 ICD10:I20.9	Choroba niedokrwienna serca, nieokreÅlona
+N3	Reference T3 ICD10:E78.5	Hiperlipidemia, nieokreÅlona
+N4	Reference T6 ICD10:R00.0	Tachykardia, nieokreÅlona
+N5	Reference T11 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N6	Reference T15 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N7	Reference T17 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N8	Reference T21 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N9	Reference T22 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+R111	Dat Arg1:T18 Arg2:T17
+R112	Dat Arg1:T18 Arg2:T19
+R132	Dat Arg1:T20 Arg2:T19
+R133	Dat Arg1:T20 Arg2:T21
+R2	Neg Arg1:T9 Arg2:T8
+R25	Neg Arg1:T14 Arg2:T13
+R26	Neg Arg1:T14 Arg2:T15
+R3	Neg Arg1:T9 Arg2:T10
+R47	Neg Arg1:T16 Arg2:T15
+R48	Neg Arg1:T16 Arg2:T17
+R72	Neg Arg1:T23 Arg2:T22
+R85	Drg Arg1:T27 Arg2:T28
+R86	Dat Arg1:T7 Arg2:T6
+R87	Dat Arg1:T7 Arg2:T8

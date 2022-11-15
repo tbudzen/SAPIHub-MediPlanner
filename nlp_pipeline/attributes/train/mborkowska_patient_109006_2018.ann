@@ -1,0 +1,111 @@
+T1	Investigation 2246 2257	echo serca,
+T2	Investigation 2258 2278	echo przezprzełykowe
+T3	Investigation 2279 2282	TET
+T4	Investigation 2284 2288	ABPM
+T5	Investigation 2290 2296	Holter
+T6	Investigation 2298 2316	RTG kl. piersiowej
+T7	Drug 2191 2198	Amlozek
+T8	Drug_dose 2199 2218	5 mg 1/2 tabl. rano
+R1	Drg Arg1:T7 Arg2:T8	
+T9	Negation 2138 2148	nie podaje
+T10	Condition 2127 2136	Uczulenia
+N1	Reference T10 ICD10:T78.4	Alergia, nieokreślona
+R2	Neg Arg1:T9 Arg2:T10	
+T11	Behaviour 2101 2126	Inne używki: okazjonalnie
+T12	Negation 2090 2100	nie podaje
+T13	Negation 2062 2072	nie podaje
+T14	Behaviour 2073 2088	Palenie tytoniu
+N2	Reference T14 ICD10:Z72.0	Używanie tytoniu
+R3	Neg Arg1:T12 Arg2:T14	
+T15	Condition 2045 2060	Wywiad rodzinny
+A1	Status T15 Family
+R4	Neg Arg1:T13 Arg2:T15	
+T16	Negation 2009 2020	nie podaje)
+T17	Negation 2032 2044	(nie podaje)
+T18	Condition 2022 2031	borelioza
+N3	Reference T18 ICD10:A69.2	Choroba z Lyme
+R5	Neg Arg1:T17 Arg2:T18	
+T19	Condition 2004 2007	WZW
+R6	Neg Arg1:T16 Arg2:T19	
+T20	Date 1911 1919	02.2018r
+T21	Treatment 1889 1908	zabieg urologicznym
+A2	Status T21 Historical_Insignificant
+R7	Dat Arg1:T20 Arg2:T21	
+T22	Drug 1276 1283	Amlozek
+T23	Drug_dose 1284 1304	1/2 tab a 5mg 1 x dz
+R8	Drg Arg1:T22 Arg2:T23	
+T24	Treatment 1222 1246	kontrola stomatologiczna
+T25	Date 1247 1257	2 x w roku
+R9	Dat Arg1:T25 Arg2:T24	
+T26	Investigation 1139 1147	MR serca
+T27	Date 1155 1166	12.12.2018r
+R10	Dat Arg1:T27 Arg2:T26	
+T28	Condition 438 491	Wrodzona wada serca pod postacią zespołu Taussig-Bing
+N5	Reference T28 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+T29	Condition 494 510	koarktacją aorty
+N6	Reference T29 ICD10:Q25.1	Zwężenie cieśni aorty
+T30	Treatment 526 563	operacji metodą korekcji anatomicznej
+T31	Date 564 576	(17.08.1999r
+R11	Dat Arg1:T31 Arg2:T30	
+T32	Treatment 584 602	balonowej plastyce
+T33	Condition 603 615	rekoarktacji
+T34	Date 617 628	12.10.2000r
+R12	Dat Arg1:T34 Arg2:T33	
+R13	Dat Arg1:T34 Arg2:T32	
+T35	Treatment 636 657	plastykach balonowych
+T36	Condition 658 698	nadzastawkowego zwężenia tętnicy płucnej
+N8	Reference T36 ICD10:I77.1	Zwężenie tętnicy
+T37	Date 700 712	13.01.2004r.
+T38	Date 715 726	22.02.2007r
+T39	Date 729 741	04.10.2012r.
+R14	Dat Arg1:T39 Arg2:T35	
+R15	Dat Arg1:T39 Arg2:T36	
+R16	Dat Arg1:T37 Arg2:T36	
+R17	Dat Arg1:T37 Arg2:T35	
+R18	Dat Arg1:T38 Arg2:T36	
+R19	Dat Arg1:T38 Arg2:T35	
+T40	Condition 746 785	Nadzastawkowe zwężenie tętnicy płucnej.
+N9	Reference T40 ICD10:I77.1	Zwężenie tętnicy
+T41	Condition 789 801	Rekoarktacja
+N10	Reference T41 ICD10:I77	Inne choroby tętnic i tętniczek
+T42	Condition 806 834	Nadciśnienie tętnicze wtórne
+N11	Reference T42 ICD10:I15	Nadciśnienie wtórne
+T43	Condition 839 859	Bradykardia zatokowa
+N12	Reference T43 ICD10:R00.1	Bradykardia, nieokreślona
+T44	Condition 1449 1503	wrodzoną wada serca pod postacią zespołu Taussing-Bing
+N13	Reference T44 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+T45	Condition 1506 1509	CoA
+N14	Reference T45 ICD10:Q25.1	Zwężenie cieśni aorty
+T46	Treatment 1583 1620	operacji metodą korekcji anatomicznej
+T47	Date 1622 1627	1999r
+R20	Dat Arg1:T47 Arg2:T46	
+T48	Treatment 1630 1648	balonowej plastyce
+T49	Condition 1649 1661	rekoarktacji
+N15	Reference T49 ICD10:I77	Inne choroby tętnic i tętniczek
+T50	Date 1663 1668	2000r
+R21	Dat Arg1:T50 Arg2:T49	
+R22	Dat Arg1:T50 Arg2:T48	
+N7	Reference T33 ICD10:I77	Inne choroby tętnic i tętniczek
+T51	Treatment 1674 1695	plastykach balonowych
+T52	Condition 1696 1731	nadzastawkowego zwężenia t. płucnej
+N16	Reference T52 ICD10:I77.1	Zwężenie tętnicy
+T53	Date 1745 1750	2012r
+T54	Date 1739 1743	207r
+T55	Date 1733 1737	2004
+R23	Dat Arg1:T53 Arg2:T51	
+R24	Dat Arg1:T53 Arg2:T52	
+R25	Dat Arg1:T54 Arg2:T51	
+R26	Dat Arg1:T54 Arg2:T52	
+R27	Dat Arg1:T55 Arg2:T51	
+R28	Dat Arg1:T55 Arg2:T52	
+T56	Condition 1755 1795	nadzastawkowym zwężeniem tętnicy płucnej
+N17	Reference T56 ICD10:I77.1	Zwężenie tętnicy
+T57	Condition 1798 1811	rekoarkatacją
+N18	Reference T57 ICD10:I77	Inne choroby tętnic i tętniczek
+T58	Condition 1814 1845	nadciśnieniem tętniczym wtórnym
+N19	Reference T58 ICD10:I15	Nadciśnienie wtórne
+T59	Condition 1848 1868	bradykardią zatokową
+N20	Reference T59 ICD10:R00.1	Bradykardia, nieokreślona
+N4	Reference T19 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T60	Treatment 969 1059	dalsza opieka w poradni POZ, okresowa kontrola kardiologiczna, w poradni medycyny sportowe
+N21	Reference T11 ICD10:Z72	Problemy związane ze stylem życia

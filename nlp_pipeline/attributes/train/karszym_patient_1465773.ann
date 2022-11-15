@@ -1,0 +1,328 @@
+T1	Drug 341 348	Clexane
+T2	Drug 350 357	Proaxon
+T3	Drug 359 362	IPP
+T4	Drug 364 373	Cefazolin
+T5	Drug 375 385	NaCl 0,9 %
+T6	Drug 388 391	PWE
+T7	Drug 393 401	Dormicum
+T8	Drug 403 409	Plavix
+T9	Drug 411 416	Acard
+T10	Treatment 535 590	dalsza opieka u lekarza POZ oraz Poradni Kardiologiczne
+T11	Date 594 622	pierwsza kontrola za miesiąc
+T13	Treatment 635 659	kontrolną hospitalizację
+T14	Date 660 673	za 3 miesiące
+R2	Dat Arg1:T14 Arg2:T13	
+T15	Treatment 680 707	oceny skuteczności leczenia
+R3	Dat Arg1:T14 Arg2:T15	
+T16	Behaviour 778 818	Dieta lekkostrawna , niskocholesterolowa
+T17	Investigation 823 906	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T18	Investigation 910 958	Systematyczna kontrola ciśnienia tętniczego krwi
+T19	Negation 968 974	nie ma
+T20	Condition 975 1009	przeciwwskazań do ewentualnego NMR
+R4	Neg Arg1:T19 Arg2:T20	
+T21	Treatment 1023 1105	Profilaktyka Infekcyjnego Zapalenia Wsierdzia (podczas zabiegów stomatologicznych)
+T22	Date 1107 1134	przez 6 miesięcy od zabiegu
+R5	Dat Arg1:T22 Arg2:T21	
+T23	Drug 1139 1151	amoksycylina
+T24	Drug 1156 1166	ampicylina
+T25	Drug_dose 1167 1187	2 g doustnie lub i.v
+T26	Condition 1202 1209	alergii
+T27	Drug 1213 1233	powyższe antybiotyki
+N1	Reference T26 ICD10:Z88.0	Uczulenie na penicylinę w wywiadzie
+T28	Drug 1236 1248	klindamycyna
+T29	Drug_dose 1249 1273	600 mg doustnie lub i.v.
+R6	Drg Arg1:T23 Arg2:T25	
+R7	Drg Arg1:T24 Arg2:T25	
+R8	Alg Arg1:T26 Arg2:T27	
+R9	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1325 1331	Plavix
+T31	Drug_dose 1332 1348	75 mg 1x dz rano
+T32	Date 1349 1365	przez 3 miesięcy
+R10	Dat Arg1:T32 Arg2:T30	
+R11	Drg Arg1:T30 Arg2:T31	
+T33	Drug 1366 1371	Acard
+T34	Drug_dose 1372 1393	75 mg 1x dz wieczorem
+R12	Drg Arg1:T33 Arg2:T34	
+T35	Date 1394 1410	przez 6 miesięcy
+T36	Drug_dose 1413 1444	następnie wg. zaleceń neurologa
+R13	Dat Arg1:T35 Arg2:T34	
+R14	Drg Arg1:T33 Arg2:T36	
+T37	Drug 1446 1449	IPP
+T38	Drug_dose 1450 1475	20 mg 1x dz rano na czczo
+T39	Date 1477 1493	przez 3 miesiące
+R15	Dat Arg1:T39 Arg2:T37	
+R16	Drg Arg1:T37 Arg2:T38	
+T40	Drug 1579 1586	Proaxon
+T41	Drug_dose 1587 1592	2x dz
+R17	Drg Arg1:T40 Arg2:T41	
+T42	Treatment 1506 1548	kontynuacja tylko w przypadku występowania
+T43	Symptom 1549 1574	dolegliwości gastrycznych
+T44	Condition 1850 1853	ASD
+N2	Reference T44 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T45	Condition 1863 1892	udarze niedokrwiennym móżdżku
+N3	Reference T45 ICD10:I63.9	Zawał mózgu, nieokreślony
+T46	Condition 2122 2171	Ubytek w przegrodzie międzyprzedsionkowej typu II
+N4	Reference T46 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T47	Treatment 2173 2228	Zamknięcie zestawem Occlutech Figulla Flex II ASD 18 mm
+N5	Reference T47 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T48	Date 2230 2240	09.01.2019
+T49	Condition 2251 2419	udarze niedokrwiennym móżdżku z zakresu unaczynienia tętnicy móżdżkowej tylnej dolnej oraz pogranicza tętnicy móżdżkowych dolnych przedniej i tylnej oraz górnej móżdżku
+N6	Reference T49 ICD10:I63.9	Zawał mózgu, nieokreślony
+R18	Dat Arg1:T48 Arg2:T47	
+T50	Treatment 2538 2594	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T51	Behaviour 2597 2637	Dieta lekkostrawna , niskocholesterolowa
+T52	Investigation 2642 2725	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T53	Investigation 2729 2777	Systematyczna kontrola ciśnienia tętniczego krwi
+T54	Negation 2787 2793	nie ma
+T55	Condition 2794 2828	przeciwwskazań do ewentualnego NMR
+R19	Neg Arg1:T54 Arg2:T55	
+T56	Treatment 2842 2924	Profilaktyka Infekcyjnego Zapalenia Wsierdzia (podczas zabiegów stomatologicznych)
+T57	Date 2926 2953	przez 6 miesięcy od zabiegu
+R20	Dat Arg1:T57 Arg2:T56	
+T58	Drug 2958 2970	amoksycylina
+T59	Drug 2975 2985	ampicylina
+T60	Drug_dose 2986 3006	2 g doustnie lub i.v
+T61	Condition 3021 3028	alergii
+T62	Drug 3032 3052	powyższe antybiotyki
+N7	Reference T61 ICD10:Z88.0	Uczulenie na penicylinę w wywiadzie
+T63	Drug 3055 3067	klindamycyna
+T64	Drug_dose 3068 3092	600 mg doustnie lub i.v.
+R21	Drg Arg1:T58 Arg2:T60	
+R22	Drg Arg1:T59 Arg2:T60	
+R23	Alg Arg1:T61 Arg2:T62	
+R24	Drg Arg1:T63 Arg2:T64	
+T65	Drug 3144 3153	Plus Card
+T66	Drug_dose 3154 3176	100 mg 1x dz wieczorem
+T67	Date 3177 3204	przez 6 miesięcy do zabiegu
+T68	Date 3207 3220	do 09.07.2019
+T69	Drug_dose 3225 3255	następnie wg zaleceń neurologa
+R25	Dat Arg1:T67 Arg2:T66	
+R26	Dat Arg1:T68 Arg2:T66	
+R27	Drg Arg1:T65 Arg2:T66	
+R28	Drg Arg1:T65 Arg2:T69	
+T70	Drug 3257 3263	Concor
+T71	Drug_dose 3264 3292	2,5  1x dz po 1/2 tal.  rano
+T72	Drug 3293 3301	Magne B6
+T73	Drug_dose 3302 3317	1x dz wieczorem
+T74	Drug 3319 3326	Proaxon
+T75	Drug_dose 3327 3332	2x dz
+T76	Drug 3359 3370	Kwas Folowy
+T77	Drug_dose 3371 3386	5 mg 1x dz rano
+R29	Drg Arg1:T70 Arg2:T71	
+R30	Drg Arg1:T72 Arg2:T73	
+R31	Drg Arg1:T74 Arg2:T75	
+R32	Drg Arg1:T76 Arg2:T77	
+T78	Treatment 3624 3679	zamknięciu zestawem Occlutech Figulla Flex II ASD 18 mm
+N8	Reference T78 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R33	Dat Arg1:T48 Arg2:T46	
+T79	Date 3681 3691	09.01.2019
+R34	Dat Arg1:T79 Arg2:T78	
+T80	Condition 3694 3757	Komorowe zaburzenia rytmu serca ( pobudzenia pojedyncze , para)
+N9	Reference T80 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T81	Condition 3759 3792	Pojedyncze pobudzenia nadkomorowe
+N10	Reference T81 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T82	Condition 3803 3971	udarze niedokrwiennym móżdżku z zakresu unaczynienia tętnicy móżdżkowej tylnej dolnej oraz pogranicza tętnicy móżdżkowych dolnych przedniej i tylnej oraz górnej móżdżku
+N11	Reference T82 ICD10:I63.9	Zawał mózgu, nieokreślony
+T83	Date 3973 3980	11.2018
+R35	Dat Arg1:T83 Arg2:T82	
+T84	Drug 4102 4107	Acard
+T85	Drug 4109 4115	Concor
+T86	Drug 4117 4125	Magne B6
+T87	Drug 4128 4136	Citotrop
+T88	Drug 4138 4152	Acidum Folicum
+T89	Condition 4552 4555	ASD
+N12	Reference T89 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T90	Treatment 4573 4598	zabiegu zamknięcia ubytku
+T91	Symptom 4644 4655	bólów głowy
+N13	Reference T91 ICD10:R51	Ból głowy
+T92	Symptom 4657 4675	ogólnego zmęczenia
+T93	Symptom 4677 4701	okresowych kołatań serca
+N14	Reference T93 ICD10:R00.2	Kołatanie serca
+T94	Date 4747 4766	od około 3 miesięcy
+R36	Dat Arg1:T94 Arg2:T91	
+R37	Dat Arg1:T94 Arg2:T92	
+R38	Dat Arg1:T94 Arg2:T93	
+T95	Negation 4768 4774	Neguje
+T96	Symptom 4775 4787	zasłabnięcia
+T97	Symptom 4789 4797	omdlenia
+N15	Reference T97 ICD10:R55	Omdlenie i zapaść
+T98	Symptom 4799 4812	zawroty głowy
+N16	Reference T98 ICD10:R42	Zawroty głowy i odurzenie
+T99	Negation 4814 4820	neguje
+T100	Symptom 4821 4845	bóle w klatce piersiowej
+N17	Reference T100 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+R39	Neg Arg1:T95 Arg2:T96	
+R40	Neg Arg1:T95 Arg2:T97	
+R41	Neg Arg1:T95 Arg2:T98	
+R42	Neg Arg1:T99 Arg2:T100	
+T101	Symptom 4847 4866	Innych dolegliwości
+T102	Negation 4867 4878	nie zgłasza
+R43	Neg Arg1:T102 Arg2:T101	
+T103	Condition 4893 5054	Udar niedokrwienny móżdżku z zakresu unaczynienia tętnicy móżdżkowej tylnej dolnej oraz pogranicza tt. móżdżkowych dolnych przedniej i tylnej oraz górnej móżdżku
+N18	Reference T103 ICD10:I63.9	Zawał mózgu, nieokreślony
+T104	Date 5056 5074	listopad 2018 roku
+R44	Dat Arg1:T104 Arg2:T103	
+T105	Condition 5077 5080	ASD
+N19	Reference T105 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T106	Treatment 5101 5119	operacja migdałków
+A1	Status T106 Historical_Insignificant
+N20	Reference T106 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T107	Date 5121 5138	około 12 lat temu
+R45	Dat Arg1:T107 Arg2:T106	
+T108	Treatment 5140 5174	Leczenie przewlekłe: neurologiczna
+T109	Condition 5202 5205	WZW
+N21	Reference T109 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T110	Condition 5214 5223	borelioza
+N22	Reference T110 ICD10:A69.2	Choroba z Lyme
+T111	Condition 5231 5239	gruźlica
+N23	Reference T111 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T112	Negation 5206 5211	( - )
+T113	Negation 5224 5229	( - )
+T114	Negation 5240 5245	( - )
+R46	Neg Arg1:T112 Arg2:T109	
+R47	Neg Arg1:T113 Arg2:T110	
+R48	Neg Arg1:T114 Arg2:T111	
+T115	Condition 5270 5280	wada serca
+A2	Status T115 Family
+T116	Condition 5283 5288	zmarł
+A3	Status T116 Family
+N24	Reference T116 ICD10:R96	Inny nagły zgon z nieznanej przyczyny
+T117	Date 5289 5303	w wieku 17 lat
+R49	Dat Arg1:T117 Arg2:T116	
+T118	Negation 5322 5325	Nie
+T119	Behaviour 5326 5330	pali
+N25	Reference T119 ICD10:Z72.0	Używanie tytoniu
+T120	Behaviour 5305 5320	Palenie tytoniu
+N26	Reference T120 ICD10:Z72.0	Używanie tytoniu
+T121	Date 5331 5353	od listopada 2018 roku
+R50	Neg Arg1:T118 Arg2:T120	
+R51	Neg Arg1:T118 Arg2:T119	
+R52	Dat Arg1:T121 Arg2:T119	
+R53	Dat Arg1:T121 Arg2:T120	
+A4	Status T118 Historical_Insignificant
+T122	Date 5355 5368	W przeszłości
+T123	Behaviour 5369 5387	e-papieros (5 lat)
+R54	Dat Arg1:T122 Arg2:T123	
+T124	Behaviour 5389 5400	Inne używki
+T125	Negation 5402 5405	nie
+R55	Neg Arg1:T125 Arg2:T124	
+T126	Condition 5407 5416	Uczulenia
+N27	Reference T126 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T127	Negation 5418 5424	neguje
+R56	Neg Arg1:T127 Arg2:T126	
+T128	Behaviour 5442 5468	warunki mieszkaniowe dobre
+T129	Drug 5476 5483	Clexane
+T130	Drug 5488 5495	Proaxon
+T131	Drug_dose 5484 5486	40
+T132	Drug 5497 5500	IPP
+T133	Drug_dose 5501 5505	20mg
+T134	Investigation 5521 5531	Echo serca
+T135	Investigation 5533 5543	Holter EKG
+T136	Investigation 5545 5549	ABPM
+R57	Drg Arg1:T129 Arg2:T131	
+R58	Drg Arg1:T132 Arg2:T133	
+T137	Treatment 5727 5779	przyjęta do Kliniki celem oceny skuteczności zabiegu
+T138	Date 5795 5805	09.01.2019
+R59	Dat Arg1:T138 Arg2:T139	
+T139	Treatment 5780 5790	zamknięcia
+T140	Drug 6649 6655	Plavix
+T141	Drug 6674 6679	Acard
+T142	Drug 6702 6708	Concor
+T143	Drug 6726 6734	Magne B6
+T144	Drug 6753 6756	IPP
+T145	Drug 6887 6894	Proaxon
+T146	Drug 6927 6938	Kwas Folowy
+T147	Symptom 5817 5832	kołatania serca
+N28	Reference T147 ICD10:R00.2	Kołatanie serca
+T148	Date 5835 5874	ostatnio występowały ok 2 tygodnie temu
+R60	Dat Arg1:T148 Arg2:T147	
+T149	Symptom 5880 5900	lekkie zawroty głowy
+N29	Reference T149 ICD10:R42	Zawroty głowy i odurzenie
+T150	Negation 5902 5908	Neguje
+T151	Symptom 5909 5921	zasłabnięcia
+T152	Symptom 5923 5931	omdlenia
+N30	Reference T152 ICD10:R55	Omdlenie i zapaść
+T153	Negation 5933 5939	neguje
+T154	Symptom 5940 5964	bóle w klatce piersiowej
+N31	Reference T154 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+R61	Neg Arg1:T150 Arg2:T151	
+R62	Neg Arg1:T150 Arg2:T152	
+R63	Neg Arg1:T153 Arg2:T154	
+T155	Symptom 5966 5985	Innych dolegliwości
+T156	Negation 5986 5997	nie zgłasza
+R64	Neg Arg1:T156 Arg2:T155	
+T157	Condition 6012 6061	Ubytek w przegrodzie międzyprzedsionkowej typu II
+N32	Reference T157 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T158	Treatment 6063 6118	Zamknięcie zestawem Occlutech Figulla Flex II ASD 18 mm
+N33	Reference T158 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T159	Date 6120 6130	09.01.2019
+R65	Dat Arg1:T159 Arg2:T158	
+R66	Dat Arg1:T159 Arg2:T157	
+T160	Condition 6141 6309	udarze niedokrwiennym móżdżku z zakresu unaczynienia tętnicy móżdżkowej tylnej dolnej oraz pogranicza tętnicy móżdżkowych dolnych przedniej i tylnej oraz górnej móżdżku
+N34	Reference T160 ICD10:I63.9	Zawał mózgu, nieokreślony
+T161	Treatment 6312 6346	Leczenie przewlekłe: neurologiczna
+T162	Condition 6374 6377	WZW
+N35	Reference T162 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T163	Condition 6386 6395	borelioza
+N36	Reference T163 ICD10:A69.2	Choroba z Lyme
+T164	Condition 6403 6411	gruźlica
+N37	Reference T164 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T165	Negation 6378 6383	( - )
+T166	Negation 6396 6401	( - )
+T167	Negation 6412 6417	( - )
+R67	Neg Arg1:T165 Arg2:T162	
+R68	Neg Arg1:T166 Arg2:T163	
+R69	Neg Arg1:T167 Arg2:T164	
+T168	Condition 6442 6452	wada serca
+A5	Status T168 Family
+T169	Condition 6455 6460	zmarł
+A6	Status T169 Family
+N38	Reference T169 ICD10:R96	Inny nagły zgon z nieznanej przyczyny
+T170	Date 6461 6475	w wieku 17 lat
+R70	Dat Arg1:T170 Arg2:T169	
+T171	Behaviour 6477 6492	Palenie tytoniu
+N39	Reference T171 ICD10:Z72.0	Używanie tytoniu
+T172	Negation 6494 6497	Nie
+T173	Behaviour 6498 6502	pali
+N40	Reference T173 ICD10:Z72.0	Używanie tytoniu
+T174	Date 6503 6525	od listopada 2018 roku
+A7	Status T172 Historical_Insignificant
+R71	Neg Arg1:T172 Arg2:T171	
+R72	Neg Arg1:T172 Arg2:T173	
+R73	Dat Arg1:T174 Arg2:T173	
+R74	Dat Arg1:T174 Arg2:T171	
+T175	Date 6527 6540	W przeszłości
+T176	Behaviour 6541 6559	e-papieros (5 lat)
+N41	Reference T176 ICD10:Z72.0	Używanie tytoniu
+R75	Dat Arg1:T175 Arg2:T176	
+T177	Behaviour 6561 6572	Inne używki
+T178	Negation 6574 6577	nie
+R76	Neg Arg1:T178 Arg2:T177	
+T179	Condition 6579 6588	Uczulenia
+N42	Reference T179 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T180	Negation 6590 6596	neguje
+R77	Neg Arg1:T180 Arg2:T179	
+T181	Behaviour 6614 6640	warunki mieszkaniowe dobre
+T182	Drug_dose 6656 6672	75 mg 1x dz rano
+T183	Drug_dose 6680 6701	75 mg 1x dz wieczorem
+T184	Drug_dose 6709 6724	2,5  1x dz rano
+T185	Drug_dose 6735 6750	1x dz wieczorem
+T186	Drug_dose 6757 6782	20 mg 1x dz rano na czczo
+T187	Date 6784 6800	przez 3 miesiące
+T188	Treatment 6813 6855	kontynuacja tylko w przypadku występowania
+T189	Symptom 6856 6881	dolegliwości gastrycznych
+T190	Drug_dose 6895 6900	2x dz
+R78	Drg Arg1:T140 Arg2:T182	
+R79	Drg Arg1:T141 Arg2:T183	
+R80	Drg Arg1:T142 Arg2:T184	
+R81	Drg Arg1:T143 Arg2:T185	
+R82	Drg Arg1:T144 Arg2:T186	
+R83	Dat Arg1:T187 Arg2:T144	
+R84	Drg Arg1:T145 Arg2:T190	
+T191	Investigation 6955 6965	Echo serca
+T192	Investigation 6967 6977	Holter EKG
+T193	Investigation 6979 6983	ABPM
+R1	Dat Arg1:T11 Arg2:T10	
+T12	Condition 5791 5794	ASD
+N43	Reference T12 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R85	Dat Arg1:T138 Arg2:T12	

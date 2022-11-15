@@ -1,0 +1,417 @@
+T1	Drug 8513 8524	Fluoksetyna
+T2	Drug 8483 8490	Ezoleta
+T3	Drug 8440 8447	Zaranta
+T4	Drug 8405 8413	Praluent
+T5	Drug 8366 8377	Betaloc ZOK
+T6	Drug_dose 8378 8403	50 mg 1x dz. 1 tabl. rano
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug_dose 8414 8438	150 mg 1 x s.c. co 2 tyg
+R2	Drg Arg1:T4 Arg2:T7	
+T8	Drug_dose 8448 8481	40 mg 1i pół tabl. 1xdz wieczorem
+R3	Drg Arg1:T3 Arg2:T8	
+T9	Drug_dose 8491 8511	10 mg 1xdz wieczorem
+R4	Drg Arg1:T2 Arg2:T9	
+T10	Drug_dose 8525 8545	20 mg 1xdz wieczorem
+R5	Drg Arg1:T1 Arg2:T10	
+T11	Behaviour 8301 8327	warunki mieszkaniowe dobre
+T12	Condition 8205 8208	WZW
+N1	Reference T12 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T13	Condition 8215 8224	borelioza
+N2	Reference T13 ICD10:A69.2	Choroba z Lyme
+T14	Condition 8232 8235	tbc
+N3	Reference T14 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T15	Condition 8241 8245	odra
+N4	Reference T15 ICD10:B05	Odra
+T16	Treatment 8251 8270	szczepienie na odrę
+N5	Reference T16 ICD10:B05	Odra
+T17	Negation 8272 8283	nie pamięta
+R6	Neg Arg1:T17 Arg2:T16	
+T18	Negation 8247 8248	-
+R7	Neg Arg1:T18 Arg2:T15	
+T19	Negation 8237 8238	-
+R8	Neg Arg1:T19 Arg2:T14	
+T20	Negation 8227 8228	-
+R9	Neg Arg1:T20 Arg2:T13	
+T21	Negation 8210 8211	-
+R10	Neg Arg1:T21 Arg2:T12	
+T22	Negation 8174 8177	nie
+T23	Negation 8159 8162	nie
+T24	Negation 8142 8145	nie
+T25	Condition 8163 8172	Uczulenia
+N6	Reference T25 ICD10:T78.4	Alergia, nieokreślona
+R11	Neg Arg1:T22 Arg2:T25	
+T26	Behaviour 8146 8157	Inne używki
+T27	Behaviour 8125 8140	Palenie tytoniu
+N7	Reference T27 ICD10:T65.2	Tytoń i nikotyna
+R12	Neg Arg1:T24 Arg2:T27	
+T28	Treatment 8097 8113	cholecystektomia
+T29	Date 8115 8122	12.2018
+R13	Dat Arg1:T29 Arg2:T28	
+T30	Condition 7969 8039	uraz czaszkowo-mózgowy wielonarządowy z uszkodzeniem rdzenia kręgowego
+A1	Status T30 Historical_Insignificant
+T31	Date 8041 8045	1998
+R14	Dat Arg1:T31 Arg2:T30	
+T32	Negation 7809 7815	Neguje
+T33	Symptom 7817 7829	zasłabnięcia
+N8	Reference T33 ICD10:R55	Omdlenie i zapaść
+T34	Symptom 7831 7839	omdlenia
+N9	Reference T34 ICD10:R55	
+T35	Symptom 7841 7851	krwawienia
+N10	Reference T35 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T36	Symptom 7853 7866	czarne stolce
+N11	Reference T36 ICD10:K92.1	Stolce smołowate
+T37	Symptom 7868 7884	brunatne wymioty
+N12	Reference T37 ICD10:K92.0	Wymioty krwawe
+T38	Condition 7886 7902	chorobę wrzodową
+N13	Reference T38 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T39	Symptom 7904 7912	duszność
+N14	Reference T39 ICD10:R06.0	Duszność
+T40	Condition 7913 7915	HA
+N15	Reference T40 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T41	Condition 7917 7919	DM
+N16	Reference T41 ICD10:E13	Inne określone postacie cukrzycy
+T42	Condition 7921 7931	udar mózgu
+N17	Reference T42 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T43	Condition 7933 7945	zawał serca.
+N18	Reference T43 ICD10:I25.2	Przebyty zawał serca
+R15	Neg Arg1:T32 Arg2:T33	
+R16	Neg Arg1:T32 Arg2:T34	
+R17	Neg Arg1:T32 Arg2:T35	
+R18	Neg Arg1:T32 Arg2:T36	
+R19	Neg Arg1:T32 Arg2:T37	
+R20	Neg Arg1:T32 Arg2:T38	
+R21	Neg Arg1:T32 Arg2:T39	
+R22	Neg Arg1:T32 Arg2:T40	
+R23	Neg Arg1:T32 Arg2:T41	
+R24	Neg Arg1:T32 Arg2:T42	
+R25	Neg Arg1:T32 Arg2:T43	
+T44	Drug 7712 7725	rosuwastatyną
+T45	Drug_dose 7726 7775	40 mg (1 i pół tabletki 1xdz - łączna dawka 60 mg
+R26	Drg Arg1:T44 Arg2:T45	
+T46	Drug 7783 7793	ezetymibem
+T47	Drug_dose 7802 7807	10 mg
+R27	Drg Arg1:T46 Arg2:T47	
+T48	Treatment 7667 7693	wyniki badań genetycznych.
+T49	Symptom 7562 7573	nagły  zgon
+A2	Status T49 Family
+T50	Condition 6769 6789	hipercholesterolemią
+N19	Reference T50 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T51	Condition 6800 6834	chorobą zwyrodnieniową kręgosłupa,
+N20	Reference T51 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T52	Condition 6835 6858	nadciśnieniem tętniczym
+N21	Reference T52 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T53	Negation 7108 7114	neguje
+T54	Symptom 7115 7133	objawy niepożądane
+R28	Neg Arg1:T53 Arg2:T54	
+T55	Drug 7150 7161	alirokumabu
+R29	Neg Arg1:T53 Arg2:T55	
+T56	Negation 7163 7169	neguje
+T57	Symptom 7182 7211	ciężkich reakcji alergicznych
+R30	Neg Arg1:T56 Arg2:T57	
+T58	Condition 7344 7346	MI
+A3	Status T58 Family
+N22	Reference T58 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T59	Condition 7371 7373	MI
+A4	Status T59 Family
+N23	Reference T59 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T60	Investigation_result 7400 7438	córka 17 lat LDL cholesterol 226 mg/dl
+A5	Status T60 Family
+T61	Drug 6508 6519	Fluoksetyna
+T62	Drug 6478 6485	Ezoleta
+T63	Drug 6435 6442	Zaranta
+T64	Drug 6396 6407	Betaloc ZOK
+T65	Drug_dose 6408 6433	50 mg 1x dz. 1 tabl. rano
+R31	Drg Arg1:T64 Arg2:T65	
+T66	Drug_dose 6443 6476	40 mg 1i pół tabl. 1xdz wieczorem
+R32	Drg Arg1:T63 Arg2:T66	
+T67	Drug_dose 6486 6506	10 mg 1xdz wieczorem
+R33	Drg Arg1:T62 Arg2:T67	
+T68	Drug_dose 6520 6540	20 mg 1xdz wieczorem
+R34	Drg Arg1:T61 Arg2:T68	
+T69	Behaviour 6330 6356	warunki mieszkaniowe dobre
+T70	Condition 6233 6236	WZW
+N24	Reference T70 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T71	Condition 6243 6252	borelioza
+N25	Reference T71 ICD10:A69.2	Choroba z Lyme
+T72	Condition 6260 6263	tbc
+N26	Reference T72 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T73	Condition 6269 6273	odra
+N27	Reference T73 ICD10:B05	Odra
+T74	Treatment 6279 6298	szczepienie na odrę
+N28	Reference T74 ICD10:B05	Odra
+T75	Negation 6300 6311	nie pamięta
+R35	Neg Arg1:T75 Arg2:T74	
+T76	Negation 6275 6276	-
+R36	Neg Arg1:T76 Arg2:T73	
+T77	Negation 6265 6266	-
+R37	Neg Arg1:T77 Arg2:T72	
+T78	Negation 6255 6256	-
+R38	Neg Arg1:T78 Arg2:T71	
+T79	Negation 6238 6239	-
+R39	Neg Arg1:T79 Arg2:T70	
+T80	Negation 6202 6203	i
+T81	Negation 6185 6188	nie
+T82	Negation 6167 6170	nie
+T83	Condition 6190 6199	Uczulenia
+N29	Reference T83 ICD10:T78.4	Alergia, nieokreślona
+R40	Neg Arg1:T80 Arg2:T83	
+T84	Behaviour 6172 6183	Inne używki
+R41	Neg Arg1:T81 Arg2:T84	
+T85	Behaviour 6150 6165	Palenie tytoniu
+N30	Reference T85 ICD10:T65.2	Tytoń i nikotyna
+R42	Neg Arg1:T82 Arg2:T85	
+T86	Treatment 6122 6138	cholecystektomia
+T87	Date 6140 6147	12.2018
+R43	Dat Arg1:T87 Arg2:T86	
+T88	Condition 5002 5022	hipercholesterolemią
+N31	Reference T88 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T89	Condition 5033 5066	chorobą zwyrodnieniową kręgosłupa
+N32	Reference T89 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T90	Condition 5068 5091	nadciśnieniem tętniczym
+N33	Reference T90 ICD10:I10	
+T91	Condition 5093 5112	nietrzymaniem moczu
+N34	Reference T91 ICD10:R32	Nietrzymanie moczu, nieokreślone
+T92	Investigation_result 5143 5182	podwyższonych wartości LDL cholesterolu
+T93	Condition 5264 5266	MI
+A6	Status T93 Family
+N35	Reference T93 ICD10:I34.0	
+T94	Condition 5291 5293	MI
+A7	Status T94 Family
+N36	Reference T94 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T95	Condition 5482 5493	nagły  zgon
+T96	Drug 5704 5717	rosuwastatyną
+T97	Drug_dose 5718 5768	40 mg (1 i pół tabletki 1xdz - łączna dawka 60 mg)
+R44	Drg Arg1:T96 Arg2:T97	
+T98	Drug 5810 5818	ezetymib
+T99	Drug_dose 5827 5832	10 mg
+R45	Drg Arg1:T98 Arg2:T99	
+T100	Negation 5834 5840	Neguje
+T101	Investigation_result 5192 5239	The Dutch Lipid Clinic Network WHO – 11 punktów
+T102	Symptom 5842 5854	zasłabnięcia
+N37	Reference T102 ICD10:R55	Omdlenie i zapaść
+T103	Symptom 5856 5864	omdlenia
+N38	Reference T103 ICD10:R55	Omdlenie i zapaść
+T104	Symptom 5866 5876	krwawienia
+N39	Reference T104 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T105	Symptom 5878 5891	czarne stolce
+N40	Reference T105 ICD10:K92.1	
+T106	Symptom 5893 5909	brunatne wymioty
+N41	Reference T106 ICD10:K92.0	Inne choroby układu pokarmowego
+T107	Condition 5911 5927	chorobę wrzodową
+N42	Reference T107 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T108	Symptom 5929 5937	duszność
+N43	Reference T108 ICD10:R06.0	
+T109	Condition 5938 5940	HA
+N44	Reference T109 ICD10:I10	
+T110	Condition 5942 5944	DM
+N45	Reference T110 ICD10:E13	
+T111	Condition 5946 5956	udar mózgu
+N46	Reference T111 ICD10:I64	
+T112	Condition 5958 5969	zawał serca
+N47	Reference T112 ICD10:I25.2	
+T113	Condition 5994 6064	uraz czaszkowo-mózgowy wielonarządowy z uszkodzeniem rdzenia kręgowego
+A8	Status T113 Historical_Insignificant
+T114	Date 6066 6073	1998 r.
+R46	Dat Arg1:T114 Arg2:T113	
+T115	Investigation_result 7272 7319	The Dutch Lipid Clinic Network WHO – 11 punktów
+T116	Drug 4455 4466	Fluoksetyna
+T117	Drug 4425 4432	Ezoleta
+T118	Drug_dose 4433 4453	10 mg 1xdz wieczorem
+R47	Drg Arg1:T117 Arg2:T118	
+T119	Drug_dose 4467 4487	20 mg 1xdz wieczorem
+R48	Drg Arg1:T116 Arg2:T119	
+T120	Drug 4382 4389	Zaranta
+T121	Drug_dose 4390 4423	40 mg 1i pół tabl. 1xdz wieczorem
+R49	Drg Arg1:T120 Arg2:T121	
+T122	Drug 4343 4354	Betaloc ZOK
+T123	Drug_dose 4355 4380	50 mg 1x dz. 1 tabl. rano
+R50	Drg Arg1:T122 Arg2:T123	
+T124	Behaviour 4277 4303	warunki mieszkaniowe dobre
+T125	Condition 4180 4183	WZW
+N48	Reference T125 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T126	Condition 4190 4199	borelioza
+N49	Reference T126 ICD10:A69.2	Choroba z Lyme
+T127	Condition 4207 4210	tbc
+N50	Reference T127 ICD10:B15	Ostre wirusowe zapalenie wątroby typu A
+T128	Condition 4216 4220	odra
+N51	Reference T128 ICD10:B05	Odra
+T129	Treatment 4226 4245	szczepienie na odrę
+N52	Reference T129 ICD10:B05	Odra
+T130	Negation 4247 4258	nie pamięta
+R51	Neg Arg1:T130 Arg2:T129	
+T131	Negation 4222 4223	-
+R52	Neg Arg1:T131 Arg2:T128	
+T132	Negation 4212 4213	-
+R53	Neg Arg1:T132 Arg2:T127	
+T133	Negation 4202 4203	-
+R54	Neg Arg1:T133 Arg2:T126	
+T134	Negation 4185 4186	-
+R55	Neg Arg1:T134 Arg2:T125	
+T135	Negation 4148 4151	nie
+T136	Negation 4132 4135	nie
+T137	Negation 4114 4117	nie
+T138	Behaviour 4097 4112	Palenie tytoniu
+N53	Reference T138 ICD10:T65.2	Tytoń i nikotyna
+R56	Neg Arg1:T137 Arg2:T138	
+T139	Behaviour 4119 4130	Inne używki
+R57	Neg Arg1:T136 Arg2:T139	
+T140	Condition 4137 4146	Uczulenia
+N54	Reference T140 ICD10:T78.4	Alergia, nieokreślona
+T141	Treatment 4069 4085	cholecystektomia
+T142	Date 4087 4094	12.2018
+R58	Dat Arg1:T142 Arg2:T141	
+T143	Treatment 2465 2481	cholecystektomii
+T144	Treatment 1731 1747	cholecystektomii
+T145	Condition 3921 3991	uraz czaszkowo-mózgowy wielonarządowy z uszkodzeniem rdzenia kręgowego
+A9	Status T145 Historical_Insignificant
+T146	Date 3993 3997	1998
+R59	Dat Arg1:T146 Arg2:T145	
+T147	Condition 2341 2406	czaszkowo-mózgowy wielonarządowy z uszkodzeniem rdzenia kręgowego
+A10	Status T147 Historical_Insignificant
+T148	Date 2408 2415	1998 r.
+R60	Dat Arg1:T148 Arg2:T147	
+T149	Symptom 4030 4048	nietrzymanie moczu
+N55	Reference T149 ICD10:R32	Nietrzymanie moczu, nieokreślone
+T150	Condition 1749 1767	Nietrzymanie moczu
+N56	Reference T150 ICD10:R32	
+T151	Condition 1015 1033	Nietrzymanie moczu
+N57	Reference T151 ICD10:R32	Nietrzymanie moczu, nieokreślone
+T152	Treatment 997 1013	cholecystektomii
+T153	Condition 868 938	Uraz czaszkowo-mózgowy wielonarządowy z uszkodzeniem rdzenia kręgowego
+A11	Status T153 Historical_Insignificant
+T154	Date 940 944	1998
+R61	Dat Arg1:T154 Arg2:T153	
+T155	Condition 845 866	Nadciśnienie tętnicze
+N58	Reference T155 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T156	Condition 1579 1600	Nadciśnienie tętnicze
+N59	Reference T156 ICD10:I10	
+T157	Condition 2313 2334	Nadciśnienie tętnicze
+N60	Reference T157 ICD10:I10	
+T158	Condition 2278 2311	Choroba zwyrodnieniowa kręgosłupa
+N61	Reference T158 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T159	Condition 1544 1577	Choroba zwyrodnieniowa kręgosłupa
+N62	Reference T159 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T160	Condition 810 843	Choroba zwyrodnieniowa kręgosłupa
+N63	Reference T160 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T161	Condition 1602 1672	Uraz czaszkowo-mózgowy wielonarządowy z uszkodzeniem rdzenia kręgowego
+A12	Status T161 Historical_Insignificant
+T162	Date 1674 1681	1998 r.
+R62	Dat Arg1:T162 Arg2:T161	
+T163	Condition 439 459	Hipercholesterolemia
+N64	Reference T163 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T164	Condition 1252 1272	Hipercholesterolemia
+N65	Reference T164 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T165	Condition 1986 2006	Hipercholesterolemia
+N66	Reference T165 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T166	Investigation_result 1291 1338	The Dutch Lipid Clinic Network WHO – 11 punktów
+T167	Investigation_result 2025 2072	The Dutch Lipid Clinic Network WHO – 11 punktów
+T168	Condition 1363 1365	MI
+A13	Status T168 Family
+N67	Reference T168 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T169	Condition 1390 1392	MI
+A14	Status T169 Family
+N68	Reference T169 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T170	Investigation_result 478 525	The Dutch Lipid Clinic Network WHO – 19 punktów
+T171	Investigation_result 540 592	mutacja genu receptora APOB oraz genu receptora LDLR
+T172	Condition 629 631	MI
+A15	Status T172 Family
+N69	Reference T172 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T173	Condition 656 658	MI
+A16	Status T173 Family
+N70	Reference T173 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T174	Condition 2097 2099	MI
+A17	Status T174 Family
+N71	Reference T174 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T175	Condition 2124 2126	MI
+A18	Status T175 Family
+T176	Condition 2628 2648	hipercholesterolemią
+N72	Reference T176 ICD10:E78	
+T177	Condition 2659 2692	chorobą zwyrodnieniową kręgosłupa
+N73	Reference T177 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T178	Condition 2694 2717	nadciśnieniem tętniczym
+N74	Reference T178 ICD10:I10	
+T179	Condition 2719 2738	nietrzymaniem moczu
+N75	Reference T179 ICD10:R32	
+T180	Negation 3000 3006	neguje
+T181	Symptom 3007 3025	objawy niepożądane
+T182	Drug 3042 3053	alirokumabu
+R63	Neg Arg1:T180 Arg2:T181	
+T183	Negation 3055 3061	neguje
+T184	Symptom 3074 3103	ciężkich reakcji alergicznych
+R64	Neg Arg1:T183 Arg2:T184	
+T185	Investigation_result 3164 3211	The Dutch Lipid Clinic Network WHO – 19 punktów
+T186	Condition 3309 3317	matka MI
+A19	Status T186 Family
+N76	Reference T186 ICD10:I34.0	
+T187	Condition 3334 3344	ojeciec MI
+A20	Status T187 Family
+N77	Reference T187 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T188	Condition 3533 3544	nagły  zgon
+A21	Status T188 Family
+T189	Drug 3641 3654	rosuwastatyną
+T190	Drug_dose 3655 3705	40 mg (1 i pół tabletki 1xdz - łączna dawka 60 mg)
+R65	Drg Arg1:T189 Arg2:T190	
+T191	Drug 3737 3745	ezetymib
+T192	Drug_dose 3754 3759	10 mg
+R66	Drg Arg1:T191 Arg2:T192	
+T193	Negation 3761 3767	Neguje
+T194	Symptom 3769 3781	zasłabnięcia
+N78	Reference T194 ICD10:R55	Omdlenie i zapaść
+T195	Symptom 3783 3791	omdlenia
+N79	Reference T195 ICD10:R55	Omdlenie i zapaść
+T196	Symptom 3793 3803	krwawienia
+N80	Reference T196 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T197	Symptom 3805 3818	czarne stolce
+N81	Reference T197 ICD10:K92.1	Stolce smołowate
+T198	Symptom 3820 3836	brunatne wymioty
+N82	Reference T198 ICD10:K92.0	Wymioty krwawe
+T199	Condition 3838 3854	chorobę wrzodową
+N83	Reference T199 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T200	Symptom 3856 3864	duszność
+N84	Reference T200 ICD10:R06.0	Duszność
+T201	Condition 3865 3867	HA
+N85	Reference T201 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T202	Condition 3869 3871	DM
+N86	Reference T202 ICD10:E13	Inne określone postacie cukrzycy
+T203	Condition 3873 3883	udar mózgu
+N87	Reference T203 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T204	Condition 3885 3896	zawał serca
+N88	Reference T204 ICD10:I25.2	Przebyty zawał serca
+R67	Neg Arg1:T193 Arg2:T194	
+R68	Neg Arg1:T193 Arg2:T195	
+R69	Neg Arg1:T193 Arg2:T196	
+R70	Neg Arg1:T193 Arg2:T197	
+R71	Neg Arg1:T193 Arg2:T198	
+R72	Neg Arg1:T193 Arg2:T199	
+R73	Neg Arg1:T193 Arg2:T200	
+R74	Neg Arg1:T193 Arg2:T201	
+R75	Neg Arg1:T193 Arg2:T202	
+R76	Neg Arg1:T193 Arg2:T203	
+R77	Neg Arg1:T193 Arg2:T204	
+T205	Investigation_result 699 723	DL cholesterol 226 mg/dl
+T206	Investigation_result 746 795	LDL cholesterol mimo stosowania leków - 351 mg/dl
+T207	Investigation_result 1436 1457	cholesterol 226 mg/dl
+T208	Investigation_result 1480 1529	LDL cholesterol mimo stosowania leków - 351 mg/dl
+N89	Reference T175 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T209	Investigation_result 2170 2191	cholesterol 226 mg/dl
+T210	Investigation_result 2214 2263	LDL cholesterol mimo stosowania leków - 351 mg/dl
+N90	Reference T188 ICD10:I46.1	Nagły zgon sercowy, tak opisany
+T211	Investigation_result 3384 3409	LDL cholesterol 226 mg/dl
+T212	Investigation_result 3432 3481	LDL cholesterol mimo stosowania leków - 351 mg/dl
+A22	Status T95 Family
+N91	Reference T95 ICD10:I46.1	Nagły zgon sercowy, tak opisany
+T213	Investigation_result 5333 5358	LDL cholesterol 226 mg/dl
+T214	Investigation_result 5381 5430	LDL cholesterol mimo stosowania leków - 351 mg/dl
+R78	Neg Arg1:T100 Arg2:T102	
+R79	Neg Arg1:T100 Arg2:T103	
+R80	Neg Arg1:T100 Arg2:T104	
+R81	Neg Arg1:T100 Arg2:T105	
+R82	Neg Arg1:T100 Arg2:T106	
+R83	Neg Arg1:T100 Arg2:T107	
+R84	Neg Arg1:T100 Arg2:T108	
+R85	Neg Arg1:T100 Arg2:T109	
+R86	Neg Arg1:T100 Arg2:T110	
+R87	Neg Arg1:T100 Arg2:T111	
+R88	Neg Arg1:T100 Arg2:T112	
+T215	Investigation_result 7461 7510	LDL cholesterol mimo stosowania leków - 351 mg/dl
+N92	Reference T49 ICD10:I46.1	Nagły zgon sercowy, tak opisany

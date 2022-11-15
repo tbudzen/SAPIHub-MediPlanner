@@ -1,0 +1,186 @@
+T1	Condition 457 488	Napadowe zaburzenia rytmu serca
+N1	Reference T1 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T2	Condition 490 508	Niewydolność serca
+N2	Reference T2 ICD10:I50.9	Niewydolność serca, nieokreślona
+T3	Condition 510 513	DM2
+N3	Reference T3 ICD10:E11	Cukrzyca insulinoniezależna
+T4	Condition 515 517	HA
+N4	Reference T4 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T5	Condition 519 546	Hiperlipidemia bez leczenia
+N5	Reference T5 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T6	Condition 548 566	Przebyta borelioza
+N6	Reference T6 ICD10:A69.2	Choroba z Lyme
+T7	Treatment 576 593	op. kolana lewego
+A1	Status T7 Historical_Insignificant
+T8	Condition 595 630	Choroba zwyrodnieniowa wielostawowa
+N7	Reference T8 ICD10:M15.9	Choroba zwyrodnieniowa wielostawowa, nieokreślona
+T9	Treatment 743 864	Dalsza opieka w POZ, Poradni Kardiologicznej, Poradni Diabetologicznej, Poradni Chorób Wątroby oraz Poradni Ortopedycznej
+T10	Treatment 870 925	Wskazana pilna kontrola w Poradni Chirurgii Naczyniowej
+T11	Treatment 931 954	Po zakończonym leczeniu
+T12	Treatment 1049 1169	skierowanie pacjentki do Oddziału Kardiologicznego dysponującego pracownią elektrofizjologii i wykonanie zabiegu ablacji
+T13	Treatment 1194 1245	do rozważenia również diagnostyka choroby wieńcowej
+T14	Investigation 1252 1355	Okresowa kontrola morfologii, lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T15	Date 1367 1381	za 4-6 tygodni
+R1	Dat Arg1:T15 Arg2:T14	
+T16	Behaviour 1387 1489	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T17	Investigation 1495 1551	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T18	Treatment 1557 1585	Regularne przyjmowanie leków
+T19	Drug 1593 1600	Clexane
+T20	Drug_dose 1601 1659	80mg/0,8ml dwa razy dziennie podskórnie (rano i wieczorem)
+T21	Drug_dose 1662 1739	zmiana leku i dawkowania wg wskazań lekarza specjalisty chirurgii naczyniowej
+R2	Drg Arg1:T19 Arg2:T20	
+R3	Drg Arg1:T19 Arg2:T21	
+T22	Drug 1740 1745	Acard
+T23	Drug_dose 1746 1771	75mg 1 tabletka wieczorem
+R4	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1772 1780	Bisocard
+T25	Drug_dose 1781 1800	5mg 1 tabletka rano
+R5	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1802 1807	Rimal
+T27	Drug_dose 1808 1836	5mg+5mg 1 tabletka wieczorem
+R6	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1838 1845	Roswera
+T29	Drug_dose 1846 1871	20mg 1 tabletka wieczorem
+R7	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1872 1878	Siofor
+T31	Drug_dose 1879 1954	500 mg 1 tabletka rano i wieczorem - wg dotychczasowych zaleceń diabetologa
+R8	Drg Arg1:T30 Arg2:T31	
+T32	Condition 2172 2203	Napadowe migotanie przedsionków
+N8	Reference T32 ICD10:I48	Migotanie i trzepotanie przedsionków
+T33	Investigation 2205 2217	CHA2DS2-VASc
+T34	Investigation_result 2218 2219	8
+T35	Investigation 2221 2228	HASBLED
+T36	Investigation_result 2229 2230	3
+R9	Inv Arg1:T33 Arg2:T34	
+R10	Inv Arg1:T35 Arg2:T36	
+T37	Condition 2233 2263	Zakrzepica żył powierzchownych
+N9	Reference T37 ICD10:I80.0	Zapalenie i zakrzepowe zapalenie żył powierzchownych kończyn dolnych
+T38	Condition 2265 2302	Blok przedsionkowo-komorowy I stopnia
+N10	Reference T38 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T39	Condition 2304 2325	Nadciśnienie tętnicze
+N11	Reference T39 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T40	Condition 2327 2339	Dyslipidemia
+N12	Reference T40 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T41	Condition 2341 2361	Stłuszczenie wątroby
+N13	Reference T41 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T42	Condition 2375 2390	Cukrzyca typu 2
+N14	Reference T42 ICD10:E11	Cukrzyca insulinoniezależna
+T43	Condition 2400 2412	udarze mózgu
+N15	Reference T43 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T44	Date 2414 2418	2000
+A2	Source T43 Declared
+R11	Dat Arg1:T44 Arg2:T43	
+T45	Treatment 2448 2470	operacji kolana lewego
+A3	Status T45 Historical_Insignificant
+T46	Condition 2472 2507	Choroba zwyrodnieniowa wielostawowa
+N16	Reference T46 ICD10:M15.9	Choroba zwyrodnieniowa wielostawowa, nieokreślona
+T47	Symptom 2680 2695	kołatania serca
+N17	Reference T47 ICD10:R00.2	Kołatanie serca
+T48	Condition 2766 2805	niewydolność powiększonej, lewej komory
+N18	Reference T48 ICD10:I50.1	Niewydolność serca lewokomorowa
+T49	Investigation 2807 2817	obraz ECHO
+T50	Date 2752 2765	w przeszłości
+R12	Dat Arg1:T50 Arg2:T48	
+T51	Symptom 2820 2848	Obrzęk lewej kończyny dolnej
+N19	Reference T51 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T52	Treatment 2858 2898	op. alloplastyki stawu kolanowego lewego
+A4	Status T52 Historical_Insignificant
+T53	Date 2900 2910	07.05.2019
+R13	Dat Arg1:T53 Arg2:T52	
+T54	Condition 2913 2915	HA
+N20	Reference T54 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T55	Condition 2917 2920	DM2
+N21	Reference T55 ICD10:E11	Cukrzyca insulinoniezależna
+T56	Condition 2922 2945	hiperlipidemia mieszana
+N22	Reference T56 ICD10:E78.2	Hiperlipidemia mieszana
+T57	Condition 2947 2967	stłuszczenie wątroby
+N23	Reference T57 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T58	Condition 2977 2983	udarze
+N24	Reference T58 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T59	Date 2984 2988	2000
+R14	Dat Arg1:T59 Arg2:T58	
+T60	Symptom 3001 3034	objawy ze strony układu równowagi
+T61	Condition 3037 3068	Podejrzenie przebytej boreliozy
+N25	Reference T61 ICD10:A69.2	Choroba z Lyme
+T62	Condition 3070 3105	Choroba zwyrodnieniowa wielostawowa
+N26	Reference T62 ICD10:M15.9	Choroba zwyrodnieniowa wielostawowa, nieokreślona
+T63	Negation 3107 3113	Neguje
+T64	Symptom 3115 3127	zasłabnięcia
+T65	Symptom 3129 3137	omdlenia
+N27	Reference T65 ICD10:R55	Omdlenie i zapaść
+T66	Symptom 3139 3149	krwawienia
+T67	Symptom 3151 3164	czarne stolce
+N28	Reference T67 ICD10:K92.1	Stolce smołowate
+T68	Symptom 3166 3182	brunatne wymioty
+N29	Reference T68 ICD10:K92.0	Wymioty krwawe
+T69	Condition 3184 3200	chorobę wrzodową
+N30	Reference T69 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T70	Symptom 3202 3230	duszność nocną typu ortopnoe
+N31	Reference T70 ICD10:R06.0	Duszność
+T71	Condition 3232 3243	zawał serca
+N32	Reference T71 ICD10:I25.2	Przebyty zawał serca
+R15	Neg Arg1:T63 Arg2:T71	
+R16	Neg Arg1:T63 Arg2:T70	
+R17	Neg Arg1:T63 Arg2:T69	
+R18	Neg Arg1:T63 Arg2:T64	
+R19	Neg Arg1:T63 Arg2:T65	
+R20	Neg Arg1:T63 Arg2:T66	
+R21	Neg Arg1:T63 Arg2:T67	
+R22	Neg Arg1:T63 Arg2:T68	
+T72	Treatment 3248 3265	Przebyte operacje
+T73	Treatment 3274 3277	op.
+A5	Status T73 Historical_Insignificant
+T74	Behaviour 3309 3324	Palenie tytoniu
+T75	Negation 3326 3329	nie
+R23	Neg Arg1:T75 Arg2:T74	
+T76	Behaviour 3331 3342	Inne używki
+T77	Negation 3344 3347	nie
+R24	Neg Arg1:T77 Arg2:T76	
+T78	Condition 3349 3358	Uczulenia
+T79	Negation 3360 3363	nie
+R25	Neg Arg1:T79 Arg2:T78	
+T80	Condition 3392 3395	WZW
+N34	Reference T80 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T81	Condition 3402 3411	borelioza
+A6	Source T81 Declared
+N35	Reference T81 ICD10:A69.2	Choroba z Lyme
+A7	Source T61 Declared
+T82	Negation 3397 3398	-
+R26	Neg Arg1:T82 Arg2:T80	
+T83	Condition 3419 3422	tbc
+N36	Reference T83 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T84	Negation 3424 3425	-
+R27	Neg Arg1:T84 Arg2:T83	
+T85	Behaviour 3444 3470	warunki mieszkaniowe dobre
+T86	Behaviour 3472 3480	Emerytka
+T87	Condition 3483 3493	W rodzinie
+A8	Status T87 Family
+T88	Negation 3495 3504	negatywny
+R28	Neg Arg1:T88 Arg2:T87	
+T89	Drug 3542 3549	Betaloc
+T90	Drug_dose 3550 3570	50 ZK 1x1 tabl. rano
+R29	Drg Arg1:T89 Arg2:T90	
+T91	Drug 3571 3577	Siofor
+T92	Drug_dose 3578 3594	500 mg 2x1 tabl.
+R30	Drg Arg1:T91 Arg2:T92	
+T93	Drug 3595 3600	Rimal
+T94	Drug_dose 3601 3624	5+5 1x1 tabl. wieczorem
+R31	Drg Arg1:T93 Arg2:T94	
+T95	Drug 3625 3630	Acard
+T96	Drug_dose 3631 3656	75 mg 1x1 tabl. wieczorem
+R32	Drg Arg1:T95 Arg2:T96	
+T97	Investigation 3718 3739	badania laboratoryjne
+T98	Investigation 3741 3745	ECHO
+T99	Investigation 3747 3751	ABPM
+T100	Investigation 3753 3763	Holter-EKG
+T101	Condition 3278 3307	żylaków lewej kończyny dolnej
+N37	Reference T101 ICD10:I83	Żylaki kończyn dolnych
+T102	Condition 1170 1192	migotania przedsionków
+N38	Reference T102 ICD10:I48	Migotanie i trzepotanie przedsionków
+T103	Condition 955 985	zakrzepicy żył powierzchownych
+N39	Reference T103 ICD10:I80.0	Zapalenie i zakrzepowe zapalenie żył powierzchownych kończyn dolnych
+T104	Treatment 987 1043	wskazane włączenie doustnego leczenia przeciwkrzepliwego
+N40	Reference T66 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+N41	Reference T78 ICD10:T78.4	Alergia, nieokreślona
+N42	Reference T64 ICD10:R55	Omdlenie i zapaść
+N33	Reference T74 ICD10:Z72.0	Używanie tytoniu

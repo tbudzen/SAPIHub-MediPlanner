@@ -1,0 +1,80 @@
+T1	Drug 569 577	Bisocard
+T2	Drug 580 587	Seronil
+T3	Behaviour 782 822	Dieta lekkostrawna , niskocholesterolowa
+T4	Investigation 835 909	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T5	Investigation 926 961	kontrola ciśnienia tętniczego krwi.
+T6	Drug 1011 1019	Bisocard
+T7	Drug 1051 1058	Seronil
+T8	Drug_dose 1020 1048	5 mg 1x dz po 1/2 tabl. rano
+R1	Drg Arg1:T6 Arg2:T8	
+T9	Drug_dose 1059 1076	10 mg 1 x dz rano
+R2	Drg Arg1:T7 Arg2:T9	
+T10	Investigation 2299 2309	Echo serca
+T11	Investigation 2312 2322	Holter EKG
+T12	Investigation 2325 2340	Próba Wysiłkowa
+T13	Investigation 2343 2346	TEE
+T14	Drug 2258 2265	Seronil
+T15	Drug_dose 2266 2283	10 mg 1 x dz rano
+R3	Drg Arg1:T14 Arg2:T15	
+T16	Drug 2218 2226	Bisocard
+T17	Drug_dose 2227 2255	5 mg 1x dz po 1/2 tabl. rano
+R4	Drg Arg1:T16 Arg2:T17	
+T18	Behaviour 2167 2193	warunki mieszkaniowe dobre
+T19	Drug 2139 2149	penicylinę
+T20	Condition 2128 2137	Uczulenia
+N1	Reference T20 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R5	Alg Arg1:T20 Arg2:T19	
+T21	Negation 2124 2127	nie
+T22	Negation 2107 2110	nie
+T23	Negation 2084 2088	brak
+T24	Negation 2037 2041	-  )
+T25	Negation 2054 2059	( - )
+T26	Behaviour 2111 2122	Inne używki
+N2	Reference T26 ICD10:Z72	Problemy związane ze stylem życia
+R6	Neg Arg1:T21 Arg2:T26	
+T27	Behaviour 2090 2106	Palenie tytoniu:
+N3	Reference T27 ICD10:Z72.0	Używanie tytoniu
+R7	Neg Arg1:T22 Arg2:T27	
+T28	Condition 2060 2081	W wywiadzie rodzinnym
+R8	Neg Arg1:T23 Arg2:T28	
+T29	Condition 2031 2034	WZW
+N4	Reference T29 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T30	Condition 2044 2053	borelioza
+N5	Reference T30 ICD10:A69.2	Choroba z Lyme
+R9	Neg Arg1:T25 Arg2:T30	
+R10	Neg Arg1:T24 Arg2:T29	
+T31	Negation 1998 2002	brak
+T32	Negation 1971 1975	brak
+T33	Treatment 1951 1968	Przebyte operacje
+R11	Neg Arg1:T32 Arg2:T33	
+T34	Treatment 1976 1995	Leczenie przewlekłe
+R12	Neg Arg1:T31 Arg2:T34	
+T35	Condition 1942 1949	Nerwica
+N6	Reference T35 ICD10:F48.9	Zaburzenia nerwicowe, nieokreślone
+T36	Condition 1919 1939	Tachykardia napadowa
+N7	Reference T36 ICD10:R00.0	Bradykardia, nieokreślona
+T37	Symptom 1889 1901	zasłabnięcia
+N8	Reference T37 ICD10:R55	Omdlenie i zapaść
+T38	Negation 1882 1888	Neguje
+R13	Neg Arg1:T38 Arg2:T37	
+T39	Investigation_result 1723 1764	niskie wartości ciśnienia tętniczego krwi
+T40	Symptom 1765 1780	kołatania serca
+N9	Reference T40 ICD10:R00.2	
+T41	Symptom 1783 1813	pogorszenie tolerancji wysiłku
+N10	Reference T41 ICD10:R53	
+T42	Symptom 1819 1878	kłujące bóle w klatce piersiowej nasilające się przy wdechu
+N11	Reference T42 ICD10:R07.3	Inne bóle w klatce piersiowej
+T43	Condition 1489 1496	Nerwica
+N12	Reference T43 ICD10:F48.9	Zaburzenia nerwicowe, nieokreślone
+T44	Condition 1473 1487	Małopłytkowość
+N13	Reference T44 ICD10:D69.6	Małopłytkowość, nieokreślona
+T45	Condition 1427 1457	Pojedyncze pobudzenia komorowe
+N14	Reference T45 ICD10:I49.3	
+T46	Condition 1460 1471	nadkomorowe
+N15	Reference T46 ICD10:I49.1	
+T47	Condition 1306 1425	Wada wrodzona przegrody międzyprzedsionkowej- dużą kieszonkę zastawki otworu owalnego zlokalizowana w lewym przedsionku
+N16	Reference T47 ICD10:Q21.8	
+T48	Treatment 697 779	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Hematologicznej
+T49	Condition 1668 1683	podejrzenia PFO
+N17	Reference T49 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T50	Investigation 1700 1703	TEE

@@ -1,0 +1,266 @@
+T1	Condition 448 527	Przewlekła niewydolność serca z zachowaną frakcją wyrzutową w II klasie wg NYHA
+N1	Reference T1 ICD10:I50.9	Niewydolność serca, nieokreślona
+T2	Condition 529 562	Nadciśnienie tętnicze skorygowane
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Condition 564 571	Nadwaga
+T4	Investigation 573 576	BMI
+T5	Condition 590 610	Hipercholesterolemia
+N3	Reference T5 ICD10:E78.0	Czysta hipercholesterolemia
+T6	Condition 620 632	udarze mózgu
+N4	Reference T6 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T7	Date 634 638	2003
+T8	Condition 653 681	ośrodkowego porażenia n. VII
+T9	Condition 684 716	niedowładu kończyny górnej lewej
+N6	Reference T9 ICD10:G83.2	Porażenie jednej kończyny górnej
+N5	Reference T8 ICD10:G51.8	Inne zaburzenia nerwu twarzowego
+R1	Dat Arg1:T7 Arg2:T6	
+R2	Dat Arg1:T7 Arg2:T8	
+R3	Dat Arg1:T7 Arg2:T9	
+T10	Condition 718 792	Wada serca pod postacią niedomykalności mitralnej i trójdzielnej I stopnia
+#1	AnnotatorNotes T10	I34.0 + I36.1
+T11	Condition 794 818	Choroba wrzodowa żołądka
+N7	Reference T11 ICD10:K25	Wrzód żołądka
+T12	Date 819 832	w przeszłości
+T13	Negation 835 838	bez
+T14	Symptom 839 851	dolegliwości
+T15	Date 852 861	od 20 lat
+R4	Dat Arg1:T12 Arg2:T11	
+R5	Neg Arg1:T13 Arg2:T14	
+R6	Dat Arg1:T15 Arg2:T14	
+T16	Condition 863 884	Zaburzenia depresyjne
+N8	Reference T16 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T17	Condition 895 948	zakrzepica żył powierzchownych kończyny dolnej prawej
+N9	Reference T17 ICD10:I80.0	Zapalenie i zakrzepowe zapalenie żył powierzchownych kończyn dolnych
+T18	Date 950 954	2006
+R7	Dat Arg1:T18 Arg2:T17	
+T19	Condition 957 974;987 1011	Alergia pokarmowa (m.in. czekolada, mleko)
+N10	Reference T19 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T20	Treatment 1021 1033	strumektomii
+N11	Reference T20 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T21	Date 1035 1039	1975
+T22	Condition 1050 1065	wola guzowatego
+T23	Treatment 1075 1088	leczeniu I131
+T24	Date 1090 1094	2001
+R8	Dat Arg1:T24 Arg2:T23	
+R9	Dat Arg1:T21 Arg2:T20	
+R10	Dat Arg1:T21 Arg2:T22	
+R11	Dat Arg1:T24 Arg2:T22	
+T25	Treatment 1105 1118	histerektomii
+A1	Status T25 Historical_Insignificant
+N13	Reference T25 ICD10:Z90.7	Nabyty brak narządów płciowych
+T26	Date 1119 1123	1992
+T27	Condition 1133 1150	mięśniaków macicy
+A2	Status T27 Historical_Insignificant
+N14	Reference T27 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+R12	Dat Arg1:T26 Arg2:T25	
+R13	Dat Arg1:T26 Arg2:T27	
+T28	Treatment 1160 1177	trzech operacjach
+N15	Reference T28 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T29	Condition 1178 1208	żylaków kończyny dolnej prawej
+A3	Status T29 Historical_Insignificant
+N16	Reference T29 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T30	Date 1210 1214	1991
+T31	Date 1216 1220	2009
+T32	Date 1222 1226	2017
+R14	Dat Arg1:T30 Arg2:T28	
+R15	Dat Arg1:T31 Arg2:T28	
+R16	Dat Arg1:T32 Arg2:T28	
+R17	Dat Arg1:T30 Arg2:T29	
+R18	Dat Arg1:T31 Arg2:T29	
+R19	Dat Arg1:T32 Arg2:T29	
+A4	Status T28 Historical_Insignificant
+T33	Treatment 1237 1245	operacji
+N17	Reference T33 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T34	Condition 1246 1264	raka piersi prawej
+N18	Reference T34 ICD10:C50.9	Pierś, umiejscowienie nieokreślone
+T35	Date 1266 1270	2012
+R20	Dat Arg1:T35 Arg2:T33	
+R21	Dat Arg1:T35 Arg2:T34	
+T36	Treatment 1395 1422	dalsza opieka w poradni POZ
+T37	Treatment 1430 1478	okresowa kontrola kardiologiczna, psychiatryczna
+T38	Date 1481 1495	za 3-5 tygodni
+R22	Dat Arg1:T38 Arg2:T37	
+T39	Treatment 1497 1562	endokrynologiczna, gastroenterologiczna i u chirurga naczyniowego
+T40	Treatment 1570 1609	codzienna kontrola ciśnienia tętniczego
+T41	Treatment 1617 1646	okresowa kontrola lipidogramu
+T42	Behaviour 1654 1664	dieta DASH
+T43	Behaviour 1671 1690	redukcja masy ciała
+T44	Behaviour 1699 1744	stały, umiarkowany, aerobowy wysiłek fizyczny
+T45	Drug 1790 1795	Acard
+T46	Drug 1848 1854	Atoris
+T47	Drug 1886 1896	Concor Cor
+T48	Drug 1925 1934	Miacardis
+T49	Drug 1966 1972	Letrox
+T50	Drug 1999 2007	Aspargin
+T51	Drug 2066 2076	Cyclo3Fort
+T52	Drug 2137 2148	Fluoksetyna
+T53	Drug 2175 2185	Deprexolet
+T54	Drug_dose 1796 1814	75 mg 1 tabl. rano
+T55	Drug_dose 1855 1878	20 mg 1 tabl. wieczorem
+T56	Drug_dose 1897 1917	1.25 mg 1 tabl. rano
+T57	Drug_dose 1935 1958	40 mg 1 tabl. wieczorem
+T58	Drug_dose 1973 1991	50 ug 1 tabl. rano
+T59	Drug_dose 2008 2032	1 tabl. rano i wieczorem
+T60	Drug_dose 2079 2103	1 tabl. rano i wieczorem
+T61	Drug_dose 2149 2167	10 mg 1 tabl. rano
+T62	Drug_dose 2186 2232	10 mg 1 tabl. wieczorem (2 godziny przed snem)
+R23	Drg Arg1:T45 Arg2:T54	
+R24	Drg Arg1:T46 Arg2:T55	
+R25	Drg Arg1:T47 Arg2:T56	
+R26	Drg Arg1:T48 Arg2:T57	
+R27	Drg Arg1:T49 Arg2:T58	
+R28	Drg Arg1:T50 Arg2:T59	
+R29	Drg Arg1:T51 Arg2:T60	
+R30	Drg Arg1:T52 Arg2:T61	
+R31	Drg Arg1:T53 Arg2:T62	
+T63	Symptom 2400 2450	niskich wartości ciśnienia tętniczego (100/60mmHg)
+N19	Reference T63 ICD10:R03.1	Nieswoiste obniżone ciśnienie tętnicze krwi
+T64	Symptom 2465 2493	ciężarem w klatce piersiowej
+N20	Reference T64 ICD10:R07.3	Inne bóle w klatce piersiowej
+T65	Symptom 2495 2505	osłabienia
+T66	Symptom 2508 2531	uczucia kołatania serca
+N21	Reference T66 ICD10:R00.2	Kołatanie serca
+T67	Symptom 2537 2593	zmniejszenia tolerancji wysiłku w czasie tych incydentów
+T68	Date 2609 2616	od roku
+R32	Dat Arg1:T68 Arg2:T64	
+R33	Dat Arg1:T68 Arg2:T63	
+R34	Dat Arg1:T68 Arg2:T65	
+R35	Dat Arg1:T68 Arg2:T66	
+R36	Dat Arg1:T68 Arg2:T67	
+T69	Condition 2640 2642	HA
+N22	Reference T69 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T70	Treatment 2646 2662	leczone doraźnie
+T71	Symptom 2721 2733	BPs >135mmHg
+T72	Symptom 2735 2757	bardzo rzadko >140mmHg
+T73	Drug 2699 2716	leki hipotensyjne
+T74	Behaviour 2673 2698	kontroluje BP i przyjmuje
+T75	Condition 2768 2780	udarze mózgu
+N23	Reference T75 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T76	Date 2782 2786	2003
+T77	Condition 2801 2828	ośrodkowego porażnia n. VII
+N24	Reference T77 ICD10:G51.8	Inne zaburzenia nerwu twarzowego
+T78	Condition 2831 2857	niedowładu k. górnej lewej
+N25	Reference T78 ICD10:G83.2	Porażenie jednej kończyny górnej
+R37	Dat Arg1:T76 Arg2:T75	
+R38	Dat Arg1:T76 Arg2:T77	
+R39	Dat Arg1:T76 Arg2:T78	
+T79	Condition 2859 2875	choroba wrzodowa
+N26	Reference T79 ICD10:K25	Wrzód żołądka
+T80	Date 2876 2889	w przeszłości
+T81	Negation 2892 2895	bez
+T82	Symptom 2896 2908	dolegliwości
+T83	Date 2909 2918	od 20 lat
+T84	Condition 2920 2941	zaburzenia depresyjne
+N27	Reference T84 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T85	Date 2954 2961	obecnie
+T86	Negation 2943 2946	nie
+T87	Treatment 2946 2953	leczone
+R40	Neg Arg1:T86 Arg2:T87	
+R41	Dat Arg1:T85 Arg2:T87	
+T88	Negation 2970 2979	odstawiła
+T89	Drug 2980 2984	leki
+T90	Symptom 2994 3022	złego samopoczucia po lekach
+T91	Symptom 3024 3037	przytłumienia
+T92	Symptom 3041 3086	trudności w wykonywaniu codziennych czynności
+R42	Neg Arg1:T88 Arg2:T89	
+R43	Dat Arg1:T85 Arg2:T89	
+R44	Dat Arg1:T85 Arg2:T84	
+A5	Status T90 Historical_Insignificant
+A6	Status T91 Historical_Insignificant
+A7	Status T92 Historical_Insignificant
+R45	Dat Arg1:T80 Arg2:T79	
+R46	Neg Arg1:T81 Arg2:T82	
+R47	Dat Arg1:T83 Arg2:T82	
+T93	Condition 3097 3154	obwodowej zakrzepicy żyl powierzchownych k. dolnej prawej
+N28	Reference T93 ICD10:I80.0	Zapalenie i zakrzepowe zapalenie żył powierzchownych kończyn dolnych
+T94	Date 3156 3160	2006
+R48	Dat Arg1:T94 Arg2:T93	
+T95	Treatment 3185 3197	strumektomia
+N29	Reference T95 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T96	Date 3199 3203	1975
+T97	Condition 3205 3218	wole guzowate
+R49	Dat Arg1:T96 Arg2:T97	
+R50	Dat Arg1:T96 Arg2:T95	
+T98	Treatment 3229 3242	leczeniu I131
+T99	Date 3244 3248	2001
+R51	Dat Arg1:T99 Arg2:T98	
+N12	Reference T97 ICD10:E05.2	Tyreotoksykoza z wolem toksycznym wieloguzkowym
+R52	Dat Arg1:T99 Arg2:T97	
+N30	Reference T22 ICD10:E05.2	Tyreotoksykoza z wolem toksycznym wieloguzkowym
+T100	Treatment 3251 3264	histerektomia
+A8	Status T100 Historical_Insignificant
+N31	Reference T100 ICD10:Z90.7	Nabyty brak narządów płciowych
+T101	Date 3265 3269	1992
+T102	Condition 3279 3296	miesniaków macicy
+A9	Status T102 Historical_Insignificant
+N32	Reference T102 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+R53	Dat Arg1:T101 Arg2:T100	
+R54	Dat Arg1:T101 Arg2:T102	
+T103	Date 3338 3342	1991
+T104	Date 3343 3347	2009
+T105	Date 3349 3353	2017
+T106	Treatment 3365 3373	operacji
+N33	Reference T106 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T107	Condition 3374 3392	raka piersi prawej
+N34	Reference T107 ICD10:C50.9	Pierś, umiejscowienie nieokreślone
+T108	Date 3394 3398	2012
+R55	Dat Arg1:T108 Arg2:T107	
+R56	Dat Arg1:T108 Arg2:T106	
+T109	Condition 3298 3316	żylaki kk. dolnych
+N35	Reference T109 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T110	Treatment 3318 3337	3x k. dolnej prawej
+N36	Reference T110 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R58	Dat Arg1:T103 Arg2:T110	
+R57	Dat Arg1:T104 Arg2:T110	
+R59	Dat Arg1:T105 Arg2:T110	
+R60	Dat Arg1:T103 Arg2:T109	
+R61	Dat Arg1:T104 Arg2:T109	
+R62	Dat Arg1:T105 Arg2:T109	
+T111	Condition 3400 3415	Wywiad rodzinny
+A10	Status T111 Family
+T112	Negation 3417 3430	bez znaczenia
+R63	Neg Arg1:T112 Arg2:T111	
+T113	Condition 3432 3484	Alergie: pokarmowe (czekolada, mleko, jabłka, serki)
+N37	Reference T113 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T114	Symptom 3487 3494	wysypka
+A11	Status T114 Historical_Insignificant
+T115	Behaviour 3496 3506	Nikotynizm
+N38	Reference T115 ICD10:Z72.0	Używanie tytoniu
+T116	Negation 3508 3514	neguje
+T117	Behaviour 3517 3538	Alkohol: okazjonalnie
+A12	Status T117 Historical_Insignificant
+N39	Reference T117 ICD10:Z72.1	Używanie alkoholu
+T118	Behaviour 3540 3557	Uzależnienie inne
+T119	Negation 3559 3565	neguje
+R64	Neg Arg1:T116 Arg2:T115	
+R65	Neg Arg1:T119 Arg2:T118	
+T120	Behaviour 3583 3592	emerytura
+T121	Behaviour 3594 3616	praca biurowa siedząca
+T122	Drug 3624 3630	Letrox
+T123	Drug 3651 3658	Amlozek
+T124	Drug 3675 3683	Aspargin
+T125	Drug 3710 3715	Acard
+T126	Drug 3736 3746	Cyclo3Fort
+T127	Drug 3775 3782	Beto ZK
+T128	Drug 3804 3812	Ranacand
+T129	Drug_dose 3631 3649	50 ug 1 tabl. rano
+T130	Drug_dose 3659 3673	5mg - doraźnie
+T131	Drug_dose 3684 3708	1 tabl. rano i wieczorem
+T132	Drug_dose 3716 3734	75 mg 1 tabl. rano
+T133	Drug_dose 3749 3773	1 tabl. rano i wieczorem
+T134	Drug_dose 3783 3803	25 1 tabl. wieczorem
+T135	Drug_dose 3813 3832	8 mg 1/2 tabl. rano
+T136	Investigation 3860 3870	echo serca
+T137	Investigation 3872 3875	TET
+T138	Investigation 3877 3881	ABPM
+T139	Investigation 3883 3893	Holter ekg
+T140	Investigation 3895 3913	rtg kl. piersiowej
+R66	Drg Arg1:T122 Arg2:T129	
+R67	Drg Arg1:T123 Arg2:T130	
+R68	Drg Arg1:T124 Arg2:T131	
+R69	Drg Arg1:T125 Arg2:T132	
+R70	Drg Arg1:T126 Arg2:T133	
+R71	Drg Arg1:T127 Arg2:T134	
+R72	Drg Arg1:T128 Arg2:T135	
+T141	Investigation_result 577 587	29.72kg/m2
+R73	Inv Arg1:T4 Arg2:T141	

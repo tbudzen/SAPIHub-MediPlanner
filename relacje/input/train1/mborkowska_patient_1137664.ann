@@ -1,0 +1,33 @@
+T1	Treatment 769 822	Systematyczne profilaktyczne kontrole stomatologiczne
+T2	Behaviour 827 862	Dostosowanie wysiłków do wydolności
+T3	Drug 987 992	leków
+T4	Negation 983 986	Bez
+R1	Neg Arg1:T4 Arg2:T3	
+T5	Drug 1884 1898	leków na stałę
+T6	Negation 1899 1912	nie otrzymuje
+R2	Neg Arg1:T6 Arg2:T5	
+T7	Condition 1857 1874	wywiad alergiczny
+N1	Reference T7 ICD10:T78.4	Alergia, nieokreślona
+T8	Negation 1875 1881	ujemny
+R3	Neg Arg1:T8 Arg2:T7	
+T9	Treatment 1808 1816	operacji
+T10	Condition 1317 1362	mnogich ubytków w przegrodzie międzykomorowej
+N2	Reference T10 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T11	Condition 1299 1315	koarktacji aorty
+N3	Reference T11 ICD10:Q25.1	Zwężenie cieśni aorty
+T12	Condition 1243 1298	Wrodzona wada serca pod postacią hipoplazji łuku aorty,
+N4	Reference T12 ICD10:Q25.1	Zwężenie cieśni aorty
+T13	Treatment 1378 1461	operacji koarktacji aorty metodą Crafoord'a i przewężenia (banding) tętnicy płucnej
+T14	Date 1463 1474	27.04.2011r
+R4	Dat Arg1:T14 Arg2:T13	
+T15	Treatment 1482 1505	angioplastyce balonowej
+T16	Date 1520 1533	02.08.2012r.)
+R5	Dat Arg1:T16 Arg2:T15	
+T17	Treatment 1539 1630	operacji zaszycia trzech ubytków w przegrodzie międzykomorowej i debandingu tętnicy płucnej
+T18	Date 1632 1643	19.03.2015r
+R6	Dat Arg1:T18 Arg2:T17	
+T19	Condition 1817 1820	CoA
+N5	Reference T19 ICD10:Q25.1	Zwężenie cieśni aorty
+T20	Condition 1506 1518	rekoarktacji
+N6	Reference T20 ICD10:I77	Inne choroby tętnic i tętniczek
+R7	Dat Arg1:T16 Arg2:T20	

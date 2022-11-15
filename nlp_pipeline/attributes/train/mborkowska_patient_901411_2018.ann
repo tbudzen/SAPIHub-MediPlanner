@@ -1,0 +1,512 @@
+T1	Investigation 451 480	kontrola ciśnienia tętniczego
+T2	Investigation 490 510	kontrola lipidogramu
+T3	Date 511 522	(raz w roku
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Behaviour 524 549	dieta niskocholesterolowa
+T5	Behaviour 551 596	stały, umiarkowany, aerobowy wysiłek fizyczny
+T6	Drug 627 633	Plavix
+T7	Drug_dose 634 697	75 mg 1 tabl. rano (stosować do 12.07.2018r następnie odstawić)
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Drug 698 706	Polocard
+T9	Drug_dose 707 730	75 mg 1 tabl. wieczorem
+R3	Drg Arg1:T8 Arg2:T9	
+T10	Drug 731 740	ArmoLipid
+T11	Drug_dose 741 758	1 tabl. wieczorem
+R4	Drg Arg1:T10 Arg2:T11	
+T12	Drug 759 767	Toramide
+T13	Drug_dose 768 787	5 mg 1  tabl.  rano
+R5	Drg Arg1:T12 Arg2:T13	
+T14	Drug 795 809	Kalipoz  prol.
+T15	Drug_dose 810 820	2 x1  tabl
+R6	Drg Arg1:T14 Arg2:T15	
+T16	Drug 821 830	Tritace  
+T17	Drug_dose 830 860	2,5 mg  1 x 1  tabl  wieczorem
+R7	Drg Arg1:T16 Arg2:T17	
+T18	Drug 869 872	IPP
+T19	Drug_dose 873 901	20 mg  1 tabl rano  na czczo
+R8	Drg Arg1:T18 Arg2:T19	
+T20	Drug 903 911	Letrox  
+T21	Drug_dose 911 947	100ug 1 tabl. rano oprócz  niedzieli
+R9	Drg Arg1:T20 Arg2:T21	
+T22	Drug 949 955	Letrox
+T23	Drug_dose 956 976	50 ug  1  tabl. rano
+R10	Drg Arg1:T22 Arg2:T23	
+T24	Drug 977 986	Nootropil
+T25	Drug_dose 987 1018	1,2   1 tabl. rano i w południe
+R11	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1019 1026	Asertin
+T27	Drug_dose 1027 1044	50 mg 1 tabl rano
+R12	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1045 1056	Trittico CR
+T29	Drug_dose 1057 1084	150 mg  2/3 tabl. wieczorem
+R13	Drg Arg1:T28 Arg2:T29	
+T30	Drug 7034 7043	Tritace  
+T31	Drug 6984 6995	Trittico CR
+T32	Drug 6946 6953	Asertin
+T33	Drug 6911 6917	Letrox
+T34	Drug 6858 6866	Letrox  
+T35	Drug 6813 6816	IPP
+T36	Drug_dose 6817 6847	20 mg  1x1 tabl rano  na czczo
+R14	Drg Arg1:T35 Arg2:T36	
+T37	Drug_dose 6866 6899	100ug  1 x 1 tab oprócz  niedziel
+R15	Drg Arg1:T34 Arg2:T37	
+T38	Drug_dose 6918 6936	50 ug  1 x 1  tabl
+R16	Drg Arg1:T33 Arg2:T38	
+T39	Drug_dose 6954 6974	50 mg  1x1 tabl rano
+R17	Drg Arg1:T32 Arg2:T39	
+T40	Drug_dose 6996 7022	150 mg  2/3 tabl wieczorem
+R18	Drg Arg1:T31 Arg2:T40	
+T41	Drug_dose 7043 7073	2,5 mg  1 x 1  tabl  wieczorem
+R19	Drg Arg1:T30 Arg2:T41	
+T42	Investigation 7159 7170	ECHO  serca
+T43	Drug 6776 6785	Nootropil
+T44	Drug 6731 6741	Toramide  
+T45	Drug 6702 6711	Kalipoz  
+T46	Drug 6660 6666	Atoris
+T47	Drug 6630 6639	Clexane  
+T48	Drug_dose 6639 6650	0,4  2x  sc
+R20	Drg Arg1:T47 Arg2:T48	
+T49	Drug_dose 6667 6692	20  1x1 tabl  po  kloacji
+R21	Drg Arg1:T46 Arg2:T49	
+T50	Drug_dose 6711 6721	2 x1  tabl
+R22	Drg Arg1:T45 Arg2:T50	
+T51	Drug_dose 6741 6765	5 mg  1  x 1  tabl  rano
+R23	Drg Arg1:T44 Arg2:T51	
+T52	Drug_dose 6786 6803	1,2   1-1-0  tabl
+R24	Drg Arg1:T43 Arg2:T52	
+T53	Behaviour 6595 6623	warunki  mieszkaniowe  dobre
+T54	Condition 6540 6543	WZW
+N1	Reference T54 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T55	Condition 6547 6556	borelioza
+N2	Reference T55 ICD10:A69.2	Choroba z Lyme
+T56	Condition 6561 6564	TBC
+N3	Reference T56 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T57	Negation 6564 6567	(-)
+R25	Neg Arg1:T57 Arg2:T56	
+T58	Negation 6556 6560	(-),
+R26	Neg Arg1:T58 Arg2:T55	
+T59	Negation 6543 6547	(-),
+R27	Neg Arg1:T59 Arg2:T54	
+T60	Drug 6492 6498	unidox
+T61	Drug 6500 6511	butapirazol
+T62	Condition 6468 6479	Uczulenia  
+N4	Reference T62 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R28	Alg Arg1:T62 Arg2:T60	
+R29	Alg Arg1:T62 Arg2:T61	
+T63	Negation 6457 6466	Nie  pije
+T64	Behaviour 6448 6455	Alkohol
+N5	Reference T64 ICD10:Z72.1	Używanie alkoholu
+R30	Neg Arg1:T63 Arg2:T64	
+T65	Behaviour 6417 6433	Palenie  tytoniu
+N6	Reference T65 ICD10:Z72.0	Używanie tytoniu
+T66	Negation 6437 6446	nie  pali
+R31	Neg Arg1:T66 Arg2:T65	
+T67	Treatment 6392 6410	Przebyte  operacje
+T68	Investigation 5504 5515	ECHO  serca
+T69	Investigation 5518 5524	Holter
+T70	Investigation 5527 5542	próba wysiłkowa
+T71	Drug 5367 5376	Tritace  
+T72	Drug 5317 5328	Trittico CR
+T73	Drug 5279 5286	Asertin
+T74	Drug 5244 5250	Letrox
+T75	Drug 5191 5199	Letrox  
+T76	Drug 5146 5149	IPP
+T77	Drug_dose 5150 5180	20 mg  1x1 tabl rano  na czczo
+R32	Drg Arg1:T76 Arg2:T77	
+T78	Drug_dose 5199 5233	100ug  1 x 1 tab oprócz  niedzieli
+R33	Drg Arg1:T75 Arg2:T78	
+T79	Drug_dose 5251 5269	50 ug  1 x 1  tabl
+R34	Drg Arg1:T74 Arg2:T79	
+T80	Drug_dose 5287 5307	50 mg  1x1 tabl rano
+R35	Drg Arg1:T73 Arg2:T80	
+T81	Drug_dose 5329 5355	150 mg  2/3 tabl wieczorem
+R36	Drg Arg1:T72 Arg2:T81	
+T82	Drug_dose 5376 5406	2,5 mg  1 x 1  tabl  wieczorem
+R37	Drg Arg1:T71 Arg2:T82	
+T83	Drug 5109 5118	Nootropil
+T84	Drug 5064 5074	Toramide  
+T85	Drug 5035 5044	Kalipoz  
+T86	Drug 4991 4997	Atoris
+T87	Drug 4962 4968	Plavix
+T88	Drug_dose 4969 4981	1 tabl. rano
+R38	Drg Arg1:T87 Arg2:T88	
+T89	Drug_dose 4998 5025	20mg  1x1 tabl  po  kloacji
+R39	Drg Arg1:T86 Arg2:T89	
+T90	Drug_dose 5044 5054	2 x1  tabl
+R40	Drg Arg1:T85 Arg2:T90	
+T91	Drug_dose 5074 5098	5 mg  1  x 1  tabl  rano
+R41	Drg Arg1:T84 Arg2:T91	
+T92	Drug_dose 5119 5136	1,2   1-1-0  tabl
+R42	Drg Arg1:T83 Arg2:T92	
+T93	Behaviour 4925 4954	 warunki  mieszkaniowe  dobre
+T94	Condition 4871 4874	WZW
+N7	Reference T94 ICD10:B19	
+T95	Condition 4878 4887	borelioza
+N8	Reference T95 ICD10:A69.2	Choroba z Lyme
+T96	Condition 4892 4895	TBC
+N9	Reference T96 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T97	Negation 4895 4898	(-)
+R43	Neg Arg1:T97 Arg2:T96	
+T98	Negation 4887 4891	(-),
+R44	Neg Arg1:T98 Arg2:T95	
+T99	Negation 4874 4878	(-),
+R45	Neg Arg1:T99 Arg2:T94	
+T100	Drug 4823 4829	unidox
+T101	Drug 4831 4842	butapirazol
+T102	Condition 4799 4810	Uczulenia  
+N10	Reference T102 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R46	Alg Arg1:T102 Arg2:T100	
+R47	Alg Arg1:T102 Arg2:T101	
+T103	Negation 4788 4797	Nie  pije
+T104	Behaviour 4779 4786	Alkohol
+N11	Reference T104 ICD10:Z72.1	Używanie alkoholu
+R48	Neg Arg1:T103 Arg2:T104	
+T105	Negation 4768 4777	nie  pali
+T106	Behaviour 4748 4764	Palenie  tytoniu
+N12	Reference T106 ICD10:Z72.0	Używanie tytoniu
+R49	Neg Arg1:T105 Arg2:T106	
+T107	Treatment 4723 4741	Przebyte  operacje
+T108	Drug 3706 3713	Furagin
+T109	Drug_dose 3714 3764	2 tabl. 3 x dz przez 1 tydzień, następnie odstawić
+R50	Drg Arg1:T108 Arg2:T109	
+T110	Drug 3666 3677	Trittico CR
+T111	Drug_dose 3678 3704	150 mg  2/3 tabl wieczorem
+R51	Drg Arg1:T110 Arg2:T111	
+T112	Drug 3638 3645	Asertin
+T113	Drug_dose 3646 3665	50 mg  1 tabl. rano
+R52	Drg Arg1:T112 Arg2:T113	
+T114	Drug 3596 3605	Nootropil
+T115	Drug_dose 3606 3637	1,2   1 tabl. rano i w południe
+R53	Drg Arg1:T114 Arg2:T115	
+T116	Drug 3558 3564	Letrox
+T117	Drug_dose 3565 3595	50 ug   1  tabl. rano na czczo
+R54	Drg Arg1:T116 Arg2:T117	
+T118	Drug 3505 3513	Letrox  
+T119	Drug_dose 3513 3556	100ug  1 tabl. rano na czczo (bez niedziel)
+R55	Drg Arg1:T118 Arg2:T119	
+T120	Drug 3469 3472	IPP
+T121	Drug 3434 3443	Tritace  
+T122	Drug 3412 3421	Kalipoz  
+T123	Drug 3382 3392	Toramide  
+T124	Drug_dose 3392 3410	5 mg 1  tabl. rano
+R56	Drg Arg1:T123 Arg2:T124	
+T125	Drug_dose 3421 3432	2 x 1  tabl
+R57	Drg Arg1:T122 Arg2:T125	
+T126	Drug_dose 3443 3468	2,5 mg 1  tabl  wieczorem
+R58	Drg Arg1:T121 Arg2:T126	
+T127	Drug_dose 3473 3503	20 mg  1x1 tabl. rano na czczo
+R59	Drg Arg1:T120 Arg2:T127	
+T128	Drug 3349 3356	Roswera
+T129	Drug_dose 3357 3381	20 mg  1 tabl. wieczorem
+R60	Drg Arg1:T128 Arg2:T129	
+T130	Drug 3299 3307	Polocard
+T131	Drug_dose 3308 3348	75 mg 1 tabl. wieczorem przez 6 miesięcy
+R61	Drg Arg1:T130 Arg2:T131	
+T132	Drug 3256 3262	Plavix
+T133	Drug_dose 3263 3298	75 mg 1 tabl. rano przez 3 miesiące
+R62	Drg Arg1:T132 Arg2:T133	
+T134	Condition 3205 3208	IZW
+A1	Source T134 Declared
+N13	Reference T134 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T135	Date 3209 3225	przez 6 miesięcy
+T136	Treatment 3192 3204	profilaktyka
+R63	Dat Arg1:T135 Arg2:T134	
+R64	Dat Arg1:T135 Arg2:T136	
+T137	Behaviour 3136 3170	zakaz ciężkich wysiłków fizycznych
+T138	Date 3171 3191	przez ok, 3 miesiące
+R65	Dat Arg1:T138 Arg2:T137	
+T139	Investigation 3114 3134	kontrola lipidogramu
+T140	Drug 2734 2746	doksycyklinę
+T141	Drug 2749 2760	butapirazol
+T142	Condition 2721 2730	Uczulenie
+N14	Reference T142 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R66	Alg Arg1:T142 Arg2:T140	
+R67	Alg Arg1:T142 Arg2:T141	
+T143	Negation 4566 4572	Neguje
+T144	Symptom 4575 4587	zasłabnięcia
+N15	Reference T144 ICD10:R55	Omdlenie i zapaść
+T145	Symptom 4590 4600	omdlenia  
+N16	Reference T145 ICD10:R55	Omdlenie i zapaść
+T146	Symptom 4602 4612	krwawienia
+N17	Reference T146 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T147	Symptom 4616 4630	czarne  stolce
+N18	Reference T147 ICD10:K92.1	Stolce smołowate
+T148	Symptom 4633 4650	brunatne  wymioty
+N19	Reference T148 ICD10:K92.0	Wymioty krwawe
+T149	Symptom 4652 4667	duszność  nocną
+N20	Reference T149 ICD10:R06.0	Duszność
+T150	Symptom 4670 4686	obrzęki  podudzi
+N21	Reference T150 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T151	Condition 4689 4691	DM
+N22	Reference T151 ICD10:E13	Inne określone postacie cukrzycy
+T152	Condition 4694 4705	udar  mózgu
+N23	Reference T152 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T153	Condition 4708 4720	zawał  serca
+N24	Reference T153 ICD10:I25.2	Przebyty zawał serca
+R68	Neg Arg1:T143 Arg2:T144	
+R69	Neg Arg1:T143 Arg2:T145	
+R70	Neg Arg1:T143 Arg2:T146	
+R71	Neg Arg1:T143 Arg2:T147	
+R72	Neg Arg1:T143 Arg2:T148	
+R73	Neg Arg1:T143 Arg2:T149	
+R74	Neg Arg1:T143 Arg2:T150	
+R75	Neg Arg1:T143 Arg2:T151	
+R76	Neg Arg1:T143 Arg2:T152	
+R77	Neg Arg1:T143 Arg2:T153	
+T154	Negation 6235 6241	Neguje
+T155	Symptom 6244 6256	zasłabnięcia
+N25	Reference T155 ICD10:R55	Omdlenie i zapaść
+T156	Symptom 6259 6269	omdlenia  
+N26	Reference T156 ICD10:R55	Omdlenie i zapaść
+T157	Symptom 6271 6281	krwawienia
+N27	Reference T157 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T158	Symptom 6284 6300	 czarne  stolce,
+N28	Reference T158 ICD10:K92.1	Stolce smołowate
+T159	Symptom 6302 6319	brunatne  wymioty
+N29	Reference T159 ICD10:K92.0	Wymioty krwawe
+T160	Symptom 6321 6336	duszność  nocną
+N30	Reference T160 ICD10:R06.0	Duszność
+T161	Symptom 6339 6355	obrzęki  podudzi
+N31	Reference T161 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T162	Condition 6358 6360	DM
+N32	Reference T162 ICD10:E13	Inne określone postacie cukrzycy
+T163	Condition 6363 6374	udar  mózgu
+N33	Reference T163 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T164	Condition 6377 6389	zawał  serca
+N34	Reference T164 ICD10:I25.2	Przebyty zawał serca
+R78	Neg Arg1:T154 Arg2:T155	
+R79	Neg Arg1:T154 Arg2:T156	
+R80	Neg Arg1:T154 Arg2:T157	
+R81	Neg Arg1:T154 Arg2:T158	
+R82	Neg Arg1:T154 Arg2:T159	
+R83	Neg Arg1:T154 Arg2:T160	
+R84	Neg Arg1:T154 Arg2:T161	
+R85	Neg Arg1:T154 Arg2:T162	
+R86	Neg Arg1:T154 Arg2:T163	
+R87	Neg Arg1:T154 Arg2:T164	
+T165	Treatment 1322 1332	zamknięciu
+T166	Condition 1333 1336	PFO
+N35	Reference T166 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T167	Treatment 1337 1384	zestawem Occlutech Figulla Flex II PFO 23/25 mm
+T168	Date 1386 1397	12.04.2018r
+R88	Dat Arg1:T168 Arg2:T167	
+R89	Dat Arg1:T168 Arg2:T166	
+R90	Dat Arg1:T168 Arg2:T165	
+T169	Treatment 3898 3976	Implantacja zapinki Occlutech Figulla Flex II PFO  o nr seryjnym 1808192503_26
+T170	Date 3886 3897	12.04.2018r
+R91	Dat Arg1:T170 Arg2:T169	
+T171	Treatment 4123 4133	zamknięciu
+T172	Condition 4134 4137	PFO
+N36	Reference T172 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T173	Treatment 4138 4155	metodą Amplatzera
+T174	Date 4156 4169	(12.04.2018r)
+R92	Dat Arg1:T174 Arg2:T173	
+R93	Dat Arg1:T174 Arg2:T172	
+R94	Dat Arg1:T174 Arg2:T171	
+T175	Condition 4246 4272	trzykrotnym  udarze  mózgu
+N37	Reference T175 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T176	Date 4275 4283	06.2016,
+T177	Date 4284 4291	07.2016
+T178	Date 4293 4300	08.2016
+R95	Dat Arg1:T176 Arg2:T175	
+R96	Dat Arg1:T177 Arg2:T175	
+R97	Dat Arg1:T178 Arg2:T175	
+T179	Condition 4303 4336	napadowe  migotanie  przedsionków
+N38	Reference T179 ICD10:I48	Migotanie i trzepotanie przedsionków
+T180	Condition 2413 2444	Napadowe migotanie przedsionków
+N39	Reference T180 ICD10:I48	Migotanie i trzepotanie przedsionków
+T181	Drug 1879 1891	doksycyklinę
+T182	Drug 1894 1905	butapirazol
+T183	Condition 1866 1875	Uczulenie
+N40	Reference T183 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R98	Alg Arg1:T183 Arg2:T181	
+R99	Alg Arg1:T183 Arg2:T182	
+T184	Condition 1408 1428	trzech udarach mózgu
+N41	Reference T184 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T185	Symptom 1451 1475	niedowładu lewostronnego
+N42	Reference T185 ICD10:G81	Porażenie połowicze
+T186	Condition 1442 1448	afazji
+N43	Reference T186 ICD10:R47.0	Dysfazja i afazja
+T187	Date 1477 1484	06.2016
+T188	Date 1486 1493	07.2016
+T189	Date 1495 1502	08.2017
+R100	Dat Arg1:T187 Arg2:T185	
+R101	Dat Arg1:T187 Arg2:T186	
+R102	Dat Arg1:T187 Arg2:T184	
+R103	Dat Arg1:T188 Arg2:T185	
+R104	Dat Arg1:T188 Arg2:T186	
+R105	Dat Arg1:T188 Arg2:T184	
+R106	Dat Arg1:T189 Arg2:T185	
+R107	Dat Arg1:T189 Arg2:T186	
+R108	Dat Arg1:T189 Arg2:T184	
+T190	Condition 1513 1546	przejściowym ataku niedokrwiennym
+N44	Reference T190 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T191	Date 1548 1556	09.2016)
+R109	Dat Arg1:T191 Arg2:T190	
+T192	Condition 1558 1589	Napadowe migotanie przedsionków
+N45	Reference T192 ICD10:I48	Migotanie i trzepotanie przedsionków
+T193	Condition 2368 2401	przejściowym ataku niedokrwiennym
+N46	Reference T193 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T194	Date 2403 2410	09.2016
+R110	Dat Arg1:T194 Arg2:T193	
+T195	Treatment 5718 5728	zamknięcia
+T196	Condition 5729 5735	ubytku
+N47	Reference T196 ICD10:Q21	Wrodzone wady rozwojowe przegród serca
+T197	Symptom 5757 5778	 łatwe  męczenie  się
+N48	Reference T197 ICD10:R53	Złe samopoczucie i zmęczenie
+T198	Symptom 5783 5804	duszność  powysiłkową
+N49	Reference T198 ICD10:R06.0	Duszność
+T199	Symptom 5808 5834	obrzęki   kończyn  dolnych
+N50	Reference T199 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+T200	Symptom 5837 5866	obniżoną  tolerancję  wysiłku
+N51	Reference T200 ICD10:R53	Złe samopoczucie i zmęczenie
+T201	Condition 5877 5911	trzykrotnie  przebyła  udar  mózgu
+N52	Reference T201 ICD10:I64	
+T202	Date 5914 5921	06.2016
+R111	Dat Arg1:T202 Arg2:T201	
+T203	Date 5923 5930	07.2016
+R112	Dat Arg1:T203 Arg2:T201	
+T204	Date 5932 5939	08.2016
+R113	Dat Arg1:T204 Arg2:T201	
+T205	Condition 5956 5989	napadowe  migotanie  przedsionków
+N53	Reference T205 ICD10:I48	Migotanie i trzepotanie przedsionków
+T206	Condition 6040 6065	choroba  wrzodowa  żołąka
+N54	Reference T206 ICD10:K25	Wrzód żołądka
+T207	Condition 6069 6082	dwunastnicy  
+N55	Reference T207 ICD10:K26	Wrzód dwunastnicy
+T208	Condition 6097 6114	astma  oskrzelowa
+N56	Reference T208 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T209	Condition 6117 6127	depresja  
+N57	Reference T209 ICD10:F32.9	Epizod depresyjny, nieokreślony
+T210	Condition 6149 6157	oponiaka
+N58	Reference T210 ICD10:D32	Nowotwór niezłośliwy opon mózgowo-rdzeniowych
+T211	Treatment 6140 6148	operacji
+T212	Date 6159 6163	2006
+R114	Dat Arg1:T212 Arg2:T210	
+R115	Dat Arg1:T212 Arg2:T211	
+T213	Condition 6188 6227	tłuszczaka   w  okolicy  barku   lewego
+N59	Reference T213 ICD10:D17.9	Tłuszczak, umiejscowienie nieokreślone
+T214	Treatment 6177 6188	usunięciu  
+A2	Status T214 Historical_Insignificant
+A3	Status T213 Historical_Insignificant
+T215	Date 6229 6233	2016
+R116	Dat Arg1:T215 Arg2:T213	
+R117	Dat Arg1:T215 Arg2:T214	
+T216	Condition 5992 6038	niedoczynność  tarczycy  w przebiegu  Hasimoto
+N60	Reference T216 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T217	Condition 4339 4385	niedoczynność  tarczycy  w przebiegu  Hasimoto
+N61	Reference T217 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T218	Condition 4387 4413	choroba  wrzodowa  żołądka
+N62	Reference T218 ICD10:K25	Wrzód żołądka
+T219	Condition 4417 4428	dwunastnicy
+N63	Reference T219 ICD10:K26	Wrzód dwunastnicy
+T220	Condition 4430 4447	astma  oskrzelowa
+N64	Reference T220 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T221	Condition 4450 4458	depresja
+N65	Reference T221 ICD10:F32.9	Epizod depresyjny, nieokreślony
+T222	Condition 4480 4488	oponiaka
+N66	Reference T222 ICD10:D32	Nowotwór niezłośliwy opon mózgowo-rdzeniowych
+T223	Treatment 4471 4479	operacji
+T224	Date 4490 4494	2006
+R118	Dat Arg1:T224 Arg2:T222	
+R119	Dat Arg1:T224 Arg2:T223	
+T225	Condition 4519 4558	tłuszczaka   w  okolicy  barku   lewego
+A4	Status T225 Historical_Insignificant
+N67	Reference T225 ICD10:D17.9	Tłuszczak, umiejscowienie nieokreślone
+T226	Date 4560 4564	2016
+T227	Treatment 4508 4519	usunięciu  
+R120	Dat Arg1:T226 Arg2:T225	
+R121	Dat Arg1:T226 Arg2:T227	
+T228	Condition 2618 2626	Depresja
+N68	Reference T228 ICD10:F32.9	Epizod depresyjny, nieokreślony
+T229	Condition 2679 2712	tłuszczaka w okolicy barku lewego
+N69	Reference T229 ICD10:D17.9	Tłuszczak, umiejscowienie nieokreślone
+T230	Date 2714 2718	2016
+T231	Treatment 2669 2678	usunięciu
+R122	Dat Arg1:T230 Arg2:T229	
+R123	Dat Arg1:T230 Arg2:T231	
+T232	Condition 2645 2653	oponiaka
+N70	Reference T232 ICD10:D32	Nowotwór niezłośliwy opon mózgowo-rdzeniowych
+T233	Date 2655 2659	2006
+T234	Treatment 2636 2644	operacji
+R124	Dat Arg1:T233 Arg2:T232	
+R125	Dat Arg1:T233 Arg2:T234	
+T235	Condition 2555 2571	Astma oskrzelowa
+N71	Reference T235 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T236	Condition 2544 2553	Bielactwo
+N72	Reference T236 ICD10:L80	Bielactwo
+T237	Condition 2492 2516	Choroba wrzodowa żołądka
+N73	Reference T237 ICD10:K25	Wrzód żołądka
+T238	Condition 2519 2530	dwunastnicy
+N74	Reference T238 ICD10:K26	Wrzód dwunastnicy
+T239	Condition 2446 2490	Niedoczynność tarczycy w przebiegu Hashimoto
+N75	Reference T239 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T240	Condition 2609 2616	laktozy
+A5	Source T240 Declared
+N76	Reference T240 ICD10:E73	
+T241	Condition 2573 2606	Podejrzenie nietolerancja glutenu
+A6	Source T241 Declared
+N77	Reference T241 ICD10:K90.4	Nieprawidłowe wchłanianie w wyniku nietolerancji, niesklasyfikowane gdzie indziej
+T242	Condition 2263 2283	trzech udarach mózgu
+N78	Reference T242 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T243	Condition 2297 2303	afazji
+N79	Reference T243 ICD10:R47.0	Dysfazja i afazja
+T244	Symptom 2306 2330	niedowładu lewostronnego
+N80	Reference T244 ICD10:G81	Porażenie połowicze
+T245	Date 2332 2339	06.2016
+T246	Date 2341 2348	07.2016
+T247	Date 2350 2357	08.2017
+R126	Dat Arg1:T245 Arg2:T244	
+R127	Dat Arg1:T246 Arg2:T244	
+R128	Dat Arg1:T247 Arg2:T244	
+R129	Dat Arg1:T247 Arg2:T243	
+R130	Dat Arg1:T247 Arg2:T242	
+T248	Treatment 2177 2187	Zamknięcie
+T249	Treatment 2192 2239	zestawem Occlutech Figulla Flex II PFO 23/25 mm
+T250	Condition 2188 2191	PFO
+N81	Reference T250 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T251	Date 2241 2252	12.04.2018r
+R131	Dat Arg1:T251 Arg2:T249	
+R132	Dat Arg1:T251 Arg2:T250	
+R133	Dat Arg1:T251 Arg2:T248	
+T252	Condition 2152 2176	Przetrwały otwór owalny.
+N82	Reference T252 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T253	Condition 1591 1635	Niedoczynność tarczycy w przebiegu Hashimoto
+N83	Reference T253 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T254	Condition 1637 1661	Choroba wrzodowa żołądka
+N84	Reference T254 ICD10:K25	Wrzód żołądka
+T255	Condition 1664 1675	dwunastnicy
+N85	Reference T255 ICD10:K26	Wrzód dwunastnicy
+T256	Condition 1689 1698	Bielactwo
+N86	Reference T256 ICD10:E70.3	Bielactwo
+T257	Condition 1700 1716	Astma oskrzelowa
+N87	Reference T257 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T258	Condition 1754 1761	laktozy
+A7	Source T258 Declared
+N88	Reference T258 ICD10:E73	Nietolerancja laktozy
+T259	Condition 1718 1751	Podejrzenie nietolerancja glutenu
+A8	Source T259 Declared
+N89	Reference T259 ICD10:K90.4	Nieprawidłowe wchłanianie w wyniku nietolerancji, niesklasyfikowane gdzie indziej
+T260	Condition 1763 1771	Depresja
+N90	Reference T260 ICD10:F32.9	Epizod depresyjny, nieokreślony
+T261	Condition 1790 1798	oponiaka
+N91	Reference T261 ICD10:D32	Nowotwór niezłośliwy opon mózgowo-rdzeniowych
+T262	Treatment 1781 1789	operacji
+T263	Date 1800 1804	2006
+R134	Dat Arg1:T263 Arg2:T261	
+R135	Dat Arg1:T263 Arg2:T262	
+T264	Condition 1824 1857	tłuszczaka w okolicy barku lewego
+A9	Status T264 Historical_Insignificant
+N92	Reference T264 ICD10:D17.9	Tłuszczak, umiejscowienie nieokreślone
+T265	Date 1859 1863	2016
+T266	Treatment 1814 1823	usunięciu
+R136	Dat Arg1:T265 Arg2:T264	
+A10	Status T266 Historical_Insignificant
+R137	Dat Arg1:T265 Arg2:T266	
+T267	Treatment 330 357	dalsza opieka w poradni POZ
+T268	Treatment 367 440	kontrola kardiologiczna, endokrynologiczna, psychiatryczna, neurologiczna
+T269	Treatment 2869 2896	dalsza opieka w poradni POZ
+T270	Treatment 2998 3044	okresowa ambulatoryjna kontrola kardiologiczna
+T271	Treatment 2897 2949	wyznaczono termin hospitalizacji w tutejszej Klinice
+T272	Date 2950 2967	w dn. 03.07.2018r
+R138	Dat Arg1:T272 Arg2:T271	

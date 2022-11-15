@@ -1,0 +1,161 @@
+T1	Treatment 332 380	Dalsza opieka w POZ oraz Poradni Kardiologicznej
+T2	Treatment 394 433	dalsza farmakoterapia przeciwzakrzepowa
+T3	Date 434 450	przez 3 miesiące
+T4	Treatment 460 517	kontynuacja leczenia do decyzji w Poradni Kardiologicznej
+T5	Date 518 531	za 3 miesiące
+T6	Investigation 536 628	Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T7	Behaviour 633 735	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T8	Investigation 740 796	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T9	Drug 835 842	Xarelto
+T10	Drug_dose 843 868	20mg 1 tabletka wieczorem
+R1	Drg Arg1:T9 Arg2:T10	
+R2	Dat Arg1:T3 Arg2:T2	
+R3	Dat Arg1:T5 Arg2:T4	
+T11	Condition 1101 1120	zatorowości płucnej
+N1	Reference T11 ICD10:I26.9	Zator płucny bez informacji o ostrym sercu płucnym
+T12	Condition 1123 1169	zakrzepicy żył głębokich kończyny lewej dolnej
+N2	Reference T12 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T13	Date 1171 1181	28/11/2018
+T14	Treatment 1187 1230	chirurgicznym usunięciu żyły odpiszczelowej
+N3	Reference T14 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T15	Condition 1240 1263	żylaków kończyn dolnych
+N4	Reference T15 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T16	Date 1265 1269	2017
+R4	Dat Arg1:T16 Arg2:T15	
+R5	Dat Arg1:T16 Arg2:T14	
+R6	Dat Arg1:T13 Arg2:T12	
+T17	Condition 1500 1523	Przetrwały otwór owalny
+N5	Reference T17 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T18	Condition 1533 1552	zatorowości płucnej
+N6	Reference T18 ICD10:I26.9	Zator płucny bez informacji o ostrym sercu płucnym
+T19	Condition 1555 1601	zakrzepicy żył głębokich kończyny lewej dolnej
+N7	Reference T19 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T20	Date 1603 1613	28/11/2018
+T21	Treatment 1624 1667	chirurgicznym usunięciu żyły odpiszczelowej
+N8	Reference T21 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T22	Condition 1677 1700	żylaków kończyn dolnych
+N9	Reference T22 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T23	Date 1702 1706	2017
+R7	Dat Arg1:T20 Arg2:T19	
+R8	Dat Arg1:T23 Arg2:T21	
+R9	Dat Arg1:T23 Arg2:T22	
+A1	Status T14 Historical_Insignificant
+A2	Status T15 Historical_Insignificant
+A3	Status T21 Historical_Insignificant
+A4	Status T22 Historical_Insignificant
+T24	Condition 1853 1872	zatorowości płucnej
+N10	Reference T24 ICD10:I26.9	Zator płucny bez informacji o ostrym sercu płucnym
+T25	Condition 1875 1921	zakrzepicy żył głębokich kończyny lewej dolnej
+N11	Reference T25 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+T26	Date 1923 1934	28/11/2018)
+R10	Dat Arg1:T13 Arg2:T11	
+R11	Dat Arg1:T20 Arg2:T18	
+T27	Treatment 1939 1982	chirurgicznym usunięciu żyły odpiszczelowej
+A5	Status T27 Historical_Insignificant
+N12	Reference T27 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T28	Condition 1992 2015	żylaków kończyn dolnych
+A6	Status T28 Historical_Insignificant
+N13	Reference T28 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T29	Date 2017 2021	2017
+T30	Condition 2052 2068	podejrzeniem ASD
+A7	Source T30 Declared
+N14	Reference T30 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T31	Investigation 2097 2100	TEE
+R12	Dat Arg1:T29 Arg2:T28	
+R13	Dat Arg1:T29 Arg2:T27	
+R14	Dat Arg1:T26 Arg2:T24	
+R15	Dat Arg1:T26 Arg2:T25	
+T32	Symptom 2148 2190	zmniejszonej tolerancji wysiłku fizycznego
+T33	Date 2191 2201	od 10/2018
+T34	Symptom 2222 2284	podwyższone wartości ciśnienia tętniczego w pomiarach domowych
+T35	Symptom 2292 2305	160/60-70mmHg
+R16	Dat Arg1:T33 Arg2:T32	
+T36	Negation 2308 2314	Neguje
+T37	Symptom 2315 2327	zasłabnięcia
+T38	Symptom 2329 2337	omdlenia
+N15	Reference T38 ICD10:R55	Omdlenie i zapaść
+T39	Symptom 2339 2352	zawroty głowy
+N16	Reference T39 ICD10:R42	Zawroty głowy i odurzenie
+T40	Negation 2354 2360	neguje
+T41	Symptom 2361 2385	bóle w klatce piersiowej
+N17	Reference T41 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T42	Symptom 2387 2402	kołatania serca
+N18	Reference T42 ICD10:R00.2	Kołatanie serca
+T43	Symptom 2404 2423	Innych dolegliwości
+T44	Negation 2424 2435	nie zgłasza
+T45	Date 2437 2450	3-4 lata temu
+T46	Drug 2468 2472	Klen
+T47	Drug_dose 2473 2477	p.o.
+T48	Drug 2483 2494	testosteron
+T50	Date 2502 2528	przed epizodem zatorowości
+T51	Drug 2537 2569	suplementy białkowe i witaminowe
+R17	Neg Arg1:T36 Arg2:T37	
+R18	Neg Arg1:T36 Arg2:T38	
+R19	Neg Arg1:T36 Arg2:T39	
+R20	Neg Arg1:T40 Arg2:T41	
+R21	Neg Arg1:T40 Arg2:T42	
+R22	Neg Arg1:T44 Arg2:T43	
+R23	Dat Arg1:T45 Arg2:T46	
+R24	Drg Arg1:T46 Arg2:T47	
+R26	Dat Arg1:T45 Arg2:T48	
+T49	Drug_dose 2495 2499	i.m.
+R25	Drg Arg1:T48 Arg2:T49	
+R27	Dat Arg1:T50 Arg2:T51	
+T52	Treatment 2618 2637	usunięcie migdałków
+T53	Date 2638 2652	w dzieciństwie
+A8	Status T52 Historical_Insignificant
+R28	Dat Arg1:T53 Arg2:T52	
+T54	Treatment 2654 2678	Leczenie przewlekłe: POZ
+T55	Condition 2707 2710	WZW
+N19	Reference T55 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T56	Condition 2719 2728	borelioza
+N20	Reference T56 ICD10:A69.2	Choroba z Lyme
+T57	Condition 2736 2744	gruźlica
+N21	Reference T57 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T58	Condition 2752 2756	odra
+N22	Reference T58 ICD10:B05	Odra
+T59	Treatment 2762 2772	szczepiony
+T60	Negation 2711 2716	( - )
+T61	Negation 2729 2734	( - )
+T62	Negation 2745 2750	( - )
+T63	Negation 2759 2760	-
+R29	Neg Arg1:T60 Arg2:T55	
+R30	Neg Arg1:T61 Arg2:T56	
+R31	Neg Arg1:T62 Arg2:T57	
+R32	Neg Arg1:T63 Arg2:T58	
+T64	Condition 2808 2818	udar mózgu
+N23	Reference T64 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T65	Date 2819 2833	w wieku 67 lat
+R33	Dat Arg1:T65 Arg2:T64	
+A9	Status T64 Family
+T66	Condition 2844 2862	żylaki kk. dolnych
+A10	Status T66 Family
+N24	Reference T66 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T67	Condition 2872 2878	glejak
+A11	Status T67 Family
+N25	Reference T67 ICD10:C71.9	Mózg, umiejscowienie nieokreślone
+T68	Behaviour 2880 2895	Palenie tytoniu
+N26	Reference T68 ICD10:Z72.0	Używanie tytoniu
+T69	Negation 2897 2903	neguje
+R34	Dat Arg1:T69 Arg2:T68	
+T70	Behaviour 2905 2916	Inne używki
+T71	Negation 2918 2924	neguje
+T72	Condition 2926 2935	Uczulenia
+N27	Reference T72 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T73	Negation 2937 2943	neguje
+T74	Behaviour 2961 2987	warunki mieszkaniowe dobre
+T75	Behaviour 2989 3000	mieszka sam
+T76	Behaviour 3002 3015	Zawód: leśnik
+T77	Drug 3023 3030	Xarelto
+T78	Drug_dose 3031 3046	20mg 1 tabl. W.
+T79	Drug 3047 3050	IPP
+T80	Drug_dose 3051 3071	20mg 1 tabletka rano
+T81	Investigation 3087 3097	Echo serca
+T82	Investigation 3099 3102	TEE
+T83	Investigation 3104 3119	Próba Wysiłkowa
+T84	Investigation 3121 3125	ABPM
+R35	Neg Arg1:T71 Arg2:T70	
+R36	Neg Arg1:T73 Arg2:T72	
+R37	Drg Arg1:T77 Arg2:T78	
+R38	Drg Arg1:T79 Arg2:T80	
+N28	Reference T52 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych

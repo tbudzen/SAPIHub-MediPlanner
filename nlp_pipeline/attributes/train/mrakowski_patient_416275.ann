@@ -1,0 +1,124 @@
+T1	Condition 439 460	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 471 523	zakrzepica żył powierzchownych lewej kończyny dolnej
+N2	Reference T2 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+T3	Date 525 535	10/11.2018
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Symptom 538 558	Migrenowe bóle głowy
+N3	Reference T4 ICD10:G43.9	Migrena, nieokreślona
+T5	Condition 572 604	Przepuklina rozworu przełykowego
+N4	Reference T5 ICD10:K44	Przepuklina przeponowa
+T6	Condition 606 649	Przewlekłe zapalenie błony śluzowej żołądka
+N5	Reference T6 ICD10:K29.5	Przewlekłe zapalenie żołądka, nieokreślone
+T7	Condition 651 665	Otyłość II st.
+N6	Reference T7 ICD10:E66	Otyłość
+T8	Drug 785 792	Helicid
+T9	Drug 794 801	Gasprid
+T10	Drug 803 810	Clexane
+T11	Drug 812 819	Amlopin
+T12	Treatment 930 952	kontrola u lekarza POZ
+T13	Treatment 955 1016	kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych
+T14	Treatment 1040 1072	kontrola w Poradni Onkologicznej
+T15	Investigation_result 1401 1454	skoków ciśnienia w pomiarach domowych do 153/100 mmHg
+N7	Reference T15 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T16	Symptom 1472 1514	silnymi bólami głowy w okolicy potylicznej
+N8	Reference T16 ICD10:R51	Ból głowy
+T17	Date 1518 1528	01/02.2019
+R2	Dat Arg1:T17 Arg2:T16	
+R3	Dat Arg1:T17 Arg2:T15	
+T18	Symptom 1569 1589	Migrenowe bóle głowy
+N9	Reference T18 ICD10:G43.9	Migrena, nieokreślona
+T19	Condition 1615 1647	zakrzepicy kończyny dolnej lewej
+N10	Reference T19 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+T20	Date 1661 1671	10/11.2018
+R4	Dat Arg1:T20 Arg2:T19	
+T21	Condition 1673 1705	Przepuklina rozworu przełykowego
+N11	Reference T21 ICD10:K44	Przepuklina przeponowa
+T22	Condition 1707 1750	Przewlekłe zapalenie błony śluzowej żołądka
+N12	Reference T22 ICD10:K29.5	Przewlekłe zapalenie żołądka, nieokreślone
+T23	Negation 1752 1758	Neguje
+T24	Symptom 1760 1772	zasłabnięcia
+T25	Symptom 1774 1782	omdlenia
+N13	Reference T25 ICD10:R55	Omdlenie i zapaść
+T26	Symptom 1784 1794	krwawienia
+T27	Symptom 1796 1809	czarne stolce
+N14	Reference T27 ICD10:K92.1	Stolce smołowate
+T28	Symptom 1811 1827	brunatne wymioty
+N15	Reference T28 ICD10:K92.0	Wymioty krwawe
+T29	Condition 1829 1845	chorobę wrzodową
+N16	Reference T29 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T30	Symptom 1847 1861	duszność nocną
+N17	Reference T30 ICD10:R06.0	Duszność
+T31	Symptom 1863 1878	obrzęki podudzi
+T32	Symptom 1880 1904	bóle w klatce piersiowej
+N19	Reference T32 ICD10:R07	Ból gardła i w klatce piersiowej
+T33	Symptom 1906 1921	kołatania serca
+N20	Reference T33 ICD10:R00.2	Kołatanie serca
+R5	Neg Arg1:T23 Arg2:T33	
+R6	Neg Arg1:T23 Arg2:T32	
+R7	Neg Arg1:T23 Arg2:T31	
+R8	Neg Arg1:T23 Arg2:T30	
+R9	Neg Arg1:T23 Arg2:T29	
+R10	Neg Arg1:T23 Arg2:T28	
+R11	Neg Arg1:T23 Arg2:T27	
+R12	Neg Arg1:T23 Arg2:T26	
+R13	Neg Arg1:T23 Arg2:T25	
+R14	Neg Arg1:T23 Arg2:T24	
+T34	Treatment 1924 1941	Przebyte operacje
+T35	Negation 1943 1949	neguje
+R15	Neg Arg1:T35 Arg2:T34	
+T36	Behaviour 1950 1965	Palenie tytoniu
+T37	Negation 1967 1973	neguje
+R16	Neg Arg1:T37 Arg2:T36	
+T38	Behaviour 1974 1985	Inne używki
+T39	Negation 1987 1993	neguje
+R17	Neg Arg1:T39 Arg2:T38	
+T40	Condition 1994 2012	Uczulenia: na leki
+T41	Negation 2013 2019	neguje
+R18	Neg Arg1:T41 Arg2:T40	
+T42	Condition 2021 2041	uczulenie na pokarmy
+T47	Condition 2107 2110	WZW
+N22	Reference T47 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T48	Condition 2117 2126	borelioza
+N23	Reference T48 ICD10:A69.2	Choroba z Lyme
+T49	Condition 2132 2135	tbc
+T50	Condition 2141 2145	odra
+N25	Reference T50 ICD10:B05	Odra
+T51	Condition 2151 2165	kontakt z odrą
+N26	Reference T51 ICD10:B05	Odra
+T52	Negation 2167 2168	-
+R19	Neg Arg1:T52 Arg2:T51	
+T53	Negation 2147 2148	-
+R20	Neg Arg1:T53 Arg2:T50	
+T54	Negation 2137 2138	-
+R21	Neg Arg1:T54 Arg2:T49	
+T55	Negation 2128 2129	-
+R22	Neg Arg1:T55 Arg2:T48	
+T56	Negation 2112 2113	-
+R23	Neg Arg1:T56 Arg2:T47	
+T57	Behaviour 2186 2212	warunki mieszkaniowe dobre
+T58	Drug 2246 2253	Helicid
+T59	Drug 2266 2273	Gastric
+T60	Drug_dose 2254 2265	40 mg 1-0-0
+R24	Drg Arg1:T58 Arg2:T60	
+T61	Drug_dose 2274 2285	10 mg 1-0-0
+R25	Drg Arg1:T59 Arg2:T61	
+T62	Investigation 2347 2368	badania laboratoryjne
+T63	Investigation 2370 2374	ECHO
+T64	Investigation 2376 2394	EKG metodą Holtera
+T65	Investigation 2396 2400	ABPM
+T66	Investigation 2402 2417	USG j,brzusznej
+A1	Source T19 Declared
+N30	Reference T24 ICD10:R55	Omdlenie i zapaść
+N21	Reference T36 ICD10:Z72.0	Używanie tytoniu
+N28	Reference T40 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+N29	Reference T42 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T43	Condition 1074 1107	zmiany w krążkach międzykręgowych
+N31	Reference T43 ICD10:M51	Inne choroby krążka międzykręgowego
+T44	Condition 1142 1169	zakrzepica żył powierzchown
+N32	Reference T44 ICD10:I80.0	Zapalenie i zakrzepowe zapalenie żył powierzchownych kończyn dolnych
+N27	Reference T26 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N18	Reference T31 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N33	Reference T38 ICD10:Z72	Problemy związane ze stylem życia
+N24	Reference T49 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+A2	Status T2 Historical_Insignificant

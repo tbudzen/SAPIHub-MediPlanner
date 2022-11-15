@@ -1,0 +1,63 @@
+T1	Behaviour 438 533	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T2	Investigation 546 563	kontrola lipidogr
+T3	Condition 781 802	Nadciśnienie tętnicze
+T4	Condition 807 819	Dyslipidemia
+T5	Condition 964 987	nadciśnieniem tętniczym
+T6	Condition 989 1017	chorobą wrzodową dwunastnicy
+dka i jelita czczego
+T7	Investigation 1044 1065	RTG klatki piersiowej
+T8	Investigation_result 1066 1084	poszerzeniem aorty
+T9	Date 1086 1093	10/2018
+T10	Investigation 1155 1158	TEE
+T11	Negation 1207 1213	Neguje
+T12	Symptom 1214 1226	zasłabnięcia
+T13	Symptom 1228 1237	duszności
+T14	Symptom 1239 1270	typowe bóle w klatce piersiowej
+T15	Negation 1292 1298	neguje
+T16	Negation 1330 1335	( - )
+T17	Negation 1348 1353	( - )
+T18	Negation 1364 1367	(-)
+T19	Treatment 1272 1289	Przebyte operacje
+T20	Condition 1326 1329	WZW
+troby
+T21	Condition 1338 1347	borelioza
+T22	Condition 1355 1363	gruźlica
+T23	Negation 1385 1388	nie
+T24	Condition 1368 1383	Wywiad rodzinny
+T25	Behaviour 1389 1409	Palenie tytoniu: tak
+T26	Behaviour 1421 1456	Inne używki: alkohol - okazjonalnie
+T27	Condition 1457 1466	Uczulenia
+T28	Negation 1468 1474	neguje
+T29	Behaviour 1491 1517	warunki mieszkaniowe dobre
+T30	Drug 1543 1548	Axtil
+T31	Drug_dose 1549 1552	5mg
+T32	Drug 1554 1562	Bisocard
+T33	Drug_dose 1563 1569	1,25mg
+T34	Date 1411 1420	od 17 lat
+N1	Reference T3 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N2	Reference T4 ICD10:E78.5	Hiperlipidemia, nieokreÅlona
+N3	Reference T5 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N4	Reference T6 ICD10:K26	WrzÃ³d dwunastnicy
+N5	Reference T12 ICD10:R55	Omdlenie i zapaÅÄ
+N6	Reference T13 ICD10:R06.0	DusznoÅÄ
+N7	Reference T14 ICD10:R07.3	
+N8	Reference T19 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N9	Reference T20 ICD10:B19	NieokreÅlone wirusowe zapalenie wÄtroby
+N10	Reference T21 ICD10:A69.2	Choroba z Lyme
+N11	Reference T22 ICD10:A15	GruÅºlica ukÅadu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N12	Reference T25 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N13	Reference T26 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N14	Reference T27 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+R1	Inv Arg1:T7 Arg2:T8
+R19	Neg Arg1:T16 Arg2:T20
+R32	Neg Arg1:T17 Arg2:T21
+R4	Dat Arg1:T9 Arg2:T7
+R45	Neg Arg1:T18 Arg2:T22
+R46	Neg Arg1:T18 Arg2:T24
+R5	Neg Arg1:T11 Arg2:T12
+R58	Neg Arg1:T23 Arg2:T24
+R60	Neg Arg1:T23 Arg2:T25
+R71	Neg Arg1:T28 Arg2:T27
+R79	Drg Arg1:T30 Arg2:T31
+R89	Dat Arg1:T34 Arg2:T26
+A1	Status T24 Family

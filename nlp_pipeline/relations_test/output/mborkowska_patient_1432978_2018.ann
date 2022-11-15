@@ -1,0 +1,23 @@
+T1	Drug 1385 1395	Polfenon  
+T2	Drug_dose 1395 1402	3x150mg
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Condition 1134 1154	zaburzeń rytmu serca
+N1	Reference T3 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T4	Drug 920 928	Polfenon
+T5	Drug 795 800	Asmag
+T6	Behaviour 585 674	Przeciwwskazany intensywny wysiłek fizyczny do czasu ponownej konsultacji kardiologicznej
+T7	Drug 365 373	Metocard
+T8	Drug_dose 374 416	2x dziennie po 25mg (1/2 tabletki po 50mg)
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 419 424	Asmag
+T10	Drug_dose 425 469	2x dziennie po 20mg (2x dziennie 1 tabletka)
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Treatment 473 501	Wizyta w Klinice Kardiologii
+T12	Date 502 534	19 marca 2018r. o godzinie 10:30
+T13	Investigation 552 580	rejestratora holterowskiego.
+R4	Dat Arg1:T12 Arg2:T11	
+R5	Dat Arg1:T12 Arg2:T13	
+R1	Drg Arg1:T7 Arg2:T8
+R4	Drg Arg1:T9 Arg2:T10
+R5	Dat Arg1:T12 Arg2:T6
+R6	Dat Arg1:T12 Arg2:T13

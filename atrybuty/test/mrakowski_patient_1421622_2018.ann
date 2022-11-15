@@ -1,0 +1,78 @@
+T1	Condition 449 505	Drożny otwór owalny z niewielkim przeciekiem lewo prawym
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Condition 507 577	Wada wrodzono pod postacią zwężenia podzastawkowego zastawki aortalnej
+N2	Reference T2 ICD10:Q24.4	Wrodzone zwężenie podzastawkowe drogi odpływu z lewej komory
+T3	Condition 580 613	Pojedyncze pobudzenia nadkomorowe
+N3	Reference T3 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T4	Condition 615 636	Nadciśnienie tętnicze
+N4	Reference T4 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T5	Condition 638 658	Hipercholesterolemia
+N5	Reference T5 ICD10:E78.0	Czysta hipercholesterolemia
+T6	Drug 779 786	Polsatr
+T7	Drug 788 794	Ebivol
+T8	Treatment 903 968	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T9	Behaviour 971 1011	Dieta lekkostrawna , niskocholesterolowa
+T10	Investigation 1015 1098	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T11	Investigation 1101 1149	Systematyczna kontrola ciśnienia tętniczego krwi
+T12	Treatment 1152 1193	Wskazane systematyczne przyjmowanie leków
+T13	Drug 1200 1207	Polsart
+T14	Drug_dose 1208 1225	80 mg 1 x dz rano
+R1	Drg Arg1:T13 Arg2:T14	
+T15	Drug 1228 1234	Ebivol
+T16	Drug_dose 1235 1251	5 mg 1 x dz rano
+R2	Drg Arg1:T15 Arg2:T16	
+T17	Investigation 1647 1664	badań kontrolnych
+T18	Negation 1668 1674	Neguje
+T19	Symptom 1675 1687	zasłabnięcia
+N6	Reference T19 ICD10:R55	Omdlenie i zapaść
+T20	Negation 1690 1696	neguje
+T21	Symptom 1697 1721	bóle w klatce piersiowej
+N7	Reference T21 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+R3	Neg Arg1:T20 Arg2:T21	
+R4	Neg Arg1:T18 Arg2:T19	
+T22	Condition 1737 1807	Wada wrodzono pod postacią zwężenia podzastawkowego zastawki aortalnej
+N8	Reference T22 ICD10:Q24.4	Wrodzone zwężenie podzastawkowe drogi odpływu z lewej komory
+T23	Condition 1809 1830	Nadciśnienie tętnicze
+N9	Reference T23 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T24	Treatment 1834 1851	Przebyte operacje
+T25	Treatment 1862 1896	usunięciu migdałków podniebiennych
+T26	Date 1897 1911	w dzieciństwie
+R5	Dat Arg1:T26 Arg2:T25	
+T27	Treatment 1913 1932	Leczenie przewlekłe
+T28	Negation 1935 1939	brak
+R6	Neg Arg1:T28 Arg2:T27	
+T29	Condition 1968 1971	WZW
+N10	Reference T29 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T30	Negation 1974 1975	-
+R7	Neg Arg1:T30 Arg2:T29	
+T31	Condition 1981 1990	borelioza
+N11	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Negation 1993 1994	-
+R8	Neg Arg1:T32 Arg2:T31	
+T33	Condition 1999 2018	wywiadzie rodzinnym
+T34	Negation 2021 2025	brak
+R9	Neg Arg1:T34 Arg2:T33	
+T35	Behaviour 2027 2042	Palenie tytoniu
+N12	Reference T35 ICD10:Z72.0	Używanie tytoniu
+T36	Negation 2044 2052	nie pali
+T37	Date 2053 2065	od 3 tygodni
+R10	Neg Arg1:T36 Arg2:T35	
+R11	Dat Arg1:T37 Arg2:T35	
+T38	Behaviour 2067 2078	Inne używki
+T39	Negation 2080 2083	nie
+R12	Neg Arg1:T39 Arg2:T38	
+T40	Condition 2084 2093	Uczulenia
+N13	Reference T40 ICD10:T78.4	Alergia, nieokreślona
+T41	Negation 2095 2101	neguje
+R13	Neg Arg1:T41 Arg2:T40	
+T42	Behaviour 2118 2144	warunki mieszkaniowe dobre
+T43	Drug 2169 2176	Polsart
+T44	Drug_dose 2177 2194	80 mg 1 x dz rano
+R14	Drg Arg1:T43 Arg2:T44	
+T45	Drug 2197 2203	Ebivol
+T46	Drug_dose 2204 2225	5 mg 1 x dz wieczorem
+R15	Drg Arg1:T45 Arg2:T46	
+T47	Investigation 2243 2253	Echo serca
+T48	Investigation 2256 2271	Holter EKG i RR
+T49	Investigation 2275 2290	Próba Wysiłkowa
+N14	Reference T38 ICD10:Z72	Problemy związane ze stylem życia

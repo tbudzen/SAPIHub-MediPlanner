@@ -1,0 +1,81 @@
+T1	Investigation 2761 2771	echo serca
+T2	Investigation 2773 2776	TET
+T3	Investigation 2778 2782	ABPM
+T4	Investigation 2784 2794	Holter ekg
+T5	Investigation 2796 2814	rtg kl. piersiowej
+T6	Drug 2618 2634	Prestilol 5+5 mg
+T7	Drug 2654 2662	Bellapan
+T8	Drug 2711 2733	beta-adrenolityk z IKA
+T9	Negation 2531 2537	neguje
+T10	Behaviour 2512 2529	Uzależnienie inne
+T11	Behaviour 2489 2510	Alkohol: okazjonalnie
+N1	Reference T11 ICD10:Z72.1	Używanie alkoholu
+T12	Behaviour 2447 2488	Nikotynizm: do 28 roku życia 10 paczkolat
+A1	Status T12 Historical_Insignificant
+T13	Negation 2439 2445	neguje
+T14	Condition 2430 2437	Alergie
+N3	Reference T14 ICD10:T78.4	Alergia, nieokreślona
+R1	Neg Arg1:T13 Arg2:T14	
+T15	Condition 2345 2352	(3 x MI
+A2	Status T15 Family
+N4	Reference T15 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T16	Condition 2382 2399	zgon w czasie snu
+A3	Status T16 Family
+N5	Reference T16 ICD10:F10.2	
+T17	Condition 2301 2316	Wywiad rodzinny
+A4	Status T17 Family
+T18	Negation 2293 2299	neguje
+T19	Treatment 2274 2291	Przebyte operacje
+R2	Neg Arg1:T18 Arg2:T19	
+T20	Condition 2249 2270	HA - pierwotne/wtórne
+N6	Reference T20 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T21	Symptom 1489 1503	zawrotów głowy
+N7	Reference T21 ICD10:R42	
+T22	Symptom 1506 1564	uczucia "ciepłoty" kończyny górnej lewej w okolicach barku
+T23	Date 1578 1583	21.00
+R3	Dat Arg1:T23 Arg2:T22	
+R4	Dat Arg1:T23 Arg2:T21	
+T24	Symptom 1676 1688	ból w klatce
+N8	Reference T24 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T25	Symptom 1690 1717	duszność w czasie incydentu
+N9	Reference T25 ICD10:R06.0	Duszność
+T26	Negation 1669 1675	Neguje
+R5	Neg Arg1:T26 Arg2:T24	
+R6	Neg Arg1:T26 Arg2:T25	
+T27	Investigation 1721 1724	ekg
+T28	Investigation_result 1726 1738	oś pośrednia
+R7	Inv Arg1:T27 Arg2:T28	
+T29	Investigation_result 1740 1750	RZM 75/min
+T30	Investigation_result 1752 1817	ślad uniesienia odc. ST w odp. V2-V3 (wysokie odejście punktu J?)
+T31	Investigation_result 1819 1854	bez zaburzeń rytmu lub przewodzenia
+R8	Inv Arg1:T27 Arg2:T29	
+R9	Inv Arg1:T27 Arg2:T30	
+R10	Inv Arg1:T27 Arg2:T31	
+T32	Symptom 1953 1974	wielokrotnie omdlenia
+N10	Reference T32 ICD10:R55	Omdlenie i zapaść
+A5	Status T32 Historical_Insignificant
+T33	Date 1987 1996	do 28r.z.
+R11	Dat Arg1:T33 Arg2:T32	
+T34	Investigation 2120 2123	ILR
+T35	Investigation_result 2137 2181	zahamowania zatokowe 3.2 s, w nocy do 9.9 s.
+R12	Inv Arg1:T34 Arg2:T35	
+T36	Investigation_result 2183 2199	EPS kilkukrotnie
+R13	Inv Arg1:T34 Arg2:T36	
+T37	Drug 1165 1172	Polpril
+T38	Drug_dose 1173 1190	5 mg 1 tabl. rano
+R14	Drg Arg1:T37 Arg2:T38	
+T39	Drug 1136 1144	Bisocard
+T40	Drug_dose 1145 1164	2,5 mg 1 tabl. rano
+R15	Drg Arg1:T39 Arg2:T40	
+T41	Condition 449 466;468 500	Omdlenia złośliwe Postać kardiodepresyjna VASIS 2B
+N11	Reference T41 ICD10:R55	Omdlenie i zapaść
+T42	Investigation_result 514 611	Pauzy w mechanizmie zahamowania zatokowego (w spoczynku max 2,6s, po wysiłku fizycznym max do 4 s
+T43	Condition 626 649	niedoczynności tarczycy
+N12	Reference T43 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T44	Treatment 884 933	rozważenia implantacji kardiostymulatora na stałe
+T45	Investigation 943 969	kontrola hormonów tarczycy
+T46	Behaviour 1031 1050	redukcja masy ciała
+T47	Behaviour 1051 1070	prawidłowe żywienie
+T48	Behaviour 1073 1105	systematyczna aktywność fizyczna
+R16	Neg Arg1:T9 Arg2:T10	
+N2	Reference T12 ICD10:T65.2	Tytoń i nikotyna

@@ -1,0 +1,121 @@
+T1	Condition 448 469	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 471 494	Hiperlipidemia mieszana
+N2	Reference T2 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T3	Condition 496 503	Otyłość
+N3	Reference T3 ICD10:E66	Otyłość
+T4	Treatment 513 540	cholecystektomii klasycznej
+A1	Status T4 Historical_Insignificant
+T5	Condition 550 578	kamicy pęcherzyka żółciowego
+N4	Reference T5 ICD10:K80	Kamica żółciowa
+A2	Status T5 Historical_Insignificant
+T6	Date 580 592	25 lat temu)
+R1	Dat Arg1:T6 Arg2:T5	
+R2	Dat Arg1:T6 Arg2:T4	
+T7	Condition 2110 2116	kamicy
+A3	Status T7 Historical_Insignificant
+N5	Reference T7 ICD10:K80	Kamica żółciowa
+T8	Treatment 2060 2086	cholecystektomia klasyczna
+A4	Status T8 Historical_Insignificant
+T9	Date 2087 2099	(25 lat temu
+R3	Dat Arg1:T9 Arg2:T8	
+R4	Dat Arg1:T9 Arg2:T7	
+T10	Treatment 724 744	opieka w poradni POZ
+T11	Treatment 760 783	kontrola kardiologiczna
+T12	Treatment 801 885	poszerzona, ambulatoryjna diagnostyka neurologiczna i laryngologiczna zawrotów głowy
+T13	Investigation 902 931	kontrola ciśnienia tętniczego
+T14	Investigation 947 967	kontrola lipidogramu
+T15	Date 978 990	za 6 tygodni
+R5	Dat Arg1:T15 Arg2:T14	
+T16	Investigation 999 1043	wykonanie kontrolnego badania ogólnego moczu
+T17	Date 1044 1053	za 10 dni
+R6	Dat Arg1:T17 Arg2:T16	
+T18	Behaviour 1140 1172	dieta DASH i niskocholesterolowa
+T19	Behaviour 1180 1199	redukcja masy ciała
+T20	Behaviour 1207 1252	stały, umiarkowany, aerobowy wysiłek fizyczny
+T21	Drug 1297 1304	Tritace
+T22	Drug 1332 1338	Lercan
+T23	Drug 1370 1382	Tertensif SR
+T24	Drug 1404 1410	Atoris
+T25	Drug_dose 1305 1323	10 mg 1 tabl. rano
+R7	Drg Arg1:T21 Arg2:T25	
+T26	Drug_dose 1339 1362	10 mg 1 tabl. wieczorem
+R8	Drg Arg1:T22 Arg2:T26	
+T27	Drug_dose 1383 1395	1 tabl. rano
+R9	Drg Arg1:T23 Arg2:T27	
+T28	Drug_dose 1411 1434	40 mg 1 tabl. wieczorem
+R10	Drg Arg1:T24 Arg2:T28	
+T29	Condition 1635 1637	HA
+N6	Reference T29 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T30	Date 1638 1648	od 10 lat,
+R11	Dat Arg1:T30 Arg2:T29	
+T31	Investigation_result 1649 1668	labilne wartości BP
+T32	Date 1669 1691	października 2017 roku
+R12	Dat Arg1:T32 Arg2:T31	
+T33	Investigation_result 1737 1753	max. 180/100mmHg
+T34	Symptom 1780 1792	zwroty głowy
+N7	Reference T34 ICD10:R42	Zawroty głowy i odurzenie
+T35	Date 1769 1779	01.01.2018
+R13	Dat Arg1:T35 Arg2:T34	
+T36	Symptom 1824 1838	bólami brzucha
+N8	Reference T36 ICD10:R10.4	Inny i nieokreślony ból brzucha
+T37	Symptom 1851 1862	nudnościami
+N9	Reference T37 ICD10:R11	Nudności i wymioty
+T38	Symptom 1840 1848	biegunką
+N10	Reference T38 ICD10:K59.1	Biegunka czynnościowa
+T39	Symptom 1956 1984	zawroty głowy utrzymują się.
+N11	Reference T39 ICD10:R42	Zawroty głowy i odurzenie
+T40	Condition 2021 2039	przewlekłe choroby
+T41	Negation 2009 2015	neguje
+R14	Neg Arg1:T41 Arg2:T40	
+T42	Negation 2135 2148	bez znaczenia
+T43	Negation 2159 2165	neguje
+T44	Negation 2179 2187	neguje  
+T45	Negation 2197 2203	neguje
+T46	Condition 2150 2157	Alergie
+N12	Reference T46 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R15	Neg Arg1:T43 Arg2:T46	
+T47	Behaviour 2167 2177	Nikotynizm
+N13	Reference T47 ICD10:Z72.0	Używanie tytoniu
+R16	Neg Arg1:T44 Arg2:T47	
+T48	Behaviour 2188 2195	Alkohol
+N14	Reference T48 ICD10:Z72.1	Używanie alkoholu
+R17	Neg Arg1:T45 Arg2:T48	
+T49	Negation 2224 2230	neguje
+T50	Behaviour 2205 2222	Uzależnienie inne
+N15	Reference T50 ICD10:Z72	Problemy związane ze stylem życia
+R18	Neg Arg1:T49 Arg2:T50	
+T51	Drug 2263 2270	Alortia
+T52	Drug_dose 2271 2295	50mg + 5 mg 1 tabl. rano
+R19	Drg Arg1:T51 Arg2:T52	
+T53	Drug 2297 2305	Vicebrol
+T54	Drug_dose 2306 2334	5mg 1 tabl. rano i wieczorem
+R20	Drg Arg1:T53 Arg2:T54	
+T55	Drug 2336 2346	Memotropil
+T56	Drug_dose 2347 2418	1200 mg 1 tabl. rano i w południe do 14 dni wstecz (przyjmowała 14 dni)
+R21	Drg Arg1:T55 Arg2:T56	
+T57	Investigation 2447 2457	echo serca
+T58	Investigation 2459 2462	TET
+T59	Investigation 2464 2468	ABPM
+T60	Investigation 2470 2481	Holter ekg,
+T61	Investigation 2482 2500	rtg kl. piersiowej
+R1	Dat Arg1:T6 Arg2:T5
+R14	Dat Arg1:T15 Arg2:T14
+R2	Dat Arg1:T6 Arg2:T4
+R26	Dat Arg1:T17 Arg2:T16
+R29	Drg Arg1:T23 Arg2:T27
+R3	Drg Arg1:T21 Arg2:T25
+R32	Dat Arg1:T30 Arg2:T29
+R34	Dat Arg1:T32 Arg2:T29
+R35	Dat Arg1:T35 Arg2:T34
+R40	Neg Arg1:T41 Arg2:T39
+R42	Neg Arg1:T42 Arg2:T7
+R47	Neg Arg1:T43 Arg2:T46
+R52	Neg Arg1:T44 Arg2:T47
+R57	Dat Arg1:T9 Arg2:T8
+R58	Neg Arg1:T45 Arg2:T48
+R6	Drg Arg1:T22 Arg2:T26
+R67	Neg Arg1:T49 Arg2:T50
+R74	Drg Arg1:T51 Arg2:T52
+R78	Drg Arg1:T53 Arg2:T54
+R82	Drg Arg1:T55 Arg2:T56

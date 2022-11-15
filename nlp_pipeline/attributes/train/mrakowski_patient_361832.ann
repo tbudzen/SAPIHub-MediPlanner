@@ -1,0 +1,81 @@
+T1	Treatment 331 358	dalsza opieka w poradni POZ
+T2	Treatment 361 393	okresowa kontrola kardiologiczna
+T3	Investigation 395 434	codzienna kontrola ciśnienia tętniczego
+T4	Investigation 437 492	okresowa kontrolą morfologii, lipidogramu, elektrolitów
+T5	Behaviour 494 519	dieta niskocholesterolowa
+T6	Treatment 522 550	regularne przyjmowanie leków
+T7	Condition 783 816	Napadowe trzepotanie przedsionków
+N1	Reference T7 ICD10:I48	Migotanie i trzepotanie przedsionków
+T8	Condition 818 829	Napadowe AF
+N2	Reference T8 ICD10:I48	Migotanie i trzepotanie przedsionków
+T9	Investigation 843 855	CHA DS -VASc
+T10	Investigation_result 856 864	3 punkty
+R1	Inv Arg1:T9 Arg2:T10	
+T11	Investigation 866 873	HASBLED
+T12	Investigation_result 874 881	1 punkt
+R2	Inv Arg1:T11 Arg2:T12	
+T13	Condition 884 905	Nadciśnienie tętnicze
+N3	Reference T13 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T14	Condition 915 959	Łagodna niedomykalność zastawki trójdzielnej
+N4	Reference T14 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T15	Condition 961 980	Polip trzonu macicy
+N5	Reference T15 ICD10:N84.0	Polip trzonu macicy
+T16	Symptom 1148 1203	uczucia szybkiego, niemiarowego bicia i kołatania serca
+N6	Reference T16 ICD10:R00.2	Kołatanie serca
+T17	Investigation 1273 1276	EKG
+T18	Investigation_result 1289 1342	trzepotanie przedsionków z częstością QRS 160-170/min
+N7	Reference T18 ICD10:I48	Migotanie i trzepotanie przedsionków
+R3	Inv Arg1:T17 Arg2:T18	
+T19	Symptom 1371 1403	niewielką dusznością spoczynkową
+N8	Reference T19 ICD10:R06.0	Duszność
+T20	Date 1417 1432	od ok 2014 roku
+T21	Condition 1433 1444	napadowe AF
+N9	Reference T21 ICD10:I48	Migotanie i trzepotanie przedsionków
+R4	Dat Arg1:T20 Arg2:T21	
+T22	Symptom 1556 1591	sporadyczne epizody kołatania serca
+N10	Reference T22 ICD10:R00.2	Kołatanie serca
+T23	Date 1593 1609	Od stycznia 2019
+T24	Symptom 1621 1662	częściej powtarzające się kołatania serca
+N11	Reference T24 ICD10:R00.2	Kołatanie serca
+T25	Symptom 1683 1708	ucisk w klatce piersiowej
+N12	Reference T25 ICD10:R07.3	Inne bóle w klatce piersiowej
+R5	Dat Arg1:T23 Arg2:T24	
+R6	Dat Arg1:T23 Arg2:T25	
+T26	Symptom 1730 1740	męczliwość
+N13	Reference T26 ICD10:R53	Złe samopoczucie i zmęczenie
+T27	Date 1742 1759	W lutym 2019 roku
+T28	Treatment 1760 1821	zabieg histeroskopii z pobraniem wycinków do badania hist-pat
+R7	Dat Arg1:T27 Arg2:T28	
+T29	Drug 1907 1916	rytmonorm
+T30	Drug_dose 1917 1927	3 x 150 mg
+R8	Drg Arg1:T29 Arg2:T30	
+T31	Treatment 1933 1955	leczenia p-krzepliwego
+T32	Negation 1929 1932	bez
+R9	Neg Arg1:T32 Arg2:T31	
+T33	Behaviour 1957 1966	Papierosy
+T34	Negation 1967 1973	neguje
+R10	Neg Arg1:T34 Arg2:T33	
+T35	Condition 1975 1984	Uczulenia
+T36	Negation 1985 1991	neguje
+R11	Neg Arg1:T36 Arg2:T35	
+T37	Condition 2018 2030	udary  mózgu
+A1	Status T37 Family
+N15	Reference T37 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T38	Condition 2033 2044	zawał serca
+A2	Status T38 Family
+N16	Reference T38 ICD10:I25.2	Przebyty zawał serca
+T39	Condition 1993 2008	Wywiad rodzinny
+A3	Status T39 Family
+T40	Condition 1831 1851	polipa trzonu macicy
+N17	Reference T40 ICD10:N84.0	Polip trzonu macicy
+R12	Dat Arg1:T27 Arg2:T40	
+N18	Reference T35 ICD10:T78.4	Alergia, nieokreślona
+T41	Condition 1445 1448	AFl
+N19	Reference T41 ICD10:I48	Migotanie i trzepotanie przedsionków
+R13	Dat Arg1:T20 Arg2:T41	
+A4	Status T28 Historical_Insignificant
+A5	Status T40 Historical_Insignificant
+N14	Reference T33 ICD10:Z72.0	Używanie tytoniu
+T42	Drug 1870 1874	Leki
+T43	Date 1877 1890	od ponad roku
+R14	Dat Arg1:T43 Arg2:T42	

@@ -1,0 +1,78 @@
+T1	Treatment 329 356	dalsza opieka w poradni POZ
+T2	Treatment 358 390	okresowa kontrola kardiologiczna
+T3	Treatment 400 446	pilna diagnostyka w ramach poradni naczyniowej
+T4	Investigation 447 485	regularne pomiary ciśnienia tętniczego
+T5	Investigation 486 541	okresowa kontrola morfologii, lipidogramu, elektrolitów
+T7	Behaviour 542 570	zaprzestanie palenia tytoniu
+T8	Behaviour 571 596	dieta ubogocholesterolowa
+T9	Behaviour 597 623	regularny wysiłek fizyczny
+T10	Drug 658 665	Nebilet
+T11	Drug_dose 666 683	5 mg 1 tabl. rano
+T12	Drug 684 691	Polpril
+T13	Drug_dose 692 716	5 mg 1/2 tabl. wieczorem
+T14	Drug 717 723	Atoris
+T15	Drug_dose 724 747	10 mg 1 tabl. wieczorem
+T16	Drug 748 756	Polocard
+T17	Drug_dose 757 780	75 mg 1 tabl. wieczorem
+T18	Drug 808 818	Polomag B6
+T19	Drug_dose 819 834	1 tabl. 1 x dz.
+R2	Drg Arg1:T10 Arg2:T11	
+R3	Drg Arg1:T12 Arg2:T13	
+R4	Drg Arg1:T14 Arg2:T15	
+R5	Drg Arg1:T16 Arg2:T17	
+R6	Drg Arg1:T18 Arg2:T19	
+T20	Condition 1008 1025	koarkatacji aorty
+N2	Reference T20 ICD10:Q25.1	Zwężenie cieśni aorty
+T21	Negation 1028 1037	negatywna
+R7	Neg Arg1:T21 Arg2:T20	
+T22	Condition 1039 1080	Niedrożność lewej tętnicy podobojczykowej
+T23	Condition 1082 1100	Zespół podkradania
+N3	Reference T23 ICD10:G45.8	Inne przemijające napady niedokrwienia mózgu i zespoły pokrewne
+T24	Condition 1102 1127	Miażdżyca tętnic szyjnych
+N4	Reference T24 ICD10:I70.8	Miażdżyca innych tętnic
+T25	Condition 1129 1166	Nadciśnienie tętnicze IIst wg ESC/ESH
+N5	Reference T25 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T26	Behaviour 1168 1189	Przewlekły nikotynizm
+N6	Reference T26 ICD10:Z72.0	Używanie tytoniu
+T27	Condition 1191 1205	Małopłytkowość
+N7	Reference T27 ICD10:D69.6	Małopłytkowość, nieokreślona
+T28	Condition 1425 1448	nadciśnieniem tętniczym
+N8	Reference T28 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T29	Symptom 1492 1535	różnicy RR pomiędzy P i L k. górną >40 mmHg
+T30	Date 1536 1549	od ok. 1 roku
+R8	Dat Arg1:T30 Arg2:T29	
+T31	Condition 1620 1636	odmrożenie dłoni
+N9	Reference T31 ICD10:T35.4	Nieokreślone odmrożenie kończyny górnej
+T32	Treatment 1560 1618	operacje: przegroda nosa, zatok, pourazowe k. górnej lewej
+A1	Status T32 Historical_Insignificant
+N10	Reference T32 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+A2	Status T31 Historical_Insignificant
+T33	Condition 1676 1679	WZW
+N11	Reference T33 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T34	Condition 1681 1690	borelioza
+N12	Reference T34 ICD10:A69.2	Choroba z Lyme
+T35	Negation 1693 1703	nie podaje
+T36	Behaviour 1728 1755	Palenie tytoniu: 1 paczka/d
+N13	Reference T36 ICD10:Z72.0	Używanie tytoniu
+T37	Date 1756 1766	ok. 30 lat
+R9	Dat Arg1:T37 Arg2:T36	
+T38	Behaviour 1767 1791	Inne używki:okazjonalnie
+T39	Condition 1792 1801	Uczulenia
+N14	Reference T39 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T40	Negation 1803 1813	nie podaje
+T41	Behaviour 1832 1839	zasiłek
+T42	Behaviour 1841 1855	mieszka z żoną
+T43	Behaviour 1857 1867	bezdzietny
+N15	Reference T41 ICD10:Z56.0	Bezrobocie, nieokreślone
+R10	Neg Arg1:T40 Arg2:T39	
+R11	Neg Arg1:T35 Arg2:T34	
+R12	Neg Arg1:T35 Arg2:T33	
+T44	Drug 1874 1881	Nebilet
+T45	Drug_dose 1882 1905	5 mg 1/2 tabl. doraźnie
+T46	Investigation 1933 1943	echo serca
+T47	Investigation 1945 1948	TET
+T48	Investigation 1950 1954	ABPM
+T49	Investigation 1956 1962	Holter
+T50	Investigation 1964 1982	RTG kl. piersiowej
+R13	Drg Arg1:T44 Arg2:T45	
+T51	Investigation 986 996	Obserwacja

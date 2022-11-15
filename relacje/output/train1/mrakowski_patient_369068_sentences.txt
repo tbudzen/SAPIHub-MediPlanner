@@ -1,0 +1,480 @@
+allRelations          : 18
+oks                   : 7
+isRedundantAndRemoveds: 8
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 3
+GOOD / BAD            : 15 / 3
+Sentence 0:
+------------------------------------------------
+Wiek: 12 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+LEKI:
+Enalapril 2 x 2,5mg 1-0-1
+Spironolakton 1 x 25mg 1-0-0
+Karwedilol 1 x 1,5625mg 1-0-1 (2 x 1/2 tabletki 3,215mg)
+
+R1	Drg Arg1:T1 Arg2:T6 << OK >>	Enalapril -> 2 x 2,5mg 1-0-1  <RANK: 3> <info: start[336, 346] <type: RIGHT>>
+R2	Drg Arg1:T1 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Enalapril -> 1 x 25mg 1-0-0 <:REMOVED other first tag between (right):> <RANK: 0> <info: start[336, 376] <type: RIGHT>>
+R3	Drg Arg1:T1 Arg2:T8 <<REDUNDANT!!!REMOVED>>	Enalapril -> 1 x 1,5625mg 1-0-1 (2 x 1/2 tabletki 3,215mg) <:REMOVED other first tag between (right):> <RANK: 0> <info: start[336, 402] <type: RIGHT>>
+R4	Drg Arg1:T4 Arg2:T6 <<REDUNDANT!!!REMOVED>>	Karwedilol -> 2 x 2,5mg 1-0-1 <:REMOVED other first tag between (left):> <RANK: 1> <info: start[391, 346] <type: LEFT>>
+R5	Drg Arg1:T4 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Karwedilol -> 1 x 25mg 1-0-0 <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[391, 376] <type: LEFT>>
+R6	Drg Arg1:T4 Arg2:T8 << OK >>	Karwedilol -> 1 x 1,5625mg 1-0-1 (2 x 1/2 tabletki 3,215mg)  <RANK: 3> <info: start[391, 402] <type: RIGHT>>
+R7	Drg Arg1:T5 Arg2:T6 <<REDUNDANT!!!REMOVED>>	Spironolakton -> 2 x 2,5mg 1-0-1 <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[362, 346] <type: LEFT>>
+R8	Drg Arg1:T5 Arg2:T7 << OK >>	Spironolakton -> 1 x 25mg 1-0-0  <RANK: 3> <info: start[362, 376] <type: RIGHT>>
+R9	Drg Arg1:T5 Arg2:T8 <<REDUNDANT!!!REMOVED>>	Spironolakton -> 1 x 1,5625mg 1-0-1 (2 x 1/2 tabletki 3,215mg) <:REMOVED other first tag between (right):> <RANK: 1> <info: start[362, 402] <type: RIGHT>>
+
+
+Sentence 5:
+Acesan 1 x 30mg 0-0-1
+Hepatil 2 x 1 tabletka 1-0-1
+
+Rezonans magnetyczny serca w klinice w Gdańsku (po wykonaniu badania proszę o przysłanie wyniku na adres kliniki Kardiologii ICZMP)
+
+R10	Drg Arg1:T2 Arg2:T9 <<REDUNDANT!!!REMOVED>>	Hepatil -> 1 x 30mg 0-0-1 <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[470, 455] <type: LEFT>>
+R11	Drg Arg1:T2 Arg2:T10 << OK >>	Hepatil -> 2 x 1 tabletka 1-0-1  <RANK: 3> <info: start[470, 478] <type: RIGHT>>
+R12	Drg Arg1:T3 Arg2:T9 << OK >>	Acesan -> 1 x 30mg 0-0-1  <RANK: 3> <info: start[448, 455] <type: RIGHT>>
+R13	Drg Arg1:T3 Arg2:T10 <<REDUNDANT!!!REMOVED>>	Acesan -> 2 x 1 tabletka 1-0-1 <:REMOVED other first tag between (right):> <RANK: 1> <info: start[448, 478] <type: RIGHT>>
+
+
+Sentence 6:
+Dalsza opieka w poradni kardiologicznej,genetycznej i endokrynologicznej. 
+
+
+
+Sentence 7:
+Ograniczenie aktywności fizycznej w życiu codziennym, powstrzymanie się od ćwiczenia na WFie przynajmniej do końca roku szkolnego.
+
+
+
+Sentence 8:
+------------------------------------------------
+
+
+
+Sentence 9:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 10:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Kardiomiopatia rozstrzeniowa\x0aStan po kardiochirurgicznym zamknięciu ASD II (27.02.2008)\x0aReakcje wazowagalne\x0aNiedobór masy ciała\x0a
+------------------------------------------------
+
+R14	Dat Arg1:T16 Arg2:T17 <<REDUNDANT!!!SHOULD BE REMOVED>>	27.02.2008 -> Reakcje wazowagalne  <RANK: 3> <info: start[1134, 1149] <type: RIGHT>>
+R15	Dat Arg1:T16 Arg2:T14 <<REDUNDANT!!!SHOULD BE REMOVED>>	27.02.2008 -> Kardiomiopatia rozstrzeniowa  <RANK: 3> <info: start[1134, 1055] <type: LEFT>>
+R16	Dat Arg1:T16 Arg2:T18 <<REDUNDANT!!!SHOULD BE REMOVED>>	27.02.2008 -> Niedobór masy ciała  <RANK: 3> <info: start[1134, 1172] <type: RIGHT>>
+R17	Dat Arg1:T16 Arg2:T26 << OK >>	27.02.2008 -> ASD II  <RANK: 3> <info: start[1134, 1126] <type: LEFT>>
+R18	Dat Arg1:T16 Arg2:T15 << OK >>	27.02.2008 -> kardiochirurgicznym zamknięciu  <RANK: 3> <info: start[1134, 1095] <type: LEFT>>
+
+
+Sentence 11:
+Zastosowane leczenie
+
+
+
+Sentence 12:
+------------------------------------------------
+Enalapril, Spironolakton, Karwedilol, Acesan, Hepatil
+------------------------------------------------
+
+
+
+Sentence 13:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 14:
+Dziewczynka z wrodzoną wadą serca i kardiomiopatią przyjęta do Kliniki do poszerzonych badań i ustalenia dalszego postępowania
+
+
+Sentence 15:
+Stan dość dobry
+------------------------------------------------
+
+
+
+Sentence 16:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 17:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.14[10^3/ul]
+    
+
+
+Sentence 18:
+RBC Krwinki czerwone:4.64[10^6/ul]
+    
+
+
+Sentence 19:
+HGB Hemoglobina:13.8[g/dl]
+    
+
+
+Sentence 20:
+HCT Hematokryt:38.3[%]
+    
+
+
+Sentence 21:
+MCV wskaźnik czerwonokrw:82.5[fl]
+    
+
+
+Sentence 22:
+MCH wskaźnik czerwonokrw:29.7[pg]
+    
+
+
+Sentence 23:
+MCHC wskaźnik czerwonokr:36.0[g/dl]
+    
+
+
+Sentence 24:
+PLT z morfologii:163[10^3/ul]
+    
+
+
+Sentence 25:
+RDW-SD:35.4[fl]
+    
+
+
+Sentence 26:
+RDW-CV:11.9[%]
+    PDW:13.2[fl]
+    MPV:10.6[fl]
+    
+
+
+Sentence 27:
+P-LCR:31.0[%]
+    
+
+
+Sentence 28:
+PCT (hematokryt płytkowy:0.17[%]
+    
+
+
+Sentence 29:
+NEUTR# wartość bezwzględ:2.03[10^3/ul]
+    
+
+
+Sentence 30:
+NEUTR%:49.0[%]
+    
+
+
+Sentence 31:
+LYMH# wartość bezwzględn:1.54[10^3/ul]
+    
+
+
+Sentence 32:
+LYMPH%:37.2[%]
+    
+
+
+Sentence 33:
+MONO# wartość bezwzględn:0.51[10^3/ul]
+    
+
+
+Sentence 34:
+MONO%:12.3[%]
+    
+
+
+Sentence 35:
+EO# wartość bezwzględna:0.04[10^3/ul]
+    
+
+
+Sentence 36:
+EO%:1.0[%]
+    BASO# wartość bezwzględn:0.02[10^3/ul]
+    BASO%:0.5[%]
+    
+
+
+Sentence 37:
+NRBC %:0.0[%]
+    
+
+
+Sentence 38:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 39:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:34.1[sek]
+
+
+
+Sentence 40:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 41:
+Czas protrombinowy:13.3[sek]
+    
+
+
+Sentence 42:
+Wskaźnik PT:82.7[%]
+    
+
+
+Sentence 43:
+INR:1.20
+Czas trombinowy TT: Czas trombinowy TT:17.9[sek]
+
+
+
+Sentence 44:
+Fibrynogen: Fibrynogen:2.15[g/L]
+D-dimer - test ilościowy: D-dimer - test ilościowy:115[ng/ml]
+
+
+
+Sentence 45:
+TSH: TSH:1.16[uIU/ml]
+
+
+
+Sentence 46:
+FT3: FT3:3.40[pg/ml]
+
+
+
+Sentence 47:
+FT4: FT4:1.46[ng/dl]
+
+
+
+Sentence 48:
+Troponina T: Troponina T:7.7[pg/ml]
+
+
+
+Sentence 49:
+ALAT: ALAT:29[U/L]
+ASPAT: ASPAT:41[U/L]
+Bilirubina całkowita (TBil): Bilirubina całkowita:3.04[mg/dl]
+
+
+
+Sentence 50:
+CK - aktywność: CK:109[U/L]
+
+
+
+Sentence 51:
+CKMB aktywność: CKMB:27[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 52:
+Sód (Na): Sód:139[mmol/L]
+
+
+
+Sentence 53:
+Potas (K): Potas:4.4[mmol/L]
+
+
+
+Sentence 54:
+Chlorki (Cl): Chlorki:103[mmol/L]
+
+
+
+Sentence 55:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:39[U/L]
+
+
+
+Sentence 56:
+Kreatynina + GFR
+    
+
+
+Sentence 57:
+Kreatynina w surowicy:0.46[mg/dl]
+    
+
+
+Sentence 58:
+eGFR stand. wg Schwartza:169.8[ml/min/1,73 m^2]
+    
+
+
+Sentence 59:
+eGFR zmod.
+
+
+Sentence 60:
+wg Schwartza:127.5[ml/min/1,73 m^2]
+    
+
+
+Sentence 61:
+wzrost:142[cm]
+
+
+
+Sentence 62:
+LDH Dehydrogenaza mleczanowa: LDH Dehydrogenaza mlecza:245[U/L]
+
+
+
+Sentence 63:
+Mocznik: Mocznik:24[mg/dl]
+
+
+
+Sentence 64:
+Gospodarka żelazem
+    Żelazo:146[ug/dl]
+    
+
+
+Sentence 65:
+TIBC (Całkowita zdolność:*[ug/dl]
+    
+
+
+Sentence 66:
+UIBC (Utajona zdolność w:*[ug/dl]
+    
+
+
+Sentence 67:
+Wskaźnik wysycenia Fe:*[%]
+
+
+
+Sentence 68:
+Żelazo (Fe): Żelazo (Fe):146[ug/dl]
+
+
+
+Sentence 69:
+NT-proBNP surowica: NT-proBNP w surowicy:1237[pg/ml]
+
+
+
+Sentence 70:
+------------------------------------------------
+
+
+
+Sentence 71:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 72:
+I42.0
+Z98.8
+Q21.1
+
+
+
+Sentence 73:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 74:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 75:
+I81
+G21
+
+
+
+Sentence 76:
+O61
+I89
+G25
+G49
+N45
+L69
+N24
+O69
+87.4
+
+
+
+Sentence 77:
+C55
+G53
+I97
+G11
+O93
+O95
+K33
+L31
+
+
+
+Sentence 78:
+O55
+I17
+O35
+M37
+I19
+N13
+
+
+
+Sentence 79:
+M19
+M18
+------------------------------------------------
+
+

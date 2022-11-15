@@ -1,0 +1,150 @@
+T1	Investigation 2879 2883	ECHO
+T2	Investigation 2885 2889	ABPM
+T3	Drug 2776 2787	Euthyrox 50
+T4	Drug_dose 2788 2794	1-0-0,
+R1	Drg Arg1:T3 Arg2:T4	
+T5	Drug 2756 2763	Lacipil
+T6	Drug_dose 2764 2774	4 mg 0-0-1
+R2	Drg Arg1:T5 Arg2:T6	
+T7	Drug 2737 2745	Spironol
+T8	Drug_dose 2746 2754	25 1-0-0
+R3	Drg Arg1:T7 Arg2:T8	
+T9	Drug 2721 2729	Noliprel
+T10	Drug_dose 2730 2735	2-0-0
+R4	Drg Arg1:T9 Arg2:T10	
+T11	Drug 2700 2707	Beto ZK
+T12	Drug_dose 2708 2719	50 mg 0-0-1
+R5	Drg Arg1:T11 Arg2:T12	
+T13	Behaviour 2554 2582	warunki mieszkaniowe średnie
+T14	Condition 2447 2450	WZW
+N1	Reference T14 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T15	Condition 2457 2466	borelioza
+N2	Reference T15 ICD10:A69.2	Choroba z Lyme
+T16	Condition 2474 2477	tbc
+N3	Reference T16 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T17	Condition 2483 2487	odra
+N4	Reference T17 ICD10:B05	Odra
+T18	Negation 2488 2501	(nie pamięta)
+R6	Neg Arg1:T18 Arg2:T17	
+T19	Treatment 2503 2522	szczepienie na odrę
+N5	Reference T19 ICD10:B05	Odra
+T20	Negation 2524 2535	nie pamięta
+T21	Negation 2415 2418	nie
+T22	Negation 2399 2402	nie
+T23	Negation 2381 2384	nie
+T24	Condition 2404 2413	Uczulenia
+N6	Reference T24 ICD10:T78.4	Alergia, nieokreślona
+R7	Neg Arg1:T21 Arg2:T24	
+T25	Behaviour 2386 2397	Inne używki
+R8	Neg Arg1:T22 Arg2:T25	
+T26	Behaviour 2364 2379	Palenie tytoniu
+N7	Reference T26 ICD10:T65.2	Tytoń i nikotyna
+R9	Neg Arg1:T23 Arg2:T26	
+T27	Treatment 2342 2363	Przebyte operacje: jw
+T28	Negation 2197 2203	Neguje
+T29	Symptom 2205 2217	zasłabnięcia
+N8	Reference T29 ICD10:R55	Omdlenie i zapaść
+T30	Symptom 2219 2227	omdlenia
+N9	Reference T30 ICD10:R55	Omdlenie i zapaść
+T31	Symptom 2229 2242	czarne stolce
+N10	Reference T31 ICD10:K92.1	Stolce smołowate
+T32	Symptom 2244 2260	brunatne wymioty
+N11	Reference T32 ICD10:K92.0	Wymioty krwawe
+T33	Condition 2262 2278	chorobę wrzodową
+N12	Reference T33 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T34	Symptom 2280 2308	duszność nocną typu ortopnoe
+N13	Reference T34 ICD10:I50.1	Niewydolność serca lewokomorowa
+T35	Condition 2310 2312	DM
+N14	Reference T35 ICD10:E13	Inne określone postacie cukrzycy
+T36	Condition 2314 2324	udar mózgu
+N15	Reference T36 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T37	Condition 2326 2337	zawał serca
+N16	Reference T37 ICD10:I25.2	Przebyty zawał serca
+R10	Neg Arg1:T28 Arg2:T29	
+R11	Neg Arg1:T28 Arg2:T31	
+R12	Neg Arg1:T28 Arg2:T30	
+R13	Neg Arg1:T28 Arg2:T32	
+R14	Neg Arg1:T28 Arg2:T33	
+R15	Neg Arg1:T28 Arg2:T34	
+R16	Neg Arg1:T28 Arg2:T35	
+R17	Neg Arg1:T28 Arg2:T36	
+R18	Neg Arg1:T28 Arg2:T37	
+T38	Symptom 2180 2195	kołatania serca
+N17	Reference T38 ICD10:R00.2	Kołatanie serca
+T39	Negation 2452 2454	-)
+T40	Negation 2469 2470	-
+T41	Negation 2478 2481	(-)
+R19	Neg Arg1:T20 Arg2:T19	
+R20	Neg Arg1:T41 Arg2:T16	
+R21	Neg Arg1:T40 Arg2:T15	
+R22	Neg Arg1:T39 Arg2:T14	
+T42	Condition 1526 1559	napadowym migotaniem przedsionków
+N18	Reference T42 ICD10:I48	Migotanie i trzepotanie przedsionków
+T43	Drug 1756 1763	Pradaxę
+T44	Symptom 1788 1805	krwawienie z nosa
+N19	Reference T44 ICD10:R04.0	Epistaxis
+T45	Negation 1766 1776	odstawiono
+R23	Neg Arg1:T45 Arg2:T43	
+T46	Drug 1855 1862	Xarelto
+T47	Symptom 1873 1888	krwienie z nosa
+N20	Reference T47 ICD10:R04.0	Epistaxis
+T48	Condition 1933 1935	HA
+N21	Reference T48 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T49	Treatment 1940 1952	strumektomii
+T50	Treatment 1957 1990	histerektomii z powodu mięśniaków
+T51	Date 1992 1996	2003
+R24	Dat Arg1:T51 Arg2:T50	
+T52	Treatment 2011 2050	operacyjnym odcinka szyjnego kręgosłupa
+A1	Source T52 Declared
+T53	Condition 2071 2091	zespołem depresyjnym
+N22	Reference T53 ICD10:F32	Epizod depresyjny
+T54	Condition 1600 1602	AF
+N23	Reference T54 ICD10:I48	Migotanie i trzepotanie przedsionków
+T55	Drug 1640 1649	Euthyroxu
+A2	Source T55 Declared
+A3	Source T54 Declared
+R25	Alg Arg1:T54 Arg2:T55	
+T56	Condition 1364 1381	Zespół depresyjny
+N24	Reference T56 ICD10:F32	
+T57	Treatment 1323 1362	operacyjnym odcinka szyjnego kręgosłupa
+T58	Treatment 1264 1277	histerektomii
+T59	Treatment 1230 1242	strumektomii
+T60	Date 1299 1303	2003
+R26	Dat Arg1:T60 Arg2:T58	
+T61	Condition 1199 1220	Nadciśnienie tętnicze
+N25	Reference T61 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T62	Condition 1166 1197	Napadowe migotanie przedsionków
+N26	Reference T62 ICD10:I48	Migotanie i trzepotanie przedsionków
+T63	Drug 920 927	Doxepin
+T64	Drug_dose 928 948	10 mg 1 tabl. 3 x dz
+R27	Drg Arg1:T63 Arg2:T64	
+T65	Drug 884 891	Nolpaza
+T66	Drug_dose 892 919	20 mg 1 tabl. rano na czczo
+R28	Drg Arg1:T65 Arg2:T66	
+T67	Drug 856 863	Xarelto
+T68	Drug_dose 864 882	20 mg 1 tabl. rano
+R29	Drg Arg1:T67 Arg2:T68	
+T69	Drug 818 833	Euthyrox 50 mcg
+T70	Drug_dose 834 855	1 tabl. rano na czczo
+R30	Drg Arg1:T69 Arg2:T70	
+T71	Drug 785 793	Primacor
+T72	Drug_dose 794 817	20 mg 1 tabl. wieczorem
+R31	Drg Arg1:T71 Arg2:T72	
+T73	Drug 751 759	Spironol
+T74	Drug_dose 760 784	25 mg 1 tabl. w południe
+R32	Drg Arg1:T73 Arg2:T74	
+T75	Drug 723 737	Noliprel Forte
+T76	Drug_dose 738 750	1 tabl. rano
+R33	Drg Arg1:T75 Arg2:T76	
+T77	Drug 696 703	Beto ZK
+T78	Drug_dose 704 722	50 mg 1 tabl. rano
+R34	Drg Arg1:T77 Arg2:T78	
+T79	Investigation 525 554	kontrola ciśnienia tętniczego
+T80	Investigation 567 587	kontrola lipidogramu
+T81	Behaviour 589 614	dieta niskocholesterolowa
+T82	Behaviour 615 660	stały, umiarkowany, aerobowy wysiłek fizyczny
+T83	Symptom 444 459	krwawień z nosa
+N27	Reference T83 ICD10:R04.0	Epistaxis
+T84	Condition 1280 1297	powodu mięśniaków
+N28	Reference T84 ICD10:D25	Mięśniak gładkokomórkowy macicy
+R35	Dat Arg1:T60 Arg2:T84	

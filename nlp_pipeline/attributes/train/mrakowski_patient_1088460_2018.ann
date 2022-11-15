@@ -1,0 +1,77 @@
+T1	Drug 345 351	Acesan
+T2	Drug_dose 352 361	1 x 50 mg
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 364 372	Spironol
+T4	Drug_dose 373 382	1 x 25 mg
+R2	Drg Arg1:T3 Arg2:T4	
+T5	Drug 385 393	Enarenal
+T6	Drug_dose 394 417	2 x 1,25 mg ( 1/4 tabl)
+R3	Drg Arg1:T5 Arg2:T6	
+T7	Drug 418 440	Leki przeciwpadaczkowe
+T8	Drug_dose 441 465	według zaleceń neurologa
+R4	Drg Arg1:T7 Arg2:T8	
+T9	Investigation 468 542	Okresowa kontrola saturacji krwi metodą przezskórną i ciśnienia tętniczego
+T10	Treatment 545 582	Kontrola kardiologiczna ambulatoryjna
+T11	Date 583 596	za ok. 6 m-cy
+R5	Dat Arg1:T11 Arg2:T10	
+T12	Investigation 599 625	Kontrolne usg j. brzusznej
+T13	Condition 638 653	kamicy nerkowej
+N1	Reference T13 ICD10:N20.0	Kamica nerki
+T14	Date 656 669	za ok. 6 m-cy
+R6	Dat Arg1:T14 Arg2:T12	
+T15	Treatment 671 719	Dalsza opieka wielospecjalistyczna ambulatoryjna
+T16	Condition 741 764	jelitowej utraty białka
+N2	Reference T16 ICD10:K90.4	Nieprawidłowe wchłanianie w wyniku nietolerancji, niesklasyfikowane gdzie indziej
+T17	Drug 910 915	Acard
+A1	Source T16 Declared
+A2	Source T13 Declared
+T18	Drug 918 926	Enarenal
+T19	Drug 929 937	Spironol
+T20	Drug 939 956	leki p-padaczkowe
+T21	Condition 1175 1223	Wrodzona wada serca pod postacią wspólnej komory
+N3	Reference T21 ICD10:Q20.4	Wejście obu dróg żylnych do jedynej komory
+T22	Condition 1226 1259	zarośnięciem zastawki dwudzielnej
+N4	Reference T22 ICD10:Q23.2	Wrodzone zwężenie zastawki mitralnej
+T23	Condition 1262 1279	malpozycją naczyń
+N5	Reference T23 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T24	Condition 1285 1306	Hipoplazja łuku aorty
+N6	Reference T24 ICD10:Q25.4	Inne wrodzone wady rozwojowe aorty
+T25	Condition 1310 1332	zwężeniem cieśni aorty
+N7	Reference T25 ICD10:Q25.1	Zwężenie cieśni aorty
+T26	Treatment 1346 1374	operacji plastyki łuku aorty
+T27	Condition 1380 1412	przewężenia pnia tętnicy płucnej
+N8	Reference T27 ICD10:Q25.6	Zwężenie pnia płucnego
+T28	Date 1414 1424	17.05.2010
+R7	Dat Arg1:T28 Arg2:T26	
+R8	Dat Arg1:T28 Arg2:T27	
+T29	Treatment 1438 1498	zabiegu implantacji stentu do przegrody międzyprzedsionkowej
+T30	Date 1501 1511	30.07.2010
+R9	Dat Arg1:T30 Arg2:T29	
+T31	Treatment 1525 1573	operacji typu dwukierunkowy Glenn z poszerzeniem
+T32	Condition 1574 1602	ubytku międzyprzedsionkowego
+N9	Reference T32 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T33	Treatment 1605 1624	z usunięciem stentu
+T35	Condition 1640 1673	przewężeniem pnia tętnicy płucnej
+N10	Reference T35 ICD10:Q25.6	Zwężenie pnia płucnego
+T36	Date 1675 1685	22.12.2010
+R10	Dat Arg1:T36 Arg2:T31	
+R11	Dat Arg1:T36 Arg2:T32	
+R12	Dat Arg1:T36 Arg2:T33	
+R13	Dat Arg1:T36 Arg2:T35	
+T34	Treatment 1699 1743	operacji metodą Fontana i Damus-Kaye-Stansel
+T37	Date 1745 1756	04.06.2013r
+R14	Dat Arg1:T37 Arg2:T34	
+T38	Condition 1780 1803	udarach niedokrwiennych
+N11	Reference T38 ICD10:I63.9	Zawał mózgu, nieokreślony
+T39	Symptom 1809 1842	Niedowład spastyczny prawostronny
+N12	Reference T39 ICD10:G81	Porażenie połowicze
+T40	Condition 1848 1876	Padaczka objawowa lekooporna
+T41	Condition 1879 1920	napadami częściowymi wtórnie uogólnionymi
+T42	Condition 1926 1960	Opóźnienie rozwoju psychoruchowego
+N15	Reference T42 ICD10:R62.0	Opóźnienie etapów rozwoju fizjologicznego
+T43	Condition 2163 2182	wrodzoną wadą serca
+N13	Reference T40 ICD10:G40.1	Padaczka objawowa (ogniskowa) (częściowa) i zespoły padaczkowe z prostymi napadami częściowymi
+N14	Reference T41 ICD10:G40.1	Padaczka objawowa (ogniskowa) (częściowa) i zespoły padaczkowe z prostymi napadami częściowymi
+T44	Condition 2276 2284	Padaczka
+N17	Reference T44 ICD10:G40	Padaczka
+N16	Reference T43 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych

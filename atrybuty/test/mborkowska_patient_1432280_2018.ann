@@ -1,0 +1,114 @@
+T1	Investigation 2811 2821	echo serca
+T2	Investigation 2823 2826	TET
+T3	Investigation 2828 2832	ABPM
+T4	Investigation 2834 2840	Holter
+T5	Investigation 2842 2861	RTG kl. piersiowej.
+T6	Drug 2749 2758	Lambrinex
+T7	Drug_dose 2759 2782	20 mg 1 tabl. wieczorem
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 2717 2724	Lecardi
+T9	Drug_dose 2725 2748	75 mg 1 tabl. wieczorem
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 2681 2686	Daneb
+T11	Drug_dose 2687 2716	5 mg 1 tabl. rano i wieczorem
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 2650 2659	Egiramlon
+T13	Drug_dose 2660 2680	10+5 mg 1 tabl. rano
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Negation 2571 2581	nie podaje
+T15	Condition 2560 2569	Uczulenia
+N1	Reference T15 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R5	Neg Arg1:T14 Arg2:T15	
+T16	Behaviour 2524 2559	Inne używki: alkohol - okazjonalnie
+N2	Reference T16 ICD10:Z72.1	Używanie alkoholu
+T17	Date 2504 2517	w przeszłości
+T18	Behaviour 2487 2502	Palenie tytoniu
+N3	Reference T18 ICD10:Z72.0	Używanie tytoniu
+R6	Dat Arg1:T17 Arg2:T18	
+T19	Condition 2481 2486	zator
+T20	Condition 2428 2431	WZW
+N4	Reference T20 ICD10:B19	
+T21	Condition 2433 2442	borelioza
+N5	Reference T21 ICD10:A69.2	Choroba z Lyme
+T22	Negation 2445 2455	nie podaje
+R7	Neg Arg1:T22 Arg2:T21	
+R8	Neg Arg1:T22 Arg2:T20	
+T23	Negation 2390 2400	nie podaje
+T24	Treatment 2369 2388	Leczenie przewlekłe
+R9	Neg Arg1:T23 Arg2:T24	
+T25	Condition 2333 2368	przepuklina pachwinowa prawostronna
+N6	Reference T25 ICD10:K40	Przepuklina pachwinowa
+T26	Symptom 2265 2270	zgaga
+N7	Reference T26 ICD10:R12	Zgaga
+T27	Condition 2272 2312	podejrzenie przerostu gruczołu krokowego
+N8	Reference T27 ICD10:N40	Rozrost gruczołu krokowego
+T28	Symptom 2228 2263	stopniowy spadek tolerancji wysiłku
+N9	Reference T28 ICD10:R53	Złe samopoczucie i zmęczenie
+T29	Condition 2008 2031	nadciśnieniem tętniczym
+N10	Reference T29 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T30	Condition 2033 2053	hipercholesterolemią
+T31	Condition 2058 2085	OZW-NSTEMI ściany przedniej
+T32	Treatment 2088 2135	PCI-LAD z implantacją stentu Bx Sonic 3,0x20 mm
+T33	Date 2137 2142	2005r
+R10	Dat Arg1:T33 Arg2:T32	
+R11	Dat Arg1:T33 Arg2:T31	
+T34	Investigation_result 2174 2213	labilnych wartości ciśnienia tętniczego
+T35	Condition 1842 1862	Hipercholesterolemia
+T36	Condition 1780 1807	OZW-NSTEMI ściany przedniej
+N14	Reference T36 ICD10:I21	Ostry zawał mięśnia sercowego
+T37	Treatment 1810 1832	implantacją stentu BMS
+T38	Date 1834 1839	2005r
+R12	Dat Arg1:T38 Arg2:T37	
+R13	Dat Arg1:T38 Arg2:T36	
+T39	Condition 1741 1770	Labilne nadciśnienie tętnicze
+N15	Reference T39 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T40	Drug 1490 1499	Lambrinex
+T41	Drug 1460 1465	Acard
+T42	Drug 1424 1429	Daneb
+T43	Drug 1393 1402	Egiramlon
+T44	Drug_dose 1403 1423	10+5 mg 1 tabl. rano
+R14	Drg Arg1:T43 Arg2:T44	
+T45	Drug_dose 1430 1459	5 mg 1 tabl. rano i wieczorem
+R15	Drg Arg1:T42 Arg2:T45	
+T46	Drug_dose 1466 1489	75 mg 1 tabl. wieczorem
+R16	Drg Arg1:T41 Arg2:T46	
+T47	Drug_dose 1500 1523	20 mg 1 tabl. wieczorem
+R17	Drg Arg1:T40 Arg2:T47	
+T48	Treatment 1096 1161	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T49	Behaviour 1164 1204	Dieta lekkostrawna , niskocholesterolowa
+T50	Investigation 1217 1292	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek.
+T51	Investigation 1308 1342	kontrola ciśnienia tętniczego krwi
+T52	Drug 953 962	Egiramlon
+T53	Drug 963 968	Daneb
+T54	Drug 969 976	Lecardi
+T55	Drug 977 986	Lambrinex
+T56	Condition 800 820	Hipercholesterolemia
+T57	Condition 777 798	Nadciśnienie tętnicze
+N17	Reference T57 ICD10:I10	
+T58	Condition 745 775	Pojedyncze pobudzenie komorowe
+N18	Reference T58 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T59	Condition 679 713	Nadkomorowe zaburzenie rytmu serca
+N19	Reference T59 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T60	Condition 715 736	pobudzenia pojedyncze
+N20	Reference T60 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T61	Condition 738 742	pary
+N21	Reference T61 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T62	Treatment 602 663	leczony PCI GPZ z implantacją stentu BMS Bx Sonic 3,0 x 20 mm
+T63	Condition 589 601	zawał NSTEMI
+N22	Reference T63 ICD10:I21	Ostry zawał mięśnia sercowego
+T64	Condition 563 588	ostrym zespole wieńcowym-
+T65	Date 666 676	20.12.2005
+R18	Dat Arg1:T65 Arg2:T62	
+R19	Dat Arg1:T65 Arg2:T63	
+R20	Dat Arg1:T65 Arg2:T64	
+T66	Condition 528 553	Dusznica bolesna stabilna
+N24	Reference T66 ICD10:I20	Choroba niedokrwienna serca
+T67	Condition 499 526	Choroba niedokrwienna serca
+T68	Condition 449 498	Umiarkowana niedomykalność zastawki trójdzielnej.
+N26	Reference T68 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+N25	Reference T67 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+N23	Reference T64 ICD10:I24.9	Ostra choroba niedokrwienna serca, nieokreślona
+N16	Reference T56 ICD10:E78.0	Czysta hipercholesterolemia
+N13	Reference T35 ICD10:E78.0	Czysta hipercholesterolemia
+N11	Reference T30 ICD10:E78.0	Czysta hipercholesterolemia
+N12	Reference T31 ICD10:I21.0	Ostry zawał serca pełnościenny ściany przedniej

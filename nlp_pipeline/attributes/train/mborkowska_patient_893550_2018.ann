@@ -1,0 +1,67 @@
+T1	Condition 578 622	Łagodna niedomykalność zastawki trójdzielnej
+N1	Reference T1 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T2	Condition 625 655	Pojedyncze pobudzenia komorowe
+N2	Reference T2 ICD10:I49.3	
+T3	Condition 658 669	nadkomorowe
+N3	Reference T3 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T4	Condition 671 692	Nadciśnienie tętnicze
+N4	Reference T4 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T5	Behaviour 694 704	Nikotynizm
+N5	Reference T5 ICD10:Z72.0	Używanie tytoniu
+T6	Behaviour 899 939	Dieta lekkostrawna , niskocholesterolowa
+T7	Investigation 952 1027	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek.
+T8	Investigation 1043 1078	kontrola ciśnienia tętniczego krwi.
+T9	Drug 1128 1135	Nebilet
+T10	Drug 1156 1163	Amlopin
+T11	Drug_dose 1136 1152	5 mg 1 x dz rano
+R1	Drg Arg1:T9 Arg2:T11	
+T12	Drug_dose 1164 1192	5 mg 1x dz po 1/2 tabl. rano
+R2	Drg Arg1:T10 Arg2:T12	
+T13	Investigation 2185 2195	Echo serca
+T14	Investigation 2198 2208	Holter EKG
+T15	Investigation 2211 2213	RR
+T16	Investigation 2217 2232	Próba Wysiłkowa
+T17	Drug 2143 2150	Nebilet
+T18	Drug_dose 2151 2167	5 mg 1 x dz rano
+R3	Drg Arg1:T17 Arg2:T18	
+T19	Behaviour 2093 2119	warunki mieszkaniowe dobre
+T20	Negation 2070 2076	neguje
+T21	Negation 2055 2058	nie
+T22	Condition 2059 2068	Uczulenia
+N6	Reference T22 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R4	Neg Arg1:T20 Arg2:T22	
+T23	Behaviour 2042 2053	Inne używki
+N7	Reference T23 ICD10:Z72	Problemy związane ze stylem życia
+T24	Behaviour 1999 2040	Palenie tytoniu: 5-10 papierosów dziennie
+N8	Reference T24 ICD10:Z72.0	Używanie tytoniu
+T25	Condition 1989 1997	cukrzyca
+A1	Status T25 Family
+T26	Condition 1928 1931	WZW
+N10	Reference T26 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T27	Condition 1941 1950	borelioza
+N11	Reference T27 ICD10:A69.2	Choroba z Lyme
+T28	Negation 1932 1938	( -  )
+R5	Neg Arg1:T28 Arg2:T26	
+T29	Negation 1951 1956	( - )
+R6	Neg Arg1:T29 Arg2:T27	
+T30	Negation 1857 1861	brak
+T31	Treatment 1837 1854	Przebyte operacje
+R7	Neg Arg1:T30 Arg2:T31	
+T32	Condition 1812 1833	nadciśnienie tętnicze
+N12	Reference T32 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T33	Symptom 1750 1762	zasłabnięcia
+N13	Reference T33 ICD10:R55	Omdlenie i zapaść
+T34	Symptom 1772 1796	bóle w klatce piersiowej
+N14	Reference T34 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T35	Negation 1765 1771	neguje
+R8	Neg Arg1:T35 Arg2:T34	
+T36	Negation 1743 1749	Neguje
+R9	Neg Arg1:T36 Arg2:T33	
+T37	Symptom 1693 1711	znaczne osłabienie
+N15	Reference T37 ICD10:R53	Złe samopoczucie i zmęczenie
+T38	Symptom 1726 1741	kołatania serca
+N16	Reference T38 ICD10:R00.2	Kołatanie serca
+T39	Investigation_result 1591 1635	chwiejnych wartości ciśnienia tętniczego krw
+T40	Investigation_result 1642 1663	przyspieszonego tętna
+T41	Treatment 822 897	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Pulmonologicznej.
+N9	Reference T25 ICD10:E14	Cukrzyca nieokreślona

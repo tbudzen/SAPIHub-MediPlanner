@@ -1,0 +1,40 @@
+T1	Drug 341 347	BetoZK
+T2	Drug 349 357	0.9%NaCl
+T3	Drug 359 371	Nifuroksazud
+T4	Drug 373 382	Loperamid
+T5	Drug 384 396	Hydroksyzyna
+T6	Treatment 507 529	kontrola u lekarza POZ
+T7	Treatment 532 614	wskazana diagnostyka w kierunku ew genetycznie uwarunkowanych zaburzeń krzepnięcia
+T8	Treatment 661 688	regularne przyjmowanie leku
+T9	Drug 690 696	BetoZK
+T10	Drug_dose 697 716	25mg 1x 1 tabl/rano
+R1	Drg Arg1:T9 Arg2:T10	
+T11	Symptom 908 923	Kołatania serca
+N1	Reference T11 ICD10:R00.2	Kołatanie serca
+T12	Condition 947 966	zatorowości płucnej
+N2	Reference T12 ICD10:I26.9	Zator płucny bez informacji o ostrym sercu płucnym
+T13	Negation 969 978	negatywna
+R2	Neg Arg1:T13 Arg2:T12	
+T14	Symptom 993 1013	migrenowe bóle głowy
+T15	Symptom 1216 1246	okresowej duszności wysiłkowej
+N4	Reference T15 ICD10:R06.0	Duszność
+T16	Symptom 1261 1276	kołatania serca
+N5	Reference T16 ICD10:R00.2	Kołatanie serca
+T17	Negation 1286 1292	neguje
+T18	Condition 1294 1311	uczulenia na leki
+R3	Neg Arg1:T17 Arg2:T18	
+T19	Symptom 1313 1346	krwawienia z przewodu pokarmowego
+N6	Reference T19 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R4	Neg Arg1:T17 Arg2:T19	
+T20	Condition 1348 1363	Wywiad rodzinny
+A1	Status T20 Family
+T21	Negation 1365 1378	bez zanczenia
+R5	Neg Arg1:T21 Arg2:T20	
+T22	Drug 1405 1415	Betaloc ZK
+T23	Drug_dose 1416 1431	25mg 1xdziennie
+R6	Drg Arg1:T22 Arg2:T23	
+T24	Investigation 1444 1454	ECHO serca
+T25	Investigation 1456 1480	angio ct tętnic płucnych
+N3	Reference T14 ICD10:G43.9	Migrena, nieokreślona
+T26	Investigation 925 946	Obserwacja w kierunku
+N7	Reference T18 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie

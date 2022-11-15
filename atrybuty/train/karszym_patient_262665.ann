@@ -1,0 +1,112 @@
+T1	Treatment 340 398	dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T2	Behaviour 402 497	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T3	Treatment 501 570	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydo
+T4	Treatment 807 817	zamknięciu
+N1	Reference T4 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T5	Date 867 878	20.12.2018r
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Condition 886 947	Okołozabiegowy częstoskurcz przedsionkowy z przewodzeniem 2:1
+N2	Reference T6 ICD10:I47.1	Częstoskurcz nadkomorowy
+T7	Condition 961 988	udarze niedokrwiennym mózgu
+N3	Reference T7 ICD10:I63.9	Zawał mózgu, nieokreślony
+T8	Condition 991 1025	niedowładem prawej kończyny górnej
+N4	Reference T8 ICD10:G83.2	Porażenie jednej kończyny górnej
+T9	Date 1027 1035	08.2018r
+R3	Dat Arg1:T9 Arg2:T7	
+T10	Condition 1043 1064	Nadciśnienie tętnicze
+N5	Reference T10 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T11	Condition 1069 1100	Dyslipidemia w trakcie leczenia
+N6	Reference T11 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T13	Drug 1101 1108	statyną
+T14	Treatment 1254 1264	zamknięciu
+N7	Reference T14 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T15	Date 1314 1325	20.12.2018r
+R4	Dat Arg1:T15 Arg2:T14	
+T16	Condition 1331 1396	okołozabiegowym częstoskurczem przedsionkowym z przewodzeniem 2:1
+N8	Reference T16 ICD10:I47.1	Częstoskurcz nadkomorowy
+T17	Condition 1401 1428	udarze niedokrwiennym mózgu
+N9	Reference T17 ICD10:I63.9	Zawał mózgu, nieokreślony
+T18	Condition 1431 1465	niedowładem prawej kończyny górnej
+N10	Reference T18 ICD10:G83.2	Porażenie jednej kończyny górnej
+T19	Date 1467 1475	08.2018r
+R5	Dat Arg1:T19 Arg2:T17	
+R6	Dat Arg1:T19 Arg2:T18	
+R7	Dat Arg1:T15 Arg2:T16	
+R8	Dat Arg1:T5 Arg2:T6	
+T20	Condition 1481 1504	nadciśnieniem tętniczym
+N11	Reference T20 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T21	Negation 1553 1559	Neguje
+T22	Symptom 1560 1572	zasłabnięcia
+T23	Symptom 1574 1583	duszności
+N12	Reference T23 ICD10:R06.0	Duszność
+T24	Symptom 1585 1616	typowe bóle w klatce piersiowej
+N13	Reference T24 ICD10:R07.2	Ból w okolicy przedsercowej
+R9	Neg Arg1:T21 Arg2:T22	
+R10	Neg Arg1:T21 Arg2:T23	
+R11	Neg Arg1:T21 Arg2:T24	
+T25	Treatment 1637 1650	appendectomia
+A1	Status T25 Historical_Insignificant
+N14	Reference T25 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T26	Date 1651 1665	w wieku 15 lat
+R12	Dat Arg1:T26 Arg2:T25	
+T27	Condition 1693 1696	WZW
+N15	Reference T27 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T28	Condition 1705 1714	borelioza
+N16	Reference T28 ICD10:A69.2	Choroba z Lyme
+T29	Condition 1722 1730	gruźlica
+N17	Reference T29 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T30	Negation 1697 1702	( - )
+T31	Negation 1715 1720	( - )
+T32	Negation 1731 1734	(-)
+R13	Neg Arg1:T30 Arg2:T27	
+R14	Neg Arg1:T31 Arg2:T28	
+R15	Neg Arg1:T32 Arg2:T29	
+T33	Condition 1763 1778	udar krwotoczny
+A2	Status T33 Family
+N18	Reference T33 ICD10:I61.9	Krwotok mózgowy, nieokreślony
+T34	Condition 1798 1838	wrodzoną wadę serca - tetralogia Fallota
+A3	Status T34 Family
+N19	Reference T34 ICD10:Q21.3	Tetralogia Fallota
+T35	Behaviour 1839 1854	Palenie tytoniu
+T36	Behaviour 1860 1871	Inne używki
+T37	Negation 1856 1859	nie
+T38	Negation 1873 1876	nie
+T39	Condition 1877 1886	Uczulenia
+N20	Reference T39 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T40	Negation 1888 1894	neguje
+T41	Behaviour 1911 1937	warunki mieszkaniowe dobre
+T42	Behaviour 1940 1954	mieszka z żoną
+T43	Drug 1961 1969	Polocard
+T44	Drug 1982 1988	Plavix
+T45	Drug 2000 2008	Bisoacrd
+T46	Drug 2019 2027	Telmizek
+T47	Drug 2039 2051	Atorvasterol
+T48	Drug 2063 2066	IPP
+T49	Drug_dose 1970 1981	150mg 0-0-1
+T50	Drug_dose 1989 1999	75mg 1-0-0
+T51	Drug_dose 2009 2018	5mg 1-0-0
+T52	Drug_dose 2028 2038	40mg 1-0-0
+T53	Drug_dose 2052 2062	20mg 0-0-1
+T54	Drug_dose 2067 2077	20mg 1-0-0
+R16	Drg Arg1:T43 Arg2:T49	
+R17	Drg Arg1:T44 Arg2:T50	
+R18	Drg Arg1:T45 Arg2:T51	
+R19	Drg Arg1:T46 Arg2:T52	
+R20	Drg Arg1:T47 Arg2:T53	
+R21	Drg Arg1:T48 Arg2:T54	
+R22	Neg Arg1:T37 Arg2:T35	
+R23	Neg Arg1:T38 Arg2:T36	
+R24	Neg Arg1:T40 Arg2:T39	
+N21	Reference T35 ICD10:Z72.0	Używanie tytoniu
+T12	Condition 818 821	PFO
+N22	Reference T12 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T55	Treatment 822 865	zapinką Occlutech Figulla Flex II PFO 25/23
+N23	Reference T55 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+R2	Dat Arg1:T5 Arg2:T12	
+R25	Dat Arg1:T5 Arg2:T55	
+T56	Condition 1265 1268	PFO
+N24	Reference T56 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T57	Treatment 1269 1312	zapinką Occlutech Figulla Flex II PFO 25/23
+N25	Reference T57 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+R26	Dat Arg1:T15 Arg2:T56	
+R27	Dat Arg1:T15 Arg2:T57	

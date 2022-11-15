@@ -1,0 +1,94 @@
+T1	Investigation 2397 2407	Echo serca
+T2	Investigation 2410 2420	Holter EKG
+T3	Investigation 2423 2438	Próba Wysiłkowa
+T4	Drug 2370 2377	Enteros
+T5	Drug_dose 2378 2381	żel
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Behaviour 2318 2344	warunki mieszkaniowe dobre
+T7	Condition 2270 2279	Uczulenia
+N1	Reference T7 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T8	Negation 2266 2269	nie
+T9	Negation 2249 2252	nie
+T10	Behaviour 2253 2264	Inne używki
+R2	Neg Arg1:T8 Arg2:T10	
+T11	Behaviour 2232 2248	Palenie tytoniu:
+N2	Reference T11 ICD10:Z72.0	Używanie tytoniu
+R3	Neg Arg1:T9 Arg2:T11	
+T12	Condition 2207 2217	udar mózgu
+A1	Status T12 Family
+N3	Reference T12 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T13	Condition 2226 2230	udar
+A2	Status T13 Family
+N4	Reference T13 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T14	Condition 2147 2150	WZW
+N5	Reference T14 ICD10:B19	
+T15	Condition 2160 2169	borelioza
+N6	Reference T15 ICD10:A69.2	Choroba z Lyme
+T16	Negation 2170 2175	( - )
+R4	Neg Arg1:T16 Arg2:T15	
+T17	Negation 2151 2157	( -  )
+R5	Neg Arg1:T17 Arg2:T14	
+T18	Negation 2080 2084	brak
+T19	Treatment 2060 2077	Przebyte operacje
+R6	Neg Arg1:T18 Arg2:T19	
+T20	Condition 2014 2058	Nadżerkowe zapalenie błony śluzowej żołądka.
+N7	Reference T20 ICD10:K29	Zapalenie żołądka i dwunastnicy
+T21	Condition 1954 2004	Podejrzenie przebytego zapalenia mięśnia sercowego
+N8	Reference T21 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+A3	Source T21 Declared
+T22	Date 2007 2011	1983
+R7	Dat Arg1:T22 Arg2:T21	
+T23	Symptom 1914 1938	bóle w klatce piersiowej
+N9	Reference T23 ICD10:R07.4	
+T24	Negation 1907 1913	neguje
+R8	Neg Arg1:T24 Arg2:T23	
+T25	Symptom 1892 1904	zasłabnięcia
+N10	Reference T25 ICD10:R55	Omdlenie i zapaść
+T26	Negation 1885 1891	Neguje
+R9	Neg Arg1:T26 Arg2:T25	
+T27	Symptom 1851 1881	pogorszenie tolerancji wysiłku
+N11	Reference T27 ICD10:R53	Złe samopoczucie i zmęczenie
+T28	Condition 1656 1696	podejrzenia choroby niedokrwiennej serca
+A4	Source T28 Declared
+T29	Investigation_result 1702 1741	chwiejnych wartości ciśnienia tętniczeg
+T30	Investigation 1747 1763	EKG spoczynkowym
+T31	Investigation_result 1764 1832	obniżenia odcinka ST w I ,II, V3-V6 , pojedyncze pobudzenia komorowe
+R10	Inv Arg1:T30 Arg2:T31	
+T32	Drug 1446 1453	Enteros
+T33	Drug_dose 1454 1457	gel
+R11	Drg Arg1:T32 Arg2:T33	
+T34	Drug 1399 1405	Lakcid
+T35	Drug_dose 1406 1444	2x dz po 1 tabl godzinę od antybiotyku
+R12	Drg Arg1:T34 Arg2:T35	
+T36	Drug 1346 1354	Cipronex
+T37	Drug_dose 1355 1397	0,5 co 12 godzin po 1 tabl. przez 7-10 dni
+R13	Drg Arg1:T36 Arg2:T37	
+T38	Drug 1318 1324	Tolura
+T39	Drug_dose 1325 1345	40mg 1x 1 tabl/wiecz
+R14	Drg Arg1:T38 Arg2:T39	
+T40	Investigation 1232 1266	kontrola ciśnienia tętniczego krwi
+T41	Investigation 1143 1216	kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek.
+T42	Behaviour 1092 1131	Dieta lekkostrawna, niskocholesterolowa
+T43	Condition 664 689	Infekcja dróg oddechowych
+T44	Symptom 642 662	migrenowe bóle głowy
+N13	Reference T44 ICD10:R51	Ból głowy
+T45	Condition 597 640	nadżerkowe zapalenie błony śluzowej żołądka
+N14	Reference T45 ICD10:K29	Zapalenie żołądka i dwunastnicy
+T46	Condition 524 574	Podejrzenie przebytego zapalenia mięśnia sercowego
+A5	Source T46 Declared
+N15	Reference T46 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T47	Date 577 582	1983r
+R15	Dat Arg1:T47 Arg2:T46	
+T48	Condition 482 522	Podejrzenie choroby niedokrwiennej serca
+A6	Source T48 Declared
+T49	Condition 459 480	Nadciśnienie tętnicze
+N17	Reference T49 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T50	Condition 413 457	Łagodna niedomykalność zastawki trójdzielnej
+N18	Reference T50 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+N19	Reference T10 ICD10:Z72	Problemy związane ze stylem życia
+N16	Reference T48 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+T51	Treatment 833 899	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej.
+T52	Treatment 901 943	Ponowna hospitalizacja w tutejszej klinice
+T53	Date 944 958	za 4-6 tygodni
+R16	Dat Arg1:T53 Arg2:T52	
+N12	Reference T28 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona

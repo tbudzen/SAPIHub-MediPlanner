@@ -1,0 +1,1096 @@
+allRelations          : 24
+oks                   : 18
+isRedundantAndRemoveds: 2
+shouldNotBeRemoveds   : 2
+shouldBeBemoveds      : 2
+GOOD / BAD            : 20 / 4
+Sentence 0:
+------------------------------------------------
+Wiek: 17 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zastosowane leczenie
+
+
+
+Sentence 3:
+------------------------------------------------
+Warfin, Clexane, ANA, No-Spa, FNT, Paracetamol, Propofol, Metamizol, Zofran, Optylite, no-Spa, Aphtin
+------------------------------------------------
+
+
+
+Sentence 4:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 5:
+Zażywanie Warfinu: 5mg-5mg-7,5mg
+
+R1	Drg Arg1:T13 Arg2:T14 << OK >>	Warfinu -> 5mg-5mg-7,5mg  <RANK: 3> <info: start[561, 570] <type: RIGHT>>
+
+
+Sentence 6:
+Kontrola INR 3 dni od wypisu z Kliniki Kardiologii, następnie 1 x w tygodniu.
+R2	Dat Arg1:T16 Arg2:T15 << OK >>	3 dni od wypisu -> Kontrola INR  <RANK: 3> <info: start[597, 584] <type: LEFT>>
+R3	Dat Arg1:T17 Arg2:T15 <<SHOULD NOT BE REMOVED>>	następnie 1 x w tygodniu -> Kontrola INR <:REMOVED other first tag between (left):> <RANK: 2> <info: start[636, 584] <type: LEFT>>
+
+
+Sentence 7:
+Dalszy sposób dawkowania leku do decyzji lekarza POZ, ewentualne zmiany po uprzednim kontakcie telefonicznym z Kliniką Kardiologii ICZMP.
+
+
+Sentence 8:
+Docelowy INR 2,5 -3. 
+
+
+
+Sentence 9:
+Pacjentka zgłosi się ponownie do Kliniki Kardiologii w dn. 06.11.2019r. (po uprzednim potwierdzeniu telefonicznym terminu przyjęcia) celem kontynuacji diagnostyki i leczenia.
+R4	Dat Arg1:T20 Arg2:T21 << OK >>	w dn. 06.11.2019r -> zgłosi się ponownie do Kliniki Kardiologii  <RANK: 3> <info: start[875, 832] <type: LEFT>>
+R5	Dat Arg1:T20 Arg2:T22 <<SHOULD NOT BE REMOVED>>	w dn. 06.11.2019r -> celem kontynuacji diagnostyki i leczenia <:REMOVED many second tags on the right:> <RANK: 2> <info: start[875, 955] <type: RIGHT>>
+
+
+Sentence 10:
+Konieczne skierowanie od lekarza POZ. 
+
+
+
+Sentence 11:
+Zwolnienie z zajęć wychowania fizycznego do czasu hospitalizacji w Klinice Kardiologii ICZMP.
+
+
+
+Sentence 12:
+W razie pogorszenia stanu pacjentki konieczny kontakt z Kliniką Kardiologii ICZMP tel. 42 271 14 78
+------------------------------------------------
+
+
+
+Sentence 13:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 14:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią ubytku przegrody przedsionkowo-komorowej oraz ubytku przegrody przedsionków typu drugiego po leczeniu operacyjnym w dniu 14.04.2003 r
+   
+R6	Dat Arg1:T29 Arg2:T26 << OK >>	14.04.2003 r -> Wrodzona wada serca pod postacią ubytku przegrody przedsionkowo-komorowej  <RANK: 2> <info: start[1601, 1447] <type: LEFT>>
+R7	Dat Arg1:T29 Arg2:T27 << OK >>	14.04.2003 r -> ubytku przegrody przedsionków typu drugiego  <RANK: 3> <info: start[1601, 1526] <type: LEFT>>
+R8	Dat Arg1:T29 Arg2:T28 << OK >>	14.04.2003 r -> leczeniu operacyjnym  <RANK: 3> <info: start[1601, 1573] <type: LEFT>>
+
+
+Sentence 15:
+Stan po  reoperacji  rozszczepu przedniego płatka zastawki dwudzielnej z istotną  niedomykalnością mitralną w dniu 16.04.2007 r.
+   Niedomykalność zastawki mitralnej umiarkowana.
+   
+R9	Dat Arg1:T31 Arg2:T32 <<REDUNDANT!!!REMOVED>>	16.04.2007 r. -> Niedomykalność zastawki mitralnej umiarkowana <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1732, 1749] <type: RIGHT>>
+R10	Dat Arg1:T31 Arg2:T56 << OK >>	16.04.2007 r. -> rozszczepu przedniego płatka zastawki dwudzielnej  <RANK: 3> <info: start[1732, 1638] <type: LEFT>>
+R11	Dat Arg1:T31 Arg2:T57 << OK >>	16.04.2007 r. -> istotną  niedomykalnością mitralną  <RANK: 3> <info: start[1732, 1690] <type: LEFT>>
+R12	Dat Arg1:T31 Arg2:T30 << OK >>	16.04.2007 r. -> reoperacji  <RANK: 3> <info: start[1732, 1626] <type: LEFT>>
+
+
+Sentence 16:
+Utrwalone trzepotanie przedsionków.
+
+
+
+Sentence 17:
+------------------------------------------------
+
+
+
+Sentence 18:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 19:
+------------------------------------------------
+ Rozpoznanie II: |Opisowo:: Wada wrodzona serca pod postacią ubytku przegrody przedsionkowo-komorowej oraz ubytku przegrody przedsionków typu drugiego po leczeniu operacyjnym w dniu 14.04.2003 r
+   
+R13	Dat Arg1:T37 Arg2:T34 <<REDUNDANT!!!SHOULD BE REMOVED>>	14.04.2003 -> Wada wrodzona serca pod postacią ubytku przegrody przedsionkowo-komorowej  <RANK: 2> <info: start[2140, 1986] <type: LEFT>>
+R14	Dat Arg1:T37 Arg2:T35 <<REDUNDANT!!!SHOULD BE REMOVED>>	14.04.2003 -> ubytku przegrody przedsionków typu drugiego  <RANK: 3> <info: start[2140, 2065] <type: LEFT>>
+R15	Dat Arg1:T37 Arg2:T36 << OK >>	14.04.2003 -> leczeniu operacyjnym  <RANK: 3> <info: start[2140, 2112] <type: LEFT>>
+
+
+Sentence 20:
+Stan po  reoperacji   rozszczepu przedniego płatka zastawki dwudzielnej z istotną  niedomykalnością mitralną w dniu 16.04.2007 r.
+   Utrwalone trzepotanie przedsionków.
+   
+R16	Dat Arg1:T39 Arg2:T40 <<REDUNDANT!!!REMOVED>>	16.04.2007 -> Utrwalone trzepotanie przedsionków <:REMOVED many second tags on the right:> <RANK: 0> <info: start[2272, 2289] <type: RIGHT>>
+R17	Dat Arg1:T39 Arg2:T58 << OK >>	16.04.2007 -> rozszczepu przedniego płatka zastawki dwudzielnej  <RANK: 3> <info: start[2272, 2178] <type: LEFT>>
+R18	Dat Arg1:T39 Arg2:T59 << OK >>	16.04.2007 -> istotną  niedomykalnością mitralną  <RANK: 3> <info: start[2272, 2230] <type: LEFT>>
+R19	Dat Arg1:T39 Arg2:T38 << OK >>	16.04.2007 -> reoperacji  <RANK: 3> <info: start[2272, 2165] <type: LEFT>>
+
+
+Sentence 21:
+Niedomykalność zastawki mitralnej umiarkowana.|Rozpoznanie IV: |Rozpoznanie V: |Rozpozanie I: |Rozpoznanie III:
+------------------------------------------------
+
+
+
+Sentence 22:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 23:
+Stosowanie leków:
+Warfin 1x 3 mg . sugerowane dawkowanie co 3-ci dzień 5 mg , czyli  od piątku do niedzieli 3-3-5 mg. 
+
+R20	Drg Arg1:T42 Arg2:T43 << OK >>	Warfin -> 1x 3 mg  <RANK: 3> <info: start[2566, 2573] <type: RIGHT>>
+R21	Drg Arg1:T42 Arg2:T44 << OK >>	Warfin -> co 3-ci dzień 5 mg , czyli  od piątku do niedzieli 3-3-5 mg  <RANK: 2> <info: start[2566, 2605] <type: RIGHT>>
+
+
+Sentence 24:
+Kontrola INR 1x w tyg, najbliższa w dn 29.07.
+R22	Dat Arg1:T46 Arg2:T45 << OK >>	1x w tyg -> Kontrola INR  <RANK: 3> <info: start[2680, 2667] <type: LEFT>>
+R23	Dat Arg1:T47 Arg2:T45 << OK >>	najbliższa w dn 29.07 -> Kontrola INR  <RANK: 2> <info: start[2690, 2667] <type: LEFT>>
+
+
+Sentence 25:
+Dalszy sposób  dawkowania leku do decyzji lekarza POZ, ewentualnie zmiany po uprzedniej  po konsultacji telefonicznej z oddziałem kardiologii. 
+
+
+
+Sentence 26:
+Dziewczynka zgłosi się ponownie do kliniki kardiologii dn 28 sierpnia 2019 ( po uprzednim potwierdzeniu telefonicznym terminu przyjęcia)  
+R24	Dat Arg1:T50 Arg2:T49 << OK >>	dn 28 sierpnia 2019 -> zgłosi się ponownie do kliniki kardiologii  <RANK: 3> <info: start[2912, 2869] <type: LEFT>>
+
+
+Sentence 27:
+celem kontynuacji diagnostyki i leczenia.
+
+
+Sentence 28:
+( skierowanie od lekarza POZ)
+
+
+
+Sentence 29:
+------------------------------------------------
+
+
+
+Sentence 30:
+Zastosowane leczenie
+
+
+
+Sentence 31:
+------------------------------------------------
+Warfin, Pyralgina
+------------------------------------------------
+
+
+
+Sentence 32:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 33:
+Dziewczynka z wrodzoną wadą serca przyjęta do Kliniki do poszerzonych badań i ustalenia dalszego postępowania
+
+
+Sentence 34:
+Stan dość  dobry
+------------------------------------------------
+
+
+
+Sentence 35:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 36:
+Grupa krwi + p/c odpornościowe (powyżej 4. m-ca życia
+    NR-KS:G-19/014201
+    KODKRESKOWYPROBKI:G-19/014201
+    
+
+
+Sentence 37:
+GR:O
+    RH:+ (dodatni)
+    
+
+
+Sentence 38:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+
+
+
+Sentence 39:
+Grupa krwi + p/c odpornościowe (powyżej 4. m-ca życia
+    NR-KS:G-19/017180
+    KODKRESKOWYPROBKI:G-19/017180
+    GR:O
+    RH:+ (dodatni)
+    
+
+
+Sentence 40:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+
+
+
+Sentence 41:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.90[10^3/ul]
+    
+
+
+Sentence 42:
+RBC Krwinki czerwone:4.93[10^6/ul]
+    
+
+
+Sentence 43:
+HGB Hemoglobina:14.8[g/dl]
+    
+
+
+Sentence 44:
+HCT Hematokryt:42.6[%]
+    
+
+
+Sentence 45:
+MCV wskaźnik czerwonokrw:86.4[fl]
+    
+
+
+Sentence 46:
+MCH wskaźnik czerwonokrw:30.0[pg]
+    
+
+
+Sentence 47:
+MCHC wskaźnik czerwonokr:34.7[g/dl]
+    
+
+
+Sentence 48:
+PLT z morfologii:244[10^3/ul]
+    
+
+
+Sentence 49:
+RDW-SD:41.1[fl]
+    
+
+
+Sentence 50:
+RDW-CV:13.2[%]
+    PDW:10.5[fl]
+    
+
+
+Sentence 51:
+MPV:9.6[fl]
+    
+
+
+Sentence 52:
+P-LCR:21.2[%]
+    
+
+
+Sentence 53:
+PCT (hematokryt płytkowy:0.23[%]
+    
+
+
+Sentence 54:
+NEUTR# wartość bezwzględ:5.49[10^3/ul]
+    
+
+
+Sentence 55:
+NEUTR%:69.4[%]
+    
+
+
+Sentence 56:
+LYMH# wartość bezwzględn:1.60[10^3/ul]
+    
+
+
+Sentence 57:
+LYMPH%:20.3[%]
+    
+
+
+Sentence 58:
+MONO# wartość bezwzględn:0.56[10^3/ul]
+    
+
+
+Sentence 59:
+MONO%:7.1[%]
+    
+
+
+Sentence 60:
+EO# wartość bezwzględna:0.23[10^3/ul]
+    
+
+
+Sentence 61:
+EO%:2.9[%]
+    
+
+
+Sentence 62:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    
+
+
+Sentence 63:
+BASO%:0.3[%]
+    
+
+
+Sentence 64:
+NRBC %:0.0[%]
+    
+
+
+Sentence 65:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 66:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.29[10^3/ul]
+    
+
+
+Sentence 67:
+RBC Krwinki czerwone:4.68[10^6/ul]
+    
+
+
+Sentence 68:
+HGB Hemoglobina:14.0[g/dl]
+    
+
+
+Sentence 69:
+HCT Hematokryt:40.0[%]
+    
+
+
+Sentence 70:
+MCV wskaźnik czerwonokrw:85.5[fl]
+    
+
+
+Sentence 71:
+MCH wskaźnik czerwonokrw:29.9[pg]
+    
+
+
+Sentence 72:
+MCHC wskaźnik czerwonokr:35.0[g/dl]
+    
+
+
+Sentence 73:
+PLT z morfologii:266[10^3/ul]
+    
+
+
+Sentence 74:
+RDW-SD:39.3[fl]
+    
+
+
+Sentence 75:
+RDW-CV:12.6[%]
+    PDW:10.0[fl]
+    
+
+
+Sentence 76:
+MPV:9.7[fl]
+    P-LCR:22.0[%]
+    
+
+
+Sentence 77:
+PCT (hematokryt płytkowy:0.26[%]
+    
+
+
+Sentence 78:
+NEUTR# wartość bezwzględ:4.25[10^3/ul]
+    
+
+
+Sentence 79:
+NEUTR%:67.5[%]
+    
+
+
+Sentence 80:
+LYMH# wartość bezwzględn:1.45[10^3/ul]
+    
+
+
+Sentence 81:
+LYMPH%:23.1[%]
+    
+
+
+Sentence 82:
+MONO# wartość bezwzględn:0.40[10^3/ul]
+    
+
+
+Sentence 83:
+MONO%:6.4[%]
+    
+
+
+Sentence 84:
+EO# wartość bezwzględna:0.17[10^3/ul]
+    
+
+
+Sentence 85:
+EO%:2.7[%]
+    
+
+
+Sentence 86:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    
+
+
+Sentence 87:
+BASO%:0.3[%]
+    
+
+
+Sentence 88:
+NRBC %:0.0[%]
+    
+
+
+Sentence 89:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 90:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:30.2[sek]
+
+
+
+Sentence 91:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:43.8[sek]
+
+
+
+Sentence 92:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 93:
+Czas protrombinowy:12.3[sek]
+    
+
+
+Sentence 94:
+Wskaźnik PT:89.4[%]
+    
+
+
+Sentence 95:
+INR:1.11
+Czas protrombinowy (PT)
+    
+
+
+Sentence 96:
+Czas protrombinowy:24.5[sek]
+    
+
+
+Sentence 97:
+Wskaźnik PT:44.9[%]
+    
+
+
+Sentence 98:
+INR:2.17
+Czas protrombinowy (PT)
+    
+
+
+Sentence 99:
+Czas protrombinowy:31.6[sek]
+    
+
+
+Sentence 100:
+Wskaźnik PT:34.8[%]
+    
+
+
+Sentence 101:
+INR:2.78
+Czas protrombinowy (PT)
+    
+
+
+Sentence 102:
+Czas protrombinowy:34.0[sek]
+    
+
+
+Sentence 103:
+Wskaźnik PT:32.4[%]
+    
+
+
+Sentence 104:
+INR:2.99
+Czas protrombinowy (PT)
+    
+
+
+Sentence 105:
+Czas protrombinowy:34.1[sek]
+    
+
+
+Sentence 106:
+Wskaźnik PT:32.3[%]
+    
+
+
+Sentence 107:
+INR:3.00
+Czas protrombinowy (PT)
+    
+
+
+Sentence 108:
+Czas protrombinowy:40.4[sek]
+    
+
+
+Sentence 109:
+Wskaźnik PT:27.2[%]
+    
+
+
+Sentence 110:
+INR:3.53
+Czas protrombinowy (PT)
+    
+
+
+Sentence 111:
+Czas protrombinowy:37.6[sek]
+    
+
+
+Sentence 112:
+Wskaźnik PT:29.3[%]
+    
+
+
+Sentence 113:
+INR:3.29
+Czas protrombinowy (PT)
+    
+
+
+Sentence 114:
+Czas protrombinowy:25.5[sek]
+    
+
+
+Sentence 115:
+Wskaźnik PT:43.1[%]
+    
+
+
+Sentence 116:
+INR:2.26
+Czas protrombinowy (PT)
+    
+
+
+Sentence 117:
+Czas protrombinowy:13.3[sek]
+    
+
+
+Sentence 118:
+Wskaźnik PT:82.7[%]
+    
+
+
+Sentence 119:
+INR:1.20
+Czas protrombinowy (PT)
+    
+
+
+Sentence 120:
+Czas protrombinowy:12.8[sek]
+    
+
+
+Sentence 121:
+Wskaźnik PT:85.9[%]
+    
+
+
+Sentence 122:
+INR:1.16
+Czas protrombinowy (PT)
+    
+
+
+Sentence 123:
+Czas protrombinowy:13.6[sek]
+    
+
+
+Sentence 124:
+Wskaźnik PT:80.9[%]
+    
+
+
+Sentence 125:
+INR:1.23
+Czas protrombinowy (PT)
+    
+
+
+Sentence 126:
+Czas protrombinowy:17.3[sek]
+    
+
+
+Sentence 127:
+Wskaźnik PT:63.6[%]
+    
+
+
+Sentence 128:
+INR:1.55
+Czas protrombinowy (PT)
+    
+
+
+Sentence 129:
+Czas protrombinowy:23.3[sek]
+    
+
+
+Sentence 130:
+Wskaźnik PT:47.2[%]
+    
+
+
+Sentence 131:
+INR:2.07
+Czas protrombinowy (PT)
+    
+
+
+Sentence 132:
+Czas protrombinowy:35.7[sek]
+    
+
+
+Sentence 133:
+Wskaźnik PT:30.8[%]
+    
+
+
+Sentence 134:
+INR:3.13
+Czas protrombinowy (PT)
+    
+
+
+Sentence 135:
+Czas protrombinowy:29.8[sek]
+    
+
+
+Sentence 136:
+Wskaźnik PT:36.9[%]
+    
+
+
+Sentence 137:
+INR:2.63
+Czas trombinowy TT: Czas trombinowy TT:16.6[sek]
+
+
+
+Sentence 138:
+Fibrynogen: Fibrynogen:2.63[g/L]
+
+
+
+Sentence 139:
+D-dimer - test ilościowy: D-dimer - test ilościowy:270[ng/ml]
+
+
+
+Sentence 140:
+Badanie ogólne moczu
+    
+
+
+Sentence 141:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 142:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 143:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 144:
+przejrzystość:niezupełna[ ]
+    
+
+
+Sentence 145:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 146:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 147:
+ciężar właściwy:1.016[ ]
+    
+
+
+Sentence 148:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 149:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 150:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 151:
+erytrocyty:nieobecne[ ]
+    
+
+
+Sentence 152:
+leukocyty:obecne[ ]
+    
+
+
+Sentence 153:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 154:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 155:
+nabłonki okrągłe:pojedyncze[w preparacie]
+    
+
+
+Sentence 156:
+leukocyty:60 /ul[ul]
+    erytrocyty świeże i częś:7/ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:nieliczne[w preparacie]
+
+
+
+Sentence 157:
+TSH: TSH:2.08[uIU/ml]
+
+
+
+Sentence 158:
+TSH: TSH:0.89[uIU/ml]
+
+
+
+Sentence 159:
+ALAT: ALAT:21[U/L]
+ALAT: ALAT:12[U/L]
+ASPAT: ASPAT:22[U/L]
+ASPAT: ASPAT:18[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 160:
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 161:
+Sód (Na): Sód:144[mmol/L]
+
+
+
+Sentence 162:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 163:
+Potas (K): Potas:3.9[mmol/L]
+
+
+
+Sentence 164:
+Potas (K): Potas:4.1[mmol/L]
+
+
+
+Sentence 165:
+Chlorki (Cl): Chlorki:106[mmol/L]
+
+
+
+Sentence 166:
+Fosforany nieorganiczne: Fosforany nieorganiczne:1.33[mmol/L]
+
+
+
+Sentence 167:
+Kreatynina + GFR
+    
+
+
+Sentence 168:
+Kreatynina w surowicy:0.64[mg/dl]
+    eGFR stand.
+
+
+Sentence 169:
+wg Schwartza:149.5[ml/min/1,73 m^2]
+    
+
+
+Sentence 170:
+eGFR zmod.
+
+
+Sentence 171:
+wg Schwartza:112.3[ml/min/1,73 m^2]
+    wzrost:174[cm]
+
+
+
+Sentence 172:
+Kreatynina + GFR
+    
+
+
+Sentence 173:
+Kreatynina w surowicy:0.65[mg/dl]
+    
+
+
+Sentence 174:
+eGFR stand. wg Schwartza:149.8[ml/min/1,73 m^2]
+    eGFR zmod.
+
+
+Sentence 175:
+wg Schwartza:112.5[ml/min/1,73 m^2]
+    wzrost:177[cm]
+
+
+
+Sentence 176:
+Magnez: Magnez:0.70[mmol/L]
+
+
+
+Sentence 177:
+Mocznik: Mocznik:26[mg/dl]
+
+
+
+Sentence 178:
+Mocznik: Mocznik:23[mg/dl]
+
+
+
+Sentence 179:
+Wapń całkowity: Wapń całkowity:2.38[mmol/L]
+
+
+
+Sentence 180:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    
+
+
+Sentence 181:
+pH:7.356
+    pCO2:47.9[mmHg]
+    BE:0.50[mmol/L]
+    
+
+
+Sentence 182:
+HCO3:26.1[mmol/L]
+    
+
+
+Sentence 183:
+pO2:41.9[mmHg]
+    
+
+
+Sentence 184:
+O2Sat:76.2[%]
+
+
+
+Sentence 185:
+Glukoza w surowicy: Glukoza w surowicy:97[mg/dl]
+
+
+
+Sentence 186:
+Glukoza w surowicy: Glukoza w surowicy:81[mg/dl]
+
+
+
+Sentence 187:
+NT-proBNP surowica: NT-proBNP w surowicy:101[pg/ml]
+
+
+
+Sentence 188:
+NT-proBNP surowica: NT-proBNP w surowicy:216[pg/ml]
+
+
+
+Sentence 189:
+------------------------------------------------
+
+
+
+Sentence 190:
+ICD10
+------------------------------------------------
+Q21.2
+Q23.3
+Z98.8
+I48
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 191:
+ICD9
+------------------------------------------------
+89.522
+A01
+
+
+
+Sentence 192:
+I81
+E65
+G21
+G
+L43
+
+
+
+Sentence 193:
+G25
+L23
+89.541
+M87
+G49
+L69
+N45
+N24
+O29
+C55
+G53
+G11
+I97
+I17
+O77
+M37
+I19
+O35
+
+
+
+Sentence 194:
+N13
+88.721
+88.761
+------------------------------------------------
+
+

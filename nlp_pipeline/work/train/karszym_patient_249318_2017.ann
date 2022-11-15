@@ -1,0 +1,58 @@
+T1	Condition 471 526	Wrodzona wada serca pod postacią przerwanego łuku aorty
+N1	Reference T1 ICD10:Q25.4	Inne wrodzone wady rozwojowe aorty
+T2	Condition 532 548	ubytku przegrody
+N2	Reference T2 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T3	Treatment 567 594	plastyce łuku met.Crafoorda
+N3	Reference T3 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T4	Treatment 600 632	przewężenia pnia tętnicy płucnej
+N4	Reference T4 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T5	Date 634 643	23.01.04r
+T6	Treatment 657 686	plastyce balonowej łuku aorty
+T7	Date 688 697	09.12.04r
+T8	Treatment 703 711	Plastyka
+N5	Reference T8 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T9	Condition 712 738	ubytku w przegrodzie komór
+N6	Reference T9 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T10	Treatment 744 787	zdjęcie podwiązki przewężającej pień płucny
+N7	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T11	Date 798 816	w dniu 15.01.2005r
+T12	Treatment 822 863	Ponowna angioplastyka balonowa łuku aorty
+T13	Date 865 876	23.11.2007r
+T14	Condition 882 914	Niedrożność lewej tętnicy udowej
+T15	Negation 1065 1068	bez
+T16	Drug 1069 1074	leków
+T17	Treatment 1183 1217	Kontrola w Poradni Kardiologicznej
+T18	Date 1218 1224	za rok
+T19	Condition 1384 1403	wrodzoną wadą serca
+N8	Reference T19 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T20	Condition 1405 1408	IAA
+N9	Reference T20 ICD10:Q25.4	Inne wrodzone wady rozwojowe aorty
+T21	Condition 1410 1413	VSD
+N10	Reference T21 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T22	Treatment 1419 1439	leczeniu operacyjnym
+N11	Reference T22 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T23	Symptom 1575 1585	Stan dobry
+T24	Date 1587 1604	W ostatnim czasie
+T25	Negation 1605 1608	bez
+T26	Condition 1609 1617	infekcji
+T27	Condition 1619 1626	Alergia
+N12	Reference T27 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T28	Negation 1629 1645	nie potwierdzona
+T29	Drug 1647 1657	Leki stałe
+T30	Negation 1660 1673	nie otrzymuje
+R1	Neg Arg1:T30 Arg2:T29	
+R2	Neg Arg1:T28 Arg2:T27	
+R3	Neg Arg1:T25 Arg2:T26	
+R4	Dat Arg1:T24 Arg2:T26	
+R5	Dat Arg1:T18 Arg2:T17	
+R6	Neg Arg1:T15 Arg2:T16	
+R7	Dat Arg1:T13 Arg2:T12	
+R8	Dat Arg1:T11 Arg2:T8	
+R9	Dat Arg1:T11 Arg2:T9	
+R10	Dat Arg1:T11 Arg2:T10	
+R11	Dat Arg1:T7 Arg2:T6	
+R12	Dat Arg1:T5 Arg2:T4	
+R13	Dat Arg1:T5 Arg2:T3	
+T31	Treatment 789 797	operacja
+N13	Reference T31 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R14	Dat Arg1:T11 Arg2:T31	

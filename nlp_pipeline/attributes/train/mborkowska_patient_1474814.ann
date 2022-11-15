@@ -1,0 +1,102 @@
+T1	Condition 439 472	Napadowy częstoskurcz nadkomorowy
+N1	Reference T1 ICD10:I47.1	Częstoskurcz nadkomorowy
+T2	Condition 474 541	Przewlekłe autoimmunizacyjne zapalenie tarczycy w stadium eutyreozy
+N2	Reference T2 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T3	Condition 543 552	Hirsutyzm
+N3	Reference T3 ICD10:L68.0	Hirsutyzm
+T4	Condition 554 570	Insulinooporność
+N4	Reference T4 ICD10:E16	Inne zaburzenia wydzielania wewnętrznego trzustki
+T5	Condition 572 589	Torbiel śledziony
+N5	Reference T5 ICD10:D73.4	Torbiel śledziony
+T6	Symptom 591 608	Przewlekły kaszel
+N6	Reference T6 ICD10:R05	Kaszel
+T7	Investigation 1123 1135	USG tarczycy
+T8	Investigation 1179 1211	okresowa kontrola TSH, fT3, fT4.
+T9	Investigation 2241 2287	samokontrola ciśnienia tętniczego krwi i tętna
+T10	Drug 2330 2340	Concor Cor
+T11	Drug_dose 2341 2364	1,25mg 1 tabletka rano.
+R1	Drg Arg1:T10 Arg2:T11	
+T12	Drug 2366 2379	Glucophage XR
+T13	Drug_dose 2380 2401	1 tabletka wieczorem.
+R2	Drg Arg1:T12 Arg2:T13	
+T14	Behaviour 2122 2224	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T15	Investigation 2011 2094	kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T16	Date 2106 2116	za 3-5 dni
+R3	Dat Arg1:T16 Arg2:T15	
+T17	Investigation_result 1779 1809	białko C i S, czynnik V Leiden
+T18	Date 1811 1826	za 3-4 tygodnie
+R4	Dat Arg1:T18 Arg2:T17	
+T19	Investigation 1851 1894	badania w kierunku mutacji genu protrombiny
+T20	Investigation 1225 1273	poszerzenie diagnostyki zaburzeń miesiączkowania
+T21	Investigation 1403 1491	LH, FSH, estradiol, testosteron, SHBG, 17OHprogesteron, androstendion, DHEAS, prolaktyna
+T22	Date 1348 1379	w 3.-5. dniu cyklu miesięcznego
+R5	Dat Arg1:T22 Arg2:T21	
+T23	Investigation 1556 1576	badaniach obrazowych
+T24	Condition 1578 1595	torbiel śledziony
+R6	Inv Arg1:T23 Arg2:T24	
+T25	Investigation 3618 3628	Echo serca
+T26	Investigation 3630 3641	 Holter-ekg
+T27	Investigation 3643 3652	Holter-RR
+T28	Drug 3540 3576	Marinette - tabletki antykoncepcyjne
+T29	Date 3580 3590	04.03.2019
+T30	Negation 3591 3604	nie przyjmuje
+T31	Condition 3497 3500	WZW
+N7	Reference T31 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T32	Condition 3506 3514	gruźlica
+N8	Reference T32 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T33	Condition 3520 3529	borelioza
+N9	Reference T33 ICD10:A69.2	Choroba z Lyme
+T34	Negation 3501 3504	(-)
+R7	Neg Arg1:T34 Arg2:T31	
+T35	Negation 3515 3518	(-)
+R8	Neg Arg1:T35 Arg2:T32	
+T36	Negation 3530 3533	(-)
+R9	Neg Arg1:T36 Arg2:T33	
+T37	Negation 3471 3479	nie było
+T38	Treatment 3451 3469	Zabiegi operacyjne
+R10	Neg Arg1:T37 Arg2:T38	
+T39	Behaviour 3446 3450	pali
+N10	Reference T39 ICD10:T65.2	Tytoń i nikotyna
+T40	Negation 3442 3445	nie
+R11	Neg Arg1:T40 Arg2:T39	
+T41	Investigation_result 3343 3369	wysokie wartości d-dimerów
+T42	Condition 3230 3239	hirsutyzm
+N11	Reference T42 ICD10:L68.0	Hirsutyzm
+T43	Condition 3259 3299	diagnostyki w kierunku choroby Hashimoto
+A1	Source T43 Declared
+N12	Reference T43 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T44	Symptom 3132 3140	Omdlenia
+N13	Reference T44 ICD10:R55	Omdlenie i zapaść
+T45	Symptom 3142 3161	utraty przytomności
+N14	Reference T45 ICD10:R55	Omdlenie i zapaść
+T46	Negation 3162 3177	nie występowały
+R12	Neg Arg1:T46 Arg2:T45	
+R13	Neg Arg1:T46 Arg2:T44	
+T47	Condition 2545 2582	napadowym częstoskurczem nadkomorowym
+N15	Reference T47 ICD10:I48	Migotanie i trzepotanie przedsionków
+T48	Symptom 2649 2658	duszności
+N16	Reference T48 ICD10:R06.0	Duszność
+T49	Symptom 2660 2683	uczucia ucisku w gardle
+T50	Symptom 2689 2712	uczucia kołatania serca
+N17	Reference T50 ICD10:R00.2	Kołatanie serca
+T51	Date 2764 2771	08.2018
+T52	Condition 2783 2832	częstoskurcz nadkomorowy (z wąskim zespołami QRS)
+N18	Reference T52 ICD10:I47.1	Częstoskurcz nadkomorowy
+R14	Dat Arg1:T51 Arg2:T52	
+T53	Symptom 2939 2969	kilkuminutowe napady duszności
+N19	Reference T53 ICD10:R06.0	Duszność
+T54	Symptom 2971 2994	uczucia braku powietrza
+T55	Symptom 3000 3015	kołatania serca
+N20	Reference T55 ICD10:R00.2	Kołatanie serca
+T56	Date 2911 2930	od listopada 2018r.
+R15	Dat Arg1:T56 Arg2:T55	
+R16	Dat Arg1:T56 Arg2:T54	
+R17	Dat Arg1:T56 Arg2:T53	
+T57	Symptom 3124 3130	kaszlu
+N21	Reference T57 ICD10:R05	Kaszel
+T58	Date 1275 1296	za minimum 3 miesiące
+R18	Dat Arg1:T58 Arg2:T21	
+R19	Dat Arg1:T29 Arg2:T28	
+R20	Neg Arg1:T30 Arg2:T28	
+N22	Reference T24 ICD10:D73.4	Torbiel śledziony
+T59	Treatment 2881 2909	umiarowiona farmakologicznie

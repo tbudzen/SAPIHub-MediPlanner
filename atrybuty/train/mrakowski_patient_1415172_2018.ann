@@ -1,0 +1,22 @@
+T1	Treatment 329 363	Kontrola w Poradni Kardiologicznej
+T2	Date 364 373	za 3 lata
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Treatment 375 393	ocena cieśni aorty
+R2	Dat Arg1:T2 Arg2:T3	
+T4	Behaviour 396 446	Przeciwwskazane nurkowanie na dużych głębokościach
+T5	Investigation 448 491	Systematyczna kontrola ciśnienia tętniczego
+T6	Condition 719 738	Drożny otwór owalny
+N1	Reference T6 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T7	Drug 858 861	ANA
+T8	Treatment 863 878	znieczulenie do
+T9	Investigation 879 882	TEE
+T10	Condition 1018 1021	ASD
+N2	Reference T10 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T11	Treatment 1038 1058	zabiegu operacyjnego
+T12	Condition 1091 1108	wywiad alergiczny
+N3	Reference T12 ICD10:T78.4	Alergia, nieokreślona
+T13	Negation 1109 1115	ujemny
+R3	Neg Arg1:T13 Arg2:T12	
+T14	Drug 1060 1074	leków na stałe
+T15	Negation 1075 1088	nie otrzymuje
+R4	Neg Arg1:T15 Arg2:T14	

@@ -1,0 +1,33 @@
+T1	Negation 341 344	Bez
+T2	Drug 345 350	leków
+R1	Neg Arg1:T1 Arg2:T2	
+T3	Treatment 462 556	Zgłosi się do oddziału nefrologicznego, kardiologicznego , pediatrycznego Szpitala Klinicznego
+T4	Date 591 607	w dn 29.05.2017r
+R2	Dat Arg1:T4 Arg2:T3	
+T5	Symptom 727 753	jakichkolwiek dolegliwości
+T6	Symptom 757 763	omdleń
+N1	Reference T6 ICD10:R55	Omdlenie i zapaść
+T7	Symptom 765 775	zasłabnięć
+N2	Reference T7 ICD10:R55	Omdlenie i zapaść
+T8	Treatment 785 811	wezwanie pomocy lekarskiej
+T9	Treatment 826 867	pilny kontakt z Kliniką Kardiologii ICZMP
+T10	Condition 1108 1154	Zaawansowany blok przedsionkowo-komorowy II st
+N3	Reference T10 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T11	Condition 1158 1178	Tachykardia zatokowa
+N4	Reference T11 ICD10:R00.0	Tachykardia, nieokreślona
+T12	Condition 1183 1210	Mózgowe porażenie dziecięce
+N5	Reference T12 ICD10:G80.9	Mózgowe porażenie dziecięce, nieokreślone
+T13	Date 1335 1342	od roku
+T14	Condition 1343 1359	zaburzenia rytmu
+N6	Reference T14 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T15	Drug 1361 1375	leków na stałe
+T16	Negation 1376 1389	nie otrzymuje
+T17	Treatment 1395 1415	pod opieką neurologa
+T18	Condition 1416 1420	MPDz
+N7	Reference T18 ICD10:G80.9	Mózgowe porażenie dziecięce, nieokreślone
+T19	Condition 1422 1439	wywiad alergiczny
+N8	Reference T19 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T20	Negation 1440 1446	ujemny
+R3	Neg Arg1:T20 Arg2:T19	
+R4	Neg Arg1:T16 Arg2:T15	
+R5	Dat Arg1:T13 Arg2:T14	

@@ -1,0 +1,81 @@
+T1	Condition 449 516	Wrodzona złożona wada zastawki aortalnej w postaci łagodnej stenozy
+N1	Reference T1 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T2	Condition 519 576	łagodną niedomykalnością na podłożu zastawki dwupłatkowej
+T3	Condition 578 608	Pojedyncze pobudzenia komorowe
+N3	Reference T3 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T4	Condition 611 622	nadkomorowe
+N4	Reference T4 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T5	Treatment 732 797	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T6	Date 800 813	co 6 miesięcy
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Treatment 816 848	Kolejna hospitalizacja w Klinice
+T8	Date 849 863	za 24 miesiące
+R2	Dat Arg1:T8 Arg2:T7	
+T9	Behaviour 868 908	Dieta lekkostrawna , niskocholesterolowa
+T10	Investigation 912 1005	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek, PT , INR
+T11	Investigation 1009 1057	Systematyczna kontrola ciśnienia tętniczego krwi
+T12	Treatment 1060 1101	Wskazane systematyczne przyjmowanie leków
+T13	Symptom 1499 1513	kołatani serca
+N5	Reference T13 ICD10:R00.2	Kołatanie serca
+T14	Symptom 1519 1549	pogorszenia tolerancji wysiłku
+N6	Reference T14 ICD10:R53	Złe samopoczucie i zmęczenie
+T15	Symptom 1552 1574	Nasilenie dolegliwości
+T16	Date 1575 1592	od kilku miesięcy
+R3	Dat Arg1:T16 Arg2:T15	
+T17	Symptom 1611 1686	ból w klatce piersiowej nasilające się przy wdechu , nie zależne od wysiłku
+N7	Reference T17 ICD10:R07.1	Ból w klatce piersiowej podczas oddychania
+T18	Negation 1690 1696	Neguje
+T19	Symptom 1697 1709	zasłabnięcia
+N8	Reference T19 ICD10:R55	Omdlenie i zapaść
+R4	Neg Arg1:T18 Arg2:T19	
+T20	Condition 1727 1791	Wrodzona wada serca pod postacią dwupłatkowej zastawki aortalnej
+N9	Reference T20 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T21	Investigation 1796 1817	ECHO przezprzełykowym
+N2	Reference T2 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T22	Investigation_result 1819 1864	zastawka aortalna - dwupłatkowa, dwuspoidłowa
+N10	Reference T22 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T23	Investigation_result 1866 1922	pierścień, LVOT i opuszka są owalne, nieistotne zwężenie
+N11	Reference T23 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T24	Investigation_result 1924 1975	AVA planimetrycznie 2,3 cm2, śladowa niedomykalność
+R5	Inv Arg1:T21 Arg2:T22	
+R6	Inv Arg1:T21 Arg2:T23	
+R7	Inv Arg1:T21 Arg2:T24	
+T25	Treatment 1988 2001	appendektomii
+T26	Date 2003 2007	2015
+R8	Dat Arg1:T26 Arg2:T25	
+T27	Condition 2011 2059	Przepuklina krążków międzykręgowych w lędźwiowym
+N12	Reference T27 ICD10:M99.5	Zwężenie kanału kręgowego przez przepuklinę krążka międzykręgowego
+T28	Treatment 2083 2100	Przebyte operacje
+T29	Treatment 2111 2124	appendektomii
+T30	Treatment 2126 2145	Leczenie przewlekłe
+T31	Treatment 2148 2162	neurologicznej
+T32	Condition 2191 2194	WZW
+N13	Reference T32 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T33	Negation 2197 2198	-
+R9	Neg Arg1:T33 Arg2:T32	
+T34	Condition 2204 2213	borelioza
+N14	Reference T34 ICD10:A69.2	Choroba z Lyme
+T35	Negation 2216 2217	-
+R10	Neg Arg1:T35 Arg2:T34	
+T36	Condition 2222 2241	wywiadzie rodzinnym
+T37	Condition 2251 2272	nadciśnienie tętnicze
+N15	Reference T37 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T38	Behaviour 2275 2290	Palenie tytoniu
+N16	Reference T38 ICD10:Z72.0	Używanie tytoniu
+T39	Negation 2292 2295	nie
+R11	Neg Arg1:T39 Arg2:T38	
+T40	Behaviour 2296 2307	Inne używki
+T41	Negation 2309 2312	nie
+R12	Neg Arg1:T41 Arg2:T40	
+T42	Condition 2313 2322	Uczulenia
+N17	Reference T42 ICD10:T78.4	Alergia, nieokreślona
+T43	Negation 2324 2330	neguje
+R13	Neg Arg1:T43 Arg2:T42	
+T44	Behaviour 2347 2373	warunki mieszkaniowe dobre
+T45	Investigation 2440 2450	Echo serca
+T46	Investigation 2453 2467	Holter EKG, RR
+T47	Investigation 2471 2486	Próba Wysiłkowa
+N18	Reference T40 ICD10:Z72	Problemy związane ze stylem życia
+T48	Negation 2403 2406	bez
+T49	Drug 2407 2425	leków przewlekłych
+R14	Neg Arg1:T48 Arg2:T49	

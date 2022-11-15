@@ -1,0 +1,168 @@
+T1	Treatment 556 621	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T2	Behaviour 624 664	Dieta lekkostrawna , niskocholesterolowa
+T3	Behaviour 668 699	Zaprzestanie palenia papierosów
+T4	Investigation 702 785	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T5	Investigation 788 836	Systematyczna kontrola ciśnienia tętniczego krwi
+T6	Treatment 839 880	Wskazane systematyczne przyjmowanie leków
+T7	Drug 887 893	Letrox
+T8	Drug_dose 894 924	100 ug 1 dzienniex1 tabl. rano
+R1	Drg Arg1:T7 Arg2:T8	
+T9	Drug 926 933	Roswera
+T10	Drug_dose 934 968	15 mg 1dziennie x1 tabl. wieczorem
+R2	Drg Arg1:T9 Arg2:T10	
+T11	Drug 970 975	Axtil
+T12	Drug_dose 976 1008	2,5 mg 2 dziennie x 1 tabl. rano
+R3	Drg Arg1:T11 Arg2:T12	
+T13	Drug 1010 1022	Tertensif SR
+T14	Drug_dose 1023 1046	1 dziennie x1 tabl rano
+R4	Drg Arg1:T13 Arg2:T14	
+T15	Symptom 1285 1310	bólów w klatce piersiowej
+N1	Reference T15 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T16	Condition 1312 1353	Łagodna niedomykalność zastawki mitralnej
+N2	Reference T16 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T17	Condition 1355 1376	Nadciśnienie tętnicze
+N3	Reference T17 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T18	Condition 1378 1401	Hiperlipidemia mieszana
+N4	Reference T18 ICD10:E78.2	Hiperlipidemia mieszana
+T19	Condition 1403 1425	Niedoczynność tarczycy
+N5	Reference T19 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T20	Treatment 1435 1451	radiojodoterapii
+A1	Status T20 Historical_Insignificant
+T22	Date 1476 1480	2007
+R6	Dat Arg1:T22 Arg2:T20	
+T23	Behaviour 1483 1493	Nikotynizm
+N7	Reference T23 ICD10:Z72.0	Używanie tytoniu
+T24	Condition 1721 1735	Hiperlipidemia
+N8	Reference T24 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T25	Condition 1737 1759	Niedoczynność tarczycy
+N9	Reference T25 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T26	Treatment 1769 1785	radiojodoterapii
+A3	Status T26 Historical_Insignificant
+T28	Date 1810 1814	2007
+R8	Dat Arg1:T28 Arg2:T26	
+T29	Behaviour 1817 1827	Nikotynizm
+N11	Reference T29 ICD10:Z72.0	Używanie tytoniu
+T30	Symptom 2226 2261	pobolewania w okolicy przedsercowej
+N12	Reference T30 ICD10:R07.2	Ból w okolicy przedsercowej
+T31	Negation 2264 2270	Neguje
+T32	Symptom 2271 2283	zasłabnięcia
+R9	Neg Arg1:T31 Arg2:T32	
+T33	Condition 2301 2322	Nadciśnienie tętnicze
+N13	Reference T33 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T34	Condition 2324 2338	Hiperlipidemia
+N14	Reference T34 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T35	Condition 2340 2362	Niedoczynność tarczycy
+N15	Reference T35 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T36	Treatment 2372 2388	radiojodoterapii
+A5	Status T36 Historical_Insignificant
+T38	Date 2413 2417	2007
+R11	Dat Arg1:T38 Arg2:T36	
+T39	Behaviour 2420 2430	Nikotynizm
+N17	Reference T39 ICD10:Z72.0	Używanie tytoniu
+T40	Treatment 2433 2450	Przebyte operacje
+T41	Negation 2453 2457	brak
+R12	Neg Arg1:T41 Arg2:T40	
+T42	Treatment 2458 2477	Leczenie przewlekłe
+T43	Negation 2480 2484	brak
+R13	Neg Arg1:T43 Arg2:T42	
+T44	Condition 2513 2516	WZW
+N18	Reference T44 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T45	Condition 2526 2535	borelioza
+N19	Reference T45 ICD10:A69.2	Choroba z Lyme
+T46	Condition 2542 2546	Odra
+N20	Reference T46 ICD10:B05	Odra
+T47	Negation 2549 2550	-
+R14	Neg Arg1:T47 Arg2:T46	
+T48	Negation 2538 2539	-
+R15	Neg Arg1:T48 Arg2:T45	
+T49	Negation 2519 2520	-
+R16	Neg Arg1:T49 Arg2:T44	
+T50	Condition 2587 2595	cukrzycę
+A7	Status T50 Family
+N21	Reference T50 ICD10:E14	Cukrzyca nieokreślona
+T51	Behaviour 2597 2641	Palenie tytoniu: tak ( 5 papierosów dziennie
+N22	Reference T51 ICD10:Z72.0	Używanie tytoniu
+T52	Date 2642 2651	od 40 lat
+R17	Dat Arg1:T52 Arg2:T51	
+T53	Behaviour 2654 2665	Inne używki
+T54	Negation 2667 2670	nie
+R18	Neg Arg1:T54 Arg2:T53	
+T55	Condition 2671 2680	Uczulenia
+T56	Negation 2682 2688	neguje
+R19	Neg Arg1:T56 Arg2:T55	
+T57	Behaviour 2705 2731	warunki mieszkaniowe dobre
+T58	Drug 2756 2762	Letrox
+T59	Drug_dose 2763 2792	100 ug 1dzienniex1 tabl. rano
+R20	Drg Arg1:T58 Arg2:T59	
+T60	Drug 2794 2801	Roswera
+T61	Drug_dose 2802 2836	15 mg 1dziennie x1 tabl. wieczorem
+R21	Drg Arg1:T60 Arg2:T61	
+T62	Drug 2838 2843	Axtil
+T63	Drug_dose 2844 2875	2,5 mg 2 dziennie x1 tabl. rano
+R22	Drg Arg1:T62 Arg2:T63	
+T64	Drug 2877 2889	Tertensif SR
+T65	Drug_dose 2890 2913	1 dziennie x1 tabl rano
+R23	Drg Arg1:T64 Arg2:T65	
+T66	Investigation 2929 2939	Echo serca
+T67	Investigation 2942 2957	Próba Wysiłkowa
+T68	Symptom 3170 3213	podwyższonych wartości ciśnienia tętniczego
+T69	Condition 3215 3256	podejrzenie nadciśnienia białego fartucha
+T70	Investigation_result 3259 3308	Pomiary ciśnień domowych - często ok. 150/90 mmHg
+T71	Treatment 3323 3339	radiojodoterapia
+A8	Status T71 Historical_Insignificant
+T73	Date 3364 3368	2007
+R25	Dat Arg1:T73 Arg2:T71	
+T74	Condition 3374 3415	niedoczynność tarczycy w stanie eutyreozy
+N24	Reference T74 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T75	Condition 3417 3437	hipercholesterolemia
+N25	Reference T75 ICD10:E78.0	Czysta hipercholesterolemia
+T76	Behaviour 3439 3464	nikotynizm (15 paczkolat)
+N26	Reference T76 ICD10:Z72.0	Używanie tytoniu
+T77	Symptom 3466 3490	Bóle w klatce piersiowej
+N27	Reference T77 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T78	Symptom 3492 3507	kołatania serca
+N28	Reference T78 ICD10:R00.2	Kołatanie serca
+T79	Symptom 3509 3517	omdlenia
+N29	Reference T79 ICD10:R55	Omdlenie i zapaść
+T80	Symptom 3519 3531	zasłabnięcia
+T81	Negation 3532 3538	neguje
+R26	Neg Arg1:T81 Arg2:T80	
+R27	Neg Arg1:T81 Arg2:T79	
+R28	Neg Arg1:T81 Arg2:T78	
+R29	Neg Arg1:T81 Arg2:T77	
+T82	Condition 3541 3550	Uczulenia
+T83	Negation 3551 3557	neguje
+R30	Neg Arg1:T83 Arg2:T82	
+T84	Condition 3577 3585	cukrzyca
+A10	Status T84 Family
+N30	Reference T84 ICD10:E14	Cukrzyca nieokreślona
+T85	Behaviour 3606 3617	nie pracuje
+T86	Behaviour 3619 3637	wcześniej księgowa
+T87	Drug 3647 3653	Letrox
+T88	Drug 3676 3683	Roswera
+T89	Drug 3710 3715	Axtil
+T90	Drug_dose 3654 3675	100 ug 1x1 tabl. rano
+R31	Drg Arg1:T87 Arg2:T90	
+T91	Drug_dose 3684 3709	15 mg 1x1 tabl. wieczorem
+R32	Drg Arg1:T88 Arg2:T91	
+T92	Drug_dose 3716 3737	2,5 mg 1x1 tabl. rano
+R33	Drg Arg1:T89 Arg2:T92	
+T93	Investigation 3749 3753	ABPM
+T94	Investigation 3755 3759	ECHO
+T95	Investigation 3761 3763	PW
+N31	Reference T68 ICD10:R03.0	Podwyższone ciśnienie tętnicze krwi, bez rozpoznanego nadciśnienia tętniczego
+N32	Reference T70 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+N33	Reference T69 ICD10:R03.0	Podwyższone ciśnienie tętnicze krwi, bez rozpoznanego nadciśnienia tętniczego
+T21	Condition 2555 2574	wywiadzie rodzinnym
+A2	Status T21 Family
+T27	Condition 3559 3574	Wywiad rodzinny
+A4	Status T27 Family
+T37	Condition 1461 1474	guza tarczycy
+N6	Reference T37 ICD10:E04.1	Guzek tarczycy pojedynczy, nietoksyczny
+T72	Condition 1795 1808	guza tarczycy
+N10	Reference T72 ICD10:E04.1	Guzek tarczycy pojedynczy, nietoksyczny
+T96	Condition 2398 2411	guza tarczycy
+N16	Reference T96 ICD10:E04.1	Guzek tarczycy pojedynczy, nietoksyczny
+T97	Condition 3349 3362	guza tarczycy
+N23	Reference T97 ICD10:E04.1	
+A6	Source T69 Declared

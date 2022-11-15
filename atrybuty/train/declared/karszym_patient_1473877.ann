@@ -1,0 +1,191 @@
+T1	Condition 439 483	Łagodna niedomykalność zastawki trójdzielnej
+N1	Reference T1 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T2	Condition 486 537	pośrednim prawdopodobieństwem nadciśnienia płucnego
+N2	Reference T2 ICD10:I27.2	Nadciśnienie płucne wtórne o innej etiologii
+T3	Condition 539 580	Łagodna niedomykalność zastawki mitralnej
+N3	Reference T3 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T4	Condition 582 603	Nadciśnienie tętnicze
+N4	Reference T4 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T5	Condition 605 622	Rak szyjki macicy
+N5	Reference T5 ICD10:C53.9	Szyjka macicy, umiejscowienie nieokreślone
+T6	Date 623 632	aktualnie
+T7	Treatment 633 653	leczony radioterapią
+N6	Reference T7 ICD10:Z51.0	Sesja radioterapii
+R1	Dat Arg1:T6 Arg2:T7	
+R2	Dat Arg1:T6 Arg2:T5	
+T8	Condition 655 670	Cukrzyca typu 2
+N7	Reference T8 ICD10:E11	Cukrzyca insulinoniezależna
+T9	Condition 672 688	Stopa cukrzycowa
+T10	Condition 690 734	Niewydolność nerek w stadium G3b/G4 wg KDIGO
+N8	Reference T10 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T11	Condition 736 750	Torbiele nerek
+T12	Condition 752 775	Hiperlipidemia mieszana
+N9	Reference T12 ICD10:E78.2	Hiperlipidemia mieszana
+T13	Condition 777 797	Nadczynność tarczycy
+N10	Reference T13 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T14	Condition 799 812	Niedowidzenie
+N11	Reference T14 ICD10:H54.2	Upośledzenie wzroku obuoczne
+A1	Status T14 Historical_Insignificant
+T15	Drug 937 944	Lorista
+T16	Drug 946 958	Hemofer prol
+T17	Drug 960 969	Furosemid
+T18	Drug 971 981	Carvedilol
+T19	Drug 983 995	Nitrendypina
+T20	Drug 997 1005	ApoDoxan
+T21	Drug 1007 1015	Thyrozol
+T22	Drug 1017 1032	Lipanthyl Supra
+T23	Drug 1034 1040	Atoris
+T24	Drug 1042 1052	Polhumin R
+T25	Drug 1054 1068	Polhumin Mix 5
+T26	Treatment 1179 1201	kontrola u lekarza POZ
+T27	Investigation 1204 1228	kontrola morfologii krwi
+T28	Investigation 1231 1284	kontrola wartości ciśnienia krwi w warunkach domowych
+T29	Investigation_result 1300 1307	poprawy
+T30	Investigation 1346 1386	diagnostyka w kierunku choroby wieńcowej
+T31	Condition 1556 1579	nadciśnieniem tętniczym
+N12	Reference T31 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T32	Symptom 1581 1598	180/70-200/80mmHg
+T33	Date 1599 1613	od prawie roku
+R3	Dat Arg1:T33 Arg2:T32	
+R4	Dat Arg1:T33 Arg2:T31	
+T34	Condition 1619 1639	rakiem szyjki macicy
+N13	Reference T34 ICD10:C53.9	Szyjka macicy, umiejscowienie nieokreślone
+T35	Date 1640 1649	aktualnie
+T36	Treatment 1650 1670	leczona radioterapią
+N14	Reference T36 ICD10:Z51.0	Sesja radioterapii
+R5	Dat Arg1:T35 Arg2:T34	
+R6	Dat Arg1:T35 Arg2:T36	
+T37	Condition 1672 1681	DM typu 2
+N15	Reference T37 ICD10:E11	Cukrzyca insulinoniezależna
+T38	Drug 1683 1691	insulina
+T39	Condition 1694 1710	stopą cukrzycową
+T40	Condition 1712 1731	niewyolnoscia nerek
+N16	Reference T40 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T41	Date 1743 1753	03/04.2019
+T42	Investigation 1733 1736	GFR
+R7	Dat Arg1:T41 Arg2:T42	
+T43	Condition 1756 1770	niedowidzeniem
+N17	Reference T43 ICD10:H54.2	Upośledzenie wzroku obuoczne
+T44	Condition 1772 1795	hiperlipidemią mieszaną
+N18	Reference T44 ICD10:E78.2	Hiperlipidemia mieszana
+T45	Drug 1799 1808	Lipanthyl
+T46	Drug 1809 1815	Atoris
+T47	Condition 1818 1840	nadczynnością tarczycy
+N19	Reference T47 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T48	Drug 1842 1850	Thyrozol
+T49	Symptom 1884 1927	duszności wysiłkowej przy małym wysiłku fiz
+N20	Reference T49 ICD10:R06.0	Duszność
+T50	Date 1928 1937	od 1 m-ca
+R8	Dat Arg1:T50 Arg2:T49	
+T51	Symptom 1939 1953	obrzęków łydek
+N21	Reference T51 ICD10:R60.0	Obrzęk zlokalizowany
+T52	Condition 1983 1998	podejrzenie PFO
+A2	Source T52 Declared
+N22	Reference T52 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T53	Negation 2002 2008	Neguje
+T54	Symptom 2010 2034	bóle w klatce piersiowej
+N23	Reference T54 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T55	Symptom 2036 2048	zasłabnięcia
+T56	Symptom 2050 2058	omdlenia
+N24	Reference T56 ICD10:R55	Omdlenie i zapaść
+T57	Condition 2060 2077	uczulenia na leki
+N25	Reference T57 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T58	Symptom 2079 2089	krwawienia
+T59	Symptom 2091 2104	czarne stolce
+N26	Reference T59 ICD10:K92.1	Stolce smołowate
+T60	Symptom 2106 2122	brunatne wymioty
+N27	Reference T60 ICD10:K92.0	Wymioty krwawe
+T61	Condition 2124 2129	zawał
+N28	Reference T61 ICD10:I25.2	Przebyty zawał serca
+T62	Condition 2131 2135	udar
+N29	Reference T62 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T63	Symptom 2137 2152	kołatania serca
+N30	Reference T63 ICD10:R00.2	Kołatanie serca
+T64	Symptom 2154 2168	duszność nocna
+N31	Reference T64 ICD10:R06.0	Duszność
+R9	Neg Arg1:T53 Arg2:T54	
+R10	Neg Arg1:T53 Arg2:T55	
+R11	Neg Arg1:T53 Arg2:T56	
+R12	Neg Arg1:T53 Arg2:T57	
+R13	Neg Arg1:T53 Arg2:T58	
+R14	Neg Arg1:T53 Arg2:T59	
+R15	Neg Arg1:T53 Arg2:T60	
+R16	Neg Arg1:T53 Arg2:T61	
+R17	Neg Arg1:T53 Arg2:T62	
+R18	Neg Arg1:T53 Arg2:T63	
+R19	Neg Arg1:T53 Arg2:T64	
+T65	Treatment 2169 2177	operacje
+N32	Reference T65 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T66	Negation 2179 2182	nie
+T67	Behaviour 2183 2192	papierosy
+N33	Reference T67 ICD10:Z72.0	Używanie tytoniu
+T68	Negation 2193 2198	nigdy
+T69	Condition 2199 2208	Uczulenia
+N34	Reference T69 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T70	Negation 2210 2213	nie
+T71	Condition 2241 2244	WZW
+N35	Reference T71 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T72	Negation 2245 2248	(-)
+T73	Condition 2251 2260	borelioza
+N36	Reference T73 ICD10:A69.2	Choroba z Lyme
+T74	Negation 2261 2264	(-)
+T75	Condition 2266 2269	tbc
+N37	Reference T75 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T76	Negation 2270 2273	(-)
+T77	Condition 2275 2283	odra (+)
+N38	Reference T77 ICD10:B05	Odra
+T78	Date 2284 2298	w dzieciństwie
+T79	Condition 2300 2314	kontakt z odrą
+N39	Reference T79 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+T80	Negation 2315 2318	(-)
+R20	Neg Arg1:T80 Arg2:T79	
+R21	Dat Arg1:T78 Arg2:T77	
+R22	Neg Arg1:T76 Arg2:T75	
+R23	Neg Arg1:T74 Arg2:T73	
+R24	Neg Arg1:T72 Arg2:T71	
+R25	Neg Arg1:T66 Arg2:T65	
+R26	Neg Arg1:T68 Arg2:T67	
+R27	Neg Arg1:T70 Arg2:T69	
+T81	Condition 2321 2340	wywiadzie rodzinnym
+A3	Status T81 Family
+T82	Negation 2342 2345	b/z
+T83	Behaviour 2362 2388	warunki mieszkaniowe dobre
+R28	Neg Arg1:T82 Arg2:T81	
+T84	Drug 2436 2445	Furosemid
+T85	Drug_dose 2446 2450	40/r
+T86	Drug 2451 2462	Telmisartan
+T87	Drug_dose 2463 2467	80/r
+T88	Drug 2468 2478	Carvedilol
+T89	Drug_dose 2479 2487	12,5 2x1
+T90	Drug 2488 2495	Amlopin
+T91	Drug_dose 2496 2506	5 1-2 t /r
+T92	Drug 2507 2515	Thyrozol
+T93	Drug_dose 2516 2522	5 1t/r
+T94	Drug 2523 2538	Lipanthyl supra
+T95	Drug_dose 2539 2545	215 /r
+T96	Drug 2546 2552	Atoris
+T97	Drug_dose 2553 2557	20/w
+T98	Drug 2558 2568	Polhumin R
+T99	Drug_dose 2569 2579	sc 10j/poł
+T100	Drug 2581 2594	Polhumin Mix5
+T101	Drug_dose 2595 2606	sc 24-0-20j
+R29	Drg Arg1:T84 Arg2:T85	
+R30	Drg Arg1:T86 Arg2:T87	
+R31	Drg Arg1:T88 Arg2:T89	
+R32	Drg Arg1:T90 Arg2:T91	
+R33	Drg Arg1:T92 Arg2:T93	
+R34	Drg Arg1:T94 Arg2:T95	
+R35	Drg Arg1:T96 Arg2:T97	
+R36	Drg Arg1:T98 Arg2:T99	
+R37	Drg Arg1:T100 Arg2:T101	
+T102	Investigation 2668 2689	badania laboratoryjne
+T103	Investigation 2691 2695	ECHO
+T104	Investigation 2697 2715	EKG metodą Holtera
+T105	Investigation 2717 2721	ABPM
+T106	Investigation 2723 2738	próba wysiłkowa
+T107	Investigation 1308 1323	morfologii krwi
+T108	Investigation_result 1325 1335	Hgb min 10
+R38	Inv Arg1:T107 Arg2:T29	
+R39	Inv Arg1:T107 Arg2:T108	
+T109	Investigation_result 1737 1742	26-33
+R40	Inv Arg1:T42 Arg2:T109	

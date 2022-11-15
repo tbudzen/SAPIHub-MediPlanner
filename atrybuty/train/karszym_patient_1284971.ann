@@ -1,0 +1,99 @@
+T1	Treatment 328 362	Kontrola w Poradni Kardiologicznej
+T2	Date 363 372	za 6 m-cy
+T3	Drug 373 381	Enarenal
+T4	Drug 409 415	Warfin
+T5	Drug_dose 382 408	1,25mg (1/4tabl) 1xdz rano
+T6	Drug_dose 416 452	1,5m-2mg w zależności od poziomu INR
+R1	Dat Arg1:T2 Arg2:T1	
+R2	Drg Arg1:T3 Arg2:T5	
+R3	Drg Arg1:T4 Arg2:T6	
+T7	Condition 615 692	Wrodzona wada serca pod postacią ubytku w przegrodzie przedsionkowo-komorowej
+N1	Reference T7 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T8	Condition 695 763	istotną niedomykalnością wspólnej zastawki przedsionkowo - komorowej
+T9	Treatment 776 796	operacji korekcyjnej
+N2	Reference T9 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T10	Date 843 854	10.10.2014r
+T11	Treatment 868 976	implantacji zastawki mechanicznej Medtronic (658480) MHV 501DM16AP mitral o średnicy 16 mm w ujście mitralne
+N3	Reference T11 ICD10:Z95.2	Obecność protez zastawek serca
+T12	Date 978 989	11.12.2014r
+T13	Treatment 1003 1013	reoperacji
+N4	Reference T13 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T14	Date 1055 1066	24.12.2014r
+T15	Treatment 1128 1211	wymianie sztucznej zastawki mitralnej na Medtronic 21mm  Nr.seryjny zastawki 905782
+N5	Reference T15 ICD10:Z95.4	Obecność innych protez zastawek serca
+T16	Date 1215 1226	30.01.2019r
+T17	Condition 1231 1260	Epizody bradykardii zatokowej
+N6	Reference T17 ICD10:R00.1	Bradykardia, nieokreślona
+R4	Dat Arg1:T10 Arg2:T9	
+R5	Dat Arg1:T12 Arg2:T11	
+R6	Dat Arg1:T14 Arg2:T13	
+R7	Dat Arg1:T16 Arg2:T15	
+T18	Drug 1457 1463	Warfin
+T19	Condition 1668 1745	Wrodzona wada serca pod postacią ubytku w przegrodzie przedsionkowo-komorowej
+N7	Reference T19 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T20	Condition 1748 1816	istotną niedomykalnością wspólnej zastawki przedsionkowo - komorowej
+T21	Treatment 1829 1849	operacji korekcyjnej
+N8	Reference T21 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T22	Date 1896 1907	10.10.2014r
+T23	Treatment 1921 2029	implantacji zastawki mechanicznej Medtronic (658480) MHV 501DM16AP mitral o średnicy 16 mm w ujście mitralne
+N9	Reference T23 ICD10:Z95.2	Obecność protez zastawek serca
+T24	Date 2031 2042	11.12.2014r
+T25	Treatment 2056 2066	reoperacji
+N10	Reference T25 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T26	Date 2108 2119	24.12.2014r
+T27	Condition 2125 2162	Zwężenie drogi wypływu z lewej komory
+T28	Condition 2167 2196	Epizody bradykardii zatokowej
+N11	Reference T28 ICD10:R00.1	Bradykardia, nieokreślona
+R8	Dat Arg1:T22 Arg2:T21	
+R9	Dat Arg1:T24 Arg2:T23	
+R10	Dat Arg1:T26 Arg2:T25	
+T29	Drug 2351 2354	ANA
+T30	Drug 2356 2362	Warfin
+T31	Drug 2364 2371	Clexane
+T32	Drug 2373 2383	Cefazolina
+T33	Treatment 2384 2398	(profilaktyka)
+T34	Drug 2400 2408	Spironol
+T35	Drug 2410 2419	Perfalgan
+T36	Drug 2438 2447	neomycyną
+T37	Drug 2473 2481	0,9%NaCl
+T38	Condition 2617 2636	wrodzona wada serca
+T39	Treatment 2642 2663	zabiegach naprawczych
+T40	Investigation 2665 2691	skierowany na cewnikowanie
+T41	Drug 2713 2719	Warfin
+T42	Drug 2722 2730	Spironol
+T43	Treatment 2737 2756	pod opieka okulisty
+T44	Condition 2758 2769	wada wzroku
+T45	Condition 2771 2788	wywiad alergiczny
+N12	Reference T45 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T46	Negation 2789 2795	ujemny
+R11	Neg Arg1:T46 Arg2:T45	
+T47	Condition 797 841	ubytku w przegrodzie przedsionkowo-komorowej
+N13	Reference T47 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+R12	Dat Arg1:T10 Arg2:T47	
+T48	Treatment 1080 1088	wycięciu
+R13	Dat Arg1:T16 Arg2:T48	
+N14	Reference T48 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T49	Condition 1850 1894	ubytku w przegrodzie przedsionkowo-komorowej
+N15	Reference T49 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+R14	Dat Arg1:T22 Arg2:T49	
+T50	Treatment 1016 1025	zaszyciem
+N16	Reference T50 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T51	Condition 1026 1053	przecieku okołozastawkowego
+N17	Reference T51 ICD10:T82.0	Mechaniczne powikłanie protezy zastawki serca
+R15	Dat Arg1:T14 Arg2:T51	
+R16	Dat Arg1:T14 Arg2:T50	
+T52	Condition 1089 1119	zwężenia pod zastawką aortalną
+R17	Dat Arg1:T16 Arg2:T52	
+T53	Treatment 2069 2078	zaszyciem
+N18	Reference T53 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T54	Condition 2079 2106	przecieku okołozastawkowego
+N19	Reference T54 ICD10:T82.0	Mechaniczne powikłanie protezy zastawki serca
+R18	Dat Arg1:T26 Arg2:T54	
+R19	Dat Arg1:T26 Arg2:T53	
+T55	Drug 2450 2459	effedryna
+T56	Drug_dose 2421 2435	Krople do nosa
+R20	Drg Arg1:T36 Arg2:T56	
+R21	Drg Arg1:T55 Arg2:T56	
+T57	Drug_dose 2461 2470	Inhalacje
+R22	Drg Arg1:T37 Arg2:T57	
+N20	Reference T44 ICD10:H52.7	Zaburzenia refrakcji, nieokreślone

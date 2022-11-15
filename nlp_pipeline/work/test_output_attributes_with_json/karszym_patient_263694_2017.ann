@@ -1,0 +1,34 @@
+T1	Treatment 447 455	korekcji
+T2	Condition 456 530	wrodzonej wady serca pod postacią zwężenia w drodze odpływu z lewej komory
+T3	Date 533 544	20.08.2010r
+T4	Condition 549 581	Przejściowy blok A-V III stopnia
+T5	Date 582 605	w okresie pooperacyjnym
+T6	Treatment 717 751	kontrola w Poradni Kardiologicznej
+T7	Date 752 762	za 12 m-cy
+T8	Treatment 916 936	leczeniu operacyjnym
+T9	Condition 946 1009	wrodzonej wady serca (zwężenie w drodze odpływu z lewej komory)
+T10	Condition 1015 1046	przejściowym bloku p-k zupełnym
+T11	Date 1048 1071	w okresie pooperacyjnym
+T12	Symptom 1170 1180	Stan dobry
+T13	Date 1182 1199	W ostatnim czasie
+T14	Negation 1200 1203	bez
+T15	Condition 1204 1212	infekcji
+T16	Condition 1214 1221	Alergia
+T17	Negation 1222 1238	nie potwierdzona
+T18	Drug 1240 1250	Leki stałe
+T19	Negation 1251 1264	nie otrzymuje
+N1	Reference T1 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N2	Reference T2 ICD10:Q20	Wrodzone wady rozwojowe jam i poÅÄczeÅ sercowych
+N3	Reference T4 ICD10:I44.2	Blok przedsionkowo-komorowy zupeÅny
+N4	Reference T8 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N5	Reference T9 ICD10:Q20	Wrodzone wady rozwojowe jam i poÅÄczeÅ sercowych
+N6	Reference T10 ICD10:I44.2	Blok przedsionkowo-komorowy zupeÅny
+N7	Reference T16 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+R1	Dat Arg1:T3 Arg2:T2
+R10	Dat Arg1:T11 Arg2:T10
+R12	Dat Arg1:T13 Arg2:T12
+R16	Neg Arg1:T17 Arg2:T16
+R17	Neg Arg1:T19 Arg2:T18
+R3	Dat Arg1:T3 Arg2:T1
+R5	Dat Arg1:T5 Arg2:T4
+R7	Dat Arg1:T7 Arg2:T6

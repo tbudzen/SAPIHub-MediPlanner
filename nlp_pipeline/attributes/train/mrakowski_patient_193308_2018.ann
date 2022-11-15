@@ -1,0 +1,49 @@
+T1	Drug 352 360	Enarenal
+T2	Drug_dose 361 387	5 mg rano 2,5 mg wieczorem
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 390 398	Magne B6
+T4	Drug_dose 399 412	1 x 1 tab dz.
+R2	Drg Arg1:T3 Arg2:T4	
+T5	Treatment 416 454	Wizyta w Poradni Kardiologicznej ICZMP
+T6	Date 455 466	za 6-8 m-cy
+R3	Dat Arg1:T6 Arg2:T5	
+T7	Behaviour 539 584	Ograniczenie maksymalnych wysiłków fizycznych
+T8	Behaviour 587 622	dostosowanie wysiłków do wydolności
+T9	Behaviour 625 736	zwolnienie z ciężkich ćwiczeń fizycznych i biegów długodystansowych na zajęciach wychowania fizycznego w szkole
+T10	Treatment 741 753	Opieka w POZ
+T11	Treatment 758 807	Regularne profilaktyczne kontrole stomatologiczne
+T12	Drug 928 936	Enarenal
+T13	Drug 938 949	Propranolol
+T14	Drug 951 954	ANA
+T15	Condition 1205 1261	Wrodzona wada serca pod postacią zwężenia zastawki aorty
+N1	Reference T15 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T16	Treatment 1278 1318	walwuloplastyce balonowej zastawki aorty
+T17	Date 1321 1332	10.04.2002r
+R4	Dat Arg1:T17 Arg2:T16	
+T18	Treatment 1347 1355	operacji
+T19	Treatment 1406 1419	metodą Ross'a
+T20	Condition 1356 1364	zwężenia
+N2	Reference T20 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T21	Condition 1367 1405	wtórną niedomykalnością zastawki aorty
+N3	Reference T21 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T22	Date 1422 1433	03.11.2015r
+R5	Dat Arg1:T22 Arg2:T18	
+R6	Dat Arg1:T22 Arg2:T20	
+R7	Dat Arg1:T22 Arg2:T21	
+R8	Dat Arg1:T22 Arg2:T19	
+T23	Condition 1438 1504	Umiarkowana niedomykalność zastawki autograftu w pozycji aortalnej
+T24	Condition 1509 1525	Łagodne zwężenie
+N5	Reference T24 ICD10:I37.0	Zwężenie zastawki pnia płucnego
+N4	Reference T23 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T25	Condition 1528 1590	łagodną niedomykalnością zastawki homograftu w pozycji płucnej
+N6	Reference T25 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T26	Condition 1595 1619	Łagodna koarktacja aorty
+N7	Reference T26 ICD10:Q25.1	Zwężenie cieśni aorty
+T27	Condition 1782 1792	wada serca
+T28	Drug 1846 1854	Enarenal
+T29	Investigation 1807 1824	badania kontrolne
+T30	Condition 1857 1874	wywiad alergiczny
+N9	Reference T30 ICD10:T78.4	Alergia, nieokreślona
+T31	Negation 1875 1881	ujemny
+R9	Neg Arg1:T31 Arg2:T30	
+N8	Reference T27 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych

@@ -1,0 +1,84 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 359 410	okresowa kontrola kardiologiczna, endokrynologiczna
+T3	Drug 417 427	Concor COR
+T4	Drug_dose 428 448	1,25 mg 1 tabl. rano
+R1	Drg Arg1:T3 Arg2:T4	
+T5	Drug 449 458	ArmoLipid
+T6	Drug_dose 459 476	1 tabl. wieczorem
+R2	Drg Arg1:T5 Arg2:T6	
+T7	Condition 694 758	Wada wrodzona serca pod postacią dwupłatkowej zastawki aortalnej
+N1	Reference T7 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T8	Condition 761 795	niedomykalnością łagodnego stopnia
+N2	Reference T8 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T9	Condition 798 827	stenozą umiarkowanego stopnia
+N3	Reference T9 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T10	Condition 829 854	Tętniak aorty wstępującej
+N4	Reference T10 ICD10:I71.2	Tętniak odcinka piersiowego aorty, bez informacji o pęknięciu
+T11	Condition 856 876	Hipercholesterolemia
+N5	Reference T11 ICD10:E78.0	Czysta hipercholesterolemia
+T12	Condition 878 907	Przewlekłe zapalenie oskrzeli
+N6	Reference T12 ICD10:J42	Nieokreślone przewlekłe zapalenie oskrzeli
+T13	Treatment 929 954	nefrektomii prawostronnej
+A1	Status T13 Historical_Insignificant
+T14	Condition 964 978	marskiej nerki
+A2	Status T14 Historical_Insignificant
+N7	Reference T14 ICD10:N28.8	Inne określone zaburzenia nerki i moczowodu
+T15	Condition 1191 1220	dwupłatkowa zastawka aortalna
+N8	Reference T15 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T16	Condition 1222 1249	poszerzona aorta wstępująca
+N9	Reference T16 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T17	Condition 1252 1283	zastawka aortalna - dwupłatkowa
+N10	Reference T17 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T18	Condition 1285 1313	obraz umiarkowanego zwężenia
+N11	Reference T18 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T19	Investigation_result 1316 1350	AVA pl. 1.3 cm2, index 0.85 cm2/m2
+T20	Condition 1352 1385	niedomykalność pierwszego stopnia
+N12	Reference T20 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T21	Investigation_result 1388 1467	PHT 819 ms, aorta - pierścień 23 mm, opuszka 35 mm, STJ 33 mm, wstępująca 43 mm
+T22	Treatment 1481 1505	nefrektomia prawostronna
+A3	Status T22 Historical_Insignificant
+T23	Condition 1515 1541	marskości pozapalnej nerki
+A4	Status T23 Historical_Insignificant
+N13	Reference T23 ICD10:N28.8	Inne określone zaburzenia nerki i moczowodu
+T24	Condition 1543 1572	przewlekłe zapalenie oskrzeli
+N14	Reference T24 ICD10:J42	Nieokreślone przewlekłe zapalenie oskrzeli
+T25	Condition 1574 1595	nadciśnienie tętnicze
+N15	Reference T25 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T26	Treatment 1598 1615	Przebyte operacje
+T27	Treatment 1617 1639	usunięcie prawej nerki
+A5	Status T27 Historical_Insignificant
+T28	Date 1641 1646	1997r
+R3	Dat Arg1:T28 Arg2:T27	
+T29	Condition 1675 1678	WZW
+N16	Reference T29 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T30	Condition 1680 1689	borelioza
+N17	Reference T30 ICD10:A69.2	Choroba z Lyme
+T31	Negation 1692 1702	nie podaje
+R4	Neg Arg1:T31 Arg2:T30	
+R5	Neg Arg1:T31 Arg2:T29	
+T32	Condition 1703 1718	Wywiad rodzinny
+A6	Status T32 Family
+T33	Condition 1731 1740	tętniaków
+A7	Status T33 Family
+N18	Reference T33 ICD10:I72	Inne postacie tętniaka
+T34	Behaviour 1741 1756	Palenie tytoniu
+N19	Reference T34 ICD10:Z72.0	Używanie tytoniu
+T35	Negation 1758 1768	nie podaje
+R6	Neg Arg1:T35 Arg2:T34	
+T36	Behaviour 1769 1780	Inne używki
+T37	Negation 1782 1792	nie podaje
+R7	Neg Arg1:T37 Arg2:T36	
+T38	Condition 1793 1802	Uczulenia
+N20	Reference T38 ICD10:T78.4	Alergia, nieokreślona
+T39	Negation 1804 1814	nie podaje
+R8	Neg Arg1:T39 Arg2:T38	
+T40	Behaviour 1833 1848	pracownik ICZMP
+T41	Drug 1874 1882	bisocard
+T42	Drug_dose 1883 1902	2,5 mg 1 tabl. rano
+R9	Drg Arg1:T41 Arg2:T42	
+T43	Investigation 1930 1940	echo serca
+T44	Investigation 1942 1962	echo przezprzełykowe
+T45	Investigation 1964 1967	TET
+T46	Investigation 1969 1973	ABPM
+T47	Investigation 1975 1981	Holter
+N21	Reference T36 ICD10:Z72	Problemy związane ze stylem życia

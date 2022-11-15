@@ -1,0 +1,222 @@
+T1	Investigation 447 480	samokontrola ciśnienia tętniczego
+T2	Behaviour 546 571	dieta ubogocholesterolowa
+T3	Behaviour 572 600	regularna aktywność fizyczna
+T4	Drug 635 643	Brilique
+T5	Drug_dose 644 664	90 mg 1 tabl. 2 x dz
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Drug 666 678	Lipanthyl NT
+T7	Drug_dose 679 716	145 mg 1 tabl. 1 x dz naprzemiennie z
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Drug 717 724	Roswera
+T9	Drug_dose 725 755	20 mg 1 tabl. 1 x dz wieczorem
+R3	Drg Arg1:T8 Arg2:T9	
+T10	Drug 756 761	Acard
+T11	Drug_dose 762 785	75 mg 1 tabl. wieczorem
+R4	Drg Arg1:T10 Arg2:T11	
+T12	Drug 786 798	Preductal MR
+T13	Drug_dose 799 813	1 tabl. 2 x dz
+R5	Drg Arg1:T12 Arg2:T13	
+T14	Drug 815 822	Nebilet
+T15	Drug_dose 823 840	5 mg 1 tabl. rano
+R6	Drg Arg1:T14 Arg2:T15	
+T16	Drug 841 848	Tritace
+T17	Drug_dose 849 873	2,5 mg 1 tabl. wieczorem
+R7	Drg Arg1:T16 Arg2:T17	
+T18	Investigation 4140 4143	TTE
+T19	Investigation 4145 4148	TET
+T20	Investigation 4150 4154	ABPM
+T21	Investigation 4156 4166	Holter EKG
+T22	Drug 3980 3989	Lipanthyl
+T23	Drug_dose 3990 3995	NT145
+R8	Drg Arg1:T22 Arg2:T23	
+T24	Drug 3997 4005	Brilique
+T25	Drug_dose 4006 4016	90mg R i W
+R9	Drg Arg1:T24 Arg2:T25	
+T26	Drug 4018 4025	Kalipoz
+T27	Drug_dose 4026 4036	codziennie
+R10	Drg Arg1:T26 Arg2:T27	
+T28	Drug 4038 4054	Ivabradine Mylan
+T29	Drug_dose 4055 4066	7,5mg R i W
+R11	Drg Arg1:T28 Arg2:T29	
+T30	Drug 4068 4077	Panprazox
+T31	Drug_dose 4078 4095	20mg 1 tabletka R
+R12	Drg Arg1:T30 Arg2:T31	
+T32	Drug 4097 4104	Romazic
+T33	Drug_dose 4105 4111	20mg W
+R13	Drg Arg1:T32 Arg2:T33	
+T34	Drug 4113 4118	Acard
+T35	Drug_dose 4119 4123	75 W
+R14	Drg Arg1:T34 Arg2:T35	
+T36	Behaviour 3921 3947	warunki mieszkaniowe dobre
+T37	Negation 3897 3903	neguje
+T38	Negation 3878 3884	neguje
+T39	Condition 3886 3895	Uczulenia
+R15	Neg Arg1:T37 Arg2:T39	
+T40	Behaviour 3865 3876	Inne używki
+R16	Neg Arg1:T38 Arg2:T40	
+T41	Behaviour 3792 3807	Palenie tytoniu
+N2	Reference T41 ICD10:T65.2	Tytoń i nikotyna
+T42	Negation 3809 3815	rzucił
+R17	Neg Arg1:T42 Arg2:T41	
+T43	Date 3816 3827	w 2015 roku
+R18	Dat Arg1:T43 Arg2:T41	
+T44	Condition 3760 3769	rak płuca
+A1	Status T44 Family
+N3	Reference T44 ICD10:C34	Nowotwór złośliwy oskrzela i płuca
+T45	Condition 3779 3790	rak jajnika
+N4	Reference T45 ICD10:C56	Nowotwór złośliwy jajnika
+A2	Status T45 Family
+T46	Condition 3719 3739	hipertriglicerydemia
+A3	Status T46 Family
+N5	Reference T46 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T47	Condition 3646 3649	WZW
+N6	Reference T47 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T48	Condition 3658 3667	borelioza
+N7	Reference T48 ICD10:A69.2	Choroba z Lyme
+T49	Condition 3675 3683	grużlica
+N8	Reference T49 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T50	Condition 3691 3695	odra
+N9	Reference T50 ICD10:B05	Odra
+T51	Negation 3696 3701	( - )
+R19	Neg Arg1:T51 Arg2:T50	
+T52	Negation 3684 3689	( - )
+R20	Neg Arg1:T52 Arg2:T49	
+T53	Negation 3668 3673	( - )
+R21	Neg Arg1:T53 Arg2:T48	
+T54	Negation 3650 3655	( - )
+R22	Neg Arg1:T54 Arg2:T47	
+T55	Negation 3562 3568	neguje
+T56	Treatment 3543 3560	Przebyte operacje
+R23	Neg Arg1:T55 Arg2:T56	
+T57	Condition 3534 3541	Nadwaga
+T58	Behaviour 3510 3520	Nikotynizm
+N10	Reference T58 ICD10:T65.2	Tytoń i nikotyna
+T59	Condition 1092 1119	Przewlekła choroba wieńcowa
+N11	Reference T59 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T60	Treatment 1129 1214	angioplastyce gałęzi przedniej zstępującej z implantacją stentu DES Firehawk 3,5/23mm
+T61	Treatment 1237 1313	angioplastyce gałęzi marginalnej z implantacją stentu DEX Coroflex 2,75x16mm
+T62	Date 1216 1226	25/06/2018
+R24	Dat Arg1:T62 Arg2:T60	
+T63	Date 1315 1325	16/05/2018
+R25	Dat Arg1:T63 Arg2:T61	
+T64	Condition 1336 1360	ostrym zespole wieńcowym
+N12	Reference T64 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T65	Treatment 1452 1551	angioplastyką prawej tętnicy wieńcowej z implantacją dwóch stentów DES Coroflex: 3,5x28mm, 3,5x16mm
+T66	Date 1580 1590	06/04/2018
+R26	Dat Arg1:T66 Arg2:T65	
+T67	Condition 1913 1920	Nadwaga
+T68	Behaviour 1889 1899	Nikotynizm
+N13	Reference T68 ICD10:T65.2	Tytoń i nikotyna
+T69	Condition 3487 3508	Głuchota ucha prawego
+N14	Reference T69 ICD10:H90	Upośledzenie słuchu przewodzeniowe i czuciowo-nerwowe
+T70	Condition 1866 1887	Głuchota ucha prawego
+N15	Reference T70 ICD10:H90	Upośledzenie słuchu przewodzeniowe i czuciowo-nerwowe
+T71	Behaviour 526 545	redukcja masy ciała
+T72	Condition 1761 1788	Miażdżyca naczyń obwodowych
+N16	Reference T72 ICD10:I70.8	Miażdżyca innych tętnic
+T73	Condition 3348 3376	Miażdżyca naczyń obwodowych.
+N17	Reference T73 ICD10:I70.8	Miażdżyca innych tętnic
+T74	Condition 3468 3485	Zaćma oka prawego
+N18	Reference T74 ICD10:H25	Zaćma starcza
+T75	Condition 1847 1864	Zaćma oka prawego
+N19	Reference T75 ICD10:H25	Zaćma starcza
+T76	Condition 1790 1810	Hipercholesterolemia
+N20	Reference T76 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T77	Condition 3377 3397	Hipercholesterolemia
+N21	Reference T77 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T78	Condition 3434 3466	Nieprawidłowa tolerancja glukozy
+N22	Reference T78 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T79	Condition 2684 2711	Przewlekła choroba wieńcowa
+N23	Reference T79 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T80	Treatment 2713 2798	Angioplastyka gałęzi przedniej zstępującej z implantacją stentu DES Firehawk 3,5/23mm
+T81	Date 2800 2810	25/06/2018
+R27	Dat Arg1:T81 Arg2:T80	
+T82	Treatment 2821 2897	angioplastyce gałęzi marginalnej z implantacją stentu DEX Coroflex 2,75x16mm
+T83	Date 2899 2909	16/05/2018
+R28	Dat Arg1:T83 Arg2:T82	
+T84	Treatment 3036 3135	angioplastyką prawej tętnicy wieńcowej z implantacją dwóch stentów DES Coroflex: 3,5x28mm, 3,5x16mm
+T85	Date 3164 3174	06/04/2018
+T86	Condition 3185 3209	ostrym zespole wieńcowym
+N24	Reference T86 ICD10:I24	Inne ostre postacie choroby niedokrwiennej serca
+T87	Negation 2511 2517	Neguje
+T88	Symptom 2518 2530	zasłabnięcia
+N25	Reference T88 ICD10:R55	Omdlenie i zapaść
+T89	Symptom 2532 2540	omdlenia
+N26	Reference T89 ICD10:R55	Omdlenie i zapaść
+T90	Symptom 2542 2552	krwawienia
+N27	Reference T90 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T91	Symptom 2554 2567	czarne stolce
+N28	Reference T91 ICD10:K92.1	Stolce smołowate
+T92	Symptom 2569 2585	brunatne wymioty
+N29	Reference T92 ICD10:K92.0	Wymioty krwawe
+T93	Condition 2587 2603	chorobę wrzodową
+N30	Reference T93 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T94	Symptom 2605 2619	duszność nocną
+N31	Reference T94 ICD10:I50.1	Niewydolność serca lewokomorowa
+T95	Symptom 2621 2636	obrzęki podudzi
+N32	Reference T95 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+R29	Neg Arg1:T87 Arg2:T88	
+R30	Neg Arg1:T87 Arg2:T89	
+R31	Neg Arg1:T87 Arg2:T90	
+R32	Neg Arg1:T87 Arg2:T91	
+R33	Neg Arg1:T87 Arg2:T92	
+R34	Neg Arg1:T87 Arg2:T93	
+R35	Neg Arg1:T87 Arg2:T94	
+R36	Neg Arg1:T87 Arg2:T95	
+T96	Symptom 2471 2484	zawroty głowy
+N33	Reference T96 ICD10:R42	Zawroty głowy i odurzenie
+T97	Symptom 2490 2509	zaburzenia widzenia
+T98	Symptom 2129 2229	dolegliwości bólowych w klatce piersiowej o charakterze kłucia (niezwiązanych z wysiłkiem fizycznym)
+N34	Reference T98 ICD10:R07.3	Inne bóle w klatce piersiowej
+T99	Investigation_result 2253 2284	wysokich wartości triglicerydów
+T100	Date 2286 2296	24/06/2019
+T101	Investigation_result 2299 2310	268,5 mg/dl
+R37	Dat Arg1:T100 Arg2:T101	
+T102	Drug 2328 2335	statyną
+T103	Drug 2338 2346	fibratem
+T104	Condition 2920 2944	ostrym zespole wieńcowym
+N35	Reference T104 ICD10:I24	Inne ostre postacie choroby niedokrwiennej serca
+T105	Treatment 3264 3336	leczonym angioplastyką prawej tętnicy wieńcowej z implantacją stentu DES
+T106	Date 3338 3345	05/2015
+T107	Condition 3212 3263	zawale serca z uniesieniem odcinka ST ściany dolnej
+N36	Reference T107 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+R38	Dat Arg1:T106 Arg2:T105	
+R39	Dat Arg1:T106 Arg2:T107	
+T108	Condition 2947 2998	zawale serca z uniesieniem odcinka ST ściany dolnej
+N37	Reference T108 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T109	Condition 1363 1414	zawale serca z uniesieniem odcinka ST ściany dolnej
+N38	Reference T109 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T110	Condition 1416 1432	dolno-podstawnej
+N39	Reference T110 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T111	Condition 1435 1442	bocznej
+N40	Reference T111 ICD10:I21.2	Ostry zawał serca pełnościenny o innej lokalizacji
+R40	Dat Arg1:T66 Arg2:T111	
+R41	Dat Arg1:T66 Arg2:T110	
+R42	Dat Arg1:T66 Arg2:T109	
+T112	Condition 1601 1625	ostrym zespole wieńcowym
+N41	Reference T112 ICD10:I24	Inne ostre postacie choroby niedokrwiennej serca
+T113	Condition 1628 1679	zawale serca z uniesieniem odcinka ST ściany dolnej
+N42	Reference T113 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T114	Treatment 1689 1752	angioplastyką prawej tętnicy wieńcowej z implantacją stentu DES
+T115	Date 1754 1758	2015
+R43	Dat Arg1:T115 Arg2:T114	
+R44	Dat Arg1:T115 Arg2:T113	
+T116	Condition 3000 3016	dolno-podstawnej
+N43	Reference T116 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T117	Condition 3019 3026	bocznej
+N44	Reference T117 ICD10:I21.2	Ostry zawał serca pełnościenny o innej lokalizacji
+R45	Dat Arg1:T85 Arg2:T84	
+R46	Dat Arg1:T85 Arg2:T117	
+R47	Dat Arg1:T85 Arg2:T116	
+R48	Dat Arg1:T85 Arg2:T108	
+T118	Behaviour 490 523	konsultacja dietetyka klinicznego
+T119	Treatment 1557 1565	podaniem
+T120	Drug 1566 1578	eptifibatydu
+R49	Dat Arg1:T66 Arg2:T120	
+R50	Dat Arg1:T66 Arg2:T119	
+T121	Treatment 1821 1845	terapii farmakologicznej
+T122	Treatment 3141 3149	podaniem
+T123	Drug 3150 3162	eptifibatydu
+R51	Dat Arg1:T85 Arg2:T123	
+R52	Dat Arg1:T85 Arg2:T122	
+N1	Reference T39 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

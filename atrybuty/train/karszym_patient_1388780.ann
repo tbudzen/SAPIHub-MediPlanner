@@ -1,0 +1,162 @@
+T1	Symptom 448 472	Bóle w klatce piersiowej
+N1	Reference T1 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T2	Condition 474 498	Zespół brady-tachykardia
+N2	Reference T2 ICD10:I49.5	Zespół chorej zatoki
+T3	Condition 500 543	utrwalone migotanie przedsionków – EHRA IIa
+N3	Reference T3 ICD10:I48	Migotanie i trzepotanie przedsionków
+T4	Investigation 545 563	CHA DS -VASc Score
+T5	Investigation_result 564 572	4 punkty
+T6	Investigation 574 588	HAS-BLED Score
+T7	Investigation_result 589 597	2 punkty
+T8	Condition 599 612	pauzy do 6,6s
+T9	Date 613 637	w trakcie farmakoterapii
+T10	Drug 638 657	beta-adrenolitykiem
+R1	Inv Arg1:T4 Arg2:T5	
+R2	Inv Arg1:T6 Arg2:T7	
+T11	Condition 660 693	Nadciśnienie tętnicze skorygowane
+N4	Reference T11 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T12	Condition 695 731	Podejrzenie kaszlu indukowanego ACEI
+A1	Source T12 Declared
+T14	Condition 733 772	Hipercholesterolemia w trakcie leczenia
+N6	Reference T14 ICD10:E78.0	Czysta hipercholesterolemia
+T15	Condition 774 781	Nadwaga
+T16	Condition 783 833	Nieprawidłowa tolerancja glukozy świeżo rozpoznana
+N7	Reference T16 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T17	Condition 835 861	Przewlekłe zapalenie zatok
+A2	Status T17 Historical_Insignificant
+N8	Reference T17 ICD10:J32.9	Przewlekłe zapalenie zatok, nieokreślone
+T18	Condition 863 907	Przewlekła choroba nerek w stadium 3a wg NKF
+N9	Reference T18 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T19	Condition 909 951	Zakażenie dolnego odcinka układu moczowego
+N10	Reference T19 ICD10:N39.0	Zakażenie układu moczowego o nieokreślonym umiejscowieniu
+T20	Treatment 954 982	w trakcie antybiotykoterapii
+T21	Treatment 992 1000	operacji
+A3	Status T21 Historical_Insignificant
+T22	Treatment 1027 1040	appendektomii
+N11	Reference T22 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T23	Date 1051 1065	w dzieciństwie
+T24	Condition 1076 1112	zakażeniu gronkowcowym skóry podudzi
+A4	Status T24 Historical_Insignificant
+N12	Reference T24 ICD10:L08.0	Ropne zapalenie skóry
+T25	Date 1113 1127	w dzieciństwie
+R3	Dat Arg1:T25 Arg2:T24	
+R4	Dat Arg1:T23 Arg2:T22	
+T26	Treatment 1253 1280	dalsza opieka w poradni POZ
+T27	Treatment 1288 1353	okresowa kontrola kardiologiczna, diabetologiczna i nefrologiczna
+T28	Investigation 1512 1526	koronarografii
+T29	Treatment 1471 1495	skierowaniem do szpitala
+T30	Date 1407 1417	23.04.2019
+R5	Dat Arg1:T30 Arg2:T29	
+R6	Dat Arg1:T30 Arg2:T28	
+T31	Investigation 1532 1571	codzienna kontrola ciśnienia tętniczego
+T32	Investigation 1579 1608	okresowa kontrola lipidogramu
+T33	Investigation 1615 1635	badanie ogólne moczu
+T34	Date 1636 1675	7 dni po zakończeniu antybiotykoterapii
+R7	Dat Arg1:T34 Arg2:T33	
+T35	Behaviour 1682 1692	dieta DASH
+T36	Behaviour 1699 1718	redukcja masy ciała
+T37	Behaviour 1727 1751	oszczędzający tryb życia
+T38	Date 1752 1785	do czasu wykonania koronarografii
+R8	Dat Arg1:T38 Arg2:T37	
+T39	Drug 1829 1836	Pradaxa
+T40	Drug_dose 1837 1868	110 mg 1 tabl. rano i wieczorem
+T41	Drug 1876 1882	Atoris
+T42	Drug_dose 1883 1906	30 mg 1 tabl. wieczorem
+T43	Drug 1913 1925	Polsart Plus
+T44	Drug_dose 1926 1954	40 mg + 12.5 mg 1 tabl. rano
+T45	Drug 1962 1969	Lacipil
+T46	Drug_dose 1970 1992	4 mg 1 tabl. wieczorem
+R9	Drg Arg1:T39 Arg2:T40	
+R10	Drg Arg1:T41 Arg2:T42	
+R11	Drg Arg1:T43 Arg2:T44	
+R12	Drg Arg1:T45 Arg2:T46	
+T47	Drug 2000 2008	Cipronex
+T48	Drug_dose 2009 2036	500 mg 1 tabl. co 12 godzin
+T49	Date 2037 2059	przez 10 kolejnych dni
+T51	Date 2072 2092	7 dni po odstawieniu
+T52	Investigation 2093 2123	kontrolne badanie ogólne moczu
+R13	Dat Arg1:T49 Arg2:T47	
+R14	Drg Arg1:T47 Arg2:T48	
+R15	Dat Arg1:T51 Arg2:T52	
+T50	Drug 2132 2138	Trilac
+T53	Drug_dose 2139 2157	1 kaps. w południe
+T54	Date 2158 2186	w trakcie antybiotykoterapii
+R16	Drg Arg1:T50 Arg2:T53	
+R17	Dat Arg1:T54 Arg2:T50	
+R18	Dat Arg1:T49 Arg2:T50	
+T55	Condition 2346 2372	zespołem brady-tachykardia
+N13	Reference T55 ICD10:I49.5	Zespół chorej zatoki
+T56	Condition 2374 2425	utrwalone migotanie przedsionków - II klasa wg EHRA
+N14	Reference T56 ICD10:I48	Migotanie i trzepotanie przedsionków
+T57	Condition 2427 2440	pauzy do 6,6s
+T58	Date 2441 2465	w trakcie farmakoterapii
+T59	Drug 2466 2485	beta-adrenolitykiem
+T60	Date 2488 2495	obecnie
+T61	Negation 2496 2499	bez
+T62	Drug 2500 2503	LBA
+R19	Dat Arg1:T9 Arg2:T8	
+R20	Dat Arg1:T9 Arg2:T10	
+R21	Neg Arg1:T61 Arg2:T62	
+R22	Dat Arg1:T60 Arg2:T62	
+R23	Dat Arg1:T58 Arg2:T57	
+R24	Dat Arg1:T58 Arg2:T59	
+T63	Condition 2508 2531	nadciśnieniem tętniczym
+N15	Reference T63 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T64	Condition 2533 2545	dyslipidemią
+N16	Reference T64 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T65	Condition 2547 2584	podejrzeniem kaszlu indukowanego ACEI
+A5	Source T65 Declared
+T13	Condition 2588 2616	przewlekłym zapaleniem zatok
+N5	Reference T13 ICD10:J32.9	Przewlekłe zapalenie zatok, nieokreślone
+A6	Status T13 Historical_Insignificant
+T66	Treatment 2621 2629	operacji
+N17	Reference T66 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+N18	Reference T21 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+A7	Status T66 Historical_Insignificant
+T67	Treatment 2651 2664	appendektomii
+N19	Reference T67 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T68	Date 2675 2689	w dzieciństwie
+T69	Investigation 2781 2806	angioCT tętnic wieńcowych
+R25	Dat Arg1:T68 Arg2:T67	
+T71	Symptom 2879 2901	wysokie wartości tętna
+N20	Reference T71 ICD10:R00.0	Tachykardia, nieokreślona
+T70	Negation 2913 2919	Neguje
+T72	Symptom 2920 2932	zasłabnięcia
+T73	Symptom 2934 2943	duszności
+N21	Reference T73 ICD10:R06.0	Duszność
+T74	Symptom 2945 2976	typowe bóle w klatce piersiowej
+N22	Reference T74 ICD10:R07.2	Ból w okolicy przedsercowej
+R26	Neg Arg1:T70 Arg2:T72	
+R27	Neg Arg1:T70 Arg2:T73	
+R28	Neg Arg1:T70 Arg2:T74	
+T75	Condition 3029 3032	WZW
+N23	Reference T75 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T76	Condition 3041 3050	borelioza
+N24	Reference T76 ICD10:A69.2	Choroba z Lyme
+T77	Condition 3058 3066	gruźlica
+N25	Reference T77 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T78	Negation 3033 3038	( - )
+T79	Negation 3051 3056	( - )
+T80	Negation 3067 3070	(-)
+R29	Neg Arg1:T78 Arg2:T75	
+R30	Neg Arg1:T79 Arg2:T76	
+R31	Neg Arg1:T80 Arg2:T77	
+T81	Behaviour 3071 3086	Palenie tytoniu
+N26	Reference T81 ICD10:Z72.0	Używanie tytoniu
+T82	Negation 3088 3091	nie
+T83	Behaviour 3092 3103	Inne używki
+T84	Negation 3105 3108	nie
+T85	Condition 3109 3118	Uczulenia
+N27	Reference T85 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T86	Negation 3120 3126	neguje
+T87	Behaviour 3143 3169	warunki mieszkaniowe dobre
+T88	Drug 3170 3186	Leki: jak w IKZL
+R32	Neg Arg1:T82 Arg2:T81	
+R33	Neg Arg1:T84 Arg2:T83	
+R34	Neg Arg1:T86 Arg2:T85	
+T89	Condition 1001 1017	zaćmy oka lewego
+A8	Status T89 Historical_Insignificant
+N28	Reference T89 ICD10:H26.9	Zaćma, nieokreślona
+T90	Condition 2630 2646	zaćmy oka lewego
+N29	Reference T90 ICD10:H26.9	Zaćma, nieokreślona
+A9	Status T90 Historical_Insignificant

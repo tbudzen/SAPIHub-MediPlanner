@@ -1,0 +1,63 @@
+T1	Drug 752 756	Agen
+T2	Drug 758 764	Avedol
+T3	Drug 766 771	Acard
+T4	Drug 773 782	Lozap HCT
+T5	Drug 784 791	Roswera
+T6	Drug 793 800	Focusin
+T7	Drug 1315 1321	Avedol
+T8	Drug 1334 1338	Agen
+T9	Drug 1354 1363	Lozap Hct
+T10	Condition 449 483	Dławica odmienna naczynioskurczowa
+N1	Reference T10 ICD10:I20.1	Choroba niedokrwienna serca z udokumentowanym skurczem naczyń wieńcowych
+T11	Condition 484 522	Przewlekła choroba niedokrwienna serca
+N2	Reference T11 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T12	Condition 524 545	Nadciśnienie tętnicze
+N3	Reference T12 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T13	Treatment 546 582	dobrze kontrolowane farmakologicznie
+T14	Condition 584 604	Hipercholesterolemia
+N4	Reference T14 ICD10:E78.0	Czysta hipercholesterolemia
+T15	Treatment 615 623	leczenia
+T16	Drug 624 631	statyną
+T17	Condition 945 982	przewleką chorobą niedokrwienną serca
+N5	Reference T17 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T18	Condition 984 1007	nadciśnieniem tętniczym
+N6	Reference T18 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T19	Symptom 1047 1079	dolegliwości w klatce piersiowej
+N7	Reference T19 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T20	Date 1081 1095	od kwietnia br
+T21	Symptom 1098 1149	nasilające się w trakcie trwania wysilku fizycznego
+T22	Symptom 1166 1196	zmniejszoną tolerancję wysiłku
+T23	Negation 1198 1201	bez
+T24	Symptom 1202 1226	obrzeków kończyn dolnych
+N8	Reference T24 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T25	Condition 1229 1238	Uczulenia
+N9	Reference T25 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T26	Condition 1241 1248	alergie
+N10	Reference T26 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T27	Negation 1250 1260	nie podaje
+T28	Condition 1263 1278	Wywiad rodzinie
+A1	Status T28 Family
+T29	Negation 1280 1305	bez znaczenia klinicznego
+T30	Drug_dose 1322 1332	2 x 12,5mg
+T31	Drug_dose 1339 1352	5mg wieczorem
+T32	Drug_dose 1364 1378	50/12,5mg rano
+T33	Drug 1379 1386	Rosvera
+T34	Drug_dose 1387 1391	15mg
+T35	Drug 1393 1400	Focusin
+T36	Drug_dose 1402 1417	0,4mg wieczorem
+T37	Investigation 1432 1464	badan ia laboratoryjne, obrazowe
+T38	Investigation 1466 1469	TTE
+T39	Investigation 1471 1492	RTG klatki piersiowej
+T40	Investigation 1493 1496	TET
+T41	Investigation 1498 1502	ABPM
+R1	Neg Arg1:T29 Arg2:T28	
+R2	Neg Arg1:T27 Arg2:T26	
+R3	Neg Arg1:T27 Arg2:T25	
+R4	Neg Arg1:T23 Arg2:T24	
+R5	Drg Arg1:T7 Arg2:T30	
+R6	Drg Arg1:T8 Arg2:T31	
+R7	Drg Arg1:T9 Arg2:T32	
+R8	Drg Arg1:T33 Arg2:T34	
+R9	Drg Arg1:T35 Arg2:T36	
+R10	Dat Arg1:T20 Arg2:T19	
+R11	Dat Arg1:T20 Arg2:T21	

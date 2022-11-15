@@ -1,0 +1,142 @@
+T1	Treatment 332 351	Dalsza opieka w POZ
+T2	Investigation 354 382	wskazana kontrola morfologii
+T3	Date 383 398	za 1-2 tygodnie
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Treatment 404 433	dalsza ewentualna diagnostyka
+T5	Investigation 438 495	Wskazana codzienna kontrola wartości ciśnienia tętniczego
+T6	Treatment 607 653	ewentualną modyfikacją leczenia hipotensyjnego
+T7	Behaviour 497 539	koniecznym jest zapisywanie ich w zeszycie
+T8	Investigation 546 582	kontrola tych wartości w Poradni POZ
+T9	Date 583 599	za około tydzień
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Treatment 658 737	Wskazana pilna konsultacja w Poradni Pulmonologicznej w celu weryfikacji wyniku
+T11	Investigation 738 759	RTG klatki piersiowej
+T12	Treatment 764 813	Wskazana dalsza opieka w Poradni Diabetologicznej
+T13	Treatment 818 900	Wskazana dalsza okresowa kontrola w Poradni Kardiologicznej oraz wykonanie badania
+T14	Investigation 901 924	SPECT mięśnia sercowego
+T15	Drug 927 940	dipirydamolem
+T16	Treatment 973 1062	Wskazana konsultacja, dalsza opieka i ewentualne leczenie w Poradni Chirurgii Naczyniowej
+T17	Investigation 1067 1146	Pacjent powinien zgłosić się po wynik oznaczenia witaminy B12 i kwasu foliowego
+T18	Date 1147 1162	za 2-3 tygodnie
+R3	Dat Arg1:T18 Arg2:T17	
+T19	Investigation 1167 1270	Okresowa kontrola morfologii, lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T20	Date 1282 1296	za 4-6 tygodni
+R4	Dat Arg1:T20 Arg2:T19	
+T21	Investigation 1301 1324	Okresowa kontrola HbA1c
+T22	Behaviour 1330 1358	Wskazana redukcja masy ciała
+T23	Behaviour 1364 1466	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T24	Behaviour 1472 1510	Kategoryczny zakaz spożywania alkoholu
+T25	Behaviour 1516 1550	Kategoryczny zakaz palenia tytoniu
+T26	Treatment 1556 1584	Regularne przyjmowanie leków
+T27	Drug 1590 1595	Acard
+T28	Drug 1652 1661	Triplixam
+T29	Drug 1623 1630	Nebilet
+T30	Drug_dose 1596 1621	75mg 1 tabletka wieczorem
+R5	Drg Arg1:T27 Arg2:T30	
+T31	Drug_dose 1631 1650	5mg 1 tabletka rano
+R6	Drg Arg1:T29 Arg2:T31	
+T32	Drug_dose 1662 1692	10mg+2,5mg+5mg 1 tabletka rano
+R7	Drg Arg1:T28 Arg2:T32	
+T33	Drug 1694 1701	Roswera
+T34	Drug_dose 1702 1727	20mg 1 tabletka wieczorem
+R8	Drg Arg1:T33 Arg2:T34	
+T35	Drug 1729 1736	Nolpaza
+T36	Drug_dose 1737 1767	20mg 1 tabletka rano, na czczo
+R9	Drg Arg1:T35 Arg2:T36	
+T37	Drug 1769 1775	Siofor
+T38	Drug_dose 1776 1875	1000mg 1 tabletka rano, w południe i wieczorem - wg dotychczasowych zaleceń specjalisty diabetologa
+R10	Drg Arg1:T37 Arg2:T38	
+T39	Condition 2094 2115	Nadciśnienie tętnicze
+N1	Reference T39 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T40	Condition 2117 2129	Cukrzyca t.2
+N2	Reference T40 ICD10:E11	Cukrzyca insulinoniezależna
+T41	Condition 2131 2143	Otyłość I st
+N3	Reference T41 ICD10:E66.9	Otyłość, nieokreślona
+T42	Behaviour 2145 2155	Nikotynizm
+N4	Reference T42 ICD10:T65.2	Tytoń i nikotyna
+T43	Condition 2157 2175	Żylaki kk. dolnych
+N5	Reference T43 ICD10:I83	Żylaki kończyn dolnych
+T44	Treatment 2185 2203	operacji brzusznej
+A1	Source T44 Declared
+T45	Date 2204 2217	w przeszłości
+R11	Dat Arg1:T45 Arg2:T44	
+T46	Condition 2456 2483	Choroba niedokrwienna serca
+N6	Reference T46 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T47	Condition 2507 2528	Nadciśnienie tętnicze
+N7	Reference T47 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T48	Condition 2530 2567	Blok przedsionkowo-komorowy I stopnia
+N8	Reference T48 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T49	Condition 2569 2581	Dyslipidemia
+N9	Reference T49 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T50	Treatment 2582 2606	w trakcie farmakoterapii
+T51	Drug 2607 2614	statyną
+T52	Condition 2616 2631	Cukrzyca typu 2
+N10	Reference T52 ICD10:E11	Cukrzyca insulinoniezależna
+T53	Condition 2633 2655	Chromanie przestankowe
+N11	Reference T53 ICD10:I73.9	Choroba naczyń obwodowych, nieokreślona
+T54	Condition 2657 2696	Łagodna niedokrwistość megaloblastyczna
+N12	Reference T54 ICD10:D53.1	Inne niedokrwistości megaloblastyczne niesklasyfikowane gdzie indziej
+T55	Condition 2698 2718	Torbiel nerki prawej
+N13	Reference T55 ICD10:N28.1	Torbiel nerki, nabyta
+T56	Treatment 2728 2751	operacji jamy brzusznej
+A2	Source T56 Declared
+T57	Date 2752 2765	w przeszłości
+R12	Dat Arg1:T57 Arg2:T56	
+T58	Condition 2830 2837	Otyłość
+N14	Reference T58 ICD10:E66.9	Otyłość, nieokreślona
+T59	Behaviour 2839 2849	Nikotynizm
+N15	Reference T59 ICD10:T65.2	Tytoń i nikotyna
+T60	Symptom 3022 3061	labilnych wartości ciśnienia tętniczego
+N16	Reference T60 ICD10:R03	
+T61	Investigation_result 3063 3078	max 230/25 mmHg
+N17	Reference T61 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T62	Date 3080 3097	od ok. 1 miesiąca
+R13	Dat Arg1:T62 Arg2:T61	
+R14	Dat Arg1:T62 Arg2:T60	
+T63	Condition 3112 3124	cukrzyca t.2
+N18	Reference T63 ICD10:E11	Cukrzyca insulinoniezależna
+T64	Treatment 3125 3142	Przebyte operacje
+T65	Treatment 3152 3160	operacji
+A3	Status T65 Historical_Insignificant
+T66	Condition 3161 3179	wrzodu dwunastnicy
+A4	Source T66 Declared
+N19	Reference T66 ICD10:K26	Wrzód dwunastnicy
+T67	Date 3183 3188	1965r
+R15	Dat Arg1:T67 Arg2:T66	
+R16	Dat Arg1:T67 Arg2:T65	
+T68	Treatment 3190 3209	Leczenie przewlekłe
+T69	Negation 3211 3221	nie podaje
+R17	Neg Arg1:T69 Arg2:T68	
+T70	Condition 3249 3252	WZW
+N20	Reference T70 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T71	Condition 3254 3263	borelioza
+N21	Reference T71 ICD10:A69.2	Choroba z Lyme
+T72	Negation 3266 3276	nie podaje
+R18	Neg Arg1:T72 Arg2:T71	
+R19	Neg Arg1:T72 Arg2:T70	
+T73	Condition 3277 3292	Wywiad rodzinny
+A5	Status T73 Family
+T74	Condition 3303 3305	MI
+A6	Status T74 Family
+N22	Reference T74 ICD10:I25.2	Przebyty zawał serca
+T75	Behaviour 3314 3344	Palenie tytoniu: do 2 paczek/d
+N23	Reference T75 ICD10:T65.2	Tytoń i nikotyna
+T76	Behaviour 3345 3370	Inne używki: okazjonalnie
+T77	Condition 3371 3380	Uczulenia
+T78	Negation 3382 3392	nie podaje
+R20	Neg Arg1:T78 Arg2:T77	
+T79	Behaviour 3411 3424	były kierowca
+T80	Drug 3444 3451	Nebilet
+T81	Drug_dose 3452 3469	5 mg 1 tabl. rano
+R21	Drg Arg1:T80 Arg2:T81	
+T82	Drug 3470 3477	Lorista
+T83	Drug_dose 3478 3501	50 mg 1 tabl. wieczorem
+R22	Drg Arg1:T82 Arg2:T83	
+T84	Drug 3502 3508	Siofor
+T85	Drug_dose 3509 3531	1000 mg 1 tabl. 3 x dz
+R23	Drg Arg1:T84 Arg2:T85	
+T86	Investigation 3559 3569	echo serca
+T87	Investigation 3571 3574	TET
+T88	Investigation 3576 3580	ABPM
+T89	Investigation 3582 3588	Holter
+T90	Investigation 3590 3608	RTG kl. piersiowej

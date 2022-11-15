@@ -1,0 +1,29 @@
+T1	Drug 755 763	Enarenal
+T2	Drug 791 799	Spironol
+T3	Drug_dose 764 788	1 x 1,25 mg ( 1/4 tabl )
+R1	Drg Arg1:T1 Arg2:T3	
+T4	Drug_dose 800 823	1 x 12,5 mg ( 1/2 tabl)
+R2	Drg Arg1:T2 Arg2:T4	
+T5	Drug 1040 1048	Enarenal
+T6	Drug 1051 1059	Spironol
+T7	Condition 1200 1245	ubytkiem w przegrodzie komorowo-przedsinkowej
+N1	Reference T7 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T8	Negation 1307 1320	nie otrzymuje
+T9	Drug 1292 1306	leków na stałe
+R3	Neg Arg1:T8 Arg2:T9	
+T10	Condition 1322 1339	wywiad alergiczny
+N2	Reference T10 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T11	Negation 1340 1346	ujemny
+R4	Neg Arg1:T11 Arg2:T10	
+T12	Investigation 891 918	oznaczenie poziomu NTproBNP
+T13	Condition 557 604	Umiarkowana niedomykalność zastawki dwudzielnej
+N3	Reference T13 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T14	Condition 438 511	Wrodzona wada serca pod postacią ubytku przegrody przedsionkowo-komorowej
+N4	Reference T14 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T15	Treatment 525 538	operacji wady
+T16	Date 541 551	25.11.2015
+R5	Dat Arg1:T16 Arg2:T15	
+T17	Treatment 824 847	Kontrola kardiologiczna
+T18	Date 848 866	za ok.3-4 miesiące
+R6	Dat Arg1:T18 Arg2:T17	
+T19	Investigation 1273 1290	badania kontrolne

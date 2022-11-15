@@ -1,0 +1,185 @@
+T1	Investigation 3895 3899	ECHO
+T2	Investigation 3901 3904	TEE
+T3	Investigation 3906 3924	EKG metodą Holtera
+T4	Investigation 3926 3930	ABPM
+T5	Drug 3795 3811	Leki: jak w IKZL
+T6	Condition 3662 3665	WZW
+N1	Reference T6 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T7	Condition 3672 3681	borelioza
+N2	Reference T7 ICD10:A69.2	Choroba z Lyme
+T8	Condition 3687 3690	tbc
+N3	Reference T8 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T9	Condition 3696 3700	odra
+N4	Reference T9 ICD10:B05	Odra
+T10	Behaviour 3706 3720	kontakt z odrą
+N5	Reference T10 ICD10:B05	Odra
+T11	Behaviour 3741 3767	warunki mieszkaniowe dobre
+T12	Date 3666 3669	(-)
+R1	Dat Arg1:T12 Arg2:T6	
+T13	Date 3682 3685	(-)
+R2	Dat Arg1:T13 Arg2:T7	
+T14	Date 3691 3694	(-)
+R3	Dat Arg1:T14 Arg2:T8	
+T15	Date 3701 3704	(-)
+R4	Dat Arg1:T15 Arg2:T9	
+T16	Negation 3721 3724	(-)
+R5	Neg Arg1:T16 Arg2:T10	
+T17	Drug 3625 3634	lidokaina
+T18	Condition 3614 3623	Uczulenia
+N6	Reference T18 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R6	Alg Arg1:T18 Arg2:T17	
+T19	Negation 3607 3613	neguje
+T20	Negation 3587 3593	neguje
+T21	Behaviour 3594 3606	Inne używki:
+R7	Neg Arg1:T19 Arg2:T21	
+T22	Behaviour 3570 3585	Palenie tytoniu
+N7	Reference T22 ICD10:T65.2	Tytoń i nikotyna
+R8	Neg Arg1:T20 Arg2:T22	
+T23	Treatment 3480 3505	endoproteza lewego biodra
+A1	Status T23 Historical_Insignificant
+T24	Date 3507 3517	6 lat temu
+R9	Dat Arg1:T24 Arg2:T23	
+T25	Treatment 3520 3554	przepuklina pachwinowa lewostronna
+A2	Status T25 Historical_Insignificant
+T26	Date 3557 3568	3 lata temu
+R10	Dat Arg1:T26 Arg2:T25	
+T27	Negation 3325 3331	Neguje
+T28	Symptom 3333 3345	zasłabnięcia
+N8	Reference T28 ICD10:R55	Omdlenie i zapaść
+T29	Symptom 3347 3355	omdlenia
+N9	Reference T29 ICD10:R55	Omdlenie i zapaść
+T30	Symptom 3357 3367	krwawienia
+N10	Reference T30 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T31	Symptom 3369 3382	czarne stolce
+N11	Reference T31 ICD10:K92.1	Stolce smołowate
+T32	Symptom 3384 3400	brunatne wymioty
+N12	Reference T32 ICD10:K92.0	Wymioty krwawe
+T33	Condition 3402 3418	chorobę wrzodową
+N13	Reference T33 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T34	Symptom 3420 3434	duszność nocną
+N14	Reference T34 ICD10:I50.1	Niewydolność serca lewokomorowa
+T35	Symptom 3436 3460	bóle w klatce piersiowej
+N15	Reference T35 ICD10:R07.3	Inne bóle w klatce piersiowej
+R11	Neg Arg1:T27 Arg2:T28	
+R12	Neg Arg1:T27 Arg2:T29	
+R13	Neg Arg1:T27 Arg2:T30	
+R14	Neg Arg1:T27 Arg2:T31	
+R15	Neg Arg1:T27 Arg2:T32	
+R16	Neg Arg1:T27 Arg2:T33	
+R17	Neg Arg1:T27 Arg2:T34	
+R18	Neg Arg1:T27 Arg2:T35	
+T36	Investigation 505 542	pomiary ciśnienia tętniczego 2-3 x dz
+T37	Investigation 544 653	okkresowo kontrola lipidogramu, glikemii, HbA1C, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T38	Behaviour 654 749	dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T39	Drug 782 789	Pradaxa
+T40	Drug_dose 790 811	150 mg 1 tabl. 2 x dz
+R19	Drg Arg1:T39 Arg2:T40	
+T41	Drug 813 819	Diuver
+T42	Drug_dose 820 838	10 mg 1 tabl. rano
+R20	Drg Arg1:T41 Arg2:T42	
+T43	Drug 839 847	Spironol
+T44	Drug_dose 848 872	25 mg 1 tabl. w południe
+R21	Drg Arg1:T43 Arg2:T44	
+T45	Drug 873 881	Primacor
+T46	Drug_dose 882 900	20 mg 1 tabl. rano
+R22	Drg Arg1:T45 Arg2:T46	
+T47	Drug 901 911	Candepress
+T48	Drug_dose 912 938	32 mg  1/2 tabl. wieczorem
+R23	Drg Arg1:T47 Arg2:T48	
+T49	Drug 940 947	Milurit
+T50	Drug_dose 948 981	300 mg 1/2 tabl. rano i wieczorem
+R24	Drg Arg1:T49 Arg2:T50	
+T51	Drug 982 990	Osteovit
+T52	Drug_dose 991 1010	1000mg 1 tabl. rano
+R25	Drg Arg1:T51 Arg2:T52	
+T53	Drug 1011 1017	Amaryl
+T54	Drug_dose 1018 1035	1 mg 1 tabl. rano
+R26	Drg Arg1:T53 Arg2:T54	
+T55	Drug 1036 1048	Metformax XR
+T56	Drug_dose 1049 1073	500 mg 1 tabl. wieczorem
+R27	Drg Arg1:T55 Arg2:T56	
+T57	Drug 1074 1090	Sorbifer durules
+T58	Drug_dose 1091 1105	1 tabl. 2 x dz
+R28	Drg Arg1:T57 Arg2:T58	
+T59	Condition 1324 1411	Wada nabyta serca pod postacią ciężkiej niedomykalności dwupłatkowej zastawki aortalnej
+N16	Reference T59 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T60	Condition 2181 2202	umiarkowaną/ciężką IA
+N17	Reference T60 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T61	Condition 1566 1652	Przewlekła niewydolność serca z zachowaną frakcją wyrzutową LK w II/III klasie wg NYHA
+N18	Reference T61 ICD10:I50	Niewydolność serca
+T62	Treatment 1688 1730	wielokrotnych kardiowersjach elektrycznych
+T63	Date 1752 1763	09.09.2019r
+R29	Dat Arg1:T63 Arg2:T62	
+T64	Condition 1654 1678	Trzepotanie przedsionków
+N19	Reference T64 ICD10:I48	Migotanie i trzepotanie przedsionków
+T65	Condition 2929 2963	Utrwalone trzepotanie przedsionków
+N20	Reference T65 ICD10:I48	Migotanie i trzepotanie przedsionków
+T66	Treatment 2973 3025	3x kardiowersji elektrycznej krótkotrwale skutecznej
+T67	Condition 2841 2927	Przewlekła niewydolnosć serca z zachowaną frakcją wyrzutową LK w II/III klasie wg NYHA
+N21	Reference T67 ICD10:I50	Niewydolność serca
+T68	Condition 2603 2624	Umiarkowana/ciężka IA
+N22	Reference T68 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T69	Symptom 2556 2580	okresowe kołatania serca
+N23	Reference T69 ICD10:R00.2	Kołatanie serca
+T70	Symptom 2474 2505	ograniczenie tolerancji wysiłku
+T71	Symptom 2508 2537	duszność do II/III klasy NYHA
+N24	Reference T71 ICD10:R06.0	Duszność
+T72	Symptom 2539 2550	zlewne poty
+N25	Reference T72 ICD10:R61	Nadmierne pocenie
+T73	Condition 3078 3093	cukrzyca typu 2
+N26	Reference T73 ICD10:E11	Cukrzyca insulinoniezależna
+T74	Condition 1817 1832	cukrzyca typu 2
+N27	Reference T74 ICD10:E11	Cukrzyca insulinoniezależna
+T75	Condition 1834 1841	otyłość
+N28	Reference T75 ICD10:E66	Otyłość
+T76	Condition 3095 3102	otyłość
+N29	Reference T76 ICD10:E66	Otyłość
+T77	Condition 3062 3076	hiperlipidemia
+N30	Reference T77 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T78	Condition 1801 1815	hiperlipidemia
+N31	Reference T78 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T79	Condition 1787 1799	nadciśnienie
+N32	Reference T79 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T80	Condition 3048 3060	nadciśnienie
+N33	Reference T80 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T81	Condition 2742 2839	Tętniak przegrody międzyprzedsionkowej skierowany w stronę prawego przedsionka bez cech przecieku
+N34	Reference T81 ICD10:Q21.9	Wrodzona wada przegrody serca, nieokreślona
+T82	Condition 1467 1564	Tętniak przegrody międzyprzedsionkowej skierowany w stronę prawego przedsionka bez cech przecieku
+N35	Reference T82 ICD10:Q21.9	Wrodzona wada przegrody serca, nieokreślona
+T83	Investigation 2372 2385	wykonania TEE
+T84	Investigation 2438 2446	TK serca
+T85	Date 2448 2455	07/2019
+R30	Dat Arg1:T85 Arg2:T84	
+T86	Condition 3134 3162	Kamica pęcherzyka żółciowego
+N36	Reference T86 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T87	Condition 1874 1902	Kamica pęcherzyka żółciowego
+N37	Reference T87 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T88	Condition 1844 1860	Torbiel trzustki
+N38	Reference T88 ICD10:K86.2	Torbiel trzustki
+T89	Condition 3104 3120	Torbiel trzustki
+N39	Reference T89 ICD10:K86.2	Torbiel trzustki
+T90	Condition 1916 1948	Miażdżyca tętnic kończyn dolnych
+N40	Reference T90 ICD10:I70.2	Miażdżyca tętnic kończyn
+T91	Condition 3176 3208	Miażdżyca tętnic kończyn dolnych
+N41	Reference T91 ICD10:I70.2	Miażdżyca tętnic kończyn
+T92	Symptom 3210 3248	Zawroty głowy pochodzenia naczyniowego
+N42	Reference T92 ICD10:R62	Brak oczekiwanego prawidłowego rozwoju fizjologicznego
+T93	Symptom 1950 1988	Zawroty głowy pochodzenia naczyniowego
+N43	Reference T93 ICD10:R42	Zawroty głowy i odurzenie
+T94	Condition 1990 2024	Choroba zwyrodnieniowa kręgosłupa.
+N44	Reference T94 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T95	Condition 3250 3283	Choroba zwyrodnieniowa kręgosłupa
+N45	Reference T95 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T96	Condition 2025 2031	Jaskra
+N46	Reference T96 ICD10:H40.9	Jaskra, nieokreślona
+T97	Condition 3285 3291	Jaskra
+N47	Reference T97 ICD10:H40.9	Jaskra, nieokreślona
+T98	Condition 3293 3323	Guzek w szczycie płuca prawego
+N48	Reference T98 ICD10:R91	Nieprawidłowe wyniki diagnostycznych badań obrazowych płuc
+T99	Condition 2626 2629	BAV
+N49	Reference T99 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T100	Condition 2206 2320	tętniakowatym poszerzeniem bezwieńcowej zatoki Valsalvy- opuszka 58x48mm i poszerzeniem aorty wstępujacej do 49 mm
+T101	Condition 2631 2741	Tętniakowate poszerzenie bezwieńcowej zatoki Valsalvy opuszka 58x48mm, poszerzenie aorty wstępujacej do 49 mm.
+N51	Reference T101 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+N50	Reference T100 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T102	Condition 1413 1466	ętniakowate poszerzenie bezwieńcowej zatoki Valsalvy.

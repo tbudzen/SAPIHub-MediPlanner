@@ -1,0 +1,137 @@
+T1	Condition 461 492	komorowe zaburzenia rytmu serca
+T2	Condition 494 528	Tendencja do bradykardii zatokowej
+N2	Reference T2 ICD10:R00.1	Bradykardia, nieokreślona
+T3	Condition 530 558	Choroba wrzodowa dwunastnicy
+N3	Reference T3 ICD10:K26	Wrzód dwunastnicy
+T4	Treatment 680 707	dalsza opieka w poradni POZ
+T5	Treatment 709 741	okresowa kontrola kardiologiczna
+T6	Behaviour 742 792	prawidłowe żywienie i regularna aktywność fizyczna
+T7	Investigation 793 840	wskazana ocena przeciwciał w kierunku boreliozy
+T8	Treatment 869 897	regularne przyjmowanie leków
+T9	Drug 899 907	Dexilant
+T10	Drug_dose 908 926	30 mg 1 tabl. rano
+R1	Drg Arg1:T9 Arg2:T10	
+T11	Symptom 1122 1189	bólu w klatce piersiowej o charakterze kłucia (ostry, przenikający)
+N4	Reference T11 ICD10:R07.2	Ból w okolicy przedsercowej
+T12	Symptom 1191 1204	kołatań serca
+N5	Reference T12 ICD10:R00.2	
+T13	Symptom 1206 1237	zmniejszonej tolerancji wysiłku
+N6	Reference T13 ICD10:R53	Złe samopoczucie i zmęczenie
+T14	Date 1238 1250	od kilku lat
+R2	Dat Arg1:T14 Arg2:T13	
+R3	Dat Arg1:T14 Arg2:T12	
+R4	Dat Arg1:T14 Arg2:T11	
+T15	Symptom 1274 1310	okresowo obrzęków kostek kk. dolnych
+T16	Condition 1402 1413	bradykardią
+N8	Reference T16 ICD10:R00.1	Bradykardia, nieokreślona
+T17	Date 1414 1425	17 lat temu
+R5	Dat Arg1:T17 Arg2:T16	
+T18	Symptom 1431 1467	niskie wartości ciśnienia tętniczego
+N9	Reference T18 ICD10:R03.1	Nieswoiste obniżone ciśnienie tętnicze krwi
+T19	Symptom 1480 1505	dolegliwości bólowe barku
+N10	Reference T19 ICD10:M25.5	Ból stawu
+T20	Negation 1534 1540	Neguje
+T21	Symptom 1541 1553	zasłabnięcia
+T22	Symptom 1555 1563	omdlenia
+N11	Reference T22 ICD10:R55	Omdlenie i zapaść
+T23	Symptom 1565 1578	zawroty głowy
+N12	Reference T23 ICD10:R42	Zawroty głowy i odurzenie
+T24	Symptom 1580 1590	krwawienia
+T25	Symptom 1592 1605	czarne stolce
+N13	Reference T25 ICD10:K92.1	Stolce smołowate
+T26	Symptom 1607 1623	brunatne wymioty
+N14	Reference T26 ICD10:K92.0	Wymioty krwawe
+T27	Symptom 1625 1639	duszność nocną
+N15	Reference T27 ICD10:R06.0	Duszność
+T28	Symptom 1641 1656	obrzęki podudzi
+R6	Neg Arg1:T20 Arg2:T28	
+R7	Neg Arg1:T20 Arg2:T27	
+R8	Neg Arg1:T20 Arg2:T26	
+R9	Neg Arg1:T20 Arg2:T25	
+R10	Neg Arg1:T20 Arg2:T24	
+R11	Neg Arg1:T20 Arg2:T23	
+R12	Neg Arg1:T20 Arg2:T22	
+R13	Neg Arg1:T20 Arg2:T21	
+T29	Symptom 1658 1677	Innych dolegliwości
+T30	Negation 1678 1689	nie zgłasza
+R14	Neg Arg1:T30 Arg2:T29	
+T31	Condition 1704 1732	choroba wrzodowa dwunastnicy
+N17	Reference T31 ICD10:K26	Wrzód dwunastnicy
+T32	Date 1734 1743	od 24 lat
+R15	Dat Arg1:T32 Arg2:T31	
+T33	Treatment 1765 1781	cięcie cesarskie
+A1	Status T33 Historical_Insignificant
+T34	Date 1783 1794	49 lat temu
+R16	Dat Arg1:T34 Arg2:T33	
+T35	Treatment 1797 1828	usunięcie kaletki lewego kolana
+A2	Status T35 Historical_Insignificant
+T36	Date 1830 1846	około 8 lat temu
+R17	Dat Arg1:T36 Arg2:T35	
+T37	Treatment 1849 1868	Leczenie przewlekłe
+T38	Treatment 1892 1905	neurologiczna
+T39	Condition 1932 1935	WZW
+T40	Condition 1944 1953	borelioza
+N19	Reference T40 ICD10:A69.2	Choroba z Lyme
+T41	Condition 1961 1969	grużlica
+T42	Condition 1977 1981	odra
+N21	Reference T42 ICD10:B05	Odra
+T43	Negation 1984 1985	-
+R18	Neg Arg1:T43 Arg2:T42	
+T44	Negation 1972 1973	-
+R19	Neg Arg1:T44 Arg2:T41	
+T45	Negation 1956 1957	-
+R20	Neg Arg1:T45 Arg2:T40	
+T46	Negation 1938 1939	-
+R21	Neg Arg1:T46 Arg2:T39	
+N18	Reference T39 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T47	Condition 1988 2003	Wywiad rodzinny
+A3	Status T47 Family
+T48	Negation 2005 2015	nieistotny
+R22	Neg Arg1:T48 Arg2:T47	
+T49	Behaviour 2017 2032	Palenie tytoniu
+T50	Negation 2034 2042	nie pali
+T51	Date 2043 2052	od 25 lat
+R23	Neg Arg1:T50 Arg2:T49	
+R24	Dat Arg1:T51 Arg2:T49	
+T52	Behaviour 2068 2090	3-4 papierosy dziennie
+T53	Date 2091 2103	przez 30 lat
+R25	Dat Arg1:T53 Arg2:T52	
+T54	Behaviour 2105 2116	Inne używki
+T55	Negation 2118 2124	neguje
+R26	Neg Arg1:T55 Arg2:T54	
+T56	Condition 2126 2135	Uczulenia
+T57	Negation 2137 2143	neguje
+R27	Neg Arg1:T57 Arg2:T56	
+T58	Behaviour 2161 2187	warunki mieszkaniowe dobre
+T59	Behaviour 2213 2221	kolektor
+T60	Drug 2229 2237	Setal MR
+T61	Drug_dose 2238 2247	2x1 tabl.
+R28	Drg Arg1:T60 Arg2:T61	
+T62	Drug 2249 2257	Dexilant
+T63	Drug_dose 2258 2275	30mg 1 tabl. rano
+R29	Drg Arg1:T62 Arg2:T63	
+T64	Drug 2277 2285	Structum
+T65	Drug_dose 2286 2294	2x1tabl.
+R30	Drg Arg1:T64 Arg2:T65	
+T66	Drug 2296 2303	Lorafen
+T67	Drug_dose 2304 2325	1mg 1 tabl. wieczorem
+R31	Drg Arg1:T66 Arg2:T67	
+T68	Investigation 2341 2344	TTE
+T69	Investigation 2346 2349	TET
+T70	Investigation 2351 2355	ABPM
+T71	Investigation 2357 2367	Holter EKG
+T72	Treatment 1746 1763	Przebyte operacje
+N1	Reference T1 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T73	Condition 439 458	Łagodna nadkomorowe
+N24	Reference T73 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T74	Treatment 1870 1890	gastroenterologiczne
+N26	Reference T56 ICD10:T78.4	Alergia, nieokreślona
+N27	Reference T21 ICD10:R55	
+N22	Reference T49 ICD10:Z72.0	Używanie tytoniu
+N23	Reference T52 ICD10:Z72.0	Używanie tytoniu
+N7	Reference T15 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N25	Reference T24 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N16	Reference T28 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+A4	Status T31 Historical_Insignificant
+N20	Reference T41 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N28	Reference T54 ICD10:Z72	Problemy związane ze stylem życia

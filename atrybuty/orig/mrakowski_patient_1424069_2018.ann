@@ -1,0 +1,104 @@
+T1	Treatment 332 354	kontrola u lekarza POZ
+T2	Treatment 357 425	dalsza kontrola w Poradni Kardiologicznej i Wad wrodzonych Dorosłych
+T3	Investigation 445 475	scyntygrafii mięśnia sercowego
+T4	Treatment 478 522	dalsza kontrola w Poradni Endokrynologicznej
+T5	Investigation 525 545	kontrola lipidogramu
+T6	Date 546 555	za 3 m-ce
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Condition 787 821	choroby wieńcowej mikronaczyniowej
+N1	Reference T7 ICD10:I20.8	Inne postacie choroby niedokrwiennej serca
+A1	Source T7 Declared
+T8	Condition 823 845	Niedoczynność tarczycy
+N2	Reference T8 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T9	Condition 847 875	Kamica pęcherzyka żółciowego
+N3	Reference T9 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T10	Treatment 885 898	appendektomii
+A2	Status T10 Historical_Insignificant
+T11	Date 899 909	przed laty
+R2	Dat Arg1:T11 Arg2:T10	
+T12	Condition 1055 1079	niedoczynnością tarczycy
+N4	Reference T12 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T13	Condition 1081 1109	kamicą pęcherzyka żółciowego
+N5	Reference T13 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T14	Treatment 1114 1127	appendektomii
+A3	Status T14 Historical_Insignificant
+T15	Date 1128 1138	przed laty
+R3	Dat Arg1:T15 Arg2:T14	
+T16	Symptom 1169 1198	uciskowych bólów zamostkowych
+N6	Reference T16 ICD10:R07.2	Ból w okolicy przedsercowej
+T17	Date 1199 1207	od dawna
+R4	Dat Arg1:T17 Arg2:T16	
+T18	Investigation_result 1291 1318	RR w domu 110/80-140/98mmHg
+N7	Reference T18 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T19	Condition 1320 1322	OM
+T20	Date 1324 1328	2016
+R5	Dat Arg1:T20 Arg2:T19	
+T21	Negation 1330 1336	Neguje
+T22	Symptom 1338 1350	zasłabnięcia
+N8	Reference T22 ICD10:R55	Omdlenie i zapaść
+T23	Symptom 1352 1360	omdlenia
+N9	Reference T23 ICD10:R55	Omdlenie i zapaść
+T24	Symptom 1362 1372	krwawienia
+T25	Symptom 1374 1387	czarne stolce
+N11	Reference T25 ICD10:K92.1	Stolce smołowate
+T26	Symptom 1389 1405	brunatne wymioty
+N12	Reference T26 ICD10:K92.0	Wymioty krwawe
+R6	Neg Arg1:T21 Arg2:T22	
+R7	Neg Arg1:T21 Arg2:T23	
+R8	Neg Arg1:T21 Arg2:T24	
+R9	Neg Arg1:T21 Arg2:T25	
+R10	Neg Arg1:T21 Arg2:T26	
+T27	Condition 1407 1423	chorobę wrzodową
+N13	Reference T27 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T28	Symptom 1425 1439	duszność nocną
+N14	Reference T28 ICD10:R06.0	Duszność
+T29	Symptom 1441 1456	obrzęki podudzi
+T30	Symptom 1457 1472	kołatania serca
+N16	Reference T30 ICD10:R00.2	Kołatanie serca
+T31	Condition 1474 1476	HA
+N17	Reference T31 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T32	Condition 1478 1480	DM
+N18	Reference T32 ICD10:E14	Cukrzyca nieokreślona
+R11	Neg Arg1:T21 Arg2:T27	
+R12	Neg Arg1:T21 Arg2:T28	
+R13	Neg Arg1:T21 Arg2:T29	
+R14	Neg Arg1:T21 Arg2:T30	
+R15	Neg Arg1:T21 Arg2:T31	
+R16	Neg Arg1:T21 Arg2:T32	
+T33	Treatment 1483 1500	Przebyte operacje
+T34	Treatment 1502 1515	appendektomia
+A4	Status T34 Historical_Insignificant
+T35	Behaviour 1517 1532	Palenie tytoniu
+N19	Reference T35 ICD10:Z72.0	Używanie tytoniu
+T36	Negation 1534 1539	nigdy
+R17	Neg Arg1:T36 Arg2:T35	
+T37	Behaviour 1540 1551	Inne używki
+T38	Negation 1553 1556	nie
+R18	Neg Arg1:T38 Arg2:T37	
+T39	Condition 1557 1566	Uczulenia
+N20	Reference T39 ICD10:T78.4	Alergia, nieokreślona
+T40	Negation 1568 1571	nie
+R19	Neg Arg1:T40 Arg2:T39	
+T41	Condition 1599 1602	WZW
+N21	Reference T41 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T42	Negation 1604 1605	-
+R20	Neg Arg1:T42 Arg2:T41	
+T43	Condition 1609 1618	borelioza
+N22	Reference T43 ICD10:A69.2	Choroba z Lyme
+T44	Negation 1621 1622	-
+R21	Neg Arg1:T44 Arg2:T43	
+T45	Condition 1626 1629	tbc
+T46	Negation 1631 1632	-
+R22	Neg Arg1:T46 Arg2:T45	
+T47	Behaviour 1650 1676	warunki mieszkaniowe dobre
+T48	Drug 1714 1720	Letrox
+T49	Drug_dose 1721 1743	150ug 1x 1/2 tabl/rano
+R23	Drg Arg1:T48 Arg2:T49	
+T50	Investigation 1804 1825	badania laboratoryjne
+T51	Investigation 1827 1831	ECHO
+T52	Investigation 1833 1837	ABPM
+T53	Investigation 1839 1854	próba wysiłkowa
+N10	Reference T24 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N15	Reference T29 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N24	Reference T37 ICD10:Z72	Problemy związane ze stylem życia
+N23	Reference T45 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

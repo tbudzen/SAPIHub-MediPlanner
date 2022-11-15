@@ -1,0 +1,178 @@
+T1	Treatment 329 422	Dalsza opieka ambulatoryjna w POZ, poradni kardiologicznej, neurologicznej oraz okulistycznej
+T2	Drug 442 447	Nedal
+T3	Drug_dose 448 468	5mg 1 x 1 tabl. rano
+T4	Drug 470 477	Polpril
+T5	Drug_dose 478 504	5mg  1 x 1 tabl. wieczorem
+T6	Drug 506 513	Ezoleta
+T7	Drug_dose 514 535	10mg 1 x 1 tabl. rano
+T8	Drug 537 542	Acard
+T9	Drug_dose 543 569	75mg 1 x 1 tabl. wieczorem
+T10	Drug 690 695	Nedal
+T11	Drug 697 709	Atorvasterol
+T12	Drug 711 716	Acard
+R1	Drg Arg1:T2 Arg2:T3	
+R2	Drg Arg1:T4 Arg2:T5	
+R3	Drg Arg1:T6 Arg2:T7	
+R4	Drg Arg1:T8 Arg2:T9	
+T13	Condition 964 1003	Przewlekła choroba  niedokrwienna serca
+N1	Reference T13 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T14	Condition 1005 1037	Nadciśnienie tętnicze  I stopnia
+N2	Reference T14 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T15	Negation 1039 1042	nie
+T16	Treatment 1042 1070	uregulowane farmakologicznie
+R5	Neg Arg1:T15 Arg2:T16	
+T17	Symptom 1072 1098	Kolka  nerkowa lewostronna
+N3	Reference T17 ICD10:N23	Nieokreślona kolka nerkowa
+T18	Condition 1100 1113	Nietolerancja
+N4	Reference T18 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T19	Drug 1115 1128	rozuwastatyny
+R6	Alg Arg1:T18 Arg2:T19	
+T20	Treatment 1238 1265	dalsza opieka w poradni POZ
+T21	Treatment 1267 1299	okresowa kontrola kardiologiczna
+T22	Treatment 1309 1335	konsultacja psychiatryczna
+T23	Behaviour 1364 1401	dieta ubogosolna, ubogocholesterolowa
+T24	Behaviour 1402 1430	regularna aktywność fizyczna
+T25	Drug 1437 1443	Concor
+T26	Drug_dose 1444 1464	5mg 1 x 1 tabl. rano
+T27	Drug 1466 1473	Polpril
+T28	Drug_dose 1474 1499	5mg 1 x 1 tabl. wieczorem
+T29	Drug 1501 1508	Ezoleta
+T30	Drug_dose 1509 1530	10mg 1 x 1 tabl. rano
+T31	Drug 1532 1537	Acard
+T32	Drug_dose 1538 1564	75mg 1 x 1 tabl. wieczorem
+T33	Drug 1567 1572	Nasen
+T34	Drug_dose 1573 1590	1 tabl. wieczorem
+T35	Drug 1591 1600	Captopril
+T36	Drug_dose 1601 1672	12,5 mg 1 tabl. doraźnie przy wysokich wartościach ciśnienia tętniczego
+R7	Drg Arg1:T25 Arg2:T26	
+R8	Drg Arg1:T27 Arg2:T28	
+R9	Drg Arg1:T29 Arg2:T30	
+R10	Drg Arg1:T31 Arg2:T32	
+R11	Drg Arg1:T33 Arg2:T34	
+R12	Drg Arg1:T35 Arg2:T36	
+T37	Condition 1899 1932	Nadciśnienie tętnicze I st.wg WHO
+N5	Reference T37 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T38	Condition 1934 1973	Przewlekła choroba  niedokrwienna serca
+N6	Reference T38 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T39	Symptom 1976 2002	Kolka  nerkowa lewostronna
+N7	Reference T39 ICD10:N23	Nieokreślona kolka nerkowa
+T40	Condition 2016 2029	Nietolerancja
+N8	Reference T40 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T41	Drug 2031 2044	rozuwastatyny
+T42	Condition 2046 2093	Przepuklina kręgosłupa odcinka lędźwiowego L3-4
+N9	Reference T42 ICD10:M99.5	Zwężenie kanału kręgowego przez przepuklinę krążka międzykręgowego
+T43	Condition 2095 2122	Zaburzenia psychosomatyczne
+N10	Reference T43 ICD10:F45.9	Zaburzenia występujące pod postacią somatyczną, nieokreślone
+T44	Condition 2124 2151	Podejrzenie nerwicy lękowej
+A1	Source T44 Declared
+N11	Reference T44 ICD10:F41.1	Zaburzenia lękowe uogólnione
+R13	Alg Arg1:T40 Arg2:T41	
+T45	Condition 2303 2326	nadciśnienia tętniczego
+N12	Reference T45 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T46	Date 2329 2334	10lat
+T47	Condition 2339 2389	przepukliną kręgosłupa odcinka lędźwiowego   L3-L4
+N13	Reference T47 ICD10:M99.5	Zwężenie kanału kręgowego przez przepuklinę krążka międzykręgowego
+T48	Treatment 2390 2429	zakwalifikowany do zabiegu operacyjnego
+T49	Date 2430 2438	od 4 lat
+R14	Dat Arg1:T49 Arg2:T48	
+R15	Dat Arg1:T49 Arg2:T47	
+R16	Dat Arg1:T46 Arg2:T45	
+T50	Investigation_result 2480 2523	zwyżki ciśnienia tętniczego  ( 240/148mmHg)
+T51	Symptom 2540 2560	drżenie całego ciała
+N14	Reference T51 ICD10:R25.1	Drżenie, nieokreślone
+T52	Negation 2563 2566	bez
+T53	Symptom 2567 2575	gorączki
+N15	Reference T53 ICD10:R50.9	Gorączka, nieokreślona
+R17	Neg Arg1:T52 Arg2:T53	
+T54	Drug 2576 2580	Leki
+T55	Behaviour 2581 2605	przyjmuje systematycznie
+T56	Drug 2608 2616	Bisocard
+T57	Drug_dose 2617 2622	2,5mg
+R18	Drg Arg1:T56 Arg2:T57	
+T58	Negation 2745 2751	neguje
+T59	Negation 2803 2805	nb
+T60	Negation 2836 2842	neguje
+T61	Treatment 2865 2879	farmakoterapia
+T62	Investigation 2883 2900	badanie lekarskie
+T63	Investigation 2901 2937	diagnostyka labortaoryjna i obrazowa
+T64	Investigation 2940 2944	echo
+T65	Investigation 2947 2951	ABPM
+T66	Investigation 2954 2966	holter - ekg
+T67	Investigation 2969 2984	próba wysiłkowa
+T68	Treatment 2987 3013	Konsultacjje :okulistyczna
+T69	Negation 3803 3809	neguje
+T70	Negation 3770 3772	nb
+T71	Drug 3846 3853	Polpril
+T72	Drug 3817 3823	Concor
+T73	Drug 3881 3888	Ezoleta
+T74	Drug 3912 3917	Acard
+T75	Treatment 3967 3981	farmakoterapia
+T76	Investigation 3984 4001	badanie lekarskie
+T77	Investigation 4002 4038	diagnostyka labortaoryjna i obrazowa
+T78	Investigation 4041 4045	echo
+T79	Investigation 4048 4052	ABPM
+T80	Investigation 4054 4066	holter - ekg
+T81	Investigation 4069 4084	próba wysiłkowa
+T82	Symptom 2643 2666	uczucie kołatania serca
+N16	Reference T82 ICD10:R00.2	Kołatanie serca
+T83	Symptom 2672 2732	dolegliwości stenokardialne niezwiązane z wysiłkem fizycznym
+N17	Reference T83 ICD10:R07.2	Ból w okolicy przedsercowej
+T84	Symptom 2735 2745	Omdlenia  
+N18	Reference T84 ICD10:R55	Omdlenie i zapaść
+T85	Condition 2773 2792	zaburzenia widzenia
+N19	Reference T85 ICD10:H53.9	Zaburzenia widzenia, nieokreślone
+T86	Treatment 2793 2801	Operacje
+N20	Reference T86 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T87	Condition 2807 2824	Uczulenia na leki
+N21	Reference T87 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T88	Condition 2827 2834	alergie
+N22	Reference T88 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R19	Neg Arg1:T58 Arg2:T84	
+R20	Neg Arg1:T59 Arg2:T86	
+R21	Neg Arg1:T60 Arg2:T88	
+R22	Neg Arg1:T60 Arg2:T87	
+T89	Condition 3177 3200	nadciśnienia tętniczego
+N23	Reference T89 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T90	Condition 3204 3252	przepukliną kręgosłupa odcinka lędźwiowego L3-L4
+N24	Reference T90 ICD10:M99.5	Zwężenie kanału kręgowego przez przepuklinę krążka międzykręgowego
+T91	Treatment 3254 3289	hospitalizowany w tutejszej Klinice
+T92	Date 3290 3301	w lipcu br.
+T93	Investigation_result 3311 3349	wysokich wartości ciśnienia tętniczego
+T94	Treatment 3392 3415	leczenia hipotensyjnego
+T95	Symptom 3437 3460	uczucie kołatania serca
+N25	Reference T95 ICD10:R00.2	Kołatanie serca
+T96	Symptom 3466 3515	nietypowe dolegliwości bólowe w klatce piersiowej
+N26	Reference T96 ICD10:R07.3	Inne bóle w klatce piersiowej
+T97	Symptom 3521 3573	zaburzenia widzenia pod postacią podwójnego widzenia
+N27	Reference T97 ICD10:H53.2	Dwojenie
+T98	Investigation_result 3592 3615	wysokich wartościach RR
+T99	Symptom 3619 3627	Omdlenia
+N28	Reference T99 ICD10:R55	Omdlenie i zapaść
+T100	Symptom 3629 3642	zawroty głowy
+N29	Reference T100 ICD10:R42	Zawroty głowy i odurzenie
+T101	Negation 3643 3649	neguje
+T102	Behaviour 3651 3680	Pacjent regularnie kontroluje
+T103	Investigation 3681 3704	RR w warunkach domowych
+T104	Investigation_result 3714 3758	poprawę w zakresie obserwowanych wartości BP
+R23	Inv Arg1:T103 Arg2:T104	
+R24	Neg Arg1:T101 Arg2:T100	
+R25	Neg Arg1:T101 Arg2:T99	
+T105	Treatment 3760 3768	Operacje
+N30	Reference T105 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T106	Condition 3774 3791	Uczulenia na leki
+N31	Reference T106 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T107	Condition 3794 3801	alergie
+N32	Reference T107 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T108	Drug_dose 3824 3844	5mg 1 x 1 tabl. rano
+T109	Drug_dose 3854 3879	5mg 1 x 1 tabl. wieczorem
+T110	Drug_dose 3889 3910	10mg 1 x 1 tabl. rano
+T111	Drug_dose 3918 3944	75mg 1 x 1 tabl. wieczorem
+R26	Drg Arg1:T72 Arg2:T108	
+R27	Drg Arg1:T71 Arg2:T109	
+R28	Drg Arg1:T73 Arg2:T110	
+R29	Drg Arg1:T74 Arg2:T111	
+R30	Neg Arg1:T69 Arg2:T107	
+R31	Neg Arg1:T69 Arg2:T106	
+R32	Neg Arg1:T70 Arg2:T105	
+R33	Dat Arg1:T92 Arg2:T91	
+R34	Dat Arg1:T92 Arg2:T93	

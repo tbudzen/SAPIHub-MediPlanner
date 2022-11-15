@@ -1,0 +1,61 @@
+T1	Treatment 332 429	Wskazana dalsza opieka u lekarza POZ i w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych ICZMP
+T2	Date 431 444	za 6 miesięcy
+T3	Behaviour 462 557	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T4	Condition 789 818	Blok lewej odnogi pęczka Hisa
+T5	Behaviour 823 833	Nikotynizm
+T6	Symptom 1052 1073	Bóle w kl. piersiowej
+T7	Condition 1075 1079	LBBB
+T8	Symptom 1255 1313	dolegliwości bólowych w kl. piersiowe o charakterze ucisku
+T9	Date 1348 1364	od ok. 2 tygodni
+T10	Investigation 1390 1393	EKG
+T11	Date 1400 1411	30.08.2019r
+T12	Investigation_result 1414 1418	LBBB
+T13	Treatment 1420 1437	Przebyte operacje
+T14	Negation 1439 1449	nie podaje
+T15	Treatment 1450 1469	Leczenie przewlekłe
+T16	Negation 1471 1481	nie podaje
+T17	Condition 1509 1512	WZW
+troby
+T18	Condition 1514 1523	borelioza
+T19	Negation 1526 1536	nie podaje
+T20	Condition 1537 1552	Wywiad rodzinny
+T21	Negation 1554 1564	nieistotny
+T22	Behaviour 1582 1601	pali ok. 1 paczki/d
+T23	Behaviour 1602 1626	Inne używki:okazjonalnie
+T24	Condition 1627 1636	Uczulenia
+T26	Behaviour 1684 1702	pracownik fizyczny
+T27	Investigation 1750 1760	echo serca
+T28	Investigation 1762 1766	ABPM
+T29	Investigation 1768 1774	Holter
+T30	Investigation 1776 1794	RTG kl. piersiowej
+T31	Symptom 1316 1347	towarzyszącym silnym zmęczeniem
+T25	Behaviour 1565 1580	Palenie tytoniu
+zane ze stylem życia
+T32	Drug 1703 1707	Leki
+T33	Negation 1709 1722	nie przyjmuje
+N1	Reference T4 ICD10:I44.7	Blok lewej odnogi pÄczka Hisa, nieokreÅlony
+N2	Reference T5 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N3	Reference T6 ICD10:R51	BÃ³l gÅowy
+N4	Reference T7 ICD10:I44.7	Blok lewej odnogi pÄczka Hisa, nieokreÅlony
+N5	Reference T8 ICD10:R52.9	BÃ³l, nieokreÅlony
+N6	Reference T12 ICD10:I44.7	Blok lewej odnogi pÄczka Hisa, nieokreÅlony
+N7	Reference T13 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N8	Reference T17 ICD10:B19	NieokreÅlone wirusowe zapalenie wÄtroby
+N9	Reference T18 ICD10:A69.2	Choroba z Lyme
+N10	Reference T22 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N11	Reference T23 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+N12	Reference T24 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N13	Reference T25 ICD10:Z72.0	UÅ¼ywanie tytoniu
+R1	Dat Arg1:T2 Arg2:T3
+R13	Neg Arg1:T14 Arg2:T15
+R14	Neg Arg1:T16 Arg2:T17
+R2	Dat Arg1:T9 Arg2:T8
+R22	Neg Arg1:T19 Arg2:T18
+R23	Neg Arg1:T19 Arg2:T20
+R3	Dat Arg1:T9 Arg2:T31
+R30	Neg Arg1:T21 Arg2:T20
+R31	Neg Arg1:T21 Arg2:T22
+R33	Neg Arg1:T21 Arg2:T25
+R4	Inv Arg1:T10 Arg2:T12
+R41	Neg Arg1:T33 Arg2:T32
+R6	Dat Arg1:T11 Arg2:T10

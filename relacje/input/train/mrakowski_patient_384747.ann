@@ -1,0 +1,116 @@
+T1	Treatment 578 588	zamknięciu
+T2	Date 684 695	11.07.2018r
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Treatment 810 875	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T4	Date 877 900	za 6 miesięcy - 07/2019
+R2	Dat Arg1:T4 Arg2:T3	
+T5	Behaviour 906 945	Dieta lekkostrawna, niskocholesterolowa
+T6	Investigation 952 1034	Okresowo kontrola lipidogramu, stężenia elektrolitów , parametrów wydolności nerek
+T7	Investigation 1041 1089	Systematyczna kontrola ciśnienia tętniczego krwi
+T8	Treatment 1096 1143	Chora nie ma przeciwwskazań do ewentualnego NMR
+T9	Treatment 1150 1191	Wskazane systematyczne przyjmowanie leków
+T10	Drug 1194 1200	Plavix
+T11	Drug 1232 1237	Acard
+T12	Drug_dose 1201 1217	75 mg 1x dz rano
+T13	Drug_dose 1238 1260	75mg 1 tabl. wieczorem
+R3	Drg Arg1:T10 Arg2:T12	
+R4	Drg Arg1:T11 Arg2:T13	
+T14	Date 1218 1231	do 11.01.2019
+T15	Date 1261 1274	do 11.04.2019
+R5	Dat Arg1:T14 Arg2:T10	
+R6	Dat Arg1:T15 Arg2:T11	
+T16	Treatment 1500 1510	zamknięciu
+T17	Date 1606 1617	11.07.2018r
+R7	Dat Arg1:T17 Arg2:T16	
+T18	Condition 1621 1669	Umiarkowana niedomykalność zastawki trójdzielnej
+N1	Reference T18 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T19	Condition 1671 1715	Pojedyncze pobudzenia komorowe i nadkomorowe
+N2	Reference T19 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T20	Condition 1861 1945	wadą serca wrodzoną pod postacią ubytku przegrody międzyprzedsionkowej typu wtórnego
+N3	Reference T20 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T21	Condition 1951 1967	rąbka aortalnego
+T22	Negation 1947 1950	bez
+R8	Neg Arg1:T22 Arg2:T21	
+T23	Condition 1971 2017	łagodną niedomykalnością zastawki trójdzielnej
+N4	Reference T23 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T24	Negation 2019 2022	bez
+T25	Condition 2023 2049	cech nadciśnienia płucnego
+N5	Reference T25 ICD10:I27.0	Pierwotne nadciśnienie płucne
+R9	Neg Arg1:T24 Arg2:T25	
+T26	Treatment 2097 2120	przezskórnym zamknięciu
+T27	Date 2164 2174	11.07.2018
+R10	Dat Arg1:T27 Arg2:T26	
+T28	Symptom 2220 2307	okresowe punktowe, kłujące bóle w klatce piersiowej, nie związane z wysiłkiem fizycznym
+N6	Reference T28 ICD10:R07.3	Inne bóle w klatce piersiowej
+T29	Drug 2332 2340	Validolu
+T30	Negation 2342 2348	Neguje
+T31	Symptom 2349 2361	zasłabnięcia
+T32	Symptom 2363 2371	omdlenia
+N7	Reference T32 ICD10:R55	Omdlenie i zapaść
+T33	Symptom 2373 2386	zawroty głowy
+N8	Reference T33 ICD10:R42	Zawroty głowy i odurzenie
+R11	Neg Arg1:T30 Arg2:T31	
+R12	Neg Arg1:T30 Arg2:T32	
+R13	Neg Arg1:T30 Arg2:T33	
+T34	Symptom 2388 2407	Innych dolegliwości
+T35	Negation 2408 2419	nie zgłasza
+R14	Neg Arg1:T35 Arg2:T34	
+T36	Treatment 2498 2511	appendektomii
+A1	Status T36 Historical_Insignificant
+T37	Date 2512 2523	10 lat temu
+R15	Dat Arg1:T37 Arg2:T36	
+T38	Treatment 2524 2559	Leczenie przewlekłe: kardiologiczne
+T39	Condition 2587 2590	WZW
+N9	Reference T39 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T40	Condition 2599 2608	borelioza
+N10	Reference T40 ICD10:A69.2	Choroba z Lyme
+T41	Condition 2616 2624	gruźlica
+N11	Reference T41 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T42	Negation 2627 2628	-
+R16	Neg Arg1:T42 Arg2:T41	
+T43	Negation 2611 2612	-
+R17	Neg Arg1:T43 Arg2:T40	
+T44	Negation 2593 2594	-
+R18	Neg Arg1:T44 Arg2:T39	
+T45	Condition 2660 2667	2 udary
+A2	Status T45 Family
+N12	Reference T45 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T46	Condition 2684 2706	migotanie przedsionków
+A3	Status T46 Family
+N13	Reference T46 ICD10:I48	Migotanie i trzepotanie przedsionków
+T47	Behaviour 2708 2723	Palenie tytoniu
+N14	Reference T47 ICD10:Z72.0	Używanie tytoniu
+T48	Negation 2725 2733	nie pali
+R19	Neg Arg1:T48 Arg2:T47	
+T49	Behaviour 2735 2746	Inne używki
+T50	Negation 2748 2751	nie
+R20	Neg Arg1:T50 Arg2:T49	
+T51	Condition 2753 2762	Uczulenia
+T52	Negation 2764 2770	neguje
+R21	Neg Arg1:T52 Arg2:T51	
+T53	Behaviour 2787 2813	warunki mieszkaniowe dobre
+T54	Behaviour 2839 2855	technik farmacji
+T55	Drug 2862 2868	Plavix
+T56	Drug_dose 2869 2884	75 1 tabl. rano
+R22	Drg Arg1:T55 Arg2:T56	
+T57	Investigation 2899 2909	Echo serca
+T58	Investigation 2911 2921	Holter EKG
+T59	Investigation 2923 2927	ABPM
+T60	Treatment 2471 2488	Przebyte operacje
+T61	Condition 2634 2653	wywiadzie rodzinnym
+A4	Status T61 Family
+T62	Treatment 645 681	zestawem Occlutech Figulla Flex 36mm
+R23	Dat Arg1:T2 Arg2:T62	
+T63	Condition 589 644	ubytku w przegrodzie międzyprzedsionkowej typu wtórnego
+N15	Reference T63 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R24	Dat Arg1:T2 Arg2:T63	
+T64	Treatment 1567 1603	zestawem Occlutech Figulla Flex 36mm
+R25	Dat Arg1:T17 Arg2:T64	
+T65	Condition 1511 1566	ubytku w przegrodzie międzyprzedsionkowej typu wtórnego
+N16	Reference T65 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R26	Dat Arg1:T17 Arg2:T65	
+T66	Condition 2121 2127	ubytku
+N17	Reference T66 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T67	Treatment 2128 2163	zapinką Occlutech Figulla Flex 36mm
+R27	Dat Arg1:T27 Arg2:T66	
+R28	Dat Arg1:T27 Arg2:T67	

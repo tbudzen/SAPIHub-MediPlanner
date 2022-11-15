@@ -1,0 +1,78 @@
+T1	Investigation 2099 2109	Echo serca
+T2	Investigation 2111 2121	Holter EKG
+T3	Investigation 2123 2127	ABPM
+T4	Investigation 2129 2144	Próba Wysiłkowa
+T5	Drug 2039 2047	Biosotal
+T6	Drug_dose 2048 2069	40mg 2 x 1tabl. R i W
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 2071 2084	Antykoncepcja
+T8	Negation 2010 2016	neguje
+T9	Negation 1992 1998	neguje
+T10	Negation 1972 1978	neguje
+T11	Negation 1944 1954	nieistotny
+T12	Condition 1921 1942	W wywiadzie rodzinnym
+A1	Status T12 Family
+R2	Neg Arg1:T11 Arg2:T12	
+T13	Behaviour 1955 1970	Palenie tytoniu
+N1	Reference T13 ICD10:T65.2	Tytoń i nikotyna
+R3	Neg Arg1:T10 Arg2:T13	
+T14	Behaviour 1979 1990	Inne używki
+R4	Neg Arg1:T9 Arg2:T14	
+T15	Condition 1999 2008	Uczulenia
+N2	Reference T15 ICD10:T78.4	Alergia, nieokreślona
+R5	Neg Arg1:T8 Arg2:T15	
+T16	Negation 1882 1883	-
+T17	Negation 1900 1901	-
+T18	Negation 1916 1917	-
+T19	Condition 1905 1913	gruźlica
+N3	Reference T19 ICD10:B05	Odra
+T20	Condition 1888 1897	borelioza
+N4	Reference T20 ICD10:A69.2	Choroba z Lyme
+T21	Condition 1876 1879	WZW
+N5	Reference T21 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+R6	Neg Arg1:T16 Arg2:T21	
+R7	Neg Arg1:T17 Arg2:T20	
+R8	Neg Arg1:T18 Arg2:T19	
+T22	Condition 1701 1778	przygotowywana do operacji wycięcia migdałków z powodu przewlekłego zapalenia
+N6	Reference T22 ICD10:J35	Przewlekłe choroby migdałków podniebiennych i migdałka gardłowego
+T23	Condition 1635 1680	przewlekłe zapalenie migdałków podniebiennych
+N7	Reference T23 ICD10:J35	Przewlekłe choroby migdałków podniebiennych i migdałka gardłowego
+T24	Treatment 1691 1699	operacje
+T25	Symptom 1550 1562	zasłabnięcia
+N8	Reference T25 ICD10:R55	Omdlenie i zapaść
+T26	Symptom 1564 1572	omdlenia
+N9	Reference T26 ICD10:R55	Omdlenie i zapaść
+T27	Symptom 1574 1587	zawroty głowy
+N10	Reference T27 ICD10:R42	Zawroty głowy i odurzenie
+T28	Negation 1543 1549	Neguje
+R9	Neg Arg1:T28 Arg2:T25	
+R10	Neg Arg1:T28 Arg2:T26	
+R11	Neg Arg1:T28 Arg2:T27	
+T29	Symptom 1480 1518	powiększony węzeł chłonny zauszny praw
+T30	Condition 863 894	komorowych zaburzeń rytmu serca
+N11	Reference T30 ICD10:I47.0	Komorowe zaburzenia rytmu typu fali nawrotowej [reentry]
+T31	Investigation 999 1027	rezonansie mięśnia sercowego
+T32	Investigation_result 935 996	okresowo wydłużonego QTc oraz z cechami zapalnymi/pozapalnymi
+R12	Inv Arg1:T31 Arg2:T32	
+T33	Date 1029 1036	05/2017
+R13	Dat Arg1:T33 Arg2:T31	
+T34	Symptom 1103 1139	okresowo występujących kołatań serca
+N12	Reference T34 ICD10:R00.2	Kołatanie serca
+T35	Symptom 1141 1229	uczucia osłabienia (pacjentce robi się "słabo", musi odpocząć, wyjść na świeże powietrze
+N13	Reference T35 ICD10:R53	Złe samopoczucie i zmęczenie
+T36	Symptom 1236 1416	okresowo występujących kłujących i ściskających bólów w klatce piersiowej nie związanych z wysiłkiem fizycznym (częściowo podczas kołatania serca, częściowo bez uczucia kołatania).
+N14	Reference T36 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T37	Condition 670 691	Ostra infekcja gardła
+N15	Reference T37 ICD10:J02	Ostre zapalenie gardła
+T38	Condition 623 668	Przewlekłe zapalenie migdałków podniebiennych
+N16	Reference T38 ICD10:J35	Przewlekłe choroby migdałków podniebiennych i migdałka gardłowego
+T39	Condition 588 622	Niedokrwistość z niedoboru żelaza.
+N17	Reference T39 ICD10:D50	Niedokrwistość z niedoboru żelaza
+T40	Investigation 546 569	rezonansie magnetycznym
+T41	Date 572 584	05.2017 roku
+R14	Dat Arg1:T41 Arg2:T40	
+T42	Investigation_result 500 543	Cechy zapalenia/pozapalne mięśnia sercowego
+R15	Inv Arg1:T40 Arg2:T42	
+T43	Investigation_result 476 498	Okresowo wydłużone QTc
+T44	Condition 450 474	Złożona arytmia komorowa
+N18	Reference T44 ICD10:I49	Inne zaburzenia rytmu serca

@@ -1,0 +1,83 @@
+T1	Condition 454 535	Niereumatyczne zaburzenia funkcji zastawki tętnicy głównej w stopniu umiarkowanym
+T2	Condition 539 560	Nadciśnienie tętnicze
+T3	Condition 563 583	Hipercholesterolemia
+T4	Condition 585 598	Wole tarczycy
+T5	Condition 623 640	Choroba Baastrupa
+T6	Symptom 642 647	Zgaga
+T7	Condition 649 662	Kolki nerkowe
+T8	Condition 676 690	Trobiele nerek
+T9	Condition 692 725	Choroba zwyrodnieniowa kręgosłupa
+T10	Condition 727 743	Miażdżyca tętnic
+T11	Condition 973 994	Nadciśnienie tętnicze
+T12	Condition 996 1028	Miażdżyca tętnic kończyn dolnych
+T13	Condition 1219 1253	niedomykalności zastawki aortalnej
+T14	Symptom 1268 1299	zmniejszenie tolerancji wysiłku
+T15	Negation 1302 1308	Neguje
+T16	Symptom 1309 1324	bóle zamostkowe
+T17	Negation 1326 1332	neguje
+T18	Symptom 1333 1352	utraty przytomności
+T19	Condition 1367 1388	nadciśnienie tętnicze
+T20	Condition 1390 1404	hiperlipidemia
+T21	Condition 1406 1438	skolioza prawostronna kręgosłupa
+T22	Condition 1440 1472	miażdżyca tętnic kończyn dolnych
+T23	Behaviour 1474 1495	Nikotynizm:   aktywny
+T24	Date 1496 1508	od wielu lat
+T25	Behaviour 1511 1518	Alkohol
+T26	Negation 1520 1526	neguje
+T27	Negation 1535 1541	neguje
+T28	Symptom 1543 1576	krwawienia z przewodu pokarmowego
+T29	Condition 1578 1587	Uczulenie
+T30	Drug 1591 1600	prestrium
+T31	Condition 1610 1625	Wywiad rodzinny
+T32	Negation 1627 1640	bez znaczenia
+T33	Drug 1667 1674	axobrex
+T34	Treatment 1675 1690	profilaktycznie
+T35	Drug 1692 1696	apap
+T36	Drug_dose 1697 1705	okresowo
+T37	Drug 1707 1714	potazek
+T38	Drug 1716 1723	nolpaza
+T39	Drug 1725 1735	amlodypina
+T40	Investigation 1748 1758	ECHO serca
+T41	Investigation 1760 1770	Holter EKG
+T42	Investigation 1772 1781	Holter RR
+T43	Investigation 1783 1785	PW
+T44	Condition 1030 1050	Hipercholesterolemia
+T45	Investigation 602 621	dalszej diagnostyki
+T46	Symptom 1602 1608	kaszel
+N1	Reference T2 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N2	Reference T3 ICD10:E78.0	Czysta hipercholesterolemia
+N3	Reference T4 ICD10:E04	Inne wole nietoksyczne
+N4	Reference T6 ICD10:R12	Zgaga
+N5	Reference T9 ICD10:M47	
+N6	Reference T10 ICD10:I70	MiaÅ¼dÅ¼yca
+N7	Reference T11 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N8	Reference T12 ICD10:I70.2	MiaÅ¼dÅ¼yca tÄtnic koÅczyn
+N9	Reference T14 ICD10:R53	ZÅe samopoczucie i zmÄczenie
+N10	Reference T16 ICD10:R51	BÃ³l gÅowy
+N11	Reference T18 ICD10:R55	Omdlenie i zapaÅÄ
+N12	Reference T19 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N13	Reference T20 ICD10:E78.5	Hiperlipidemia, nieokreÅlona
+N14	Reference T21 ICD10:M41.9	Skolioza, nieokreÅlona
+N15	Reference T22 ICD10:I70.2	MiaÅ¼dÅ¼yca tÄtnic koÅczyn
+N16	Reference T23 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N17	Reference T25 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N18	Reference T28 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreÅlony
+N19	Reference T29 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N20	Reference T44 ICD10:E78.0	Czysta hipercholesterolemia
+N21	Reference T46 ICD10:R05	Kaszel
+R1	Neg Arg1:T15 Arg2:T16
+R12	Neg Arg1:T26 Arg2:T25
+R14	Neg Arg1:T27 Arg2:T28
+R18	Neg Arg1:T27 Arg2:T25
+R2	Neg Arg1:T17 Arg2:T18
+R20	Alg Arg1:T29 Arg2:T30
+R23	Drg Arg1:T35 Arg2:T36
+R24	Drg Arg1:T37 Arg2:T36
+R25	Drg Arg1:T38 Arg2:T36
+R3	Neg Arg1:T17 Arg2:T19
+R6	Dat Arg1:T24 Arg2:T22
+R7	Dat Arg1:T24 Arg2:T23
+R8	Neg Arg1:T26 Arg2:T28
+A1	Status T4 Historical_Insignificant
+A2	Status T21 Historical_Insignificant
+A3	Status T25 Historical_Insignificant

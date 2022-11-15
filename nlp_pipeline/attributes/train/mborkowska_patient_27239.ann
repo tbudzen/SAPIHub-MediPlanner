@@ -1,0 +1,95 @@
+T1	Investigation 2079 2089	echo serca
+T2	Investigation 2091 2094	TET
+T3	Investigation 2096 2100	ABPM
+T4	Investigation 2102 2112	Holter ekg
+T5	Investigation 2114 2132	rtg kl. piersiowej
+T6	Drug 2019 2030	Ac. folicum
+T7	Drug_dose 2031 2049	15 mg 1 tabl. rano
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 1987 1999	Sulfasalzyna
+T9	Drug_dose 2000 2015	500 mg 3x1 tabl
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 1959 1975	Azathioprine VIS
+T11	Drug_dose 1976 1985	50 mg 2x1
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 1930 1943	Euthyrox N125
+T13	Drug_dose 1944 1956	1 tabl. rano
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Drug 1902 1914	Symapamid SR
+T15	Drug_dose 1915 1927	1 tabl. rano
+R5	Drg Arg1:T14 Arg2:T15	
+T16	Drug 1867 1887	Candezek Combi 16/10
+T17	Drug_dose 1888 1900	1 tabl. rano
+R6	Drg Arg1:T16 Arg2:T17	
+T18	Behaviour 1824 1833	emerytura
+T19	Behaviour 1743 1779	Alkohol: okazjonalnie, bardzo rzadko
+N1	Reference T19 ICD10:Z72.1	Używanie alkoholu
+T21	Behaviour 1781 1798	Uzależnienie inne
+T22	Negation 1800 1806	neguje
+R8	Neg Arg1:T22 Arg2:T21	
+T23	Behaviour 1699 1710	Nikotynizm:
+T24	Date 1711 1716	40 la
+T25	Negation 1718 1726	nie pali
+T26	Condition 1669 1671	MI
+A1	Status T26 Family
+N3	Reference T26 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T27	Condition 1682 1689	Alergie
+N4	Reference T27 ICD10:T78.4	Alergia, nieokreślona
+T28	Negation 1691 1697	neguje
+R9	Neg Arg1:T28 Arg2:T27	
+T29	Condition 1550 1568	żylaki kk. dolnych
+N5	Reference T29 ICD10:I83	Żylaki kończyn dolnych
+T30	Date 1575 1590	4 i 3 lata temu
+R10	Dat Arg1:T30 Arg2:T29	
+T31	Treatment 1592 1625	usunięcie jajnika i trzonu macicy
+A3	Status T31 Historical_Insignificant
+T32	Date 1636 1642	30 lat
+R11	Dat Arg1:T32 Arg2:T31	
+T33	Condition 1359 1375	HA - skorygowane
+N6	Reference T33 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T34	Condition 1496 1512	podejrzenie DM ?
+N7	Reference T34 ICD10:E13	Inne określone postacie cukrzycy
+T35	Treatment 1470 1494	częściowej tyreidektomii
+T36	Condition 1446 1466	niedoczynność tarczy
+N8	Reference T36 ICD10:E03	Niedoczynność tarczycy o innej etiologii
+T37	Condition 1399 1444	owrzodzenie jelita grubego - colitis ulcerosa
+N9	Reference T37 ICD10:K51	Wrzodziejące zapalenie jelita grubego
+T38	Condition 1377 1397	zaburzenia rytmu ExV
+N10	Reference T38 ICD10:I49	Inne zaburzenia rytmu serca
+T39	Symptom 1316 1335	obrzęki kk. dolnych
+N11	Reference T39 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T40	Symptom 1227 1244	uczucia duszności
+N12	Reference T40 ICD10:R06.0	Duszność
+T41	Symptom 1247 1273;1276 1292	ucisku w klatce piersiowej w wysiłku II CCS
+T42	Condition 1035 1059	żylaków kończyn dolnych.
+N13	Reference T42 ICD10:I83	Żylaki kończyn dolnych
+T43	Condition 1002 1017	Otyłość III st.
+N14	Reference T43 ICD10:E66	Otyłość
+T44	Condition 916 953	Wrzodziejące zapalenie jelita grubego
+N15	Reference T44 ICD10:K51	Wrzodziejące zapalenie jelita grubego
+T45	Treatment 975 1001	częściowej tyreoidektomii.
+T46	Condition 886 915	Żylaki lewej kończyny dolnej.
+N16	Reference T46 ICD10:I83	Żylaki kończyn dolnych
+T47	Condition 855 884	Podejrzenie choroby wieńcowej
+N17	Reference T47 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T48	Condition 832 853	Nadciśnienie tętnicze
+N18	Reference T48 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T49	Condition 793 816	Ekstrasystolia komorowa
+N19	Reference T49 ICD10:I47.2	Częstoskurcz komorowy
+T50	Condition 819 830	nadkomorowa
+N20	Reference T50 ICD10:I47.1	Częstoskurcz nadkomorowy
+T51	Behaviour 448 490	dieta niskocholesterolowa, niskokaloryczna
+T52	Behaviour 492 511	redukcja masy ciała
+T53	Investigation 514 524	lipidogram
+T54	Date 525 534	za 3 m-ce
+R12	Dat Arg1:T54 Arg2:T53	
+T55	Investigation 420 445	angioCT tętnic wieńcowych
+R13	Neg Arg1:T25 Arg2:T23	
+T56	Treatment 1540 1548	operacje
+R14	Dat Arg1:T30 Arg2:T56	
+T57	Treatment 1026 1034	operacji
+A2	Source T47 Declared
+A4	Source T34 Declared
+R15	Dat Arg1:T24 Arg2:T23	
+N2	Reference T23 ICD10:Z72.0	Używanie tytoniu
+A5	Status T19 Historical_Insignificant

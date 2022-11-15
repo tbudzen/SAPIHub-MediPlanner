@@ -1,0 +1,27 @@
+T1	Condition 439 476	Blok przedsionkowo-komorowy I stopnia
+N1	Reference T1 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T2	Condition 1091 1120	Blok przedsionkowo-komorowy I
+N2	Reference T2 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T3	Condition 1121 1132	II stopnia.
+N3	Reference T3 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T4	Symptom 1269 1288	omdlenie po wysiłku
+N4	Reference T4 ICD10:R55	Omdlenie i zapaść
+T5	Date 1257 1268	2 m-ce temu
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Condition 1341 1358	wywiad alergiczny
+N5	Reference T6 ICD10:T78.4	Alergia, nieokreślona
+T7	Negation 1359 1365	ujemny
+R2	Neg Arg1:T7 Arg2:T6	
+T8	Drug 1310 1324	leków na stałe
+T9	Negation 1325 1338	nie otrzymuje
+R3	Neg Arg1:T9 Arg2:T8	
+T10	Condition 1504 1535	blokiem przedsionkowo komorowym
+N6	Reference T10 ICD10:I44.3	Inne i nieokreślone bloki przedsionkowo-komorowe
+T11	Treatment 589 623	Kontrola w Poradni Kardiologicznej
+T12	Date 624 637	za 6 miesięcy
+R4	Dat Arg1:T12 Arg2:T11	
+T13	Treatment 642 674	Opieka w Poradni Immunologicznej
+T14	Treatment 787 821	Kontrola w Poradni Kardiologicznej
+T15	Date 822 835	za 6 miesięcy
+R5	Dat Arg1:T15 Arg2:T14	
+T16	Treatment 841 872	pieka w Poradni Immunologicznej

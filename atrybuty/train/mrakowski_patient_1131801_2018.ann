@@ -1,0 +1,62 @@
+T1	Condition 449 488	Kardiomiopatia o nieustalonej etiologii
+N1	Reference T1 ICD10:I42.8	Inne kardiomiopatie
+T2	Condition 490 537	Łagodna dysfunkcja skurczowa lewej komory serca
+N2	Reference T2 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+T3	Investigation_result 540 547	EF= 47%
+T4	Condition 550 594	Łagodna niedomykalność zastawki pni płucnego
+N3	Reference T4 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T5	Condition 596 626	Pojedyncze pobudzenia komorowe
+N4	Reference T5 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T6	Condition 629 640	nadkomorowe
+N5	Reference T6 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T7	Treatment 750 815	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T8	Behaviour 818 858	Dieta lekkostrawna , niskocholesterolowa
+T9	Investigation 862 945	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T10	Investigation 948 996	Systematyczna kontrola ciśnienia tętniczego krwi
+T11	Treatment 999 1040	Wskazane systematyczne przyjmowanie leków
+T12	Drug 1047 1054	Nebilet
+T13	Drug 1085 1095	Prestarium
+T14	Drug_dose 1055 1083	5 mg 1x dz rano po 1/4 tabl.
+R1	Drg Arg1:T12 Arg2:T14	
+T15	Drug_dose 1096 1116	5 mg 1x dz wieczorem
+R2	Drg Arg1:T13 Arg2:T15	
+T16	Condition 1344 1366	Zaburzenia rytmu serca
+N6	Reference T16 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T17	Drug 1487 1494	Nebilet
+T18	Drug 1496 1506	Prestarium
+T19	Symptom 1702 1725	uczucia kołatania serca
+N7	Reference T19 ICD10:R00.2	Kołatanie serca
+T20	Date 1728 1736	06.2018r
+R3	Dat Arg1:T20 Arg2:T19	
+T21	Condition 1752 1792	wada wrodzona serca  pod postacią ubytku
+N8	Reference T21 ICD10:Q21.9	Wrodzona wada przegrody serca, nieokreślona
+T22	Treatment 1802 1818	uległ zamknięciu
+T23	Date 1819 1825	w 3 rż
+R4	Dat Arg1:T23 Arg2:T22	
+A1	Source T22 Declared
+A2	Source T21 Declared
+T24	Negation 1845 1848	Nie
+T25	Negation 1855 1858	nie
+T26	Behaviour 1849 1853	pali
+N9	Reference T26 ICD10:Z72.0	Używanie tytoniu
+R5	Neg Arg1:T24 Arg2:T26	
+T27	Behaviour 1859 1872	pije alkoholu
+N10	Reference T27 ICD10:Z72.1	Używanie alkoholu
+R6	Neg Arg1:T25 Arg2:T27	
+T28	Condition 1875 1882	Alergie
+N11	Reference T28 ICD10:T78.4	Alergia, nieokreślona
+T29	Negation 1884 1890	neguje
+R7	Neg Arg1:T29 Arg2:T28	
+T30	Condition 1892 1910	nietolerancje lekó
+N12	Reference T30 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T31	Negation 1911 1917	neguje
+R8	Neg Arg1:T31 Arg2:T30	
+T32	Treatment 2000 2014	farmakoterapia
+T33	Investigation 2016 2037	badania laboratoryjne
+T34	Investigation 2039 2043	ABPM
+T35	Investigation 2045 2048	TET
+T36	Investigation 2050 2053	TTE
+T37	Investigation 2055 2069	ekg m. Holtera
+T38	Drug 1920 1936	Przewlekle leków
+T39	Negation 1937 1950	nie przyjmuje
+R9	Neg Arg1:T39 Arg2:T38	

@@ -1,0 +1,169 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 358 406	okresowa kontrola kardiologiczna, psychiatryczna
+T3	Treatment 407 458	wyznaczono termin ponownej hospitalizacji w Klinice
+T4	Date 465 476	17.01.2019r
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Treatment 477 493	profilaktyka IZW
+T6	Date 494 510	przez 6 miesięcy
+R2	Dat Arg1:T6 Arg2:T5	
+T7	Treatment 511 539	regularne przyjmowanie leków
+T8	Drug 541 551	Isoptin SR
+T9	Drug_dose 552 571	120 mg 1 tabl. rano
+R3	Drg Arg1:T8 Arg2:T9	
+T10	Drug 572 579	Citobax
+T11	Drug_dose 580 598	20 mg 1 tabl. rano
+R4	Drg Arg1:T10 Arg2:T11	
+T12	Drug 599 605	Alprox
+T13	Drug_dose 606 630	0,5 mg 1/2 tabl. 2 x dz.
+R5	Drg Arg1:T12 Arg2:T13	
+T14	Drug 631 646	Aspirin Protect
+T15	Drug_dose 647 671	100 mg 1 tabl. wieczorem
+R6	Drg Arg1:T14 Arg2:T15	
+T16	Date 672 688	przez 6 miesięcy
+R7	Dat Arg1:T16 Arg2:T14	
+T17	Drug 689 695	Plavix
+T18	Drug_dose 696 714	75 mg 1 tabl. rano
+T19	Date 715 731	przez 3 miesiące
+R8	Drg Arg1:T17 Arg2:T18	
+R9	Dat Arg1:T19 Arg2:T17	
+T20	Drug 732 735	IPP
+T21	Drug_dose 736 763	20 mg 1 tabl. rano na czczo
+T22	Date 764 780	przez 3 miesiące
+R10	Drg Arg1:T20 Arg2:T21	
+R11	Dat Arg1:T22 Arg2:T20	
+T23	Investigation 807 818	badania NMR
+T24	Treatment 958 995	zestawem Occlutech Figulla Flex 15 mm
+T25	Date 997 1008	16.10.2019r
+R12	Dat Arg1:T25 Arg2:T24	
+T26	Condition 1228 1239	ASD typu II
+N1	Reference T26 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T28	Date 1298 1309	16.10.2019r
+T29	Condition 1312 1320	Depresja
+N2	Reference T29 ICD10:F33	Zaburzenia depresyjne nawracające
+A1	Source T29 Declared
+T30	Condition 1499 1510	ASD typu II
+N3	Reference T30 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T31	Treatment 1549 1574	zabiegu zamknięcia ubytku
+T32	Negation 1611 1617	Neguje
+T33	Symptom 1618 1630	zasłabnięcia
+T34	Symptom 1632 1640	omdlenia
+N4	Reference T34 ICD10:R55	Omdlenie i zapaść
+T35	Symptom 1642 1655	zawroty głowy
+N5	Reference T35 ICD10:R42	Zawroty głowy i odurzenie
+T36	Symptom 1657 1667	krwawienia
+T37	Symptom 1669 1682	czarne stolce
+N6	Reference T37 ICD10:K92.1	Stolce smołowate
+T38	Symptom 1684 1700	brunatne wymioty
+N7	Reference T38 ICD10:K92.0	Wymioty krwawe
+T39	Condition 1702 1718	chorobę wrzodową
+N8	Reference T39 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T40	Symptom 1720 1734	duszność nocną
+N9	Reference T40 ICD10:R06.0	Duszność
+T41	Symptom 1736 1751	obrzęki podudzi
+N10	Reference T41 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T42	Symptom 1753 1777	bóle w klatce piersiowej
+N11	Reference T42 ICD10:R07	Ból gardła i w klatce piersiowej
+R14	Neg Arg1:T32 Arg2:T42	
+R15	Neg Arg1:T32 Arg2:T41	
+R16	Neg Arg1:T32 Arg2:T40	
+R17	Neg Arg1:T32 Arg2:T39	
+R18	Neg Arg1:T32 Arg2:T38	
+R19	Neg Arg1:T32 Arg2:T37	
+R20	Neg Arg1:T32 Arg2:T36	
+R21	Neg Arg1:T32 Arg2:T35	
+R22	Neg Arg1:T32 Arg2:T34	
+R23	Neg Arg1:T32 Arg2:T33	
+T43	Symptom 1779 1851	Dolegliwości bólowe kończyny dolnej prawej po dłuższym okresie chodzenia
+N12	Reference T43 ICD10:M79.6	Bóle kończyn
+T44	Symptom 1870 1918	ból od stopy do pachwiny) po odpoczynku ustępuje
+N13	Reference T44 ICD10:M79.6	Bóle kończyn
+T45	Investigation_result 1932 1963	guz prawej piersi zdiagnozowany
+N14	Reference T45 ICD10:N63	Nieokreślony guzek w piersi
+T46	Investigation 1966 1977	mammografii
+R24	Inv Arg1:T46 Arg2:T45	
+T47	Date 2003 2014	po pół roku
+T48	Investigation_result 2015 2026	brak zmiany
+R25	Dat Arg1:T47 Arg2:T48	
+R26	Inv Arg1:T46 Arg2:T48	
+A2	Source T48 Declared
+T49	Condition 2061 2072	ASD typu II
+N15	Reference T49 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+A3	Source T46 Declared
+A4	Source T45 Declared
+T50	Condition 2074 2085	Tachykardia
+N16	Reference T50 ICD10:R00.0	Tachykardia, nieokreślona
+T51	Drug 2098 2107	isoptinem
+A5	Source T51 Declared
+A6	Source T50 Declared
+T52	Condition 2129 2137	Depresja
+A7	Source T52 Declared
+N17	Reference T52 ICD10:F33	Zaburzenia depresyjne nawracające
+T53	Treatment 2172 2189	Przebyte operacje
+T54	Treatment 2199 2214	operacji macicy
+A8	Source T54 Declared
+A9	Status T54 Historical_Insignificant
+T55	Treatment 2217 2241	usunięciu lewego jajnika
+A10	Status T55 Historical_Insignificant
+A11	Source T55 Declared
+T56	Condition 2289 2292	WZW
+N18	Reference T56 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T57	Condition 2301 2310	borelioza
+N19	Reference T57 ICD10:A69.2	Choroba z Lyme
+T58	Condition 2318 2326	grużlica
+N20	Reference T58 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T59	Condition 2334 2338	odra
+N21	Reference T59 ICD10:B05	Odra
+T60	Negation 2341 2342	-
+T61	Negation 2329 2330	-
+T62	Negation 2313 2314	-
+R27	Neg Arg1:T62 Arg2:T57	
+R28	Neg Arg1:T61 Arg2:T58	
+R29	Neg Arg1:T60 Arg2:T59	
+T63	Negation 2295 2296	-
+R30	Neg Arg1:T63 Arg2:T56	
+T64	Condition 2345 2360	Wywiad rodzinny
+A12	Status T64 Family
+T65	Negation 2362 2372	nieistotny
+R31	Neg Arg1:T65 Arg2:T64	
+T66	Behaviour 2374 2389	Palenie tytoniu
+T67	Negation 2391 2399	nie pali
+T68	Date 2400 2408	od 8 lat
+R32	Neg Arg1:T67 Arg2:T66	
+R33	Dat Arg1:T68 Arg2:T66	
+T69	Behaviour 2421 2449	około 20 papierosów dziennie
+T70	Date 2450 2462	przez 20 lat
+R34	Dat Arg1:T70 Arg2:T69	
+T71	Behaviour 2464 2475	Inne używki
+T72	Negation 2477 2483	neguje
+R35	Neg Arg1:T72 Arg2:T71	
+T73	Condition 2485 2494	Uczulenia
+T74	Negation 2496 2502	neguje
+R36	Neg Arg1:T74 Arg2:T73	
+T75	Behaviour 2520 2546	warunki mieszkaniowe dobre
+T76	Drug 2584 2591	Isoptin
+T77	Investigation 2748 2751	TTE
+T78	Investigation 2753 2756	TET
+T79	Investigation 2758 2762	ABPM
+T80	Investigation 2764 2774	Holter EKG
+T81	Drug 2674 2681	Citabax
+T82	Drug 2701 2707	Alprox
+T83	Drug_dose 2592 2605	120mg SR 1x/R
+R37	Drg Arg1:T76 Arg2:T83	
+T84	Drug_dose 2682 2699	20mg 1 tabletka R
+R38	Drg Arg1:T81 Arg2:T84	
+T85	Drug_dose 2708 2732	0,5mg 1/2 tabletki R i W
+R39	Drg Arg1:T82 Arg2:T85	
+T86	Treatment 939 949	Zamknięcie
+R40	Dat Arg1:T25 Arg2:T86	
+T87	Condition 950 957	ASD t.2
+N24	Reference T87 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R41	Dat Arg1:T25 Arg2:T87	
+T88	Treatment 1241 1296	Zamknięcie ubytku zestawem Occlutech Figulla Flex 15 mm
+R42	Dat Arg1:T28 Arg2:T88	
+N25	Reference T36 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+N26	Reference T73 ICD10:T78.4	Alergia, nieokreślona
+N27	Reference T33 ICD10:R55	Omdlenie i zapaść
+N22	Reference T66 ICD10:Z72.0	Używanie tytoniu
+N23	Reference T69 ICD10:Z72.0	Używanie tytoniu
+T27	Symptom 2641 2671	szybkiej częstości pracy serca
+N28	Reference T27 ICD10:R00.0	Tachykardia, nieokreślona

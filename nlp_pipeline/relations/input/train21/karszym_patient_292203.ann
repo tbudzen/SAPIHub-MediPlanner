@@ -1,0 +1,88 @@
+T1	Treatment 340 396	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T2	Treatment 400 463	Planowa hospitalizacja celem oceny zaawansowania wady aortalnej
+T3	Date 464 477	za 6 miesięcy
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Condition 804 807	BAV
+T5	Condition 809 811	IA
+N1	Reference T5 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T6	Condition 1116 1137	Nadciśnienie tętnicze
+N3	Reference T6 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T7	Condition 1139 1159	Hipertriglicerydemia
+N4	Reference T7 ICD10:E78.1	Czysta hiperglicerydemia
+T9	Condition 1329 1352	złożonej wady aortalnej
+T10	Symptom 1379 1396	Okresowo duszność
+N5	Reference T10 ICD10:R06.0	Duszność
+T11	Condition 1410 1412	HA
+N6	Reference T11 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T12	Negation 1414 1420	Neguje
+T13	Symptom 1422 1434	zasłabnięcia
+T14	Symptom 1436 1444	omdlenia
+N7	Reference T14 ICD10:R55	Omdlenie i zapaść
+T15	Symptom 1446 1456	krwawienia
+T16	Symptom 1458 1471	czarne stolce
+N8	Reference T16 ICD10:K92.1	Stolce smołowate
+T17	Symptom 1473 1489	brunatne wymioty
+N9	Reference T17 ICD10:K92.0	Wymioty krwawe
+T18	Condition 1491 1507	chorobę wrzodową
+N10	Reference T18 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T19	Symptom 1509 1537	duszność nocną typu ortopnoe
+N11	Reference T19 ICD10:R06.0	Duszność
+T20	Condition 1539 1541	DM
+N12	Reference T20 ICD10:E14	Cukrzyca nieokreślona
+T21	Condition 1543 1553	udar mózgu
+N13	Reference T21 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T22	Condition 1555 1566	zawał serca
+N14	Reference T22 ICD10:I25.2	Przebyty zawał serca
+T23	Treatment 1590 1604	tonsillektomia
+A1	Status T23 Historical_Insignificant
+N15	Reference T23 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T24	Behaviour 1606 1621	Palenie tytoniu
+T25	Negation 1623 1626	nie
+T26	Behaviour 1628 1639	Inne używki
+T27	Negation 1641 1644	nie
+T28	Condition 1646 1655	Uczulenia
+N16	Reference T28 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T29	Negation 1657 1660	nie
+T30	Condition 1689 1692	WZW
+N17	Reference T30 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T31	Condition 1699 1708	borelioza
+N18	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Condition 1714 1717	tbc
+N19	Reference T32 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T33	Negation 1693 1696	(-)
+T34	Negation 1709 1712	(-)
+T35	Negation 1718 1721	(-)
+T36	Behaviour 1739 1765	warunki mieszkaniowe dobre
+T37	Behaviour 1767 1775	Studiuje
+R2	Neg Arg1:T12 Arg2:T13	
+R3	Neg Arg1:T12 Arg2:T14	
+R4	Neg Arg1:T12 Arg2:T15	
+R5	Neg Arg1:T12 Arg2:T16	
+R6	Neg Arg1:T12 Arg2:T17	
+R7	Neg Arg1:T12 Arg2:T18	
+R8	Neg Arg1:T12 Arg2:T19	
+R9	Neg Arg1:T12 Arg2:T20	
+R10	Neg Arg1:T12 Arg2:T21	
+R11	Neg Arg1:T12 Arg2:T22	
+R12	Neg Arg1:T25 Arg2:T24	
+R13	Neg Arg1:T27 Arg2:T26	
+R14	Neg Arg1:T29 Arg2:T28	
+R15	Neg Arg1:T33 Arg2:T30	
+R16	Neg Arg1:T34 Arg2:T31	
+R17	Neg Arg1:T35 Arg2:T32	
+T38	Drug 1823 1829	Carzap
+T39	Drug_dose 1830 1850	16 mg 1x1 tabl. rano
+R18	Drg Arg1:T38 Arg2:T39	
+T40	Investigation 1911 1932	badania laboratoryjne
+T41	Investigation 1934 1938	ECHO
+T42	Investigation 1940 1944	ABPM
+T43	Investigation 1946 1956	Holter-EKG
+T44	Investigation 1958 1961	ExT
+N20	Reference T24 ICD10:Z72.0	Używanie tytoniu
+T8	Investigation 1062 1071	AVA index
+T45	Investigation_result 1072 1082	1,3 cm2/m2
+R19	Inv Arg1:T8 Arg2:T45	
+T46	Condition 1030 1059	Dwupłatkowa zastawka aortalna
+N2	Reference T46 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T47	Condition 1084 1114	z umiarkowaną niedomykalnością
+N21	Reference T47 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej

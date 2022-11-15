@@ -1,0 +1,25 @@
+T1	Drug 340 348	Relanium
+T2	Condition 597 646	Wrodzona wada serca pod postacią Zespołu Ebsteina
+N1	Reference T2 ICD10:Q22.5	Anomalia Ebsteina
+T3	Condition 651 688	Ubytek przegrody międzyprzedsionkowej
+N2	Reference T3 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T4	Condition 693 722	Niedobór masy ciała i wzrostu
+N3	Reference T4 ICD10:R62.8	Inne braki w porównaniu do oczekiwanego prawidłowego rozwoju fizjologicznego
+T5	Treatment 859 878	Opieka pediatryczna
+T6	Investigation 883 911	tym kontrola morfologii krwi
+T7	Date 912 924	za ok 4 m-ce
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Condition 934 976	tendencja do niedokrwistości mikrocytarnej
+T9	Treatment 1026 1069	Zgłoszenie się na ponowne badania w Klinice
+T10	Date 1070 1081	12.11.2019r
+R2	Dat Arg1:T10 Arg2:T9	
+T11	Treatment 1155 1206	pilny kontakt z Kliniką przy niepokojących objawach
+T12	Condition 1339 1352	z z. Ebsteina
+N4	Reference T12 ICD10:Q22.5	Anomalia Ebsteina
+T13	Investigation 1369 1386	badania kontrolne
+T14	Condition 1389 1406	wywiad alergiczny
+T15	Negation 1407 1413	ujemny
+R3	Neg Arg1:T15 Arg2:T14	
+T16	Investigation_result 977 1020	przy prawidłowym poziomie żelaza w surowicy
+N5	Reference T8 ICD10:D50	Niedokrwistość z niedoboru żelaza
+N6	Reference T14 ICD10:T78.4	Alergia, nieokreślona

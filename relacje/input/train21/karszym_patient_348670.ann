@@ -1,0 +1,22 @@
+T1	Condition 438 484	Obserwacja w kierunku choroby węzła zatokowego
+N1	Reference T1 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T2	Condition 489 523	Obserwacja w kierunku zespołu LQTs
+N2	Reference T2 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T3	Negation 634 642	Unikanie
+T4	Drug 643 678	leków mogących wpływać na odstęp QT
+R1	Neg Arg1:T3 Arg2:T4	
+T5	Condition 912 958	Obserwacja w kierunku choroby węzła zatokowego
+N3	Reference T5 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T6	Condition 963 997	Obserwacja w kierunku zespołu LQTs
+N4	Reference T6 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T7	Treatment 1130 1162	przyjęcia do Kliniki Kardiologii
+T8	Date 1166 1176	3.10.2019r
+T9	Negation 1181 1189	Unikanie
+T10	Drug_dose 1190 1225	leków mogących wpływać na odstęp QT
+T11	Investigation 1245 1274	Kontrolne oznaczenie glikemii
+R2	Dat Arg1:T8 Arg2:T7	
+R3	Neg Arg1:T9 Arg2:T10	
+A1	Source T1 Declared
+A2	Source T2 Declared
+A3	Source T5 Declared
+A4	Source T6 Declared

@@ -1,0 +1,709 @@
+allRelations          : 35
+oks                   : 8
+isRedundantAndRemoveds: 19
+shouldNotBeRemoveds   : 3
+shouldBeBemoveds      : 5
+GOOD / BAD            : 27 / 8
+Sentence 0:
+------------------------------------------------
+Wiek: 6 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+1. Przyjmowanie leków:
+
+
+
+Sentence 4:
+- Acesan 1x 30mg
+- Spironol 1x 12,5 mg
+
+R1	Drg Arg1:T1 Arg2:T4 << OK >>	Acesan -> 1x 30mg  <RANK: 3> <info: start[353, 360] <type: RIGHT>>
+R2	Drg Arg1:T1 Arg2:T5 <<REDUNDANT!!!REMOVED>>	Acesan -> 1x 12,5 mg <:REMOVED other first tag between (right):> <RANK: 1> <info: start[353, 379] <type: RIGHT>>
+R3	Drg Arg1:T2 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Spironol -> 1x 30mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[370, 360] <type: LEFT>>
+R4	Drg Arg1:T2 Arg2:T5 << OK >>	Spironol -> 1x 12,5 mg  <RANK: 3> <info: start[370, 379] <type: RIGHT>>
+
+
+Sentence 5:
+- Enarenal 1x 2,5mg
+2. Kontrola GGTP, AspAT, AlAT i bilirubiny  za miesiąc , wskazana opieka Poradni Hepatologicznej, w tym wykonanie  badania Fibro-Scan wątroby 
+
+R5	Drg Arg1:T3 Arg2:T6 << OK >>	Enarenal -> 1x 2,5mg  <RANK: 3> <info: start[392, 401] <type: RIGHT>>
+R6	Dat Arg1:T8 Arg2:T7 << OK >>	za miesiąc -> Kontrola GGTP, AspAT, AlAT i bilirubiny  <RANK: 3> <info: start[454, 413] <type: LEFT>>
+R7	Dat Arg1:T8 Arg2:T9 <<REDUNDANT!!!REMOVED>>	za miesiąc -> opieka Poradni Hepatologicznej <:REMOVED many second tags on the right:> <RANK: 2> <info: start[454, 476] <type: RIGHT>>
+R8	Dat Arg1:T8 Arg2:T10 <<REDUNDANT!!!REMOVED>>	za miesiąc -> badania Fibro-Scan wątroby <:REMOVED many second tags on the right:> <RANK: 2> <info: start[454, 525] <type: RIGHT>>
+R9	Dat Arg1:T8 Arg2:T3 <<REDUNDANT!!!REMOVED>>	za miesiąc -> Enarenal <:REMOVED other second tag between (left):> <RANK: 0> <info: start[454, 392] <type: LEFT>>
+
+
+Sentence 6:
+3. Kontrola w Poradni Kardiologicznej za 6 miesięcy
+
+R10	Dat Arg1:T12 Arg2:T11 << OK >>	za 6 miesięcy -> Kontrola w Poradni Kardiologicznej  <RANK: 3> <info: start[591, 556] <type: LEFT>>
+
+
+Sentence 7:
+4. Opieka w Poradni Psychologicznej i Laryngologicznej \x09
+------------------------------------------------
+
+
+
+Sentence 8:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 9:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią zespołu niedorozwoju lewego serca (HLHS).\x0aStan po zmodyfikowanej operacji met.
+
+
+Sentence 10:
+Norwooda (zespolenie o śr. 4mm pomiędzy pniem ramienno - głowowym a tętnicą płucną prawą) (30.08.2013r)\x0aStan po dwukierunkowym zespoleniu met. Glenna z podwiązaniem zespolenia pomiędzy pniem ramienno - głowowym a tętnicą płucną prawą (10.01.2014)\x0aStan po operacji Fontana (tunel zewnątrzprzedsionkowy z fenestracją) 29.06.2016\x0aStan po zamknięciu fenestracji zestawem ADO II 5/4 mm ( 23.02.2017).\x0aOpóźnienie rozwoju.\x0aNiedosłuch obustronny.\x0a\x09
+------------------------------------------------
+
+R11	Dat Arg1:T16 Arg2:T23 <<REDUNDANT!!!REMOVED>>	30.08.2013r -> Opóźnienie rozwoju <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1088, 1405] <type: RIGHT>>
+R12	Dat Arg1:T16 Arg2:T24 <<REDUNDANT!!!REMOVED>>	30.08.2013r -> Niedosłuch obustronny <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1088, 1428] <type: RIGHT>>
+R13	Dat Arg1:T16 Arg2:T17 <<REDUNDANT!!!SHOULD BE REMOVED>>	30.08.2013r -> dwukierunkowym zespoleniu met. Glenna z podwiązaniem zespolenia pomiędzy pniem ramienno - głowowym a tętnicą płucną prawą  <RANK: 3> <info: start[1088, 1112] <type: RIGHT>>
+R14	Dat Arg1:T16 Arg2:T19 <<REDUNDANT!!!REMOVED>>	30.08.2013r -> operacji Fontana (tunel zewnątrzprzedsionkowy z fenestracją <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1088, 1258] <type: RIGHT>>
+R15	Dat Arg1:T16 Arg2:T21 <<REDUNDANT!!!REMOVED>>	30.08.2013r -> zamknięciu fenestracji zestawem ADO II 5/4 mm <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1088, 1341] <type: RIGHT>>
+R16	Dat Arg1:T18 Arg2:T23 <<REDUNDANT!!!REMOVED>>	10.01.2014 -> Opóźnienie rozwoju <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1235, 1405] <type: RIGHT>>
+R17	Dat Arg1:T18 Arg2:T24 <<REDUNDANT!!!REMOVED>>	10.01.2014 -> Niedosłuch obustronny <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1235, 1428] <type: RIGHT>>
+R18	Dat Arg1:T18 Arg2:T17 <<SHOULD NOT BE REMOVED>>	10.01.2014 -> dwukierunkowym zespoleniu met. Glenna z podwiązaniem zespolenia pomiędzy pniem ramienno - głowowym a tętnicą płucną prawą <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1235, 1112] <type: LEFT>>
+R19	Dat Arg1:T18 Arg2:T19 <<REDUNDANT!!!SHOULD BE REMOVED>>	10.01.2014 -> operacji Fontana (tunel zewnątrzprzedsionkowy z fenestracją  <RANK: 3> <info: start[1235, 1258] <type: RIGHT>>
+R20	Dat Arg1:T18 Arg2:T21 <<REDUNDANT!!!REMOVED>>	10.01.2014 -> zamknięciu fenestracji zestawem ADO II 5/4 mm <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1235, 1341] <type: RIGHT>>
+R21	Dat Arg1:T20 Arg2:T23 <<REDUNDANT!!!REMOVED>>	29.06.2016 -> Opóźnienie rozwoju <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1319, 1405] <type: RIGHT>>
+R22	Dat Arg1:T20 Arg2:T24 <<REDUNDANT!!!REMOVED>>	29.06.2016 -> Niedosłuch obustronny <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1319, 1428] <type: RIGHT>>
+R23	Dat Arg1:T20 Arg2:T17 <<REDUNDANT!!!REMOVED>>	29.06.2016 -> dwukierunkowym zespoleniu met. Glenna z podwiązaniem zespolenia pomiędzy pniem ramienno - głowowym a tętnicą płucną prawą <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1319, 1112] <type: LEFT>>
+R24	Dat Arg1:T20 Arg2:T19 <<SHOULD NOT BE REMOVED>>	29.06.2016 -> operacji Fontana (tunel zewnątrzprzedsionkowy z fenestracją <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1319, 1258] <type: LEFT>>
+R25	Dat Arg1:T20 Arg2:T21 <<REDUNDANT!!!SHOULD BE REMOVED>>	29.06.2016 -> zamknięciu fenestracji zestawem ADO II 5/4 mm  <RANK: 3> <info: start[1319, 1341] <type: RIGHT>>
+R26	Dat Arg1:T22 Arg2:T23 <<REDUNDANT!!!SHOULD BE REMOVED>>	23.02.2017 -> Opóźnienie rozwoju  <RANK: 2> <info: start[1389, 1405] <type: RIGHT>>
+R27	Dat Arg1:T22 Arg2:T24 <<REDUNDANT!!!SHOULD BE REMOVED>>	23.02.2017 -> Niedosłuch obustronny  <RANK: 2> <info: start[1389, 1428] <type: RIGHT>>
+R28	Dat Arg1:T22 Arg2:T17 <<REDUNDANT!!!REMOVED>>	23.02.2017 -> dwukierunkowym zespoleniu met. Glenna z podwiązaniem zespolenia pomiędzy pniem ramienno - głowowym a tętnicą płucną prawą <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1389, 1112] <type: LEFT>>
+R29	Dat Arg1:T22 Arg2:T19 <<REDUNDANT!!!REMOVED>>	23.02.2017 -> operacji Fontana (tunel zewnątrzprzedsionkowy z fenestracją <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1389, 1258] <type: LEFT>>
+R30	Dat Arg1:T22 Arg2:T21 <<SHOULD NOT BE REMOVED>>	23.02.2017 -> zamknięciu fenestracji zestawem ADO II 5/4 mm <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1389, 1341] <type: LEFT>>
+
+
+Sentence 11:
+Zastosowane leczenie
+
+
+
+Sentence 12:
+------------------------------------------------
+- Acesan 1x 30mg
+- Spironol 1x 12,5 mg
+
+R31	Drg Arg1:T25 Arg2:T28 << OK >>	Acesan -> 1x 30mg  <RANK: 3> <info: start[1580, 1587] <type: RIGHT>>
+R32	Drg Arg1:T25 Arg2:T29 <<REDUNDANT!!!REMOVED>>	Acesan -> 1x 12,5 mg <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1580, 1606] <type: RIGHT>>
+R33	Drg Arg1:T26 Arg2:T28 <<REDUNDANT!!!REMOVED>>	Spironol -> 1x 30mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1597, 1587] <type: LEFT>>
+R34	Drg Arg1:T26 Arg2:T29 << OK >>	Spironol -> 1x 12,5 mg  <RANK: 3> <info: start[1597, 1606] <type: RIGHT>>
+
+
+Sentence 13:
+- Enarenal 1x 2,5mg
+------------------------------------------------
+
+R35	Drg Arg1:T27 Arg2:T30 << OK >>	Enarenal -> 1x 2,5mg  <RANK: 3> <info: start[1619, 1628] <type: RIGHT>>
+
+
+Sentence 14:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 15:
+Chłopiec  6   letni  w  stanie  dobrym  został przyjęty  do  kliniki  celem  przeprowadzenia  badań 
+
+
+
+Sentence 16:
+Otrzymuje  Acesan Spironol.  
+
+
+Sentence 17:
+Enarenal 
+
+
+
+Sentence 18:
+Nosi  aparaty  słuchowe.
+
+
+
+Sentence 19:
+------------------------------------------------
+
+
+
+Sentence 20:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 21:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:15.18[10^3/ul]
+    
+
+
+Sentence 22:
+RBC Krwinki czerwone:5.34[10^6/ul]
+    
+
+
+Sentence 23:
+HGB Hemoglobina:15.0[g/dl]
+    
+
+
+Sentence 24:
+HCT Hematokryt:42.7[%]
+    
+
+
+Sentence 25:
+MCV wskaźnik czerwonokrw:80.0[fl]
+    
+
+
+Sentence 26:
+MCH wskaźnik czerwonokrw:28.1[pg]
+    
+
+
+Sentence 27:
+MCHC wskaźnik czerwonokr:35.1[g/dl]
+    
+
+
+Sentence 28:
+PLT z morfologii:322[10^3/ul]
+    
+
+
+Sentence 29:
+RDW-SD:37.9[fl]
+    
+
+
+Sentence 30:
+RDW-CV:13.2[%]
+    PDW:10.3[fl]
+    
+
+
+Sentence 31:
+MPV:9.6[fl]
+    
+
+
+Sentence 32:
+P-LCR:20.6[%]
+    
+
+
+Sentence 33:
+PCT (hematokryt płytkowy:0.31[%]
+    
+
+
+Sentence 34:
+NEUTR# wartość bezwzględ:9.76[10^3/ul]
+    
+
+
+Sentence 35:
+NEUTR%:64.3[%]
+    
+
+
+Sentence 36:
+LYMH# wartość bezwzględn:4.22[10^3/ul]
+    
+
+
+Sentence 37:
+LYMPH%:27.8[%]
+    
+
+
+Sentence 38:
+MONO# wartość bezwzględn:0.88[10^3/ul]
+    
+
+
+Sentence 39:
+MONO%:5.8[%]
+    
+
+
+Sentence 40:
+EO# wartość bezwzględna:0.23[10^3/ul]
+    
+
+
+Sentence 41:
+EO%:1.5[%]
+    
+
+
+Sentence 42:
+BASO# wartość bezwzględn:0.09[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 43:
+NRBC %:0.1[%]
+    
+
+
+Sentence 44:
+NRBC #:0.01[10^3/ul]
+
+
+
+Sentence 45:
+Antytrombina III: Antytrombina III:109[%]
+
+
+
+Sentence 46:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:36.0[sek]
+
+
+
+Sentence 47:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 48:
+Czas protrombinowy:13.9[sek]
+    
+
+
+Sentence 49:
+Wskaźnik PT:79.1[%]
+    
+
+
+Sentence 50:
+INR:1.26
+Czas trombinowy TT: Czas trombinowy TT:16.1[sek]
+
+
+
+Sentence 51:
+Fibrynogen: Fibrynogen:2.70[g/L]
+D-dimer - test ilościowy: D-dimer - test ilościowy:74[ng/ml]
+
+
+
+Sentence 52:
+Płytki krwi z THEX: Płytki krwi:306[10^3/ul]
+
+
+
+Sentence 53:
+Badanie ogólne moczu
+    
+
+
+Sentence 54:
+barwa:żółty[ ]
+    
+
+
+Sentence 55:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 56:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 57:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 58:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 59:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 60:
+ciężar właściwy:1.020[ ]
+    
+
+
+Sentence 61:
+pH:6[ ]
+    
+
+
+Sentence 62:
+białko:nieobecne[ ]
+    
+
+
+Sentence 63:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 64:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 65:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 66:
+OSAD MOCZU:MIKROSKOPOWY[ ]
+    
+
+
+Sentence 67:
+nabłonki płaskie:pojedyncze[w preparacie]
+    leukocyty:1-3[ul]
+    
+
+
+Sentence 68:
+skupiska erytrocytów:poj.[w preparacie]
+    
+
+
+Sentence 69:
+śluz:pojedyncze pasma[w preparacie]
+
+
+
+Sentence 70:
+Przeciwciała przeciw CMV IgM
+    
+
+
+Sentence 71:
+Przeciwciała przeciw HCM:0.03[Index]
+    
+
+
+Sentence 72:
+Wynik::Ujemny
+
+
+
+Sentence 73:
+Przeciwciała przeciw CMV IgG
+    
+
+
+Sentence 74:
+Przeciwciała przeciw HCM:6.0[AU/ml]
+    
+
+
+Sentence 75:
+Wynik::Dodatni
+TSH: TSH:4.85[uIU/ml]
+
+
+
+Sentence 76:
+FT3: FT3:4.53[pg/ml]
+
+
+
+Sentence 77:
+FT4: FT4:1.60[ng/dl]
+
+
+
+Sentence 78:
+Troponina T: Troponina T:4.9[pg/ml]
+
+
+
+Sentence 79:
+AFP: AFP:1.51[IU/ml]
+HBsAg: HBsAg:niereaktywny[ ]
+HBsAg: HBsAg:niereaktywny[ ]
+
+
+
+Sentence 80:
+Przeciwciała anty-HBs: Przeciwciała anty-HBs:4.6[mIU/ml]
+
+
+
+Sentence 81:
+Przeciwciała anty-HBs: Przeciwciała anty-HBs:4.3[mIU/ml]
+
+
+
+Sentence 82:
+Przeciwciała anty-HCV: Przeciwciała anty-HCV:niereaktywny
+
+
+
+Sentence 83:
+Przeciwciała anty-HCV: Przeciwciała anty-HCV:niereaktywny
+ALAT: ALAT:31[U/L]
+
+
+
+Sentence 84:
+Albumina: Albumina:5.0[g/dl]
+
+
+
+Sentence 85:
+ASPAT: ASPAT:45[U/L]
+
+
+
+Sentence 86:
+Białko całkowite w surowicy (TP): Białko całkowite w surow:7.6[g/dl]
+
+
+
+Sentence 87:
+Bilirubina niesprzężona (pośrednia) (Bu): Bilirubina niesprzężona:0.5[mg/dl]
+
+
+
+Sentence 88:
+Bilirubina sprzężona (bezpośrednia) (Bc): Bilirubina sprzężona (be:0.0[mg/dl]
+
+
+
+Sentence 89:
+Bilirubina całkowita (TBil): Bilirubina całkowita:0.5[mg/dl]
+
+
+
+Sentence 90:
+CK - aktywność: CK:91[U/L]
+
+
+
+Sentence 91:
+CKMB aktywność: CKMB:37[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.96[mg/dl]
+
+
+
+Sentence 92:
+Sód (Na): Sód:138[mmol/L]
+
+
+
+Sentence 93:
+Potas (K): Potas:4.6[mmol/L]
+
+
+
+Sentence 94:
+Chlorki (Cl): Chlorki:104[mmol/L]
+
+
+
+Sentence 95:
+Fosfataza alkaliczna (ALP): Fosfataza alkaliczna:197[U/L]
+
+
+
+Sentence 96:
+Fosforany nieorganiczne: Fosforany nieorganiczne:1.87[mmol/L]
+
+
+
+Sentence 97:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:62316[U/L]
+Kreatynina + GFR
+    
+
+
+Sentence 98:
+Kreatynina w surowicy:0.5[mg/dl]
+    
+
+
+Sentence 99:
+eGFR stand.
+
+
+Sentence 100:
+wg Schwartza:119.9[ml/min/1,73 m^2]
+    
+
+
+Sentence 101:
+eGFR zmod.
+
+
+Sentence 102:
+wg Schwartza:90.0[ml/min/1,73 m^2]
+    wzrost:109[cm]
+
+
+
+Sentence 103:
+Mleczany (LAC): Mleczany:44.7[mg/dl]
+
+
+
+Sentence 104:
+LDH Dehydrogenaza mleczanowa: LDH Dehydrogenaza mlecza:316[U/L]
+
+
+
+Sentence 105:
+Magnez: Magnez:0.83[mmol/L]
+
+
+
+Sentence 106:
+Mocznik: Mocznik:43[mg/dl]
+
+
+
+Sentence 107:
+Transferyna: Transferyna:246[mg/dl]
+
+
+
+Sentence 108:
+Wapń całkowity: Wapń całkowity:2.63[mmol/L]
+
+
+
+Sentence 109:
+Gospodarka żelazem
+    Żelazo:97[ug/dl]
+    
+
+
+Sentence 110:
+TIBC (Całkowita zdolność:356[ug/dl]
+    
+
+
+Sentence 111:
+UIBC (Utajona zdolność w:259[ug/dl]
+    
+
+
+Sentence 112:
+Wskaźnik wysycenia Fe:27[%]
+
+
+
+Sentence 113:
+Żelazo (Fe): Żelazo (Fe):97[ug/dl]
+
+
+
+Sentence 114:
+ASO
+    ASO:
+    25[IU/ml]
+
+
+
+Sentence 115:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    pH:7.320
+    pCO2:48.6[mmHg]
+    BE:-1.90[mmol/L]
+    
+
+
+Sentence 116:
+HCO3:24.3[mmol/L]
+    
+
+
+Sentence 117:
+pO2:23.8[mmHg]
+    
+
+
+Sentence 118:
+O2Sat:30.1[%]
+
+
+
+Sentence 119:
+Glukoza w surowicy: Glukoza w surowicy:74[mg/dl]
+
+
+
+Sentence 120:
+NT-proBNP surowica: NT-proBNP w surowicy:213[pg/ml]
+------------------------------------------------
+ICD10
+------------------------------------------------
+
+
+
+Sentence 121:
+Q23.4
+Z98.8
+
+
+
+Sentence 122:
+Z95.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 123:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 124:
+88.734
+89.522
+88.721
+89.541
+88.761
+88.751
+------------------------------------------------
+
+

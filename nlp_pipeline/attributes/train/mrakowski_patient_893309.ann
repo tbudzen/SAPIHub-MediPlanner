@@ -1,0 +1,129 @@
+T1	Condition 439 473	Łagodna niedomykalność trójdzielna
+N1	Reference T1 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T2	Condition 475 557	Łagodna arytmia komorowa pod postacią pojedynczych skurczów dodatkowych komorowych
+T3	Treatment 567 608	operacyjnym usunięciu macicy i przydatków
+T4	Date 654 662	23/04/18
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Condition 665 701	Nawracające zakażenia dróg moczowych
+N3	Reference T5 ICD10:N39.0	Zakażenie układu moczowego o nieokreślonym umiejscowieniu
+T6	Symptom 715 734	Okresowe bóle głowy
+N4	Reference T6 ICD10:R51	Ból głowy
+T7	Condition 736 782	Nawracające epizody rwy kulszowej lewostronnej
+N5	Reference T7 ICD10:M54.3	Rwa kulszowa
+T8	Condition 784 804	Izolowana leukopenia
+N6	Reference T8 ICD10:D70	Agranulocytoza
+T9	Condition 806 826	Hipercholesterolemia
+N7	Reference T9 ICD10:E78.0	Czysta hipercholesterolemia
+T10	Treatment 938 974	Wskazana dalsza opieka u lekarza POZ
+T11	Treatment 977 1025	Wskazana dalsza opieka w Poradni Kardiologicznej
+T12	Investigation 1039 1093	nieinwazyjnej diagnostyki tętnic wieńcowych w angio-CT
+T13	Treatment 1097 1175	Wskazana dalsza opieka w Poradni Ginekologicznej/Onkologicznej, Neurologicznej
+T14	Condition 1322 1396	arytmią komorową pod postacią pojedynczych skurczów dodatkowych komorowych
+T15	Treatment 1401 1442	operacyjnym usunięciu macicy i przydatków
+T16	Date 1488 1496	23/04/18
+R2	Dat Arg1:T16 Arg2:T15	
+T17	Condition 1501 1541	nawracającymi zakażeniami dróg moczowych
+N9	Reference T17 ICD10:N39.0	Zakażenie układu moczowego o nieokreślonym umiejscowieniu
+T18	Condition 1584 1601	arytmii komorowej
+N10	Reference T18 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+N8	Reference T14 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+N2	Reference T2 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T19	Date 1634 1642	Od 2 lat
+T20	Drug 1661 1669	Biosotal
+T21	Drug_dose 1670 1677	2x40 mg
+R3	Drg Arg1:T20 Arg2:T21	
+R4	Dat Arg1:T19 Arg2:T20	
+T22	Treatment 1766 1808	na stałe pod opieką poradni neurologicznej
+T23	Symptom 1818 1858	nawracających bólów głowy za uchem lewym
+N11	Reference T23 ICD10:R51	Ból głowy
+T24	Investigation 1907 1916	MRI głowy
+T25	Condition 1923 1973	lewostronnych nawracających epizodów rwy kulszowej
+N12	Reference T25 ICD10:M54.3	Rwa kulszowa
+T26	Condition 2008 2018	leukopenii
+N13	Reference T26 ICD10:D70	Agranulocytoza
+T27	Negation 2020 2026	Neguje
+T28	Symptom 2028 2040	zasłabnięcia
+T29	Symptom 2042 2050	omdlenia
+N14	Reference T29 ICD10:R55	Omdlenie i zapaść
+T30	Symptom 2052 2062	krwawienia
+T31	Symptom 2064 2077	czarne stolce
+N15	Reference T31 ICD10:K92.1	Stolce smołowate
+T32	Symptom 2079 2095	brunatne wymioty
+N16	Reference T32 ICD10:K92.0	Wymioty krwawe
+T33	Condition 2097 2113	chorobę wrzodową
+N17	Reference T33 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T34	Condition 2116 2118	HA
+T35	Condition 2120 2122	DM
+N19	Reference T35 ICD10:E14	Cukrzyca nieokreślona
+N18	Reference T34 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T36	Condition 2124 2134	udar mózgu
+N20	Reference T36 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T37	Condition 2136 2147	zawał serca
+N21	Reference T37 ICD10:I25.2	Przebyty zawał serca
+R5	Neg Arg1:T27 Arg2:T37	
+R6	Neg Arg1:T27 Arg2:T36	
+R7	Neg Arg1:T27 Arg2:T35	
+R8	Neg Arg1:T27 Arg2:T34	
+R9	Neg Arg1:T27 Arg2:T33	
+R10	Neg Arg1:T27 Arg2:T32	
+R11	Neg Arg1:T27 Arg2:T31	
+R12	Neg Arg1:T27 Arg2:T30	
+R13	Neg Arg1:T27 Arg2:T29	
+R14	Neg Arg1:T27 Arg2:T28	
+T38	Treatment 2152 2169	Przebyte operacje
+T39	Treatment 2171 2187	cięcie cesarskie
+A1	Status T39 Historical_Insignificant
+T40	Behaviour 2193 2208	Palenie tytoniu
+T41	Negation 2210 2213	nie
+R15	Neg Arg1:T41 Arg2:T40	
+T42	Behaviour 2215 2226	Inne używki
+T43	Negation 2228 2231	nie
+R16	Neg Arg1:T43 Arg2:T42	
+T44	Condition 2233 2242	Uczulenia
+T45	Negation 2244 2247	nie
+R17	Neg Arg1:T45 Arg2:T44	
+T46	Condition 2276 2279	WZW
+N23	Reference T46 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T47	Condition 2286 2295	borelioza
+N24	Reference T47 ICD10:A69.2	Choroba z Lyme
+T48	Condition 2303 2306	tbc
+T49	Condition 2312 2316	odra
+N26	Reference T49 ICD10:B05	Odra
+T50	Treatment 2322 2343	szczepienie p-o odrze
+T51	Negation 2345 2346	-
+R18	Neg Arg1:T51 Arg2:T50	
+T52	Negation 2318 2319	-
+R19	Neg Arg1:T52 Arg2:T49	
+T53	Negation 2308 2309	-
+R20	Neg Arg1:T53 Arg2:T48	
+T54	Negation 2298 2299	-
+R21	Neg Arg1:T54 Arg2:T47	
+T55	Negation 2281 2282	-
+R22	Neg Arg1:T55 Arg2:T46	
+T56	Behaviour 2365 2391	warunki mieszkaniowe dobre
+T57	Drug 2446 2454	Biosotal
+T58	Drug 2475 2480	Asmag
+T59	Drug_dose 2455 2473	40 mg 1 tabl. 2xdz
+R23	Drg Arg1:T57 Arg2:T59	
+T60	Drug_dose 2481 2492	20 mg 1xdz.
+R24	Drg Arg1:T58 Arg2:T60	
+T61	Investigation 2554 2575	badania laboratoryjne
+T62	Investigation 2577 2581	ECHO
+T63	Investigation 2583 2593	Holter EKG
+T64	Investigation 2595 2599	ABPM
+T65	Condition 618 652	nowotworu złośliwego trzonu macicy
+N27	Reference T65 ICD10:C54	Nowotwór złośliwy trzonu macicy
+R25	Dat Arg1:T4 Arg2:T65	
+T66	Condition 1452 1486	nowotworu złośliwego trzonu macicy
+N28	Reference T66 ICD10:C54	Nowotwór złośliwy trzonu macicy
+R26	Dat Arg1:T16 Arg2:T66	
+N30	Reference T44 ICD10:T78.4	Alergia, nieokreślona
+A2	Status T65 Historical_Insignificant
+A3	Status T3 Historical_Insignificant
+A4	Status T66 Historical_Insignificant
+A5	Status T15 Historical_Insignificant
+N31	Reference T28 ICD10:R55	Omdlenie i zapaść
+N22	Reference T40 ICD10:Z72.0	Używanie tytoniu
+N29	Reference T30 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N32	Reference T42 ICD10:Z72	Problemy związane ze stylem życia
+N25	Reference T48 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

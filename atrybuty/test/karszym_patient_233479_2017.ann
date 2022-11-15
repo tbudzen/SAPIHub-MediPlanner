@@ -1,0 +1,21 @@
+T1	Investigation 461 482	Obserwacja w kierunku
+T2	Condition 483 503	zaburzeń rytmu serca
+N1	Reference T2 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T3	Symptom 513 548	Bóle w klatce piersiowej po wysiłku
+N2	Reference T3 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T4	Treatment 666 700	Kontrola w Poradni Kardiologicznej
+T5	Date 701 707	za rok
+T6	Treatment 709 722	Do rozważenia
+T7	Investigation 731 742	badanie TEE
+T8	Investigation 747 767	Kontrolny holter EKG
+T9	Date 796 807	za pół roku
+T10	Treatment 811 853	Kontynuacja opieki Poradni Alergologicznej
+T11	Symptom 1003 1020	w  stanie  dobrym
+T12	Investigation 1076 1093	próby  wysiłkowej
+T13	Condition 1111 1118	alergia
+N3	Reference T13 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T14	Drug 1138 1145	leków
+T15	Negation 1145 1159	nie  otrzymuje
+R1	Neg Arg1:T15 Arg2:T14
+R2	Dat Arg1:T9 Arg2:T8
+R3	Dat Arg1:T5 Arg2:T4

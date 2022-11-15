@@ -1,0 +1,117 @@
+T1	Treatment 345 372	dalsza opieka w poradni POZ
+T2	Treatment 388 427	kontrola kardiologiczna i neurologiczna
+T3	Treatment 434 464	dalsze leczenie ginekologiczne
+T4	Investigation 482 511	kontrola ciśnienia tętniczego
+T5	Investigation 527 547	kontrola lipidogramu
+T6	Date 549 559	raz w roku
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Behaviour 567 592	dieta niskocholesterolowa
+T8	Drug 638 648	Euthyrox N
+T9	Drug_dose 649 664	50 1 tabl. rano
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 672 680	Neurotop
+T11	Drug_dose 681 714	600 mg 1/2 tabl. rano i wieczorem
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 723 732	Nootropil
+T13	Drug_dose 733 764	1200 mg 1tabl rano i w południe
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Drug 772 780	Vinpoton
+T15	Drug_dose 781 810	5 mg 1 tabl. rano i wieczorem
+R5	Drg Arg1:T14 Arg2:T15	
+T16	Symptom 1029 1053	Bóle w klatce piersiowej
+N1	Reference T16 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T17	Investigation 1056 1078	diagnostyka w kierunku
+T18	Condition 1079 1096	choroby wieńcowej
+A1	Source T18 Declared
+T19	Negation 1097 1103	ujemna
+R6	Neg Arg1:T19 Arg2:T18	
+T20	Condition 1105 1124	Polip trzonu macicy
+N3	Reference T20 ICD10:N84.0	Polip trzonu macicy
+T21	Condition 1126 1161	Niedokrwistość łagodna normocytarna
+N4	Reference T21 ICD10:D64	Inne niedokrwistości
+T22	Treatment 1196 1221	leczenia substytucyjnego.
+T23	Condition 1163 1185	Niedoczynność tarczycy
+N5	Reference T23 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T24	Condition 1222 1230	Padaczka
+N6	Reference T24 ICD10:G40.9	Padaczka, nieokreślona
+T25	Investigation 2309 2319	echo serca
+T26	Investigation 2321 2342	echo przezprzełykowe,
+T27	Investigation 2343 2360	echo obciążeniowe
+T28	Investigation 2362 2365	TET
+T29	Investigation 2367 2371	ABPM
+T30	Investigation 2373 2379	Holter
+T31	Investigation 2381 2400	RTG kl. piersiowej.
+T32	Drug 2252 2260	Vinpoton
+T33	Drug_dose 2261 2281	5 mg 1 tabl. 2 x dz,
+R7	Drg Arg1:T32 Arg2:T33	
+T34	Drug 2209 2218	Nootropil
+T35	Drug_dose 2220 2251	200 mg  1tabl rano i w południe
+R8	Drg Arg1:T34 Arg2:T35	
+T36	Drug 2175 2183	Neurotop
+T37	Drug_dose 2184 2207	600 mg 1/2 tabl. 2 x dz
+R9	Drg Arg1:T36 Arg2:T37	
+T38	Drug 2147 2155	Euthyrox
+T39	Drug_dose 2156 2174	50 ug 1 tabl. rano
+R10	Drg Arg1:T38 Arg2:T39	
+T40	Negation 2070 2073	nie
+T41	Negation 2054 2057	nie
+T42	Negation 2030 2040	nie podaje
+T43	Condition 2059 2068	Uczulenia
+N7	Reference T43 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R11	Neg Arg1:T40 Arg2:T43	
+T44	Behaviour 2041 2052	Inne używki
+N8	Reference T44 ICD10:Z72	Problemy związane ze stylem życia
+R12	Neg Arg1:T41 Arg2:T44	
+T45	Behaviour 2013 2028	Palenie tytoniu
+N9	Reference T45 ICD10:Z72.0	Używanie tytoniu
+R13	Neg Arg1:T42 Arg2:T45	
+T46	Condition 1985 1988	WZW
+N10	Reference T46 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T47	Condition 1990 1999	borelioza
+N11	Reference T47 ICD10:A69.2	Choroba z Lyme
+T48	Negation 2002 2012	nie podaje
+R14	Neg Arg1:T48 Arg2:T47	
+R15	Neg Arg1:T48 Arg2:T46	
+T49	Condition 1937 1956	nagłe zgony sercowe
+A2	Status T49 Family
+N12	Reference T49 ICD10:I46.1	Nagły zgon sercowy, tak opisany
+T50	Negation 1930 1936	neguje
+R16	Neg Arg1:T50 Arg2:T49	
+T51	Condition 1907 1927	chorób  przewlekłych
+A3	Status T51 Family
+T52	Negation 1903 1906	bez
+R17	Neg Arg1:T52 Arg2:T51	
+T53	Drug 1869 1877	Neurotop
+T54	Drug 1829 1839	Euthyrox N
+T55	Drug_dose 1840 1866	50ug 1  x dz rano na czczo
+R18	Drg Arg1:T54 Arg2:T55	
+T56	Symptom 1783 1802	utraty przytomności
+N13	Reference T56 ICD10:R55	Omdlenie i zapaść
+T57	Symptom 1756 1773	uczucie duszności
+N14	Reference T57 ICD10:R06.0	Duszność
+T58	Negation 1776 1782	neguje
+R19	Neg Arg1:T58 Arg2:T56	
+T59	Negation 1749 1755	Neguje
+R20	Neg Arg1:T59 Arg2:T57	
+T60	Symptom 1715 1746	ograniczenie tolerancji wysiłku
+N15	Reference T60 ICD10:R53	Złe samopoczucie i zmęczenie
+T61	Negation 1708 1714	Neguje
+R21	Neg Arg1:T61 Arg2:T60	
+T62	Symptom 1635 1672	nawracające bóle w  klatce piersiowej
+N16	Reference T62 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T63	Date 1674 1686	d ok. 1 roku
+T64	Symptom 1687 1706	stresowe, wysiłkowe
+R22	Dat Arg1:T63 Arg2:T62	
+R23	Dat Arg1:T63 Arg2:T64	
+T65	Condition 1375 1399	niedoczynnością tarczycy
+N17	Reference T65 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T66	Condition 1401 1409	padaczką
+N18	Reference T66 ICD10:G40.9	Padaczka, nieokreślona
+T67	Investigation 1437 1464	diagnostyki kardiologicznej
+T68	Date 1523 1531	03.2018r
+T69	Treatment 1538 1560	wyłyżeczkowania macicy
+R24	Dat Arg1:T68 Arg2:T69	
+T70	Investigation 1618 1621	EKG
+T71	Investigation_result 1610 1615	zmian
+R25	Inv Arg1:T70 Arg2:T71	
+N2	Reference T18 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona

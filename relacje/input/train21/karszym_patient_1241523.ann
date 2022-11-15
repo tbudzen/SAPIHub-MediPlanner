@@ -1,0 +1,108 @@
+T1	Condition 448 492	Przewlekła choroba wieńcowa - I klasa wg CCS
+N1	Reference T1 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T2	Condition 497 535	Poszerzenie aorty wstępującej do 48 mm
+T3	Condition 540 561	Nadciśnienie tętnicze
+N2	Reference T3 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T4	Condition 566 578	Dyslipidemia
+N3	Reference T4 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T5	Condition 583 603	Nietolerancja statyn
+N4	Reference T5 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T6	Drug 605 618	atorwastatyna
+R1	Alg Arg1:T5 Arg2:T6	
+T7	Condition 636 667	Tętniak tętnicy kręgowej prawej
+N5	Reference T7 ICD10:I72.8	Tętniak innych określonych tętnic
+T8	Condition 673 719	Niedoczynność tarczycy w trakcie suplementacji
+N6	Reference T8 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T10	Drug 720 731	L-tyroksyną
+T11	Treatment 852 910	dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T12	Treatment 913 950	okresową kontrolą echokardiograficzną
+T13	Behaviour 975 1070	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T14	Condition 1229 1252	nadciśnieniem tętniczym
+N7	Reference T14 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T15	Condition 1254 1317	niedoczynnością tarczycy w trakcie suplementacji substytucyjnej
+N8	Reference T15 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T17	Drug 1318 1329	L-tyroksyną
+T18	Condition 1331 1365	tętniakiem tętnicy kręgowej prawej
+N9	Reference T18 ICD10:I72.8	Tętniak innych określonych tętnic
+T19	Condition 1367 1395	prawdopodobnie nietolerancją
+N10	Reference T19 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T20	Drug 1396 1402	statyn
+R2	Alg Arg1:T19 Arg2:T20	
+T21	Symptom 1450 1534	dolegliwości bólowych w klatce piersiowej, występujących głównie w godzinach nocnych
+N11	Reference T21 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T22	Symptom 1541 1554	kołatań serca
+N12	Reference T22 ICD10:R00.2	Kołatanie serca
+T23	Symptom 1556 1619	Dolegliwości bólowe w klatce piersiowej o charakterze pieczenia
+N13	Reference T23 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T24	Symptom 1622 1645	towarzyszącą dusznością
+N14	Reference T24 ICD10:R06.0	Duszność
+T25	Symptom 1648 1665	kołataniami serca
+N15	Reference T25 ICD10:R00.2	Kołatanie serca
+T26	Date 1680 1699	od około 6 miesięcy
+R3	Dat Arg1:T26 Arg2:T23	
+R4	Dat Arg1:T26 Arg2:T24	
+R5	Dat Arg1:T26 Arg2:T25	
+R6	Dat Arg1:T26 Arg2:T21	
+R7	Dat Arg1:T26 Arg2:T22	
+T27	Negation 1702 1708	Neguje
+T28	Symptom 1709 1721	zasłabnięcia
+T29	Symptom 1723 1732	duszności
+N16	Reference T29 ICD10:R06.0	Duszność
+T30	Symptom 1734 1777	typowe bóle w klatce piersiowej w spoczynku
+N17	Reference T30 ICD10:R07.2	Ból w okolicy przedsercowej
+T31	Treatment 1799 1829	operacją łąkotki kolana lewego
+A1	Status T31 Historical_Insignificant
+N18	Reference T31 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T32	Date 1831 1847	około 5 lat temu
+R8	Neg Arg1:T27 Arg2:T28	
+R9	Neg Arg1:T27 Arg2:T29	
+R10	Neg Arg1:T27 Arg2:T30	
+R11	Dat Arg1:T32 Arg2:T31	
+T33	Condition 1876 1879	WZW
+N19	Reference T33 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T34	Condition 1888 1897	borelioza
+N20	Reference T34 ICD10:A69.2	Choroba z Lyme
+T35	Condition 1905 1913	gruźlica
+N21	Reference T35 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T36	Negation 1880 1885	( - )
+T37	Negation 1898 1903	( - )
+T38	Negation 1914 1917	(-)
+R12	Neg Arg1:T36 Arg2:T33	
+R13	Neg Arg1:T37 Arg2:T34	
+R14	Neg Arg1:T38 Arg2:T35	
+T39	Condition 1943 1945	HA
+A2	Status T39 Family
+N22	Reference T39 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T40	Negation 1963 1966	nie
+T41	Date 1973 1986	od 3 miesięcy
+T42	Date 1988 1997	wcześniej
+T43	Behaviour 1998 2004	paliła
+N23	Reference T43 ICD10:Z72.0	Używanie tytoniu
+T44	Behaviour 1967 1971	pali
+N24	Reference T44 ICD10:Z72.0	Używanie tytoniu
+R15	Neg Arg1:T40 Arg2:T44	
+R16	Dat Arg1:T41 Arg2:T44	
+R17	Dat Arg1:T42 Arg2:T43	
+T45	Date 2005 2015	ok. 45 lat
+R18	Dat Arg1:T45 Arg2:T43	
+T46	Behaviour 2016 2034	0,5-1 paczkę/dzień
+N25	Reference T46 ICD10:Z72.0	Używanie tytoniu
+R19	Dat Arg1:T45 Arg2:T46	
+R20	Dat Arg1:T42 Arg2:T46	
+T47	Behaviour 2035 2046	Inne używki
+T48	Negation 2048 2051	nie
+T49	Condition 2052 2061	Uczulenia
+N26	Reference T49 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T50	Negation 2063 2069	neguje
+T51	Behaviour 2086 2112	warunki mieszkaniowe dobre
+T52	Behaviour 2115 2130	mieszka z córką
+R21	Neg Arg1:T48 Arg2:T47	
+R22	Neg Arg1:T50 Arg2:T49	
+T53	Drug 2137 2147	Beto 50 ZK
+T54	Drug 2149 2157	Noliprel
+T55	Drug 2159 2166	Amlopin
+T56	Drug 2168 2176	Setal MR
+T57	Drug 2178 2188	Euthyrox N
+T58	Drug_dose 2188 2192	88ug
+T59	Drug 2194 2208	Lipiforma plus
+R23	Drg Arg1:T57 Arg2:T58	

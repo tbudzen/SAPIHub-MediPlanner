@@ -1,0 +1,65 @@
+T1	Condition 447 505	Wrodzona wada serca - ubytek w przegrodzie międzykomorowej
+N1	Reference T1 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T2	Treatment 506 525	leczony operacyjnie
+T3	Date 528 533	2000r
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Treatment 645 667	kontrola u lekarza POZ
+T5	Treatment 670 747	okresowa dalsza kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych
+T6	Negation 1069 1075	Neguje
+T7	Symptom 1076 1088	zasłabnięcia
+R2	Neg Arg1:T6 Arg2:T7	
+T8	Negation 1091 1097	neguje
+T9	Symptom 1098 1122	bóle w klatce piersiowej
+T10	Symptom 1132 1149	uczucie duszności
+N3	Reference T10 ICD10:R06.0	Duszność
+T11	Negation 1125 1131	neguje
+R3	Neg Arg1:T11 Arg2:T10	
+R4	Neg Arg1:T8 Arg2:T9	
+T12	Treatment 1176 1205	operacji wrodzonej wady serca
+T13	Condition 1219 1255	ubytku w przegrodzie międzykomorowej
+N4	Reference T13 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T14	Date 1257 1262	2000r
+R5	Dat Arg1:T14 Arg2:T13	
+R6	Dat Arg1:T14 Arg2:T12	
+T15	Condition 1265 1278	Arytmia serca
+N5	Reference T15 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T16	Treatment 1299 1316	Przebyte operacje
+A1	Source T15 Declared
+T17	Treatment 1324 1343	Leczenie przewlekłe
+T18	Negation 1346 1350	brak
+R7	Neg Arg1:T18 Arg2:T17	
+T19	Condition 1379 1382	WZW
+N6	Reference T19 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T20	Condition 1392 1401	borelioza
+N7	Reference T20 ICD10:A69.2	Choroba z Lyme
+T21	Negation 1404 1405	-
+R8	Neg Arg1:T21 Arg2:T20	
+T22	Negation 1385 1386	-
+R9	Neg Arg1:T22 Arg2:T19	
+T23	Condition 1410 1429	wywiadzie rodzinnym
+A2	Status T23 Family
+T24	Negation 1432 1436	brak
+R10	Neg Arg1:T24 Arg2:T23	
+T25	Behaviour 1438 1453	Palenie tytoniu
+T26	Negation 1455 1458	nie
+R11	Neg Arg1:T26 Arg2:T25	
+T27	Behaviour 1459 1470	Inne używki
+T28	Negation 1472 1475	nie
+R12	Neg Arg1:T28 Arg2:T27	
+T29	Condition 1476 1485	Uczulenia
+T30	Behaviour 1552 1578	warunki mieszkaniowe dobre
+T31	Investigation 1645 1655	Echo serca
+T32	Investigation 1658 1668	Holter EKG
+T33	Investigation 1671 1686	Próba Wysiłkowa
+T34	Investigation 1689 1692	TEE
+N10	Reference T7 ICD10:R55	Omdlenie i zapaść
+N8	Reference T25 ICD10:Z72.0	Używanie tytoniu
+N9	Reference T29 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T35	Drug 871 876	leków
+T36	Negation 867 870	bez
+R13	Neg Arg1:T36 Arg2:T35	
+N2	Reference T9 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N11	Reference T27 ICD10:Z72	Problemy związane ze stylem życia
+T37	Negation 1608 1611	bez
+T38	Drug 1612 1630	leków przewlekłych
+R14	Neg Arg1:T37 Arg2:T38	

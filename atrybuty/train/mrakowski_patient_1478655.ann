@@ -1,0 +1,123 @@
+T1	Condition 373 396	Niedociśnienie tętnicze
+N1	Reference T1 ICD10:I95.9	Niedociśnienie tętnicze, nieokreślone
+T2	Symptom 398 410	Zasłabnięcia
+T3	Drug 596 607	Nodon Combi
+T4	Drug 609 619	Starazolin
+T5	Drug 621 630	Nootropil
+T6	Drug 632 639	Kaldyum
+T7	Treatment 750 772	kontrola u lekarza POZ
+T8	Investigation 775 816	kontrola wartości RR w warunkach domowych
+T9	Investigation 819 869	kontrola morfologii, jonogramu, układu krzepnięcia
+T10	Drug 913 923	Nootropilu
+T11	Date 870 884	po ok 7 dniach
+R1	Dat Arg1:T11 Arg2:T9	
+T12	Treatment 926 953	regularne przyjmowanie leku
+T13	Drug 955 964	Nootropil
+T14	Drug_dose 965 975	800mg 1-1-
+R2	Drg Arg1:T13 Arg2:T14	
+T15	Condition 1118 1127	niewidoma
+N2	Reference T15 ICD10:H54.0	Ślepota obuoczna
+T16	Symptom 1158 1208	uczucia zmniejszonej tolerancji wysiłku fizycznego
+N3	Reference T16 ICD10:R53	Złe samopoczucie i zmęczenie
+T17	Date 1209 1218	od 1 roku
+R3	Dat Arg1:T17 Arg2:T16	
+T18	Symptom 1220 1252	zmęczenie po wejściu na 3 piętro
+N4	Reference T18 ICD10:R53	Złe samopoczucie i zmęczenie
+T19	Symptom 1292 1329	duszność w spoczynku i przy chodzeniu
+N5	Reference T19 ICD10:R06.0	Duszność
+T20	Date 1255 1265	w lutym br
+R4	Dat Arg1:T20 Arg2:T19	
+T21	Symptom 1353 1367	2 zasłabnięcia
+T22	Symptom 1383 1393	dusznością
+N6	Reference T22 ICD10:R06.0	Duszność
+T23	Symptom 1395 1406	osłabieniem
+T24	Date 1408 1425	trwające ok 5 min
+R5	Dat Arg1:T24 Arg2:T21	
+T25	Negation 1427 1433	Neguje
+T26	Symptom 1435 1443	omdlenia
+N7	Reference T26 ICD10:R55	Omdlenie i zapaść
+T27	Symptom 1445 1459	duszność nocną
+N8	Reference T27 ICD10:R06.0	Duszność
+T28	Symptom 1461 1476	obrzęki podudzi
+T29	Symptom 1478 1502	bóle w klatce piersiowej
+T30	Symptom 1504 1519	kołatania serca
+N11	Reference T30 ICD10:R00.2	Kołatanie serca
+T31	Symptom 1521 1557	objawy zapalenia żył kończyn dolnych
+N12	Reference T31 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+R6	Neg Arg1:T25 Arg2:T31	
+R7	Neg Arg1:T25 Arg2:T30	
+R8	Neg Arg1:T25 Arg2:T29	
+R9	Neg Arg1:T25 Arg2:T28	
+R10	Neg Arg1:T25 Arg2:T27	
+R11	Neg Arg1:T25 Arg2:T26	
+T32	Treatment 1559 1576	Przebyte operacje
+T33	Treatment 1578 1592	tonsillektomia
+A1	Status T33 Historical_Insignificant
+T34	Date 1593 1607	w dzieciństwie
+R12	Dat Arg1:T34 Arg2:T33	
+T35	Behaviour 1608 1623	Palenie tytoniu
+T36	Negation 1625 1630	nigdy
+R13	Neg Arg1:T36 Arg2:T35	
+T37	Behaviour 1631 1642	Inne używki
+T38	Negation 1644 1647	nie
+R14	Neg Arg1:T38 Arg2:T37	
+T39	Condition 1648 1657	Uczulenia
+T40	Negation 1659 1662	nie
+R15	Neg Arg1:T40 Arg2:T39	
+T41	Symptom 1664 1671	siniaki
+N14	Reference T41 ICD10:M79.8	Inne określone choroby tkanek miękkich
+T42	Condition 1729 1732	WZW
+N15	Reference T42 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T43	Negation 1734 1735	-
+R16	Neg Arg1:T43 Arg2:T42	
+T44	Condition 1739 1748	borelioza
+N16	Reference T44 ICD10:A69.2	
+T45	Negation 1750 1751	-
+R17	Neg Arg1:T45 Arg2:T44	
+T46	Condition 1754 1757	tbc
+T47	Negation 1759 1760	-
+R18	Neg Arg1:T47 Arg2:T46	
+T48	Condition 1763 1767	odra
+N18	Reference T48 ICD10:B05	Odra
+T49	Negation 1769 1770	-
+R19	Neg Arg1:T49 Arg2:T48	
+T50	Condition 1773 1787	kontakt z odrą
+N19	Reference T50 ICD10:B05	Odra
+T51	Negation 1789 1790	-
+R20	Neg Arg1:T51 Arg2:T50	
+T52	Condition 1794 1813	wywiadzie rodzinnym
+A2	Status T52 Family
+T53	Behaviour 1837 1863	warunki mieszkaniowe dobre
+T54	Drug 1873 1899	Nodom Combi krople do oczu
+T55	Drug_dose 1900 1920	2x 1 kropla do oka L
+R21	Drg Arg1:T54 Arg2:T55	
+T56	Drug 1921 1931	Starazolin
+T57	Drug_dose 1934 1942	doraźnie
+R22	Drg Arg1:T56 Arg2:T57	
+T58	Investigation 1944 1965	RTG klatki piersiowej
+T59	Date 1967 1977	18.02.2019
+R23	Dat Arg1:T59 Arg2:T58	
+T60	Investigation_result 1980 2018	miąższ płucny bez wyraźnych zagęszczeń
+T61	Investigation_result 2020 2061	Sylwetka serca i pień naczyniowy w normie
+T62	Investigation_result 2063 2077	przepona wolna
+R24	Inv Arg1:T58 Arg2:T60	
+R25	Inv Arg1:T58 Arg2:T61	
+R26	Inv Arg1:T58 Arg2:T62	
+T63	Investigation 2139 2160	badania laboratoryjne
+T64	Investigation 2162 2166	ECHO
+T65	Investigation 2168 2186	EKG metodą Holtera
+T66	Investigation 2188 2192	ABPM
+T67	Investigation 2194 2209	próba wysiłkowa
+N20	Reference T39 ICD10:T78.4	Alergia, nieokreślona
+T68	Condition 1674 1684	spadek PLT
+T69	Drug 1688 1700	salicylanach
+N21	Reference T2 ICD10:R55	Omdlenie i zapaść
+N22	Reference T21 ICD10:R55	Omdlenie i zapaść
+N23	Reference T23 ICD10:R53	Złe samopoczucie i zmęczenie
+R27	Dat Arg1:T24 Arg2:T22	
+R28	Dat Arg1:T24 Arg2:T23	
+N13	Reference T35 ICD10:Z72.0	Używanie tytoniu
+N9	Reference T28 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N10	Reference T29 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N24	Reference T37 ICD10:Z72	Problemy związane ze stylem życia
+N17	Reference T46 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

@@ -1,0 +1,51 @@
+T1	Investigation 1171 1181	ECHO serca
+T2	Investigation 1183 1193	Holter EKG
+T3	Investigation 1195 1204	Holter RR
+T4	Investigation 1206 1208	PW
+T5	Negation 1146 1159	nie przyjmuje
+T6	Drug 1140 1144	leki
+R1	Neg Arg1:T5 Arg2:T6	
+T7	Condition 447 473	Plamica Schönleina-Henocha
+N1	Reference T7 ICD10:D69.0	Plamica alergiczna
+T8	Symptom 651 657	omdleń
+N2	Reference T8 ICD10:R55	Omdlenie i zapaść
+T9	Symptom 659 686	Omdlenia kilka razy w życiu
+N3	Reference T9 ICD10:R5	
+T10	Symptom 726 735	z potami,
+T11	Symptom 736 747	osłabieniem
+N4	Reference T11 ICD10:R53	Złe samopoczucie i zmęczenie
+T12	Negation 749 752	Bez
+T13	Symptom 753 766	kołatań serca
+N5	Reference T13 ICD10:R00.2	Kołatanie serca
+T14	Symptom 768 788	bólu w kl piersiowej
+N6	Reference T14 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+R2	Neg Arg1:T12 Arg2:T13	
+R3	Neg Arg1:T12 Arg2:T14	
+T15	Symptom 790 807	Bóle w nadbrzuszu
+T16	Symptom 817 827	męczliwość
+N7	Reference T16 ICD10:R53	Złe samopoczucie i zmęczenie
+T17	Date 809 816	Od roku
+R4	Dat Arg1:T17 Arg2:T16	
+T18	Condition 842 868	plamica Schönleina-Henocha
+N8	Reference T18 ICD10:D69.0	Plamica alergiczna
+T19	Treatment 902 936	usunięciu migdałków podniebiennych
+T20	Date 872 882	12 i 16 rż
+R5	Dat Arg1:T20 Arg2:T18	
+T21	Behaviour 937 947	Nikotynizm
+N9	Reference T21 ICD10:T65.2	Tytoń i nikotyna
+T22	Behaviour 960 981	Alkohol: okazjonalnie
+N10	Reference T22 ICD10:Z72.1	Używanie alkoholu
+T23	Negation 951 959	neguje  
+R6	Neg Arg1:T23 Arg2:T21	
+T24	Negation 990 996	neguje
+T25	Symptom 997 1030	krwawienia z przewodu pokarmowego
+N11	Reference T25 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R7	Neg Arg1:T24 Arg2:T25	
+T26	Condition 1032 1041	Uczulenie
+N12	Reference T26 ICD10:Z88.1	Uczulenie na inne antybiotyki w wywiadzie
+T27	Negation 1073 1086	bez znaczenia
+T28	Condition 1056 1071	Wywiad rodzinny
+A1	Status T28 Family
+R8	Neg Arg1:T27 Arg2:T28	
+T29	Drug 1045 1055	penicylinę
+R9	Alg Arg1:T26 Arg2:T29	

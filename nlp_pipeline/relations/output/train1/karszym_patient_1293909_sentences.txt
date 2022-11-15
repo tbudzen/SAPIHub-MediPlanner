@@ -1,0 +1,495 @@
+allRelations          : 16
+oks                   : 6
+isRedundantAndRemoveds: 9
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 1
+GOOD / BAD            : 15 / 1
+Sentence 0:
+------------------------------------------------
+Wiek: 5 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+Captopril 2 x 1/2 tabletki a 12,5mg (czyli 2 x 6,25mg)
+
+R1	Drg Arg1:T1 Arg2:T2 << OK >>	Captopril -> 2 x 1/2 tabletki a 12,5mg (czyli 2 x 6,25mg)  <RANK: 3> <info: start[328, 338] <type: RIGHT>>
+
+
+Sentence 4:
+Kontrola w poradni kardiologicznej u dr Binikowskiej za około 6 miesięcy celem rozważenia zwiększenia dawki leku.
+
+R2	Dat Arg1:T4 Arg2:T3 << OK >>	za około 6 miesięcy -> Kontrola w poradni kardiologicznej  <RANK: 3> <info: start[436, 383] <type: LEFT>>
+R3	Dat Arg1:T4 Arg2:T5 << OK >>	za około 6 miesięcy -> rozważenia zwiększenia dawki leku  <RANK: 3> <info: start[436, 462] <type: RIGHT>>
+
+
+Sentence 5:
+------------------------------------------------
+
+
+
+Sentence 6:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 7:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią zwężenia łuku aorty , przetrwałego przewodu tętniczego i nieprawidłowego odejścia prawej tętnicy podobojczykowej jako ostatniego od łuku aorty .\x0aHipoplazja zastawki dwudzielnej\x0aStan po operacji metodą Crafoorda z podwiązaniem i odcięciem od aorty prawej tętnicy podobojczykowej ( tętnica błądząca ) oraz podwiązaniem przewodu tętniczego ( 21.12.2014r ).
+
+R4	Dat Arg1:T11 Arg2:T6 <<REDUNDANT!!!REMOVED>>	21.12.2014r -> Wrodzona wada serca pod postacią zwężenia łuku aorty <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1092, 714] <type: LEFT>>
+R5	Dat Arg1:T11 Arg2:T7 <<REDUNDANT!!!REMOVED>>	21.12.2014r -> przetrwałego przewodu tętniczego <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1092, 769] <type: LEFT>>
+R6	Dat Arg1:T11 Arg2:T8 <<REDUNDANT!!!REMOVED>>	21.12.2014r -> nieprawidłowego odejścia prawej tętnicy podobojczykowej jako ostatniego od łuku aorty <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1092, 804] <type: LEFT>>
+R7	Dat Arg1:T11 Arg2:T9 <<REDUNDANT!!!REMOVED>>	21.12.2014r -> Hipoplazja zastawki dwudzielnej <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1092, 895] <type: LEFT>>
+R8	Dat Arg1:T11 Arg2:T10 << OK >>	21.12.2014r -> operacji metodą Crafoorda z podwiązaniem i odcięciem od aorty prawej tętnicy podobojczykowej ( tętnica błądząca ) oraz podwiązaniem przewodu tętniczego  <RANK: 3> <info: start[1092, 938] <type: LEFT>>
+
+
+Sentence 8:
+------------------------------------------------
+
+
+
+Sentence 9:
+Zastosowane leczenie
+
+
+
+Sentence 10:
+------------------------------------------------
+Depakine 200mg.
+------------------------------------------------
+
+R9	Drg Arg1:T12 Arg2:T13 << OK >>	Depakine -> 200mg  <RANK: 3> <info: start[1226, 1235] <type: RIGHT>>
+
+
+Sentence 11:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+ wada wrodzona aorty, skierowany na badania kontrolne, z powodu padaczki otrzymuje Depakinę, wywiad alergiczny ujemny
+------------------------------------------------
+
+R10	Neg Arg1:T18 Arg2:T14 <<REDUNDANT!!!REMOVED>>	ujemny -> wada wrodzona aorty <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1477, 1367] <type: LEFT>>
+R11	Neg Arg1:T18 Arg2:T15 <<REDUNDANT!!!REMOVED>>	ujemny -> padaczki <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1477, 1430] <type: LEFT>>
+R12	Neg Arg1:T18 Arg2:T17 << OK >>	ujemny -> wywiad alergiczny  <RANK: 3> <info: start[1477, 1459] <type: LEFT>>
+R13	Neg Arg1:T18 Arg2:T16 <<REDUNDANT!!!REMOVED>>	ujemny -> Depakinę <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1477, 1449] <type: LEFT>>
+R14	Alg Arg1:T14 Arg2:T16 <<REDUNDANT!!!REMOVED>>	wada wrodzona aorty -> Depakinę <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1367, 1449] <type: RIGHT>>
+R15	Alg Arg1:T15 Arg2:T16 <<REDUNDANT!!!SHOULD BE REMOVED>>	padaczki -> Depakinę  <RANK: 3> <info: start[1430, 1449] <type: RIGHT>>
+R16	Alg Arg1:T17 Arg2:T16 <<REDUNDANT!!!REMOVED>>	wywiad alergiczny -> Depakinę <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1459, 1449] <type: LEFT>>
+
+
+Sentence 12:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 13:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.98[10^3/ul]
+    
+
+
+Sentence 14:
+RBC Krwinki czerwone:4.11[10^6/ul]
+    
+
+
+Sentence 15:
+HGB Hemoglobina:13.1[g/dl]
+    
+
+
+Sentence 16:
+HCT Hematokryt:35.5[%]
+    
+
+
+Sentence 17:
+MCV wskaźnik czerwonokrw:86.4[fl]
+    
+
+
+Sentence 18:
+MCH wskaźnik czerwonokrw:31.9[pg]
+    
+
+
+Sentence 19:
+MCHC wskaźnik czerwonokr:36.9[g/dl]
+    
+
+
+Sentence 20:
+PLT z morfologii:261[10^3/ul]
+    
+
+
+Sentence 21:
+RDW-SD:37.7[fl]
+    
+
+
+Sentence 22:
+RDW-CV:11.9[%]
+    PDW:10.0[fl]
+    
+
+
+Sentence 23:
+MPV:9.5[fl]
+    
+
+
+Sentence 24:
+P-LCR:20.5[%]
+    
+
+
+Sentence 25:
+PCT (hematokryt płytkowy:0.25[%]
+    
+
+
+Sentence 26:
+NEUTR# wartość bezwzględ:0.98[10^3/ul]
+    
+
+
+Sentence 27:
+NEUTR%:16.4[%]
+    
+
+
+Sentence 28:
+LYMH# wartość bezwzględn:4.21[10^3/ul]
+    
+
+
+Sentence 29:
+LYMPH%:70.4[%]
+    
+
+
+Sentence 30:
+MONO# wartość bezwzględn:0.64[10^3/ul]
+    
+
+
+Sentence 31:
+MONO%:10.7[%]
+    
+
+
+Sentence 32:
+EO# wartość bezwzględna:0.12[10^3/ul]
+    
+
+
+Sentence 33:
+EO%:2.0[%]
+    
+
+
+Sentence 34:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    
+
+
+Sentence 35:
+BASO%:0.5[%]
+    
+
+
+Sentence 36:
+NRBC %:0.0[%]
+    
+
+
+Sentence 37:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 38:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:33.2[sek]
+
+
+
+Sentence 39:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 40:
+Czas protrombinowy:12.9[sek]
+    
+
+
+Sentence 41:
+Wskaźnik PT:85.3[%]
+    
+
+
+Sentence 42:
+INR:1.17
+Czas trombinowy TT: Czas trombinowy TT:19.7[sek]
+
+
+
+Sentence 43:
+Fibrynogen
+    Fibrynogen:1.36[g/L]
+    
+
+
+Sentence 44:
+Fibrynogen:1.43[g/L]
+
+
+
+Sentence 45:
+Badanie ogólne moczu
+    
+
+
+Sentence 46:
+barwa:słomkowy[ ]
+    
+
+
+Sentence 47:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 48:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 49:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 50:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 51:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 52:
+ciężar właściwy:1.004[ ]
+    pH:7.0[ ]
+    
+
+
+Sentence 53:
+białko:nieobecne[ ]
+    
+
+
+Sentence 54:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 55:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 56:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 57:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 58:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 59:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 60:
+leukocyty:2 /ul[ul]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 61:
+Troponina T: Troponina T:4.0[pg/ml]
+
+
+
+Sentence 62:
+ALAT: ALAT:11[U/L]
+ASPAT: ASPAT:29[U/L]
+Bilirubina całkowita (TBil): Bilirubina całkowita:0.89[mg/dl]
+
+
+
+Sentence 63:
+CK - aktywność: CK:63[U/L]
+
+
+
+Sentence 64:
+CKMB aktywność: CKMB:25[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 65:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 66:
+Potas (K): Potas:4.2[mmol/L]
+
+
+
+Sentence 67:
+Chlorki (Cl): Chlorki:105[mmol/L]
+
+
+
+Sentence 68:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:15[U/L]
+
+
+
+Sentence 69:
+Kreatynina + GFR
+    
+
+
+Sentence 70:
+Kreatynina w surowicy:0.32[mg/dl]
+    
+
+
+Sentence 71:
+eGFR stand.
+
+
+Sentence 72:
+wg Schwartza:182.2[ml/min/1,73 m^2]
+    eGFR zmod.
+
+
+Sentence 73:
+wg Schwartza:136.8[ml/min/1,73 m^2]
+    wzrost:106[cm]
+
+
+
+Sentence 74:
+Mocznik: Mocznik:22[mg/dl]
+
+
+
+Sentence 75:
+Glukoza w surowicy: Glukoza w surowicy:88[mg/dl]
+
+
+
+Sentence 76:
+------------------------------------------------
+
+
+
+Sentence 77:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 78:
+Q23.8
+Q25.4
+
+
+
+Sentence 79:
+Q25.1
+Z98.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 80:
+ICD9
+------------------------------------------------
+89.522
+C55
+A01
+I81
+G53
+I97
+G11
+G21
+L43
+L31
+
+
+
+Sentence 81:
+G25
+
+
+
+Sentence 82:
+O61
+I89
+N45
+
+
+
+Sentence 83:
+I17
+O35
+M37
+I19
+N13
+88.721
+
+
+
+Sentence 84:
+M19
+M18
+------------------------------------------------
+
+

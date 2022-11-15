@@ -1,0 +1,154 @@
+T1	Condition 438 457	Drożny otwór owalny
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Treatment 460 523	stan po zamknięciu zestawem Occlutech Figulla Flex II PFO 27/30
+T3	Date 525 536	19.12.2018)
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Condition 538 579	Łagodna niedomykalność zastawki mitralnej
+N2	Reference T4 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T5	Condition 582 594	trójdzielnej
+N3	Reference T5 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T6	Condition 596 616	Bradykardia polekowa
+N4	Reference T6 ICD10:R00.1	Bradykardia, nieokreślona
+T7	Condition 672 699	udarze niedokrwiennym mózgu
+N5	Reference T7 ICD10:I63	Zawał mózgu
+T8	Treatment 700 725	leczonym fibrynolitycznie
+T9	Date 727 734	08.2017
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Condition 737 762	Małopłytkowość przewlekła
+N6	Reference T10 ICD10:D69.5	Małopłytkowość wtórna
+T11	Condition 764 779	Podejrzenie TIA
+A1	Source T11 Declared
+N7	Reference T11 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T12	Date 781 785	2015
+R3	Dat Arg1:T12 Arg2:T11	
+T13	Treatment 796 813	operacji z powodu
+A2	Status T13 Historical_Insignificant
+T14	Behaviour 1063 1103	Dieta lekkostrawna, niskocholesterolowa.
+T15	Investigation 1116 1189	kontrola elektrolitów i magnezu, lipidogramu, parametrów wydolności nerek
+T16	Treatment 1208 1243	kontrola ciśnienia tętniczego krwi.
+T17	Treatment 1308 1353	Profilaktyka Infekcyjnego Zapalenia Wsierdzia
+N8	Reference T17 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T18	Drug 1423 1435	amoksycylina
+T19	Drug 1440 1450	ampicylina
+T20	Drug_dose 1451 1471	2 g doustnie lub i.v
+R4	Drg Arg1:T19 Arg2:T20	
+R5	Drg Arg1:T18 Arg2:T20	
+T21	Condition 1497 1516	powyższe antybiotyk
+N9	Reference T21 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R6	Alg Arg1:T21 Arg2:T19	
+R7	Alg Arg1:T21 Arg2:T18	
+T22	Drug 1520 1532	klindamycyna
+T23	Drug_dose 1533 1556	600 mg doustnie lub i.v
+R8	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1612 1623	Clopidogrel
+T25	Drug_dose 1624 1690	75mg 1x 1 tabl rano do 19.06.2019- następnie wg. zaleceń neurologa
+R9	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1693 1702	Rytmonorm
+T27	Drug_dose 1703 1718	150 mg 2x1 tabl
+R10	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1719 1725	Atoris
+T29	Drug_dose 1726 1746	20mg 1x 1 tabl/wiecz
+R11	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1749 1756	Kaldyum
+T31	Drug_dose 1757 1766	1x 1 tabl
+R12	Drg Arg1:T30 Arg2:T31	
+T32	Drug 1767 1775	Magne B6
+T33	Drug_dose 1776 1779	2x1
+R13	Drg Arg1:T32 Arg2:T33	
+T34	Investigation 3053 3063	Echo serca
+T35	Investigation 3065 3075	Holter ekg
+T36	Investigation 3077 3081	ABPM
+T37	Drug 3018 3025	Kaldyum
+T38	Drug_dose 3026 3035	1x 1 tabl
+R14	Drg Arg1:T37 Arg2:T38	
+T39	Drug 2988 2994	Atoris
+T40	Drug_dose 2995 3015	20mg 1x 1 tabl/wiecz
+R15	Drg Arg1:T39 Arg2:T40	
+T41	Drug 2954 2965	Betaloc ZOK
+T42	Drug_dose 2966 2985	25mg 1x 1 tabl/rano
+R16	Drg Arg1:T41 Arg2:T42	
+T43	Drug 2907 2912	Acard
+T44	Drug_dose 2913 2951	75 mg 1x dz wieczorem przez 3 miesięcy
+R17	Drg Arg1:T43 Arg2:T44	
+T45	Drug 2823 2834	Clopidogrel
+T46	Drug_dose 2835 2904	75mg 1x 1 tabl rano przez 6 miesięcy- następnie wg. zaleceń neurologa
+R18	Drg Arg1:T45 Arg2:T46	
+T47	Behaviour 2771 2797	warunki mieszkaniowe dobre
+T48	Negation 2747 2753	neguje
+T49	Negation 2731 2734	nie
+T50	Negation 2697 2715	nie pali od 30 lat
+T51	Behaviour 2680 2696	Palenie tytoniu:
+N10	Reference T51 ICD10:T65.2	Tytoń i nikotyna
+R19	Neg Arg1:T50 Arg2:T51	
+T52	Behaviour 2718 2730	Inne używki:
+R20	Neg Arg1:T49 Arg2:T52	
+T53	Condition 2736 2745	Uczulenia
+N11	Reference T53 ICD10:T78.4	Alergia, nieokreślona
+R21	Neg Arg1:T48 Arg2:T53	
+T54	Condition 2645 2655	udar mózgu
+A3	Status T54 Family
+N12	Reference T54 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T55	Condition 2665 2677	ca. prostaty
+N13	Reference T55 ICD10:C61	Nowotwór złośliwy gruczołu krokowego
+A4	Status T55 Family
+T56	Condition 2568 2571	WZW
+N14	Reference T56 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T57	Condition 2581 2590	borelioza
+N15	Reference T57 ICD10:A69.2	Choroba z Lyme
+T58	Condition 2597 2601	odra
+N16	Reference T58 ICD10:B05	Odra
+T59	Negation 2603 2614	nie pamięta
+A5	Source T59 Declared
+R22	Neg Arg1:T59 Arg2:T58	
+T60	Negation 2591 2596	( - )
+R23	Neg Arg1:T60 Arg2:T57	
+T61	Negation 2572 2578	( -  )
+R24	Neg Arg1:T61 Arg2:T56	
+T62	Treatment 2460 2482	Przebyte operacje:  jw
+T63	Behaviour 2434 2446	Nikotynizmem
+T64	Treatment 2378 2395	operacji z powodu
+A6	Status T64 Historical_Insignificant
+T65	Condition 2346 2361	Podejrzenie TIA
+N18	Reference T65 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T66	Date 2363 2367	2015
+A7	Source T65 Declared
+R25	Dat Arg1:T66 Arg2:T65	
+T67	Condition 2319 2344	Małopłytkowość przewlekła
+N19	Reference T67 ICD10:D69.5	Małopłytkowość wtórna
+T68	Condition 2254 2275;2276 2281	udarze niedokrwiennym mózgu
+N20	Reference T68 ICD10:I63	Zawał mózgu
+T69	Treatment 2282 2307	leczonym fibrynolitycznie
+T70	Date 2309 2316	08.2017
+R26	Dat Arg1:T70 Arg2:T69	
+T71	Condition 2156 2197	Łagodna niedomykalność zastawki mitralnej
+N21	Reference T71 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T72	Condition 2200 2212	trójdzielnej
+N22	Reference T72 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T73	Treatment 1937 1981	zestawem Occlutech Figulla Flex II PFO 27/30
+T74	Date 1983 1993	19.12.2018
+R27	Dat Arg1:T74 Arg2:T73	
+T75	Symptom 2036 2103	dolegliwości bólowych w klatce piersiowej o charakterze dyskomfortu
+N23	Reference T75 ICD10:R07.3	Inne bóle w klatce piersiowej
+T76	Date 2104 2117	od 2 miesięcy
+R28	Dat Arg1:T76 Arg2:T75	
+T77	Symptom 2118 2141	bez związku z wysiłkiem
+R29	Dat Arg1:T76 Arg2:T77	
+T78	Condition 2214 2244	Pojedyncze pobudzenia komorowe
+N24	Reference T78 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T79	Condition 654 662	komorowe
+N25	Reference T79 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T80	Condition 618 651	Pojedyncze pobudzenia nadkomorowe
+N26	Reference T80 ICD10:I49.2	Przedwczesna depolaryzacja [pobudzenie] z łącza przedsionkowo-komorowego
+R30	Dat Arg1:T3 Arg2:T1	
+R31	Dat Arg1:T9 Arg2:T7	
+T81	Condition 814 851	przepukliny pachwinowej lewostronnej.
+N27	Reference T81 ICD10:K40	Przepuklina pachwinowa
+T82	Condition 1933 1936	PFO
+N28	Reference T82 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T83	Treatment 1922 1932	zamknięciu
+R32	Dat Arg1:T74 Arg2:T82	
+R33	Dat Arg1:T74 Arg2:T83	
+R34	Dat Arg1:T70 Arg2:T68	
+T84	Condition 2396 2432	przepukliny pachwinowej lewostronnej
+N29	Reference T84 ICD10:K40	Przepuklina pachwinowa
+N17	Reference T63 ICD10:T65.2	Tytoń i nikotyna

@@ -1,0 +1,99 @@
+T1	Treatment 331 398	Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T2	Treatment 423 469	Wskazana dalsza opieka w Poradni Ortopedycznej
+T3	Symptom 502 553	dolegliwości bólowe w odcinku piersiowym kręgosłupa
+N1	Reference T3 ICD10:M54.6	Ból kręgosłupa piersiowego
+T4	Behaviour 558 570	Dieta lekkos
+T5	Condition 797 828	Łagodna niedomykalność mitralna
+N2	Reference T5 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T6	Condition 830 851	Nadciśnienie tętnicze
+N3	Reference T6 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T7	Condition 853 865	Dyslipidemia
+N4	Reference T7 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T8	Behaviour 867 877	Nikotynizm
+T9	Behaviour 891 903	45 paczkolat
+T10	Treatment 914 922	operacji
+A1	Status T10 Historical_Insignificant
+T11	Treatment 956 987	operacji kręgosłupa lędźwiowego
+A2	Status T11 Historical_Insignificant
+T12	Date 941 945	2011
+R1	Dat Arg1:T12 Arg2:T10	
+T13	Date 989 993	2012
+R2	Dat Arg1:T13 Arg2:T11	
+T14	Condition 1162 1185	nadciśnienia tętniczego
+N7	Reference T14 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T15	Treatment 1190 1198	operacji
+A3	Status T15 Historical_Insignificant
+T16	Date 1217 1221	2011
+R3	Dat Arg1:T16 Arg2:T15	
+T17	Treatment 1224 1258	po operacji kręgosłupa lędźwiowego
+A4	Status T17 Historical_Insignificant
+T18	Date 1260 1264	2012
+R4	Dat Arg1:T18 Arg2:T17	
+T19	Symptom 1311 1324	kołatań serca
+N8	Reference T19 ICD10:R00.2	Kołatanie serca
+T20	Symptom 1327 1436	atypowych dolegliwości bólowych w klatce piersiowej, występujących głównie po stronie lewej klatki piersiowej
+N9	Reference T20 ICD10:R07.3	Inne bóle w klatce piersiowej
+T21	Date 1449 1456	od roku
+R5	Dat Arg1:T21 Arg2:T20	
+R6	Dat Arg1:T21 Arg2:T19	
+T22	Negation 1459 1465	Neguje
+T23	Symptom 1466 1474	omdlenia
+N10	Reference T23 ICD10:R55	Omdlenie i zapaść
+T24	Symptom 1476 1485	duszności
+N11	Reference T24 ICD10:R06.0	Duszność
+T25	Symptom 1487 1518	typowe bóle w klatce piersiowej
+N12	Reference T25 ICD10:R07	Ból gardła i w klatce piersiowej
+R7	Neg Arg1:T22 Arg2:T23	
+R8	Neg Arg1:T22 Arg2:T24	
+R9	Neg Arg1:T22 Arg2:T25	
+T26	Treatment 1520 1537	Przebyte operacje
+T27	Condition 1571 1574	WZW
+N13	Reference T27 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T28	Condition 1583 1592	borelioza
+N14	Reference T28 ICD10:A69.2	Choroba z Lyme
+T29	Condition 1600 1608	gruźlica
+T31	Treatment 1614 1631	odra - szczepiony
+T30	Negation 1610 1611	-
+R10	Neg Arg1:T30 Arg2:T29	
+T32	Negation 1595 1596	-
+R11	Neg Arg1:T32 Arg2:T28	
+T33	Negation 1577 1578	-
+R12	Neg Arg1:T33 Arg2:T27	
+T34	Condition 1658 1660	MI
+A5	Status T34 Family
+N16	Reference T34 ICD10:I25.2	Przebyty zawał serca
+T36	Condition 1682 1684	MI
+A6	Status T36 Family
+N17	Reference T36 ICD10:I25.2	Przebyty zawał serca
+T38	Behaviour 1704 1719	Palenie tytoniu
+T39	Negation 1721 1729	nie pali
+T40	Date 1730 1737	od roku
+T42	Behaviour 1749 1772	palił 1 paczkę dziennie
+T43	Date 1773 1785	przez 45 lat
+R15	Neg Arg1:T39 Arg2:T38	
+R16	Dat Arg1:T40 Arg2:T38	
+R17	Dat Arg1:T43 Arg2:T42	
+T41	Behaviour 1786 1803	Inne używki: kawa
+T44	Condition 1804 1813	Uczulenia
+T46	Behaviour 1842 1868	warunki mieszkaniowe dobre
+T47	Condition 923 939	zaćmy oka lewego
+N20	Reference T47 ICD10:H26.9	Zaćma, nieokreślona
+R19	Dat Arg1:T12 Arg2:T47	
+T48	Condition 1199 1215	zaćmy oka lewego
+N21	Reference T48 ICD10:H26.9	Zaćma, nieokreślona
+R20	Dat Arg1:T16 Arg2:T48	
+A7	Status T47 Historical_Insignificant
+A8	Status T48 Historical_Insignificant
+T49	Date 1148 1161	wieloletniego
+R18	Dat Arg1:T49 Arg2:T14	
+T51	Condition 1632 1647	Wywiad rodzinny
+A9	Status T51 Family
+T35	Drug 1815 1825	penicylina
+R13	Alg Arg1:T44 Arg2:T35	
+N5	Reference T8 ICD10:Z72.0	Używanie tytoniu
+N6	Reference T9 ICD10:Z72.0	Używanie tytoniu
+N18	Reference T38 ICD10:Z72.0	Używanie tytoniu
+N19	Reference T42 ICD10:Z72.0	Używanie tytoniu
+N23	Reference T44 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+N15	Reference T29 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N22	Reference T41 ICD10:Z72	Problemy związane ze stylem życia

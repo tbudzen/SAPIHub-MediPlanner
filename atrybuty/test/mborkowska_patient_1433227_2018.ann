@@ -1,0 +1,130 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 369 392	kontrola kardiologiczna
+T3	Investigation 404 433	kontrola ciśnienia tętniczego
+T4	Investigation 445 514	kontrolą morfologii, lipidogramu , parametrów wątrobowych i nerkowych
+T5	Behaviour 516 541	dieta niskocholesterolowa
+T6	Condition 767 794	Przewlekła choroba wieńcowa
+N1	Reference T6 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T7	Condition 1174 1201	Przewlekła choroba wieńcowa
+N2	Reference T7 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T8	Treatment 804 845	CABG LITA do LAD, SBG do RCA, Mg II, Dg I
+T9	Date 847 851	2003
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Condition 898 910	trójdzielnej
+N3	Reference T10 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T11	Condition 854 895	Łagodna niedomykalność zastawki mitralnej
+N4	Reference T11 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T12	Condition 912 933	Nadciśnienie tętnicze
+N5	Reference T12 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T13	Condition 935 955	Hipercholesterolemia
+N6	Reference T13 ICD10:E78.0	Czysta hipercholesterolemia
+T14	Condition 1284 1304	Hipercholesterolemia
+N7	Reference T14 ICD10:E78.0	Czysta hipercholesterolemia
+T15	Condition 1261 1282	Nadciśnienie tętnicze
+N8	Reference T15 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T16	Treatment 1211 1252	CABG LITA do LAD, SBG do RCA, Mg II, Dg I
+T17	Date 1254 1258	2003
+R2	Dat Arg1:T17 Arg2:T16	
+T18	Investigation 2382 2386	ECHO
+T19	Investigation 2388 2392	ABPM
+T20	Investigation 2394 2404	Holter ekg
+T21	Investigation 2406 2409	TET
+T22	Drug 2265 2273	Polocard
+T23	Drug 2233 2241	Metocard
+T24	Drug 2200 2206	Atoris
+T25	Drug_dose 2207 2232	30 mg 1 x 1 tabl/ wieczór
+R3	Drg Arg1:T24 Arg2:T25	
+T26	Drug_dose 2242 2263	50mg 1x 1/2 tabl/rano
+R4	Drg Arg1:T23 Arg2:T26	
+T27	Drug_dose 2274 2297	75 mg 1x 1 tabl/wieczór
+R5	Drg Arg1:T22 Arg2:T27	
+T28	Behaviour 2134 2160	warunki mieszkaniowe dobre
+T29	Condition 2082 2085	WZW
+N9	Reference T29 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T30	Condition 2092 2101	borelioza
+N10	Reference T30 ICD10:A69.2	Choroba z Lyme
+T31	Condition 2109 2112	tbc
+N11	Reference T31 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T32	Negation 2113 2116	(-)
+R6	Neg Arg1:T32 Arg2:T31	
+T33	Negation 2102 2107	( - )
+R7	Neg Arg1:T33 Arg2:T30	
+T34	Negation 2086 2089	(-)
+R8	Neg Arg1:T34 Arg2:T29	
+T35	Negation 2050 2053	nie
+T36	Negation 2034 2037	nie
+T37	Negation 2002 2010	nie pali
+T38	Condition 2039 2048	Uczulenia
+N12	Reference T38 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R9	Neg Arg1:T35 Arg2:T38	
+T39	Behaviour 2021 2032	Inne używki
+N13	Reference T39 ICD10:Z72	Problemy związane ze stylem życia
+R10	Neg Arg1:T36 Arg2:T39	
+T40	Date 2011 2020	od 15 lat
+T41	Behaviour 1970 1986	Palenie tytoniu:
+N14	Reference T41 ICD10:Z72.0	Używanie tytoniu
+R11	Neg Arg1:T37 Arg2:T41	
+R12	Dat Arg1:T40 Arg2:T41	
+T42	Treatment 1961 1965	CAGG
+T43	Negation 1782 1788	Neguje
+T44	Symptom 1790 1802	zasłabnięcia
+N15	Reference T44 ICD10:R55	Omdlenie i zapaść
+T45	Symptom 1804 1812	omdlenia
+N16	Reference T45 ICD10:R55	Omdlenie i zapaść
+T46	Symptom 1814 1830	kołatania serca,
+N17	Reference T46 ICD10:R00.2	Kołatanie serca
+T47	Symptom 1831 1841	krwawienia
+N18	Reference T47 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T48	Symptom 1843 1856	czarne stolce
+N19	Reference T48 ICD10:K92.1	Stolce smołowate
+T49	Symptom 1858 1875	brunatne wymioty,
+N20	Reference T49 ICD10:K92.0	Wymioty krwawe
+T50	Condition 1876 1892	chorobę wrzodową
+N21	Reference T50 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T51	Symptom 1894 1922	duszność nocną typu ortopnoe
+N22	Reference T51 ICD10:R06.0	Duszność
+T52	Condition 1924 1926	DM
+N23	Reference T52 ICD10:E14	Cukrzyca nieokreślona
+T53	Condition 1928 1938	udar mózgu
+N24	Reference T53 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+R13	Neg Arg1:T43 Arg2:T44	
+R14	Neg Arg1:T43 Arg2:T45	
+R15	Neg Arg1:T43 Arg2:T46	
+R16	Neg Arg1:T43 Arg2:T47	
+R17	Neg Arg1:T43 Arg2:T48	
+R18	Neg Arg1:T43 Arg2:T49	
+R19	Neg Arg1:T43 Arg2:T50	
+R20	Neg Arg1:T43 Arg2:T51	
+R21	Neg Arg1:T43 Arg2:T52	
+R22	Neg Arg1:T43 Arg2:T53	
+T54	Condition 1447 1450	CAD
+N25	Reference T54 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T55	Treatment 1454 1494	CABG LITA do LAD, SBG do RCA, MgII, Dg I
+T56	Date 1496 1500	2003
+R23	Dat Arg1:T56 Arg2:T55	
+T57	Investigation 1539 1565	angio CT tętnic wieńcowych
+T58	Investigation_result 1503 1528	bez przewężeń w by-pasach
+T59	Date 1566 1575	z 2014 r,
+R24	Dat Arg1:T59 Arg2:T57	
+R25	Dat Arg1:T59 Arg2:T58	
+R26	Inv Arg1:T57 Arg2:T58	
+T60	Investigation 1579 1582	TET
+T61	Investigation_result 1583 1600	klinicznie ujemną
+R27	Inv Arg1:T60 Arg2:T61	
+T62	Investigation 1602 1605	ekg
+T63	Investigation_result 1606 1637	dodatnią w II, III do max 2,6mm
+T64	Date 1639 1644	2015r
+R28	Inv Arg1:T62 Arg2:T63	
+R29	Dat Arg1:T64 Arg2:T62	
+R30	Dat Arg1:T64 Arg2:T63	
+T65	Condition 1649 1651	HA
+N26	Reference T65 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T66	Condition 1653 1656	HLP
+N27	Reference T66 ICD10:E78.0	Czysta hipercholesterolemia
+T67	Symptom 1660 1716	nietypowymi dolegliwościami bólowymi w klatce piersiowej
+N28	Reference T67 ICD10:R07.3	Inne bóle w klatce piersiowej
+T68	Date 1717 1726	od 14 lat
+R31	Dat Arg1:T68 Arg2:T67	
+T69	Investigation 1743 1776	celem diagnostyki nieinwazyjnej  
+T70	Condition 1776 1780	ChNS
+N29	Reference T70 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona

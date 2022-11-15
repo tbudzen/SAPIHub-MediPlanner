@@ -1,0 +1,456 @@
+allRelations          : 36
+oks                   : 9
+isRedundantAndRemoveds: 24
+shouldNotBeRemoveds   : 2
+shouldBeBemoveds      : 1
+GOOD / BAD            : 33 / 3
+Sentence 0:
+------------------------------------------------
+Wiek: 20 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q23|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Łagodne zwężenie z łagodną niedomykalnością dwupłatkowej zastawki aortalnej.
+
+
+Sentence 6:
+Celiakia.
+
+
+Sentence 7:
+Obserwacja w kierunku Colitis Ulcerosa negatywna.
+R1	Neg Arg1:T4 Arg2:T3 << OK >>	negatywna -> Colitis Ulcerosa  <RANK: 3> <info: start[574, 557] <type: LEFT>>
+
+
+Sentence 8:
+Pojedynczy epizod omdlenia w trakcie badania gastroskopowego.
+
+
+
+Sentence 9:
+------------------------------------------------
+
+
+
+Sentence 10:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 11:
+1.
+
+
+Sentence 12:
+Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej.
+
+
+
+Sentence 13:
+2. Wskazana coroczna kontrola w warunkach ambulatoryjnych w Poradni Kardiologicznej oraz przed ewentualną ciążą w tutejszej Klinice. 
+
+
+
+Sentence 14:
+3. Dieta lekkostrawna , niskocholesterolowa .  
+
+
+
+Sentence 15:
+4. Regularna aktywność fizyczna 5x w tyg. po 30 min. dziennie.
+
+
+
+Sentence 16:
+5. Zakaz palenia tytoniu.
+
+
+
+Sentence 17:
+6. Okresowo kontrola lipidogramu .
+
+
+Sentence 18:
+stężenia elektrolitów , parametrów wydolności nerek.  
+
+
+
+Sentence 19:
+7. Systematyczna kontrola ciśnienia tętniczego krwi.  
+
+
+
+Sentence 20:
+8. Wskazana profilaktyka infekcyjnego zapalenia wsierdzia podczas zabiegów stomatologicznych (amoksycylina lub ampicylina 2 g doustnie lub i.v , w przypadku alergii na powyższe antybiotyki - klindamycyna 600 mg doustnie lub i.v.) 
+
+R2	Drg Arg1:T15 Arg2:T17 <<SHOULD NOT BE REMOVED>>	amoksycylina -> 2 g doustnie lub i.v <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1335, 1363] <type: RIGHT>>
+R3	Drg Arg1:T15 Arg2:T21 <<REDUNDANT!!!REMOVED>>	amoksycylina -> 600 mg doustnie lub i.v. <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1335, 1445] <type: RIGHT>>
+R4	Drg Arg1:T16 Arg2:T17 <<SHOULD NOT BE REMOVED>>	ampicylina -> 2 g doustnie lub i.v <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1352, 1363] <type: RIGHT>>
+R5	Drg Arg1:T16 Arg2:T21 <<REDUNDANT!!!REMOVED>>	ampicylina -> 600 mg doustnie lub i.v. <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1352, 1445] <type: RIGHT>>
+R6	Drg Arg1:T19 Arg2:T17 <<REDUNDANT!!!REMOVED>>	antybiotyki -> 2 g doustnie lub i.v <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1418, 1363] <type: LEFT>>
+R7	Drg Arg1:T19 Arg2:T21 <<REDUNDANT!!!REMOVED>>	antybiotyki -> 600 mg doustnie lub i.v. <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1418, 1445] <type: RIGHT>>
+R8	Drg Arg1:T20 Arg2:T17 <<REDUNDANT!!!REMOVED>>	klindamycyna -> 2 g doustnie lub i.v <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1432, 1363] <type: LEFT>>
+R9	Drg Arg1:T20 Arg2:T21 << OK >>	klindamycyna -> 600 mg doustnie lub i.v.  <RANK: 3> <info: start[1432, 1445] <type: RIGHT>>
+R10	Alg Arg1:T18 Arg2:T15 <<REDUNDANT!!!REMOVED>>	alergii -> amoksycylina <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1398, 1335] <type: LEFT>>
+R11	Alg Arg1:T18 Arg2:T16 <<REDUNDANT!!!REMOVED>>	alergii -> ampicylina <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1398, 1352] <type: LEFT>>
+R12	Alg Arg1:T18 Arg2:T19 <<REDUNDANT!!!REMOVED>>	alergii -> antybiotyki <:REMOVED too long text between 13 limit:10:> <RANK: 3> <info: start[1398, 1418] <type: RIGHT>>
+R13	Alg Arg1:T18 Arg2:T20 <<REDUNDANT!!!REMOVED>>	alergii -> klindamycyna <:REMOVED too long text between 27 limit:10:> <RANK: 3> <info: start[1398, 1432] <type: RIGHT>>
+
+
+Sentence 21:
+9. W związku z wysokim ryzykiem infekcyjnego zapalenia wsierdzia zaleca się działania profilaktyczne - ścisła higiena skóry i jamy ustnej, przeglądy stomatologiczne należy przeprowadzać co najmniej dwa razy w roku, dezynfekcja ran, eliminacja lub ograniczenie przewlekłego nosicielstwa bakteryjnego: skóry, moczu, leczenie antybiotykami każdego ogniska zakażenia bakteryjnego, niestosowanie antybiotyków samodzielnie przez pacjenta, unikanie kolczykowania i tatuowania ciała, ścisłe przestrzeganie zasad aseptyki podczas zabiegów stwarzających ryzyko zakażenia. 
+
+
+R14	Dat Arg1:T24 Arg2:T27 <<REDUNDANT!!!REMOVED>>	co najmniej dwa razy w roku -> niestosowanie antybiotyków samodzielnie przez pacjenta <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1658, 1849] <type: RIGHT>>
+R15	Dat Arg1:T24 Arg2:T28 <<REDUNDANT!!!REMOVED>>	co najmniej dwa razy w roku -> unikanie kolczykowania i tatuowania ciała <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1658, 1905] <type: RIGHT>>
+R16	Dat Arg1:T24 Arg2:T22 <<REDUNDANT!!!SHOULD BE REMOVED>>	co najmniej dwa razy w roku -> W związku z wysokim ryzykiem infekcyjnego zapalenia wsierdzia zaleca się działania profilaktyczne - ścisła higiena skóry i jamy ustnej  <RANK: 2> <info: start[1658, 1475] <type: LEFT>>
+R17	Dat Arg1:T24 Arg2:T23 << OK >>	co najmniej dwa razy w roku -> przeglądy stomatologiczne  <RANK: 3> <info: start[1658, 1611] <type: LEFT>>
+R18	Dat Arg1:T24 Arg2:T25 <<REDUNDANT!!!REMOVED>>	co najmniej dwa razy w roku -> dezynfekcja ran, eliminacja lub ograniczenie przewlekłego nosicielstwa bakteryjnego: skóry, moczu <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1658, 1687] <type: RIGHT>>
+R19	Dat Arg1:T24 Arg2:T26 <<REDUNDANT!!!REMOVED>>	co najmniej dwa razy w roku -> leczenie antybiotykami każdego ogniska zakażenia bakteryjnego <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1658, 1786] <type: RIGHT>>
+R20	Dat Arg1:T24 Arg2:T29 <<REDUNDANT!!!REMOVED>>	co najmniej dwa razy w roku -> ścisłe przestrzeganie zasad aseptyki podczas zabiegów stwarzających ryzyko zakażenia <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1658, 1948] <type: RIGHT>>
+
+
+Sentence 22:
+Bez wskazań do przyjmowania leków na stałe.
+
+R21	Neg Arg1:T31 Arg2:T30 << OK >>	Bez -> wskazań do przyjmowania leków na stałe  <RANK: 3> <info: start[2036, 2040] <type: RIGHT>>
+
+
+Sentence 23:
+------------------------------------------------
+
+
+
+Sentence 24:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 25:
+Pacjentka lat 19 przyjęta do Kliniki z powodu szmeru nad sercem.
+
+
+Sentence 26:
+Dolegliwości kardiologiczne neguje.
+R22	Neg Arg1:T34 Arg2:T33 << OK >>	neguje -> Dolegliwości kardiologiczne  <RANK: 3> <info: start[2297, 2269] <type: LEFT>>
+
+
+Sentence 27:
+Pacjentka bez dokumentacji medycznej.
+
+
+Sentence 28:
+W wywiadzie: zwężenie zastawki aortalnej, BAV, celiakia, obserwacja w kierunku WZJG negatywna, pojedynczy epizod omdlenia w trakcie badania gastroskopowego.
+R23	Neg Arg1:T39 Arg2:T40 <<REDUNDANT!!!REMOVED>>	negatywna -> pojedynczy epizod omdlenia <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2427, 2438] <type: RIGHT>>
+R24	Neg Arg1:T39 Arg2:T35 <<REDUNDANT!!!REMOVED>>	negatywna -> zwężenie zastawki aortalnej <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2427, 2356] <type: LEFT>>
+R25	Neg Arg1:T39 Arg2:T36 <<REDUNDANT!!!REMOVED>>	negatywna -> BAV <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2427, 2385] <type: LEFT>>
+R26	Neg Arg1:T39 Arg2:T37 <<REDUNDANT!!!REMOVED>>	negatywna -> celiakia <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2427, 2390] <type: LEFT>>
+R27	Neg Arg1:T39 Arg2:T38 << OK >>	negatywna -> WZJG  <RANK: 3> <info: start[2427, 2422] <type: LEFT>>
+R28	Neg Arg1:T39 Arg2:T41 <<REDUNDANT!!!REMOVED>>	negatywna -> badania gastroskopowego <:REMOVED other second tag between (right):> <RANK: 2> <info: start[2427, 2475] <type: RIGHT>>
+
+
+Sentence 29:
+Uczulenia: biseptol, kurz.
+R29	Alg Arg1:T42 Arg2:T43 << OK >>	Uczulenia -> biseptol  <RANK: 3> <info: start[2500, 2511] <type: RIGHT>>
+R30	Alg Arg1:T44 Arg2:T43 <<REDUNDANT!!!REMOVED>>	kurz -> biseptol <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[2521, 2511] <type: LEFT>>
+
+
+Sentence 30:
+Używki: nikotynizm (1 paczka/3 dni od października), alkohol sporadycznie, narkotyki neguje.
+R31	Neg Arg1:T49 Arg2:T45 <<REDUNDANT!!!REMOVED>>	neguje -> Używki: nikotynizm (1 paczka/3 dni <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2612, 2527] <type: LEFT>>
+R32	Neg Arg1:T49 Arg2:T47 <<REDUNDANT!!!REMOVED>>	neguje -> alkohol sporadycznie <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2612, 2580] <type: LEFT>>
+R33	Neg Arg1:T49 Arg2:T48 << OK >>	neguje -> narkotyki  <RANK: 3> <info: start[2612, 2602] <type: LEFT>>
+R34	Dat Arg1:T46 Arg2:T45 << OK >>	od października -> Używki: nikotynizm (1 paczka/3 dni  <RANK: 3> <info: start[2562, 2527] <type: LEFT>>
+R35	Dat Arg1:T46 Arg2:T47 <<REDUNDANT!!!REMOVED>>	od października -> alkohol sporadycznie <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2562, 2580] <type: RIGHT>>
+R36	Dat Arg1:T46 Arg2:T48 <<REDUNDANT!!!REMOVED>>	od października -> narkotyki <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2562, 2602] <type: RIGHT>>
+
+
+Sentence 31:
+Wywiad rodzinny: siostra HLHS.
+
+
+Sentence 32:
+Leków na stałe nie przyjmuje.
+
+
+Sentence 33:
+Status społeczny - dobry, status student, pracuje w charakterze fizycznym.
+
+
+
+Sentence 34:
+------------------------------------------------
+
+
+
+Sentence 35:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 36:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:11.96[10^3/ul]
+    
+
+
+Sentence 37:
+RBC Krwinki czerwone:4.19[10^6/ul]
+    
+
+
+Sentence 38:
+HGB Hemoglobina:13.1[g/dl]
+    
+
+
+Sentence 39:
+HCT Hematokryt:38.5[%]
+    
+
+
+Sentence 40:
+MCV wskaźnik czerwonokrw:91.9[fl]
+    
+
+
+Sentence 41:
+MCH wskaźnik czerwonokrw:31.3[pg]
+    
+
+
+Sentence 42:
+MCHC wskaźnik czerwonokr:34.0[g/dl]
+    
+
+
+Sentence 43:
+PLT z morfologii:223[10^3/ul]
+    
+
+
+Sentence 44:
+RDW-SD:46.5[fl]
+    
+
+
+Sentence 45:
+RDW-CV:13.8[%]
+    PDW:12.4[fl]
+    
+
+
+Sentence 46:
+MPV:10.5[fl]
+    
+
+
+Sentence 47:
+P-LCR:29.2[%]
+    
+
+
+Sentence 48:
+PCT (hematokryt płytkowy:0.23[%]
+    
+
+
+Sentence 49:
+NEUTR# wartość bezwzględ:6.17[10^3/ul]
+    
+
+
+Sentence 50:
+NEUTR%:51.6[%]
+    
+
+
+Sentence 51:
+LYMH# wartość bezwzględn:4.35[10^3/ul]
+    
+
+
+Sentence 52:
+LYMPH%:36.4[%]
+    
+
+
+Sentence 53:
+MONO# wartość bezwzględn:0.92[10^3/ul]
+    
+
+
+Sentence 54:
+MONO%:7.7[%]
+    
+
+
+Sentence 55:
+EO# wartość bezwzględna:0.46[10^3/ul]
+    
+
+
+Sentence 56:
+EO%:3.8[%]
+    BASO# wartość bezwzględn:0.06[10^3/ul]
+    
+
+
+Sentence 57:
+BASO%:0.5[%]
+    
+
+
+Sentence 58:
+NRBC %:0.0[%]
+    
+
+
+Sentence 59:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 60:
+TSH: TSH:1.33[uIU/ml]
+
+
+
+Sentence 61:
+FT3: FT3:3.16[pg/ml]
+
+
+
+Sentence 62:
+FT4: FT4:0.91[ng/dl]
+
+
+
+Sentence 63:
+ALAT: ALAT:10[U/L]
+ASPAT: ASPAT:15[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 64:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 65:
+Potas (K): Potas:4.6[mmol/L]
+
+
+
+Sentence 66:
+Kreatynina + GFR
+    
+
+
+Sentence 67:
+Kreatynina w surowicy:0.68[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 68:
+MDRD ze stan:111.5[ml/min/1,73 m^2]
+
+
+
+Sentence 69:
+Mocznik: Mocznik:22[mg/dl]
+
+
+
+Sentence 70:
+Kwas moczowy: Kwas moczowy:3.5[mg/dl]
+
+
+
+Sentence 71:
+Lipidogram
+    
+
+
+Sentence 72:
+Cholesterol całkowity:142[mg/dl]
+    
+
+
+Sentence 73:
+Cholesterol HDL:57[mg/dl]
+    
+
+
+Sentence 74:
+Cholestrol LDL:78[mg/dl]
+    Triglicerydy:57[mg/dl]
+    
+
+
+Sentence 75:
+Stosunek cholesterolu HD:0.4
+Glukoza w surowicy: Glukoza w surowicy:85[mg/dl]
+
+
+
+Sentence 76:
+------------------------------------------------
+
+
+
+Sentence 77:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 78:
+I35.2
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 79:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 80:
+88.721
+88.722
+------------------------------------------------
+
+

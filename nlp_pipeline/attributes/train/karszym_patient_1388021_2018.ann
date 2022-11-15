@@ -1,0 +1,292 @@
+T1	Treatment 346 373	dalsza opieka w poradni POZ
+T2	Treatment 379 475	okresowa kontrola kardiologiczna, pulmonologiczna, diabetologiczna, neurologiczna i onkologiczna
+T3	Investigation 482 521	codzienna kontrola ciśnienia tętniczego
+T4	Investigation 527 556	okresowa kontrola lipidogramu
+T5	Date 558 579	pierwsza za 6 tygodni
+T6	Behaviour 586 624	dieta niskocholesterolowa i cukrzycowa
+T7	Behaviour 631 650	redukcja masy ciała
+R1	Dat Arg1:T5 Arg2:T4	
+T8	Drug 693 698	Acard
+T9	Drug 756 762	Atoris
+T10	Drug 794 804	Concor COR
+T11	Drug 832 839	Tritace
+T12	Drug 866 874	Spironol
+T13	Drug 901 907	Lercan
+T14	Drug 939 942	IPP
+T15	Drug 978 987	Metformax
+T16	Drug 1041 1047	Amaryl
+T17	Drug 1074 1089	DIH Max Comfort
+T18	Drug 1118 1124	Doreta
+T19	Drug 1196 1206	Pulmoterol
+T20	Drug 1252 1261	Miflonide
+T21	Drug 1308 1316	Ventolin
+T22	Drug_dose 699 722	75 mg 1 tabl. wieczorem
+T23	Drug_dose 763 786	80 mg 1 tabl. wieczorem
+T24	Drug_dose 805 824	7,5 mg 1 tabl. rano
+T25	Drug_dose 840 858	10 mg 1 tabl. rano
+T26	Drug_dose 875 893	25 mg 1 tabl. rano
+T27	Drug_dose 908 931	10 mg 1 tabl. wieczorem
+T28	Drug_dose 943 970	20 mg 1 tabl. rano na czczo
+T29	Drug_dose 988 1032	1000 mg 1 tabl. rano, w południe i wieczorem
+T30	Drug_dose 1048 1065	2 mg 1 tabl. rano
+T31	Drug_dose 1090 1110	1000 mg 1 tabl. rano
+T32	Drug_dose 1126 1186	37.5 + 325 mg 1 tabl. doraźnie w razie dolegliwości bólowych
+T33	Drug_dose 1207 1243	50 µg/dawkę 1 wziew rano i wieczorem
+T34	Drug_dose 1262 1299	200 µg/dawkę 1 wziew rano i wieczorem
+T35	Drug_dose 1317 1369	100 µg/dawkę - doraźnie 1-2 wdechy w razie duszności
+R2	Drg Arg1:T8 Arg2:T22	
+R3	Drg Arg1:T9 Arg2:T23	
+R4	Drg Arg1:T10 Arg2:T24	
+R5	Drg Arg1:T11 Arg2:T25	
+R6	Drg Arg1:T12 Arg2:T26	
+R7	Drg Arg1:T13 Arg2:T27	
+R8	Drg Arg1:T14 Arg2:T28	
+R9	Drg Arg1:T15 Arg2:T29	
+R10	Drg Arg1:T16 Arg2:T30	
+R11	Drg Arg1:T17 Arg2:T31	
+R12	Drg Arg1:T18 Arg2:T32	
+R13	Drg Arg1:T19 Arg2:T33	
+R14	Drg Arg1:T20 Arg2:T34	
+R15	Drg Arg1:T21 Arg2:T35	
+T36	Condition 1504 1533	Przewlekła niewydolność serca
+N1	Reference T36 ICD10:I50.9	Niewydolność serca, nieokreślona
+T37	Symptom 1534 1548	II/III wg NYHA
+T38	Condition 1549 1578	z zachowaną frakcją wyrzutową
+N2	Reference T38 ICD10:I50.9	Niewydolność serca, nieokreślona
+T39	Condition 1580 1618	Przewlekła choroba niedokrwienna serca
+N3	Reference T39 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T40	Condition 1629 1641	zawale serca
+N4	Reference T40 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T41	Date 1643 1647	2000
+T42	Treatment 1651 1685	rewaskularyzacji mięśnia sercowego
+T43	Date 1687 1691	2000
+T44	Treatment 1694 1705	LIMA do LAD
+T45	Treatment 1707 1735	bez krążenia pozaustrojowego
+R16	Dat Arg1:T41 Arg2:T40	
+R17	Dat Arg1:T43 Arg2:T42	
+R18	Dat Arg1:T43 Arg2:T44	
+R19	Dat Arg1:T43 Arg2:T45	
+T46	Condition 1738 1759	Nadciśnienie tętnicze
+N5	Reference T46 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T47	Condition 1761 1774	Cukrzyca t.2.
+N6	Reference T47 ICD10:E11	Cukrzyca insulinoniezależna
+T48	Condition 1775 1782	Otyłość
+N7	Reference T48 ICD10:E66.9	Otyłość, nieokreślona
+T49	Behaviour 1784 1794	Nikotynizm
+N8	Reference T49 ICD10:Z72.0	Używanie tytoniu
+T50	Date 1795 1808	w przeszłości
+T51	Condition 1810 1837	Choroba refluksowa przełyku
+N9	Reference T51 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T52	Condition 1839 1882	Przewlekłe zapalenie błony śluzowej żołądka
+N10	Reference T52 ICD10:K29.5	Przewlekłe zapalenie żołądka, nieokreślone
+T53	Condition 1884 1913	Podejrzenie astmy oskrzelowej
+A1	Source T53 Declared
+N11	Reference T53 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T54	Condition 1914 1919	POCHP
+A2	Source T54 Declared
+N12	Reference T54 ICD10:J44.8	Inna określona przewlekła obturacyjna choroba płuc
+T55	Date 1921 1948	wstępne rozpoznanie 01.2018
+T56	Treatment 1959 1992	częściowej resekcji sutka prawego
+N13	Reference T56 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T57	Condition 2002 2006	raka
+N14	Reference T57 ICD10:C50.9	Pierś, umiejscowienie nieokreślone
+T58	Treatment 2008 2016	operacja
+N15	Reference T58 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T59	Date 2017 2022	2017r
+T60	Negation 2024 2027	bez
+T61	Treatment 2028 2052	następczej chemioterapii
+N16	Reference T61 ICD10:Z51.1	Cykl chemioterapii przeciwnowotworowej
+T62	Treatment 2057 2069	radioterapii
+N17	Reference T62 ICD10:Z51.0	Sesja radioterapii
+T63	Condition 2072 2105	Choroba zwyrodnieniowa kręgosłupa
+N18	Reference T63 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T64	Condition 2108 2137	dyskopatią szyjną i lędźwiową
+T65	Condition 2139 2208	Półpaścowa neuralgia lewej połowy klatki piersiowej i ramienia lewego
+N19	Reference T65 ICD10:G53.0*	Nerwoból po przebytym półpaścu (B02.2†)
+T66	Condition 2210 2232	Żylaki kończyn dolnych
+A4	Status T66 Historical_Insignificant
+N20	Reference T66 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+R20	Dat Arg1:T50 Arg2:T49	
+R21	Dat Arg1:T55 Arg2:T54	
+R22	Dat Arg1:T55 Arg2:T53	
+R23	Dat Arg1:T59 Arg2:T57	
+R24	Dat Arg1:T59 Arg2:T56	
+R25	Dat Arg1:T59 Arg2:T58	
+R26	Neg Arg1:T60 Arg2:T61	
+R28	Dat Arg1:T59 Arg2:T61	
+R29	Dat Arg1:T59 Arg2:T62	
+T67	Treatment 2242 2258	panhisterektomii
+A5	Status T67 Historical_Insignificant
+N21	Reference T67 ICD10:Z90.7	Nabyty brak narządów płciowych
+T68	Treatment 2261 2277	cholecystektomii
+A6	Status T68 Historical_Insignificant
+N22	Reference T68 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T69	Date 2278 2291	w przeszłości
+T70	Condition 2294 2315	Nietolerancja laktozy
+N23	Reference T70 ICD10:E73.9	Nietolerancja laktozy, nieokreślona
+R30	Dat Arg1:T69 Arg2:T67	
+R31	Dat Arg1:T69 Arg2:T68	
+T71	Symptom 2584 2604	duszności wysiłkowej
+N24	Reference T71 ICD10:R06.0	Duszność
+T72	Symptom 2610 2635	spadku tolerancji wysiłku
+T73	Date 2636 2653	od ok. 2 miesięcy
+T74	Condition 2668 2697	przewlekła niewydolność serca
+N25	Reference T74 ICD10:I50.9	Niewydolność serca, nieokreślona
+T75	Symptom 2698 2712	II/III wg NYHA
+T76	Condition 2715 2731	obniżoną frakcją
+N26	Reference T76 ICD10:I50.9	Niewydolność serca, nieokreślona
+T77	Investigation_result 2732 2739	EF =50%
+T78	Condition 2741 2779	przewlekła choroba niedokrwienna serca
+N27	Reference T78 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T79	Condition 2799 2811	zawale serca
+N28	Reference T79 ICD10:I21.9	Ostry zawał serca, nieokreślony
+A7	Source T79 Declared
+T80	Date 2834 2839	2000r
+R32	Dat Arg1:T80 Arg2:T79	
+R33	Dat Arg1:T73 Arg2:T72	
+R34	Dat Arg1:T73 Arg2:T71	
+T81	Treatment 2843 2877	rewaskularyzacji mięśnia sercowego
+T82	Date 2879 2884	2000r
+T83	Treatment 2887 2895	LIMA-LAD
+T84	Treatment 2897 2925	bez krążenia pozaustrojowego
+T85	Condition 2928 2949	nadciśnienie tętnicze
+N29	Reference T85 ICD10:I10	
+T86	Condition 2951 2963	cukrzyca t.2
+N30	Reference T86 ICD10:E11	Cukrzyca insulinoniezależna
+T87	Condition 2966 2973	otyłość
+N31	Reference T87 ICD10:E66.9	Otyłość, nieokreślona
+T88	Condition 2975 2993	choroba refluksowa
+N32	Reference T88 ICD10:K21.9	Zarzucanie żołądkowo-przełykowe bez zapalenia przełyku
+T89	Condition 2995 3040	przewlekłe zapalenie błony śluzowej żołądkowa
+N33	Reference T89 ICD10:K29.5	Przewlekłe zapalenie żołądka, nieokreślone
+T90	Treatment 3050 3083	częściowej resekcji sutka prawego
+N34	Reference T90 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T91	Condition 3093 3095	ca
+N35	Reference T91 ICD10:C50.9	Pierś, umiejscowienie nieokreślone
+T92	Treatment 3097 3105	operacja
+N36	Reference T92 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T93	Date 3106 3111	2017r
+T94	Negation 3113 3116	bez
+T95	Treatment 3117 3130	chemioterapii
+N37	Reference T95 ICD10:Z51.1	Cykl chemioterapii przeciwnowotworowej
+T96	Treatment 3132 3144	radioterapii
+N38	Reference T96 ICD10:Z51.0	
+T97	Condition 3147 3164	podejrzenie POCHP
+N39	Reference T97 ICD10:J44.8	Inna określona przewlekła obturacyjna choroba płuc
+T98	Condition 3165 3182	astmy oskrzelowej
+A8	Source T98 Declared
+N40	Reference T98 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+A9	Source T97 Declared
+T99	Treatment 3201 3212	pulmonologa
+A10	Source T99 Declared
+T100	Date 3216 3224	01.2018r
+T101	Condition 3227 3260	choroba zwyrodnieniowa kręgosłupa
+N41	Reference T101 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T102	Condition 3263 3292	dyskopatią szyjną i lędźwiową
+T103	Condition 3294 3318	rwa ramienna lewostronna
+R35	Dat Arg1:T82 Arg2:T81	
+R36	Dat Arg1:T82 Arg2:T83	
+R37	Dat Arg1:T82 Arg2:T84	
+R38	Dat Arg1:T93 Arg2:T90	
+R39	Dat Arg1:T93 Arg2:T91	
+R40	Dat Arg1:T93 Arg2:T92	
+R41	Neg Arg1:T94 Arg2:T95	
+R42	Dat Arg1:T93 Arg2:T95	
+R43	Neg Arg1:T94 Arg2:T96	
+R44	Dat Arg1:T93 Arg2:T96	
+R27	Neg Arg1:T60 Arg2:T62	
+R45	Dat Arg1:T100 Arg2:T99	
+R46	Dat Arg1:T100 Arg2:T97	
+R47	Dat Arg1:T100 Arg2:T98	
+N42	Reference T103 ICD10:M75.8	Inne uszkodzenia barku
+T104	Condition 3321 3383	półpaścowa neuralgia lewej połowy klatki piersiowej i ramienia
+N43	Reference T104 ICD10:G53.0*	Nerwoból po przebytym półpaścu (B02.2†)
+T105	Condition 3385 3414	zespół bolesnego barku lewego
+T106	Condition 3416 3434	Żylaki kk. dolnych
+A3	Status T106 Historical_Insignificant
+N44	Reference T106 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T107	Treatment 3469 3485	panhisterektomii
+N45	Reference T107 ICD10:Z90.7	Nabyty brak narządów płciowych
+T108	Date 3486 3499	w przeszłości
+T109	Treatment 3509 3525	cholecystektomii
+A12	Status T109 Historical_Insignificant
+N46	Reference T109 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T110	Date 3526 3539	w przeszłości
+T111	Date 3607 3612	2014r
+T112	Condition 3596 3605	półpasiec
+N47	Reference T112 ICD10:B02.2†	Półpasiec z zajęciem innych części układu nerwowego
+T113	Condition 3616 3631	bóle przewlekłe
+N48	Reference T113 ICD10:G53.0*	Nerwoból po przebytym półpaścu (B02.2†)
+R48	Dat Arg1:T111 Arg2:T112	
+R49	Dat Arg1:T111 Arg2:T113	
+T114	Condition 3567 3570	WZW
+N49	Reference T114 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T115	Condition 3572 3581	borelioza
+N50	Reference T115 ICD10:A69.2	Choroba z Lyme
+T116	Negation 3584 3594	nie podaje
+R50	Neg Arg1:T116 Arg2:T115	
+R51	Neg Arg1:T116 Arg2:T114	
+T117	Negation 3649 3659	nie podaje
+T118	Condition 3632 3647	Wywiad rodzinny
+A13	Status T118 Family
+R52	Neg Arg1:T117 Arg2:T118	
+R53	Dat Arg1:T108 Arg2:T107	
+R54	Dat Arg1:T110 Arg2:T109	
+T119	Behaviour 3660 3675	Palenie tytoniu
+N51	Reference T119 ICD10:Z72.0	Używanie tytoniu
+T120	Date 3677 3690	w przeszłości
+T121	Behaviour 3691 3702	Inne używki
+T122	Negation 3704 3714	nie podaje
+T123	Condition 3715 3724	Uczulenia
+N52	Reference T123 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T124	Drug 3729 3735	Tramal
+T125	Condition 3737 3758	nietolerancja laktozy
+N53	Reference T125 ICD10:E73.9	Nietolerancja laktozy, nieokreślona
+T126	Behaviour 3777 3786	emerytura
+T127	Behaviour 3788 3793	wdowa
+T128	Behaviour 3795 3803	2 dzieci
+T129	Drug 3810 3819	Metformax
+T130	Drug_dose 3820 3840	1000 mg 1 tabl. rano
+T131	Drug 3841 3847	Amaryl
+T132	Drug_dose 3848 3868	2 mg 1 tabl. w obiad
+T133	Drug 3869 3874	Gasec
+T134	Drug_dose 3875 3902	20 mg 1 tabl. rano na czczo
+T135	Drug 3903 3912	Simvastin
+T136	Drug_dose 3913 3936	20 mg 1 tabl. wieczorem
+T137	Drug 3937 3947	Concor COR
+T138	Drug_dose 3948 3965	5 mg 1 tabl. rano
+T139	Drug 3966 3976	Prestarium
+T140	Drug_dose 3977 3994	5 mg 1 tabl. rano
+T141	Drug 3995 4003	Spironol
+T142	Drug_dose 4004 4022	25 mg 1 tabl. rano
+T143	Drug 4023 4034	Molsidomina
+T144	Drug_dose 4035 4057	2 mg 1 tabl. wieczorem
+T145	Drug 4058 4064	Doreta
+T146	Drug_dose 4065 4080	1 tabl. 3 x dz.
+T147	Drug 4081 4091	Pulmoterol
+T148	Drug_dose 4092 4098	2 x dz
+T149	Drug 4099 4108	Miflonide
+T150	Drug_dose 4109 4115	2 x dz
+T151	Drug 4116 4124	Ventolin
+T152	Drug_dose 4127 4135	doraźnie
+T153	Investigation 4163 4173	echo serca
+T154	Investigation 4174 4177	TET
+T155	Investigation 4179 4183	ABPM
+T156	Investigation 4185 4191	Holter
+T157	Investigation 4193 4211	RTG kl. piersiowej
+R55	Dat Arg1:T120 Arg2:T119	
+R56	Neg Arg1:T122 Arg2:T121	
+R57	Alg Arg1:T123 Arg2:T124	
+R58	Drg Arg1:T129 Arg2:T130	
+R59	Drg Arg1:T131 Arg2:T132	
+R60	Drg Arg1:T133 Arg2:T134	
+R61	Drg Arg1:T135 Arg2:T136	
+R62	Drg Arg1:T137 Arg2:T138	
+R63	Drg Arg1:T139 Arg2:T140	
+R64	Drg Arg1:T141 Arg2:T142	
+R65	Drg Arg1:T143 Arg2:T144	
+R66	Drg Arg1:T145 Arg2:T146	
+R67	Drg Arg1:T147 Arg2:T148	
+R68	Drg Arg1:T149 Arg2:T150	
+R69	Drg Arg1:T151 Arg2:T152	
+N54	Reference T121 ICD10:Z72	Problemy związane ze stylem życia

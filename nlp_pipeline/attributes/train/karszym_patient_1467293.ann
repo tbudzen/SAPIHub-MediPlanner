@@ -1,0 +1,150 @@
+T1	Condition 472 500	choroby niedokrwiennej serca
+N1	Reference T1 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T2	Negation 503 512	negatywna
+R1	Neg Arg1:T2 Arg2:T1	
+T3	Treatment 526 553	dwukrotnym cięciu cesarskim
+N2	Reference T3 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+A1	Status T3 Historical_Insignificant
+T4	Treatment 567 575	operacji
+A2	Status T4 Historical_Insignificant
+N3	Reference T4 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T5	Condition 585 601	torbieli jajnika
+A3	Status T5 Historical_Insignificant
+N4	Reference T5 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T6	Treatment 614 644	operacji wyrostka robaczkowego
+N5	Reference T6 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+A4	Status T6 Historical_Insignificant
+T7	Treatment 765 792	dalsza opieka u lekarza POZ
+T8	Behaviour 796 891	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T9	Investigation 895 986	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T10	Condition 1213 1240	Choroba niedokrwienna serca
+A5	Source T10 Declared
+N6	Reference T10 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T11	Treatment 1274 1301	dwukrotnym cięciu cesarskim
+A6	Status T11 Historical_Insignificant
+N7	Reference T11 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+T12	Treatment 1311 1319	operacji
+A7	Status T12 Historical_Insignificant
+N8	Reference T12 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T13	Condition 1329 1345	torbieli jajnika
+A8	Status T13 Historical_Insignificant
+N9	Reference T13 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T14	Date 1347 1358	lata 80./90
+R2	Dat Arg1:T14 Arg2:T13	
+R3	Dat Arg1:T14 Arg2:T12	
+T15	Treatment 1370 1400	operacji wyrostka robaczkowego
+A9	Status T15 Historical_Insignificant
+N10	Reference T15 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T16	Date 1401 1411	w młodości
+R4	Dat Arg1:T16 Arg2:T15	
+T17	Condition 1583 1617	podejrzenia choroby niedokrwiennej
+A10	Source T17 Declared
+N11	Reference T17 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T18	Investigation 1635 1675	echokardiograficznej próby obciążeniowej
+T19	Date 1694 1701	12/2018
+T20	Investigation 1743 1782	elektrokardiograficznie próbę wysiłkową
+T21	Investigation_result 1711 1728	klinicznie ujemną
+T22	Investigation_result 1734 1742	wątpliwą
+R5	Inv Arg1:T20 Arg2:T22	
+R6	Inv Arg1:T20 Arg2:T21	
+R7	Dat Arg1:T19 Arg2:T20	
+T23	Investigation_result 1785 1836;1849 2001	W trakcie wysiłku oraz w początkowej fazie recovery obniżenia o przebiegu skośnym ku górze w II (-2.30mm), aVF (-1.95mm), V5 (-1.45mm), V6 (-1.40mm) oraz o przebiegu poziomym w odprowadzeniu III (-1.55mm)
+N12	Reference T23 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+R8	Inv Arg1:T20 Arg2:T23	
+T24	Investigation_result 2003 2032	Zmiany ustąpiły po odpoczynku
+R9	Inv Arg1:T20 Arg2:T24	
+T25	Date 2044 2068	na przełomie 01/02. 2019
+T26	Symptom 2079 2109	piekący ból w klatce piersiowe
+T27	Symptom 2162 2168	kaszlu
+N14	Reference T27 ICD10:R05	Kaszel
+T28	Symptom 2171 2218	wraz z ustąpieniem kaszlu ustąpiły dolegliwości
+R10	Dat Arg1:T25 Arg2:T26	
+R11	Dat Arg1:T25 Arg2:T27	
+R12	Dat Arg1:T25 Arg2:T28	
+N13	Reference T26 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T29	Symptom 2264 2355	okresowo występujących kłujących bólów w klatce piersiowej związanych z wysiłkiem fizycznym
+N15	Reference T29 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T30	Negation 2357 2363	Neguje
+T31	Symptom 2364 2376	zasłabnięcia
+T32	Symptom 2378 2386	omdlenia
+N16	Reference T32 ICD10:R55	Omdlenie i zapaść
+T33	Symptom 2388 2401	zawroty głowy
+N17	Reference T33 ICD10:R42	Zawroty głowy i odurzenie
+R13	Neg Arg1:T30 Arg2:T31	
+R14	Neg Arg1:T30 Arg2:T32	
+R15	Neg Arg1:T30 Arg2:T33	
+T34	Symptom 2403 2422	Innych dolegliwości
+T35	Negation 2423 2434	nie zgłasza
+R16	Neg Arg1:T35 Arg2:T34	
+T36	Negation 2460 2463	nie
+T37	Condition 2479 2492	żadne choroby
+R17	Neg Arg1:T36 Arg2:T37	
+T38	Treatment 2513 2543	operacja wyrostka robaczkowego
+A11	Status T38 Historical_Insignificant
+N18	Reference T38 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T39	Date 2544 2554	w młodości
+T40	Treatment 2556 2575	2x cesarskie cięcie
+N19	Reference T40 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+A12	Status T40 Historical_Insignificant
+T41	Treatment 2581 2589	operacja
+A13	Status T41 Historical_Insignificant
+N20	Reference T41 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T42	Condition 2599 2615	torbieli jajnika
+A14	Status T42 Historical_Insignificant
+N21	Reference T42 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T43	Date 2617 2629	lata 80./90.
+R18	Dat Arg1:T43 Arg2:T42	
+R19	Dat Arg1:T43 Arg2:T41	
+R20	Dat Arg1:T39 Arg2:T38	
+T44	Treatment 2632 2651	Leczenie przewlekłe
+T45	Negation 2653 2657	brak
+R21	Neg Arg1:T45 Arg2:T44	
+T46	Condition 2686 2689	WZW
+N22	Reference T46 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T47	Condition 2698 2707	borelioza
+N23	Reference T47 ICD10:A69.2	Choroba z Lyme
+T48	Condition 2715 2723	gruźlica
+N24	Reference T48 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T49	Condition 2730 2734	odra
+N25	Reference T49 ICD10:B05	Odra
+T50	Negation 2690 2695	( - )
+T51	Negation 2708 2713	( - )
+T52	Negation 2724 2729	( - )
+T53	Negation 2735 2738	(-)
+R22	Neg Arg1:T50 Arg2:T46	
+R23	Neg Arg1:T51 Arg2:T47	
+R24	Neg Arg1:T52 Arg2:T48	
+R25	Neg Arg1:T53 Arg2:T49	
+T54	Condition 2740 2761	W wywiadzie rodzinnym
+A15	Status T54 Family
+T55	Negation 2763 2773	nieistotny
+T56	Behaviour 2775 2790	Palenie tytoniu
+N26	Reference T56 ICD10:Z72.0	Używanie tytoniu
+T57	Negation 2792 2795	nie
+T58	Behaviour 2796 2800	pali
+N27	Reference T58 ICD10:Z72.0	Używanie tytoniu
+T59	Behaviour 2802 2813	Inne używki
+T60	Negation 2815 2818	nie
+T61	Condition 2820 2829	Uczulenia
+N28	Reference T61 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T62	Negation 2831 2837	neguje
+T63	Behaviour 2855 2881	warunki mieszkaniowe dobre
+T64	Behaviour 2883 2898	mieszka z mężem
+T65	Drug 2899 2903	Leki
+T66	Negation 2905 2918	nie przyjmuje
+R26	Neg Arg1:T55 Arg2:T54	
+R27	Neg Arg1:T57 Arg2:T56	
+R28	Neg Arg1:T57 Arg2:T58	
+R29	Neg Arg1:T60 Arg2:T59	
+R30	Neg Arg1:T62 Arg2:T61	
+R31	Neg Arg1:T66 Arg2:T65	
+A16	Source T1 Declared
+T67	Investigation 450 460	Obserwacja
+T68	Investigation 1243 1264	w trakcie diagnostyki
+N29	Reference T59 ICD10:Z72	Problemy związane ze stylem życia
+N30	Reference T31 ICD10:R55	Omdlenie i zapaść
+T69	Date 2449 2459	dotychczas
+T70	Treatment 2464 2475	lecząca się
+R32	Neg Arg1:T36 Arg2:T70	
+R33	Dat Arg1:T69 Arg2:T70	
+R34	Dat Arg1:T69 Arg2:T37	

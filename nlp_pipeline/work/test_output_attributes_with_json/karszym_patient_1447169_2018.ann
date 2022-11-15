@@ -1,0 +1,59 @@
+T1	Symptom 448 463	Kołatania serca
+T2	Condition 465 478	Wole guzowate
+T3	Condition 481 498	Zaburzenia lękowe
+T4	Condition 725 738	Wole guzowate
+T5	Symptom 901 927	okresowego kołatania serca
+T6	Negation 930 933	Bez
+T7	Symptom 934 941	dławicy
+T8	Condition 956 973	zaburzenia lękowe
+T9	Investigation 977 989	usg tarczycy
+T10	Date 992 999	06.2018
+T11	Investigation_result 1002 1019	torbiele tarczycy
+T12	Treatment 1022 1052	pod kontrolą endokrynologiczną
+T13	Investigation_result 1055 1063	TSH 1,8,
+T14	Investigation_result 1064 1069	fT3 5
+T15	Investigation_result 1071 1077	fT4 17
+T16	Investigation_result 1079 1091	anty TPO 316
+T17	Investigation_result 1093 1103	anty TG 50
+T18	Date 1105 1112	05.2016
+T19	Treatment 1125 1127	CC
+T20	Date 1128 1139	17 lat temu
+T21	Behaviour 1140 1150	Nikotynizm
+T22	Negation 1152 1158	neguje
+T23	Treatment 1115 1123	Operacje
+T24	Behaviour 1164 1171	Alkohol
+T25	Negation 1173 1179	neguje
+T26	Negation 1188 1194	neguje
+T27	Condition 1196 1213	uczulenia na leki
+T28	Symptom 1215 1248	krwawienia z przewodu pokarmowego
+T29	Symptom 1250 1269	utraty przytomności
+T30	Condition 1271 1286	Wywiad rodzinny
+T31	Negation 1288 1299	nie istotny
+T32	Drug 1326 1334	Bisocard
+T33	Drug_dose 1335 1341	1,25mg
+T34	Investigation 1354 1364	ECHO serca
+T35	Investigation 1366 1376	Holter EKG
+T36	Investigation 1378 1387	Holter RR
+T37	Investigation 1389 1391	PW
+N1	Reference T1 ICD10:R00.2	KoÅatanie serca
+N2	Reference T2 ICD10:E04.9	Wole nietoksyczne, nieokreÅlone
+N3	Reference T4 ICD10:E04.9	Wole nietoksyczne, nieokreÅlone
+N4	Reference T21 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N5	Reference T23 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N6	Reference T24 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N7	Reference T27 ICD10:Z88	Uczulenia na leki, Årodki farmakologiczne i substancje biologiczne w wywiadzie
+N8	Reference T28 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreÅlony
+N9	Reference T29 ICD10:R55	Omdlenie i zapaÅÄ
+R1	Neg Arg1:T6 Arg2:T5
+R10	Neg Arg1:T22 Arg2:T21
+R17	Neg Arg1:T25 Arg2:T24
+R18	Neg Arg1:T26 Arg2:T28
+R19	Neg Arg1:T26 Arg2:T29
+R2	Neg Arg1:T6 Arg2:T7
+R20	Neg Arg1:T26 Arg2:T27
+R21	Neg Arg1:T26 Arg2:T30
+R28	Dat Arg1:T20 Arg2:T21
+R3	Dat Arg1:T10 Arg2:T12
+R34	Neg Arg1:T31 Arg2:T32
+R36	Drg Arg1:T32 Arg2:T33
+R5	Dat Arg1:T18 Arg2:T23

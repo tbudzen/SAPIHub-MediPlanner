@@ -1,0 +1,61 @@
+T1	Treatment 345 372	dalsza opieka w poradni POZ
+T2	Treatment 379 431	okresowa kontrola endokrynologiczna i psychiatryczna
+T3	Behaviour 437 473	dieta zbliżona do śródziemnomorskiej
+T4	Behaviour 480 525	stały, umiarkowany, aerobowy wysiłek fizyczny
+T5	Treatment 532 560	regularne przyjmowanie leków
+T6	Drug 569 581	Euthyrox N50
+T7	Drug 611 618	Asentra
+T8	Drug_dose 582 603	1 tabl. rano na czczo
+T9	Drug_dose 619 677	50 mg 1 tabl. rano (wg dotychczasowych zaleceń psychiatry)
+R1	Drg Arg1:T6 Arg2:T8	
+R2	Drg Arg1:T7 Arg2:T9	
+T10	Condition 918 938	wady wrodzonej serca
+T11	Condition 940 963	przetrwały otwór owalny
+N2	Reference T11 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T12	Condition 966 981	przewód Botalla
+N3	Reference T12 ICD10:Q25.0	Drożny przewód tętniczy
+T13	Negation 983 992	negatywna
+R3	Neg Arg1:T13 Arg2:T12	
+R4	Neg Arg1:T13 Arg2:T11	
+R5	Neg Arg1:T13 Arg2:T10	
+T14	Condition 994 1045	Nadkomorowe zaburzenia rytmu serca – ekstrasystolie
+N4	Reference T14 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T15	Condition 1082 1099	choroby Hashimoto
+N5	Reference T15 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T16	Treatment 1100 1134	w trakcie leczenia substytucyjnego
+T17	Condition 1135 1154	w okresie eutyreozy
+T18	Condition 1156 1177	Upośledzenie umysłowe
+N6	Reference T18 ICD10:F79	Nieokreślone upośledzenie umysłowe
+T19	Condition 1321 1324	ASD
+N7	Reference T19 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T20	Condition 1325 1328	FoA
+N8	Reference T20 ICD10:Q21.1	
+T21	Condition 1410 1431	upośledzenie umysłowe
+N9	Reference T21 ICD10:F79	Nieokreślone upośledzenie umysłowe
+T22	Condition 1435 1474	niedotlenieniu w okresie okołoporodowym
+N10	Reference T22 ICD10:P91.0	Niedokrwienie mózgu noworodkowe
+T23	Condition 1476 1493	choroba Hashimoto
+N11	Reference T23 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T24	Negation 1495 1501	Neguje
+T25	Condition 1503 1510	alergie
+R6	Neg Arg1:T24 Arg2:T25	
+T26	Condition 1512 1536	chorobę wrzodową żołądka
+R7	Neg Arg1:T24 Arg2:T26	
+N13	Reference T26 ICD10:K25	Wrzód żołądka
+T27	Symptom 1538 1553	kołatania serca
+N14	Reference T27 ICD10:R00.2	Kołatanie serca
+T28	Symptom 1555 1567	zasłabnięcia
+R8	Neg Arg1:T24 Arg2:T27	
+R9	Neg Arg1:T24 Arg2:T28	
+T29	Drug 1575 1583	Euthyrox
+T30	Drug 1585 1592	Asentra
+T31	Condition 1594 1609	Wywiad rodzinny
+A1	Status T31 Family
+T32	Negation 1610 1623	bez znaczenia
+R10	Neg Arg1:T32 Arg2:T31	
+T33	Condition 1047 1081	Niedoczynność tarczycy w przebiegu
+N15	Reference T33 ICD10:E03	Niedoczynność tarczycy o innej etiologii
+T34	Investigation 895 917	Diagnostyka w kierunku
+N12	Reference T25 ICD10:T78.4	Alergia, nieokreślona
+N16	Reference T28 ICD10:R55	Omdlenie i zapaść
+N1	Reference T10 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych

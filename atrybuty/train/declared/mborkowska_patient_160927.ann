@@ -1,0 +1,71 @@
+T1	Investigation 2230 2240	echo serca
+T2	Investigation 2242 2245	TET
+T3	Investigation 2247 2251	ABPM
+T4	Investigation 2253 2259	Holter
+T5	Investigation 2261 2279	RTG kl. piersiowej
+T6	Negation 2192 2202	nie podaje
+T7	Drug 2186 2190	Leki
+R1	Neg Arg1:T6 Arg2:T7	
+T8	Negation 2128 2138	nie podaje
+T9	Negation 2106 2116	nie podaje
+T10	Negation 2082 2092	nie podaje
+T11	Condition 2117 2126	Uczulenia
+N1	Reference T11 ICD10:T78.4	Alergia, nieokreślona
+R2	Neg Arg1:T8 Arg2:T11	
+T12	Behaviour 2093 2104	Inne używki
+R3	Neg Arg1:T9 Arg2:T12	
+T13	Behaviour 2065 2080	Palenie tytoniu
+R4	Neg Arg1:T10 Arg2:T13	
+T14	Negation 2054 2064	nieistotny
+T15	Condition 2037 2052	Wywiad rodzinny
+A1	Status T15 Family
+R5	Neg Arg1:T14 Arg2:T15	
+T16	Condition 2009 2012	WZW
+T17	Condition 2014 2023	borelioza
+N4	Reference T17 ICD10:A69.2	Choroba z Lyme
+T18	Negation 2026 2036	nie podaje
+R6	Neg Arg1:T18 Arg2:T17	
+R7	Neg Arg1:T18 Arg2:T16	
+T19	Negation 1971 1981	nie podaje
+T20	Negation 1939 1949	nie podaje
+T21	Treatment 1920 1937	Przebyte operacje
+R8	Neg Arg1:T20 Arg2:T21	
+T22	Treatment 1950 1969	Leczenie przewlekłe
+R9	Neg Arg1:T19 Arg2:T22	
+T23	Investigation 1777 1785	CT głowy
+T24	Investigation 1788 1797	NMR głowy
+T25	Investigation_result 1800 1817	wyniki prawidłowe
+A2	Source T24 Declared
+A3	Source T23 Declared
+A4	Source T25 Declared
+R10	Inv Arg1:T23 Arg2:T25	
+R11	Inv Arg1:T24 Arg2:T25	
+T26	Symptom 1896 1919	nieregularne miesiączki
+T27	Behaviour 673 727	Dieta bogatosodowa ze spożywaniem do 3l płynów na dobę
+T28	Investigation 748 782	kontrola ciśnienia tętniczego krwi
+T29	Behaviour 789 866	Regularna rekreacyjna aktywność fizyczna min. 30 minut dziennie 5x w tygodniu
+T30	Symptom 1138 1146	Omdlenia
+N5	Reference T30 ICD10:R55	Omdlenie i zapaść
+T31	Condition 1160 1196	Podejrzenie hipotonii ortostatycznej
+A5	Source T31 Declared
+N6	Reference T31 ICD10:I95	Niedociśnienie
+T32	Condition 1198 1223	Zniesiona lordoza szyjna.
+N7	Reference T32 ICD10:M40.4	Inna lordoza
+T33	Condition 1224 1249	Skrzywiona przegroda nosa
+N8	Reference T33 ICD10:J34.2	Skrzywienie przegrody nosa
+T34	Symptom 1251 1261	Bóle głowy
+N9	Reference T34 ICD10:R51	Ból głowy
+T35	Symptom 1463 1473	zasłabnięć
+N10	Reference T35 ICD10:R55	Omdlenie i zapaść
+T36	Condition 1543 1593	przebytą infekcją gardła (zakażenie Ebsteina-Bara)
+N11	Reference T36 ICD10:B27	Mononukleoza zakaźna
+T37	Investigation 1649 1668	próba ortostatyczna
+T38	Investigation_result 1671 1696	wybitnie dodatnia w 7 min
+R12	Inv Arg1:T37 Arg2:T38	
+T39	Investigation 1698 1704	Holter
+T40	Investigation 1706 1730	usg doppler tt. szyjnych
+T41	Investigation_result 1733 1743	prawidłowe
+R13	Inv Arg1:T40 Arg2:T41	
+R14	Inv Arg1:T39 Arg2:T41	
+N3	Reference T16 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N2	Reference T13 ICD10:Z72.0	Używanie tytoniu

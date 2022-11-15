@@ -1,0 +1,25 @@
+T1	Condition 470 556	Wrodzona wada serca pod postacią ubytku w przegrodzie międzyprzedsionkowej typu ASD II
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Condition 1100 1103	ASD
+N2	Reference T2 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T3	Condition 1075 1098	wrodzoną wada serca PDA
+N3	Reference T3 ICD10:Q25.0	Drożny przewód tętniczy
+T4	Condition 590 593	PDA
+N4	Reference T4 ICD10:Q25.0	Drożny przewód tętniczy
+T5	Condition 561 588	Przetrwały przewód tętniczy
+N5	Reference T5 ICD10:Q25.0	Drożny przewód tętniczy
+T6	Drug 1138 1152	leków na stałe
+T7	Negation 1153 1166	nie otrzymuje
+R1	Neg Arg1:T7 Arg2:T6	
+T8	Condition 1169 1186	wywiad alergiczny
+N6	Reference T8 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T9	Negation 1187 1193	ujemny
+R2	Neg Arg1:T9 Arg2:T8	
+T10	Investigation 881 906	Holter EKG ambulatoryjnie
+T11	Date 928 939	20.08.2018r
+R3	Dat Arg1:T11 Arg2:T10	
+T12	Drug 755 764	tiopental
+T13	Condition 599 628	Dwupłatkowa zastawka aortalna
+N7	Reference T13 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T14	Condition 630 633	BAV
+N8	Reference T14 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej

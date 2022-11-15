@@ -1,0 +1,27 @@
+T1	Condition 460 528	Wrodzona wada serca pod postacią przełożenia wielkich pni tętniczych
+N1	Reference T1 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T2	Treatment 541 571	operacji korekcji anatomicznej
+N2	Reference T2 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T3	Date 573 584	26.06.2006r
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Condition 746 782	wrodzoną wadą serca pod postacią TGA
+N3	Reference T4 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T5	Date 852 862	W styczniu
+T6	Investigation 879 897	scyntygrafię serca
+R2	Dat Arg1:T5 Arg2:T6	
+T7	Date 899 906	Obecnie
+T8	Negation 907 910	bez
+T9	Symptom 911 923	dolegliwości
+R3	Neg Arg1:T8 Arg2:T9	
+R4	Dat Arg1:T7 Arg2:T9	
+T10	Condition 925 948	Inne choroby przewlekłe
+T11	Negation 949 952	/-/
+T12	Condition 953 960	Alergie
+N4	Reference T12 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T13	Negation 974 977	/-/
+R5	Neg Arg1:T11 Arg2:T10	
+R6	Neg Arg1:T13 Arg2:T12	
+T14	Treatment 997 1009	korekcja TGA
+N5	Reference T14 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T15	Treatment 1012 1036	Szczepiony zgodnie z PSO
+R7	Dat Arg1:T3 Arg2:T1	

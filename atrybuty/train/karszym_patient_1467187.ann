@@ -1,0 +1,53 @@
+T1	Drug 340 349	0,9% NaCl
+T2	Drug 378 387	neomycyną
+T3	Drug 400 408	Fenistil
+T4	Drug 410 423	Hydrokortyzon
+T5	Condition 673 742	Wrodzona wada serca pod postacią ubytku w przegrodzie międzykomorowej
+N1	Reference T5 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T6	Condition 745 786	ubytku w przegrodzie międzyprzedsionkowej
+N2	Reference T6 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T7	Condition 1027 1096	Wrodzona wada serca pod postacią ubytku w przegrodzie międzykomorowej
+N3	Reference T7 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T8	Condition 1099 1140	ubytku w przegrodzie międzyprzedsionkowej
+N4	Reference T8 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T9	Condition 1392 1461	Wrodzona wada serca pod postacią ubytku w przegrodzie międzykomorowej
+N5	Reference T9 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T10	Condition 1464 1505	ubytku w przegrodzie międzyprzedsionkowej
+N6	Reference T10 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T11	Condition 1510 1541	Ostry nieżyt żołądkowo-jelitowy
+N7	Reference T11 ICD10:A09	Biegunka i zapalenie żołądkowo-jelitowe o przypuszczalnie zakaźnej etiologii
+T12	Drug 1662 1669	ANA 2:1
+T13	Drug 1686 1694	Hidrasec
+T14	Drug 1696 1702	Smecta
+T15	Drug 1704 1712	Lacto Dr
+T16	Drug 1714 1721	Enterol
+T17	Drug 1723 1732	Perfalgan
+T18	Drug 1734 1743	Ibuprofen
+T19	Symptom 1897 1914	w  stanie  dobrym
+T20	Treatment 1923 1992	przyjęta  do  Kliniki  celem przygotowania  do  zabiegu  operacyjnego
+T21	Symptom 2142 2159	w  stanie  dobrym
+T22	Condition 2161 2205	opóźniająca  się  w  rozwoju  psychoruchowym
+N8	Reference T22 ICD10:R62.0	Opóźnienie etapów rozwoju fizjologicznego
+T23	Treatment 2215 2286	przyjęte  do  Kliniki   celem  przygotowania  do  zabiegu  operacyjnego
+T24	Condition 2435 2438	ASD
+N9	Reference T24 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T25	Condition 2441 2444	VSD
+N10	Reference T25 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T26	Treatment 2445 2476	skierowana na zabieg operacyjny
+T27	Condition 2479 2496	wywiad alergiczny
+N11	Reference T27 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T28	Negation 2497 2503	ujemny
+T29	Drug 2506 2520	leków na stałe
+T30	Negation 2521 2534	nie otrzymuje
+R1	Neg Arg1:T30 Arg2:T29	
+R2	Neg Arg1:T28 Arg2:T27	
+T31	Drug 390 398	efedryną
+T32	Drug_dose 361 375	krople do nosa
+T33	Drug_dose 350 359	inhalacje
+R3	Drg Arg1:T1 Arg2:T33	
+R4	Drg Arg1:T2 Arg2:T32	
+R5	Drg Arg1:T31 Arg2:T32	
+T34	Drug_dose 424 433	0,1% krem
+R6	Drg Arg1:T4 Arg2:T34	
+T35	Drug_dose 1670 1683	kroplówka i.v
+R7	Drg Arg1:T12 Arg2:T35	

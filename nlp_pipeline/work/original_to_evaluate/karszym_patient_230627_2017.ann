@@ -1,0 +1,47 @@
+T1	Negation 341 344	Bez
+T2	Drug 345 350	leków
+T3	Drug 483 491	Magne B6
+T4	Drug_dose 492 501	1 x 1 tab
+T5	Drug 504 515	Padma Basic
+T6	Drug_dose 516 531	100mg 1 x 1 tab
+T7	Condition 554 562	infekcji
+T8	Behaviour 533 553	szczególnie w czasie
+R1	Neg Arg1:T1 Arg2:T2	
+R2	Drg Arg1:T3 Arg2:T4	
+R3	Drg Arg1:T5 Arg2:T6	
+T9	Treatment 567 605	Wizyta w Poradni kardiologicznej ICZMP
+T10	Date 606 615	za 6 m-cy
+T11	Symptom 631 652	niepokojšcych objawów
+T12	Date 655 664	wczeniej
+T13	Treatment 734 746	Opieka w POZ
+T14	Behaviour 750 768	zwracanie uwagi na
+T15	Condition 769 790	ew. nasilenie arytmii
+N1	Reference T15 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T16	Condition 800 808	infekcji
+T17	Condition 1048 1080	Komorowe pobudzenia przedwczesne
+N2	Reference T17 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T18	Condition 1085 1122	Blok przedsionkowo-komorowy I stopnia
+N3	Reference T18 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T19	Condition 1309 1329	zaburzeń rytmu serca
+N4	Reference T19 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T20	Date 1330 1343	od marca 2016
+T21	Investigation 1288 1299	obserwowana
+T22	Drug 1365 1371	Magnez
+T23	Drug 1374 1379	Padmę
+T24	Date 1432 1441	Aktualnie
+T25	Negation 1442 1445	bez
+T26	Symptom 1446 1459	cech infekcji
+T27	Condition 1461 1484	inne choroby przewlekłe
+T28	Negation 1485 1488	(-)
+R4	Neg Arg1:T28 Arg2:T27	
+R5	Dat Arg1:T24 Arg2:T26	
+R6	Neg Arg1:T25 Arg2:T26	
+R7	Dat Arg1:T20 Arg2:T21	
+R8	Dat Arg1:T20 Arg2:T19	
+R9	Dat Arg1:T12 Arg2:T11	
+R10	Dat Arg1:T12 Arg2:T9	
+R11	Dat Arg1:T10 Arg2:T9	
+T29	Symptom 631 652	niepokojących objawów
+T30	Date 655 664	wcześniej
+R12	Dat Arg1:T30 Arg2:T29	
+R13	Dat Arg1:T30 Arg2:T9	

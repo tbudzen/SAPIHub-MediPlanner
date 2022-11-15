@@ -1,0 +1,133 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 358 390	okresowa kontrola kardiologiczna
+T3	Treatment 392 428	wskazana konsultacja reumatologiczna
+T4	Investigation 429 458	okresowa kontrola lipidogramu
+T5	Date 482 494	za 6 tygodni
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Behaviour 496 521	dieta niskocholesterolowa
+T7	Behaviour 522 567	stały, umiarkowany, aerobowy wysiłek fizyczny
+T8	Treatment 568 596	regularne przyjmowanie leków
+T9	Drug 598 606	Euthyrox
+T10	Drug_dose 607 652	75 ug 1 tabl. rano na czczo w dni nieparzyste
+R2	Drg Arg1:T9 Arg2:T10	
+T11	Drug 653 661	Euthyrox
+T12	Drug_dose 662 703	50ug 1 tabl. rano na czczo w dni parzyste
+R3	Drg Arg1:T11 Arg2:T12	
+T13	Drug 704 715	Betaloc ZOK
+T14	Drug_dose 716 734	25 mg 1 tabl. rano
+R4	Drg Arg1:T13 Arg2:T14	
+T15	Condition 952 1033	Wada nabyta serca pod postacią umiarkowanej niedomykalności zastawki trójdzielnej
+N1	Reference T15 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T16	Condition 1036 1079	łagodnej niedomykalności zastawki mitralnej
+N2	Reference T16 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T17	Condition 1081 1110	Przewlekła niewydolność serca
+N3	Reference T17 ICD10:I50	Niewydolność serca
+T18	Condition 1127 1182	Komorowe zaburzenia rytmu serca (II, IIIa wg kl. Lowna)
+N4	Reference T18 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T19	Treatment 1192 1215	częściowej strumektomii
+A1	Status T19 Historical_Insignificant
+T20	Condition 1225 1249	wola guzowatego tarczycy
+N5	Reference T20 ICD10:E04.1	Guzek tarczycy pojedynczy, nietoksyczny
+T21	Date 1263 1268	2010r
+A2	Status T20 Historical_Insignificant
+R5	Dat Arg1:T21 Arg2:T19	
+R6	Dat Arg1:T21 Arg2:T20	
+T22	Treatment 1279 1288	usunięciu
+A3	Status T22 Historical_Insignificant
+T23	Condition 1289 1303	polipów macicy
+A4	Status T23 Historical_Insignificant
+N6	Reference T23 ICD10:N84.0	Polip trzonu macicy
+T24	Treatment 1325 1333	operacji
+A5	Status T24 Historical_Insignificant
+T25	Condition 1334 1356	przepukliny kręgosłupa
+N7	Reference T25 ICD10:M99.5	Zwężenie kanału kręgowego przez przepuklinę krążka międzykręgowego
+A6	Status T25 Historical_Insignificant
+T26	Symptom 1541 1575	napadowego uczucia kołatania serca
+N8	Reference T26 ICD10:R00.2	Kołatanie serca
+T27	Symptom 1579 1597	uczuciem niepokoju
+N9	Reference T27 ICD10:R45.1	Niepokój i pobudzenie
+T28	Date 1613 1625	od dwóch lat
+R7	Dat Arg1:T28 Arg2:T26	
+R8	Dat Arg1:T28 Arg2:T27	
+T29	Date 1642 1659	głównie wieczorem
+T30	Investigation 1781 1804	rezonansu magnetycznego
+T31	Investigation 1808 1811	EKG
+T32	Investigation_result 1822 1851	dodatkowe pobudzenia komorowe
+N10	Reference T32 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+R9	Inv Arg1:T31 Arg2:T32	
+T33	Date 1872 1882	ok 3-4 lat
+T34	Symptom 1883 1904	wędrujące bóle stawów
+N11	Reference T34 ICD10:M25.5	Ból stawu
+R10	Dat Arg1:T33 Arg2:T34	
+T35	Negation 1906 1912	Neguje
+T36	Symptom 1913 1926	zawroty głowy
+N12	Reference T36 ICD10:R42	Zawroty głowy i odurzenie
+T37	Symptom 1929 1941	zasłabnięcia
+T38	Symptom 1943 1951	omdlenia
+N13	Reference T38 ICD10:R55	Omdlenie i zapaść
+R11	Neg Arg1:T35 Arg2:T38	
+R12	Neg Arg1:T35 Arg2:T37	
+R13	Neg Arg1:T35 Arg2:T36	
+T39	Symptom 1979 2021	krótkotrwały incydent zachwiania równowagi
+N14	Reference T39 ICD10:R26.8	Inne i nieokreślone zaburzenia chodu i poruszania się
+T40	Treatment 2043 2066	częściowej strumektomii
+A7	Status T40 Historical_Insignificant
+T41	Condition 2076 2100	wola guzowatego tarczycy
+A8	Status T41 Historical_Insignificant
+N15	Reference T41 ICD10:E04.1	Guzek tarczycy pojedynczy, nietoksyczny
+T42	Date 2101 2106	2011r
+R14	Dat Arg1:T42 Arg2:T40	
+R15	Dat Arg1:T42 Arg2:T41	
+T43	Treatment 2120 2143	leczeniu substytucyjnym
+T44	Treatment 2173 2183	usunięciem
+A9	Status T44 Historical_Insignificant
+T45	Investigation 2148 2170	trzech histereskopiach
+T46	Condition 2184 2198	polipów macicy
+A10	Status T46 Historical_Insignificant
+N16	Reference T46 ICD10:N84.0	Polip trzonu macicy
+T47	Treatment 2203 2211	operacji
+A11	Status T47 Historical_Insignificant
+T48	Condition 2212 2234	przepukliny kręgosłupa
+A12	Status T48 Historical_Insignificant
+N17	Reference T48 ICD10:M99.5	Zwężenie kanału kręgowego przez przepuklinę krążka międzykręgowego
+T49	Treatment 2237 2254	Przebyte operacje
+T50	Treatment 2263 2282	Leczenie przewlekłe
+T51	Condition 2285 2307	niedoczynnośc tarczycy
+N18	Reference T51 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T52	Condition 2336 2339	WZW
+N19	Reference T52 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T53	Negation 2341 2342	-
+R16	Neg Arg1:T53 Arg2:T52	
+T54	Condition 2345 2354	borelioza
+N20	Reference T54 ICD10:A69.2	Choroba z Lyme
+T55	Negation 2357 2358	-
+R17	Neg Arg1:T55 Arg2:T54	
+T56	Condition 2363 2371	gruźlica
+T57	Negation 2372 2373	-
+R18	Neg Arg1:T57 Arg2:T56	
+T58	Condition 2377 2396	wywiadzie rodzinnym
+A13	Status T58 Family
+T59	Behaviour 2399 2414	Palenie tytoniu
+N22	Reference T59 ICD10:Z72.0	Używanie tytoniu
+T60	Negation 2416 2419	nie
+R19	Neg Arg1:T60 Arg2:T59	
+T61	Behaviour 2422 2433	Inne używki
+T62	Negation 2435 2438	nie
+R20	Neg Arg1:T62 Arg2:T61	
+T63	Condition 2439 2448	Uczulenia
+N23	Reference T63 ICD10:T78.4	Alergia, nieokreślona
+T64	Negation 2450 2456	neguje
+R21	Neg Arg1:T64 Arg2:T63	
+T65	Behaviour 2474 2500	warunki mieszkaniowe dobre
+T66	Drug 2507 2515	Euthyrox
+T67	Drug_dose 2516 2539	naprzemiennie 50 i 75ug
+R22	Drg Arg1:T66 Arg2:T67	
+T68	Investigation 2554 2564	Echo serca
+T69	Investigation 2567 2577	Holter EKG
+T70	Symptom 1111 1125	II kl. wg NYHA
+N24	Reference T70 ICD10:I50	Niewydolność serca
+R23	Dat Arg1:T29 Arg2:T26	
+R24	Dat Arg1:T29 Arg2:T27	
+N25	Reference T37 ICD10:R55	Omdlenie i zapaść
+N21	Reference T56 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N26	Reference T61 ICD10:Z72	Problemy związane ze stylem życia

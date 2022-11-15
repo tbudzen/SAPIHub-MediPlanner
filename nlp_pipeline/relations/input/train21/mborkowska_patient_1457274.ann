@@ -1,0 +1,84 @@
+T1	Behaviour 448 543	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T2	Investigation 547 570	Okresowo kontrola lipid
+T3	Condition 797 839	Łagodna niedomykalność zastawki aortalnej.
+N1	Reference T3 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T4	Condition 843 906	Poszerzenie opuszki aorty do 44 mm i aorty wstępującej do 40 mm
+N2	Reference T4 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T5	Condition 911 955	Przewlekła choroba wieńcowa - I klasa wg CCS
+N3	Reference T5 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T6	Condition 960 981	Nadciśnienie tętnicze
+N4	Reference T6 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T7	Condition 1004 1011	Otyłość
+N5	Reference T7 ICD10:E66	Otyłość
+T8	Condition 986 998	Dyslipidemia
+N6	Reference T8 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T9	Investigation 1168 1171	TTE
+T10	Investigation_result 1172 1180	IA II st
+N7	Reference T10 ICD10:I35.1	Niedomykalność zastawki aortalnej
+R1	Inv Arg1:T9 Arg2:T10	
+T11	Date 1183 1190	09/2017
+R2	Dat Arg1:T11 Arg2:T9	
+T12	Condition 1193 1237	przewlekłą chorobą wieńcową - I klasa wg CCS
+N8	Reference T12 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T13	Condition 1242 1248	OZW-UA
+N9	Reference T13 ICD10:I21	Ostry zawał mięśnia sercowego
+T14	Condition 1258 1288	zmiany brzeżne w tt wieńcowych
+N10	Reference T14 ICD10:I70	Miażdżyca
+T15	Condition 1290 1302	dyslipidemią
+N11	Reference T15 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T16	Condition 1304 1313	otyłością
+N12	Reference T16 ICD10:E66	Otyłość
+T17	Condition 1315 1338	nadciśnieniem tętniczym
+N13	Reference T17 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T18	Negation 1431 1437	Neguje
+T19	Symptom 1438 1450	zasłabnięcia
+N14	Reference T19 ICD10:R55	Omdlenie i zapaść
+T20	Symptom 1452 1461	duszności
+N15	Reference T20 ICD10:R06.0	Duszność
+T21	Symptom 1463 1494	typowe bóle w klatce piersiowej
+N16	Reference T21 ICD10:R07.3	Inne bóle w klatce piersiowej
+R3	Neg Arg1:T18 Arg2:T19	
+R4	Neg Arg1:T18 Arg2:T20	
+R5	Neg Arg1:T18 Arg2:T21	
+T22	Negation 1516 1522	neguje
+T23	Treatment 1496 1513	Przebyte operacje
+R6	Neg Arg1:T22 Arg2:T23	
+T24	Condition 1550 1553	WZW
+N17	Reference T24 ICD10:B18	
+T25	Condition 1563 1572	borelioza
+N18	Reference T25 ICD10:A69.2	Choroba z Lyme
+T26	Condition 1580 1588	gruźlica
+N19	Reference T26 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T27	Negation 1554 1560	( -  )
+R7	Neg Arg1:T27 Arg2:T24	
+T28	Negation 1573 1578	( - )
+R8	Neg Arg1:T28 Arg2:T25	
+T29	Negation 1589 1592	(-)
+R9	Neg Arg1:T29 Arg2:T26	
+T30	Condition 1638 1652	tętniaki aorty
+A1	Status T30 Family
+N20	Reference T30 ICD10:I71	Tętniak i rozwarstwienie aorty
+T31	Treatment 1660 1690	implantowane rozruszniki serca
+A2	Status T31 Family
+T32	Negation 1708 1711	nie
+T33	Negation 1725 1728	nie
+T34	Negation 1740 1746	neguje
+T35	Behaviour 1763 1789	warunki mieszkaniowe dobre
+T36	Drug 1814 1820	Lokren
+T37	Drug_dose 1821 1843	20mg  1x 1/2 tabl/rano
+R10	Drg Arg1:T36 Arg2:T37	
+T38	Drug 1845 1852	Amlozek
+T39	Drug_dose 1853 1880	10 mg 1 x 1 tabl/ wieczorem
+R11	Drg Arg1:T38 Arg2:T39	
+T40	Investigation 1896 1899	TEE
+T41	Investigation 1901 1904	TET
+T42	Investigation 1905 1926	angioCT tt wieńcowych
+T43	Condition 1729 1738	Uczulenia
+N21	Reference T43 ICD10:T78.4	Alergia, nieokreślona
+R12	Neg Arg1:T34 Arg2:T43	
+T44	Behaviour 1712 1723	Inne używki
+R13	Neg Arg1:T33 Arg2:T44	
+T45	Behaviour 1691 1706	Palenie tytoniu
+R14	Neg Arg1:T32 Arg2:T45	
+N22	Reference T45 ICD10:T65.2	Tytoń i nikotyna
+T46	Investigation 1426 1429	TEE

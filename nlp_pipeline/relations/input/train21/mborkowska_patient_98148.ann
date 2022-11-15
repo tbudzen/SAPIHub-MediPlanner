@@ -1,0 +1,120 @@
+T1	Condition 438 485	Umiarkowana/ciężka niedomykalność dwupłatkowej,
+N1	Reference T1 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T2	Condition 486 519	dwuspoidłowej zastawki aortalnej.
+N2	Reference T2 ICD10:Q23	Wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T3	Condition 523 572	Wrodzona wada serca - zwężenie zastawki aortalnej
+N3	Reference T3 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T4	Treatment 582 605	komisurotomii aortalnej
+T5	Date 607 616	13.05.99r
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Condition 622 653	Łagodna niedomykalność mitralna
+N4	Reference T6 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T7	Condition 658 719	Podejrzenie kardiomiopatii z niescalenia mięśnia lewej komory
+N5	Reference T7 ICD10:I42.8	Inne kardiomiopatie
+T8	Condition 721 748	Przerost ścian lewej komory
+N6	Reference T8 ICD10:I42.2	Inne kardiomiopatie przerostowe
+T9	Condition 753 778	Alergizacja paciorkowcowa
+T10	Behaviour 780 790	Nikotynizm
+T11	Investigation 1032 1041	MRI serca
+T12	Condition 1074 1102	kardiomiopatii z niescalenia
+N8	Reference T12 ICD10:I42.8	Inne kardiomiopatie
+T13	Condition 1114 1139	niedomykalności aortalnej
+N9	Reference T13 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T14	Drug 1276 1281	leków
+T15	Negation 1272 1275	Bez
+R2	Neg Arg1:T15 Arg2:T14	
+T16	Investigation 2624 2628	ECHO
+T17	Investigation 2630 2648	EKG metodą Holtera
+T18	Investigation 2650 2654	ABPM
+T19	Investigation 2656 2671	próba wysiłkowa
+T20	Negation 2527 2540	nie przyjmuje
+T21	Drug 2521 2525	Leki
+R3	Neg Arg1:T20 Arg2:T21	
+T22	Behaviour 2494 2520	warunki mieszkaniowe dobre
+T23	Negation 2420 2421	-
+T24	Negation 2435 2437	(-
+T25	Negation 2454 2457	(-)
+T26	Negation 2444 2447	(-)
+T27	Negation 2474 2476	(-
+T28	Behaviour 2459 2473	kontakt z odrą
+N10	Reference T28 ICD10:B05	Odra
+R4	Neg Arg1:T27 Arg2:T28	
+T29	Condition 2449 2453	odra
+N11	Reference T29 ICD10:B05	Odra
+R5	Neg Arg1:T25 Arg2:T29	
+T30	Condition 2440 2443	tbc
+N12	Reference T30 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+R6	Neg Arg1:T26 Arg2:T30	
+T31	Condition 2425 2434	borelioza
+N13	Reference T31 ICD10:A69.2	Choroba z Lyme
+R7	Neg Arg1:T24 Arg2:T31	
+T32	Condition 2415 2418	WZW
+N14	Reference T32 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+R8	Neg Arg1:T23 Arg2:T32	
+T33	Negation 2381 2387	neguje
+T34	Negation 2363 2369	neguje
+T35	Condition 2370 2379	Uczulenia
+N15	Reference T35 ICD10:T78.4	Alergia, nieokreślona
+R9	Neg Arg1:T33 Arg2:T35	
+T36	Behaviour 2350 2361	Inne używki
+R10	Neg Arg1:T34 Arg2:T36	
+T37	Behaviour 2307 2340	Palenie tytoniu: czyny nikotynizm
+N16	Reference T37 ICD10:T65.2	Tytoń i nikotyna
+T38	Treatment 2285 2306	Przebyte operacje: jw
+T39	Symptom 2140 2152	zasłabnięcia
+N17	Reference T39 ICD10:R55	Omdlenie i zapaść
+T40	Symptom 2154 2162	omdlenia
+N18	Reference T40 ICD10:R55	Omdlenie i zapaść
+T41	Symptom 2164 2174	krwawienia
+N19	Reference T41 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T42	Symptom 2176 2189	czarne stolce
+N20	Reference T42 ICD10:K92.1	Stolce smołowate
+T43	Symptom 2191 2207	brunatne wymioty
+N21	Reference T43 ICD10:K92.0	Wymioty krwawe
+T44	Condition 2209 2225	chorobę wrzodową
+N22	Reference T44 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T45	Symptom 2227 2241	duszność nocną
+N23	Reference T45 ICD10:I50.1	Niewydolność serca lewokomorowa
+T46	Symptom 2243 2258	obrzęki podudzi
+N24	Reference T46 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T47	Symptom 2260 2284	bóle w klatce piersiowej
+N25	Reference T47 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T48	Negation 2132 2138	Neguje
+R11	Neg Arg1:T48 Arg2:T39	
+R12	Neg Arg1:T48 Arg2:T40	
+R13	Neg Arg1:T48 Arg2:T41	
+R14	Neg Arg1:T48 Arg2:T42	
+R15	Neg Arg1:T48 Arg2:T43	
+R16	Neg Arg1:T48 Arg2:T44	
+R17	Neg Arg1:T48 Arg2:T45	
+R18	Neg Arg1:T48 Arg2:T46	
+R19	Neg Arg1:T48 Arg2:T47	
+T49	Condition 2113 2123	Nikotynizm
+N26	Reference T49 ICD10:F17.2	
+T50	Condition 2086 2111	Alergizacja paciorkowcowa
+T51	Condition 2020 2042	Istotna niedomykalność
+N27	Reference T51 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T52	Condition 2045 2084	umiarkowane zwężenie zastawki aortalnej
+N28	Reference T52 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T53	Treatment 1983 2006	komisurotomii aortalnej
+T54	Date 2007 2018	(13.05.99r)
+A2	Status T53 Historical_Insignificant
+R20	Dat Arg1:T54 Arg2:T53	
+T55	Condition 1924 1973	Wrodzona wada serca - zwężenie zastawki aortalnej
+N29	Reference T55 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T56	Condition 1471 1533	wrodzonej wady serca pod postacią zwężenia zastawki aortalnej,
+N30	Reference T56 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T57	Treatment 1570 1593	komisurotomii aortalnej
+T58	Date 1595 1605	13.05.99r)
+R21	Dat Arg1:T58 Arg2:T57	
+T59	Condition 1609 1619	istotną IA
+N31	Reference T59 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T60	Condition 1622 1636	umiarkowaną SA
+N32	Reference T60 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T61	Symptom 1883 1900	kołataniami serca
+N33	Reference T61 ICD10:R00.2	Kołatanie serca
+T62	Symptom 1803 1851	dobrą tolerancją wysiłku fizycznego I kalsa NYHA
+T63	Symptom 1778 1800	dolegliwości bólowych,
+T64	Negation 1774 1777	bez
+R22	Neg Arg1:T64 Arg2:T63	
+N7	Reference T10 ICD10:T65.2	Tytoń i nikotyna

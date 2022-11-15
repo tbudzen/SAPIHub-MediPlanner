@@ -1,0 +1,32 @@
+T1	Drug 329 337	Metocard
+T2	Drug_dose 338 352	1 x 25 mg rano
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 353 361	Metocard
+T4	Drug_dose 362 385	1 x 12.5 mg po południu
+R2	Drg Arg1:T3 Arg2:T4	
+T5	Treatment 391 425	kontroli w Poradni Kardiologicznej
+T6	Date 452 467	za 7-8 miesięcy
+R3	Dat Arg1:T6 Arg2:T5	
+T7	Treatment 749 776	operacji wrodzonej złożonej
+T8	Condition 779 849	siniczej wady serca pod postacią przełożenia głównych pni naczyniowych
+N1	Reference T8 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T9	Condition 851 893	współistniejące z ubytkiem międzykomorowym
+N2	Reference T9 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T10	Condition 895 916	hipoplazją łuku aorty
+N3	Reference T10 ICD10:Q25.4	Inne wrodzone wady rozwojowe aorty
+T11	Condition 922 938	koarktacją aorty
+N4	Reference T11 ICD10:Q25.1	Zwężenie cieśni aorty
+T12	Treatment 963 981	plastyce balonowej
+T13	Condition 982 994	rekoarktacji
+N5	Reference T13 ICD10:I77	
+T14	Condition 1132 1135	TGA
+N6	Reference T14 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T15	Treatment 1140 1162	zabiegach korekcyjnych
+T16	Investigation 1177 1194	badania kontrolne
+T17	Drug 1216 1224	Metocard
+T18	Condition 1226 1243	wywiad alergiczny
+N7	Reference T18 ICD10:T78.4	Alergia, nieokreślona
+T19	Negation 1244 1250	ujemny
+R4	Neg Arg1:T19 Arg2:T18	
+T20	Date 940 949	09.07.02r
+R5	Dat Arg1:T20 Arg2:T11	

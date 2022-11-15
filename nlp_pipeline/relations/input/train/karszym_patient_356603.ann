@@ -1,0 +1,91 @@
+T1	Treatment 342 399	dalsza opieka u lekarza POZ oraz w Poradni Neurologicznej
+T2	Investigation 413 477	kontrolne angio-CT tętnic wieńcowych w warunkach ambulatoryjnych
+T3	Behaviour 530 569	Dieta lekkostrawna, niskocholesterolowa
+T4	Drug 603 617	leków na stałe
+T5	Negation 575 602	Bez wskazań do przyjmowania
+R1	Neg Arg1:T5 Arg2:T4	
+T6	Condition 845 879	Łagodna niedomykalność trójdzielna
+N1	Reference T6 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T7	Condition 881 918	Podejrzenie napadowych zaburzeń rytmu
+T8	Negation 921 941	obserwacja negatywna
+R2	Neg Arg1:T8 Arg2:T7	
+T9	Symptom 951 963	zasłabnięciu
+T10	Treatment 985 993	operacji
+A1	Status T10 Historical_Insignificant
+N3	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T11	Date 1023 1037	w dzieciństwie
+R3	Dat Arg1:T11 Arg2:T10	
+T12	Symptom 1213 1233	epizodu zasłabnięcia
+T13	Negation 1234 1237	bez
+T14	Symptom 1238 1257	utraty przytomności
+R4	Neg Arg1:T13 Arg2:T14	
+T15	Symptom 1263 1314	nawracających epizodów osłabienia i kołatania serca
+T16	Date 1356 1374	ok 6 miesięcy temu
+T17	Symptom 1377 1389	zasłabnięcie
+R5	Dat Arg1:T16 Arg2:T17	
+T19	Date 1409 1425	po ok 1 tygodniu
+T20	Symptom 1452 1461	kołatania
+N4	Reference T20 ICD10:R00.2	Kołatanie serca
+T21	Symptom 1464 1485	szybkiego bicia serca
+N5	Reference T21 ICD10:R00.0	Tachykardia, nieokreślona
+T22	Symptom 1523 1565	towarzyszyło mu drętwienie kończyn górnych
+T23	Symptom 1493 1519	szybko ustąpiło samoistnie
+R7	Dat Arg1:T19 Arg2:T20	
+R8	Dat Arg1:T19 Arg2:T21	
+R9	Dat Arg1:T19 Arg2:T23	
+R10	Dat Arg1:T19 Arg2:T22	
+T24	Investigation 1586 1632	diagnozowana neurologicznie i laryngologicznie
+T25	Treatment 1650 1662	była leczona
+T26	Condition 1663 1697	niedokrwistość z niedoboru  żelaza
+N6	Reference T26 ICD10:D50.9	Niedokrwistość z niedoboru żelaza, nieokreślona
+T27	Treatment 1725 1733	operacje
+N7	Reference T27 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T28	Treatment 1775 1795	usunięcie 3 migdałka
+A2	Status T28 Historical_Insignificant
+N8	Reference T28 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+A3	Status T27 Historical_Insignificant
+T29	Date 1699 1713	W dzieciństwie
+R11	Dat Arg1:T29 Arg2:T27	
+R12	Dat Arg1:T29 Arg2:T28	
+T30	Date 1797 1811	Kilka lat temu
+T31	Treatment 1812 1821	osuniecie
+N9	Reference T31 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T32	Treatment 1841 1849	plastyka
+N10	Reference T32 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R13	Dat Arg1:T30 Arg2:T31	
+R14	Dat Arg1:T30 Arg2:T32	
+T33	Date 1872 1879	Obecnie
+T34	Negation 1880 1883	bez
+T35	Drug 1884 1889	leków
+R15	Neg Arg1:T34 Arg2:T35	
+R16	Dat Arg1:T33 Arg2:T35	
+T36	Negation 1902 1905	nie
+T37	Behaviour 1891 1901	Papierosów
+N11	Reference T37 ICD10:Z72.0	Używanie tytoniu
+T38	Behaviour 1906 1910	pali
+N12	Reference T38 ICD10:Z72.0	Używanie tytoniu
+R17	Neg Arg1:T36 Arg2:T37	
+R18	Neg Arg1:T36 Arg2:T38	
+T39	Condition 1941 1944	IHD
+A4	Status T39 Family
+A5	Source T39 Declared
+N13	Reference T39 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+N2	Reference T7 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T18	Condition 994 1022	torbieli podpajęczynówkowych
+N14	Reference T18 ICD10:G93.0	Torbiele mózgu
+R6	Dat Arg1:T11 Arg2:T18	
+A6	Status T18 Historical_Insignificant
+T40	Condition 1736 1773	obustronne wodniaki podpajęczynówkowe
+N15	Reference T40 ICD10:G93.0	Torbiele mózgu
+A7	Status T40 Historical_Insignificant
+R19	Dat Arg1:T29 Arg2:T40	
+A8	Status T32 Historical_Insignificant
+T41	Condition 1850 1870	przepukliny pępkowej
+A9	Status T41 Historical_Insignificant
+N16	Reference T41 ICD10:K42.9	Przepuklina pępkowa bez niedrożności lub zgorzeli
+R20	Dat Arg1:T30 Arg2:T41	
+T42	Condition 1822 1838	torbieli jajnika
+A10	Status T42 Historical_Insignificant
+N17	Reference T42 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+R21	Dat Arg1:T30 Arg2:T42	
+A11	Status T31 Historical_Insignificant

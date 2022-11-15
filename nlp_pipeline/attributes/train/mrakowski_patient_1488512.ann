@@ -1,0 +1,99 @@
+T1	Condition 447 524	Wrodzona wada serca pod postacią ubytku przegrody międzyprzedsionkowej typu 2
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Condition 527 570	przeciekiem lewo-prawym i z wtórnym do wady
+N2	Reference T2 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T3	Condition 571 626	powiększeniem prawej komory serca i prawego przedsionka
+N3	Reference T3 ICD10:I51.7	Powiększenie serca
+T4	Condition 628 671	Łagodna dysfunkcja rozkurczowa lewej komory
+N4	Reference T4 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+T5	Condition 673 717	Łagodna niedomykalność zastawki trójdzielnej
+N5	Reference T5 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T6	Treatment 727 740	appendektomii
+A1	Status T6 Historical_Insignificant
+T7	Date 741 759	w wieku dziecięcym
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Treatment 765 790	operacji stawu kolanowego
+A2	Status T8 Historical_Insignificant
+T9	Condition 793 810	zerwanie więzadeł
+N6	Reference T9 ICD10:M23.6	Inne spontaniczne zerwanie więzadeł kolana
+A3	Status T9 Historical_Insignificant
+T10	Date 812 823	14 lat temu
+R2	Dat Arg1:T10 Arg2:T8	
+R3	Dat Arg1:T10 Arg2:T9	
+T11	Treatment 949 976	dalsza opieka w poradni POZ
+T12	Treatment 984 1029	ponowne przyjęcie do Kliniki celem zamknięcia
+T13	Condition 1030 1033	ASD
+N7	Reference T13 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T14	Treatment 1034 1041	zapinką
+T15	Date 1048 1058	04.11.2019
+R4	Dat Arg1:T15 Arg2:T12	
+R5	Dat Arg1:T15 Arg2:T13	
+R6	Dat Arg1:T15 Arg2:T14	
+T16	Investigation 1065 1104	regularna kontrola ciśnienia tętniczego
+T17	Investigation 1112 1141	okresowa kontrola lipidogramu
+T18	Behaviour 1149 1185	dieta zbliżona do śródziemnomorskiej
+T19	Symptom 1388 1435	uczucia duszności przy gwałtownych pionizacjach
+N8	Reference T19 ICD10:R06.0	Duszność
+T20	Symptom 1437 1451	zawrotów głowy
+N9	Reference T20 ICD10:R42	Zawroty głowy i odurzenie
+T21	Condition 1468 1472	RBBB
+N10	Reference T21 ICD10:I45.0	Blok prawej odnogi pęczka Hisa
+T22	Investigation 1476 1479	ekg
+T23	Investigation_result 1495 1504	QRS 96 ms
+R7	Inv Arg1:T22 Arg2:T23	
+T24	Investigation 1516 1519	TTE
+T25	Investigation_result 1520 1547	wiotka IAS - pod. przecieku
+R8	Inv Arg1:T24 Arg2:T25	
+N11	Reference T25 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+N12	Reference T23 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+T26	Investigation 1552 1568	EKG Holterowskim
+T27	Investigation_result 1573 1602	zaburzeń rytmu i przewodzenia
+T28	Investigation_result 1604 1632	okresy tachykardii zatokowej
+N13	Reference T28 ICD10:R00.0	Tachykardia, nieokreślona
+R9	Inv Arg1:T26 Arg2:T27	
+R10	Inv Arg1:T26 Arg2:T28	
+T29	Treatment 1665 1682	Przebyte operacje
+T30	Treatment 1684 1697	appendektomia
+A4	Status T30 Historical_Insignificant
+T31	Date 1698 1716	w wieku dziecięcym
+R11	Dat Arg1:T31 Arg2:T30	
+T32	Treatment 1718 1743	operacja stawu kolanowego
+A5	Status T32 Historical_Insignificant
+T33	Condition 1746 1763	zerwanie więzadeł
+A6	Status T33 Historical_Insignificant
+N14	Reference T33 ICD10:M23.6	Inne spontaniczne zerwanie więzadeł kolana
+T34	Date 1765 1776	14 lat temu
+R12	Dat Arg1:T34 Arg2:T33	
+R13	Dat Arg1:T34 Arg2:T32	
+T35	Condition 1778 1793	Wywiad rodzinny
+A7	Status T35 Family
+T36	Condition 1801 1804	ASD
+A8	Status T36 Family
+N15	Reference T36 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T37	Condition 1805 1812	Alergie
+N16	Reference T37 ICD10:T78.4	Alergia, nieokreślona
+T38	Negation 1814 1820	neguje
+R14	Neg Arg1:T38 Arg2:T37	
+T39	Behaviour 1822 1832	Nikotynizm
+T40	Negation 1834 1840	neguje
+R15	Neg Arg1:T40 Arg2:T39	
+T41	Behaviour 1843 1864	Alkohol: okazjonalnie
+N18	Reference T41 ICD10:Z72.1	Używanie alkoholu
+T42	Behaviour 1866 1883	Uzależnienie inne
+T43	Negation 1885 1891	neguje
+R16	Neg Arg1:T43 Arg2:T42	
+T44	Behaviour 1909 1918	lakiernik
+T45	Investigation 1962 1972	echo serca
+T46	Investigation 1974 1977	TET
+T47	Investigation 1979 1983	ABPM
+T48	Investigation 1985 1995	Holter ekg
+T49	Investigation 1997 2015	rtg kl. piersiowej
+N19	Reference T27 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T50	Negation 1569 1572	bez
+R17	Neg Arg1:T50 Arg2:T27	
+N17	Reference T39 ICD10:Z72.0	Używanie tytoniu
+N20	Reference T42 ICD10:Z72	Problemy związane ze stylem życia
+T51	Drug 1920 1924	Leki
+T52	Negation 1926 1933	żadnych
+R18	Neg Arg1:T52 Arg2:T51	
+A9	Status T41 Historical_Insignificant

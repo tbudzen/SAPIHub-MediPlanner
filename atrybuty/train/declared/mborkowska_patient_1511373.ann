@@ -1,0 +1,70 @@
+T1	Condition 1107 1135	choroby niedokrwiennej serca
+A1	Source T1 Declared
+N1	Reference T1 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T2	Behaviour 1161 1171	Nikotynizm
+T3	Condition 1173 1205	Zmiany zwyrodnieniowe kręgosłupa
+N3	Reference T3 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T4	Condition 1207 1220	Żylaki odbytu
+N4	Reference T4 ICD10:I84	Hemoroidy
+T5	Condition 1019 1083	Wada wrodzona serca pod postacią dwupłatkowej zastawki aortalnej
+N5	Reference T5 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T6	Drug 759 766	Roswera
+T7	Drug_dose 767 790	10 mg 1 tabl. wieczorem
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 672 686	ProctoGlyvenol
+T9	Drug_dose 687 728	krem 2 x dz do ustąpienia ostrych objawów
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 729 751	nasiadówki z kory dębu
+T11	Drug_dose 752 758	1 x dz
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 636 649	Diohespan Max
+T13	Drug_dose 650 671	1000mg 1 tabl. 2 x dz
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Behaviour 581 626	stały, umiarkowany, aerobowy wysiłek fizyczny
+T15	Behaviour 552 580	ograniczenie palenia tytoniu
+T16	Behaviour 491 551	dieta bogatoresztkowa z unikaniem cukrów prostych i alkoholu
+T17	Investigation 1917 1927	echo serca
+T18	Investigation 1929 1932	TET
+T19	Investigation 1934 1938	ABPM
+T20	Investigation 1940 1946	Holter
+T21	Investigation 1948 1966	RTG kl. piersiowej
+T22	Negation 1879 1889	nie podaje
+T23	Drug 1873 1877	Leki
+R5	Neg Arg1:T22 Arg2:T23	
+T24	Negation 1825 1835	nie podaje
+T25	Condition 1814 1823	Uczulenia
+N6	Reference T25 ICD10:T78.4	Alergia, nieokreślona
+R6	Neg Arg1:T24 Arg2:T25	
+T26	Behaviour 1757 1783	Inne używki: okazjonalnie,
+T27	Behaviour 1784 1813	regularnie alkohol 2-3 piwa/d
+N7	Reference T27 ICD10:Z72.1	Używanie alkoholu
+T28	Behaviour 1707 1737	Palenie tytoniu: tak 1,5 p/d -
+T29	Condition 1703 1706	RZS
+N9	Reference T29 ICD10:M06.9	Reumatoidalne zapalenie stawów, nieokreślone
+T30	Condition 1663 1666	WZW
+T31	Condition 1672 1681	borelioza
+N11	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Negation 1682 1685	(-)
+R7	Neg Arg1:T32 Arg2:T31	
+T33	Negation 1667 1671	(-),
+R8	Neg Arg1:T33 Arg2:T30	
+T34	Negation 1625 1635	nie podaje
+T35	Negation 1593 1603	nie podaje
+T36	Treatment 1604 1623	Leczenie przewlekłe
+R9	Neg Arg1:T34 Arg2:T36	
+T37	Treatment 1574 1591	Przebyte operacje
+R10	Neg Arg1:T35 Arg2:T37	
+T38	Symptom 1393 1438	bólów w kl. piersiowej o charakterze kłującym
+N12	Reference T38 ICD10:R07.3	Inne bóle w klatce piersiowej
+T39	Date 1439 1452	od ok. 1 roku
+R11	Dat Arg1:T39 Arg2:T38	
+T40	Condition 1518 1538	skolioza lewostronna
+N13	Reference T40 ICD10:M41	Skolioza
+T41	Condition 1540 1573	przepukliny kręgosłupa odc. L3-S1
+N14	Reference T41 ICD10:M99.5	Zwężenie kanału kręgowego przez przepuklinę krążka międzykręgowego
+T42	Date 1746 1756	ok. 15 lat
+R12	Dat Arg1:T42 Arg2:T28	
+T43	Investigation 1085 1106	Obserwacja w kierunku
+N2	Reference T2 ICD10:Z72.0	Używanie tytoniu
+N10	Reference T30 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N8	Reference T28 ICD10:Z72.0	Używanie tytoniu

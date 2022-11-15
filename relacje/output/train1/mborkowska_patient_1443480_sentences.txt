@@ -1,0 +1,604 @@
+allRelations          : 28
+oks                   : 6
+isRedundantAndRemoveds: 19
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 2
+GOOD / BAD            : 25 / 3
+Sentence 0:
+------------------------------------------------
+Wiek: 1 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zastosowane leczenie
+
+
+
+Sentence 3:
+------------------------------------------------
+Acesan, Captopril, Spironol, Sildenafil, Dormicum
+------------------------------------------------
+
+
+
+Sentence 4:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 5:
+Acesan 25mg 1 x dziennie
+Spironol 5mg 1 x dziennie
+Captopril 2mg 2 x dziennie
+Sildenafil 3mg 2 x dziennie
+
+Przyjęcie do Kliniki 22.11.2019 w celu wykonania badania Angio CT (konieczny wcześniejszy telefon do Kliniki w celu potwierdzenia terminu - proszę o telefon około 12.11.2019 w celu potwierdzenia zakończenia remontu pracowni tomografii komputerowej).
+
+R1	Drg Arg1:T6 Arg2:T10 << OK >>	Acesan -> 25mg 1 x dziennie  <RANK: 3> <info: start[497, 504] <type: RIGHT>>
+R2	Drg Arg1:T6 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Acesan -> 5mg 1 x dziennie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[497, 531] <type: RIGHT>>
+R3	Drg Arg1:T6 Arg2:T12 <<REDUNDANT!!!REMOVED>>	Acesan -> 2mg 2 x dziennie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[497, 558] <type: RIGHT>>
+R4	Drg Arg1:T6 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Acesan -> 3mg 2 x dziennie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[497, 586] <type: RIGHT>>
+R5	Drg Arg1:T7 Arg2:T10 <<REDUNDANT!!!REMOVED>>	Spironol -> 25mg 1 x dziennie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[522, 504] <type: LEFT>>
+R6	Drg Arg1:T7 Arg2:T11 << OK >>	Spironol -> 5mg 1 x dziennie  <RANK: 3> <info: start[522, 531] <type: RIGHT>>
+R7	Drg Arg1:T7 Arg2:T12 <<REDUNDANT!!!REMOVED>>	Spironol -> 2mg 2 x dziennie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[522, 558] <type: RIGHT>>
+R8	Drg Arg1:T7 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Spironol -> 3mg 2 x dziennie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[522, 586] <type: RIGHT>>
+R9	Drg Arg1:T8 Arg2:T10 <<REDUNDANT!!!REMOVED>>	Captopril -> 25mg 1 x dziennie <:REMOVED other first tag between (left):> <RANK: 1> <info: start[548, 504] <type: LEFT>>
+R10	Drg Arg1:T8 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Captopril -> 5mg 1 x dziennie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[548, 531] <type: LEFT>>
+R11	Drg Arg1:T8 Arg2:T12 << OK >>	Captopril -> 2mg 2 x dziennie  <RANK: 3> <info: start[548, 558] <type: RIGHT>>
+R12	Drg Arg1:T8 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Captopril -> 3mg 2 x dziennie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[548, 586] <type: RIGHT>>
+R13	Drg Arg1:T9 Arg2:T10 <<REDUNDANT!!!REMOVED>>	Sildenafil -> 25mg 1 x dziennie <:REMOVED other first tag between (left):> <RANK: 1> <info: start[575, 504] <type: LEFT>>
+R14	Drg Arg1:T9 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Sildenafil -> 5mg 1 x dziennie <:REMOVED other first tag between (left):> <RANK: 1> <info: start[575, 531] <type: LEFT>>
+R15	Drg Arg1:T9 Arg2:T12 <<REDUNDANT!!!REMOVED>>	Sildenafil -> 2mg 2 x dziennie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[575, 558] <type: LEFT>>
+R16	Drg Arg1:T9 Arg2:T13 << OK >>	Sildenafil -> 3mg 2 x dziennie  <RANK: 3> <info: start[575, 586] <type: RIGHT>>
+
+
+Sentence 6:
+Do przyjęcia konieczne skierowanie do szpitala od lekarza POZ.
+
+
+
+Sentence 7:
+------------------------------------------------
+
+
+
+Sentence 8:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 9:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q23.4|Rozpoznanie II: ICD10:Z98.8|Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: ICD10:R23.0|Opisowo:: Wrodzona, sinicza wada serca pod postacią hipoplazji lewej komory serca.\x0aStan po operacji met.
+
+
+Sentence 10:
+Norwooda (12.06.2018)\x0aStan po balonoplastyce RPA (19.06.2018)\x0aStan po operacji met. dwukierunkowego Glenna (05.11.2018)\x0aStan op balonoplastyce i implantacji stentu do LPA (16.11.2018)
+------------------------------------------------
+
+R17	Dat Arg1:T16 Arg2:T17 <<REDUNDANT!!!SHOULD BE REMOVED>>	12.06.2018 -> po balonoplastyce RPA  <RANK: 3> <info: start[1275, 1295] <type: RIGHT>>
+R18	Dat Arg1:T16 Arg2:T19 <<REDUNDANT!!!REMOVED>>	12.06.2018 -> operacji met. dwukierunkowego Glenna <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1275, 1341] <type: RIGHT>>
+R19	Dat Arg1:T16 Arg2:T21 <<REDUNDANT!!!REMOVED>>	12.06.2018 -> balonoplastyce i implantacji stentu do LPA <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1275, 1402] <type: RIGHT>>
+R20	Dat Arg1:T18 Arg2:T17 <<SHOULD NOT BE REMOVED>>	19.06.2018 -> po balonoplastyce RPA <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1318, 1295] <type: LEFT>>
+R21	Dat Arg1:T18 Arg2:T19 <<REDUNDANT!!!SHOULD BE REMOVED>>	19.06.2018 -> operacji met. dwukierunkowego Glenna  <RANK: 3> <info: start[1318, 1341] <type: RIGHT>>
+R22	Dat Arg1:T18 Arg2:T21 <<REDUNDANT!!!REMOVED>>	19.06.2018 -> balonoplastyce i implantacji stentu do LPA <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1318, 1402] <type: RIGHT>>
+R23	Dat Arg1:T20 Arg2:T17 <<REDUNDANT!!!REMOVED>>	05.11.2018 -> po balonoplastyce RPA <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1379, 1295] <type: LEFT>>
+R24	Dat Arg1:T20 Arg2:T19 << OK >>	05.11.2018 -> operacji met. dwukierunkowego Glenna  <RANK: 3> <info: start[1379, 1341] <type: LEFT>>
+R25	Dat Arg1:T20 Arg2:T21 <<REDUNDANT!!!REMOVED>>	05.11.2018 -> balonoplastyce i implantacji stentu do LPA <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1379, 1402] <type: RIGHT>>
+R26	Dat Arg1:T22 Arg2:T17 <<REDUNDANT!!!REMOVED>>	16.11.2018 -> po balonoplastyce RPA <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1446, 1295] <type: LEFT>>
+R27	Dat Arg1:T22 Arg2:T19 <<REDUNDANT!!!REMOVED>>	16.11.2018 -> operacji met. dwukierunkowego Glenna <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1446, 1341] <type: LEFT>>
+R28	Dat Arg1:T22 Arg2:T21 << OK >>	16.11.2018 -> balonoplastyce i implantacji stentu do LPA  <RANK: 3> <info: start[1446, 1402] <type: LEFT>>
+
+
+Sentence 11:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 12:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:13.26[10^3/ul]
+    
+
+
+Sentence 13:
+RBC Krwinki czerwone:5.82[10^6/ul]
+    
+
+
+Sentence 14:
+HGB Hemoglobina:16.7[g/dl]
+    
+
+
+Sentence 15:
+HCT Hematokryt:44.7[%]
+    
+
+
+Sentence 16:
+MCV wskaźnik czerwonokrw:76.8[fl]
+    
+
+
+Sentence 17:
+MCH wskaźnik czerwonokrw:28.7[pg]
+    
+
+
+Sentence 18:
+MCHC wskaźnik czerwonokr:37.4[g/dl]
+    
+
+
+Sentence 19:
+PLT z morfologii:371[10^3/ul]
+    
+
+
+Sentence 20:
+RDW-SD:36.2[fl]
+    
+
+
+Sentence 21:
+RDW-CV:13.3[%]
+    PDW:10.6[fl]
+    
+
+
+Sentence 22:
+MPV:9.6[fl]
+    
+
+
+Sentence 23:
+P-LCR:21.2[%]
+    
+
+
+Sentence 24:
+PCT (hematokryt płytkowy:0.35[%]
+    
+
+
+Sentence 25:
+NEUTR# wartość bezwzględ:6.98[10^3/ul]
+    
+
+
+Sentence 26:
+NEUTR%:52.7[%]
+    
+
+
+Sentence 27:
+LYMH# wartość bezwzględn:4.46[10^3/ul]
+    
+
+
+Sentence 28:
+LYMPH%:33.6[%]
+    
+
+
+Sentence 29:
+MONO# wartość bezwzględn:1.21[10^3/ul]
+    MONO%:9.1[%]
+    
+
+
+Sentence 30:
+EO# wartość bezwzględna:0.56[10^3/ul]
+    
+
+
+Sentence 31:
+EO%:4.2[%]
+    
+
+
+Sentence 32:
+BASO# wartość bezwzględn:0.05[10^3/ul]
+    BASO%:0.4[%]
+    
+
+
+Sentence 33:
+NRBC %:0.0[%]
+    
+
+
+Sentence 34:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 35:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:29.3[sek]
+
+
+
+Sentence 36:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 37:
+Czas protrombinowy:12.1[sek]
+    
+
+
+Sentence 38:
+Wskaźnik PT:90.9[%]
+    
+
+
+Sentence 39:
+INR:1.10
+Czas trombinowy TT: Czas trombinowy TT:15.8[sek]
+
+
+
+Sentence 40:
+Fibrynogen: Fibrynogen:2.34[g/L]
+
+
+
+Sentence 41:
+Płytki krwi z THEX: Płytki krwi:345[10^3/ul]
+
+
+
+Sentence 42:
+Badanie ogólne moczu
+    
+
+
+Sentence 43:
+barwa:słomkowy[ ]
+    
+
+
+Sentence 44:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 45:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 46:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 47:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 48:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 49:
+ciężar właściwy:1.003[ ]
+    pH:7.0[ ]
+    
+
+
+Sentence 50:
+białko:nieobecne[ ]
+    
+
+
+Sentence 51:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 52:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 53:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 54:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 55:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 56:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 57:
+leukocyty:1 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 58:
+TSH: TSH:7.17[uIU/ml]
+
+
+
+Sentence 59:
+FT3: FT3:3.78[pg/ml]
+
+
+
+Sentence 60:
+FT4: FT4:1.13[ng/dl]
+
+
+
+Sentence 61:
+Troponina T: Troponina T:9.1[pg/ml]
+
+
+
+Sentence 62:
+Witamina D 25-OH: Witamina D 25-OH:53.3[ng/ml]
+
+
+
+Sentence 63:
+AFP: AFP:9.60[IU/ml]
+
+
+
+Sentence 64:
+ALAT: ALAT:20[U/L]
+
+
+
+Sentence 65:
+Albumina: Albumina:4.7[g/dl]
+
+
+
+Sentence 66:
+ASPAT: ASPAT:44[U/L]
+Białko całkowite w surowicy (TP): Białko całkowite w surow:6.8[g/dl]
+
+
+
+Sentence 67:
+Bilirubina niesprzężona (pośrednia) (Bu): Bilirubina niesprzężona:0.58[mg/dl]
+
+
+
+Sentence 68:
+Bilirubina sprzężona (bezpośrednia) (Bc): Bilirubina sprzężona (be:0.00[mg/dl]
+
+
+
+Sentence 69:
+Bilirubina całkowita (TBil): Bilirubina całkowita:0.85[mg/dl]
+
+
+
+Sentence 70:
+CK - aktywność: CK:127[U/L]
+
+
+
+Sentence 71:
+CKMB aktywność: CKMB:42[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.56[mg/dl]
+
+
+
+Sentence 72:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 73:
+Potas (K): Potas:5.1[mmol/L]
+
+
+
+Sentence 74:
+Chlorki (Cl): Chlorki:106[mmol/L]
+
+
+
+Sentence 75:
+Fosfataza alkaliczna (ALP): Fosfataza alkaliczna:245[U/L]
+
+
+
+Sentence 76:
+Fosforany nieorganiczne: Fosforany nieorganiczne:2.01[mmol/L]
+
+
+
+Sentence 77:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:18[U/L]
+
+
+
+Sentence 78:
+Kreatynina + GFR
+    
+
+
+Sentence 79:
+Kreatynina w surowicy:0.33[mg/dl]
+    
+
+
+Sentence 80:
+eGFR stand.
+
+
+Sentence 81:
+wg Schwartza:131.7[ml/min/1,73 m^2]
+    
+
+
+Sentence 82:
+wzrost:79[cm]
+
+
+
+Sentence 83:
+Mleczany (LAC): Mleczany:40.7[mg/dl]
+
+
+
+Sentence 84:
+LDH Dehydrogenaza mleczanowa: LDH Dehydrogenaza mlecza:318[U/L]
+
+
+
+Sentence 85:
+Magnez: Magnez:1.02[mmol/L]
+
+
+
+Sentence 86:
+Mocznik: Mocznik:25[mg/dl]
+
+
+
+Sentence 87:
+Wapń całkowity: Wapń całkowity:2.56[mmol/L]
+
+
+
+Sentence 88:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    
+
+
+Sentence 89:
+pH:7.296
+    pCO2:45.3[mmHg]
+    BE:-4.90[mmol/L]
+    
+
+
+Sentence 90:
+HCO3:21.4[mmol/L]
+    pO2:32.7[mmHg]
+    
+
+
+Sentence 91:
+O2Sat:52.5[%]
+
+
+
+Sentence 92:
+Glukoza w surowicy: Glukoza w surowicy:59[mg/dl]
+
+
+
+Sentence 93:
+NT-proBNP surowica: NT-proBNP w surowicy:293[pg/ml]
+------------------------------------------------
+
+
+
+Sentence 94:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 95:
+Q23.4
+Z98.8
+
+
+
+Sentence 96:
+Z95.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 97:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 98:
+I81
+G21
+I87
+O61
+I89
+L23
+M87
+N45
+L07
+I09
+I91
+C55
+O91
+
+
+
+Sentence 99:
+G11
+I97
+I77
+K33
+L31
+
+
+
+Sentence 100:
+L11
+I17
+N11
+I19
+O35
+M37
+
+
+
+Sentence 101:
+N13
+M19
+M18
+
+
+
+Sentence 102:
+------------------------------------------------
+
+

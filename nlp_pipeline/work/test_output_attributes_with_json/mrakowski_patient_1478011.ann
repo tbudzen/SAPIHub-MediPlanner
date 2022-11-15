@@ -1,0 +1,68 @@
+T1	Condition 448 469	Nadciśnienie tętnicze
+T2	Condition 471 491	Hipercholesterolemia
+T3	Condition 493 517	Choroba wrzodowa żołądka
+dka
+T4	Condition 519 534	Cukrzyca typu 2
+T5	Condition 773 814	Łagodna niedomykalność zastawki mitralnej
+T6	Condition 820 832	trójdzielnej
+T7	Condition 834 895	Niewydolność serca z zachowaną funkcją skurczową lewej komory
+T8	Condition 897 918	Nadciśnienie tętnicze
+T9	Condition 920 940	Hipercholesterolemia
+T10	Condition 942 966	Choroba wrzodowa żołądka
+dka
+T11	Condition 968 983	Cukrzyca typu 2
+T12	Condition 985 1010	Miażdżyca tętnic szyjnych
+T13	Symptom 1180 1224	zmniejszenia tolerancji wysiłku postępującej
+T14	Date 1225 1233	od 2 lat
+T15	Condition 1248 1250	HA
+T16	Condition 1252 1254	DM
+T17	Condition 1255 1279	choroba wrzodowa żoładka
+dka
+T18	Treatment 1281 1289	Operacje
+T19	Negation 1290 1291	-
+T20	Behaviour 1292 1302	Nikotynizm
+T21	Negation 1307 1308	-
+T22	Behaviour 1310 1317	Alkohol
+T23	Negation 1318 1319	-
+T24	Negation 1328 1334	neguje
+T25	Condition 1336 1353	uczulenia na leki
+T26	Symptom 1355 1388	krwawienia z przewodu pokarmowego
+T27	Condition 1390 1405	Wywiad rodzinny
+T28	Negation 1406 1407	-
+T29	Investigation 1457 1467	ECHO serca
+T30	Investigation 1469 1479	Holter EKG
+T31	Investigation 1481 1490	Holter RR
+T32	Investigation 1492 1494	PW
+N1	Reference T1 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N2	Reference T2 ICD10:E78.0	Czysta hipercholesterolemia
+N3	Reference T3 ICD10:K25	WrzÃ³d Å¼oÅÄdka
+N4	Reference T4 ICD10:E11	Cukrzyca insulinoniezaleÅ¼na
+N5	Reference T5 ICD10:I34.0	NiedomykalnoÅÄ zastawki mitralnej
+N6	Reference T6 ICD10:I07.1	NiedomykalnoÅÄ zastawki trÃ³jdzielnej
+N7	Reference T7 ICD10:I50	NiewydolnoÅÄ serca
+N8	Reference T8 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N9	Reference T9 ICD10:E78.0	Czysta hipercholesterolemia
+N10	Reference T10 ICD10:K25	WrzÃ³d Å¼oÅÄdka
+N11	Reference T11 ICD10:E11	Cukrzyca insulinoniezaleÅ¼na
+N12	Reference T12 ICD10:I70.8	MiaÅ¼dÅ¼yca innych tÄtnic
+N13	Reference T13 ICD10:R53	ZÅe samopoczucie i zmÄczenie
+N14	Reference T15 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N15	Reference T16 ICD10:E14	Cukrzyca nieokreÅlona
+N16	Reference T17 ICD10:K27	WrzÃ³d trawienny o nieokreÅlonej lokalizacji
+N17	Reference T18 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N18	Reference T20 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N19	Reference T22 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N20	Reference T25 ICD10:Z88	Uczulenia na leki, Årodki farmakologiczne i substancje biologiczne w wywiadzie
+N21	Reference T26 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreÅlony
+R1	Dat Arg1:T14 Arg2:T15
+R14	Neg Arg1:T24 Arg2:T25
+R18	Neg Arg1:T28 Arg2:T27
+R2	Dat Arg1:T14 Arg2:T16
+R3	Dat Arg1:T14 Arg2:T17
+R4	Neg Arg1:T19 Arg2:T20
+R5	Neg Arg1:T19 Arg2:T22
+R6	Neg Arg1:T19 Arg2:T18
+R7	Neg Arg1:T21 Arg2:T20
+R8	Neg Arg1:T21 Arg2:T22
+A1	Status T18 Historical_Insignificant
+A2	Status T27 Family

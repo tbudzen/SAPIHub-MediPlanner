@@ -1,0 +1,49 @@
+T1	Treatment 408 437	kontrola ciśnienia tętniczego
+T2	Behaviour 442 522	Higieniczny tryb życia: rzucenie palenia tytoniu, ograniczenie spożycia alkoholu
+T3	Drug 559 562	IPP
+T4	Drug_dose 563 605	20 mg 1x1 tabl rano 30 min przed posiłkiem
+R1	Drg Arg1:T3 Arg2:T4	
+T5	Condition 834 875	Łagodna niedomykalność zastawki mitralnej
+N1	Reference T5 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T6	Condition 915 925	Nikotynizm
+N2	Reference T6 ICD10:F17.2	
+T7	Condition 877 901	Choroba wrzodowa żołądka
+N3	Reference T7 ICD10:K28	Wrzód żołądka i jelita czczego
+T8	Condition 1402 1426	choroba wrzodowa żołądka
+N4	Reference T8 ICD10:K28	Wrzód żołądka i jelita czczego
+T9	Date 1427 1440	w przeszłości
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Condition 1443 1446	HA?
+N5	Reference T10 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T11	Symptom 1320 1345	bólów w klatce piersiowej
+N6	Reference T11 ICD10:R07.3	Inne bóle w klatce piersiowej
+T12	Date 1348 1379	od kilku lat, głównie wieczorem
+R3	Dat Arg1:T12 Arg2:T11	
+T13	Negation 1449 1461	chory neguje
+R4	Neg Arg1:T13 Arg2:T10	
+T14	Negation 1482 1489	żadnych
+T15	Treatment 1463 1480	Przebyte operacje
+R5	Neg Arg1:T14 Arg2:T15	
+T16	Negation 1508 1521	bez znaczenia
+T17	Condition 1491 1506	Wywiad rodzinny
+A2	Status T17 Family
+R6	Neg Arg1:T16 Arg2:T17	
+T18	Condition 1523 1530	Alergie
+N7	Reference T18 ICD10:T78.4	Alergia, nieokreślona
+T19	Negation 1532 1538	neguje
+R7	Neg Arg1:T19 Arg2:T18	
+T20	Behaviour 1540 1564	Nikotynizm: 50 paczkolat
+T21	Behaviour 1565 1637	Alkohol: spożywa - okazjonalnie, dzisiaj o 2 nad ranem ostatnie spożycie
+N9	Reference T21 ICD10:Z72.1	Używanie alkoholu
+T22	Negation 1658 1664	neguje
+T23	Behaviour 1639 1656	Uzależnienie inne
+R8	Neg Arg1:T22 Arg2:T23	
+T24	Negation 1736 1743	żadnych
+T25	Drug 1730 1734	Leki
+R9	Neg Arg1:T24 Arg2:T25	
+T26	Investigation 1771 1781	echo serca
+T27	Investigation 1783 1786	TET
+T28	Investigation 1788 1792	ABPM
+T29	Investigation 1794 1805	Holter ekg,
+T30	Investigation 1806 1824	rtg kl. piersiowej
+N8	Reference T20 ICD10:T65.2	Tytoń i nikotyna

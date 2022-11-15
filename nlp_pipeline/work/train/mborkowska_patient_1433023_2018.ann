@@ -1,0 +1,78 @@
+T1	Drug 341 349	Setal MR
+T2	Drug 351 356	Acard
+T3	Drug 358 365	Piramil
+T4	Drug 367 370	IPP
+T5	Drug 372 377	NaSen
+T6	Drug 379 384	Otrex
+T7	Treatment 495 517	kontrola u lekarza POZ
+T8	Treatment 520 561	dalsza kontrola w Poradni Kardiologicznej
+T9	Treatment 564 678	wskazana ponowna hospitalizacja w tutejszej klinice celem oceny skuteczności leczenia (skierowanie od lekarza POZ)
+T10	Drug 711 719	Setal MR
+T11	Condition 938 976	Przewlekła choroba niedokrwienna serca
+N1	Reference T11 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T12	Condition 978 1010	Łagodna niedomykalność mitralna.
+N2	Reference T12 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T13	Condition 1011 1032	Nadciśnienie tętnicze
+N3	Reference T13 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T14	Condition 1063 1097	choroba zwyrodnieniowa kręgosłupa.
+N4	Reference T14 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T15	Condition 1034 1061	Choroba refluksowa przełyku
+N5	Reference T15 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T16	Investigation 1977 1987	Echo serca
+T17	Investigation 1990 2001	 Holter EKG
+T18	Drug 1927 1935	Setal MR
+T19	Drug_dose 1951 1955	1,25
+T20	Drug 1937 1950	Acard Piramil
+R1	Drg Arg1:T20 Arg2:T19	
+T21	Drug 1957 1962	Nasen
+T22	Behaviour 1890 1916	warunki mieszkaniowe dobre
+T23	Condition 1839 1873	alergiczne zapalenie sluzówki nosa
+N6	Reference T23 ICD10:J30.4	Alergiczne zapalenie błony śluzowej nosa, nieokreślone
+T24	Negation 1824 1827	nie
+T25	Negation 1807 1810	nie
+T26	Condition 1828 1837	Uczulenia
+N7	Reference T26 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T27	Behaviour 1811 1822	Inne używki
+N8	Reference T27 ICD10:Z72	Problemy związane ze stylem życia
+R2	Neg Arg1:T24 Arg2:T27	
+T28	Behaviour 1790 1805	Palenie tytoniu
+N9	Reference T28 ICD10:Z72.0	Używanie tytoniu
+R3	Neg Arg1:T25 Arg2:T28	
+T29	Condition 1748 1751	WZW
+N10	Reference T29 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T30	Negation 1754 1758	-  )
+R4	Neg Arg1:T30 Arg2:T29	
+T31	Condition 1761 1770	borelioza
+N11	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Condition 1778 1786	gruźlica
+N12	Reference T32 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T33	Negation 1786 1789	(-)
+R5	Neg Arg1:T33 Arg2:T32	
+T34	Negation 1771 1776	( - )
+R6	Neg Arg1:T34 Arg2:T31	
+T35	Treatment 1696 1715	Leczenie przewlekłe
+T36	Condition 1675 1694	ciąży pozamacicznej
+N13	Reference T36 ICD10:O00.9	Ciąża pozamaciczna, nieokreślona
+T37	Treatment 1665 1674	usunięcie
+A1	Status T37 Historical_Insignificant
+A2	Status T36 Historical_Insignificant
+T38	Condition 1588 1615	choroba refluksowa przełyku
+N14	Reference T38 ICD10:K21.9	Zarzucanie żołądkowo-przełykowe bez zapalenia przełyku
+T39	Condition 1243 1281	przewlekła chorobą niedokrwienną serca
+N15	Reference T39 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T40	Condition 1283 1306	nadciśnieniem tetniczym
+N16	Reference T40 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T41	Condition 1308 1342	choroba zwyrodnieniowa kręgosłupa,
+N17	Reference T41 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T42	Condition 1343 1354	bezsennośią
+N18	Reference T42 ICD10:G47.0	Zaburzenia zasypiania i utrzymania snu [bezsenność]
+T43	Symptom 1385 1416	zmniejszenia tolerancji wysiłku
+N19	Reference T43 ICD10:R53	Złe samopoczucie i zmęczenie
+T44	Date 1417 1434	od kilku miesięcy
+T45	Symptom 1438 1449	NYHA II/III
+R7	Dat Arg1:T44 Arg2:T43	
+R8	Dat Arg1:T44 Arg2:T45	
+T46	Symptom 1476 1491	kołatania serca
+N20	Reference T46 ICD10:R00.2	Kołatanie serca
+T47	Date 1492 1566	głownie w godzinach wieczornych po przyjęciu pozycji leżącej na lewym boku
+R9	Dat Arg1:T47 Arg2:T46	

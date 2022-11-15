@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "annotation",
+  "type": "object",
+  "properties": {
+    "text_id": {
+      "type": "string"
+    },
+    "dateAdded": {
+      "type": "string",
+      "format": "date"
+    },
+    "pipeVersion": {
+      "type": "string"
+    },
+    "annotations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/annotation"
+      }
+    },
+    "originalText": {
+      "type": "string"
+    }
+  },
+
+  "required": ["text_id", "dateAdded", "pipeVersion", "annotations", "originalText"],
+
+  "definitions":
+  {
+      "annotation": {
+        "type": "object",
+        "required": [
+          "identifier",
+          "type",
+          "subtype"
+        ],
+        "properties":
+        {
+          "identifier": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "T",
+              "N",
+              "R",
+              "A"
+            ]
+          },
+          "subtype": {
+            "type": "string"
+          }
+        }
+      }
+  }
+}

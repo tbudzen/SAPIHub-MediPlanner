@@ -1,0 +1,167 @@
+T1	Investigation 3350 3360	echo serca
+T2	Investigation 3362 3365	TET
+T3	Investigation 3367 3371	ABPM
+T4	Investigation 3373 3379	Holter
+T5	Investigation 3381 3399	RTG kl. piersiowej
+T6	Drug 3300 3303	IPP
+T7	Drug_dose 3304 3322	20 mg 1 tabl. rano
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 3274 3280	Letrox
+T9	Drug_dose 3281 3299	50 mg 1 tabl. rano
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 3239 3250	Madopar HBS
+T11	Drug_dose 3251 3272	125 mg 1 tabl. 3 x dz
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 3212 3219	Asertin
+T13	Drug_dose 3220 3238	50 mg 1 tabl. rano
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Drug 3184 3191	Milurit
+T15	Drug_dose 3192 3211	100 mg 1 tabl. rano
+R5	Drg Arg1:T14 Arg2:T15	
+T16	Drug 3148 3157	Apo-Tamis
+T17	Drug_dose 3158 3183	0,4  mg 1 tabl. wieczorem
+R6	Drg Arg1:T16 Arg2:T17	
+T18	Drug 3065 3077	Acenokumarol
+T19	Drug_dose 3078 3147	4 mg 1/2 tabl. wieczorem (ostatnio codziennie) (wyraża zgodę na NOAC)
+R7	Drg Arg1:T18 Arg2:T19	
+T20	Drug 3028 3040	Atorvasterol
+T21	Drug_dose 3041 3064	20 mg 1 tabl. wieczorem
+R8	Drg Arg1:T20 Arg2:T21	
+T22	Drug 2994 3001	Tritace
+T23	Drug_dose 3002 3027	2,5 mg 1/2 tal. wieczorem
+R9	Drg Arg1:T22 Arg2:T23	
+T24	Drug 2964 2971	Digoxin
+T25	Drug_dose 2972 2993	0,1 mg 1/2 tabl. rano
+R10	Drg Arg1:T24 Arg2:T25	
+T26	Drug 2922 2928	Avedol
+T27	Drug_dose 2929 2963	6,25 mg 1/2 tabl. rano i wieczorem
+R11	Drg Arg1:T26 Arg2:T27	
+T28	Drug 2896 2902	Espiro
+T29	Drug_dose 2903 2921	25 mg 1 tabl. rano
+R12	Drg Arg1:T28 Arg2:T29	
+T30	Drug 2860 2869	Furosemid
+T31	Drug_dose 2870 2895	1 tabl. rano i w południe
+R13	Drg Arg1:T30 Arg2:T31	
+T32	Negation 2802 2812	nie podaje
+T33	Negation 2780 2790	nie podaje
+T34	Condition 2791 2800	Uczulenia
+N1	Reference T34 ICD10:T78.4	Alergia, nieokreślona
+R14	Neg Arg1:T32 Arg2:T34	
+T35	Behaviour 2767 2778	Inne używki
+R15	Neg Arg1:T33 Arg2:T35	
+T36	Behaviour 2711 2726	Palenie tytoniu
+N2	Reference T36 ICD10:T65.2	Tytoń i nikotyna
+T37	Date 2729 2742	w przeszłości
+R16	Dat Arg1:T37 Arg2:T36	
+T38	Negation 2700 2710	nieistotny
+T39	Negation 2672 2682	nie podaje
+T40	Condition 2660 2669	borelioza
+N3	Reference T40 ICD10:A69.2	Choroba z Lyme
+T41	Condition 2655 2658	WZW
+N4	Reference T41 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+R17	Neg Arg1:T39 Arg2:T40	
+R18	Neg Arg1:T39 Arg2:T41	
+T42	Condition 2683 2698	Wywiad rodzinny
+A1	Status T42 Family
+R19	Neg Arg1:T38 Arg2:T42	
+T43	Treatment 2574 2582	operacje
+T44	Condition 2584 2615	przepuklina kręgosłupa szyjnego
+N5	Reference T44 ICD10:M99.5	Zwężenie kanału kręgowego przez przepuklinę krążka międzykręgowego
+T45	Investigation_result 554 565	QTc= 269 ms
+T46	Drug 526 535	Cordarone
+T47	Condition 788 850	Przewlekła niewydolność serca z pośrednią frakcją wyrzutową LK
+N6	Reference T47 ICD10:I50	Niewydolność serca
+T48	Condition 852 857	HFmrE
+T49	Condition 868 891	w II/III klasie wg NYHA
+T50	Condition 893 946	Utrwalone migotanie przedsionków w II klasie wg EHRA.
+N7	Reference T50 ICD10:I48	Migotanie i trzepotanie przedsionków
+T51	Condition 947 971	Łagodna arytmia komorowa
+N8	Reference T51 ICD10:I49	Inne zaburzenia rytmu serca
+T52	Condition 973 994	Nadciśnienie tętnicze
+N9	Reference T52 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T53	Condition 996 1035	Przewlekła choroba niedokrwienna serca.
+N10	Reference T53 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T54	Condition 1036 1048	Cukrzyca t.2
+N11	Reference T54 ICD10:E11	Cukrzyca insulinoniezależna
+T55	Condition 1064 1076	Dyslipidemia
+N12	Reference T55 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T56	Drug 1096 1103	statyną
+R20	Alg Arg1:T55 Arg2:T56	
+T57	Condition 1105 1163	Przewlekła cukrzycowa choroba nerek w stadium G3b wg KDIGO
+N13	Reference T57 ICD10:E10.2	
+T58	Condition 1165 1199	Subkliniczna nadczynność tarczycy.
+N14	Reference T58 ICD10:E05.9	Tyreotoksykoza, nieokreślona
+T59	Condition 1200 1235	Łagodna niedokrwistość normocytarna
+T60	Condition 1237 1272	Łagodny rozrost gruczołu krokowego.
+N15	Reference T60 ICD10:N40	Rozrost gruczołu krokowego
+T61	Condition 1273 1301	Choroba wrzodowa dwunastnicy
+N16	Reference T61 ICD10:K28	Wrzód żołądka i jelita czczego
+T62	Condition 1315 1346	Uchyłki i polipy jelita grubego
+N17	Reference T62 ICD10:D12	
+T63	Treatment 1356 1368	polipektomii
+T64	Date 1370 1377	01.2016
+R21	Dat Arg1:T64 Arg2:T63	
+T65	Condition 1600 1633	Utrwalone migotanie przedsionków.
+N18	Reference T65 ICD10:I48	Migotanie i trzepotanie przedsionków
+T66	Condition 1634 1655	Nadciśnienie tętnicze
+N19	Reference T66 ICD10:I10	
+T67	Condition 1657 1695	Przewlekła choroba niedokrwienna serca
+N20	Reference T67 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T68	Condition 1697 1727	Przewlekła niewydolność serca.
+N21	Reference T68 ICD10:I50	Niewydolność serca
+T69	Condition 1728 1741	cukrzyca t.2.
+N22	Reference T69 ICD10:E11	Cukrzyca insulinoniezależna
+T70	Condition 1742 1770	Niewydolność nerek 3st g NKF
+T71	Condition 1772 1794	Niedoczynność tarczycy
+N24	Reference T71 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T72	Condition 1796 1813	Przerost prostaty
+N25	Reference T72 ICD10:N40	
+T73	Condition 1815 1843	Choroba wrzodowa dwunastnicy
+N26	Reference T73 ICD10:K28	Wrzód żołądka i jelita czczego
+T74	Condition 1857 1875	Uchyłki j. grubego
+N27	Reference T74 ICD10:K57	
+T75	Symptom 2052 2073	szybkiej pracy serca,
+T76	Symptom 2074 2090	łatwego męczenia
+N28	Reference T76 ICD10:R53	
+T77	Symptom 2092 2106	zawrotów głowy
+N29	Reference T77 ICD10:R42	Zawroty głowy i odurzenie
+T78	Symptom 2108 2158	bólów w kl. piersiowej przy niskich wartościach BP
+N30	Reference T78 ICD10:R07.3	Inne bóle w klatce piersiowej
+T79	Condition 2173 2195	migotanie przedsionków
+N31	Reference T79 ICD10:I48	Migotanie i trzepotanie przedsionków
+T80	Investigation_result 2231 2242	IIa wg EHRA
+T81	Investigation_result 2245 2283	labilne wartości ciśnienia tętniczego,
+T82	Condition 2284 2311	choroba niedokrwienna serca
+N32	Reference T82 ICD10:I25	
+T83	Date 2197 2230	od 2011r, od ok. 3 lat utrwalone,
+R22	Dat Arg1:T83 Arg2:T79	
+T84	Date 2313 2318	2016r
+T85	Investigation 2319 2323	koro
+T86	Investigation_result 2325 2366	zmiany przyścienne, niedrożność OM2 z k.o
+R23	Inv Arg1:T85 Arg2:T86	
+R24	Dat Arg1:T84 Arg2:T85	
+T87	Condition 2370 2399	przewlekła niewydolność serca
+N33	Reference T87 ICD10:I50	Niewydolność serca
+T88	Condition 2401 2413	cukrzyca t.2
+N34	Reference T88 ICD10:E11	Cukrzyca insulinoniezależna
+T89	Condition 2430 2458	niewydolność nerek 3st g NKF
+N35	Reference T89 ICD10:N18.8	Inna przewlekła niewydolność nerek
+N23	Reference T70 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T90	Condition 2460 2482	niedoczynność tarczycy
+N36	Reference T90 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T91	Condition 2484 2501	przerost prostaty
+N37	Reference T91 ICD10:N40	Rozrost gruczołu krokowego
+T92	Condition 2503 2531	choroba wrzodowa dwunastnicy
+N38	Reference T92 ICD10:E28	Zaburzenia czynności jajników
+T93	Condition 2544 2562	uchyłki j. grubego
+N39	Reference T93 ICD10:K57	Choroba uchyłkowa jelita
+T94	Investigation 440 443	EKG
+T95	Date 543 553	18/07/2019
+R25	Dat Arg1:T95 Arg2:T45	
+T96	Investigation_result 860 866	EF=45%
+A2	Source T43 Declared
+A3	Source T44 Declared
+N40	Reference T48 ICD10:I50	Niewydolność serca
+T97	Behaviour 1049 1062	leczona dietą
+T98	Date 2744 2757	od ok 3 0 lat
+R26	Dat Arg1:T98 Arg2:T36	

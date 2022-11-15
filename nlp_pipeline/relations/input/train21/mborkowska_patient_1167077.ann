@@ -1,0 +1,69 @@
+T1	Investigation 400 426	kontrola glikemii na czczo
+T2	Investigation 441 470	kontrola ciśnienia tętniczego
+T3	Behaviour 471 490	prawidłowe żywienie
+T4	Behaviour 491 526	regularny aerobowy wysiłek fizyczny
+T5	Condition 753 795	Zespół wypadania płatka zastawki mitralnej
+N1	Reference T5 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T6	Condition 798 826	umiarkowaną niedomykalnością
+N2	Reference T6 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T7	Condition 1001 1036	niedomykalności zastawki mitralnej.
+N3	Reference T7 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T8	Symptom 1037 1093	Okresowe niespecyficzne dolegliwości w klatce piersiowej
+N4	Reference T8 ICD10:R07.3	Inne bóle w klatce piersiowej
+T9	Symptom 1103 1111	duszność
+N5	Reference T9 ICD10:R06.0	Duszność
+T10	Symptom 1113 1128	kołatania serca
+N6	Reference T10 ICD10:R00.2	Kołatanie serca
+T11	Symptom 1130 1143	zawroty głowy
+N7	Reference T11 ICD10:R42	Zawroty głowy i odurzenie
+T12	Symptom 1145 1164	utraty przytomności
+N8	Reference T12 ICD10:R55	Omdlenie i zapaść
+T13	Negation 1095 1101	Neguje
+R1	Neg Arg1:T13 Arg2:T9	
+R2	Neg Arg1:T13 Arg2:T10	
+R3	Neg Arg1:T13 Arg2:T11	
+R4	Neg Arg1:T13 Arg2:T12	
+T14	Condition 1179 1181	IM
+N9	Reference T14 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T15	Date 1182 1192	od 06.2019
+R5	Dat Arg1:T15 Arg2:T14	
+T16	Condition 1203 1234	Nieprawidłowa glikemia na czczo
+T17	Condition 1194 1201	Migreny
+N10	Reference T17 ICD10:G43	Migrena
+T18	Investigation 1241 1245	OGTT
+T19	Date 1246 1253	05.2019
+T20	Investigation_result 1254 1264	prawidłowy
+R6	Dat Arg1:T19 Arg2:T18	
+R7	Inv Arg1:T18 Arg2:T20	
+T21	Negation 1276 1282	neguje
+T22	Treatment 1266 1274	Operacje
+R8	Neg Arg1:T21 Arg2:T22	
+T23	Behaviour 1283 1293	Nikotynizm
+A1	Status T23 Historical_Insignificant
+N11	Reference T23 ICD10:T65.2	Tytoń i nikotyna
+T24	Date 1296 1309	w przeszłości
+R9	Dat Arg1:T24 Arg2:T23	
+T25	Behaviour 1313 1334	Alkohol: okazjonalnie
+N12	Reference T25 ICD10:Z72.1	Używanie alkoholu
+T26	Condition 1351 1369	uczulenia na leki,
+N13	Reference T26 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T27	Symptom 1370 1403	krwawienia z przewodu pokarmowego
+N14	Reference T27 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T28	Negation 1343 1349	neguje
+R10	Neg Arg1:T28 Arg2:T26	
+R11	Neg Arg1:T28 Arg2:T27	
+T29	Negation 1422 1428	neguje
+T30	Condition 1405 1420	Wywiad rodzinny
+A2	Status T30 Family
+R12	Neg Arg1:T29 Arg2:T30	
+T31	Condition 1469 1486	Ca jelita grubego
+A3	Status T31 Family
+N15	Reference T31 ICD10:C18	Nowotwór złośliwy jelita grubego
+T32	Negation 1514 1520	neguje
+T33	Drug 1488 1512	Przyjmowane obecnie leki
+R13	Neg Arg1:T32 Arg2:T33	
+T34	Investigation 1532 1542	ECHO serca
+T35	Investigation 1544 1554	Holter EKG
+T36	Investigation 1556 1565	Holter RR
+T37	Investigation 1567 1569	PW
+N16	Reference T16 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy

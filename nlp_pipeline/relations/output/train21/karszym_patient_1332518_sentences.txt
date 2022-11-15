@@ -1,0 +1,767 @@
+allRelations          : 41
+oks                   : 30
+isRedundantAndRemoveds: 9
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 1
+GOOD / BAD            : 39 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 4 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zastosowane leczenie
+
+
+
+Sentence 4:
+------------------------------------------------
+Acesan, Clexane, Cefazolina, Perfalgan, ANA, Nebulizacje z Nebbud + 0,9%NaCl, Captopril
+------------------------------------------------
+
+
+
+Sentence 5:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 6:
+Captopril 2x2mg
+Acesan: 37,5mg 1xdz
+
+R1	Drg Arg1:T8 Arg2:T10 << OK >>	Captopril -> 2x2mg  <RANK: 3> <info: start[535, 545] <type: RIGHT>>
+R2	Drg Arg1:T8 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Captopril -> 37,5mg 1xdz <:REMOVED other first tag between (right):> <RANK: 1> <info: start[535, 559] <type: RIGHT>>
+R3	Drg Arg1:T9 Arg2:T10 <<REDUNDANT!!!REMOVED>>	Acesan -> 2x2mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[551, 545] <type: LEFT>>
+R4	Drg Arg1:T9 Arg2:T11 << OK >>	Acesan -> 37,5mg 1xdz  <RANK: 3> <info: start[551, 559] <type: RIGHT>>
+
+
+Sentence 7:
+Nebulizacje z Nebbud 500mcg + 1ml 0,9%NaCl 2xdz
+Kontrola w Poradni kardiologicznej za 3 m-ce
+------------------------------------------------
+
+R5	Drg Arg1:T12 Arg2:T13 << OK >>	Nebbud -> 500mcg  <RANK: 3> <info: start[585, 592] <type: RIGHT>>
+R6	Drg Arg1:T12 Arg2:T14 <<REDUNDANT!!!SHOULD BE REMOVED>>	Nebbud -> 1ml  <RANK: 3> <info: start[585, 601] <type: RIGHT>>
+R7	Drg Arg1:T12 Arg2:T16 <<SHOULD NOT BE REMOVED>>	Nebbud -> 2xdz <:REMOVED other first tag between (right):> <RANK: 2> <info: start[585, 614] <type: RIGHT>>
+R8	Drg Arg1:T15 Arg2:T13 <<REDUNDANT!!!REMOVED>>	0,9%NaCl -> 500mcg <:REMOVED other second tag between (left):> <RANK: 3> <info: start[605, 592] <type: LEFT>>
+R9	Drg Arg1:T15 Arg2:T14 << OK >>	0,9%NaCl -> 1ml  <RANK: 3> <info: start[605, 601] <type: LEFT>>
+R10	Drg Arg1:T15 Arg2:T16 << OK >>	0,9%NaCl -> 2xdz  <RANK: 3> <info: start[605, 614] <type: RIGHT>>
+R11	Dat Arg1:T19 Arg2:T17 <<REDUNDANT!!!REMOVED>>	za 3 m-ce -> Nebulizacje z <:REMOVED other second tag between (left):> <RANK: 0> <info: start[654, 571] <type: LEFT>>
+R12	Dat Arg1:T19 Arg2:T18 << OK >>	za 3 m-ce -> Kontrola w Poradni kardiologicznej  <RANK: 3> <info: start[654, 619] <type: LEFT>>
+R13	Dat Arg1:T19 Arg2:T12 <<REDUNDANT!!!REMOVED>>	za 3 m-ce -> Nebbud <:REMOVED other second tag between (left):> <RANK: 0> <info: start[654, 585] <type: LEFT>>
+R14	Dat Arg1:T19 Arg2:T15 <<REDUNDANT!!!REMOVED>>	za 3 m-ce -> 0,9%NaCl <:REMOVED other second tag between (left):> <RANK: 1> <info: start[654, 605] <type: LEFT>>
+
+
+Sentence 8:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 9:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q23.4|Rozpoznanie II: ICD10:Z98.8|Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią zespołu niedorozwoju serca lewego (HLHS).
+   
+
+
+Sentence 10:
+Stan po bandingu gałęzi płucnych (do śr. 3mm) w dniu 02.11.2015r.
+   
+R15	Dat Arg1:T22 Arg2:T21 << OK >>	w dniu 02.11.2015r -> bandingu gałęzi płucnych (do śr. 3mm)  <RANK: 3> <info: start[1027, 989] <type: LEFT>>
+
+
+Sentence 11:
+Stan po operacji metodą Norwooda z wycięciem przegrody międzyprzedsionkowej, zespoleniem komorowo - płucnym o śr. 5mm wykonanej w dniu 09.11.2015r.
+R16	Dat Arg1:T24 Arg2:T23 << OK >>	w dniu 09.11.2015r -> operacji metodą Norwooda z wycięciem przegrody międzyprzedsionkowej, zespoleniem komorowo - płucnym o śr. 5mm  <RANK: 3> <info: start[1178, 1058] <type: LEFT>>
+
+
+Sentence 12:
+(odroczone zamknięcie mostka w dniu 11.11.2015r.)
+   
+R17	Dat Arg1:T26 Arg2:T25 << OK >>	w dniu 11.11.2015r -> odroczone zamknięcie mostka  <RANK: 3> <info: start[1227, 1199] <type: LEFT>>
+
+
+Sentence 13:
+Stan po diagnostycznym cewnikowaniu serca wykonanym w dniu 18.04.2016r.
+   
+R18	Dat Arg1:T28 Arg2:T27 << OK >>	w dniu 18.04.2016r -> diagnostycznym cewnikowaniu serca  <RANK: 3> <info: start[1303, 1259] <type: LEFT>>
+
+
+Sentence 14:
+Stan po operacji dwukierunkowego Glena z pozostawieniem zespolenia systemowo - płucnego (25.04.2016r)
+   
+R19	Dat Arg1:T30 Arg2:T29 << OK >>	25.04.2016r -> operacji dwukierunkowego Glena z pozostawieniem zespolenia systemowo - płucnego  <RANK: 3> <info: start[1415, 1334] <type: LEFT>>
+
+
+Sentence 15:
+Stan po podwiązaniu i przecięciu zespolenia RV-PA.
+
+
+Sentence 16:
+Podwiązanie przetoki żylnej po stronie lewej (25.06.2016)
+   
+R20	Dat Arg1:T34 Arg2:T67 << OK >>	25.06.2016 -> przetoki żylnej po stronie lewej  <RANK: 3> <info: start[1528, 1494] <type: LEFT>>
+R21	Dat Arg1:T34 Arg2:T41 << OK >>	25.06.2016 -> Podwiązanie  <RANK: 3> <info: start[1528, 1482] <type: LEFT>>
+
+
+Sentence 17:
+Stan po cewnikowaniu serca z implantacją stentu do LPA (31.02.2017r)
+   
+R22	Dat Arg1:T33 Arg2:T32 << OK >>	31.02.2017r -> implantacją stentu do LPA  <RANK: 3> <info: start[1599, 1572] <type: LEFT>>
+R23	Dat Arg1:T33 Arg2:T68 << OK >>	31.02.2017r -> cewnikowaniu serca  <RANK: 3> <info: start[1599, 1551] <type: LEFT>>
+
+
+Sentence 18:
+Stan po implantacji drugiego stentu do LPA (22.06.2017r)
+   
+R24	Dat Arg1:T36 Arg2:T35 << OK >>	22.06.2017r -> implantacji drugiego stentu do LPA  <RANK: 3> <info: start[1659, 1623] <type: LEFT>>
+
+
+Sentence 19:
+Stan po operacji metodą Fontana bez fenestracji (24.07.2017r)
+   Cewnikowanie serca z doprężeniem stentu cewnikiem CordisPowerFlex 10x30mm (30.09.2019)
+------------------------------------------------
+
+R25	Dat Arg1:T38 Arg2:T37 << OK >>	24.07.2017r -> operacji metodą Fontana bez fenestracji  <RANK: 3> <info: start[1724, 1683] <type: LEFT>>
+R26	Dat Arg1:T38 Arg2:T39 <<REDUNDANT!!!REMOVED>>	24.07.2017r -> doprężeniem stentu cewnikiem CordisPowerFlex 10x30mm <:REMOVED other second tag between (right):> <RANK: 1> <info: start[1724, 1761] <type: RIGHT>>
+R27	Dat Arg1:T38 Arg2:T69 <<REDUNDANT!!!REMOVED>>	24.07.2017r -> Cewnikowanie serca <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1724, 1740] <type: RIGHT>>
+R28	Dat Arg1:T40 Arg2:T37 <<REDUNDANT!!!REMOVED>>	30.09.2019 -> operacji metodą Fontana bez fenestracji <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1815, 1683] <type: LEFT>>
+R29	Dat Arg1:T40 Arg2:T39 << OK >>	30.09.2019 -> doprężeniem stentu cewnikiem CordisPowerFlex 10x30mm  <RANK: 3> <info: start[1815, 1761] <type: LEFT>>
+R30	Dat Arg1:T40 Arg2:T69 << OK >>	30.09.2019 -> Cewnikowanie serca  <RANK: 3> <info: start[1815, 1740] <type: LEFT>>
+
+
+Sentence 20:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 21:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q23.4|Rozpoznanie II: ICD10:Z98.8|Rozpoznanie V: |Opisowo:: Wrodzona wada serca pod postacią zespołu niedorozwoju serca lewego (HLHS).
+   
+
+
+Sentence 22:
+Stan po bandingu gałęzi płucnych (do śr. 3mm) w dniu 02.11.2015r.
+   
+R31	Dat Arg1:T44 Arg2:T43 << OK >>	w dniu 02.11.2015r -> bandingu gałęzi płucnych (do śr. 3mm)  <RANK: 3> <info: start[2155, 2117] <type: LEFT>>
+
+
+Sentence 23:
+Stan po operacji metodą Norwooda z wycięciem przegrody międzyprzedsionkowej, zespoleniem komorowo - płucnym o śr. 5mm wykonanej w dniu 09.11.2015r.
+R32	Dat Arg1:T46 Arg2:T45 << OK >>	w dniu 09.11.2015r -> operacji metodą Norwooda z wycięciem przegrody międzyprzedsionkowej, zespoleniem komorowo - płucnym o śr. 5mm  <RANK: 3> <info: start[2306, 2186] <type: LEFT>>
+
+
+Sentence 24:
+(odroczone zamknięcie mostka w dniu 11.11.2015r.)
+   
+R33	Dat Arg1:T48 Arg2:T47 << OK >>	w dniu 11.11.2015r -> odroczone zamknięcie mostka  <RANK: 3> <info: start[2355, 2327] <type: LEFT>>
+
+
+Sentence 25:
+Stan po diagnostycznym cewnikowaniu serca wykonanym w dniu 18.04.2016r.
+   
+R34	Dat Arg1:T50 Arg2:T49 << OK >>	w dniu 18.04.2016r -> diagnostycznym cewnikowaniu serca  <RANK: 3> <info: start[2431, 2387] <type: LEFT>>
+
+
+Sentence 26:
+Stan po operacji dwukierunkowego Glena z pozostawieniem zespolenia systemowo - płucnego (25.04.2016r)
+   
+R35	Dat Arg1:T52 Arg2:T51 << OK >>	25.04.2016r -> operacji dwukierunkowego Glena z pozostawieniem zespolenia systemowo - płucnego  <RANK: 3> <info: start[2543, 2462] <type: LEFT>>
+
+
+Sentence 27:
+Stan po podwiązaniu i przecięciu zespolenia RV-PA.
+
+
+Sentence 28:
+Podwiązanie przetoki żylnej po stronie lewej (25.06.2016)
+   
+R36	Dat Arg1:T55 Arg2:T70 << OK >>	25.06.2016 -> przetoki żylnej po stronie lewej  <RANK: 3> <info: start[2656, 2622] <type: LEFT>>
+R37	Dat Arg1:T55 Arg2:T54 << OK >>	25.06.2016 -> Podwiązanie  <RANK: 3> <info: start[2656, 2610] <type: LEFT>>
+
+
+Sentence 29:
+Stan po cewnikowaniu serca z implantacją stentu do LPA (31.02.2017r)
+   
+R38	Dat Arg1:T57 Arg2:T56 << OK >>	31.02.2017r -> implantacją stentu do LPA  <RANK: 3> <info: start[2727, 2700] <type: LEFT>>
+R39	Dat Arg1:T57 Arg2:T71 << OK >>	31.02.2017r -> cewnikowaniu serca  <RANK: 3> <info: start[2727, 2679] <type: LEFT>>
+
+
+Sentence 30:
+Stan po implantacji drugiego stentu do LPA (22.06.2017r)
+   
+R40	Dat Arg1:T59 Arg2:T58 << OK >>	22.06.2017r -> implantacji drugiego stentu do LPA  <RANK: 3> <info: start[2787, 2751] <type: LEFT>>
+
+
+Sentence 31:
+Stan po operacji metodą Fontana bez fenestracji (24.07.2017r)|Rozpoznanie IV: |Rozpoznanie III:
+------------------------------------------------
+
+R41	Dat Arg1:T61 Arg2:T60 << OK >>	24.07.2017r -> operacji metodą Fontana bez fenestracji  <RANK: 3> <info: start[2852, 2811] <type: LEFT>>
+
+
+Sentence 32:
+Zastosowane leczenie
+
+
+
+Sentence 33:
+------------------------------------------------
+Acesan, Captopril, ANA, Cefazolina (profilkatyka)
+------------------------------------------------
+
+
+
+Sentence 34:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 35:
+Próba zgodności (kontrola grupy krwi biorcy)
+    
+
+
+Sentence 36:
+NR-KS:K-19/3230
+    KODKRESKOWYPROBKI:K-19/3230
+    
+
+
+Sentence 37:
+GR:B
+    RH:- (ujemny)
+    
+
+
+Sentence 38:
+FENOTYP:K+
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+    
+
+
+Sentence 39:
+DONACJA:Z511519016513
+    
+
+
+Sentence 40:
+GR:B
+    RH:- (ujemny)
+    WYNIK-D:zgodna
+Grupa krwi + p/c odpornościowe (powyżej 4. m-ca życia
+    NR-KS:G-19/019370
+    KODKRESKOWYPROBKI:G-19/019370
+    
+
+
+Sentence 41:
+GR:B
+    RH:- (ujemny)
+    
+
+
+Sentence 42:
+FENOTYP:K+
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+
+
+
+Sentence 43:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:10.65[10^3/ul]
+    
+
+
+Sentence 44:
+RBC Krwinki czerwone:5.00[10^6/ul]
+    
+
+
+Sentence 45:
+HGB Hemoglobina:14.5[g/dl]
+    
+
+
+Sentence 46:
+HCT Hematokryt:40.7[%]
+    
+
+
+Sentence 47:
+MCV wskaźnik czerwonokrw:81.4[fl]
+    
+
+
+Sentence 48:
+MCH wskaźnik czerwonokrw:29.0[pg]
+    
+
+
+Sentence 49:
+MCHC wskaźnik czerwonokr:35.6[g/dl]
+    
+
+
+Sentence 50:
+PLT z morfologii:226[10^3/ul]
+    
+
+
+Sentence 51:
+RDW-SD:38.0[fl]
+    
+
+
+Sentence 52:
+RDW-CV:13.0[%]
+    PDW:10.4[fl]
+    
+
+
+Sentence 53:
+MPV:9.9[fl]
+    
+
+
+Sentence 54:
+P-LCR:22.5[%]
+    
+
+
+Sentence 55:
+PCT (hematokryt płytkowy:0.22[%]
+    
+
+
+Sentence 56:
+NEUTR# wartość bezwzględ:4.76[10^3/ul]
+    
+
+
+Sentence 57:
+NEUTR%:44.7[%]
+    
+
+
+Sentence 58:
+LYMH# wartość bezwzględn:4.28[10^3/ul]
+    
+
+
+Sentence 59:
+LYMPH%:40.2[%]
+    
+
+
+Sentence 60:
+MONO# wartość bezwzględn:1.31[10^3/ul]
+    
+
+
+Sentence 61:
+MONO%:12.3[%]
+    
+
+
+Sentence 62:
+EO# wartość bezwzględna:0.26[10^3/ul]
+    
+
+
+Sentence 63:
+EO%:2.4[%]
+    
+
+
+Sentence 64:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    BASO%:0.4[%]
+    
+
+
+Sentence 65:
+NRBC %:0.0[%]
+    
+
+
+Sentence 66:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 67:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:28.6[sek]
+
+
+
+Sentence 68:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 69:
+Czas protrombinowy:13.4[sek]
+    
+
+
+Sentence 70:
+Wskaźnik PT:82.1[%]
+    
+
+
+Sentence 71:
+INR:1.21
+Czas trombinowy TT: Czas trombinowy TT:14.7[sek]
+
+
+
+Sentence 72:
+Fibrynogen: Fibrynogen:2.23[g/L]
+
+
+
+Sentence 73:
+Badanie ogólne moczu
+    
+
+
+Sentence 74:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 75:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 76:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 77:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 78:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 79:
+ciężar właściwy:1.018[ ]
+    
+
+
+Sentence 80:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 81:
+pH:5.0[ ]
+    
+
+
+Sentence 82:
+białko:nieobecne[ ]
+    
+
+
+Sentence 83:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 84:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 85:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 86:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 87:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 88:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 89:
+nabłonki okrągłe:pojedyncze[w preparacie]
+    
+
+
+Sentence 90:
+leukocyty:4 /ul[ul]
+    erytrocyty świeże:3 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 91:
+TSH: TSH:5.01[uIU/ml]
+
+
+
+Sentence 92:
+FT3: FT3:4.13[pg/ml]
+
+
+
+Sentence 93:
+FT4: FT4:1.57[ng/dl]
+
+
+
+Sentence 94:
+Witamina D 25-OH: Witamina D 25-OH:44.9[ng/ml]
+
+
+
+Sentence 95:
+AFP: AFP:2.17[IU/ml]
+
+
+
+Sentence 96:
+ALAT: ALAT:26[U/L]
+
+
+
+Sentence 97:
+Albumina: Albumina:4.4[g/dl]
+
+
+
+Sentence 98:
+ASPAT: ASPAT:38[U/L]
+
+
+
+Sentence 99:
+Białko całkowite w surowicy (TP): Białko całkowite w surow:6.8[g/dl]
+
+
+
+Sentence 100:
+Bilirubina całkowita (TBil): Bilirubina całkowita:0.72[mg/dl]
+
+
+
+Sentence 101:
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.57[mg/dl]
+
+
+
+Sentence 102:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 103:
+Potas (K): Potas:4.8[mmol/L]
+
+
+
+Sentence 104:
+Chlorki (Cl): Chlorki:107[mmol/L]
+
+
+
+Sentence 105:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:87[U/L]
+
+
+
+Sentence 106:
+Kreatynina + GFR
+    
+
+
+Sentence 107:
+Kreatynina w surowicy:0.45[mg/dl]
+    eGFR stand.
+
+
+Sentence 108:
+wg Schwartza:125.9[ml/min/1,73 m^2]
+    
+
+
+Sentence 109:
+eGFR zmod.
+
+
+Sentence 110:
+wg Schwartza:94.5[ml/min/1,73 m^2]
+    wzrost:103[cm]
+
+
+
+Sentence 111:
+Magnez: Magnez:0.81[mmol/L]
+
+
+
+Sentence 112:
+Mocznik: Mocznik:27[mg/dl]
+
+
+
+Sentence 113:
+Wapń całkowity: Wapń całkowity:2.49[mmol/L]
+
+
+
+Sentence 114:
+Gospodarka żelazem
+    Żelazo:85[ug/dl]
+    
+
+
+Sentence 115:
+TIBC (Całkowita zdolność:364[ug/dl]
+    
+
+
+Sentence 116:
+UIBC (Utajona zdolność w:279[ug/dl]
+    
+
+
+Sentence 117:
+Wskaźnik wysycenia Fe:23[%]
+
+
+
+Sentence 118:
+AAT w kale: AAT w kale:SYNEVO
+
+
+
+Sentence 119:
+NT-proBNP surowica: NT-proBNP w surowicy:95[pg/ml]
+
+
+
+Sentence 120:
+------------------------------------------------
+
+
+
+Sentence 121:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 122:
+Q23.4
+Z98.8
+
+
+
+Sentence 123:
+R23.0
+
+
+
+Sentence 124:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 125:
+ICD9
+------------------------------------------------
+89.522
+I81
+89.602
+G21
+I89
+G25
+M87
+
+
+
+Sentence 126:
+N45
+L69
+N24
+39.999
+L07
+I09
+37.21
+C55
+G53
+I97
+G11
+
+
+
+Sentence 127:
+I77
+O93
+L31
+87.440
+I17
+O77
+
+
+
+Sentence 128:
+O55
+I19
+
+
+
+Sentence 129:
+O35
+M37
+
+
+
+Sentence 130:
+N13
+88.761
+
+
+
+Sentence 131:
+------------------------------------------------
+
+

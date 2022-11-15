@@ -1,0 +1,74 @@
+T1	Investigation 1785 1795	holter-ekg
+T2	Investigation 1797 1801	ABPM
+T3	Investigation 1803 1813	echo serca
+T4	Investigation 1815 1830	próba wysiłkowa
+T5	Condition 447 490	Diagnostyka w kierunku zaburzeń rytmu serca
+A1	Source T5 Declared
+N1	Reference T5 ICD10:I49	Inne zaburzenia rytmu serca
+T6	Symptom 652 689	nawracającego uczucia kołatania serca
+N2	Reference T6 ICD10:R00.2	Kołatanie serca
+T7	Symptom 705 723	uczuciem niepokoju
+T8	Date 754 763	05.2017r.
+T9	Symptom 964 978	drętwienie rąk
+N3	Reference T9 ICD10:R20.2	Parestezje
+T10	Symptom 980 988	duszność
+N4	Reference T10 ICD10:R06.0	Duszność
+T11	Symptom 1141 1149	Omdlenia
+N5	Reference T11 ICD10:R55	Omdlenie i zapaść
+T12	Symptom 1151 1170	utraty przytomności
+N6	Reference T12 ICD10:R55	Omdlenie i zapaść
+T13	Symptom 1172 1236	dolegliwości bólowe w klatce piersiowej o charakterze dławicowym
+N7	Reference T13 ICD10:R07.3	Inne bóle w klatce piersiowej
+T14	Negation 1237 1252	nie występowały
+R1	Neg Arg1:T14 Arg2:T13	
+R2	Neg Arg1:T14 Arg2:T12	
+R3	Neg Arg1:T14 Arg2:T11	
+T15	Condition 1266 1317	niedoczynność tarczycy - obecnie w stanie eutyreozy
+N8	Reference T15 ICD10:E03	Niedoczynność tarczycy o innej etiologii
+T16	Date 1319 1327	od 5 lat
+T17	Negation 1328 1331	bez
+T18	Treatment 1332 1340	leczenia
+R4	Neg Arg1:T17 Arg2:T18	
+R5	Dat Arg1:T16 Arg2:T18	
+R6	Neg Arg1:T17 Arg2:T15	
+T19	Treatment 1364 1436	około 5 krotnie mikrolaryngoskopia  z powodu zmian na strunach głosowych
+T20	Date 1450 1462	29.11.2018r.
+R7	Dat Arg1:T20 Arg2:T19	
+T21	Treatment 1465 1478	appendectomia
+A2	Status T21 Historical_Insignificant
+T22	Date 1479 1483	1996
+R8	Dat Arg1:T22 Arg2:T21	
+T23	Condition 1485 1519	przepuklina pachwinowa lewostronna
+N9	Reference T23 ICD10:K40	Przepuklina pachwinowa
+T24	Treatment 1351 1361	operacyjne
+T25	Date 1520 1525	2008r
+R9	Dat Arg1:T25 Arg2:T24	
+R10	Dat Arg1:T25 Arg2:T23	
+T26	Condition 1552 1568	arytmia komorowa
+A3	Status T26 Family
+N10	Reference T26 ICD10:I49	Inne zaburzenia rytmu serca
+T27	Condition 1582 1597	cukrzyca typu 2
+N11	Reference T27 ICD10:E11	Cukrzyca insulinoniezależna
+A4	Status T27 Family
+T28	Condition 1661 1664	WZW
+A5	Source T28 Confirmed
+N12	Reference T28 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T29	Date 1667 1671	1979
+R11	Dat Arg1:T29 Arg2:T28	
+T30	Condition 1673 1682	bolerioza
+A6	Source T30 Declared
+N13	Reference T30 ICD10:B60.2	Neglerioza
+T31	Date 1683 1693	2014/2015r
+R12	Dat Arg1:T31 Arg2:T30	
+T32	Behaviour 1730 1734	pali
+N14	Reference T32 ICD10:T65.2	Tytoń i nikotyna
+T33	Negation 1726 1729	nie
+R13	Neg Arg1:T33 Arg2:T32	
+T34	Drug 1749 1763	na stałe leków
+T35	Negation 1735 1748	nie przyjmuje
+R14	Neg Arg1:T35 Arg2:T34	
+T36	Condition 876 879	CAD
+N15	Reference T36 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T37	Date 990 1020	dość często, ale nieregularnie
+R15	Dat Arg1:T37 Arg2:T10	
+R16	Dat Arg1:T37 Arg2:T9	

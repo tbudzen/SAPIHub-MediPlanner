@@ -1,0 +1,55 @@
+T1	Condition 448 481	Napadowy częstoskurcz nadkomorowy
+N1	Reference T1 ICD10:I47.1	Częstoskurcz nadkomorowy
+T2	Condition 483 488	AVNRT
+N2	Reference T2 ICD10:I47.1	Częstoskurcz nadkomorowy
+T3	Drug 609 617	Adenocor
+T4	Drug 619 627	Metocard
+T5	Drug 740 748	Metocard
+T6	Drug_dose 749 762	2 x 25 mg pos
+T7	Condition 767 795	W razie napadu częstoskurczu
+N3	Reference T7 ICD10:I47.1	Częstoskurcz nadkomorowy
+T8	Treatment 814 858	metody niefarmakologiczne przerywania napadu
+T9	Negation 901 914	w razie braku
+T10	Treatment 919 925	efektu
+R1	Neg Arg1:T9 Arg2:T10	
+T11	Treatment 933 985	kontaktować się z najbliższą placówką służby zdrowia
+T12	Drug 999 1008	Adenocoru
+T13	Treatment 1014 1042	Dalsza opieka kardiologiczna
+T14	Treatment 1044 1082	wizyta w Poradni Kardiologicznej ICZMP
+T15	Date 1083 1100	w dniu   09.2018r
+R2	Dat Arg1:T15 Arg2:T14	
+T16	Drug 1159 1171	Nasivin soft
+T17	Drug_dose 1172 1195	4 x 1 aplikacja do nosa
+T18	Drug 1197 1205	Gardimax
+T19	Drug_dose 1206 1231	4 x 1 aplikacja do gardła
+T20	Drug 1233 1246	Rutinoscorbin
+T21	Drug_dose 1247 1266	3 x 2 tabletki pos.
+T22	Negation 1305 1315	ustąpienia
+T23	Symptom 1316 1323	objawów
+T24	Date 1302 1304	do
+R3	Neg Arg1:T22 Arg2:T23	
+R4	Dat Arg1:T24 Arg2:T16	
+R5	Dat Arg1:T24 Arg2:T18	
+R6	Dat Arg1:T24 Arg2:T20	
+R7	Drg Arg1:T16 Arg2:T17	
+R8	Drg Arg1:T18 Arg2:T19	
+R9	Drg Arg1:T20 Arg2:T21	
+R10	Drg Arg1:T5 Arg2:T6	
+T25	Investigation_result 1499 1510	tachykardii
+N4	Reference T25 ICD10:R00.0	Tachykardia, nieokreślona
+T26	Investigation 1525 1528	ekg
+T27	Investigation_result 1529 1540	HR 150/ min
+N5	Reference T27 ICD10:R00.0	Tachykardia, nieokreślona
+T28	Investigation_result 1547 1557	HR 172/min
+N6	Reference T28 ICD10:R00.0	Tachykardia, nieokreślona
+R11	Inv Arg1:T26 Arg2:T27	
+T29	Drug 1578 1585	Ospamox
+T30	Date 1586 1594	od 5 dni
+T31	Condition 1604 1620	zapalenia gardła
+N7	Reference T31 ICD10:J02.9	Ostre zapalenie gardła, nieokreślone
+T32	Condition 1622 1628;1640 1665	Często infekcje dróg oddechowych
+T33	Drug 1668 1682	Leków na stałe
+T34	Negation 1683 1696	nie przyjmuje
+R12	Dat Arg1:T30 Arg2:T29	
+R13	Dat Arg1:T30 Arg2:T31	
+R14	Neg Arg1:T34 Arg2:T33	

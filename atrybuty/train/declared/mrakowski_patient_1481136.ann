@@ -1,0 +1,77 @@
+T1	Treatment 332 368	Wskazana dalsza opieka u lekarza POZ
+T2	Behaviour 372 467	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T3	Investigation 471 562	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T4	Condition 826 829	ASD
+N1	Reference T4 ICD10:Q21.1	
+T5	Negation 832 841	negatywna
+R1	Neg Arg1:T5 Arg2:T4	
+T6	Condition 847 888	Łagodna niedomykalność zastawki mitralnej
+N2	Reference T6 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T7	Condition 893 937	Łagodna niedomykalność zastawki trójdzielnej
+N3	Reference T7 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T8	Symptom 974 982	Omdlenia
+N4	Reference T8 ICD10:R55	Omdlenie i zapaść
+T9	Symptom 1152 1164	kilku omdleń
+N5	Reference T9 ICD10:R55	Omdlenie i zapaść
+T10	Date 1166 1189	ostatnie kilka lat temu
+R2	Dat Arg1:T10 Arg2:T9	
+T11	Condition 1249 1252	PFO
+N6	Reference T11 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T12	Investigation 1275 1284	MRI głowy
+T13	Date 1286 1296	12/02/2018
+R3	Dat Arg1:T13 Arg2:T12	
+T14	Investigation_result 1320 1414	w prawej okolicy ciemieniowej pojedyncze, drobne 3,5 mm ognisko - prawdopodobnie niedokrwienne
+N7	Reference T14 ICD10:R90	Nieprawidłowe wyniki badań obrazowych ośrodkowego systemu nerwowego
+R4	Inv Arg1:T12 Arg2:T14	
+T15	Negation 1425 1431	neguje
+T16	Symptom 1432 1444	zasłabnięcia
+T17	Symptom 1446 1455	duszności
+N8	Reference T17 ICD10:R06.0	Duszność
+T18	Symptom 1457 1488	typowe bóle w klatce piersiowej
+N9	Reference T18 ICD10:R07	Ból gardła i w klatce piersiowej
+R5	Neg Arg1:T15 Arg2:T16	
+R6	Neg Arg1:T15 Arg2:T17	
+R7	Neg Arg1:T15 Arg2:T18	
+T19	Treatment 1490 1507	Przebyte operacje
+T20	Negation 1510 1516	neguje
+R8	Neg Arg1:T20 Arg2:T19	
+T21	Condition 1544 1547	WZW
+N10	Reference T21 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T22	Condition 1556 1565	borelioza
+N11	Reference T22 ICD10:A69.2	
+T23	Condition 1573 1581	gruźlica
+N12	Reference T23 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T24	Condition 1587 1591	odra
+N13	Reference T24 ICD10:B05	Odra
+A1	Source T24 Declared
+T25	Negation 1583 1584	-
+R9	Neg Arg1:T25 Arg2:T23	
+T26	Negation 1568 1569	-
+R10	Neg Arg1:T26 Arg2:T22	
+T27	Negation 1550 1551	-
+R11	Neg Arg1:T27 Arg2:T21	
+T28	Condition 1657 1672	Wywiad rodzinny
+A2	Status T28 Family
+T29	Treatment 1683 1705	wymiana zastawki serca
+A3	Status T29 Family
+T30	Behaviour 1706 1721	Palenie tytoniu
+T31	Negation 1723 1726	nie
+R12	Neg Arg1:T31 Arg2:T30	
+T32	Behaviour 1727 1738	Inne używki
+T33	Negation 1740 1743	nie
+R13	Neg Arg1:T33 Arg2:T32	
+T34	Condition 1744 1753	Uczulenia
+T35	Condition 1770 1779	uczulenie
+T36	Drug 1783 1792	pyralginę
+R14	Alg Arg1:T35 Arg2:T36	
+T37	Behaviour 1809 1835	warunki mieszkaniowe dobre
+N15	Reference T34 ICD10:T78.4	Alergia, nieokreślona
+T38	Condition 940 969	niskim prawdopodobieństwem PH
+A4	Source T38 Declared
+N17	Reference T38 ICD10:I27.0	Pierwotne nadciśnienie płucne
+T39	Condition 822 825	PFO
+N18	Reference T39 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R15	Neg Arg1:T5 Arg2:T39	
+N19	Reference T16 ICD10:R55	Omdlenie i zapaść
+N14	Reference T30 ICD10:Z72.0	Używanie tytoniu
+N16	Reference T35 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie

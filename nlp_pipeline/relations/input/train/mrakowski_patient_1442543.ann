@@ -1,0 +1,123 @@
+T1	Condition 438 471	Ciężka stenoza zastawki aortalnej
+N1	Reference T1 ICD10:I35.0	Zwężenie zastawki aortalnej
+T2	Investigation_result 474 526	AVA 0,9 cm2, PG max 73,24 mmHg, PG średni 42,51 mmHg
+T3	Condition 539 590	wady wrodzonej pod postacią zastawki jednopłatkowej
+N2	Reference T3 ICD10:I35.8	Inne zaburzenia funkcji zastawki aortalnej
+T4	Condition 592 633	Łagodna niedomykalność zastawki mitralnej
+N3	Reference T4 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T5	Investigation_result 635 693	Tętniak aorty wstępującej do 52 mm bez cech rozwarstwienia
+N4	Reference T5 ICD10:I71.2	Tętniak odcinka piersiowego aorty, bez informacji o pęknięciu
+T6	Investigation 696 699	TTE
+T7	Investigation 702 705	TEE
+R1	Inv Arg1:T6 Arg2:T5	
+R2	Inv Arg1:T7 Arg2:T5	
+T8	Condition 707 727	Hipercholesterolemia
+N5	Reference T8 ICD10:E78.0	Czysta hipercholesterolemia
+T9	Treatment 836 901	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T10	Treatment 925 1004	Wizyta w Poradni Kardiochirurgicznej celem ostatecznej kwalifikacji do operacji
+T11	Date 1034 1044	31/05/2019
+R3	Dat Arg1:T11 Arg2:T10	
+T12	Treatment 1202 1293	Wskazane wykonanie koronarografii/angio-CT tętnic wieńcowych przed kwalifikacją do operacji
+T13	Treatment 1295 1454	Wskazane wykonanie konsultacji laryngologicznej, urologicznej, stomatologicznej celem poszukiwania aktywnych ognisk zapalnych przed operacją kardiochirurgiczną
+T14	Treatment 1457 1548	Wskazane pobranie wymazu z nosa w warunkach POZ przed planowaną operacją kardiochirurgiczną
+T15	Treatment 1551 1600	Wskazane wykonanie szczepień przeciwko WZW typu B
+T16	Behaviour 1604 1644	Dieta lekkostrawna , niskocholesterolowa
+T17	Investigation 1648 1731	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T18	Investigation 1734 1782	Systematyczna kontrola ciśnienia tętniczego krwi
+T19	Treatment 1785 1826	Wskazane systematyczne przyjmowanie leków
+T20	Drug 1833 1842	Nebilenin
+T21	Drug 1862 1868	Atoris
+T22	Drug_dose 1843 1861	5 mg 1/2-0-0 tabl.
+R4	Drg Arg1:T20 Arg2:T22	
+T23	Drug_dose 1869 1886	40 mg 0-0-1 tabl.
+R5	Drg Arg1:T21 Arg2:T23	
+T24	Condition 2028 2061	ciężką stenozą zastawki aortalnej
+N6	Reference T24 ICD10:I35.0	Zwężenie zastawki aortalnej
+T25	Investigation_result 2063 2134	AVA 0,9 cm2, AVA index 0,55 cm2/m2,  PG max 73, 2 mmHg, PG śr 42,5 mmHg
+T26	Condition 2147 2198	wady wrodzonej pod postacią zastawki jednopłatkowej
+N7	Reference T26 ICD10:I35.8	Inne zaburzenia funkcji zastawki aortalnej
+T27	Condition 2206 2259	tętniakowatym poszerzeniem aorty wstępującej do 50 mm
+N8	Reference T27 ICD10:I71.2	Tętniak odcinka piersiowego aorty, bez informacji o pęknięciu
+T28	Symptom 2435 2465	bezobjawowy w I klasie wg NYHA
+T29	Treatment 2467 2502	Hospitalizowany w tutejszej Klinice
+T30	Date 2514 2521	07/2018
+R6	Dat Arg1:T30 Arg2:T29	
+T31	Investigation 2542 2556	angio-CT aorty
+T32	Date 2558 2568	13/09/2018
+R7	Dat Arg1:T32 Arg2:T31	
+T33	Condition 2592 2633	Łagodna niedomykalność zastawki mitralnej
+N9	Reference T33 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T34	Condition 2635 2655	Hipercholesterolemia
+N10	Reference T34 ICD10:E78.0	Czysta hipercholesterolemia
+T35	Negation 2657 2663	Neguje
+T36	Symptom 2665 2677	zasłabnięcia
+T37	Symptom 2679 2687	omdlenia
+N11	Reference T37 ICD10:R55	Omdlenie i zapaść
+T38	Symptom 2689 2699	krwawienia
+T39	Symptom 2701 2714	czarne stolce
+N12	Reference T39 ICD10:K92.1	Stolce smołowate
+T40	Symptom 2716 2732	brunatne wymioty
+N13	Reference T40 ICD10:K92.0	Wymioty krwawe
+T41	Condition 2734 2750	chorobę wrzodową
+N14	Reference T41 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T42	Symptom 2752 2766	duszność nocną
+N15	Reference T42 ICD10:R06.0	Duszność
+T43	Symptom 2768 2783	obrzęki podudzi
+N16	Reference T43 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T44	Symptom 2785 2809	bóle w klatce piersiowej
+N17	Reference T44 ICD10:R07	Ból gardła i w klatce piersiowej
+T45	Symptom 2811 2826	kołatania serca
+N18	Reference T45 ICD10:R00.2	Kołatanie serca
+R8	Neg Arg1:T35 Arg2:T45	
+R9	Neg Arg1:T35 Arg2:T44	
+R10	Neg Arg1:T35 Arg2:T43	
+R11	Neg Arg1:T35 Arg2:T42	
+R12	Neg Arg1:T35 Arg2:T41	
+R13	Neg Arg1:T35 Arg2:T40	
+R14	Neg Arg1:T35 Arg2:T39	
+R15	Neg Arg1:T35 Arg2:T38	
+R16	Neg Arg1:T35 Arg2:T37	
+R17	Neg Arg1:T35 Arg2:T36	
+T46	Treatment 2829 2846	Przebyte operacje
+T47	Negation 2848 2854	neguje
+R18	Neg Arg1:T47 Arg2:T46	
+T48	Behaviour 2855 2870	Palenie tytoniu
+N19	Reference T48 ICD10:Z72.0	Używanie tytoniu
+T49	Negation 2872 2878	neguje
+R19	Neg Arg1:T49 Arg2:T48	
+T50	Behaviour 2879 2890	Inne używki
+T51	Negation 2892 2898	neguje
+R20	Neg Arg1:T51 Arg2:T50	
+T52	Condition 2899 2908	Uczulenia
+T53	Negation 2910 2916	neguje
+R21	Neg Arg1:T53 Arg2:T52	
+T54	Condition 2944 2947	WZW
+N20	Reference T54 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T55	Condition 2954 2963	borelioza
+N21	Reference T55 ICD10:A69.2	Choroba z Lyme
+T56	Condition 2969 2972	tbc
+N22	Reference T56 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T57	Condition 2978 2982	odra
+N23	Reference T57 ICD10:B05	Odra
+T58	Condition 2988 3002	kontakt z odrą
+N24	Reference T58 ICD10:B05	Odra
+T59	Negation 3004 3005	-
+R22	Neg Arg1:T59 Arg2:T58	
+T60	Negation 2984 2985	-
+R23	Neg Arg1:T60 Arg2:T57	
+T61	Negation 2974 2975	-
+R24	Neg Arg1:T61 Arg2:T56	
+T62	Negation 2965 2966	-
+R25	Neg Arg1:T62 Arg2:T55	
+T63	Negation 2949 2950	-
+R26	Neg Arg1:T63 Arg2:T54	
+T64	Behaviour 3023 3049	warunki mieszkaniowe dobre
+T65	Drug 3099 3108	Nebilenin
+T66	Drug_dose 3109 3127	5 mg 1/2-0-0 tabl.
+R27	Drg Arg1:T65 Arg2:T66	
+T67	Investigation 3188 3209	badania laboratoryjne
+T68	Investigation 3248 3251	TTE
+T69	Investigation 3243 3246	TEE
+T70	Investigation 3237 3241	ABPM
+T71	Investigation 3217 3235	EKG metodą Holtera
+T72	Investigation 3211 3215	ECHO

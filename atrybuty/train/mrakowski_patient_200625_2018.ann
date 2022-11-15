@@ -1,0 +1,125 @@
+T1	Treatment 332 354	kontrola u lekarza POZ
+T2	Treatment 357 398	dalsza kontrola w Poradni Kardiologicznej
+T3	Investigation 420 450	scyntygrafii mięśnia sercowego
+T4	Treatment 453 497	dalsza kontrola w Poradni Endokrynologicznej
+T5	Behaviour 500 525	dieta niskocholesterolowa
+T6	Investigation 527 547	kontrola lipidogramu
+T7	Date 548 562	za  ok. 3 m-ce
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Drug 684 692	Euthyrox
+T9	Symptom 910 925	Kołatania serca
+N1	Reference T9 ICD10:R00.2	Kołatanie serca
+T10	Condition 927 950	Hiperlipidemia mieszana
+N2	Reference T10 ICD10:E78.2	Hiperlipidemia mieszana
+T11	Condition 952 989	Choroba Hashimoto w okresie eutyreozy
+N3	Reference T11 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T12	Condition 991 1019	Kamica pęcherzyka żółciowego
+N4	Reference T12 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T13	Condition 1165 1182	chorobą Hashimoto
+N5	Reference T13 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T14	Drug 1184 1196	Euthyrox N88
+T15	Symptom 1228 1251	napadów kołatania serca
+N6	Reference T15 ICD10:R00.2	Kołatanie serca
+T16	Date 1252 1262	"od dawna"
+R2	Dat Arg1:T16 Arg2:T15	
+A1	Source T16 Declared
+T17	Symptom 1268 1304	uciskowych bólów w klatce piersiowej
+N7	Reference T17 ICD10:R07.3	Inne bóle w klatce piersiowej
+T18	Symptom 1320 1335	kołatania serca
+N8	Reference T18 ICD10:R00.2	Kołatanie serca
+T19	Symptom 1359 1367	omdlenia
+N9	Reference T19 ICD10:R55	Omdlenie i zapaść
+T20	Date 1368 1378	w młodości
+R3	Dat Arg1:T20 Arg2:T19	
+T21	Symptom 1380 1433	na 2 piętro wchodzie bez odpoczynku ale jest zmęczona
+T22	Symptom 1446 1464	duszność wysiłkowa
+N10	Reference T22 ICD10:R06.0	Duszność
+T23	Symptom 1466 1486	obrzeki wokół kostek
+T24	Symptom 1499 1526	duszność nocna (po stresie)
+N12	Reference T24 ICD10:R06.0	Duszność
+T25	Condition 1528 1530	OM
+T26	Date 1532 1543	2 lata temu
+R4	Dat Arg1:T26 Arg2:T25	
+T27	Negation 1545 1548	bez
+T28	Treatment 1549 1552	HTZ
+R5	Neg Arg1:T27 Arg2:T28	
+T29	Negation 1553 1559	Neguje
+T30	Symptom 1561 1573	zasłabnięcia
+T31	Symptom 1575 1585	krwawienia
+T32	Symptom 1587 1600	czarne stolce
+N14	Reference T32 ICD10:K92.1	Stolce smołowate
+T33	Symptom 1602 1618	brunatne wymioty
+N15	Reference T33 ICD10:K92.0	Wymioty krwawe
+T34	Condition 1620 1636	chorobę wrzodową
+N16	Reference T34 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T35	Symptom 1638 1652	duszność nocną
+N17	Reference T35 ICD10:R06.0	Duszność
+T36	Symptom 1654 1669	obrzęki podudzi
+T37	Condition 1671 1673	HA
+N19	Reference T37 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T38	Condition 1675 1677	DM
+N20	Reference T38 ICD10:E14	Cukrzyca nieokreślona
+T39	Condition 1679 1689	udar mózgu
+N21	Reference T39 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T40	Condition 1691 1702	zawał serca
+N22	Reference T40 ICD10:I25.2	Przebyty zawał serca
+R6	Neg Arg1:T29 Arg2:T40	
+R7	Neg Arg1:T29 Arg2:T39	
+R8	Neg Arg1:T29 Arg2:T38	
+R9	Neg Arg1:T29 Arg2:T37	
+R10	Neg Arg1:T29 Arg2:T36	
+R11	Neg Arg1:T29 Arg2:T35	
+R12	Neg Arg1:T29 Arg2:T34	
+R13	Neg Arg1:T29 Arg2:T33	
+R14	Neg Arg1:T29 Arg2:T32	
+R15	Neg Arg1:T29 Arg2:T31	
+R16	Neg Arg1:T29 Arg2:T30	
+T41	Treatment 1706 1723	Przebyte operacje
+T42	Treatment 1725 1730	1x CC
+A2	Status T42 Historical_Insignificant
+T43	Behaviour 1731 1760	Palenie tytoniu: okazjonalnie
+T44	Behaviour 1761 1772	Inne używki
+T45	Negation 1774 1777	nie
+R17	Neg Arg1:T45 Arg2:T44	
+T46	Condition 1778 1787	Uczulenia
+N24	Reference T46 ICD10:T78.4	Alergia, nieokreślona
+T47	Negation 1790 1793	nie
+R18	Neg Arg1:T47 Arg2:T46	
+T48	Condition 1821 1824	WZW
+N25	Reference T48 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T49	Negation 1826 1827	-
+R19	Neg Arg1:T49 Arg2:T48	
+T50	Condition 1831 1840	borelioza
+N26	Reference T50 ICD10:A69.2	Choroba z Lyme
+T51	Negation 1843 1844	-
+R20	Neg Arg1:T51 Arg2:T50	
+T52	Condition 1848 1851	tbc
+T53	Negation 1853 1854	-
+R21	Neg Arg1:T53 Arg2:T52	
+T54	Condition 1858 1877	wywiadzie rodzinnym
+A3	Status T54 Family
+T55	Condition 1893 1917	udar niedokrwienny mózgu
+A4	Status T55 Family
+N28	Reference T55 ICD10:I63.9	Zawał mózgu, nieokreślony
+T56	Condition 1933 1936	CAD
+A5	Status T56 Family
+N29	Reference T56 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T57	Treatment 1944 1948	CABG
+A6	Status T57 Family
+T58	Behaviour 1966 1992	warunki mieszkaniowe dobre
+T59	Drug 2029 2041	Euthyrox N88
+T60	Drug_dose 2042 2056	1x 1 tabl/rano
+R22	Drg Arg1:T59 Arg2:T60	
+T61	Investigation 2117 2138	badania laboratoryjne
+T62	Investigation 2140 2144	ECHO
+T63	Investigation 2146 2164	EKG metodą Holtera
+T64	Investigation 2166 2170	ABPM
+T65	Investigation 2172 2187	próba wysiłkowa
+N30	Reference T30 ICD10:R55	Omdlenie i zapaść
+N23	Reference T43 ICD10:Z72.0	Używanie tytoniu
+N11	Reference T23 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N13	Reference T31 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N18	Reference T36 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N31	Reference T44 ICD10:Z72	Problemy związane ze stylem życia
+A7	Status T43 Historical_Insignificant
+N27	Reference T52 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

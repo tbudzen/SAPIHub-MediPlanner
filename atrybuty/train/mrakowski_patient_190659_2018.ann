@@ -1,0 +1,153 @@
+T1	Treatment 346 373	dalsza opieka w poradni POZ
+T2	Treatment 381 450	okresowa kontrola kardiologiczna, diabetologiczna i endokrynologiczna
+T3	Treatment 457 497	pacjentka zgłosi się ponownie do Kliniki
+T4	Date 504 514	16.04.2018
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Treatment 515 564	celem oceny skuteczności zmodyfikowanego leczenia
+T6	Investigation 570 609	codzienna kontrola ciśnienia tętniczego
+T7	Behaviour 617 642	dieta niskocholesterolowa
+T8	Treatment 651 679	regularne przyjmowanie leków
+T9	Drug 689 697	Biosotal
+T10	Drug_dose 698 750	80 mg 1 tabl. rano, w południe i 1/2 tabl. wieczorem
+R2	Drg Arg1:T9 Arg2:T10	
+T11	Drug 759 765	Atoris
+T12	Drug_dose 766 789	20 mg 1 tabl. wieczorem
+R3	Drg Arg1:T11 Arg2:T12	
+T13	Drug 798 805	Tritace
+T14	Drug_dose 806 823	5 mg 1 tabl. rano
+R4	Drg Arg1:T13 Arg2:T14	
+T15	Drug 832 838	Lercan
+T16	Drug_dose 839 862	10 mg 1 tabl. wieczorem
+R5	Drg Arg1:T15 Arg2:T16	
+T17	Drug 871 884	Euthyrox N200
+T18	Drug_dose 885 897	1 tabl. rano
+R6	Drg Arg1:T17 Arg2:T18	
+T19	Drug 906 918	Euthyrox N25
+T20	Drug_dose 921 964	dodatkowo 1 tabl. rano w sobotę i niedzielę
+R7	Drg Arg1:T19 Arg2:T20	
+T21	Drug 972 985	Glucophage XR
+T22	Drug_dose 986 1010	500 mg 1 tabl. wieczorem
+R8	Drg Arg1:T21 Arg2:T22	
+T23	Date 1012 1025	przez tydzień
+R9	Dat Arg1:T23 Arg2:T21	
+T24	Drug 1034 1046	Glucphage XR
+T25	Drug_dose 1047 1072	1000 mg 1 tabl. wieczorem
+T26	Drug_dose 1074 1165	włączyć po tygodniu, po zaprzestaniu przyjmowania dawki 500mg i przy dobrej tolerancji leku
+R10	Drg Arg1:T24 Arg2:T25	
+R11	Drg Arg1:T24 Arg2:T26	
+T27	Drug 1174 1186	Ins. Humalog
+T28	Drug_dose 1189 1215	wg dotychczasowych zaleceń
+R12	Drg Arg1:T27 Arg2:T28	
+T29	Drug 1225 1240	Ins. Humulin M3
+T30	Drug_dose 1243 1281	wg dotychczasowych zaleceń diabetologa
+R13	Drg Arg1:T29 Arg2:T30	
+T31	Condition 1509 1530	Nadciśnienie tętnicze
+N1	Reference T31 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T32	Condition 1532 1556	Tendencja do hipokalemii
+N2	Reference T32 ICD10:E87.6	Hipokalemia
+T33	Condition 1570 1611	Przewlekła rozkurczowa niewydolność serca
+T34	Condition 1655 1695	przewlekłej choroby niedokrwiennej serca
+N4	Reference T34 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T35	Negation 1696 1702	ujemna
+R14	Neg Arg1:T35 Arg2:T34	
+T36	Condition 1704 1735	Komorowe zaburzenia rytmu serca
+N5	Reference T36 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T37	Condition 1737 1752	Cukrzyca typu 2
+N6	Reference T37 ICD10:E11	Cukrzyca insulinoniezależna
+T38	Condition 1754 1776	Niedoczynność tarczycy
+N7	Reference T38 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T39	Condition 1778 1811	Choroba zwyrodnieniowa kręgosłupa
+N8	Reference T39 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T40	Treatment 1821 1840	leczeniu zabiegowym
+A1	Status T40 Historical_Insignificant
+T41	Condition 1841 1853	endometriozy
+A2	Status T41 Historical_Insignificant
+N9	Reference T41 ICD10:N80.9	Gruczolistość, nieokreślona
+T42	Date 1855 1866	20 lat temu
+R15	Dat Arg1:T42 Arg2:T41	
+R16	Dat Arg1:T42 Arg2:T40	
+T43	Symptom 2050 2101	ucisku w klatce piersiowej nie zależnego od wysiłku
+N10	Reference T43 ICD10:R07.3	Inne bóle w klatce piersiowej
+T44	Date 2104 2118	głównie w nocy
+R17	Dat Arg1:T44 Arg2:T43	
+T45	Symptom 2121 2143	Nasilenie dolegliwości
+T46	Date 2144 2155	od miesięcy
+R18	Dat Arg1:T46 Arg2:T45	
+R19	Dat Arg1:T46 Arg2:T43	
+T47	Symptom 2173 2190	uczucie duszności
+N11	Reference T47 ICD10:R06.0	Duszność
+T48	Symptom 2193 2208	kołatania serca
+N12	Reference T48 ICD10:R00.2	Kołatanie serca
+T49	Negation 2212 2218	Neguje
+T50	Symptom 2219 2231	zasłabnięcia
+R20	Neg Arg1:T49 Arg2:T50	
+T51	Condition 2249 2270	Nadciśnienie tętnicze
+N13	Reference T51 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T52	Condition 2273 2288	Cukrzyca typu 2
+N14	Reference T52 ICD10:E11	Cukrzyca insulinoniezależna
+T53	Condition 2291 2313	Niedoczynność tarczycy
+N15	Reference T53 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T54	Condition 2316 2349	Choroba zwyrodnieniowa kręgosłupa
+N16	Reference T54 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T55	Condition 2352 2376	Tendencja do hipokalemii
+N17	Reference T55 ICD10:E87.6	Hipokalemia
+T56	Treatment 2378 2395	Przebyte operacje
+T57	Condition 2407 2419	endometriozy
+A3	Status T57 Historical_Insignificant
+N18	Reference T57 ICD10:N80.9	Gruczolistość, nieokreślona
+T58	Date 2420 2431	20 lat temu
+R21	Dat Arg1:T58 Arg2:T57	
+T59	Treatment 2433 2452	Leczenie przewlekłe
+T60	Treatment 2455 2471	diabetologicznej
+T61	Treatment 2474 2492	endokrynologicznej
+T62	Condition 2521 2524	WZW
+N19	Reference T62 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T63	Negation 2527 2528	-
+R22	Neg Arg1:T63 Arg2:T62	
+T64	Condition 2534 2543	borelioza
+N20	Reference T64 ICD10:A69.2	Choroba z Lyme
+T65	Negation 2546 2547	-
+R23	Neg Arg1:T65 Arg2:T64	
+T66	Condition 2552 2571	wywiadzie rodzinnym
+A4	Status T66 Family
+T67	Negation 2574 2578	brak
+R24	Neg Arg1:T67 Arg2:T66	
+T68	Behaviour 2580 2595	Palenie tytoniu
+T69	Negation 2597 2600	nie
+R25	Neg Arg1:T69 Arg2:T68	
+T70	Behaviour 2601 2612	Inne używki
+T71	Negation 2614 2617	nie
+R26	Neg Arg1:T71 Arg2:T70	
+T72	Condition 2618 2627	Uczulenia
+N22	Reference T72 ICD10:T78.4	Alergia, nieokreślona
+T73	Negation 2629 2635	neguje
+R27	Neg Arg1:T73 Arg2:T72	
+T74	Behaviour 2652 2678	warunki mieszkaniowe dobre
+T75	Drug 2703 2709	Kalium
+T76	Drug_dose 2710 2728	782 mg /3 g 2 x dz
+R28	Drg Arg1:T75 Arg2:T76	
+T77	Drug 2731 2736	Nedal
+T78	Drug_dose 2737 2759	5 mg 1 x dz po 1 tabl.
+R29	Drg Arg1:T77 Arg2:T78	
+T79	Drug 2760 2773	Euthyrox N175
+T80	Drug_dose 2774 2794	1 x dz rano na czczo
+R30	Drg Arg1:T79 Arg2:T80	
+T81	Drug 2797 2805	Spironol
+T82	Drug_dose 2806 2828	50 mg 1x dz w południe
+R31	Drg Arg1:T81 Arg2:T82	
+T83	Drug 2831 2847	Insulina Humalog
+T84	Drug_dose 2848 2869	16 j sc - 10 j sc - 0
+R32	Drg Arg1:T83 Arg2:T84	
+T85	Drug 2873 2883	Humulin M3
+T86	Drug_dose 2885 2899	26 j sc na noc
+R33	Drg Arg1:T85 Arg2:T86	
+T87	Investigation 2915 2925	Echo serca
+T88	Investigation 2928 2938	Holter EKG
+T89	Investigation 2941 2956	Próba Wysiłkowa
+T90	Symptom 1612 1630	w I klasie wg NYHA
+N23	Reference T90 ICD10:I50	Niewydolność serca
+N3	Reference T33 ICD10:I50	Niewydolność serca
+T91	Investigation 1632 1654	Diagnostyka w kierunku
+N24	Reference T50 ICD10:R55	Omdlenie i zapaść
+N21	Reference T68 ICD10:Z72.0	Używanie tytoniu
+N25	Reference T70 ICD10:Z72	Problemy związane ze stylem życia

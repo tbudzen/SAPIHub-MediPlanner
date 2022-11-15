@@ -1,0 +1,127 @@
+T1	Behaviour 629 704	Dieta lekkostrawna, niskocholesterolowa z niską zawartością cukrów prostych
+T2	Investigation 510 563	kontrola lipidogramu, jonogramu, parametrów nerkowych
+T3	Drug 807 831	Karbicombi 16mg + 12,5mg
+T4	Drug_dose 832 854	1 tabletka 1x/dz. rano
+R1	Drg Arg1:T3 Arg2:T4	
+T5	Drug 856 862	Bibloc
+T6	Drug_dose 863 889	5mg 1 tabletka 1x/dz. rano
+R2	Drg Arg1:T5 Arg2:T6	
+T7	Drug 891 898	Kaldyum
+T8	Drug_dose 899 921	1 tabletka 1x/dz. rano
+R3	Drg Arg1:T7 Arg2:T8	
+T9	Drug 923 931	Primacor
+T10	Drug_dose 932 964	10mg 1 tabletka 1x/dz. wieczorem
+R4	Drg Arg1:T9 Arg2:T10	
+T11	Drug 966 973	Roswera
+T12	Drug_dose 974 1006	20mg 1 tabletka 1x/dz. wieczorem
+R5	Drg Arg1:T11 Arg2:T12	
+T13	Condition 1234 1282	Niewydolność serca z zachowaną frakcją wyrzutową
+N1	Reference T13 ICD10:I50	Niewydolność serca
+T14	Condition 1284 1307	Przetrwały otwór owalny
+N2	Reference T14 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T15	Condition 1309 1349	Pojedyncze dodatkowe pobudzenia komorowe
+N3	Reference T15 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T16	Condition 1351 1385	Nadkomorowe zaburzenia rytmu serca
+T17	Condition 1387 1408	Nadciśnienie tętnicze
+N5	Reference T17 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T18	Condition 1410 1422	Dyslipidemia
+N6	Reference T18 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T19	Condition 1424 1451	Miażdżyca tętnic obwodowych
+N7	Reference T19 ICD10:I73	Inne choroby naczyń obwodowych
+T20	Condition 1453 1483	Żylaki kończyny dolnej prawej.
+N8	Reference T20 ICD10:I83	Żylaki kończyn dolnych
+T21	Condition 1484 1511	Polip pęcherzyka żółciowego
+N9	Reference T21 ICD10:K82	Inne choroby pęcherzyka żółciowego
+T22	Condition 1513 1567	Zmiany zwyrodnieniowe w obrębie kręgosłupa piersiowego
+N10	Reference T22 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T23	Condition 1569 1578	Uczulenie
+N11	Reference T23 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T24	Drug 1582 1591	pyralginę
+R6	Alg Arg1:T23 Arg2:T24	
+T25	Investigation 2702 2712	Echo serca
+T26	Investigation 2714 2724	Holter EKG
+T27	Investigation 2726 2730	ABPM
+T28	Investigation 2732 2747	Próba Wysiłkowa
+T29	Investigation 2749 2757	RTG płuc
+T30	Symptom 1801 1836	gniotących bólów w klatce piersiowe
+T31	Symptom 1839 1848	duszności
+N12	Reference T31 ICD10:R06.0	Duszność
+T32	Symptom 1854 1906	bólów głowy związanych z wysiłkiem (II/III NYHA/CCS)
+T33	Date 1940 1952	8-9 miesięcy
+R7	Dat Arg1:T33 Arg2:T32	
+R8	Dat Arg1:T33 Arg2:T31	
+R9	Dat Arg1:T33 Arg2:T30	
+T34	Symptom 2058 2073	kołatania serca
+N13	Reference T34 ICD10:R00.2	Kołatanie serca
+T35	Symptom 2080 2141	przy większym wysiłku, występujący ból kończyny dolnej prawej
+T36	Symptom 2150 2162	zasłabnięcia
+N14	Reference T36 ICD10:R55	Omdlenie i zapaść
+T37	Symptom 2164 2172	omdlenia
+N15	Reference T37 ICD10:R55	Omdlenie i zapaść
+T38	Symptom 2174 2187	zawroty głowy
+N16	Reference T38 ICD10:R42	Zawroty głowy i odurzenie
+T39	Negation 2143 2149	Neguje
+R10	Neg Arg1:T39 Arg2:T36	
+R11	Neg Arg1:T39 Arg2:T37	
+R12	Neg Arg1:T39 Arg2:T38	
+T40	Condition 2235 2256	nadciśnienie tętnicze
+N17	Reference T40 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T41	Condition 2258 2265	alergia
+N18	Reference T41 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T42	Drug 2269 2278	pyralginę
+R13	Alg Arg1:T41 Arg2:T42	
+T43	Condition 2280 2309	żylaki kończyny dolnej prawej
+N19	Reference T43 ICD10:I83	Żylaki kończyn dolnych
+T44	Negation 2330 2334	brak
+T45	Treatment 2311 2328	Przebyte operacje
+R14	Neg Arg1:T44 Arg2:T45	
+T46	Condition 2398 2401	WZW
+T47	Condition 2410 2419	borelioza
+N21	Reference T47 ICD10:A69.2	Choroba z Lyme
+T48	Condition 2427 2435	gruźlica
+N22	Reference T48 ICD10:B05	Odra
+T49	Negation 2437 2439	-)
+R15	Neg Arg1:T49 Arg2:T48	
+T50	Negation 2422 2423	-
+R16	Neg Arg1:T50 Arg2:T47	
+T51	Negation 2404 2405	-
+R17	Neg Arg1:T51 Arg2:T46	
+T52	Negation 2457 2467	nieistotny
+T53	Negation 2486 2492	neguje
+T54	Negation 2507 2513	neguje
+T55	Condition 2440 2455	Wywiad rodzinny
+A1	Status T55 Family
+R18	Neg Arg1:T52 Arg2:T55	
+T56	Behaviour 2469 2484	Palenie tytoniu
+R19	Neg Arg1:T53 Arg2:T56	
+T57	Behaviour 2494 2505	Inne używki
+R20	Neg Arg1:T54 Arg2:T57	
+T58	Condition 2515 2524	Uczulenia
+N24	Reference T58 ICD10:Z88	
+T59	Drug 2526 2535	pyralgina
+R21	Alg Arg1:T58 Arg2:T59	
+T60	Behaviour 2553 2579	warunki mieszkaniowe dobre
+T61	Drug 2587 2617	Karbicombi (kandesartan + HCT)
+T62	Drug_dose 2618 2632	16mg +12,5mg R
+R22	Drg Arg1:T61 Arg2:T62	
+T63	Drug 2634 2639	Doxar
+T64	Drug_dose 2640 2645	2mg W
+R23	Drg Arg1:T63 Arg2:T64	
+T65	Drug 2647 2654	Amlopin
+T66	Drug_dose 2655 2662	10mg P,
+R24	Drg Arg1:T65 Arg2:T66	
+T67	Drug 2663 2669	Bibloc
+T68	Drug_dose 2670 2675	5mg P
+R25	Drg Arg1:T67 Arg2:T68	
+T69	Drug 2677 2684	Kaldyum
+T70	Drug_dose 2685 2686	R
+R26	Drg Arg1:T69 Arg2:T70	
+T71	Investigation 719 765	samokontrola ciśnienia tętniczego krwi i tętna
+T72	Date 594 624	pierwsza za około 3-4 tygodnie
+R27	Dat Arg1:T72 Arg2:T2	
+N25	Reference T30 ICD10:R07.3	Inne bóle w klatce piersiowej
+N26	Reference T32 ICD10:R51	Ból głowy
+N27	Reference T35 ICD10:M79.6	Bóle kończyn
+N4	Reference T16 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+N20	Reference T46 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N23	Reference T56 ICD10:Z72.0	Używanie tytoniu

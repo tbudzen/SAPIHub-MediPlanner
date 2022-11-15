@@ -1,0 +1,104 @@
+T1	Treatment 345 372	dalsza opieka w poradni POZ
+T2	Treatment 388 428	kontrola kardiologiczna, diabetologiczna
+T3	Investigation 445 474	kontrola ciśnienia tętniczego
+T4	Investigation 490 528	kontrola lipidogramu i aminotransferaz
+T5	Date 540 552	za 6 tygodni
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Behaviour 559 613	dieta DASH i niskocholesterolowa oraz niskoglikemiczna
+T7	Behaviour 622 641	redukcja masy ciała
+T8	Behaviour 649 694	stały, umiarkowany, aerobowy wysiłek fizyczny
+T9	Drug 740 746	Siofor
+T10	Drug_dose 747 791	1000 mg 1 tabl. rano, w południe i wieczorem
+R2	Drg Arg1:T9 Arg2:T10	
+T11	Drug 800 806	Amaryl
+T12	Drug_dose 807 824	2 mg 1 tabl. rano
+R3	Drg Arg1:T11 Arg2:T12	
+T13	Drug 832 839	Amlopin
+T14	Drug_dose 840 861	5mg 1 tabl. wieczorem
+R4	Drg Arg1:T13 Arg2:T14	
+T15	Drug 869 877	Actelsar
+T16	Drug_dose 878 895	80mg 1 tabl. rano
+R5	Drg Arg1:T15 Arg2:T16	
+T17	Drug 903 915	Tertensif SR
+T18	Drug_dose 916 928	1 tabl. rano
+R6	Drg Arg1:T17 Arg2:T18	
+T19	Drug 937 942	Acard
+T20	Drug_dose 943 966	75 mg 1 tabl. wieczorem
+R7	Drg Arg1:T19 Arg2:T20	
+T21	Drug 974 980	Atoris
+T22	Drug_dose 981 1004	40 mg 1 tabl. wieczorem
+R8	Drg Arg1:T21 Arg2:T22	
+T23	Condition 1223 1250	Przewlekła choroba wieńcowa
+T24	Condition 1252 1259	Otyłość
+N2	Reference T24 ICD10:E66	Otyłość
+T25	Condition 1261 1277	Cukrzyca typu 2.
+N3	Reference T25 ICD10:E11	Cukrzyca insulinoniezależna
+T26	Condition 1278 1311	Nadciśnienie tętnicze skorygowane
+N4	Reference T26 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T27	Condition 1313 1336	Hiperlipidemia mieszana
+N5	Reference T27 ICD10:E78.2	Hiperlipidemia mieszana
+T28	Behaviour 1338 1348	Nikotynizm
+N6	Reference T28 ICD10:Z72.0	Używanie tytoniu
+T29	Date 1349 1362	w przeszłości
+R9	Dat Arg1:T29 Arg2:T28	
+A1	Status T28 Historical_Insignificant
+T30	Investigation 2426 2436	echo serca
+T31	Investigation 2438 2441	TET
+T32	Investigation 2443 2447	ABPM
+T33	Investigation 2449 2459	Holter ekg
+T34	Investigation 2461 2479	rtg kl. piersiowej
+T35	Drug 2364 2376	Actelsar HCT
+T36	Drug 2332 2339	Amlopin
+T37	Drug 2306 2312	Amaryl
+T38	Drug 2271 2277	Siofor
+T39	Drug_dose 2278 2304	1000 mg 1 tabl. 3xdziennie
+R10	Drg Arg1:T38 Arg2:T39	
+T40	Drug_dose 2313 2330	1 mg 1 tabl. rano
+R11	Drg Arg1:T37 Arg2:T40	
+T41	Drug_dose 2340 2362	5 mg 1 tabl. wieczorem
+R12	Drg Arg1:T36 Arg2:T41	
+T42	Drug_dose 2377 2397	80+25mg 1 tabl. rano
+R13	Drg Arg1:T35 Arg2:T42	
+T43	Negation 2224 2230	neguje
+T44	Behaviour 2205 2222	Uzależnienie inne
+N7	Reference T44 ICD10:Z72.0	Używanie tytoniu
+R14	Neg Arg1:T43 Arg2:T44	
+T45	Behaviour 2167 2203	Alkohol: okazjonalnie, 2x w miesiącu
+N8	Reference T45 ICD10:Z72.1	Używanie alkoholu
+T46	Date 2120 2138	do 2.5 roku wstecz
+T47	Behaviour 2108 2118	Nikotynizm
+N9	Reference T47 ICD10:Z72.0	Używanie tytoniu
+R15	Dat Arg1:T46 Arg2:T47	
+T48	Condition 2072 2079	Alergie
+N10	Reference T48 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T49	Condition 2026 2032	DM t.2
+A2	Status T49 Family
+N11	Reference T49 ICD10:E11	Cukrzyca insulinoniezależna
+T50	Negation 2001 2007	neguje
+T51	Treatment 1982 1999	Przebyte operacje
+R16	Neg Arg1:T50 Arg2:T51	
+T52	Condition 1871 1876	DMt.2
+N12	Reference T52 ICD10:E11	Cukrzyca insulinoniezależna
+T53	Date 1879 1890	4 lata temu
+R17	Dat Arg1:T53 Arg2:T52	
+T54	Condition 1900 1902	HA
+N13	Reference T54 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T55	Date 1905 1913	od 2 lat
+R18	Dat Arg1:T55 Arg2:T54	
+T56	Treatment 1914 1921	leczone
+R19	Dat Arg1:T55 Arg2:T56	
+T57	Treatment 1891 1898	wykryta
+R20	Dat Arg1:T53 Arg2:T57	
+T58	Condition 1545 1575	wysłuchanego szmeru nad sercem
+N14	Reference T58 ICD10:R01.2	Inne zjawiska osłuchowe w okolicy serca
+T59	Symptom 1650 1677	duszność wysiłkową nasiloną
+N15	Reference T59 ICD10:R06.0	Duszność
+T60	Date 1678 1687	od 6 m-cy
+R21	Dat Arg1:T60 Arg2:T59	
+T61	Symptom 1690 1710	II/III klasę wg NYHA
+R22	Dat Arg1:T60 Arg2:T61	
+T62	Symptom 1720 1789	ból uciskowy w klatce piersiowej spoczynkowy (nawracające 1 godzinne,
+N16	Reference T62 ICD10:R07.3	Inne bóle w klatce piersiowej
+T63	Date 1790 1823	trwały przez 2 tygodnie w wakacje
+R23	Dat Arg1:T63 Arg2:T62	
+N1	Reference T23 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona

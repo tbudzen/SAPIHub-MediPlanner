@@ -1,0 +1,95 @@
+T1	Investigation 495 554	kontrola wartości ciśnienia tętniczego w warunkach domowych
+T2	Behaviour 557 589	zaprzestanie palenia papierosów!
+T3	Drug 621 626	Nedal
+T4	Drug_dose 627 647	5mg 1x 1/2 tabl/rano
+R1	Drg Arg1:T3 Arg2:T4	
+T5	Condition 865 887	Nadciśnienie tętnicze.
+N1	Reference T5 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T6	Symptom 888 903	Kołatania serca
+N2	Reference T6 ICD10:R00.2	Kołatanie serca
+T7	Investigation_result 1069 1127	powodu skoków RR do 179/140mmHg (zwykle RR sk 130-140mmHg)
+T8	Symptom 1130 1154	drżeniem kończyn górnych
+N3	Reference T8 ICD10:G25.0	Drżenie samoistne
+T9	Symptom 1156 1170	uczuciem zimna
+N4	Reference T9 ICD10:R20.2	Parestezje
+T10	Symptom 1172 1187	zawrotami głowy
+N5	Reference T10 ICD10:R42	Zawroty głowy i odurzenie
+T11	Symptom 1190 1200	dusznością
+N6	Reference T11 ICD10:R06.0	Duszność
+T12	Symptom 1202 1233	jeden raz z utratą przytomności
+N7	Reference T12 ICD10:R55	Omdlenie i zapaść
+T13	Symptom 1282 1304	napady kołatania serca
+N8	Reference T13 ICD10:R00.2	Kołatanie serca
+T14	Symptom 1306 1340	nietypowe bóle w klatce piersiowej
+N9	Reference T14 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T15	Date 1248 1258	od 09.2018
+R2	Dat Arg1:T15 Arg2:T7	
+R3	Dat Arg1:T15 Arg2:T8	
+R4	Dat Arg1:T15 Arg2:T9	
+R5	Dat Arg1:T15 Arg2:T10	
+R6	Dat Arg1:T15 Arg2:T11	
+R7	Dat Arg1:T15 Arg2:T12	
+T16	Symptom 1350 1362	zasłabnięcia
+N10	Reference T16 ICD10:R55	Omdlenie i zapaść
+T17	Symptom 1364 1379	obrzęki podudzi
+N11	Reference T17 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T18	Symptom 1381 1423	zmniejszenie tolerancji wysiłku fizycznego
+T19	Behaviour 1425 1431	używki
+T20	Behaviour 1433 1446	antykoncepcja
+T21	Condition 1448 1453	ciąża
+N12	Reference T21 ICD10:Z32.1	Ciąża potwierdzona
+T22	Negation 1342 1348	Neguje
+R8	Neg Arg1:T22 Arg2:T16	
+R9	Neg Arg1:T22 Arg2:T17	
+R10	Neg Arg1:T22 Arg2:T18	
+R11	Neg Arg1:T22 Arg2:T19	
+R12	Neg Arg1:T22 Arg2:T20	
+R13	Neg Arg1:T22 Arg2:T21	
+T23	Treatment 1474 1517	usunięcie kostek dodatkowych przyśrodkowych
+A1	Status T23 Historical_Insignificant
+T24	Behaviour 1519 1545	Palenie tytoniu: do 10/ dz
+N13	Reference T24 ICD10:T65.2	Tytoń i nikotyna
+T25	Behaviour 1547 1558	Inne używki
+T26	Negation 1560 1563	nie
+R14	Neg Arg1:T26 Arg2:T25	
+T27	Condition 1564 1573	Uczulenia
+N14	Reference T27 ICD10:T78.4	Alergia, nieokreślona
+T28	Negation 1575 1578	nie
+R15	Neg Arg1:T28 Arg2:T27	
+T29	Condition 1607 1610	WZW
+N15	Reference T29 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T30	Condition 1617 1626	borelioza
+N16	Reference T30 ICD10:A69.2	Choroba z Lyme
+T31	Condition 1632 1635	tbc
+N17	Reference T31 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T32	Condition 1641 1645	odra
+N18	Reference T32 ICD10:B05	Odra
+T33	Behaviour 1651 1665	kontakt z odrą
+N19	Reference T33 ICD10:B05	Odra
+T34	Negation 1666 1669	(-)
+R16	Dat Arg1:T34 Arg2:T33	
+T35	Negation 1646 1649	(-)
+R17	Dat Arg1:T35 Arg2:T32	
+T36	Negation 1636 1639	(-)
+R18	Dat Arg1:T36 Arg2:T31	
+T37	Negation 1627 1630	(-)
+R19	Dat Arg1:T37 Arg2:T30	
+T38	Negation 1611 1614	(-)
+R20	Neg Arg1:T38 Arg2:T29	
+T39	Negation 1693 1696	b/z
+T40	Condition 1670 1692	W wywiadzie rodzinnym:
+A2	Status T40 Family
+R21	Neg Arg1:T39 Arg2:T40	
+T41	Behaviour 1713 1739	warunki mieszkaniowe dobre
+T42	Drug 1777 1782	Nedal
+T43	Drug_dose 1783 1786	5mg
+T44	Drug 1789 1795	Vivace
+T45	Drug_dose 1796 1801	2,5mg
+R22	Drg Arg1:T42 Arg2:T43	
+R23	Drg Arg1:T44 Arg2:T45	
+T46	Investigation 1887 1891	ECHO
+T47	Investigation 1893 1911	EKG metodą Holtera
+T48	Investigation 1913 1917	ABPM
+T49	Investigation 1919 1934	próba wysiłkowa
+T50	Drug 348 359	Paracetamol
+T51	Drug 341 346	Nedal

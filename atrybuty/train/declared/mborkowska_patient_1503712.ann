@@ -1,0 +1,254 @@
+T1	Investigation 3802 3805	TTE
+T2	Investigation 3807 3810	TET
+T3	Investigation 3812 3816	ABPM
+T4	Investigation 3818 3829	Holter EKG.
+T5	Drug 3489 3500	Diaprel MR,
+T6	Drug 3501 3507	Atoris
+T7	Drug_dose 3508 3533	20mg 1 tabletka wieczorem
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 3535 3540	Axtil
+T9	Drug_dose 3541 3561	10mg 1 tabletka rano
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 3563 3575	Tertensif SR
+T11	Drug_dose 3576 3591	1 tabletka rano
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 3593 3600	Lacipil
+T13	Drug_dose 3601 3625	4mg 1 tabletka wieczorem
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Drug 3627 3637	Beto 50 ZK
+T15	Drug_dose 3638 3655	1/2 tabletki rano
+R5	Drg Arg1:T14 Arg2:T15	
+T16	Drug 3657 3665	Polocard
+T17	Drug_dose 3666 3691	75mg 1 tabletka wieczorem
+R6	Drg Arg1:T16 Arg2:T17	
+T18	Drug 3693 3700	Nonpres
+T19	Drug_dose 3701 3734	25mg 1 tabletka w pon i czwartki,
+R7	Drg Arg1:T18 Arg2:T19	
+T20	Drug 3735 3742	Kaldyum
+T21	Drug_dose 3743 3763	1 tabletka wieczorem
+R8	Drg Arg1:T20 Arg2:T21	
+T22	Drug 3765 3773	Magnesin
+T23	Drug_dose 3774 3786	1 tabletka R
+R9	Drg Arg1:T22 Arg2:T23	
+T24	Behaviour 3439 3465	warunki mieszkaniowe dobre
+T25	Negation 3415 3421	neguje
+T26	Negation 3396 3402	neguje
+T27	Negation 3375 3381	neguje
+T28	Condition 3404 3413	Uczulenia
+N1	Reference T28 ICD10:T78.4	Alergia, nieokreślona
+R10	Neg Arg1:T25 Arg2:T28	
+T29	Behaviour 3383 3394	Inne używki
+R11	Neg Arg1:T26 Arg2:T29	
+T30	Behaviour 3358 3373	Palenie tytoniu
+R12	Neg Arg1:T27 Arg2:T30	
+T31	Behaviour 460 555	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T32	Investigation 559 571	Okresowo kon
+T33	Condition 3330 3348	choroba alzheimera
+A1	Status T33 Family
+N3	Reference T33 ICD10:G30.9	Choroba Alzheimera, nieokreślona
+T34	Condition 3354 3356	HA
+A2	Status T34 Family
+N4	Reference T34 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T35	Condition 3249 3252	WZW
+T36	Condition 3261 3270	borelioza
+N6	Reference T36 ICD10:A69.2	Choroba z Lyme
+T37	Condition 3278 3286	grużlica
+N7	Reference T37 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T38	Condition 3294 3298	odra
+N8	Reference T38 ICD10:B05	
+T39	Negation 3253 3258	( - )
+R13	Neg Arg1:T39 Arg2:T35	
+T40	Negation 3271 3277	( - ),
+R14	Neg Arg1:T40 Arg2:T36	
+T41	Negation 3289 3292	- )
+R15	Neg Arg1:T41 Arg2:T37	
+T42	Negation 3299 3304	( - )
+R16	Neg Arg1:T42 Arg2:T38	
+T43	Condition 3189 3221	Zmiany zwyrodnieniowe kręgosłupa
+N9	Reference T43 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T44	Treatment 3111 3165	panhisterektomii z następową brachy i teleradioterapią
+T45	Condition 3175 3177	Ca
+T46	Date 3179 3186	10/1998
+R17	Dat Arg1:T46 Arg2:T45	
+R18	Dat Arg1:T46 Arg2:T44	
+T47	Treatment 3075 3091	cholecystektomii
+T48	Date 3093 3100	10/2015
+R19	Dat Arg1:T48 Arg2:T47	
+T49	Treatment 3010 3038	hemikolektomii prawostronnej
+T50	Condition 3048 3055	adenoca
+T51	Date 3057 3065	10/2015)
+R20	Dat Arg1:T51 Arg2:T50	
+R21	Dat Arg1:T51 Arg2:T49	
+T52	Treatment 2952 2974	endoskopowym usunięciu
+T53	Condition 2975 2990	polipów żołądka
+N10	Reference T53 ICD10:K31.7	Polip żołądka i dwunastnicy
+T54	Date 2992 2999	10/2016
+R22	Dat Arg1:T54 Arg2:T53	
+R23	Dat Arg1:T54 Arg2:T52	
+T55	Treatment 2889 2911	endoskopowym usunięciu
+T56	Condition 2912 2932	gruczolaka okrężnicy
+N11	Reference T56 ICD10:C18	Nowotwór złośliwy jelita grubego
+T57	Date 2934 2941	10/2016
+R24	Dat Arg1:T57 Arg2:T56	
+R25	Dat Arg1:T57 Arg2:T55	
+T58	Date 2871 2878	04/2012
+T59	Condition 2835 2869	zatoru tętnicy środkowej siatkówki
+N12	Reference T59 ICD10:H34.1	Zamknięcie tętnicy środkowej siatkówki
+T60	Condition 2807 2825	Ślepota oka lewego
+N13	Reference T60 ICD10:H54.4	Ślepota jednego oka
+R26	Dat Arg1:T58 Arg2:T59	
+R27	Dat Arg1:T58 Arg2:T60	
+T61	Condition 2751 2766	Torbiele nerek.
+N14	Reference T61 ICD10:N28.1	Torbiel nerki, nabyta
+T62	Condition 2734 2749	Cukrzyca typu 2
+N15	Reference T62 ICD10:E11	Cukrzyca insulinoniezależna
+T63	Condition 2767 2805	Zwapniały tętniak tętnicy śledzionowej
+N16	Reference T63 ICD10:I72	Inne postacie tętniaka
+T64	Condition 2699 2733	Zwężenie tętnic szyjnych (do 60%).
+N17	Reference T64 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T65	Condition 2652 2664	Dyslipidemia
+N18	Reference T65 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T66	Drug 2690 2697	statyną
+T67	Condition 2590 2650	Arytmia nadkomorowa pod postacią ExSV pojedynczych, par, TSV
+N19	Reference T67 ICD10:I47.1	Częstoskurcz nadkomorowy
+T68	Condition 2528 2573	Umiarkowana niedomykalność zastawki mitralnej
+N20	Reference T68 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T69	Condition 2576 2588	trójdzielnej
+N21	Reference T69 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T70	Condition 2505 2527	Nadciśnienie tętnicze.
+N22	Reference T70 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T71	Condition 2457 2477	zawale ściany dolnej
+N23	Reference T71 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T72	Date 2479 2483	2001
+R28	Dat Arg1:T72 Arg2:T71	
+A3	Source T71 Declared
+T73	Treatment 2387 2437	CABG (LIMA do GPZ, pomost aortalno-wieńcowy do PTW
+T74	Date 2439 2446	05/2005
+R29	Dat Arg1:T74 Arg2:T73	
+T75	Condition 2350 2378	Przewlekła choroba wieńcowa.
+N24	Reference T75 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T76	Negation 2136 2142	Neguje
+T77	Symptom 2143 2155	zasłabnięcia
+N25	Reference T77 ICD10:R55	Omdlenie i zapaść
+T78	Symptom 2157 2165	omdlenia
+N26	Reference T78 ICD10:R55	Omdlenie i zapaść
+T79	Symptom 2167 2180	zawroty głowy
+N27	Reference T79 ICD10:R42	Zawroty głowy i odurzenie
+T80	Symptom 2182 2192	krwawienia
+N28	Reference T80 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T81	Symptom 2194 2207	czarne stolce
+N29	Reference T81 ICD10:K92.1	Stolce smołowate
+T82	Symptom 2209 2225	brunatne wymioty
+N30	Reference T82 ICD10:K92.0	Wymioty krwawe
+T83	Condition 2227 2243	chorobę wrzodową
+N31	Reference T83 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T84	Symptom 2245 2259	duszność nocną
+N32	Reference T84 ICD10:I50.1	Niewydolność serca lewokomorowa
+T85	Symptom 2261 2276	obrzęki podudzi
+N33	Reference T85 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T86	Symptom 2278 2303	bóle w klatce piersiowej.
+R30	Neg Arg1:T76 Arg2:T77	
+R31	Neg Arg1:T76 Arg2:T78	
+R32	Neg Arg1:T76 Arg2:T79	
+R33	Neg Arg1:T76 Arg2:T80	
+R34	Neg Arg1:T76 Arg2:T81	
+R35	Neg Arg1:T76 Arg2:T82	
+R36	Neg Arg1:T76 Arg2:T83	
+R37	Neg Arg1:T76 Arg2:T84	
+R38	Neg Arg1:T76 Arg2:T85	
+R39	Neg Arg1:T76 Arg2:T86	
+T87	Symptom 2065 2080	kołatania serca
+N35	Reference T87 ICD10:R00.2	Kołatanie serca
+T88	Condition 1795 1827	Zmiany zwyrodnieniowe kręgosłupa
+N36	Reference T88 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T89	Condition 1832 1860	Wysiłkowe nietrzymanie moczu
+N37	Reference T89 ICD10:N39.3	Wysiłkowe nietrzymanie moczu
+T90	Treatment 1713 1767	panhisterektomii z następową brachy i teleradioterapią
+T91	Condition 1777 1779	Ca
+T92	Date 1781 1788	10/1998
+R40	Dat Arg1:T92 Arg2:T91	
+R41	Dat Arg1:T92 Arg2:T90	
+T93	Treatment 1673 1689	cholecystektomii
+T94	Date 1690 1699	(10/2015)
+R42	Dat Arg1:T94 Arg2:T93	
+T95	Treatment 1597 1625	hemikolektomii prawostronnej
+T96	Condition 1635 1649	adenocarcinoma
+T97	Date 1650 1658	(10/2015
+R43	Dat Arg1:T97 Arg2:T96	
+R44	Dat Arg1:T97 Arg2:T95	
+T98	Treatment 1535 1557	endoskopowym usunięciu
+T99	Treatment 1468 1490	endoskopowym usunięciu
+T100	Condition 1491 1511	gruczolaka okrężnicy
+N38	Reference T100 ICD10:C18	Nowotwór złośliwy jelita grubego
+T101	Date 1513 1520	10/2016
+R45	Dat Arg1:T101 Arg2:T100	
+R46	Dat Arg1:T101 Arg2:T99	
+T102	Condition 1558 1573	polipów żołądka
+N39	Reference T102 ICD10:K31.7	Polip żołądka i dwunastnicy
+T103	Date 1575 1582	10/2016
+R47	Dat Arg1:T103 Arg2:T102	
+R48	Dat Arg1:T103 Arg2:T98	
+T104	Condition 1317 1332	Cukrzyca typu 2
+N40	Reference T104 ICD10:E11	Cukrzyca insulinoniezależna
+T105	Condition 1290 1310	Miażdżyca uogólniona
+N41	Reference T105 ICD10:I70.9	Miażdżyca uogólniona i nieokreślona
+T106	Condition 1382 1400	Ślepota oka lewego
+N42	Reference T106 ICD10:H54.4	Ślepota jednego oka
+T107	Condition 1410 1444	zatoru tętnicy środkowej siatkówki
+N43	Reference T107 ICD10:H34.1	Zamknięcie tętnicy środkowej siatkówki
+T108	Date 1446 1453	04/2012
+R49	Dat Arg1:T108 Arg2:T107	
+R50	Dat Arg1:T108 Arg2:T106	
+T109	Condition 1338 1377	Zwapniały tętniak tętnicy śledzionowej.
+N44	Reference T109 ICD10:I72	Inne postacie tętniaka
+T110	Condition 1261 1285	Zwężenie tętnic szyjnych
+N45	Reference T110 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T111	Condition 1210 1222	Dyslipidemia
+N46	Reference T111 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T112	Drug 1248 1255	statyną
+T113	Condition 1183 1204	Nadciśnienie tętnicze
+N47	Reference T113 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T114	Condition 1079 1124	Umiarkowana niedomykalność zastawki mitralnej
+N48	Reference T114 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T115	Condition 1127 1139	trójdzielnej
+N49	Reference T115 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T116	Condition 1144 1177	Arytmia komorowa do nsVT włącznie
+N50	Reference T116 ICD10:I47.2	Częstoskurcz komorowy
+T117	Condition 1027 1047	zawale ściany dolnej
+A4	Source T117 Declared
+N51	Reference T117 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T118	Date 1049 1053	2001
+R51	Dat Arg1:T118 Arg2:T117	
+T119	Treatment 953 1004	CABG (LIMA do LAD, pomost aortalno-wieńcowy do RCA;
+T120	Date 1005 1012	05/2015
+R52	Dat Arg1:T120 Arg2:T119	
+T121	Condition 798 862	: Przewlekła niewydolność serca z zachowaną frakcją wyrzutową LV
+N52	Reference T121 ICD10:I50	Niewydolność serca
+T122	Investigation_result 863 872	(EF: 53%)
+T123	Symptom 875 890	I klasa wg NYHA
+T124	Condition 895 939	Przewlekła choroba wieńcowa - I klasa wg CCS
+N53	Reference T124 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T125	Symptom 2304 2323	Innych dolegliwości
+T126	Negation 2324 2336	nie zgłasza.
+R53	Neg Arg1:T126 Arg2:T125	
+N2	Reference T30 ICD10:Z72.0	Używanie tytoniu
+N5	Reference T35 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+A5	Status T44 Historical_Insignificant
+A6	Status T45 Historical_Insignificant
+A7	Status T47 Historical_Insignificant
+A8	Status T49 Historical_Insignificant
+A9	Status T50 Historical_Insignificant
+A10	Status T53 Historical_Insignificant
+A11	Status T52 Historical_Insignificant
+A12	Status T55 Historical_Insignificant
+A13	Status T56 Historical_Insignificant
+N34	Reference T86 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+A14	Status T90 Historical_Insignificant
+A15	Status T91 Historical_Insignificant
+A16	Status T93 Historical_Insignificant
+A17	Status T95 Historical_Insignificant
+A18	Status T96 Historical_Insignificant
+A19	Status T102 Historical_Insignificant
+A20	Status T98 Historical_Insignificant
+A21	Status T100 Historical_Insignificant
+A22	Status T99 Historical_Insignificant

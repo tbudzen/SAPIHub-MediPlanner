@@ -1,0 +1,21 @@
+T1	Drug 357 365	efedryną
+T2	Drug_dose 340 354	Krople robione
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 497 508	Betaloc ZOK
+T4	Drug_dose 509 519	1 x 12.5mg
+T5	Investigation 523 556	Ambulatoryjna kontrola tętna i RR
+T6	Behaviour 561 594	Ograniczenie aktywności fizycznej
+T7	Behaviour 597 637	zwolnienie z zajęć wychowania fizycznego
+T8	Treatment 643 682	Dalsza opieka w Poradni Kardiologicznej
+T9	Treatment 685 701	kontrolna wizyta
+T10	Date 702 712	za 3-4 mce
+T11	Symptom 742 783	dolegliwości bólowych w klatce piersiowej
+N1	Reference T11 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T12	Treatment 794 811	kontakt z kliniką
+T13	Symptom 956 974	w  stanie   dobrym
+T14	Treatment 1015 1051	kwalifikacji  do  dalszego  leczenia
+R2	Dat Arg1:T10 Arg2:T9	
+R3	Drg Arg1:T3 Arg2:T4	
+R1	Drg Arg1:T1 Arg2:T2
+R2	Drg Arg1:T3 Arg2:T4
+R3	Dat Arg1:T10 Arg2:T9

@@ -1,0 +1,35 @@
+T1	Treatment 614 636	diagnostyki w kierunku
+T2	Condition 637 640	ASD
+T3	Investigation 654 657	TTE
+T4	Date 660 667	08.2018
+T5	Treatment 709 711	CC
+T6	Date 712 719	10.2018
+T7	Symptom 764 779	kołatania serca
+T8	Condition 785 792	migreny
+T9	Symptom 802 833	okresowe kłucia w kl piersiowej
+T10	Negation 835 843	Bez cech
+T11	Condition 844 864	niewydolności serca.
+T12	Condition 865 882	Uczulenia na leki
+T13	Negation 883 889	neguje
+T14	Negation 908 921	nie przyjmuje
+T15	Drug 891 907	Leków przewlekle
+T16	Investigation_result 923 978	Ciśnienie tętnicze w pomiarach ambulatoryjnych w normie
+T17	Investigation_result 980 1019	Siła mięśniowa symetryczna, prawidłowa.
+T18	Negation 757 763	neguje
+T19	Symptom 731 755	dolegliwości dławicowych
+T20	Negation 727 730	bez
+N1	Reference T2 ICD10:Q21.1	Ubytek przegrody miÄdzyprzedsionkowej
+N2	Reference T7 ICD10:R00.2	KoÅatanie serca
+N3	Reference T8 ICD10:G43.9	Migrena, nieokreÅlona
+N4	Reference T11 ICD10:I50	NiewydolnoÅÄ serca
+N5	Reference T12 ICD10:Z88	Uczulenia na leki, Årodki farmakologiczne i substancje biologiczne w wywiadzie
+R1	Dat Arg1:T4 Arg2:T3
+R10	Neg Arg1:T14 Arg2:T16
+R2	Neg Arg1:T20 Arg2:T5
+R3	Dat Arg1:T6 Arg2:T5
+R4	Neg Arg1:T18 Arg2:T7
+R6	Neg Arg1:T18 Arg2:T19
+R8	Neg Arg1:T10 Arg2:T11
+R9	Neg Arg1:T13 Arg2:T15
+A1	Source T2 Declared
+A2	Source T3 Declared

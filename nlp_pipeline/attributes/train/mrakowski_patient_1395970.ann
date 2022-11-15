@@ -1,0 +1,73 @@
+T1	Treatment 332 420	Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej i Endokrynologicznej
+T2	Behaviour 424 519	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T3	Investigation 523 571	Okresowo kontrola lipidogramu, stężenia elektrol
+T4	Treatment 808 818	zamknięciu
+T5	Date 873 883	09.02.2017
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Condition 894 897	TIA
+N1	Reference T6 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T7	Date 967 974	09.2016
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Symptom 911 924	zaburzeń mowy
+N2	Reference T8 ICD10:R47.8	Inne i nieokreślone zaburzenia mowy
+T9	Symptom 927 965	parestezji ręki kończyny górnej prawej
+N3	Reference T9 ICD10:R20.2	Parestezje
+T10	Condition 977 1049	Niedoczynność tarczycy w przebiegu choroby Hashimoto w stadium eutyreozy
+N4	Reference T10 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T11	Treatment 1246 1256	zamknięciu
+T12	Date 1286 1296	09/02/2017
+R3	Dat Arg1:T12 Arg2:T11	
+T13	Condition 1330 1333	TIA
+N5	Reference T13 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T14	Date 1335 1342	09/2016
+R4	Dat Arg1:T14 Arg2:T13	
+T15	Symptom 1357 1370	zaburzeń mowy
+N6	Reference T15 ICD10:R47.8	Inne i nieokreślone zaburzenia mowy
+T16	Symptom 1373 1405	drętwienia reki k. górnej prawej
+N7	Reference T16 ICD10:R20.2	Parestezje
+T17	Condition 1407 1445	choroba Hashimoto w stadium euthyreozy
+N8	Reference T17 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T18	Treatment 1447 1464	Przebyte operacje
+T19	Negation 1466 1472	neguje
+R5	Neg Arg1:T19 Arg2:T18	
+T20	Condition 1474 1489	Wywiad rodzinny
+A1	Status T20 Family
+T21	Condition 1498 1506	rak płuc
+A2	Status T21 Family
+N9	Reference T21 ICD10:C78.0	Wtórny nowotwór złośliwy płuc
+T22	Behaviour 1521 1537	palaczka tytoniu
+A3	Status T22 Family
+T23	Condition 1541 1548	Alergie
+T24	Negation 1550 1556	neguje
+R6	Neg Arg1:T24 Arg2:T23	
+T25	Behaviour 1558 1568	Nikotynizm
+T26	Negation 1570 1576	neguje
+R7	Neg Arg1:T26 Arg2:T25	
+T27	Behaviour 1579 1620	Alkohol: okazjonalnie, w małych ilościach
+N12	Reference T27 ICD10:Z72.1	Używanie alkoholu
+T28	Behaviour 1622 1639	Uzależnienie inne
+T29	Negation 1641 1647	neguje
+R8	Neg Arg1:T29 Arg2:T28	
+T30	Behaviour 1665 1677	nauczycielka
+T31	Treatment 848 871	zapinką Figulla Flex II
+R9	Dat Arg1:T5 Arg2:T31	
+T32	Condition 819 847	przetrwałego otworu owalnego
+N13	Reference T32 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R10	Dat Arg1:T5 Arg2:T32	
+T33	Treatment 1261 1284	zapinką Figulla Flex II
+R11	Dat Arg1:T12 Arg2:T33	
+T34	Condition 1257 1260	PFO
+N14	Reference T34 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R12	Dat Arg1:T12 Arg2:T34	
+N15	Reference T23 ICD10:T78.4	Alergia, nieokreślona
+R13	Dat Arg1:T7 Arg2:T8	
+R14	Dat Arg1:T7 Arg2:T9	
+R15	Dat Arg1:T14 Arg2:T15	
+R16	Dat Arg1:T14 Arg2:T16	
+N10	Reference T22 ICD10:Z72.0	Używanie tytoniu
+N11	Reference T25 ICD10:Z72.0	Używanie tytoniu
+A4	Status T27 Historical_Insignificant
+N16	Reference T28 ICD10:Z72	Problemy związane ze stylem życia
+T35	Negation 1684 1687	bez
+T36	Drug 1688 1693	leków
+R17	Neg Arg1:T35 Arg2:T36	

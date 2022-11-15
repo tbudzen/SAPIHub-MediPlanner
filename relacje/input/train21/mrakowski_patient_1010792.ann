@@ -1,0 +1,247 @@
+T1	Treatment 333 405	Dalsza opieka w POZ, Poradni Neurologicznej oraz Poradni Hematologicznej
+T2	Treatment 410 462	Wskazana okresowa kontrola w Poradni Kardiologicznej
+T3	Treatment 468 532	dalsza diagnostyka choroby wieńcowej w warunkach ambulatoryjnych
+T4	Investigation 534 584	angio-CT tętnic wieńcowych/SPECT mięśnia sercowego
+T5	Investigation 591 703	Okresowa kontrola morfologii, elektrolitów, profilu lipidowego, parametrów wątrobowych oraz parametrów nerkowych
+T6	Date 715 729	za 4-6 tygodni
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Investigation 735 852	Okresowa kontrola wskaźnika INR - zalecana do wykonania w poniedziałek z ewentualną modyfikacją dawki w warunkach POZ
+T8	Investigation 854 967	Wskazana dalsza kontrola co tydzień do czasu ustabilizowania się wskaźnika między 2 a 3, następnie raz w miesiącu
+T9	Behaviour 973 1075	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T10	Investigation 1081 1137	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T11	Treatment 1143 1171	Regularne przyjmowanie leków
+T12	Drug 1179 1185	Warfin
+T13	Drug_dose 1186 1256	4,5mg rano - dawkę należy dostosować do wyników okresowej kontroli INR
+R2	Drg Arg1:T12 Arg2:T13	
+T14	Drug 1345 1353	Polocard
+T15	Drug_dose 1354 1374	1 tabletka wieczorem
+R3	Drg Arg1:T14 Arg2:T15	
+T16	Drug 1376 1383	Roxiper
+T17	Drug_dose 1384 1415	10mg/4mg/1,25mg 1 tabletka rano
+R4	Drg Arg1:T16 Arg2:T17	
+T18	Drug 1417 1430	Euthyrox N125
+T19	Drug_dose 1431 1499	1 tabletka rano, na czczo (30 minut przed posiłkiem i innymi lekami)
+R5	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1501 1510	Sympramol
+T21	Drug_dose 1511 1570	50mg 1 tabletka przed snem - wg zaleceń lekarza specjalisty
+R6	Drg Arg1:T20 Arg2:T21	
+T22	Condition 1797 1824	udarze niedokrwiennym mózgu
+N1	Reference T22 ICD10:I63.9	Zawał mózgu, nieokreślony
+T23	Condition 1827 1851	niedowładem lewostronnym
+N2	Reference T23 ICD10:G81.9	Porażenie połowicze, nieokreślone
+T25	Date 1878 1888	06/05/2019
+R7	Dat Arg1:T25 Arg2:T22	
+R8	Dat Arg1:T25 Arg2:T23	
+T26	Condition 1899 1918	zatorowości płucnej
+N3	Reference T26 ICD10:I26.9	Zator płucny bez informacji o ostrym sercu płucnym
+T27	Date 1920 1927	01/2012
+R10	Dat Arg1:T27 Arg2:T26	
+T28	Condition 1930 1977	Mutacja typu Leiden genu czynnika V (Arg506Gln)
+N4	Reference T28 ICD10:D68	Inne zaburzenia krzepnięcia
+T29	Condition 1979 1999	Hipercholesterolemia
+N5	Reference T29 ICD10:E78.0	Czysta hipercholesterolemia
+T30	Condition 2001 2022	Nadciśnienie tętnicze
+N6	Reference T30 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T31	Condition 2024 2046	Niedoczynność tarczycy
+N7	Reference T31 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T32	Treatment 2056 2064	operacji
+T33	Date 2136 2143	01/2019
+R11	Dat Arg1:T33 Arg2:T32	
+T34	Condition 2146 2158	Hipokaliemia
+N8	Reference T34 ICD10:E87.6	Hipokalemia
+T35	Treatment 2180 2227	wycięciu macicy i plastyce tylnej ściany pochwy
+T37	Date 2277 2287	20/11/2013
+A2	Status T32 Historical_Insignificant
+A3	Status T35 Historical_Insignificant
+T38	Condition 2507 2530	Przetrwały otwór owalny
+N10	Reference T38 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T39	Condition 2540 2567	udarze niedokrwiennym mózgu
+N11	Reference T39 ICD10:I63.9	Zawał mózgu, nieokreślony
+T40	Condition 2570 2594	niedowładem lewostronnym
+N12	Reference T40 ICD10:G81.9	Porażenie połowicze, nieokreślone
+T42	Date 2621 2631	06/05/2019
+R13	Dat Arg1:T42 Arg2:T39	
+R14	Dat Arg1:T42 Arg2:T40	
+T43	Condition 2634 2681	Mutacja typu Leiden genu czynnika V (Arg506Gln)
+N13	Reference T43 ICD10:D68	Inne zaburzenia krzepnięcia
+T44	Condition 2691 2710	zatorowości płucnej
+N14	Reference T44 ICD10:I26.9	Zator płucny bez informacji o ostrym sercu płucnym
+T45	Date 2712 2719	01/2012
+R16	Dat Arg1:T45 Arg2:T44	
+T46	Condition 2722 2742	Hipercholesterolemia
+N15	Reference T46 ICD10:E78.0	Czysta hipercholesterolemia
+T47	Condition 2744 2765	Nadciśnienie tętnicze
+N16	Reference T47 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T48	Condition 2767 2789	Niedoczynność tarczycy
+N17	Reference T48 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T49	Treatment 2799 2807	operacji
+T50	Date 2879 2886	01/2019
+R17	Dat Arg1:T50 Arg2:T49	
+T51	Treatment 2897 2944	wycięciu macicy i plastyce tylnej ściany pochwy
+T53	Date 2994 3004	20/11/2013
+A5	Status T51 Historical_Insignificant
+A6	Status T49 Historical_Insignificant
+R19	Dat Arg1:T53 Arg2:T51	
+T54	Condition 3007 3019	Hipokaliemia
+N19	Reference T54 ICD10:E87.6	Hipokalemia
+T55	Condition 3198 3214	podejrzeniem PFO
+N20	Reference T55 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T56	Symptom 3297 3327	zmniejszoną tolerancję wysiłku
+T57	Date 3328 3343	od 2-3 miesięcy
+R20	Dat Arg1:T57 Arg2:T56	
+T58	Symptom 3345 3361	łatwa męczliwość
+T59	Symptom 3364 3382	duszność wysiłkowa
+N23	Reference T59 ICD10:R06.0	Duszność
+R21	Dat Arg1:T57 Arg2:T58	
+R22	Dat Arg1:T57 Arg2:T59	
+T60	Negation 3385 3391	Neguje
+T61	Symptom 3392 3404	zasłabnięcia
+T62	Symptom 3406 3414	omdlenia
+N24	Reference T62 ICD10:R55	Omdlenie i zapaść
+T63	Symptom 3416 3429	zawroty głowy
+N25	Reference T63 ICD10:R42	Zawroty głowy i odurzenie
+T64	Symptom 3431 3441	krwawienia
+T65	Symptom 3443 3456	czarne stolce
+N26	Reference T65 ICD10:K92.1	Stolce smołowate
+T66	Symptom 3458 3474	brunatne wymioty
+N27	Reference T66 ICD10:K92.0	Wymioty krwawe
+T67	Condition 3476 3492	chorobę wrzodową
+N28	Reference T67 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T68	Symptom 3494 3508	duszność nocną
+N29	Reference T68 ICD10:R06.0	Duszność
+T69	Symptom 3510 3525	obrzęki podudzi
+N30	Reference T69 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T70	Symptom 3527 3551	bóle w klatce piersiowej
+N31	Reference T70 ICD10:R07	Ból gardła i w klatce piersiowej
+R23	Neg Arg1:T60 Arg2:T61	
+R24	Neg Arg1:T60 Arg2:T62	
+R25	Neg Arg1:T60 Arg2:T63	
+R26	Neg Arg1:T60 Arg2:T64	
+R27	Neg Arg1:T60 Arg2:T65	
+R28	Neg Arg1:T60 Arg2:T66	
+R29	Neg Arg1:T60 Arg2:T67	
+R30	Neg Arg1:T60 Arg2:T68	
+R31	Neg Arg1:T60 Arg2:T69	
+R32	Neg Arg1:T60 Arg2:T70	
+T71	Symptom 3553 3572	Innych dolegliwości
+T72	Negation 3573 3584	nie zgłasza
+R33	Neg Arg1:T72 Arg2:T71	
+T73	Condition 3608 3635	udarze niedokrwiennym mózgu
+N32	Reference T73 ICD10:I63.9	Zawał mózgu, nieokreślony
+T74	Condition 3638 3662	niedowładem lewostronnym
+N33	Reference T74 ICD10:G81.9	Porażenie połowicze, nieokreślone
+T76	Date 3689 3699	06/05/2019
+R35	Dat Arg1:T76 Arg2:T74	
+R36	Dat Arg1:T76 Arg2:T73	
+T77	Condition 3710 3729	zatorowości płucnej
+N34	Reference T77 ICD10:I26.9	Zator płucny bez informacji o ostrym sercu płucnym
+T78	Date 3731 3738	01/2012
+R37	Dat Arg1:T78 Arg2:T77	
+T79	Condition 3741 3788	Mutacja typu Leiden genu czynnika V (Arg506Gln)
+N35	Reference T79 ICD10:D68	Inne zaburzenia krzepnięcia
+T80	Condition 3790 3810	Hipercholesterolemia
+N36	Reference T80 ICD10:E78.0	Czysta hipercholesterolemia
+T81	Condition 3812 3833	Nadciśnienie tętnicze
+N37	Reference T81 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T82	Condition 3835 3857	Niedoczynność tarczycy
+N38	Reference T82 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T83	Treatment 3867 3875	operacji
+T84	Date 3947 3954	01/2019
+R38	Dat Arg1:T84 Arg2:T83	
+A7	Status T83 Historical_Insignificant
+T85	Condition 3957 3969	Hipokaliemia
+N39	Reference T85 ICD10:E87.6	Hipokalemia
+T86	Treatment 3991 4038	wycięciu macicy i plastyce tylnej ściany pochwy
+A8	Status T86 Historical_Insignificant
+T88	Date 4088 4098	20/11/2013
+R40	Dat Arg1:T88 Arg2:T86	
+T89	Treatment 4125 4160	Leczenie przewlekłe: neurologicznie
+T90	Treatment 4162 4177	hematologicznie
+T91	Condition 4205 4208	WZW
+N41	Reference T91 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T92	Condition 4217 4226	borelioza
+N42	Reference T92 ICD10:A69.2	Choroba z Lyme
+T93	Condition 4234 4242	grużlica
+N43	Reference T93 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T94	Condition 4250 4254	odra
+N44	Reference T94 ICD10:B05	Odra
+T95	Negation 4257 4258	-
+R41	Neg Arg1:T95 Arg2:T94	
+T96	Negation 4245 4246	-
+R42	Neg Arg1:T96 Arg2:T93	
+T97	Negation 4229 4230	-
+R43	Neg Arg1:T97 Arg2:T92	
+T98	Negation 4211 4212	-
+R44	Neg Arg1:T98 Arg2:T91	
+T99	Condition 4284 4293	białaczka
+A10	Status T99 Family
+N45	Reference T99 ICD10:C95.9	Białaczka, nieokreślona
+T101	Behaviour 4304 4319	Palenie tytoniu
+N46	Reference T101 ICD10:Z72.0	Używanie tytoniu
+T102	Negation 4321 4327	neguje
+R46	Neg Arg1:T102 Arg2:T101	
+T103	Behaviour 4343 4369	sporadycznie, okazjonalnie
+N47	Reference T103 ICD10:Z72.0	Używanie tytoniu
+T104	Date 4329 4342	w przeszłości
+R47	Dat Arg1:T104 Arg2:T103	
+T105	Behaviour 4372 4383	Inne używki
+T106	Negation 4385 4391	neguje
+R48	Neg Arg1:T106 Arg2:T105	
+T107	Condition 4393 4402	Uczulenia
+T108	Drug 4404 4410	tramal
+R49	Alg Arg1:T107 Arg2:T108	
+T109	Behaviour 4428 4454	warunki mieszkaniowe dobre
+T110	Behaviour 4480 4492	pielęgniarka
+T111	Drug 4522 4528	Warfin
+T112	Drug_dose 4529 4556	4,5mg-4,5mg-3mg w sekwencji
+R50	Drg Arg1:T111 Arg2:T112	
+T113	Drug 4558 4566	Polocard
+T114	Drug_dose 4567 4592	75mg 1 tabletka wieczorem
+R51	Drg Arg1:T113 Arg2:T114	
+T115	Drug 4594 4607	Euthyrox N125
+T116	Drug_dose 4608 4622	1/2 tabl. rano
+R52	Drg Arg1:T115 Arg2:T116	
+T117	Drug 4624 4638	Noliprel forte
+T118	Drug_dose 4639 4658	5mg 1 tabletka rano
+R53	Drg Arg1:T117 Arg2:T118	
+T119	Drug 4660 4667	Zaranta
+T120	Drug_dose 4668 4693	10mg 1 tabletka wieczorem
+R54	Drg Arg1:T119 Arg2:T120	
+T121	Drug 4695 4704	Sympramol
+T122	Drug_dose 4705 4716	50mg na noc
+R55	Drg Arg1:T121 Arg2:T122	
+T123	Investigation 4732 4735	TTE
+T124	Investigation 4737 4740	TET
+T125	Investigation 4742 4746	ABPM
+T126	Investigation 4748 4758	Holter EKG
+N21	Reference T56 ICD10:R53	Złe samopoczucie i zmęczenie
+N22	Reference T58 ICD10:R53	Złe samopoczucie i zmęczenie
+R9	Dat Arg1:T37 Arg2:T35	
+A1	Source T55 Declared
+T24	Treatment 4101 4118	Przebyte operacje
+T36	Condition 4261 4276	Wywiad rodzinny
+A4	Status T36 Family
+T41	Treatment 1852 1876	leczonym trombolitycznie
+R12	Dat Arg1:T25 Arg2:T41	
+T52	Condition 2074 2134	neuropatii nerwu pośrodkowego prawego na poziomie nadgarstka
+N9	Reference T52 ICD10:G56.1	Inne uszkodzenia nerwu pośrodkowego
+R15	Dat Arg1:T33 Arg2:T52	
+T75	Condition 2237 2275	przepukliny jelitowej w ścianie pochwy
+N18	Reference T75 ICD10:N81.5	Przepuklina jelitowa pochwy [enterocoele]
+R18	Dat Arg1:T37 Arg2:T75	
+T87	Treatment 2595 2619	leczonym trombolitycznie
+R34	Dat Arg1:T42 Arg2:T87	
+T127	Condition 2817 2877	neuropatii nerwu pośrodkowego prawego na poziomie nadgarstka
+N40	Reference T127 ICD10:G56.1	Inne uszkodzenia nerwu pośrodkowego
+R39	Dat Arg1:T50 Arg2:T127	
+T128	Condition 2954 2992	przepukliny jelitowej w ścianie pochwy
+N48	Reference T128 ICD10:N81.5	Przepuklina jelitowa pochwy [enterocoele]
+R56	Dat Arg1:T53 Arg2:T128	
+T129	Treatment 3663 3687	leczonym trombolitycznie
+R57	Dat Arg1:T76 Arg2:T129	
+T130	Condition 3885 3945	neuropatii nerwu pośrodkowego prawego na poziomie nadgarstka
+N49	Reference T130 ICD10:G56.1	Inne uszkodzenia nerwu pośrodkowego
+R58	Dat Arg1:T84 Arg2:T130	
+T131	Condition 4048 4086	przepukliny jelitowej w ścianie pochwy
+N50	Reference T131 ICD10:N81.5	Przepuklina jelitowa pochwy [enterocoele]
+R59	Dat Arg1:T88 Arg2:T131	

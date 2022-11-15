@@ -1,0 +1,56 @@
+T1	Drug 344 352	Spironol
+T2	Drug 354 362	Sambucol
+T3	Drug 364 370	Diflos
+T4	Condition 631 695	Wrodzona wada serca pod postacią ubytku przedsionkowo-komorowego
+N1	Reference T4 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T5	Condition 701 717	zespołu Fallota.
+N2	Reference T5 ICD10:Q21.3	Tetralogia Fallota
+T6	Condition 721 743	Trisomia 21 chromosomu
+N3	Reference T6 ICD10:Q90.9	Zespół Downa, nieokreślony
+T7	Symptom 748 754	Sinica
+N4	Reference T7 ICD10:R23.0	
+T8	Drug 871 879	Spironol
+T9	Drug 901 909	Debridat
+T10	Drug_dose 880 896	1 x 12,5 mg pos,
+R1	Drg Arg1:T8 Arg2:T10	
+T11	Drug_dose 910 952	3 x 1,7 ml pos na 20 minut przed posiłkiem
+R2	Drg Arg1:T9 Arg2:T11	
+T12	Treatment 957 1000	Kontrola kardiologiczna w poradni rejonowej
+T13	Date 1001 1019	w połowie marca br
+R3	Dat Arg1:T13 Arg2:T12	
+T14	Investigation 1240 1269	Regularny pomiar saturacji!!!
+T15	Drug 1389 1397	Spironol
+T16	Drug 1399 1417	czopek glicerynowy
+T17	Condition 1668 1732	Wrodzona wada serca pod postacią ubytku przedsionkowo-komorowego
+N5	Reference T17 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T18	Condition 1738 1753	zespołu Fallota
+N6	Reference T18 ICD10:Q21.3	
+T19	Condition 1759 1781	Trisomia 21 chromosomu
+N7	Reference T19 ICD10:Q90.9	Zespół Downa, nieokreślony
+T20	Condition 1786 1814	Refluks żołądkowo-przełykowy
+N8	Reference T20 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T21	Condition 1951 1970	wrodzoną wadą serca
+N9	Reference T21 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T22	Condition 1973 1993	niewydolnością serca
+T23	Condition 2231 2272	wspólnym kanałem przedsionkowo- komorowym
+N11	Reference T23 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T24	Treatment 2287 2307	zabiegu operacyjnego
+T25	Condition 2220 2228	z. Downa
+N12	Reference T25 ICD10:Q90.9	Zespół Downa, nieokreślony
+T26	Drug 2310 2324	leków na stałe
+T27	Negation 2325 2338	nie otrzymuje
+R4	Neg Arg1:T27 Arg2:T26	
+T28	Condition 2341 2358	wywiad alergiczny
+N13	Reference T28 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T29	Negation 2359 2365	ujemny
+R5	Neg Arg1:T29 Arg2:T28	
+T30	Treatment 1025 1075	Ponowny termin hosptalizacji w Klinice Kardiologii
+T31	Date 1076 1096	w dniu      06.2018r
+R6	Dat Arg1:T31 Arg2:T30	
+N10	Reference T22 ICD10:I50.9	Niewydolność serca, nieokreślona
+R1	Drg Arg1:T9 Arg2:T10
+R12	Neg Arg1:T29 Arg2:T28
+R2	Drg Arg1:T9 Arg2:T11
+R3	Dat Arg1:T13 Arg2:T30
+R4	Dat Arg1:T31 Arg2:T14
+R9	Neg Arg1:T27 Arg2:T26

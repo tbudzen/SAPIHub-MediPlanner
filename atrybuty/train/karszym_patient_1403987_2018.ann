@@ -1,0 +1,119 @@
+T1	Condition 448 469	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 471 490	Hipercholestrolemia
+N2	Reference T2 ICD10:E78.0	Czysta hipercholesterolemia
+T3	Treatment 500 506	PCI Cx
+T4	Treatment 509 537	implantacją stentu DES do Cx
+N3	Reference T4 ICD10:Z95.5	Obecność implantów i przeszczepów związanych z angioplastyką wieńcową
+T5	Date 539 546	09.2017
+T7	Treatment 557 581	PCI Cx z implantacją DES
+N4	Reference T7 ICD10:Z95.5	Obecność implantów i przeszczepów związanych z angioplastyką wieńcową
+T9	Treatment 601 628	PCI Cx z implantacją stentu
+N5	Reference T9 ICD10:Z95.5	Obecność implantów i przeszczepów związanych z angioplastyką wieńcową
+T10	Date 630 637	11.2005
+T11	Treatment 648 676	PCI LAD z implantacją stentu
+N6	Reference T11 ICD10:Z95.5	Obecność implantów i przeszczepów związanych z angioplastyką wieńcową
+T12	Date 678 685	02.2003
+T13	Condition 688 712	Choroba wrzodowa żołądka
+N7	Reference T13 ICD10:K25	Wrzód żołądka
+T14	Condition 714 729	Zespół Lerich'a
+N8	Reference T14 ICD10:I74.0	Zator i zakrzep odcinka brzusznego aorty
+T15	Condition 731 742	Osteoporoza
+N9	Reference T15 ICD10:M81.9	Osteoporoza, nieokreślona
+T16	Behaviour 744 754	Nikotynizm
+N10	Reference T16 ICD10:Z72.0	Używanie tytoniu
+R1	Dat Arg1:T5 Arg2:T3	
+R2	Dat Arg1:T5 Arg2:T4	
+R3	Dat Arg1:T10 Arg2:T9	
+T17	Date 583 590	01.2007
+R5	Dat Arg1:T17 Arg2:T7	
+R4	Dat Arg1:T12 Arg2:T11	
+T6	Condition 912 935	nadciśnieniem tętniczym
+N11	Reference T6 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T8	Investigation_result 937 965	RR w domu: 140/85-160/90mmHg
+T18	Condition 968 987	hipercholestrolemią
+N12	Reference T18 ICD10:E78.0	Czysta hipercholesterolemia
+T19	Behaviour 989 1013	przewlekłym nikotynizmem
+N13	Reference T19 ICD10:Z72.0	Używanie tytoniu
+T20	Condition 1015 1031	chorobą wieńcową
+N14	Reference T20 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T21	Treatment 1036 1042	PCI Cx
+T22	Treatment 1045 1073	implantacją stentu DES do Cx
+N15	Reference T22 ICD10:Z95.5	Obecność implantów i przeszczepów związanych z angioplastyką wieńcową
+T23	Date 1075 1082	09.2017
+T24	Treatment 1088 1112	PCI Cx z implantacją DES
+N16	Reference T24 ICD10:Z95.5	Obecność implantów i przeszczepów związanych z angioplastyką wieńcową
+T25	Date 1114 1121	01.2007
+T26	Treatment 1127 1154	PCI Cx z implantacją stentu
+N17	Reference T26 ICD10:Z95.5	Obecność implantów i przeszczepów związanych z angioplastyką wieńcową
+T27	Date 1156 1163	11.2005
+T28	Treatment 1169 1197	PCI LAD z implantacją stentu
+N18	Reference T28 ICD10:Z95.5	Obecność implantów i przeszczepów związanych z angioplastyką wieńcową
+T29	Date 1199 1206	02.2003
+T30	Condition 1231 1245	zapalenia płuc
+N19	Reference T30 ICD10:J18.9	Zapalenie płuc, nieokreślone
+T31	Condition 1258 1282	niewydolnością oddechową
+N20	Reference T31 ICD10:J96.0	Ostra niewydolność oddechowa
+T32	Condition 1288 1316	zaburzeniami elektrolitowymi
+N21	Reference T32 ICD10:E87	Inne zaburzenia równowagi wodno-elektrolitowej i kwasowo-zasadowej
+T33	Date 1318 1325	05.2017
+T34	Condition 1328 1339	osteoporozą
+N22	Reference T34 ICD10:M81.9	Osteoporoza, nieokreślona
+T35	Symptom 1379 1410	zmniejszonej tolerancji wysiłku
+T36	Investigation 1367 1378	diagnostyki
+T37	Condition 1433 1455	chromanie przestankowe
+N23	Reference T37 ICD10:I73.9	Choroba naczyń obwodowych, nieokreślona
+T38	Symptom 1457 1473	dystans 100-150m
+T39	Symptom 1476 1528	przewlekły kaszel z odkrztuszaniem białej wydzieliny
+N24	Reference T39 ICD10:R05	Kaszel
+T40	Symptom 1530 1566	rzadko- krótkotrwałe kołatania serca
+N25	Reference T40 ICD10:R00.2	Kołatanie serca
+T41	Condition 1568 1584	choroba wrzodowa
+N26	Reference T41 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T42	Date 1585 1595	przed laty
+T43	Date 1597 1604	obecnie
+T44	Negation 1605 1608	bez
+T45	Symptom 1609 1621	dolegliwości
+R6	Dat Arg1:T42 Arg2:T41	
+R7	Dat Arg1:T43 Arg2:T45	
+R8	Neg Arg1:T44 Arg2:T45	
+R9	Dat Arg1:T23 Arg2:T21	
+R10	Dat Arg1:T23 Arg2:T22	
+R11	Dat Arg1:T25 Arg2:T24	
+R12	Dat Arg1:T27 Arg2:T26	
+R13	Dat Arg1:T29 Arg2:T28	
+R14	Dat Arg1:T33 Arg2:T30	
+R15	Dat Arg1:T33 Arg2:T31	
+R16	Dat Arg1:T33 Arg2:T32	
+T46	Negation 1630 1636	neguje
+T47	Condition 1637 1654	uczulenia na leki
+N27	Reference T47 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R17	Neg Arg1:T46 Arg2:T47	
+T48	Symptom 1656 1672	Miewa krwawienia
+N28	Reference T48 ICD10:K62.5	Krwawienie z odbytu i odbytnicy
+T49	Condition 1676 1690	żylaków odbytu
+N29	Reference T49 ICD10:I84.8	Guzki krwawnicze nieokreślone z innymi powikłaniami
+T50	Drug 1710 1717	Nebilet
+T51	Drug_dose 1718 1736	5mg 1x 1 tabl/rano
+T52	Drug 1737 1744	Areplex
+T53	Drug_dose 1745 1765	75mg 1x 1 tabl/wiecz
+T54	Drug 1766 1776	Prestarium
+T55	Drug_dose 1777 1797	5mg 1x 1/2 tabl/rano
+T56	Drug 1798 1804	Atoris
+T57	Drug_dose 1805 1825	40mg 1x 1 tabl/wiecz
+T58	Drug 1826 1833	Noplaza
+T59	Drug_dose 1834 1853	20mg 1x 1 tabl/rano
+T60	Drug 1854 1862	Spironol
+T61	Drug_dose 1863 1880	12,5mg w południe
+T62	Drug 1881 1897	Sorbifer durules
+T63	Drug_dose 1898 1908	1xdziennie
+T64	Investigation 1929 1939	Holter EKG
+T65	Investigation 1941 1943	RR
+T66	Investigation 1945 1955	ECHO serca
+R18	Drg Arg1:T50 Arg2:T51	
+R19	Drg Arg1:T52 Arg2:T53	
+R20	Drg Arg1:T54 Arg2:T55	
+R21	Drg Arg1:T56 Arg2:T57	
+R22	Drg Arg1:T58 Arg2:T59	
+R23	Drg Arg1:T60 Arg2:T61	
+R24	Drg Arg1:T62 Arg2:T63	

@@ -1,0 +1,157 @@
+T1	Condition 439 462	Przetrwały otwór owalny
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Condition 464 507	Niedokrwistość mikrocytarna, hipochromiczna
+N2	Reference T2 ICD10:D50.9	Niedokrwistość z niedoboru żelaza, nieokreślona
+T3	Treatment 508 539	w trakcie suplementacji żelazem
+T4	Condition 541 573	Zapalenie błony śluzowej żołądka
+N3	Reference T4 ICD10:K29.7	Zapalenie żołądka, nieokreślone
+T5	Condition 587 629	Podejrzenie pierwotnej marskości żółciowej
+N4	Reference T5 ICD10:K74.3	Pierwotna marskość żółciowa
+T6	Symptom 659 679	Migrenowe bóle głowy
+N5	Reference T6 ICD10:R51	Ból głowy
+T7	Treatment 701 725	operacji ginekologicznej
+T8	Condition 736 748	polip macicy
+N6	Reference T8 ICD10:N84.9	Polip żeńskiego układu rozrodczego, nieokreślony
+T9	Date 727 734	09/2019
+R1	Dat Arg1:T9 Arg2:T8	
+R2	Dat Arg1:T9 Arg2:T7	
+T10	Treatment 861 880	Dalsza opieka w POZ
+T11	Treatment 884 1010	Dalsza diagnostyka i ewentualne leczenie w Poradni Hepatologicznej, Poradni Gastroenterologicznej oraz Poradni Hematologicznej
+T12	Treatment 1014 1053	Dalsza opieka w Poradni Kardiologicznej
+T13	Investigation 1055 1100	wskazane wykonanie badania angio-CT tętnic wi
+T14	Condition 1285 1316	podejrzenia zatorowości płucnej
+T15	Symptom 1318 1377	dolegliwości bólowe w klatce piersiowej kłujące, uciskające
+N8	Reference T15 ICD10:R07.2	Ból w okolicy przedsercowej
+T16	Symptom 1379 1394	okresowo kaszel
+N9	Reference T16 ICD10:R05	Kaszel
+T17	Symptom 1396 1404	duszność
+N10	Reference T17 ICD10:R06.0	Duszność
+T18	Condition 1441 1461	uraz kończyny dolnej
+N11	Reference T18 ICD10:T13.9	Nieokreślony uraz kończyny dolnej, poziom nieokreślony
+T19	Investigation 1503 1506	TTE
+T20	Investigation 1507 1510	TEE
+T21	Date 1559 1566	10/2018
+T22	Condition 1575 1603	urazu kończyny dolnej prawej
+N12	Reference T22 ICD10:T13.9	Nieokreślony uraz kończyny dolnej, poziom nieokreślony
+T23	Date 1635 1648	na 3 miesiące
+R3	Dat Arg1:T23 Arg2:T22	
+T24	Symptom 1718 1740	kończyna dolna sinieje
+N13	Reference T24 ICD10:R23.0	Sinica
+T25	Investigation 1751 1768	badanie D-dimerów
+T26	Investigation_result 1770 1792	podwyższone około 2000
+R4	Inv Arg1:T25 Arg2:T26	
+T27	Investigation 1808 1827	Doppler kk. dolnych
+T28	Investigation_result 1839 1886	uwidoczniono jedynie niewydolne VSM obu kończyn
+T29	Investigation_result 1889 1919	perforatory w kończynie prawej
+T30	Investigation_result 1921 1943	bez zmian zakrzepowych
+R5	Inv Arg1:T27 Arg2:T28	
+R6	Inv Arg1:T27 Arg2:T29	
+R7	Inv Arg1:T27 Arg2:T30	
+T31	Investigation 1947 1961	kontrolnym USG
+T32	Investigation_result 1973 1986	obraz podobny
+T33	Date 1962 1972	w styczniu
+R8	Inv Arg1:T31 Arg2:T32	
+R9	Dat Arg1:T33 Arg2:T31	
+R10	Dat Arg1:T33 Arg2:T32	
+T34	Drug 2010 2018	neoparin
+T35	Drug_dose 2019 2027	80mg 2x1
+R11	Drg Arg1:T34 Arg2:T35	
+T36	Investigation 2038 2056	badania genetyczne
+T37	Investigation_result 2068 2177	wykluczono mutacje w genach czynnika II protrombiny, czynnika V Leiden, MTHFR C677T i A1298C, PAI-1 675 4F/5G
+R12	Inv Arg1:T36 Arg2:T37	
+T38	Investigation 2188 2216	scyntygrafię perfuzyjną płuc
+T39	Investigation_result 2224 2259	nie wykryła obszarów braku perfuzji
+R13	Inv Arg1:T38 Arg2:T39	
+T40	Symptom 2278 2310	pogorszenie swojego samopoczucia
+N14	Reference T40 ICD10:R53	Złe samopoczucie i zmęczenie
+T41	Drug 2325 2337	enoksaparyny
+T42	Negation 2314 2324	odłączeniu
+R14	Neg Arg1:T42 Arg2:T41	
+T43	Symptom 2368 2405	często występujący stan podgorączkowy
+N15	Reference T43 ICD10:R50.9	Gorączka, nieokreślona
+T44	Negation 2408 2414	Neguje
+T45	Symptom 2415 2427	zasłabnięcia
+T46	Symptom 2429 2437	omdlenia
+N16	Reference T46 ICD10:R55	Omdlenie i zapaść
+T47	Symptom 2439 2452	zawroty głowy
+N17	Reference T47 ICD10:R42	Zawroty głowy i odurzenie
+T48	Symptom 2454 2464	krwawienia
+T49	Symptom 2466 2479	czarne stolce
+N18	Reference T49 ICD10:K92.1	Stolce smołowate
+T50	Symptom 2481 2497	brunatne wymioty
+N19	Reference T50 ICD10:K92.0	Wymioty krwawe
+T51	Symptom 2499 2513	duszność nocną
+N20	Reference T51 ICD10:R06.0	Duszność
+T52	Symptom 2515 2530	obrzęki podudzi
+N21	Reference T52 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+R15	Neg Arg1:T44 Arg2:T52	
+R16	Neg Arg1:T44 Arg2:T51	
+R17	Neg Arg1:T44 Arg2:T50	
+R18	Neg Arg1:T44 Arg2:T49	
+R19	Neg Arg1:T44 Arg2:T48	
+R20	Neg Arg1:T44 Arg2:T47	
+R21	Neg Arg1:T44 Arg2:T46	
+R22	Neg Arg1:T44 Arg2:T45	
+T53	Symptom 2532 2551	Innych dolegliwości
+T54	Negation 2552 2563	nie zgłasza
+R23	Neg Arg1:T54 Arg2:T53	
+T55	Treatment 2586 2610	operacji ginekologicznej
+A1	Status T55 Historical_Insignificant
+A2	Status T7 Historical_Insignificant
+T56	Date 2611 2618	09/2019
+T57	Condition 2620 2632	polip macicy
+N22	Reference T57 ICD10:N84.9	Polip żeńskiego układu rozrodczego, nieokreślony
+R24	Dat Arg1:T56 Arg2:T55	
+R25	Dat Arg1:T56 Arg2:T57	
+T58	Condition 2635 2667	Zapalenie błony śluzowej żołądka
+N23	Reference T58 ICD10:K29.7	Zapalenie żołądka, nieokreślone
+T59	Condition 2681 2723	Podejrzenie pierwotnej marskości żółciowej
+N24	Reference T59 ICD10:K74.3	Pierwotna marskość żółciowa
+T60	Condition 2775 2778	WZW
+N25	Reference T60 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T61	Condition 2787 2796	borelioza
+N26	Reference T61 ICD10:A69.2	Choroba z Lyme
+T62	Condition 2804 2812	grużlica
+N27	Reference T62 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T63	Condition 2820 2824	odra
+N28	Reference T63 ICD10:B05	Odra
+T64	Negation 2827 2828	-
+R26	Neg Arg1:T64 Arg2:T63	
+T65	Negation 2815 2816	-
+R27	Neg Arg1:T65 Arg2:T62	
+T66	Negation 2799 2800	-
+R28	Neg Arg1:T66 Arg2:T61	
+T67	Negation 2781 2782	-
+R29	Neg Arg1:T67 Arg2:T60	
+T68	Condition 2831 2846	Wywiad rodzinny
+A3	Status T68 Family
+T69	Negation 2848 2858	nieistotny
+R30	Neg Arg1:T69 Arg2:T68	
+T70	Behaviour 2860 2875	Palenie tytoniu
+N29	Reference T70 ICD10:Z72.0	Używanie tytoniu
+T71	Negation 2877 2883	neguje
+R31	Neg Arg1:T71 Arg2:T70	
+T72	Behaviour 2885 2896	Inne używki
+T73	Negation 2898 2904	neguje
+R32	Neg Arg1:T73 Arg2:T72	
+T74	Condition 2906 2915	Uczulenia
+T75	Negation 2917 2923	neguje
+R33	Neg Arg1:T75 Arg2:T74	
+T76	Behaviour 2941 2967	warunki mieszkaniowe dobre
+T77	Behaviour 2986 2999	Praca: handel
+T78	Investigation 3032 3035	TTE
+T79	Investigation 3037 3040	TET
+T80	Investigation 3042 3046	ABPM
+T81	Investigation 3048 3058	Holter EKG
+A4	Source T5 Declared
+A5	Source T14 Declared
+N7	Reference T14 ICD10:I26.9	Zator płucny bez informacji o ostrym sercu płucnym
+A6	Source T59 Declared
+T82	Treatment 2725 2742	Przebyte operacje
+T83	Treatment 1464 1481	założeniem ortezy
+T84	Behaviour 1406 1439	w wywiadzie długie loty samolotem
+T85	Treatment 1606 1634	następowym założeniem ortezy
+T86	Treatment 1672 1687	miękkiej ortezy
+T87	Date 1661 1671	2 miesiące
+R34	Dat Arg1:T87 Arg2:T86	
+R35	Dat Arg1:T23 Arg2:T85	

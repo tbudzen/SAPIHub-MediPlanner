@@ -1,0 +1,26 @@
+T1	Condition 439 499	Wrodzona wada serca - ubytek międzyprzedsionkowy typu ASD II
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Negation 620 623	Bez
+T3	Drug 624 629	leków
+T4	Investigation 760 784	badania radioizotopowego
+T5	Treatment 785 816	w Zakładzie Medycyny Nuklearnej
+T6	Treatment 887 915	Dalsza opieka kardiologiczna
+T7	Treatment 920 933	Do rozważenia
+T8	Treatment 942 974	konsultacja gastroenterologiczna
+R1	Neg Arg1:T2 Arg2:T3	
+T9	Condition 1126 1153	wrodzoną wadą serca (ASDII)
+N2	Reference T9 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T10	Symptom 1252 1262	Stan dobry
+T11	Date 1264 1281	W ostatnim czasie
+T12	Negation 1282 1285	bez
+T13	Condition 1286 1294	infekcji
+T14	Condition 1296 1303	Alergia
+N3	Reference T14 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T15	Negation 1304 1320	nie potwierdzona
+T16	Drug 1322 1332	Leki stałe
+T17	Negation 1335 1348	nie otrzymuje
+R2	Neg Arg1:T17 Arg2:T16	
+R3	Neg Arg1:T15 Arg2:T14	
+R4	Dat Arg1:T11 Arg2:T13	
+R5	Neg Arg1:T12 Arg2:T13	
+T18	Investigation 1205 1250	badań kwalifikujących do leczenia zabiegowego

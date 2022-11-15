@@ -1,0 +1,198 @@
+T1	Condition 450 510	Wada serca pod postacią niedomykalności aortalnej II stopnia
+N1	Reference T1 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T2	Condition 513 542	nieistotnej stenozy aortalnej
+N2	Reference T2 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T3	Condition 555 586	dwupłatkowej zastawki aortalnej
+N3	Reference T3 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T4	Condition 588 630	Nadciśnienie tętnicze I stopnia wg ESC/ESH
+N4	Reference T4 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T5	Condition 632 652	Hipercholesterolemia
+N5	Reference T5 ICD10:E78.0	Czysta hipercholesterolemia
+T6	Condition 654 661	Nadwaga
+T7	Condition 663 680	Triada aspirynowa
+T8	Condition 683 699	astma oskrzelowa
+N6	Reference T8 ICD10:J45.1	Astma oskrzelowa niealergiczna
+T9	Condition 701 714	nadwrażliwość
+N7	Reference T9 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T10	Drug 718 722	NLPZ
+R1	Alg Arg1:T9 Arg2:T10	
+T11	Condition 724 735	polipy nosa
+N8	Reference T11 ICD10:J33.0	Polip jamy nosowej
+T12	Condition 737 776	przewlekłe zapalenie zatok przynosowych
+N9	Reference T12 ICD10:J32.4	Przewlekłe zapalenie wszystkich zatok przynosowych
+T13	Treatment 786 794	plastyce
+N10	Reference T13 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+A1	Status T13 Historical_Insignificant
+A2	Status T12 Historical_Insignificant
+A3	Status T11 Historical_Insignificant
+T14	Condition 795 827	przerośniętych małżowin nosowych
+A4	Status T14 Historical_Insignificant
+N11	Reference T14 ICD10:J34.3	Przerost małżowin nosowych
+T15	Date 829 839	12.12.2016
+T16	Treatment 850 890	endoskopowej operacji zatok przynosowych
+A5	Status T16 Historical_Insignificant
+N12	Reference T16 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T17	Date 892 902	28.06.2016
+T18	Condition 905 919	Kaszel po ACEI
+T20	Condition 945 955	WZW typu A
+N14	Reference T20 ICD10:B15	Ostre wirusowe zapalenie wątroby typu A
+T21	Date 921 944	Przebyte w dzieciństwie
+R2	Dat Arg1:T15 Arg2:T13	
+R3	Dat Arg1:T15 Arg2:T14	
+R4	Dat Arg1:T17 Arg2:T16	
+R5	Dat Arg1:T21 Arg2:T20	
+T22	Treatment 1069 1096	dalsza opieka w poradni POZ
+T23	Treatment 1103 1153	okresowa kontrola kardiologiczna i pulmonologiczna
+T24	Investigation 1159 1184	ocena echokardiograficzna
+T25	Date 1185 1198	za 3 miesiące
+T26	Condition 1201 1259	w przypadku postępującego pogorszenia funkcji lewej komory
+N15	Reference T26 ICD10:I50.1	Niewydolność serca lewokomorowa
+T27	Treatment 1270 1324	ponowna optymalizacja leczenia w warunkach szpitalnych
+T28	Behaviour 1339 1383	uzdrowiskowe leczenie sanatoryjne nad morzem
+T29	Investigation 1389 1428	regularna kontrola ciśnienia tętniczego
+R6	Dat Arg1:T25 Arg2:T24	
+T30	Investigation 1435 1464	okresowa kontrola lipidogramu
+T31	Date 1466 1487	pierwsza za 6 tygodni
+R7	Dat Arg1:T31 Arg2:T30	
+T32	Behaviour 1496 1528	dieta DASH i niskocholesterolowa
+T33	Behaviour 1536 1555	redukcja masy ciała
+T34	Behaviour 1563 1608	stały, umiarkowany, aerobowy wysiłek fizyczny
+T35	Drug 1653 1661	Spironol
+T36	Drug 1687 1693	Atoris
+T37	Drug 1725 1732	Alvesco
+T38	Drug 1771 1787	Flixonase Nasule
+T39	Drug_dose 1662 1679	25mg 1 tabl. rano
+T40	Drug_dose 1694 1717	20 mg 1 tabl. wieczorem
+T41	Drug_dose 1733 1763	160ug 1 wziew rano i wieczorem
+T42	Drug_dose 1788 1837	0.5 amp. do każdego przewodu nosowego 2x dziennie
+R8	Drg Arg1:T35 Arg2:T39	
+R9	Drg Arg1:T36 Arg2:T40	
+R10	Drg Arg1:T37 Arg2:T41	
+R11	Drg Arg1:T38 Arg2:T42	
+T43	Condition 1979 1982	BAV
+N16	Reference T43 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T44	Condition 1985 1994	IA II st.
+N17	Reference T44 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T45	Condition 1996 2009	nieistotna SA
+N18	Reference T45 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T46	Condition 2011 2039	poszerzenie opuszki do 42 mm
+T47	Treatment 2041 2056	hospitalizowana
+T48	Date 2057 2066	w 04.2017
+T49	Treatment 2067 2086	w tutejszej Klinice
+R12	Dat Arg1:T48 Arg2:T47	
+R13	Dat Arg1:T48 Arg2:T49	
+T50	Date 2097 2104	obecnie
+T51	Drug 2131 2153	leków kardiologicznych
+T52	Treatment 2111 2130	ponownego włączenia
+T53	Negation 2155 2164	ostawione
+T54	Drug 2182 2192	bisoprolol
+T55	Symptom 2202 2211	duszności
+N19	Reference T55 ICD10:R06.0	Duszność
+T56	Drug 2217 2228	perindopril
+T57	Symptom 2238 2254	nasilenia kaszlu
+N20	Reference T57 ICD10:R05	Kaszel
+R14	Dat Arg1:T50 Arg2:T52	
+R15	Dat Arg1:T50 Arg2:T51	
+R16	Neg Arg1:T53 Arg2:T54	
+R17	Neg Arg1:T53 Arg2:T56	
+R18	Dat Arg1:T50 Arg2:T54	
+R19	Dat Arg1:T50 Arg2:T56	
+R20	Dat Arg1:T50 Arg2:T55	
+R21	Dat Arg1:T50 Arg2:T57	
+T58	Investigation 2260 2298	kontrolnym badaniu echokardograficznym
+T59	Investigation_result 2337 2359	pogorszenie funkcji LK
+N21	Reference T59 ICD10:I50.1	Niewydolność serca lewokomorowa
+T60	Negation 2365 2377	nieobecności
+T61	Investigation_result 2378 2398	progresji wady serca
+R22	Neg Arg1:T60 Arg2:T61	
+N22	Reference T61 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+R23	Inv Arg1:T58 Arg2:T59	
+R24	Inv Arg1:T58 Arg2:T61	
+T62	Date 2401 2440	W okresie od poprzedniej hospitalizacji
+T63	Condition 2461 2478	triadę aspirynową
+R25	Dat Arg1:T62 Arg2:T63	
+T64	Investigation_result 2480 2489	spadek BP
+T65	Drug 2519 2528	pyrlginie
+T66	Behaviour 2529 2563	poprzedzonej zjedzeniem grejpfruta
+T67	Investigation 2582 2598	testy alergiczne
+T68	Investigation_result 2599 2658	ujemne zarówna na pyralginę, jak i na wspomniane połączenie
+R26	Inv Arg1:T67 Arg2:T68	
+T69	Symptom 2685 2704	nasilenie duszności
+N23	Reference T69 ICD10:R06.0	Duszność
+T70	Date 2705 2711	wiosną
+R27	Dat Arg1:T70 Arg2:T69	
+T71	Condition 2746 2777	podejrzenie astmy eozynofilowej
+N24	Reference T71 ICD10:J45.0	Astma oskrzelowa w głównej mierze z przyczyn alergicznych
+R28	Dat Arg1:T62 Arg2:T67	
+R29	Dat Arg1:T62 Arg2:T64	
+R30	Dat Arg1:T62 Arg2:T65	
+R31	Dat Arg1:T62 Arg2:T66	
+R32	Dat Arg1:T62 Arg2:T71	
+R33	Dat Arg1:T62 Arg2:T69	
+A6	Source T71 Declared
+T72	Investigation 2815 2823	Holterze
+T73	Date 2824 2836	przed rokiem
+T74	Investigation_result 2801 2812	bradykardia
+N25	Reference T74 ICD10:R00.1	Bradykardia, nieokreślona
+R34	Dat Arg1:T73 Arg2:T72	
+R35	Inv Arg1:T72 Arg2:T74	
+T75	Drug 2852 2862	bisoprolol
+T76	Drug_dose 2871 2882	1.25 mg/die
+R36	Drg Arg1:T75 Arg2:T76	
+T77	Condition 2884 2923	przewlekłe zapalenie zatok przynosowych
+A7	Status T77 Historical_Insignificant
+N26	Reference T77 ICD10:J32.4	Przewlekłe zapalenie wszystkich zatok przynosowych
+T78	Condition 2925 2962	przerost małżowin nosowych środkowych
+A8	Status T78 Historical_Insignificant
+N27	Reference T78 ICD10:J34.3	Przerost małżowin nosowych
+T79	Treatment 2973 2990	plastyce małżowin
+N28	Reference T79 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T80	Date 2991 3002	12.12.2016r
+R37	Dat Arg1:T80 Arg2:T79	
+T81	Treatment 3013 3053	endoskopowej operacji zatok przynosowych
+N29	Reference T81 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T82	Date 3055 3065	28.06.2016
+R38	Dat Arg1:T82 Arg2:T81	
+T83	Condition 3068 3097	zrost nosowy po stronie lewej
+T84	Condition 3107 3117	WZW typu A
+N30	Reference T84 ICD10:B15	Ostre wirusowe zapalenie wątroby typu A
+T85	Date 3128 3142	w dzieciństwie
+R39	Dat Arg1:T85 Arg2:T84	
+T86	Condition 3170 3186	astma oskrzelowa
+T87	Condition 3188 3194	DM t.2
+N32	Reference T87 ICD10:E11	Cukrzyca insulinoniezależna
+T88	Condition 3196 3200	CHNS
+N33	Reference T88 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T89	Condition 3202 3204	HA
+N34	Reference T89 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+A9	Status T86 Family
+N31	Reference T86 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+A10	Status T87 Family
+A11	Status T88 Family
+A12	Status T89 Family
+T90	Condition 3215 3225	udar mózgu
+A13	Status T90 Family
+N35	Reference T90 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T91	Date 3227 3229	75
+R40	Dat Arg1:T91 Arg2:T90	
+T92	Behaviour 3246 3256	Nikotynizm
+N36	Reference T92 ICD10:Z72.0	Używanie tytoniu
+T93	Negation 3258 3264	neguje
+T94	Behaviour 3265 3322	Alkohol: okazjonalnie, sporadycznie w znikomych ilościach
+A14	Status T94 Historical_Insignificant
+N37	Reference T94 ICD10:Z72.1	Używanie alkoholu
+T95	Behaviour 3323 3340	Uzależnienie inne
+T96	Negation 3342 3348	neguje
+T97	Behaviour 3382 3393	ekonomistka
+T98	Drug 3400 3416	Flixonase Nasule
+T99	Drug_dose 3417 3466	0.5 amp. do każdego przewodu nosowego 2x dziennie
+T100	Behaviour 3365 3372	mężatka
+T101	Drug 3467 3474	Alvesco
+T102	Drug_dose 3475 3491	160ug  2x1 wdech
+R41	Drg Arg1:T101 Arg2:T102	
+R42	Drg Arg1:T98 Arg2:T99	
+R43	Neg Arg1:T96 Arg2:T95	
+R44	Neg Arg1:T93 Arg2:T92	
+A15	Status T79 Historical_Insignificant
+A16	Status T81 Historical_Insignificant
+N13	Reference T95 ICD10:Z72	Problemy związane ze stylem życia

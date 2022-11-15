@@ -1,0 +1,123 @@
+T1	Condition 439 480	Zwapnienia pierścienia zastawki mitralnej
+N1	Reference T1 ICD10:I34.8	Inne niereumatyczne zaburzenia funkcji zastawki mitralnej
+T2	Condition 482 485	MAC
+N2	Reference T2 ICD10:I34.8	Inne niereumatyczne zaburzenia funkcji zastawki mitralnej
+T3	Condition 488 519	Napadowe migotanie przedsionków
+N3	Reference T3 ICD10:I48	Migotanie i trzepotanie przedsionków
+T4	Investigation 521 533	CHA2DS2-VASc
+T5	Investigation 537 544	HASBLED
+T6	Investigation_result 534 535	3
+T7	Investigation_result 545 546	1
+R1	Inv Arg1:T4 Arg2:T6	
+R2	Inv Arg1:T5 Arg2:T7	
+T8	Condition 549 582	Arytmia komorowa do nsVT włącznie
+N4	Reference T8 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T9	Condition 584 605	Nadciśnienie tętnicze
+N5	Reference T9 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T10	Condition 607 628	Wole guzkowe tarczycy
+N6	Reference T10 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T11	Condition 639 660	nadczynności tarczycy
+N7	Reference T11 ICD10:E05	Nadczynność tarczycy [tyreotoksykoza]
+T12	Condition 662 681	Przepuklina pępkowa
+N8	Reference T12 ICD10:K42	Przepuklina pępkowa
+T13	Condition 683 713	Naczyniak obejmujący trzon Th8
+N9	Reference T13 ICD10:D18.0	Naczyniak krwionośny o dowolnym umiejscowieniu
+T14	Treatment 723 739	cholecystektomii
+A1	Status T14 Historical_Insignificant
+T15	Date 741 745	2001
+R3	Dat Arg1:T15 Arg2:T14	
+T16	Condition 748 780	Zmiany zwyrodnieniowe kręgosłupa
+N10	Reference T16 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T17	Treatment 896 915	Dalsza opieka w POZ
+T18	Treatment 919 1013	Wskazana pilna hospitalizacja w Oddziale Pulmonologicznym w celu weryfikacji zmiany opisywanej
+T19	Investigation 1016 1036	CT klatki piersiowej
+T20	Treatment 1040 1134	Wskazana hospitalizacja w Klinice Kardiologii i Wad Wrodzonych Dorosłych w celu ponownej oceny
+T21	Condition 1362 1393	Napadowe migotanie przedsionków
+N11	Reference T21 ICD10:I48	Migotanie i trzepotanie przedsionków
+T22	Condition 1395 1411	Stenoza mitralna
+N12	Reference T22 ICD10:I34.2	Niereumatyczne zwężenie zastawki mitralnej
+T23	Condition 1558 1591	napadowym migotaniem przedsionków
+N13	Reference T23 ICD10:I48	Migotanie i trzepotanie przedsionków
+T24	Condition 1593 1616	nadciśnieniem tętniczym
+N14	Reference T24 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T25	Condition 1618 1650	zwyrodnieniem zastawki mitralnej
+N15	Reference T25 ICD10:I05.9	Choroba zastawki mitralnej, nieokreślona
+T26	Symptom 1699 1729	pogorszenia tolerancji wysiłku
+N16	Reference T26 ICD10:R53	Złe samopoczucie i zmęczenie
+T27	Symptom 1735 1800	dolegliwości bólowych w klatce piersiowej o charakterze ściskania
+N17	Reference T27 ICD10:R07.3	Inne bóle w klatce piersiowej
+T28	Condition 1824 1846	niedoczynność tarczycy
+A2	Source T28 Declared
+N18	Reference T28 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T29	Negation 1868 1874	Neguje
+T30	Symptom 1876 1888	zasłabnięcia
+T31	Symptom 1890 1898	omdlenia
+N19	Reference T31 ICD10:R55	Omdlenie i zapaść
+T32	Symptom 1900 1910	krwawienia
+T33	Symptom 1912 1925	czarne stolce
+N21	Reference T33 ICD10:K92.1	Stolce smołowate
+T34	Symptom 1927 1943	brunatne wymioty
+N22	Reference T34 ICD10:K92.0	Wymioty krwawe
+T35	Condition 1945 1961	chorobę wrzodową
+N23	Reference T35 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T36	Symptom 1963 1977	duszność nocną
+N24	Reference T36 ICD10:R06.0	Duszność
+R4	Neg Arg1:T29 Arg2:T36	
+R5	Neg Arg1:T29 Arg2:T35	
+R6	Neg Arg1:T29 Arg2:T34	
+R7	Neg Arg1:T29 Arg2:T33	
+R8	Neg Arg1:T29 Arg2:T32	
+R9	Neg Arg1:T29 Arg2:T31	
+R10	Neg Arg1:T29 Arg2:T30	
+T37	Treatment 1979 1996	Przebyte operacje
+T38	Treatment 1998 2014	cholecystektomia
+A3	Status T38 Historical_Insignificant
+T39	Date 2017 2022	2001r
+R11	Dat Arg1:T39 Arg2:T38	
+T40	Behaviour 2024 2039	Palenie tytoniu
+T41	Negation 2041 2049	nie pali
+R12	Neg Arg1:T41 Arg2:T40	
+T42	Behaviour 2050 2061	Inne używki
+T43	Negation 2063 2066	nie
+R13	Neg Arg1:T43 Arg2:T42	
+T44	Condition 2067 2076	Uczulenia
+N26	Reference T44 ICD10:T78.4	Alergia, nieokreślona
+T45	Negation 2078 2081	nie
+R14	Neg Arg1:T45 Arg2:T44	
+T46	Condition 2109 2112	WZW
+N27	Reference T46 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T47	Condition 2119 2128	borelioza
+N28	Reference T47 ICD10:A69.2	Choroba z Lyme
+T48	Condition 2134 2137	tbc
+T49	Condition 2143 2147	odra
+N30	Reference T49 ICD10:B05	Odra
+T50	Condition 2153 2167	kontakt z odrą
+N31	Reference T50 ICD10:B05	Odra
+T51	Negation 2169 2170	-
+R15	Neg Arg1:T51 Arg2:T50	
+T52	Negation 2149 2150	-
+R16	Neg Arg1:T52 Arg2:T49	
+T53	Negation 2139 2140	-
+R17	Neg Arg1:T53 Arg2:T48	
+T54	Negation 2130 2131	-
+R18	Neg Arg1:T54 Arg2:T47	
+T55	Negation 2114 2115	-
+R19	Neg Arg1:T55 Arg2:T46	
+T56	Behaviour 2188 2208	warunki mieszkaniowe
+T57	Behaviour 2211 2230	mieszka sama, dobre
+T58	Drug 2265 2271	Gopten
+T59	Drug 2299 2307	Biosotal
+T60	Drug_dose 2272 2298	0,5-2mg w zależności od BP
+T61	Drug_dose 2308 2333	40 mg  w zależności od HR
+R20	Drg Arg1:T58 Arg2:T60	
+R21	Drg Arg1:T59 Arg2:T61	
+T62	Investigation 2394 2415	badania laboratoryjne
+T63	Investigation 2417 2421	ECHO
+T64	Investigation 2423 2441	EKG metodą Holtera
+T65	Investigation 2443 2447	ABPM
+T66	Investigation 2449 2464	próba wysiłkowa
+N32	Reference T30 ICD10:R55	Omdlenie i zapaść
+N25	Reference T40 ICD10:Z72.0	Używanie tytoniu
+N20	Reference T32 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N33	Reference T42 ICD10:Z72	Problemy związane ze stylem życia
+N29	Reference T48 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

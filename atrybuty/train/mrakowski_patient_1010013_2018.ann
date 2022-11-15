@@ -1,0 +1,119 @@
+T1	Drug 341 350	perfalgan
+T2	Drug 352 361	Nootropil
+T3	Drug 363 371	0,9%NaCl
+T4	Condition 589 610	Nadciśnienie tętnicze
+N1	Reference T4 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T5	Symptom 612 646	Bóle głowy prawdopodobnie związane
+N2	Reference T5 ICD10:R51	Ból głowy
+T6	Condition 649 662	nadciśnieniem
+N3	Reference T6 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T7	Treatment 774 796	kontrola u lekarza POZ
+T8	Treatment 799 831	kontrola w Poradni Okulistycznej
+T9	Investigation 833 849	badanie dna oczu
+T10	Investigation 891 932	kontrola wartości RR w warunkach domowych
+T11	Investigation 935 955	kontrola lipidogramu
+T12	Date 956 965	za 3 m-ce
+R1	Dat Arg1:T12 Arg2:T11	
+T13	Treatment 968 996	regularne przyjmowanie leków
+T14	Symptom 1171 1180	skoków RR
+N4	Reference T14 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T15	Investigation_result 1201 1223	skok RR do 170/105mmHg
+N5	Reference T15 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T16	Symptom 1241 1250	zawrotami
+N6	Reference T16 ICD10:R42	Zawroty głowy i odurzenie
+T17	Symptom 1253 1265	bólami głowy
+N7	Reference T17 ICD10:R51	Ból głowy
+T18	Drug 1270 1280	Captoprilu
+T19	Investigation_result 1281 1294	RR 153/95mmHg
+N8	Reference T19 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T20	Symptom 1304 1312	skoki RR
+N9	Reference T20 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T21	Investigation_result 1336 1357	Zwykle RR <120/78mmHg
+T22	Symptom 1380 1402	napady kołatania serca
+N10	Reference T22 ICD10:R00.2	Kołatanie serca
+T23	Condition 1433 1475	przewróciła się i uderzyła się w tył głowy
+N11	Reference T23 ICD10:S09.9	Nieokreślony uraz głowy
+T24	Negation 1477 1480	bez
+T25	Symptom 1481 1500	utraty przytomnosci
+N12	Reference T25 ICD10:R55	Omdlenie i zapaść
+R2	Neg Arg1:T24 Arg2:T25	
+T26	Negation 1504 1510	Neguje
+T27	Symptom 1512 1524	zasłabnięcia
+T28	Symptom 1526 1534	omdlenia
+N13	Reference T28 ICD10:R55	Omdlenie i zapaść
+T29	Symptom 1536 1546	krwawienia
+T30	Symptom 1548 1561	czarne stolce
+N15	Reference T30 ICD10:K92.1	Stolce smołowate
+T31	Symptom 1563 1579	brunatne wymioty
+N16	Reference T31 ICD10:K92.0	Wymioty krwawe
+T32	Condition 1581 1597	chorobę wrzodową
+N17	Reference T32 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T33	Symptom 1599 1613	duszność nocną
+N18	Reference T33 ICD10:R06.0	Duszność
+T34	Symptom 1615 1630	obrzęki podudzi
+T35	Symptom 1632 1656	bóle w klatce piersiowej
+T36	Condition 1658 1660	HA
+N21	Reference T36 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T37	Condition 1662 1664	DM
+N22	Reference T37 ICD10:E14	Cukrzyca nieokreślona
+T38	Symptom 1666 1708	zmniejszenie tolerancji wysiłku fizycznego
+N23	Reference T38 ICD10:R53	Złe samopoczucie i zmęczenie
+T39	Condition 1710 1712	OM
+T40	Date 1713 1724	3 lata temu
+R3	Dat Arg1:T40 Arg2:T39	
+T41	Treatment 1726 1743	Przebyte operacje
+T42	Negation 1745 1749	brak
+R4	Neg Arg1:T42 Arg2:T41	
+T43	Behaviour 1750 1765	Palenie tytoniu
+N24	Reference T43 ICD10:Z72.0	Używanie tytoniu
+T44	Negation 1767 1775	nie pali
+T45	Date 1776 1783	o dawna
+R5	Neg Arg1:T44 Arg2:T43	
+R6	Dat Arg1:T45 Arg2:T43	
+T46	Behaviour 1784 1795	Inne używki
+T47	Negation 1797 1800	nie
+R7	Neg Arg1:T47 Arg2:T46	
+T48	Condition 1801 1810	Uczulenia
+N25	Reference T48 ICD10:T78.4	Alergia, nieokreślona
+T49	Negation 1812 1815	nie
+R8	Neg Arg1:T49 Arg2:T48	
+T50	Condition 1843 1846	WZW
+N26	Reference T50 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T51	Negation 1848 1849	-
+R9	Neg Arg1:T51 Arg2:T50	
+T52	Condition 1853 1862	borelioza
+N27	Reference T52 ICD10:A69.2	Choroba z Lyme
+T53	Negation 1865 1866	-
+R10	Neg Arg1:T53 Arg2:T52	
+T54	Condition 1870 1873	tbc
+T55	Negation 1875 1876	-
+R11	Neg Arg1:T55 Arg2:T54	
+T56	Behaviour 1894 1920	warunki mieszkaniowe dobre
+T57	Investigation 1999 2020	badania laboratoryjne
+T58	Investigation 2022 2026	ECHO
+T59	Investigation 2028 2046	EKG metodą Holtera
+T60	Investigation 2048 2052	ABPM
+T61	Investigation 2054 2069	próba wysiłkowa
+R12	Neg Arg1:T26 Arg2:T27	
+R13	Neg Arg1:T26 Arg2:T28	
+R14	Neg Arg1:T26 Arg2:T29	
+R15	Neg Arg1:T26 Arg2:T30	
+R16	Neg Arg1:T26 Arg2:T31	
+R17	Neg Arg1:T26 Arg2:T32	
+R18	Neg Arg1:T26 Arg2:T33	
+R19	Neg Arg1:T26 Arg2:T34	
+R20	Neg Arg1:T26 Arg2:T35	
+R21	Neg Arg1:T26 Arg2:T36	
+R22	Neg Arg1:T26 Arg2:T37	
+R23	Neg Arg1:T26 Arg2:T38	
+N29	Reference T27 ICD10:R55	Omdlenie i zapaść
+T62	Date 1182 1200	w dniu wczorajszym
+R24	Dat Arg1:T62 Arg2:T15	
+N14	Reference T29 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N19	Reference T34 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N20	Reference T35 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N30	Reference T46 ICD10:Z72	Problemy związane ze stylem życia
+N28	Reference T54 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T63	Drug 1933 1938	leków
+T64	Negation 1929 1932	bez
+R25	Neg Arg1:T64 Arg2:T63	

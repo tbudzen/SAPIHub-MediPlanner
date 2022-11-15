@@ -1,0 +1,26 @@
+T1	Drug 764 773	Pyralgina
+T2	Drug 775 812	krople do nosa z neomycyną i efedryną
+T3	Condition 471 527	Wrodzona wada serca pod postacią zwężenia zastawki aorty
+N1	Reference T3 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T4	Condition 530 554	łagodną niedomykalnością
+N2	Reference T4 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T5	Treatment 567 589	operacji metodą Ross'a
+T6	Date 591 602	29.12.2011r
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Investigation_result 609 622	Dodatni wynik
+T8	Investigation 623 640	próby wysiłkowej.
+R2	Inv Arg1:T8 Arg2:T7	
+T9	Condition 981 989	zwężenia
+N3	Reference T9 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T10	Condition 992 1026	niedomykalności zastawki aortalnej
+N4	Reference T10 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T11	Treatment 1032 1043	oper. Rossa
+T12	Condition 1079 1096	wywiad alergiczny
+T13	Negation 1097 1103	ujemny
+R3	Neg Arg1:T13 Arg2:T12	
+T14	Drug 1106 1120	leków na stałe
+T15	Negation 1121 1134	nie otrzymuje
+R4	Neg Arg1:T15 Arg2:T14	
+T16	Condition 948 967	wrodzona wadą serca
+N6	Reference T16 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+N5	Reference T12 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

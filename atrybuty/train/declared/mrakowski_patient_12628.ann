@@ -1,0 +1,78 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 359 391	okresowa kontrola kardiologiczna
+T3	Treatment 392 426	wskazana konsultacja neurologiczna
+T4	Investigation 427 465	regularne pomiary ciśnienia tętniczego
+T5	Investigation 466 509	okresowa kontrola elektrolitów, lipidogramu
+T6	Behaviour 510 560	prawidłowe żywienie i regularna aktywność fizyczna
+T7	Drug 567 577	Concor COR
+T8	Drug_dose 578 598	1,25 mg 1 tabl. rano
+T9	Drug 599 608	Captopril
+T10	Drug_dose 609 633	12,5 mg 1 tabl. doraźnie
+R1	Drg Arg1:T7 Arg2:T8	
+R2	Drg Arg1:T9 Arg2:T10	
+T11	Condition 883 911	choroby niedokrwiennej serca
+N1	Reference T11 ICD10:I20	Choroba niedokrwienna serca
+T12	Condition 937 971	Nadkomorowe zaburzenia rytmu serca
+T13	Behaviour 973 983	Nikotynizm
+T14	Condition 985 1000	Miażdżyca aorty
+N4	Reference T14 ICD10:I70.0	Miażdżyca aorty
+T15	Condition 1014 1047	zmiany ogniskowej/ tętniaka aorty
+T16	Condition 1049 1071	Żylaki kończyn dolnych
+N5	Reference T16 ICD10:I83	Żylaki kończyn dolnych
+T17	Condition 1073 1105	Zmiany zwyrodnieniowe kręgosłupa
+N6	Reference T17 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T18	Symptom 1274 1319	kołatań serca - tylko w sytuacjach stresowych
+N7	Reference T18 ICD10:R00.2	Kołatanie serca
+T20	Condition 1396 1428	zmiany zwyrodnieniowe stawów rąk
+T21	Condition 1430 1448	żylaki kk. dolnych
+N9	Reference T21 ICD10:I83	Żylaki kończyn dolnych
+T22	Symptom 1451 1473	drętwienie kk. dolnych
+N10	Reference T22 ICD10:R20.2	Parestezje
+T23	Treatment 1477 1494	Przebyte operacje
+T24	Negation 1496 1502	neguje
+R4	Neg Arg1:T24 Arg2:T23	
+T25	Condition 1595 1602	Alergie
+T27	Drug 1612 1624	metronidazol
+T29	Behaviour 1638 1648	Nikotynizm
+T30	Behaviour 1688 1709	Alkohol: okazjonalnie
+N12	Reference T30 ICD10:Z72.1	Używanie alkoholu
+T31	Behaviour 1711 1728	Uzależnienie inne
+T32	Negation 1730 1736	neguje
+R6	Neg Arg1:T32 Arg2:T31	
+T34	Investigation 1819 1829	echo serca
+T35	Investigation 1831 1834	TET
+T36	Investigation 1836 1840	ABPM
+T37	Investigation 1842 1852	Holter ekg
+T38	Investigation 1854 1872	rtg kl. piersiowej
+T28	Date 1321 1370	kilkuminutowe, 1  x w tygodniu, występują od roku
+R7	Dat Arg1:T28 Arg2:T18	
+N8	Reference T20 ICD10:M15	Zwyrodnienie wielostawowe
+T33	Condition 1529 1533	udar
+A1	Status T33 Family
+A2	Source T33 Declared
+N14	Reference T33 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T40	Condition 1558 1570	rak trzustki
+A3	Status T40 Family
+N15	Reference T40 ICD10:C25	Nowotwór złośliwy trzustki
+T41	Condition 1591 1593	DM
+N16	Reference T41 ICD10:E14	Cukrzyca nieokreślona
+A4	Status T41 Family
+T39	Behaviour 1763 1775	pielęgniarka
+T42	Behaviour 1754 1761	pracuje
+N2	Reference T12 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+A5	Source T11 Declared
+A6	Source T15 Declared
+N13	Reference T15 ICD10:I71.9	Tętniak aorty o nieokreślonym umiejscowieniu, bez informacji o pęknięciu
+T47	Condition 1504 1519	Wywiad rodzinny
+A7	Status T47 Family
+T43	Date 1655 1671	do 30 lat wstecz
+R5	Dat Arg1:T43 Arg2:T29	
+T44	Behaviour 1673 1686	3.5 paczkolat
+T45	Symptom 1627 1636	pokrzywka
+N17	Reference T45 ICD10:L50.9	Pokrzywka, nieokreślona
+R8	Alg Arg1:T25 Arg2:T27	
+T26	Investigation 861 882	Obserwacja w kierunku
+N3	Reference T13 ICD10:Z72.0	Używanie tytoniu
+N18	Reference T25 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+N11	Reference T29 ICD10:Z72.0	Używanie tytoniu
+N19	Reference T44 ICD10:Z72.0	Używanie tytoniu

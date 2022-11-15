@@ -1,0 +1,44 @@
+T1	Drug 340 343	ANA
+T2	Drug 345 351	Zofran
+T3	Drug 353 362	Perfalgan
+T4	Condition 581 640	Wrodzona wada układu krążenia - przetrwały przewód tętniczy
+N1	Reference T4 ICD10:Q25.0	Drożny przewód tętniczy
+T5	Condition 643 680	podejrzenie łagodnej koarktacji aorty
+A1	Source T5 Declared
+N2	Reference T5 ICD10:Q25.1	Zwężenie cieśni aorty
+T6	Condition 685 694	Dyspepsia
+N3	Reference T6 ICD10:K30	Dyspepsja
+T7	Condition 913 972	Wrodzona wada układu krążenia - przetrwały przewód tętniczy
+N4	Reference T7 ICD10:Q25.0	Drożny przewód tętniczy
+T8	Condition 975 1012	podejrzenie łagodnej koarktacji aorty
+A2	Source T8 Declared
+N5	Reference T8 ICD10:Q25.1	Zwężenie cieśni aorty
+T9	Condition 1231 1290	Wrodzona wada układu krążenia - przetrwały przewód tętniczy
+N6	Reference T9 ICD10:Q25.0	Drożny przewód tętniczy
+T10	Condition 1293 1330	podejrzenie łagodnej koarktacji aorty
+A3	Source T10 Declared
+N7	Reference T10 ICD10:Q25.1	Zwężenie cieśni aorty
+T11	Investigation 1335 1353	Cewnikowanie serca
+T12	Treatment 1356 1367	zamknięciem
+T13	Treatment 1372 1410	zestawem OCCLUTECH PDA OCCLUDER 5 7 mm
+T14	Condition 1368 1371	PDA
+N8	Reference T14 ICD10:Q25.0	Drożny przewód tętniczy
+T15	Date 1413 1424	05.08.2019r
+R1	Dat Arg1:T15 Arg2:T13	
+R2	Dat Arg1:T15 Arg2:T14	
+R3	Dat Arg1:T15 Arg2:T12	
+R4	Dat Arg1:T15 Arg2:T11	
+T16	Drug 1536 1542	Acesan
+T17	Drug_dose 1543 1565	1 x 15 mg przez 3 m-ce
+R5	Drg Arg1:T16 Arg2:T17	
+T18	Treatment 1568 1602	kontrola w Poradni Kardiologicznej
+T19	Date 1603 1612	za 3 m-ce
+R6	Dat Arg1:T19 Arg2:T18	
+T20	Condition 1747 1750	PDA
+N9	Reference T20 ICD10:Q25.0	Drożny przewód tętniczy
+T21	Condition 1753 1756	CoA
+N10	Reference T21 ICD10:Q25.1	Zwężenie cieśni aorty
+T22	Treatment 1791 1819	zabiegu kardiochirurgicznego
+T23	Condition 1822 1839	wywiad alergiczny
+T24	Negation 1840 1846	ujemny
+R7	Neg Arg1:T24 Arg2:T23	

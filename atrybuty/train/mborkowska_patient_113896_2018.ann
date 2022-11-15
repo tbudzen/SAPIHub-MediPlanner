@@ -1,0 +1,96 @@
+T1	Drug 2055 2065	PoloMag B6
+T2	Drug_dose 2066 2078	1 tabl. rano
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 2030 2040	Novocardia
+T4	Drug_dose 2041 2053	1 tabl. rano
+R2	Drg Arg1:T3 Arg2:T4	
+T5	Drug 2002 2012	Procoralan
+T6	Drug_dose 2013 2028	5 mg 1 x 1 tabl
+R3	Drg Arg1:T5 Arg2:T6	
+T7	Negation 1953 1963	nie podaje
+T8	Negation 1931 1941	nie podaje
+T9	Negation 1907 1917	nie podaje
+T10	Negation 1879 1889	nie podaje
+T11	Negation 1851 1861	nie podaje
+T12	Condition 1839 1848	borelioza
+N1	Reference T12 ICD10:A69.2	Choroba z Lyme
+R4	Neg Arg1:T11 Arg2:T12	
+T13	Condition 1834 1837	WZW
+N2	Reference T13 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+R5	Neg Arg1:T11 Arg2:T13	
+T14	Condition 1942 1951	Uczulenia
+R6	Neg Arg1:T7 Arg2:T14	
+T15	Behaviour 1918 1930	Inne używki:
+R7	Neg Arg1:T8 Arg2:T15	
+T16	Behaviour 1890 1906	Palenie tytoniu:
+N4	Reference T16 ICD10:Z72.0	Używanie tytoniu
+R8	Neg Arg1:T9 Arg2:T16	
+T17	Condition 1862 1877	Wywiad rodzinny
+A1	Status T17 Family
+R9	Neg Arg1:T10 Arg2:T17	
+T18	Treatment 1772 1806	Leczenie przewlekłe: rehabilitacja
+T19	Drug 1168 1178	PoloMag B6
+T20	Drug_dose 1179 1191	1 tabl. rano
+R10	Drg Arg1:T19 Arg2:T20	
+T21	Drug 1137 1147	Novocardia
+T22	Drug 1097 1107	Concor Cor
+T23	Drug_dose 1108 1128	1.25 mg 1 tabl. rano
+R11	Drg Arg1:T22 Arg2:T23	
+T24	Drug_dose 1148 1160	1 tabl. rano
+R12	Drg Arg1:T21 Arg2:T24	
+T25	Behaviour 1007 1052	stały, umiarkowany, aerobowy wysiłek fizyczny
+T26	Behaviour 990 1000	dieta DASH
+T27	Investigation 954 983	kontrola ciśnienia tętniczego
+T28	Condition 415 458	Łagodne zastawkowe zwężenie tętnicy płucnej
+N5	Reference T28 ICD10:I77.1	Zwężenie tętnicy
+T29	Treatment 468 478	zamknięciu
+T30	Condition 479 520	ubytku w przegrodzie międzyprzedsionkowej
+N6	Reference T30 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T31	Treatment 521 528	zapinką
+T32	Date 530 534	2005
+R13	Dat Arg1:T32 Arg2:T31	
+R14	Dat Arg1:T32 Arg2:T30	
+R15	Dat Arg1:T32 Arg2:T29	
+T33	Treatment 545 578	operacji splotu barkowego prawego
+T34	Condition 588 615	uszkodzenia okołoporodowego
+T35	Date 661 665	2000
+R16	Dat Arg1:T35 Arg2:T34	
+R17	Dat Arg1:T35 Arg2:T33	
+T36	Treatment 1341 1351	zamknięciu
+T37	Condition 1352 1393	ubytku w przegrodzie międzyprzedsionkowej
+N7	Reference T37 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T38	Date 1395 1400	2005r
+R18	Dat Arg1:T38 Arg2:T37	
+R19	Dat Arg1:T38 Arg2:T36	
+T39	Condition 1416 1453	zwężeniem zastawkowym tętnicy płucnej
+T40	Condition 1457 1491	niedowładem prawej kończyny górnej
+T41	Investigation_result 1579 1607	spadków ciśnienia tętniczego
+T42	Symptom 1622 1644	bólów w kl. piersiowej
+N9	Reference T42 ICD10:R07.3	Inne bóle w klatce piersiowej
+T43	Symptom 1646 1655	duszności
+N10	Reference T43 ICD10:R06.0	Duszność
+T44	Date 1766 1771	2000r
+T45	Treatment 1667 1675	operacje
+T46	Condition 1677 1699	Niedowład prawostronny
+R20	Dat Arg1:T44 Arg2:T46	
+R21	Dat Arg1:T44 Arg2:T45	
+T47	Condition 1493 1536	okołoporodowe uszkodzenie splotu ramiennego
+T48	Treatment 1755 1763	operacja
+R22	Dat Arg1:T44 Arg2:T48	
+N11	Reference T15 ICD10:Z72	Problemy związane ze stylem życia
+T49	Condition 1709 1753	okołoporodowego uszkodzenia splotu barkowego
+N12	Reference T49 ICD10:P14.3	Inne urazy porodowe splotu ramiennego
+R23	Dat Arg1:T44 Arg2:T49	
+N14	Reference T47 ICD10:P14.3	Inne urazy porodowe splotu ramiennego
+N8	Reference T39 ICD10:I28.8	Inne określone choroby naczyń płucnych
+N16	Reference T34 ICD10:P14.3	Inne urazy porodowe splotu ramiennego
+T50	Condition 618 659	niedowładem prawostronnym kończyny górnej
+N17	Reference T50 ICD10:G83.2	Porażenie jednej kończyny górnej
+R24	Dat Arg1:T35 Arg2:T50	
+N13	Reference T46 ICD10:G83.2	Porażenie jednej kończyny górnej
+N15	Reference T40 ICD10:G83.2	Porażenie jednej kończyny górnej
+T51	Treatment 825 852	dalsza opieka w poradni POZ
+T52	Treatment 868 921	kontrola kardiologiczna – kolejna w tutejszej Klinice
+T53	Date 922 936	za 12 miesięcy
+R25	Dat Arg1:T53 Arg2:T52	
+N3	Reference T14 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

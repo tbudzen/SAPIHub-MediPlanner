@@ -1,0 +1,136 @@
+T1	Treatment 346 373	dalsza opieka w poradni POZ
+T2	Treatment 382 414	okresowa kontrola kardiologiczna
+T3	Treatment 423 532	kontrola gastroenterologiczna, pulmonologiczna, gastroenterologiczna, neurologiczna i u chirurga naczyniowego
+T4	Investigation 541 580	codzienna kontrola ciśnienia tętniczego
+T5	Investigation 589 618	okresowa kontrola lipidogramu
+T6	Date 629 635	za rok
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Behaviour 644 654	dieta DASH
+T8	Behaviour 663 708	stały, umiarkowany, aerobowy wysiłek fizyczny
+T9	Treatment 717 745	regularne przyjmowanie leków
+T10	Drug 756 762	Vivace
+T11	Drug_dose 763 787	2.5 mg 1 tabl. wieczorem
+R2	Drg Arg1:T10 Arg2:T11	
+T12	Drug 796 808	Tertensif SR
+T13	Drug_dose 809 821	1 tabl. rano
+R3	Drg Arg1:T12 Arg2:T13	
+T14	Drug 831 840	Oxycardil
+T15	Drug_dose 841 860	180 mg 1 tabl. rano
+R4	Drg Arg1:T14 Arg2:T15	
+T16	Drug 869 877	Magnezin
+T17	Drug_dose 878 902	2 tabl. rano i wieczorem
+R5	Drg Arg1:T16 Arg2:T17	
+T18	Drug 942 949	Roswera
+T19	Drug_dose 950 973	10 mg 1 tabl. wieczorem
+R6	Drg Arg1:T18 Arg2:T19	
+T20	Drug 982 990	Dexilant
+T21	Drug_dose 991 1018	30 mg 1 tabl. rano na czczo
+R7	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1027 1039	Cyklo 3 Fort
+T23	Drug_dose 1040 1064	1 tabl. rano i wieczorem
+R8	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1104 1110	Fostex
+T25	Drug_dose 1111 1146	100ug+6ug 2 wziewy rano i wieczorem
+R9	Drg Arg1:T24 Arg2:T25	
+T26	Condition 1330 1351	Nadciśnienie tętnicze
+N1	Reference T26 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T27	Condition 1353 1360	Nadwaga
+N2	Reference T27 ICD10:E66.9	Otyłość, nieokreślona
+T28	Condition 1362 1382	Hipercholesterolemia
+N3	Reference T28 ICD10:E78.0	Czysta hipercholesterolemia
+T29	Treatment 1383 1401	w trakcie leczenia
+T30	Drug 1402 1409	statyną
+T31	Condition 1411 1457	Blok przedniej wiązki lewej odnogi pęczka Hisa
+T32	Condition 1459 1497	Napadowy blok lewej odnogi pęczka Hisa
+N5	Reference T32 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+N4	Reference T31 ICD10:I44.4	Blok przedniej gałęzi lewej odnogi pęczka Hisa
+T33	Condition 1499 1553	Przewlekła niewydolność naczyń żylnych kończyn dolnych
+N6	Reference T33 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+T34	Condition 1567 1583	Astma oskrzelowa
+N7	Reference T34 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T35	Condition 1585 1617	Przepuklina rozworu przełykowego
+N8	Reference T35 ICD10:K44	Przepuklina przeponowa
+T36	Condition 1619 1689	Zmiany zwyrodnieniowe stawów kręgosłupa odcinka szyjnego i lędźwiowego
+N9	Reference T36 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T37	Condition 1691 1700	Uczulenie
+T38	Treatment 1732 1766	operacji korekty przegrody nosowej
+A1	Status T38 Historical_Insignificant
+T39	Date 1768 1772	1997
+R10	Dat Arg1:T39 Arg2:T38	
+T40	Condition 1975 1994	przemijającego LBBB
+N11	Reference T40 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T41	Date 1996 2003	03.2018
+T42	Symptom 2023 2059	uczucie "ciepła" w klatce piersiowej
+R11	Dat Arg1:T41 Arg2:T42	
+T43	Condition 2152 2156	LBBB
+N12	Reference T43 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T44	Negation 2136 2151	nie stwierdzono
+T45	Date 2121 2135	przy przyjęciu
+R12	Neg Arg1:T44 Arg2:T43	
+R13	Dat Arg1:T45 Arg2:T43	
+T46	Condition 2163 2186	nadciśnienia tętniczego
+N13	Reference T46 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T47	Investigation_result 2188 2203	max. 165/95mmHg
+N14	Reference T47 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T48	Condition 2250 2253	IFG
+N15	Reference T48 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T49	Condition 2255 2271	astma oskrzelowa
+N16	Reference T49 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T50	Condition 2273 2301	niewydolność żył kk. dolnych
+N17	Reference T50 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+T51	Condition 2303 2335	przepuklina rozwory przełykowego
+N18	Reference T51 ICD10:K44	Przepuklina przeponowa
+T52	Condition 2337 2357	hipercholesterolemia
+N19	Reference T52 ICD10:E78.0	Czysta hipercholesterolemia
+T53	Condition 2359 2409	zmiany zwyrodnieniowe stawów kręgosłupa odc. C i L
+N20	Reference T53 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T54	Treatment 2412 2429	Przebyte operacje
+T55	Treatment 2431 2456	korekta przegrody nosowej
+A2	Status T55 Historical_Insignificant
+T56	Date 2458 2460	97
+R14	Dat Arg1:T56 Arg2:T55	
+T57	Condition 2463 2478	Wywiad rodzinny
+A3	Status T57 Family
+T58	Negation 2480 2493	bez znaczenia
+R15	Neg Arg1:T58 Arg2:T57	
+T59	Condition 2495 2502	Alergie
+T60	Behaviour 2528 2538	Nikotynizm
+T61	Negation 2540 2546	neguje
+R16	Neg Arg1:T61 Arg2:T60	
+T62	Behaviour 2549 2570	Alkohol: okazjonalnie
+N23	Reference T62 ICD10:Z72.1	Używanie alkoholu
+T63	Behaviour 2572 2589	Uzależnienie inne
+T64	Negation 2591 2597	neguje
+R17	Neg Arg1:T64 Arg2:T63	
+T65	Behaviour 2615 2623	księgowa
+T66	Drug 2630 2637	Roswera
+T67	Drug_dose 2638 2661	10 mg 1 tabl. wieczorem
+R18	Drg Arg1:T66 Arg2:T67	
+T68	Drug 2663 2670	Dexilan
+T69	Drug_dose 2671 2689	30 mg 1 tabl. rano
+R19	Drg Arg1:T68 Arg2:T69	
+T70	Drug 2691 2699	Pramolan
+T71	Drug_dose 2700 2723	50 mg 1 tabl. wieczorem
+R20	Drg Arg1:T70 Arg2:T71	
+T72	Drug 2725 2734	Oxycardil
+T73	Drug_dose 2735 2756	180 mg 1 tabl. na noc
+R21	Drg Arg1:T72 Arg2:T73	
+T74	Drug 2758 2768	Vascotazin
+T75	Drug_dose 2769 2789	35 mg 1 tabl. na noc
+R22	Drg Arg1:T74 Arg2:T75	
+T76	Drug 2791 2803	Cyklo 3 Fort
+T77	Drug_dose 2804 2828	1 tabl. rano i wieczorem
+R23	Drg Arg1:T76 Arg2:T77	
+T78	Drug 2830 2836	Fostex
+T79	Drug_dose 2837 2873	100 +6 ug- 2 wziewy rano i wieczorem
+R24	Drg Arg1:T78 Arg2:T79	
+T80	Investigation 2902 2912	echo serca
+T81	Investigation 2914 2917	TET
+T82	Investigation 2919 2923	ABPM
+T83	Investigation 2925 2935	Holter ekg
+T84	Investigation 2937 2955	rtg kl. piersiowej
+N10	Reference T37 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N21	Reference T59 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N22	Reference T60 ICD10:Z72.0	Używanie tytoniu
+A4	Status T62 Historical_Insignificant
+N24	Reference T63 ICD10:Z72	Problemy związane ze stylem życia

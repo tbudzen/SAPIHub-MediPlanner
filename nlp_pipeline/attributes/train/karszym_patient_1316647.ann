@@ -1,0 +1,53 @@
+T1	Condition 438 489	Wrodzona wada serca pod postacią Tetralogii Fallota
+N1	Reference T1 ICD10:Q21.3	Tetralogia Fallota
+T2	Treatment 501 544	plastyce balonowej zastawki tętnicy płucnej
+T3	Date 546 551	18.06
+T4	Treatment 556 583	Operacja kardiochirurgiczna
+N2	Reference T4 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T5	Date 640 657	w dniu 04.11.2015
+T6	Treatment 665 673	Plastyka
+N3	Reference T6 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T7	Treatment 732 740	Wycięcie
+N4	Reference T7 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T8	Treatment 799 851	Nacięcie pnia i pierścienia zastawki tętnicy płucnej
+N5	Reference T8 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T9	Treatment 901 1011	Poszerzenie drogi wypływu z prawej komory, zastawki i pnia tętnicy płucnej łatką za własnego osierdzia dziecka
+N6	Reference T9 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T10	Condition 1016 1063	Istotna niedomykalność zastawki tętnicy płucnej
+N7	Reference T10 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+R1	Dat Arg1:T3 Arg2:T2	
+R2	Dat Arg1:T5 Arg2:T4	
+T11	Negation 1188 1201	nie przyjmuje
+T12	Drug 1202 1233	leków kardiologicznych na stałe
+R3	Neg Arg1:T11 Arg2:T12	
+T13	Treatment 1234 1259	Stała opieka pediatryczna
+T14	Investigation 1351 1393	ocena 24godzinna zapisu ekg metodą holtera
+T15	Treatment 1417 1451	Kontrola w Poradni Kardiologicznej
+T16	Date 1452 1466	za 5-6miesięcy
+R4	Dat Arg1:T16 Arg2:T15	
+T17	Condition 1606 1624	tetralogią Fallota
+N8	Reference T17 ICD10:Q21.3	Tetralogia Fallota
+T18	Symptom 1701 1716	Stan dość dobry
+R5	Dat Arg1:T5 Arg2:T6	
+R6	Dat Arg1:T5 Arg2:T7	
+R7	Dat Arg1:T5 Arg2:T8	
+T19	Condition 674 696	ubytku przegrody komór
+N9	Reference T19 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T20	Treatment 697 724	łatką dakronową o śr. 14 mm
+N10	Reference T20 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+R8	Dat Arg1:T5 Arg2:T19	
+R9	Dat Arg1:T5 Arg2:T20	
+T21	Treatment 853 892	nacięcie przedniej ściany prawej komory
+N11	Reference T21 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R10	Dat Arg1:T5 Arg2:T21	
+R11	Dat Arg1:T5 Arg2:T9	
+T22	Treatment 585 630	Operacja w warunkach krążenia pozaustrojowego
+R12	Dat Arg1:T5 Arg2:T22	
+T23	Condition 741 790	belek mięśniowych z drogi wypływu z prawej komory
+N12	Reference T23 ICD10:Q24.3	Wrodzone zwężenie stożka tętniczego prawej komory
+R13	Dat Arg1:T5 Arg2:T23	
+N13	Reference T22 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T24	Negation 1274 1299	brak możliwości wykonania
+T25	Investigation 1300 1307	badania
+T26	Treatment 1318 1332	hospitalizacji
+R14	Neg Arg1:T24 Arg2:T25	

@@ -1,0 +1,660 @@
+allRelations          : 67
+oks                   : 28
+isRedundantAndRemoveds: 38
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 1
+GOOD / BAD            : 66 / 1
+Sentence 0:
+------------------------------------------------
+Wiek: 51 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+Dalsza opieka w Poradni Endokrynologicznej, Kardiologicznej, Hepatologicznej, Ginekologicznej oraz w Poradni Żywieniowej.
+
+
+
+Sentence 5:
+Przestrzeganie diety ubogocholesterolowej oraz okresowa kontrola lipidogramu w POZ->docelowe wartości chol.
+
+
+Sentence 6:
+LDL <100mg/dl.
+
+R1	Inv Arg1:T3 Arg2:T4 << OK >>	LDL -> <100mg/dl  <RANK: 3> <info: start[560, 564] <type: RIGHT>>
+
+
+Sentence 7:
+Kontrola aminotransferaz (ALT, AST) za 2 tygodnie w POZ.
+
+R2	Dat Arg1:T6 Arg2:T5 << OK >>	2 tygodnie -> Kontrola aminotransferaz (ALT, AST)  <RANK: 3> <info: start[614, 575] <type: LEFT>>
+
+
+Sentence 8:
+Redukcja masy ciała oraz regularna aerobowa aktywność fizyczna.
+
+
+
+Sentence 9:
+Codzienna kontrola ciśnienia tętniczego.
+
+
+
+Sentence 10:
+Systematyczne stosowanie leków:
+
+
+
+Sentence 11:
+Prestarium 5 mg 1x1 tabl rano
+Ezetrol 10 mg 1x1 tabl rano
+Heparegen 3x1 tabl 
+Proursan 2x1 tabl.
+
+R3	Drg Arg1:T10 Arg2:T11 << OK >>	Prestarium -> 5 mg 1x1 tabl rano  <RANK: 3> <info: start[769, 780] <type: RIGHT>>
+R4	Drg Arg1:T10 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Prestarium -> 10 mg 1x1 tabl rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[769, 807] <type: RIGHT>>
+R5	Drg Arg1:T10 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Prestarium -> 3x1 tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[769, 837] <type: RIGHT>>
+R6	Drg Arg1:T10 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Prestarium -> 2x1 tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[769, 856] <type: RIGHT>>
+R7	Drg Arg1:T12 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Ezetrol -> 5 mg 1x1 tabl rano <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[799, 780] <type: LEFT>>
+R8	Drg Arg1:T12 Arg2:T13 << OK >>	Ezetrol -> 10 mg 1x1 tabl rano  <RANK: 3> <info: start[799, 807] <type: RIGHT>>
+R9	Drg Arg1:T12 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Ezetrol -> 3x1 tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[799, 837] <type: RIGHT>>
+R10	Drg Arg1:T12 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Ezetrol -> 2x1 tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[799, 856] <type: RIGHT>>
+R11	Drg Arg1:T14 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Heparegen -> 5 mg 1x1 tabl rano <:REMOVED other first tag between (left):> <RANK: 1> <info: start[827, 780] <type: LEFT>>
+R12	Drg Arg1:T14 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Heparegen -> 10 mg 1x1 tabl rano <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[827, 807] <type: LEFT>>
+R13	Drg Arg1:T14 Arg2:T15 << OK >>	Heparegen -> 3x1 tabl  <RANK: 3> <info: start[827, 837] <type: RIGHT>>
+R14	Drg Arg1:T14 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Heparegen -> 2x1 tabl <:REMOVED other first tag between (right):> <RANK: 1> <info: start[827, 856] <type: RIGHT>>
+R15	Drg Arg1:T16 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Proursan -> 5 mg 1x1 tabl rano <:REMOVED other first tag between (left):> <RANK: 1> <info: start[847, 780] <type: LEFT>>
+R16	Drg Arg1:T16 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Proursan -> 10 mg 1x1 tabl rano <:REMOVED other first tag between (left):> <RANK: 1> <info: start[847, 807] <type: LEFT>>
+R17	Drg Arg1:T16 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Proursan -> 3x1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[847, 837] <type: LEFT>>
+R18	Drg Arg1:T16 Arg2:T17 << OK >>	Proursan -> 2x1 tabl  <RANK: 3> <info: start[847, 856] <type: RIGHT>>
+
+
+Sentence 12:
+Glucophage XR 750 mg 1x1 tabl na noc przez 2 tygodnie, następnie 1x2 tabl na noc.
+
+R19	Drg Arg1:T18 Arg2:T19 << OK >>	Glucophage XR -> 750 mg 1x1 tabl na noc przez 2 tygodnie  <RANK: 3> <info: start[866, 880] <type: RIGHT>>
+R20	Drg Arg1:T18 Arg2:T20 << OK >>	Glucophage XR -> następnie 1x2 tabl na noc  <RANK: 2> <info: start[866, 921] <type: RIGHT>>
+
+
+Sentence 13:
+Luteina 100 mg 2xdziennie dopochwowo przez 10 dni, następnie w 16-25 dc.
+
+
+R21	Drg Arg1:T21 Arg2:T22 << OK >>	Luteina -> 100 mg 2xdziennie dopochwowo  <RANK: 3> <info: start[948, 956] <type: RIGHT>>
+R22	Dat Arg1:T23 Arg2:T21 <<REDUNDANT!!!SHOULD BE REMOVED>>	10 dni -> Luteina  <RANK: 3> <info: start[991, 948] <type: LEFT>>
+
+
+Sentence 14:
+Niezdolność do pracy: 19.02-27.02.2019r.
+R23	Dat Arg1:T24 Arg2:T25 << OK >>	19.02-27.02.2019r. -> Niezdolność do pracy  <RANK: 3> <info: start[1044, 1022] <type: LEFT>>
+
+
+Sentence 15:
+Wydano druk ZUS ZLA.
+
+
+
+Sentence 16:
+------------------------------------------------
+
+
+
+Sentence 17:
+Zastosowane leczenie
+
+
+
+Sentence 18:
+------------------------------------------------
+
+
+
+Sentence 19:
+Prestarium, Heparegen, Proursan.
+
+
+
+Sentence 20:
+------------------------------------------------
+
+
+
+Sentence 21:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 22:
+------------------------------------------------
+ Rozpozanie I: ICD10:I10|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Łagodna niedomykalność zastawki mitralnej i aortalnej.
+
+
+Sentence 23:
+Nadciśnienie tętnicze.
+
+
+Sentence 24:
+Insulinooporność.
+
+
+Sentence 25:
+Nieprawidłowa tolerancja glukozy.
+
+
+Sentence 26:
+Hipercholesterolemia.
+
+
+Sentence 27:
+Hepatopatia.
+
+
+Sentence 28:
+Guz tarczycy do weryfikacji w BACC.
+
+
+Sentence 29:
+Otyłość III st BMI 40 kg/m2.
+
+R24	Inv Arg1:T39 Arg2:T40 << OK >>	BMI -> 40 kg/m2  <RANK: 3> <info: start[1678, 1682] <type: RIGHT>>
+
+
+Sentence 30:
+------------------------------------------------
+
+
+
+Sentence 31:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 32:
+Pacjentka lat 51 z przyjęta do kliniki z powodu labilnych wartości ciśnienia tętniczego, kołatań serca oraz ograniczonej tolerancji wysiłku.
+
+
+
+Sentence 33:
+W wywiadzie ponadto: otyłość, hipercholesterolemia (obecnie bez leczenia), hepatopatia, torbiele jajnika.
+
+
+
+Sentence 34:
+Neguje: zasłabnięcia, omdlenia, krwawienia, czarne stolce, brunatne wymioty, chorobę wrzodową, duszność nocną, obrzęki podudzi, bóle w klatce piersiowej.
+
+R25	Neg Arg1:T86 Arg2:T48 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[2063, 2071] <type: RIGHT>>
+R26	Neg Arg1:T86 Arg2:T49 << OK >>	Neguje -> omdlenia  <RANK: 2> <info: start[2063, 2085] <type: RIGHT>>
+R27	Neg Arg1:T86 Arg2:T50 << OK >>	Neguje -> krwawienia  <RANK: 2> <info: start[2063, 2095] <type: RIGHT>>
+R28	Neg Arg1:T86 Arg2:T51 << OK >>	Neguje -> czarne stolce  <RANK: 2> <info: start[2063, 2107] <type: RIGHT>>
+R29	Neg Arg1:T86 Arg2:T52 << OK >>	Neguje -> brunatne wymioty  <RANK: 2> <info: start[2063, 2122] <type: RIGHT>>
+R30	Neg Arg1:T86 Arg2:T54 << OK >>	Neguje -> duszność nocną  <RANK: 2> <info: start[2063, 2158] <type: RIGHT>>
+R31	Neg Arg1:T86 Arg2:T55 << OK >>	Neguje -> obrzęki podudzi  <RANK: 2> <info: start[2063, 2174] <type: RIGHT>>
+R32	Neg Arg1:T86 Arg2:T85 << OK >>	Neguje -> bóle w klatce piersiowej.  <RANK: 2> <info: start[2063, 2191] <type: RIGHT>>
+R33	Neg Arg1:T86 Arg2:T53 << OK >>	Neguje -> chorobę wrzodową  <RANK: 2> <info: start[2063, 2140] <type: RIGHT>>
+
+
+Sentence 35:
+Przebyte operacje:laparoskopia z powodu: mięsniaków, endometriozy, teratomy jajnika.
+
+
+
+Sentence 36:
+Palenie tytoniu: nie pali 
+Inne używki: nie
+Uczulenia: nie
+
+R34	Neg Arg1:T61 Arg2:T60 << OK >>	nie pali -> Palenie tytoniu  <RANK: 3> <info: start[2319, 2302] <type: LEFT>>
+R35	Neg Arg1:T61 Arg2:T64 <<REDUNDANT!!!REMOVED>>	nie pali -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2319, 2346] <type: RIGHT>>
+R36	Neg Arg1:T61 Arg2:T62 <<REDUNDANT!!!REMOVED>>	nie pali -> Inne używki <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2319, 2329] <type: RIGHT>>
+R37	Neg Arg1:T63 Arg2:T60 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2342, 2302] <type: LEFT>>
+R38	Neg Arg1:T63 Arg2:T64 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2342, 2346] <type: RIGHT>>
+R39	Neg Arg1:T63 Arg2:T62 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[2342, 2329] <type: LEFT>>
+R40	Neg Arg1:T65 Arg2:T60 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2357, 2302] <type: LEFT>>
+R41	Neg Arg1:T65 Arg2:T64 << OK >>	nie -> Uczulenia  <RANK: 3> <info: start[2357, 2346] <type: LEFT>>
+R42	Neg Arg1:T65 Arg2:T62 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2357, 2329] <type: LEFT>>
+
+
+Sentence 37:
+Przebyte choroby zakaźne - WZW (-) , borelioza (-), tbc (-), odra (-), kontakt z odrą (-)
+
+R43	Neg Arg1:T71 Arg2:T66 << OK >>	(-) -> WZW  <RANK: 3> <info: start[2392, 2388] <type: LEFT>>
+R44	Neg Arg1:T71 Arg2:T67 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2392, 2398] <type: RIGHT>>
+R45	Neg Arg1:T71 Arg2:T68 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2392, 2413] <type: RIGHT>>
+R46	Neg Arg1:T71 Arg2:T69 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2392, 2422] <type: RIGHT>>
+R47	Neg Arg1:T71 Arg2:T70 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2392, 2432] <type: RIGHT>>
+R48	Neg Arg1:T72 Arg2:T66 <<REDUNDANT!!!REMOVED>>	(-), -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2408, 2388] <type: LEFT>>
+R49	Neg Arg1:T72 Arg2:T67 << OK >>	(-), -> borelioza  <RANK: 3> <info: start[2408, 2398] <type: LEFT>>
+R50	Neg Arg1:T72 Arg2:T68 <<REDUNDANT!!!REMOVED>>	(-), -> tbc <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[2408, 2413] <type: RIGHT>>
+R51	Neg Arg1:T72 Arg2:T69 <<REDUNDANT!!!REMOVED>>	(-), -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2408, 2422] <type: RIGHT>>
+R52	Neg Arg1:T72 Arg2:T70 <<REDUNDANT!!!REMOVED>>	(-), -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2408, 2432] <type: RIGHT>>
+R53	Neg Arg1:T73 Arg2:T66 <<REDUNDANT!!!REMOVED>>	(-), -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2417, 2388] <type: LEFT>>
+R54	Neg Arg1:T73 Arg2:T67 <<REDUNDANT!!!REMOVED>>	(-), -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2417, 2398] <type: LEFT>>
+R55	Neg Arg1:T73 Arg2:T68 << OK >>	(-), -> tbc  <RANK: 3> <info: start[2417, 2413] <type: LEFT>>
+R56	Neg Arg1:T73 Arg2:T69 <<REDUNDANT!!!REMOVED>>	(-), -> odra <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[2417, 2422] <type: RIGHT>>
+R57	Neg Arg1:T73 Arg2:T70 <<REDUNDANT!!!REMOVED>>	(-), -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[2417, 2432] <type: RIGHT>>
+R58	Neg Arg1:T74 Arg2:T66 <<REDUNDANT!!!REMOVED>>	(-), -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2427, 2388] <type: LEFT>>
+R59	Neg Arg1:T74 Arg2:T67 <<REDUNDANT!!!REMOVED>>	(-), -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2427, 2398] <type: LEFT>>
+R60	Neg Arg1:T74 Arg2:T68 <<REDUNDANT!!!REMOVED>>	(-), -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2427, 2413] <type: LEFT>>
+R61	Neg Arg1:T74 Arg2:T69 << OK >>	(-), -> odra  <RANK: 3> <info: start[2427, 2422] <type: LEFT>>
+R62	Neg Arg1:T74 Arg2:T70 <<REDUNDANT!!!REMOVED>>	(-), -> kontakt z odrą <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[2427, 2432] <type: RIGHT>>
+R63	Neg Arg1:T75 Arg2:T66 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2447, 2388] <type: LEFT>>
+R64	Neg Arg1:T75 Arg2:T67 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2447, 2398] <type: LEFT>>
+R65	Neg Arg1:T75 Arg2:T68 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2447, 2413] <type: LEFT>>
+R66	Neg Arg1:T75 Arg2:T69 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2447, 2422] <type: LEFT>>
+R67	Neg Arg1:T75 Arg2:T70 << OK >>	(-) -> kontakt z odrą  <RANK: 3> <info: start[2447, 2432] <type: LEFT>>
+
+
+Sentence 38:
+Stan społeczny: warunki mieszkaniowe dobre
+
+
+
+Sentence 39:
+Leki: przyjęte rano w domu
+
+
+
+Sentence 40:
+Leki: 
+Prestarium, Bisocard, Heparegen, Proursan.
+
+
+
+
+Sentence 41:
+Planowany czas hospitalizacji: 4-5 dni.
+
+
+
+Sentence 42:
+Planowane badania: badania laboratoryjne, ECHO, EKG metodą Holtera, ABPM, próba wysiłkowa.
+
+
+
+Sentence 43:
+------------------------------------------------
+
+
+
+Sentence 44:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 45:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.86[10^3/ul]
+    
+
+
+Sentence 46:
+RBC Krwinki czerwone:4.84[10^6/ul]
+    
+
+
+Sentence 47:
+HGB Hemoglobina:14.3[g/dl]
+    
+
+
+Sentence 48:
+HCT Hematokryt:42.8[%]
+    
+
+
+Sentence 49:
+MCV wskaźnik czerwonokrw:88.4[fl]
+    
+
+
+Sentence 50:
+MCH wskaźnik czerwonokrw:29.5[pg]
+    
+
+
+Sentence 51:
+MCHC wskaźnik czerwonokr:33.4[g/dl]
+    
+
+
+Sentence 52:
+PLT z morfologii:240[10^3/ul]
+    
+
+
+Sentence 53:
+RDW-SD:41.6[fl]
+    
+
+
+Sentence 54:
+RDW-CV:12.7[%]
+    PDW:13.1[fl]
+    MPV:10.7[fl]
+    P-LCR:32.0[%]
+    
+
+
+Sentence 55:
+PCT (hematokryt płytkowy:0.26[%]
+    
+
+
+Sentence 56:
+NEUTR# wartość bezwzględ:2.51[10^3/ul]
+    
+
+
+Sentence 57:
+NEUTR%:36.5[%]
+    
+
+
+Sentence 58:
+LYMH# wartość bezwzględn:3.43[10^3/ul]
+    
+
+
+Sentence 59:
+LYMPH%:50.0[%]
+    
+
+
+Sentence 60:
+MONO# wartość bezwzględn:0.63[10^3/ul]
+    
+
+
+Sentence 61:
+MONO%:9.2[%]
+    
+
+
+Sentence 62:
+EO# wartość bezwzględna:0.23[10^3/ul]
+    
+
+
+Sentence 63:
+EO%:3.4[%]
+    
+
+
+Sentence 64:
+BASO# wartość bezwzględn:0.06[10^3/ul]
+    BASO%:0.9[%]
+    
+
+
+Sentence 65:
+NRBC %:0.0[%]
+    
+
+
+Sentence 66:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 67:
+D-dimer - test ilościowy: D-dimer - test ilościowy:140[ng/ml]
+
+
+
+Sentence 68:
+Badanie ogólne moczu
+    
+
+
+Sentence 69:
+barwa:żółty[ ]
+    
+
+
+Sentence 70:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 71:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 72:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 73:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 74:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 75:
+ciężar właściwy:1.024[ ]
+    
+
+
+Sentence 76:
+pH:5.0[ ]
+    
+
+
+Sentence 77:
+białko:nieobecne[ ]
+    
+
+
+Sentence 78:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 79:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 80:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 81:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 82:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 83:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 84:
+leukocyty:8 /ul[ul]
+    erytrocyty świeże:3 /ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:nieliczne[w preparacie]
+
+
+
+Sentence 85:
+TSH: TSH:1.73[uIU/ml]
+
+
+
+Sentence 86:
+FT3: FT3:3.43[pg/ml]
+
+
+
+Sentence 87:
+FT4: FT4:0.93[ng/dl]
+
+
+
+Sentence 88:
+ALAT: ALAT:76[U/L]
+ASPAT: ASPAT:56[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 89:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 90:
+Potas (K): Potas:4.4[mmol/L]
+
+
+
+Sentence 91:
+Hemoglobina glikowana (HbA1c)
+    :5.55[%]
+    :37[mmol/mol]
+
+
+
+Sentence 92:
+Kreatynina + GFR
+    
+
+
+Sentence 93:
+Kreatynina w surowicy:0.68[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 94:
+MDRD ze stan:91.2[ml/min/1,73 m^2]
+
+
+
+Sentence 95:
+Mocznik: Mocznik:28[mg/dl]
+
+
+
+Sentence 96:
+Kwas moczowy: Kwas moczowy:6.3[mg/dl]
+
+
+
+Sentence 97:
+Lipidogram
+    
+
+
+Sentence 98:
+Cholesterol całkowity:206[mg/dl]
+    
+
+
+Sentence 99:
+Cholesterol HDL:46[mg/dl]
+    
+
+
+Sentence 100:
+Cholestrol LDL:153[mg/dl]
+    Triglicerydy:85[mg/dl]
+    
+
+
+Sentence 101:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:94[mg/dl]
+
+
+
+Sentence 102:
+Insulina 0 min.: Insulina 0 min.:12.13[uU/ml]
+
+
+
+Sentence 103:
+Insulina 120 min.: Insulina 120 min.:112.70[uU/ml]
+
+
+
+Sentence 104:
+Glukoza 0 min.: Glukoza 0 min.:95[mg/dl]
+
+
+
+Sentence 105:
+Glukoza 120 min.: Glukoza 120 min.:179[mg/dl]
+
+
+
+Sentence 106:
+NT-proBNP surowica: NT-proBNP w surowicy:21[pg/ml]
+
+
+
+Sentence 107:
+------------------------------------------------
+
+
+
+Sentence 108:
+ICD10
+------------------------------------------------
+I34.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 109:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 110:
+89.501
+88.721
+89.502
+89.41
+88.761
+------------------------------------------------
+
+

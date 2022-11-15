@@ -1,0 +1,84 @@
+T1	Condition 500 552	Podejrzenie przewlekłej choroby niedokrwiennej serca
+T2	Condition 554 611	Wada serca pod postacią łagodnej niedomykalności mitralne
+T3	Condition 614 655	Przebyta zatorowość płucna w czasie ciąży
+T4	Date 657 661	2012
+T5	Condition 664 690	Kamica nerkowa lewostronna
+T6	Condition 692 713	Zaburzenia depresyjne
+T7	Condition 734 743	Uczulenie
+T8	Drug 747 757	bisoprolol
+T9	Investigation 1069 1098	kontrola ciśnienia tętniczego
+T10	Investigation 1115 1135	kontrola lipidogramu
+T11	Behaviour 1143 1179	dieta zbliżona do śródziemnomorskiej
+T12	Behaviour 1188 1212	oszczędzający tryb życia
+T13	Drug 1256 1263	Asentra
+T14	Drug_dose 1264 1282	50 mg 1 tabl. rano
+T15	Drug 1290 1301	Trittico CR
+T16	Drug_dose 1302 1348	75 mg 1/3 tabl. wieczorem 2 godziny przed snem
+T17	Drug 1355 1362	MagneB6
+T18	Drug_dose 1363 1375	1 tabl. rano
+T19	Investigation 1561 1564	ekg
+T20	Investigation_result 1565 1633	nieprawidłowości pod postacią ujemnych zał. T w II, III, aVF, V3-V6.
+T21	Symptom 1648 1656	duszność
+T22	Symptom 1658 1695	bóle w klatce niespecyficzne (stres?)
+T23	Symptom 1697 1712	kołatnia serca.
+T24	Condition 1745 1756	IM I/II st.
+T25	Condition 1757 1804	wypadanie przedniego płatka zastawki mitralnej,
+T26	Investigation 1822 1825	EPS
+T27	Investigation_result 1827 1864	wykluczono obecność drogi dodatkowej)
+T28	Investigation 2286 2297	echo serca,
+T29	Investigation 2298 2301	TET
+T30	Investigation 2303 2307	ABPM
+T31	Investigation 2309 2319	Holter ekg
+T32	Investigation 2321 2339	rtg kl. piersiowej
+T33	Drug 2160 2169	Sotahexal
+T34	Drug_dose 2170 2192	40 mg 1 -1/2 -1/2 tabl
+T35	Drug 2195 2203	Setal MR
+T36	Drug_dose 2204 2228	1 tabl. rano i wieczorem
+T37	Drug 2230 2237	Asentra
+T38	Drug_dose 2238 2256	50 mg 1 tabl. rano
+T39	Negation 2101 2107	neguje
+T40	Negation 2074 2080	neguje
+T41	Negation 2056 2064	neguje  
+T42	Behaviour 2082 2099	Uzależnienie inne
+T43	Behaviour 2065 2072	Alkohol
+T44	Behaviour 2044 2054	Nikotynizm
+T45	Condition 2011 2018	Alergie
+T46	Drug 2023 2033	bisoprolol
+T47	Symptom 2035 2042	wysypka
+T48	Negation 1996 2009	bez znaczenia
+T49	Condition 1979 1994	Wywiad rodzinny
+T50	Treatment 1975 1977	CC
+T51	Condition 1887 1904	zatorowość płucna
+T52	Date 1906 1925	2012 w czasie ciąży
+T53	Condition 1927 1953	kamica nerkowa lewostronna
+T54	Condition 448 474	Podejrzenie kardiomiopatii
+T55	Investigation 477 499	w trakcie diagnostyki.
+N1	Reference T1 ICD10:I25.9	PrzewlekÅa choroba niedokrwienna serca, nieokreÅlona
+N2	Reference T2 ICD10:Q20	Wrodzone wady rozwojowe jam i poÅÄczeÅ sercowych
+N3	Reference T5 ICD10:N20.0	Kamica nerki
+N4	Reference T7 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N5	Reference T20 ICD10:D68.9	Zaburzenie krzepniÄcia, nieokreÅlone
+N6	Reference T21 ICD10:R06.0	DusznoÅÄ
+N7	Reference T22 ICD10:R51	BÃ³l gÅowy
+N8	Reference T42 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+N9	Reference T43 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N10	Reference T44 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N11	Reference T45 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N12	Reference T47 ICD10:R21	RumieÅ i inne nieswoiste wysypki skÃ³rne
+N13	Reference T53 ICD10:N20.0	Kamica nerki
+R1	Dat Arg1:T4 Arg2:T5
+R13	Neg Arg1:T48 Arg2:T45
+R14	Neg Arg1:T48 Arg2:T49
+R2	Alg Arg1:T7 Arg2:T8
+R20	Neg Arg1:T39 Arg2:T42
+R25	Neg Arg1:T41 Arg2:T43
+R26	Drg Arg1:T33 Arg2:T34
+R3	Drg Arg1:T13 Arg2:T14
+R30	Drg Arg1:T35 Arg2:T36
+R34	Drg Arg1:T37 Arg2:T38
+R6	Drg Arg1:T15 Arg2:T16
+R7	Inv Arg1:T19 Arg2:T20
+R8	Inv Arg1:T26 Arg2:T27
+R9	Dat Arg1:T52 Arg2:T51
+A1	Source T1 Declared
+A2	Source T54 Declared

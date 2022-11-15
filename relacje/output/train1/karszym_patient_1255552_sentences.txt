@@ -1,0 +1,598 @@
+allRelations          : 16
+oks                   : 8
+isRedundantAndRemoveds: 6
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 2
+GOOD / BAD            : 14 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 66 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:I35|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: I35 - Niereumatyczne zaburzenia funkcji zastawki tętnicy głównej w stopniu umiarkowanym\x0aNadciśnienie tętnicze.  
+
+
+Sentence 6:
+Hipercholesterolemia.
+
+
+Sentence 7:
+Wole tarczycy do dalszej diagnostyki.
+
+
+Sentence 8:
+Choroba Baastrupa.
+
+
+Sentence 9:
+Zgaga.
+
+
+Sentence 10:
+Kolki nerkowe w wywiadzie.
+
+
+Sentence 11:
+Trobiele nerek.
+
+
+Sentence 12:
+Choroba zwyrodnieniowa kręgosłupa.
+
+
+Sentence 13:
+Miażdżyca tętnic.
+
+
+
+Sentence 14:
+------------------------------------------------
+
+
+
+Sentence 15:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 16:
+------------------------------------------------
+ Rozpozanie I: ICD10:I35.1|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Nadciśnienie tętnicze.
+
+
+Sentence 17:
+Miażdżyca tętnic kończyn dolnych.
+
+
+Sentence 18:
+Hipercholesterolemia.
+
+
+
+Sentence 19:
+------------------------------------------------
+
+
+
+Sentence 20:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 21:
+Pacjentka lat 66 została przyjęta z powodu niedomykalności zastawki aortalnej.
+
+
+Sentence 22:
+Chora podaje zmniejszenie tolerancji wysiłku. 
+
+
+
+Sentence 23:
+Neguje bóle zamostkowe, neguje utraty przytomności.
+R1	Neg Arg1:T15 Arg2:T16 << OK >>	Neguje -> bóle zamostkowe  <RANK: 3> <info: start[1302, 1309] <type: RIGHT>>
+R2	Neg Arg1:T15 Arg2:T18 <<REDUNDANT!!!REMOVED>>	Neguje -> utraty przytomności <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1302, 1333] <type: RIGHT>>
+R3	Neg Arg1:T17 Arg2:T16 <<REDUNDANT!!!REMOVED>>	neguje -> bóle zamostkowe <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1326, 1309] <type: LEFT>>
+R4	Neg Arg1:T17 Arg2:T18 << OK >>	neguje -> utraty przytomności  <RANK: 3> <info: start[1326, 1333] <type: RIGHT>>
+
+
+Sentence 24:
+W wywiadzie: nadciśnienie tętnicze, hiperlipidemia, skolioza prawostronna kręgosłupa, miażdżyca tętnic kończyn dolnych.
+
+
+
+Sentence 25:
+Nikotynizm:   aktywny od wielu lat   Alkohol: neguje
+
+R5	Neg Arg1:T26 Arg2:T23 <<REDUNDANT!!!SHOULD BE REMOVED>>	neguje -> Nikotynizm:   aktywny  <RANK: 3> <info: start[1520, 1474] <type: LEFT>>
+R6	Neg Arg1:T26 Arg2:T25 << OK >>	neguje -> Alkohol  <RANK: 3> <info: start[1520, 1511] <type: LEFT>>
+R7	Dat Arg1:T24 Arg2:T23 << OK >>	od wielu lat -> Nikotynizm:   aktywny  <RANK: 3> <info: start[1496, 1474] <type: LEFT>>
+R8	Dat Arg1:T24 Arg2:T25 <<REDUNDANT!!!SHOULD BE REMOVED>>	od wielu lat -> Alkohol  <RANK: 3> <info: start[1496, 1511] <type: RIGHT>>
+
+
+Sentence 26:
+Pacjent neguje: krwawienia z przewodu pokarmowego.
+
+R9	Neg Arg1:T27 Arg2:T28 << OK >>	neguje -> krwawienia z przewodu pokarmowego  <RANK: 3> <info: start[1535, 1543] <type: RIGHT>>
+
+
+Sentence 27:
+Uczulenie na prestrium (kaszel)
+
+R10	Alg Arg1:T29 Arg2:T30 << OK >>	Uczulenie -> prestrium  <RANK: 3> <info: start[1578, 1591] <type: RIGHT>>
+
+
+Sentence 28:
+Wywiad rodzinny: bez znaczenia
+
+R11	Neg Arg1:T32 Arg2:T31 << OK >>	bez znaczenia -> Wywiad rodzinny  <RANK: 3> <info: start[1627, 1610] <type: LEFT>>
+
+
+Sentence 29:
+Przyjmowane obecnie leki: axobrex profilaktycznie, apap okresowo, potazek, nolpaza, amlodypina.
+
+R12	Drg Arg1:T33 Arg2:T36 <<REDUNDANT!!!REMOVED>>	axobrex -> okresowo <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1667, 1697] <type: RIGHT>>
+R13	Drg Arg1:T35 Arg2:T36 << OK >>	apap -> okresowo  <RANK: 3> <info: start[1692, 1697] <type: RIGHT>>
+R14	Drg Arg1:T37 Arg2:T36 <<REDUNDANT!!!REMOVED>>	potazek -> okresowo <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1707, 1697] <type: LEFT>>
+R15	Drg Arg1:T38 Arg2:T36 <<REDUNDANT!!!REMOVED>>	nolpaza -> okresowo <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1716, 1697] <type: LEFT>>
+R16	Drg Arg1:T39 Arg2:T36 <<REDUNDANT!!!REMOVED>>	amlodypina -> okresowo <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1725, 1697] <type: LEFT>>
+
+
+Sentence 30:
+Planowane: ECHO serca, Holter EKG, Holter RR, PW.
+
+
+
+Sentence 31:
+------------------------------------------------
+
+
+
+Sentence 32:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 33:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.07[10^3/ul]
+    
+
+
+Sentence 34:
+RBC Krwinki czerwone:4.95[10^6/ul]
+    
+
+
+Sentence 35:
+HGB Hemoglobina:14.5[g/dl]
+    
+
+
+Sentence 36:
+HCT Hematokryt:43.1[%]
+    
+
+
+Sentence 37:
+MCV wskaźnik czerwonokrw:87.1[fl]
+    
+
+
+Sentence 38:
+MCH wskaźnik czerwonokrw:29.3[pg]
+    
+
+
+Sentence 39:
+MCHC wskaźnik czerwonokr:33.6[g/dl]
+    
+
+
+Sentence 40:
+PLT z morfologii:200[10^3/ul]
+    
+
+
+Sentence 41:
+RDW-SD:42.8[fl]
+    
+
+
+Sentence 42:
+RDW-CV:13.5[%]
+    PDW:16.0[fl]
+    
+
+
+Sentence 43:
+MPV:12.1[fl]
+    
+
+
+Sentence 44:
+P-LCR:41.8[%]
+    
+
+
+Sentence 45:
+PCT (hematokryt płytkowy:0.24[%]
+    
+
+
+Sentence 46:
+NEUTR# wartość bezwzględ:3.81[10^3/ul]
+    
+
+
+Sentence 47:
+NEUTR%:54.0[%]
+    
+
+
+Sentence 48:
+LYMH# wartość bezwzględn:2.25[10^3/ul]
+    
+
+
+Sentence 49:
+LYMPH%:31.8[%]
+    
+
+
+Sentence 50:
+MONO# wartość bezwzględn:0.73[10^3/ul]
+    
+
+
+Sentence 51:
+MONO%:10.3[%]
+    
+
+
+Sentence 52:
+EO# wartość bezwzględna:0.22[10^3/ul]
+    
+
+
+Sentence 53:
+EO%:3.1[%]
+    
+
+
+Sentence 54:
+BASO# wartość bezwzględn:0.06[10^3/ul]
+    
+
+
+Sentence 55:
+BASO%:0.8[%]
+    
+
+
+Sentence 56:
+NRBC %:0.0[%]
+    
+
+
+Sentence 57:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 58:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:32.8[sek]
+
+
+
+Sentence 59:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 60:
+Czas protrombinowy:10.9[sek]
+    
+
+
+Sentence 61:
+Wskaźnik PT:100.9[%]
+    
+
+
+Sentence 62:
+INR:0.99
+D-dimer
+
+
+Sentence 63:
+- test ilościowy: D-dimer - test ilościowy:286[ng/ml]
+
+
+
+Sentence 64:
+Badanie ogólne moczu
+    
+
+
+Sentence 65:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 66:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 67:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 68:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 69:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 70:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 71:
+ciężar właściwy:1.015[ ]
+    
+
+
+Sentence 72:
+pH:6.5[ ]
+    
+
+
+Sentence 73:
+białko:nikły ślad[ ]
+    
+
+
+Sentence 74:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 75:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 76:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 77:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 78:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 79:
+nabłonki płaskie:dość liczne[w preparacie]
+    
+
+
+Sentence 80:
+leukocyty:3 /ul[ul]
+    erytrocyty świeże:1 /ul[ul]
+    śluz:dość liczny[w preparacie]
+    
+
+
+Sentence 81:
+bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 82:
+TSH: TSH:0.73[uIU/ml]
+
+
+
+Sentence 83:
+FT3: FT3:3.02[pg/ml]
+
+
+
+Sentence 84:
+FT4: FT4:1.59[ng/dl]
+
+
+
+Sentence 85:
+Troponina T: Troponina T:11.1[pg/ml]
+
+
+
+Sentence 86:
+ALAT: ALAT:15[U/L]
+ASPAT: ASPAT:21[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:1.33[mg/dl]
+
+
+
+Sentence 87:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 88:
+Potas (K): Potas:4.1[mmol/L]
+
+
+
+Sentence 89:
+Kreatynina + GFR
+    
+
+
+Sentence 90:
+Kreatynina w surowicy:0.83[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 91:
+MDRD ze stan:68.8[ml/min/1,73 m^2]
+
+
+
+Sentence 92:
+Mocznik: Mocznik:31[mg/dl]
+
+
+
+Sentence 93:
+Kwas moczowy: Kwas moczowy:6.6[mg/dl]
+
+
+
+Sentence 94:
+Lipidogram
+    
+
+
+Sentence 95:
+Cholesterol całkowity:210[mg/dl]
+    
+
+
+Sentence 96:
+Cholesterol HDL:68[mg/dl]
+    
+
+
+Sentence 97:
+Cholestrol LDL:118[mg/dl]
+    
+
+
+Sentence 98:
+Triglicerydy:111[mg/dl]
+    
+
+
+Sentence 99:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:83[mg/dl]
+
+
+
+Sentence 100:
+NT-proBNP surowica: NT-proBNP w surowicy:375[pg/ml]
+
+
+
+Sentence 101:
+------------------------------------------------
+
+
+
+Sentence 102:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 103:
+I35.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 104:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 105:
+88
+89.501
+89.502
+A01
+
+
+
+Sentence 106:
+I81
+G21
+L43
+O61
+G49
+N45
+L69
+M45
+N24
+O69
+C55
+89.41
+G11
+87.440
+I17
+O55
+I19
+
+
+
+Sentence 107:
+O35
+M37
+
+
+
+Sentence 108:
+N13
+88.721
+
+
+
+Sentence 109:
+------------------------------------------------
+
+

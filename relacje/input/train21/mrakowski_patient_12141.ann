@@ -1,0 +1,566 @@
+T1	Treatment 333 381	Dalsza opieka w POZ oraz Poradni Kardiologicznej
+T2	Treatment 386 481	Hospitalizacja w I Klinice Kardiologii Górnośląskiego Centrum Medycznego im. Prof. Leszka Gieca
+T3	Treatment 581 663	w celu celu oceny pacjentki pod kątem ustalenia możliwości interwencji zabiegowych
+T4	Date 671 681	29.09.2019
+R1	Dat Arg1:T4 Arg2:T3	
+R2	Dat Arg1:T4 Arg2:T2	
+T5	Investigation 711 814	Okresowa kontrola morfologii, lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T6	Behaviour 819 921	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T7	Investigation 926 982	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T8	Treatment 987 1015	Regularne przyjmowanie leków
+T9	Drug 1021 1027	BetoZK
+T10	Drug_dose 1028 1061	50 mg 1 tabletka rano i wieczorem
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 1063 1069	Diuver
+T12	Drug_dose 1070 1093	10 mg 1x1 tabletka rano
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 1095 1102	Nonpres
+T14	Drug_dose 1103 1123	25mg 1 tabletka rano
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Condition 1353 1420	Istotna niedomykalność mitralna w mechanizmie wypadania obu płatków
+T16	Condition 1422 1509	Przewlekła niewydolność serca z zachowaną fakcją wyrzutową (EF=58%) w I okresie wg NYHA
+T17	Condition 1511 1545	Łagodna niedomykalność trójdzielna
+T18	Condition 1579 1612	łagodną niedomykalnością aortalną
+T19	Condition 1614 1645	Napadowe migotanie przedsionków
+N5	Reference T19 ICD10:I48	Migotanie i trzepotanie przedsionków
+T20	Treatment 1648 1676	kardiowersja farmakologiczna
+T21	Date 1678 1688	22.01.2019
+R6	Dat Arg1:T21 Arg2:T20	
+R7	Dat Arg1:T21 Arg2:T19	
+T22	Investigation 1691 1703	CHA2DS2–VASc
+T23	Investigation 1723 1730	HASBLED
+T24	Investigation_result 1704 1721	1 punkt za płeć K
+R8	Inv Arg1:T22 Arg2:T24	
+T25	Investigation_result 1731 1740	0 punktów
+R9	Inv Arg1:T23 Arg2:T25	
+R10	Dat Arg1:T21 Arg2:T22	
+R11	Dat Arg1:T21 Arg2:T24	
+R12	Dat Arg1:T21 Arg2:T23	
+R13	Dat Arg1:T21 Arg2:T25	
+T26	Condition 1743 1800	Nieokreślona dysplazja tkanki łącznej z wadami wrodzonymi
+N1	Reference T15 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T27	Condition 2040 2051	Osteoporoza
+T28	Treatment 1886 1905	zabiegu operacyjnym
+A7	Status T28 Historical_Insignificant
+T29	Date 1916 1920	2003
+R14	Dat Arg1:T29 Arg2:T28	
+T30	Condition 1923 1981	Podejrzenie zespołu Ehlersa-Danlosa - typ kyfoskoliotyczny
+T31	Condition 2005 2038	wrodzonej łamliwości kości typu V
+N7	Reference T30 ICD10:Q79.6	Zespół Ehlersa-Danlosa
+T32	Condition 2053 2069	Hypowitaminoza D
+T33	Condition 2071 2085	Hiperkalciuria
+T34	Investigation 2423 2512	okresowa kontrola kardiologiczna (wydano skierowanie do Poradni Kardiologicznej) oraz POZ
+T35	Treatment 2516 2622	w przypadku napadu migotania przedsionków proszę zgłosić się do Poradni Kardiologicznej ICZMP lub szpitala
+T36	Behaviour 2625 2644	prawidłowe żywienie
+T37	Condition 2875 2942	Istotna niedomykalność mitralna w mechanizmie wypadania obu płatków
+N8	Reference T37 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T38	Condition 2944 2975	Mała niedomykalność trójdzielna
+T39	Condition 3009 3039	małą niedomykalnością aortalną
+T40	Condition 3088 3119	Napadowe migotanie przedsionków
+N11	Reference T40 ICD10:I48	Migotanie i trzepotanie przedsionków
+T41	Treatment 3122 3150	kardiowersja farmakologiczna
+T42	Date 3152 3162	22.01.2019
+R15	Dat Arg1:T42 Arg2:T41	
+R16	Dat Arg1:T42 Arg2:T40	
+T43	Investigation 3165 3177	CHA2DS2–VASc
+A2	Status T43 Historical_Significant
+T44	Investigation_result 3178 3195	1 punkt za płeć K
+A9	Status T44 Historical_Significant
+T45	Investigation 3197 3204	HASBLED
+A10	Status T45 Historical_Significant
+T46	Investigation_result 3205 3214	0 punktów
+A11	Status T46 Historical_Significant
+R17	Inv Arg1:T43 Arg2:T44	
+R18	Inv Arg1:T45 Arg2:T46	
+R19	Dat Arg1:T42 Arg2:T43	
+R20	Dat Arg1:T42 Arg2:T44	
+R21	Dat Arg1:T42 Arg2:T45	
+R22	Dat Arg1:T42 Arg2:T46	
+T47	Condition 3217 3274	Nieokreślona dysplazja tkanki łącznej z wadami wrodzonymi
+T48	Treatment 3360 3379	zabiegu operacyjnym
+A12	Status T48 Historical_Insignificant
+T49	Date 3389 3393	2003
+R23	Dat Arg1:T49 Arg2:T48	
+T50	Condition 3397 3455	Podejrzenie zespołu Ehlersa-Danlosa - typ kyfoskoliotyczny
+N12	Reference T50 ICD10:Q79.6	Zespół Ehlersa-Danlosa
+T51	Condition 3479 3512	wrodzonej łamliwości kości typu V
+T52	Condition 3514 3525	Osteoporoza
+T53	Condition 3527 3543	Hypowitaminoza D
+N14	Reference T53 ICD10:E55	Niedobór witaminy D
+T54	Condition 3545 3559	Hiperkalciuria
+N15	Reference T32 ICD10:E55	Niedobór witaminy D
+T55	Condition 3778 3834	Napadowe migotanie przedsionków/trzepotanie przedsionków
+N16	Reference T55 ICD10:I48	Migotanie i trzepotanie przedsionków
+T56	Drug 3891 3902	metoprololu
+T57	Date 3911 3921	26.10.2019
+T58	Treatment 3924 3952	kardiowersja farmakologiczna
+T59	Date 3954 3964	22.01.2019
+R24	Dat Arg1:T59 Arg2:T58	
+R25	Dat Arg1:T57 Arg2:T56	
+T60	Investigation 3967 3979	CHA2DS2–VASc
+T61	Investigation_result 3980 3997	1 punkt za płeć K
+R26	Inv Arg1:T60 Arg2:T61	
+T62	Investigation 3999 4006	HASBLED
+T63	Investigation_result 4007 4016	0 punktów
+R27	Inv Arg1:T62 Arg2:T63	
+T64	Condition 4019 4086	Istotna niedomykalność mitralna w mechanizmie wypadania obu płatków
+N17	Reference T64 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T65	Condition 4088 4175	Przewlekła niewydolność serca z zachowaną fakcją wyrzutową (EF=58%) w I okresie wg NYHA
+T66	Condition 4177 4211	Łagodna niedomykalność trójdzielna
+T67	Condition 4245 4278	łagodną niedomykalnością aortalną
+T68	Condition 4280 4337	Nieokreślona dysplazja tkanki łącznej z wadami wrodzonymi
+T69	Treatment 4423 4442	zabiegu operacyjnym
+A19	Status T69 Historical_Insignificant
+T70	Date 4453 4457	2003
+R28	Dat Arg1:T70 Arg2:T69	
+T71	Condition 4460 4518	Podejrzenie zespołu Ehlersa-Danlosa - typ kyfoskoliotyczny
+N21	Reference T71 ICD10:Q79.6	Zespół Ehlersa-Danlosa
+T72	Condition 4542 4575	wrodzonej łamliwości kości typu V
+T73	Condition 4577 4588	Osteoporoza
+T74	Condition 4590 4606	Hypowitaminoza D
+N23	Reference T74 ICD10:E55	Niedobór witaminy D
+T75	Condition 4608 4622	Hiperkalciuria
+T76	Condition 4624 4670	Niedokrwistość mikrocytarna w trakcie leczenia
+N24	Reference T76 ICD10:D50	Niedokrwistość z niedoboru żelaza
+R29	Dat Arg1:T59 Arg2:T60	
+R30	Dat Arg1:T59 Arg2:T61	
+R31	Dat Arg1:T59 Arg2:T62	
+R32	Dat Arg1:T59 Arg2:T63	
+T77	Treatment 4796 4823	dalsza opieka u lekarza POZ
+T78	Treatment 4830 4930	ponowna konsultacja w I Klinice Kardiologii Górnośląskiego Centrum Medycznego im. Prof. Leszka Gieca
+T79	Treatment 5030 5095	celem ustalenia możliwości leczenia zabiegowego – termin ustalony
+T80	Date 5096 5115	za około 2 miesiące
+R33	Dat Arg1:T80 Arg2:T79	
+R34	Dat Arg1:T80 Arg2:T78	
+T81	Investigation 5123 5211	okresowa kontrola morfologii, lipidogramu, jonogramu, parametrów nerkowych i wątrobowych
+T82	Behaviour 5218 5254	dieta zbliżona do śródziemnomorskiej
+T83	Investigation 5260 5312	regularna kontrola ciśnienia tętniczego krwi i tętna
+T84	Treatment 5319 5347	regularne przyjmowanie leków
+T85	Drug 5356 5367	Beto 100 ZK
+T86	Drug_dose 5368 5402	1 tabl. rano i 1/2 tabl. wieczorem
+R35	Drg Arg1:T85 Arg2:T86	
+T87	Drug 5409 5415	Diuver
+T88	Drug_dose 5416 5434	10 mg 1 tabl. rano
+R36	Drg Arg1:T87 Arg2:T88	
+T89	Drug 5441 5448	Nonpres
+T90	Drug_dose 5449 5466	25mg 1 tabl. rano
+R37	Drg Arg1:T89 Arg2:T90	
+T91	Drug 5474 5481	Xarelto
+T92	Drug_dose 5482 5500	20 mg 1 tabl. rano
+R38	Drg Arg1:T91 Arg2:T92	
+T93	Drug 5508 5521	Hemofer prol.
+T94	Drug_dose 5522 5540	1 tabl. w południe
+R39	Drg Arg1:T93 Arg2:T94	
+T95	Drug 5548 5555	Kaldyum
+T96	Drug_dose 5556 5573	1 kaps. wieczorem
+R40	Drg Arg1:T95 Arg2:T96	
+T97	Drug 5580 5587	MagneB6
+T98	Drug_dose 5588 5612	1 tabl. rano i wieczorem
+R41	Drg Arg1:T97 Arg2:T98	
+T99	Condition 5753 5832	istotną niedomykalnością zastawki mitralnej w mechanizmie wypadania obu płatków
+N25	Reference T99 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T100	Condition 5834 5867	małą niedomykalnością trójdzielną
+T101	Condition 5902 5932	małą niedomykalnością aortalną
+T102	Condition 5934 5965	kinkingowatym przebiegiem aorty
+T103	Condition 5967 5997	po jedynym w życiu napadzie AF
+N28	Reference T103 ICD10:I48	Migotanie i trzepotanie przedsionków
+T104	Date 6000 6008	01.2019r
+R42	Dat Arg1:T104 Arg2:T103	
+T105	Drug 6021 6030	amiodaron
+T106	Condition 6051 6108	nieokreśloną dysplazją tkanki łącznej z wadami wrodzonymi
+T107	Treatment 6189 6208	zabiegu operacyjnym
+T108	Date 6220 6224	2003
+R43	Dat Arg1:T108 Arg2:T107	
+A20	Status T107 Historical_Insignificant
+A22	Status T103 Historical_Significant
+T109	Condition 6226 6290	z podejrzeniem zespołu Ehlersa-Danlosa w typie kyfoskoliotycznym
+N29	Reference T109 ICD10:Q79.6	Zespół Ehlersa-Danlosa
+T110	Condition 6296 6329	wrodzonej łamliwości kości typu V
+T111	Condition 6331 6342	osteoporozą
+T112	Condition 6344 6360	hipowitaminozą D
+N31	Reference T112 ICD10:E55	Niedobór witaminy D
+T113	Condition 6362 6376	hiperkalciurią
+T114	Symptom 6409 6461	umiarkowanej duszności jedynie w godzinach porannych
+N32	Reference T114 ICD10:R06.0	Duszność
+T116	Date 6596 6603	01.2019
+T115	Investigation 6623 6648	badaniach laboratoryjnych
+T117	Investigation_result 6665 6685	NT-proBNP 1506 pg/ml
+R44	Inv Arg1:T115 Arg2:T117	
+R45	Dat Arg1:T116 Arg2:T115	
+R46	Dat Arg1:T116 Arg2:T117	
+T118	Investigation 6698 6726	badaniu echokardiograficznym
+R47	Dat Arg1:T116 Arg2:T118	
+T119	Investigation_result 6727 6806	uwidoczniono dużą niedomykalnością mitralną w mechanizmie wypadania obu płatków
+T120	Investigation_result 6808 6837	nieprawidłową budowę zastwaki
+R48	Dat Arg1:T116 Arg2:T119	
+R49	Dat Arg1:T116 Arg2:T120	
+R50	Inv Arg1:T118 Arg2:T119	
+R51	Inv Arg1:T118 Arg2:T120	
+T121	Investigation 6851 6855	ABPM
+T122	Investigation_result 6858 6898	prawidłowe wartości ciśnienia tętniczego
+T123	Investigation_result 6900 6910	non-dipper
+R52	Inv Arg1:T121 Arg2:T122	
+R53	Inv Arg1:T121 Arg2:T123	
+R54	Dat Arg1:T116 Arg2:T121	
+R55	Dat Arg1:T116 Arg2:T122	
+R56	Dat Arg1:T116 Arg2:T123	
+T124	Investigation 6914 6951	24-h monitorowaniu EKG metodą Holtera
+T125	Investigation_result 6952 7019	uwidoczniono tendencję do bradykardii zatokowej w godzinach nocnych
+T126	Investigation_result 7021 7080	arytmię pod postacią skurczów dodatkowych nad- i komorowych
+R57	Inv Arg1:T124 Arg2:T125	
+R58	Inv Arg1:T124 Arg2:T126	
+R59	Dat Arg1:T116 Arg2:T124	
+R60	Dat Arg1:T116 Arg2:T125	
+R61	Dat Arg1:T116 Arg2:T126	
+T127	Treatment 7129 7160	farmakoterapię przeciwkrzepliwą
+T128	Investigation 7176 7250	diagnostykę genetyczną w kierunku chorób z grupy RASO-patii (m. in. z CFC)
+T129	Investigation 7288 7300	CHA2DS2–VASc
+T130	Investigation_result 7315 7339	1 punkt (za płeć żeńską)
+R62	Inv Arg1:T129 Arg2:T130	
+T131	Condition 7345 7383	pierwszy epizod migotania przedsionków
+N33	Reference T131 ICD10:I48	Migotanie i trzepotanie przedsionków
+T132	Treatment 7447 7472	leczenia przeciwkrzepliwe
+T133	Date 7473 7485	przez 4 tyg.
+R65	Dat Arg1:T133 Arg2:T132	
+T134	Condition 7585 7592	Alergie
+T135	Negation 7595 7601	neguje
+R66	Neg Arg1:T135 Arg2:T134	
+T136	Behaviour 7604 7614	Nikotynizm
+N34	Reference T136 ICD10:Z72.0	Używanie tytoniu
+T137	Negation 7616 7622	neguje
+R67	Neg Arg1:T137 Arg2:T136	
+T138	Behaviour 7626 7633	Alkohol
+N35	Reference T138 ICD10:Z72.1	Używanie alkoholu
+T139	Negation 7635 7641	neguej
+R68	Neg Arg1:T139 Arg2:T138	
+T140	Behaviour 7644 7661	Uzależnienie inne
+T141	Negation 7663 7669	neguje
+R69	Neg Arg1:T141 Arg2:T140	
+T142	Drug 7679 7693	Betaloc ZOK 50
+T143	Drug_dose 7694 7727	1 tabl. rano -0-1 tabl. wieczorem
+R70	Drg Arg1:T142 Arg2:T143	
+T144	Drug 7730 7738	Spironol
+T145	Drug_dose 7739 7757	25 mg 1 tabl. rano
+R71	Drg Arg1:T144 Arg2:T145	
+T146	Drug 7760 7768	Torsemed
+T147	Drug_dose 7769 7787	10 mg 1 tabl. rano
+R72	Drg Arg1:T146 Arg2:T147	
+T148	Condition 7962 7971	napadu AF
+N36	Reference T148 ICD10:I48	Migotanie i trzepotanie przedsionków
+T149	Date 7972 7986	przed 2 dniami
+R73	Dat Arg1:T149 Arg2:T148	
+T150	Treatment 8050 8079	włączono leczenie p/krzepliwe
+T151	Condition 8105 8149	istotna IM PISA 17 mm- wypadanie oby płatków
+N37	Reference T151 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T152	Condition 8152 8195	znaczene powiększenie LA - 56 mm, LAA 33cm2
+T153	Condition 8197 8215	IA do umiarkowanej
+T154	Condition 8217 8229	IT niewielka
+T155	Condition 8231 8243	IP niewielka
+T156	Condition 8245 8279	poszerzenie opuszki aorty do 45 mm
+T157	Condition 8281 8314	kinking aorty w dalszym przebiegu
+T158	Condition 8316 8373	nieokreślona dysplazja tkanki łącznej z wadami wrodzonymi
+T159	Treatment 8458 8478	leczeniu operacyjnym
+A37	Status T159 Historical_Insignificant
+T160	Date 8490 8495	2003r
+R74	Dat Arg1:T160 Arg2:T159	
+T161	Condition 8498 8546	pod. z. Ehlersa - Danlosa - typ kyfoskoliotyczny
+N41	Reference T161 ICD10:Q79.6	Zespół Ehlersa-Danlosa
+T162	Condition 8570 8603	wrodzonej łamliwości kości typu V
+T163	Condition 8605 8616	osteoporoza
+T164	Condition 8618 8637	niedobór witaminy D
+N43	Reference T164 ICD10:E55	Niedobór witaminy D
+T165	Condition 8639 8653	hiperkalciuria
+T166	Condition 8688 8695	Alergie
+T167	Negation 8698 8704	neguje
+T168	Behaviour 8706 8716	Nikotynizm
+N44	Reference T168 ICD10:Z72.0	Używanie tytoniu
+T169	Negation 8718 8724	neguje
+R75	Neg Arg1:T167 Arg2:T166	
+R76	Neg Arg1:T169 Arg2:T168	
+T170	Behaviour 8727 8734	Alkohol
+N45	Reference T170 ICD10:Z72.1	Używanie alkoholu
+T171	Negation 8736 8742	neguej
+R77	Neg Arg1:T171 Arg2:T170	
+T172	Behaviour 8744 8761	Uzależnienie inne
+T173	Negation 8763 8769	neguje
+R78	Neg Arg1:T173 Arg2:T172	
+T174	Drug 8777 8791	Betaloc ZOK 50
+T175	Drug_dose 8792 8806	1 -0-1/2 tabl.
+R79	Drg Arg1:T174 Arg2:T175	
+T176	Drug 8808 8816	Spironol
+T177	Drug_dose 8817 8835	25 mg 1 tabl. rano
+R80	Drg Arg1:T176 Arg2:T177	
+T178	Drug 8837 8845	Torsemed
+T179	Drug_dose 8846 8864	10 mg 1 tabl. rano
+R81	Drg Arg1:T178 Arg2:T179	
+T180	Drug 8866 8873	Xarelto
+T181	Drug_dose 8874 8908	20 mg - 1 tabl. wieczorem od 2 dni
+R82	Drg Arg1:T180 Arg2:T181	
+T182	Investigation 8936 8946	echo serca
+T183	Investigation 8948 8951	TET
+T184	Investigation 8953 8957	ABPM
+T185	Investigation 8959 8969	Holter ekg
+T186	Investigation 8971 8989	rtg kl. piersiowej
+T187	Condition 9182 9215	napadowym migotaniem przedsionków
+N46	Reference T187 ICD10:I48	Migotanie i trzepotanie przedsionków
+T188	Treatment 9218 9246	kardiowersja farmakologiczna
+T189	Date 9248 9258	22.01.2019
+R83	Dat Arg1:T189 Arg2:T188	
+R84	Dat Arg1:T189 Arg2:T187	
+T190	Investigation 9261 9273	CHA2DS2–VASc
+T191	Investigation_result 9274 9291	1 punkt za płeć K
+R85	Dat Arg1:T189 Arg2:T190	
+R86	Dat Arg1:T189 Arg2:T191	
+T192	Investigation 9293 9300	HASBLED
+T193	Investigation_result 9301 9310	0 punktów
+R87	Dat Arg1:T189 Arg2:T192	
+R88	Inv Arg1:T190 Arg2:T191	
+R89	Inv Arg1:T192 Arg2:T193	
+R90	Dat Arg1:T189 Arg2:T193	
+T194	Condition 9313 9382	istotną niedomykalnością mitralną w mechanizmie wypadania obu płatków
+N47	Reference T194 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T195	Condition 9384 9453	przewlekłą niewydolnością serca z zachowaną fakcją wyrzutową (EF=58%)
+T196	Condition 9455 9491	łagodną niedomykalnością trójdzielną
+T197	Condition 9526 9559	łagodną niedomykalnością aortalną
+T198	Condition 9590 9621	napadu trzepotania przedsionków
+N51	Reference T198 ICD10:I48	Migotanie i trzepotanie przedsionków
+T200	Symptom 9664 9674	dusznością
+N52	Reference T200 ICD10:R06.0	Duszność
+T201	Drug 9726 9735	Metocardu
+T202	Drug_dose 9721 9725	50mg
+T204	Symptom 9765 9805	Od kilku m-cy odpoczywa po przejściu 50m
+T205	Treatment 9807 9830	Ostatnia hospitalizacja
+T206	Date 9860 9867	09.2019
+R93	Dat Arg1:T206 Arg2:T205	
+T207	Condition 10081 10138	Nieokreślona dysplazja tkanki łącznej z wadami wrodzonymi
+T208	Treatment 10224 10243	zabiegu operacyjnym
+A44	Status T208 Historical_Insignificant
+T209	Date 10254 10258	2003
+R94	Dat Arg1:T209 Arg2:T208	
+T210	Condition 10261 10319	Podejrzenie zespołu Ehlersa-Danlosa - typ kyfoskoliotyczny
+N54	Reference T210 ICD10:Q79.6	Zespół Ehlersa-Danlosa
+T211	Condition 10343 10376	wrodzonej łamliwości kości typu V
+T212	Condition 10378 10389	Osteoporoza
+T213	Condition 10391 10407	Hypowitaminoza D
+N56	Reference T213 ICD10:E55	Niedobór witaminy D
+T214	Condition 10409 10423	Hiperkalciuria
+T215	Negation 10425 10431	Neguje
+T216	Symptom 10433 10445	zasłabnięcia
+T217	Symptom 10447 10455	omdlenia
+N58	Reference T217 ICD10:R55	Omdlenie i zapaść
+T218	Symptom 10457 10467	krwawienia
+T219	Symptom 10469 10482	czarne stolce
+N59	Reference T219 ICD10:K92.1	Stolce smołowate
+T220	Symptom 10484 10500	brunatne wymioty
+N60	Reference T220 ICD10:K92.0	Wymioty krwawe
+T221	Condition 10502 10518	chorobę wrzodową
+T222	Symptom 10520 10534	duszność nocną
+N62	Reference T222 ICD10:R06.0	Duszność
+T223	Symptom 10536 10551	obrzęki podudzi
+T224	Symptom 10553 10577	bóle w klatce piersiowej
+N64	Reference T224 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T225	Condition 10579 10581	HA
+N65	Reference T225 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T226	Condition 10583 10585	DM
+N66	Reference T226 ICD10:E14	Cukrzyca nieokreślona
+R95	Neg Arg1:T215 Arg2:T216	
+R96	Neg Arg1:T215 Arg2:T217	
+R97	Neg Arg1:T215 Arg2:T218	
+R98	Neg Arg1:T215 Arg2:T219	
+R99	Neg Arg1:T215 Arg2:T220	
+R100	Neg Arg1:T215 Arg2:T221	
+R101	Neg Arg1:T215 Arg2:T222	
+R102	Neg Arg1:T215 Arg2:T223	
+R103	Neg Arg1:T215 Arg2:T224	
+R104	Neg Arg1:T215 Arg2:T225	
+R105	Neg Arg1:T215 Arg2:T226	
+T227	Behaviour 10609 10624	Palenie tytoniu
+N67	Reference T227 ICD10:Z72.0	Używanie tytoniu
+T228	Negation 10626 10629	nie
+R106	Neg Arg1:T228 Arg2:T227	
+T229	Behaviour 10630 10641	Inne używki
+T230	Negation 10643 10646	nie
+R107	Neg Arg1:T230 Arg2:T229	
+T231	Condition 10647 10656	Uczulenia
+T232	Negation 10658 10661	nie
+R108	Neg Arg1:T232 Arg2:T231	
+T233	Condition 10690 10693	WZW
+N68	Reference T233 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T234	Negation 10695 10696	-
+R109	Neg Arg1:T234 Arg2:T233	
+T235	Condition 10700 10709	borelioza
+N69	Reference T235 ICD10:A69.2	Choroba z Lyme
+T236	Negation 10711 10712	-
+R110	Neg Arg1:T236 Arg2:T235	
+T237	Condition 10715 10718	tbc
+T238	Negation 10720 10721	-
+N70	Reference T237 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+R111	Neg Arg1:T238 Arg2:T237	
+T239	Condition 10724 10728	odra
+N71	Reference T239 ICD10:B05	Odra
+T240	Negation 10730 10731	-
+R112	Neg Arg1:T240 Arg2:T239	
+T241	Condition 10734 10748	kontakt z odrą
+T242	Negation 10750 10751	-
+R113	Neg Arg1:T242 Arg2:T241	
+T243	Behaviour 10769 10795	warunki mieszkaniowe dobre
+T244	Drug 10846 10852	BetoZK
+T245	Drug_dose 10853 10868	50mg 1-0-1 tabl
+R114	Drg Arg1:T244 Arg2:T245	
+T246	Drug 10869 10877	Toramide
+T247	Drug_dose 10878 10897	10mg 1x 1 tabl/rano
+R115	Drg Arg1:T246 Arg2:T247	
+T248	Drug 10898 10905	Nonpres
+T249	Drug_dose 10906 10924	25mg 1x 1 tabl/poł
+R116	Drg Arg1:T248 Arg2:T249	
+T250	Drug 10925 10932	Hemofer
+T251	Drug_dose 10933 10946	1x 1 tabl/poł
+R117	Drg Arg1:T250 Arg2:T251	
+T252	Drug 10947 10954	Kaldyum
+T253	Drug_dose 10955 10969	1x 1 tabl/rano
+R118	Drg Arg1:T252 Arg2:T253	
+T254	Investigation 11030 11051	badania laboratoryjne
+T255	Investigation 11053 11057	ECHO
+T256	Investigation 11059 11077	EKG metodą Holtera
+T257	Investigation 11079 11083	ABPM
+A45	Status T205 Historical_Significant
+R92	Drg Arg1:T201 Arg2:T202	
+T258	Condition 1803 1821	deformacją czaszki
+T259	Condition 1823 1837	niskorosłością
+T260	Condition 1839 1876	kyfoskoliozą z deformacją kręgów Th/L
+N73	Reference T258 ICD10:Q75	Inne wrodzone wady rozwojowe kości czaszki i twarzy
+N72	Reference T260 ICD10:Q76.3	Wrodzone skrzywienie boczne kręgosłupa spowodowane wrodzoną wadą rozwojową kości
+N74	Reference T259 ICD10:E34.3	Niskorosłość niesklasyfikowana gdzie indziej
+N6	Reference T27 ICD10:M81.9	Osteoporoza, nieokreślona
+N75	Reference T33 ICD10:E83.5	Zaburzenia przemian wapnia
+T261	Condition 3059 3086	kinkingowaty przebieg aorty
+T262	Condition 3277 3295	deformacją czaszki
+N76	Reference T262 ICD10:Q75	Inne wrodzone wady rozwojowe kości czaszki i twarzy
+T263	Condition 3297 3311	niskorosłością
+N77	Reference T263 ICD10:E34.3	Niskorosłość niesklasyfikowana gdzie indziej
+T264	Condition 3313 3350	kyfoskoliozą z deformacją kręgów Th/L
+N78	Reference T264 ICD10:Q76.4	Inne wrodzone wady rozwojowe kręgosłupa bez towarzyszącego skrzywienia bocznego
+N13	Reference T52 ICD10:M81.9	Osteoporoza, nieokreślona
+N79	Reference T54 ICD10:E83.5	Zaburzenia przemian wapnia
+T265	Condition 1547 1576	Poszerzenie aorty wstępującej
+T266	Condition 2977 3006	Poszerzenie aorty wstępującej
+T267	Condition 4213 4242	Poszerzenie aorty wstępującej
+T268	Condition 4340 4358	deformacją czaszki
+N80	Reference T268 ICD10:Q75	Inne wrodzone wady rozwojowe kości czaszki i twarzy
+T269	Condition 4360 4374	niskorosłością
+N81	Reference T269 ICD10:E34.3	Niskorosłość niesklasyfikowana gdzie indziej
+T270	Condition 4376 4413	kyfoskoliozą z deformacją kręgów Th/L
+N82	Reference T270 ICD10:Q76.4	Inne wrodzone wady rozwojowe kręgosłupa bez towarzyszącego skrzywienia bocznego
+N22	Reference T73 ICD10:M81.9	Osteoporoza, nieokreślona
+N83	Reference T75 ICD10:E83.5	Zaburzenia przemian wapnia
+T271	Condition 5869 5899	poszerzeniem aorty wstępującej
+T273	Condition 6111 6129	deformacją czaszki
+N84	Reference T273 ICD10:Q75	Inne wrodzone wady rozwojowe kości czaszki i twarzy
+T274	Condition 6131 6145	niskorosłością
+N85	Reference T274 ICD10:E34.3	Niskorosłość niesklasyfikowana gdzie indziej
+T275	Condition 6147 6184	kyfoskoliozą z deformacją kręgów Th/L
+N86	Reference T275 ICD10:Q76.4	Inne wrodzone wady rozwojowe kręgosłupa bez towarzyszącego skrzywienia bocznego
+N30	Reference T111 ICD10:M81.9	Osteoporoza, nieokreślona
+N87	Reference T113 ICD10:E83.5	Zaburzenia przemian wapnia
+N88	Reference T119 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+N90	Reference T125 ICD10:R00.1	Bradykardia, nieokreślona
+N91	Reference T126 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T276	Drug 8027 8038	amiodaronem
+T277	Condition 8376 8394	deformacja czaszki
+N92	Reference T277 ICD10:Q75	Inne wrodzone wady rozwojowe kości czaszki i twarzy
+T278	Condition 8396 8408	niskorosłość
+N93	Reference T278 ICD10:E34.3	Niskorosłość niesklasyfikowana gdzie indziej
+T279	Condition 8410 8447	kyfoskolioza z deformacją kręgów Th/L
+N94	Reference T279 ICD10:Q76.4	Inne wrodzone wady rozwojowe kręgosłupa bez towarzyszącego skrzywienia bocznego
+N42	Reference T163 ICD10:M81.9	Osteoporoza, nieokreślona
+N95	Reference T165 ICD10:E83.5	Zaburzenia przemian wapnia
+T280	Condition 7552 7567	Wywiad rodzinny
+A13	Status T280 Family
+T281	Negation 7569 7582	bez znaczenia
+R63	Neg Arg1:T281 Arg2:T280	
+T282	Condition 8656 8671	Wywiad rodzinny
+A21	Status T282 Family
+T283	Negation 8673 8686	bez znaczenia
+R64	Neg Arg1:T283 Arg2:T282	
+T284	Condition 9493 9523	poszerzeniem aorty wstępującej
+T285	Date 9629 9648	trwał ok. 1 godziny
+R119	Dat Arg1:T285 Arg2:T198	
+T286	Condition 10141 10159	deformacją czaszki
+N96	Reference T286 ICD10:Q75	Inne wrodzone wady rozwojowe kości czaszki i twarzy
+T287	Condition 10161 10175	niskorosłością
+N97	Reference T287 ICD10:E34.3	Niskorosłość niesklasyfikowana gdzie indziej
+T288	Condition 10177 10214	kyfoskoliozą z deformacją kręgów Th/L
+N98	Reference T288 ICD10:Q76.4	Inne wrodzone wady rozwojowe kręgosłupa bez towarzyszącego skrzywienia bocznego
+N55	Reference T212 ICD10:M81.9	Osteoporoza, nieokreślona
+N99	Reference T214 ICD10:E83.5	Zaburzenia przemian wapnia
+N57	Reference T221 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+N2	Reference T16 ICD10:I50.9	Niewydolność serca, nieokreślona
+N63	Reference T223 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T289	Treatment 10589 10606	Przebyte operacje
+N3	Reference T17 ICD10:Q22.8	Inne wrodzone wady rozwojowe zastawki trójdzielnej
+A36	Source T30 Declared
+A46	Source T31 Declared
+N9	Reference T38 ICD10:Q22.8	Inne wrodzone wady rozwojowe zastawki trójdzielnej
+N10	Reference T39 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+N4	Reference T18 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+A47	Source T50 Declared
+A48	Source T51 Declared
+N18	Reference T65 ICD10:I50.9	Niewydolność serca, nieokreślona
+N19	Reference T66 ICD10:Q22.8	Inne wrodzone wady rozwojowe zastawki trójdzielnej
+N20	Reference T67 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+A49	Source T71 Declared
+A50	Source T72 Declared
+N26	Reference T100 ICD10:Q22.8	Inne wrodzone wady rozwojowe zastawki trójdzielnej
+N27	Reference T101 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+A51	Source T109 Declared
+A52	Source T110 Declared
+N103	Reference T152 ICD10:I42.9	Kardiomiopatia, nieokreślona
+N38	Reference T153 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+N39	Reference T154 ICD10:Q22.8	Inne wrodzone wady rozwojowe zastawki trójdzielnej
+N40	Reference T155 ICD10:Q22.2	Wrodzona niedomykalność zastawki pnia płucnego
+A53	Source T161 Declared
+A54	Source T162 Declared
+N48	Reference T195 ICD10:I50.9	Niewydolność serca, nieokreślona
+N49	Reference T196 ICD10:Q22.8	Inne wrodzone wady rozwojowe zastawki trójdzielnej
+N50	Reference T197 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+N53	Reference T204 ICD10:R53	Złe samopoczucie i zmęczenie
+A55	Source T210 Declared
+A56	Source T211 Declared
+T199	Treatment 7384 7424	umiarowionego farmakologicznie przez ZPR
+N106	Reference T26 ICD10:Q89.9	Wrodzona wada rozwojowa, nieokreślona
+N107	Reference T68 ICD10:Q89.9	Wrodzona wada rozwojowa, nieokreślona
+N61	Reference T265 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+N108	Reference T31 ICD10:Q78.0	Kostnienie niedoskonałe
+N109	Reference T51 ICD10:Q78.0	Kostnienie niedoskonałe
+N110	Reference T47 ICD10:Q89.9	Wrodzona wada rozwojowa, nieokreślona
+N100	Reference T266 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+N101	Reference T267 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+N111	Reference T72 ICD10:Q78.0	Kostnienie niedoskonałe
+N102	Reference T271 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+N112	Reference T106 ICD10:Q89.9	Wrodzona wada rozwojowa, nieokreślona
+N113	Reference T110 ICD10:Q78.0	Kostnienie niedoskonałe
+N104	Reference T156 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+N114	Reference T158 ICD10:Q89.9	Wrodzona wada rozwojowa, nieokreślona
+N115	Reference T162 ICD10:Q78.0	Kostnienie niedoskonałe
+N105	Reference T284 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+N116	Reference T207 ICD10:Q89.9	Wrodzona wada rozwojowa, nieokreślona
+N117	Reference T211 ICD10:Q78.0	Kostnienie niedoskonałe
+T203	Condition 1906 1914	skoliozy
+N118	Reference T203 ICD10:M41.9	Skolioza, nieokreślona
+R91	Dat Arg1:T29 Arg2:T203	
+T272	Condition 3380 3388	skoliozy
+N119	Reference T272 ICD10:M41.9	Skolioza, nieokreślona
+R120	Dat Arg1:T49 Arg2:T272	
+T290	Condition 4443 4451	skoliozy
+N120	Reference T290 ICD10:M41.9	Skolioza, nieokreślona
+R121	Dat Arg1:T70 Arg2:T290	
+T291	Condition 6209 6217	skoliozy
+N121	Reference T291 ICD10:M41.9	Skolioza, nieokreślona
+R122	Dat Arg1:T108 Arg2:T291	
+N89	Reference T120 ICD10:Q24.9	Wrodzona wada rozwojowa serca, nieokreślona
+T292	Condition 8479 8487	skoliozy
+N122	Reference T292 ICD10:M41.9	Skolioza, nieokreślona
+R123	Dat Arg1:T160 Arg2:T292	
+T293	Condition 10244 10252	skoliozy
+N123	Reference T293 ICD10:M41.9	Skolioza, nieokreślona
+R124	Dat Arg1:T209 Arg2:T293	

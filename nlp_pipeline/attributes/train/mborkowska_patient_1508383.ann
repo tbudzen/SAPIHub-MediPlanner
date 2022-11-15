@@ -1,0 +1,146 @@
+T1	Investigation 3001 3011	Echo serca
+T2	Investigation 3014 3024	Holter EKG
+T3	Investigation 3027 3042	Próba Wysiłkowa
+T4	Investigation 3045 3048	TEE
+T5	Drug 2804 2807	IPP
+T6	Drug_dose 2808 2824	20 mg 1x dz rano
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 2827 2832	Doxar
+T8	Drug_dose 2833 2853	4 mg 1x dz wieczorem
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 2855 2863	Polocard
+T10	Drug_dose 2864 2882	75 1x dz wieczorem
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 2885 2895	Concor Cor
+T12	Drug_dose 2896 2923	2,5 1x dz po 1/2 tabl. rano
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 2926 2934	Vesicare
+T14	Drug_dose 2935 2948	10 1x dz rano
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Drug 2951 2962	Simvasterol
+T16	Drug_dose 2963 2984	20 mg 1x dz wieczorem
+R6	Drg Arg1:T15 Arg2:T16	
+T17	Behaviour 2753 2779	warunki mieszkaniowe dobre
+T18	Negation 2730 2736	neguje
+T19	Negation 2715 2718	nie
+T20	Negation 2698 2701	nie
+T21	Negation 2668 2679	brak danych
+T22	Condition 2604 2607	WZW
+T23	Condition 2617 2626	borelioza
+N2	Reference T23 ICD10:A69.2	Choroba z Lyme
+T24	Condition 2633 2637	Odra
+N3	Reference T24 ICD10:B05	Odra
+T25	Negation 2638 2643	( - )
+R7	Neg Arg1:T25 Arg2:T24	
+T26	Negation 2627 2632	( - )
+R8	Neg Arg1:T26 Arg2:T23	
+T27	Negation 2608 2614	( -  )
+R9	Neg Arg1:T27 Arg2:T22	
+T28	Condition 2719 2728	Uczulenia
+N4	Reference T28 ICD10:T78.4	Alergia, nieokreślona
+R10	Neg Arg1:T18 Arg2:T28	
+T29	Behaviour 2702 2714	Inne używki:
+R11	Neg Arg1:T19 Arg2:T29	
+T30	Behaviour 2681 2696	Palenie tytoniu
+R12	Neg Arg1:T20 Arg2:T30	
+T31	Condition 2644 2665	W wywiadzie rodzinnym
+A1	Status T31 Family
+R13	Neg Arg1:T21 Arg2:T31	
+T32	Treatment 2494 2502	operacji
+T33	Condition 2503 2540	żylaków  kończyn dolnych wielokrotnie
+N6	Reference T33 ICD10:I83	Żylaki kończyn dolnych
+T34	Treatment 2426 2434	operacji
+T35	Condition 2435 2469	przepuklin pachwinowej obustronnej
+N7	Reference T35 ICD10:K40.2	Obustronna przepuklina pachwinowa, bez niedrożności lub zgorzeli
+T36	Date 2470 2484	wiele lat temu
+R14	Dat Arg1:T36 Arg2:T35	
+R15	Dat Arg1:T36 Arg2:T34	
+A2	Status T34 Historical_Insignificant
+A3	Status T35 Historical_Insignificant
+T37	Condition 2370 2397	Przerost gruczołu krokowego
+N8	Reference T37 ICD10:N40	Rozrost gruczołu krokowego
+T38	Condition 2345 2367	Żylaki kończyn dolnych
+N9	Reference T38 ICD10:I83	Żylaki kończyn dolnych
+T39	Condition 2315 2343	Choroba refluksowa przełyku.
+N10	Reference T39 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T40	Condition 2297 2307	Istotna IA
+N11	Reference T40 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T41	Condition 2310 2312	IM
+N12	Reference T41 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T42	Symptom 2187 2223	okresowych bólów w klatce piersiowej
+T43	Symptom 2229 2257	obniżonej tolerancji wysiłku
+N14	Reference T43 ICD10:R53	Złe samopoczucie i zmęczenie
+T44	Drug 1732 1735	IPP
+T45	Drug 1738 1743	Doxar
+T46	Drug 1745 1753	Polocard
+T47	Drug 1756 1766	Concor Cor
+T48	Drug 1770 1778	Vesicare
+T49	Drug 1780 1791	Simvasterol
+T50	Drug 1405 1417	Atorvasterol
+T51	Drug_dose 1418 1441	40 mg 1 x dz  wieczorem
+R16	Drg Arg1:T50 Arg2:T51	
+T52	Drug 1444 1452	Polocard
+T53	Drug_dose 1453 1471	75 1x dz wieczorem
+R17	Drg Arg1:T52 Arg2:T53	
+T54	Drug 1475 1485	Concor Cor
+T55	Drug_dose 1486 1513	2,5 1x dz po 1/2 tabl. rano
+R18	Drg Arg1:T54 Arg2:T55	
+T56	Drug 1515 1518	IPP
+T57	Drug_dose 1519 1535	20 mg 1x dz rano
+R19	Drg Arg1:T56 Arg2:T57	
+T58	Drug 1539 1544	Doxar
+T59	Drug_dose 1545 1565	4 mg 1x dz wieczorem
+R20	Drg Arg1:T58 Arg2:T59	
+T60	Drug 1568 1576	Vesicare
+T61	Drug_dose 1577 1612	10 1x dz rano - wg. zaleceń urologa
+R21	Drg Arg1:T60 Arg2:T61	
+T62	Symptom 2267 2279	zasłabnięcia
+N15	Reference T62 ICD10:R55	Omdlenie i zapaść
+T63	Negation 2260 2266	Neguje
+R22	Neg Arg1:T63 Arg2:T62	
+T64	Investigation 1320 1354	kontrola ciśnienia tętniczego krwi
+T65	Investigation 1229 1303	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T66	Behaviour 1176 1216	Dieta lekkostrawna , niskocholesterolowa
+T67	Condition 449 472	Przetrwały otwór owalny
+N16	Reference T67 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T68	Condition 474 564	Istotna niedomykalność zastawki mitralnej w mieszanym mechanizmie typu I/II wg Carpentiera
+N17	Reference T68 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T69	Condition 566 599	Łagodna niedomykalności aortalnej
+N18	Reference T69 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T70	Condition 601 645	Łagodna niedomykalność zastawki trójdzielnej
+N19	Reference T70 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T71	Condition 647 681	Nadkomorowe zaburzania rytmu serca
+N20	Reference T71 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T72	Condition 736 766	Pojedyncze pobudzenia komorowe
+N21	Reference T72 ICD10:I49	Inne zaburzenia rytmu serca
+T73	Condition 769 796	Choroba refluksowa przełyku
+N22	Reference T73 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T74	Condition 798 821	Kamica układu moczowego
+N23	Reference T74 ICD10:N20.9	Kamica moczowa, nieokreślona
+T75	Condition 824 846	Żylaki kończyn dolnych
+N24	Reference T75 ICD10:I83	Żylaki kończyn dolnych
+T76	Treatment 856 864	operacji
+T77	Condition 865 889	żylaków  kończyn dolnych
+N25	Reference T77 ICD10:I83	Żylaki kończyn dolnych
+T78	Date 890 900	przed laty
+R23	Dat Arg1:T78 Arg2:T77	
+R24	Dat Arg1:T78 Arg2:T76	
+T79	Condition 902 929	Przerost gruczołu krokowego
+N26	Reference T79 ICD10:N40	Rozrost gruczołu krokowego
+T80	Treatment 939 947	operacji
+T81	Condition 948 983	przepukliny pachwinowej obustronnej
+N27	Reference T81 ICD10:K40.2	Obustronna przepuklina pachwinowa, bez niedrożności lub zgorzeli
+T82	Date 984 999	wiele lat temu.
+A4	Status T81 Historical_Insignificant
+A5	Status T80 Historical_Insignificant
+R25	Dat Arg1:T82 Arg2:T81	
+R26	Dat Arg1:T82 Arg2:T80	
+N5	Reference T30 ICD10:Z72.0	Używanie tytoniu
+N1	Reference T22 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T83	Condition 684 705	pobudzenia pojedyncze
+N28	Reference T83 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T84	Condition 707 733	nieutrwalone częstoskurcze
+N29	Reference T84 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T85	Treatment 1108 1173	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+N13	Reference T42 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N30	Reference T29 ICD10:Z72	Problemy związane ze stylem życia

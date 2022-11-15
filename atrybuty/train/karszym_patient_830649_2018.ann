@@ -1,0 +1,148 @@
+T1	Treatment 346 373	dalsza opieka w poradni POZ
+T2	Treatment 380 429	okresowa kontrola kardiologiczna, diabetologiczna
+T3	Treatment 435 464	dalsza diagnostyka i leczenie
+T4	Condition 465 479	wola guzkowego
+T5	Treatment 480 508	w poradni endokrynologicznej
+T6	Drug 2529 2536	Amlozek
+T7	Drug_dose 2537 2553	5 mg 1 x dz rano
+T8	Drug 2555 2562	Indapen
+T9	Drug_dose 2563 2580	2,5 mg 1x dz rano
+T10	Drug 2583 2588	Axtil
+T11	Investigation 515 554	codzienna kontrola ciśnienia tętniczego
+T12	Behaviour 637 712	sprawdzenie poprawności kalibracji aparatu używanego dotychczas do pomiarów
+T13	Behaviour 596 635	po 10-15 minutach odpoczynku fizycznego
+T14	Behaviour 556 593	pomiar w pełnym komforcie psychicznym
+T15	Investigation 719 748	okresowa kontrola lipidogramu
+T16	Date 750 771	pierwsza za 6 tygodni
+R1	Dat Arg1:T16 Arg2:T15	
+T17	Behaviour 780 796	dieta cukrzycowa
+T18	Behaviour 803 822	redukcja masy ciała
+T20	Behaviour 829 850	zakaz palenia tytoniu
+N1	Reference T20 ICD10:Z72.0	Używanie tytoniu
+T21	Behaviour 856 901	stały, umiarkowany, aerobowy wysiłek fizyczny
+T22	Drug 945 952	Amlozek
+T23	Drug 983 988	Axtil
+T24	Drug 1013 1021	Bisocard
+T25	Drug 1045 1052	Indapen
+T26	Drug 1080 1085	Acard
+T27	Drug 1118 1124	Ridlip
+T28	Drug 1156 1168	Metformax SR
+T29	Drug 1198 1216	Asparaginian Extra
+T30	Condition 1448 1481	Nadciśnienie tętnicze skorygowane
+N2	Reference T30 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T31	Condition 1483 1503	Hipertriglicerydemia
+N3	Reference T31 ICD10:E78.1	Czysta hiperglicerydemia
+T32	Behaviour 1505 1515	Nikotynizm
+N4	Reference T32 ICD10:Z72	Problemy związane ze stylem życia
+T33	Condition 1517 1541	Otyłość I stopnia wg WHO
+N5	Reference T33 ICD10:E66.9	Otyłość, nieokreślona
+T34	Investigation 1543 1546	BMI
+T35	Investigation_result 1547 1557	30.5 kg/m2
+R3	Inv Arg1:T34 Arg2:T35	
+T36	Drug_dose 953 975	5 mg 1 tabl. wieczorem
+T37	Drug_dose 989 1007	10 mg 1 tabl. rano
+T38	Drug_dose 1022 1039	5 mg 1 tabl. rano
+T39	Drug_dose 1053 1072	2,5 mg 1 tabl. rano
+T40	Drug_dose 1086 1109	75 mg 1 tabl. wieczorem
+T41	Drug_dose 1125 1148	20 mg 1 tabl. wieczorem
+T42	Drug_dose 1169 1190	500 1 tabl. wieczorem
+T43	Drug_dose 1218 1229	1tabl. rano
+R4	Drg Arg1:T22 Arg2:T36	
+R5	Drg Arg1:T23 Arg2:T37	
+R6	Drg Arg1:T24 Arg2:T38	
+R7	Drg Arg1:T25 Arg2:T39	
+R8	Drg Arg1:T26 Arg2:T40	
+R9	Drg Arg1:T27 Arg2:T41	
+R10	Drg Arg1:T28 Arg2:T42	
+R11	Drg Arg1:T29 Arg2:T43	
+T44	Condition 1559 1574	Miażdżyca aorty
+N6	Reference T44 ICD10:I70.0	Miażdżyca aorty
+T45	Condition 1576 1615	Utrwalony blok lewej odnogi pęczka Hisa
+N7	Reference T45 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T46	Condition 1617 1666	Wada serca pod postacią niedomykalności aortalnej
+N8	Reference T46 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T47	Condition 1669 1691	trójdzielnej I stopnia
+N9	Reference T47 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T48	Condition 1693 1714	Odrost wola guzkowego
+T49	Condition 1725 1762	subklinicznej niedoczynności tarczycy
+N10	Reference T49 ICD10:E03.8	Inne określone postacie niedoczynności tarczycy
+T50	Treatment 1772 1784	strumektomii
+N11	Reference T50 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T51	Date 1786 1790	1974
+R12	Dat Arg1:T51 Arg2:T50	
+T52	Condition 1793 1808	Cukrzyca typu 2
+N12	Reference T52 ICD10:E11	Cukrzyca insulinoniezależna
+T53	Condition 1810 1823	Hiperurykemia
+N13	Reference T53 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T54	Investigation_result 1995 2054	wysokich wartości ciśnienia tętniczego krwi do 230/120 mmHg
+T55	Negation 2057 2063	Neguje
+T56	Symptom 2064 2076	zasłabnięcia
+N14	Reference T56 ICD10:R55	Omdlenie i zapaść
+T57	Negation 2079 2085	neguje
+T58	Symptom 2086 2110	bóle w klatce piersiowej
+N15	Reference T58 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T59	Condition 2126 2147	Nadciśnienie tętnicze
+N16	Reference T59 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T60	Condition 2149 2164	Cukrzyca typu 2
+N17	Reference T60 ICD10:E11	Cukrzyca insulinoniezależna
+T61	Condition 2166 2185	Zaburzenia lipidowe
+N18	Reference T61 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T62	Condition 2187 2191	LBBB
+N19	Reference T62 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T64	Date 2204 2211	04.2018
+R13	Dat Arg1:T64 Arg2:T62	
+R14	Neg Arg1:T55 Arg2:T56	
+R15	Neg Arg1:T57 Arg2:T58	
+T63	Treatment 2215 2232	Przebyte operacje
+N20	Reference T63 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T65	Treatment 2243 2254	strumektomi
+N21	Reference T65 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T66	Date 2255 2259	1974
+T67	Treatment 2262 2281	Leczenie przewlekłe
+T68	Negation 2284 2295	brak danych
+R16	Neg Arg1:T68 Arg2:T67	
+T69	Condition 2324 2327	WZW
+N22	Reference T69 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T70	Negation 2328 2334	( -  )
+T71	Condition 2337 2346	borelioza
+N23	Reference T71 ICD10:A69.2	Choroba z Lyme
+T72	Negation 2347 2352	( - )
+T73	Condition 2355 2374	wywiadzie rodzinnym
+A1	Status T73 Family
+T74	Negation 2377 2388	brak danych
+T75	Behaviour 2407 2424	pali 1/2 dziennie
+N24	Reference T75 ICD10:Z72.0	Używanie tytoniu
+T76	Behaviour 2427 2438	Inne używki
+N25	Reference T76 ICD10:Z72	Problemy związane ze stylem życia
+T77	Negation 2440 2443	nie
+T78	Condition 2444 2453	Uczulenia
+N26	Reference T78 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T79	Negation 2455 2461	neguje
+T80	Behaviour 2478 2504	warunki mieszkaniowe dobre
+T81	Behaviour 2507 2522	mieszka z mężem
+T82	Drug_dose 2589 2605	10 mg 1x dz rano
+T83	Drug 2608 2616	Bisocard
+R17	Neg Arg1:T70 Arg2:T69	
+R18	Neg Arg1:T72 Arg2:T71	
+R19	Neg Arg1:T74 Arg2:T73	
+R20	Neg Arg1:T77 Arg2:T76	
+R21	Neg Arg1:T79 Arg2:T78	
+T84	Drug_dose 2617 2632	5 mg 1x dz rano
+T85	Drug 2634 2643	Lipanthyl
+T86	Drug_dose 2644 2665	267 M 1x dz wieczorem
+T87	Drug 2668 2674	Ridlip
+T88	Drug_dose 2675 2696	10 mg 1x dz wieczorem
+T89	Drug 2700 2712	Metformax SR
+T90	Drug_dose 2713 2732	500 1x dz wieczorem
+T91	Drug 2735 2746	Asparginian
+T92	Drug_dose 2747 2757	1x dz rano
+T93	Investigation 2773 2783	Echo serca
+T94	Investigation 2786 2796	Holter EKG
+R22	Drg Arg1:T6 Arg2:T7	
+R23	Drg Arg1:T8 Arg2:T9	
+R24	Drg Arg1:T10 Arg2:T82	
+R25	Drg Arg1:T83 Arg2:T84	
+R26	Drg Arg1:T85 Arg2:T86	
+R27	Drg Arg1:T87 Arg2:T88	
+R28	Drg Arg1:T89 Arg2:T90	
+R29	Drg Arg1:T91 Arg2:T92	

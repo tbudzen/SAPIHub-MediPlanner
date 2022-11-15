@@ -1,0 +1,41 @@
+T1	Condition 456 483	Niewydolność serca z EF 50%
+T2	Condition 485 517	Kardiomiopatia nie-niedokrwienna
+N2	Reference T2 ICD10:I42.9	Kardiomiopatia, nieokreślona
+T3	Condition 519 551	Utrwalone migotanie przedsionków
+N3	Reference T3 ICD10:I48	Migotanie i trzepotanie przedsionków
+T4	Investigation 553 567	CHA2DS2 - VAsc
+T5	Investigation_result 568 573	2 pkt
+R1	Inv Arg1:T4 Arg2:T5	
+T6	Condition 576 620	Łagodna niedomykalność zastawki trójdzielnej
+N4	Reference T6 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T7	Treatment 630 646	cholecystektomii
+A1	Status T7 Historical_Insignificant
+T8	Condition 648 662	Guzki tarczycy
+N5	Reference T8 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T9	Condition 664 695	Nieprawidłowa glikemia na czczo
+N6	Reference T9 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T10	Investigation_result 878 903	skokiem RR do 200/100mmHg
+T11	Condition 918 936	niewydolność serca
+N7	Reference T11 ICD10:I50.9	Niewydolność serca, nieokreślona
+T12	Condition 938 971	przetrwałe migotanie przedsionków
+N8	Reference T12 ICD10:I48	Migotanie i trzepotanie przedsionków
+T13	Condition 974 984	łagodna IT
+N9	Reference T13 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T14	Condition 986 1000	umiarkowana IM
+N10	Reference T14 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T15	Condition 1002 1033	Nieprawidłowa glikemia na czczo
+N11	Reference T15 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T16	Condition 1039 1046	dławicy
+N12	Reference T16 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+T17	Negation 1035 1038	Bez
+R2	Neg Arg1:T17 Arg2:T16	
+T18	Condition 1048 1065	Uczulenia na leki
+T19	Negation 1066 1072	neguje
+R3	Neg Arg1:T19 Arg2:T18	
+T20	Condition 1086 1103	Uczulenia na leki
+T21	Negation 1104 1110	neguje
+R4	Neg Arg1:T21 Arg2:T20	
+T22	Behaviour 1074 1084	Nikotynizm
+N13	Reference T22 ICD10:Z72.0	Używanie tytoniu
+N14	Reference T10 ICD10:R03.0	Podwyższone ciśnienie tętnicze krwi, bez rozpoznanego nadciśnienia tętniczego
+N1	Reference T1 ICD10:I50.9	Niewydolność serca, nieokreślona

@@ -1,0 +1,96 @@
+T1	Condition 439 472	Napadowy częstoskurcz nadkomorowy
+N1	Reference T1 ICD10:I47.1	Częstoskurcz nadkomorowy
+T2	Condition 474 515	Łagodna niedomykalność zastawki mitralnej
+N2	Reference T2 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T3	Condition 518 530	trójdzielnej
+N3	Reference T3 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T4	Symptom 532 556	Bóle w klatce piersiowej
+N4	Reference T4 ICD10:R07.4	
+T5	Treatment 797 819	kontrola u lekarza POZ
+T6	Treatment 822 865	wskazana kontrola w Poradni Kardiologicznej
+T7	Condition 949 987	napadowego częstoskurczu nadkomorowego
+N5	Reference T7 ICD10:I47.1	Częstoskurcz nadkomorowy
+T8	Behaviour 1179 1199	pielęgniarka z ICZMP
+T9	Symptom 1230 1253	napadów kołatania serca
+N6	Reference T9 ICD10:R00.2	Kołatanie serca
+T10	Date 1254 1262	od 5 lat
+R1	Dat Arg1:T10 Arg2:T9	
+T11	Symptom 1265 1287	Nasilenie dolegliwości
+T12	Date 1288 1297	od 6 m-cy
+R2	Dat Arg1:T12 Arg2:T11	
+T13	Symptom 1301 1332	towarzyszącym uciskiem w gardle
+N7	Reference T13 ICD10:R07.0	Ból gardła
+T14	Symptom 1355 1408	zasłabnięcia po długim przebywaniu w pozycji stojącej
+N8	Reference T14 ICD10:R55	Omdlenie i zapaść
+T15	Date 1411 1424	w przeszłości
+T16	Symptom 1433 1441	omdlenia
+N9	Reference T16 ICD10:R55	Omdlenie i zapaść
+R3	Dat Arg1:T15 Arg2:T16	
+T17	Symptom 1448 1472	bóle w klatce piersiowej
+N10	Reference T17 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T18	Symptom 1476 1491	kołataniu serca
+N11	Reference T18 ICD10:R00.2	Kołatanie serca
+T19	Condition 1512 1534	miesiączkuje regulanie
+T20	Investigation_result 1536 1550	RR<<140/90mmHg
+N12	Reference T20 ICD10:R03.0	Podwyższone ciśnienie tętnicze krwi, bez rozpoznanego nadciśnienia tętniczego
+T21	Negation 1552 1558	Neguje
+T22	Symptom 1560 1570	krwawienia
+T23	Symptom 1572 1585	czarne stolce
+N14	Reference T23 ICD10:K92.1	Stolce smołowate
+T24	Symptom 1587 1603	brunatne wymioty
+N15	Reference T24 ICD10:K92.0	Wymioty krwawe
+T25	Condition 1605 1621	chorobę wrzodową
+N16	Reference T25 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T26	Symptom 1623 1637	duszność nocną
+N17	Reference T26 ICD10:R06.0	Duszność
+T27	Symptom 1639 1654	obrzęki podudzi
+T28	Condition 1656 1658	HA
+N19	Reference T28 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+R4	Neg Arg1:T21 Arg2:T28	
+R5	Neg Arg1:T21 Arg2:T27	
+R6	Neg Arg1:T21 Arg2:T26	
+R7	Neg Arg1:T21 Arg2:T25	
+R8	Neg Arg1:T21 Arg2:T24	
+R9	Neg Arg1:T21 Arg2:T23	
+R10	Neg Arg1:T21 Arg2:T22	
+T29	Treatment 1659 1676	Przebyte operacje
+T30	Treatment 1678 1682	2xcc
+A1	Status T30 Historical_Insignificant
+T31	Behaviour 1683 1698	Palenie tytoniu
+N20	Reference T31 ICD10:Z72.0	Używanie tytoniu
+T32	Negation 1700 1705	nigdy
+R11	Neg Arg1:T32 Arg2:T31	
+T33	Behaviour 1706 1717	Inne używki
+T34	Negation 1719 1722	nie
+R12	Neg Arg1:T34 Arg2:T33	
+T35	Condition 1723 1732	Uczulenia
+N21	Reference T35 ICD10:T78.4	Alergia, nieokreślona
+T36	Negation 1735 1738	nie
+R13	Neg Arg1:T36 Arg2:T35	
+T37	Condition 1766 1769	WZW
+N22	Reference T37 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T38	Negation 1771 1772	-
+R14	Neg Arg1:T38 Arg2:T37	
+T39	Condition 1776 1785	borelioza
+N23	Reference T39 ICD10:A69.2	Choroba z Lyme
+T40	Negation 1788 1789	-
+R15	Neg Arg1:T40 Arg2:T39	
+T41	Condition 1793 1796	tbc
+T42	Negation 1798 1799	-
+R16	Neg Arg1:T42 Arg2:T41	
+T43	Behaviour 1817 1843	warunki mieszkaniowe dobre
+T44	Investigation 1922 1943	badania laboratoryjne
+T45	Investigation 1945 1949	ECHO
+T46	Investigation 1951 1969	EKG metodą Holtera
+T47	Investigation 1971 1975	ABPM
+T48	Investigation 1977 1992	próba wysiłkowa
+T49	Drug 681 686	leków
+T50	Negation 677 680	bez
+R17	Neg Arg1:T50 Arg2:T49	
+N13	Reference T22 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N18	Reference T27 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N25	Reference T33 ICD10:Z72	Problemy związane ze stylem życia
+N24	Reference T41 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T51	Negation 1852 1855	bez
+T52	Drug 1856 1861	leków
+R18	Neg Arg1:T51 Arg2:T52	

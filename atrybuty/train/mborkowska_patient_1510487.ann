@@ -1,0 +1,134 @@
+T1	Investigation 3250 3253	TTE
+T2	Investigation 3255 3258	TET
+T3	Investigation 3260 3264	ABPM
+T4	Investigation 3266 3276	Holter EKG
+T5	Behaviour 3148 3174	warunki mieszkaniowe dobre
+T6	Negation 3124 3130	neguje
+T7	Negation 3105 3111	neguje
+T8	Condition 3113 3122	Uczulenia
+R1	Neg Arg1:T6 Arg2:T8	
+T9	Behaviour 3092 3103	Inne używki
+R2	Neg Arg1:T7 Arg2:T9	
+T10	Behaviour 3039 3077	Palenie tytoniu: 15 papierosów na dobę
+T11	Condition 3032 3037	zawał
+A1	Status T11 Family
+N3	Reference T11 ICD10:I25.2	Przebyty zawał serca
+T12	Condition 2938 2941	WZW
+T13	Condition 2950 2959	borelioza
+N5	Reference T13 ICD10:A69.2	Choroba z Lyme
+T14	Condition 2967 2975	grużlica
+N6	Reference T14 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T15	Condition 2983 2987	odra
+N7	Reference T15 ICD10:B05	Odra
+T16	Negation 2942 2947	( - )
+R3	Neg Arg1:T16 Arg2:T12	
+T17	Negation 2962 2965	- )
+R4	Neg Arg1:T17 Arg2:T13	
+T18	Negation 2976 2981	( - )
+R5	Neg Arg1:T18 Arg2:T14	
+T19	Negation 2988 2993	( - )
+R6	Neg Arg1:T19 Arg2:T15	
+T20	Negation 2835 2841	neguje
+T21	Treatment 2816 2833	Przebyte operacje
+R7	Neg Arg1:T20 Arg2:T21	
+T22	Negation 2553 2559	Neguje
+T23	Symptom 2560 2572	zasłabnięcia
+N8	Reference T23 ICD10:R55	Omdlenie i zapaść
+T24	Symptom 2574 2582	omdlenia
+N9	Reference T24 ICD10:R55	Omdlenie i zapaść
+T25	Symptom 2584 2597	zawroty głowy
+N10	Reference T25 ICD10:R42	Zawroty głowy i odurzenie
+T26	Symptom 2599 2609	krwawienia
+N11	Reference T26 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T27	Symptom 2611 2624	czarne stolce
+N12	Reference T27 ICD10:K92.1	Stolce smołowate
+T28	Symptom 2626 2642	brunatne wymioty
+N13	Reference T28 ICD10:K92.0	Wymioty krwawe
+T29	Condition 2644 2660	chorobę wrzodową
+N14	Reference T29 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T30	Symptom 2662 2676	duszność nocną
+T31	Symptom 2678 2693	obrzęki podudzi
+N16	Reference T31 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T32	Symptom 2695 2720	bóle w klatce piersiowej.
+R8	Neg Arg1:T22 Arg2:T23	
+R9	Neg Arg1:T22 Arg2:T24	
+R10	Neg Arg1:T22 Arg2:T25	
+R11	Neg Arg1:T22 Arg2:T26	
+R12	Neg Arg1:T22 Arg2:T27	
+R13	Neg Arg1:T22 Arg2:T28	
+R14	Neg Arg1:T22 Arg2:T29	
+R15	Neg Arg1:T22 Arg2:T30	
+R16	Neg Arg1:T22 Arg2:T31	
+R17	Neg Arg1:T22 Arg2:T32	
+T33	Investigation_result 2443 2498	wysokich wartości ciśnienia tętniczego (do 220/120mmHg)
+T34	Drug 2138 2147	Metformax
+T35	Drug_dose 2148 2271	500 mg 1 tabl. rano i wieczorem od dnia 01.11.2019 (po 3-4 dniach zwiększyć dawkę leku do 2 tabl. rano i 2 tabl. wieczorem)
+R18	Drg Arg1:T34 Arg2:T35	
+T36	Drug 2102 2107	Doxar
+T37	Drug 2055 2065	Isoptin SR
+T38	Drug_dose 2108 2130	4 mg 1 tabl. wieczorem
+R19	Drg Arg1:T36 Arg2:T38	
+T39	Drug_dose 2066 2094	120 1 tabl. rano i wieczorem
+R20	Drg Arg1:T37 Arg2:T39	
+T40	Drug 2020 2027	Milurit
+T41	Drug_dose 2028 2047	100 mg 1 tabl. rano
+R21	Drg Arg1:T40 Arg2:T41	
+T42	Drug 1981 1988	Roswera
+T43	Drug_dose 1989 2012	30 mg 1 tabl. wieczorem
+R22	Drg Arg1:T42 Arg2:T43	
+T44	Behaviour 1848 1938	stały, umiarkowany, aerobowy wysiłek fizyczny (optymalnie codziennie przez minimum 45 min)
+T45	Behaviour 1820 1839	redukcja masy ciała
+T46	Behaviour 1792 1814	zakaz palenia tytoniu!
+T47	Behaviour 1609 1631	dieta niskoglikemiczna
+T48	Investigation 1633 1786	kontrola glikemii początkowo na czczo i po każdym posiłku (przez około 7 dni, następnie wybiórczo 1x dziennie o różnych porach – na czczo lub po posiłku)
+T49	Investigation 1541 1579	kontrola lipidogramu i aminotransferaz
+T50	Date 1590 1602	za 8 tygodni
+R23	Dat Arg1:T50 Arg2:T49	
+T51	Investigation 1495 1524	kontrola ciśnienia tętniczego
+T52	Investigation 1278 1343	badanie tomograficzne nadnerczy z oceną dodatkowo miąższu wątroby
+T53	Condition 439 484	Nadciśnienie tętnicze III stopnia wg ESC/ESH.
+N18	Reference T53 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T54	Condition 827 871	Zwyrodnienie kręgosłupa w odcinku piersiowym
+N19	Reference T54 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T55	Condition 1156 1187	hiperaldosteronizmu pierwotnego
+N20	Reference T55 ICD10:E26.0	Pierwotny hiperaldosteronizm
+T56	Condition 810 825	Torbiel wątroby
+N21	Reference T56 ICD10:Q44.6	Torbielowatość wątroby
+T57	Condition 747 783	Krwinkomocz o nieustalonej etiologii
+N22	Reference T57 ICD10:R31	Krwiomocz, nieokreślony
+T58	Investigation_result 729 745	Mikroalbuminuria
+T59	Condition 697 712	Cukrzyca typu 2
+N23	Reference T59 ICD10:E11	Cukrzyca insulinoniezależna
+T60	Condition 675 695	Stłuszczenie wątroby
+N24	Reference T60 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T61	Condition 666 673	Nadwaga
+T62	Condition 651 664	Hiperurykemia
+N25	Reference T62 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T63	Condition 626 649	Hiperlipidemia mieszana
+N26	Reference T63 ICD10:E78.2	Hiperlipidemia mieszana
+T64	Behaviour 614 624	Nikotynizm
+T65	Condition 542 612	Wada serca pod postacią łagodnej niedomykalności zastawki trójdzielnej
+N28	Reference T65 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T66	Condition 507 540	Napadowy częstoskurcz nadkomorowy
+N29	Reference T66 ICD10:I47.1	Częstoskurcz nadkomorowy
+T67	Condition 485 505	Gruczolaki nadnerczy
+N30	Reference T67 ICD10:D35.0	Nadnercze
+T68	Symptom 2721 2740	Innych dolegliwości
+T69	Negation 2741 2752	nie zgłasza
+R24	Neg Arg1:T69 Arg2:T68	
+T70	Date 3078 3090	przez 20 lat
+R25	Dat Arg1:T70 Arg2:T10	
+N27	Reference T64 ICD10:Z72.0	Używanie tytoniu
+N17	Reference T32 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N4	Reference T12 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N2	Reference T10 ICD10:Z72.0	Używanie tytoniu
+T71	Treatment 995 1022	dalsza opieka w poradni POZ
+T72	Treatment 1039 1062	kontrola kardiologiczna
+T73	Treatment 1069 1144	hospitalizacja w Klinice Endokrynologii ICZMP celem poszerzonej diagnostyki
+T74	Treatment 1350 1374	kontrola diabetologiczna
+T75	Date 1375 1385	za miesiąc
+R26	Dat Arg1:T75 Arg2:T74	
+T76	Treatment 1407 1478	wskazana konsultacja psychologiczna celem nauki technik redukcji stresu
+N15	Reference T30 ICD10:R06.0	Duszność
+N31	Reference T9 ICD10:Z72	Problemy związane ze stylem życia
+N1	Reference T8 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

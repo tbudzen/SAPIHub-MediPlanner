@@ -1,0 +1,37 @@
+T1	Condition 438 532	Wrodzona wada serca pod postacią tetralogii Fallota z odejściem lewej tętnicy płucnej od aorty
+N1	Reference T1 ICD10:Q21.3	Tetralogia Fallota
+T2	Treatment 545 600	operacji zespolenia gałęzi płucnych z jego przewężeniem
+N2	Reference T2 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T3	Date 602 613	24.04.2003r
+T4	Date 615 626	07.05.2003r
+T5	Treatment 632 687	operacji prawostronnego zespolenia systemowo - płucnego
+N3	Reference T5 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T6	Date 689 698	04.01.05r
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Treatment 709 728	korekcji całkowitej
+N4	Reference T7 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T8	Date 730 739	05.10.07r
+R2	Dat Arg1:T8 Arg2:T7	
+T9	Condition 745 775	Zwężenie lewej tętnicy płucnej
+R3	Dat Arg1:T3 Arg2:T2	
+R4	Dat Arg1:T4 Arg2:T2	
+T10	Negation 896 899	bez
+T11	Drug 900 905	leków
+R5	Neg Arg1:T10 Arg2:T11	
+T12	Negation 1025 1048	nie wymaga przyjmowania
+T13	Drug 1049 1066	leków nasercowych
+R6	Neg Arg1:T12 Arg2:T13	
+T14	Treatment 1071 1113	Kontrolna wizyta w Poradni Kardiologicznej
+T15	Date 1114 1121	za 6mcy
+R7	Dat Arg1:T15 Arg2:T14	
+T16	Treatment 1260 1279	całkowitej korekcji
+N6	Reference T16 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T17	Condition 1342 1350	trądziku
+T18	Drug 1383 1389	Isotec
+T19	Behaviour 1396 1453	na diecie z ograniczeniem produktów mlecznych i czekolady
+N7	Reference T17 ICD10:L70.0	Trądzik pospolity
+A1	Status T17 Historical_Insignificant
+N5	Reference T9 ICD10:I28.8	Inne określone choroby naczyń płucnych
+R8	Dat Arg1:T8 Arg2:T1	
+T20	Condition 1280 1298	tetralogii Fallota
+N8	Reference T20 ICD10:Q21.3	Tetralogia Fallota

@@ -1,0 +1,40 @@
+T1	Drug 348 355	Tritace
+T2	Drug_dose 358 371	7,5mg 1 x dz.
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Treatment 375 414	Regularne kontrole ciśnienia tętniczego
+T4	Treatment 419 454	Dalsza opieka nefrologiczna i w POZ
+T5	Treatment 494 554;567 596	Kliniki Nefrologii, Transplantacji Nerek i Nadciśnienia ICZD - kontrolne badania w Klinice
+T6	Date 597 612	we wrześniu br.
+R2	Dat Arg1:T6 Arg2:T5	
+T7	Drug 732 739	Tritace
+T8	Condition 1001 1070	Wrodzona wada serca pod postacią ubytku w przegrodzie międzykomorowej
+N1	Reference T8 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T9	Condition 1072 1127	ubytku w przegrodzie międzyprzedsionkowej typu secundum
+N2	Reference T9 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T10	Condition 1130 1146	koarktacji aorty
+T11	Treatment 1188 1200	m/o Crafoord
+N4	Reference T11 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T12	Date 1202 1213	08.11.2002r
+R3	Dat Arg1:T12 Arg2:T11	
+T13	Treatment 1221 1285	plastyki ubytku międzykomorowego  (łatą) i międzyprzedsionkowego
+N5	Reference T13 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T14	Date 1287 1298	24.09.2003r
+R4	Dat Arg1:T14 Arg2:T13	
+T15	Condition 1305 1379	Łagodne zwężenie drogi wypływu z lewej komory (zastawkowe i podzastawkowe)
+#1	AnnotatorNotes T15	Q23.0 + Q24.4
+T16	Condition 1384 1405	Nadciśnienie tętnicze
+N6	Reference T16 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T17	Symptom 1584 1601	w  stanie  dobrym
+T18	Treatment 1667 1688	Opieka  nefrologiczna
+T19	Condition 1690 1692	HA
+N7	Reference T19 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T20	Drug 1704 1711	Tritace
+T21	Drug_dose 1712 1720	1x7,5 mg
+R5	Drg Arg1:T20 Arg2:T21	
+N3	Reference T10 ICD10:Q25.1	Zwężenie cieśni aorty
+T22	Condition 1171 1187	koarktacji aorty
+N8	Reference T22 ICD10:Q25.1	Zwężenie cieśni aorty
+R6	Dat Arg1:T12 Arg2:T22	
+T23	Treatment 1156 1164	operacji
+N9	Reference T23 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R7	Dat Arg1:T12 Arg2:T23	

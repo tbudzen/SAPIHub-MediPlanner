@@ -1,0 +1,33 @@
+T1	Treatment 433 441	operacji
+T2	Date 475 486	20.12.2000r
+T3	Condition 492 525	Niedomykalność zastawki mitralnej
+T4	Treatment 530 543	Rekanalizacja
+T5	Condition 544 567	ubytku międzykomorowego
+N2	Reference T5 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T6	Treatment 856 915	Dalsza opieka w Poradni Kardiologicznej dla Dorosłych ICZMP
+N1	Reference T3 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T7	Investigation 920 953	Ambulatoryjna kontrola tętna i RR
+T8	Behaviour 958 1000	Aktywność fizyczna w zakresie rekreacyjnym
+T9	Treatment 1005 1017	Profilaktyka
+T10	Condition 1018 1050	infekcyjnego zapalenia wsierdzia
+N3	Reference T10 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T11	Treatment 1190 1198	operacji
+T12	Condition 1199 1240	wspólnego kanału przedsionkowo-komorowego
+N4	Reference T12 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T13	Condition 1244 1279	niedomykalnością zastawki mitralnej
+N5	Reference T13 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T14	Investigation 1296 1313	badania kontrolne
+T15	Condition 1316 1333	wywiad alergiczny
+N6	Reference T15 ICD10:T78.4	Alergia, nieokreślona
+T16	Negation 1334 1340	ujemny
+R1	Neg Arg1:T16 Arg2:T15	
+T17	Condition 442 473	kanału przedsionkowo-komorowego
+N7	Reference T17 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+R2	Dat Arg1:T2 Arg2:T17	
+R3	Dat Arg1:T2 Arg2:T1	
+T18	Drug 738 743	leków
+T19	Negation 734 737	Bez
+R4	Neg Arg1:T19 Arg2:T18	
+T20	Drug 1343 1357	leków na stałe
+T21	Negation 1358 1371	nie otrzymuje
+R5	Neg Arg1:T21 Arg2:T20	

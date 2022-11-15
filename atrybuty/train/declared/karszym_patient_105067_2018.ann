@@ -1,0 +1,146 @@
+T1	Treatment 329 363	Kontrola w Poradni Kardiologicznej
+T2	Date 364 377	za 6 miesięcy
+T3	Treatment 379 403	Kontrolna hospitalizacja
+T4	Date 404 415	za 2,5 roku
+T5	Treatment 416 447	w tutejszej Klinice Kardiologii
+T6	Negation 461 469	unikanie
+T7	Drug 470 492	leków wydłużających QT
+T8	Drug 494 503	makrolidy
+T9	Drug 505 521	leki p/grzybicze
+T10	Drug 523 541	leki p/histaminowe
+T11	Drug 543 562	leki psychiatryczne
+T12	Drug 564 595	leki p/wymiotne i prokinetyczne
+R1	Neg Arg1:T6 Arg2:T7	
+R2	Neg Arg1:T6 Arg2:T8	
+R3	Neg Arg1:T6 Arg2:T9	
+R4	Neg Arg1:T6 Arg2:T10	
+R5	Neg Arg1:T6 Arg2:T11	
+R6	Neg Arg1:T6 Arg2:T12	
+R7	Dat Arg1:T2 Arg2:T1	
+R8	Dat Arg1:T4 Arg2:T3	
+R9	Dat Arg1:T4 Arg2:T5	
+T13	Behaviour 597 637	Dieta lekkostrawna , niskocholesterolowa
+T14	Investigation 641 724	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T15	Investigation 727 775	Systematyczna kontrola ciśnienia tętniczego krwi
+T16	Condition 1006 1075	Wrodzona wada serca pod postacią ubytku w przegrodzie międzykomorowej
+N1	Reference T16 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T17	Treatment 1085 1107	operacyjnym zamknięciu
+N2	Reference T17 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T18	Condition 1108 1144	ubytku w przegrodzie międzykomorowej
+N3	Reference T18 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T19	Date 1146 1150	1999
+T20	Condition 1153 1183	Pojedyncze pobudzenia komorowe
+N4	Reference T20 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T21	Condition 1207 1221	wydłużonego QT
+N5	Reference T21 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T22	Negation 1224 1233	negatywna
+T23	Date 1235 1239	2015
+R10	Dat Arg1:T19 Arg2:T17	
+R11	Dat Arg1:T19 Arg2:T18	
+R12	Neg Arg1:T22 Arg2:T21	
+R13	Dat Arg1:T23 Arg2:T21	
+T24	Condition 1459 1528	Wrodzona wada serca pod postacią ubytku w przegrodzie międzykomorowej
+N6	Reference T24 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T25	Treatment 1541 1563	operacyjnym zamknięciu
+N7	Reference T25 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T26	Condition 1564 1600	ubytku w przegrodzie międzykomorowej
+N8	Reference T26 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T27	Date 1602 1606	1999
+R14	Dat Arg1:T27 Arg2:T26	
+R15	Dat Arg1:T27 Arg2:T25	
+T28	Condition 1634 1648	wydłużonego QT
+N9	Reference T28 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T29	Negation 1651 1660	negatywna
+T30	Date 1662 1666	2015
+R16	Neg Arg1:T29 Arg2:T28	
+R17	Dat Arg1:T30 Arg2:T28	
+T31	Condition 1810 1879	wrodzoną wadą serca pod postacią ubytku w przegrodzie międzykomorowej
+N10	Reference T31 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T32	Treatment 1884 1906	operacyjnym zamknięciu
+N11	Reference T32 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T33	Condition 1907 1943	ubytku w przegrodzie międzykomorowej
+N12	Reference T33 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T34	Date 1945 1949	1999
+R18	Dat Arg1:T34 Arg2:T33	
+R19	Dat Arg1:T34 Arg2:T32	
+T35	Condition 2044 2058	wydłużonego QT
+N13	Reference T35 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T36	Negation 2061 2070	negatywna
+T37	Date 2072 2076	2015
+R20	Neg Arg1:T36 Arg2:T35	
+R21	Dat Arg1:T37 Arg2:T35	
+T38	Negation 2107 2113	Neguje
+T39	Symptom 2115 2127	zasłabnięcia
+T40	Symptom 2129 2137	omdlenia
+N14	Reference T40 ICD10:R55	Omdlenie i zapaść
+T41	Symptom 2139 2149	krwawienia
+T42	Symptom 2151 2164	czarne stolce
+N15	Reference T42 ICD10:K92.1	Stolce smołowate
+T43	Symptom 2166 2182	brunatne wymioty
+N16	Reference T43 ICD10:K92.0	Wymioty krwawe
+T44	Condition 2184 2200	chorobę wrzodową
+N17	Reference T44 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T45	Symptom 2202 2216	duszność nocną
+N18	Reference T45 ICD10:R06.0	Duszność
+T46	Symptom 2218 2233	obrzęki podudzi
+N19	Reference T46 ICD10:R60.0	Obrzęk zlokalizowany
+T47	Symptom 2235 2259	bóle w klatce piersiowej
+N20	Reference T47 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T48	Symptom 2261 2276	kołatania serca
+N21	Reference T48 ICD10:R00.2	Kołatanie serca
+R22	Neg Arg1:T38 Arg2:T39	
+R23	Neg Arg1:T38 Arg2:T40	
+R24	Neg Arg1:T38 Arg2:T41	
+R25	Neg Arg1:T38 Arg2:T42	
+R26	Neg Arg1:T38 Arg2:T43	
+R27	Neg Arg1:T38 Arg2:T44	
+R28	Neg Arg1:T38 Arg2:T45	
+R29	Neg Arg1:T38 Arg2:T46	
+R30	Neg Arg1:T38 Arg2:T47	
+R31	Neg Arg1:T38 Arg2:T48	
+T49	Behaviour 2301 2316	Palenie tytoniu
+N22	Reference T49 ICD10:Z72.0	Używanie tytoniu
+T50	Negation 2318 2321	nie
+T51	Behaviour 2322 2326	pali
+N23	Reference T51 ICD10:Z72.0	Używanie tytoniu
+T52	Date 2327 2336	od 6 m-cy
+R32	Neg Arg1:T50 Arg2:T49	
+R33	Neg Arg1:T50 Arg2:T51	
+R34	Dat Arg1:T52 Arg2:T51	
+R35	Dat Arg1:T52 Arg2:T49	
+T53	Behaviour 2337 2348	Inne używki
+T54	Negation 2350 2353	nie
+R36	Neg Arg1:T54 Arg2:T53	
+T55	Condition 2354 2363	Uczulenia
+N24	Reference T55 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T56	Negation 2365 2368	nie
+T57	Condition 2396 2399	WZW
+N25	Reference T57 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T58	Negation 2400 2403	(-)
+T59	Condition 2406 2415	borelioza
+N26	Reference T59 ICD10:A69.2	Choroba z Lyme
+T60	Negation 2416 2421	( - )
+T61	Condition 2423 2426	tbc
+N27	Reference T61 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T62	Negation 2427 2430	(-)
+R37	Neg Arg1:T58 Arg2:T57	
+R38	Neg Arg1:T60 Arg2:T59	
+R39	Neg Arg1:T62 Arg2:T61	
+R40	Neg Arg1:T56 Arg2:T55	
+T63	Negation 2454 2463	negatywny
+T64	Condition 2433 2452	wywiadzie rodzinnym
+A1	Status T64 Family
+R41	Neg Arg1:T63 Arg2:T64	
+T65	Behaviour 2480 2506	warunki mieszkaniowe dobre
+T66	Negation 2515 2518	bez
+T67	Drug 2519 2524	leków
+R42	Neg Arg1:T66 Arg2:T67	
+T68	Investigation 2586 2607	badania laboratoryjne
+T69	Investigation 2609 2613	ECHO
+T70	Investigation 2615 2633	EKG metodą Holtera
+T71	Investigation 2635 2639	ABPM
+T72	Investigation 2641 2656	próba wysiłkowa
+T73	Investigation 2022 2032	obserwacja
+A2	Source T35 Declared
+A3	Source T21 Declared
+T74	Investigation 1185 1195	Obserwacja

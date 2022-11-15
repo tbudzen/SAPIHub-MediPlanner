@@ -1,0 +1,73 @@
+T1	Investigation 2171 2181	echo serca
+T2	Investigation 2183 2203	echo przezprzełykowe
+T3	Investigation 2205 2208	TET
+T4	Investigation 2210 2214	ABPM
+T5	Investigation 2216 2234	RTG kl. piersiowej
+T6	Drug 2115 2121	BetoZK
+T7	Drug 2079 2092	Co-Prestarium
+T8	Drug_dose 2093 2113	10/5 mg 1 tabl. rano
+R1	Drg Arg1:T7 Arg2:T8	
+T9	Drug_dose 2122 2143	100 mg 1/2 tabl. rano
+R2	Drg Arg1:T6 Arg2:T9	
+T10	Condition 439 468	Wada serca - koarktacja aorty
+N1	Reference T10 ICD10:Q25.1	Zwężenie cieśni aorty
+T11	Condition 470 491	Nadciśnienie tętnicze
+N2	Reference T11 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T12	Condition 493 514	Nietolerancja glutenu
+N3	Reference T12 ICD10:K90.8	Inne zaburzenia wchłaniania jelitowego
+T13	Condition 1172 1193	Nietolerancja glutenu
+N4	Reference T13 ICD10:K90.8	Inne zaburzenia wchłaniania jelitowego
+T14	Condition 1088 1117	Wada serca - koarktacja aorty
+N5	Reference T14 ICD10:Q25.1	Zwężenie cieśni aorty
+T15	Investigation 795 824	kontrola ciśnienia tętniczego
+T16	Investigation 836 868	kontrolą morfologii, lipidogramu
+T17	Condition 765 782	włókniaków piersi
+T18	Investigation 756 764	kontrola
+T19	Condition 1119 1140	Nadciśnienie tętnicze
+N6	Reference T19 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T20	Condition 1143 1170	Łagodna arytmia nadkomorowa
+N7	Reference T20 ICD10:I47.1	Częstoskurcz nadkomorowy
+T21	Negation 1997 2007	nie podaje
+T22	Negation 1973 1983	nie podaje
+T23	Negation 1946 1955	negatywny
+T24	Negation 1918 1928	nie podaje
+T25	Condition 1906 1915	borelioza
+N8	Reference T25 ICD10:A69.2	Choroba z Lyme
+T26	Condition 1901 1904	WZW
+N9	Reference T26 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+R3	Neg Arg1:T24 Arg2:T25	
+R4	Neg Arg1:T24 Arg2:T26	
+T27	Condition 1929 1944	Wywiad rodzinny
+A1	Status T27 Family
+R5	Neg Arg1:T23 Arg2:T27	
+T28	Behaviour 1956 1972	Palenie tytoniu:
+N10	Reference T28 ICD10:Z72.0	Używanie tytoniu
+R6	Neg Arg1:T22 Arg2:T28	
+T29	Behaviour 1984 1996	Inne używki:
+N11	Reference T29 ICD10:Z72	Problemy związane ze stylem życia
+R7	Neg Arg1:T21 Arg2:T29	
+T30	Condition 2008 2017	Uczulenia
+N12	Reference T30 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T31	Negation 1780 1790	nie podaje
+T32	Treatment 1761 1778	Przebyte operacje
+R8	Neg Arg1:T31 Arg2:T32	
+T33	Condition 1350 1382	koarktacją aorty (typ przeponowy
+N13	Reference T33 ICD10:Q25.1	Zwężenie cieśni aorty
+T34	Condition 1403 1426	nadciśnieniem tętniczym
+N14	Reference T34 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T35	Investigation_result 1428 1457	średnie RR 140-150/do 90 mmHg
+T36	Investigation_result 1459 1475	max 180/100 mmHg
+T37	Investigation 1541 1563	angioCT - tt. wieńcowe
+T38	Date 1533 1538	2018r
+R9	Dat Arg1:T38 Arg2:T37	
+T39	Condition 1703 1723	podejrzenie celiakii
+A2	Source T39 Declared
+N15	Reference T39 ICD10:K90.0	
+T40	Condition 1682 1701	Uczulenie na gluten
+N16	Reference T40 ICD10:K90.8	Inne zaburzenia wchłaniania jelitowego
+T41	Investigation_result 1566 1680	bez przewężeń, koarktacja aorty zstępującej, znaczne poszerzenie tętnice piersiowe wewnętrzne oraz tętnice kręgowe
+R10	Inv Arg1:T37 Arg2:T41	
+R11	Dat Arg1:T38 Arg2:T41	
+T42	Treatment 637 664	dalsza opieka w poradni POZ
+T43	Treatment 676 754	kontrola kardiologiczna, gastroenterologiczna, endokrynologiczna, onkologiczna
+T44	Investigation 1498 1531	celem diagnostyki kardiologicznej

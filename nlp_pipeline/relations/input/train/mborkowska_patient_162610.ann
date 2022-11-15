@@ -1,0 +1,287 @@
+T1	Drug 5159 5172	Vigantoletten
+T2	Drug_dose 5173 5227	1 tabletka rano - wg zaleceń specjalisty endokrynologa
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 5088 5096	Calperos
+T4	Drug 4998 5007	Nootropil
+T5	Drug 4972 4980	Magne B6
+T7	Drug_dose 4981 4996	1 tabletka rano
+R2	Drg Arg1:T5 Arg2:T7	
+T6	Drug 4935 4954	Pluscard 100mg+40mg
+T8	Drug_dose 4955 4970	1 tabletka rano
+R3	Drg Arg1:T6 Arg2:T8	
+T9	Drug_dose 5008 5086	800mg 1 tabletka rano i około godziny 13-14 - wg zaleceń specjalisty neurologa
+R4	Drg Arg1:T4 Arg2:T9	
+T10	Drug_dose 5097 5157	500mg 1 tabletka rano - wg zaleceń specjalisty endokrynologa
+R5	Drg Arg1:T3 Arg2:T10	
+T11	Investigation 4587 4670	kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T12	Treatment 4528 4573	Profilaktyka infekcyjnego zapalenia wsierdzia
+N1	Reference T12 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T13	Behaviour 4675 4777	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T14	Investigation 4854 4900	samokontrola ciśnienia tętniczego krwi i tętna
+T15	Date 560 570	14.03.2001
+T16	Date 605 615	11.05.2017
+T17	Investigation 9180 9183	TTE
+T18	Investigation 9185 9188	TET
+T19	Investigation 9190 9194	ABPM
+T20	Investigation 9196 9206	Holter EKG
+T21	Drug 9067 9075	Pluscard
+T22	Drug_dose 9076 9088	100 + 40mg R
+T23	Drug 9090 9098	Calperos
+T24	Drug 9099 9118	500 1 tabletka rano
+T25	Drug 9120 9148	witaminta D3 (Vigantoletten)
+T26	Drug_dose 9149 9164	1 tabletka rano
+R6	Drg Arg1:T25 Arg2:T26	
+R7	Drg Arg1:T21 Arg2:T22	
+T27	Behaviour 8999 9025	warunki mieszkaniowe dobre
+T28	Condition 8935 8945	Uczulenia:
+N2	Reference T28 ICD10:T78.4	Alergia, nieokreślona
+T29	Negation 8946 8952	neguje
+T30	Negation 8927 8933	neguje
+T31	Negation 8906 8912	neguje
+T32	Negation 8877 8887	nieistotny
+T33	Condition 8958 8977	na klej od elektrod
+A1	Source T33 Declared
+N3	Reference T33 ICD10:T78.4	Alergia, nieokreślona
+T34	Behaviour 8914 8925	Inne używki
+R8	Neg Arg1:T30 Arg2:T34	
+R9	Neg Arg1:T29 Arg2:T28	
+T35	Behaviour 8889 8904	Palenie tytoniu
+N4	Reference T35 ICD10:T65.2	Tytoń i nikotyna
+R10	Neg Arg1:T31 Arg2:T35	
+T36	Condition 8860 8875	Wywiad rodzinny
+A2	Status T36 Family
+R11	Neg Arg1:T32 Arg2:T36	
+T37	Negation 8797 8798	-
+T38	Negation 8815 8816	-
+T39	Negation 8831 8832	-
+T40	Condition 8791 8794	WZW
+N5	Reference T40 ICD10:B18	
+T41	Condition 8803 8812	borelioza
+N6	Reference T41 ICD10:A69.2	Choroba z Lyme
+T42	Condition 8820 8828	grużlica
+N7	Reference T42 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T43	Condition 8836 8840	odra
+N8	Reference T43 ICD10:B05	
+T44	Negation 8847 8858	nie pamięta
+A3	Source T44 Declared
+R12	Neg Arg1:T44 Arg2:T43	
+R13	Neg Arg1:T39 Arg2:T42	
+R14	Neg Arg1:T38 Arg2:T41	
+R15	Neg Arg1:T37 Arg2:T40	
+T45	Treatment 8684 8706	Przebyte operacje: j/w
+T46	Treatment 520 558	korekcji z użyciem homograftu płucnego
+T47	Treatment 576 603	Implantacja zastawki Melody
+R16	Dat Arg1:T16 Arg2:T47	
+T48	Treatment 621 709	Cewnikowanie serca z angioplastyką balonową stentu CP i zastawki Melody balonem BIB 22mm
+T49	Date 711 721	29.11.2017
+R17	Dat Arg1:T49 Arg2:T48	
+T50	Treatment 727 820	Cewnikowanie serca z angioplastyką balonową stentu CP i zastawki Melody balonem ATLAS 22x20mm
+T51	Date 822 832	10.10.2019
+R18	Dat Arg1:T51 Arg2:T50	
+T52	Condition 838 883	Umiarkowana niedomykalność zastawki aortalnej
+N9	Reference T52 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T53	Condition 923 938	Obserwacja LQTS
+T54	Condition 888 917	Zespół Di Geeorge'a (CATCH 22
+N10	Reference T54 ICD10:D82.1	Zespół DiGeorge’a
+T55	Condition 439 507	Wrodzona wada serca pod postacią wspólnego pnia tętniczego TAC typ I
+N11	Reference T55 ICD10:Q20.0	Wspólny pień tętniczy
+T56	Investigation 1320 1339	cewnikowanie serca.
+T57	Treatment 1618 1663	Profilaktyka infekcyjnego zapalenia wsierdzia
+N12	Reference T57 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T58	Investigation 1678 1761	kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T59	Behaviour 1767 1869	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T60	Behaviour 1875 1931	Niewskazane uprawianie sportów wyczynowych oraz pływanie
+T61	Drug 2031 2050	Pluscard 100mg+40mg
+T62	Drug_dose 2051 2066	1 tabletka rano
+R19	Drg Arg1:T61 Arg2:T62	
+T63	Drug 2069 2077	Magne B6
+T64	Drug_dose 2078 2093	1 tabletka rano
+R20	Drg Arg1:T63 Arg2:T64	
+T65	Drug 2096 2105	Nootropil
+T66	Drug_dose 2106 2185	1200mg 1 tabletka rano i około godziny 13-14 - wg zaleceń specjalisty neurologa
+R21	Drg Arg1:T65 Arg2:T66	
+T67	Drug 2188 2196	Calperos
+T68	Drug_dose 2197 2257	500mg 1 tabletka rano - wg zaleceń specjalisty endokrynologa
+R22	Drg Arg1:T67 Arg2:T68	
+T69	Drug 2260 2273	Vigantoletten
+T70	Drug_dose 2274 2329	1 tabletka rano - wg zaleceń specjalisty endokrynologa.
+R23	Drg Arg1:T69 Arg2:T70	
+T71	Condition 2555 2576	Wspólny pień tętniczy
+N13	Reference T71 ICD10:Q20.0	Wspólny pień tętniczy
+T72	Condition 2584 2617	Inne określone stany po zabiegach
+N14	Reference T72 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T73	Condition 2625 2683	Mikrodelecje (delecje widzialne tylko podczas prometafazy)
+N15	Reference T73 ICD10:Q93.6	Delecje obserwowane tylko podczas prometafazy
+T74	Condition 2691 2751	Obecność innych wszczepów i przeszczepów sercowonaczyniowych
+N16	Reference T74 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T75	Treatment 2826 2853	Implantacja zastawki Melody
+T76	Date 2855 2866	11.05.2017r
+R24	Dat Arg1:T76 Arg2:T75	
+T77	Treatment 2873 2961	Cewnikowanie serca z angioplastyką balonową stentu CP i zastawki Melody balonem BIB 22mm
+T78	Date 2963 2973	29.11.2017
+R25	Dat Arg1:T78 Arg2:T77	
+T79	Condition 2981 3067	Umiarkowana/granicznie ciężka stenoza homograftu płucnego na wysokości zastawki Melody
+T80	Treatment 3081 3119	korekcji z użyciem homograftu płucnego
+T81	Date 3121 3132	14.03.2001r
+R26	Dat Arg1:T81 Arg2:T80	
+T82	Condition 3139 3169	Zespół Di Geeorge,a (CATCH 22)
+N17	Reference T82 ICD10:D82.1	Zespół DiGeorge’a
+T83	Condition 3175 3190	Obserwacja LQTS
+T84	Condition 3835 3865	Zespół Di Geeorge,a (CATCH 22)
+N18	Reference T84 ICD10:D82.1	Zespół DiGeorge’a
+T85	Treatment 3778 3816	korekcji z użyciem homograftu płucnego
+T86	Date 3818 3829	14.03.2001r
+R27	Dat Arg1:T86 Arg2:T85	
+T87	Condition 3870 3886	Obserwacja LQTS.
+T88	Condition 3679 3766	Umiarkowana/granicznie ciężka stenoza homograftu płucnego na wysokości zastawki Melody.
+T89	Treatment 3572 3660	Cewnikowanie serca z angioplastyką balonową stentu CP i zastawki Melody balonem BIB 22mm
+T90	Date 3662 3673	29.11.2017r
+R28	Dat Arg1:T90 Arg2:T89	
+T91	Treatment 3526 3553	Implantacja zastawki Melody
+T92	Date 3555 3566	11.05.2017r
+R29	Dat Arg1:T92 Arg2:T91	
+T93	Condition 2752 2820	Wrodzona wada serca pod postacią wspólnego pnia tętniczego TAC typ I
+N19	Reference T93 ICD10:Q20.0	Wspólny pień tętniczy
+T94	Behaviour 4403 4452	Unikanie leków powodujących wydłużenie odstępu QT
+T95	Behaviour 4782 4838	Niewskazane uprawianie sportów wyczynowych oraz pływanie
+T96	Treatment 8656 8683	Obserwacja w kierunku LQTS.
+T97	Treatment 8552 8640	Cewnikowanie serca z angioplastyką balonową stentu CP i zastawki Melody balonem BIB 22mm
+T98	Date 8642 8654	29.11.2017r)
+R30	Dat Arg1:T98 Arg2:T97	
+T99	Treatment 8509 8536	Implantacja zastawki Melody
+T100	Date 8538 8550	11.05.2017r)
+R31	Dat Arg1:T100 Arg2:T99	
+T101	Condition 8477 8507	Zespół Di Geeorge,a (CATCH 22)
+N20	Reference T101 ICD10:D82.1	Zespół DiGeorge’a
+T102	Treatment 8423 8461	korekcji z użyciem homograftu płucnego
+T103	Date 8463 8474	14.03.2001r
+R32	Dat Arg1:T103 Arg2:T102	
+T104	Condition 8344 8412	Wrodzona wada serca pod postacią wspólnego pnia tętniczego TAC typ I
+N21	Reference T104 ICD10:Q20.0	Wspólny pień tętniczy
+T105	Symptom 8187 8200	zawroty głowy
+N22	Reference T105 ICD10:R42	Zawroty głowy i odurzenie
+T106	Symptom 8202 8212	krwawienia
+N23	Reference T106 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T107	Symptom 8214 8227	czarne stolce
+N24	Reference T107 ICD10:K92.1	Stolce smołowate
+T108	Symptom 8229 8245	brunatne wymioty
+N25	Reference T108 ICD10:K92.0	Wymioty krwawe
+T109	Condition 8247 8263	chorobę wrzodową
+N26	Reference T109 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T110	Symptom 8265 8279	duszność nocną
+N27	Reference T110 ICD10:I50.1	Niewydolność serca lewokomorowa
+T111	Symptom 8281 8296	obrzęki podudzi
+N28	Reference T111 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T112	Negation 8180 8186	Neguje
+R33	Neg Arg1:T112 Arg2:T105	
+R34	Neg Arg1:T112 Arg2:T106	
+R35	Neg Arg1:T112 Arg2:T107	
+R36	Neg Arg1:T112 Arg2:T108	
+R37	Neg Arg1:T112 Arg2:T109	
+R38	Neg Arg1:T112 Arg2:T110	
+R39	Neg Arg1:T112 Arg2:T111	
+T113	Symptom 7484 7503	ogólnego osłabienia
+T114	Symptom 7523 7540	zasłabnięć/omdleń
+N29	Reference T114 ICD10:R55	Omdlenie i zapaść
+T115	Date 7541 7549	od 2 lat
+R40	Dat Arg1:T115 Arg2:T114	
+T116	Symptom 7643 7731	osłabienie oraz brak orientacji tego co się dzieje wokół z następowym brakiem świadomośc
+T117	Symptom 7788 7793	blada
+T118	Symptom 7798 7830	niskie ciśnienie rzędu 60/40mmHg
+T119	Symptom 7832 7873	bardzo słabo reaguje na bodźce zewnętrze)
+T120	Symptom 7944 8024	kłującego bólu w klatce piersiowej z jednoczesną niemożnością nabrania powietrza
+T121	Symptom 8120 8161	przemijającego zasinienia ust po spacerze
+T122	Date 8162 8177	2 tygodnie temu
+R41	Dat Arg1:T122 Arg2:T121	
+T123	Investigation 7214 7217	TTE
+T124	Investigation 7219 7223	ABPM
+T125	Investigation 7225 7235	Holter EKG
+T126	Drug 7128 7141	Vigantoletten
+T127	Drug_dose 7142 7196	1 tabletka rano - wg zaleceń specjalisty endokrynologa
+R42	Drg Arg1:T126 Arg2:T127	
+T128	Drug 7056 7064	Calperos
+T129	Drug_dose 7065 7125	500mg 1 tabletka rano - wg zaleceń specjalisty endokrynologa
+R43	Drg Arg1:T128 Arg2:T129	
+T130	Drug 6965 6974	Nootropil
+T131	Drug_dose 6975 7053	800mg 1 tabletka rano i około godziny 13-14 - wg zaleceń specjalisty neurologa
+R44	Drg Arg1:T130 Arg2:T131	
+T132	Drug 6938 6946	Magne B6
+T133	Drug_dose 6947 6962	1 tabletka rano
+R45	Drg Arg1:T132 Arg2:T133	
+T134	Drug 6900 6919	Pluscard 100mg+40mg
+T135	Drug_dose 6920 6935	1 tabletka rano
+R46	Drg Arg1:T134 Arg2:T135	
+T136	Behaviour 6832 6858	warunki mieszkaniowe dobre
+T137	Condition 6767 6776	Uczulenia
+N30	Reference T137 ICD10:T78.4	Alergia, nieokreślona
+T138	Negation 6778 6784	neguje
+R47	Neg Arg1:T138 Arg2:T137	
+T139	Condition 6786 6814	ew. na klej od elektrod (?).
+N31	Reference T139 ICD10:T78.4	Alergia, nieokreślona
+T140	Negation 6758 6764	neguje
+T141	Negation 6736 6742	neguje
+T142	Negation 6706 6716	nieistotny
+T143	Behaviour 6745 6756	Inne używki
+R48	Neg Arg1:T140 Arg2:T143	
+T144	Behaviour 6719 6734	Palenie tytoniu
+N32	Reference T144 ICD10:T65.2	Tytoń i nikotyna
+R49	Neg Arg1:T141 Arg2:T144	
+T145	Condition 6689 6705	Wywiad rodzinny:
+A4	Status T145 Family
+R50	Neg Arg1:T142 Arg2:T145	
+T146	Condition 6619 6622	WZW
+N33	Reference T146 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T147	Condition 6631 6640	borelioza
+N34	Reference T147 ICD10:A69.2	Choroba z Lyme
+T148	Condition 6648 6656	grużlica
+N35	Reference T148 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T149	Condition 6664 6668	odra
+N36	Reference T149 ICD10:B05	Odra
+T150	Negation 6625 6626	-
+R51	Neg Arg1:T150 Arg2:T146	
+T151	Negation 6643 6644	-
+R52	Neg Arg1:T151 Arg2:T147	
+T152	Negation 6659 6660	-
+R53	Neg Arg1:T152 Arg2:T148	
+T153	Negation 6671 6686	- , nie pamięta
+A5	Source T153 Declared
+R54	Neg Arg1:T153 Arg2:T149	
+T154	Treatment 6510 6533	Przebyte operacje: j/w.
+T155	Symptom 5490 5509	ogólnego osłabienia
+T156	Symptom 5538 5548	zasłabnięć
+N37	Reference T156 ICD10:R55	Omdlenie i zapaść
+N38	Reference T155 ICD10:R53	Złe samopoczucie i zmęczenie
+T157	Investigation 5596 5633	wykonania cewnikowania prawostronnego
+T158	Investigation 5638 5680	rzezklatkowym badaniu echokardiograficznym
+T159	Investigation_result 5681 5777	uwidoczniono powiększony wymiar prawej komory serca w części napływowej oraz prawego przedsionka
+T160	Investigation_result 5779 5905	nieprawidłowy ruch przegrody międzykomorowej, zachowaną frakcję wyrzutową lewej komory bez przerostu mięśnia i obniżonym GLPS,
+T161	Investigation_result 5906 5958	nieznacznie obniżoną funkcję skurczową prawej komory
+T162	Investigation_result 5960 6026	przegrodę międzyprzedsionkową i międzykomorową bez cech przecieku,
+T163	Investigation_result 6027 6144	przepływ przez zastawkę Melody z PG max 20.21mmHg ze śladową niedomykalnością, cechy zwyrodnienia homograftu płucnego
+T164	Investigation_result 6150 6195	umiarkowaną niedomykalność zastawki aortalnej
+N39	Reference T164 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T165	Investigation 6206 6216	badanie RM
+R55	Inv Arg1:T158 Arg2:T159	
+R56	Inv Arg1:T158 Arg2:T160	
+R57	Inv Arg1:T158 Arg2:T161	
+R58	Inv Arg1:T158 Arg2:T163	
+R59	Inv Arg1:T158 Arg2:T162	
+R60	Inv Arg1:T158 Arg2:T164	
+T166	Investigation_result 6235 6266	łagodną niedomykalność aortalną
+N40	Reference T166 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T167	Investigation_result 6272 6445	homograft płucny dość wąski na całej długości, z rejestrowaną powyżej zastawki płucnej maksymalną prędkością przepływu rzędu 320cm/s sugerującą zwężenie na poziomie zastawki
+R61	Inv Arg1:T165 Arg2:T166	
+R62	Inv Arg1:T165 Arg2:T167	
+T168	Investigation 6457 6467	Holter EKG
+T169	Investigation_result 6468 6507	wydłużenie QTc (śr. 493ms, maks. 529ms)
+R63	Inv Arg1:T168 Arg2:T169	
+T170	Behaviour 1492 1541	Unikanie leków powodujących wydłużenie odstępu QT
+T171	Investigation 1948 1994	samokontrola ciśnienia tętniczego krwi i tętna
+T172	Condition 3453 3521	Wrodzona wada serca pod postacią wspólnego pnia tętniczego TAC typ I
+N41	Reference T172 ICD10:Q20.0	Wspólny pień tętniczy
+A6	Source T53 Declared
+N42	Reference T53 ICD10:I45.8	Inne określone zaburzenia przewodnictwa
+A7	Source T83 Declared
+N43	Reference T83 ICD10:I45.8	Inne określone zaburzenia przewodnictwa
+A8	Source T87 Declared
+N44	Reference T87 ICD10:I45.8	Inne określone zaburzenia przewodnictwa

@@ -1,0 +1,248 @@
+T1	Investigation 5870 5880	Echo serca
+T2	Investigation 5883 5898	Holter EKG i RR
+T3	Investigation 5902 5917	Próba Wysiłkowa
+T4	Investigation 5920 5941	RTG klatki piersiowej
+T5	Investigation 5944 5967	Dopler tętnic nerkowych
+T6	Drug 5784 5792	Bisocard
+T7	Drug_dose 5793 5821	5 mg 1x dz po 1/2 tabl. rano
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 5824 5832	Prenessa
+T9	Drug_dose 5833 5854	4 mg 1 x dz wieczorem
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 5754 5759	Acard
+T11	Drug_dose 5760 5781	75 mg 1x dz wieczorem
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Behaviour 5703 5729	warunki mieszkaniowe dobre
+T13	Drug 5677 5685	Biseptol
+T14	Condition 5666 5675	Uczulenia
+N1	Reference T14 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R4	Alg Arg1:T14 Arg2:T13	
+T15	Negation 5662 5665	nie
+T16	Negation 5645 5648	nie
+T17	Behaviour 5649 5660	Inne używki
+N2	Reference T17 ICD10:Z72	Problemy związane ze stylem życia
+R5	Neg Arg1:T15 Arg2:T17	
+T18	Behaviour 5628 5644	Palenie tytoniu:
+N3	Reference T18 ICD10:Z72.0	Używanie tytoniu
+R6	Neg Arg1:T16 Arg2:T18	
+T19	Condition 5583 5604	nadciśnienie tętnicze
+N4	Reference T19 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T20	Condition 5614 5626	udarze mózgu
+N5	Reference T20 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T21	Condition 5522 5525	WZW
+N6	Reference T21 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T22	Condition 5535 5544	borelioza
+N7	Reference T22 ICD10:A69.2	Choroba z Lyme
+T23	Negation 5547 5550	- )
+R7	Neg Arg1:T23 Arg2:T22	
+T24	Negation 5526 5532	( -  )
+R8	Neg Arg1:T24 Arg2:T21	
+T25	Negation 5489 5493	brak
+T26	Treatment 5467 5486	Leczenie przewlekłe
+R9	Neg Arg1:T25 Arg2:T26	
+T27	Treatment 5399 5415	cholecystektomii
+T28	Date 5416 5427	30 lat temu
+R10	Dat Arg1:T28 Arg2:T27	
+T29	Treatment 5438 5450	opendektomii
+T30	Date 5451 5465	w dzieciństwie
+R11	Dat Arg1:T30 Arg2:T29	
+T31	Condition 5346 5367	Nadciśnienie tętnicze
+N8	Reference T31 ICD10:I10	
+T32	Symptom 5313 5330	uczucie duszności
+N9	Reference T32 ICD10:R06.0	Duszność
+T33	Symptom 5291 5303	zasłabnięcia
+N10	Reference T33 ICD10:R55	Omdlenie i zapaść
+T34	Negation 5306 5312	neguje
+R12	Neg Arg1:T34 Arg2:T32	
+T35	Negation 5284 5290	Neguje
+R13	Neg Arg1:T35 Arg2:T33	
+T36	Symptom 5277 5282	zgagę
+N11	Reference T36 ICD10:R12	Zgaga
+T37	Symptom 5257 5274	Zgłasza odbijanie
+N12	Reference T37 ICD10:R14	Wzdęcie i pokrewne objawy
+T38	Investigation_result 5224 5255	okresowo niskie tętno do 41/min
+T39	Symptom 5041 5117	bólów w klatce piersiowej o charakterze ściskającym , niezależnym od wysiłku
+N13	Reference T39 ICD10:R07.3	Inne bóle w klatce piersiowej
+T40	Investigation_result 5123 5168	chwiejnych wartości ciśnienia tętniczego krwi
+T41	Investigation 4801 4804	TEE
+T42	Investigation 4807 4817	Holter EKG
+T43	Drug 4763 4772	Esoxx One
+T44	Drug_dose 4773 4785	1x dz na noc
+R14	Drg Arg1:T43 Arg2:T44	
+T45	Drug 4732 4739	Helides
+T46	Drug 4699 4707	Prenessa
+T47	Drug 4656 4664	Bisocard
+T48	Drug_dose 4665 4693	5 mg 1x dz po 1/2 tabl. rano
+R15	Drg Arg1:T47 Arg2:T48	
+T49	Drug_dose 4708 4729	4 mg 1 x dz wieczorem
+R16	Drg Arg1:T46 Arg2:T49	
+T50	Drug_dose 4740 4761	40 mg 1 x dz na czczo
+R17	Drg Arg1:T45 Arg2:T50	
+T51	Behaviour 4604 4630	warunki mieszkaniowe dobre
+T52	Drug 4578 4586	Biseptol
+T53	Condition 4567 4576	Uczulenia
+N14	Reference T53 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R18	Alg Arg1:T53 Arg2:T52	
+T54	Negation 4563 4566	nie
+T55	Negation 4546 4549	nie
+T56	Behaviour 4550 4562	Inne używki:
+N15	Reference T56 ICD10:Z72	Problemy związane ze stylem życia
+R19	Neg Arg1:T54 Arg2:T56	
+T57	Behaviour 4529 4544	Palenie tytoniu
+N16	Reference T57 ICD10:Z72.0	Używanie tytoniu
+R20	Neg Arg1:T55 Arg2:T57	
+T58	Condition 4484 4505	nadciśnienie tętnicze
+N17	Reference T58 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T59	Condition 4515 4527	udarze mózgu
+N18	Reference T59 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T60	Condition 4436 4445	borelioza
+N19	Reference T60 ICD10:A69.2	Choroba z Lyme
+T61	Condition 4423 4426	WZW
+N20	Reference T61 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T62	Negation 4446 4451	( - )
+R21	Neg Arg1:T62 Arg2:T60	
+T63	Negation 4427 4433	( -  )
+R22	Neg Arg1:T63 Arg2:T61	
+T64	Negation 4390 4394	brak
+T65	Treatment 4368 4387	Leczenie przewlekłe
+R23	Neg Arg1:T64 Arg2:T65	
+T66	Treatment 4300 4316	cholecystektomii
+T67	Date 4317 4328	30 lat temu
+R24	Dat Arg1:T67 Arg2:T66	
+T68	Treatment 4339 4351	opendektomii
+T69	Date 4352 4366	w dzieciństwie
+R25	Dat Arg1:T69 Arg2:T68	
+T70	Drug 4249 4257	Biseptol
+T71	Condition 4236 4245	Uczulenie
+N21	Reference T71 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R26	Alg Arg1:T71 Arg2:T70	
+T72	Condition 4213 4234	Nadciśnienie tętnicze
+N22	Reference T72 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T73	Condition 4144 4178	Nadkomorowe zaburzenia rytmu serca
+N23	Reference T73 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T74	Condition 4181 4202	pobudzenia pojedyncze
+N24	Reference T74 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T75	Condition 4205 4209	pary
+N25	Reference T75 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T76	Condition 4112 4142	Pojedyncze pobudzenia komorowe
+N26	Reference T76 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T77	Investigation 4106 4109	TEE
+T78	Condition 4092 4095	ASD
+N27	Reference T78 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T79	Condition 4088 4091	PFO
+N28	Reference T79 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T80	Investigation 4072 4087	do różnicowania
+T81	Condition 3997 4069	Tętniak przegrody międzyprzedsionkowej niewielkim przeciekiem lewo prawo
+N29	Reference T81 ICD10:Q21.8	Inna wrodzona wada rozwojowa przegród serca
+T82	Condition 3939 3980	Łagodna niedomykalność zastawki mitralnej
+N30	Reference T82 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T83	Condition 3983 3995	trójdzielnej
+N31	Reference T83 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T84	Symptom 3906 3923	uczucie duszności
+N32	Reference T84 ICD10:R06.0	Duszność
+T85	Symptom 3884 3896	zasłabnięcia
+N33	Reference T85 ICD10:R55	Omdlenie i zapaść
+T86	Negation 3899 3905	neguje
+R27	Neg Arg1:T86 Arg2:T84	
+T87	Negation 3877 3883	Neguje
+R28	Neg Arg1:T87 Arg2:T85	
+T88	Condition 3427 3468	ubytku w przegrodzie międzyprzedsionkowej
+N34	Reference T88 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T89	Investigation 3485 3488	TEE
+T90	Symptom 3506 3640	nadal dolegliwości bólowe o charakterze ściskającym , niezależnym od wysiłku o mniejszym nasileniu niż przy poprzedniej hospitalizacji
+N35	Reference T90 ICD10:R07.3	Inne bóle w klatce piersiowej
+T91	Investigation 3652 3667	próbę wysiłkowa
+T92	Investigation 3688 3711	elektrokardiograficznie
+T93	Investigation_result 3668 3674	ujemna
+R29	Inv Arg1:T91 Arg2:T93	
+R30	Inv Arg1:T92 Arg2:T93	
+T94	Date 3714 3721	02.2018
+R31	Dat Arg1:T94 Arg2:T91	
+R32	Dat Arg1:T94 Arg2:T93	
+R33	Dat Arg1:T94 Arg2:T92	
+T95	Symptom 3724 3741	Zgłasza odbijanie
+N36	Reference T95 ICD10:R14	Wzdęcie i pokrewne objawy
+T96	Symptom 3744 3749	zgagę
+N37	Reference T96 ICD10:R12	Zgaga
+T97	Drug 3229 3232	IPP
+T98	Drug 3197 3205	Prenessa
+T99	Drug 3155 3163	Bisocard
+T100	Drug_dose 3164 3192	5 mg 1x dz po 1/2 tabl. rano
+R34	Drg Arg1:T99 Arg2:T100	
+T101	Drug_dose 3206 3227	4 mg 1 x dz wieczorem
+R35	Drg Arg1:T98 Arg2:T101	
+T102	Drug_dose 3233 3254	20 mg 1 x dz na czczo
+R36	Drg Arg1:T97 Arg2:T102	
+T103	Treatment 2721 2810	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Gastroenterologicznej.
+T104	Investigation 2915 2918	TEE
+T105	Behaviour 2921 2961	Dieta lekkostrawna , niskocholesterolowa
+T106	Date 2888 2898	09.04.2018
+T107	Treatment 2812 2884	Wyznaczono kolejny termin hospitalizacji w tutejszej Klinice Kardiologii
+R37	Dat Arg1:T106 Arg2:T107	
+T108	Investigation 2975 3050	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek.
+T109	Investigation 3067 3101	kontrola ciśnienia tętniczego krwi
+T110	Drug 2584 2589	Acard
+T111	Drug 2592 2600	Bisocard
+T112	Drug 2603 2611	Prenessa
+T113	Drug 2217 2225	Biseptol
+T114	Condition 2204 2213	Uczulenie
+N38	Reference T114 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R38	Alg Arg1:T114 Arg2:T113	
+T115	Condition 2181 2202	Nadciśnienie tętnicze
+N39	Reference T115 ICD10:I10	
+T116	Condition 2112 2146	Nadkomorowe zaburzenia rytmu serca
+N40	Reference T116 ICD10:I49.1\	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T117	Condition 2149 2170	pobudzenia pojedyncze
+N41	Reference T117 ICD10:I49.4	Inne zaburzenia rytmu serca
+T118	Condition 2173 2177	pary
+N42	Reference T118 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T119	Condition 2080 2110	Pojedyncze pobudzenia komorowe
+N43	Reference T119 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T120	Condition 1965 2037	Tętniak przegrody międzyprzedsionkowej niewielkim przeciekiem lewo prawo
+N44	Reference T120 ICD10:Q21.8	Inna wrodzona wada rozwojowa przegród serca
+T121	Investigation 2040 2055	do różnicowania
+T122	Condition 2060 2063	ASD
+N45	Reference T122 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T123	Condition 2056 2059	PFO
+N46	Reference T123 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T124	Investigation 2074 2077	TEE
+T125	Condition 1907 1948	Łagodna niedomykalność zastawki mitralnej
+N47	Reference T125 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T126	Condition 1951 1963	trójdzielnej
+N48	Reference T126 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T127	Drug 1655 1664	Esoxx One
+T128	Drug 1624 1631	Helides
+T129	Drug 1591 1599	Prenessa
+T130	Drug 1548 1556	Bisocard
+T131	Drug_dose 1557 1585	5 mg 1x dz po 1/2 tabl. rano
+R39	Drg Arg1:T130 Arg2:T131	
+T132	Drug_dose 1600 1621	4 mg 1 x dz wieczorem
+R40	Drg Arg1:T129 Arg2:T132	
+T133	Drug_dose 1632 1653	40 mg 1 x dz na czczo
+R41	Drg Arg1:T128 Arg2:T133	
+T134	Drug_dose 1665 1677	1x dz na noc
+R42	Drg Arg1:T127 Arg2:T134	
+T135	Treatment 1212 1316	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Gastroneterologicznej, Neurologicznej
+T136	Behaviour 1319 1359	Dieta lekkostrawna , niskocholesterolowa
+T137	Investigation 1372 1446	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T138	Investigation 1449 1497	Systematyczna kontrola ciśnienia tętniczego krwi
+T139	Drug 841 849	Bisocard
+T140	Drug 850 858	Prenessa
+T141	Drug 859 866	Helides
+T142	Drug 867 876	Esoxx One
+T143	Drug 691 699	Biseptol
+T144	Condition 678 687	Uczulenie
+N49	Reference T144 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R43	Alg Arg1:T144 Arg2:T143	
+T145	Condition 655 676	Nadciśnienie tętnicze
+N50	Reference T145 ICD10:I10	
+T146	Condition 607 653	Napadowy nieutrwalony częstoskurcz nadkomorowy
+N51	Reference T146 ICD10:I47.1	Częstoskurcz nadkomorowy
+T147	Condition 575 605	Pojedyncze pobudzenia komorowe
+N52	Reference T147 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T148	Condition 517 558	Łagodna niedomykalność zastawki mitralnej
+N53	Reference T148 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T149	Condition 561 573	trójdzielnej
+N54	Reference T149 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T150	Condition 450 515	Przetrwały otwór owalny z nieistotnym hemodynamicznie przeciekiem
+N55	Reference T150 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej

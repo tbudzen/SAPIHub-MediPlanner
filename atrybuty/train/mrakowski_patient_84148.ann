@@ -1,0 +1,50 @@
+T1	Condition 450 495	Łagodna niedomykalność zastawki pnia płucnego
+N1	Reference T1 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T2	Condition 498 519	zastawki trójdzielnej
+N2	Reference T2 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T3	Treatment 629 690	dalsza opieka w poradni POZ, okresowa kontrola kardiologiczna
+T4	Behaviour 691 710	prawidłowe żywienie
+T5	Behaviour 711 749	regularna, aerobowa aktywność fizyczna
+T6	Condition 902 972	wrodzona serca pod postacią stenozy płucnej z łagodną niedomykalnością
+N3	Reference T6 ICD10:I37.2	Zwężenie zastawki pnia płucnego z niedomykalnością
+T7	Negation 1035 1038	bez
+T8	Symptom 1039 1051	dolegliwości
+R1	Neg Arg1:T7 Arg2:T8	
+T9	Treatment 1054 1071	Przebyte operacje
+T10	Negation 1073 1083	nie podaje
+R2	Neg Arg1:T10 Arg2:T9	
+T11	Treatment 1084 1103	Leczenie przewlekłe
+T12	Negation 1105 1115	nie podaje
+R3	Neg Arg1:T12 Arg2:T11	
+T13	Condition 1143 1146	WZW
+N4	Reference T13 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T14	Condition 1148 1157	borelioza
+N5	Reference T14 ICD10:A69.2	Choroba z Lyme
+T15	Negation 1160 1170	nie podaje
+R4	Neg Arg1:T15 Arg2:T14	
+R5	Neg Arg1:T15 Arg2:T13	
+T16	Condition 1171 1186	Wywiad rodzinny
+A1	Status T16 Family
+T17	Negation 1188 1198	nie podaje
+R6	Neg Arg1:T17 Arg2:T16	
+T18	Behaviour 1199 1214	Palenie tytoniu
+T19	Negation 1216 1226	nie podaje
+R7	Neg Arg1:T19 Arg2:T18	
+T20	Behaviour 1227 1238	Inne używki
+T21	Negation 1240 1250	nie podaje
+R8	Neg Arg1:T21 Arg2:T20	
+T22	Condition 1251 1260	Uczulenia
+T23	Negation 1262 1272	nie podaje
+R9	Neg Arg1:T23 Arg2:T22	
+T24	Behaviour 1291 1301	bezrobotna
+T25	Drug 1329 1339	Vibin mini
+T26	Drug_dose 1342 1370	tabl. antykoncepcyjna 1 x dz
+R10	Drg Arg1:T25 Arg2:T26	
+T27	Investigation 1398 1408	echo serca
+T28	Investigation 1410 1413	TET
+T29	Investigation 1415 1419	ABPM
+T30	Investigation 1421 1427	Holter
+T31	Investigation 1429 1447	RTG kl. piersiowej
+N7	Reference T22 ICD10:T78.4	Alergia, nieokreślona
+N6	Reference T18 ICD10:Z72.0	Używanie tytoniu
+N8	Reference T20 ICD10:Z72	Problemy związane ze stylem życia

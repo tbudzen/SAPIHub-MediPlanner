@@ -1,0 +1,542 @@
+allRelations          : 45
+oks                   : 18
+isRedundantAndRemoveds: 26
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 1
+GOOD / BAD            : 44 / 1
+Sentence 0:
+------------------------------------------------
+Wiek: 40 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+
+
+
+Sentence 4:
+------------------------------------------------
+- dalsza opieka w POZ
+- dalsza diagnostyka w Poradni Neurologicznej, Laryngologicznej oraz Chorób Zakaźnych
+- redukcja masy ciała
+- dieta bezglutenowa, lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz c
+------------------------------------------------
+
+
+
+Sentence 5:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 6:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q21|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Diagnostyka w kierunku PFO - negatywna.
+R1	Neg Arg1:T4 Arg2:T3 << OK >>	negatywna -> Diagnostyka w kierunku PFO  <RANK: 3> <info: start[820, 791] <type: LEFT>>
+
+
+Sentence 7:
+Nietolerancja glutenu oraz laktozy.
+
+
+
+Sentence 8:
+------------------------------------------------
+
+
+
+Sentence 9:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 10:
+Pacjentka lat 40, ze zmniejszoną tolerancją wysiłku fizycznego od 1 roku (aktualnie odpoczywa po wejściu na 1,5 piętra), ogólnym osłabieniem, z bólami głowy, przyjęta do kliniki z powodu okresów szybkiej i wolnej pracy serca. 
+
+
+
+Sentence 11:
+W wywiadzie ponadto: bóle w klatce piersiowej bez związku z wysiłkiem fizycznym, w RM głowy (04.06.2019): zmiany bliznowate- możliwe pochodzenie niedokrwienne, demielinizacyjne, zapalne, przyścienne zgrubienia śluzówkowe w zatokach przynosowych.
+
+R2	Inv Arg1:T49 Arg2:T51 << OK >>	RM głowy -> zmiany bliznowate- możliwe pochodzenie niedokrwienne, demielinizacyjne, zapalne, przyścienne zgrubienia śluzówkowe w zatokach przynosowych  <RANK: 2> <info: start[1301, 1324] <type: RIGHT>>
+R3	Dat Arg1:T50 Arg2:T48 <<REDUNDANT!!!SHOULD BE REMOVED>>	04.06.2019 -> bóle w klatce piersiowej bez związku z wysiłkiem fizycznym  <RANK: 2> <info: start[1311, 1239] <type: LEFT>>
+R4	Dat Arg1:T50 Arg2:T49 << OK >>	04.06.2019 -> RM głowy  <RANK: 3> <info: start[1311, 1301] <type: LEFT>>
+
+
+Sentence 12:
+RR nie mierzy w domu
+
+
+
+Sentence 13:
+Neguje: zasłabnięcia, omdlenia, krwawienia, duszność, obrzęki podudzi, HA, DM, 
+
+R5	Neg Arg1:T36 Arg2:T37 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[1485, 1493] <type: RIGHT>>
+R6	Neg Arg1:T36 Arg2:T38 << OK >>	Neguje -> omdlenia  <RANK: 2> <info: start[1485, 1507] <type: RIGHT>>
+R7	Neg Arg1:T36 Arg2:T39 << OK >>	Neguje -> krwawienia  <RANK: 2> <info: start[1485, 1517] <type: RIGHT>>
+R8	Neg Arg1:T36 Arg2:T40 << OK >>	Neguje -> duszność  <RANK: 2> <info: start[1485, 1529] <type: RIGHT>>
+R9	Neg Arg1:T36 Arg2:T41 << OK >>	Neguje -> obrzęki podudzi  <RANK: 2> <info: start[1485, 1539] <type: RIGHT>>
+R10	Neg Arg1:T36 Arg2:T42 << OK >>	Neguje -> HA  <RANK: 2> <info: start[1485, 1556] <type: RIGHT>>
+R11	Neg Arg1:T36 Arg2:T43 << OK >>	Neguje -> DM  <RANK: 2> <info: start[1485, 1560] <type: RIGHT>>
+
+
+Sentence 14:
+Przebyte operacje: usunięcie macicy, cholecystektomia
+
+
+
+Sentence 15:
+Palenie tytoniu: nie
+Inne używki: nie 
+Uczulenia: gluten, laktoza
+
+R12	Neg Arg1:T30 Arg2:T7 <<REDUNDANT!!!REMOVED>>	nie -> laktoza <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1653, 1677] <type: RIGHT>>
+R13	Neg Arg1:T30 Arg2:T8 <<REDUNDANT!!!REMOVED>>	nie -> gluten <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1653, 1669] <type: RIGHT>>
+R14	Neg Arg1:T30 Arg2:T32 << OK >>	nie -> Inne używki:  <RANK: 3> <info: start[1653, 1640] <type: LEFT>>
+R15	Neg Arg1:T30 Arg2:T33 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu: <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1653, 1619] <type: LEFT>>
+R16	Neg Arg1:T31 Arg2:T7 <<REDUNDANT!!!REMOVED>>	nie -> laktoza <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1636, 1677] <type: RIGHT>>
+R17	Neg Arg1:T31 Arg2:T8 <<REDUNDANT!!!REMOVED>>	nie -> gluten <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1636, 1669] <type: RIGHT>>
+R18	Neg Arg1:T31 Arg2:T32 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki: <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1636, 1640] <type: RIGHT>>
+R19	Neg Arg1:T31 Arg2:T33 << OK >>	nie -> Palenie tytoniu:  <RANK: 3> <info: start[1636, 1619] <type: LEFT>>
+
+
+Sentence 16:
+Przebyte choroby zakaźne - WZW (-) , borelioza (-), tbc (-), odra (-), kontakt z odrą (-)
+
+R20	Neg Arg1:T25 Arg2:T20 << OK >>	(-) -> WZW  <RANK: 3> <info: start[1716, 1712] <type: LEFT>>
+R21	Neg Arg1:T25 Arg2:T21 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1716, 1722] <type: RIGHT>>
+R22	Neg Arg1:T25 Arg2:T22 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1716, 1737] <type: RIGHT>>
+R23	Neg Arg1:T25 Arg2:T23 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1716, 1746] <type: RIGHT>>
+R24	Neg Arg1:T25 Arg2:T24 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1716, 1756] <type: RIGHT>>
+R25	Neg Arg1:T26 Arg2:T20 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1732, 1712] <type: LEFT>>
+R26	Neg Arg1:T26 Arg2:T21 << OK >>	(-) -> borelioza  <RANK: 3> <info: start[1732, 1722] <type: LEFT>>
+R27	Neg Arg1:T26 Arg2:T22 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1732, 1737] <type: RIGHT>>
+R28	Neg Arg1:T26 Arg2:T23 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1732, 1746] <type: RIGHT>>
+R29	Neg Arg1:T26 Arg2:T24 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1732, 1756] <type: RIGHT>>
+R30	Neg Arg1:T27 Arg2:T20 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1741, 1712] <type: LEFT>>
+R31	Neg Arg1:T27 Arg2:T21 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1741, 1722] <type: LEFT>>
+R32	Neg Arg1:T27 Arg2:T22 << OK >>	(-) -> tbc  <RANK: 3> <info: start[1741, 1737] <type: LEFT>>
+R33	Neg Arg1:T27 Arg2:T23 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1741, 1746] <type: RIGHT>>
+R34	Neg Arg1:T27 Arg2:T24 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1741, 1756] <type: RIGHT>>
+R35	Neg Arg1:T28 Arg2:T20 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1751, 1712] <type: LEFT>>
+R36	Neg Arg1:T28 Arg2:T21 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1751, 1722] <type: LEFT>>
+R37	Neg Arg1:T28 Arg2:T22 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1751, 1737] <type: LEFT>>
+R38	Neg Arg1:T28 Arg2:T23 << OK >>	(-) -> odra  <RANK: 3> <info: start[1751, 1746] <type: LEFT>>
+R39	Neg Arg1:T28 Arg2:T24 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1751, 1756] <type: RIGHT>>
+R40	Neg Arg1:T29 Arg2:T20 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1771, 1712] <type: LEFT>>
+R41	Neg Arg1:T29 Arg2:T21 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1771, 1722] <type: LEFT>>
+R42	Neg Arg1:T29 Arg2:T22 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1771, 1737] <type: LEFT>>
+R43	Neg Arg1:T29 Arg2:T23 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1771, 1746] <type: LEFT>>
+R44	Neg Arg1:T29 Arg2:T24 << OK >>	(-) -> kontakt z odrą  <RANK: 3> <info: start[1771, 1756] <type: LEFT>>
+
+
+Sentence 17:
+W wywiadzie rodzinnym: DM t1- siostra, DM t2, HA- ojciec, 
+
+
+
+Sentence 18:
+Stan społeczny: warunki mieszkaniowe dobre. 
+
+
+
+Sentence 19:
+Leki: bez leków
+
+
+R45	Neg Arg1:T14 Arg2:T15 << OK >>	bez leków -> Leki  <RANK: 3> <info: start[1885, 1879] <type: LEFT>>
+
+
+Sentence 20:
+Planowany czas hospitalizacji: 4-5 dni.
+
+
+
+Sentence 21:
+Planowane badania: badania laboratoryjne, ECHO, TEE, EKG metodą Holtera, ABPM, próba wysiłkowa.
+
+
+
+Sentence 22:
+------------------------------------------------
+
+
+
+Sentence 23:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 24:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.63[10^3/ul]
+    
+
+
+Sentence 25:
+RBC Krwinki czerwone:4.33[10^6/ul]
+    
+
+
+Sentence 26:
+HGB Hemoglobina:13.0[g/dl]
+    
+
+
+Sentence 27:
+HCT Hematokryt:35.5[%]
+    
+
+
+Sentence 28:
+MCV wskaźnik czerwonokrw:82.0[fl]
+    
+
+
+Sentence 29:
+MCH wskaźnik czerwonokrw:30.0[pg]
+    
+
+
+Sentence 30:
+MCHC wskaźnik czerwonokr:36.6[g/dl]
+    
+
+
+Sentence 31:
+PLT z morfologii:237[10^3/ul]
+    
+
+
+Sentence 32:
+RDW-SD:39.2[fl]
+    
+
+
+Sentence 33:
+RDW-CV:13.1[%]
+    PDW:15.1[fl]
+    MPV:11.8[fl]
+    P-LCR:40.1[%]
+    
+
+
+Sentence 34:
+PCT (hematokryt płytkowy:0.28[%]
+    
+
+
+Sentence 35:
+NEUTR# wartość bezwzględ:3.37[10^3/ul]
+    
+
+
+Sentence 36:
+NEUTR%:50.8[%]
+    
+
+
+Sentence 37:
+LYMH# wartość bezwzględn:2.08[10^3/ul]
+    
+
+
+Sentence 38:
+LYMPH%:31.4[%]
+    
+
+
+Sentence 39:
+MONO# wartość bezwzględn:0.49[10^3/ul]
+    MONO%:7.4[%]
+    
+
+
+Sentence 40:
+EO# wartość bezwzględna:0.63[10^3/ul]
+    
+
+
+Sentence 41:
+EO%:9.5[%]
+    BASO# wartość bezwzględn:0.06[10^3/ul]
+    BASO%:0.9[%]
+    
+
+
+Sentence 42:
+NRBC %:0.0[%]
+    
+
+
+Sentence 43:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 44:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:25.9[sek]
+
+
+
+Sentence 45:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 46:
+Czas protrombinowy:11.9[sek]
+    
+
+
+Sentence 47:
+Wskaźnik PT:92.4[%]
+    
+
+
+Sentence 48:
+INR:1.08
+Badanie ogólne moczu
+    
+
+
+Sentence 49:
+barwa:słomkowy[ ]
+    
+
+
+Sentence 50:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 51:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 52:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 53:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 54:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 55:
+ciężar właściwy:1.004[ ]
+    pH:7.0[ ]
+    
+
+
+Sentence 56:
+białko:nieobecne[ ]
+    
+
+
+Sentence 57:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 58:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 59:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 60:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 61:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 62:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 63:
+leukocyty:3 /ul[ul]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 64:
+TSH: TSH:1.19[uIU/ml]
+
+
+
+Sentence 65:
+FT3: FT3:2.99[pg/ml]
+
+
+
+Sentence 66:
+FT4: FT4:1.34[ng/dl]
+
+
+
+Sentence 67:
+ALAT: ALAT:10[U/L]
+ASPAT: ASPAT:17[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 68:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 69:
+Potas (K): Potas:4.2[mmol/L]
+
+
+
+Sentence 70:
+Kreatynina + GFR
+    
+
+
+Sentence 71:
+Kreatynina w surowicy:0.53[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 72:
+MDRD ze stan:127.8[ml/min/1,73 m^2]
+
+
+
+Sentence 73:
+Mocznik: Mocznik:11[mg/dl]
+
+
+
+Sentence 74:
+Kwas moczowy: Kwas moczowy:4.9[mg/dl]
+
+
+
+Sentence 75:
+Lipidogram
+    
+
+
+Sentence 76:
+Cholesterol całkowity:146[mg/dl]
+    
+
+
+Sentence 77:
+Cholesterol HDL:70[mg/dl]
+    
+
+
+Sentence 78:
+Cholestrol LDL:64[mg/dl]
+    Triglicerydy:64[mg/dl]
+    
+
+
+Sentence 79:
+Stosunek cholesterolu HD:0.5
+
+
+
+Sentence 80:
+Glukoza w surowicy: Glukoza w surowicy:92[mg/dl]
+
+
+
+Sentence 81:
+Glukoza w surowicy: Glukoza w surowicy:88[mg/dl]
+
+
+
+Sentence 82:
+------------------------------------------------
+
+
+
+Sentence 83:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 84:
+Q21.9
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 85:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 86:
+89.501
+C55
+89.502
+A01
+
+
+
+Sentence 87:
+I81
+G11
+G21
+L43
+N45
+L69
+O55
+I17
+M45
+O35
+M37
+I19
+N13
+88.721
+O69
+88.722
+------------------------------------------------
+
+

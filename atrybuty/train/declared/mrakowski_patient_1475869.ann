@@ -1,0 +1,69 @@
+T1	Treatment 331 404	Wskazana dalsza opieka u lekarza POZ oraz w poradni gastroenterologicznej
+T2	Behaviour 429 503	Dieta lekkostrawna z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T3	Behaviour 507 569	Regularne spożywanie posiłków i ograniczenie nadmiernego picia
+T4	Symptom 797 829	Atypowe bóle w klatce piersiowej
+N1	Reference T4 ICD10:R07.3	Inne bóle w klatce piersiowej
+T5	Condition 843 868	choroby wrzodowej żołądka
+A1	Source T5 Declared
+N2	Reference T5 ICD10:K25	Wrzód żołądka
+T6	Symptom 1037 1064	bólów o charakterze wysiłku
+N3	Reference T6 ICD10:R07.3	Inne bóle w klatce piersiowej
+T7	Date 1072 1085	1.5 roku temu
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Symptom 1086 1144	w wysiłku (siłowania, spacer szybki, duszne pomieszczenia)
+N4	Reference T8 ICD10:R07.3	Inne bóle w klatce piersiowej
+T9	Symptom 1224 1272	z promieniowaniem do pleców - ból kilkusekundowy
+N5	Reference T9 ICD10:R07.3	Inne bóle w klatce piersiowej
+T10	Symptom 1298 1314	złe samopoczucie
+T11	Symptom 1316 1329	zawroty głowy
+N6	Reference T11 ICD10:R42	Zawroty głowy i odurzenie
+T12	Symptom 1331 1337	ospały
+N7	Reference T12 ICD10:R53	Złe samopoczucie i zmęczenie
+T13	Investigation 1354 1379	Holter EKG ambulatoryjnie
+T14	Date 1380 1393	w przeszłości
+R2	Dat Arg1:T14 Arg2:T13	
+T15	Investigation_result 1396 1427	tachykardia zatokowa rozpoznana
+N8	Reference T15 ICD10:R00.0	Tachykardia, nieokreślona
+R3	Dat Arg1:T14 Arg2:T15	
+R4	Inv Arg1:T13 Arg2:T15	
+T16	Negation 1451 1457	neguje
+T17	Treatment 1459 1476	Przebyte operacje
+T18	Negation 1478 1484	neguje
+R5	Neg Arg1:T18 Arg2:T17	
+T19	Condition 1486 1501	Wywiad rodzinny
+A2	Status T19 Family
+T20	Condition 1513 1515	MI
+A3	Status T20 Family
+N9	Reference T20 ICD10:I25.2	Przebyty zawał serca
+T21	Treatment 1518 1522	CABG
+A4	Status T21 Family
+T22	Condition 1548 1555	Alergie
+T23	Negation 1557 1563	neguje
+R6	Neg Arg1:T23 Arg2:T22	
+T24	Behaviour 1565 1575	Nikotynizm
+T25	Date 1581 1597	do 6 m-cy wstecz
+R7	Dat Arg1:T25 Arg2:T24	
+T26	Behaviour 1599 1611	10 paczkolat
+T27	Behaviour 1612 1633	Alkohol: okazjonalnie
+N12	Reference T27 ICD10:Z72.1	Używanie alkoholu
+T28	Behaviour 1635 1652	Uzależnienie inne
+T29	Negation 1654 1660	neguje
+R8	Neg Arg1:T29 Arg2:T28	
+T30	Behaviour 1678 1718	pracuje - jako konserwator w przedszkolu
+T31	Symptom 1754 1763	spadki BP
+N13	Reference T31 ICD10:R03.1	Nieswoiste obniżone ciśnienie tętnicze krwi
+T32	Drug 1765 1776	Betaloc ZOK
+T33	Date 1735 1744	wcześniej
+R9	Dat Arg1:T33 Arg2:T31	
+R10	Dat Arg1:T33 Arg2:T32	
+T34	Investigation 1841 1851	echo serca
+T35	Investigation 1853 1856	TET
+T36	Investigation 1858 1862	ABPM
+T37	Investigation 1864 1874	Holter ekg
+T38	Investigation 1876 1894	rtg kl. piersiowej
+N14	Reference T22 ICD10:T78.4	Alergia, nieokreślona
+R11	Dat Arg1:T7 Arg2:T8	
+T40	Drug 1745 1751	Ebivol
+R13	Dat Arg1:T33 Arg2:T40	
+N10	Reference T24 ICD10:Z72.0	Używanie tytoniu
+N11	Reference T26 ICD10:Z72.0	Używanie tytoniu

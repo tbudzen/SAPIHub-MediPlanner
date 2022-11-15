@@ -1,0 +1,508 @@
+allRelations          : 57
+oks                   : 16
+isRedundantAndRemoveds: 38
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 2
+GOOD / BAD            : 54 / 3
+Sentence 0:
+------------------------------------------------
+Wiek: 59 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:I10|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Nadciśnienie tętnicze.
+
+
+
+Sentence 6:
+------------------------------------------------
+
+
+
+Sentence 7:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 8:
+------------------------------------------------
+ Rozpozanie I: ICD10:I10|Rozpoznanie II: |Rozpoznanie V: |Opisowo:: Łagodna niedomykalność zastawki mitralnej i trójdzielnej.
+
+
+Sentence 9:
+Kołatania serca.|Rozpoznanie IV: |Rozpoznanie III:
+------------------------------------------------
+
+
+
+Sentence 10:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+58-letni pacjent z nadciśnieniem tętniczym kontrolowanym farmakologicznie, ograniczenia tolerancji wysiłku do I klasy wg NYHA od lat oraz kołatań serca, został przyjęty do Kliniki celem diagnostyki. 
+
+R1	Dat Arg1:T7 Arg2:T6 << OK >>	od lat -> ograniczenia tolerancji wysiłku do I klasy wg NYHA  <RANK: 3> <info: start[1020, 969] <type: LEFT>>
+R2	Dat Arg1:T7 Arg2:T8 <<SHOULD NOT BE REMOVED>>	od lat -> kołatań serca <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1020, 1032] <type: RIGHT>>
+R3	Dat Arg1:T7 Arg2:T5 <<REDUNDANT!!!SHOULD BE REMOVED>>	od lat -> nadciśnieniem tętniczym kontrolowanym farmakologicznie  <RANK: 2> <info: start[1020, 913] <type: LEFT>>
+
+
+Sentence 11:
+Neguje zasłabnięcia, duszności, typowe bóle w klatce piersiowej.
+
+R4	Neg Arg1:T9 Arg2:T10 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[1094, 1101] <type: RIGHT>>
+R5	Neg Arg1:T9 Arg2:T11 << OK >>	Neguje -> duszności  <RANK: 2> <info: start[1094, 1115] <type: RIGHT>>
+R6	Neg Arg1:T9 Arg2:T12 << OK >>	Neguje -> typowe bóle w klatce piersiowej  <RANK: 2> <info: start[1094, 1126] <type: RIGHT>>
+
+
+Sentence 12:
+Przebyte operacje:  neguje
+Przebyte choroby zakaźne - WZW ( - ) , borelioza ( - ), gruźlica (-), odra (-)
+Wywiad rodzinny: ojciec - udar mózgu w wieku 60 lat
+
+R7	Neg Arg1:T14 Arg2:T15 <<REDUNDANT!!!REMOVED>>	neguje -> WZW <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1179, 1213] <type: RIGHT>>
+R8	Neg Arg1:T14 Arg2:T16 <<REDUNDANT!!!REMOVED>>	neguje -> borelioza <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1179, 1225] <type: RIGHT>>
+R9	Neg Arg1:T14 Arg2:T17 <<REDUNDANT!!!REMOVED>>	neguje -> gruźlica <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1179, 1242] <type: RIGHT>>
+R10	Neg Arg1:T14 Arg2:T18 <<REDUNDANT!!!REMOVED>>	neguje -> odra <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1179, 1256] <type: RIGHT>>
+R11	Neg Arg1:T14 Arg2:T23 <<REDUNDANT!!!REMOVED>>	neguje -> udar mózgu <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1179, 1291] <type: RIGHT>>
+R12	Neg Arg1:T14 Arg2:T38 <<REDUNDANT!!!REMOVED>>	neguje -> Wywiad rodzinny <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1179, 1265] <type: RIGHT>>
+R13	Neg Arg1:T14 Arg2:T13 << OK >>	neguje -> Przebyte operacje  <RANK: 3> <info: start[1179, 1159] <type: LEFT>>
+R14	Neg Arg1:T19 Arg2:T15 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1262, 1213] <type: LEFT>>
+R15	Neg Arg1:T19 Arg2:T16 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1262, 1225] <type: LEFT>>
+R16	Neg Arg1:T19 Arg2:T17 <<REDUNDANT!!!REMOVED>>	- -> gruźlica <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1262, 1242] <type: LEFT>>
+R17	Neg Arg1:T19 Arg2:T18 << OK >>	- -> odra  <RANK: 3> <info: start[1262, 1256] <type: LEFT>>
+R18	Neg Arg1:T19 Arg2:T23 <<REDUNDANT!!!REMOVED>>	- -> udar mózgu <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1262, 1291] <type: RIGHT>>
+R19	Neg Arg1:T19 Arg2:T38 <<REDUNDANT!!!REMOVED>>	- -> Wywiad rodzinny <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1262, 1265] <type: RIGHT>>
+R20	Neg Arg1:T19 Arg2:T13 <<REDUNDANT!!!REMOVED>>	- -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1262, 1159] <type: LEFT>>
+R21	Neg Arg1:T20 Arg2:T15 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1252, 1213] <type: LEFT>>
+R22	Neg Arg1:T20 Arg2:T16 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1252, 1225] <type: LEFT>>
+R23	Neg Arg1:T20 Arg2:T17 << OK >>	- -> gruźlica  <RANK: 3> <info: start[1252, 1242] <type: LEFT>>
+R24	Neg Arg1:T20 Arg2:T18 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1252, 1256] <type: RIGHT>>
+R25	Neg Arg1:T20 Arg2:T23 <<REDUNDANT!!!REMOVED>>	- -> udar mózgu <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1252, 1291] <type: RIGHT>>
+R26	Neg Arg1:T20 Arg2:T38 <<REDUNDANT!!!REMOVED>>	- -> Wywiad rodzinny <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1252, 1265] <type: RIGHT>>
+R27	Neg Arg1:T20 Arg2:T13 <<REDUNDANT!!!REMOVED>>	- -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1252, 1159] <type: LEFT>>
+R28	Neg Arg1:T21 Arg2:T15 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1237, 1213] <type: LEFT>>
+R29	Neg Arg1:T21 Arg2:T16 << OK >>	- -> borelioza  <RANK: 3> <info: start[1237, 1225] <type: LEFT>>
+R30	Neg Arg1:T21 Arg2:T17 <<REDUNDANT!!!REMOVED>>	- -> gruźlica <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1237, 1242] <type: RIGHT>>
+R31	Neg Arg1:T21 Arg2:T18 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1237, 1256] <type: RIGHT>>
+R32	Neg Arg1:T21 Arg2:T23 <<REDUNDANT!!!REMOVED>>	- -> udar mózgu <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1237, 1291] <type: RIGHT>>
+R33	Neg Arg1:T21 Arg2:T38 <<REDUNDANT!!!REMOVED>>	- -> Wywiad rodzinny <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1237, 1265] <type: RIGHT>>
+R34	Neg Arg1:T21 Arg2:T13 <<REDUNDANT!!!REMOVED>>	- -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1237, 1159] <type: LEFT>>
+R35	Neg Arg1:T22 Arg2:T15 << OK >>	- -> WZW  <RANK: 3> <info: start[1219, 1213] <type: LEFT>>
+R36	Neg Arg1:T22 Arg2:T16 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1219, 1225] <type: RIGHT>>
+R37	Neg Arg1:T22 Arg2:T17 <<REDUNDANT!!!REMOVED>>	- -> gruźlica <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1219, 1242] <type: RIGHT>>
+R38	Neg Arg1:T22 Arg2:T18 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1219, 1256] <type: RIGHT>>
+R39	Neg Arg1:T22 Arg2:T23 <<REDUNDANT!!!REMOVED>>	- -> udar mózgu <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1219, 1291] <type: RIGHT>>
+R40	Neg Arg1:T22 Arg2:T38 <<REDUNDANT!!!REMOVED>>	- -> Wywiad rodzinny <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1219, 1265] <type: RIGHT>>
+R41	Neg Arg1:T22 Arg2:T13 <<REDUNDANT!!!REMOVED>>	- -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1219, 1159] <type: LEFT>>
+R42	Dat Arg1:T24 Arg2:T15 <<REDUNDANT!!!REMOVED>>	w wieku 60 lat -> WZW <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1302, 1213] <type: LEFT>>
+R43	Dat Arg1:T24 Arg2:T16 <<REDUNDANT!!!REMOVED>>	w wieku 60 lat -> borelioza <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1302, 1225] <type: LEFT>>
+R44	Dat Arg1:T24 Arg2:T17 <<REDUNDANT!!!REMOVED>>	w wieku 60 lat -> gruźlica <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1302, 1242] <type: LEFT>>
+R45	Dat Arg1:T24 Arg2:T18 <<REDUNDANT!!!REMOVED>>	w wieku 60 lat -> odra <:REMOVED other second tag between (left):> <RANK: 1> <info: start[1302, 1256] <type: LEFT>>
+R46	Dat Arg1:T24 Arg2:T23 << OK >>	w wieku 60 lat -> udar mózgu  <RANK: 3> <info: start[1302, 1291] <type: LEFT>>
+R47	Dat Arg1:T24 Arg2:T38 <<REDUNDANT!!!SHOULD BE REMOVED>>	w wieku 60 lat -> Wywiad rodzinny  <RANK: 3> <info: start[1302, 1265] <type: LEFT>>
+R48	Dat Arg1:T24 Arg2:T13 <<REDUNDANT!!!REMOVED>>	w wieku 60 lat -> Przebyte operacje <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1302, 1159] <type: LEFT>>
+
+
+Sentence 13:
+Palenie tytoniu: nie, palił ostatni raz 20 lat temu
+
+R49	Neg Arg1:T26 Arg2:T25 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[1334, 1317] <type: LEFT>>
+R50	Dat Arg1:T27 Arg2:T25 << OK >>	ostatni raz 20 lat temu -> Palenie tytoniu  <RANK: 2> <info: start[1345, 1317] <type: LEFT>>
+
+
+Sentence 14:
+Inne używki: alkohol - okazjonalnie
+Uczulenia: neguje
+Stan społeczny: warunki mieszkaniowe dobre, mieszka z rodziną
+
+R51	Neg Arg1:T30 Arg2:T29 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[1416, 1405] <type: LEFT>>
+R52	Neg Arg1:T30 Arg2:T28 <<REDUNDANT!!!REMOVED>>	neguje -> alkohol - okazjonalnie <:REMOVED other second tag between (left):> <RANK: 1> <info: start[1416, 1382] <type: LEFT>>
+R53	Neg Arg1:T30 Arg2:T31 <<REDUNDANT!!!REMOVED>>	neguje -> warunki mieszkaniowe dobre <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1416, 1439] <type: RIGHT>>
+R54	Neg Arg1:T30 Arg2:T39 <<REDUNDANT!!!REMOVED>>	neguje -> Inne używki <:REMOVED other second tag between (left):> <RANK: 1> <info: start[1416, 1369] <type: LEFT>>
+
+
+Sentence 15:
+Leki:
+Co-Prestarium 5+5 1-0-0
+
+R55	Drg Arg1:T32 Arg2:T35 << OK >>	Co-Prestarium -> 5+5 1-0-0  <RANK: 3> <info: start[1491, 1505] <type: RIGHT>>
+
+
+Sentence 16:
+Concor 5mg 1-0-0
+
+R56	Drg Arg1:T33 Arg2:T36 << OK >>	Concor -> 5mg 1-0-0  <RANK: 3> <info: start[1515, 1522] <type: RIGHT>>
+
+
+Sentence 17:
+Nolpaza 20mg 1-0-0
+------------------------------------------------
+
+R57	Drg Arg1:T34 Arg2:T37 << OK >>	Nolpaza -> 20mg 1-0-0  <RANK: 3> <info: start[1532, 1540] <type: RIGHT>>
+
+
+Sentence 18:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 19:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.83[10^3/ul]
+    
+
+
+Sentence 20:
+RBC Krwinki czerwone:4.99[10^6/ul]
+    
+
+
+Sentence 21:
+HGB Hemoglobina:14.1[g/dl]
+    
+
+
+Sentence 22:
+HCT Hematokryt:41.6[%]
+    
+
+
+Sentence 23:
+MCV wskaźnik czerwonokrw:83.4[fl]
+    
+
+
+Sentence 24:
+MCH wskaźnik czerwonokrw:28.3[pg]
+    
+
+
+Sentence 25:
+MCHC wskaźnik czerwonokr:33.9[g/dl]
+    
+
+
+Sentence 26:
+PLT z morfologii:190[10^3/ul]
+    
+
+
+Sentence 27:
+RDW-SD:40.6[fl]
+    
+
+
+Sentence 28:
+RDW-CV:13.3[%]
+    PDW:22.3[fl]
+    MPV:13.3[fl]
+    
+
+
+Sentence 29:
+P-LCR:49.8[%]
+    
+
+
+Sentence 30:
+PCT (hematokryt płytkowy:0.25[%]
+    
+
+
+Sentence 31:
+NEUTR# wartość bezwzględ:3.46[10^3/ul]
+    
+
+
+Sentence 32:
+NEUTR%:59.4[%]
+    
+
+
+Sentence 33:
+LYMH# wartość bezwzględn:1.85[10^3/ul]
+    
+
+
+Sentence 34:
+LYMPH%:31.7[%]
+    
+
+
+Sentence 35:
+MONO# wartość bezwzględn:0.44[10^3/ul]
+    
+
+
+Sentence 36:
+MONO%:7.5[%]
+    
+
+
+Sentence 37:
+EO# wartość bezwzględna:0.05[10^3/ul]
+    
+
+
+Sentence 38:
+EO%:0.9[%]
+    
+
+
+Sentence 39:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    
+
+
+Sentence 40:
+BASO%:0.5[%]
+    
+
+
+Sentence 41:
+NRBC %:0.0[%]
+    
+
+
+Sentence 42:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 43:
+Badanie ogólne moczu
+    
+
+
+Sentence 44:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 45:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 46:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 47:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 48:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 49:
+ciężar właściwy:1.019[ ]
+    
+
+
+Sentence 50:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 51:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 52:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 53:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 54:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 55:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 56:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 57:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 58:
+leukocyty:1 /ul[ul]
+    erytrocyty świeże:1 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 59:
+TSH: TSH:1.04[uIU/ml]
+
+
+
+Sentence 60:
+FT3: FT3:3.53[pg/ml]
+
+
+
+Sentence 61:
+FT4: FT4:1.29[ng/dl]
+
+
+
+Sentence 62:
+ALAT: ALAT:28[U/L]
+ASPAT: ASPAT:22[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.60[mg/dl]
+
+
+
+Sentence 63:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 64:
+Potas (K): Potas:4.6[mmol/L]
+
+
+
+Sentence 65:
+Kreatynina + GFR
+    
+
+
+Sentence 66:
+Kreatynina w surowicy:0.89[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 67:
+MDRD ze stan:87.8[ml/min/1,73 m^2]
+
+
+
+Sentence 68:
+Mocznik: Mocznik:38[mg/dl]
+
+
+
+Sentence 69:
+Kwas moczowy: Kwas moczowy:7.5[mg/dl]
+
+
+
+Sentence 70:
+Lipidogram
+    
+
+
+Sentence 71:
+Cholesterol całkowity:202[mg/dl]
+    
+
+
+Sentence 72:
+Cholesterol HDL:42[mg/dl]
+    
+
+
+Sentence 73:
+Cholestrol LDL:140[mg/dl]
+    
+
+
+Sentence 74:
+Triglicerydy:80[mg/dl]
+    
+
+
+Sentence 75:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:104[mg/dl]
+
+
+
+Sentence 76:
+------------------------------------------------
+
+
+
+Sentence 77:
+ICD10
+------------------------------------------------
+I34.0
+
+
+
+Sentence 78:
+I10
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 79:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 80:
+C53
+I19
+89.501
+88.721
+89.502
+A01
+I81
+89.41
+L43
+N45
+L69
+I17
+------------------------------------------------
+
+

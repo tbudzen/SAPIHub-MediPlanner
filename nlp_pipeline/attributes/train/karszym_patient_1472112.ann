@@ -1,0 +1,46 @@
+T1	Drug 346 355	Cordarone
+T2	Drug 357 368	Propranolol
+T3	Drug 370 376	Acesan
+T4	Drug 378 387	Perfalgan
+T5	Drug 398 407	Neomycyną
+T6	Drug 440 449	0,9% NaCl
+T7	Condition 710 746	Migotanie i trzepotanie przedsionków
+N1	Reference T7 ICD10:I48	Migotanie i trzepotanie przedsionków
+T8	Condition 751 789	Złożone przedsionkowe zaburzenia rytmu
+N2	Reference T8 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T9	Condition 794 859	Wrodzona wada serca pod postacią ubytku przegrody międzykomorowej
+N3	Reference T9 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T10	Treatment 869 877	plastyce
+N4	Reference T10 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T11	Condition 878 900	ubytku przegrody komór
+N5	Reference T11 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T12	Treatment 901 928	łatką dakronową o śr. 10 mm
+N6	Reference T12 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T13	Treatment 930 975	operacja w warunkach krążenia pozaustrojowego
+T14	Date 985 1003	w dniu 11.02.2019r
+R1	Dat Arg1:T14 Arg2:T13	
+R2	Dat Arg1:T14 Arg2:T12	
+R3	Dat Arg1:T14 Arg2:T11	
+R4	Dat Arg1:T14 Arg2:T10	
+T15	Drug 1116 1125	Cordarone
+T16	Drug 1145 1156	Propranolol
+T17	Drug 1174 1180	Acesan
+T18	Drug_dose 1126 1139	1 x 40 mg pos
+T19	Drug_dose 1157 1169	3 x 4 mg pos
+T20	Drug_dose 1181 1194	1 x 30 mg pos
+T21	Treatment 1199 1227	Dalsza opieka kardiologiczna
+T22	Treatment 1229 1261	wizyta w Poradni Kardiologicznej
+T23	Date 1262 1280	w dniu 02.07.2019r
+R5	Dat Arg1:T23 Arg2:T22	
+R6	Drg Arg1:T15 Arg2:T18	
+R7	Drg Arg1:T16 Arg2:T19	
+R8	Drg Arg1:T17 Arg2:T20	
+T24	Drug_dose 428 437	inhalacje
+T25	Drug 410 418	efedryną
+T26	Drug_dose 389 395	krople
+T27	Drug_dose 419 426	do nosa
+R9	Drg Arg1:T5 Arg2:T26	
+R10	Drg Arg1:T5 Arg2:T27	
+R11	Drg Arg1:T25 Arg2:T27	
+R12	Drg Arg1:T25 Arg2:T26	
+R13	Drg Arg1:T6 Arg2:T24	

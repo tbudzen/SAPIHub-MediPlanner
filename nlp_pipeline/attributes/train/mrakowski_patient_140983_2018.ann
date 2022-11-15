@@ -1,0 +1,121 @@
+T1	Condition 450 504	Nadciśnienie tętnicze I stopnia wg ESC/ESH skorygowane
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 506 529	Hiperlipidemia mieszana
+N2	Reference T2 ICD10:E78.2	Hiperlipidemia mieszana
+T3	Condition 531 544	Hiperurykemia
+N3	Reference T3 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T4	Condition 546 568	Niedoczynność tarczycy
+N4	Reference T4 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T5	Condition 581 598	choroby Hashimoto
+N5	Reference T5 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T6	Treatment 599 633	w trakcie leczenia substytucyjnego
+T7	Condition 635 642	Nadwaga
+N6	Reference T7 ICD10:E66.9	Otyłość, nieokreślona
+T8	Treatment 652 677	dwóch cieciach cesarskich
+A1	Status T8 Historical_Insignificant
+T9	Date 689 699	przez laty
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Treatment 702 715	appendektomii
+A2	Status T10 Historical_Insignificant
+T11	Date 716 730	w wieku 18 lat
+R2	Dat Arg1:T11 Arg2:T10	
+T12	Condition 732 741	Uczulenie
+T17	Treatment 905 932	dalsza opieka w poradni POZ
+T18	Treatment 939 971	okresowa kontrola kardiologiczna
+T19	Treatment 978 1004	kontrola endokrynologiczna
+T20	Investigation 1010 1049	codzienna kontrola ciśnienia tętniczego
+T21	Investigation 1056 1085	okresowa kontrola lipidogramu
+T22	Behaviour 1092 1143	dieta DASH i niskocholesterolowa oraz ubogopurynowa
+T23	Behaviour 1150 1169	redukcja masy ciała
+T24	Behaviour 1177 1222	stały, umiarkowany, aerobowy wysiłek fizyczny
+T25	Treatment 1229 1257	regularne przyjmowanie leków
+T26	Drug 1267 1276	Euhyrox N
+T27	Drug_dose 1277 1293	137 1 tabl. rano
+R3	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1301 1311	Concor Cor
+T29	Drug_dose 1312 1331	2.5 mg 1 tabl. rano
+R4	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1339 1344	Cilan
+T31	Drug_dose 1345 1364	2.5 mg 1 tabl. rano
+R5	Drg Arg1:T30 Arg2:T31	
+T32	Drug 1372 1378	Atoris
+T33	Drug_dose 1379 1402	20 mg 1 tabl. wieczorem
+R6	Drg Arg1:T32 Arg2:T33	
+T34	Drug 1410 1417	Milurit
+T35	Drug_dose 1418 1437	100 mg 1 tabl. rano
+R7	Drg Arg1:T34 Arg2:T35	
+T36	Symptom 1606 1619	kołatań serca
+N8	Reference T36 ICD10:R00.2	Kołatanie serca
+T37	Date 1622 1634	od wielu lat
+R8	Dat Arg1:T37 Arg2:T36	
+T38	Date 1645 1655	od 06.2018
+R9	Dat Arg1:T38 Arg2:T36	
+T39	Condition 1683 1686	WPW
+A3	Source T39 Declared
+N9	Reference T39 ICD10:I45.6	Zespół preekscytacji
+T40	Symptom 1688 1732	bólów w klatce piersiowej, międzyłopatkowych
+N10	Reference T40 ICD10:R07.3	Inne bóle w klatce piersiowej
+T41	Date 1734 1748	przed 5 dniami
+R10	Dat Arg1:T41 Arg2:T40	
+T42	Symptom 1749 1786	kilkusekundowy ból od koniuszka serca
+N11	Reference T42 ICD10:R07.3	Inne bóle w klatce piersiowej
+R11	Dat Arg1:T41 Arg2:T42	
+T43	Condition 1811 1834	hiperlipidemia mieszana
+N12	Reference T43 ICD10:E78.2	Hiperlipidemia mieszana
+T44	Condition 1836 1844	HA I st.
+N13	Reference T44 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T45	Condition 1846 1859	ch. Hashimoto
+N14	Reference T45 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T46	Condition 1884 1895	trombifilii
+A4	Source T46 Declared
+N15	Reference T46 ICD10:D68.9	Zaburzenie krzepnięcia, nieokreślone
+T47	Condition 1898 1917	MTHFR nieprawidłowy
+N16	Reference T47 ICD10:E72	Inne zaburzenia przemian aminokwasów
+T48	Treatment 1918 1935	Przebyte operacje
+T49	Treatment 1937 1945	CC - 2 x
+A5	Status T49 Historical_Insignificant
+T50	Treatment 1947 1960	appendektomia
+A6	Status T50 Historical_Insignificant
+T51	Date 1963 1977	w wieku 18 lat
+R12	Dat Arg1:T51 Arg2:T50	
+T52	Condition 1979 1994	Wywiad rodzinny
+A7	Status T52 Family
+T53	Negation 1996 2009	bez znaczenia
+R13	Neg Arg1:T53 Arg2:T52	
+T54	Condition 2011 2018	Alergie
+T55	Negation 2043 2049	neguje
+T56	Drug 2050 2057	na leki
+R14	Neg Arg1:T55 Arg2:T56	
+T60	Behaviour 2058 2068	Nikotynizm
+T61	Negation 2070 2076	neguje
+T62	Behaviour 2078 2091	bierny palacz
+T63	Date 2092 2104	przez 20 lat
+R15	Dat Arg1:T63 Arg2:T62	
+R16	Neg Arg1:T61 Arg2:T60	
+T64	Behaviour 2108 2129	Alkohol: okazjonalnie
+N20	Reference T64 ICD10:Z72.1	Używanie alkoholu
+T65	Behaviour 2131 2148	Uzależnienie inne
+T66	Negation 2150 2156	neguje
+R17	Neg Arg1:T66 Arg2:T65	
+T67	Behaviour 2174 2195	pracownik rejestracji
+T68	Drug 2212 2221	Euhyrox N
+T69	Drug_dose 2222 2238	137 1 tabl. rano
+R18	Drg Arg1:T68 Arg2:T69	
+T70	Drug 2240 2250	Concor Cor
+T71	Drug_dose 2251 2270	2.5 mg 1 tabl. rano
+R19	Drg Arg1:T70 Arg2:T71	
+T72	Drug 2272 2277	Cilan
+T73	Drug_dose 2278 2297	2.5 mg 1 tabl. rano
+R20	Drg Arg1:T72 Arg2:T73	
+T74	Investigation 2326 2336	echo serca
+T75	Investigation 2338 2341	TET
+T76	Investigation 2343 2347	ABPM
+T77	Investigation 2349 2359	Holter ekg
+T78	Investigation 2361 2379	rtg kl. piersiowej
+N7	Reference T12 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T13	Investigation 1861 1883	disgnostyka w kierunku
+N17	Reference T54 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N18	Reference T60 ICD10:Z72.0	Używanie tytoniu
+N19	Reference T62 ICD10:Z58.7	Narażenie na dym tytoniowy
+A8	Status T64 Historical_Insignificant
+N21	Reference T65 ICD10:Z72	Problemy związane ze stylem życia

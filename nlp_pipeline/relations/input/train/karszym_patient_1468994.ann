@@ -1,0 +1,222 @@
+T1	Condition 450 491	Łagodna niedomykalność zastawki mitralnej
+N1	Reference T1 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T2	Condition 493 517	Para pobudzeń komorowych
+T3	Condition 519 552	Pojedyncze pobudzenia nadkomorowe
+N2	Reference T3 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+N3	Reference T2 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T4	Condition 554 581	Niedokrwistość normocytarna
+N4	Reference T4 ICD10:D64.9	Niedokrwistość, nieokreślona
+T5	Condition 583 596	Żylaki odbytu
+A1	Status T5 Historical_Insignificant
+N5	Reference T5 ICD10:I84.9	Hemoroidy, nieokreślone, bez powikłań
+T6	Drug 717 725	Divascan
+T7	Treatment 843 899	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T8	Behaviour 902 942	Dieta lekkostrawna , niskocholesterolowa
+T9	Treatment 946 1029	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T10	Treatment 1032 1080	Systematyczna kontrola ciśnienia tętniczego krwi
+T11	Drug 1131 1138	Nebilet
+T12	Drug 1169 1177	Divascan
+T13	Drug_dose 1139 1167	5 mg 1x dz po 1/4 tabl. rano
+T14	Drug_dose 1178 1198	2,5  2x dz po 1 tabl
+R1	Drg Arg1:T11 Arg2:T13	
+R2	Drg Arg1:T12 Arg2:T14	
+T15	Investigation 1678 1689	Diagnostyka
+T16	Symptom 1690 1715	bólów w klatce piersiowej
+N6	Reference T16 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T17	Condition 1717 1758	Łagodna niedomykalność zastawki mitralnej
+N7	Reference T17 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T18	Condition 1760 1784	Para pobudzeń komorowych
+A2	Status T18 Historical_Insignificant
+N8	Reference T18 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+A3	Status T2 Historical_Insignificant
+T19	Condition 1798 1831	Pojedyncze pobudzenia nadkomorowe
+N9	Reference T19 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T20	Condition 1845 1872	Niedokrwistość normocytarna
+N10	Reference T20 ICD10:D64.9	Niedokrwistość, nieokreślona
+T21	Condition 1886 1899	Żylaki odbytu
+A4	Status T21 Historical_Insignificant
+N11	Reference T21 ICD10:I84.9	Hemoroidy, nieokreślone, bez powikłań
+T22	Treatment 2017 2073	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T23	Behaviour 2076 2116	Dieta lekkostrawna , niskocholesterolowa
+T24	Treatment 2120 2203	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T25	Treatment 2206 2254	Systematyczna kontrola ciśnienia tętniczego krwi
+T26	Drug 2305 2313	Divascan
+T27	Drug 2330 2337	Nebilet
+T28	Drug_dose 2314 2326	2,5 mg 2x dz
+T29	Drug_dose 2338 2360	5 mg 1x dz po 1/4 tabl
+R3	Drg Arg1:T26 Arg2:T28	
+R4	Drg Arg1:T27 Arg2:T29	
+T30	Drug 2707 2714	Nebilet
+T31	Symptom 2886 2958	okresowego kołatania serca ( często występującego w nocy z wybudzaniem )
+N12	Reference T31 ICD10:R00.2	Kołatanie serca
+T32	Symptom 2976 3007	bóle głowy trwające nawet 5 dni
+N13	Reference T32 ICD10:R51	Ból głowy
+T33	Symptom 3010 3040	podwyższonym RR do 150/90 mmHg
+T34	Treatment 3053 3084	pod  stała opieką neurologiczna
+T35	Symptom 3097 3146	bóle w klatce piersiowej nie związane z wysiłkiem
+N14	Reference T35 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T36	Symptom 3159 3175;3190 3203	przy wstawaniu - zawroty głowy
+N15	Reference T36 ICD10:R42	Zawroty głowy i odurzenie
+T37	Date 3247 3255	od 2 lat
+T38	Symptom 3205 3246	Dolegliwości występują okresami nasilenia
+R5	Dat Arg1:T37 Arg2:T31	
+R6	Dat Arg1:T37 Arg2:T32	
+R7	Dat Arg1:T37 Arg2:T33	
+R8	Dat Arg1:T37 Arg2:T34	
+R9	Dat Arg1:T37 Arg2:T35	
+R10	Dat Arg1:T37 Arg2:T36	
+R11	Dat Arg1:T37 Arg2:T38	
+T39	Condition 3276 3286	dwa zawały
+A5	Status T39 Family
+N16	Reference T39 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T40	Date 3287 3301	w wieki 50 lat
+T41	Date 3304 3310	60 lat
+R12	Dat Arg1:T40 Arg2:T39	
+R13	Dat Arg1:T41 Arg2:T39	
+T42	Negation 3312 3318	Neguje
+T43	Symptom 3319 3331	zasłabnięcia
+R14	Neg Arg1:T42 Arg2:T43	
+T44	Symptom 3348 3365	Szmery nad sercem
+A6	Status T44 Historical_Insignificant
+A7	Source T44 Declared
+T45	Date 3366 3380	w dzieciństwie
+R15	Dat Arg1:T45 Arg2:T44	
+T46	Treatment 3405 3422	Przebyte operacje
+N17	Reference T46 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T47	Negation 3425 3429	brak
+R16	Neg Arg1:T47 Arg2:T46	
+T48	Treatment 3430 3465	Leczenie przewlekłe:  neurologiczne
+T49	Condition 3494 3497	WZW
+N18	Reference T49 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T50	Condition 3507 3516	borelioza
+N19	Reference T50 ICD10:A69.2	Choroba z Lyme
+T51	Condition 3523 3527	Odra
+N20	Reference T51 ICD10:B05	Odra
+T52	Negation 3498 3504	( -  )
+T53	Negation 3517 3522	( - )
+T54	Negation 3528 3533	( - )
+R17	Neg Arg1:T52 Arg2:T49	
+R18	Neg Arg1:T53 Arg2:T50	
+R19	Neg Arg1:T54 Arg2:T51	
+T55	Condition 3564 3574	dwa zawały
+A8	Status T55 Family
+N21	Reference T55 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T56	Date 3575 3589	w wieki 50 lat
+T57	Date 3592 3598	60 lat
+R20	Dat Arg1:T56 Arg2:T55	
+R21	Dat Arg1:T57 Arg2:T55	
+T58	Condition 3601 3622	nadciśnienie tętnicze
+N22	Reference T58 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+A9	Status T58 Family
+T59	Condition 3625 3638	choroba nerek
+A10	Status T59 Family
+T60	Condition 3648 3654	jaskra
+A11	Status T60 Family
+N23	Reference T60 ICD10:H40.9	Jaskra, nieokreślona
+T61	Condition 3657 3678	nadciśnienie tętnicze
+A12	Status T61 Family
+N24	Reference T61 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T62	Behaviour 3681 3696	Palenie tytoniu
+N25	Reference T62 ICD10:Z72.0	Używanie tytoniu
+T63	Negation 3698 3701	nie
+T64	Behaviour 3702 3713	Inne używki
+T65	Negation 3715 3718	nie
+T66	Condition 3719 3728	Uczulenia
+N26	Reference T66 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T67	Negation 3730 3736	neguje
+T68	Behaviour 3753 3779	warunki mieszkaniowe dobre
+T69	Behaviour 3782 3797	mieszka z mężem
+T70	Drug 3804 3812	Divascan
+T71	Drug_dose 3813 3825	2,5 mg 2x dz
+T72	Investigation 3843 3853	Echo serca
+T73	Investigation 3856 3871	Holter EKG i RR
+T74	Investigation 3875 3890	Próba Wysiłkowa
+R22	Neg Arg1:T63 Arg2:T62	
+R23	Neg Arg1:T65 Arg2:T64	
+R24	Neg Arg1:T67 Arg2:T66	
+R25	Drg Arg1:T70 Arg2:T71	
+T75	Symptom 4102 4172	okresowego kołatania serca ( często występującego w nocy z wybudzaniem
+N27	Reference T75 ICD10:R00.2	Kołatanie serca
+T76	Symptom 4175 4191	znaczna  poprawa
+T77	Drug 4206 4218	nebivololu  
+T78	Symptom 4229 4278	bóle w klatce piersiowej nie związane z wysiłkiem
+N28	Reference T78 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T79	Symptom 4291 4307;4322 4335	przy wstawaniu - zawroty głowy
+N29	Reference T79 ICD10:R42	Zawroty głowy i odurzenie
+T80	Condition 4357 4367	dwa zawały
+A13	Status T80 Family
+N30	Reference T80 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T81	Date 4368 4382	w wieki 50 lat
+T82	Date 4385 4391	60 lat
+R26	Dat Arg1:T81 Arg2:T80	
+R27	Dat Arg1:T82 Arg2:T80	
+T83	Negation 4393 4399	Neguje
+T84	Symptom 4400 4412	zasłabnięcia
+R28	Neg Arg1:T83 Arg2:T84	
+T85	Condition 4430 4471	Łagodna niedomykalność zastawki mitralnej
+N31	Reference T85 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T86	Condition 4473 4497	Para pobudzeń komorowych
+A14	Status T86 Historical_Insignificant
+N32	Reference T86 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T87	Condition 4499 4532	Pojedyncze pobudzenia nadkomorowe
+N33	Reference T87 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T88	Condition 4534 4561	Niedokrwistość normocytarna
+N34	Reference T88 ICD10:D64.9	Niedokrwistość, nieokreślona
+T89	Condition 4563 4576	Żylaki odbytu
+A15	Status T89 Historical_Insignificant
+N35	Reference T89 ICD10:I84.9	Hemoroidy, nieokreślone, bez powikłań
+T90	Treatment 4577 4594	Przebyte operacje
+N36	Reference T90 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T91	Negation 4597 4601	brak
+T92	Treatment 4602 4637	Leczenie przewlekłe:  neurologiczne
+R29	Neg Arg1:T91 Arg2:T90	
+T93	Condition 4666 4669	WZW
+N37	Reference T93 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T94	Condition 4679 4688	borelioza
+N38	Reference T94 ICD10:A69.2	Choroba z Lyme
+T95	Condition 4695 4699	Odra
+N39	Reference T95 ICD10:B05	Odra
+T96	Negation 4670 4676	( -  )
+T97	Negation 4689 4694	( - )
+T98	Negation 4700 4705	( - )
+R30	Neg Arg1:T96 Arg2:T93	
+R31	Neg Arg1:T97 Arg2:T94	
+R32	Neg Arg1:T98 Arg2:T95	
+T99	Condition 4736 4746	dwa zawały
+A16	Status T99 Historical_Insignificant
+N40	Reference T99 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T100	Date 4747 4761	w wieki 50 lat
+T101	Date 4764 4770	60 lat
+T102	Condition 4773 4794	nadciśnienie tętnicze
+A17	Status T102 Family
+N41	Reference T102 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T103	Condition 4797 4810	choroba nerek
+A18	Status T103 Family
+T104	Condition 4820 4826	jaskra
+A19	Status T104 Family
+N42	Reference T104 ICD10:H40.9	Jaskra, nieokreślona
+T105	Condition 4829 4850	nadciśnienie tętnicze
+N43	Reference T105 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+R33	Dat Arg1:T100 Arg2:T99	
+R34	Dat Arg1:T101 Arg2:T99	
+T106	Behaviour 4853 4868	Palenie tytoniu
+N44	Reference T106 ICD10:Z72.0	Używanie tytoniu
+T107	Negation 4870 4873	nie
+T108	Behaviour 4874 4885	Inne używki
+T109	Negation 4887 4890	nie
+T110	Condition 4891 4900	Uczulenia
+N45	Reference T110 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T111	Negation 4902 4908	neguje
+T112	Behaviour 4925 4951	warunki mieszkaniowe dobre
+T113	Behaviour 4954 4969	mieszka z mężem
+R35	Neg Arg1:T107 Arg2:T106	
+R36	Neg Arg1:T109 Arg2:T108	
+R37	Neg Arg1:T111 Arg2:T110	
+T114	Drug 4976 4984	Divascan
+T115	Drug_dose 4985 4997	2,5 mg 2x dz
+T116	Drug 5000 5007	Nebilet
+T117	Drug_dose 5008 5030	5 mg 1x dz po 1/4 tabl
+R38	Drg Arg1:T114 Arg2:T115	
+R39	Drg Arg1:T116 Arg2:T117	
+T118	Investigation 5047 5057	Echo serca
+T119	Investigation 5059 5083	Próba ergospirometryczna

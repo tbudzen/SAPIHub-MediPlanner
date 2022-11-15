@@ -1,0 +1,40 @@
+T1	Drug 333 341	Metocard
+T2	Drug_dose 342 359	2 x 50mg doustnie
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 363 372	Actiferol
+T4	Drug_dose 373 402	kapsułki 30mg. 2 x 1 kapsułka
+R2	Drg Arg1:T3 Arg2:T4	
+T6	Treatment 418 488	kontrola w POZ (morfologia + retikulocyty) i dalsza decyzja o leczeniu
+T7	Date 404 417	za 4 tygodnie
+R3	Dat Arg1:T7 Arg2:T6	
+T5	Treatment 492 526	Kontrola w Poradni Kardiologicznej
+T8	Date 541 551	10.10.2019
+R4	Dat Arg1:T8 Arg2:T5	
+T9	Investigation 656 672	próby wysiłkowej
+T10	Behaviour 677 717	Zwolnienie z zajęć wychowania fizycznego
+T11	Symptom 778 807	uczucia szybkiego bicia serca
+N1	Reference T11 ICD10:R00.0	Tachykardia, nieokreślona
+T12	Treatment 826 877	niefarmakologiczne metody przerywania częstoskurczu
+T13	Drug 1065 1073	Metocard
+T14	Condition 1302 1326	Częstoskurcz nadkomorowy
+N2	Reference T14 ICD10:I47.1	Częstoskurcz nadkomorowy
+T15	Symptom 1501 1516	kołatania serca
+N3	Reference T15 ICD10:R00.2	Kołatanie serca
+T16	Date 1517 1532	od ok. 30 minut
+R5	Dat Arg1:T16 Arg2:T15	
+T17	Condition 1551 1574	częstoskurcz - 209/ min
+N4	Reference T17 ICD10:I47.9	Częstoskurcz napadowy, nieokreślony
+T18	Investigation_result 1576 1591	RR  115/55 mmHg
+T19	Symptom 1603 1612	osłabiona
+N5	Reference T19 ICD10:R53	Złe samopoczucie i zmęczenie
+T20	Symptom 1626 1641	Kołatanie serca
+N6	Reference T20 ICD10:R00.2	Kołatanie serca
+T21	Date 1656 1690	od ok 4 miesięcy śr raz w miesiącu
+R6	Dat Arg1:T21 Arg2:T20	
+T24	Treatment 1742 1769	konsultacji kardiologicznej
+T25	Negation 1770 1778	nie była
+R8	Neg Arg1:T25 Arg2:T24	
+N8	Reference T18 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T22	Symptom 1692 1737	Objaw ustępowała samoistnie po ok 20 minutach
+N7	Reference T22 ICD10:R00.2	Kołatanie serca
+T23	Treatment 879 944	w razie utrzymywania się napadu proszę wezwać pogotowie ratunkowe

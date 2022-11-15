@@ -1,0 +1,92 @@
+T1	Condition 458 478	Zespół chorej zatoki
+N1	Reference T1 ICD10:I49.5	Zespół chorej zatoki
+T2	Condition 480 500	Hipercholesterolemia
+N2	Reference T2 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T3	Condition 502 523	Nadciśnienie tętnicze
+N3	Reference T3 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T4	Condition 537 585	Podejrzenie przebyte udaru niedokrwiennego mózgu
+A1	Source T4 Declared
+N4	Reference T4 ICD10:I63	Zawał mózgu
+T5	Condition 619 645	Diagnostyka w kierunku PFO
+N5	Reference T5 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T6	Negation 646 655	negatywna
+R1	Neg Arg1:T6 Arg2:T5	
+T7	Condition 657 674	Zaburzenia lękowe
+N6	Reference T7 ICD10:F41	Inne zaburzenia lękowe
+T8	Condition 676 713	Autoimmunologiczne zapalenie tarczycy
+N7	Reference T8 ICD10:E06.2	Zapalenie tarczycy przewlekłe z przemijającą tyreotoksykozą
+T9	Investigation 1037 1059	kontrola TSH, FT3, FT4
+T10	Investigation 1141 1223	kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T11	Behaviour 1085 1124	Dieta lekkostrawna, niskocholesterolowa
+T12	Investigation 1258 1300	kontrola ciśnienia tętniczego krwi i tętna
+T13	Drug 1313 1321	Sertagen
+T14	Drug_dose 1322 1343	100 mg 1x1 tabl. rano
+R2	Drg Arg1:T13 Arg2:T14	
+T15	Drug 1344 1355	Pregabalina
+T16	Drug_dose 1356 1371	150 mg 2x1 tabl
+R3	Drg Arg1:T15 Arg2:T16	
+T17	Drug 1373 1380	Romazic
+T18	Drug_dose 1381 1401	40 mg 1x1 tabl. rano
+R4	Drg Arg1:T17 Arg2:T18	
+T19	Drug 1402 1408	Ketrel
+T20	Drug_dose 1409 1434	75 mg 1x1 tabl. wieczorem
+R5	Drg Arg1:T19 Arg2:T20	
+T21	Investigation 2238 2242	ABPM
+T22	Investigation 2244 2254	Holter-EKG
+T23	Investigation 2256 2260	ECHO
+T24	Drug 2193 2199	Ketrel
+T25	Drug_dose 2200 2225	75 mg 1x1 tabl. wieczorem
+R6	Drg Arg1:T24 Arg2:T25	
+T26	Drug 2164 2171	Romazic
+T27	Drug_dose 2172 2192	20 mg 1x1 tabl. rano
+R7	Drg Arg1:T26 Arg2:T27	
+T28	Drug 2135 2146	Pregabalina
+T29	Drug_dose 2147 2163	150 mg 2x1 tabl.
+R8	Drg Arg1:T28 Arg2:T29	
+T30	Drug 2104 2112	Sertagen
+T31	Drug_dose 2113 2134	100 mg 1x1 tabl. rano
+R9	Drg Arg1:T30 Arg2:T31	
+T32	Symptom 1632 1645	Zawroty głowy
+N8	Reference T32 ICD10:R42	Zawroty głowy i odurzenie
+T33	Date 1648 1659	przeszłości
+R10	Dat Arg1:T33 Arg2:T32	
+T34	Symptom 1678 1684	omdleń
+N9	Reference T34 ICD10:R55	Omdlenie i zapaść
+T35	Negation 1674 1677	Bez
+R11	Neg Arg1:T35 Arg2:T34	
+T36	Condition 1698 1719	nadciśnienie tętnicze
+N10	Reference T36 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T37	Investigation_result 1721 1750	zmiany naczyniopochodne w OUN
+T38	Condition 1752 1796	podejrzenie przebytego udaru niedokrwiennego
+A2	Source T38 Declared
+N11	Reference T38 ICD10:I63	Zawał mózgu
+T39	Condition 1799 1825	diagnostyka w kierunku PFO
+A3	Source T39 Declared
+N12	Reference T39 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T40	Negation 1826 1835	negatywna
+R12	Neg Arg1:T40 Arg2:T39	
+T41	Condition 1837 1854	zaburzenia lękowe
+N13	Reference T41 ICD10:F41	Inne zaburzenia lękowe
+T42	Condition 1856 1892	podejrzenie choroby węzła zatokowego
+N14	Reference T42 ICD10:I49	Inne zaburzenia rytmu serca
+T43	Negation 2016 2022	neguje
+T44	Condition 2006 2015	Uczulenia
+N15	Reference T44 ICD10:T78.4	Alergia, nieokreślona
+R13	Neg Arg1:T43 Arg2:T44	
+T45	Date 1894 1901	09.2018
+T46	Investigation_result 1904 1915	pauzy 5,6 s
+R14	Dat Arg1:T45 Arg2:T46	
+T47	Date 1947 1954	12.2018
+T48	Investigation_result 1957 1963	3,37 s
+R15	Dat Arg1:T47 Arg2:T48	
+T49	Condition 2061 2063	HA
+A4	Status T49 Family
+N16	Reference T49 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T50	Date 1066 1080	za 4-6 tygodni
+R16	Dat Arg1:T50 Arg2:T9	
+T51	Date 1224 1234	co 6-8 tyg
+R17	Dat Arg1:T51 Arg2:T10	
+T52	Condition 586 616	(zmiany naczyniopochodne w OUN
+T53	Investigation 1000 1023	USG gruczołu tarczowego
+T54	Drug 1929 1938	B-bloker,
+A5	Source T42 Declared

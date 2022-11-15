@@ -1,0 +1,360 @@
+T1	Treatment 346 373	dalsza opieka w poradni POZ
+T2	Treatment 380 412	okresowa kontrola ginekologiczna
+T3	Investigation 420 459	regularna kontrola ciśnienia tętniczego
+T4	Investigation 466 489	kontrolne badanie moczu
+T5	Date 490 503	za 3 tygodnie
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Treatment 517 542	konsultacja nefrologiczna
+T7	Behaviour 548 558	dieta DASH
+T8	Behaviour 566 592	regularny wysiłek fizyczny
+T9	Treatment 598 626	regularne przyjmowanie leków
+T10	Drug 636 643	Nebilet
+T11	Drug_dose 644 662	5 mg 1/2 tabl rano
+R2	Drg Arg1:T10 Arg2:T11	
+T12	Drug 670 680	Ipres long
+T13	Drug_dose 681 699	1,5 mg 1 tabl rano
+R3	Drg Arg1:T12 Arg2:T13	
+T14	Drug 707 715	Primacor
+T15	Drug_dose 716 738	10 mg 1 tabl wieczorem
+R4	Drg Arg1:T14 Arg2:T15	
+T16	Drug 746 753	Pentasa
+T17	Drug_dose 754 768	50 mg 3x1 tabl
+R5	Drg Arg1:T16 Arg2:T17	
+T18	Condition 998 1031	Nadciśnienie tętnicze skorygowane
+N1	Reference T18 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T19	Symptom 1033 1072	Niespecyficzne bóle w klatce piersiowej
+N2	Reference T19 ICD10:R07.3	Inne bóle w klatce piersiowej
+T20	Symptom 1074 1092	Drętwienie kończyn
+N3	Reference T20 ICD10:R20.2	Parestezje
+T21	Symptom 1094 1118	Nawracające zasłabnięcia
+T22	Symptom 1132 1160	pojedynczy incydent omdlenia
+N4	Reference T22 ICD10:R55	Omdlenie i zapaść
+T23	Condition 1173 1185	hipoglikemii
+N5	Reference T23 ICD10:E16.2	Hipoglikemia, nieokreślona
+T24	Condition 1211 1221	insulinoma
+N6	Reference T24 ICD10:D13.7	Część wewnątrzwydzielnicza trzustki
+T25	Negation 1222 1231	negatywna
+R6	Neg Arg1:T25 Arg2:T24	
+T26	Date 1233 1237	2016
+R7	Dat Arg1:T26 Arg2:T24	
+T27	Condition 1240 1268	Choroba Leśniowskiego-Crohna
+N7	Reference T27 ICD10:K50.9	Choroba Leśniowskiego-Crohna, nieokreślona
+T28	Condition 1270 1282	Endometrioza
+N8	Reference T28 ICD10:N80.9	Gruczolistość, nieokreślona
+T29	Treatment 1292 1304	laparoskopii
+A1	Status T29 Historical_Insignificant
+T30	Condition 1314 1353	torbieli endometrialnych lewego jajnika
+N9	Reference T30 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+A2	Status T30 Historical_Insignificant
+T31	Date 1355 1359	2013
+T32	Date 1362 1366	2012
+R8	Dat Arg1:T31 Arg2:T29	
+R9	Dat Arg1:T32 Arg2:T29	
+R10	Dat Arg1:T31 Arg2:T30	
+R11	Dat Arg1:T32 Arg2:T30	
+T33	Treatment 1377 1390	appendektomii
+A3	Status T33 Historical_Insignificant
+T34	Date 1392 1396	2008
+R12	Dat Arg1:T34 Arg2:T33	
+T35	Treatment 1522 1549	dalsza opieka w poradni POZ
+T36	Treatment 1556 1604	okresowa kontrola kardiologiczna, ginekologiczna
+T37	Treatment 1612 1673	konieczna konsultacja neurologiczna i lekarz chorób zakaźnych
+T38	Symptom 1675 1716	napadowe drętwienie kk. górnych i dolnych
+N10	Reference T38 ICD10:R20.2	Parestezje
+T39	Investigation 1725 1764	codzienna kontrola ciśnienia tętniczego
+T40	Behaviour 1771 1781	dieta DASH
+T41	Treatment 1789 1817	regularne przyjmowanie leków
+T42	Drug 1827 1834	Nebilet
+T43	Drug_dose 1835 1854	5 mg 1/2 tabl. rano
+R13	Drg Arg1:T42 Arg2:T43	
+T44	Drug 1863 1873	Ipres long
+T45	Drug_dose 1874 1886	1 tabl. rano
+R14	Drg Arg1:T44 Arg2:T45	
+T46	Drug 1895 1903	Primacor
+T47	Drug_dose 1904 1927	10 mg 1 tabl. wieczorem
+R15	Drg Arg1:T46 Arg2:T47	
+T48	Drug 1936 1943	Pentasa
+T49	Drug_dose 1944 1986	500mg 2 tabl. rano, w południe i wieczorem
+R16	Drg Arg1:T48 Arg2:T49	
+T50	Condition 2170 2203	Nadciśnienie tętnicze skorygowane
+N11	Reference T50 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T51	Condition 2218 2233	wtórnej postaci
+A4	Source T51 Declared
+N12	Reference T51 ICD10:I15	Nadciśnienie wtórne
+T52	Symptom 2235 2274	Niespecyficzne bóle w klatce piersiowej
+N13	Reference T52 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T53	Symptom 2276 2294	Drętwienie kończyn
+N14	Reference T53 ICD10:R20.2	Parestezje
+T54	Symptom 2296 2320	Nawracające zasłabnięcia
+T55	Symptom 2322 2350	pojedynczy incydent omdlenia
+N15	Reference T55 ICD10:R55	Omdlenie i zapaść
+T56	Condition 2363 2375	hipoglikemii
+N16	Reference T56 ICD10:E16.2	Hipoglikemia, nieokreślona
+T57	Condition 2401 2411	insulinoma
+N17	Reference T57 ICD10:D13.7	Część wewnątrzwydzielnicza trzustki
+T58	Negation 2412 2421	negatywna
+T59	Date 2423 2427	2016
+R17	Neg Arg1:T58 Arg2:T57	
+R18	Dat Arg1:T59 Arg2:T57	
+T60	Condition 2430 2458	Choroba Leśniowskiego-Crohna
+N18	Reference T60 ICD10:K50.9	Choroba Leśniowskiego-Crohna, nieokreślona
+T61	Condition 2460 2490	Torbiele piersi lewej i prawej
+N19	Reference T61 ICD10:N60.1	Rozlane zwyrodnienie torbielowate piersi
+T62	Condition 2514 2526	Endometrioza
+N20	Reference T62 ICD10:N80.9	Gruczolistość, nieokreślona
+T63	Treatment 2536 2548	laparoskopii
+A5	Status T63 Historical_Insignificant
+T64	Condition 2558 2597	torbieli endometrialnych lewego jajnika
+N21	Reference T64 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+A6	Status T64 Historical_Insignificant
+T65	Date 2599 2603	2013
+T66	Date 2606 2610	2012
+R19	Dat Arg1:T66 Arg2:T64	
+R20	Dat Arg1:T66 Arg2:T63	
+R21	Dat Arg1:T65 Arg2:T64	
+R22	Dat Arg1:T65 Arg2:T63	
+T67	Treatment 2621 2634	appendektomii
+A7	Status T67 Historical_Insignificant
+T68	Date 2636 2640	2008
+R23	Dat Arg1:T68 Arg2:T67	
+T69	Condition 2872 2895	nadciśnieniem tętniczym
+N22	Reference T69 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T70	Treatment 2896 2904	leczonym
+T71	Date 2905 2913	od lat 8
+R24	Dat Arg1:T71 Arg2:T70	
+R25	Dat Arg1:T71 Arg2:T69	
+T72	Condition 2919 2947	chorobą Leśniowskiego-Crohna
+N23	Reference T72 ICD10:K50.9	Choroba Leśniowskiego-Crohna, nieokreślona
+T73	Condition 2951 2983	torbielami piersi lewej i prawej
+N24	Reference T73 ICD10:N60.1	Rozlane zwyrodnienie torbielowate piersi
+T74	Condition 3009 3049	torbielami endometralnymi lewego jajnika
+N25	Reference T74 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T75	Condition 3052 3064	endometriozą
+N26	Reference T75 ICD10:N80.9	Gruczolistość, nieokreślona
+T76	Symptom 3102 3151	bólów w klatce piersiowej o charakterze mrowienia
+N27	Reference T76 ICD10:R07.3	
+T77	Symptom 3154 3176	drętwieniem ręki lewej
+N28	Reference T77 ICD10:R20.2	Parestezje
+T78	Symptom 3178 3214	niewielkich obrzęków kończyn dolnych
+N29	Reference T78 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T79	Investigation 3227 3230	DSE
+T80	Symptom 3232 3251	Stanu podgorączkowe
+N30	Reference T80 ICD10:R50.9	Gorączka, nieokreślona
+T81	Condition 3289 3298	boreliozy
+N31	Reference T81 ICD10:A69.2	Choroba z Lyme
+T82	Negation 3299 3305	ujemna
+R26	Neg Arg1:T82 Arg2:T81	
+T83	Date 3320 3330	9x w życiu
+T84	Symptom 3331 3343	zasłabnięcia
+R27	Dat Arg1:T83 Arg2:T84	
+T85	Symptom 3351 3376	pełną utratą przytomności
+N32	Reference T85 ICD10:R55	Omdlenie i zapaść
+T86	Date 3378 3398	ostatnio 3 lata temu
+R28	Dat Arg1:T86 Arg2:T85	
+T87	Condition 3421 3433	hipoglikemii
+N33	Reference T87 ICD10:E16.2	Hipoglikemia, nieokreślona
+T88	Condition 3460 3470	insulinoma
+N34	Reference T88 ICD10:D13.7	Część wewnątrzwydzielnicza trzustki
+T89	Date 3472 3477	2016r
+T90	Negation 3481 3491	wykluczono
+R29	Dat Arg1:T89 Arg2:T88	
+R30	Neg Arg1:T90 Arg2:T88	
+T91	Negation 3493 3499	Neguje
+T92	Symptom 3501 3511	krwawienia
+N35	Reference T92 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T93	Symptom 3513 3526	czarne stolce
+N36	Reference T93 ICD10:K92.1	Stolce smołowate
+T94	Symptom 3528 3544	brunatne wymioty
+N37	Reference T94 ICD10:K92.0	Wymioty krwawe
+T95	Condition 3546 3562	chorobę wrzodową
+N38	Reference T95 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T96	Symptom 3564 3592	duszność nocną typu ortopnoe
+N39	Reference T96 ICD10:R06.0	Duszność
+T97	Condition 3594 3596	DM
+N40	Reference T97 ICD10:E14	Cukrzyca nieokreślona
+T98	Condition 3598 3608	udar mózgu
+N41	Reference T98 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T99	Condition 3610 3621	zawał serca
+N42	Reference T99 ICD10:I25.2	Przebyty zawał serca
+R31	Neg Arg1:T91 Arg2:T99	
+R32	Neg Arg1:T91 Arg2:T98	
+R33	Neg Arg1:T91 Arg2:T97	
+R34	Neg Arg1:T91 Arg2:T96	
+R35	Neg Arg1:T91 Arg2:T95	
+R36	Neg Arg1:T91 Arg2:T94	
+R37	Neg Arg1:T91 Arg2:T93	
+R38	Neg Arg1:T91 Arg2:T92	
+T100	Treatment 3623 3640	Przebyte operacje
+T101	Treatment 3642 3655	appendektomia
+A8	Status T101 Historical_Insignificant
+T102	Date 3656 3661	2008r
+R39	Dat Arg1:T102 Arg2:T101	
+T103	Treatment 3663 3675	laparoskopia
+A9	Status T103 Historical_Insignificant
+T104	Condition 3685 3723	torbieli endometralnych lewego jajnika
+A10	Status T104 Historical_Insignificant
+N43	Reference T104 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T105	Date 3725 3729	2013
+T106	Date 3732 3737	2012r
+R40	Dat Arg1:T105 Arg2:T103	
+R41	Dat Arg1:T106 Arg2:T103	
+R42	Dat Arg1:T105 Arg2:T104	
+R43	Dat Arg1:T106 Arg2:T104	
+T107	Behaviour 3739 3754	Palenie tytoniu
+N44	Reference T107 ICD10:T65.2	Tytoń i nikotyna
+T108	Negation 3756 3759	nie
+R44	Neg Arg1:T108 Arg2:T107	
+T109	Behaviour 3760 3771	Inne używki
+T110	Negation 3773 3776	nie
+R45	Neg Arg1:T110 Arg2:T109	
+T111	Condition 3777 3786	Uczulenia
+N45	Reference T111 ICD10:T78.4	Alergia, nieokreślona
+T112	Drug 3788 3798	fluconazol
+R46	Alg Arg1:T111 Arg2:T112	
+T113	Condition 3826 3829	WZW
+N46	Reference T113 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T114	Negation 3831 3832	-
+R47	Neg Arg1:T114 Arg2:T113	
+T115	Condition 3836 3845	borelioza
+N47	Reference T115 ICD10:A69.2	Choroba z Lyme
+T116	Negation 3848 3849	-
+R48	Neg Arg1:T116 Arg2:T115	
+T117	Condition 3853 3856	tbc
+N48	Reference T117 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T118	Negation 3858 3859	-
+R49	Neg Arg1:T118 Arg2:T117	
+T119	Behaviour 3877 3903	warunki mieszkaniowe dobre
+T120	Drug 3938 3945	Nebilet
+T121	Drug_dose 3946 3964	5 mg 1/2 tabl rano
+R50	Drg Arg1:T120 Arg2:T121	
+T122	Drug 3965 3975	Ipres long
+T123	Drug_dose 3976 3998	1,5 mg 1x1 1 tabl rano
+R51	Drg Arg1:T122 Arg2:T123	
+T124	Drug 3999 4007	Primacor
+T125	Drug 4029 4036	Pentasa
+T126	Drug_dose 4008 4028	10 mg 1tab wieczorem
+R52	Drg Arg1:T124 Arg2:T126	
+T127	Drug_dose 4037 4051	50 mg 3x1 tabl
+R53	Drg Arg1:T125 Arg2:T127	
+T128	Condition 4195 4218	nadciśnieniem tętniczym
+N49	Reference T128 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T129	Treatment 4219 4227	leczonym
+T130	Date 4228 4236	od lat 8
+R54	Dat Arg1:T130 Arg2:T128	
+R55	Dat Arg1:T130 Arg2:T129	
+T131	Condition 4242 4270	chorobą Leśniowskiego-Crohna
+N50	Reference T131 ICD10:K50.9	Choroba Leśniowskiego-Crohna, nieokreślona
+T132	Condition 4274 4306	torbielami piersi lewej i prawej
+N51	Reference T132 ICD10:N60.1	Rozlane zwyrodnienie torbielowate piersi
+T133	Condition 4332 4372	torbielami endometralnymi lewego jajnika
+N52	Reference T133 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T134	Condition 4375 4387	endometriozą
+N53	Reference T134 ICD10:N80.9	Gruczolistość, nieokreślona
+T135	Symptom 4425 4474	bólów w klatce piersiowej o charakterze mrowienia
+N54	Reference T135 ICD10:R07.3	Inne bóle w klatce piersiowej
+T136	Symptom 4477 4499	drętwieniem ręki lewej
+N55	Reference T136 ICD10:R20.2	Parestezje
+T137	Symptom 4501 4537	niewielkich obrzęków kończyn dolnych
+N56	Reference T137 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T138	Symptom 4539 4549	osłabienia
+T139	Symptom 4555 4585	stanu podgorączkowego 37,5st C
+N57	Reference T139 ICD10:R50.9	Gorączka, nieokreślona
+T140	Date 4586 4598	od 2 tygodni
+R56	Dat Arg1:T140 Arg2:T139	
+T141	Date 4612 4622	9x w życiu
+T142	Symptom 4623 4635	zasłabnięcia
+R57	Dat Arg1:T141 Arg2:T142	
+T143	Symptom 4643 4668	pełną utratą przytomności
+N58	Reference T143 ICD10:R55	Omdlenie i zapaść
+T144	Date 4670 4690	ostatnio 3 lata temu
+R58	Dat Arg1:T144 Arg2:T143	
+T145	Condition 4713 4725	hipoglikemii
+N59	Reference T145 ICD10:E16.2	Hipoglikemia, nieokreślona
+T146	Condition 4752 4762	insulinoma
+N60	Reference T146 ICD10:D13.7	Część wewnątrzwydzielnicza trzustki
+T147	Date 4764 4769	2016r
+T148	Negation 4773 4783	wykluczono
+R59	Dat Arg1:T147 Arg2:T146	
+R60	Neg Arg1:T148 Arg2:T146	
+T149	Negation 4785 4791	Neguje
+T150	Symptom 4793 4803	krwawienia
+N61	Reference T150 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T151	Symptom 4805 4818	czarne stolce
+N62	Reference T151 ICD10:K92.1	Stolce smołowate
+T152	Symptom 4820 4836	brunatne wymioty
+N63	Reference T152 ICD10:K92.0	Wymioty krwawe
+T153	Condition 4838 4854	chorobę wrzodową
+N64	Reference T153 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T154	Symptom 4856 4884	duszność nocną typu ortopnoe
+N65	Reference T154 ICD10:R06.0	Duszność
+T155	Condition 4886 4888	DM
+N66	Reference T155 ICD10:E14	Cukrzyca nieokreślona
+T156	Condition 4890 4900	udar mózgu
+N67	Reference T156 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T157	Condition 4902 4913	zawał serca
+N68	Reference T157 ICD10:I25.2	Przebyty zawał serca
+R61	Neg Arg1:T149 Arg2:T157	
+R62	Neg Arg1:T149 Arg2:T156	
+R63	Neg Arg1:T149 Arg2:T155	
+R64	Neg Arg1:T149 Arg2:T154	
+R65	Neg Arg1:T149 Arg2:T153	
+R66	Neg Arg1:T149 Arg2:T152	
+R67	Neg Arg1:T149 Arg2:T151	
+R68	Neg Arg1:T149 Arg2:T150	
+T158	Treatment 4918 4935	Przebyte operacje
+T159	Treatment 4937 4950	appendektomia
+A11	Status T159 Historical_Insignificant
+T160	Date 4951 4956	2008r
+R69	Dat Arg1:T160 Arg2:T159	
+T161	Treatment 4958 4970	laparoskopia
+A12	Status T161 Historical_Insignificant
+T162	Condition 4980 5018	torbieli endometralnych lewego jajnika
+A13	Status T162 Historical_Insignificant
+N69	Reference T162 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T163	Date 5020 5024	2013
+T164	Date 5027 5032	2012r
+R70	Dat Arg1:T163 Arg2:T161	
+R71	Dat Arg1:T164 Arg2:T161	
+R72	Dat Arg1:T163 Arg2:T162	
+R73	Dat Arg1:T164 Arg2:T162	
+T165	Behaviour 5034 5049	Palenie tytoniu
+N70	Reference T165 ICD10:T65.2	Tytoń i nikotyna
+T166	Negation 5051 5054	nie
+R74	Neg Arg1:T166 Arg2:T165	
+T167	Behaviour 5056 5067	Inne używki
+T168	Negation 5069 5072	nie
+R75	Neg Arg1:T168 Arg2:T167	
+T169	Condition 5074 5083	Uczulenia
+N71	Reference T169 ICD10:T78.4	Alergia, nieokreślona
+T170	Drug 5085 5095	fluconazol
+R76	Alg Arg1:T169 Arg2:T170	
+T171	Condition 5123 5126	WZW
+N72	Reference T171 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T172	Negation 5128 5129	-
+R77	Neg Arg1:T172 Arg2:T171	
+T173	Condition 5133 5142	borelioza
+N73	Reference T173 ICD10:A69.2	Choroba z Lyme
+T174	Negation 5145 5146	-
+R78	Neg Arg1:T174 Arg2:T173	
+T175	Condition 5150 5153	tbc
+N74	Reference T175 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T176	Negation 5155 5156	-
+R79	Neg Arg1:T176 Arg2:T175	
+T177	Behaviour 5175 5201	warunki mieszkaniowe dobre
+T178	Drug 5241 5248	Nebilet
+T179	Drug_dose 5249 5271	5 mg 1x1 1/2 tabl rano
+R80	Drg Arg1:T178 Arg2:T179	
+T180	Drug 5272 5282	Ipres long
+T181	Drug_dose 5283 5305	1,5 mg 1x1 1 tabl rano
+R81	Drg Arg1:T180 Arg2:T181	
+T182	Drug 5306 5314	Ranacand
+T183	Drug_dose 5315 5341	8mg  1x1 1/2 tab wieczorem
+R82	Drg Arg1:T182 Arg2:T183	
+T184	Drug 5342 5349	Pentasa
+T185	Drug_dose 5350 5364	50 mg 3x1 tabl
+R83	Drg Arg1:T184 Arg2:T185	
+T186	Investigation 5426 5447	badania laboratoryjne
+T187	Investigation 5449 5453	ECHO
+T188	Investigation 5455 5459	ABPM
+T189	Investigation 5461 5471	Holter ekg
+T190	Investigation 5473 5476	TET

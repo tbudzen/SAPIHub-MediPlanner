@@ -1,0 +1,30 @@
+T1	Treatment 333 396	stała opieka kardiologiczna- kontrola w Poradni Kardiologicznej
+T2	Negation 455 469	bez wskazań do
+T3	Drug 470 492	leków kardiologicznych
+R1	Neg Arg1:T2 Arg2:T3	
+T4	Condition 754 836	Wrodzona wada serca pod postacią podwójnego odejścia dużych naczyń z prawej komory
+N1	Reference T4 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+T5	Condition 838 870	ubytku przegrody międzykomorowej
+N2	Reference T5 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T6	Condition 876 923	częściowego nieprawidłowego spływu żył płucnych
+N3	Reference T6 ICD10:Q26.3	Częściowo nieprawidłowe ujście żył płucnych
+T7	Treatment 936 966	korekcji całkowitej wady serca
+N4	Reference T7 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T8	Date 968 979	16.05.2005r
+R2	Dat Arg1:T8 Arg2:T7	
+T9	Condition 985 1015	Agenezja lewej tętnicy płucnej
+N5	Reference T9 ICD10:Q25.7	Inne wrodzone wady rozwojowe pnia płucnego
+T10	Treatment 1028 1070	resekcji brzeżnej segmentu 3 płuca prawego
+T12	Condition 1092 1113	Agenezja płuca lewego
+N8	Reference T12 ICD10:Q33.3	Niewytworzenie płuca
+T11	Symptom 1300 1318	w  stanie   dobrym
+T13	Treatment 1381 1404	Opieka  pulmonologiczna
+T14	Drug 1407 1423	leków  na  stałe
+T15	Negation 1424 1437	nie otrzymuje
+R3	Neg Arg1:T15 Arg2:T14	
+N6	Reference T10 ICD10:Z90.2	Nabyty brak [części] płuca
+R4	Dat Arg1:T8 Arg2:T4	
+R5	Dat Arg1:T8 Arg2:T5	
+R6	Dat Arg1:T8 Arg2:T6	
+T16	Condition 1080 1087	rozedmy
+N7	Reference T16 ICD10:J43.9	Rozedma płuc, nieokreślona

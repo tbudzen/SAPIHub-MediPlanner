@@ -1,0 +1,104 @@
+T1	Drug 2040 2046	Lokren
+T2	Drug 2048 2058	Carzap HCT
+T3	Drug 2060 2070	Cardura XL
+T4	Drug 2072 2083	Hydroxyurea
+T5	Drug 2085 2092	Milurit
+T6	Behaviour 1988 2014	warunki mieszkaniowe dobre
+T9	Negation 1919 1922	nie
+T10	Negation 1902 1905	nie
+T11	Behaviour 1906 1917	Inne używki
+R1	Neg Arg1:T9 Arg2:T11	
+T12	Behaviour 1885 1900	Palenie tytoniu
+N3	Reference T12 ICD10:T65.2	Tytoń i nikotyna
+R2	Neg Arg1:T10 Arg2:T12	
+T13	Condition 1882 1884	HA
+N4	Reference T13 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T14	Condition 1770 1773	WZW
+N5	Reference T14 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T15	Condition 1782 1791	borelioza
+N6	Reference T15 ICD10:A69.2	Choroba z Lyme
+T16	Condition 1799 1807	gruźlica
+N7	Reference T16 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T17	Condition 1813 1817	odra
+N8	Reference T17 ICD10:B05	Odra
+T18	Treatment 1823 1856	szczepiona w dzieciństwie na odrę
+N9	Reference T18 ICD10:B05	Odra
+T19	Negation 1776 1777	-
+T20	Negation 1794 1795	-
+T21	Negation 1809 1810	-
+T22	Negation 1819 1820	-
+R3	Neg Arg1:T19 Arg2:T14	
+R4	Neg Arg1:T20 Arg2:T15	
+R5	Neg Arg1:T21 Arg2:T16	
+R6	Neg Arg1:T22 Arg2:T17	
+T23	Treatment 1624 1637	appendectomia
+A1	Status T23 Historical_Insignificant
+T24	Treatment 1650 1687	3x laparoskopia z powodu niepłodności
+A2	Status T24 Historical_Insignificant
+T25	Treatment 1712 1728	kręgosłup szyjny
+T26	Date 1730 1742	12 lat temu)
+R7	Dat Arg1:T26 Arg2:T25	
+A3	Status T25 Historical_Insignificant
+T27	Date 1689 1709	ostatnia 16 lat temu
+R8	Dat Arg1:T27 Arg2:T24	
+T28	Condition 1331 1352	czerwienicą prawdziwą
+N10	Reference T28 ICD10:D45	Czerwienica prawdziwa
+T29	Condition 1354 1377	nadciśnieniem tętniczym
+N11	Reference T29 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T30	Investigation_result 1413 1438	wzrost RR do 220/130 mmHg
+T31	Condition 1441 1447	jaskrą
+N12	Reference T31 ICD10:H40	Jaskra
+T32	Symptom 1449 1456	kaszlem
+T33	Symptom 1535 1547	zasłabnięcia
+N14	Reference T33 ICD10:R55	Omdlenie i zapaść
+T34	Symptom 1549 1569	duszność spoczynkową
+N15	Reference T34 ICD10:R06.0	Duszność
+T35	Symptom 1571 1602	typowe bóle w klatce piersiowej
+N16	Reference T35 ICD10:R07	Ból gardła i w klatce piersiowej
+T36	Negation 1528 1534	Neguje
+R9	Neg Arg1:T36 Arg2:T33	
+R10	Neg Arg1:T36 Arg2:T34	
+R11	Neg Arg1:T36 Arg2:T35	
+T37	Treatment 1065 1078	appendektomii
+A4	Status T37 Historical_Insignificant
+T38	Treatment 1091 1115	trzykrotnej laparoskopii
+A5	Status T38 Historical_Insignificant
+T39	Treatment 1143 1169	operacji kręgosłupa szyjny
+A6	Status T39 Historical_Insignificant
+T40	Date 1170 1182	(12 lat temu
+R12	Dat Arg1:T40 Arg2:T39	
+T41	Date 1117 1137	ostatnia 16 lat temu
+R13	Dat Arg1:T41 Arg2:T38	
+T42	Date 1080 1088	lata 80'
+R14	Dat Arg1:T42 Arg2:T37	
+T43	Symptom 1027 1033	kaszel
+N17	Reference T43 ICD10:T78.4	Alergia, nieokreślona
+T44	Condition 1006 1012	Jaskra
+N18	Reference T44 ICD10:H40	Jaskra
+T45	Condition 983 1005	Czerwienica prawdziwa.
+N19	Reference T45 ICD10:D45	Czerwienica prawdziwa
+T46	Condition 960 981	Nadciśnienie tętnicze
+N20	Reference T46 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T47	Drug 684 690	Lokren
+T48	Drug 692 702	Carzap HCT
+T49	Drug 704 711	Cardura
+T50	Drug 713 724	Hydroxyurea
+T51	Drug 726 733	Heviran
+T52	Date 1639 1646	lata 80
+R15	Dat Arg1:T52 Arg2:T23	
+T53	Investigation 509 529	RTG klatki piersiowe
+T7	Drug 1944 1948	ACEI
+T54	Symptom 1934 1940	kaszel
+N1	Reference T54 ICD10:R05	Kaszel
+T55	Condition 1923 1932	Uczulenia
+N21	Reference T55 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R16	Alg Arg1:T55 Arg2:T7	
+T8	Drug 1960 1971	amlodypinie
+T56	Symptom 1950 1956	kaszel
+N2	Reference T56 ICD10:R05	Kaszel
+R17	Alg Arg1:T55 Arg2:T8	
+T57	Drug 1037 1041	ACEI
+T58	Drug 1044 1055	amlodypinie
+N13	Reference T32 ICD10:R05	Kaszel
+T59	Drug 1460 1464	ACEI
+A7	Status T13 Family

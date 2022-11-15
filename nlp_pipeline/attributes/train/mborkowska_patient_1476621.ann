@@ -1,0 +1,378 @@
+T1	Investigation 8823 8827	ECHO
+T2	Investigation 8829 8833	ABPM
+T3	Investigation 8835 8845	Holter EKG
+T4	Negation 8724 8737	nie przyjmuje
+T5	Drug 8718 8722	Leki
+R1	Neg Arg1:T4 Arg2:T5	
+T6	Behaviour 8687 8713	warunki mieszkaniowe dobre
+T7	Condition 8616 8619	WZW
+T8	Condition 8626 8635	borelioza
+N2	Reference T8 ICD10:A69.2	Choroba z Lyme
+T9	Condition 8643 8646	tbc
+N3	Reference T9 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T10	Condition 8651 8655	odra
+N4	Reference T10 ICD10:B05	Odra
+T11	Negation 8657 8668	nie pamięta
+A1	Source T11 Declared
+R2	Neg Arg1:T11 Arg2:T10	
+T12	Negation 8647 8650	(-)
+R3	Neg Arg1:T12 Arg2:T9	
+T13	Negation 8636 8641	( - )
+R4	Neg Arg1:T13 Arg2:T8	
+T14	Negation 8620 8623	(-)
+R5	Neg Arg1:T14 Arg2:T7	
+T15	Negation 8583 8588	nie  
+T16	Negation 8566 8571	nie  
+T17	Condition 8572 8581	Uczulenia
+N5	Reference T17 ICD10:T78.4	Alergia, nieokreślona
+R6	Neg Arg1:T15 Arg2:T17	
+T18	Behaviour 8553 8564	Inne używki
+R7	Neg Arg1:T16 Arg2:T18	
+T19	Behaviour 8489 8504	Palenie tytoniu
+T20	Negation 8506 8514	nie pali
+R8	Neg Arg1:T20 Arg2:T19	
+T21	Negation 8484 8487	nie
+T22	Treatment 8465 8482	Przebyte operacje
+R9	Neg Arg1:T21 Arg2:T22	
+T23	Negation 8270 8276	Neguje
+T24	Symptom 8278 8290	zasłabnięcia
+N7	Reference T24 ICD10:R55	Omdlenie i zapaść
+T25	Symptom 8292 8300	omdlenia
+N8	Reference T25 ICD10:R55	Omdlenie i zapaść
+T26	Symptom 8302 8317	kołatania serca
+N9	Reference T26 ICD10:R00.2	Kołatanie serca
+T27	Symptom 8319 8329	krwawienia
+N10	Reference T27 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T28	Symptom 8331 8344	czarne stolce
+N11	Reference T28 ICD10:K92.1	Stolce smołowate
+T29	Symptom 8346 8362	brunatne wymioty
+N12	Reference T29 ICD10:K92.0	Wymioty krwawe
+T30	Condition 8364 8380	chorobę wrzodową
+N13	Reference T30 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T31	Symptom 8382 8410	duszność nocną typu ortopnoe
+N14	Reference T31 ICD10:I50.1	Niewydolność serca lewokomorowa
+T32	Condition 8412 8414	HA
+N15	Reference T32 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T33	Condition 8416 8418	DM
+N16	Reference T33 ICD10:E13	Inne określone postacie cukrzycy
+T34	Condition 8420 8430	udar mózgu
+N17	Reference T34 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T35	Condition 8432 8443	zawał serca
+N18	Reference T35 ICD10:I25.2	Przebyty zawał serca
+R10	Neg Arg1:T23 Arg2:T24	
+R11	Neg Arg1:T23 Arg2:T25	
+R12	Neg Arg1:T23 Arg2:T26	
+R13	Neg Arg1:T23 Arg2:T27	
+R14	Neg Arg1:T23 Arg2:T29	
+R15	Neg Arg1:T23 Arg2:T30	
+R16	Neg Arg1:T23 Arg2:T31	
+R17	Neg Arg1:T23 Arg2:T32	
+R18	Neg Arg1:T23 Arg2:T33	
+R19	Neg Arg1:T23 Arg2:T34	
+R20	Neg Arg1:T23 Arg2:T35	
+T36	Investigation_result 8449 8464	HBPM prawidłowe
+T38	Symptom 8095 8145	pobolewaniami w klatce piersiowej kilkusekundowymi
+N20	Reference T38 ICD10:R07.3	Inne bóle w klatce piersiowej
+T39	Date 8146 8161	3 tygodnie temu
+R21	Dat Arg1:T39 Arg2:T38	
+T40	Behaviour 8163 8175	nikotynizmem
+T41	Condition 8051 8055	LBBB
+N22	Reference T41 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T42	Date 8081 8092	28.02.2019,
+R22	Dat Arg1:T42 Arg2:T41	
+T43	Investigation 7886 7890	ECHO
+T44	Investigation 7892 7896	ABPM
+T45	Investigation 7898 7908	Holter EKG
+T46	Drug 7619 7625	Bibloc
+T47	Drug_dose 7626 7730	2,5mg 1 tabl. rano - odstawiony przed 3 miesiącami - duszność (odstawił po wizycie lekarskiej w 07.2019)
+R23	Drg Arg1:T46 Arg2:T47	
+T48	Drug 7731 7741	Eplenocard
+T49	Drug_dose 7742 7802	25mg 1 tabl. rano (odstawił po wizycie lekarskiej w 07.2019)
+R24	Drg Arg1:T48 Arg2:T49	
+T50	Drug 7565 7572	Milurit
+T51	Drug 7526 7535	Coroswera
+T52	Drug 7476 7484	Entresto
+T53	Drug_dose 7485 7525	49/51mg 1 tabl. rano i 1 tabl. wieczorem
+R25	Drg Arg1:T52 Arg2:T53	
+T54	Drug_dose 7536 7563	10mg+20mg 1 tabl. wieczorem
+R26	Drg Arg1:T51 Arg2:T54	
+T55	Drug_dose 7573 7592	100 mg 1 tabl. rano
+R27	Drg Arg1:T50 Arg2:T55	
+T56	Drug 7415 7433	Ivabradine Anpharm
+T57	Drug_dose 7434 7474	5mg 1/2 tabl. rano i 1/2 tabl. wieczorem
+R28	Drg Arg1:T56 Arg2:T57	
+T58	Drug 7386 7391	Acard
+T59	Drug_dose 7392 7414	75mg 1 tabl. wieczorem
+R29	Drg Arg1:T58 Arg2:T59	
+T60	Behaviour 7352 7378	warunki mieszkaniowe dobre
+T61	Condition 7282 7285	WZW
+T62	Condition 7292 7301	borelioza
+N24	Reference T62 ICD10:A69.2	Choroba z Lyme
+T63	Condition 7309 7312	tbc
+N25	Reference T63 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T64	Condition 7317 7321	odra
+N26	Reference T64 ICD10:B05	Odra
+T65	Negation 7323 7335	nie pamięta)
+R30	Neg Arg1:T65 Arg2:T64	
+T66	Negation 7313 7316	(-)
+R31	Neg Arg1:T66 Arg2:T63	
+T67	Negation 7304 7305	-
+R32	Neg Arg1:T67 Arg2:T62	
+T68	Negation 7286 7289	(-)
+R33	Neg Arg1:T68 Arg2:T61	
+T69	Negation 7251 7254	nie
+T70	Negation 7236 7239	nie
+T71	Negation 7175 7183	nie pali
+T73	Behaviour 7158 7173	Palenie tytoniu
+R34	Neg Arg1:T71 Arg2:T73	
+T74	Behaviour 7223 7234	Inne używki
+R35	Neg Arg1:T70 Arg2:T74	
+T75	Condition 7240 7249	Uczulenia
+N29	Reference T75 ICD10:T78.4	Alergia, nieokreślona
+R36	Neg Arg1:T69 Arg2:T75	
+T76	Negation 7151 7157	neguje
+T77	Treatment 7132 7149	Przebyte operacje
+R37	Neg Arg1:T76 Arg2:T77	
+T78	Investigation 7050 7073	SPECT mięśnia sercowego
+T79	Drug 6873 6883	sacubitryl
+T80	Drug 6884 6893	walsartan
+T81	Investigation 6928 6950	MRI serca z kontrastem
+T82	Date 6952 6962	04/07/2019
+R38	Dat Arg1:T82 Arg2:T81	
+T83	Drug 6678 6687	ezetymibu
+T84	Investigation 6326 6344	USG jamy brzusznej
+T85	Investigation 6302 6323	RTG klatki piersiowej
+T86	Investigation_result 6345 6392	nie zarejestrowano istotnych odchyleń od normy.
+R39	Inv Arg1:T84 Arg2:T86	
+R40	Inv Arg1:T85 Arg2:T86	
+T87	Investigation 6186 6211	morfologii krwi obwodowej
+T88	Investigation_result 6212 6249	nie stwierdzono cech niedokrwistości,
+R41	Inv Arg1:T87 Arg2:T88	
+T89	Investigation 6086 6104	badaniu per rectum
+T90	Investigation_result 6105 6163	nie stwierdzono cech krwawienia, czy patologicznych oporów
+R42	Inv Arg1:T89 Arg2:T90	
+T91	Investigation_result 5983 5999	(Hgb 12,1 g/dl).
+T92	Condition 5933 5982	łagodną niedokrwistość normocytarną normobarwliwą
+T93	Date 5869 5876	03/2019
+T94	Investigation_result 5878 5904	2848 pg/ml vs 1979 pg/ml).
+T95	Investigation_result 5809 5839	zwiększenie stężenia NT-proBNP
+T96	Investigation 5610 5651	monitorowaniu ciśnienia tętniczego ABPM z
+T97	Investigation_result 5665 5767	średnie wartości ciśnienia tętniczego na poziomie 130,9/81,9 mmHg o profilu nocnym typu reverse-dipper
+R43	Inv Arg1:T96 Arg2:T97	
+T98	Investigation 5424 5434	Holter EKG
+T99	Investigation_result 5450 5591	rytm zatokowy o średniej częstości 70/min., łagodną arytmię komorową do nsVT włącznie (1 epizod składający się z 3 QRS o częstości 140/min.).
+R44	Inv Arg1:T98 Arg2:T99	
+T100	Investigation 5067 5070	TTE
+T101	Investigation_result 5084 5336	uogólnioną hipokinezę ścian z gorsza kurczliwością IVS i przedniej IVS z ciężką dysfunkcją skurczowo-rozkurczową powiększonej (LVDD 64 mm) i łagodnie przerośniętej LV z EF 37% (w 03/2019 rejestrowano EF na poziomie 27%) i kurczliwością typową dla LBBB.
+R45	Inv Arg1:T100 Arg2:T101	
+T102	Investigation_result 5346 5419	uwidoczniono łagodną niedomykalność zastawki mitralnej i powiększenie LA.
+R46	Inv Arg1:T100 Arg2:T102	
+T103	Condition 4589 4652	przewlekłą niewydolnością serca z obniżoną frakcją wyrzutową LV
+N30	Reference T103 ICD10:I50	Niewydolność serca
+T104	Investigation_result 4654 4662	EF: 27%)
+T105	Symptom 4665 4680	I klasa wg NYHA
+T106	Condition 4757 4801	przewlekłą chorobą wieńcową - I klasa wg CCS
+T107	Condition 4805 4889	łagodną/umiarkowaną niedomykalnością zastawki mitralnej (typ I+IIIb wg Carpentiera),
+N32	Reference T107 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T108	Condition 4890 4894	LBBB
+N33	Reference T108 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T109	Condition 4896 4908	dyslipidemią
+N34	Reference T109 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T110	Investigation 4423 4427	ECHO
+T111	Investigation 4429 4433	ABPM
+T112	Investigation 4435 4445	Holter EKG
+T113	Drug 4307 4314	Roswera
+T114	Drug_dose 4315 4337	20mg 1 tabl. wieczorem
+R47	Drg Arg1:T113 Arg2:T114	
+T115	Drug 4278 4288	Eplenocard
+T116	Drug_dose 4289 4306	25mg 1 tabl. rano
+R48	Drg Arg1:T115 Arg2:T116	
+T117	Drug 4246 4253	Polpril
+T118	Drug_dose 4254 4277	2,5mg 1 tabl. wieczorem
+R49	Drg Arg1:T117 Arg2:T118	
+T119	Drug 4220 4226	Bibloc
+T120	Drug_dose 4227 4245	2,5mg 1 tabl. rano
+R50	Drg Arg1:T119 Arg2:T120	
+T121	Drug 4191 4196	Acard
+T122	Drug_dose 4197 4219	75mg 1 tabl. wieczorem
+R51	Drg Arg1:T121 Arg2:T122	
+T123	Behaviour 4153 4179	warunki mieszkaniowe dobre
+T124	Condition 4082 4085	WZW
+T125	Condition 4092 4101	borelioza
+N36	Reference T125 ICD10:A69.2	Choroba z Lyme
+T126	Condition 4109 4112	tbc
+N37	Reference T126 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T127	Condition 4117 4121	odra
+N38	Reference T127 ICD10:B05	Odra
+T128	Negation 4123 4134	nie pamięta
+A3	Source T128 Declared
+R52	Neg Arg1:T128 Arg2:T127	
+T129	Negation 4113 4116	(-)
+R53	Neg Arg1:T129 Arg2:T126	
+T130	Negation 4104 4105	-
+R54	Neg Arg1:T130 Arg2:T125	
+T131	Negation 4086 4089	(-)
+R55	Neg Arg1:T131 Arg2:T124	
+T132	Negation 4049 4054	nie  
+T133	Negation 4032 4037	nie  
+T134	Negation 3971 3979	nie pali
+T135	Condition 4038 4047	Uczulenia
+N39	Reference T135 ICD10:T78.4	Alergia, nieokreślona
+R56	Neg Arg1:T132 Arg2:T135	
+T136	Behaviour 4019 4030	Inne używki
+R57	Neg Arg1:T133 Arg2:T136	
+T137	Behaviour 3954 3969	Palenie tytoniu
+R58	Neg Arg1:T134 Arg2:T137	
+T139	Negation 3947 3953	neguje
+T140	Treatment 3928 3945	Przebyte operacje
+R59	Neg Arg1:T139 Arg2:T140	
+T141	Negation 3749 3755	Neguje
+T142	Symptom 3757 3769	zasłabnięcia
+N42	Reference T142 ICD10:R55	Omdlenie i zapaść
+T143	Symptom 3771 3779	omdlenia
+N43	Reference T143 ICD10:R55	Omdlenie i zapaść
+T144	Symptom 3781 3796	kołatania serca
+N44	Reference T144 ICD10:R00.2	Kołatanie serca
+T145	Symptom 3798 3808	krwawienia
+N45	Reference T145 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T146	Symptom 3810 3823	czarne stolce
+N46	Reference T146 ICD10:K92.1	Stolce smołowate
+T147	Symptom 3825 3841	brunatne wymioty
+N47	Reference T147 ICD10:K92.0	Wymioty krwawe
+T148	Condition 3843 3859	chorobę wrzodową
+N48	Reference T148 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T149	Symptom 3861 3889	duszność nocną typu ortopnoe
+N49	Reference T149 ICD10:I50.1	Niewydolność serca lewokomorowa
+T150	Condition 3891 3893	HA
+N50	Reference T150 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T151	Condition 3895 3897	DM
+N51	Reference T151 ICD10:E13	Inne określone postacie cukrzycy
+T152	Condition 3899 3909	udar mózgu
+N52	Reference T152 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T153	Condition 3911 3922	zawał serca
+N53	Reference T153 ICD10:I25.2	Przebyty zawał serca
+R60	Neg Arg1:T141 Arg2:T142	
+R61	Neg Arg1:T141 Arg2:T143	
+R62	Neg Arg1:T141 Arg2:T144	
+R63	Neg Arg1:T141 Arg2:T145	
+R64	Neg Arg1:T141 Arg2:T146	
+R65	Neg Arg1:T141 Arg2:T147	
+R66	Neg Arg1:T141 Arg2:T148	
+R67	Neg Arg1:T141 Arg2:T149	
+R68	Neg Arg1:T141 Arg2:T150	
+R69	Neg Arg1:T141 Arg2:T151	
+R70	Neg Arg1:T141 Arg2:T152	
+R71	Neg Arg1:T141 Arg2:T153	
+T154	Condition 3349 3412	przewlekłą niewydolnością serca z obniżoną frakcją wyrzutową LV
+T155	Investigation_result 3414 3422	EF: 27%)
+T156	Symptom 3425 3440	I klasa wg NYHA
+T157	Condition 3517 3561	przewlekłą chorobą wieńcową - I klasa wg CCS
+T158	Condition 3566 3648	agodną/umiarkowaną niedomykalnością zastawki mitralnej (typ I+IIIb wg Carpentiera)
+N56	Reference T158 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T159	Condition 3650 3654	LBBB
+N57	Reference T159 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T160	Condition 3656 3668	dyslipidemią
+N58	Reference T160 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T161	Condition 2884 2945	Przewlekła niewydolność serca z obniżoną frakcją wyrzutową LV
+T162	Investigation_result 2947 2955	EF: 27%)
+T163	Symptom 2958 2983	I klasa wg NYHA - de novo
+T164	Condition 2988 3033	Przewlekła choroba wieńcowa - I klasa wg CCS.
+N60	Reference T164 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T165	Condition 3037 3119	Łagodna/umiarkowana niedomykalność zastawki mitralnej (typ I+IIIb wg Carpentiera).
+N61	Reference T165 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T166	Condition 3123 3152	Blok lewej odnogi pęczka Hisa
+N62	Reference T166 ICD10:I44.7	
+T167	Condition 3158 3170	Dyslipidemia
+N63	Reference T167 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T168	Condition 2662 2666	LBBB
+N64	Reference T168 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T169	Symptom 2668 2692	bóle w klatce piersiowej
+T170	Investigation 2280 2303	SPECT mięśnia sercowego
+T171	Investigation 2032 2087	kontrola lipidogramu, stężenia elektrolitów, parametrów
+T172	Behaviour 1924 2019	dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T173	Drug 1696 1701	Acard
+T174	Drug 1703 1713	Ivabradine
+T175	Drug 1715 1723	Entresto
+T176	Drug 1725 1734	Coroswera
+T177	Drug 1736 1743	Milurit
+T178	Condition 1492 1522	Blok lewej odnogi pęczka Hisa.
+N66	Reference T178 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T179	Drug 1565 1575	ezetymibem
+T180	Drug 1555 1562	statyną
+T181	Condition 1523 1535	Dyslipidemia
+N67	Reference T181 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T182	Condition 1449 1490	Łagodna niedomykalność zastawki mitralnej
+N68	Reference T182 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T183	Condition 1403 1448	Przewlekła choroba wieńcowa - I klasa wg CCS.
+T184	Condition 1312 1373	Przewlekła niewydolność serca z obniżoną frakcją wyrzutową LV
+T185	Investigation_result 1376 1382	F: 37%
+T186	Symptom 1386 1401	I klasa wg NYHA
+T187	Condition 996 1026	Blok lewej odnogi pęczka Hisa.
+N71	Reference T187 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T188	Condition 1032 1044	Dyslipidemia
+N72	Reference T188 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T189	Drug 1064 1071	statyną
+T190	Drug 1074 1084	ezetymibem
+T191	Condition 949 990	Łagodna niedomykalność zastawki mitralnej
+N73	Reference T191 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T192	Condition 899 943	Przewlekła choroba wieńcowa - I klasa wg CCS
+T193	Condition 804 865	Przewlekła niewydolność serca z obniżoną frakcją wyrzutową LV
+T194	Investigation_result 867 874	EF: 37%
+T195	Symptom 878 893	I klasa wg NYHA
+T196	Drug 508 516	Entresto
+T197	Investigation 549 571	MRI serca z kontrastem
+T198	Negation 4996 5002	neguje
+T199	Symptom 5003 5028	jakiekolwiek dolegliwości
+R76	Neg Arg1:T198 Arg2:T199	
+T200	Drug 6441 6451	iwabradynę
+T201	Drug 6427 6430	LBA
+T202	Investigation_result 6462 6484	zwolnienie HR < 70/min
+R72	Dat Arg1:T93 Arg2:T94	
+T203	Treatment 6619 6658	nieskutecznej terapii hipolipemizującej
+T204	Treatment 6394 6423	Zmodyfikowano farmakoterapię,
+T205	Date 3980 3993	od 3 miesięcy
+R73	Dat Arg1:T205 Arg2:T137	
+T72	Date 7184 7197	od 7 miesięcy
+R74	Dat Arg1:T72 Arg2:T73	
+T37	Date 8515 8527	od 2 tygodni
+R75	Dat Arg1:T37 Arg2:T19	
+N19	Reference T169 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T138	Behaviour 3995 4000	palił
+N27	Reference T138 ICD10:Z72.0	Używanie tytoniu
+T206	Date 4001 4007	30 lat
+R77	Dat Arg1:T206 Arg2:T138	
+N35	Reference T124 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T207	Drug 6591 6601	sacubitryl
+T208	Drug 6602 6611	walsartan
+T209	Behaviour 7199 7204	palił
+N41	Reference T209 ICD10:Z72.0	Używanie tytoniu
+T210	Date 7205 7211	30 lat
+R78	Dat Arg1:T210 Arg2:T209	
+N23	Reference T61 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N21	Reference T40 ICD10:Z72.0	Używanie tytoniu
+T211	Behaviour 8529 8534	palił
+N65	Reference T211 ICD10:Z72.0	Używanie tytoniu
+T212	Date 8535 8541	30 lat
+R79	Dat Arg1:T212 Arg2:T211	
+N1	Reference T7 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N6	Reference T19 ICD10:Z72.0	Używanie tytoniu
+N28	Reference T73 ICD10:Z72.0	Używanie tytoniu
+N40	Reference T137 ICD10:Z72.0	Używanie tytoniu
+T213	Treatment 331 396	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T214	Treatment 400 445	Pierwsza kontrola w Poradni kardiologicznej (
+N75	Reference T193 ICD10:I50.9	Niewydolność serca, nieokreślona
+N74	Reference T192 ICD10:I25.8	Inne postacie przewlekłej choroby niedokrwiennej serca
+N70	Reference T184 ICD10:I50.9	Niewydolność serca, nieokreślona
+N69	Reference T183 ICD10:I25.8	Inne postacie przewlekłej choroby niedokrwiennej serca
+T215	Treatment 1855 1877	kontrola u lekarza POZ
+T216	Treatment 1887 1921	kontrola w Poradni Kardiologicznej
+T217	Treatment 2198 2263	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T218	Treatment 2308 2380	Planowa hospitalizacja celem oceny skuteczności dotychczasowego leczenia
+T219	Date 2381 2394	za 3 miesiące
+R80	Dat Arg1:T219 Arg2:T218	
+N59	Reference T161 ICD10:I50.9	Niewydolność serca, nieokreślona
+N54	Reference T154 ICD10:I50.9	Niewydolność serca, nieokreślona
+N55	Reference T157 ICD10:I25.8	Inne postacie przewlekłej choroby niedokrwiennej serca
+N76	Reference T136 ICD10:Z72	Problemy związane ze stylem życia
+N31	Reference T106 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+N77	Reference T74 ICD10:Z72	Problemy związane ze stylem życia

@@ -1,0 +1,112 @@
+T1	Investigation 2283 2287	ECHO
+T2	Investigation 2289 2307	EKG metodą Holtera
+T3	Investigation 2309 2313	ABPM
+T4	Investigation 2315 2330	próba wysiłkowa
+T5	Drug 2177 2193	Essentiale forte
+T6	Drug_dose 2194 2199	1-0-0
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 2153 2161	Aspiryna
+T8	Drug_dose 2162 2176	500 mg 0-0-1/2
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 2135 2140	Acard
+T10	Drug_dose 2141 2152	75 mg 1-0-0
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 2113 2123	Benalapril
+T12	Drug_dose 2124 2134	5 mg 1-0-1
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Behaviour 2053 2079	warunki mieszkaniowe dobre
+T14	Negation 1979 1980	-
+T15	Negation 1995 1996	-
+T16	Negation 2004 2005	-
+T17	Negation 2014 2015	-
+T18	Negation 2034 2035	-
+T19	Behaviour 2018 2032	kontakt z odrą
+N1	Reference T19 ICD10:B05	Odra
+R5	Neg Arg1:T18 Arg2:T19	
+T20	Condition 2008 2012	odra
+N2	Reference T20 ICD10:B05	Odra
+R6	Neg Arg1:T17 Arg2:T20	
+T21	Condition 1999 2002	tbc
+N3	Reference T21 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+R7	Neg Arg1:T16 Arg2:T21	
+T22	Condition 1984 1993	borelioza
+N4	Reference T22 ICD10:A69.2	Choroba z Lyme
+R8	Neg Arg1:T15 Arg2:T22	
+T23	Condition 1974 1977	WZW
+R9	Neg Arg1:T14 Arg2:T23	
+T24	Condition 1930 1939	Uczulenia
+N6	Reference T24 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T25	Negation 1923 1929	neguje
+T26	Negation 1903 1909	neguje
+T27	Behaviour 1910 1921	Inne używki
+R10	Neg Arg1:T25 Arg2:T27	
+T28	Behaviour 1886 1901	Palenie tytoniu
+R11	Neg Arg1:T26 Arg2:T28	
+T29	Treatment 1864 1885	Przebyte operacje: jw
+T30	Condition 1246 1323	wrodzoną wadą serca pod postacią pojedynczej komory o morfologii komory lewej
+N8	Reference T30 ICD10:Q24	Inne wrodzone wady rozwojowe serca
+T31	Condition 1326 1355	atrezją zastawki trójdzielnej
+N9	Reference T31 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T32	Condition 1364 1402	wariantem podwójnej zastawki mitralnej
+T33	Treatment 1543 1557	m. hemiFontana
+T34	Treatment 1577 1596	operacji m. Fontana
+T35	Date 1559 1566	11.2000
+R12	Dat Arg1:T35 Arg2:T33	
+T36	Date 1598 1605	03.2002
+R13	Dat Arg1:T36 Arg2:T34	
+T37	Treatment 1616 1655	zamknięciu fenestracji zapinką Amplatza
+T38	Date 1657 1664	10.2004
+R14	Dat Arg1:T38 Arg2:T37	
+T39	Symptom 1700 1712	zasłabnięcia
+N10	Reference T39 ICD10:R55	Omdlenie i zapaść
+T40	Symptom 1714 1722	omdlenia
+N11	Reference T40 ICD10:R55	Omdlenie i zapaść
+T41	Symptom 1724 1734	krwawienia
+N12	Reference T41 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T42	Symptom 1736 1749	czarne stolce
+N13	Reference T42 ICD10:K92.1	Stolce smołowate
+T43	Symptom 1751 1767	brunatne wymioty
+N14	Reference T43 ICD10:K92.0	Wymioty krwawe
+T44	Condition 1769 1785	chorobę wrzodową
+N15	Reference T44 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T45	Symptom 1787 1801	duszność nocną
+N16	Reference T45 ICD10:I50.1	Niewydolność serca lewokomorowa
+T46	Symptom 1803 1818	obrzęki podudzi
+N17	Reference T46 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T47	Symptom 1820 1844	bóle w klatce piersiowej
+N18	Reference T47 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T48	Symptom 1846 1861	kołatania serca
+N19	Reference T48 ICD10:R00.2	Kołatanie serca
+T49	Negation 1692 1698	Neguje
+R15	Neg Arg1:T49 Arg2:T39	
+R16	Neg Arg1:T49 Arg2:T40	
+R17	Neg Arg1:T49 Arg2:T41	
+R18	Neg Arg1:T49 Arg2:T42	
+R19	Neg Arg1:T49 Arg2:T43	
+R20	Neg Arg1:T49 Arg2:T44	
+R21	Neg Arg1:T49 Arg2:T45	
+R22	Neg Arg1:T49 Arg2:T46	
+R23	Neg Arg1:T49 Arg2:T47	
+R24	Neg Arg1:T49 Arg2:T48	
+T50	Treatment 697 736	zamknięciu fenestracji zapinką Amplatza
+T51	Date 743 750	10.2004
+R25	Dat Arg1:T51 Arg2:T50	
+T52	Treatment 653 672	operacji m. Fontana
+T53	Date 679 686	03.2002
+R26	Dat Arg1:T53 Arg2:T52	
+T54	Treatment 605 628	operacji m. hemiFontana
+T55	Date 635 642	11.2000
+R27	Dat Arg1:T55 Arg2:T54	
+T56	Condition 439 516	Wrodzona wada serca pod postacią pojedynczej komory o morfologii komory lewej
+N20	Reference T56 ICD10:Q24	Inne wrodzone wady rozwojowe serca
+T57	Condition 519 548	atrezją zastawki trójdzielnej
+N21	Reference T57 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T58	Condition 557 595	wariantem podwójnej zastawki mitralnej
+N5	Reference T23 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T59	Drug 1941 1946	wapno
+R28	Alg Arg1:T24 Arg2:T59	
+N7	Reference T28 ICD10:Z72.0	Używanie tytoniu
+T60	Condition 1513 1542	atrezji zastawki trójdzielnej
+R29	Dat Arg1:T35 Arg2:T60	
+T61	Treatment 1504 1512	operacji
+R30	Dat Arg1:T35 Arg2:T61	

@@ -1,0 +1,72 @@
+T1	Treatment 331 365	kontrola w Poradni Kardiologicznej
+T2	Date 366 375	za 6 m-cy
+T3	Drug 378 387	Berotec N
+T4	Drug_dose 388 404	aer, 2 x 1 wdech
+T5	Drug 407 419	Flavamed max
+T6	Drug_dose 420 428	2 x 5 ml
+T7	Treatment 431 449	kontrola w Poradni
+T8	Date 452 460	za 3 dni
+T9	Condition 678 729	Wrodzona wada serca - wspólny pień tętniczy typ III
+N1	Reference T9 ICD10:Q20.0	Wspólny pień tętniczy
+T10	Treatment 742 755	korekcji wady
+N2	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T11	Treatment 758 785	użyciem homograftu płucnego
+N3	Reference T11 ICD10:Z95.4	Obecność innych protez zastawek serca
+T12	Date 787 798	23,11,2004r
+T13	Treatment 812 831	wymianie homograftu
+N4	Reference T13 ICD10:Z95.4	Obecność innych protez zastawek serca
+T14	Date 833 844	25.10.2005r
+T15	Treatment 858 881	angioplastyce balonowej
+T16	Treatment 884 912	implantacją dwóch stentów CP
+N5	Reference T16 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T17	Treatment 918 933	zastawki Melody
+N6	Reference T17 ICD10:Z95.3	Obecność ksenogenicznej zastawki serca
+T18	Condition 937 966	zwężonego homograftu płucnego
+N7	Reference T18 ICD10:T82.0	Mechaniczne powikłanie protezy zastawki serca
+T19	Date 968 979	05.02.2016r
+T20	Condition 985 1003	Zapalenie oskrzeli
+T21	Condition 1151 1170	wrodzoną wadą serca
+N9	Reference T21 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T22	Treatment 1175 1195	leczeniu operacyjnym
+N10	Reference T22 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T23	Symptom 1305 1315	Stan dobry
+T24	Date 1317 1334	W ostatnim czasie
+T25	Negation 1335 1338	bez
+T26	Condition 1339 1347	infekcji
+T27	Condition 1349 1356	Alergia
+N11	Reference T27 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T28	Negation 1357 1373	nie potwierdzona
+T29	Drug 1375 1385	Leki stałe
+T30	Negation 1388 1401	nie przyjmuje
+R1	Neg Arg1:T30 Arg2:T29	
+R2	Neg Arg1:T28 Arg2:T27	
+R3	Neg Arg1:T25 Arg2:T26	
+R4	Dat Arg1:T24 Arg2:T26	
+R5	Dat Arg1:T14 Arg2:T13	
+R6	Dat Arg1:T12 Arg2:T10	
+R7	Dat Arg1:T12 Arg2:T11	
+R8	Dat Arg1:T19 Arg2:T15	
+R9	Dat Arg1:T19 Arg2:T16	
+R10	Dat Arg1:T19 Arg2:T17	
+R11	Dat Arg1:T19 Arg2:T18	
+R12	Dat Arg1:T2 Arg2:T1	
+R13	Drg Arg1:T3 Arg2:T4	
+R14	Drg Arg1:T5 Arg2:T6	
+R15	Dat Arg1:T8 Arg2:T7	
+N8	Reference T20 ICD10:J40	Zapalenie oskrzeli nieokreślone jako ostre albo przewlekłe
+R1	Drg Arg1:T3 Arg2:T4
+R10	Dat Arg1:T8 Arg2:T7
+R16	Dat Arg1:T12 Arg2:T10
+R17	Dat Arg1:T12 Arg2:T11
+R27	Dat Arg1:T14 Arg2:T13
+R32	Dat Arg1:T19 Arg2:T18
+R37	Dat Arg1:T19 Arg2:T15
+R38	Dat Arg1:T19 Arg2:T16
+R39	Dat Arg1:T19 Arg2:T17
+R4	Drg Arg1:T5 Arg2:T6
+R42	Dat Arg1:T24 Arg2:T22
+R43	Neg Arg1:T25 Arg2:T26
+R44	Neg Arg1:T28 Arg2:T27
+R45	Neg Arg1:T30 Arg2:T29
+R5	Dat Arg1:T2 Arg2:T1
+R7	Dat Arg1:T2 Arg2:T3

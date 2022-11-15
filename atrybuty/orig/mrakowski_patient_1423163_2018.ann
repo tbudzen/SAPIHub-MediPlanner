@@ -1,0 +1,38 @@
+T1	Drug 340 350	Betaloc 25
+T2	Drug 352 373	Depakine chronosphere
+T3	Drug 375 384	Petinimid
+T4	Condition 613 647	Napady częstoskurczu nadkomorowego
+N1	Reference T4 ICD10:I47.1	Częstoskurcz nadkomorowy
+T5	Investigation 847 854	bad EKG
+T6	Investigation_result 855 875	napadu częstoskurczu
+N2	Reference T6 ICD10:I47.9	Częstoskurcz napadowy, nieokreślony
+R1	Inv Arg1:T5 Arg2:T6	
+T7	Investigation_result 879 898	domu HR 0o. 200/min
+N3	Reference T7 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T8	Drug_dose 910 916	120 mg
+T9	Drug 917 926	Corgaronu
+T10	Drug_dose 927 929	iv
+R2	Drg Arg1:T9 Arg2:T10	
+R3	Drg Arg1:T9 Arg2:T8	
+T11	Investigation_result 982 996	HR ok. 170/min
+N4	Reference T11 ICD10:R00.0	Tachykardia, nieokreślona
+T12	Investigation_result 998 1007	RR 114/55
+T13	Date 1069 1080	od 1,5 roku
+T14	Date 1038 1067	ostatnio na początku sierpnia
+T15	Condition 1009 1015	Napady
+N5	Reference T15 ICD10:I47.9	Częstoskurcz napadowy, nieokreślony
+R4	Dat Arg1:T14 Arg2:T15	
+R5	Dat Arg1:T13 Arg2:T15	
+T16	Symptom 1155 1167	bóle brzucha
+N6	Reference T16 ICD10:R10.4	Inny i nieokreślony ból brzucha
+T17	Investigation 1169 1187	obserwowana w kier
+T18	Condition 1189 1210	nietolerancji laktozy
+A1	Source T18 Declared
+N7	Reference T18 ICD10:E73	Nietolerancja laktozy
+T19	Treatment 1217 1239	leczona neurologicznie
+T20	Drug 1271 1291	Depakina Chronosfera
+T21	Drug_dose 1292 1300	2xdz 250
+R6	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1307 1316	Petinimid
+T23	Drug_dose 1317 1328	2xdz 250 mg
+R7	Drg Arg1:T22 Arg2:T23	

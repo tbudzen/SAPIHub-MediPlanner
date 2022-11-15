@@ -1,0 +1,117 @@
+T1	Drug 340 349	Triplixam
+T2	Treatment 460 482	kontrola u lekarza POZ
+T3	Treatment 485 526	dalsza kontrola w Poradni Kardiologicznej
+T4	Treatment 538 558	kontrola lipidogramu
+T5	Date 559 568	za 3 m-ce
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Drug 600 609	Triplixam
+T7	Drug_dose 610 635	5/1,25/5mg 1x 1 tabl/rano
+T8	Condition 854 875	Nadciśnienie tętnicze
+N1	Reference T8 ICD10:I10	
+R2	Drg Arg1:T6 Arg2:T7	
+T9	Condition 1035 1037	HA
+N2	Reference T9 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T10	Date 1039 1051	od ok. 5 lat
+T11	Symptom 1054 1095	przypadkowych pomiarach RR sk 150-160mmHg
+R3	Dat Arg1:T10 Arg2:T9	
+R4	Dat Arg1:T10 Arg2:T11	
+T12	Drug 1166 1177	Triplixamem
+T13	Drug_dose 1178 1188	5/1,25/5mg
+R5	Drg Arg1:T12 Arg2:T13	
+T14	Symptom 1191 1215	RR sk w domu ok. 140mmHg
+T15	Date 1149 1157	Ostatnio
+R6	Dat Arg1:T15 Arg2:T12	
+R7	Dat Arg1:T15 Arg2:T14	
+T16	Date 1238 1247	od 1 m-ca
+T17	Symptom 1248 1322	ból opasujący  po lewej stronie klatki piersiowej przy głębokim oddychaniu
+N3	Reference T17 ICD10:R07.1	Ból w klatce piersiowej podczas oddychania
+R8	Dat Arg1:T16 Arg2:T17	
+T18	Condition 877 891	Torbiele nerek
+T19	Negation 1324 1330	Neguje
+T20	Symptom 1332 1344	zasłabnięcia
+T21	Symptom 1346 1354	omdlenia
+N4	Reference T21 ICD10:R55	Omdlenie i zapaść
+T22	Symptom 1356 1366	krwawienia
+T23	Symptom 1368 1381	czarne stolce
+N5	Reference T23 ICD10:K92.1	Stolce smołowate
+T24	Symptom 1383 1399	brunatne wymioty
+N6	Reference T24 ICD10:K92.0	Wymioty krwawe
+T25	Condition 1401 1417	chorobę wrzodową
+N7	Reference T25 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T26	Symptom 1419 1433	duszność nocną
+N8	Reference T26 ICD10:R06.0	Duszność
+T27	Symptom 1435 1450	obrzęki podudzi
+N9	Reference T27 ICD10:R60.0	Obrzęk zlokalizowany
+T28	Symptom 1452 1467	kołatania serca
+N10	Reference T28 ICD10:R00.2	Kołatanie serca
+T29	Condition 1469 1471	DM
+N11	Reference T29 ICD10:E14	Cukrzyca nieokreślona
+T30	Condition 1473 1495	uraz klatki piersiowej
+N12	Reference T30 ICD10:S29.9	Nieokreślony uraz klatki piersiowej
+R9	Neg Arg1:T19 Arg2:T20	
+R10	Neg Arg1:T19 Arg2:T21	
+R11	Neg Arg1:T19 Arg2:T22	
+R12	Neg Arg1:T19 Arg2:T23	
+R13	Neg Arg1:T19 Arg2:T24	
+R14	Neg Arg1:T19 Arg2:T25	
+R15	Neg Arg1:T19 Arg2:T26	
+R16	Neg Arg1:T19 Arg2:T27	
+R17	Neg Arg1:T19 Arg2:T28	
+R18	Neg Arg1:T19 Arg2:T29	
+R19	Neg Arg1:T19 Arg2:T30	
+T31	Treatment 1498 1515	Przebyte operacje
+N13	Reference T31 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T32	Negation 1517 1520	nie
+R20	Neg Arg1:T32 Arg2:T31	
+T33	Behaviour 1521 1536	Palenie tytoniu
+N14	Reference T33 ICD10:Z72.0	Używanie tytoniu
+T34	Negation 1538 1541	nie
+T35	Behaviour 1542 1546	pali
+N15	Reference T35 ICD10:Z72.0	Używanie tytoniu
+T36	Date 1547 1555	od 9 lat
+R21	Neg Arg1:T34 Arg2:T35	
+R22	Neg Arg1:T34 Arg2:T33	
+R23	Dat Arg1:T36 Arg2:T35	
+R24	Dat Arg1:T36 Arg2:T33	
+T37	Behaviour 1556 1567	Inne używki
+T38	Negation 1569 1572	nie
+T39	Condition 1573 1582	Uczulenia
+N16	Reference T39 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T40	Negation 1584 1587	nie
+R25	Neg Arg1:T38 Arg2:T37	
+R26	Neg Arg1:T40 Arg2:T39	
+T41	Condition 1616 1619	WZW
+N17	Reference T41 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T42	Condition 1626 1635	borelioza
+N18	Reference T42 ICD10:A69.2	Choroba z Lyme
+T43	Condition 1641 1644	tbc
+N19	Reference T43 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T44	Condition 1650 1654	odra
+N20	Reference T44 ICD10:B05	Odra
+T45	Condition 1660 1674	kontakt z odrą
+N21	Reference T45 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+T46	Negation 1620 1623	(-)
+T47	Negation 1636 1639	(-)
+T48	Negation 1645 1648	(-)
+T49	Negation 1655 1658	(-)
+T50	Negation 1675 1678	(-)
+T51	Condition 1722 1732	udar mózgu
+A1	Status T51 Family
+N22	Reference T51 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T52	Date 1733 1740	ok 45rż
+R27	Dat Arg1:T52 Arg2:T51	
+R28	Neg Arg1:T46 Arg2:T41	
+R29	Neg Arg1:T47 Arg2:T42	
+R30	Neg Arg1:T48 Arg2:T43	
+R31	Neg Arg1:T49 Arg2:T44	
+R32	Neg Arg1:T50 Arg2:T45	
+T53	Behaviour 1758 1784	warunki mieszkaniowe dobre
+T54	Drug 1822 1831	Triplixam
+T55	Drug_dose 1832 1857	5/1,25/5mg 1x 1 tabl/rano
+R33	Drg Arg1:T54 Arg2:T55	
+T56	Investigation 1918 1939	badania laboratoryjne
+T57	Investigation 1941 1945	ECHO
+T58	Investigation 1947 1965	EKG metodą Holtera
+T59	Investigation 1967 1971	ABPM
+T60	Investigation 1973 1988	próba wysiłkowa
+A2	Status T18 Historical_Insignificant

@@ -1,0 +1,245 @@
+T1	Treatment 559 610	Dalsza opieka w POZ oraz Poradni Endokrynologicznej
+T2	Treatment 615 658	Wskazana kontrola w Poradni Kardiologicznej
+T3	Investigation 781 784	ILR
+T4	Investigation 786 795	Tilt Test
+T5	Treatment 801 942	Wskazana diagnostyka i wykluczenie neurologicznych oraz psychogennych przyczyn omdleń w warunkach Poradni Neurologicznej oraz Psychiatrycznej
+T6	Investigation 947 984	Wskazane kontrolne USG jamy brzusznej
+T7	Date 985 998	za 6 miesięcy
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Treatment 999 1057	w celu oceny zmian opisywanych w dotychczasowych badaniach
+T9	Investigation 1062 1154	Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T10	Date 1166 1180	za 5-6 tygodni
+R2	Dat Arg1:T10 Arg2:T9	
+T11	Behaviour 1185 1287	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T12	Investigation 1292 1348	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T13	Treatment 1353 1381	Regularne przyjmowanie leków
+T14	Drug 1387 1401	Euthyrox N 125
+T15	Drug_dose 1402 1429	1/2 tabletki rano, na czczo
+R3	Drg Arg1:T14 Arg2:T15	
+T16	Symptom 1648 1656	Omdlenia
+N1	Reference T16 ICD10:R55	Omdlenie i zapaść
+T17	Condition 1680 1700	Bradykardia zatokowa
+N2	Reference T17 ICD10:R00.1	Bradykardia, nieokreślona
+T18	Condition 1702 1711	Hipotonia
+N3	Reference T18 ICD10:I95.9	Niedociśnienie tętnicze, nieokreślone
+T19	Condition 1713 1754	Łagodna niedomykalność zastawki mitralnej
+N4	Reference T19 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T20	Condition 1757 1769	trójdzielnej
+N5	Reference T20 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T21	Condition 1771 1793	Niedoczynność tarczycy
+N6	Reference T21 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T22	Condition 1795 1817	Hipoglikemia reaktywna
+N7	Reference T22 ICD10:E16.2	Hipoglikemia, nieokreślona
+T23	Condition 1819 1885	Zwężenie kanału kręgowego przez przepuklinę krążka międzykręgowego
+N8	Reference T23 ICD10:M99.5	Zwężenie kanału kręgowego przez przepuklinę krążka międzykręgowego
+T24	Treatment 1895 1903	operacji
+A1	Status T24 Historical_Insignificant
+T25	Condition 1935 1959	Zespół jelita drażliwego
+N9	Reference T25 ICD10:K58	Zespół jelita drażliwego
+T26	Condition 2122 2146	stanów hipoglikemicznych
+A2	Source T26 Declared
+N10	Reference T26 ICD10:E16.2	Hipoglikemia, nieokreślona
+T27	Symptom 2269 2288	trzykrotne omdlenie
+N11	Reference T27 ICD10:R55	Omdlenie i zapaść
+T28	Symptom 2302 2350	silnymi dolegliwościami bólowymi głowy lub barku
+N12	Reference T28 ICD10:R51	Ból głowy
+T29	Negation 2362 2368	neguje
+T30	Symptom 2369 2384	kołatanie serca
+N13	Reference T30 ICD10:R00.2	Kołatanie serca
+T31	Symptom 2386 2394	duszność
+N14	Reference T31 ICD10:R06.0	Duszność
+T32	Symptom 2396 2420	bóle w klatce piersiowej
+N15	Reference T32 ICD10:R07	Ból gardła i w klatce piersiowej
+T33	Symptom 2422 2426	bóle
+N16	Reference T33 ICD10:R51	Ból głowy
+T34	Symptom 2429 2465	zawroty głowy towarzyszące omdleniom
+N17	Reference T34 ICD10:R42	Zawroty głowy i odurzenie
+R4	Neg Arg1:T29 Arg2:T34	
+R5	Neg Arg1:T29 Arg2:T33	
+R6	Neg Arg1:T29 Arg2:T32	
+R7	Neg Arg1:T29 Arg2:T31	
+R8	Neg Arg1:T29 Arg2:T30	
+T35	Symptom 2477 2503	epizod utraty przytomności
+N18	Reference T35 ICD10:R55	Omdlenie i zapaść
+T36	Date 2504 2514	25.01.2019
+R9	Dat Arg1:T36 Arg2:T35	
+T37	Treatment 2526 2543	zopatrzono  w SOR
+T38	Symptom 2559 2608	osłabioną siłę mięśniową w lewej kończynie górnej
+T39	Investigation 2618 2626	TK głowy
+T40	Investigation_result 2679 2705	krwawienie wewnątrzmózgowe
+R10	Inv Arg1:T39 Arg2:T40	
+T41	Investigation_result 2629 2644	tkanki mózgowia
+R11	Inv Arg1:T39 Arg2:T41	
+T42	Symptom 2707 2751	Omdlenia pojawiają się w godzinach porannych
+N19	Reference T42 ICD10:R55	Omdlenie i zapaść
+T43	Condition 2859 2912	przepukliny odcinka szyjnego i lędźwiowego kręgosłupa
+N20	Reference T43 ICD10:M99.5	Zwężenie kanału kręgowego przez przepuklinę krążka międzykręgowego
+T44	Symptom 2964 2997	bóle brzucha w okolicy podbrzusza
+N21	Reference T44 ICD10:R10.3	Ból zlokalizowany w innych częściach podbrzusza
+T45	Drug 3018 3026	Debretin
+T46	Symptom 3070 3082	schudła 7 kg
+N22	Reference T46 ICD10:R63.4	Nieprawidłowa utrata masy ciała
+T47	Condition 3126 3138	wole guzkowe
+N23	Reference T47 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T48	Investigation 3149 3153	BACC
+T49	Date 3157 3170	wrześniu 2017
+T50	Investigation_result 3173 3184	Bethesda II
+R12	Inv Arg1:T48 Arg2:T50	
+R13	Dat Arg1:T49 Arg2:T50	
+R14	Dat Arg1:T49 Arg2:T48	
+T51	Condition 3187 3211	zespół jelita drażliwego
+N24	Reference T51 ICD10:K58	Zespół jelita drażliwego
+T52	Symptom 3213 3232	epizod rwy barkowej
+N25	Reference T52 ICD10:M54.2	Bóle karku
+T53	Condition 3234 3252	infekcja H. Pylori
+T54	Date 3255 3260	2015r
+R15	Dat Arg1:T54 Arg2:T53	
+T55	Condition 3262 3284	żylaki kończyn dolnych
+N26	Reference T55 ICD10:I83	Żylaki kończyn dolnych
+T56	Drug 3317 3325	Euthyrox
+T57	Drug_dose 3326 3333	125 mcg
+R16	Drg Arg1:T56 Arg2:T57	
+T58	Drug 3335 3343	Polocard
+T59	Drug_dose 3344 3349	75 mg
+R17	Drg Arg1:T58 Arg2:T59	
+T60	Drug 3351 3359	Trittico
+T61	Condition 3361 3376	Alergie na leki
+T62	Negation 3377 3383	neguje
+R18	Neg Arg1:T62 Arg2:T61	
+T63	Condition 3385 3387	OM
+T64	Date 3389 3395	50. rż
+R19	Dat Arg1:T64 Arg2:T63	
+T65	Condition 3398 3413	Wywiad rodzinny
+A3	Status T65 Family
+T66	Condition 3423 3438	cukrzyca typu 2
+A4	Status T66 Family
+N27	Reference T66 ICD10:E11	Cukrzyca insulinoniezależna
+T67	Investigation 3449 3452	BMI
+T68	Investigation_result 3455 3459	20,9
+R20	Inv Arg1:T67 Arg2:T68	
+T69	Symptom 3488 3554	ból podbrzusza po stronie prawej, promieniujący do kończyny dolnej
+N28	Reference T69 ICD10:R10.3	Ból zlokalizowany w innych częściach podbrzusza
+T70	Condition 3709 3724	wola guzowatego
+N29	Reference T70 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T71	Symptom 3755 3778	trudności z zasypianiem
+N30	Reference T71 ICD10:G47.9	Zaburzenia snu, nieokreślone
+T72	Condition 3780 3802	wypuklin w kręgosłupie
+N31	Reference T72 ICD10:M99.5	Zwężenie kanału kręgowego przez przepuklinę krążka międzykręgowego
+T73	Symptom 3877 3901	dwóch utrat przytomności
+N32	Reference T73 ICD10:R55	Omdlenie i zapaść
+T74	Symptom 3904 3924	jednego zasłabnięcia
+T75	Date 3938 3945	04.2018
+R21	Dat Arg1:T75 Arg2:T73	
+R22	Dat Arg1:T75 Arg2:T74	
+T76	Symptom 3960 3983	ciemnością przed oczami
+N33	Reference T76 ICD10:H53.4	Zmiany w polu widzenia
+T77	Symptom 3986 4006	1x z bełkotliwą mową
+N34	Reference T77 ICD10:R47	Zaburzenia mowy niesklasyfikowane gdzie indziej
+T78	Condition 4008 4045	2x z upadkami i urazami (m.ni. głowy)
+N35	Reference T78 ICD10:T07	Liczne nieokreślone urazy
+T79	Symptom 4047 4080	1x z bólem całych kończyn dolnych
+N36	Reference T79 ICD10:M79.6	Bóle kończyn
+T80	Investigation_result 4089 4104	RR ok 90/60mmHg
+N37	Reference T80 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T81	Condition 4134 4166	ciśnieniomierz wskazywał arytmię
+A5	Source T81 Declared
+N38	Reference T81 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T82	Symptom 4175 4223	mała różnica między RR skurczowym i rozkurczowym
+N39	Reference T82 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T83	Symptom 4246 4269	czasami kołatania serca
+N40	Reference T83 ICD10:R00.2	Kołatanie serca
+T84	Symptom 4271 4309	1x uczucie ciężaru w klatce piersiowej
+N41	Reference T84 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T85	Symptom 4312 4356	kołataniem serca w czasie wysiłku fizycznego
+N42	Reference T85 ICD10:R00.2	Kołatanie serca
+T86	Condition 4370 4386	napadów lękowych
+A6	Source T86 Declared
+N43	Reference T86 ICD10:F41.9	Zaburzenia lękowe, nieokreślone
+T87	Date 4389 4399	w młodości
+T88	Symptom 4400 4412	zasłabnięcia
+N44	Reference T88 ICD10:R55	Omdlenie i zapaść
+R23	Dat Arg1:T87 Arg2:T88	
+T89	Negation 4434 4440	Neguje
+T90	Condition 4442 4444	DM
+N45	Reference T90 ICD10:E14	Cukrzyca nieokreślona
+T91	Symptom 4446 4464	obrzęki kk dolnych
+N46	Reference T91 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T92	Symptom 4466 4486	szybsze męczenie się
+N47	Reference T92 ICD10:R53	Złe samopoczucie i zmęczenie
+T93	Behaviour 4488 4498	papierosów
+T94	Negation 4499 4507	nie pali
+T95	Date 4508 4519	od 3-4 m-cy
+R24	Neg Arg1:T94 Arg2:T93	
+R25	Dat Arg1:T95 Arg2:T93	
+R26	Neg Arg1:T89 Arg2:T90	
+R27	Neg Arg1:T89 Arg2:T91	
+R28	Neg Arg1:T89 Arg2:T92	
+T96	Condition 4541 4563	żylaki kończyn dolnych
+T97	Treatment 4565 4584	Leczenie przewlekłe
+T98	Condition 4634 4637	WZW
+N49	Reference T98 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T99	Condition 4647 4656	borelioza
+N50	Reference T99 ICD10:A69.2	Choroba z Lyme
+T100	Condition 4663 4667	Odra
+N51	Reference T100 ICD10:B05	Odra
+T101	Negation 4640 4641	-
+R29	Neg Arg1:T101 Arg2:T98	
+T102	Negation 4659 4660	-
+R30	Neg Arg1:T102 Arg2:T99	
+T103	Negation 4670 4671	-
+R31	Neg Arg1:T103 Arg2:T100	
+T104	Condition 4676 4695	wywiadzie rodzinnym
+A8	Status T104 Family
+T105	Negation 4699 4703	brak
+R32	Neg Arg1:T105 Arg2:T104	
+T106	Behaviour 4705 4720	Palenie tytoniu
+T107	Negation 4722 4730	nie pali
+T108	Date 4731 4748	od kilku miesięcy
+R33	Neg Arg1:T107 Arg2:T106	
+R34	Dat Arg1:T108 Arg2:T106	
+T109	Behaviour 4750 4761	Inne używki
+T110	Negation 4763 4766	nie
+R35	Neg Arg1:T110 Arg2:T109	
+T111	Condition 4767 4776	Uczulenia
+T112	Negation 4778 4784	neguje
+R36	Neg Arg1:T112 Arg2:T111	
+T113	Behaviour 4801 4827	warunki mieszkaniowe dobre
+T114	Drug 4852 4860	Polocard
+T115	Drug_dose 4861 4882	75 mg 1x dz wieczorem
+R37	Drg Arg1:T114 Arg2:T115	
+T116	Drug 4885 4898	Euthyrox N125
+T117	Drug_dose 4899 4917	1x dz po 1/2 tabl.
+R38	Drg Arg1:T116 Arg2:T117	
+T118	Drug 4920 4927	Tritico
+T119	Investigation 4943 4953	Echo serca
+T120	Investigation 4956 4966	Holter EKG
+T121	Investigation 4969 4984	Próba Wysiłkowa
+T122	Condition 1904 1933	żylaków kończyny dolnej lewej
+N53	Reference T122 ICD10:I83	Żylaki kończyn dolnych
+T123	Treatment 4521 4538	Przebyte operacje
+N54	Reference T96 ICD10:I83	Żylaki kończyn dolnych
+T124	Date 659 672	za 3 miesiące
+R39	Dat Arg1:T124 Arg2:T2	
+T125	Treatment 673 713	w celu oceny ciśnienia tętniczego, tętna
+T126	Symptom 719 734	epizodów omdleń
+N55	Reference T126 ICD10:R55	Omdlenie i zapaść
+T127	Treatment 737 779	rozważenia dalszej pogłębionej diagnostyki
+N57	Reference T111 ICD10:T78.4	Alergia, nieokreślona
+T128	Treatment 4587 4605	endokrynologicznej
+T129	Investigation 4113 4133	podczas mierzenia RR
+A7	Status T122 Historical_Insignificant
+T130	Negation 2645 2648	bez
+T131	Investigation_result 2649 2666	zmian ogniskowych
+R40	Neg Arg1:T130 Arg2:T131	
+T132	Negation 2668 2678	wykluczono
+R41	Neg Arg1:T132 Arg2:T40	
+N58	Reference T40 ICD10:I61	Krwotok śródczaszkowy
+T133	Date 3083 3103	w przeciągu pół roku
+R42	Dat Arg1:T133 Arg2:T46	
+N56	Reference T61 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+N59	Reference T74 ICD10:R55	Omdlenie i zapaść
+T134	Symptom 4413 4421	omdlenia
+N60	Reference T134 ICD10:R55	Omdlenie i zapaść
+R43	Dat Arg1:T87 Arg2:T134	
+N48	Reference T93 ICD10:Z72.0	Używanie tytoniu
+N52	Reference T106 ICD10:Z72.0	Używanie tytoniu

@@ -1,0 +1,105 @@
+T1	Condition 448 482	Nadkomorowe zaburzenia rytmu serca
+N1	Reference T1 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T2	Condition 484 505	Nadciśnienie tętnicze
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Condition 507 553	Zapalenie błony śluzowej żołądka i dwunastnicy
+N3	Reference T3 ICD10:K29.9	Zapalenie żołądka i dwunastnicy, nieokreślone
+T4	Condition 784 791	Arytmia
+N4	Reference T4 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T5	Condition 793 814	Nadciśnienie tętnicze
+N5	Reference T5 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T6	Condition 816 862	Zapalenie błony śluzowej żołądka i dwunastnicy
+N6	Reference T6 ICD10:K29.9	Zapalenie żołądka i dwunastnicy, nieokreślone
+T7	Condition 1048 1097	arytmii pod postacią poj. ExSV, TSV oraz poj. ExV
+N7	Reference T7 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T9	Negation 1153 1159	Neguje
+T10	Symptom 1160 1172	zasłabnięcia
+T11	Symptom 1174 1182	omdlenia
+N9	Reference T11 ICD10:R55	Omdlenie i zapaść
+T12	Symptom 1184 1197	zawroty głowy
+N10	Reference T12 ICD10:R42	Zawroty głowy i odurzenie
+T13	Symptom 1199 1209	krwawienia
+T14	Symptom 1211 1224	czarne stolce
+N12	Reference T14 ICD10:K92.1	Stolce smołowate
+T15	Symptom 1226 1242	brunatne wymioty
+N13	Reference T15 ICD10:K92.0	Wymioty krwawe
+T16	Condition 1244 1260	chorobę wrzodową
+N14	Reference T16 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T17	Symptom 1262 1276	duszność nocną
+N15	Reference T17 ICD10:R06.0	Duszność
+T18	Symptom 1278 1293	obrzęki podudzi
+R1	Neg Arg1:T9 Arg2:T18	
+R2	Neg Arg1:T9 Arg2:T17	
+R3	Neg Arg1:T9 Arg2:T16	
+R4	Neg Arg1:T9 Arg2:T15	
+R5	Neg Arg1:T9 Arg2:T14	
+R6	Neg Arg1:T9 Arg2:T13	
+R7	Neg Arg1:T9 Arg2:T12	
+R8	Neg Arg1:T9 Arg2:T11	
+R9	Neg Arg1:T9 Arg2:T10	
+T19	Symptom 1304 1401	uciskowe dolegliwości bólowe w klatce piersiowej, niezwiązany z wysiłkiem fizycznym, krótkotrwały
+N17	Reference T19 ICD10:R07.3	Inne bóle w klatce piersiowej
+T21	Symptom 1432 1503	drętwienie palców dłoni, częściej prawej występujące najczęściej w nocy
+N18	Reference T21 ICD10:R20.2	Parestezje
+T22	Investigation_result 1532 1562	skoki ciśnienia do 170/110mmHg
+N19	Reference T22 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T23	Condition 1577 1584	Arytmia
+N20	Reference T23 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T24	Condition 1586 1607	Nadciśnienie tętnicze
+N21	Reference T24 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T25	Condition 1609 1655	Zapalenie błony śluzowej żołądka i dwunastnicy
+N22	Reference T25 ICD10:K29.9	Zapalenie żołądka i dwunastnicy, nieokreślone
+T26	Treatment 1669 1686	Przebyte operacje
+T27	Negation 1688 1692	brak
+R10	Neg Arg1:T27 Arg2:T26	
+T28	Condition 1720 1723	WZW
+N23	Reference T28 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T29	Condition 1732 1741	borelioza
+N24	Reference T29 ICD10:A69.2	Choroba z Lyme
+T30	Condition 1749 1757	grużlica
+T31	Condition 1765 1769	odra
+N26	Reference T31 ICD10:B05	Odra
+T32	Negation 1772 1773	-
+R11	Neg Arg1:T32 Arg2:T31	
+T33	Negation 1760 1761	-
+R12	Neg Arg1:T33 Arg2:T30	
+T34	Negation 1744 1745	-
+R13	Neg Arg1:T34 Arg2:T29	
+T35	Negation 1726 1727	-
+R14	Neg Arg1:T35 Arg2:T28	
+T36	Condition 1776 1791	Wywiad rodzinny
+A1	Status T36 Family
+T37	Condition 1793 1795	NS
+A2	Status T37 Family
+N27	Reference T37 ICD10:I50.9	Niewydolność serca, nieokreślona
+T38	Condition 1797 1824	zapalenie mięśnia sercowego
+A3	Status T38 Family
+N28	Reference T38 ICD10:I40.9	Ostre zapalenie mięśnia sercowego, nieokreślone
+T39	Condition 1841 1846	zawał
+A4	Status T39 Family
+N29	Reference T39 ICD10:I25.2	Przebyty zawał serca
+T40	Behaviour 1869 1884	Palenie tytoniu
+T41	Negation 1886 1892	neguje
+R15	Neg Arg1:T41 Arg2:T40	
+T42	Behaviour 1894 1905	Inne używki
+T43	Negation 1907 1913	neguje
+R16	Neg Arg1:T43 Arg2:T42	
+T44	Condition 1915 1924	Uczulenia
+N31	Reference T44 ICD10:T78.4	Alergia, nieokreślona
+T45	Negation 1926 1932	neguje
+R17	Neg Arg1:T45 Arg2:T44	
+T46	Behaviour 1950 1976	warunki mieszkaniowe dobre
+T47	Behaviour 2002 2015	szef w firmie
+T48	Drug 2023 2030	nebilet
+T49	Drug_dose 2031 2047	5mg 1 tabletka R
+R18	Drg Arg1:T48 Arg2:T49	
+T50	Investigation 2063 2066	TTE
+T51	Investigation 2068 2071	TET
+T52	Investigation 2073 2077	ABPM
+T53	Investigation 2079 2089	Holter EKG
+N32	Reference T10 ICD10:R55	Omdlenie i zapaść
+N30	Reference T40 ICD10:Z72.0	Używanie tytoniu
+N11	Reference T13 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N16	Reference T18 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N8	Reference T30 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N25	Reference T42 ICD10:Z72	Problemy związane ze stylem życia

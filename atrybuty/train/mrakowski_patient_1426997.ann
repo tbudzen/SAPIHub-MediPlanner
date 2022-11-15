@@ -1,0 +1,203 @@
+T1	Condition 438 459	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 461 492	Napadowe migotanie przedsionków
+N2	Reference T2 ICD10:I48	Migotanie i trzepotanie przedsionków
+T3	Condition 494 535	Łagodna niedomykalność zastawki mitralnej
+N3	Reference T3 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T4	Symptom 537 550	Zawroty głowy
+N4	Reference T4 ICD10:R42	Zawroty głowy i odurzenie
+T5	Condition 564 596	Zmiany zwyrodnieniowe kręgosłupa
+N5	Reference T5 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T6	Behaviour 598 608	Nikotynizm
+N6	Reference T6 ICD10:Z72.0	Używanie tytoniu
+T7	Treatment 630 651	operacyjnym usunięciu
+T8	Date 677 687	14/02/2019
+R1	Dat Arg1:T8 Arg2:T7	
+T9	Treatment 698 719	operacyjnym usunięciu
+A1	Status T9 Historical_Insignificant
+A2	Status T7 Historical_Insignificant
+T10	Treatment 752 760	operacji
+A3	Status T10 Historical_Insignificant
+T11	Date 782 793	15 lat temu
+R2	Dat Arg1:T11 Arg2:T10	
+T12	Treatment 803 816	appendektomii
+A4	Status T12 Historical_Insignificant
+T13	Date 817 831	w wieku 17 lat
+R3	Dat Arg1:T13 Arg2:T12	
+T14	Treatment 944 1016	Dalsza opieka w POZ, Poradni Kardiologicznej oraz Poradni Neurologicznej
+T15	Investigation 1021 1113	Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T16	Behaviour 1118 1220	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T17	Investigation 1225 1307	Regularna samokontrola ciśnienia tętniczego krwi i tętna (minimum 2 razy dziennie)
+T18	Treatment 1312 1340	Regularne przyjmowanie leków
+T19	Drug 1346 1353	Xarelto
+T20	Drug_dose 1354 1374	20mg 1 tabletka rano
+R4	Drg Arg1:T19 Arg2:T20	
+T21	Drug 1376 1392	Telmisartan EGIS
+T22	Drug_dose 1393 1420	40mg 1/2 tabletki wieczorem
+R5	Drg Arg1:T21 Arg2:T22	
+T23	Drug 1422 1431	Rytmonorm
+T24	Drug_dose 1432 1465	150mg 1 tabletka rano i wieczorem
+R6	Drg Arg1:T23 Arg2:T24	
+T25	Drug 1467 1473	Atoris
+T26	Drug_dose 1474 1499	10mg 1 tabletka wieczorem
+R7	Drg Arg1:T25 Arg2:T26	
+T27	Drug 1501 1509	Cavinton
+T28	Drug_dose 1510 1568	5mg 1 tabletka rano i wieczorem - według zaleceń neurologa
+R8	Drg Arg1:T27 Arg2:T28	
+T29	Drug 1570 1578	Pramolan
+T30	Drug_dose 1579 1631	50mg 1 tabletka wieczorem - według zaleceń neurologa
+R9	Drg Arg1:T29 Arg2:T30	
+T31	Condition 1818 1827	ASD t. II
+A5	Source T31 Declared
+N7	Reference T31 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T32	Investigation 1847 1850	TTE
+T33	Date 1853 1858	2017r
+T34	Investigation_result 1874 1877	ASD
+R10	Dat Arg1:T33 Arg2:T32	
+R11	Dat Arg1:T33 Arg2:T34	
+R12	Inv Arg1:T32 Arg2:T34	
+T35	Symptom 1906 1947	niestabilne wartości ciśnienia tętniczego
+N8	Reference T35 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T36	Investigation_result 1982 2002	maks. do 190/110mmHg
+N9	Reference T36 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T37	Negation 2006 2012	Neguje
+T38	Symptom 2013 2025	zasłabnięcia
+T39	Symptom 2027 2035	omdlenia
+N10	Reference T39 ICD10:R55	Omdlenie i zapaść
+T40	Symptom 2037 2047	krwawienia
+T41	Symptom 2049 2062	czarne stolce
+N11	Reference T41 ICD10:K92.1	Stolce smołowate
+T42	Symptom 2064 2080	brunatne wymioty
+N12	Reference T42 ICD10:K92.0	Wymioty krwawe
+T43	Condition 2082 2098	chorobę wrzodową
+N13	Reference T43 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T44	Symptom 2100 2114	duszność nocną
+N14	Reference T44 ICD10:R06.0	Duszność
+T45	Symptom 2116 2131	obrzęki podudzi
+T46	Symptom 2133 2157	bóle w klatce piersiowej
+R13	Neg Arg1:T37 Arg2:T46	
+R14	Neg Arg1:T37 Arg2:T38	
+R15	Neg Arg1:T37 Arg2:T45	
+R16	Neg Arg1:T37 Arg2:T44	
+R17	Neg Arg1:T37 Arg2:T43	
+R18	Neg Arg1:T37 Arg2:T42	
+R19	Neg Arg1:T37 Arg2:T41	
+R20	Neg Arg1:T37 Arg2:T40	
+R21	Neg Arg1:T37 Arg2:T39	
+T47	Symptom 2159 2178	Innych dolegliwości
+T48	Negation 2179 2190	nie zgłasza
+R22	Neg Arg1:T48 Arg2:T47	
+T49	Condition 2205 2226	Nadciśnienie tętnicze
+N17	Reference T49 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T50	Condition 2228 2259	Napadowe migotanie przedsionków
+N18	Reference T50 ICD10:I48	Migotanie i trzepotanie przedsionków
+T51	Symptom 2261 2274	Zawroty głowy
+N19	Reference T51 ICD10:R42	Zawroty głowy i odurzenie
+T52	Condition 2288 2320	Zmiany zwyrodnieniowe kręgosłupa
+N20	Reference T52 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T53	Behaviour 2322 2332	Nikotynizm
+T54	Treatment 2347 2364	Przebyte operacje
+T55	Treatment 2374 2395	operacyjnym usunięciu
+A6	Status T55 Historical_Insignificant
+T56	Date 2421 2431	14/02/2019
+R23	Dat Arg1:T56 Arg2:T55	
+T57	Treatment 2442 2463	operacyjnym usunięciu
+A7	Status T57 Historical_Insignificant
+T58	Treatment 2488 2501	Appendektomia
+A8	Status T58 Historical_Insignificant
+T59	Date 2502 2516	w wieku 17 lat
+R24	Dat Arg1:T59 Arg2:T58	
+T60	Treatment 2518 2526	Operacja
+A9	Status T60 Historical_Insignificant
+T61	Date 2548 2559	15 lat temu
+R25	Dat Arg1:T61 Arg2:T60	
+T62	Treatment 2561 2580	Leczenie przewlekłe
+T63	Treatment 2596 2613	endokrynologiczne
+T64	Treatment 2615 2629	psychiatryczne
+T65	Condition 2656 2659	WZW
+N22	Reference T65 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T66	Condition 2668 2677	borelioza
+N23	Reference T66 ICD10:A69.2	Choroba z Lyme
+T67	Condition 2685 2693	grużlica
+T68	Condition 2701 2705	odra
+A10	Source T68 Declared
+N25	Reference T68 ICD10:B05	Odra
+T69	Negation 2696 2697	-
+R26	Neg Arg1:T69 Arg2:T67	
+T70	Negation 2680 2681	-
+R27	Neg Arg1:T70 Arg2:T66	
+T71	Negation 2662 2663	-
+R28	Neg Arg1:T71 Arg2:T65	
+T72	Behaviour 2722 2737	Palenie tytoniu
+T73	Date 2748 2756	od 2 lat
+T74	Negation 2739 2747	Nie pali
+R29	Neg Arg1:T74 Arg2:T72	
+R30	Dat Arg1:T73 Arg2:T72	
+T75	Date 2758 2771	W przeszłości
+T76	Behaviour 2789 2804	paczka dziennie
+R31	Dat Arg1:T75 Arg2:T76	
+T77	Behaviour 2806 2817	Inne używki
+T78	Negation 2819 2825	neguje
+R32	Neg Arg1:T78 Arg2:T77	
+T79	Condition 2827 2836	Uczulenia
+T80	Negation 2838 2844	neguje
+R33	Neg Arg1:T80 Arg2:T79	
+T81	Behaviour 2862 2888	warunki mieszkaniowe dobre
+T82	Drug 2912 2928	Telmisarten EGIS
+T83	Drug_dose 2929 2945	40mg 1/2 tabl. R
+R34	Drg Arg1:T82 Arg2:T83	
+T84	Drug 2947 2954	Xarelto
+T85	Drug_dose 2955 2969	20mg 1 tabl. R
+R35	Drg Arg1:T84 Arg2:T85	
+T86	Drug 2971 2980	Rytmonorm
+T87	Drug_dose 2981 3000	150mg 1 tabl. R i W
+R36	Drg Arg1:T86 Arg2:T87	
+T88	Drug 3002 3008	Atoris
+T89	Drug_dose 3009 3023	10mg 1 tabl. W
+R37	Drg Arg1:T88 Arg2:T89	
+T90	Drug 3025 3033	Cavinton
+T91	Drug_dose 3034 3051	5mg 1 tabl. R i W
+R38	Drg Arg1:T90 Arg2:T91	
+T92	Drug 3053 3061	Pramolan
+T93	Drug_dose 3062 3076	50mg 1 tabl. W
+R39	Drg Arg1:T92 Arg2:T93	
+T94	Investigation 3092 3095	TTE
+T95	Investigation 3097 3100	TET
+T96	Investigation 3102 3106	ABPM
+T97	Investigation 3108 3118	Holter EKG
+T98	Condition 652 675	tłuszczaka piersi lewej
+N28	Reference T98 ICD10:D17.3	Tłuszczak skóry i tkanki podskórnej o innym i nieokreślonym umiejscowieniu
+R40	Dat Arg1:T8 Arg2:T98	
+T99	Condition 720 742	skrzydlika oka prawego
+N29	Reference T99 ICD10:H11.0	Skrzydlik
+T100	Condition 761 781	przetoki odbytniczej
+N30	Reference T100 ICD10:K60.3	Przetoka odbytu
+R41	Dat Arg1:T11 Arg2:T100	
+T101	Condition 2396 2419	tłuszczaka piersi lewej
+N31	Reference T101 ICD10:D17.3	Tłuszczak skóry i tkanki podskórnej o innym i nieokreślonym umiejscowieniu
+R42	Dat Arg1:T56 Arg2:T101	
+T102	Condition 2465 2486	Skrzydlik oka prawego
+N32	Reference T102 ICD10:H11.0	Skrzydlik
+T103	Condition 2527 2547	przetoki odbytniczej
+N33	Reference T103 ICD10:K60.3	
+R43	Dat Arg1:T61 Arg2:T103	
+A11	Status T98 Historical_Insignificant
+A12	Status T99 Historical_Insignificant
+A13	Status T100 Historical_Insignificant
+A14	Status T101 Historical_Insignificant
+A15	Status T102 Historical_Insignificant
+A16	Status T103 Historical_Insignificant
+N34	Reference T79 ICD10:T78.4	Alergia, nieokreślona
+T104	Treatment 2582 2594	okulistyczne
+N36	Reference T34 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T105	Negation 1860 1873	nie opisywano
+R44	Neg Arg1:T105 Arg2:T34	
+N37	Reference T38 ICD10:R55	Omdlenie i zapaść
+N21	Reference T53 ICD10:Z72.0	Używanie tytoniu
+N26	Reference T72 ICD10:Z72.0	Używanie tytoniu
+N27	Reference T76 ICD10:Z72.0	Używanie tytoniu
+N35	Reference T40 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N15	Reference T45 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N16	Reference T46 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N24	Reference T67 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N38	Reference T77 ICD10:Z72	Problemy związane ze stylem życia

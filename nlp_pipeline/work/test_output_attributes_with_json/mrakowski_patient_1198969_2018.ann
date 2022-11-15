@@ -1,0 +1,87 @@
+T1	Treatment 345 372	dalsza opieka w poradni POZ
+T2	Treatment 379 434	okresowa kontrola kardiologiczna i gastroenterologiczna
+T3	Treatment 441 518	konieczna konsultacja hematologiczna celem rozważenia poszerzonej diagnostyki
+T4	Condition 519 534	małopłytkowości
+T5	Investigation 591 612	rtg klatki piersiowej
+T6	Investigation_result 613 706	zacienienia w lewym kącie przeponowo-sercowym (najprawdopodobniej depozyt tkanki tłuszczowej)
+żenia wieńcowego
+T7	Investigation 712 751	codzienna kontrola ciśnienia tętniczego
+T8	Investigation 758 787	okresowa kontrola lipidogramu
+T9	Behaviour 794 804	dieta DASH
+T10	Behaviour 811 830	redukcja masy ciała
+T11	Behaviour 838 883	stały, umiarkowany, aerobowy wysiłek fizyczny
+T12	Treatment 890 918	regularne przyjmowanie leków
+T13	Drug 928 931	IPP
+T14	Drug_dose 932 959	20 mg 1 tabl. rano na czczo
+T15	Condition 1194 1245	Nadkomorowe zaburzenia rytmu serca - ekstrasystolie
+T16	Condition 1247 1267	Bradykardia zatokowa
+T17	Condition 1269 1276	Nadwaga
+T18	Investigation_result 1278 1292	BMI 26.4 kg/m2
+T19	Condition 1295 1309	Małopłytkowość
+T20	Condition 1311 1335	Choroba wrzodowa żołądka
+dka
+T21	Treatment 1346 1389	kilkukrotnej eradykacji Helicobacter pylori
+T22	Condition 1391 1419	Choroba refluksowa  przełyku
+dkowo-przełykowa
+T23	Condition 1429 1470	oparzeniu tułowia i kończyny dolnej lewej
+T24	Date 1472 1486	w dzieciństwie
+T25	Symptom 1663 1702	labilnych wartości ciśnienia tętniczego
+T26	Condition 1726 1750	choroba wrzodowa żołądka
+dka
+T27	Treatment 1760 1786	eradykacji HP kilkukrotnej
+T28	Condition 1788 1816	refluks żołądkowo-przełykowy
+T29	Condition 1818 1853	oparzenie tułowia i k. dolnej lewej
+T30	Date 1854 1868	w dzieciństwie
+T31	Treatment 1870 1887	Przebyte operacje
+T32	Negation 1889 1895	neguje
+T33	Condition 1897 1912	Wywiad rodzinny
+T34	Condition 1923 1947	rak przewodu pokarmowego
+T35	Condition 1957 1967	rak piersi
+T36	Condition 1997 2004	Alergie
+T37	Negation 2006 2012	neguje
+T38	Behaviour 2014 2024	Nikotynizm
+T39	Negation 2026 2032	neguje
+T40	Behaviour 2035 2056	Alkohol: okazjonalnie
+T41	Behaviour 2058 2075	Uzależnienie inne
+T42	Negation 2077 2083	neguje
+T43	Behaviour 2101 2108	prawnik
+T44	Investigation 2152 2162	echo serca
+T45	Investigation 2164 2167	TET
+T46	Investigation 2169 2173	ABPM
+T47	Investigation 2175 2185	Holter ekg
+T48	Investigation 2187 2205	rtg kl. piersiowej
+T49	Drug 2110 2114	Leki
+T50	Negation 2116 2123	żadnych
+zane ze stylem życia
+N1	Reference T15 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+N2	Reference T16 ICD10:R00.1	Bradykardia, nieokreÅlona
+N3	Reference T17 ICD10:E66	OtyÅoÅÄ
+N4	Reference T19 ICD10:D69.6	MaÅopÅytkowoÅÄ, nieokreÅlona
+N5	Reference T20 ICD10:K25	WrzÃ³d Å¼oÅÄdka
+N6	Reference T26 ICD10:K25	WrzÃ³d Å¼oÅÄdka
+N7	Reference T28 ICD10:K21	
+N8	Reference T31 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N9	Reference T36 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N10	Reference T38 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N11	Reference T40 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N12	Reference T41 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+R1	Inv Arg1:T5 Arg2:T6
+R107	Dat Arg1:T30 Arg2:T31
+R17	Neg Arg1:T32 Arg2:T31
+R2	Inv Arg1:T7 Arg2:T6
+R29	Neg Arg1:T37 Arg2:T36
+R3	Drg Arg1:T13 Arg2:T14
+R30	Neg Arg1:T37 Arg2:T38
+R4	Dat Arg1:T24 Arg2:T25
+R48	Neg Arg1:T39 Arg2:T38
+R49	Neg Arg1:T39 Arg2:T40
+R68	Neg Arg1:T42 Arg2:T41
+R69	Neg Arg1:T42 Arg2:T43
+R8	Neg Arg1:T32 Arg2:T33
+R95	Neg Arg1:T50 Arg2:T49
+R97	Dat Arg1:T30 Arg2:T29
+A1	Status T25 Historical_Insignificant
+A2	Status T29 Historical_Insignificant
+A3	Status T33 Family
+A4	Status T34 Family
+A5	Status T35 Family

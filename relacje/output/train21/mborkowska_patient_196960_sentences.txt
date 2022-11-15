@@ -1,0 +1,526 @@
+allRelations          : 18
+oks                   : 12
+isRedundantAndRemoveds: 5
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 1
+GOOD / BAD            : 17 / 1
+Sentence 0:
+------------------------------------------------
+Wiek: 50 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+
+
+
+Sentence 2:
+------------------------------------------------
+
+
+
+Sentence 3:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 4:
+------------------------------------------------
+ Rozpozanie I: ICD10:I71.2|Rozpoznanie II: ICD10:I08.0|Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Dwupłatkowa zastawka aortalna.
+
+
+Sentence 5:
+Łagodna stenoza aortalna z łagodną niedomykalnością aortalną.
+
+
+Sentence 6:
+Poszerzenie aorty wstępującej do 45 mm.
+
+
+Sentence 7:
+Zachyłek worka osierdziowego.
+
+
+Sentence 8:
+Nadciśnienie tętnicze.
+
+
+Sentence 9:
+Hiperlipidemia.
+
+
+Sentence 10:
+Nieprawidłowa tolerancja glukozy.
+
+
+Sentence 11:
+Refluks żołądkowy.
+
+
+Sentence 12:
+Zmiany zwyrodnieniowe kręgosłupa.
+
+
+Sentence 13:
+Kamica pęcherzyka żółciowego.
+
+
+Sentence 14:
+Torbiel nerki prawej.
+
+
+Sentence 15:
+Zespół jelita drażliwego.
+
+
+Sentence 16:
+Zmiany guzkowe płuc.
+
+
+Sentence 17:
+Kamica nerkowa w przeszłości.
+
+
+
+Sentence 18:
+------------------------------------------------
+
+
+
+Sentence 19:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 20:
+Pacjent lat 50 został przyjęty celem diagnostyki kardiologicznej okresowego dyskomfortu w klatce piersiowej.
+
+
+Sentence 21:
+W badaniu CT klatki piersiowej stwierdzono wielokomorową torbiel osierdzia, poszerzenie aorty wstępującej, lite okrągłe guzki w miąższu obu płuc.
+R1	Inv Arg1:T24 Arg2:T25 << OK >>	CT klatki piersiowej -> wielokomorową torbiel osierdzia  <RANK: 3> <info: start[1121, 1154] <type: RIGHT>>
+R2	Inv Arg1:T24 Arg2:T26 << OK >>	CT klatki piersiowej -> poszerzenie aorty wstępującej  <RANK: 2> <info: start[1121, 1187] <type: RIGHT>>
+R3	Inv Arg1:T24 Arg2:T27 << OK >>	CT klatki piersiowej -> lite okrągłe guzki w miąższu obu płuc  <RANK: 2> <info: start[1121, 1218] <type: RIGHT>>
+
+
+Sentence 22:
+W wywiadzie: refluks żołądkowy, stan po cholecystektomii.
+
+
+Sentence 23:
+W wykonanym badaniu echokardiograficznymprzezklatkowym oraz przezprzełykowym (2018)  uwidoczniono zastawkę aortalną dwupłatkową, poszerzenie aorty wstępującej.
+R4	Inv Arg1:T30 Arg2:T32 << OK >>	badaniu echokardiograficznymprzezklatkowym oraz przezprzełykowym -> uwidoczniono zastawkę aortalną dwupłatkową  <RANK: 3> <info: start[1327, 1400] <type: RIGHT>>
+R5	Inv Arg1:T30 Arg2:T33 << OK >>	badaniu echokardiograficznymprzezklatkowym oraz przezprzełykowym -> poszerzenie aorty wstępującej  <RANK: 2> <info: start[1327, 1444] <type: RIGHT>>
+R6	Dat Arg1:T31 Arg2:T30 << OK >>	2018 -> badaniu echokardiograficznymprzezklatkowym oraz przezprzełykowym  <RANK: 3> <info: start[1393, 1327] <type: LEFT>>
+
+
+Sentence 24:
+W badaniu MR serca stwierdzono bocznie od pnia płucnego podłużną strukturę o orientacyjnych wymiarach 33x30x10mm.
+R7	Inv Arg1:T34 Arg2:T35 << OK >>	MR serca -> bocznie od pnia płucnego podłużną strukturę o orientacyjnych wymiarach 33x30x10mm  <RANK: 3> <info: start[1485, 1506] <type: RIGHT>>
+
+
+Sentence 25:
+Zmiana wykazuje sygnał płynowo-tłuszczowy.
+
+
+Sentence 26:
+Po dożylnym podaniu środka kontrastowego zmiana nie uległa wzmocnieniu kontrastowemu.
+
+
+Sentence 27:
+Obraz najpewniej odpowiada zachyłkowi worka osierdzia.
+
+
+Sentence 28:
+Po dożylnym podaniu środka kontrastowego nie uwidoczniono nieprawidłowych ognisk wczesnego i późnego wzmocnienia kontrastowego myocardium. 
+
+R8	Neg Arg1:T38 Arg2:T40 << OK >>	nie uwidoczniono -> nieprawidłowych ognisk wczesnego i późnego wzmocnienia kontrastowego myocardium  <RANK: 3> <info: start[1814, 1831] <type: RIGHT>>
+
+
+Sentence 29:
+Neguje uczulenia na leki, neguje kołatania serca, utraty przytomności.
+
+R9	Neg Arg1:T5 Arg2:T6 << OK >>	Neguje -> uczulenia na leki  <RANK: 3> <info: start[1913, 1920] <type: RIGHT>>
+R10	Neg Arg1:T5 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Neguje -> kołatania serca <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1913, 1946] <type: RIGHT>>
+R11	Neg Arg1:T5 Arg2:T9 <<REDUNDANT!!!REMOVED>>	Neguje -> utraty przytomności <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1913, 1963] <type: RIGHT>>
+R12	Neg Arg1:T8 Arg2:T6 <<REDUNDANT!!!REMOVED>>	neguje -> uczulenia na leki <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1939, 1920] <type: LEFT>>
+R13	Neg Arg1:T8 Arg2:T7 << OK >>	neguje -> kołatania serca  <RANK: 3> <info: start[1939, 1946] <type: RIGHT>>
+R14	Neg Arg1:T8 Arg2:T9 <<REDUNDANT!!!SHOULD BE REMOVED>>	neguje -> utraty przytomności  <RANK: 2> <info: start[1939, 1963] <type: RIGHT>>
+
+
+Sentence 30:
+Leki:
+IPP 40mg 1xdziennie rano na czczo
+Li
+Nebilet 5mg pół tabletki rano
+------------------------------------------------
+
+R15	Drg Arg1:T1 Arg2:T2 << OK >>	Nebilet -> 5mg pół tabletki rano  <RANK: 3> <info: start[2027, 2035] <type: RIGHT>>
+R16	Drg Arg1:T1 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Nebilet -> 40mg 1xdziennie rano na czczo <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2027, 1994] <type: LEFT>>
+R17	Drg Arg1:T3 Arg2:T2 <<REDUNDANT!!!REMOVED>>	IPP -> 5mg pół tabletki rano <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1990, 2035] <type: RIGHT>>
+R18	Drg Arg1:T3 Arg2:T4 << OK >>	IPP -> 40mg 1xdziennie rano na czczo  <RANK: 3> <info: start[1990, 1994] <type: RIGHT>>
+
+
+Sentence 31:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 32:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.16[10^3/ul]
+    
+
+
+Sentence 33:
+RBC Krwinki czerwone:4.57[10^6/ul]
+    
+
+
+Sentence 34:
+HGB Hemoglobina:13.9[g/dl]
+    
+
+
+Sentence 35:
+HCT Hematokryt:38.8[%]
+    
+
+
+Sentence 36:
+MCV wskaźnik czerwonokrw:84.9[fl]
+    
+
+
+Sentence 37:
+MCH wskaźnik czerwonokrw:30.4[pg]
+    
+
+
+Sentence 38:
+MCHC wskaźnik czerwonokr:35.8[g/dl]
+    
+
+
+Sentence 39:
+PLT z morfologii:219[10^3/ul]
+    
+
+
+Sentence 40:
+RDW-SD:42.0[fl]
+    
+
+
+Sentence 41:
+RDW-CV:13.5[%]
+    PDW:11.5[fl]
+    MPV:10.1[fl]
+    
+
+
+Sentence 42:
+P-LCR:25.3[%]
+    
+
+
+Sentence 43:
+PCT (hematokryt płytkowy:0.22[%]
+    
+
+
+Sentence 44:
+NEUTR# wartość bezwzględ:2.67[10^3/ul]
+    
+
+
+Sentence 45:
+NEUTR%:43.3[%]
+    
+
+
+Sentence 46:
+LYMH# wartość bezwzględn:2.66[10^3/ul]
+    
+
+
+Sentence 47:
+LYMPH%:43.2[%]
+    
+
+
+Sentence 48:
+MONO# wartość bezwzględn:0.59[10^3/ul]
+    MONO%:9.6[%]
+    
+
+
+Sentence 49:
+EO# wartość bezwzględna:0.21[10^3/ul]
+    
+
+
+Sentence 50:
+EO%:3.4[%]
+    
+
+
+Sentence 51:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    
+
+
+Sentence 52:
+BASO%:0.5[%]
+    
+
+
+Sentence 53:
+NRBC %:0.0[%]
+    
+
+
+Sentence 54:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 55:
+Badanie ogólne moczu
+    
+
+
+Sentence 56:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 57:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 58:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 59:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 60:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 61:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 62:
+ciężar właściwy:1.011[ ]
+    
+
+
+Sentence 63:
+pH:5.0[ ]
+    
+
+
+Sentence 64:
+białko:nieobecne[ ]
+    
+
+
+Sentence 65:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 66:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 67:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 68:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 69:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 70:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 71:
+leukocyty:2 /ul[ul]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 72:
+TSH: TSH:1.43[uIU/ml]
+
+
+
+Sentence 73:
+FT3: FT3:3.42[pg/ml]
+
+
+
+Sentence 74:
+FT4: FT4:1.59[ng/dl]
+
+
+
+Sentence 75:
+ALAT: ALAT:37[U/L]
+ASPAT: ASPAT:28[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.62[mg/dl]
+
+
+
+Sentence 76:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 77:
+Potas (K): Potas:3.7[mmol/L]
+
+
+
+Sentence 78:
+Kreatynina + GFR
+    
+
+
+Sentence 79:
+Kreatynina w surowicy:0.70[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 80:
+MDRD ze stan:119.4[ml/min/1,73 m^2]
+
+
+
+Sentence 81:
+Mocznik: Mocznik:30[mg/dl]
+
+
+
+Sentence 82:
+Kwas moczowy: Kwas moczowy:4.9[mg/dl]
+
+
+
+Sentence 83:
+Lipidogram
+    
+
+
+Sentence 84:
+Cholesterol całkowity:207[mg/dl]
+    
+
+
+Sentence 85:
+Cholesterol HDL:39[mg/dl]
+    
+
+
+Sentence 86:
+Cholestrol LDL:142[mg/dl]
+    
+
+
+Sentence 87:
+Triglicerydy:152[mg/dl]
+    
+
+
+Sentence 88:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:93[mg/dl]
+
+
+
+Sentence 89:
+NT-proBNP surowica: NT-proBNP w surowicy:71[pg/ml]
+
+
+
+Sentence 90:
+------------------------------------------------
+
+
+
+Sentence 91:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 92:
+I08.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 93:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 94:
+89.501
+89.502
+C55
+A01
+I81
+L43
+N45
+L69
+O55
+I17
+M45
+M37
+I19
+O35
+
+
+
+Sentence 95:
+N13
+N24
+88.721
+O69
+
+
+
+Sentence 96:
+------------------------------------------------
+
+

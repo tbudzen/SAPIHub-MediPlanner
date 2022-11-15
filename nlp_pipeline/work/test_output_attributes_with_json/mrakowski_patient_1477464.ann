@@ -1,0 +1,63 @@
+T1	Condition 451 479	choroby niedokrwiennej serca
+T2	Condition 707 728	Nadciśnienie tętnicze
+T3	Condition 730 744	Hiperlipidemia
+T4	Condition 746 755	Miażdżyca
+T5	Condition 757 761	LBBB
+T6	Symptom 964 994	pogorszenia tolerancji wysiłku
+T7	Date 995 1012	od ok. 2 miesięcy
+T8	Condition 910 933	nadciśnieniem tętniczym
+T9	Condition 1015 1019	LBBB
+T10	Date 1033 1045	od ok. 3 lat
+T11	Treatment 1048 1065	Przebyte operacje
+T12	Treatment 1067 1083	panhisterektomia
+T13	Date 1086 1091	1988r
+T14	Condition 1119 1122	WZW
+troby
+T15	Condition 1124 1133	borelioza
+T16	Negation 1136 1146	nie podaje
+T17	Condition 1147 1162	Wywiad rodzinny
+T18	Negation 1164 1174	nieistotny
+T19	Behaviour 1175 1190	Palenie tytoniu
+T20	Negation 1192 1202	nie podaje
+T21	Behaviour 1203 1228	Inne używki: okazjonalnie
+T22	Condition 1229 1238	Uczulenia
+T23	Negation 1240 1250	nie podaje
+T24	Behaviour 1269 1277	emerytka
+T25	Drug 1303 1309	Lokren
+T26	Drug_dose 1310 1330	20 mg 1/2 tabl. rano
+T27	Drug 1331 1339	Indix SR
+T28	Drug_dose 1340 1352	1 tabl. rano
+T29	Investigation 1380 1390	echo serca
+T30	Investigation 1392 1395	TET
+T31	Investigation 1397 1401	ABPM
+T32	Investigation 1403 1409	Holter
+T33	Investigation 1411 1429	RTG kl. piersiowej
+zane ze stylem życia
+N1	Reference T1 ICD10:I20.9	Choroba niedokrwienna serca, nieokreÅlona
+N2	Reference T2 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N3	Reference T3 ICD10:E78.5	Hiperlipidemia, nieokreÅlona
+N4	Reference T4 ICD10:I70	MiaÅ¼dÅ¼yca
+N5	Reference T5 ICD10:I44.7	Blok lewej odnogi pÄczka Hisa, nieokreÅlony
+N6	Reference T6 ICD10:R53	ZÅe samopoczucie i zmÄczenie
+N7	Reference T8 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N8	Reference T9 ICD10:I44.7	Blok lewej odnogi pÄczka Hisa, nieokreÅlony
+N9	Reference T11 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N10	Reference T14 ICD10:B19	NieokreÅlone wirusowe zapalenie wÄtroby
+N11	Reference T15 ICD10:A69.2	Choroba z Lyme
+N12	Reference T19 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N13	Reference T21 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+N14	Reference T22 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+R1	Dat Arg1:T7 Arg2:T6
+R11	Neg Arg1:T16 Arg2:T15
+R12	Neg Arg1:T16 Arg2:T17
+R23	Neg Arg1:T18 Arg2:T17
+R25	Neg Arg1:T18 Arg2:T19
+R36	Neg Arg1:T20 Arg2:T19
+R37	Neg Arg1:T20 Arg2:T21
+R46	Neg Arg1:T23 Arg2:T22
+R54	Drg Arg1:T25 Arg2:T26
+R57	Drg Arg1:T27 Arg2:T28
+R8	Dat Arg1:T10 Arg2:T11
+R9	Dat Arg1:T13 Arg2:T12
+A1	Status T12 Historical_Insignificant
+A2	Source T1 Declared

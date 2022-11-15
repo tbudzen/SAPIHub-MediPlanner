@@ -1,0 +1,91 @@
+T1	Symptom 439 454	Kołatania serca
+N1	Reference T1 ICD10:R00.2	Kołatanie serca
+T2	Condition 456 515	Wada serca pod postacią niedomykalności mitralnej I stopnia
+N2	Reference T2 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T3	Condition 518 540	trójdzielnej I stopnia
+N3	Reference T3 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T4	Behaviour 542 552	Nikotynizm
+N4	Reference T4 ICD10:Z72.0	Używanie tytoniu
+T5	Date 553 566	w przeszłości
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Condition 568 607	Zmiany zwyrodnieniowe stawów kręgosłupa
+N5	Reference T6 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T7	Treatment 732 759	dalsza opieka w poradni POZ
+T8	Treatment 766 784	dalsza diagnostyka
+T9	Symptom 785 798	kołatań serca
+N6	Reference T9 ICD10:R00.2	Kołatanie serca
+T10	Investigation 875 914	regularna kontrola ciśnienia tętniczego
+T11	Investigation 921 950	okresowa kontrola lipidogramu
+T12	Behaviour 957 993	dieta zbliżona do śródziemnomorskiej
+T13	Treatment 999 1027	regularne przyjmowanie leków
+T14	Drug 1037 1045	Bisocard
+T15	Drug_dose 1046 1063	5 mg 1 tabl. rano
+R2	Drg Arg1:T14 Arg2:T15	
+T16	Symptom 1241 1265	napadowych kołatań serca
+N7	Reference T16 ICD10:R00.2	Kołatanie serca
+T17	Investigation 1270 1278	Holterze
+T18	Negation 1279 1282	nie
+T19	Investigation_result 1283 1312	udokumentowano zaburzeń rytmu
+N8	Reference T19 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+R3	Inv Arg1:T17 Arg2:T19	
+R4	Neg Arg1:T18 Arg2:T19	
+T20	Date 1314 1326	przed rokiem
+R5	Dat Arg1:T20 Arg2:T19	
+R6	Dat Arg1:T20 Arg2:T17	
+T21	Symptom 1348 1365	napadów kołatania
+N9	Reference T21 ICD10:R00.2	Kołatanie serca
+T22	Symptom 1366 1375	tachypnoe
+N10	Reference T22 ICD10:R06.4	Hiperwentylacja
+T23	Symptom 1377 1385	nudności
+N11	Reference T23 ICD10:R11	Nudności i wymioty
+T24	Symptom 1387 1415	uczucie "ściskania" w gardle
+N12	Reference T24 ICD10:R07.0	Ból gardła
+T25	Symptom 1417 1429	Dolegliwości
+T26	Date 1430 1438	od 5 lat
+R7	Dat Arg1:T26 Arg2:T25	
+R8	Dat Arg1:T26 Arg2:T21	
+R9	Dat Arg1:T26 Arg2:T22	
+R10	Dat Arg1:T26 Arg2:T23	
+R11	Dat Arg1:T26 Arg2:T24	
+T27	Date 1466 1482	do 3x w miesiącu
+R12	Dat Arg1:T27 Arg2:T25	
+R13	Dat Arg1:T27 Arg2:T21	
+R14	Dat Arg1:T27 Arg2:T22	
+R15	Dat Arg1:T27 Arg2:T23	
+R16	Dat Arg1:T27 Arg2:T24	
+T28	Condition 1506 1567	zmiany zwyrodnieniowe kręgosłupa - C i L nasilone najbardziej
+N13	Reference T28 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T29	Treatment 1569 1586	Przebyte operacje
+T30	Negation 1588 1594	neguje
+R17	Neg Arg1:T30 Arg2:T29	
+T31	Condition 1596 1611	Wywiad rodzinny
+A1	Status T31 Family
+T32	Condition 1643 1645	MI
+A2	Status T32 Family
+N14	Reference T32 ICD10:I25.2	Przebyty zawał serca
+T33	Condition 1647 1654	Alergie
+N15	Reference T33 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T34	Symptom 1677 1689	rumień skóry
+N16	Reference T34 ICD10:R21	Rumień i inne nieswoiste wysypki skórne
+T35	Behaviour 1691 1701	Nikotynizm
+N17	Reference T35 ICD10:Z72.0	Używanie tytoniu
+T36	Date 1703 1719	do 35 roku życia
+R18	Dat Arg1:T36 Arg2:T35	
+T37	Behaviour 1721 1733	15 paczkolat
+N18	Reference T37 ICD10:Z72.0	Używanie tytoniu
+T38	Behaviour 1735 1756	Alkohol: okazjonalnie
+N19	Reference T38 ICD10:Z72.1	Używanie alkoholu
+T39	Behaviour 1758 1775	Uzależnienie inne
+T40	Negation 1777 1783	neguje
+R19	Neg Arg1:T40 Arg2:T39	
+T41	Behaviour 1801 1811	informatyk
+T42	Drug 1819 1827	Biosotal
+T43	Drug_dose 1828 1845	40mg 1 tabl. rano
+R20	Drg Arg1:T42 Arg2:T43	
+T44	Investigation 1875 1885	echo serca
+T45	Investigation 1887 1890	TET
+T46	Investigation 1892 1896	ABPM
+T47	Investigation 1898 1908	Holter ekg
+T48	Investigation 1910 1928	rtg kl. piersiowej
+A3	Status T38 Historical_Insignificant
+N20	Reference T39 ICD10:Z72	Problemy związane ze stylem życia

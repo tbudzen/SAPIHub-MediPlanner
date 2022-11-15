@@ -1,0 +1,138 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 359 406	okresowa kontrola kardiologiczna, neurologiczna
+T3	Treatment 416 471	konsultacja pulmonologiczna w warunkach ambulatoryjnych
+T4	Treatment 481 528	kontrola morfologii, kreatyniny, mocznika, eGFR
+T5	Date 529 545	za ok. 1 miesiąc
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Behaviour 546 565	prawidłowe żywienie
+T7	Behaviour 568 596	regularna aktywność fizyczna
+T8	Drug 629 640	Betaloc ZOK
+T9	Drug_dose 641 659	25 mg 1 tabl. rano
+T10	Drug 660 668	Pluscard
+T11	Drug_dose 669 696	100/40 mg 1 tabl. wieczorem
+T12	Drug 697 705	Pramolan
+T13	Drug_dose 706 729	50 mg 1 tabl. wieczorem
+R2	Drg Arg1:T8 Arg2:T9	
+R3	Drg Arg1:T10 Arg2:T11	
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Condition 956 977	Nadciśnienie tętnicze
+N1	Reference T14 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T15	Symptom 979 992	Zawroty głowy
+N2	Reference T15 ICD10:R42	Zawroty głowy i odurzenie
+T16	Condition 994 1005	Zrosty płuc
+T17	Condition 1007 1021	Małopłytkowość
+N3	Reference T17 ICD10:D69.6	Małopłytkowość, nieokreślona
+T18	Date 1226 1239	od 4 miesięcy
+T19	Symptom 1240 1394	dolegliwości bólowych w klatce piersiowej o charakterze ucisku, promieniujących do lewej kończyny górnej i nadbrzusza, niezwiązanych z wysiłkiem fizycznym
+N4	Reference T19 ICD10:R07.2	Ból w okolicy przedsercowej
+T20	Symptom 1396 1405	duszności
+N5	Reference T20 ICD10:R06.0	Duszność
+T21	Symptom 1408 1422	zawrotów głowy
+N6	Reference T21 ICD10:R42	Zawroty głowy i odurzenie
+R5	Dat Arg1:T18 Arg2:T19	
+R6	Dat Arg1:T18 Arg2:T20	
+R7	Dat Arg1:T18 Arg2:T21	
+T22	Investigation 1426 1454	wykonanym ambulatoryjnie TTE
+T23	Date 1456 1466	15/12/2018
+T24	Investigation_result 1481 1506	upośledzoną relaksację LK
+N7	Reference T24 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T25	Negation 1508 1511	bez
+T26	Investigation_result 1512 1545	odcinkowych zaburzeń kurczliwości
+N8	Reference T26 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T27	Investigation_result 1546 1552	EF 65%
+R8	Dat Arg1:T23 Arg2:T22	
+R9	Inv Arg1:T22 Arg2:T24	
+R10	Inv Arg1:T22 Arg2:T26	
+R11	Inv Arg1:T22 Arg2:T27	
+R12	Neg Arg1:T25 Arg2:T26	
+T28	Symptom 1574 1594	4 epizody zasłabnięć
+T29	Date 1595 1613	od lipca 2018 roku
+R13	Dat Arg1:T29 Arg2:T28	
+T30	Date 1630 1663	pod koniec października 2018 roku
+T31	Symptom 1615 1629	ostatni epizod
+R15	Dat Arg1:T30 Arg2:T31	
+T32	Negation 1665 1671	Neguje
+T33	Symptom 1672 1680	omdlenia
+N9	Reference T33 ICD10:R55	Omdlenie i zapaść
+R14	Neg Arg1:T32 Arg2:T33	
+T34	Symptom 1682 1701	Innych dolegliwości
+T35	Negation 1702 1713	nie zgłasza
+R16	Neg Arg1:T35 Arg2:T34	
+T36	Condition 1728 1733	zaćma
+A1	Status T36 Historical_Insignificant
+N10	Reference T36 ICD10:H26.9	Zaćma, nieokreślona
+T37	Treatment 1761 1769	opreacji
+A2	Status T37 Historical_Insignificant
+N11	Reference T37 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T38	Date 1785 1796	w 2017 roku
+R17	Dat Arg1:T38 Arg2:T37	
+T39	Condition 1770 1784	zaćmy obu oczu
+A3	Status T39 Historical_Insignificant
+N12	Reference T39 ICD10:H26.9	Zaćma, nieokreślona
+R18	Dat Arg1:T38 Arg2:T39	
+T40	Treatment 1806 1814	operacji
+A4	Status T40 Historical_Insignificant
+N13	Reference T40 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T41	Condition 1815 1844	przepukliny pachwinowej lewej
+A5	Status T41 Historical_Insignificant
+N14	Reference T41 ICD10:K40.9	Jednostronna lub nieokreślona przepuklina pachwinowa bez niedrożności lub zgorzeli
+T42	Condition 1847 1868	wyrostka robaczkowego
+A6	Status T42 Historical_Insignificant
+N15	Reference T42 ICD10:K37	Zapalenie wyrostka robaczkowego, nieokreślone
+T43	Date 1869 1883	w dzieciństwie
+R19	Dat Arg1:T43 Arg2:T40	
+R20	Dat Arg1:T43 Arg2:T41	
+R21	Dat Arg1:T43 Arg2:T42	
+T44	Treatment 1885 1918	Leczenie przewlekłe: okulistyczne
+T45	Condition 1947 1950	WZW
+N16	Reference T45 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T46	Condition 1959 1968	borelioza
+N17	Reference T46 ICD10:A69.2	Choroba z Lyme
+T47	Condition 1976 1984	gruźlica
+N18	Reference T47 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T49	Negation 2012 2016	brak
+T48	Condition 2017 2043	kontaktu z chorymi na odrę
+N19	Reference T48 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+T50	Date 2044 2061	w ostatnim czasie
+R22	Neg Arg1:T49 Arg2:T48	
+R23	Dat Arg1:T50 Arg2:T48	
+T51	Negation 1951 1956	( - )
+T52	Negation 1969 1974	( - )
+T53	Negation 1985 1990	( - )
+R24	Neg Arg1:T51 Arg2:T45	
+R25	Neg Arg1:T52 Arg2:T46	
+R26	Neg Arg1:T53 Arg2:T47	
+T54	Negation 2152 2158	neguje
+T55	Negation 2173 2179	neguje
+T56	Negation 2192 2198	neguje
+T57	Behaviour 2216 2242	warunki mieszkaniowe dobre
+T58	Behaviour 2244 2252	Emerytka
+T59	Drug 2260 2266	Bibloc
+T60	Drug 2293 2301	Pluscard
+T61	Drug 2333 2341	Pramolan
+T62	Investigation 2378 2388	Echo serca
+T63	Investigation 2390 2394	ABPM
+T64	Investigation 2396 2406	Holter EKG
+T65	Investigation 2408 2423	Próba Wysiłkowa
+T66	Drug_dose 2267 2291	1,25mg 1/2 tabletki rano
+T67	Drug_dose 2302 2331	100+50mg 1 tabletka wieczorem
+T68	Drug_dose 2342 2362	1 tabletka wieczorem
+R27	Drg Arg1:T59 Arg2:T66	
+R28	Drg Arg1:T60 Arg2:T67	
+R29	Drg Arg1:T61 Arg2:T68	
+T69	Behaviour 2135 2150	Palenie tytoniu
+N20	Reference T69 ICD10:Z72.0	Używanie tytoniu
+T70	Behaviour 2160 2171	Inne używki
+T71	Condition 2181 2190	Uczulenia
+N21	Reference T71 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R30	Neg Arg1:T54 Arg2:T69	
+R31	Neg Arg1:T55 Arg2:T70	
+R32	Neg Arg1:T56 Arg2:T71	
+T72	Condition 2123 2133	rak piersi
+A7	Status T72 Family
+N22	Reference T72 ICD10:C50.9	Pierś, umiejscowienie nieokreślone
+T73	Condition 2094 2099	zawał
+A8	Status T73 Historical_Insignificant
+N23	Reference T73 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T74	Date 2100 2114	w wieku 60 lat
+R33	Dat Arg1:T74 Arg2:T73	

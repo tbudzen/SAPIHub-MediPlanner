@@ -1,0 +1,38 @@
+T1	Drug 449 459	Biofazolin
+T2	Drug 461 464	ANA
+T3	Drug 466 474	Dormicum
+T4	Drug 476 483	Clexane
+T5	Treatment 485 497	znieczulenie
+T6	Investigation 501 519	cewnikowania serca
+T7	Condition 770 838	Wrodzona wada serca pod postacią przełożenia wielkich pni tętniczych
+N1	Reference T7 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T8	Condition 841 879	ubytkiem w przegrodzie międzykomorowej
+N2	Reference T8 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T9	Treatment 892 913	korekcji anatomicznej
+N3	Reference T9 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T10	Date 915 924	05.04.04r
+T11	Investigation 937 951	koronarografii
+T12	Date 953 962	22.05.17r
+T13	Treatment 1129 1137	operacji
+N4	Reference T13 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T14	Condition 1138 1141	TGA
+N5	Reference T14 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T15	Symptom 1145 1165	cechy niedotlenienia
+A1	Source T15 Declared
+T16	Investigation 1170 1187	próbie wysiłkowej
+T17	Drug 1201 1215	leków na stałe
+T18	Negation 1216 1229	nie otrzymuje
+T19	Treatment 1236 1259	pod opieka ortopedyczną
+T20	Condition 1261 1280	ganglion -ręka lewa
+N6	Reference T20 ICD10:M67.4	Ganglion
+T21	Treatment 1287 1300	rehabilitanta
+T22	Condition 1303 1325	skrzywienie kręgosłupa
+N7	Reference T22 ICD10:M41.9	Skolioza, nieokreślona
+R1	Dat Arg1:T10 Arg2:T9	
+R2	Dat Arg1:T12 Arg2:T11	
+R3	Neg Arg1:T18 Arg2:T17	
+A2	Status T22 Historical_Insignificant
+R14	Neg Arg1:T18 Arg2:T19
+R17	Neg Arg1:T18 Arg2:T17
+R3	Dat Arg1:T10 Arg2:T9
+R8	Dat Arg1:T12 Arg2:T11

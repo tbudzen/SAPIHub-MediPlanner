@@ -1,0 +1,116 @@
+T1	Treatment 329 356	dalsza opieka w poradni POZ
+T2	Treatment 358 421	okresowa kontrola kardiologiczna, neurologiczna, hepatologiczna
+T3	Treatment 422 451	systematyczny profil glikemii
+T4	Treatment 461 490	okresowa kontrola lipdiogramu
+T5	Date 492 508	za ok. 1 miesiąc
+T6	Treatment 511 559	elektrolitów, parametrów wątrobowych i nerkowych
+T7	Treatment 560 603	systematyczna kontrola ciśnienia tętniczego
+T8	Behaviour 604 620	dieta cukrzycowa
+T9	Negation 621 626	zakaz
+T10	Behaviour 627 646	spożywania alkoholu
+T11	Drug 677 689	Tertensif SR
+T12	Drug 703 711	Primacor
+T13	Drug 731 738	Tritace
+T14	Drug 763 770	Roswera
+T15	Drug 851 856	Acard
+T16	Drug 881 894	Glucophage XR
+T17	Drug 921 928	Hepatil
+T18	Investigation 812 829	kontrola AST, ALT
+T19	Date 830 849	za ok. 2-4 tygodnie
+T20	Drug_dose 690 702	1 tabl. rano
+T21	Drug_dose 712 730	10 mg 1 tabl. rano
+T22	Drug_dose 739 762	10 mg 1 tabl. wieczorem
+T23	Drug_dose 771 794	20 mg 1 tabl. wieczorem
+T24	Drug_dose 857 880	75 mg 1 tabl. wieczorem
+T25	Drug_dose 895 920	1000 mg 1 tabl. wieczorem
+T26	Drug_dose 929 943	1 tabl. 3 x dz
+R1	Dat Arg1:T5 Arg2:T4	
+R2	Neg Arg1:T9 Arg2:T10	
+R3	Drg Arg1:T11 Arg2:T20	
+R4	Drg Arg1:T12 Arg2:T21	
+R5	Drg Arg1:T13 Arg2:T22	
+R6	Drg Arg1:T14 Arg2:T23	
+R7	Dat Arg1:T19 Arg2:T18	
+R8	Drg Arg1:T15 Arg2:T24	
+R9	Drg Arg1:T16 Arg2:T25	
+R10	Drg Arg1:T17 Arg2:T26	
+T27	Condition 1161 1178	Szczelinowate PFO
+N1	Reference T27 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T28	Condition 1188 1202	udarze wzgórza
+N2	Reference T28 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T29	Date 1204 1212	08.2018r
+T30	Condition 1215 1236	Nadciśnienie tętnicze
+N3	Reference T30 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T31	Condition 1239 1252	Cukrzyca t.2.
+N4	Reference T31 ICD10:E11	Cukrzyca insulinoniezależna
+T32	Condition 1253 1273	Hipercholesterolemia
+N5	Reference T32 ICD10:E78.0	Czysta hipercholesterolemia
+T33	Condition 1275 1295	Stłuszczenie wątroby
+N6	Reference T33 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T34	Condition 1297 1316	Torbiel nerki lewej
+R11	Dat Arg1:T29 Arg2:T28	
+T35	Condition 1536 1548	udarze mózgu
+N7	Reference T35 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T36	Date 1550 1558	08.2018r
+T37	Condition 1562 1574	udar wzgórza
+N8	Reference T37 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T38	Condition 1576 1597	nadciśnienie tętnicze
+N9	Reference T38 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T39	Condition 1599 1618	torbiel nerki lewej
+T40	Condition 1620 1640	stłuszczenie wątroby
+N10	Reference T40 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T41	Condition 1642 1662	hipercholesterolemia
+N11	Reference T41 ICD10:E78.0	Czysta hipercholesterolemia
+T42	Condition 1664 1676	cukrzyca t.2
+N12	Reference T42 ICD10:E11	Cukrzyca insulinoniezależna
+R12	Dat Arg1:T36 Arg2:T35	
+R13	Dat Arg1:T36 Arg2:T37	
+T43	Treatment 1677 1694	Przebyte operacje
+N13	Reference T43 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T44	Negation 1696 1706	nie podaje
+T45	Condition 1734 1737	WZW
+N14	Reference T45 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T46	Condition 1739 1748	borelioza
+N15	Reference T46 ICD10:A69.2	Choroba z Lyme
+T47	Negation 1751 1761	nie podaje
+T48	Condition 1762 1777	Wywiad rodzinny
+A1	Status T48 Family
+T49	Negation 1779 1789	nieistotny
+T50	Behaviour 1790 1805	Palenie tytoniu
+T51	Date 1807 1820	w przeszłości
+R14	Dat Arg1:T51 Arg2:T50	
+T53	Behaviour 1854 1872	piwo kilka/tydzień
+T54	Condition 1873 1882	Uczulenia
+N16	Reference T54 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T55	Negation 1884 1894	nie podaje
+R15	Neg Arg1:T44 Arg2:T43	
+R16	Neg Arg1:T47 Arg2:T46	
+R17	Neg Arg1:T47 Arg2:T45	
+R18	Neg Arg1:T49 Arg2:T48	
+R19	Neg Arg1:T55 Arg2:T54	
+T52	Drug 1919 1924	Acard
+T56	Drug 1949 1956	Tritace
+T57	Drug 1981 1993	Tertensif SR
+T58	Drug 2007 2014	Amlopin
+T59	Drug 2033 2046	Glucophage XR
+T60	Drug_dose 1925 1948	75 mg 1 tabl. wieczorem
+T61	Drug_dose 1957 1980	10 mg 1 tabl. wieczorem
+T62	Drug_dose 1994 2006	1 tabl. rano
+T63	Drug_dose 2015 2032	5 mg 1 tabl. rano
+T64	Drug_dose 2047 2071	500 mg 1 tabl. wieczorem
+T65	Investigation 2100 2110	echo serca
+T66	Investigation 2112 2132	echo przezprzełykowe
+T67	Investigation 2134 2137	TET
+T68	Investigation 2139 2143	ABPM
+T69	Investigation 2145 2151	Holter
+T70	Investigation 2153 2171	RTG kl. piersiowej
+R20	Drg Arg1:T52 Arg2:T60	
+R21	Drg Arg1:T56 Arg2:T61	
+R22	Drg Arg1:T57 Arg2:T62	
+R23	Drg Arg1:T58 Arg2:T63	
+R24	Drg Arg1:T59 Arg2:T64	
+A2	Status T34 Historical_Insignificant
+A3	Status T39 Historical_Insignificant
+N17	Reference T10 ICD10:Z72.1	Używanie alkoholu
+N18	Reference T50 ICD10:Z72.0	Używanie tytoniu
+N19	Reference T53 ICD10:Z72.1	Używanie alkoholu

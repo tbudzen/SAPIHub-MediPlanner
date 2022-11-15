@@ -1,0 +1,109 @@
+T1	Investigation 2168 2178	echo serca
+T2	Investigation 2180 2183	TET
+T3	Investigation 2185 2189	ABPM
+T4	Investigation 2191 2197	Holter
+T5	Drug 2123 2129	Magnez
+T6	Drug 2114 2122	Sanprobi
+T7	Drug 2106 2112	Optima
+T8	Drug_dose 2130 2140	3 x 1 tabl
+R1	Drg Arg1:T5 Arg2:T8	
+T9	Drug 2075 2083	Trittico
+T10	Drug_dose 2084 2105	150 1 tabl. wieczorem
+R2	Drg Arg1:T9 Arg2:T10	
+T11	Drug 2044 2053	Pulmicort
+T12	Drug_dose 2054 2074	200 rano i wieczorem
+R3	Drg Arg1:T11 Arg2:T12	
+T13	Drug 2018 2024	Letrox
+T14	Drug 1995 2004	Plaquenil
+T15	Drug_dose 2005 2017	1 tabl. rano
+R4	Drg Arg1:T14 Arg2:T15	
+T16	Drug_dose 2025 2043	75 ug 1 tabl. rano
+R5	Drg Arg1:T13 Arg2:T16	
+T17	Investigation 402 430	pomiary ciśnienia tętniczego
+T18	Behaviour 431 480	zbilansowana dieta z ograniczeniem soli kuchennej
+T19	Behaviour 481 509	regularna aktywność fizyczna
+T20	Drug 516 522	Letrox
+T21	Drug_dose 523 549	75ug 1 tabl. rano na czczo
+R6	Drg Arg1:T20 Arg2:T21	
+T22	Drug 550 559	Plaquenil
+T23	Drug_dose 560 572	1 tabl. rano
+R7	Drg Arg1:T22 Arg2:T23	
+T24	Drug 573 584	Trittico CR
+T25	Drug_dose 585 607	150 mg 1 tabl. 1 x dz.
+R8	Drg Arg1:T24 Arg2:T25	
+T26	Drug 608 628	Pulmicort Turbohaler
+T27	Drug_dose 629 649	200ug/d  2 x 1 wdech
+R9	Drg Arg1:T26 Arg2:T27	
+T28	Drug 650 658	Magnezin
+T29	Drug_dose 659 670	3 x 2 tabl.
+R10	Drg Arg1:T28 Arg2:T29	
+T30	Drug 671 678	Tritace
+T31	Drug_dose 679 698	2,5 mg 1 tabl. rano
+R11	Drg Arg1:T30 Arg2:T31	
+T32	Drug 699 708	Captopril
+T33	Drug_dose 709 733	12,5 mg 1 tabl. doraźnie
+R12	Drg Arg1:T32 Arg2:T33	
+T34	Condition 951 983	Nadciśnienie tętnicze Ist wg WHO
+N1	Reference T34 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T35	Condition 985 1001	Astma oskrzelowa
+N2	Reference T35 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T36	Condition 1003 1020	Choroba Hashimoto
+N3	Reference T36 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T37	Condition 1022 1050	Toczeń rumieniowaty układowy
+N4	Reference T37 ICD10:M32.9	Toczeń rumieniowaty układowy, nieokreślony
+T38	Condition 1052 1066	Hemochromatoza
+N5	Reference T38 ICD10:E83.1	Zaburzenia przemian żelaza
+T39	Condition 1068 1100	Zmiany zwyrodnieniowe kręgosłupa
+T40	Condition 1102 1130	Zaburzenia lękowo-depresyjne
+N7	Reference T40 ICD10:F41.2	Zaburzenia depresyjne i lękowe mieszane
+T41	Investigation_result 1332 1358	wahań ciśnienia tętniczego
+T42	Date 1359 1374	od ok. 1/2 roku
+R13	Dat Arg1:T42 Arg2:T41	
+T43	Condition 1389 1417	toczeń rumieniowaty układowy
+N8	Reference T43 ICD10:M32.9	Toczeń rumieniowaty układowy, nieokreślony
+T44	Condition 1419 1436	choroba Hashimoto
+N9	Reference T44 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T45	Condition 1438 1455	astma oskrzelowa,
+N10	Reference T45 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T46	Condition 1456 1470	hemochromatoza
+N11	Reference T46 ICD10:E83.1	Zaburzenia przemian żelaza
+T47	Condition 1472 1500	zaburzenia lękowo-depresyjne
+N12	Reference T47 ICD10:F41.2	
+T48	Treatment 1639 1653	tonisllectomii
+T49	Treatment 1663 1682	operacji oka lewego
+T50	Condition 1551 1611	zmiany zwyrodnieniowe kręgosłupa z wielopoziomową dyskopatią
+N13	Reference T50 ICD10:M47	
+T51	Condition 1710 1713	WZW
+N14	Reference T51 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T52	Condition 1715 1724	borelioza
+N15	Reference T52 ICD10:A69.2	
+T53	Negation 1725 1735	nie podaje
+R14	Neg Arg1:T53 Arg2:T52	
+R15	Neg Arg1:T53 Arg2:T51	
+T54	Behaviour 1845 1866	Inne używki: doraźnie
+N16	Reference T54 ICD10:Z72	Problemy związane ze stylem życia
+T55	Drug 1887 1895	dolargan
+T56	Drug 1897 1905	barwniki
+T57	Drug 1907 1913	nikiel
+T58	Drug 1877 1885	pyralgin
+T59	Condition 1867 1876	Uczulenia
+N17	Reference T59 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R16	Alg Arg1:T59 Arg2:T58	
+R17	Alg Arg1:T59 Arg2:T55	
+R18	Alg Arg1:T59 Arg2:T56	
+R19	Alg Arg1:T59 Arg2:T57	
+T60	Behaviour 1770 1785	Palenie tytoniu
+N18	Reference T60 ICD10:Z72.0	Używanie tytoniu
+T61	Date 1787 1800	w przeszłości
+R20	Dat Arg1:T61 Arg2:T60	
+T62	Date 1814 1821	obecnie
+T63	Behaviour 1822 1844	papieros elektroniczny
+N19	Reference T63 ICD10:Z72.0	Używanie tytoniu
+R21	Dat Arg1:T62 Arg2:T63	
+T64	Condition 1502 1549	kandydoza błon śluzowych i przewodu pokarmowego
+N20	Reference T64 ICD10:B37.8	
+A1	Status T48 Historical_Insignificant
+A2	Status T49 Historical_Insignificant
+T65	Treatment 330 357	dalsza opieka w poradni POZ
+T66	Treatment 368 391	kontrola kardiologiczna
+N6	Reference T39 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone

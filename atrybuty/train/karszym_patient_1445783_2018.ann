@@ -1,0 +1,91 @@
+T1	Condition 450 479	Dodatkowe pobudzenia komorowe
+N1	Reference T1 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T2	Condition 481 508	Choroba niedokrwienna serca
+N2	Reference T2 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T3	Condition 510 524	Hiperlipidemia
+N3	Reference T3 ICD10:E78.2	Hiperlipidemia mieszana
+T4	Condition 534 544	boreliozie
+N4	Reference T4 ICD10:A69.2	Choroba z Lyme
+T5	Condition 546 579	Choroba zwyrodnieniowa kręgosłupa
+A1	Status T5 Historical_Insignificant
+N5	Reference T5 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T6	Condition 811 840	Dodatkowe pobudzenia komorowe
+N6	Reference T6 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T7	Condition 850 860	boreliozie
+N7	Reference T7 ICD10:A69.2	Choroba z Lyme
+T8	Symptom 1029 1073	postępującej zmniejszonej tolerancji wysiłku
+T9	Date 1074 1085	od ok 2 lat
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Symptom 1100 1159	bóle okolicy lewej strony kl piersiowej przy zmianie pogody
+N8	Reference T10 ICD10:R07.3	Inne bóle w klatce piersiowej
+T11	Date 1161 1176	Ok tydzień temu
+T12	Symptom 1177 1204	zawroty głowy incydentalnie
+T13	Negation 1206 1209	bez
+T14	Symptom 1210 1219	powtórzeń
+R2	Dat Arg1:T11 Arg2:T12	
+R3	Neg Arg1:T13 Arg2:T14	
+T15	Condition 1264 1271	arytmię
+N9	Reference T15 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T16	Condition 1273 1276	ExV
+N10	Reference T16 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T17	Negation 1279 1282	nie
+T18	Symptom 1283 1306	odczuwa kołatania serca
+N11	Reference T18 ICD10:R00.2	Kołatanie serca
+R4	Neg Arg1:T17 Arg2:T18	
+T19	Condition 1332 1341	boreliozy
+N12	Reference T19 ICD10:A69.2	Choroba z Lyme
+T20	Date 1342 1356	ok 3 lata temu
+T21	Treatment 1358 1376	antybiotykoterapia
+T22	Date 1377 1394	przez ok pół roku
+T23	Investigation 1406 1414	kontrola
+T24	Date 1415 1430	przez ok 2 lata
+T25	Treatment 1458 1468	wyleczenie
+R5	Dat Arg1:T24 Arg2:T23	
+R6	Dat Arg1:T22 Arg2:T21	
+R7	Dat Arg1:T20 Arg2:T19	
+R8	Dat Arg1:T20 Arg2:T21	
+T26	Symptom 1487 1509	bóle mięśniowo-stawowe
+N13	Reference T26 ICD10:M79.1	Bóle mięśni
+T27	Condition 1541 1550	boreliozy
+N14	Reference T27 ICD10:A69.2	Choroba z Lyme
+T28	Date 1532 1540	od czasu
+T29	Symptom 1552 1588	Zmniejszają się podczas przyjmowania
+T30	Drug 1589 1594	tranu
+T31	Treatment 1597 1605	Operacje
+N15	Reference T31 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T32	Negation 1607 1613	neguje
+T33	Behaviour 1614 1624	Nikotynizm
+N16	Reference T33 ICD10:Z72.0	Używanie tytoniu
+T34	Date 1628 1641	w przeszłości
+T35	Behaviour 1644 1665	Alkohol: okazjonalnie
+A2	Status T35 Historical_Insignificant
+N17	Reference T35 ICD10:Z72.1	Używanie alkoholu
+T36	Negation 1674 1680	neguje
+T37	Condition 1682 1699	uczulenia na leki
+N18	Reference T37 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T38	Symptom 1701 1734	krwawienia z przewodu pokarmowego
+N19	Reference T38 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T39	Symptom 1736 1755	utraty przytomności
+T40	Condition 1757 1772	Wywiad rodzinny
+A3	Status T40 Family
+T41	Negation 1774 1780	neguje
+T42	Drug 1807 1811	tran
+T43	Investigation 1823 1833	ECHO serca
+T44	Investigation 1835 1845	Holter EKG
+T45	Investigation 1847 1856	Holter RR
+T46	Investigation 1858 1860	PW
+T47	Investigation 1862 1879	RTG kl piersiowej
+T48	Date 1880 1898	ok 3 miesiące temu
+T49	Investigation_result 1901 1911	prawidłowe
+A4	Source T49 Declared
+R9	Dat Arg1:T48 Arg2:T47	
+R10	Inv Arg1:T47 Arg2:T49	
+R11	Neg Arg1:T41 Arg2:T40	
+R12	Neg Arg1:T36 Arg2:T37	
+R13	Neg Arg1:T36 Arg2:T38	
+R14	Neg Arg1:T36 Arg2:T39	
+R15	Dat Arg1:T34 Arg2:T33	
+R16	Neg Arg1:T32 Arg2:T31	
+R17	Dat Arg1:T28 Arg2:T26	
+R18	Dat Arg1:T28 Arg2:T29	
+R19	Dat Arg1:T28 Arg2:T27	

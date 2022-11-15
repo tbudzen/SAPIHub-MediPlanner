@@ -1,0 +1,35 @@
+T1	Treatment 434 442	operacji
+N1	Reference T1 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T2	Condition 443 486	ubytku typu kanału przedsionkowo-komorowego
+N2	Reference T2 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T3	Date 488 499	12.04.2007r
+T4	Treatment 513 523	reoperacji
+N3	Reference T4 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T5	Condition 533 576	istotnej niedomykalności zastawki mitralnej
+T6	Date 578 589	14.01.2008r
+N4	Reference T5 ICD10:I34.0	Niedomykalność zastawki mitralnej
+R1	Dat Arg1:T3 Arg2:T1	
+R2	Dat Arg1:T3 Arg2:T2	
+R3	Dat Arg1:T6 Arg2:T5	
+R4	Dat Arg1:T6 Arg2:T4	
+T7	Drug 769 778	Captopril
+T8	Drug_dose 779 787	2x6,25mg
+T9	Investigation 792 826	Ambulatoryjne badanie holterowskie
+R5	Drg Arg1:T7 Arg2:T8	
+T10	Treatment 896 936	Kontrola w Poradni Kardiologicznej ICZMP
+T11	Date 945 953	za 1 rok
+T12	Treatment 967 1005	konsultacja w Poradni Rehabilitacyjnej
+R6	Dat Arg1:T11 Arg2:T10	
+T13	Treatment 1010 1071	Dalsza opieka ogólnopediatryczna w Poradni Lekarza Rodzinnego
+T14	Drug 1192 1201	Captopril
+T15	Treatment 1342 1350	operacji
+N5	Reference T15 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T16	Condition 1351 1354	CAV
+N6	Reference T16 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T17	Condition 1359 1418	istotną hemodynamicznie niedomykalnością zastawki mitralnej
+N7	Reference T17 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T18	Drug 1474 1483	Captopril
+T19	Condition 1485 1502	wywiad alergiczny
+N8	Reference T19 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T20	Negation 1503 1509	ujemny
+R7	Neg Arg1:T20 Arg2:T19	

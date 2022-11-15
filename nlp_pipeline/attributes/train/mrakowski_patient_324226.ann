@@ -1,0 +1,97 @@
+T1	Condition 449 486	Pojedyncze pobudzenia nad- i komorowe
+T2	Symptom 492 509	Zaburzenia lękowe
+N2	Reference T2 ICD10:F41.9	Zaburzenia lękowe, nieokreślone
+T3	Treatment 621 657	Wskazana Dalsza Opieka u lekarza POZ
+T4	Treatment 661 688	do rozważenia psychoterapia
+T5	Behaviour 692 766	Dieta lekkostrawna z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T6	Investigation 770 826	systematyczna Kontrola ciśnienia tętniczego krwi i tętna
+T7	Treatment 830 946	do rozważenia włączenie preparatu z magnezem i potasem w przypadku nasilenia wystepowania pobudzeń dodatkowych serca
+T8	Investigation 948 1015	Wówczas Wskazana okresowa Kontrola w/w elektrolitów w warunkach POZ
+T9	Symptom 1245 1255	osłabienia
+T10	Symptom 1429 1455	skurczów dodatkowych serca
+T11	Treatment 1492 1559	w trakcie rocznej suplementacji magnezu i potasu ustąpienie arytmii
+T12	Negation 1562 1568	Neguje
+T13	Symptom 1570 1582	zasłabnięcia
+T14	Symptom 1584 1592	omdlenia
+N4	Reference T14 ICD10:R55	Omdlenie i zapaść
+T15	Symptom 1594 1604	krwawienia
+T16	Symptom 1606 1619	czarne stolce
+N5	Reference T16 ICD10:K92.1	Stolce smołowate
+T17	Symptom 1621 1637	brunatne wymioty
+N6	Reference T17 ICD10:K92.0	Wymioty krwawe
+T18	Condition 1639 1655	chorobę wrzodową
+N7	Reference T18 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T19	Symptom 1657 1685	duszność nocną typu ortopnoe
+N8	Reference T19 ICD10:R06.0	Duszność
+N3	Reference T10 ICD10:R00.2	Kołatanie serca
+T20	Condition 1687 1689	HA
+N9	Reference T20 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T21	Condition 1691 1693	DM
+N10	Reference T21 ICD10:E14	Cukrzyca nieokreślona
+T22	Condition 1695 1705	udar mózgu
+N11	Reference T22 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T23	Condition 1707 1718	zawał serca
+N12	Reference T23 ICD10:I25.2	Przebyty zawał serca
+R1	Neg Arg1:T12 Arg2:T23	
+R2	Neg Arg1:T12 Arg2:T22	
+R3	Neg Arg1:T12 Arg2:T21	
+R4	Neg Arg1:T12 Arg2:T20	
+R5	Neg Arg1:T12 Arg2:T19	
+R6	Neg Arg1:T12 Arg2:T18	
+R7	Neg Arg1:T12 Arg2:T17	
+R8	Neg Arg1:T12 Arg2:T16	
+R9	Neg Arg1:T12 Arg2:T15	
+R10	Neg Arg1:T12 Arg2:T14	
+R11	Neg Arg1:T12 Arg2:T13	
+T24	Behaviour 1743 1758	Palenie tytoniu
+T25	Negation 1760 1763	nie
+R12	Neg Arg1:T25 Arg2:T24	
+T26	Behaviour 1765 1776	Inne używki
+T27	Negation 1778 1784	neguje
+R13	Neg Arg1:T27 Arg2:T26	
+T28	Condition 1787 1796	Uczulenia
+T29	Negation 1798 1801	nie
+R14	Neg Arg1:T29 Arg2:T28	
+T30	Condition 1830 1833	WZW
+N14	Reference T30 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T31	Condition 1840 1849	borelioza
+T32	Condition 1857 1860	tbc
+N15	Reference T31 ICD10:A69.2	Choroba z Lyme
+T33	Condition 1866 1870	odra
+N17	Reference T33 ICD10:B05	Odra
+T34	Treatment 1876 1908	szczepienie na odrę (szczepiony)
+T35	Negation 1872 1873	-
+R15	Neg Arg1:T35 Arg2:T33	
+T36	Negation 1862 1863	-
+R16	Neg Arg1:T36 Arg2:T32	
+T37	Negation 1852 1853	-
+R17	Neg Arg1:T37 Arg2:T31	
+T38	Negation 1835 1836	-
+R18	Neg Arg1:T38 Arg2:T30	
+T39	Behaviour 1927 1953	warunki mieszkaniowe dobre
+T40	Behaviour 1955 1977	trenuje trójbój siłowy
+T41	Behaviour 1986 2004	stosowanie dopingu
+T42	Negation 1979 1985	neguje
+R19	Neg Arg1:T42 Arg2:T41	
+T43	Behaviour 2007 2035	praca umysłowa - programista
+T44	Investigation 2128 2149	badania laboratoryjne
+T45	Investigation 2151 2161	Holter EKG
+T46	Investigation 2163 2167	ECHO
+T47	Investigation 2169 2173	ABPM
+N1	Reference T1 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T48	Treatment 1723 1740	Przebyte operacje
+T49	Behaviour 2037 2044	student
+T50	Condition 1467 1490	różne nasilenie arytmii
+N18	Reference T50 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T51	Date 1457 1465	od 7 r.z
+R20	Dat Arg1:T51 Arg2:T50	
+N20	Reference T28 ICD10:T78.4	Alergia, nieokreślona
+N21	Reference T9 ICD10:R53	Złe samopoczucie i zmęczenie
+N22	Reference T13 ICD10:R55	Omdlenie i zapaść
+N13	Reference T24 ICD10:Z72.0	Używanie tytoniu
+N19	Reference T15 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N23	Reference T26 ICD10:Z72	Problemy związane ze stylem życia
+N16	Reference T32 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T52	Drug 2048 2052	Leki
+T53	Negation 2054 2065	nie stosuje
+R21	Neg Arg1:T53 Arg2:T52	

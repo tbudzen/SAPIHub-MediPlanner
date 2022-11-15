@@ -1,0 +1,87 @@
+T1	Condition 447 468	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 470 484	Hiperlipidemia
+N2	Reference T2 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T3	Treatment 485 503	w trakcie leczenia
+T4	Condition 513 538	Obturacyjny bezdech senny
+N3	Reference T4 ICD10:G47.3	Bezdech senny
+T5	Condition 553 586	choroba zwyrodnieniowa kręgosłupa
+N4	Reference T5 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T6	Condition 588 615	przerost gruczołu krokowego
+N5	Reference T6 ICD10:N40	Rozrost gruczołu krokowego
+T7	Condition 617 630	dna moczanowa
+N6	Reference T7 ICD10:M10	Dna moczanowa
+T8	Treatment 640 653	appendektomii
+A1	Status T8 Historical_Insignificant
+T9	Date 655 662	01.2019
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Behaviour 665 686	Przewlekły nikotynizm
+N7	Reference T10 ICD10:Z72.0	Używanie tytoniu
+T11	Drug 811 819	Bisocard
+T12	Drug 821 826	Doxar
+T13	Drug 828 835	Lacipil
+T14	Drug 837 845	Telmizek
+T15	Drug 847 854	Roswera
+T16	Treatment 965 987	kontrola u lekarza POZ
+T17	Treatment 990 1031	dalsza kontrola w Poradni Kardiologicznej
+T18	Behaviour 1034 1059	dieta niskocholesterolowa
+T19	Investigation 1064 1103	okresowa kontrola lipidogramu, AST, ALT
+T20	Date 1119 1130	za 2-3 m-ce
+R2	Dat Arg1:T20 Arg2:T19	
+T21	Treatment 1133 1161	regularne przyjmowanie leków
+T22	Drug 1163 1171	Bisocard
+T23	Drug_dose 1172 1182	2,5mg 1x 1
+R3	Drg Arg1:T22 Arg2:T23	
+T24	Investigation_result 1351 1421	podwyższonych wartości BP (140/90 - 170/110) mimo stosowanego leczenia
+N8	Reference T24 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T25	Condition 1538 1541	IFG
+N9	Reference T25 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T26	Condition 1544 1576	zmiany zwyrodnieniowe kregosłupa
+N10	Reference T26 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+A2	Source T25 Declared
+T27	Condition 1578 1595	przerost prostaty
+N11	Reference T27 ICD10:N40	Rozrost gruczołu krokowego
+T28	Symptom 1597 1602	zgaga
+N12	Reference T28 ICD10:R12	Zgaga
+T29	Condition 1604 1617	dna moczanowa
+N13	Reference T29 ICD10:M10	Dna moczanowa
+T30	Condition 1619 1622	OBS
+N14	Reference T30 ICD10:G47.3	Bezdech senny
+T31	Treatment 1634 1638	CPAP
+T32	Condition 1640 1666	skrzywienie przegrody nosa
+N15	Reference T32 ICD10:J34.2	Skrzywienie przegrody nosa
+T33	Treatment 1667 1684	Przebyte operacje
+T34	Treatment 1686 1699	appendektomia
+A3	Status T34 Historical_Insignificant
+T35	Date 1702 1709	01/2019
+R4	Dat Arg1:T35 Arg2:T34	
+T36	Condition 1710 1725	Wywiad rodzinny
+A4	Status T36 Family
+T37	Negation 1727 1740	bez znaczenia
+R5	Neg Arg1:T37 Arg2:T36	
+T38	Condition 1742 1749	Alergie
+T39	Negation 1751 1757	neguje
+R6	Neg Arg1:T39 Arg2:T38	
+T40	Behaviour 1759 1783	Nikotynizm: 30 paczkolat
+N16	Reference T40 ICD10:Z72.0	Używanie tytoniu
+T41	Behaviour 1785 1840	Alkohol: do 500 ml wódki w weekend, w tygodniu nie pije
+N17	Reference T41 ICD10:Z72.1	Używanie alkoholu
+T42	Behaviour 1842 1859	Uzależnienie inne
+T43	Negation 1861 1867	neguje
+R7	Neg Arg1:T43 Arg2:T42	
+T44	Behaviour 1885 1926	działalnośc gosodarcza (sprzedaż odzieży)
+T45	Drug 1934 1950	Noliprel Biforte
+T46	Drug 1977 1984	Lacipil
+T47	Drug_dose 1951 1975	10 + 2,5 mg 1 tabl. rano
+R8	Drg Arg1:T45 Arg2:T47	
+T48	Drug_dose 1985 2002	6 mg 1 tabl. rano
+R9	Drg Arg1:T46 Arg2:T48	
+T49	Drug 2004 2012	Bisocard
+T50	Drug_dose 2013 2031	2,5mg 1 tabl. rano
+R10	Drg Arg1:T49 Arg2:T50	
+T51	Investigation 2060 2070	echo serca
+T52	Investigation 2072 2075	TET
+T53	Investigation 2077 2081	ABPM
+T54	Investigation 2083 2093	Holter ekg
+T55	Investigation 2095 2113	rtg kl. piersiowej
+T56	Drug 504 511	statyną

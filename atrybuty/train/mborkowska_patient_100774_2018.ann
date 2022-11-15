@@ -1,0 +1,73 @@
+T1	Condition 450 529	Wrodzona wada serca pod postacią ubytku w przegrodzie przedsionkowo - komorowej
+N1	Reference T1 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+T2	Treatment 533 555	korekcji chirurgicznej
+T3	Date 557 567	12.07.1999
+R1	Dat Arg1:T3 Arg2:T1	
+R2	Dat Arg1:T3 Arg2:T2	
+T4	Condition 570 582	Zespół Downa
+N2	Reference T4 ICD10:Q90.9	Zespół Downa, nieokreślony
+T5	Condition 584 595	Astygmatyzm
+N3	Reference T5 ICD10:H52.2	Astygmatyzm
+T6	Condition 597 641	Zmiana guzowata w okolicy podżuchwowej lewej
+N4	Reference T6 ICD10:R22.6	
+T7	Drug 785 793	0,9%NaCl
+T8	Investigation 939 956	badanie d-dimerów
+T9	Investigation 1857 1867	Echo serca
+T10	Investigation 1870 1880	Holter EKG
+T11	Investigation 1883 1892	Holter RR
+T12	Behaviour 1764 1790	warunki mieszkaniowe dobre
+T13	Negation 1741 1747	neguje
+T14	Negation 1726 1729	nie
+T15	Negation 1709 1712	nie
+T16	Negation 1679 1690	brak danych
+T17	Negation 1649 1654	( - )
+T18	Negation 1630 1636	( -  )
+T19	Condition 1730 1739	Uczulenia
+R3	Neg Arg1:T13 Arg2:T19	
+T20	Behaviour 1713 1724	Inne używki
+R4	Neg Arg1:T14 Arg2:T20	
+T21	Behaviour 1692 1707	Palenie tytoniu
+N6	Reference T21 ICD10:Z72.0	Używanie tytoniu
+R5	Neg Arg1:T15 Arg2:T21	
+T22	Condition 1655 1676	W wywiadzie rodzinnym
+A1	Status T22 Family
+R6	Neg Arg1:T16 Arg2:T22	
+T23	Condition 1626 1629	WZW
+T24	Condition 1639 1648	borelioza
+N8	Reference T24 ICD10:A69.2	
+R7	Neg Arg1:T17 Arg2:T24	
+R8	Neg Arg1:T18 Arg2:T23	
+T25	Treatment 1538 1562	Przebyte operacje:  j. w
+T26	Condition 1524 1535	Astygmatyzm
+N9	Reference T26 ICD10:H52.2	Astygmatyzm
+T27	Condition 1510 1522	Zespół Dawna
+N10	Reference T27 ICD10:Q90.9	Zespół Downa, nieokreślony
+T28	Treatment 1471 1493	korekcji chirurgicznej
+T29	Date 1496 1506	12.07.1999
+T30	Condition 1430 1460	wada wrodzona pod postacią CAV
+N11	Reference T30 ICD10:Q21.8	Inna wrodzona wada rozwojowa przegród serca
+T31	Symptom 1396 1414	uczucie duszności.
+N12	Reference T31 ICD10:R06.0	Duszność
+T32	Symptom 1362 1386	bóle w klatce piersiowej
+T33	Symptom 1340 1352	zasłabnięcia
+N14	Reference T33 ICD10:R55	Omdlenie i zapaść
+T34	Negation 1333 1339	Neguje
+R9	Neg Arg1:T34 Arg2:T33	
+T35	Negation 1355 1361	neguje
+R10	Neg Arg1:T35 Arg2:T32	
+T36	Negation 1389 1395	neguje
+R11	Neg Arg1:T36 Arg2:T31	
+T37	Symptom 1308 1329	nierównej pracy serca
+N13	Reference T32 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+R12	Dat Arg1:T29 Arg2:T28	
+R13	Dat Arg1:T29 Arg2:T30	
+N7	Reference T23 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T38	Drug 1814 1818	Leki
+T39	Negation 1820 1823	bez
+T40	Drug 1824 1842	leków przewlekłych
+R14	Neg Arg1:T39 Arg2:T40	
+T41	Treatment 904 926	kontrola u lekarza POZ
+T42	Treatment 982 1059	kontrola w Poradni Chirurgii Naczyniowej i Onkologicznej (wydano skierowania)
+T43	Treatment 1062 1136	dalsza kontrola w Poradni Kardiologicznej i Wad wrodzonych Dorosłych i Oku
+N15	Reference T20 ICD10:Z72	Problemy związane ze stylem życia
+N5	Reference T19 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

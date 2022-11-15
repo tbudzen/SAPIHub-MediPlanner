@@ -1,0 +1,45 @@
+T1	Condition 1478 1496	złożoną wadą serca
+czeń sercowych
+T2	Investigation 1513 1525	badania ECHO
+T3	Treatment 1528 1535	sedacji
+T4	Condition 1541 1544	AZS
+T5	Drug 1547 1561	leków na stałe
+T6	Negation 1562 1575	nie otrzymuje
+T7	Drug 339 349	Thiopental
+T8	Drug 351 354	ANA
+T9	Condition 628 704	Wrodzona wada serca pod postacią przełożenia wielkich pni tętniczych (L-TGA)
+czenia przedsionkowo-komorowe
+T10	Condition 707 731	ubytkiem międzykomorowym
+T11	Condition 734 772	umiarkowanym zwężeniem tętnicy płucnej
+T12	Treatment 785 802	operacji plastyki
+T13	Condition 803 826	ubytku międzykomorowego
+T14	Treatment 828 864	przy użyciu łaty dakronowej śr. 15mm
+T15	Date 868 879	23.06.2017r
+T16	Condition 884 918	Nosicielstwo Staphylococcus auerus
+T17	Treatment 1063 1095	Wizyta w Poradni Kardiologicznej
+T18	Date 1096 1109	za ok. 6 m-cy
+T19	Symptom 1179 1212	w przypadku niepokojących objawów
+T20	Date 1215 1224	wcześniej
+T21	Treatment 1228 1253	Opieka pediatryczna w POZ
+T22	Drug 1273 1284	probiotyków
+T23	Drug_dose 1257 1272	codzienna podaż
+T24	Investigation 1299 1320	kontrolny posiew kału
+T25	Investigation 1327 1341	wymaz z odbytu
+T26	Drug_dose 1285 1296	(zamiennie)
+N1	Reference T1 ICD10:Q20	Wrodzone wady rozwojowe jam i poÅÄczeÅ sercowych
+N2	Reference T4 ICD10:L20.9	Atopowe zapalenie skÃ³ry, nieokreÅlone
+N3	Reference T9 ICD10:Q20.3	NieprawidÅowe poÅÄczenia komorowo-tÄtnicze
+N4	Reference T10 ICD10:Q21.0	Ubytek przegrody miÄdzykomorowej
+N5	Reference T12 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N6	Reference T13 ICD10:Q21.0	Ubytek przegrody miÄdzykomorowej
+R1	Dat Arg1:T15 Arg2:T9
+R14	Neg Arg1:T6 Arg2:T5
+R2	Dat Arg1:T15 Arg2:T10
+R3	Dat Arg1:T15 Arg2:T11
+R4	Dat Arg1:T15 Arg2:T13
+R5	Dat Arg1:T15 Arg2:T12
+R6	Dat Arg1:T15 Arg2:T14
+R7	Drg Arg1:T22 Arg2:T23
+R8	Dat Arg1:T20 Arg2:T19
+R9	Dat Arg1:T20 Arg2:T21
+A1	Status T25 Historical_Insignificant

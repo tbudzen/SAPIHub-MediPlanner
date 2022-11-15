@@ -1,0 +1,28 @@
+T1	Negation 340 343	Bez
+T2	Drug 344 349	leków
+R1	Neg Arg1:T1 Arg2:T2	
+T3	Treatment 462 496	Kontrola w Poradni Kardiologicznej
+T4	Date 497 513	za ok 2 miesiące
+T5	Investigation 518 579	Systematyczna kontrola tętna i ciśnienia w warunkach domowych
+T6	Treatment 584 612	Stała opieka stomatologiczna
+R2	Dat Arg1:T4 Arg2:T3	
+T7	Treatment 640 694	Opieka ogólnopediatryczna w Poradni Lekarza Rodzinnego
+T8	Investigation 913 923	Obserwacja
+T9	Condition 935 958	nadciśnienia tętniczego
+N1	Reference T9 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T10	Condition 963 993	Nadciśnienie "białego fatucha"
+N2	Reference T10 ICD10:R03.0	Podwyższone ciśnienie tętnicze krwi, bez rozpoznanego nadciśnienia tętniczego
+T11	Date 1119 1131	od maja 2018
+T12	Investigation_result 1132 1158	skoki ciśnienia tętniczego
+T13	Symptom 1175 1186	bólem głowy
+N3	Reference T13 ICD10:R51	Ból głowy
+T14	Condition 1189 1206	wywiad alergiczny
+N4	Reference T14 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T15	Negation 1207 1213	ujemny
+T16	Drug 1216 1230	leków na stałe
+T17	Negation 1231 1244	nie otrzymuje
+R3	Neg Arg1:T17 Arg2:T16	
+R4	Neg Arg1:T15 Arg2:T14	
+R5	Dat Arg1:T11 Arg2:T12	
+R6	Dat Arg1:T11 Arg2:T13	
+A1	Source T9 Declared

@@ -1,0 +1,657 @@
+allRelations          : 14
+oks                   : 6
+isRedundantAndRemoveds: 6
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 2
+GOOD / BAD            : 12 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 4 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zastosowane leczenie
+------------------------------------------------
+
+
+
+Sentence 4:
+Euthyrox
+------------------------------------------------
+
+
+
+Sentence 5:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 6:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Przetrwały przewód tętniczy.\x0aSamoistnie zamknięte: ubytek w przegrodzie międzykomorowej i otwór owalny.\x0aNiedoczynność tarczycy\x0aZespół Downa
+------------------------------------------------
+
+
+
+Sentence 7:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 8:
+Euthyrox 25mg 1 x 1 tabl śr i sob
+
+R1	Drg Arg1:T6 Arg2:T9 << OK >>	Euthyrox -> 25mg 1 x 1 tabl śr i sob  <RANK: 3> <info: start[822, 831] <type: RIGHT>>
+
+
+Sentence 9:
+Euthyrox 25mg 1 x 1/2 tabl pon, wt, czw, pt, nd
+Acesan 50mg 1x 1 tabl codziennie
+
+Kontrola w poradni kardiologicznej u dr Binikowskiej za około 6 miesięcy.
+
+R2	Drg Arg1:T7 Arg2:T10 << OK >>	Euthyrox -> 25mg 1 x 1/2 tabl pon, wt, czw, pt, nd  <RANK: 3> <info: start[856, 865] <type: RIGHT>>
+R3	Drg Arg1:T7 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Euthyrox -> 50mg 1x 1 tabl codziennie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[856, 911] <type: RIGHT>>
+R4	Drg Arg1:T8 Arg2:T10 <<REDUNDANT!!!REMOVED>>	Acesan -> 25mg 1 x 1/2 tabl pon, wt, czw, pt, nd <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[904, 865] <type: LEFT>>
+R5	Drg Arg1:T8 Arg2:T11 << OK >>	Acesan -> 50mg 1x 1 tabl codziennie  <RANK: 3> <info: start[904, 911] <type: RIGHT>>
+R6	Dat Arg1:T13 Arg2:T12 << OK >>	za około 6 miesięcy -> Kontrola w poradni kardiologicznej  <RANK: 3> <info: start[991, 938] <type: LEFT>>
+R7	Dat Arg1:T13 Arg2:T7 <<REDUNDANT!!!REMOVED>>	za około 6 miesięcy -> Euthyrox <:REMOVED other second tag between (left):> <RANK: 0> <info: start[991, 856] <type: LEFT>>
+R8	Dat Arg1:T13 Arg2:T8 <<REDUNDANT!!!REMOVED>>	za około 6 miesięcy -> Acesan <:REMOVED other second tag between (left):> <RANK: 1> <info: start[991, 904] <type: LEFT>>
+
+
+Sentence 10:
+------------------------------------------------
+
+
+
+Sentence 11:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 12:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Przetrwały przewód tętniczy.\x0aSamoistnie zamknięte: ubytek w przegrodzie międzykomorowej i otwór owalny.\x0aNiedoczynność tarczycy\x0aZespół Downa\x0aStan po cewnikowania serca z zamknięciem przetrwałego przewodu tętniczego z użyciem zestawu AMPLATZER Duct Occluder II 6mm/5mm (29.05.2019).
+
+R9	Dat Arg1:T19 Arg2:T14 <<REDUNDANT!!!REMOVED>>	29.05.2019 -> Przetrwały przewód tętniczy <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1509, 1229] <type: LEFT>>
+R10	Dat Arg1:T19 Arg2:T15 <<REDUNDANT!!!REMOVED>>	29.05.2019 -> Samoistnie zamknięte: ubytek w przegrodzie międzykomorowej i otwór owalny <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1509, 1261] <type: LEFT>>
+R11	Dat Arg1:T19 Arg2:T16 <<REDUNDANT!!!SHOULD BE REMOVED>>	29.05.2019 -> Niedoczynność tarczycy  <RANK: 3> <info: start[1509, 1339] <type: LEFT>>
+R12	Dat Arg1:T19 Arg2:T17 <<REDUNDANT!!!SHOULD BE REMOVED>>	29.05.2019 -> Zespół Downa  <RANK: 3> <info: start[1509, 1365] <type: LEFT>>
+R13	Dat Arg1:T19 Arg2:T18 << OK >>	29.05.2019 -> zamknięciem przetrwałego przewodu tętniczego z użyciem zestawu AMPLATZER Duct Occluder II 6mm/5mm  <RANK: 3> <info: start[1509, 1410] <type: LEFT>>
+R14	Dat Arg1:T19 Arg2:T22 << OK >>	29.05.2019 -> cewnikowania serca  <RANK: 3> <info: start[1509, 1389] <type: LEFT>>
+
+
+Sentence 13:
+------------------------------------------------
+
+
+
+Sentence 14:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 15:
+Chłopiec 4 letni  w  stanie  dobrym został  przyjęty  do Kliniki celem przeprowadzenia  badań 
+
+
+
+Sentence 16:
+Otrzymuje   Euthyrox
+------------------------------------------------
+
+
+
+Sentence 17:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 18:
+Próba zgodności (kontrola grupy krwi biorcy)
+    
+
+
+Sentence 19:
+NR-KS:K-19/1707
+    KODKRESKOWYPROBKI:K-19/1707
+    GR:B
+    RH:+ (dodatni)
+    
+
+
+Sentence 20:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+    
+
+
+Sentence 21:
+DONACJA:Z510019008549
+    
+
+
+Sentence 22:
+GR:B
+    RH:+ (dodatni)
+    WYNIK-D:zgodna
+
+
+
+Sentence 23:
+Próba zgodności (kontrola grupy krwi biorcy)
+    
+
+
+Sentence 24:
+NR-KS:K-19/1731
+    KODKRESKOWYPROBKI:K-19/1731
+    
+
+
+Sentence 25:
+GR:B
+    RH:+ (dodatni)
+    
+
+
+Sentence 26:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+    
+
+
+Sentence 27:
+DONACJA:Z510019008549
+    
+
+
+Sentence 28:
+GR:B
+    RH:+ (dodatni)
+    WYNIK-D:zgodna
+Grupa krwi + p/c odpornościowe (powyżej 4. m-ca życia
+    NR-KS:G-19/009958
+    KODKRESKOWYPROBKI:G-19/009958
+    GR:B
+    RH:+ (dodatni)
+    
+
+
+Sentence 29:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+
+
+
+Sentence 30:
+Grupa krwi + p/c odpornościowe (powyżej 4. m-ca życia
+    NR-KS:G-19/010138
+    KODKRESKOWYPROBKI:G-19/010138
+    
+
+
+Sentence 31:
+GR:B
+    RH:+ (dodatni)
+    
+
+
+Sentence 32:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+
+
+
+Sentence 33:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.71[10^3/ul]
+    
+
+
+Sentence 34:
+RBC Krwinki czerwone:5.31[10^6/ul]
+    
+
+
+Sentence 35:
+HGB Hemoglobina:15.9[g/dl]
+    
+
+
+Sentence 36:
+HCT Hematokryt:42.7[%]
+    
+
+
+Sentence 37:
+MCV wskaźnik czerwonokrw:80.4[fl]
+    
+
+
+Sentence 38:
+MCH wskaźnik czerwonokrw:29.9[pg]
+    
+
+
+Sentence 39:
+MCHC wskaźnik czerwonokr:37.2[g/dl]
+    
+
+
+Sentence 40:
+PLT z morfologii:369[10^3/ul]
+    
+
+
+Sentence 41:
+RDW-SD:37.1[fl]
+    
+
+
+Sentence 42:
+RDW-CV:12.9[%]
+    
+
+
+Sentence 43:
+PDW:9.2[fl]
+    
+
+
+Sentence 44:
+MPV:8.9[fl]
+    
+
+
+Sentence 45:
+P-LCR:15.7[%]
+    
+
+
+Sentence 46:
+PCT (hematokryt płytkowy:0.33[%]
+    
+
+
+Sentence 47:
+NEUTR# wartość bezwzględ:3.24[10^3/ul]
+    
+
+
+Sentence 48:
+NEUTR%:48.2[%]
+    
+
+
+Sentence 49:
+LYMH# wartość bezwzględn:2.50[10^3/ul]
+    
+
+
+Sentence 50:
+LYMPH%:37.3[%]
+    
+
+
+Sentence 51:
+MONO# wartość bezwzględn:0.71[10^3/ul]
+    
+
+
+Sentence 52:
+MONO%:10.6[%]
+    
+
+
+Sentence 53:
+EO# wartość bezwzględna:0.16[10^3/ul]
+    
+
+
+Sentence 54:
+EO%:2.4[%]
+    BASO# wartość bezwzględn:0.10[10^3/ul]
+    
+
+
+Sentence 55:
+BASO%:1.5[%]
+    
+
+
+Sentence 56:
+NRBC %:0.0[%]
+    
+
+
+Sentence 57:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 58:
+Antytrombina III: Antytrombina III:111[%]
+
+
+
+Sentence 59:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 60:
+Czas protrombinowy:10.8[sek]
+    
+
+
+Sentence 61:
+Wskaźnik PT:101.9[%]
+    
+
+
+Sentence 62:
+INR:0.98
+Czas trombinowy TT: Czas trombinowy TT:15.9[sek]
+
+
+
+Sentence 63:
+Fibrynogen: Fibrynogen:1.96[g/L]
+D-dimer - test ilościowy: D-dimer - test ilościowy:2524[ng/ml]
+
+
+
+Sentence 64:
+Badanie ogólne moczu
+    
+
+
+Sentence 65:
+barwa:żółty[ ]
+    
+
+
+Sentence 66:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 67:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 68:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 69:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 70:
+kwas askrobinowy:40 mg/dl[ ]
+    
+
+
+Sentence 71:
+ciężar właściwy:1.020[ ]
+    
+
+
+Sentence 72:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 73:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 74:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 75:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 76:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 77:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 78:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 79:
+leukocyty:4 /ul[ul]
+    śluz:nieliczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 80:
+TSH: TSH:4.99[uIU/ml]
+
+
+
+Sentence 81:
+FT3: FT3:5.24[pg/ml]
+
+
+
+Sentence 82:
+FT4: FT4:1.76[ng/dl]
+
+
+
+Sentence 83:
+Troponina T: Troponina T:3.4[pg/ml]
+
+
+
+Sentence 84:
+Witamina D 25-OH: Witamina D 25-OH:30.7[ng/ml]
+
+
+
+Sentence 85:
+ALAT: ALAT:38[U/L]
+ASPAT: ASPAT:51[U/L]
+Bilirubina całkowita (TBil): Bilirubina całkowita:1.25[mg/dl]
+
+
+
+Sentence 86:
+CK - aktywność: CK:145[U/L]
+
+
+
+Sentence 87:
+CKMB aktywność: CKMB:35[U/L]
+
+
+
+Sentence 88:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 89:
+Potas (K): Potas:5.0[mmol/L]
+
+
+
+Sentence 90:
+Chlorki (Cl): Chlorki:108[mmol/L]
+
+
+
+Sentence 91:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:19[U/L]
+
+
+
+Sentence 92:
+Kreatynina + GFR
+    
+
+
+Sentence 93:
+Kreatynina w surowicy:0.48[mg/dl]
+    
+
+
+Sentence 94:
+eGFR stand. wg Schwartza:114.6[ml/min/1,73 m^2]
+    
+
+
+Sentence 95:
+eGFR zmod.
+
+
+Sentence 96:
+wg Schwartza:86.0[ml/min/1,73 m^2]
+    wzrost:100[cm]
+
+
+
+Sentence 97:
+Mocznik: Mocznik:37[mg/dl]
+
+
+
+Sentence 98:
+Gospodarka żelazem
+    Żelazo:163[ug/dl]
+    
+
+
+Sentence 99:
+TIBC (Całkowita zdolność:369[ug/dl]
+    
+
+
+Sentence 100:
+UIBC (Utajona zdolność w:206[ug/dl]
+    
+
+
+Sentence 101:
+Wskaźnik wysycenia Fe:44[%]
+
+
+
+Sentence 102:
+Glukoza w surowicy: Glukoza w surowicy:91[mg/dl]
+
+
+
+Sentence 103:
+------------------------------------------------
+
+
+
+Sentence 104:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 105:
+Q25.0
+Z95.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 106:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 107:
+A01
+E65
+G21
+L43
+O61
+I89
+G03
+
+
+
+Sentence 108:
+G25
+G49
+N45
+L69
+35.972
+O69
+
+
+
+Sentence 109:
+87.4
+37.21
+
+
+
+Sentence 110:
+C55
+G53
+O91
+I97
+O93
+L31
+I17
+O55
+I19
+O35
+M37
+N13
+88.721
+
+
+
+Sentence 111:
+M19
+M18
+------------------------------------------------
+
+

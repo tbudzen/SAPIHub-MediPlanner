@@ -1,0 +1,149 @@
+T1	Condition 438 482	Łagodna niedomykalność zastawki trójdzielnej
+N1	Reference T1 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T2	Condition 492 495	TIA
+N2	Reference T2 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T3	Date 497 501	2009
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Symptom 524 553	Dwa epizody zaburzeń widzenia
+N3	Reference T4 ICD10:H53.9	Zaburzenia widzenia, nieokreślone
+T5	Symptom 556 577	drętwienia ręki lewej
+T6	Date 579 586	02/2018
+T7	Date 588 595	06/2018
+R2	Dat Arg1:T6 Arg2:T5	
+R3	Dat Arg1:T7 Arg2:T5	
+R4	Dat Arg1:T6 Arg2:T4	
+R5	Dat Arg1:T7 Arg2:T4	
+N4	Reference T5 ICD10:R20.2	Parestezje
+T8	Condition 618 638	Hipercholesterolemia
+N5	Reference T8 ICD10:E78.0	Czysta hipercholesterolemia
+T9	Condition 868 883	Podejrzenie PFO
+A1	Source T9 Declared
+N6	Reference T9 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T10	Investigation 887 890	TEE
+T11	Condition 900 903	TIA
+N7	Reference T11 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T12	Symptom 913 942	2 epizodach zaburzeń widzenia
+N8	Reference T12 ICD10:H53.9	Zaburzenia widzenia, nieokreślone
+T13	Condition 944 964	Hipercholesterolemia
+N9	Reference T13 ICD10:E78.0	Czysta hipercholesterolemia
+T14	Treatment 1077 1149	Dalsza opieka w POZ, Poradni Neurologicznej oraz Poradni Kardiologicznej
+T15	Treatment 1163 1231	diagnostyka w kierunku zaburzeń krzepnięcia w Poradni Neurologicznej
+T16	Investigation 1255 1284	7-dniowego badania Holter EKG
+T19	Treatment 1332 1428	rozważyć angio-CT/SPECT w celu wykluczenia choroby wieńcowej w warunkach Poradni Kardiologicznej
+T20	Investigation 1433 1525	Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T21	Date 1528 1551	pierwsza za 4-6 tygodni
+R6	Dat Arg1:T21 Arg2:T20	
+T22	Behaviour 1556 1658	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T23	Investigation 1663 1719	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T24	Drug 1758 1763	Acard
+T25	Drug 1825 1832	Roswera
+T26	Drug 1860 1868	Vicebrol
+T27	Drug_dose 1764 1789	75mg 1 tabletka wieczorem
+T28	Drug_dose 1833 1858	20mg 1 tabletka wieczorem
+T29	Drug_dose 1869 1900	5mg 1 tabletka rano i wieczorem
+R7	Drg Arg1:T24 Arg2:T27	
+R8	Drg Arg1:T25 Arg2:T28	
+R9	Drg Arg1:T26 Arg2:T29	
+T17	Condition 2106 2121	podejrzenia PFO
+A2	Source T17 Declared
+N10	Reference T17 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T18	Negation 2177 2183	Neguje
+T30	Symptom 2184 2196	zasłabnięcia
+T31	Symptom 2198 2206	omdlenia
+N11	Reference T31 ICD10:R55	Omdlenie i zapaść
+T32	Symptom 2208 2221	zawroty głowy
+N12	Reference T32 ICD10:R42	Zawroty głowy i odurzenie
+T33	Symptom 2223 2233	krwawienia
+T34	Symptom 2235 2248	czarne stolce
+N13	Reference T34 ICD10:K92.1	Stolce smołowate
+T35	Symptom 2250 2266	brunatne wymioty
+N14	Reference T35 ICD10:K92.0	Wymioty krwawe
+T36	Condition 2268 2284	chorobę wrzodową
+N15	Reference T36 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T37	Symptom 2286 2300	duszność nocną
+N16	Reference T37 ICD10:R06.0	Duszność
+T38	Symptom 2302 2317	obrzęki podudzi
+N17	Reference T38 ICD10:R60.0	Obrzęk zlokalizowany
+T39	Symptom 2319 2343	bóle w klatce piersiowej
+N18	Reference T39 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+R10	Neg Arg1:T18 Arg2:T30	
+R11	Neg Arg1:T18 Arg2:T31	
+R12	Neg Arg1:T18 Arg2:T32	
+R13	Neg Arg1:T18 Arg2:T33	
+R14	Neg Arg1:T18 Arg2:T34	
+R15	Neg Arg1:T18 Arg2:T35	
+R16	Neg Arg1:T18 Arg2:T36	
+R17	Neg Arg1:T18 Arg2:T37	
+R18	Neg Arg1:T18 Arg2:T38	
+R19	Neg Arg1:T18 Arg2:T39	
+T40	Symptom 2345 2364	Innych dolegliwości
+T41	Negation 2365 2376	nie zgłasza
+R20	Neg Arg1:T41 Arg2:T40	
+T42	Condition 2399 2402	TIA
+N19	Reference T42 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T43	Date 2404 2408	2009
+R21	Dat Arg1:T43 Arg2:T42	
+T44	Symptom 2431 2460	Dwa epizody zaburzeń widzenia
+N20	Reference T44 ICD10:H53.9	Zaburzenia widzenia, nieokreślone
+T45	Symptom 2463 2484	drętwienia ręki lewej
+N21	Reference T45 ICD10:R20.2	Parestezje
+T46	Date 2486 2493	02/2018
+T47	Date 2495 2502	06/2018
+R23	Dat Arg1:T47 Arg2:T44	
+R22	Dat Arg1:T46 Arg2:T45	
+R24	Dat Arg1:T46 Arg2:T44	
+R25	Dat Arg1:T47 Arg2:T45	
+T48	Condition 2525 2545	Hipercholesterolemia
+N22	Reference T48 ICD10:E78.0	Czysta hipercholesterolemia
+T49	Treatment 2548 2565	Przebyte operacje
+N23	Reference T49 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T50	Negation 2567 2573	neguje
+R26	Neg Arg1:T50 Arg2:T49	
+T51	Treatment 2575 2625	Leczenie przewlekłe: neurologiczne, kardiologiczne
+T52	Condition 2653 2656	WZW
+N24	Reference T52 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T53	Condition 2665 2674	borelioza
+N25	Reference T53 ICD10:A69.2	Choroba z Lyme
+T54	Condition 2682 2690	grużlica
+N26	Reference T54 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T55	Condition 2698 2702	odra
+N27	Reference T55 ICD10:B05	Odra
+T56	Negation 2657 2662	( - )
+T57	Negation 2675 2680	( - )
+T58	Negation 2691 2696	( - )
+T59	Negation 2703 2708	( - )
+R27	Neg Arg1:T56 Arg2:T52	
+R28	Neg Arg1:T57 Arg2:T53	
+R29	Neg Arg1:T58 Arg2:T54	
+R30	Neg Arg1:T59 Arg2:T55	
+T60	Condition 2735 2740	udary
+A3	Status T60 Family
+N28	Reference T60 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T61	Condition 2751 2762	rak żołądka
+A4	Status T61 Family
+N29	Reference T61 ICD10:C16.9	Żołądek, umiejscowienie nieokreślone
+T62	Behaviour 2764 2779	Palenie tytoniu
+N30	Reference T62 ICD10:Z72.0	Używanie tytoniu
+T63	Negation 2781 2787	neguje
+T64	Behaviour 2789 2800	Inne używki
+T65	Negation 2802 2808	neguje
+T66	Condition 2810 2819	Uczulenia
+N31	Reference T66 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T67	Negation 2821 2827	neguje
+T68	Behaviour 2845 2871	warunki mieszkaniowe dobre
+T69	Behaviour 2873 2887	mieszka z żoną
+T70	Behaviour 2896 2928	technik serwisu wózków widłowych
+R31	Neg Arg1:T63 Arg2:T62	
+R32	Neg Arg1:T65 Arg2:T64	
+R33	Neg Arg1:T67 Arg2:T66	
+T71	Drug 2936 2944	Vicebrol
+T72	Drug_dose 2945 2972	1 tabletka rano i wieczorem
+T73	Drug 2974 2982	Polocard
+T74	Drug_dose 2983 3008	75mg 1 tabletka wieczorem
+T75	Investigation 3024 3027	TEE
+T76	Investigation 3029 3032	TTE
+T77	Investigation 3034 3037	TET
+T78	Investigation 3040 3044	ABPM
+T79	Investigation 3046 3056	Holter EKG
+R34	Drg Arg1:T71 Arg2:T72	
+R35	Drg Arg1:T73 Arg2:T74	

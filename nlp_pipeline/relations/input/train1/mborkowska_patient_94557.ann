@@ -1,0 +1,106 @@
+T1	Investigation 2937 2939	PW
+T2	Investigation 2941 2945	Echo
+T3	Investigation 2947 2957	Holter EKG
+T4	Investigation 2960 2962	RR
+T5	Condition 2891 2903	przebycie IM
+T6	Symptom 2905 2925	utraty przytomności.
+N2	Reference T6 ICD10:R55	Omdlenie i zapaść
+T7	Negation 2884 2890	Neguje
+R1	Neg Arg1:T7 Arg2:T5	
+R2	Neg Arg1:T7 Arg2:T6	
+T8	Negation 2869 2882	nie istotnych
+T9	Condition 2852 2867	Wywiad rodzinny
+A1	Status T9 Family
+T10	Drug 2766 2775	tolucombi
+T11	Drug 2777 2783	siofor
+T12	Drug 2785 2792	kalipoz
+T13	Drug 2794 2807	rutinoscorbin
+T14	Drug 2809 2816	ianesal
+T15	Drug 2818 2824	concor
+T16	Drug 2826 2832	atoris
+T17	Drug 2834 2841	cardura
+T18	Drug 2843 2850	amlozek
+T19	Negation 2715 2721	Neguje
+T20	Condition 2722 2739	uczulenia na leki
+N3	Reference T20 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T21	Symptom 2748 2758	krwawienia
+N4	Reference T21 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T22	Negation 2741 2747	neguje
+R3	Neg Arg1:T22 Arg2:T21	
+R4	Neg Arg1:T19 Arg2:T20	
+T23	Condition 2703 2713	Nikotynizm
+N5	Reference T23 ICD10:F17.2	
+T24	Condition 2689 2701	Dyslipidemia
+N6	Reference T24 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T25	Condition 2662 2675	Schizoffrenia
+N7	Reference T25 ICD10:F20.9	Schizofrenia, nieokreślona
+T26	Condition 2617 2640	Choroba reumatologiczna
+A2	Source T26 Declared
+T27	Condition 2600 2615	Cukrzyca typu 2
+N8	Reference T27 ICD10:E11	Cukrzyca insulinoniezależna
+T28	Condition 2155 2170	Cukrzyca typu 2
+N9	Reference T28 ICD10:E11	Cukrzyca insulinoniezależna
+T29	Condition 2172 2195	Choroba reumatologiczna
+A3	Source T29 Declared
+T30	Condition 2229 2241	Schizofrenia
+N10	Reference T30 ICD10:F20.9	Schizofrenia, nieokreślona
+T31	Behaviour 2255 2265	Nikotynizm
+T32	Condition 2505 2526	Nadciśnienie tętnicze
+N12	Reference T32 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T33	Symptom 2441 2457	kołatania serca,
+N13	Reference T33 ICD10:R00.2	Kołatanie serca
+T34	Symptom 2469 2490	bólów w kl piersiowej
+N14	Reference T34 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T35	Condition 2528 2598	Zaburzenia rytmu serca pod postacią dodatkowych skurczów nadkomorowych
+R5	Neg Arg1:T8 Arg2:T9	
+T36	Condition 2118 2139	Nadciśnienie tętnicze
+N16	Reference T36 ICD10:i10	
+T37	Condition 2141 2153	Dyslipidemia
+N17	Reference T37 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T38	Condition 2056 2116	Łagodna arytmia nadkomorowa (pojedyncze, trójka, salwa ExSV)
+N18	Reference T38 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+N15	Reference T35 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T39	Condition 470 540	Zaburzenia rytmu serca pod postacią dodatkowych skurczów nadkomorowych
+N19	Reference T39 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T40	Condition 447 468	Nadciśnienie tętnicze
+N20	Reference T40 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T41	Condition 542 557	Cukrzyca typu 2
+N21	Reference T41 ICD10:E11	Cukrzyca insulinoniezależna
+T42	Condition 559 582	Choroba reumatologiczna
+A4	Source T42 Declared
+T43	Condition 631 643	Dyslipidemia
+N22	Reference T43 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T44	Condition 645 655	Nikotynizm
+N23	Reference T44 ICD10:F17.2	
+T45	Condition 604 617	Schizoffrenia
+N24	Reference T45 ICD10:F20.9	Schizofrenia, nieokreślona
+T46	Investigation 1106 1189	kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T47	Investigation 1230 1244	kontrola HbA1c
+T48	Behaviour 1260 1363	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych.
+T49	Investigation 1377 1424	samokontrola ciśnienia tętniczego krwi i tętna.
+T50	Drug 1462 1483	Tolucombi 80mg + 25mg
+T51	Drug_dose 1484 1499	1 tabletka rano
+R6	Drg Arg1:T50 Arg2:T51	
+T52	Drug 1501 1511	Concor Cor
+T53	Drug_dose 1512 1534	1,25mg 1 tabletka rano
+R7	Drg Arg1:T52 Arg2:T53	
+T54	Drug 1536 1543	Amlozek
+T55	Drug_dose 1544 1569	10mg 1 tabletka wieczorem
+R8	Drg Arg1:T54 Arg2:T55	
+T56	Drug 1571 1581	Cardura XL
+T57	Drug_dose 1582 1606	4mg 1 tabletka wieczorem
+R9	Drg Arg1:T56 Arg2:T57	
+T58	Drug 1608 1614	Atoris
+T59	Drug_dose 1615 1640	10mg 1 tabletka wieczorem
+R10	Drg Arg1:T58 Arg2:T59	
+T60	Drug 1642 1648	Siofor
+T61	Drug_dose 1649 1695	1000mg 1 tabletka rano, w południe i wieczorem
+R11	Drg Arg1:T60 Arg2:T61	
+T62	Drug 1697 1716	Kalipoz prolongatum
+T63	Drug_dose 1717 1744	1 tabletka rano i wieczorem
+R12	Drg Arg1:T62 Arg2:T63	
+T64	Drug 1746 1754	Tianesal
+T65	Drug_dose 1755 1837	12,5mg 1 tabletka rano, w południe i wieczorem - wg zaleceń specjalisty psychiatry
+R13	Drg Arg1:T64 Arg2:T65	
+N11	Reference T31 ICD10:T65.2	Tytoń i nikotyna
+N1	Reference T5 ICD10:I34.0	Niedomykalność zastawki mitralnej

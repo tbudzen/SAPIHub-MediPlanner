@@ -1,0 +1,47 @@
+T1	Drug 1380 1387	Romazic
+T2	Drug_dose 1388 1415	10mg 1xdziennie wieczorem W
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 1350 1361	Betaloc ZOK
+T4	Drug_dose 1362 1379	25mg 1xdziennie R
+R2	Drg Arg1:T3 Arg2:T4	
+T5	Drug 1323 1330	Tritace
+T6	Drug_dose 1331 1349	2,5mg 1xdziennie W
+R3	Drg Arg1:T5 Arg2:T6	
+T7	Investigation 1224 1254	echokardiograficznym (TEE+TTE)
+T8	Negation 1255 1265	wykluczono
+T9	Investigation_result 1275 1303	otworu międzyprzedsionkowego
+N1	Reference T9 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+R5	Neg Arg1:T8 Arg2:T9	
+T10	Condition 977 1000	nadciśnieniem tętniczym
+N2	Reference T10 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T11	Condition 1002 1016	hiperlipidemią
+N3	Reference T11 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T12	Condition 1018 1041	wolem guzkowym tarczycy
+N4	Reference T12 ICD10:E04	Inne wole nietoksyczne
+T13	Treatment 1046 1054	operacji
+T14	Treatment 1111 1124	histerektomii
+A2	Status T14 Historical_Insignificant
+T15	Date 1128 1133	1999r
+R6	Dat Arg1:T15 Arg2:T14	
+T16	Symptom 1178 1201	uczucia kołatania serca
+N5	Reference T16 ICD10:R00.2	Kołatanie serca
+T17	Investigation_result 1204 1212	wahań RR
+T18	Treatment 774 782	operacji
+T19	Date 826 831	1976r
+R7	Dat Arg1:T19 Arg2:T18	
+T20	Condition 723 764	Wole guzkowe tarczycy w okresie eutyreozy
+N6	Reference T20 ICD10:E04	Inne wole nietoksyczne
+T21	Condition 707 721	Hiperlipidemia
+N7	Reference T21 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T22	Condition 683 705	Zaburzenia rytmu serca
+N8	Reference T22 ICD10:I49	Inne zaburzenia rytmu serca
+T23	Condition 783 823	nerwiakogruczolaka lewego dołu pachowego
+N9	Reference T23 ICD10:D35	
+R8	Dat Arg1:T19 Arg2:T23	
+T24	Condition 1055 1095	nerwiakogruczolaka lewego dołu pachowego
+N10	Reference T24 ICD10:D35	
+A1	Status T23 Historical_Insignificant
+A3	Status T18 Historical_Insignificant
+A4	Status T24 Historical_Insignificant
+A5	Status T13 Historical_Insignificant
+R4	Inv Arg1:T7 Arg2:T9	

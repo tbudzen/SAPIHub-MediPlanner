@@ -1,0 +1,28 @@
+T1	Symptom 447 455	Omdlenia
+N1	Reference T1 ICD10:R55	Omdlenie i zapaść
+T2	Condition 472 500	Podejrzenie półpaśca ocznego
+N2	Reference T2 ICD10:B02.3	Choroba gałki ocznej wywołana przez wirus herpes zoster
+T3	Negation 631 634	Bez
+T4	Drug 635 640	leków
+T5	Treatment 753 774	Dalsze leczenie w POZ
+T6	Treatment 779 789	stosowanie
+T7	Drug 790 795	maści
+T8	Treatment 796 825	zgodnie z zaleceniem okulisty
+T9	Treatment 882 920	skierowanie do poradni hepatologicznej
+T10	Investigation 927 950	poszerzenia diagnostyki
+T11	Investigation_result 962 994	obraz ultrasonograficzny wątroby
+T12	Treatment 998 1030	Kontrola w Poradni Okulistycznej
+T13	Investigation 1078 1100	badań kardiologicznych
+T14	Treatment 1035 1053	Kontakt  z Kliniką
+T15	Symptom 1246 1263	w  stanie  dobrym
+T17	Symptom 1334 1340	omdleń
+N3	Reference T17 ICD10:R55	Omdlenie i zapaść
+T16	Symptom 1355 1367	5x  omdlenia
+N4	Reference T16 ICD10:R55	Omdlenie i zapaść
+T18	Date 1369 1391	od  ostatnich  wakacji
+R1	Dat Arg1:T18 Arg2:T16	
+R2	Neg Arg1:T3 Arg2:T4	
+A1	Source T2 Declared
+R1	Neg Arg1:T3 Arg2:T4
+R2	Inv Arg1:T10 Arg2:T11
+R5	Dat Arg1:T18 Arg2:T16

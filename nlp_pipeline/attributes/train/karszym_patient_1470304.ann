@@ -1,0 +1,91 @@
+T1	Treatment 345 372	dalsza opieka w poradni POZ
+T2	Treatment 380 429	okresowa kontrola w Poradni Kardiologicznej ICZMP
+T3	Treatment 431 444	do rozważenia
+T4	Investigation 445 453	RM serca
+T5	Investigation 455 478	badanie scyntygraficzne
+T6	Investigation 481 512	kontrolny Holterowski zapis ekg
+T7	Investigation 520 558	okresowa kontrola ciśnienia tętniczego
+T8	Investigation 566 622	okresowa kontrola lipidogramu i stężenia aminotransferaz
+T9	Date 625 647	kolejna za 6-8 tygodni
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Behaviour 653 689	dieta zbliżona do śródziemnomorskiej
+T11	Drug 735 741	Bibloc
+T12	Drug 770 776	Atoris
+T13	Drug_dose 742 762	1.25 mg 1 tabl. rano
+T14	Drug_dose 777 795	20 mg 1 tabl. rano
+R2	Drg Arg1:T11 Arg2:T13	
+R3	Drg Arg1:T12 Arg2:T14	
+T15	Condition 1014 1065	Tętniak części błoniastej przegrody międzykomorowej
+N1	Reference T15 ICD10:I25.3	Tętniak serca
+T16	Condition 1066 1119	ubytek w przegrodzie międzykomorowej – do weryfikacji
+A1	Source T16 Declared
+N2	Reference T16 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T17	Investigation 1122 1131	RMI serca
+T18	Condition 1133 1211	Komorowe zaburzenia rytmu serca pod postacią pojedynczych skurczów dodatkowych
+N3	Reference T18 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T19	Condition 1213 1228	Miażdżyca aorty
+N4	Reference T19 ICD10:I70.0	Miażdżyca aorty
+T20	Condition 1402 1438	podejrzeniem VSD w części błoniastej
+A2	Source T20 Declared
+N5	Reference T20 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T21	Symptom 1522 1546	okresowo kołatanie serca
+N6	Reference T21 ICD10:R00.2	Kołatanie serca
+T22	Symptom 1552 1568	„ucisk w gardle”
+T23	Symptom 1602 1612	Krwawienia
+T24	Symptom 1614 1627	czarne stolce
+N7	Reference T24 ICD10:K92.1	Stolce smołowate
+T25	Symptom 1629 1642	zawroty głowy
+N8	Reference T25 ICD10:R42	Zawroty głowy i odurzenie
+T26	Symptom 1644 1668	bóle w klatce piersiowej
+N9	Reference T26 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T27	Symptom 1670 1678	omdlenia
+N10	Reference T27 ICD10:R55	Omdlenie i zapaść
+T28	Symptom 1680 1699	utraty przytomności
+T29	Negation 1700 1706	neguje
+R4	Neg Arg1:T29 Arg2:T28	
+R5	Neg Arg1:T29 Arg2:T27	
+R6	Neg Arg1:T29 Arg2:T25	
+R7	Neg Arg1:T29 Arg2:T26	
+R8	Neg Arg1:T29 Arg2:T24	
+R9	Neg Arg1:T29 Arg2:T23	
+T30	Condition 1721 1743	niedoczynność tarczycy
+A3	Source T30 Declared
+N11	Reference T30 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T31	Date 1786 1800	W wieku 57 lat
+T32	Condition 1815 1825	„na serce”
+A4	Status T32 Family
+N12	Reference T32 ICD10:I51.9	Choroba serca, nieokreślona
+R10	Dat Arg1:T31 Arg2:T32	
+T33	Condition 1801 1807	umarła
+N13	Reference T33 ICD10:I46.1	Nagły zgon sercowy, tak opisany
+R11	Dat Arg1:T31 Arg2:T33	
+T34	Symptom 1569 1600	głównie w sytuacjach stresowych
+T35	Condition 1867 1875	Ca płuca
+A5	Status T35 Family
+N14	Reference T35 ICD10:C34.9	Oskrzele lub płuco, umiejscowienie nieokreślone
+T36	Condition 1878 1888	Ca wątroby
+N15	Reference T36 ICD10:C22.9	Wątroba, umiejscowienie nieokreślone
+A6	Status T36 Family
+T37	Treatment 1890 1907	Przebyte operacje
+N16	Reference T37 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T38	Negation 1909 1913	brak
+R12	Neg Arg1:T38 Arg2:T37	
+T39	Condition 1915 1924	Uczulenia
+N17	Reference T39 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T40	Negation 1951 1957	neguje
+R13	Neg Arg1:T40 Arg2:T39	
+T41	Condition 1926 1933	pleśnie
+N18	Reference T41 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T42	Condition 1935 1941	grzyby
+N19	Reference T42 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T43	Behaviour 1959 1964	Tytoń
+N20	Reference T43 ICD10:Z72.0	Używanie tytoniu
+T44	Negation 1966 1972	neguje
+T45	Behaviour 1974 1985	Inne używki
+T46	Negation 1987 1993	neguje
+T47	Negation 2001 2004	bez
+T48	Drug 2005 2010	leków
+R14	Neg Arg1:T47 Arg2:T48	
+R15	Neg Arg1:T46 Arg2:T45	
+R16	Neg Arg1:T44 Arg2:T43	
+A7	Status T33 Family

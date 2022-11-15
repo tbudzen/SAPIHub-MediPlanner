@@ -1,0 +1,137 @@
+T1	Treatment 345 372	dalsza opieka w poradni POZ
+T2	Treatment 380 460	okresowa kontrola kardiologiczna i perinatologiczna oraz u chirurga naczyniowego
+T3	Investigation 466 505	codzienna kontrola ciśnienia tętniczego
+T4	Behaviour 513 550	stosowanie pończoch II stopnia ucisku
+T5	Behaviour 557 607	unikanie przedłużonych pozycji ze zgięciem kończyn
+T6	Behaviour 614 657	elewacja kończyny z zakrzepicą w czasie snu
+T7	Investigation 664 698	kontrolne badanie Holterowskie ekg
+T8	Investigation 721 815	kontrolne badania laboratoryjne – stężenie d-dimerów, prokalcytoniny, CRP oraz morfologia krwi
+T9	Date 816 824	za 7 dni
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Date 699 714	za 3-4 tygodnie
+R2	Dat Arg1:T10 Arg2:T7	
+T11	Treatment 831 859	regularne przyjmowanie leków
+T12	Drug 868 875	Clexane
+T13	Drug_dose 876 900	1mg/kg m.c. co 12 godzin
+T14	Drug_dose 903 953	dawka wymaga okresowego dostosowania do masy ciała
+R3	Drg Arg1:T12 Arg2:T14	
+R4	Drg Arg1:T12 Arg2:T13	
+T15	Treatment 955 989	optymalnie pod kontrolą aktywności
+T16	Investigation 990 1006	wskaźnika antyXa
+T17	Investigation_result 1049 1079	zalecana wartość 0.6-1.2 IU/ml
+R5	Inv Arg1:T16 Arg2:T17	
+T18	Treatment 1007 1047	oznaczonego 4-6 godzin po przyjęciu leku
+T19	Drug_dose 1082 1123	obecnie zalecana dawka 80 mg co 12 godzin
+R6	Drg Arg1:T12 Arg2:T19	
+T20	Condition 1351 1445	Zakrzepica żyły biodrowej zewnętrznej, udowej oraz ujścia żyły odpiszczelowej po stronie lewej
+N1	Reference T20 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+T21	Condition 1447 1488	Niedobór białka S – zmniejszona aktywność
+N2	Reference T21 ICD10:D68.8	Inne określone zaburzenia krzepnięcia
+T22	Condition 1630 1660	w 9 tygodniu  w ciąży trzeciej
+N3	Reference T22 ICD10:Z32.1	Ciąża potwierdzona
+T23	Condition 1718 1737	zatorowości płucnej
+A1	Source T23 Declared
+N4	Reference T23 ICD10:I26	Zator płucny
+T24	Symptom 1831 1838	omdleni
+N5	Reference T24 ICD10:R55	Omdlenie i zapaść
+T25	Date 1841 1868	ostatnio w dniu wczorajszym
+R7	Dat Arg1:T25 Arg2:T24	
+T26	Symptom 1886 1953	pierwsza utrata przytomności podczas długotrwałej podróży samolotem
+N6	Reference T26 ICD10:R55	Omdlenie i zapaść
+T27	Negation 1960 1966	Neguje
+T28	Symptom 1967 1991	bóle w klatce piersiowej
+N7	Reference T28 ICD10:R07	Ból gardła i w klatce piersiowej
+T29	Negation 1994 2000	neguje
+T30	Symptom 2001 2018	uczucie duszności
+N8	Reference T30 ICD10:R06.0	Duszność
+R8	Neg Arg1:T29 Arg2:T30	
+R9	Neg Arg1:T27 Arg2:T28	
+T31	Drug 2048 2059	Farxiparine
+T32	Drug_dose 2060 2083	0,6 2x dz sc od wczoraj
+R10	Drg Arg1:T31 Arg2:T32	
+T33	Condition 2104 2123	chorób przewlekłych
+T34	Negation 2100 2103	Bez
+R11	Neg Arg1:T34 Arg2:T33	
+T35	Investigation 2126 2153	doppler żył kończyn dolnych
+T36	Investigation_result 2154 2273	Po stronie lewej stwierdza się rozległą zakrzepicę obejmującą żyłę biodrową zewnętrzną oraz udową na całej jej długości
+N9	Reference T36 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+R12	Inv Arg1:T35 Arg2:T36	
+T37	Investigation_result 2275 2348	Naczynia wypełnione niskoechogenicznymi (świeżymi) skrzeplinami w całości
+T38	Investigation_result 2350 2411	ze zniesioną reakcją ścian na ucisk, bez uchwytnego przepływu
+R13	Inv Arg1:T35 Arg2:T37	
+N10	Reference T37 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+R14	Inv Arg1:T35 Arg2:T38	
+T39	Investigation_result 2413 2478	Skrzeplina widoczna jest także w ujściu lewej żyły odpiszczelowej
+N11	Reference T39 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+R15	Inv Arg1:T35 Arg2:T39	
+T40	Investigation_result 2480 2607	jednakże wypełnia ona około 50 proc. światła naczynia na krótkim odcinku, jedynie częściowo ograniczając przepływ w obrębie VSM
+R16	Inv Arg1:T35 Arg2:T40	
+T41	Date 2634 2644	27.04.2019
+R17	Dat Arg1:T41 Arg2:T35	
+T42	Treatment 2647 2679	chora konsultowana chirurgicznie
+T43	Investigation 2684 2709	badaniach laboratoryjnych
+T44	Investigation_result 2712 2788	CRP ok 5,4 , WBC 14 tys , troponina w normie , NT-proBNP 119 , DDimer 21 tys
+R18	Inv Arg1:T43 Arg2:T44	
+T45	Investigation 2793 2814	kontrolnym echo serca
+T46	Investigation_result 2817 2858	Powiększony wymiar pnia płucnego ( 22 mm)
+N12	Reference T46 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T47	Investigation_result 2860 2955	pozostałe wymiary jam serca w normie ( PK 29 mm, RVOT porx 27 mm, RVOT dys. 23 mm , RVIT 38 mm)
+T48	Investigation_result 2976 3009	odcinkowych zaburzeń kurczliwości
+T49	Investigation_result 3066 3073	IM slad
+N13	Reference T49 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T50	Investigation_result 3075 3106	IT ślad/+ ( TR V max 237 cm/s )
+N14	Reference T50 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+R19	Inv Arg1:T45 Arg2:T46	
+R20	Inv Arg1:T45 Arg2:T47	
+R21	Inv Arg1:T45 Arg2:T48	
+R22	Inv Arg1:T45 Arg2:T49	
+R23	Inv Arg1:T45 Arg2:T50	
+T51	Investigation_result 3109 3130	HP mało prawdopodobne
+T52	Investigation_result 3132 3151	Osierdzie bez zmian
+R24	Inv Arg1:T45 Arg2:T52	
+R25	Inv Arg1:T45 Arg2:T51	
+T54	Treatment 3200 3219	Leczenie przewlekłe
+T55	Negation 3221 3225	brak
+R26	Neg Arg1:T55 Arg2:T54	
+T56	Condition 3254 3257	WZW
+N15	Reference T56 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T57	Condition 3267 3276	borelioza
+N16	Reference T57 ICD10:A69.2	Choroba z Lyme
+T58	Condition 3283 3287	Odra
+N17	Reference T58 ICD10:B05	Odra
+T59	Negation 3290 3291	-
+R28	Neg Arg1:T59 Arg2:T58	
+T60	Negation 3279 3280	-
+R29	Neg Arg1:T60 Arg2:T57	
+T61	Negation 3260 3261	-
+R30	Neg Arg1:T61 Arg2:T56	
+T62	Condition 3296 3315	wywiadzie rodzinnym
+A2	Status T62 Family
+T63	Condition 3318 3340	żylaki kończyn dolnych
+A3	Status T63 Family
+N18	Reference T63 ICD10:I83	Żylaki kończyn dolnych
+T64	Behaviour 3342 3357	Palenie tytoniu
+T65	Negation 3359 3362	nie
+R31	Neg Arg1:T65 Arg2:T64	
+T66	Behaviour 3363 3374	Inne używki
+T67	Negation 3376 3379	nie
+R32	Neg Arg1:T67 Arg2:T66	
+T68	Condition 3380 3389	Uczulenia
+N20	Reference T68 ICD10:T78.4	Alergia, nieokreślona
+T69	Negation 3391 3397	neguje
+R33	Neg Arg1:T69 Arg2:T68	
+T70	Behaviour 3414 3440	warunki mieszkaniowe dobre
+T71	Investigation 3502 3512	Echo serca
+T72	Investigation_result 3012 3064	zachowaną funkcja skurczowa obu komór ( TAPSE 29 mm)
+T73	Investigation_result 2961 2970	przerostu
+T74	Negation 2957 2960	Bez
+T75	Negation 2972 2975	bez
+R34	Neg Arg1:T74 Arg2:T73	
+R35	Neg Arg1:T75 Arg2:T48	
+R36	Inv Arg1:T43 Arg2:T73	
+R37	Inv Arg1:T43 Arg2:T72	
+T53	Investigation_result 3155 3180	Żyła główna dolna 20/5 mm
+T76	Investigation_result 3185 3195	Atc 107 ms
+R27	Inv Arg1:T45 Arg2:T53	
+R38	Inv Arg1:T45 Arg2:T76	
+N19	Reference T64 ICD10:Z72.0	Używanie tytoniu

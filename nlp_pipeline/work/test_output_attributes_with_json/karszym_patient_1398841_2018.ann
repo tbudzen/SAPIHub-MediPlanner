@@ -1,0 +1,87 @@
+T1	Investigation 438 449	Diagnostyka
+T2	Condition 461 464	CAD
+T3	Condition 470 501	napadowych zaburzeń rytmu serca
+T4	Condition 503 518	Cukrzyca typu 2
+T5	Condition 520 550	Choroba Leśniowskiego - Crohna
+T6	Treatment 660 694	Kontrola w Poradni Kardiologicznej
+T7	Investigation 712 751	badania SPECT serca (spoczynek+wysiłek)
+T8	Treatment 757 774	dalszego leczenia
+T9	Treatment 776 820	Okresowa kontrola w Poradii Diabetologicznej
+T10	Investigation 822 861	Regularna kontrola ciśnienia tętniczego
+T11	Investigation 863 948	Regularna kontrola glikemii 4 x dziennie (na czczo i 2 godziny po głównych posiłkach)
+T12	Drug 949 957	Bisocard
+T13	Drug_dose 958 989	2,5 mg 1tabl. 1 x dziennie rano
+T14	Drug 990 996	Amaryl
+T15	Drug_dose 997 1027	4 mg 1 tabl. 1 x dziennie rano
+T16	Drug 1028 1033	Acard
+T17	Drug_dose 1034 1068	75mg 1 tabl. 1x dziennie wieczorem
+T18	Drug 1069 1078	Metformax
+T19	Drug_dose 1079 1118	850 mg 1 tabl. 3 x dziennie do posiłków
+T20	Date 1260 1285	rozpoznaną około rok temu
+T21	Condition 1286 1301	cukrzycą typu 2
+T22	Investigation 1326 1337	diagnostyki
+T23	Symptom 1338 1405	nietypowych nawracających dolegliwości bólowych w klatce piersiowej
+T24	Symptom 1426 1449	uczucia kołatania serca
+T25	Condition 1471 1501	choroba Leśniowskiego - Crohna
+T26	Negation 1511 1517	neguje
+T27	Symptom 1518 1526	omdlenia
+T28	Symptom 1528 1547	utraty przytomności
+T29	Negation 1549 1571	Bez wywiadu w kierunku
+T30	Condition 1572 1595	nadciśnienia tętniczego
+T31	Treatment 1597 1605	Operacje
+T32	Negation 1607 1613	neguje
+T33	Behaviour 1614 1624	Nikotynizm
+T34	Negation 1627 1628	-
+T35	Behaviour 1632 1639	Alkohol
+T36	Negation 1641 1642	-
+T37	Condition 1643 1660	Uczulenia na leki
+T38	Negation 1662 1672	nie podaje
+T39	Condition 1673 1688	Wywiad rodzinny
+T40	Negation 1690 1700	nieistotny
+T41	Drug 1727 1735	Bisocard
+T42	Drug_dose 1736 1741	2,5mg
+T43	Drug 1743 1749	Amaryl
+T44	Drug_dose 1750 1753	3mg
+T45	Drug 1755 1760	Acard
+T46	Drug_dose 1761 1765	75mg
+T47	Investigation 1777 1787	ECHO serca
+T48	Investigation 1789 1799	Holter EKG
+T49	Investigation 1801 1810	Holter RR
+T50	Investigation 1812 1814	PW
+N1	Reference T2 ICD10:I25	PrzewlekÅa choroba niedokrwienna serca
+N2	Reference T4 ICD10:E11	Cukrzyca insulinoniezaleÅ¼na
+N3	Reference T21 ICD10:E11	Cukrzyca insulinoniezaleÅ¼na
+N4	Reference T24 ICD10:R00.2	KoÅatanie serca
+N5	Reference T27 ICD10:R55	Omdlenie i zapaÅÄ
+N6	Reference T28 ICD10:R55	Omdlenie i zapaÅÄ
+N7	Reference T30 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N8	Reference T31 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N9	Reference T33 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N10	Reference T35 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N11	Reference T37 ICD10:Z88	Uczulenia na leki, Årodki farmakologiczne i substancje biologiczne w wywiadzie
+R1	Drg Arg1:T12 Arg2:T13
+R10	Neg Arg1:T29 Arg2:T30
+R11	Neg Arg1:T32 Arg2:T33
+R12	Neg Arg1:T32 Arg2:T31
+R15	Neg Arg1:T34 Arg2:T35
+R26	Neg Arg1:T36 Arg2:T37
+R4	Drg Arg1:T14 Arg2:T15
+R40	Neg Arg1:T38 Arg2:T39
+R5	Drg Arg1:T16 Arg2:T17
+R59	Neg Arg1:T40 Arg2:T41
+R6	Drg Arg1:T18 Arg2:T19
+R65	Drg Arg1:T41 Arg2:T42
+R66	Drg Arg1:T41 Arg2:T44
+R67	Drg Arg1:T41 Arg2:T46
+R68	Drg Arg1:T43 Arg2:T42
+R69	Drg Arg1:T43 Arg2:T44
+R7	Dat Arg1:T20 Arg2:T21
+R70	Drg Arg1:T43 Arg2:T46
+R72	Drg Arg1:T45 Arg2:T44
+R73	Drg Arg1:T45 Arg2:T46
+R8	Neg Arg1:T26 Arg2:T27
+R9	Neg Arg1:T29 Arg2:T28
+A1	Status T31 Historical_Insignificant
+A2	Source T2 Declared
+A3	Source T3 Declared
+A4	Source T31 Declared

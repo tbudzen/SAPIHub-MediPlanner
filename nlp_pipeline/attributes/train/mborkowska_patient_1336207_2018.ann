@@ -1,0 +1,148 @@
+T1	Investigation 2553 2563	echo serca
+T2	Investigation 2565 2568	TET
+T3	Investigation 2570 2574	ABPM
+T4	Investigation 2576 2586	Holter ekg
+T5	Investigation 2588 2606	rtg kl. piersiowej
+T6	Drug 2481 2492	Propranolol
+T7	Condition 513 548	Umiarkowana niedomykalność aortalna
+N1	Reference T7 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T8	Condition 550 581	łagodna niedomykalność mitralna
+N2	Reference T8 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T9	Condition 448 511	: Wrodzona wada serca pod postacią przetrwałego otworu owalnego
+N3	Reference T9 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T10	Drug_dose 2493 2523	10 mg 1 tabl. rano i wieczorem
+R1	Drg Arg1:T6 Arg2:T10	
+T11	Drug 2458 2465	Seronil
+T12	Drug_dose 2466 2478	20 mg 1 tabl
+R2	Drg Arg1:T11 Arg2:T12	
+T13	Drug 2431 2443	Euthyrox N88
+T14	Drug_dose 2444 2456	1 tabl. rano
+R3	Drg Arg1:T13 Arg2:T14	
+T15	Negation 2362 2368	neguje
+T16	Negation 2335 2341	neguje
+T17	Negation 2317 2325	neguje  
+T18	Behaviour 2305 2315	Nikotynizm
+N4	Reference T18 ICD10:Z72.0	Używanie tytoniu
+R4	Neg Arg1:T17 Arg2:T18	
+T19	Behaviour 2326 2333	Alkohol
+N5	Reference T19 ICD10:Z72.1	Używanie alkoholu
+R5	Neg Arg1:T16 Arg2:T19	
+T20	Behaviour 2343 2360	Uzależnienie inne
+N6	Reference T20 ICD10:Z72	Problemy związane ze stylem życia
+R6	Neg Arg1:T15 Arg2:T20	
+T21	Condition 2213 2220	Alergie
+N7	Reference T21 ICD10:Z91	Narażenie na czynniki ryzyka niesklasyfikowane gdzie indziej w wywiadzie
+T22	Drug 2251 2261	ketoprofen
+R7	Alg Arg1:T21 Arg2:T22	
+T23	Drug_dose 2262 2264	iv
+R8	Drg Arg1:T22 Arg2:T23	
+T24	Condition 583 612	Poszerzenie aorty wstępującej
+N8	Reference T24 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T25	Condition 614 641	miażdżyca aorty zstępującej
+N9	Reference T25 ICD10:I70.0	Miażdżyca aorty
+T26	Condition 643 676	Zaburzenia rytmu serca - komorowe
+N10	Reference T26 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T27	Condition 679 690	nadkomorowe
+N11	Reference T27 ICD10:I49.1	
+T28	Condition 692 699	Otyłość
+N12	Reference T28 ICD10:E66	Otyłość
+T29	Condition 701 721	Hipercholesterolemia
+N13	Reference T29 ICD10:E78	
+T30	Condition 723 730	Migrena
+N14	Reference T30 ICD10:G43	Migrena
+T31	Condition 732 740	Depresja
+N15	Reference T31 ICD10:F32.9	Epizod depresyjny, nieokreślony
+T32	Condition 742 764	Niedoczynność tarczycy
+N16	Reference T32 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T33	Condition 802 819	guz trzonu macicy
+N17	Reference T33 ICD10:D39.0	Macica
+T34	Date 821 833	przed 8 laty
+T35	Treatment 775 783	operacje
+A1	Status T35 Historical_Insignificant
+R9	Dat Arg1:T34 Arg2:T33	
+R10	Dat Arg1:T34 Arg2:T35	
+T36	Treatment 844 853	usunięciu
+A2	Status T36 Historical_Insignificant
+T37	Condition 854 868	polipa żołądka
+N18	Reference T37 ICD10:K31.7	Polip żołądka i dwunastnicy
+T38	Date 869 877	(09.2018
+R11	Dat Arg1:T38 Arg2:T37	
+R12	Dat Arg1:T38 Arg2:T36	
+T39	Condition 880 889	Uczulenie
+N19	Reference T39 ICD10:Z91	Narażenie na czynniki ryzyka niesklasyfikowane gdzie indziej w wywiadzie
+T40	Drug 917 927	ketoprofen
+R13	Alg Arg1:T39 Arg2:T40	
+T41	Investigation 1192 1221	kontrola ciśnienia tętniczego
+T42	Investigation 1237 1257	kontrola lipidogramu
+T43	Behaviour 1287 1323	dieta zbliżona do śródziemnomorskiej
+T44	Behaviour 1330 1349	redukcja masy ciała
+T45	Drug 1394 1402	Euthyrox
+T46	Drug_dose 1403 1419	N88 1 tabl. rano
+R14	Drg Arg1:T45 Arg2:T46	
+T47	Drug 1427 1434	Seronil
+T48	Drug_dose 1435 1458	20 mg 1 tabl. wieczorem
+R15	Drg Arg1:T47 Arg2:T48	
+T49	Drug 1465 1471	Atoris
+T50	Drug_dose 1472 1495	10 mg 1 tabl. wieczorem
+R16	Drg Arg1:T49 Arg2:T50	
+T51	Drug 1502 1513	Propranolol
+T52	Drug_dose 1514 1544	10 mg 1 tabl. rano i wieczorem
+R17	Drg Arg1:T51 Arg2:T52	
+T53	Symptom 1712 1743	upośledzonej tolerancji wysiłku
+N20	Reference T53 ICD10:R53	Złe samopoczucie i zmęczenie
+T54	Symptom 1755 1767	zasłabnięcia
+N21	Reference T54 ICD10:R55	Omdlenie i zapaść
+T55	Date 1768 1784	w sierpniu 2018,
+R18	Dat Arg1:T55 Arg2:T54	
+T56	Condition 1785 1806	tachykardii zatokowej
+N22	Reference T56 ICD10:R00.0	Tachykardia, nieokreślona
+T57	Condition 1831 1848	IA II/III stopnia
+N23	Reference T57 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T58	Condition 1850 1899	poszerzenie pozaopuszkowe aorty - wstępująca 39mm
+N24	Reference T58 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T59	Condition 1901 1908	migrena
+N25	Reference T59 ICD10:G43.9	Migrena, nieokreślona
+T60	Condition 1910 1918	depresja
+N26	Reference T60 ICD10:F32.9	Epizod depresyjny, nieokreślony
+T61	Condition 1920 1942	niedoczynność tarczycy
+N27	Reference T61 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+A3	Status T33 Historical_Insignificant
+T62	Condition 1980 2000	guz w trzonie macicy
+A4	Status T62 Historical_Insignificant
+N28	Reference T62 ICD10:D39.0	Macica
+T63	Treatment 1953 1961	operacje
+A5	Status T63 Historical_Insignificant
+T64	Date 2001 2011	8 lat temu
+R19	Dat Arg1:T64 Arg2:T62	
+R20	Dat Arg1:T64 Arg2:T63	
+T65	Treatment 2021 2030	usunięciu
+A6	Status T37 Historical_Insignificant
+T66	Condition 2031 2045	polipa żołądka
+A7	Status T66 Historical_Insignificant
+N29	Reference T66 ICD10:K31.7	Polip żołądka i dwunastnicy
+A8	Status T65 Historical_Insignificant
+T67	Date 2046 2053	09.2018
+R21	Dat Arg1:T67 Arg2:T66	
+R22	Dat Arg1:T67 Arg2:T65	
+T68	Investigation_result 2056 2077	hispat zmiana łagodna
+T69	Behaviour 2103 2113	nikotynizm
+A9	Status T69 Family
+N30	Reference T69 ICD10:Z72.0	Używanie tytoniu
+T70	Condition 2115 2120	SCD ?
+A10	Status T70 Family
+A11	Source T70 Declared
+N31	Reference T70 ICD10:I46.1	Nagły zgon sercowy, tak opisany
+T71	Condition 2158 2160	MI
+A12	Status T71 Family
+N32	Reference T71 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T72	Condition 2170 2174	2xMI
+A13	Status T72 Family
+N33	Reference T72 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T73	Treatment 2184 2211	wymianie zastawki aortalnej
+A14	Status T73 Family
+T74	Symptom 2267 2304	wybroczyny na całej powierzchni skóry
+N34	Reference T74 ICD10:R23	Inne zmiany skórne
+T75	Treatment 1052 1079	dalsza opieka w poradni POZ
+T76	Treatment 1095 1175	kontrola kardiologiczna, endokrynologiczna, psychiatryczna, gastroenterologiczna
+T77	Date 1267 1279	za 8 tygodni
+R23	Dat Arg1:T77 Arg2:T42	

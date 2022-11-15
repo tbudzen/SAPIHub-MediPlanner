@@ -1,0 +1,98 @@
+T1	Condition 450 494	Kardiomiopatia (prawdopodobnie) poinfekcyjna
+N1	Reference T1 ICD10:I42.9	Kardiomiopatia, nieokreślona
+T2	Condition 496 535	Niedomykalność zastawki mitralnej II st
+N2	Reference T2 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T3	Condition 537 562	typ I+IIIb wg Carpentiera
+N3	Reference T3 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T4	Condition 565 606	Niedomykalność zastawki trójdzilnej I st.
+N4	Reference T4 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T5	Condition 607 626	Drożny otwór owalny
+N5	Reference T5 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T6	Condition 629 645	Arytmia komorowa
+N6	Reference T6 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T7	Treatment 655 671	cięciu cesarskim
+A1	Status T7 Historical_Insignificant
+T8	Date 673 683	11.10.2018
+R1	Dat Arg1:T8 Arg2:T7	
+T9	Treatment 796 818	kontrola u lekarza POZ
+T10	Treatment 821 855	kontrola w Poradni Kardiologicznej
+T11	Date 856 864	za 1 m-c
+R2	Dat Arg1:T11 Arg2:T10	
+T12	Treatment 890 932	ponowna hospitalizacja w tutejszej klinice
+T13	Date 933 942	za 2 m-ce
+R3	Dat Arg1:T13 Arg2:T12	
+T14	Investigation 959 967	RM serca
+T15	Investigation 970 973	TEE
+R4	Dat Arg1:T13 Arg2:T14	
+R5	Dat Arg1:T13 Arg2:T15	
+T16	Treatment 978 1006	regularne przyjmowanie leków
+T17	Drug 1008 1014	Betalo
+T18	Drug 1134 1141	Hemofer
+T19	Drug 1143 1154	Biofuroksym
+T20	Drug 1156 1167	Betaloc ZOK
+T21	Drug 1169 1176	Tritace
+T22	Drug 1178 1187	Bromergon
+T23	Drug 1189 1200	Clotrimazol
+T24	Drug 1202 1208	Diflos
+T25	Drug 1210 1218	Toramide
+T26	Drug 1220 1226	Inspra
+T27	Drug 1228 1237	Furosemid
+T28	Drug 1239 1246	Kalipoz
+T29	Condition 1468 1521	narastania stopnia niedomykalności zastawki mitralnej
+N7	Reference T29 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T30	Symptom 1537 1555	duszność wysiłkową
+N8	Reference T30 ICD10:R06.0	Duszność
+T31	Investigation 1559 1569	echo serca
+T32	Investigation_result 1570 1599	dysfunkcja skurczowa z EF 43%
+N9	Reference T32 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+R6	Inv Arg1:T31 Arg2:T32	
+T33	Condition 1614 1656	kardiomiopatia prawdopodobnie poinfekcyjna
+N10	Reference T33 ICD10:I42.9	Kardiomiopatia, nieokreślona
+T34	Date 1669 1681	od wielu lat
+R7	Dat Arg1:T34 Arg2:T33	
+T35	Negation 1694 1697	bez
+T36	Symptom 1698 1722	obrzęków kończyn dolnych
+T37	Negation 1724 1727	bez
+T38	Symptom 1728 1735	zastoju
+R8	Neg Arg1:T37 Arg2:T38	
+R9	Neg Arg1:T35 Arg2:T36	
+T39	Treatment 1737 1745	Operacje
+T40	Treatment 1747 1749	CC
+A2	Status T40 Historical_Insignificant
+T41	Date 1750 1760	11.10.2018
+R10	Dat Arg1:T41 Arg2:T40	
+T42	Negation 1769 1775	neguje
+T43	Condition 1777 1794	uczulenia na leki
+T44	Symptom 1796 1829	krwawienia z przewodu pokarmowego
+N13	Reference T44 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R11	Neg Arg1:T42 Arg2:T43	
+R12	Neg Arg1:T42 Arg2:T44	
+T45	Condition 1831 1846	Wywiad rodzinny
+A3	Status T45 Family
+T46	Negation 1848 1861	bez znaczenia
+R13	Neg Arg1:T46 Arg2:T45	
+T47	Drug 1888 1895	Tritace
+T48	Drug_dose 1896 1901	2,5mg
+R14	Drg Arg1:T47 Arg2:T48	
+T49	Drug 1903 1914	Betaloc ZOK
+T50	Drug_dose 1915 1919	25mg
+R15	Drg Arg1:T49 Arg2:T50	
+T51	Drug 1921 1930	Bromergon
+T52	Drug_dose 1931 1941	2x1/2 tabl
+R16	Drg Arg1:T51 Arg2:T52	
+T53	Drug 1943 1954	Biofuroksym
+T54	Drug_dose 1955 1970	1,5g 3xdziennie
+R17	Drg Arg1:T53 Arg2:T54	
+T55	Drug 1972 1983	Clotrimazol
+T56	Drug_dose 1984 2005	1xdziennie dopochwowo
+R18	Drg Arg1:T55 Arg2:T56	
+T57	Treatment 2079 2109	kontynuować antybiotykoterapię
+T58	Drug 2111 2117	Zinnat
+T59	Drug 2118 2129	Biofuroksym
+T60	Drug 2131 2142	Clotrimazol
+T61	Drug 2149 2158	Bromergon
+T62	Treatment 2161 2190	do czasu zahamowania laktacji
+T63	Investigation 2206 2216	ECHO serca
+T64	Investigation 2218 2228	Holter EKG
+N12	Reference T43 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+N11	Reference T36 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej

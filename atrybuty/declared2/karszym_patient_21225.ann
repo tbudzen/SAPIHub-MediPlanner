@@ -1,0 +1,221 @@
+T1	Treatment 332 354	kontrola u lekarza POZ
+T2	Treatment 357 418	kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych
+T3	Investigation 461 486	angioCT tętnic wieńcowych
+T4	Treatment 489 531	dalsza kontrola w Poradni Pulmonologicznej
+T5	Treatment 535 564	kontrola w Poradni Gastrologi
+T6	Condition 782 826	Łagodna niedomykalność zastawki trójdzielnej
+N1	Reference T6 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T7	Symptom 828 852	Bóle w klatce piersiowej
+N2	Reference T7 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T8	Condition 854 875	Nadciśnienie tętnicze
+N3	Reference T8 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T9	Condition 877 912	Przewlekła obturacyjna choroba płuc
+N4	Reference T9 ICD10:J44.9	Przewlekła obturacyjna choroba płuc, nieokreślona
+T10	Condition 914 938	Niedowład lewych kończyn
+T11	Treatment 942 950	operacji
+N6	Reference T11 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T12	Date 991 995	1999
+R1	Dat Arg1:T12 Arg2:T11	
+T13	Condition 1011 1022	osteoporoza
+N7	Reference T13 ICD10:M81.9	Osteoporoza, nieokreślona
+T14	Condition 1024 1067	przewlekłe zapalenie błony śluzowej żołądka
+N8	Reference T14 ICD10:K29.5	Przewlekłe zapalenie żołądka, nieokreślone
+T15	Condition 1069 1097	choroba wrzodowa dwunastnicy
+N9	Reference T15 ICD10:K26	Wrzód dwunastnicy
+T16	Condition 1111 1127	choroba tarczycy
+T17	Condition 1129 1150	zaburzenia depresyjne
+N10	Reference T17 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T18	Condition 1152 1166	zaburzenia snu
+N11	Reference T18 ICD10:G47.9	Zaburzenia snu, nieokreślone
+T19	Investigation 3601 3605	ECHO
+T20	Investigation 3607 3625	EKG metodą Holtera
+T21	Investigation 3627 3631	ABPM
+T22	Investigation 3633 3648	próba wysiłkowa
+T23	Drug 3310 3317	Isoptin
+T24	Drug 3338 3343	Acard
+T25	Drug 3365 3371	Polsen
+T26	Drug 3391 3397	Ketrel
+T27	Drug 3417 3423	Doreta
+T28	Drug 3444 3452	Mydocalm
+T29	Drug 3468 3474	Aclexa
+T30	Drug 3491 3497	Vitrum
+T31	Drug_dose 3318 3337	80mg 1x 1 tabl/rano
+T32	Drug_dose 3344 3364	75mg 1x 1 tabl/wiecz
+T33	Drug_dose 3372 3390	10mg 1x 1 tabl/noc
+T34	Drug_dose 3424 3443	37,5+325mg doraźnie
+T35	Drug_dose 3398 3416	25mg 1x 1 tabl/noc
+T36	Drug_dose 3453 3467	150mg doraźnie
+T37	Drug_dose 3475 3490	100mg 3x 1 tabl
+T38	Drug_dose 3498 3517	1250 1x 1 tabl/rano
+R2	Drg Arg1:T23 Arg2:T31	
+R3	Drg Arg1:T24 Arg2:T32	
+R4	Drg Arg1:T25 Arg2:T33	
+R5	Drg Arg1:T26 Arg2:T35	
+R6	Drg Arg1:T27 Arg2:T34	
+R7	Drg Arg1:T28 Arg2:T36	
+R8	Drg Arg1:T29 Arg2:T37	
+R9	Drg Arg1:T30 Arg2:T38	
+T39	Behaviour 3246 3272	warunki mieszkaniowe dobre
+T40	Condition 3167 3170	WZW
+N12	Reference T40 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T41	Condition 3177 3186	borelioza
+N13	Reference T41 ICD10:A69.2	Choroba z Lyme
+T42	Condition 3192 3195	tbc
+N14	Reference T42 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T43	Condition 3201 3205	odra
+N15	Reference T43 ICD10:B05	Odra
+T44	Condition 3211 3225	kontakt z odrą
+N16	Reference T44 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+T45	Negation 3171 3174	(-)
+T46	Negation 3187 3190	(-)
+T47	Negation 3196 3199	(-)
+T48	Negation 3206 3209	(-)
+T49	Negation 3226 3229	(-)
+R10	Neg Arg1:T49 Arg2:T44	
+R11	Neg Arg1:T48 Arg2:T43	
+R12	Neg Arg1:T47 Arg2:T42	
+R13	Neg Arg1:T46 Arg2:T41	
+R14	Neg Arg1:T45 Arg2:T40	
+T50	Condition 3124 3133	Uczulenia
+N17	Reference T50 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T51	Negation 3135 3138	nie
+R15	Neg Arg1:T51 Arg2:T50	
+T52	Behaviour 3107 3118	Inne używki
+T53	Negation 3120 3123	nie
+R16	Neg Arg1:T53 Arg2:T52	
+T54	Negation 3101 3106	nigdy
+T55	Negation 3080 3083	nie
+T56	Behaviour 3084 3099	Palenie tytoniu
+T57	Treatment 3061 3078	Przebyte operacje
+N18	Reference T57 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+R17	Neg Arg1:T54 Arg2:T56	
+R18	Neg Arg1:T55 Arg2:T57	
+T58	Negation 2962 2968	Neguje
+T59	Symptom 2970 2982	zasłabnięcia
+T60	Symptom 2984 2992	omdlenia
+N19	Reference T60 ICD10:R55	Omdlenie i zapaść
+T61	Symptom 2994 3004	krwawienia
+T62	Symptom 3006 3019	czarne stolce
+N20	Reference T62 ICD10:K92.1	Stolce smołowate
+T63	Symptom 3021 3037	brunatne wymioty
+N21	Reference T63 ICD10:K92.0	Wymioty krwawe
+T64	Symptom 3039 3054	obrzęki podudzi
+N22	Reference T64 ICD10:R60.0	Obrzęk zlokalizowany
+T65	Condition 3056 3058	DM
+N23	Reference T65 ICD10:E14	Cukrzyca nieokreślona
+R19	Neg Arg1:T58 Arg2:T59	
+R20	Neg Arg1:T58 Arg2:T60	
+R21	Neg Arg1:T58 Arg2:T61	
+R22	Neg Arg1:T58 Arg2:T62	
+R23	Neg Arg1:T58 Arg2:T63	
+R24	Neg Arg1:T58 Arg2:T64	
+R25	Neg Arg1:T58 Arg2:T65	
+N5	Reference T10 ICD10:G81.9	Porażenie połowicze, nieokreślone
+T66	Symptom 1385 1409	Bóle w klatce piersiowej
+N24	Reference T66 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T67	Symptom 1411 1445	Mała tolerancja wysiłku fizycznego
+T68	Condition 1451 1495	Łagodna niedomykalność zastawki trójdzielnej
+N25	Reference T68 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T69	Condition 1497 1518	Nadciśnienie tętnicze
+N26	Reference T69 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T70	Condition 1520 1555	Przewlekła obturacyjna choroba płuc
+N27	Reference T70 ICD10:J44.9	Przewlekła obturacyjna choroba płuc, nieokreślona
+T71	Condition 1557 1581	Niedowład lewych kończyn
+N28	Reference T71 ICD10:G81.9	Porażenie połowicze, nieokreślone
+T72	Treatment 1585 1593	operacji
+N29	Reference T72 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T73	Date 1630 1634	1999
+R26	Dat Arg1:T73 Arg2:T72	
+T74	Symptom 1662 1677	kołatania serca
+N30	Reference T74 ICD10:R00.2	Kołatanie serca
+T75	Condition 1679 1690	osteoporoza
+N31	Reference T75 ICD10:M81.9	Osteoporoza, nieokreślona
+T76	Condition 1692 1735	przewlekłe zapalenie błony śluzowej żołądka
+N32	Reference T76 ICD10:K29.5	Przewlekłe zapalenie żołądka, nieokreślone
+T77	Condition 1737 1765	choroba wrzodowa dwunastnicy
+N33	Reference T77 ICD10:K26	Wrzód dwunastnicy
+T78	Symptom 1779 1792	zawroty głowy
+N34	Reference T78 ICD10:R42	Zawroty głowy i odurzenie
+T79	Symptom 1793 1807	duszność nocna
+N35	Reference T79 ICD10:R06.0	Duszność
+T80	Date 1808 1816	od dawna
+R27	Dat Arg1:T80 Arg2:T79	
+T81	Condition 1818 1834	choroba tarczycy
+T82	Condition 1836 1857	zaburzenia depresyjne
+N36	Reference T82 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T83	Condition 1859 1873	zaburzenia snu
+N37	Reference T83 ICD10:G47.9	Zaburzenia snu, nieokreślone
+T84	Drug 1994 2001	Isoptin
+T85	Drug 2003 2008	Acard
+T86	Drug 2010 2013	IPP
+T87	Drug 2015 2021	Telmix
+T88	Condition 2166 2168	HA
+N38	Reference T88 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T89	Symptom 2170 2223	RR w domu: 100/60-180/100mmHg, najczęściej 130/90mmHg
+T90	Condition 2226 2231	POChP
+N39	Reference T90 ICD10:J44.9	Przewlekła obturacyjna choroba płuc, nieokreślona
+T91	Condition 2233 2259	niedowładem lewych kończyn
+N40	Reference T91 ICD10:G81	Porażenie połowicze
+T92	Treatment 2263 2271	operacji
+N41	Reference T92 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T93	Date 2308 2312	1999
+R28	Dat Arg1:T93 Arg2:T92	
+T94	Symptom 2344 2390	bólów w klatce piersiowej o charakterze ucisku
+N42	Reference T94 ICD10:R07.2	Ból w okolicy przedsercowej
+T95	Date 2391 2401	od 12.2018
+R29	Dat Arg1:T95 Arg2:T94	
+T96	Date 2403 2411	od 3 dni
+T97	Symptom 2422 2470	non-stop, bez ewidentnych czynników wywołujących
+R30	Dat Arg1:T96 Arg2:T97	
+N43	Reference T97 ICD10:R07.2	Ból w okolicy przedsercowej
+R31	Dat Arg1:T96 Arg2:T94	
+T98	Symptom 2494 2547	wchodząc na 1 piętro odpoczywa 2 razy (duszność, ból)
+T99	Symptom 2549 2611	kołatania serca kilkusekundowe bez towarzyszących dolegliwości
+N44	Reference T99 ICD10:R00.2	Kołatanie serca
+T100	Condition 2613 2624	osteoporoza
+N45	Reference T100 ICD10:M81.9	Osteoporoza, nieokreślona
+T101	Condition 2626 2669	przewlekłę zapalenie błony śluzowej żołądka
+N46	Reference T101 ICD10:K29.5	Przewlekłe zapalenie żołądka, nieokreślone
+T102	Condition 2671 2699	choroba wrzodowa dwunastnicy
+N47	Reference T102 ICD10:K26	Wrzód dwunastnicy
+T103	Symptom 2723 2747	bóle brzucha po jedzeniu
+N48	Reference T103 ICD10:R10.4	Inny i nieokreślony ból brzucha
+T104	Treatment 2749 2768	wizyta u gastrologa
+T105	Date 2769 2775	w 11br
+R32	Dat Arg1:T105 Arg2:T104	
+T106	Symptom 2778 2837	zawroty głowy (przy zmanienie pozycji ciała i wahaniach RR)
+N49	Reference T106 ICD10:R42	Zawroty głowy i odurzenie
+T107	Symptom 2839 2853	duszność nocna
+N50	Reference T107 ICD10:R06.0	Duszność
+T108	Date 2854 2862	od dawna
+R33	Dat Arg1:T108 Arg2:T107	
+T109	Condition 2864 2880	choroba tarczycy
+T110	Negation 2908 2911	bez
+T111	Drug 2912 2920	leczenia
+R34	Neg Arg1:T110 Arg2:T111	
+T112	Condition 2923 2944	zaburzenia depresyjne
+N51	Reference T112 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T113	Condition 2946 2960	zaburzenia snu
+N52	Reference T113 ICD10:G47.9	Zaburzenia snu, nieokreślone
+T114	Treatment 2882 2906	pod opieką endokrynologa
+A1	Status T11 Historical_Insignificant
+A2	Status T18 Historical_Insignificant
+A3	Status T72 Historical_Insignificant
+A4	Status T75 Historical_Insignificant
+R35	Dat Arg1:T80 Arg2:T78	
+A5	Status T83 Historical_Insignificant
+A6	Status T92 Historical_Insignificant
+A7	Status T113 Historical_Insignificant
+N53	Reference T56 ICD10:Z72.0	Używanie tytoniu
+T115	Condition 951 989	torbieli odcinka krzyżowego kręgosłupa
+N54	Reference T115 ICD10:M85.4	Pojedyncza torbiel kości
+A8	Status T115 Historical_Insignificant
+R36	Dat Arg1:T12 Arg2:T115	
+T116	Condition 1594 1628	torbieli odc krzyżowego kręgosłupa
+A9	Status T116 Historical_Insignificant
+N55	Reference T116 ICD10:M85.4	Pojedyncza torbiel kości
+R37	Dat Arg1:T73 Arg2:T116	
+T117	Condition 2272 2306	torbieli odc krzyżowego kręgosłupa
+A10	Status T117 Historical_Insignificant
+N56	Reference T117 ICD10:M85.4	Pojedyncza torbiel kości
+R38	Dat Arg1:T93 Arg2:T117	

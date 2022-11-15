@@ -1,0 +1,68 @@
+T1	Drug 341 349	Euthyrox
+T2	Drug 351 359	Enarenal
+T3	Drug 361 368	Bemecor
+T4	Drug 370 380	Cefazolina
+T5	Drug 382 389	Clexane
+T6	Drug 391 394	ANA
+T7	Drug 504 514	Euthyrox N
+T8	Drug_dose 515 534	37,5 mcg1x dz. p.o.
+T9	Drug 536 544	Enarenal
+T10	Drug_dose 545 553	2x1,25mg
+T11	Drug 555 562	Bemecor
+T12	Drug_dose 563 600	0,1mg 2x1tabl (z przerwą w niedzielę)
+T13	Drug 603 610	Peritol
+T14	Drug_dose 611 616	0-0-1
+T15	Date 617 629	przez 3 m-ce
+T16	Investigation 632 671	Regularna kontrola ciśnienia tętniczego
+T17	Investigation 673 689	Kontrola poziomu
+T18	Drug 690 699	Digoksyny
+T19	Date 700 708	za 2 tyg
+T20	Condition 967 1027	Wrodzona wada serca pod postacią zwężenia zastawki aortalnej
+N1	Reference T20 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T21	Condition 1030 1042	cieśni aorty
+N2	Reference T21 ICD10:Q25.1	Zwężenie cieśni aorty
+T22	Treatment 1056 1088	angioplastyce balonowej zastawki
+T23	Treatment 1091 1103	cieśni aorty
+T24	Date 1106 1117	24.02.2005r
+T25	Condition 1123 1137	Zespół Turnera
+N3	Reference T25 ICD10:Q96.9	Zespół Turnera, nieokreślony
+R1	Dat Arg1:T24 Arg2:T23	
+R2	Dat Arg1:T24 Arg2:T22	
+T26	Investigation_result 1143 1179	Upośledzona kurczliwość lewej komory
+N4	Reference T26 ICD10:I50.1	Niewydolność serca lewokomorowa
+T27	Investigation 1184 1202	Cewnikowanie serca
+T28	Investigation 1205 1219	koronarografia
+T29	Date 1221 1232	21.06.2017r
+T30	Condition 1407 1423	zespołem Turnera
+N5	Reference T30 ICD10:Q96.9	Zespół Turnera, nieokreślony
+T31	Condition 1427 1446	wrodzoną wadą serca
+N6	Reference T31 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T32	Treatment 1451 1471	leczeniu operacyjnym
+N7	Reference T32 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T33	Symptom 1596 1606	Stan dobry
+T34	Date 1608 1625	W ostatnim czasie
+T35	Negation 1626 1629	bez
+T36	Condition 1630 1657	infekcji układu oddechowego
+T37	Condition 1659 1666	Alergia
+N8	Reference T37 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T38	Negation 1669 1685	nie potwierdzona
+T39	Drug 1699 1707	Euthyrox
+T40	Drug_dose 1708 1715	1x25 ug
+T41	Condition 1717 1739	niedoczynność tarczycy
+N9	Reference T41 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T42	Drug 1742 1749	Bemecor
+T43	Drug 1751 1759	Enarenal
+T44	Drug 1761 1770	Omnitrope
+T45	Drug 1772 1786	hormon wzrostu
+R3	Drg Arg1:T39 Arg2:T40	
+R4	Neg Arg1:T38 Arg2:T37	
+R5	Neg Arg1:T35 Arg2:T36	
+R6	Dat Arg1:T34 Arg2:T36	
+R7	Dat Arg1:T29 Arg2:T27	
+R8	Dat Arg1:T29 Arg2:T28	
+R9	Dat Arg1:T19 Arg2:T17	
+R10	Dat Arg1:T15 Arg2:T13	
+R11	Drg Arg1:T13 Arg2:T14	
+R12	Drg Arg1:T11 Arg2:T12	
+R13	Drg Arg1:T9 Arg2:T10	
+R14	Drg Arg1:T7 Arg2:T8	

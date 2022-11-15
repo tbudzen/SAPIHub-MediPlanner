@@ -1,0 +1,547 @@
+allRelations          : 27
+oks                   : 15
+isRedundantAndRemoveds: 12
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 0
+GOOD / BAD            : 27 / 0
+Sentence 0:
+------------------------------------------------
+Wiek: 68 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+
+
+
+Sentence 4:
+------------------------------------------------
+
+
+
+Sentence 5:
+dalsza opieka w poradni POZ
+okresowa kontrola kardiologiczna, neurologiczna
+pomiary ciśnienia tętniczego 2 x dz
+wydano skierowanie do Kliniki Endokrynologii i Zaburzeń Metabolicznych ICZMP w Łodzi 
+
+
+
+Sentence 6:
+dieta śródziemnomorska z małą zawartością soli kuchennej (5g/d)
+regularna aktywność fizyczna
+leki:
+Doxanorm 4 mg 1 tabl.
+R1	Drg Arg1:T7 Arg2:T8 << OK >>	Doxanorm -> 4 mg 1 tabl. wieczorem  <RANK: 3> <info: start[627, 636] <type: RIGHT>>
+
+
+Sentence 7:
+wieczorem
+Zaranta 20 mg 1 tabl.
+R2	Drg Arg1:T9 Arg2:T10 << OK >>	Zaranta -> 20 mg 1 tabl. wieczorem  <RANK: 3> <info: start[659, 667] <type: RIGHT>>
+
+
+Sentence 8:
+wieczorem
+Acard 75 mg 1 tabl.
+R3	Drg Arg1:T11 Arg2:T12 << OK >>	Acard -> 75 mg 1 tabl. wieczorem  <RANK: 3> <info: start[691, 697] <type: RIGHT>>
+
+
+Sentence 9:
+wieczorem
+------------------------------------------------
+
+
+
+Sentence 10:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 11:
+------------------------------------------------
+ Rozpozanie I: ICD10:I10|Rozpoznanie II: ICD10:I20|Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Podejrzenie gruczolaka kory nadnercza lewego.
+
+
+Sentence 12:
+Nadciśnienie tętnicze skorygowane.
+
+
+Sentence 13:
+Łagodna niedomykalność zastawki trójdzielnej.
+
+
+Sentence 14:
+Łagodna arytmia nadkomorowa i komorowa.
+
+
+Sentence 15:
+Miażdżyca aorty.
+
+
+Sentence 16:
+Przewlekłe zapalenie okołooskrzelowe.
+
+
+Sentence 17:
+Przewlekły nikotynizm.  
+
+
+Sentence 18:
+Zmiany zwyrodnieniowe kręgosłupa szyjnego.
+
+
+Sentence 19:
+Skrzywienie prawostronne kręgosłupa piersiowego.
+
+
+Sentence 20:
+Skrzywienie lewostronne odcinka lędźwiowego
+------------------------------------------------
+
+
+
+Sentence 21:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 22:
+Chora lat 67, przyjęta do Kliniki z powodu labilnych wartości ciśnienia (BPs90-160mmHg), uczucia gorąca i drętwienia k. górnej lewej - od 2 m-cy. 
+
+R4	Dat Arg1:T26 Arg2:T24 << OK >>	od 2 m-cy -> uczucia gorąca  <RANK: 2> <info: start[1597, 1551] <type: LEFT>>
+R5	Dat Arg1:T26 Arg2:T25 << OK >>	od 2 m-cy -> drętwienia k. górnej lewej  <RANK: 3> <info: start[1597, 1568] <type: LEFT>>
+
+
+Sentence 23:
+W wywiadzie ponadto:  HA - od roku, zmiany zwyrodnieniowe kręgosłupa L-S, hipercholesterolemia
+
+R6	Dat Arg1:T28 Arg2:T27 << OK >>	od roku -> HA  <RANK: 3> <info: start[1636, 1631] <type: LEFT>>
+R7	Dat Arg1:T28 Arg2:T29 <<REDUNDANT!!!REMOVED>>	od roku -> zmiany zwyrodnieniowe kręgosłupa L-S <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1636, 1645] <type: RIGHT>>
+R8	Dat Arg1:T28 Arg2:T30 <<REDUNDANT!!!REMOVED>>	od roku -> hipercholesterolemia <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1636, 1683] <type: RIGHT>>
+
+
+Sentence 24:
+Przebyte operacje: ginekologiczna - 8 lat temu 
+
+R9	Dat Arg1:T32 Arg2:T31 << OK >>	8 lat temu -> Przebyte operacje: ginekologiczna  <RANK: 3> <info: start[1740, 1704] <type: LEFT>>
+
+
+Sentence 25:
+Wywiad rodzinny: bez znaczenia 
+Alergie: neguje 
+
+R10	Neg Arg1:T34 Arg2:T33 << OK >>	neguje -> Alergie  <RANK: 3> <info: start[1793, 1784] <type: LEFT>>
+R11	Neg Arg1:T34 Arg2:T53 <<REDUNDANT!!!REMOVED>>	neguje -> Wywiad rodzinny <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1793, 1752] <type: LEFT>>
+R12	Neg Arg1:T54 Arg2:T33 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Alergie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1769, 1784] <type: RIGHT>>
+R13	Neg Arg1:T54 Arg2:T53 << OK >>	bez znaczenia -> Wywiad rodzinny  <RANK: 3> <info: start[1769, 1752] <type: LEFT>>
+
+
+Sentence 26:
+Nikotynizm: tak, 3/4 paczki przez 40 lat 
+
+R14	Dat Arg1:T36 Arg2:T35 << OK >>	przez 40 lat -> Nikotynizm: tak, 3/4 paczki  <RANK: 3> <info: start[1829, 1801] <type: LEFT>>
+
+
+Sentence 27:
+Alkohol: neguje 
+Uzależnienie inne: neguje 
+Stan społeczny: pracuje w ICZMP, praca fizyczna 
+Leki:
+Triplixam 5mg-1.25-5mg - 1/2 tabl. rano (rano po przyjęciu całej tabl.
+R15	Neg Arg1:T38 Arg2:T37 << OK >>	neguje -> Alkohol  <RANK: 3> <info: start[1852, 1843] <type: LEFT>>
+R16	Neg Arg1:T38 Arg2:T39 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1852, 1860] <type: RIGHT>>
+R17	Neg Arg1:T38 Arg2:T52 <<REDUNDANT!!!REMOVED>>	neguje -> praca fizyczna <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1852, 1920] <type: RIGHT>>
+R18	Neg Arg1:T38 Arg2:T41 <<REDUNDANT!!!REMOVED>>	neguje -> Triplixam <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1852, 1942] <type: RIGHT>>
+R19	Neg Arg1:T38 Arg2:T42 <<REDUNDANT!!!REMOVED>>	neguje -> 5mg-1.25-5mg - 1/2 tabl. rano (rano po przyjęciu całej tabl. BP bardzo niskie, następnie wysokie w godzinach popołudniowych) <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1852, 1952] <type: RIGHT>>
+R20	Neg Arg1:T40 Arg2:T37 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1879, 1843] <type: LEFT>>
+R21	Neg Arg1:T40 Arg2:T39 << OK >>	neguje -> Uzależnienie inne  <RANK: 3> <info: start[1879, 1860] <type: LEFT>>
+R22	Neg Arg1:T40 Arg2:T52 <<REDUNDANT!!!REMOVED>>	neguje -> praca fizyczna <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1879, 1920] <type: RIGHT>>
+R23	Neg Arg1:T40 Arg2:T41 <<REDUNDANT!!!REMOVED>>	neguje -> Triplixam <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1879, 1942] <type: RIGHT>>
+R24	Neg Arg1:T40 Arg2:T42 <<REDUNDANT!!!REMOVED>>	neguje -> 5mg-1.25-5mg - 1/2 tabl. rano (rano po przyjęciu całej tabl. BP bardzo niskie, następnie wysokie w godzinach popołudniowych) <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1879, 1952] <type: RIGHT>>
+R25	Drg Arg1:T41 Arg2:T42 << OK >>	Triplixam -> 5mg-1.25-5mg - 1/2 tabl. rano (rano po przyjęciu całej tabl. BP bardzo niskie, następnie wysokie w godzinach popołudniowych)  <RANK: 3> <info: start[1942, 1952] <type: RIGHT>>
+
+
+Sentence 28:
+BP bardzo niskie, następnie wysokie w godzinach popołudniowych)
+
+
+
+Sentence 29:
+Zaranta 20 mg 1 tabl.
+R26	Drg Arg1:T44 Arg2:T45 << OK >>	Zaranta -> 20 mg 1 tabl. wieczorem  <RANK: 3> <info: start[2077, 2085] <type: RIGHT>>
+
+
+Sentence 30:
+wieczorem 
+Acard 75 mg 1 tabl.
+R27	Drg Arg1:T46 Arg2:T47 << OK >>	Acard -> 75 mg 1 tabl. wieczorem  <RANK: 3> <info: start[2110, 2116] <type: RIGHT>>
+
+
+Sentence 31:
+wieczorem 
+
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter ekg, rtg kl. piersiowej
+
+
+
+Sentence 32:
+Przewidywana liczba dni hospitalizacji: 5-7 dni
+------------------------------------------------
+
+
+
+Sentence 33:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 34:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:9.20[10^3/ul]
+    
+
+
+Sentence 35:
+RBC Krwinki czerwone:4.76[10^6/ul]
+    
+
+
+Sentence 36:
+HGB Hemoglobina:14.0[g/dl]
+    
+
+
+Sentence 37:
+HCT Hematokryt:40.2[%]
+    
+
+
+Sentence 38:
+MCV wskaźnik czerwonokrw:84.5[fl]
+    
+
+
+Sentence 39:
+MCH wskaźnik czerwonokrw:29.4[pg]
+    
+
+
+Sentence 40:
+MCHC wskaźnik czerwonokr:34.8[g/dl]
+    
+
+
+Sentence 41:
+PLT z morfologii:232[10^3/ul]
+    
+
+
+Sentence 42:
+RDW-SD:41.5[fl]
+    
+
+
+Sentence 43:
+RDW-CV:13.5[%]
+    PDW:12.8[fl]
+    MPV:10.9[fl]
+    P-LCR:31.9[%]
+    
+
+
+Sentence 44:
+PCT (hematokryt płytkowy:0.25[%]
+    
+
+
+Sentence 45:
+NEUTR# wartość bezwzględ:4.63[10^3/ul]
+    
+
+
+Sentence 46:
+NEUTR%:50.3[%]
+    
+
+
+Sentence 47:
+LYMH# wartość bezwzględn:3.53[10^3/ul]
+    
+
+
+Sentence 48:
+LYMPH%:38.4[%]
+    
+
+
+Sentence 49:
+MONO# wartość bezwzględn:0.65[10^3/ul]
+    MONO%:7.1[%]
+    
+
+
+Sentence 50:
+EO# wartość bezwzględna:0.37[10^3/ul]
+    
+
+
+Sentence 51:
+EO%:4.0[%]
+    
+
+
+Sentence 52:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    
+
+
+Sentence 53:
+BASO%:0.2[%]
+    
+
+
+Sentence 54:
+NRBC %:0.0[%]
+    
+
+
+Sentence 55:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 56:
+Badanie ogólne moczu
+    
+
+
+Sentence 57:
+barwa:żółty[ ]
+    
+
+
+Sentence 58:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 59:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 60:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 61:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 62:
+ciężar właściwy:1.020[ ]
+    
+
+
+Sentence 63:
+kwas askrobinowy:40 mg/dl[ ]
+    
+
+
+Sentence 64:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 65:
+urobilinogen:2,0 mg/dl[ ]
+    
+
+
+Sentence 66:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 67:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 68:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 69:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 70:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 71:
+leukocyty:20 /ul[ul]
+    
+
+
+Sentence 72:
+erytrocyty świeże:9 /ul[ul]
+    śluz:liczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 73:
+TSH: TSH:7.77[uIU/ml]
+
+
+
+Sentence 74:
+FT3: FT3:2.54[pg/ml]
+
+
+
+Sentence 75:
+FT4: FT4:1.01[ng/dl]
+
+
+
+Sentence 76:
+Troponina T: Troponina T:6.3[pg/ml]
+
+
+
+Sentence 77:
+ALAT: ALAT:17[U/L]
+ASPAT: ASPAT:21[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 78:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 79:
+Potas (K): Potas:4.3[mmol/L]
+
+
+
+Sentence 80:
+Kreatynina + GFR
+    
+
+
+Sentence 81:
+Kreatynina w surowicy:0.62[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 82:
+MDRD ze stan:96.0[ml/min/1,73 m^2]
+
+
+
+Sentence 83:
+Mocznik: Mocznik:37[mg/dl]
+
+
+
+Sentence 84:
+Kwas moczowy: Kwas moczowy:4.1[mg/dl]
+
+
+
+Sentence 85:
+Lipidogram
+    
+
+
+Sentence 86:
+Cholesterol całkowity:116[mg/dl]
+    
+
+
+Sentence 87:
+Cholesterol HDL:40[mg/dl]
+    
+
+
+Sentence 88:
+Cholestrol LDL:68[mg/dl]
+    
+
+
+Sentence 89:
+Triglicerydy:97[mg/dl]
+    
+
+
+Sentence 90:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:83[mg/dl]
+
+
+
+Sentence 91:
+------------------------------------------------
+
+
+
+Sentence 92:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 93:
+I10
+D44.7
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 94:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 95:
+89.501
+88.721
+89.41
+87.440
+87.221
+88.761
+------------------------------------------------
+
+

@@ -1,0 +1,63 @@
+T1	Investigation 333 353	Kontrolny holter EKG
+T2	Date 354 367	za 9 miesięcy
+T3	Treatment 372 406	Kontrola w Poradni Kardiologicznej
+T4	Date 407 421	za 10 miesięcy
+T5	Investigation 444 454	holter EKG
+T6	Behaviour 467 505	może uprawiać sport w formie rekreacji
+T7	Symptom 530 551	niepokojących objawów
+T8	Symptom 556 562	omdleń
+N1	Reference T8 ICD10:R55	Omdlenie i zapaść
+T9	Treatment 563 592	kontakt z Kliniką Kardiologii
+R1	Dat Arg1:T4 Arg2:T3
+R2	Dat Arg1:T2 Arg2:T1
+T10	Condition 866 935	Wrodzona wada serca pod postacią zarośnięcia zastawki tętnicy płucnej
+N2	Reference T10 ICD10:Q22.0	Zarośnięcie zastawki pnia płucnego
+T11	Condition 941 972	dysplazją zastawki trójdzielnej
+N3	Reference T11 ICD10:Q22.8	Inne wrodzone wady rozwojowe zastawki trójdzielnej
+T12	Treatment 977 994	etapowym leczeniu
+N4	Reference T12 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T13	Treatment 998 1038	implantacji homograftu w pozycję płucnej
+N5	Reference T13 ICD10:Z95.4	Obecność innych protez zastawek serca
+T14	Treatment 1051 1070	wymianie homograftu
+N6	Reference T14 ICD10:Z95.4	Obecność innych protez zastawek serca
+T15	Treatment 1072 1102	plastyce zastawki trójdzielnej
+N7	Reference T15 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T16	Treatment 1105 1115	zamknięciu
+N8	Reference T16 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T17	Condition 1116 1122	ASD II
+N9	Reference T17 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T18	Date 1124 1135	03.10.2011r
+T19	Condition 1141 1177	Niedomykalność zastawki trójdzielnej
+N10	Reference T19 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T20	Treatment 1182 1246	Implantacja zastawki Cor-Matrix o śr. 27mm w pozycję trójdzielną
+N11	Reference T20 ICD10:Z95.4	Obecność innych protez zastawek serca
+T21	Date 1256 1273	w dniu 08.04.2015
+T22	Condition 1277 1311	Niedomykalność zastawki Cor-Matrix
+N12	Reference T22 ICD10:T82.0	Mechaniczne powikłanie protezy zastawki serca
+T23	Treatment 1315 1353	Operacja naprawcza zastawki Cor-Matrix
+N13	Reference T23 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T24	Date 1363 1380	w dniu 28.05.2015
+T25	Investigation 1385 1395	Obserwacja
+T26	Condition 1407 1431	choroby węzła zatokowego
+N14	Reference T26 ICD10:I49.5	Zespół chorej zatoki
+T27	Condition 1595 1613	złożoną wadą serca
+N15	Reference T27 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T28	Symptom 1738 1748	Stan dobry
+T29	Date 1750 1767	W ostatnim czasie
+T30	Negation 1768 1771	bez
+T31	Condition 1772 1780	infekcji
+T32	Condition 1782 1789	Alergia
+N16	Reference T32 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T33	Negation 1792 1808	nie potwierdzona
+T34	Drug 1810 1820	Leki stałe
+T35	Negation 1823 1836	nie przyjmuje
+R3	Neg Arg1:T35 Arg2:T34
+R4	Neg Arg1:T33 Arg2:T32
+R5	Dat Arg1:T29 Arg2:T31
+R6	Neg Arg1:T30 Arg2:T31
+R7	Dat Arg1:T24 Arg2:T23
+R8	Dat Arg1:T21 Arg2:T20
+R9	Dat Arg1:T18 Arg2:T17
+R11	Dat Arg1:T18 Arg2:T14
+R12	Dat Arg1:T18 Arg2:T15
+R13	Dat Arg1:T18 Arg2:T16

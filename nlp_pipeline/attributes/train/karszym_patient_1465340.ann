@@ -1,0 +1,63 @@
+T1	Condition 413 434	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 436 460	Przewlekła choroba nerek
+N2	Reference T2 ICD10:N18.9	Przewlekła niewydolność nerek, nieokreślona
+T3	Treatment 606 678	Dalsza opieka w POZ, Poradni Kardiologicznej oraz Poradni Nefrologicznej
+T4	Treatment 794 828	w warunkach Poradni Nefrologicznej
+T5	Investigation 833 944	Okresowa kontrola glikemii na czczo, morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych
+T6	Date 947 970	pierwsza za 5-6 tygodni
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Investigation 984 1006	kontrola TSH, FT3, FT4
+T8	Date 1007 1021	za 4-5 tygodni
+R2	Dat Arg1:T8 Arg2:T7	
+T9	Behaviour 1026 1128	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T10	Investigation 1133 1203	Regularna samokontrola ciśnienia tętniczego krwi i tętna oraz glikemii
+T11	Drug 1242 1256	Noliprel forte
+T12	Drug_dose 1257 1284	5mg + 1,25mg 1x1 tabl. rano
+T13	Drug 1286 1293	Amlozek
+T14	Drug_dose 1294 1319	10 mg 1x1 tabl. wieczorem
+T15	Drug 1321 1327	Atoris
+T16	Drug_dose 1328 1352	30mg 1x1 tabl. wieczorem
+T17	Condition 1580 1622	Nadciśnienie tętnicze I stopnia wg ESH/ESC
+N3	Reference T17 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+R3	Drg Arg1:T11 Arg2:T12	
+R4	Drg Arg1:T13 Arg2:T14	
+R5	Drg Arg1:T15 Arg2:T16	
+T18	Condition 1624 1665	Łagodna niedomykalność zastawki mitralnej
+N4	Reference T18 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T19	Condition 1667 1714	Przewlekła choroba nerek w stadium G3b wg KDIGO
+N5	Reference T19 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T20	Condition 1716 1748	Nieprawidłowa tolerancja glukozy
+N6	Reference T20 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T21	Condition 1901 1924	nadciśnieniem tętniczym
+N7	Reference T21 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T22	Date 1889 1900	wieloletnim
+R6	Dat Arg1:T22 Arg2:T21	
+T23	Investigation_result 1962 1970	wahań RR
+T24	Symptom 1976 2009	pogorszenia tolerancji wysiłkowej
+T25	Symptom 2011 2053	okresowego dyskomfortu w klatce piersiowej
+N8	Reference T25 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T26	Treatment 2065 2098	pod opieka Poradni Nefrologicznej
+T27	Condition 2108 2148	przewlekłej choroby nerek stadium G 2/3.
+N9	Reference T27 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T28	Symptom 2171 2194	epizody kołatania serca
+N10	Reference T28 ICD10:R00.2	Kołatanie serca
+T29	Behaviour 2197 2206	Papierosy
+N11	Reference T29 ICD10:Z72.0	Używanie tytoniu
+T30	Behaviour 2209 2220	inne używki
+T31	Negation 2221 2227	neguje
+R7	Neg Arg1:T31 Arg2:T30	
+R8	Neg Arg1:T31 Arg2:T29	
+T32	Treatment 2238 2294	operacja laparoskopowego usunięcia pęcherzyka żółciowego
+A1	Status T32 Historical_Insignificant
+N12	Reference T32 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T33	Date 2300 2314	w dzieciństwie
+T34	Treatment 2315 2336	wyrostka robaczkowego
+A2	Status T34 Historical_Insignificant
+N13	Reference T34 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R9	Dat Arg1:T33 Arg2:T34	
+T35	Drug 2358 2372	Noliprel forte
+T36	Drug_dose 2373 2383	1 x 1 tabl
+R10	Drg Arg1:T35 Arg2:T36	
+T37	Investigation 699 741	wykonanie dodatkowej diagnostyki obrazowej
+T38	Investigation 749 793	weryfikacji odejścia prawej tętnicy nerkowej

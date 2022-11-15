@@ -1,0 +1,78 @@
+T1	Investigation 461 484	angio-CT tt. wieńcowych
+T2	Investigation 495 524	kontrola ciśnienia tętniczego
+T3	Behaviour 528 547	prawidłowe żywienie
+T4	Behaviour 548 593	stały, umiarkowany, aerobowy wysiłek fizyczny
+T5	Drug 629 639	Concor COR
+T6	Drug_dose 640 660	1,25 mg 1 tabl. rano
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Condition 878 956	Wada wrodzona serca pod postacią "szpilkowatego" przetrwałego otworu owalnego.
+N1	Reference T7 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T8	Symptom 1017 1030	zawroty głowy
+N2	Reference T8 ICD10:R42	Zawroty głowy i odurzenie
+T9	Symptom 1010 1014	Bóle
+N3	Reference T9 ICD10:R51	Ból głowy
+T10	Drug 2431 2441	Concor COR
+T11	Drug_dose 2442 2455	1,25 mg 1-0-0
+R2	Drg Arg1:T10 Arg2:T11	
+T12	Negation 2388 2398	nie podaje
+T13	Negation 2366 2376	nie podaje
+T14	Negation 2346 2352	neguje
+T15	Condition 2306 2328	zaburzenia rytmu serca
+A1	Status T15 Family
+N4	Reference T15 ICD10:I49	Inne zaburzenia rytmu serca
+T16	Condition 2377 2386	Uczulenia
+R3	Neg Arg1:T12 Arg2:T16	
+T17	Behaviour 2353 2365	Inne używki:
+R4	Neg Arg1:T13 Arg2:T17	
+T18	Behaviour 2329 2344	Palenie tytoniu
+N6	Reference T18 ICD10:T65.2	Tytoń i nikotyna
+R5	Neg Arg1:T14 Arg2:T18	
+T19	Treatment 965 988	ablacji RF drogi wolnej
+T20	Date 997 1008	przeszłości
+R6	Dat Arg1:T20 Arg2:T19	
+T21	Investigation_result 1032 1209	Niecharakterystyczne ognisko w istocie białej zakrętu czołowego dolnego, podkorowo mogące odpowiadać zmianie naczyniopochodnej, dysmielinizacyjnej lub nieaktywnej demielinizacji
+T22	Investigation_result 1211 1274	Malformacja naczyniowa w tylnej części płata skroniowego lewego
+T23	Symptom 1276 1286	Niedosłuch
+N7	Reference T23 ICD10:H90	Upośledzenie słuchu przewodzeniowe i czuciowo-nerwowe
+T24	Condition 2256 2259	WZW
+N8	Reference T24 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T25	Condition 2261 2270	borelioza
+N9	Reference T25 ICD10:A69.2	Choroba z Lyme
+T26	Negation 2273 2279	neguje
+R7	Neg Arg1:T26 Arg2:T25	
+T27	Negation 2154 2160	neguje
+T28	Behaviour 2142 2151	Papierosy
+N10	Reference T28 ICD10:T65.2	Tytoń i nikotyna
+R8	Neg Arg1:T27 Arg2:T28	
+T29	Treatment 2181 2213	przebyta ablacja RF drowi wolnej
+T30	Condition 2138 2140	AF
+A2	Status T30 Family
+N11	Reference T30 ICD10:I48	Migotanie i trzepotanie przedsionków
+T31	Negation 2082 2088	neguje
+T32	Condition 2074 2081	alergie
+N12	Reference T32 ICD10:T78.4	Alergia, nieokreślona
+R9	Neg Arg1:T31 Arg2:T32	
+T33	Condition 1431 1461	arytmią nadkomorową i komorową
+N13	Reference T33 ICD10:I49	Inne zaburzenia rytmu serca
+T34	Treatment 1478 1501	ablacji RF drogi wolnej
+T35	Condition 1521 1539	szczelinowatym PFO
+N14	Reference T35 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T36	Symptom 1581 1601	zaburzeń świadomości
+T37	Symptom 1716 1726	niedosłuch
+N15	Reference T37 ICD10:H90	Upośledzenie słuchu przewodzeniowe i czuciowo-nerwowe
+T38	Symptom 1728 1732	bóle
+N16	Reference T38 ICD10:R51	Ból głowy
+T39	Symptom 1735 1748	zawroty głowy
+N17	Reference T39 ICD10:R42	Zawroty głowy i odurzenie
+T40	Investigation 1752 1761	MRI głowy
+T41	Investigation_result 1762 2051	obecne niecharakterystyczne ognisko w istocie białej zakrętu czołowego dolnego, podkorowo - może odpowiadać zmianie naczyniopochodnej, dysmielinizacyjnej lub nieaktywnej demielinizacji. W tylnej części płata skroniowego lewego zmian ao charakterze malformacji naczyniowej wielkości ok 3 mm
+R10	Inv Arg1:T40 Arg2:T41	
+T42	Condition 2223 2228	AVNRT
+T43	Condition 989 994	AVNRT
+N18	Reference T43 ICD10:I47.1	Częstoskurcz nadkomorowy
+T44	Condition 1511 1516	AVNRT
+N19	Reference T44 ICD10:I47.1	Częstoskurcz nadkomorowy
+N20	Reference T42 ICD10:I47.1	Częstoskurcz nadkomorowy
+R11	Dat Arg1:T20 Arg2:T43	
+R12	Neg Arg1:T26 Arg2:T24	
+N5	Reference T16 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

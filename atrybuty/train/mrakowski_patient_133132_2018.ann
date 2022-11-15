@@ -1,0 +1,70 @@
+T1	Condition 439 460	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 462 497	Subkliniczna niedoczynność tarczycy
+N2	Reference T2 ICD10:E02	Subkliniczna postać niedoczynności tarczycy z powodu niedoboru jodu
+T3	Treatment 607 634	dalsza opieka w poradni POZ
+T4	Investigation 635 701	wskazane wykonanie  RTG kl. piersiowej w warunkach ambulatoryjnych
+T5	Date 702 718	za ok. 1 miesiąc
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Treatment 719 770	okresowa kontrola kardiologiczna, endokrynologiczna
+T7	Investigation 771 810	codzienna kontrola ciśnienia tętniczego
+T8	Investigation 811 846	okresowa kontrola hormonów tarczycy
+T9	Behaviour 847 892	stały, umiarkowany, aerobowy wysiłek fizyczny
+T10	Treatment 893 921	regularne przyjmowanie leków
+T11	Drug 923 933	Tertens-AM
+T12	Drug_dose 934 946	1 tabl. rano
+R2	Drg Arg1:T11 Arg2:T12	
+T13	Drug 947 956	Captopril
+T14	Drug_dose 957 981	12,5 mg 1 tabl. doraźnie
+R3	Drg Arg1:T13 Arg2:T14	
+T15	Treatment 1192 1219	diagnostyki kardiologicznej
+T16	Date 1233 1250	od kilku miesięcy
+T17	Symptom 1251 1292	podwyższone wartości ciśnienia tętniczego
+N3	Reference T17 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+R4	Dat Arg1:T16 Arg2:T17	
+T18	Investigation_result 1329 1347	max do 170/90 mmHg
+N4	Reference T18 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T19	Symptom 1365 1406	bólami głowy ( + w sytuacjach stresowych)
+N5	Reference T19 ICD10:R51	Ból głowy
+T21	Behaviour 1407 1435	Wysiłek fizyczny okazjonalny
+T22	Treatment 1436 1453	Przebyte operacje
+T23	Negation 1455 1465	nie podaje
+R5	Neg Arg1:T23 Arg2:T22	
+T24	Treatment 1466 1485	Leczenie przewlekłe
+T25	Negation 1487 1497	nie podaje
+R6	Neg Arg1:T25 Arg2:T24	
+T26	Condition 1525 1528	WZW
+N6	Reference T26 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T27	Condition 1530 1539	borelioza
+N7	Reference T27 ICD10:A69.2	Choroba z Lyme
+T28	Negation 1542 1552	nie podaje
+R7	Neg Arg1:T28 Arg2:T27	
+R8	Neg Arg1:T28 Arg2:T26	
+T29	Condition 1553 1568	Wywiad rodzinny
+A1	Status T29 Family
+T30	Condition 1570 1572	HA
+A2	Status T30 Family
+N8	Reference T30 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T31	Behaviour 1586 1601	Palenie tytoniu
+T32	Negation 1603 1613	nie podaje
+R9	Neg Arg1:T32 Arg2:T31	
+T33	Behaviour 1614 1625	Inne używki
+T34	Negation 1627 1637	nie podaje
+R10	Neg Arg1:T34 Arg2:T33	
+T35	Condition 1638 1647	Uczulenia
+N10	Reference T35 ICD10:T78.4	Alergia, nieokreślona
+T36	Negation 1649 1659	nie podaje
+R11	Neg Arg1:T36 Arg2:T35	
+T37	Behaviour 1685 1703	pracownik umysłowy
+T38	Behaviour 1705 1715	bezdzietna
+T39	Investigation 1759 1769	echo serca
+T40	Investigation 1771 1774	TET
+T41	Investigation 1776 1780	ABPM
+T42	Investigation 1782 1788	Holter
+T43	Investigation 1790 1808	RTG kl. piersiowej
+T44	Investigation 1810 1828	usg jamy brzusznej
+N9	Reference T31 ICD10:Z72.0	Używanie tytoniu
+N11	Reference T33 ICD10:Z72	Problemy związane ze stylem życia
+T20	Negation 1722 1725	bez
+T45	Drug 1726 1731	leków
+R12	Neg Arg1:T20 Arg2:T45	

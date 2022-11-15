@@ -1,0 +1,105 @@
+T1	Condition 448 491	Napadowe migotanie/trzepotanie przedsionków
+N1	Reference T1 ICD10:I48	Migotanie i trzepotanie przedsionków
+T2	Investigation 493 505	CHA2DS2-VASc
+T3	Investigation 515 523	HAS-BLED
+T4	Investigation_result 508 513	4 pkt
+T5	Investigation_result 526 531	2 pkt
+T6	Investigation 533 537	EHRA
+T7	Investigation_result 538 542	1/2a
+R1	Inv Arg1:T6 Arg2:T7	
+R2	Inv Arg1:T3 Arg2:T5	
+R3	Inv Arg1:T2 Arg2:T4	
+T8	Condition 553 556	TIA
+N2	Reference T8 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T9	Date 558 563	2017r
+R4	Dat Arg1:T9 Arg2:T8	
+T10	Condition 566 587	Nadciśnienie tętnicze
+N3	Reference T10 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T11	Condition 589 597	Dystymie
+N4	Reference T11 ICD10:F34.1	Dystymia
+T12	Treatment 607 623	cholecystektomii
+A1	Status T12 Historical_Insignificant
+T13	Date 624 637	w przeszłości
+R5	Dat Arg1:T13 Arg2:T12	
+T14	Condition 639 672	Choroba zwyrodnieniowa kręgosłupa
+N5	Reference T14 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T15	Treatment 794 821	dalsza opieka w poradni POZ
+T16	Treatment 822 905	wskazana konsultacja w Poradni Zaburzeń Rytmu w CKD w Łodzi celem wykonania ablacji
+T17	Investigation 906 976	wskazane wykonanie angio-CT tt. wieńcowych w warunkach ambulatoryjnych
+T18	Treatment 977 1024	okresowa kontrola kardiologiczna, neurologiczna
+T19	Behaviour 1025 1050	dieta ubogocholesterolowa
+T20	Behaviour 1051 1090	regularny, umiarkowany wysiłek fizyczny
+T21	Drug 1097 1104	Pradaxa
+T22	Drug_dose 1105 1115	2 x 150 mg
+R6	Drg Arg1:T21 Arg2:T22	
+T23	Drug 1116 1127	Betaloc ZOK
+T24	Drug_dose 1128 1143	25 2 x 1/4 tabl
+R7	Drg Arg1:T23 Arg2:T24	
+T25	Drug 1144 1152	Polfenon
+T26	Drug_dose 1153 1163	2 x 150 mg
+R8	Drg Arg1:T25 Arg2:T26	
+T27	Drug 1164 1171	Kalipoz
+T28	Drug_dose 1172 1183	2 x 1 tabl.
+R9	Drg Arg1:T27 Arg2:T28	
+T29	Drug 1185 1193	Sipronol
+T30	Drug_dose 1194 1203	1 x 50 mg
+R10	Drg Arg1:T29 Arg2:T30	
+T31	Symptom 1370 1408	nawracających epizodów kołatania serca
+N6	Reference T31 ICD10:R00.2	Kołatanie serca
+T32	Symptom 1410 1420	osłabienia
+T33	Symptom 1423 1443	łatwego męczenia się
+N7	Reference T33 ICD10:R53	Złe samopoczucie i zmęczenie
+T34	Investigation_result 1494 1511	wolną - ok 50/min
+N8	Reference T34 ICD10:R00.1	Bradykardia, nieokreślona
+T35	Investigation_result 1514 1548	szybką - oko100/min czynność serca
+N9	Reference T35 ICD10:R00.0	Tachykardia, nieokreślona
+T36	Date 1445 1467	W ostatnich tygodniach
+R11	Dat Arg1:T36 Arg2:T34	
+R12	Dat Arg1:T36 Arg2:T35	
+T37	Symptom 1556 1581	niemiarową czynność serca
+N10	Reference T37 ICD10:R00.8	Inne i nieokreślone zaburzenia rytmu serca
+T38	Date 1587 1597	1 rok temu
+T39	Symptom 1598 1638	epizod krótkotrwałej utraty przytomności
+N11	Reference T39 ICD10:R55	Omdlenie i zapaść
+R13	Dat Arg1:T38 Arg2:T39	
+T40	Condition 1699 1702	TIA
+N12	Reference T40 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T41	Condition 1704 1715	napadowe AF
+N13	Reference T41 ICD10:I48	Migotanie i trzepotanie przedsionków
+T42	Condition 1760 1776	zapalenia tętnic
+A2	Source T42 Declared
+N14	Reference T42 ICD10:I77.6	Zapalenie tętnicy, nieokreślone
+T43	Negation 1779 1789	wykluczono
+T44	Condition 1790 1818	zapalenie tętnicy skroniowej
+N15	Reference T44 ICD10:M31.5	Olbrzymiokomórkowe zapalenie tętnic ze współistnieniem polimialgii reumatycznej
+R14	Neg Arg1:T43 Arg2:T44	
+T45	Condition 1833 1845	hipokaliemii
+N16	Reference T45 ICD10:E87.6	Hipokalemia
+T46	Behaviour 1848 1854	nałogi
+T47	Negation 1855 1861	neguje
+R15	Neg Arg1:T47 Arg2:T46	
+T48	Condition 1863 1882	Obciążenie rodzinne
+A3	Status T48 Family
+T49	Condition 1884 1896	udarem mózgu
+A4	Status T49 Family
+N17	Reference T49 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T50	Condition 1905 1924	zgon w wieku 52 lat
+A5	Status T50 Family
+N18	Reference T50 ICD10:R98	Zgon nieoczekiwany
+T51	Drug 1932 1939	Pradaxa
+T52	Drug_dose 1940 1950	2 x 150 mg
+R16	Drg Arg1:T51 Arg2:T52	
+T53	Drug 2022 2030	Sipronol
+T54	Drug_dose 2031 2040	1 x 50 mg
+R17	Drg Arg1:T53 Arg2:T54	
+T55	Drug 1952 1963	Betaloc ZOK
+T56	Drug_dose 1964 1979	25 2 x 1/4 tabl
+R18	Drg Arg1:T55 Arg2:T56	
+T57	Drug 1981 1989	Polfenon
+T58	Drug_dose 1990 2000	3 x 150 mg
+R19	Drg Arg1:T57 Arg2:T58	
+T59	Drug 2002 2009	Kalipoz
+T60	Drug_dose 2010 2021	2 x 2 tabl.
+R20	Drg Arg1:T59 Arg2:T60	
+N19	Reference T32 ICD10:R53	Złe samopoczucie i zmęczenie
+N20	Reference T46 ICD10:Z72	Problemy związane ze stylem życia

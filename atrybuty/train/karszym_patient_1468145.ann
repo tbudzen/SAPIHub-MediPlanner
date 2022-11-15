@@ -1,0 +1,111 @@
+T1	Condition 448 499	Nadciśnienie tętnicze kontrolowane farmakologicznie
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 501 512	Stenokardia
+N2	Reference T2 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T3	Condition 514 521	Otyłość
+N3	Reference T3 ICD10:E66.9	Otyłość, nieokreślona
+T4	Behaviour 523 533	Nikotynizm
+N4	Reference T4 ICD10:Z72.0	Używanie tytoniu
+T5	Condition 535 557	Niedoczynność tarczycy
+N5	Reference T5 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T6	Condition 571 584	Hiperurykemia
+N6	Reference T6 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T7	Treatment 606 619	hysterektomii
+A1	Status T7 Historical_Insignificant
+N7	Reference T7 ICD10:Z90.7	Nabyty brak narządów płciowych
+T8	Treatment 741 818	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej i Endokrynologicznej
+T9	Investigation 832 879	ambulatoryjne wykonanie angio-CT tt. wieńcowych
+T10	Behaviour 933 972	Dieta lekkostrawna, niskocholesterolowa
+T11	Investigation 980 1028	Systematyczna kontrola ciśnienia tętniczego krwi
+T12	Behaviour 1035 1054	Redukcja masy ciała
+T13	Behaviour 1059 1122	Regularna aktywność fizyczna 5x w tygodniu po 30 minut dziennie
+T15	Behaviour 1127 1148	Zakaz palenia tytoniu
+T16	Drug 1160 1168	Euthyrox
+T17	Drug_dose 1169 1189	N88 1x1/2 tabl. rano
+T18	Drug 1190 1200	Concor Cor
+T19	Drug 1221 1233	Tertensif SR
+T20	Drug 1249 1256	Atacand
+T21	Drug 1278 1284	Lercan
+T22	Drug_dose 1201 1220	5 mg 1x1 tabl. rano
+T23	Drug_dose 1234 1248	1x1 tabl. rano
+T24	Drug_dose 1257 1277	16 mg 1x1 tabl. rano
+T25	Drug_dose 1285 1310	10 mg 1x1 tabl. wieczorem
+R2	Drg Arg1:T16 Arg2:T17	
+R3	Drg Arg1:T18 Arg2:T22	
+R4	Drg Arg1:T19 Arg2:T23	
+R5	Drg Arg1:T20 Arg2:T24	
+R6	Drg Arg1:T21 Arg2:T25	
+T26	Symptom 1485 1524	labilnych wartości ciśnienia tętniczego
+T27	Symptom 1526 1595	bólów w klatce piersiowej (zamostkowych) przy wysokich wartościach BP
+N9	Reference T27 ICD10:R07.2	Ból w okolicy przedsercowej
+T28	Symptom 1598 1611	kołatań serca
+N10	Reference T28 ICD10:R00.2	Kołatanie serca
+T29	Date 1636 1649	od ok. 1 roku
+R7	Dat Arg1:T29 Arg2:T26	
+R8	Dat Arg1:T29 Arg2:T27	
+R9	Dat Arg1:T29 Arg2:T28	
+T30	Condition 1664 1677	hiperurykemia
+N11	Reference T30 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T31	Treatment 1697 1705	operacja
+N12	Reference T31 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T32	Condition 1706 1712	zez OP
+A2	Status T32 Historical_Insignificant
+N13	Reference T32 ICD10:H50.9	Zez, nieokreślony
+A3	Status T31 Historical_Insignificant
+T33	Date 1713 1727	w dzieciństwie
+R10	Dat Arg1:T33 Arg2:T32	
+R11	Dat Arg1:T33 Arg2:T31	
+T34	Treatment 1737 1750	histerectomii
+A4	Status T34 Historical_Insignificant
+N14	Reference T34 ICD10:Z90.7	Nabyty brak narządów płciowych
+T35	Condition 1760 1781	macicy mięśniakowatej
+A5	Status T35 Historical_Insignificant
+N15	Reference T35 ICD10:D26	Inne nowotwory niezłośliwe macicy
+T36	Date 1783 1790	2012/13
+R12	Dat Arg1:T36 Arg2:T35	
+R13	Dat Arg1:T36 Arg2:T34	
+T37	Condition 1794 1816	niedoczynność tarczycy
+N16	Reference T37 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T38	Condition 1844 1847	WZW
+N17	Reference T38 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T39	Condition 1849 1858	borelioza
+N18	Reference T39 ICD10:A69.2	Choroba z Lyme
+T40	Negation 1861 1871	nie podaje
+R14	Neg Arg1:T40 Arg2:T39	
+R15	Neg Arg1:T40 Arg2:T38	
+T41	Negation 1889 1899	nieistotny
+T42	Condition 1872 1887	Wywiad rodzinny
+A6	Status T42 Family
+R16	Neg Arg1:T41 Arg2:T42	
+T43	Behaviour 1900 1924	Palenie tytoniu: do 10/d
+N19	Reference T43 ICD10:Z72.0	Używanie tytoniu
+T44	Date 1925 1934	30-40 lat
+R17	Dat Arg1:T44 Arg2:T43	
+T45	Behaviour 1935 1960	Inne używki: okazjonalnie
+A7	Status T45 Historical_Insignificant
+T46	Condition 1961 1970	Uczulenia
+N20	Reference T46 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T47	Drug 1972 1979	Ketonal
+R18	Alg Arg1:T46 Arg2:T47	
+T48	Behaviour 1998 2021	działalność gospodarcza
+T49	Behaviour 2023 2038	mieszka z mężem
+T50	Drug 2045 2053	Euthyrox
+T51	Drug 2072 2082	Concor COR
+T52	Drug_dose 2083 2100	5 mg 1 tabl. rano
+T53	Drug 2101 2107	Lercan
+T54	Drug_dose 2108 2131	10 mg 1 tabl. wieczorem
+T55	Drug_dose 2054 2071	88ug 1 tabl. rano
+T56	Drug 2132 2139	Atacand
+T57	Drug_dose 2140 2158	16 mg 1 tabl. rano
+T58	Drug 2159 2171	Tertensif SR
+T59	Drug_dose 2172 2204	1 tabl. rano w środy i niedziele
+T60	Investigation 2232 2242	echo serca
+T61	Investigation 2244 2247	TET
+T62	Investigation 2249 2253	ABPM
+T63	Investigation 2255 2261	Holter
+T64	Investigation 2263 2281	RTG kl. piersiowej
+R19	Drg Arg1:T50 Arg2:T55	
+R20	Drg Arg1:T51 Arg2:T52	
+R21	Drg Arg1:T53 Arg2:T54	
+R22	Drg Arg1:T56 Arg2:T57	
+R23	Drg Arg1:T58 Arg2:T59	

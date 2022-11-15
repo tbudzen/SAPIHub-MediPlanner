@@ -1,0 +1,59 @@
+T1	Condition 438 508	Wada serca pod postacią łagodnej niedomykalności zastawki trójdzielnej
+T2	Condition 510 525	Cukrzyca typu 1
+T3	Symptom 527 535	Omdlenia
+T4	Treatment 656 683	dalsza opieka w poradni POZ
+T5	Treatment 684 733	okresowa kontrola kardiologiczna, diabetologiczna
+T6	Investigation 736 775	regularna kontrola ciśnienia tętniczego
+T7	Behaviour 776 792	dieta cukrzycowa
+T8	Drug 830 845	Ins. Gensulin R
+T9	Drug_dose 847 863	8j - 8j - 8j sc.
+T10	Drug 873 888	Ins. Gensulin N
+T11	Drug_dose 889 908	9j - 0 - 0 - 9j sc.
+T12	Drug 915 921	Bibloc
+T13	Drug_dose 922 939	5 mg 1 tabl. rano
+T14	Condition 1128 1139	tachykardii
+T15	Condition 1145 1172	podejrzeniem kardiomiopatii
+T16	Date 1176 1191	czerwiec 2018r.
+T17	Investigation_result 1194 1205	EF- ok. 40%
+T18	Symptom 1228 1256	2 - krotny incydent omdlenia
+T19	Negation 1266 1272	neguje
+T20	Symptom 1273 1297	bóle w klatce piersiowej
+T21	Symptom 1300 1323	obrzęki kończyn dolnych
+T22	Negation 1325 1331	Neguje
+T23	Condition 1332 1351	przewlekłe infekcje
+T24	Condition 1354 1363	Uczulenie
+T25	Negation 1374 1384	nie podaje
+T26	Condition 1365 1372	alergie
+T27	Drug 1392 1407	Ins. Gensulin R
+T28	Drug_dose 1410 1423	8j- 8j-8j sc.
+T29	Drug 1425 1435	Gensulin N
+T30	Drug_dose 1437 1453	9j - 0 -0 -9jsc.
+T31	Treatment 1469 1483	Farmakoterapia
+T32	Investigation 1485 1501	badania obrazowe
+T33	Investigation 1503 1517	ekg m. Holtera
+T34	Investigation 1519 1522	TTE
+T35	Negation 1554 1557	Nie
+T36	Behaviour 1558 1562	pali
+T37	Negation 1566 1569	nie
+T38	Behaviour 1570 1583	pije alkoholu
+N1	Reference T1 ICD10:I07.1	NiedomykalnoÅÄ zastawki trÃ³jdzielnej
+N2	Reference T2 ICD10:E11	Cukrzyca insulinoniezaleÅ¼na
+N3	Reference T3 ICD10:R55	Omdlenie i zapaÅÄ
+N4	Reference T14 ICD10:R00.0	Tachykardia, nieokreÅlona
+N5	Reference T20 ICD10:R07.4	BÃ³l w klatce piersiowej, nieokreÅlony
+N6	Reference T21 ICD10:R22.4	Zlokalizowany obrzÄk, guz i guzek w obrÄbie koÅczyny dolnej
+N7	Reference T24 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N8	Reference T26 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N9	Reference T36 ICD10:Z72.0	UÅ¼ywanie tytoniu
+R10	Neg Arg1:T25 Arg2:T27
+R11	Drg Arg1:T29 Arg2:T30
+R15	Neg Arg1:T35 Arg2:T34
+R16	Neg Arg1:T37 Arg2:T36
+R2	Drg Arg1:T12 Arg2:T11
+R3	Drg Arg1:T12 Arg2:T13
+R4	Dat Arg1:T16 Arg2:T14
+R5	Dat Arg1:T16 Arg2:T15
+R6	Neg Arg1:T19 Arg2:T18
+R8	Neg Arg1:T22 Arg2:T21
+R9	Neg Arg1:T22 Arg2:T23
+A1	Source T16 Declared

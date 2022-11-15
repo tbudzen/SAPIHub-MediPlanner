@@ -1,0 +1,124 @@
+T1	Treatment 341 368	dalsza opieka u lekarza POZ
+T2	Treatment 380 419	dalsza opieka w Poradni Kardiologicznej
+T3	Investigation 433 476	nieinwazyjnej diagnostyki choroby wieńcowej
+T4	Investigation 487 495	angio-CT
+T5	Behaviour 499 571	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierz
+T6	Condition 789 830	Łagodna niedomykalność zastawki mitralnej
+N1	Reference T6 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T7	Condition 832 876	Łagodna niedomykalność zastawki trójdzielnej
+N2	Reference T7 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T8	Condition 878 899	Nadciśnienie tętnicze
+N3	Reference T8 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T9	Condition 901 913	Dyslipidemia
+N4	Reference T9 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T10	Condition 915 944	Podejrzenie choroby wieńcowej
+A1	Source T10 Declared
+N5	Reference T10 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T11	Condition 946 953	Otyłość
+N6	Reference T11 ICD10:E66.9	Otyłość, nieokreślona
+T12	Symptom 1138 1166	okresowymi kołataniami serca
+N7	Reference T12 ICD10:R00.2	Kołatanie serca
+T13	Symptom 1168 1193	obrzękami kończyn dolnych
+N8	Reference T13 ICD10:R60.0	Obrzęk zlokalizowany
+T14	Symptom 1195 1227	ograniczeniem tolerancji wysiłku
+T15	Symptom 1230 1250	dusznością wysiłkową
+N9	Reference T15 ICD10:R06.0	Duszność
+T16	Symptom 1280 1355	atypowymi dolegliwościami bólowymi w klatce piersiowej o charakterze ucisku
+N10	Reference T16 ICD10:R07.3	Inne bóle w klatce piersiowej
+T17	Condition 1425 1446	nadciśnienie tetnicze
+N11	Reference T17 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T18	Condition 1448 1460	dyslipidemia
+N12	Reference T18 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T19	Condition 1462 1469	otyłośc
+N13	Reference T19 ICD10:E66.9	Otyłość, nieokreślona
+T20	Negation 1470 1476	Neguje
+T21	Symptom 1478 1490	zasłabnięcia
+T22	Symptom 1492 1500	omdlenia
+N14	Reference T22 ICD10:R55	Omdlenie i zapaść
+T23	Symptom 1502 1512	krwawienia
+T24	Symptom 1514 1527	czarne stolce
+N15	Reference T24 ICD10:K92.1	Stolce smołowate
+T25	Symptom 1529 1545	brunatne wymioty
+N16	Reference T25 ICD10:K92.0	Wymioty krwawe
+T26	Condition 1547 1563	chorobę wrzodową
+N17	Reference T26 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T27	Symptom 1565 1579	duszność nocną
+N18	Reference T27 ICD10:R06.0	Duszność
+T28	Treatment 1599 1611	wyłuszczanie
+A2	Status T28 Historical_Insignificant
+N19	Reference T28 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T29	Condition 1612 1633	tłuszczaka obu piersi
+A3	Status T29 Historical_Insignificant
+N20	Reference T29 ICD10:D17.1	Tłuszczak skóry i tkanki podskórnej tułowia
+T30	Date 1635 1645	7 lat temu
+T31	Treatment 1648 1666	usunięcie tarczycy
+N21	Reference T31 ICD10:E89.0	Pozabiegowa niedoczynność tarczycy
+T32	Date 1668 1679	25 lat temu
+R1	Dat Arg1:T30 Arg2:T28	
+R2	Dat Arg1:T30 Arg2:T29	
+R3	Dat Arg1:T32 Arg2:T31	
+R4	Neg Arg1:T20 Arg2:T21	
+R5	Neg Arg1:T20 Arg2:T22	
+R6	Neg Arg1:T20 Arg2:T23	
+R7	Neg Arg1:T20 Arg2:T24	
+R8	Neg Arg1:T20 Arg2:T25	
+R9	Neg Arg1:T20 Arg2:T26	
+R10	Neg Arg1:T20 Arg2:T27	
+T33	Behaviour 1681 1710	Palenie tytoniu: okazjonalnie
+A4	Status T33 Historical_Insignificant
+N22	Reference T33 ICD10:Z72.0	Używanie tytoniu
+T34	Date 1711 1721	w młodości
+R11	Dat Arg1:T34 Arg2:T33	
+T35	Behaviour 1722 1733	Inne używki
+T36	Negation 1735 1741	neguje
+T37	Condition 1742 1751	Uczulenia
+N23	Reference T37 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T38	Negation 1753 1759	neguje
+T39	Condition 1760 1775	Wywiad rodzinny
+A5	Status T39 Family
+T40	Negation 1777 1787	nieistotny
+T41	Condition 1815 1818	WZW
+N24	Reference T41 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T42	Negation 1819 1822	(-)
+T43	Condition 1825 1834	borelioza
+N25	Reference T43 ICD10:A69.2	Choroba z Lyme
+T44	Negation 1835 1838	(-)
+T45	Condition 1840 1843	tbc
+N26	Reference T45 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T46	Condition 1849 1853	odra
+N27	Reference T46 ICD10:B05	Odra
+T47	Condition 1859 1873	kontakt z odrą
+N28	Reference T47 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+T48	Negation 1844 1847	(-)
+T49	Negation 1854 1857	(-)
+T50	Negation 1874 1877	(-)
+T51	Behaviour 1894 1920	warunki mieszkaniowe dobre
+R12	Neg Arg1:T36 Arg2:T35	
+R13	Neg Arg1:T38 Arg2:T37	
+R14	Neg Arg1:T40 Arg2:T39	
+R15	Neg Arg1:T42 Arg2:T41	
+R16	Neg Arg1:T44 Arg2:T43	
+R17	Neg Arg1:T48 Arg2:T45	
+R18	Neg Arg1:T49 Arg2:T46	
+R19	Neg Arg1:T50 Arg2:T47	
+T52	Drug 1954 1959	Acard
+T53	Drug_dose 1960 1971	75 mg 0-0-1
+T54	Drug 1972 1981	Apo-Torva
+T55	Drug_dose 1982 1993	40 mg 0-0-1
+T56	Drug 1994 2002	Bisocard
+T57	Drug_dose 2003 2013	5 mg 1-0-0
+T58	Drug 2014 2026	Telmizek HCT
+T59	Drug_dose 2027 2037	80+12,5 mg
+T60	Drug 2038 2051	Diosminex Max
+T61	Drug_dose 2052 2057	1-0-0
+T62	Investigation 2118 2139	badania laboratoryjne
+T63	Investigation 2141 2145	ECHO
+T64	Investigation 2147 2165	EKG metodą Holtera
+T65	Investigation 2167 2171	ABPM
+R20	Drg Arg1:T52 Arg2:T53	
+R21	Drg Arg1:T54 Arg2:T55	
+R22	Drg Arg1:T56 Arg2:T57	
+R23	Drg Arg1:T58 Arg2:T59	
+R24	Drg Arg1:T60 Arg2:T61	
+T66	Symptom 1254 1274	II/III klasy wg NYHA
+N29	Reference T66 ICD10:I50	Niewydolność serca

@@ -1,0 +1,126 @@
+T1	Behaviour 452 595	Wskazane unikanie leków wydłużających QT (makrolidy, leki p/grzybicze, leki p/histaminowe, leki psychiatryczne, leki p/wymiotne i prokinetyczne
+T2	Behaviour 597 637	Dieta lekkostrawna , niskocholesterolowa
+T3	Investigation 650 724	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T4	Investigation 741 776	kontrola ciśnienia tętniczego krwi.
+T5	Condition 1006 1075	Wrodzona wada serca pod postacią ubytku w przegrodzie międzykomorowej
+N1	Reference T5 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T6	Condition 1459 1528	Wrodzona wada serca pod postacią ubytku w przegrodzie międzykomorowej
+N2	Reference T6 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T7	Treatment 1085 1107	operacyjnym zamknięciu
+T8	Condition 1108 1144	ubytku w przegrodzie międzykomorowej
+N3	Reference T8 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T9	Condition 1564 1600	ubytku w przegrodzie międzykomorowej
+N4	Reference T9 ICD10:Q21.0	
+T10	Date 1146 1150	1999
+R1	Dat Arg1:T10 Arg2:T8	
+R2	Dat Arg1:T10 Arg2:T7	
+T11	Treatment 1541 1563	operacyjnym zamknięciu
+T12	Date 1602 1606	1999
+R3	Dat Arg1:T12 Arg2:T9	
+R4	Dat Arg1:T12 Arg2:T11	
+T13	Condition 1625 1648	kierunku wydłużonego QT
+N5	Reference T13 ICD10:I45.8	Inne określone zaburzenia przewodnictwa
+T14	Negation 1651 1660	negatywna
+T15	Investigation 1612 1622	Obserwacja
+A1	Source T13 Declared
+T16	Date 1662 1666	2015
+R5	Dat Arg1:T16 Arg2:T13	
+R6	Dat Arg1:T16 Arg2:T15	
+R7	Neg Arg1:T14 Arg2:T13	
+T17	Investigation 2609 2613	ECHO
+T18	Investigation 2615 2633	EKG metodą Holtera
+T19	Investigation 2635 2639	ABPM
+T20	Investigation 2641 2656	próba wysiłkowa
+T21	Behaviour 2480 2507	warunki mieszkaniowe dobre.
+T22	Negation 2454 2463	negatywny
+T23	Condition 2431 2453	W wywiadzie rodzinnym:
+A2	Status T23 Family
+R9	Neg Arg1:T22 Arg2:T23	
+T24	Drug 2519 2524	leków
+T25	Negation 2515 2518	bez
+R10	Neg Arg1:T25 Arg2:T24	
+T26	Condition 2396 2399	WZW
+N6	Reference T26 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T27	Condition 2406 2415	borelioza
+N7	Reference T27 ICD10:A69.2	Choroba z Lyme
+T28	Condition 2423 2426	tbc
+N8	Reference T28 ICD10:A15	
+T29	Negation 2427 2430	(-)
+R11	Neg Arg1:T29 Arg2:T28	
+T30	Negation 2416 2421	( - )
+R12	Neg Arg1:T30 Arg2:T27	
+T31	Negation 2400 2403	(-)
+R13	Neg Arg1:T31 Arg2:T26	
+T32	Negation 2365 2368	nie
+T33	Negation 2350 2353	nie
+T34	Negation 2318 2326	nie pali
+T35	Date 2327 2336	od 6 m-cy
+T36	Behaviour 2301 2316	Palenie tytoniu
+N9	Reference T36 ICD10:Z72.0	Używanie tytoniu
+R14	Neg Arg1:T34 Arg2:T36	
+R15	Dat Arg1:T35 Arg2:T36	
+T37	Behaviour 2337 2348	Inne używki
+R16	Neg Arg1:T33 Arg2:T37	
+T38	Condition 2354 2363	Uczulenia
+N10	Reference T38 ICD10:T78.4	Alergia, nieokreślona
+R17	Neg Arg1:T32 Arg2:T38	
+T39	Treatment 2279 2300	Przebyte operacje: jw
+T40	Symptom 2115 2127	zasłabnięcia
+N11	Reference T40 ICD10:R55	Omdlenie i zapaść
+T41	Symptom 2129 2137	omdlenia
+N12	Reference T41 ICD10:R55	Omdlenie i zapaść
+T42	Symptom 2139 2149	krwawienia
+N13	Reference T42 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T43	Symptom 2151 2164	czarne stolce
+N14	Reference T43 ICD10:K92.1	Stolce smołowate
+T44	Symptom 2166 2182	brunatne wymioty
+N15	Reference T44 ICD10:K92.0	Wymioty krwawe
+T45	Condition 2184 2200	chorobę wrzodową
+N16	Reference T45 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T46	Symptom 2202 2216	duszność nocną
+N17	Reference T46 ICD10:I50.1	Niewydolność serca lewokomorowa
+T47	Symptom 2218 2233	obrzęki podudzi
+N18	Reference T47 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T48	Symptom 2235 2259	bóle w klatce piersiowej
+N19	Reference T48 ICD10:R07.3	Inne bóle w klatce piersiowej
+T49	Symptom 2261 2277	kołatania serca,
+N20	Reference T49 ICD10:R00.2	Kołatanie serca
+T50	Negation 2107 2113	Neguje
+R18	Neg Arg1:T50 Arg2:T40	
+R19	Neg Arg1:T50 Arg2:T41	
+R20	Neg Arg1:T50 Arg2:T42	
+R21	Neg Arg1:T50 Arg2:T43	
+R22	Neg Arg1:T50 Arg2:T44	
+R23	Neg Arg1:T50 Arg2:T45	
+R24	Neg Arg1:T50 Arg2:T46	
+R25	Neg Arg1:T50 Arg2:T47	
+R26	Neg Arg1:T50 Arg2:T48	
+R27	Neg Arg1:T50 Arg2:T49	
+T51	Condition 1810 1879	wrodzoną wadą serca pod postacią ubytku w przegrodzie międzykomorowej
+N21	Reference T51 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T52	Treatment 1884 1906	operacyjnym zamknięciu
+T53	Condition 1907 1943	ubytku w przegrodzie międzykomorowej
+N22	Reference T53 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T54	Date 1945 1949	1999
+R28	Dat Arg1:T54 Arg2:T53	
+R29	Dat Arg1:T54 Arg2:T52	
+T55	Investigation 2022 2032	obserwacja
+T56	Condition 2035 2058	kierunku wydłużonego QT
+N23	Reference T56 ICD10:I45.8	Inne określone zaburzenia przewodnictwa
+T57	Negation 2061 2070	negatywna
+R30	Neg Arg1:T57 Arg2:T56	
+T58	Date 2072 2076	2015
+R31	Dat Arg1:T58 Arg2:T56	
+R32	Dat Arg1:T58 Arg2:T55	
+A3	Source T56 Declared
+T59	Condition 1153 1183	Pojedyncze pobudzenia komorowe
+N24	Reference T59 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T60	Condition 1207 1221	wydłużonego QT
+A4	Source T60 Declared
+N25	Reference T60 ICD10:I45.8	Inne określone zaburzenia przewodnictwa
+T61	Negation 1224 1233	negatywna
+R34	Neg Arg1:T61 Arg2:T60	
+T62	Investigation 1185 1206	Obserwacja w kierunku
+T63	Date 1235 1239	2015
+R35	Dat Arg1:T63 Arg2:T60	
+R36	Dat Arg1:T63 Arg2:T62	

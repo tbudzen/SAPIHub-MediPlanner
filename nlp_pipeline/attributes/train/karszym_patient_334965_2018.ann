@@ -1,0 +1,38 @@
+T1	Investigation 358 388	scyntygrafii mięśnia sercowego
+T2	Date 389 405	w dniu 24.01.19r
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Date 422 431	25.01.19r
+T4	Negation 620 623	bez
+T5	Drug 624 629	leków
+R3	Neg Arg1:T4 Arg2:T5	
+T6	Condition 869 937	Wrodzona wada serca pod postacią przełożenia wielkich pni tętniczych
+N1	Reference T6 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T7	Treatment 949 979	operacji korekcji anatomicznej
+N2	Reference T7 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T8	Date 981 992	12.12.2006r
+R4	Dat Arg1:T8 Arg2:T7	
+T9	Condition 1159 1162	TGA
+N3	Reference T9 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T10	Treatment 1166 1174	korekcji
+N4	Reference T10 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T11	Condition 1177 1182	IA II
+N5	Reference T11 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T12	Drug 1185 1199	leków na stałe
+T13	Negation 1200 1213	nie otrzymuje
+T14	Condition 1216 1233	wywiad alergiczny
+N6	Reference T14 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T15	Negation 1234 1240	ujemny
+T16	Treatment 1247 1267	pod opieka neurologa
+T17	Condition 1269 1281	torbiele  UN
+T18	Condition 1283 1290	migrena
+N7	Reference T18 ICD10:G43.9	Migrena, nieokreślona
+T19	Treatment 1291 1304	i laryngologa
+T20	Condition 1306 1316	niedosłuch
+A1	Status T20 Historical_Insignificant
+N8	Reference T20 ICD10:H91.9	Ubytek słuchu, nieokreślony
+T21	Condition 1319 1340	nosi aparaty słuchowe
+N9	Reference T21 ICD10:Z97.4	Obecność zewnętrznego aparatu słuchowego
+A2	Status T21 Historical_Insignificant
+R5	Neg Arg1:T13 Arg2:T12	
+R6	Neg Arg1:T15 Arg2:T14	
+R2	Dat Arg1:T3 Arg2:T1	

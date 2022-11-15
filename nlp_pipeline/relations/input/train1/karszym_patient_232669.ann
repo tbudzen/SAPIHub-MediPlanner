@@ -1,0 +1,51 @@
+T1	Condition 439 511	Wrodzona wada serca pod postacią wspólnego pnia tętniczego (TAC typ III)
+N1	Reference T1 ICD10:Q20.0	Wspólny pień tętniczy
+T2	Treatment 523 581	korekcji kardiochirurgicznej z użyciem homograftu płucnego
+N2	Reference T2 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T3	Date 583 592	01.03.04r
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Treatment 607 626	operacją paliatywną
+N3	Reference T4 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T5	Date 628 639	17.07.2003r
+R2	Dat Arg1:T5 Arg2:T4	
+T6	Condition 645 679	Wielopoziomowe zwężenie homograftu
+T7	Investigation 692 710	cewnikowaniu serca
+T8	Date 712 724	19. 04.2013r
+T9	Treatment 728 800	implantacją stentu CP covered 8 x 34 do proksymalnego odcinka homograftu
+N4	Reference T9 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T10	Treatment 803 864	angioplastyka wysokociśnieniowa dystalnego odcinka homograftu
+R3	Dat Arg1:T8 Arg2:T7	
+R4	Dat Arg1:T8 Arg2:T9	
+R5	Dat Arg1:T8 Arg2:T10	
+T11	Treatment 898 941	implantacji stentów oraz zastawki MELODY 22
+N5	Reference T11 ICD10:Z95.3	Obecność ksenogenicznej zastawki serca
+T12	Date 943 954	10.12.2015r
+R6	Dat Arg1:T12 Arg2:T11	
+T13	Condition 959 989	Infekcyjne zapalenie wsierdzia
+T14	Date 1003 1008	2017r
+R7	Dat Arg1:T14 Arg2:T13	
+N7	Reference T6 ICD10:T82.3	Mechaniczne powikłanie innych przeszczepów naczyniowych
+T15	Drug 1130 1138	Pluscard
+T16	Drug 1271 1279	Pluscard
+T17	Drug_dose 1282 1299	100mg 1x dziennie
+T18	Drug 1300 1314	Magne B6 forte
+T19	Drug_dose 1316 1334	1 tabl 2x dziennie
+R8	Drg Arg1:T16 Arg2:T17	
+R9	Drg Arg1:T18 Arg2:T19	
+T20	Treatment 1338 1366	Dalsza opieka kardiologiczna
+T21	Treatment 1372 1397	Dalsza opieka lekarza POZ
+T22	Condition 1537 1572	wada serca pod postacią TAC typ III
+N8	Reference T22 ICD10:Q20.0	Wspólny pień tętniczy
+T23	Treatment 1578 1599	zabiegach naprawczych
+T24	Treatment 1605 1632	implantacji zastawki Melody
+N9	Reference T24 ICD10:Z95.3	Obecność ksenogenicznej zastawki serca
+T25	Drug 1686 1694	Pluscard
+T26	Condition 1696 1713	wywiad alergiczny
+N10	Reference T26 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T27	Negation 1714 1720	ujemny
+R10	Neg Arg1:T27 Arg2:T26	
+N6	Reference T13 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+R11	Dat Arg1:T3 Arg2:T1	
+R12	Dat Arg1:T5 Arg2:T1	
+T28	Investigation 877 895	cewnikowaniu serca
+R13	Dat Arg1:T12 Arg2:T28	

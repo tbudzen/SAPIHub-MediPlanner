@@ -1,0 +1,144 @@
+T1	Condition 448 499	Choroba niedokrwienna serca - w trakcie diagnostyki
+T2	Condition 501 522	Nadciśnienie tętnicze
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Condition 524 539	Miażdżyca aorty
+N3	Reference T3 ICD10:I70.0	Miażdżyca aorty
+T4	Condition 541 563	Żylaki kończyn dolnych
+N4	Reference T4 ICD10:I83	Żylaki kończyn dolnych
+T5	Condition 565 622	Przetoka tętniczo-żylna w dorzeczu żył biodrowych prawych
+N5	Reference T5 ICD10:I77.0	Przetoka tętniczo-żylna, nabyta
+T6	Treatment 632 652	operacyjnym leczeniu
+T7	Treatment 700 708	operacji
+T8	Date 726 731	2014r
+T9	Date 734 739	2015r
+T10	Date 684 689	2009r
+R1	Dat Arg1:T10 Arg2:T6	
+R2	Dat Arg1:T8 Arg2:T7	
+R3	Dat Arg1:T9 Arg2:T7	
+T11	Treatment 850 926	dalsza opieka w poradni POZ, okresowa kontrola kardiologiczna, neurologiczna
+T12	Investigation 985 1021	wykonania angio-CT tętnic wieńcowych
+T13	Investigation 1022 1075	okresowa kontrola lipidogramu, parametrów wątrobowych
+T14	Date 1104 1112	po 6 tyg
+R4	Dat Arg1:T14 Arg2:T13	
+T15	Investigation 1115 1184	regularne pomiary ciśnienia tętniczego 2 x dz z wpisem do dzienniczka
+T16	Behaviour 1185 1220	prawidłowe żywienie i systematyczna
+T17	Behaviour 1222 1252	umiarkowana aktywność fizyczna
+T18	Treatment 1253 1281	regularne przyjmowanie leków
+T19	Drug 1283 1290	Sobycor
+T20	Drug_dose 1291 1310	2,5 mg 1 tabl. rano
+R5	Drg Arg1:T19 Arg2:T20	
+T21	Drug 1311 1321	Prestarium
+T22	Drug_dose 1322 1344	5 mg 1 tabl. wieczorem
+R6	Drg Arg1:T21 Arg2:T22	
+T23	Drug 1345 1351	Atoris
+T24	Drug_dose 1352 1375	10 mg 1 tabl. wieczorem
+R7	Drg Arg1:T23 Arg2:T24	
+T25	Drug 1376 1381	Acard
+T26	Drug_dose 1382 1405	75 mg 1 tabl. wieczorem
+R8	Drg Arg1:T25 Arg2:T26	
+T27	Drug 1406 1415	Captopril
+T28	Drug_dose 1416 1440	12,5 mg 1 tabl. doraźnie
+R9	Drg Arg1:T27 Arg2:T28	
+T29	Condition 1606 1629	nadciśnienia tętniczego
+N6	Reference T29 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T30	Date 1585 1596	wieloletnim
+R10	Dat Arg1:T30 Arg2:T29	
+T31	Symptom 1668 1707	labilnych wartości ciśnienia tętniczego
+N7	Reference T31 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T32	Symptom 1782 1814	napadowe uczucie kołatania serca
+N8	Reference T32 ICD10:R00.2	Kołatanie serca
+T33	Symptom 1820 1921	dolegliwości bólowe w klatce piersiowej o charakterze rozpierania, nie związane z wysiłkiem fizycznym
+N9	Reference T33 ICD10:R07.2	Ból w okolicy przedsercowej
+T34	Symptom 1923 1949	sporadycznie zawroty głowy
+N10	Reference T34 ICD10:R42	Zawroty głowy i odurzenie
+T35	Symptom 1979 2008	krwawieniu podpajęczynówkowym
+N11	Reference T35 ICD10:I60.9	Krwotok podpajęczynówkowy, nieokreślony
+T36	Date 2011 2019	04.2009r
+R11	Dat Arg1:T36 Arg2:T35	
+T37	Condition 2022 2079	przetoka tętniczo-żylna w dorzeczu żył biodrowych prawych
+N12	Reference T37 ICD10:I77.0	Przetoka tętniczo-żylna, nabyta
+T38	Symptom 2081 2101	Omdlenie 1 x w życiu
+N13	Reference T38 ICD10:R55	Omdlenie i zapaść
+T39	Negation 2103 2109	Neguje
+T40	Symptom 2111 2123	zasłabnięcia
+T41	Symptom 2126 2136	krwawienia
+T42	Symptom 2138 2151	czarne stolce
+N14	Reference T42 ICD10:K92.1	Stolce smołowate
+T43	Symptom 2153 2169	brunatne wymioty
+N15	Reference T43 ICD10:K92.0	Wymioty krwawe
+T44	Condition 2171 2187	chorobę wrzodową
+N16	Reference T44 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T45	Symptom 2189 2203	duszność nocną
+N17	Reference T45 ICD10:R06.0	Duszność
+R12	Neg Arg1:T39 Arg2:T45	
+R13	Neg Arg1:T39 Arg2:T44	
+R14	Neg Arg1:T39 Arg2:T43	
+R15	Neg Arg1:T39 Arg2:T42	
+R16	Neg Arg1:T39 Arg2:T41	
+R17	Neg Arg1:T39 Arg2:T40	
+T46	Treatment 2224 2248	zabieg operacyjny kolana
+A1	Status T46 Historical_Insignificant
+T47	Treatment 2250 2259	ewakuacja
+T48	Treatment 2297 2305	operacji
+T49	Date 2325 2329	2014
+T50	Date 2332 2336	2015
+R18	Dat Arg1:T49 Arg2:T48	
+R19	Dat Arg1:T50 Arg2:T48	
+T51	Behaviour 2338 2353	Palenie tytoniu
+N18	Reference T51 ICD10:Z72.0	Używanie tytoniu
+T52	Negation 2355 2363	nie pali
+R20	Neg Arg1:T52 Arg2:T51	
+T53	Behaviour 2365 2376	Inne używki
+T54	Negation 2378 2381	nie
+R21	Neg Arg1:T54 Arg2:T53	
+T55	Condition 2382 2391	Uczulenia
+T56	Negation 2393 2396	nie
+R22	Neg Arg1:T56 Arg2:T55	
+T57	Condition 2424 2427	WZW
+N19	Reference T57 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T58	Condition 2434 2443	borelioza
+N20	Reference T58 ICD10:A69.2	Choroba z Lyme
+T59	Condition 2449 2452	tbc
+N21	Reference T59 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T60	Condition 2458 2462	odra
+N22	Reference T60 ICD10:B05	Odra
+T61	Condition 2468 2482	kontakt z odrą
+N23	Reference T61 ICD10:B05	Odra
+T62	Negation 2484 2485	-
+R23	Neg Arg1:T62 Arg2:T61	
+T63	Negation 2464 2465	-
+R24	Neg Arg1:T63 Arg2:T60	
+T64	Negation 2445 2446	-
+R25	Neg Arg1:T64 Arg2:T58	
+T65	Negation 2454 2455	-
+R26	Neg Arg1:T65 Arg2:T59	
+T66	Negation 2429 2430	-
+R27	Neg Arg1:T66 Arg2:T57	
+T67	Behaviour 2503 2529	warunki mieszkaniowe dobre
+T68	Behaviour 2548 2556	emerytka
+T69	Drug 2591 2601	Concor Cor
+T70	Drug_dose 2602 2611	2,5 1-0-0
+R28	Drg Arg1:T69 Arg2:T70	
+T71	Drug 2612 2621	Armolipid
+T72	Drug_dose 2622 2627	0-0-1
+R29	Drg Arg1:T71 Arg2:T72	
+T73	Investigation 2688 2709	badania laboratoryjne
+T74	Investigation 2711 2715	ECHO
+T75	Investigation 2717 2735	EKG metodą Holtera
+T76	Investigation 2737 2741	ABPM
+T77	Investigation 2743 2758	próba wysiłkowa
+N1	Reference T1 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T78	Treatment 2205 2222	Przebyte operacje
+T79	Condition 653 682	krwiaka podpajęczynówkowatego
+N24	Reference T79 ICD10:I60.9	Krwotok podpajęczynówkowy, nieokreślony
+R30	Dat Arg1:T10 Arg2:T79	
+T80	Condition 709 724	zaćmy obuocznej
+N25	Reference T80 ICD10:H26.9	Zaćma, nieokreślona
+R31	Dat Arg1:T8 Arg2:T80	
+R32	Dat Arg1:T9 Arg2:T80	
+T81	Condition 2260 2287	krwiaka podpajęczynówkowego
+N26	Reference T81 ICD10:I60.9	Krwotok podpajęczynówkowy, nieokreślony
+T82	Condition 2306 2323	zaćmy - obuocznej
+N27	Reference T82 ICD10:H26.9	Zaćma, nieokreślona
+R33	Dat Arg1:T49 Arg2:T82	
+R34	Dat Arg1:T50 Arg2:T82	

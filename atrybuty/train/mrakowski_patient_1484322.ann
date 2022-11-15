@@ -1,0 +1,172 @@
+T1	Treatment 345 372	dalsza opieka w poradni POZ
+T2	Treatment 380 429	okresowa kontrola w Poradni Kardiologicznej ICZMP
+T3	Treatment 436 478	konsultacja ortopedyczna i pulmonologiczna
+T4	Treatment 485 533	kontrola endokrynologiczna, gastroenterologiczna
+T5	Investigation 539 578	codzienna kontrola ciśnienia tętniczego
+T6	Investigation 586 626	okresowa kontrola lipidogramu, d-dimerów
+T7	Date 628 641	za 4 tygodnie
+T8	Investigation 648 665	hormonów tarczycy
+R1	Dat Arg1:T7 Arg2:T6	
+R2	Dat Arg1:T7 Arg2:T8	
+T9	Behaviour 672 727	dieta DASH, spożywanie co najmniej 1.5l płynów dziennie
+T10	Behaviour 734 753	redukcja masy ciała
+T11	Behaviour 762 786	oszczędzający tryb życia
+T12	Treatment 793 821	regularne przyjmowanie leków
+T13	Drug 831 836	Acard
+T14	Drug_dose 837 887	75 mg 1 tabl. wieczorem (lek dostępny bez recepty)
+R3	Drg Arg1:T13 Arg2:T14	
+T15	Drug 896 899	IPP
+T16	Drug_dose 900 954	20 mg 1 tabl. rano (na czczo, 30 min przed śniadaniem)
+R4	Drg Arg1:T15 Arg2:T16	
+T17	Drug 962 968	Atoris
+T18	Drug_dose 969 992	20 mg 1 tabl. wieczorem
+R5	Drg Arg1:T17 Arg2:T18	
+T19	Drug 1002 1009	Nebilet
+T20	Drug_dose 1010 1096	5 mg 3/4  tabl. rano (dawka do optymalizacji pod kontrole lekarza POZ z oceną HR i BP)
+R6	Drg Arg1:T19 Arg2:T20	
+T21	Drug 1104 1116	Tertensif SR
+T22	Drug_dose 1117 1129	1 tabl. rano
+R7	Drg Arg1:T21 Arg2:T22	
+T23	Drug 1139 1146	Tritace
+T24	Drug_dose 1147 1169	5 mg 1 tabl. wieczorem
+R8	Drg Arg1:T23 Arg2:T24	
+T25	Drug 1179 1187	Nilogrin
+T26	Drug_dose 1188 1218	10 mg 1 tabl. rano i wieczorem
+R9	Drg Arg1:T25 Arg2:T26	
+T27	Drug 1228 1235	Milurit
+T28	Drug_dose 1236 1255	100 mg 1 tabl. rano
+R10	Drg Arg1:T27 Arg2:T28	
+T29	Drug 1265 1277	Euthyrox N75
+T30	Drug_dose 1278 1365	1 tabl. rano na czczo (poniedziałek - piątek, wg dotychczasowych zaleceń endokrynologa)
+R11	Drg Arg1:T29 Arg2:T30	
+T31	Drug 1375 1387	Euthyrox N50
+T32	Drug_dose 1388 1470	1 tabl. rano na czczo (sobota-niedziela, wg dotychczasowych zaleceń endokrynologa)
+R12	Drg Arg1:T31 Arg2:T32	
+T33	Drug 1481 1490	Captopril
+T34	Drug_dose 1491 1505	12.5mg 1 tabl.
+R13	Drg Arg1:T33 Arg2:T34	
+T35	Drug_dose 1506 1561	doraźnie pod język w razie wzrostu ciśnienia tętniczego
+R14	Drg Arg1:T33 Arg2:T35	
+T36	Drug 1572 1589	Nitromint aerozol
+T37	Drug 1733 1739	Tramal
+T38	Drug_dose 1590 1722	1 dawka pod język w razie bólu w klatce piersiowej (w przypadku nieustąpienia dolegliwości po 5 minutach wezwać pogotowie ratunkowe)
+R15	Drg Arg1:T36 Arg2:T38	
+T39	Drug_dose 1740 1791	50 mg 1 tabl. doraźnie w razie bólu kończyny dolnej
+R16	Drg Arg1:T37 Arg2:T39	
+T40	Condition 2019 2046	Przewlekła choroba wieńcowa
+N1	Reference T40 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T41	Condition 2048 2083	Miażdżyca tętnic szyjnych wspólnych
+N2	Reference T41 ICD10:I65.2	Niedrożność i zwężenie tętnicy szyjnej wewnętrznej
+T42	Condition 2085 2128	Nadciśnienie tętnicze II stopnia wg ESC/ESH
+N3	Reference T42 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T43	Condition 2130 2167	Łagodny przerost mięśnia lewej komory
+N4	Reference T43 ICD10:I51.7	Powiększenie serca
+T44	Condition 2169 2193	Otyłość I stopnia wg WHO
+N5	Reference T44 ICD10:E66.9	Otyłość, nieokreślona
+T45	Behaviour 2195 2205	Nikotynizm
+T46	Date 2206 2219	w przeszłości
+R17	Dat Arg1:T46 Arg2:T45	
+T47	Condition 2221 2280	Wada serca pod postacią niedomykalności mitralnej I stopnia
+N7	Reference T47 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T48	Condition 2282 2304	Zaburzenia nadkomorowe
+N8	Reference T48 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T49	Condition 2307 2350	komorowe rytmu serca (PSVT, ekstrasystolie)
+N9	Reference T49 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T50	Condition 2352 2365	Hiperurykemia
+N10	Reference T50 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T51	Condition 2367 2388	Wole guzkowe tarczycy
+N11	Reference T51 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T52	Treatment 2389 2423	w trakcie leczenia substytucyjnego
+T53	Drug 2424 2435	l-tyroksyną
+T54	Condition 2436 2455	w stadium eutyreozy
+T55	Condition 2457 2499	Przepuklina wślizgowa rozworu przełykowego
+N12	Reference T55 ICD10:K44	Przepuklina przeponowa
+T56	Condition 2501 2565	Zmiany zanikowe mózgu i móżdżku z poszerzeniem układu komorowego
+N13	Reference T56 ICD10:G31.0	Zanik mózgu ograniczony
+T57	Condition 2575 2601	upadku z wysokości własnej
+N14	Reference T57 ICD10:W01	Upadek na tym samym poziomie wskutek potknięcia, poślizgnięcia
+T58	Date 2603 2613	08/06/2019
+R18	Dat Arg1:T58 Arg2:T57	
+T59	Condition 2617 2645	urazem kończyny dolnej lewej
+N15	Reference T59 ICD10:T13.9	Nieokreślony uraz kończyny dolnej, poziom nieokreślony
+R19	Dat Arg1:T58 Arg2:T59	
+T60	Treatment 2655 2668	appendektomii
+A1	Status T60 Historical_Insignificant
+T61	Date 2670 2674	1970
+R20	Dat Arg1:T61 Arg2:T60	
+T62	Condition 2677 2688	Guzki płuca
+N16	Reference T62 ICD10:D38.1	Tchawica, oskrzele i płuco
+T63	Investigation_result 2691 2737	w segmencie 6 płuca prawego guzek średnicy 4mm
+T64	Investigation_result 2739 2806	w segmencie 10 płuca lewego ognisko zagęszczeń miąższu średnicy 7mm
+N17	Reference T63 ICD10:R91	Nieprawidłowe wyniki diagnostycznych badań obrazowych płuc
+N18	Reference T64 ICD10:R91	Nieprawidłowe wyniki diagnostycznych badań obrazowych płuc
+T65	Condition 2977 3000	nadciśnieniem tętniczym
+N19	Reference T65 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T66	Negation 3001 3017	niekontrolowanym
+T67	Treatment 3018 3034	farmakologicznie
+R21	Neg Arg1:T66 Arg2:T67	
+T68	Symptom 3036 3080	dolegliwościami bólowymi w klatce piersiowej
+N20	Reference T68 ICD10:R07.3	Inne bóle w klatce piersiowej
+T69	Symptom 3122 3163	dusznością wysiłkową do III klasy wg NYHA
+N21	Reference T69 ICD10:R06.0	Duszność
+T70	Condition 3165 3179	wolem guzkowym
+N22	Reference T70 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T71	Condition 3184 3210	upadku z własnej wysokości
+N23	Reference T71 ICD10:W01	Upadek na tym samym poziomie wskutek potknięcia, poślizgnięcia
+T72	Date 3212 3222	08/06/2019
+R22	Dat Arg1:T72 Arg2:T71	
+T73	Negation 3311 3317	Neguje
+T74	Symptom 3318 3330	zasłabnięcia
+T75	Symptom 3332 3352	duszność spoczynkową
+N24	Reference T75 ICD10:R06.0	Duszność
+T76	Symptom 3354 3385	typowe bóle w klatce piersiowej
+R23	Neg Arg1:T73 Arg2:T74	
+R24	Neg Arg1:T73 Arg2:T75	
+R25	Neg Arg1:T73 Arg2:T76	
+T77	Treatment 3387 3404	Przebyte operacje
+T78	Treatment 3407 3420	appendectomia
+A2	Status T78 Historical_Insignificant
+T79	Date 3423 3428	1970r
+R26	Dat Arg1:T79 Arg2:T78	
+T80	Condition 3457 3460	WZW
+N26	Reference T80 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T81	Condition 3469 3478	borelioza
+N27	Reference T81 ICD10:A69.2	Choroba z Lyme
+T82	Condition 3486 3494	gruźlica
+T83	Condition 3500 3504	odra
+N29	Reference T83 ICD10:B05	Odra
+T84	Negation 3496 3497	-
+R27	Neg Arg1:T84 Arg2:T82	
+T85	Negation 3481 3482	-
+R28	Neg Arg1:T85 Arg2:T81	
+T86	Negation 3463 3464	-
+R29	Neg Arg1:T86 Arg2:T80	
+T87	Condition 3509 3524	Wywiad rodzinny
+A3	Status T87 Family
+T88	Condition 3534 3554	"chorowała na serce"
+N30	Reference T88 ICD10:I51.6	Choroby serca i naczyń krwionośnych, nieokreślone
+A4	Status T88 Family
+T89	Behaviour 3555 3570	Palenie tytoniu
+T91	Date 3587 3596	od 40 lat
+T92	Negation 3597 3605	nie pali
+R30	Dat Arg1:T91 Arg2:T89	
+R31	Neg Arg1:T92 Arg2:T89	
+T90	Behaviour 3614 3625	Inne używki
+T93	Negation 3627 3630	nie
+R32	Neg Arg1:T93 Arg2:T90	
+T94	Condition 3631 3640	Uczulenia
+N32	Reference T94 ICD10:T78.4	Alergia, nieokreślona
+T95	Negation 3642 3648	neguje
+R33	Neg Arg1:T95 Arg2:T94	
+T96	Behaviour 3665 3691	warunki mieszkaniowe dobre
+T97	Date 3104 3120	w porach nocnych
+R34	Dat Arg1:T97 Arg2:T68	
+N6	Reference T45 ICD10:Z72.0	Używanie tytoniu
+N35	Reference T74 ICD10:R55	Omdlenie i zapaść
+N31	Reference T89 ICD10:Z72.0	Używanie tytoniu
+A5	Status T59 Historical_Insignificant
+A6	Status T57 Historical_Insignificant
+A7	Status T71 Historical_Insignificant
+N25	Reference T76 ICD10:R07.4	Ból gardła i w klatce piersiowej
+N28	Reference T82 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N33	Reference T90 ICD10:Z72	Problemy związane ze stylem życia

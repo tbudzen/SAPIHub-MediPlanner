@@ -1,0 +1,69 @@
+T1	Negation 1932 1938	( -  )
+T2	Negation 1951 1956	( - )
+T3	Negation 2070 2076	neguje
+T4	Negation 2055 2058	nie
+T5	Negation 1765 1771	neguje
+T6	Negation 1743 1749	Neguje
+T7	Drug 1128 1135	Nebilet
+T8	Drug 1156 1163	Amlopin
+T9	Negation 1857 1861	brak
+T10	Drug 2143 2150	Nebilet
+T11	Condition 578 622	Łagodna niedomykalność zastawki trójdzielnej
+N1	Reference T11 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T12	Condition 625 669	Pojedyncze pobudzenia komorowe i nadkomorowe
+N2	Reference T12 ICD10:I49	Inne zaburzenia rytmu serca
+T13	Condition 671 692	Nadciśnienie tętnicze
+N3	Reference T13 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T14	Behaviour 694 704	Nikotynizm
+N4	Reference T14 ICD10:Z72.0	Używanie tytoniu
+T15	Drug 341 349	Nebispes
+T16	Treatment 822 896	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Pulmonologicznej
+T17	Behaviour 899 939	Dieta lekkostrawna , niskocholesterolowa
+T18	Investigation 943 1026	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T19	Investigation 1029 1077	Systematyczna kontrola ciśnienia tętniczego krwi
+T20	Drug_dose 1136 1152	5 mg 1 x dz rano
+T21	Drug_dose 1164 1192	5 mg 1x dz po 1/2 tabl. rano
+R1	Drg Arg1:T7 Arg2:T20	
+R2	Drg Arg1:T8 Arg2:T21	
+T22	Investigation_result 1591 1636	chwiejnych wartości ciśnienia tętniczego krwi
+T23	Condition 1642 1663	przyspieszonego tętna
+N5	Reference T23 ICD10:R00.0	Tachykardia, nieokreślona
+T24	Symptom 1674 1682;1693 1711	okresowo znaczne osłabienie
+T25	Symptom 1717 1741	okresowe kołatania serca
+N6	Reference T25 ICD10:R00.2	Kołatanie serca
+T26	Symptom 1750 1762	zasłabnięcia
+N7	Reference T26 ICD10:R55	Omdlenie i zapaść
+T27	Symptom 1772 1796	bóle w klatce piersiowej
+N8	Reference T27 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T28	Condition 1812 1833	nadciśnienie tętnicze
+N9	Reference T28 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T29	Treatment 1837 1854	Przebyte operacje
+N10	Reference T29 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T30	Treatment 1862 1899	Leczenie przewlekłe:  Pulmonologiczne
+T31	Condition 1928 1931	WZW
+N11	Reference T31 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T32	Condition 1941 1950	borelioza
+N12	Reference T32 ICD10:A69.2	Choroba z Lyme
+R3	Neg Arg1:T6 Arg2:T26	
+R4	Neg Arg1:T5 Arg2:T27	
+R5	Neg Arg1:T9 Arg2:T29	
+R6	Neg Arg1:T1 Arg2:T31	
+R7	Neg Arg1:T2 Arg2:T32	
+T33	Condition 1989 1997	cukrzyca
+A1	Status T33 Family
+N13	Reference T33 ICD10:E14	Cukrzyca nieokreślona
+T34	Behaviour 1999 2040	Palenie tytoniu: 5-10 papierosów dziennie
+N14	Reference T34 ICD10:Z72.0	Używanie tytoniu
+T35	Behaviour 2042 2053	Inne używki
+N15	Reference T35 ICD10:Z72	Problemy związane ze stylem życia
+T36	Condition 2059 2068	Uczulenia
+N16	Reference T36 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T37	Behaviour 2093 2119	warunki mieszkaniowe dobre
+T38	Behaviour 2122 2136	mieszka z mamą
+R8	Neg Arg1:T4 Arg2:T35	
+R9	Neg Arg1:T3 Arg2:T36	
+T39	Drug_dose 2151 2167	5 mg 1 x dz rano
+T40	Investigation 2185 2195	Echo serca
+T41	Investigation 2198 2213	Holter EKG , RR
+T42	Investigation 2217 2232	Próba Wysiłkowa
+R10	Drg Arg1:T10 Arg2:T39	

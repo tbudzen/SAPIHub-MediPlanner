@@ -1,0 +1,135 @@
+T1	Drug 617 625	Euthyrox
+T2	Drug 753 762	Nebilenin
+T3	Drug 781 787	Diuver
+T4	Drug 807 815	Valsacor
+T5	Drug 841 848	Amlozek
+T6	Drug 872 877	Acard
+T7	Drug 902 908	Atoris
+T8	Drug 933 941	Gliclada
+T9	Drug 961 970	Metformax
+T10	Drug 993 1002	Furagin
+T11	Drug_dose 626 666	50 ug 1/2 tabl. 30 min. przed niadaniem
+T12	Treatment 330 357	dalsza opieka w poradni POZ
+T13	Treatment 359 410	okresowa kontrola kardiologiczna, endokrynologiczna
+T14	Investigation 420 432	kontrola TSH
+T15	Date 433 446	za 2 miesišce
+T16	Investigation 447 487	okresowa kontrola lipidogramu, jonogramu
+T17	Investigation 488 526	regularne pomiary cinienia tętniczego
+T18	Behaviour 527 610	dieta cukrzycowa, ubogocholesterolowa, z niskš zawartociš soli kuchennej (do 5g/d)
+R1	Dat Arg1:T15 Arg2:T14
+T19	Drug_dose 763 780	5 mg 1 tabl. rano
+T20	Drug_dose 788 806	10 mg 1 tabl. rano
+T21	Drug_dose 849 871	5 mg 1 tabl. wieczorem
+T22	Drug_dose 878 901	75 mg 1 tabl. wieczorem
+T23	Drug_dose 909 932	20 mg 1 tabl. wieczorem
+T24	Drug_dose 942 960	60 mg 1 tabl. rano
+T25	Drug_dose 971 992	500 mg 1 tabl. 3 x dz
+T26	Drug_dose 1002 1016	1 tabl. 3 x dz
+T27	Condition 1235 1264	Przewlekła niewydolnoć serca
+N1	Reference T27 ICD10:I50.9	Niewydolność serca, nieokreślona
+T28	Symptom 1265 1279	II kl. wg NYHA
+N2	Reference T28 ICD10:I50	Niewydolność serca
+T29	Condition 1281 1332	Nadcinienie tętnicze III st wg ESH/ESC zredukowane
+N3	Reference T29 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T30	Condition 1334 1347	Cukrzyca t.2.
+N4	Reference T30 ICD10:E11	Cukrzyca insulinoniezależna
+T31	Condition 1348 1356	Otyłoć.
+N5	Reference T31 ICD10:E66.9	Otyłość, nieokreślona
+T32	Condition 1357 1377	Hipertriglicerydemia
+N6	Reference T32 ICD10:E78.1	Czysta hiperglicerydemia
+T33	Date 1379 1396	wieżo rozpoznana
+T34	Condition 1397 1419	niedoczynnoć tarczycy
+N7	Reference T34 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T35	Condition 1421 1431	Niedosłuch
+N8	Reference T35 ICD10:H90	Upośledzenie słuchu przewodzeniowe i czuciowo-nerwowe
+T36	Condition 1433 1459	Zakażenie układu moczowego
+N9	Reference T36 ICD10:N39.0	Zakażenie układu moczowego o nieokreślonym umiejscowieniu
+R2	Dat Arg1:T33 Arg2:T34
+T37	Drug_dose 816 840	160 mg 1 tabl. wieczorem
+R3	Drg Arg1:T2 Arg2:T19
+R4	Drg Arg1:T3 Arg2:T20
+R5	Drg Arg1:T4 Arg2:T37
+R6	Drg Arg1:T5 Arg2:T21
+R7	Drg Arg1:T6 Arg2:T22
+R8	Drg Arg1:T7 Arg2:T23
+R9	Drg Arg1:T8 Arg2:T24
+R10	Drg Arg1:T9 Arg2:T25
+R11	Drg Arg1:T10 Arg2:T26
+T38	Date 1608 1619	wieloletnim
+T39	Condition 1620 1643	nadcinieniem tętniczym
+N10	Reference T39 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T40	Condition 1645 1657	cukrzycš t.2
+N11	Reference T40 ICD10:E11	Cukrzyca insulinoniezależna
+T41	Investigation_result 1688 1727	labilnych wartoci cinienia tętniczego
+T42	Treatment 1729 1746	Przebyte operacje
+N12	Reference T42 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T43	Negation 1748 1764	wywiad negatywny
+T44	Condition 1765 1780	Wywiad rodzinny
+T45	Negation 1782 1795	bez znaczenia
+T46	Condition 1797 1804	Alergie
+N13	Reference T46 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T47	Negation 1807 1813	neguje
+T48	Date 433 446	za 2 miesiące
+R12	Dat Arg1:T48 Arg2:T14
+T49	Investigation 488 526	regularne pomiary ciśnienia tętniczego
+T50	Behaviour 527 610	dieta cukrzycowa, ubogocholesterolowa, z niską zawartością soli kuchennej (do 5g/d)
+T51	Drug_dose 626 682	50 ug 1/2 tabl. 30 min. przed śniadaniem przez 1 tydzień
+T53	Drug_dose 684 717	1 tabletkę (50ug) przez 2 tydzień
+T55	Drug_dose 719 751	1,5 tabl. (75ug) przez 3 tydzień
+R16	Drg Arg1:T1 Arg2:T51
+R17	Drg Arg1:T1 Arg2:T53
+R18	Drg Arg1:T1 Arg2:T55
+T57	Condition 1235 1264	Przewlekła niewydolność serca
+N14	Reference T57 ICD10:I50.9	Niewydolność serca, nieokreślona
+T58	Condition 1281 1320	Nadciśnienie tętnicze III st wg ESH/ESC
+N15	Reference T58 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T59	Treatment 1321 1332	zredukowane
+T60	Condition 1348 1355	Otyłość
+N16	Reference T60 ICD10:E66.9	Otyłość, nieokreślona
+T61	Condition 1397 1419	niedoczynność tarczycy
+N17	Reference T61 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+R19	Dat Arg1:T33 Arg2:T61
+T62	Condition 1620 1643	nadciśnieniem tętniczym
+N18	Reference T62 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T63	Condition 1645 1657	cukrzycą t.2
+N19	Reference T63 ICD10:E11	Cukrzyca insulinoniezależna
+T64	Investigation_result 1688 1727	labilnych wartości ciśnienia tętniczego
+R20	Dat Arg1:T38 Arg2:T62
+T65	Negation 1827 1833	neguje
+R21	Neg Arg1:T43 Arg2:T42
+R22	Neg Arg1:T45 Arg2:T44
+T66	Negation 1845 1851	neguje
+T67	Behaviour 1815 1825	Nikotynizm
+N20	Reference T67 ICD10:Z72.0	Używanie tytoniu
+T68	Behaviour 1836 1843	Alkohol
+N21	Reference T68 ICD10:Z72.1	Używanie alkoholu
+T69	Behaviour 1852 1869	Uzależnienie inne
+N22	Reference T69 ICD10:Z72	Problemy związane ze stylem życia
+T70	Behaviour 1902 1914	mieszka sama
+T71	Behaviour 1916 1934	3 córki dochodzące
+R23	Neg Arg1:T47 Arg2:T46
+R24	Neg Arg1:T65 Arg2:T67
+R25	Neg Arg1:T66 Arg2:T68
+T72	Negation 1871 1877	neguje
+R26	Neg Arg1:T72 Arg2:T69
+T73	Drug 1941 1950	Nebilenin
+T74	Drug_dose 1951 1968	5 mg 1 tabl. rano
+T75	Drug 1969 1977	Valsacor
+T76	Drug_dose 1978 2002	160 mg 1 tabl. wieczorem
+T77	Drug 2003 2008	Acard
+T78	Drug_dose 2009 2032	75 mg 1 tabl. wieczorem
+T79	Drug 2033 2042	Simvacard
+T80	Drug_dose 2043 2066	20 mg 1 tabl. wieczorem
+T81	Drug 2067 2073	Diuver
+T82	Drug_dose 2074 2092	10 mg 1 tabl. rano
+T83	Drug 2093 2101	Gliclada
+T84	Drug_dose 2102 2120	60 mg 1 tabl. rano
+T85	Drug 2121 2130	Metformax
+T86	Drug_dose 2134 2150	1/2 tabl. 2 x dz
+R27	Drg Arg1:T85 Arg2:T86
+R28	Drg Arg1:T83 Arg2:T84
+R29	Drg Arg1:T81 Arg2:T82
+R30	Drg Arg1:T79 Arg2:T80
+R31	Drg Arg1:T77 Arg2:T78
+R32	Drg Arg1:T75 Arg2:T76
+R33	Drg Arg1:T73 Arg2:T74

@@ -1,0 +1,71 @@
+T1	Drug 340 347	BETO ZK
+T2	Drug 349 360	Haloperidol
+T3	Drug 362 367	Acard
+T4	Drug 369 379	Essentiale
+T5	Drug 391 400	Perfalgan
+T6	Drug 402 409	Fragmin
+T7	Drug 411 419	Enarenal
+T8	Drug 421 431	Sildenafil
+T9	Drug 380 389	Cefazolin
+T10	Drug 540 545	Acard
+T11	Drug 570 578	Enarenal
+T12	Drug 601 611	Sildenafil
+T13	Drug 636 650	Essentiale max
+T14	Treatment 676 710	Kontrola w poradni kardiologicznej
+T15	Date 711 724	za 3 miesiące
+T16	Treatment 769 808	Dalsza opieka w poradni hepatologicznej
+T17	Treatment 821 842	operacji met. Fontana
+N1	Reference T17 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T18	Treatment 843 904	wymaga wykonania szczegółowej diagnostyki zwłóknienia wątroby
+T19	Investigation 930 948	badania FIBRO-SCAN
+T20	Investigation 953 973	elastografii wątroby
+R1	Dat Arg1:T15 Arg2:T14	
+T21	Drug_dose 546 569	150mg p.o. 1 x dziennie
+T22	Drug_dose 579 600	5mg p.o. 1 x dziennie
+T23	Drug_dose 612 635	100mg p.o. 2 x dziennie
+T24	Drug_dose 651 675	1 kaps p.o. 1 x dziennie
+R2	Drg Arg1:T10 Arg2:T21	
+R3	Drg Arg1:T11 Arg2:T22	
+R4	Drg Arg1:T12 Arg2:T23	
+R5	Drg Arg1:T13 Arg2:T24	
+T25	Condition 1192 1265	Wrodzona złożona wada serca pod postacią zarośnięcia zastawki dwudzielnej
+N2	Reference T25 ICD10:Q23.2	Wrodzone zwężenie zastawki mitralnej
+T26	Condition 1268 1283	wspólnej komory
+N3	Reference T26 ICD10:Q20.4	Wejście obu dróg żylnych do jedynej komory
+T27	Condition 1286 1322	przełożeniem wielkich pni tętniczych
+N4	Reference T27 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T28	Condition 1328 1352	zwężenia tętnicy płucnej
+N5	Reference T28 ICD10:Q25.6	Zwężenie pnia płucnego
+T29	Condition 1357 1369	Dextrokardia
+N6	Reference T29 ICD10:Q24.0	Prawostronne położenie serca
+T30	Treatment 1382 1426	zespoleniu systemowo - płucnym prawostronnym
+N7	Reference T30 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T31	Date 1428 1439	07.03.2003r
+R6	Dat Arg1:T31 Arg2:T30	
+T32	Treatment 1452 1487	zespoleniu typu dwukierunkowy Glenn
+N8	Reference T32 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T33	Date 1489 1500	20.01.2004r
+R7	Dat Arg1:T33 Arg2:T32	
+T34	Treatment 1513 1536	operacji metodą Fontana
+N9	Reference T34 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T35	Date 1538 1549	18.01.2006r
+R8	Dat Arg1:T35 Arg2:T34	
+T36	Condition 1554 1580	Zwężenie zespolenia Glenna
+T37	Condition 1586 1639	obecność przetok żylno - żylnych w lewym kącie żylnym
+T38	Treatment 1665 1705	angioplastyką zwężenia zespolenia Glenna
+N12	Reference T38 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T39	Treatment 1707 1830	zwężenia tunelu zewnątrzprzedsionkowego z implantacją stentu CP 4528 COVERED 18 x 45 mm z doprężeniem stentu śr. 20 x 40 mm
+N13	Reference T39 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T40	Treatment 1836 1903	zamknięciu przetoki żylnej zestawem Amplatzer vascular Plug IV 8 mm
+N14	Reference T40 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T41	Date 1905 1916	26.06.2017r
+R9	Dat Arg1:T41 Arg2:T40	
+R10	Dat Arg1:T41 Arg2:T39	
+R11	Dat Arg1:T41 Arg2:T38	
+T42	Condition 1921 2001	Niedrożność odcinka proksymalnego żyły głównej górnej prawej w odcinku dystalnym
+T43	Investigation 2014 2032	cewnikowaniu serca
+N11	Reference T43 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T44	Date 2033 2044	16.08.2019r
+R12	Dat Arg1:T44 Arg2:T43	
+T45	Investigation 1644 1662	Cewnikowanie serca
+R13	Dat Arg1:T41 Arg2:T45	

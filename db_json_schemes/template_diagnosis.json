@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "diagnosis",
+  "type": "object",
+  "properties": {
+    "patientIdentifier": {
+      "type": "string"
+    },
+    "dateAdded": {
+      "type": "string",
+      "format": "date"
+    },
+    "analyserVersion": {
+      "type": "string"
+    },
+    "alternativeManualDiagnosis": {
+      "type": "string"
+    },
+    "additionalManualComment": {
+      "type": "string"
+    },
+    "addtionalDataRequired": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/additionalData"
+      }
+    },
+    "diagnoses": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/diagnosis"
+      }
+    },
+    "dataWasSufficient": {
+      "type": "boolean"
+    }
+  },
+
+  "required": ["patientIdentifier", "dateAdded", "analyserVersion", "alternativeManualDiagnosis", "additionalManualComment",
+    "addtionalDataRequired", "diagnoses", "dataWasSufficient"],
+
+  "definitions":
+  {
+    "diagnosis": {
+        "type": "object",
+        "required": ["diagIdentifier"],
+        "properties": {
+          "diagIdentifier": {
+            "type": "string"
+          }
+        }
+    },
+    "additionalData":
+    {
+        "type": "object",
+        "required": ["additionalData"],
+        "properties": {
+          "additionalData": {
+            "type": "string"
+          }
+        }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+T1	Condition 412 440	Kardiomiopatia rozstrzeniowa
+N1	Reference T1 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+T2	Behaviour 679 718	Dieta ubogocholesterolowa i niskosodowa
+T3	Investigation 730 783	kontrola ciśnienia tętniczego krwi i poziomu glikemii
+T4	Drug 818 827	Opacorden
+T5	Drug 840 846	Siofor
+T6	Drug 859 866	Pradaxa
+T7	Drug 879 886	Beto ZK
+T8	Drug 899 907	Torsemed
+T9	Drug 918 925	Nonpres
+T10	Drug 937 945	Suvardio
+T11	Drug 957 964	Nolpaza
+T12	Drug 976 984	Magnezin
+T13	Drug 997 1003	Karbis
+T14	Treatment 1015 1030	Insulinoterapia
+T15	Drug 1032 1039	Mixtard
+T16	Drug_dose 1040 1079	30 38j-0-38j – modyfikowane wg glikemii
+R1	Drg Arg1:T15 Arg2:T16	
+T17	Drug_dose 1004 1014	16mg 0-0-1
+R2	Drg Arg1:T13 Arg2:T17	
+T18	Drug_dose 985 996	500mg 1-1-1
+R3	Drg Arg1:T12 Arg2:T18	
+T19	Drug_dose 965 975	20mg 1-0-0
+R4	Drg Arg1:T11 Arg2:T19	
+T20	Drug_dose 946 956	20mg 0-0-1
+R5	Drg Arg1:T10 Arg2:T20	
+T21	Drug_dose 926 936	25mg 0-1-0
+R6	Drg Arg1:T9 Arg2:T21	
+T22	Drug_dose 908 917	5mg 1-1-0
+R7	Drg Arg1:T8 Arg2:T22	
+T23	Drug_dose 887 898	50 mg 1-0-1
+R8	Drg Arg1:T7 Arg2:T23	
+T24	Drug_dose 867 878	150mg 1-0-1
+R9	Drg Arg1:T6 Arg2:T24	
+T25	Drug_dose 847 858	850mg 1-0-0
+R10	Drg Arg1:T5 Arg2:T25	
+T26	Drug_dose 828 839	200mg 1-0-0
+R11	Drg Arg1:T4 Arg2:T26	
+T27	Investigation 2337 2340	TTE
+T28	Investigation 2342 2346	ABPM
+T29	Investigation 2348 2358	Holter EKG
+T30	Drug 2275 2282	Mixtard
+T31	Drug_dose 2283 2322	30 38j-0-38j – modyfikowane wg glikemii
+R12	Drg Arg1:T30 Arg2:T31	
+T32	Treatment 2258 2273	Insulinoterapia
+T33	Drug 2241 2247	Karbis
+T34	Drug 2220 2228	Magnezin
+T35	Drug_dose 2248 2257	8mg 0-0-1
+R13	Drg Arg1:T33 Arg2:T35	
+T36	Drug_dose 2229 2240	500mg 1-1-1
+R14	Drg Arg1:T34 Arg2:T36	
+T37	Drug 2201 2208	Nolpaza
+T38	Drug 2181 2189	Suvardio
+T39	Drug 2162 2169	Nonpres
+T40	Drug 2142 2150	Torsemed
+T41	Drug 2118 2125	Beto ZK
+T42	Drug 2098 2105	Pradaxa
+T43	Drug 2079 2085	Siofor
+T44	Drug 2057 2066	Opacorden
+T45	Drug_dose 2067 2078	200mg 1-0-0
+R15	Drg Arg1:T44 Arg2:T45	
+T46	Drug_dose 2086 2097	850mg 1-0-0
+R16	Drg Arg1:T43 Arg2:T46	
+T47	Drug_dose 2106 2117	150mg 1-0-1
+R17	Drg Arg1:T42 Arg2:T47	
+T48	Drug_dose 2126 2141	50 mg 1,5-0-1,5
+R18	Drg Arg1:T41 Arg2:T48	
+T49	Drug_dose 2151 2161	10mg 1-0-0
+R19	Drg Arg1:T40 Arg2:T49	
+T50	Drug_dose 2170 2180	25mg 0-1-0
+R20	Drg Arg1:T39 Arg2:T50	
+T51	Drug_dose 2190 2200	20mg 0-0-1
+R21	Drg Arg1:T38 Arg2:T51	
+T52	Drug_dose 2209 2219	20mg 1-0-0
+R22	Drg Arg1:T37 Arg2:T52	
+T53	Negation 2012 2018	neguje
+T54	Negation 1997 2000	nie
+T55	Negation 1980 1983	nie
+T56	Negation 1883 1888	( - )
+T57	Negation 1899 1904	( - )
+T58	Condition 2001 2010	Uczulenia
+N2	Reference T58 ICD10:T78.4	Alergia, nieokreślona
+R23	Neg Arg1:T53 Arg2:T58	
+T59	Behaviour 1984 1995	Inne używki
+R24	Neg Arg1:T54 Arg2:T59	
+T60	Behaviour 1963 1978	Palenie tytoniu
+N3	Reference T60 ICD10:T65.2	Tytoń i nikotyna
+R25	Neg Arg1:T55 Arg2:T60	
+T61	Condition 1937 1947	udar mózgu
+N4	Reference T61 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+A1	Status T61 Family
+T62	Condition 1873 1882	borelioza
+N5	Reference T62 ICD10:A69.2	Choroba z Lyme
+T63	Condition 1890 1898	gruźlica
+N6	Reference T63 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+R26	Neg Arg1:T57 Arg2:T63	
+R27	Neg Arg1:T56 Arg2:T62	
+T64	Condition 1842 1853	WZW-B ( + )
+A2	Source T64 Confirmed
+N7	Reference T64 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T65	Treatment 1781 1814	operacji palców IV, V ręki prawej
+T66	Negation 1677 1683	Neguje
+T67	Symptom 1684 1696	zasłabnięcia
+N8	Reference T67 ICD10:R55	Omdlenie i zapaść
+T68	Symptom 1698 1707	duszności
+N9	Reference T68 ICD10:R06.0	Duszność
+T69	Symptom 1709 1752	typowe bóle w klatce piersiowej w spoczynku
+N10	Reference T69 ICD10:R07.3	Inne bóle w klatce piersiowej
+R28	Neg Arg1:T66 Arg2:T67	
+R29	Neg Arg1:T66 Arg2:T68	
+R30	Neg Arg1:T66 Arg2:T69	
+T70	Treatment 1224 1231	ablacji
+T71	Condition 1232 1249	arytmii komorowej
+N11	Reference T71 ICD10:I49	Inne zaburzenia rytmu serca
+T72	Date 1251 1258	05/2018
+R31	Dat Arg1:T72 Arg2:T71	
+R32	Dat Arg1:T72 Arg2:T70	
+T73	Condition 1263 1323	kardiomiopatią rozstrzeniową obecnie w II/III klasie wg NYHA
+N12	Reference T73 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+T74	Treatment 1338 1387	implantacji ICD Biotronic w prewencji wtórnej NZS
+T75	Date 1389 1396	05/2015
+R33	Dat Arg1:T75 Arg2:T74	
+T76	Condition 1402 1404	VT
+T77	Drug 1416 1427	amiodaronem
+R34	Alg Arg1:T76 Arg2:T77	
+N13	Reference T76 ICD10:I47.2	Częstoskurcz komorowy
+T78	Date 1854 1871	około 30 lat temu
+R35	Dat Arg1:T78 Arg2:T64	
+T79	Condition 1431 1446	napadowym FA/AT
+N14	Reference T79 ICD10:I48	Migotanie i trzepotanie przedsionków
+T80	Condition 1460 1462	HA
+N15	Reference T80 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T81	Condition 1464 1468	DMt2
+N16	Reference T81 ICD10:E11	Cukrzyca insulinoniezależna
+T82	Treatment 1479 1494	insulinoterapii
+T83	Condition 1498 1507	otyłością
+N17	Reference T83 ICD10:E66	Otyłość
+T84	Drug 1520 1524	ACEI
+T85	Symptom 1509 1516	kaszlem
+N18	Reference T85 ICD10:R05	Kaszel
+T86	Condition 1526 1563	przewlekła chorobą nerek w II stadium
+N19	Reference T86 ICD10:N18	Przewlekła niewydolność nerek
+T87	Symptom 1590 1609	nasilenia zmęczenia
+N20	Reference T87 ICD10:R53	Złe samopoczucie i zmęczenie
+T88	Symptom 1612 1645	duszności do II/III klasy wg NYHA
+N21	Reference T88 ICD10:R06.0	Duszność
+T89	Investigation_result 442 450	EF: 30%)
+T90	Condition 453 473	II/III klasa wg NYHA
+N22	Reference T90 ICD10:I42.0	Kardiomiopatia rozstrzeniowa
+T91	Investigation_result 1325 1333	EF: 30%)
+A3	Status T65 Historical_Insignificant

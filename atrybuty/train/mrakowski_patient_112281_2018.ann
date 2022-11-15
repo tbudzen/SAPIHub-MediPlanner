@@ -1,0 +1,111 @@
+T1	Condition 404 472	Wrodzona wada serca pod postacią przełożenia wielkich pni tętniczych
+N1	Reference T1 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T2	Condition 475 513	ubytkiem w przegrodzie międzykomorowej
+N2	Reference T2 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T3	Treatment 526 563	operacji metodą korekcji anatomicznej
+T4	Date 565 574	28.09.99r
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Condition 580 600	Zespół preekscytacji
+N3	Reference T5 ICD10:I45.6	Zespół preekscytacji
+T6	Treatment 777 804	dalsza opieka w poradni POZ
+T7	Investigation 806 870	okresowa kontrola morfologii, parametrów wątrobowych i nerkowych
+T8	Treatment 872 915	okresowa kontrola w Poradni Kardiologicznej
+T9	Investigation 920 945	oceną echokardiograficzna
+T10	Date 946 952	co rok
+R2	Dat Arg1:T10 Arg2:T9	
+T11	Condition 1235 1303	Wrodzona wada serca pod postacią przełożenia wielkich pni tętniczych
+N4	Reference T11 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T12	Condition 1306 1344	ubytkiem w przegrodzie międzykomorowej
+N5	Reference T12 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T13	Treatment 1354 1391	operacji metodą korekcji anatomicznej
+T14	Date 1393 1402	28.09.99r
+R3	Dat Arg1:T14 Arg2:T13	
+T15	Condition 1408 1428	Zespół preekscytacji
+N6	Reference T15 ICD10:I45.6	Zespół preekscytacji
+T16	Condition 1430 1466	Częstoskurcz nadkomorowy bezobjawowy
+N7	Reference T16 ICD10:I47.1	Częstoskurcz nadkomorowy
+T17	Condition 1616 1684	wrodzoną wadą serca pod postacią przełożenia wielkich pni tętniczych
+N8	Reference T17 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T18	Condition 1687 1725	ubytkiem w przegrodzie międzykomorowej
+N9	Reference T18 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T19	Treatment 1730 1760	operacji korekcji anatomicznej
+T20	Date 1762 1773	28.09.1999r
+R4	Dat Arg1:T20 Arg2:T19	
+T21	Condition 1778 1800	zespołem preekscytacji
+N10	Reference T21 ICD10:I45.6	Zespół preekscytacji
+T22	Date 1975 1980	2016r
+T23	Investigation 2015 2033	EKG metodą Holtera
+T24	Investigation_result 2036 2063	obecność cech preekscytacji
+N11	Reference T24 ICD10:I45.6	Zespół preekscytacji
+R5	Inv Arg1:T23 Arg2:T24	
+R6	Dat Arg1:T22 Arg2:T23	
+T25	Investigation 2067 2074	AngioCT
+R7	Dat Arg1:T22 Arg2:T25	
+T26	Investigation_result 2092 2145	zwężeń w miejscach wszycia ani w odcinkach obwodowych
+T27	Investigation_result 2147 2186	przy dominacji prawej tętnicy wieńcowej
+T28	Investigation_result 2188 2260	wykonano pomiary zastawki neoaorty, łuku aorty, tętnicy płucnej i gałęzi
+R8	Inv Arg1:T25 Arg2:T26	
+R9	Inv Arg1:T25 Arg2:T27	
+R10	Inv Arg1:T25 Arg2:T28	
+T29	Investigation 2262 2264	RM
+R11	Dat Arg1:T22 Arg2:T29	
+T30	Investigation_result 2266 2315	oceniono funkcję zastawek wielkich pni tętniczych
+R12	Inv Arg1:T29 Arg2:T30	
+T31	Investigation_result 2324 2418	pomiar przepływu metodą phase contrast wykazał brak fali zwrotnej na poziomie zastawki płucnej
+R13	Inv Arg1:T29 Arg2:T31	
+T32	Investigation_result 2420 2479	niewielką (3ml) falę zwrotną na poziomie zastawki aortalnej
+T33	Investigation_result 2497 2526	istotnych zaburzeń przepływów
+T34	Investigation_result 2528 2552	oceniono parametry komór
+T35	Investigation_result 2570 2619	patologicznych zmian w miokardium ani w osierdziu
+R14	Inv Arg1:T29 Arg2:T32	
+R15	Inv Arg1:T29 Arg2:T33	
+R16	Inv Arg1:T29 Arg2:T34	
+R17	Inv Arg1:T29 Arg2:T35	
+T36	Treatment 2622 2639	Przebyte operacje
+T37	Treatment 2641 2654	tonsilectomia
+A1	Status T37 Historical_Insignificant
+T38	Date 2655 2659	2012
+R18	Dat Arg1:T38 Arg2:T37	
+T39	Treatment 2660 2679	Leczenie przewlekłe
+T40	Treatment 2681 2698	endokrynologiczne
+T41	Condition 2727 2730	WZW
+N12	Reference T41 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T42	Condition 2732 2741	borelioza
+N13	Reference T42 ICD10:A69.2	Choroba z Lyme
+T43	Negation 2744 2754	nie podano
+R19	Neg Arg1:T43 Arg2:T42	
+R20	Neg Arg1:T43 Arg2:T41	
+T44	Condition 2755 2770	Wywiad rodzinny
+A2	Status T44 Family
+T45	Negation 2772 2781	negatywny
+R21	Neg Arg1:T45 Arg2:T44	
+T46	Behaviour 2782 2797	Palenie tytoniu
+T47	Negation 2799 2802	nie
+R22	Neg Arg1:T47 Arg2:T46	
+T48	Behaviour 2803 2814	Inne używki
+T49	Negation 2816 2819	nie
+R23	Neg Arg1:T49 Arg2:T48	
+T50	Condition 2820 2829	Uczulenia
+N15	Reference T50 ICD10:T78.4	Alergia, nieokreślona
+T51	Negation 2831 2834	nie
+R24	Neg Arg1:T51 Arg2:T50	
+T52	Behaviour 2853 2861	uczy się
+T53	Drug 2875 2881	Letrox
+T54	Drug_dose 2882 2888	25ug/d
+R25	Drg Arg1:T53 Arg2:T54	
+T55	Investigation 2916 2926	echo serca
+T56	Investigation 2928 2931	TET
+T57	Investigation 2933 2937	ABPM
+T58	Investigation 2939 2945	Holter
+T59	Investigation 2947 2965	RTG kl. piersiowej
+T60	Negation 2076 2091	nie stwierdzono
+R26	Neg Arg1:T60 Arg2:T26	
+T61	Negation 2554 2569	nie stwierdzono
+R27	Neg Arg1:T61 Arg2:T35	
+T62	Negation 2481 2496	nie stwierdzono
+R28	Neg Arg1:T62 Arg2:T33	
+N14	Reference T46 ICD10:Z72.0	Używanie tytoniu
+T63	Negation 1945 1956	nie zgłasza
+T64	Symptom 1957 1969	dolegliwości
+R29	Neg Arg1:T63 Arg2:T64	
+N16	Reference T48 ICD10:Z72	Problemy związane ze stylem życia

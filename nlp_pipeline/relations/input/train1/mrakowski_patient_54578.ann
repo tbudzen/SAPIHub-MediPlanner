@@ -1,0 +1,88 @@
+T1	Condition 468 512	Łagodna niedomykalność zastawki trójdzielnej
+T2	Condition 514 565	Diagnostyka w kierunku choroby niedokrwiennej serca
+T3	Negation 566 575	negatywna
+R1	Neg Arg1:T3 Arg2:T2	
+T4	Condition 577 598	Nadciśnienie tętnicze
+N3	Reference T4 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T5	Treatment 710 731	dalsza kontrola w POZ
+T6	Treatment 734 788	dalsza diagnostyka w warunkach Poradni Kardiologicznej
+T7	Investigation 791 862	regularna kontrola ciśnienia tętniczego oraz tętna w warunkach domowych
+T8	Behaviour 865 882	dieta ubogosodowa
+T9	Treatment 885 913	regularne przyjmowanie leków
+T10	Drug 915 922	Polpril
+T11	Drug_dose 923 928	5mg 1
+R2	Drg Arg1:T10 Arg2:T11	
+T12	Investigation_result 1099 1167	labilnych wartości ciśnienia tętniczego do max wartości 190/110 mmHg
+N4	Reference T12 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T13	Date 1168 1186	w dniu dzisiejszym
+R3	Dat Arg1:T13 Arg2:T12	
+T14	Drug 1196 1206	Captoprilu
+T15	Drug_dose 1191 1195	25mg
+R4	Drg Arg1:T14 Arg2:T15	
+T16	Investigation_result 1207 1234	obniżyło się do 180/90 mmHg
+N5	Reference T16 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T17	Investigation_result 1249 1296	domowej kontroli RR w granicach 120/80 mmHg max
+N6	Reference T17 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T18	Symptom 1315 1328	zawroty głowy
+N7	Reference T18 ICD10:R42	Zawroty głowy i odurzenie
+T19	Date 1329 1348	od dnia 04.07.2019r
+R5	Dat Arg1:T19 Arg2:T18	
+T20	Symptom 1379 1459	bólu w klatce piersiowej o charakterze ucisku, bez związku z wysiłkiem fizycznym
+N1	Reference T1 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+N8	Reference T20 ICD10:R07.2	Ból w okolicy przedsercowej
+T21	Condition 1473 1495	niedoczynność tarczycy
+N9	Reference T21 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T22	Drug 1508 1518	Euthyrox N
+T23	Drug_dose 1519 1524	88 ug
+R6	Drg Arg1:T22 Arg2:T23	
+T24	Negation 1526 1529	Bez
+T25	Symptom 1530 1536	omdleń
+N10	Reference T25 ICD10:R55	Omdlenie i zapaść
+T26	Symptom 1537 1555	utrat przytomności
+R7	Neg Arg1:T24 Arg2:T25	
+R8	Neg Arg1:T24 Arg2:T26	
+T27	Condition 1582 1594	nadciśnienie
+A1	Status T27 Family
+N11	Reference T27 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T28	Condition 1605 1618	arytmia serca
+A2	Status T28 Family
+T31	Investigation_result 1800 1868	labilnych wartości ciśnienia tętniczego do max wartości 190/110 mmHg
+T32	Date 1869 1887	w dniu dzisiejszym
+R10	Dat Arg1:T32 Arg2:T31	
+T33	Drug_dose 1892 1896	25mg
+T34	Drug 1897 1907	Captoprilu
+R11	Drg Arg1:T34 Arg2:T33	
+T35	Investigation_result 1908 1935	obniżyło się do 180/90 mmHg
+N15	Reference T35 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T36	Investigation_result 1950 1997	domowej kontroli RR w granicach 120/80 mmHg max
+N16	Reference T36 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T37	Symptom 2016 2029	zawroty głowy
+N17	Reference T37 ICD10:R42	Zawroty głowy i odurzenie
+T38	Date 2030 2049	od dnia 04.07.2019r
+R12	Dat Arg1:T38 Arg2:T37	
+T39	Symptom 2080 2160	bólu w klatce piersiowej o charakterze ucisku, bez związku z wysiłkiem fizycznym
+N18	Reference T39 ICD10:R07.2	Ból w okolicy przedsercowej
+T40	Condition 2174 2196	niedoczynność tarczycy
+N19	Reference T40 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T41	Drug 2209 2219	Euthyrox N
+T42	Drug_dose 2220 2246	88 ug 1 tabl rano na czczo
+R13	Drg Arg1:T41 Arg2:T42	
+T43	Negation 2248 2251	Bez
+T44	Symptom 2252 2258	omdleń
+N20	Reference T44 ICD10:R55	Omdlenie i zapaść
+T45	Symptom 2259 2277	utrat przytomności
+R14	Neg Arg1:T43 Arg2:T44	
+R15	Neg Arg1:T43 Arg2:T45	
+T46	Condition 2304 2316	nadciśnienie
+A3	Status T46 Family
+N21	Reference T46 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T47	Condition 2327 2340	arytmia serca
+A4	Status T47 Family
+N14	Reference T31 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+N2	Reference T2 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T50	Condition 1557 1572	Wywiad rodzinny
+A6	Status T50 Family
+N12	Reference T28 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T51	Condition 2279 2294	Wywiad rodzinny
+A7	Status T51 Family
+N22	Reference T47 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone

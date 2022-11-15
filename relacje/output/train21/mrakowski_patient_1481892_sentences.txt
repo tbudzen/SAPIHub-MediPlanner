@@ -1,0 +1,501 @@
+allRelations          : 24
+oks                   : 9
+isRedundantAndRemoveds: 15
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 0
+GOOD / BAD            : 24 / 0
+Sentence 0:
+------------------------------------------------
+Wiek: 34 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:I49|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Rozpoznanie: Tendencja do tachykardii zatokowej.
+
+
+Sentence 6:
+Niezróżnicowana choroba tkanki łącznej w trakcie obserwacji
+------------------------------------------------
+
+
+
+Sentence 7:
+Zalecenia
+------------------------------------------------
+
+
+
+
+Sentence 8:
+Zalecenia
+•\x09dalsza opieka w poradni POZ  
+•\x09okresowa kontrola kardiologiczna – kolejna w tutejszej Klinice za 6 miesięcy   
+•\x09kontrola endokrynologiczna, gastroenterologiczna, diabetologiczna, pulmonologiczna, psychiatryczna i u chirurga naczyniowego  
+•\x09codzienna kontrola ciśnienia tętniczego  
+•\x09okresowa kontrola lipidogramu  
+•\x09dieta DASH niskocholesterolowa niskoglikemiczna zbliżona do śródziemnomorskiej   
+•\x09redukcja masy ciała   
+•\x09stały, umiarkowany, aerobowy wysiłek fizyczny  
+•\x09oszczędzający tryb życia 
+
+R1	Dat Arg1:T5 Arg2:T9 <<REDUNDANT!!!REMOVED>>	za 6 miesięcy -> dieta DASH niskocholesterolowa niskoglikemiczna zbliżona do śródziemnomorskiej <:REMOVED many second tags on the right:> <RANK: 0> <info: start[779, 1017] <type: RIGHT>>
+R2	Dat Arg1:T5 Arg2:T10 <<REDUNDANT!!!REMOVED>>	za 6 miesięcy -> redukcja masy ciała <:REMOVED many second tags on the right:> <RANK: 0> <info: start[779, 1104] <type: RIGHT>>
+R3	Dat Arg1:T5 Arg2:T11 <<REDUNDANT!!!REMOVED>>	za 6 miesięcy -> stały, umiarkowany, aerobowy wysiłek fizyczny <:REMOVED many second tags on the right:> <RANK: 0> <info: start[779, 1132] <type: RIGHT>>
+R4	Dat Arg1:T5 Arg2:T12 <<REDUNDANT!!!REMOVED>>	za 6 miesięcy -> oszczędzający tryb życia <:REMOVED many second tags on the right:> <RANK: 0> <info: start[779, 1185] <type: RIGHT>>
+R5	Dat Arg1:T5 Arg2:T3 <<REDUNDANT!!!REMOVED>>	za 6 miesięcy -> dalsza opieka w poradni POZ <:REMOVED other second tag between (left):> <RANK: 1> <info: start[779, 681] <type: LEFT>>
+R6	Dat Arg1:T5 Arg2:T4 << OK >>	za 6 miesięcy -> okresowa kontrola kardiologiczna – kolejna w tutejszej Klinice  <RANK: 3> <info: start[779, 716] <type: LEFT>>
+R7	Dat Arg1:T5 Arg2:T6 <<REDUNDANT!!!REMOVED>>	za 6 miesięcy -> kontrola endokrynologiczna, gastroenterologiczna, diabetologiczna, pulmonologiczna, psychiatryczna i u chirurga naczyniowego <:REMOVED many second tags on the right:> <RANK: 1> <info: start[779, 801] <type: RIGHT>>
+R8	Dat Arg1:T5 Arg2:T7 <<REDUNDANT!!!REMOVED>>	za 6 miesięcy -> codzienna kontrola ciśnienia tętniczego <:REMOVED many second tags on the right:> <RANK: 0> <info: start[779, 933] <type: RIGHT>>
+R9	Dat Arg1:T5 Arg2:T8 <<REDUNDANT!!!REMOVED>>	za 6 miesięcy -> okresowa kontrola lipidogramu <:REMOVED many second tags on the right:> <RANK: 0> <info: start[779, 980] <type: RIGHT>>
+
+
+Sentence 9:
+•\x09regularne przyjmowanie leków:
+
+1.\x09Iwabradyna 7.5 mg rano i 2.5mg wieczorem 
+2.\x09leki reumatologiczne
+------------------------------------------------
+
+R10	Drg Arg1:T14 Arg2:T16 << OK >>	Iwabradyna -> 7.5 mg rano i 2.5mg wieczorem  <RANK: 3> <info: start[1253, 1264] <type: RIGHT>>
+R11	Drg Arg1:T15 Arg2:T16 <<REDUNDANT!!!REMOVED>>	leki reumatologiczne -> 7.5 mg rano i 2.5mg wieczorem <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 0> <info: start[1301, 1264] <type: LEFT>>
+
+
+Sentence 10:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 11:
+Pacjentka lat 33 została przyjęta z powodu okresowego kołatania serca.
+
+
+Sentence 12:
+W badaniu Holter EKG opisywana tachykardia zatokowa.
+R12	Inv Arg1:T18 Arg2:T19 << OK >>	Holter EKG -> tachykardia zatokowa  <RANK: 3> <info: start[1527, 1548] <type: RIGHT>>
+
+
+Sentence 13:
+W wywiadzie: niezróżnicowana choroba tkanki łącznej w trakcie obserwacji.
+
+
+Sentence 14:
+Pacjentka pod opieką reumatologiczną.
+
+
+Sentence 15:
+Chora od kilku lat odczuwa tachykardię, leczoną Iwabradyną (z poprawą).
+R13	Dat Arg1:T22 Arg2:T23 << OK >>	od kilku lat -> tachykardię  <RANK: 3> <info: start[1688, 1709] <type: RIGHT>>
+R14	Dat Arg1:T22 Arg2:T24 << OK >>	od kilku lat -> leczoną  <RANK: 2> <info: start[1688, 1722] <type: RIGHT>>
+R15	Dat Arg1:T22 Arg2:T25 << OK >>	od kilku lat -> Iwabradyną  <RANK: 2> <info: start[1688, 1730] <type: RIGHT>>
+
+
+Sentence 16:
+Neguje uczulenia na leki, neguje krwawienia, neguje omdlenia. 
+
+R16	Neg Arg1:T26 Arg2:T29 <<REDUNDANT!!!REMOVED>>	Neguje -> krwawienia <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1754, 1787] <type: RIGHT>>
+R17	Neg Arg1:T26 Arg2:T31 <<REDUNDANT!!!REMOVED>>	Neguje -> omdlenia <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1754, 1806] <type: RIGHT>>
+R18	Neg Arg1:T26 Arg2:T27 << OK >>	Neguje -> uczulenia na leki  <RANK: 3> <info: start[1754, 1761] <type: RIGHT>>
+R19	Neg Arg1:T28 Arg2:T29 << OK >>	neguje -> krwawienia  <RANK: 3> <info: start[1780, 1787] <type: RIGHT>>
+R20	Neg Arg1:T28 Arg2:T31 <<REDUNDANT!!!REMOVED>>	neguje -> omdlenia <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1780, 1806] <type: RIGHT>>
+R21	Neg Arg1:T28 Arg2:T27 <<REDUNDANT!!!REMOVED>>	neguje -> uczulenia na leki <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1780, 1761] <type: LEFT>>
+R22	Neg Arg1:T30 Arg2:T29 <<REDUNDANT!!!REMOVED>>	neguje -> krwawienia <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1799, 1787] <type: LEFT>>
+R23	Neg Arg1:T30 Arg2:T31 << OK >>	neguje -> omdlenia  <RANK: 3> <info: start[1799, 1806] <type: RIGHT>>
+R24	Neg Arg1:T30 Arg2:T27 <<REDUNDANT!!!REMOVED>>	neguje -> uczulenia na leki <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1799, 1761] <type: LEFT>>
+
+
+Sentence 17:
+Chora planowana do próby wysiłkowej.
+
+
+Sentence 18:
+Obciążenie rodzinne - tata HA. 
+
+
+
+Sentence 19:
+Leki: encorton, plaquenil, controloc, iwabradyna, biofenac.
+
+
+
+Sentence 20:
+------------------------------------------------
+
+
+
+Sentence 21:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 22:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.42[10^3/ul]
+    
+
+
+Sentence 23:
+RBC Krwinki czerwone:4.70[10^6/ul]
+    
+
+
+Sentence 24:
+HGB Hemoglobina:13.3[g/dl]
+    
+
+
+Sentence 25:
+HCT Hematokryt:39.3[%]
+    
+
+
+Sentence 26:
+MCV wskaźnik czerwonokrw:83.6[fl]
+    
+
+
+Sentence 27:
+MCH wskaźnik czerwonokrw:28.3[pg]
+    
+
+
+Sentence 28:
+MCHC wskaźnik czerwonokr:33.8[g/dl]
+    
+
+
+Sentence 29:
+PLT z morfologii:221[10^3/ul]
+    
+
+
+Sentence 30:
+RDW-SD:43.8[fl]
+    
+
+
+Sentence 31:
+RDW-CV:14.3[%]
+    PDW:16.7[fl]
+    MPV:12.2[fl]
+    P-LCR:42.8[%]
+    
+
+
+Sentence 32:
+PCT (hematokryt płytkowy:0.27[%]
+    
+
+
+Sentence 33:
+NEUTR# wartość bezwzględ:3.03[10^3/ul]
+    
+
+
+Sentence 34:
+NEUTR%:40.7[%]
+    
+
+
+Sentence 35:
+LYMH# wartość bezwzględn:3.73[10^3/ul]
+    
+
+
+Sentence 36:
+LYMPH%:50.3[%]
+    
+
+
+Sentence 37:
+MONO# wartość bezwzględn:0.51[10^3/ul]
+    MONO%:6.9[%]
+    
+
+
+Sentence 38:
+EO# wartość bezwzględna:0.13[10^3/ul]
+    
+
+
+Sentence 39:
+EO%:1.8[%]
+    
+
+
+Sentence 40:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    
+
+
+Sentence 41:
+BASO%:0.3[%]
+    
+
+
+Sentence 42:
+NRBC %:0.0[%]
+    
+
+
+Sentence 43:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 44:
+D-dimer - test ilościowy: D-dimer - test ilościowy:333[ng/ml]
+
+
+
+Sentence 45:
+Badanie ogólne moczu
+    
+
+
+Sentence 46:
+barwa:żółty[ ]
+    
+
+
+Sentence 47:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 48:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 49:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 50:
+ciała ketonowe:10 mg/dl[mg/dl]
+    
+
+
+Sentence 51:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 52:
+ciężar właściwy:1.023[ ]
+    
+
+
+Sentence 53:
+pH:5.0[ ]
+    
+
+
+Sentence 54:
+białko:nieobecne[ ]
+    
+
+
+Sentence 55:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 56:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 57:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 58:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 59:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 60:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 61:
+leukocyty:4 /ul[ul]
+    erytrocyty świeże:1 /ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 62:
+TSH: TSH:1.79[uIU/ml]
+
+
+
+Sentence 63:
+FT3: FT3:2.72[pg/ml]
+
+
+
+Sentence 64:
+FT4: FT4:1.19[ng/dl]
+
+
+
+Sentence 65:
+ALAT: ALAT:12[U/L]
+ASPAT: ASPAT:19[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 66:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 67:
+Potas (K): Potas:3.8[mmol/L]
+
+
+
+Sentence 68:
+Kreatynina + GFR
+    
+
+
+Sentence 69:
+Kreatynina w surowicy:0.77[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 70:
+MDRD ze stan:86.3[ml/min/1,73 m^2]
+
+
+
+Sentence 71:
+Mocznik: Mocznik:23[mg/dl]
+
+
+
+Sentence 72:
+Kwas moczowy: Kwas moczowy:4.2[mg/dl]
+
+
+
+Sentence 73:
+Lipidogram
+    
+
+
+Sentence 74:
+Cholesterol całkowity:159[mg/dl]
+    
+
+
+Sentence 75:
+Cholesterol HDL:68[mg/dl]
+    Cholestrol LDL:70[mg/dl]
+    Triglicerydy:69[mg/dl]
+    
+
+
+Sentence 76:
+Stosunek cholesterolu HD:0.4
+Glukoza w surowicy: Glukoza w surowicy:83[mg/dl]
+
+
+
+Sentence 77:
+NT-proBNP surowica: NT-proBNP w surowicy:38[pg/ml]
+
+
+
+Sentence 78:
+------------------------------------------------
+
+
+
+Sentence 79:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 80:
+I49.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 81:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 82:
+C55
+A01
+89.502
+I81
+89.41
+L43
+G49
+N45
+L69
+O55
+I17
+M45
+O35
+M37
+I19
+N13
+N24
+88.721
+O69
+
+
+
+Sentence 83:
+------------------------------------------------
+
+

@@ -1,0 +1,80 @@
+T1	Investigation 1710 1714	ECHO
+T2	Investigation 1716 1726	Holter ekg
+T3	Condition 1500 1503	WZW
+N1	Reference T3 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T4	Condition 1510 1519	borelioza
+N2	Reference T4 ICD10:A69.2	Choroba z Lyme
+T5	Condition 1527 1530	tbc
+N3	Reference T5 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T6	Negation 1531 1534	(-)
+R1	Neg Arg1:T6 Arg2:T5	
+T7	Negation 1522 1523	-
+R2	Neg Arg1:T7 Arg2:T4	
+T8	Negation 1504 1507	(-)
+R3	Neg Arg1:T8 Arg2:T3	
+T9	Negation 1468 1471	nie
+T10	Negation 1452 1455	nie
+T11	Negation 1434 1437	nie
+T12	Negation 1413 1416	nie
+T13	Treatment 1394 1411	Przebyte operacje
+R4	Neg Arg1:T12 Arg2:T13	
+T14	Behaviour 1417 1432	Palenie tytoniu
+N4	Reference T14 ICD10:T65.2	Tytoń i nikotyna
+R5	Neg Arg1:T11 Arg2:T14	
+T15	Behaviour 1439 1450	Inne używki
+R6	Neg Arg1:T10 Arg2:T15	
+T16	Condition 1457 1466	Uczulenia
+N5	Reference T16 ICD10:T78.4	Alergia, nieokreślona
+R7	Neg Arg1:T9 Arg2:T16	
+T17	Behaviour 1552 1578	warunki mieszkaniowe dobre
+T18	Negation 1599 1605	ujemna
+T19	Condition 1582 1597	Wywiad rodzinny
+A1	Status T19 Family
+R8	Neg Arg1:T18 Arg2:T19	
+T20	Negation 1612 1625	nie przyjmuje
+T21	Drug 1606 1610	Leki
+R9	Neg Arg1:T20 Arg2:T21	
+T22	Symptom 772 787	Kołatania serca
+N6	Reference T22 ICD10:R00.2	Kołatanie serca
+T23	Condition 789 809	Tachykardia zatokowa
+N7	Reference T23 ICD10:R00.0	Tachykardia, nieokreślona
+T24	Symptom 1024 1154	okresowego kołatania serca trwającego kilka sekund od roku z częstotliwością średnio 1x w tygodniu bez towarzyszących dolegliwości
+N8	Reference T24 ICD10:R00.2	Kołatanie serca
+T25	Investigation_result 1164 1200	tendencja do tachykardii 100-120/min
+T26	Symptom 1210 1222	zasłabnięcia
+N9	Reference T26 ICD10:R55	Omdlenie i zapaść
+T27	Symptom 1224 1232	omdlenia
+N10	Reference T27 ICD10:R55	Omdlenie i zapaść
+T28	Symptom 1234 1244	krwawienia
+N11	Reference T28 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T29	Symptom 1246 1259	czarne stolce
+N12	Reference T29 ICD10:K92.1	Stolce smołowate
+T30	Symptom 1261 1277	brunatne wymioty
+N13	Reference T30 ICD10:K92.0	Wymioty krwawe
+T31	Condition 1279 1295	chorobę wrzodową
+N14	Reference T31 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T32	Symptom 1297 1305	duszność
+N15	Reference T32 ICD10:R06.0	Duszność
+T33	Condition 1307 1309	HA
+N16	Reference T33 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T34	Condition 1311 1313	DM
+N17	Reference T34 ICD10:E13	Inne określone postacie cukrzycy
+T35	Condition 1315 1325	udar mózgu
+N18	Reference T35 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T36	Condition 1327 1338	zawał serca
+N19	Reference T36 ICD10:I25.2	Przebyty zawał serca
+T37	Negation 1202 1208	Neguje
+R10	Neg Arg1:T37 Arg2:T26	
+R11	Neg Arg1:T37 Arg2:T27	
+R12	Neg Arg1:T37 Arg2:T28	
+R13	Neg Arg1:T37 Arg2:T29	
+R14	Neg Arg1:T37 Arg2:T30	
+R15	Neg Arg1:T37 Arg2:T31	
+R16	Neg Arg1:T37 Arg2:T32	
+R17	Neg Arg1:T37 Arg2:T33	
+R18	Neg Arg1:T37 Arg2:T34	
+R19	Neg Arg1:T37 Arg2:T35	
+R20	Neg Arg1:T37 Arg2:T36	
+T38	Investigation 1343 1348	HBPM:
+T39	Investigation_result 1349 1393	prawidłowe czasem niższe - dobrze tolerowane
+R21	Inv Arg1:T38 Arg2:T39	

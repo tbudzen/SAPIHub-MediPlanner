@@ -1,0 +1,31 @@
+T1	Treatment 328 365	Kontrola kardiologiczna ambulatoryjna
+T2	Date 366 375	za 10 mcy
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Treatment 602 623	korekcji anatomicznej
+T4	Condition 625 694	wrodzonej wady serca pod postacią przełożenia wielkich pni tętniczych
+N1	Reference T4 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T5	Condition 697 735	ubytkiem w przegrodzie międzykomorowej
+N2	Reference T5 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T6	Date 738 749	27.02.2012r
+R2	Dat Arg1:T6 Arg2:T3	
+R3	Dat Arg1:T6 Arg2:T4	
+R4	Dat Arg1:T6 Arg2:T5	
+T7	Treatment 762 785	angioplastyce balonowej
+T8	Condition 786 826	zwężenia nadzastawkowego tętnicy płucnej
+N3	Reference T8 ICD10:Q25.6	Zwężenie pnia płucnego
+T9	Date 829 840	21.02.2013r
+R5	Dat Arg1:T9 Arg2:T7	
+R6	Dat Arg1:T9 Arg2:T8	
+T10	Condition 977 980	TGA
+N4	Reference T10 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T11	Condition 983 986	VSD
+N5	Reference T11 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T12	Treatment 987 998	po korekcji
+T13	Investigation 1015 1032	badania kontrolne
+T14	Condition 1064 1081	wywiad alergiczny
+N6	Reference T14 ICD10:T78.4	Alergia, nieokreślona
+T15	Negation 1082 1088	ujemny
+R7	Neg Arg1:T15 Arg2:T14	
+T16	Drug 1034 1048	leków na stałe
+T17	Negation 1049 1062	nie otrzymuje
+R8	Neg Arg1:T17 Arg2:T16	

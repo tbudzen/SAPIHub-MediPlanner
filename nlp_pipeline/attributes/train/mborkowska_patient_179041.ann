@@ -1,0 +1,85 @@
+T1	Condition 448 490	Nadciśnienie tętnicze I stopnia wg ESC/ESH
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 492 499	Nadwaga
+T3	Condition 518 546	Nadkomorowe zaburzenia rytmu
+T4	Condition 571 622	Przemijający blok przedsionkowo-komorowy I stopnia.
+T5	Condition 623 645	Niedoczynność tarczycy
+N4	Reference T5 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T6	Condition 677 689	urazie barku
+T7	Date 717 730	(przed 2 laty
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Treatment 741 765	operacji ginekologicznej
+T9	Date 810 822	przed 2 laty
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Investigation 1176 1205	kontrola ciśnienia tętniczego
+T11	Investigation 1223 1243	kontrola lipidogramu
+T12	Behaviour 1252 1288	dieta zbliżona do śródziemnomorskiej
+T13	Behaviour 1298 1317	redukcja masy ciała
+T14	Behaviour 1327 1372	stały, umiarkowany, aerobowy wysiłek fizyczny
+T15	Drug 1420 1426	Bibloc
+T16	Drug_dose 1427 1447	1.25 mg 1 tabl. rano
+R3	Drg Arg1:T15 Arg2:T16	
+T17	Investigation 2167 2177	echo serca
+T18	Investigation 2179 2182	TET
+T19	Investigation 2184 2188	ABPM
+T20	Investigation 2190 2200	Holter ekg
+T21	Investigation 2202 2220	rtg kl. piersiowej
+T22	Drug 2112 2117	Ximve
+T23	Drug_dose 2118 2138	20 mg 1 tabl. na noc
+R4	Drg Arg1:T22 Arg2:T23	
+T24	Negation 2027 2033	neguje
+T25	Negation 1981 1989	neguje  
+T26	Negation 1999 2007	neguje  
+T27	Negation 1961 1967	neguje
+T28	Negation 1936 1949	bez znaczenia
+T29	Behaviour 2008 2025	Uzależnienie inne
+R5	Neg Arg1:T24 Arg2:T29	
+T30	Behaviour 1990 1997	Alkohol
+N5	Reference T30 ICD10:Z72.1	Używanie alkoholu
+R6	Neg Arg1:T26 Arg2:T30	
+T31	Behaviour 1969 1979	Nikotynizm
+R7	Neg Arg1:T25 Arg2:T31	
+T32	Condition 1951 1958	Alergie
+N7	Reference T32 ICD10:T78.4	Alergia, nieokreślona
+R8	Neg Arg1:T27 Arg2:T32	
+T33	Condition 1919 1934	Wywiad rodzinny
+A1	Status T33 Family
+R9	Neg Arg1:T28 Arg2:T33	
+T34	Treatment 1880 1904	statyka narządów rodnych
+T35	Date 1905 1917	przed 2 laty
+R10	Dat Arg1:T35 Arg2:T34	
+T36	Condition 1726 1766	 pod. zapalenia/ niedoczynności tarczycy
+A2	Source T36 Declared
+N8	Reference T36 ICD10:E03	Niedoczynność tarczycy o innej etiologii
+T37	Condition 1768 1790	hipercholesterolemia ?
+A3	Source T37 Declared
+N9	Reference T37 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T38	Investigation_result 1793 1806	LDL 104 mg/dl
+T39	Condition 1820 1830	uraz barku
+T40	Date 1849 1860	2 lata temu
+R11	Dat Arg1:T40 Arg2:T39	
+T41	Investigation_result 1680 1701	graniczna tachykardia
+T42	Investigation 1674 1679	ekfgg
+R12	Inv Arg1:T42 Arg2:T41	
+T43	Investigation_result 501 515	BMI 27.2 kg/m2
+N2	Reference T3 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T44	Condition 548 561	pojedyncze Ex
+N10	Reference T44 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T45	Condition 563 568	salwy
+N11	Reference T45 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+N3	Reference T4 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+A4	Status T8 Historical_Insignificant
+T46	Condition 775 808	zaburzeń statyki narządów rodnych
+N12	Reference T46 ICD10:N81	Wypadanie żeńskich narządów rozrodczych
+R13	Dat Arg1:T9 Arg2:T46	
+A5	Status T46 Historical_Insignificant
+T47	Treatment 1834 1848	sterydoterapią
+R14	Dat Arg1:T40 Arg2:T47	
+A6	Status T47 Historical_Insignificant
+A7	Status T39 Historical_Insignificant
+A8	Status T34 Historical_Insignificant
+N6	Reference T31 ICD10:Z72.0	Używanie tytoniu
+T48	Treatment 702 716	sterydoterapią
+R15	Dat Arg1:T7 Arg2:T48	
+A9	Status T48 Historical_Insignificant
+A10	Status T6 Historical_Insignificant

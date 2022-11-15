@@ -1,0 +1,101 @@
+T1	Condition 461 522	Wrodzona wada serca pod postacią przetrwałego otworu owalnego
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Condition 524 570	Niedomykalność zastawki trójdzielnej I stopnia
+N2	Reference T2 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T3	Condition 572 615	Nadciśnienie tętnicze II stopnia wg ESH/ESC
+N3	Reference T3 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T4	Condition 617 637	Hipercholesterolemia
+N4	Reference T4 ICD10:E78.0	Czysta hipercholesterolemia
+T5	Condition 639 646	Nadwaga
+T6	Condition 648 675	Hepatopatia o niejasnym tle
+N5	Reference T6 ICD10:K76.9	Choroba wątroby, nieokreślona
+T7	Condition 677 718	Wole guzkowe tarczycy w stadium eutyreozy
+N6	Reference T7 ICD10:E04.2	Wole wieloguzkowe, nietoksyczne
+T8	Treatment 720 749	planowane leczenie operacyjne
+T9	Date 756 767	13.01.2019r
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Treatment 900 927	dalsza opieka w poradni POZ
+T11	Treatment 935 967	okresowa kontrola kardiologiczna
+T12	Treatment 1004 1056	okresowa kontrola endokrynologiczna i hepatologiczna
+T13	Investigation 1063 1102	regularna kontrola ciśnienia tętniczego
+T14	Investigation 1110 1139	okresowa kontrola lipidogramu
+T15	Date 1142 1162	kolejna za 6 tygodni
+R2	Dat Arg1:T15 Arg2:T14	
+T16	Behaviour 1169 1179	dieta DASH
+T17	Behaviour 1187 1206	redukcja masy ciała
+T18	Behaviour 1215 1260	stały, umiarkowany, aerobowy wysiłek fizyczny
+T19	Drug 1306 1315	Tezeo HCT
+T20	Drug_dose 1316 1342	40 mg +12.5mg 1 tabl. rano
+R3	Drg Arg1:T19 Arg2:T20	
+T21	Symptom 1511 1526	kołatania serca
+N8	Reference T21 ICD10:R00.2	Kołatanie serca
+T22	Symptom 1529 1543	głownie w nocy
+T23	Symptom 1545 1567	nasilenie dolegliwości
+T24	Date 1568 1577	w 06.2018
+R4	Dat Arg1:T24 Arg2:T23	
+T25	Condition 1602 1622	hipercholesterolemia
+N9	Reference T25 ICD10:E78.0	Czysta hipercholesterolemia
+T26	Condition 1624 1628	HA  
+N10	Reference T26 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T27	Symptom 1630 1654	max. wartości 160/100 mg
+T28	Condition 1656 1698	podejrzenie nadciśnienia "białego fartucha
+A1	Source T28 Declared
+N11	Reference T28 ICD10:R03.0	Podwyższone ciśnienie tętnicze krwi, bez rozpoznanego nadciśnienia tętniczego
+T29	Date 1701 1708	obecnie
+T30	Treatment 1711 1732	tracie farmakoterapii
+T31	Investigation 1766 1770	GGTP
+T32	Treatment 1790 1811	pod opieką hepatologa
+R5	Dat Arg1:T29 Arg2:T30	
+T33	Negation 1813 1819	neguje
+T34	Behaviour 1820 1837	spożycie alkoholu
+N12	Reference T34 ICD10:Z72.1	Używanie alkoholu
+R6	Neg Arg1:T33 Arg2:T34	
+T35	Condition 1840 1861	wole guzkowe tarczycy
+N13	Reference T35 ICD10:E04.2	Wole wieloguzkowe, nietoksyczne
+T36	Treatment 1864 1882	planowana operacja
+N14	Reference T36 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T37	Date 1883 1888	13.01
+N7	Reference T8 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R7	Dat Arg1:T9 Arg2:T7	
+R8	Dat Arg1:T37 Arg2:T36	
+R9	Dat Arg1:T37 Arg2:T35	
+T38	Treatment 1896 1913	Przebyte operacje
+N15	Reference T38 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T39	Negation 1915 1921	neguje
+R10	Neg Arg1:T39 Arg2:T38	
+T40	Condition 1924 1939	Wywiad rodzinny
+A2	Status T40 Family
+T41	Negation 1941 1954	bez znaczenia
+R11	Neg Arg1:T41 Arg2:T40	
+T42	Condition 1956 1963	Alergie
+N16	Reference T42 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T43	Drug 1982 1989	Traumon
+T44	Symptom 1965 1975	wysypka po
+N17	Reference T44 ICD10:R21	Rumień i inne nieswoiste wysypki skórne
+R12	Alg Arg1:T42 Arg2:T43	
+T45	Behaviour 1991 2001	Nikotynizm
+N18	Reference T45 ICD10:Z72.0	Używanie tytoniu
+T46	Negation 2003 2009	neguje
+R13	Dat Arg1:T46 Arg2:T45	
+T47	Behaviour 2012 2056	Alkohol: 1x 3 tygodnie (drinki, wódka, wino)
+A3	Status T47 Historical_Insignificant
+N19	Reference T47 ICD10:Z72.1	Używanie alkoholu
+T48	Behaviour 2059 2076	Uzależnienie inne
+T49	Negation 2078 2084	neguje
+R14	Neg Arg1:T49 Arg2:T48	
+T50	Behaviour 2102 2112	sprzedawca
+T51	Drug 2120 2129	Lorista H
+T52	Drug_dose 2130 2158	50mg +12.5 mg 1/2 tabl. rano
+R15	Drg Arg1:T51 Arg2:T52	
+T53	Investigation 2188 2198	echo serca
+T54	Investigation 2200 2203	TET
+T55	Investigation 2205 2209	ABPM
+T56	Investigation 2211 2221	Holter ekg
+T57	Investigation 2223 2241	rtg kl. piersiowej
+T58	Investigation 976 995	echokardiograficzna
+T59	Investigation 1772 1787	aminotransferaz
+T60	Investigation_result 1745 1765	podwyższone wartości
+R16	Inv Arg1:T31 Arg2:T60	
+R17	Inv Arg1:T59 Arg2:T60	
+T61	Drug_dose 1976 1981	maści
+R18	Drg Arg1:T43 Arg2:T61	

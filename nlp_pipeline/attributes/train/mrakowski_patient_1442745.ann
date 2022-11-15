@@ -1,0 +1,145 @@
+T1	Condition 447 491	Przewlekła choroba wieńcowa – I klasa wg CCS
+N1	Reference T1 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T2	Treatment 505 540	OPCAB z wykonaniem pomostu LIMA-LAD
+T3	Date 542 549	01.2017
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Treatment 571 605	leczonym PCI LAD z implantacją DES
+T5	Date 607 614	09.2016
+R2	Dat Arg1:T5 Arg2:T4	
+T6	Treatment 636 671	leczonym  PCI LAD z implantacją BMS
+T7	Date 673 677	2009
+R3	Dat Arg1:T7 Arg2:T6	
+T8	Condition 684 715	Napadowe migotanie przedsionków
+N2	Reference T8 ICD10:I48	Migotanie i trzepotanie przedsionków
+T9	Investigation 717 727	CHADS2VASC
+T10	Investigation 735 743	HAS-BLED
+T11	Investigation_result 744 748	0pkt
+R4	Inv Arg1:T10 Arg2:T11	
+T12	Investigation_result 729 733	3pkt
+R5	Inv Arg1:T9 Arg2:T12	
+T13	Condition 755 776	Nadciśnienie tętnicze
+N3	Reference T13 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T14	Condition 782 794	Dyslipidemia
+N4	Reference T14 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T15	Treatment 795 813	w trakcie leczenia
+T16	Condition 827 851	Cukrzyca typu 2. de novo
+N5	Reference T16 ICD10:E11	Cukrzyca insulinoniezależna
+T17	Condition 857 874	Aorta porcelanowa
+T18	Condition 880 902	Chromanie przestankowe
+N7	Reference T18 ICD10:I73.9	Choroba naczyń obwodowych, nieokreślona
+T19	Behaviour 908 929	Przewlekły nikotynizm
+T20	Date 930 943	w przeszłości
+R6	Dat Arg1:T20 Arg2:T19	
+T21	Treatment 1055 1120	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T22	Behaviour 1124 1231	Dieta lekkostrawna, cukrzycowa, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T23	Investigation 1235 1294	Okresowo kontrola lipidogramu, stężenia elektrolitów, param
+T24	Treatment 1773 1812	leczonym PCI BMS i nieskuteczna POBA Cx
+T25	Date 1813 1817	2009
+R7	Dat Arg1:T25 Arg2:T24	
+T26	Condition 1751 1754	CAD
+N9	Reference T26 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T27	Treatment 1835 1857	leczonym PCI LAD + DES
+T28	Date 1859 1866	09.2016
+R8	Dat Arg1:T28 Arg2:T27	
+T29	Treatment 1877 1894	CABG (LIMA do LAD
+T30	Date 1895 1902	01/2017
+R9	Dat Arg1:T30 Arg2:T29	
+T31	Condition 1905 1922	porcelanowa aorta
+T32	Condition 1924 1926	HA
+N11	Reference T32 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T33	Condition 1928 1942	hiperlipidemia
+N12	Reference T33 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T34	Behaviour 1944 1954	nikotynizm
+T35	Date 1955 1968	w przeszłości
+T36	Date 1970 1977	do 2009
+R10	Dat Arg1:T35 Arg2:T34	
+R11	Dat Arg1:T36 Arg2:T34	
+T37	Condition 1980 2002	chromanie przestankowe
+N14	Reference T37 ICD10:I73.9	Choroba naczyń obwodowych, nieokreślona
+T38	Condition 2020 2031	AF napadowe
+N15	Reference T38 ICD10:I48	Migotanie i trzepotanie przedsionków
+T39	Condition 2033 2067	zmiany zwyrodnieniowe kręgosłupa L
+N16	Reference T39 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T40	Investigation 2069 2081	scyntygrafia
+T41	Date 2083 2090	10.2018
+R12	Dat Arg1:T41 Arg2:T40	
+T42	Investigation_result 2094 2161	indukowane wysiłkiem niedokrwienia 3%(dół), ubytek trwały 17% (bok)
+R13	Inv Arg1:T40 Arg2:T42	
+R14	Dat Arg1:T41 Arg2:T42	
+T43	Treatment 2162 2179	Przebyte operacje
+T44	Condition 2182 2197	Wywiad rodzinny
+A1	Status T44 Family
+T45	Behaviour 2207 2221	palacz tytoniu
+A2	Status T45 Family
+T46	Condition 2230 2232	MI
+A3	Status T46 Family
+N18	Reference T46 ICD10:I25.2	Przebyty zawał serca
+T47	Condition 2235 2242	Alergie
+T48	Negation 2245 2251	neguje
+R15	Neg Arg1:T48 Arg2:T47	
+T49	Behaviour 2253 2263	Nikotynizm
+T50	Negation 2265 2271	neguje
+R16	Neg Arg1:T50 Arg2:T49	
+T51	Behaviour 2274 2312	Alkohol: okazjonalnie (1 x w tygodniu)
+N20	Reference T51 ICD10:Z72.1	Używanie alkoholu
+T52	Behaviour 2313 2330	Uzależnienie inne
+T53	Negation 2332 2338	neguje
+R17	Neg Arg1:T53 Arg2:T52	
+T54	Drug 2363 2370	Pradaxa
+T55	Drug 2404 2410	Contix
+T56	Drug 2431 2438	Amlozek
+T57	Drug 2458 2464	Atoris
+T58	Drug 2524 2531	Roswera
+T59	Drug 2491 2498	Tritace
+T60	Drug_dose 2371 2402	150 mg 1 tabl. rano i wieczorem
+R18	Drg Arg1:T54 Arg2:T60	
+T61	Drug_dose 2411 2429	20 mg 1 tabl. rano
+R19	Drg Arg1:T55 Arg2:T61	
+T62	Drug_dose 2439 2456	5 mg 1 tabl. rano
+R20	Drg Arg1:T56 Arg2:T62	
+T63	Drug_dose 2465 2488	20 mg 1 tabl. wieczorem
+R21	Drg Arg1:T57 Arg2:T63	
+T64	Drug_dose 2499 2522	10 mg 1 tabl. wieczorem
+R22	Drg Arg1:T59 Arg2:T64	
+T65	Drug_dose 2532 2555	20 mg 1 tabl. wieczorem
+R23	Drg Arg1:T58 Arg2:T65	
+T66	Drug 2584 2591	Roswera
+T67	Drug 2596 2603	Atorisu
+T68	Negation 2592 2595	bez
+R24	Neg Arg1:T68 Arg2:T67	
+T69	Drug 2623 2631	Bisocard
+T70	Drug 2651 2657	Espiro
+T71	Drug 2680 2692	Preductal MR
+T72	Drug_dose 2632 2649	5 mg 1 tabl. rano
+R25	Drg Arg1:T69 Arg2:T72	
+T73	Drug_dose 2658 2678	50 mg 1/2 tabl. rano
+R26	Drg Arg1:T70 Arg2:T73	
+T74	Drug_dose 2693 2696	2x1
+R27	Drg Arg1:T71 Arg2:T74	
+T75	Investigation 2726 2736	echo serca
+T76	Investigation 2738 2741	TET
+T77	Investigation 2743 2747	ABPM
+T78	Investigation 2749 2759	Holter ekg
+T79	Investigation 2761 2779	rtg kl. piersiowej
+N6	Reference T17 ICD10:I70.0	Miażdżyca aorty
+N10	Reference T31 ICD10:I70.0	Miażdżyca aorty
+T80	Condition 564 570	NSTEMI
+N21	Reference T80 ICD10:I25.2	
+R28	Dat Arg1:T5 Arg2:T80	
+T81	Condition 629 635	NSTEMI
+N22	Reference T81 ICD10:I25.2	Przebyty zawał serca
+R29	Dat Arg1:T7 Arg2:T81	
+T82	Drug 814 821	statyną
+T83	Condition 1765 1773	NSTEMI  
+N23	Reference T83 ICD10:I25.2	Przebyty zawał serca
+R30	Dat Arg1:T25 Arg2:T83	
+T84	Condition 1828 1834	NSTEMI
+N24	Reference T84 ICD10:I25.2	Przebyty zawał serca
+R31	Dat Arg1:T28 Arg2:T84	
+N25	Reference T47 ICD10:T78.4	Alergia, nieokreślona
+T85	Symptom 2004 2017	dystans >2 km
+N8	Reference T19 ICD10:Z72.0	Używanie tytoniu
+N13	Reference T34 ICD10:Z72.0	Używanie tytoniu
+N17	Reference T45 ICD10:Z72.0	Używanie tytoniu
+N19	Reference T49 ICD10:Z72.0	Używanie tytoniu
+N26	Reference T52 ICD10:Z72	Problemy związane ze stylem życia

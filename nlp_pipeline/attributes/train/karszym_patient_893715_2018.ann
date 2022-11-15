@@ -1,0 +1,159 @@
+T1	Treatment 339 395	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T2	Behaviour 398 439	Dieta niskocholesterolowa , niskobiałkowa
+T3	Investigation 443 526	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T4	Investigation 529 577	Systematyczna kontrola ciśnienia tętniczego krwi
+T5	Drug 628 636	Bisocard
+T6	Drug_dose 637 654	5 mg  1 x dz rano
+T7	Drug 658 667	Rytmonorm
+T8	Drug_dose 668 688	150 3 x dz po 1 tabl
+T9	Drug 691 698	Pradaxa
+T10	Drug_dose 699 718	150 2 x dz po1 tabl
+T11	Drug 721 731	Karbicombi
+T12	Drug_dose 732 759	16 mg + 12,5 mg 1 x dz rano
+T13	Drug 761 771	Euthyrox N
+T14	Drug_dose 773 804	dwa razy w tygodniu 100 ug/dobę
+T15	Drug_dose 832 858	w pozostałe dni 88 ug/dobę
+T16	Drug 979 988	Bisoacard
+T17	Drug 991 1000	Rytmonorm
+T18	Drug 1002 1009	Clexane
+T19	Drug 1012 1020	Euthyrox
+T20	Drug 1023 1032	Lorisat H
+T21	Drug 1035 1040	Acard
+R1	Drg Arg1:T5 Arg2:T6	
+R2	Drg Arg1:T7 Arg2:T8	
+R3	Drg Arg1:T9 Arg2:T10	
+R4	Drg Arg1:T11 Arg2:T12	
+R5	Drg Arg1:T13 Arg2:T14	
+R6	Drg Arg1:T13 Arg2:T15	
+T22	Condition 1495 1536	Łagodna niedomykalność zastawki mitralnej
+N1	Reference T22 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T23	Condition 1539 1572	Napadowe trzepotanie przedsionków
+N2	Reference T23 ICD10:I48	Migotanie i trzepotanie przedsionków
+T24	Condition 1575 1608	Napadowe częstoskurcz nadkomorowy
+N3	Reference T24 ICD10:I47.1	Częstoskurcz nadkomorowy
+T25	Condition 1623 1667	Pojedyncze pobudzenia nadkomorowe i komorowe
+N4	Reference T25 ICD10:I49	Inne zaburzenia rytmu serca
+T26	Condition 1678 1705	zapaleniu mięśnia sercowego
+N5	Reference T26 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+T27	Date 1706 1710	2004
+A1	Source T26 Declared
+R7	Dat Arg1:T27 Arg2:T26	
+T28	Condition 1735 1756	Nadciśnienie tętnicze
+N6	Reference T28 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T29	Condition 1758 1778	Hipercholesterolemia
+N7	Reference T29 ICD10:E78.0	Czysta hipercholesterolemia
+T30	Condition 1781 1794	Hiperurykemia
+N8	Reference T30 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T31	Investigation_result 1797 1823	Cechy stłuszczenia wątroby
+N9	Reference T31 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T32	Condition 1827 1849	Niedoczynność tarczycy
+N10	Reference T32 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T33	Condition 1852 1902	Choroba zwyrodnieniowa kręgosłupa odcinka szyjnego
+N11	Reference T33 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+A2	Status T33 Historical_Insignificant
+T34	Symptom 2077 2103	okresowego kołatania serca
+N12	Reference T34 ICD10:R00.2	Kołatanie serca
+T36	Date 2106 2129	Nasilenie od 6 miesięcy
+T37	Symptom 2143 2155	zasłabnięcia
+N13	Reference T37 ICD10:R55	Omdlenie i zapaść
+T38	Date 2158 2176	ostatni 2 lat temu
+T39	Symptom 2191 2249	bóle w klatce piersiowej nie zależny od wysiłku , punktowy
+N14	Reference T39 ICD10:R07.3	Inne bóle w klatce piersiowej
+T40	Date 2253 2279	ostatnio 7-8 miesięcy temu
+T41	Symptom 2284 2292;2303 2349	Okresowo uczucie duszności - głównie związane z upałami
+N15	Reference T41 ICD10:R06.0	Duszność
+T42	Negation 2353 2359	Neguje
+T43	Symptom 2360 2379	utraty przytomności
+T44	Condition 2398 2419	Nadciśnienie tętnicze
+N16	Reference T44 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+R8	Dat Arg1:T38 Arg2:T37	
+R10	Dat Arg1:T40 Arg2:T39	
+T45	Condition 2430 2457	zapaleniu mięśnia sercowego
+A3	Source T45 Declared
+N17	Reference T45 ICD10:I51.4	Zapalenie mięśnia sercowego, nieokreślone
+T46	Date 2458 2462	2004
+R11	Dat Arg1:T46 Arg2:T45	
+R12	Neg Arg1:T42 Arg2:T43	
+T47	Condition 2487 2520	Napadowe częstoskurcz nadkomorowy
+N18	Reference T47 ICD10:I47.1	Częstoskurcz nadkomorowy
+T48	Condition 2523 2554	Napadowe migotanie przedsionków
+N19	Reference T48 ICD10:I48	Migotanie i trzepotanie przedsionków
+T49	Drug 2560 2568	Acardzie
+T50	Drug_dose 2569 2591	75 mg 1 x dz wieczorem
+R13	Drg Arg1:T49 Arg2:T50	
+A4	Source T48 Declared
+T51	Condition 2630 2652	Niedoczynność tarczycy
+N20	Reference T51 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T52	Condition 2655 2705	Choroba zwyrodnieniowa kręgosłupa odcinka szyjnego
+A5	Status T52 Historical_Insignificant
+N21	Reference T52 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T53	Treatment 2709 2726	Przebyte operacje
+N22	Reference T53 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T54	Negation 2729 2733	brak
+T55	Treatment 2734 2793	Leczenie przewlekłe:  endokrynologiczne , neurochirurgiczne
+T56	Condition 2822 2825	WZW
+N23	Reference T56 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T57	Condition 2835 2844	borelioza
+N24	Reference T57 ICD10:A69.2	Choroba z Lyme
+R14	Neg Arg1:T54 Arg2:T53	
+T58	Negation 2826 2832	( -  )
+T59	Negation 2845 2850	( - )
+T60	Condition 2890 2905	trzech zawałach
+A6	Status T60 Family
+N25	Reference T60 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T61	Condition 2915 2944	przewlekłe zapalenie oskrzeli
+A7	Status T61 Family
+N26	Reference T61 ICD10:J42	Nieokreślone przewlekłe zapalenie oskrzeli
+R15	Neg Arg1:T58 Arg2:T56	
+R16	Neg Arg1:T59 Arg2:T57	
+T62	Behaviour 2946 2961	Palenie tytoniu
+N27	Reference T62 ICD10:Z72.0	Używanie tytoniu
+T63	Negation 2963 2966	nie
+T64	Behaviour 2967 2978	Inne używki
+N28	Reference T64 ICD10:Z72	Problemy związane ze stylem życia
+T65	Negation 2980 2983	nie
+T66	Condition 2984 2993	Uczulenia
+N29	Reference T66 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T67	Drug 2995 3001	zinnat
+T68	Behaviour 3019 3045	warunki mieszkaniowe dobre
+T69	Behaviour 3048 3063	mieszka z mężem
+T70	Drug 3071 3079	Bisocard
+T71	Drug_dose 3080 3097	5 mg  1 x dz rano
+T72	Drug 3100 3109	Rytmonorm
+T73	Drug_dose 3110 3130	150 3 x dz po 1 tabl
+T74	Drug 3134 3139	Acard
+T75	Drug_dose 3140 3162	75 mg 1 x dz wieczorem
+T76	Drug 3165 3173	Euthyrox
+T77	Drug_dose 3174 3198	N88 1 x dz rano na czczo
+T78	Drug 3201 3212	Diuresin SR
+T79	Drug_dose 3213 3221	doraźnie
+T80	Drug 3225 3234	Lorista H
+T81	Drug_dose 3235 3254	50+12,5 1 x dz rano
+T82	Investigation 3270 3280	Echo serca
+T83	Investigation 3283 3293	Holter EKG
+T84	Investigation 3296 3311	Próba Wysiłkowa
+T85	Investigation 3314 3317	TEE
+T86	Investigation 3358 3361	EKG
+T87	Investigation_result 3362 3374	Oś pośrednia
+T88	Investigation_result 3377 3402	RZM o częstości ok 70/min
+T89	Investigation_result 3404 3424	małe załamki r w III
+T90	Investigation_result 3427 3442	Załamek Q w aVF
+T91	Negation 3445 3448	Bez
+T92	Investigation_result 3449 3476	zmian w zakresie odcinka ST
+N30	Reference T92 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+R17	Neg Arg1:T91 Arg2:T92	
+R18	Inv Arg1:T86 Arg2:T87	
+R19	Inv Arg1:T86 Arg2:T88	
+R20	Inv Arg1:T86 Arg2:T89	
+R21	Inv Arg1:T86 Arg2:T90	
+R22	Inv Arg1:T86 Arg2:T92	
+R23	Neg Arg1:T63 Arg2:T62	
+R24	Neg Arg1:T65 Arg2:T64	
+R25	Alg Arg1:T66 Arg2:T67	
+R26	Drg Arg1:T70 Arg2:T71	
+R27	Drg Arg1:T72 Arg2:T73	
+R28	Drg Arg1:T74 Arg2:T75	
+R29	Drg Arg1:T76 Arg2:T77	
+R30	Drg Arg1:T78 Arg2:T79	
+R31	Drg Arg1:T80 Arg2:T81	
+R9	Dat Arg1:T36 Arg2:T34	

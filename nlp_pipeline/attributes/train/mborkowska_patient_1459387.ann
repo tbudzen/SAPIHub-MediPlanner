@@ -1,0 +1,160 @@
+T1	Investigation 2825 2835	echo serca
+T2	Investigation 2837 2840	TET
+T3	Investigation 2842 2846	ABPM
+T4	Investigation 2848 2854	Holter
+T5	Investigation 2856 2874	RTG kl. piersiowej
+T6	Drug 2766 2773	Vestibo
+T7	Drug_dose 2774 2797	24 mg 1/2 tabl. 2 x dz.
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Drug 2739 2747	Euthyrox
+T9	Drug_dose 2748 2765	88ug 1 tabl. rano
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 2708 2714	Zahron
+T11	Drug_dose 2715 2738	10 mg 1 tabl. wieczorem
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 2685 2688	IPP
+T13	Drug_dose 2689 2707	20 mg 1 tabl. rano
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Drug 2637 2643	Bibloc
+T15	Drug_dose 2644 2684	2,5 mg 1/4 tabl. (nie bierze regularnie)
+R5	Drg Arg1:T14 Arg2:T15	
+T16	Drug 2606 2614	Polfenon
+T17	Drug_dose 2615 2636	150 mg 1 tabl. 3 x dz
+R6	Drg Arg1:T16 Arg2:T17	
+T18	Drug 2574 2581	Lapixen
+T19	Drug_dose 2582 2605	2 mg 1 tabl. w południe
+R7	Drg Arg1:T18 Arg2:T19	
+T20	Drug 2539 2549	Prestarium
+T21	Drug_dose 2550 2573	10 mg 1 tabl. wieczorem
+R8	Drg Arg1:T20 Arg2:T21	
+T22	Drug 2512 2519	Xarelto
+T23	Drug_dose 2520 2538	15 mg 1 tabl. rano
+R9	Drg Arg1:T22 Arg2:T23	
+T24	Drug 2431 2439	Pyralgin
+T25	Condition 2420 2429	Uczulenia
+N1	Reference T25 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R10	Alg Arg1:T25 Arg2:T24	
+T26	Behaviour 2394 2419	Inne używki: okazjonalnie
+T27	Negation 2355 2364	nie pali,
+T28	Behaviour 2338 2353	Palenie tytoniu
+N2	Reference T28 ICD10:T65.2	Tytoń i nikotyna
+R11	Neg Arg1:T27 Arg2:T28	
+T29	Condition 2301 2317	Wywiad rodzinny:
+A1	Status T29 Historical_Insignificant
+T30	Condition 2272 2275	WZW
+N3	Reference T30 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T31	Condition 2277 2286	borelioza
+N4	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Negation 2289 2299	nie podaje
+R12	Neg Arg1:T32 Arg2:T31	
+R13	Neg Arg1:T32 Arg2:T30	
+T33	Treatment 2213 2229	cholecystektomii
+T34	Treatment 2231 2244	appendektomii
+T35	Investigation 494 523	kontrola ciśnienia tętniczego
+T36	Investigation 533 553	kontrola lipidogramu
+T37	Behaviour 554 590	dieta zbliżona do śródziemnomorskiej
+T38	Drug 621 629	Polfenon
+T39	Drug_dose 630 650	150 mg  tabl. 2 x dz
+R14	Drg Arg1:T38 Arg2:T39	
+T40	Drug 652 658	Bibloc
+T41	Drug_dose 659 680	2,5 mg 1/2 tabl. rano
+R15	Drg Arg1:T40 Arg2:T41	
+T42	Drug 681 688	Roswera
+T43	Drug_dose 689 712	10 mg 1 tabl. wieczorem
+R16	Drg Arg1:T42 Arg2:T43	
+T44	Drug 713 716	IPP
+T45	Drug_dose 717 735	20 mg 1 tabl. rano
+R17	Drg Arg1:T44 Arg2:T45	
+T46	Drug 736 743	Vestibo
+T47	Drug_dose 744 776	24 mg 1/2 tabl. rano i wieczorem
+R18	Drg Arg1:T46 Arg2:T47	
+T48	Drug 777 785	Euthyrox
+T49	Drug_dose 786 804	88 ug 1 tabl. rano
+R19	Drg Arg1:T48 Arg2:T49	
+T50	Drug 805 812	Xarelto
+T51	Drug_dose 813 831	15 mg 1 tabl. rano
+R20	Drg Arg1:T50 Arg2:T51	
+T52	Drug 832 843	Tertnsif SR
+T53	Drug_dose 844 856	1 tabl. rano
+R21	Drg Arg1:T52 Arg2:T53	
+T54	Drug 857 864	Amlessa
+T55	Drug_dose 865 889	4/5 mg 1 tabl. wieczorem
+R22	Drg Arg1:T54 Arg2:T55	
+T56	Drug 890 909	Nitromint - aerozol
+T57	Drug_dose 912 920	doraźnie
+R23	Drg Arg1:T56 Arg2:T57	
+T58	Condition 1103 1134	Napadowe migotanie przedsionków
+N5	Reference T58 ICD10:I48	Migotanie i trzepotanie przedsionków
+T59	Condition 1174 1207	Nadciśnienie tętnicze skorygowane
+N6	Reference T59 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T60	Symptom 1209 1222	Zawroty głowy
+N7	Reference T60 ICD10:R42	Zawroty głowy i odurzenie
+T61	Condition 1224 1238	Hiperlipidemia
+N8	Reference T61 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T62	Treatment 1249 1263	farmakoterapii
+T63	Treatment 1273 1281	wycięciu
+T64	Treatment 1326 1339	immunoterapii
+T65	Treatment 1341 1354	chemioterapii
+T66	Treatment 1356 1368	radioterapii
+T67	Treatment 1371 1385	hormonoterapii
+T68	Condition 1401 1424	Niedoczynność tarczycy.
+N9	Reference T68 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T69	Condition 1425 1441	Astma oskrzelowa
+N10	Reference T69 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T70	Condition 1455 1487	Zmiany zwyrodnieniowe kręgosłupa
+N11	Reference T70 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T71	Condition 1282 1316	guza piersi lewej (rak przewodowy)
+N12	Reference T71 ICD10:C50	Nowotwór złośliwy piersi
+T72	Date 1387 1397	2014/2015r
+R24	Dat Arg1:T72 Arg2:T67	
+R25	Dat Arg1:T72 Arg2:T66	
+R26	Dat Arg1:T72 Arg2:T65	
+R27	Dat Arg1:T72 Arg2:T64	
+R28	Dat Arg1:T72 Arg2:T71	
+R29	Dat Arg1:T72 Arg2:T63	
+T73	Condition 2153 2185	zmiany zwyrodnieniowe kręgosłupa
+N13	Reference T73 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T74	Condition 2137 2151	hiperlipidemia
+N14	Reference T74 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T75	Symptom 2122 2135	zawroty głowy
+N15	Reference T75 ICD10:R42	Zawroty głowy i odurzenie
+T76	Condition 2104 2120	astma oskrzelowa
+N16	Reference T76 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T77	Condition 2080 2102	niedoczynność tarczycy
+N17	Reference T77 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T78	Condition 2057 2078	nadciśnienie tętnicze
+N18	Reference T78 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T79	Treatment 2028 2042	hormonoterapii
+T80	Treatment 2014 2026	radioterapii
+T81	Treatment 1999 2012	chemioterapii
+T82	Treatment 1984 1997	immunoterapii
+T83	Condition 1904 1943	rak przewodowy naciekający piersi lewej
+N19	Reference T83 ICD10:C50	Nowotwór złośliwy piersi
+T84	Treatment 1953 1961	wycięciu
+T85	Condition 1962 1980	guza piersi lewej,
+N20	Reference T85 ICD10:C50	Nowotwór złośliwy piersi
+T86	Date 2044 2054	2014/2015r
+R30	Dat Arg1:T86 Arg2:T79	
+R31	Dat Arg1:T86 Arg2:T80	
+R32	Dat Arg1:T86 Arg2:T81	
+R33	Dat Arg1:T86 Arg2:T82	
+R34	Dat Arg1:T86 Arg2:T85	
+R35	Dat Arg1:T86 Arg2:T84	
+T87	Drug 1804 1819	Bibloc-Polfenon
+T88	Investigation_result 1820 1847	tendencja do wolnych rytmów
+T89	Investigation_result 1849 1860	HR 40-50/')
+T90	Drug 1883 1889	Bibloc
+T91	Negation 1879 1882	bez
+R36	Neg Arg1:T91 Arg2:T90	
+T92	Date 1865 1878	ok.1 miesiąca
+R37	Dat Arg1:T92 Arg2:T90	
+T93	Condition 1696 1737	częstszych napadów migotania przedsionków
+N21	Reference T93 ICD10:I48	Migotanie i trzepotanie przedsionków
+T94	Symptom 1740 1765	spadku tolerancji wysiłku
+T95	Date 1769 1780	ok. 1 roku.
+R38	Dat Arg1:T95 Arg2:T94	
+T96	Condition 2318 2337	obustronnie dodatni
+A2	Status T96 Family
+T97	Investigation 461 484	angio-CT tt. wieńcowych
+T98	Investigation_result 1136 1154	CHA2DS2-VASC 4 pkt
+T99	Investigation_result 1157 1171	HAS-BLED 2 pkt

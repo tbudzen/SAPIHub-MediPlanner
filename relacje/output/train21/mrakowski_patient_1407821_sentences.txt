@@ -1,0 +1,542 @@
+allRelations          : 32
+oks                   : 6
+isRedundantAndRemoveds: 21
+shouldNotBeRemoveds   : 2
+shouldBeBemoveds      : 3
+GOOD / BAD            : 27 / 5
+Sentence 0:
+------------------------------------------------
+Wiek: 30 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+1.
+
+
+Sentence 5:
+Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej.
+
+
+
+Sentence 6:
+2. Wskazane wykonanie RM serca w warunkach ambulatoryjnych -
+
+
+Sentence 7:
+wydano skierowanie do Poradni Kardiologicznej.
+
+
+
+Sentence 8:
+3. Dieta lekkostrawna , niskocholesterolowa .   
+
+
+
+Sentence 9:
+4. Systematyczna kontrola ciśnienia tętniczego krwi.  
+
+
+
+Sentence 10:
+5. Wskazana profilaktyka infekcyjnego zapalenia wsierdzia podczas zabiegów stomatologicznych (amoksycylina lub ampicylina 2 g doustnie lub i.v , w przypadku alergii na powyższe antybiotyki - klindamycyna 600 mg doustnie lub i.v.) 
+
+R1	Drg Arg1:T6 Arg2:T8 <<SHOULD NOT BE REMOVED>>	amoksycylina -> 2 g doustnie lub i.v <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[705, 733] <type: RIGHT>>
+R2	Drg Arg1:T6 Arg2:T12 <<REDUNDANT!!!REMOVED>>	amoksycylina -> 600 mg doustnie lub i.v. <:REMOVED other first tag between (right):> <RANK: 2> <info: start[705, 815] <type: RIGHT>>
+R3	Drg Arg1:T7 Arg2:T8 <<SHOULD NOT BE REMOVED>>	ampicylina -> 2 g doustnie lub i.v <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[722, 733] <type: RIGHT>>
+R4	Drg Arg1:T7 Arg2:T12 <<REDUNDANT!!!REMOVED>>	ampicylina -> 600 mg doustnie lub i.v. <:REMOVED other first tag between (right):> <RANK: 2> <info: start[722, 815] <type: RIGHT>>
+R5	Drg Arg1:T10 Arg2:T8 <<REDUNDANT!!!REMOVED>>	antybiotyki -> 2 g doustnie lub i.v <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[788, 733] <type: LEFT>>
+R6	Drg Arg1:T10 Arg2:T12 <<REDUNDANT!!!REMOVED>>	antybiotyki -> 600 mg doustnie lub i.v. <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[788, 815] <type: RIGHT>>
+R7	Drg Arg1:T11 Arg2:T8 <<REDUNDANT!!!REMOVED>>	klindamycyna -> 2 g doustnie lub i.v <:REMOVED other first tag between (left):> <RANK: 2> <info: start[802, 733] <type: LEFT>>
+R8	Drg Arg1:T11 Arg2:T12 << OK >>	klindamycyna -> 600 mg doustnie lub i.v.  <RANK: 3> <info: start[802, 815] <type: RIGHT>>
+R9	Alg Arg1:T9 Arg2:T6 <<REDUNDANT!!!REMOVED>>	alergii -> amoksycylina <:REMOVED other second tag between (left):> <RANK: 2> <info: start[768, 705] <type: LEFT>>
+R10	Alg Arg1:T9 Arg2:T7 <<REDUNDANT!!!REMOVED>>	alergii -> ampicylina <:REMOVED many second tags on the left:> <RANK: 2> <info: start[768, 722] <type: LEFT>>
+R11	Alg Arg1:T9 Arg2:T10 <<REDUNDANT!!!REMOVED>>	alergii -> antybiotyki <:REMOVED too long text between 13 limit:10:> <RANK: 3> <info: start[768, 788] <type: RIGHT>>
+R12	Alg Arg1:T9 Arg2:T11 <<REDUNDANT!!!REMOVED>>	alergii -> klindamycyna <:REMOVED too long text between 27 limit:10:> <RANK: 3> <info: start[768, 802] <type: RIGHT>>
+
+
+Sentence 11:
+6.
+
+
+Sentence 12:
+W związku z wysokim ryzykiem infekcyjnego zapalenia wsierdzia zaleca się działania profilaktyczne - ścisła higiena skóry i jamy ustnej, przeglądy stomatologiczne należy przeprowadzać co najmniej dwa razy w roku, dezynfekcja ran, eliminacja lub ograniczenie przewlekłego nosicielstwa bakteryjnego: skóry, moczu, leczenie antybiotykami każdego ogniska zakażenia bakteryjnego, niestosowanie antybiotyków samodzielnie przez pacjenta, unikanie kolczykowania i tatuowania ciała, ścisłe przestrzeganie zasad aseptyki podczas zabiegów stwarzających ryzyko zakażenia. 
+
+R13	Dat Arg1:T15 Arg2:T18 <<REDUNDANT!!!REMOVED>>	dwa razy w roku -> niestosowanie antybiotyków samodzielnie przez pacjenta <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1040, 1219] <type: RIGHT>>
+R14	Dat Arg1:T15 Arg2:T19 <<REDUNDANT!!!REMOVED>>	dwa razy w roku -> unikanie kolczykowania i tatuowania ciała <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1040, 1275] <type: RIGHT>>
+R15	Dat Arg1:T15 Arg2:T13 <<REDUNDANT!!!SHOULD BE REMOVED>>	dwa razy w roku -> W związku z wysokim ryzykiem infekcyjnego zapalenia wsierdzia zaleca się działania profilaktyczne - ścisła higiena skóry i jamy ustnej  <RANK: 2> <info: start[1040, 845] <type: LEFT>>
+R16	Dat Arg1:T15 Arg2:T14 << OK >>	dwa razy w roku -> przeglądy stomatologiczne  <RANK: 3> <info: start[1040, 981] <type: LEFT>>
+R17	Dat Arg1:T15 Arg2:T16 <<REDUNDANT!!!REMOVED>>	dwa razy w roku -> dezynfekcja ran, eliminacja lub ograniczenie przewlekłego nosicielstwa bakteryjnego: skóry, moczu <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1040, 1057] <type: RIGHT>>
+R18	Dat Arg1:T15 Arg2:T17 <<REDUNDANT!!!REMOVED>>	dwa razy w roku -> leczenie antybiotykami każdego ogniska zakażenia bakteryjnego <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1040, 1156] <type: RIGHT>>
+R19	Dat Arg1:T15 Arg2:T20 <<REDUNDANT!!!REMOVED>>	dwa razy w roku -> ścisłe przestrzeganie zasad aseptyki podczas zabiegów stwarzających ryzyko zakażenia <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1040, 1318] <type: RIGHT>>
+
+
+Sentence 13:
+7.
+
+
+Sentence 14:
+Wskazane ograniczenie sportu i wysiłku fizycznego do poziomu rekreacyjnego.
+
+
+
+Sentence 15:
+8. Zakaz picia alkoholu.
+
+
+
+Sentence 16:
+Bez wskazań do przyjmowania leków na stałe.
+
+
+
+Sentence 17:
+------------------------------------------------
+
+
+
+Sentence 18:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 19:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q22.3|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią zastawkowego zwężenia tętnicy płucnej, stan po przebytej angioplastyce balonowej zastawki płucnej (1991 r.).
+R20	Dat Arg1:T26 Arg2:T24 <<REDUNDANT!!!SHOULD BE REMOVED>>	1991 -> Wrodzona wada serca pod postacią zastawkowego zwężenia tętnicy płucnej  <RANK: 2> <info: start[1913, 1781] <type: LEFT>>
+R21	Dat Arg1:T26 Arg2:T25 << OK >>	1991 -> przebytej angioplastyce balonowej zastawki płucnej  <RANK: 3> <info: start[1913, 1861] <type: LEFT>>
+
+
+Sentence 20:
+Istotna niedomykalność zastawki płucnej, łagodna trójdzielnej.
+
+
+Sentence 21:
+Arytmia komorowa pod postacią nieutrwalonego częstoskurczu komorowego.
+
+
+Sentence 22:
+Skrzywiona przegroda nosowa, chroniczny katar.
+
+
+Sentence 23:
+Guzki krwawnicze w wywiadzie, stan po appendektomii.
+
+
+
+Sentence 24:
+------------------------------------------------
+
+
+
+Sentence 25:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 26:
+Pacjent lat 29 przyjęty do Kliniki przyjęty z powodu okresowo występującego kołatania serca celem kontroli wady serca.
+
+
+Sentence 27:
+W wywiadzie: wrodzona wada serca pod postacią zastawkowego zwężenia tętnicy płucnej, stan po przebytej angioplastyce balonowej zastawki płucnej (1991 r.), niedomykalność zastawki płucnej II*, trójdzielnej I*, skrzywiona przegroda nosowa, chroniczny katar, guzki krwawnicze w wywiadzie, stan po appendektomii.
+R22	Dat Arg1:T38 Arg2:T42 <<REDUNDANT!!!REMOVED>>	1991 -> chroniczny katar <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2545, 2638] <type: RIGHT>>
+R23	Dat Arg1:T38 Arg2:T36 <<REDUNDANT!!!SHOULD BE REMOVED>>	1991 -> wrodzona wada serca pod postacią zastawkowego zwężenia tętnicy płucnej  <RANK: 2> <info: start[2545, 2413] <type: LEFT>>
+R24	Dat Arg1:T38 Arg2:T39 <<REDUNDANT!!!REMOVED>>	1991 -> niedomykalność zastawki płucnej II* <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2545, 2555] <type: RIGHT>>
+R25	Dat Arg1:T38 Arg2:T40 <<REDUNDANT!!!REMOVED>>	1991 -> trójdzielnej I* <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2545, 2592] <type: RIGHT>>
+R26	Dat Arg1:T38 Arg2:T41 <<REDUNDANT!!!REMOVED>>	1991 -> skrzywiona przegroda nosowa <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2545, 2609] <type: RIGHT>>
+R27	Dat Arg1:T38 Arg2:T43 <<REDUNDANT!!!REMOVED>>	1991 -> guzki krwawnicze <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2545, 2656] <type: RIGHT>>
+R28	Dat Arg1:T38 Arg2:T37 << OK >>	1991 -> przebytej angioplastyce balonowej zastawki płucnej  <RANK: 3> <info: start[2545, 2493] <type: LEFT>>
+R29	Dat Arg1:T38 Arg2:T44 <<REDUNDANT!!!REMOVED>>	1991 -> appendektomii <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2545, 2694] <type: RIGHT>>
+
+
+Sentence 28:
+Uczulenia neguje.
+R30	Neg Arg1:T46 Arg2:T45 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[2719, 2709] <type: LEFT>>
+
+
+Sentence 29:
+Używki: alkohol sporadycznie, neguje palenie.
+R31	Neg Arg1:T48 Arg2:T47 <<REDUNDANT!!!REMOVED>>	neguje -> Używki: alkohol sporadycznie <:REMOVED many second tags on the left:> <RANK: 2> <info: start[2757, 2727] <type: LEFT>>
+R32	Neg Arg1:T48 Arg2:T49 << OK >>	neguje -> palenie  <RANK: 3> <info: start[2757, 2764] <type: RIGHT>>
+
+
+Sentence 30:
+Leków na stałe nie przyjmuje.
+
+
+Sentence 31:
+Stan społeczny - dobry, pracuje jako informatyk.
+
+
+Sentence 32:
+Wywiad rodzinny: HA u ojca.
+
+
+
+Sentence 33:
+------------------------------------------------
+
+
+
+Sentence 34:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 35:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.49[10^3/ul]
+    
+
+
+Sentence 36:
+RBC Krwinki czerwone:5.19[10^6/ul]
+    
+
+
+Sentence 37:
+HGB Hemoglobina:16.3[g/dl]
+    
+
+
+Sentence 38:
+HCT Hematokryt:45.4[%]
+    
+
+
+Sentence 39:
+MCV wskaźnik czerwonokrw:87.5[fl]
+    
+
+
+Sentence 40:
+MCH wskaźnik czerwonokrw:31.4[pg]
+    
+
+
+Sentence 41:
+MCHC wskaźnik czerwonokr:35.9[g/dl]
+    
+
+
+Sentence 42:
+PLT z morfologii:188[10^3/ul]
+    
+
+
+Sentence 43:
+RDW-SD:39.3[fl]
+    
+
+
+Sentence 44:
+RDW-CV:12.2[%]
+    PDW:16.2[fl]
+    
+
+
+Sentence 45:
+MPV:11.8[fl]
+    
+
+
+Sentence 46:
+P-LCR:40.5[%]
+    
+
+
+Sentence 47:
+PCT (hematokryt płytkowy:0.22[%]
+    
+
+
+Sentence 48:
+NEUTR# wartość bezwzględ:2.07[10^3/ul]
+    
+
+
+Sentence 49:
+NEUTR%:37.7[%]
+    
+
+
+Sentence 50:
+LYMH# wartość bezwzględn:2.68[10^3/ul]
+    
+
+
+Sentence 51:
+LYMPH%:48.8[%]
+    
+
+
+Sentence 52:
+MONO# wartość bezwzględn:0.45[10^3/ul]
+    
+
+
+Sentence 53:
+MONO%:8.2[%]
+    
+
+
+Sentence 54:
+EO# wartość bezwzględna:0.23[10^3/ul]
+    
+
+
+Sentence 55:
+EO%:4.2[%]
+    
+
+
+Sentence 56:
+BASO# wartość bezwzględn:0.06[10^3/ul]
+    
+
+
+Sentence 57:
+BASO%:1.1[%]
+    
+
+
+Sentence 58:
+NRBC %:0.0[%]
+    
+
+
+Sentence 59:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 60:
+Badanie ogólne moczu
+    
+
+
+Sentence 61:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 62:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 63:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 64:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 65:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 66:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 67:
+ciężar właściwy:1.013[ ]
+    
+
+
+Sentence 68:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 69:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 70:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 71:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 72:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 73:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 74:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 75:
+leukocyty:1 /ul[ul]
+    śluz:nieliczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 76:
+TSH: TSH:4.21[uIU/ml]
+
+
+
+Sentence 77:
+FT3: FT3:3.08[pg/ml]
+
+
+
+Sentence 78:
+FT4: FT4:1.22[ng/dl]
+
+
+
+Sentence 79:
+ALAT: ALAT:16[U/L]
+ASPAT: ASPAT:22[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 80:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 81:
+Potas (K): Potas:4.3[mmol/L]
+
+
+
+Sentence 82:
+Kreatynina + GFR
+    
+
+
+Sentence 83:
+Kreatynina w surowicy:0.90[mg/dl]
+    
+
+
+Sentence 84:
+eGFR wg skr.
+
+
+Sentence 85:
+MDRD ze stan:99.8[ml/min/1,73 m^2]
+
+
+
+Sentence 86:
+Mocznik: Mocznik:36[mg/dl]
+
+
+
+Sentence 87:
+Kwas moczowy: Kwas moczowy:7.0[mg/dl]
+
+
+
+Sentence 88:
+Lipidogram
+    
+
+
+Sentence 89:
+Cholesterol całkowity:119[mg/dl]
+    
+
+
+Sentence 90:
+Cholesterol HDL:47[mg/dl]
+    
+
+
+Sentence 91:
+Cholestrol LDL:74[mg/dl]
+    
+
+
+Sentence 92:
+Triglicerydy:54[mg/dl]
+    
+
+
+Sentence 93:
+Stosunek cholesterolu HD:0.4
+Glukoza w surowicy: Glukoza w surowicy:77[mg/dl]
+
+
+
+Sentence 94:
+------------------------------------------------
+
+
+
+Sentence 95:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 96:
+Q22.3
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 97:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 98:
+89.501
+88.721
+89.502
+------------------------------------------------
+
+

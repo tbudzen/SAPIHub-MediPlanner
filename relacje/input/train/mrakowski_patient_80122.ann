@@ -1,0 +1,55 @@
+T1	Condition 449 490	Łagodna niedomykalność zastawki mitralnej
+N1	Reference T1 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T2	Condition 493 505	trójdzielnej
+N2	Reference T2 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T3	Symptom 507 522	Kołatania serca
+N3	Reference T3 ICD10:R00.2	Kołatanie serca
+T4	Symptom 524 548	Bóle w klatce piersiowej
+N4	Reference T4 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T5	Condition 550 609	Podejrzenie zwyrodnienia stawów odc. piersiowego kręgosłupa
+N5	Reference T5 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T6	Treatment 719 802	Dalsza opieka w Poradni Kardiologii i Wad Wrodzonych Dorosłych, Ortopedycznej i POZ
+T7	Behaviour 804 831	Rzucenie palenia tytoniu!!!
+T8	Behaviour 833 924	Regularna aktywność fizyczna oraz przestrzeganie dobrze zbilansowanej , zróżnicowanej diety
+T9	Symptom 1097 1156	dolegliwości bólowych w kl. piersiowej o charakterze kłucia
+N6	Reference T9 ICD10:R07.2	Ból w okolicy przedsercowej
+T10	Date 1157 1169	od ok. 2 lat
+R1	Dat Arg1:T10 Arg2:T9	
+T11	Investigation 1203 1228	bad. echokardiograficznym
+T12	Investigation_result 1230 1245	podejrzenie PDA
+N7	Reference T12 ICD10:Q25.0	Drożny przewód tętniczy
+T13	Investigation_result 1247 1257	IT I/II st
+N8	Reference T13 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+R2	Inv Arg1:T11 Arg2:T12	
+R3	Inv Arg1:T11 Arg2:T13	
+T14	Treatment 1278 1304	skrzywionej przegrody nosa
+A1	Status T14 Historical_Insignificant
+T15	Condition 1332 1335	WZW
+N9	Reference T15 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T16	Condition 1337 1346	borelioza
+N10	Reference T16 ICD10:A69.2	Choroba z Lyme
+T17	Negation 1349 1359	nie podaje
+R4	Neg Arg1:T17 Arg2:T16	
+R5	Neg Arg1:T17 Arg2:T15	
+T18	Condition 1360 1375	Wywiad rodzinny
+A2	Status T18 Family
+T19	Negation 1377 1387	nie podaje
+R6	Neg Arg1:T19 Arg2:T18	
+T20	Behaviour 1388 1421	Palenie tytoniu: 1 paczka/miesiąc
+N11	Reference T20 ICD10:Z72.0	Używanie tytoniu
+T21	Behaviour 1422 1433	Inne używki
+T22	Negation 1435 1445	nie podaje
+R7	Neg Arg1:T22 Arg2:T21	
+T23	Condition 1446 1455	Uczulenia
+T24	Negation 1457 1467	nie podaje
+R8	Neg Arg1:T24 Arg2:T23	
+T25	Behaviour 1486 1497	nie pracuje
+T26	Investigation 1576 1586	echo serca
+T27	Investigation 1588 1591	TET
+T28	Investigation 1593 1597	ABPM
+T29	Investigation 1599 1605	Holter
+T30	Investigation 1607 1625	RTG kl. piersiowej
+A3	Source T5 Declared
+T31	Treatment 1259 1276	Przebyte operacje
+A4	Source T12 Declared
+T32	Behaviour 1499 1520	wykształcenia średnie

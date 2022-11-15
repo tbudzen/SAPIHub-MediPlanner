@@ -1,0 +1,202 @@
+T1	Drug 341 350	0.9% NaCl
+T2	Drug_dose 351 353	iv
+T3	Drug 355 362	Pradaxa
+T4	Drug 364 375	Betaloc ZOK
+T5	Drug 377 389	Tertensif SR
+T6	Drug 391 398	Tritace
+T7	Drug 400 408	Primacor
+T8	Drug 410 422	Kalipoz prol
+T9	Drug 424 436	Nitrendypina
+T10	Treatment 548 605	kontrola u lekarza POZ i dalsza w Poradni Kardiologicznej
+T11	Behaviour 608 651	przyjmowanie min. 1,5 litra płynów dziennie
+T12	Investigation 654 700	kontrola jonogramu, mocznika, kreatyniny i GFR
+T13	Date 701 712	za ok 7 dni
+T14	Drug 762 769	Pradaxa
+T15	Drug_dose 770 773	110
+R1	Drg Arg1:T1 Arg2:T2	
+R2	Drg Arg1:T14 Arg2:T15	
+R3	Dat Arg1:T13 Arg2:T12	
+T16	Condition 991 1018	Choroba niedokrwienna serca
+N1	Reference T16 ICD10:I20	Choroba niedokrwienna serca
+T17	Condition 1020 1051	Napadowe migotanie przedsionków
+N2	Reference T17 ICD10:I48	Migotanie i trzepotanie przedsionków
+T18	Condition 1053 1074	Nadciśnienie tętnicze
+N3	Reference T18 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T19	Treatment 1189 1244	Dalsze leczenie w Poradni POZ i Poradni Kardiologicznej
+T20	Date 1347 1365	w dniu 26/07/2017r
+T21	Investigation 1391 1416	angioCT tętnic wieńcowych
+T22	Date 1417 1435	w dniu 27/07/2017r
+T23	Treatment 1246 1306	Zgłosi się do Kliniki Kardiologii i Wad Wrodzonych Dorosłych
+T24	Investigation 1448 1493	Regularny pomiar ciśnienia tętniczego i tętna
+T25	Investigation 1495 1561	Okresowe monitorowanie parametrów nerkowych i poziomu elektrolitów
+T26	Drug 1621 1632	Betaloc ZOK
+R4	Dat Arg1:T20 Arg2:T23	
+R5	Dat Arg1:T22 Arg2:T21	
+T27	Drug_dose 1633 1651	100 1x1 tabl. rano
+T28	Drug 1652 1659	Pradaxa
+T29	Drug_dose 1660 1675	110 mg 2x1 tabl
+T30	Drug 1677 1684	Tritace
+T31	Drug_dose 1685 1710	10 mg 1x1 tabl. wieczorem
+T32	Drug 1711 1723	Tertensif SR
+T33	Drug_dose 1724 1738	1x1 tabl. rano
+T34	Drug 1739 1747	Primacor
+T35	Drug_dose 1748 1768	10 mg 1x1 tabl. rano
+R6	Drg Arg1:T26 Arg2:T27	
+R7	Drg Arg1:T28 Arg2:T29	
+R8	Drg Arg1:T30 Arg2:T31	
+R9	Drg Arg1:T32 Arg2:T33	
+R10	Drg Arg1:T34 Arg2:T35	
+T36	Drug 1888 1899	Betaloc ZOK
+T37	Drug 1901 1908	Pradaxa
+T38	Drug 1910 1917	Tritace
+T39	Drug 1919 1931	Tertensif SR
+T40	Drug 1933 1941	Primacor
+T41	Drug 1943 1950	Amlozek
+T42	Drug 1952 1959	Clexane
+T43	Condition 2339 2352	FA napadowego
+N4	Reference T43 ICD10:I48	Migotanie i trzepotanie przedsionków
+T44	Date 2354 2364	od 05.2017
+T45	Condition 2367 2369	HA
+N5	Reference T45 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T46	Investigation_result 2371 2392	RR w domu <145/90mmHg
+T47	Symptom 2424 2436	męczenia się
+T48	Symptom 2438 2490	na 1 piętro wchodzi bez odpoczynku, bez dolegliwości
+T49	Symptom 2492 2540	gdy idzie szybciej to męczy się po przejściu 15m
+R11	Dat Arg1:T44 Arg2:T43	
+T50	Symptom 2564 2614	bóle w klatce piersiowej przy wysilku, za mostkiem
+N6	Reference T50 ICD10:R07.2	Ból w okolicy przedsercowej
+T51	Symptom 2616 2635	gdy szybciej chodzi
+T52	Symptom 2637 2658	o charakterze ciężaru
+T53	Symptom 2660 2676	trwające do 2min
+T54	Symptom 2678 2700	ustępujące w spoczynku
+T55	Negation 2702 2705	bez
+T56	Symptom 2706 2725	bólów spoczynkowych
+R12	Neg Arg1:T55 Arg2:T56	
+T57	Symptom 2727 2747	obrzeki wokół kostek
+N7	Reference T57 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T58	Symptom 2749 2771	napady kolatania serca
+N8	Reference T58 ICD10:R00.2	Kołatanie serca
+T59	Symptom 2788 2816	uciskiem w klatce piersiowej
+N9	Reference T59 ICD10:R07.3	Inne bóle w klatce piersiowej
+T60	Investigation 2837 2848	usg brzucha
+T61	Investigation_result 2869 2888	płyn do diagnostyki
+N10	Reference T61 ICD10:R93.5	Nieprawidłowe wyniki diagnostycznych badań obrazowych innych części jamy brzusznej, w tym przestrzeni zaotrzewnowej
+T62	Treatment 2893 2924	skierowanie do oddz Ginekologii
+T63	Investigation 2928 2939	diagnostyki
+A1	Source T61 Declared
+T64	Date 2819 2827	Ostatnio
+R13	Dat Arg1:T64 Arg2:T60	
+R14	Inv Arg1:T60 Arg2:T61	
+R15	Dat Arg1:T64 Arg2:T62	
+R16	Dat Arg1:T64 Arg2:T63	
+T65	Negation 2941 2947	Neguje
+T66	Symptom 2949 2961	zasłabnięcia
+N11	Reference T66 ICD10:R55	Omdlenie i zapaść
+T67	Symptom 2963 2971	omdlenia
+N12	Reference T67 ICD10:R55	Omdlenie i zapaść
+T68	Symptom 2973 2983	krwawienia
+N13	Reference T68 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T69	Symptom 2985 2998	czarne stolce
+N14	Reference T69 ICD10:K92.1	Stolce smołowate
+T70	Symptom 3000 3016	brunatne wymioty
+N15	Reference T70 ICD10:K92.0	Wymioty krwawe
+T71	Condition 3018 3034	chorobę wrzodową
+N16	Reference T71 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T72	Symptom 3036 3050	duszność nocną
+N17	Reference T72 ICD10:R06.0	Duszność
+T73	Condition 3052 3054	DM
+N18	Reference T73 ICD10:E11	Cukrzyca insulinoniezależna
+T74	Condition 3056 3066	udar mózgu
+N19	Reference T74 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T75	Condition 3068 3079	zawał serca
+N20	Reference T75 ICD10:I25.2	Przebyty zawał serca
+T76	Treatment 3083 3100	Przebyte operacje
+N21	Reference T76 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T77	Treatment 3102 3115	appendektomia
+A2	Status T77 Historical_Insignificant
+N22	Reference T77 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T78	Date 3116 3126	przed laty
+R17	Dat Arg1:T78 Arg2:T77	
+R18	Neg Arg1:T65 Arg2:T66	
+R19	Neg Arg1:T65 Arg2:T67	
+R20	Neg Arg1:T65 Arg2:T68	
+R21	Neg Arg1:T65 Arg2:T69	
+R22	Neg Arg1:T65 Arg2:T70	
+R23	Neg Arg1:T65 Arg2:T71	
+R24	Neg Arg1:T65 Arg2:T72	
+R25	Neg Arg1:T65 Arg2:T73	
+R26	Neg Arg1:T65 Arg2:T74	
+R27	Neg Arg1:T65 Arg2:T75	
+T79	Behaviour 3127 3142	Palenie tytoniu
+N23	Reference T79 ICD10:Z72.0	Używanie tytoniu
+T80	Negation 3144 3147	nie
+T81	Behaviour 3148 3159	Inne używki
+N24	Reference T81 ICD10:Z72	Problemy związane ze stylem życia
+T82	Negation 3160 3163	nie
+T83	Condition 3164 3173	Uczulenia
+N25	Reference T83 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T84	Negation 3210 3216	neguje
+T85	Condition 3217 3232	alergię na leki
+N26	Reference T85 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T86	Condition 3261 3264	WZW
+N27	Reference T86 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T87	Condition 3271 3280	borelioza
+N28	Reference T87 ICD10:A69.2	Choroba z Lyme
+T88	Condition 3288 3291	tbc
+N29	Reference T88 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T89	Negation 3265 3268	(-)
+T90	Negation 3281 3286	( - )
+T91	Negation 3292 3295	(-)
+T92	Behaviour 3312 3338	warunki mieszkaniowe dobre
+T93	Drug 3375 3382	Pradaxa
+R28	Neg Arg1:T80 Arg2:T79	
+R29	Neg Arg1:T82 Arg2:T81	
+R30	Neg Arg1:T84 Arg2:T85	
+R31	Neg Arg1:T89 Arg2:T86	
+R32	Neg Arg1:T90 Arg2:T87	
+R33	Neg Arg1:T91 Arg2:T88	
+T94	Drug_dose 3383 3390	2x110mg
+T95	Drug 3391 3402	Betaloc ZOK
+T96	Drug_dose 3403 3423	100mg 1x 1 tabl/rano
+T97	Drug 3424 3436	Tertensif SR
+T98	Drug_dose 3437 3451	1x 1 tabl/rano
+T99	Drug 3452 3459	Tritace
+T100	Drug_dose 3460 3480	10mg 1x 1 tabl/wiecz
+T101	Drug 3481 3489	Primacor
+T102	Drug_dose 3490 3509	10mg 1x 1 tabl/rano
+T103	Drug 3510 3522	Kalipoz prol
+T104	Drug_dose 3523 3532	2x 1 tabl
+R34	Drg Arg1:T93 Arg2:T94	
+R35	Drg Arg1:T95 Arg2:T96	
+R36	Drg Arg1:T97 Arg2:T98	
+R37	Drg Arg1:T99 Arg2:T100	
+R38	Drg Arg1:T101 Arg2:T102	
+R39	Drg Arg1:T103 Arg2:T104	
+T105	Condition 3680 3713	napadowym migotaniem przedsionków
+N30	Reference T105 ICD10:I48	Migotanie i trzepotanie przedsionków
+T106	Investigation_result 3715 3757	labilnymi wartościami ciśnienia tętniczego
+T107	Date 3758 3770	od kilku lat
+T108	Symptom 3775 3806	pogorszeniem tolerancji wysiłku
+T109	Date 3807 3815	od 3 lat
+T110	Condition 3957 3974	uczulenia na leki
+N31	Reference T110 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T111	Negation 3950 3956	neguje
+T112	Condition 3906 3923	alergia pokarmowa
+N32	Reference T112 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R40	Neg Arg1:T111 Arg2:T110	
+T113	Condition 3975 3990	Wywiad rodzinny
+A3	Status T113 Family
+T114	Negation 3992 4001	negatywny
+T115	Behaviour 4002 4009	Palenie
+N33	Reference T115 ICD10:Z72.1	Używanie alkoholu
+T116	Negation 4011 4017	neguje
+T117	Drug 4024 4035	Betaloc ZOK
+T118	Drug_dose 4036 4053	50 1x1 tabl. rano
+T119	Drug 4055 4067	Tertensif SR
+T120	Drug_dose 4068 4087	1x1 tabl. wieczorem
+R41	Drg Arg1:T117 Arg2:T118	
+R42	Drg Arg1:T119 Arg2:T120	
+R43	Neg Arg1:T114 Arg2:T113	
+R44	Neg Arg1:T116 Arg2:T115	
+R45	Dat Arg1:T107 Arg2:T106	
+R46	Dat Arg1:T109 Arg2:T108	

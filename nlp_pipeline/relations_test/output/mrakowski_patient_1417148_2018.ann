@@ -1,0 +1,39 @@
+T1	Drug 339 349	Cefazolina
+T2	Drug 352 361	kroplówka
+T3	Condition 581 635	Wrodzona wada serca pod postacią zwężenia cieśni aorty
+N1	Reference T3 ICD10:Q25.1	Zwężenie cieśni aorty
+T4	Condition 640 651	Trisomia 21
+T5	Drug 788 796	witaminy
+T6	Treatment 905 928	Kontrola kardiologiczna
+T7	Date 929 938	za 3 m-ce
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Investigation 941 1006	Badanie ogólne moczu i dalsze postepowanie w zależności od wyniku
+T9	Condition 1159 1213	Wrodzona wada serca pod postacią zwężenia cieśni aorty
+N3	Reference T9 ICD10:Q25.1	Zwężenie cieśni aorty
+T10	Condition 1216 1248	przetrwałego przewodu tętniczego
+N4	Reference T10 ICD10:Q25.0	Drożny przewód tętniczy
+T11	Condition 1253 1265	Zespół Downa
+N5	Reference T11 ICD10:Q90	Zespół Downa
+N2	Reference T4 ICD10:Q90	Zespół Downa
+T12	Condition 1489 1497	z. Downa
+N6	Reference T12 ICD10:Q90	Zespół Downa
+T13	Condition 1502 1505	CoA
+N7	Reference T13 ICD10:Q25.1	Zwężenie cieśni aorty
+T14	Condition 1508 1511	PDA
+N8	Reference T14 ICD10:Q25.0	Drożny przewód tętniczy
+T15	Investigation 1526 1543	badania kontrolne
+T16	Symptom 1546 1560	okresowo ulewa
+N9	Reference T16 ICD10:P92.1	Ulewanie i przeżuwanie pokarmu u noworodka
+T17	Symptom 1590 1608	zwymiotował żółcią
+N10	Reference T17 ICD10:P92.0	Wymioty u noworodka
+T18	Investigation 1620 1631	usg brzucha
+T19	Condition 1633 1650	wywiad alergiczny
+N11	Reference T19 ICD10:T78.4	Alergia, nieokreślona
+T20	Negation 1651 1657	ujemny
+R2	Neg Arg1:T20 Arg2:T19	
+T21	Drug 1660 1674	leków na stałe
+T22	Negation 1675 1688	nie otrzymuje
+R3	Neg Arg1:T22 Arg2:T21	
+R1	Dat Arg1:T7 Arg2:T8
+R19	Neg Arg1:T22 Arg2:T21
+R7	Neg Arg1:T20 Arg2:T19

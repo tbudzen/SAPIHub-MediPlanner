@@ -1,0 +1,538 @@
+allRelations          : 39
+oks                   : 14
+isRedundantAndRemoveds: 20
+shouldNotBeRemoveds   : 2
+shouldBeBemoveds      : 3
+GOOD / BAD            : 34 / 5
+Sentence 0:
+------------------------------------------------
+Wiek: 31 lat
+------------------------------------------------
+
+
+
+Sentence 1:
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+Zalecenia
+•\x09dalsza opieka w poradni POZ  
+•\x09okresowa kontrola endokrynologiczna, neurologiczna, gastroenterologiczna i ginekologiczna 
+•\x09badanie w kierunku trombofilii wrodzonych w Poradni Genetycznej w ICZMP 
+•\x09regularna kontrola ciśnienia tętniczego  
+•\x09okresowa kontrola lipidogramu  
+•\x09dieta zbliżona do śródziemnomorskiej   
+•\x09stały, umiarkowany, aerobowy wysiłek fizyczny  
+•\x09regularne przyjmowanie leków:
+
+1.\x09Letrox 25 ug 1 tabl.
+R1	Drg Arg1:T9 Arg2:T11 << OK >>	Letrox -> 25 ug 1 tabl. rano  <RANK: 3> <info: start[773, 780] <type: RIGHT>>
+
+
+Sentence 5:
+rano 
+2.\x09leki p/histaminowe – doraźnie wg dotychczasowych zaleceń specjalisty 
+------------------------------------------------
+
+R2	Drg Arg1:T10 Arg2:T12 << OK >>	leki p/histaminowe -> doraźnie wg dotychczasowych zaleceń specjalisty  <RANK: 3> <info: start[806, 827] <type: RIGHT>>
+
+
+Sentence 6:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 7:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q21|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią przetrwałego otworu owalnego bez cech przecieku.
+
+
+Sentence 8:
+Stan po przejściowej utracie słuchu po stronie prawej (przed 2 laty).
+R3	Dat Arg1:T15 Arg2:T14 << OK >>	przed 2 laty -> przejściowej utracie słuchu po stronie prawej  <RANK: 3> <info: start[1239, 1192] <type: LEFT>>
+
+
+Sentence 9:
+Bóle głowy.
+
+
+Sentence 10:
+Niedoczynność tarczycy w trakcie leczenia substytucyjnego.
+
+
+Sentence 11:
+Jelito nadwrażliwe - postać mieszana.
+
+
+Sentence 12:
+Stan po usunięciu polipa szyjki macicy (01.2019).
+R4	Dat Arg1:T20 Arg2:T57 << OK >>	01.2019 -> polipa szyjki macicy  <RANK: 3> <info: start[1403, 1381] <type: LEFT>>
+R5	Dat Arg1:T20 Arg2:T19 << OK >>	01.2019 -> usunięciu  <RANK: 3> <info: start[1403, 1371] <type: LEFT>>
+
+
+Sentence 13:
+Uczulenie na pyralginę i klarytromycyna; alergia sezonowa (pyłki traw i drzew)
+
+R6	Alg Arg1:T21 Arg2:T22 << OK >>	Uczulenie -> pyralginę  <RANK: 3> <info: start[1413, 1426] <type: RIGHT>>
+R7	Alg Arg1:T21 Arg2:T23 <<SHOULD NOT BE REMOVED>>	Uczulenie -> klarytromycyna <:REMOVED too long text between 16 limit:10:> <RANK: 2> <info: start[1413, 1438] <type: RIGHT>>
+R8	Alg Arg1:T24 Arg2:T22 <<REDUNDANT!!!REMOVED>>	alergia sezonowa -> pyralginę <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1454, 1426] <type: LEFT>>
+R9	Alg Arg1:T24 Arg2:T23 <<REDUNDANT!!!SHOULD BE REMOVED>>	alergia sezonowa -> klarytromycyna  <RANK: 2> <info: start[1454, 1438] <type: LEFT>>
+R10	Alg Arg1:T25 Arg2:T22 <<REDUNDANT!!!REMOVED>>	pyłki traw i drzew -> pyralginę <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1472, 1426] <type: LEFT>>
+R11	Alg Arg1:T25 Arg2:T23 <<REDUNDANT!!!REMOVED>>	pyłki traw i drzew -> klarytromycyna <:REMOVED too long text between 20 limit:10:> <RANK: 2> <info: start[1472, 1438] <type: LEFT>>
+
+
+Sentence 14:
+------------------------------------------------
+
+
+
+Sentence 15:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 16:
+Chora lat 31, przyjęta do Kliniki celem diagnostyki w kierunku PFO - 2 lata temu 3 dniowa utrata słuchu po stronie prawej, od tego czasu okresowo parestezje w ok. ucha zewnętrznego prawego i bóle głowy. 
+ 
+R12	Dat Arg1:T27 Arg2:T28 << OK >>	2 lata temu -> 3 dniowa utrata słuchu po stronie prawej  <RANK: 3> <info: start[1685, 1697] <type: RIGHT>>
+R13	Dat Arg1:T27 Arg2:T29 <<REDUNDANT!!!REMOVED>>	2 lata temu -> okresowo parestezje w ok. ucha zewnętrznego prawego <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1685, 1753] <type: RIGHT>>
+R14	Dat Arg1:T27 Arg2:T30 <<REDUNDANT!!!REMOVED>>	2 lata temu -> bóle głowy <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1685, 1807] <type: RIGHT>>
+R15	Dat Arg1:T27 Arg2:T26 <<REDUNDANT!!!SHOULD BE REMOVED>>	2 lata temu -> diagnostyki w kierunku PFO  <RANK: 3> <info: start[1685, 1656] <type: LEFT>>
+
+
+Sentence 17:
+W wywiadzie ponadto:  jelito nadwrażliwe - postać mieszana, niedoczynność tarczycy  
+
+
+
+Sentence 18:
+Przebyte operacje: usunięcie polipa z szyjki macicy (01.2019)
+
+R16	Dat Arg1:T34 Arg2:T58 << OK >>	01.2019 -> polipa z szyjki macicy  <RANK: 3> <info: start[1959, 1935] <type: LEFT>>
+R17	Dat Arg1:T34 Arg2:T33 << OK >>	01.2019 -> usunięcie  <RANK: 3> <info: start[1959, 1925] <type: LEFT>>
+R18	Dat Arg1:T34 Arg2:T56 <<REDUNDANT!!!SHOULD BE REMOVED>>	01.2019 -> Przebyte operacje  <RANK: 3> <info: start[1959, 1906] <type: LEFT>>
+
+
+Sentence 19:
+Wywiad rodzinny: bez znaczenia 
+Alergie: leki - pyralgina, klarytromycyna (rumień) , sezonowa - pyłki 
+
+R19	Neg Arg1:T36 Arg2:T40 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> rumień <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1985, 2043] <type: RIGHT>>
+R20	Neg Arg1:T36 Arg2:T35 << OK >>	bez znaczenia -> Wywiad rodzinny  <RANK: 3> <info: start[1985, 1968] <type: LEFT>>
+R21	Neg Arg1:T36 Arg2:T37 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Alergie <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1985, 2000] <type: RIGHT>>
+R22	Neg Arg1:T36 Arg2:T41 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> sezonowa - pyłki <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1985, 2053] <type: RIGHT>>
+R23	Neg Arg1:T36 Arg2:T38 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> pyralgina <:REMOVED other second tag between (right):> <RANK: 1> <info: start[1985, 2016] <type: RIGHT>>
+R24	Neg Arg1:T36 Arg2:T39 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> klarytromycyna <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1985, 2027] <type: RIGHT>>
+R25	Alg Arg1:T35 Arg2:T38 <<REDUNDANT!!!REMOVED>>	Wywiad rodzinny -> pyralgina <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1968, 2016] <type: RIGHT>>
+R26	Alg Arg1:T35 Arg2:T39 <<REDUNDANT!!!REMOVED>>	Wywiad rodzinny -> klarytromycyna <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1968, 2027] <type: RIGHT>>
+R27	Alg Arg1:T37 Arg2:T38 << OK >>	Alergie -> pyralgina  <RANK: 3> <info: start[2000, 2016] <type: RIGHT>>
+R28	Alg Arg1:T37 Arg2:T39 <<SHOULD NOT BE REMOVED>>	Alergie -> klarytromycyna <:REMOVED too long text between 20 limit:10:> <RANK: 2> <info: start[2000, 2027] <type: RIGHT>>
+R29	Alg Arg1:T41 Arg2:T38 <<REDUNDANT!!!REMOVED>>	sezonowa - pyłki -> pyralgina <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2053, 2016] <type: LEFT>>
+R30	Alg Arg1:T41 Arg2:T39 <<REDUNDANT!!!REMOVED>>	sezonowa - pyłki -> klarytromycyna <:REMOVED too long text between 12 limit:10:> <RANK: 2> <info: start[2053, 2027] <type: LEFT>>
+
+
+Sentence 20:
+Nikotynizm: neguje  
+Alkohol: sporadycznie 
+Uzależnienie inne: neguje 
+Stan społeczny: logistyk w firmie przewozowej 
+
+R31	Neg Arg1:T43 Arg2:T42 << OK >>	neguje -> Nikotynizm  <RANK: 3> <info: start[2083, 2071] <type: LEFT>>
+R32	Neg Arg1:T43 Arg2:T44 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: sporadycznie <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2083, 2092] <type: RIGHT>>
+R33	Neg Arg1:T43 Arg2:T45 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2083, 2115] <type: RIGHT>>
+R34	Neg Arg1:T43 Arg2:T47 <<REDUNDANT!!!REMOVED>>	neguje -> logistyk w firmie przewozowej <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2083, 2158] <type: RIGHT>>
+R35	Neg Arg1:T46 Arg2:T42 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2134, 2071] <type: LEFT>>
+R36	Neg Arg1:T46 Arg2:T44 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: sporadycznie <:REMOVED other second tag between (left):> <RANK: 1> <info: start[2134, 2092] <type: LEFT>>
+R37	Neg Arg1:T46 Arg2:T45 << OK >>	neguje -> Uzależnienie inne  <RANK: 3> <info: start[2134, 2115] <type: LEFT>>
+R38	Neg Arg1:T46 Arg2:T47 <<REDUNDANT!!!REMOVED>>	neguje -> logistyk w firmie przewozowej <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2134, 2158] <type: RIGHT>>
+
+
+Sentence 21:
+Leki:
+Letrox 25 ug 1 tabl.
+R39	Drg Arg1:T48 Arg2:T49 << OK >>	Letrox -> 25 ug 1 tabl. rano  <RANK: 3> <info: start[2195, 2202] <type: RIGHT>>
+
+
+Sentence 22:
+rano 
+antihisaminiki 
+
+
+
+Sentence 23:
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter ekg, rtg kl. piersiowej
+
+
+
+Sentence 24:
+Przewidywana liczba dni hospitalizacji: 5-7 dni
+------------------------------------------------
+
+
+
+Sentence 25:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 26:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.69[10^3/ul]
+    
+
+
+Sentence 27:
+RBC Krwinki czerwone:4.38[10^6/ul]
+    
+
+
+Sentence 28:
+HGB Hemoglobina:12.7[g/dl]
+    
+
+
+Sentence 29:
+HCT Hematokryt:36.7[%]
+    
+
+
+Sentence 30:
+MCV wskaźnik czerwonokrw:83.8[fl]
+    
+
+
+Sentence 31:
+MCH wskaźnik czerwonokrw:29.0[pg]
+    
+
+
+Sentence 32:
+MCHC wskaźnik czerwonokr:34.6[g/dl]
+    
+
+
+Sentence 33:
+PLT z morfologii:239[10^3/ul]
+    
+
+
+Sentence 34:
+RDW-SD:38.0[fl]
+    
+
+
+Sentence 35:
+RDW-CV:12.6[%]
+    PDW:10.9[fl]
+    
+
+
+Sentence 36:
+MPV:9.6[fl]
+    
+
+
+Sentence 37:
+P-LCR:21.7[%]
+    
+
+
+Sentence 38:
+PCT (hematokryt płytkowy:0.23[%]
+    
+
+
+Sentence 39:
+NEUTR# wartość bezwzględ:3.73[10^3/ul]
+    
+
+
+Sentence 40:
+NEUTR%:55.8[%]
+    
+
+
+Sentence 41:
+LYMH# wartość bezwzględn:2.19[10^3/ul]
+    
+
+
+Sentence 42:
+LYMPH%:32.7[%]
+    
+
+
+Sentence 43:
+MONO# wartość bezwzględn:0.52[10^3/ul]
+    
+
+
+Sentence 44:
+MONO%:7.8[%]
+    
+
+
+Sentence 45:
+EO# wartość bezwzględna:0.20[10^3/ul]
+    
+
+
+Sentence 46:
+EO%:3.0[%]
+    
+
+
+Sentence 47:
+BASO# wartość bezwzględn:0.05[10^3/ul]
+    
+
+
+Sentence 48:
+BASO%:0.7[%]
+    
+
+
+Sentence 49:
+NRBC %:0.0[%]
+    
+
+
+Sentence 50:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 51:
+D-dimer - test ilościowy: D-dimer - test ilościowy:465[ng/ml]
+
+
+
+Sentence 52:
+Badanie ogólne moczu
+    
+
+
+Sentence 53:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 54:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 55:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 56:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 57:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 58:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 59:
+ciężar właściwy:1.009[ ]
+    
+
+
+Sentence 60:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 61:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 62:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 63:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 64:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 65:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 66:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 67:
+leukocyty:3 /ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 68:
+TSH: TSH:2.63[uIU/ml]
+
+
+
+Sentence 69:
+FT3: FT3:2.73[pg/ml]
+
+
+
+Sentence 70:
+FT4: FT4:1.40[ng/dl]
+
+
+
+Sentence 71:
+ALAT: ALAT:21[U/L]
+ASPAT: ASPAT:29[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.61[mg/dl]
+
+
+
+Sentence 72:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 73:
+Potas (K): Potas:3.9[mmol/L]
+
+
+
+Sentence 74:
+Kreatynina + GFR
+    
+
+
+Sentence 75:
+Kreatynina w surowicy:0.60[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 76:
+MDRD ze stan:116.6[ml/min/1,73 m^2]
+
+
+
+Sentence 77:
+Mocznik: Mocznik:19[mg/dl]
+
+
+
+Sentence 78:
+Kwas moczowy: Kwas moczowy:4.6[mg/dl]
+
+
+
+Sentence 79:
+Lipidogram
+    
+
+
+Sentence 80:
+Cholesterol całkowity:175[mg/dl]
+    
+
+
+Sentence 81:
+Cholesterol HDL:46[mg/dl]
+    
+
+
+Sentence 82:
+Cholestrol LDL:123[mg/dl]
+    
+
+
+Sentence 83:
+Triglicerydy:74[mg/dl]
+    
+
+
+Sentence 84:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:77[mg/dl]
+
+
+
+Sentence 85:
+------------------------------------------------
+
+
+
+Sentence 86:
+ICD10
+------------------------------------------------
+Q21.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 87:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 88:
+C55
+A01
+I81
+L43
+G49
+N45
+L69
+O55
+I17
+M45
+O35
+M37
+I19
+N13
+88.721
+O69
+88.722
+------------------------------------------------
+
+

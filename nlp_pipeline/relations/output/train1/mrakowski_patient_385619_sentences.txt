@@ -1,0 +1,620 @@
+allRelations          : 31
+oks                   : 21
+isRedundantAndRemoveds: 8
+shouldNotBeRemoveds   : 1
+shouldBeBemoveds      : 1
+GOOD / BAD            : 29 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 24 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+1.
+
+
+Sentence 5:
+Wskazana dalsza opieka u lekarza POZ oraz Poradni Neurologicznej.
+
+
+
+Sentence 6:
+2.
+
+
+Sentence 7:
+Wskazana pilna hospitalizacja w Klinice Elektrokardiologii CSK w Łodzi - wydano pilne skierowanie - proszę zgłosić się na IP o godz. 9:30 w dn. 01.08.2019 r.
+3.
+
+
+Sentence 8:
+Wskazana wizyta w Poradni Chirurgicznej celem zdjęcia szwów.
+
+
+
+Sentence 9:
+4. Dieta lekkostrawna, niskocholesterolowa.  
+
+
+
+Sentence 10:
+5.
+
+
+Sentence 11:
+Systematyczna kontrola ciśnienia tętniczego krwi.  
+
+
+
+Sentence 12:
+6. Zakaz palenia tytoniu.
+
+
+
+Sentence 13:
+7.
+
+
+Sentence 14:
+Podanie anatoksyny przeciwtężcowej w POZ za miesiąc i pół roku. 
+
+R1	Dat Arg1:T8 Arg2:T7 << OK >>	za miesiąc i pół roku -> Podanie anatoksyny przeciwtężcowej w POZ  <RANK: 3> <info: start[794, 753] <type: LEFT>>
+
+
+Sentence 15:
+8.. Leki: 
+Augmentin 1g 1 tabl.
+R2	Drg Arg1:T9 Arg2:T10 << OK >>	Augmentin -> 1g 1 tabl. co 12h  <RANK: 3> <info: start[829, 839] <type: RIGHT>>
+
+
+Sentence 16:
+co 12h przez 3 dni
+Lakcid 2x1 tabl.
+R3	Drg Arg1:T12 Arg2:T13 << OK >>	Lakcid -> 2x1 tabl.  <RANK: 3> <info: start[869, 876] <type: RIGHT>>
+R4	Dat Arg1:T11 Arg2:T12 <<REDUNDANT!!!SHOULD BE REMOVED>>	przez 3 dni -> Lakcid  <RANK: 1> <info: start[857, 869] <type: RIGHT>>
+
+
+Sentence 17:
+przez 10 dni
+
+
+
+Sentence 18:
+Nystatyna 500 tys. j.m. co 12h przez 3 dni
+------------------------------------------------
+
+R5	Drg Arg1:T15 Arg2:T16 << OK >>	Nystatyna -> 500 tys. j.m.  <RANK: 3> <info: start[899, 909] <type: RIGHT>>
+R6	Dat Arg1:T17 Arg2:T15 <<SHOULD NOT BE REMOVED>>	co 12h przez 3 dni -> Nystatyna <:REMOVED other second tag between (left):> <RANK: 2> <info: start[923, 899] <type: LEFT>>
+
+
+Sentence 19:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 20:
+------------------------------------------------
+ Rozpozanie I: ICD10:R55|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Omdlenie - pierwszy epizod w dniu 24.07.2019.
+R7	Dat Arg1:T19 Arg2:T18 << OK >>	24.07.2019 -> Omdlenie - pierwszy epizod  <RANK: 3> <info: start[1202, 1168] <type: LEFT>>
+
+
+Sentence 21:
+Uraz głowy z raną lewego łuku brwiowego wymagającą szycia.
+
+
+Sentence 22:
+Nikotynizm.
+
+
+
+Sentence 23:
+------------------------------------------------
+
+
+
+Sentence 24:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 25:
+Pacjent lat 23 nie leczący się do tej pory przyjęty z powodu nagłego omdlenia z następczym urazem głowy wymagającym zaopatrzenia chirurgicznego.
+
+
+
+Sentence 26:
+Neguje: wcześniejsze zasłabnięcia, omdlenia, krwawienia, czarne stolce, brunatne wymioty, chorobę wrzodową, duszność nocną typu ortopnoe, HA, DM, udar mózgu, zawał serca.   
+
+R8	Neg Arg1:T25 Arg2:T26 << OK >>	Neguje -> wcześniejsze zasłabnięcia  <RANK: 3> <info: start[1554, 1562] <type: RIGHT>>
+R9	Neg Arg1:T25 Arg2:T27 << OK >>	Neguje -> omdlenia  <RANK: 2> <info: start[1554, 1589] <type: RIGHT>>
+R10	Neg Arg1:T25 Arg2:T28 << OK >>	Neguje -> krwawienia  <RANK: 2> <info: start[1554, 1599] <type: RIGHT>>
+R11	Neg Arg1:T25 Arg2:T29 << OK >>	Neguje -> czarne stolce  <RANK: 2> <info: start[1554, 1611] <type: RIGHT>>
+R12	Neg Arg1:T25 Arg2:T30 << OK >>	Neguje -> brunatne wymioty  <RANK: 2> <info: start[1554, 1626] <type: RIGHT>>
+R13	Neg Arg1:T25 Arg2:T32 << OK >>	Neguje -> duszność nocną typu ortopnoe  <RANK: 2> <info: start[1554, 1662] <type: RIGHT>>
+R14	Neg Arg1:T25 Arg2:T31 << OK >>	Neguje -> chorobę wrzodową  <RANK: 2> <info: start[1554, 1644] <type: RIGHT>>
+R15	Neg Arg1:T25 Arg2:T33 << OK >>	Neguje -> HA  <RANK: 2> <info: start[1554, 1692] <type: RIGHT>>
+R16	Neg Arg1:T25 Arg2:T34 << OK >>	Neguje -> DM  <RANK: 2> <info: start[1554, 1696] <type: RIGHT>>
+R17	Neg Arg1:T25 Arg2:T35 << OK >>	Neguje -> udar mózgu  <RANK: 2> <info: start[1554, 1700] <type: RIGHT>>
+R18	Neg Arg1:T25 Arg2:T36 << OK >>	Neguje -> zawał serca  <RANK: 2> <info: start[1554, 1712] <type: RIGHT>>
+
+
+Sentence 27:
+Przebyte operacje: -
+Palenie tytoniu:
+
+
+Sentence 28:
+tak 
+Inne używki: nie 
+Uczulenia: nie 
+
+R19	Neg Arg1:T40 Arg2:T39 << OK >>	nie -> Uczulenia  <RANK: 3> <info: start[1800, 1789] <type: LEFT>>
+R20	Neg Arg1:T40 Arg2:T38 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1800, 1771] <type: LEFT>>
+R21	Neg Arg1:T48 Arg2:T39 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1784, 1789] <type: RIGHT>>
+R22	Neg Arg1:T48 Arg2:T38 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[1784, 1771] <type: LEFT>>
+
+
+Sentence 29:
+Przebyte choroby zakaźne - WZW (-) , borelioza  (-), tbc (-) 
+
+R23	Neg Arg1:T42 Arg2:T41 << OK >>	- -> WZW  <RANK: 3> <info: start[1837, 1832] <type: LEFT>>
+R24	Neg Arg1:T42 Arg2:T43 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1837, 1842] <type: RIGHT>>
+R25	Neg Arg1:T42 Arg2:T45 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1837, 1858] <type: RIGHT>>
+R26	Neg Arg1:T44 Arg2:T41 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1854, 1832] <type: LEFT>>
+R27	Neg Arg1:T44 Arg2:T43 << OK >>	- -> borelioza  <RANK: 3> <info: start[1854, 1842] <type: LEFT>>
+R28	Neg Arg1:T44 Arg2:T45 <<REDUNDANT!!!REMOVED>>	- -> tbc <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1854, 1858] <type: RIGHT>>
+R29	Neg Arg1:T46 Arg2:T41 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1863, 1832] <type: LEFT>>
+R30	Neg Arg1:T46 Arg2:T43 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1863, 1842] <type: LEFT>>
+R31	Neg Arg1:T46 Arg2:T45 << OK >>	- -> tbc  <RANK: 3> <info: start[1863, 1858] <type: LEFT>>
+
+
+Sentence 30:
+Stan społeczny: warunki mieszkaniowe dobre.  
+
+
+
+Sentence 31:
+Leki: przyjęte rano w domu  
+
+
+
+Sentence 32:
+Nie przyjmuje na stałe leków.
+
+
+
+Sentence 33:
+------------------------------------------------
+
+
+
+Sentence 34:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 35:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:13.88[10^3/ul]
+    
+
+
+Sentence 36:
+RBC Krwinki czerwone:5.00[10^6/ul]
+    
+
+
+Sentence 37:
+HGB Hemoglobina:16.4[g/dl]
+    
+
+
+Sentence 38:
+HCT Hematokryt:46.3[%]
+    
+
+
+Sentence 39:
+MCV wskaźnik czerwonokrw:92.6[fl]
+    
+
+
+Sentence 40:
+MCH wskaźnik czerwonokrw:32.8[pg]
+    
+
+
+Sentence 41:
+MCHC wskaźnik czerwonokr:35.4[g/dl]
+    
+
+
+Sentence 42:
+PLT z morfologii:236[10^3/ul]
+    
+
+
+Sentence 43:
+RDW-SD:41.8[fl]
+    
+
+
+Sentence 44:
+RDW-CV:12.1[%]
+    PDW:12.8[fl]
+    MPV:10.7[fl]
+    
+
+
+Sentence 45:
+P-LCR:30.7[%]
+    
+
+
+Sentence 46:
+PCT (hematokryt płytkowy:0.25[%]
+    
+
+
+Sentence 47:
+NEUTR# wartość bezwzględ:12.10[10^3/ul]
+    
+
+
+Sentence 48:
+NEUTR%:87.2[%]
+    
+
+
+Sentence 49:
+LYMH# wartość bezwzględn:0.77[10^3/ul]
+    
+
+
+Sentence 50:
+LYMPH%:5.5[%]
+    
+
+
+Sentence 51:
+MONO# wartość bezwzględn:0.95[10^3/ul]
+    
+
+
+Sentence 52:
+MONO%:6.8[%]
+    
+
+
+Sentence 53:
+EO# wartość bezwzględna:0.01[10^3/ul]
+    
+
+
+Sentence 54:
+EO%:0.1[%]
+    BASO# wartość bezwzględn:0.05[10^3/ul]
+    BASO%:0.4[%]
+    
+
+
+Sentence 55:
+NRBC %:0.0[%]
+    
+
+
+Sentence 56:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 57:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:30.4[sek]
+
+
+
+Sentence 58:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 59:
+Czas protrombinowy:11.3[sek]
+    
+
+
+Sentence 60:
+Wskaźnik PT:97.3[%]
+    
+
+
+Sentence 61:
+INR:1.03
+Fibrynogen: Fibrynogen:2.10[g/L]
+
+
+
+Sentence 62:
+D-dimer - test ilościowy: D-dimer
+
+
+Sentence 63:
+- test ilościowy:970[ng/ml]
+
+
+
+Sentence 64:
+Badanie ogólne moczu
+    
+
+
+Sentence 65:
+barwa:żółty[ ]
+    
+
+
+Sentence 66:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 67:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 68:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 69:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 70:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 71:
+ciężar właściwy:1.019[ ]
+    pH:5.0[ ]
+    
+
+
+Sentence 72:
+białko:nikły ślad[ ]
+    
+
+
+Sentence 73:
+urobilinogen:2,0 mg/dl[ ]
+    
+
+
+Sentence 74:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 75:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 76:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 77:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 78:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 79:
+leukocyty:2 /ul[ul]
+    erytrocyty świeże:4 /ul[ul]
+    śluz:nieliczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+    
+
+
+Sentence 80:
+wałeczki szkliste:0-1 wpw[w preparacie]
+
+
+
+Sentence 81:
+TSH: TSH:3.29[uIU/ml]
+
+
+
+Sentence 82:
+FT3: FT3:4.25[pg/ml]
+
+
+
+Sentence 83:
+FT4: FT4:1.55[ng/dl]
+
+
+
+Sentence 84:
+Troponina T: Troponina T:8.1[pg/ml]
+
+
+
+Sentence 85:
+ALAT: ALAT:19[U/L]
+ASPAT: ASPAT:33[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 86:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 87:
+Potas (K): Potas:4.2[mmol/L]
+
+
+
+Sentence 88:
+Kreatynina + GFR
+    
+
+
+Sentence 89:
+Kreatynina w surowicy:0.80[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 90:
+MDRD ze stan:119.8[ml/min/1,73 m^2]
+
+
+
+Sentence 91:
+Magnez: Magnez:0.96[mmol/L]
+
+
+
+Sentence 92:
+Mocznik: Mocznik:22[mg/dl]
+
+
+
+Sentence 93:
+Kwas moczowy: Kwas moczowy:9.3[mg/dl]
+
+
+
+Sentence 94:
+Lipidogram
+    
+
+
+Sentence 95:
+Cholesterol całkowity:162[mg/dl]
+    
+
+
+Sentence 96:
+Cholesterol HDL:43[mg/dl]
+    
+
+
+Sentence 97:
+Cholestrol LDL:100[mg/dl]
+    
+
+
+Sentence 98:
+Triglicerydy:187[mg/dl]
+    
+
+
+Sentence 99:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:81[mg/dl]
+
+
+
+Sentence 100:
+------------------------------------------------
+
+
+
+Sentence 101:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 102:
+R55
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 103:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 104:
+89.501
+89.502
+C55
+A01
+I81
+G53
+G11
+G21
+L43
+
+
+
+Sentence 105:
+O61
+M87
+G49
+I17
+N45
+L69
+O55
+M45
+I19
+O35
+M37
+
+
+
+Sentence 106:
+N13
+87.030
+88.721
+O69
+
+
+
+Sentence 107:
+------------------------------------------------
+
+

@@ -1,0 +1,166 @@
+T1	Condition 439 449	CI 33 tyg.
+T2	Condition 450 462	Preeclampsia
+N1	Reference T2 ICD10:O11.9	
+T3	Condition 464 480	Hypotrofia płodu
+N2	Reference T3 ICD10:P05	Opóźniony wzrost płodu i niedożywienie płodu
+T4	Condition 482 504	Niedoczynność tarczycy
+N3	Reference T4 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T5	Condition 506 535	Poród operacyjny przedwczesny
+T6	Investigation_result 537 547	SŻNd 1700g
+T7	Investigation_result 548 560	Apg 8/7/7/8.
+T8	Condition 565 606	Nadciśnienie tętnicze rozpoznane w ciąży.
+T9	Treatment 615 631	cięciu cesarskim
+T10	Condition 641 664	stanu przedrzucawkowego
+T11	Date 665 675	28.08.2019
+N5	Reference T10 ICD10:O14.1	Ciężki stan przedrzucawkowy
+R1	Dat Arg1:T11 Arg2:T10	
+R2	Dat Arg1:T11 Arg2:T9	
+T12	Condition 690 712	niedoczynność tarczycy
+N6	Reference T12 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T13	Date 715 727	czasie ciąży
+R3	Dat Arg1:T13 Arg2:T12	
+T14	Behaviour 961 1017	dieta śródziemnomorska, zwiększenie aktywności fizycznej
+T15	Investigation 1020 1040	kontrola lipidogramu
+T16	Investigation 864 902	kontrola wartości ciśnienia tętniczego
+T17	Condition 1289 1329	Nadciśnienie tętnicze rozpoznane w ciąży
+N7	Reference T17 ICD10:O16	Nieokreślone nadciśnienie u ciężarnej
+N4	Reference T8 ICD10:O16	Nieokreślone nadciśnienie u ciężarnej
+T18	Treatment 1339 1355	cięciu cesarskim
+T19	Date 1410 1420	28.08.2019
+T20	Date 1358 1375	33 tygodniu ciąży
+T21	Condition 1385 1408	stanu przedrzucawkowego
+N8	Reference T21 ICD10:O14.1	Ciężki stan przedrzucawkowy
+R4	Dat Arg1:T19 Arg2:T21	
+R5	Dat Arg1:T19 Arg2:T18	
+R6	Dat Arg1:T20 Arg2:T18	
+R7	Dat Arg1:T20 Arg2:T21	
+T22	Condition 1423 1445	Niedoczynność tarczycy
+N9	Reference T22 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T23	Date 1446 1460	w czasie ciąży
+R8	Dat Arg1:T23 Arg2:T22	
+T24	Drug 1581 1593	Fraxipariunm
+T25	Drug 1595 1607	Nitrendypina
+T26	Drug 1609 1620	Betaloć ZOK
+T27	Drug 1622 1629	Dopegyt
+T28	Drug 1631 1639	ApoDoxan
+T29	Treatment 1803 1820	porodzie drogą cc
+T30	Date 1828 1838	28.08.2019
+R9	Dat Arg1:T30 Arg2:T29	
+T31	Condition 1782 1794	CIPI 32 tyg,
+T32	Condition 1936 1939	PIH
+T33	Condition 1941 1949	obrzęków
+N11	Reference T33 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T34	Investigation_result 1951 1962	białkomoczu
+T35	Condition 1910 1932	stanu przedrzucawkoweg
+N12	Reference T35 ICD10:O14.1	Ciężki stan przedrzucawkowy
+N10	Reference T32 ICD10:O14	Nadciśnienie ciążowe [wywołane ciążą] ze znacznym białkomoczem
+T36	Investigation 3230 3234	ECHO
+T37	Investigation 3236 3254	EKG metodą Holtera
+T38	Investigation 3256 3260	ABPM
+T39	Investigation 3262 3277	próba wysiłkowa
+T40	Drug 3124 3131	Tritace
+T41	Drug 3099 3108	Apo-Doxan
+T42	Drug 3080 3087	Dopegyt
+T43	Drug 3058 3069	Betaloc ZOK
+T44	Drug 3035 3047	Nitrendypina
+T45	Drug_dose 3048 3056	2x 20mg,
+R10	Drg Arg1:T44 Arg2:T45	
+T46	Drug_dose 3070 3077	2x 50mg
+R11	Drg Arg1:T43 Arg2:T46	
+T47	Drug_dose 3088 3097	4x 500mg,
+R12	Drg Arg1:T42 Arg2:T47	
+T48	Drug_dose 3109 3121	1x 4mg/wiecz
+R13	Drg Arg1:T41 Arg2:T48	
+T49	Drug_dose 3132 3144	1x 10mg/rano
+R14	Drg Arg1:T40 Arg2:T49	
+T50	Drug 2945 2953	Mannitol
+T51	Drug 2955 2962	Helicid
+T52	Drug 2964 2982	Fraxiparinum Multi
+T53	Drug 2996 3005	Perfalgan
+T54	Drug 3015 3023	Pyralgin
+T55	Drug_dose 3024 3032	doraźnie
+R15	Drg Arg1:T54 Arg2:T55	
+T56	Drug_dose 3006 3013	doaźnie
+R16	Drg Arg1:T53 Arg2:T56	
+T57	Drug_dose 2983 2994	1x 0,4ml sc
+R17	Drg Arg1:T52 Arg2:T57	
+T58	Behaviour 2903 2929	warunki mieszkaniowe dobre
+T59	Negation 2883 2886	b/z
+T60	Condition 2860 2881	W wywiadzie rodzinnym
+A1	Status T60 Family
+R18	Neg Arg1:T59 Arg2:T60	
+T61	Condition 2797 2800	WZW
+T62	Condition 2807 2816	borelioza
+N14	Reference T62 ICD10:A69.2	Choroba z Lyme
+T63	Condition 2822 2825	tbc
+N15	Reference T63 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T64	Condition 2831 2835	odra
+N16	Reference T64 ICD10:B05	Odra
+T65	Behaviour 2841 2855	kontakt z odrą
+N17	Reference T65 ICD10:B05	Odra
+T66	Negation 2856 2859	(-)
+R19	Neg Arg1:T66 Arg2:T65	
+T67	Negation 2836 2840	(-),
+R20	Neg Arg1:T67 Arg2:T64	
+T68	Negation 2826 2830	(-),
+R21	Neg Arg1:T68 Arg2:T63	
+T69	Negation 2817 2821	(-),
+R22	Neg Arg1:T69 Arg2:T62	
+T70	Negation 2801 2804	(-)
+R23	Neg Arg1:T70 Arg2:T61	
+T71	Negation 2765 2768	nie
+T72	Negation 2750 2753	nie
+T73	Date 2723 2736	w przeszłości
+T74	Treatment 2703 2705	cc
+T75	Condition 2754 2763	Uczulenia
+R24	Neg Arg1:T71 Arg2:T75	
+T76	Behaviour 2737 2748	Inne używki
+R25	Neg Arg1:T72 Arg2:T76	
+T77	Behaviour 2706 2721	Palenie tytoniu
+R26	Dat Arg1:T73 Arg2:T77	
+T78	Negation 2536 2542	Neguje
+T79	Symptom 2544 2556	zasłabnięcia
+N20	Reference T79 ICD10:R55	Omdlenie i zapaść
+T80	Symptom 2558 2566	omdlenia
+N21	Reference T80 ICD10:R55	Omdlenie i zapaść
+T81	Condition 2568 2584	chorobę wrzodową
+N22	Reference T81 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T82	Symptom 2586 2601	obrzęki podudzi
+N23	Reference T82 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T83	Symptom 2603 2627	bóle w klatce piersiowej
+T84	Symptom 2629 2644	kołatania serca
+N25	Reference T84 ICD10:R00.2	Kołatanie serca
+T85	Symptom 2646 2682	objawy zapalenia żył kończyn dolnych
+R27	Neg Arg1:T78 Arg2:T79	
+R28	Neg Arg1:T78 Arg2:T80	
+R29	Neg Arg1:T78 Arg2:T81	
+R30	Neg Arg1:T78 Arg2:T82	
+R31	Neg Arg1:T78 Arg2:T83	
+R32	Neg Arg1:T78 Arg2:T84	
+R33	Neg Arg1:T78 Arg2:T85	
+T86	Drug 2410 2428	antybiotykoterapia
+T87	Condition 2438 2459	Clostridium difficile
+N26	Reference T87 ICD10:A04.7	Zapalenie jelita cienkiego i grubego wywołane przez Clostridium difficile
+T88	Symptom 2385 2402	ogólne osłabienie
+N27	Reference T88 ICD10:R53	Złe samopoczucie i zmęczenie
+T89	Condition 2162 2185	niedoczynności tarczycy
+N28	Reference T89 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T90	Condition 2188 2211	nadciśnienia tętniczego
+N29	Reference T90 ICD10:O16	Nieokreślone nadciśnienie u ciężarnej
+T91	Treatment 2246 2263	porodzie drogą cc
+T92	Date 2271 2281	28.08.2019
+T93	Condition 2291 2314	stanu przedrzucawkowego
+N30	Reference T93 ICD10:O14.1	Ciężki stan przedrzucawkowy
+R35	Dat Arg1:T92 Arg2:T91	
+R36	Dat Arg1:T92 Arg2:T93	
+N31	Reference T5 ICD10:O82.1	Poród pojedynczy przez cięcie cesarskie ze wskazań nagłych
+T94	Date 1041 1050	za 3 m-ce
+R34	Dat Arg1:T94 Arg2:T15	
+T95	Condition 1985 2008	niedoczynność tarczycy.
+N32	Reference T95 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+N24	Reference T83 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N19	Reference T77 ICD10:Z72.0	Używanie tytoniu
+N13	Reference T61 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N18	Reference T75 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T96	Treatment 839 861	kontrola u lekarza POZ
+T97	Treatment 1053 1071	kontrola w Poradni

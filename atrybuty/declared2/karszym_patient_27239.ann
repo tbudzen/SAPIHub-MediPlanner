@@ -1,0 +1,120 @@
+T1	Treatment 332 354	kontrola u lekarza POZ
+T2	Treatment 357 398	dalsza kontrola w Poradni Kardiologicznej
+T3	Investigation 410 445	wykonanie angioCT tętnic wieńcowych
+T4	Behaviour 448 490	dieta niskocholesterolowa, niskokaloryczna
+T5	Behaviour 492 511	redukcja masy ciała
+T6	Investigation 514 524	lipidogram
+T7	Date 525 534	za 3 m-ce
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Condition 793 830	Ekstrasystolia komorowa i nadkomorowa
+N1	Reference T8 ICD10:I49	Inne zaburzenia rytmu serca
+T9	Condition 832 853	Nadciśnienie tętnicze
+N2	Reference T9 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T10	Condition 855 884	Podejrzenie choroby wieńcowej
+N3	Reference T10 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T11	Condition 886 914	Żylaki lewej kończyny dolnej
+N4	Reference T11 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T12	Condition 916 953	Wrzodziejące zapalenie jelita grubego
+N5	Reference T12 ICD10:K51.9	Wrzodziejące zapalenie jelita grubego, nieokreślone
+T13	Treatment 975 1000	częściowej tyreoidektomii
+N6	Reference T13 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T14	Condition 1002 1017	Otyłość III st.
+N7	Reference T14 ICD10:E66.9	Otyłość, nieokreślona
+T15	Treatment 1026 1034	operacji
+N8	Reference T15 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T16	Symptom 1227 1244	uczucia duszności
+N9	Reference T16 ICD10:R06.0	Duszność
+T17	Symptom 1316 1335	obrzęki kk. dolnych
+N10	Reference T17 ICD10:R60.0	Obrzęk zlokalizowany
+T18	Symptom 1247 1285	ucisku w klatce piersiowej - w wysiłku
+N11	Reference T18 ICD10:R07.2	Ból w okolicy przedsercowej
+T19	Symptom 1286 1292	II CCS
+T20	Condition 1359 1375	HA - skorygowane
+N12	Reference T20 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T22	Condition 1377 1397	zaburzenia rytmu ExV
+N13	Reference T22 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T23	Condition 1399 1444	owrzodzenie jelita grubego - colitis ulcerosa
+N14	Reference T23 ICD10:K51.9	Wrzodziejące zapalenie jelita grubego, nieokreślone
+T24	Condition 1446 1466	niedoczynność tarczy
+N15	Reference T24 ICD10:E89.0	Pozabiegowa niedoczynność tarczycy
+T26	Condition 1496 1512	podejrzenie DM ?
+N17	Reference T26 ICD10:E14	Cukrzyca nieokreślona
+T27	Treatment 1540 1548	operacje
+N18	Reference T27 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T28	Date 1575 1590	4 i 3 lata temu
+R2	Dat Arg1:T28 Arg2:T27	
+T29	Treatment 1592 1625	usunięcie jajnika i trzonu macicy
+N19	Reference T29 ICD10:Z90.7	Nabyty brak narządów płciowych
+T30	Date 1628 1642	w wieku 30 lat
+R3	Dat Arg1:T30 Arg2:T29	
+A1	Status T29 Historical_Insignificant
+T31	Condition 1669 1671	MI
+A2	Status T31 Family
+N20	Reference T31 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T32	Date 1673 1679	lat 78
+R4	Dat Arg1:T32 Arg2:T31	
+T33	Condition 1682 1689	Alergie
+N21	Reference T33 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T34	Negation 1691 1697	neguje
+T35	Behaviour 1699 1709	Nikotynizm
+T36	Date 1711 1717	40 lat
+T37	Negation 1718 1721	nie
+T38	Behaviour 1722 1726	pali
+T39	Date 1728 1733	1 rok
+T40	Behaviour 1734 1740	paliła
+A3	Status T40 Historical_Insignificant
+R5	Neg Arg1:T37 Arg2:T35	
+R6	Neg Arg1:T37 Arg2:T38	
+R7	Dat Arg1:T36 Arg2:T35	
+R8	Dat Arg1:T36 Arg2:T38	
+R9	Dat Arg1:T39 Arg2:T40	
+R10	Neg Arg1:T34 Arg2:T33	
+T41	Behaviour 1743 1779	Alkohol: okazjonalnie, bardzo rzadko
+T42	Behaviour 1781 1798	Uzależnienie inne
+T43	Negation 1800 1806	neguje
+R11	Neg Arg1:T43 Arg2:T42	
+T44	Behaviour 1824 1833	emerytura
+T45	Behaviour 1845 1859	praca umysłowa
+T46	Date 1835 1844	wcześniej
+R12	Dat Arg1:T46 Arg2:T45	
+T47	Drug 1867 1881	Candezek Combi
+T48	Drug 1902 1914	Symapamid SR
+T49	Drug 1930 1938	Euthyrox
+T50	Drug 1959 1975	Azathioprine VIS
+T51	Drug 1987 1999	Sulfasalzyna
+T52	Drug_dose 1882 1900	16/10 1 tabl. rano
+T53	Drug_dose 1915 1927	1 tabl. rano
+T54	Drug_dose 1939 1956	N125 1 tabl. rano
+T55	Drug_dose 1976 1985	50 mg 2x1
+T56	Drug_dose 2000 2015	500 mg 3x1 tabl
+T57	Drug 2019 2030	Ac. folicum
+T58	Drug_dose 2031 2049	15 mg 1 tabl. rano
+R13	Drg Arg1:T47 Arg2:T52	
+R14	Drg Arg1:T48 Arg2:T53	
+R15	Drg Arg1:T49 Arg2:T54	
+R16	Drg Arg1:T50 Arg2:T55	
+R17	Drg Arg1:T51 Arg2:T56	
+R18	Drg Arg1:T57 Arg2:T58	
+T59	Investigation 2079 2089	echo serca
+T60	Investigation 2091 2094	TET
+T61	Investigation 2096 2100	ABPM
+T62	Investigation 2102 2112	Holter ekg
+T63	Investigation 2114 2132	rtg kl. piersiowej
+A4	Status T11 Historical_Insignificant
+A5	Status T15 Historical_Insignificant
+T21	Treatment 1470 1494	częściowej tyreidektomii
+N16	Reference T21 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+N22	Reference T35 ICD10:Z72.0	Używanie tytoniu
+N23	Reference T38 ICD10:Z72.0	Używanie tytoniu
+N24	Reference T40 ICD10:Z72.0	Używanie tytoniu
+A6	Status T41 Historical_Insignificant
+N25	Reference T41 ICD10:Z72.1	Używanie alkoholu
+A7	Status T27 Historical_Insignificant
+T25	Condition 1035 1058	żylaków kończyn dolnych
+N26	Reference T25 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+A8	Status T25 Historical_Insignificant
+T64	Condition 1550 1574	żylaki kk. dolnych - obu
+A9	Status T64 Historical_Insignificant
+N27	Reference T64 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+R19	Dat Arg1:T28 Arg2:T64	
+N28	Reference T19 ICD10:I20	Choroba niedokrwienna serca

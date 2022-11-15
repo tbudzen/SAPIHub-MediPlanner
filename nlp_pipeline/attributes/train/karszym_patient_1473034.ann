@@ -1,0 +1,163 @@
+T1	Treatment 342 417	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej i Diabetologicznej
+T2	Treatment 432 479	pilna hospitalizacja w Oddziale Kardiologicznym
+T3	Investigation 496 510	koronarografii
+T4	Treatment 513 532	kwalifikacji do AVR
+T5	Treatment 568 612	pilna konsultacja w Poradni Diabetologicznej
+T6	Treatment 619 650	optymalizacji leczenia cukrzycy
+T7	Behaviour 677 716	Dieta lekkostrawna, niskocholesterolowa
+T8	Investigation 725 816	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T9	Date 817 828	co 6-8 tyg.
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Investigation 842 901	Systematyczna kontrola ciśnienia tętniczego krwi i glikemii
+T11	Investigation 918 958	kontrola funkcji nerek oraz stęż. potasu
+T12	Date 959 967	za 7 dni
+R2	Dat Arg1:T12 Arg2:T11	
+T13	Drug 986 992	Atoris
+T14	Drug 1019 1025	Siofor
+T15	Drug 1045 1050	Acard
+T16	Drug 1077 1085	Biosotal
+T17	Drug 1102 1112	Prestarium
+T18	Drug 1140 1146	Amaryl
+T19	Drug 1167 1175	Toramide
+T20	Drug_dose 993 1018	60 mg 1x1 tabl. wieczorem
+T21	Drug_dose 1026 1044	850 mg 0-1-1 tabl.
+T22	Drug_dose 1051 1076	75 mg 1x1 tabl. wieczorem
+T23	Drug_dose 1086 1101	40 mg 3x1 tabl.
+T24	Drug_dose 1113 1139	5 mg 1x1/2 tabl. wieczorem
+T25	Drug_dose 1147 1166	4 mg 1x1 tabl. rano
+T26	Drug_dose 1176 1196	20 mg 1x1 tabl. rano
+R3	Drg Arg1:T13 Arg2:T20	
+R4	Drg Arg1:T14 Arg2:T21	
+R5	Drg Arg1:T15 Arg2:T22	
+R6	Drg Arg1:T16 Arg2:T23	
+R7	Drg Arg1:T17 Arg2:T24	
+R8	Drg Arg1:T18 Arg2:T25	
+R9	Drg Arg1:T19 Arg2:T26	
+T27	Condition 1423 1446	Ciężka stenoza aortalna
+N1	Reference T27 ICD10:I35.0	Zwężenie zastawki aortalnej
+T28	Condition 1458 1479	zastawki dwupłatkowej
+N2	Reference T28 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T29	Condition 1481 1529	Niewydolność serca z zachowaną funkcją skurczową
+N3	Reference T29 ICD10:I50.9	Niewydolność serca, nieokreślona
+T30	Condition 1546 1592	Arytmia nadkomorowa - trigeminia przedsionkowa
+T31	Condition 1594 1624	Blok przedsionkowo-komorowy I*
+T32	Condition 1626 1647	Nadciśnienie tętnicze
+T33	Condition 1649 1669	Hipercholesterolemia
+T34	Condition 1671 1706	Curkzyca typu II - źle kontrolowana
+T35	Condition 1708 1746	Choroba wrzodowa żołądka i dwunastnicy
+T36	Condition 1760 1795	Choroba zwyrodnieniowa wielostawowa
+T37	Symptom 1967 1982	uczucia arytmii
+T38	Symptom 1988 2019	ograniczenia tolerancji wysiłku
+T39	Symptom 2032 2117	bólów w klatce piersiowej promieniujących do lewego barku, nie związanych z wysiłkiem
+T40	Symptom 2123 2164	obrzęków kończyn dolnych do połowy goleni
+T41	Condition 2179 2210	napadowe migotanie przedsionków
+T42	Condition 2224 2266	zastawka aortalna czynnościowo dwupłatkowa
+T43	Condition 2268 2289	nadciśnienie tętnicze
+T44	Condition 2291 2307	cukrzyca typu II
+T45	Condition 2309 2333	choroba wrzodowa żołądka
+T46	Condition 2335 2370	choroba zwyrodnieniowa wielostawowa
+T47	Negation 2372 2378	Neguje
+T48	Symptom 2380 2392	zasłabnięcia
+T49	Symptom 2394 2402	omdlenia
+T50	Symptom 2404 2414	krwawienia
+T51	Symptom 2416 2429	czarne stolce
+T52	Symptom 2431 2447	brunatne wymioty
+T53	Symptom 2449 2477	duszność nocną typu ortopnoe
+T54	Condition 2479 2489	udar mózgu
+T55	Condition 2491 2502	zawał serca
+T56	Treatment 2526 2541	cholecytektomia
+A1	Status T56 Historical_Insignificant
+T57	Treatment 2543 2556	appendektomia
+A2	Status T57 Historical_Insignificant
+T58	Behaviour 2558 2573	Palenie tytoniu
+T59	Negation 2575 2578	nie
+T60	Behaviour 2580 2591	Inne używki
+T61	Negation 2593 2596	nie
+T62	Condition 2598 2629	Uczulenia: jad błonkoskrzydłych
+T63	Condition 2658 2661	WZW
+T64	Negation 2662 2665	(-)
+T65	Condition 2668 2677	borelioza
+T66	Negation 2678 2681	(-)
+T67	Condition 2683 2686	tbc
+T68	Negation 2687 2690	(-)
+T69	Behaviour 2708 2734	warunki mieszkaniowe dobre
+T70	Behaviour 2736 2744	emerytka
+T71	Condition 2772 2788	choroba zastawek
+A3	Status T71 Family
+T72	Condition 2796 2799	BAV
+A4	Status T72 Family
+T73	Condition 2817 2822	udary
+A5	Status T73 Family
+T74	Condition 2825 2828	DM2
+A6	Status T74 Family
+T75	Drug 2865 2873	Biosotal
+T76	Drug_dose 2874 2888	40 mg 2x1 tabl
+T77	Drug 2890 2898	Toramide
+T78	Drug_dose 2899 2918	5 mg 1x1 tabl. rano
+T79	Drug 2919 2924	Acard
+T80	Drug_dose 2925 2950	75 mg 1x1 tabl. wieczorem
+T81	Drug 2951 2957	Tolura
+T82	Drug_dose 2958 2983	40 mg 1x1 tabl. wieczorem
+T83	Drug 2984 2990	Amaryl
+T84	Drug_dose 2991 3010	4 mg 1x1 tabl. rano
+T85	Drug 3011 3017	Siofor
+T86	Drug_dose 3018 3035	850 mg 0-1-1 tabl
+T87	Negation 3044 3053	odstawiła
+T88	Drug 3054 3061	Nonpres
+N4	Reference T30 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+N5	Reference T31 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+N6	Reference T32 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+N7	Reference T33 ICD10:E78.0	Czysta hipercholesterolemia
+N8	Reference T34 ICD10:E11	Cukrzyca insulinoniezależna
+A7	Status T36 Historical_Insignificant
+N9	Reference T36 ICD10:M19.9	Choroba zwyrodnieniowa stawów, nieokreślona
+N10	Reference T37 ICD10:R00.2	Kołatanie serca
+N11	Reference T39 ICD10:R07.2	Ból w okolicy przedsercowej
+N12	Reference T40 ICD10:R60.0	Obrzęk zlokalizowany
+N13	Reference T41 ICD10:I48	Migotanie i trzepotanie przedsionków
+N14	Reference T42 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+N15	Reference T43 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+N16	Reference T44 ICD10:E11	Cukrzyca insulinoniezależna
+N17	Reference T45 ICD10:K25	Wrzód żołądka
+A8	Status T46 Historical_Insignificant
+N18	Reference T46 ICD10:M19.9	Choroba zwyrodnieniowa stawów, nieokreślona
+R10	Neg Arg1:T47 Arg2:T48	
+R11	Neg Arg1:T47 Arg2:T49	
+R12	Neg Arg1:T47 Arg2:T50	
+R13	Neg Arg1:T47 Arg2:T51	
+R14	Neg Arg1:T47 Arg2:T52	
+R15	Neg Arg1:T47 Arg2:T53	
+R16	Neg Arg1:T47 Arg2:T54	
+R17	Neg Arg1:T47 Arg2:T55	
+N19	Reference T49 ICD10:R55	Omdlenie i zapaść
+N20	Reference T51 ICD10:K92.1	Stolce smołowate
+N21	Reference T52 ICD10:K92.0	Wymioty krwawe
+N22	Reference T53 ICD10:R06.0	Duszność
+N23	Reference T54 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+N24	Reference T55 ICD10:I25.2	Przebyty zawał serca
+N25	Reference T56 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+N26	Reference T57 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R18	Neg Arg1:T59 Arg2:T58	
+N27	Reference T58 ICD10:Z72.0	Używanie tytoniu
+R19	Neg Arg1:T61 Arg2:T60	
+N28	Reference T62 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N29	Reference T63 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N30	Reference T65 ICD10:A69.2	Choroba z Lyme
+N31	Reference T67 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+R20	Neg Arg1:T64 Arg2:T63	
+R21	Neg Arg1:T66 Arg2:T65	
+R22	Neg Arg1:T68 Arg2:T67	
+N32	Reference T72 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+N33	Reference T73 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+N34	Reference T74 ICD10:E11	Cukrzyca insulinoniezależna
+R23	Drg Arg1:T75 Arg2:T76	
+R24	Drg Arg1:T77 Arg2:T78	
+R25	Drg Arg1:T79 Arg2:T80	
+R26	Drg Arg1:T81 Arg2:T82	
+R27	Drg Arg1:T83 Arg2:T84	
+R28	Drg Arg1:T85 Arg2:T86	
+R29	Neg Arg1:T87 Arg2:T88	
+T89	Symptom 1530 1544	klasy NYHA III
+N35	Reference T89 ICD10:I50	Niewydolność serca
+T90	Symptom 2022 2031	NYHA III,
+N36	Reference T90 ICD10:I50	Niewydolność serca

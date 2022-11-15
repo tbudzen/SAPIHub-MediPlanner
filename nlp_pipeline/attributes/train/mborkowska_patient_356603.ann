@@ -1,0 +1,62 @@
+T1	Investigation 423 449	angio-CT tętnic wieńcowych
+T2	Behaviour 530 569	Dieta lekkostrawna, niskocholesterolowa
+T3	Behaviour 575 617	Bez wskazań do przyjmowania leków na stałe
+T4	Condition 845 879	Łagodna niedomykalność trójdzielna
+N1	Reference T4 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T5	Condition 881 918	Podejrzenie napadowych zaburzeń rytmu
+A1	Source T5 Declared
+N2	Reference T5 ICD10:I47	Częstoskurcz napadowy
+T6	Negation 932 941	negatywna
+R1	Neg Arg1:T6 Arg2:T5	
+T7	Symptom 951 963	zasłabnięciu
+N3	Reference T7 ICD10:R55	Omdlenie i zapaść
+T8	Treatment 985 993	operacji
+A2	Status T8 Historical_Insignificant
+T9	Date 1023 1037	w dzieciństwie
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Condition 1930 1944	obciążenie IHD
+A3	Status T10 Family
+N4	Reference T10 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T11	Behaviour 1891 1901	Papierosów
+N5	Reference T11 ICD10:T65.2	Tytoń i nikotyna
+T12	Negation 1902 1910	nie pali
+R3	Neg Arg1:T12 Arg2:T11	
+T13	Drug 1884 1889	leków
+T14	Negation 1880 1883	bez
+R4	Neg Arg1:T14 Arg2:T13	
+T15	Treatment 1812 1821	osuniecie
+T16	Treatment 1841 1849	plastyka
+T17	Condition 1736 1773	obustronne wodniaki podpajęczynówkowe
+A6	Status T17 Historical_Insignificant
+T18	Treatment 1775 1795	usunięcie 3 migdałka
+A7	Status T18 Historical_Insignificant
+T19	Symptom 1221 1257	zasłabnięcia bez utraty przytomności
+N6	Reference T19 ICD10:R55	Omdlenie i zapaść
+T20	Symptom 1263 1296	nawracających epizodów osłabienia
+N7	Reference T20 ICD10:R55	Omdlenie i zapaść
+T21	Symptom 1299 1314	kołatania serca
+N8	Reference T21 ICD10:R00.2	Kołatanie serca
+T22	Symptom 1377 1389	zasłabnięcie
+N9	Reference T22 ICD10:R55	Omdlenie i zapaść
+T23	Date 1356 1374	ok 6 miesięcy temu
+R5	Dat Arg1:T23 Arg2:T22	
+T24	Symptom 1452 1461	kołatania
+N10	Reference T24 ICD10:R00.2	Kołatanie serca
+T25	Symptom 1464 1485	szybkiego bicia serca
+T26	Symptom 1539 1565	drętwienie kończyn górnych
+N11	Reference T26 ICD10:R20.2	Parestezje
+T27	Condition 1663 1697	niedokrwistość z niedoboru  żelaza
+N12	Reference T27 ICD10:D50.0	Niedokrwistość z niedoboru żelaza spowodowana (przewlekłą) utratą krwi
+A8	Status T27 Historical_Insignificant
+T28	Date 1699 1713	W dzieciństwie
+R6	Dat Arg1:T28 Arg2:T17	
+R7	Dat Arg1:T28 Arg2:T18	
+T29	Condition 1822 1838	torbieli jajnika
+N13	Reference T29 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T30	Condition 1850 1870	przepukliny pępkowej
+N14	Reference T30 ICD10:K42.9	Przepuklina pępkowa bez niedrożności lub zgorzeli
+T31	Condition 994 1022	torbieli podpajęczynówkowych
+N15	Reference T31 ICD10:G93.0	Torbiele mózgu
+R8	Dat Arg1:T9 Arg2:T31	
+T32	Treatment 1725 1733	operacje
+R9	Dat Arg1:T28 Arg2:T32	

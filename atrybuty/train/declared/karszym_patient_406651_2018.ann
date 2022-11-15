@@ -1,0 +1,69 @@
+T1	Condition 460 485	Komorowe zaburzenia rytmu
+N1	Reference T1 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T2	Condition 512 559	kardiomiopatii niescalenia mięsnia lewej komory
+A1	Source T2 Declared
+N2	Reference T2 ICD10:I42.8	Inne kardiomiopatie
+T3	Condition 561 565	LVNC
+A2	Source T3 Declared
+N3	Reference T3 ICD10:I42.8	Inne kardiomiopatie
+T4	Drug 676 685	Rytmonorm
+T5	Drug_dose 686 701	300mg co 8 godz
+T6	Drug 703 713	Filomag B6
+T7	Drug_dose 714 724	3 x 1 tabl
+T8	Drug 725 731	Acesan
+T9	Drug_dose 732 749	75mg 1 x dziennie
+T10	Drug 869 877	Metocard
+T11	Drug 879 885	BetoZK
+T12	Drug 888 897	Rytmonorm
+T13	Drug 899 905	Acesan
+T14	Drug 907 914	Filomag
+T15	Drug 1034 1043	Rytmonorm
+T16	Drug 1045 1051	Acesan
+T17	Drug 1053 1060	Filomag
+T18	Condition 1278 1303	Komorowe zaburzenia rytmu
+N4	Reference T18 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T19	Condition 1308 1340	Niescalenie mięśnia lewej komory
+N5	Reference T19 ICD10:I42.8	Inne kardiomiopatie
+T20	Condition 1342 1346	LVNC
+N6	Reference T20 ICD10:I42.8	Inne kardiomiopatie
+T21	Drug 1500 1509	Rytmonorm
+T22	Drug_dose 1510 1535	300mg co 8 godz. doustnie
+T23	Drug 1537 1547	Filomag B6
+T24	Drug_dose 1548 1568	3 x 1 tabl. doustnie
+T25	Drug 1570 1576	Acesan
+T26	Drug_dose 1577 1602	75mg 1 x 1 tabl. doustnie
+T27	Investigation 1607 1637	Kontrolne badanie holterowskie
+T28	Date 1660 1670	20.12.2019
+T29	Treatment 1690 1728	zgłosić się do poradni kardiologicznej
+T30	Behaviour 1807 1826	redukcję masy ciała
+T31	Date 1828 1844	w chwili obecnej
+T32	Investigation 1845 1849	m.c.
+T33	Investigation_result 1850 1855	99p.c
+T34	Investigation 1859 1862	BMI
+T35	Investigation_result 1863 1872	99,9 p.c.
+T36	Behaviour 1881 1911	stosowanie zbilansowanej diety
+T37	Behaviour 1914 2027	ograniczeniem produktów wysokoprzetworzonych, solonych, bogatych w cukry proste, tłuszcze nasycone i typu "trans"
+T38	Treatment 2029 2059	do rozważenia porada dietetyka
+T39	Behaviour 2061 2104	Aktywność fizyczna na poziomie rekreacyjnym
+T40	Negation 2106 2109	bez
+T41	Behaviour 2110 2140	wysiłków o dużej intensywności
+T42	Condition 2277 2301	zaburzeniami rytmu serca
+N7	Reference T42 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T43	Condition 2304 2331	podejrzeniem kardiomiopatii
+A3	Source T43 Declared
+N8	Reference T43 ICD10:I42.9	Kardiomiopatia, nieokreślona
+T44	Symptom 2408 2423	Stan dość dobry
+R1	Drg Arg1:T4 Arg2:T5	
+R2	Drg Arg1:T6 Arg2:T7	
+R3	Drg Arg1:T8 Arg2:T9	
+R4	Drg Arg1:T21 Arg2:T22	
+R5	Drg Arg1:T23 Arg2:T24	
+R6	Drg Arg1:T25 Arg2:T26	
+R7	Dat Arg1:T28 Arg2:T27	
+R8	Dat Arg1:T31 Arg2:T32	
+R9	Inv Arg1:T32 Arg2:T33	
+R10	Inv Arg1:T34 Arg2:T35	
+R11	Dat Arg1:T31 Arg2:T34	
+N10	Reference T35 ICD10:E66.9	Otyłość, nieokreślona
+R12	Neg Arg1:T40 Arg2:T41	
+T45	Investigation 490 500	Obserwacja

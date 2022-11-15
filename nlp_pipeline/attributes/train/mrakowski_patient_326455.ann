@@ -1,0 +1,115 @@
+T1	Treatment 556 621	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T2	Behaviour 624 664	Dieta lekkostrawna , niskocholesterolowa
+T3	Investigation 668 751	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T4	Investigation 754 802	Systematyczna kontrola ciśnienia tętniczego krwi
+T5	Treatment 805 846	Wskazane systematyczne przyjmowanie leków
+T6	Drug 853 863	Tardyferon
+T7	Drug_dose 864 884	1 tabl. 1 x dziennie
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Symptom 1113 1137	Bóle w klatce piersiowej
+T9	Condition 1139 1187	Umiarkowana niedomykalność zastawki trójdzielnej
+N2	Reference T9 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T10	Condition 1189 1230	Łagodna niedomykalność zastawki mitralnej
+N3	Reference T10 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T11	Condition 1246 1276	Pojedyncze pobudzenia komorowe
+T12	Condition 1278 1292	Niedokrwistość
+N5	Reference T12 ICD10:D64.9	Niedokrwistość, nieokreślona
+T13	Symptom 1523 1544	Bóle w kl. piersiowej
+N6	Reference T13 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N1	Reference T8 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T14	Condition 1773 1829	Łagodna/umiarkowana niedomykalność zastawki trójdzielnej
+N7	Reference T14 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T15	Condition 1831 1872	Łagodna niedomykalność zastawki mitralnej
+N8	Reference T15 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T16	Symptom 1889 1913	Bóle w klatce piersiowej
+N9	Reference T16 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T17	Condition 1915 1929	Niedokrwistość
+N10	Reference T17 ICD10:D64.9	Niedokrwistość, nieokreślona
+T18	Symptom 2128 2249	bólów w kl. piersiowej zamostkowych, rozpierających, samoistnie ustępujących, nie związane z wysiłkiem fizycznym, stresem
+N11	Reference T18 ICD10:R07.3	Inne bóle w klatce piersiowej
+T19	Condition 2265 2281	mięśniaki macicy
+N12	Reference T19 ICD10:N80.0	Gruczolistość mięśnia macicy
+T20	Condition 2283 2301	żylaki kk. dolnych
+N13	Reference T20 ICD10:I83	Żylaki kończyn dolnych
+T21	Treatment 2302 2319	Przebyte operacje
+T22	Negation 2321 2331	nie podaje
+R2	Neg Arg1:T22 Arg2:T21	
+T23	Treatment 2332 2351	Leczenie przewlekłe
+T24	Negation 2353 2363	nie podaje
+R3	Neg Arg1:T24 Arg2:T23	
+T25	Condition 2391 2394	WZW
+N14	Reference T25 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T26	Condition 2396 2405	borelioza
+N15	Reference T26 ICD10:A69.2	Choroba z Lyme
+T27	Negation 2408 2418	nie podaje
+R4	Neg Arg1:T27 Arg2:T26	
+R5	Neg Arg1:T27 Arg2:T25	
+T28	Behaviour 2460 2475	Palenie tytoniu
+T29	Negation 2477 2487	nie podaje
+R6	Neg Arg1:T29 Arg2:T28	
+T30	Behaviour 2488 2499	Inne używki
+T31	Negation 2501 2511	nie podaje
+R7	Neg Arg1:T31 Arg2:T30	
+T32	Condition 2512 2521	Uczulenia
+T33	Negation 2523 2533	nie podaje
+R8	Neg Arg1:T33 Arg2:T32	
+T34	Behaviour 2571 2588	pracownik biurowy
+T35	Drug 2595 2605	Tardyferon
+T36	Drug_dose 2606 2621	1 tabl. 1 x dz.
+R9	Drg Arg1:T35 Arg2:T36	
+T37	Investigation 2649 2659	echo serca
+T38	Investigation 2661 2664	TET
+T39	Symptom 2887 3008	bólów w kl. piersiowej zamostkowych, rozpierających, samoistnie ustępujących, nie związane z wysiłkiem fizycznym, stresem
+N17	Reference T39 ICD10:R07.3	Inne bóle w klatce piersiowej
+T40	Date 3035 3050	w grudniu 2018r
+R10	Dat Arg1:T40 Arg2:T39	
+T41	Condition 3065 3081	mięśniaki macicy
+N18	Reference T41 ICD10:N80.0	Gruczolistość mięśnia macicy
+T42	Condition 3083 3101	żylaki kk. dolnych
+N19	Reference T42 ICD10:I83	Żylaki kończyn dolnych
+T43	Treatment 3102 3119	Przebyte operacje
+T44	Negation 3121 3131	nie podaje
+R11	Neg Arg1:T44 Arg2:T43	
+T45	Treatment 3132 3151	Leczenie przewlekłe
+T46	Negation 3153 3163	nie podaje
+R12	Neg Arg1:T46 Arg2:T45	
+T47	Condition 3191 3194	WZW
+N20	Reference T47 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T48	Condition 3196 3205	borelioza
+N21	Reference T48 ICD10:A69.2	Choroba z Lyme
+T49	Negation 3208 3218	nie podaje
+R13	Neg Arg1:T49 Arg2:T48	
+R14	Neg Arg1:T49 Arg2:T47	
+T50	Behaviour 3260 3275	Palenie tytoniu
+T51	Negation 3277 3287	nie podaje
+R15	Neg Arg1:T51 Arg2:T50	
+T52	Behaviour 3288 3299	Inne używki
+T53	Negation 3301 3311	nie podaje
+R16	Neg Arg1:T53 Arg2:T52	
+T54	Condition 3312 3321	Uczulenia
+T55	Negation 3323 3333	nie podaje
+R17	Neg Arg1:T55 Arg2:T54	
+T56	Behaviour 3371 3388	pracownik biurowy
+T57	Drug 3395 3405	Tardyferon
+T58	Drug_dose 3406 3421	1 tabl. 1 x dz.
+R18	Drg Arg1:T57 Arg2:T58	
+T59	Investigation 3449 3459	echo serca
+T60	Investigation 3461 3464	TET
+T61	Investigation 3466 3470	ABPM
+T62	Investigation 3472 3478	Holter
+T63	Investigation 3480 3498	RTG kl. piersiowej
+T64	Condition 1236 1245	aortalnej
+N23	Reference T64 ICD10:I35.1	Niedomykalność zastawki aortalnej
+N4	Reference T11 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T65	Condition 1878 1887	aortalnej
+N24	Reference T65 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T66	Condition 2419 2434	Wywiad rodzinny
+A1	Status T66 Family
+T67	Condition 3219 3234	Wywiad rodzinny
+A2	Status T67 Family
+N25	Reference T32 ICD10:T78.4	Alergia, nieokreślona
+N26	Reference T54 ICD10:T78.4	Alergia, nieokreślona
+N16	Reference T28 ICD10:Z72.0	Używanie tytoniu
+N22	Reference T50 ICD10:Z72.0	Używanie tytoniu
+N27	Reference T30 ICD10:Z72	Problemy związane ze stylem życia
+N28	Reference T52 ICD10:Z72	Problemy związane ze stylem życia

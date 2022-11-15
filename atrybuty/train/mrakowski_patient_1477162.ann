@@ -1,0 +1,177 @@
+T1	Drug 340 347	Pradaxa
+T2	Drug 349 357	Biosotal
+T3	Drug 359 366	Nolpaza
+T4	Drug 368 375	Fokusin
+T5	Treatment 486 510	kontrola u lekarza w POZ
+T6	Treatment 513 554	dalsza kontrola w Poradni Kardiologicznej
+T7	Investigation 576 601	angioCT tętnic wieńcowych
+T8	Behaviour 605 630	dieta niskocholesterolowa
+T9	Investigation 633 663	kontrola lipidogramu, AST, ALT
+T10	Date 664 678	za ok 2-3 m-ce
+R1	Dat Arg1:T10 Arg2:T9	
+T11	Treatment 681 709	regularne przyjmowanie leków
+T12	Condition 929 974	Umiarkowana niedomykalność zastawki mitralnej
+N1	Reference T12 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T13	Condition 977 989	trójdzielnej
+N2	Reference T13 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T14	Condition 991 1035	Napadowe migotanie/ trzepotanie przedsionków
+N3	Reference T14 ICD10:I48	Migotanie i trzepotanie przedsionków
+T15	Treatment 1045 1124	ablacji RF żyły płucnej lewej górnej oraz modyfikacji cieśni trójdzielno-żylnej
+T16	Date 1126 1133	12.2018
+R2	Dat Arg1:T16 Arg2:T15	
+T17	Treatment 1144 1173	krioablacji ujść żył płucnych
+T18	Date 1175 1182	08.2018
+R3	Dat Arg1:T18 Arg2:T17	
+T19	Treatment 1193 1233	skutecznych kardiowersjach elektrycznych
+T20	Date 1235 1239	2015
+T21	Date 1241 1245	2014
+T22	Date 1247 1251	2011
+R4	Dat Arg1:T22 Arg2:T19	
+R5	Dat Arg1:T21 Arg2:T19	
+R6	Dat Arg1:T20 Arg2:T19	
+T23	Condition 1254 1275	Nadciśnienie tętnicze
+N4	Reference T23 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T24	Condition 1289 1306	choroby wieńcowej
+A1	Source T24 Declared
+N5	Reference T24 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T25	Condition 1456 1471	FA/fA napadowym
+N6	Reference T25 ICD10:I48	Migotanie i trzepotanie przedsionków
+T26	Drug 1473 1480	Pradaxa
+T27	Drug_dose 1481 1486	150mg
+R7	Drg Arg1:T26 Arg2:T27	
+T28	Treatment 1492 1571	ablacji RF żyły płucnej lewej górnej oraz modyfikacji cieśni trójdzielno-żylnej
+T29	Date 1573 1583	14.12.2018
+R8	Dat Arg1:T29 Arg2:T28	
+T30	Treatment 1589 1618	krioablacji ujść żył płucnych
+T31	Date 1620 1630	28.08.2018
+R9	Dat Arg1:T31 Arg2:T30	
+T32	Treatment 1636 1676	skutecznych kardiowersjach elektrycznych
+T33	Date 1678 1682	2015
+T34	Date 1684 1688	2014
+T35	Date 1690 1694	2011
+R10	Dat Arg1:T35 Arg2:T32	
+R11	Dat Arg1:T34 Arg2:T32	
+R12	Dat Arg1:T33 Arg2:T32	
+T36	Condition 1699 1701	HA
+N7	Reference T36 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T37	Investigation_result 1703 1719	RR: 94/64-122/91
+N8	Reference T37 ICD10:R03	
+T38	Symptom 1736 1767	zmniejszenie tolerancji wysiłku
+N9	Reference T38 ICD10:R53	Złe samopoczucie i zmęczenie
+T39	Date 1769 1776	od roku
+R13	Dat Arg1:T39 Arg2:T38	
+T40	Symptom 1778 1826	odpoczywa po wejsciu na 2 piętro, bez bólu w klp
+N10	Reference T40 ICD10:R53	Złe samopoczucie i zmęczenie
+T41	Symptom 1829 1839	bóle głowy
+N11	Reference T41 ICD10:R51	Ból głowy
+T42	Symptom 1841 1881	zawroty głowy przy zmianie pozycji ciała
+N12	Reference T42 ICD10:R42	Zawroty głowy i odurzenie
+T43	Symptom 1883 1905	kołątania serca czasem
+N13	Reference T43 ICD10:R00.2	Kołatanie serca
+T44	Symptom 1914 1964	piekące bóle w kl piers nasilające się po jedzeniu
+N14	Reference T44 ICD10:R07.3	Inne bóle w klatce piersiowej
+T45	Investigation 1968 1980	holterze ekg
+T46	Drug 1984 1993	Biosotalu
+T47	Drug_dose 1994 1998	3x80
+R14	Drg Arg1:T46 Arg2:T47	
+T48	Investigation_result 2000 2013	HR 48-102/min
+T49	Investigation_result 2015 2025	epizody FA
+N15	Reference T49 ICD10:I48	Migotanie i trzepotanie przedsionków
+T50	Investigation_result 2031 2035	pauz
+R15	Inv Arg1:T45 Arg2:T48	
+R16	Inv Arg1:T45 Arg2:T49	
+R17	Inv Arg1:T45 Arg2:T50	
+T51	Negation 2037 2043	Neguje
+T52	Symptom 2045 2049	zasł
+T53	Symptom 2051 2059	omdlenia
+N16	Reference T53 ICD10:R55	Omdlenie i zapaść
+T54	Symptom 2061 2079	obrzęki kk dolnych
+T55	Condition 2081 2083	DM
+N18	Reference T55 ICD10:E14	Cukrzyca nieokreślona
+T56	Condition 2085 2088	CAD
+N19	Reference T56 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T57	Condition 2090 2095	zawał
+N20	Reference T57 ICD10:I25.2	Przebyty zawał serca
+T58	Condition 2097 2101	udar
+N21	Reference T58 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T59	Condition 2103 2114	ch wrzodowa
+N22	Reference T59 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T60	Condition 2116 2127	ch tarczycy
+N23	Reference T60 ICD10:E07.9	Choroby tarczycy, nieokreślone
+T61	Treatment 2129 2137	operacje
+T62	Symptom 2139 2148	krawienia
+T63	Symptom 2150 2163	czarne stolce
+N24	Reference T63 ICD10:K92.1	Stolce smołowate
+T64	Symptom 2165 2181	brunatne wymioty
+N25	Reference T64 ICD10:K92.0	Wymioty krwawe
+R18	Neg Arg1:T51 Arg2:T64	
+R19	Neg Arg1:T51 Arg2:T63	
+R20	Neg Arg1:T51 Arg2:T62	
+R21	Neg Arg1:T51 Arg2:T61	
+R22	Neg Arg1:T51 Arg2:T60	
+R23	Neg Arg1:T51 Arg2:T59	
+R24	Neg Arg1:T51 Arg2:T58	
+R25	Neg Arg1:T51 Arg2:T57	
+R26	Neg Arg1:T51 Arg2:T56	
+R27	Neg Arg1:T51 Arg2:T55	
+R28	Neg Arg1:T51 Arg2:T54	
+R29	Neg Arg1:T51 Arg2:T53	
+R30	Neg Arg1:T51 Arg2:T52	
+T65	Treatment 2184 2201	Przebyte operacje
+T66	Negation 2203 2206	nie
+R31	Neg Arg1:T66 Arg2:T65	
+T67	Behaviour 2207 2222	Palenie tytoniu
+T68	Negation 2224 2229	nigdy
+R32	Neg Arg1:T68 Arg2:T67	
+T69	Behaviour 2230 2241	Inne używki
+T70	Negation 2243 2246	nie
+R33	Neg Arg1:T70 Arg2:T69	
+T71	Condition 2247 2256	Uczulenia
+T72	Condition 2258 2267	uczulenia
+T73	Condition 2296 2299	WZW
+N27	Reference T73 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T74	Condition 2306 2315	borelioza
+N28	Reference T74 ICD10:A69.2	Choroba z Lyme
+T75	Condition 2321 2324	tbc
+T76	Condition 2330 2334	odra
+N30	Reference T76 ICD10:B05	Odra
+T77	Condition 2340 2354	kontakt z odrą
+N31	Reference T77 ICD10:B05	Odra
+T78	Negation 2356 2357	-
+R34	Neg Arg1:T78 Arg2:T77	
+T79	Negation 2336 2337	-
+R35	Neg Arg1:T79 Arg2:T76	
+T80	Negation 2326 2327	-
+R36	Neg Arg1:T80 Arg2:T75	
+T81	Negation 2317 2318	-
+R37	Neg Arg1:T81 Arg2:T74	
+T82	Negation 2301 2302	-
+R38	Neg Arg1:T82 Arg2:T73	
+T83	Behaviour 2375 2401	warunki mieszkaniowe dobre
+T84	Drug 2451 2458	Pradaxa
+T85	Drug 2480 2488	Biosotal
+T86	Drug_dose 2459 2479	150mg tabl 2x 1 tabl
+R39	Drg Arg1:T84 Arg2:T86	
+T87	Drug_dose 2489 2503	80mg 3x 1 tabl
+R40	Drg Arg1:T85 Arg2:T87	
+T88	Drug 2504 2511	Nolpaza
+T89	Drug_dose 2512 2526	20mg 1x 1 tabl
+R41	Drg Arg1:T88 Arg2:T89	
+T90	Drug 2527 2534	Fokusin
+T91	Drug_dose 2535 2556	0,4mg 1x 1 tabl/wiecz
+R42	Drg Arg1:T90 Arg2:T91	
+T92	Investigation 2617 2638	badania laboratoryjne
+T93	Investigation 2640 2644	ECHO
+T94	Investigation 2646 2664	EKG metodą Holtera
+T95	Investigation 2666 2670	ABPM
+T96	Investigation 2672 2687	próba wysiłkowa
+N33	Reference T71 ICD10:T78.4	Alergia, nieokreślona
+N34	Reference T72 ICD10:T78.4	Alergia, nieokreślona
+T97	Negation 2027 2030	bez
+R43	Neg Arg1:T97 Arg2:T50	
+N35	Reference T52 ICD10:R55	
+N26	Reference T67 ICD10:Z72.0	Używanie tytoniu
+N17	Reference T54 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N32	Reference T62 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N36	Reference T69 ICD10:Z72	Problemy związane ze stylem życia
+N29	Reference T75 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

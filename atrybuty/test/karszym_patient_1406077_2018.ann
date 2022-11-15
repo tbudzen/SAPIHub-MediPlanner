@@ -1,0 +1,73 @@
+T1	Treatment 331 353	kontrola u lekarza POZ
+T2	Behaviour 356 381	dieta niskocholesterolowa
+T3	Behaviour 383 401	zmiana stylu życia
+T4	Investigation 405 433	okresowa kontrola lipdogramu
+T5	Date 435 457	pierwszy raz za 3 m-ce
+T6	Investigation 460 492	kontrola RR w warunkach domowych
+T7	Investigation 503 517	wykonanie ABPM
+T8	Treatment 521 555	kontrola w Poradni Kardiologicznej
+R1	Dat Arg1:T5 Arg2:T4	
+T9	Condition 783 806	Ekstrasystolia komorowa
+N1	Reference T9 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T10	Condition 808 829	Nadciśnienie tętnicze
+N2	Reference T10 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T11	Condition 834 854	Hipercholesterolemia
+N3	Reference T11 ICD10:E78.0	Czysta hipercholesterolemia
+T12	Date 1036 1047	od tygodnia
+T13	Investigation 1059 1062	ekg
+T14	Investigation_result 1063 1127	arytmii pod postacią dodatkowych skurczów pochodzenia komorowego
+N4	Reference T14 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+R2	Inv Arg1:T13 Arg2:T14	
+R3	Dat Arg1:T12 Arg2:T14	
+T15	Negation 1129 1135	Neguje
+T16	Symptom 1136 1144	omdlenia
+N5	Reference T16 ICD10:R55	Omdlenie i zapaść
+T17	Negation 1146 1152	neguje
+T18	Symptom 1153 1170	inne dolegliwości
+T19	Symptom 1238 1260	bólu stawów łokciowych
+N6	Reference T19 ICD10:M25.5	Ból stawu
+T20	Date 1201 1216	przed tygodniem
+R4	Dat Arg1:T20 Arg2:T19	
+T21	Investigation 1197 1200	ekg
+R5	Dat Arg1:T20 Arg2:T21	
+R6	Neg Arg1:T15 Arg2:T16	
+R7	Neg Arg1:T17 Arg2:T18	
+T22	Condition 1285 1298	HA (graniczne
+N7	Reference T22 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T23	Investigation_result 1299 1309	140/90mmHg
+T24	Date 1311 1319	od 3 lat
+T25	Condition 1322 1342	hipercholesterolemia
+N8	Reference T25 ICD10:E78.0	Czysta hipercholesterolemia
+T26	Treatment 1344 1380	przejściowo leczona farmakologicznie
+T27	Condition 1383 1399	krótkowzroczność
+N9	Reference T27 ICD10:H52.1	Krótkowzroczność
+T28	Negation 1421 1427	neguje
+T29	Treatment 1402 1419	Przebyte operacje
+N10	Reference T29 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T30	Condition 1454 1467	wada wrodzona
+N11	Reference T30 ICD10:Q89.9	Wrodzona wada rozwojowa, nieokreślona
+T31	Negation 1477 1483	neguje
+T32	Condition 1468 1475	Alergie
+N12	Reference T32 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T33	Negation 1497 1503	neguje
+T34	Behaviour 1485 1495	Nikotynizm
+N13	Reference T34 ICD10:Z72.0	Używanie tytoniu
+T35	Behaviour 1507 1548	Alkohol: okazjonalnie, w małych ilościach
+N14	Reference T35 ICD10:Z72.1	Używanie alkoholu
+R8	Neg Arg1:T31 Arg2:T32	
+R9	Neg Arg1:T33 Arg2:T34	
+R10	Dat Arg1:T24 Arg2:T22	
+R11	Dat Arg1:T24 Arg2:T23	
+R12	Neg Arg1:T28 Arg2:T29	
+T36	Behaviour 1550 1567	Uzależnienie inne
+N15	Reference T36 ICD10:Z72	Problemy związane ze stylem życia
+T37	Negation 1569 1575	neguje
+T38	Behaviour 1593 1610	pracuje fizycznie
+T39	Drug 1612 1616	Leki
+T40	Negation 1618 1625	żadnych
+T41	Investigation 1654 1664	echo serca
+T42	Investigation 1666 1669	TET
+T43	Investigation 1671 1675	ABPM
+T44	Investigation 1677 1687	Holter ekg
+R13	Neg Arg1:T40 Arg2:T39	
+R14	Neg Arg1:T37 Arg2:T36	

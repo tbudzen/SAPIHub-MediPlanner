@@ -1,0 +1,102 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 361 393	okresowa kontrola kardiologiczna
+T3	Treatment 397 436	regularna kontrola ciśnienia tętniczego
+T4	Treatment 440 484	okresowa kontrola lipidogramu, kw. moczowego
+T5	Behaviour 485 538	dieta niskocholesterolowa z unikaniem cukrów prostych
+T6	Behaviour 539 584	stały, umiarkowany, aerobowy wysiłek fizyczny
+T7	Drug 620 630	Concor COR
+T8	Drug_dose 631 651	1,25 mg 1 tabl. rano
+T9	Drug 652 662	Prestarium
+T10	Drug_dose 663 687	5 mg 1/2 tabl. wieczorem
+R1	Drg Arg1:T7 Arg2:T8	
+R2	Drg Arg1:T9 Arg2:T10	
+T11	Condition 879 915	Nadciśnienie tętnicze Ist wg ESC/ESH
+N1	Reference T11 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T12	Condition 917 939	Żylaki k. dolnej lewej
+N2	Reference T12 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T13	Condition 941 956	Ca sutka lewego
+N3	Reference T13 ICD10:C50.9	Pierś, umiejscowienie nieokreślone
+T14	Treatment 967 978	mastektomii
+N4	Reference T14 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T15	Treatment 1004 1019	chemioterapii  
+T16	Date 1020 1024	2014
+R3	Dat Arg1:T16 Arg2:T13	
+R4	Dat Arg1:T16 Arg2:T14	
+R5	Dat Arg1:T16 Arg2:T15	
+A1	Status T14 Historical_Insignificant
+T17	Condition 1027 1076	Zmiany zwyrodnieniowe kręgosłupa odc. lędźwiowego
+N6	Reference T17 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+A3	Status T17 Historical_Insignificant
+A4	Status T12 Historical_Insignificant
+T18	Symptom 1286 1325	labilnych wartości ciśnienia tętniczego
+T19	Date 1326 1334	od 2 lat
+T20	Symptom 1337 1364	towarzyszącymi bólami głowy
+N7	Reference T20 ICD10:R51	Ból głowy
+T21	Symptom 1366 1382	max 180/100 mmHg
+R6	Dat Arg1:T19 Arg2:T18	
+R7	Dat Arg1:T19 Arg2:T20	
+R8	Dat Arg1:T19 Arg2:T21	
+T22	Condition 1397 1413	rak sutka lewego
+N8	Reference T22 ICD10:C50.9	Pierś, umiejscowienie nieokreślone
+T23	Date 1415 1420	2014r
+T24	Treatment 1424 1437	chemioterapia
+T25	Treatment 1440 1451	mastektomia
+A5	Status T25 Historical_Insignificant
+N10	Reference T25 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T26	Date 1476 1480	2014
+R9	Dat Arg1:T26 Arg2:T25	
+R10	Dat Arg1:T26 Arg2:T24	
+R11	Dat Arg1:T23 Arg2:T22	
+T27	Condition 1483 1532	zmiany zwyrodnieniowe kręgosłupa odc. lędźwiowego
+A7	Status T27 Historical_Insignificant
+N11	Reference T27 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T28	Condition 1534 1555	żylaki k dolnej lewej
+N12	Reference T28 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+A8	Status T28 Historical_Insignificant
+T29	Condition 1614 1617	WZW
+N13	Reference T29 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T30	Condition 1619 1628	borelioza
+N14	Reference T30 ICD10:A69.2	Choroba z Lyme
+T31	Negation 1631 1641	nie podaje
+R12	Neg Arg1:T31 Arg2:T29	
+R13	Neg Arg1:T31 Arg2:T30	
+T32	Condition 1642 1657	Wywiad rodzinny
+A9	Status T32 Family
+T33	Negation 1659 1669	nieistotny
+R14	Neg Arg1:T33 Arg2:T32	
+T34	Behaviour 1670 1685	Palenie tytoniu
+N15	Reference T34 ICD10:Z72.0	Używanie tytoniu
+T35	Negation 1687 1697	nie podaje
+R15	Neg Arg1:T35 Arg2:T34	
+T36	Behaviour 1698 1709	Inne używki
+T37	Negation 1711 1721	nie podaje
+R16	Neg Arg1:T37 Arg2:T36	
+T38	Condition 1722 1731	Uczulenia
+N16	Reference T38 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T39	Drug 1733 1741	dolargan
+T40	Drug 1743 1753	penicylina
+R17	Alg Arg1:T38 Arg2:T39	
+R18	Alg Arg1:T38 Arg2:T40	
+T41	Behaviour 1772 1778	lekarz
+T42	Behaviour 1780 1788	3 dzieci
+T43	Negation 1795 1798	bez
+T44	Drug 1799 1804	leków
+R19	Neg Arg1:T43 Arg2:T44	
+T45	Investigation 1832 1842	echo serca
+T46	Investigation 1844 1864	echo przezprzełykowe
+T47	Investigation 1866 1883	echo obciążeniowe
+T48	Investigation 1885 1888	TET
+T49	Investigation 1890 1894	ABPM
+T50	Investigation 1896 1902	Holter
+T51	Investigation 1904 1922	RTG kl. piersiowej
+N9	Reference T24 ICD10:Z51.1	Cykl chemioterapii przeciwnowotworowej
+N5	Reference T15 ICD10:Z51.1	Cykl chemioterapii przeciwnowotworowej
+T52	Treatment 981 1001	rekonstrukcją piersi
+A2	Status T52 Historical_Insignificant
+N17	Reference T52 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R20	Dat Arg1:T16 Arg2:T52	
+T53	Treatment 1454 1474	rekonstrukcja piersi
+N18	Reference T53 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+A6	Status T53 Historical_Insignificant
+R21	Dat Arg1:T26 Arg2:T53	
+N19	Reference T36 ICD10:Z72	Problemy związane ze stylem życia

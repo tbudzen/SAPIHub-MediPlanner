@@ -1,0 +1,72 @@
+T1	Condition 449 490	Łagodna niedomykalność zastawki mitralnej
+T2	Condition 492 513	Nadciśnienie tętnicze
+T3	Condition 515 553	Przewlekła choroba niedokrwienna serca
+T4	Condition 556 610	Dodatkowe pojedyncze pobudzenia komorowe i nadkomorowe
+T5	Condition 612 626	Hiperlipidemia
+T6	Condition 628 660	Nieprawidłowa tolerancja glukozy
+T7	Condition 662 676	Kamica nerkowa
+T8	Condition 678 697	Torbiel nerki lewej
+T9	Condition 699 706	Otyłość
+T10	Investigation 708 711	BMI
+T11	Investigation_result 712 714	33
+T12	Symptom 890 905	kołatania serca
+T13	Condition 920 941	nadciśnienie tętnicze
+T14	Condition 943 957	hiperlipidemia
+T15	Condition 959 973	kamica nerkowa
+T16	Condition 975 994	torbiel nerki lewej
+T17	Treatment 996 1004	Operacje
+T18	Negation 1006 1012	neguje
+T19	Behaviour 1013 1023	Nikotynizm
+T20	Date 1026 1039	w przeszłości
+T21	Behaviour 1043 1064	Alkohol: okazjonalnie
+T22	Negation 1073 1079	neguje
+T23	Condition 1081 1098	uczulenia na leki
+T24	Symptom 1100 1133	krwawienia z przewodu pokarmowego
+T25	Symptom 1158 1175	kołataniami serca
+T26	Drug 1202 1207	acard
+T27	Drug_dose 1208 1212	75mg
+T28	Drug 1214 1221	nolpaza
+T29	Drug_dose 1222 1226	20mg
+T30	Drug 1228 1239	betaloc ZOK
+T31	Drug_dose 1240 1244	50mg
+T32	Drug 1246 1253	tritace
+T33	Drug_dose 1254 1257	5mg
+T34	Drug 1259 1271	tertensif sr
+T35	Drug 1273 1282	simvacard
+T36	Drug_dose 1283 1287	20mg
+T37	Drug 1289 1297	aspargin
+T38	Investigation 1310 1320	ECHO serca
+T39	Investigation 1322 1332	Holter EKG
+T40	Investigation 1334 1343	Holter RR
+T41	Investigation 1345 1347	PW
+N1	Reference T1 ICD10:I34.0	NiedomykalnoÅÄ zastawki mitralnej
+N2	Reference T2 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N3	Reference T3 ICD10:I25.9	PrzewlekÅa choroba niedokrwienna serca, nieokreÅlona
+N4	Reference T5 ICD10:E78.5	Hiperlipidemia, nieokreÅlona
+N5	Reference T6 ICD10:R73.0	NieprawidÅowe wyniki testu tolerancji glukozy
+N6	Reference T7 ICD10:N20.0	Kamica nerki
+N7	Reference T8 ICD10:N28.1	Torbiel nerki, nabyta
+N8	Reference T9 ICD10:E66	OtyÅoÅÄ
+N9	Reference T12 ICD10:R00.2	KoÅatanie serca
+N10	Reference T13 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N11	Reference T14 ICD10:E78.5	Hiperlipidemia, nieokreÅlona
+N12	Reference T15 ICD10:N20.0	Kamica nerki
+N13	Reference T16 ICD10:N28.1	Torbiel nerki, nabyta
+N14	Reference T17 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N15	Reference T19 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N16	Reference T21 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N17	Reference T23 ICD10:Z88	Uczulenia na leki, Årodki farmakologiczne i substancje biologiczne w wywiadzie
+N18	Reference T24 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreÅlony
+N19	Reference T25 ICD10:R00.2	KoÅatanie serca
+R10	Dat Arg1:T20 Arg2:T23
+R11	Dat Arg1:T20 Arg2:T21
+R12	Drg Arg1:T26 Arg2:T27
+R17	Drg Arg1:T28 Arg2:T27
+R23	Drg Arg1:T30 Arg2:T29
+R29	Drg Arg1:T32 Arg2:T31
+R35	Drg Arg1:T34 Arg2:T33
+R5	Neg Arg1:T18 Arg2:T17
+R7	Neg Arg1:T22 Arg2:T23
+R8	Neg Arg1:T22 Arg2:T21
+A1	Status T17 Historical_Insignificant
+A2	Status T25 Family

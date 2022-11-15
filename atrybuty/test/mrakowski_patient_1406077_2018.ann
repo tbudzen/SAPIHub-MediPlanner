@@ -1,0 +1,72 @@
+T1	Treatment 331 353	kontrola u lekarza POZ
+T2	Behaviour 356 401	dieta niskocholesterolowa, zmiana stylu życia
+T3	Investigation 405 433	okresowa kontrola lipdogramu
+T4	Date 435 457	pierwszy raz za 3 m-ce
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Investigation 460 492	kontrola RR w warunkach domowych
+T6	Investigation 494 517	wskazane wykonanie ABPM
+T7	Treatment 521 555	kontrola w Poradni Kardiologicznej
+T8	Condition 783 806	Ekstrasystolia komorowa
+N1	Reference T8 ICD10:I49.3	
+T9	Condition 808 829	Nadciśnienie tętnicze
+N2	Reference T9 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T10	Condition 834 854	Hipercholesterolemia
+N3	Reference T10 ICD10:E78.0	Czysta hipercholesterolemia
+T11	Investigation 1050 1062	zapisach ekg
+T12	Investigation_result 1063 1127	arytmii pod postacią dodatkowych skurczów pochodzenia komorowego
+N4	Reference T12 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+R2	Inv Arg1:T11 Arg2:T12	
+T13	Negation 1129 1135	Neguje
+T14	Negation 1146 1152	neguje
+T15	Symptom 1136 1144	omdlenia
+N5	Reference T15 ICD10:R55	Omdlenie i zapaść
+T16	Symptom 1153 1170	inne dolegliwości
+R3	Neg Arg1:T14 Arg2:T16	
+R4	Neg Arg1:T13 Arg2:T15	
+T17	Investigation 1189 1200	zapisem ekg
+T18	Date 1201 1216	przed tygodniem
+T19	Symptom 1238 1260	bólu stawów łokciowych
+N6	Reference T19 ICD10:M25.5	Ból stawu
+R5	Dat Arg1:T18 Arg2:T19	
+T20	Condition 1285 1287	HA
+N7	Reference T20 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T21	Investigation_result 1289 1309	graniczne 140/90mmHg
+N8	Reference T21 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T22	Date 1311 1319	od 3 lat
+R6	Dat Arg1:T22 Arg2:T21	
+T23	Condition 1322 1342	hipercholesterolemia
+N9	Reference T23 ICD10:E78.0	Czysta hipercholesterolemia
+T24	Treatment 1344 1380	przejściowo leczona farmakologicznie
+T25	Condition 1383 1399	krótkowzroczność
+N10	Reference T25 ICD10:H52.1	Krótkowzroczność
+T26	Treatment 1402 1419	Przebyte operacje
+T27	Negation 1421 1427	neguje
+R7	Neg Arg1:T27 Arg2:T26	
+T28	Condition 1429 1444	Wywiad rodzinny
+T29	Condition 1454 1467	wada wrodzona
+N11	Reference T29 ICD10:Q89.9	Wrodzona wada rozwojowa, nieokreślona
+T30	Condition 1468 1475	Alergie
+N12	Reference T30 ICD10:T78.4	Alergia, nieokreślona
+T31	Negation 1477 1483	neguje
+R8	Neg Arg1:T31 Arg2:T30	
+T32	Behaviour 1485 1495	Nikotynizm
+N13	Reference T32 ICD10:Z72.0	Używanie tytoniu
+T33	Negation 1497 1503	neguje
+R9	Neg Arg1:T33 Arg2:T32	
+T34	Behaviour 1507 1548	Alkohol: okazjonalnie, w małych ilościach
+N14	Reference T34 ICD10:Z72.1	Używanie alkoholu
+T35	Behaviour 1550 1567	Uzależnienie inne
+T36	Negation 1569 1575	neguje
+R10	Neg Arg1:T36 Arg2:T35	
+T37	Behaviour 1593 1610	pracuje fizycznie
+T38	Investigation 1654 1664	echo serca
+T39	Investigation 1666 1669	TET
+T40	Investigation 1671 1675	ABPM
+T41	Investigation 1677 1687	Holter ekg
+N15	Reference T35 ICD10:Z72	Problemy związane ze stylem życia
+T42	Drug 1612 1616	Leki
+T43	Negation 1618 1625	żadnych
+R11	Neg Arg1:T43 Arg2:T42	
+T44	Date 1036 1047	od tygodnia
+R12	Dat Arg1:T44 Arg2:T11	
+R13	Dat Arg1:T44 Arg2:T12	

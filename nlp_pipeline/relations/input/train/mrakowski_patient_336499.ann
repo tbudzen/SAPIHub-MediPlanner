@@ -1,0 +1,112 @@
+T1	Treatment 332 368	Wskazana dalsza opieka u lekarza POZ
+T2	Treatment 371 414	Okresowa kontrola w Poradni Kardiologicznej
+T3	Investigation 438 483	wykonaniem badania angio-CT tętnic wieńcowych
+T4	Treatment 487 522	Wskazana konsultacja psychologiczna
+T5	Behaviour 525 564	Dieta lekkostrawna, niskocholesterolowa
+T6	Condition 782 816	Łagodna niedomykalność trójdzielna
+N1	Reference T6 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T7	Condition 827 848	Nadciśnienie tętnicze
+N2	Reference T7 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T8	Condition 819 825	płucna
+N3	Reference T8 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T9	Condition 850 862	Dyslipidemia
+N4	Reference T9 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T10	Condition 864 876	Endometrioza
+N5	Reference T10 ICD10:N80.9	Gruczolistość, nieokreślona
+T11	Condition 878 900	Wole obojętne tarczycy
+N6	Reference T11 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T12	Symptom 1090 1124	okresowego uczucia kołatania serca
+N7	Reference T12 ICD10:R00.2	Kołatanie serca
+T13	Symptom 1127 1137	HR>100/min
+N8	Reference T13 ICD10:R00.0	Tachykardia, nieokreślona
+T14	Symptom 1155 1180	uczuciem uderzenia gorąca
+T15	Date 1181 1198	od kilku miesięcy
+R1	Dat Arg1:T15 Arg2:T14	
+R2	Dat Arg1:T15 Arg2:T13	
+R3	Dat Arg1:T15 Arg2:T12	
+T16	Date 1209 1217	od 3 tyg
+T17	Investigation_result 1218 1263	skoki RR do 180/120 mmHg w pomiarach domowych
+N9	Reference T17 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T18	Condition 1286 1306	Nadciśnenie tętnicze
+N10	Reference T18 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T19	Condition 1308 1320	Endometrioza
+N11	Reference T19 ICD10:N80.9	Gruczolistość, nieokreślona
+T20	Condition 1322 1344	Wole obojętne tarczycy
+N12	Reference T20 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T21	Negation 1347 1353	Neguje
+T22	Symptom 1355 1367	zasłabnięcia
+R4	Neg Arg1:T21 Arg2:T22	
+T23	Symptom 1369 1377	omdlenia
+N13	Reference T23 ICD10:R55	Omdlenie i zapaść
+T24	Symptom 1379 1389	krwawienia
+T25	Symptom 1391 1404	czarne stolce
+N14	Reference T25 ICD10:K92.1	Stolce smołowate
+T26	Symptom 1406 1422	brunatne wymioty
+N15	Reference T26 ICD10:K92.0	Wymioty krwawe
+R5	Neg Arg1:T21 Arg2:T23	
+R6	Neg Arg1:T21 Arg2:T24	
+R7	Neg Arg1:T21 Arg2:T25	
+R8	Neg Arg1:T21 Arg2:T26	
+R9	Dat Arg1:T16 Arg2:T17	
+T27	Condition 1424 1440	chorobę wrzodową
+N16	Reference T27 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+R10	Neg Arg1:T21 Arg2:T27	
+T28	Symptom 1442 1456	duszność nocną
+N17	Reference T28 ICD10:R06.0	Duszność
+R11	Neg Arg1:T21 Arg2:T28	
+T29	Symptom 1458 1473	obrzęki podudzi
+N18	Reference T29 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+R12	Neg Arg1:T21 Arg2:T29	
+T30	Symptom 1475 1499	bóle w klatce piersiowej
+N19	Reference T30 ICD10:R07	Ból gardła i w klatce piersiowej
+R13	Neg Arg1:T21 Arg2:T30	
+T31	Treatment 1500 1517	Przebyte operacje
+T32	Negation 1519 1525	neguje
+R14	Neg Arg1:T32 Arg2:T31	
+T33	Behaviour 1526 1541	Palenie tytoniu
+N20	Reference T33 ICD10:Z72.0	Używanie tytoniu
+T34	Negation 1543 1549	neguje
+R15	Neg Arg1:T34 Arg2:T33	
+T35	Behaviour 1550 1561	Inne używki
+T36	Negation 1563 1566	nie
+R16	Neg Arg1:T36 Arg2:T35	
+T37	Condition 1609 1612	WZW
+N21	Reference T37 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T38	Negation 1614 1615	-
+R17	Neg Arg1:T38 Arg2:T37	
+T39	Condition 1619 1628	borelioza
+N22	Reference T39 ICD10:A69.2	Choroba z Lyme
+T40	Negation 1630 1631	-
+R18	Neg Arg1:T40 Arg2:T39	
+T41	Condition 1634 1637	tbc
+N23	Reference T41 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T42	Negation 1639 1640	-
+R19	Neg Arg1:T42 Arg2:T41	
+T43	Condition 1643 1647	odra
+N24	Reference T43 ICD10:B05	Odra
+T44	Condition 1653 1667	kontakt z odrą
+N25	Reference T44 ICD10:B05	Odra
+T45	Negation 1649 1650	-
+R20	Neg Arg1:T45 Arg2:T43	
+T46	Negation 1669 1670	-
+R21	Neg Arg1:T46 Arg2:T44	
+T47	Behaviour 1688 1714	warunki mieszkaniowe dobre
+T48	Drug 1749 1760	Betaloc ZOK
+T49	Drug_dose 1761 1774	50 mg 1/2-0-0
+R22	Drg Arg1:T48 Arg2:T49	
+T50	Drug 1775 1783	Indix SR
+T51	Drug_dose 1784 1796	1,5 mg 1-0-0
+R23	Drg Arg1:T50 Arg2:T51	
+T52	Drug 1797 1809	Vilpin Combi
+T53	Drug_dose 1810 1822	5+5 mg 1-0-0
+R24	Drg Arg1:T52 Arg2:T53	
+T54	Drug 1823 1826	Yaz
+T55	Drug_dose 1827 1832	1-0-0
+R25	Drg Arg1:T54 Arg2:T55	
+T56	Investigation 1894 1915	badania laboratoryjne
+T57	Investigation 1917 1921	ECHO
+T58	Investigation 1923 1941	EKG metodą Holtera
+T59	Investigation 1943 1947	ABPM
+T60	Condition 1567 1576	Uczulenia
+T61	Negation 1578 1581	nie
+R26	Neg Arg1:T61 Arg2:T60	

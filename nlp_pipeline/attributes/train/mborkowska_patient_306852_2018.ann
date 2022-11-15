@@ -1,0 +1,86 @@
+T1	Investigation 2005 2015	Echo serca
+T2	Investigation 2018 2033	Próba Wysiłkowa
+T3	Investigation 769 789	kontrola lipidogramu
+T4	Investigation 804 848	glikemii, elektrolitów, parametrów nerkowych
+T5	Date 790 801	(raz w roku
+R1	Dat Arg1:T5 Arg2:T3	
+T6	Behaviour 849 904	dieta redukcyjna niskocholesterolowa i niskoglikemiczna
+T7	Behaviour 905 924	redukcja masy ciała
+T8	Behaviour 925 974	regularna aktywność fizyczna  (minimum 2,5 h/ tyg
+T9	Drug 1006 1016	Concor COR
+T10	Drug_dose 1017 1038	1,25 mg  1 tabl. rano
+R2	Drg Arg1:T9 Arg2:T10	
+T11	Drug 1039 1045	Atoris
+T12	Drug_dose 1046 1069	20 mg 1 tabl. wieczorem
+R3	Drg Arg1:T11 Arg2:T12	
+T13	Drug 1070 1083	Glucophage XR
+T14	Drug_dose 1084 1108	500 mg 1 tabl. wieczorem
+R4	Drg Arg1:T13 Arg2:T14	
+T15	Drug 1936 1941	Cital
+T16	Drug_dose 1942 1961	1 x dz po 1/2 tabl.
+R5	Drg Arg1:T15 Arg2:T16	
+T17	Drug 1888 1905	Krople na sercowe
+A1	Source T17 Declared
+T18	Behaviour 1836 1862	warunki mieszkaniowe dobre
+T19	Negation 1813 1819	neguje
+T20	Negation 1798 1801	nie
+T21	Negation 1781 1784	nie
+T22	Negation 1751 1762	brak danych
+T23	Negation 1702 1708	( -  )
+T24	Negation 1721 1726	( - )
+T25	Condition 1711 1720	borelioza
+N1	Reference T25 ICD10:A69.2	Choroba z Lyme
+R6	Neg Arg1:T24 Arg2:T25	
+T26	Condition 1698 1701	WZW
+N2	Reference T26 ICD10:B19	
+R7	Neg Arg1:T23 Arg2:T26	
+T27	Condition 1802 1811	Uczulenia
+R8	Neg Arg1:T19 Arg2:T27	
+T28	Behaviour 1785 1797	Inne używki:
+R9	Neg Arg1:T20 Arg2:T28	
+T29	Behaviour 1764 1779	Palenie tytoniu
+N4	Reference T29 ICD10:Z72.0	Używanie tytoniu
+R10	Neg Arg1:T21 Arg2:T29	
+T30	Condition 1727 1748	W wywiadzie rodzinnym
+A2	Status T30 Family
+R11	Neg Arg1:T22 Arg2:T30	
+T31	Negation 1665 1669	brak
+T32	Negation 1638 1642	brak
+T33	Treatment 1643 1663	Leczenie przewlekłe:
+T34	Treatment 1618 1635	Przebyte operacje
+R12	Neg Arg1:T32 Arg2:T34	
+R13	Neg Arg1:T31 Arg2:T33	
+T35	Symptom 356 378	Bóle w kl. piersiowej.
+N5	Reference T35 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T36	Condition 379 405	Świeżo rozpoznana cukrzyca
+N6	Reference T36 ICD10:E14	Cukrzyca nieokreślona
+T37	Condition 407 419	Dyslipidemia
+N7	Reference T37 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T38	Condition 421 432	Hepatopatia
+N8	Reference T38 ICD10:K76	Inne choroby wątroby
+T39	Condition 1608 1616	Depresja
+N9	Reference T39 ICD10:F32.9	
+T40	Symptom 1290 1315	bólów w klatce piersiowej
+N10	Reference T40 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T41	Symptom 1334 1409	kłujący ból po prawej stronie klaki piersiowej występuje przy zdenerwowaniu
+N11	Reference T41 ICD10:R07.3	Inne bóle w klatce piersiowej
+T42	Symptom 1432 1458	uciski w klatce piersiowej
+N12	Reference T42 ICD10:R07.3	Inne bóle w klatce piersiowej
+T43	Condition 1474 1490	Mięśniaki macicy
+N13	Reference T43 ICD10:D25	Mięśniak gładkokomórkowy macicy
+T44	Treatment 1506 1526	zabiegu operacyjnego
+T45	Date 1527 1534	12.2017
+R14	Dat Arg1:T45 Arg2:T44	
+R15	Dat Arg1:T45 Arg2:T43	
+T46	Investigation 1560 1563	EKG
+T47	Investigation_result 1564 1588	ujemne załamki T w V1-V6
+R16	Inv Arg1:T46 Arg2:T47	
+T48	Negation 1596 1605	odroczono
+T49	Treatment 1589 1595	zabieg
+R17	Neg Arg1:T48 Arg2:T49	
+A3	Source T44 Declared
+A4	Status T44 Historical_Insignificant
+N14	Reference T28 ICD10:Z72	Problemy związane ze stylem życia
+T50	Treatment 634 661	dalsza opieka w poradni POZ
+T51	Treatment 671 727	kontrola kardiologiczna, diabetologiczna, ginekologiczna
+N3	Reference T27 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

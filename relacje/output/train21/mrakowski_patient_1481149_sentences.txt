@@ -1,0 +1,667 @@
+allRelations          : 83
+oks                   : 23
+isRedundantAndRemoveds: 58
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 2
+GOOD / BAD            : 81 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 70 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:I50|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wada serca pod postacią niedomykalności aortalnej III st i łagodnej stenozy aortalnej oraz niedomykalności mitralnej III st w III okresie hemodynamicznym wg NYHA.
+
+
+Sentence 6:
+Utrwalone migotanie przedsionków.
+
+
+Sentence 7:
+Nadciśnienie tętnicze.
+
+
+Sentence 8:
+Cukrzyca t.2
+------------------------------------------------
+
+
+
+Sentence 9:
+Zalecenia
+
+
+
+Sentence 10:
+------------------------------------------------
+
+
+
+Sentence 11:
+dalsza opieka w poradni POZ, okresowa kontrola kardiologiczna, diabetologiczna
+okresowa kontrola glikemii, lipidogramu
+
+
+
+Sentence 12:
+regularna kontrola ciśnienia tętniczego
+dieta cukrzycowa
+regularne przyjmowanie leków:
+Eliquis 2,5 mg 1 tabl.
+R1	Drg Arg1:T12 Arg2:T13 << OK >>	Eliquis -> 2,5 mg 1 tabl. 2 x dz.  <RANK: 3> <info: start[993, 1001] <type: RIGHT>>
+
+
+Sentence 13:
+2 x dz.
+Bisocard 5 mg 1 tabl.
+R2	Drg Arg1:T14 Arg2:T15 << OK >>	Bisocard -> 5 mg 1 tabl. rano  <RANK: 3> <info: start[1024, 1033] <type: RIGHT>>
+
+
+Sentence 14:
+rano 
+Digoxin 100ug 1 tabl.
+R3	Drg Arg1:T16 Arg2:T17 << OK >>	Digoxin -> 100ug 1 tabl. rano  <RANK: 3> <info: start[1052, 1060] <type: RIGHT>>
+
+
+Sentence 15:
+rano 
+Prestarium 5 mg 1 tabl.
+R4	Drg Arg1:T18 Arg2:T19 << OK >>	Prestarium -> 5 mg 1 tabl. rano  <RANK: 3> <info: start[1080, 1091] <type: RIGHT>>
+
+
+Sentence 16:
+rano
+Furosemid 1 tabl.
+R5	Drg Arg1:T20 Arg2:T21 << OK >>	Furosemid -> 1 tabl. rano  <RANK: 3> <info: start[1109, 1119] <type: RIGHT>>
+
+
+Sentence 17:
+rano
+Spironol 25 mg 1 tabl. w południe
+Atoris 20 mg 1 tabl.
+R6	Drg Arg1:T22 Arg2:T23 << OK >>	Spironol -> 25 mg 1 tabl. w południe  <RANK: 3> <info: start[1132, 1141] <type: RIGHT>>
+R7	Drg Arg1:T22 Arg2:T25 <<REDUNDANT!!!REMOVED>>	Spironol -> 20 mg 1 tabl. wieczorem <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1132, 1173] <type: RIGHT>>
+R8	Drg Arg1:T24 Arg2:T23 <<REDUNDANT!!!REMOVED>>	Atoris -> 25 mg 1 tabl. w południe <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1166, 1141] <type: LEFT>>
+R9	Drg Arg1:T24 Arg2:T25 << OK >>	Atoris -> 20 mg 1 tabl. wieczorem  <RANK: 3> <info: start[1166, 1173] <type: RIGHT>>
+
+
+Sentence 18:
+wieczorem
+Nolpaza 20 mg 1 tabl.
+R10	Drg Arg1:T26 Arg2:T27 << OK >>	Nolpaza -> 20 mg 1 tabl. rano  <RANK: 3> <info: start[1197, 1205] <type: RIGHT>>
+
+
+Sentence 19:
+rano
+Siofor 500 mg 1 tabl. rano i wieczorem
+------------------------------------------------
+
+R11	Drg Arg1:T28 Arg2:T29 << OK >>	Siofor -> 500 mg 1 tabl. rano i wieczorem  <RANK: 3> <info: start[1224, 1231] <type: RIGHT>>
+
+
+Sentence 20:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 21:
+Chory lat 69, przyjęty do Kliniki z powodu zmniejszonej tolerancji wysiłku (nasilenie duszności wg chorego od 01.2019 - wcześniej przebyta infekcja), w kartach wypisowych z 2012: IA III st + łagodna stenoza aortalna gradient 39/21 mmHg, EF 46%, podaje ucisk w klatce piersiowej.  
+
+R12	Dat Arg1:T32 Arg2:T30 <<REDUNDANT!!!SHOULD BE REMOVED>>	od 01.2019 -> zmniejszonej tolerancji wysiłku  <RANK: 3> <info: start[1494, 1430] <type: LEFT>>
+R13	Dat Arg1:T32 Arg2:T31 << OK >>	od 01.2019 -> nasilenie duszności  <RANK: 3> <info: start[1494, 1463] <type: LEFT>>
+R14	Dat Arg1:T32 Arg2:T37 <<REDUNDANT!!!REMOVED>>	od 01.2019 -> ucisk w klatce piersiowej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1494, 1639] <type: RIGHT>>
+R15	Dat Arg1:T32 Arg2:T33 <<REDUNDANT!!!REMOVED>>	od 01.2019 -> przebyta infekcja <:REMOVED Too far from TagInfo[T32, 1494, 1504, Date, od 01.2019
+] TagInfo[T31, 1463, 1482, Symptom, nasilenie duszności
+]:> <RANK: 3> <info: start[1494, 1517] <type: RIGHT>>
+R16	Dat Arg1:T32 Arg2:T35 <<REDUNDANT!!!REMOVED>>	od 01.2019 -> IA III st + łagodna stenoza aortalna gradient 39/21 mmHg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1494, 1566] <type: RIGHT>>
+R17	Dat Arg1:T34 Arg2:T30 <<REDUNDANT!!!REMOVED>>	2012 -> zmniejszonej tolerancji wysiłku <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1560, 1430] <type: LEFT>>
+R18	Dat Arg1:T34 Arg2:T31 <<REDUNDANT!!!REMOVED>>	2012 -> nasilenie duszności <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1560, 1463] <type: LEFT>>
+R19	Dat Arg1:T34 Arg2:T37 <<REDUNDANT!!!REMOVED>>	2012 -> ucisk w klatce piersiowej <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1560, 1639] <type: RIGHT>>
+R20	Dat Arg1:T34 Arg2:T33 <<REDUNDANT!!!REMOVED>>	2012 -> przebyta infekcja <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1560, 1517] <type: LEFT>>
+R21	Dat Arg1:T34 Arg2:T35 <<REDUNDANT!!!SHOULD BE REMOVED>>	2012 -> IA III st + łagodna stenoza aortalna gradient 39/21 mmHg  <RANK: 3> <info: start[1560, 1566] <type: RIGHT>>
+
+
+Sentence 22:
+W wywiadzie ponadto:  AF utrwalone, HA, dysplipidemia, DMt.2 (bez kontroli od 6 lat!), hiperurykemia, 
+
+
+
+Sentence 23:
+Przebyte operacje: neguje
+Wywiad rodzinny: bez znaczenia 
+Alergie: neguje 
+Nikotynizm: neguje  
+Alkohol: okazjonalnie, od 10 lat w ogóle nie spożywa 
+Uzależnienie inne: neguje 
+Stan społeczny: emerytura, praca umysłowa 
+
+R22	Neg Arg1:T44 Arg2:T45 <<REDUNDANT!!!REMOVED>>	neguje -> Wywiad rodzinny <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1790, 1797] <type: RIGHT>>
+R23	Neg Arg1:T44 Arg2:T47 <<REDUNDANT!!!REMOVED>>	neguje -> Alergie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1790, 1829] <type: RIGHT>>
+R24	Neg Arg1:T44 Arg2:T49 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1790, 1846] <type: RIGHT>>
+R25	Neg Arg1:T44 Arg2:T51 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: okazjonalnie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1790, 1867] <type: RIGHT>>
+R26	Neg Arg1:T44 Arg2:T54 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1790, 1921] <type: RIGHT>>
+R27	Neg Arg1:T44 Arg2:T56 <<REDUNDANT!!!REMOVED>>	neguje -> emerytura <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1790, 1964] <type: RIGHT>>
+R28	Neg Arg1:T44 Arg2:T57 <<REDUNDANT!!!REMOVED>>	neguje -> praca umysłowa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1790, 1975] <type: RIGHT>>
+R29	Neg Arg1:T44 Arg2:T43 << OK >>	neguje -> Przebyte operacje  <RANK: 3> <info: start[1790, 1771] <type: LEFT>>
+R30	Neg Arg1:T46 Arg2:T45 << OK >>	bez znaczenia -> Wywiad rodzinny  <RANK: 3> <info: start[1814, 1797] <type: LEFT>>
+R31	Neg Arg1:T46 Arg2:T47 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Alergie <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1814, 1829] <type: RIGHT>>
+R32	Neg Arg1:T46 Arg2:T49 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Nikotynizm <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1814, 1846] <type: RIGHT>>
+R33	Neg Arg1:T46 Arg2:T51 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Alkohol: okazjonalnie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1814, 1867] <type: RIGHT>>
+R34	Neg Arg1:T46 Arg2:T54 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Uzależnienie inne <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1814, 1921] <type: RIGHT>>
+R35	Neg Arg1:T46 Arg2:T56 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> emerytura <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1814, 1964] <type: RIGHT>>
+R36	Neg Arg1:T46 Arg2:T57 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> praca umysłowa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1814, 1975] <type: RIGHT>>
+R37	Neg Arg1:T46 Arg2:T43 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1814, 1771] <type: LEFT>>
+R38	Neg Arg1:T48 Arg2:T45 <<REDUNDANT!!!REMOVED>>	neguje -> Wywiad rodzinny <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1838, 1797] <type: LEFT>>
+R39	Neg Arg1:T48 Arg2:T47 << OK >>	neguje -> Alergie  <RANK: 3> <info: start[1838, 1829] <type: LEFT>>
+R40	Neg Arg1:T48 Arg2:T49 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1838, 1846] <type: RIGHT>>
+R41	Neg Arg1:T48 Arg2:T51 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: okazjonalnie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1838, 1867] <type: RIGHT>>
+R42	Neg Arg1:T48 Arg2:T54 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1838, 1921] <type: RIGHT>>
+R43	Neg Arg1:T48 Arg2:T56 <<REDUNDANT!!!REMOVED>>	neguje -> emerytura <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1838, 1964] <type: RIGHT>>
+R44	Neg Arg1:T48 Arg2:T57 <<REDUNDANT!!!REMOVED>>	neguje -> praca umysłowa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1838, 1975] <type: RIGHT>>
+R45	Neg Arg1:T48 Arg2:T43 <<REDUNDANT!!!REMOVED>>	neguje -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1838, 1771] <type: LEFT>>
+R46	Neg Arg1:T50 Arg2:T45 <<REDUNDANT!!!REMOVED>>	neguje -> Wywiad rodzinny <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1858, 1797] <type: LEFT>>
+R47	Neg Arg1:T50 Arg2:T47 <<REDUNDANT!!!REMOVED>>	neguje -> Alergie <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1858, 1829] <type: LEFT>>
+R48	Neg Arg1:T50 Arg2:T49 << OK >>	neguje -> Nikotynizm  <RANK: 3> <info: start[1858, 1846] <type: LEFT>>
+R49	Neg Arg1:T50 Arg2:T51 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: okazjonalnie <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1858, 1867] <type: RIGHT>>
+R50	Neg Arg1:T50 Arg2:T54 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1858, 1921] <type: RIGHT>>
+R51	Neg Arg1:T50 Arg2:T56 <<REDUNDANT!!!REMOVED>>	neguje -> emerytura <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1858, 1964] <type: RIGHT>>
+R52	Neg Arg1:T50 Arg2:T57 <<REDUNDANT!!!REMOVED>>	neguje -> praca umysłowa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1858, 1975] <type: RIGHT>>
+R53	Neg Arg1:T50 Arg2:T43 <<REDUNDANT!!!REMOVED>>	neguje -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1858, 1771] <type: LEFT>>
+R54	Neg Arg1:T53 Arg2:T45 <<REDUNDANT!!!REMOVED>>	nie spożywa -> Wywiad rodzinny <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1908, 1797] <type: LEFT>>
+R55	Neg Arg1:T53 Arg2:T47 <<REDUNDANT!!!REMOVED>>	nie spożywa -> Alergie <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1908, 1829] <type: LEFT>>
+R56	Neg Arg1:T53 Arg2:T49 <<REDUNDANT!!!REMOVED>>	nie spożywa -> Nikotynizm <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1908, 1846] <type: LEFT>>
+R57	Neg Arg1:T53 Arg2:T51 << OK >>	nie spożywa -> Alkohol: okazjonalnie  <RANK: 2> <info: start[1908, 1867] <type: LEFT>>
+R58	Neg Arg1:T53 Arg2:T54 <<REDUNDANT!!!REMOVED>>	nie spożywa -> Uzależnienie inne <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1908, 1921] <type: RIGHT>>
+R59	Neg Arg1:T53 Arg2:T56 <<REDUNDANT!!!REMOVED>>	nie spożywa -> emerytura <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1908, 1964] <type: RIGHT>>
+R60	Neg Arg1:T53 Arg2:T57 <<REDUNDANT!!!REMOVED>>	nie spożywa -> praca umysłowa <:REMOVED other first tag between (right):> <RANK: 0> <info: start[1908, 1975] <type: RIGHT>>
+R61	Neg Arg1:T53 Arg2:T43 <<REDUNDANT!!!REMOVED>>	nie spożywa -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1908, 1771] <type: LEFT>>
+R62	Neg Arg1:T55 Arg2:T45 <<REDUNDANT!!!REMOVED>>	neguje -> Wywiad rodzinny <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1940, 1797] <type: LEFT>>
+R63	Neg Arg1:T55 Arg2:T47 <<REDUNDANT!!!REMOVED>>	neguje -> Alergie <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1940, 1829] <type: LEFT>>
+R64	Neg Arg1:T55 Arg2:T49 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1940, 1846] <type: LEFT>>
+R65	Neg Arg1:T55 Arg2:T51 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: okazjonalnie <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1940, 1867] <type: LEFT>>
+R66	Neg Arg1:T55 Arg2:T54 << OK >>	neguje -> Uzależnienie inne  <RANK: 3> <info: start[1940, 1921] <type: LEFT>>
+R67	Neg Arg1:T55 Arg2:T56 <<REDUNDANT!!!REMOVED>>	neguje -> emerytura <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1940, 1964] <type: RIGHT>>
+R68	Neg Arg1:T55 Arg2:T57 <<REDUNDANT!!!REMOVED>>	neguje -> praca umysłowa <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1940, 1975] <type: RIGHT>>
+R69	Neg Arg1:T55 Arg2:T43 <<REDUNDANT!!!REMOVED>>	neguje -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1940, 1771] <type: LEFT>>
+R70	Dat Arg1:T52 Arg2:T45 <<REDUNDANT!!!REMOVED>>	od 10 lat -> Wywiad rodzinny <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1890, 1797] <type: LEFT>>
+R71	Dat Arg1:T52 Arg2:T47 <<REDUNDANT!!!REMOVED>>	od 10 lat -> Alergie <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1890, 1829] <type: LEFT>>
+R72	Dat Arg1:T52 Arg2:T49 <<REDUNDANT!!!REMOVED>>	od 10 lat -> Nikotynizm <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1890, 1846] <type: LEFT>>
+R73	Dat Arg1:T52 Arg2:T51 << OK >>	od 10 lat -> Alkohol: okazjonalnie  <RANK: 2> <info: start[1890, 1867] <type: LEFT>>
+R74	Dat Arg1:T52 Arg2:T54 <<REDUNDANT!!!REMOVED>>	od 10 lat -> Uzależnienie inne <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1890, 1921] <type: RIGHT>>
+R75	Dat Arg1:T52 Arg2:T56 <<REDUNDANT!!!REMOVED>>	od 10 lat -> emerytura <:REMOVED other second tag between (right):> <RANK: 1> <info: start[1890, 1964] <type: RIGHT>>
+R76	Dat Arg1:T52 Arg2:T57 <<REDUNDANT!!!REMOVED>>	od 10 lat -> praca umysłowa <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1890, 1975] <type: RIGHT>>
+R77	Dat Arg1:T52 Arg2:T43 <<REDUNDANT!!!REMOVED>>	od 10 lat -> Przebyte operacje <:REMOVED other second tag between (left):> <RANK: 0> <info: start[1890, 1771] <type: LEFT>>
+
+
+Sentence 24:
+Leki:
+Bisocard 5 mg 1 tabl.
+R78	Drg Arg1:T58 Arg2:T59 << OK >>	Bisocard -> 5 mg 1 tabl. rano  <RANK: 3> <info: start[1997, 2006] <type: RIGHT>>
+
+
+Sentence 25:
+rano 
+Digoxin 100ug 1 tabl.
+R79	Drg Arg1:T60 Arg2:T61 << OK >>	Digoxin -> 100ug 1 tabl. rano  <RANK: 3> <info: start[2025, 2033] <type: RIGHT>>
+
+
+Sentence 26:
+rano 
+Prestarium 5 mg 1 tabl.
+R80	Drg Arg1:T62 Arg2:T63 << OK >>	Prestarium -> 5 mg 1 tabl. doraźnie  ("jakby było wysokie ciśnienie")  <RANK: 3> <info: start[2053, 2064] <type: RIGHT>>
+
+
+Sentence 27:
+doraźnie  ("jakby było wysokie ciśnienie")
+
+
+
+Sentence 28:
+Siofor 500 mg 1 tabl.
+R81	Drg Arg1:T64 Arg2:T65 << OK >>	Siofor -> 500 mg 1 tabl. rano  <RANK: 3> <info: start[2120, 2127] <type: RIGHT>>
+
+
+Sentence 29:
+rano 
+Furosemid 1 tabl. o 16.00 (pora nietypowa z powodu zawrotów głowy przy dawkowaniu porannym)
+
+R82	Drg Arg1:T66 Arg2:T67 << OK >>	Furosemid -> 1 tabl. o 16.00 (pora nietypowa z powodu zawrotów głowy przy dawkowaniu porannym)  <RANK: 3> <info: start[2148, 2158] <type: RIGHT>>
+
+
+Sentence 30:
+Acard 150 mg 1 tabl. w południe ("jakby bolało w klatce")
+
+R83	Drg Arg1:T68 Arg2:T69 << OK >>	Acard -> 150 mg 1 tabl. w południe ("jakby bolało w klatce")  <RANK: 3> <info: start[2240, 2246] <type: RIGHT>>
+
+
+Sentence 31:
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter ekg, rtg kl. piersiowej
+
+
+
+Sentence 32:
+Przewidywana liczba dni hospitalizacji: 5-7 dni
+------------------------------------------------
+
+
+
+Sentence 33:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 34:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.79[10^3/ul]
+    
+
+
+Sentence 35:
+RBC Krwinki czerwone:4.54[10^6/ul]
+    
+
+
+Sentence 36:
+HGB Hemoglobina:14.2[g/dl]
+    
+
+
+Sentence 37:
+HCT Hematokryt:40.4[%]
+    
+
+
+Sentence 38:
+MCV wskaźnik czerwonokrw:89.0[fl]
+    
+
+
+Sentence 39:
+MCH wskaźnik czerwonokrw:31.3[pg]
+    
+
+
+Sentence 40:
+MCHC wskaźnik czerwonokr:35.1[g/dl]
+    
+
+
+Sentence 41:
+PLT z morfologii:90[10^3/ul]
+    
+
+
+Sentence 42:
+RDW-SD:50.3[fl]
+    
+
+
+Sentence 43:
+RDW-CV:15.5[%]
+    PDW:19.1[fl]
+    MPV:13.8[fl]
+    P-LCR:55.0[%]
+    
+
+
+Sentence 44:
+PCT (hematokryt płytkowy:0.12[%]
+    
+
+
+Sentence 45:
+NEUTR# wartość bezwzględ:2.74[10^3/ul]
+    
+
+
+Sentence 46:
+NEUTR%:57.3[%]
+    
+
+
+Sentence 47:
+LYMH# wartość bezwzględn:1.26[10^3/ul]
+    
+
+
+Sentence 48:
+LYMPH%:26.3[%]
+    
+
+
+Sentence 49:
+MONO# wartość bezwzględn:0.62[10^3/ul]
+    
+
+
+Sentence 50:
+MONO%:12.9[%]
+    
+
+
+Sentence 51:
+EO# wartość bezwzględna:0.14[10^3/ul]
+    
+
+
+Sentence 52:
+EO%:2.9[%]
+    
+
+
+Sentence 53:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 54:
+NRBC %:0.0[%]
+    
+
+
+Sentence 55:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 56:
+Rozmaz krwi obwodowej (mikroskopowy)
+    
+
+
+Sentence 57:
+Granulocyty podzielone:58[%]
+    
+
+
+Sentence 58:
+Granulocyty kwasochłonne:2[%]
+    Limfocyty:36[%]
+    
+
+
+Sentence 59:
+Monocyty:4[%]
+    
+
+
+Sentence 60:
+Opis płyteki krwi::
+    anizocytoza płytek krwi:nieznaczna
+D-dimer
+
+
+Sentence 61:
+- test ilościowy: D-dimer - test ilościowy:322[ng/ml]
+
+
+
+Sentence 62:
+Badanie ogólne moczu
+    
+
+
+Sentence 63:
+barwa:żółty[ ]
+    
+
+
+Sentence 64:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 65:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 66:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 67:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 68:
+ciężar właściwy:1.014[ ]
+    
+
+
+Sentence 69:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 70:
+pH:5.0[ ]
+    
+
+
+Sentence 71:
+białko:nieobecne[ ]
+    
+
+
+Sentence 72:
+urobilinogen:wzmożony +[ ]
+    
+
+
+Sentence 73:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 74:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 75:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 76:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 77:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 78:
+leukocyty:3 /ul[ul]
+    erytrocyty świeże:1 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 79:
+TSH: TSH:5.44[uIU/ml]
+
+
+
+Sentence 80:
+FT3: FT3:2.45[pg/ml]
+
+
+
+Sentence 81:
+FT4: FT4:1.36[ng/dl]
+
+
+
+Sentence 82:
+Troponina T: Troponina T:17.3[pg/ml]
+
+
+
+Sentence 83:
+ALAT: ALAT:15[U/L]
+ASPAT: ASPAT:21[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 84:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 85:
+Potas (K): Potas:4.4[mmol/L]
+
+
+
+Sentence 86:
+Hemoglobina glikowana (HbA1c)
+    :5.86[%]
+    :41[mmol/mol]
+
+
+
+Sentence 87:
+Kreatynina + GFR
+    
+
+
+Sentence 88:
+Kreatynina w surowicy:0.98[mg/dl]
+    
+
+
+Sentence 89:
+eGFR wg BIS1:67.2[ml/min/1,73 m^2]
+
+
+
+Sentence 90:
+Mocznik: Mocznik:50[mg/dl]
+
+
+
+Sentence 91:
+Kwas moczowy: Kwas moczowy:7.1[mg/dl]
+
+
+
+Sentence 92:
+Lipidogram
+    
+
+
+Sentence 93:
+Cholesterol całkowity:144[mg/dl]
+    
+
+
+Sentence 94:
+Cholesterol HDL:30[mg/dl]
+    
+
+
+Sentence 95:
+Cholestrol LDL:107[mg/dl]
+    Triglicerydy:70[mg/dl]
+    
+
+
+Sentence 96:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:87[mg/dl]
+
+
+
+Sentence 97:
+NT-proBNP surowica: NT-proBNP w surowicy:14323[pg/ml]
+
+
+
+Sentence 98:
+------------------------------------------------
+
+
+
+Sentence 99:
+ICD10
+------------------------------------------------
+I35.0
+I35.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 100:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 101:
+89.501
+C55
+A01
+89.502
+I81
+C32
+L43
+O61
+L55
+G49
+N45
+L69
+O55
+I17
+M45
+O35
+M37
+I19
+N13
+N24
+88.721
+O69
+
+
+
+Sentence 102:
+------------------------------------------------
+
+

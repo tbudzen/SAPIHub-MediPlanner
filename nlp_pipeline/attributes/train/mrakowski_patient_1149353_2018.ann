@@ -1,0 +1,55 @@
+T1	Drug 339 345	Acesan
+T2	Condition 564 623	Wrodzona wada serca pod postacią dwunapływowej lewej komory
+N1	Reference T2 ICD10:Q20.4	Wejście obu dróg żylnych do jedynej komory
+T3	Condition 626 650	ubytkiem międzykomorowym
+N2	Reference T3 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T4	Condition 653 670	malpozycją naczyń
+N3	Reference T4 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T5	Condition 673 694	hipoplazją łuku aorty
+N4	Reference T5 ICD10:Q25.4	Inne wrodzone wady rozwojowe aorty
+T6	Treatment 707 726	operacji m.Norwooda
+T7	Date 728 737	09.08.11r
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Treatment 751 784	operacji typu dwukierunkowy Glenn
+T9	Date 786 795	02.03.12r
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Condition 800 819	Zwężenie łuku aorty
+N5	Reference T10 ICD10:Q25.3	Zwężenie aorty
+T11	Treatment 833 869	implantacji stentu P-G do łuku aorty
+T12	Date 872 880	08.05.12
+R3	Dat Arg1:T12 Arg2:T11	
+T13	Condition 886 919	Pęknięcie stentu z jego zwężeniem
+N6	Reference T13 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T14	Treatment 933 956	angioplastyce balonowej
+T15	Condition 957 972	zwężenia stentu
+N7	Reference T15 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T16	Date 975 983	21.01.14
+R4	Dat Arg1:T16 Arg2:T15	
+R5	Dat Arg1:T16 Arg2:T14	
+T17	Treatment 1000 1039	operacji metodą Fontana bez fenestracji
+T18	Date 1041 1052	21.01.2015r
+R6	Dat Arg1:T18 Arg2:T17	
+T19	Condition 1058 1087	Epizody bradykardii zatokowej
+N8	Reference T19 ICD10:R00.1	Bradykardia, nieokreślona
+T20	Condition 1105 1147	Zwężenie prawej tętnicy udowej zewnętrznej
+N9	Reference T20 ICD10:I74.3	Zator i zakrzep tętnic kończyn dolnych
+T21	Condition 1150 1178	Wąska prawa tętnica biodrowa
+N10	Reference T21 ICD10:I74.5	Zator i zakrzep tętnicy biodrowej
+T22	Condition 1196 1241	niedrożności lewej żyły biodrowej zewnętrznej
+N11	Reference T22 ICD10:I80.2	Zapalenie i zakrzepowe zapalenie innych żył i innych naczyń głębokich kończyn dolnych
+A1	Source T22 Declared
+T23	Drug 1417 1423	Acesan
+T24	Drug_dose 1424 1444	1 x 50 mg codziennie
+R7	Drg Arg1:T23 Arg2:T24	
+T25	Treatment 1445 1468	Kontrola kardiologiczna
+T26	Date 1469 1486	za ok. 6 miesięcy
+R8	Dat Arg1:T26 Arg2:T25	
+T27	Investigation 1489 1552	Okresowa kontrola saturacji przezskórnej i ciśnienia tętniczego
+T28	Condition 1691 1709	złożona wada serca
+T29	Investigation 1726 1743	badania kontrolne
+T30	Drug 1765 1771	Acesan
+T31	Condition 1774 1791	wywiad alergiczny
+N13	Reference T31 ICD10:T78.4	Alergia, nieokreślona
+T32	Negation 1792 1798	ujemny
+R9	Neg Arg1:T32 Arg2:T31	
+N12	Reference T28 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych

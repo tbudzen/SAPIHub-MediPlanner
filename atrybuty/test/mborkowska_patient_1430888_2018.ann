@@ -1,0 +1,359 @@
+T1	Investigation 7501 7511	Echo serca
+T2	Investigation 7514 7524	Holter EKG
+T3	Investigation 7526 7544	Holter ciśnieniowy
+T4	Drug 7456 7464	Spironol
+T5	Drug 7424 7431	Milurit
+T6	Drug 7366 7374	Finaster
+T7	Drug 7339 7344	Doxar
+T8	Drug 7305 7316	Agapurin SR
+T9	Drug 7278 7284	Gerdin
+T10	Drug 7251 7261	Vascotazin
+T11	Drug 7221 7228	Vestibo
+T12	Drug 7190 7204	Vinpoton forte
+T13	Drug 7158 7167	Biotropil
+T14	Drug 7117 7128	Humalog Mix
+T15	Drug 7067 7077	Polhumin R
+T16	Drug 7039 7044	Acard
+T17	Drug 7015 7022	Kalipoz
+T18	Drug_dose 7023 7037	1x 1 tabl/rano
+R1	Drg Arg1:T17 Arg2:T18	
+T19	Drug_dose 7045 7065	75mg 1x 1 tabl/wiecz
+R2	Drg Arg1:T16 Arg2:T19	
+T20	Drug_dose 7078 7114	sc do śniadania i obiadu wg glikemii
+R3	Drg Arg1:T15 Arg2:T20	
+T21	Drug_dose 7128 7156	25 sc do kolacji wg glikemii
+R4	Drg Arg1:T14 Arg2:T21	
+T22	Drug_dose 7168 7188	800mg 1x 1 tabl/rano
+R5	Drg Arg1:T13 Arg2:T22	
+T23	Drug_dose 7205 7219	1x 1 tabl/rano
+R6	Drg Arg1:T12 Arg2:T23	
+T24	Drug_dose 7229 7249	24mg 1/2--0-1/2 tabl
+T25	Drug_dose 7262 7276	1x 1 tabl/rano
+R7	Drg Arg1:T11 Arg2:T24	
+R8	Drg Arg1:T10 Arg2:T25	
+T26	Drug_dose 7285 7303	40mg 1x 1 tablrano
+R9	Drg Arg1:T9 Arg2:T26	
+T27	Drug_dose 7317 7337	600mg 1x 1 tabl/rano
+R10	Drg Arg1:T8 Arg2:T27	
+T28	Drug_dose 7345 7364	4mg 1x 1 tabl/wiecz
+R11	Drg Arg1:T7 Arg2:T28	
+T29	Drug_dose 7375 7395	5mg  1x 1 tabl/wiecz
+R12	Drg Arg1:T6 Arg2:T29	
+T30	Drug_dose 7432 7454	100 mg  1x 1 tabl/rano
+R13	Drg Arg1:T5 Arg2:T30	
+T31	Drug_dose 7465 7485	25 mg 1x 1 tabl/rano
+R14	Drg Arg1:T4 Arg2:T31	
+T32	Behaviour 6950 6976	warunki mieszkaniowe dobre
+T33	Negation 6926 6932	neguje
+T34	Negation 6910 6913	nie
+T35	Negation 6892 6895	nie
+T36	Condition 6832 6835	WZW
+N1	Reference T36 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T37	Condition 6845 6854	borelioza
+N2	Reference T37 ICD10:A69.2	Choroba z Lyme
+T38	Condition 6862 6870	gruźlica
+N3	Reference T38 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T39	Negation 6870 6873	(-)
+R15	Neg Arg1:T39 Arg2:T38	
+T40	Negation 6857 6858	-
+R16	Neg Arg1:T40 Arg2:T37	
+T41	Negation 6838 6842	-  )
+R17	Neg Arg1:T41 Arg2:T36	
+T42	Behaviour 6875 6890	Palenie tytoniu
+N4	Reference T42 ICD10:Z72.0	Używanie tytoniu
+R18	Neg Arg1:T35 Arg2:T42	
+T43	Behaviour 6897 6908	Inne używki
+N5	Reference T43 ICD10:Z72	Problemy związane ze stylem życia
+R19	Neg Arg1:T34 Arg2:T43	
+T44	Condition 6915 6924	Uczulenia
+N6	Reference T44 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R20	Neg Arg1:T33 Arg2:T44	
+T45	Treatment 6779 6798	Leczenie przewlekłe
+T46	Drug 340 350	Polhumin R
+T47	Drug 352 366	Humalog Mix25,
+T48	Drug 367 377	Vascotazin
+T49	Drug 379 388	Torasemid
+T50	Drug 390 399	Furosemid
+T51	Drug 401 409	Spironol
+T52	Drug 411 417	Gerdin
+T53	Drug 419 424	Acard
+T54	Drug 426 435	Biotropil
+T55	Drug 437 444	Kalipoz
+T56	Drug 446 454	Agapurin
+T57	Drug 456 467	Vinpocetine
+T58	Drug 469 476	Vestibo
+T59	Drug 478 483	Doxar
+T60	Drug 485 493	Finaster
+T61	Drug 495 503	0.9%NaCl
+T62	Drug 505 513	Bisocard
+T63	Treatment 1303 1325	kontrola u lekarza POZ
+T64	Treatment 1335 1369	kontrola w Poradni Kardiologicznej
+T65	Treatment 1382 1435	kontrola w Poradni Nefrologicznej (wydano skierowanie
+T66	Treatment 3090 3117	dalsza opieka w poradni POZ
+T67	Treatment 3133 3186	kontrola kardiologiczna, diabetologiczna, urologiczna
+T68	Treatment 3193 3224	pilna konsultacja nefrologiczna
+T69	Investigation_result 3289 3319	podwyższone stężenie ferrytyny
+T70	Treatment 3231 3286	konsultacja hepatologa celem wykluczenia hemochromatozy
+T71	Investigation 3335 3364	kontrola ciśnienia tętniczego
+T72	Investigation 3380 3400	kontrola lipidogramu
+T73	Behaviour 3407 3432	dieta niskocholesterolowa
+T74	Drug 3522 3527	Acard
+T75	Drug 3562 3572	Trifas cor
+T76	Drug 3598 3603	Atrox
+T77	Drug 3635 3645	Vascotazin
+T78	Drug 3685 3691	Gerdin
+T79	Drug 3717 3726	Biotropil
+T80	Drug 3768 3776	Vinpoton
+T81	Drug 3827 3834	Vestibo
+T82	Drug 3875 3886	Agapurin SR
+T83	Drug 3915 3920	Doxar
+T84	Drug 3952 3960	Finaster
+T85	Drug 3991 3998	Milurit
+T86	Drug 4027 4037	Polhumin R
+T87	Drug 4094 4107	Humalog Mix25
+T88	Drug_dose 4110 4144	podskórnie, do kolacji wg glikemii
+R21	Drg Arg1:T87 Arg2:T88	
+T89	Drug_dose 4040 4085	podskórnie, do śniadania i obiadu wg glikemii
+R22	Drg Arg1:T86 Arg2:T89	
+T90	Drug_dose 3999 4018	100 mg 1 tabl. rano
+R23	Drg Arg1:T85 Arg2:T90	
+T91	Drug_dose 3961 3982	5mg 1 tabl. wieczorem
+R24	Drg Arg1:T84 Arg2:T91	
+T92	Drug_dose 3921 3942	4mg 1 tabl. wieczorem
+R25	Drg Arg1:T83 Arg2:T92	
+T93	Drug_dose 3887 3905	600mg 1 tabl. rano
+R26	Drg Arg1:T82 Arg2:T93	
+T94	Drug_dose 3835 3866	24mg 1/2 tabl. rano i wieczorem
+R27	Drg Arg1:T81 Arg2:T94	
+T95	Drug_dose 3777 3818	5 mg 1 tabl. rano, w południe i wieczorem
+R28	Drg Arg1:T80 Arg2:T95	
+T96	Drug_dose 3727 3759	1200mg 1 tabl. rano i w południe
+R29	Drg Arg1:T79 Arg2:T96	
+T97	Drug_dose 3692 3709	40mg 1 tabl. rano
+R30	Drg Arg1:T78 Arg2:T97	
+T98	Drug_dose 3646 3676	35 mg 1 tabl. rano i wieczorem
+R31	Drg Arg1:T77 Arg2:T98	
+T99	Drug_dose 3604 3627	10 mg 1 tabl. wieczorem
+R32	Drg Arg1:T76 Arg2:T99	
+T100	Drug_dose 3573 3590	5 mg 1 tabl. rano
+R33	Drg Arg1:T75 Arg2:T100	
+T101	Drug_dose 3528 3553	75mg 1x 1 tabl. wieczorem
+R34	Drg Arg1:T74 Arg2:T101	
+T102	Condition 1013 1028	Cukrzyca typu 2
+N7	Reference T102 ICD10:E11	
+T103	Condition 1991 2006	Cukrzyca typu 2
+N8	Reference T103 ICD10:E11	Cukrzyca insulinoniezależna
+T104	Condition 1089 1129	Przewlekła choroba nerek (G3B wg KDIGO).
+N9	Reference T104 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T105	Condition 1130 1144	Niedokrwistość
+N10	Reference T105 ICD10:D64.9	Niedokrwistość, nieokreślona
+T106	Treatment 1154 1162	operacji
+T107	Condition 1163 1184	przepukliny brzusznej
+N11	Reference T107 ICD10:K43	Przepuklina brzuszna
+T108	Date 1186 1190	2011
+R35	Dat Arg1:T108 Arg2:T107	
+R36	Dat Arg1:T108 Arg2:T106	
+T109	Condition 990 1012	Okresowy blok AV I st.
+N12	Reference T109 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T110	Condition 1968 1989	Okresowy blok AV I st
+N13	Reference T110 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T111	Condition 944 988	Bradykardia zatokowa prawdopodobnie polekowa
+N14	Reference T111 ICD10:R00.1	Bradykardia, nieokreślona
+T112	Condition 1030 1087	Przewlekłe zapalenie błony śluzowej żołądka i dwunastnicy
+N15	Reference T112 ICD10:K29	Zapalenie żołądka i dwunastnicy
+T113	Condition 899 942	Łagodna dysfunkcja rozkurczowa lewej komory
+N16	Reference T113 ICD10:I50	Niewydolność serca
+T114	Condition 853 898	Łagodna niedomykalność zastawki trójdzielnej.
+N17	Reference T114 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T115	Condition 732 851	Łagodna niedomykalność zastawki aortalnej w mechanizmie złożonym (dominującym mechanizmie wg. skali Carpentiera typu I)
+N18	Reference T115 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T116	Condition 1753 1873	Łagodna niedomykalność zastawki aortalnej w mechanizmie złożonym (dominującym mechanizmie wg. skali Carpentiera typu I).
+N19	Reference T116 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T117	Condition 1874 1919	Łagodna niedomykalność zastawki trójdzielnej.
+N20	Reference T117 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T118	Condition 1920 1963	Łagodna dysfunkcja rozkurczowa lewej komory
+N21	Reference T118 ICD10:I50	Niewydolność serca
+T119	Condition 2008 2065	Przewlekłe zapalenie błony śluzowej żołądka i dwunastnicy
+N22	Reference T119 ICD10:K29	Zapalenie żołądka i dwunastnicy
+T120	Condition 2067 2106	Przewlekła choroba nerek (G3B wg KDIGO)
+N23	Reference T120 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T121	Condition 2108 2122	Niedokrwistość
+N24	Reference T121 ICD10:D64.9	Niedokrwistość, nieokreślona
+T122	Condition 2141 2162	przepukliny brzusznej
+N25	Reference T122 ICD10:K43	Przepuklina brzuszna
+T123	Treatment 2132 2140	operacji
+T124	Date 2164 2168	2011
+R37	Dat Arg1:T124 Arg2:T122	
+R38	Dat Arg1:T124 Arg2:T123	
+T125	Condition 2400 2518	Łagodna niedomykalność zastawki aortalnej w mechanizmie złożonym (dominującym mechanizmie wg skali Carpentiera typu I)
+N26	Reference T125 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T126	Condition 2520 2565	Łagodna niedomykalność zastawki trójdzielnej.
+N27	Reference T126 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T127	Condition 2566 2609	Łagodna dysfunkcja rozkurczowa lewej komory
+N28	Reference T127 ICD10:I50	Niewydolność serca
+T128	Condition 2611 2684	Zaburzenia przewodzenia - napadowy blok przedsionkowo-komorowy I stopnia,
+N29	Reference T128 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T129	Condition 2685 2731	blok przedniej wiązki lewej odnogi pęczka Hisa
+N30	Reference T129 ICD10:I44.4	Blok przedniej gałęzi lewej odnogi pęczka Hisa
+T130	Condition 2733 2749	Cukrzyca typu 2.
+N31	Reference T130 ICD10:E11	Cukrzyca insulinoniezależna
+T131	Condition 2750 2789	Przewlekła choroba nerek (G4 wg KDIGO).
+N32	Reference T131 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T132	Condition 2790 2832	Wtórna łagodna niedokrwistość normocytarna
+N33	Reference T132 ICD10:D64	
+T133	Condition 2834 2891	Przewlekłe zapalenie błony śluzowej żołądka i dwunastnicy
+N34	Reference T133 ICD10:K29	Zapalenie żołądka i dwunastnicy
+T134	Condition 2910 2931	przepukliny brzusznej
+N35	Reference T134 ICD10:K43	Przepuklina brzuszna
+T135	Treatment 2901 2909	operacji
+T136	Date 2933 2938	2011)
+R39	Dat Arg1:T136 Arg2:T134	
+R40	Dat Arg1:T136 Arg2:T135	
+T137	Condition 2940 2957	Przerost prostaty
+N36	Reference T137 ICD10:N40	Rozrost gruczołu krokowego
+T138	Condition 4288 4319	przewlekłą niewydolnością serca
+T139	Condition 4321 4333	cukrzycą t.2
+N38	Reference T139 ICD10:E11	Cukrzyca insulinoniezależna
+T140	Condition 4337 4391	przewlekłym zapaleniem śluzówki żołądka i dwunastnicy,
+N39	Reference T140 ICD10:K29	Zapalenie żołądka i dwunastnicy
+T141	Condition 4408 4429	przepukliny brzusznej
+N40	Reference T141 ICD10:K43	Przepuklina brzuszna
+T142	Condition 5479 5500	przepukliny brzusznej
+N41	Reference T142 ICD10:K43	Przepuklina brzuszna
+T143	Date 5502 5507	2011)
+T144	Treatment 5461 5469	operacji
+R41	Dat Arg1:T143 Arg2:T142	
+R42	Dat Arg1:T143 Arg2:T144	
+T145	Condition 5397 5457	przewlekłym zapaleniem błony śluzowej żołądka i dwunastnicy,
+N42	Reference T145 ICD10:K29	Zapalenie żołądka i dwunastnicy
+T146	Condition 5390 5393	PNN
+N43	Reference T146 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T147	Condition 5373 5388	cukrzycą typu 2
+N44	Reference T147 ICD10:E11	Cukrzyca insulinoniezależna
+T148	Treatment 4395 4407	alloplastyce
+T149	Date 4430 4434	2011
+R43	Dat Arg1:T149 Arg2:T141	
+R44	Dat Arg1:T149 Arg2:T148	
+T150	Condition 4439 4466	przewlekłą niedokrwistością
+N45	Reference T150 ICD10:D64.9	Niedokrwistość, nieokreślona
+T151	Condition 4558 4579	bradykardii zatokowej
+N46	Reference T151 ICD10:R00.1	Bradykardia, nieokreślona
+T152	Condition 4582 4599	blokiem p-k I st.
+N47	Reference T152 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T153	Symptom 4617 4630	kołatań serca
+N48	Reference T153 ICD10:R00.2	Kołatanie serca
+T154	Symptom 4669 4700	zmniejszenie tolerancji wysiłku
+N49	Reference T154 ICD10:R53	Złe samopoczucie i zmęczenie
+T155	Symptom 4639 4663	bóle w klatce piersiowej
+N50	Reference T155 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T156	Negation 4632 4638	Neguje
+R45	Neg Arg1:T156 Arg2:T155	
+R46	Neg Arg1:T156 Arg2:T154	
+T157	Treatment 4704 4723	Leczenie przewlekłe
+T158	Condition 4756 4759	WZW
+N51	Reference T158 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T159	Condition 4769 4778	borelioza
+N52	Reference T159 ICD10:A69.2	Choroba z Lyme
+T160	Condition 4786 4794	gruźlica
+N53	Reference T160 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T161	Negation 4794 4797	(-)
+R47	Neg Arg1:T161 Arg2:T160	
+T162	Negation 4779 4782	( -
+R48	Neg Arg1:T162 Arg2:T159	
+T163	Negation 4760 4766	( -  )
+R49	Neg Arg1:T163 Arg2:T158	
+T164	Negation 4815 4818	nie
+T165	Negation 4832 4835	nie
+T166	Negation 4847 4853	neguje
+T167	Behaviour 4819 4831	Inne używki:
+N54	Reference T167 ICD10:Z72	Problemy związane ze stylem życia
+R50	Neg Arg1:T165 Arg2:T167	
+T168	Behaviour 4798 4813	Palenie tytoniu
+N55	Reference T168 ICD10:Z72.0	Używanie tytoniu
+R51	Neg Arg1:T164 Arg2:T168	
+T169	Condition 4836 4845	Uczulenia
+N56	Reference T169 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R52	Neg Arg1:T166 Arg2:T169	
+T170	Behaviour 4870 4896	warunki mieszkaniowe dobre
+T171	Drug 4906 4916	Polhumin R
+T172	Drug 4918 4932	Humalog Mix 25
+T173	Drug 4934 4944	Vascotazin
+T174	Drug 4946 4954	Bisocard
+T175	Drug_dose 4955 4961	2.5 mg
+R53	Drg Arg1:T174 Arg2:T175	
+T176	Drug 4963 4970	Nolpaza
+T177	Drug 4972 4981	Torasemid
+T178	Drug 4983 4992	Furosemid
+T179	Drug 4994 5002	Spironol
+T180	Drug 5004 5009	Acard
+T181	Drug 5011 5020	Biotropil
+T182	Drug 5022 5033	Agapurin SR
+T183	Drug 5035 5046	Vinpocetine
+T184	Drug 5048 5055	Vestibo
+T185	Drug 5057 5065	Finaster
+T186	Drug 5067 5072	Doxar
+T187	Drug 5074 5083	Biotropil
+T188	Investigation 5100 5110	Echo serca
+T189	Investigation 5114 5124	Holter EKG
+T190	Investigation 5126 5144	Holter ciśnieniowy
+T191	Condition 5511 5538	przewlekłą niedokrwistością
+N57	Reference T191 ICD10:D64.9	Niedokrwistość, nieokreślona
+T192	Condition 5656 5677	bradykardii zatokowej
+N58	Reference T192 ICD10:R00.1	Bradykardia, nieokreślona
+T193	Date 5641 5655	w czerwcu 2018
+R54	Dat Arg1:T193 Arg2:T192	
+T194	Condition 5680 5697	blokiem p-k I st.
+N59	Reference T194 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+R55	Dat Arg1:T193 Arg2:T194	
+T195	Symptom 5726 5739	kołatań serca
+N60	Reference T195 ICD10:R00.2	Kołatanie serca
+T196	Drug 5815 5828	trimetazydyna
+T197	Drug 5830 5839	torasemid
+T198	Drug 5841 5852	pantoprazol
+T199	Investigation 5925 5929	ECHO
+T200	Investigation_result 5931 5938	EF= 61%
+R56	Inv Arg1:T199 Arg2:T200	
+T201	Investigation_result 5940 6086	Powiększony wymiar prawej komory serca w części napływowej, prawego przedsionka, opuszki i aorty wstępującej, pozostałe wymiary jam serca w normie
+R57	Inv Arg1:T199 Arg2:T201	
+T202	Condition 6088 6131	Łagodna dysfunkcja rozkurczowa lewej komory
+N61	Reference T202 ICD10:I50	Niewydolność serca
+T203	Condition 6133 6174	Łagodna niedomykalność zastawki aortalnej
+N62	Reference T203 ICD10:I35.1	Niereumatyczne choroby zastawki aortalnej
+T204	Condition 6176 6220	Łagodna niedomykalność zastawki trójdzielnej
+N63	Reference T204 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T205	Condition 6222 6258	Wiotka przegroda międzyprzedsionkowa
+N64	Reference T205 ICD10:Q21.8	Inna wrodzona wada rozwojowa przegród serca
+T206	Investigation 6262 6266	ABPM
+T207	Investigation_result 6268 6279	Non dipper.
+R58	Inv Arg1:T206 Arg2:T207	
+T208	Investigation 6283 6301	EKG metodą Holtera
+T209	Drug 6316 6327	Bisocardzie
+T210	Drug_dose 6328 6333	2,5mg
+R59	Drg Arg1:T209 Arg2:T210	
+T211	Investigation_result 6335 6370	Rytm zatokowy o częstości od 42/min
+T212	Investigation_result 6380 6389	do 88/min
+T213	Date 6390 6398	(05:29 )
+T214	Date 6372 6379	18:00 )
+R60	Dat Arg1:T214 Arg2:T211	
+R61	Dat Arg1:T213 Arg2:T212	
+R62	Inv Arg1:T208 Arg2:T211	
+R63	Inv Arg1:T208 Arg2:T212	
+T215	Investigation_result 6400 6447	śr. 55/min. Bradykardia <50/min: 642, zatokowe,
+T216	Date 6450 6466	ciągu całej doby
+R64	Dat Arg1:T216 Arg2:T215	
+T217	Investigation_result 6468 6479	min. 42/min
+T218	Date 6480 6488	o 18:00.
+R65	Dat Arg1:T218 Arg2:T217	
+R66	Inv Arg1:T208 Arg2:T215	
+R67	Inv Arg1:T208 Arg2:T217	
+T219	Condition 6490 6502	Blok AV I st
+N65	Reference T219 ICD10:I44.0	Blok przedsionkowo-komorowy pierwszego stopnia
+T220	Investigation 6505 6544	Próba wysiłkowa: Próba klinicznie i EKG
+T221	Investigation_result 6545 6574	ujemna przy obciążeniu 3,4MET
+R68	Inv Arg1:T220 Arg2:T221	
+T222	Investigation_result 6634 6658	GFR: 34-37 ml.min/1,73m2
+T223	Drug 6715 6727	beta-bloker,
+T224	Treatment 1440 1482	ponowna hospitalizacja w tutejszej klinice
+T225	Date 1483 1501	za ok. 4-6 tygodni
+R69	Dat Arg1:T225 Arg2:T224	
+N37	Reference T138 ICD10:I50.9	Niewydolność serca, nieokreślona

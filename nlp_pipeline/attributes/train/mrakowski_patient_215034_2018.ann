@@ -1,0 +1,67 @@
+T1	Treatment 456 527	wszczepieniu zastawki biologicznej (ksenograft aortalny Freestyle 23mm)
+T2	Condition 537 563	ciężkiej stenozy aortalnej
+N1	Reference T2 ICD10:I35.0	Zwężenie zastawki aortalnej
+T3	Date 565 572	06.2013
+R1	Dat Arg1:T3 Arg2:T2	
+R2	Dat Arg1:T3 Arg2:T1	
+T4	Treatment 583 627	wymianie aorty wstępującej (Interguard 28mm)
+T5	Condition 637 681	tętniakowatego poszerzenia aorty wstępującej
+N2	Reference T5 ICD10:I71.2	Tętniak odcinka piersiowego aorty, bez informacji o pęknięciu
+T6	Date 683 688	2013r
+R3	Dat Arg1:T6 Arg2:T5	
+R4	Dat Arg1:T6 Arg2:T4	
+T7	Condition 691 740	Przetrwały otwór owalny z przeciekiem lewo-prawym
+N3	Reference T7 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T8	Condition 742 772	Utajona niedoczynność tarczycy
+N4	Reference T8 ICD10:E03	Niedoczynność tarczycy o innej etiologii
+T9	Condition 774 794	Hipercholesterolemia
+N5	Reference T9 ICD10:E78.0	Czysta hipercholesterolemia
+T10	Drug 1141 1147	Concor
+T11	Drug 1149 1157	polocard
+T12	Drug 1159 1164	zocor
+T13	Symptom 1389 1449	niecharakterystyczne dolegliwości bólowe w klatce piersiowej
+N6	Reference T13 ICD10:R07.3	Inne bóle w klatce piersiowej
+T14	Treatment 1481 1552	wszczepieniu zastawki biologicznej (ksenograft aortalny Freestyle 23mm)
+T15	Condition 1562 1575	krytycznej SA
+N7	Reference T15 ICD10:I35.0	Zwężenie zastawki aortalnej
+T16	Condition 1578 1589	IA I/II st.
+N8	Reference T16 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T17	Treatment 1598 1640	wymianie aorty wstępującej Interguard 28mm
+T18	Condition 1650 1694	tętniakowatego poszerzenia aorty wstępującej
+N9	Reference T18 ICD10:I71.2	Tętniak odcinka piersiowego aorty, bez informacji o pęknięciu
+T19	Date 1697 1707	11.06.2013
+R5	Dat Arg1:T19 Arg2:T17	
+R6	Dat Arg1:T19 Arg2:T18	
+T20	Condition 1730 1751	PFO z przeciekiem L-P
+N10	Reference T20 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T21	Condition 1753 1783	utajona niedoczynność tarczycy
+N11	Reference T21 ICD10:E03	Niedoczynność tarczycy o innej etiologii
+T22	Treatment 1787 1804	Przebyte operacje
+T23	Condition 1811 1826	Wywiad rodzinny
+A1	Status T23 Family
+T24	Condition 1836 1857	wada zastawkowa serca
+A2	Status T24 Family
+N12	Reference T24 ICD10:I08.9	Choroba wielu zastawek, nieokreślona
+T25	Condition 1859 1866	Alergie
+N13	Reference T25 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T26	Behaviour 1935 1945	Nikotynizm
+N14	Reference T26 ICD10:Z72.0	Używanie tytoniu
+T27	Negation 1947 1953	neguje
+R7	Neg Arg1:T27 Arg2:T26	
+T28	Behaviour 1956 1997	Alkohol: okazjonalnie, w małych ilościach
+N15	Reference T28 ICD10:Z72.1	Używanie alkoholu
+T29	Behaviour 1998 2015	Uzależnienie inne
+T30	Negation 2017 2023	neguje
+R8	Neg Arg1:T30 Arg2:T29	
+T31	Behaviour 2041 2056	pracuje, salowa
+T32	Drug 2067 2075	Bisocard
+T33	Drug_dose 2076 2094	2,5mg 1 tabl. rano
+R9	Drg Arg1:T32 Arg2:T33	
+T34	Drug 2099 2104	Zocor
+T35	Drug_dose 2105 2128	10 mg 1 tabl. wieczorem
+R10	Drg Arg1:T34 Arg2:T35	
+T36	Drug 2133 2141	Polocard
+T37	Drug_dose 2142 2165	75 mg 1 tabl. wieczorem
+R11	Drg Arg1:T36 Arg2:T37	
+A3	Status T28 Historical_Insignificant
+N16	Reference T29 ICD10:Z72	Problemy związane ze stylem życia

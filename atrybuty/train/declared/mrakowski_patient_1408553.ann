@@ -1,0 +1,101 @@
+T1	Condition 448 469	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 474 486	Dyslipidemia
+N2	Reference T2 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T3	Condition 492 533	Niedokrwistość normocytarna normobarwliwa
+N3	Reference T3 ICD10:D64.9	Niedokrwistość, nieokreślona
+T4	Condition 539 568	Choroba zwyrodnieniowa stawów
+N4	Reference T4 ICD10:M19.9	Choroba zwyrodnieniowa stawów, nieokreślona
+T5	Condition 574 588	Kamica nerkowa
+N5	Reference T5 ICD10:N20.0	Kamica nerki
+T6	Treatment 938 974	Wskazana dalsza opieka u lekarza POZ
+T7	Investigation 976 995	D-dimer do kontroli
+T8	Date 996 1008	za 1 miesiąc
+R1	Dat Arg1:T8 Arg2:T7	
+T9	Behaviour 1013 1108	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T10	Investigation 1112 1176	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów
+T11	Symptom 1349 1412	okresowych bólów w klatce piersiowej nie związanych z wysiłkiem
+N6	Reference T11 ICD10:R07.3	Inne bóle w klatce piersiowej
+T12	Symptom 1414 1433	okresowej duszności
+N7	Reference T12 ICD10:R06.0	Duszność
+T13	Symptom 1439 1464	okresowego kołatani serca
+N8	Reference T13 ICD10:R00.2	Kołatanie serca
+T14	Treatment 1479 1502	zabiegu usunięci macicy
+T15	Date 1522 1532	15.04.2019
+R2	Dat Arg1:T15 Arg2:T14	
+T16	Date 1544 1554	11.07.2019
+T17	Treatment 1558 1576	staw biodrowy lewy
+A1	Status T17 Historical_Insignificant
+R3	Dat Arg1:T16 Arg2:T17	
+A2	Status T14 Historical_Insignificant
+T18	Negation 1578 1584	Neguje
+T19	Symptom 1585 1597	zasłabnięcia
+R4	Neg Arg1:T18 Arg2:T19	
+T20	Condition 1615 1636	Nadciśnienie tętnicze
+N9	Reference T20 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T21	Condition 1638 1667	Choroba zwyrodnieniowa stawów
+N10	Reference T21 ICD10:M19.9	Choroba zwyrodnieniowa stawów, nieokreślona
+T22	Symptom 1669 1686	Przewlekły kaszel
+N11	Reference T22 ICD10:R05	Kaszel
+T23	Condition 1689 1703	Kamica nerkowa
+A3	Source T23 Declared
+N12	Reference T23 ICD10:N20.0	Kamica nerki
+T24	Treatment 1727 1744	Przebyte operacje
+T25	Negation 1747 1751	brak
+R5	Neg Arg1:T25 Arg2:T24	
+T26	Treatment 1752 1771	Leczenie przewlekłe
+T27	Condition 1819 1822	WZW
+N13	Reference T27 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T28	Condition 1832 1841	borelioza
+N14	Reference T28 ICD10:A69.2	Choroba z Lyme
+T29	Condition 1848 1852	Odra
+N15	Reference T29 ICD10:B05	Odra
+T30	Negation 1855 1856	-
+R6	Neg Arg1:T30 Arg2:T29	
+T31	Negation 1844 1845	-
+R7	Neg Arg1:T31 Arg2:T28	
+T32	Negation 1825 1826	-
+R8	Neg Arg1:T32 Arg2:T27	
+T33	Condition 1861 1880	wywiadzie rodzinnym
+A4	Status T33 Family
+T34	Negation 1883 1894	brak danych
+R9	Neg Arg1:T34 Arg2:T33	
+T35	Behaviour 1896 1911	Palenie tytoniu
+T36	Negation 1913 1916	nie
+R10	Neg Arg1:T36 Arg2:T35	
+T37	Behaviour 1917 1928	Inne używki
+T38	Negation 1930 1933	nie
+R11	Neg Arg1:T38 Arg2:T37	
+T39	Condition 1934 1943	Uczulenia
+T40	Negation 1945 1951	neguje
+R12	Neg Arg1:T40 Arg2:T39	
+T41	Behaviour 1968 1994	warunki mieszkaniowe dobre
+T42	Drug 2017 2024	Allupal
+T43	Drug_dose 2025 2044	100 1x dz wieczorem
+R13	Drg Arg1:T42 Arg2:T43	
+T44	Drug 2047 2052	Axtil
+T45	Drug_dose 2053 2068	5 mg 1x d zrano
+R14	Drg Arg1:T44 Arg2:T45	
+T46	Drug 2071 2078	Nolpaza
+T47	Drug_dose 2079 2092	20 1x dz rano
+R15	Drg Arg1:T46 Arg2:T47	
+T48	Drug 2095 2101	Medrol
+T49	Drug_dose 2102 2138	4 mg 1x dz po 1/2 tabl. po śniadaniu
+R16	Drg Arg1:T48 Arg2:T49	
+T50	Drug 2141 2154	Magnez skurcz
+T51	Drug_dose 2155 2162	2 x  dz
+R17	Drg Arg1:T50 Arg2:T51	
+T52	Drug 2165 2170	Acard
+T53	Drug_dose 2171 2192	75 mg 1x dz wieczorem
+R18	Drg Arg1:T52 Arg2:T53	
+T54	Investigation 2209 2219	Echo serca
+T55	Investigation 2222 2232	Holter EKG
+T56	Investigation 2235 2250	Próba Wysiłkowa
+T57	Condition 1512 1521	wypadania
+N17	Reference T57 ICD10:N81.4	Wypadanie macicy i pochwy, nieokreślone
+T58	Treatment 1774 1790	pulmonologicznej
+R19	Dat Arg1:T15 Arg2:T57	
+N18	Reference T39 ICD10:T78.4	Alergia, nieokreślona
+A5	Status T57 Historical_Insignificant
+N19	Reference T19 ICD10:R55	Omdlenie i zapaść
+N16	Reference T35 ICD10:Z72.0	Używanie tytoniu

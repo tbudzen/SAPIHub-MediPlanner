@@ -1,0 +1,157 @@
+T1	Condition 404 425	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 427 464	Dyslipidemia w trakcie farmakoterapii
+N2	Reference T2 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T3	Drug 465 472	statyną
+T4	Condition 474 489	Cukrzyca typu 2
+N3	Reference T4 ICD10:E11	Cukrzyca insulinoniezależna
+T5	Treatment 499 518	licznych operacjach
+A1	Status T5 Historical_Insignificant
+N4	Reference T5 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T6	Treatment 574 589	usunięcu macicy
+A2	Status T6 Historical_Insignificant
+N5	Reference T6 ICD10:Z90.7	Nabyty brak narządów płciowych
+T7	Date 656 663	04.2018
+T8	Treatment 669 726	podniesieniu kikuta pochwy do więzadła krzyżowo-kolcowego
+N6	Reference T8 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R1	Dat Arg1:T7 Arg2:T6	
+T9	Treatment 591 654	plastyce tylnej ściany pochwy z użyciem siatki polipropylenowej
+N7	Reference T9 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+A3	Status T9 Historical_Insignificant
+R2	Dat Arg1:T7 Arg2:T9	
+T10	Condition 728 750	Zaburzenia adaptacyjne
+N8	Reference T10 ICD10:F43.2	Zaburzenia adaptacyjne
+T11	Treatment 897 971	Dalsza opieka w POZ, Poradni Diabetologicznej oraz Poradni Ginekologicznej
+A4	Status T8 Historical_Insignificant
+T12	Treatment 985 1035	dalsza okresowa kontrola w Poradni Kardiologicznej
+T13	Treatment 1041 1098	diagnostyka choroby wieńcowej w warunkach ambulatoryjnych
+N9	Reference T13 ICD10:I25.1	Choroba serca w przebiegu miażdżycy
+T14	Treatment 1104 1207	Okresowa kontrola morfologii, stężenia elektrolitów, lipidogramu, parametrów wydolności nerek i wątroby
+T15	Date 1210 1233	pierwsza za 4-6 tygodni
+T16	Behaviour 1238 1340	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+R3	Dat Arg1:T15 Arg2:T14	
+T17	Behaviour 1345 1373	Wskazana redukcja masy ciała
+T18	Treatment 1378 1434	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T19	Drug 1473 1480	Nebilet
+T20	Drug_dose 1481 1506	5mg 1/2 tabletki rano p.o
+T21	Drug 1507 1518	Co-Prenessa
+T22	Drug_dose 1519 1547	4mg + 1,25mg 1 tabletka rano
+T23	Drug 1549 1556	Amlopin
+T24	Drug_dose 1557 1581	5mg 1 tabletki wieczorem
+T25	Drug 1582 1589	Roswera
+T26	Drug_dose 1590 1615	20mg 1 tabletka wieczorem
+T27	Drug 1616 1625	Metformax
+T28	Drug_dose 1626 1659	850mg 1 tabletka rano i wieczorem
+R4	Drg Arg1:T19 Arg2:T20	
+R5	Drg Arg1:T21 Arg2:T22	
+R6	Drg Arg1:T23 Arg2:T24	
+R7	Drg Arg1:T25 Arg2:T26	
+R8	Drg Arg1:T27 Arg2:T28	
+T29	Condition 1929 1966	Dyslipidemia w trakcie farmakoterapii
+N10	Reference T29 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T30	Drug 1967 1974	statyną
+T31	Condition 1976 1991	Cukrzyca typu 2
+N11	Reference T31 ICD10:E11	Cukrzyca insulinoniezależna
+T32	Treatment 2001 2020	licznych operacjach
+N12	Reference T32 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T33	Treatment 2076 2091	usunięcu macicy
+N13	Reference T33 ICD10:Z90.7	Nabyty brak narządów płciowych
+A5	Status T33 Historical_Insignificant
+A6	Status T32 Historical_Insignificant
+T34	Treatment 2093 2156	plastyce tylnej ściany pochwy z użyciem siatki polipropylenowej
+A7	Status T34 Historical_Insignificant
+N14	Reference T34 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T35	Date 2158 2165	04.2018
+T36	Treatment 2171 2228	podniesieniu kikuta pochwy do więzadła krzyżowo-kolcowego
+A8	Status T36 Historical_Insignificant
+N15	Reference T36 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R9	Dat Arg1:T35 Arg2:T33	
+R10	Dat Arg1:T35 Arg2:T34	
+T37	Condition 2493 2516	nadciśnieniem tętniczym
+N16	Reference T37 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T38	Condition 2669 2704	zaburzenia statyki narządów rodnych
+T39	Negation 2716 2733	zdyskwalifikowana
+T40	Treatment 2736 2756	zabiegu operacyjnego
+N18	Reference T40 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T41	Symptom 2768 2807	podwyższone wartości RR do 200/100 mmHg
+T42	Treatment 2829 2844	liczne operacje
+N19	Reference T42 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T43	Date 2915 2942	Ostatnia operacja w 04.2018
+T44	Treatment 2945 3008	plastyka tylnej ściany pochwy z użyciem siatki polipropylenowej
+N20	Reference T44 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R11	Dat Arg1:T43 Arg2:T44	
+R12	Neg Arg1:T39 Arg2:T40	
+T45	Date 3010 3019	Wcześniej
+T46	Treatment 3020 3077	podniesienie kikuta pochwy do więzadła krzyżowo-kolcowego
+N21	Reference T46 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+R13	Dat Arg1:T45 Arg2:T46	
+T47	Behaviour 3081 3096	Palenie tytoniu
+N22	Reference T47 ICD10:Z72.0	Używanie tytoniu
+T48	Negation 3098 3101	nie
+T49	Behaviour 3102 3106	pali
+N23	Reference T49 ICD10:Z72.0	Używanie tytoniu
+R14	Neg Arg1:T48 Arg2:T49	
+R15	Neg Arg1:T48 Arg2:T47	
+T50	Behaviour 3108 3119	Inne używki
+T51	Negation 3121 3124	nie
+T52	Condition 3125 3134	Uczulenia
+N24	Reference T52 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T53	Negation 3136 3139	nie
+T54	Treatment 2589 2659	Kliniki Gin. Oper., Endoskop. i Gin. Onkol. gdzie była hospitalizowana
+A9	Status T42 Historical_Insignificant
+A10	Status T44 Historical_Insignificant
+A11	Status T46 Historical_Insignificant
+T55	Condition 3167 3170	WZW
+N25	Reference T55 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T56	Condition 3177 3186	borelioza
+N26	Reference T56 ICD10:A69.2	Choroba z Lyme
+T57	Condition 3194 3197	tbc
+N27	Reference T57 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T58	Negation 3171 3174	(-)
+T59	Negation 3187 3192	( - )
+T60	Negation 3198 3201	(-)
+R16	Neg Arg1:T58 Arg2:T55	
+R17	Neg Arg1:T59 Arg2:T56	
+R18	Neg Arg1:T60 Arg2:T57	
+R19	Neg Arg1:T51 Arg2:T50	
+R20	Neg Arg1:T53 Arg2:T52	
+T61	Behaviour 3273 3299	warunki mieszkaniowe dobre
+T62	Drug 3338 3348	Metoprolol
+T63	Drug_dose 3349 3366	50 mg 2xdz 1 tabl
+T64	Drug 3369 3378	Metformax
+T65	Drug_dose 3379 3398	850 mg 2xdz 1 tabl.
+T66	Drug 3400 3405	Tulip
+T67	Drug_dose 3406 3427	20 mg 1 x dz. 1 tabl.
+T68	Drug 3429 3438	Polprazol
+T69	Drug_dose 3439 3464	40 mg 1 x dz 1 tabl. rano
+T70	Drug 3466 3471	Olfen
+T71	Drug_dose 3472 3509	doraźnie w razie bólu kończyn dolnych
+R21	Drg Arg1:T62 Arg2:T63	
+R22	Drg Arg1:T64 Arg2:T65	
+R23	Drg Arg1:T66 Arg2:T67	
+R24	Drg Arg1:T68 Arg2:T69	
+T72	Condition 1906 1927	Nadciśnienie tętnicze
+N28	Reference T72 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+A12	Status T38 Historical_Insignificant
+R25	Drg Arg1:T70 Arg2:T71	
+T74	Drug 3511 3516	Sedam
+T75	Drug_dose 3547 3563	2xdz po 1/2 tabl
+R26	Drg Arg1:T74 Arg2:T75	
+T73	Investigation 3625 3646	badania laboratoryjne
+T76	Investigation 3648 3652	ECHO
+T77	Investigation 3654 3658	ABPM
+A13	Status T54 Historical_Insignificant
+T78	Condition 528 563	zaburzeń statyki narządów płciowych
+N29	Reference T78 ICD10:N81.9	Wypadanie żeńskich narządów rozrodczych, nieokreślone
+A14	Status T78 Historical_Insignificant
+T79	Condition 2030 2065	zaburzeń statyki narządów płciowych
+A15	Status T79 Historical_Insignificant
+N30	Reference T79 ICD10:N81.9	Wypadanie żeńskich narządów rozrodczych, nieokreślone
+T80	Treatment 2561 2586	optymalizacji leczenia HA
+N17	Reference T38 ICD10:N81.9	Wypadanie żeńskich narządów rozrodczych, nieokreślone
+T81	Condition 2854 2889	zaburzeń statyki narządów płciowych
+A16	Status T81 Historical_Insignificant
+N31	Reference T81 ICD10:N81.9	Wypadanie żeńskich narządów rozrodczych, nieokreślone
+T82	Treatment 2897 2913	usunięcie macicy
+A17	Status T82 Historical_Insignificant
+N32	Reference T82 ICD10:Z90.7	Nabyty brak narządów płciowych

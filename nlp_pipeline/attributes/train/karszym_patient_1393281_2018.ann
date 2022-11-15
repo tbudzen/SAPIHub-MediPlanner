@@ -1,0 +1,33 @@
+T1	Condition 443 493	Wrodzona wada serca - mnogie ubytki międzykomorowe
+N1	Reference T1 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T2	Condition 496 530	dysplazją zastawki tętnicy płucnej
+N2	Reference T2 ICD10:Q22.3	Inne wrodzone wady rozwojowe zastawki pnia płucnego
+T3	Treatment 543 584	operacji przewężenia pnia tętnicy płucnej
+N3	Reference T3 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T4	Treatment 587 618	podwiązania przewodu tętniczego
+N4	Reference T4 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T5	Date 620 631	23.05.2017r
+T6	Condition 639 668	Niedobór masy ciała i wzrostu
+T7	Drug 789 800	Paracetamol
+T8	Drug 802 808	Brufen
+T9	Drug 810 816	Vit.D3
+T10	Treatment 929 957	Dalsza opieka kardiologiczna
+T11	Treatment 960 994	kontrola w Poradni Kardiologicznej
+T12	Date 995 1002	za 6mcy
+T13	Treatment 1009 1041	Dalsza opieka ogólnopediatryczna
+T14	Symptom 1063 1091	W przypadku objawów infekcji
+T15	Treatment 1102 1126	kontakt z lekarzem POZ-u
+T16	Condition 1271 1281	mnogim VSD
+N5	Reference T16 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T17	Treatment 1287 1298	bandingu PA
+N6	Reference T17 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T18	Condition 1367 1384	wywiad alergiczny
+N7	Reference T18 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T19	Negation 1385 1391	ujemny
+T20	Drug 1394 1408	leków na stałe
+T21	Negation 1409 1422	nie otrzymuje
+R1	Neg Arg1:T21 Arg2:T20	
+R2	Neg Arg1:T19 Arg2:T18	
+R3	Dat Arg1:T12 Arg2:T11	
+R4	Dat Arg1:T5 Arg2:T4	
+R5	Dat Arg1:T5 Arg2:T3	

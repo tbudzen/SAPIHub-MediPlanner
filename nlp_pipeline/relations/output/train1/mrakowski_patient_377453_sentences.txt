@@ -1,0 +1,474 @@
+allRelations          : 19
+oks                   : 6
+isRedundantAndRemoveds: 12
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 1
+GOOD / BAD            : 18 / 1
+Sentence 0:
+------------------------------------------------
+Wiek: 14 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+1) Ketrel 75-50 mg pos, 
+2) Depakine Chrono 2x 1 tabl,
+3) Hdroxizinum doraźnie,
+4) Magne B6 2 x 1 tabl,
+5) Dalsza opieka psychiatryczna
+6) Regularna kontrola  ciśnienia tętniczego
+
+R1	Drg Arg1:T1 Arg2:T2 << OK >>	Ketrel -> 75-50 mg pos  <RANK: 3> <info: start[333, 340] <type: RIGHT>>
+R2	Drg Arg1:T1 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Ketrel -> 2x 1 tabl <:REMOVED other first tag between (right):> <RANK: 0> <info: start[333, 374] <type: RIGHT>>
+R3	Drg Arg1:T1 Arg2:T6 <<REDUNDANT!!!REMOVED>>	Ketrel -> doraźnie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[333, 400] <type: RIGHT>>
+R4	Drg Arg1:T1 Arg2:T8 <<REDUNDANT!!!REMOVED>>	Ketrel -> 2 x 1 tabl <:REMOVED other first tag between (right):> <RANK: 0> <info: start[333, 422] <type: RIGHT>>
+R5	Drg Arg1:T3 Arg2:T2 <<REDUNDANT!!!REMOVED>>	Depakine Chrono -> 75-50 mg pos <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[358, 340] <type: LEFT>>
+R6	Drg Arg1:T3 Arg2:T4 << OK >>	Depakine Chrono -> 2x 1 tabl  <RANK: 3> <info: start[358, 374] <type: RIGHT>>
+R7	Drg Arg1:T3 Arg2:T6 <<REDUNDANT!!!REMOVED>>	Depakine Chrono -> doraźnie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[358, 400] <type: RIGHT>>
+R8	Drg Arg1:T3 Arg2:T8 <<REDUNDANT!!!REMOVED>>	Depakine Chrono -> 2 x 1 tabl <:REMOVED other first tag between (right):> <RANK: 0> <info: start[358, 422] <type: RIGHT>>
+R9	Drg Arg1:T5 Arg2:T2 <<REDUNDANT!!!REMOVED>>	Hdroxizinum -> 75-50 mg pos <:REMOVED other first tag between (left):> <RANK: 0> <info: start[388, 340] <type: LEFT>>
+R10	Drg Arg1:T5 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Hdroxizinum -> 2x 1 tabl <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[388, 374] <type: LEFT>>
+R11	Drg Arg1:T5 Arg2:T6 << OK >>	Hdroxizinum -> doraźnie  <RANK: 3> <info: start[388, 400] <type: RIGHT>>
+R12	Drg Arg1:T5 Arg2:T8 <<REDUNDANT!!!REMOVED>>	Hdroxizinum -> 2 x 1 tabl <:REMOVED other first tag between (right):> <RANK: 0> <info: start[388, 422] <type: RIGHT>>
+R13	Drg Arg1:T7 Arg2:T2 <<REDUNDANT!!!REMOVED>>	Magne B6 -> 75-50 mg pos <:REMOVED other first tag between (left):> <RANK: 0> <info: start[413, 340] <type: LEFT>>
+R14	Drg Arg1:T7 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Magne B6 -> 2x 1 tabl <:REMOVED other first tag between (left):> <RANK: 0> <info: start[413, 374] <type: LEFT>>
+R15	Drg Arg1:T7 Arg2:T6 <<REDUNDANT!!!REMOVED>>	Magne B6 -> doraźnie <:REMOVED multipleConnectedByTag2:> <RANK: 0> <info: start[413, 400] <type: LEFT>>
+R16	Drg Arg1:T7 Arg2:T8 << OK >>	Magne B6 -> 2 x 1 tabl  <RANK: 3> <info: start[413, 422] <type: RIGHT>>
+
+
+Sentence 5:
+7) Metocard 2 x 1/2 tabletki po 50 mg pos
+------------------------------------------------
+
+R17	Drg Arg1:T11 Arg2:T12 << OK >>	Metocard -> 2 x 1/2 tabletki po 50 mg pos  <RANK: 3> <info: start[513, 522] <type: RIGHT>>
+
+
+Sentence 6:
+Zastosowane leczenie
+
+
+
+Sentence 7:
+------------------------------------------------
+
+
+
+Sentence 8:
+Ketrel, Depakine Chrono, Hydroxizinum, Midanium, Magne B6, ANA 1:1
+------------------------------------------------
+
+
+
+Sentence 9:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 10:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q21.1|Rozpoznanie II: ICD10:R00.0|Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: ICD10:F71|Opisowo:: Ubytek przegrody międzyprzedsionkowej typu II.\x0aObserwacja w kierunku zespołu wydłużonego  QT negatywna.
+R18	Neg Arg1:T21 Arg2:T19 <<REDUNDANT!!!SHOULD BE REMOVED>>	negatywna -> Ubytek przegrody międzyprzedsionkowej typu II  <RANK: 2> <info: start[1082, 986] <type: LEFT>>
+R19	Neg Arg1:T21 Arg2:T20 << OK >>	negatywna -> Obserwacja w kierunku zespołu wydłużonego  QT  <RANK: 3> <info: start[1082, 1036] <type: LEFT>>
+
+
+Sentence 11:
+\x0aTachykardia zatokowa.\x0aAutyzm.\x0aUpośledzenie umysłowe w stopniu umiarkowanym.
+
+
+
+Sentence 12:
+------------------------------------------------
+
+
+
+Sentence 13:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 14:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.31[10^3/ul]
+    
+
+
+Sentence 15:
+RBC Krwinki czerwone:3.81[10^6/ul]
+    
+
+
+Sentence 16:
+HGB Hemoglobina:11.5[g/dl]
+    
+
+
+Sentence 17:
+HCT Hematokryt:33.6[%]
+    
+
+
+Sentence 18:
+MCV wskaźnik czerwonokrw:88.2[fl]
+    
+
+
+Sentence 19:
+MCH wskaźnik czerwonokrw:30.2[pg]
+    
+
+
+Sentence 20:
+MCHC wskaźnik czerwonokr:34.2[g/dl]
+    
+
+
+Sentence 21:
+PLT z morfologii:200[10^3/ul]
+    
+
+
+Sentence 22:
+RDW-SD:38.5[fl]
+    
+
+
+Sentence 23:
+RDW-CV:11.9[%]
+    PDW:12.8[fl]
+    MPV:11.0[fl]
+    
+
+
+Sentence 24:
+P-LCR:33.4[%]
+    
+
+
+Sentence 25:
+PCT (hematokryt płytkowy:0.22[%]
+    
+
+
+Sentence 26:
+NEUTR# wartość bezwzględ:1.93[10^3/ul]
+    
+
+
+Sentence 27:
+NEUTR%:30.6[%]
+    
+
+
+Sentence 28:
+LYMH# wartość bezwzględn:3.45[10^3/ul]
+    
+
+
+Sentence 29:
+LYMPH%:54.7[%]
+    
+
+
+Sentence 30:
+MONO# wartość bezwzględn:0.75[10^3/ul]
+    
+
+
+Sentence 31:
+MONO%:11.9[%]
+    
+
+
+Sentence 32:
+EO# wartość bezwzględna:0.14[10^3/ul]
+    
+
+
+Sentence 33:
+EO%:2.2[%]
+    
+
+
+Sentence 34:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 35:
+NRBC %:0.0[%]
+    
+
+
+Sentence 36:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 37:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:34.7[sek]
+
+
+
+Sentence 38:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 39:
+Czas protrombinowy:11.7[sek]
+    
+
+
+Sentence 40:
+Wskaźnik PT:94.0[%]
+    
+
+
+Sentence 41:
+INR:1.06
+Czas trombinowy TT: Czas trombinowy TT:17.6[sek]
+
+
+
+Sentence 42:
+Fibrynogen: Fibrynogen:1.95[g/L]
+
+
+
+Sentence 43:
+TSH: TSH:2.07[uIU/ml]
+
+
+
+Sentence 44:
+FT4: FT4:1.03[ng/dl]
+Troponina T
+    Troponina T:
+    3.00[pg/ml]
+
+
+
+Sentence 45:
+ALAT: ALAT:17[U/L]
+ASPAT: ASPAT:34[U/L]
+Bilirubina całkowita (TBil): Bilirubina całkowita:0.19[mg/dl]
+
+
+
+Sentence 46:
+CKMB aktywność: CKMB:15[U/L]
+
+
+
+Sentence 47:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 48:
+Potas (K): Potas:4.4[mmol/L]
+
+
+
+Sentence 49:
+Chlorki (Cl): Chlorki:108[mmol/L]
+
+
+
+Sentence 50:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:16[U/L]
+
+
+
+Sentence 51:
+Kreatynina + GFR
+    
+
+
+Sentence 52:
+Kreatynina w surowicy:0.47[mg/dl]
+    
+
+
+Sentence 53:
+eGFR stand. wg Schwartza:196.6[ml/min/1,73 m^2]
+    
+
+
+Sentence 54:
+eGFR zmod.
+
+
+Sentence 55:
+wg Schwartza:147.6[ml/min/1,73 m^2]
+    wzrost:168[cm]
+
+
+
+Sentence 56:
+Magnez: Magnez:0.71[mmol/L]
+
+
+
+Sentence 57:
+Mocznik: Mocznik:21[mg/dl]
+
+
+
+Sentence 58:
+Wapń całkowity: Wapń całkowity:2.34[mmol/L]
+
+
+
+Sentence 59:
+Gospodarka żelazem
+    Żelazo:93[ug/dl]
+    
+
+
+Sentence 60:
+TIBC (Całkowita zdolność:415[ug/dl]
+    
+
+
+Sentence 61:
+UIBC (Utajona zdolność w:322[ug/dl]
+    
+
+
+Sentence 62:
+Wskaźnik wysycenia Fe:22[%]
+
+
+
+Sentence 63:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    pH:7.394
+    
+
+
+Sentence 64:
+pCO2:35.9[mmHg]
+    BE:-2.40[mmol/L]
+    HCO3:21.5[mmol/L]
+    pO2:59.3[mmHg]
+    
+
+
+Sentence 65:
+O2Sat:91.1[%]
+
+
+
+Sentence 66:
+Lipidogram
+    
+
+
+Sentence 67:
+Cholesterol całkowity:143[mg/dl]
+    
+
+
+Sentence 68:
+Cholesterol HDL:65[mg/dl]
+    
+
+
+Sentence 69:
+Cholestrol LDL:53[mg/dl]
+    Triglicerydy:95[mg/dl]
+    
+
+
+Sentence 70:
+Stosunek cholesterolu HD:0.5
+
+
+
+Sentence 71:
+Glukoza w surowicy: Glukoza w surowicy:83[mg/dl]
+
+
+
+Sentence 72:
+------------------------------------------------
+
+
+
+Sentence 73:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 74:
+F71.0
+R00.0
+Q21.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 75:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 76:
+89.522
+G21
+L43
+O61
+I89
+G25
+M87
+N45
+L69
+89.5
+O69
+O29
+C55
+G53
+I97
+G11
+O93
+L31
+O77
+I17
+M37
+I19
+O35
+N13
+88.721
+M19
+
+
+
+Sentence 77:
+------------------------------------------------
+
+

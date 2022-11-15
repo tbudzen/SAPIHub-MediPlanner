@@ -1,0 +1,554 @@
+allRelations          : 25
+oks                   : 5
+isRedundantAndRemoveds: 13
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 7
+GOOD / BAD            : 18 / 7
+Sentence 0:
+------------------------------------------------
+Wiek: 11 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q21.0|Rozpoznanie II: ICD10:Q21.1|Rozpoznanie IV: ICD10:I42.8|Rozpoznanie V: |Rozpoznanie III: ICD10:Z98.8|Opisowo:: Stan po operacji VSD i ASD.
+
+
+Sentence 6:
+Niescalone wsierdzie lewej komory.
+
+
+
+Sentence 7:
+------------------------------------------------
+
+
+
+Sentence 8:
+Zastosowane leczenie
+
+
+
+Sentence 9:
+------------------------------------------------
+Spironol, Acesan, Vivacor
+------------------------------------------------
+
+
+
+Sentence 10:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 11:
+Spironol 1 x 12,5 mg
+Acesan 1 x 75 mg
+Vivacor 1 x 3,125 mg
+Kontrola w Poradni Kardiologicznej za 6 miesięcy
+
+R1	Drg Arg1:T6 Arg2:T7 << OK >>	Spironol -> 1 x 12,5 mg  <RANK: 3> <info: start[799, 808] <type: RIGHT>>
+R2	Drg Arg1:T6 Arg2:T9 <<REDUNDANT!!!REMOVED>>	Spironol -> 1 x 75 mg <:REMOVED other first tag between (right):> <RANK: 0> <info: start[799, 827] <type: RIGHT>>
+R3	Drg Arg1:T6 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Spironol -> 1 x 3,125 mg <:REMOVED other first tag between (right):> <RANK: 0> <info: start[799, 845] <type: RIGHT>>
+R4	Drg Arg1:T8 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Acesan -> 1 x 12,5 mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[820, 808] <type: LEFT>>
+R5	Drg Arg1:T8 Arg2:T9 << OK >>	Acesan -> 1 x 75 mg  <RANK: 3> <info: start[820, 827] <type: RIGHT>>
+R6	Drg Arg1:T8 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Acesan -> 1 x 3,125 mg <:REMOVED other first tag between (right):> <RANK: 1> <info: start[820, 845] <type: RIGHT>>
+R7	Drg Arg1:T10 Arg2:T7 <<REDUNDANT!!!REMOVED>>	Vivacor -> 1 x 12,5 mg <:REMOVED other first tag between (left):> <RANK: 1> <info: start[837, 808] <type: LEFT>>
+R8	Drg Arg1:T10 Arg2:T9 <<REDUNDANT!!!REMOVED>>	Vivacor -> 1 x 75 mg <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[837, 827] <type: LEFT>>
+R9	Drg Arg1:T10 Arg2:T11 << OK >>	Vivacor -> 1 x 3,125 mg  <RANK: 3> <info: start[837, 845] <type: RIGHT>>
+R10	Dat Arg1:T13 Arg2:T12 << OK >>	za 6 miesięcy -> Kontrola w Poradni Kardiologicznej  <RANK: 3> <info: start[893, 858] <type: LEFT>>
+R11	Dat Arg1:T13 Arg2:T6 <<REDUNDANT!!!REMOVED>>	za 6 miesięcy -> Spironol <:REMOVED other second tag between (left):> <RANK: 0> <info: start[893, 799] <type: LEFT>>
+R12	Dat Arg1:T13 Arg2:T8 <<REDUNDANT!!!REMOVED>>	za 6 miesięcy -> Acesan <:REMOVED other second tag between (left):> <RANK: 0> <info: start[893, 820] <type: LEFT>>
+R13	Dat Arg1:T13 Arg2:T10 <<REDUNDANT!!!REMOVED>>	za 6 miesięcy -> Vivacor <:REMOVED other second tag between (left):> <RANK: 0> <info: start[893, 837] <type: LEFT>>
+
+
+Sentence 12:
+------------------------------------------------
+
+
+
+Sentence 13:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+po opercji VSD , na stałe otrzymuje Spironol , Acard, Vivacor , wywiad alergiczny ujemny
+------------------------------------------------
+
+R14	Neg Arg1:T19 Arg2:T18 << OK >>	ujemny -> wywiad alergiczny  <RANK: 3> <info: start[1113, 1095] <type: LEFT>>
+R15	Neg Arg1:T19 Arg2:T22 <<REDUNDANT!!!SHOULD BE REMOVED>>	ujemny -> VSD  <RANK: 2> <info: start[1113, 1042] <type: LEFT>>
+R16	Neg Arg1:T19 Arg2:T14 <<REDUNDANT!!!REMOVED>>	ujemny -> opercji <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1113, 1034] <type: LEFT>>
+R17	Neg Arg1:T19 Arg2:T15 <<REDUNDANT!!!REMOVED>>	ujemny -> Spironol <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1113, 1067] <type: LEFT>>
+R18	Neg Arg1:T19 Arg2:T16 <<REDUNDANT!!!REMOVED>>	ujemny -> Acard <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1113, 1078] <type: LEFT>>
+R19	Neg Arg1:T19 Arg2:T17 <<REDUNDANT!!!REMOVED>>	ujemny -> Vivacor <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1113, 1085] <type: LEFT>>
+R20	Alg Arg1:T18 Arg2:T15 <<REDUNDANT!!!SHOULD BE REMOVED>>	wywiad alergiczny -> Spironol  <RANK: 2> <info: start[1095, 1067] <type: LEFT>>
+R21	Alg Arg1:T18 Arg2:T16 <<REDUNDANT!!!SHOULD BE REMOVED>>	wywiad alergiczny -> Acard  <RANK: 2> <info: start[1095, 1078] <type: LEFT>>
+R22	Alg Arg1:T18 Arg2:T17 <<REDUNDANT!!!SHOULD BE REMOVED>>	wywiad alergiczny -> Vivacor  <RANK: 2> <info: start[1095, 1085] <type: LEFT>>
+R23	Alg Arg1:T22 Arg2:T15 <<REDUNDANT!!!SHOULD BE REMOVED>>	VSD -> Spironol  <RANK: 2> <info: start[1042, 1067] <type: RIGHT>>
+R24	Alg Arg1:T22 Arg2:T16 <<REDUNDANT!!!SHOULD BE REMOVED>>	VSD -> Acard  <RANK: 2> <info: start[1042, 1078] <type: RIGHT>>
+R25	Alg Arg1:T22 Arg2:T17 <<REDUNDANT!!!SHOULD BE REMOVED>>	VSD -> Vivacor  <RANK: 2> <info: start[1042, 1085] <type: RIGHT>>
+
+
+Sentence 14:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 15:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:9.07[10^3/ul]
+    
+
+
+Sentence 16:
+RBC Krwinki czerwone:4.90[10^6/ul]
+    
+
+
+Sentence 17:
+HGB Hemoglobina:13.8[g/dl]
+    
+
+
+Sentence 18:
+HCT Hematokryt:40.3[%]
+    
+
+
+Sentence 19:
+MCV wskaźnik czerwonokrw:82.2[fl]
+    
+
+
+Sentence 20:
+MCH wskaźnik czerwonokrw:28.2[pg]
+    
+
+
+Sentence 21:
+MCHC wskaźnik czerwonokr:34.2[g/dl]
+    
+
+
+Sentence 22:
+PLT z morfologii:372[10^3/ul]
+    
+
+
+Sentence 23:
+RDW-SD:39.0[fl]
+    
+
+
+Sentence 24:
+RDW-CV:13.0[%]
+    PDW:10.0[fl]
+    
+
+
+Sentence 25:
+MPV:9.5[fl]
+    
+
+
+Sentence 26:
+P-LCR:19.8[%]
+    
+
+
+Sentence 27:
+PCT (hematokryt płytkowy:0.35[%]
+    
+
+
+Sentence 28:
+NEUTR# wartość bezwzględ:6.24[10^3/ul]
+    
+
+
+Sentence 29:
+NEUTR%:68.8[%]
+    
+
+
+Sentence 30:
+LYMH# wartość bezwzględn:1.56[10^3/ul]
+    
+
+
+Sentence 31:
+LYMPH%:17.2[%]
+    
+
+
+Sentence 32:
+MONO# wartość bezwzględn:0.72[10^3/ul]
+    MONO%:7.9[%]
+    
+
+
+Sentence 33:
+EO# wartość bezwzględna:0.50[10^3/ul]
+    
+
+
+Sentence 34:
+EO%:5.5[%]
+    
+
+
+Sentence 35:
+BASO# wartość bezwzględn:0.05[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 36:
+NRBC %:0.0[%]
+    
+
+
+Sentence 37:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 38:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:32.9[sek]
+
+
+
+Sentence 39:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 40:
+Czas protrombinowy:14.6[sek]
+    
+
+
+Sentence 41:
+Wskaźnik PT:75.3[%]
+    
+
+
+Sentence 42:
+INR:1.32
+Czas trombinowy TT: Czas trombinowy TT:15.3[sek]
+
+
+
+Sentence 43:
+Fibrynogen: Fibrynogen:2.34[g/L]
+
+
+
+Sentence 44:
+D-dimer - test ilościowy: D-dimer - test ilościowy:702[ng/ml]
+
+
+
+Sentence 45:
+Badanie ogólne moczu
+    
+
+
+Sentence 46:
+barwa:żółty[ ]
+    
+
+
+Sentence 47:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 48:
+przejrzystość:niezupełna[ ]
+    
+
+
+Sentence 49:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 50:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 51:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 52:
+ciężar właściwy:1.027[ ]
+    pH:5.0[ ]
+    
+
+
+Sentence 53:
+białko:nieobecne[ ]
+    
+
+
+Sentence 54:
+urobilinogen:3,0 mg/dl[ ]
+    
+
+
+Sentence 55:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 56:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 57:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 58:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 59:
+nabłonki płaskie:bardzo liczne[w preparacie]
+    
+
+
+Sentence 60:
+leukocyty:7 /ul[ul]
+    
+
+
+Sentence 61:
+erytrocyty świeże i częś:6/ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:nieliczne[w preparacie]
+
+
+
+Sentence 62:
+TSH: TSH:3.14[uIU/ml]
+
+
+
+Sentence 63:
+FT3: FT3:3.12[pg/ml]
+
+
+
+Sentence 64:
+FT4: FT4:1.37[ng/dl]
+
+
+
+Sentence 65:
+ALAT: ALAT:13[U/L]
+ASPAT: ASPAT:20[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 66:
+Sód (Na): Sód:144[mmol/L]
+
+
+
+Sentence 67:
+Potas (K): Potas:4.4[mmol/L]
+
+
+
+Sentence 68:
+Chlorki (Cl): Chlorki:105[mmol/L]
+
+
+
+Sentence 69:
+Fosforany nieorganiczne: Fosforany nieorganiczne:1.47[mmol/L]
+
+
+
+Sentence 70:
+Kreatynina + GFR
+    
+
+
+Sentence 71:
+Kreatynina w surowicy:0.55[mg/dl]
+    eGFR stand.
+
+
+Sentence 72:
+wg Schwartza:153.0[ml/min/1,73 m^2]
+    eGFR zmod.
+
+
+Sentence 73:
+wg Schwartza:114.9[ml/min/1,73 m^2]
+    wzrost:153[cm]
+
+
+
+Sentence 74:
+Mleczany (LAC): Mleczany:14.5[mg/dl]
+
+
+
+Sentence 75:
+Mleczany (LAC): Mleczany:49.3[mg/dl]
+
+
+
+Sentence 76:
+Magnez: Magnez:0.87[mmol/L]
+
+
+
+Sentence 77:
+Mocznik: Mocznik:28[mg/dl]
+
+
+
+Sentence 78:
+Wapń całkowity: Wapń całkowity:2.34[mmol/L]
+
+
+
+Sentence 79:
+Równowaga Kwasowo-Zasadowa (RKZ)
+    
+
+
+Sentence 80:
+pH:7.301
+    pCO2:55.1[mmHg]
+    BE:-0.80[mmol/L]
+    HCO3:26.3[mmol/L]
+    
+
+
+Sentence 81:
+pO2:27.3[mmHg]
+    
+
+
+Sentence 82:
+O2Sat:39.8[%]
+
+
+
+Sentence 83:
+Glukoza w surowicy: Glukoza w surowicy:71[mg/dl]
+
+
+
+Sentence 84:
+NT-proBNP surowica: NT-proBNP w surowicy:35[pg/ml]
+
+
+
+Sentence 85:
+------------------------------------------------
+
+
+
+Sentence 86:
+ICD10
+------------------------------------------------
+Z98.8
+Q21.0
+Q21.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 87:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 88:
+A01
+
+
+
+Sentence 89:
+I81
+G21
+L43
+G25
+L23
+M87
+G49
+N45
+L69
+N
+N24
+O69
+O29
+C55
+G53
+I97
+G11
+I17
+O77
+
+
+
+Sentence 90:
+O55
+N11
+I19
+O35
+M37
+
+
+
+Sentence 91:
+N13
+88.761
+
+
+
+Sentence 92:
+------------------------------------------------
+
+

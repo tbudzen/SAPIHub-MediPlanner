@@ -1,0 +1,175 @@
+T1	Negation 2096 2099	(-)
+T2	Negation 2112 2117	( - )
+T3	Negation 2123 2126	(-)
+T4	Negation 2027 2032	nigdy
+T5	Negation 2046 2049	nie
+T6	Negation 2061 2064	nie
+T7	Drug 2350 2360	CoPrenessa
+T8	Drug 2385 2393	Euthyrox
+T9	Drug 2414 2420	Zahron
+T10	Drug 1113 1123	CoPrenessa
+T11	Drug 1125 1133	Euthyrox
+T12	Drug 1135 1141	Zahron
+T13	Drug 1143 1151	0.9%NaCl
+T14	Drug 1680 1688	Euthyrox
+T15	Drug 1691 1697	Zofran
+T16	Negation 1719 1722	bez
+T17	Treatment 332 354	kontrola u lekarza POZ
+T18	Treatment 357 424	kontrola w Poradni Kardiologicznej i Wad wrodzonych Serca Dorosłych
+T19	Investigation 426 451	angioCT tętnic wieńcowych
+T20	Drug 505 515	CoPrenessa
+T21	Drug_dose 516 539	4/1,25mg 1x 1 tabl/rano
+T22	Drug 540 548	Euthyrox
+T23	Drug_dose 549 557	N75ug 1x
+R1	Drg Arg1:T20 Arg2:T21	
+R2	Drg Arg1:T22 Arg2:T23	
+T24	Symptom 775 799	Bóle w klatce piersiowej
+N1	Reference T24 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T25	Condition 801 822	Nadciśnienie tętnicze
+N2	Reference T25 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T26	Condition 824 864	Dyslipidemia mieszana w trakcie leczenia
+N3	Reference T26 ICD10:E78.2	Hiperlipidemia mieszana
+T27	Condition 866 888	Niedoczynność tarczycy
+N4	Reference T27 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T28	Condition 896 912	Choroba wrzodowa
+N5	Reference T28 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T29	Date 913 923	przed laty
+R3	Dat Arg1:T29 Arg2:T28	
+T30	Treatment 933 953	dwukrotnym usunięciu
+A1	Status T30 Historical_Insignificant
+N6	Reference T30 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T31	Condition 954 969	torbieli piersi
+N7	Reference T31 ICD10:N60.0	Samotna torbiel piersi
+A2	Status T31 Historical_Insignificant
+T32	Treatment 979 992	appendektomii
+A3	Status T32 Historical_Insignificant
+N8	Reference T32 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T33	Condition 1296 1319	nadciśnieniem tętniczym
+N9	Reference T33 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T34	Date 1320 1329	od 10 lat
+T35	Investigation_result 1331 1355	zwykle RR ok. 110/65mmHg
+T36	Investigation_result 1357 1397	czasem rano wzrasta RR mx do 160/100mmHg
+T37	Symptom 1414 1425	bólem głowy
+N10	Reference T37 ICD10:R51	Ból głowy
+T38	Date 1431 1443	od 2 tygodni
+T39	Symptom 1444 1535	bóle w klatce piersiowej o charakterze rozpierania, trwające od kilku minut do wielu godzin
+N11	Reference T39 ICD10:R07.3	Inne bóle w klatce piersiowej
+R4	Dat Arg1:T38 Arg2:T39	
+R5	Dat Arg1:T34 Arg2:T33	
+T40	Symptom 1537 1565	bez reakcji na leki p/bólowe
+T41	Symptom 1567 1600	bez związku z wysiłkiem fizycznym
+R6	Dat Arg1:T38 Arg2:T40	
+R7	Dat Arg1:T38 Arg2:T41	
+T42	Investigation_result 1624 1633	chol- 250
+T43	Investigation_result 1635 1642	TG- 240
+T44	Investigation_result 1644 1650	TSH- 6
+T45	Date 1652 1669	od listopada 2017
+R8	Dat Arg1:T45 Arg2:T14	
+R9	Dat Arg1:T45 Arg2:T15	
+T46	Condition 1699 1708	menopauza
+T47	Date 1709 1717	od 2 lat
+T48	Drug 1723 1741	leków hormonalnych
+T49	Date 1744 1754	przed laty
+T50	Condition 1755 1771	choroba wrzodowa
+N12	Reference T50 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T51	Date 1773 1781	od dawna
+T52	Negation 1782 1785	bez
+T53	Symptom 1786 1798	dolegliwości
+R10	Dat Arg1:T47 Arg2:T46	
+R11	Neg Arg1:T16 Arg2:T48	
+R12	Dat Arg1:T49 Arg2:T50	
+R13	Dat Arg1:T51 Arg2:T53	
+R14	Neg Arg1:T52 Arg2:T53	
+T54	Negation 1801 1807	Neguje
+T55	Symptom 1809 1821	zasłabnięcia
+N13	Reference T55 ICD10:R55	Omdlenie i zapaść
+T56	Symptom 1823 1831	omdlenia
+N14	Reference T56 ICD10:R55	Omdlenie i zapaść
+T57	Symptom 1833 1843	krwawienia
+N15	Reference T57 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T58	Symptom 1845 1858	czarne stolce
+N16	Reference T58 ICD10:K92.1	Stolce smołowate
+T59	Symptom 1860 1876	brunatne wymioty
+N17	Reference T59 ICD10:K92.1	Stolce smołowate
+T60	Symptom 1878 1892	duszność nocną
+N18	Reference T60 ICD10:R06.0	Duszność
+T61	Symptom 1894 1909	obrzęki podudzi
+N19	Reference T61 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T62	Condition 1911 1913	DM
+N20	Reference T62 ICD10:E14	Cukrzyca nieokreślona
+T63	Condition 1915 1925	udar mózgu
+N21	Reference T63 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T64	Condition 1927 1938	zawał serca
+N22	Reference T64 ICD10:I25.2	Przebyty zawał serca
+R15	Neg Arg1:T54 Arg2:T55	
+R16	Neg Arg1:T54 Arg2:T56	
+R17	Neg Arg1:T54 Arg2:T57	
+R18	Neg Arg1:T54 Arg2:T58	
+R19	Neg Arg1:T54 Arg2:T59	
+R20	Neg Arg1:T54 Arg2:T60	
+R21	Neg Arg1:T54 Arg2:T61	
+R22	Neg Arg1:T54 Arg2:T62	
+R23	Neg Arg1:T54 Arg2:T63	
+R24	Neg Arg1:T54 Arg2:T64	
+T65	Treatment 1942 1959	Przebyte operacje
+N23	Reference T65 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T66	Treatment 1961 1973	2x usunięcie
+A4	Status T66 Historical_Insignificant
+N24	Reference T66 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T67	Condition 1974 1989	torbieli piersi
+A5	Status T67 Historical_Insignificant
+N25	Reference T67 ICD10:N60.0	Samotna torbiel piersi
+T68	Treatment 1991 1993	CC
+A6	Status T68 Historical_Insignificant
+N26	Reference T68 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+T69	Treatment 1995 2008	appendektomia
+A7	Status T69 Historical_Insignificant
+N27	Reference T69 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T70	Behaviour 2010 2025	Palenie tytoniu
+N28	Reference T70 ICD10:Z72.0	Używanie tytoniu
+T71	Behaviour 2033 2044	Inne używki
+N29	Reference T71 ICD10:Z72	Problemy związane ze stylem życia
+T72	Condition 2050 2059	Uczulenia
+N30	Reference T72 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T73	Condition 2092 2095	WZW
+N31	Reference T73 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T74	Condition 2102 2111	borelioza
+N32	Reference T74 ICD10:A69.2	Choroba z Lyme
+T75	Condition 2119 2122	tbc
+N33	Reference T75 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+R25	Neg Arg1:T4 Arg2:T70	
+R26	Neg Arg1:T5 Arg2:T71	
+R27	Neg Arg1:T6 Arg2:T72	
+R28	Neg Arg1:T1 Arg2:T73	
+R29	Neg Arg1:T2 Arg2:T74	
+R30	Neg Arg1:T3 Arg2:T75	
+T76	Date 2157 2168	w wieku 40+
+T77	Condition 2169 2183	3 zawały serca
+N34	Reference T77 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T78	Condition 2185 2190	zmarł
+N35	Reference T78 ICD10:R98	Zgon nieoczekiwany
+T79	Date 2191 2197	w 53rż
+T80	Negation 2199 2217	nie zgodził się na
+T81	Treatment 2218 2222	CABG
+A8	Status T81 Family
+N36	Reference T81 ICD10:Z95.1	Obecność pomostów naczyniowych aortalno-wieńcowych omijających typu bypass
+R31	Neg Arg1:T80 Arg2:T81	
+T82	Condition 2231 2251	hipercholesterolemia
+A9	Status T82 Family
+N37	Reference T82 ICD10:E78.0	Czysta hipercholesterolemia
+R32	Dat Arg1:T79 Arg2:T78	
+R33	Dat Arg1:T76 Arg2:T77	
+T83	Behaviour 2269 2295	warunki mieszkaniowe dobre
+T84	Drug_dose 2361 2384	4/1,25mg 1x 1 tabl/rano
+T85	Drug_dose 2394 2413	25ug 1x 1 tabl/rano
+T86	Drug_dose 2421 2441	20mg 1x 1 tabl/wiecz
+T87	Investigation 2502 2523	badania laboratoryjne
+T88	Investigation 2525 2529	ECHO
+T89	Investigation 2531 2549	EKG metodą Holtera
+T90	Investigation 2551 2555	ABPM
+T91	Investigation 2557 2572	próba wysiłkowa
+R34	Drg Arg1:T7 Arg2:T84	
+R35	Drg Arg1:T8 Arg2:T85	
+R36	Drg Arg1:T9 Arg2:T86	
+A10	Status T77 Family
+A11	Status T78 Family

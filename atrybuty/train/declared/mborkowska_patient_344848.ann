@@ -1,0 +1,67 @@
+T1	Condition 800 845	Ubytek przegrody międzyprzedsionkowej typu II
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Treatment 848 903	zamknięcie zestawem Occlutech Figulla Flex II ASD 18 mm
+T3	Date 905 916	14/08/2019)
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Treatment 929 947	usunięciu tarczycy
+T5	Condition 1109 1133	podejrzeniem ASD typu II
+A1	Source T5 Declared
+N2	Reference T5 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T6	Treatment 1202 1220	usunięciu tarczycy
+T7	Symptom 1244 1256	zasłabnięcia
+N3	Reference T7 ICD10:R55	Omdlenie i zapaść
+T8	Symptom 1258 1267	duszności
+N4	Reference T8 ICD10:R06.0	Duszność
+T9	Symptom 1269 1300	typowe bóle w klatce piersiowej
+N5	Reference T9 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T10	Negation 1237 1243	Neguje
+R2	Neg Arg1:T10 Arg2:T7	
+R3	Neg Arg1:T10 Arg2:T8	
+R4	Neg Arg1:T10 Arg2:T9	
+T11	Date 1302 1316	W grudniu 2018
+T12	Symptom 1333 1359	uciski w klatce piersiowej
+T13	Symptom 1365 1380	kołatania serca
+N6	Reference T13 ICD10:R00.2	Kołatanie serca
+R5	Dat Arg1:T11 Arg2:T12	
+R6	Dat Arg1:T11 Arg2:T13	
+T14	Treatment 1384 1406	Przebyte operacje:  jw
+T15	Condition 1434 1437	WZW
+N7	Reference T15 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T16	Condition 1446 1455	borelioza
+N8	Reference T16 ICD10:A69.2	Choroba z Lyme
+T17	Condition 1463 1471	gruźlica
+N9	Reference T17 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T18	Condition 1477 1481	odra
+N10	Reference T18 ICD10:B05	Odra
+T19	Treatment 1487 1511	szczepiona na odrę - tak
+A2	Source T19 Confirmed
+N11	Reference T19 ICD10:B05	Odra
+T20	Negation 1482 1485	(-)
+R7	Neg Arg1:T20 Arg2:T18	
+T21	Negation 1472 1475	(-)
+R8	Neg Arg1:T21 Arg2:T17	
+T22	Negation 1458 1461	- )
+R9	Neg Arg1:T22 Arg2:T16	
+T23	Negation 1440 1443	- )
+R10	Neg Arg1:T23 Arg2:T15	
+T24	Condition 1529 1557	dziadek ze strony matki - HA
+A3	Status T24 Family
+N12	Reference T24 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T25	Behaviour 1558 1573	Palenie tytoniu
+N13	Reference T25 ICD10:T65.2	Tytoń i nikotyna
+T26	Negation 1575 1585	nie, nigdy
+R11	Neg Arg1:T26 Arg2:T25	
+T27	Behaviour 1586 1598	Inne używki:
+T28	Negation 1599 1602	nie
+R12	Neg Arg1:T28 Arg2:T27	
+T29	Negation 1614 1620	neguje
+T30	Condition 1603 1612	Uczulenia
+N14	Reference T30 ICD10:T78.4	Alergia, nieokreślona
+R13	Neg Arg1:T29 Arg2:T30	
+T31	Behaviour 1637 1663	warunki mieszkaniowe dobre
+T32	Drug 1684 1700	Leki: jak w IKZL
+T33	Condition 1230 1234	wola
+N15	Reference T33 ICD10:E04	Inne wole nietoksyczne
+T34	Condition 957 961	wola
+N16	Reference T34 ICD10:E04	Inne wole nietoksyczne
+R14	Dat Arg1:T3 Arg2:T1	

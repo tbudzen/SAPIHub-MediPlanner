@@ -1,0 +1,120 @@
+T1	Investigation 2288 2292	ECHO
+T2	Investigation 2294 2304	Holter EKG
+T3	Investigation 2306 2310	ABPM
+T4	Drug 2167 2174	Seronil
+T5	Drug_dose 2175 2202	0,37 1 tabl. 1xdz wieczorem
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Drug 2133 2142	Tamoxifen
+T7	Drug_dose 2143 2166	1 tabl. 1xdz wieczorem,
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Behaviour 2044 2070	warunki mieszkaniowe dobre
+T9	Condition 1956 1959	WZW
+N1	Reference T9 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T10	Condition 1966 1975	borelioza
+N2	Reference T10 ICD10:A69.2	
+T11	Condition 1983 1986	tbc
+N3	Reference T11 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T12	Condition 1992 1996	odra
+N4	Reference T12 ICD10:B05	Odra
+T13	Treatment 2002 2021	szczepienia na odrę
+N5	Reference T13 ICD10:B05	Odra
+T14	Negation 2022 2025	(-)
+R3	Neg Arg1:T14 Arg2:T13	
+T15	Negation 1997 2000	(-)
+R4	Neg Arg1:T15 Arg2:T12	
+T16	Negation 1987 1990	(-)
+R5	Neg Arg1:T16 Arg2:T11	
+T17	Negation 1976 1981	( - )
+R6	Neg Arg1:T17 Arg2:T10	
+T18	Negation 1960 1963	(-)
+R7	Neg Arg1:T18 Arg2:T9	
+T19	Negation 1924 1927	nie
+T20	Negation 1908 1911	nie
+T21	Negation 1890 1893	nie
+T22	Condition 1913 1922	Uczulenia
+N6	Reference T22 ICD10:T78.4	Alergia, nieokreślona
+R8	Neg Arg1:T19 Arg2:T22	
+T23	Behaviour 1895 1906	Inne używki
+R9	Neg Arg1:T20 Arg2:T23	
+T24	Behaviour 1873 1888	Palenie tytoniu
+N7	Reference T24 ICD10:T65,2	
+R10	Neg Arg1:T21 Arg2:T24	
+T25	Negation 1737 1743	Neguje
+T26	Symptom 1745 1757	zasłabnięcia
+N8	Reference T26 ICD10:R55	Omdlenie i zapaść
+T27	Symptom 1759 1767	omdlenia
+N9	Reference T27 ICD10:R55	Omdlenie i zapaść
+T28	Symptom 1769 1779	krwawienia
+N10	Reference T28 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T29	Symptom 1781 1794	czarne stolce
+N11	Reference T29 ICD10:K92.1	Stolce smołowate
+T30	Symptom 1796 1812	brunatne wymioty
+N12	Reference T30 ICD10:K92.0	Wymioty krwawe
+T31	Condition 1814 1816	HA
+N13	Reference T31 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T32	Condition 1818 1820	DM
+N14	Reference T32 ICD10:E13	Inne określone postacie cukrzycy
+T33	Condition 1822 1832	udar mózgu
+N15	Reference T33 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T34	Condition 1834 1845	zawał serca
+N16	Reference T34 ICD10:I25.2	Przebyty zawał serca
+R11	Neg Arg1:T25 Arg2:T26	
+R12	Neg Arg1:T25 Arg2:T27	
+R13	Neg Arg1:T25 Arg2:T28	
+R14	Neg Arg1:T25 Arg2:T29	
+R15	Neg Arg1:T25 Arg2:T30	
+R16	Neg Arg1:T25 Arg2:T31	
+R17	Neg Arg1:T25 Arg2:T32	
+R18	Neg Arg1:T25 Arg2:T33	
+R19	Neg Arg1:T25 Arg2:T34	
+T35	Symptom 450 465	Kołatania serca
+N17	Reference T35 ICD10:R00.2	Kołatanie serca
+T36	Symptom 888 903	Kołatania serca
+N18	Reference T36 ICD10:R00.2	Kołatanie serca
+T37	Symptom 1665 1680	kołatania serca
+N19	Reference T37 ICD10:R00.2	Kołatanie serca
+T38	Symptom 1726 1735	duszności
+N20	Reference T38 ICD10:R06.0	Duszność
+T39	Symptom 1687 1724	towarzyszących mu: ucisku za mostkiem
+T40	Treatment 1302 1330	operacji kręgosłupa szyjnego
+T41	Date 1332 1336	2013
+R20	Dat Arg1:T41 Arg2:T40	
+T42	Treatment 913 941	operacji kręgosłupa szyjnego
+T43	Date 943 949	2013 r
+R21	Dat Arg1:T43 Arg2:T42	
+T44	Treatment 1344 1381	leczeniu chirurgicznym oszczędzającym
+T45	Condition 1382 1400	raka piersi prawej
+N21	Reference T45 ICD10:C50	Nowotwór złośliwy piersi
+T46	Condition 507 525	raka piersi prawej
+N22	Reference T46 ICD10:C50	Nowotwór złośliwy piersi
+T47	Date 1402 1406	2016
+R22	Dat Arg1:T47 Arg2:T45	
+R23	Dat Arg1:T47 Arg2:T44	
+T48	Condition 998 1016	raka piersi prawej
+N23	Reference T48 ICD10:C50	Nowotwór złośliwy piersi
+T49	Treatment 1412 1463	radioterapii z tego powodu w trakcie hormonoterapii
+T50	Drug 1466 1475	Tamoxifen
+T51	Date 1498 1508	do 2021 r.
+R24	Dat Arg1:T51 Arg2:T50	
+T52	Condition 1513 1543	łuszczycowym zapaleniem stawów
+N24	Reference T52 ICD10:L40.5	
+T53	Treatment 960 997	leczeniu chirurgicznym oszczędzającym
+T54	Date 1018 1022	2016
+R25	Dat Arg1:T54 Arg2:T48	
+R26	Dat Arg1:T54 Arg2:T53	
+T55	Treatment 1028 1079	radioterapii z tego powodu w trakcie hormonoterapii
+T56	Drug 1082 1091	Tamoxifen
+T57	Date 1093 1123	w planach stosowanie do 2021 r
+T58	Condition 1127 1155	Łuszczycowe zapalenie stawów
+N25	Reference T58 ICD10:L40.5	
+T59	Treatment 632 660	operacji kręgosłupa szyjnego
+T60	Date 662 668	2013 r
+R27	Dat Arg1:T60 Arg2:T59	
+T61	Condition 594 622	Łuszczycowe zapalenie stawów
+N26	Reference T61 ICD10:L40.5	
+T62	Treatment 542 554	radioterapii
+T63	Treatment 556 580	w trakcie hormonoterapii
+T64	Drug 583 592	Tamoxifen
+T65	Date 527 531	2016
+R28	Dat Arg1:T65 Arg2:T46	
+T66	Treatment 1850 1871	Przebyte operacje: jw

@@ -1,0 +1,264 @@
+T1	Behaviour 624 664	Dieta lekkostrawna , niskocholesterolowa
+T2	Investigation 6568 6578	echo serca
+T3	Investigation 6580 6583	TET
+T4	Investigation 6585 6589	ABPM
+T5	Investigation 6591 6601	Holter ekg
+T6	Investigation 6603 6621	rtg kl. piersiowej
+T7	Drug 6508 6515	Roswera
+T8	Drug_dose 6516 6539	20 mg 1 tabl. wieczorem
+T9	Drug 6476 6487	Betaloc ZOK
+T10	Drug_dose 6488 6506	50 mg 1 tabl. rano
+T11	Drug 6446 6454	Lecalpin
+T12	Drug_dose 6455 6473	10 mg 1 tabl. rano
+T13	Drug 6416 6424	Actelsar
+T14	Drug_dose 6425 6443	80 mg 1 tabl. rano
+T15	Behaviour 6388 6400	pielęgniarka
+T16	Behaviour 6345 6362	Uzależnienie inne
+T17	Negation 6364 6370	neguje
+R1	Neg Arg1:T17 Arg2:T16	
+T18	Behaviour 6322 6343	Alkohol: okazjonalnie
+N1	Reference T18 ICD10:Z72.1	Używanie alkoholu
+T19	Behaviour 6284 6294;6296 6319	Nikotynizm 5-7 pap./dzien od 30 la
+N2	Reference T19 ICD10:T65.2	Tytoń i nikotyna
+T20	Condition 6267 6274	Alergie
+N3	Reference T20 ICD10:T78.4	Alergia, nieokreślona
+T21	Negation 6276 6282	neguje
+R2	Neg Arg1:T21 Arg2:T20	
+T22	Treatment 6162 6197	artroskopia stawu kolanowego lewego
+A1	Status T22 Historical_Insignificant
+T23	Date 6200 6210	9 lat temu
+R3	Dat Arg1:T23 Arg2:T22	
+T24	Treatment 6213 6220	prawego
+T25	Date 6221 6233	przed rokiem
+R4	Dat Arg1:T25 Arg2:T24	
+T26	Investigation 6031 6086	Próba wysiłkowa na bieżni wykonana wg protokołu Bruce'a
+T27	Investigation_result 6087 6138	ujemna przy uzyskanym maksymalnym obciążeniu 7 METs
+R5	Inv Arg1:T26 Arg2:T27	
+T28	Investigation 5955 5977	usg tętnic dogłowowych
+T29	Investigation_result 5978 6025	bez  przewężeń w tętnicach szyjnych i kręgowych
+R6	Inv Arg1:T28 Arg2:T29	
+T30	Investigation 5884 5906	EKG metodą Holterowską
+T31	Investigation_result 5907 5947	nie stwierdzono istotnych zaburzeń rytmu
+R7	Inv Arg1:T30 Arg2:T31	
+T32	Investigation 5739 5784	24 godzinnej rejestracji ciśnienia tętniczego
+T33	Investigation_result 5785 5877	średnie wartości w ciągu doby wynosiły 116/69 mmHg, z typowym spadkiem wartości w ciągu nocy
+R8	Inv Arg1:T32 Arg2:T33	
+T34	Investigation 5666 5682	echokardiogramie
+T35	Investigation_result 5683 5731	uwidoczniono izolowaną dysfunkcję rozkurczową LK
+T36	Condition 5301 5328;5329 5351	nadciśnienie tętnicze I st. wg ESC/ESH skorygowane
+N4	Reference T36 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T37	Condition 5353 5388	izolowana dysfunkcja rozkurczowa LK
+N5	Reference T37 ICD10:I50	Niewydolność serca
+T38	Condition 5390 5424	nadkomorowe zaburzenia rytmu serca
+N6	Reference T38 ICD10:I47.1	Częstoskurcz nadkomorowy
+T39	Condition 5426 5449	hiperlipidemia mieszana
+N7	Reference T39 ICD10:E78.2	Hiperlipidemia mieszana
+T40	Symptom 5451 5464	zawroty głowy
+N8	Reference T40 ICD10:R42	Zawroty głowy i odurzenie
+T41	Treatment 5474 5490	cholecystektomii
+A3	Status T41 Historical_Insignificant
+T42	Date 5493 5507	w wieku 23 lat
+R9	Dat Arg1:T42 Arg2:T41	
+T43	Symptom 5547 5560	kołatań serca
+N9	Reference T43 ICD10:R00.2	Kołatanie serca
+T44	Date 5564 5572	3 tygodn
+R10	Dat Arg1:T44 Arg2:T43	
+T45	Investigation 5578 5581	ekg
+T46	Investigation_result 5582 5625	poj. ExV, pary, okresowo bigeminia komorowa
+R11	Inv Arg1:T45 Arg2:T46	
+R12	Drg Arg1:T13 Arg2:T14	
+R13	Drg Arg1:T11 Arg2:T12	
+R14	Drg Arg1:T9 Arg2:T10	
+R15	Drg Arg1:T7 Arg2:T8	
+T47	Drug 4959 4966	Roswera
+T48	Drug_dose 4967 4990	20 mg 1 tabl. wieczorem
+T49	Drug 4888 4901	MagneB6 forte
+T50	Drug_dose 4902 4926	2 tabl. rano i wieczorem
+T51	Drug 4773 4783	Isoptin SR
+T52	Drug_dose 4784 4883	120 mg 1 tabl. rano (dawka do optymalizacji pod kontrolą lekarza POZ z oceną częstości rytmu serca)
+T53	Drug 4740 4748	Lecalpin
+T54	Drug_dose 4749 4767	10 mg 1 tabl. rano
+R16	Drg Arg1:T53 Arg2:T54	
+R17	Drg Arg1:T51 Arg2:T52	
+R18	Drg Arg1:T49 Arg2:T50	
+R19	Drg Arg1:T47 Arg2:T48	
+T55	Drug 4707 4715	Actelsar
+T56	Drug_dose 4716 4734	80 mg 1 tabl. rano
+T57	Behaviour 4656 4682	warunki mieszkaniowe dobre
+T58	Negation 4633 4639	neguje
+T59	Negation 4618 4621	nie
+T60	Behaviour 4555 4603	Palenie tytoniu: 5 papierosów dziennie od 30 lat
+N10	Reference T60 ICD10:Z72.0	Używanie tytoniu
+T61	Behaviour 4605 4616	Inne używki
+T62	Condition 4622 4631	Uczulenia
+N11	Reference T62 ICD10:T78.4	Alergia, nieokreślona
+R20	Neg Arg1:T58 Arg2:T62	
+R21	Neg Arg1:T59 Arg2:T61	
+T63	Condition 4470 4473	WZW
+N12	Reference T63 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T64	Condition 4483 4492	borelioza
+N13	Reference T64 ICD10:A69.2	Choroba z Lyme
+T65	Condition 4499 4503	Odra
+N14	Reference T65 ICD10:B05	Odra
+T66	Negation 4506 4507	-
+T67	Negation 4495 4496	-
+T68	Negation 4476 4479	-  
+R22	Neg Arg1:T68 Arg2:T63	
+R23	Neg Arg1:T67 Arg2:T64	
+R24	Neg Arg1:T66 Arg2:T65	
+T69	Condition 4535 4553	matka - ca. piersi
+A4	Status T69 Family
+N15	Reference T69 ICD10:C50	Nowotwór złośliwy piersi
+T70	Treatment 4316 4351	artroskopia stawu kolanowego lewego
+A5	Status T70 Historical_Insignificant
+T71	Date 4353 4363	9 lat temu
+R25	Dat Arg1:T71 Arg2:T70	
+T72	Treatment 4367 4374	prawego
+T73	Date 4376 4388	przed rokiem
+R26	Dat Arg1:T73 Arg2:T72	
+T74	Treatment 4274 4290	cholecystektomii
+A7	Status T74 Historical_Insignificant
+T75	Date 4291 4305	w wieku 23 lat
+R27	Dat Arg1:T75 Arg2:T74	
+T76	Condition 4251 4264	Zawroty głowy
+N16	Reference T76 ICD10:R42	
+T77	Condition 4205 4250	Łagodna niedomykalność zastawki trójdzielnej.
+N17	Reference T77 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T78	Condition 4157 4172	Miażdżycy aorty
+N18	Reference T78 ICD10:I70.0	Miażdżyca aorty
+T79	Condition 4124 4155	Nieprawidłowa glikemia na czczo
+T80	Condition 4174 4204	Poszerzenie aorty wstępującej.
+N19	Reference T80 ICD10:I71	Tętniak i rozwarstwienie aorty
+T81	Condition 4112 4122	Nikotynizm
+T82	Condition 4103 4110	Nadwaga
+N21	Reference T82 ICD10:E66	Otyłość
+T83	Condition 4078 4101	Hiperlipidemia mieszana
+N22	Reference T83 ICD10:E78.2	Hiperlipidemia mieszana
+T84	Condition 4022 4076	Nadciśnienie tętnicze I stopnia wg ESC/ESH skorygowane
+N23	Reference T84 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T85	Negation 3834 3840	Neguje
+T86	Symptom 3841 3853	zasłabnięcia
+N24	Reference T86 ICD10:R55	Omdlenie i zapaść
+T87	Condition 3899 3933	Nadkomorowe (ekstrasystolie, PSVT)
+N25	Reference T87 ICD10:I47.1	Częstoskurcz nadkomorowy
+T88	Condition 3936 4020	komorowe (pojedyncze ekstrasystolie, pary, bi – i trigeminia) zaburzenia rytmu serca
+N26	Reference T88 ICD10:I47.2	Częstoskurcz komorowy
+T89	Symptom 3737 3769	okresowe uczucie kołatania serca
+N27	Reference T89 ICD10:R00.2	Kołatanie serca
+T90	Drug 3823 3831	Isoptine
+T91	Symptom 3663 3727	niecharakterystycznych dolegliwości bólowych w klatce piersiowej
+T92	Drug 3448 3455	Roswera
+T93	Drug_dose 3456 3479	20 mg 1 tabl. wieczorem
+R28	Drg Arg1:T92 Arg2:T93	
+T94	Drug 3375 3388	MagneB6 forte
+T95	Drug_dose 3389 3413	2 tabl. rano i wieczorem
+T96	Drug 3258 3268	Isoptin SR
+T97	Drug_dose 3269 3367	120 mg 1 tabl. rano (dawka do optymalizacji pod kontrolą lekarza POZ z oceną częstości rytmu serca
+T98	Drug 3223 3231	Lecalpin
+T99	Drug_dose 3232 3250	10 mg 1 tabl. rano
+T100	Drug 3188 3196	Actelsar
+T101	Drug_dose 3197 3215	80 mg 1 tabl. rano
+R29	Drg Arg1:T100 Arg2:T101	
+R30	Drg Arg1:T98 Arg2:T99	
+R31	Drg Arg1:T96 Arg2:T97	
+R32	Drg Arg1:T94 Arg2:T95	
+T102	Behaviour 3097 3142	stały, umiarkowany, aerobowy wysiłek fizyczny
+T103	Behaviour 3070 3091	zakaz palenia tytoniu
+T104	Behaviour 3042 3061	redukcja masy ciała
+T105	Behaviour 3024 3034	dieta DASH
+T106	Investigation 2987 3016	okresowa kontrola lipidogramu
+T107	Investigation 2950 2979	kontrola ciśnienia tętniczego
+T108	Treatment 2432 2467	artroskopia stawu kolanowego lewego
+A8	Status T108 Historical_Insignificant
+T109	Treatment 2483 2490	prawego
+T110	Date 2492 2504	przed rokiem
+R33	Dat Arg1:T110 Arg2:T109	
+T111	Negation 2468 2480	(9 lat temu)
+R34	Neg Arg1:T111 Arg2:T108	
+T112	Treatment 2390 2406	cholecystektomii
+A10	Status T112 Historical_Insignificant
+T113	Date 2407 2421	w wieku 23 lat
+R35	Dat Arg1:T113 Arg2:T112	
+T114	Condition 2367 2380	Zawroty głowy
+N28	Reference T114 ICD10:R42	Zawroty głowy i odurzenie
+T115	Condition 2321 2365	Łagodna niedomykalność zastawki trójdzielnej
+N29	Reference T115 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T116	Condition 2290 2319	Poszerzenie aorty wstępującej
+T117	Condition 2273 2289	Miażdżycy aorty.
+N30	Reference T117 ICD10:I70.0	Miażdżyca aorty
+T118	Condition 2240 2271	Nieprawidłowa glikemia na czczo
+T119	Behaviour 2228 2238	Nikotynizm
+N31	Reference T119 ICD10:T65.2	Tytoń i nikotyna
+T120	Condition 2219 2226	Nadwaga
+N32	Reference T120 ICD10:E66	Otyłość
+T121	Condition 2194 2217	Hiperlipidemia mieszana
+N33	Reference T121 ICD10:E78.2	Hiperlipidemia mieszana
+T122	Condition 2138 2193	Nadciśnienie tętnicze I stopnia wg ESC/ESH skorygowane.
+N34	Reference T122 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T123	Condition 2015 2048	Nadkomorowe (ekstrasystolie, PSVT
+N35	Reference T123 ICD10:I47.1	Częstoskurcz nadkomorowy
+T124	Condition 2052 2136	komorowe (pojedyncze ekstrasystolie, pary, bi – i trigeminia) zaburzenia rytmu serca
+N36	Reference T124 ICD10:I47.2	Częstoskurcz komorowy
+T125	Behaviour 668 699	Zaprzestanie palenia papierosów
+T126	Investigation 711 785	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T128	Drug 887 895	Actelsar
+T129	Drug_dose 896 914	80 mg 1 tabl. rano
+T130	Drug 917 925	Lecalpin
+T131	Drug_dose 926 944	10 mg 1 tabl. rano
+T132	Drug 947 957	Isoptin SR
+T133	Drug_dose 958 980	120 mg 2x dz po 1 tabl
+T134	Drug 984 997	MagneB6 forte
+T135	Drug_dose 998 1022	2 tabl. rano i wieczorem
+T136	Drug 1052 1059	Roswera
+T137	Drug_dose 1060 1083	15 mg 1 tabl. wieczorem
+T138	Symptom 1322 1347	bólów w klatce piersiowej
+T139	Condition 1349 1394	Łagodna niedomykalność zastawki trójdzielnej.
+N37	Reference T139 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T140	Condition 1396 1429	Nadkomorowe (ekstrasystolie, PSVT
+N38	Reference T140 ICD10:I47.1	Częstoskurcz nadkomorowy
+T141	Condition 1433 1517	komorowe (pojedyncze ekstrasystolie, pary, bi – i trigeminia) zaburzenia rytmu serca
+N39	Reference T141 ICD10:I47.2	Częstoskurcz komorowy
+T142	Condition 1531 1552	Nadciśnienie tętnicze
+N40	Reference T142 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T143	Condition 1554 1577	Hiperlipidemia mieszana
+N41	Reference T143 ICD10:E78.2	Hiperlipidemia mieszana
+T144	Condition 1579 1586	Nadwaga
+N42	Reference T144 ICD10:E66	Otyłość
+T145	Condition 1588 1598	Nikotynizm
+T146	Condition 1600 1631	Nieprawidłowa glikemia na czczo
+N43	Reference T145 ICD10:F17.2	
+T147	Condition 1633 1648	Miażdżyca aorty
+N44	Reference T147 ICD10:I70.0	Miażdżyca aorty
+T148	Condition 1650 1663	Zawroty głowy
+N45	Reference T148 ICD10:R42	Zawroty głowy i odurzenie
+T149	Investigation_result 1673 1689	cholecystektomii
+T150	Date 1690 1705	w wieku 23 lat.
+R36	Dat Arg1:T150 Arg2:T149	
+T151	Treatment 1715 1750	artroskopia stawu kolanowego lewego
+T152	Date 1752 1762	9 lat temu
+A11	Status T151 Historical_Insignificant
+T153	Treatment 1766 1773	prawego
+A12	Status T153 Historical_Insignificant
+T154	Date 1775 1787	przed rokiem
+R37	Dat Arg1:T154 Arg2:T153	
+R38	Dat Arg1:T152 Arg2:T151	
+N20	Reference T81 ICD10:F17.2	
+T127	Investigation 802 836	kontrola ciśnienia tętniczego krwi
+R39	Drg Arg1:T128 Arg2:T129	
+R40	Drg Arg1:T130 Arg2:T131	
+R41	Drg Arg1:T132 Arg2:T133	
+R42	Drg Arg1:T134 Arg2:T135	
+R43	Drg Arg1:T136 Arg2:T137	
+T155	Investigation 5031 5041	Echo serca
+T156	Investigation 5044 5059	Próba Wysiłkowa
+T157	Treatment 4391 4414	Przebyte operacje:  j.w
+T158	Negation 6250 6265	: bez znaczenia
+T159	Condition 6235 6250	Wywiad rodzinny
+A13	Status T159 Family
+R44	Neg Arg1:T158 Arg2:T159	
+N46	Reference T146 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+N47	Reference T118 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+R45	Neg Arg1:T85 Arg2:T86	
+N48	Reference T79 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+R46	Drg Arg1:T55 Arg2:T56	
+R47	Inv Arg1:T34 Arg2:T35	

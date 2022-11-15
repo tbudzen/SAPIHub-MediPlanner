@@ -1,0 +1,99 @@
+T1	Condition 447 491	Przewlekła choroba wieńcowa - I klasa wg CCS
+N1	Reference T1 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T2	Condition 505 568	zawale mięśnia sercowego z uniesieniem odcinka ST ściany dolnej
+N2	Reference T2 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T3	Treatment 569 610	leczonym PCI RPL z implantacją stentu DES
+T4	Date 612 620	07/2017)
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Condition 626 668	Nadciśnienie tętnicze wtórne nerkopochodne
+N3	Reference T5 ICD10:I15.1	Nadciśnienie wtórne do innej patologii nerek
+T6	Treatment 679 715	angioplastyce tętnicy nerkowej lewej
+T7	Date 717 724	06/2018
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Condition 728 801	powodu 90% zwężenia; zwężenie prawej tętnicy nerkowej (dwukrotnie do 50%)
+N4	Reference T8 ICD10:I77.1	Zwężenie tętnicy
+T9	Condition 806 818	Dyslipidemia
+N5	Reference T9 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T10	Drug 838 845	statyną
+T11	Drug 848 858	ezetymibem
+T12	Condition 864 889	Cukrzyca typu 2 - de novo
+N6	Reference T12 ICD10:E11	Cukrzyca insulinoniezależna
+T13	Condition 895 908	Hiperurykemia
+N7	Reference T13 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T14	Condition 913 920	Otyłość
+N8	Reference T14 ICD10:E66	Otyłość
+T15	Behaviour 1229 1268	Dieta lekkostrawna, niskocholesterolowa
+T16	Condition 1415 1460	przewlekłą chorobą wieńcową w I klasie wg CCS
+N9	Reference T16 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T17	Condition 1465 1488	OZW STEMI ściany dolnej
+N10	Reference T17 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T18	Treatment 1489 1523	leczonym PCI RPL z implantacją DES
+T19	Date 1525 1532	07.2017
+R5	Dat Arg1:T19 Arg2:T18	
+T20	Condition 1535 1581	nadciśnieniem tętniczym wtórnym nerkopochodnym
+N11	Reference T20 ICD10:I15.1	Nadciśnienie wtórne do innej patologii nerek
+T21	Condition 1584 1665	zwężenie lewej tętnicy nerkowej 90% i prawej tętnicy nerkowej (dwukrotnie do 50%)
+N12	Reference T21 ICD10:I77.1	Zwężenie tętnicy
+T22	Treatment 1670 1706	angioplastyce tętnicy nerkowej lewej
+T23	Date 1708 1715	06.2018
+R6	Dat Arg1:T23 Arg2:T22	
+T24	Condition 1720 1751	otyłością II st. (BMI 39 kg/m2)
+N13	Reference T24 ICD10:E66	Otyłość
+T25	Condition 1753 1773	hipercholesterolemią
+N14	Reference T25 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T26	Drug 1793 1800	statyną
+T27	Condition 1802 1815	hiperurykemią
+N15	Reference T27 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T28	Investigation_result 1944 1961	tętno ok. 100/min
+T29	Date 1923 1935	d około roku
+R7	Dat Arg1:T29 Arg2:T28	
+T30	Symptom 1971 1983	zasłabnięcia
+N16	Reference T30 ICD10:R55	Omdlenie i zapaść
+T31	Symptom 1985 1994	duszności
+N17	Reference T31 ICD10:R06.0	Duszność
+T32	Symptom 1996 2027	typowe bóle w klatce piersiowej
+N18	Reference T32 ICD10:R07.3	Inne bóle w klatce piersiowej
+T33	Negation 1964 1970	Neguje
+R8	Neg Arg1:T33 Arg2:T30	
+R9	Neg Arg1:T33 Arg2:T31	
+R10	Neg Arg1:T33 Arg2:T32	
+T34	Negation 2049 2055	neguje
+T35	Treatment 2029 2046	Przebyte operacje
+R11	Neg Arg1:T34 Arg2:T35	
+T36	Condition 2083 2086	WZW
+N19	Reference T36 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T37	Condition 2095 2104	borelioza
+N20	Reference T37 ICD10:A69.2	Choroba z Lyme
+T38	Condition 2112 2120	gruźlica
+N21	Reference T38 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T39	Condition 2126 2130	odra
+N22	Reference T39 ICD10:B05	Odra
+T40	Treatment 2136 2155	szczepienie na odrę
+N23	Reference T40 ICD10:B05	Odra
+T41	Negation 2157 2189	chyba tak, nie pamięta dokładnie
+A1	Source T41 Declared
+R12	Neg Arg1:T41 Arg2:T40	
+T42	Negation 2131 2134	(-)
+R13	Neg Arg1:T42 Arg2:T39	
+T43	Negation 2121 2124	(-)
+R14	Neg Arg1:T43 Arg2:T38	
+T44	Negation 2105 2110	( - )
+R15	Neg Arg1:T44 Arg2:T37	
+T45	Negation 2087 2092	( - )
+R16	Neg Arg1:T45 Arg2:T36	
+T46	Condition 2208 2210	HA
+N24	Reference T46 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T47	Negation 2265 2271	neguje
+T48	Negation 2285 2288	nie
+T49	Negation 2300 2306	neguje
+T50	Behaviour 2248 2263	Palenie tytoniu
+N25	Reference T50 ICD10:T65.2	Tytoń i nikotyna
+R17	Neg Arg1:T47 Arg2:T50	
+T51	Behaviour 2272 2283	Inne używki
+R18	Neg Arg1:T48 Arg2:T51	
+T52	Condition 2289 2298	Uczulenia
+R19	Neg Arg1:T49 Arg2:T52	
+T53	Behaviour 2323 2349	warunki mieszkaniowe dobre
+T54	Drug 2370 2386	Leki: jak w IKZL
+A2	Status T46 Family
+N26	Reference T52 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

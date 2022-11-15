@@ -1,0 +1,105 @@
+T1	Drug 567 579	Tertensif SR
+T2	Drug 582 589	Nebilet
+T3	Condition 783 828	Łagodna niedomykalność zastawki trójdzielnej.
+N1	Reference T3 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T4	Condition 829 863	Nadkomorowe zaburzenia rytmu serca
+N2	Reference T4 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T5	Condition 866 887	pobudzenia pojedyncze
+T6	Condition 889 893	pary
+T7	Condition 896 931	napadowy częstoskurcz przedsionkowy
+T8	Condition 934 964	Pojedyncze pobudzenia komorowe
+N3	Reference T8 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T9	Condition 966 988	 Nadciśnienie tętnicze
+N4	Reference T9 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T10	Condition 990 1010	Hipetrójglicerydemia
+N5	Reference T10 ICD10:E78.1	Czysta hiperglicerydemia
+T11	Condition 1013 1020	Otyłość
+N6	Reference T11 ICD10:E66	Otyłość
+T12	Condition 1022 1035	Hiperurykemia
+N7	Reference T12 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T13	Condition 1037 1064	Cechy stłuszczenia wątroby.
+N8	Reference T13 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T14	Condition 1066 1099	Choroba zwyrodnieniowa kręgosłupa
+N9	Reference T14 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T15	Investigation 1398 1423	angi-CT tętnic wieńcowych
+T16	Behaviour 1460 1515	Dieta lekkostrawna , niskocholesterolowa, niskobiałkowa
+T17	Behaviour 1517 1536	Redukcja masy ciała
+T18	Investigation 1549 1624	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek.
+T19	Investigation 1640 1674	kontrola ciśnienia tętniczego krwi
+T20	Drug 1725 1732	Nebilet
+T21	Drug 1763 1773	Prestarium
+T22	Drug 1805 1811	Diuver
+T23	Drug_dose 1733 1761	5 mg 1x dz po 1/2 tabl. rano
+R1	Drg Arg1:T20 Arg2:T23	
+T24	Drug_dose 1774 1803	5 mg 1xdz po 1 tab. wieczorem
+R2	Drg Arg1:T21 Arg2:T24	
+T25	Drug_dose 1812 1836	2,5 mg 1x dz po 1/2 tabl
+R3	Drg Arg1:T22 Arg2:T25	
+T26	Symptom 2010 2041	pogorszenia tolerancji wysiłku,
+N10	Reference T26 ICD10:R53	Złe samopoczucie i zmęczenie
+T27	Symptom 2042 2062	duszności wysiłkowej
+N11	Reference T27 ICD10:R06.0	Duszność
+T28	Symptom 2064 2088	obrzęków kończyn dolnych
+N12	Reference T28 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T29	Symptom 2149 2197	ucisk w okolicy serca , nie związany z wysiłkiem
+T30	Symptom 2206 2218	zasłabnięcia
+N13	Reference T30 ICD10:R55	Omdlenie i zapaść
+T31	Negation 2199 2205	Neguje
+R5	Neg Arg1:T31 Arg2:T30	
+T32	Condition 2236 2257	Nadciśnienie tętnicze
+N14	Reference T32 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T33	Condition 2259 2292	Choroba zwyrodnieniowa kręgosłupa
+T34	Treatment 2323 2331	operacji
+T35	Condition 2332 2355	żylaków kończyn dolnych
+N16	Reference T35 ICD10:I83	Żylaki kończyn dolnych
+T36	Date 2356 2371	5 i 10 lat temu
+R6	Dat Arg1:T36 Arg2:T35	
+R7	Dat Arg1:T36 Arg2:T34	
+T37	Negation 2397 2401	brak
+T38	Treatment 2375 2395	Leczenie przewlekłe:
+T39	Condition 2443 2452	borelioza
+N17	Reference T39 ICD10:A69.2	Choroba z Lyme
+T40	Condition 2430 2433	WZW
+T41	Negation 2434 2440	( -  )
+R8	Neg Arg1:T41 Arg2:T40	
+T42	Negation 2453 2458	( - )
+R9	Neg Arg1:T42 Arg2:T39	
+T43	Condition 2483 2499	astma oskrzelowa
+A1	Status T43 Family
+N19	Reference T43 ICD10:J45.9	Astma oskrzelowa, nieokreślona
+T44	Behaviour 2509 2524	Palenie tytoniu
+N20	Reference T44 ICD10:Z72.0	Używanie tytoniu
+T45	Negation 2526 2534	nie pali
+R10	Neg Arg1:T45 Arg2:T44	
+T46	Date 2535 2544	od 15 lat
+R11	Dat Arg1:T46 Arg2:T44	
+T47	Negation 2559 2562	nie
+T48	Behaviour 2546 2557	Inne używki
+R12	Neg Arg1:T47 Arg2:T48	
+T49	Condition 2563 2572	Uczulenia
+N21	Reference T49 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T50	Behaviour 2614 2640	warunki mieszkaniowe dobre
+T51	Drug 2665 2677	Tertensif SR
+T52	Drug_dose 2678 2688	1x dz rano
+R13	Drg Arg1:T51 Arg2:T52	
+T53	Drug 2691 2699	Ketonola
+T54	Drug_dose 2700 2708	doraźnie
+R14	Drg Arg1:T53 Arg2:T54	
+T55	Investigation 2724 2734	Echo serca
+T56	Investigation 2737 2747	Holter EKG
+T57	Investigation 2751 2753	RR
+T58	Investigation 2756 2771	Próba Wysiłkowa
+N22	Reference T5 ICD10:i49.4	
+N23	Reference T6 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+N24	Reference T7 ICD10:I47.1	Częstoskurcz nadkomorowy
+N18	Reference T40 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+R15	Neg Arg1:T37 Arg2:T38	
+N25	Reference T29 ICD10:R07.3	Inne bóle w klatce piersiowej
+T59	Symptom 2091 2098	górnych
+N26	Reference T59 ICD10:R22.3	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny górnej
+N27	Reference T48 ICD10:Z72	Problemy związane ze stylem życia
+N15	Reference T33 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T60	Symptom 2100 2122	Nasilenie dolegliwości
+T61	Date 2123 2130	od roku
+R4	Dat Arg1:T61 Arg2:T60	
+T62	Treatment 1251 1334	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Pulmonologicznej

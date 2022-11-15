@@ -1,0 +1,57 @@
+T1	Condition 577 597	Bradykardia zatokowa
+N1	Reference T1 ICD10:R00.1	Bradykardia, nieokreślona
+T2	Condition 599 643	Łagodna niedomykalność zastawki trójdzielnej
+N2	Reference T2 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T3	Drug 341 347	Letrox
+T4	Condition 645 686	Ubytek w przegrodzie międzyprzedsionkowej
+N3	Reference T4 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T5	Condition 688 696	Celiakia
+N4	Reference T5 ICD10:K90.0	Choroba trzewna
+T6	Condition 698 735	Autoimmunologiczne zapalenie tarczycy
+N5	Reference T6 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T7	Condition 745 770	ostrym zapaleniu trzustki
+A1	Status T7 Historical_Insignificant
+N6	Reference T7 ICD10:K85.9	Ostre zapalenie trzustki, nieokreślone
+T8	Date 772 777	2016r
+R1	Dat Arg1:T8 Arg2:T7	
+T9	Treatment 889 989	Dalsza opieka w Poradni Endokrynologicznej, Neurologicznej (wydano skierowanie) oraz Kardiologicznej
+T10	Investigation 1014 1045	badanie SPECT mięśnia sercowego
+T11	Investigation 1107 1116	MRI głowy
+T12	Treatment 1051 1106	ew. kwalifikacja do zamknięcia ubytku w IAS po wynikach
+T13	Treatment 1119 1140	Kontrola TSH oraz FT4
+T14	Date 1147 1160	za 2 tygodnie
+R2	Dat Arg1:T14 Arg2:T13	
+T15	Behaviour 1162 1196	Przestrzeganie diety bezglutenowej
+T16	Drug 1230 1236	Letrox
+T17	Drug 1267 1273	Letrox
+T18	Drug_dose 1237 1266	100 ug 1x1 tabl rano na czczo
+T19	Drug_dose 1274 1304	50 ug 1x1/4 tabl rano na czczo
+R3	Drg Arg1:T16 Arg2:T18	
+R4	Drg Arg1:T17 Arg2:T19	
+T20	Condition 1448 1487	autoimmunologicznym zapaleniem tarczycy
+N7	Reference T20 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T21	Condition 1489 1497	celiakią
+N8	Reference T21 ICD10:K90.0	Choroba trzewna
+T22	Condition 1502 1505	OZT
+A2	Status T22 Historical_Insignificant
+N9	Reference T22 ICD10:K85.9	Ostre zapalenie trzustki, nieokreślone
+T23	Date 1507 1512	2016r
+R5	Dat Arg1:T23 Arg2:T22	
+T24	Condition 1583 1604	bradykardii zatokowej
+N10	Reference T24 ICD10:R00.1	Bradykardia, nieokreślona
+T25	Date 1570 1582	od kilku lat
+R6	Dat Arg1:T25 Arg2:T24	
+T26	Symptom 1607 1645	okresowo występującymi zawrotami głowy
+N11	Reference T26 ICD10:R42	Zawroty głowy i odurzenie
+T27	Condition 1661 1668	Alergie
+N12	Reference T27 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T28	Negation 1669 1675	neguje
+R7	Neg Arg1:T28 Arg2:T27	
+T29	Condition 1676 1691	Wywiad rodzinny
+A3	Status T29 Family
+T30	Negation 1692 1705	bez znaczenia
+T31	Drug 1713 1719	Letrox
+R8	Neg Arg1:T30 Arg2:T29	
+R9	Dat Arg1:T25 Arg2:T26	
+T32	Symptom 1646 1659	i osłabieniem
+R10	Dat Arg1:T25 Arg2:T32	

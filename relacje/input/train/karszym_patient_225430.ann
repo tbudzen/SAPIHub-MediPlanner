@@ -1,0 +1,142 @@
+T1	Condition 438 459	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Condition 461 494	Stan po ostrym zapaleniu trzustki
+N2	Reference T2 ICD10:K85.9	Ostre zapalenie trzustki, nieokreślone
+T3	Date 496 500	2015
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Condition 503 543	Uczulenie na jad owadów błonkoskrzydłych
+N3	Reference T4 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T5	Treatment 656 704	Dalsza opieka w POZ oraz Poradni Kardiologicznej
+T6	Treatment 709 799	Okresowa kontrola morfologii, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T7	Date 802 825	pierwsza za 4-6 tygodni
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Treatment 839 859	kontrola lipidogramu
+T9	Date 860 873	za 3 miesiące
+T10	Treatment 879 917	rozważenie farmakoterapii dyslipidemii
+R3	Dat Arg1:T9 Arg2:T8	
+R4	Dat Arg1:T9 Arg2:T10	
+T11	Behaviour 922 1024	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T12	Behaviour 1038 1057	redukcja masy ciała
+T13	Behaviour 1071 1116	umiarkowana, systematyczna aktywność fizyczna
+T14	Treatment 1121 1177	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T15	Drug 1216 1222	Vivace
+T16	Drug 1243 1251	Primacor
+T17	Drug_dose 1223 1242	5mg 1 tabletka rano
+T18	Drug_dose 1252 1277	10mg 1 tabletka wieczorem
+R5	Drg Arg1:T15 Arg2:T17	
+R6	Drg Arg1:T16 Arg2:T18	
+T19	Condition 1460 1481	Nadciśnienie tętnicze
+N4	Reference T19 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T20	Condition 1483 1494	Stan po OZT
+N5	Reference T20 ICD10:K85.9	Ostre zapalenie trzustki, nieokreślone
+T21	Date 1496 1507	4 lata temu
+R7	Dat Arg1:T21 Arg2:T20	
+T22	Condition 1510 1550	Uczulenie na jad owadów błonkoskrzydłych
+N6	Reference T22 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T23	Condition 1728 1730	HA
+N7	Reference T23 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T24	Date 1744 1755	5 m-cy temu
+R8	Dat Arg1:T24 Arg2:T23	
+T25	Symptom 1787 1812	podwyższonych wartości RR
+T26	Negation 1815 1818	Bez
+T27	Treatment 1819 1827	leczenia
+R9	Neg Arg1:T26 Arg2:T27	
+T28	Symptom 1840 1842;1854 1867	RR : 145/115mmHg
+T29	Symptom 1870 1884	HR 105-110/min
+T30	Date 1886 1907	po włączeniu leczenia
+T31	Drug 1909 1915	Vivace
+T32	Drug 1926 1933	Nebilet
+T33	Drug_dose 1916 1924	2x 2,5mg
+T34	Drug_dose 1934 1941	1x2,5mg
+R10	Drg Arg1:T31 Arg2:T33	
+R11	Drg Arg1:T32 Arg2:T34	
+T36	Symptom 1943 1952;1960 1970	RR wynosi 125/95mmHg
+T37	Symptom 1972 1984	HR 85-95/min
+R14	Dat Arg1:T30 Arg2:T36	
+R15	Dat Arg1:T30 Arg2:T37	
+T38	Condition 2039 2054	zapalenie zatok
+N8	Reference T38 ICD10:J01.9	Ostre zapalenie zatok, nieokreślone
+T39	Treatment 2017 2038	leczone antybiotykiem
+T41	Condition 2056 2080	ostre zapalenie trzustki
+N9	Reference T41 ICD10:K85.9	Ostre zapalenie trzustki, nieokreślone
+T42	Date 2082 2093	4 lata temu
+R16	Dat Arg1:T42 Arg2:T41	
+T40	Date 2008 2016	niedawno
+R17	Dat Arg1:T40 Arg2:T39	
+R18	Dat Arg1:T40 Arg2:T38	
+T43	Negation 2095 2101	Neguje
+T44	Symptom 2103 2115	zasłabnięcia
+T45	Symptom 2117 2125	omdlenia
+N10	Reference T45 ICD10:R55	Omdlenie i zapaść
+T46	Condition 2127 2143	chorobę wrzodową
+N11	Reference T46 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T47	Symptom 2145 2153	duszność
+N12	Reference T47 ICD10:R06.0	Duszność
+T48	Symptom 2155 2170	obrzęki podudzi
+N13	Reference T48 ICD10:R60.0	Obrzęk zlokalizowany
+T49	Symptom 2172 2196	bóle w klatce piersiowej
+N14	Reference T49 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T50	Condition 2198 2200	DM
+N15	Reference T50 ICD10:E14	Cukrzyca nieokreślona
+R19	Neg Arg1:T43 Arg2:T44	
+R20	Neg Arg1:T43 Arg2:T45	
+R21	Neg Arg1:T43 Arg2:T46	
+R22	Neg Arg1:T43 Arg2:T47	
+R23	Neg Arg1:T43 Arg2:T48	
+R24	Neg Arg1:T43 Arg2:T49	
+R25	Neg Arg1:T43 Arg2:T50	
+T51	Treatment 2203 2220	Przebyte operacje
+N16	Reference T51 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T52	Negation 2222 2225	nie
+R26	Neg Arg1:T52 Arg2:T51	
+T53	Behaviour 2226 2241	Palenie tytoniu
+T54	Negation 2243 2246	nie
+R27	Neg Arg1:T54 Arg2:T53	
+T55	Behaviour 2247 2258	Inne używki
+T56	Negation 2260 2263	nie
+R28	Neg Arg1:T56 Arg2:T55	
+T57	Condition 2264 2302	Uczulenia: jad owadów błonkoskrzydłych
+N17	Reference T57 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T58	Treatment 2304 2324	w trakcie odczulania
+T59	Condition 2354 2357	WZW
+N18	Reference T59 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T60	Condition 2364 2373	borelioza
+N19	Reference T60 ICD10:A69.2	Choroba z Lyme
+T61	Condition 2379 2382	tbc
+N20	Reference T61 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T62	Condition 2388 2392	odra
+N21	Reference T62 ICD10:B05	Odra
+T63	Condition 2398 2412	kontakt z odrą
+N22	Reference T63 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+T64	Negation 2358 2361	(-)
+T65	Negation 2374 2377	(-)
+T66	Negation 2383 2386	(-)
+T67	Negation 2393 2396	(-)
+T68	Negation 2413 2416	(-)
+R29	Neg Arg1:T68 Arg2:T63	
+R30	Neg Arg1:T67 Arg2:T62	
+R31	Neg Arg1:T66 Arg2:T61	
+R32	Neg Arg1:T65 Arg2:T60	
+R33	Neg Arg1:T64 Arg2:T59	
+T69	Condition 2417 2438	W wywiadzie rodzinnym
+A1	Status T69 Family
+T70	Negation 2440 2443	b/z
+R34	Neg Arg1:T70 Arg2:T69	
+T71	Behaviour 2461 2487	warunki mieszkaniowe dobre
+T72	Drug 2525 2531	Vivace
+T73	Drug 2548 2560	Preductal MR
+T74	Drug 2575 2582	Nebilet
+T75	Drug_dose 2532 2547	5mg 2x 1/2 tabl
+T76	Drug_dose 2561 2574	1x 1 tabl/poł
+T77	Drug_dose 2583 2603	5mg 1x 1/2 tabl/rano
+R35	Drg Arg1:T72 Arg2:T75	
+R36	Drg Arg1:T73 Arg2:T76	
+R37	Drg Arg1:T74 Arg2:T77	
+T78	Investigation 2664 2685	badania laboratoryjne
+T79	Investigation 2687 2691	ECHO
+T80	Investigation 2693 2711	EKG metodą Holtera
+T81	Investigation 2713 2717	ABPM
+T82	Investigation 2719 2734	próba wysiłkowa
+A2	Status T20 Historical_Insignificant
+A3	Status T41 Historical_Insignificant
+N23	Reference T53 ICD10:Z72.0	Używanie tytoniu

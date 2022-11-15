@@ -1,0 +1,30 @@
+T1	Condition 591 666	Wrodzona wada serca pod postacią skorygowanego przełożenia pni naczyniowych
+N1	Reference T1 ICD10:Q20.5	Nieprawidłowe połączenia przedsionkowo-komorowe
+T2	Condition 672 697	Komorowe zaburzenia rytmu
+N2	Reference T2 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T3	Condition 702 721	Niedobór witaminy D
+N3	Reference T3 ICD10:E55	Niedobór witaminy D
+T4	Treatment 838 856	Przyjmowanie leków
+T5	Drug 858 868	Witamina D
+T6	Drug_dose 869 874	2000j
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Investigation 876 909	oznaczenie poziomu ambulatoryjnie
+T8	Date 910 923	za 3 miesiące
+R2	Dat Arg1:T8 Arg2:T7	
+T9	Investigation 984 1000	próby wysiłkowej
+T10	Date 957 967	9.01.2019r
+R3	Dat Arg1:T10 Arg2:T9	
+T11	Treatment 1034 1088	Opieka ogólnopediatryczna w Poradni Lekarza Rodzinnego
+T12	Condition 1228 1231	TGA
+N4	Reference T12 ICD10:Q20.3	
+T13	Investigation 1248 1265	badania kontrolne
+T14	Condition 1268 1285	wywiad alergiczny
+N5	Reference T14 ICD10:T78.4	Alergia, nieokreślona
+T15	Negation 1286 1292	ujemny
+R4	Neg Arg1:T15 Arg2:T14	
+T16	Drug 1294 1308	leków na stałe
+T17	Negation 1309 1322	nie otrzymuje
+R5	Neg Arg1:T17 Arg2:T16	
+T18	Drug 345 350	leków
+T19	Negation 341 344	Bez
+R6	Neg Arg1:T19 Arg2:T18	

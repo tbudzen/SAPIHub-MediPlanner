@@ -1,0 +1,77 @@
+T1	Condition 472 509	Wrodzona wada serca pod postacią DILV
+N1	Reference T1 ICD10:Q20.4	
+T2	Condition 510 516	Atr AP
+N2	Reference T2 ICD10:Q22.0	Zarośnięcie zastawki pnia płucnego
+T3	Condition 517 520	VSD
+N3	Reference T3 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T4	Condition 521 524	ASD
+N4	Reference T4 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T5	Condition 525 535	TR III st.
+N5	Reference T5 ICD10:Q22.8	Inne wrodzone wady rozwojowe zastawki trójdzielnej
+T6	Treatment 547 600	operacji zespolenia systemowo-płucnego prawostronnego
+T7	Date 601 606	1999r
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Treatment 614 636	dwukierunkowego Glenna
+T9	Date 638 643	2002r
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Treatment 650 657	Fontana
+T11	Date 659 670	16.12.2003r
+R3	Dat Arg1:T11 Arg2:T10	
+T12	Condition 676 691	Łagodna arytmia
+N6	Reference T12 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T13	Condition 861 928	wrodzoną siniczą wadą serca pod postacią dwunapływowej lewej komory
+N7	Reference T13 ICD10:Q20.4	Wejście obu dróg żylnych do jedynej komory
+T14	Treatment 932 988	wieloetapowym leczeniu kardiochirurgicznym metodą Glenna
+T15	Date 990 994	2002
+R4	Dat Arg1:T15 Arg2:T14	
+T16	Treatment 997 1011	metodą Fontana
+T17	Date 1013 1021	16.12.03
+R5	Dat Arg1:T17 Arg2:T16	
+T18	Treatment 1027 1049	zamknięciu fenestracji
+T19	Date 1051 1062	03.01.2006r
+R6	Dat Arg1:T19 Arg2:T18	
+T20	Symptom 1185 1218	ograniczenie wydolności fizycznej
+N8	Reference T20 ICD10:R53	Złe samopoczucie i zmęczenie
+T21	Negation 1248 1254	Neguje
+T22	Condition 1255 1262	dławicę
+N9	Reference T22 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+T23	Symptom 1264 1272	duszność
+N10	Reference T23 ICD10:R06.0	Duszność
+T24	Symptom 1274 1293	utraty przytomności
+N11	Reference T24 ICD10:R55	Omdlenie i zapaść
+R7	Neg Arg1:T21 Arg2:T22	
+R8	Neg Arg1:T21 Arg2:T23	
+R9	Neg Arg1:T21 Arg2:T24	
+T25	Behaviour 1295 1305	Nikotynizm
+T26	Negation 1308 1314	neguje
+R10	Neg Arg1:T26 Arg2:T25	
+T27	Behaviour 1318 1325	Alkohol
+N13	Reference T27 ICD10:Z72.1	Używanie alkoholu
+T28	Negation 1327 1333	neguje
+R11	Neg Arg1:T28 Arg2:T27	
+T29	Negation 1342 1348	neguje
+T30	Symptom 1351 1384	krwawienia z przewodu pokarmowego
+N14	Reference T30 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R12	Neg Arg1:T29 Arg2:T30	
+T31	Condition 1386 1403	Uczulenia na leki
+T32	Symptom 1405 1412	wysypka
+N16	Reference T32 ICD10:R21	Rumień i inne nieswoiste wysypki skórne
+T33	Drug 1416 1422	Ceclor
+T34	Drug 1424 1433	augmentin
+T35	Drug 1435 1441	klacid
+R13	Alg Arg1:T31 Arg2:T33	
+R14	Alg Arg1:T31 Arg2:T34	
+R15	Alg Arg1:T31 Arg2:T35	
+T36	Condition 1442 1457	Wywiad rodzinny
+A1	Status T36 Family
+T37	Negation 1459 1472	bez znaczenia
+R16	Neg Arg1:T37 Arg2:T36	
+T38	Drug 1499 1504	Acard
+T39	Drug_dose 1505 1520	75mg 1xdziennie
+R17	Drg Arg1:T38 Arg2:T39	
+T40	Investigation 1532 1542	ECHO serca
+T41	Investigation 1544 1554	Holter EKG
+T42	Investigation 1556 1565	Holter RR
+T43	Investigation 1567 1569	PW
+N12	Reference T25 ICD10:Z72.0	Używanie tytoniu
+N15	Reference T31 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie

@@ -1,0 +1,94 @@
+T1	Condition 413 434	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Date 619 628	10 letnim
+T3	Condition 649 672	nadciśnienia tętniczego
+N2	Reference T3 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+R1	Dat Arg1:T2 Arg2:T3	
+T4	Treatment 739 762	leczenia hipotensyjnego
+T5	Date 764 781	Od  grudnia 2018r
+T6	Symptom 814 824	osłabienie
+T7	Symptom 826 839	zawroty głowy
+N3	Reference T7 ICD10:R42	Zawroty głowy i odurzenie
+T8	Symptom 845 868	uczucie kołatania serca
+N4	Reference T8 ICD10:R00.2	Kołatanie serca
+T9	Investigation_result 889 928	labilne wartości RR 100-170/70-100 mmHg
+N5	Reference T9 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+R2	Dat Arg1:T5 Arg2:T6	
+R3	Dat Arg1:T5 Arg2:T7	
+R4	Dat Arg1:T5 Arg2:T8	
+R5	Dat Arg1:T5 Arg2:T9	
+T10	Symptom 930 969	Dolegliwości bólowe w klatce piersiowej
+N6	Reference T10 ICD10:R07	Ból gardła i w klatce piersiowej
+T11	Symptom 971 979	omdlenia
+N7	Reference T11 ICD10:R55	Omdlenie i zapaść
+T12	Symptom 981 1000	utraty przytomności
+N8	Reference T12 ICD10:R55	Omdlenie i zapaść
+T13	Negation 1001 1007	neguje
+R6	Neg Arg1:T13 Arg2:T12	
+R7	Neg Arg1:T13 Arg2:T11	
+R8	Neg Arg1:T13 Arg2:T10	
+T14	Condition 1023 1050	androgenne wypadanie włosów
+N9	Reference T14 ICD10:L64	Łysienie androgenowe
+T15	Condition 1052 1074	niedoczynność tarczycy
+N10	Reference T15 ICD10:E03.9	Niedoczynność tarczycy, nieokreślona
+T16	Condition 1077 1098	wole guzkowe obojętne
+N11	Reference T16 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T17	Treatment 1120 1153	wycięcie macicy i prawego jajnika
+A1	Status T17 Historical_Insignificant
+T18	Date 1155 1160	2014r
+R9	Dat Arg1:T18 Arg2:T17	
+T19	Treatment 1165 1174	prewencja
+A2	Status T19 Historical_Insignificant
+T20	Treatment 1186 1209	wycięcie lewego jajnika
+A3	Status T20 Historical_Insignificant
+T21	Date 1210 1215	2005r
+R10	Dat Arg1:T21 Arg2:T20	
+T22	Treatment 1240 1256	cholecystectomia
+A4	Status T22 Historical_Insignificant
+T23	Date 1257 1262	2004r
+R11	Dat Arg1:T23 Arg2:T22	
+T24	Condition 1218 1237	cysta endometrialna
+N12	Reference T24 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+R12	Dat Arg1:T21 Arg2:T24	
+T25	Condition 1282 1285	WZW
+N13	Reference T25 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T26	Condition 1287 1296	borelioza
+N14	Reference T26 ICD10:A69.2	Choroba z Lyme
+T27	Condition 1298 1306	gruźlica
+N15	Reference T27 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T28	Negation 1309 1319	nie podaje
+R13	Neg Arg1:T28 Arg2:T27	
+R14	Neg Arg1:T28 Arg2:T26	
+R15	Neg Arg1:T28 Arg2:T25	
+T29	Condition 1343 1364	nadciśnienie tętnicze
+A5	Status T29 Family
+N16	Reference T29 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T30	Condition 1375 1391	PCM z powodu SSS
+A6	Status T30 Family
+N17	Reference T30 ICD10:I49.5	Zespół chorej zatoki
+T31	Negation 1392 1395	nie
+T32	Behaviour 1396 1400	pali
+N18	Reference T32 ICD10:Z72.0	Używanie tytoniu
+R16	Neg Arg1:T31 Arg2:T32	
+T33	Drug 1407 1418	Betaloc ZOK
+T34	Drug_dose 1419 1434	50 1 tabl. rano
+R17	Drg Arg1:T33 Arg2:T34	
+T35	Drug 1435 1441	Vivace
+T36	Drug_dose 1442 1470	5mg 1 tabl. rano i wieczorem
+R18	Drg Arg1:T35 Arg2:T36	
+T37	Drug 1471 1483	Tertensif SR
+T38	Drug_dose 1484 1496	1 tabl. rano
+R19	Drg Arg1:T37 Arg2:T38	
+T39	Drug 1497 1503	Letrox
+T40	Drug_dose 1504 1530	50mg 1 tabl. rano na czczo
+R20	Drg Arg1:T39 Arg2:T40	
+T41	Investigation 1552 1562	echo serca
+T42	Investigation 1564 1574	holter-ekg
+T43	Investigation 1576 1580	ABPM
+T44	Investigation 1582 1597	próba wysiłkowa
+T45	Treatment 1100 1118	Zabiegi operacyjne
+R21	Dat Arg1:T18 Arg2:T19	
+T46	Condition 1320 1335	Wywiad rodzinny
+A7	Status T46 Family
+T47	Condition 1175 1184	ca macicy
+N19	Reference T47 ICD10:C55	Nowotwór złośliwy nieokreślonej części macicy

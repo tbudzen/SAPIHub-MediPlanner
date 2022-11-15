@@ -1,0 +1,237 @@
+T1	Investigation 4571 4575	ECHO
+T2	Investigation 4577 4595	EKG metodą Holtera
+T3	Investigation 4597 4601	ABPM
+T4	Investigation 4603 4618	próba wysiłkowa
+T5	Drug 4461 4470	Metformax
+T6	Drug_dose 4471 4487	1000mg 3x 1 tabl
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 4426 4434	Gliclada
+T8	Drug_dose 4435 4459	60mg 1x 1 tabl/wieczorem
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 4390 4400	Cardura XL
+T10	Drug_dose 4401 4424	4mg 1x 1 tabl/wieczorem
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 4355 4363	Polocard
+T12	Drug_dose 4364 4388	75mg 1x 1 tabl/wieczorem
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 4326 4332	Plavix
+T14	Drug_dose 4333 4352	75mg 1x 1 tabl/rano
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Drug 4294 4300	Atoris
+T16	Drug_dose 4301 4325	40mg 1x 1 tabl/wieczorem
+R6	Drg Arg1:T15 Arg2:T16	
+T17	Drug 4261 4268	Amlopin
+T18	Drug_dose 4269 4292	5mg 1x 1 tabl/wieczorem
+R7	Drg Arg1:T17 Arg2:T18	
+T19	Drug 4224 4234	Prestarium
+T20	Drug_dose 4235 4259	10mg 1x 1 tabl/wieczorem
+R8	Drg Arg1:T19 Arg2:T20	
+T21	Drug 4198 4204	Espiro
+T22	Drug_dose 4205 4223	25mg 1x 1 tabl/poł
+R9	Drg Arg1:T21 Arg2:T22	
+T23	Drug 4173 4181	Bisocard
+T24	Drug_dose 4182 4196	10mg 1x 1 tabl
+R10	Drg Arg1:T23 Arg2:T24	
+T25	Drug 4148 4157	Furosemid
+T26	Drug_dose 4158 4172	1x 1 tabl/rano
+R11	Drg Arg1:T25 Arg2:T26	
+T27	Drug 4108 4117	Controloc
+T28	Drug_dose 4118 4146	20mg 1x 1 tabl/rano na czczo
+R12	Drg Arg1:T27 Arg2:T28	
+T29	Behaviour 4045 4071	warunki mieszkaniowe dobre
+T30	Condition 3994 3997	WZW
+N1	Reference T30 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T31	Condition 4004 4013	borelioza
+N2	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Condition 4021 4024	tbc
+N3	Reference T32 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T33	Negation 3998 4001	(-)
+R13	Neg Arg1:T33 Arg2:T30	
+T34	Negation 4016 4019	- )
+R14	Neg Arg1:T34 Arg2:T31	
+T35	Negation 4025 4028	(-)
+R15	Neg Arg1:T35 Arg2:T32	
+T36	Negation 3963 3966	nie
+T37	Negation 3947 3950	nie
+T38	Condition 3951 3960	Uczulenia
+N4	Reference T38 ICD10:T78.4	Alergia, nieokreślona
+R16	Neg Arg1:T36 Arg2:T38	
+T39	Behaviour 3934 3945	Inne używki
+R17	Neg Arg1:T37 Arg2:T39	
+T40	Negation 3915 3923	nie pali
+T41	Behaviour 3898 3914	Palenie tytoniu:
+N5	Reference T41 ICD10:T65.2	Tytoń i nikotyna
+R18	Neg Arg1:T40 Arg2:T41	
+T42	Treatment 3876 3897	Przebyte operacje: jw
+T43	Symptom 3699 3711	zasłabnięcia
+N6	Reference T43 ICD10:R55	Omdlenie i zapaść
+T44	Symptom 3713 3721	omdlenia
+N7	Reference T44 ICD10:R55	Omdlenie i zapaść
+T45	Symptom 3723 3733	krwawienia
+N8	Reference T45 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T46	Symptom 3735 3748	czarne stolce
+N9	Reference T46 ICD10:K92.1	Stolce smołowate
+T47	Symptom 3750 3779	stolce ze śluzem i ołówkowate
+N10	Reference T47 ICD10:R19.5	Inne patologie kału
+T48	Symptom 3781 3798	brunatne wymioty,
+N11	Reference T48 ICD10:K92.0	Wymioty krwawe
+T49	Symptom 3799 3813	duszność nocną
+N12	Reference T49 ICD10:I50.1	Niewydolność serca lewokomorowa
+T50	Symptom 3815 3830	obrzęki podudzi
+N13	Reference T50 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T51	Symptom 3832 3856	bóle w klatce piersiowej
+N14	Reference T51 ICD10:R07.3	Inne bóle w klatce piersiowej
+T52	Symptom 3858 3873	kołatania serca
+N15	Reference T52 ICD10:R00.2	Kołatanie serca
+T53	Negation 3691 3697	Neguje
+R19	Neg Arg1:T53 Arg2:T43	
+R20	Neg Arg1:T53 Arg2:T44	
+R21	Neg Arg1:T53 Arg2:T45	
+R22	Neg Arg1:T53 Arg2:T46	
+R23	Neg Arg1:T53 Arg2:T47	
+R24	Neg Arg1:T53 Arg2:T48	
+R25	Neg Arg1:T53 Arg2:T49	
+R26	Neg Arg1:T53 Arg2:T50	
+R27	Neg Arg1:T53 Arg2:T51	
+R28	Neg Arg1:T53 Arg2:T52	
+T54	Drug 1954 1963	Metformax
+T55	Drug 1965 1977	Preductal MR
+T56	Drug 1979 1987	Actrapid
+T57	Drug 1989 1992	PWE
+T58	Drug 1994 2000	Diured
+T59	Drug 2002 2011	Controloc
+T60	Drug 2013 2021	Nebicard
+T61	Drug 2023 2029	Espiro
+T62	Drug 2031 2041	Prestarium
+T63	Drug 2043 2050	Amlopin
+T64	Drug 2052 2059	Roswera
+T65	Drug 2061 2067	Plavix
+T66	Drug 2069 2076	Plocard
+T67	Drug 2078 2085	Cardura
+T68	Drug 2087 2095	Gliclada
+T69	Drug 2097 2106	Furosemid
+T70	Drug 2108 2116	Bisocard
+T71	Drug 2118 2126	0,9%NaCl
+T72	Behaviour 2453 2469	dieta niskochole
+T73	Investigation 2358 2417	kontrola wartości ciśnienia tętniczego w warunkach domowych
+T74	Behaviour 2419 2450	ograniczenie wysiłku fizycznego
+T75	Condition 977 1009	Poszerzenie opuszki aorty (55mm)
+N16	Reference T75 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T76	Condition 1415 1448	Poszerzenie opuszki aorty (55mm).
+N17	Reference T76 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T77	Condition 438 524	Przewlekła niewydolność serca III wg NYHA z upośledzoną frakcją wyrzutową lewej komory
+N18	Reference T77 ICD10:I50	Niewydolność serca
+T78	Condition 1228 1314	Przewlekła niewydolność serca III wg NYHA z upośledzoną frakcją wyrzutową lewej komory
+N19	Reference T78 ICD10:I50	Niewydolność serca
+T79	Condition 2612 2700	niewydolnością serca II/III st. wg. NYHA, z ciężką niedokrwienną dysfunkcją lewej komory
+N20	Reference T79 ICD10:I50	Niewydolność serca
+T80	Condition 535 557	Choroba wieńcowa serca
+N21	Reference T80 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T81	Condition 1449 1471	Choroba wieńcowa serca
+N22	Reference T81 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T82	Condition 2711 2738	chorobą niedokrwienną serca
+N23	Reference T82 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T83	Condition 1325 1370	Umiarkowana niedomykalność zastawki aortalnej
+N24	Reference T83 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T84	Condition 3112 3159	umiarkowaną niedomykalnością zastawki aortalnej
+N25	Reference T84 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T85	Condition 1372 1413	Łagodna niedomykalność zastawki mitralnej
+N26	Reference T85 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T86	Condition 934 976	Łagodna niedomykalność zastawki mitralnej.
+N27	Reference T86 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T87	Condition 887 932	Umiarkowana niedomykalność zastawki aortalnej
+N28	Reference T87 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T88	Condition 870 885	Cukrzyca typu 2
+N29	Reference T88 ICD10:E11	Cukrzyca insulinoniezależna
+T89	Condition 1818 1833	Cukrzyca typu 2
+N30	Reference T89 ICD10:E11	Cukrzyca insulinoniezależna
+T90	Condition 3070 3110	cukrzycą typu 2 (pod opieką diabetologa)
+N31	Reference T90 ICD10:E11	Cukrzyca insulinoniezależna
+T91	Condition 831 852	Nadciśnienie tętnicze
+N32	Reference T91 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T92	Condition 1779 1800	Nadciśnienie tętnicze
+N33	Reference T92 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T93	Condition 2992 3017	z nadciśnieniem tętniczym
+N34	Reference T93 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T94	Investigation_result 3019 3042	RR zwykle ok 140/80mmHg
+T95	Treatment 567 595	PCI LAD z implantacją stentu
+T96	Date 596 604	(03.2007
+R29	Dat Arg1:T96 Arg2:T95	
+T97	Treatment 615 643	PCI RCA z implantacją stentu
+T98	Date 645 652	06.2007
+R30	Dat Arg1:T98 Arg2:T97	
+T99	Treatment 663 694	PCI Cx z implantacją stentu DES
+T100	Date 695 703	(08.2016
+R31	Dat Arg1:T100 Arg2:T99	
+T101	Treatment 714 757	implantacji ICD-VR Medtronic Protecta XT VR
+T102	Treatment 763 816	elektrody defibrylującej Medtronic 6935M-62 cm do RVA
+T103	Date 818 828	24.01.2018
+R32	Dat Arg1:T103 Arg2:T102	
+R33	Dat Arg1:T103 Arg2:T101	
+T104	Condition 854 868	Hiperlipidemia
+N35	Reference T104 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T105	Treatment 1481 1509	PCI LAD z implantacją stentu
+T106	Treatment 1529 1557	PCI RCA z implantacją stentu
+T107	Treatment 1577 1608	PCI Cx z implantacją stentu DES
+T108	Treatment 1628 1671	implantacji ICD-VR Medtronic Protecta XT VR
+T109	Treatment 1677 1730	elektrody defibrylującej Medtronic 6935M-62 cm do RVA
+T110	Date 1732 1742	24.01.2018
+R34	Dat Arg1:T110 Arg2:T109	
+R35	Dat Arg1:T110 Arg2:T108	
+T111	Date 1609 1617	(08.2016
+R36	Dat Arg1:T111 Arg2:T107	
+T112	Date 1559 1566	06.2007
+R37	Dat Arg1:T112 Arg2:T106	
+T113	Date 1511 1518	03.2007
+R38	Dat Arg1:T113 Arg2:T105	
+T114	Condition 1802 1816	Hiperlipidemia
+N36	Reference T114 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T115	Condition 1745 1777	Miażdżyca tętnic kończyn dolnych
+N37	Reference T115 ICD10:I70.2	Miażdżyca tętnic kończyn
+T116	Condition 3165 3204	poszerzeniem aorty w odcinku piersiowym
+N38	Reference T116 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T117	Investigation 3208 3212	ECHO
+T118	Date 3215 3223	01.2018:
+R39	Dat Arg1:T118 Arg2:T117	
+T119	Investigation_result 3224 3253	opuszka 53mm, wstępująca 50mm
+R40	Inv Arg1:T117 Arg2:T119	
+T120	Symptom 3285 3326	znacznego pogorszenia tolerancji wysiłku,
+T121	Symptom 3327 3346	ogólnego osłabienia
+T122	Symptom 3358 3391	odpoczywa po wejściu na 1 piętro,
+T123	Symptom 3396 3420	bólu w klatce piersiowej
+N39	Reference T123 ICD10:R07.3	Inne bóle w klatce piersiowej
+T124	Negation 3392 3395	bez
+R41	Neg Arg1:T124 Arg2:T123	
+T125	Symptom 3444 3503	bóle całych kończyn dolnych przy chodzeniu (dystans ok 200m
+T126	Symptom 3565 3577	brak apetytu
+T127	Treatment 2743 2771	PCI LAD z implantacją stentu
+T128	Date 2773 2780	03.2007
+R42	Dat Arg1:T128 Arg2:T127	
+R43	Dat Arg1:T128 Arg2:T82	
+T129	Treatment 2786 2814	PCI RCA z implantacją stentu
+T130	Date 2816 2823	06.2007
+R44	Dat Arg1:T130 Arg2:T129	
+T131	Treatment 2829 2860	PCI Cx z implantacją stentu DES
+T132	Date 2862 2869	08.2016
+R45	Dat Arg1:T132 Arg2:T131	
+T133	Treatment 2875 2977	implantacji ICD-VR Medtronic Protecta XT VR oraz elektrody defibrylującej Medtronic 6935M-62 cm do RVA
+T134	Date 2979 2990	24.01.2018)
+R46	Dat Arg1:T134 Arg2:T133	
+T135	Condition 3045 3068	zaburzeniami lipidowymi
+N40	Reference T135 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T136	Date 3347 3356	od 3 m-cy
+R47	Dat Arg1:T136 Arg2:T121	
+R48	Dat Arg1:T136 Arg2:T120	
+T137	Condition 3517 3564	infekcja górnych dróg oddechowych bez gorączki,
+N41	Reference T137 ICD10:J06	Ostre zakażenie górnych dróg oddechowych o umiejscowieniu mnogim nieokreślonym
+T138	Condition 3602 3631	przerost gruczołu krokowego (
+N42	Reference T138 ICD10:N40	Rozrost gruczołu krokowego
+T139	Condition 3652 3673	wypadek komunikacyjny
+T140	Date 3675 3685	31.08.2018
+R49	Dat Arg1:T140 Arg2:T139	
+N43	Reference T139 ICD10:V49	Użytkownik samochodu ranny w innym i nieokreślonym wypadku komunikacyjnym
+T141	Investigation_result 525 532	(EF 29%
+T142	Date 1315 1323	(EF 29%)
+T143	Investigation_result 2701 2708	(EF<20%
+T144	Date 3924 3933	od 18 lat
+R50	Dat Arg1:T144 Arg2:T41	

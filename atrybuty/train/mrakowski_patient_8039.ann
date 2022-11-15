@@ -1,0 +1,28 @@
+T1	Condition 676 717	Łagodna niedomykalność zastawki mitralnej
+N1	Reference T1 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T2	Condition 720 732	trójdzielnej
+N2	Reference T2 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T3	Symptom 734 749	Kołatania serca
+N3	Reference T3 ICD10:R00.2	Kołatanie serca
+T4	Condition 751 755	LBBB
+N4	Reference T4 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T5	Symptom 924 955	zmniejszonej tolerancji wysiłku
+N5	Reference T5 ICD10:R53	Złe samopoczucie i zmęczenie
+T6	Symptom 957 972	kołatania serca
+N6	Reference T6 ICD10:R00.2	Kołatanie serca
+T7	Condition 987 1005	niewydolność serca
+T8	Condition 1016 1020	LBBB
+N8	Reference T8 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T9	Condition 1023 1040	Uczulenia na leki
+T10	Negation 1041 1047	neguje
+R1	Neg Arg1:T10 Arg2:T9	
+T11	Symptom 1049 1082	Krwawienia z przewodu pokarmowego
+N9	Reference T11 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+T12	Negation 1083 1089	neguje
+R2	Neg Arg1:T12 Arg2:T11	
+N7	Reference T7 ICD10:I50.9	Niewydolność serca, nieokreślona
+T13	Investigation_result 1008 1014	EF 43%
+N10	Reference T9 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T14	Drug 1091 1104	Leki na stałe
+T15	Negation 1105 1118	nie przyjmuje
+R3	Neg Arg1:T15 Arg2:T14	

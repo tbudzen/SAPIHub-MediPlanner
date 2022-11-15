@@ -1,0 +1,288 @@
+T1	Condition 404 431	Choroba niedokrwienna serca
+N1	Reference T1 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T2	Condition 433 484	Izolowana dysfunkcja rozkurczowa lewej komory serca
+N2	Reference T2 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+T3	Condition 486 507	Nadciśnienie tętnicze
+N3	Reference T3 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T4	Condition 509 525	Astma oskrzelowa
+N4	Reference T4 ICD10:J45	Astma oskrzelowa
+T5	Condition 527 537	Niedosłuch
+T6	Condition 539 564	Miażdżyca tętnic szyjnych
+N6	Reference T6 ICD10:I70.8	Miażdżyca innych tętnic
+T7	Condition 566 598	Zmiany zwyrodnieniowe kręgosłupa
+N7	Reference T7 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T8	Treatment 611 624	appendektomii
+A1	Status T8 Historical_Insignificant
+T9	Date 625 639	w dzieciństwie
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Drug 799 811	Lisiprol HCT
+T11	Drug 813 819	Diured
+T12	Drug 821 826	Acard
+T13	Drug 828 835	Nolpaza
+T14	Drug 837 844	Romazic
+T15	Drug 846 855	Polvertic
+T16	Drug 857 871	Cavinton forte
+T17	Drug 873 881	0,9%NaCl
+T18	Treatment 992 1014	kontrola u lekarza POZ
+T19	Treatment 1017 1087	okresowa kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych
+T20	Treatment 1090 1146	konieczna powtórna konsultacja w Porani Pulmonologicznej
+T21	Treatment 1150 1191	wskazana diagnostyka przewodu pokarmowego
+T22	Behaviour 1194 1217	spożywanie min. 1,5l pł
+T23	Condition 1363 1379	astmą oskrzelową
+N8	Reference T23 ICD10:J45	Astma oskrzelowa
+T24	Condition 1381 1404	nadciśnieniem tętniczym
+N9	Reference T24 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T25	Investigation_result 1406 1434	RR w domu 120/80-140/100mmHg
+N10	Reference T25 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T26	Condition 1437 1449	niedosłuchem
+T27	Symptom 1480 1507	ucisków w klatce piersiowej
+N12	Reference T27 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T28	Date 1508 1521	od ponad roku
+R2	Dat Arg1:T28 Arg2:T27	
+T29	Symptom 1566 1575	zmęczenia
+N13	Reference T29 ICD10:R53	Złe samopoczucie i zmęczenie
+T30	Symptom 1578 1617	duszności wysiłkowej przy małym wysiłku
+N14	Reference T30 ICD10:R06.0	Duszność
+T31	Symptom 1619 1655	20 stopni wchodzi z 1-3 odpoczynkami
+N15	Reference T31 ICD10:R53	Złe samopoczucie i zmęczenie
+T32	Date 1656 1670	od wiosny 2017
+R3	Dat Arg1:T32 Arg2:T31	
+R4	Dat Arg1:T32 Arg2:T30	
+R5	Dat Arg1:T32 Arg2:T29	
+T33	Symptom 1694 1718	zasłabnięcia w spoczynku
+N16	Reference T33 ICD10:R55	Omdlenie i zapaść
+T34	Negation 1720 1738	bez towarzyszących
+T35	Symptom 1739 1771	dolegliwosci w klatce piersiowej
+N17	Reference T35 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+R6	Neg Arg1:T34 Arg2:T35	
+T36	Date 1773 1797	3-4 razy od grudnia 2017
+R7	Dat Arg1:T36 Arg2:T33	
+T37	Symptom 1799 1818	obrzeki podudzi L>P
+T38	Symptom 1827 1852	wymioty treścią pokarmową
+N19	Reference T38 ICD10:R11	Nudności i wymioty
+T40	Symptom 1854 1880	2-3x dziennie luźny stolec
+N20	Reference T40 ICD10:K59.1	Biegunka czynnościowa
+T41	Negation 1882 1888	Neguje
+T42	Symptom 1890 1898	omdlenia
+N21	Reference T42 ICD10:R55	Omdlenie i zapaść
+T43	Symptom 1900 1910	krwawienia
+T44	Symptom 1912 1925	czarne stolce
+N23	Reference T44 ICD10:K92.1	Stolce smołowate
+T45	Symptom 1927 1943	brunatne wymioty
+N24	Reference T45 ICD10:K92.0	Wymioty krwawe
+R9	Neg Arg1:T41 Arg2:T42	
+R10	Neg Arg1:T41 Arg2:T43	
+R11	Neg Arg1:T41 Arg2:T44	
+R12	Neg Arg1:T41 Arg2:T45	
+T46	Condition 1945 1961	chorobę wrzodową
+N25	Reference T46 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T47	Symptom 1963 1977	duszność nocną
+N26	Reference T47 ICD10:R06.0	Duszność
+T48	Condition 1979 1981	DM
+N27	Reference T48 ICD10:E14	Cukrzyca nieokreślona
+T49	Condition 1983 1993	udar mózgu
+N28	Reference T49 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T50	Condition 1995 2006	zawał serca
+N29	Reference T50 ICD10:I25.2	Przebyty zawał serca
+T51	Symptom 2008 2029	problemy z połykaniem
+N30	Reference T51 ICD10:R13	Dysfagia
+T52	Symptom 2031 2050	zmiana barwy stolca
+N31	Reference T52 ICD10:R19.5	Inne patologie kału
+R13	Neg Arg1:T41 Arg2:T46	
+R14	Neg Arg1:T41 Arg2:T47	
+R15	Neg Arg1:T41 Arg2:T48	
+R16	Neg Arg1:T41 Arg2:T49	
+R17	Neg Arg1:T41 Arg2:T50	
+R18	Neg Arg1:T41 Arg2:T51	
+R19	Neg Arg1:T41 Arg2:T52	
+T53	Treatment 2054 2071	Przebyte operacje
+T54	Treatment 2073 2086	appendektomia
+A2	Status T54 Historical_Insignificant
+T55	Date 2087 2101	w dzieciństwie
+R20	Dat Arg1:T55 Arg2:T54	
+T56	Behaviour 2102 2117	Palenie tytoniu
+N32	Reference T56 ICD10:Z72.0	Używanie tytoniu
+T57	Date 2130 2145	przez wiele lat
+T58	Negation 2119 2124	nigdy
+R21	Neg Arg1:T58 Arg2:T56	
+T59	Behaviour 2147 2162	bierna palaczka
+N33	Reference T59 ICD10:Z58.7	Narażenie na dym tytoniowy
+R22	Dat Arg1:T57 Arg2:T59	
+T60	Behaviour 2163 2174	Inne używki
+T61	Negation 2176 2179	nie
+R23	Neg Arg1:T61 Arg2:T60	
+T62	Condition 2180 2189	Uczulenia
+N34	Reference T62 ICD10:T78.4	Alergia, nieokreślona
+T63	Negation 2192 2195	nie
+R24	Neg Arg1:T63 Arg2:T62	
+T64	Condition 2223 2226	WZW
+N35	Reference T64 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T65	Negation 2228 2229	-
+R25	Neg Arg1:T65 Arg2:T64	
+T66	Condition 2233 2242	borelioza
+N36	Reference T66 ICD10:A69.2	Choroba z Lyme
+T67	Negation 2245 2246	-
+R26	Neg Arg1:T67 Arg2:T66	
+T68	Condition 2250 2253	tbc
+T69	Negation 2255 2256	-
+R27	Neg Arg1:T69 Arg2:T68	
+T70	Behaviour 2274 2300	warunki mieszkaniowe dobre
+T71	Drug 2338 2350	Lisiprol HCT
+T72	Drug_dose 2351 2371	20+25 1x 1 tabl/rano
+R28	Drg Arg1:T71 Arg2:T72	
+T73	Drug 2372 2378	Diured
+T74	Drug_dose 2379 2398	10mg 1x 1 tabl/rano
+R29	Drg Arg1:T73 Arg2:T74	
+T75	Drug 2399 2407	Proficar
+T76	Drug_dose 2408 2427	75mg 1x 1 tabl/rano
+R30	Drg Arg1:T75 Arg2:T76	
+T77	Drug 2428 2437	Polvertic
+T78	Drug_dose 2438 2452	24mg 2x 1 tabl
+R31	Drg Arg1:T77 Arg2:T78	
+T79	Drug 2453 2467	Cavinton forte
+T80	Drug_dose 2468 2482	10mg 2x 1 tabl
+R32	Drg Arg1:T79 Arg2:T80	
+T81	Drug 2483 2490	Nolpaza
+T82	Drug_dose 2491 2510	20mg 1x 1 tabl/rano
+R33	Drg Arg1:T81 Arg2:T82	
+T83	Drug 2511 2523	LEKI WZIEWNE
+T84	Date 2538 2551	2-3 m-ce temu
+T85	Negation 2524 2537	skończyły się
+R34	Neg Arg1:T85 Arg2:T83	
+R35	Dat Arg1:T84 Arg2:T83	
+T86	Investigation 2663 2684	badania laboratoryjne
+T87	Investigation 2686 2690	ECHO
+T88	Investigation 2692 2710	EKG metodą Holtera
+T89	Investigation 2712 2727	próba wysiłkowa
+T90	Condition 2873 2889	astmą oskrzelową
+N38	Reference T90 ICD10:J45	Astma oskrzelowa
+T91	Condition 2891 2914	nadciśnieniem tętniczym
+N39	Reference T91 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T92	Investigation_result 2916 2944	RR w domu 120/80-140/100mmHg
+N40	Reference T92 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T93	Condition 2947 2959	niedosłuchem
+T94	Symptom 2990 3017	ucisków w klatce piersiowej
+N42	Reference T94 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T95	Date 3018 3031	od ponad roku
+R36	Dat Arg1:T95 Arg2:T94	
+T96	Symptom 3076 3085	zmęczenia
+N43	Reference T96 ICD10:R53	Złe samopoczucie i zmęczenie
+T97	Symptom 3088 3127	duszności wysiłkowej przy małym wysiłku
+N44	Reference T97 ICD10:R06.0	Duszność
+T98	Symptom 3129 3165	20 stopni wchodzi z 1-3 odpoczynkami
+N45	Reference T98 ICD10:R53	Złe samopoczucie i zmęczenie
+T99	Date 3166 3180	od wiosny 2017
+R37	Dat Arg1:T99 Arg2:T96	
+R38	Dat Arg1:T99 Arg2:T97	
+R39	Dat Arg1:T99 Arg2:T98	
+T100	Symptom 3204 3228	zasłabnięcia w spoczynku
+N46	Reference T100 ICD10:R55	Omdlenie i zapaść
+T101	Negation 3230 3248	bez towarzyszących
+T102	Symptom 3249 3281	dolegliwosci w klatce piersiowej
+N47	Reference T102 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T103	Date 3283 3307	3-4 razy od grudnia 2017
+R40	Dat Arg1:T103 Arg2:T100	
+R41	Neg Arg1:T101 Arg2:T102	
+T104	Symptom 3309 3328	obrzeki podudzi L>P
+T105	Symptom 3337 3362	wymioty treścią pokarmową
+N49	Reference T105 ICD10:R11	Nudności i wymioty
+T39	Symptom 3364 3390	2-3x dziennie luźny stolec
+N50	Reference T39 ICD10:K59.1	Biegunka czynnościowa
+T106	Negation 3392 3398	Neguje
+T107	Symptom 3400 3408	omdlenia
+N51	Reference T107 ICD10:R55	Omdlenie i zapaść
+T108	Symptom 3410 3420	krwawienia
+T109	Symptom 3422 3435	czarne stolce
+N53	Reference T109 ICD10:K92.1	Stolce smołowate
+T110	Symptom 3437 3453	brunatne wymioty
+N54	Reference T110 ICD10:K92.0	Wymioty krwawe
+R8	Neg Arg1:T106 Arg2:T107	
+R42	Neg Arg1:T106 Arg2:T108	
+R43	Neg Arg1:T106 Arg2:T109	
+R44	Neg Arg1:T106 Arg2:T110	
+T111	Condition 3455 3471	chorobę wrzodową
+N55	Reference T111 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T112	Symptom 3473 3487	duszność nocną
+N56	Reference T112 ICD10:R06.0	Duszność
+T113	Condition 3489 3491	DM
+N57	Reference T113 ICD10:E14	Cukrzyca nieokreślona
+T114	Condition 3493 3503	udar mózgu
+N58	Reference T114 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+R45	Neg Arg1:T106 Arg2:T111	
+R46	Neg Arg1:T106 Arg2:T112	
+R47	Neg Arg1:T106 Arg2:T113	
+R48	Neg Arg1:T106 Arg2:T114	
+T115	Condition 3505 3516	zawał serca
+N59	Reference T115 ICD10:I25.2	Przebyty zawał serca
+T116	Symptom 3518 3539	problemy z połykaniem
+N60	Reference T116 ICD10:R13	Dysfagia
+T117	Symptom 3541 3560	zmiana barwy stolca
+N61	Reference T117 ICD10:R19.5	Inne patologie kału
+R49	Neg Arg1:T106 Arg2:T115	
+R50	Neg Arg1:T106 Arg2:T116	
+R51	Neg Arg1:T106 Arg2:T117	
+T118	Treatment 3564 3581	Przebyte operacje
+T119	Treatment 3583 3596	appendektomia
+A3	Status T119 Historical_Insignificant
+T120	Date 3597 3611	w dzieciństwie
+R52	Dat Arg1:T120 Arg2:T119	
+T121	Behaviour 3612 3627	Palenie tytoniu
+N62	Reference T121 ICD10:Z72.0	Używanie tytoniu
+T122	Negation 3629 3634	nigdy
+R53	Neg Arg1:T122 Arg2:T121	
+T123	Date 3640 3655	przez wiele lat
+T124	Behaviour 3657 3672	bierna palaczka
+N63	Reference T124 ICD10:Z58.7	Narażenie na dym tytoniowy
+R54	Dat Arg1:T123 Arg2:T124	
+T125	Behaviour 3673 3684	Inne używki
+T126	Negation 3686 3689	nie
+R55	Neg Arg1:T126 Arg2:T125	
+T127	Condition 3690 3699	Uczulenia
+N64	Reference T127 ICD10:T78.4	Alergia, nieokreślona
+T128	Negation 3702 3705	nie
+R56	Neg Arg1:T128 Arg2:T127	
+T129	Condition 3733 3736	WZW
+N65	Reference T129 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T130	Negation 3738 3739	-
+R57	Neg Arg1:T130 Arg2:T129	
+T131	Condition 3743 3752	borelioza
+N66	Reference T131 ICD10:A69.2	Choroba z Lyme
+T132	Negation 3755 3756	-
+R58	Neg Arg1:T132 Arg2:T131	
+T133	Condition 3760 3763	tbc
+T134	Negation 3765 3766	-
+R59	Neg Arg1:T134 Arg2:T133	
+T135	Behaviour 3784 3810	warunki mieszkaniowe dobre
+T136	Drug 3848 3860	Lisiprol HCT
+T137	Drug_dose 3861 3881	20+25 1x 1 tabl/rano
+R60	Drg Arg1:T136 Arg2:T137	
+T138	Drug 3882 3888	Diured
+T139	Drug_dose 3889 3908	10mg 1x 1 tabl/rano
+R61	Drg Arg1:T138 Arg2:T139	
+T140	Drug 3909 3917	Proficar
+T141	Drug_dose 3918 3937	75mg 1x 1 tabl/rano
+R62	Drg Arg1:T140 Arg2:T141	
+T142	Drug 3938 3947	Polvertic
+T143	Drug_dose 3948 3962	24mg 2x 1 tabl
+R63	Drg Arg1:T142 Arg2:T143	
+T144	Drug 3963 3977	Cavinton forte
+T145	Drug_dose 3978 3992	10mg 2x 1 tabl
+R64	Drg Arg1:T144 Arg2:T145	
+T146	Drug 3993 4000	Nolpaza
+T147	Drug_dose 4001 4020	20mg 1x 1 tabl/rano
+R65	Drg Arg1:T146 Arg2:T147	
+T148	Investigation 4082 4103	badania laboratoryjne
+T149	Investigation 4105 4109	ECHO
+T150	Investigation 4111 4129	EKG metodą Holtera
+T151	Investigation 4131 4146	próba wysiłkowa
+N5	Reference T5 ICD10:H90	Upośledzenie słuchu przewodzeniowe i czuciowo-nerwowe
+N11	Reference T26 ICD10:H90	Upośledzenie słuchu przewodzeniowe i czuciowo-nerwowe
+N18	Reference T37 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N22	Reference T43 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N68	Reference T60 ICD10:Z72	Problemy związane ze stylem życia
+N37	Reference T68 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N41	Reference T93 ICD10:H90	Upośledzenie słuchu przewodzeniowe i czuciowo-nerwowe
+N48	Reference T104 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N52	Reference T108 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N69	Reference T125 ICD10:Z72	Problemy związane ze stylem życia
+N67	Reference T133 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

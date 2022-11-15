@@ -1,0 +1,79 @@
+T1	Investigation 510 570	kontrola lipidogramu, stężenia elektrolitów, parametrów wydo
+T2	Behaviour 402 497	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T3	Condition 799 818	Drożny otwór owalny
+N1	Reference T3 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T4	Treatment 829 897	przezskórnym zamknięciu zestawem Occlutech Figulla Flex II PFO 25/23
+T5	Date 899 909	17.12.2018
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Condition 923 964	udarze niedokrwiennym mózgu lewej półkuli
+N2	Reference T6 ICD10:I63	Zawał mózgu
+T7	Date 965 976	(29.07.2018
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Condition 983 995	Dyslipidemia
+N3	Reference T8 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T9	Drug 1015 1022	statyną
+R3	Alg Arg1:T8 Arg2:T9	
+T10	Symptom 1028 1050	Żylaki kończyn dolnych
+N4	Reference T10 ICD10:I83	Żylaki kończyn dolnych
+T11	Treatment 1064 1072	operacji
+T12	Symptom 1082 1101	żylaków obu kończyn
+N5	Reference T12 ICD10:I83	Żylaki kończyn dolnych
+T13	Condition 1107 1118	Nikotynizm.
+N6	Reference T13 ICD10:F17.2	
+T14	Drug 1884 1889	Acard
+T15	Drug 1891 1897	Plavix
+T16	Drug 1899 1904	Tulip
+T17	Behaviour 1834 1860	warunki mieszkaniowe dobre
+T18	Negation 1811 1817	neguje
+T19	Negation 1796 1799	nie
+T20	Condition 1800 1809	Uczulenia
+N7	Reference T20 ICD10:T78.4	Alergia, nieokreślona
+R4	Neg Arg1:T18 Arg2:T20	
+T21	Behaviour 1783 1794	Inne używki
+R5	Neg Arg1:T19 Arg2:T21	
+T22	Behaviour 1732 1753	Palenie tytoniu: tak,
+N8	Reference T22 ICD10:T65.2	Tytoń i nikotyna
+T23	Negation 1720 1731	brak danych
+T24	Condition 1703 1718	Wywiad rodzinny
+A1	Status T24 Family
+R6	Neg Arg1:T23 Arg2:T24	
+T25	Negation 1665 1670	( - )
+T26	Negation 1683 1688	( - )
+T27	Negation 1699 1702	(-)
+T28	Condition 1661 1664	WZW
+N9	Reference T28 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T29	Condition 1673 1682	borelioza
+N10	Reference T29 ICD10:A69.2	Choroba z Lyme
+T30	Condition 1690 1698	gruźlica
+N11	Reference T30 ICD10:A15	
+R7	Neg Arg1:T27 Arg2:T30	
+R8	Neg Arg1:T26 Arg2:T29	
+R9	Neg Arg1:T25 Arg2:T28	
+T31	Negation 1627 1633	neguje
+T32	Treatment 1607 1624	Przebyte operacje
+R10	Neg Arg1:T31 Arg2:T32	
+T33	Symptom 1549 1561	zasłabnięcia
+N12	Reference T33 ICD10:R55	Omdlenie i zapaść
+T34	Symptom 1563 1572	duszności
+N13	Reference T34 ICD10:R06.0	Duszność
+T35	Symptom 1574 1605	typowe bóle w klatce piersiowej
+N14	Reference T35 ICD10:R07.3	Inne bóle w klatce piersiowej
+T36	Negation 1542 1548	Neguje
+R11	Neg Arg1:T36 Arg2:T33	
+R12	Neg Arg1:T36 Arg2:T34	
+R13	Neg Arg1:T36 Arg2:T35	
+T37	Condition 1351 1392	udarze niedokrwiennym mózgu lewej półkuli
+N15	Reference T37 ICD10:I63	Zawał mózgu
+T38	Date 1394 1404	29.07.2018
+R14	Dat Arg1:T38 Arg2:T37	
+T39	Symptom 1407 1431	żylakami kończyn dolnych
+N16	Reference T39 ICD10:I83	Żylaki kończyn dolnych
+T40	Treatment 1436 1444	operacji
+T41	Symptom 1454 1473	żylaków obu kończyn
+N17	Reference T41 ICD10:I83	Żylaki kończyn dolnych
+T42	Behaviour 1475 1487	nikotynizmem
+T43	Treatment 1262 1333	rzezskórnym zamknięciu PFO zestawem Occlutech Figulla Flex II PFO 25/23
+N19	Reference T43 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T44	Date 1335 1345	17.12.2018
+R15	Dat Arg1:T44 Arg2:T43	
+N18	Reference T42 ICD10:T65.2	Tytoń i nikotyna

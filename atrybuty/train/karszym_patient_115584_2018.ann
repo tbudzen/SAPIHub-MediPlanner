@@ -1,0 +1,70 @@
+T1	Condition 447 505	Wrodzona wada serca - ubytek w przegrodzie międzykomorowej
+N1	Reference T1 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T2	Treatment 506 525	leczony operacyjnie
+N2	Reference T2 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T3	Date 526 534	w 2000r.
+T4	Treatment 645 667	kontrola u lekarza POZ
+T5	Treatment 670 747	okresowa dalsza kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych
+T6	Negation 867 870	bez
+T7	Drug 871 876	leków
+T8	Negation 1069 1075	Neguje
+T9	Symptom 1076 1088	zasłabnięcia
+T10	Negation 1091 1097	neguje
+T11	Symptom 1098 1122	bóle w klatce piersiowej
+N3	Reference T11 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T12	Negation 1125 1131	neguje
+T13	Symptom 1132 1149	uczucie duszności
+N4	Reference T13 ICD10:R06.0	Duszność
+T14	Treatment 1176 1205	operacji wrodzonej wady serca
+N5	Reference T14 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T15	Condition 1219 1255	ubytku w przegrodzie międzykomorowej
+N6	Reference T15 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T16	Date 1257 1262	2000r
+T17	Condition 1265 1278	Arytmia serca
+N7	Reference T17 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T18	Treatment 1324 1343	Leczenie przewlekłe
+T19	Negation 1346 1350	brak
+T20	Condition 1379 1382	WZW
+N8	Reference T20 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T21	Condition 1392 1401	borelioza
+N9	Reference T21 ICD10:A69.2	Choroba z Lyme
+T22	Negation 1383 1389	( -  )
+T23	Negation 1402 1407	( - )
+T24	Condition 1410 1429	wywiadzie rodzinnym
+A1	Status T24 Family
+T25	Negation 1432 1436	brak
+T26	Behaviour 1438 1453	Palenie tytoniu
+N10	Reference T26 ICD10:Z72.0	Używanie tytoniu
+T27	Negation 1455 1458	nie
+T28	Behaviour 1459 1470	Inne używki
+T29	Negation 1472 1475	nie
+T30	Condition 1476 1485	Uczulenia
+N11	Reference T30 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T31	Behaviour 1552 1578	warunki mieszkaniowe dobre
+T32	Behaviour 1581 1600	mieszka z rodzicami
+T33	Negation 1608 1611	bez
+T34	Drug 1612 1630	leków przewlekłych
+T35	Investigation 1645 1655	Echo serca
+T36	Investigation 1658 1668	Holter EKG
+T37	Investigation 1671 1686	Próba Wysiłkowa
+T38	Investigation 1689 1692	TEE
+R1	Dat Arg1:T3 Arg2:T2	
+R2	Dat Arg1:T3 Arg2:T1	
+R3	Neg Arg1:T6 Arg2:T7	
+R4	Neg Arg1:T8 Arg2:T9	
+R5	Neg Arg1:T10 Arg2:T11	
+R6	Neg Arg1:T12 Arg2:T13	
+R7	Dat Arg1:T16 Arg2:T15	
+R8	Dat Arg1:T16 Arg2:T14	
+R9	Neg Arg1:T19 Arg2:T18	
+R10	Neg Arg1:T22 Arg2:T20	
+R11	Neg Arg1:T23 Arg2:T21	
+R12	Neg Arg1:T25 Arg2:T24	
+R13	Neg Arg1:T27 Arg2:T26	
+R14	Neg Arg1:T29 Arg2:T28	
+R15	Neg Arg1:T33 Arg2:T34	
+N12	Reference T9 ICD10:R55	Omdlenie i zapaść
+A2	Source T17 Declared
+T39	Treatment 1299 1316	Przebyte operacje
+N13	Reference T39 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+N14	Reference T28 ICD10:Z72	Problemy związane ze stylem życia

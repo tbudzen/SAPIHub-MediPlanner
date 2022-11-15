@@ -1,0 +1,76 @@
+T1	Drug 2027 2034	Nebilet
+T2	Drug_dose 2035 2056	5mg pół tabletki rano
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 1990 1993	IPP
+T4	Drug_dose 1994 2023	40mg 1xdziennie rano na czczo
+R2	Drg Arg1:T3 Arg2:T4	
+T5	Negation 1913 1919	Neguje
+T6	Condition 1920 1937	uczulenia na leki
+N1	Reference T6 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T7	Symptom 1946 1961	kołatania serca
+N2	Reference T7 ICD10:R00.2	Kołatanie serca
+T8	Negation 1939 1945	neguje
+R3	Neg Arg1:T8 Arg2:T7	
+R4	Neg Arg1:T5 Arg2:T6	
+T9	Symptom 1963 1982	utraty przytomności
+N3	Reference T9 ICD10:R55	Omdlenie i zapaść
+T10	Condition 848 862	Kamica nerkowa
+N4	Reference T10 ICD10:N20.0	Kamica nerki
+T11	Condition 460 489	Dwupłatkowa zastawka aortalna
+N5	Reference T11 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T12	Condition 491 551	Łagodna stenoza aortalna z łagodną niedomykalnością aortalną
+N6	Reference T12 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T13	Condition 553 591	Poszerzenie aorty wstępującej do 45 mm
+T14	Condition 623 644	Nadciśnienie tętnicze
+N8	Reference T14 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T15	Condition 646 660	Hiperlipidemia
+N9	Reference T15 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T16	Condition 662 694	Nieprawidłowa tolerancja glukozy
+T17	Condition 696 713	Refluks żołądkowy
+N10	Reference T17 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T18	Condition 715 747	Zmiany zwyrodnieniowe kręgosłupa
+N11	Reference T18 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T19	Condition 749 777	Kamica pęcherzyka żółciowego
+N12	Reference T19 ICD10:K80	Kamica żółciowa
+T20	Condition 779 799	Torbiel nerki prawej
+N13	Reference T20 ICD10:N28.1	Torbiel nerki, nabyta
+T21	Condition 801 825	Zespół jelita drażliwego
+N14	Reference T21 ICD10:K58	Zespół jelita drażliwego
+T22	Condition 593 621	Zachyłek worka osierdziowego
+T23	Condition 827 846	Zmiany guzkowe płuc
+N15	Reference T23 ICD10:R91	Nieprawidłowe wyniki diagnostycznych badań obrazowych płuc
+T24	Investigation 1121 1141	CT klatki piersiowej
+T25	Investigation_result 1154 1185	wielokomorową torbiel osierdzia
+T26	Investigation_result 1187 1216	poszerzenie aorty wstępującej
+T27	Investigation_result 1218 1255	lite okrągłe guzki w miąższu obu płuc
+R5	Inv Arg1:T24 Arg2:T25	
+R6	Inv Arg1:T24 Arg2:T26	
+R7	Inv Arg1:T24 Arg2:T27	
+T28	Condition 1270 1287	refluks żołądkowy
+N16	Reference T28 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T29	Treatment 1297 1313	cholecystektomii
+T30	Investigation 1327 1391	badaniu echokardiograficznymprzezklatkowym oraz przezprzełykowym
+T31	Date 1393 1397	2018
+R8	Dat Arg1:T31 Arg2:T30	
+T32	Investigation_result 1400 1442	uwidoczniono zastawkę aortalną dwupłatkową
+T33	Investigation_result 1444 1473	poszerzenie aorty wstępującej
+R9	Inv Arg1:T30 Arg2:T32	
+R10	Inv Arg1:T30 Arg2:T33	
+T34	Investigation 1485 1493	MR serca
+T35	Investigation_result 1506 1587	bocznie od pnia płucnego podłużną strukturę o orientacyjnych wymiarach 33x30x10mm
+R11	Inv Arg1:T34 Arg2:T35	
+T36	Investigation_result 1589 1630	Zmiana wykazuje sygnał płynowo-tłuszczowy
+R12	Inv Arg1:T34 Arg2:T36	
+T37	Condition 1745 1771	zachyłkowi worka osierdzia
+T38	Negation 1814 1830	nie uwidoczniono
+T39	Drug 1773 1792;1793 1813	Po dożylnym podaniu środka kontrastowego
+T40	Investigation_result 1831 1910	nieprawidłowych ognisk wczesnego i późnego wzmocnienia kontrastowego myocardium
+R13	Neg Arg1:T38 Arg2:T39	
+R14	Neg Arg1:T38 Arg2:T40	
+T41	Drug 1652 1672	środka kontrastowego
+N17	Reference T16 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+N7	Reference T13 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T42	Date 863 877	w przeszłości.
+R15	Dat Arg1:T42 Arg2:T10	
+A1	Status T29 Historical_Insignificant
+T43	Drug 2024 2026	Li

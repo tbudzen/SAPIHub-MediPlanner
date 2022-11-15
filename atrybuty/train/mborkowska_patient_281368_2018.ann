@@ -1,0 +1,33 @@
+T1	Behaviour 393 537	Systematyczny wysiłek fizyczny 5 x /tygodniowo po 30-45min z umiarkowaną intensywnościa,  z ograniczeniem sportów wyczynowych, forsownych biegów
+T2	Condition 789 846	Wrodzona wada serca - przełożenie wielkich pni tętniczych
+N1	Reference T2 ICD10:Q20.3	
+T3	Condition 849 878	mnogie ubytki międzykomorowe.
+N2	Reference T3 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T4	Treatment 890 898	operacji
+T5	Condition 900 927	przewężeniu tętnicy płucnej
+N3	Reference T5 ICD10:I77.1	Zwężenie tętnicy
+T6	Date 929 940	01.02.2005r
+R1	Dat Arg1:T6 Arg2:T5	
+R2	Dat Arg1:T6 Arg2:T4	
+T7	Treatment 955 1001	korekcji anatomicznej m/o Jatene oraz zaszyciu
+T8	Condition 1002 1026	ubytków międzykomorowych
+N4	Reference T8 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T9	Date 1028 1040	28.02.2005r)
+R3	Dat Arg1:T9 Arg2:T7	
+R4	Dat Arg1:T9 Arg2:T8	
+T10	Investigation 1052 1070	cewnikowaniu serca
+T11	Date 1073 1084	14.04.2011r
+R5	Dat Arg1:T11 Arg2:T10	
+T12	Condition 1248 1269	wada pod postacią TGA
+N5	Reference T12 ICD10:Q20.3	
+T13	Treatment 1275 1296	zabiegach naprawczych
+T14	Condition 1333 1350	wywiad alergiczny
+N6	Reference T14 ICD10:T78.4	Alergia, nieokreślona
+T15	Negation 1351 1357	ujemny
+R6	Neg Arg1:T15 Arg2:T14	
+T16	Drug 1360 1374	leków na stałe
+T17	Negation 1375 1388	nie otrzymuje
+R7	Neg Arg1:T17 Arg2:T16	
+T18	Treatment 333 375	Kontrolna wizyta w Poradni Kardiologicznej
+T19	Date 376 387	za 6-9 m-cy
+R8	Dat Arg1:T19 Arg2:T18	

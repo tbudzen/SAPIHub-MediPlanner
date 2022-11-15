@@ -1,0 +1,105 @@
+T1	Symptom 448 470	Napady kołatania serca
+N1	Reference T1 ICD10:R00.2	Kołatanie serca
+T2	Condition 472 514	Wole guzkowe tarczycy w trakcie obserwacji
+T3	Treatment 626 645	dalsza opieka w POZ
+T4	Treatment 648 715	okresowa kontrola w Poradni Kardiologicznej oraz Endokrynologicznej
+T5	Treatment 718 768	regularna kontrola ciśnienia tętniczego oraz tętna
+T6	Behaviour 771 852	dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych
+T7	Negation 1011 1022	bez wywiadu
+T8	Condition 1034 1056	chorób układu krążenia
+R1	Neg Arg1:T7 Arg2:T8	
+T9	Symptom 1084 1115	napadów uczucia kołatania serca
+N2	Reference T9 ICD10:R00.2	Kołatanie serca
+T10	Symptom 1117 1266	nietypowych dolegliwości bólowych w klatce piersiowej o charakterze ciężaru/ucisku pojawiającego się nieregularnie, bez związku z wysiłkiem fizycznym
+N3	Reference T10 ICD10:R07.3	Inne bóle w klatce piersiowej
+T11	Symptom 1268 1321	czasami dolegliwości te utrzymują się przez kilka dni
+T12	Condition 1354 1368	guzka tarczycy
+T13	Negation 1411 1414	bez
+T14	Treatment 1415 1423	leczenia
+R3	Neg Arg1:T13 Arg2:T14	
+N4	Reference T2 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+N5	Reference T12 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T15	Negation 1425 1431	Neguje
+T16	Symptom 1433 1445	zasłabnięcia
+T17	Symptom 1447 1455	omdlenia
+N6	Reference T17 ICD10:R55	Omdlenie i zapaść
+T18	Symptom 1457 1467	krwawienia
+T19	Symptom 1469 1482	czarne stolce
+N7	Reference T19 ICD10:K92.1	Stolce smołowate
+T20	Symptom 1484 1500	brunatne wymioty
+N8	Reference T20 ICD10:K92.0	Wymioty krwawe
+T21	Condition 1502 1518	chorobę wrzodową
+N9	Reference T21 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T22	Symptom 1520 1534	duszność nocną
+N10	Reference T22 ICD10:R06.0	Duszność
+T23	Symptom 1536 1551	obrzęki podudzi
+N11	Reference T23 ICD10:R60.0	Obrzęk zlokalizowany
+T24	Treatment 1581 1604	usunięciu szyjki macicy
+N12	Reference T24 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T26	Date 1628 1633	2012r
+T27	Treatment 1625 1627	cc
+N14	Reference T27 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+R4	Dat Arg1:T26 Arg2:T27	
+T28	Behaviour 1635 1650	Palenie tytoniu
+T29	Negation 1652 1655	nie
+T30	Behaviour 1656 1660	pali
+R5	Neg Arg1:T29 Arg2:T30	
+R6	Neg Arg1:T29 Arg2:T28	
+T31	Condition 1662 1677	Wywiad rodzinny
+A1	Status T31 Family
+T32	Negation 1679 1689	nieistotny
+R7	Neg Arg1:T32 Arg2:T31	
+T33	Behaviour 1690 1701	Inne używki
+T34	Negation 1703 1706	nie
+T35	Condition 1707 1716	Uczulenia
+N15	Reference T35 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T36	Negation 1718 1721	nie
+R8	Neg Arg1:T34 Arg2:T33	
+R9	Neg Arg1:T36 Arg2:T35	
+T37	Condition 1749 1752	WZW
+N16	Reference T37 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T38	Condition 1759 1768	borelioza
+N17	Reference T38 ICD10:A69.2	Choroba z Lyme
+T39	Condition 1774 1777	tbc
+N18	Reference T39 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T40	Condition 1783 1787	odra
+N19	Reference T40 ICD10:B05	Odra
+T41	Condition 1793 1807	kontakt z odrą
+N20	Reference T41 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+T42	Negation 1753 1756	(-)
+T43	Negation 1769 1772	(-)
+T44	Negation 1778 1781	(-)
+T45	Negation 1788 1791	(-)
+T46	Negation 1808 1811	(-)
+R10	Neg Arg1:T46 Arg2:T41	
+R11	Neg Arg1:T45 Arg2:T40	
+R12	Neg Arg1:T44 Arg2:T39	
+R13	Neg Arg1:T43 Arg2:T38	
+R14	Neg Arg1:T42 Arg2:T37	
+T47	Behaviour 1828 1854	warunki mieszkaniowe dobre
+T48	Behaviour 1856 1866	bezrobotna
+T49	Drug 1867 1871	Leki
+T50	Negation 1873 1895	nie przyjmuje na stałe
+R15	Neg Arg1:T50 Arg2:T49	
+T51	Drug 1919 1926	Hemofer
+T53	Investigation 1987 2008	badania laboratoryjne
+T54	Investigation 2010 2014	ECHO
+T55	Investigation 2016 2034	EKG metodą Holtera
+T56	Investigation 2036 2040	ABPM
+T57	Investigation 2042 2057	próba wysiłkowa
+N21	Reference T28 ICD10:Z72.0	Używanie tytoniu
+N22	Reference T30 ICD10:Z72.0	Używanie tytoniu
+A2	Status T27 Historical_Insignificant
+R17	Neg Arg1:T15 Arg2:T16	
+R18	Neg Arg1:T15 Arg2:T17	
+R19	Neg Arg1:T15 Arg2:T19	
+R20	Neg Arg1:T15 Arg2:T20	
+R21	Neg Arg1:T15 Arg2:T21	
+R22	Neg Arg1:T15 Arg2:T22	
+R23	Neg Arg1:T15 Arg2:T23	
+A3	Status T24 Historical_Insignificant
+T25	Drug_dose 1896 1913	okresowo włączany
+R16	Drg Arg1:T51 Arg2:T25	
+T52	Condition 1614 1623	dysplazji
+N13	Reference T52 ICD10:N87	Dysplazja szyjki macicy
+A4	Status T52 Historical_Insignificant

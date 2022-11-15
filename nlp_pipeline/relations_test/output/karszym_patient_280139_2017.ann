@@ -1,0 +1,38 @@
+T1	Drug 340 346	Acesan
+T2	Drug 348 356	Enarenal
+T3	Drug 358 366	Spironol
+T4	Drug 368 376	Encorton
+T5	Drug 378 389	Clemastinum
+T6	Drug 523 531	Enarenal
+T7	Drug_dose 532 541	2 x 2,5mg
+T8	Drug 587 595	Spironol
+T9	Drug_dose 596 606	1 x 12,5mg
+T10	Drug 652 658	Acesan
+T11	Drug_dose 659 667	1 x 50mg
+T12	Investigation 671 740	Ambulatoryjna kontrola parametrów układu krążenia - tętna, RR, sat.O2
+T13	Behaviour 745 787	Aktywność fizyczna w zakresie rekreacyjnym
+T14	Treatment 793 821	Dalsza opieka kardiologiczna
+T15	Treatment 824 865	kontrola wizyta w Poradni Kardiologicznej
+T16	Date 866 873	za 6mcy
+T17	Treatment 878 905	Dalsza opieka nefrologiczna
+T18	Condition 1045 1063	złożoną wadą serca
+N1	Reference T18 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T19	Treatment 1069 1091	zabiegach operacyjnych
+N2	Reference T19 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T20	Drug 1147 1153	Acesan
+T21	Drug 1155 1163	Enarenal
+T22	Drug 1166 1174	Spironol
+T23	Condition 1176 1193	wywiad alergiczny
+N3	Reference T23 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T24	Negation 1194 1200	ujemny
+R1	Neg Arg1:T24 Arg2:T23	
+R2	Dat Arg1:T16 Arg2:T15	
+R3	Drg Arg1:T6 Arg2:T7	
+R4	Drg Arg1:T8 Arg2:T9	
+R5	Drg Arg1:T10 Arg2:T11	
+R1	Drg Arg1:T6 Arg2:T7
+R10	Dat Arg1:T16 Arg2:T15
+R11	Dat Arg1:T16 Arg2:T17
+R13	Neg Arg1:T24 Arg2:T23
+R5	Drg Arg1:T8 Arg2:T9
+R9	Drg Arg1:T10 Arg2:T11

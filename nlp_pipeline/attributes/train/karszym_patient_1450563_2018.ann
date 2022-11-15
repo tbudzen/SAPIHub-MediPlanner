@@ -1,0 +1,34 @@
+T1	Drug 357 366	InnoferFe
+T2	Drug_dose 367 374	1x1,8ml
+T3	Drug 376 387	Innovitum B
+T4	Drug_dose 388 397	1x1kropla
+T5	Treatment 402 434	Przyjęcie do Kliniki Kardiologii
+T6	Date 435 453	w dniu 10.01.2019r
+T7	Treatment 460 481	leczenia operacyjnego
+N1	Reference T7 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T8	Treatment 560 620	Stała opieka ogólnopediatryczna w Poradni Lekarza Rodzinnego
+T9	Condition 861 901	Wrodzona wada serca - tetralogia Fallota
+N2	Reference T9 ICD10:Q21.3	Tetralogia Fallota
+T10	Condition 904 939	hipoplazją zastawki tętnicy płucnej
+N3	Reference T10 ICD10:Q22.3	Inne wrodzone wady rozwojowe zastawki pnia płucnego
+T11	Symptom 944 960	Sinica centralna
+N4	Reference T11 ICD10:R23.0	Sinica
+T12	Condition 965 998	Niedokrwistość z niedoboru żelaza
+N5	Reference T12 ICD10:D50.9	Niedokrwistość z niedoboru żelaza, nieokreślona
+T13	Drug 1119 1129	Innofer Fe
+T14	Drug 1131 1142	Innovitum B
+T15	Drug 1144 1155	witamina D.
+R1	Dat Arg1:T6 Arg2:T5	
+R2	Dat Arg1:T6 Arg2:T7	
+R3	Drg Arg1:T1 Arg2:T2	
+R4	Drg Arg1:T3 Arg2:T4	
+T16	Condition 1294 1297	ToF
+N6	Reference T16 ICD10:Q21.3	Tetralogia Fallota
+T17	Treatment 1337 1367	ewent. kwalifikację do zabiegu
+T18	Condition 1370 1387	wywiad alergiczny
+N7	Reference T18 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T19	Negation 1388 1394	ujemny
+T20	Drug 1397 1411	leków na stałe
+T21	Negation 1412 1425	nie otrzymuje
+R5	Neg Arg1:T21 Arg2:T20	
+R6	Neg Arg1:T19 Arg2:T18	

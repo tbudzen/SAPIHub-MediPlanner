@@ -1,0 +1,131 @@
+T1	Symptom 439 454	Kołatania serca
+N1	Reference T1 ICD10:R00.2	Kołatanie serca
+T2	Condition 456 477	Nadciśnienie tętnicze
+A1	Source T2 Declared
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Symptom 479 496	Zaburzenia lękowe
+A2	Source T3 Declared
+N3	Reference T3 ICD10:F41.9	Zaburzenia lękowe, nieokreślone
+T4	Treatment 609 653	Dalsza opieka w poradni kardiologicznej, POZ
+T5	Investigation 660 706	Codzienna kontrola ciśnienia tętniczego, tętna
+T6	Behaviour 708 725	Dieta ubogosodowa
+T7	Investigation 731 753	Okresowe badania w POZ
+T8	Treatment 759 791	Systematyczne przyjmowanie leków
+T9	Drug 794 801	Nebilet
+T10	Drug_dose 802 819	5mg 1/2 tabl rano
+R1	Drg Arg1:T9 Arg2:T10	
+T11	Treatment 1154 1219	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T12	Behaviour 1222 1262	Dieta lekkostrawna , niskocholesterolowa
+T13	Investigation 1266 1349	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T14	Investigation 1352 1400	Systematyczna kontrola ciśnienia tętniczego krwi
+T15	Treatment 1403 1444	Wskazane systematyczne przyjmowanie leków
+T16	Drug 1451 1458	Nebilet
+T17	Drug_dose 1459 1487	5 mg 1x dz po 1/4 tabl. rano
+R2	Drg Arg1:T16 Arg2:T17	
+T18	Symptom 1715 1739	Bóle w klatce piersiowej
+N4	Reference T18 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T19	Condition 1762 1818	Łagodna/umiarkowana niedomykalność zastawki trójdzielnej
+N5	Reference T19 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T20	Condition 1820 1841	Nadciśnienie tętnicze
+N6	Reference T20 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T21	Condition 1843 1863	Hipercholesterolemia
+N7	Reference T21 ICD10:E78.0	Czysta hipercholesterolemia
+T22	Behaviour 1865 1875	Nikotynizm
+T23	Drug 1996 2003	Nebilet
+T24	Symptom 2178 2214	kołatań serca, głównie spoczynkowych
+N9	Reference T24 ICD10:R00.2	Kołatanie serca
+T25	Symptom 2231 2244	uczuciem lęku
+N10	Reference T25 ICD10:F41.9	Zaburzenia lękowe, nieokreślone
+T26	Date 2245 2257	od ok. 2 lat
+R3	Dat Arg1:T26 Arg2:T25	
+R4	Dat Arg1:T26 Arg2:T24	
+T27	Symptom 2263 2302	labilnych wartości ciśnienia tętniczego
+N11	Reference T27 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T28	Condition 2317 2326	menopauza
+T29	Date 2328 2345	od ok. 6 miesięcy
+T30	Condition 2346 2361	brak miesiączki
+N12	Reference T30 ICD10:N91.2	Brak miesiączki, nieokreślony
+R5	Dat Arg1:T29 Arg2:T30	
+R6	Dat Arg1:T29 Arg2:T28	
+T31	Condition 2364 2396	zmiany zwyrodnieniowe kręgosłupa
+N13	Reference T31 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T32	Condition 2398 2408	dyskopatie
+N14	Reference T32 ICD10:M51.9	Choroba krążków międzykręgowych, nieokreślona
+T33	Symptom 2410 2482	zawroty głowy przy długotrwałej pozycji stojącej z pochyleniem do przodu
+N15	Reference T33 ICD10:R42	
+T34	Treatment 2483 2500	Przebyte operacje
+T35	Negation 2502 2512	nie podaje
+R7	Neg Arg1:T35 Arg2:T34	
+T36	Treatment 2513 2532	Leczenie przewlekłe
+T37	Negation 2534 2544	nie podaje
+R8	Neg Arg1:T37 Arg2:T36	
+T38	Condition 2572 2575	WZW
+N16	Reference T38 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T39	Condition 2577 2586	borelioza
+N17	Reference T39 ICD10:A69.2	Choroba z Lyme
+T40	Negation 2590 2600	nie podaje
+R9	Neg Arg1:T40 Arg2:T39	
+R10	Neg Arg1:T40 Arg2:T38	
+T41	Condition 2601 2616	Wywiad rodzinny
+A3	Status T41 Family
+T42	Negation 2618 2628	nieistotny
+R11	Neg Arg1:T42 Arg2:T41	
+T43	Behaviour 2629 2662	Palenie tytoniu: tak 1/2 paczki/d
+T44	Behaviour 2663 2688	Inne używki: okazjonalnie
+T45	Condition 2689 2698	Uczulenia
+T48	Behaviour 2732 2744	pielęgniarka
+T49	Investigation 2807 2817	echo serca
+T50	Investigation 2819 2822	TET
+T51	Investigation 2824 2828	ABPM
+T52	Investigation 2830 2836	Holter
+T53	Investigation 2838 2856	RTG kl. piersiowej
+T54	Symptom 3080 3143	okresowych bólów w klatce piersiowej nie związanych z wysiłkiem
+N19	Reference T54 ICD10:R07.3	Inne bóle w klatce piersiowej
+T55	Condition 3158 3167	menopauza
+T56	Date 3169 3186	od ok. 9 miesięcy
+T57	Condition 3187 3202	brak miesiączki
+N20	Reference T57 ICD10:N91.2	Brak miesiączki, nieokreślony
+R12	Dat Arg1:T56 Arg2:T57	
+R13	Dat Arg1:T56 Arg2:T55	
+T58	Condition 3205 3237	zmiany zwyrodnieniowe kręgosłupa
+N21	Reference T58 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T59	Condition 3239 3249	dyskopatie
+N22	Reference T59 ICD10:M51.9	Choroba krążków międzykręgowych, nieokreślona
+T60	Symptom 3251 3323	zawroty głowy przy długotrwałej pozycji stojącej z pochyleniem do przodu
+N23	Reference T60 ICD10:R42	Zawroty głowy i odurzenie
+T61	Treatment 3324 3341	Przebyte operacje
+T62	Treatment 3354 3373	Leczenie przewlekłe
+T63	Negation 3343 3353	nie podaje
+T64	Negation 3375 3385	nie podaje
+R14	Neg Arg1:T63 Arg2:T61	
+R15	Neg Arg1:T64 Arg2:T62	
+T65	Condition 3413 3416	WZW
+N24	Reference T65 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T66	Condition 3418 3427	borelioza
+N25	Reference T66 ICD10:A69.2	Choroba z Lyme
+T67	Negation 3431 3441	nie podaje
+R16	Neg Arg1:T67 Arg2:T66	
+R17	Neg Arg1:T67 Arg2:T65	
+T68	Condition 3442 3457	Wywiad rodzinny
+A4	Status T68 Family
+T69	Negation 3459 3469	nieistotny
+R18	Neg Arg1:T69 Arg2:T68	
+T70	Behaviour 3470 3503	Palenie tytoniu: tak 1/2 paczki/d
+N26	Reference T70 ICD10:Z72.0	Używanie tytoniu
+T71	Behaviour 3504 3529	Inne używki: okazjonalnie
+T72	Condition 3530 3539	Uczulenia
+T75	Behaviour 3573 3585	pielęgniarka
+T76	Drug 3611 3618	Nebilet
+T77	Drug_dose 3619 3642	5 mg 1x dz po 1/4 tabl.
+R19	Drg Arg1:T76 Arg2:T77	
+T78	Investigation 3681 3691	echo serca
+T79	Investigation 3693 3696	TET
+N8	Reference T22 ICD10:Z72.0	Używanie tytoniu
+N18	Reference T43 ICD10:Z72.0	Używanie tytoniu
+N27	Reference T45 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N28	Reference T72 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+N29	Reference T44 ICD10:Z72	Problemy związane ze stylem życia
+T46	Negation 2770 2773	bez
+T47	Drug 2774 2779	leków
+R20	Neg Arg1:T46 Arg2:T47	
+N30	Reference T71 ICD10:Z72	Problemy związane ze stylem życia

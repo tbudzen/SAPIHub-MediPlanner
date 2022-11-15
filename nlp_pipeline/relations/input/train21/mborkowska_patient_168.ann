@@ -1,0 +1,45 @@
+T1	Treatment 420 440	operacyjnym leczeniu
+T2	Date 474 478	1996
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Condition 481 509	Niedomykalność mitralna I st
+N1	Reference T3 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T4	Condition 511 523	Zespół Downa
+N2	Reference T4 ICD10:Q90	Zespół Downa
+T5	Condition 525 547	Niedoczynność tarczycy
+N3	Reference T5 ICD10:E01	Patologie tarczycy związane z niedoborem jodu i innymi chorobami
+T6	Behaviour 803 828	dieta niskocholesterolowa
+T7	Drug 864 872	Euthyrox
+T8	Drug_dose 873 925	50ug 1 tabl. rano na czczo od poniedziałku do soboty
+T9	Drug 928 936	Euthyrox
+T10	Drug_dose 937 975	75ug 1 tabl. rano na czczo w niedzielę
+R2	Drg Arg1:T7 Arg2:T8	
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Condition 1115 1129	Zespołem Downa
+N4	Reference T11 ICD10:Q90	Zespół Downa
+T12	Treatment 1134 1175	operacyjnej korekcji wspólnego kanału A-V
+T13	Date 1194 1200	1996 r
+A2	Status T12 Historical_Insignificant
+R4	Dat Arg1:T13 Arg2:T12	
+T14	Date 1389 1407	październiku 2018r
+T15	Condition 1418 1431	zasłabnięcia,
+N5	Reference T15 ICD10:R55	Omdlenie i zapaść
+R5	Dat Arg1:T14 Arg2:T15	
+T16	Condition 1459 1470	odwodnienia
+N6	Reference T16 ICD10:E86	Nadmierna utrata płynów
+R6	Dat Arg1:T14 Arg2:T16	
+T17	Symptom 1545 1635	pogorszenia wydolności fizycznej oraz innych objawów ze strony układu sercowo-naczyniowego
+T18	Negation 1541 1544	bez
+R7	Neg Arg1:T18 Arg2:T17	
+T19	Drug 1695 1705	Euthyroxem
+T20	Drug_dose 1706 1713	50 ug/d
+T21	Condition 1657 1679	niedoczynność tarczycy
+N7	Reference T21 ICD10:E01	Patologie tarczycy związane z niedoborem jodu i innymi chorobami
+R8	Alg Arg1:T21 Arg2:T19	
+T22	Treatment 732 755	kontrola kardiologiczna
+T23	Investigation 767 787	kontrola lipidogramu
+T24	Date 789 799	raz w roku
+R9	Dat Arg1:T24 Arg2:T23	
+T25	Condition 441 472	kanału przedsionkowo-komorowego
+N8	Reference T25 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+R10	Dat Arg1:T2 Arg2:T25	
+R11	Drg Arg1:T19 Arg2:T20	

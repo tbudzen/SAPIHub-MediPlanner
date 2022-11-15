@@ -1,0 +1,128 @@
+T1	Condition 459 503	Łagodna niedomykalność zastawki trójdzielnej
+N1	Reference T1 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T2	Condition 536 558	(bradykardia zatokowa;
+N2	Reference T2 ICD10:R00.1	Bradykardia, nieokreślona
+T3	Condition 559 590	napadowe migotanie przedsionków
+N3	Reference T3 ICD10:I48	Migotanie i trzepotanie przedsionków
+T5	Condition 512 535	bradykardia-tachykardia
+T6	Treatment 646 657	krioablacji
+T7	Condition 658 691	napadowego migotania przedsionków
+N6	Reference T7 ICD10:I48	Migotanie i trzepotanie przedsionków
+T8	Date 692 703	20.03.2019r
+R1	Dat Arg1:T8 Arg2:T7	
+R2	Dat Arg1:T8 Arg2:T6	
+T9	Condition 705 734	Blok lewej odnogi pęczka Hisa
+N7	Reference T9 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T10	Symptom 736 755	Utrata przytomności
+N8	Reference T10 ICD10:R55	Omdlenie i zapaść
+T11	Date 769 776	07.2018
+R3	Dat Arg1:T11 Arg2:T10	
+T12	Condition 779 870	Przewlekła niewydolność serca z zachowaną frakcją wyrzutową lewej komory w I klasie wg NYHA
+N9	Reference T12 ICD10:I50	Niewydolność serca
+T13	Behaviour 872 882	Nikotynizm
+T14	Investigation 1078 1107	kontrola ciśnienia tętniczego
+T15	Investigation 1123 1143	kontrola lipidogramu
+T16	Behaviour 1150 1198	dieta niskocholesterolowa i uboga w cukry proste
+T17	Behaviour 1204 1225	zakaz palenia tytoniu
+T18	Drug 1269 1276	Pradaxa
+T19	Drug_dose 1277 1308	150 mg 1 tabl. rano i wieczorem
+R4	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1316 1326	Prestarium
+T21	Drug_dose 1327 1360	5 mg   1/2 tabl. rano i wieczorem
+R5	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1368 1378	Trifas Cor
+T23	Drug_dose 1379 1396	5 mg 1 tabl. rano
+R6	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1403 1411	Spironol
+T25	Drug_dose 1412 1436	25 mg 1 tabl. popołudniu
+R7	Drg Arg1:T24 Arg2:T25	
+T26	Investigation 2563 2573	echo serca
+T27	Investigation 2575 2578	TET
+T28	Investigation 2580 2584	ABPM
+T29	Investigation 2586 2592	Holter
+T30	Drug 2518 2526	Spironol
+T31	Drug_dose 2527 2535	25 0-1-0
+R8	Drg Arg1:T30 Arg2:T31	
+T32	Drug 2499 2509	Trifas Cor
+T33	Drug_dose 2510 2517	5 1-0-0
+R9	Drg Arg1:T32 Arg2:T33	
+T34	Drug 2474 2484	Prestarium
+T35	Drug_dose 2485 2498	5mg 1/2-0-1/2
+R10	Drg Arg1:T34 Arg2:T35	
+T36	Drug 2456 2463	Pradaxa
+T37	Drug_dose 2464 2473	150 1-0-1
+R11	Drg Arg1:T36 Arg2:T37	
+T38	Negation 2358 2368	nie podaje
+T39	Condition 2347 2356	Uczulenia
+N11	Reference T39 ICD10:T78.4	Alergia, nieokreślona
+R12	Neg Arg1:T38 Arg2:T39	
+T40	Behaviour 2321 2346	Inne używki: okazjonalnie
+T41	Negation 2304 2312	nie pali
+T42	Behaviour 2287 2302	Palenie tytoniu
+N12	Reference T42 ICD10:T65.2	Tytoń i nikotyna
+R13	Neg Arg1:T41 Arg2:T42	
+T43	Condition 2240 2251	zawał serca
+N13	Reference T43 ICD10:I25.2	Przebyty zawał serca
+A1	Status T43 Family
+T44	Treatment 2283 2286	PCM
+A2	Status T44 Family
+T45	Condition 2180 2183	WZW
+N14	Reference T45 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T46	Condition 2185 2194	borelioza
+N15	Reference T46 ICD10:A69.2	Choroba z Lyme
+T47	Negation 2197 2207	nie podaje
+R14	Neg Arg1:T47 Arg2:T46	
+R15	Neg Arg1:T47 Arg2:T45	
+T48	Negation 2142 2152	nie podaje
+T49	Negation 2110 2121	nie zgłasza
+T50	Treatment 2123 2140	Przebyte operacje
+R16	Neg Arg1:T48 Arg2:T50	
+T51	Symptom 2090 2109	Innych dolegliwości
+R17	Neg Arg1:T49 Arg2:T51	
+T52	Negation 1961 1967	neguje
+T53	Symptom 1968 1978	krwawienia
+N16	Reference T53 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T54	Symptom 1980 1993	czarne stolce
+N17	Reference T54 ICD10:K92.1	Stolce smołowate
+T55	Symptom 1995 2011	brunatne wymioty
+N18	Reference T55 ICD10:K92.0	Wymioty krwawe
+T56	Symptom 2013 2029	chorobę wrzodową
+N19	Reference T56 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T57	Symptom 2031 2046	duszność nocną,
+N20	Reference T57 ICD10:I50.1	Niewydolność serca lewokomorowa
+T58	Symptom 2047 2063	obrzęki podudzi,
+N21	Reference T58 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T59	Symptom 2064 2088	bóle w klatce piersiowej
+N22	Reference T59 ICD10:R07.3	Inne bóle w klatce piersiowej
+R18	Neg Arg1:T52 Arg2:T53	
+R19	Neg Arg1:T52 Arg2:T54	
+R20	Neg Arg1:T52 Arg2:T55	
+R21	Neg Arg1:T52 Arg2:T56	
+R22	Neg Arg1:T52 Arg2:T57	
+R23	Neg Arg1:T52 Arg2:T58	
+R24	Neg Arg1:T52 Arg2:T59	
+T60	Treatment 1585 1592	ablacji
+T61	Condition 1593 1626	napadowego migotania przedsionków
+N23	Reference T61 ICD10:I48	Migotanie i trzepotanie przedsionków
+T62	Date 1628 1639	20.03.2019r
+R25	Dat Arg1:T62 Arg2:T61	
+R26	Dat Arg1:T62 Arg2:T60	
+T63	Symptom 1737 1751	zawrotów glowy
+N24	Reference T63 ICD10:R42	Zawroty głowy i odurzenie
+T64	Symptom 1819 1859	epizod krótkotrwałej utraty przytomności
+N25	Reference T64 ICD10:R55	Omdlenie i zapaść
+T65	Date 1862 1870	07.2018r
+R27	Dat Arg1:T65 Arg2:T64	
+T66	Condition 1899 1930	zespołu tachykardia-bradykardia
+N26	Reference T66 ICD10:I49.5	Zespół chorej zatoki
+T67	Investigation 1942 1945	ekg
+T68	Investigation_result 1946 1950	RBBB
+N27	Reference T68 ICD10:I45.0	Blok prawej odnogi pęczka Hisa
+R28	Inv Arg1:T67 Arg2:T68	
+N4	Reference T5 ICD10:I49.5	Zespół chorej zatoki
+T4	Date 2313 2320	od roku
+R29	Dat Arg1:T4 Arg2:T42	
+N5	Reference T13 ICD10:T65.2	Tytoń i nikotyna
+T69	Investigation_result 593 598	EHRA0
+T70	Investigation_result 600 618	ChA2DS2VASc punkty
+T71	Investigation_result 620 635	HASBLED 1 punkt

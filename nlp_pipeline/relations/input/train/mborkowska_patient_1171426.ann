@@ -1,0 +1,18 @@
+T1	Condition 568 643	Wrodzona wada serca pod postacią skorygowanego przełożenia pni naczyniowych
+N1	Reference T1 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T2	Condition 649 674	Komorowe zaburzenia rytmu
+N2	Reference T2 ICD10:I49	Inne zaburzenia rytmu serca
+T3	Condition 816 832	skorygowanym TGA
+N3	Reference T3 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T4	Condition 835 853	zaburzeniami rytmu
+N4	Reference T4 ICD10:I49	Inne zaburzenia rytmu serca
+T5	Drug 888 902	leków na stałe
+T6	Negation 903 916	nie otrzymuje
+R1	Neg Arg1:T6 Arg2:T5	
+T7	Condition 919 936	wywiad alergiczny
+N5	Reference T7 ICD10:T78.4	Alergia, nieokreślona
+T8	Negation 937 943	ujemny
+R2	Neg Arg1:T8 Arg2:T7	
+T9	Drug 345 350	leków
+T10	Negation 341 344	bez
+R3	Neg Arg1:T10 Arg2:T9	

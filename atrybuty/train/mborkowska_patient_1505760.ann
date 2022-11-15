@@ -1,0 +1,82 @@
+T1	Investigation 612 658	samokontrola ciśnienia tętniczego krwi i tętna
+T2	Behaviour 716 744	Wskazana redukcja masy ciała
+T3	Behaviour 821 923	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T4	Behaviour 749 816	Wskazane podjęcie umiarkowanej, systematycznej aktywności fizycznej
+T5	Investigation 1370 1390	kontrola lipidogramu
+T6	Date 1391 1404	za 3 miesiące
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Investigation 1493 1575	kontrola morfologii, stężenia elektrolitów, parametrów wydolności nerek i wątroby.
+T8	Drug 1610 1616	Levoxa
+T9	Drug_dose 1617 1721	500mg 1 tabletka rano przez 4 dni - dokończenie włączonej w warunkach ambulatoryjnych antybiotykoterapii
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Condition 2189 2201	Dyslipidemia
+N1	Reference T10 ICD10:E78.5	
+T11	Behaviour 2245 2255	Nikotynizm
+T12	Condition 2203 2218	Mnogie przetoki
+N3	Reference T12 ICD10:K60.3	
+T13	Condition 2221 2243	ropnie okołoodbytnicze
+N4	Reference T13 ICD10:K61	Ropień okolicy odbytu i odbytnicy
+T14	Condition 2413 2433	hipertriglicerydemią
+N5	Reference T14 ICD10:E78	
+T15	Symptom 2464 2477	kołatań serca
+N6	Reference T15 ICD10:R00.2	Kołatanie serca
+T16	Investigation_result 2480 2538	labilnych wartości ciśnienia tętniczego (max 180/105 mmHg)
+T17	Symptom 2556 2568	bólami głowy
+N7	Reference T17 ICD10:R51	Ból głowy
+T18	Date 2569 2582	od ok. 3 lat.
+R3	Dat Arg1:T18 Arg2:T17	
+R4	Dat Arg1:T18 Arg2:T16	
+T19	Condition 2584 2611	Sącząca się zmiana w kroczu
+T20	Drug 2645 2652	Leovoxa
+T21	Drug_dose 2653 2674	500 mg 1 tabl. 1 x dz
+R5	Drg Arg1:T20 Arg2:T21	
+T22	Drug 2708 2719	Propranolol
+T23	Drug_dose 2689 2697	doraźnie
+R6	Drg Arg1:T22 Arg2:T23	
+T24	Negation 2739 2749	nie podaje
+T25	Negation 2794 2804	nie podaje
+T26	Treatment 2720 2738	Przebyte operacje:
+R7	Neg Arg1:T24 Arg2:T26	
+T27	Condition 2777 2780	WZW
+T28	Condition 2782 2791	borelioza
+N9	Reference T28 ICD10:A69.2	Choroba z Lyme
+R8	Neg Arg1:T25 Arg2:T28	
+R9	Neg Arg1:T25 Arg2:T27	
+T29	Negation 2822 2832	nie podaje
+T30	Condition 2805 2820	Wywiad rodzinny
+R10	Neg Arg1:T29 Arg2:T30	
+A1	Status T30 Family
+T31	Behaviour 2833 2848	Palenie tytoniu
+T32	Negation 2850 2858	nie pali
+R11	Neg Arg1:T32 Arg2:T31	
+T33	Negation 2908 2918	nie podaje
+T34	Negation 2886 2896	nie podaje
+T35	Behaviour 2873 2884	Inne używki
+R12	Neg Arg1:T34 Arg2:T35	
+T36	Condition 2897 2906	Uczulenia
+R13	Neg Arg1:T33 Arg2:T36	
+T37	Investigation 3008 3018	echo serca
+T38	Investigation 3020 3023	TET
+T39	Investigation 3025 3029	ABPM
+T40	Investigation 3031 3037	Holter
+T41	Investigation 3039 3058	RTG kl. piersiowej.
+T42	Condition 2166 2187	Nadciśnienie tętnicze
+N12	Reference T42 ICD10:I10	
+T43	Date 2859 2872	od 3 miesięcy
+R14	Dat Arg1:T43 Arg2:T31	
+T44	Condition 1265 1284	zaburzenia lipidowe
+N2	Reference T11 ICD10:Z72.0	Używanie tytoniu
+R15	Dat Arg1:T18 Arg2:T15	
+N13	Reference T19 ICD10:N90	Inne niezapalne choroby sromu i krocza
+N8	Reference T27 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N10	Reference T31 ICD10:Z72.0	Używanie tytoniu
+T45	Treatment 332 351	Dalsza opieka w POZ
+T46	Treatment 356 511	Wskazana dalsza diagnostyka i leczenie w Klinice Chirurgii Ogólnej i Kolorektalnej Uniwersyteckiego Szpitala Klinicznego im. Wojskowej Akademii Medycznej –
+T47	Treatment 928 1236	Wskazana ponowna konsultacja w Poradni Kardiologicznej, ocena wartości ciśnienia tętniczego w warunkach domowych wraz z podjęciem decyzji o konieczności farmakoterapii oraz ewentualna ponowna hospitalizacja w Klinice Kardiologii i Wad Wrodzonych Dorosłych po zakończeniu diagnostyki i leczenia chirurgicznego
+N14	Reference T35 ICD10:Z72	Problemy związane ze stylem życia
+N11	Reference T36 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T48	Drug 2954 2958	Leki
+T49	Negation 2960 2963	bez
+R16	Neg Arg1:T49 Arg2:T48	
+T50	Drug_dose 2964 2980	stałego leczenia
+R17	Drg Arg1:T48 Arg2:T50	

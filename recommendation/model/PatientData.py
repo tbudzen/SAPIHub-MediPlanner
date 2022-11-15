@@ -1,0 +1,3 @@
+class PatientData(object):
+    pass
+

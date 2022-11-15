@@ -1,0 +1,527 @@
+allRelations          : 41
+oks                   : 11
+isRedundantAndRemoveds: 24
+shouldNotBeRemoveds   : 2
+shouldBeBemoveds      : 4
+GOOD / BAD            : 35 / 6
+Sentence 0:
+------------------------------------------------
+Wiek: 19 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zastosowane leczenie
+------------------------------------------------
+
+
+
+Sentence 3:
+Nedal, Paracetamol
+------------------------------------------------
+
+
+
+Sentence 4:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 5:
+- kontrola u lekarza POZ
+- kontrola wartości ciśnienia tętniczego w warunkach domowych
+
+
+
+Sentence 6:
+- zaprzestanie palenia papierosów!
+
+
+
+Sentence 7:
+- regularne przyjmowanie leku:
+
+
+
+Sentence 8:
+Nedal 5mg 1x 1/2 tabl/rano
+------------------------------------------------
+
+R1	Drg Arg1:T3 Arg2:T4 << OK >>	Nedal -> 5mg 1x 1/2 tabl/rano  <RANK: 3> <info: start[621, 627] <type: RIGHT>>
+
+
+Sentence 9:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 10:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Nadciśnienie tętnicze.
+
+
+Sentence 11:
+Kołatania serca.
+
+
+
+Sentence 12:
+------------------------------------------------
+
+
+
+Sentence 13:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 14:
+Pacjentka lat 19, przyjęta do kliniki z powodu skoków RR do 179/140mmHg (zwykle RR sk 130-140mmHg) z drżeniem kończyn górnych, uczuciem zimna, zawrotami głowy i dusznością, jeden raz z utratą przytomności.
+
+
+Sentence 15:
+Dolegliwości od 09.2018. 
+
+
+
+Sentence 16:
+W wywiadzie ponadto: napady kołatania serca, nietypowe bóle w klatce piersiowej.
+
+
+
+Sentence 17:
+Neguje: zasłabnięcia, obrzęki podudzi, zmniejszenie tolerancji wysiłku fizycznego, używki, antykoncepcja, ciąża.
+
+R2	Neg Arg1:T22 Arg2:T16 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[1342, 1350] <type: RIGHT>>
+R3	Neg Arg1:T22 Arg2:T17 << OK >>	Neguje -> obrzęki podudzi  <RANK: 2> <info: start[1342, 1364] <type: RIGHT>>
+R4	Neg Arg1:T22 Arg2:T18 << OK >>	Neguje -> zmniejszenie tolerancji wysiłku fizycznego  <RANK: 2> <info: start[1342, 1381] <type: RIGHT>>
+R5	Neg Arg1:T22 Arg2:T21 << OK >>	Neguje -> ciąża  <RANK: 2> <info: start[1342, 1448] <type: RIGHT>>
+R6	Neg Arg1:T22 Arg2:T19 <<SHOULD NOT BE REMOVED>>	Neguje -> używki <:REMOVED other second tag between (right):> <RANK: 2> <info: start[1342, 1425] <type: RIGHT>>
+R7	Neg Arg1:T22 Arg2:T20 <<SHOULD NOT BE REMOVED>>	Neguje -> antykoncepcja <:REMOVED other second tag between (right):> <RANK: 2> <info: start[1342, 1433] <type: RIGHT>>
+
+
+Sentence 18:
+Przebyte operacje: usunięcie kostek dodatkowych przyśrodkowych.
+
+
+
+Sentence 19:
+Palenie tytoniu: do 10/ dz.
+Inne używki: nie
+Uczulenia: nie.
+
+R8	Neg Arg1:T26 Arg2:T27 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1560, 1564] <type: RIGHT>>
+R9	Neg Arg1:T26 Arg2:T24 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu: do 10/ dz <:REMOVED Tag2 not in the same line:> <RANK: 0> <info: start[1560, 1519] <type: LEFT>>
+R10	Neg Arg1:T26 Arg2:T25 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[1560, 1547] <type: LEFT>>
+R11	Neg Arg1:T28 Arg2:T27 << OK >>	nie -> Uczulenia  <RANK: 3> <info: start[1575, 1564] <type: LEFT>>
+R12	Neg Arg1:T28 Arg2:T24 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu: do 10/ dz <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1575, 1519] <type: LEFT>>
+R13	Neg Arg1:T28 Arg2:T25 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1575, 1547] <type: LEFT>>
+
+
+Sentence 20:
+Przebyte choroby zakaźne - WZW (-) , borelioza (-), tbc (-), odra (-), kontakt z odrą (-)
+
+R14	Neg Arg1:T34 Arg2:T29 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1666, 1607] <type: LEFT>>
+R15	Neg Arg1:T34 Arg2:T30 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1666, 1617] <type: LEFT>>
+R16	Neg Arg1:T34 Arg2:T31 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1666, 1632] <type: LEFT>>
+R17	Neg Arg1:T34 Arg2:T32 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1666, 1641] <type: LEFT>>
+R18	Neg Arg1:T34 Arg2:T33 <<REDUNDANT!!!SHOULD BE REMOVED>>	(-) -> kontakt z odrą  <RANK: 3> <info: start[1666, 1651] <type: LEFT>>
+R19	Neg Arg1:T35 Arg2:T29 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1646, 1607] <type: LEFT>>
+R20	Neg Arg1:T35 Arg2:T30 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1646, 1617] <type: LEFT>>
+R21	Neg Arg1:T35 Arg2:T31 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1646, 1632] <type: LEFT>>
+R22	Neg Arg1:T35 Arg2:T32 <<REDUNDANT!!!SHOULD BE REMOVED>>	(-) -> odra  <RANK: 3> <info: start[1646, 1641] <type: LEFT>>
+R23	Neg Arg1:T35 Arg2:T33 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1646, 1651] <type: RIGHT>>
+R24	Neg Arg1:T36 Arg2:T29 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1636, 1607] <type: LEFT>>
+R25	Neg Arg1:T36 Arg2:T30 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1636, 1617] <type: LEFT>>
+R26	Neg Arg1:T36 Arg2:T31 <<REDUNDANT!!!SHOULD BE REMOVED>>	(-) -> tbc  <RANK: 3> <info: start[1636, 1632] <type: LEFT>>
+R27	Neg Arg1:T36 Arg2:T32 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1636, 1641] <type: RIGHT>>
+R28	Neg Arg1:T36 Arg2:T33 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1636, 1651] <type: RIGHT>>
+R29	Neg Arg1:T37 Arg2:T29 <<REDUNDANT!!!REMOVED>>	(-) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1627, 1607] <type: LEFT>>
+R30	Neg Arg1:T37 Arg2:T30 <<REDUNDANT!!!SHOULD BE REMOVED>>	(-) -> borelioza  <RANK: 3> <info: start[1627, 1617] <type: LEFT>>
+R31	Neg Arg1:T37 Arg2:T31 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1627, 1632] <type: RIGHT>>
+R32	Neg Arg1:T37 Arg2:T32 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1627, 1641] <type: RIGHT>>
+R33	Neg Arg1:T37 Arg2:T33 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1627, 1651] <type: RIGHT>>
+R34	Neg Arg1:T38 Arg2:T29 << OK >>	(-) -> WZW  <RANK: 3> <info: start[1611, 1607] <type: LEFT>>
+R35	Neg Arg1:T38 Arg2:T30 <<REDUNDANT!!!REMOVED>>	(-) -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1611, 1617] <type: RIGHT>>
+R36	Neg Arg1:T38 Arg2:T31 <<REDUNDANT!!!REMOVED>>	(-) -> tbc <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1611, 1632] <type: RIGHT>>
+R37	Neg Arg1:T38 Arg2:T32 <<REDUNDANT!!!REMOVED>>	(-) -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1611, 1641] <type: RIGHT>>
+R38	Neg Arg1:T38 Arg2:T33 <<REDUNDANT!!!REMOVED>>	(-) -> kontakt z odrą <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1611, 1651] <type: RIGHT>>
+
+
+Sentence 21:
+W wywiadzie rodzinnym: b/z
+
+R39	Neg Arg1:T39 Arg2:T40 << OK >>	b/z -> W wywiadzie rodzinnym:  <RANK: 3> <info: start[1693, 1670] <type: LEFT>>
+
+
+Sentence 22:
+Stan społeczny: warunki mieszkaniowe dobre. 
+
+
+
+Sentence 23:
+Leki: przyjęte rano w domu 
+
+
+
+Sentence 24:
+Leki: 
+Nedal 5mg ?
+
+R40	Drg Arg1:T42 Arg2:T43 << OK >>	Nedal -> 5mg  <RANK: 3> <info: start[1777, 1783] <type: RIGHT>>
+
+
+Sentence 25:
+Vivace 2,5mg ?
+
+
+R41	Drg Arg1:T44 Arg2:T45 << OK >>	Vivace -> 2,5mg  <RANK: 3> <info: start[1789, 1796] <type: RIGHT>>
+
+
+Sentence 26:
+Planowany czas hospitalizacji: 4-5 dni.
+
+
+
+Sentence 27:
+Planowane badania: badania laboratoryjne, ECHO, EKG metodą Holtera, ABPM, próba wysiłkowa.
+
+
+
+Sentence 28:
+------------------------------------------------
+
+
+
+Sentence 29:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 30:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.54[10^3/ul]
+    
+
+
+Sentence 31:
+RBC Krwinki czerwone:4.11[10^6/ul]
+    
+
+
+Sentence 32:
+HGB Hemoglobina:11.9[g/dl]
+    
+
+
+Sentence 33:
+HCT Hematokryt:34.8[%]
+    
+
+
+Sentence 34:
+MCV wskaźnik czerwonokrw:84.7[fl]
+    
+
+
+Sentence 35:
+MCH wskaźnik czerwonokrw:29.0[pg]
+    
+
+
+Sentence 36:
+MCHC wskaźnik czerwonokr:34.2[g/dl]
+    
+
+
+Sentence 37:
+PLT z morfologii:237[10^3/ul]
+    
+
+
+Sentence 38:
+RDW-SD:44.0[fl]
+    
+
+
+Sentence 39:
+RDW-CV:14.2[%]
+    PDW:13.0[fl]
+    MPV:11.2[fl]
+    
+
+
+Sentence 40:
+P-LCR:35.5[%]
+    
+
+
+Sentence 41:
+PCT (hematokryt płytkowy:0.26[%]
+    
+
+
+Sentence 42:
+NEUTR# wartość bezwzględ:2.27[10^3/ul]
+    
+
+
+Sentence 43:
+NEUTR%:34.6[%]
+    
+
+
+Sentence 44:
+LYMH# wartość bezwzględn:3.72[10^3/ul]
+    
+
+
+Sentence 45:
+LYMPH%:56.9[%]
+    
+
+
+Sentence 46:
+MONO# wartość bezwzględn:0.39[10^3/ul]
+    
+
+
+Sentence 47:
+MONO%:6.0[%]
+    
+
+
+Sentence 48:
+EO# wartość bezwzględna:0.15[10^3/ul]
+    
+
+
+Sentence 49:
+EO%:2.3[%]
+    BASO# wartość bezwzględn:0.01[10^3/ul]
+    
+
+
+Sentence 50:
+BASO%:0.2[%]
+    
+
+
+Sentence 51:
+NRBC %:0.0[%]
+    
+
+
+Sentence 52:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 53:
+Badanie ogólne moczu
+    
+
+
+Sentence 54:
+barwa:żółty[ ]
+    
+
+
+Sentence 55:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 56:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 57:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 58:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 59:
+ciężar właściwy:1.014[ ]
+    
+
+
+Sentence 60:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 61:
+pH:6.0[ ]
+    
+
+
+Sentence 62:
+białko:nieobecne[ ]
+    
+
+
+Sentence 63:
+urobilinogen:2,0 mg/dl[ ]
+    
+
+
+Sentence 64:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 65:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 66:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 67:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 68:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 69:
+leukocyty:5 /ul[ul]
+    śluz:liczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 70:
+TSH: TSH:0.68[uIU/ml]
+
+
+
+Sentence 71:
+FT3: FT3:2.93[pg/ml]
+
+
+
+Sentence 72:
+FT4: FT4:0.90[ng/dl]
+
+
+
+Sentence 73:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 74:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 75:
+Kreatynina + GFR
+    
+
+
+Sentence 76:
+Kreatynina w surowicy:0.49[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 77:
+MDRD ze stan:162.7[ml/min/1,73 m^2]
+
+
+
+Sentence 78:
+Mocznik: Mocznik:21[mg/dl]
+
+
+
+Sentence 79:
+Lipidogram
+    
+
+
+Sentence 80:
+Cholesterol całkowity:110[mg/dl]
+    
+
+
+Sentence 81:
+Cholesterol HDL:39[mg/dl]
+    
+
+
+Sentence 82:
+Cholestrol LDL:74[mg/dl]
+    
+
+
+Sentence 83:
+Triglicerydy:53[mg/dl]
+    
+
+
+Sentence 84:
+Stosunek cholesterolu HD:0.4
+Glukoza w surowicy: Glukoza w surowicy:83[mg/dl]
+
+
+
+Sentence 85:
+------------------------------------------------
+
+
+
+Sentence 86:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 87:
+I10
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 88:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 89:
+89.501
+88.721
+89.502
+88.761
+88.751
+------------------------------------------------
+
+

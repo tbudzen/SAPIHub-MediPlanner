@@ -1,0 +1,29 @@
+T1	Condition 470 526	Wrodzona złożona wada serca pod postacią zespołu Fallota
+N1	Reference T1 ICD10:Q21.3	Tetralogia Fallota
+T2	Condition 901 911	z. Fallota
+N2	Reference T2 ICD10:Q21.3	Tetralogia Fallota
+T3	Symptom 999 1006	wymioty
+N3	Reference T3 ICD10:R11	Nudności i wymioty
+T4	Condition 1008 1025	wywiad alergiczny
+N4	Reference T4 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T5	Negation 1026 1032	ujemny
+R1	Neg Arg1:T5 Arg2:T4	
+T6	Drug 1035 1049	leków na stałe
+T7	Negation 1050 1063	nie otrzymuje
+R2	Neg Arg1:T7 Arg2:T6	
+T8	Condition 528 555	zastawka płucna dwupłatkowa
+N5	Reference T8 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T9	Condition 560 581	aSpodziectwo mosznowe
+N6	Reference T9 ICD10:Q54.8	Inne postacie spodziectwa
+T10	Investigation 594 612	cewnikowaniu serca
+T11	Treatment 615 632	plastyką balonową
+T12	Condition 633 657	zwężenia tętnicy płucnej
+N7	Reference T12 ICD10:Q25.6	Zwężenie pnia płucnego
+T13	Date 659 668	14.12.15r
+R3	Dat Arg1:T13 Arg2:T12	
+R4	Dat Arg1:T13 Arg2:T11	
+R5	Dat Arg1:T13 Arg2:T10	
+T14	Treatment 682 753	operacji - plastyce drogi odpływu prawej komory łatą przezpierścieniową
+T15	Date 755 764	13.06.16r
+R6	Dat Arg1:T15 Arg2:T14	
+T16	Investigation 926 943	badania kontrolne

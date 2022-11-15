@@ -1,0 +1,166 @@
+T1	Behaviour 738 760	zakaz palenia tytoniu!
+T2	Investigation 776 805	kontrola ciśnienia tętniczego
+T3	Investigation 821 841	kontrola lipidogramu
+T4	Date 853 865	za 6 tygodni
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Behaviour 872 916	dieta niskocholesterolowa i niskoglikemiczna
+T6	Behaviour 923 952	konieczna redukcja masy ciała
+T7	Behaviour 958 993	stały, umiarkowany wysiłek fizyczny
+T8	Drug 1038 1043	Acard
+T9	Drug_dose 1044 1067	75 mg 1 tabl. wieczorem
+R2	Drg Arg1:T8 Arg2:T9	
+T10	Drug 1075 1082	Xarelto
+T11	Drug_dose 1083 1107	20 mg 1 tabl. w południe
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Drug 1115 1122	Roswera
+T13	Drug_dose 1123 1146	30 mg 1 tabl. wieczorem
+R4	Drg Arg1:T12 Arg2:T13	
+T14	Drug 1154 1161	Nebilet
+T15	Drug_dose 1162 1182	5 mg   1/2tabl. rano
+R5	Drg Arg1:T14 Arg2:T15	
+T16	Drug 1190 1197	Lorista
+T17	Drug_dose 1198 1216	50 mg 1 tabl. rano
+R6	Drg Arg1:T16 Arg2:T17	
+T18	Drug 1224 1232	Primacor
+T19	Drug_dose 1233 1256	10 mg 1 tabl. wieczorem
+R7	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1264 1271	Emanera
+T21	Drug_dose 1272 1290	20 mg 1 tabl. rano
+R8	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1298 1304	Tribux
+T23	Drug_dose 1305 1347	100 mg 1 tabl. 3x dziennie przed posiłkami
+R9	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1354 1362	Gliclada
+T25	Drug_dose 1363 1422	30 mg 2 tabl. rano (wg dotychczasowych zaleceń specjalisty)
+R10	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1430 1443	Glucophage XR
+T27	Drug_dose 1444 1509	750 mg 1 tabl. wieczorem (wg dotychczasowych zaleceń specjalisty)
+R11	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1517 1530	Polfilin prol
+T29	Drug_dose 1532 1599	1 tabl. 2 rano i wieczorem (wg dotychczasowych zaleceń specjalisty)
+R12	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1607 1614	Seronil
+T31	Drug_dose 1615 1674	20 mg 1 tabl. rano (wg dotychczasowych zaleceń specjalisty)
+R13	Drg Arg1:T30 Arg2:T31	
+T32	Drug 1682 1693	Trittico CR
+T33	Drug_dose 1694 1758	75 mg 1 tabl. wieczorem (wg dotychczasowych zaleceń specjalisty)
+R14	Drg Arg1:T32 Arg2:T33	
+T34	Investigation 4081 4084	TEE
+T35	Investigation 4086 4122	USG doppler naczyń  kończyn  dolnych
+T36	Investigation 4124 4136	USG  brzucha
+T37	Investigation 4138 4161	RTG  klatki  piersiowej
+T38	Drug 3942 3950	gliclada
+T39	Drug 3953 3960	emanera
+T40	Drug 3962 3971	polfilina
+T41	Drug 3974 3984	soby-combi
+T42	Drug 3986 3995	diosminex
+T43	Drug 3997 4002	acard
+T44	Drug 4003 4010	seronil
+T45	Drug 4012 4019	xarelto
+T46	Drug 4021 4027	tribux
+T47	Drug 4030 4040	glucophage
+T48	Drug 4042 4049	roswera
+T49	Drug 4051 4059	trittico
+T50	Drug 4061 4068	lorista
+T51	Negation 3878 3881	nie
+T52	Condition 3866 3875	Uczulenia
+R15	Neg Arg1:T51 Arg2:T52	
+T53	Negation 3861 3864	nie
+T54	Behaviour 3837 3844	Alkohol
+N2	Reference T54 ICD10:Z72.1	Używanie alkoholu
+T55	Behaviour 3847 3859	inne  używki
+R16	Neg Arg1:T53 Arg2:T55	
+T56	Behaviour 3816 3836	Palenie  tytoniu,tak
+N3	Reference T56 ICD10:Z72.0	Używanie tytoniu
+T57	Condition 3806 3814	gruźlica
+A1	Status T57 Family
+N4	Reference T57 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T58	Condition 3775 3795	rak  jelita  grubego
+A2	Status T58 Family
+N5	Reference T58 ICD10:C18	Nowotwór złośliwy jelita grubego
+T59	Condition 3736 3745	borelioza
+N6	Reference T59 ICD10:A69.2	Choroba z Lyme
+T60	Condition 3728 3731	WZW
+T61	Negation 3731 3734	(-)
+R17	Neg Arg1:T61 Arg2:T60	
+T62	Negation 3745 3748	(-)
+R18	Neg Arg1:T62 Arg2:T59	
+T63	Treatment 3677 3697	wyrostek  robaczkowy
+T64	Condition 3652 3675	przepuklina  pachwinowa
+N8	Reference T64 ICD10:K40	Przepuklina pachwinowa
+A3	Status T64 Historical_Insignificant
+T65	Treatment 3642 3650	operacje
+A4	Status T65 Historical_Insignificant
+T66	Condition 3331 3413	wada  serca  pod  postacią umiarkowanej  stenozy dwupłatkowej  zastawki  aortalnej
+N9	Reference T66 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T67	Condition 3416 3439	choroba  wieńcowa serca
+T68	Condition 3452 3484	 przebytej  zatorowości  płucnej
+N11	Reference T68 ICD10:I26	Zator płucny
+T69	Condition 3508 3537	udarze  niedokrwiennym  mózgu
+N12	Reference T69 ICD10:I63	Zawał mózgu
+T70	Date 3539 3543	2002
+R19	Dat Arg1:T70 Arg2:T69	
+T71	Condition 3546 3567	nadciśnienie tętnicze
+N13	Reference T71 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T72	Condition 3569 3573	RBBB
+N14	Reference T72 ICD10:I45.0	Blok prawej odnogi pęczka Hisa
+T73	Condition 3575 3580	POCHP
+N15	Reference T73 ICD10:J44.8	Inna określona przewlekła obturacyjna choroba płuc
+T74	Condition 3582 3593	cukrzyca t2
+N16	Reference T74 ICD10:E11	Cukrzyca insulinoniezależna
+T75	Condition 3595 3630	miażdżyca  tętnic  kończyn  dolnych
+N17	Reference T75 ICD10:I70.2	Miażdżyca tętnic kończyn
+T76	Treatment 2825 2838	appendektomii
+T77	Condition 2792 2816	przepukliny pachwinowej,
+N18	Reference T77 ICD10:K40	Przepuklina pachwinowa
+T78	Treatment 2783 2791	operacji
+T79	Condition 2741 2761	Zaburzenia afektywne
+N19	Reference T79 ICD10:F31.8	Inne zaburzenia afektywne dwubiegunowe
+T80	Condition 2687 2729	Zaburzenia motoryki przewodu pokarmowego w
+N20	Reference T80 ICD10:K59.9	Czynnościowe zaburzenia jelit, nieokreślone
+T81	Condition 2650 2685	Przewlekła obturacyjna choroba płuc
+N21	Reference T81 ICD10:J44.8	Inna określona przewlekła obturacyjna choroba płuc
+T82	Condition 2610 2636	Przebyta zatorowość płucna
+N22	Reference T82 ICD10:I26	Zator płucny
+T83	Condition 2548 2608	Miażdżyca tętnic szyjnych wewnętrznych - zmiany niekrytyczne
+N23	Reference T83 ICD10:I65.2	Niedrożność i zwężenie tętnicy szyjnej wewnętrznej
+T84	Condition 2492 2546	Miażdżyca tętnic kończyn dolnych - zmiany niekrytyczne
+N24	Reference T84 ICD10:I70.2	Miażdżyca tętnic kończyn
+T85	Condition 2475 2490	Miażdżyca aorty
+N25	Reference T85 ICD10:I70.0	Miażdżyca aorty
+T86	Condition 2434 2461	Przewlekła choroba wieńcowa
+T87	Condition 2388 2425	przebytym udarze niedokrwiennym mózgu
+T88	Date 2427 2431	2002
+R20	Dat Arg1:T88 Arg2:T87	
+T89	Condition 2363 2378	Cukrzyca typu 2
+N28	Reference T89 ICD10:E11	Cukrzyca insulinoniezależna
+T90	Behaviour 2351 2361	Nikotynizm
+N29	Reference T90 ICD10:Z72.0	Używanie tytoniu
+T91	Condition 2325 2349	Otyłość I stopnia wg WHO
+N30	Reference T91 ICD10:E66	Otyłość
+T92	Condition 2268 2324	Nadciśnienie tętnicze II stopnia wg ESH/ESC skorygowane.
+N31	Reference T92 ICD10:I10	
+T93	Condition 2227 2247	Hipercholesterolemia
+T94	Condition 2087 2121	Niedomykalność mitralna I stopnia.
+N33	Reference T94 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T95	Condition 1976 2025	Wrodzona wada serca pod postacią ciężkiej stenozy
+N34	Reference T95 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T96	Condition 2028 2085	niedomykalności I stopnia dwupłatkowej zastawki aortalnej
+N35	Reference T96 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T97	Condition 2163 2225	nadkomorowe zaburzenia rytmu pod postacią skurczów dodatkowych
+N36	Reference T97 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T98	Condition 2122 2161	Zaburzenia przewodnictwa śródkomorowego
+N37	Reference T98 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+A5	Status T63 Historical_Insignificant
+N7	Reference T60 ICD10:B19	Przewlekłe wirusowe zapalenie wątroby
+R21	Neg Arg1:T53 Arg2:T54	
+T99	Treatment 346 373	dalsza opieka w poradni POZ
+T100	Treatment 389 493	kontrola kardiologiczna, diabetologiczna, gastroenterologiczna, psychiatryczna i u chirurga naczyniowego
+T101	Treatment 510 600	konsultacja kardiochirurgiczna celem rozważenia leczenia operacyjnego aortalnej wady serca
+T102	Treatment 616 732	konsultacja pulmonologiczna celem poszerzonej diagnostyki i rozważenia konieczności leczenia farmakologicznego POCHP
+N32	Reference T93 ICD10:E78.0	Czysta hipercholesterolemia
+N26	Reference T86 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+N27	Reference T87 ICD10:I63.9	Zawał mózgu, nieokreślony
+N10	Reference T67 ICD10:I20.9	Choroba niedokrwienna serca, nieokreślona
+N38	Reference T55 ICD10:Z72	Problemy związane ze stylem życia
+N1	Reference T52 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

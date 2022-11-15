@@ -1,0 +1,144 @@
+T1	Treatment 338 394	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T2	Behaviour 397 437	Dieta lekkostrawna , niskocholesterolowa
+T3	Investigation 441 524	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T4	Investigation 527 575	Systematyczna kontrola ciśnienia tętniczego krwi
+T5	Drug 626 633	Polpril
+T6	Drug 653 664	Diuresin SR
+T7	Drug 677 686	Omic Ocas
+T8	Drug_dose 634 651	10 mg 1x d z rano
+T9	Drug_dose 665 675	1x dz rano
+T10	Drug_dose 687 701	0,4 1x dz rano
+R1	Drg Arg1:T5 Arg2:T8	
+R2	Drg Arg1:T6 Arg2:T9	
+R3	Drg Arg1:T7 Arg2:T10	
+T11	Condition 942 963	Nadciśnienie tętnicze
+N1	Reference T11 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T12	Condition 965 992	Przerost gruczołu krokowego
+N2	Reference T12 ICD10:N40	Rozrost gruczołu krokowego
+T13	Drug 1113 1120	Polpril
+T14	Drug 1122 1132	Ominc Ocas
+T15	Condition 1285 1329	Łagodna niedomykalność zastawki trójdzielnej
+N3	Reference T15 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T16	Condition 1331 1394	Komorowe zaburzenia rytmu serca ( pobudzenia pojedyncze, salwa)
+N4	Reference T16 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T17	Condition 1396 1429	Pojedyncze pobudzenia nadkomorowe
+N5	Reference T17 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T18	Condition 1432 1453	Nadciśnienie tętnicze
+N6	Reference T18 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T19	Condition 1455 1484	Hipercholesterolemia mieszana
+N7	Reference T19 ICD10:E78.2	Hiperlipidemia mieszana
+T20	Condition 1486 1513	Przerost gruczołu krokowego
+N8	Reference T20 ICD10:N40	Rozrost gruczołu krokowego
+T21	Condition 1733 1756	nadciśnieniem tętniczym
+N9	Reference T21 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T22	Date 1757 1770	od ok. 20 lat
+T23	Date 1772 1779	obecnie
+T24	Drug 1789 1798	Polprilem
+T25	Drug_dose 1799 1804	10 mg
+R4	Dat Arg1:T22 Arg2:T21	
+R5	Dat Arg1:T23 Arg2:T24	
+R6	Drg Arg1:T24 Arg2:T25	
+T26	Treatment 1780 1788	leczonym
+R7	Dat Arg1:T23 Arg2:T26	
+T27	Condition 1807 1836	przerostem gruczołu krokowego
+N10	Reference T27 ICD10:N40	Rozrost gruczołu krokowego
+T28	Symptom 1898 1908	osłabienie
+T29	Symptom 1867 1896	niespecyficznych dolegliwości
+T30	Symptom 1910 1924	kołatań serca,
+N11	Reference T30 ICD10:R00.2	Kołatanie serca
+T31	Symptom 1925 1934	duszności
+N12	Reference T31 ICD10:R06.0	Duszność
+T32	Symptom 1936 1956	drętwienie rąk i nóg
+N13	Reference T32 ICD10:R20.2	Parestezje
+T33	Symptom 1958 1978	mroczki przed oczami
+N14	Reference T33 ICD10:H53.1	Subiektywne zaburzenia widzenia
+T34	Symptom 1980 2031	Dolegliwości zdarzają się w każdych okolicznościach
+T35	Condition 2054 2086	uraz odcinka szyjnego kręgosłupa
+T36	Date 2087 2102	ok. 15 lat temu
+R8	Dat Arg1:T36 Arg2:T35	
+T37	Negation 2125 2128	nie
+T38	Treatment 2128 2157	hospitalizowany z tego powodu
+R9	Neg Arg1:T37 Arg2:T38	
+R10	Dat Arg1:T36 Arg2:T38	
+T39	Condition 2159 2192	wirusowe zapalenie wątroby typu B
+N15	Reference T39 ICD10:B16.9	Ostre wirusowe zapalenie wątroby typu B bez nadkażenia wirusem delta bez śpiączki wątrobowej
+T40	Date 2205 2215	przed laty
+R11	Dat Arg1:T40 Arg2:T39	
+A1	Source T39 Declared
+T41	Condition 2255 2293	skręceniu kostki lewej kończyny dolnej
+N16	Reference T41 ICD10:S93.4	Skręcenie i naderwanie stawu skokowego
+T42	Date 2294 2312	przed wieloma laty
+A2	Status T41 Historical_Insignificant
+T43	Treatment 2313 2333	leczonym zachowawczo
+R12	Dat Arg1:T42 Arg2:T41	
+R13	Dat Arg1:T42 Arg2:T43	
+A3	Status T43 Historical_Insignificant
+T44	Negation 2335 2341	Neguje
+T45	Symptom 2343 2353	krwawienia
+T46	Symptom 2355 2368	czarne stolce
+N17	Reference T46 ICD10:K92.1	Stolce smołowate
+T47	Symptom 2370 2386	brunatne wymioty
+N18	Reference T47 ICD10:K92.0	Wymioty krwawe
+T48	Condition 2388 2404	chorobę wrzodową
+N19	Reference T48 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T49	Symptom 2406 2434	duszność nocną typu ortopnoe
+N20	Reference T49 ICD10:R06.0	Duszność
+T50	Condition 2436 2438	DM
+N21	Reference T50 ICD10:E14	Cukrzyca nieokreślona
+T51	Condition 2440 2450	udar mózgu
+N22	Reference T51 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T52	Condition 2452 2463	zawał serca
+N23	Reference T52 ICD10:I25.2	Przebyty zawał serca
+R14	Neg Arg1:T44 Arg2:T45	
+R15	Neg Arg1:T44 Arg2:T46	
+R16	Neg Arg1:T44 Arg2:T47	
+R17	Neg Arg1:T44 Arg2:T48	
+R18	Neg Arg1:T44 Arg2:T49	
+R19	Neg Arg1:T44 Arg2:T50	
+R20	Neg Arg1:T44 Arg2:T51	
+R21	Neg Arg1:T44 Arg2:T52	
+T53	Treatment 2468 2485	Przebyte operacje
+N24	Reference T53 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T54	Negation 2487 2488	-
+R22	Neg Arg1:T54 Arg2:T53	
+T55	Behaviour 2489 2504	Palenie tytoniu
+N25	Reference T55 ICD10:Z72.0	Używanie tytoniu
+T56	Negation 2506 2509	nie
+R23	Neg Arg1:T56 Arg2:T55	
+T57	Behaviour 2511 2544	Inne używki: alkohol okazjonalnie
+A4	Status T57 Historical_Insignificant
+N26	Reference T57 ICD10:Z72.1	Używanie alkoholu
+T58	Condition 2546 2555	Uczulenia
+N27	Reference T58 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T59	Negation 2557 2560	nie
+R24	Neg Arg1:T59 Arg2:T58	
+T60	Condition 2589 2596	WZW (+)
+N28	Reference T60 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T61	Condition 2599 2608	borelioza
+N29	Reference T61 ICD10:A69.2	Choroba z Lyme
+T62	Negation 2609 2614	( - )
+T63	Condition 2616 2619	tbc
+N30	Reference T63 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T64	Negation 2620 2623	(-)
+T65	Condition 2625 2629	odra
+N31	Reference T65 ICD10:B05	Odra
+T66	Negation 2630 2633	(-)
+T67	Treatment 2635 2654;2663 2682	szczepienie na odrę tak, wg. kalendarza
+A5	Source T67 Declared
+R25	Neg Arg1:T62 Arg2:T61	
+R26	Neg Arg1:T64 Arg2:T63	
+R27	Neg Arg1:T66 Arg2:T65	
+T68	Behaviour 2702 2728	warunki mieszkaniowe dobre
+T69	Behaviour 2730 2748	pracownik fizyczny
+T70	Behaviour 2751 2767	praca na budowie
+T71	Drug 2806 2813	Piramil
+T72	Drug_dose 2814 2837	10 mg 1 tabl. 1xdz rano
+T73	Drug 2839 2849	Omnic Ocas
+T74	Drug_dose 2850 2874	0,4 mg 1 tabl. 1xdz rano
+T75	Investigation 2937 2958	badania laboratoryjne
+T76	Investigation 2960 2964	ECHO
+T77	Investigation 2966 2970	ABPM
+T78	Investigation 2972 2982	Holter EKG
+T79	Investigation 2984 2999	próba wysiłkowa
+R28	Drg Arg1:T71 Arg2:T72	
+R29	Drg Arg1:T73 Arg2:T74	

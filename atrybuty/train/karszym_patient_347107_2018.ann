@@ -1,0 +1,93 @@
+T1	Treatment 332 377	Dalsza opieka w Poradni Kardiologicznej ICZMP
+T2	Date 396 414	w dniu 20.09.2018r
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Negation 596 599	nie
+T4	Treatment 600 641	konsultowany przez kardiologa dziecięcego
+R2	Neg Arg1:T3 Arg2:T4	
+T5	Date 691 715	od godzin popołudniowych
+T6	Condition 716 758	trzech incydentów szybkiej czynności serca
+N1	Reference T6 ICD10:R00.0	Tachykardia, nieokreślona
+R3	Dat Arg1:T5 Arg2:T6	
+T7	Date 809 830	tego samego dnia rano
+T8	Behaviour 831 856	spożył napój energetyczny
+T9	Drug 875 882	kofeinę
+R4	Dat Arg1:T7 Arg2:T8	
+R5	Dat Arg1:T7 Arg2:T9	
+T10	Investigation 886 889	ekg
+T11	Investigation_result 985 1019	niemiarową zatokowo czynność serca
+N2	Reference T11 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T12	Investigation_result 1021 1039	częstość 64-84/min
+T13	Investigation_result 1044 1082;1099 1122	skorygowanym czasem trwania odstępu QT na górnej granicy normy
+R6	Inv Arg1:T10 Arg2:T11	
+R7	Inv Arg1:T10 Arg2:T12	
+R8	Inv Arg1:T10 Arg2:T13	
+T14	Date 1124 1138	Przy przyjęciu
+T15	Symptom 1152 1165	stanie dobrym
+T16	Condition 1169 1215	miarową, szybką czynnością serca około 110/min
+N3	Reference T16 ICD10:R00.0	Tachykardia, nieokreślona
+R9	Dat Arg1:T14 Arg2:T15	
+R10	Dat Arg1:T14 Arg2:T16	
+T17	Investigation 1219 1243	spoczynkowym zapisie ekg
+T18	Investigation_result 1279 1303	niemiarowy zatokowo rytm
+N4	Reference T18 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T19	Investigation_result 1306 1328	częstościach 64-93/min
+T20	Investigation_result 1332 1335;1352 1360	QTc w normie
+R11	Inv Arg1:T17 Arg2:T18	
+R12	Inv Arg1:T17 Arg2:T19	
+R13	Inv Arg1:T17 Arg2:T20	
+R14	Dat Arg1:T14 Arg2:T17	
+T21	Investigation 1362 1391	Kolejny spoczynkowy zapis ekg
+T22	Negation 1400 1411	nie ujawnił
+T23	Investigation_result 1412 1428	nieprawidłowości
+N5	Reference T23 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+R15	Neg Arg1:T22 Arg2:T23	
+R16	Inv Arg1:T21 Arg2:T23	
+T24	Investigation 1432 1465	24-godzinnym badaniu holterowskim
+T25	Investigation_result 1489 1565	krótkotrwałe zwolnienie rytmu zatokowego z salwą zastępczego rytmu węzłowego
+T26	Investigation_result 1570 1615	kilkoma pobudzeniami węzłowymi przedwczesnymi
+T27	Investigation 1691 1707	próby wysiłkowej
+T28	Investigation_result 1645 1659	Zaburzeń rytmu
+N6	Reference T28 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T29	Negation 1660 1676	nie wygenerowano
+T30	Investigation_result 1738 1763	wysoką wydolność fizyczną
+T31	Investigation_result 1766 1790	dobrą tolerancją wysiłku
+T32	Investigation_result 1794 1837	prawidłową reakcją tensyjną i chronotropową
+T33	Investigation 1849 1869	echokardiograficznym
+T34	Investigation_result 1883 1908	prawidłową anatomię serca
+T35	Investigation_result 1910 1950	kurczliwość była prawidłowa, symetryczna
+T36	Investigation_result 1952 1965;1979 1987	wymiary komór w normie
+R17	Inv Arg1:T24 Arg2:T25	
+R18	Inv Arg1:T24 Arg2:T26	
+R19	Neg Arg1:T29 Arg2:T28	
+R20	Inv Arg1:T27 Arg2:T28	
+R21	Inv Arg1:T27 Arg2:T30	
+R22	Inv Arg1:T27 Arg2:T31	
+R23	Inv Arg1:T27 Arg2:T32	
+R24	Inv Arg1:T33 Arg2:T34	
+R25	Inv Arg1:T33 Arg2:T35	
+R26	Inv Arg1:T33 Arg2:T36	
+T37	Negation 2023 2029	nie ma
+T38	Condition 2030 2040	wskazań do
+T39	Treatment 2041 2066	leczenia antyarytmicznego
+R27	Neg Arg1:T37 Arg2:T38	
+R28	Neg Arg1:T37 Arg2:T39	
+T40	Treatment 2079 2104	pod opieką kardiologiczną
+T41	Drug 2186 2193	kofeiną
+T42	Behaviour 2194 2224	spożytą w napoju energetycznym
+T43	Condition 2106 2129;2154 2184	Nie można wykluczyć, że dolegliwości sprowokowane były
+A1	Source T43 Declared
+T44	Symptom 2516 2531	Kołatania serca
+N7	Reference T44 ICD10:R00.2	Kołatanie serca
+T45	Condition 2570 2594	częstoskurczu napadowego
+N8	Reference T45 ICD10:I47	Częstoskurcz napadowy
+T46	Negation 2595 2604	negatywna
+R29	Neg Arg1:T46 Arg2:T45	
+T47	Symptom 2749 2766	w  stanie  dobrym
+T48	Condition 2813 2834	zaburzeń rytmu  serca
+N9	Reference T48 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T49	Date 2836 2854	W dniu dzisiejszym
+T50	Symptom 2856 2895	4 x 10 minutowe napady kołatania  serca
+N10	Reference T50 ICD10:R00.2	Kołatanie serca
+R30	Dat Arg1:T49 Arg2:T50	
+A2	Source T45 Declared
+T51	Investigation 2548 2558	Obserwacja

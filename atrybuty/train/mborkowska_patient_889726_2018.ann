@@ -1,0 +1,159 @@
+T1	Investigation 3289 3299	Echo serca
+T2	Investigation 3302 3312	Holter EKG
+T3	Investigation 3315 3319	RR  
+T4	Investigation 3321 3336	Próba Wysiłkowa
+T5	Drug 3221 3230	Cloranxen
+T6	Drug_dose 3231 3244	5 mg 1- 0 - 1
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 3247 3254	Kaldyum
+T8	Drug_dose 3255 3271	2 x dz po 3 tabl
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 3183 3198	Neurotop retard
+T10	Drug_dose 3199 3219	300 mg 1 - 0- 1 tabl
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Drug 3119 3127	Mirtagen
+T12	Drug_dose 3128 3154	1x dz po 1 tabl. wieczorem
+R4	Drg Arg1:T11 Arg2:T12	
+T13	Drug 3158 3166	Padolten
+T14	Drug_dose 3167 3181	3 - 0- 2 tabl.
+R5	Drg Arg1:T13 Arg2:T14	
+T15	Drug 3089 3096	Nonpres
+T16	Drug_dose 3097 3117	50 mg 2 - 0 - 1 tabl
+R6	Drg Arg1:T15 Arg2:T16	
+T17	Behaviour 3037 3063	warunki mieszkaniowe dobre
+T18	Negation 3014 3020	neguje
+T19	Negation 2999 3002	nie
+T20	Negation 2929 2940	brak danych
+T21	Negation 2880 2886	( -  )
+T22	Negation 2899 2904	( - )
+T23	Condition 2889 2898	borelioza
+N1	Reference T23 ICD10:A69.2	Choroba z Lyme
+R7	Neg Arg1:T22 Arg2:T23	
+T24	Condition 2876 2879	WZW
+N2	Reference T24 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+R8	Neg Arg1:T21 Arg2:T24	
+T25	Condition 2905 2926	W wywiadzie rodzinnym
+A1	Status T25 Family
+R9	Neg Arg1:T20 Arg2:T25	
+T26	Behaviour 2942 2974	Palenie tytoniu: paczkę dziennie
+N3	Reference T26 ICD10:Z72.0	Używanie tytoniu
+T27	Date 2975 2984	od 20 lat
+R10	Dat Arg1:T27 Arg2:T26	
+T28	Behaviour 2986 2998	Inne używki:
+N4	Reference T28 ICD10:Z72	Problemy związane ze stylem życia
+R11	Neg Arg1:T19 Arg2:T28	
+T29	Condition 3003 3012	Uczulenia
+N5	Reference T29 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R12	Neg Arg1:T18 Arg2:T29	
+T30	Drug 1295 1302	Nonpres
+T31	Drug 1326 1333	Kaldyum
+T32	Drug 1353 1361	Padolten
+T33	Drug 1379 1387	Mirtagen
+T34	Drug 1456 1465	Cloranxen
+T35	Drug 1418 1433	Neurotop retard
+T36	Drug_dose 1303 1324	50 mg 2 - 0 - 1 tabl.
+R13	Drg Arg1:T30 Arg2:T36	
+T37	Drug_dose 1334 1351	3 x dz po 3 tabl.
+R14	Drg Arg1:T31 Arg2:T37	
+T38	Drug_dose 1362 1375	3 - 0- 2 tabl
+R15	Drg Arg1:T32 Arg2:T38	
+T39	Drug_dose 1388 1414	1x dz po 1 tabl. wieczorem
+R16	Drg Arg1:T33 Arg2:T39	
+T40	Drug_dose 1434 1455	300 mg 1 - 0- 1 tabl.
+R17	Drg Arg1:T35 Arg2:T40	
+T41	Drug_dose 1466 1505	5 mg 1- 0 - 1 , - wg zaleceń neurologa.
+R18	Drg Arg1:T34 Arg2:T41	
+T42	Drug 1625 1632	Nonpres
+T43	Drug 1635 1642	Kaldyum
+T44	Drug 1644 1652	Padolten
+T45	Drug 1655 1665	Mirtagen  
+T46	Drug 1668 1683	Neurotop retard
+T47	Drug 1686 1695	Cloranxen
+T48	Drug 1697 1707	NaCl 0,9 %
+T49	Drug 1710 1713	KCl
+T50	Investigation 1210 1244	kontrola ciśnienia tętniczego krwi
+T51	Investigation 1119 1193	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T52	Behaviour 1066 1106	Dieta lekkostrawna , niskocholesterolowa
+T53	Behaviour 825 835	Nikotynizm
+N6	Reference T53 ICD10:Z72.0	Używanie tytoniu
+T54	Investigation_result 450 507	Tętniak przegrody międzyprzedsionkowej bez cech przecieku
+T55	Date 510 513	TTE
+R19	Dat Arg1:T55 Arg2:T54	
+T56	Condition 515 548	Pojedyncze pobudzenia nadkomorowe
+N8	Reference T56 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T57	Condition 550 579	Hipercholesterolemia mieszana
+N9	Reference T57 ICD10:E78.2	Hiperlipidemia mieszana
+T58	Condition 581 592	Hipokalemia
+N10	Reference T58 ICD10:E87.6	Hipokalemia
+T59	Condition 594 602	Tężyczka
+N11	Reference T59 ICD10:R29.0	Tężyczka
+T60	Condition 604 628	Podejrzenie tubulopatii.
+N12	Reference T60 ICD10:N25.8	Inne zaburzenia wynikające z upośledzonej czynności cewek nerkowych
+A2	Source T60 Declared
+T61	Condition 629 643	Torbiele nerek
+N13	Reference T61 ICD10:N28.1	Torbiel nerki, nabyta
+T62	Condition 645 689	Przewlekła choroba nerek w II niewydolności.
+N14	Reference T62 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T63	Condition 690 731	Przedwczesne wygasanie czynności jajników
+T64	Condition 733 743	Osteopenia
+N15	Reference T64 ICD10:M85	Inne zaburzenia mineralizacji i struktury kości
+T65	Condition 800 823	rwą barkową lewostronna
+N16	Reference T65 ICD10:M54	Bóle grzbietu
+T66	Condition 745 797	Przewlekły zespół bólowy odcinka szyjnego kręgosłupa
+N17	Reference T66 ICD10:M50	Choroby krążków międzykręgowych szyjnych
+T67	Treatment 2719 2751	operacji powiększania obu piersi
+A3	Status T67 Historical_Insignificant
+T68	Date 2752 2769	około 10 lat temu
+R20	Dat Arg1:T68 Arg2:T67	
+T69	Behaviour 2113 2139	okresowych kołatania serca
+N18	Reference T69 ICD10:R00.2	Kołatanie serca
+T70	Investigation_result 2145 2173	istotnych obniżeń odcinka ST
+T71	Investigation 2176 2179	EKG
+R21	Inv Arg1:T71 Arg2:T70	
+T72	Symptom 2190 2202	zasłabnięcia
+N19	Reference T72 ICD10:R55	Omdlenie i zapaść
+T73	Negation 2183 2189	Neguje
+R22	Neg Arg1:T73 Arg2:T72	
+T74	Negation 2205 2211	neguje
+T75	Symptom 2212 2236	bóle w klatce piersiowej
+N20	Reference T75 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+R23	Neg Arg1:T74 Arg2:T75	
+T76	Condition 2252 2270	Wada serca- ubytek
+A4	Source T76 Declared
+N21	Reference T76 ICD10:Q21	Wrodzone wady rozwojowe przegród serca
+T77	Condition 2367 2378	Hipokalemia
+N22	Reference T77 ICD10:E87.6	Hipokalemia
+T78	Condition 2380 2388	Tężyczka
+N23	Reference T78 ICD10:R29.0	Tężyczka
+T79	Condition 2390 2414	Podejrzenie tubulopatii.
+A5	Source T79 Declared
+N24	Reference T79 ICD10:N25.8	Inne zaburzenia wynikające z upośledzonej czynności cewek nerkowych
+T80	Condition 2415 2429	Torbiele nerek
+N25	Reference T80 ICD10:N28.1	Torbiel nerki, nabyta
+T81	Condition 2431 2455	Przewlekła choroba nerek
+N26	Reference T81 ICD10:N18.9	Przewlekła niewydolność nerek, nieokreślona
+T82	Condition 2457 2498	Przedwczesne wygasanie czynności jajników
+T83	Condition 2500 2510	Osteopenia
+N27	Reference T83 ICD10:M85	Inne zaburzenia mineralizacji i struktury kości
+T84	Condition 2512 2564	Przewlekły zespół bólowy odcinka szyjnego kręgosłupa
+N28	Reference T84 ICD10:M50	Choroby krążków międzykręgowych szyjnych
+T85	Condition 2567 2590	rwą barkową lewostronna
+N29	Reference T85 ICD10:M54	Bóle grzbietu
+T86	Treatment 2621 2629	operacji
+A6	Status T86 Historical_Insignificant
+T87	Condition 2639 2658	ciąży pozamacicznej
+N30	Reference T87 ICD10:O00.9	Ciąża pozamaciczna, nieokreślona
+A7	Status T87 Historical_Insignificant
+T88	Date 2659 2671	16 lat temu.
+R24	Dat Arg1:T88 Arg2:T87	
+R25	Dat Arg1:T88 Arg2:T86	
+T89	Treatment 2680 2696	cięciu cesarskim
+N31	Reference T89 ICD10:O82	Poród pojedynczy przez cięcie cesarskie
+T90	Date 2697 2708	18 lat temu
+R26	Dat Arg1:T90 Arg2:T89	
+T91	Treatment 961 1062	opieka u lekarza POZ oraz Poradni Kardiologicznej, Nefrologicznej, Neurologicznej, Endokrynologicznej
+N7	Reference T54 ICD10:Q21.8	Inna wrodzona wada rozwojowa przegród serca
+T92	Condition 2333 2360	samoistnie uległ zamknięciu
+T93	Date 2318 2332	w dzieciństwie
+R27	Dat Arg1:T93 Arg2:T92	
+A8	Source T92 Declared

@@ -1,0 +1,89 @@
+T1	Condition 447 485	Przewlekła choroba niedokrwienna serca
+N1	Reference T1 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T2	Condition 487 518	Choroba wieńcowa dwunaczyniowa.
+N2	Reference T2 ICD10:I24	Inne ostre postacie choroby niedokrwiennej serca
+T3	Condition 659 669	Nikotynizm
+N3	Reference T3 ICD10:T65.2	Tytoń i nikotyna
+T4	Condition 643 657	Hiperlipidemia
+N4	Reference T4 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T5	Condition 527 562	zawale serca STEMI ściany przedniej
+N5	Reference T5 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T6	Treatment 563 604	leczonym PCI LAD z imaplntacją stentu DES
+T7	Date 606 618	13.10.2018r.
+R1	Dat Arg1:T7 Arg2:T6	
+R2	Dat Arg1:T7 Arg2:T5	
+T8	Condition 620 641	Nadciśnienie tętnicze
+N6	Reference T8 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T9	Investigation 1996 2006	ECHO serca
+T10	Investigation 2008 2018	Holter EKG
+T11	Investigation 2020 2029	Holter RR
+T12	Drug 1943 1950	Ivohart
+T13	Drug 1909 1916	Polpril
+T14	Drug 1877 1885	Rosutrox
+T15	Drug 1846 1849	IPP
+T16	Drug 1806 1813	Beto ZK
+T17	Drug 1778 1783	Acard
+T18	Drug 1737 1745	Brilique
+T19	Drug_dose 1746 1777	90 mg 2x1 tabl rano i wieczorem
+R3	Drg Arg1:T18 Arg2:T19	
+T20	Drug_dose 1784 1805	75mg 1 tabl wieczorem
+R4	Drg Arg1:T17 Arg2:T20	
+T21	Drug_dose 1814 1845	50mg 2x 1 tabl rano i wieczorem
+R5	Drg Arg1:T16 Arg2:T21	
+T22	Drug_dose 1850 1876	20 mg 1 tabl rano na czczo
+R6	Drg Arg1:T15 Arg2:T22	
+T23	Drug_dose 1886 1908	40 mg 1 tabl wieczorem
+R7	Drg Arg1:T14 Arg2:T23	
+T24	Drug_dose 1917 1942	2,5 mg 1/2 tabl wieczorem
+R8	Drg Arg1:T13 Arg2:T24	
+T25	Drug_dose 1951 1984	5 mg 2x 1/2 tabl rano i wieczorem
+R9	Drg Arg1:T12 Arg2:T25	
+T26	Negation 1697 1710	bez znaczenia
+T27	Negation 1618 1624	neguje
+T28	Condition 1680 1696	Wywiad rodzinny:
+A1	Status T28 Family
+R10	Neg Arg1:T26 Arg2:T28	
+T29	Condition 1626 1643	uczulenia na leki
+N7	Reference T29 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T30	Symptom 1645 1678	krwawienia z przewodu pokarmowego
+N8	Reference T30 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+R11	Neg Arg1:T27 Arg2:T29	
+R12	Neg Arg1:T27 Arg2:T30	
+T31	Negation 1598 1608	nieistotny
+T32	Negation 1580 1581	-
+T33	Condition 1582 1597	Wywiad rodzinny
+A2	Status T33 Family
+R13	Neg Arg1:T31 Arg2:T33	
+T34	Behaviour 1543 1568	Nikotynizm:  5 sztuk/dobę
+N9	Reference T34 ICD10:T65.2	Tytoń i nikotyna
+T35	Negation 1534 1541	ne było
+T36	Treatment 1524 1532	Operacje
+R14	Neg Arg1:T35 Arg2:T36	
+T37	Investigation_result 1495 1521	RR w granicach 140/80 mmHg
+T38	Investigation 854 883	kontrola ciśnienia tętniczego
+T39	Investigation 895 964	kontrolą morfologii, lipidogramu , parametrów wątrobowych i nerkowych
+T40	Behaviour 966 1006	dieta niskocholesterolowa, wskazana ambu
+T41	Condition 1149 1184	zawale serca STEMI ściany przedniej
+N10	Reference T41 ICD10:I21.1	Ostry zawał serca pełnościenny ściany dolnej
+T42	Treatment 1185 1226	leczonym PCI LAD z implantacją stentu DES
+T43	Date 1228 1236	10.2018r
+R15	Dat Arg1:T43 Arg2:T42	
+T44	Symptom 1265 1295	pogorszenia tolerancji wysiłku
+T45	Symptom 1301 1354	nietypowych dolegliwości bólowych w klatce peirsiowej
+N11	Reference T45 ICD10:R07.3	Inne bóle w klatce piersiowej
+T46	Condition 1377 1398	nadciśnienie tętnicze
+N12	Reference T46 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T47	Condition 1400 1414	hiperlipidemia
+N13	Reference T47 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T48	Behaviour 1416 1426	nikotynizm
+N14	Reference T48 ICD10:T65.2	Tytoń i nikotyna
+T49	Symptom 1448 1454	omdleń
+N15	Reference T49 ICD10:R55	Omdlenie i zapaść
+T50	Symptom 1456 1474	utrat przytomności
+N16	Reference T50 ICD10:R55	Omdlenie i zapaść
+T51	Negation 1428 1434	Neguje
+R16	Neg Arg1:T51 Arg2:T49	
+R17	Neg Arg1:T51 Arg2:T50	
+T52	Behaviour 1572 1579	Alkohol
+N17	Reference T52 ICD10:Z72.1	Używanie alkoholu
+R18	Neg Arg1:T32 Arg2:T52	

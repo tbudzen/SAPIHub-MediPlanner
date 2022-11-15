@@ -1,0 +1,34 @@
+T1	Condition 437 465	Dysplazja zastawki aortalnej
+N1	Reference T1 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T2	Condition 470 505	Łagodne zwężenie zastawki aortalnej
+N2	Reference T2 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T3	Drug 626 634	Dormicum
+T4	Drug 636 639	ANA
+T5	Treatment 751 785	Kontrola w Poradni Kardiologicznej
+T6	Date 786 799	za 6 miesięcy
+T7	Treatment 804 817	Suplementacja
+T8	Drug 818 824	żelaza
+T9	Drug 830 852	witamin krwiotwórczych
+T10	Condition 863 898	niedokrwistością z niedoboru żelaza
+N3	Reference T10 ICD10:D50.9	Niedokrwistość z niedoboru żelaza, nieokreślona
+T11	Drug 900 907	Innofer
+T12	Drug_dose 908 925	2,4 ml 1xdziennie
+T13	Drug 926 935	Innovitum
+T14	Drug_dose 936 955	3 krople 1xdziennie
+T15	Investigation 971 1006	kotrolnej morfologii krwi obwodowej
+T16	Date 1007 1020	za 2 miesiące
+T17	Condition 1157 1176	wrodzoną wada serca
+T18	Treatment 1211 1218	sedacji
+T19	Drug 1221 1235	na stałe leków
+T20	Negation 1236 1249	nie otrzymuje
+T21	Condition 1252 1269	wywiad alergiczny
+N4	Reference T21 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T22	Negation 1270 1276	ujemny
+R1	Dat Arg1:T6 Arg2:T5	
+R2	Drg Arg1:T11 Arg2:T12	
+R3	Drg Arg1:T13 Arg2:T14	
+R4	Dat Arg1:T16 Arg2:T15	
+R5	Neg Arg1:T20 Arg2:T19	
+R6	Neg Arg1:T22 Arg2:T21	
+T23	Investigation 1193 1208	wykonania badań
+N5	Reference T17 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych

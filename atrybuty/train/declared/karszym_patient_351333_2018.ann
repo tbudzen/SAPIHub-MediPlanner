@@ -1,0 +1,85 @@
+T1	Drug 353 361	Enarenal
+T2	Drug_dose 362 371	1 x 2.5mg
+T3	Drug 415 423	Spironol
+T4	Drug_dose 425 435	2 x 12.5mg
+T5	Drug 479 497	Hydrochlorothiazyd
+T6	Drug_dose 498 508	2 x 6.25mg
+T7	Drug 553 559	Acesan
+T8	Drug_dose 561 569	1 x 50mg
+T9	Drug 676 688	Sanprobi IBS
+T10	Drug 613 622	Polprazol
+T11	Drug_dose 624 632	1 x 20mg
+T12	Drug_dose 690 700	1 x 1 kaps
+T13	Investigation 705 762	Ambulatoryjna kontrola parametrów funkcji układu krążenia
+T14	Behaviour 767 798	Kontrolowana aktywność fizyczna
+T15	Treatment 803 831	Dalsza opieka kardiologiczna
+T16	Treatment 834 862	ponowne przyjęcie do kliniki
+T17	Date 863 879	w dn.03.04.2019r
+R1	Dat Arg1:T17 Arg2:T16	
+R2	Drg Arg1:T1 Arg2:T2	
+R3	Drg Arg1:T3 Arg2:T4	
+R4	Drg Arg1:T5 Arg2:T6	
+R5	Drg Arg1:T7 Arg2:T8	
+R6	Drg Arg1:T10 Arg2:T11	
+R7	Drg Arg1:T9 Arg2:T12	
+T18	Condition 1205 1251	Wrodzona wada serca - dwunapływowa komora lewa
+N1	Reference T18 ICD10:Q20.4	Wejście obu dróg żylnych do jedynej komory
+T19	Condition 1254 1286	atrezją zastawki tętnicy płucnej
+N2	Reference T19 ICD10:Q22.0	Zarośnięcie zastawki pnia płucnego
+T20	Condition 1289 1306	malpozycją naczyń
+N3	Reference T20 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T21	Treatment 1320 1373	operacji prawostronnego zespolenia systemowo-płucnego
+N4	Reference T21 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T22	Date 1375 1384	21.06.07r
+T23	Treatment 1390 1393	BDG
+N5	Reference T23 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T24	Date 1395 1404	03.07.08r
+T25	Treatment 1410 1426	operacji Fontana
+N6	Reference T25 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T26	Date 1428 1437	03.09.13r
+T27	Treatment 1452 1495	implantacji stentu do lewej tętnicy płucnej
+N7	Reference T27 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T28	Treatment 1498 1508	zamknięcia
+T29	Condition 1509 1530	przetoki żylno-żylnej
+T30	Date 1532 1541	01.02.12r
+T31	Treatment 1544 1561	doprężeniu stentu
+T32	Date 1563 1572	25.01.13r
+T33	Treatment 1578 1600	zamknięciu fenestracji
+N8	Reference T33 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T34	Date 1602 1611	08.04.14r
+T35	Treatment 1617 1627	zamknięciu
+T36	Condition 1628 1697	kolaterali systemowo-płucnej od prawej tętnicy piersiowej wewnętrznej
+N9	Reference T36 ICD10:Q25.8	Inne wrodzone wady rozwojowe dużych tętnic
+T37	Treatment 1698 1725	zestawem Jackson-coil 3-5mm
+N10	Reference T37 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+N11	Reference T35 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T38	Date 1727 1736	06.07.16r
+T39	Condition 1742 1773	Podejrzenie choroby refluksowej
+N12	Reference T39 ICD10:K21.9	Zarzucanie żołądkowo-przełykowe bez zapalenia przełyku
+A1	Source T39 Declared
+T40	Drug 1898 1906	Spironol
+T41	Drug 1908 1925	Hydrochlorotiazyd
+T42	Drug 1927 1936	Captopril
+T43	Drug 1938 1944	Acesan
+T44	Condition 2085 2103	złożoną wada serca
+T45	Treatment 2109 2130	zabiegach naprawczych
+N13	Reference T45 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T46	Drug 2152 2157	Acard
+T47	Drug 2159 2168	Captopril
+T48	Drug 2170 2178	Spironol
+T49	Drug 2180 2197	Hydrochlorotiazyd
+T50	Condition 2199 2216	wywiad alergiczny
+N14	Reference T50 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T51	Negation 2217 2223	ujemny
+R8	Dat Arg1:T22 Arg2:T21	
+R9	Dat Arg1:T24 Arg2:T23	
+R10	Dat Arg1:T26 Arg2:T25	
+R11	Dat Arg1:T30 Arg2:T27	
+R12	Dat Arg1:T30 Arg2:T28	
+R13	Dat Arg1:T30 Arg2:T29	
+R14	Dat Arg1:T32 Arg2:T31	
+R15	Dat Arg1:T34 Arg2:T33	
+R16	Dat Arg1:T38 Arg2:T35	
+R17	Dat Arg1:T38 Arg2:T36	
+R18	Dat Arg1:T38 Arg2:T37	
+R19	Neg Arg1:T51 Arg2:T50	

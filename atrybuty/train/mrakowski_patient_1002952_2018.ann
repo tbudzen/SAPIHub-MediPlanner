@@ -1,0 +1,88 @@
+T1	Condition 373 431	Wada serca pod postacią łagodnej niedomykalności mitralnej
+N1	Reference T1 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T2	Behaviour 433 443	Nikotynizm
+N2	Reference T2 ICD10:Z72.0	Używanie tytoniu
+T3	Date 444 457	w przeszłości
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Condition 459 494	Niedokrwistość łagodna mikrocytarna
+N3	Reference T4 ICD10:D50	Niedokrwistość z niedoboru żelaza
+T5	Treatment 684 711	dalsza opieka w poradni POZ
+T6	Treatment 718 750	okresowa kontrola kardiologiczna
+T7	Treatment 756 778	poszerzona diagnostyka
+T8	Condition 779 794	niedokrwistości
+N4	Reference T8 ICD10:D64.9	Niedokrwistość, nieokreślona
+T9	Investigation 828 866	okresowa kontrola ciśnienia tętniczego
+T10	Investigation 873 902	okresowa kontrola lipidogramu
+T11	Date 904 914	raz w roku
+R2	Dat Arg1:T11 Arg2:T10	
+T12	Investigation 921 936	morfologii krwi
+T13	Date 948 961	za 4 tygodnie
+R3	Dat Arg1:T13 Arg2:T12	
+T14	Behaviour 968 993	dieta niskocholesterolowa
+T15	Behaviour 1000 1045	stały, umiarkowany, aerobowy wysiłek fizyczny
+T16	Behaviour 1052 1073	zakaz palenia tytoniu
+T17	Treatment 1080 1108	regularne przyjmowanie leków
+T18	Drug 1118 1131	Hemofer prol.
+T19	Drug_dose 1132 1156	1 tabl. rano i wieczorem
+R4	Drg Arg1:T18 Arg2:T19	
+T20	Symptom 1328 1351	niemiarowej pracy serca
+N5	Reference T20 ICD10:R00	Zaburzenia rytmu serca
+T21	Symptom 1353 1368	kołatania serca
+N6	Reference T21 ICD10:R00.2	Kołatanie serca
+T22	Symptom 1387 1444	ściskające bóle w klatce piersiowej nie zalezą od wysiłku
+N7	Reference T22 ICD10:R07.3	Inne bóle w klatce piersiowej
+T23	Symptom 1462 1486	bóle stawów dłoni , stóp
+N8	Reference T23 ICD10:M25.5	Ból stawu
+T24	Negation 1490 1496	Neguje
+T25	Symptom 1497 1509	zasłabnięcia
+R5	Neg Arg1:T24 Arg2:T25	
+T26	Treatment 1553 1570	Przebyte operacje
+T27	Negation 1573 1577	brak
+R6	Neg Arg1:T27 Arg2:T26	
+T28	Treatment 1578 1597	Leczenie przewlekłe
+T29	Negation 1600 1604	brak
+R7	Neg Arg1:T29 Arg2:T28	
+T30	Condition 1633 1636	WZW
+N9	Reference T30 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T31	Negation 1639 1640	-
+R8	Neg Arg1:T31 Arg2:T30	
+T32	Condition 1646 1655	borelioza
+N10	Reference T32 ICD10:A69.2	Choroba z Lyme
+T33	Negation 1658 1659	-
+R9	Neg Arg1:T33 Arg2:T32	
+T34	Condition 1664 1683	wywiadzie rodzinnym
+A1	Status T34 Family
+T35	Condition 1691 1702	zawał serca
+A2	Status T35 Family
+N11	Reference T35 ICD10:I25.2	Przebyty zawał serca
+T36	Condition 1712 1723	udary mózgu
+A3	Status T36 Family
+N12	Reference T36 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T37	Behaviour 1739 1754	Palenie tytoniu
+N13	Reference T37 ICD10:Z72.0	Używanie tytoniu
+T38	Negation 1764 1772	nie pali
+T39	Date 1773 1780	od roku
+R10	Neg Arg1:T38 Arg2:T37	
+R11	Dat Arg1:T39 Arg2:T37	
+T40	Date 1793 1798	3 lat
+T41	Behaviour 1799 1805	paliła
+N14	Reference T41 ICD10:Z72.0	Używanie tytoniu
+R12	Dat Arg1:T40 Arg2:T41	
+T42	Behaviour 1807 1824	Inne używki: kawa
+T43	Condition 1826 1835	Uczulenia
+N15	Reference T43 ICD10:T78.4	
+T44	Negation 1837 1843	neguje
+R13	Neg Arg1:T44 Arg2:T43	
+T45	Behaviour 1860 1886	warunki mieszkaniowe dobre
+T46	Investigation 1948 1958	Echo serca
+T47	Investigation 1961 1971	Holter EKG
+T48	Investigation 1974 1976	RR
+T49	Investigation 1980 2000	RTG latki piersiowej
+N16	Reference T25 ICD10:R55	Omdlenie i zapaść
+T50	Negation 1526 1530	brak
+T51	Condition 1531 1550	chorób przewlekłych
+R14	Neg Arg1:T50 Arg2:T51	
+N17	Reference T42 ICD10:Z72	Problemy związane ze stylem życia
+T52	Negation 1911 1914	bez
+T53	Drug 1915 1933	leków przewlekłych
+R15	Neg Arg1:T52 Arg2:T53	

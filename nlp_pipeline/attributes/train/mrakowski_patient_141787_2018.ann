@@ -1,0 +1,117 @@
+T1	Condition 439 529	Wada nabyta serca pod postacią łagodnej/umiarkowanej niedomykalności zastawki trójdzielnej
+N1	Reference T1 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T2	Condition 531 574	łagodnej niedomykalności zastawki mitralnej
+N2	Reference T2 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T3	Condition 576 615	Zaburzenia przewodnictwa śródkomorowego
+N3	Reference T3 ICD10:I45.4	Nieokreślony blok wewnątrzkomorowy
+T4	Condition 629 659	bloku lewej odnogi pęczka Hisa
+N4	Reference T4 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T5	Condition 673 695	zespołu wazo-wagalnego
+A1	Source T5 Declared
+N5	Reference T5 ICD10:I95.1	Niedociśnienie tętnicze ortostatyczne
+T6	Condition 697 729	Zmiany zwyrodnieniowe kręgosłupa
+N6	Reference T6 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T7	Treatment 743 760	Przebyte operacje
+T8	Condition 771 823	torbieli stawu kolanowego prawego i barkowego lewego
+N7	Reference T8 ICD10:M67.4	Ganglion
+A2	Status T8 Historical_Insignificant
+T9	Treatment 945 972	dalsza opieka w poradni POZ
+T10	Treatment 974 1006	okresowa kontrola kardiologiczna
+T11	Behaviour 1007 1032	dieta ubogocholesterolowa
+T12	Behaviour 1033 1061	regularna aktywność fizyczna
+T13	Drug 1068 1077	Captopril
+T14	Drug_dose 1078 1102	12,5 mg 1 tabl. doraźnie
+R1	Drg Arg1:T13 Arg2:T14	
+T15	Condition 1247 1251	LBBB
+N8	Reference T15 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+T16	Symptom 1306 1318	zasłabnięcia
+T17	Treatment 1319 1340	podczas rehabilitacji
+T18	Condition 1350 1384	choroby zwyrodnieniowej kręgosłupa
+N9	Reference T18 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T19	Investigation 1388 1391	EKG
+T20	Investigation_result 1412 1416	LBBB
+N10	Reference T20 ICD10:I44.7	Blok lewej odnogi pęczka Hisa, nieokreślony
+R2	Inv Arg1:T19 Arg2:T20	
+T21	Symptom 1440 1480	bóle o charakterze pieczenia za mostkiem
+N11	Reference T21 ICD10:R07.2	Ból w okolicy przedsercowej
+T22	Symptom 1485 1537	okolicy m/łopatkowej przy większym wysiłku fizycznym
+N12	Reference T22 ICD10:M54.2	Bóle karku
+T23	Symptom 1539 1571	odpoczywa po wejściu na 2 piętro
+N13	Reference T23 ICD10:R53	Złe samopoczucie i zmęczenie
+T24	Investigation_result 1573 1589	RR w domu 130/80
+T25	Investigation_result 1591 1617	czasem skoki do 150/90mmHg
+N14	Reference T25 ICD10:R03.0	Podwyższone ciśnienie tętnicze krwi, bez rozpoznanego nadciśnienia tętniczego
+T26	Negation 1619 1625	Neguje
+T27	Symptom 1627 1635	omdlenia
+N15	Reference T27 ICD10:R55	Omdlenie i zapaść
+T28	Symptom 1637 1647	krwawienia
+T29	Symptom 1649 1662	czarne stolce
+N17	Reference T29 ICD10:K92.1	Stolce smołowate
+T30	Symptom 1664 1680	brunatne wymioty
+N18	Reference T30 ICD10:K92.0	Wymioty krwawe
+T31	Condition 1682 1698	chorobę wrzodową
+N19	Reference T31 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T32	Symptom 1700 1714	duszność nocną
+N20	Reference T32 ICD10:R06.0	Duszność
+T33	Symptom 1716 1731	obrzęki podudzi
+T34	Condition 1733 1735	HA
+N22	Reference T34 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T35	Condition 1737 1739	DM
+N23	Reference T35 ICD10:E14	Cukrzyca nieokreślona
+T36	Condition 1741 1751	udar mózgu
+N24	Reference T36 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T37	Condition 1753 1764	zawał serca
+N25	Reference T37 ICD10:I25.2	Przebyty zawał serca
+R3	Neg Arg1:T26 Arg2:T37	
+R4	Neg Arg1:T26 Arg2:T36	
+R5	Neg Arg1:T26 Arg2:T35	
+R6	Neg Arg1:T26 Arg2:T34	
+R7	Neg Arg1:T26 Arg2:T33	
+R8	Neg Arg1:T26 Arg2:T32	
+R9	Neg Arg1:T26 Arg2:T31	
+R10	Neg Arg1:T26 Arg2:T30	
+R11	Neg Arg1:T26 Arg2:T29	
+R12	Neg Arg1:T26 Arg2:T28	
+R13	Neg Arg1:T26 Arg2:T27	
+T38	Treatment 1768 1785	Przebyte operacje
+T39	Condition 1796 1848	torbieli stawu kolanowego prawego i barkowego lewego
+A3	Status T39 Historical_Insignificant
+N26	Reference T39 ICD10:M67.4	Ganglion
+T40	Date 1850 1860	przed laty
+R14	Dat Arg1:T40 Arg2:T39	
+T41	Behaviour 1862 1877	Palenie tytoniu
+T42	Negation 1879 1882	nie
+R15	Neg Arg1:T42 Arg2:T41	
+T43	Behaviour 1883 1894	Inne używki
+T44	Negation 1896 1899	nie
+R16	Neg Arg1:T44 Arg2:T43	
+T45	Condition 1900 1909	Uczulenia
+N28	Reference T45 ICD10:T78.4	Alergia, nieokreślona
+T46	Negation 1912 1915	nie
+R17	Neg Arg1:T46 Arg2:T45	
+T47	Condition 1943 1946	WZW
+N29	Reference T47 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T48	Condition 1953 1962	borelioza
+N30	Reference T48 ICD10:A69.2	Choroba z Lyme
+T49	Condition 1970 1973	tbc
+T50	Negation 1975 1976	-
+R18	Neg Arg1:T50 Arg2:T49	
+T51	Negation 1965 1966	-
+R19	Neg Arg1:T51 Arg2:T48	
+T52	Negation 1948 1949	-
+R20	Neg Arg1:T52 Arg2:T47	
+T53	Behaviour 1994 2020	warunki mieszkaniowe dobre
+T54	Drug_dose 2029 2037	doraźnie
+T55	Drug 2038 2051	leki p/bólowe
+R21	Drg Arg1:T55 Arg2:T54	
+T56	Investigation 2112 2133	badania laboratoryjne
+T57	Investigation 2135 2139	ECHO
+T58	Investigation 2141 2159	EKG metodą Holtera
+T59	Investigation 2161 2165	ABPM
+T60	Investigation 2167 2170	DSE
+N32	Reference T16 ICD10:R55	Omdlenie i zapaść
+N27	Reference T41 ICD10:Z72.0	Używanie tytoniu
+N16	Reference T28 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N21	Reference T33 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N33	Reference T43 ICD10:Z72	Problemy związane ze stylem życia
+N31	Reference T49 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

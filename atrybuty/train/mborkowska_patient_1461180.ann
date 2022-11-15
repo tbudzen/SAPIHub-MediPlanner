@@ -1,0 +1,62 @@
+T1	Behaviour 438 533	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T2	Investigation 546 563	kontrola lipidogr
+T3	Condition 781 802	Nadciśnienie tętnicze
+N1	Reference T3 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T4	Condition 807 819	Dyslipidemia
+N2	Reference T4 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T5	Condition 964 987	nadciśnieniem tętniczym
+N3	Reference T5 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T6	Condition 989 1017	chorobą wrzodową dwunastnicy
+N4	Reference T6 ICD10:K28	Wrzód żołądka i jelita czczego
+T7	Investigation 1044 1065	RTG klatki piersiowej
+T8	Investigation_result 1066 1084	poszerzeniem aorty
+T9	Date 1086 1093	10/2018
+R2	Inv Arg1:T7 Arg2:T8	
+R3	Dat Arg1:T9 Arg2:T7	
+T10	Investigation 1155 1158	TEE
+T11	Negation 1207 1213	Neguje
+T12	Symptom 1214 1226	zasłabnięcia
+N5	Reference T12 ICD10:R55	Omdlenie i zapaść
+T13	Symptom 1228 1237	duszności
+N6	Reference T13 ICD10:R06.0	Duszność
+T14	Symptom 1239 1270	typowe bóle w klatce piersiowej
+N7	Reference T14 ICD10:R07.3	Inne bóle w klatce piersiowej
+R4	Neg Arg1:T11 Arg2:T12	
+R5	Neg Arg1:T11 Arg2:T13	
+R6	Neg Arg1:T11 Arg2:T14	
+T15	Negation 1292 1298	neguje
+T16	Negation 1330 1335	( - )
+T17	Negation 1348 1353	( - )
+T18	Negation 1364 1367	(-)
+T19	Treatment 1272 1289	Przebyte operacje
+R7	Neg Arg1:T15 Arg2:T19	
+T20	Condition 1326 1329	WZW
+N8	Reference T20 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T21	Condition 1338 1347	borelioza
+N9	Reference T21 ICD10:A69.2	Choroba z Lyme
+T22	Condition 1355 1363	gruźlica
+N10	Reference T22 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+R8	Neg Arg1:T18 Arg2:T22	
+R9	Neg Arg1:T17 Arg2:T21	
+R10	Neg Arg1:T16 Arg2:T20	
+T23	Negation 1385 1388	nie
+T24	Condition 1368 1383	Wywiad rodzinny
+A1	Status T24 Family
+R11	Neg Arg1:T23 Arg2:T24	
+T25	Behaviour 1389 1409	Palenie tytoniu: tak
+N11	Reference T25 ICD10:T65.2	Tytoń i nikotyna
+T26	Behaviour 1421 1456	Inne używki: alkohol - okazjonalnie
+N12	Reference T26 ICD10:Z72.1	Używanie alkoholu
+T27	Condition 1457 1466	Uczulenia
+N13	Reference T27 ICD10:T78.4	Alergia, nieokreślona
+T28	Negation 1468 1474	neguje
+R12	Neg Arg1:T28 Arg2:T27	
+T29	Behaviour 1491 1517	warunki mieszkaniowe dobre
+T30	Drug 1543 1548	Axtil
+T31	Drug_dose 1549 1552	5mg
+R13	Drg Arg1:T30 Arg2:T31	
+T32	Drug 1554 1562	Bisocard
+T33	Drug_dose 1563 1569	1,25mg
+R14	Drg Arg1:T32 Arg2:T33	
+T34	Date 1411 1420	od 17 lat
+R1	Dat Arg1:T34 Arg2:T25	

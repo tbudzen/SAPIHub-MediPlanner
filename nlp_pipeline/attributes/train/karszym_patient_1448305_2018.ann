@@ -1,0 +1,149 @@
+T1	Date 524 534	08.07.2018
+T2	Negation 2008 2014	neguje
+T3	Negation 2032 2038	neguje
+T4	Negation 2052 2058	neguje
+T5	Negation 2070 2076	neguje
+T6	Condition 2104 2107	WZW
+N1	Reference T6 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T7	Negation 2108 2111	(-)
+T8	Condition 2114 2123	borelioza
+N2	Reference T8 ICD10:A69.2	Choroba z Lyme
+T9	Negation 2124 2129	( - )
+T10	Condition 2131 2134	tbc
+N3	Reference T10 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T11	Negation 2135 2138	(-)
+T12	Behaviour 2156 2182	warunki mieszkaniowe dobre
+T13	Drug 2186 2190	Leki
+T14	Negation 2192 2205	nie przyjmuje
+T15	Condition 2230 2241	zawał serca
+A1	Status T15 Family
+N4	Reference T15 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T16	Investigation 2301 2322	badania laboratoryjne
+T17	Investigation 2325 2335	Holter ekg
+T18	Investigation 2337 2341	ECHO
+T19	Investigation 2343 2347	ABPM
+R1	Neg Arg1:T14 Arg2:T13	
+R2	Neg Arg1:T7 Arg2:T6	
+R3	Neg Arg1:T9 Arg2:T8	
+R4	Neg Arg1:T11 Arg2:T10	
+T20	Condition 2059 2068	Uczulenia
+N5	Reference T20 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T21	Behaviour 2039 2050	Inne używki
+N6	Reference T21 ICD10:Z72	Problemy związane ze stylem życia
+T22	Behaviour 2015 2030	Palenie tytoniu
+N7	Reference T22 ICD10:Z72.0	Używanie tytoniu
+T23	Treatment 1989 2006	Przebyte operacje
+N8	Reference T23 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T24	Negation 1830 1836	Neguje
+T25	Condition 537 541	C II
+T26	Condition 542 545	P I
+T27	Condition 546 552	hbd 22
+T28	Symptom 514 522	omdleniu
+N9	Reference T28 ICD10:R55	Omdlenie i zapaść
+R5	Dat Arg1:T1 Arg2:T28	
+T29	Condition 404 464	Napadowy zaawansowany blok przedsionkowo-komorowy II stopnia
+N10	Reference T29 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T30	Condition 467 504	blok przedsionkowo-komorowy całkowity
+N11	Reference T30 ICD10:I44.2	Blok przedsionkowo-komorowy zupełny
+T31	Condition 728 747	w 20 tygodniu ciąży
+T32	Condition 750 753	CII
+T33	Condition 754 756	PI
+T34	Condition 760 826	napadowym zaawansowanym blokiem przedsionkowo-komorowym II stopnia
+N12	Reference T34 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T35	Condition 839 882	blokiem przedsionkowo-komorowym III stopnia
+N13	Reference T35 ICD10:I44.2	Blok przedsionkowo-komorowy zupełny
+T36	Date 885 895	07.08.2018
+R6	Dat Arg1:T36 Arg2:T35	
+T37	Investigation_result 900 918	pauzami do 5,2 sek
+T38	Date 933 943	od 02.2018
+T39	Investigation 959 972	3x Holter ekg
+R7	Dat Arg1:T38 Arg2:T39	
+R8	Inv Arg1:T39 Arg2:T37	
+N14	Reference T37 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+T40	Symptom 1003 1023	1 epizodzie omdlenia
+N15	Reference T40 ICD10:R55	Omdlenie i zapaść
+T41	Date 1024 1042	w dniu 08.07.2018r
+R9	Dat Arg1:T41 Arg2:T40	
+T42	Condition 1168 1195	podejrzeniem hiperwagotonii
+N16	Reference T42 ICD10:G52.2	Zaburzenia nerwu błędnego
+A2	Source T42 Declared
+T43	Investigation 1210 1220	obserwacji
+T44	Investigation 1262 1279	1x 48h Holter ekg
+T45	Date 1280 1299	w dniu 24.08.2018 r
+T46	Investigation_result 1325 1352	2 epizody napadowego AVB II
+N17	Reference T46 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T47	Investigation_result 1357 1377	w nocy zwolnienie RS
+N18	Reference T47 ICD10:R00.1	Bradykardia, nieokreślona
+T48	Investigation_result 1379 1392	AVB II st 4:1
+N19	Reference T48 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T49	Investigation_result 1395 1421	pauzami 5 sek oraz 1,8 sek
+N20	Reference T49 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+T50	Investigation_result 1424 1454	o godz 7:40 rano zwolnienie RS
+N21	Reference T50 ICD10:R00.1	Bradykardia, nieokreślona
+T51	Investigation_result 1456 1465	AVB II st
+N22	Reference T51 ICD10:I44.1	Blok przedsionkowo-komorowy drugiego stopnia
+T52	Investigation_result 1468 1481	pauzą 2,9 sek
+N23	Reference T52 ICD10:R94.3	Nieprawidłowe wyniki badań czynnościowych układu krążenia
+T53	Investigation 1500 1503	TTE
+T54	Investigation_result 1513 1567	prawidłowe parametry czynnościowe i strukturalne serca
+T55	Investigation 1583 1611	badaniach mikrobiologicznych
+T56	Negation 1614 1627	bez danych na
+T57	Investigation_result 1628 1636	infekcję
+R10	Neg Arg1:T56 Arg2:T57	
+R11	Inv Arg1:T55 Arg2:T57	
+R12	Inv Arg1:T53 Arg2:T54	
+R13	Dat Arg1:T45 Arg2:T44	
+R14	Inv Arg1:T44 Arg2:T46	
+R15	Inv Arg1:T44 Arg2:T47	
+R16	Inv Arg1:T44 Arg2:T48	
+R17	Inv Arg1:T44 Arg2:T49	
+R18	Inv Arg1:T44 Arg2:T50	
+R19	Inv Arg1:T44 Arg2:T51	
+R20	Inv Arg1:T44 Arg2:T52	
+T58	Negation 1645 1664	nie zakwalifikowano
+T59	Treatment 1668 1706	implantacji układu stymulującego serca
+N24	Reference T59 ICD10:Z95.0	Obecność stymulatora serca
+R21	Neg Arg1:T58 Arg2:T59	
+T60	Date 1709 1726	Na początku ciąży
+T61	Symptom 1753 1813	dolegliwości bólowe w klatce piersiowej o charakterze kłucia
+N25	Reference T61 ICD10:R07.3	Inne bóle w klatce piersiowej
+T62	Symptom 1820 1828	ustąpiły
+R22	Dat Arg1:T60 Arg2:T61	
+R23	Dat Arg1:T60 Arg2:T62	
+T63	Symptom 1838 1853	kołatania serca
+N26	Reference T63 ICD10:R00.2	Kołatanie serca
+T64	Symptom 1855 1865	krwawienia
+N27	Reference T64 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+T65	Symptom 1867 1880	czarne stolce
+N28	Reference T65 ICD10:K92.1	Stolce smołowate
+T66	Symptom 1882 1898	brunatne wymioty
+N29	Reference T66 ICD10:K92.0	Wymioty krwawe
+T67	Condition 1900 1916	chorobę wrzodową
+N30	Reference T67 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T68	Symptom 1918 1926	duszność
+N31	Reference T68 ICD10:R06.0	Duszność
+T69	Condition 1928 1930	HA
+N32	Reference T69 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T70	Condition 1932 1934	DM
+N33	Reference T70 ICD10:E14	Cukrzyca nieokreślona
+T71	Condition 1936 1946	udar mózgu
+N34	Reference T71 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T72	Condition 1948 1959	zawał serca
+N35	Reference T72 ICD10:I25.2	Przebyty zawał serca
+T73	Condition 1961 1986	ugryzienie przez kleszcza
+N36	Reference T73 ICD10:W57	Ugryzienie lub użądlenie przez niejadowitego owada i innego niejadowitego stawonoga
+R24	Neg Arg1:T24 Arg2:T63	
+R25	Neg Arg1:T24 Arg2:T64	
+R26	Neg Arg1:T24 Arg2:T65	
+R27	Neg Arg1:T24 Arg2:T66	
+R28	Neg Arg1:T24 Arg2:T67	
+R29	Neg Arg1:T24 Arg2:T68	
+R30	Neg Arg1:T24 Arg2:T69	
+R31	Neg Arg1:T24 Arg2:T70	
+R32	Neg Arg1:T24 Arg2:T71	
+R33	Neg Arg1:T24 Arg2:T72	
+R34	Neg Arg1:T24 Arg2:T73	
+R35	Neg Arg1:T2 Arg2:T23	
+R36	Neg Arg1:T3 Arg2:T22	
+R37	Neg Arg1:T4 Arg2:T21	
+R38	Neg Arg1:T5 Arg2:T20	

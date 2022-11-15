@@ -1,0 +1,459 @@
+allRelations          : 22
+oks                   : 10
+isRedundantAndRemoveds: 12
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 0
+GOOD / BAD            : 22 / 0
+Sentence 0:
+------------------------------------------------
+Wiek: 22 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zastosowane leczenie
+
+
+
+Sentence 4:
+------------------------------------------------
+
+
+
+Sentence 5:
+Acesan
+------------------------------------------------
+
+
+
+Sentence 6:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 7:
+- Acesan 1 x 75 mg
+- kontrola w Poradni Kardiologicznej za 12 m-cy
+------------------------------------------------
+
+R1	Drg Arg1:T2 Arg2:T3 << OK >>	Acesan -> 1 x 75 mg  <RANK: 3> <info: start[458, 465] <type: RIGHT>>
+R2	Dat Arg1:T5 Arg2:T4 << OK >>	za 12 m-cy -> kontrola w Poradni Kardiologicznej  <RANK: 3> <info: start[512, 477] <type: LEFT>>
+R3	Dat Arg1:T5 Arg2:T2 <<REDUNDANT!!!REMOVED>>	za 12 m-cy -> Acesan <:REMOVED other second tag between (left):> <RANK: 1> <info: start[512, 458] <type: LEFT>>
+
+
+Sentence 8:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 9:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q22.6|Rozpoznanie II: ICD10:Z98.8|Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: ICD10:Z95.8|Opisowo:: Wrodzona wada serca pod postacią hipoplazji prawej komory i zastawki trójdzielnej z ubytkiem przegrody międzykomorowej i międzyprzedsionkowej.
+   
+
+
+Sentence 10:
+- stan po zespoleniu B-T lewostronnym (07.04.1998r).
+   
+R4	Dat Arg1:T10 Arg2:T9 << OK >>	07.04.1998r -> zespoleniu B-T lewostronnym  <RANK: 3> <info: start[958, 929] <type: LEFT>>
+
+
+Sentence 11:
+- stan po operacji BDG (08.09.2000r)
+   - stan po operacji metodą Fontana (30.07.2008 r.)
+   - stan po cewnikowaniu serca z zamknięciem fenestracji zestawem Amplaztera nr 5 (31.10.2008r).
+   
+R5	Dat Arg1:T12 Arg2:T11 << OK >>	08.09.2000r -> operacji BDG  <RANK: 3> <info: start[999, 985] <type: LEFT>>
+R6	Dat Arg1:T12 Arg2:T13 <<REDUNDANT!!!REMOVED>>	08.09.2000r -> operacji metodą Fontana <:REMOVED many second tags on the right:> <RANK: 1> <info: start[999, 1025] <type: RIGHT>>
+R7	Dat Arg1:T12 Arg2:T15 <<REDUNDANT!!!REMOVED>>	08.09.2000r -> zamknięciem fenestracji zestawem Amplaztera nr 5 <:REMOVED other first tag between (right):> <RANK: 0> <info: start[999, 1099] <type: RIGHT>>
+R8	Dat Arg1:T12 Arg2:T22 <<REDUNDANT!!!REMOVED>>	08.09.2000r -> cewnikowaniu serca <:REMOVED other first tag between (right):> <RANK: 0> <info: start[999, 1078] <type: RIGHT>>
+R9	Dat Arg1:T14 Arg2:T11 <<REDUNDANT!!!REMOVED>>	30.07.2008 -> operacji BDG <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1050, 985] <type: LEFT>>
+R10	Dat Arg1:T14 Arg2:T13 << OK >>	30.07.2008 -> operacji metodą Fontana  <RANK: 3> <info: start[1050, 1025] <type: LEFT>>
+R11	Dat Arg1:T14 Arg2:T15 <<REDUNDANT!!!REMOVED>>	30.07.2008 -> zamknięciem fenestracji zestawem Amplaztera nr 5 <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1050, 1099] <type: RIGHT>>
+R12	Dat Arg1:T14 Arg2:T22 <<REDUNDANT!!!REMOVED>>	30.07.2008 -> cewnikowaniu serca <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1050, 1078] <type: RIGHT>>
+R13	Dat Arg1:T16 Arg2:T11 <<REDUNDANT!!!REMOVED>>	31.10.2008r -> operacji BDG <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1149, 985] <type: LEFT>>
+R14	Dat Arg1:T16 Arg2:T13 <<REDUNDANT!!!REMOVED>>	31.10.2008r -> operacji metodą Fontana <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1149, 1025] <type: LEFT>>
+R15	Dat Arg1:T16 Arg2:T15 << OK >>	31.10.2008r -> zamknięciem fenestracji zestawem Amplaztera nr 5  <RANK: 3> <info: start[1149, 1099] <type: LEFT>>
+R16	Dat Arg1:T16 Arg2:T22 << OK >>	31.10.2008r -> cewnikowaniu serca  <RANK: 3> <info: start[1149, 1078] <type: LEFT>>
+
+
+Sentence 12:
+- stan po cewnikowaniu serca i implantacji stentu VALEO do lewej tętnicy płucnej (12.07.2017r) 
+   - stan po implantacji układu drenującego przestrzeni podtwardówkowej (1998r.)
+
+R17	Dat Arg1:T18 Arg2:T17 << OK >>	12.07.2017r -> implantacji stentu VALEO do lewej tętnicy płucnej  <RANK: 3> <info: start[1248, 1197] <type: LEFT>>
+R18	Dat Arg1:T18 Arg2:T19 <<REDUNDANT!!!REMOVED>>	12.07.2017r -> implantacji układu drenującego przestrzeni podtwardówkowej <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1248, 1275] <type: RIGHT>>
+R19	Dat Arg1:T18 Arg2:T21 << OK >>	12.07.2017r -> cewnikowaniu serca  <RANK: 2> <info: start[1248, 1176] <type: LEFT>>
+R20	Dat Arg1:T20 Arg2:T17 <<REDUNDANT!!!REMOVED>>	1998r -> implantacji stentu VALEO do lewej tętnicy płucnej <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1335, 1197] <type: LEFT>>
+R21	Dat Arg1:T20 Arg2:T19 << OK >>	1998r -> implantacji układu drenującego przestrzeni podtwardówkowej  <RANK: 3> <info: start[1335, 1275] <type: LEFT>>
+R22	Dat Arg1:T20 Arg2:T21 <<REDUNDANT!!!REMOVED>>	1998r -> cewnikowaniu serca <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1335, 1176] <type: LEFT>>
+
+
+Sentence 13:
+------------------------------------------------
+
+
+
+Sentence 14:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 15:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.66[10^3/ul]
+    
+
+
+Sentence 16:
+RBC Krwinki czerwone:5.12[10^6/ul]
+    
+
+
+Sentence 17:
+HGB Hemoglobina:14.8[g/dl]
+    
+
+
+Sentence 18:
+HCT Hematokryt:42.3[%]
+    
+
+
+Sentence 19:
+MCV wskaźnik czerwonokrw:82.6[fl]
+    
+
+
+Sentence 20:
+MCH wskaźnik czerwonokrw:28.9[pg]
+    
+
+
+Sentence 21:
+MCHC wskaźnik czerwonokr:35.0[g/dl]
+    
+
+
+Sentence 22:
+PLT z morfologii:265[10^3/ul]
+    
+
+
+Sentence 23:
+RDW-SD:41.8[fl]
+    
+
+
+Sentence 24:
+RDW-CV:13.9[%]
+    PDW:12.6[fl]
+    
+
+
+Sentence 25:
+MPV:10.2[fl]
+    
+
+
+Sentence 26:
+P-LCR:27.5[%]
+    
+
+
+Sentence 27:
+PCT (hematokryt płytkowy:0.27[%]
+    
+
+
+Sentence 28:
+NEUTR# wartość bezwzględ:4.45[10^3/ul]
+    
+
+
+Sentence 29:
+NEUTR%:66.8[%]
+    
+
+
+Sentence 30:
+LYMH# wartość bezwzględn:1.45[10^3/ul]
+    
+
+
+Sentence 31:
+LYMPH%:21.8[%]
+    
+
+
+Sentence 32:
+MONO# wartość bezwzględn:0.54[10^3/ul]
+    
+
+
+Sentence 33:
+MONO%:8.1[%]
+    
+
+
+Sentence 34:
+EO# wartość bezwzględna:0.18[10^3/ul]
+    
+
+
+Sentence 35:
+EO%:2.7[%]
+    
+
+
+Sentence 36:
+BASO# wartość bezwzględn:0.04[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 37:
+NRBC %:0.0[%]
+    
+
+
+Sentence 38:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 39:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:37.0[sek]
+
+
+
+Sentence 40:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 41:
+Czas protrombinowy:13.8[sek]
+    
+
+
+Sentence 42:
+Wskaźnik PT:79.7[%]
+    
+
+
+Sentence 43:
+INR:1.25
+Badanie ogólne moczu
+    
+
+
+Sentence 44:
+barwa:żółty[ ]
+    
+
+
+Sentence 45:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 46:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 47:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 48:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 49:
+ciężar właściwy:1.020[ ]
+    
+
+
+Sentence 50:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 51:
+pH:5.0[ ]
+    
+
+
+Sentence 52:
+białko:nieobecne[ ]
+    
+
+
+Sentence 53:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 54:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 55:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 56:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 57:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 58:
+nabłonki płaskie:dość liczne[w preparacie]
+    
+
+
+Sentence 59:
+leukocyty:3 /ul[ul]
+    erytrocyty świeże:2 /ul[ul]
+    śluz:liczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 60:
+TSH: TSH:2.78[uIU/ml]
+
+
+
+Sentence 61:
+FT3: FT3:2.86[pg/ml]
+
+
+
+Sentence 62:
+FT4: FT4:1.24[ng/dl]
+
+
+
+Sentence 63:
+Troponina T
+    Troponina T:
+    3,00[pg/ml]
+
+
+
+Sentence 64:
+ALAT: ALAT:12[U/L]
+ASPAT: ASPAT:19[U/L]
+
+
+
+Sentence 65:
+Białko całkowite w surowicy (TP): Białko całkowite w surow:7.9[g/dl]
+
+
+
+Sentence 66:
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 67:
+Sód (Na): Sód:144[mmol/L]
+
+
+
+Sentence 68:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 69:
+Kreatynina + GFR
+    
+
+
+Sentence 70:
+Kreatynina w surowicy:0.78[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 71:
+MDRD ze stan:93.2[ml/min/1,73 m^2]
+    wzrost:171[cm]
+
+
+
+Sentence 72:
+Mocznik: Mocznik:29[mg/dl]
+
+
+
+Sentence 73:
+NT-proBNP surowica: NT-proBNP w surowicy:117[pg/ml]
+
+
+
+Sentence 74:
+------------------------------------------------
+
+
+
+Sentence 75:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 76:
+Q22.6
+Z98.8
+Z95.8
+
+
+
+Sentence 77:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 78:
+ICD9
+------------------------------------------------
+89.522
+88.721
+87.440
+89.541
+88.761
+------------------------------------------------
+
+

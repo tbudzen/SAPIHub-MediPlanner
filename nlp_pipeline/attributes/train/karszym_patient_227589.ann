@@ -1,0 +1,215 @@
+T1	Condition 373 451	Złożona wada mitralna pod postacią istotnej stenozy z łagodną niedomykalnością
+N1	Reference T1 ICD10:Q23	Wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T2	Condition 453 502	Umiarkowana niedomykalność trójdzielna i aortalna
+T3	Condition 504 566	Przewlekła niewydolność serca z zachowaną frakcją wyrzutową LK
+N2	Reference T3 ICD10:I50.9	Niewydolność serca, nieokreślona
+T4	Condition 577 629	Utrwalone migotanie przedsionków w II klasie wg EHRA
+N3	Reference T4 ICD10:I48	Migotanie i trzepotanie przedsionków
+T5	Condition 631 682	Nadciśnienie tętnicze kontrolowane farmakologicznie
+N4	Reference T5 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T7	Condition 692 719	udarze niedokrwiennym mózgu
+N5	Reference T7 ICD10:I63.9	Zawał mózgu, nieokreślony
+T8	Condition 720 743	wtórnie ukrwotocznionym
+N6	Reference T8 ICD10:I61.9	Krwotok mózgowy, nieokreślony
+T9	Date 745 752	08/2017
+R1	Dat Arg1:T9 Arg2:T7	
+R2	Dat Arg1:T9 Arg2:T8	
+T10	Condition 779 793	afazja ruchowa
+N7	Reference T10 ICD10:R47.0	Dysfazja i afazja
+T11	Condition 795 802	aleksja
+T12	Condition 804 811	agrafia
+N9	Reference T12 ICD10:I69.4	Następstwa udaru mózgu, nieokreślonego jako krwotoczny lub zawałowy
+N8	Reference T11 ICD10:I69.4	Następstwa udaru mózgu, nieokreślonego jako krwotoczny lub zawałowy
+T13	Condition 755 777	NIedowład prawostronny
+N10	Reference T13 ICD10:G81.9	Porażenie połowicze, nieokreślone
+T14	Condition 813 830	Zespół depresyjny
+N11	Reference T14 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T15	Condition 840 869	krwawieniu podpajęczynówkowym
+N12	Reference T15 ICD10:I60.9	Krwotok podpajęczynówkowy, nieokreślony
+T16	Date 871 878	12/2011
+R3	Dat Arg1:T16 Arg2:T15	
+T17	Condition 881 899	Zapalenie trzustki
+N13	Reference T17 ICD10:K85.9	Ostre zapalenie trzustki, nieokreślone
+T18	Date 913 920	06/2013
+R4	Dat Arg1:T18 Arg2:T17	
+T19	Condition 923 980	Przewlekłe zapalenie błony śluzowej żołądka i dwunastnicy
+N14	Reference T19 ICD10:K29.9	Zapalenie żołądka i dwunastnicy, nieokreślone
+A1	Status T17 Historical_Insignificant
+T20	Treatment 1167 1263	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej, Gastroenterologicznej i Neurologicznej
+T21	Treatment 1277 1313;1340 1397	konsultacja w Instytucie Kardiologii celem oceny wskazań do walwuloplastyki zastawki balonowej
+T22	Behaviour 1477 1516	Dieta lekkostrawna, niskocholesterolowa
+T23	Treatment 1523 1614	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T24	Date 1615 1626	co 6-8 tyg.
+R5	Dat Arg1:T24 Arg2:T23	
+T25	Treatment 1632 1680	Systematyczna kontrola ciśnienia tętniczego krwi
+T26	Treatment 1687 1699	Kontrola INR
+T27	Date 1706 1714	za 7 dni
+R6	Dat Arg1:T27 Arg2:T26	
+T28	Treatment 1716 1746	docelowe wartości INR: 2,0-3,0
+T29	Drug 1758 1764	Warfin
+T30	Drug_dose 1765 1771	wg INR
+T31	Drug_dose 1797 1827	1,5 mg/d - 1,5 mg/d - 2,5 mg/d
+R7	Drg Arg1:T29 Arg2:T30	
+R8	Drg Arg1:T29 Arg2:T31	
+T32	Drug 1829 1840	Betaloc ZOK
+T33	Drug 1859 1866	Romazic
+T34	Drug 1893 1902	Furosemid
+T35	Date 1774 1795	do kolejnej oceny INR
+R9	Dat Arg1:T35 Arg2:T31	
+T36	Drug 1926 1936	Verospiron
+T37	Drug 1960 1967	Kalipoz
+T38	Drug 1991 1994	IPP
+T40	Drug_dose 1867 1892	20 mg 1x1 tabl. wieczorem
+T41	Drug_dose 1903 1925	40 mg 1x1/2 tabl. rano
+T42	Drug_dose 1937 1959	25 mg 1x1/2 tabl. rano
+T43	Drug_dose 1968 1989	1 tabl. rano co 2 dni
+T44	Drug_dose 1995 2024	40 mg 1x1 tabl. rano na czczo
+R11	Drg Arg1:T33 Arg2:T40	
+R12	Drg Arg1:T34 Arg2:T41	
+R13	Drg Arg1:T36 Arg2:T42	
+R14	Drg Arg1:T37 Arg2:T43	
+R15	Drg Arg1:T38 Arg2:T44	
+T45	Drug_dose 1841 1858	50 1x1 tabl. rano
+R10	Drg Arg1:T32 Arg2:T45	
+T39	Condition 2170 2191	złożoną wadą mitralną
+N15	Reference T39 ICD10:Q23	Wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T46	Investigation 2254 2257	TEE
+T47	Symptom 2267 2285	duszność wysiłkową
+N16	Reference T47 ICD10:R06.0	Duszność
+T48	Symptom 2305 2376	Okresowe bóle po lewej stronie mostka bez związku z wysiłkiem fizycznym
+N17	Reference T48 ICD10:R07.2	Ból w okolicy przedsercowej
+T49	Investigation 2378 2394	W koronarografii
+T50	Date 2396 2403	04/2012
+T51	Negation 2405 2408	bez
+T52	Investigation_result 2409 2427	zmian w naczyniach
+R16	Neg Arg1:T51 Arg2:T52	
+R17	Dat Arg1:T50 Arg2:T49	
+R18	Inv Arg1:T49 Arg2:T52	
+T53	Condition 2450 2544	Złożona wada mitralna pod postacią łagodnej/umiarkowaną stenozy z umiarkowaną niedomykalnością
+N18	Reference T53 ICD10:Q23	Wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T54	Condition 2546 2595	Umiarkowana niedomykalność trójdzielna i aortalna
+T55	Condition 2597 2659	Przewlekła niewydolność serca z zachowaną frakcją wyrzutową LK
+N19	Reference T55 ICD10:I50.9	Niewydolność serca, nieokreślona
+T56	Condition 2670 2722	Utrwalone migotanie przedsionków w II klasie wg EHRA
+N20	Reference T56 ICD10:I48	Migotanie i trzepotanie przedsionków
+T57	Condition 2724 2745	Nadciśnienie tętnicze
+N21	Reference T57 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T58	Condition 2755 2782	udarze niedokrwiennym mózgu
+N22	Reference T58 ICD10:I63.9	Zawał mózgu, nieokreślony
+T59	Condition 2783 2806	wtórnie ukrwotocznionym
+N23	Reference T59 ICD10:I61.9	Krwotok mózgowy, nieokreślony
+T60	Date 2808 2815	08/2017
+R19	Dat Arg1:T60 Arg2:T59	
+R20	Dat Arg1:T60 Arg2:T58	
+T61	Condition 2818 2840	NIedowład prawostronny
+N24	Reference T61 ICD10:G81.9	Porażenie połowicze, nieokreślone
+T62	Condition 2842 2856	afazja ruchowa
+N25	Reference T62 ICD10:R47.0	Dysfazja i afazja
+T63	Condition 2858 2865	aleksja
+N26	Reference T63 ICD10:I69.4	Następstwa udaru mózgu, nieokreślonego jako krwotoczny lub zawałowy
+T64	Condition 2867 2874	agrafia
+N27	Reference T64 ICD10:I69.4	Następstwa udaru mózgu, nieokreślonego jako krwotoczny lub zawałowy
+T65	Condition 2876 2893	Zespół depresyjny
+N28	Reference T65 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T66	Condition 2903 2932	krwawieniu podpajęczynówkowym
+N29	Reference T66 ICD10:I60.9	Krwotok podpajęczynówkowy, nieokreślony
+T67	Date 2934 2941	12/2011
+R21	Dat Arg1:T67 Arg2:T66	
+T68	Condition 2944 2962	Zapalenie trzustki
+N30	Reference T68 ICD10:K85.9	Ostre zapalenie trzustki, nieokreślone
+T69	Date 2976 2983	06/2013
+R22	Dat Arg1:T69 Arg2:T68	
+A2	Status T68 Historical_Insignificant
+T70	Condition 2986 3043	Przewlekłe zapalenie błony śluzowej żołądka i dwunastnicy
+N31	Reference T70 ICD10:K29.9	Zapalenie żołądka i dwunastnicy, nieokreślone
+T71	Negation 3045 3051	Neguje
+T72	Symptom 3053 3063	krwawienia
+T73	Symptom 3065 3078	czarne stolce
+N32	Reference T73 ICD10:K92.1	Stolce smołowate
+T74	Symptom 3080 3096	brunatne wymioty
+N33	Reference T74 ICD10:K92.0	Wymioty krwawe
+T75	Condition 3098 3114	chorobę wrzodową
+N34	Reference T75 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T76	Symptom 3116 3130	duszność nocną
+N35	Reference T76 ICD10:R06.0	Duszność
+T77	Symptom 3132 3147	kołatania serca
+N36	Reference T77 ICD10:R00.2	Kołatanie serca
+R23	Neg Arg1:T71 Arg2:T72	
+R24	Neg Arg1:T71 Arg2:T73	
+R25	Neg Arg1:T71 Arg2:T74	
+R26	Neg Arg1:T71 Arg2:T75	
+R27	Neg Arg1:T71 Arg2:T76	
+R28	Neg Arg1:T71 Arg2:T77	
+T78	Treatment 3169 3182	appendectomia
+N37	Reference T78 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T79	Date 3183 3189	w 18rz
+R29	Dat Arg1:T79 Arg2:T78	
+A3	Status T78 Historical_Insignificant
+T80	Treatment 3191 3216	plastyka narządów rodnych
+N38	Reference T80 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T81	Negation 3234 3237	nie
+T82	Behaviour 3238 3242	pali
+T83	Date 3243 3252	od 15 lat
+R30	Neg Arg1:T81 Arg2:T82	
+R31	Dat Arg1:T83 Arg2:T82	
+T84	Behaviour 3253 3264	Inne używki
+T85	Negation 3266 3272	neguje
+R32	Neg Arg1:T85 Arg2:T84	
+T86	Condition 3273 3282	Uczulenia
+N39	Reference T86 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T87	Negation 3284 3290	neguje
+R33	Neg Arg1:T87 Arg2:T86	
+T88	Condition 3318 3321	WZW
+N40	Reference T88 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T89	Condition 3328 3337	borelioza
+N41	Reference T89 ICD10:A69.2	Choroba z Lyme
+T90	Condition 3343 3346	tbc
+N42	Reference T90 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T91	Condition 3352 3356	odra
+N43	Reference T91 ICD10:B05	Odra
+T92	Condition 3362 3376	kontakt z odrą
+N44	Reference T92 ICD10:Z20.8	Styczność i narażenie na inne choroby zakaźne
+T93	Negation 3322 3325	(-)
+T94	Negation 3338 3341	(-)
+T95	Negation 3347 3350	(-)
+T96	Negation 3357 3360	(-)
+T97	Negation 3377 3380	(-)
+R34	Neg Arg1:T93 Arg2:T88	
+R35	Neg Arg1:T94 Arg2:T89	
+R36	Neg Arg1:T95 Arg2:T90	
+R37	Neg Arg1:T96 Arg2:T91	
+R38	Neg Arg1:T97 Arg2:T92	
+T98	Behaviour 3397 3423	warunki mieszkaniowe dobre
+T99	Behaviour 3425 3442	mieszka z rodziną
+T100	Behaviour 3217 3232	Palenie tytoniu
+R39	Dat Arg1:T83 Arg2:T100	
+R40	Neg Arg1:T81 Arg2:T100	
+T101	Drug 3476 3486	Verospiron
+T102	Drug 3501 3510	Furosemid
+T103	Drug 3526 3542	Kalipoz prolong.
+T104	Drug 3549 3555	Warfin
+T105	Drug 3571 3578	Romazic
+T106	Drug 3591 3602	Betaloc ZOK
+T107	Drug_dose 3487 3500	25 mg 1/2-0-0
+T108	Drug_dose 3511 3525	40 mg 1/2 -0-0
+T109	Drug_dose 3543 3548	1-0-0
+T110	Drug_dose 3556 3570	1,5-1,5-2,5 mg
+T111	Drug_dose 3579 3590	10 mg 0-0-1
+T112	Drug_dose 3603 3614	50 mg 1-0-0
+R41	Drg Arg1:T101 Arg2:T107	
+R42	Drg Arg1:T102 Arg2:T108	
+R43	Drg Arg1:T103 Arg2:T109	
+R44	Drg Arg1:T104 Arg2:T110	
+R45	Drg Arg1:T105 Arg2:T111	
+R46	Drg Arg1:T106 Arg2:T112	
+T113	Investigation 3675 3696	badania laboratoryjne
+T114	Investigation 3698 3702	ECHO
+T115	Investigation 3703 3706	TEE
+A4	Status T80 Historical_Insignificant
+N45	Reference T100 ICD10:Z72.0	Używanie tytoniu
+N46	Reference T82 ICD10:Z72.0	Używanie tytoniu
+N47	Reference T52 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T6	Investigation_result 568 574	EF=53%
+T116	Symptom 2289 2303	III klasy NYHA
+N48	Reference T116 ICD10:I50	Niewydolność serca
+T117	Investigation_result 2661 2667	EF=56%

@@ -1,0 +1,97 @@
+T1	Treatment 332 397	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T2	Investigation 402 457	Wskazane wykonanie RM serca w warunkach ambulatoryjnych
+T3	Behaviour 510 550	Dieta lekkostrawna , niskocholesterolowa
+T4	Investigation 559 607	Systematyczna kontrola ciśnienia tętniczego krwi
+T5	Treatment 614 635	Wskazana profilaktyka
+T6	Drug 705 717	amoksycylina
+T7	Drug 722 732	ampicylina
+T8	Drug_dose 733 753	2 g doustnie lub i.v
+R1	Drg Arg1:T7 Arg2:T8	
+R2	Drg Arg1:T6 Arg2:T8	
+T9	Condition 768 775	alergii
+T10	Drug 788 799	antybiotyki
+T11	Drug 802 814	klindamycyna
+T12	Drug_dose 815 839	600 mg doustnie lub i.v.
+R3	Drg Arg1:T11 Arg2:T12	
+T13	Treatment 907 979	zaleca się działania profilaktyczne - ścisła higiena skóry i jamy ustnej
+T14	Treatment 981 1006	przeglądy stomatologiczne
+T15	Date 1040 1055	dwa razy w roku
+R4	Dat Arg1:T15 Arg2:T14	
+T16	Treatment 1057 1154	dezynfekcja ran, eliminacja lub ograniczenie przewlekłego nosicielstwa bakteryjnego: skóry, moczu
+T17	Treatment 1156 1217	leczenie antybiotykami każdego ogniska zakażenia bakteryjnego
+T18	Behaviour 1219 1273	niestosowanie antybiotyków samodzielnie przez pacjenta
+T19	Behaviour 1275 1316	unikanie kolczykowania i tatuowania ciała
+T20	Treatment 1318 1402	ścisłe przestrzeganie zasad aseptyki podczas zabiegów stwarzających ryzyko zakażenia
+T21	Behaviour 1408 1482	Wskazane ograniczenie sportu i wysiłku fizycznego do poziomu rekreacyjnego
+T22	Behaviour 1487 1507	Zakaz picia alkoholu
+T23	Treatment 1509 1551	Bez wskazań do przyjmowania leków na stałe
+T24	Condition 1781 1851	Wrodzona wada serca pod postacią zastawkowego zwężenia tętnicy płucnej
+N1	Reference T24 ICD10:Q22.1	Wrodzone zwężenie zastawki pnia płucnego
+T25	Treatment 1861 1911	przebytej angioplastyce balonowej zastawki płucnej
+T26	Date 1913 1917	1991
+R5	Dat Arg1:T26 Arg2:T25	
+T27	Condition 1923 1962	Istotna niedomykalność zastawki płucnej
+N2	Reference T27 ICD10:Q22.2	Wrodzona niedomykalność zastawki pnia płucnego
+T28	Condition 1964 1984	łagodna trójdzielnej
+N3	Reference T28 ICD10:Q22.8	Inne wrodzone wady rozwojowe zastawki trójdzielnej
+T29	Condition 1986 2055	Arytmia komorowa pod postacią nieutrwalonego częstoskurczu komorowego
+T30	Condition 2057 2084	Skrzywiona przegroda nosowa
+N5	Reference T30 ICD10:J34.2	Skrzywienie przegrody nosa
+T31	Symptom 2086 2102	chroniczny katar
+N6	Reference T31 ICD10:J30	Naczynioruchowy i alergiczny nieżyt nosa
+T32	Condition 2104 2120	Guzki krwawnicze
+T33	Treatment 2142 2155	appendektomii
+N7	Reference T32 ICD10:I84.9	Hemoroidy, nieokreślone, bez powikłań
+A1	Status T33 Historical_Insignificant
+T34	Symptom 2334 2372	okresowo występującego kołatania serca
+N8	Reference T34 ICD10:R00.2	Kołatanie serca
+T35	Treatment 2379 2387	kontroli
+T36	Condition 2413 2483	wrodzona wada serca pod postacią zastawkowego zwężenia tętnicy płucnej
+N9	Reference T36 ICD10:Q22.1	Wrodzone zwężenie zastawki pnia płucnego
+T37	Treatment 2493 2543	przebytej angioplastyce balonowej zastawki płucnej
+T38	Date 2545 2549	1991
+R6	Dat Arg1:T38 Arg2:T37	
+T39	Condition 2555 2590	niedomykalność zastawki płucnej II*
+N10	Reference T39 ICD10:Q22.2	Wrodzona niedomykalność zastawki pnia płucnego
+T40	Condition 2592 2607	trójdzielnej I*
+N11	Reference T40 ICD10:Q22.8	Inne wrodzone wady rozwojowe zastawki trójdzielnej
+T41	Condition 2609 2636	skrzywiona przegroda nosowa
+N12	Reference T41 ICD10:J34.2	Skrzywienie przegrody nosa
+T42	Symptom 2638 2654	chroniczny katar
+N13	Reference T42 ICD10:J30	Naczynioruchowy i alergiczny nieżyt nosa
+T43	Condition 2656 2672	guzki krwawnicze
+N14	Reference T43 ICD10:I84.9	Hemoroidy, nieokreślone, bez powikłań
+T44	Treatment 2694 2707	appendektomii
+A2	Status T44 Historical_Insignificant
+T45	Condition 2709 2718	Uczulenia
+T46	Negation 2719 2725	neguje
+R7	Neg Arg1:T46 Arg2:T45	
+T47	Behaviour 2735 2755	alkohol sporadycznie
+N15	Reference T47 ICD10:Z72.1	Używanie alkoholu
+T48	Negation 2757 2763	neguje
+T49	Behaviour 2764 2771	palenie
+R8	Neg Arg1:T48 Arg2:T49	
+T50	Behaviour 2827 2850	pracuje jako informatyk
+T51	Behaviour 2820 2825	dobry
+T52	Condition 2852 2867	Wywiad rodzinny
+A3	Status T52 Family
+T53	Condition 2869 2871	HA
+A4	Status T53 Family
+N17	Reference T53 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T54	Condition 2388 2398	wady serca
+N18	Reference T9 ICD10:T78.4	Alergia, nieokreślona
+T55	Treatment 669 703	podczas zabiegów stomatologicznych
+T56	Condition 636 668	infekcyjnego zapalenia wsierdzia
+N19	Reference T56 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T57	Condition 874 906	infekcyjnego zapalenia wsierdzia
+N20	Reference T57 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+N4	Reference T29 ICD10:I47.2	Częstoskurcz komorowy
+N21	Reference T45 ICD10:T78.4	Alergia, nieokreślona
+N16	Reference T49 ICD10:Z72.0	Używanie tytoniu
+N22	Reference T54 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych
+T58	Drug 2773 2787	Leków na stałe
+T59	Negation 2788 2801	nie przyjmuje
+R9	Neg Arg1:T59 Arg2:T58	
+A5	Status T47 Historical_Insignificant
+T60	Behaviour 2727 2733	Używki
+N23	Reference T60 ICD10:Z72	Problemy związane ze stylem życia

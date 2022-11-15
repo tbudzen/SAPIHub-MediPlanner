@@ -1,0 +1,90 @@
+T1	Investigation 2566 2576	echo serca
+T2	Investigation 2578 2581	TET
+T3	Investigation 2583 2587	ABPM
+T4	Investigation 2589 2595	Holter
+T5	Drug 2492 2498	Atoris
+T6	Drug_dose 2499 2537	20 mg 1 tabl. wieczorem (okazjonalnie)
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Drug 2459 2471	Acenokumarol
+T8	Drug_dose 2472 2491	4 mg 1 tabl. 1 x dz
+R2	Drg Arg1:T7 Arg2:T8	
+T9	Drug 2432 2439	Isoptin
+T10	Drug_dose 2440 2458	40 mg 1 tabl. rano
+R3	Drg Arg1:T9 Arg2:T10	
+T11	Negation 2367 2377	nie podaje
+T12	Condition 2355 2364	Uczulenia
+N1	Reference T12 ICD10:T78.4	Alergia, nieokreślona
+R4	Neg Arg1:T11 Arg2:T12	
+T13	Behaviour 2330 2354	Inne używki:okazjonalnie
+T14	Behaviour 2291 2329	Palenie tytoniu: pali ok 1 paczki/dobę
+N2	Reference T14 ICD10:T65.2	Tytoń i nikotyna
+T15	Negation 2280 2290	nie podaje
+T16	Negation 2252 2262	nie podaje
+T17	Condition 2263 2279	Wywiad rodzinny:
+A1	Status T17 Family
+R5	Neg Arg1:T15 Arg2:T17	
+T18	Condition 2240 2249	borelioza
+N3	Reference T18 ICD10:A69.2	Choroba z Lyme
+R6	Neg Arg1:T16 Arg2:T18	
+T19	Condition 2235 2238	WZW
+N4	Reference T19 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+R7	Neg Arg1:T16 Arg2:T19	
+T20	Behaviour 506 570	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczó
+T21	Condition 788 840	Migotanie przedsionków o nieustalonym czasie trwania
+N5	Reference T21 ICD10:I48	Migotanie i trzepotanie przedsionków
+T22	Condition 842 863	Nadciśnienie tętnicze
+N6	Reference T22 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T23	Condition 865 891	Kardiomiopatia przerostowa
+N7	Reference T23 ICD10:I42	Kardiomiopatia
+T24	Condition 911 923	udarze mózgu
+N8	Reference T24 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T25	Investigation 2049 2063	koronarografia
+T26	Investigation_result 2066 2103	prawdopodobnie bez zmian w naczyniach
+A3	Source T26 Declared
+R8	Inv Arg1:T25 Arg2:T26	
+T27	Condition 1724 1746	migotania przedsionków
+N9	Reference T27 ICD10:I48	Migotanie i trzepotanie przedsionków
+T28	Date 1749 1777	nieustalonym czasie trwania.
+R9	Dat Arg1:T28 Arg2:T27	
+T29	Condition 1791 1812	nadciśnienie tętnicze
+N10	Reference T29 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T30	Condition 1814 1840	kardiomiopatia przerostowa
+N11	Reference T30 ICD10:I42	Kardiomiopatia
+T31	Condition 1849 1860	bradykardii
+N12	Reference T31 ICD10:R00.1	Bradykardia, nieokreślona
+A4	Source T31 Declared
+T32	Condition 1902 1914	udarze mózgu
+N13	Reference T32 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T33	Date 1916 1936	ok. 10 lat wcześniej
+R10	Dat Arg1:T33 Arg2:T32	
+T34	Condition 1939 1956	nowotwór prostaty
+N14	Reference T34 ICD10:C61	Nowotwór złośliwy gruczołu krokowego
+T35	Treatment 1966 1978	radioterapii
+T36	Date 1979 1992	ok 5 lat temu
+R11	Dat Arg1:T36 Arg2:T35	
+T37	Condition 1994 2013	przepuklina pępkowa
+N15	Reference T37 ICD10:K42	Przepuklina pępkowa
+T38	Treatment 1459 1490	radioterapii gruczołu krokowego
+T39	Condition 1493 1509	powodu nowotworu
+N16	Reference T39 ICD10:C61	Nowotwór złośliwy gruczołu krokowego
+T40	Date 1511 1525	ok. 5 lat temu
+R12	Dat Arg1:T40 Arg2:T39	
+T41	Condition 1416 1428	udarze mózgu
+N17	Reference T41 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T42	Date 1430 1445	ok. 10 lat temu
+R13	Dat Arg1:T42 Arg2:T41	
+T43	Condition 1532 1551	Przepuklina pępkowa
+N18	Reference T43 ICD10:K42	Przepuklina pępkowa
+T44	Condition 1153 1240	Kardiomiopatia przerostowa bez zawężania drogi odpływu lewej komory w II klasie wg NYHA
+N19	Reference T44 ICD10:I42	Kardiomiopatia
+T45	Condition 1245 1277	Utrwalone migotanie przedsionków
+N20	Reference T45 ICD10:I48	Migotanie i trzepotanie przedsionków
+T46	Condition 1282 1315	Arytmia komorowa do nsVT włącznie
+N21	Reference T46 ICD10:I49	
+T47	Condition 1320 1358	Poszerzenie aorty wstępującej do 44 mm
+N22	Reference T47 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T48	Drug 1395 1402	statyną
+A2	Source T25 Declared
+R14	Dat Arg1:T40 Arg2:T38	
+A5	Status T39 Historical_Insignificant
+A6	Status T38 Historical_Insignificant

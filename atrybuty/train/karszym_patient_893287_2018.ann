@@ -1,0 +1,100 @@
+T1	Drug 1347 1354	Tritace
+T2	Drug 1380 1388	Nebispes
+T3	Negation 2169 2175	( -  )
+T4	Negation 2188 2193	( - )
+T5	Condition 641 682	Łagodna niedomykalność zastawki mitralnej
+N1	Reference T5 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T6	Condition 685 719	Nadkomorowe zaburzenia rytmu serca
+N2	Reference T6 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T7	Condition 722 743	pobudzenia pojedyncze
+N3	Reference T7 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T8	Condition 746 750	pary
+N4	Reference T8 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T9	Condition 753 758	salwa
+N5	Reference T9 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T10	Condition 764 794	Pojedyncze pobudzenia komorowe
+N6	Reference T10 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T11	Condition 798 819	Nadciśnienie tętnicze
+N7	Reference T11 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T12	Condition 822 842	Hipercholesterolemia
+N8	Reference T12 ICD10:E78.0	Czysta hipercholesterolemia
+T13	Investigation 845 855	Obserwacja
+T14	Condition 867 895	choroby niedokrwiennej serca
+A1	Source T14 Declared
+N9	Reference T14 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T15	Negation 896 905	negatywna
+T16	Treatment 1059 1115	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T17	Behaviour 1118 1158	Dieta lekkostrawna , niskocholesterolowa
+T18	Investigation 1162 1245	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T19	Investigation 1248 1296	Systematyczna kontrola ciśnienia tętniczego krwi
+T20	Drug_dose 1355 1378	5 mg 2 x dz po 1/2 tabl
+T21	Drug_dose 1389 1412	5 mg 1 x dz po 1/2 tabl
+T22	Drug 1533 1540	Tritace
+T23	Drug 1543 1551	Metocard
+T24	Drug 1554 1562	Nebispes
+R1	Drg Arg1:T1 Arg2:T20	
+R2	Drg Arg1:T2 Arg2:T21	
+R3	Neg Arg1:T15 Arg2:T14	
+T25	Investigation_result 1734 1795	chwiejnych wartości ciśnienia tętniczego krwi do 202/150 mmHg
+T26	Investigation_result 1798 1808	HR 140/min
+T27	Date 1813 1826	od 22.12.2017
+T28	Treatment 1833 1853	leczona hipotensyjne
+T29	Symptom 1858 1880	Nasilenie dolegliwości
+T30	Date 1881 1892	od miesiąca
+T31	Symptom 1911 1926	kołatania serca
+N10	Reference T31 ICD10:R00.2	Kołatanie serca
+T32	Negation 1927 1933	Neguje
+T33	Symptom 1934 1946	zasłabnięcia
+N11	Reference T33 ICD10:R55	Omdlenie i zapaść
+T34	Negation 1949 1955	neguje
+T35	Symptom 1956 1980	bóle w klatce piersiowej
+N12	Reference T35 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T36	Condition 1998 2019	Nadciśnienie tętnicze
+N13	Reference T36 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T37	Condition 2030 2068	zapaleniu nerwu wzrokowego oka prawego
+N14	Reference T37 ICD10:H46	Zapalenie nerwu wzrokowego
+T38	Date 2069 2076	1990 r.
+T39	Treatment 2078 2095	Przebyte operacje
+N15	Reference T39 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T40	Negation 2098 2102	brak
+T41	Treatment 2103 2137	Leczenie przewlekłe:  okulistyczne
+R4	Dat Arg1:T27 Arg2:T28	
+R5	Dat Arg1:T30 Arg2:T29	
+R6	Neg Arg1:T32 Arg2:T33	
+R7	Neg Arg1:T34 Arg2:T35	
+R8	Dat Arg1:T38 Arg2:T37	
+R9	Neg Arg1:T40 Arg2:T39	
+T42	Condition 2165 2168	WZW
+N16	Reference T42 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T43	Condition 2178 2187	borelioza
+N17	Reference T43 ICD10:A69.2	Choroba z Lyme
+R10	Neg Arg1:T4 Arg2:T43	
+R11	Neg Arg1:T3 Arg2:T42	
+T44	Condition 2233 2254	nadciśnienie tętnicze
+A3	Status T44 Family
+N18	Reference T44 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T45	Condition 2263 2278	cukrzyca typu 2
+A4	Status T45 Family
+N19	Reference T45 ICD10:E11	Cukrzyca insulinoniezależna
+T46	Behaviour 2281 2296	Palenie tytoniu
+N20	Reference T46 ICD10:Z72.0	Używanie tytoniu
+T47	Negation 2298 2301	nie
+T48	Behaviour 2302 2313	Inne używki
+N21	Reference T48 ICD10:Z72	Problemy związane ze stylem życia
+T49	Negation 2315 2318	nie
+T50	Condition 2319 2328	Uczulenia
+N22	Reference T50 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T51	Behaviour 2367 2393	warunki mieszkaniowe dobre
+T52	Behaviour 2396 2410	mieszka z sama
+T53	Drug 2419 2426	Tritace
+T54	Drug_dose 2427 2450	5 mg 2 x dz po 1/2 tabl
+T55	Drug 2452 2461	Captopril
+T56	Drug_dose 2462 2478	12,5 mg dorażnie
+T57	Investigation 2496 2506	Echo serca
+T58	Investigation 2509 2519	Holter EKG
+T59	Investigation 2522 2537	Próba Wysiłkowa
+T60	Investigation 2540 2564	Doppler tętnic nerkowych
+R12	Drg Arg1:T53 Arg2:T54	
+R13	Drg Arg1:T55 Arg2:T56	
+R14	Neg Arg1:T49 Arg2:T48	
+R15	Neg Arg1:T47 Arg2:T46	

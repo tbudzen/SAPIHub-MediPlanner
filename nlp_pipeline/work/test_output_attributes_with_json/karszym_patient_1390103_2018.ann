@@ -1,0 +1,33 @@
+T1	Condition 437 465	Dysplazja zastawki aortalnej
+T2	Condition 470 505	Łagodne zwężenie zastawki aortalnej
+T3	Drug 626 634	Dormicum
+T4	Drug 636 639	ANA
+T5	Treatment 751 785	Kontrola w Poradni Kardiologicznej
+T6	Date 786 799	za 6 miesięcy
+T7	Treatment 804 817	Suplementacja
+T8	Drug 818 824	żelaza
+T9	Drug 830 852	witamin krwiotwórczych
+T10	Condition 863 898	niedokrwistością z niedoboru żelaza
+T11	Drug 900 907	Innofer
+T12	Drug_dose 908 925	2,4 ml 1xdziennie
+T13	Drug 926 935	Innovitum
+T14	Drug_dose 936 955	3 krople 1xdziennie
+T15	Investigation 971 1006	kotrolnej morfologii krwi obwodowej
+T16	Date 1007 1020	za 2 miesiące
+T17	Condition 1157 1176	wrodzoną wada serca
+T18	Treatment 1211 1218	sedacji
+T19	Drug 1221 1235	na stałe leków
+T20	Negation 1236 1249	nie otrzymuje
+T21	Condition 1252 1269	wywiad alergiczny
+T22	Negation 1270 1276	ujemny
+T23	Investigation 1193 1208	wykonania badań
+czeń sercowych
+N1	Reference T2 ICD10:Q23.0	Wrodzone zwÄÅ¼enie zastawki aortalnej
+N2	Reference T10 ICD10:D64.9	NiedokrwistoÅÄ, nieokreÅlona
+N3	Reference T21 ICD10:T78.4	Alergia, nieokreÅlona
+R1	Dat Arg1:T6 Arg2:T7
+R11	Dat Arg1:T16 Arg2:T15
+R21	Neg Arg1:T20 Arg2:T21
+R24	Neg Arg1:T20 Arg2:T19
+R9	Drg Arg1:T13 Arg2:T14
+A1	Status T17 Family

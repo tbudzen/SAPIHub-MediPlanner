@@ -1,0 +1,550 @@
+allRelations          : 48
+oks                   : 18
+isRedundantAndRemoveds: 19
+shouldNotBeRemoveds   : 2
+shouldBeBemoveds      : 9
+GOOD / BAD            : 37 / 11
+Sentence 0:
+------------------------------------------------
+Wiek: 30 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+1. Dalsza opieka w POZ oraz Poradni Kardiologicznej i Poradni Chorób Zakażnych.
+
+
+
+Sentence 5:
+2.
+
+
+Sentence 6:
+Wskazana kontrolna wizyta w Poradni Kardiologicznej za 6 miesięcy. 
+
+
+
+Sentence 7:
+3. Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych - pierwsza za 5-6 tygodni.
+
+
+
+Sentence 8:
+4. Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych.
+
+
+
+Sentence 9:
+5. Regularna samokontrola ciśnienia tętniczego krwi i tętna.
+
+
+
+Sentence 10:
+6. Regularne przyjmowanie leków:
+Rp.
+
+
+
+Sentence 11:
+Betaserc 24mg 1 tabletka rano i wieczorem.
+
+R1	Drg Arg1:T42 Arg2:T43 << OK >>	Betaserc -> 24mg 1 tabletka rano i wieczorem  <RANK: 3> <info: start[808, 817] <type: RIGHT>>
+
+
+Sentence 12:
+------------------------------------------------
+
+
+
+Sentence 13:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 14:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q21.3|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Stan po operacyjnym leczeniu z powodu Tetralogii Fallota w wieku 3 lat.
+R2	Dat Arg1:T41 Arg2:T40 << OK >>	w wieku 3 lat -> Tetralogii Fallota  <RANK: 3> <info: start[1136, 1117] <type: LEFT>>
+R3	Dat Arg1:T41 Arg2:T47 << OK >>	w wieku 3 lat -> operacyjnym  <RANK: 3> <info: start[1136, 1087] <type: LEFT>>
+
+
+Sentence 15:
+Napadowy blok AV II stopnia typu I. Przewlekłe zakażenie WZW typu C leczone interferonem (2004).
+R4	Dat Arg1:T38 Arg2:T36 << OK >>	2004 -> WZW typu C  <RANK: 3> <info: start[1241, 1208] <type: LEFT>>
+R5	Dat Arg1:T38 Arg2:T39 <<REDUNDANT!!!SHOULD BE REMOVED>>	2004 -> Napadowy blok AV II stopnia typu I.  <RANK: 3> <info: start[1241, 1151] <type: LEFT>>
+R6	Dat Arg1:T38 Arg2:T37 <<REDUNDANT!!!SHOULD BE REMOVED>>	2004 -> interferonem  <RANK: 3> <info: start[1241, 1227] <type: LEFT>>
+R7	Alg Arg1:T36 Arg2:T37 << OK >>	WZW typu C -> interferonem  <RANK: 3> <info: start[1208, 1227] <type: RIGHT>>
+R8	Alg Arg1:T39 Arg2:T37 <<REDUNDANT!!!REMOVED>>	Napadowy blok AV II stopnia typu I. -> interferonem <:REMOVED other second tag between (right):> <RANK: 3> <info: start[1151, 1227] <type: RIGHT>>
+
+
+Sentence 16:
+Niedosłuch obustronny.
+
+
+
+Sentence 17:
+------------------------------------------------
+
+
+
+Sentence 18:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 19:
+29- letni pacjent, po korekcji wrodzonej wady serca pod postacią tetralogii Fallota (1992r), został przyjęty do Kliniki ze względu na stwierdzone wcześniej epizody zaburzeń przewodnictwa pod postacią bloku przedsionkowo - komorowego II stopnia typu Wenckebacha z towarzyszącymi pauzami max 2,1 sek w godzinach nocnych (opisywane w 2010r, 2014r).
+R9	Dat Arg1:T32 Arg2:T31 <<SHOULD NOT BE REMOVED>>	1992r -> tetralogii Fallota <:REMOVED Too far from TagInfo[T32, 1480, 1485, Date, 1992r
+] TagInfo[T48, 1417, 1425, Treatment, korekcji
+]:> <RANK: 3> <info: start[1480, 1460] <type: LEFT>>
+R10	Dat Arg1:T32 Arg2:T33 <<REDUNDANT!!!REMOVED>>	1992r -> epizody zaburzeń przewodnictwa pod postacią bloku przedsionkowo - komorowego II stopnia typu Wenckebacha z towarzyszącymi pauzami max 2,1 sek w godzinach nocnych <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1480, 1551] <type: RIGHT>>
+R11	Dat Arg1:T32 Arg2:T48 << OK >>	1992r -> korekcji  <RANK: 3> <info: start[1480, 1417] <type: LEFT>>
+R12	Dat Arg1:T34 Arg2:T31 <<REDUNDANT!!!REMOVED>>	w 2010r -> tetralogii Fallota <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1724, 1460] <type: LEFT>>
+R13	Dat Arg1:T34 Arg2:T33 << OK >>	w 2010r -> epizody zaburzeń przewodnictwa pod postacią bloku przedsionkowo - komorowego II stopnia typu Wenckebacha z towarzyszącymi pauzami max 2,1 sek w godzinach nocnych  <RANK: 3> <info: start[1724, 1551] <type: LEFT>>
+R14	Dat Arg1:T34 Arg2:T48 <<REDUNDANT!!!REMOVED>>	w 2010r -> korekcji <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1724, 1417] <type: LEFT>>
+R15	Dat Arg1:T49 Arg2:T31 <<REDUNDANT!!!REMOVED>>	2014r -> tetralogii Fallota <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1733, 1460] <type: LEFT>>
+R16	Dat Arg1:T49 Arg2:T33 << OK >>	2014r -> epizody zaburzeń przewodnictwa pod postacią bloku przedsionkowo - komorowego II stopnia typu Wenckebacha z towarzyszącymi pauzami max 2,1 sek w godzinach nocnych  <RANK: 2> <info: start[1733, 1551] <type: LEFT>>
+R17	Dat Arg1:T49 Arg2:T48 <<REDUNDANT!!!REMOVED>>	2014r -> korekcji <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1733, 1417] <type: LEFT>>
+
+
+Sentence 20:
+W badaniu echokardiograficznym (2010r) - powiększony wymiar prawej komory i umiarkowana niedomykalność zastawki tętnicy płucnej, (2014r) - EF 45%, poszerzony LP, PP, powiększona PK, umiarkowana IT, łagona IA, łagodnie podwyższony RVSP.
+
+R18	Inv Arg1:T20 Arg2:T21 << OK >>	echokardiograficznym -> powiększony wymiar prawej komory  <RANK: 3> <info: start[1751, 1782] <type: RIGHT>>
+R19	Inv Arg1:T20 Arg2:T22 << OK >>	echokardiograficznym -> umiarkowana niedomykalność zastawki tętnicy płucnej  <RANK: 2> <info: start[1751, 1817] <type: RIGHT>>
+R20	Inv Arg1:T20 Arg2:T25 <<REDUNDANT!!!SHOULD BE REMOVED>>	echokardiograficznym -> EF 45%  <RANK: 2> <info: start[1751, 1880] <type: RIGHT>>
+R21	Inv Arg1:T20 Arg2:T26 <<REDUNDANT!!!SHOULD BE REMOVED>>	echokardiograficznym -> poszerzony LP, PP  <RANK: 2> <info: start[1751, 1888] <type: RIGHT>>
+R22	Inv Arg1:T20 Arg2:T27 <<REDUNDANT!!!SHOULD BE REMOVED>>	echokardiograficznym -> powiększona PK  <RANK: 2> <info: start[1751, 1907] <type: RIGHT>>
+R23	Inv Arg1:T20 Arg2:T28 <<REDUNDANT!!!SHOULD BE REMOVED>>	echokardiograficznym -> umiarkowana IT  <RANK: 2> <info: start[1751, 1923] <type: RIGHT>>
+R24	Inv Arg1:T20 Arg2:T29 <<REDUNDANT!!!SHOULD BE REMOVED>>	echokardiograficznym -> łagona IA  <RANK: 2> <info: start[1751, 1939] <type: RIGHT>>
+R25	Inv Arg1:T20 Arg2:T30 <<REDUNDANT!!!SHOULD BE REMOVED>>	echokardiograficznym -> łagodnie podwyższony RVSP  <RANK: 2> <info: start[1751, 1950] <type: RIGHT>>
+R26	Dat Arg1:T23 Arg2:T20 << OK >>	2010r -> echokardiograficznym  <RANK: 3> <info: start[1773, 1751] <type: LEFT>>
+R27	Dat Arg1:T24 Arg2:T20 <<SHOULD NOT BE REMOVED>>	2014r -> echokardiograficznym <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1871, 1751] <type: LEFT>>
+
+
+Sentence 21:
+W wywiadzie: zakażenie wzw t. c leczony interferonem (2004), niedosłuch obustronny
+
+Wywiad rodzinny: nieistotny
+
+R28	Neg Arg1:T12 Arg2:T11 << OK >>	nieistotny -> Wywiad rodzinny  <RANK: 3> <info: start[2078, 2061] <type: LEFT>>
+R29	Neg Arg1:T12 Arg2:T16 <<REDUNDANT!!!REMOVED>>	nieistotny -> zakażenie wzw t. c <:REMOVED other second tag between (left):> <RANK: 0> <info: start[2078, 1990] <type: LEFT>>
+R30	Neg Arg1:T12 Arg2:T19 <<REDUNDANT!!!REMOVED>>	nieistotny -> niedosłuch obustronny <:REMOVED other second tag between (left):> <RANK: 1> <info: start[2078, 2038] <type: LEFT>>
+R31	Neg Arg1:T12 Arg2:T17 <<REDUNDANT!!!REMOVED>>	nieistotny -> interferonem <:REMOVED other second tag between (left):> <RANK: 0> <info: start[2078, 2017] <type: LEFT>>
+R32	Dat Arg1:T18 Arg2:T11 <<REDUNDANT!!!REMOVED>>	2004 -> Wywiad rodzinny <:REMOVED other second tag between (right):> <RANK: 0> <info: start[2031, 2061] <type: RIGHT>>
+R33	Dat Arg1:T18 Arg2:T16 <<REDUNDANT!!!SHOULD BE REMOVED>>	2004 -> zakażenie wzw t. c  <RANK: 3> <info: start[2031, 1990] <type: LEFT>>
+R34	Dat Arg1:T18 Arg2:T19 <<REDUNDANT!!!REMOVED>>	2004 -> niedosłuch obustronny <:REMOVED many second tags on the right:> <RANK: 2> <info: start[2031, 2038] <type: RIGHT>>
+R35	Dat Arg1:T18 Arg2:T17 << OK >>	2004 -> interferonem  <RANK: 3> <info: start[2031, 2017] <type: LEFT>>
+R36	Alg Arg1:T11 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Wywiad rodzinny -> interferonem <:REMOVED other first tag between (left):> <RANK: 0> <info: start[2061, 2017] <type: LEFT>>
+R37	Alg Arg1:T16 Arg2:T17 << OK >>	zakażenie wzw t. c -> interferonem  <RANK: 3> <info: start[1990, 2017] <type: RIGHT>>
+R38	Alg Arg1:T19 Arg2:T17 <<REDUNDANT!!!REMOVED>>	niedosłuch obustronny -> interferonem <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[2038, 2017] <type: LEFT>>
+
+
+Sentence 22:
+Palenie tytoniu: nie podaje
+Inne używki: nie podaje
+Uczulenia: nie podaje
+
+R39	Neg Arg1:T8 Arg2:T15 << OK >>	nie podaje -> Uczulenia  <RANK: 3> <info: start[2152, 2141] <type: LEFT>>
+R40	Neg Arg1:T8 Arg2:T13 <<REDUNDANT!!!REMOVED>>	nie podaje -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2152, 2089] <type: LEFT>>
+R41	Neg Arg1:T8 Arg2:T14 <<REDUNDANT!!!REMOVED>>	nie podaje -> Inne używki <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2152, 2117] <type: LEFT>>
+R42	Neg Arg1:T9 Arg2:T15 <<REDUNDANT!!!REMOVED>>	nie podaje -> Uczulenia <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2130, 2141] <type: RIGHT>>
+R43	Neg Arg1:T9 Arg2:T13 <<REDUNDANT!!!REMOVED>>	nie podaje -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2130, 2089] <type: LEFT>>
+R44	Neg Arg1:T9 Arg2:T14 << OK >>	nie podaje -> Inne używki  <RANK: 3> <info: start[2130, 2117] <type: LEFT>>
+R45	Neg Arg1:T10 Arg2:T15 <<REDUNDANT!!!REMOVED>>	nie podaje -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2106, 2141] <type: RIGHT>>
+R46	Neg Arg1:T10 Arg2:T13 << OK >>	nie podaje -> Palenie tytoniu  <RANK: 3> <info: start[2106, 2089] <type: LEFT>>
+R47	Neg Arg1:T10 Arg2:T14 <<REDUNDANT!!!REMOVED>>	nie podaje -> Inne używki <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[2106, 2117] <type: RIGHT>>
+
+
+Sentence 23:
+Status społeczny: kawaler, kierowca
+
+
+
+Sentence 24:
+Leki:
+Betaserc 24 mg 1-0-1
+
+R48	Drg Arg1:T6 Arg2:T7 << OK >>	Betaserc -> 24 mg 1-0-1  <RANK: 3> <info: start[2205, 2214] <type: RIGHT>>
+
+
+Sentence 25:
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter, RTG kl. piersiowej.
+
+
+
+Sentence 26:
+Przewidywana liczba dni hospitalizacji: 4-5 dni
+------------------------------------------------
+
+
+
+Sentence 27:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 28:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.26[10^3/ul]
+    
+
+
+Sentence 29:
+RBC Krwinki czerwone:5.55[10^6/ul]
+    
+
+
+Sentence 30:
+HGB Hemoglobina:16.1[g/dl]
+    
+
+
+Sentence 31:
+HCT Hematokryt:44.9[%]
+    
+
+
+Sentence 32:
+MCV wskaźnik czerwonokrw:80.9[fl]
+    
+
+
+Sentence 33:
+MCH wskaźnik czerwonokrw:29.0[pg]
+    
+
+
+Sentence 34:
+MCHC wskaźnik czerwonokr:35.9[g/dl]
+    
+
+
+Sentence 35:
+PLT z morfologii:310[10^3/ul]
+    
+
+
+Sentence 36:
+RDW-SD:34.5[fl]
+    
+
+
+Sentence 37:
+RDW-CV:11.9[%]
+    
+
+
+Sentence 38:
+PDW:9.9[fl]
+    
+
+
+Sentence 39:
+MPV:9.0[fl]
+    
+
+
+Sentence 40:
+P-LCR:17.1[%]
+    
+
+
+Sentence 41:
+PCT (hematokryt płytkowy:0.28[%]
+    
+
+
+Sentence 42:
+NEUTR# wartość bezwzględ:3.44[10^3/ul]
+    
+
+
+Sentence 43:
+NEUTR%:47.3[%]
+    
+
+
+Sentence 44:
+LYMH# wartość bezwzględn:2.64[10^3/ul]
+    
+
+
+Sentence 45:
+LYMPH%:36.4[%]
+    
+
+
+Sentence 46:
+MONO# wartość bezwzględn:0.66[10^3/ul]
+    MONO%:9.1[%]
+    
+
+
+Sentence 47:
+EO# wartość bezwzględna:0.47[10^3/ul]
+    
+
+
+Sentence 48:
+EO%:6.5[%]
+    
+
+
+Sentence 49:
+BASO# wartość bezwzględn:0.05[10^3/ul]
+    BASO%:0.7[%]
+    
+
+
+Sentence 50:
+NRBC %:0.0[%]
+    
+
+
+Sentence 51:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 52:
+Badanie ogólne moczu
+    
+
+
+Sentence 53:
+barwa:żółty[ ]
+    
+
+
+Sentence 54:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 55:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 56:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 57:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 58:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 59:
+ciężar właściwy:1.028[ ]
+    
+
+
+Sentence 60:
+pH:5.0[ ]
+    
+
+
+Sentence 61:
+białko:nieobecne[ ]
+    
+
+
+Sentence 62:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 63:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 64:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 65:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 66:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 67:
+nabłonki płaskie:nieliczne[w preparacie]
+    leukocyty:21 /ul[ul]
+    erytrocyty świeże i częś:6/ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:nieliczne[w preparacie]
+
+
+
+Sentence 68:
+TSH: TSH:1.28[uIU/ml]
+
+
+
+Sentence 69:
+FT3: FT3:3.87[pg/ml]
+
+
+
+Sentence 70:
+FT4: FT4:1.13[ng/dl]
+
+
+
+Sentence 71:
+Troponina T: Troponina T:3.7[pg/ml]
+
+
+
+Sentence 72:
+ALAT: ALAT:27[U/L]
+ASPAT: ASPAT:24[U/L]
+Bilirubina całkowita (TBil): Bilirubina całkowita:1.58[mg/dl]
+
+
+
+Sentence 73:
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.79[mg/dl]
+
+
+
+Sentence 74:
+Sód (Na): Sód:143[mmol/L]
+
+
+
+Sentence 75:
+Potas (K): Potas:4.6[mmol/L]
+
+
+
+Sentence 76:
+Kreatynina + GFR
+    
+
+
+Sentence 77:
+Kreatynina w surowicy:0.72[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 78:
+MDRD ze stan:129.1[ml/min/1,73 m^2]
+
+
+
+Sentence 79:
+Mocznik: Mocznik:28[mg/dl]
+
+
+
+Sentence 80:
+Kwas moczowy: Kwas moczowy:5.9[mg/dl]
+
+
+
+Sentence 81:
+Lipidogram
+    
+
+
+Sentence 82:
+Cholesterol całkowity:96[mg/dl]
+    
+
+
+Sentence 83:
+Cholesterol HDL:41[mg/dl]
+    
+
+
+Sentence 84:
+Cholestrol LDL:58[mg/dl]
+    Triglicerydy:55[mg/dl]
+    
+
+
+Sentence 85:
+Stosunek cholesterolu HD:0.4
+Glukoza w surowicy: Glukoza w surowicy:89[mg/dl]
+
+
+
+Sentence 86:
+------------------------------------------------
+
+
+
+Sentence 87:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 88:
+Q21.3
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 89:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 90:
+C53
+A01
+I81
+89.41
+L43
+I89
+87.440
+N45
+L69
+I17
+I19
+O35
+88.721
+88.761
+------------------------------------------------
+
+

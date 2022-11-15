@@ -1,0 +1,20 @@
+T1	Treatment 332 374	Kontrolna wizyta w Poradni Kardiologicznej
+T2	Date 375 382	za 6mcy
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Behaviour 387 442	Kontrolowana aktywność fizyczna w zakresie rekreacyjnym
+T4	Treatment 448 484	Systematyczna opieka stomatologiczna
+T5	Condition 703 764	Wrodzona wada zastawki aortalnej - umiarkowana niedomykalność
+N1	Reference T5 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T6	Condition 767 783	łagodne zwężenie
+N2	Reference T6 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T9	Investigation 1053 1069	badania kontrole
+T10	Condition 1072 1089	wywiad alergiczny
+T11	Negation 1090 1096	ujemny
+R3	Neg Arg1:T11 Arg2:T10	
+N3	Reference T10 ICD10:T78.4	Alergia, nieokreślona
+T7	Drug 1099 1113	leków na stałe
+T8	Negation 1114 1127	nie otrzymuje
+R2	Neg Arg1:T8 Arg2:T7	
+T12	Negation 904 907	Bez
+T13	Drug 908 913	leków
+R4	Neg Arg1:T12 Arg2:T13	

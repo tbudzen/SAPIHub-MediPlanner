@@ -1,0 +1,78 @@
+T1	Behaviour 441 474	Dieta niskotłuszczowa i małosolna
+T2	Behaviour 476 529	Regularna aktywność fizyczna min. 5x w tyg. po 30 min
+T3	Investigation 531 568	Kontrola ciśnienia tętniczego i tętna
+T4	Behaviour 574 606	prowadzenie dzienniczka pomiarów
+T5	Drug 615 622	Isoptin
+T6	Drug_dose 623 637	40 mg 2x1 tabl
+R1	Drg Arg1:T5 Arg2:T6	
+T7	Investigation 1981 1991	echo serca
+T8	Investigation 1993 1996	TET
+T9	Investigation 1998 2002	ABPM
+T10	Investigation 2004 2010	Holter
+T11	Negation 1944 1953	bez leków
+T12	Drug 1938 1942	Leki
+R2	Neg Arg1:T11 Arg2:T12	
+T13	Negation 1865 1875	nie podaje
+T14	Negation 1843 1853	nie podaje
+T15	Negation 1819 1829	nie podaje
+T16	Negation 1768 1778	nie podaje
+T17	Negation 1713 1723	nie podaje
+T18	Condition 1854 1863	Uczulenia
+N1	Reference T18 ICD10:T78.4	Alergia, nieokreślona
+R3	Neg Arg1:T13 Arg2:T18	
+T19	Behaviour 1830 1841	Inne używki
+R4	Neg Arg1:T14 Arg2:T19	
+T20	Behaviour 1802 1817	Palenie tytoniu
+N2	Reference T20 ICD10:T65.2	Tytoń i nikotyna
+R5	Neg Arg1:T15 Arg2:T20	
+T21	Condition 1751 1754	WZW
+N3	Reference T21 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T22	Condition 1756 1765	borelioza
+N4	Reference T22 ICD10:A69.2	Choroba z Lyme
+R6	Neg Arg1:T16 Arg2:T22	
+R7	Neg Arg1:T16 Arg2:T21	
+T23	Treatment 1694 1711	Przebyte operacje
+R8	Neg Arg1:T17 Arg2:T23	
+T24	Condition 830 861	Nadciśnienie tętnicze I* wg WHO
+N5	Reference T24 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T25	Condition 1022 1062	Choroba zwyrodnieniowa stawów kręgosłupa
+N6	Reference T25 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T26	Condition 1661 1693	zmiany zwyrodnieniowe kręgosłupa
+N7	Reference T26 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T27	Condition 1012 1020	Skolioza
+N8	Reference T27 ICD10:M41	Skolioza
+T28	Condition 1639 1659	skolioza lewostronna
+N9	Reference T28 ICD10:M41	Skolioza
+T29	Condition 1613 1637	złamanie kompresyjne L1?
+N10	Reference T29 ICD10:S32.0	Złamanie kręgów odcinka lędźwiowego kręgosłupa
+T30	Treatment 1566 1603	limfadenopatii biodrowej lewostronnej
+T31	Date 1605 1610	2018r
+R9	Dat Arg1:T31 Arg2:T30	
+T32	Treatment 1536 1548	radioterapii
+T33	Treatment 1521 1534	chemioterapii
+T34	Treatment 1493 1519	orchidektomii lewostronnej
+T35	Date 1550 1555	2018r
+R10	Dat Arg1:T35 Arg2:T32	
+R11	Dat Arg1:T35 Arg2:T33	
+R12	Dat Arg1:T35 Arg2:T34	
+T36	Symptom 1398 1428	pogorszenia tolerancji wysiłku
+N11	Reference T36 ICD10:R53	Złe samopoczucie i zmęczenie
+T37	Investigation_result 1431 1470	labilnych wartości ciśnienia tętniczego
+T38	Condition 1064 1108	Podejrzenie układowej choroby tkanki łącznej
+T39	Symptom 1111 1133	dodatni objaw Raynauda
+N13	Reference T39 ICD10:I73.0	Zespół Raynauda
+A1	Source T38 Declared
+T40	Condition 988 998	Opryszczka
+N14	Reference T40 ICD10:B00	Zakażenia wywołane przez wirus opryszczki [herpes simplex]
+T41	Treatment 923 949	orchidektomii lewostronnej
+T42	Treatment 951 964	chemioterapii
+T43	Treatment 966 978	radioterapii
+T44	Date 980 985	2018r
+R13	Dat Arg1:T44 Arg2:T43	
+R14	Dat Arg1:T44 Arg2:T42	
+R15	Dat Arg1:T44 Arg2:T41	
+T45	Condition 863 913	Rak jądra z przerzutami do kości, węzłów chłonnych
+N15	Reference T45 ICD10:C62	Nowotwór złośliwy jądra
+N12	Reference T38 ICD10:M35.9	Układowe choroby tkanki łącznej, nieokreślone
+T46	Condition 1313 1367	rakiem jądra z przerzutami do kości i węzłów chłonnych
+N16	Reference T46 ICD10:C62	Nowotwór złośliwy jądra

@@ -1,0 +1,87 @@
+T1	Symptom 438 453	Kołatania serca
+N1	Reference T1 ICD10:R00.2	Kołatanie serca
+T2	Condition 463 511	zakrzepowym zapaleniu żył kończyny dolnej prawej
+N2	Reference T2 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+T3	Condition 513 535	Niedoczynność tarczycy
+T4	Treatment 545 561	radiojodoterapii
+T5	Condition 571 592	nadczynności tarczycy
+N5	Reference T5 ICD10:E05.9	Tyreotoksykoza, nieokreślona
+T6	Date 594 598	2005
+R1	Dat Arg1:T6 Arg2:T4	
+T7	Condition 601 613	Zespół Downa
+N6	Reference T7 ICD10:Q90.9	Zespół Downa, nieokreślony
+R2	Dat Arg1:T6 Arg2:T5	
+T8	Drug 734 742	Euthyrox
+T9	Drug 744 755	Fraxiparine
+T10	Drug 757 765	Polocard
+T11	Drug 767 783	Essentiale forte
+T12	Treatment 894 947	kontrola u lekarza POZ i w Poradni Endokrynologicznej
+T13	Investigation 951 1010	kontrola wartości ciśnienia tętniczego w warunkach domowych
+T14	Treatment 1013 1053	kontrola w Poradni Chirurgii Naczyniowej
+T15	Treatment 1077 1107	kontrola w Poradni Genetycznej
+T16	Condition 1271 1285	zespołem Downa
+N7	Reference T16 ICD10:Q90.9	Zespół Downa, nieokreślony
+T17	Condition 1289 1313	niedoczynnością tarczycy
+N8	Reference T17 ICD10:E89.0	Pozabiegowa niedoczynność tarczycy
+N3	Reference T3 ICD10:E89.0	Pozabiegowa niedoczynność tarczycy
+T18	Treatment 1318 1329	jodoterapii
+T19	Date 1333 1338	2005r
+T20	Condition 1349 1370	nadczynności tarczycy
+N10	Reference T20 ICD10:E05.9	Tyreotoksykoza, nieokreślona
+R3	Dat Arg1:T19 Arg2:T20	
+R4	Dat Arg1:T19 Arg2:T18	
+T21	Symptom 1401 1414	kołatań serca
+N11	Reference T21 ICD10:R00.2	Kołatanie serca
+T22	Symptom 1417 1447	pogorszenia tolerancji wysiłku
+T23	Date 1448 1463	od ok. 1/2 roku
+R5	Dat Arg1:T23 Arg2:T22	
+R6	Dat Arg1:T23 Arg2:T21	
+T24	Symptom 1485 1504	obrzęki limfatyczne
+N12	Reference T24 ICD10:I89.0	Obrzęk chłonny niesklasyfikowany gdzie indziej
+T25	Condition 1506 1528	żylaki kończyn dolnych
+N13	Reference T25 ICD10:I83.9	Żylaki kończyn dolnych bez owrzodzenia i zapalenia
+T26	Investigation 1530 1540	Echo serca
+T27	Date 1552 1565	w przeszłości
+R7	Dat Arg1:T27 Arg2:T26	
+T28	Investigation_result 1584 1594	wady serca
+R8	Inv Arg1:T26 Arg2:T28	
+T29	Treatment 1605 1613	operacje
+A1	Status T29 Historical_Insignificant
+N14	Reference T29 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T30	Date 1634 1648	w dzieciństwie
+R9	Dat Arg1:T30 Arg2:T29	
+T31	Condition 1697 1700	WZW
+N15	Reference T31 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T32	Condition 1702 1711	borelioza
+N16	Reference T32 ICD10:A69.2	Choroba z Lyme
+T33	Negation 1729 1739	nieistotny
+T34	Condition 1712 1727	Wywiad rodzinny
+A2	Status T34 Family
+R10	Neg Arg1:T33 Arg2:T34	
+T35	Behaviour 1740 1755	Palenie tytoniu
+T36	Negation 1757 1767	nie podaje
+T37	Behaviour 1768 1779	Inne używki
+T38	Negation 1781 1791	nie podaje
+T39	Condition 1792 1801	Uczulenia
+N17	Reference T39 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T40	Behaviour 1832 1849	mieszka z rodziną
+R11	Neg Arg1:T36 Arg2:T35	
+R12	Neg Arg1:T38 Arg2:T37	
+T41	Negation 1803 1813	nie podaje
+R13	Neg Arg1:T41 Arg2:T39	
+T42	Drug 1877 1885	Euthyrox
+T43	Drug_dose 1886 1904	125ug 1 tabl. rano
+R14	Drg Arg1:T42 Arg2:T43	
+T44	Investigation 1932 1942	echo serca
+T45	Investigation 1944 1947	TET
+T46	Investigation 1949 1953	ABPM
+T47	Investigation 1955 1961	Holter
+T48	Investigation 1963 1981	RTG kl. piersiowej
+N18	Reference T35 ICD10:Z72.0	Używanie tytoniu
+T49	Negation 1568 1583	nie stwierdzano
+R15	Neg Arg1:T49 Arg2:T28	
+T50	Condition 1615 1633	niezstąpione jądro
+N4	Reference T50 ICD10:Q53.9	Niezstąpienie jądra, nieokreślone
+R16	Dat Arg1:T30 Arg2:T50	
+A3	Status T50 Historical_Insignificant
+N9	Reference T37 ICD10:Z72	Problemy związane ze stylem życia

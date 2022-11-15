@@ -1,0 +1,88 @@
+T1	Condition 461 484	Tendencja do hipotensji
+T2	Condition 486 506	Tachykardia zatokowa
+T3	Condition 508 561	Niedobór witaminy D i magnezu w trakcie suplementacji
+T6	Condition 563 608	Zespół jelita nadwrażliwego - postać mieszana
+N3	Reference T6 ICD10:K58	Zespół jelita drażliwego
+T7	Symptom 610 624	Objaw Reynauda
+T8	Condition 626 646	Bóle kończyn górnych
+N4	Reference T8 ICD10:M79.6	Bóle kończyn
+T9	Condition 648 664	Mięśniaki macicy
+N5	Reference T9 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+T10	Condition 666 679	Żylaki odbytu
+N6	Reference T10 ICD10:I84.9	Hemoroidy, nieokreślone, bez powikłań
+T11	Treatment 690 706	cięcie cesarskie
+N7	Reference T11 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+T12	Date 708 712	2003
+R1	Dat Arg1:T12 Arg2:T11	
+A1	Status T11 Historical_Insignificant
+T13	Treatment 838 865	dalsza opieka w poradni POZ
+T14	Treatment 873 947	okresowa kontrola kardiologiczna, endokrynologiczna i gastroenterologiczna
+T15	Treatment 953 1048	konsultacja reumatologiczna celem rozważenia wskazań do poszerzonej diagnostyki (obj. Reynauda)
+T16	Treatment 1055 1094	codzienna kontrola ciśnienia tętniczego
+T17	Treatment 1102 1131	okresowa kontrola lipidogramu
+T18	Behaviour 1139 1212	dieta zbliżona do śródziemnomorskiej ze zwiększoną ilością soli kuchennej
+T19	Behaviour 1218 1253	spożywanie około 3l płynów dziennie
+T20	Behaviour 1260 1305	stały, umiarkowany, aerobowy wysiłek fizyczny
+T21	Drug 1349 1355	Wit D3
+T22	Drug 1384 1398	Magne B6 forte
+T23	Drug 1429 1436	Ircolon
+T24	Drug_dose 1356 1377	3000j.m. 1 kaps. rano
+T25	Drug_dose 1399 1422	2 tabl.rano i wieczorem
+T26	Drug_dose 1437 1480	100 mg 1 tabl. rano, w południe i wieczorem
+R2	Drg Arg1:T21 Arg2:T24	
+R3	Drg Arg1:T22 Arg2:T25	
+R4	Drg Arg1:T23 Arg2:T26	
+T27	Symptom 1648 1683	tendencji do hipotensji (80/60mmHg)
+T28	Condition 1707 1723	niedobór magnezu
+N8	Reference T28 ICD10:E61.2	Niedobór magnezu
+T29	Condition 1725 1770	zespół jelita nadwrażliwego - mieszana postać
+N9	Reference T29 ICD10:K58	Zespół jelita drażliwego
+T30	Symptom 1772 1785	obj. Reynauda
+T31	Condition 1787 1809	bóle kości kk. górnych
+N10	Reference T31 ICD10:M79.6	Bóle kończyn
+T32	Condition 1812 1828	mięśniaki macicy
+N11	Reference T32 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+T33	Condition 1830 1843	żylaki odbytu
+N12	Reference T33 ICD10:I84.9	Hemoroidy, nieokreślone, bez powikłań
+T34	Treatment 1864 1866	CC
+N13	Reference T34 ICD10:O82.9	Poród pojedynczy przez cięcie cesarskie, nieokreślony
+T35	Date 1867 1871	2003
+R5	Dat Arg1:T35 Arg2:T34	
+T36	Condition 1902 1904	MI
+A2	Status T36 Family
+N14	Reference T36 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T37	Date 1890 1896	50 rż.
+R6	Dat Arg1:T37 Arg2:T36	
+T38	Negation 1934 1940	neguje
+T39	Condition 1925 1932	Alergie
+N15	Reference T39 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R7	Neg Arg1:T38 Arg2:T39	
+T40	Behaviour 1942 1952	Nikotynizm
+T41	Negation 1954 1960	neguje
+T42	Behaviour 1963 1984	Alkohol: sporadycznie
+T43	Behaviour 1985 2002	Uzależnienie inne
+T44	Negation 2004 2010	neguje
+R8	Neg Arg1:T44 Arg2:T43	
+T45	Behaviour 2028 2045	prof. biologii UŁ
+T46	Drug 2053 2059	Wit D3
+T47	Drug 2083 2097	Magne B6 forte
+T48	Drug 2123 2130	Duo-Fem
+T49	Drug 2157 2164	Ircolon
+T50	Drug_dose 2060 2081	3000j.m. 1 kaps. rano
+T51	Drug_dose 2098 2121	2 tabl.rano i wieczorem
+T52	Drug_dose 2131 2155	1 tabl. rano i wieczorem
+T53	Drug_dose 2165 2184	100 mg 1 tabl. 3xdz
+R9	Drg Arg1:T46 Arg2:T50	
+R10	Drg Arg1:T47 Arg2:T51	
+R11	Drg Arg1:T48 Arg2:T52	
+R12	Drg Arg1:T49 Arg2:T53	
+T54	Investigation 2213 2223	echo serca
+T55	Investigation 2225 2228	TET
+T56	Investigation 2230 2234	ABPM
+T57	Investigation 2236 2247	Holter ekg,
+T58	Investigation 2248 2266	rtg kl. piersiowej
+A3	Status T9 Historical_Insignificant
+A4	Status T32 Historical_Insignificant
+A5	Status T34 Historical_Insignificant
+N16	Reference T40 ICD10:Z72.0	Używanie tytoniu
+#1	AnnotatorNotes T3	E55.9 + E61.2

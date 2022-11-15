@@ -1,0 +1,187 @@
+T1	Treatment 332 351	Dalsza opieka w POZ
+T2	Treatment 356 424	Dalsza diagnostyka w Poradni Nefrologicznej i Poradni Neurologicznej
+T3	Treatment 429 475	Okresowa kontrola w Poradni Endokrynologicznej
+T4	Investigation 480 581	Okresowa kontrola morfologii, elektrolitów, magnezu, parametrów wątrobowych oraz parametrów nerkowych
+T5	Date 593 607	za 5-6 tygodni
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Behaviour 612 728	Dieta lekkostrawna, wysokosodowa, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T7	Investigation 733 789	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T8	Treatment 794 822	Regularne przyjmowanie leków
+T9	Drug 828 837	Cortineff
+T10	Drug 920 932	Vitaminum B6
+T11	Drug 883 891	Slow-Mag
+T12	Drug_dose 838 882	1/2 tabletki rano - wg zaleceń endokrynologa
+R2	Drg Arg1:T9 Arg2:T12	
+T13	Drug_dose 892 919	1 tabletka rano i wieczorem
+R3	Drg Arg1:T11 Arg2:T13	
+T14	Drug_dose 933 976	50mg 1 tabletka rano - wg zaleceń nefrologa
+R4	Drg Arg1:T10 Arg2:T14	
+T15	Condition 1194 1217	Hipotonia ortostatyczna
+N1	Reference T15 ICD10:I95	Niedociśnienie
+T16	Condition 1219 1246	Łagodna arytmia nadkomorowa
+N2	Reference T16 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T17	Condition 1248 1289	Łagodna niedomykalność zastawki mitralnej
+N3	Reference T17 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T18	Condition 1292 1304	trójdzielnej
+N4	Reference T18 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T19	Condition 1306 1344	Przewlekła choroba nerek w stadium G3b
+N5	Reference T19 ICD10:N18.9	Przewlekła niewydolność nerek, nieokreślona
+T20	Investigation 1412 1425	biopsja nerki
+T21	Date 1428 1436	09.2018r
+R5	Dat Arg1:T21 Arg2:T20	
+T22	Condition 1440 1465	Przewlekła kamica nerkowa
+N6	Reference T22 ICD10:N20.0	Kamica nerki
+T23	Condition 1479 1498	Nerkowa utrata soli
+N7	Reference T23 ICD10:E25.0	Wrodzone zespoły nadnerczowo-płciowe związane z niedoborem enzymów
+T24	Condition 1500 1544	Przewlekłe wirusowe zapalenie wątroby typu B
+N8	Reference T24 ICD10:B18.1	Przewlekłe wirusowe zapalenie wątroby typu B bez wirusa delta
+T25	Condition 1546 1592	Przewlekłe uszkodzenie obu nerwów strzałkowych
+N9	Reference T25 ICD10:G57.3	Uszkodzenie nerwu strzałkowego wspólnego
+T26	Condition 1594 1635	Miogenne uszkodzenie mięśni proksymalnych
+N10	Reference T26 ICD10:M62.8	Inne określone choroby mięśni
+T27	Condition 1659 1685	zapalenia wielomięśniowego
+T28	Condition 1687 1707	dystrofii mięśniowej
+N11	Reference T28 ICD10:G71.0	Dystrofia mięśniowa
+N12	Reference T27 ICD10:M60.9	Zapalenie mięśni, nieokreślone
+T29	Negation 1708 1717	negatywna
+R6	Neg Arg1:T29 Arg2:T28	
+R7	Neg Arg1:T29 Arg2:T27	
+T30	Condition 1870 1894	hipotonii ortostatycznej
+N13	Reference T30 ICD10:I95	Niedociśnienie
+T31	Condition 1896 1931	komorowymi zaburzeniami rytmu serca
+N14	Reference T31 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T32	Symptom 1969 2045	nawracających dolegliwości bólowych w klatce piersiowej o charakterze kłucia
+N15	Reference T32 ICD10:R07.3	Inne bóle w klatce piersiowej
+T33	Symptom 2060 2088	nudności przy poruszaniu się
+N16	Reference T33 ICD10:R11	Nudności i wymioty
+T34	Symptom 2094 2104	osłabienia
+T35	Symptom 2107 2124	nużliwości mięśni
+N17	Reference T35 ICD10:R53	Złe samopoczucie i zmęczenie
+T36	Condition 2147 2185	przewlekłą choroba nerek w stadium G3a
+N18	Reference T36 ICD10:N18.9	Przewlekła niewydolność nerek, nieokreślona
+T37	Investigation 2253 2266	biopsja nerki
+T38	Date 2269 2277	09.2018r
+R8	Dat Arg1:T38 Arg2:T37	
+T39	Condition 2281 2306	przewlekła kamica nerkowa
+N19	Reference T39 ICD10:N20.0	Kamica nerki
+T40	Condition 2308 2327	nerkowa utrata soli
+N20	Reference T40 ICD10:E25.0	Wrodzone zespoły nadnerczowo-płciowe związane z niedoborem enzymów
+T41	Condition 2329 2372	przewlekłe wirusowe zapaleie wątroby typu B
+N21	Reference T41 ICD10:B18.1	Przewlekłe wirusowe zapalenie wątroby typu B bez wirusa delta
+T42	Condition 2374 2420	przewlekłe uszkodzenie obu nerwów strzałkowych
+N22	Reference T42 ICD10:G57.3	Uszkodzenie nerwu strzałkowego wspólnego
+T43	Condition 2422 2463	miogenne uszkodzenie mięśni proksymalnych
+N23	Reference T43 ICD10:M62.8	Inne określone choroby mięśni
+T44	Condition 2487 2513	zapalenia wielomięśniowego
+N24	Reference T44 ICD10:M60.9	Zapalenie mięśni, nieokreślone
+T45	Condition 2515 2535	dystrofii mięśniowej
+N25	Reference T45 ICD10:G71.0	Dystrofia mięśniowa
+T46	Negation 2536 2545	negatywna
+R9	Neg Arg1:T46 Arg2:T45	
+R10	Neg Arg1:T46 Arg2:T44	
+T47	Investigation 2548 2562	Koronarografia
+T48	Date 2563 2580	około 3 lata temu
+R11	Dat Arg1:T48 Arg2:T47	
+T49	Investigation_result 2602 2640	z relacji pacjenta bez istotnych zmian
+R12	Inv Arg1:T47 Arg2:T49	
+R13	Dat Arg1:T48 Arg2:T49	
+A1	Source T49 Declared
+T50	Negation 2642 2648	Neguje
+T51	Symptom 2650 2662	zasłabnięcia
+T52	Symptom 2664 2718	omdlenia - 2x epizod krótkotrwałej utraty przytomności
+N26	Reference T52 ICD10:R55	Omdlenie i zapaść
+T53	Date 2720 2724	2013
+T54	Date 2727 2732	2014r
+R14	Dat Arg1:T53 Arg2:T52	
+R15	Dat Arg1:T54 Arg2:T52	
+R16	Neg Arg1:T50 Arg2:T51	
+T55	Symptom 2736 2746	krwawienia
+T56	Symptom 2748 2761	czarne stolce
+N27	Reference T56 ICD10:K92.1	Stolce smołowate
+T57	Symptom 2763 2779	brunatne wymioty
+N28	Reference T57 ICD10:K92.0	Wymioty krwawe
+T58	Condition 2781 2797	chorobę wrzodową
+N29	Reference T58 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T59	Symptom 2799 2813	duszność nocną
+N30	Reference T59 ICD10:R06.0	Duszność
+T60	Symptom 2815 2830	obrzęki podudzi
+T61	Symptom 2832 2856	bóle w klatce piersiowej
+T62	Symptom 2858 2873	kołatania serca
+N33	Reference T62 ICD10:R00.2	Kołatanie serca
+R17	Neg Arg1:T50 Arg2:T55	
+R18	Neg Arg1:T50 Arg2:T56	
+R19	Neg Arg1:T50 Arg2:T57	
+R20	Neg Arg1:T50 Arg2:T58	
+R21	Neg Arg1:T50 Arg2:T59	
+R22	Neg Arg1:T50 Arg2:T60	
+R23	Neg Arg1:T50 Arg2:T61	
+R24	Neg Arg1:T50 Arg2:T62	
+T63	Treatment 2876 2893	Przebyte operacje
+T64	Investigation 2895 2913	biopsja mięśnia 2x
+T65	Investigation 2915 2928	biopsja nerki
+T66	Treatment 2930 2938	usuwanie
+A2	Status T66 Historical_Insignificant
+T67	Behaviour 2957 2972	Palenie tytoniu
+T68	Date 2974 2990	od 17 roku życia
+R25	Dat Arg1:T68 Arg2:T67	
+T69	Behaviour 2992 3013	około 1/2 paczki/dobę
+R26	Dat Arg1:T68 Arg2:T69	
+T70	Behaviour 3014 3025	Inne używki
+T71	Negation 3027 3030	nie
+R27	Neg Arg1:T71 Arg2:T70	
+T72	Condition 3031 3040	Uczulenia
+T73	Negation 3042 3045	nie
+R28	Neg Arg1:T73 Arg2:T72	
+T74	Condition 3073 3076	WZW
+N36	Reference T74 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T75	Condition 3083 3092	borelioza
+N37	Reference T75 ICD10:A69.2	Choroba z Lyme
+T76	Negation 3094 3095	-
+R29	Neg Arg1:T76 Arg2:T75	
+T77	Condition 3098 3101	tbc
+T78	Negation 3103 3104	-
+R30	Neg Arg1:T78 Arg2:T77	
+T79	Condition 3107 3111	odra
+N39	Reference T79 ICD10:B05	Odra
+T80	Negation 3113 3114	-
+R31	Neg Arg1:T80 Arg2:T79	
+T81	Condition 3117 3131	kontakt z odrą
+N40	Reference T81 ICD10:B05	Odra
+T82	Negation 3133 3134	-
+R32	Neg Arg1:T82 Arg2:T81	
+T83	Behaviour 3173 3191	przebywa na rencie
+T84	Condition 3192 3207	Wywiad rodzinny
+A3	Status T84 Family
+T85	Condition 3218 3232	cukrzyca typu2
+A4	Status T85 Family
+N41	Reference T85 ICD10:E11	Cukrzyca insulinoniezależna
+T86	Drug 3269 3278	Cortineff
+T87	Drug 3293 3301	witaminy
+T88	Drug_dose 3279 3292	1 tabl x dobę
+R33	Drg Arg1:T86 Arg2:T88	
+T89	Investigation 3362 3383	badania laboratoryjne
+T90	Investigation 3385 3389	ECHO
+T91	Investigation 3391 3409	EKG metodą Holtera
+T92	Investigation 3411 3415	ABPM
+T93	Investigation 3417 3432	próba wysiłkowa
+A5	Status T64 Historical_Insignificant
+A6	Status T65 Historical_Insignificant
+T94	Condition 1357 1410	przewlekłego cewkowo- śródmiąższowego zapalenia nerek
+N42	Reference T94 ICD10:N11.9	Przewlekłe cewkowo-śródmiąższowe zapalenie nerek, nieokreślone
+T95	Condition 2198 2251	przewlekłego cewkowo- śródmiąższowego zapalenia nerek
+N43	Reference T95 ICD10:N11.9	Przewlekłe cewkowo-śródmiąższowe zapalenie nerek, nieokreślone
+T96	Condition 2939 2956	kamieni nerkowych
+A7	Status T96 Historical_Insignificant
+N44	Reference T96 ICD10:N20.0	Kamica nerki
+N45	Reference T72 ICD10:T78.4	Alergia, nieokreślona
+T97	Investigation 1637 1658	obserwacja w kierunku
+N47	Reference T34 ICD10:R53	Złe samopoczucie i zmęczenie
+T98	Investigation 2465 2486	obserwacja w kierunku
+N48	Reference T51 ICD10:R55	Omdlenie i zapaść
+N34	Reference T67 ICD10:Z72.0	Używanie tytoniu
+N35	Reference T69 ICD10:Z72.0	Używanie tytoniu
+N46	Reference T55 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N31	Reference T60 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N32	Reference T61 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N49	Reference T70 ICD10:Z72	Problemy związane ze stylem życia
+N38	Reference T77 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

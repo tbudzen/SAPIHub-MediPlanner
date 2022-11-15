@@ -1,0 +1,111 @@
+T1	Investigation 2064 2074	echo serca
+T2	Investigation 2076 2079	TET
+T3	Investigation 2081 2085	ABPM
+T4	Investigation 2087 2093	Holter
+T5	Drug 2017 2021	Leki
+T6	Negation 2023 2036	nie przyjmuje
+R1	Neg Arg1:T6 Arg2:T5	
+T7	Negation 1962 1972	nie podaje
+T8	Negation 1940 1950	nie podaje
+T9	Negation 1916 1926	nie podaje
+T10	Negation 1888 1898	nie podaje
+T11	Negation 1860 1870	nie podaje
+T12	Condition 1951 1960	Uczulenia
+R2	Neg Arg1:T7 Arg2:T12	
+T13	Behaviour 1927 1938	Inne używki
+R3	Neg Arg1:T8 Arg2:T13	
+T14	Behaviour 1899 1914	Palenie tytoniu
+R4	Neg Arg1:T9 Arg2:T14	
+T15	Condition 1871 1886	Wywiad rodzinny
+A1	Status T15 Family
+R5	Neg Arg1:T10 Arg2:T15	
+T16	Condition 1843 1846	WZW
+T17	Condition 1848 1857	borelioza
+N4	Reference T17 ICD10:A69.2	Choroba z Lyme
+R6	Neg Arg1:T11 Arg2:T17	
+R7	Neg Arg1:T11 Arg2:T16	
+T18	Treatment 1784 1803	Leczenie przewlekłe
+T19	Treatment 1754 1771	Przebyte operacje
+T20	Negation 1773 1783	nie podaje
+R8	Neg Arg1:T20 Arg2:T19	
+T21	Negation 1805 1815	nie podaje
+R9	Neg Arg1:T21 Arg2:T18	
+T22	Condition 438 457	Łagodne nadkomorowe
+N5	Reference T22 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T23	Condition 460 491	komorowe zaburzenia rytmu serca
+N6	Reference T23 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T24	Investigation_result 493 529	ExV II, IIIa, IIIb, IVa wg kl. Lowna
+T25	Condition 532 565	Blok przedniej wiązki pęczka Hisa
+N7	Reference T25 ICD10:I44.4	Blok przedniej gałęzi lewej odnogi pęczka Hisa
+T26	Condition 567 612	Łagodna niedomykalność zastawki trójdzielnej.
+N8	Reference T26 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T27	Condition 613 633	Hipercholesterolemia
+T28	Condition 635 653	Polip poprzecznicy
+N10	Reference T28 ICD10:D12	Nowotwór niezłośliwy okrężnicy, odbytnicy, odbytu i kanału odbytu
+T29	Treatment 664 676	polipektomii
+T30	Date 677 686	(09.2019r
+R10	Dat Arg1:T30 Arg2:T29	
+T31	Condition 689 707	Uchyłki okrężnicy.
+N11	Reference T31 ICD10:K57	Choroba uchyłkowa jelita
+T32	Condition 708 725	Zapalenie żołądka
+N12	Reference T32 ICD10:K29.1	Inne ostre zapalenie żołądka
+T33	Treatment 736 746	eradykacji
+T34	Date 759 767	09.2019r
+R11	Dat Arg1:T34 Arg2:T33	
+T35	Investigation 1029 1054	angioCT tętnic wieńcowych
+T36	Investigation 1093 1122	kontrola ciśnienia tętniczego
+T37	Investigation 1132 1188	kontrola lipidogramu, elektrolitów, parametrów nerkowych
+T38	Drug 1217 1227	Concor COR
+T39	Drug_dose 1228 1248	1,25 mg 1 tabl. rano
+R12	Drg Arg1:T38 Arg2:T39	
+T40	Drug 1249 1254	Acard
+T41	Drug_dose 1255 1278	75 mg 1 tabl. wieczorem
+R13	Drg Arg1:T40 Arg2:T41	
+T42	Drug 1279 1285	Atoris
+T43	Drug_dose 1286 1309	20 mg 1 tabl. wieczorem
+R14	Drg Arg1:T42 Arg2:T43	
+T44	Drug 1310 1317	Mage B6
+T45	Drug_dose 1318 1330	1 tabl. rano
+R15	Drg Arg1:T44 Arg2:T45	
+T46	Symptom 1502 1515	kołatań serca
+N13	Reference T46 ICD10:R00.2	Kołatanie serca
+T47	Symptom 1517 1548	zmniejszonej tolerancji wysiłku
+N14	Reference T47 ICD10:R53	Złe samopoczucie i zmęczenie
+T48	Date 1549 1564	od ok. 1/2 roku
+R16	Dat Arg1:T48 Arg2:T47	
+R17	Dat Arg1:T48 Arg2:T46	
+T49	Symptom 1579 1620	tendencja do wolnej czynności rytmu serca
+T50	Condition 1622 1640	polip poprzecznicy
+N15	Reference T50 ICD10:D12	Nowotwór niezłośliwy okrężnicy, odbytnicy, odbytu i kanału odbytu
+T51	Treatment 1650 1662	polipektomii
+T52	Date 1664 1669	2019r
+R18	Dat Arg1:T52 Arg2:T51	
+T53	Condition 1672 1689	uchyłki okrężnicy
+N16	Reference T53 ICD10:K57	Choroba uchyłkowa jelita
+T54	Condition 1691 1708	zapalenie żołądka
+N17	Reference T54 ICD10:K29.1	Inne ostre zapalenie żołądka
+T55	Treatment 1732 1742	eradykacja
+T56	Date 1744 1752	09.2019r
+R19	Dat Arg1:T56 Arg2:T55	
+R20	Dat Arg1:T30 Arg2:T28	
+R21	Dat Arg1:T34 Arg2:T32	
+T57	Condition 1710 1729	zakażenie H. pylori
+R22	Dat Arg1:T56 Arg2:T57	
+A2	Status T29 Historical_Insignificant
+A3	Status T28 Historical_Insignificant
+T58	Condition 747 756	H. pylori
+R23	Dat Arg1:T34 Arg2:T58	
+A4	Status T51 Historical_Insignificant
+A5	Status T50 Historical_Insignificant
+R24	Dat Arg1:T52 Arg2:T50	
+A6	Status T55 Historical_Insignificant
+A7	Status T57 Historical_Insignificant
+A8	Status T58 Historical_Insignificant
+A9	Status T33 Historical_Insignificant
+A10	Status T32 Historical_Insignificant
+N3	Reference T16 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+N2	Reference T14 ICD10:Z72.0	Używanie tytoniu
+N9	Reference T27 ICD10:E78.0	Czysta hipercholesterolemia
+T59	Treatment 878 1009	dalsza opieka w poradni POZ, okresowa kontrola kardiologiczna, gastrologiczna (wydano skierowanie do Poradni Kardiologicznej ICZMP)
+N18	Reference T13 ICD10:Z72	Problemy związane ze stylem życia
+N1	Reference T12 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

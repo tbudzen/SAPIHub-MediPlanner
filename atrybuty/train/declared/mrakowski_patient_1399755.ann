@@ -1,0 +1,86 @@
+T1	Treatment 332 368	Wskazana dalsza opieka u lekarza POZ
+T2	Treatment 371 460	Wskazana konsultacja kardiochirurgiczna wady mitralnej w Ośrodku wg preferencji pacjentki
+T3	Investigation 464 569	Kontrola morfologii po 1 msc terapii żelazem, kontrola morfologii i gospodarki żelazowej po 3 msc terapii
+T4	Condition 798 814	Prolaps mitralny
+N1	Reference T4 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T5	Condition 816 829	Nieistotna IM
+N2	Reference T5 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T6	Condition 834 852	Choroba Haschimoto
+N3	Reference T6 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T7	Condition 1077 1117	Ciężka niedomykalność zastawki mitralnej
+N4	Reference T7 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T8	Condition 1119 1192	typ I i II wg Carpentiera- wypadanie obu płatków we wszystkich segmentach
+N5	Reference T8 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T9	Condition 1196 1244	Umiarkowana niedomykalność zastawki trójdzielnej
+T10	Condition 1278 1319	Łagodna niedomykalność zastawki aortalnej
+N7	Reference T10 ICD10:I35.1	Niedomykalność zastawki aortalnej
+N6	Reference T9 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T11	Condition 1322 1359	Choroba Hashimoto w stadium eutyreozy
+N8	Reference T11 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T12	Condition 1361 1394	Choroba zwyrodnieniowa kręgosłupa
+N9	Reference T12 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T13	Condition 1396 1408	Dyslipidemia
+N10	Reference T13 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T14	Condition 1410 1443	Niedokrwistość z niedoboru żelaza
+N11	Reference T14 ICD10:D50	Niedokrwistość z niedoboru żelaza
+T15	Condition 1591 1610	prolapsem mitralnym
+N12	Reference T15 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T16	Condition 1613 1626	nieistotną IM
+N13	Reference T16 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T17	Condition 1628 1653	istotnym powiększeniem LA
+N14	Reference T17 ICD10:I51.7	Powiększenie serca
+T18	Condition 1659 1694	poszerzeniem opuszki aorty do 44 mm
+T19	Investigation 1697 1700	TTE
+T20	Date 1720 1730	21/02/2019
+R1	Dat Arg1:T20 Arg2:T19	
+T21	Condition 1733 1751	chorobą Haschimoto
+N16	Reference T21 ICD10:E06.3	Zapalenie tarczycy autoimmunologiczne
+T22	Condition 1753 1786	chorobą zwyrodnieniową kręgosłupa
+N17	Reference T22 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T23	Investigation 1856 1859	TEE
+T24	Negation 1862 1868	Neguje
+T25	Symptom 1869 1881	zasłabnięcia
+T26	Symptom 1883 1892	duszności
+N18	Reference T26 ICD10:R06.0	Duszność
+R2	Neg Arg1:T24 Arg2:T25	
+R3	Neg Arg1:T24 Arg2:T26	
+T27	Symptom 1922 1978	rozpierające dolegliwości bólowe (?) w klatce piersiowej
+T28	Treatment 2001 2015	ginekologiczna
+A1	Status T28 Historical_Insignificant
+T29	Date 2018 2023	2008r
+R4	Dat Arg1:T29 Arg2:T28	
+T30	Condition 2081 2084	WZW
+N20	Reference T30 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T31	Condition 2094 2103	borelioza
+N21	Reference T31 ICD10:A69.2	Choroba z Lyme
+T32	Condition 2111 2119	gruźlica
+N22	Reference T32 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T33	Negation 2121 2122	-
+R5	Neg Arg1:T33 Arg2:T32	
+T34	Negation 2106 2107	-
+R6	Neg Arg1:T34 Arg2:T31	
+T35	Negation 2087 2088	-
+R7	Neg Arg1:T35 Arg2:T30	
+T36	Condition 2124 2139	Wywiad rodzinny
+A2	Status T36 Family
+T37	Negation 2141 2150	negatywny
+R8	Neg Arg1:T37 Arg2:T36	
+T38	Behaviour 2151 2166	Palenie tytoniu
+T39	Negation 2168 2171	nie
+R9	Neg Arg1:T39 Arg2:T38	
+T40	Behaviour 2172 2183	Inne używki
+T41	Negation 2185 2188	nie
+R10	Neg Arg1:T41 Arg2:T40	
+T42	Condition 2189 2198	Uczulenia
+T43	Negation 2200 2206	neguje
+R11	Neg Arg1:T43 Arg2:T42	
+T44	Behaviour 2223 2249	warunki mieszkaniowe dobre
+N15	Reference T18 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T45	Treatment 1981 1998	Przebyte operacje
+N24	Reference T42 ICD10:T78.4	Alergia, nieokreślona
+T46	Condition 1247 1276	niskim prawdopodobieństwem HP
+A3	Source T46 Declared
+N25	Reference T46 ICD10:I27.0	Pierwotne nadciśnienie płucne
+N26	Reference T25 ICD10:R55	Omdlenie i zapaść
+N23	Reference T38 ICD10:Z72.0	Używanie tytoniu
+N19	Reference T27 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony

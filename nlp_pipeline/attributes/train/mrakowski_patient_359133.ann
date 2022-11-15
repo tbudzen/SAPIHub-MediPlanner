@@ -1,0 +1,37 @@
+T1	Condition 450 540	Wrodzona wada serca pod postacią ubytku w przegrodzie międzyprzedsionkowej typu ASD primum
+N1	Reference T1 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T2	Condition 557 586	rozszczepem płatka przedniego
+T3	Condition 594 624	dużą niedomykalnością mitralną
+N2	Reference T3 ICD10:Q23.3	Wrodzona niedomykalność zastawki mitralnej
+T4	Treatment 736 803	Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T5	Treatment 828 957	Konsultacja w Instytucie Kardiologii w Warszawie Aninie celem ostatecznej  kwalifikacji chorej do zabiegu operacyjnego wady serca
+T6	Condition 1125 1200	wadą wrodzoną pod postacią ubytku w przegrodzie międzyprzedsionkowej typu I
+N3	Reference T6 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T7	Treatment 1253 1272	korekcji wady serca
+T8	Negation 1284 1290	neguje
+T9	Symptom 1291 1299	omdlenia
+N4	Reference T9 ICD10:R55	Omdlenie i zapaść
+T10	Symptom 1301 1320	utraty przytomności
+N5	Reference T10 ICD10:R55	Omdlenie i zapaść
+T11	Negation 1322 1333	nie zgłasza
+T12	Symptom 1334 1375	dolegliwości bólowych w klatce piersiowej
+N6	Reference T12 ICD10:R07	Ból gardła i w klatce piersiowej
+R1	Neg Arg1:T8 Arg2:T9	
+R2	Neg Arg1:T8 Arg2:T10	
+R3	Neg Arg1:T11 Arg2:T12	
+T13	Condition 1421 1440	wada wrodzona serca
+A1	Status T13 Family
+N7	Reference T13 ICD10:Q24.9	Wrodzona wada rozwojowa serca, nieokreślona
+T14	Treatment 1450 1468	zabiegi operacyjne
+T15	Negation 1470 1486	nie było żadnych
+R4	Neg Arg1:T15 Arg2:T14	
+T16	Behaviour 1487 1511	pali około 10 sztuk/dobę
+T17	Condition 1535 1551	chorób zakaźnych
+T18	Negation 1512 1523	bez wywiadu
+R5	Neg Arg1:T18 Arg2:T17	
+T19	Condition 1378 1393	Wywiad rodzinny
+A2	Status T19 Family
+N8	Reference T16 ICD10:Z72.0	Używanie tytoniu
+T20	Drug 1552 1556	Leki
+T21	Negation 1558 1580	nie przyjmuje na stałe
+R6	Neg Arg1:T21 Arg2:T20	

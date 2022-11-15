@@ -1,0 +1,90 @@
+T1	Condition 448 477	Przewlekła niewydolność serca
+N1	Reference T1 ICD10:I50	Niewydolność serca
+T2	Treatment 487 532	wszczepieniu zastawki komorowo-przedsionkowej
+T3	Condition 534 544	Wodogłowie
+N2	Reference T3 ICD10:G91	Wodogłowie
+T4	Condition 547 566	zespół Chiariego II
+N3	Reference T4 ICD10:Q07.0	Zespół Arnolda-Chiariego
+T5	Condition 568 600	Niedowład wiotki kończyn dolnych
+N4	Reference T5 ICD10:G82.0	Wiotkie porażenie kończyn dolnych
+T6	Condition 619 679	przepukliny oponowo-rdzeniowej odcinka piersiowo-lędźwiowego
+T7	Condition 681 706	Rozszczep kręgosłupa Th-L
+N5	Reference T7 ICD10:Q05.3	Rozszczep kręgosłupa krzyżowego ze współistniejącym wodogłowiem
+T8	Condition 708 720	Kifoskolioza
+N6	Reference T8 ICD10:M41.8	Inne postacie skoliozy
+T9	Condition 722 741	Pęcherz neurogenny.
+N7	Reference T9 ICD10:N31	Nerwowo-mięśniowa dysfunkcja pęcherza moczowego, niesklasyfikowana gdzie indziej
+T10	Treatment 750 758	operacji
+T11	Condition 789 809	Hipercholesterolemia
+N8	Reference T11 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T12	Condition 811 834	Torbiele okołojajnikowe
+N9	Reference T12 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T13	Condition 836 871	Tłuszczak skóry biodra i uda lewego
+N10	Reference T13 ICD10:D17.3	Tłuszczak skóry i tkanki podskórnej o innym i nieokreślonym umiejscowieniu
+T14	Behaviour 1030 1055	dieta niskocholesterolowa
+T15	Investigation 1065 1085	kontrola lipidogramu
+T16	Drug 1117 1122	Acard
+T17	Drug_dose 1123 1152	75mg 1x 1 tabl. co 2-gi dzień
+R1	Drg Arg1:T16 Arg2:T17	
+T18	Drug 1153 1162	Armolipid
+T19	Drug_dose 1163 1183	1x 1 tabl. wieczorem
+R2	Drg Arg1:T18 Arg2:T19	
+T20	Condition 1338 1360	niewydolności krążenia
+N11	Reference T20 ICD10:I50	Niewydolność serca
+T21	Treatment 1370 1415	wszczepienia zastawki komorowo-przedsionkowej
+T22	Investigation 1502 1512	badanie TK
+T23	Investigation_result 1418 1477	nieprawidłową lokalizacja koncowki cewnika w prawej komorze
+T24	Date 1480 1491	przeszłości
+R3	Dat Arg1:T24 Arg2:T23	
+T25	Date 1515 1522	11.2018
+T26	Investigation_result 1525 1617	przebieg drenu dosercowego trudny do oceny, końcówka najprawdopodobniej w prawym przedsionku
+R4	Inv Arg1:T22 Arg2:T26	
+R5	Dat Arg1:T25 Arg2:T22	
+T27	Condition 1685 1695	wodogłowie
+N12	Reference T27 ICD10:G91	Wodogłowie
+T28	Condition 1697 1717	zespół Chiariiego II
+N13	Reference T28 ICD10:Q07.0	Zespół Arnolda-Chiariego
+T29	Condition 1719 1751	niedowład wiatki kończyn dolnych
+N14	Reference T29 ICD10:G82.0	Wiotkie porażenie kończyn dolnych
+T30	Treatment 1761 1829	plastyce przepukliny oponowo-rdzeniowe odcinka piersiowo lędźwiowego
+T31	Condition 1831 1849	pęcherz neurogenny
+N15	Reference T31 ICD10:N31	Nerwowo-mięśniowa dysfunkcja pęcherza moczowego, niesklasyfikowana gdzie indziej
+T32	Treatment 1859 1867	operacji
+T33	Condition 1924 1959	tłuszczak skóry biodra i uda lewego
+N16	Reference T33 ICD10:D17.3	Tłuszczak skóry i tkanki podskórnej o innym i nieokreślonym umiejscowieniu
+T34	Condition 1898 1922	Torbiele okołojajowodowe
+N17	Reference T34 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T35	Condition 2017 2020	WZW
+N18	Reference T35 ICD10:B18	Przewlekłe wirusowe zapalenie wątroby
+T36	Condition 2029 2038	borelioza
+N19	Reference T36 ICD10:A69.2	Choroba z Lyme
+T37	Condition 2046 2054	gruźlica
+N20	Reference T37 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T38	Condition 2059 2063	odra
+N21	Reference T38 ICD10:B05	Odra
+T39	Negation 2023 2024	-
+R6	Neg Arg1:T39 Arg2:T35	
+T40	Negation 2041 2042	-
+R7	Neg Arg1:T40 Arg2:T36	
+T41	Negation 2054 2058	(-),
+R8	Neg Arg1:T41 Arg2:T37	
+T42	Negation 2064 2067	(-)
+R9	Neg Arg1:T42 Arg2:T38	
+T43	Behaviour 2068 2083	Palenie tytoniu
+N22	Reference T43 ICD10:T65.2	Tytoń i nikotyna
+T44	Behaviour 2089 2100	Inne używki
+T45	Condition 2106 2123	Uczulenia: lateks
+N23	Reference T45 ICD10:T78.4	Alergia, nieokreślona
+T46	Negation 2102 2105	nie
+T47	Negation 2085 2088	nie
+R10	Neg Arg1:T47 Arg2:T43	
+R11	Neg Arg1:T46 Arg2:T44	
+T48	Behaviour 2140 2166	warunki mieszkaniowe dobre
+T49	Drug 2192 2197	Acard
+T50	Drug_dose 2198 2218	75 mg co drugi dzień
+R12	Drg Arg1:T49 Arg2:T50	
+T51	Drug 2220 2246	leki wyjaławiające pęcherz
+T52	Investigation 2261 2271	Echo serca
+T53	Condition 759 787	torbieli wewnątrzotrzewnowej
+T54	Condition 1868 1897	torbieli wewnątrzotrzewnowej.
+T55	Treatment 610 618	plastyce

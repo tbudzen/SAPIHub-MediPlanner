@@ -1,0 +1,98 @@
+T1	Condition 449 511	Złożona wada zastawki aortalnej w postaci umiarkowanej stenozy
+N1	Reference T1 ICD10:I35.0	Zwężenie zastawki aortalnej
+T2	Investigation_result 514 531	PG max 46,96 mmHg
+T3	Condition 536 560	łagodną niedomykalnością
+N2	Reference T3 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T4	Condition 572 593	zastawki dwupłatkowej
+N3	Reference T4 ICD10:Q23.8	Inne wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T5	Condition 595 622	Poszerzona aorta wstępująca
+T6	Investigation_result 623 631	do 45 mm
+T7	Treatment 750 806	dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T8	Treatment 808 816	kontrola
+T9	Date 817 830	co 6 miesięcy
+R1	Dat Arg1:T9 Arg2:T8	
+T10	Treatment 843 905	co roczna kontrola w warunkach szpitalnych w tutejszej Klinice
+T11	Behaviour 908 948	Dieta lekkostrawna , niskocholesterolowa
+T12	Investigation 953 1036	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T13	Investigation 1040 1088	Systematyczna kontrola ciśnienia tętniczego krwi
+T14	Treatment 1101 1127	Profilaktyka antybiotykowa
+T15	Condition 1128 1160	Infekcyjnego Zapalenia Wsierdzia
+A1	Source T15 Declared
+N4	Reference T15 ICD10:I33.0	Ostre i podostre zakaźne zapalenie wsierdzia
+T16	Treatment 1162 1196	podczas zabiegów stomatologicznych
+T17	Condition 1212 1253	ryzykiem Infekcyjnego Zapalenia Wsierdzia
+T18	Treatment 1265 1289	działania profilaktyczne
+T19	Behaviour 1292 1326	Ścisła higiena skóry i jamy ustnej
+T20	Treatment 1328 1353	Przeglądy stomatologiczne
+T21	Date 1375 1402	co najmniej dwa razy w roku
+T22	Behaviour 1405 1420	Dezynfekcja ran
+T23	Treatment 1422 1503	Eliminacja lub ograniczenie przewlekłego nosicielstwa bakteryj¬nego: skóry, moczu
+T24	Treatment 1505 1566	Leczenie antybiotykami każdego ogniska zakażenia bakteryjnego
+T26	Behaviour 1568 1622	Niestosowanie antybiotyków samodzielnie przez pacjenta
+T28	Behaviour 1624 1665	Unikanie kolczykowania i tatuowania ciała
+T29	Treatment 1667 1751	Ścisłe przestrzeganie zasad aseptyki podczas zabiegów stwarzających ryzyko zakażenia
+T30	Negation 1760 1772	nie powinien
+T31	Behaviour 1773 1816	uprawiać sportu wyczynowo oraz kontaktowych
+T32	Behaviour 1827 1856	unikać ćwiczeń izometrycznych
+T33	Drug 1908 1915	Nebilet
+T34	Drug_dose 1916 1938	5 mg 1x dz po 1/4 tabl
+R2	Drg Arg1:T33 Arg2:T34	
+R3	Neg Arg1:T30 Arg2:T31	
+R5	Dat Arg1:T21 Arg2:T20	
+T25	Condition 2143 2181	wrodzona SA na poziomie podzastawkowym
+N5	Reference T25 ICD10:Q24.4	Wrodzone zwężenie podzastawkowe drogi odpływu z lewej komory
+T35	Condition 2184 2195	zastawkowym
+N6	Reference T35 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T36	Investigation_result 2197 2213	gr. max. 45 mmHg
+T37	Investigation 2226 2231	ocena
+T38	Date 2232 2239	w 2009r
+R6	Dat Arg1:T38 Arg2:T37	
+R7	Inv Arg1:T37 Arg2:T36	
+T39	Negation 2245 2251	Neguje
+T40	Symptom 2252 2260	omdlenia
+N7	Reference T40 ICD10:R55	Omdlenie i zapaść
+T41	Negation 2460 2466	neguje
+T42	Symptom 2262 2275	zawroty głowy
+N8	Reference T42 ICD10:R42	Zawroty głowy i odurzenie
+T43	Symptom 2277 2285	duszność
+N9	Reference T43 ICD10:R06.0	Duszność
+T44	Symptom 2287 2341	jakiekolwiek inne objawy z układu sercowo-naczyniowego
+T45	Treatment 2384 2401	Przebyte operacje
+N10	Reference T45 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T46	Negation 2403 2409	neguje
+T47	Condition 2436 2447	SA wrodzona
+A2	Source T47 Declared
+N11	Reference T47 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T48	Condition 2450 2457	Alergie
+N12	Reference T48 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T49	Behaviour 2468 2499	Nikotynizm: tak, kilka dziennie
+N13	Reference T49 ICD10:Z72.0	Używanie tytoniu
+R8	Neg Arg1:T39 Arg2:T40	
+R9	Neg Arg1:T39 Arg2:T42	
+R10	Neg Arg1:T39 Arg2:T43	
+R11	Neg Arg1:T39 Arg2:T44	
+R12	Neg Arg1:T46 Arg2:T45	
+R13	Neg Arg1:T41 Arg2:T48	
+T50	Date 2500 2510	do 07.2018
+R14	Dat Arg1:T50 Arg2:T49	
+T51	Date 2525 2547	2-3 miesiące wcześniej
+R15	Dat Arg1:T51 Arg2:T49	
+T52	Behaviour 2549 2570	Alkohol: okazjonalnie
+A3	Status T52 Historical_Insignificant
+N14	Reference T52 ICD10:Z72.1	Używanie alkoholu
+T53	Behaviour 2572 2589	Uzależnienie inne
+N15	Reference T53 ICD10:Z72	Problemy związane ze stylem życia
+T54	Negation 2591 2597	neguje
+T55	Behaviour 2615 2632	uczeń - technikum
+T56	Drug 2634 2638	Leki
+T57	Negation 2640 2647	żadnych
+T58	Investigation 2675 2685	echo serca
+T59	Investigation 2687 2690	TET
+T60	Investigation 2692 2696	ABPM
+T61	Investigation 2698 2708	Holter ekg
+T62	Investigation 2710 2728	rtg kl. piersiowej
+R16	Neg Arg1:T54 Arg2:T53	
+R17	Neg Arg1:T57 Arg2:T56	
+T63	Negation 2365 2371	neguje
+T64	Condition 2372 2382	przewlekłe
+R18	Neg Arg1:T63 Arg2:T64	

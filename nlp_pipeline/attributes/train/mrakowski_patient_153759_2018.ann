@@ -1,0 +1,53 @@
+T1	Condition 449 463	Zespół Barlowa
+N1	Reference T1 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T2	Treatment 573 600	dalsza opieka w poradni POZ
+T3	Treatment 601 633	okresowa kontrola kardiologiczna
+T4	Behaviour 634 685	zakaz stosowania używek kofeina, alkohol, papierosy
+T5	Behaviour 686 733	regularna aktywność fizyczna minimum 2,5h/tydz.
+T6	Drug 741 751	PoloMag B6
+T7	Drug_dose 752 767	1 tabl. 1 x dz.
+R1	Drg Arg1:T6 Arg2:T7	
+T8	Condition 936 953	szmeru nad sercem
+N2	Reference T8 ICD10:R01.1	Szmer serca, nieokreślony
+T9	Symptom 1040 1058	łatwe męczenie się
+N3	Reference T9 ICD10:R53	Złe samopoczucie i zmęczenie
+T10	Treatment 1089 1106	Przebyte operacje
+T11	Negation 1107 1110	nie
+R2	Neg Arg1:T11 Arg2:T10	
+T12	Behaviour 1111 1126	Palenie tytoniu
+T13	Negation 1128 1131	nie
+R3	Neg Arg1:T13 Arg2:T12	
+T14	Behaviour 1133 1144	Inne używki
+T15	Negation 1146 1149	nie
+R4	Neg Arg1:T15 Arg2:T14	
+T16	Condition 1151 1160	Uczulenia
+N5	Reference T16 ICD10:T78.4	Alergia, nieokreślona
+T17	Negation 1162 1165	nie
+R5	Neg Arg1:T17 Arg2:T16	
+T18	Condition 1194 1197	WZW
+N6	Reference T18 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T19	Condition 1204 1213	borelioza
+N7	Reference T19 ICD10:A69.2	Choroba z Lyme
+T20	Condition 1221 1224	tbc
+T21	Negation 1226 1227	-
+R6	Neg Arg1:T21 Arg2:T20	
+T22	Negation 1216 1217	-
+R7	Neg Arg1:T22 Arg2:T19	
+T23	Negation 1199 1200	-
+R8	Neg Arg1:T23 Arg2:T18	
+T24	Behaviour 1246 1272	warunki mieszkaniowe dobre
+T25	Behaviour 1274 1294	pacjent jest uczniem
+T26	Investigation 1372 1393	badania laboratoryjne
+T27	Investigation 1395 1398	TTE
+T28	Investigation 1400 1403	TEE
+T29	Investigation 1405 1420	próba wysiłkowa
+T30	Investigation 1422 1426	HEKG
+N4	Reference T12 ICD10:Z72.0	Używanie tytoniu
+T31	Condition 1060 1072	Inne choroby
+T32	Negation 1073 1087	pacjent neguje
+R9	Neg Arg1:T32 Arg2:T31	
+T33	Drug 1298 1302	Leki
+T34	Negation 1305 1309	brak
+R10	Neg Arg1:T34 Arg2:T33	
+N8	Reference T20 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N9	Reference T14 ICD10:Z72	Problemy związane ze stylem życia

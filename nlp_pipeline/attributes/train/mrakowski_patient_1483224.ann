@@ -1,0 +1,28 @@
+T1	Symptom 387 471	epizodami dolegliwości bólowych w klatce piersiowej indukowanych wysiłkiem fizycznym
+N1	Reference T1 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T2	Investigation 528 544	próby wysiłkowej
+T3	Condition 637 644	Alergie
+N2	Reference T3 ICD10:T78.4	Alergia, nieokreślona
+T4	Negation 645 651	neguje
+R1	Neg Arg1:T4 Arg2:T3	
+T5	Condition 680 703	w stanie ogólnym dobrym
+T6	Negation 705 716	Bez jawnych
+T7	Negation 732 743	Bez jawnych
+T8	Investigation 770 774	SaO2
+T9	Investigation 782 784	BP
+T10	Investigation 777 779	HR
+T11	Investigation 799 857	ergospirometrycznej próbie wysiłkowej wg protokołu Bruce'a
+T12	Symptom 1076 1099	Ból w klatce piersiowej
+N3	Reference T12 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T13	Condition 744 768	cech niewydolności serca
+N4	Reference T13 ICD10:I50.9	Niewydolność serca, nieokreślona
+T14	Condition 717 730	cech infekcji
+R2	Neg Arg1:T6 Arg2:T14	
+R3	Neg Arg1:T7 Arg2:T13	
+N5	Reference T14 ICD10:J00	Ostre zapalenie nosa i gardła [przeziębienie]
+T15	Drug 607 621	Leków na stałe
+T16	Negation 622 635	nie otrzymuje
+R4	Neg Arg1:T16 Arg2:T15	
+T17	Negation 579 582	nie
+T18	Treatment 583 605	lecząca sie przewlekle
+R5	Neg Arg1:T17 Arg2:T18	

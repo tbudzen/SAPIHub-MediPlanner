@@ -1,0 +1,678 @@
+allRelations          : 88
+oks                   : 10
+isRedundantAndRemoveds: 71
+shouldNotBeRemoveds   : 3
+shouldBeBemoveds      : 4
+GOOD / BAD            : 81 / 7
+Sentence 0:
+------------------------------------------------
+Wiek: 16 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zastosowane leczenie
+
+
+
+Sentence 3:
+------------------------------------------------
+BETO ZK, Haloperidol, Acard, Essentiale Cefazolin, Perfalgan, Fragmin, Enarenal, Sildenafil
+------------------------------------------------
+
+
+
+Sentence 4:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 5:
+Acard 150mg p.o. 1 x dziennie
+Enarenal 5mg p.o. 1 x dziennie
+
+R1	Drg Arg1:T10 Arg2:T21 << OK >>	Acard -> 150mg p.o. 1 x dziennie  <RANK: 3> <info: start[540, 546] <type: RIGHT>>
+R2	Drg Arg1:T10 Arg2:T22 <<REDUNDANT!!!REMOVED>>	Acard -> 5mg p.o. 1 x dziennie <:REMOVED other first tag between (right):> <RANK: 0> <info: start[540, 579] <type: RIGHT>>
+R3	Drg Arg1:T11 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Enarenal -> 150mg p.o. 1 x dziennie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[570, 546] <type: LEFT>>
+R4	Drg Arg1:T11 Arg2:T22 << OK >>	Enarenal -> 5mg p.o. 1 x dziennie  <RANK: 3> <info: start[570, 579] <type: RIGHT>>
+
+
+Sentence 6:
+Sildenafil 100mg p.o. 2 x dziennie
+
+R5	Drg Arg1:T12 Arg2:T23 << OK >>	Sildenafil -> 100mg p.o. 2 x dziennie  <RANK: 3> <info: start[601, 612] <type: RIGHT>>
+
+
+Sentence 7:
+Essentiale max 1 kaps p.o. 1 x dziennie
+Kontrola w poradni kardiologicznej za 3 miesiące (konieczne wcześniejsze umówienie terminu).
+
+R6	Drg Arg1:T13 Arg2:T24 << OK >>	Essentiale max -> 1 kaps p.o. 1 x dziennie  <RANK: 3> <info: start[636, 651] <type: RIGHT>>
+R7	Dat Arg1:T15 Arg2:T14 << OK >>	za 3 miesiące -> Kontrola w poradni kardiologicznej  <RANK: 3> <info: start[711, 676] <type: LEFT>>
+R8	Dat Arg1:T15 Arg2:T13 <<REDUNDANT!!!REMOVED>>	za 3 miesiące -> Essentiale max <:REMOVED other second tag between (left):> <RANK: 0> <info: start[711, 636] <type: LEFT>>
+
+
+Sentence 8:
+Dalsza opieka w poradni hepatologicznej.
+
+
+Sentence 9:
+Pacjent po operacji met.
+
+
+Sentence 10:
+Fontana wymaga wykonania szczegółowej diagnostyki zwłóknienia wątroby, zalecane jest wykonanie badania FIBRO-SCAN lub elastografii wątroby.
+
+
+
+Sentence 11:
+------------------------------------------------
+
+
+
+Sentence 12:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 13:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona złożona wada serca pod postacią zarośnięcia zastawki dwudzielnej i wspólnej komory z przełożeniem wielkich pni tętniczych oraz zwężenia tętnicy płucnej.\x0aDextrokardia.\x0aStan po zespoleniu systemowo - płucnym prawostronnym (07.03.2003r)\x0aStan po zespoleniu typu dwukierunkowy Glenn (20.01.2004r)\x0aStan po operacji metodą Fontana (18.01.2006r)\x0aZwężenie zespolenia Glenna oraz obecność przetok żylno - żylnych w lewym kącie żylnym.\x0aCewnikowanie serca z angioplastyką zwężenia zespolenia Glenna, zwężenia tunelu zewnątrzprzedsionkowego z implantacją stentu CP 4528 COVERED 18 x 45 mm z doprężeniem stentu śr. 20 x 40 mm oraz zamknięciu przetoki żylnej zestawem Amplatzer vascular Plug IV 8 mm (26.06.2017r)\x0aNiedrożność odcinka proksymalnego żyły głównej górnej prawej w odcinku dystalnym.\x0aStan po cewnikowaniu serca 16.08.2019r.
+
+R9	Dat Arg1:T31 Arg2:T25 <<REDUNDANT!!!REMOVED>>	07.03.2003r -> Wrodzona złożona wada serca pod postacią zarośnięcia zastawki dwudzielnej <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1428, 1192] <type: LEFT>>
+R10	Dat Arg1:T31 Arg2:T26 <<REDUNDANT!!!REMOVED>>	07.03.2003r -> wspólnej komory <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1428, 1268] <type: LEFT>>
+R11	Dat Arg1:T31 Arg2:T27 <<REDUNDANT!!!REMOVED>>	07.03.2003r -> przełożeniem wielkich pni tętniczych <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1428, 1286] <type: LEFT>>
+R12	Dat Arg1:T31 Arg2:T28 <<REDUNDANT!!!REMOVED>>	07.03.2003r -> zwężenia tętnicy płucnej <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1428, 1328] <type: LEFT>>
+R13	Dat Arg1:T31 Arg2:T29 <<REDUNDANT!!!REMOVED>>	07.03.2003r -> Dextrokardia <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1428, 1357] <type: LEFT>>
+R14	Dat Arg1:T31 Arg2:T36 <<REDUNDANT!!!REMOVED>>	07.03.2003r -> Zwężenie zespolenia Glenna <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1428, 1554] <type: RIGHT>>
+R15	Dat Arg1:T31 Arg2:T37 <<REDUNDANT!!!REMOVED>>	07.03.2003r -> obecność przetok żylno - żylnych w lewym kącie żylnym <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1428, 1586] <type: RIGHT>>
+R16	Dat Arg1:T31 Arg2:T42 <<REDUNDANT!!!REMOVED>>	07.03.2003r -> Niedrożność odcinka proksymalnego żyły głównej górnej prawej w odcinku dystalnym <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1428, 1921] <type: RIGHT>>
+R17	Dat Arg1:T31 Arg2:T30 << OK >>	07.03.2003r -> zespoleniu systemowo - płucnym prawostronnym  <RANK: 3> <info: start[1428, 1382] <type: LEFT>>
+R18	Dat Arg1:T31 Arg2:T32 <<REDUNDANT!!!SHOULD BE REMOVED>>	07.03.2003r -> zespoleniu typu dwukierunkowy Glenn  <RANK: 3> <info: start[1428, 1452] <type: RIGHT>>
+R19	Dat Arg1:T31 Arg2:T34 <<REDUNDANT!!!REMOVED>>	07.03.2003r -> operacji metodą Fontana <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1428, 1513] <type: RIGHT>>
+R20	Dat Arg1:T31 Arg2:T38 <<REDUNDANT!!!REMOVED>>	07.03.2003r -> angioplastyką zwężenia zespolenia Glenna <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1428, 1665] <type: RIGHT>>
+R21	Dat Arg1:T31 Arg2:T39 <<REDUNDANT!!!REMOVED>>	07.03.2003r -> zwężenia tunelu zewnątrzprzedsionkowego z implantacją stentu CP 4528 COVERED 18 x 45 mm z doprężeniem stentu śr. 20 x 40 mm <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1428, 1707] <type: RIGHT>>
+R22	Dat Arg1:T31 Arg2:T40 <<REDUNDANT!!!REMOVED>>	07.03.2003r -> zamknięciu przetoki żylnej zestawem Amplatzer vascular Plug IV 8 mm <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1428, 1836] <type: RIGHT>>
+R23	Dat Arg1:T31 Arg2:T43 <<REDUNDANT!!!REMOVED>>	07.03.2003r -> cewnikowaniu serca <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1428, 2014] <type: RIGHT>>
+R24	Dat Arg1:T31 Arg2:T45 <<REDUNDANT!!!REMOVED>>	07.03.2003r -> Cewnikowanie serca <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1428, 1644] <type: RIGHT>>
+R25	Dat Arg1:T33 Arg2:T25 <<REDUNDANT!!!REMOVED>>	20.01.2004r -> Wrodzona złożona wada serca pod postacią zarośnięcia zastawki dwudzielnej <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1489, 1192] <type: LEFT>>
+R26	Dat Arg1:T33 Arg2:T26 <<REDUNDANT!!!REMOVED>>	20.01.2004r -> wspólnej komory <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1489, 1268] <type: LEFT>>
+R27	Dat Arg1:T33 Arg2:T27 <<REDUNDANT!!!REMOVED>>	20.01.2004r -> przełożeniem wielkich pni tętniczych <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1489, 1286] <type: LEFT>>
+R28	Dat Arg1:T33 Arg2:T28 <<REDUNDANT!!!REMOVED>>	20.01.2004r -> zwężenia tętnicy płucnej <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1489, 1328] <type: LEFT>>
+R29	Dat Arg1:T33 Arg2:T29 <<REDUNDANT!!!REMOVED>>	20.01.2004r -> Dextrokardia <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1489, 1357] <type: LEFT>>
+R30	Dat Arg1:T33 Arg2:T36 <<REDUNDANT!!!REMOVED>>	20.01.2004r -> Zwężenie zespolenia Glenna <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1489, 1554] <type: RIGHT>>
+R31	Dat Arg1:T33 Arg2:T37 <<REDUNDANT!!!REMOVED>>	20.01.2004r -> obecność przetok żylno - żylnych w lewym kącie żylnym <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1489, 1586] <type: RIGHT>>
+R32	Dat Arg1:T33 Arg2:T42 <<REDUNDANT!!!REMOVED>>	20.01.2004r -> Niedrożność odcinka proksymalnego żyły głównej górnej prawej w odcinku dystalnym <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1489, 1921] <type: RIGHT>>
+R33	Dat Arg1:T33 Arg2:T30 <<REDUNDANT!!!REMOVED>>	20.01.2004r -> zespoleniu systemowo - płucnym prawostronnym <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1489, 1382] <type: LEFT>>
+R34	Dat Arg1:T33 Arg2:T32 << OK >>	20.01.2004r -> zespoleniu typu dwukierunkowy Glenn  <RANK: 3> <info: start[1489, 1452] <type: LEFT>>
+R35	Dat Arg1:T33 Arg2:T34 <<REDUNDANT!!!SHOULD BE REMOVED>>	20.01.2004r -> operacji metodą Fontana  <RANK: 3> <info: start[1489, 1513] <type: RIGHT>>
+R36	Dat Arg1:T33 Arg2:T38 <<REDUNDANT!!!REMOVED>>	20.01.2004r -> angioplastyką zwężenia zespolenia Glenna <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1489, 1665] <type: RIGHT>>
+R37	Dat Arg1:T33 Arg2:T39 <<REDUNDANT!!!REMOVED>>	20.01.2004r -> zwężenia tunelu zewnątrzprzedsionkowego z implantacją stentu CP 4528 COVERED 18 x 45 mm z doprężeniem stentu śr. 20 x 40 mm <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1489, 1707] <type: RIGHT>>
+R38	Dat Arg1:T33 Arg2:T40 <<REDUNDANT!!!REMOVED>>	20.01.2004r -> zamknięciu przetoki żylnej zestawem Amplatzer vascular Plug IV 8 mm <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1489, 1836] <type: RIGHT>>
+R39	Dat Arg1:T33 Arg2:T43 <<REDUNDANT!!!REMOVED>>	20.01.2004r -> cewnikowaniu serca <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1489, 2014] <type: RIGHT>>
+R40	Dat Arg1:T33 Arg2:T45 <<REDUNDANT!!!REMOVED>>	20.01.2004r -> Cewnikowanie serca <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1489, 1644] <type: RIGHT>>
+R41	Dat Arg1:T35 Arg2:T25 <<REDUNDANT!!!REMOVED>>	18.01.2006r -> Wrodzona złożona wada serca pod postacią zarośnięcia zastawki dwudzielnej <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1538, 1192] <type: LEFT>>
+R42	Dat Arg1:T35 Arg2:T26 <<REDUNDANT!!!REMOVED>>	18.01.2006r -> wspólnej komory <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1538, 1268] <type: LEFT>>
+R43	Dat Arg1:T35 Arg2:T27 <<REDUNDANT!!!REMOVED>>	18.01.2006r -> przełożeniem wielkich pni tętniczych <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1538, 1286] <type: LEFT>>
+R44	Dat Arg1:T35 Arg2:T28 <<REDUNDANT!!!REMOVED>>	18.01.2006r -> zwężenia tętnicy płucnej <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1538, 1328] <type: LEFT>>
+R45	Dat Arg1:T35 Arg2:T29 <<REDUNDANT!!!REMOVED>>	18.01.2006r -> Dextrokardia <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1538, 1357] <type: LEFT>>
+R46	Dat Arg1:T35 Arg2:T36 <<REDUNDANT!!!SHOULD BE REMOVED>>	18.01.2006r -> Zwężenie zespolenia Glenna  <RANK: 3> <info: start[1538, 1554] <type: RIGHT>>
+R47	Dat Arg1:T35 Arg2:T37 <<REDUNDANT!!!REMOVED>>	18.01.2006r -> obecność przetok żylno - żylnych w lewym kącie żylnym <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1538, 1586] <type: RIGHT>>
+R48	Dat Arg1:T35 Arg2:T42 <<REDUNDANT!!!REMOVED>>	18.01.2006r -> Niedrożność odcinka proksymalnego żyły głównej górnej prawej w odcinku dystalnym <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1538, 1921] <type: RIGHT>>
+R49	Dat Arg1:T35 Arg2:T30 <<REDUNDANT!!!REMOVED>>	18.01.2006r -> zespoleniu systemowo - płucnym prawostronnym <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1538, 1382] <type: LEFT>>
+R50	Dat Arg1:T35 Arg2:T32 <<REDUNDANT!!!REMOVED>>	18.01.2006r -> zespoleniu typu dwukierunkowy Glenn <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1538, 1452] <type: LEFT>>
+R51	Dat Arg1:T35 Arg2:T34 << OK >>	18.01.2006r -> operacji metodą Fontana  <RANK: 3> <info: start[1538, 1513] <type: LEFT>>
+R52	Dat Arg1:T35 Arg2:T38 <<REDUNDANT!!!REMOVED>>	18.01.2006r -> angioplastyką zwężenia zespolenia Glenna <:REMOVED other second tag between (right) (dat):> <RANK: 2> <info: start[1538, 1665] <type: RIGHT>>
+R53	Dat Arg1:T35 Arg2:T39 <<REDUNDANT!!!REMOVED>>	18.01.2006r -> zwężenia tunelu zewnątrzprzedsionkowego z implantacją stentu CP 4528 COVERED 18 x 45 mm z doprężeniem stentu śr. 20 x 40 mm <:REMOVED other second tag between (right) (dat):> <RANK: 2> <info: start[1538, 1707] <type: RIGHT>>
+R54	Dat Arg1:T35 Arg2:T40 <<REDUNDANT!!!REMOVED>>	18.01.2006r -> zamknięciu przetoki żylnej zestawem Amplatzer vascular Plug IV 8 mm <:REMOVED other second tag between (right) (dat):> <RANK: 2> <info: start[1538, 1836] <type: RIGHT>>
+R55	Dat Arg1:T35 Arg2:T43 <<REDUNDANT!!!REMOVED>>	18.01.2006r -> cewnikowaniu serca <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1538, 2014] <type: RIGHT>>
+R56	Dat Arg1:T35 Arg2:T45 <<REDUNDANT!!!REMOVED>>	18.01.2006r -> Cewnikowanie serca <:REMOVED other second tag between (right) (dat):> <RANK: 2> <info: start[1538, 1644] <type: RIGHT>>
+R57	Dat Arg1:T41 Arg2:T25 <<REDUNDANT!!!REMOVED>>	26.06.2017r -> Wrodzona złożona wada serca pod postacią zarośnięcia zastawki dwudzielnej <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1905, 1192] <type: LEFT>>
+R58	Dat Arg1:T41 Arg2:T26 <<REDUNDANT!!!REMOVED>>	26.06.2017r -> wspólnej komory <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1905, 1268] <type: LEFT>>
+R59	Dat Arg1:T41 Arg2:T27 <<REDUNDANT!!!REMOVED>>	26.06.2017r -> przełożeniem wielkich pni tętniczych <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1905, 1286] <type: LEFT>>
+R60	Dat Arg1:T41 Arg2:T28 <<REDUNDANT!!!REMOVED>>	26.06.2017r -> zwężenia tętnicy płucnej <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1905, 1328] <type: LEFT>>
+R61	Dat Arg1:T41 Arg2:T29 <<REDUNDANT!!!REMOVED>>	26.06.2017r -> Dextrokardia <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1905, 1357] <type: LEFT>>
+R62	Dat Arg1:T41 Arg2:T36 <<REDUNDANT!!!REMOVED>>	26.06.2017r -> Zwężenie zespolenia Glenna <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1905, 1554] <type: LEFT>>
+R63	Dat Arg1:T41 Arg2:T37 <<REDUNDANT!!!REMOVED>>	26.06.2017r -> obecność przetok żylno - żylnych w lewym kącie żylnym <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1905, 1586] <type: LEFT>>
+R64	Dat Arg1:T41 Arg2:T42 <<REDUNDANT!!!SHOULD BE REMOVED>>	26.06.2017r -> Niedrożność odcinka proksymalnego żyły głównej górnej prawej w odcinku dystalnym  <RANK: 3> <info: start[1905, 1921] <type: RIGHT>>
+R65	Dat Arg1:T41 Arg2:T30 <<REDUNDANT!!!REMOVED>>	26.06.2017r -> zespoleniu systemowo - płucnym prawostronnym <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1905, 1382] <type: LEFT>>
+R66	Dat Arg1:T41 Arg2:T32 <<REDUNDANT!!!REMOVED>>	26.06.2017r -> zespoleniu typu dwukierunkowy Glenn <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1905, 1452] <type: LEFT>>
+R67	Dat Arg1:T41 Arg2:T34 <<REDUNDANT!!!REMOVED>>	26.06.2017r -> operacji metodą Fontana <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1905, 1513] <type: LEFT>>
+R68	Dat Arg1:T41 Arg2:T38 <<SHOULD NOT BE REMOVED>>	26.06.2017r -> angioplastyką zwężenia zespolenia Glenna <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1905, 1665] <type: LEFT>>
+R69	Dat Arg1:T41 Arg2:T39 <<SHOULD NOT BE REMOVED>>	26.06.2017r -> zwężenia tunelu zewnątrzprzedsionkowego z implantacją stentu CP 4528 COVERED 18 x 45 mm z doprężeniem stentu śr. 20 x 40 mm <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1905, 1707] <type: LEFT>>
+R70	Dat Arg1:T41 Arg2:T40 << OK >>	26.06.2017r -> zamknięciu przetoki żylnej zestawem Amplatzer vascular Plug IV 8 mm  <RANK: 3> <info: start[1905, 1836] <type: LEFT>>
+R71	Dat Arg1:T41 Arg2:T43 <<REDUNDANT!!!REMOVED>>	26.06.2017r -> cewnikowaniu serca <:REMOVED other second tag between (right) (dat):> <RANK: 2> <info: start[1905, 2014] <type: RIGHT>>
+R72	Dat Arg1:T41 Arg2:T45 <<SHOULD NOT BE REMOVED>>	26.06.2017r -> Cewnikowanie serca <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1905, 1644] <type: LEFT>>
+R73	Dat Arg1:T44 Arg2:T25 <<REDUNDANT!!!REMOVED>>	16.08.2019r -> Wrodzona złożona wada serca pod postacią zarośnięcia zastawki dwudzielnej <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2033, 1192] <type: LEFT>>
+R74	Dat Arg1:T44 Arg2:T26 <<REDUNDANT!!!REMOVED>>	16.08.2019r -> wspólnej komory <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2033, 1268] <type: LEFT>>
+R75	Dat Arg1:T44 Arg2:T27 <<REDUNDANT!!!REMOVED>>	16.08.2019r -> przełożeniem wielkich pni tętniczych <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2033, 1286] <type: LEFT>>
+R76	Dat Arg1:T44 Arg2:T28 <<REDUNDANT!!!REMOVED>>	16.08.2019r -> zwężenia tętnicy płucnej <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2033, 1328] <type: LEFT>>
+R77	Dat Arg1:T44 Arg2:T29 <<REDUNDANT!!!REMOVED>>	16.08.2019r -> Dextrokardia <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2033, 1357] <type: LEFT>>
+R78	Dat Arg1:T44 Arg2:T36 <<REDUNDANT!!!REMOVED>>	16.08.2019r -> Zwężenie zespolenia Glenna <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2033, 1554] <type: LEFT>>
+R79	Dat Arg1:T44 Arg2:T37 <<REDUNDANT!!!REMOVED>>	16.08.2019r -> obecność przetok żylno - żylnych w lewym kącie żylnym <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2033, 1586] <type: LEFT>>
+R80	Dat Arg1:T44 Arg2:T42 <<REDUNDANT!!!REMOVED>>	16.08.2019r -> Niedrożność odcinka proksymalnego żyły głównej górnej prawej w odcinku dystalnym <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2033, 1921] <type: LEFT>>
+R81	Dat Arg1:T44 Arg2:T30 <<REDUNDANT!!!REMOVED>>	16.08.2019r -> zespoleniu systemowo - płucnym prawostronnym <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2033, 1382] <type: LEFT>>
+R82	Dat Arg1:T44 Arg2:T32 <<REDUNDANT!!!REMOVED>>	16.08.2019r -> zespoleniu typu dwukierunkowy Glenn <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2033, 1452] <type: LEFT>>
+R83	Dat Arg1:T44 Arg2:T34 <<REDUNDANT!!!REMOVED>>	16.08.2019r -> operacji metodą Fontana <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2033, 1513] <type: LEFT>>
+R84	Dat Arg1:T44 Arg2:T38 <<REDUNDANT!!!REMOVED>>	16.08.2019r -> angioplastyką zwężenia zespolenia Glenna <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2033, 1665] <type: LEFT>>
+R85	Dat Arg1:T44 Arg2:T39 <<REDUNDANT!!!REMOVED>>	16.08.2019r -> zwężenia tunelu zewnątrzprzedsionkowego z implantacją stentu CP 4528 COVERED 18 x 45 mm z doprężeniem stentu śr. 20 x 40 mm <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2033, 1707] <type: LEFT>>
+R86	Dat Arg1:T44 Arg2:T40 <<REDUNDANT!!!REMOVED>>	16.08.2019r -> zamknięciu przetoki żylnej zestawem Amplatzer vascular Plug IV 8 mm <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2033, 1836] <type: LEFT>>
+R87	Dat Arg1:T44 Arg2:T43 << OK >>	16.08.2019r -> cewnikowaniu serca  <RANK: 3> <info: start[2033, 2014] <type: LEFT>>
+R88	Dat Arg1:T44 Arg2:T45 <<REDUNDANT!!!REMOVED>>	16.08.2019r -> Cewnikowanie serca <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2033, 1644] <type: LEFT>>
+
+
+Sentence 14:
+------------------------------------------------
+
+
+
+Sentence 15:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 16:
+Próba zgodności (kontrola grupy krwi biorcy)
+    
+
+
+Sentence 17:
+NR-KS:K-19/2712
+    KODKRESKOWYPROBKI:K-19/2712
+    
+
+
+Sentence 18:
+GR:O
+    RH:+ (dodatni)
+    
+
+
+Sentence 19:
+FENOTYP:K-
+    P-CIALA:Przeciwciał odpornościowych dla antygenów krwinek czerwonych nie stwierdzono.
+    
+
+
+Sentence 20:
+DONACJA:
+
+
+Sentence 21:
+Z510819001298
+    GR:O
+    RH:+ (dodatni)
+    WYNIK-D:zgodna
+
+
+
+Sentence 22:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.75[10^3/ul]
+    
+
+
+Sentence 23:
+RBC Krwinki czerwone:6.68[10^6/ul]
+    
+
+
+Sentence 24:
+HGB Hemoglobina:18.5[g/dl]
+    
+
+
+Sentence 25:
+HCT Hematokryt:53.2[%]
+    
+
+
+Sentence 26:
+MCV wskaźnik czerwonokrw:79.6[fl]
+    
+
+
+Sentence 27:
+MCH wskaźnik czerwonokrw:27.7[pg]
+    
+
+
+Sentence 28:
+MCHC wskaźnik czerwonokr:34.8[g/dl]
+    
+
+
+Sentence 29:
+PLT z morfologii:131[10^3/ul]
+    
+
+
+Sentence 30:
+RDW-SD:40.1[fl]
+    
+
+
+Sentence 31:
+RDW-CV:14.5[%]
+    PDW:20.3[fl]
+    MPV:13.0[fl]
+    
+
+
+Sentence 32:
+P-LCR:49.5[%]
+    
+
+
+Sentence 33:
+PCT (hematokryt płytkowy:0.17[%]
+    
+
+
+Sentence 34:
+NEUTR# wartość bezwzględ:4.31[10^3/ul]
+    
+
+
+Sentence 35:
+NEUTR%:75.0[%]
+    
+
+
+Sentence 36:
+LYMH# wartość bezwzględn:0.92[10^3/ul]
+    
+
+
+Sentence 37:
+LYMPH%:16.0[%]
+    
+
+
+Sentence 38:
+MONO# wartość bezwzględn:0.46[10^3/ul]
+    MONO%:8.0[%]
+    
+
+
+Sentence 39:
+EO# wartość bezwzględna:0.04[10^3/ul]
+    
+
+
+Sentence 40:
+EO%:0.7[%]
+    BASO# wartość bezwzględn:0.02[10^3/ul]
+    
+
+
+Sentence 41:
+BASO%:0.3[%]
+    
+
+
+Sentence 42:
+NRBC %:0.0[%]
+    
+
+
+Sentence 43:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 44:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:38.6[sek]
+
+
+
+Sentence 45:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 46:
+Czas protrombinowy:13.7[sek]
+    
+
+
+Sentence 47:
+Wskaźnik PT:80.3[%]
+    
+
+
+Sentence 48:
+INR:1.24
+Czas trombinowy TT: Czas trombinowy TT:13.3[sek]
+
+
+
+Sentence 49:
+Fibrynogen: Fibrynogen:3.45[g/L]
+
+
+
+Sentence 50:
+D-dimer - test ilościowy: D-dimer - test ilościowy:187[ng/ml]
+
+
+
+Sentence 51:
+Płytki krwi z THEX: Płytki krwi:115[10^3/ul]
+
+
+
+Sentence 52:
+Badanie ogólne moczu
+    
+
+
+Sentence 53:
+barwa:żółty[ ]
+    
+
+
+Sentence 54:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 55:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 56:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 57:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 58:
+ciężar właściwy:1.018[ ]
+    
+
+
+Sentence 59:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 60:
+pH:5.0[ ]
+    
+
+
+Sentence 61:
+białko:nieobecne[ ]
+    
+
+
+Sentence 62:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 63:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 64:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 65:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 66:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 67:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 68:
+leukocyty:7 /ul[ul]
+    erytrocyty świeże:1 /ul[ul]
+    śluz:dość liczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 69:
+TSH: TSH:2.89[uIU/ml]
+
+
+
+Sentence 70:
+FT3: FT3:3.72[pg/ml]
+
+
+
+Sentence 71:
+FT4: FT4:1.49[ng/dl]
+
+
+
+Sentence 72:
+Witamina D 25-OH: Witamina D 25-OH:26.0[ng/ml]
+
+
+
+Sentence 73:
+AFP: AFP:1.03[IU/ml]
+
+
+
+Sentence 74:
+ALAT: ALAT:50[U/L]
+
+
+
+Sentence 75:
+Albumina: Albumina:4.8[g/dl]
+
+
+
+Sentence 76:
+ASPAT: ASPAT:43[U/L]
+
+
+
+Sentence 77:
+Białko całkowite w surowicy (TP): Białko całkowite w surow:8.6[g/dl]
+
+
+
+Sentence 78:
+Bilirubina całkowita (TBil): Bilirubina całkowita:2.21[mg/dl]
+
+
+
+Sentence 79:
+Cholesterol całkowity: Cholesterol całkowity:121[mg/dl]
+
+
+
+Sentence 80:
+Cholesterol HDL: Cholesterol HDL:49[mg/dl]
+
+
+
+Sentence 81:
+Cholestrol LDL (direct): Cholestrol LDL:61[mg/dl]
+
+
+
+Sentence 82:
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.66[mg/dl]
+
+
+
+Sentence 83:
+Sód (Na): Sód:142[mmol/L]
+
+
+
+Sentence 84:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 85:
+Fosfataza alkaliczna (ALP): Fosfataza alkaliczna:158[U/L]
+
+
+
+Sentence 86:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:68[U/L]
+
+
+
+Sentence 87:
+Kreatynina + GFR
+    
+
+
+Sentence 88:
+Kreatynina w surowicy:1.02[mg/dl]
+    
+
+
+Sentence 89:
+eGFR stand. wg Schwartza:126.3[ml/min/1,73 m^2]
+    
+
+
+Sentence 90:
+eGFR zmod.
+
+
+Sentence 91:
+wg Schwartza:74.5[ml/min/1,73 m^2]
+    wzrost:184[cm]
+
+
+
+Sentence 92:
+Mleczany (LAC): Mleczany:26.4[mg/dl]
+
+
+
+Sentence 93:
+Magnez: Magnez:0.81[mmol/L]
+
+
+
+Sentence 94:
+Mocznik: Mocznik:33[mg/dl]
+
+
+
+Sentence 95:
+ASO: ASO:59[IU/ml]
+
+
+
+Sentence 96:
+AAT w kale: AAT w kale:SYNEVO
+
+
+
+Sentence 97:
+NT-proBNP surowica: NT-proBNP w surowicy:35[pg/ml]
+
+
+
+Sentence 98:
+------------------------------------------------
+
+
+
+Sentence 99:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 100:
+Q20.3
+Q24.0
+Q20.4
+Q23.2
+Z95.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 101:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 102:
+I81
+G
+I89
+K01
+M87
+N45
+K03
+88.776
+L07
+88.777
+I09
+C55
+O91
+G11
+I77
+I99
+L31
+
+
+
+Sentence 103:
+L11
+I17
+N11
+I19
+O35
+M37
+
+
+
+Sentence 104:
+N13
+U75
+88.761
+
+
+
+Sentence 105:
+------------------------------------------------
+
+

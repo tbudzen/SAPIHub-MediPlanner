@@ -1,0 +1,117 @@
+T1	Drug 341 348	Amlozek
+T2	Drug 351 359	Polocard
+T3	Drug 361 373	Hydroxyzinum
+T4	Drug 375 383	Primacor
+T5	Drug 386 393	Nebilet
+T6	Drug 396 406	NaCl 0,9 %
+T7	Condition 602 621	Drożny otwór owalny
+N1	Reference T7 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T8	Condition 623 681	Nadkomorowe zaburzenia rytmu serca ( pobudzenia pojedyncze
+N2	Reference T8 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T10	Condition 687 711	częstoskurcz nadkomorowe
+N3	Reference T10 ICD10:I47.1	Częstoskurcz nadkomorowy
+T11	Condition 714 735	Nadciśnienie tętnicze
+N4	Reference T11 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T12	Condition 737 757	Hipercholesterolemia
+N5	Reference T12 ICD10:E78.0	Czysta hipercholesterolemia
+T13	Condition 760 803	Incydent przemijającego niedokrwienia mózgu
+N6	Reference T13 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T14	Date 804 814	03.09.2018
+R1	Dat Arg1:T14 Arg2:T13	
+T15	Condition 816 860	Prawostronny zespół cieśni kanału nadgarstka
+N7	Reference T15 ICD10:G56.0	Zespół cieśni nadgarstka
+T16	Behaviour 862 872	Nikotynizm
+N8	Reference T16 ICD10:Z72.0	Używanie tytoniu
+T17	Treatment 1244 1309	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T18	Behaviour 1312 1352	Dieta lekkostrawna , niskocholesterolowa
+T19	Investigation 1373 1504	oznaczenie w dobowej zbiórce moczu kwas 5 hydroksyindolooctowy, kwas wanilinomigdałowy, metoksykatecholaminy , renina , aldosterono
+T20	Date 1507 1520	za 4 tygodnie
+R2	Dat Arg1:T20 Arg2:T19	
+T21	Investigation 1523 1606	Okresowo kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek
+T22	Investigation 1609 1657	Systematyczna kontrola ciśnienia tętniczego krwi
+T23	Treatment 1660 1701	Wskazane systematyczne przyjmowanie leków
+T24	Drug 1708 1720	Atorvasterol
+T25	Drug_dose 1721 1744	20 mg 1 x dz  wieczorem
+R3	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1747 1754	Plocard
+T27	Drug_dose 1755 1776	75 mg 1x dz wieczorem
+R4	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1779 1787	Primacor
+T29	Drug_dose 1788 1804	20 mg 1x dz rano
+R5	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1806 1813	Nebilet
+T31	Drug_dose 1814 1842	5 mg 1x dz po 1/4 tabl. rano
+R6	Drg Arg1:T30 Arg2:T31	
+T32	Investigation 2012 2015	TEE
+T33	Condition 2025 2064	wiotkiej przegrody międzyprzedsionkowej
+N9	Reference T33 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T34	Condition 2067 2081	przebytego TIA
+N10	Reference T34 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T35	Symptom 2103 2123	nierówne prace serca
+N11	Reference T35 ICD10:R00.8	Inne i nieokreślone zaburzenia rytmu serca
+T36	Symptom 2134 2169	dyskomforty w okolicy gardła, szyji
+N12	Reference T36 ICD10:R07.0	Ból gardła
+T37	Symptom 2175 2188	zawroty głowy
+N13	Reference T37 ICD10:R42	Zawroty głowy i odurzenie
+T38	Negation 2192 2198	Neguje
+T39	Symptom 2199 2211	zasłabnięcia
+R7	Neg Arg1:T38 Arg2:T39	
+T40	Condition 2229 2250	Nadciśnienie tętnicze
+N14	Reference T40 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T41	Condition 2252 2295	Incydent przemijającego niedokrwienia mózgu
+N15	Reference T41 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T42	Date 2296 2306	03.09.2018
+R8	Dat Arg1:T42 Arg2:T41	
+T43	Condition 2308 2352	Prawostronny zespół cieśni kanału nadgarstka
+N16	Reference T43 ICD10:G56.0	Zespół cieśni nadgarstka
+T44	Treatment 2355 2372	Przebyte operacje
+T45	Negation 2375 2379	brak
+R9	Neg Arg1:T45 Arg2:T44	
+T46	Treatment 2380 2399	Leczenie przewlekłe
+T47	Negation 2402 2406	brak
+R10	Neg Arg1:T47 Arg2:T46	
+T48	Condition 2435 2438	WZW
+N17	Reference T48 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T49	Negation 2441 2442	-
+R11	Neg Arg1:T49 Arg2:T48	
+T50	Condition 2448 2457	borelioza
+N18	Reference T50 ICD10:A69.2	Choroba z Lyme
+T51	Negation 2460 2461	-
+R12	Neg Arg1:T51 Arg2:T50	
+T52	Condition 2466 2485	wywiadzie rodzinnym
+A1	Status T52 Family
+T53	Condition 2496 2514	niewydolność nerek
+A2	Status T53 Family
+N19	Reference T53 ICD10:N18	Przewlekła niewydolność nerek
+T54	Condition 2517 2536	zaburzenia lipidowe
+A3	Status T54 Family
+N20	Reference T54 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T55	Condition 2545 2560	cukrzyca typu 2
+A4	Status T55 Family
+N21	Reference T55 ICD10:E11	Cukrzyca insulinoniezależna
+T56	Condition 2563 2565	AF
+A5	Status T56 Family
+N22	Reference T56 ICD10:I48	Migotanie i trzepotanie przedsionków
+T57	Behaviour 2569 2596	Palenie tytoniu: 5 dziennie
+N23	Reference T57 ICD10:Z72.0	Używanie tytoniu
+T58	Behaviour 2598 2609	Inne używki
+T59	Negation 2611 2614	nie
+R13	Neg Arg1:T59 Arg2:T58	
+T60	Condition 2615 2624	Uczulenia
+N24	Reference T60 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T61	Negation 2626 2632	neguje
+R14	Neg Arg1:T61 Arg2:T60	
+T62	Behaviour 2649 2675	warunki mieszkaniowe dobre
+T63	Drug 2700 2708	Polocard
+T64	Drug_dose 2709 2730	75 mg 1x dz wieczorem
+R15	Drg Arg1:T63 Arg2:T64	
+T65	Drug 2732 2739	Amlozek
+T66	Drug_dose 2740 2756	10 mg 1x dz rano
+R16	Drg Arg1:T65 Arg2:T66	
+T67	Investigation 2774 2777	TEE
+T68	Investigation 2781 2791	Holter EKG
+T69	Investigation 2794 2809	Próba Wysiłkowa
+T70	Investigation 2812 2815	TEE
+T71	Investigation 2818 2836	USG jamy brzusznej
+N25	Reference T39 ICD10:R55	Omdlenie i zapaść
+N26	Reference T58 ICD10:Z72	Problemy związane ze stylem życia

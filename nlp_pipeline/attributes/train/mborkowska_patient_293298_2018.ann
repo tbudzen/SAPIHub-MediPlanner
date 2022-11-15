@@ -1,0 +1,61 @@
+T1	Investigation 1632 1642	Echo serca
+T2	Negation 1608 1617	bez leków
+T3	Drug 1601 1605	Leki
+R1	Neg Arg1:T2 Arg2:T3	
+T4	Behaviour 1571 1597	warunki mieszkaniowe dobre
+T5	Negation 1548 1554	neguje
+T6	Negation 1533 1536	nie
+T7	Negation 1516 1519	nie
+T8	Negation 1461 1467	( -  )
+T9	Negation 1480 1485	( - )
+T10	Negation 1495 1498	(-)
+T11	Condition 1537 1546	Uczulenia
+N1	Reference T11 ICD10:T78.4	Alergia, nieokreślona
+R2	Neg Arg1:T5 Arg2:T11	
+T12	Behaviour 1520 1532	Inne używki:
+R3	Neg Arg1:T6 Arg2:T12	
+T13	Behaviour 1499 1514	Palenie tytoniu
+N2	Reference T13 ICD10:Z72.0	Używanie tytoniu
+R4	Neg Arg1:T7 Arg2:T13	
+T14	Condition 1457 1460	WZW
+N3	Reference T14 ICD10:B19	
+T15	Condition 1470 1479	borelioza
+N4	Reference T15 ICD10:A69.2	Choroba z Lyme
+T16	Condition 1487 1495	gruźlica
+N5	Reference T16 ICD10:A15	
+R5	Neg Arg1:T10 Arg2:T16	
+R6	Neg Arg1:T9 Arg2:T15	
+R7	Neg Arg1:T8 Arg2:T14	
+T17	Negation 1426 1429	nie
+T18	Negation 1401 1404	nie
+T19	Treatment 1405 1424	Leczenie przewlekłe
+R8	Neg Arg1:T17 Arg2:T19	
+T20	Treatment 1381 1398	Przebyte operacje
+R9	Neg Arg1:T18 Arg2:T20	
+T21	Symptom 1313 1337	bóle w klatce piersiowej
+N6	Reference T21 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T22	Symptom 1343 1379	zawroty glowy po większych wysiłkach
+N7	Reference T22 ICD10:R42	Zawroty głowy i odurzenie
+T23	Date 1283 1303	od ok dwóch miesięcy
+R10	Dat Arg1:T23 Arg2:T21	
+R11	Dat Arg1:T23 Arg2:T22	
+T24	Condition 1144 1183	zlozona wadą aortalną w postaci stenozy
+N8	Reference T24 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T25	Condition 1186 1201	niedomykalności
+N9	Reference T25 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T26	Behaviour 947 1001	zajęcia wychowania fizycznego: bez wysiłków długotrwał
+T27	Condition 438 478	Wada aortalna z przewagą niedomykalności
+N10	Reference T27 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T28	Condition 481 522	przebiegu dwupłatkowej zastawki aortalnej
+N11	Reference T28 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T29	Condition 524 527	BAV
+N12	Reference T29 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T30	Drug 653 658	leków
+T31	Negation 649 652	bez
+R12	Neg Arg1:T31 Arg2:T30	
+N13	Reference T12 ICD10:Z72	Problemy związane ze stylem życia
+T32	Treatment 769 791	kontrola u lekarza POZ
+T33	Treatment 801 862	kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych
+T34	Treatment 865 908	ponowna hospitalizacja w tutejszym oddziale
+T35	Date 909 918	za 6 m-cy
+R13	Dat Arg1:T35 Arg2:T34	

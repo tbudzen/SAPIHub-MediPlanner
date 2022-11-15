@@ -1,0 +1,146 @@
+T1	Drug 341 349	Bisocard
+T2	Drug 351 358	Amlopin
+T3	Treatment 469 491	kontrola u lekarza POZ
+T4	Treatment 494 555	kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych
+T5	Investigation 579 638	kontrola wartości ciśnienia tętniczego w warunkach domowych
+T6	Investigation 641 661	kontrola lipidogramu
+T7	Date 662 670	za 1 rok
+R1	Dat Arg1:T7 Arg2:T6	
+T8	Condition 912 933	Nadciśnienie tętnicze
+N1	Reference T8 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T9	Symptom 935 957	Napady kołatania serca
+N2	Reference T9 ICD10:R00.2	Kołatanie serca
+T10	Condition 972 1014	choroba zwyrodnieniowa kręgosłupa szyjnego
+N3	Reference T10 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T11	Condition 1016 1037	wole guzkowe tarczycy
+N4	Reference T11 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T12	Condition 1039 1082	nadżerkowe zapalenie błony śluzowej żołądka
+N5	Reference T12 ICD10:K29.7	Zapalenie żołądka, nieokreślone
+T13	Condition 1084 1113	zakażenie Helicobacter pylori
+T14	Treatment 1124 1134	eradykacja
+T15	Condition 1281 1283	HA
+N6	Reference T15 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T16	Date 1284 1292	od 3 lat
+R2	Dat Arg1:T16 Arg2:T15	
+T17	Symptom 1346 1368	chwiejnych wartości RR
+N7	Reference T17 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T18	Investigation_result 1371 1403	Bez leczenia: RR 145-170/100mmHg
+N8	Reference T18 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T19	Drug 1411 1422	Bisocardzie
+T20	Drug_dose 1423 1428	2,5mg
+T21	Drug 1431 1440	Dopegycie
+T22	Drug_dose 1441 1444	1x1
+R3	Drg Arg1:T21 Arg2:T22	
+R4	Drg Arg1:T19 Arg2:T20	
+T23	Investigation_result 1447 1467	RR 117/75-140/92mmHg
+N9	Reference T23 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T24	Symptom 1498 1543	uczucie niemożności wzięcia głębokiego wdechu
+N10	Reference T24 ICD10:R06.0	Duszność
+T25	Condition 1545 1587	choroba zwyrodnieniowa kręgosłupa szyjnego
+N11	Reference T25 ICD10:M47	Zmiany zwyrodnieniowe kręgosłupa
+T26	Symptom 1596 1629	kołatania serca trwające do 30min
+N12	Reference T26 ICD10:R00.2	Kołatanie serca
+T27	Condition 1671 1685	guzki tarczycy
+N13	Reference T27 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T28	Condition 1733 1764	nadżerki błony śluzowej żołądka
+N14	Reference T28 ICD10:K29.7	Zapalenie żołądka, nieokreślone
+T29	Condition 1767 1796	zakażenie Helicobacter pylori
+T30	Treatment 1807 1827	skończona eradykacja
+T31	Drug 1828 1837	Ospamoxem
+T32	Drug 1840 1854	Metronidazolem
+T33	Investigation 1858 1870	RTG kl piers
+T34	Investigation_result 1893 1903	prawidłowy
+R5	Inv Arg1:T33 Arg2:T34	
+T35	Negation 1905 1911	Neguje
+T36	Symptom 1913 1925	zasłabnięcia
+T37	Symptom 1927 1935	omdlenia
+N15	Reference T37 ICD10:R55	Omdlenie i zapaść
+T38	Condition 1937 1953	chorobę wrzodową
+N16	Reference T38 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T39	Symptom 1955 1969	duszność nocną
+N17	Reference T39 ICD10:R06.0	Duszność
+T40	Symptom 1971 1986	obrzęki podudzi
+N18	Reference T40 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T41	Symptom 1988 2012	bóle w klatce piersiowej
+N19	Reference T41 ICD10:R07	Ból gardła i w klatce piersiowej
+T42	Condition 2014 2016	DM
+N20	Reference T42 ICD10:E14	Cukrzyca nieokreślona
+T43	Symptom 2018 2049	ograniczenie wysiłku fizycznego
+N21	Reference T43 ICD10:R53	Złe samopoczucie i zmęczenie
+T44	Symptom 2051 2082	objawy zapalenia żył kk dolnych
+N22	Reference T44 ICD10:I80.3	Zapalenie i zakrzepowe zapalenie żył kończyn dolnych, nieokreślone
+T45	Drug 2084 2097	antykoncepcję
+R6	Neg Arg1:T35 Arg2:T45	
+R7	Neg Arg1:T35 Arg2:T44	
+R8	Neg Arg1:T35 Arg2:T43	
+R9	Neg Arg1:T35 Arg2:T42	
+R10	Neg Arg1:T35 Arg2:T41	
+R11	Neg Arg1:T35 Arg2:T40	
+R12	Neg Arg1:T35 Arg2:T39	
+R13	Neg Arg1:T35 Arg2:T38	
+R14	Neg Arg1:T35 Arg2:T37	
+R15	Neg Arg1:T35 Arg2:T36	
+T46	Treatment 2099 2116	Przebyte operacje
+T47	Negation 2118 2121	nie
+R16	Neg Arg1:T47 Arg2:T46	
+T48	Behaviour 2122 2137	Palenie tytoniu
+T49	Negation 2139 2147	nie pali
+T50	Date 2148 2158	od 09.2019
+R17	Dat Arg1:T50 Arg2:T48	
+R18	Neg Arg1:T49 Arg2:T48	
+T51	Behaviour 2159 2170	Inne używki
+T52	Negation 2172 2175	nie
+R19	Neg Arg1:T52 Arg2:T51	
+T53	Condition 2176 2185	Uczulenia
+T54	Negation 2187 2190	nie
+T55	Symptom 2220 2253	zmiany kontaktowe na dłoni prawej
+R20	Neg Arg1:T54 Arg2:T53	
+T56	Condition 2282 2285	WZW
+N24	Reference T56 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T57	Condition 2292 2301	borelioza
+N25	Reference T57 ICD10:A69.2	Choroba z Lyme
+T58	Condition 2307 2310	tbc
+N26	Reference T58 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T59	Condition 2316 2320	odra
+N27	Reference T59 ICD10:B05	Odra
+T60	Condition 2326 2340	kontakt z odrą
+N28	Reference T60 ICD10:B05	Odra
+T61	Negation 2342 2343	-
+R21	Neg Arg1:T61 Arg2:T60	
+T62	Negation 2322 2323	-
+R22	Neg Arg1:T62 Arg2:T59	
+T63	Negation 2312 2313	-
+R23	Neg Arg1:T63 Arg2:T58	
+T64	Negation 2303 2304	-
+R24	Neg Arg1:T64 Arg2:T57	
+T65	Negation 2287 2288	-
+R25	Neg Arg1:T65 Arg2:T56	
+T67	Condition 2375 2397	zmarł w 52 rż na zawał
+A1	Status T67 Family
+N29	Reference T67 ICD10:I25.2	Przebyty zawał serca
+T68	Condition 2407 2409	HA
+A2	Status T68 Family
+N30	Reference T68 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T70	Behaviour 2437 2463	warunki mieszkaniowe dobre
+T71	Drug 2501 2509	Bisocard
+T72	Drug 2531 2538	Dopegyt
+T73	Drug_dose 2510 2530	5mg 1x 1/2 tabl/rano
+T74	Drug_dose 2539 2553	1x 1 tabl/rano
+R28	Drg Arg1:T71 Arg2:T73	
+R29	Drg Arg1:T72 Arg2:T74	
+T75	Investigation 2614 2635	badania laboratoryjne
+T76	Investigation 2637 2641	ECHO
+T77	Investigation 2643 2661	EKG metodą Holtera
+T78	Investigation 2663 2667	ABPM
+T79	Investigation 2669 2684	próba wysiłkowa
+A3	Source T55 Declared
+T80	Condition 2347 2366	wywiadzie rodzinnym
+A4	Status T80 Family
+N31	Reference T13 ICD10:B96.8	Inne określone bakterie jako przyczyna chorób sklasyfikowanych w innych rozdziałach
+T66	Symptom 1646 1669	dyskomfortem w kl piers
+N32	Reference T66 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N33	Reference T29 ICD10:B96.8	Inne określone bakterie jako przyczyna chorób sklasyfikowanych w innych rozdziałach
+N34	Reference T53 ICD10:T78.4	Alergia, nieokreślona
+N35	Reference T55 ICD10:L23.9	Alergiczne kontaktowe zapalenie skóry o nieokreślonej przyczynie
+N36	Reference T36 ICD10:R55	Omdlenie i zapaść
+N23	Reference T48 ICD10:Z72.0	Używanie tytoniu

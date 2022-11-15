@@ -1,0 +1,36 @@
+T1	Drug 353 361	Enarenal
+T2	Drug_dose 362 373	2,5mg 1x dz
+T3	Drug 424 432	Euthyrox
+T4	Drug_dose 433 445	50ug 1x rano
+T5	Treatment 449 481	Przyjecie do Kliniki Kardiologii
+T6	Date 482 500	w dniu 23.04.2018r
+T7	Treatment 534 558	kwalifikacji do operacji
+R1	Drg Arg1:T1 Arg2:T2	
+R2	Drg Arg1:T3 Arg2:T4	
+R3	Dat Arg1:T6 Arg2:T5	
+R4	Dat Arg1:T6 Arg2:T7	
+T8	Condition 832 901	Wrodzona wada serca pod postacią ubytku w przegrodzie międzykomorowej
+N1	Reference T8 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T9	Condition 903 931	drożnego przewodu tętniczego
+N2	Reference T9 ICD10:Q25.0	Drożny przewód tętniczy
+T10	Condition 934 950	koarktacji aorty
+N3	Reference T10 ICD10:Q25.1	Zwężenie cieśni aorty
+T11	Treatment 963 991	korekcji kardiochirurgicznej
+N4	Reference T11 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T12	Date 993 1004	04.02.2014r
+T13	Condition 1010 1022	Zespół Downa
+N5	Reference T13 ICD10:Q90.9	Zespół Downa, nieokreślony
+R5	Dat Arg1:T12 Arg2:T11	
+T14	Investigation 1035 1053	cewnikowaniu serca
+T15	Date 1055 1064	09.10.14r
+T16	Condition 1070 1120	Wrodzona niedomykalność zastawki aortalnej III st.
+N6	Reference T16 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T17	Investigation 1124 1134	Obserwacja
+T18	Condition 1136 1146	koarktacji
+N7	Reference T18 ICD10:Q25.1	Zwężenie cieśni aorty
+T19	Negation 1147 1156	negatywna
+R6	Neg Arg1:T19 Arg2:T18	
+R7	Dat Arg1:T15 Arg2:T14	
+T20	Symptom 1316 1339	w  stanie  dość  dobrym
+T21	Drug 1412 1420	Euthyrox
+T22	Drug 1425 1433	Enarenal

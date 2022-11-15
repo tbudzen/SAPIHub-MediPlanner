@@ -1,0 +1,225 @@
+T1	Treatment 330 357	dalsza opieka w poradni POZ
+T2	Treatment 359 390	okresowa kontrola neurologiczna
+T3	Treatment 391 440	wskazana kontrola w Poradni Kardiologicznej ICZMP
+T4	Date 441 457	za ok. 1 miesiąc
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Investigation 479 517	wskazana częsta kontrola wskaźnika INR
+T6	Investigation_result 519 547	zalecane wartości INR ok.3,0
+T7	Behaviour 549 594	dieta ubogocholesterolowa, ubogowęglowodanowa
+T8	Behaviour 595 623	zaprzestanie palenia tytoniu
+T9	Treatment 624 652	regularne przyjmowanie leków
+T10	Drug 654 666	Acenokumarol
+T11	Drug_dose 667 673	wg INR
+R2	Drg Arg1:T10 Arg2:T11	
+T12	Drug 674 682	Bisocard
+T13	Drug_dose 683 701	10 mg 1 tabl. rano
+R3	Drg Arg1:T12 Arg2:T13	
+T14	Drug 702 709	Tritace
+T15	Drug_dose 710 736	2,5 mg 1/2 tabl. wieczorem
+R4	Drg Arg1:T14 Arg2:T15	
+T16	Drug 738 745	Kaldyum
+T17	Drug_dose 746 755	1x1 tabl.
+R5	Drg Arg1:T16 Arg2:T17	
+T18	Drug 757 765	Suvardio
+T19	Drug_dose 766 789	10 mg 1 tabl. wieczorem
+R6	Drg Arg1:T18 Arg2:T19	
+T20	Drug 791 798	Vestibo
+T21	Drug 816 823	Symglic
+T22	Drug_dose 799 814	24 mg 2x1 tabl.
+R7	Drg Arg1:T20 Arg2:T22	
+T23	Drug_dose 824 841	4 mg 1 tabl. rano
+R8	Drg Arg1:T21 Arg2:T23	
+T24	Drug 843 849	Siofor
+T25	Drug_dose 850 866	850 mg 3x1 tabl.
+R9	Drg Arg1:T24 Arg2:T25	
+T26	Drug 868 878	Insulatard
+T27	Drug_dose 879 901	o godz. 21.00 - 4-10 j
+R10	Drg Arg1:T26 Arg2:T27	
+T28	Condition 1128 1176	Wada nabyta serca pod postacią stenozy mitralnej
+N1	Reference T28 ICD10:I34.2	Niereumatyczne zwężenie zastawki mitralnej
+T29	Treatment 1187 1227	implantacji zastawki St Jude Medical 29M
+T30	Date 1229 1233	1993
+R11	Dat Arg1:T30 Arg2:T29	
+T31	Condition 1236 1265	Przewlekła niewydolność serca
+T32	Condition 1289 1329	zachowaną funkcją skurczową lewej komory
+T33	Condition 1331 1374	Napadowe migotanie/trzepotanie przedsionków
+N3	Reference T33 ICD10:I48	Migotanie i trzepotanie przedsionków
+T34	Investigation 1380 1392	CHA2DS2-VASC
+T35	Investigation 1400 1408	HAS-BLED
+T36	Investigation_result 1393 1398	7 pkt
+T37	Investigation_result 1409 1414	4 pkt
+R12	Inv Arg1:T35 Arg2:T37	
+R13	Inv Arg1:T34 Arg2:T36	
+T38	Condition 1418 1439	Nadciśnienie tętnicze
+N4	Reference T38 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T39	Condition 1441 1453	Cukrzyca t.2
+N5	Reference T39 ICD10:E11	Cukrzyca insulinoniezależna
+T40	Condition 1463 1477	udarze móżdżku
+N6	Reference T40 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T41	Date 1479 1483	2015
+R14	Dat Arg1:T41 Arg2:T40	
+T42	Condition 1486 1511	Miażdżyca tętnic szyjnych
+N7	Reference T42 ICD10:I65.2	Niedrożność i zwężenie tętnicy szyjnej wewnętrznej
+T43	Condition 1513 1528	Miażdżyca aorty
+N8	Reference T43 ICD10:I70.0	Miażdżyca aorty
+T44	Condition 1530 1550	Stłuszczenie wątroby
+N9	Reference T44 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T45	Condition 1552 1569	Zaćma oka prawego
+N10	Reference T45 ICD10:H26.9	Zaćma, nieokreślona
+T46	Condition 1571 1579	Depresja
+N11	Reference T46 ICD10:F33	Zaburzenia depresyjne nawracające
+T47	Condition 1748 1759	tachykardii
+N12	Reference T47 ICD10:R00.0	Tachykardia, nieokreślona
+T48	Date 1770 1777	>1 m-ca
+R15	Dat Arg1:T48 Arg2:T47	
+T49	Drug 1826 1833	Coaxilu
+T51	Symptom 1865 1877	zwroty głowy
+N13	Reference T51 ICD10:R42	Zawroty głowy i odurzenie
+T52	Symptom 1879 1887	zaparcia
+N14	Reference T52 ICD10:K59.0	Zaparcie
+T53	Condition 1889 1900	tachykardia
+N15	Reference T53 ICD10:R00.0	Tachykardia, nieokreślona
+T54	Negation 1907 1916	ostawiony
+R17	Neg Arg1:T54 Arg2:T49	
+T55	Date 1933 1945	po 17 dniach
+R16	Dat Arg1:T55 Arg2:T49	
+T50	Treatment 1962 1993	Hospitalizacja w Skierniewicach
+T56	Date 2004 2031	od 29/05/2019 do 04/06/2019
+R18	Dat Arg1:T56 Arg2:T50	
+T57	Symptom 2056 2071	kołatania serca
+N16	Reference T57 ICD10:R00.2	Kołatanie serca
+T58	Symptom 2074 2105	zmniejszenia tolerancji wysiłku
+N17	Reference T58 ICD10:R53	Złe samopoczucie i zmęczenie
+T59	Investigation 2133 2149	echokardiogramie
+T60	Investigation_result 2150 2198	prawidłowa funkcja skurczowa obu komór (EF 50%!)
+T61	Investigation_result 2200 2215	powiększenie LP
+N18	Reference T61 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T62	Investigation_result 2217 2253	w ujściu mitralnym sztuczna zastawka
+T63	Investigation_result 2292 2325	gradientem max. 25, srednim 6mmHg
+T64	Investigation_result 2328 2342	IT umiarkowana
+N19	Reference T64 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T65	Investigation_result 2344 2371	cechy nadciśnienia płucnego
+N20	Reference T65 ICD10:I27.0	Pierwotne nadciśnienie płucne
+R19	Inv Arg1:T59 Arg2:T60	
+R20	Inv Arg1:T59 Arg2:T61	
+R21	Inv Arg1:T59 Arg2:T62	
+R22	Inv Arg1:T59 Arg2:T63	
+R23	Inv Arg1:T59 Arg2:T64	
+R24	Inv Arg1:T59 Arg2:T65	
+T66	Investigation 2377 2387	Holter EKG
+T67	Investigation_result 2394 2417	HR 50-106/min, bez pauz
+R25	Inv Arg1:T66 Arg2:T67	
+T68	Condition 2445 2457	AFl napadowe
+N21	Reference T68 ICD10:I48	Migotanie i trzepotanie przedsionków
+T69	Condition 2467 2481	udarze móżdzku
+N22	Reference T69 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T70	Date 2483 2487	2015
+R26	Dat Arg1:T70 Arg2:T69	
+T71	Symptom 2502 2524	silnych zawrotów głowy
+N23	Reference T71 ICD10:R42	Zawroty głowy i odurzenie
+T72	Investigation_result 2526 2545	blaszki miażdzycowe
+N24	Reference T72 ICD10:I70.8	Miażdżyca innych tętnic
+T73	Investigation 2548 2560	tt. szyjnych
+T74	Investigation_result 2561 2591	bez znaczenie hemodynamicznego
+R27	Inv Arg1:T73 Arg2:T72	
+R28	Inv Arg1:T73 Arg2:T74	
+T75	Date 2593 2597	2015
+R29	Dat Arg1:T75 Arg2:T73	
+T76	Condition 2600 2603	CHF
+T77	Treatment 2677 2745	implantacji w ujście mitralne sztucznej zastawki St Jude Medical 29M
+T78	Date 2747 2751	1993
+R30	Dat Arg1:T78 Arg2:T77	
+T79	Condition 2762 2764	SM
+N26	Reference T79 ICD10:I34.2	Niereumatyczne zwężenie zastawki mitralnej
+T80	Condition 2766 2768	HA
+N27	Reference T80 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T81	Condition 2770 2776	DM t.2
+N28	Reference T81 ICD10:E11	Cukrzyca insulinoniezależna
+T82	Symptom 2778 2791	zawroty głowy
+N29	Reference T82 ICD10:R42	Zawroty głowy i odurzenie
+T83	Condition 2793 2810	zaćma oka prawego
+N30	Reference T83 ICD10:H26.9	Zaćma, nieokreślona
+T84	Treatment 2813 2838	do operacji kwalifikowana
+T85	Condition 2840 2848	depresja
+N31	Reference T85 ICD10:F33	Zaburzenia depresyjne nawracające
+T86	Condition 2850 2870	stłuszczenie wątroby
+N32	Reference T86 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T87	Treatment 2872 2889	Przebyte operacje
+T88	Condition 2897 2912	Wywiad rodzinny
+A1	Status T88 Family
+T89	Negation 2914 2927	bez znaczenia
+R31	Neg Arg1:T89 Arg2:T88	
+T90	Condition 2929 2936	Alergie
+N33	Reference T90 ICD10:T78.4	Alergia, nieokreślona
+T91	Negation 2939 2945	neguje
+R32	Neg Arg1:T91 Arg2:T90	
+T92	Behaviour 2947 2957	Nikotynizm
+T93	Date 2964 2980	do 20 lat wstecz
+R33	Dat Arg1:T93 Arg2:T92	
+T94	Behaviour 2982 2994	30 paczkolat
+T95	Behaviour 2996 3003	Alkohol
+N36	Reference T95 ICD10:Z72.1	Używanie alkoholu
+T96	Negation 3005 3011	neguje
+R34	Neg Arg1:T96 Arg2:T95	
+T97	Behaviour 3013 3030	Uzależnienie inne
+T98	Negation 3032 3038	neguje
+R35	Neg Arg1:T98 Arg2:T97	
+T99	Behaviour 3056 3065	emerytura
+T100	Behaviour 3067 3075	krawcowa
+T101	Drug 3082 3094	Acenokumarol
+T102	Drug_dose 3114 3122	3-3-2-3-
+T103	Drug_dose 3146 3169	kolejne dni 4-4-3-3-2mg
+R36	Drg Arg1:T101 Arg2:T102	
+R37	Drg Arg1:T101 Arg2:T103	
+T104	Investigation_result 3136 3144	INR 1.65
+T105	Drug 3170 3177	Digoxin
+T106	Drug_dose 3178 3197	100 ug 1 tabl. rano
+R38	Drg Arg1:T105 Arg2:T106	
+T107	Drug 3199 3205	Lokren
+T108	Drug_dose 3206 3221	10 mg 1/2 tabl.
+R39	Drg Arg1:T107 Arg2:T108	
+T109	Drug 3223 3230	Tritace
+T110	Drug_dose 3231 3247	1.25mg wieczorem
+R40	Drg Arg1:T109 Arg2:T110	
+T111	Drug 3249 3256	Kaldyum
+T112	Drug_dose 3257 3266	2x1 tabl.
+R41	Drg Arg1:T111 Arg2:T112	
+T113	Drug 3268 3276	Suvardio
+T114	Drug_dose 3277 3300	10 mg 1 tabl. wieczorem
+R42	Drg Arg1:T113 Arg2:T114	
+T115	Drug 3302 3309	Vestibo
+T116	Drug_dose 3310 3325	24 mg 2x1 tabl.
+R43	Drg Arg1:T115 Arg2:T116	
+T117	Drug 3327 3334	Symglic
+T118	Drug_dose 3335 3352	4 mg 1 tabl. rano
+R44	Drg Arg1:T117 Arg2:T118	
+T119	Drug 3354 3360	Siofor
+T120	Drug_dose 3361 3377	850 mg 3x1 tabl.
+R45	Drg Arg1:T119 Arg2:T120	
+T121	Drug 3379 3389	Insulatard
+T122	Drug_dose 3390 3430	o 21 - różnie 4-10 j po pomiarze decyzja
+R46	Drg Arg1:T121 Arg2:T122	
+T123	Investigation 3459 3469	echo serca
+T124	Investigation 3471 3474	TET
+T125	Investigation 3476 3480	ABPM
+T126	Investigation 3482 3492	Holter ekg
+T127	Investigation 3494 3512	rtg kl. piersiowej
+T128	Condition 1375 1378	PAT
+N37	Reference T128 ICD10:I47.1	Częstoskurcz nadkomorowy
+T129	Condition 2442 2444	AF
+N38	Reference T129 ICD10:I48	Migotanie i trzepotanie przedsionków
+T130	Symptom 1266 1286	II/III klasa wg NYHA
+N39	Reference T130 ICD10:I50	Niewydolność serca
+N2	Reference T31 ICD10:I50	Niewydolność serca
+N40	Reference T32 ICD10:I50	Niewydolność serca
+T131	Symptom 2604 2624	II/III klasa wg NYHA
+N41	Reference T131 ICD10:I50	Niewydolność serca
+N25	Reference T76 ICD10:I50	Niewydolność serca
+T132	Condition 2627 2667	zachowaną funkcją skurczową lewej komory
+N42	Reference T132 ICD10:I50	Niewydolność serca
+N34	Reference T92 ICD10:Z72.0	Używanie tytoniu
+N35	Reference T94 ICD10:Z72.0	Używanie tytoniu
+T133	Investigation_result 2388 2391	AFl
+N43	Reference T133 ICD10:I48	Migotanie i trzepotanie przedsionków
+R47	Inv Arg1:T66 Arg2:T133	
+N44	Reference T97 ICD10:Z72	Problemy związane ze stylem życia

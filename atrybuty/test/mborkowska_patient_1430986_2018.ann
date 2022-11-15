@@ -1,0 +1,173 @@
+T1	Investigation 3907 3917	echo serca
+T2	Investigation 3920 3923	TET
+T3	Investigation 3925 3929	ABPM
+T4	Investigation 3931 3937	Holter
+T5	Investigation 3939 3957	RTG kl. piersiowej
+T6	Drug 3867 3879	Bicalutamide
+T7	Negation 3802 3812	nie podaje
+T8	Negation 3747 3755	nie pali
+T9	Behaviour 3730 3746	Palenie tytoniu:
+N1	Reference T9 ICD10:Z72.0	Używanie tytoniu
+R1	Neg Arg1:T8 Arg2:T9	
+T10	Date 3756 3764	od 4 lat
+R2	Dat Arg1:T10 Arg2:T9	
+T11	Behaviour 3765 3790	Inne używki: okazjonalnie
+N2	Reference T11 ICD10:Z72.1	Używanie alkoholu
+T12	Condition 3791 3800	Uczulenia
+N3	Reference T12 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R3	Neg Arg1:T7 Arg2:T12	
+T13	Condition 3727 3729	MI
+N4	Reference T13 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T14	Negation 3689 3699	nie podaje
+T15	Condition 3677 3686	borelioza
+N5	Reference T15 ICD10:A69.2	Choroba z Lyme
+T16	Condition 3672 3675	WZW
+N6	Reference T16 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+R4	Neg Arg1:T14 Arg2:T15	
+R5	Neg Arg1:T14 Arg2:T16	
+T17	Condition 3616 3643	kamica nerkowa prawostronna
+N7	Reference T17 ICD10:N20.0	Kamica nerki
+T18	Treatment 3478 3498	leczonym hormonalnie
+T19	Investigation_result 3529 3568	labilnych wartości ciśnienia tętniczego
+T20	Symptom 3582 3595	kołatań serca
+N8	Reference T20 ICD10:R00.2	Kołatanie serca
+T21	Condition 3462 3477	rakiem prostaty
+N9	Reference T21 ICD10:C61	Nowotwór złośliwy gruczołu krokowego
+T22	Investigation 3238 3260	angioCT tt. wieńcowych
+T23	Investigation 3262 3268	Holter
+T24	Drug 3180 3186	Atoris
+T25	Drug 3149 3156	Tritace
+T26	Drug 3127 3136	Polovit  
+T27	Drug 3095 3105	Concor COR
+T28	Drug 3058 3076	Calcium dobesilate
+T29	Drug_dose 3187 3210	20 mg 1 tabl. wieczorem
+R6	Drg Arg1:T24 Arg2:T29	
+T30	Drug_dose 3157 3179	5 mg 1 tabl. wieczorem
+R7	Drg Arg1:T25 Arg2:T30	
+T31	Drug_dose 3136 3147	1 tabl. ran
+R8	Drg Arg1:T26 Arg2:T31	
+T32	Drug_dose 3106 3126	1,25 mg 1 tabl. rano
+R9	Drg Arg1:T27 Arg2:T32	
+T33	Drug_dose 3077 3094	1 tabl. wieczorem
+R10	Drg Arg1:T28 Arg2:T33	
+T34	Drug 3030 3037	Vit. D3
+T35	Drug_dose 3038 3057	2000j. 1 tabl. rano
+R11	Drg Arg1:T34 Arg2:T35	
+T36	Drug 2997 3013	Essentiale forte
+T37	Drug_dose 3014 3028	1 tabl. 2 x dz
+R12	Drg Arg1:T36 Arg2:T37	
+T38	Drug 2958 2970	Bicalutamide
+T39	Drug_dose 2971 2996	50 mg 1 tabl. 1 x dz rano
+R13	Drg Arg1:T38 Arg2:T39	
+T40	Negation 2893 2903	nie podaje
+T41	Negation 2838 2846	nie pali
+T42	Date 2847 2855	od 4 lat
+T43	Condition 2882 2891	Uczulenia
+N10	Reference T43 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R14	Neg Arg1:T40 Arg2:T43	
+T44	Behaviour 2856 2881	Inne używki: okazjonalnie
+N11	Reference T44 ICD10:Z72	Problemy związane ze stylem życia
+T45	Behaviour 2821 2836	Palenie tytoniu
+N12	Reference T45 ICD10:Z72.0	Używanie tytoniu
+R15	Dat Arg1:T42 Arg2:T45	
+R16	Neg Arg1:T41 Arg2:T45	
+T46	Condition 2818 2820	MI
+N13	Reference T46 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T47	Condition 2768 2777	borelioza
+N14	Reference T47 ICD10:A69.2	Choroba z Lyme
+T48	Condition 2763 2766	WZW
+N15	Reference T48 ICD10:B19	
+T49	Negation 2780 2790	nie podaje
+R17	Neg Arg1:T49 Arg2:T47	
+R18	Neg Arg1:T49 Arg2:T48	
+T50	Condition 2707 2734	kamica nerkowa prawostronna
+N16	Reference T50 ICD10:N20.0	Kamica nerki
+T51	Symptom 2673 2686	kołatań serca
+N17	Reference T51 ICD10:R00.2	Kołatanie serca
+T52	Investigation_result 2620 2659	labilnych wartości ciśnienia tętniczego
+T53	Treatment 2569 2589	leczonym hormonalnie
+T54	Condition 2553 2568	rakiem prostaty
+N18	Reference T54 ICD10:C61	Nowotwór złośliwy gruczołu krokowego
+T55	Drug 2378 2385	Tritace
+T56	Drug 2357 2364	PoloVit
+T57	Drug 2325 2335	Concor COR
+T58	Drug 2288 2306	Calcium dobesilate
+T59	Drug 2259 2266	Vit. D3
+T60	Drug_dose 2267 2287	2000j 1 tabl. 1 x dz
+R19	Drg Arg1:T59 Arg2:T60	
+T61	Drug_dose 2307 2324	1 tabl. wieczorem
+R20	Drg Arg1:T58 Arg2:T61	
+T62	Drug_dose 2336 2356	1,25 mg 1 tabl. rano
+R21	Drg Arg1:T57 Arg2:T62	
+T63	Drug_dose 2365 2377	1 tabl. rano
+R22	Drg Arg1:T56 Arg2:T63	
+T64	Drug_dose 2386 2408	5 mg 1 tabl. wieczorem
+R23	Drg Arg1:T55 Arg2:T64	
+T65	Drug 2226 2242	Essentiale forte
+T66	Drug_dose 2243 2257	1 tabl. 2 x dz
+R24	Drg Arg1:T65 Arg2:T66	
+T67	Drug 2195 2212	Bicalutamide Tevo
+T68	Drug_dose 2213 2225	1 tabl. rano
+R25	Drg Arg1:T67 Arg2:T68	
+T69	Treatment 1830 1857	dalsza opieka w poradni POZ
+T70	Investigation 1936 1958	angioCT tt. wieńcowych
+T71	Date 1961 1976	dn. 16.07.2018r
+R26	Dat Arg1:T71 Arg2:T70	
+T72	Treatment 1986 2022	kontrola kardiologiczna, urologiczna
+T73	Investigation 2033 2062	kontrola ciśnienia tętniczego
+T74	Investigation 2072 2092	kontrola lipidogramu
+T75	Behaviour 2093 2118	dieta niskocholesterolowa
+T76	Behaviour 2119 2164	stały, umiarkowany, aerobowy wysiłek fizyczny
+T77	Condition 1608 1645	Nadciśnienie tętnicze I st wg ESC/ESH
+N19	Reference T77 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T78	Condition 1647 1681	Nadkomorowe zaburzenia rytmu serca
+N20	Reference T78 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T79	Condition 1683 1695	Rak prostaty
+N21	Reference T79 ICD10:C61	Nowotwór złośliwy gruczołu krokowego
+T80	Treatment 1698 1721	trakcie hormonoterapii.
+T81	Treatment 792 819	dalsza opieka w poradni POZ
+T82	Treatment 829 865	kontrola kardiologiczna, urologiczna
+T83	Investigation 875 913	wykonanie badania polisomnograficznego
+T84	Investigation 952 981	kontrola ciśnienia tętniczego
+T85	Investigation 991 1011	kontrola lipidogramu
+T86	Behaviour 1012 1037	dieta niskocholesterolowa
+T87	Behaviour 1038 1083	stały, umiarkowany, aerobowy wysiłek fizyczny
+T88	Drug 1114 1131	Bicalutamide Tevo
+T89	Drug_dose 1132 1144	1 tabl. rano
+R27	Drg Arg1:T88 Arg2:T89	
+T90	Drug 1145 1161	Essentiale forte
+T91	Drug_dose 1162 1176	1 tabl. 2 x dz
+R28	Drg Arg1:T90 Arg2:T91	
+T92	Drug 1178 1185	Vit. D3
+T93	Drug_dose 1186 1206	2000j 1 tabl. 1 x dz
+R29	Drg Arg1:T92 Arg2:T93	
+T94	Drug 1207 1225	Calcium dobesilate
+T95	Drug_dose 1226 1243	1 tabl. wieczorem
+R30	Drg Arg1:T94 Arg2:T95	
+T96	Drug 1244 1252	Biosotal
+T97	Drug_dose 1253 1265	80 mg 2 x dz
+R31	Drg Arg1:T96 Arg2:T97	
+T98	Drug 1267 1275	Primacor
+T99	Drug_dose 1276 1299	10 mg 1 tabl. wieczorem
+R32	Drg Arg1:T98 Arg2:T99	
+T100	Drug 1300 1306	Atoris
+T101	Drug_dose 1307 1330	20 mg 1 tabl. wieczorem
+R33	Drg Arg1:T100 Arg2:T101	
+T102	Drug 1331 1339	Polocard
+T103	Drug_dose 1340 1389	75 mg 1 tabl. wieczorem (lek dostępny bez recepty
+R34	Drg Arg1:T102 Arg2:T103	
+T104	Condition 403 441	Przewlekła choroba niedokrwienna serca
+T105	Condition 443 463	Hipercholesterolemia
+T106	Condition 465 500	Nadkomorowe zaburzenia rytmu serca.
+N24	Reference T106 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T107	Condition 501 538	Nadciśnienie tętnicze I st wg ESC/ESH
+N25	Reference T107 ICD10:I10	
+T108	Condition 540 568	Podejrzenie bezdechu sennego
+N26	Reference T108 ICD10:G47.3	Bezdech senny
+T109	Condition 570 597	Kamica nerkowa prawostronna
+N27	Reference T109 ICD10:N20.0	Kamica nerki
+T110	Condition 611 623	Rak prostaty
+N28	Reference T110 ICD10:C61	Nowotwór złośliwy gruczołu krokowego
+T111	Treatment 626 649	trakcie hormonoterapii.
+N23	Reference T105 ICD10:E78.0	Czysta hipercholesterolemia
+N22	Reference T104 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona

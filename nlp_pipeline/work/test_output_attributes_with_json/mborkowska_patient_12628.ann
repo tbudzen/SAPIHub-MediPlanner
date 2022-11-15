@@ -1,0 +1,65 @@
+T1	Investigation 427 465	regularne pomiary ciśnienia tętniczego
+T2	Investigation 466 509	okresowa kontrola elektrolitów, lipidogramu
+T3	Behaviour 510 529	prawidłowe żywienie
+T4	Behaviour 532 560	regularna aktywność fizyczna
+T5	Drug 567 577	Concor COR
+T6	Drug_dose 578 598	1,25 mg 1 tabl. rano
+T7	Drug 599 608	Captopril
+T8	Drug_dose 609 633	12,5 mg 1 tabl. doraźnie
+T9	Condition 883 911	choroby niedokrwiennej serca
+T10	Condition 937 971	Nadkomorowe zaburzenia rytmu serca
+T11	Behaviour 973 983	Nikotynizm
+T12	Condition 985 1000	Miażdżyca aorty
+T13	Condition 1002 1047	Podejrzenie zmiany ogniskowej/ tętniaka aorty
+T14	Condition 1049 1071	Żylaki kończyn dolnych
+T15	Condition 1073 1105	Zmiany zwyrodnieniowe kręgosłupa
+T16	Symptom 1451 1473	drętwienie kk. dolnych
+T17	Condition 1430 1448	żylaki kk. dolnych
+T18	Condition 1396 1428	zmiany zwyrodnieniowe stawów rąk
+T19	Symptom 1274 1334	kołatań serca - tylko w sytuacjach stresowych, kilkuminutowe
+T20	Condition 1529 1534	udar?
+T21	Condition 1558 1570	rak trzustki
+T22	Condition 1591 1593	DM
+T23	Condition 1595 1602	Alergie
+T24	Symptom 1627 1636	pokrzywka
+T25	Behaviour 1638 1654	Nikotynizm: tak,
+T26	Behaviour 1688 1709	Alkohol: okazjonalnie
+T27	Behaviour 1711 1729	Uzależnienie inne:
+T28	Negation 1730 1736	neguje
+T29	Investigation 1819 1829	echo serca
+T30	Investigation 1831 1834	TET
+T31	Investigation 1836 1840	ABPM
+T32	Investigation 1842 1852	Holter ekg
+T33	Investigation 1854 1872	rtg kl. piersiowej
+T34	Investigation 861 882	Obserwacja w kierunku
+T35	Date 1336 1370	1  x w tygodniu, występują od roku
+T36	Treatment 1477 1494	Przebyte operacje
+T37	Negation 1496 1502	neguje
+T38	Date 1655 1671	do 30 lat wstecz
+T39	Negation 1783 1790	żadnych
+T40	Drug 1777 1781	Leki
+N1	Reference T9 ICD10:I20.9	Choroba niedokrwienna serca, nieokreÅlona
+N2	Reference T10 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+N3	Reference T11 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N4	Reference T12 ICD10:I70.0	MiaÅ¼dÅ¼yca aorty
+N5	Reference T14 ICD10:I83	Å»ylaki koÅczyn dolnych
+N6	Reference T15 ICD10:M47.9	Zmiany zwyrodnieniowe krÄgosÅupa, nieokreÅlone
+N7	Reference T17 ICD10:I83	Å»ylaki koÅczyn dolnych
+N8	Reference T19 ICD10:R00.2	KoÅatanie serca
+N9	Reference T21 ICD10:C25	NowotwÃ³r zÅoÅliwy trzustki
+N10	Reference T22 ICD10:E14	Cukrzyca nieokreÅlona
+N11	Reference T23 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+N12	Reference T25 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N13	Reference T26 ICD10:Z72.1	UÅ¼ywanie alkoholu
+N14	Reference T27 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+N15	Reference T36 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+R10	Neg Arg1:T28 Arg2:T27
+R2	Drg Arg1:T7 Arg2:T6
+R24	Neg Arg1:T39 Arg2:T40
+R3	Dat Arg1:T35 Arg2:T19
+R5	Dat Arg1:T38 Arg2:T24
+R8	Dat Arg1:T38 Arg2:T25
+A1	Status T20 Family
+A2	Status T21 Family
+A3	Status T22 Family
+A4	Status T24 Historical_Insignificant

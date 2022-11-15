@@ -1,0 +1,96 @@
+T1	Condition 450 494	Przewlekła choroba wieńcowa - I klasa wg CCS
+N1	Reference T1 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T2	Condition 499 540	Łagodna niedomykalność zastawki mitralnej
+N2	Reference T2 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T3	Condition 545 589	Łagodna niedomykalność zastawki trójdzielnej
+N3	Reference T3 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+T4	Condition 594 625	Przewlekłe zapalenie WZW typu C
+N4	Reference T4 ICD10:B18.2	Przewlekłe wirusowe zapalenie wątroby typu C
+T5	Condition 630 652	Żylaki kończyn dolnych
+N5	Reference T5 ICD10:I83	Żylaki kończyn dolnych
+T6	Condition 658 672	Małopłytkowość
+N6	Reference T6 ICD10:D69.6	Małopłytkowość, nieokreślona
+T7	Condition 685 723	złamaniu kości śródstopia stopy prawej
+T8	Condition 736 773	złamaniu palca pierwszego stopy lewej
+N8	Reference T8 ICD10:S92.5	Złamanie innego palca stopy
+N7	Reference T7 ICD10:S92.3	Złamanie kości śródstopia
+T9	Condition 786 833	oparzeniu kończyn dolnych i górnych oraz pleców
+N9	Reference T9 ICD10:T29	Oparzenia termiczne i chemiczne licznych okolic ciała
+T10	Treatment 846 859	appendectomii
+A1	Status T10 Historical_Insignificant
+T11	Treatment 971 1083	Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej, Laryngologicznej i Poradni Chorób Zakaźnych
+T12	Behaviour 1108 1203	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T13	Symptom 1385 1455	nawracających dolegliwości bólowych w klatce piersiowej o typie ucisku
+N10	Reference T13 ICD10:R07.3	Inne bóle w klatce piersiowej
+T14	Symptom 1474 1484	mdłościami
+N11	Reference T14 ICD10:R11	Nudności i wymioty
+T15	Date 1512 1535	w godzinach wieczornych
+R1	Dat Arg1:T15 Arg2:T13	
+R2	Dat Arg1:T15 Arg2:T14	
+T16	Condition 1560 1594	WZW typu B (bez opieki hepatologa)
+N12	Reference T16 ICD10:B16	Ostre wirusowe zapalenie wątroby typu B
+T17	Condition 1596 1607	Tętniak IAS
+N13	Reference T17 ICD10:I25.3	Tętniak serca
+T18	Condition 1609 1647	Nad- i komorowe zaburzenia rytmu serca
+N14	Reference T18 ICD10:I49.8	Inne określone zaburzenia rytmu serca
+T19	Condition 1649 1692	Niewydolność naczyń żylnych kończyn dolnych
+N15	Reference T19 ICD10:I87.2	Niewydolność żył (przewlekła) (obwodowa)
+T20	Condition 1694 1708	Małopłytkowość
+N16	Reference T20 ICD10:D69.6	Małopłytkowość, nieokreślona
+T21	Condition 1718 1756	złamaniu kości śródstopia stopy prawej
+N17	Reference T21 ICD10:S92.3	Złamanie kości śródstopia
+T22	Date 1759 1776	przed trzema laty
+R3	Dat Arg1:T22 Arg2:T21	
+T23	Condition 1783 1811	palca pierwszego stopy lewej
+N18	Reference T23 ICD10:S92.5	Złamanie innego palca stopy
+T24	Date 1814 1833	przed pięcioma laty
+R4	Dat Arg1:T24 Arg2:T23	
+T25	Condition 1835 1857	żylaki kończyn dolnych
+N19	Reference T25 ICD10:I83	Żylaki kończyn dolnych
+T26	Condition 1867 1919	oparzeniu kk. dolnych i górnych oraz tułowia (plecy)
+N20	Reference T26 ICD10:T29	Oparzenia termiczne i chemiczne licznych okolic ciała
+T27	Date 1920 1934	w wieku 40 lat
+R5	Dat Arg1:T27 Arg2:T26	
+T28	Treatment 1954 1967	appendektomia
+A2	Status T28 Historical_Insignificant
+T29	Date 1968 1982	w dzieciństwie
+R6	Dat Arg1:T29 Arg2:T28	
+T30	Treatment 1935 1952	Przebyte operacje
+T31	Condition 1983 1998	Wywiad rodzinny
+A3	Status T31 Family
+T32	Condition 2009 2011	MI
+A4	Status T32 Family
+N21	Reference T32 ICD10:I25.2	Przebyty zawał serca
+T33	Date 2013 2028	50 lat, 61 zgon
+R7	Dat Arg1:T33 Arg2:T32	
+T34	Condition 2031 2033	AO
+A5	Status T34 Family
+N22	Reference T34 ICD10:I71.2	Tętniak odcinka piersiowego aorty, bez informacji o pęknięciu
+T35	Condition 2035 2042	Alergie
+T36	Condition 2044 2080	obrzęk twarzy po zjedzeniu truskawek
+T37	Behaviour 2083 2093	Nikotynizm
+N23	Reference T37 ICD10:Z72.0	Używanie tytoniu
+T38	Negation 2095 2101	neguje
+R8	Neg Arg1:T38 Arg2:T37	
+T39	Behaviour 2104 2145	Alkohol: okazjonalnie, w małych ilościach
+N24	Reference T39 ICD10:Z72.1	Używanie alkoholu
+T40	Condition 2148 2165	Uzależnienie inne
+T41	Negation 2167 2173	neguje
+R9	Neg Arg1:T41 Arg2:T40	
+T42	Behaviour 2191 2200	emerytura
+T43	Behaviour 2212 2226	praca siedząca
+T44	Date 2202 2211	wcześniej
+R10	Dat Arg1:T44 Arg2:T43	
+T45	Drug 2234 2241	Sobycor
+T46	Drug_dose 2242 2260	5mg 1/2 tabl. rano
+R11	Drg Arg1:T45 Arg2:T46	
+T47	Drug 2261 2264	DIH
+T48	Drug_dose 2265 2296	500 mg 1 tabl. rano i wieczorem
+R12	Drg Arg1:T47 Arg2:T48	
+T49	Drug 2298 2314	Essentiale forte
+T50	Drug_dose 2315 2351	1 tabl. rano, w południe i wieczorem
+R13	Drg Arg1:T49 Arg2:T50	
+T51	Drug 2352 2359	Verhist
+T52	Drug_dose 2360 2377	24mg 1 tabl. rano
+R14	Drg Arg1:T51 Arg2:T52	
+N25	Reference T36 ICD10:R22.0	Zlokalizowany obrzęk, guz i guzek w obrębie głowy

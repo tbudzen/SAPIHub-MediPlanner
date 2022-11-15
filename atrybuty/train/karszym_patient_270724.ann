@@ -1,0 +1,57 @@
+T1	Symptom 403 422	Utraty przytomności
+T2	Treatment 567 618	Dalsza opieka w POZ oraz Poradni Neurochirurgicznej
+T3	Investigation 631 661	wykonanie testu pochyleniowego
+T4	Treatment 765 806	kontrola w Poradni Kardiologicznej po uzy
+T5	Symptom 978 1015	powtarzających się utrat przytomności
+T6	Date 1047 1073	w ciągu 1 roku 2 incydenty
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Symptom 1076 1122	Pełne utraty przytomności trwają ok. 1-3 minut
+T8	Symptom 1124 1173	Czynniki inicjujące: ból, widok krwi, silny stres
+T9	Condition 1188 1219	przepuklina kręgosłupa (odc. L)
+N2	Reference T9 ICD10:Q05	Rozszczep kręgosłupa
+T10	Negation 1239 1249	nie podaje
+T11	Treatment 1220 1237	Przebyte operacje
+N3	Reference T11 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+R2	Neg Arg1:T10 Arg2:T11	
+T12	Condition 1277 1280	WZW
+N7	Reference T12 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T13	Condition 1286 1295	borelioza
+N8	Reference T13 ICD10:A69.2	Choroba z Lyme
+T14	Negation 1281 1284	(-)
+T15	Negation 1296 1299	(-)
+T16	Condition 1300 1315	Wywiad rodzinny
+A1	Status T16 Family
+T17	Negation 1317 1326	negatywny
+T18	Behaviour 1327 1342	Palenie tytoniu
+T19	Negation 1344 1347	nie
+T20	Behaviour 1348 1352	pali
+R3	Neg Arg1:T19 Arg2:T20	
+R4	Neg Arg1:T19 Arg2:T18	
+R5	Neg Arg1:T17 Arg2:T16	
+R6	Neg Arg1:T14 Arg2:T12	
+R7	Neg Arg1:T15 Arg2:T13	
+T21	Behaviour 1353 1364	Inne używki
+T22	Negation 1366 1377	nie dotyczy
+R8	Neg Arg1:T22 Arg2:T21	
+T23	Condition 1378 1387	Uczulenia
+N9	Reference T23 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T24	Condition 1413 1429	astma oskrzelowa
+T25	Date 1398 1412	w dzieciństwie
+R9	Dat Arg1:T25 Arg2:T24	
+T26	Behaviour 1448 1466	pracownik umysłowy
+T27	Behaviour 1468 1485	mieszka z rodziną
+T28	Drug 1492 1499	Movalis
+T29	Drug_dose 1500 1518	15 mg 1 tabl. rano
+T30	Investigation 1546 1556	echo serca
+T31	Investigation 1558 1561	TET
+T32	Investigation 1563 1567	ABPM
+T33	Investigation 1569 1575	Holter
+T34	Investigation 1577 1595	RTG kl. piersiowej
+R10	Drg Arg1:T28 Arg2:T29	
+N1	Reference T18 ICD10:Z72.0	Używanie tytoniu
+N11	Reference T20 ICD10:Z72.0	Używanie tytoniu
+T35	Symptom 1030 1045	zawrotami głowy
+N12	Reference T35 ICD10:R42	Zawroty głowy i odurzenie
+R11	Dat Arg1:T6 Arg2:T35	
+N4	Reference T21 ICD10:Z72	Problemy związane ze stylem życia
+N5	Reference T24 ICD10:J45.9	Astma oskrzelowa, nieokreślona

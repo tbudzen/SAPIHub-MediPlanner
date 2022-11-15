@@ -1,0 +1,611 @@
+allRelations          : 77
+oks                   : 26
+isRedundantAndRemoveds: 49
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 2
+GOOD / BAD            : 75 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 63 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+
+
+
+Sentence 4:
+------------------------------------------------
+
+
+
+Sentence 5:
+dalsza opieka w poradni POZ
+okresowa kontrola kardiologiczna, diabetologiczna
+
+
+
+Sentence 6:
+dieta cukrzycowa
+regularna aktywność fizyczna
+stałe pomiary ciśnienia tętniczego
+codzienne pomiary glikemii 3 x dz.
+okresowa kontrola elektrolitów, lipidogramu, parametrów nerkowych, HbA1C
+regularne przyjmowanie leków:
+Teldipin 80mg/5 mg 1 tabl.
+R1	Drg Arg1:T8 Arg2:T9 << OK >>	Teldipin -> 80mg/5 mg 1 tabl. rano  <RANK: 3> <info: start[626, 635] <type: RIGHT>>
+
+
+Sentence 7:
+rano
+Jardiance 10 mg 1 tabl.
+R2	Drg Arg1:T10 Arg2:T11 << OK >>	Jardiance -> 10 mg 1 tabl. rano  <RANK: 3> <info: start[658, 668] <type: RIGHT>>
+
+
+Sentence 8:
+rano
+Metformax 500 mg 1 tabl.
+R3	Drg Arg1:T12 Arg2:T13 << OK >>	Metformax -> 500 mg 1 tabl. 3 x dz  <RANK: 3> <info: start[687, 697] <type: RIGHT>>
+
+
+Sentence 9:
+3 x dz.
+Acard 75 mg 1x dz wieczorem 
+Atoris 20 mg 1 tabl.
+R4	Drg Arg1:T14 Arg2:T15 << OK >>	Acard -> 75 mg 1x dz wieczorem  <RANK: 3> <info: start[720, 726] <type: RIGHT>>
+R5	Drg Arg1:T14 Arg2:T17 <<REDUNDANT!!!REMOVED>>	Acard -> 20 mg 1 tabl. wieczorem <:REMOVED other first tag between (right):> <RANK: 1> <info: start[720, 756] <type: RIGHT>>
+R6	Drg Arg1:T16 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Atoris -> 75 mg 1x dz wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[749, 726] <type: LEFT>>
+R7	Drg Arg1:T16 Arg2:T17 << OK >>	Atoris -> 20 mg 1 tabl. wieczorem  <RANK: 3> <info: start[749, 756] <type: RIGHT>>
+
+
+Sentence 10:
+wieczorem
+Magne B6 1 tabl.
+R8	Drg Arg1:T18 Arg2:T19 << OK >>	Magne B6 -> 1 tabl. 1 x dz  <RANK: 3> <info: start[780, 789] <type: RIGHT>>
+
+
+Sentence 11:
+1 x dz.
+------------------------------------------------
+
+
+
+Sentence 12:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 13:
+------------------------------------------------
+ Rozpozanie I: ICD10:I10|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Nadciśnienie tętnicze Ist wg ESC/ESH.
+
+
+Sentence 14:
+Cukrzyca t.2.
+
+
+Sentence 15:
+Torbiel nerki lewej.
+
+
+Sentence 16:
+Skolioza lewostronna.
+
+
+Sentence 17:
+Zmiany zwyrodnieniowe kręgosłupa.
+
+
+
+Sentence 18:
+------------------------------------------------
+
+
+
+Sentence 19:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 20:
+Pacjent lat 62 przyjęty do Kliniki z powodu wysokich wartości ciśnienia tętniczego krwi. 
+
+
+
+Sentence 21:
+Neguje zasłabnięcia , neguje bóle w klatce piersiowej 
+
+R9	Neg Arg1:T26 Arg2:T27 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[1374, 1381] <type: RIGHT>>
+R10	Neg Arg1:T26 Arg2:T29 <<REDUNDANT!!!REMOVED>>	Neguje -> bóle w klatce piersiowej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1374, 1403] <type: RIGHT>>
+R11	Neg Arg1:T28 Arg2:T27 <<REDUNDANT!!!REMOVED>>	neguje -> zasłabnięcia <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1396, 1381] <type: LEFT>>
+R12	Neg Arg1:T28 Arg2:T29 << OK >>	neguje -> bóle w klatce piersiowej  <RANK: 3> <info: start[1396, 1403] <type: RIGHT>>
+
+
+Sentence 22:
+W wywiadzie : nadciśnienie tętnicze.
+
+
+Sentence 23:
+cukrzyca typu 2 .
+
+
+Sentence 24:
+Podaje że miał koronarografię - wszystko w normie  ( brak dokumentacji ) ok 10 lat temu 
+
+R13	Inv Arg1:T32 Arg2:T33 << OK >>	koronarografię -> w normie  <RANK: 3> <info: start[1499, 1525] <type: RIGHT>>
+R14	Dat Arg1:T34 Arg2:T32 << OK >>	ok 10 lat temu -> koronarografię  <RANK: 3> <info: start[1557, 1499] <type: LEFT>>
+
+
+Sentence 25:
+Przebyte operacje:  brak
+
+R15	Neg Arg1:T36 Arg2:T35 << OK >>	brak -> Przebyte operacje  <RANK: 3> <info: start[1593, 1573] <type: LEFT>>
+
+
+Sentence 26:
+Leczenie przewlekłe:  brak 
+
+R16	Neg Arg1:T38 Arg2:T37 << OK >>	brak -> Leczenie przewlekłe  <RANK: 3> <info: start[1620, 1598] <type: LEFT>>
+
+
+Sentence 27:
+Przebyte choroby zakaźne - WZW ( -  ) , borelioza ( - ) Odra ( - )
+
+R17	Neg Arg1:T42 Arg2:T39 << OK >>	( -  ) -> WZW  <RANK: 3> <info: start[1657, 1653] <type: LEFT>>
+R18	Neg Arg1:T42 Arg2:T40 <<REDUNDANT!!!REMOVED>>	( -  ) -> borelioza <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1657, 1666] <type: RIGHT>>
+R19	Neg Arg1:T42 Arg2:T41 <<REDUNDANT!!!REMOVED>>	( -  ) -> Odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1657, 1682] <type: RIGHT>>
+R20	Neg Arg1:T43 Arg2:T39 <<REDUNDANT!!!REMOVED>>	( - ) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1676, 1653] <type: LEFT>>
+R21	Neg Arg1:T43 Arg2:T40 << OK >>	( - ) -> borelioza  <RANK: 3> <info: start[1676, 1666] <type: LEFT>>
+R22	Neg Arg1:T43 Arg2:T41 <<REDUNDANT!!!SHOULD BE REMOVED>>	( - ) -> Odra  <RANK: 3> <info: start[1676, 1682] <type: RIGHT>>
+R23	Neg Arg1:T44 Arg2:T39 <<REDUNDANT!!!REMOVED>>	( - ) -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1687, 1653] <type: LEFT>>
+R24	Neg Arg1:T44 Arg2:T40 <<REDUNDANT!!!SHOULD BE REMOVED>>	( - ) -> borelioza  <RANK: 3> <info: start[1687, 1666] <type: LEFT>>
+R25	Neg Arg1:T44 Arg2:T41 << OK >>	( - ) -> Odra  <RANK: 3> <info: start[1687, 1682] <type: LEFT>>
+
+
+Sentence 28:
+W wywiadzie rodzinnym : brak danych 
+
+R26	Neg Arg1:T46 Arg2:T45 << OK >>	brak danych -> W wywiadzie rodzinnym  <RANK: 3> <info: start[1717, 1693] <type: LEFT>>
+
+
+Sentence 29:
+Palenie tytoniu: nie pali od 10 lat 
+
+R27	Neg Arg1:T48 Arg2:T47 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[1747, 1730] <type: LEFT>>
+R28	Neg Arg1:T48 Arg2:T49 << OK >>	nie -> pali  <RANK: 3> <info: start[1747, 1751] <type: RIGHT>>
+R29	Dat Arg1:T50 Arg2:T47 << OK >>	od 10 lat -> Palenie tytoniu  <RANK: 3> <info: start[1756, 1730] <type: LEFT>>
+R30	Dat Arg1:T50 Arg2:T49 << OK >>	od 10 lat -> pali  <RANK: 3> <info: start[1756, 1751] <type: LEFT>>
+
+
+Sentence 30:
+Inne używki: alkohol sporadycznie 
+Uczulenia: neguje
+Stan społeczny: warunki mieszkaniowe dobre , mieszka z żoną 
+Leki: Tertensif SR 1x dz rano , Temizek 80 mg 1x dz wieczorem, Metformax SR 500 1x dz wieczorem, Acard 75 mg 1x dz wieczorem, Magnez B6 1x dz rano 
+Plan Opieki : Echo serca , Holter EKG , Próba Wysiłkowa  
+R31	Neg Arg1:T53 Arg2:T52 << OK >>	neguje -> Uczulenia  <RANK: 3> <info: start[1813, 1802] <type: LEFT>>
+R32	Neg Arg1:T53 Arg2:T51 <<REDUNDANT!!!REMOVED>>	neguje -> Inne używki: alkohol sporadycznie <:REMOVED other second tag between (left):> <RANK: 1> <info: start[1813, 1767] <type: LEFT>>
+R33	Neg Arg1:T53 Arg2:T54 <<REDUNDANT!!!REMOVED>>	neguje -> warunki mieszkaniowe dobre <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1813, 1836] <type: RIGHT>>
+R34	Neg Arg1:T53 Arg2:T55 <<REDUNDANT!!!REMOVED>>	neguje -> mieszka z żoną <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1813, 1865] <type: RIGHT>>
+R35	Neg Arg1:T53 Arg2:T66 <<REDUNDANT!!!REMOVED>>	neguje -> Echo serca <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1813, 2043] <type: RIGHT>>
+R36	Neg Arg1:T53 Arg2:T67 <<REDUNDANT!!!REMOVED>>	neguje -> Holter EKG <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1813, 2056] <type: RIGHT>>
+R37	Neg Arg1:T53 Arg2:T68 <<REDUNDANT!!!REMOVED>>	neguje -> Próba Wysiłkowa <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1813, 2069] <type: RIGHT>>
+R38	Neg Arg1:T53 Arg2:T56 <<REDUNDANT!!!REMOVED>>	neguje -> Tertensif SR <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1813, 1887] <type: RIGHT>>
+R39	Neg Arg1:T53 Arg2:T58 <<REDUNDANT!!!REMOVED>>	neguje -> Temizek <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1813, 1913] <type: RIGHT>>
+R40	Neg Arg1:T53 Arg2:T60 <<REDUNDANT!!!REMOVED>>	neguje -> Metformax SR <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1813, 1944] <type: RIGHT>>
+R41	Neg Arg1:T53 Arg2:T62 <<REDUNDANT!!!REMOVED>>	neguje -> Acard <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1813, 1978] <type: RIGHT>>
+R42	Neg Arg1:T53 Arg2:T64 <<REDUNDANT!!!REMOVED>>	neguje -> Magnez B6 <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1813, 2007] <type: RIGHT>>
+R43	Neg Arg1:T53 Arg2:T57 <<REDUNDANT!!!REMOVED>>	neguje -> 1x dz rano <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1813, 1900] <type: RIGHT>>
+R44	Neg Arg1:T53 Arg2:T59 <<REDUNDANT!!!REMOVED>>	neguje -> 80 mg 1x dz wieczorem <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1813, 1921] <type: RIGHT>>
+R45	Neg Arg1:T53 Arg2:T61 <<REDUNDANT!!!REMOVED>>	neguje -> 500 1x dz wieczorem <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1813, 1957] <type: RIGHT>>
+R46	Neg Arg1:T53 Arg2:T63 <<REDUNDANT!!!REMOVED>>	neguje -> 75 mg 1x dz wieczorem <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1813, 1984] <type: RIGHT>>
+R47	Neg Arg1:T53 Arg2:T65 <<REDUNDANT!!!REMOVED>>	neguje -> 1x dz rano <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1813, 2017] <type: RIGHT>>
+R48	Drg Arg1:T56 Arg2:T57 << OK >>	Tertensif SR -> 1x dz rano  <RANK: 3> <info: start[1887, 1900] <type: RIGHT>>
+R49	Drg Arg1:T56 Arg2:T59 <<REDUNDANT!!!REMOVED>>	Tertensif SR -> 80 mg 1x dz wieczorem <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1887, 1921] <type: RIGHT>>
+R50	Drg Arg1:T56 Arg2:T61 <<REDUNDANT!!!REMOVED>>	Tertensif SR -> 500 1x dz wieczorem <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1887, 1957] <type: RIGHT>>
+R51	Drg Arg1:T56 Arg2:T63 <<REDUNDANT!!!REMOVED>>	Tertensif SR -> 75 mg 1x dz wieczorem <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1887, 1984] <type: RIGHT>>
+R52	Drg Arg1:T56 Arg2:T65 <<REDUNDANT!!!REMOVED>>	Tertensif SR -> 1x dz rano <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1887, 2017] <type: RIGHT>>
+R53	Drg Arg1:T58 Arg2:T57 <<REDUNDANT!!!REMOVED>>	Temizek -> 1x dz rano <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1913, 1900] <type: LEFT>>
+R54	Drg Arg1:T58 Arg2:T59 << OK >>	Temizek -> 80 mg 1x dz wieczorem  <RANK: 3> <info: start[1913, 1921] <type: RIGHT>>
+R55	Drg Arg1:T58 Arg2:T61 <<REDUNDANT!!!REMOVED>>	Temizek -> 500 1x dz wieczorem <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1913, 1957] <type: RIGHT>>
+R56	Drg Arg1:T58 Arg2:T63 <<REDUNDANT!!!REMOVED>>	Temizek -> 75 mg 1x dz wieczorem <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1913, 1984] <type: RIGHT>>
+R57	Drg Arg1:T58 Arg2:T65 <<REDUNDANT!!!REMOVED>>	Temizek -> 1x dz rano <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1913, 2017] <type: RIGHT>>
+R58	Drg Arg1:T60 Arg2:T57 <<REDUNDANT!!!REMOVED>>	Metformax SR -> 1x dz rano <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1944, 1900] <type: LEFT>>
+R59	Drg Arg1:T60 Arg2:T59 <<REDUNDANT!!!REMOVED>>	Metformax SR -> 80 mg 1x dz wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1944, 1921] <type: LEFT>>
+R60	Drg Arg1:T60 Arg2:T61 << OK >>	Metformax SR -> 500 1x dz wieczorem  <RANK: 3> <info: start[1944, 1957] <type: RIGHT>>
+R61	Drg Arg1:T60 Arg2:T63 <<REDUNDANT!!!REMOVED>>	Metformax SR -> 75 mg 1x dz wieczorem <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1944, 1984] <type: RIGHT>>
+R62	Drg Arg1:T60 Arg2:T65 <<REDUNDANT!!!REMOVED>>	Metformax SR -> 1x dz rano <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1944, 2017] <type: RIGHT>>
+R63	Drg Arg1:T62 Arg2:T57 <<REDUNDANT!!!REMOVED>>	Acard -> 1x dz rano <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1978, 1900] <type: LEFT>>
+R64	Drg Arg1:T62 Arg2:T59 <<REDUNDANT!!!REMOVED>>	Acard -> 80 mg 1x dz wieczorem <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1978, 1921] <type: LEFT>>
+R65	Drg Arg1:T62 Arg2:T61 <<REDUNDANT!!!REMOVED>>	Acard -> 500 1x dz wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1978, 1957] <type: LEFT>>
+R66	Drg Arg1:T62 Arg2:T63 << OK >>	Acard -> 75 mg 1x dz wieczorem  <RANK: 3> <info: start[1978, 1984] <type: RIGHT>>
+R67	Drg Arg1:T62 Arg2:T65 <<REDUNDANT!!!REMOVED>>	Acard -> 1x dz rano <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1978, 2017] <type: RIGHT>>
+R68	Drg Arg1:T64 Arg2:T57 <<REDUNDANT!!!REMOVED>>	Magnez B6 -> 1x dz rano <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2007, 1900] <type: LEFT>>
+R69	Drg Arg1:T64 Arg2:T59 <<REDUNDANT!!!REMOVED>>	Magnez B6 -> 80 mg 1x dz wieczorem <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2007, 1921] <type: LEFT>>
+R70	Drg Arg1:T64 Arg2:T61 <<REDUNDANT!!!REMOVED>>	Magnez B6 -> 500 1x dz wieczorem <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2007, 1957] <type: LEFT>>
+R71	Drg Arg1:T64 Arg2:T63 <<REDUNDANT!!!REMOVED>>	Magnez B6 -> 75 mg 1x dz wieczorem <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2007, 1984] <type: LEFT>>
+R72	Drg Arg1:T64 Arg2:T65 << OK >>	Magnez B6 -> 1x dz rano  <RANK: 3> <info: start[2007, 2017] <type: RIGHT>>
+R73	Alg Arg1:T52 Arg2:T56 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Tertensif SR <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1802, 1887] <type: RIGHT>>
+R74	Alg Arg1:T52 Arg2:T58 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Temizek <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1802, 1913] <type: RIGHT>>
+R75	Alg Arg1:T52 Arg2:T60 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Metformax SR <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1802, 1944] <type: RIGHT>>
+R76	Alg Arg1:T52 Arg2:T62 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Acard <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1802, 1978] <type: RIGHT>>
+R77	Alg Arg1:T52 Arg2:T64 <<REDUNDANT!!!REMOVED>>	Uczulenia -> Magnez B6 <:REMOVED other second tag between (right):> <RANK: 0> <info: start[1802, 2007] <type: RIGHT>>
+
+
+Sentence 31:
+, Planowany czas hospitalizacji 4-5 dni
+------------------------------------------------
+
+
+
+Sentence 32:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 33:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:4.87[10^3/ul]
+    
+
+
+Sentence 34:
+RBC Krwinki czerwone:4.86[10^6/ul]
+    
+
+
+Sentence 35:
+HGB Hemoglobina:13.7[g/dl]
+    
+
+
+Sentence 36:
+HCT Hematokryt:40.3[%]
+    
+
+
+Sentence 37:
+MCV wskaźnik czerwonokrw:82.9[fl]
+    
+
+
+Sentence 38:
+MCH wskaźnik czerwonokrw:28.2[pg]
+    
+
+
+Sentence 39:
+MCHC wskaźnik czerwonokr:34.0[g/dl]
+    
+
+
+Sentence 40:
+PLT z morfologii:269[10^3/ul]
+    
+
+
+Sentence 41:
+RDW-SD:38.6[fl]
+    
+
+
+Sentence 42:
+RDW-CV:12.7[%]
+    PDW:11.8[fl]
+    MPV:10.2[fl]
+    
+
+
+Sentence 43:
+P-LCR:27.2[%]
+    
+
+
+Sentence 44:
+PCT (hematokryt płytkowy:0.27[%]
+    
+
+
+Sentence 45:
+NEUTR# wartość bezwzględ:2.71[10^3/ul]
+    
+
+
+Sentence 46:
+NEUTR%:55.7[%]
+    
+
+
+Sentence 47:
+LYMH# wartość bezwzględn:1.55[10^3/ul]
+    
+
+
+Sentence 48:
+LYMPH%:31.8[%]
+    
+
+
+Sentence 49:
+MONO# wartość bezwzględn:0.45[10^3/ul]
+    
+
+
+Sentence 50:
+MONO%:9.2[%]
+    
+
+
+Sentence 51:
+EO# wartość bezwzględna:0.13[10^3/ul]
+    
+
+
+Sentence 52:
+EO%:2.7[%]
+    
+
+
+Sentence 53:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 54:
+NRBC %:0.0[%]
+    
+
+
+Sentence 55:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 56:
+Badanie ogólne moczu
+    
+
+
+Sentence 57:
+barwa:żółty[ ]
+    
+
+
+Sentence 58:
+glukoza:ślad[ ]
+    
+
+
+Sentence 59:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 60:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 61:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 62:
+ciężar właściwy:1.021[ ]
+    
+
+
+Sentence 63:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 64:
+pH:7.5[ ]
+    
+
+
+Sentence 65:
+białko:nieobecne[ ]
+    
+
+
+Sentence 66:
+urobilinogen:2,0 mg/dl[ ]
+    
+
+
+Sentence 67:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 68:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 69:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 70:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 71:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 72:
+leukocyty:1 /ul[ul]
+    erytrocyty świeże:2 /ul[ul]
+    śluz:pojedyncze pasma[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 73:
+TSH: TSH:0.81[uIU/ml]
+
+
+
+Sentence 74:
+FT3: FT3:3.18[pg/ml]
+
+
+
+Sentence 75:
+FT4: FT4:1.45[ng/dl]
+
+
+
+Sentence 76:
+ALAT: ALAT:32[U/L]
+ASPAT: ASPAT:36[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.79[mg/dl]
+
+
+
+Sentence 77:
+Sód (Na): Sód:138[mmol/L]
+
+
+
+Sentence 78:
+Potas (K): Potas:4.2[mmol/L]
+
+
+
+Sentence 79:
+Hemoglobina glikowana (HbA1c)
+    :9.42[%]
+    :79[mmol/mol]
+
+
+
+Sentence 80:
+Kreatynina + GFR
+    
+
+
+Sentence 81:
+Kreatynina w surowicy:0.86[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 82:
+MDRD ze stan:90.1[ml/min/1,73 m^2]
+
+
+
+Sentence 83:
+Mocznik: Mocznik:48[mg/dl]
+
+
+
+Sentence 84:
+Kwas moczowy: Kwas moczowy:3.6[mg/dl]
+
+
+
+Sentence 85:
+Lipidogram
+    
+
+
+Sentence 86:
+Cholesterol całkowity:214[mg/dl]
+    
+
+
+Sentence 87:
+Cholesterol HDL:41[mg/dl]
+    
+
+
+Sentence 88:
+Cholestrol LDL:158[mg/dl]
+    Triglicerydy:89[mg/dl]
+    
+
+
+Sentence 89:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:190[mg/dl]
+
+
+
+Sentence 90:
+Glukoza w surowicy: Glukoza w surowicy:216[mg/dl]
+
+
+
+Sentence 91:
+------------------------------------------------
+
+
+
+Sentence 92:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 93:
+I10
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 94:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 95:
+89.501
+C55
+A01
+I81
+L43
+L55
+87.440
+N45
+L69
+O55
+I17
+M45
+M37
+I19
+O35
+N13
+88.721
+O69
+88.761
+------------------------------------------------
+
+

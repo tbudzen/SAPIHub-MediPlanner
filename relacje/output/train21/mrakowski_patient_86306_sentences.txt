@@ -1,0 +1,537 @@
+allRelations          : 27
+oks                   : 15
+isRedundantAndRemoveds: 10
+shouldNotBeRemoveds   : 0
+shouldBeBemoveds      : 2
+GOOD / BAD            : 25 / 2
+Sentence 0:
+------------------------------------------------
+Wiek: 26 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: męska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+- Dalsza opieka w POZ. 
+
+
+
+Sentence 4:
+- Wskazana kontrola w Poradni Kardiologicznej za 6 miesięcy.
+
+R1	Dat Arg1:T3 Arg2:T2 << OK >>	za 6 miesięcy -> Wskazana kontrola w Poradni Kardiologicznej  <RANK: 3> <info: start[399, 355] <type: LEFT>>
+
+
+Sentence 5:
+- Hospitalizacja w Klinice Kardiologii i Wad Wrodzonych Dorosłych ICZMP w celu ponownej oceny kardiologicznej za 12 miesięcy. 
+
+R2	Dat Arg1:T5 Arg2:T4 << OK >>	za 12 miesięcy -> Hospitalizacja w Klinice Kardiologii i Wad Wrodzonych Dorosłych ICZMP w celu ponownej oceny kardiologicznej  <RANK: 3> <info: start[524, 416] <type: LEFT>>
+
+
+Sentence 6:
+- Okresowa kontrola mo
+------------------------------------------------
+
+
+
+Sentence 7:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 8:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q23.0|Rozpoznanie II: |Rozpoznanie V: |Opisowo:: Wrodzona wada serca pod postacią zwężenia zastawki aortalnej.
+
+
+Sentence 9:
+Stan po operacji m. Rossa (2005).
+R3	Dat Arg1:T9 Arg2:T8 << OK >>	2005 -> operacji m. Rossa  <RANK: 3> <info: start[846, 827] <type: LEFT>>
+
+
+Sentence 10:
+Łagodna niedomykalność zastawki aortalnej.
+
+
+Sentence 11:
+Poszerzona opuszka aorty (do 50mm).
+
+
+Sentence 12:
+Cechy zwyrodnienia homograftu płucnego (łagodne zwężenie z łagodną niedomykalnością).|Rozpoznanie IV: |Rozpoznanie III:
+------------------------------------------------
+
+
+
+Sentence 13:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 14:
+------------------------------------------------
+ Rozpozanie I: ICD10:Q23.0|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo::
+------------------------------------------------
+
+
+
+Sentence 15:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 16:
+Pacjent lat 26, z wadą serca pod postacią zwężania zastawki aortalnej, po operacji Rossa (2005r), przyjęty do Kliniki celem oceny układu krążenia.
+R4	Dat Arg1:T15 Arg2:T13 <<REDUNDANT!!!SHOULD BE REMOVED>>	2005r -> wadą serca pod postacią zwężania zastawki aortalnej  <RANK: 2> <info: start[1494, 1422] <type: LEFT>>
+R5	Dat Arg1:T15 Arg2:T14 << OK >>	2005r -> po operacji Rossa  <RANK: 3> <info: start[1494, 1475] <type: LEFT>>
+
+
+Sentence 17:
+Obecnie bez dolegliwości . 
+
+R6	Neg Arg1:T16 Arg2:T17 << OK >>	bez -> dolegliwości  <RANK: 3> <info: start[1559, 1563] <type: RIGHT>>
+
+
+Sentence 18:
+Neguje zasłabnięcia , neguje bóle w klatce piersiowej.
+
+R7	Neg Arg1:T18 Arg2:T19 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[1579, 1586] <type: RIGHT>>
+R8	Neg Arg1:T18 Arg2:T21 <<REDUNDANT!!!REMOVED>>	Neguje -> bóle w klatce piersiowej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1579, 1608] <type: RIGHT>>
+R9	Neg Arg1:T20 Arg2:T19 <<REDUNDANT!!!REMOVED>>	neguje -> zasłabnięcia <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1601, 1586] <type: LEFT>>
+R10	Neg Arg1:T20 Arg2:T21 << OK >>	neguje -> bóle w klatce piersiowej  <RANK: 3> <info: start[1601, 1608] <type: RIGHT>>
+
+
+Sentence 19:
+Przebyte operacje:  sprowadzanie jądra w dzieciństwie 
+
+R11	Dat Arg1:T23 Arg2:T22 << OK >>	w dzieciństwie -> sprowadzanie jądra  <RANK: 3> <info: start[1673, 1654] <type: LEFT>>
+R12	Dat Arg1:T23 Arg2:T42 <<REDUNDANT!!!SHOULD BE REMOVED>>	w dzieciństwie -> Przebyte operacje  <RANK: 3> <info: start[1673, 1634] <type: LEFT>>
+
+
+Sentence 20:
+Leczenie przewlekłe:  neguje 
+
+R13	Neg Arg1:T25 Arg2:T24 << OK >>	neguje -> Leczenie przewlekłe  <RANK: 3> <info: start[1711, 1689] <type: LEFT>>
+
+
+Sentence 21:
+Przebyte choroby zakaźne - WZW ( -  ) , borelioza ( - )
+
+R14	Neg Arg1:T28 Arg2:T26 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1771, 1746] <type: LEFT>>
+R15	Neg Arg1:T28 Arg2:T27 << OK >>	- -> borelioza  <RANK: 3> <info: start[1771, 1759] <type: LEFT>>
+R16	Neg Arg1:T29 Arg2:T26 << OK >>	- -> WZW  <RANK: 3> <info: start[1752, 1746] <type: LEFT>>
+R17	Neg Arg1:T29 Arg2:T27 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1752, 1759] <type: RIGHT>>
+
+
+Sentence 22:
+W wywiadzie rodzinnym : brak danych 
+
+R18	Neg Arg1:T31 Arg2:T30 << OK >>	brak danych -> wywiadzie rodzinnym  <RANK: 3> <info: start[1799, 1777] <type: LEFT>>
+
+
+Sentence 23:
+Palenie tytoniu: nie
+Inne używki: nie
+Uczulenia: na doksycyklinę 
+
+R19	Neg Arg1:T33 Arg2:T36 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1829, 1850] <type: RIGHT>>
+R20	Neg Arg1:T33 Arg2:T32 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[1829, 1812] <type: LEFT>>
+R21	Neg Arg1:T33 Arg2:T34 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1829, 1833] <type: RIGHT>>
+R22	Neg Arg1:T33 Arg2:T37 <<REDUNDANT!!!REMOVED>>	nie -> doksycyklinę <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1829, 1864] <type: RIGHT>>
+R23	Neg Arg1:T35 Arg2:T36 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1846, 1850] <type: RIGHT>>
+R24	Neg Arg1:T35 Arg2:T32 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1846, 1812] <type: LEFT>>
+R25	Neg Arg1:T35 Arg2:T34 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[1846, 1833] <type: LEFT>>
+R26	Neg Arg1:T35 Arg2:T37 <<REDUNDANT!!!REMOVED>>	nie -> doksycyklinę <:REMOVED other second tag between (right):> <RANK: 1> <info: start[1846, 1864] <type: RIGHT>>
+R27	Alg Arg1:T36 Arg2:T37 << OK >>	Uczulenia -> doksycyklinę  <RANK: 3> <info: start[1850, 1864] <type: RIGHT>>
+
+
+Sentence 24:
+Stan społeczny: warunki mieszkaniowe dobre , mieszka z dziewczyną
+Leki: bez leków przewlekłych 
+
+
+
+Sentence 25:
+Plan Opieki : Echo serca , Holter EKG i RR  , Próba Wysiłkowa  , Planowany czas hospitalizacji 4-5 dni
+
+
+
+Sentence 26:
+------------------------------------------------
+
+
+
+Sentence 27:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 28:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:7.82[10^3/ul]
+    
+
+
+Sentence 29:
+RBC Krwinki czerwone:4.70[10^6/ul]
+    
+
+
+Sentence 30:
+HGB Hemoglobina:15.0[g/dl]
+    
+
+
+Sentence 31:
+HCT Hematokryt:42.7[%]
+    
+
+
+Sentence 32:
+MCV wskaźnik czerwonokrw:90.9[fl]
+    
+
+
+Sentence 33:
+MCH wskaźnik czerwonokrw:31.9[pg]
+    
+
+
+Sentence 34:
+MCHC wskaźnik czerwonokr:35.1[g/dl]
+    
+
+
+Sentence 35:
+PLT z morfologii:210[10^3/ul]
+    
+
+
+Sentence 36:
+RDW-SD:38.9[fl]
+    
+
+
+Sentence 37:
+RDW-CV:11.6[%]
+    PDW:11.4[fl]
+    MPV:10.4[fl]
+    P-LCR:28.0[%]
+    
+
+
+Sentence 38:
+PCT (hematokryt płytkowy:0.22[%]
+    
+
+
+Sentence 39:
+NEUTR# wartość bezwzględ:5.10[10^3/ul]
+    
+
+
+Sentence 40:
+NEUTR%:65.2[%]
+    
+
+
+Sentence 41:
+LYMH# wartość bezwzględn:1.72[10^3/ul]
+    
+
+
+Sentence 42:
+LYMPH%:22.0[%]
+    
+
+
+Sentence 43:
+MONO# wartość bezwzględn:0.54[10^3/ul]
+    
+
+
+Sentence 44:
+MONO%:6.9[%]
+    
+
+
+Sentence 45:
+EO# wartość bezwzględna:0.37[10^3/ul]
+    
+
+
+Sentence 46:
+EO%:4.7[%]
+    
+
+
+Sentence 47:
+BASO# wartość bezwzględn:0.09[10^3/ul]
+    
+
+
+Sentence 48:
+BASO%:1.2[%]
+    
+
+
+Sentence 49:
+NRBC %:0.0[%]
+    
+
+
+Sentence 50:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 51:
+Badanie ogólne moczu
+    
+
+
+Sentence 52:
+barwa:żółty[ ]
+    
+
+
+Sentence 53:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 54:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 55:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 56:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 57:
+kwas askrobinowy:40 mg/dl[ ]
+    
+
+
+Sentence 58:
+ciężar właściwy:1.029[ ]
+    
+
+
+Sentence 59:
+pH:5.0[ ]
+    
+
+
+Sentence 60:
+białko:nieobecne[ ]
+    
+
+
+Sentence 61:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 62:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 63:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 64:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 65:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 66:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 67:
+leukocyty:1 /ul[ul]
+    śluz:liczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 68:
+TSH: TSH:0.65[uIU/ml]
+
+
+
+Sentence 69:
+FT3: FT3:2.62[pg/ml]
+
+
+
+Sentence 70:
+FT4: FT4:1.25[ng/dl]
+
+
+
+Sentence 71:
+ALAT: ALAT:31[U/L]
+ASPAT: ASPAT:33[U/L]
+Bilirubina całkowita (TBil): Bilirubina całkowita:1.01[mg/dl]
+
+
+
+Sentence 72:
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 73:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 74:
+Potas (K): Potas:4.3[mmol/L]
+
+
+
+Sentence 75:
+Kreatynina + GFR
+    
+
+
+Sentence 76:
+Kreatynina w surowicy:0.97[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 77:
+MDRD ze stan:93.6[ml/min/1,73 m^2]
+
+
+
+Sentence 78:
+Mocznik: Mocznik:30[mg/dl]
+
+
+
+Sentence 79:
+Kwas moczowy: Kwas moczowy:6.1[mg/dl]
+
+
+
+Sentence 80:
+Lipidogram
+    
+
+
+Sentence 81:
+Cholesterol całkowity:153[mg/dl]
+    
+
+
+Sentence 82:
+Cholesterol HDL:33[mg/dl]
+    
+
+
+Sentence 83:
+Cholestrol LDL:98[mg/dl]
+    Triglicerydy:95[mg/dl]
+    
+
+
+Sentence 84:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:88[mg/dl]
+
+
+
+Sentence 85:
+NT-proBNP surowica: NT-proBNP w surowicy:51[pg/ml]
+
+
+
+Sentence 86:
+------------------------------------------------
+
+
+
+Sentence 87:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 88:
+Q23.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 89:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 90:
+89.501
+C55
+A01
+89.502
+I81
+89.41
+L43
+I89
+N45
+L69
+O55
+I17
+M45
+M37
+I19
+O35
+N13
+88.721
+O69
+
+
+
+Sentence 91:
+------------------------------------------------
+
+

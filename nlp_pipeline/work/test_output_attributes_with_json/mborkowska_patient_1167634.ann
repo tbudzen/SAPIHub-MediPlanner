@@ -1,0 +1,92 @@
+T1	Behaviour 440 459	redukcja masy ciała
+T2	Behaviour 462 564	dieta bezglutenowa, lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz c
+T3	Condition 791 817	Diagnostyka w kierunku PFO
+T4	Negation 820 829	negatywna
+T5	Condition 831 852	Nietolerancja glutenu
+T6	Condition 858 865	laktozy
+T9	Investigation 1978 1982	ECHO
+T10	Investigation 1984 1987	TEE
+T11	Investigation 1989 2007	EKG metodą Holtera
+T12	Investigation 2009 2013	ABPM
+T13	Investigation 2015 2030	próba wysiłkowa
+T14	Negation 1885 1894	bez leków
+T15	Drug 1879 1883	Leki
+T16	Behaviour 1850 1876	warunki mieszkaniowe dobre
+T17	Condition 1798 1803	DM t1
+T18	Condition 1814 1819	DM t2
+T19	Condition 1821 1823	HA
+T20	Condition 1712 1715	WZW
+troby
+T21	Condition 1722 1731	borelioza
+T22	Condition 1737 1740	tbc
+T23	Condition 1746 1750	odra
+T24	Behaviour 1756 1770	kontakt z odrą
+T25	Negation 1716 1719	(-)
+T26	Negation 1732 1735	(-)
+T27	Negation 1741 1744	(-)
+T28	Negation 1751 1754	(-)
+T29	Negation 1771 1774	(-)
+T30	Negation 1653 1656	nie
+T31	Negation 1636 1639	nie
+T32	Behaviour 1640 1652	Inne używki:
+T33	Behaviour 1619 1635	Palenie tytoniu:
+T34	Treatment 1584 1600	usunięcie macicy
+T35	Treatment 1602 1618	cholecystektomia
+T36	Negation 1485 1491	Neguje
+T37	Symptom 1493 1505	zasłabnięcia
+T38	Symptom 1507 1515	omdlenia
+T39	Symptom 1517 1527	krwawienia
+T40	Symptom 1529 1537	duszność
+T41	Symptom 1539 1554	obrzęki podudzi
+T42	Condition 1556 1558	HA
+T43	Condition 1560 1562	DM
+T44	Symptom 1012 1110	zmniejszoną tolerancją wysiłku fizycznego od 1 roku (aktualnie odpoczywa po wejściu na 1,5 piętra)
+T45	Symptom 1112 1131	ogólnym osłabieniem
+T46	Symptom 1135 1147	bólami głowy
+T47	Symptom 1178 1215	okresów szybkiej i wolnej pracy serca
+T48	Symptom 1239 1297	bóle w klatce piersiowej bez związku z wysiłkiem fizycznym
+T49	Investigation 1301 1309	RM głowy
+T50	Date 1311 1321	04.06.2019
+T51	Investigation_result 1324 1462	zmiany bliznowate- możliwe pochodzenie niedokrwienne, demielinizacyjne, zapalne, przyścienne zgrubienia śluzówkowe w zatokach przynosowych
+T7	Condition 1658 1667	Uczulenia
+N1	Reference T5 ICD10:Z88	Uczulenia na leki, Årodki farmakologiczne i substancje biologiczne w wywiadzie
+N2	Reference T17 ICD10:E14	Cukrzyca nieokreÅlona
+N3	Reference T18 ICD10:E11	Cukrzyca insulinoniezaleÅ¼na
+N4	Reference T19 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N5	Reference T20 ICD10:B19	NieokreÅlone wirusowe zapalenie wÄtroby
+N6	Reference T21 ICD10:A69.2	Choroba z Lyme
+N7	Reference T22 ICD10:A15	GruÅºlica ukÅadu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N8	Reference T32 ICD10:Z72	Problemy zwiÄzane ze stylem Å¼ycia
+N9	Reference T33 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N10	Reference T34 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N11	Reference T37 ICD10:R55	Omdlenie i zapaÅÄ
+N12	Reference T38 ICD10:R55	Omdlenie i zapaÅÄ
+N13	Reference T39 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N14	Reference T40 ICD10:R06.0	DusznoÅÄ
+N15	Reference T41 ICD10:R22	Umiejscowiony obrzÄk, guzek, guz skÃ³ry i tkanki podskÃ³rnej
+N16	Reference T42 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N17	Reference T43 ICD10:E14	Cukrzyca nieokreÅlona
+N18	Reference T46 ICD10:R51	BÃ³l gÅowy
+N19	Reference T48 ICD10:R07.4	BÃ³l w klatce piersiowej, nieokreÅlony
+N20	Reference T7 ICD10:Z91.0	Uczulenie na czynniki inne niÅ¼ leki i substancje biologiczne w wywiadzie
+R1	Neg Arg1:T4 Arg2:T3
+R151	Neg Arg1:T30 Arg2:T32
+R173	Neg Arg1:T31 Arg2:T33
+R2	Neg Arg1:T4 Arg2:T5
+R29	Neg Arg1:T14 Arg2:T15
+R3	Inv Arg1:T49 Arg2:T51
+R37	Neg Arg1:T25 Arg2:T20
+R38	Neg Arg1:T25 Arg2:T21
+R4	Neg Arg1:T36 Arg2:T37
+R59	Neg Arg1:T26 Arg2:T21
+R6	Neg Arg1:T36 Arg2:T51
+R60	Neg Arg1:T26 Arg2:T22
+R61	Neg Arg1:T26 Arg2:T23
+R8	Dat Arg1:T50 Arg2:T49
+R81	Neg Arg1:T27 Arg2:T22
+R82	Neg Arg1:T27 Arg2:T23
+A1	Status T17 Family
+A2	Status T18 Family
+A3	Status T19 Family
+A4	Status T35 Historical_Insignificant
+A5	Source T5 Declared

@@ -1,0 +1,541 @@
+allRelations          : 50
+oks                   : 14
+isRedundantAndRemoveds: 32
+shouldNotBeRemoveds   : 2
+shouldBeBemoveds      : 2
+GOOD / BAD            : 46 / 4
+Sentence 0:
+------------------------------------------------
+Wiek: 41 lat
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 1:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 3:
+- Wskazana dalsza opieka u lekarza POZ oraz w Poradni Reumatologicznej i Endokrynologicznej.
+
+
+
+Sentence 4:
+- Konsultacja dietetyczna.
+
+
+
+Sentence 5:
+- Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych.
+
+
+
+Sentence 6:
+- Okresowo kont
+------------------------------------------------
+
+
+
+Sentence 7:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 8:
+------------------------------------------------
+ Rozpozanie I: ICD10:I10|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Dyslipidemia. 
+   
+
+
+Sentence 9:
+Reumatoidalne zapalenie stawów.
+   
+
+
+Sentence 10:
+Stan po operacji przepukliny pępkowej (2016)
+------------------------------------------------
+
+R1	Dat Arg1:T8 Arg2:T7 << OK >>	2016 -> przepukliny pępkowej  <RANK: 3> <info: start[883, 861] <type: LEFT>>
+R2	Dat Arg1:T8 Arg2:T6 << OK >>	2016 -> operacji  <RANK: 3> <info: start[883, 852] <type: LEFT>>
+
+
+Sentence 11:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 12:
+41-letnia pacjentka z RZS od 11 lat, po operacji przepukliny pępkowej (2016), w trakcie diagnostyki endokrynologicznej w kierunku nadczynności tarczycy, została przyjęta do Kliniki z powodu chwiejnych wartości ciśnienia tętniczego do 170/150 mmHg z towarzyszącym bólem głowy i wymiotami (w tym roku 2 takie incydenty, ostatnio w 02/2019), celem diagnostyki.
+
+R3	Dat Arg1:T10 Arg2:T17 <<REDUNDANT!!!REMOVED>>	od 11 lat -> bólem głowy <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1039, 1276] <type: RIGHT>>
+R4	Dat Arg1:T10 Arg2:T18 <<REDUNDANT!!!REMOVED>>	od 11 lat -> wymiotami <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1039, 1290] <type: RIGHT>>
+R5	Dat Arg1:T10 Arg2:T9 << OK >>	od 11 lat -> RZS  <RANK: 3> <info: start[1039, 1035] <type: LEFT>>
+R6	Dat Arg1:T10 Arg2:T12 <<REDUNDANT!!!REMOVED>>	od 11 lat -> przepukliny pępkowej <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1039, 1062] <type: RIGHT>>
+R7	Dat Arg1:T10 Arg2:T15 <<REDUNDANT!!!REMOVED>>	od 11 lat -> nadczynności tarczycy <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1039, 1143] <type: RIGHT>>
+R8	Dat Arg1:T10 Arg2:T11 <<REDUNDANT!!!REMOVED>>	od 11 lat -> operacji <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1039, 1053] <type: RIGHT>>
+R9	Dat Arg1:T10 Arg2:T14 <<REDUNDANT!!!REMOVED>>	od 11 lat -> w trakcie diagnostyki endokrynologicznej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1039, 1091] <type: RIGHT>>
+R10	Dat Arg1:T13 Arg2:T17 <<REDUNDANT!!!REMOVED>>	2016 -> bólem głowy <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1084, 1276] <type: RIGHT>>
+R11	Dat Arg1:T13 Arg2:T18 <<REDUNDANT!!!REMOVED>>	2016 -> wymiotami <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1084, 1290] <type: RIGHT>>
+R12	Dat Arg1:T13 Arg2:T9 <<REDUNDANT!!!REMOVED>>	2016 -> RZS <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1084, 1035] <type: LEFT>>
+R13	Dat Arg1:T13 Arg2:T12 << OK >>	2016 -> przepukliny pępkowej  <RANK: 3> <info: start[1084, 1062] <type: LEFT>>
+R14	Dat Arg1:T13 Arg2:T15 <<REDUNDANT!!!REMOVED>>	2016 -> nadczynności tarczycy <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1084, 1143] <type: RIGHT>>
+R15	Dat Arg1:T13 Arg2:T11 << OK >>	2016 -> operacji  <RANK: 3> <info: start[1084, 1053] <type: LEFT>>
+R16	Dat Arg1:T13 Arg2:T14 <<REDUNDANT!!!REMOVED>>	2016 -> w trakcie diagnostyki endokrynologicznej <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1084, 1091] <type: RIGHT>>
+R17	Dat Arg1:T19 Arg2:T17 <<SHOULD NOT BE REMOVED>>	02/2019 -> bólem głowy <:REMOVED Too far from TagInfo[T19, 1342, 1349, Date, 02/2019
+] TagInfo[T15, 1143, 1164, Condition, nadczynności tarczycy
+]:> <RANK: 2> <info: start[1342, 1276] <type: LEFT>>
+R18	Dat Arg1:T19 Arg2:T18 <<SHOULD NOT BE REMOVED>>	02/2019 -> wymiotami <:REMOVED Too far from TagInfo[T19, 1342, 1349, Date, 02/2019
+] TagInfo[T15, 1143, 1164, Condition, nadczynności tarczycy
+]:> <RANK: 2> <info: start[1342, 1290] <type: LEFT>>
+R19	Dat Arg1:T19 Arg2:T9 <<REDUNDANT!!!REMOVED>>	02/2019 -> RZS <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1342, 1035] <type: LEFT>>
+R20	Dat Arg1:T19 Arg2:T12 <<REDUNDANT!!!REMOVED>>	02/2019 -> przepukliny pępkowej <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1342, 1062] <type: LEFT>>
+R21	Dat Arg1:T19 Arg2:T15 <<REDUNDANT!!!SHOULD BE REMOVED>>	02/2019 -> nadczynności tarczycy  <RANK: 2> <info: start[1342, 1143] <type: LEFT>>
+R22	Dat Arg1:T19 Arg2:T11 <<REDUNDANT!!!REMOVED>>	02/2019 -> operacji <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1342, 1053] <type: LEFT>>
+R23	Dat Arg1:T19 Arg2:T14 <<REDUNDANT!!!SHOULD BE REMOVED>>	02/2019 -> w trakcie diagnostyki endokrynologicznej  <RANK: 2> <info: start[1342, 1091] <type: LEFT>>
+
+
+Sentence 13:
+Neguje zasłabnięcia, duszności, typowe bóle w klatce piersiowej.
+
+R24	Neg Arg1:T20 Arg2:T21 << OK >>	Neguje -> zasłabnięcia  <RANK: 3> <info: start[1371, 1378] <type: RIGHT>>
+R25	Neg Arg1:T20 Arg2:T22 << OK >>	Neguje -> duszności  <RANK: 2> <info: start[1371, 1392] <type: RIGHT>>
+R26	Neg Arg1:T20 Arg2:T23 << OK >>	Neguje -> typowe bóle w klatce piersiowej  <RANK: 2> <info: start[1371, 1403] <type: RIGHT>>
+
+
+Sentence 14:
+Przebyte operacje:  j/w
+
+
+
+Sentence 15:
+Przebyte choroby zakaźne - WZW ( -  ) , borelioza ( + ), gruźlica ( - ), odra (-), nie pamięta, czy była szczepiona na odrę
+
+R27	Neg Arg1:T27 Arg2:T25 << OK >>	- -> WZW  <RANK: 3> <info: start[1493, 1487] <type: LEFT>>
+R28	Neg Arg1:T27 Arg2:T26 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1493, 1500] <type: RIGHT>>
+R29	Neg Arg1:T27 Arg2:T28 <<REDUNDANT!!!REMOVED>>	- -> gruźlica <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1493, 1517] <type: RIGHT>>
+R30	Neg Arg1:T27 Arg2:T30 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1493, 1533] <type: RIGHT>>
+R31	Neg Arg1:T27 Arg2:T32 <<REDUNDANT!!!REMOVED>>	- -> szczepiona na odrę <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1493, 1565] <type: RIGHT>>
+R32	Neg Arg1:T29 Arg2:T25 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1528, 1487] <type: LEFT>>
+R33	Neg Arg1:T29 Arg2:T26 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1528, 1500] <type: LEFT>>
+R34	Neg Arg1:T29 Arg2:T28 << OK >>	- -> gruźlica  <RANK: 3> <info: start[1528, 1517] <type: LEFT>>
+R35	Neg Arg1:T29 Arg2:T30 <<REDUNDANT!!!REMOVED>>	- -> odra <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1528, 1533] <type: RIGHT>>
+R36	Neg Arg1:T29 Arg2:T32 <<REDUNDANT!!!REMOVED>>	- -> szczepiona na odrę <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1528, 1565] <type: RIGHT>>
+R37	Neg Arg1:T31 Arg2:T25 <<REDUNDANT!!!REMOVED>>	- -> WZW <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1539, 1487] <type: LEFT>>
+R38	Neg Arg1:T31 Arg2:T26 <<REDUNDANT!!!REMOVED>>	- -> borelioza <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1539, 1500] <type: LEFT>>
+R39	Neg Arg1:T31 Arg2:T28 <<REDUNDANT!!!REMOVED>>	- -> gruźlica <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1539, 1517] <type: LEFT>>
+R40	Neg Arg1:T31 Arg2:T30 << OK >>	- -> odra  <RANK: 3> <info: start[1539, 1533] <type: LEFT>>
+R41	Neg Arg1:T31 Arg2:T32 <<REDUNDANT!!!REMOVED>>	- -> szczepiona na odrę <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1539, 1565] <type: RIGHT>>
+
+
+Sentence 16:
+Wywiad rodzinny: dziadek od strony ojca i babcia od strony matki - "chorowali na serce"
+
+
+
+Sentence 17:
+Palenie tytoniu: nie
+Inne używki: nie
+Uczulenia: Ketonal
+
+R42	Neg Arg1:T36 Arg2:T39 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1689, 1710] <type: RIGHT>>
+R43	Neg Arg1:T36 Arg2:T35 << OK >>	nie -> Palenie tytoniu  <RANK: 3> <info: start[1689, 1672] <type: LEFT>>
+R44	Neg Arg1:T36 Arg2:T37 <<REDUNDANT!!!REMOVED>>	nie -> Inne używki <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1689, 1693] <type: RIGHT>>
+R45	Neg Arg1:T36 Arg2:T40 <<REDUNDANT!!!REMOVED>>	nie -> Ketonal <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1689, 1721] <type: RIGHT>>
+R46	Neg Arg1:T38 Arg2:T39 <<REDUNDANT!!!REMOVED>>	nie -> Uczulenia <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1706, 1710] <type: RIGHT>>
+R47	Neg Arg1:T38 Arg2:T35 <<REDUNDANT!!!REMOVED>>	nie -> Palenie tytoniu <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1706, 1672] <type: LEFT>>
+R48	Neg Arg1:T38 Arg2:T37 << OK >>	nie -> Inne używki  <RANK: 3> <info: start[1706, 1693] <type: LEFT>>
+R49	Neg Arg1:T38 Arg2:T40 <<REDUNDANT!!!REMOVED>>	nie -> Ketonal <:REMOVED other second tag between (right):> <RANK: 1> <info: start[1706, 1721] <type: RIGHT>>
+R50	Alg Arg1:T39 Arg2:T40 << OK >>	Uczulenia -> Ketonal  <RANK: 3> <info: start[1710, 1721] <type: RIGHT>>
+
+
+Sentence 18:
+Stan społeczny: warunki mieszkaniowe dobre , mieszka z rodziną
+Leki: jak w IKZL
+------------------------------------------------
+
+
+
+Sentence 19:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 20:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:9.31[10^3/ul]
+    
+
+
+Sentence 21:
+RBC Krwinki czerwone:3.88[10^6/ul]
+    
+
+
+Sentence 22:
+HGB Hemoglobina:12.5[g/dl]
+    
+
+
+Sentence 23:
+HCT Hematokryt:35.2[%]
+    
+
+
+Sentence 24:
+MCV wskaźnik czerwonokrw:90.7[fl]
+    
+
+
+Sentence 25:
+MCH wskaźnik czerwonokrw:32.2[pg]
+    
+
+
+Sentence 26:
+MCHC wskaźnik czerwonokr:35.5[g/dl]
+    
+
+
+Sentence 27:
+PLT z morfologii:240[10^3/ul]
+    
+
+
+Sentence 28:
+RDW-SD:42.5[fl]
+    
+
+
+Sentence 29:
+RDW-CV:13.0[%]
+    PDW:12.2[fl]
+    MPV:10.7[fl]
+    P-LCR:30.4[%]
+    
+
+
+Sentence 30:
+PCT (hematokryt płytkowy:0.26[%]
+    
+
+
+Sentence 31:
+NEUTR# wartość bezwzględ:7.15[10^3/ul]
+    
+
+
+Sentence 32:
+NEUTR%:76.9[%]
+    
+
+
+Sentence 33:
+LYMH# wartość bezwzględn:1.67[10^3/ul]
+    
+
+
+Sentence 34:
+LYMPH%:17.9[%]
+    
+
+
+Sentence 35:
+MONO# wartość bezwzględn:0.44[10^3/ul]
+    
+
+
+Sentence 36:
+MONO%:4.7[%]
+    
+
+
+Sentence 37:
+EO# wartość bezwzględna:0.03[10^3/ul]
+    
+
+
+Sentence 38:
+EO%:0.3[%]
+    
+
+
+Sentence 39:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    
+
+
+Sentence 40:
+BASO%:0.2[%]
+    
+
+
+Sentence 41:
+NRBC %:0.0[%]
+    
+
+
+Sentence 42:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 43:
+Badanie ogólne moczu
+    
+
+
+Sentence 44:
+barwa:żółty[ ]
+    
+
+
+Sentence 45:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 46:
+przejrzystość:lekko mętny[ ]
+    
+
+
+Sentence 47:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 48:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 49:
+ciężar właściwy:1.016[ ]
+    
+
+
+Sentence 50:
+kwas askrobinowy:nieobecny[ ]
+    pH:7.0[ ]
+    
+
+
+Sentence 51:
+białko:nieobecne[ ]
+    
+
+
+Sentence 52:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 53:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 54:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 55:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 56:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 57:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 58:
+leukocyty:3 /ul[ul]
+    erytrocyty świeże:2 /ul[ul]
+    śluz:nieliczny[w preparacie]
+    bakterie:nieliczne[w preparacie]
+    
+
+
+Sentence 59:
+fosforany bezpostaciowe:bardzo liczne[w preparacie]
+
+
+
+Sentence 60:
+TSH: TSH:0.51[uIU/ml]
+
+
+
+Sentence 61:
+FT3: FT3:2.65[pg/ml]
+
+
+
+Sentence 62:
+FT4: FT4:1.15[ng/dl]
+
+
+
+Sentence 63:
+Troponina T
+    Troponina T:
+    3.00[pg/ml]
+
+
+
+Sentence 64:
+Ferrytyna: Ferrytyna:130.5[ng/ml]
+
+
+
+Sentence 65:
+ALAT: ALAT:17[U/L]
+ASPAT: ASPAT:23[U/L]
+CRP Białko C-reaktywne: CRP Białko C-reaktywne:0.77[mg/dl]
+
+
+
+Sentence 66:
+Sód (Na): Sód:141[mmol/L]
+
+
+
+Sentence 67:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 68:
+Kreatynina + GFR
+    
+
+
+Sentence 69:
+Kreatynina w surowicy:0.57[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 70:
+MDRD ze stan:116.9[ml/min/1,73 m^2]
+
+
+
+Sentence 71:
+Mocznik: Mocznik:24[mg/dl]
+
+
+
+Sentence 72:
+Kwas moczowy: Kwas moczowy:4.0[mg/dl]
+
+
+
+Sentence 73:
+Lipidogram
+    
+
+
+Sentence 74:
+Cholesterol całkowity:254[mg/dl]
+    
+
+
+Sentence 75:
+Cholesterol HDL:49[mg/dl]
+    
+
+
+Sentence 76:
+Cholestrol LDL:187[mg/dl]
+    
+
+
+Sentence 77:
+Triglicerydy:72[mg/dl]
+    
+
+
+Sentence 78:
+Stosunek cholesterolu HD:0.2
+Glukoza w surowicy: Glukoza w surowicy:97[mg/dl]
+
+
+
+Sentence 79:
+NT-proBNP surowica: NT-proBNP w surowicy:150[pg/ml]
+
+
+
+Sentence 80:
+------------------------------------------------
+
+
+
+Sentence 81:
+ICD10
+------------------------------------------------
+R03.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 82:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 83:
+C55
+A01
+89.502
+I81
+L43
+O61
+N45
+L69
+O55
+I17
+M45
+O35
+M37
+L05
+
+
+
+Sentence 84:
+I19
+N13
+N24
+88.721
+O69
+88.761
+88.751
+
+
+
+Sentence 85:
+------------------------------------------------
+
+

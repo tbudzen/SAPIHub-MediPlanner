@@ -1,0 +1,33 @@
+T1	Drug 333 341	Dicoflor
+T2	Drug_dose 342 363	5 kropli 2 x dziennie
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 628 631	ANA
+T4	Drug 633 644	Paracetamol
+T5	Drug 646 654	Dormicum
+T6	Condition 818 886	wrodzona wada serca pod postacia przełożenia wielkich pni tętniczych
+N1	Reference T6 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T7	Condition 889 927	ubytkiem w przegrodzie międzykomorowej
+N2	Reference T7 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T8	Condition 933 949	koarktacja aorty
+N3	Reference T8 ICD10:Q25.1	Zwężenie cieśni aorty
+T9	Treatment 953 974	korekcji anatomicznej
+T10	Date 975 997	w okresie noworodkowym
+R2	Dat Arg1:T10 Arg2:T9	
+R3	Dat Arg1:T10 Arg2:T8	
+R4	Dat Arg1:T10 Arg2:T7	
+R5	Dat Arg1:T10 Arg2:T6	
+T11	Condition 999 1035	Porażenie przepony po stronie prawej
+N4	Reference T11 ICD10:J98.6	Choroby przepony
+T12	Condition 1038 1057	Niedobór masy ciała
+N5	Reference T12 ICD10:R62.8	Inne braki w porównaniu do oczekiwanego prawidłowego rozwoju fizjologicznego
+T13	Condition 1063 1090	Niezyt żoładkowo - jelitowy
+N6	Reference T13 ICD10:A08	Wirusowe i inne określone zakażenia jelit
+T14	Treatment 364 404	Kontrola w Poradni Gastroenterologicznej
+T15	Treatment 405 439	Kontrola w Poradni KArdiologicznej
+T16	Date 440 453	za 6 miesięcy
+R6	Dat Arg1:T16 Arg2:T15	
+R1	Drg Arg1:T1 Arg2:T2
+R3	Dat Arg1:T16 Arg2:T15
+R7	Dat Arg1:T10 Arg2:T8
+R8	Dat Arg1:T10 Arg2:T11
+R9	Dat Arg1:T10 Arg2:T9

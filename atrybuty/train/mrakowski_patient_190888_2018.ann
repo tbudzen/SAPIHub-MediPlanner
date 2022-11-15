@@ -1,0 +1,90 @@
+T1	Symptom 456 464	omdleniu
+N1	Reference T1 ICD10:R55	Omdlenie i zapaść
+T2	Condition 480 507	Choroba niedokrwienna serca
+N2	Reference T2 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T3	Condition 509 530	Nadciśnienie tętnicze
+N3	Reference T3 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T4	Condition 532 546	Hiperlipidemia
+N4	Reference T4 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T5	Symptom 747 773	pełnej utraty przytomności
+N5	Reference T5 ICD10:R55	Omdlenie i zapaść
+T6	Date 781 791	13.12.2018
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Investigation 812 815	EKG
+T8	Investigation_result 797 809	nowych zmian
+R2	Inv Arg1:T7 Arg2:T8	
+T9	Investigation_result 821 854	ujemnym wyniku oznaczeń troponiny
+T10	Symptom 856 881	Pełna utrata przytomności
+N6	Reference T10 ICD10:R55	
+T11	Symptom 894 928	bólem w okolicy podżebrowej prawej
+N7	Reference T11 ICD10:R07.3	Inne bóle w klatce piersiowej
+T12	Symptom 931 948	uczuciem nudności
+N8	Reference T12 ICD10:R11	Nudności i wymioty
+T13	Symptom 964 973	wymiotami
+N9	Reference T13 ICD10:R11	Nudności i wymioty
+T14	Negation 976 979	bez
+T15	Condition 980 985	urazu
+N10	Reference T15 ICD10:T14.9	Uraz, nieokreślony
+R3	Neg Arg1:T14 Arg2:T15	
+T16	Drug 1008 1016	Bisocard
+T17	Drug 1019 1031	Hydroxyzinum
+T18	Investigation_result 1041 1072	podwyższonych BP do 170/100mmHg
+N11	Reference T18 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T19	Treatment 1079 1104	zabiegiem Ginekologicznym
+T20	Condition 1126 1142	mięśniaka macicy
+A1	Source T20 Declared
+N12	Reference T20 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+T21	Condition 1145 1166	przerostu endometrium
+A2	Source T21 Declared
+N13	Reference T21 ICD10:N80.0	Gruczolistość mięśnia macicy
+T22	Treatment 1193 1238	zabiegu w znieczuleniu krótkotrwałym dożylnym
+T23	Negation 1240 1246	neguje
+T24	Symptom 1247 1271	bóle w klatce piersiowej
+R4	Neg Arg1:T23 Arg2:T24	
+T25	Negation 1273 1279	neguje
+T26	Symptom 1280 1297	uczucie duszności
+N15	Reference T26 ICD10:R06.0	Duszność
+T27	Symptom 1299 1314	kołatania serca
+N16	Reference T27 ICD10:R00.2	Kołatanie serca
+R5	Neg Arg1:T25 Arg2:T27	
+R6	Neg Arg1:T25 Arg2:T26	
+T28	Treatment 1356 1373	Przebyte operacje
+T29	Negation 1376 1380	brak
+R7	Neg Arg1:T29 Arg2:T28	
+T30	Treatment 1381 1400	Leczenie przewlekłe
+T31	Negation 1403 1407	brak
+R8	Neg Arg1:T31 Arg2:T30	
+T32	Condition 1435 1438	WZW
+N17	Reference T32 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T33	Condition 1448 1457	borelioza
+N18	Reference T33 ICD10:A69.2	Choroba z Lyme
+T34	Negation 1460 1461	-
+R9	Neg Arg1:T34 Arg2:T33	
+T35	Negation 1441 1442	-
+R10	Neg Arg1:T35 Arg2:T32	
+T36	Condition 1466 1485	wywiadzie rodzinnym
+A3	Status T36 Family
+T37	Negation 1488 1492	brak
+R11	Neg Arg1:T37 Arg2:T36	
+T38	Behaviour 1494 1509	Palenie tytoniu
+T39	Negation 1511 1514	nie
+R12	Neg Arg1:T39 Arg2:T38	
+T40	Behaviour 1515 1526	Inne używki
+T41	Negation 1528 1531	nie
+R13	Neg Arg1:T41 Arg2:T40	
+T42	Condition 1532 1541	Uczulenia
+N20	Reference T42 ICD10:T78.4	Alergia, nieokreślona
+T43	Negation 1543 1549	neguje
+R14	Neg Arg1:T43 Arg2:T42	
+T44	Behaviour 1566 1592	warunki mieszkaniowe dobre
+T45	Investigation 1654 1664	Holter EKG
+T46	Investigation 1667 1682	Próba Wysiłkowa
+N19	Reference T38 ICD10:Z72.0	Używanie tytoniu
+N14	Reference T24 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T47	Negation 1331 1334	bez
+T48	Condition 1335 1354	chorób przewlekłych
+R15	Neg Arg1:T47 Arg2:T48	
+N21	Reference T40 ICD10:Z72	Problemy związane ze stylem życia
+T49	Negation 1617 1620	bez
+T50	Drug 1621 1639	leków przewlekłych
+R16	Neg Arg1:T49 Arg2:T50	

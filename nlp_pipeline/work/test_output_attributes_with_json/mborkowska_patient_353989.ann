@@ -1,0 +1,38 @@
+T1	Drug 340 350	Salbutamol
+T2	Drug 483 495	Salbutamol  
+T3	Drug_dose 495 503	2 x 5ml.
+T4	Investigation 522 559	kontrola tętna i ciśnienia tętniczego
+T5	Treatment 564 647	Ewentualne modyfikacje farmakoterapii po weryfikacji z listą leków wydłużających QT
+T6	Behaviour 688 764	Ograniczenie aktywności fizycznej - zwolnienie z zajęć wychowania fizycznego
+T7	Condition 1184 1246	Wrodzona wada serca - podwójne odejście naczyń z prawej komory
+T8	Condition 1249 1273	ubytkiem międzykomorowym
+T9	Condition 1276 1292	koarktacją aorty
+T10	Treatment 1305 1318	operacji wady
+T11	Date 1320 1329	28.08.07r
+T12	Treatment 1335 1381	reoperacji zwężenia drogi odpływu lewej komory
+T13	Date 1383 1392	18.12.07r
+T14	Treatment 1406 1437	plastyce balonowej rekoarktacji
+T15	Date 1439 1448	06.12.07r
+T16	Condition 1454 1474	Bradykardia zatokowa
+T17	Condition 1480 1505	Komorowe zaburzenia rytmu
+T18	Condition 1510 1536	Obserwacja w kierunku LQTS
+T19	Drug 1715 1725	salbutamol
+T20	Condition 1728 1744	uczulony na kurz
+T21	Drug 1759 1764	leków
+T22	Negation 1755 1758	bez
+N1	Reference T7 ICD10:Q20	Wrodzone wady rozwojowe jam i poÅÄczeÅ sercowych
+N2	Reference T8 ICD10:Q21.0	Ubytek przegrody miÄdzykomorowej
+N3	Reference T10 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N4	Reference T12 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N5	Reference T14 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N6	Reference T16 ICD10:R00.1	Bradykardia, nieokreÅlona
+N7	Reference T17 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komÃ³r
+R1	Drg Arg1:T2 Arg2:T3
+R16	Dat Arg1:T13 Arg2:T12
+R17	Dat Arg1:T13 Arg2:T14
+R21	Dat Arg1:T15 Arg2:T16
+R25	Dat Arg1:T15 Arg2:T14
+R28	Neg Arg1:T22 Arg2:T21
+R29	Alg Arg1:T20 Arg2:T19
+R7	Dat Arg1:T11 Arg2:T10
+R8	Dat Arg1:T11 Arg2:T12

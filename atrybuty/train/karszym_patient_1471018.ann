@@ -1,0 +1,116 @@
+T1	Treatment 346 373	dalsza opieka w poradni POZ
+T2	Treatment 381 413	okresowa kontrola kardiologiczna
+T3	Treatment 420 499	konsultacja psychologiczna i psychiatryczna celem nauki technik redukcji stresu
+T4	Investigation 505 650	codzienna kontrola ciśnienia tętniczego (w warunkach pełnego komfortu psychicznego i co najmniej po 10 minutach odpoczynku po wysiłku fizycznym!)
+T5	Behaviour 656 690	spożycie płynów 2.0-3.0 litra/dobę
+T6	Investigation 696 723	okresowa kontrola jonogramu
+T7	Date 726 744	kolejna za tydzień
+T8	Investigation 745 758	i lipidogramu
+R1	Dat Arg1:T7 Arg2:T6	
+T9	Behaviour 765 801	dieta zbliżona do śródziemnomorskiej
+T10	Behaviour 810 855	stały, umiarkowany, aerobowy wysiłek fizyczny
+T11	Drug 900 911	Trittico CR
+T12	Drug 947 956	Captopril
+T13	Drug_dose 912 938	150 mg 2/3 tabl. wieczorem
+T14	Drug_dose 957 1009	12.5 mg doraźnie pod język w razie wzrostu ciśnienia
+R2	Drg Arg1:T11 Arg2:T13	
+R3	Drg Arg1:T12 Arg2:T14	
+T15	Condition 1228 1251	Niedociśnienie tętnicze
+T16	Behaviour 1253 1263	Nikotynizm
+N2	Reference T16 ICD10:Z72.0	Używanie tytoniu
+T17	Date 1264 1277	w przeszłości
+R4	Dat Arg1:T17 Arg2:T16	
+T18	Treatment 1287 1295	operacji
+N3	Reference T18 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+A1	Status T18 Historical_Insignificant
+T19	Condition 1296 1312	zaćmy oka lewego
+A2	Status T19 Historical_Insignificant
+N4	Reference T19 ICD10:H26.9	Zaćma, nieokreślona
+T20	Date 1314 1326	przed 5 laty
+T21	Condition 1328 1344	oraz oka prawego
+A3	Status T21 Historical_Insignificant
+N5	Reference T21 ICD10:H26.9	Zaćma, nieokreślona
+T22	Date 1346 1359	przed 10 laty
+T23	Treatment 1370 1378	operacji
+A4	Status T23 Historical_Insignificant
+N6	Reference T23 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T24	Condition 1388 1406	nietrzymania moczu
+A5	Status T24 Historical_Insignificant
+T25	Date 1408 1420	przed 2 laty
+N7	Reference T24 ICD10:R32	Nietrzymanie moczu, nieokreślone
+R5	Dat Arg1:T20 Arg2:T18	
+R6	Dat Arg1:T20 Arg2:T19	
+R7	Dat Arg1:T22 Arg2:T21	
+R8	Dat Arg1:T22 Arg2:T18	
+R9	Dat Arg1:T25 Arg2:T24	
+R10	Dat Arg1:T25 Arg2:T23	
+T26	Investigation_result 1589 1610	labilnych wartości BP
+T27	Investigation_result 1640 1656	max. BPs>180mmHg
+T28	Investigation_result 1659 1691	samoistnym  spadkiem po godzinie
+T29	Investigation_result 1704 1714	BPs 86mmHg
+T30	Investigation_result 1717 1788	Czas utrzymywania się podwyższonego BP różnie długi - czasem cały dzień
+T31	Symptom 1804 1814	bóle głowy
+N8	Reference T31 ICD10:R51	Ból głowy
+T32	Symptom 1821 1844	ogólne złe samopoczucie
+N9	Reference T32 ICD10:R53	Złe samopoczucie i zmęczenie
+T33	Investigation 1876 1907	echokardiogramie ambulatoryjnym
+T34	Investigation_result 1916 1925	IT IV st.
+N10	Reference T34 ICD10:I36.1	Niereumatyczna niedomykalność zastawki trójdzielnej
+R11	Inv Arg1:T33 Arg2:T34	
+T35	Treatment 2013 2021	operacje
+A6	Status T35 Historical_Insignificant
+N11	Reference T35 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T36	Condition 2023 2031	zaćma OL
+A7	Status T36 Historical_Insignificant
+N12	Reference T36 ICD10:H26.9	Zaćma, nieokreślona
+T37	Date 2034 2039	5 lat
+T38	Condition 2040 2042	OP
+A8	Status T38 Historical_Insignificant
+N13	Reference T38 ICD10:H26.9	Zaćma, nieokreślona
+T39	Date 2045 2051	10 lat
+T40	Condition 2062 2080	nietrzymania moczu
+A9	Status T40 Historical_Insignificant
+N14	Reference T40 ICD10:R32	Nietrzymanie moczu, nieokreślone
+R12	Dat Arg1:T37 Arg2:T36	
+R13	Dat Arg1:T39 Arg2:T38	
+R14	Dat Arg1:T37 Arg2:T35	
+R15	Dat Arg1:T39 Arg2:T35	
+T41	Date 2081 2092	2 lata temu
+R16	Dat Arg1:T41 Arg2:T40	
+T42	Condition 2094 2109	Wywiad rodzinny
+A10	Status T42 Family
+T43	Negation 2111 2124	bez znaczenia
+R17	Dat Arg1:T41 Arg2:T35	
+T44	Condition 2126 2133	Alergie
+N15	Reference T44 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T45	Negation 2135 2141	neguje
+T46	Behaviour 2143 2158	Nikotynizm: tak
+N16	Reference T46 ICD10:Z72.0	Używanie tytoniu
+T47	Date 2159 2175	do 4 m-cy wstecz
+T48	Behaviour 2176 2188	10 paczkolat
+N17	Reference T48 ICD10:Z72.0	Używanie tytoniu
+R18	Dat Arg1:T47 Arg2:T46	
+R19	Neg Arg1:T43 Arg2:T42	
+R20	Neg Arg1:T45 Arg2:T44	
+T49	Behaviour 2190 2211	Alkohol: okazjonalnie
+A11	Status T49 Historical_Insignificant
+N18	Reference T49 ICD10:Z72.1	Używanie alkoholu
+T50	Behaviour 2213 2230	Uzależnienie inne
+T51	Negation 2232 2238	neguje
+R21	Neg Arg1:T51 Arg2:T50	
+T52	Behaviour 2256 2265	emerytura
+T53	Behaviour 2267 2279	ekspedientka
+T54	Behaviour 2281 2294	praca biurowa
+R22	Dat Arg1:T47 Arg2:T48	
+T55	Drug 2302 2309	Nebilet
+T56	Drug_dose 2310 2329	5 mg 1/4 tabl. rano
+T57	Drug 2331 2342	Trittico CR
+T58	Drug_dose 2343 2369	150 mg 2/3 tabl. wieczorem
+T59	Investigation 2399 2409	echo serca
+T60	Investigation 2411 2414	TET
+T61	Investigation 2416 2420	ABPM
+T62	Investigation 2422 2432	Holter ekg
+T63	Investigation 2434 2452	rtg kl. piersiowej
+R23	Drg Arg1:T55 Arg2:T56	
+R24	Drg Arg1:T57 Arg2:T58	
+N1	Reference T15 ICD10:I95.0	Samoistne niedociśnienie tętnicze

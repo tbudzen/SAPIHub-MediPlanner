@@ -1,0 +1,142 @@
+T1	Treatment 330 450	Dalsza opieka w Poradni Endokrynologicznej, Kardiologicznej, Hepatologicznej, Ginekologicznej oraz w Poradni Żywieniowej
+T2	Behaviour 452 493	Przestrzeganie diety ubogocholesterolowej
+T3	Investigation 499 574	okresowa kontrola lipidogramu w POZ->docelowe wartości chol. LDL <100mg/dl.
+T4	Investigation 575 610	Kontrola aminotransferaz (ALT, AST)
+T5	Date 611 624	za 2 tygodnie
+R1	Dat Arg1:T5 Arg2:T4	
+T6	Behaviour 632 694	Redukcja masy ciała oraz regularna aerobowa aktywność fizyczna
+T7	Investigation 696 735	Codzienna kontrola ciśnienia tętniczego
+T8	Treatment 737 767	Systematyczne stosowanie leków
+T9	Drug 769 779	Prestarium
+T10	Drug_dose 780 798	5 mg 1x1 tabl rano
+R2	Drg Arg1:T9 Arg2:T10	
+T11	Drug 799 806	Ezetrol
+T12	Drug_dose 807 826	10 mg 1x1 tabl rano
+R3	Drg Arg1:T11 Arg2:T12	
+T13	Drug 827 836	Heparegen
+T14	Drug_dose 837 845	3x1 tabl
+R4	Drg Arg1:T13 Arg2:T14	
+T15	Drug 847 855	Proursan
+T16	Drug_dose 856 865	2x1 tabl.
+R5	Drg Arg1:T15 Arg2:T16	
+T17	Drug 866 879	Glucophage XR
+T18	Drug_dose 880 947	750 mg 1x1 tabl na noc przez 2 tygodnie, następnie 1x2 tabl na noc.
+R6	Drg Arg1:T17 Arg2:T18	
+T19	Drug 948 955	Luteina
+T20	Drug_dose 956 1020	100 mg 2xdziennie dopochwowo przez 10 dni, następnie w 16-25 dc.
+R7	Drg Arg1:T19 Arg2:T20	
+T21	Behaviour 1022 1042	Niezdolność do pracy
+T22	Date 1044 1061	19.02-27.02.2019r
+R8	Dat Arg1:T22 Arg2:T21	
+T23	Drug 1203 1213	Prestarium
+T24	Drug 1215 1224	Heparegen
+T25	Drug 1226 1234	Proursan
+T26	Condition 1462 1503	Łagodna niedomykalność zastawki mitralnej
+N1	Reference T26 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T27	Condition 1506 1515	aortalnej
+N2	Reference T27 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T28	Condition 1517 1538	Nadciśnienie tętnicze
+N3	Reference T28 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T29	Condition 1540 1556	Insulinooporność
+N4	Reference T29 ICD10:E34	Inne zaburzenia wydzielania wewnętrznego
+T30	Condition 1558 1590	Nieprawidłowa tolerancja glukozy
+T31	Condition 1592 1612	Hipercholesterolemia
+N6	Reference T31 ICD10:E78.0	Czysta hipercholesterolemia
+T32	Condition 1614 1625	Hepatopatia
+T33	Condition 1627 1639	Guz tarczycy
+N8	Reference T33 ICD10:D44	Nowotwór o niepewnym lub nieznanym charakterze gruczołów wydzielania wewnętrznego
+T34	Condition 1663 1677	Otyłość III st
+N9	Reference T34 ICD10:E66	Otyłość
+T35	Symptom 1864 1903	labilnych wartości ciśnienia tętniczego
+T36	Symptom 1905 1918	kołatań serca
+N10	Reference T36 ICD10:R00.2	Kołatanie serca
+T37	Symptom 1924 1955	ograniczonej tolerancji wysiłku
+N11	Reference T37 ICD10:R53	Złe samopoczucie i zmęczenie
+T38	Condition 1978 1985	otyłość
+N12	Reference T38 ICD10:E66	Otyłość
+T39	Condition 1987 2030	hipercholesterolemia (obecnie bez leczenia)
+N13	Reference T39 ICD10:E78.0	Czysta hipercholesterolemia
+T40	Condition 2032 2043	hepatopatia
+T41	Condition 2045 2061	torbiele jajnika
+N15	Reference T41 ICD10:N83.2	Inne i nieokreślone torbiele jajnikowe
+T42	Negation 2063 2069	Neguje
+T43	Symptom 2071 2083	zasłabnięcia
+T44	Symptom 2085 2093	omdlenia
+N16	Reference T44 ICD10:R55	Omdlenie i zapaść
+T45	Symptom 2095 2105	krwawienia
+T46	Symptom 2107 2120	czarne stolce
+N17	Reference T46 ICD10:K92.1	Stolce smołowate
+T47	Symptom 2122 2138	brunatne wymioty
+N18	Reference T47 ICD10:K92.0	Wymioty krwawe
+T48	Condition 2140 2156	chorobę wrzodową
+N19	Reference T48 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T49	Symptom 2158 2172	duszność nocną
+N20	Reference T49 ICD10:R06.0	Duszność
+T50	Symptom 2174 2189	obrzęki podudzi
+T51	Symptom 2191 2215	bóle w klatce piersiowej
+N22	Reference T51 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+R9	Neg Arg1:T42 Arg2:T43	
+R10	Neg Arg1:T42 Arg2:T44	
+R11	Neg Arg1:T42 Arg2:T45	
+R12	Neg Arg1:T42 Arg2:T46	
+R13	Neg Arg1:T42 Arg2:T47	
+R14	Neg Arg1:T42 Arg2:T48	
+R15	Neg Arg1:T42 Arg2:T49	
+R16	Neg Arg1:T42 Arg2:T50	
+R17	Neg Arg1:T42 Arg2:T51	
+T52	Treatment 2235 2247	laparoskopia
+A1	Status T52 Historical_Insignificant
+T53	Condition 2270 2282	endometriozy
+T54	Condition 2284 2300	teratomy jajnika
+T55	Behaviour 2302 2317	Palenie tytoniu
+N23	Reference T55 ICD10:Z72.0	Używanie tytoniu
+T56	Negation 2319 2327	nie pali
+R18	Neg Arg1:T56 Arg2:T55	
+T57	Behaviour 2329 2340	Inne używki
+T58	Negation 2342 2345	nie
+R19	Neg Arg1:T58 Arg2:T57	
+T59	Condition 2346 2355	Uczulenia
+T60	Negation 2357 2360	nie
+R20	Neg Arg1:T60 Arg2:T59	
+T61	Condition 2388 2391	WZW
+N24	Reference T61 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T62	Negation 2393 2394	-
+R21	Neg Arg1:T62 Arg2:T61	
+T63	Condition 2398 2407	borelioza
+N25	Reference T63 ICD10:A69.2	Choroba z Lyme
+T64	Negation 2409 2410	-
+R22	Neg Arg1:T64 Arg2:T63	
+T65	Condition 2413 2416	tbc
+N26	Reference T65 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T66	Negation 2418 2419	-
+R23	Neg Arg1:T66 Arg2:T65	
+T67	Condition 2422 2426	odra
+N27	Reference T67 ICD10:B05	Odra
+T68	Negation 2428 2429	-
+R24	Neg Arg1:T68 Arg2:T67	
+T69	Condition 2432 2446	kontakt z odrą
+N28	Reference T69 ICD10:B05	Odra
+T70	Negation 2448 2449	-
+R25	Neg Arg1:T70 Arg2:T69	
+T71	Behaviour 2467 2493	warunki mieszkaniowe dobre
+T72	Drug 2528 2538	Prestarium
+T73	Drug 2540 2548	Bisocard
+T74	Drug 2550 2559	Heparegen
+T75	Drug 2561 2569	Proursan
+T76	Investigation 2631 2652	badania laboratoryjne
+T77	Investigation 2654 2658	ECHO
+T78	Investigation 2660 2678	EKG metodą Holtera
+T79	Investigation 2680 2684	ABPM
+T80	Investigation 2686 2701	próba wysiłkowa
+T81	Investigation 1657 1661	BACC
+N29	Reference T35 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+N21	Reference T50 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+T82	Investigation_result 1678 1690	BMI 40 kg/m2
+N5	Reference T30 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T83	Treatment 2217 2234	Przebyte operacje
+N7	Reference T32 ICD10:K76.9	Choroba wątroby, nieokreślona
+N14	Reference T40 ICD10:K76.9	Choroba wątroby, nieokreślona
+T84	Condition 2258 2268	mięsniaków
+N30	Reference T84 ICD10:D25.9	Mięśniak gładkokomórkowy macicy, umiejscowienie nieokreślone
+N31	Reference T53 ICD10:N80	Gruczolistość
+N32	Reference T54 ICD10:D39.1	Jajnik

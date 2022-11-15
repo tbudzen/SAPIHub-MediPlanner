@@ -1,0 +1,74 @@
+T1	Treatment 341 399	dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T2	Treatment 410 445	kontrolna w Poradni Kardiologicznej
+T3	Date 446 458	za 1 miesiąc
+R1	Dat Arg1:T3 Arg2:T2	
+T4	Treatment 470 543	kontrolna hospitalizacja w Klinice Kardiologii i Wad Wrodzonych Dorosłych
+T5	Condition 800 845	Ubytek przegrody międzyprzedsionkowej typu II
+N1	Reference T5 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T6	Treatment 848 903	zamknięcie zestawem Occlutech Figulla Flex II ASD 18 mm
+N2	Reference T6 ICD10:Z95.8	Obecność innych implantów i przeszczepów sercowo-naczyniowych
+T7	Date 905 915	14/08/2019
+R2	Dat Arg1:T7 Arg2:T6	
+T8	Treatment 929 947	usunięciu tarczycy
+T9	Condition 957 961	wola
+T10	Condition 1109 1133	podejrzeniem ASD typu II
+N5	Reference T10 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T11	Treatment 1202 1220	usunięciu tarczycy
+T12	Condition 1230 1234	wola
+T13	Negation 1237 1243	Neguje
+T14	Symptom 1244 1256	zasłabnięcia
+T15	Symptom 1258 1267	duszności
+N8	Reference T15 ICD10:R06.0	Duszność
+T16	Symptom 1269 1300	typowe bóle w klatce piersiowej
+N9	Reference T16 ICD10:R07.2	Ból w okolicy przedsercowej
+R3	Neg Arg1:T13 Arg2:T14	
+R4	Neg Arg1:T13 Arg2:T15	
+R5	Neg Arg1:T13 Arg2:T16	
+T17	Date 1302 1316	W grudniu 2018
+T18	Symptom 1323 1358	odczuwała uciski w klatce piersiowe
+N10	Reference T18 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T19	Symptom 1365 1380	kołatania serca
+N11	Reference T19 ICD10:R00.2	Kołatanie serca
+R6	Dat Arg1:T17 Arg2:T18	
+R7	Dat Arg1:T17 Arg2:T19	
+T20	Condition 1434 1437	WZW
+N12	Reference T20 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T21	Condition 1446 1455	borelioza
+N13	Reference T21 ICD10:A69.2	Choroba z Lyme
+T22	Condition 1463 1471	gruźlica
+N14	Reference T22 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T23	Condition 1477 1481	odra
+N15	Reference T23 ICD10:B05	Odra
+T24	Treatment 1487 1511	szczepiona na odrę - tak
+T25	Negation 1438 1443	( - )
+T26	Negation 1456 1461	( - )
+T27	Negation 1472 1475	(-)
+T28	Negation 1482 1485	(-)
+R8	Neg Arg1:T25 Arg2:T20	
+R9	Neg Arg1:T26 Arg2:T21	
+R10	Neg Arg1:T27 Arg2:T22	
+R11	Neg Arg1:T28 Arg2:T23	
+T29	Condition 1555 1557	HA
+A1	Status T29 Family
+N16	Reference T29 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T30	Behaviour 1558 1573	Palenie tytoniu
+N17	Reference T30 ICD10:Z72.0	Używanie tytoniu
+T31	Negation 1575 1585	nie, nigdy
+R12	Neg Arg1:T31 Arg2:T30	
+T32	Behaviour 1586 1597	Inne używki
+T33	Negation 1599 1602	nie
+T34	Condition 1603 1612	Uczulenia
+N18	Reference T34 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T35	Negation 1614 1620	neguje
+R13	Neg Arg1:T33 Arg2:T32	
+R14	Neg Arg1:T35 Arg2:T34	
+T36	Behaviour 1637 1663	warunki mieszkaniowe dobre
+T37	Behaviour 1666 1683	mieszka z rodziną
+T38	Drug 1684 1700	Leki: jak w IKZL
+R16	Dat Arg1:T7 Arg2:T5	
+T40	Treatment 550 571	oceny skuteczności le
+N4	Reference T14 ICD10:R55	Omdlenie i zapaść
+N7	Reference T32 ICD10:Z72	Problemy związane ze stylem życia
+A2	Source T10 Declared
+N6	Reference T11 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+N3	Reference T8 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych

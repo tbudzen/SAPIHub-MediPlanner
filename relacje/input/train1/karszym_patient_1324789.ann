@@ -1,0 +1,75 @@
+T1	Condition 449 534	Ciężka niedomykalność zastawki mitralnej (typ I+II wg Carpentiera) w I klasie wg NYHA
+N1	Reference T1 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T2	Condition 540 578	Nadciśnienie tętnicze I st. wg ESH/ESC
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Treatment 592 600	operacji
+A1	Status T3 Historical_Insignificant
+N3	Reference T3 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T4	Treatment 763 821	dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T5	Treatment 825 875	Przed zabiegiem kardiochirurgicznym należy wykonać
+T6	Treatment 877 907	szczepienie przeciw WZW typu B
+T7	Investigation 909 946	wymaz z nosa i gardła w kierunku MRSA
+T8	Treatment 948 994	konsultacje: stomatologiczną i laryngologiczną
+T9	Condition 1168 1257	niedomykalności zastawki mitralnej w mechanizmie wypadania obu płatków w I klasie wg NYHA
+N4	Reference T9 ICD10:I34	Niereumatyczne choroby zastawki mitralnej
+T10	Symptom 1295 1305	osłabienia
+T11	Date 1306 1325	od około 6 miesięcy
+R1	Dat Arg1:T11 Arg2:T10	
+T12	Negation 1346 1352	Neguje
+T13	Symptom 1353 1365	zasłabnięcia
+T14	Symptom 1367 1376	duszności
+N5	Reference T14 ICD10:R06.0	Duszność
+T15	Symptom 1378 1409	typowe bóle w klatce piersiowej
+N6	Reference T15 ICD10:R07.2	Ból w okolicy przedsercowej
+R2	Neg Arg1:T12 Arg2:T13	
+R3	Neg Arg1:T12 Arg2:T14	
+R4	Neg Arg1:T12 Arg2:T15	
+T16	Treatment 1431 1439	operacja
+N7	Reference T16 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T17	Date 1477 1494	około 20 lat temu
+R5	Dat Arg1:T17 Arg2:T16	
+T18	Condition 1522 1525	WZW
+N8	Reference T18 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T19	Condition 1535 1544	borelioza
+N9	Reference T19 ICD10:A69.2	Choroba z Lyme
+T20	Condition 1552 1560	gruźlica
+N10	Reference T20 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T21	Condition 1566 1569	odr
+N11	Reference T21 ICD10:B05	Odra
+T22	Negation 1526 1532	( -  )
+T23	Negation 1545 1550	( - )
+T24	Negation 1561 1564	(-)
+T25	Negation 1570 1573	(-)
+R6	Neg Arg1:T22 Arg2:T18	
+R7	Neg Arg1:T23 Arg2:T19	
+R8	Neg Arg1:T24 Arg2:T20	
+R9	Neg Arg1:T25 Arg2:T21	
+T26	Condition 1574 1589	Wywiad rodzinny
+A2	Status T26 Family
+T27	Negation 1591 1600	negatywny
+T28	Behaviour 1601 1616	Palenie tytoniu
+N12	Reference T28 ICD10:Z72.0	Używanie tytoniu
+T29	Date 1618 1631	w przeszłości
+T30	Behaviour 1632 1643	Inne używki
+T31	Negation 1645 1648	nie
+T32	Condition 1649 1658	Uczulenia
+N13	Reference T32 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T33	Negation 1660 1666	neguje
+R10	Neg Arg1:T27 Arg2:T26	
+R11	Dat Arg1:T29 Arg2:T28	
+R12	Neg Arg1:T31 Arg2:T30	
+R13	Neg Arg1:T33 Arg2:T32	
+T34	Behaviour 1683 1709	warunki mieszkaniowe dobre
+T35	Behaviour 1712 1726	mieszka z żoną
+T36	Drug 1733 1739	Concor
+T37	Drug_dose 1740 1761	3,75mg 1x1 tabl. rano
+R14	Drg Arg1:T36 Arg2:T37	
+A3	Status T16 Historical_Insignificant
+T38	Condition 601 637	przepukliny pachwinowej lewostronnej
+A4	Status T38 Historical_Insignificant
+N14	Reference T38 ICD10:K40.9	Jednostronna lub nieokreślona przepuklina pachwinowa bez niedrożności lub zgorzeli
+#1	AnnotatorNotes T9	I34.0 + I34.1
+T39	Condition 1440 1476	przepukliny pachwinowej lewostronnej
+A5	Status T39 Historical_Insignificant
+N15	Reference T39 ICD10:K40.9	Jednostronna lub nieokreślona przepuklina pachwinowa bez niedrożności lub zgorzeli
+R15	Dat Arg1:T17 Arg2:T39	

@@ -1,0 +1,120 @@
+T1	Condition 439 477	Tętniak przegrody międzyprzedsionkowej
+N1	Reference T1 ICD10:I25.3	Tętniak serca
+T2	Condition 479 500	Nadciśnienie tętnicze
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Condition 502 552	Łagodna niedokrwistość normocytarna, normobarwliwa
+N3	Reference T3 ICD10:D64.9	Niedokrwistość, nieokreślona
+T4	Condition 554 572	Kamica nerki lewej
+N4	Reference T4 ICD10:N20.0	Kamica nerki
+T5	Treatment 582 590	operacji
+N5	Reference T5 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T6	Treatment 610 632	następową radioterapią
+T7	Date 634 638	2012
+R1	Dat Arg1:T7 Arg2:T6	
+R2	Dat Arg1:T7 Arg2:T5	
+A1	Status T4 Historical_Insignificant
+T8	Condition 678 691	meta do kości
+N7	Reference T8 ICD10:C79.5	Wtórny nowotwór złośliwy kości i szpiku kostnego
+T9	Date 694 707	4 miesiące po
+T10	Treatment 708 716	leczeniu
+T11	Drug 717 740	pamidronianem disodowym
+R3	Dat Arg1:T9 Arg2:T8	
+R4	Dat Arg1:T9 Arg2:T10	
+R5	Dat Arg1:T9 Arg2:T11	
+T12	Symptom 762 775	Zawroty głowy
+T13	Treatment 789 815	pod kontrolą neurologiczną
+T14	Treatment 929 971	Dalsza opieka w POZ, Poradni Onkologicznej
+T15	Treatment 985 1047	pilna konsultacja w Poradni Neurologicznej z uwagi na podawane
+T16	Symptom 1048 1061	zawroty głowy
+N9	Reference T16 ICD10:R42	Zawroty głowy i odurzenie
+T17	Symptom 1067 1097	okresowe drętwienie lewej ręki
+T18	Treatment 1111 1161	dalsza okresowa kontrola w Poradni Kardiologicznej
+T19	Investigation 1177 1236	badania SPECT mięśnia sercowego w warunkach ambulatoryjnych
+T20	Investigation 1272 1290	USG jamy brzusznej
+T21	Investigation_result 1291 1309	kamicę nerki lewej
+N10	Reference T21 ICD10:N20.0	Kamica nerki
+T22	Investigation_result 1315 1326	krwinkomocz
+T23	Treatment 1337 1371	konsultacja w Poradni Urologicznej
+R6	Inv Arg1:T20 Arg2:T21	
+T24	Investigation 1385 1412	dalsza diagnostyka przyczyn
+T25	Investigation 1460 1563	Okresowa kontrola morfologii, lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T26	Date 1566 1589	pierwsza za 4-6 tygodni
+R7	Dat Arg1:T26 Arg2:T25	
+T27	Behaviour 1594 1696	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T28	Investigation 1701 1757	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T29	Drug 1796 1804	Telmizek
+T30	Drug 1832 1844	Tertensif SR
+T31	Drug 1862 1870	Transtec
+T32	Drug_dose 1805 1830	40mg 1 tabletka wieczorem
+T33	Drug_dose 1845 1860	1 tabletka rano
+T34	Drug_dose 1871 1888	52,5ug/h co 4 dni
+R8	Drg Arg1:T29 Arg2:T32	
+R9	Drg Arg1:T30 Arg2:T33	
+R10	Drg Arg1:T31 Arg2:T34	
+T35	Symptom 2332 2362	pogorszenia tolerancji wysiłku
+T36	Investigation_result 2364 2385	labilnych wartości BP
+T37	Symptom 2387 2407	obrzęków kk. dolnych
+N11	Reference T37 ICD10:R60.0	Obrzęk zlokalizowany
+T38	Condition 2431 2472	zmiany po radioterapii pęcherza moczowego
+T39	Treatment 2512 2520	operacja
+A2	Status T39 Historical_Insignificant
+N12	Reference T39 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T40	Date 2536 2540	2012
+T41	Treatment 2523 2535	radioterapia
+R11	Dat Arg1:T40 Arg2:T41	
+R12	Dat Arg1:T40 Arg2:T39	
+T42	Condition 2542 2555	meta do kości
+N14	Reference T42 ICD10:C79.5	Wtórny nowotwór złośliwy kości i szpiku kostnego
+T43	Date 2558 2576	przed 4 tygodniami
+T44	Treatment 2577 2592	koniec leczenia
+R13	Dat Arg1:T43 Arg2:T44	
+T45	Condition 2594 2609	Wywiad rodzinny
+A3	Status T45 Family
+T46	Negation 2611 2624	bez znaczenia
+T47	Condition 2626 2633	Alergie
+N15	Reference T47 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T48	Negation 2636 2642	neguje
+T49	Behaviour 2644 2668	Nikotynizm: 10 paczkolat
+T50	Date 2670 2685	do 5 lat wstecz
+R15	Dat Arg1:T50 Arg2:T49	
+R16	Neg Arg1:T48 Arg2:T47	
+R17	Neg Arg1:T46 Arg2:T45	
+T51	Behaviour 2688 2695	Alkohol
+T52	Negation 2697 2703	neguje
+T53	Behaviour 2705 2722	Uzależnienie inne
+T54	Negation 2724 2730	neguje
+T55	Behaviour 2748 2757	emerytura
+T56	Behaviour 2759 2773	praca umysłowa
+T57	Date 2774 2783	wczesniej
+R14	Dat Arg1:T57 Arg2:T56	
+T58	Drug 2791 2799	Transtec
+T59	Drug 2867 2879	Nitrendypina
+T60	Drug_dose 2800 2826	52,5 ug/h plaster co 4 dni
+T61	Drug_dose 2880 2898	10 mg 1 tabl. rano
+T63	Drug_dose 2899 2921	(czasami 2 x dziennie)
+R18	Drg Arg1:T58 Arg2:T60	
+R19	Drg Arg1:T59 Arg2:T61	
+R21	Drg Arg1:T59 Arg2:T63	
+R22	Neg Arg1:T52 Arg2:T51	
+R23	Neg Arg1:T54 Arg2:T53	
+T64	Investigation 2950 2960	echo serca
+T65	Investigation 2962 2965	TET
+T66	Investigation 2967 2971	ABPM
+T67	Investigation 2973 2983	Holter ekg
+T68	Investigation 2985 3003	rtg kl. piersiowej
+N13	Reference T41 ICD10:Z51.0	Sesja radioterapii
+N16	Reference T49 ICD10:Z72.0	Używanie tytoniu
+N17	Reference T51 ICD10:Z72.1	Używanie alkoholu
+T62	Condition 591 607	Ca trzonu macicy
+N18	Reference T62 ICD10:C54	Nowotwór złośliwy trzonu macicy
+R20	Dat Arg1:T7 Arg2:T62	
+N6	Reference T6 ICD10:Z51.0	Sesja radioterapii
+A4	Source T8 Declared
+N8	Reference T12 ICD10:R42	Zawroty głowy i odurzenie
+T69	Condition 2493 2509	ca trzonu macicy
+N19	Reference T69 ICD10:C54	Nowotwór złośliwy trzonu macicy
+R24	Dat Arg1:T40 Arg2:T69	
+R25	Dat Arg1:T43 Arg2:T42	
+T70	Symptom 1413 1423	krwawienia
+T71	Treatment 1424 1455	w Poradni Gastroenterologicznej
+N20	Reference T22 ICD10:R82.8	Nieprawidłowe wyniki badań cytologicznych i histologicznych moczu

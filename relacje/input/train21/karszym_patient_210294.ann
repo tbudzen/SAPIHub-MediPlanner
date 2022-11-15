@@ -1,0 +1,89 @@
+T1	Condition 450 545	Wrodzona wada serca pod postacią dwupłatkowej zastawki aortalnej z umiarkowaną niedomykalnością
+N1	Reference T1 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T2	Condition 551 572	Nadciśnienie tętnicze
+N2	Reference T2 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T3	Condition 577 608	Dyslipidemia w trakcie leczenia
+N3	Reference T3 ICD10:E78.9	Zaburzenia przemian lipoprotein, nieokreślone
+T5	Drug 609 616	statyną
+T6	Condition 622 639	Wole nietoksyczne
+N4	Reference T6 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T7	Condition 644 672	Toczeń rumieniowaty układowy
+N5	Reference T7 ICD10:M32.9	Toczeń rumieniowaty układowy, nieokreślony
+T8	Condition 678 691	Zawroty głowy
+N6	Reference T8 ICD10:H81.9	Zaburzenia układu przedsionkowego, nieokreślone
+T9	Condition 704 739	przemijającej niepamięci całkowitej
+N7	Reference T9 ICD10:G45.4	Przemijająca niepamięć całkowita
+T10	Date 741 751	02/12/2017
+R1	Dat Arg1:T10 Arg2:T9	
+T11	Condition 757 778	Zaburzenia depresyjne
+N8	Reference T11 ICD10:F33.9	Nawracające zaburzenia depresyjne, nieokreślone
+T12	Treatment 899 957	dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T13	Treatment 960 997	okresową kontrolą echokardiograficzną
+T14	Behaviour 1002 1097	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T15	Treatment 1101 1129	Okresowo kontrola lipidogram
+T16	Condition 1276 1311	niedomykalnością zastawki aortalnej
+N9	Reference T16 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T17	Condition 1314 1332	toczniem układowym
+N10	Reference T17 ICD10:M32.9	Toczeń rumieniowaty układowy, nieokreślony
+T18	Condition 1334 1353	wolem nietoksycznym
+N11	Reference T18 ICD10:E04.9	Wole nietoksyczne, nieokreślone
+T19	Condition 1355 1364	otyłością
+N12	Reference T19 ICD10:E66.9	Otyłość, nieokreślona
+T20	Condition 1366 1395	chorobą zwyrodnieniowa stawów
+N13	Reference T20 ICD10:M19.9	Choroba zwyrodnieniowa stawów, nieokreślona
+T21	Negation 1492 1498	Neguje
+T22	Symptom 1499 1511	zasłabnięcia
+T23	Symptom 1513 1522	duszności
+N14	Reference T23 ICD10:R06.0	Duszność
+T24	Symptom 1524 1555	typowe bóle w klatce piersiowej
+N15	Reference T24 ICD10:R07.2	Ból w okolicy przedsercowej
+T25	Negation 1577 1583	neguje
+T26	Treatment 1557 1574	Przebyte operacje
+R2	Neg Arg1:T25 Arg2:T26	
+R3	Neg Arg1:T21 Arg2:T22	
+R4	Neg Arg1:T21 Arg2:T23	
+R5	Neg Arg1:T21 Arg2:T24	
+T27	Condition 1611 1614	WZW
+N17	Reference T27 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T28	Condition 1623 1632	borelioza
+N18	Reference T28 ICD10:A69.2	Choroba z Lyme
+T29	Condition 1640 1648	gruźlica
+N19	Reference T29 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+T30	Condition 1654 1662	odra (+)
+N20	Reference T30 ICD10:B05	Odra
+T31	Negation 1615 1620	( - )
+T32	Negation 1633 1638	( - )
+T33	Negation 1649 1652	(-)
+R6	Neg Arg1:T31 Arg2:T27	
+R7	Neg Arg1:T32 Arg2:T28	
+R8	Neg Arg1:T33 Arg2:T29	
+T34	Condition 1689 1699	udar mózgu
+A1	Status T34 Family
+N21	Reference T34 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T35	Date 1700 1714	w wieku 70 lat
+R9	Dat Arg1:T35 Arg2:T34	
+T36	Behaviour 1741 1761	w przeszłości paliła
+T37	Date 1762 1772	ok. 10 lat
+R10	Dat Arg1:T37 Arg2:T36	
+T38	Negation 1774 1777	nie
+T39	Behaviour 1778 1782	pali
+T40	Date 1783 1792	od 20 lat
+R11	Neg Arg1:T38 Arg2:T39	
+R12	Dat Arg1:T40 Arg2:T39	
+T41	Behaviour 1793 1804	Inne używki
+T42	Negation 1806 1809	nie
+R13	Neg Arg1:T42 Arg2:T41	
+T43	Negation 1821 1827	neguje
+T44	Condition 1810 1819	Uczulenia
+N22	Reference T44 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+R14	Neg Arg1:T43 Arg2:T44	
+T45	Behaviour 1844 1870	warunki mieszkaniowe dobre
+T46	Behaviour 1873 1888	mieszka z mężem
+T47	Drug 1889 1893	Leki
+T48	Drug_dose 1895 1905	jak w IKZL
+R15	Drg Arg1:T47 Arg2:T48	
+T49	Investigation 1466 1490	oceny zastawki aortalnej
+N16	Reference T26 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+N23	Reference T36 ICD10:Z72.0	Używanie tytoniu
+N24	Reference T39 ICD10:Z72.0	Używanie tytoniu
+A2	Status T20 Historical_Insignificant

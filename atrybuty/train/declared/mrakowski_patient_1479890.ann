@@ -1,0 +1,56 @@
+T1	Condition 875 905	hipercholesterolemii rodzinnej
+A1	Source T1 Declared
+N1	Reference T1 ICD10:E78.0	Czysta hipercholesterolemia
+T2	Negation 907 913	Neguje
+T3	Symptom 914 938	bóle w klatce piersiowej
+N2	Reference T3 ICD10:R07	Ból gardła i w klatce piersiowej
+T4	Symptom 940 955	kołatania serca
+N3	Reference T4 ICD10:R00.2	Kołatanie serca
+T5	Symptom 957 965	omdlenia
+N4	Reference T5 ICD10:R55	Omdlenie i zapaść
+T6	Symptom 967 980	zawroty głowy
+N5	Reference T6 ICD10:R42	Zawroty głowy i odurzenie
+T7	Symptom 982 1004	chromanie przestankowe
+N6	Reference T7 ICD10:I73.9	Choroba naczyń obwodowych, nieokreślona
+T8	Symptom 1007 1024	inne dolegliwości
+R1	Neg Arg1:T2 Arg2:T8	
+R2	Neg Arg1:T2 Arg2:T7	
+R3	Neg Arg1:T2 Arg2:T6	
+R4	Neg Arg1:T2 Arg2:T5	
+R5	Neg Arg1:T2 Arg2:T4	
+R6	Neg Arg1:T2 Arg2:T3	
+T9	Behaviour 1026 1053	Prowadzi aktywny tryb życia
+T10	Condition 1067 1080	dysplipidemia
+N7	Reference T10 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T11	Behaviour 1082 1092	nikotynizm
+T12	Condition 1094 1116	żylaki kończyn dolnych
+N9	Reference T12 ICD10:I83	Żylaki kończyn dolnych
+T13	Treatment 1127 1147	2 operacjach obu nóg
+T14	Condition 1149 1171	przepuklina pachwinowa
+N10	Reference T14 ICD10:K40.9	Jednostronna lub nieokreślona przepuklina pachwinowa bez niedrożności lub zgorzeli
+T15	Behaviour 1173 1179	Używki
+T16	Behaviour 1181 1207	palenie - ok. 35 paczkolat
+T17	Behaviour 1209 1216	alkohol
+T18	Negation 1217 1223	neguje
+R7	Neg Arg1:T18 Arg2:T17	
+T19	Condition 1225 1234	Uczulenia
+T20	Negation 1235 1241	neguje
+R8	Neg Arg1:T20 Arg2:T19	
+T21	Condition 1243 1258	Wywiad rodzinny
+A2	Status T21 Family
+T22	Condition 1267 1272	wylew
+N13	Reference T22 ICD10:I61.9	Krwotok mózgowy, nieokreślony
+A3	Status T22 Family
+T23	Condition 1293 1295	HA
+A4	Status T23 Family
+N14	Reference T23 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T24	Condition 1306 1324	udar niedokrwienny
+A5	Status T24 Family
+N15	Reference T24 ICD10:I63.9	Zawał mózgu, nieokreślony
+T25	Condition 1430 1451	prawidłowy lipidogram
+A6	Status T25 Family
+T26	Behaviour 1471 1506	pracuje - biznesowy charakter pracy
+N12	Reference T17 ICD10:Z72.1	Używanie alkoholu
+N16	Reference T19 ICD10:T78.4	Alergia, nieokreślona
+N8	Reference T11 ICD10:Z72.0	Używanie tytoniu
+N11	Reference T16 ICD10:Z72.0	Używanie tytoniu

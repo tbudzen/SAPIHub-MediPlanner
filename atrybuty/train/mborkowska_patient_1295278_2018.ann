@@ -1,0 +1,91 @@
+T1	Drug 1142 1148	Vivace
+T2	Drug 1176 1182	Bibloc
+T3	Drug_dose 1149 1167	2,5mg 1 tabl. rano
+R1	Drg Arg1:T1 Arg2:T3	
+T4	Drug_dose 1183 1202	2.5 mg 1 tabl. rano
+R2	Drg Arg1:T2 Arg2:T4	
+T5	Investigation 963 992	kontrola ciśnienia tętniczego
+T6	Investigation 1008 1028	kontrola lipidogramu
+T7	Behaviour 1035 1045	dieta DASH
+T8	Behaviour 1052 1097	stały, umiarkowany, aerobowy wysiłek fizyczny
+T9	Condition 448 490	Nadciśnienie tętnicze I stopnia wg ESH/ESC
+N1	Reference T9 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T10	Drug 1804 1810	Vivace
+T11	Drug_dose 1811 1816	2,5mg
+R3	Drg Arg1:T10 Arg2:T11	
+T12	Investigation 1918 1921	TTE
+T13	Investigation 1923 1926	TET
+T14	Investigation 1928 1932	ABPM
+T15	Negation 1778 1786	nie pije
+T16	Behaviour 1787 1795	alkoholu
+N2	Reference T16 ICD10:Z72.1	Używanie alkoholu
+R4	Neg Arg1:T15 Arg2:T16	
+T17	Behaviour 1771 1775	pali
+N3	Reference T17 ICD10:Z72.0	Używanie tytoniu
+T18	Negation 1767 1770	Nie
+R5	Neg Arg1:T18 Arg2:T17	
+T19	Condition 492 532	Nadczynność tarczycy w stadium eutyreozy
+N4	Reference T19 ICD10:E05.8	Inne tyreotoksykozy
+T20	Condition 534 577	Przewlekła choroba nerek w 3 stadium wg NKF
+N5	Reference T20 ICD10:N18.8	Inna przewlekła niewydolność nerek
+T21	Condition 579 593	Kamica nerkowa
+N6	Reference T21 ICD10:N20.0	Kamica nerki
+T22	Condition 612 640	guza łagodnego piersi prawej
+N7	Reference T22 ICD10:D48	Nowotwory o niepewnym lub nieznanym charakterze o innym i nieokreślonym umiejscowieniu
+T23	Date 643 654	2 lata temu
+T24	Treatment 664 674	eradykacji
+T25	Condition 675 694	Helicobacter pylori
+A1	Status T25 Historical_Insignificant
+A2	Status T24 Historical_Insignificant
+T26	Date 696 700	2017
+R6	Dat Arg1:T26 Arg2:T25	
+R7	Dat Arg1:T26 Arg2:T24	
+T27	Treatment 603 611	operacji
+A3	Status T27 Historical_Insignificant
+A4	Status T22 Historical_Insignificant
+R8	Dat Arg1:T23 Arg2:T22	
+R9	Dat Arg1:T23 Arg2:T27	
+T28	Condition 1347 1369	nadczynnością tarczycy
+N8	Reference T28 ICD10:E05.9	Tyreotoksykoza, nieokreślona
+T29	Date 1373 1381	od 2007r
+R10	Dat Arg1:T29 Arg2:T28	
+T30	Date 1398 1412	od  3 miesięcy
+T31	Negation 1413 1416	bez
+T32	Treatment 1417 1425	leczenia
+R11	Dat Arg1:T30 Arg2:T32	
+R12	Neg Arg1:T31 Arg2:T32	
+R13	Dat Arg1:T30 Arg2:T28	
+R14	Neg Arg1:T31 Arg2:T28	
+T33	Condition 1429 1452	nadciśnieniem tętniczym
+N9	Reference T33 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T34	Condition 1454 1469	kamica  nerkową
+N10	Reference T34 ICD10:N20.0	Kamica nerki
+T35	Condition 1483 1511	guza łagodnego piersi prawej
+A5	Status T35 Historical_Insignificant
+N11	Reference T35 ICD10:D48	Nowotwory o niepewnym lub nieznanym charakterze o innym i nieokreślonym umiejscowieniu
+T36	Treatment 1474 1482	operacji
+A6	Status T36 Historical_Insignificant
+T37	Date 1512 1525	2 lata  temu,
+R15	Dat Arg1:T37 Arg2:T35	
+R16	Dat Arg1:T37 Arg2:T36	
+T38	Treatment 1529 1539	eradykacji
+T39	Condition 1540 1548	H.pylori
+T40	Date 1549 1558	w 2017r.,
+R17	Dat Arg1:T40 Arg2:T39	
+R18	Dat Arg1:T40 Arg2:T38	
+T41	Symptom 1598 1622	uczucia kołatania serca,
+N12	Reference T41 ICD10:R00.2	Kołatanie serca
+T42	Symptom 1623 1710	wysiłkowych dolegliwości bólowych w klatce piersiowej raczej o charakterze dyskomfortu.
+N13	Reference T42 ICD10:R07.3	Inne bóle w klatce piersiowej
+T43	Condition 1720 1729	uczulenia
+N14	Reference T43 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T44	Condition 1711 1718	Alergie
+N15	Reference T44 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+T45	Condition 1732 1752	nietolerancja leków-
+N16	Reference T45 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T46	Negation 1759 1765	neguje
+R19	Neg Arg1:T46 Arg2:T45	
+R20	Neg Arg1:T46 Arg2:T43	
+R21	Neg Arg1:T46 Arg2:T44	
+T47	Treatment 827 854	dalsza opieka w poradni POZ
+T48	Treatment 870 947	kontrola kardiologiczna, endokrynologiczna, gastroenterologiczna, urologiczna

@@ -1,0 +1,92 @@
+T1	Condition 450 495	Łagodna niedomykalność zastawki  trójdzielnej
+T2	Condition 536 556	niedokrwiennej serca
+T3	Negation 557 566	negatywna
+T4	Condition 568 616	Łagodna arytmia nadkomorowa oraz komorowa Lown I
+T5	Condition 618 639	Nadciśnienie tętnicze
+T6	Condition 642 656	Hiperlipidemia
+T7	Treatment 666 682	cholecystektomii
+T8	Date 684 689	2010r
+T9	Treatment 700 708	operacji
+T10	Condition 709 726	cieśni nadgarstka
+T11	Date 729 737	07.2017r
+T12	Drug 848 860	Tertensif SR
+T13	Drug_dose 861 883	1,5mg  1 x1 tabl. rano
+T14	Drug 887 894	Tritace
+T15	Drug_dose 895 921	10mg 1 x 1 tabl. wieczorem
+T16	Drug 923 933	Spironol  
+T17	Drug_dose 933 953	50mg 1 x 1 tabl.rano
+T18	Drug 956 966	Concor Cor
+T19	Drug_dose 967 990	1,25mg 1 x 1 tabl. rano
+T20	Drug 992 999	Rosvera
+T21	Drug_dose 1000 1026	30mg 1 x 1 tabl. wieczorem
+T22	Drug 1029 1034	Acard
+T23	Drug_dose 1035 1061	75mg 1 x 1 tabl. wieczorem
+T24	Drug 1182 1194	Tertensif SR
+T25	Drug 1196 1203	Tritace
+T26	Drug 1206 1214	Spironol
+T27	Drug 1217 1227	Concor Cor
+T28	Drug 1230 1237	Rosvera
+T29	Drug 1240 1245	Acard
+T30	Condition 1391 1414	nadciśnieniem tętniczym
+T31	Symptom 1455 1486	zmniejszonej tolerancji wysiłku
+T32	Symptom 1488 1498	potliwości
+T33	Symptom 1506 1551	kołatania serca zwłaszcza w godzinach nocnych
+T34	Negation 1553 1559	Neguje
+T35	Symptom 1561 1595	typowe dolegliwości stenokardialne
+T36	Symptom 1619 1629	osłabienie
+T37	Symptom 1632 1664	cechy infekcji  dróg oddechowych
+T38	Symptom 1668 1690	utrzymujący się kaszel
+T39	Behaviour 1703 1726	Pali  10 papierosów /d.
+T40	Drug 1750 1762	Tertensif SR
+T41	Drug_dose 1763 1768	1,5mg
+T42	Drug 1771 1778	Tritace
+T43	Drug_dose 1779 1788	10mg ( w)
+T44	Drug 1791 1801	Spironol  
+T45	Drug_dose 1801 1810	50mg rano
+T46	Drug 1812 1822	COncor Cor
+T47	Drug_dose 1823 1829	1,25mg
+T48	Drug 1831 1838	Rosvera
+T49	Drug_dose 1839 1843	30mg
+T50	Treatment 1857 1874	choolecystektomia
+T51	Treatment 1885 1895	operacji  
+T52	Condition 1895 1912	cieśni nadgarsska
+T53	Treatment 1957 1970	farmakoterpia
+T54	Investigation 1981 2003	badania: laboratoryjne
+T55	Investigation 2010 2013	TET
+T56	Investigation 2015 2019	ABPM
+T57	Investigation 2022 2025	TTE
+T58	Investigation 2028 2049	RTG klatki piersiowej
+T59	Investigation 505 515	Obserwacja
+N1	Reference T4 ICD10:I47.1	CzÄstoskurcz nadkomorowy
+N2	Reference T5 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N3	Reference T6 ICD10:E78.5	Hiperlipidemia, nieokreÅlona
+N4	Reference T7 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N5	Reference T9 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+N6	Reference T30 ICD10:I10	NadciÅnienie samoistne (pierwotne)
+N7	Reference T31 ICD10:R53	ZÅe samopoczucie i zmÄczenie
+N8	Reference T33 ICD10:R00.2	KoÅatanie serca
+N9	Reference T36 ICD10:R53	ZÅe samopoczucie i zmÄczenie
+N10	Reference T37 ICD10:J00	Ostre zapalenie nosa i gardÅa [przeziÄbienie]
+N11	Reference T39 ICD10:Z72.0	UÅ¼ywanie tytoniu
+N12	Reference T51 ICD10:Z98.8	Inne okreÅlone stany po zabiegach chirurgicznych
+R1	Neg Arg1:T3 Arg2:T2
+R13	Drg Arg1:T16 Arg2:T17
+R14	Drg Arg1:T18 Arg2:T19
+R15	Drg Arg1:T20 Arg2:T21
+R16	Drg Arg1:T22 Arg2:T23
+R19	Neg Arg1:T34 Arg2:T33
+R2	Neg Arg1:T3 Arg2:T4
+R20	Neg Arg1:T34 Arg2:T35
+R21	Drg Arg1:T42 Arg2:T41
+R27	Drg Arg1:T44 Arg2:T43
+R3	Dat Arg1:T8 Arg2:T9
+R33	Drg Arg1:T46 Arg2:T45
+R39	Drg Arg1:T48 Arg2:T47
+R4	Drg Arg1:T12 Arg2:T13
+R7	Drg Arg1:T14 Arg2:T15
+R8	Dat Arg1:T11 Arg2:T10
+A1	Status T7 Historical_Insignificant
+A2	Status T10 Historical_Insignificant
+A3	Status T51 Historical_Insignificant
+A4	Source T2 Declared
+A5	Source T37 Declared

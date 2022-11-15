@@ -1,0 +1,31 @@
+T1	Condition 470 538	Wrodzona wada serca pod postacią podwójnego odejścia z prawej komory
+N1	Reference T1 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+T2	Condition 541 582	ubytkiem komorowym (typu double commited)
+N2	Reference T2 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T3	Condition 586 619	malpozycyjnym ustawieniem mnaczyń
+N3	Reference T3 ICD10:Q20.3	Nieprawidłowe połączenia komorowo-tętnicze
+T4	Condition 622 662	zwężeniem podzastawkowym tętnicy płucnej
+N4	Reference T4 ICD10:Q24.3	Wrodzone zwężenie stożka tętniczego prawej komory
+T5	Drug 808 822	wlewy kroplowe
+T6	Treatment 824 831	sedacja
+T7	Investigation 835 847	badania echo
+T8	Treatment 960 989	Kontrolna wizyta u kardiologa
+T9	Date 990 1000	za 6 m-cy.
+T10	Investigation 1004 1038	Ambulatoryjne pomiary Saturacji O2
+T11	Treatment 1150 1157	sedacja
+T12	Investigation 1161 1173	badania echo
+T13	Drug 1175 1188	wlew kroplowy
+T14	Condition 1326 1375	wrodzoną wada serca - podwójna droga wypływu z PK
+N5	Reference T14 ICD10:Q20.1	Odejście obu dużych naczyń z prawej komory
+T15	Condition 1377 1380	VSD
+N6	Reference T15 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T16	Treatment 1398 1418	zabiegu operacyjnego
+N7	Reference T16 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T17	Drug 1420 1434	na stałe leków
+T18	Negation 1435 1448	nie otrzymuje
+T19	Condition 1450 1467	wywiad alergiczny
+N8	Reference T19 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T20	Negation 1468 1474	ujemny
+R1	Neg Arg1:T20 Arg2:T19	
+R2	Neg Arg1:T18 Arg2:T17	
+R3	Dat Arg1:T9 Arg2:T8	

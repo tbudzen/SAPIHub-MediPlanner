@@ -1,0 +1,584 @@
+allRelations          : 84
+oks                   : 10
+isRedundantAndRemoveds: 67
+shouldNotBeRemoveds   : 5
+shouldBeBemoveds      : 2
+GOOD / BAD            : 77 / 7
+Sentence 0:
+------------------------------------------------
+Wiek: 63 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+- Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej.
+
+
+
+Sentence 5:
+- Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych.
+
+
+
+Sentence 6:
+- Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydo
+------------------------------------------------
+
+
+
+Sentence 7:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 8:
+------------------------------------------------
+ Rozpozanie I: ICD10:I49|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Przewlekła choroba wieńcowa - I klasa wg CCS.
+   
+
+
+Sentence 9:
+Niewydolność serca z zachowaną frakcją wyrzutową LV (EF: 58%) - II klasa wg NYHA.
+   
+
+
+Sentence 10:
+Nadciśnienie tętnicze.
+   
+
+
+Sentence 11:
+Bradykardia zatokowa w wywiadzie.
+   
+
+
+Sentence 12:
+Dyslipidemia.
+   
+
+
+Sentence 13:
+Zmiany zwyrodnieniowe kręgosłupa.
+   
+
+
+Sentence 14:
+Stan po cholecystektomii.
+   
+
+
+Sentence 15:
+Otyłość I st.
+------------------------------------------------
+
+
+
+Sentence 16:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 17:
+Chora lat 62, z wywiadem niewydolności serca z zachowaną frakcją wyrzutową LV (EF: 60%), nadciśnienia tętniczego, z otyłością I st., bradykardią zatokową w wywiadzie, z dyslipidemią, została przyjęta do Kliniki z powodu pośledzenia tolerancji wysiłku, okresowo występujących kołatań serca, celem diagnostyki kardiologicznej, w tym wykonania angioCT tt. wieńcowych. 
+
+
+
+Sentence 18:
+W wywiadzie ponadto: komorowe i nadkomorowe zaburzenia rytmu (chora zgłasza kołatanie serca w nocy, codziennie  - w Holterze EKG z 2016 26pary ExV i 518 poj. ExV, 297 poj. ExSV, w 2015 dodatkowo wstawki częstoskurczu przedsionkowego, bigeminia, trigeminia komorowa i bradykardia zatokowa min. 41/min w nocy (chora kilka lat leczona Bellapanem do 2015 i leczona Rytmonormem przez rok do 2 lat wstecz), przerost mięśnia LK i IT IIst. i IM I st. w echo, torbiel nerki prawej, kamica nerkowa (piasek), zmiany zwyrodnieniowe kregosłupa
+
+R1	Inv Arg1:T30 Arg2:T32 << OK >>	Holterze EKG -> 26pary ExV i 518 poj. ExV, 297 poj. ExSV,  <RANK: 3> <info: start[1698, 1718] <type: RIGHT>>
+R2	Inv Arg1:T30 Arg2:T36 << OK >>	Holterze EKG -> dodatkowo wstawki częstoskurczu przedsionkowego, bigeminia, trigeminia komorowa i bradykardia zatokowa min. 41/min w nocy  <RANK: 2> <info: start[1698, 1767] <type: RIGHT>>
+R3	Inv Arg1:T30 Arg2:T41 <<REDUNDANT!!!REMOVED>>	Holterze EKG -> przerost mięśnia LK <:REMOVED other second tag between (right):> <RANK: 2> <info: start[1698, 1983] <type: RIGHT>>
+R4	Inv Arg1:T30 Arg2:T42 <<REDUNDANT!!!REMOVED>>	Holterze EKG -> IT IIst. <:REMOVED other second tag between (right):> <RANK: 2> <info: start[1698, 2005] <type: RIGHT>>
+R5	Inv Arg1:T30 Arg2:T43 <<REDUNDANT!!!REMOVED>>	Holterze EKG -> IM I st <:REMOVED other second tag between (right):> <RANK: 2> <info: start[1698, 2016] <type: RIGHT>>
+R6	Inv Arg1:T44 Arg2:T32 <<REDUNDANT!!!REMOVED>>	echo -> 26pary ExV i 518 poj. ExV, 297 poj. ExSV, <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2027, 1718] <type: LEFT>>
+R7	Inv Arg1:T44 Arg2:T36 <<REDUNDANT!!!REMOVED>>	echo -> dodatkowo wstawki częstoskurczu przedsionkowego, bigeminia, trigeminia komorowa i bradykardia zatokowa min. 41/min w nocy <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2027, 1767] <type: LEFT>>
+R8	Inv Arg1:T44 Arg2:T41 <<SHOULD NOT BE REMOVED>>	echo -> przerost mięśnia LK <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2027, 1983] <type: LEFT>>
+R9	Inv Arg1:T44 Arg2:T42 <<SHOULD NOT BE REMOVED>>	echo -> IT IIst. <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2027, 2005] <type: LEFT>>
+R10	Inv Arg1:T44 Arg2:T43 << OK >>	echo -> IM I st  <RANK: 2> <info: start[2027, 2016] <type: LEFT>>
+R11	Dat Arg1:T31 Arg2:T34 <<REDUNDANT!!!SHOULD BE REMOVED>>	2016 -> kołatanie serca w nocy  <RANK: 2> <info: start[1713, 1658] <type: LEFT>>
+R12	Dat Arg1:T31 Arg2:T33 <<REDUNDANT!!!SHOULD BE REMOVED>>	2016 -> komorowe i nadkomorowe zaburzenia rytmu  <RANK: 2> <info: start[1713, 1603] <type: LEFT>>
+R13	Dat Arg1:T31 Arg2:T45 <<REDUNDANT!!!REMOVED>>	2016 -> torbiel nerki prawej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1713, 2033] <type: RIGHT>>
+R14	Dat Arg1:T31 Arg2:T46 <<REDUNDANT!!!REMOVED>>	2016 -> kamica nerkowa (piasek) <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1713, 2055] <type: RIGHT>>
+R15	Dat Arg1:T31 Arg2:T47 <<REDUNDANT!!!REMOVED>>	2016 -> zmiany zwyrodnieniowe kregosłupa <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1713, 2080] <type: RIGHT>>
+R16	Dat Arg1:T31 Arg2:T30 << OK >>	2016 -> Holterze EKG  <RANK: 3> <info: start[1713, 1698] <type: LEFT>>
+R17	Dat Arg1:T31 Arg2:T44 <<REDUNDANT!!!REMOVED>>	2016 -> echo <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1713, 2027] <type: RIGHT>>
+R18	Dat Arg1:T31 Arg2:T37 <<REDUNDANT!!!REMOVED>>	2016 -> Bellapanem <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1713, 1914] <type: RIGHT>>
+R19	Dat Arg1:T31 Arg2:T39 <<REDUNDANT!!!REMOVED>>	2016 -> Rytmonormem <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1713, 1943] <type: RIGHT>>
+R20	Dat Arg1:T35 Arg2:T34 <<REDUNDANT!!!REMOVED>>	2015 -> kołatanie serca w nocy <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1762, 1658] <type: LEFT>>
+R21	Dat Arg1:T35 Arg2:T33 <<REDUNDANT!!!REMOVED>>	2015 -> komorowe i nadkomorowe zaburzenia rytmu <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1762, 1603] <type: LEFT>>
+R22	Dat Arg1:T35 Arg2:T45 <<REDUNDANT!!!REMOVED>>	2015 -> torbiel nerki prawej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1762, 2033] <type: RIGHT>>
+R23	Dat Arg1:T35 Arg2:T46 <<REDUNDANT!!!REMOVED>>	2015 -> kamica nerkowa (piasek) <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1762, 2055] <type: RIGHT>>
+R24	Dat Arg1:T35 Arg2:T47 <<REDUNDANT!!!REMOVED>>	2015 -> zmiany zwyrodnieniowe kregosłupa <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1762, 2080] <type: RIGHT>>
+R25	Dat Arg1:T35 Arg2:T30 <<SHOULD NOT BE REMOVED>>	2015 -> Holterze EKG <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1762, 1698] <type: LEFT>>
+R26	Dat Arg1:T35 Arg2:T44 <<REDUNDANT!!!REMOVED>>	2015 -> echo <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1762, 2027] <type: RIGHT>>
+R27	Dat Arg1:T35 Arg2:T37 <<REDUNDANT!!!REMOVED>>	2015 -> Bellapanem <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1762, 1914] <type: RIGHT>>
+R28	Dat Arg1:T35 Arg2:T39 <<REDUNDANT!!!REMOVED>>	2015 -> Rytmonormem <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1762, 1943] <type: RIGHT>>
+R29	Dat Arg1:T38 Arg2:T34 <<REDUNDANT!!!REMOVED>>	do 2015 -> kołatanie serca w nocy <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1925, 1658] <type: LEFT>>
+R30	Dat Arg1:T38 Arg2:T33 <<REDUNDANT!!!REMOVED>>	do 2015 -> komorowe i nadkomorowe zaburzenia rytmu <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1925, 1603] <type: LEFT>>
+R31	Dat Arg1:T38 Arg2:T45 <<REDUNDANT!!!REMOVED>>	do 2015 -> torbiel nerki prawej <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1925, 2033] <type: RIGHT>>
+R32	Dat Arg1:T38 Arg2:T46 <<REDUNDANT!!!REMOVED>>	do 2015 -> kamica nerkowa (piasek) <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1925, 2055] <type: RIGHT>>
+R33	Dat Arg1:T38 Arg2:T47 <<REDUNDANT!!!REMOVED>>	do 2015 -> zmiany zwyrodnieniowe kregosłupa <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1925, 2080] <type: RIGHT>>
+R34	Dat Arg1:T38 Arg2:T30 <<REDUNDANT!!!REMOVED>>	do 2015 -> Holterze EKG <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1925, 1698] <type: LEFT>>
+R35	Dat Arg1:T38 Arg2:T44 <<REDUNDANT!!!REMOVED>>	do 2015 -> echo <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1925, 2027] <type: RIGHT>>
+R36	Dat Arg1:T38 Arg2:T37 << OK >>	do 2015 -> Bellapanem  <RANK: 3> <info: start[1925, 1914] <type: LEFT>>
+R37	Dat Arg1:T38 Arg2:T39 <<REDUNDANT!!!REMOVED>>	do 2015 -> Rytmonormem <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1925, 1943] <type: RIGHT>>
+R38	Dat Arg1:T40 Arg2:T34 <<REDUNDANT!!!REMOVED>>	przez rok do 2 lat wstec -> kołatanie serca w nocy <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1955, 1658] <type: LEFT>>
+R39	Dat Arg1:T40 Arg2:T33 <<REDUNDANT!!!REMOVED>>	przez rok do 2 lat wstec -> komorowe i nadkomorowe zaburzenia rytmu <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1955, 1603] <type: LEFT>>
+R40	Dat Arg1:T40 Arg2:T45 <<REDUNDANT!!!REMOVED>>	przez rok do 2 lat wstec -> torbiel nerki prawej <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1955, 2033] <type: RIGHT>>
+R41	Dat Arg1:T40 Arg2:T46 <<REDUNDANT!!!REMOVED>>	przez rok do 2 lat wstec -> kamica nerkowa (piasek) <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1955, 2055] <type: RIGHT>>
+R42	Dat Arg1:T40 Arg2:T47 <<REDUNDANT!!!REMOVED>>	przez rok do 2 lat wstec -> zmiany zwyrodnieniowe kregosłupa <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1955, 2080] <type: RIGHT>>
+R43	Dat Arg1:T40 Arg2:T30 <<REDUNDANT!!!REMOVED>>	przez rok do 2 lat wstec -> Holterze EKG <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1955, 1698] <type: LEFT>>
+R44	Dat Arg1:T40 Arg2:T44 <<REDUNDANT!!!REMOVED>>	przez rok do 2 lat wstec -> echo <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1955, 2027] <type: RIGHT>>
+R45	Dat Arg1:T40 Arg2:T37 <<REDUNDANT!!!REMOVED>>	przez rok do 2 lat wstec -> Bellapanem <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1955, 1914] <type: LEFT>>
+R46	Dat Arg1:T40 Arg2:T39 << OK >>	przez rok do 2 lat wstec -> Rytmonormem  <RANK: 3> <info: start[1955, 1943] <type: LEFT>>
+R47	Alg Arg1:T33 Arg2:T37 <<REDUNDANT!!!REMOVED>>	komorowe i nadkomorowe zaburzenia rytmu -> Bellapanem <:REMOVED other second tag between (right):> <RANK: 2> <info: start[1603, 1914] <type: RIGHT>>
+R48	Alg Arg1:T33 Arg2:T39 <<REDUNDANT!!!REMOVED>>	komorowe i nadkomorowe zaburzenia rytmu -> Rytmonormem <:REMOVED other second tag between (right):> <RANK: 2> <info: start[1603, 1943] <type: RIGHT>>
+R49	Alg Arg1:T45 Arg2:T37 <<REDUNDANT!!!REMOVED>>	torbiel nerki prawej -> Bellapanem <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2033, 1914] <type: LEFT>>
+R50	Alg Arg1:T45 Arg2:T39 <<REDUNDANT!!!REMOVED>>	torbiel nerki prawej -> Rytmonormem <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2033, 1943] <type: LEFT>>
+R51	Alg Arg1:T46 Arg2:T37 <<REDUNDANT!!!REMOVED>>	kamica nerkowa (piasek) -> Bellapanem <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2055, 1914] <type: LEFT>>
+R52	Alg Arg1:T46 Arg2:T39 <<REDUNDANT!!!REMOVED>>	kamica nerkowa (piasek) -> Rytmonormem <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2055, 1943] <type: LEFT>>
+R53	Alg Arg1:T47 Arg2:T37 <<REDUNDANT!!!REMOVED>>	zmiany zwyrodnieniowe kregosłupa -> Bellapanem <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2080, 1914] <type: LEFT>>
+R54	Alg Arg1:T47 Arg2:T39 <<REDUNDANT!!!REMOVED>>	zmiany zwyrodnieniowe kregosłupa -> Rytmonormem <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2080, 1943] <type: LEFT>>
+
+
+Sentence 19:
+Przebyte operacje: cholecystektomia klasyczna (kamica), CC 1 x
+
+
+
+Sentence 20:
+Wywiad rodzinny: ojciec MI 63, udar 73, matka 74 MI, syn 41 MI zgon, córka 32 HA  
+Alergie: po choelcystektomii podano lek - chora twierdzi, że spadek ciśnienia nastąpił (nazwy leku nie zna), Lerkan – zaczerwienienie twarzy i szyi
+
+R55	Alg Arg1:T50 Arg2:T56 <<REDUNDANT!!!REMOVED>>	HA -> Lerkan <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2254, 2368] <type: RIGHT>>
+R56	Alg Arg1:T50 Arg2:T61 <<REDUNDANT!!!REMOVED>>	HA -> (nazwy leku nie zna <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2254, 2346] <type: RIGHT>>
+R57	Alg Arg1:T51 Arg2:T56 <<REDUNDANT!!!REMOVED>>	MI -> Lerkan <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2236, 2368] <type: RIGHT>>
+R58	Alg Arg1:T51 Arg2:T61 <<REDUNDANT!!!REMOVED>>	MI -> (nazwy leku nie zna <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2236, 2346] <type: RIGHT>>
+R59	Alg Arg1:T52 Arg2:T56 <<REDUNDANT!!!REMOVED>>	MI -> Lerkan <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2225, 2368] <type: RIGHT>>
+R60	Alg Arg1:T52 Arg2:T61 <<REDUNDANT!!!REMOVED>>	MI -> (nazwy leku nie zna <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2225, 2346] <type: RIGHT>>
+R61	Alg Arg1:T53 Arg2:T56 <<REDUNDANT!!!REMOVED>>	udar -> Lerkan <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2207, 2368] <type: RIGHT>>
+R62	Alg Arg1:T53 Arg2:T61 <<REDUNDANT!!!REMOVED>>	udar -> (nazwy leku nie zna <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2207, 2346] <type: RIGHT>>
+R63	Alg Arg1:T54 Arg2:T56 <<REDUNDANT!!!REMOVED>>	MI -> Lerkan <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2200, 2368] <type: RIGHT>>
+R64	Alg Arg1:T54 Arg2:T61 <<REDUNDANT!!!REMOVED>>	MI -> (nazwy leku nie zna <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2200, 2346] <type: RIGHT>>
+R65	Alg Arg1:T58 Arg2:T56 <<SHOULD NOT BE REMOVED>>	Alergie -> Lerkan <:REMOVED too long text between 102 limit:10:> <RANK: 2> <info: start[2259, 2368] <type: RIGHT>>
+R66	Alg Arg1:T58 Arg2:T61 <<SHOULD NOT BE REMOVED>>	Alergie -> (nazwy leku nie zna <:REMOVED too long text between 80 limit:10:> <RANK: 2> <info: start[2259, 2346] <type: RIGHT>>
+R67	Alg Arg1:T59 Arg2:T56 <<REDUNDANT!!!REMOVED>>	Wywiad rodzinny -> Lerkan <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2176, 2368] <type: RIGHT>>
+R68	Alg Arg1:T59 Arg2:T61 <<REDUNDANT!!!REMOVED>>	Wywiad rodzinny -> (nazwy leku nie zna <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2176, 2346] <type: RIGHT>>
+
+
+Sentence 21:
+Nikotynizm: neguje  
+Alkohol: neguje 
+Uzależnienie inne: neguje 
+Stan społeczny: emerytura, wcześniej fizyczna praca 
+Leki:
+Noliprel Bi-forte 1 tabl.
+R69	Neg Arg1:T16 Arg2:T19 << OK >>	neguje -> Uzależnienie inne  <RANK: 3> <info: start[2464, 2445] <type: LEFT>>
+R70	Neg Arg1:T16 Arg2:T20 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2464, 2428] <type: LEFT>>
+R71	Neg Arg1:T16 Arg2:T21 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2464, 2407] <type: LEFT>>
+R72	Neg Arg1:T16 Arg2:T14 <<REDUNDANT!!!REMOVED>>	neguje -> Noliprel Bi-forte <:REMOVED many second tags on the right:> <RANK: 0> <info: start[2464, 2531] <type: RIGHT>>
+R73	Neg Arg1:T16 Arg2:T15 <<REDUNDANT!!!REMOVED>>	neguje -> 1 tabl. rano <:REMOVED other second tag between (right):> <RANK: 0> <info: start[2464, 2549] <type: RIGHT>>
+R74	Neg Arg1:T17 Arg2:T19 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2437, 2445] <type: RIGHT>>
+R75	Neg Arg1:T17 Arg2:T20 << OK >>	neguje -> Alkohol  <RANK: 3> <info: start[2437, 2428] <type: LEFT>>
+R76	Neg Arg1:T17 Arg2:T21 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (left):> <RANK: 1> <info: start[2437, 2407] <type: LEFT>>
+R77	Neg Arg1:T17 Arg2:T14 <<REDUNDANT!!!REMOVED>>	neguje -> Noliprel Bi-forte <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2437, 2531] <type: RIGHT>>
+R78	Neg Arg1:T17 Arg2:T15 <<REDUNDANT!!!REMOVED>>	neguje -> 1 tabl. rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2437, 2549] <type: RIGHT>>
+R79	Neg Arg1:T18 Arg2:T19 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED other first tag between (right):> <RANK: 1> <info: start[2419, 2445] <type: RIGHT>>
+R80	Neg Arg1:T18 Arg2:T20 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2419, 2428] <type: RIGHT>>
+R81	Neg Arg1:T18 Arg2:T21 << OK >>	neguje -> Nikotynizm  <RANK: 3> <info: start[2419, 2407] <type: LEFT>>
+R82	Neg Arg1:T18 Arg2:T14 <<REDUNDANT!!!REMOVED>>	neguje -> Noliprel Bi-forte <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2419, 2531] <type: RIGHT>>
+R83	Neg Arg1:T18 Arg2:T15 <<REDUNDANT!!!REMOVED>>	neguje -> 1 tabl. rano <:REMOVED other first tag between (right):> <RANK: 0> <info: start[2419, 2549] <type: RIGHT>>
+R84	Drg Arg1:T14 Arg2:T15 << OK >>	Noliprel Bi-forte -> 1 tabl. rano  <RANK: 3> <info: start[2531, 2549] <type: RIGHT>>
+
+
+Sentence 22:
+rano 
+
+Plan opieki nad pacjentem: angioCT tt wieńcowych, Holter EKG, ABPM
+
+
+
+Sentence 23:
+Przewidywana liczba dni hospitalizacji: 4-5 dni
+------------------------------------------------
+
+
+
+Sentence 24:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 25:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:8.59[10^3/ul]
+    
+
+
+Sentence 26:
+RBC Krwinki czerwone:4.62[10^6/ul]
+    
+
+
+Sentence 27:
+HGB Hemoglobina:13.9[g/dl]
+    
+
+
+Sentence 28:
+HCT Hematokryt:39.4[%]
+    
+
+
+Sentence 29:
+MCV wskaźnik czerwonokrw:85.3[fl]
+    
+
+
+Sentence 30:
+MCH wskaźnik czerwonokrw:30.1[pg]
+    
+
+
+Sentence 31:
+MCHC wskaźnik czerwonokr:35.3[g/dl]
+    
+
+
+Sentence 32:
+PLT z morfologii:251[10^3/ul]
+    
+
+
+Sentence 33:
+RDW-SD:40.0[fl]
+    
+
+
+Sentence 34:
+RDW-CV:13.0[%]
+    PDW:12.7[fl]
+    MPV:10.6[fl]
+    
+
+
+Sentence 35:
+P-LCR:29.9[%]
+    
+
+
+Sentence 36:
+PCT (hematokryt płytkowy:0.27[%]
+    
+
+
+Sentence 37:
+NEUTR# wartość bezwzględ:4.93[10^3/ul]
+    
+
+
+Sentence 38:
+NEUTR%:57.4[%]
+    
+
+
+Sentence 39:
+LYMH# wartość bezwzględn:3.03[10^3/ul]
+    
+
+
+Sentence 40:
+LYMPH%:35.3[%]
+    
+
+
+Sentence 41:
+MONO# wartość bezwzględn:0.51[10^3/ul]
+    MONO%:5.9[%]
+    
+
+
+Sentence 42:
+EO# wartość bezwzględna:0.07[10^3/ul]
+    
+
+
+Sentence 43:
+EO%:0.8[%]
+    
+
+
+Sentence 44:
+BASO# wartość bezwzględn:0.05[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 45:
+NRBC %:0.1[%]
+    
+
+
+Sentence 46:
+NRBC #:0.01[10^3/ul]
+
+
+
+Sentence 47:
+Badanie ogólne moczu
+    
+
+
+Sentence 48:
+barwa:słomkowy[ ]
+    
+
+
+Sentence 49:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 50:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 51:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 52:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 53:
+ciężar właściwy:1.009[ ]
+    
+
+
+Sentence 54:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 55:
+pH:6.5[ ]
+    
+
+
+Sentence 56:
+białko:nieobecne[ ]
+    
+
+
+Sentence 57:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 58:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 59:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 60:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 61:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 62:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 63:
+leukocyty:2 /ul[ul]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 64:
+TSH: TSH:1.26[uIU/ml]
+
+
+
+Sentence 65:
+FT3: FT3:3.04[pg/ml]
+
+
+
+Sentence 66:
+FT4: FT4:1.56[ng/dl]
+
+
+
+Sentence 67:
+ALAT: ALAT:25[U/L]
+ASPAT: ASPAT:28[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 68:
+Sód (Na): Sód:136[mmol/L]
+
+
+
+Sentence 69:
+Potas (K): Potas:4.1[mmol/L]
+
+
+
+Sentence 70:
+Kreatynina + GFR
+    
+
+
+Sentence 71:
+Kreatynina w surowicy:0.97[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 72:
+MDRD ze stan:58.2[ml/min/1,73 m^2]
+
+
+
+Sentence 73:
+Kreatynina + GFR
+    
+
+
+Sentence 74:
+Kreatynina w surowicy:0.89[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 75:
+MDRD ze stan:64.3[ml/min/1,73 m^2]
+
+
+
+Sentence 76:
+Mocznik: Mocznik:53[mg/dl]
+
+
+
+Sentence 77:
+Mocznik: Mocznik:34[mg/dl]
+
+
+
+Sentence 78:
+Kwas moczowy: Kwas moczowy:5.2[mg/dl]
+
+
+
+Sentence 79:
+Lipidogram
+    
+
+
+Sentence 80:
+Cholesterol całkowity:188[mg/dl]
+    
+
+
+Sentence 81:
+Cholesterol HDL:53[mg/dl]
+    
+
+
+Sentence 82:
+Cholestrol LDL:109[mg/dl]
+    
+
+
+Sentence 83:
+Triglicerydy:94[mg/dl]
+    
+
+
+Sentence 84:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:110[mg/dl]
+
+
+
+Sentence 85:
+Glukoza 0 min.: Glukoza 0 min.:81[mg/dl]
+
+
+
+Sentence 86:
+Glukoza 120 min.: Glukoza 120 min.:130[mg/dl]
+
+
+
+Sentence 87:
+------------------------------------------------
+
+
+
+Sentence 88:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 89:
+I25.0
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 90:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 91:
+88.721
+87.421
+------------------------------------------------
+
+

@@ -1,0 +1,110 @@
+T1	Drug 341 349	Toramide
+T2	Drug 351 358	Polsart
+T3	Drug 360 367	Nebilet
+T4	Drug 369 376	Romazic
+T5	Drug 378 383	Acard
+T6	Drug 385 395	MultiFraxi
+T7	Drug 397 407	Taromentin
+T8	Drug 409 418	Flukofast
+T9	Drug 420 428	0.9%NaCl
+T10	Drug 430 439	Furosemid
+T11	Condition 666 682	Choroba wieńcowa
+N1	Reference T11 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T12	Treatment 701 739	leczonym PCI LAD z implantacją 2 x DES
+T13	Date 741 751	19.07.2014
+R1	Dat Arg1:T13 Arg2:T12	
+T14	Condition 754 775	Nadciśnienie tętnicze
+N2	Reference T14 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T15	Condition 777 797	Hipercholesterolemia
+N3	Reference T15 ICD10:E78.0	Czysta hipercholesterolemia
+T16	Condition 799 814	Cukrzyca typu 2
+N4	Reference T16 ICD10:E11	Cukrzyca insulinoniezależna
+T17	Condition 816 855	Przewlekła choroba nerek w 3 st. wg NKF
+N5	Reference T17 ICD10:N18.9	Przewlekła niewydolność nerek, nieokreślona
+T18	Condition 857 870	Hiperurykemia
+N6	Reference T18 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T19	Treatment 880 888	operacji
+A1	Status T19 Historical_Insignificant
+T20	Condition 918 940	Żylaki kończyn dolnych
+N7	Reference T20 ICD10:I83	Żylaki kończyn dolnych
+T21	Treatment 1056 1078	kontrola u lekarza POZ
+T22	Treatment 1081 1142	kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych
+T23	Investigation 1185 1215	scyntygrafii mięśnia sercowego
+T24	Behaviour 1219 1244	dieta niskocholesterolowa
+T25	Treatment 1247 1275	regularne przyjmowanie leków
+T26	Symptom 1440 1466	niskiej tolerancji wysiłku
+N8	Reference T26 ICD10:R53	Złe samopoczucie i zmęczenie
+T27	Symptom 1468 1488	duszności wysiłkowej
+N9	Reference T27 ICD10:R06.0	Duszność
+T28	Symptom 1490 1543	uczucia ucisku w gardle nasilającego się przy wysiłku
+T29	Date 1558 1570	od 2 tygodni
+R2	Dat Arg1:T29 Arg2:T28	
+R3	Dat Arg1:T29 Arg2:T27	
+R4	Dat Arg1:T29 Arg2:T26	
+N10	Reference T28 ICD10:R07	Ból gardła i w klatce piersiowej
+T30	Symptom 1596 1622	gorączkowała do 38 stopnia
+N11	Reference T30 ICD10:R50.9	Gorączka, nieokreślona
+T31	Date 1573 1578	2 dni
+R5	Dat Arg1:T31 Arg2:T30	
+T32	Condition 1647 1649	HA
+N12	Reference T32 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T33	Condition 1652 1672	hipercholesterolemia
+N13	Reference T33 ICD10:E78.0	Czysta hipercholesterolemia
+T34	Treatment 1698 1736	leczonym PCI LAD z implantacją 2 x DES
+T35	Date 1738 1748	19/07/2014
+R6	Dat Arg1:T35 Arg2:T34	
+T36	Condition 1751 1757	DM t.2
+N14	Reference T36 ICD10:E11	Cukrzyca insulinoniezależna
+T37	Condition 1843 1846	OZW
+N15	Reference T37 ICD10:I25.2	
+T38	Condition 1849 1867	CKD w 3 st. wg NKF
+N16	Reference T38 ICD10:N18.9	Przewlekła niewydolność nerek, nieokreślona
+T39	Condition 1869 1894	hiperurykemia bezobjawowa
+N17	Reference T39 ICD10:E79.0	Hiperurykemia bez objawów zapalenia stawów i obecności guzków dnawych
+T40	Treatment 1898 1906	operacje
+A2	Status T40 Historical_Insignificant
+T41	Condition 1938 1953	Wywiad rodzinny
+A3	Status T41 Family
+T42	Negation 1955 1965	nieistotny
+R7	Neg Arg1:T42 Arg2:T41	
+T43	Behaviour 1966 1975	Papierosy
+T44	Negation 1977 1983	neguje
+R8	Neg Arg1:T44 Arg2:T43	
+T45	Behaviour 1985 1992	Alkohol
+N19	Reference T45 ICD10:Z72.1	Używanie alkoholu
+T46	Negation 1994 2000	neguje
+R9	Neg Arg1:T46 Arg2:T45	
+T47	Condition 2002 2009	Alergie
+T48	Negation 2011 2017	neguje
+R10	Neg Arg1:T48 Arg2:T47	
+T49	Drug 2059 2064	Acard
+T50	Drug 2109 2116	Nebilet
+T51	Drug 2136 2143	Romazik
+T52	Drug 2083 2090	Polsart
+T53	Drug_dose 2065 2081	75 mg 1x dz rano
+T54	Drug_dose 2091 2107	40 mg 1x dz rano
+T55	Drug_dose 2117 2134	5 mg 1 tabl. rano
+R11	Drg Arg1:T50 Arg2:T55	
+R12	Drg Arg1:T52 Arg2:T54	
+R13	Drg Arg1:T49 Arg2:T53	
+T56	Investigation 2159 2169	Echo serca
+T57	Investigation 2172 2187	Próba Wysiłkowa
+T58	Condition 692 700	OZW - UA
+N20	Reference T58 ICD10:I25.2	Przebyty zawał serca
+R14	Dat Arg1:T13 Arg2:T58	
+T59	Condition 898 916	brodawczaka języka
+N21	Reference T59 ICD10:D10.1	Język
+T60	Condition 1675 1678	CAD
+N22	Reference T60 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T61	Condition 1689 1697	OZW - UA
+N23	Reference T61 ICD10:I25.2	Przebyty zawał serca
+R15	Dat Arg1:T35 Arg2:T61	
+T62	Condition 1908 1937	brodawczak - zmiana na języku
+N24	Reference T62 ICD10:D10.1	Język
+N25	Reference T47 ICD10:T78.4	Alergia, nieokreślona
+A4	Status T59 Historical_Insignificant
+A5	Status T62 Historical_Insignificant
+N18	Reference T43 ICD10:Z72.0	Używanie tytoniu
+T63	Negation 1760 1771	obecnie bez
+T64	Drug 1772 1777	leków
+R16	Neg Arg1:T63 Arg2:T64	

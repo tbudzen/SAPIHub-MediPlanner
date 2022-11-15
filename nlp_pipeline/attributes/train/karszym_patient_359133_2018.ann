@@ -1,0 +1,24 @@
+T1	Condition 415 505	Wrodzona wada serca pod postacią ubytku w przegrodzie międzyprzedsionkowej typu ASD primum
+T2	Condition 522 589	rozszczepem płatka przedniego oraz z dużą niedomykalnością mitralną
+N2	Reference T2 ICD10:Q23	Wrodzone wady rozwojowe zastawki aortalnej i zastawki mitralnej
+T3	Condition 789 827	wada wrodzoną serca pod postacią ASD I
+T4	Negation 873 879	neguje
+T5	Symptom 880 895	kołatania serca
+N4	Reference T5 ICD10:R00.2	Kołatanie serca
+T6	Symptom 897 909	zasłabnięcia
+T7	Symptom 911 930	utraty przytomności
+T8	Condition 969 988	wady wrodzone serca
+A1	Status T8 Family
+T9	Negation 1006 1012	Neguje
+T10	Behaviour 1019 1029	nikotynizm
+N6	Reference T10 ICD10:Z72.0	Używanie tytoniu
+T11	Drug 1031 1045	Leków na stałe
+T12	Negation 1046 1059	nie przyjmuje
+R1	Neg Arg1:T4 Arg2:T5	
+R2	Neg Arg1:T4 Arg2:T6	
+R3	Neg Arg1:T4 Arg2:T7	
+R4	Neg Arg1:T9 Arg2:T10	
+R5	Neg Arg1:T12 Arg2:T11	
+N1	Reference T1 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+N3	Reference T3 ICD10:Q21.2	Ubytek przegrody przedsionkowo-komorowej
+N5	Reference T8 ICD10:Q20	Wrodzone wady rozwojowe jam i połączeń sercowych

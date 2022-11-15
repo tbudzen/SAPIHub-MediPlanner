@@ -1,0 +1,129 @@
+T1	Condition 438 459	Nadciśnienie tętnicze
+N1	Reference T1 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T2	Treatment 460 489	kontrolowane farmakologicznie
+T3	Condition 491 511	Hipercholesterolemia
+N2	Reference T3 ICD10:E78.0	Czysta hipercholesterolemia
+T4	Condition 513 525	Bradyarytmia
+N3	Reference T4 ICD10:I49.9	Zaburzenia rytmu serca, nieokreślone
+T5	Investigation_result 566 585	Nieprawidłowy wynik
+T6	Investigation 586 602	próby wysiłkowej
+R1	Inv Arg1:T6 Arg2:T5	
+T7	Treatment 755 820	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T8	Investigation 825 891	Wskazane wykonanie ambulatoryjnego badania angio-CT tt. wieńcowych
+T9	Investigation 896 947	Wskazane ambulatoryjne wykonanie badania Holter-EKG
+T10	Behaviour 951 990	Dieta lekkostrawna, niskocholesterolowa
+T11	Investigation 997 1026	Okresowo kontrola lipidogramu
+T12	Investigation 1031 1079	Systematyczna kontrola ciśnienia tętniczego krwi
+T13	Drug 1086 1093	Zofenil
+T14	Drug_dose 1094 1116	30 mg 1x1/2 tabl. rano
+R2	Drg Arg1:T13 Arg2:T14	
+T15	Behaviour 1118 1125	ZUS ZLA
+T16	Date 1127 1150	06.08.2019 - 14.08.2019
+R3	Dat Arg1:T16 Arg2:T15	
+T17	Behaviour 1291 1346	czynny sportowiec (3-4 treningi piłki nożnej w tygodniu
+T18	Date 1347 1357	od 12 r.ż.
+R4	Dat Arg1:T18 Arg2:T17	
+T19	Symptom 1395 1424	niskich częstości rytmu serca
+N4	Reference T19 ICD10:R00.1	Bradykardia, nieokreślona
+T20	Drug 1428 1436	Lokrenie
+T21	Condition 1442 1465	nadciśnienia tętniczego
+N5	Reference T21 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T22	Date 1466 1473	od 2012
+R5	Dat Arg1:T22 Arg2:T21	
+T23	Condition 1544 1554	wiotka IAS
+T24	Condition 1556 1558	HA
+N6	Reference T24 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T25	Condition 1560 1586	kleszczowe zapalenie mózgu
+N7	Reference T25 ICD10:A84.9	Wirusowe zapalenie mózgu wywołane przez wirusy przenoszone przez kleszcze, nieokreślone
+T26	Date 1588 1592	2012
+R6	Dat Arg1:T26 Arg2:T25	
+T27	Treatment 1603 1630	2-krotnym zabiegu usunięcia
+T28	Condition 1631 1658	guzów gruczołów piersiowych
+N8	Reference T28 ICD10:N63	Nieokreślony guzek w piersi
+T29	Date 1659 1680	w okresie nastoletnim
+R7	Dat Arg1:T29 Arg2:T28	
+R8	Dat Arg1:T29 Arg2:T27	
+T30	Condition 1690 1730	polipowata zmiana w pęcherzyku żółciowym
+N9	Reference T30 ICD10:K82.9	Choroba pęcherzyka żółciowego, nieokreślona
+T31	Investigation 1764 1780	USG j. brzusznej
+T32	Investigation 1783 1804	Doppler tt. nerkowych
+T33	Negation 1810 1816	Neguje
+T34	Symptom 1818 1830	zasłabnięcia
+T35	Symptom 1832 1840	omdlenia
+N10	Reference T35 ICD10:R55	Omdlenie i zapaść
+T36	Symptom 1842 1852	krwawienia
+T37	Symptom 1854 1867	czarne stolce
+N11	Reference T37 ICD10:K92.1	Stolce smołowate
+T38	Symptom 1869 1885	brunatne wymioty
+N12	Reference T38 ICD10:K92.0	Wymioty krwawe
+T39	Condition 1887 1903	chorobę wrzodową
+N13	Reference T39 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T40	Symptom 1905 1933	duszność nocną typu ortopnoe
+N14	Reference T40 ICD10:R06.0	Duszność
+T41	Condition 1935 1937	DM
+N15	Reference T41 ICD10:E14	Cukrzyca nieokreślona
+T42	Condition 1939 1949	udar mózgu
+N16	Reference T42 ICD10:I64	Udar mózgu, nieokreślony jako krwotoczny lub zawałowy
+T43	Condition 1951 1962	zawał serca
+N17	Reference T43 ICD10:I25.2	Przebyty zawał serca
+T44	Symptom 1964 2003	dolegliwości bólowe w klatce piersiowej
+R9	Neg Arg1:T33 Arg2:T44	
+R10	Neg Arg1:T33 Arg2:T43	
+R11	Neg Arg1:T33 Arg2:T42	
+R12	Neg Arg1:T33 Arg2:T41	
+R13	Neg Arg1:T33 Arg2:T40	
+R14	Neg Arg1:T33 Arg2:T39	
+R15	Neg Arg1:T33 Arg2:T38	
+R16	Neg Arg1:T33 Arg2:T37	
+R17	Neg Arg1:T33 Arg2:T36	
+R18	Neg Arg1:T33 Arg2:T35	
+R19	Neg Arg1:T33 Arg2:T34	
+T45	Treatment 2006 2023	Przebyte operacje
+T46	Condition 2030 2045	Wywiad rodzinny
+A1	Status T46 Family
+T47	Condition 2047 2049	HA
+A2	Status T47 Family
+N19	Reference T47 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T48	Condition 2052 2055	DM2
+A3	Status T48 Family
+N20	Reference T48 ICD10:E11	Cukrzyca insulinoniezależna
+T49	Behaviour 2057 2072	Palenie tytoniu
+T50	Negation 2074 2077	nie
+R20	Neg Arg1:T50 Arg2:T49	
+T51	Behaviour 2078 2089	Inne używki
+T52	Negation 2091 2097	neguje
+R21	Neg Arg1:T52 Arg2:T51	
+T53	Condition 2099 2108	Uczulenia
+T54	Negation 2110 2116	neguje
+R22	Neg Arg1:T54 Arg2:T53	
+T55	Condition 2145 2148	WZW
+N22	Reference T55 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T56	Condition 2155 2164	borelioza
+N23	Reference T56 ICD10:A69.2	Choroba z Lyme
+T57	Condition 2170 2173	tbc
+T58	Negation 2175 2176	-
+R23	Neg Arg1:T58 Arg2:T57	
+T59	Negation 2166 2167	-
+R24	Neg Arg1:T59 Arg2:T56	
+T60	Negation 2150 2151	-
+R25	Neg Arg1:T60 Arg2:T55	
+T61	Behaviour 2210 2236	warunki mieszkaniowe dobre
+T62	Behaviour 2239 2262	Przedstawiciel handlowy
+T63	Drug 2270 2277	Zofenil
+T64	Drug_dose 2278 2298	30 mg 1/2 tabletka R
+R26	Drg Arg1:T63 Arg2:T64	
+T65	Investigation 2360 2381	badania laboratoryjne
+T66	Investigation 2383 2387	ECHO
+T67	Investigation 2389 2399	Holter EKG
+T68	Investigation 2401 2404	ExT
+T69	Investigation 2406 2409	TEE
+N26	Reference T53 ICD10:T78.4	Alergia, nieokreślona
+T70	Investigation 528 547	badaniu podmiotowym
+A4	Status T27 Historical_Insignificant
+A5	Status T28 Historical_Insignificant
+N27	Reference T34 ICD10:R55	Omdlenie i zapaść
+N21	Reference T49 ICD10:Z72.0	Używanie tytoniu
+N25	Reference T36 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N18	Reference T44 ICD10:R07.4	Ból gardła i w klatce piersiowej
+N28	Reference T51 ICD10:Z72	Problemy związane ze stylem życia
+N24	Reference T57 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie

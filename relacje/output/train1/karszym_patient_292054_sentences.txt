@@ -1,0 +1,549 @@
+allRelations          : 42
+oks                   : 11
+isRedundantAndRemoveds: 27
+shouldNotBeRemoveds   : 2
+shouldBeBemoveds      : 2
+GOOD / BAD            : 38 / 4
+Sentence 0:
+------------------------------------------------
+Wiek: 65 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+
+
+
+Sentence 3:
+------------------------------------------------
+
+
+
+Sentence 4:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 5:
+------------------------------------------------
+ Rozpozanie I: ICD10:I10|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo::
+------------------------------------------------
+
+
+
+Sentence 6:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 7:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Diagnostyka w kierunku nadciśnienia tętniczego.
+
+
+Sentence 8:
+Łagodna niedomykalność zastawki trójdzielnej.
+
+
+Sentence 9:
+Zmiany zwyrodnieniowe kręgosłupa w wywiadzie.
+
+
+
+Sentence 10:
+------------------------------------------------
+
+
+
+Sentence 11:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 12:
+1. Dalsza opieka w POZ.
+
+
+
+Sentence 13:
+2. Wskazane wykonanie scyntygrafii perfuzyjnej mięśnia sercowego w warunkach Poradni Kardiologicznej.
+
+
+
+Sentence 14:
+3. Wskazane rozważenie diagnostyki endokrynologicznej - wystawiono skierowanie do Poradni Endokrynologicznej.
+
+
+
+Sentence 15:
+4. Okresowa kontrola morfologii, elektrolitów, parametrów wątrobowych oraz parametrów nerkowych.
+
+
+
+Sentence 16:
+5. Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych.
+
+
+
+Sentence 17:
+6. Regularna samokontrola ciśnienia tętniczego krwi i tętna.
+
+
+
+Sentence 18:
+7. Regularne przyjmowanie leków:
+Rp.
+Captopril 12,5mg 1 tabletka podjęzykowo doraźnie.
+
+R1	Drg Arg1:T11 Arg2:T12 << OK >>	Captopril -> 12,5mg 1 tabletka podjęzykowo doraźnie  <RANK: 3> <info: start[1451, 1461] <type: RIGHT>>
+
+
+Sentence 19:
+------------------------------------------------
+
+
+
+Sentence 20:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 21:
+Chora lat 64, lekarz dentysta, przyjęta do Kliniki z powodu labilnych wartości BP - nie przyjmuje leków, od 08.2018 3 incydenty nagłego wzrostu BP do wartości max. 220/110mmHg.  
+
+R2	Neg Arg1:T14 Arg2:T13 <<REDUNDANT!!!SHOULD BE REMOVED>>	nie przyjmuje -> labilnych wartości BP  <RANK: 3> <info: start[1709, 1685] <type: LEFT>>
+R3	Neg Arg1:T14 Arg2:T17 <<REDUNDANT!!!REMOVED>>	nie przyjmuje -> 3 incydenty nagłego wzrostu BP do wartości max. 220/110mmHg. <:REMOVED other second tag between (right):> <RANK: 2> <info: start[1709, 1741] <type: RIGHT>>
+R4	Neg Arg1:T14 Arg2:T15 << OK >>	nie przyjmuje -> leków  <RANK: 3> <info: start[1709, 1723] <type: RIGHT>>
+R5	Dat Arg1:T16 Arg2:T13 <<REDUNDANT!!!REMOVED>>	od 08.2018 -> labilnych wartości BP <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1730, 1685] <type: LEFT>>
+R6	Dat Arg1:T16 Arg2:T17 << OK >>	od 08.2018 -> 3 incydenty nagłego wzrostu BP do wartości max. 220/110mmHg.  <RANK: 3> <info: start[1730, 1741] <type: RIGHT>>
+R7	Dat Arg1:T16 Arg2:T15 <<REDUNDANT!!!REMOVED>>	od 08.2018 -> leków <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1730, 1723] <type: LEFT>>
+
+
+Sentence 22:
+W wywiadzie ponadto:  zmiany zwyrodnieniowe kręgosłupa 
+
+
+
+Sentence 23:
+Przebyte operacje: neguje 
+Wywiad rodzinny: bez znaczenia 
+Alergie:  neguje 
+
+R8	Neg Arg1:T20 Arg2:T21 <<REDUNDANT!!!REMOVED>>	neguje -> Wywiad rodzinny <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1879, 1887] <type: RIGHT>>
+R9	Neg Arg1:T20 Arg2:T23 <<REDUNDANT!!!REMOVED>>	neguje -> Alergie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1879, 1919] <type: RIGHT>>
+R10	Neg Arg1:T20 Arg2:T19 << OK >>	neguje -> Przebyte operacje  <RANK: 3> <info: start[1879, 1860] <type: LEFT>>
+R11	Neg Arg1:T22 Arg2:T21 << OK >>	bez znaczenia -> Wywiad rodzinny  <RANK: 3> <info: start[1904, 1887] <type: LEFT>>
+R12	Neg Arg1:T22 Arg2:T23 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Alergie <:REMOVED multipleConnectedByTag2:> <RANK: 1> <info: start[1904, 1919] <type: RIGHT>>
+R13	Neg Arg1:T22 Arg2:T19 <<REDUNDANT!!!REMOVED>>	bez znaczenia -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1904, 1860] <type: LEFT>>
+R14	Neg Arg1:T24 Arg2:T21 <<REDUNDANT!!!REMOVED>>	neguje -> Wywiad rodzinny <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1929, 1887] <type: LEFT>>
+R15	Neg Arg1:T24 Arg2:T23 << OK >>	neguje -> Alergie  <RANK: 3> <info: start[1929, 1919] <type: LEFT>>
+R16	Neg Arg1:T24 Arg2:T19 <<REDUNDANT!!!REMOVED>>	neguje -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1929, 1860] <type: LEFT>>
+
+
+Sentence 24:
+Nikotynizm: tak do 7 lat wstecz, 15 paczkolat   
+Alkohol: okazjonalnie 
+Uzależnienie inne: neguje 
+Stan społeczny: pracuje w zawodzie 
+
+R17	Neg Arg1:T30 Arg2:T25 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm: tak <:REMOVED Tag2 not in the same line:> <RANK: 0> <info: start[2028, 1937] <type: LEFT>>
+R18	Neg Arg1:T30 Arg2:T27 <<REDUNDANT!!!REMOVED>>	neguje -> 15 paczkolat <:REMOVED Tag2 not in the same line:> <RANK: 1> <info: start[2028, 1970] <type: LEFT>>
+R19	Neg Arg1:T30 Arg2:T28 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: okazjonalnie <:REMOVED Tag2 not in the same line:> <RANK: 1> <info: start[2028, 1986] <type: LEFT>>
+R20	Neg Arg1:T30 Arg2:T29 << OK >>	neguje -> Uzależnienie inne  <RANK: 3> <info: start[2028, 2009] <type: LEFT>>
+R21	Neg Arg1:T30 Arg2:T31 <<REDUNDANT!!!REMOVED>>	neguje -> pracuje w zawodzie <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2028, 2052] <type: RIGHT>>
+R22	Dat Arg1:T26 Arg2:T25 << OK >>	do 7 lat wstecz -> Nikotynizm: tak  <RANK: 3> <info: start[1953, 1937] <type: LEFT>>
+R23	Dat Arg1:T26 Arg2:T27 <<SHOULD NOT BE REMOVED>>	do 7 lat wstecz -> 15 paczkolat <:REMOVED many second tags on the right:> <RANK: 2> <info: start[1953, 1970] <type: RIGHT>>
+R24	Dat Arg1:T26 Arg2:T28 <<REDUNDANT!!!REMOVED>>	do 7 lat wstecz -> Alkohol: okazjonalnie <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1953, 1986] <type: RIGHT>>
+R25	Dat Arg1:T26 Arg2:T29 <<REDUNDANT!!!REMOVED>>	do 7 lat wstecz -> Uzależnienie inne <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1953, 2009] <type: RIGHT>>
+R26	Dat Arg1:T26 Arg2:T31 <<REDUNDANT!!!REMOVED>>	do 7 lat wstecz -> pracuje w zawodzie <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1953, 2052] <type: RIGHT>>
+
+
+Sentence 25:
+Leki:
+doraźnie Pramolan, Tolura, Captopril, na stałe żadnych 
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter ekg, rtg kl. piersiowej
+
+R27	Neg Arg1:T36 Arg2:T38 <<REDUNDANT!!!REMOVED>>	żadnych -> echo serca <:REMOVED many second tags on the right:> <RANK: 1> <info: start[2125, 2161] <type: RIGHT>>
+R28	Neg Arg1:T36 Arg2:T39 <<REDUNDANT!!!REMOVED>>	żadnych -> TET <:REMOVED many second tags on the right:> <RANK: 0> <info: start[2125, 2173] <type: RIGHT>>
+R29	Neg Arg1:T36 Arg2:T40 <<REDUNDANT!!!REMOVED>>	żadnych -> ABPM <:REMOVED many second tags on the right:> <RANK: 0> <info: start[2125, 2178] <type: RIGHT>>
+R30	Neg Arg1:T36 Arg2:T41 <<REDUNDANT!!!REMOVED>>	żadnych -> Holter ekg <:REMOVED many second tags on the right:> <RANK: 0> <info: start[2125, 2184] <type: RIGHT>>
+R31	Neg Arg1:T36 Arg2:T42 <<REDUNDANT!!!REMOVED>>	żadnych -> rtg kl. piersiowej <:REMOVED many second tags on the right:> <RANK: 0> <info: start[2125, 2196] <type: RIGHT>>
+R32	Neg Arg1:T36 Arg2:T32 <<REDUNDANT!!!REMOVED>>	żadnych -> Pramolan <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2125, 2087] <type: LEFT>>
+R33	Neg Arg1:T36 Arg2:T34 <<REDUNDANT!!!REMOVED>>	żadnych -> Tolura <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2125, 2097] <type: LEFT>>
+R34	Neg Arg1:T36 Arg2:T35 <<REDUNDANT!!!REMOVED>>	żadnych -> Captopril <:REMOVED other second tag between (left):> <RANK: 2> <info: start[2125, 2105] <type: LEFT>>
+R35	Neg Arg1:T36 Arg2:T33 <<REDUNDANT!!!SHOULD BE REMOVED>>	żadnych -> doraźnie  <RANK: 2> <info: start[2125, 2078] <type: LEFT>>
+R36	Neg Arg1:T36 Arg2:T1 << OK >>	żadnych -> na stałe  <RANK: 3> <info: start[2125, 2116] <type: LEFT>>
+R37	Drg Arg1:T32 Arg2:T33 << OK >>	Pramolan -> doraźnie  <RANK: 3> <info: start[2087, 2078] <type: LEFT>>
+R38	Drg Arg1:T32 Arg2:T1 <<REDUNDANT!!!REMOVED>>	Pramolan -> na stałe <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[2087, 2116] <type: RIGHT>>
+R39	Drg Arg1:T34 Arg2:T33 << OK >>	Tolura -> doraźnie  <RANK: 2> <info: start[2097, 2078] <type: LEFT>>
+R40	Drg Arg1:T34 Arg2:T1 <<REDUNDANT!!!REMOVED>>	Tolura -> na stałe <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[2097, 2116] <type: RIGHT>>
+R41	Drg Arg1:T35 Arg2:T33 <<SHOULD NOT BE REMOVED>>	Captopril -> doraźnie <:REMOVED other first tag between (left):> <RANK: 2> <info: start[2105, 2078] <type: LEFT>>
+R42	Drg Arg1:T35 Arg2:T1 <<REDUNDANT!!!REMOVED>>	Captopril -> na stałe <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[2105, 2116] <type: RIGHT>>
+
+
+Sentence 26:
+Przewidywana liczba dni hospitalizacji: 5-7 dni
+------------------------------------------------
+
+
+
+Sentence 27:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 28:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.20[10^3/ul]
+    
+
+
+Sentence 29:
+RBC Krwinki czerwone:5.00[10^6/ul]
+    
+
+
+Sentence 30:
+HGB Hemoglobina:14.0[g/dl]
+    
+
+
+Sentence 31:
+HCT Hematokryt:42.1[%]
+    
+
+
+Sentence 32:
+MCV wskaźnik czerwonokrw:84.2[fl]
+    
+
+
+Sentence 33:
+MCH wskaźnik czerwonokrw:28.0[pg]
+    
+
+
+Sentence 34:
+MCHC wskaźnik czerwonokr:33.3[g/dl]
+    
+
+
+Sentence 35:
+PLT z morfologii:146[10^3/ul]
+    
+
+
+Sentence 36:
+RDW-SD:41.0[fl]
+    
+
+
+Sentence 37:
+RDW-CV:13.3[%]
+    PDW:13.8[fl]
+    
+
+
+Sentence 38:
+MPV:11.6[fl]
+    
+
+
+Sentence 39:
+P-LCR:37.3[%]
+    
+
+
+Sentence 40:
+PCT (hematokryt płytkowy:0.17[%]
+    
+
+
+Sentence 41:
+NEUTR# wartość bezwzględ:3.18[10^3/ul]
+    
+
+
+Sentence 42:
+NEUTR%:51.4[%]
+    
+
+
+Sentence 43:
+LYMH# wartość bezwzględn:2.16[10^3/ul]
+    
+
+
+Sentence 44:
+LYMPH%:34.8[%]
+    
+
+
+Sentence 45:
+MONO# wartość bezwzględn:0.61[10^3/ul]
+    
+
+
+Sentence 46:
+MONO%:9.8[%]
+    
+
+
+Sentence 47:
+EO# wartość bezwzględna:0.23[10^3/ul]
+    
+
+
+Sentence 48:
+EO%:3.7[%]
+    
+
+
+Sentence 49:
+BASO# wartość bezwzględn:0.02[10^3/ul]
+    
+
+
+Sentence 50:
+BASO%:0.3[%]
+    
+
+
+Sentence 51:
+NRBC %:0.0[%]
+    
+
+
+Sentence 52:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 53:
+Badanie ogólne moczu
+    
+
+
+Sentence 54:
+barwa:jasnożółty[ ]
+    
+
+
+Sentence 55:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 56:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 57:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 58:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 59:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 60:
+ciężar właściwy:1.008[ ]
+    pH:7.0[ ]
+    
+
+
+Sentence 61:
+białko:nieobecne[ ]
+    
+
+
+Sentence 62:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 63:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 64:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 65:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 66:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 67:
+nabłonki płaskie:pojedyncze[w preparacie]
+    
+
+
+Sentence 68:
+leukocyty:6 /ul[ul]
+    erytrocyty świeże i częś:6 /ul[ul]
+    śluz:nieliczny[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 69:
+TSH: TSH:1.33[uIU/ml]
+
+
+
+Sentence 70:
+FT3: FT3:2.73[pg/ml]
+
+
+
+Sentence 71:
+FT4: FT4:1.11[ng/dl]
+
+
+
+Sentence 72:
+ALAT: ALAT:16[U/L]
+ASPAT: ASPAT:25[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 73:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 74:
+Potas (K): Potas:4.0[mmol/L]
+
+
+
+Sentence 75:
+Kreatynina + GFR
+    
+
+
+Sentence 76:
+Kreatynina w surowicy:0.60[mg/dl]
+    eGFR wg skr.
+
+
+Sentence 77:
+MDRD ze stan:100.6[ml/min/1,73 m^2]
+
+
+
+Sentence 78:
+Mocznik: Mocznik:28[mg/dl]
+
+
+
+Sentence 79:
+Kwas moczowy: Kwas moczowy:4.3[mg/dl]
+
+
+
+Sentence 80:
+Lipidogram
+    
+
+
+Sentence 81:
+Cholesterol całkowity:187[mg/dl]
+    
+
+
+Sentence 82:
+Cholesterol HDL:66[mg/dl]
+    
+
+
+Sentence 83:
+Cholestrol LDL:106[mg/dl]
+    
+
+
+Sentence 84:
+Triglicerydy:91[mg/dl]
+    
+
+
+Sentence 85:
+Stosunek cholesterolu HD:0.4
+Glukoza w surowicy: Glukoza w surowicy:73[mg/dl]
+
+
+
+Sentence 86:
+------------------------------------------------
+
+
+
+Sentence 87:
+ICD10
+------------------------------------------------
+I36.1
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 88:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 89:
+89.501
+C55
+A01
+89.502
+I81
+L43
+N45
+L69
+O55
+I17
+M45
+M37
+I19
+O35
+N13
+88.721
+O69
+88.761
+88.751
+------------------------------------------------
+
+

@@ -1,0 +1,138 @@
+T1	Treatment 332 397	Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej
+T2	Behaviour 422 517	Dieta lekkostrawna, niskocholesterolowa z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T3	Investigation 521 571	Okresowo kontrola lipidogramu, stężenia elektrolit
+T4	Condition 789 820	Napadowe migotanie przedsionków
+N1	Reference T4 ICD10:I48	Migotanie i trzepotanie przedsionków
+T5	Condition 822 843	Nadciśnienie tętnicze
+N2	Reference T5 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T6	Condition 845 880	Zaburzenia metabolizmu węglowodanów
+N3	Reference T6 ICD10:E74.9	Zaburzenia przemian węglowodanów, nieokreślone
+T7	Condition 950 962	Dyslipidemia
+T8	Condition 964 987	Stan po 2 epizodach TIA
+N5	Reference T8 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T9	Date 989 993	2006
+T10	Date 995 999	2013
+R1	Dat Arg1:T9 Arg2:T8	
+R2	Dat Arg1:T10 Arg2:T8	
+T11	Condition 1002 1009	Otyłość
+N6	Reference T11 ICD10:E66	Otyłość
+T12	Condition 1012 1034	Żylaki kończyn dolnych
+N7	Reference T12 ICD10:I83	Żylaki kończyn dolnych
+T13	Condition 1179 1212	napadowym migotaniem przedsionków
+N8	Reference T13 ICD10:I48	Migotanie i trzepotanie przedsionków
+T14	Condition 1270 1289	niewydolności serca
+N9	Reference T14 ICD10:I50	Niewydolność serca
+T15	Symptom 1291 1351	Okresowo zmniejszenie tolerancji wysiłku do II klasy wg NYHA
+N10	Reference T15 ICD10:R53	Złe samopoczucie i zmęczenie
+T16	Symptom 1353 1368	kołatania serca
+N11	Reference T16 ICD10:R00.2	Kołatanie serca
+T17	Condition 1391 1422	Napadowe migotanie przedsionków
+N12	Reference T17 ICD10:I48	Migotanie i trzepotanie przedsionków
+T18	Condition 1424 1445	Nadciśnienie tętnicze
+N13	Reference T18 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T19	Condition 1447 1478	Nieprawidłowa glikemia na czczo
+N14	Reference T19 ICD10:E74.9	Zaburzenia przemian węglowodanów, nieokreślone
+T20	Condition 1480 1492	Dyslipidemia
+T21	Condition 1494 1517	Stan po 2 epizodach TIA
+N16	Reference T21 ICD10:G45.9	Przemijające napady niedokrwienia mózgu, nieokreślone
+T22	Date 1519 1523	2006
+T23	Date 1525 1529	2013
+R3	Dat Arg1:T22 Arg2:T21	
+R4	Dat Arg1:T23 Arg2:T21	
+T24	Condition 1532 1539	Otyłość
+N17	Reference T24 ICD10:E66	Otyłość
+T25	Condition 1542 1564	Zylaki kończyn dolnych
+N18	Reference T25 ICD10:I83	Żylaki kończyn dolnych
+T26	Negation 1567 1573	Neguje
+T27	Symptom 1575 1587	zasłabnięcia
+T28	Symptom 1589 1597	omdlenia
+N19	Reference T28 ICD10:R55	Omdlenie i zapaść
+T29	Symptom 1599 1609	krwawienia
+T30	Symptom 1611 1624	czarne stolce
+N20	Reference T30 ICD10:K92.1	Stolce smołowate
+T31	Symptom 1626 1642	brunatne wymioty
+N21	Reference T31 ICD10:K92.0	Wymioty krwawe
+T32	Condition 1644 1660	chorobę wrzodową
+T33	Symptom 1662 1676	duszność nocną
+N23	Reference T33 ICD10:R06.0	Duszność
+R5	Neg Arg1:T26 Arg2:T27	
+R6	Neg Arg1:T26 Arg2:T28	
+R7	Neg Arg1:T26 Arg2:T29	
+R8	Neg Arg1:T26 Arg2:T30	
+R9	Neg Arg1:T26 Arg2:T31	
+R10	Neg Arg1:T26 Arg2:T32	
+R11	Neg Arg1:T26 Arg2:T33	
+T34	Symptom 1678 1693	obrzęki podudzi
+T35	Symptom 1695 1719	bóle w klatce piersiowej
+N25	Reference T35 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+R12	Neg Arg1:T26 Arg2:T34	
+R13	Neg Arg1:T26 Arg2:T35	
+T36	Treatment 1720 1737	Przebyte operacje
+T37	Negation 1738 1744	neguje
+R14	Neg Arg1:T37 Arg2:T36	
+T38	Behaviour 1745 1760	Palenie tytoniu
+N26	Reference T38 ICD10:Z72.0	Używanie tytoniu
+T39	Negation 1762 1768	neguje
+R15	Neg Arg1:T39 Arg2:T38	
+T40	Behaviour 1769 1780	Inne używki
+T41	Negation 1782 1788	neguje
+R16	Neg Arg1:T41 Arg2:T40	
+T42	Condition 1789 1798	Uczulenia
+T43	Negation 1800 1806	neguje
+R17	Neg Arg1:T43 Arg2:T42	
+T44	Condition 1834 1837	WZW
+N27	Reference T44 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T45	Negation 1839 1840	-
+R18	Neg Arg1:T45 Arg2:T44	
+T46	Condition 1844 1853	borelioza
+N28	Reference T46 ICD10:A69.2	Choroba z Lyme
+T47	Negation 1855 1856	-
+R19	Neg Arg1:T47 Arg2:T46	
+T48	Condition 1859 1862	tbc
+N29	Reference T48 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T49	Negation 1864 1865	-
+R20	Neg Arg1:T49 Arg2:T48	
+T50	Condition 1868 1872	odra
+N30	Reference T50 ICD10:B05	Odra
+T51	Negation 1874 1875	-
+R21	Neg Arg1:T51 Arg2:T50	
+T52	Condition 1878 1892	kontakt z odrą
+N31	Reference T52 ICD10:B05	Odra
+T53	Negation 1894 1895	-
+R22	Neg Arg1:T53 Arg2:T52	
+T54	Behaviour 1913 1939	warunki mieszkaniowe dobre
+T55	Drug 2020 2027	Pradaxa
+T56	Drug_dose 2028 2040	150 mg 1-0-1
+R23	Drg Arg1:T55 Arg2:T56	
+T57	Drug 2042 2049	Amlozek
+T58	Drug_dose 2050 2061	10 mg 0-0-1
+R24	Drg Arg1:T57 Arg2:T58	
+T59	Drug 2062 2074	Tertensif SR
+T60	Drug_dose 2075 2087	1,5 mg 1-0-0
+R25	Drg Arg1:T59 Arg2:T60	
+T61	Drug 2088 2096	Valsacor
+T62	Drug_dose 2097 2109	160 mg 1-0-0
+R26	Drg Arg1:T61 Arg2:T62	
+T63	Drug 2110 2118	Biosotal
+T64	Drug_dose 2119 2130	80 mg 1-0-1
+R27	Drg Arg1:T63 Arg2:T64	
+T65	Drug 2132 2137	Zocor
+T66	Drug_dose 2138 2149	20 mg 0-0-1
+R28	Drg Arg1:T65 Arg2:T66	
+T67	Investigation 2210 2231	badania laboratoryjne
+T68	Investigation 2233 2237	ECHO
+T69	Investigation 2239 2257	EKG metodą Holtera
+T70	Investigation 2259 2263	ABPM
+T71	Condition 882 913	nieprawidłowa glikemia na czczo
+N32	Reference T71 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T72	Condition 915 947	nieprawidłowa tolerancja glukozy
+N33	Reference T72 ICD10:E74	Inne zaburzenia przemian węglowodanów
+N4	Reference T7 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+N15	Reference T20 ICD10:E78	Zaburzenia metabolizmu lipoprotein i inne lipidemie
+T73	Condition 1964 1978	zmarł na zawał
+A1	Status T73 Family
+N34	Reference T73 ICD10:I21.9	Ostry zawał serca, nieokreślony
+T74	Date 1979 1985	w 61rz
+R29	Dat Arg1:T74 Arg2:T73	
+N24	Reference T34 ICD10:R22.4	Zlokalizowany obrzęk, guz i guzek w obrębie kończyny dolnej
+N22	Reference T32 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji

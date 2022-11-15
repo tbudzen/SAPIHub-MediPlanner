@@ -1,0 +1,50 @@
+T1	Drug 341 351	Cetirizine
+T2	Drug 367 375	0,9%NaCl
+T3	Drug_dose 353 364	nebulizacje
+R1	Drg Arg1:T2 Arg2:T3	
+T4	Treatment 624 632	operacji
+N1	Reference T4 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T5	Condition 633 651	tetralogii Fallota
+N2	Reference T5 ICD10:Q21.3	Tetralogia Fallota
+T6	Date 653 664	23.08.2004r
+T7	Treatment 778 806	Dalsza opieka kardiologiczna
+T8	Investigation 837 866	rezonansu magnetycznego serca
+T9	Date 893 904	27.11.2017r
+T10	Investigation 988 1031	badań laboratoryjnych - kreatynina, mocznik
+T11	Behaviour 967 975	na czczo
+T12	Drug 1057 1067	Cetirizine
+T13	Drug_dose 1068 1085	1x10mg przed snem
+T14	Treatment 1087 1126	Dalsza opieka w Poradni Alergologicznej
+T15	Treatment 1131 1185	Opieka ogólnopediatryczna w Poradni Lekarza Rodzinnego
+R2	Dat Arg1:T6 Arg2:T5	
+R3	Dat Arg1:T6 Arg2:T4	
+R4	Dat Arg1:T9 Arg2:T8	
+R5	Dat Arg1:T9 Arg2:T11	
+R6	Drg Arg1:T12 Arg2:T13	
+T16	Condition 1337 1362	wrodzoną wadą serca (ToF)
+N3	Reference T16 ICD10:Q21.3	Tetralogia Fallota
+T17	Treatment 1367 1387	leczeniu operacyjnym
+N4	Reference T17 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T18	Symptom 1512 1522	Stan dobry
+T19	Date 1524 1541	W ostatnim czasie
+T20	Negation 1542 1545	bez
+T21	Condition 1546 1554	infekcji
+T22	Condition 1556 1563	Alergia
+N5	Reference T22 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T23	Negation 1566 1582	nie potwierdzona
+T24	Drug 1584 1594	Leki stałe
+T25	Negation 1597 1610	nie otrzymuje
+R7	Neg Arg1:T25 Arg2:T24	
+R8	Neg Arg1:T23 Arg2:T22	
+R9	Neg Arg1:T20 Arg2:T21	
+R10	Dat Arg1:T19 Arg2:T21	
+R1	Drg Arg1:T1 Arg2:T3
+R11	Neg Arg1:T20 Arg2:T21
+R12	Neg Arg1:T23 Arg2:T22
+R13	Neg Arg1:T25 Arg2:T24
+R2	Drg Arg1:T2 Arg2:T3
+R3	Dat Arg1:T6 Arg2:T5
+R4	Dat Arg1:T6 Arg2:T4
+R5	Dat Arg1:T9 Arg2:T11
+R7	Drg Arg1:T12 Arg2:T13
+R8	Dat Arg1:T19 Arg2:T18

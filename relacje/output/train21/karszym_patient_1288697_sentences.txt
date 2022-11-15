@@ -1,0 +1,545 @@
+allRelations          : 80
+oks                   : 19
+isRedundantAndRemoveds: 56
+shouldNotBeRemoveds   : 2
+shouldBeBemoveds      : 3
+GOOD / BAD            : 75 / 5
+Sentence 0:
+------------------------------------------------
+Wiek: 36 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+- Wskazana dalsza opieka u lekarza POZ oraz Poradni Kardiologicznej (skierowanie wydano).
+
+
+
+Sentence 5:
+- Wykonanie MRI serca z kontrastem w warunkach ambulatoryjnych (Poradnia Kardiologii i Wad Wrodzonych Dorosłych ICZMP, dr M. Rybak).
+
+
+
+Sentence 6:
+- Dieta lekkostraw
+------------------------------------------------
+
+
+
+Sentence 7:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 8:
+------------------------------------------------
+ Rozpozanie I: ICD10:I49|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Arytmia komorowa do nsVT włącznie.
+   
+
+
+
+Sentence 9:
+------------------------------------------------
+
+
+
+Sentence 10:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 11:
+------------------------------------------------
+ Rozpozanie I: ICD10:I49|Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo::
+------------------------------------------------
+
+
+
+Sentence 12:
+Badanie podmiotowe/Wywiad
+------------------------------------------------
+
+
+
+Sentence 13:
+Chora lat 35, przyjęta do Kliniki z powodu rejestrowanych w zapisie ekg poj. ExV i ujemnych zal. T w odp. V2-V3. 
+
+R1	Inv Arg1:T5 Arg2:T10 << OK >>	ekg -> poj. ExV  <RANK: 3> <info: start[1255, 1259] <type: RIGHT>>
+R2	Inv Arg1:T5 Arg2:T11 << OK >>	ekg -> ujemnych zal. T w odp. V2-V3  <RANK: 2> <info: start[1255, 1270] <type: RIGHT>>
+
+
+Sentence 14:
+Wykonana dgn ambulatoryjna: Holter EKG - jedynie 50 poj. ExV/dobę, bez innych zaburzeń rytmu lub przewodzenia, TET - brak dokumentacji, echokardiogram - powiększenie RV, wcześniej ścieńczała przegrodą międzyprzedsionkowa, angio TK nn. wieńcowych w 2014 r. - bez zmian nn. wieńcowe, 
+
+R3	Inv Arg1:T6 Arg2:T7 << OK >>	Holter EKG -> 50 poj. ExV/dobę  <RANK: 3> <info: start[1329, 1350] <type: RIGHT>>
+R4	Inv Arg1:T6 Arg2:T9 << OK >>	Holter EKG -> innych zaburzeń rytmu lub przewodzenia  <RANK: 2> <info: start[1329, 1372] <type: RIGHT>>
+R5	Inv Arg1:T6 Arg2:T14 <<REDUNDANT!!!REMOVED>>	Holter EKG -> powiększenie RV <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1329, 1454] <type: RIGHT>>
+R6	Inv Arg1:T6 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Holter EKG -> ścieńczała przegrodą międzyprzedsionkowa <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1329, 1481] <type: RIGHT>>
+R7	Inv Arg1:T6 Arg2:T19 <<REDUNDANT!!!REMOVED>>	Holter EKG -> nn. wieńcowe <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1329, 1569] <type: RIGHT>>
+R8	Inv Arg1:T12 Arg2:T7 <<REDUNDANT!!!REMOVED>>	TET -> 50 poj. ExV/dobę <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1412, 1350] <type: LEFT>>
+R9	Inv Arg1:T12 Arg2:T9 <<REDUNDANT!!!REMOVED>>	TET -> innych zaburzeń rytmu lub przewodzenia <:REMOVED the same tag2, but tag1 on the oter side and lower rank:> <RANK: 2> <info: start[1412, 1372] <type: LEFT>>
+R10	Inv Arg1:T12 Arg2:T14 <<REDUNDANT!!!REMOVED>>	TET -> powiększenie RV <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1412, 1454] <type: RIGHT>>
+R11	Inv Arg1:T12 Arg2:T15 <<REDUNDANT!!!REMOVED>>	TET -> ścieńczała przegrodą międzyprzedsionkowa <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1412, 1481] <type: RIGHT>>
+R12	Inv Arg1:T12 Arg2:T19 <<REDUNDANT!!!REMOVED>>	TET -> nn. wieńcowe <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1412, 1569] <type: RIGHT>>
+R13	Inv Arg1:T13 Arg2:T7 <<REDUNDANT!!!REMOVED>>	echokardiogram -> 50 poj. ExV/dobę <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1437, 1350] <type: LEFT>>
+R14	Inv Arg1:T13 Arg2:T9 <<REDUNDANT!!!REMOVED>>	echokardiogram -> innych zaburzeń rytmu lub przewodzenia <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1437, 1372] <type: LEFT>>
+R15	Inv Arg1:T13 Arg2:T14 << OK >>	echokardiogram -> powiększenie RV  <RANK: 3> <info: start[1437, 1454] <type: RIGHT>>
+R16	Inv Arg1:T13 Arg2:T15 << OK >>	echokardiogram -> ścieńczała przegrodą międzyprzedsionkowa  <RANK: 2> <info: start[1437, 1481] <type: RIGHT>>
+R17	Inv Arg1:T13 Arg2:T19 <<REDUNDANT!!!REMOVED>>	echokardiogram -> nn. wieńcowe <:REMOVED other second tag between (right):> <RANK: 2> <info: start[1437, 1569] <type: RIGHT>>
+R18	Inv Arg1:T16 Arg2:T7 <<REDUNDANT!!!REMOVED>>	angio TK nn. wieńcowych -> 50 poj. ExV/dobę <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1523, 1350] <type: LEFT>>
+R19	Inv Arg1:T16 Arg2:T9 <<REDUNDANT!!!REMOVED>>	angio TK nn. wieńcowych -> innych zaburzeń rytmu lub przewodzenia <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1523, 1372] <type: LEFT>>
+R20	Inv Arg1:T16 Arg2:T14 <<REDUNDANT!!!REMOVED>>	angio TK nn. wieńcowych -> powiększenie RV <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1523, 1454] <type: LEFT>>
+R21	Inv Arg1:T16 Arg2:T15 <<REDUNDANT!!!SHOULD BE REMOVED>>	angio TK nn. wieńcowych -> ścieńczała przegrodą międzyprzedsionkowa  <RANK: 2> <info: start[1523, 1481] <type: LEFT>>
+R22	Inv Arg1:T16 Arg2:T19 << OK >>	angio TK nn. wieńcowych -> nn. wieńcowe  <RANK: 2> <info: start[1523, 1569] <type: RIGHT>>
+R23	Neg Arg1:T8 Arg2:T6 <<REDUNDANT!!!REMOVED>>	bez -> Holter EKG <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1368, 1329] <type: LEFT>>
+R24	Neg Arg1:T8 Arg2:T12 <<REDUNDANT!!!REMOVED>>	bez -> TET <:REMOVED other second tag between (right):> <RANK: 2> <info: start[1368, 1412] <type: RIGHT>>
+R25	Neg Arg1:T8 Arg2:T13 <<REDUNDANT!!!REMOVED>>	bez -> echokardiogram <:REMOVED other second tag between (right):> <RANK: 2> <info: start[1368, 1437] <type: RIGHT>>
+R26	Neg Arg1:T8 Arg2:T16 <<REDUNDANT!!!REMOVED>>	bez -> angio TK nn. wieńcowych <:REMOVED other second tag between (right):> <RANK: 2> <info: start[1368, 1523] <type: RIGHT>>
+R27	Neg Arg1:T8 Arg2:T7 <<REDUNDANT!!!REMOVED>>	bez -> 50 poj. ExV/dobę <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1368, 1350] <type: LEFT>>
+R28	Neg Arg1:T8 Arg2:T9 << OK >>	bez -> innych zaburzeń rytmu lub przewodzenia  <RANK: 3> <info: start[1368, 1372] <type: RIGHT>>
+R29	Neg Arg1:T8 Arg2:T14 <<REDUNDANT!!!REMOVED>>	bez -> powiększenie RV <:REMOVED other second tag between (right):> <RANK: 2> <info: start[1368, 1454] <type: RIGHT>>
+R30	Neg Arg1:T8 Arg2:T15 <<REDUNDANT!!!REMOVED>>	bez -> ścieńczała przegrodą międzyprzedsionkowa <:REMOVED other second tag between (right):> <RANK: 2> <info: start[1368, 1481] <type: RIGHT>>
+R31	Neg Arg1:T8 Arg2:T19 <<REDUNDANT!!!REMOVED>>	bez -> nn. wieńcowe <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1368, 1569] <type: RIGHT>>
+R32	Neg Arg1:T18 Arg2:T6 <<REDUNDANT!!!REMOVED>>	bez zmian -> Holter EKG <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1559, 1329] <type: LEFT>>
+R33	Neg Arg1:T18 Arg2:T12 <<REDUNDANT!!!REMOVED>>	bez zmian -> TET <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1559, 1412] <type: LEFT>>
+R34	Neg Arg1:T18 Arg2:T13 <<REDUNDANT!!!REMOVED>>	bez zmian -> echokardiogram <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1559, 1437] <type: LEFT>>
+R35	Neg Arg1:T18 Arg2:T16 <<REDUNDANT!!!REMOVED>>	bez zmian -> angio TK nn. wieńcowych <:REMOVED many second tags on the left:> <RANK: 2> <info: start[1559, 1523] <type: LEFT>>
+R36	Neg Arg1:T18 Arg2:T7 <<REDUNDANT!!!REMOVED>>	bez zmian -> 50 poj. ExV/dobę <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1559, 1350] <type: LEFT>>
+R37	Neg Arg1:T18 Arg2:T9 <<REDUNDANT!!!REMOVED>>	bez zmian -> innych zaburzeń rytmu lub przewodzenia <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1559, 1372] <type: LEFT>>
+R38	Neg Arg1:T18 Arg2:T14 <<REDUNDANT!!!REMOVED>>	bez zmian -> powiększenie RV <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1559, 1454] <type: LEFT>>
+R39	Neg Arg1:T18 Arg2:T15 <<REDUNDANT!!!REMOVED>>	bez zmian -> ścieńczała przegrodą międzyprzedsionkowa <:REMOVED other second tag between (left):> <RANK: 2> <info: start[1559, 1481] <type: LEFT>>
+R40	Neg Arg1:T18 Arg2:T19 << OK >>	bez zmian -> nn. wieńcowe  <RANK: 3> <info: start[1559, 1569] <type: RIGHT>>
+R41	Dat Arg1:T17 Arg2:T6 <<REDUNDANT!!!SHOULD BE REMOVED>>	w 2014 r. -> Holter EKG  <RANK: 2> <info: start[1547, 1329] <type: LEFT>>
+R42	Dat Arg1:T17 Arg2:T12 <<REDUNDANT!!!REMOVED>>	w 2014 r. -> TET <:REMOVED Too far from TagInfo[T17, 1547, 1556, Date, w 2014 r.
+] TagInfo[T6, 1329, 1339, Investigation, Holter EKG
+]:> <RANK: 2> <info: start[1547, 1412] <type: LEFT>>
+R43	Dat Arg1:T17 Arg2:T13 <<REDUNDANT!!!REMOVED>>	w 2014 r. -> echokardiogram <:REMOVED Too far from TagInfo[T17, 1547, 1556, Date, w 2014 r.
+] TagInfo[T6, 1329, 1339, Investigation, Holter EKG
+]:> <RANK: 2> <info: start[1547, 1437] <type: LEFT>>
+R44	Dat Arg1:T17 Arg2:T16 <<SHOULD NOT BE REMOVED>>	w 2014 r. -> angio TK nn. wieńcowych <:REMOVED Too far from TagInfo[T17, 1547, 1556, Date, w 2014 r.
+] TagInfo[T6, 1329, 1339, Investigation, Holter EKG
+]:> <RANK: 3> <info: start[1547, 1523] <type: LEFT>>
+
+
+Sentence 15:
+We wrześniu incydent zasłabnięcia z bólem w ok. koniuszka (5 tygodni).  
+
+R45	Dat Arg1:T20 Arg2:T21 << OK >>	We wrześniu -> incydent zasłabnięcia  <RANK: 3> <info: start[1584, 1596] <type: RIGHT>>
+R46	Dat Arg1:T20 Arg2:T22 << OK >>	We wrześniu -> bólem w ok. koniuszka (5 tygodni)  <RANK: 3> <info: start[1584, 1620] <type: RIGHT>>
+
+
+Sentence 16:
+W wywiadzie: neguje 
+Przebyte operacje: neguje 
+Wywiad rodzinny: udar niedokrwienny - 40 r.ż. matka (palaczka tytoniu), ojciec - udar mózgu 59 r.z. (palacz) 
+
+R47	Neg Arg1:T24 Arg2:T25 <<REDUNDANT!!!REMOVED>>	neguje -> udar niedokrwienny <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1697, 1722] <type: RIGHT>>
+R48	Neg Arg1:T24 Arg2:T27 <<REDUNDANT!!!REMOVED>>	neguje -> udar mózgu <:REMOVED many second tags on the right:> <RANK: 0> <info: start[1697, 1786] <type: RIGHT>>
+R49	Neg Arg1:T24 Arg2:T23 << OK >>	neguje -> Przebyte operacje  <RANK: 3> <info: start[1697, 1678] <type: LEFT>>
+R50	Dat Arg1:T26 Arg2:T25 << OK >>	40 r.ż. -> udar niedokrwienny  <RANK: 3> <info: start[1743, 1722] <type: LEFT>>
+R51	Dat Arg1:T26 Arg2:T27 <<REDUNDANT!!!REMOVED>>	40 r.ż. -> udar mózgu <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1743, 1786] <type: RIGHT>>
+R52	Dat Arg1:T26 Arg2:T23 <<REDUNDANT!!!REMOVED>>	40 r.ż. -> Przebyte operacje <:REMOVED other second tag between (left):> <RANK: 1> <info: start[1743, 1678] <type: LEFT>>
+R53	Dat Arg1:T28 Arg2:T25 <<REDUNDANT!!!REMOVED>>	59 r.z. -> udar niedokrwienny <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1797, 1722] <type: LEFT>>
+R54	Dat Arg1:T28 Arg2:T27 << OK >>	59 r.z. -> udar mózgu  <RANK: 3> <info: start[1797, 1786] <type: LEFT>>
+R55	Dat Arg1:T28 Arg2:T23 <<REDUNDANT!!!REMOVED>>	59 r.z. -> Przebyte operacje <:REMOVED other first tag between (left):> <RANK: 0> <info: start[1797, 1678] <type: LEFT>>
+
+
+Sentence 17:
+Alergie: neguje 
+Nikotynizm: neguje 
+Alkohol: okazjonalnie 
+Uzależnienie inne: neguje 
+Stan społeczny: menadżer (praca umysłowa) 
+
+R56	Neg Arg1:T30 Arg2:T29 << OK >>	neguje -> Alergie  <RANK: 3> <info: start[1824, 1815] <type: LEFT>>
+R57	Neg Arg1:T30 Arg2:T31 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1824, 1832] <type: RIGHT>>
+R58	Neg Arg1:T30 Arg2:T33 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: okazjonalnie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1824, 1852] <type: RIGHT>>
+R59	Neg Arg1:T30 Arg2:T34 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1824, 1875] <type: RIGHT>>
+R60	Neg Arg1:T30 Arg2:T36 <<REDUNDANT!!!REMOVED>>	neguje -> praca umysłowa <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1824, 1928] <type: RIGHT>>
+R61	Neg Arg1:T30 Arg2:T39 <<REDUNDANT!!!REMOVED>>	neguje -> menadżer <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1824, 1918] <type: RIGHT>>
+R62	Neg Arg1:T32 Arg2:T29 <<REDUNDANT!!!REMOVED>>	neguje -> Alergie <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1844, 1815] <type: LEFT>>
+R63	Neg Arg1:T32 Arg2:T31 << OK >>	neguje -> Nikotynizm  <RANK: 3> <info: start[1844, 1832] <type: LEFT>>
+R64	Neg Arg1:T32 Arg2:T33 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: okazjonalnie <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1844, 1852] <type: RIGHT>>
+R65	Neg Arg1:T32 Arg2:T34 <<REDUNDANT!!!REMOVED>>	neguje -> Uzależnienie inne <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1844, 1875] <type: RIGHT>>
+R66	Neg Arg1:T32 Arg2:T36 <<REDUNDANT!!!REMOVED>>	neguje -> praca umysłowa <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1844, 1928] <type: RIGHT>>
+R67	Neg Arg1:T32 Arg2:T39 <<REDUNDANT!!!REMOVED>>	neguje -> menadżer <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1844, 1918] <type: RIGHT>>
+R68	Neg Arg1:T35 Arg2:T29 <<REDUNDANT!!!REMOVED>>	neguje -> Alergie <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1894, 1815] <type: LEFT>>
+R69	Neg Arg1:T35 Arg2:T31 <<REDUNDANT!!!REMOVED>>	neguje -> Nikotynizm <:REMOVED other first tag between (left):> <RANK: 1> <info: start[1894, 1832] <type: LEFT>>
+R70	Neg Arg1:T35 Arg2:T33 <<REDUNDANT!!!REMOVED>>	neguje -> Alkohol: okazjonalnie <:REMOVED other second tag between (left):> <RANK: 1> <info: start[1894, 1852] <type: LEFT>>
+R71	Neg Arg1:T35 Arg2:T34 << OK >>	neguje -> Uzależnienie inne  <RANK: 3> <info: start[1894, 1875] <type: LEFT>>
+R72	Neg Arg1:T35 Arg2:T36 <<REDUNDANT!!!REMOVED>>	neguje -> praca umysłowa <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1894, 1928] <type: RIGHT>>
+R73	Neg Arg1:T35 Arg2:T39 <<REDUNDANT!!!REMOVED>>	neguje -> menadżer <:REMOVED many second tags on the right:> <RANK: 1> <info: start[1894, 1918] <type: RIGHT>>
+
+
+Sentence 18:
+Leki:
+żadnych (wcześniej Biosotal 40 mg 1 tabl. dziennie)
+
+R74	Neg Arg1:T38 Arg2:T37 <<SHOULD NOT BE REMOVED>>	żadnych -> Leki <:REMOVED many second tags on the left:> <RANK: 1> <info: start[1951, 1945] <type: LEFT>>
+R75	Neg Arg1:T38 Arg2:T41 <<REDUNDANT!!!SHOULD BE REMOVED>>	żadnych -> Biosotal  <RANK: 3> <info: start[1951, 1970] <type: RIGHT>>
+R76	Neg Arg1:T38 Arg2:T42 <<REDUNDANT!!!REMOVED>>	żadnych -> 40 mg 1 tabl. dziennie <:REMOVED other second tag between (right):> <RANK: 3> <info: start[1951, 1979] <type: RIGHT>>
+R77	Drg Arg1:T37 Arg2:T42 <<REDUNDANT!!!REMOVED>>	Leki -> 40 mg 1 tabl. dziennie <:REMOVED other first tag between (right):> <RANK: 1> <info: start[1945, 1979] <type: RIGHT>>
+R78	Drg Arg1:T41 Arg2:T42 << OK >>	Biosotal -> 40 mg 1 tabl. dziennie  <RANK: 3> <info: start[1970, 1979] <type: RIGHT>>
+R79	Dat Arg1:T40 Arg2:T37 <<REDUNDANT!!!REMOVED>>	wcześniej -> Leki <:REMOVED many second tags on the left:> <RANK: 1> <info: start[1960, 1945] <type: LEFT>>
+R80	Dat Arg1:T40 Arg2:T41 << OK >>	wcześniej -> Biosotal  <RANK: 3> <info: start[1960, 1970] <type: RIGHT>>
+
+
+Sentence 19:
+Plan opieki nad pacjentem: echo serca, TET, ABPM, Holter ekg, rtg kl. piersiowej
+
+
+
+Sentence 20:
+Przewidywana liczba dni hospitalizacji: 5-7 dni
+------------------------------------------------
+
+
+
+Sentence 21:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 22:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:5.43[10^3/ul]
+    
+
+
+Sentence 23:
+RBC Krwinki czerwone:4.14[10^6/ul]
+    
+
+
+Sentence 24:
+HGB Hemoglobina:12.5[g/dl]
+    
+
+
+Sentence 25:
+HCT Hematokryt:35.5[%]
+    
+
+
+Sentence 26:
+MCV wskaźnik czerwonokrw:85.7[fl]
+    
+
+
+Sentence 27:
+MCH wskaźnik czerwonokrw:30.2[pg]
+    
+
+
+Sentence 28:
+MCHC wskaźnik czerwonokr:35.2[g/dl]
+    
+
+
+Sentence 29:
+PLT z morfologii:193[10^3/ul]
+    
+
+
+Sentence 30:
+RDW-SD:37.8[fl]
+    
+
+
+Sentence 31:
+RDW-CV:12.0[%]
+    PDW:13.6[fl]
+    MPV:11.8[fl]
+    P-LCR:40.1[%]
+    
+
+
+Sentence 32:
+PCT (hematokryt płytkowy:0.23[%]
+    
+
+
+Sentence 33:
+NEUTR# wartość bezwzględ:2.33[10^3/ul]
+    
+
+
+Sentence 34:
+NEUTR%:42.9[%]
+    
+
+
+Sentence 35:
+LYMH# wartość bezwzględn:2.27[10^3/ul]
+    
+
+
+Sentence 36:
+LYMPH%:41.8[%]
+    
+
+
+Sentence 37:
+MONO# wartość bezwzględn:0.63[10^3/ul]
+    
+
+
+Sentence 38:
+MONO%:11.6[%]
+    
+
+
+Sentence 39:
+EO# wartość bezwzględna:0.17[10^3/ul]
+    
+
+
+Sentence 40:
+EO%:3.1[%]
+    
+
+
+Sentence 41:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    BASO%:0.6[%]
+    
+
+
+Sentence 42:
+NRBC %:0.0[%]
+    
+
+
+Sentence 43:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 44:
+Badanie ogólne moczu
+    
+
+
+Sentence 45:
+barwa:żółty[ ]
+    
+
+
+Sentence 46:
+glukoza:nieobecna[ ]
+    
+
+
+Sentence 47:
+przejrzystość:zupełna[ ]
+    
+
+
+Sentence 48:
+bilirubina:nieobecna[ ]
+    
+
+
+Sentence 49:
+ciała ketonowe:nieobecne[mg/dl]
+    
+
+
+Sentence 50:
+ciężar właściwy:1.024[ ]
+    
+
+
+Sentence 51:
+kwas askrobinowy:nieobecny[ ]
+    
+
+
+Sentence 52:
+pH:5.5[ ]
+    białko:nieobecne[ ]
+    
+
+
+Sentence 53:
+urobilinogen:niewzmożony[ ]
+    
+
+
+Sentence 54:
+azotyny:nieobecne[ ]
+    
+
+
+Sentence 55:
+erytrocyty:nieobecna[ ]
+    
+
+
+Sentence 56:
+leukocyty:nieobecne[ ]
+    
+
+
+Sentence 57:
+OSAD MOCZU:AUTOMATYCZNY[ ]
+    
+
+
+Sentence 58:
+nabłonki płaskie:nieliczne[w preparacie]
+    
+
+
+Sentence 59:
+leukocyty:9 /ul[ul]
+    erytrocyty świeże:4 /ul[ul]
+    śluz:obfity[w preparacie]
+    bakterie:pojedyncze[w preparacie]
+
+
+
+Sentence 60:
+TSH: TSH:4.85[uIU/ml]
+
+
+
+Sentence 61:
+FT3: FT3:2.46[pg/ml]
+
+
+
+Sentence 62:
+FT4: FT4:1.31[ng/dl]
+
+
+
+Sentence 63:
+ALAT: ALAT:10[U/L]
+ASPAT: ASPAT:16[U/L]
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 64:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 65:
+Potas (K): Potas:4.5[mmol/L]
+
+
+
+Sentence 66:
+Kreatynina + GFR
+    
+
+
+Sentence 67:
+Kreatynina w surowicy:0.79[mg/dl]
+    
+
+
+Sentence 68:
+eGFR wg skr.
+
+
+Sentence 69:
+MDRD ze stan:82.8[ml/min/1,73 m^2]
+
+
+
+Sentence 70:
+Mocznik: Mocznik:25[mg/dl]
+
+
+
+Sentence 71:
+Kwas moczowy: Kwas moczowy:4.5[mg/dl]
+
+
+
+Sentence 72:
+Lipidogram
+    
+
+
+Sentence 73:
+Cholesterol całkowity:137[mg/dl]
+    
+
+
+Sentence 74:
+Cholesterol HDL:43[mg/dl]
+    
+
+
+Sentence 75:
+Cholestrol LDL:88[mg/dl]
+    
+
+
+Sentence 76:
+Triglicerydy:53[mg/dl]
+    
+
+
+Sentence 77:
+Stosunek cholesterolu HD:0.3
+Glukoza w surowicy: Glukoza w surowicy:74[mg/dl]
+
+
+
+Sentence 78:
+------------------------------------------------
+
+
+
+Sentence 79:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 80:
+I49.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 81:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 82:
+89.501
+89.502
+------------------------------------------------
+
+

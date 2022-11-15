@@ -1,0 +1,93 @@
+T1	Drug 329 342	Ramizek combi
+T2	Drug_dose 343 364	10+5 1 x 1 tabl. rano
+T3	Drug 366 372	Siofor
+T4	Drug_dose 373 390	1000mg 3 x 1 tabl
+T5	Condition 574 615	Łagodna niedomykalność zastawki mitralnej
+N1	Reference T5 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T6	Condition 625 678	Nadciśnienie tętnicze nieuregulowane farmakologicznie
+N2	Reference T6 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T7	Condition 680 719	Cukrzyca typu 2 wyrównana metabolicznie
+N3	Reference T7 ICD10:E11	Cukrzyca insulinoniezależna
+T8	Condition 721 735	Kamica nerkowa
+A1	Status T8 Historical_Insignificant
+N4	Reference T8 ICD10:N20.0	Kamica nerki
+T9	Drug 890 897	Ramizek
+T10	Drug 899 905	Siofor
+T11	Drug 907 914	Tritace
+R1	Drg Arg1:T1 Arg2:T2	
+R2	Drg Arg1:T3 Arg2:T4	
+T12	Investigation_result 1085 1130	chwiejnych wartości ciśnienia tętniczego krwi
+T13	Symptom 1136 1161	bólów w klatce piersiowej
+N5	Reference T13 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T14	Investigation 1165 1186	RTG klatki piersiowej
+T15	Investigation_result 1187 1204	powiększone serce
+N6	Reference T15 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+T16	Symptom 1215 1233	obrzęk lewej stopy
+N7	Reference T16 ICD10:R60.0	Obrzęk zlokalizowany
+T17	Treatment 1244 1275	leczeniu leczeniu ortopedycznym
+N8	Reference T17 ICD10:Z98.8	Inne określone stany po zabiegach chirurgicznych
+T18	Symptom 1285 1305	bóle w okolicy piety
+N9	Reference T18 ICD10:R52.0	Ból ostry
+T19	Treatment 1308 1329	dolegliwości ustąpiły
+T20	Negation 1331 1337	Neguje
+T21	Symptom 1338 1350	zasłabnięcia
+T22	Negation 1353 1359	neguje
+T23	Symptom 1360 1384	bóle w klatce piersiowej
+N10	Reference T23 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T24	Negation 1386 1392	neguje
+T25	Symptom 1393 1402	duszności
+N11	Reference T25 ICD10:R06.0	Duszność
+T26	Condition 1538 1541	WZW
+N12	Reference T26 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T27	Condition 1551 1560	borelioza
+N13	Reference T27 ICD10:A69.2	Choroba z Lyme
+T28	Negation 1542 1548	( -  )
+T29	Negation 1561 1566	( - )
+T30	Condition 1597 1605	cukrzyca
+A2	Status T30 Family
+N14	Reference T30 ICD10:E14	Cukrzyca nieokreślona
+T31	Condition 1417 1438	nadciśnienie tętnicze
+N15	Reference T31 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T32	Condition 1440 1455	cukrzyca typu 2
+N16	Reference T32 ICD10:E11	Cukrzyca insulinoniezależna
+T33	Negation 1478 1482	brak
+T34	Negation 1505 1509	brak
+T35	Treatment 1458 1475	Przebyte operacje
+N17	Reference T35 ICD10:Z98	Inne stany po zabiegach chirurgicznych
+T36	Treatment 1483 1502	Leczenie przewlekłe
+T37	Date 1633 1640	od 2005
+T38	Negation 1624 1627	nie
+T39	Behaviour 1628 1632	pali
+N18	Reference T39 ICD10:Z72.0	Używanie tytoniu
+T40	Behaviour 1607 1622	Palenie tytoniu
+N19	Reference T40 ICD10:Z72.0	Używanie tytoniu
+T41	Negation 1654 1657	nie
+T42	Behaviour 1642 1652	nne używki
+T43	Negation 1669 1675	neguje
+T44	Condition 1658 1667	Uczulenia
+N20	Reference T44 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T45	Behaviour 1692 1718	warunki mieszkaniowe dobre
+T46	Behaviour 1721 1735	mieszka z żoną
+T47	Drug 1743 1749	Siofor
+T48	Drug_dose 1750 1761	1000 3 x dz
+T49	Drug 1764 1777	Ramizek Combi
+T50	Drug_dose 1778 1797	5+5 1x dz wieczorem
+T51	Investigation 1814 1824	Echo serca
+T52	Investigation 1827 1836	Holter RR
+T53	Investigation 1839 1854	Próba Wysiłkowa
+R3	Inv Arg1:T14 Arg2:T15	
+R4	Neg Arg1:T20 Arg2:T21	
+R5	Neg Arg1:T22 Arg2:T23	
+R6	Neg Arg1:T24 Arg2:T25	
+R7	Neg Arg1:T33 Arg2:T35	
+R8	Neg Arg1:T34 Arg2:T36	
+R9	Neg Arg1:T28 Arg2:T26	
+R10	Neg Arg1:T29 Arg2:T27	
+R11	Neg Arg1:T38 Arg2:T39	
+R12	Neg Arg1:T38 Arg2:T40	
+R13	Dat Arg1:T37 Arg2:T39	
+R14	Dat Arg1:T37 Arg2:T40	
+R15	Neg Arg1:T41 Arg2:T42	
+R16	Neg Arg1:T43 Arg2:T44	
+R17	Drg Arg1:T47 Arg2:T48	
+R18	Drg Arg1:T49 Arg2:T50	

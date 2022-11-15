@@ -1,0 +1,514 @@
+allRelations          : 38
+oks                   : 12
+isRedundantAndRemoveds: 20
+shouldNotBeRemoveds   : 2
+shouldBeBemoveds      : 4
+GOOD / BAD            : 32 / 6
+Sentence 0:
+------------------------------------------------
+Wiek: 12 lat
+
+
+
+Sentence 1:
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 2:
+Płeć: żeńska
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 3:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 4:
+1)Przyjmowanie lekow: Acesan 1 x75mg, Enarenal 1 x 2,5mg, Spironol 1 x 12,5mg
+2) Rehabilitacja ruchowa / systematyczne ćwiczenia w domu -w/g otrzymanego instruktażu .
+
+R1	Drg Arg1:T1 Arg2:T2 << OK >>	Acesan -> 1 x75mg  <RANK: 3> <info: start[352, 359] <type: RIGHT>>
+R2	Drg Arg1:T1 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Acesan -> 1 x 2,5mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[352, 377] <type: RIGHT>>
+R3	Drg Arg1:T1 Arg2:T6 <<REDUNDANT!!!REMOVED>>	Acesan -> 1 x 12,5mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[352, 397] <type: RIGHT>>
+R4	Drg Arg1:T3 Arg2:T2 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1 x75mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[368, 359] <type: LEFT>>
+R5	Drg Arg1:T3 Arg2:T4 << OK >>	Enarenal -> 1 x 2,5mg  <RANK: 3> <info: start[368, 377] <type: RIGHT>>
+R6	Drg Arg1:T3 Arg2:T6 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1 x 12,5mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[368, 397] <type: RIGHT>>
+R7	Drg Arg1:T5 Arg2:T2 <<REDUNDANT!!!REMOVED>>	Spironol -> 1 x75mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[388, 359] <type: LEFT>>
+R8	Drg Arg1:T5 Arg2:T4 <<REDUNDANT!!!REMOVED>>	Spironol -> 1 x 2,5mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[388, 377] <type: LEFT>>
+R9	Drg Arg1:T5 Arg2:T6 << OK >>	Spironol -> 1 x 12,5mg  <RANK: 3> <info: start[388, 397] <type: RIGHT>>
+
+
+Sentence 5:
+3) Ponowne przyjęcie do szpitala  celem wykonania kontrolnej ergospirometrii 15.07.2019
+4).Opieka Poradni Hepatologicznej (w tym wskazane wykonanie badania Fibro-Scan) w miejscu zamieszkania.
+
+R10	Dat Arg1:T9 Arg2:T8 << OK >>	15.07.2019 -> ergospirometrii  <RANK: 3> <info: start[574, 558] <type: LEFT>>
+
+
+Sentence 6:
+------------------------------------------------
+
+
+
+Sentence 7:
+Zastosowane leczenie
+
+
+
+Sentence 8:
+------------------------------------------------
+
+
+
+Sentence 9:
+Acesan 1 x75mg, Enarenal 1 x 2,5mg, Spironol 1 x 12,5mg
+------------------------------------------------
+
+R11	Drg Arg1:T10 Arg2:T11 << OK >>	Acesan -> 1 x75mg  <RANK: 3> <info: start[808, 815] <type: RIGHT>>
+R12	Drg Arg1:T10 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Acesan -> 1 x 2,5mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[808, 833] <type: RIGHT>>
+R13	Drg Arg1:T10 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Acesan -> 1 x 12,5mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[808, 853] <type: RIGHT>>
+R14	Drg Arg1:T12 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1 x75mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[824, 815] <type: LEFT>>
+R15	Drg Arg1:T12 Arg2:T13 << OK >>	Enarenal -> 1 x 2,5mg  <RANK: 3> <info: start[824, 833] <type: RIGHT>>
+R16	Drg Arg1:T12 Arg2:T15 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1 x 12,5mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[824, 853] <type: RIGHT>>
+R17	Drg Arg1:T14 Arg2:T11 <<REDUNDANT!!!REMOVED>>	Spironol -> 1 x75mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[844, 815] <type: LEFT>>
+R18	Drg Arg1:T14 Arg2:T13 <<REDUNDANT!!!REMOVED>>	Spironol -> 1 x 2,5mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[844, 833] <type: LEFT>>
+R19	Drg Arg1:T14 Arg2:T15 << OK >>	Spironol -> 1 x 12,5mg  <RANK: 3> <info: start[844, 853] <type: RIGHT>>
+
+
+Sentence 10:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 11:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią zespołu niedorozwoju lewego serca (HLHS).\x0aStan po operacji met.
+
+
+Sentence 12:
+Norwooda (21.03.2007)\x0aStan po operacji met. Glenna (05.10.2007)\x0aStan po op.met.
+R20	Dat Arg1:T18 Arg2:T19 <<REDUNDANT!!!SHOULD BE REMOVED>>	21.03.2007 -> operacji met. Glenna  <RANK: 3> <info: start[1191, 1214] <type: RIGHT>>
+R21	Dat Arg1:T18 Arg2:T21 <<REDUNDANT!!!REMOVED>>	21.03.2007 -> op.met. Fontana <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1191, 1259] <type: RIGHT>>
+R22	Dat Arg1:T20 Arg2:T19 <<SHOULD NOT BE REMOVED>>	(05.10.2007 -> operacji met. Glenna <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1235, 1214] <type: LEFT>>
+R23	Dat Arg1:T20 Arg2:T21 <<REDUNDANT!!!SHOULD BE REMOVED>>	(05.10.2007 -> op.met. Fontana  <RANK: 3> <info: start[1235, 1259] <type: RIGHT>>
+
+
+Sentence 13:
+Fontana (01.03.2012r) (tunel zewnątrzprzedsionkowy bez fenestracji)\x0a.
+
+R24	Dat Arg1:T22 Arg2:T23 << OK >>	01.03.2012r) -> tunel zewnątrzprzedsionkowy bez fenestracji)  <RANK: 3> <info: start[1276, 1290] <type: RIGHT>>
+
+
+Sentence 14:
+------------------------------------------------
+
+
+
+Sentence 15:
+Rozpoznanie lek. przyjm.
+
+
+
+Sentence 16:
+------------------------------------------------
+ Rozpozanie I: |Rozpoznanie II: |Rozpoznanie IV: |Rozpoznanie V: |Rozpoznanie III: |Opisowo:: Wrodzona wada serca pod postacią zespołu niedorozwoju lewego serca (HLHS).\x0aStan po operacji met.
+
+
+Sentence 17:
+Norwooda (21.03.2007)\x0aStan po operacji met. Glenna (05.10.2007)\x0aStan po op.met.
+R25	Dat Arg1:T26 Arg2:T27 <<REDUNDANT!!!SHOULD BE REMOVED>>	21.03.2007) -> operacji met. Glenna  <RANK: 3> <info: start[1667, 1690] <type: RIGHT>>
+R26	Dat Arg1:T26 Arg2:T29 <<REDUNDANT!!!REMOVED>>	21.03.2007) -> op.met. Fontana <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1667, 1735] <type: RIGHT>>
+R27	Dat Arg1:T28 Arg2:T27 <<SHOULD NOT BE REMOVED>>	05.10.2007 -> operacji met. Glenna <:REMOVED multipleConnectedByTag2:> <RANK: 3> <info: start[1712, 1690] <type: LEFT>>
+R28	Dat Arg1:T28 Arg2:T29 <<REDUNDANT!!!SHOULD BE REMOVED>>	05.10.2007 -> op.met. Fontana  <RANK: 3> <info: start[1712, 1735] <type: RIGHT>>
+
+
+Sentence 18:
+Fontana (01.03.2012r) (tunel zewnątrzprzedsionkowy bez fenestracji)
+
+R29	Dat Arg1:T30 Arg2:T31 << OK >>	01.03.2012r) -> tunel zewnątrzprzedsionkowy bez fenestracji  <RANK: 3> <info: start[1752, 1766] <type: RIGHT>>
+
+
+Sentence 19:
+------------------------------------------------
+
+
+
+Sentence 20:
+Zastosowane leczenie
+
+
+
+Sentence 21:
+------------------------------------------------
+
+
+
+Sentence 22:
+Acesan 1 x75mg, Enarenal 1 x 2,5mg, Spironol 1 x 12,5mg
+------------------------------------------------
+
+R30	Drg Arg1:T32 Arg2:T33 << OK >>	Acesan -> 1 x75mg  <RANK: 3> <info: start[1930, 1937] <type: RIGHT>>
+R31	Drg Arg1:T32 Arg2:T35 <<REDUNDANT!!!REMOVED>>	Acesan -> 1 x 2,5mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1930, 1955] <type: RIGHT>>
+R32	Drg Arg1:T32 Arg2:T37 <<REDUNDANT!!!REMOVED>>	Acesan -> 1 x 12,5mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1930, 1975] <type: RIGHT>>
+R33	Drg Arg1:T34 Arg2:T33 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1 x75mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1946, 1937] <type: LEFT>>
+R34	Drg Arg1:T34 Arg2:T35 << OK >>	Enarenal -> 1 x 2,5mg  <RANK: 3> <info: start[1946, 1955] <type: RIGHT>>
+R35	Drg Arg1:T34 Arg2:T37 <<REDUNDANT!!!REMOVED>>	Enarenal -> 1 x 12,5mg <:REMOVED other first tag between (right):> <RANK: 2> <info: start[1946, 1975] <type: RIGHT>>
+R36	Drg Arg1:T36 Arg2:T33 <<REDUNDANT!!!REMOVED>>	Spironol -> 1 x75mg <:REMOVED other first tag between (left):> <RANK: 2> <info: start[1966, 1937] <type: LEFT>>
+R37	Drg Arg1:T36 Arg2:T35 <<REDUNDANT!!!REMOVED>>	Spironol -> 1 x 2,5mg <:REMOVED multipleConnectedByTag2:> <RANK: 2> <info: start[1966, 1955] <type: LEFT>>
+R38	Drg Arg1:T36 Arg2:T37 << OK >>	Spironol -> 1 x 12,5mg  <RANK: 3> <info: start[1966, 1975] <type: RIGHT>>
+
+
+Sentence 23:
+Zalecenia
+------------------------------------------------
+
+
+
+Sentence 24:
+1)Przyjmowanie lekow: Acesan 1 x75mg, Enarenal 1 x 2,5mg, Spironol 1 x 12,5mg
+2) Rehabilitacja ruchowa / systematyczne ćwiczenia w domu -w/g otrzymanego instruktażu .
+
+
+
+Sentence 25:
+3) Ponowne przyjęcie do szpitala celem wykonania kontrolnej ergospirometrii  za  6-m-cy.
+
+
+
+Sentence 26:
+4).Opieka Poradni Hepatologicznej (w tym wskazane wykonanie  elastografii lub badania Fibro-Scan ) w miejscu zamieszkania.
+
+
+
+Sentence 27:
+------------------------------------------------
+
+
+
+Sentence 28:
+Wyniki badań
+------------------------------------------------
+
+
+
+Sentence 29:
+Morfologia krwi + PLT rozdział 5 część WBC
+    WBC Krwinki białe:6.65[10^3/ul]
+    
+
+
+Sentence 30:
+RBC Krwinki czerwone:4.68[10^6/ul]
+    
+
+
+Sentence 31:
+HGB Hemoglobina:14.0[g/dl]
+    
+
+
+Sentence 32:
+HCT Hematokryt:39.6[%]
+    
+
+
+Sentence 33:
+MCV wskaźnik czerwonokrw:84.6[fl]
+    
+
+
+Sentence 34:
+MCH wskaźnik czerwonokrw:29.9[pg]
+    
+
+
+Sentence 35:
+MCHC wskaźnik czerwonokr:35.4[g/dl]
+    
+
+
+Sentence 36:
+PLT z morfologii:162[10^3/ul]
+    
+
+
+Sentence 37:
+RDW-SD:38.2[fl]
+    
+
+
+Sentence 38:
+RDW-CV:12.5[%]
+    PDW:15.6[fl]
+    
+
+
+Sentence 39:
+MPV:12.1[fl]
+    
+
+
+Sentence 40:
+P-LCR:43.3[%]
+    
+
+
+Sentence 41:
+PCT (hematokryt płytkowy:0.20[%]
+    
+
+
+Sentence 42:
+NEUTR# wartość bezwzględ:3.79[10^3/ul]
+    
+
+
+Sentence 43:
+NEUTR%:56.9[%]
+    
+
+
+Sentence 44:
+LYMH# wartość bezwzględn:1.83[10^3/ul]
+    
+
+
+Sentence 45:
+LYMPH%:27.5[%]
+    
+
+
+Sentence 46:
+MONO# wartość bezwzględn:0.71[10^3/ul]
+    
+
+
+Sentence 47:
+MONO%:10.7[%]
+    
+
+
+Sentence 48:
+EO# wartość bezwzględna:0.29[10^3/ul]
+    
+
+
+Sentence 49:
+EO%:4.4[%]
+    
+
+
+Sentence 50:
+BASO# wartość bezwzględn:0.03[10^3/ul]
+    
+
+
+Sentence 51:
+BASO%:0.5[%]
+    
+
+
+Sentence 52:
+NRBC %:0.0[%]
+    
+
+
+Sentence 53:
+NRBC #:0.00[10^3/ul]
+
+
+
+Sentence 54:
+Antytrombina III: Antytrombina III:93[%]
+
+
+
+Sentence 55:
+Czas kaolinowo-kefalinowy (APTT): APTT-SP:30.0[sek]
+
+
+
+Sentence 56:
+Czas protrombinowy (PT)
+    
+
+
+Sentence 57:
+Czas protrombinowy:13.4[sek]
+    
+
+
+Sentence 58:
+Wskaźnik PT:82.1[%]
+    
+
+
+Sentence 59:
+INR:1.22
+
+
+
+Sentence 60:
+Czas trombinowy TT: Czas trombinowy TT:16.8[sek]
+
+
+
+Sentence 61:
+Fibrynogen: Fibrynogen:2.19[g/L]
+D-dimer - test ilościowy: D-dimer - test ilościowy:213[ng/ml]
+
+
+
+Sentence 62:
+ALAT: ALAT:17[U/L]
+
+
+
+Sentence 63:
+Albumina: Albumina:4.4[g/dl]
+
+
+
+Sentence 64:
+ASPAT: ASPAT:26[U/L]
+
+
+
+Sentence 65:
+Białko całkowite w surowicy (TP): Białko całkowite w surow:7.1[g/dl]
+
+
+
+Sentence 66:
+CRP Białko C-reaktywne
+    CRP Białko C-reaktywne:
+    0.50[mg/dl]
+
+
+
+Sentence 67:
+Sód (Na): Sód:140[mmol/L]
+
+
+
+Sentence 68:
+Potas (K): Potas:4.7[mmol/L]
+
+
+
+Sentence 69:
+Gammaglutamylotranspeptydaza (GGTP): Gammaglutamylotranspepty:18[U/L]
+
+
+
+Sentence 70:
+Kreatynina + GFR
+    
+
+
+Sentence 71:
+Kreatynina w surowicy:0.74[mg/dl]
+    
+
+
+Sentence 72:
+eGFR stand.
+
+
+Sentence 73:
+wg Schwartza:118.9[ml/min/1,73 m^2]
+    eGFR zmod.
+
+
+Sentence 74:
+wg Schwartza:89.3[ml/min/1,73 m^2]
+    
+
+
+Sentence 75:
+wzrost:160[cm]
+
+
+
+Sentence 76:
+Mleczany (LAC): Mleczany:16.6[mg/dl]
+
+
+
+Sentence 77:
+Mleczany (LAC): Mleczany:51.9[mg/dl]
+
+
+
+Sentence 78:
+Mleczany (LAC): Mleczany:18.4[mg/dl]
+
+
+
+Sentence 79:
+Mleczany (LAC): Mleczany:53.3[mg/dl]
+
+
+
+Sentence 80:
+Mocznik: Mocznik:27[mg/dl]
+
+
+
+Sentence 81:
+------------------------------------------------
+
+
+
+Sentence 82:
+ICD10
+------------------------------------------------
+
+
+
+Sentence 83:
+Q23.4
+Z98.8
+
+
+
+Sentence 84:
+Z95.8
+------------------------------------------------
+------------------------------------------------
+
+
+
+Sentence 85:
+ICD9
+------------------------------------------------
+
+
+
+Sentence 86:
+C53
+89.522
+I81
+89.602
+89.41
+
+
+
+Sentence 87:
+I77
+N45
+I17
+N11
+I19
+O35
+88.721
+I09
+------------------------------------------------
+
+

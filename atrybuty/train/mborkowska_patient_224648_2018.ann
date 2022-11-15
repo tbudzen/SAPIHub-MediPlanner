@@ -1,0 +1,96 @@
+T1	Investigation 2210 2220	Echo serca
+T2	Investigation 2223 2233	Holter EKG
+T3	Investigation 2236 2251	Próba Wysiłkowa
+T4	Drug 2135 2141	Bibloc
+T5	Drug_dose 2142 2157	5 mg 1x dz rano
+R1	Drg Arg1:T4 Arg2:T5	
+T6	Drug 2160 2173	Co-Prestarium
+T7	Drug_dose 2174 2194	5+5 1x dz wieczorem.
+R2	Drg Arg1:T6 Arg2:T7	
+T8	Behaviour 2084 2110	warunki mieszkaniowe dobre
+T9	Negation 2061 2067	neguje
+T10	Negation 2046 2049	nie
+T11	Condition 2050 2059	Uczulenia
+R3	Neg Arg1:T9 Arg2:T11	
+T12	Behaviour 2033 2044	Inne używki
+R4	Neg Arg1:T10 Arg2:T12	
+T13	Behaviour 1983 2021	Palenie tytoniu: 5 papierosów dziennie
+N2	Reference T13 ICD10:Z72.0	Używanie tytoniu
+T14	Date 2022 2031	od 20 lat
+R5	Dat Arg1:T14 Arg2:T13	
+T15	Condition 1944 1960	choroba wieńcowa
+A1	Status T15 Family
+N3	Reference T15 ICD10:I25	Przewlekła choroba niedokrwienna serca
+T16	Condition 1970 1981	rak wątroby
+A2	Status T16 Family
+N4	Reference T16 ICD10:C22	Nowotwór złośliwy wątroby i przewodów żółciowych wewnątrzwątrobowych
+T17	Condition 1898 1907	borelioza
+N5	Reference T17 ICD10:A69.2	Choroba z Lyme
+T18	Condition 1885 1888	WZW
+T19	Negation 1908 1913	( - )
+R6	Neg Arg1:T19 Arg2:T17	
+T20	Negation 1889 1895	( -  )
+R7	Neg Arg1:T20 Arg2:T18	
+T21	Negation 1852 1856	brak
+T22	Treatment 1830 1849	Leczenie przewlekłe
+R8	Neg Arg1:T21 Arg2:T22	
+T23	Treatment 1683 1699	cesarskim cięciu
+T24	Date 1705 1709	2013
+T25	Date 1700 1704	2004
+R9	Dat Arg1:T24 Arg2:T23	
+R10	Dat Arg1:T25 Arg2:T23	
+T26	Treatment 1719 1743	laparoskopii zwiadowczej
+T27	Date 1744 1748	2001
+R11	Dat Arg1:T27 Arg2:T26	
+T28	Treatment 1755 1798	operacji ginekologicznej na szyjce macicy (
+A3	Status T28 Historical_Insignificant
+T29	Treatment 1799 1822	Konizacja szyjki macicy
+A4	Status T29 Historical_Insignificant
+T30	Date 1825 1829	2017
+R12	Dat Arg1:T30 Arg2:T29	
+R13	Dat Arg1:T30 Arg2:T28	
+A5	Status T26 Historical_Insignificant
+T31	Condition 1635 1653	Naczyniak wątroby.
+N7	Reference T31 ICD10:D18	
+T32	Condition 1612 1633	Nadciśnienie tętnicze
+N8	Reference T32 ICD10:I10	
+T33	Investigation_result 1369 1429	chwiejnych wartości ciśnienia tętniczego ( do 196/115 mmHg )
+T34	Symptom 1446 1472	bólów w klatce piersiowej.
+T35	Symptom 1489 1518	uczucie nierównej pracy serca
+T36	Symptom 1530 1540	bóle głowy
+N10	Reference T36 ICD10:R51	Ból głowy
+T37	Symptom 1557 1571	zawrotny głowy
+N11	Reference T37 ICD10:R42	Zawroty głowy i odurzenie
+T38	Symptom 1574 1595	stany przedomdleniowe
+N12	Reference T38 ICD10:R55	Omdlenie i zapaść
+T39	Investigation 1107 1119	gastroskopię
+T40	Drug 808 814	Bibloc
+T41	Drug 816 829	Co-Prestarium
+T42	Drug 831 838	Amlopin
+T43	Drug 840 847	Hemofer
+T44	Treatment 589 613	laparoskopii zwiadowczej
+A6	Status T44 Historical_Insignificant
+T45	Date 615 619	2001
+R14	Dat Arg1:T45 Arg2:T44	
+T46	Treatment 623 646	konizacji szyjki macicy
+T47	Date 648 652	2017
+A7	Status T46 Historical_Insignificant
+R15	Dat Arg1:T47 Arg2:T46	
+T48	Condition 562 580	Naczyniak wątroby.
+N13	Reference T48 ICD10:D18	Naczyniaki krwionośne i chłonne o dowolnym umiejscowieniu
+T49	Condition 517 543	Niedokrwistość normocytowa
+N14	Reference T49 ICD10:D64.8	Inne określone niedokrwistości
+T50	Condition 494 515	Nadciśnienie tętnicze
+N15	Reference T50 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T51	Condition 413 449	Wypadanie płatków zastawki mitralnej
+N16	Reference T51 ICD10:I34.1	Wypadanie płatka zastawki mitralnej
+T52	Condition 452 492	niedomykalnością zastawki mitralnej I st
+N17	Reference T52 ICD10:I34.0	Niedomykalność zastawki mitralnej
+N9	Reference T34 ICD10:R07.4	Inne bóle w klatce piersiowej
+N6	Reference T18 ICD10:B19	Przewlekłe wirusowe zapalenie wątroby
+T53	Treatment 958 980	kontrola u lekarza POZ
+T54	Date 1138 1157	19.11.2018 o 08:00,
+R16	Dat Arg1:T54 Arg2:T39	
+T55	Treatment 983 1084	konieczna pilna diagnostyka przyczyn niedokrwistości (m.in. w kierunku chorób przewodu pokarmowego) -
+N18	Reference T12 ICD10:Z72	Problemy związane ze stylem życia
+N1	Reference T11 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie

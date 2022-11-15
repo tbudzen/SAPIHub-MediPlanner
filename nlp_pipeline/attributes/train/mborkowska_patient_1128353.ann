@@ -1,0 +1,25 @@
+T1	Condition 437 466	Poszerzenie aorty wstępującej
+N1	Reference T1 ICD10:I71	Tętniak i rozwarstwienie aorty
+T2	Condition 471 487	Łagodne zwężenie
+N2	Reference T2 ICD10:Q23.0	Wrodzone zwężenie zastawki aortalnej
+T3	Condition 493 539	umiarkowana niedomykalność zastawki aortalnej.
+N3	Reference T3 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T4	Condition 543 577	Obserwacja w kierunku elastopatii.
+N4	Reference T4 ICD10:M35.7	Zespół nadmiernej ruchomości
+A1	Source T4 Declared
+T5	Drug 722 730	Metocard
+T6	Drug_dose 731 748	12,5mg 1xdziennie
+T7	Drug 750 758	Debridat
+T8	Drug_dose 759 775	10ml 2 xdziennie
+R1	Drg Arg1:T7 Arg2:T8	
+R2	Drg Arg1:T5 Arg2:T6	
+T9	Drug 988 996	Debridat
+T10	Drug 998 1006	Metocard
+T11	Condition 1192 1209	wywiad alergiczny
+N5	Reference T11 ICD10:T78.4	Alergia, nieokreślona
+T12	Negation 1210 1216	ujemny
+R3	Neg Arg1:T12 Arg2:T11	
+T13	Drug 1219 1233	leków na stałe
+T14	Negation 1234 1247	nie otrzymuje
+R4	Neg Arg1:T14 Arg2:T13	
+T15	Condition 1142 1155	wada aortalną

@@ -1,0 +1,97 @@
+T1	Treatment 331 353	kontrola u lekarza POZ
+T2	Treatment 356 424	dalsza kontrola w Poradni Kardiologicznej i Wad Wrodzonych Dorosłych
+T3	Treatment 427 470	ponowna hospitalizacja w tutejszym oddziale
+T4	Date 471 487	za ok 4 tygodnie
+R1	Dat Arg1:T4 Arg2:T3	
+T5	Treatment 488 521	celem oceny skuteczności leczenia
+T6	Drug 683 692	cordarone
+T7	Drug 694 700	Lokren
+T8	Drug 702 709	Crestor
+T9	Drug 711 719	Polocard
+T10	Drug 721 727	Zyrtec
+T11	Drug 729 742	Glucophage XR
+T12	Drug 744 755	Betaloc ZOK
+T13	Condition 939 990	Wrodzona wada serca - dwupłatkowa zastawka aortalna
+N1	Reference T13 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T14	Condition 992 995	BAV
+N2	Reference T14 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T15	Condition 998 1029	Niedomykalność aortalna III st.
+N3	Reference T15 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T16	Condition 1030 1053	Ekstrasystolia komorowa
+N4	Reference T16 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T17	Condition 1055 1085	Upośledzona tolerancja glukozy
+N5	Reference T17 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T18	Condition 1095 1132	przebytym zapaleniu mięśnia sercowego
+N6	Reference T18 ICD10:I40	Ostre zapalenie mięśnia sercowego
+T19	Condition 1135 1156	gorączce reumatycznej
+N7	Reference T19 ICD10:I01	Gorączka reumatyczna z zajęciem serca
+T20	Date 1157 1170	w przeszłości
+R2	Dat Arg1:T20 Arg2:T19	
+R3	Dat Arg1:T20 Arg2:T18	
+T21	Condition 1172 1186	Hiperlipidemia
+N8	Reference T21 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T22	Treatment 1196 1210	tonsillektomii
+T23	Date 1211 1224	w przeszłości
+R4	Dat Arg1:T23 Arg2:T22	
+T24	Condition 1404 1419	wadą serca - IA
+N9	Reference T24 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T25	Date 1434 1448	w dzieciństwie
+T26	Condition 1449 1476	zapaleniu mięśnia sercowego
+N10	Reference T26 ICD10:I40	Ostre zapalenie mięśnia sercowego
+T27	Condition 1479 1500	gorączce reumatycznej
+N11	Reference T27 ICD10:I01	Gorączka reumatyczna z zajęciem serca
+R5	Dat Arg1:T25 Arg2:T26	
+R6	Dat Arg1:T25 Arg2:T27	
+T28	Condition 1504 1532	częstoskuczami nadkomorowymi
+N12	Reference T28 ICD10:I47.1	Częstoskurcz nadkomorowy
+T29	Drug 1546 1552	Lokren
+T30	Drug_dose 1553 1560	20 mg/d
+R7	Drg Arg1:T29 Arg2:T30	
+T31	Condition 1565 1577	dyslipidemią
+N13	Reference T31 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T32	Condition 1647 1658	polipy nosa
+N14	Reference T32 ICD10:J33	Polip nosa
+T33	Treatment 1659 1676	Przebyte operacje
+T34	Treatment 1678 1692	tonsillectomia
+T35	Date 1693 1698	1986r
+R8	Dat Arg1:T35 Arg2:T34	
+T36	Condition 1726 1729	WZW
+N15	Reference T36 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T37	Condition 1731 1740	borelioza
+N16	Reference T37 ICD10:A69.2	Choroba z Lyme
+T38	Negation 1743 1753	nie podaje
+R9	Neg Arg1:T38 Arg2:T37	
+R10	Neg Arg1:T38 Arg2:T36	
+T39	Condition 1754 1769	Wywiad rodzinny
+T40	Negation 1771 1781	nie podaje
+R11	Neg Arg1:T40 Arg2:T39	
+T41	Behaviour 1782 1797	Palenie tytoniu
+N17	Reference T41 ICD10:Z72.0	Używanie tytoniu
+T42	Negation 1799 1809	nie podaje
+R12	Neg Arg1:T42 Arg2:T41	
+T43	Behaviour 1810 1821	Inne używki
+T44	Negation 1823 1833	nie podaje
+R13	Neg Arg1:T44 Arg2:T43	
+T45	Condition 1834 1843	Uczulenia
+N18	Reference T45 ICD10:T78.4	Alergia, nieokreślona
+T46	Negation 1845 1855	nie podaje
+R14	Neg Arg1:T46 Arg2:T45	
+T47	Drug 1880 1886	Lokren
+T48	Drug_dose 1887 1905	20 mg 1 tabl. rano
+R15	Drg Arg1:T47 Arg2:T48	
+T49	Drug 1906 1913	Crestor
+T50	Drug_dose 1914 1937	20 mg 1 tabl. wieczorem
+R16	Drg Arg1:T49 Arg2:T50	
+T51	Drug 1938 1946	Polocard
+T52	Drug_dose 1947 1970	75 mg 1 tabl. wieczorem
+R17	Drg Arg1:T51 Arg2:T52	
+T53	Drug 1971 1977	Zyrtec
+T54	Drug_dose 1978 2001	10 mg 1 tabl. wieczorem
+R18	Drg Arg1:T53 Arg2:T54	
+T55	Investigation 2029 2039	echo serca
+T56	Investigation 2041 2061	echo przezprzełykowe
+T57	Investigation 2063 2066	TET
+T58	Investigation 2068 2072	ABPM
+T59	Investigation 2074 2080	Holter
+T60	Investigation 2082 2100	RTG kl. piersiowej
+N19	Reference T43 ICD10:Z72	Problemy związane ze stylem życia

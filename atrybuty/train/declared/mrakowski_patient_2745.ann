@@ -1,0 +1,71 @@
+T1	Treatment 455 477	operacyjnym zamknięciu
+T2	Date 483 488	1996r
+R1	Dat Arg1:T2 Arg2:T1	
+T3	Condition 495 516	Nadciśnienie tętnicze
+N1	Reference T3 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T4	Treatment 628 695	Wskazana dalsza opieka u lekarza POZ oraz w Poradni Kardiologicznej
+T5	Behaviour 699 773	Dieta lekkostrawna z ograniczeniem tłuszczów zwierzęcych i cukrów prostych
+T6	Investigation 777 867	Okresowo kontrola lipidogramu, stężenia elektrolitów, parametrów wydolności nerek i wątrob
+T7	Treatment 1012 1034	operacyjnym zamknięciu
+T8	Date 1040 1045	1996r
+R2	Dat Arg1:T8 Arg2:T7	
+A3	Source T7 Declared
+T9	Condition 1107 1130	nadciśnienia tętniczego
+N2	Reference T9 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T10	Investigation_result 1132 1162	wartości domowe do 160/70 mmHg
+T11	Negation 1215 1221	Neguje
+T12	Symptom 1222 1234	zasłabnięcia
+T13	Symptom 1236 1245	duszności
+N3	Reference T13 ICD10:R06.0	Duszność
+T14	Symptom 1247 1278	typowe bóle w klatce piersiowej
+N4	Reference T14 ICD10:R07	Ból gardła i w klatce piersiowej
+R3	Neg Arg1:T11 Arg2:T12	
+R4	Neg Arg1:T11 Arg2:T13	
+R5	Neg Arg1:T11 Arg2:T14	
+T15	Condition 1331 1334	WZW
+N5	Reference T15 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T16	Condition 1344 1353	borelioza
+N6	Reference T16 ICD10:A69.2	Choroba z Lyme
+T17	Condition 1361 1369	gruźlica
+N7	Reference T17 ICD10:A16	Gruźlica układu oddechowego, niepotwierdzona bakteriologicznie lub histologicznie
+T18	Negation 1337 1338	-
+R6	Neg Arg1:T18 Arg2:T15	
+T19	Negation 1356 1357	-
+R7	Neg Arg1:T19 Arg2:T16	
+T20	Negation 1371 1372	-
+R8	Neg Arg1:T20 Arg2:T17	
+T21	Behaviour 1436 1451	Palenie tytoniu
+T22	Behaviour 1467 1478	Inne używki
+T23	Negation 1480 1483	nie
+R9	Neg Arg1:T23 Arg2:T22	
+T24	Condition 1484 1493	Uczulenia
+T25	Negation 1495 1501	neguje
+R10	Neg Arg1:T25 Arg2:T24	
+T26	Behaviour 1518 1544	warunki mieszkaniowe dobre
+T27	Drug 1574 1583	Egiramlon
+T28	Drug_dose 1584 1591	10+10mg
+R11	Drg Arg1:T27 Arg2:T28	
+T29	Drug 1593 1603	Indapen SR
+T30	Condition 1400 1403	VSD
+N9	Reference T30 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+T31	Condition 1405 1407	HA
+A5	Status T31 Family
+N10	Reference T31 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+A6	Status T30 Family
+T32	Condition 1433 1435	HA
+A7	Status T32 Family
+N11	Reference T32 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+N12	Reference T10 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T33	Treatment 1280 1297	Przebyte operacje
+T34	Condition 1374 1389	Wywiad rodzinny
+A8	Status T34 Family
+T35	Date 1453 1466	w przeszłości
+R12	Dat Arg1:T35 Arg2:T21	
+T36	Condition 478 481	VSD
+N13	Reference T36 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+R13	Dat Arg1:T2 Arg2:T36	
+T37	Condition 1035 1038	VSD
+N14	Reference T37 ICD10:Q21.0	Ubytek przegrody międzykomorowej
+R14	Dat Arg1:T8 Arg2:T37	
+N15	Reference T24 ICD10:T78.4	Alergia, nieokreślona
+N8	Reference T21 ICD10:Z72.0	Używanie tytoniu

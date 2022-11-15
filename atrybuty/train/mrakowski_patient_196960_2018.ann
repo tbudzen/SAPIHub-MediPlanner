@@ -1,0 +1,87 @@
+T1	Drug 329 332	IPP
+T2	Drug_dose 333 362	40mg 1xdziennie rano na czczo
+R1	Drg Arg1:T1 Arg2:T2	
+T3	Drug 363 370	Tritace
+T4	Drug_dose 371 397	5mg pół tabletki wieczorem
+R2	Drg Arg1:T3 Arg2:T4	
+T5	Drug 398 404	Atoris
+T6	Drug_dose 405 430	10mg 1xdziennie wieczorem
+R3	Drg Arg1:T5 Arg2:T6	
+T7	Drug 431 438	Nebilet
+T8	Drug_dose 439 460	5mg pół tabletki rano
+R4	Drg Arg1:T7 Arg2:T8	
+T9	Condition 709 738	Dwupłatkowa zastawka aortalna
+N1	Reference T9 ICD10:Q23.1	Wrodzona niedomykalność zastawki aortalnej
+T10	Condition 740 764	Łagodna stenoza aortalna
+N2	Reference T10 ICD10:I35.0	Zwężenie zastawki aortalnej
+T11	Condition 767 796	niedomykalnością aortalną Ist
+N3	Reference T11 ICD10:I35.1	Niedomykalność zastawki aortalnej
+T12	Condition 798 823	Tętniak aorty wstępującej
+N4	Reference T12 ICD10:I71.2	Tętniak odcinka piersiowego aorty, bez informacji o pęknięciu
+T13	Condition 825 842	Choroba osierdzia
+N5	Reference T13 ICD10:I31.9	Choroba osierdzia, nieokreślona
+T14	Condition 845 866	Nadciśnienie tętnicze
+N6	Reference T14 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T15	Condition 868 882	Hiperlipidemia
+N7	Reference T15 ICD10:E78.5	Hiperlipidemia, nieokreślona
+T16	Condition 884 916	Nieprawidłowa tolerancja glukozy
+N8	Reference T16 ICD10:R73.0	Nieprawidłowe wyniki testu tolerancji glukozy
+T17	Condition 918 935	Refluks żołądkowy
+N9	Reference T17 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T18	Condition 937 969	Zmiany zwyrodnieniowe kręgosłupa
+N10	Reference T18 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T19	Condition 971 999	Kamica pęcherzyka żółciowego
+N11	Reference T19 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T20	Condition 1001 1021	Torbiel nerki prawej
+N12	Reference T20 ICD10:N28.1	Torbiel nerki, nabyta
+T21	Condition 1023 1047	Zespół jelita drażliwego
+N13	Reference T21 ICD10:K58	Zespół jelita drażliwego
+T22	Condition 1049 1068	Zmiany guzkowe płuc
+N14	Reference T22 ICD10:R91	Nieprawidłowe wyniki diagnostycznych badań obrazowych płuc
+T23	Condition 1070 1084	Kamica nerkowa
+N15	Reference T23 ICD10:N20.0	Kamica nerki
+T24	Treatment 1261 1288	diagnostyki kardiologicznej
+T25	Investigation 1292 1308	ct kl piersiowej
+T26	Investigation_result 1310 1341	wielokomorowa torbiel osierdzia
+N16	Reference T26 ICD10:I31.9	Choroba osierdzia, nieokreślona
+R5	Inv Arg1:T25 Arg2:T26	
+T27	Investigation_result 1343 1372	poszerzenie aorty wstępującej
+N17	Reference T27 ICD10:R93.1	Nieprawidłowe wyniki diagnostycznych badań obrazowych serca i krążenia wieńcowego
+R6	Inv Arg1:T25 Arg2:T27	
+T28	Investigation_result 1374 1411	lite okrągłe guzki w miąższu obu płuc
+N18	Reference T28 ICD10:R91	Nieprawidłowe wyniki diagnostycznych badań obrazowych płuc
+R7	Inv Arg1:T25 Arg2:T28	
+T29	Condition 1426 1443	refluks żołądkowy
+N19	Reference T29 ICD10:K21	Choroba refluksowa żołądkowo-przełykowa
+T30	Treatment 1444 1452	Operacje
+T31	Treatment 1462 1485	usunięciu przezcewkowym
+A1	Status T31 Historical_Insignificant
+T32	Condition 1486 1513	kamicy nerkowej obustronnej
+N20	Reference T32 ICD10:N20.0	Kamica nerki
+A2	Status T32 Historical_Insignificant
+T33	Behaviour 1514 1524	Nikotynizm
+T34	Negation 1527 1533	neguje
+R8	Neg Arg1:T34 Arg2:T33	
+T35	Behaviour 1537 1557	Alkohol: okazjonalny
+N22	Reference T35 ICD10:Z72.1	Używanie alkoholu
+T36	Negation 1566 1572	neguje
+T37	Condition 1574 1591	uczulenia na leki
+T38	Symptom 1593 1626	krwawienia z przewodu pokarmowego
+N24	Reference T38 ICD10:K92.2	Krwotok z przewodu pokarmowego, nieokreślony
+R9	Neg Arg1:T36 Arg2:T37	
+R10	Neg Arg1:T36 Arg2:T38	
+T39	Treatment 1645 1681	skutecznego odczulania na pyłki traw
+T40	Condition 1683 1698	Wywiad rodzinny
+A3	Status T40 Family
+T41	Condition 1707 1709	IM
+A4	Status T41 Family
+N25	Reference T41 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T42	Drug 1736 1743	emanera
+T43	Investigation 1774 1784	ECHO serca
+T44	Investigation 1786 1796	Holter EKG
+T45	Investigation 1798 1807	Holter RR
+N21	Reference T33 ICD10:Z72.0	Używanie tytoniu
+N23	Reference T37 ICD10:Z88	
+T46	Date 1085 1098	w przeszłości
+R11	Dat Arg1:T46 Arg2:T23	
+A5	Status T35 Historical_Insignificant

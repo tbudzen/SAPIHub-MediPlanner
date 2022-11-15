@@ -1,0 +1,246 @@
+T1	Treatment 333 377	Dalsza opieka w POZ, Poradni Kardiologicznej
+T2	Treatment 404 451	Poradni Neurologicznej, Poradni Ginekologicznej
+T3	Treatment 478 532	Poradni Chorób Zakaźnych oraz Poradni Diabetologicznej
+T4	Treatment 537 620	Wskazana dalsza opieka w Poradni Zdrowia Psychicznego oraz rozważenie psychoterapii
+T5	Investigation 625 715	Okresowa kontrola morfologii, stężenia elektrolitów, parametrów wydolności nerek i wątroby
+T6	Date 727 737	za 3-5 dni
+R1	Dat Arg1:T6 Arg2:T5	
+T7	Investigation 742 765	Okresowa kontrola HbA1c
+T8	Behaviour 770 872	Dieta lekkostrawna, niskocholesterolowa z niską zawartością tłuszczów zwierzęcych oraz cukrów prostych
+T9	Behaviour 877 905	Wskazana redukcja masy ciała
+T10	Investigation 910 966	Regularna samokontrola ciśnienia tętniczego krwi i tętna
+T11	Treatment 971 999	Regularne przyjmowanie leków
+T12	Drug 1005 1010	Acard
+T13	Drug 1037 1047	Beto 25 ZK
+T14	Drug_dose 1011 1036	75mg 1 tabletka wieczorem
+R2	Drg Arg1:T12 Arg2:T14	
+T15	Drug_dose 1048 1063	1 tabletka rano
+R3	Drg Arg1:T13 Arg2:T15	
+T16	Drug 1064 1069	Axtil
+T17	Drug_dose 1070 1094	5mg 1 tabletka wieczorem
+R4	Drg Arg1:T16 Arg2:T17	
+T18	Drug 1095 1101	Atoris
+T19	Drug_dose 1102 1127	20mg 1 tabletka wieczorem
+R5	Drg Arg1:T18 Arg2:T19	
+T20	Drug 1128 1147	Kalium Effervescens
+T21	Drug_dose 1148 1171	1 saszetka raz dziennie
+R6	Drg Arg1:T20 Arg2:T21	
+T22	Drug 1173 1182	Metformax
+T23	Drug_dose 1183 1228	500mg 1 tabletka rano, w południe i wieczorem
+R7	Drg Arg1:T22 Arg2:T23	
+T24	Drug 1230 1246	Essentiale Forte
+T25	Drug_dose 1247 1303	1 tabletka rano - wg dotychczasowych zaleceń specjalisty
+R8	Drg Arg1:T24 Arg2:T25	
+T26	Drug 1305 1310	Dexak
+T27	Drug_dose 1311 1339	25mg - doraźnie w razie bólu
+R9	Drg Arg1:T26 Arg2:T27	
+T28	Drug 1341 1346	Cital
+T29	Drug_dose 1347 1420	20mg 1 tabletka rano i wieczorem - wg dotychczasowych zaleceń specjalisty
+R10	Drg Arg1:T28 Arg2:T29	
+T30	Drug 1422 1429	Madopar
+T31	Drug 1431 1438	Oprymea
+T32	Drug_dose 1441 1479	wg dotychczasowych zaleceń specjalisty
+R11	Drg Arg1:T30 Arg2:T32	
+R12	Drg Arg1:T31 Arg2:T32	
+T33	Condition 1698 1719	Nadciśnienie tętnicze
+N1	Reference T33 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T34	Condition 1721 1736	Cukrzyca typu 2
+N2	Reference T34 ICD10:E11	Cukrzyca insulinoniezależna
+T35	Condition 1738 1751	Zakażenie HCV
+N3	Reference T35 ICD10:B17.1	Ostre wirusowe zapalenie wątroby typu C
+T36	Treatment 1752 1787	pod opieką Poradni Chorób Zakaźnych
+T37	Condition 1789 1823	Naczyniopochodne uszkodzenie mózgu
+N4	Reference T37 ICD10:I69.8	Następstwa innych i nieokreślonych chorób naczyń mózgowych
+T38	Treatment 1833 1841	operacji
+T39	Condition 1842 1879	guza prawego kąta mostowo-móżdżkowego
+N5	Reference T39 ICD10:D43.2	Mózg, umiejscowienie nieokreślone
+T40	Condition 1881 1915	Porażenie prawego nerwu twarzowego
+N6	Reference T40 ICD10:G51.0	Obwodowe porażenie nerwu twarzowego
+T41	Condition 1917 1954	Neuralgia nerwu trójdzielnego prawego
+N7	Reference T41 ICD10:G50.0	Nerwoból nerwu trójdzielnego
+T42	Symptom 1956 1969	Zawroty głowy
+N8	Reference T42 ICD10:R42	Zawroty głowy i odurzenie
+T43	Condition 1971 1989	Choroba Parkinsona
+N9	Reference T43 ICD10:G20	Choroba Parkinsona
+T44	Condition 1991 2019	Niedosłuch po stronie prawej
+T45	Condition 2021 2053	Zmiany zwyrodnieniowe kręgosłupa
+N11	Reference T45 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T46	Condition 2055 2063	Depresja
+N12	Reference T46 ICD10:F33	Zaburzenia depresyjne nawracające
+T47	Condition 2294 2321	Przewlekła choroba wieńcowa
+N13	Reference T47 ICD10:I25.9	Przewlekła choroba niedokrwienna serca, nieokreślona
+T48	Condition 2323 2344	Nadciśnienie tętnicze
+N14	Reference T48 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T49	Condition 2346 2385	Arytmia komorowa (ExV pojedyncze, pary)
+N15	Reference T49 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T50	Condition 2387 2442	Arytmia nadkomorowa (ExSV pojedyncze, pary, salwy, TSV)
+N16	Reference T50 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T51	Condition 2444 2489	Łagodna niedomykalność zastawki pnia płucnego
+N17	Reference T51 ICD10:I37.1	Niedomykalność zastawki pnia płucnego
+T52	Condition 2491 2506	Cukrzyca typu 2
+N18	Reference T52 ICD10:E11	Cukrzyca insulinoniezależna
+T53	Condition 2508 2521	Zakażenie HCV
+N19	Reference T53 ICD10:B17.1	Ostre wirusowe zapalenie wątroby typu C
+T54	Treatment 2522 2557	pod opieką Poradni Chorób Zakaźnych
+T55	Condition 2559 2574	Torbiel wątroby
+N20	Reference T55 ICD10:Q44.6	Torbielowatość wątroby
+T56	Condition 2576 2596	Stłuszczenie wątroby
+N21	Reference T56 ICD10:K76.0	Stłuszczenie wątroby niesklasyfikowane gdzie indziej
+T57	Condition 2598 2626	Kamica pęcherzyka żółciowego
+N22	Reference T57 ICD10:K80.2	Kamica pęcherzyka żółciowego bez zapalenia pęcherzyka żółciowego
+T58	Condition 2628 2662	Naczyniopochodne uszkodzenie mózgu
+N23	Reference T58 ICD10:I69.8	Następstwa innych i nieokreślonych chorób naczyń mózgowych
+T59	Treatment 2672 2680	operacji
+T60	Condition 2681 2718	guza prawego kąta mostowo-móżdżkowego
+N24	Reference T60 ICD10:D43.2	Mózg, umiejscowienie nieokreślone
+T61	Condition 2720 2754	Porażenie prawego nerwu twarzowego
+N25	Reference T61 ICD10:G51.0	Obwodowe porażenie nerwu twarzowego
+T62	Condition 2756 2793	Neuralgia nerwu trójdzielnego prawego
+N26	Reference T62 ICD10:G50.0	Nerwoból nerwu trójdzielnego
+T63	Symptom 2795 2808	Zawroty głowy
+N27	Reference T63 ICD10:R42	Zawroty głowy i odurzenie
+T64	Condition 2810 2828	Choroba Parkinsona
+N28	Reference T64 ICD10:G20	Choroba Parkinsona
+T65	Condition 2830 2851	Głuchota ucha prawego
+T66	Condition 2853 2871	Nietrzymanie moczu
+N30	Reference T66 ICD10:R32	Nietrzymanie moczu, nieokreślone
+T67	Condition 2873 2905	Zmiany zwyrodnieniowe kręgosłupa
+N31	Reference T67 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T68	Condition 2907 2915	Depresja
+N32	Reference T68 ICD10:F33	Zaburzenia depresyjne nawracające
+T69	Symptom 3089 3116	skoków ciśnienia tętniczego
+N33	Reference T69 ICD10:R03	Nieprawidłowy wynik pomiaru ciśnienia tętniczego krwi, bez rozpoznania
+T70	Negation 3171 3177	Neguje
+T71	Symptom 3178 3190	zasłabnięcia
+T72	Symptom 3192 3200	omdlenia
+N34	Reference T72 ICD10:R55	Omdlenie i zapaść
+T73	Symptom 3202 3212	krwawienia
+T74	Symptom 3214 3227	czarne stolce
+N36	Reference T74 ICD10:K92.1	Stolce smołowate
+T75	Symptom 3229 3245	brunatne wymioty
+N37	Reference T75 ICD10:K92.0	Wymioty krwawe
+T76	Condition 3247 3263	chorobę wrzodową
+N38	Reference T76 ICD10:K27	Wrzód trawienny o nieokreślonej lokalizacji
+T77	Symptom 3265 3279	duszność nocną
+N39	Reference T77 ICD10:R06.0	Duszność
+T78	Symptom 3281 3296	obrzęki podudzi
+T79	Symptom 3298 3322	bóle w klatce piersiowej
+T80	Symptom 3324 3339	kołatania serca
+N42	Reference T80 ICD10:R00.2	Kołatanie serca
+R13	Neg Arg1:T70 Arg2:T80	
+R14	Neg Arg1:T70 Arg2:T79	
+R15	Neg Arg1:T70 Arg2:T78	
+R16	Neg Arg1:T70 Arg2:T77	
+R17	Neg Arg1:T70 Arg2:T76	
+R18	Neg Arg1:T70 Arg2:T75	
+R19	Neg Arg1:T70 Arg2:T74	
+R20	Neg Arg1:T70 Arg2:T73	
+R21	Neg Arg1:T70 Arg2:T72	
+R22	Neg Arg1:T70 Arg2:T71	
+T81	Symptom 3359 3380	problemy z chodzeniem
+N43	Reference T81 ICD10:R26	Zaburzenia chodu i poruszania się
+T82	Condition 3410 3428	Choroby Parkinsona
+N44	Reference T82 ICD10:G20	Choroba Parkinsona
+T83	Symptom 3448 3490	bólowe kończyn dolnych w trakcie chodzenia
+N45	Reference T83 ICD10:M79.6	Bóle kończyn
+T84	Condition 3506 3527	Nadciśnienie tętnicze
+N46	Reference T84 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T85	Condition 3529 3544	Cukrzyca typu 2
+N47	Reference T85 ICD10:E11	Cukrzyca insulinoniezależna
+T86	Condition 3546 3559	Zakażenie HCV
+N48	Reference T86 ICD10:B17.1	Ostre wirusowe zapalenie wątroby typu C
+T87	Treatment 3560 3595	pod opieką Poradni Chorób Zakaźnych
+T88	Condition 3597 3631	Naczyniopochodne uszkodzenie mózgu
+N49	Reference T88 ICD10:I69.8	Następstwa innych i nieokreślonych chorób naczyń mózgowych
+T89	Treatment 3641 3649	operacji
+T90	Condition 3650 3687	guza prawego kąta mostowo-móżdżkowego
+N50	Reference T90 ICD10:D43.2	Mózg, umiejscowienie nieokreślone
+T91	Condition 3689 3723	Porażenie prawego nerwu twarzowego
+N51	Reference T91 ICD10:G51.0	Obwodowe porażenie nerwu twarzowego
+T92	Condition 3725 3762	Neuralgia nerwu trójdzielnego prawego
+N52	Reference T92 ICD10:G50.0	Nerwoból nerwu trójdzielnego
+T93	Symptom 3764 3777	Zawroty głowy
+N53	Reference T93 ICD10:R42	Zawroty głowy i odurzenie
+T94	Condition 3779 3797	Choroba Parkinsona
+N54	Reference T94 ICD10:G20	Choroba Parkinsona
+T95	Condition 3799 3827	Niedosłuch po stronie prawej
+T96	Condition 3829 3861	Zmiany zwyrodnieniowe kręgosłupa
+N56	Reference T96 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+T97	Condition 3863 3871	Depresja
+N57	Reference T97 ICD10:F33	Zaburzenia depresyjne nawracające
+T98	Treatment 3885 3920	Leczenie przewlekłe: kardiologiczne
+T99	Treatment 3922 3935	neurologiczne
+T100	Treatment 3937 3951	psychiatryczne
+T101	Treatment 3953 3969	chorób zakażnych
+T102	Condition 3997 4002	WZW C
+N58	Reference T102 ICD10:B17.1	Ostre wirusowe zapalenie wątroby typu C
+T103	Condition 4007 4012	WZW B
+N59	Reference T103 ICD10:B16	Ostre wirusowe zapalenie wątroby typu B
+T104	Negation 4015 4016	-
+R23	Neg Arg1:T104 Arg2:T103	
+T105	Condition 4021 4030	borelioza
+N60	Reference T105 ICD10:A69.2	Choroba z Lyme
+T106	Condition 4038 4046	grużlica
+T107	Condition 4054 4058	odra
+N62	Reference T107 ICD10:B05	Odra
+T108	Negation 4061 4062	-
+R24	Neg Arg1:T108 Arg2:T107	
+T109	Negation 4049 4050	-
+R25	Neg Arg1:T109 Arg2:T106	
+T110	Negation 4033 4034	-
+R26	Neg Arg1:T110 Arg2:T105	
+T111	Condition 4065 4080	Wywiad rodzinny
+A1	Status T111 Family
+T112	Condition 4082 4091	Parkinson
+A2	Status T112 Family
+N63	Reference T112 ICD10:G20	Choroba Parkinsona
+T113	Behaviour 4100 4115	Palenie tytoniu
+T114	Negation 4117 4123	neguje
+T115	Negation 4138 4144	neguje
+T116	Negation 4157 4163	neguje
+T117	Behaviour 4125 4136	Inne używki
+T118	Condition 4146 4155	Uczulenia
+N65	Reference T118 ICD10:T78.4	Alergia, nieokreślona
+R27	Neg Arg1:T114 Arg2:T113	
+R28	Neg Arg1:T115 Arg2:T117	
+R29	Neg Arg1:T116 Arg2:T118	
+T119	Behaviour 4181 4207	warunki mieszkaniowe dobre
+T120	Behaviour 4233 4241	emerytka
+T121	Drug 4249 4256	Madopar
+T122	Drug_dose 4257 4280	200mg + 50mg 4xdziennie
+R30	Drg Arg1:T121 Arg2:T122	
+T123	Drug 4282 4287	Cital
+T124	Drug_dose 4288 4309	20mg 1 tabletka R i W
+R31	Drg Arg1:T123 Arg2:T124	
+T125	Drug 4311 4316	Dexak
+T126	Drug_dose 4317 4330	25mg doraźnie
+R32	Drg Arg1:T125 Arg2:T126	
+T127	Drug 4332 4351	Kalium Effervescens
+T128	Drug_dose 4352 4364	1 saszetka R
+R33	Drg Arg1:T127 Arg2:T128	
+T129	Drug 4366 4382	Essentiale Forte
+T130	Drug_dose 4383 4401	300mg 1 tabletka R
+R34	Drg Arg1:T129 Arg2:T130	
+T131	Drug 4403 4411	Diuresin
+T132	Drug_dose 4412 4437	1,5mg 1 tabletka doraźnie
+R35	Drg Arg1:T131 Arg2:T132	
+T133	Drug 4439 4452	Glucophage XR
+T134	Drug_dose 4453 4471	750mg 1 tabletka W
+R36	Drg Arg1:T133 Arg2:T134	
+T135	Drug 4473 4482	Captopril
+T136	Drug_dose 4483 4491	doraźnie
+R37	Drg Arg1:T135 Arg2:T136	
+T137	Investigation 4507 4510	TTE
+T138	Investigation 4512 4515	TET
+T139	Investigation 4517 4521	ABPM
+T140	Investigation 4523 4533	Holter EKG
+N71	Reference T71 ICD10:R55	Omdlenie i zapaść
+N64	Reference T113 ICD10:Z72.0	Używanie tytoniu
+N10	Reference T44 ICD10:H90	Upośledzenie słuchu przewodzeniowe i czuciowo-nerwowe
+N29	Reference T65 ICD10:H90	Upośledzenie słuchu przewodzeniowe i czuciowo-nerwowe
+N35	Reference T73 ICD10:R58	Krwotok niesklasyfikowany gdzie indziej
+N40	Reference T78 ICD10:R22	Umiejscowiony obrzęk, guzek, guz skóry i tkanki podskórnej
+N41	Reference T79 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+N55	Reference T95 ICD10:H90	Upośledzenie słuchu przewodzeniowe i czuciowo-nerwowe
+N61	Reference T106 ICD10:A15	Gruźlica układu oddechowego, potwierdzona bakteriologicznie i histologicznie
+N66	Reference T117 ICD10:Z72	Problemy związane ze stylem życia

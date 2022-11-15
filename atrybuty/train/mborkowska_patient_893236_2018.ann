@@ -1,0 +1,154 @@
+T1	Drug 1071 1077	Lokren
+T2	Drug 1080 1092	Tertensif SR
+T3	Drug 1095 1104	Zofenil  
+T4	Drug 1106 1111	Acard
+T5	Drug 1114 1123	Midazolam
+T6	Investigation 3165 3175	Echo serca
+T7	Investigation 3178 3188	Holter EKG
+T8	Investigation 3191 3195	RR  
+T9	Investigation 3197 3212	Próba Wysiłkowa
+T10	Investigation 3215 3233	USG jamy brzusznej
+T11	Investigation 3236 3292	USG dopler naczyn konczyn dolnych i szyjnych i nerkowych
+T12	Drug 3034 3040	Lokren
+T13	Drug_dose 3041 3057	20 mg 1x dz rano
+R1	Drg Arg1:T12 Arg2:T13	
+T14	Drug 3060 3072	Tertensif SR
+T15	Drug_dose 3073 3084	1 x dz rano
+R2	Drg Arg1:T14 Arg2:T15	
+T16	Drug 3087 3094	Zofenil
+T17	Drug_dose 3095 3117	30 mg 1 x dz wieczorem
+R3	Drg Arg1:T16 Arg2:T17	
+T18	Drug 3120 3125	Acard
+T19	Drug_dose 3126 3147	75 mg 1x dz wieczorem
+R4	Drg Arg1:T18 Arg2:T19	
+T20	Behaviour 2983 3009	warunki mieszkaniowe dobre
+T21	Negation 2960 2966	neguje
+T22	Negation 2945 2948	nie
+T23	Negation 2928 2931	nie
+T24	Negation 2898 2909	brak danych
+T25	Negation 2849 2855	( -  )
+T26	Negation 2868 2873	( - )
+T27	Condition 2949 2958	Uczulenia
+N1	Reference T27 ICD10:Z91.0	Uczulenie na czynniki inne niż leki i substancje biologiczne w wywiadzie
+R5	Neg Arg1:T21 Arg2:T27	
+T28	Behaviour 2932 2943	Inne używki
+R6	Neg Arg1:T22 Arg2:T28	
+T29	Behaviour 2911 2926	Palenie tytoniu
+N2	Reference T29 ICD10:Z72.0	Używanie tytoniu
+R7	Neg Arg1:T23 Arg2:T29	
+T30	Condition 2874 2895	W wywiadzie rodzinnym
+A1	Status T30 Family
+R8	Neg Arg1:T24 Arg2:T30	
+T31	Condition 2845 2848	WZW
+N3	Reference T31 ICD10:B19	Nieokreślone wirusowe zapalenie wątroby
+T32	Condition 2858 2867	borelioza
+N4	Reference T32 ICD10:A69.2	Choroba z Lyme
+R9	Neg Arg1:T26 Arg2:T32	
+R10	Neg Arg1:T25 Arg2:T31	
+T33	Drug 1717 1726	Corhydron
+T34	Drug_dose 1727 1772	200 mg iv - podano ok 11:00 w dniu 20.08.2018
+R11	Drg Arg1:T33 Arg2:T34	
+T35	Drug 1681 1693	Atorvasterol
+T36	Drug 1661 1668	Kaldyum
+T37	Drug 1642 1647	Acard
+T38	Drug 1578 1590	Tertensif SR
+T39	Drug 1550 1556	Lokren
+T40	Drug 1607 1614	Zofenil
+T41	Drug_dose 1557 1573	20 mg 1x dz rano
+R12	Drg Arg1:T39 Arg2:T41	
+T42	Drug_dose 1591 1602	1 x dz rano
+R13	Drg Arg1:T38 Arg2:T42	
+T43	Drug_dose 1615 1637	30 mg 1 x dz wieczorem
+R14	Drg Arg1:T40 Arg2:T43	
+T44	Drug_dose 1648 1658	75 mg 1x d
+R15	Drg Arg1:T37 Arg2:T44	
+T45	Drug_dose 1669 1679	1x dz rano
+R16	Drg Arg1:T36 Arg2:T45	
+T46	Drug_dose 1694 1715	40 mg 1x dz wieczorem
+R17	Drg Arg1:T35 Arg2:T46	
+T47	Investigation 1462 1496	kontrola ciśnienia tętniczego krwi
+T48	Investigation 1370 1445	kontrola lipidogramu . stężenia elektrolitów , parametrów wydolności nerek.
+T49	Behaviour 1316 1355	Dieta lekkostrawna , niskocholesterolow
+T50	Investigation_result 2171 2237	chwiejnych wartości ciśnienia tętniczego krwi ( do 180 /110 mmHg )
+T51	Symptom 2240 2255	kołatania serca
+N5	Reference T51 ICD10:R00.2	Kołatanie serca
+T52	Symptom 2272 2286	zawrotów głowy
+N6	Reference T52 ICD10:R42	Zawroty głowy i odurzenie
+T53	Date 2312 2327	od 4-5 miesięcy
+T54	Symptom 2348 2369	stany przedomdleniowe
+N7	Reference T54 ICD10:R55	Omdlenie i zapaść
+T55	Date 2379 2386	04.2018
+R18	Dat Arg1:T55 Arg2:T54	
+T56	Symptom 2389 2409	bóle kończyn dolnych
+N8	Reference T56 ICD10:M79.6	Bóle kończyn
+T57	Symptom 2420 2444	bóle w klatce piersiowej
+N9	Reference T57 ICD10:R07.4	Ból w klatce piersiowej, nieokreślony
+T58	Negation 2413 2419	neguje
+R19	Neg Arg1:T58 Arg2:T57	
+T59	Negation 2447 2453	neguje
+T60	Symptom 2454 2471	uczucie duszności
+N10	Reference T60 ICD10:R06.0	Duszność
+R20	Neg Arg1:T59 Arg2:T60	
+T61	Condition 2487 2508	Nadciśnienie tętnicze
+N11	Reference T61 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T62	Condition 2510 2538	Wielotorbilowatość obu nerek
+N12	Reference T62 ICD10:Q61	Wielotorbielowatość nerek
+T63	Condition 2581 2589	torbieli
+T64	Treatment 2549 2580	wielokrotnej punkcji leczniczej
+A2	Status T64 Historical_Insignificant
+A3	Status T63 Historical_Insignificant
+T65	Condition 2592 2619	Kamica nerkowa prawostronna
+N13	Reference T65 ICD10:N20.0	Kamica nerki
+T66	Condition 2623 2656	Choroba zwyrodnieniowa kręgosłupa
+T67	Treatment 2666 2706	operacji kręgosłupa w odcinku lędźwiowym
+A4	Status T67 Historical_Insignificant
+T68	Date 2707 2713	w 2013
+R21	Dat Arg1:T68 Arg2:T67	
+T69	Condition 2753 2775	włókniaka piersi lewej
+N15	Reference T69 ICD10:N60	Łagodna dysplazja piersi
+A5	Status T69 Historical_Insignificant
+T70	Treatment 2744 2752	operacji
+A6	Status T70 Historical_Insignificant
+T71	Date 2778 2782	2009
+R22	Dat Arg1:T71 Arg2:T69	
+R23	Dat Arg1:T71 Arg2:T70	
+T72	Condition 919 926	Alergia
+N16	Reference T72 ICD10:Z88	Uczulenia na leki, środki farmakologiczne i substancje biologiczne w wywiadzie
+T73	Drug 930 938	kontrast
+R24	Alg Arg1:T72 Arg2:T73	
+T74	Treatment 870 910	operacji kręgosłupa w odcinku lędźwiowym
+A7	Status T74 Historical_Insignificant
+T75	Date 913 917	2013
+R25	Dat Arg1:T75 Arg2:T74	
+T76	Condition 827 860	Choroba zwyrodnieniowa kręgosłupa
+T77	Condition 796 823	Kamica nerkowa prawostronna
+N18	Reference T77 ICD10:N20.0	Kamica nerki
+T78	Treatment 753 784	wielokrotnej punkcji leczniczej
+A8	Status T78 Historical_Insignificant
+T79	Condition 785 793	torbieli
+A9	Status T79 Historical_Insignificant
+T80	Condition 714 742	Wielotorbilowatość obu nerek
+N19	Reference T80 ICD10:Q61	Wielotorbielowatość nerek
+T81	Condition 691 712	Nadciśnienie tętnicze
+N20	Reference T81 ICD10:I10	Nadciśnienie samoistne (pierwotne)
+T82	Condition 659 689	Pojedyncze pobudzenie komorowe
+N21	Reference T82 ICD10:I49.3	Przedwczesna depolaryzacja [pobudzenie] komór
+T83	Condition 590 624	Nadkomorowe zaburzenia rytmu serca
+N22	Reference T83 ICD10:I49.1	Przedwczesna depolaryzacja przedsionkowa [pobudzenie przedsionkowe]
+T84	Condition 627 648	pobudzenia pojedyncze
+N23	Reference T84 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T85	Condition 650 655	salwa
+N24	Reference T85 ICD10:I49.4	Inne i nieokreślone przedwczesne depolaryzacje [pobudzenia]
+T86	Condition 531 572	Łagodna niedomykalność zastawki mitralnej
+N25	Reference T86 ICD10:I34.0	Niedomykalność zastawki mitralnej
+T87	Condition 575 587	trójdzielnej
+N26	Reference T87 ICD10:I07.1	Niedomykalność zastawki trójdzielnej
+T88	Condition 481 530	Przetrwały otwór owalny z niewielkim przeciekiem.
+N27	Reference T88 ICD10:Q21.1	Ubytek przegrody międzyprzedsionkowej
+T89	Condition 450 479	Dusznica bolesna niestabilna.
+N28	Reference T89 ICD10:I20.8	Inne postacie choroby niedokrwiennej serca
+T90	Treatment 1248 1313	opieka u lekarza POZ oraz Poradni Kardiologicznej, Neurologicznej
+T91	Symptom 2289 2311	Nasilenie dolegliwości
+R26	Dat Arg1:T53 Arg2:T91	
+N14	Reference T66 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
+N17	Reference T76 ICD10:M47.9	Zmiany zwyrodnieniowe kręgosłupa, nieokreślone
